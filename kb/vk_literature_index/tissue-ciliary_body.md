@@ -1,0 +1,231 @@
+---
+title: 文献索引: ciliary_body
+created: 2026-09-23
+updated: 2026-09-23
+type: query
+tags: [literature, rag, index, ciliary_body]
+sources: [literature_db v2.0_2026-09]
+confidence: high
+---
+
+# 文献: ciliary_body (205 篇, 多标签口径)
+
+> RAG v2.0 中 tissue_labels 含 ciliary_body 的论文清单（含与其他组织共标的论文），按年份倒序。
+> 溯源用 PMID 查询 RAG API: `stage3_retrieve.py --tissue ciliary_body --db-dir literature_db/v2.0_2026-09 --cell-type <CT>`
+> 定位 (Claude5 冻结): 仅人机交互辅助引用, 不入打分。
+
+## 论文列表
+- PMID42334455 (2026) Intraflagellar transport protein IFT172 contains a C-terminal ubiquitin-binding U-box-like domain involved in ciliary signaling. — *eLife* [human] tags=ciliary_body v=v2.0-new
+- PMID42011761 (2026) Tubulin hyperglutamylation induces retinal degeneration by disrupting ciliary architecture and protein trafficking. — *Zoological research* [both] tags=ciliary_body v=v2.0-new
+- PMID41165761 (2026) Ciliopathy-related B9 protein complex regulates ciliary axonemal microtubule posttranslational modifications and initiation of ciliogenesis. — *The Journal of clinical investigation* [human] tags=ciliary_body v=v2.0-new
+- PMID42036045 (2026) Rab8 and TNPO1 function as the ciliary transport adapters for GPCRs. — *The Journal of biological chemistry* [both] tags=ciliary_body v=v2.0-new
+- PMID42268917 (2026) Smoothened and ciliary GPCRs regulate ciliary protein kinase A activity involved in Hedgehog signal transduction. — *PLoS biology* [both] tags=ciliary_body v=v2.0-new
+- PMID42173885 (2026) Light- and chemical-induced ciliary signaling governs dorsal/ventral regionalization of human telencephalic organoids. — *Nature communications* [human] tags=ciliary_body v=v2.0-new
+- PMID42342706 (2026) RGS22 is a metazoa-specific radial spoke component required for coordinated ciliary beating. — *Nature communications* [mouse] tags=ciliary_body v=v2.0-new
+- PMID42082754 (2026) ASD mutations in the ciliary gene CEP41 impact development of projection neurons and interneurons in a human cortical organoid model. — *Molecular psychiatry* [human] tags=ciliary_body v=v2.0-new
+- PMID42284459 (2026) Ancient conservation of androglobin expression reveals its evolutionary link to ciliary processes. — *Molecular biology and evolution* [human] tags=ciliary_body v=v2.0-new
+- PMID41370039 (2026) Filippi syndrome-associated CKAP2L modulates microtubule dynamics essential for mitosis and ciliary length regulation. — *Journal of molecular cell biology* [both] tags=ciliary_body v=v2.0-new
+- PMID41805112 (2026) The EH-binding protein EHBP1 operates in a ciliary functional module affected by INPP5E dysfunction. — *Journal of cell science* [human] tags=ciliary_body v=v2.0-new
+- PMID41814306 (2026) Disruption of primary ciliary prostaglandin E&lt;sub&gt;2&lt;/sub&gt; signaling by transforming growth factor-β1 impairs endometrial receptivity. — *Journal of biomedical science* [both] tags=ciliary_body v=v2.0-new
+- PMID40441296 (2026) Ciliary IFT88 inhibits intervertebral disc degeneration under excessive mechanical stress by regulating endplate cartilage calcification. — *Journal of advanced research* [human] tags=ciliary_body v=v2.0-new
+- PMID41805095 (2026) Rod-Cone Dystrophy Related WDR34 Is Essential for Ciliary Integrity and Survival of Mammalian Photoreceptor Cells. — *Investigative ophthalmology & visual science* [both] tags=ciliary_body v=v2.0-new
+- PMID41609173 (2026) Vitamin E Alleviates Oxidative Damage and Attenuates Ferroptosis Caused by Prolonged Contraction of the Ciliary Muscle by Activating ACOT7. — *Investigative ophthalmology & visual science* [other] tags=ciliary_body v=v2.0-new
+- PMID42178579 (2026) FLNB and TTC26 regulate ciliary Hedgehog signaling to maintain intervertebral disc matrix homeostasis in adolescent idiopathic scoliosis. — *Genome biology* [both] tags=ciliary_body v=v2.0-new
+- PMID42510807 (2026) Clinical Utility of NGS-Based Diagnosis in Primary Ciliary Dyskinesia: Experience from a Brazilian Pediatric Cohort at a Reference Center for Rare Diseases. — *Genes* [human] tags=ciliary_body v=v2.0-new
+- PMID42326015 (2026) Tubulin monoglutamylation is sufficient to rescue the ciliary motility defects in a &lt;i&gt;Chlamydomonas&lt;/i&gt; polyglutamylation deficient mutant. — *Frontiers in cell and developmental biology* [unknown] tags=ciliary_body v=v2.0-new
+- PMID41372633 (2026) JHY enables the transition from switchable to fixed ciliary waveforms in metazoan evolution. — *EMBO reports* [both] tags=ciliary_body v=v2.0-new
+- PMID41957701 (2026) Hedgehog pathway activity downstream of Smoothened is regulated specifically by basal ciliary PKA. — *Cellular & molecular biology letters* [both] tags=ciliary_body v=v2.0-new
+- PMID41972697 (2026) Cilia Dynamics in Primary Ciliary Dyskinesia: A Biophysical Characterization of the &lt;i&gt;RSPH4A&lt;/i&gt; Founder Variant. — *Cells* [human] tags=ciliary_body v=v2.0-new
+- PMID42105234 (2026) Proximity labeling proteomics maps radial glial ciliary proteins across the developing telencephalon. — *Cell reports* [mouse] tags=ciliary_body v=v2.0-new
+- PMID41746809 (2026) Nonsense-mediated mRNA decay orchestrates neuronal migration and cortical lamination while modulating Reelin and ciliary gene regulatory networks. — *Cell reports* [both] tags=ciliary_body v=v2.0-new
+- PMID42316211 (2026) Bardet-Biedl syndrome 1 mutations differentially impact BBSome integrity and ciliary trafficking. — *Cell communication and signaling : CCS* [human] tags=ciliary_body v=v2.0-new
+- PMID42764995 (2026) Ciliary neurotrophic factor slows axonal transport of signalling endosomes. — *Brain communications* [mouse] tags=ciliary_body v=v2.0-new
+- PMID40009443 (2025) Control of ciliary transcriptional programs during spermatogenesis by antagonistic transcription factors. — *eLife* [mouse] tags=ciliary_body v=v2.0-new
+- PMID40956303 (2025) The ciliary kinesin KIF7 controls the development of the cerebral cortex by acting differentially on SHH signaling in dorsal and ventral forebrain. — *eLife* [both] tags=ciliary_body v=v2.0-new
+- PMID40623838 (2025) Identification of New Ciliary Signaling Pathways in the Brain and Insights into Neurological Disorders. — *The Journal of neuroscience : the official journal of the Society for Neuroscience* [mouse] tags=ciliary_body v=v2.0-new
+- PMID41056017 (2025) CDKL1 variants affecting ciliary formation predispose to thoracic aortic aneurysm and dissection. — *The Journal of clinical investigation* [human] tags=ciliary_body v=v2.0-new
+- PMID40396915 (2025) A conserved role for centriolar satellites in translation of centrosomal and ciliary proteins. — *The Journal of cell biology* [human] tags=ciliary_body v=v2.0-new
+- PMID39894222 (2025) A splicing variant in EFCAB7 hinders ciliary transport and disrupts cardiac development. — *The Journal of biological chemistry* [both] tags=ciliary_body v=v2.0-new
+- PMID40836034 (2025) BBS8-dependent ciliary Hedgehog signaling governs cell fate in the white adipose tissue. — *The EMBO journal* [both] tags=ciliary_body v=v2.0-new
+- PMID40319064 (2025) Restorative potential of ciliary body cells in a retinal ganglion cell degeneration model. — *Scientific reports* [mouse] tags=ciliary_body v=v2.0-new
+- PMID39747370 (2025) Temporal ablation of the ciliary protein IFT88 alters normal brainwave patterns. — *Scientific reports* [mouse] tags=ciliary_body v=v2.0-new
+- PMID40858722 (2025) Kras and ciliary gene mutations cooperatively lead to pancreatic tumorigenesis only when induced during embryogenesis. — *Scientific reports* [both] tags=ciliary_body v=v2.0-new
+- PMID41071877 (2025) Loss-of-function variants in ciliary genes confer high risk for tetralogy of Fallot. — *Science advances* [both] tags=ciliary_body v=v2.0-new
+- PMID40737317 (2025) Lysosomal glucocerebrosidase is needed for ciliary Hedgehog signaling: A convergent pathway contributing to Parkinson's disease. — *Proceedings of the National Academy of Sciences of the United States of America* [both] tags=ciliary_body v=v2.0-new
+- PMID40632733 (2025) Focal adhesion-related non-ciliary functions of CEP290. — *PloS one* [both] tags=ciliary_body v=v2.0-new
+- PMID41124206 (2025) C. elegans SAS-1 ensures centriole integrity and ciliary function, and operates with SSNA-1. — *PLoS genetics* [human] tags=ciliary_body v=v2.0-new
+- PMID41385589 (2025) Activation of the ciliary kinase CDKL5 is mediated by the cyclin-dependent kinase CDK20/LF2 to control flagellar length. — *PLoS biology* [mouse] tags=ciliary_body v=v2.0-new
+- PMID40188187 (2025) A differential requirement for ciliary transition zone proteins in human and mouse neural progenitor fate specification. — *Nature communications* [both] tags=ciliary_body v=v2.0-new
+- PMID40617876 (2025) The Mn-motif protein MAP6d1 assembles ciliary doublet microtubules. — *Nature communications* [both] tags=ciliary_body v=v2.0-new
+- PMID40389989 (2025) Mutations in NEK1 cause ciliary dysfunction as a novel pathogenic mechanism in amyotrophic lateral sclerosis. — *Molecular neurodegeneration* [human] tags=ciliary_body v=v2.0-new
+- PMID39575470 (2025) Ciliary neurotrophic factor activation of astrocytes mediates neuronal damage via the IL‑6/IL‑6R pathway. — *Molecular medicine reports* [human] tags=ciliary_body v=v2.0-new
+- PMID39565681 (2025) A defined tubby domain β-barrel surface region of TULP3 mediates ciliary trafficking of diverse cargoes. — *Molecular biology of the cell* [human] tags=ciliary_body v=v2.0-new
+- PMID39824631 (2025) NME7 maintains primary cilium assembly, ciliary microtubule stability, and Hedgehog signaling. — *Life science alliance* [both] tags=ciliary_body v=v2.0-new
+- PMID39539829 (2025) Isolated Recurrence of Diffuse Large B-Cell Lymphoma Predominantly in the Iris and Ciliary Body. — *Journal of vitreoretinal diseases* [human] tags=ciliary_body,iris v=v2.0-new
+- PMID41140281 (2025) Tackling ciliary specialization to understand phenotypic variability in human primary ciliopathies. — *Journal of cell science* [human] tags=ciliary_body v=v2.0-new
+- PMID40970667 (2025) Exon Skipping Therapy Restores Ciliary Function in USH2A-Related Retinal Degeneration. — *Investigative ophthalmology & visual science* [both] tags=ciliary_body v=v2.0-new
+- PMID40806783 (2025) CFAP300 Loss-of-Function Mutations with Primary Ciliary Dyskinesia: Evidence from Ex Vivo and ALI Cultures. — *International journal of molecular sciences* [human] tags=ciliary_body v=v2.0-new
+- PMID40292331 (2025) Differences in neuronal ciliation rate and ciliary content revealed by systematic imaging-based analysis of hiPSC-derived models across protocols. — *Frontiers in cell and developmental biology* [human] tags=ciliary_body v=v2.0-new
+- PMID39587330 (2025) BBSome-deficient cells activate intraciliary CDC42 to trigger actin-dependent ciliary ectocytosis. — *EMBO reports* [both] tags=ciliary_body v=v2.0-new
+- PMID40859055 (2025) EMT-ciliary signaling in quasi-mesenchymal-stem-like cells drives therapeutic resistance and is a druggable vulnerability in triple-negative breast cancer. — *EMBO molecular medicine* [human] tags=ciliary_body v=v2.0-new
+- PMID40552535 (2025) Ciliary biology intersects autism and congenital heart disease. — *Development (Cambridge, England)* [human] tags=ciliary_body v=v2.0-new
+- PMID39936988 (2025) Single-Cell RNA Sequencing on Formalin-Fixed and Paraffin-Embedded (FFPE) Tissue Identified Multi-Ciliary Cells in Breast Cancer. — *Cells* [human] tags=ciliary_body v=v2.0-new
+- PMID40862715 (2025) Systematic Comparison of Temperature Effects on Antibody Performance via Automated Image Analysis: A Key for Primary Ciliary Dyskinesia Diagnostic. — *Cells* [human] tags=ciliary_body v=v2.0-new
+- PMID39915276 (2025) Ciliary IFT-B Transportation Plays an Important Role in Human Endometrial Receptivity Establishment and is Disrupted in Recurrent Implantation Failure Patients. — *Cell proliferation* [human] tags=ciliary_body v=v2.0-new
+- PMID41057298 (2025) The dynamic role of TRIM8, a novel ciliary protein, during various stages of mitosis. — *Cell death & disease* [human] tags=ciliary_body v=v2.0-new
+- PMID41316318 (2025) Primary cilium and TULP3-dependent ciliary targeting of ACE2 in SARS-CoV-2 tropism. — *Cell communication and signaling : CCS* [human] tags=ciliary_body v=v2.0-new
+- PMID41327293 (2025) Podocalyxin and ciliary neurotrophic factor receptor are novel components of the surfaceome of chondrogenic cells. — *Cell communication and signaling : CCS* [human] tags=ciliary_body v=v2.0-new
+- PMID39671305 (2024) Ciliary length regulation by intraflagellar transport in zebrafish. — *eLife* [human] tags=ciliary_body v=v2.0-new
+- PMID39641991 (2024) A cryo-electron tomography study of ciliary rootlet organization. — *eLife* [mouse] tags=ciliary_body v=v2.0-new
+- PMID39137039 (2024) Central regulation of feeding and body weight by ciliary GPR75. — *The Journal of clinical investigation* [both] tags=ciliary_body v=v2.0-new
+- PMID39008680 (2024) KATNAL2 mutations link ciliary dysfunction to hydrocephalus and autism. — *Proceedings of the National Academy of Sciences of the United States of America* [human] tags=ciliary_body v=v2.0-new
+- PMID38635628 (2024) Parkinsonism Sac domain mutation in Synaptojanin-1 affects ciliary properties in iPSC-derived dopaminergic neurons. — *Proceedings of the National Academy of Sciences of the United States of America* [both] tags=ciliary_body v=v2.0-new
+- PMID38989623 (2024) CilioGenics: an integrated method and database for predicting novel ciliary genes. — *Nucleic acids research* [human] tags=ciliary_body v=v2.0-new
+- PMID38670973 (2024) Single-cell analyses reveal transient retinal progenitor cells in the ciliary margin of developing human retina. — *Nature communications* [human] tags=ciliary_body,retina v=v1.0
+- PMID38664376 (2024) Numb positively regulates Hedgehog signaling at the ciliary pocket. — *Nature communications* [both] tags=ciliary_body v=v2.0-new
+- PMID38773095 (2024) Ciliary tip actin dynamics regulate photoreceptor outer segment integrity. — *Nature communications* [both] tags=ciliary_body v=v2.0-new
+- PMID37490178 (2024) The implication of ciliary signaling pathways for epithelial-mesenchymal transition. — *Molecular and cellular biochemistry* [human] tags=ciliary_body v=v2.0-new
+- PMID39293864 (2024) Ccrk-Mak/Ick signaling is a ciliary transport regulator essential for retinal photoreceptor survival. — *Life science alliance* [both] tags=ciliary_body,retina v=v1.0
+- PMID39592934 (2024) Effects of a ciliary neurotrophic factor (CNTF) small-molecule peptide mimetic in an in vitro and in vivo model of CDKL5 deficiency disorder. — *Journal of neurodevelopmental disorders* [both] tags=ciliary_body v=v2.0-new
+- PMID38573618 (2024) The Pediatric and Young Adult Choroidal and Ciliary Body Melanoma Genetic Study, A Survey by the European Ophthalmic Oncology Group. — *Investigative ophthalmology & visual science* [human] tags=choroid,ciliary_body v=v2.0-new
+- PMID38542059 (2024) Platelet-Activating Factor Receptor (PAFR) Regulates Retinal Progenitor/Stem Cells Profile in Ciliary Epithelium Cells. — *International journal of molecular sciences* [unknown] tags=ciliary_body,retina v=v1.0
+- PMID39273233 (2024) FABP5 Is a Possible Factor for the Maintenance of Functions of Human Non-Pigmented Ciliary Epithelium Cells. — *International journal of molecular sciences* [human] tags=ciliary_body v=v2.0-new
+- PMID38223458 (2024) POMC Neuron BBSome Regulation of Body Weight is Independent of its Ciliary Function. — *Function (Oxford, England)* [human] tags=ciliary_body v=v2.0-new
+- PMID39606241 (2024) Indigenous gut microbiota constitutively drive release of ciliary neurotrophic factor from mucosal enteric glia to maintain the homeostasis of enteric neural circuits. — *Frontiers in immunology* [mouse] tags=ciliary_body v=v2.0-new
+- PMID38177908 (2024) TTLL12 is required for primary ciliary axoneme formation in polarized epithelial cells. — *EMBO reports* [unknown] tags=ciliary_body v=v2.0-new
+- PMID39270640 (2024) Protofilament-specific nanopatterns of tubulin post-translational modifications regulate the mechanics of ciliary beating. — *Current biology : CB* [unknown] tags=ciliary_body v=v2.0-new
+- PMID37319416 (2024) Whole-exome sequencing identified novel DNAH5 homozygous variants in two consanguineous families with primary ciliary dyskinesia. — *Chinese medical journal* [human] tags=ciliary_body v=v2.0-new
+- PMID39768188 (2024) The Biomechanics of Fibrillin Microfibrils: Lessons from the Ciliary Zonule. — *Cells* [human] tags=ciliary_body v=v2.0-new
+- PMID38334651 (2024) Postnatal Dynamic Ciliary ARL13B and ADCY3 Localization in the Mouse Brain. — *Cells* [mouse] tags=ciliary_body v=v2.0-new
+- PMID38670096 (2024) CRISPR-Cas9-mediated deletion of carbonic anhydrase 2 in the ciliary body to treat glaucoma. — *Cell reports. Medicine* [both] tags=ciliary_body v=v2.0-new
+- PMID39122680 (2024) CYLD/HDAC6 signaling regulates the interplay between epithelial-mesenchymal transition and ciliary homeostasis during pulmonary fibrosis. — *Cell death & disease* [both] tags=ciliary_body v=v2.0-new
+- PMID39696441 (2024) Distinct roles of centriole distal appendage proteins in ciliary assembly and disassembly. — *Cell communication and signaling : CCS* [human] tags=ciliary_body v=v2.0-new
+- PMID37034981 (2023) Neofunctionalization of ciliary BBS proteins to nuclear roles is likely a frequent innovation across eukaryotes. — *iScience* [human] tags=ciliary_body v=v2.0-new
+- PMID36849261 (2023) Physiological Condition-Dependent Changes in Ciliary GPCR Localization in the Brain. — *eNeuro* [mouse] tags=ciliary_body v=v2.0-new
+- PMID37057896 (2023) Calaxin stabilizes the docking of outer arm dyneins onto ciliary doublet microtubule in vertebrates. — *eLife* [human] tags=ciliary_body v=v2.0-new
+- PMID38096226 (2023) Ulk4 promotes Shh signaling by regulating Stk36 ciliary localization and Gli2 phosphorylation. — *eLife* [human] tags=ciliary_body v=v2.0-new
+- PMID36598133 (2023) Disrupting the ciliary gradient of active Arl3 affects rod photoreceptor nuclear migration. — *eLife* [both] tags=ciliary_body v=v2.0-new
+- PMID37756660 (2023) CEP104/FAP256 and associated cap complex maintain stability of the ciliary tip. — *The Journal of cell biology* [unknown] tags=ciliary_body v=v2.0-new
+- PMID36802443 (2023) Deficiency of the minor spliceosome component U4atac snRNA secondarily results in ciliary defects in human and zebrafish. — *Proceedings of the National Academy of Sciences of the United States of America* [human] tags=ciliary_body v=v2.0-new
+- PMID36669111 (2023) TMEM161B regulates cerebral cortical gyration, Sonic Hedgehog signaling, and ciliary structure in the developing central nervous system. — *Proceedings of the National Academy of Sciences of the United States of America* [both] tags=ciliary_body v=v2.0-new
+- PMID37844228 (2023) Ciliary localization of a light-activated neuronal GPCR shapes behavior. — *Proceedings of the National Academy of Sciences of the United States of America* [other] tags=ciliary_body v=v2.0-new
+- PMID38109525 (2023) Coexistence within one cell of microvillous and ciliary phototransductions across M1- through M6-IpRGCs. — *Proceedings of the National Academy of Sciences of the United States of America* [unknown] tags=ciliary_body v=v2.0-new
+- PMID37479688 (2023) MOF-mediated histone H4 Lysine 16 acetylation governs mitochondrial and ciliary functions by controlling gene promoters. — *Nature communications* [mouse] tags=ciliary_body v=v2.0-new
+- PMID37726137 (2023) MAST4 promotes primary ciliary resorption through phosphorylation of Tctex-1. — *Life science alliance* [human] tags=ciliary_body v=v2.0-new
+- PMID36914265 (2023) The ERK activator, BCI, inhibits ciliogenesis and causes defects in motor behavior, ciliary gating, and cytoskeletal rearrangement. — *Life science alliance* [human] tags=ciliary_body v=v2.0-new
+- PMID37015875 (2023) The actin-bundling protein Fascin-1 modulates ciliary signalling. — *Journal of molecular cell biology* [human] tags=ciliary_body v=v2.0-new
+- PMID36820148 (2023) An Integrated Analysis Reveals Ciliary Abnormalities in Antrochoanal Polyps. — *Journal of inflammation research* [human] tags=ciliary_body v=v2.0-new
+- PMID37071472 (2023) Gene augmentation of LCA5-associated Leber congenital amaurosis ameliorates bulge region defects of the photoreceptor ciliary axoneme. — *JCI insight* [mouse] tags=ciliary_body v=v2.0-new
+- PMID36797232 (2023) RGS12 represses oral squamous cell carcinoma by driving M1 polarization of tumor-associated macrophages via controlling ciliary MYCBP2/KIF2A signaling. — *International journal of oral science* [both] tags=ciliary_body v=v2.0-new
+- PMID37240074 (2023) WGS Revealed Novel <i>BBS5</i> Pathogenic Variants, Missed by WES, Causing Ciliary Structure and Function Defects. — *International journal of molecular sciences* [human] tags=ciliary_body v=v2.0-new
+- PMID36675184 (2023) Mechanical Stretch Activates TRPV4 and Hemichannel Responses in the Nonpigmented Ciliary Epithelium. — *International journal of molecular sciences* [other] tags=ciliary_body v=v2.0-new
+- PMID37239344 (2023) Loss of Primary Cilia Potentiates <i>BRAF/MAPK</i> Pathway Activation in Rhabdoid Colorectal Carcinoma: A Series of 21 Cases Showing Ciliary Rootlet CoiledCoil (<i>CROCC</i>) Alterations. — *Genes* [human] tags=ciliary_body v=v2.0-new
+- PMID37144094 (2023) Distribution of ciliary adaptor proteins tubby and TULP3 in the organ of Corti. — *Frontiers in neuroscience* [mouse] tags=ciliary_body v=v2.0-new
+- PMID36744302 (2023) Ubiquitylation of BBSome is required for ciliary assembly and signaling. — *EMBO reports* [unknown] tags=ciliary_body v=v2.0-new
+- PMID37830570 (2023) Increasing Ciliary ARL13B Expression Drives Active and Inhibitor-Resistant Smoothened and GLI into Glioma Primary Cilia. — *Cells* [human] tags=ciliary_body v=v2.0-new
+- PMID36775821 (2023) Human IFT-A complex structures provide molecular insights into ciliary transport. — *Cell research* [human] tags=ciliary_body v=v2.0-new
+- PMID36063381 (2022) Multiple ciliary localization signals control INPP5E ciliary targeting. — *eLife* [human] tags=ciliary_body v=v2.0-new
+- PMID35475783 (2022) Mechanical stimulation promotes enthesis injury repair by mobilizing <i>Prrx1</i><sup>+</sup> cells via ciliary TGF-β signaling. — *eLife* [mouse] tags=ciliary_body v=v2.0-new
+- PMID36129685 (2022) ARL3 mediates BBSome ciliary turnover by promoting its outward movement across the transition zone. — *The Journal of cell biology* [unknown] tags=ciliary_body v=v2.0-new
+- PMID34997029 (2022) Combinations of deletion and missense variations of the dynein-2 DYNC2LI1 subunit found in skeletal ciliopathies cause ciliary defects. — *Scientific reports* [human] tags=ciliary_body v=v2.0-new
+- PMID36114230 (2022) The interaction between LC8 and LCA5 reveals a novel oligomerization function of LC8 in the ciliary-centrosome system. — *Scientific reports* [unknown] tags=ciliary_body v=v2.0-new
+- PMID36155669 (2022) Light chain 2 is a Tctex-type related axonemal dynein light chain that regulates directional ciliary motility in Trypanosoma brucei. — *PLoS pathogens* [unknown] tags=ciliary_body v=v2.0-new
+- PMID36074756 (2022) Deletion of CEP164 in mouse photoreceptors post-ciliogenesis interrupts ciliary intraflagellar transport (IFT). — *PLoS genetics* [mouse] tags=ciliary_body v=v2.0-new
+- PMID34979259 (2022) Primary cilia and ciliary signaling pathways in aging and age-related brain disorders. — *Neurobiology of disease* [human] tags=ciliary_body v=v2.0-new
+- PMID35810181 (2022) Ciliary transition zone proteins coordinate ciliary protein composition and ectosome shedding. — *Nature communications* [human] tags=ciliary_body v=v2.0-new
+- PMID36074075 (2022) CEP19-RABL2-IFT-B axis controls BBSome-mediated ciliary GPCR export. — *Molecular biology of the cell* [human] tags=ciliary_body v=v2.0-new
+- PMID35704471 (2022) Molecular basis underlying the ciliary defects caused by &lt;i&gt;IFT52&lt;/i&gt; variations found in skeletal ciliopathies. — *Molecular biology of the cell* [human] tags=ciliary_body v=v2.0-new
+- PMID34818063 (2022) The ARF GAPs ELMOD1 and ELMOD3 act at the Golgi and cilia to regulate ciliogenesis and ciliary protein traffic. — *Molecular biology of the cell* [mouse] tags=ciliary_body v=v2.0-new
+- PMID34705483 (2022) Hedgehog-induced ciliary trafficking of kinesin-4 motor KIF7 requires intraflagellar transport but not KIF7's microtubule binding. — *Molecular biology of the cell* [mouse] tags=ciliary_body v=v2.0-new
+- PMID35038201 (2022) Ciliary IFT88 Protects Coordinated Adolescent Growth Plate Ossification From Disruptive Physiological Mechanical Forces. — *Journal of bone and mineral research : the official journal of the American Society for Bone and Mineral Research* [mouse] tags=ciliary_body v=v2.0-new
+- PMID36233334 (2022) Interactions between C8orf37 and FAM161A, Two Ciliary Proteins Essential for Photoreceptor Survival. — *International journal of molecular sciences* [human] tags=ciliary_body v=v2.0-new
+- PMID35806143 (2022) Ciliary Proteins Repurposed by the Synaptic Ribbon: Trafficking Myristoylated Proteins at Rod Photoreceptor Synapses. — *International journal of molecular sciences* [human] tags=ciliary_body v=v2.0-new
+- PMID35955469 (2022) Ciliary Neurotrophic Factor (CNTF) and Its Receptors Signal Regulate Cementoblasts Apoptosis through a Mechanism of ERK1/2 and Caspases Signaling. — *International journal of molecular sciences* [unknown] tags=ciliary_body v=v2.0-new
+- PMID36012576 (2022) Ciliary Neurotrophic Factor (CNTF) Inhibits In Vitro Cementoblast Mineralization and Induces Autophagy, in Part by STAT3/ERK Commitment. — *International journal of molecular sciences* [unknown] tags=ciliary_body v=v2.0-new
+- PMID35253837 (2022) PCARE requires coiled coil, RP62 kinase-binding and EVH1 domain-binding motifs for ciliary expansion. — *Human molecular genetics* [mouse] tags=ciliary_body v=v2.0-new
+- PMID36699005 (2022) Ciliary signaling proteins are mislocalized in the brains of Bardet-Biedl syndrome 1-null mice. — *Frontiers in cell and developmental biology* [both] tags=ciliary_body v=v2.0-new
+- PMID36561368 (2022) Ciliary control of adipocyte progenitor cell fate regulates energy storage. — *Frontiers in cell and developmental biology* [unknown] tags=ciliary_body v=v2.0-new
+- PMID35741122 (2022) Underlying Ciliary Body Uveal Melanoma in a Patient with Chronic Lymphocytic Leukemia Presenting for Hyphema. — *Diagnostics (Basel, Switzerland)* [human] tags=ciliary_body v=v2.0-new
+- PMID36163311 (2022) A single-cell transcriptomic atlas of the human ciliary body. — *Cellular and molecular life sciences : CMLS* [human] tags=ciliary_body v=v2.0-new
+- PMID35584663 (2022) The ciliary gene INPP5E confers dorsal telencephalic identity to human cortical organoids by negatively regulating Sonic hedgehog signaling. — *Cell reports* [human] tags=ciliary_body v=v2.0-new
+- PMID36180752 (2022) Cilia regeneration requires an RNA splicing factor from the ciliary base. — *Cell regeneration (London, England)* [unknown] tags=ciliary_body v=v2.0-new
+- PMID35794391 (2022) Modulation of matrix metalloproteases by ciliary neurotrophic factor in human placental development. — *Cell and tissue research* [human] tags=ciliary_body v=v2.0-new
+- PMID36497399 (2022) Ciliary Neurotrophic Factor Modulates Multiple Downstream Signaling Pathways in Prostate Cancer Inhibiting Cell Invasiveness. — *Cancers* [human] tags=ciliary_body v=v2.0-new
+- PMID35965828 (2022) The ciliary protein Spef2 stimulates acinar Ampkα/Sirt1 signaling and ameliorates acute pancreatitis and associated lung injury. — *Annals of translational medicine* [other] tags=ciliary_body v=v2.0-new
+- PMID34783461 (2022) Ciliary Type III Adenylyl Cyclase in the VMH Is Crucial for High-Fat Diet-Induced Obesity Mediated by Autophagy. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [mouse] tags=ciliary_body v=v2.0-new
+- PMID34346313 (2021) Ciliary and extraciliary Gpr161 pools repress hedgehog signaling in a tissue-specific manner. — *eLife* [mouse] tags=ciliary_body v=v2.0-new
+- PMID34734804 (2021) A WDR35-dependent coat protein complex transports ciliary membrane cargo vesicles to cilia. — *eLife* [mouse] tags=ciliary_body v=v2.0-new
+- PMID34672258 (2021) Ciliary Hedgehog signaling regulates cell survival to build the facial midline. — *eLife* [both] tags=ciliary_body v=v2.0-new
+- PMID33650969 (2021) Ciliary neuropeptidergic signaling dynamically regulates excitatory synapses in postnatal neocortical pyramidal neurons. — *eLife* [other] tags=ciliary_body v=v2.0-new
+- PMID34533135 (2021) Ectocytosis prevents accumulation of ciliary cargo in <i>C. elegans</i> sensory neurons. — *eLife* [unknown] tags=ciliary_body v=v2.0-new
+- PMID33587040 (2021) Bardet-Biedl syndrome 3 protein promotes ciliary exit of the signaling protein phospholipase D via the BBSome. — *eLife* [unknown] tags=ciliary_body v=v2.0-new
+- PMID33284321 (2021) Sterol and oxysterol synthases near the ciliary base activate the Hedgehog pathway. — *The Journal of cell biology* [mouse] tags=ciliary_body v=v2.0-new
+- PMID34161574 (2021) E3 ubiquitin ligase Wwp1 regulates ciliary dynamics of the Hedgehog receptor Smoothened. — *The Journal of cell biology* [both] tags=ciliary_body v=v2.0-new
+- PMID33856408 (2021) Time-resolved proteomics profiling of the ciliary Hedgehog response. — *The Journal of cell biology* [both] tags=ciliary_body v=v2.0-new
+- PMID33234597 (2021) Separable roles for RanGTP in nuclear and ciliary trafficking of a kinesin-2 subunit. — *The Journal of biological chemistry* [human] tags=ciliary_body v=v2.0-new
+- PMID34040021 (2021) Genetic variant of TTLL11 gene and subsequent ciliary defects are associated with idiopathic scoliosis in a 5-generation UK family. — *Scientific reports* [human] tags=ciliary_body v=v2.0-new
+- PMID33927279 (2021) Estrogen withdrawal alters cytoskeletal and primary ciliary dynamics resulting in increased Hedgehog and osteoclastogenic paracrine signalling in osteocytes. — *Scientific reports* [mouse] tags=ciliary_body v=v2.0-new
+- PMID34083607 (2021) Composition and function of the C1b/C1f region in the ciliary central apparatus. — *Scientific reports* [unknown] tags=ciliary_body v=v2.0-new
+- PMID34644112 (2021) Ciliary protein Kif7 regulates Gli and Ezh2 for initiating the neuronal differentiation of enteric neural crest cells during development. — *Science advances* [both] tags=ciliary_body v=v2.0-new
+- PMID34162535 (2021) Ciliopathy protein HYLS1 coordinates the biogenesis and signaling of primary cilia by activating the ciliary lipid kinase PIPKIγ. — *Science advances* [unknown] tags=ciliary_body v=v2.0-new
+- PMID33637535 (2021) A dynein-associated photoreceptor protein prevents ciliary acclimation to blue light. — *Science advances* [unknown] tags=ciliary_body v=v2.0-new
+- PMID33846249 (2021) A complex of distal appendage-associated kinases linked to human disease regulates ciliary trafficking and stability. — *Proceedings of the National Academy of Sciences of the United States of America* [both] tags=ciliary_body v=v2.0-new
+- PMID34624068 (2021) CCRK/CDK20 regulates ciliary retrograde protein trafficking via interacting with BROMI/TBC1D32. — *PloS one* [both] tags=ciliary_body v=v2.0-new
+- PMID33318704 (2021) Structure of the radial spoke head and insights into its role in mechanoregulation of ciliary beating. — *Nature structural & molecular biology* [human] tags=ciliary_body v=v2.0-new
+- PMID34893605 (2021) Ciliary Hedgehog signaling patterns the digestive system to generate mechanical forces driving elongation. — *Nature communications* [mouse] tags=ciliary_body v=v2.0-new
+- PMID34462398 (2021) Differential Roles of Tubby Family Proteins in Ciliary Formation and Trafficking. — *Molecules and cells* [both] tags=ciliary_body v=v2.0-new
+- PMID34613793 (2021) An updated SYSCILIA gold standard (SCGSv2) of known ciliary genes, revealing the vast progress that has been made in the cilia research field. — *Molecular biology of the cell* [human] tags=ciliary_body v=v2.0-new
+- PMID33175651 (2021) Cooperation of the IFT-A complex with the IFT-B complex is required for ciliary retrograde protein trafficking and GPCR import. — *Molecular biology of the cell* [human] tags=ciliary_body v=v2.0-new
+- PMID33625872 (2021) Rpgrip1l controls ciliary gating by ensuring the proper amount of Cep290 at the vertebrate transition zone. — *Molecular biology of the cell* [both] tags=ciliary_body v=v2.0-new
+- PMID33720362 (2021) Ciliary Rootlet Coiled-Coil 2 (crocc2) Is Associated with Evolutionary Divergence and Plasticity of Cichlid Jaw Shape. — *Molecular biology and evolution* [other] tags=ciliary_body v=v2.0-new
+- PMID33372037 (2021) HTR6 and SSTR3 ciliary targeting relies on both IC3 loops and C-terminal tails. — *Life science alliance* [both] tags=ciliary_body v=v2.0-new
+- PMID33653689 (2021) nNOS regulates ciliated cell polarity, ciliary beat frequency, and directional flow in mouse trachea. — *Life science alliance* [both] tags=ciliary_body v=v2.0-new
+- PMID33936569 (2021) Ciliary extracellular vesicles are distinct from the cytosolic extracellular vesicles. — *Journal of extracellular vesicles* [both] tags=ciliary_body v=v2.0-new
+- PMID34405951 (2021) Identification of compound heterozygous DNAH11 variants in a Han-Chinese family with primary ciliary dyskinesia. — *Journal of cellular and molecular medicine* [human] tags=ciliary_body v=v2.0-new
+- PMID33646289 (2021) Nanophthalmos-Associated MYRF Gene Mutation Causes Ciliary Zonule Defects in Mice. — *Investigative ophthalmology & visual science* [both] tags=ciliary_body v=v2.0-new
+- PMID33749722 (2021) Let-7, Lin28 and Hmga2 Expression in Ciliary Epithelium and Retinal Progenitor Cells. — *Investigative ophthalmology & visual science* [other] tags=ciliary_body v=v2.0-new
+- PMID34207050 (2021) Retinal Stem Cell 'Retirement Plans': Growth, Regulation and Species Adaptations in the Retinal Ciliary Marginal Zone. — *International journal of molecular sciences* [human] tags=ciliary_body,retina v=v1.0
+- PMID33916973 (2021) Semi-Lethal Primary Ciliary Dyskinesia in Rats Lacking the <i>Nme7</i> Gene. — *International journal of molecular sciences* [other] tags=ciliary_body v=v2.0-new
+- PMID34066037 (2021) Involvement of Huntingtin in Development and Ciliary Beating Regulation of Larvae of the Sea Urchin, <i>Hemicentrotus pulcherrimus</i>. — *International journal of molecular sciences* [unknown] tags=ciliary_body v=v2.0-new
+- PMID33809498 (2021) Central Apparatus, the Molecular Kickstarter of Ciliary and Flagellar Nanomachines. — *International journal of molecular sciences* [unknown] tags=ciliary_body v=v2.0-new
+- PMID33355362 (2021) RPGR isoform imbalance causes ciliary defects due to exon ORF15 mutations in X-linked retinitis pigmentosa (XLRP). — *Human molecular genetics* [human] tags=ciliary_body v=v2.0-new
+- PMID34385262 (2021) Discovery of ciliary G protein-coupled receptors regulating pancreatic islet insulin and glucagon secretion. — *Genes & development* [both] tags=ciliary_body v=v2.0-new
+- PMID34717927 (2021) Single-cell RNA-sequencing analysis of the ciliary epithelium and contiguous tissues in the mouse eye. — *Experimental eye research* [mouse] tags=ciliary_body v=v2.0-new
+- PMID34169630 (2021) Aurora Kinase A proximity map reveals centriolar satellites as regulators of its ciliary function. — *EMBO reports* [human] tags=ciliary_body v=v2.0-new
+- PMID33972689 (2021) ARP-T1-associated Bazex-Dupré-Christol syndrome is an inherited basal cell cancer with ciliary defects characteristic of ciliopathies. — *Communications biology* [human] tags=ciliary_body v=v2.0-new
+- PMID34854775 (2021) A retrospective review of Achromobacter species and antibiotic treatments in patients with primary ciliary dyskinesia. — *Chronic respiratory disease* [human] tags=ciliary_body v=v2.0-new
+- PMID34863182 (2021) Ciliary photoreceptors in sea urchin larvae indicate pan-deuterostome cell type conservation. — *BMC biology* [unknown] tags=ciliary_body v=v2.0-new
+- PMID32840212 (2020) A transient role of the ciliary gene <i>Inpp5e</i> in controlling direct versus indirect neurogenesis in cortical development. — *eLife* [mouse] tags=ciliary_body v=v2.0-new
+- PMID31740506 (2020) Ciliary force-responsive striated fibers promote basal body connections and cortical interactions. — *The Journal of cell biology* [unknown] tags=ciliary_body v=v2.0-new
+- PMID32368833 (2020) Insufficiency of ciliary cholesterol in hereditary Zellweger syndrome. — *The EMBO journal* [human] tags=ciliary_body v=v2.0-new
+- PMID32375023 (2020) CCDC61/VFL3 Is a Paralog of SAS6 and Promotes Ciliary Functions. — *Structure (London, England : 1993)* [human] tags=ciliary_body v=v2.0-new
+- PMID32313077 (2020) Impacts of ciliary neurotrophic factor on the retinal transcriptome in a mouse model of photoreceptor degeneration. — *Scientific reports* [both] tags=ciliary_body,retina v=v1.0
+- PMID33168876 (2020) Centrosome and ciliary abnormalities in fetal akinesia deformation sequence human fibroblasts. — *Scientific reports* [human] tags=ciliary_body v=v2.0-new
+- PMID32647199 (2020) dnmt1 function is required to maintain retinal stem cells within the ciliary marginal zone of the zebrafish eye. — *Scientific reports* [other] tags=ciliary_body v=v2.0-new
+- PMID32792522 (2020) Mycoplasma hyopneumoniae J elicits an antioxidant response and decreases the expression of ciliary genes in infected swine epithelial cells. — *Scientific reports* [unknown] tags=ciliary_body v=v2.0-new
+- PMID32312818 (2020) PCARE and WASF3 regulate ciliary F-actin assembly that is required for the initiation of photoreceptor outer segment disk formation. — *Proceedings of the National Academy of Sciences of the United States of America* [both] tags=ciliary_body v=v2.0-new
+- PMID33141819 (2020) Mutations in PIH proteins MOT48, TWI1 and PF13 define common and unique steps for preassembly of each, different ciliary dynein. — *PLoS genetics* [human] tags=ciliary_body v=v2.0-new
+- PMID33370260 (2020) CEP290 is essential for the initiation of ciliary transition zone assembly. — *PLoS biology* [human] tags=ciliary_body v=v2.0-new
+- PMID32163404 (2020) MKS-NPHP module proteins control ciliary shedding at the transition zone. — *PLoS biology* [unknown] tags=ciliary_body v=v2.0-new
+- PMID33214552 (2020) PCM1 is necessary for focal ciliary integrity and is a candidate for severe schizophrenia. — *Nature communications* [both] tags=ciliary_body v=v2.0-new
+- PMID32820176 (2020) Genes with spiralian-specific protein motifs are expressed in spiralian ciliary bands. — *Nature communications* [unknown] tags=ciliary_body v=v2.0-new
+- PMID32726168 (2020) Formation of the B9-domain protein complex MKS1-B9D2-B9D1 is essential as a diffusion barrier for ciliary membrane proteins. — *Molecular biology of the cell* [human] tags=ciliary_body v=v2.0-new
+- PMID33298129 (2020) Effect of ciliary neurotrophic factor on neural differentiation of stem cells of human exfoliated deciduous teeth. — *Journal of biological engineering* [human] tags=ciliary_body v=v2.0-new
+- PMID32916859 (2020) Involvement of Netrin/Unc-5 Interaction in Ciliary Beating and in Pattern Formation of the Ciliary Band-Associated Strand (CBAS) in the Sea Urchin, <i>Hemicentrotus pulcherrimus</i>. — *International journal of molecular sciences* [mouse] tags=ciliary_body v=v2.0-new
+- PMID33193130 (2020) Morpholino-Mediated Knockdown of Ciliary Genes in <i>Euplotes vannus</i>, a Novel Marine Ciliated Model Organism. — *Frontiers in microbiology* [human] tags=ciliary_body v=v2.0-new
+- PMID32528252 (2020) Ciliary Neurotrophic Factor Acts on Distinctive Hypothalamic Arcuate Neurons and Promotes Leptin Entry Into and Action on the Mouse Hypothalamus. — *Frontiers in cellular neuroscience* [both] tags=ciliary_body v=v2.0-new
+- PMID32452112 (2020) An immune response to the avascular lens following wounding of the cornea involves ciliary zonule fibrils. — *FASEB journal : official publication of the Federation of American Societies for Experimental Biology* [mouse] tags=ciliary_body v=v2.0-new
+- PMID33196317 (2020) Monoallelic Mutations in <i>CC2D1A</i> Suggest a Novel Role in Human Heterotaxy and Ciliary Dysfunction. — *Circulation. Genomic and precision medicine* [human] tags=ciliary_body v=v2.0-new
+- PMID31936298 (2020) Expression of Melatonin and Dopamine D<sub>3</sub> Receptor Heteromers in Eye Ciliary Body Epithelial Cells and Negative Correlation with Ocular Hypertension. — *Cells* [human] tags=ciliary_body v=v2.0-new
+- PMID31979260 (2020) Regulation of the Extracellular Matrix by Ciliary Machinery. — *Cells* [human] tags=ciliary_body v=v2.0-new
+- PMID33023312 (2020) Transplantation Efficacy of Human Ciliary Epithelium Cells from Fetal Eye and Lin-ve Stem Cells from Umbilical Cord Blood in the Murine Retinal Degeneration Model of Laser Injury. — *Cell transplantation* [both] tags=ciliary_body v=v2.0-new
+- PMID32690089 (2020) Meningioma cells express primary cilia but do not transduce ciliary Hedgehog signals. — *Acta neuropathologica communications* [human] tags=ciliary_body v=v2.0-new
+
+---
+<!-- KB1V2-WIKILINKS v1.1 -->
+## 判读层链接 (判读层链接版本: KB1v2 (2026-09-23, t_16c3e020))
+
+- **组成基线**: [kb/baselines/ciliary_body.md](/mnt/D/EyeKB/kb/baselines/ciliary_body.md) — 供者级条件参考分布 (锚定 registry 标准集或 t_6f5cc731 映射)
+- **RAG reason-tag**: 每条 PMID 的入库原因/论断关系/证据条件见 `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (键=pmid; 字段 inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` 命中自动联表带出
+- **概念 ID 映射**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
+- 红线: 本页与全部链接内容仅证据引用与 QC 旗, 禁入打分 (ANNOTATION_PROTOCOL_v1.1.md §0)

@@ -1,0 +1,2145 @@
+{
+ "schema": "eyekb-baseline/1.1",
+ "entry_id": "baseline_human_ocular_surface",
+ "tissue": "ocular_surface",
+ "species": "human",
+ "title": "组成基线: 人(正常)眼表 adult-only 主档 — 角膜/limbus/巩膜超级类 (D002, 供者级条件参考分布, KB2c 发育轴单列)",
+ "status": "filled_donor_level",
+ "generated": "2026-09-23",
+ "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c 发育轴单列 t_be336eee)",
+ "card": "t_16c3e020",
+ "anchor": {
+  "registry_row": "OA-D002 (CELLxGENE-OcularSurface)",
+  "registry_csv": "/mnt/D/OcularKB/registry/ocular_public_datasets_verified_v1.csv",
+  "local_path": "/mnt/D/OcularKB/data/D002_ocularsurface/D002_allcells_578K.h5ad",
+  "collection": "https://cellxgene.cziscience.com/collections/0f7d022a-46c7-4e64-be4c-e34adbb78089",
+  "tier": "T1 已注释标准集"
+ },
+ "category_note": "眼表为超级类 (cornea/limbus/sclera/conjunctiva 合并口径, 类目=per-region 多套禁跨区套用); conjunctiva/sclera 独立骨架另立 (t_6f5cc731 裁定: 结膜=数据不足, 建议并入眼表亚群标注)。",
+ "t2_fields": {
+  "取样材料": "人眼表离体组织: cornea / corneo-scleral junction(limbus) / sclera / ocular surface region / corneal endothelium (移植角膜内皮边缘碎块)",
+  "疾病阶段": "normal (disease 列全 normal; 供者为眼库捐献角膜缘/巩膜环)",
+  "治疗背景": "未记录 (眼库捐献元数据无治疗列)",
+  "平台": "scRNA-seq (suspension_type=cell 100%, 10x 3' v2/v3) —— 与 D001 retina(核) 不同口径, 跨基线比较注意",
+  "富集步骤": "无细胞分选记录 (全组织解离直接上机)",
+  "解离方法": "机械+酶解离; 主要试剂: 2 mg/ml Collagenase A×206,010细胞; 1.5 mg/ml Collagenase A×166,417细胞; 2.5 mg/ml Collagenase A×88,531细胞; 5 mg/ml collagenase A×46,892细胞",
+  "供者数": "主档 adult-only 41 donors / 67 供者单元; 对照档 adult_pool 50 donors / 84 单元 (含 9 非 adult 供者如 newborn 0-28d → 逐行见 excluded_nonadult_units)",
+  "计数分母": "577,857 cells (majorclass 全标注)",
+  "证据来源": "本地实测复算 (A) + CELLxGENE collection 官方注释 (portal)"
+ },
+ "usage_scope": "用途口径 (Astra T2 裁定固化): 本基线 = 该取样材料在该实验流程下捕获到的细胞构成的身份参考 + 背景对照; **不得当组成达标线**。疾病手术材料的取样对象 ≠ 健康器官 (如 PDR 纤维血管膜不得对照健康视网膜组成验收); 注释数据出现清单外身份 → 触发 unexpected 旗即可, 不得强制改成清单内身份 (标签接受上下文一致性核查, 非白名单定位)。",
+ "evidence_grades": {
+  "A": "本地实测复算 (带文件路径+脚本)",
+  "B": "文献原文直接报告",
+  "C": "A 级源数据供者级/跨研究分布推得的经验区间",
+  "qualitative": "文献仅定性描述 → 只存定性, 不补造区间 (Astra T2)",
+  "not_estimable": "区间无法估计 —— 合法状态, 注释仍可开展 (Astra T2)"
+ },
+ "distribution_method": "供者级 (donor|组织组 单元); 组织组先分层, 不跨组合并 (Astra T2); KB2c: 主档仅 adult 供者单元; pooled 仅对照",
+ "donor_level_main": {
+  "Corneal Endothelium": {
+   "n_units": 67,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "range_pct": [
+    0.0,
+    100.0
+   ]
+  },
+  "Endothelium": {
+   "n_units": 67,
+   "median_pct": 3.42,
+   "iqr_pct": [
+    0.0,
+    8.99
+   ],
+   "range_pct": [
+    0.0,
+    43.48
+   ]
+  },
+  "Epithelium": {
+   "n_units": 67,
+   "median_pct": 50.48,
+   "iqr_pct": [
+    7.26,
+    70.25
+   ],
+   "range_pct": [
+    0.0,
+    99.62
+   ]
+  },
+  "Fibroblasts": {
+   "n_units": 67,
+   "median_pct": 28.53,
+   "iqr_pct": [
+    12.65,
+    44.01
+   ],
+   "range_pct": [
+    0.0,
+    93.77
+   ]
+  },
+  "Immune Cells": {
+   "n_units": 67,
+   "median_pct": 1.12,
+   "iqr_pct": [
+    0.4,
+    2.6
+   ],
+   "range_pct": [
+    0.0,
+    37.71
+   ]
+  },
+  "Melanocytes": {
+   "n_units": 67,
+   "median_pct": 0.29,
+   "iqr_pct": [
+    0.0,
+    2.45
+   ],
+   "range_pct": [
+    0.0,
+    48.63
+   ]
+  },
+  "Pericytes": {
+   "n_units": 67,
+   "median_pct": 2.03,
+   "iqr_pct": [
+    0.0,
+    4.27
+   ],
+   "range_pct": [
+    0.0,
+    41.31
+   ]
+  },
+  "Schwann Cells": {
+   "n_units": 67,
+   "median_pct": 0.23,
+   "iqr_pct": [
+    0.0,
+    1.06
+   ],
+   "range_pct": [
+    0.0,
+    20.52
+   ]
+  },
+  "Smooth Muscle Cells": {
+   "n_units": 67,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "range_pct": [
+    0.0,
+    63.33
+   ]
+  }
+ },
+ "pooled_adult_only_main": {
+  "Corneal Endothelium": 0.1,
+  "Endothelium": 5.75,
+  "Epithelium": 44.59,
+  "Fibroblasts": 39.04,
+  "Immune Cells": 1.87,
+  "Melanocytes": 1.48,
+  "Pericytes": 5.79,
+  "Schwann Cells": 0.89,
+  "Smooth Muscle Cells": 0.49
+ },
+ "pooled_all_cells": {
+  "Corneal Endothelium": 0.07,
+  "Endothelium": 5.76,
+  "Epithelium": 43.32,
+  "Fibroblasts": 39.84,
+  "Immune Cells": 1.73,
+  "Melanocytes": 1.25,
+  "Pericytes": 6.49,
+  "Schwann Cells": 1.05,
+  "Smooth Muscle Cells": 0.48
+ },
+ "strata": [
+  {
+   "tissue_group": "cornea (含角膜上皮/固有质)",
+   "n_donors": 34,
+   "n_cells": 218598,
+   "donor_level": {
+    "Corneal Endothelium": {
+     "n_units": 34,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      2.64
+     ]
+    },
+    "Endothelium": {
+     "n_units": 34,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      1.04
+     ],
+     "range_pct": [
+      0.0,
+      15.6
+     ]
+    },
+    "Epithelium": {
+     "n_units": 34,
+     "median_pct": 65.2,
+     "iqr_pct": [
+      29.4,
+      81.04
+     ],
+     "range_pct": [
+      4.83,
+      99.62
+     ]
+    },
+    "Fibroblasts": {
+     "n_units": 34,
+     "median_pct": 30.35,
+     "iqr_pct": [
+      15.49,
+      66.9
+     ],
+     "range_pct": [
+      0.0,
+      93.77
+     ]
+    },
+    "Immune Cells": {
+     "n_units": 34,
+     "median_pct": 0.55,
+     "iqr_pct": [
+      0.32,
+      1.2
+     ],
+     "range_pct": [
+      0.0,
+      9.5
+     ]
+    },
+    "Melanocytes": {
+     "n_units": 34,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.4
+     ],
+     "range_pct": [
+      0.0,
+      6.6
+     ]
+    },
+    "Pericytes": {
+     "n_units": 34,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.22
+     ],
+     "range_pct": [
+      0.0,
+      3.72
+     ]
+    },
+    "Schwann Cells": {
+     "n_units": 34,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      3.31
+     ]
+    },
+    "Smooth Muscle Cells": {
+     "n_units": 34,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.64
+     ]
+    }
+   },
+   "donor_level_adult_only": {
+    "Corneal Endothelium": {
+     "n_units": 29,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      2.64
+     ]
+    },
+    "Endothelium": {
+     "n_units": 29,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      1.35
+     ],
+     "range_pct": [
+      0.0,
+      15.6
+     ]
+    },
+    "Epithelium": {
+     "n_units": 29,
+     "median_pct": 63.08,
+     "iqr_pct": [
+      29.31,
+      79.27
+     ],
+     "range_pct": [
+      4.83,
+      99.62
+     ]
+    },
+    "Fibroblasts": {
+     "n_units": 29,
+     "median_pct": 32.09,
+     "iqr_pct": [
+      14.88,
+      67.25
+     ],
+     "range_pct": [
+      0.0,
+      93.77
+     ]
+    },
+    "Immune Cells": {
+     "n_units": 29,
+     "median_pct": 0.55,
+     "iqr_pct": [
+      0.31,
+      1.58
+     ],
+     "range_pct": [
+      0.0,
+      9.5
+     ]
+    },
+    "Melanocytes": {
+     "n_units": 29,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.71
+     ],
+     "range_pct": [
+      0.0,
+      6.6
+     ]
+    },
+    "Pericytes": {
+     "n_units": 29,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.25
+     ],
+     "range_pct": [
+      0.0,
+      3.72
+     ]
+    },
+    "Schwann Cells": {
+     "n_units": 29,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      3.31
+     ]
+    },
+    "Smooth Muscle Cells": {
+     "n_units": 29,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.64
+     ]
+    }
+   },
+   "n_units_adult_only": 29,
+   "adult_fallback_guard": null
+  },
+  {
+   "tissue_group": "corneal endothelium (单独层, 仅 404 细胞)",
+   "n_donors": 2,
+   "n_cells": 404,
+   "donor_level": {
+    "Corneal Endothelium": {
+     "n_units": 2,
+     "median_pct": 100.0,
+     "iqr_pct": [
+      100.0,
+      100.0
+     ],
+     "range_pct": [
+      100.0,
+      100.0
+     ]
+    },
+    "Endothelium": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Epithelium": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Fibroblasts": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Immune Cells": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Melanocytes": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Pericytes": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Schwann Cells": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Smooth Muscle Cells": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "donor_level_adult_only": {
+    "Corneal Endothelium": {
+     "n_units": 2,
+     "median_pct": 100.0,
+     "iqr_pct": [
+      100.0,
+      100.0
+     ],
+     "range_pct": [
+      100.0,
+      100.0
+     ]
+    },
+    "Endothelium": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Epithelium": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Fibroblasts": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Immune Cells": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Melanocytes": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Pericytes": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Schwann Cells": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Smooth Muscle Cells": {
+     "n_units": 2,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "n_units_adult_only": 2,
+   "adult_fallback_guard": null
+  },
+  {
+   "tissue_group": "corneo-scleral junction (limbus 区)",
+   "n_donors": 28,
+   "n_cells": 244108,
+   "donor_level": {
+    "Corneal Endothelium": {
+     "n_units": 28,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Endothelium": {
+     "n_units": 28,
+     "median_pct": 6.68,
+     "iqr_pct": [
+      5.14,
+      10.52
+     ],
+     "range_pct": [
+      0.92,
+      18.67
+     ]
+    },
+    "Epithelium": {
+     "n_units": 28,
+     "median_pct": 55.92,
+     "iqr_pct": [
+      33.5,
+      67.6
+     ],
+     "range_pct": [
+      0.0,
+      91.73
+     ]
+    },
+    "Fibroblasts": {
+     "n_units": 28,
+     "median_pct": 28.14,
+     "iqr_pct": [
+      10.02,
+      39.76
+     ],
+     "range_pct": [
+      0.0,
+      89.24
+     ]
+    },
+    "Immune Cells": {
+     "n_units": 28,
+     "median_pct": 1.5,
+     "iqr_pct": [
+      0.82,
+      2.66
+     ],
+     "range_pct": [
+      0.2,
+      37.71
+     ]
+    },
+    "Melanocytes": {
+     "n_units": 28,
+     "median_pct": 1.55,
+     "iqr_pct": [
+      0.3,
+      2.85
+     ],
+     "range_pct": [
+      0.0,
+      21.21
+     ]
+    },
+    "Pericytes": {
+     "n_units": 28,
+     "median_pct": 3.69,
+     "iqr_pct": [
+      2.69,
+      6.31
+     ],
+     "range_pct": [
+      0.0,
+      19.37
+     ]
+    },
+    "Schwann Cells": {
+     "n_units": 28,
+     "median_pct": 0.74,
+     "iqr_pct": [
+      0.29,
+      1.24
+     ],
+     "range_pct": [
+      0.0,
+      20.52
+     ]
+    },
+    "Smooth Muscle Cells": {
+     "n_units": 28,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      11.81
+     ]
+    }
+   },
+   "donor_level_adult_only": {
+    "Corneal Endothelium": {
+     "n_units": 22,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Endothelium": {
+     "n_units": 22,
+     "median_pct": 7.25,
+     "iqr_pct": [
+      5.38,
+      12.02
+     ],
+     "range_pct": [
+      0.92,
+      18.67
+     ]
+    },
+    "Epithelium": {
+     "n_units": 22,
+     "median_pct": 58.44,
+     "iqr_pct": [
+      36.9,
+      67.75
+     ],
+     "range_pct": [
+      0.0,
+      91.73
+     ]
+    },
+    "Fibroblasts": {
+     "n_units": 22,
+     "median_pct": 26.39,
+     "iqr_pct": [
+      7.23,
+      37.8
+     ],
+     "range_pct": [
+      0.0,
+      89.24
+     ]
+    },
+    "Immune Cells": {
+     "n_units": 22,
+     "median_pct": 1.8,
+     "iqr_pct": [
+      0.85,
+      2.66
+     ],
+     "range_pct": [
+      0.23,
+      37.71
+     ]
+    },
+    "Melanocytes": {
+     "n_units": 22,
+     "median_pct": 1.66,
+     "iqr_pct": [
+      0.31,
+      4.75
+     ],
+     "range_pct": [
+      0.0,
+      21.21
+     ]
+    },
+    "Pericytes": {
+     "n_units": 22,
+     "median_pct": 3.71,
+     "iqr_pct": [
+      2.58,
+      6.07
+     ],
+     "range_pct": [
+      0.0,
+      19.37
+     ]
+    },
+    "Schwann Cells": {
+     "n_units": 22,
+     "median_pct": 0.7,
+     "iqr_pct": [
+      0.23,
+      1.06
+     ],
+     "range_pct": [
+      0.0,
+      20.52
+     ]
+    },
+    "Smooth Muscle Cells": {
+     "n_units": 22,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      11.81
+     ]
+    }
+   },
+   "n_units_adult_only": 22,
+   "adult_fallback_guard": null
+  },
+  {
+   "tissue_group": "ocular surface region (混合)",
+   "n_donors": 4,
+   "n_cells": 14934,
+   "donor_level": {
+    "Corneal Endothelium": {
+     "n_units": 4,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Endothelium": {
+     "n_units": 4,
+     "median_pct": 5.1,
+     "iqr_pct": [
+      3.98,
+      6.51
+     ],
+     "range_pct": [
+      2.45,
+      8.9
+     ]
+    },
+    "Epithelium": {
+     "n_units": 4,
+     "median_pct": 58.19,
+     "iqr_pct": [
+      48.71,
+      67.9
+     ],
+     "range_pct": [
+      43.42,
+      73.92
+     ]
+    },
+    "Fibroblasts": {
+     "n_units": 4,
+     "median_pct": 23.07,
+     "iqr_pct": [
+      17.06,
+      30.8
+     ],
+     "range_pct": [
+      16.93,
+      36.1
+     ]
+    },
+    "Immune Cells": {
+     "n_units": 4,
+     "median_pct": 4.95,
+     "iqr_pct": [
+      3.7,
+      5.87
+     ],
+     "range_pct": [
+      2.2,
+      6.4
+     ]
+    },
+    "Melanocytes": {
+     "n_units": 4,
+     "median_pct": 0.71,
+     "iqr_pct": [
+      0.28,
+      3.28
+     ],
+     "range_pct": [
+      0.0,
+      9.99
+     ]
+    },
+    "Pericytes": {
+     "n_units": 4,
+     "median_pct": 2.11,
+     "iqr_pct": [
+      1.93,
+      2.59
+     ],
+     "range_pct": [
+      1.63,
+      3.79
+     ]
+    },
+    "Schwann Cells": {
+     "n_units": 4,
+     "median_pct": 0.86,
+     "iqr_pct": [
+      0.55,
+      1.26
+     ],
+     "range_pct": [
+      0.27,
+      1.82
+     ]
+    },
+    "Smooth Muscle Cells": {
+     "n_units": 4,
+     "median_pct": 0.53,
+     "iqr_pct": [
+      0.05,
+      1.04
+     ],
+     "range_pct": [
+      0.03,
+      1.13
+     ]
+    }
+   },
+   "donor_level_adult_only": {
+    "Corneal Endothelium": {
+     "n_units": 4,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Endothelium": {
+     "n_units": 4,
+     "median_pct": 5.1,
+     "iqr_pct": [
+      3.98,
+      6.51
+     ],
+     "range_pct": [
+      2.45,
+      8.9
+     ]
+    },
+    "Epithelium": {
+     "n_units": 4,
+     "median_pct": 58.19,
+     "iqr_pct": [
+      48.71,
+      67.9
+     ],
+     "range_pct": [
+      43.42,
+      73.92
+     ]
+    },
+    "Fibroblasts": {
+     "n_units": 4,
+     "median_pct": 23.07,
+     "iqr_pct": [
+      17.06,
+      30.8
+     ],
+     "range_pct": [
+      16.93,
+      36.1
+     ]
+    },
+    "Immune Cells": {
+     "n_units": 4,
+     "median_pct": 4.95,
+     "iqr_pct": [
+      3.7,
+      5.87
+     ],
+     "range_pct": [
+      2.2,
+      6.4
+     ]
+    },
+    "Melanocytes": {
+     "n_units": 4,
+     "median_pct": 0.71,
+     "iqr_pct": [
+      0.28,
+      3.28
+     ],
+     "range_pct": [
+      0.0,
+      9.99
+     ]
+    },
+    "Pericytes": {
+     "n_units": 4,
+     "median_pct": 2.11,
+     "iqr_pct": [
+      1.93,
+      2.59
+     ],
+     "range_pct": [
+      1.63,
+      3.79
+     ]
+    },
+    "Schwann Cells": {
+     "n_units": 4,
+     "median_pct": 0.86,
+     "iqr_pct": [
+      0.55,
+      1.26
+     ],
+     "range_pct": [
+      0.27,
+      1.82
+     ]
+    },
+    "Smooth Muscle Cells": {
+     "n_units": 4,
+     "median_pct": 0.53,
+     "iqr_pct": [
+      0.05,
+      1.04
+     ],
+     "range_pct": [
+      0.03,
+      1.13
+     ]
+    }
+   },
+   "n_units_adult_only": 4,
+   "adult_fallback_guard": null
+  },
+  {
+   "tissue_group": "sclera",
+   "n_donors": 16,
+   "n_cells": 99813,
+   "donor_level": {
+    "Corneal Endothelium": {
+     "n_units": 16,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Endothelium": {
+     "n_units": 16,
+     "median_pct": 10.48,
+     "iqr_pct": [
+      7.5,
+      14.56
+     ],
+     "range_pct": [
+      0.0,
+      43.48
+     ]
+    },
+    "Epithelium": {
+     "n_units": 16,
+     "median_pct": 0.3,
+     "iqr_pct": [
+      0.0,
+      3.34
+     ],
+     "range_pct": [
+      0.0,
+      96.98
+     ]
+    },
+    "Fibroblasts": {
+     "n_units": 16,
+     "median_pct": 40.45,
+     "iqr_pct": [
+      29.55,
+      59.6
+     ],
+     "range_pct": [
+      0.0,
+      88.84
+     ]
+    },
+    "Immune Cells": {
+     "n_units": 16,
+     "median_pct": 1.16,
+     "iqr_pct": [
+      0.42,
+      2.62
+     ],
+     "range_pct": [
+      0.0,
+      22.81
+     ]
+    },
+    "Melanocytes": {
+     "n_units": 16,
+     "median_pct": 0.13,
+     "iqr_pct": [
+      0.0,
+      2.97
+     ],
+     "range_pct": [
+      0.0,
+      48.63
+     ]
+    },
+    "Pericytes": {
+     "n_units": 16,
+     "median_pct": 14.77,
+     "iqr_pct": [
+      6.9,
+      29.89
+     ],
+     "range_pct": [
+      0.0,
+      41.31
+     ]
+    },
+    "Schwann Cells": {
+     "n_units": 16,
+     "median_pct": 1.64,
+     "iqr_pct": [
+      0.0,
+      2.7
+     ],
+     "range_pct": [
+      0.0,
+      5.72
+     ]
+    },
+    "Smooth Muscle Cells": {
+     "n_units": 16,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.14
+     ],
+     "range_pct": [
+      0.0,
+      63.33
+     ]
+    }
+   },
+   "donor_level_adult_only": {
+    "Corneal Endothelium": {
+     "n_units": 10,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Endothelium": {
+     "n_units": 10,
+     "median_pct": 11.88,
+     "iqr_pct": [
+      8.63,
+      17.21
+     ],
+     "range_pct": [
+      6.56,
+      43.48
+     ]
+    },
+    "Epithelium": {
+     "n_units": 10,
+     "median_pct": 0.15,
+     "iqr_pct": [
+      0.0,
+      2.71
+     ],
+     "range_pct": [
+      0.0,
+      9.73
+     ]
+    },
+    "Fibroblasts": {
+     "n_units": 10,
+     "median_pct": 40.45,
+     "iqr_pct": [
+      34.26,
+      51.56
+     ],
+     "range_pct": [
+      3.04,
+      77.02
+     ]
+    },
+    "Immune Cells": {
+     "n_units": 10,
+     "median_pct": 1.16,
+     "iqr_pct": [
+      0.51,
+      4.4
+     ],
+     "range_pct": [
+      0.0,
+      22.81
+     ]
+    },
+    "Melanocytes": {
+     "n_units": 10,
+     "median_pct": 0.27,
+     "iqr_pct": [
+      0.0,
+      5.71
+     ],
+     "range_pct": [
+      0.0,
+      48.63
+     ]
+    },
+    "Pericytes": {
+     "n_units": 10,
+     "median_pct": 16.4,
+     "iqr_pct": [
+      12.88,
+      34.62
+     ],
+     "range_pct": [
+      0.0,
+      41.31
+     ]
+    },
+    "Schwann Cells": {
+     "n_units": 10,
+     "median_pct": 1.64,
+     "iqr_pct": [
+      0.28,
+      2.24
+     ],
+     "range_pct": [
+      0.0,
+      3.85
+     ]
+    },
+    "Smooth Muscle Cells": {
+     "n_units": 10,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.41
+     ],
+     "range_pct": [
+      0.0,
+      63.33
+     ]
+    }
+   },
+   "n_units_adult_only": 10,
+   "adult_fallback_guard": null
+  }
+ ],
+ "major_classes": [
+  {
+   "class": "Corneal Endothelium",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "donor_range_pct": [
+    0.0,
+    100.0
+   ],
+   "pooled_pct_for_reference_only": 0.07,
+   "evidence": "A",
+   "source_ids": [
+    "D002_LOCAL",
+    "D002_PORTAL"
+   ]
+  },
+  {
+   "class": "Endothelium",
+   "donor_median_pct": 3.42,
+   "donor_iqr_pct": [
+    0.0,
+    8.99
+   ],
+   "donor_range_pct": [
+    0.0,
+    43.48
+   ],
+   "pooled_pct_for_reference_only": 5.76,
+   "evidence": "A",
+   "source_ids": [
+    "D002_LOCAL",
+    "D002_PORTAL"
+   ]
+  },
+  {
+   "class": "Epithelium",
+   "donor_median_pct": 50.48,
+   "donor_iqr_pct": [
+    7.26,
+    70.25
+   ],
+   "donor_range_pct": [
+    0.0,
+    99.62
+   ],
+   "pooled_pct_for_reference_only": 43.32,
+   "evidence": "A",
+   "source_ids": [
+    "D002_LOCAL",
+    "D002_PORTAL"
+   ]
+  },
+  {
+   "class": "Fibroblasts",
+   "donor_median_pct": 28.53,
+   "donor_iqr_pct": [
+    12.65,
+    44.01
+   ],
+   "donor_range_pct": [
+    0.0,
+    93.77
+   ],
+   "pooled_pct_for_reference_only": 39.84,
+   "evidence": "A",
+   "source_ids": [
+    "D002_LOCAL",
+    "D002_PORTAL"
+   ]
+  },
+  {
+   "class": "Immune Cells",
+   "donor_median_pct": 1.12,
+   "donor_iqr_pct": [
+    0.4,
+    2.6
+   ],
+   "donor_range_pct": [
+    0.0,
+    37.71
+   ],
+   "pooled_pct_for_reference_only": 1.73,
+   "evidence": "A",
+   "source_ids": [
+    "D002_LOCAL",
+    "D002_PORTAL"
+   ]
+  },
+  {
+   "class": "Melanocytes",
+   "donor_median_pct": 0.29,
+   "donor_iqr_pct": [
+    0.0,
+    2.45
+   ],
+   "donor_range_pct": [
+    0.0,
+    48.63
+   ],
+   "pooled_pct_for_reference_only": 1.25,
+   "evidence": "A",
+   "source_ids": [
+    "D002_LOCAL",
+    "D002_PORTAL"
+   ]
+  },
+  {
+   "class": "Pericytes",
+   "donor_median_pct": 2.03,
+   "donor_iqr_pct": [
+    0.0,
+    4.27
+   ],
+   "donor_range_pct": [
+    0.0,
+    41.31
+   ],
+   "pooled_pct_for_reference_only": 6.49,
+   "evidence": "A",
+   "source_ids": [
+    "D002_LOCAL",
+    "D002_PORTAL"
+   ]
+  },
+  {
+   "class": "Schwann Cells",
+   "donor_median_pct": 0.23,
+   "donor_iqr_pct": [
+    0.0,
+    1.06
+   ],
+   "donor_range_pct": [
+    0.0,
+    20.52
+   ],
+   "pooled_pct_for_reference_only": 1.05,
+   "evidence": "A",
+   "source_ids": [
+    "D002_LOCAL",
+    "D002_PORTAL"
+   ]
+  },
+  {
+   "class": "Smooth Muscle Cells",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "donor_range_pct": [
+    0.0,
+    63.33
+   ],
+   "pooled_pct_for_reference_only": 0.48,
+   "evidence": "A",
+   "source_ids": [
+    "D002_LOCAL",
+    "D002_PORTAL"
+   ]
+  }
+ ],
+ "fine_types": {
+  "denominator_note": "author_cell_type 类内占比 (pooled within class, 供参考)",
+  "Fibroblasts": [
+   [
+    "Corneal Stromal Keratocytes",
+    45.1
+   ],
+   [
+    "Limbus Fibroblasts",
+    18.3
+   ],
+   [
+    "Limbus/Sclera Fibroblasts - C2",
+    18.3
+   ],
+   [
+    "Limbus/Sclera Fibroblasts - C1",
+    14.3
+   ],
+   [
+    "Sclera Fibroblasts",
+    4.0
+   ]
+  ],
+  "Epithelium": [
+   [
+    "Corneal_superficial_TDC",
+    25.4
+   ],
+   [
+    "Corneal_suprabasal_PMC",
+    18.2
+   ],
+   [
+    "Limbus_suprabasal_eTAC_ConjFate",
+    11.8
+   ],
+   [
+    "Limbus_suprabasal_eTAC_CorFate",
+    11.5
+   ],
+   [
+    "Limbus_basal_LSC/LPC",
+    11.0
+   ],
+   [
+    "Conj_basal",
+    7.5
+   ]
+  ],
+  "Pericytes": [
+   [
+    "Pericytes",
+    100.0
+   ]
+  ],
+  "Endothelium": [
+   [
+    "Venule_Sclera",
+    53.4
+   ],
+   [
+    "Capillary",
+    16.4
+   ],
+   [
+    "Venule_postCapillary",
+    16.3
+   ],
+   [
+    "Lymphatic_Endo",
+    10.3
+   ],
+   [
+    "Artery",
+    3.6
+   ]
+  ],
+  "Schwann Cells": [
+   [
+    "Schwann_N",
+    89.2
+   ],
+   [
+    "Schwann_M",
+    10.8
+   ]
+  ],
+  "Immune Cells": [
+   [
+    "Macrophages",
+    49.6
+   ],
+   [
+    "NK/T Cells",
+    39.4
+   ],
+   [
+    "Mast Cells",
+    6.3
+   ],
+   [
+    "Monocytes",
+    2.5
+   ],
+   [
+    "B Cells",
+    2.1
+   ]
+  ],
+  "Melanocytes": [
+   [
+    "Melanocytes",
+    100.0
+   ]
+  ],
+  "Smooth Muscle Cells": [
+   [
+    "Smooth Muscle Cells",
+    100.0
+   ]
+  ],
+  "Corneal Endothelium": [
+   [
+    "Corneal_Endo",
+    100.0
+   ]
+  ]
+ },
+ "states": null,
+ "flags": {
+  "expected_low_but_present": [
+   "Corneal Endothelium (pooled 0.07%) —— 仅眼库内皮边缘碎块贡献, 常规角膜缘样本近零",
+   "Melanocytes/Schwann Cells/Smooth Muscle Cells <2%"
+  ],
+  "unexpected": [
+   "光感受器/视网膜神经元类出现 (取材越界到视网膜?)",
+   "大量造血成熟标志 (FCN1/LYZ 粒系) —— 供体血液残留旗"
+  ],
+  "contamination_suspect": [
+   "published_annotation 列含 red blood cells 主导层 (525,617 标注) —— 血液残留是本库已知主污染, 见 caveat",
+   "黑素颗粒/色素组织污染 (色素性供者巩膜)"
+  ]
+ },
+ "caveats": [
+  "本地 D002 文件 = 577,857 cells / 50 donors, 为 collection 级 (>1M/102) 的子集提取 (口径=本地实测); 回填全 collection 需下载审批, 列'待回填'。",
+  "'Majorclass=Immune Cells' 仅 1.7%: 眼表固有免疫稀少 + 无免疫富集步骤 —— 免疫比例不可对照炎症疾病样本。",
+  "published_annotation 与 majorclass 并存: published_annotation='red blood cells' 占大头说明 RBC 未从 majorclass 里剔除干净? 不 —— majorclass 9 类无 RBC 类, RBC 信号散入各类, 计数分母含 RBC 污染核, 各类% 为'捕获事件构成'非组织真值 (Astra T2 口径声明)。",
+  "sclera/conjunctiva 独立条目见对应骨架文件; 本条 corneo-scleral junction 层 ≠ 独立结膜基线。",
+  "v1.1 (KB2c t_be336eee): 主档=adult-only (>=18y); v1.0 混口径 (含 newborn 0-28d 25,018 细胞 + postnatal/儿童青少年) 保留于 donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0)。FALLBACK_BLOCKED 守卫已实装（组织组 0 adult 供者时触发禁回退）——本次实测 0 层触发, 各组织组 adult-only 均有真实支撑。",
+  "t_e1febb8e (2026-09-24) 追加: 角膜基质 keratocyte 参考格 —— D002 adult 主档 67 供者单元中, 既有作者标签 Corneal Stromal Keratocytes 类单元内 pooled 约 23.4% (unit 中位 ~20%; 混合眼表捕获事件口径, 非纯 cornea 真值, 非达标线); 文献范围格=缺项落阻塞 (见 stromal_keratocyte_reference); marker 库角膜两类补录与层级映射见 markers 库 v1-membrane-20260924 与概念条 EYEKBC-0018/0019。"
+ ],
+ "sources": [
+  {
+   "sid": "D002_LOCAL",
+   "kind": "dataset",
+   "label": "本地文件 /mnt/D/OcularKB/data/D002_ocularsurface/D002_allcells_578K.h5ad",
+   "path": "/mnt/D/OcularKB/data/D002_ocularsurface/D002_allcells_578K.h5ad",
+   "computation": "/mnt/D/EyeKB/scripts/baselines/build_baselines.py build_ocular_surface()"
+  },
+  {
+   "sid": "D002_PORTAL",
+   "kind": "dataset",
+   "label": "Human Ocular Surface Cell Atlas, CELLxGENE collection (portal 官方注释)",
+   "url": "https://cellxgene.cziscience.com/collections/0f7d022a-46c7-4e64-be4c-e34adbb78089"
+  }
+ ],
+ "organism_stage": "adult",
+ "stage_axis": {
+  "field": "organism_stage",
+  "levels": [
+   "fetal",
+   "adult",
+   "developing",
+   "unknown"
+  ],
+  "adult_rule": "UBERON development_stage 数字化年龄 >= 18y 判 adult; 显式成年术语 (late/prime/middle/mature/human adult stage, 年代段>=3rd) 亦判 adult 并记 rule; 阈值改动须过裁定 (KB2c Q2, 2026-09-23)",
+  "developing_rule": "newborn/infant/postnatal stage 与 <18y 数字年龄/年龄段 → developing (KB2c Q2)",
+  "fetal_rule": "fetal/embryonic/gestation/Carnegie 术语 → fetal; 永不并入 adult 主档 (红线1)",
+  "unknown_rule": "无年龄列/未映射术语/organoid/年龄段跨阈值 → unknown, 必须披露行, 禁静默归 adult (红线2)",
+  "aging_note": ">=60 老年分层不在本轴 — aging 是正交独立轴, 将来单独立条目 (裁定 Q2)",
+  "source_col": "obs/development_stage (UBERON 原值逐行保留; 汇总见 stage_disclosure, 排除清单见 excluded_nonadult_units)",
+  "tier_ids": {
+   "adult_only": "baseline_human_ocular_surface__adult_only__kb2c",
+   "adult_pool": "baseline_human_ocular_surface__adult_pool__v1.0"
+  }
+ },
+ "stage_disclosure": {
+  "64-year-old stage": {
+   "cells": 56324,
+   "n_donors": 3,
+   "organism_stage": "adult",
+   "rule": "数字年龄 64y vs 阈值 18y"
+  },
+  "43-year-old stage": {
+   "cells": 45727,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "数字年龄 43y vs 阈值 18y"
+  },
+  "32-year-old stage": {
+   "cells": 39770,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 32y vs 阈值 18y"
+  },
+  "72-year-old stage": {
+   "cells": 30149,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 72y vs 阈值 18y"
+  },
+  "2-year-old stage": {
+   "cells": 27157,
+   "n_donors": 1,
+   "organism_stage": "developing",
+   "rule": "数字年龄 2y vs 阈值 18y"
+  },
+  "25-year-old stage": {
+   "cells": 26051,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 25y vs 阈值 18y"
+  },
+  "newborn stage (0-28 days)": {
+   "cells": 25018,
+   "n_donors": 1,
+   "organism_stage": "developing",
+   "rule": "newborn/infant 产后早期→developing (裁定 Q2)"
+  },
+  "1-year-old stage": {
+   "cells": 23364,
+   "n_donors": 1,
+   "organism_stage": "developing",
+   "rule": "数字年龄 1y vs 阈值 18y"
+  },
+  "55-year-old stage": {
+   "cells": 22600,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 55y vs 阈值 18y"
+  },
+  "67-year-old stage": {
+   "cells": 22556,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 67y vs 阈值 18y"
+  },
+  "11-year-old stage": {
+   "cells": 22308,
+   "n_donors": 1,
+   "organism_stage": "developing",
+   "rule": "数字年龄 11y vs 阈值 18y"
+  },
+  "70-year-old stage": {
+   "cells": 21432,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 70y vs 阈值 18y"
+  },
+  "87-year-old stage": {
+   "cells": 19901,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 87y vs 阈值 18y"
+  },
+  "61-year-old stage": {
+   "cells": 19093,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "数字年龄 61y vs 阈值 18y"
+  },
+  "51-year-old stage": {
+   "cells": 17436,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "数字年龄 51y vs 阈值 18y"
+  },
+  "10-year-old stage": {
+   "cells": 15667,
+   "n_donors": 1,
+   "organism_stage": "developing",
+   "rule": "数字年龄 10y vs 阈值 18y"
+  },
+  "27-year-old stage": {
+   "cells": 15052,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 27y vs 阈值 18y"
+  },
+  "34-year-old stage": {
+   "cells": 12347,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 34y vs 阈值 18y"
+  },
+  "53-year-old stage": {
+   "cells": 11393,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 53y vs 阈值 18y"
+  },
+  "75-year-old stage": {
+   "cells": 10823,
+   "n_donors": 4,
+   "organism_stage": "adult",
+   "rule": "数字年龄 75y vs 阈值 18y"
+  },
+  "postnatal stage": {
+   "cells": 10550,
+   "n_donors": 2,
+   "organism_stage": "developing",
+   "rule": "postnatal→developing (裁定 Q1 映射)"
+  },
+  "65-year-old stage": {
+   "cells": 9813,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 65y vs 阈值 18y"
+  },
+  "41-year-old stage": {
+   "cells": 8904,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 41y vs 阈值 18y"
+  },
+  "13-year-old stage": {
+   "cells": 8281,
+   "n_donors": 1,
+   "organism_stage": "developing",
+   "rule": "数字年龄 13y vs 阈值 18y"
+  },
+  "90 year-old and over stage": {
+   "cells": 7997,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "'90 year-old and over' 下界>=阈值"
+  },
+  "74-year-old stage": {
+   "cells": 7504,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 74y vs 阈值 18y"
+  },
+  "33-year-old stage": {
+   "cells": 7159,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 33y vs 阈值 18y"
+  },
+  "69-year-old stage": {
+   "cells": 6063,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 69y vs 阈值 18y"
+  },
+  "84-year-old stage": {
+   "cells": 4320,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "数字年龄 84y vs 阈值 18y"
+  },
+  "86-year-old stage": {
+   "cells": 4293,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "数字年龄 86y vs 阈值 18y"
+  },
+  "77-year-old stage": {
+   "cells": 3352,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 77y vs 阈值 18y"
+  },
+  "48-year-old stage": {
+   "cells": 3224,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 48y vs 阈值 18y"
+  },
+  "62-year-old stage": {
+   "cells": 3047,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 62y vs 阈值 18y"
+  },
+  "22-year-old stage": {
+   "cells": 2533,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 22y vs 阈值 18y"
+  },
+  "16-year-old stage": {
+   "cells": 2245,
+   "n_donors": 1,
+   "organism_stage": "developing",
+   "rule": "数字年龄 16y vs 阈值 18y"
+  },
+  "45-year-old stage": {
+   "cells": 1879,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 45y vs 阈值 18y"
+  },
+  "83-year-old stage": {
+   "cells": 1595,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 83y vs 阈值 18y"
+  },
+  "39-year-old stage": {
+   "cells": 732,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 39y vs 阈值 18y"
+  },
+  "eighth decade stage": {
+   "cells": 198,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "eighth decade = 70-79y 下界>=阈值"
+  }
+ },
+ "excluded_nonadult_units": [
+  {
+   "donor_id": "BCM_22_0496",
+   "cells": 27157,
+   "uberon": "2-year-old stage",
+   "organism_stage": "developing",
+   "rule": "数字年龄 2y vs 阈值 18y"
+  },
+  {
+   "donor_id": "BCM_22_0698",
+   "cells": 25018,
+   "uberon": "newborn stage (0-28 days)",
+   "organism_stage": "developing",
+   "rule": "newborn/infant 产后早期→developing (裁定 Q2)"
+  },
+  {
+   "donor_id": "BCM_22_0485",
+   "cells": 23364,
+   "uberon": "1-year-old stage",
+   "organism_stage": "developing",
+   "rule": "数字年龄 1y vs 阈值 18y"
+  },
+  {
+   "donor_id": "BCM_22_0769",
+   "cells": 22308,
+   "uberon": "11-year-old stage",
+   "organism_stage": "developing",
+   "rule": "数字年龄 11y vs 阈值 18y"
+  },
+  {
+   "donor_id": "BCM_21_0999",
+   "cells": 15667,
+   "uberon": "10-year-old stage",
+   "organism_stage": "developing",
+   "rule": "数字年龄 10y vs 阈值 18y"
+  },
+  {
+   "donor_id": "shi_donor1",
+   "cells": 8281,
+   "uberon": "13-year-old stage",
+   "organism_stage": "developing",
+   "rule": "数字年龄 13y vs 阈值 18y"
+  },
+  {
+   "donor_id": "chen_donor1",
+   "cells": 6249,
+   "uberon": "postnatal stage",
+   "organism_stage": "developing",
+   "rule": "postnatal→developing (裁定 Q1 映射)"
+  },
+  {
+   "donor_id": "chen_donor2",
+   "cells": 4301,
+   "uberon": "postnatal stage",
+   "organism_stage": "developing",
+   "rule": "postnatal→developing (裁定 Q1 映射)"
+  },
+  {
+   "donor_id": "BCM_23_0131",
+   "cells": 2245,
+   "uberon": "16-year-old stage",
+   "organism_stage": "developing",
+   "rule": "数字年龄 16y vs 阈值 18y"
+  }
+ ],
+ "donor_level_adult_pool_contrast": {
+  "Corneal Endothelium": {
+   "n_units": 84,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "range_pct": [
+    0.0,
+    100.0
+   ]
+  },
+  "Endothelium": {
+   "n_units": 84,
+   "median_pct": 3.32,
+   "iqr_pct": [
+    0.0,
+    8.89
+   ],
+   "range_pct": [
+    0.0,
+    43.48
+   ]
+  },
+  "Epithelium": {
+   "n_units": 84,
+   "median_pct": 51.18,
+   "iqr_pct": [
+    6.97,
+    71.49
+   ],
+   "range_pct": [
+    0.0,
+    99.62
+   ]
+  },
+  "Fibroblasts": {
+   "n_units": 84,
+   "median_pct": 29.96,
+   "iqr_pct": [
+    13.76,
+    53.83
+   ],
+   "range_pct": [
+    0.0,
+    93.77
+   ]
+  },
+  "Immune Cells": {
+   "n_units": 84,
+   "median_pct": 1.1,
+   "iqr_pct": [
+    0.41,
+    2.28
+   ],
+   "range_pct": [
+    0.0,
+    37.71
+   ]
+  },
+  "Melanocytes": {
+   "n_units": 84,
+   "median_pct": 0.27,
+   "iqr_pct": [
+    0.0,
+    2.17
+   ],
+   "range_pct": [
+    0.0,
+    48.63
+   ]
+  },
+  "Pericytes": {
+   "n_units": 84,
+   "median_pct": 2.27,
+   "iqr_pct": [
+    0.0,
+    6.01
+   ],
+   "range_pct": [
+    0.0,
+    41.31
+   ]
+  },
+  "Schwann Cells": {
+   "n_units": 84,
+   "median_pct": 0.23,
+   "iqr_pct": [
+    0.0,
+    1.14
+   ],
+   "range_pct": [
+    0.0,
+    20.52
+   ]
+  },
+  "Smooth Muscle Cells": {
+   "n_units": 84,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "range_pct": [
+    0.0,
+    63.33
+   ]
+  }
+ },
+ "pooled_adult_pool_contrast": {
+  "Corneal Endothelium": 0.07,
+  "Endothelium": 5.76,
+  "Epithelium": 43.32,
+  "Fibroblasts": 39.84,
+  "Immune Cells": 1.73,
+  "Melanocytes": 1.25,
+  "Pericytes": 6.49,
+  "Schwann Cells": 1.05,
+  "Smooth Muscle Cells": 0.48
+ },
+ "adult_only_meta": {
+  "n_donors_adult": 41,
+  "n_donors_excluded_nonadult": 9,
+  "n_cells_adult": 443267,
+  "n_units_adult_main": 67,
+  "n_units_pool": 84
+ },
+ "axis_version": "kb2c-1.1",
+ "development_stage": "adult",
+ "development_stage_prohibition": "KB3 禁令 (PI 红线 2026-09-23): 发育期数据不得进成人基线统计池, 反之亦然 —— 同一组织胎儿≠成人, adult/fetal 不互为参照。",
+ "kb3_card": "t_5425a7ca",
+ "identity_signature": {
+  "baseline_human_ocular_surface__adult_only__kb2c": "sha256:7914e7e8ffc01a7ecbffb83921bfe1c5b487e36fbdc759d297b7c4a257e48417",
+  "baseline_human_ocular_surface__adult_pool__v1.0": "sha256:d82e277da026e6f581a19c4d1d086c512c6455653e7477c314f74c29b8b0a5ba"
+ },
+ "stromal_keratocyte_reference": {
+  "added": "2026-09-24",
+  "added_by_card": "t_e1febb8e",
+  "review_chain": "外部审稿 gpt-6-astra CONDITIONAL (R5) 修订版; 裁定文件=工作区 review/ASTRA_R18_verdict_fixed.md",
+  "reason": "KB2 评测 Q6::15 簇 (ALDH3A1+KERA) 两名判读员跨轮误标 Corneal Endothelium; 证据库角膜身份缺口补录。注意: 本块=证据覆盖与层级映射修复的组成侧, Q6::15 属开发依据, 仅用于针对性回归, 不作独立泛化效果证据。",
+  "d002_measured": {
+   "labels": [
+    "Corneal Stromal Keratocytes",
+    "corneal stroma keratocytes"
+   ],
+   "denominator_scope": "D002 本地混合眼表 (cornea/limbus/sclera 超级类) 捕获事件中, 既有作者 keratocyte 标签占比 —— 非独立验证的细胞身份, 非纯 cornea 组织真值",
+   "unit": "供者单元 (tissue_group × donor_id), 与基线主档同口径 (67 adult 单元, 无最小细胞过滤)",
+   "pooled_pct": 20.34,
+   "unit_level_adult": {
+    "n_units": 67,
+    "median_pct": 5.41,
+    "iqr_pct": [
+     0.36,
+     25.79
+    ],
+    "range_pct": [
+     0.0,
+     91.19
+    ]
+   },
+   "n_units": 67,
+   "keratocyte_cells": 103738,
+   "adult_cells": 443267,
+   "evidence": "A (本地实测复算; 脚本与中间产物=工作区 selfcheck/)",
+   "source_ids": [
+    "D002_LOCAL"
+   ],
+   "source_roles": {
+    "D002_LOCAL": "本地计算来源",
+    "D002_PORTAL": "标签与数据出处 (collection 官方注释; 其数值非本卡复算)"
+   },
+   "note_17_95pct": "17.95% = 全文件 (含非 adult) 口径, 仅存档于工作区; 主档口径见本块 23.42%/67 单元"
+  },
+  "literature_anchor": {
+   "status": "缺项落阻塞",
+   "note": "任务书要求文献范围格: 本卡检索到最接近的可定位先例 = PMID:34381080 (Sci Rep 2021, 6 成人角膜 scRNA-seq, keratocyte 为基质主驻留细胞) 但其在健康人角膜全部细胞中的百分比区间未能以可定位正文级证据钉死; 共聚焦类密度文献属细胞密度(cell/mm³) 口径, 不得冒充细胞组成百分比 —— 按 R5.6 处置: 不补造区间, 显式缺项+另卡。",
+   "nearest_refs": [
+    "PMID:34381080",
+    "PMID:34741068"
+   ]
+  },
+  "nonpublishable": "本块数字为 D002 捕获事件统计, 不得当作人群层面'角膜 keratocyte 占角膜细胞 X%'的文献定论引用; 亦不得作为组成达标线 (usage_scope 全继承)。",
+  "idempotency": "重复运行检测 stromal_keratocyte_reference 在位即跳过; 若 build_baselines.py 重渲染覆盖本块, 须重放本卡补丁 (脚本+sha 见工作区)。"
+ }
+}

@@ -1,0 +1,20 @@
+PASS manifest 计数=parquet 行数 | (220571, 220571)
+PASS papers.jsonl 行数=3696 (含 v2.1 遗留 15 ghost) | 3696
+PASS unique papers=3681 | 
+PASS v2.1 三文件 sha 复核零改动 | {'chunks.parquet': True, 'papers.jsonl': True, 'manifest.yaml': True}
+PASS 7 D0 verification_status=D0_critical | {'35061025': 'D0_critical_review_20260923', '37917183': 'D0_critical_review_20260923', '39220810': 'D0_critica
+PASS 7 D0 source_db 指针=v2.2 | 
+PASS sidecar 覆盖数与新库一致 | 3696
+PASS D0 admission_lane 全登记 | 
+PASS abstract_only 两篇标记正确 | 
+PASS D0 is_preprint=0 (正刊不混预印本) | 
+PASS abstract-only 行 full_text_available=0 | 2
+PASS 全文 D0 行 full_text_available=1 | 
+FAIL pointer 含 v2.2 且 default 仍 v2.0 (切默认待拍板) | 
+PASS 撞库三篇在库未删 (423/36/2) | {'35659263': 423, '33298129': 36, '22388286': 2}
+PASS collision_impact.json 在场 (五情景) | 33
+PASS v2.2 黄金集无回退 10/10 | 10
+PASS anchor 检索性 (7 篇全部 dense 可检索) | {'35061025': 1, '37917183': 69, '39220810': 1, '40069725': None, '40562775': 1, '41578023': 1, '42601615': 1}
+
+VERDICT: 16/17 PASS
+REG_RC=1

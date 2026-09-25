@@ -1,0 +1,147 @@
+{
+ "started": "2026-09-23 21:39:30",
+ "checks": [
+  {
+   "name": "TC human/retina 命中 human_retina",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "TC retina rows 与 JSON 逐项一致 (10 类×数值)",
+   "ok": true,
+   "detail": "10 rows"
+  },
+  {
+   "name": "TC retina 10 类齐全",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "TC retina 数值抽查 Rod=33.55/RGC=12.58/RPE=0.03",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "TC human/membrane 命中 human_pdr_membrane",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "TC membrane rows 与 JSON 逐项一致",
+   "ok": true,
+   "detail": "8 rows"
+  },
+  {
+   "name": "TC membrane myeloid PDR-only=79.49",
+   "ok": false,
+   "detail": ""
+  },
+  {
+   "name": "TC disease 参数命中 human_pdr_membrane (视网膜无 PDR 基线条)",
+   "ok": false,
+   "detail": "None"
+  },
+  {
+   "name": "DP 别名 PDR→proliferative_DR",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "DP 旗/签名与 JSON 逐项一致",
+   "ok": true,
+   "detail": "None"
+  },
+  {
+   "name": "DP tissue=vitreous 过滤 (仅1组织端)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "MD retina 主表 10 行×(类/%/区间) 与工具一致",
+   "ok": false,
+   "detail": "md rows=11"
+  },
+  {
+   "name": "MD membrane 主表 PDR-only% 与工具一致",
+   "ok": false,
+   "detail": "md=9"
+  },
+  {
+   "name": "MD disease 条目含预期矩阵/旗/签名关键词",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "出处闭包: retina rows 全 source_ids 可解析",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "出处闭包: membrane rows 全 source_ids 可解析",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "出处闭包: PDR 矩阵 source_ids 可解析",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "红线8机检: 全部 sources 带 PMID 或数据集路径",
+   "ok": true,
+   "detail": "38 sources"
+  },
+  {
+   "name": "漂移: HRCA total=3,177,310",
+   "ok": true,
+   "detail": "3177310"
+  },
+  {
+   "name": "漂移: HRCA Rod% 与条目一致",
+   "ok": true,
+   "detail": "[1066056, 33.55]"
+  },
+  {
+   "name": "漂移: GSE165784 myeloid PDR% 与条目一致",
+   "ok": true,
+   "detail": "[5677, 79.49]"
+  },
+  {
+   "name": "list_tools == 五工具",
+   "ok": true,
+   "detail": "['get_disease_prior', 'get_kb_page', 'get_tissue_composition', 'query_marker', 'search_literature']"
+  },
+  {
+   "name": "stdio TC(retina) == 直调 (深度相等)",
+   "ok": true,
+   "detail": "None"
+  },
+  {
+   "name": "stdio DP(PDR) == 直调 (深度相等)",
+   "ok": true,
+   "detail": "None"
+  },
+  {
+   "name": "边界: 未知物种 → error+available",
+   "ok": true,
+   "detail": "{'error': \"无匹配组成条目 (species='dragon' tissue='retina' disease='')\", 'available': "
+  },
+  {
+   "name": "边界: 未知疾病 → error",
+   "ok": true,
+   "detail": "{'error': \"无匹配疾病条目: 'xyz-not-exist'\", 'available': [{'entry_id': 'human_pdr_memb"
+  },
+  {
+   "name": "旧套件不回归: regression_mcp_vs_direct_v2_20260923.py",
+   "ok": false,
+   "detail": "rc=1 fails=?"
+  },
+  {
+   "name": "旧套件不回归: selftest_tools_v2_20260923.py",
+   "ok": false,
+   "detail": "rc=1 fails=1"
+  }
+ ],
+ "pass": 22,
+ "fail": 6
+}

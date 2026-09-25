@@ -1,0 +1,1117 @@
+{
+ "schema": "eyekb-baseline/1.1",
+ "entry_id": "baseline_human_trabecular_meshwork",
+ "tissue": "trabecular_meshwork",
+ "species": "human",
+ "title": "组成基线: 人(正常)trabecular_meshwork snRNA adult-only 主档 (trabecular_meshwork 切片 184,922 核 / 25 供者, 供者级条件参考分布, KB2c 发育轴单列)",
+ "status": "filled_donor_level",
+ "generated": "2026-09-23",
+ "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c 发育轴单列 t_be336eee)",
+ "card": "t_bad1fbab",
+ "anchor": {
+  "registry_row": "OA-D004=OA-D016 (GSE199013/HASA, t_6f5cc731 盘点 TM/CB 主力底座; 本地件核数与 HASA 条目 1,102,250 精确吻合)",
+  "registry_csv": "/mnt/D/OcularKB/registry/ocular_public_datasets_verified_v1.csv",
+  "local_path": "/mnt/D/OcularKB/data/HRA000728_tm_cb/HRA000728_tm_cb.h5ad",
+  "tier": "T1 portal 官方注释 (majorclass/author_cell_type/cell_type; study=chen_tm_cb+sanes_GSE199013)"
+ },
+ "t2_fields": {
+  "取样材料": "人前节段手术取材中 trabecular_meshwork 解剖组分 (tissue 列='eye trabecular meshwork' 切片; 另有 uvea 分量 53,406 核未入本条)",
+  "疾病阶段": "normal (disease 列全 normal; 供者系统性死亡眼库/手术材料)",
+  "治疗背景": "未记录 (元数据无治疗列) —— 标'未记录', 不臆测",
+  "scRNA_vs_snRNA": "snRNA-seq (suspension_type=nucleus 100%; intronic_reads_counted=yes)",
+  "富集步骤": "无分选记录 (全组织核悬液直接上机)",
+  "解离方法": "mechanical dissociation,detergent solubilization×157,161核; mechanical dissociation,centrifugation×27,761核 (sample_collection_method=surgical resection)",
+  "供者数": "主档 adult-only 25 donors / 25 供者单元; 对照档 adult_pool 25 donors / 25 单元 (含 0 非 adult 供者 → 逐行见 excluded_nonadult_units)",
+  "计数分母": "184,922 核 (trabecular_meshwork 切片内 majorclass 全标注)",
+  "证据来源": "本地实测复算 (A) + portal/HASA 官方注释 (t_6f5cc731 判 'portal官方')"
+ },
+ "usage_scope": "用途口径 (Astra T2 裁定固化): 本基线 = 该取样材料在该实验流程下捕获到的细胞构成的身份参考 + 背景对照; **不得当组成达标线**。疾病手术材料的取样对象 ≠ 健康器官 (如 PDR 纤维血管膜不得对照健康视网膜组成验收); 注释数据出现清单外身份 → 触发 unexpected 旗即可, 不得强制改成清单内身份 (标签接受上下文一致性核查, 非白名单定位)。",
+ "evidence_grades": {
+  "A": "本地实测复算 (带文件路径+脚本)",
+  "B": "文献原文直接报告",
+  "C": "A 级源数据供者级/跨研究分布推得的经验区间",
+  "qualitative": "文献仅定性描述 → 只存定性, 不补造区间 (Astra T2)",
+  "not_estimable": "区间无法估计 —— 合法状态, 注释仍可开展 (Astra T2)"
+ },
+ "distribution_method": "供者级 (研究|供者 单元); 研究层先分层展示; KB2c: 主档仅 adult 供者单元; pooled 仅对照",
+ "donor_level_main": {
+  "CB_NPCE": {
+   "n_units": 25,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "range_pct": [
+    0.0,
+    2.81
+   ]
+  },
+  "CB_PCE": {
+   "n_units": 25,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "range_pct": [
+    0.0,
+    4.9
+   ]
+  },
+  "Ciliary_Muscle": {
+   "n_units": 25,
+   "median_pct": 34.22,
+   "iqr_pct": [
+    30.18,
+    43.43
+   ],
+   "range_pct": [
+    17.61,
+    59.17
+   ]
+  },
+  "Endothelium": {
+   "n_units": 25,
+   "median_pct": 2.35,
+   "iqr_pct": [
+    1.47,
+    3.2
+   ],
+   "range_pct": [
+    0.78,
+    10.68
+   ]
+  },
+  "Fibroblast": {
+   "n_units": 25,
+   "median_pct": 37.37,
+   "iqr_pct": [
+    31.05,
+    42.69
+   ],
+   "range_pct": [
+    20.83,
+    65.3
+   ]
+  },
+  "Immune Cell": {
+   "n_units": 25,
+   "median_pct": 4.58,
+   "iqr_pct": [
+    3.44,
+    6.58
+   ],
+   "range_pct": [
+    0.67,
+    18.82
+   ]
+  },
+  "Melanocyte": {
+   "n_units": 25,
+   "median_pct": 5.31,
+   "iqr_pct": [
+    3.46,
+    7.21
+   ],
+   "range_pct": [
+    0.63,
+    11.45
+   ]
+  },
+  "Pericyte": {
+   "n_units": 25,
+   "median_pct": 0.33,
+   "iqr_pct": [
+    0.27,
+    0.42
+   ],
+   "range_pct": [
+    0.0,
+    0.88
+   ]
+  },
+  "Schwann Cell": {
+   "n_units": 25,
+   "median_pct": 11.58,
+   "iqr_pct": [
+    7.72,
+    13.6
+   ],
+   "range_pct": [
+    3.73,
+    22.85
+   ]
+  }
+ },
+ "pooled_adult_only_main": {
+  "CB_NPCE": 0.18,
+  "CB_PCE": 0.31,
+  "Ciliary_Muscle": 36.93,
+  "Endothelium": 2.47,
+  "Fibroblast": 36.38,
+  "Immune Cell": 5.28,
+  "Melanocyte": 5.94,
+  "Pericyte": 0.39,
+  "Schwann Cell": 12.11
+ },
+ "pooled_all_cells": {
+  "CB_NPCE": 0.18,
+  "CB_PCE": 0.31,
+  "Ciliary_Muscle": 36.93,
+  "Endothelium": 2.47,
+  "Fibroblast": 36.38,
+  "Immune Cell": 5.28,
+  "Melanocyte": 5.94,
+  "Pericyte": 0.39,
+  "Schwann Cell": 12.11
+ },
+ "strata": [
+  {
+   "study": "chen_tm_cb",
+   "tissue_group": "trabecular_meshwork",
+   "n_donors": 21,
+   "n_cells": 157161,
+   "share_of_atlas_pct": 84.99,
+   "donor_level": {
+    "CB_NPCE": {
+     "n_units": 21,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      2.81
+     ]
+    },
+    "CB_PCE": {
+     "n_units": 21,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      4.9
+     ]
+    },
+    "Ciliary_Muscle": {
+     "n_units": 21,
+     "median_pct": 33.09,
+     "iqr_pct": [
+      30.06,
+      37.84
+     ],
+     "range_pct": [
+      17.61,
+      59.17
+     ]
+    },
+    "Endothelium": {
+     "n_units": 21,
+     "median_pct": 2.35,
+     "iqr_pct": [
+      2.04,
+      3.2
+     ],
+     "range_pct": [
+      0.78,
+      9.43
+     ]
+    },
+    "Fibroblast": {
+     "n_units": 21,
+     "median_pct": 38.04,
+     "iqr_pct": [
+      32.24,
+      43.24
+     ],
+     "range_pct": [
+      20.83,
+      65.3
+     ]
+    },
+    "Immune Cell": {
+     "n_units": 21,
+     "median_pct": 4.58,
+     "iqr_pct": [
+      3.3,
+      6.37
+     ],
+     "range_pct": [
+      0.67,
+      18.82
+     ]
+    },
+    "Melanocyte": {
+     "n_units": 21,
+     "median_pct": 6.18,
+     "iqr_pct": [
+      3.71,
+      7.45
+     ],
+     "range_pct": [
+      0.63,
+      11.45
+     ]
+    },
+    "Pericyte": {
+     "n_units": 21,
+     "median_pct": 0.31,
+     "iqr_pct": [
+      0.26,
+      0.36
+     ],
+     "range_pct": [
+      0.0,
+      0.77
+     ]
+    },
+    "Schwann Cell": {
+     "n_units": 21,
+     "median_pct": 11.46,
+     "iqr_pct": [
+      7.72,
+      13.01
+     ],
+     "range_pct": [
+      3.73,
+      17.67
+     ]
+    }
+   },
+   "donor_level_adult_only": {
+    "CB_NPCE": {
+     "n_units": 21,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      2.81
+     ]
+    },
+    "CB_PCE": {
+     "n_units": 21,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      4.9
+     ]
+    },
+    "Ciliary_Muscle": {
+     "n_units": 21,
+     "median_pct": 33.09,
+     "iqr_pct": [
+      30.06,
+      37.84
+     ],
+     "range_pct": [
+      17.61,
+      59.17
+     ]
+    },
+    "Endothelium": {
+     "n_units": 21,
+     "median_pct": 2.35,
+     "iqr_pct": [
+      2.04,
+      3.2
+     ],
+     "range_pct": [
+      0.78,
+      9.43
+     ]
+    },
+    "Fibroblast": {
+     "n_units": 21,
+     "median_pct": 38.04,
+     "iqr_pct": [
+      32.24,
+      43.24
+     ],
+     "range_pct": [
+      20.83,
+      65.3
+     ]
+    },
+    "Immune Cell": {
+     "n_units": 21,
+     "median_pct": 4.58,
+     "iqr_pct": [
+      3.3,
+      6.37
+     ],
+     "range_pct": [
+      0.67,
+      18.82
+     ]
+    },
+    "Melanocyte": {
+     "n_units": 21,
+     "median_pct": 6.18,
+     "iqr_pct": [
+      3.71,
+      7.45
+     ],
+     "range_pct": [
+      0.63,
+      11.45
+     ]
+    },
+    "Pericyte": {
+     "n_units": 21,
+     "median_pct": 0.31,
+     "iqr_pct": [
+      0.26,
+      0.36
+     ],
+     "range_pct": [
+      0.0,
+      0.77
+     ]
+    },
+    "Schwann Cell": {
+     "n_units": 21,
+     "median_pct": 11.46,
+     "iqr_pct": [
+      7.72,
+      13.01
+     ],
+     "range_pct": [
+      3.73,
+      17.67
+     ]
+    }
+   },
+   "n_units_adult_only": 21,
+   "adult_fallback_guard": null
+  },
+  {
+   "study": "sanes_GSE199013",
+   "tissue_group": "trabecular_meshwork",
+   "n_donors": 4,
+   "n_cells": 27761,
+   "share_of_atlas_pct": 15.01,
+   "donor_level": {
+    "CB_NPCE": {
+     "n_units": 4,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "CB_PCE": {
+     "n_units": 4,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Ciliary_Muscle": {
+     "n_units": 4,
+     "median_pct": 43.88,
+     "iqr_pct": [
+      42.97,
+      45.02
+     ],
+     "range_pct": [
+      41.56,
+      47.12
+     ]
+    },
+    "Endothelium": {
+     "n_units": 4,
+     "median_pct": 1.95,
+     "iqr_pct": [
+      1.35,
+      4.52
+     ],
+     "range_pct": [
+      1.09,
+      10.68
+     ]
+    },
+    "Fibroblast": {
+     "n_units": 4,
+     "median_pct": 29.95,
+     "iqr_pct": [
+      27.47,
+      31.1
+     ],
+     "range_pct": [
+      22.05,
+      32.53
+     ]
+    },
+    "Immune Cell": {
+     "n_units": 4,
+     "median_pct": 5.57,
+     "iqr_pct": [
+      4.31,
+      6.75
+     ],
+     "range_pct": [
+      3.56,
+      7.23
+     ]
+    },
+    "Melanocyte": {
+     "n_units": 4,
+     "median_pct": 3.65,
+     "iqr_pct": [
+      2.48,
+      4.62
+     ],
+     "range_pct": [
+      1.22,
+      5.28
+     ]
+    },
+    "Pericyte": {
+     "n_units": 4,
+     "median_pct": 0.72,
+     "iqr_pct": [
+      0.67,
+      0.78
+     ],
+     "range_pct": [
+      0.55,
+      0.88
+     ]
+    },
+    "Schwann Cell": {
+     "n_units": 4,
+     "median_pct": 12.91,
+     "iqr_pct": [
+      10.22,
+      16.38
+     ],
+     "range_pct": [
+      6.15,
+      22.85
+     ]
+    }
+   },
+   "donor_level_adult_only": {
+    "CB_NPCE": {
+     "n_units": 4,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "CB_PCE": {
+     "n_units": 4,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Ciliary_Muscle": {
+     "n_units": 4,
+     "median_pct": 43.88,
+     "iqr_pct": [
+      42.97,
+      45.02
+     ],
+     "range_pct": [
+      41.56,
+      47.12
+     ]
+    },
+    "Endothelium": {
+     "n_units": 4,
+     "median_pct": 1.95,
+     "iqr_pct": [
+      1.35,
+      4.52
+     ],
+     "range_pct": [
+      1.09,
+      10.68
+     ]
+    },
+    "Fibroblast": {
+     "n_units": 4,
+     "median_pct": 29.95,
+     "iqr_pct": [
+      27.47,
+      31.1
+     ],
+     "range_pct": [
+      22.05,
+      32.53
+     ]
+    },
+    "Immune Cell": {
+     "n_units": 4,
+     "median_pct": 5.57,
+     "iqr_pct": [
+      4.31,
+      6.75
+     ],
+     "range_pct": [
+      3.56,
+      7.23
+     ]
+    },
+    "Melanocyte": {
+     "n_units": 4,
+     "median_pct": 3.65,
+     "iqr_pct": [
+      2.48,
+      4.62
+     ],
+     "range_pct": [
+      1.22,
+      5.28
+     ]
+    },
+    "Pericyte": {
+     "n_units": 4,
+     "median_pct": 0.72,
+     "iqr_pct": [
+      0.67,
+      0.78
+     ],
+     "range_pct": [
+      0.55,
+      0.88
+     ]
+    },
+    "Schwann Cell": {
+     "n_units": 4,
+     "median_pct": 12.91,
+     "iqr_pct": [
+      10.22,
+      16.38
+     ],
+     "range_pct": [
+      6.15,
+      22.85
+     ]
+    }
+   },
+   "n_units_adult_only": 4,
+   "adult_fallback_guard": null
+  }
+ ],
+ "major_classes": [
+  {
+   "class": "CB_NPCE",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "donor_range_pct": [
+    0.0,
+    2.81
+   ],
+   "pooled_pct_for_reference_only": 0.18,
+   "evidence": "A",
+   "source_ids": [
+    "TRABECULAR_MESHWORK_LOCAL",
+    "TRABECULAR_MESHWORK_HASA"
+   ]
+  },
+  {
+   "class": "CB_PCE",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "donor_range_pct": [
+    0.0,
+    4.9
+   ],
+   "pooled_pct_for_reference_only": 0.31,
+   "evidence": "A",
+   "source_ids": [
+    "TRABECULAR_MESHWORK_LOCAL",
+    "TRABECULAR_MESHWORK_HASA"
+   ]
+  },
+  {
+   "class": "Ciliary_Muscle",
+   "donor_median_pct": 34.22,
+   "donor_iqr_pct": [
+    30.18,
+    43.43
+   ],
+   "donor_range_pct": [
+    17.61,
+    59.17
+   ],
+   "pooled_pct_for_reference_only": 36.93,
+   "evidence": "A",
+   "source_ids": [
+    "TRABECULAR_MESHWORK_LOCAL",
+    "TRABECULAR_MESHWORK_HASA"
+   ]
+  },
+  {
+   "class": "Endothelium",
+   "donor_median_pct": 2.35,
+   "donor_iqr_pct": [
+    1.47,
+    3.2
+   ],
+   "donor_range_pct": [
+    0.78,
+    10.68
+   ],
+   "pooled_pct_for_reference_only": 2.47,
+   "evidence": "A",
+   "source_ids": [
+    "TRABECULAR_MESHWORK_LOCAL",
+    "TRABECULAR_MESHWORK_HASA"
+   ]
+  },
+  {
+   "class": "Fibroblast",
+   "donor_median_pct": 37.37,
+   "donor_iqr_pct": [
+    31.05,
+    42.69
+   ],
+   "donor_range_pct": [
+    20.83,
+    65.3
+   ],
+   "pooled_pct_for_reference_only": 36.38,
+   "evidence": "A",
+   "source_ids": [
+    "TRABECULAR_MESHWORK_LOCAL",
+    "TRABECULAR_MESHWORK_HASA"
+   ]
+  },
+  {
+   "class": "Immune Cell",
+   "donor_median_pct": 4.58,
+   "donor_iqr_pct": [
+    3.44,
+    6.58
+   ],
+   "donor_range_pct": [
+    0.67,
+    18.82
+   ],
+   "pooled_pct_for_reference_only": 5.28,
+   "evidence": "A",
+   "source_ids": [
+    "TRABECULAR_MESHWORK_LOCAL",
+    "TRABECULAR_MESHWORK_HASA"
+   ]
+  },
+  {
+   "class": "Melanocyte",
+   "donor_median_pct": 5.31,
+   "donor_iqr_pct": [
+    3.46,
+    7.21
+   ],
+   "donor_range_pct": [
+    0.63,
+    11.45
+   ],
+   "pooled_pct_for_reference_only": 5.94,
+   "evidence": "A",
+   "source_ids": [
+    "TRABECULAR_MESHWORK_LOCAL",
+    "TRABECULAR_MESHWORK_HASA"
+   ]
+  },
+  {
+   "class": "Pericyte",
+   "donor_median_pct": 0.33,
+   "donor_iqr_pct": [
+    0.27,
+    0.42
+   ],
+   "donor_range_pct": [
+    0.0,
+    0.88
+   ],
+   "pooled_pct_for_reference_only": 0.39,
+   "evidence": "A",
+   "source_ids": [
+    "TRABECULAR_MESHWORK_LOCAL",
+    "TRABECULAR_MESHWORK_HASA"
+   ]
+  },
+  {
+   "class": "Schwann Cell",
+   "donor_median_pct": 11.58,
+   "donor_iqr_pct": [
+    7.72,
+    13.6
+   ],
+   "donor_range_pct": [
+    3.73,
+    22.85
+   ],
+   "pooled_pct_for_reference_only": 12.11,
+   "evidence": "A",
+   "source_ids": [
+    "TRABECULAR_MESHWORK_LOCAL",
+    "TRABECULAR_MESHWORK_HASA"
+   ]
+  }
+ ],
+ "fine_types": {
+  "denominator_note": "author_cell_type 类内占比 (pooled within class, 供参考)"
+ },
+ "states": null,
+ "flags": {
+  "expected_low_but_present": [
+   "Schwann Cell ~12% (神经支配组织)",
+   "Pericyte ~0.4%"
+  ],
+  "unexpected": [
+   "Melanocyte ~6% (葡萄膜色素组织附带, 取材平面相关)"
+  ],
+  "contamination_suspect": [
+   "CB_PCE/CB_NPCE ~0.5% (取材越界到睫状体)"
+  ]
+ },
+ "caveats": [
+  "本条=小梁网解剖组分取材切片: Ciliary_Muscle 占比高系紧邻的巩膜 spur/小梁肌一体取材, 属捕获构成非 TM 细胞层真值; 作者级 TM 特异亚型 (BeamA/BeamB/JCT, author_cell_type) 见 fine_types。",
+  "Fibroblast 主表类在本切片 = TM 成纤维/梁细胞 (TMFibro) —— 勿与角膜/巩膜成纤维直接混比。",
+  "CB_PCE/CB_NPCE 少量 (合计 ~0.5%) = 睫状体取材边界污染。",
+  "供者 25 但单元内供者规模不均; n=25 供者级区间仍属中等支撑, 疾病对照用后须复核方向。",
+  "snRNA 口径, 与 scRNA 条不可直接互比 (Astra T2); uvea 分量 (53,406 核) 与巩膜/葡萄膜条另议。",
+  "v1.1 (KB2c t_be336eee): 主档=adult-only (>=18y, 裁定 Q2) —— 本切片实测剔除 0 个 (本切片全部供者 >=18y → 两档数值合法全等, 仅身份签名分离); v1.0 混口径保留于 donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0), 两档签名分离。"
+ ],
+ "sources": [
+  {
+   "sid": "TRABECULAR_MESHWORK_LOCAL",
+   "kind": "dataset",
+   "label": "本地文件 /mnt/D/OcularKB/data/HRA000728_tm_cb/HRA000728_tm_cb.h5ad",
+   "path": "/mnt/D/OcularKB/data/HRA000728_tm_cb/HRA000728_tm_cb.h5ad",
+   "computation": "/mnt/D/EyeKB/scripts/baselines/build_baselines.py _build_tmcb('eye trabecular meshwork','trabecular_meshwork')"
+  },
+  {
+   "sid": "TRABECULAR_MESHWORK_HASA",
+   "kind": "dataset",
+   "label": "HASA/前节段 snRNA collection (t_6f5cc731 盘点映射 OA-D004/OA-D016; 本切片=其 chen_tm_cb+sanes 集成件的 trabecular_meshwork 分量)",
+   "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE199013"
+  }
+ ],
+ "organism_stage": "adult",
+ "stage_axis": {
+  "field": "organism_stage",
+  "levels": [
+   "fetal",
+   "adult",
+   "developing",
+   "unknown"
+  ],
+  "adult_rule": "UBERON development_stage 数字化年龄 >= 18y 判 adult; 显式成年术语 (late/prime/middle/mature/human adult stage, 年代段>=3rd) 亦判 adult 并记 rule; 阈值改动须过裁定 (KB2c Q2, 2026-09-23)",
+  "developing_rule": "newborn/infant/postnatal stage 与 <18y 数字年龄/年龄段 → developing (KB2c Q2)",
+  "fetal_rule": "fetal/embryonic/gestation/Carnegie 术语 → fetal; 永不并入 adult 主档 (红线1)",
+  "unknown_rule": "无年龄列/未映射术语/organoid/年龄段跨阈值 → unknown, 必须披露行, 禁静默归 adult (红线2)",
+  "aging_note": ">=60 老年分层不在本轴 — aging 是正交独立轴, 将来单独立条目 (裁定 Q2)",
+  "source_col": "obs/development_stage (UBERON 原值逐行保留; 汇总见 stage_disclosure, 排除清单见 excluded_nonadult_units)",
+  "tier_ids": {
+   "adult_only": "baseline_human_trabecular_meshwork__adult_only__kb2c",
+   "adult_pool": "baseline_human_trabecular_meshwork__adult_pool__v1.0"
+  }
+ },
+ "stage_disclosure": {
+  "53-year-old stage": {
+   "cells": 22052,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "数字年龄 53y vs 阈值 18y"
+  },
+  "68-year-old stage": {
+   "cells": 20418,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "数字年龄 68y vs 阈值 18y"
+  },
+  "80 year-old and over stage": {
+   "cells": 16802,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "'80 year-old and over' 下界>=阈值"
+  },
+  "69-year-old stage": {
+   "cells": 16533,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "数字年龄 69y vs 阈值 18y"
+  },
+  "66-year-old stage": {
+   "cells": 12159,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 66y vs 阈值 18y"
+  },
+  "20-year-old stage": {
+   "cells": 10682,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 20y vs 阈值 18y"
+  },
+  "72-year-old stage": {
+   "cells": 8741,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 72y vs 阈值 18y"
+  },
+  "56-year-old stage": {
+   "cells": 8567,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 56y vs 阈值 18y"
+  },
+  "58-year-old stage": {
+   "cells": 8501,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 58y vs 阈值 18y"
+  },
+  "76-year-old stage": {
+   "cells": 8015,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 76y vs 阈值 18y"
+  },
+  "57-year-old stage": {
+   "cells": 7975,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 57y vs 阈值 18y"
+  },
+  "47-year-old stage": {
+   "cells": 6492,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 47y vs 阈值 18y"
+  },
+  "24-year-old stage": {
+   "cells": 6284,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 24y vs 阈值 18y"
+  },
+  "50-year-old stage": {
+   "cells": 5526,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 50y vs 阈值 18y"
+  },
+  "65-year-old stage": {
+   "cells": 5270,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 65y vs 阈值 18y"
+  },
+  "64-year-old stage": {
+   "cells": 4313,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 64y vs 阈值 18y"
+  },
+  "51-year-old stage": {
+   "cells": 3889,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 51y vs 阈值 18y"
+  },
+  "30-year-old stage": {
+   "cells": 3840,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 30y vs 阈值 18y"
+  },
+  "34-year-old stage": {
+   "cells": 3510,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 34y vs 阈值 18y"
+  },
+  "61-year-old stage": {
+   "cells": 2994,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 61y vs 阈值 18y"
+  },
+  "44-year-old stage": {
+   "cells": 2359,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 44y vs 阈值 18y"
+  }
+ },
+ "excluded_nonadult_units": [],
+ "donor_level_adult_pool_contrast": {
+  "CB_NPCE": {
+   "n_units": 25,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "range_pct": [
+    0.0,
+    2.81
+   ]
+  },
+  "CB_PCE": {
+   "n_units": 25,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "range_pct": [
+    0.0,
+    4.9
+   ]
+  },
+  "Ciliary_Muscle": {
+   "n_units": 25,
+   "median_pct": 34.22,
+   "iqr_pct": [
+    30.18,
+    43.43
+   ],
+   "range_pct": [
+    17.61,
+    59.17
+   ]
+  },
+  "Endothelium": {
+   "n_units": 25,
+   "median_pct": 2.35,
+   "iqr_pct": [
+    1.47,
+    3.2
+   ],
+   "range_pct": [
+    0.78,
+    10.68
+   ]
+  },
+  "Fibroblast": {
+   "n_units": 25,
+   "median_pct": 37.37,
+   "iqr_pct": [
+    31.05,
+    42.69
+   ],
+   "range_pct": [
+    20.83,
+    65.3
+   ]
+  },
+  "Immune Cell": {
+   "n_units": 25,
+   "median_pct": 4.58,
+   "iqr_pct": [
+    3.44,
+    6.58
+   ],
+   "range_pct": [
+    0.67,
+    18.82
+   ]
+  },
+  "Melanocyte": {
+   "n_units": 25,
+   "median_pct": 5.31,
+   "iqr_pct": [
+    3.46,
+    7.21
+   ],
+   "range_pct": [
+    0.63,
+    11.45
+   ]
+  },
+  "Pericyte": {
+   "n_units": 25,
+   "median_pct": 0.33,
+   "iqr_pct": [
+    0.27,
+    0.42
+   ],
+   "range_pct": [
+    0.0,
+    0.88
+   ]
+  },
+  "Schwann Cell": {
+   "n_units": 25,
+   "median_pct": 11.58,
+   "iqr_pct": [
+    7.72,
+    13.6
+   ],
+   "range_pct": [
+    3.73,
+    22.85
+   ]
+  }
+ },
+ "pooled_adult_pool_contrast": {
+  "CB_NPCE": 0.18,
+  "CB_PCE": 0.31,
+  "Ciliary_Muscle": 36.93,
+  "Endothelium": 2.47,
+  "Fibroblast": 36.38,
+  "Immune Cell": 5.28,
+  "Melanocyte": 5.94,
+  "Pericyte": 0.39,
+  "Schwann Cell": 12.11
+ },
+ "adult_only_meta": {
+  "n_donors_adult": 25,
+  "n_donors_excluded_nonadult": 0,
+  "n_cells_adult": 184922,
+  "n_units_adult_main": 25,
+  "n_units_pool": 25
+ },
+ "axis_version": "kb2c-1.1",
+ "development_stage": "adult",
+ "development_stage_prohibition": "KB3 禁令 (PI 红线 2026-09-23): 发育期数据不得进成人基线统计池, 反之亦然 —— 同一组织胎儿≠成人, adult/fetal 不互为参照。",
+ "kb3_card": "t_5425a7ca",
+ "identity_signature": {
+  "baseline_human_trabecular_meshwork__adult_only__kb2c": "sha256:c85aa43abeaba42cc85c150647dc348476f44914bc464dbbc59f823c2cab7f0b",
+  "baseline_human_trabecular_meshwork__adult_pool__v1.0": "sha256:aefa46e647d12752a32b12205c81cd842759ef956da8f622b10fad46d9ef9556"
+ }
+}

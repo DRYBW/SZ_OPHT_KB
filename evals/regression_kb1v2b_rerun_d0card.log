@@ -1,0 +1,69 @@
+[09/23/26 23:53:23] INFO     JAX version 0.10.2 available.         config.py:125
+                    INFO     Loading SentenceTransformer model     model.py:1080
+                             from                                               
+                             /mnt/D/OcularKB/models/bge-large-en-v              
+                             1.5.                                               
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 7481.32it/s]
+库: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09 | 174616 chunks, 6 species
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.02it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.99it/s]
+[PASS] initialize 握手  KB1v2-0.1
+[PASS] list_tools == 5  ['get_disease_prior', 'get_kb_page', 'get_tissue_composition', 'query_marker', 'search_literature']
+[PASS] 旧行为: retina 10 类不变  
+[PASS] retina→baseline 条  /mnt/D/EyeKB/kb/baselines/retina.json
+[PASS] retina 供者级分布与源文件全等  
+[PASS] retina p≡file (pooled/strata)  
+[PASS] retina T2 字段完备  ['取样材料', '疾病阶段', '治疗背景', '平台', '富集步骤', '解离方法', '供者数', '计数分母', '证据来源']
+[PASS] retina 用途口径写死(不得当达标线)  
+[PASS] retina rows=10 带 marker  
+[PASS] ocular_surface 与源文件全等  
+[PASS] 眼表 scRNA 口径标注  
+[PASS] 骨架条(conjunctiva): 状态+映射回填+区间无法估计合法  ⚠️数据不足（无成人正常结膜专门单细胞图谱；只有类器官模型GSE191232+发
+[PASS] KB1v2b: 骨架数 == 5 (ON/RPE/TM/CB 已回填)  ['choroid', 'conjunctiva', 'iris', 'lens', 'sclera']
+[PASS] baselines.json 索引 filled=6/skeleton=5  {'filled_donor_level': 6, 'skeleton_mapping_backfilled': 5}
+[PASS] optic_nerve→filled_donor_level 条  /mnt/D/EyeKB/kb/baselines/optic_nerve.json
+[PASS] optic_nerve 供者级分布与源文件全等  
+[PASS] optic_nerve T2 九字段完备  ['取样材料', '疾病阶段', '治疗背景', 'scRNA_vs_snRNA', '富集步骤', '解离方法', '供者数', '计数分母', '证据来源']
+[PASS] optic_nerve 用途口径写死  
+[PASS] optic_nerve rows=25 (portal majorclass 词表)  
+[PASS] optic_nerve 4 分层 (来源×部位)  
+[PASS] optic_nerve 视网膜混入旗在位  
+[PASS] RPE→filled_donor_level 条  /mnt/D/EyeKB/kb/baselines/RPE.json
+[PASS] RPE 供者级分布与源文件全等  
+[PASS] RPE T2 九字段完备  ['取样材料', '疾病阶段', '治疗背景', 'scRNA_vs_snRNA', '富集步骤', '解离方法', '供者数', '计数分母', '证据来源']
+[PASS] RPE rows=5 canonical 类  
+[PASS] RPE marker 推断口径声明在位 (非作者官方命名 caveat)  
+[PASS] RPE 状态层 26 簇全列  
+[PASS] RPE 干细候群'无法估计'合法态声明  
+[PASS] RPE 行内 source_ids 可解析 (无 MISSING)  
+[PASS] trabecular_meshwork→filled_donor_level 条  /mnt/D/EyeKB/kb/baselines/trabecular_meshwork.json
+[PASS] trabecular_meshwork 供者级分布与源文件全等  
+[PASS] trabecular_meshwork T2 九字段完备  
+[PASS] trabecular_meshwork rows=9  
+[PASS] trabecular_meshwork 用途口径写死  
+[PASS] trabecular_meshwork 行内 source_ids 可解析  
+[PASS] ciliary_body→filled_donor_level 条  /mnt/D/EyeKB/kb/baselines/ciliary_body.json
+[PASS] ciliary_body 供者级分布与源文件全等  
+[PASS] ciliary_body T2 九字段完备  
+[PASS] ciliary_body rows=9  
+[PASS] ciliary_body 用途口径写死  
+[PASS] ciliary_body 行内 source_ids 可解析  
+[PASS] PDR→v2 薄层条  
+[PASS] 错配警示在场  
+[PASS] 身份层级 7 + 状态轴 7  
+[PASS] 签名证据条件 (T4)  
+[PASS] unexpected 四分队列  
+[PASS] 最小可用标准在场  
+[PASS] 中文别名命中 v2 条  
+[PASS] 组织过滤 (膜格)  
+[PASS] 红线=T3 扩展表述  
+[PASS] 矩阵文件存在  
+[PASS] search 命中带三字段  [['disease_mechanism_background'], ['composition_baseline']]
+[PASS] sidecar 覆盖 2713 篇  2713
+[PASS] D0 复核状态透传  
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 6357.96it/s]
+库: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09 | 174616 chunks, 6 species
+[PASS] 检索语义不变 (剥 sidecar 全等)  
+[PASS] 无 PDR 中心目录/文件名  
+
+== KB1V2B REGRESSION (含回填扩展用例) 56/56 → PASS → /mnt/D/EyeKB/evals/REGRESSION_KB1V2B_20260923.json
+RC=0

@@ -1,0 +1,724 @@
+{
+ "schema": "eyekb-prior/1.0",
+ "entry_id": "human_retina",
+ "title": "组成基线: 人(正常)神经视网膜细胞组成",
+ "species": "human",
+ "tissue": "retina",
+ "disease": null,
+ "frozen_date": "2026-09-23",
+ "card": "t_39182aa2",
+ "evidence_grades": {
+  "A": "本地实测复算(带路径)",
+  "B": "文献原文直接报告",
+  "C": "A级源数据跨研究分布推得的经验区间"
+ },
+ "sources": [
+  {
+   "sid": "HRCA317M",
+   "kind": "dataset",
+   "pmid": "41578023",
+   "label": "HRCA CELLxGENE 合并版 3,177,310 cells (10 majorclass, 全 normal, 6 研究/104 donors, fovea~periphery)",
+   "path": "/mnt/D/OcularKB/data/HRCA_cellxgene/HRCA_allcells_annotated.h5ad",
+   "computation": "本卡 t_39182aa2 obs.majorclass 复算 (build_priors.py recompute_hrca)"
+  },
+  {
+   "sid": "HRCA_PAPER",
+   "kind": "paper",
+   "pmid": "41578023",
+   "label": "Li et al., Single-cell atlas of the transcriptome and chromatin accessibility in the human retina. Nat Genet 2026 (整版 ~3.9M cells, 123 RNA 类)"
+  },
+  {
+   "sid": "FOVEA_PERIPH",
+   "kind": "paper",
+   "pmid": "32555229",
+   "label": "Cell Atlas of the Human Fovea and Peripheral Retina (2020) — 中央凹/周边共享类型但比例与表达有区域差"
+  },
+  {
+   "sid": "AGING_ATLAS",
+   "kind": "paper",
+   "pmid": "34691611",
+   "label": "A single-cell transcriptome atlas of the aging human and macaque retina (2021)"
+  },
+  {
+   "sid": "MULTIOMICS_ATLAS",
+   "kind": "paper",
+   "pmid": "37388908",
+   "label": "A multi-omics atlas of the human retina at single-cell resolution (2023)"
+  },
+  {
+   "sid": "RETINA_ORGANOIDS",
+   "kind": "paper",
+   "pmid": "32946783",
+   "label": "Cell Types of the Human Retina and Its Organoids at Single-Cell Resolution (2020)"
+  },
+  {
+   "sid": "DEV_DUAL",
+   "kind": "paper",
+   "pmid": "39117640",
+   "label": "Single cell dual-omic atlas of the human developing retina (2024) — 发育期含 progenitor, 成体基线不适用"
+  },
+  {
+   "sid": "RETLIB41",
+   "kind": "kb",
+   "label": "本地 marker 库 markers_v4.1_clean.json v4.1-clean-P0.4",
+   "path": "/mnt/D/EyeKB/kb/markers/markers_v4.1_clean.json"
+  }
+ ],
+ "major_classes": [
+  {
+   "class": "Rod",
+   "label_cn": "视杆光感受器",
+   "pct_hrca317m": 33.55,
+   "n_cells": 1066056,
+   "expected_range_pct": [
+    28,
+    46
+   ],
+   "per_study_spread_pct": [
+    19.05,
+    47.77
+   ],
+   "markers_local_lib": [
+    "RHO",
+    "NRL",
+    "NR2E3",
+    "PDE6B",
+    "GNAT1"
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "HRCA317M",
+    "RETLIB41"
+   ],
+   "grade_b_anchors": [
+    "HRCA_PAPER",
+    "FOVEA_PERIPH",
+    "AGING_ATLAS",
+    "MULTIOMICS_ATLAS"
+   ]
+  },
+  {
+   "class": "Cone",
+   "label_cn": "视锥光感受器",
+   "pct_hrca317m": 4.0,
+   "n_cells": 127060,
+   "expected_range_pct": [
+    1.5,
+    7
+   ],
+   "per_study_spread_pct": [
+    0.95,
+    6.44
+   ],
+   "markers_local_lib": [
+    "OPN1SW",
+    "OPN1MW",
+    "ARR3",
+    "PDE6H",
+    "GNAT2"
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "HRCA317M",
+    "RETLIB41"
+   ],
+   "grade_b_anchors": [
+    "HRCA_PAPER",
+    "FOVEA_PERIPH",
+    "AGING_ATLAS",
+    "MULTIOMICS_ATLAS"
+   ]
+  },
+  {
+   "class": "BC",
+   "label_cn": "双极细胞",
+   "pct_hrca317m": 21.75,
+   "n_cells": 691008,
+   "expected_range_pct": [
+    12,
+    33
+   ],
+   "per_study_spread_pct": [
+    5.54,
+    32.64
+   ],
+   "markers_local_lib": [
+    "VSX2",
+    "GRM6",
+    "CACNA1S",
+    "ISL1",
+    "OTX2"
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "HRCA317M",
+    "RETLIB41"
+   ],
+   "grade_b_anchors": [
+    "HRCA_PAPER",
+    "FOVEA_PERIPH",
+    "AGING_ATLAS",
+    "MULTIOMICS_ATLAS"
+   ]
+  },
+  {
+   "class": "AC",
+   "label_cn": "无长突细胞",
+   "pct_hrca317m": 17.99,
+   "n_cells": 571579,
+   "expected_range_pct": [
+    8,
+    28
+   ],
+   "per_study_spread_pct": [
+    7.87,
+    27.67
+   ],
+   "markers_local_lib": [
+    "TFAP2A",
+    "GAD1",
+    "GAD2",
+    "SLC6A9",
+    "ONECUT2"
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "HRCA317M",
+    "RETLIB41"
+   ],
+   "grade_b_anchors": [
+    "HRCA_PAPER",
+    "FOVEA_PERIPH",
+    "AGING_ATLAS",
+    "MULTIOMICS_ATLAS"
+   ]
+  },
+  {
+   "class": "HC",
+   "label_cn": "水平细胞",
+   "pct_hrca317m": 2.54,
+   "n_cells": 80548,
+   "expected_range_pct": [
+    1,
+    8
+   ],
+   "per_study_spread_pct": [
+    0.51,
+    7.65
+   ],
+   "markers_local_lib": [
+    "ONECUT1",
+    "ONECUT3",
+    "GAD1",
+    "ISL1",
+    "CX3CR1"
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "HRCA317M",
+    "RETLIB41"
+   ],
+   "grade_b_anchors": [
+    "HRCA_PAPER",
+    "FOVEA_PERIPH",
+    "AGING_ATLAS",
+    "MULTIOMICS_ATLAS"
+   ]
+  },
+  {
+   "class": "RGC",
+   "label_cn": "神经节细胞",
+   "pct_hrca317m": 12.58,
+   "n_cells": 399605,
+   "expected_range_pct": [
+    3,
+    15
+   ],
+   "per_study_spread_pct": [
+    0.18,
+    43.64
+   ],
+   "markers_local_lib": [
+    "RBPMS",
+    "SLC17A6",
+    "POU4F1",
+    "POU4F2",
+    "NEFL"
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "HRCA317M",
+    "RETLIB41"
+   ],
+   "grade_b_anchors": [
+    "HRCA_PAPER",
+    "FOVEA_PERIPH",
+    "AGING_ATLAS",
+    "MULTIOMICS_ATLAS"
+   ],
+   "enrichment_note": "RGC 靶向研究 (Chen_rgc pooled 46.2%, Shekhar_legacy 43.6%) 为分选/富集设计, 高比例≠异常"
+  },
+  {
+   "class": "MG",
+   "label_cn": "Müller 胶质",
+   "pct_hrca317m": 6.97,
+   "n_cells": 221612,
+   "expected_range_pct": [
+    3,
+    12
+   ],
+   "per_study_spread_pct": [
+    1.93,
+    10.44
+   ],
+   "markers_local_lib": [
+    "RLBP1",
+    "GLUL",
+    "SOX9",
+    "VIM",
+    "S100B"
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "HRCA317M",
+    "RETLIB41"
+   ],
+   "grade_b_anchors": [
+    "HRCA_PAPER",
+    "FOVEA_PERIPH",
+    "AGING_ATLAS",
+    "MULTIOMICS_ATLAS"
+   ]
+  },
+  {
+   "class": "Astrocyte",
+   "label_cn": "星形胶质",
+   "pct_hrca317m": 0.44,
+   "n_cells": 14085,
+   "expected_range_pct": [
+    0.1,
+    1.5
+   ],
+   "per_study_spread_pct": [
+    0.23,
+    1.03
+   ],
+   "markers_local_lib": [
+    "GFAP",
+    "AQP4",
+    "S100B",
+    "VIM",
+    "SLC1A3"
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "HRCA317M",
+    "RETLIB41"
+   ],
+   "grade_b_anchors": [
+    "HRCA_PAPER",
+    "FOVEA_PERIPH",
+    "AGING_ATLAS",
+    "MULTIOMICS_ATLAS"
+   ]
+  },
+  {
+   "class": "Microglia",
+   "label_cn": "小胶质",
+   "pct_hrca317m": 0.15,
+   "n_cells": 4894,
+   "expected_range_pct": [
+    0.05,
+    0.8
+   ],
+   "per_study_spread_pct": [
+    0.0,
+    0.26
+   ],
+   "markers_local_lib": [
+    "C1QB"
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "HRCA317M",
+    "RETLIB41"
+   ],
+   "grade_b_anchors": [
+    "HRCA_PAPER",
+    "FOVEA_PERIPH",
+    "AGING_ATLAS",
+    "MULTIOMICS_ATLAS"
+   ]
+  },
+  {
+   "class": "RPE",
+   "label_cn": "视网膜色素上皮",
+   "pct_hrca317m": 0.03,
+   "n_cells": 863,
+   "expected_range_pct": [
+    0,
+    1.0
+   ],
+   "per_study_spread_pct": [
+    0.0,
+    0.12
+   ],
+   "markers_local_lib": [
+    "BEST1",
+    "RPE65",
+    "TTR",
+    "LRAT",
+    "RDH5",
+    "MITF"
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "HRCA317M",
+    "RETLIB41"
+   ],
+   "grade_b_anchors": [
+    "HRCA_PAPER",
+    "FOVEA_PERIPH",
+    "AGING_ATLAS",
+    "MULTIOMICS_ATLAS"
+   ],
+   "enrichment_note": "神经视网膜切片中 RPE 高比例提示 RPE/脉络膜混入 (非神经视网膜本体成分)"
+  }
+ ],
+ "fine_types": {
+  "denominator_note": "cell_type 列细分仅覆盖该 majorclass 已精细注释细胞; % 为亚型/类内注释细胞数",
+  "BC": {
+   "basis": "BC 亚型注释细胞",
+   "top": [
+    [
+     "flat midget bipolar cell",
+     20.9
+    ],
+    [
+     "invaginating midget",
+     15.4
+    ],
+    [
+     "rod bipolar cell",
+     14.7
+    ],
+    [
+     "diffuse bipolar 2",
+     9.9
+    ],
+    [
+     "DB1",
+     7.3
+    ],
+    [
+     "DB4",
+     7.1
+    ],
+    [
+     "DB3b",
+     5.1
+    ],
+    [
+     "giant bipolar (GB)",
+     3.7
+    ],
+    [
+     "DB3a",
+     3.2
+    ],
+    [
+     "DB6",
+     2.7
+    ]
+   ]
+  },
+  "AC": {
+   "basis": "AC 注释细胞",
+   "top": [
+    [
+     "GABAergic amacrine",
+     63.5
+    ],
+    [
+     "glycinergic amacrine",
+     23.0
+    ],
+    [
+     "amacrine (unclassified)",
+     10.0
+    ],
+    [
+     "starburst amacrine",
+     3.5
+    ]
+   ]
+  },
+  "RGC": {
+   "basis": "RGC 注释细胞",
+   "top": [
+    [
+     "OFF midget GC",
+     50.2
+    ],
+    [
+     "ON midget GC",
+     38.0
+    ],
+    [
+     "retinal ganglion cell (未分型)",
+     7.8
+    ],
+    [
+     "OFF parasol",
+     2.5
+    ],
+    [
+     "ON parasol",
+     1.5
+    ]
+   ]
+  },
+  "HC": {
+   "basis": "HC 注释细胞",
+   "top": [
+    [
+     "H1",
+     85.2
+    ],
+    [
+     "H2",
+     14.8
+    ]
+   ]
+  },
+  "Cone": {
+   "basis": "Cone 注释细胞",
+   "top": [
+    [
+     "retinal cone cell",
+     93.3
+    ],
+    [
+     "S cone",
+     6.7
+    ]
+   ]
+  }
+ },
+ "states": [
+  {
+   "cell_type": "Microglia",
+   "state": "homeostatic",
+   "markers": [
+    "P2RY12",
+    "TMEM119",
+    "CX3CR1",
+    "IRF8",
+    "C1QA/B",
+    "TYROBP",
+    "AIF1",
+    "SALL1",
+    "HEXB"
+   ],
+   "evidence": "A+B",
+   "source_ids": [
+    "RETLIB41",
+    "MEMLIB"
+   ],
+   "note": "retina 库 legacy_v4 + AUC 候选合并; 正常视网膜内占比极低 (HRCA 0.15%)"
+  },
+  {
+   "cell_type": "Müller glia",
+   "state": "homeostatic",
+   "markers": [
+    "RLBP1",
+    "GLUL",
+    "SOX9",
+    "S100B",
+    "VIM",
+    "AQP4(低)"
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "RETLIB41",
+    "HRCA317M"
+   ]
+  },
+  {
+   "cell_type": "RPE",
+   "state": "homeostatic",
+   "markers": [
+    "BEST1",
+    "RPE65",
+    "LRAT",
+    "RDH5",
+    "MITF",
+    "TTR"
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "RETLIB41",
+    "HRCA317M"
+   ],
+   "note": "神经视网膜标本中 RPE 应近零; 出现即触发 RPE/脉络膜混入旗"
+  },
+  {
+   "cell_type": "Astrocyte",
+   "state": "homeostatic (血管周围)",
+   "markers": [
+    "GFAP",
+    "AQP4",
+    "SLC1A3",
+    "S100B"
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "RETLIB41",
+    "HRCA317M"
+   ],
+   "note": "GFAP 上调=反应性胶质旗, 见疾病条目"
+  }
+ ],
+ "caveats": [
+  "单样本比例强烈受取材/分选设计影响 (NeuN± 核分选、RGC 富集、fovea vs 周边、lobe vs macular): 跨研究 spread (C 级区间推导依据) = Chen_a/Chen_b/Chen_c/MMD/BCM/Shekhar_legacy 6 组 pooled 的 min~max, 已排除 RGC 靶向组。",
+  "HRCA 10 类词表不含内皮/周细胞 (神经视网膜整合未收录血管类)。真实全视网膜含低比例血管成分; 注释数据出现 Endo/Pericyte 小簇属正常血管, 不打 contamination 旗 (对照疾病条目)。",
+  "RGC 富集样本 (如 Chen_rgc 46.2% RGC, Shekhar legacy 43.6%) 高比例是设计使然 —— 判'异常'前必须先查该数据集建库策略。",
+  "发育/类器官标本不适用本基线 (progenitor 与亚型比例完全不同, 锚 DEV_DUAL/RETINA_ORGANOIDS)。",
+  "PI 提醒: 公开数据自注释本身可能不准 —— 本条所有比例是'带证据等级的先验', 与数据打架时旗标上报, 不硬凑。"
+ ],
+ "flags": {
+  "expected_low_but_present": [
+   "Microglia (0.05~0.8%)",
+   "RPE (≈0, 混入即>1%)",
+   "Astrocyte (0.1~1.5%)"
+  ],
+  "contamination_suspect": [
+   "高 MT 光感受器碎片区 (解离应激, 见疾病条目)",
+   "外周血髓系大簇 (FCN1/LYZ) —— 全视网膜标本血液残留旗"
+  ],
+  "unexpected": [
+   "progenitor/PCNA+ 大簇 (成人视网膜)",
+   "大量肥大细胞/嗜酸细胞"
+  ]
+ },
+ "_computed": {
+  "total_cells": 3177310,
+  "pooled_whole_retina_excl_targeted": {
+   "n": 3014623,
+   "AC": 16.39,
+   "BC": 22.88,
+   "RGC": 10.76,
+   "Rod": 35.16,
+   "Cone": 4.15,
+   "HC": 2.67,
+   "MG": 7.34,
+   "Astrocyte": 0.47,
+   "Microglia": 0.16,
+   "RPE": 0.03
+  },
+  "per_study": {
+   "Chen_a": {
+    "n": 1062102,
+    "AC": 20.23,
+    "BC": 29.42,
+    "RGC": 0.18,
+    "Rod": 37.72,
+    "Cone": 4.3,
+    "HC": 0.51,
+    "MG": 7.26,
+    "Astrocyte": 0.24,
+    "Microglia": 0.15,
+    "RPE": 0.01
+   },
+   "Chen_b_GSE226108": {
+    "n": 269400,
+    "AC": 21.48,
+    "BC": 21.56,
+    "RGC": 4.33,
+    "Rod": 37.17,
+    "Cone": 4.35,
+    "HC": 4.32,
+    "MG": 6.36,
+    "Astrocyte": 0.31,
+    "Microglia": 0.08,
+    "RPE": 0.03
+   },
+   "Chen_c_GSE247157": {
+    "n": 153621,
+    "AC": 7.87,
+    "BC": 21.11,
+    "RGC": 4.12,
+    "Rod": 47.77,
+    "Cone": 4.37,
+    "HC": 3.03,
+    "MG": 10.42,
+    "Astrocyte": 1.03,
+    "Microglia": 0.2,
+    "RPE": 0.07
+   },
+   "Chen_rgc_TARGETED": {
+    "n": 162687,
+    "AC": 47.62,
+    "BC": 0.77,
+    "RGC": 46.2,
+    "Rod": 3.68,
+    "Cone": 1.23,
+    "HC": 0.09,
+    "MG": 0.22,
+    "Astrocyte": 0.03,
+    "Microglia": 0.08,
+    "RPE": 0.07
+   },
+   "other": {
+    "n": 8697,
+    "AC": 12.53,
+    "BC": 32.64,
+    "RGC": 4.97,
+    "Rod": 29.7,
+    "Cone": 2.89,
+    "HC": 7.65,
+    "MG": 8.83,
+    "Astrocyte": 0.79
+   },
+   "BCM": {
+    "n": 575563,
+    "AC": 12.65,
+    "BC": 25.11,
+    "RGC": 11.26,
+    "Rod": 27.2,
+    "Cone": 6.44,
+    "HC": 6.27,
+    "MG": 10.44,
+    "Astrocyte": 0.33,
+    "Microglia": 0.26,
+    "RPE": 0.04
+   },
+   "MMD": {
+    "n": 767869,
+    "AC": 11.24,
+    "BC": 16.88,
+    "RGC": 21.08,
+    "Rod": 38.15,
+    "Cone": 2.86,
+    "HC": 2.68,
+    "MG": 6.09,
+    "Astrocyte": 0.88,
+    "Microglia": 0.13,
+    "RPE": 0.01
+   },
+   "Shekhar_legacy": {
+    "n": 177371,
+    "AC": 27.67,
+    "BC": 5.54,
+    "RGC": 43.64,
+    "Rod": 19.05,
+    "Cone": 0.95,
+    "HC": 0.78,
+    "MG": 1.93,
+    "Astrocyte": 0.23,
+    "Microglia": 0.09,
+    "RPE": 0.12
+   }
+  }
+ }
+}

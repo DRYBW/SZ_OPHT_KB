@@ -1,0 +1,97 @@
+回归用例: 41 (golden_retina 10 + tissue_spot 31)
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 11937.23it/s]
+库: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09 | 174616 chunks, 6 species
+  直调首轮 37s (含模型/库加载)
+  直调侧完成 41 用例, 79s
+[09/23/26 20:47:59] INFO     JAX version 0.10.2 available.         config.py:125
+[09/23/26 20:48:00] INFO     Loading SentenceTransformer model     model.py:1080
+                             from                                               
+                             /mnt/D/OcularKB/models/bge-large-en-v              
+                             1.5.                                               
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 8157.08it/s]
+库: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09 | 174616 chunks, 6 species
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  9.73it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  9.70it/s]
+[OK ] golden_retina          Rod                            pmids=34006945,36261438,40531615... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.41it/s]
+[OK ] golden_retina          Cone                           pmids=34006945,40531615,40660409... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 17.90it/s]
+[OK ] golden_retina          Retinal Pigment Epithelium     pmids=34977041,37156914,36231108... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 14.72it/s]
+[OK ] golden_retina          Muller Glia                    pmids=35167652,36277849,40531615... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 26.60it/s]
+[OK ] golden_retina          Astrocyte                      pmids=41892278,36277849,37749651... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 25.78it/s]
+[OK ] golden_retina          Microglia                      pmids=35212809,38409074,34006945... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 22.38it/s]
+[OK ] golden_retina          Retinal Ganglion Cell          pmids=34946963,34006945,38903914... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 26.55it/s]
+[OK ] golden_retina          Rod Bipolar Cell               pmids=33665228,34006945,41632798... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.66it/s]
+[OK ] golden_retina          Horizontal Cell                pmids=35615708,35212809,35325233... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 26.46it/s]
+[OK ] golden_retina          Amacrine Cell                  pmids=34006945,35615708,35212809... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 20.33it/s]
+[OK ] spot_cornea            corneal epithelium             pmids=34381080,37443842,40390022... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 22.77it/s]
+[OK ] spot_cornea            corneal endothelium            pmids=34741068,39732756,34381080... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  9.41it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  9.38it/s]
+[OK ] spot_cornea            keratocyte                     pmids=34381080,37443842,40390022... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 26.36it/s]
+[OK ] spot_cornea            limbal stem cell               pmids=37443842,34381080,37389178... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 22.60it/s]
+[OK ] spot_conjunctiva       goblet cell                    pmids=37389178,37443842,34638869... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.97it/s]
+[OK ] spot_conjunctiva       conjunctival epithelium        pmids=37389178,37443842,34381080... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 23.21it/s]
+[OK ] spot_conjunctiva       fibroblast                     pmids=40238113,37569323,38177186... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 24.62it/s]
+[OK ] spot_sclera            fibroblast                     pmids=40402520,40576432,40677403... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.89it/s]
+[OK ] spot_sclera            chondrocyte                    pmids=40576432,40402520,41803895... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.48it/s]
+[OK ] spot_sclera            smooth muscle                  pmids=41803895,40576432,40402520... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 22.06it/s]
+[OK ] spot_trabecular_meshwork trabecular meshwork cell       pmids=42291280,40728983,39952952... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.98it/s]
+[OK ] spot_trabecular_meshwork schlemm canal endothelium      pmids=39422453,41636427,32832237... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 22.84it/s]
+[OK ] spot_trabecular_meshwork endothelial cell               pmids=39422453,32832237,40126508... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 29.06it/s]
+[OK ] spot_iris              iris smooth muscle             pmids=41309590,36092714... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.01it/s]
+[OK ] spot_iris              iris pigment epithelium        pmids=41309590,36582303,38587075... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.51it/s]
+[OK ] spot_iris              astrocyte                      pmids=41309590,36582303,38587075... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 19.69it/s]
+[OK ] spot_ciliary_body      ciliary epithelium             pmids=36163311,39273233,41805112... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.28it/s]
+[OK ] spot_ciliary_body      endothelial cell               pmids=36163311,39422453,36821388... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.80it/s]
+[OK ] spot_ciliary_body      smooth muscle                  pmids=36163311,40055379,41528844... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 28.78it/s]
+[OK ] spot_lens              lens fiber cell                pmids=40598599,38643244,41989229... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.35it/s]
+[OK ] spot_lens              lens epithelium                pmids=40598599,41020554,40408092... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 28.44it/s]
+[OK ] spot_lens              fiber cell                     pmids=38643244,40598599,41989229... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.39it/s]
+[OK ] spot_optic_nerve       oligodendrocyte                pmids=40567162,41856199,37681863... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 25.69it/s]
+[OK ] spot_optic_nerve       astrocyte                      pmids=37681863,33627831,37749651... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 26.71it/s]
+[OK ] spot_optic_nerve       microglia                      pmids=41856199,37681863,41705242... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.48it/s]
+[OK ] spot_optic_nerve       retinal ganglion cell          pmids=33499292,41856199,38903914... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.29it/s]
+[OK ] spot_RPE               retinal pigment epithelium     pmids=34977041,38528525,40882639... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 25.60it/s]
+[OK ] spot_RPE               endothelial cell               pmids=41254671,38528525,37528478... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.32it/s]
+[OK ] spot_choroid           choriocapillaris endothelium   pmids=35181781,38115754,37504962... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 26.09it/s]
+[OK ] spot_choroid           melanocyte                     pmids=38232696,37289546,41528844... 
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 26.46it/s]
+[OK ] spot_choroid           pericyte                       pmids=36645183,34779136,41528844... 
+
+== REGRESSION 41/41 consistent → PASS -> /mnt/D/EyeKB/evals/MCP_REGRESSION_V2_20260923.md
+REG_EXIT=0

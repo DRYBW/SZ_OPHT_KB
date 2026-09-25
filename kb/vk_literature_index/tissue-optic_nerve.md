@@ -1,0 +1,258 @@
+---
+title: 文献索引: optic_nerve
+created: 2026-09-23
+updated: 2026-09-23
+type: query
+tags: [literature, rag, index, optic_nerve]
+sources: [literature_db v2.0_2026-09]
+confidence: high
+---
+
+# 文献: optic_nerve (232 篇, 多标签口径)
+
+> RAG v2.0 中 tissue_labels 含 optic_nerve 的论文清单（含与其他组织共标的论文），按年份倒序。
+> 溯源用 PMID 查询 RAG API: `stage3_retrieve.py --tissue optic_nerve --db-dir literature_db/v2.0_2026-09 --cell-type <CT>`
+> 定位 (Claude5 冻结): 仅人机交互辅助引用, 不入打分。
+
+## 论文列表
+- PMID41744494 (2026) Coordinated stimulation of axon regenerative and neurodegenerative transcriptional programs by ATF4 following optic nerve injury. — *eLife* [mouse] tags=optic_nerve v=v2.0-new
+- PMID41769942 (2026) Beyond the Globe: Molecular Diagnostics of Optic Nerve, Orbital, and Adnexal Neoplasms. — *Translational vision science & technology* [human] tags=optic_nerve v=v2.0-new
+- PMID42390160 (2026) The Role of Nrf2 in SIRT1-Mediated RGC Neuroprotection in Traumatic Optic Neuropathy. — *Translational vision science & technology* [both] tags=optic_nerve v=v2.0-new
+- PMID41761675 (2026) Extracellular vesicles conjugated with c(RGDyk) peptide targeting integrin αVβ3 repair optic nerve injury through YAP/TAZ and Smad2/3 signaling. — *Stem cells translational medicine* [mouse] tags=optic_nerve v=v2.0-new
+- PMID41856199 (2026) The role of prostanoids in the retina and optic nerve in health and disease. — *Progress in retinal and eye research* [both] tags=optic_nerve v=v2.0-new
+- PMID42044330 (2026) Hopx(+) optic nerve head-astrocytes counter neuronal stress and glaucoma damage. — *Proceedings of the National Academy of Sciences of the United States of America* [other] tags=optic_nerve v=v2.0-new
+- PMID40537004 (2026) Cell-based therapies for traumatic optic neuropathy: Recent advances, challenges, and perspectives. — *Neural regeneration research* [human] tags=optic_nerve v=v2.0-new
+- PMID41837548 (2026) Heat shock protein 40 enhances axon regeneration in a mouse model of traumatic optic neuropathy. — *Neural regeneration research* [mouse] tags=optic_nerve v=v2.0-new
+- PMID40903948 (2026) Overexpressing neurogenic differentiation factor 1 in Müller cells improves retinal function after optic nerve crush injury in adult mice. — *Neural regeneration research* [mouse] tags=optic_nerve v=v2.0-new
+- PMID41577708 (2026) Endothelial stem cells of the retinal vasculature reside in the optic nerve. — *Nature communications* [mouse] tags=optic_nerve,retina v=v1.0
+- PMID42542603 (2026) Cyclic stretch increases transglutaminase 2-mediated serotonylation of extracellular fibronectin in cultured optic nerve head astrocytes: a pilot study. — *Matrix biology plus* [human] tags=optic_nerve v=v2.0-new
+- PMID42021335 (2026) Tryptophan metabolism in glaucomatous optic neuropathy: from metabolic dysregulation to therapeutic opportunities. — *Journal of translational medicine* [human] tags=optic_nerve v=v2.0-new
+- PMID42135831 (2026) IL-1-mediated vitreous inflammation as an early indicator of retinal ganglion cell loss following acute optic nerve injury. — *Journal of neuroinflammation* [mouse] tags=optic_nerve v=v2.0-new
+- PMID41645183 (2026) Cell-intrinsic vulnerability and immune activation cooperate to drive degeneration in a mitochondrial complex I deficiency model of optic neuropathy. — *Journal of neuroinflammation* [mouse] tags=optic_nerve v=v2.0-new
+- PMID41972858 (2026) Overexpression or Activation of Potassium Channel TASK-3 Protects Retinal Ganglion Cells and Restores Visual Function in Optic Nerve Crush. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve,retina v=v1.1
+- PMID41810892 (2026) Optic Nerve Head Spatial Transcriptomic Change in Nonhuman Primate Early Experimental Glaucoma. — *Investigative ophthalmology & visual science* [human] tags=optic_nerve v=v2.0-new
+- PMID42212882 (2026) Identification of a Small-Molecule Modulator of Astrocyte Reactivity for Optic Nerve Protection. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID41626869 (2026) Pharmacological Depletion of Retinal Mononuclear Phagocytes Is Neuroprotective in a Mouse Model of Mitochondrial Optic Neuropathy. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID41898506 (2026) Pathogenesis of Non-Arteritic Anterior Ischemic Optic Neuropathy Associated with COVID-19. — *International journal of molecular sciences* [human] tags=optic_nerve v=v2.0-new
+- PMID41828599 (2026) Gene Expression Profiles in the Optic Nerve of Mice with Systemic Acanthamoebiasis. — *International journal of molecular sciences* [mouse] tags=optic_nerve v=v2.0-new
+- PMID41705242 (2026) Neuroinflammatory regulatory role of microglia in optic nerve injury: from pathological mechanisms to therapeutic targets. — *Frontiers in immunology* [human] tags=optic_nerve v=v2.0-new
+- PMID42662088 (2026) Infectious optic neuropathy: the interplay between pathogens and the host immune system-a review of diagnostic and therapeutic dilemmas. — *Frontiers in cellular and infection microbiology* [human] tags=optic_nerve v=v2.0-new
+- PMID42592906 (2026) Smarcc1 drives optic stalk patterning and optic nerve head astrocyte differentiation. — *Development (Cambridge, England)* [mouse] tags=optic_nerve v=v2.0-new
+- PMID41577749 (2026) 40 Hz flicker preconditioning protects nonarteritic anterior ischemic optic neuropathy via adenosine signaling. — *Communications biology* [mouse] tags=optic_nerve v=v2.0-new
+- PMID42260115 (2026) Impact-acceleration head injury results in optic neuropathy in the thirteen-lined ground squirrel. — *Communications biology* [both] tags=optic_nerve v=v2.0-new
+- PMID41721205 (2026) From Regeneration Failure to Functional Restoration: Unlocking the Neuronal-Intrinsic Regenerative Capacity as a Therapeutic Frontier for Optic Neuropathy and Glaucoma. — *CNS neuroscience & therapeutics* [human] tags=optic_nerve v=v2.0-new
+- PMID41622742 (2026) Optic nerve sheath meningioma exhibits neural niche-associated transcriptomic features and rare copy number variation-linked evolution. — *Brain pathology (Zurich, Switzerland)* [human] tags=optic_nerve v=v2.0-new
+- PMID41220285 (2026) Alpinetin Nanoparticles Alleviate Optic Nerve Injury Induced by Acute Glaucoma via LRP1-PPARγ Mediated Regulation of Microglial Lipid Metabolism. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [both] tags=optic_nerve v=v2.0-new
+- PMID42478262 (2026) Multifunctional Catechol-Functionalized Cellulose Hydrogels for the Minimally Invasive Treatment of Acute Optic Nerve Injuries. — *Advanced healthcare materials* [mouse] tags=optic_nerve v=v2.0-new
+- PMID40567162 (2025) From injury to recovery: Spatiotemporal dynamics of the visual pathway during spontaneous structural and functional regeneration after optic nerve transection in zebrafish. — *Zoological research* [human] tags=optic_nerve v=v2.0-new
+- PMID40492995 (2025) Aquaporin-4 Peptide Injection in Mice Induces Retinal and Optic Nerve Alterations That Simulate Those of Neuromyelitis Optica Spectrum Disorder. — *Translational vision science & technology* [both] tags=optic_nerve v=v2.0-new
+- PMID40639784 (2025) Leber's hereditary optic neuropathy-associated ND1 3733G&gt;C mutation ameliorates the mitochondrial quality control and cellular homeostasis. — *The Journal of biological chemistry* [human] tags=optic_nerve v=v2.0-new
+- PMID40499779 (2025) Nitric Oxide May Adversely Affect the Metabolism and Viability of Retinal Organoids Derived from Patients with Leber Hereditary Optic Neuropathy. — *The American journal of pathology* [human] tags=optic_nerve,retina v=v1.1
+- PMID40471791 (2025) Protocol for assessing regional pathology in the rodent optic nerve using longitudinal cryosections and cross-sectional electron microscopy. — *STAR protocols* [mouse] tags=optic_nerve v=v2.0-new
+- PMID40449651 (2025) Pericytes in the optic nerve head. — *Progress in retinal and eye research* [both] tags=optic_nerve v=v2.0-new
+- PMID40284004 (2025) Tauroursodeoxycholic Acid Protects Retinal Ganglion Cells and Reduces Inflammation in Mice Following Optic Nerve Crush. — *Pharmaceuticals (Basel, Switzerland)* [mouse] tags=optic_nerve v=v2.0-new
+- PMID40971959 (2025) Zebrafish optic nerve injury results in systemic retinal ganglion cell dedifferentiation. — *PLoS genetics* [both] tags=optic_nerve,retina v=v1.0
+- PMID38819069 (2025) Small extracellular vesicles derived from human induced pluripotent stem cell-differentiated neural progenitor cells mitigate retinal ganglion cell degeneration in a mouse model of optic nerve injury. — *Neural regeneration research* [both] tags=optic_nerve v=v2.0-new
+- PMID41345151 (2025) Mitochondria-targeted gene delivery using fluorinated lipid nanoparticles to alleviate Leber's hereditary optic neuropathy. — *Nature communications* [both] tags=optic_nerve v=v2.0-new
+- PMID40045384 (2025) Srebf2 mediates successful optic nerve axon regeneration via the mevalonate synthesis pathway. — *Molecular neurodegeneration* [other] tags=optic_nerve v=v2.0-new
+- PMID39966959 (2025) Apelin-13 attenuates optic nerve damage in glaucomatous mice by regulating glucose metabolism. — *Journal of translational medicine* [both] tags=optic_nerve v=v2.0-new
+- PMID40055743 (2025) Intravitreal delivery of NMO-IgG causes primary retinal damage in the absence of optic nerve injury. — *Journal of neuroinflammation* [both] tags=optic_nerve v=v2.0-new
+- PMID40036074 (2025) Vitamin A treatment restores vision failures arising from Leber's hereditary optic neuropathy-linked mtDNA mutation. — *JCI insight* [both] tags=optic_nerve v=v2.0-new
+- PMID41533933 (2025) HDAC4 Promotes Neuroprotection of Retinal Ganglion Cells After Optic Nerve Injury. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve,retina v=v1.0
+- PMID40557874 (2025) Maraviroc Prevents Optic Nerve Injury-Induced Retinal Ganglion Cell Apoptosis by Modulating the CCL5/CCR5/CTSS Axis. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve,retina v=v1.1
+- PMID41129126 (2025) Spatial Proteomic Analysis Highlights Molecular Reprogramming in Optic Nerve Invasive Retinoblastoma. — *Investigative ophthalmology & visual science* [human] tags=optic_nerve v=v2.0-new
+- PMID40408096 (2025) Single-Cell RNA Sequencing of the Primary Visual Cortex in Mice With Optic Nerve Injury. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID41400315 (2025) Autophagy-Induced Microglial Death Contributes to Neuroinflammation in Acute Optic Nerve Injury. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID40327012 (2025) Endoplasmic Reticulum Stress Drives Neuroinflammation Through Lipocalin 2 Upregulation in Retinal Microglia After Optic Nerve Injury. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID40622215 (2025) Activation of Sigma 1 Receptor Preserves Visual Function After Optic Nerve Injury. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID40126507 (2025) Optic Nerve Crush Does Not Induce Retinal Ganglion Cell Loss in the Contralateral Eye. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID41171041 (2025) Longitudinal Structural and Microvascular Imaging of Mouse Retina After Optic Nerve Crush Using Temporal Speckle-Averaging Visible Light OCT. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID40990867 (2025) Evaluating the Optic Nerve Crush Model to Understand the Function of Microglia in Glaucoma Neuroprotection. — *Investigative ophthalmology & visual science* [both] tags=optic_nerve v=v2.0-new
+- PMID41283752 (2025) Preclinical Assessment of Mitochondrial-Targeted ND4 Gene Therapy for Leber Hereditary Optic Neuropathy. — *Investigative ophthalmology & visual science* [both] tags=optic_nerve v=v2.0-new
+- PMID41465596 (2025) Dasatinib and Quercetin Alleviate Retinal Ganglion Cell Dendritic Shrinkage and Promote Axonal Regeneration in Mice with Optic Nerve Injury. — *International journal of molecular sciences* [mouse] tags=optic_nerve v=v2.0-new
+- PMID39578308 (2025) Inhibiting NLRP3 Inflammasome Activation to Alleviate Retinal Inflammation and Protect the Optic Nerve of OPTN(E50K)Mice. — *Inflammation* [mouse] tags=optic_nerve v=v2.0-new
+- PMID40463588 (2025) Differential retinal ganglion cell resilience to optic nerve injury across vertebrate species. — *Frontiers in neuroscience* [mouse] tags=optic_nerve,retina v=v1.0
+- PMID41403938 (2025) Unraveling the immune response in optic nerve injury: implications for retinal ganglion cell protection. — *Frontiers in immunology* [human] tags=optic_nerve,retina v=v1.0
+- PMID40160813 (2025) Inflammatory profiling and immune cell infiltration in dysthyroid optic neuropathy: insights from bulk RNA sequencing. — *Frontiers in immunology* [human] tags=optic_nerve v=v2.0-new
+- PMID41601638 (2025) Revealing the role of regulatory microglial IRF7-NLRP3 interactions in optic nerve damage of normal-tension glaucoma based on single-cell RNA sequencing. — *Frontiers in immunology* [both] tags=optic_nerve v=v2.0-new
+- PMID39939990 (2025) Kidins220-deficient hydrocephalus mice exhibit altered glial phenotypes and AQP4 differential regulation in the retina and optic nerve, with preserved retinal ganglion cell survival. — *Fluids and barriers of the CNS* [both] tags=optic_nerve v=v2.0-new
+- PMID41102382 (2025) OPTN protects retinal ganglion cells and ameliorates neuroinflammation in optic neuropathies. — *Communications biology* [both] tags=optic_nerve,retina v=v1.0
+- PMID41294883 (2025) Region-Specific Roles of TGF-β2 and Angiotensin II in Fibrotic and Inflammatory Remodeling of the Optic Nerve Head. — *Cells* [human] tags=optic_nerve v=v2.0-new
+- PMID41090416 (2025) Applicability of regenerative oligodendrocyte precursor cell optic nerve transplantation in rat model of demyelinating disease. — *Cell transplantation* [human] tags=optic_nerve v=v2.0-new
+- PMID41331389 (2025) Multifunctional nanoplatforms for optic nerve regeneration integrating anti-inflammatory, epigenetic, and ionic mechanisms with emerging artificial intelligence technologies. — *Cell biology and toxicology* [both] tags=optic_nerve v=v2.0-new
+- PMID40001462 (2025) Targeting SMOX Preserves Optic Nerve Myelin, Axonal Integrity, and Visual Function in Multiple Sclerosis. — *Biomolecules* [mouse] tags=optic_nerve v=v2.0-new
+- PMID40722990 (2025) Roles of 670 nm Photobiomodulation on Rat Anterior Ischemic Optic Neuropathy: Enhancing RGC Survival, Mitochondrial Function, and Anti-Inflammatory Response. — *Antioxidants (Basel, Switzerland)* [other] tags=optic_nerve v=v2.0-new
+- PMID40245175 (2025) A Facile Strategy to Restore the Optic Nerve Functionality Using an Injectable Conducting Hydrogel. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [human] tags=optic_nerve v=v2.0-new
+- PMID38548335 (2024) Ca<sup>2+</sup>/Calmodulin-Dependent Protein Kinase II Enhances Retinal Ganglion Cell Survival But Suppresses Axon Regeneration after Optic Nerve Injury. — *eNeuro* [mouse] tags=optic_nerve,retina v=v1.1
+- PMID39214298 (2024) Defective post-transcriptional modification of tRNA disrupts mitochondrial homeostasis in Leber's hereditary optic neuropathy. — *The Journal of biological chemistry* [human] tags=optic_nerve v=v2.0-new
+- PMID38548269 (2024) Enhanced Optic Nerve Expansion and Altered Ultrastructure of Elastic Fibers Induced by Lysyl Oxidase Inhibition in a Mouse Model of Marfan Syndrome. — *The American journal of pathology* [mouse] tags=optic_nerve v=v2.0-new
+- PMID39521904 (2024) Novel laser model of optic nerve transection provides valuable insights about the dynamics of optic nerve regeneration. — *Scientific reports* [human] tags=optic_nerve v=v2.0-new
+- PMID39093964 (2024) Modulating amacrine cell-derived dopamine signaling promotes optic nerve regeneration and preserves visual function. — *Science advances* [mouse] tags=optic_nerve v=v2.0-new
+- PMID39569076 (2024) Injectable drug-loaded thermosensitive hydrogel delivery system for protecting retina ganglion cells in traumatic optic neuropathy. — *Regenerative biomaterials* [other] tags=optic_nerve v=v2.0-new
+- PMID38289952 (2024) Effective treatment of optic neuropathies by intraocular delivery of MSC-sEVs through augmenting the G-CSF-macrophage pathway. — *Proceedings of the National Academy of Sciences of the United States of America* [both] tags=optic_nerve v=v2.0-new
+- PMID39116180 (2024) A combination of topical and systemic administration of brimonidine is neuroprotective in the murine optic nerve crush model. — *PloS one* [mouse] tags=optic_nerve v=v2.0-new
+- PMID38931465 (2024) Assessment of Brain-Derived Neurotrophic Factor on Retinal Structure and Visual Function in Rodent Models of Optic Nerve Crush. — *Pharmaceuticals (Basel, Switzerland)* [mouse] tags=optic_nerve v=v2.0-new
+- PMID38804475 (2024) An Extensive Study Regarding the Microscopic Anatomy of the Early Fetal Human Optic Nerve. — *Neurology international* [human] tags=optic_nerve v=v2.0-new
+- PMID39461953 (2024) Immunomodulation by the combination of statin and matrix-bound nanovesicle enhances optic nerve regeneration. — *NPJ Regenerative medicine* [mouse] tags=optic_nerve v=v2.0-new
+- PMID39568070 (2024) Regulation of disease-associated microglia in the optic nerve by lipoxin B&lt;sub&gt;4&lt;/sub&gt; and ocular hypertension. — *Molecular neurodegeneration* [mouse] tags=optic_nerve v=v2.0-new
+- PMID38639863 (2024) NFATc4 Knockout Promotes Neuroprotection and Retinal Ganglion Cell Regeneration After Optic Nerve Injury. — *Molecular neurobiology* [mouse] tags=optic_nerve,retina v=v1.0
+- PMID39506841 (2024) Implantation of biomimetic polydopamine nanocomposite scaffold promotes optic nerve regeneration through modulating inhibitory microenvironment. — *Journal of nanobiotechnology* [other] tags=optic_nerve v=v2.0-new
+- PMID38294803 (2024) Induced Attenuation of Scleral TGF-β Signaling in Mutant Mice Increases Susceptibility to IOP-Induced Optic Nerve Damage. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve,sclera v=v2.0-new
+- PMID39540862 (2024) Overcoming Low mRNA Expression in White Matter: A Protocol for RNA Extraction From the Optic Nerve in Large Animals for Transcriptomic Analysis. — *Investigative ophthalmology & visual science* [human] tags=optic_nerve v=v2.0-new
+- PMID39499510 (2024) Progressive Optic Neuropathy in Hydrocephalic Ccdc13 Mutant Mice Caused by Impaired Axoplasmic Transport at the Optic Nerve Head. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID39601637 (2024) Cobalt Toxicity Induces Retinopathy and Optic Neuropathy in Mice. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID39576623 (2024) VEP Latency Delay Reflects Demyelination Beyond the Optic Nerve in the Cuprizone Model. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID39565302 (2024) The Mechanisms of Neuroprotection by Topical Rho Kinase Inhibition in Experimental Mouse Glaucoma and Optic Neuropathy. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID39140963 (2024) Macrophages Modulate Optic Nerve Crush Injury Scar Formation and Retinal Ganglion Cell Function. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID38776115 (2024) CD38 Deficiency Protects Mouse Retinal Ganglion Cells Through Activating the NAD+/Sirt1 Pathway in Ischemia-Reperfusion and Optic Nerve Crush Models. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID38587440 (2024) Comparison of Brn3a and RBPMS Labeling to Assess Retinal Ganglion Cell Loss During Aging and in a Model of Optic Neuropathy. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID39769388 (2024) Remote Ischemic Post-Conditioning (RIC) Mediates Anti-Inflammatory Signaling via Myeloid AMPKα1 in Murine Traumatic Optic Neuropathy (TON). — *International journal of molecular sciences* [mouse] tags=optic_nerve v=v2.0-new
+- PMID39596110 (2024) Artificial Gravity Attenuates the Transcriptomic Response to Spaceflight in the Optic Nerve and Retina. — *International journal of molecular sciences* [mouse] tags=optic_nerve v=v2.0-new
+- PMID39596239 (2024) p53 and the E3 Ubiquitin Ligase MDM2 in Glaucomatous Lamina Cribrosa Cells. — *International journal of molecular sciences* [both] tags=optic_nerve v=v2.0-new
+- PMID38844990 (2024) CX3CL1-CX3CR1 axis protects retinal ganglion cells by inhibiting microglia activation in a distal optic nerve trauma model. — *Inflammation and regeneration* [mouse] tags=optic_nerve v=v2.0-new
+- PMID38638966 (2024) Effect of astrocyte GPER on the optic nerve inflammatory response following optic nerve injury in mice. — *Heliyon* [mouse] tags=optic_nerve v=v2.0-new
+- PMID38828288 (2024) Neuroprotective effects and mechanisms of action of artemisinin in retinal ganglion cells in a mouse model of traumatic optic neuropathy. — *Heliyon* [mouse] tags=optic_nerve v=v2.0-new
+- PMID38370256 (2024) Protective effect of Tetrandrine on optic nerve by inhibiting glial activation through NF-κB pathway. — *Heliyon* [other] tags=optic_nerve v=v2.0-new
+- PMID39228100 (2024) Neuronal and glial cell alterations involved in the retinal degeneration of the familial dysautonomia optic neuropathy. — *Glia* [both] tags=optic_nerve v=v2.0-new
+- PMID38247823 (2024) Modeling of Retina and Optic Nerve Ischemia-Reperfusion Injury through Hypoxia-Reoxygenation in Human Induced Pluripotent Stem Cell-Derived Retinal Ganglion Cells. — *Cells* [human] tags=optic_nerve v=v2.0-new
+- PMID38891043 (2024) Cytoprotective Small Compound M109S Attenuated Retinal Ganglion Cell Degeneration Induced by Optic Nerve Crush in Mice. — *Cells* [both] tags=optic_nerve v=v2.0-new
+- PMID38272025 (2024) Genetic variants affecting NQO1 protein levels impact the efficacy of idebenone treatment in Leber hereditary optic neuropathy. — *Cell reports. Medicine* [human] tags=optic_nerve v=v2.0-new
+- PMID39021340 (2024) Cellular senescence mediates retinal ganglion cell survival regulation post-optic nerve crush injury. — *Cell proliferation* [mouse] tags=optic_nerve v=v2.0-new
+- PMID39695101 (2024) Marcks  overexpression in retinal ganglion cells promotes optic nerve regeneration — *Cell death & disease* [unknown] tags=optic_nerve,retina v=v1.0
+- PMID39659974 (2024) Opa1 and MT-Nd6 mutations induce early mitochondrial changes in the retina and prelaminar optic nerve of hereditary optic neuropathy mouse models. — *Brain communications* [mouse] tags=optic_nerve v=v2.0-new
+- PMID38502591 (2024) Glial Cell Activation and Immune Responses in Glaucoma: A Systematic Review of Human Postmortem Studies of the Retina and Optic Nerve. — *Aging and disease* [human] tags=optic_nerve v=v2.0-new
+- PMID39191397 (2024) Glaucoma, More than Meets the Eye: Patterns of Demyelination Revealed in Human Postmortem Glaucomatous Optic Nerve. — *Aging and disease* [human] tags=optic_nerve v=v2.0-new
+- PMID39734233 (2024) Tppp3 is a novel molecule for retinal ganglion cell identification and optic nerve regeneration. — *Acta neuropathologica communications* [both] tags=optic_nerve,retina v=v1.0
+- PMID39198924 (2024) A deep phenotyping study in mouse and iPSC models to understand the role of oligodendroglia in optic neuropathy in Wolfram syndrome. — *Acta neuropathologica communications* [both] tags=optic_nerve v=v2.0-new
+- PMID36645345 (2023) MCT1-dependent energetic failure and neuroinflammation underlie optic nerve degeneration in Wolfram syndrome mice. — *eLife* [mouse] tags=optic_nerve v=v2.0-new
+- PMID37282486 (2023) Phosphorylated S6K1 and 4E-BP1 play different roles in constitutively active Rheb-mediated retinal ganglion cell survival and axon regeneration after optic nerve injury. — *Neural regeneration research* [mouse] tags=optic_nerve v=v2.0-new
+- PMID37449644 (2023) Selective deletion of zinc transporter 3 in amacrine cells promotes retinal ganglion cell survival and optic nerve regeneration after injury. — *Neural regeneration research* [mouse] tags=optic_nerve v=v2.0-new
+- PMID36204863 (2023) Use of a tissue clearing technique combined with retrograde trans-synaptic viral tracing to evaluate changes in mouse retinorecipient brain regions following optic nerve crush. — *Neural regeneration research* [mouse] tags=optic_nerve v=v2.0-new
+- PMID37640753 (2023) α-Synuclein pathology in post-mortem retina and optic nerve is specific for α-synucleinopathies. — *NPJ Parkinson's disease* [human] tags=optic_nerve v=v2.0-new
+- PMID36950280 (2023) Differential effects of SARM1 inhibition in traumatic glaucoma and EAE optic neuropathies. — *Molecular therapy. Nucleic acids* [mouse] tags=optic_nerve v=v2.0-new
+- PMID37359418 (2023) Human amnionic progenitor cell secretome mitigates the consequence of traumatic optic neuropathy in a mouse model. — *Molecular therapy. Methods & clinical development* [both] tags=optic_nerve v=v2.0-new
+- PMID37735444 (2023) Retinal ganglion cell repopulation for vision restoration in optic neuropathy: a roadmap from the RReSTORe Consortium. — *Molecular neurodegeneration* [human] tags=optic_nerve,retina v=v1.0
+- PMID37759301 (2023) Astrocytes of the optic nerve exhibit a region-specific and temporally distinct response to elevated intraocular pressure. — *Molecular neurodegeneration* [both] tags=optic_nerve v=v2.0-new
+- PMID37539744 (2023) Metabolomic profiling of a neurodegenerative retina following optic nerve transection. — *Molecular medicine reports* [human] tags=optic_nerve v=v2.0-new
+- PMID37160307 (2023) Vitamin C protects retinal ganglion cells via SPP1 in glaucoma and after optic nerve damage. — *Life science alliance* [mouse] tags=optic_nerve v=v2.0-new
+- PMID36680758 (2023) Traumatic Axonal Injury in the Optic Nerve: The Selective Role of SARM1 in the Evolution of Distal Axonopathy. — *Journal of neurotrauma* [mouse] tags=optic_nerve v=v2.0-new
+- PMID36821399 (2023) Full-length optic nerve regeneration in the absence of genetic manipulations. — *JCI insight* [human] tags=optic_nerve v=v2.0-new
+- PMID37669061 (2023) The Neuroprotective Effect of Activation of Sigma-1 Receptor on Neural Injury by Optic Nerve Crush. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID37145604 (2023) Microglial CD11b Knockout Contributes to Axonal Debris Clearance and Axonal Degradation Attenuation via IGF-1 After Acute Optic Nerve Injury. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID36982411 (2023) Ligand-Induced Activation of GPR110 (ADGRF1) to Improve Visual Function Impaired by Optic Nerve Injury. — *International journal of molecular sciences* [mouse] tags=optic_nerve v=v2.0-new
+- PMID36901786 (2023) Optic Nerve Injury Enhanced Mitochondrial Fission and Increased Mitochondrial Density without Altering the Uniform Mitochondrial Distribution in the Unmyelinated Axons of Retinal Ganglion Cells in a Mouse Model. — *International journal of molecular sciences* [both] tags=optic_nerve v=v2.0-new
+- PMID37143930 (2023) Pericyte-derived cells participate in optic nerve scar formation. — *Frontiers in physiology* [mouse] tags=optic_nerve v=v2.0-new
+- PMID36944985 (2023) Large-scale morphometry of the subarachnoid space of the optic nerve. — *Fluids and barriers of the CNS* [human] tags=optic_nerve v=v2.0-new
+- PMID37779186 (2023) Activation of multiple Eph receptors on neuronal membranes correlates with the onset of optic neuropathy. — *Eye and vision (London, England)* [both] tags=optic_nerve v=v2.0-new
+- PMID37540379 (2023) The efficient induction of human retinal ganglion-like cells provides a platform for studying optic neuropathies. — *Cellular and molecular life sciences : CMLS* [human] tags=optic_nerve v=v2.0-new
+- PMID37681863 (2023) Astrocytes in the Optic Nerve Are Heterogeneous in Their Reactivity to Glaucomatous Injury. — *Cells* [human] tags=optic_nerve v=v2.0-new
+- PMID37998352 (2023) HLA-Homozygous iPSC-Derived Mesenchymal Stem Cells Rescue Rotenone-Induced Experimental Leber's Hereditary Optic Neuropathy-like Models In Vitro and In Vivo. — *Cells* [mouse] tags=optic_nerve v=v2.0-new
+- PMID37624696 (2023) Osteopontin drives retinal ganglion cell resiliency in glaucomatous optic neuropathy. — *Cell reports* [human] tags=optic_nerve,retina v=v1.0
+- PMID37751356 (2023) Diversity in homeostatic calcium set points predicts retinal ganglion cell survival following optic nerve injury in vivo. — *Cell reports* [human] tags=optic_nerve v=v2.0-new
+- PMID37816735 (2023) Calbindin 2-specific deletion of arginase 2 preserves visual function after optic nerve crush. — *Cell death & disease* [mouse] tags=optic_nerve v=v2.0-new
+- PMID37640747 (2023) Knockdown of Porf-2 restores visual function after optic nerve crush injury. — *Cell death & disease* [both] tags=optic_nerve v=v2.0-new
+- PMID37371541 (2023) Intravitreal Neuroglobin Mitigates Primate Experimental Glaucomatous Structural Damage in Association with Reduced Optic Nerve Microglial and Complement 3-Astrocyte Activation. — *Biomolecules* [human] tags=optic_nerve v=v2.0-new
+- PMID36681854 (2023) NAD salvage pathway machinery expression in normal and glaucomatous retina and optic nerve. — *Acta neuropathologica communications* [human] tags=optic_nerve,retina v=v1.0
+- PMID36302632 (2022) Effects of Visual Deprivation on Remodeling of Nodes of Ranvier in Optic Nerve. — *eNeuro* [mouse] tags=optic_nerve v=v2.0-new
+- PMID35027445 (2022) Lyso-Lipid-Induced Oligodendrocyte Maturation Underlies Restoration of Optic Nerve Function. — *eNeuro* [both] tags=optic_nerve v=v2.0-new
+- PMID35575776 (2022) Ultrasound Targeted Microbubble Destruction Promotes the Therapeutic Effect of HUMSC Transplantation on Glaucoma-Caused Optic Nerve Injury in Rabbits. — *Translational vision science & technology* [human] tags=optic_nerve v=v2.0-new
+- PMID33836988 (2022) Detection of SARS-CoV-2 genomic and subgenomic RNA in retina and optic nerve of patients with COVID-19. — *The British journal of ophthalmology* [human] tags=optic_nerve v=v2.0-new
+- PMID36261683 (2022) Elk-1 regulates retinal ganglion cell axon regeneration after injury. — *Scientific reports* [human] tags=optic_nerve,retina v=v1.0
+- PMID36385152 (2022) Ferroptosis inhibition by deferiprone, attenuates myelin damage and promotes neuroprotection in demyelinated optic nerve. — *Scientific reports* [both] tags=optic_nerve v=v2.0-new
+- PMID36332025 (2022) Astrocytic dysfunction induced by ABCA1 deficiency causes optic neuropathy. — *Science advances* [mouse] tags=optic_nerve v=v2.0-new
+- PMID36413918 (2022) Inhibition of ferroptosis promotes retina ganglion cell survival in experimental optic neuropathies. — *Redox biology* [mouse] tags=optic_nerve v=v2.0-new
+- PMID35394873 (2022) Monocyte-derived SDF1 supports optic nerve regeneration and alters retinal ganglion cells' response to Pten deletion. — *Proceedings of the National Academy of Sciences of the United States of America* [mouse] tags=optic_nerve,retina v=v1.0
+- PMID35235463 (2022) Failed remyelination of the nonhuman primate optic nerve leads to axon degeneration, retinal damages, and visual dysfunction. — *Proceedings of the National Academy of Sciences of the United States of America* [human] tags=optic_nerve v=v2.0-new
+- PMID36306327 (2022) A small molecule M1 promotes optic nerve regeneration to restore target-specific neural activity and visual function. — *Proceedings of the National Academy of Sciences of the United States of America* [human] tags=optic_nerve v=v2.0-new
+- PMID36454994 (2022) Ultrastructural characteristics of oligodendrocyte precursor cells in the early postnatal mouse optic nerve observed by serial block-face scanning electron microscopy. — *PloS one* [mouse] tags=optic_nerve v=v2.0-new
+- PMID34558505 (2022) Glymphatic imaging and modulation of the optic nerve. — *Neural regeneration research* [human] tags=optic_nerve v=v2.0-new
+- PMID35015027 (2022) Matrix Mechanotransduction via Yes-Associated Protein in Human Lamina Cribrosa Cells in Glaucoma. — *Investigative ophthalmology & visual science* [human] tags=optic_nerve v=v2.0-new
+- PMID36239974 (2022) Optic Nerve Head Myelin-Related Protein, GFAP, and Iba1 Alterations in Non-Human Primates With Early to Moderate Experimental Glaucoma. — *Investigative ophthalmology & visual science* [human] tags=optic_nerve v=v2.0-new
+- PMID36538003 (2022) Continuous Hypoxia Reduces Retinal Ganglion Cell Degeneration in a Mouse Model of Mitochondrial Optic Neuropathy. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID36613856 (2022) Protective Effect of Pioglitazone on Retinal Ganglion Cells in an Experimental Mouse Model of Ischemic Optic Neuropathy. — *International journal of molecular sciences* [mouse] tags=optic_nerve,retina v=v1.1
+- PMID35683014 (2022) The Consequences of Mitochondrial T10432C Mutation in Cika Cattle: A "Potential" Model for Leber's Hereditary Optic Neuropathy. — *International journal of molecular sciences* [human] tags=optic_nerve v=v2.0-new
+- PMID36233171 (2022) Neuroprotective Effect of Azithromycin Following Induction of Optic Nerve Crush in Wild Type and Immunodeficient Mice. — *International journal of molecular sciences* [mouse] tags=optic_nerve v=v2.0-new
+- PMID35743157 (2022) High-Mobility Group Box 1 Inhibitor BoxA Alleviates Neuroinflammation-Induced Retinal Ganglion Cell Damage in Traumatic Optic Neuropathy. — *International journal of molecular sciences* [mouse] tags=optic_nerve v=v2.0-new
+- PMID34908112 (2022) Selective retinal ganglion cell loss and optic neuropathy in a humanized mouse model of familial dysautonomia. — *Human molecular genetics* [both] tags=optic_nerve,retina v=v1.0
+- PMID35383288 (2022) Gene therapy restores mitochondrial function and protects retinal ganglion cells in optic neuropathy induced by a mito-targeted mutant ND1 gene. — *Gene therapy* [both] tags=optic_nerve v=v2.0-new
+- PMID35309305 (2022) Neuroinflammation, Microglia and Implications for Retinal Ganglion Cell Survival and Axon Regeneration in Traumatic Optic Neuropathy. — *Frontiers in immunology* [human] tags=optic_nerve,retina v=v1.0
+- PMID36618342 (2022) Characteristics of macrophage-like cells in acute nonarteritic anterior ischemic optic neuropathy and the normal fellow eyes on en face optical coherence tomography. — *Frontiers in immunology* [human] tags=optic_nerve v=v2.0-new
+- PMID36203577 (2022) Optic nerve head: A gatekeeper for vitreous infectious insults? — *Frontiers in immunology* [mouse] tags=optic_nerve v=v2.0-new
+- PMID35493079 (2022) CCN2/CTGF-A Modulator of the Optic Nerve Head Astrocyte. — *Frontiers in cell and developmental biology* [both] tags=optic_nerve v=v2.0-new
+- PMID35586662 (2022) Involvement of High Mobility Group Box 1 Protein in Optic Nerve Damage in Diabetes. — *Eye and brain* [both] tags=optic_nerve v=v2.0-new
+- PMID35474440 (2022) Proteomic profiles of the retina in an experimental unilateral optic nerve transection: Roles of Müller cell activation. — *Clinical and translational medicine* [human] tags=optic_nerve v=v2.0-new
+- PMID36552864 (2022) Treatment with MDL 72527 Ameliorated Clinical Symptoms, Retinal Ganglion Cell Loss, Optic Nerve Inflammation, and Improved Visual Acuity in an Experimental Model of Multiple Sclerosis. — *Cells* [mouse] tags=optic_nerve v=v2.0-new
+- PMID35858578 (2022) Pathological mitophagy disrupts mitochondrial homeostasis in Leber's hereditary optic neuropathy. — *Cell reports* [human] tags=optic_nerve v=v2.0-new
+- PMID35619185 (2022) Fibronectin extra domain A (FN-EDA) causes glaucomatous trabecular meshwork, retina, and optic nerve damage in mice. — *Cell & bioscience* [mouse] tags=optic_nerve,retina,trabecular_meshwork v=v1.1
+- PMID36267329 (2022) Axon hyperexcitability in the contralateral projection following unilateral optic nerve crush in mice. — *Brain communications* [mouse] tags=optic_nerve v=v2.0-new
+- PMID35453537 (2022) Retinal Circular RNA hsa_circ_0087207 Expression Promotes Apoptotic Cell Death in Induced Pluripotent Stem Cell-Derived Leber's Hereditary Optic Neuropathy-like Models. — *Biomedicines* [human] tags=optic_nerve v=v2.0-new
+- PMID36552630 (2022) Vitamin B3 Provides Neuroprotection via Antioxidative Stress in a Rat Model of Anterior Ischemic Optic Neuropathy. — *Antioxidants (Basel, Switzerland)* [mouse] tags=optic_nerve v=v2.0-new
+- PMID35986368 (2022) Widespread retina and optic nerve neuroinflammation in enucleated eyes from glaucoma patients. — *Acta neuropathologica communications* [human] tags=optic_nerve,retina v=v1.1
+- PMID34373754 (2021) Astrocytic YAP protects the optic nerve and retina in an experimental autoimmune encephalomyelitis model through TGF-β signaling. — *Theranostics* [mouse] tags=optic_nerve,retina v=v1.1
+- PMID32901261 (2021) No Evidence of Varicella-Zoster Virus Infection in Temporal Artery Biopsies of Anterior Ischemic Optic Neuropathy Patients With and Without Giant Cell Arteritis. — *The Journal of infectious diseases* [human] tags=optic_nerve v=v2.0-new
+- PMID34413361 (2021) Effects of intravitreal injection of siRNA against caspase-2 on retinal and optic nerve degeneration in air blast induced ocular trauma. — *Scientific reports* [mouse] tags=optic_nerve v=v2.0-new
+- PMID34786561 (2021) Utilizing mouse optic nerve crush to examine CNS remyelination. — *STAR protocols* [mouse] tags=optic_nerve v=v2.0-new
+- PMID33529207 (2021) The role of aquaporin-4 in optic nerve head astrocytes in experimental glaucoma. — *PloS one* [mouse] tags=optic_nerve v=v2.0-new
+- PMID34440593 (2021) Evaluating Ocular Response in the Retina and Optic Nerve Head after Single and Fractionated High-Energy Protons. — *Life (Basel, Switzerland)* [mouse] tags=optic_nerve v=v2.0-new
+- PMID33096971 (2021) Traumatic Optic Nerve Injury Elevates Plasma Biomarkers of Traumatic Brain Injury in a Porcine Model. — *Journal of neurotrauma* [human] tags=optic_nerve v=v2.0-new
+- PMID34930292 (2021) Polydopamine nanoparticles attenuate retina ganglion cell degeneration and restore visual function after optic nerve injury. — *Journal of nanobiotechnology* [both] tags=optic_nerve,retina v=v1.1
+- PMID34934336 (2021) Modulation of Sirt1-mTORC1 Pathway in Microglia Attenuates Retinal Ganglion Cell Loss After Optic Nerve Injury. — *Journal of inflammation research* [mouse] tags=optic_nerve v=v2.0-new
+- PMID34232261 (2021) Longitudinal In Vivo Changes in Retinal Ganglion Cell Dendritic Morphology After Acute and Chronic Optic Nerve Injury. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve,retina v=v1.1
+- PMID34283208 (2021) Optic Nerve Engraftment of Neural Stem Cells. — *Investigative ophthalmology & visual science* [human] tags=optic_nerve v=v2.0-new
+- PMID34311469 (2021) Assocation Between Leber's Hereditary Optic Neuropathy and MT-ND1 3460G>A Mutation-Induced Alterations in Mitochondrial Function, Apoptosis, and Mitophagy. — *Investigative ophthalmology & visual science* [human] tags=optic_nerve v=v2.0-new
+- PMID34406331 (2021) Sigma-1R Protects Retinal Ganglion Cells in Optic Nerve Crush Model for Glaucoma. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID34086045 (2021) Sigma 1 Receptor Modulates Optic Nerve Head Astrocyte Reactivity. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID33672743 (2021) The Benefits and Hazards of Intravitreal Mesenchymal Stem Cell (MSC) Based-Therapies in the Experimental Ischemic Optic Neuropathy. — *International journal of molecular sciences* [human] tags=optic_nerve v=v2.0-new
+- PMID34576177 (2021) NGF Eye Administration Recovers the TrkB and Glutamate/GABA Marker Deficit in the Adult Visual Cortex Following Optic Nerve Crush. — *International journal of molecular sciences* [human] tags=optic_nerve v=v2.0-new
+- PMID34299278 (2021) Decorin-An Antagonist of TGF-β in Astrocytes of the Optic Nerve. — *International journal of molecular sciences* [both] tags=optic_nerve v=v2.0-new
+- PMID35008811 (2021) Citrus Naringenin Increases Neuron Survival in Optic Nerve Crush Injury Model by Inhibiting JNK-JUN Pathway. — *International journal of molecular sciences* [both] tags=optic_nerve v=v2.0-new
+- PMID33799827 (2021) Retinal Genomic Fabric Remodeling after Optic Nerve Injury. — *Genes* [other] tags=optic_nerve,retina v=v1.0
+- PMID33499292 (2021) From Transcriptomics to Treatment in Inherited Optic Neuropathies. — *Genes* [human] tags=optic_nerve v=v2.0-new
+- PMID34819834 (2021) Loss of Caveolin-1 Impairs Light Flicker-Induced Neurovascular Coupling at the Optic Nerve Head. — *Frontiers in neuroscience* [mouse] tags=optic_nerve v=v2.0-new
+- PMID33981197 (2021) Neuroprotective Effects of Fingolimod Supplement on the Retina and Optic Nerve in the Mouse Model of Experimental Autoimmune Encephalomyelitis. — *Frontiers in neuroscience* [both] tags=optic_nerve v=v2.0-new
+- PMID34093141 (2021) Local Accumulation of Axonal Mitochondria in the Optic Nerve Glial Lamina Precedes Myelination. — *Frontiers in neuroanatomy* [both] tags=optic_nerve v=v2.0-new
+- PMID35140707 (2021) Progressive Retinal and Optic Nerve Damage in a Mouse Model of Spontaneous Opticospinal Encephalomyelitis. — *Frontiers in immunology* [mouse] tags=optic_nerve v=v2.0-new
+- PMID33844961 (2021) Commonalities of optic nerve injury and glaucoma-induced neurodegeneration: Insights from transcriptome-wide studies. — *Experimental eye research* [mouse] tags=optic_nerve v=v2.0-new
+- PMID34206213 (2021) miRNA Changes in Retinal Ganglion Cells after Optic Nerve Crush and Glaucomatous Damage. — *Cells* [mouse] tags=optic_nerve,retina v=v1.1
+- PMID33922788 (2021) Traumatic Optic Neuropathy Is Associated with Visual Impairment, Neurodegeneration, and Endoplasmic Reticulum Stress in Adolescent Mice. — *Cells* [mouse] tags=optic_nerve v=v2.0-new
+- PMID34943851 (2021) Chronic Histological Outcomes of Indirect Traumatic Optic Neuropathy in Adolescent Mice: Persistent Degeneration and Temporally Regulated Glial Responses. — *Cells* [both] tags=optic_nerve v=v2.0-new
+- PMID33657370 (2021) Optic nerve regeneration screen identifies multiple genes restricting adult neural repair. — *Cell reports* [both] tags=optic_nerve v=v2.0-new
+- PMID34911931 (2021) Retinal ganglion cell loss in an ex vivo mouse model of optic nerve cut is prevented by curcumin treatment. — *Cell death discovery* [mouse] tags=optic_nerve v=v2.0-new
+- PMID34039431 (2021) Semaphorin3A increases M1-like microglia and retinal ganglion cell apoptosis after optic nerve injury. — *Cell & bioscience* [mouse] tags=optic_nerve v=v2.0-new
+- PMID33668263 (2021) Extracellular Matrix Remodeling in the Retina and Optic Nerve of a Novel Glaucoma Mouse Model. — *Biology* [mouse] tags=optic_nerve v=v2.0-new
+- PMID34204966 (2021) Protective Effects of Oroxylin A on Retinal Ganglion Cells in Experimental Model of Anterior Ischemic Optic Neuropathy. — *Antioxidants (Basel, Switzerland)* [human] tags=optic_nerve,retina v=v1.1
+- PMID34943037 (2021) Intravitreal Injection of Long-Acting Pegylated Granulocyte Colony-Stimulating Factor Provides Neuroprotective Effects via Antioxidant Response in a Rat Model of Traumatic Optic Neuropathy. — *Antioxidants (Basel, Switzerland)* [human] tags=optic_nerve v=v2.0-new
+- PMID33173609 (2020) Laser Capture Microdissection-Based RNA Microsequencing Reveals Optic Nerve Crush-Related Early mRNA Alterations in Retinal Ganglion Cell Layer. — *Translational vision science & technology* [human] tags=optic_nerve,retina v=v1.0
+- PMID33101779 (2020) Mitochondrial Transfer of the Mutant Human <i>ND6T14484C</i> Gene Causes Visual Loss and Optic Neuropathy. — *Translational vision science & technology* [both] tags=optic_nerve v=v2.0-new
+- PMID31769495 (2020) Mutations in LAMB2 Are Associated With Albuminuria and Optic Nerve Hypoplasia With Hypopituitarism. — *The Journal of clinical endocrinology and metabolism* [both] tags=optic_nerve v=v2.0-new
+- PMID32587280 (2020) Neuroprotective effects of low-dose G-CSF plus meloxicam in a rat model of anterior ischemic optic neuropathy. — *Scientific reports* [human] tags=optic_nerve v=v2.0-new
+- PMID33303775 (2020) Dynamic changes in cell size and corresponding cell fate after optic nerve injury. — *Scientific reports* [mouse] tags=optic_nerve v=v2.0-new
+- PMID32973242 (2020) Topical ripasudil stimulates neuroprotection and axon regeneration in adult mice following optic nerve injury. — *Scientific reports* [mouse] tags=optic_nerve v=v2.0-new
+- PMID33293617 (2020) Mesoscopic cortical network reorganization during recovery of optic nerve injury in GCaMP6s mice. — *Scientific reports* [mouse] tags=optic_nerve v=v2.0-new
+- PMID32822415 (2020) Astrocyte responses to experimental glaucoma in mouse optic nerve head. — *PloS one* [mouse] tags=optic_nerve v=v2.0-new
+- PMID33315889 (2020) MEF2 transcription factors differentially contribute to retinal ganglion cell loss after optic nerve injury. — *PloS one* [both] tags=optic_nerve v=v2.0-new
+- PMID32277382 (2020) Altered Energy Metabolism During Early Optic Nerve Crush Injury: Implications of Warburg-Like Aerobic Glycolysis in Facilitating Retinal Ganglion Cell Survival. — *Neuroscience bulletin* [mouse] tags=optic_nerve v=v2.0-new
+- PMID32748371 (2020) Aqp9 Gene Deletion Enhances Retinal Ganglion Cell (RGC) Death and Dysfunction Induced by Optic Nerve Crush: Evidence that Aquaporin 9 Acts as an Astrocyte-to-Neuron Lactate Shuttle in Concert with Monocarboxylate Transporters To Support RGC Function and Survival. — *Molecular neurobiology* [mouse] tags=optic_nerve,retina v=v1.1
+- PMID32450896 (2020) Ocular hypertension suppresses homeostatic gene expression in optic nerve head microglia of DBA/2 J mice. — *Molecular brain* [mouse] tags=optic_nerve v=v2.0-new
+- PMID33176797 (2020) Complement peptide C3a receptor 1 promotes optic nerve degeneration in DBA/2J mice. — *Journal of neuroinflammation* [both] tags=optic_nerve v=v2.0-new
+- PMID33137197 (2020) Reduced Oxidative Phosphorylation and Increased Glycolysis in Human Glaucoma Lamina Cribrosa Cells. — *Investigative ophthalmology & visual science* [human] tags=optic_nerve v=v2.0-new
+- PMID32915982 (2020) Histone Deacetylases Regulation by δ-Opioids in Human Optic Nerve Head Astrocytes. — *Investigative ophthalmology & visual science* [human] tags=optic_nerve v=v2.0-new
+- PMID32421147 (2020) Statins Suppress TGF-β2-Mediated MMP-2 and MMP-9 Expression and Activation Through RhoA/ROCK Inhibition in Astrocytes of the Human Optic Nerve Head. — *Investigative ophthalmology & visual science* [human] tags=optic_nerve v=v2.0-new
+- PMID32866269 (2020) Reduced Dendritic Spines in the Visual Cortex Contralateral to the Optic Nerve Crush Eye in Adult Mice. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID32735323 (2020) XIAP Protects Retinal Ganglion Cells in the Mutant ND4 Mouse Model of Leber Hereditary Optic Neuropathy. — *Investigative ophthalmology & visual science* [mouse] tags=optic_nerve v=v2.0-new
+- PMID33291226 (2020) Intravitreal Injection of Liposomes Loaded with a Histone Deacetylase Inhibitor Promotes Retinal Ganglion Cell Survival in a Mouse Model of Optic Nerve Crush. — *International journal of molecular sciences* [mouse] tags=optic_nerve,retina v=v1.1
+- PMID33396673 (2020) Dimethyl Fumarate Promotes the Survival of Retinal Ganglion Cells after Optic Nerve Injury, Possibly through the Nrf2/HO-1 Pathway. — *International journal of molecular sciences* [mouse] tags=optic_nerve v=v2.0-new
+- PMID33281816 (2020) Therapeutic Targeting of Retinal Immune Microenvironment With CSF-1 Receptor Antibody Promotes Visual Function Recovery After Ischemic Optic Neuropathy. — *Frontiers in immunology* [both] tags=optic_nerve v=v2.0-new
+- PMID32410964 (2020) Longitudinal Morphological and Functional Assessment of RGC Neurodegeneration After Optic Nerve Crush in Mouse. — *Frontiers in cellular neuroscience* [mouse] tags=optic_nerve v=v2.0-new
+- PMID32106630 (2020) Glaucoma: A Degenerative Optic Neuropathy Related to Neuroinflammation? — *Cells* [human] tags=optic_nerve v=v2.0-new
+- PMID33356508 (2020) C6 Cell Injection into the Optic Nerve of Long-Evans Rats: A Short-Term Model of Optic Pathway Gliomas. — *Cell transplantation* [both] tags=optic_nerve v=v2.0-new
+- PMID32883957 (2020) Cdk5-mediated Drp1 phosphorylation drives mitochondrial defects and neuronal apoptosis in radiation-induced optic neuropathy. — *Cell death & disease* [both] tags=optic_nerve v=v2.0-new
+
+---
+<!-- KB1V2-WIKILINKS v1.1 -->
+## 判读层链接 (判读层链接版本: KB1v2 (2026-09-23, t_16c3e020))
+
+- **组成基线**: [kb/baselines/optic_nerve.md](/mnt/D/EyeKB/kb/baselines/optic_nerve.md) — 供者级条件参考分布 (锚定 registry 标准集或 t_6f5cc731 映射)
+- **RAG reason-tag**: 每条 PMID 的入库原因/论断关系/证据条件见 `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (键=pmid; 字段 inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` 命中自动联表带出
+- **概念 ID 映射**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
+- 红线: 本页与全部链接内容仅证据引用与 QC 旗, 禁入打分 (ANNOTATION_PROTOCOL_v1.1.md §0)

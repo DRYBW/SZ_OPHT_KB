@@ -1,0 +1,104 @@
+{
+ "version": "v6.0-lacrimal-20260925",
+ "created": "2026-09-25",
+ "card": "t_e7ec73ab",
+ "prereg_sha": "见 out/SHA_PRE_KB8.txt 内 BRIEF_KB8_LACRIMAL.md 行 (判据先落纸后跑数)",
+ "scope": "KB8 首批泪腺词条 (首个眼附属器词条)。数据=GSE164403 (PMID:33730555, Cell Stem Cell 2021;28:1221; 世界唯一人泪腺本体单细胞图谱) 组织池 QC 层 (n_genes>=200 ∧ pct_mt<25 ∧ total_counts>=500 → 1,076 细胞; 本卡口径, 论文 916 阈值不可反查唯一化)。类器官池只作导管侧参考禁产体内基线 (源论文: organoids recapitulate lacrimal ducts)。参考系 pairwise DE 判据参数 (CPM>=5/det>=0.5/lfc>=1/供体>=10/pool>=100 触发线) 与 KB6b 差异及理由=KB8 完成报告 §参数表。文献门=KB4 六必修 (本地 RAG v2.3 + eutils 摘要语境校验, SALL4 型字面假匹配防线)。CL 回证=OLS4 (out/ols_evidence_kb8/)。零下载/冻结面零触碰。",
+ "data_note_ambient": "384 孔板 SORT-seq 孔间 ambient 携带重: LYZ 0.8–14.9 万 CPM、LTF 0.5–5.9 万 CPM 跨几乎全部组 det≈1.0 (T 细胞群亦 LYZ 8.5k CPM) ⇒ 分泌液基因读数≠细胞自主表达; LACRT 在非分泌组有 ~1.5–5k CPM 板级环境本底 (Tcell det 0.97) ⇒ 阳性判读须按 ≥5–10× 本底 (如 >20k CPM) 而非绝对检出。LYZ/LTF 由此禁入任何 core (数据门 RED 同步实证)。",
+ "data_note_acinar_zymogen_gap": "腺泡经典酶原程序在本图谱不可检出: PRSS1 max 2.3 CPM、CTRB1 6.1、PNLIP 10.7(det 0.00)、CTRB2 仅在假基因汤簇 det 0.02、LIPF/CELA/BHLHA2≈0——真泪腺腺泡应为万级 CPM ⇒ '腺泡'按酶原定义无数据支撑, 本卡以 LACRT+/SCGB+/CST+ 血清黏液分泌程序定义分泌词条 (layer_descriptor 明载), 酶原缺口登记于 registry 与完成报告。",
+ "lacrimal_increment": {
+  "Lacrimal_secretory_tearcell": {
+   "display_name": "lacrimal_gland_secretory_cell (LACRT+ seromucous, acinar-like)",
+   "cl_id": "CL:0000315",
+   "label": "tear secreting cell",
+   "layer_descriptor": "分泌池操作定义 = LACRT/SCGB/CST 血清黏液程序 (CL:0000315 定义 'a cell secreting tears…fluid secreted by the lacrimal glands' 覆盖本群; 经典酶原腺泡定义在本图谱不可检出, 见 data_note_acinar_zymogen_gap); 供体覆盖 d3+c6(40c)/d7,8+c11(25c), donor 分层 DISC/VER 双队列全 PASS",
+   "core": [
+    {"gene": "LACRT",
+     "evidence": [
+      {"type": "canonical", "note": "lacritin——以泪腺命名并文献确立的泪腺特异分泌糖蛋白 (lacrimal-exclusive synthesis and secretion 共识)"},
+      {"type": "pmid", "id": "PMID:42191868", "gene_symbol": "LACRT/lacritin", "species": "human", "tissue": "tear fluid/lacrimal", "evidence": "human tear glycoproteomics: spliceoform-dependent lacritin", "semantics": "泪液蛋白组直接语境"},
+      {"type": "pmid", "id": "PMID:42777860", "gene_symbol": "LACRT", "species": "human", "tissue": "tear", "evidence": "species-specific tear proteomic signatures (human vs rabbit DIA-MS)", "semantics": "泪液人源特异条带"},
+      {"type": "data_driven", "id": "kb8::LG-tricolor (CPM 166,657 det 1.00 min_lfc 5.06 DISC/VER PASS; D002 10组max 0.0 CPM)"}],
+     "note": "板级环境本底 ~1.5–5k CPM, 判阳性用 ≥20k 级而非检出"},
+    {"gene": "SCGB1D1",
+     "evidence": [
+      {"type": "pmid", "id": "PMID:26173177", "gene_symbol": "SCGB1D1/mammaglobin", "species": "human", "tissue": "reflex tear proteome", "evidence": "human reflex tear proteome high expression", "semantics": "泪液高丰度蛋白"},
+      {"type": "pmid", "id": "PMID:16395610", "gene_symbol": "SCGB family", "species": "human", "tissue": "ocular glands", "evidence": "IHC secretoglobins in human ocular glands (lacrimal/Harderian-type)", "semantics": "眼腺组织定位"},
+      {"type": "data_driven", "id": "kb8::LG-tricolor (CPM 89,461 min_lfc 5.50 双队列 PASS; D002 max 0.0)"}]},
+    {"gene": "SCGB2A1",
+     "evidence": [
+      {"type": "pmid", "id": "PMID:16395610", "gene_symbol": "SCGB2A1", "species": "human", "tissue": "ocular glands", "evidence": "免疫组化直接分析 SCGB2A1 在人眼腺表达", "semantics": "乳腺/泪腺交叉语义注记 (D002 上皮侧 81.9 CPM=450×稀释, 无火灾)"},
+      {"type": "pmid", "id": "PMID:27436115", "gene_symbol": "SCGB2A1", "species": "human", "tissue": "tears (dry eye vs control)", "evidence": "tear proteomics aqueous-deficient/evaporative", "semantics": "泪液蛋白语境"},
+      {"type": "data_driven", "id": "kb8::LG-tricolor (CPM 36,982 min_lfc 4.57 双队列 PASS)"}]},
+    {"gene": "CST4",
+     "evidence": [
+      {"type": "pmid", "id": "PMID:37894795", "gene_symbol": "CST4/cystatin SN", "species": "human", "tissue": "tears/meibomian", "evidence": "MGD associated with low tear cystatin-SN", "semantics": "泪液胱抑素语境 (人为主, 含小鼠注记)"},
+      {"type": "pmid", "id": "PMID:11879580", "gene_symbol": "CST1-CST5", "species": "human", "tissue": "adult tissues/submandibular", "evidence": "type 2 cystatin 基因家族表达谱", "semantics": "跨外分泌腺注释 (与唾液腺共享)"},
+      {"type": "data_driven", "id": "kb8::LG-tricolor (CPM 12,284 min_lfc 4.74 双队列 PASS; D002 max 0.0)"}]},
+    {"gene": "CST1",
+     "evidence": [
+      {"type": "pmid", "id": "PMID:2029847", "gene_symbol": "cystatin S", "species": "human", "tissue": "tear fluid", "evidence": "Cystatins in human tear fluid (1991)", "semantics": "泪液直接"},
+      {"type": "pmid", "id": "PMID:1471486", "gene_symbol": "cystatins", "species": "human", "tissue": "lacrimal gland", "evidence": "免疫荧光定位 cystatins 于人泪腺", "semantics": "泪腺组织定位直接 (最强)；跨腺注释"},
+      {"type": "data_driven", "id": "kb8::LG-tricolor (CPM 6,048 min_lfc 4.02 双队列 PASS)"}]},
+    {"gene": "MUC7",
+     "evidence": [
+      {"type": "canonical", "note": "MUC7 = 泪腺/下颌下腺特异小唾液酸黏蛋白 (tear-specific mucin 教科书共识)"},
+      {"type": "pmid", "id": "PMID:17399701", "gene_symbol": "MUC7", "species": "human", "tissue": "tear fluid", "evidence": "Assay of mucins in human tear fluid", "semantics": "泪液黏蛋白检测"},
+      {"type": "data_driven", "id": "kb8::LG-tricolor (CPM 337 det 0.42 min_lfc 1.59 双队列 PASS; D002 Epithelium max 1.7 CPM=无火灾)"}],
+     "note": "丰度中等且 det 0.42——作佐证位点不作单判据"}],
+   "removed_note": [
+    "HMGCS2: 数据 GREEN (min_lfc 4.77) 但文献门 0 (人泪腺语境无; 泛代谢酶语义污染风险) → 弃用登记 (HC 先例)",
+    "PLA2G2A: 数据 GREEN 但泪液文献语境以炎症程序为主 (PMID:33011237 sPLA2-IIa 在 DED 眼表炎症) + D002 间质侧交叉 3,182 CPM → 语义污染弃用",
+    "ZG16B/AQP5/SCGB2A2/CST5/SLPI: LG 数据门 RED (对 D_duct/Plasma/Fibro 不过)",
+    "PRSS1/CTRB1/PNLIP/CELA/LIPF/BHLHA2: 全池不可检出 (酶原缺口, 见 data_note)"],
+   "support": {"cells": 65, "clusters": "qc_tissue_6(40,d3)+qc_tissue_11(25,d7/d8)", "donor_labels": 3}
+  },
+  "Lacrimal_duct_epithelial": {
+   "display_name": "lacrimal_gland_duct_epithelial_cell (PRR27+)",
+   "cl_id": null,
+   "label": "(CL 无泪腺导管专有条目——OLS4 实证: 'lacrimal' 检索仅 lacrimal sac/canaliculus/drainage 系统条与 tear secreting cell, 见 out/ols_evidence_kb8/; 不借唾液腺条冒充, 禁双写)",
+   "layer_descriptor": "导管上皮 (intercalated/striated duct 混合池; D_duct 组=c0/c3/c5/c9, 455 细胞)",
+   "core": [
+    {"gene": "PRR27",
+     "evidence": [
+      {"type": "pmid", "id": "PMID:37591874", "gene_symbol": "PRR27", "species": "human+mouse", "tissue": "mammary/salivary gland locus", "evidence": "multigene locus active in mammary and salivary glands (Nat Commun 2023)", "semantics": "跨外分泌腺类比注记 (COX4I2×人脑壁细胞先例同型)——泪腺直接文献缺, 照实登记"},
+      {"type": "data_driven", "id": "kb8::LG-tricolor GREEN (CPM 1,392 det 0.79 min_lfc 2.05, 0 RED); 供体分层 d3=967/d7=1011/d8=3048 CPM 三供体一致; DISC(d3)/VER(d7+8) 双队列 PASS; D002 10 组 max 0.1 CPM = 零火灾"}],
+     "note": "单基因 core (KERA 先例)——本数据导管侧唯一双队列存活基因; PRR4 (泪腺文献最强 PMID:26173177) 数据门 RED (对 Fibro_stroma lfc 0.48) 不入, 见 removed_note"}],
+   "removed_note": [
+    "PRR4: 文献最强 (泪腺 PRR4 tear proteome) 但对 Fibro_stroma 数据 RED (8,251 CPM 侧) — 数据文献互证失败照实弃",
+    "HTN1/HTN3: 组内 RED (Plasma 携带) / det<0.5",
+    "KRT19/KRT7/SOX9/ELF3/PIGR/LTF/CFTR/CLDN10/KRT8/18/AQP1/CA2/B2M/SLC3A2/ANO1/S100A4/SPINT2/TMEM267/MUC7(D侧): LG 内数据门 RED (Plasma/Fibro 邻组污染主导, ambient 语义) — 全清单 out/kb8_lg_tricolor.tsv",
+    "D002 侧通签警示: KRT19(KRT19 眼表上皮 964 CPM≥LG 导管 274)/ELF3/SPINT2/SOX9/KRT7 均为眼表上皮共享程序, 与结膜词条双向纠缠 → 本词条禁把 pan-epithelial keratins 当独立判据"],
+   "support": {"cells": 455, "clusters": "qc_tissue_0(114,d3)+3(149,d3)+5(97,d3/7)+9(95,d8/7)", "donor_labels": 3}
+  },
+  "Lacrimal_myoepithelial": {
+   "display_name": "lacrimal_gland_myoepithelial_cell (警示条)",
+   "cl_id": "CL:0000185",
+   "label": "myoepithelial cell",
+   "layer_descriptor": "腺泡/导管外周收缩细胞; CL 定义自带 'resembling smooth muscle cells'——与壁细胞词条共享收缩程序是本体语义, 非本卡新缺陷",
+   "core": [],
+   "myoepithelial_caution": true,
+   "removed_note": [
+    "LG 内 13 基因三色全 GREEN (KRT14/KRT5/CNN1/ACTA2/MYH11/CARMN/TPM2/MYL9/TAGLN/TP63/MYLK/KCNMB1/LMOD1, min_lfc 2.49–8.92, out/kb8_lg_tricolor.tsv) 但方向2a (D002 交叉) 无一幸存: KRT14(D002 眼表上皮 3504>LG 1264)/KRT5(4363>2363)/TPM2(3746>2776)/MYL9(4083>2894)/TAGLN(Pericytes 6735>3746) = HIGH 火灾 (会把 D002 结膜/角膜缘 basal 与 SMC/Peri 簇拉走, KB6b 池化掩盖同型); CNN1/ACTA2/MYH11/CARMN/MYLK/KCNMB1/LMOD1/TP63 = D002 SMC/Peri 组 ≥5 CPM 交叉表达线索 (mural 共享)",
+    "支撑面: c4 仅 18 细胞 (d3/7/8 各<10, 队列验证 no_cells) + 簇内混有血管成分 (前 QC c8 曾以 PECAM1/VWF 与 ACTA2 同簇) —— 低支撑+高火灾双因, 按 Myofibroblast 先例发布 core=[] 警示条",
+    "观察锚清单 (LG 内 GREEN, 供未来带壁细胞外部数据卡复用): KRT14∧ACTA2∧(CNN1|MYH11|LMOD1) 共表达组合; 单独任一基因禁判"],
+   "support": {"cells": 18, "clusters": "qc_tissue_4", "donor_labels": "3 (每供体<10细胞)"}
+  }
+ },
+ "reference_layer": {
+  "note": "腺内免疫/内皮=参考层非新词条 (既有 membrane v1 面板复用)。LG 数据实测: Tcell c7(106c,CD3D/PTPRC/CCL5 强)、Plasma c1(292c, IGH/IGL 主导)、Endo c8(14c,VWF/ACKR1/PLVAP) 组存在确认; 纤维间质 c2(115c,COL1A1/FDCSP)、表面污染 c10(11c,KRT13/KRT4/SCGB3A1/MUC16=真结膜上皮混入, 被 facev6::Conj_epithelium_basal/superficial 词条正确命中=审计阳性对照)。",
+  "fire_audit_ref": "out/kb8_fire_eye_side.tsv (84 格: 眼词条→LG 簇方向; SMC/Pericyte 词条命中 LG 肌上皮候选 7 格为预期 mural 纠缠, DC/免疫散格为低深度孔携带)",
+  "ambient_prohibition": "LYZ/LTF/HTN 等泪液高丰度蛋白基因禁作 LG 任何类群判据 (板级 ambient, 见 data_note_ambient)"
+ },
+ "granularity_note_lacrimal": {
+  "zymogen_gap": "本图谱无经典酶原型腺泡读数——引用 LG 分泌词条时不得写成 '腺泡酶原细胞已验证'; 适用域=成人泪腺 LACRT+ 血清黏液分泌池。",
+  "donor_support": "组织池 3 供体标签 (patient 3/7/8; d3=76% 主导, d7=30 细胞) —— 组成比例禁当达标线 (KB2 判读层红线沿用)。",
+  "organoid_separation": "类器官池 (1,395 QC 后, 供体标签 2/3/5) 只出导管侧参考 (BPIFB1/PSCA/MSMB/NKX3-1/PIP 程序, out/kb8qc_markers_organoid.tsv), 禁并入体内基线; patient '3' 跨池同号未证同体。"
+ },
+ "registry_ref": "plans/kb8_lacrimal_20260925/REGISTRY_ENTRY_Q10_GSE164403.md",
+ "provenance": {
+  "pipeline": "scripts/kb8_w1_cluster.py → kb8_w2_qc_cluster.py → kb8_w3_audit.py → kb8_w4_discovery.py → kb8_w5_litgate.py(+round2) → kb8_w6_ols.py; seed=20260925 全固定",
+  "h5ad_sha": "5e6d753d0c10d1c5ac23e50b5b0150741ce0341654ad65cd68a2a72368a73399",
+  "d002_side": "只读复用 kb6b agg_kb6b_v1.npz (sha 入 PRE 台账), 零新聚合"
+ }
+}

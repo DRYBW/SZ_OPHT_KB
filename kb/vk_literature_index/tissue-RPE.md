@@ -1,0 +1,340 @@
+---
+title: 文献索引: RPE
+created: 2026-09-23
+updated: 2026-09-23
+type: query
+tags: [literature, rag, index, RPE]
+sources: [literature_db v2.0_2026-09]
+confidence: high
+---
+
+# 文献: RPE (311 篇, 多标签口径)
+
+> RAG v2.0 中 tissue_labels 含 RPE 的论文清单（含与其他组织共标的论文），按年份倒序。
+> 溯源用 PMID 查询 RAG API: `stage3_retrieve.py --tissue RPE --db-dir literature_db/v2.0_2026-09 --cell-type <CT>`
+> 定位 (Claude5 冻结): 仅人机交互辅助引用, 不入打分。
+
+## 论文列表
+- PMID41881262 (2026) Age-dependent induction of ER stress in retinal pigment epithelium impairs phagocytosis  via  ADAM17-dependent MERTK shedding — *The Journal of biological chemistry* [mouse] tags=RPE,retina v=v1.0
+- PMID41866494 (2026) Advances in retinal pigment epithelium transplantation for age-related macular degeneration: bridging biology to therapeutic frontiers. — *Stem cell research & therapy* [human] tags=RPE,retina v=v1.0
+- PMID42443308 (2026) Soft matrix promotes ciliogenesis in human retinal pigment epithelial cells. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID42270720 (2026) Mathematical analysis of photoreceptor changes in conditions of separation from the underlying retinal pigment epithelium. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID41963383 (2026) Integrated transcriptomic and metabolomic analyses reveal distinct energy metabolic signatures and functional properties of RPE cells under two culture conditions. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID42555638 (2026) 3D epigenomic landscape of the human retinal pigment epithelium. — *Proceedings of the National Academy of Sciences of the United States of America* [human] tags=RPE v=v2.0-new
+- PMID42100001 (2026) Injectable alginate hydrogels improve the effects of subretinal hiPSC-derived RPE cell therapy on retinal degeneration in rats. — *Materials today. Bio* [human] tags=RPE,retina v=v1.1
+- PMID41787550 (2026) Systemic inflammation triggers local complement production in the mouse retina and RPE. — *Journal of neuroinflammation* [mouse] tags=RPE,retina v=v1.1
+- PMID41746734 (2026) Splicing variants in MYRF cause partial loss of function in the retinal pigment epithelium leading to nanophthalmos. — *JCI insight* [both] tags=RPE,retina v=v1.0
+- PMID41848364 (2026) Targeted Ferroptosis Improves RPE Phagocytosis via MERTK/NFE2L2/HMOX1 Axis to Alleviate Retinitis Pigmentosa. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID41533919 (2026) PRPF8 Mutation-Induced Defects in Human iPSC-Derived RPE Are Rescued by Adenine Base Editing. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID41631752 (2026) CR2-fH, A Targeted Inhibitor of Alternative Complement Pathway Reduces Dry AMD-Like Phenotype in AMD Patient iPSC-derived RPE Cells. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID42449920 (2026) Personalized Pathogenicity Assessment of &lt;i&gt;RPE65&lt;/i&gt; Gene Mutations Using Patient-Specific hiPSC-Derived Retinal Pigment Epithelium Model. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID42278399 (2026) Excessive Stretching Drives RPE Inflammation and ECM Remodeling in Ectopia Lentis Retinopathy. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID41960189 (2026) CircAFF3 modulation of p53-ID2 signaling in the retinal pigment epithelium links inflammation with cell death in dry age-related macular degeneration. — *Frontiers in cell and developmental biology* [unknown] tags=RPE,retina v=v1.0
+- PMID41929533 (2026) Maresin 1 activates autophagy through SIRT1/PPAR-γ signaling to mitigate high glucose-induced pyroptosis in human retinal pigment epithelial cells. — *Experimental and therapeutic medicine* [human] tags=RPE v=v2.0-new
+- PMID42487268 (2026) FZD7 Inhibitor SRI Attenuates High Glucose-Induced Retinal Pigment Epithelial Cell Injury Accompanied by Ferroptosis-Associated Changes via Suppression of the Wnt/β-Catenin Pathway. — *Endocrinology, diabetes & metabolism* [human] tags=RPE v=v2.0-new
+- PMID42067699 (2026) Insulin production in the retina drives autocrine signalling and metabolism reprogramming of the ARPE-19, a retinal pigment epithelium cellular model. — *Cellular and molecular life sciences : CMLS* [human] tags=RPE,retina v=v1.1
+- PMID42055007 (2026) IND-enabling safety and efficacy of RPESC-RPE-4W, an adult RPE progenitor cell therapy for dry age-related macular degeneration. — *Cell reports. Medicine* [human] tags=RPE v=v2.0-new
+- PMID41528844 (2026) Single-cell multiome and enhancer connectome of human retinal pigment epithelium and choroid nominate causal variants in macular degeneration. — *Cell reports* [human] tags=RPE,choroid,retina v=v1.0
+- PMID42695327 (2026) Syntaxin-3 Regulates Tight Junction Assembly in Human Retinal Pigment Epithelium. — *Cell biochemistry and function* [human] tags=RPE v=v2.0-new
+- PMID42193986 (2026) Prominin-1 and Retinal Degenerative Disorders: Expanding the Biology from Photoreceptors to the Retinal Pigment Epithelium. — *Biomolecules* [human] tags=RPE,retina v=v1.1
+- PMID41594671 (2026) Protective Effects of Cord Blood Serum (CBS) on Retinal Pigment Epithelium (ARPE-19) and Retinal Photoreceptor-like (661W) Cell Line Viability Under In Vitro Oxidative Stress. — *Biomolecules* [human] tags=RPE v=v2.0-new
+- PMID42333946 (2026) Humanin Mitigates Aβ-Induced Retinal Pigment Epithelium Injury via AMPK-Beclin1-Dependent Mitophagy. — *Aging cell* [human] tags=RPE v=v2.0-new
+- PMID42030193 (2026) Decellularized Aged Bruch's Membrane Confers Unique Biochemical Cues to Retinal Pigment Epithelium for In Vitro Modeling of Age-Related Macular Degeneration. — *Aging cell* [human] tags=RPE v=v2.0-new
+- PMID39985055 (2025) Gain of 20q11.21 in human pluripotent stem cells enhances differentiation to retinal pigment epithelium. — *Stem cell research & therapy* [both] tags=RPE,retina v=v1.0
+- PMID40542390 (2025) The influence of femtosecond laser intrastromal lenticules on the characteristics and maturity in tissue-engineered stem cell-derived retinal pigment epithelium sheets. — *Stem cell research & therapy* [human] tags=RPE v=v2.0-new
+- PMID40882639 (2025) Single-cell transcriptome and surfaceome profiling of the adult human retinal pigment epithelium. — *Stem cell reports* [human] tags=RPE,retina v=v1.0
+- PMID39753135 (2025) Non-canonical roles of CFH in retinal pigment epithelial cells revealed by dysfunctional rare CFH variants. — *Stem cell reports* [human] tags=RPE v=v2.0-new
+- PMID41254090 (2025) Extracellular matrix stiffness modulates angiogenic properties of the retinal pigment epithelium. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID41364556 (2025) Protocol for the differentiation of induced pluripotent stem cells into retinal pigment epithelial cells. — *STAR protocols* [human] tags=RPE v=v2.0-new
+- PMID40317724 (2025) Protocol for immunofluorescence characterization of drusen in induced pluripotent stem cell-derived retinal pigment epithelium cultures. — *STAR protocols* [human] tags=RPE v=v2.0-new
+- PMID41424614 (2025) Subretinal suspensions of hiPSC-derived retinal pigment epithelium cells form functional monolayers in NOD-SCID mice facilitating treatment of advanced retinal diseases. — *Regenerative therapy* [both] tags=RPE,retina v=v1.0
+- PMID40416648 (2025) Differentiation of human induced pluripotent stem cells into retinal pigment epithelium cells during culture on peptide-grafted hydrogels. — *Regenerative biomaterials* [human] tags=RPE v=v2.0-new
+- PMID39869549 (2025) "Energetics of the outer retina II: Calculation of a spatio-temporal energy budget in retinal pigment epithelium and photoreceptor cells based on quantification of cellular processes". — *PloS one* [human] tags=RPE,retina v=v1.0
+- PMID40233131 (2025) Myelin regulatory factor (MYRF) is a critical early regulator of retinal pigment epithelial development. — *PLoS genetics* [both] tags=RPE,retina v=v1.0
+- PMID40284227 (2025) Biological Effect of Mycosporine-Gly-Ser (Shinorine) Against Bis-Retinoid &lt;i&gt;N&lt;/i&gt;-Retinyl-&lt;i&gt;N&lt;/i&gt;-Retinylidene Ethanolamine- and Blue-Light-Induced Retinal Pigment Epithelium Cell Damage. — *Nutrients* [human] tags=RPE v=v2.0-new
+- PMID41366246 (2025) Chemical reprogramming of fibroblasts into retinal pigment epithelium cells for vision restoration. — *Nature communications* [human] tags=RPE,retina v=v1.0
+- PMID41290721 (2025) 1q gain bypasses the selective barrier against aneuploidy in RPE differentiation via wild-type co-culture rescue. — *Nature communications* [human] tags=RPE v=v2.0-new
+- PMID41162371 (2025) Non-damaging laser treatment with electroretinography-based thermal dosimetry activates hormetic heat response in pig retinal pigment epithelium. — *Nature communications* [human] tags=RPE v=v2.0-new
+- PMID40253438 (2025) Allogeneic RPE cell suspension manufactured at scale demonstrating preclinical safety and efficacy led to IND approval. — *NPJ Regenerative medicine* [human] tags=RPE v=v2.0-new
+- PMID40231248 (2025) The RNA content of extracellular vesicles from gene-edited  PRPF31 +/−  hiPSC-RPE show potential as biomarkers of retinal degeneration — *Molecular therapy. Methods & clinical development* [human] tags=RPE,retina v=v1.0
+- PMID40520565 (2025) Transplantation of human embryonic stem cell-derived retinal pigment epithelial cells via injectable microfluidic-templated microgels for retinal regeneration. — *Materials today. Bio* [human] tags=RPE v=v2.0-new
+- PMID41149584 (2025) A Sulfated Polysaccharide from &lt;i&gt;Gelidium crinale&lt;/i&gt; Suppresses Oxidative Stress and Epithelial-Mesenchymal Transition in Cultured Retinal Pigment Epithelial Cells. — *Marine drugs* [human] tags=RPE v=v2.0-new
+- PMID40703032 (2025) A PEDF-Derived Short Peptide Prevents Sodium Iodate-Induced Retinal Degeneration in Rats by Activating the SLC7A11/GSH/GPX4 Pathway in the RPE Cells. — *Journal of cellular and molecular medicine* [human] tags=RPE,retina v=v1.1
+- PMID40970669 (2025) Targeting RPE Senescence Via Suppressing IL-6/IL-6R Signaling for Treating Retinal Degenerative Diseases. — *Investigative ophthalmology & visual science* [both] tags=RPE,retina v=v1.0
+- PMID40048184 (2025) Porcine Sub-Retinal Pigment Epithelium Deposits: A Model for Dry Age-Related Macular Degeneration With Comparison to Human Drusen. — *Investigative ophthalmology & visual science* [human] tags=RPE,retina v=v1.1
+- PMID41288322 (2025) RPGRORF15 Mutations Disrupt Lysosomal Lipid Metabolism in Retinal Pigment Epithelium Cells and Cause Retinitis Pigmentosa. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID40728360 (2025) Complement C3 Activation in the Human Retinal Pigment Epithelium. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID40498044 (2025) Characterization of Bruch's Membrane Formation in Human Fetal Retina and De Novo Membrane Synthesis by hPSC-Derived Retinal Pigment Epithelium. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID39841110 (2025) DNA-Dependent Protein Kinase Catalytic Subunit Prevents Ferroptosis in Retinal Pigment Epithelial Cells. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID40331961 (2025) Role of Oxidative Stress and Inflammation in Age Related Macular Degeneration: Insights into the Retinal Pigment Epithelium (RPE). — *International journal of molecular sciences* [human] tags=RPE,retina v=v1.0
+- PMID41096710 (2025) Modulation of mTOR Within Retinal Pigment Epithelium Affects Cell Viability and Mitochondrial Pathology. — *International journal of molecular sciences* [human] tags=RPE,retina v=v1.1
+- PMID41373691 (2025) Prominin-1 Regulates Retinal Pigment Epithelium Homeostasis: Transcriptomic Insights into Degenerative Mechanisms. — *International journal of molecular sciences* [mouse] tags=RPE,retina v=v1.1
+- PMID40806748 (2025) Role of Endogenous Galectin-3 on Cell Biology of Immortalized Retinal Pigment Epithelial Cells In Vitro. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID40943481 (2025) Hormetic Effects of Curcumin in RPE Cells: SIRT1 and Caspase-3 Inactivation with Implications for AMD. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID40151609 (2025) Protective effects of carotenoids against blue light induced-cellular damage in human retinal pigment epithelium. — *Food science and biotechnology* [human] tags=RPE v=v2.0-new
+- PMID40552921 (2025) Germline Disruption of Retinal Pigment Epithelium‐Expressed Zebrafish  rlbp1b 
+ −/−  Results in Selective Dim Light Visual Behavior Deficits and Provides a Screening Platform for Evaluating the Pathogenicity of Human  
+ RLBP1 
+  Variants — *FASEB journal : official publication of the Federation of American Societies for Experimental Biology* [human] tags=RPE,retina v=v1.0
+- PMID40598610 (2025) Low-level red light inhibits human retinal pigment epithelial cell fibrosis via UBE2C in a myopia-simulating hypoxic microenvironment. — *European journal of medical research* [human] tags=RPE,retina v=v1.0
+- PMID41168502 (2025) Defective chaperone-mediated autophagy in the retinal pigment epithelium of age-related macular degeneration patients. — *EMBO molecular medicine* [human] tags=RPE,retina v=v1.0
+- PMID40710374 (2025) Prolyl Hydroxylase Inhibitor-Mediated HIF Activation Drives Transcriptional Reprogramming in Retinal Pigment Epithelium: Relevance to Chronic Kidney Disease. — *Cells* [human] tags=RPE v=v2.0-new
+- PMID40801600 (2025) Whole RNA-Seq Analysis Reveals Longitudinal Proteostasis Network Responses to Photoreceptor Outer Segment Trafficking and Degradation in RPE Cells. — *Cells* [human] tags=RPE v=v2.0-new
+- PMID40961946 (2025) Safety and tolerability of RPESC-RPE transplantation in patients with dry age-related macular degeneration: Low-dose clinical outcomes. — *Cell stem cell* [human] tags=RPE v=v2.0-new
+- PMID39953740 (2025) PD-L1 Promotes Immunological Tolerance and Enhances Visual Protection of hESC-RPE Grafts in Retinal Degeneration. — *Cell proliferation* [both] tags=RPE,retina v=v1.0
+- PMID39667912 (2025) A Chemical Reprogramming Approach Efficiently Producing Human Retinal Pigment Epithelium Cells for Retinal Disease Therapies. — *Cell proliferation* [human] tags=RPE v=v2.0-new
+- PMID41430718 (2025) Retinal pigment epithelium-derived extracellular vesicles mediate outer blood retinal barrier disruption in response to AMD-related stress. — *Cell communication and signaling : CCS* [both] tags=RPE,retina v=v1.1
+- PMID41301488 (2025) Local Insulin for Local Needs? Insights into Retinal Insulin Signaling and RPE Metabolism. — *Biomolecules* [human] tags=RPE,retina v=v1.0
+- PMID40867611 (2025) Retinal Pigment Epithelium Transplantation in Retinal Disease: Clinical Trial Development, Challenges, and Future Directions. — *Biomolecules* [human] tags=RPE v=v2.0-new
+- PMID40722628 (2025) Epigenetic Modifications in the Retinal Pigment Epithelium of the Eye During RPE-Related Regeneration or Retinal Diseases in Vertebrates. — *Biomedicines* [human] tags=RPE,retina v=v1.0
+- PMID40466971 (2025) IRE1α-mediated endoplasmic reticulum stress response regulates oxidative damage in CYP4V2 deficient human retinal pigment epithelial cells. — *Biomedical journal* [human] tags=RPE v=v2.0-new
+- PMID39663766 (2025) Phagocytosis by the retinal pigment epithelium: New insights into polarized cell mechanics. — *BioEssays : news and reviews in molecular, cellular and developmental biology* [human] tags=RPE,retina v=v1.1
+- PMID41462634 (2025) HDGF Protects Retinal Pigment Epithelium from Glyoxal-Induced Ferroptosis via SIRT1/PGC-1α/Nrf2 Pathway. — *Antioxidants (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID40653679 (2025) Senescence Alters Antimicrobial Peptide Expression and Induces Amyloid-β Production in Retinal Pigment Epithelial Cells. — *Aging cell* [human] tags=RPE,retina v=v1.0
+- PMID40541565 (2025) Naphthalene Metabolites From Long-Term Environmental Tobacco Smoke Induce the Aging of Retinal Pigment Epithelium. — *Aging cell* [human] tags=RPE v=v2.0-new
+- PMID40956390 (2025) Retinitis Pigmentosa-Associated Gene TRIM49 Regulates ULK1-Mediated Autophagy and Photoreceptor Phagocytosis by the Retinal Pigment Epithelium. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [human] tags=RPE,retina v=v1.1
+- PMID40396905 (2025) PHOSPHO1 Suppresses Ferroptosis in Retinal Pigment Epithelial Cells by Reducing the Levels of Phosphatidylethanolamine Molecular Species. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [human] tags=RPE v=v2.0-new
+- PMID40171949 (2025) Delivery of Human iPSC-Derived RPE Cells in Healthy Minipig Retina Results in Interaction Between Photoreceptors and Transplanted Cells. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [human] tags=RPE v=v2.0-new
+- PMID38722314 (2024) Pigmentation level of human iPSC-derived RPE does not indicate a specific gene expression profile. — *eLife* [human] tags=RPE v=v2.0-new
+- PMID38705389 (2024) Conditional deletion of miR-204 and miR-211 in murine retinal pigment epithelium results in retinal degeneration. — *The Journal of biological chemistry* [both] tags=RPE,retina v=v1.0
+- PMID37094835 (2024) Deep-learning automated quantification of longitudinal OCT scans demonstrates reduced RPE loss rate, preservation of intact macular area and predictive value of isolated photoreceptor degeneration in geographic atrophy patients receiving C3 inhibition treatment. — *The British journal of ophthalmology* [human] tags=RPE v=v2.0-new
+- PMID39572643 (2024) Circular RNA HIPK3 mediates epithelial-mesenchymal transition of retinal pigment epithelial cells by sponging multiple microRNAs. — *Scientific reports* [human] tags=RPE,retina v=v1.1
+- PMID39169055 (2024) Selective nanosecond laser removal of retinal pigment epithelium for cell therapy. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID39369033 (2024) YTHDF1-regulated ALOX5 in retinal pigment epithelial cells under hypoxia enhances VEGF expression and promotes viability, migration, and angiogenesis of vascular endothelial cells. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID39080379 (2024) TRPML1 activation ameliorates lysosomal phenotypes in CLN3 deficient retinal pigment epithelial cells. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID38698112 (2024) Graft cell expansion from hiPSC-RPE strip after transplantation in primate eyes with or without RPE damage. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID38553490 (2024) The impact of substrate stiffness on morphological, transcriptional and functional aspects in RPE. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID38514646 (2024) Phototoxicity of low doses of light and influence of the spectral composition on human RPE cells. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID38293586 (2024) Investigation of the effectiveness of gelatin hydrolysate in human iPS-RPE cell suspension transplantation. — *Regenerative therapy* [human] tags=RPE v=v2.0-new
+- PMID39233867 (2024) Effects of ECM protein-coated surfaces on the generation of retinal pigment epithelium cells differentiated from human pluripotent stem cells. — *Regenerative biomaterials* [human] tags=RPE v=v2.0-new
+- PMID39018199 (2024) Cone photoreceptor differentiation regulated by thyroid hormone transporter MCT8 in the retinal pigment epithelium. — *Proceedings of the National Academy of Sciences of the United States of America* [mouse] tags=RPE,retina v=v1.0
+- PMID38190398 (2024) Reusable rule-based cell cycle model explains compartment-resolved dynamics of 16 observables in RPE-1 cells. — *PLoS computational biology* [human] tags=RPE v=v2.0-new
+- PMID39506758 (2024) m6A-methylase METTL3 promotes retinal angiogenesis through modulation of metabolic reprogramming in RPE cells. — *Journal of neuroinflammation* [both] tags=RPE,retina v=v1.0
+- PMID38528525 (2024) The mouse retinal pigment epithelium mounts an innate immune defense response following retinal detachment. — *Journal of neuroinflammation* [both] tags=RPE,retina v=v1.1
+- PMID38151470 (2024) Extracellular vesicles from organoid-derived human retinal progenitor cells prevent lipid overload-induced retinal pigment epithelium injury by regulating fatty acid metabolism. — *Journal of extracellular vesicles* [human] tags=RPE v=v2.0-new
+- PMID39281021 (2024) Dynamics of microRNA secreted via extracellular vesicles during the maturation of embryonic stem cell-derived retinal pigment epithelium. — *Journal of extracellular biology* [human] tags=RPE v=v2.0-new
+- PMID38229139 (2024) Tissue engineering RPE sheet derived from hiPSC-RPE cell spheroids supplemented with Y-27632 and RepSox. — *Journal of biological engineering* [human] tags=RPE v=v2.0-new
+- PMID39641748 (2024) Elevation of Granulocyte Colony Stimulating Factor in Human AMD Donor RPE-Choroid. — *Investigative ophthalmology & visual science* [human] tags=RPE,choroid v=v2.0-new
+- PMID39226050 (2024) Knockdown of HSPA13 Inhibits TGFβ1-Induced Epithelial-Mesenchymal Transition of RPE by Suppressing the PI3K/Akt Signaling Pathway. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID39283617 (2024) iPSC-Derived LCHADD Retinal Pigment Epithelial Cells Are Susceptible to Lipid Peroxidation and Rescued by Transfection of a Wildtype AAV-HADHA Vector. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID38315495 (2024) m6A-Mediated Upregulation of Imprinted in Prader-Willi Syndrome Induces Aberrant Apical-Basal Polarization and Oxidative Damage in RPE Cells. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID39297806 (2024) Blue Light-Induced Accelerated Formation of Melanolipofuscin-Like Organelles in Japanese Quail RPE Cells: An Electron Microscopic Study. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID39125641 (2024) The Scavenging Activity of Coenzyme Q<sub>10</sub> Plus a Nutritional Complex on Human Retinal Pigment Epithelial Cells. — *International journal of molecular sciences* [human] tags=RPE,retina v=v1.1
+- PMID39273216 (2024) Galectin-1 Attenuates PDGF-Mediated AKT Signaling in Retinal Pigment Epithelial Cells. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID38542166 (2024) Beneficial Effects of Fibroblast Growth Factor-1 on Retinal Pigment Epithelial Cells Exposed to High Glucose-Induced Damage: Alleviation of Oxidative Stress, Endoplasmic Reticulum Stress, and Enhancement of Autophagy. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID39524785 (2024) Role of HDAC3 in the epithelial-mesenchymal transition of retinal pigment epithelium cells: Implications for proliferative vitreoretinopathy. — *Heliyon* [human] tags=RPE v=v2.0-new
+- PMID38760655 (2024) Comparative 3D genome analysis between neural retina and retinal pigment epithelium reveals differential cis-regulatory interactions at retinal disease loci. — *Genome biology* [human] tags=RPE v=v2.0-new
+- PMID39734536 (2024) The retinal pigment epithelium: Functions and roles in ocular diseases. — *Fundamental research* [unknown] tags=RPE,retina v=v1.0
+- PMID38334673 (2024) Recent Achievements in the Heterogeneity of Mammalian and Human Retinal Pigment Epithelium: In Search of a Stem Cell. — *Cells* [human] tags=RPE,retina v=v1.0
+- PMID39056772 (2024) Initial Characterization of WDR5B Reveals a Role in the Proliferation of Retinal Pigment Epithelial Cells. — *Cells* [human] tags=RPE,retina v=v1.0
+- PMID39273005 (2024) Metformin Alleviates Inflammation and Induces Mitophagy in Human Retinal Pigment Epithelium Cells Suffering from Mitochondrial Damage. — *Cells* [human] tags=RPE v=v2.0-new
+- PMID38183022 (2024) SB431542 partially inhibits high glucose-induced EMT by restoring mitochondrial homeostasis in RPE cells. — *Cell communication and signaling : CCS* [human] tags=RPE v=v2.0-new
+- PMID38586992 (2024) Activation of Heme Oxygenase-1 by Mangiferin in Human Retinal Pigment Epithelial Cells Contributes to Blocking Oxidative Damage. — *Biomolecules & therapeutics* [human] tags=RPE v=v2.0-new
+- PMID37507467 (2024) Elemental mass spectrometry to study metallo-transcriptomic changes during the in vitro degeneration of the retinal pigment epithelium. — *Analytical and bioanalytical chemistry* [human] tags=RPE v=v2.0-new
+- PMID38393691 (2024) Protective effects of triptolide against oxidative stress in retinal pigment epithelium cells via the PI3K/AKT/Nrf2 pathway: a network pharmacological method and experimental validation. — *Aging* [human] tags=RPE v=v2.0-new
+- PMID39420512 (2024) Quantum Dots-caused Retinal Degeneration in Zebrafish Regulated by Ferroptosis and Mitophagy in Retinal Pigment Epithelial Cells through Inhibiting Spliceosome. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [other] tags=RPE,retina v=v1.0
+- PMID36680182 (2023) Differential Susceptibility of Fetal Retinal Pigment Epithelial Cells, hiPSC- Retinal Stem Cells, and Retinal Organoids to Zika Virus Infection. — *Viruses* [human] tags=RPE v=v2.0-new
+- PMID37728563 (2023) Identifying biomarkers of heterogeneity and transplantation efficacy in retinal pigment epithelial cells. — *The Journal of experimental medicine* [human] tags=RPE,retina v=v1.0
+- PMID37137441 (2023) Crosstalk of protein clearance, inflammasome, and Ca<sup>2+</sup> channels in retinal pigment epithelium derived from age-related macular degeneration patients. — *The Journal of biological chemistry* [human] tags=RPE v=v2.0-new
+- PMID37605279 (2023) Soluble CX3CL1-expressing retinal pigment epithelium cells protect rod photoreceptors in a mouse model of retinitis pigmentosa. — *Stem cell research & therapy* [both] tags=RPE,retina v=v1.1
+- PMID37660150 (2023) TNFα induced by DNA-sensing in macrophage compromises retinal pigment epithelial (RPE) barrier function. — *Scientific reports* [human] tags=RPE,retina v=v1.0
+- PMID36662852 (2023) Inflammation of the retinal pigment epithelium drives early-onset photoreceptor degeneration in <i>Mertk</i>-associated retinitis pigmentosa. — *Science advances* [mouse] tags=RPE,retina v=v1.1
+- PMID37566944 (2023) Comparative mechanistic study of RPE cell death induced by different oxidative stresses. — *Redox biology* [human] tags=RPE v=v2.0-new
+- PMID37339216 (2023) Single-cell transcriptomics reveals maturation of transplanted stem cell-derived retinal pigment epithelial cells toward native state. — *Proceedings of the National Academy of Sciences of the United States of America* [human] tags=RPE,retina v=v1.0
+- PMID38048369 (2023) Deletion of IFT20 exclusively in the RPE ablates primary cilia and leads to retinal degeneration. — *PLoS biology* [both] tags=RPE,retina v=v1.0
+- PMID37190767 (2023) Wnt/β-Catenin Signaling Pathway Is Necessary for the Specification but Not the Maintenance of the Mouse Retinal Pigment Epithelium. — *Molecules and cells* [mouse] tags=RPE,retina v=v1.1
+- PMID37110558 (2023) Carnosine Counteracts the Molecular Alterations Aβ Oligomers-Induced in Human Retinal Pigment Epithelial Cells. — *Molecules (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID36903482 (2023) Lipopolysaccharide Activating NF-kB Signaling by Regulates HTRA1 Expression in Human Retinal Pigment Epithelial Cells. — *Molecules (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID37232340 (2023) Thioredoxin1 is a target to attenuate diabetes‑induced RPE cell dysfunction in human ARPE19 cells by alleviating oxidative stress. — *Molecular medicine reports* [human] tags=RPE v=v2.0-new
+- PMID37185874 (2023) SIRT6 overexpression in the nucleus protects mouse retinal pigment epithelium from oxidative stress. — *Life science alliance* [mouse] tags=RPE,retina v=v1.1
+- PMID38098048 (2023) Comparison of retinal degeneration treatment with four types of different mesenchymal stem cells, human induced pluripotent stem cells and RPE cells in a rat retinal degeneration model. — *Journal of translational medicine* [human] tags=RPE,retina v=v1.1
+- PMID36926611 (2023) Nrf2-mediated activation of HO-1 is required in the blocking effect of compound K, a ginseng saponin metabolite, against oxidative stress damage in ARPE-19 human retinal pigment epithelial cells. — *Journal of ginseng research* [human] tags=RPE v=v2.0-new
+- PMID37048820 (2023) Role of Epithelial-to-Mesenchymal Transition of Retinal Pigment Epithelial Cells in Glaucoma Cupping. — *Journal of clinical medicine* [human] tags=RPE,retina v=v1.1
+- PMID37731202 (2023) Hyperbaric oxygen therapy suppresses hypoxia and reoxygenation injury to retinal pigment epithelial cells through activating peroxisome proliferator activator receptor-alpha signalling. — *Journal of cellular and molecular medicine* [human] tags=RPE,retina v=v1.1
+- PMID37548963 (2023) Impaired Lysosome Reformation in Chloroquine-Treated Retinal Pigment Epithelial Cells. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID37163276 (2023) Spatiotemporal Coordination of RPE Cell Quality by Extracellular Vesicle miR-494-3p Via Competitive Interplays With SIRT3 or PTEN. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID37175646 (2023) Comparison of Fucoidans from <i>Saccharina latissima</i> Regarding Age-Related Macular Degeneration Relevant Pathomechanisms in Retinal Pigment Epithelium. — *International journal of molecular sciences* [human] tags=RPE,retina v=v1.1
+- PMID37446374 (2023) PRGF Membrane with Tailored Optical Properties Preserves the Cytoprotective Effect of Plasma Rich in Growth Factors: In Vitro Model of Retinal Pigment Epithelial Cells. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID36675091 (2023) CHAC1 as a Novel Contributor of Ferroptosis in Retinal Pigment Epithelial Cells with Oxidative Damage. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID37445726 (2023) Spermidine Attenuates High Glucose-Induced Oxidative Damage in Retinal Pigment Epithelial Cells by Inhibiting Production of ROS and NF-κB/NLRP3 Inflammasome Pathway. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID37628816 (2023) Endogenous Galectin-1 Modulates Cell Biological Properties of Immortalized Retinal Pigment Epithelial Cells In Vitro. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID37838654 (2023) Microglia preserve visual function loss in the aging retina by supporting retinal pigment epithelial health. — *Immunity & ageing : I & A* [mouse] tags=RPE,retina v=v1.0
+- PMID36645183 (2023) Single-cell RNA sequencing reveals transcriptional changes of human choroidal and retinal pigment epithelium cells during fetal development, in healthy adult and intermediate age-related macular degeneration. — *Human molecular genetics* [human] tags=RPE,choroid,retina v=v1.0
+- PMID35943778 (2023) Complement factor B is critical for sub-RPE deposit accumulation in a model of Doyne honeycomb retinal dystrophy with features of age-related macular degeneration. — *Human molecular genetics* [mouse] tags=RPE,retina v=v1.0
+- PMID37139437 (2023) Protective effects of <i>Scoparia dulcis</i> L. extract on high glucose-induced injury in human retinal pigment epithelial cells. — *Frontiers in nutrition* [human] tags=RPE,retina v=v1.1
+- PMID37928068 (2023) A novel quantification method for retinal pigment epithelium phagocytosis using a very-long-chain polyunsaturated fatty acids-based strategy. — *Frontiers in molecular neuroscience* [human] tags=RPE,retina v=v1.1
+- PMID37529008 (2023) Hydrogen peroxide-induced oxidative damage and protective role of peroxiredoxin 6 protein via EGFR/ERK signaling pathway in RPE cells. — *Frontiers in aging neuroscience* [human] tags=RPE v=v2.0-new
+- PMID37528478 (2023) Ex vivo cultivated retinal pigment epithelial cell transplantation for the treatment of rabbit corneal endothelial dysfunction. — *Eye and vision (London, England)* [human] tags=RPE,cornea,retina v=v1.1
+- PMID36899910 (2023) Zinc Supplementation Induced Transcriptional Changes in Primary Human Retinal Pigment Epithelium: A Single-Cell RNA Sequencing Study to Understand Age-Related Macular Degeneration. — *Cells* [human] tags=RPE,retina v=v1.0
+- PMID37371114 (2023) Isolation and Characterization of the Primary Marmoset (<i>Callithrix jacchus</i>) Retinal Pigment Epithelial Cells. — *Cells* [human] tags=RPE v=v2.0-new
+- PMID36672142 (2023) NFκB-Mediated Expression of Phosphoinositide 3-Kinase δ Is Critical for Mesenchymal Transition in Retinal Pigment Epithelial Cells. — *Cells* [human] tags=RPE v=v2.0-new
+- PMID37408192 (2023) Mitochondrial Dysfunction and Impaired Antioxidant Responses in Retinal Pigment Epithelial Cells Derived from a Patient with <i>RCBTB1</i>-Associated Retinopathy. — *Cells* [human] tags=RPE v=v2.0-new
+- PMID36672144 (2023) Recognizing the Differentiation Degree of Human Induced Pluripotent Stem Cell-Derived Retinal Pigment Epithelium Cells Using Machine Learning and Deep Learning-Based Approaches. — *Cells* [human] tags=RPE v=v2.0-new
+- PMID37443724 (2023) Polarized RPE Secretome Preserves Photoreceptors in Retinal Dystrophic RCS Rats. — *Cells* [human] tags=RPE v=v2.0-new
+- PMID36830851 (2023) Retinal Pigment Epithelium Cell Development: Extrapolating Basic Biology to Stem Cell Research. — *Biomedicines* [human] tags=RPE,retina v=v1.0
+- PMID36738354 (2023) SARS-COV-2 spike protein promotes RPE cell senescence via the ROS/P53/P21 pathway. — *Biogerontology* [human] tags=RPE v=v2.0-new
+- PMID37507949 (2023) β-Asarone Alleviates High-Glucose-Induced Oxidative Damage via Inhibition of ROS Generation and Inactivation of the NF-κB/NLRP3 Inflammasome Pathway in Human Retinal Pigment Epithelial Cells. — *Antioxidants (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID36829938 (2023) TRAP1 Is Expressed in Human Retinal Pigment Epithelial Cells and Is Required to Maintain their Energetic Status. — *Antioxidants (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID36185374 (2022) Induced retinal pigment epithelial cells with anti-epithelial-to-mesenchymal transition ability delay retinal degeneration. — *iScience* [human] tags=RPE,retina v=v1.1
+- PMID35433274 (2022) The effect of docetaxel on retinal pigment epithelial cells. — *Toxicology reports* [human] tags=RPE v=v2.0-new
+- PMID35868562 (2022) Vitamin B3, nicotinamide, enhances mitochondrial metabolism to promote differentiation of the retinal pigment epithelium. — *The Journal of biological chemistry* [human] tags=RPE v=v2.0-new
+- PMID36064625 (2022) Determining the optimal stage for cryopreservation of human embryonic stem cell-derived retinal pigment epithelial cells. — *Stem cell research & therapy* [human] tags=RPE v=v2.0-new
+- PMID35073969 (2022) Cell maturation influences the ability of hESC-RPE to tolerate cellular stress. — *Stem cell research & therapy* [human] tags=RPE v=v2.0-new
+- PMID35030321 (2022) Inducing human retinal pigment epithelium-like cells from somatic tissue. — *Stem cell reports* [human] tags=RPE,retina v=v1.0
+- PMID35705015 (2022) Molecular profiling of stem cell-derived retinal pigment epithelial cell differentiation established for clinical translation. — *Stem cell reports* [human] tags=RPE,retina v=v1.0
+- PMID35021041 (2022) In vitro disease modeling of oculocutaneous albinism type 1 and 2 using human induced pluripotent stem cell-derived retinal pigment epithelium. — *Stem cell reports* [human] tags=RPE v=v2.0-new
+- PMID35120620 (2022) Survival of an HLA-mismatched, bioengineered RPE implant in dry age-related macular degeneration. — *Stem cell reports* [human] tags=RPE v=v2.0-new
+- PMID35440610 (2022) Development of an electrospun poly(ε-caprolactone)/collagen-based human amniotic membrane powder scaffold for culturing retinal pigment epithelial cells. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID35915300 (2022) Plasmid-mediated gene transfer of Cas9 induces vector-related but not SpCas9-related immune responses in human retinal pigment epithelial cells. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID36386870 (2022) An improved protocol for generation and characterization of human-induced pluripotent stem cell-derived retinal pigment epithelium cells. — *STAR protocols* [human] tags=RPE v=v2.0-new
+- PMID35176707 (2022) REV-ERBα regulates age-related and oxidative stress-induced degeneration in retinal pigment epithelium via NRF2. — *Redox biology* [mouse] tags=RPE,retina v=v1.1
+- PMID35939707 (2022) DARPP32, a target of hyperactive mTORC1 in the retinal pigment epithelium. — *Proceedings of the National Academy of Sciences of the United States of America* [both] tags=RPE,retina v=v1.0
+- PMID35056119 (2022) Testing Mitochondrial-Targeted Drugs in iPSC-RPE from Patients with Age-Related Macular Degeneration. — *Pharmaceuticals (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID35271573 (2022) mTOR activity is essential for retinal pigment epithelium regeneration in zebrafish. — *PLoS genetics* [human] tags=RPE,retina v=v1.1
+- PMID35882847 (2022) Transcriptomic and proteomic retinal pigment epithelium signatures of age-related macular degeneration. — *Nature communications* [human] tags=RPE,retina v=v1.0
+- PMID35974011 (2022) Modeling PRPF31 retinitis pigmentosa using retinal pigment epithelium and organoids combined with gene augmentation rescue. — *NPJ Regenerative medicine* [human] tags=RPE,retina v=v1.1
+- PMID35209218 (2022) Bruch's-Mimetic Nanofibrous Membranes Functionalized with the Integrin-Binding Peptides as a Promising Approach for Human Retinal Pigment Epithelium Cell Transplantation. — *Molecules (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID35330501 (2022) Human iPSC-Derived Retinal Organoids and Retinal Pigment Epithelium for Novel Intronic <i>RPGR</i> Variant Assessment for Therapy Suitability. — *Journal of personalized medicine* [human] tags=RPE v=v2.0-new
+- PMID35831910 (2022) Complement activation contributes to subretinal fibrosis through the induction of epithelial-to-mesenchymal transition (EMT) in retinal pigment epithelial cells. — *Journal of neuroinflammation* [both] tags=RPE,retina v=v1.0
+- PMID36544284 (2022) Retinal pigment epithelium extracellular vesicles are potent inducers of age-related macular degeneration disease phenotype in the outer retina. — *Journal of extracellular vesicles* [human] tags=RPE,retina v=v1.1
+- PMID36469025 (2022) Prolonged Lifetimes of Histologic Autofluorescence in Ectopic Retinal Pigment Epithelium in Age-Related Macular Degeneration. — *Investigative ophthalmology & visual science* [human] tags=RPE,retina v=v1.1
+- PMID36413373 (2022) Protrusion of KCNJ13 Gene Knockout Retinal Pigment Epithelium Due to Oxidative Stress-Induced Cell Death. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID35216333 (2022) A Splicing Mutation in  Slc4a5  Results in Retinal Detachment and Retinal Pigment Epithelium Dysfunction — *International journal of molecular sciences* [both] tags=RPE,retina v=v1.0
+- PMID36142331 (2022) Single-Cell RNA Sequencing Reveals Molecular Features of Heterogeneity in the Murine Retinal Pigment Epithelium. — *International journal of molecular sciences* [mouse] tags=RPE,retina v=v1.0
+- PMID36077335 (2022) Oxidation of DJ-1 Cysteines in Retinal Pigment Epithelium Function. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID35742861 (2022) Effect of Photobiomodulation in Suppression of Oxidative Stress on Retinal Pigment Epithelium. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID36012314 (2022) Aberrant Retinal Pigment Epithelial Cells Derived from Induced Pluripotent Stem Cells of a Retinitis Pigmentosa Patient with the PRPF6 Mutation. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID35628282 (2022) Hypoxia Differently Affects TGF-β2-Induced Epithelial Mesenchymal Transitions in the 2D and 3D Culture of the Human Retinal Pigment Epithelium Cells. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID35328615 (2022) Regulation of ABCA1 by AMD-Associated Genetic Variants and Hypoxia in iPSC-RPE. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID35806438 (2022) Impaired Bestrophin Channel Activity in an iPSC-RPE Model of Best Vitelliform Macular Dystrophy (BVMD) from an Early Onset Patient Carrying the P77S Dominant Mutation. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID35752290 (2022) Identification of Age-associated Proteins and Functional Alterations in Human Retinal Pigment Epithelium. — *Genomics, proteomics & bioinformatics* [human] tags=RPE v=v2.0-new
+- PMID35784747 (2022) Fisetin Attenuated Oxidative Stress-Induced Cellular Damage in ARPE-19 Human Retinal Pigment Epithelial Cells Through Nrf2-Mediated Activation of Heme Oxygenase-1. — *Frontiers in pharmacology* [human] tags=RPE v=v2.0-new
+- PMID36408381 (2022) Exploring the pathogenesis of age-related macular degeneration: A review of the interplay between retinal pigment epithelium dysfunction and the innate immune system. — *Frontiers in neuroscience* [human] tags=RPE,retina v=v1.0
+- PMID36092714 (2022) Transcriptional comparison of adult human primary Retinal Pigment Epithelium, human pluripotent stem cell-derived Retinal Pigment Epithelium, and ARPE19 cells. — *Frontiers in cell and developmental biology* [human] tags=RPE v=v2.0-new
+- PMID36408112 (2022) Intercellular communication analysis of the human retinal pigment epithelial and choroidal cells predicts pathways associated with aging, cellular senescence and age-related macular degeneration. — *Frontiers in aging neuroscience* [human] tags=RPE,choroid,retina v=v1.0
+- PMID34974542 (2022) Renormalization of metabolic coupling treats age-related degenerative disorders: an oxidative RPE niche fuels the more glycolytic photoreceptors. — *Eye (London, England)* [human] tags=RPE v=v2.0-new
+- PMID35859009 (2022) Single-cell transcriptome of the mouse retinal pigment epithelium in response to a low-dose of doxorubicin. — *Communications biology* [mouse] tags=RPE,retina v=v1.0
+- PMID35688936 (2022) Dynamic full-field optical coherence tomography allows live imaging of retinal pigment epithelium stress model. — *Communications biology* [human] tags=RPE v=v2.0-new
+- PMID35297555 (2022) Activation of autophagy reverses progressive and deleterious protein aggregation in PRPF31 patient-induced pluripotent stem cell-derived retinal pigment epithelium cells. — *Clinical and translational medicine* [human] tags=RPE,retina v=v1.1
+- PMID36231108 (2022) Global Transcriptional and Epigenetic Reconfiguration during Chemical Reprogramming of Human Retinal Pigment Epithelial Cells into Photoreceptor-like Cells. — *Cells* [human] tags=RPE,retina v=v1.0
+- PMID36359858 (2022) Membrane Attack Complex Mediates Retinal Pigment Epithelium Cell Death in Stargardt Macular Degeneration. — *Cells* [human] tags=RPE,retina v=v1.1
+- PMID35681472 (2022) Hormetic Heat Shock Enhances Autophagy through HSF1 in Retinal Pigment Epithelium Cells. — *Cells* [human] tags=RPE v=v2.0-new
+- PMID35805159 (2022) Inflammasome Activation in Retinal Pigment Epithelium from Human Donors with Age-Related Macular Degeneration. — *Cells* [human] tags=RPE v=v2.0-new
+- PMID36539414 (2022) IL-4 induces reparative phenotype of RPE cells and protects against retinal neurodegeneration via Nrf2 activation. — *Cell death & disease* [both] tags=RPE,retina v=v1.0
+- PMID35314673 (2022) Deficiency of thyroid hormone receptor protects retinal pigment epithelium and photoreceptors from cell death in a mouse model of age-related macular degeneration. — *Cell death & disease* [both] tags=RPE,retina v=v1.1
+- PMID36096985 (2022) Direct conversion of human umbilical cord mesenchymal stem cells into retinal pigment epithelial cells for treatment of retinal degeneration. — *Cell death & disease* [human] tags=RPE,retina v=v1.1
+- PMID36552081 (2022) Hydrogels to Support Transplantation of Human Embryonic Stem Cell-Derived Retinal Pigment Epithelial Cells. — *Brain sciences* [human] tags=RPE,retina v=v1.1
+- PMID35327471 (2022) Subretinal Implantation of Human Primary RPE Cells Cultured on Nanofibrous Membranes in Minipigs. — *Biomedicines* [human] tags=RPE v=v2.0-new
+- PMID35883037 (2022) Exploring the lncRNA localization landscape within the retinal pigment epithelium under normal and stress conditions. — *BMC genomics* [human] tags=RPE,retina v=v1.1
+- PMID34024230 (2022) HMGB1 downregulation in retinal pigment epithelial cells protects against diabetic retinopathy through the autophagy-lysosome pathway. — *Autophagy* [human] tags=RPE v=v2.0-new
+- PMID36552561 (2022) Phloroglucinol Attenuates DNA Damage and Apoptosis Induced by Oxidative Stress in Human Retinal Pigment Epithelium ARPE-19 Cells by Blocking the Production of Mitochondrial ROS. — *Antioxidants (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID35740104 (2022) PPARδ Inhibits Hyperglycemia-Triggered Senescence of Retinal Pigment Epithelial Cells by Upregulating SIRT1. — *Antioxidants (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID35453399 (2022) Proteins Associated with Phagocytosis Alteration in Retinal Pigment Epithelial Cells Derived from Age-Related Macular Degeneration Patients. — *Antioxidants (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID35453289 (2022) Human iPSC- and Primary-Retinal Pigment Epithelial Cells for Modeling Age-Related Macular Degeneration. — *Antioxidants (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID34809716 (2021) Multiocular organoids from human induced pluripotent stem cells displayed retinal, corneal, and retinal pigment epithelium lineages. — *Stem cell research & therapy* [human] tags=RPE,cornea v=v2.0-new
+- PMID33883023 (2021) Efficient differentiation of human embryonic stem cells to retinal pigment epithelium under defined conditions. — *Stem cell research & therapy* [human] tags=RPE v=v2.0-new
+- PMID34315534 (2021) Submacular integration of hESC-RPE monolayer xenografts in a surgical non-human primate model. — *Stem cell research & therapy* [human] tags=RPE v=v2.0-new
+- PMID34262099 (2021) MYCN-induced nucleolar stress drives an early senescence-like transcriptional program in hTERT-immortalized RPE cells. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID34239032 (2021) FHL-1 interacts with human RPE cells through the α5β1 integrin and confers protection against oxidative stress. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID34301870 (2021) Chromosome 10q26-driven age-related macular degeneration is associated with reduced levels of <i>HTRA1</i> in human retinal pigment epithelium. — *Proceedings of the National Academy of Sciences of the United States of America* [human] tags=RPE v=v2.0-new
+- PMID33922669 (2021) Anti-Inflammatory and Anti-Oxidative Synergistic Effect of Vitamin D and Nutritional Complex on Retinal Pigment Epithelial and Endothelial Cell Lines against Age-Related Macular Degeneration. — *Nutrients* [human] tags=RPE,retina v=v1.1
+- PMID34684987 (2021) Nano-Graphene Oxide-Promoted Epithelial-Mesenchymal Transition of Human Retinal Pigment Epithelial Cells through Regulation of Phospholipase D Signaling. — *Nanomaterials (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID33738324 (2021) Cell therapy with hiPSC-derived RPE cells and RPCs prevents visual function loss in a rat model of retinal degeneration. — *Molecular therapy. Methods & clinical development* [human] tags=RPE v=v2.0-new
+- PMID33760200 (2021) Connective tissue growth factor promotes retinal pigment epithelium mesenchymal transition via the PI3K/AKT signaling pathway. — *Molecular medicine reports* [human] tags=RPE v=v2.0-new
+- PMID33670685 (2021) Cytoprotective Potential of Fucoxanthin in Oxidative Stress-Induced Age-Related Macular Degeneration and Retinal Pigment Epithelial Cell Senescence In Vivo and In Vitro. — *Marine drugs* [human] tags=RPE v=v2.0-new
+- PMID34750957 (2021) Extracellular vesicles released by human retinal pigment epithelium mediate increased polarised secretion of drusen proteins in response to AMD stressors. — *Journal of extracellular vesicles* [human] tags=RPE,retina v=v1.1
+- PMID33934486 (2021) RNA-seq analysis of ageing human retinal pigment epithelium: Unexpected up-regulation of visual cycle gene transcription. — *Journal of cellular and molecular medicine* [human] tags=RPE,retina v=v1.0
+- PMID33759344 (2021) METTL3 attenuates proliferative vitreoretinopathy and epithelial-mesenchymal transition of retinal pigment epithelial cells via wnt/β-catenin pathway. — *Journal of cellular and molecular medicine* [human] tags=RPE,retina v=v1.1
+- PMID33784255 (2021) An inducible Cre mouse for studying roles of the RPE in retinal physiology and disease. — *JCI insight* [mouse] tags=RPE,retina v=v1.0
+- PMID33616620 (2021) Morphometric Analysis of Retinal Pigment Epithelial Cells From C57BL/6J Mice During Aging. — *Investigative ophthalmology & visual science* [mouse] tags=RPE,retina v=v1.0
+- PMID34448806 (2021) Hyperreflective Foci, Optical Coherence Tomography Progression Indicators in Age-Related Macular Degeneration, Include Transdifferentiated Retinal Pigment Epithelium. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID34313720 (2021) Formation of Lipofuscin-Like Autofluorescent Granules in the Retinal Pigment Epithelium Requires Lysosome Dysfunction. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID33599733 (2021) Hypoxia Induces Galectin-1 Expression Via Autoinduction of Placental Growth Factor in Retinal Pigment Epithelium Cells. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID33591357 (2021) Knockdown of Claudin-19 in the Retinal Pigment Epithelium Is Accompanied by Slowed Phagocytosis and Increased Expression of SQSTM1. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID34491262 (2021) Progressive Dysmorphia of Retinal Pigment Epithelium in Age-Related Macular Degeneration Investigated by Fluorescence Lifetime Imaging. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID33792620 (2021) Transcriptome Landscape of Epithelial to Mesenchymal Transition of Human Stem Cell-Derived RPE. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID33377455 (2021) Human Stem Cell-Derived Retinal Pigment Epithelial Cells as a Model for Drug Screening and Pre-Clinical Assays Compared to ARPE-19 Cell Line. — *International journal of stem cells* [human] tags=RPE,retina v=v1.1
+- PMID34638840 (2021) Transplantation of Human Induced Pluripotent Stem Cell-Derived Retinal Pigment Epithelium in a Swine Model of Geographic Atrophy. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID34768747 (2021) Scaffold-Free Retinal Pigment Epithelium Microtissues Exhibit Increased Release of PEDF. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID33572787 (2021) The Role of Oxidative Stress and Autophagy in Blue-Light-Induced Damage to the Retinal Pigment Epithelium in Zebrafish In Vitro and In Vivo. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID33946753 (2021) Suppression of PGC-1α Drives Metabolic Dysfunction in TGFβ2-Induced EMT of Retinal Pigment Epithelial Cells. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID33499245 (2021) Development of 3D Printed Bruch's Membrane-Mimetic Substance for the Maturation of Retinal Pigment Epithelial Cells. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID34281287 (2021) Fibroblast Growth Factor Type 1 Ameliorates High-Glucose-Induced Oxidative Stress and Neuroinflammation in Retinal Pigment Epithelial Cells and a Streptozotocin-Induced Diabetic Rat Model. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID34360950 (2021) AMD-Like Substrate Causes Epithelial Mesenchymal Transition in iPSC-Derived Retinal Pigment Epithelial Cells Wild Type but Not <i>C3</i>-Knockout. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID33572992 (2021) Spermidine Attenuates Oxidative Stress-Induced Apoptosis via Blocking Ca<sup>2+</sup> Overload in Retinal Pigment Epithelial Cells Independently of ROS. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID33925448 (2021) Real-Time Monitoring the Effect of Cytopathic Hypoxia on Retinal Pigment Epithelial Barrier Functionality Using Electric Cell-Substrate Impedance Sensing (ECIS) Biosensor Technology. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID34202702 (2021) Differential Expression of Inflammasome-Related Genes in Induced Pluripotent Stem-Cell-Derived Retinal Pigment Epithelial Cells with or without History of Age-Related Macular Degeneration. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID33572860 (2021) BBS Proteins Affect Ciliogenesis and Are Essential for Hedgehog Signaling, but Not for Formation of iPSC-Derived RPE-65 Expressing RPE-Like Cells. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID33307245 (2021) Transcriptomic Profiling of Human Pluripotent Stem Cell-derived Retinal Pigment Epithelium over Time. — *Genomics, proteomics & bioinformatics* [human] tags=RPE,retina v=v1.0
+- PMID34025440 (2021) Attenuation of High Glucose-Induced Damage in RPE Cells through p38 MAPK Signaling Pathway Inhibition. — *Frontiers in pharmacology* [human] tags=RPE v=v2.0-new
+- PMID34819832 (2021) Suppressor of Cytokine Signaling 2 Regulates Retinal Pigment Epithelium Metabolism by Enhancing Autophagy. — *Frontiers in neuroscience* [mouse] tags=RPE,retina v=v1.1
+- PMID34764853 (2021) Co-grafts of Human Embryonic Stem Cell Derived Retina Organoids and Retinal Pigment Epithelium for Retinal Reconstruction in Immunodeficient Retinal Degenerate Royal College of Surgeons Rats. — *Frontiers in neuroscience* [human] tags=RPE v=v2.0-new
+- PMID33994920 (2021) Mutant PRPF8 Causes Widespread Splicing Changes in Spliceosome Components in Retinitis Pigmentosa Patient iPSC-Derived RPE Cells. — *Frontiers in neuroscience* [human] tags=RPE v=v2.0-new
+- PMID34819935 (2021) Complement Factor H-Related 3 Enhanced Inflammation and Complement Activation in Human RPE Cells. — *Frontiers in immunology* [human] tags=RPE v=v2.0-new
+- PMID34977041 (2021) A Single-Cell Transcriptome Atlas of the Human Retinal Pigment Epithelium. — *Frontiers in cell and developmental biology* [human] tags=RPE,retina v=v1.0
+- PMID34650985 (2021) Human Amniotic Epithelial Stem Cell-Derived Retinal Pigment Epithelium Cells Repair Retinal Degeneration. — *Frontiers in cell and developmental biology* [human] tags=RPE,retina v=v1.1
+- PMID33918210 (2021) Impaired Mitochondrial Function in iPSC-Retinal Pigment Epithelium with the Complement Factor H Polymorphism for Age-Related Macular Degeneration. — *Cells* [human] tags=RPE,retina v=v1.1
+- PMID34685484 (2021) Role of the Transcriptional Repressor Zinc Finger with KRAB and SCAN Domains 3 (ZKSCAN3) in Retinal Pigment Epithelial Cells. — *Cells* [human] tags=RPE v=v2.0-new
+- PMID33477551 (2021) A Splice Variant in <i>SLC16A8</i> Gene Leads to Lactate Transport Deficit in Human iPS Cell-Derived Retinal Pigment Epithelial Cells. — *Cells* [human] tags=RPE v=v2.0-new
+- PMID34831174 (2021) Long-Term Transplant Effects of iPSC-RPE Monolayer in Immunodeficient RCS Rats. — *Cells* [human] tags=RPE v=v2.0-new
+- PMID33664479 (2021) Long noncoding RNA ERLR mediates epithelial-mesenchymal transition of retinal pigment epithelial cells and promotes experimental proliferative vitreoretinopathy. — *Cell death and differentiation* [both] tags=RPE,retina v=v1.1
+- PMID34827622 (2021) Complement Factor H Loss in RPE Cells Causes Retinal Degeneration in a Human RPE-Porcine Retinal Explant Co-Culture Model. — *Biomolecules* [human] tags=RPE,retina v=v1.1
+- PMID33922434 (2021) Glycine-Conjugated Bile Acids Protect RPE Tight Junctions against Oxidative Stress and Inhibit Choroidal Endothelial Cell Angiogenesis In Vitro. — *Biomolecules* [human] tags=RPE,choroid v=v2.0-new
+- PMID34070383 (2021) Erythropoietin Gene Therapy Delays Retinal Degeneration Resulting from Oxidative Stress in the Retinal Pigment Epithelium. — *Antioxidants (Basel, Switzerland)* [mouse] tags=RPE,retina v=v1.0
+- PMID34943121 (2021) Overexpression of CERKL Protects Retinal Pigment Epithelium Mitochondria from Oxidative Stress Effects. — *Antioxidants (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID33498524 (2021) Urban Aerosol Particulate Matter Promotes Necrosis and Autophagy via Reactive Oxygen Species-Mediated Cellular Disorders that are Accompanied by Cell Cycle Arrest in Retinal Pigment Epithelial Cells. — *Antioxidants (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID34919533 (2021) Chronobiological activity of cysteinyl leukotriene receptor 1 during basal and induced autophagy in the ARPE-19 retinal pigment epithelial cell line. — *Aging* [human] tags=RPE v=v2.0-new
+- PMID32934896 (2020) Endogenous or Exogenous Retinal Pigment Epithelial Cells: A Comparison of Two Experimental Animal Models of Proliferative Vitreoretinopathy. — *Translational vision science & technology* [human] tags=RPE,retina v=v1.1
+- PMID32319201 (2020) Preclinical safety studies of human embryonic stem cell-derived retinal pigment epithelial cells for the treatment of age-related macular degeneration. — *Stem cells translational medicine* [human] tags=RPE,retina v=v1.0
+- PMID32815311 (2020) Complement modulation reverses pathology in Y402H-retinal pigment epithelium cell model of age-related macular degeneration by restoring lysosomal function. — *Stem cells translational medicine* [human] tags=RPE v=v2.0-new
+- PMID32967731 (2020) Embryonic stem cell microenvironment enhances proliferation of human retinal pigment epithelium cells by activating the PI3K signaling pathway. — *Stem cell research & therapy* [human] tags=RPE v=v2.0-new
+- PMID33239074 (2020) Improving cell survival and engraftment in vivo via layer-by-layer nanocoating of hESC-derived RPE cells. — *Stem cell research & therapy* [human] tags=RPE v=v2.0-new
+- PMID32014053 (2020) Rapid generation of purified human RPE from pluripotent stem cells using 2D cultures and lipoprotein uptake-based sorting. — *Stem cell research & therapy* [human] tags=RPE v=v2.0-new
+- PMID33242397 (2020) A Human Retinal Pigment Epithelium-Based Screening Platform Reveals Inducers of Photoreceptor Outer Segments Phagocytosis. — *Stem cell reports* [human] tags=RPE v=v2.0-new
+- PMID32197113 (2020) Generation of Retinal Pigment Epithelial Cells Derived from Human Embryonic Stem Cells Lacking Human Leukocyte Antigen Class I and II. — *Stem cell reports* [human] tags=RPE v=v2.0-new
+- PMID32160519 (2020) MERTK-Dependent Ensheathment of Photoreceptor Outer Segments by Human Pluripotent Stem Cell-Derived Retinal Pigment Epithelium. — *Stem cell reports* [human] tags=RPE v=v2.0-new
+- PMID32243845 (2020) Epigenomic and Transcriptomic Changes During Human RPE EMT in a Stem Cell Model of Epiretinal Membrane Pathogenesis and Prevention by Nicotinamide. — *Stem cell reports* [human] tags=RPE v=v2.0-new
+- PMID32963317 (2020) Regulation of Ras homolog family member G by microRNA-124 regulates proliferation and migration of human retinal pigment epithelial cells. — *Scientific reports* [human] tags=RPE,retina v=v1.1
+- PMID33077798 (2020) Cysteinyl leukotriene receptor 1 modulates autophagic activity in retinal pigment epithelial cells. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID31988387 (2020) Annexin A8 regulates Wnt signaling to maintain the phenotypic plasticity of retinal pigment epithelial cells. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID32366945 (2020) Invasion of Human Retinal Pigment Epithelial Cells by Porphyromonas gingivalis leading to Vacuolar/Cytosolic localization and Autophagy dysfunction In-Vitro. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID32483256 (2020) Lentiviral mediated RPE65 gene transfer in healthy hiPSCs-derived retinal pigment epithelial cells markedly increased RPE65 mRNA, but modestly protein level. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID32587311 (2020) Loss of Complement Factor H impairs antioxidant capacity and energy metabolism of human RPE cells. — *Scientific reports* [human] tags=RPE v=v2.0-new
+- PMID32826201 (2020) Oxidative stress in the retina and retinal pigment epithelium (RPE): Role of aging, and DJ-1. — *Redox biology* [mouse] tags=RPE,retina v=v1.1
+- PMID31978676 (2020) Effect of ER stress on sphingolipid levels and apoptotic pathways in retinal pigment epithelial cells. — *Redox biology* [human] tags=RPE v=v2.0-new
+- PMID33036197 (2020) A Multi-Omics Approach Identifies Key Regulatory Pathways Induced by Long-Term Zinc Supplementation in Human Primary Retinal Pigment Epithelium. — *Nutrients* [human] tags=RPE v=v2.0-new
+- PMID32231223 (2020) Identification of cell surface markers and establishment of monolayer differentiation to retinal pigment epithelial cells. — *Nature communications* [human] tags=RPE,retina v=v1.0
+- PMID32987810 (2020) Sericin-Induced Melanogenesis in Cultured Retinal Pigment Epithelial Cells Is Associated with Elevated Levels of Hydrogen Peroxide and Inflammatory Proteins. — *Molecules (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID32044724 (2020) LINC00167 Regulates RPE Differentiation by Targeting the miR-203a-3p/SOCS3 Axis. — *Molecular therapy. Nucleic acids* [human] tags=RPE v=v2.0-new
+- PMID32423093 (2020) Multidrug-Resistant <i>Pseudomonas aeruginosa</i> Evokes Differential Inflammatory Responses in Human Microglial and Retinal Pigment Epithelial Cells. — *Microorganisms* [human] tags=RPE v=v2.0-new
+- PMID32751632 (2020) Nanoscopic Approach to Study the Early Stages of Epithelial to Mesenchymal Transition (EMT) of Human Retinal Pigment Epithelial (RPE) Cells In Vitro. — *Life (Basel, Switzerland)* [human] tags=RPE,retina v=v1.1
+- PMID33047885 (2020) Exosomes mediate an epithelial-mesenchymal transition cascade in retinal pigment epithelial cells: Implications for proliferative vitreoretinopathy. — *Journal of cellular and molecular medicine* [human] tags=RPE,retina v=v1.0
+- PMID32022439 (2020) KRT8 phosphorylation regulates the epithelial-mesenchymal transition in retinal pigment epithelial cells through autophagy modulation. — *Journal of cellular and molecular medicine* [human] tags=RPE v=v2.0-new
+- PMID32638535 (2020) MeCP2-421-mediated RPE epithelial-mesenchymal transition and its relevance to the pathogenesis of proliferative vitreoretinopathy. — *Journal of cellular and molecular medicine* [human] tags=RPE v=v2.0-new
+- PMID33151282 (2020) Partially Differentiated Neuroretinal Cells Promote Maturation of the Retinal Pigment Epithelium. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID32031576 (2020) Vitamin-D3 (α-1, 25(OH) 2D3) Protects Retinal Pigment Epithelium From Hyperoxic Insults. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID32421148 (2020) Small Molecules Restore Bestrophin 1 Expression and Function of Both Dominant and Recessive Bestrophinopathies in Patient-Derived Retinal Pigment Epithelium. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID32437550 (2020) KCNJ13 Gene Deletion Impairs Cell Alignment and Phagocytosis in Retinal Pigment Epithelium Derived from Human-Induced Pluripotent Stem Cells. — *Investigative ophthalmology & visual science* [human] tags=RPE v=v2.0-new
+- PMID33027920 (2020) Involvement of the Retinal Pigment Epithelium in the Development of Retinal Lattice Degeneration. — *International journal of molecular sciences* [human] tags=RPE,retina v=v1.1
+- PMID32629957 (2020) The Effect of <i>Lycium barbarum</i> Polysaccharides on Pyroptosis-Associated Amyloid β<sub>1-40</sub> Oligomers-Induced Adult Retinal Pigment Epithelium 19 Cell Damage. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID32471212 (2020) Isolation of Human Small Extracellular Vesicles and Tracking of their Uptake by Retinal Pigment Epithelial Cells In Vitro. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID32344885 (2020) A Comprehensive Proteomic and Phosphoproteomic Analysis of Retinal Pigment Epithelium Reveals Multiple Pathway Alterations in Response to the Inflammatory Stimuli. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID32899567 (2020) Retinal Pigment Epithelial Cells Derived from Induced Pluripotent Stem (iPS) Cells Suppress or Activate T Cells via Costimulatory Signals. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID32932802 (2020) An In-Vitro Cell Model of Intracellular Protein Aggregation Provides Insights into RPE Stress Associated with Retinopathy. — *International journal of molecular sciences* [human] tags=RPE v=v2.0-new
+- PMID32582966 (2020) Carbon monoxide‑releasing molecules protect against blue light exposure and inflammation in retinal pigment epithelial cells. — *International journal of molecular medicine* [human] tags=RPE v=v2.0-new
+- PMID32318066 (2020) Retinal Distribution and Extracellular Activity of Granzyme B: A Serine Protease That Degrades Retinal Pigment Epithelial Tight Junctions and Extracellular Matrix Proteins. — *Frontiers in immunology* [human] tags=RPE,retina v=v1.1
+- PMID32104303 (2020) Gremlin mediates the TGF-β-induced induction of profibrogenic genes in human retinal pigment epithelial cells. — *Experimental and therapeutic medicine* [human] tags=RPE v=v2.0-new
+- PMID31932580 (2020) Inhibition of thyroid hormone signaling protects retinal pigment epithelium and photoreceptors from cell death in a mouse model of age-related macular degeneration. — *Cell death & disease* [both] tags=RPE,retina v=v1.1
+- PMID33255669 (2020) Protective Effects of Fucoxanthin on High Glucose- and 4-Hydroxynonenal (4-HNE)-Induced Injury in Human Retinal Pigment Epithelial Cells. — *Antioxidants (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID32859013 (2020) Properdin Modulates Complement Component Production in Stressed Human Primary Retinal Pigment Epithelium Cells. — *Antioxidants (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID33114498 (2020) The Effect of Antioxidants on Photoreactivity and Phototoxic Potential of RPE Melanolipofuscin Granules from Human Donors of Different Age. — *Antioxidants (Basel, Switzerland)* [human] tags=RPE v=v2.0-new
+- PMID33313247 (2020) Human retinal pigment epithelial cells are protected against hypoxia by BNIP3. — *Annals of translational medicine* [human] tags=RPE v=v2.0-new
+
+---
+<!-- KB1V2-WIKILINKS v1.1 -->
+## 判读层链接 (判读层链接版本: KB1v2 (2026-09-23, t_16c3e020))
+
+- **组成基线**: [kb/baselines/RPE.md](/mnt/D/EyeKB/kb/baselines/RPE.md) — 供者级条件参考分布 (锚定 registry 标准集或 t_6f5cc731 映射)
+- **RAG reason-tag**: 每条 PMID 的入库原因/论断关系/证据条件见 `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (键=pmid; 字段 inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` 命中自动联表带出
+- **概念 ID 映射**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
+- 红线: 本页与全部链接内容仅证据引用与 QC 旗, 禁入打分 (ANNOTATION_PROTOCOL_v1.1.md §0)

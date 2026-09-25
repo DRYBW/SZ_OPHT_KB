@@ -1,0 +1,227 @@
+{
+ "schema": "eyekb-baseline-development/1.0",
+ "entry_id": "baseline_human_retina__fetal_developing__kb3",
+ "tissue": "retina",
+ "species": "human",
+ "title": "组成参考 (发育期): 人胎视网膜 fetal_developing (作者/portal 标签聚合, KB3 独立条)",
+ "status": "development_annotated_aggregate",
+ "generated": "2026-09-24",
+ "generator": "kb3_build_dev_entries.py (KB3 t_5425a7ca) ← kb3_fetal_agg.py 实测素材",
+ "card": "t_5425a7ca",
+ "development_stage": "fetal_developing",
+ "development_stage_prohibition": "KB3 禁令 (PI 红线 2026-09-23): 发育期数据不得进成人基线统计池, 反之亦然 —— 同一组织胎儿≠成人, adult/fetal 不互为参照。",
+ "stage_axis": {
+  "field": "development_stage",
+  "levels": [
+   "adult",
+   "fetal_developing",
+   "postnatal_neonatal",
+   "mixed_not_separable",
+   "unknown"
+  ],
+  "note": "KB3 枚举 (任务书 W1)。本条=发育期条, 与 adult 主档 (retina.json, organism_stage=adult) 身份永久分离; 引用本条数字禁止回填任何 adult 条, 反之亦然。"
+ },
+ "nature": "发育期**组成参考**条目: 数字=数据集作者/CELLxGENE portal 已发布细胞标签的**直接计数聚合**, 非现役成人引擎推断 (引擎对 fetal 必须弃权, E4/E5 OOD_严格 冻结件); 供者级 median/IQR 口径未建 (fetal 参考管线任务未启动, KB2c 裁定 Q5), 本条为标签分布级参考。",
+ "usage_scope": "胎/发育期视网膜材料的身份参考 + OOD 行为对照锚 (E5 同源数据); 不得当组成达标线; 不得与 adult 主档互为参照 (PI 红线); 禁入一切打分 (Astra T2 全域继承)。",
+ "evidence_grades": {
+  "A": "portal/作者发布标签的直接计数 (文件路径+聚合脚本可溯源)"
+ },
+ "anchors": [
+  {
+   "acc": "GSE268630",
+   "role": "primary_portal",
+   "tier": "fetal",
+   "file": "/mnt/D/OcularKB/data/GSE268630/gse268630_cellxgene.h5ad",
+   "cells": 226506,
+   "donors": 14,
+   "stage_range": "11w2d–23w4d post-fertilization (portal development_stage 14 档, 全档列表见 plans/kb3_evidence/fetal_agg_20260924.json)",
+   "tissue_note": "macula lutea 119,111 + peripheral 100,532 + retina(未标部位) 6,863",
+   "provenance": "CELLxGENE portal 注释 (author_cell_type/majorclass 列)"
+  },
+  {
+   "acc": "GSE138002",
+   "role": "secondary_author_labels",
+   "tier": "fetal+postnatal 混面已拆",
+   "file": "/mnt/D/OcularKB/data/GSE138002/GSE138002_Final_barcodes.csv.gz",
+   "cells_final_total": 118555,
+   "layer_split": {
+    "fetal_Hgw": 88013,
+    "postnatal_Hpnd": 7382,
+    "adult_Adult": 11618,
+    "organoid_Day": 11542,
+    "other": 0
+   },
+   "fetal_layer_cells": 88013,
+   "fetal_layer_samples": [
+    "Hgw11",
+    "Hgw12",
+    "Hgw13",
+    "Hgw14",
+    "Hgw15",
+    "Hgw16",
+    "Hgw17",
+    "Hgw18",
+    "Hgw19_rep1",
+    "Hgw19_rep2",
+    "Hgw20_rep1",
+    "Hgw20_rep2",
+    "Hgw22",
+    "Hgw24_rep1",
+    "Hgw24_rep2",
+    "Hgw27",
+    "Hgw9"
+   ],
+   "stage_range_note": "任务书写 GW9-19; 实测 portal 终版含 Hgw9–Hgw27 + Hpnd8 + Adult + 类器官 Days —— 混内容按样本面前缀硬拆, 非 fetal 面不入本条主体",
+   "provenance": "作者发布标签列 umap2_CellType (GEO suppl Final_barcodes)"
+  },
+  {
+   "acc": "GSE234963",
+   "role": "data_card_only",
+   "tier": "fetal_RPC",
+   "cells": "176,849 (24 h5ad, obs 无标签列 — 实测 iloc 全空)",
+   "registry": "OA-D009 Human fetal retinal progenitor, ~7.5-21 PCW, 24 samples/13 time points (SRA PRJNA983820)",
+   "files": "/mnt/D/OcularKB/data/backlog_h5ad/GSE234963_*.h5ad + /mnt/D/OcularKB/data/GSE234963/GSE234963_RAW.tar",
+   "composition": null,
+   "note": "obs 无标签列 (实测 24×h5ad obs 全空) + GEO 无独立标签文件 (registry 复核一致) → 只立数据卡, 组成待 fetal 参考管线/作者标签获取后回填; 无据不建 (KB3 纪律3)。"
+  }
+ ],
+ "portal_majorclass_reference": {
+  "cells": 226506,
+  "donors": 14,
+  "pct": {
+   "PRPC": 23.17,
+   "RGC": 18.54,
+   "Rod": 16.85,
+   "AC": 11.65,
+   "NRPC": 9.31,
+   "BC": 9.27,
+   "HC": 4.21,
+   "Cone": 4.12,
+   "MG": 2.89
+  },
+  "hist": {
+   "PRPC": 52479,
+   "RGC": 41984,
+   "Rod": 38167,
+   "AC": 26384,
+   "NRPC": 21087,
+   "BC": 20996,
+   "HC": 9532,
+   "Cone": 9324,
+   "MG": 6553
+  },
+  "vocabulary_note": "PRPC=photoreceptor progenitor, NRPC=neural retina progenitor —— 发育专用类, **无成人 10 类对应物**, 禁映射进 adult 词表 (本体隔离)。"
+ },
+ "author_labels_fetal_layer(GSE138002)": {
+  "cells": 88013,
+  "samples": [
+   "Hgw11",
+   "Hgw12",
+   "Hgw13",
+   "Hgw14",
+   "Hgw15",
+   "Hgw16",
+   "Hgw17",
+   "Hgw18",
+   "Hgw19_rep1",
+   "Hgw19_rep2",
+   "Hgw20_rep1",
+   "Hgw20_rep2",
+   "Hgw22",
+   "Hgw24_rep1",
+   "Hgw24_rep2",
+   "Hgw27",
+   "Hgw9"
+  ],
+  "pct_by_celltype": {
+   "RPCs": 34.49,
+   "Rods": 14.65,
+   "Amacrine Cells": 12.45,
+   "Retinal Ganglion Cells": 10.18,
+   "Horizontal Cells": 7.39,
+   "Bipolar Cells": 6.8,
+   "Cones": 5.05,
+   "Neurogenic Cells": 3.77,
+   "BC/Photo_Precurs": 2.86,
+   "AC/HC_Precurs": 1.97,
+   "Muller Glia": 0.39
+  },
+  "vocabulary_note": "RPCs/Neurogenic Cells/BC.Photo_Precurs/AC.HC_Precurs 等前体词表同上 —— 禁成人化翻译。"
+ },
+ "postnatal_neonatal_layer(GSE138002)": {
+  "cells": 7382,
+  "samples": [
+   "Hpnd8_rep1",
+   "Hpnd8_rep2"
+  ],
+  "pct_by_celltype": {
+   "Rods": 66.47,
+   "Bipolar Cells": 30.47,
+   "Muller Glia": 0.83,
+   "Horizontal Cells": 0.79,
+   "Amacrine Cells": 0.62,
+   "RPCs": 0.56,
+   "Cones": 0.27
+  },
+  "development_stage": "postnatal_neonatal",
+  "note": "单列分层: 新生≠胎≠成人 (KB3 枚举第三值在此有据); 与胎层不互并。"
+ },
+ "excluded_layers": {
+  "adult_Adult": {
+   "cells": 11618,
+   "disposition": "禁并入本发育条 (adult 对照材料归 adult 侧口径, 但 11.6K 细胞 非 D001 体系 — 不单建条目, 登记隔离)"
+  },
+  "organoid_Day": {
+   "cells": 11542,
+   "samples": [
+    "24_Day",
+    "30_Day",
+    "42_Day",
+    "59_Day"
+   ],
+   "disposition": "organoid → unknown+旗标 (KB2c 裁定 Q1: 类器官≠胎儿组织≠成人); 只列不并入任何发育/成人条"
+  },
+  "other": {
+   "cells": 0,
+   "disposition": "非发育命名样本面 → 隔离"
+  }
+ },
+ "cross_source_note": "两锚点词表不同 (portal majorclass 9 类 vs 作者 12+ 类) —— 本条并列展示, 不合成单一分布 (Astra T6 不合成口径的发育轴继承)。",
+ "flags": {
+  "engine_applicability": "现役判读引擎=成人域, 对本条材料必须弃权; 本条数字不得被用作引擎对 fetal 输出'对错'的评分基准 (E5 仅行为描述)。",
+  "not_donor_level": "供者级区间口径未建 (fetal 管线另批), 引用时须带本旗。"
+ },
+ "caveats": [
+  "标签分布=发表注释的转录组面; GSE268630 同时含 multiome ATAC 面 GSM 矩阵 (未并入本条)。",
+  "GSE138002 'Final' 为作者清洗后集合 (118,555/全 138,672), All_barcodes 面无标签列, 聚合以 Final 为准。",
+  "本条=发育期**独立文件**; KB2c 概念条 fetal_development_transitions 仍是入口占位, 二者并存: 概念条答'有哪些候选', 本条答'胎视网膜标签分布实测是什么'。"
+ ],
+ "sources": [
+  {
+   "sid": "S1",
+   "kind": "portal_dataset",
+   "acc": "GSE268630",
+   "path": "/mnt/D/OcularKB/data/GSE268630/gse268630_cellxgene.h5ad"
+  },
+  {
+   "sid": "S2",
+   "kind": "geo_supplementary",
+   "acc": "GSE138002",
+   "path": "/mnt/D/OcularKB/data/GSE138002/GSE138002_Final_barcodes.csv.gz"
+  },
+  {
+   "sid": "S3",
+   "kind": "registry",
+   "row": "OA-D009/OA-D010",
+   "path": "/mnt/D/OcularKB/registry/ocular_public_datasets_verified_v1.csv"
+  },
+  {
+   "sid": "S4",
+   "kind": "eval_anchor",
+   "note": "E5=Q8_GSE268630 (评估侧同数据, 行为隔离在先, 本条为其 KB 侧配套)"
+  }
+ ],
+ "identity_signature": {
+  "baseline_human_retina__fetal_developing__kb3": "sha256:4c5056b77d1c5e59c7ed5a5cb204f29b14f06eb22078a5e366c120201349d846"
+ }
+}

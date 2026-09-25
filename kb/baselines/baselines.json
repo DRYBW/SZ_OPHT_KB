@@ -1,0 +1,226 @@
+{
+ "schema": "eyekb-baselines-index/1.1",
+ "generated": "2026-09-23",
+ "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c 发育轴单列 t_be336eee)",
+ "card": "t_be336eee",
+ "supersedes": "index 1.0 (card t_16c3e020)",
+ "note": "眼科通用架构 (PI 2026-09-23 口径): 组成基线按组织锚定 registry 已注释标准集; 旧 kb/priors/composition/ 为 v1 口径存档, MCP get_tissue_composition 优先读本目录。KB2c (t_be336eee) 发育轴单列: 顶层轴 organism_stage 4 级 {fetal, adult, developing, unknown}; adult 主档=donor_age>=18y 供者单元 (裁定 Q2, 阈值改动须过裁定); v1.0 混口径降为 adult_pool 对照档, 两档 entry_id/身份签名分离; unknown 必须披露行禁静默归 adult; fetal/developing 组成条目见 fetal_development_transitions。",
+ "stage_axis": {
+  "field": "organism_stage",
+  "levels": [
+   "fetal",
+   "adult",
+   "developing",
+   "unknown"
+  ],
+  "adult_rule": "UBERON development_stage 数字化年龄 >= 18y 判 adult; 显式成年术语 (late/prime/middle/mature/human adult stage, 年代段>=3rd) 亦判 adult 并记 rule; 阈值改动须过裁定 (KB2c Q2, 2026-09-23)",
+  "developing_rule": "newborn/infant/postnatal stage 与 <18y 数字年龄/年龄段 → developing (KB2c Q2)",
+  "fetal_rule": "fetal/embryonic/gestation/Carnegie 术语 → fetal; 永不并入 adult 主档 (红线1)",
+  "unknown_rule": "无年龄列/未映射术语/organoid/年龄段跨阈值 → unknown, 必须披露行, 禁静默归 adult (红线2)",
+  "aging_note": ">=60 老年分层不在本轴 — aging 是正交独立轴, 将来单独立条目 (裁定 Q2)",
+  "source_col": "obs/development_stage (UBERON 原值逐行保留; 汇总见 stage_disclosure, 排除清单见 excluded_nonadult_units)",
+  "tier_ids": {
+   "adult_only": "baseline_human_<tissue>__adult_only__kb2c",
+   "adult_pool": "baseline_human_<tissue>__adult_pool__v1.0"
+  }
+ },
+ "entries": [
+  {
+   "tissue": "retina",
+   "file": "retina.md",
+   "status": "filled_donor_level",
+   "organism_stage": "adult",
+   "development_stage": "adult",
+   "anchor": "OA-D001 (HCA-HRCA-v1.0)",
+   "n_donors": "主档 adult-only 97 donors / 113 供者单元; 对照档 adult_pool 104 donors / 120 单元 (含 7 非 adult 供者 → 逐行见 excluded_nonadult_units, KB2c 裁定 Q2 阈值>=18y)",
+   "tiers": {
+    "adult_only": "baseline_human_retina__adult_only__kb2c",
+    "adult_pool": "baseline_human_retina__adult_pool__v1.0"
+   },
+   "identity_signature": {
+    "baseline_human_retina__adult_only__kb2c": "sha256:5623f7883d668070be887e65dce090e579ae090120eebe9b4a0776f31f3fab78",
+    "baseline_human_retina__adult_pool__v1.0": "sha256:1ee942d771080e6a039f7dda7c03a405ae584161815b737e1b69244a677e7964"
+   }
+  },
+  {
+   "tissue": "ocular_surface",
+   "file": "ocular_surface.md",
+   "status": "filled_donor_level",
+   "organism_stage": "adult",
+   "development_stage": "adult",
+   "anchor": "OA-D002 (CELLxGENE-OcularSurface)",
+   "n_donors": "主档 adult-only 41 donors / 67 供者单元; 对照档 adult_pool 50 donors / 84 单元 (含 9 非 adult 供者如 newborn 0-28d → 逐行见 excluded_nonadult_units)",
+   "tiers": {
+    "adult_only": "baseline_human_ocular_surface__adult_only__kb2c",
+    "adult_pool": "baseline_human_ocular_surface__adult_pool__v1.0"
+   },
+   "identity_signature": {
+    "baseline_human_ocular_surface__adult_only__kb2c": "sha256:7914e7e8ffc01a7ecbffb83921bfe1c5b487e36fbdc759d297b7c4a257e48417",
+    "baseline_human_ocular_surface__adult_pool__v1.0": "sha256:d82e277da026e6f581a19c4d1d086c512c6455653e7477c314f74c29b8b0a5ba"
+   }
+  },
+  {
+   "tissue": "optic_nerve",
+   "file": "optic_nerve.md",
+   "status": "filled_donor_level",
+   "organism_stage": "adult",
+   "development_stage": "adult",
+   "anchor": "OA-D003 (CELLxGENE-OpticNerve)",
+   "n_donors": "主档 adult-only 74 donors / 98 供者单元; 对照档 adult_pool 83 donors / 107 单元 (含 9 非 adult 供者含 newborn 15,177 核 → 逐行见 excluded_nonadult_units)",
+   "tiers": {
+    "adult_only": "baseline_human_optic_nerve__adult_only__kb2c",
+    "adult_pool": "baseline_human_optic_nerve__adult_pool__v1.0"
+   },
+   "identity_signature": {
+    "baseline_human_optic_nerve__adult_only__kb2c": "sha256:04ed21d9e901a33d18bc424e039086fc35c699e1efafa7955b7dfd067ed48169",
+    "baseline_human_optic_nerve__adult_pool__v1.0": "sha256:ae33cb20e12c6b8a3e1e87af05fb9d76b821b046796ff17dec0ff2e9bd06eac9"
+   }
+  },
+  {
+   "tissue": "trabecular_meshwork",
+   "file": "trabecular_meshwork.md",
+   "status": "filled_donor_level",
+   "organism_stage": "adult",
+   "development_stage": "adult",
+   "anchor": "OA-D004=OA-D016 (GSE199013/HASA, t_6f5cc731 盘点 TM/CB 主力底座; 本地件核数与 HASA 条目 1,102,250 精确吻合)",
+   "n_donors": "主档 adult-only 25 donors / 25 供者单元; 对照档 adult_pool 25 donors / 25 单元 (含 0 非 adult 供者 → 逐行见 excluded_nonadult_units)",
+   "tiers": {
+    "adult_only": "baseline_human_trabecular_meshwork__adult_only__kb2c",
+    "adult_pool": "baseline_human_trabecular_meshwork__adult_pool__v1.0"
+   },
+   "identity_signature": {
+    "baseline_human_trabecular_meshwork__adult_only__kb2c": "sha256:c85aa43abeaba42cc85c150647dc348476f44914bc464dbbc59f823c2cab7f0b",
+    "baseline_human_trabecular_meshwork__adult_pool__v1.0": "sha256:aefa46e647d12752a32b12205c81cd842759ef956da8f622b10fad46d9ef9556"
+   }
+  },
+  {
+   "tissue": "ciliary_body",
+   "file": "ciliary_body.md",
+   "status": "filled_donor_level",
+   "organism_stage": "adult",
+   "development_stage": "adult",
+   "anchor": "OA-D004=OA-D016 (GSE199013/HASA, t_6f5cc731 盘点 TM/CB 主力底座; 本地件核数与 HASA 条目 1,102,250 精确吻合)",
+   "n_donors": "主档 adult-only 55 donors / 55 供者单元; 对照档 adult_pool 59 donors / 59 单元 (含 4 非 adult 供者 → 逐行见 excluded_nonadult_units)",
+   "tiers": {
+    "adult_only": "baseline_human_ciliary_body__adult_only__kb2c",
+    "adult_pool": "baseline_human_ciliary_body__adult_pool__v1.0"
+   },
+   "identity_signature": {
+    "baseline_human_ciliary_body__adult_only__kb2c": "sha256:cae64435669886a46bca669fe454ee0f5a63e531bcde0dfb349e40e9d18dcb31",
+    "baseline_human_ciliary_body__adult_pool__v1.0": "sha256:bc6209994212835d719554490832c6100c0ab12d793672f3196029a9dcf16bc1"
+   }
+  },
+  {
+   "tissue": "RPE",
+   "file": "RPE.md",
+   "status": "filled_donor_level",
+   "organism_stage": "unknown",
+   "development_stage": "unknown",
+   "anchor": "mapping_from_t_6f5cc731 GSE158629 行 (未单列 OA-D 号)",
+   "n_donors": "4 (donor1=10x, donor2-4=ICELL8 —— 平台与供者完全捆绑, tech 分层=描述性) —— KB2c: cells_meta 无年龄列, 本条 organism_stage=unknown (GEO 文字记 'four adult human donor eyes' 为 B 级文献描述, 不可逐行核验, 禁静默归 adult)",
+   "tiers": {
+    "unknown_descriptive": "baseline_human_RPE__stage_unknown__kb2c"
+   },
+   "identity_signature": {
+    "baseline_human_RPE__stage_unknown__kb2c": "sha256:4b72841baaac133e80d4324a3e54b5a463a053f08856e737e8de5939f03c5126"
+   }
+  },
+  {
+   "tissue": "choroid",
+   "file": "choroid.md",
+   "status": "skeleton_mapping_backfilled",
+   "organism_stage": "unknown",
+   "development_stage": "unknown",
+   "anchor": "—",
+   "n_donors": null,
+   "tiers": {
+    "adult_only": "baseline_human_choroid__adult_only__kb2c",
+    "adult_pool": "baseline_human_choroid__adult_pool__v1.0"
+   },
+   "identity_signature": {
+    "baseline_human_choroid__adult_only__kb2c": "sha256:ce25ab70feda3a6aee6532ab968190254f0d6a7a06740b2f1810d3cd8fbf449f"
+   }
+  },
+  {
+   "tissue": "iris",
+   "file": "iris.md",
+   "status": "skeleton_mapping_backfilled",
+   "organism_stage": "unknown",
+   "development_stage": "unknown",
+   "anchor": "—",
+   "n_donors": null,
+   "tiers": {
+    "adult_only": "baseline_human_iris__adult_only__kb2c",
+    "adult_pool": "baseline_human_iris__adult_pool__v1.0"
+   },
+   "identity_signature": {
+    "baseline_human_iris__adult_only__kb2c": "sha256:c0c482712c6693df96840cff6fc1ce695f795dd5a030ffe5cf983f09047eaa81"
+   }
+  },
+  {
+   "tissue": "lens",
+   "file": "lens.md",
+   "status": "skeleton_mapping_backfilled",
+   "organism_stage": "unknown",
+   "development_stage": "unknown",
+   "anchor": "—",
+   "n_donors": null,
+   "tiers": {
+    "adult_only": "baseline_human_lens__adult_only__kb2c",
+    "adult_pool": "baseline_human_lens__adult_pool__v1.0"
+   },
+   "identity_signature": {
+    "baseline_human_lens__adult_only__kb2c": "sha256:c9b0105ed92482bbdfbae7b5038180a9c5ace8c6fcda38984ddb8a36e004613d"
+   }
+  },
+  {
+   "tissue": "conjunctiva",
+   "file": "conjunctiva.md",
+   "status": "skeleton_mapping_backfilled",
+   "organism_stage": "unknown",
+   "development_stage": "unknown",
+   "anchor": "—",
+   "n_donors": null,
+   "tiers": {
+    "adult_only": "baseline_human_conjunctiva__adult_only__kb2c",
+    "adult_pool": "baseline_human_conjunctiva__adult_pool__v1.0"
+   },
+   "identity_signature": {
+    "baseline_human_conjunctiva__adult_only__kb2c": "sha256:dcccf0756583f985c20e22350059788d7573c5ec0cfdaf448b18d5408338ddf2"
+   }
+  },
+  {
+   "tissue": "sclera",
+   "file": "sclera.md",
+   "status": "skeleton_mapping_backfilled",
+   "organism_stage": "unknown",
+   "development_stage": "unknown",
+   "anchor": "—",
+   "n_donors": null,
+   "tiers": {
+    "adult_only": "baseline_human_sclera__adult_only__kb2c",
+    "adult_pool": "baseline_human_sclera__adult_pool__v1.0"
+   },
+   "identity_signature": {
+    "baseline_human_sclera__adult_only__kb2c": "sha256:37cf9b3a551b0f53e7ab7174589d284b12bee68789aba7313efc2ad5d30419b3"
+   }
+  }
+ ],
+ "kb3_note": "KB3 发育轴全量单列: 每条基线增 development_stage 必填字段 (枚举 adult/fetal_developing/postnatal_neonatal/mixed_not_separable/unknown); 发育期条目独立文件 (schema eyekb-baseline-development/1.0, MCP 成人查询不可见), 登记于 development_entries; 参考分布段禁令已入档。",
+ "development_entries": [
+  {
+   "entry_id": "baseline_human_retina__fetal_developing__kb3",
+   "file": "retina__fetal_developing.md",
+   "tissue": "retina",
+   "development_stage": "fetal_developing",
+   "anchors": [
+    "GSE268630",
+    "GSE138002",
+    "GSE234963"
+   ],
+   "status": "development_annotated_aggregate",
+   "schema": "eyekb-baseline-development/1.0",
+   "note": "发育期独立条 (MCP 成人查询不可见; 概念条并存)"
+  }
+ ]
+}

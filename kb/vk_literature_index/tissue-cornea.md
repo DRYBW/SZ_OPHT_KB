@@ -1,0 +1,229 @@
+---
+title: 文献索引: cornea
+created: 2026-09-23
+updated: 2026-09-23
+type: query
+tags: [literature, rag, index, cornea]
+sources: [literature_db v2.0_2026-09]
+confidence: high
+---
+
+# 文献: cornea (203 篇, 多标签口径)
+
+> RAG v2.0 中 tissue_labels 含 cornea 的论文清单（含与其他组织共标的论文），按年份倒序。
+> 溯源用 PMID 查询 RAG API: `stage3_retrieve.py --tissue cornea --db-dir literature_db/v2.0_2026-09 --cell-type <CT>`
+> 定位 (Claude5 冻结): 仅人机交互辅助引用, 不入打分。
+
+## 论文列表
+- PMID42620929 (2027) Synthetic β-amino acid polymer promoting keratocyte adhesion and corneal regeneration. — *Bioactive materials* [human] tags=cornea v=v2.0-new
+- PMID41865000 (2026) HC-HA/PTX3 from amniotic membrane reprograms human corneal fibroblasts to neural crest progenitors by switching from canonical to noncanonical TGFβ signaling. — *Stem cell research & therapy* [human] tags=cornea v=v2.0-new
+- PMID41708739 (2026) Exploring the impact of human pluripotent stem cell heterogeneity on corneal limbal stem cell differentiation outcomes. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID42310124 (2026) Toward clinically relevant automated corneal biomanufacturing with human-derived FBS alternatives. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID41912634 (2026) Gene expression and machine learning techniques uncover corneal biomarkers associated with oxidative stress in the myopia progression. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID42115358 (2026) Key donor corneal factors governing successful expansion of human corneal endothelial cells. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID42069863 (2026) Structure-based virtual screening identifies VX-809 as a candidate dual-pathway modulator in fuchs endothelial corneal dystrophy. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID41888247 (2026) Imaging improvements reveal guttae development and posterior fibrillar layer formation in fuchs endothelial corneal dystrophy. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID41580559 (2026) Evaluation of cytotoxicity, wound healing, and anti-inflammatory effects of netarsudil on human corneal epithelial cells. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID41535560 (2026) Evaluation of dECM hydrogel-NAP on 3D organotypic human corneal epithelium in diabetic keratopathy model. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID41703084 (2026) The effect of macromolecular crowders as a supplement to serum free media on human corneal stromal cells proliferation and marker expression. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID41362835 (2026) Decellularized corneal-based 3D scaffolds: methods decellularization, characterization, mechanical properties, and species source. — *Regenerative therapy* [human] tags=cornea v=v2.0-new
+- PMID42217275 (2026) Iron overload triggers pathological remodeling of corneal stroma through ferroptosis and senescence-associated secretory phenotype in keratoconus. — *Redox biology* [human] tags=cornea v=v2.0-new
+- PMID41931904 (2026) Metabolic and redox adaptations of the corneal endothelium: From metabolic plasticity to therapeutic opportunities. — *Redox biology* [human] tags=cornea v=v2.0-new
+- PMID41832165 (2026) Seeing through collagen: integrative pro-regenerative corneal implants for clearer future. — *NPJ Regenerative medicine* [human] tags=cornea v=v2.0-new
+- PMID41930340 (2026) High-Purity Functional Corneal Endothelial Cells From Human Induced Pluripotent Stem Cells via a Novel Wash-Out Method. — *MedComm* [human] tags=cornea v=v2.0-new
+- PMID41923125 (2026) Functionalized metal-organic framework-based photosensitive hydrogel eye drops for inhibition of corneal neovascularization and promotion of epithelial repair. — *Journal of nanobiotechnology* [human] tags=cornea v=v2.0-new
+- PMID42278597 (2026) DNA Oxidation and Expression of Repair Enzymes in Organ- Cultured Human Limbal Epithelium. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID42278250 (2026) Ocular Surface Inflammation as a Driver of Cornea Limbal Stem Cell Deficiency: Mechanisms and Implications. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID42653280 (2026) Negative Pressure Promotes G3BP1-Mediated Migration of Corneal Epithelial Cells Through Activation of AKT/ERK/Paxillin Pathway. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID42450352 (2026) Integrated Analysis of mRNA and microRNA Expression in Corneal Impression Cytology Samples from Patients with &lt;i&gt;PAX6&lt;/i&gt;-Related Congenital Aniridia. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID41752009 (2026) FOXC1 Regulates Cytokine Signaling, Inflammatory Pathways, and Retinoid Metabolism to Maintain Limbal Epithelial Cell Homeostasis In Vitro. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID41752162 (2026) Matrix Metalloproteinase 14 in Corneal Neovascularization. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID42614741 (2026) Immune cell dynamics and cytokine regulation in cornea and transplantation. — *Frontiers in immunology* [human] tags=cornea v=v2.0-new
+- PMID42495118 (2026) A biomimetic and xeno-free platform for corneal engineering: synergy between PRGF technology and human dental pulp stem cells. — *Frontiers in bioengineering and biotechnology* [human] tags=cornea v=v2.0-new
+- PMID41929428 (2026) Targeted proteomic and bioinformatic investigation of extracellular matrix remodeling in hAEC-EV-mediated corneal repair. — *Frontiers in bioengineering and biotechnology* [human] tags=cornea v=v2.0-new
+- PMID42057097 (2026) Corneal backscatter as a biomarker for edema severity in Fuchs endothelial corneal dystrophy: a cross-sectional study. — *Eye and vision (London, England)* [human] tags=cornea v=v2.0-new
+- PMID41326717 (2026) Corneal biomechanical cues mediated by PAI-2: the origin of PM2.5-induced corneal disease. — *EMBO molecular medicine* [human] tags=cornea v=v2.0-new
+- PMID41972705 (2026) Human Corneal Stromal Stem Cell Treatment Reduces Established Opacities in Chronic Corneal Scarring. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID41827828 (2026) Patient-Derived Immortalized Limbal Epithelial Cells as In Vitro Models of Congenital Aniridia. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID41629264 (2026) p16-mediated G0/G1 cell cycle arrest leads to SASP and fibrosis in Fuchs endothelial corneal dystrophy. — *Cell death & disease* [human] tags=cornea v=v2.0-new
+- PMID42194275 (2026) Putative Self-Organizing Human Corneal Organoids Recapitulate Human Corneal Architecture and Cellular Diversity. — *Bioengineering (Basel, Switzerland)* [human] tags=cornea v=v2.0-new
+- PMID42351915 (2026) Keratin-Laden Bioink for Corneal Stroma Bioprinting. — *Bioengineering (Basel, Switzerland)* [human] tags=cornea v=v2.0-new
+- PMID42194274 (2026) Cytocompatibility of PMMA and Titanium Boston Keratoprosthesis Backplates with Human Corneal Fibroblasts. — *Bioengineering (Basel, Switzerland)* [human] tags=cornea v=v2.0-new
+- PMID42194302 (2026) Development and Validation of an In Vitro Ocular Irritation Test for Ophthalmic Medical Devices with a Novel Reconstructed Human Corneal Epithelium Model. — *Bioengineering (Basel, Switzerland)* [human] tags=cornea v=v2.0-new
+- PMID41551761 (2026) Bacterial synthesis of personalized biomimetic biological cornea. — *Bioactive materials* [human] tags=cornea v=v2.0-new
+- PMID42023163 (2026) MMP-9-responsive contact lens facilitating disease-adaptive and safer dexamethasone delivery for corneal neovascularization therapy. — *Asian journal of pharmaceutical sciences* [human] tags=cornea v=v2.0-new
+- PMID41486622 (2026) Bioinspired Tissue Transparency: Achieving Sclera-to-Cornea Transplantation. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [human] tags=cornea,sclera v=v2.0-new
+- PMID42380034 (2026) Gellan Gum Fluid Gel System for Controlled-Delivery of Cytokine-Licensed MSC-EVs to Enhance Corneal Repair in Limbal Stem Cell Deficiency. — *Advanced healthcare materials* [human] tags=cornea v=v2.0-new
+- PMID41190718 (2025) Sox9  prevents retinal degeneration and is required for limbal stem cell differentiation in the adult mouse eye — *eLife* [mouse] tags=cornea,retina v=v1.0
+- PMID40660345 (2025) TLR3-overexpressing umbilical cord mesenchymal stromal cells suppress immune responses to attenuate high-risk corneal transplantation rejection. — *Stem cell research & therapy* [human] tags=cornea v=v2.0-new
+- PMID41422093 (2025) Multimodal objective assessment of a porcine limbal stem cell deficiency model for corneal therapy research. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID39994275 (2025) Caveolin 1 and 2 enhance the proliferative capacity of BCAM-positive corneal progenitors. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID40481094 (2025) Investigation of postmortem change in the human corneal epithelium via impression cytology. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID40221533 (2025) Tissue engineered corneal endothelium transplantation in an ex vivo human cornea organ culture model. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID40287463 (2025) Comprehensive identification of dysregulated extracellular matrix molecules in the corneal endothelium of patients with Fuchs endothelial corneal dystrophy. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID40753109 (2025) AMF30a promotes survival and function of human corneal endothelial cells by regulating TGF-β/ROCK/HIPPO pathway. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID40617919 (2025) Corneal safety assessment of germicidal far UV-C radiation. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID40287480 (2025) A feasibility of computational drug screening for Fuchs endothelial corneal dystrophy. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID40210649 (2025) Assessment of the toxic effect of benzalkonium chloride on human limbal stem cells. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID40437144 (2025) Co-differentiation and enrichment of corneal endothelial cells and keratocytes from human pluripotent stem cells. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID40140459 (2025) Irradiated umbilical cord mesenchymal stem cell-coated high oxygen-permeable hydrogel lenses inhibit corneal inflammation and neovascularization after corneal alkali burns. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID40854928 (2025) Investigating the role of molecular coating in human corneal endothelial cell primary culture using artificial intelligence-driven image analysis. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID40230358 (2025) Human corneal organoid has a limbal function that supplies epithelium to the cornea with limbal deficiency. — *Regenerative therapy* [human] tags=cornea v=v2.0-new
+- PMID40979555 (2025) &lt;i&gt;Ex vivo&lt;/i&gt; expansion of corneal endothelial cells enabled by small molecule inhibitors of LATS kinase. — *Regenerative therapy* [human] tags=cornea v=v2.0-new
+- PMID41157773 (2025) Antioxidant-Rich &lt;i&gt;Clitoria ternatea&lt;/i&gt; Flower Extract Promotes Proliferation and Migration of Human Corneal Epithelial Cells. — *Plants (Basel, Switzerland)* [human] tags=cornea v=v2.0-new
+- PMID41471055 (2025) Generation of a Bioengineered Substitute of the Human Sclero-Corneal Limbus Using a Novel Decellularization Method. — *Pharmaceutics* [human] tags=cornea v=v2.0-new
+- PMID40838019 (2025) Prediction of cell states and key transcription factors of the human cornea through integrated single-cell omics analyses. — *PNAS nexus* [human] tags=cornea v=v2.0-new
+- PMID40315239 (2025) Herpes simplex virus type-1 infection and spread in a novel porcine corneal explant model is restricted to the epithelium. — *PLoS pathogens* [human] tags=cornea v=v2.0-new
+- PMID41224754 (2025) Regulation of corneal stromal cell behavior by modulating curvature using a hydraulically-controlled organ chip array. — *Nature communications* [human] tags=cornea v=v2.0-new
+- PMID39905045 (2025) Bio-orthogonal crosslinking and hyaluronan facilitate transparent healing after treatment of deep corneal injuries with in situ-forming hydrogels. — *NPJ Regenerative medicine* [human] tags=cornea v=v2.0-new
+- PMID40755901 (2025) A bioequivalent cornea cross-linking method using photo-initiators LAP and visible light. — *Materials today. Bio* [human] tags=cornea v=v2.0-new
+- PMID40761516 (2025) Construction and characteristics of an adjustable biomechanical in vitro corneal stromal model simulating keratoconus pathological features. — *Materials today. Bio* [human] tags=cornea v=v2.0-new
+- PMID39935895 (2025) Photochemical corneal cross-linking: Evaluating the potential of a hand-held biopen. — *Materials today. Bio* [human] tags=cornea v=v2.0-new
+- PMID40296037 (2025) Self-healing adhesive oxidized guar gum hydrogel loaded with mesenchymal stem cell exosomes for corneal wound healing. — *Journal of nanobiotechnology* [human] tags=cornea v=v2.0-new
+- PMID41440637 (2025) Porcine Corneal Models as Translational Platforms for Innovative Therapies: Current Insights and Future Directions. — *Journal of functional biomaterials* [human] tags=cornea v=v2.0-new
+- PMID38729560 (2025) The hiPSC-derived corneal endothelial progenitor-like cell recovers the rabbit model of corneal endothelial dystrophy. — *Journal of advanced research* [human] tags=cornea v=v2.0-new
+- PMID40965404 (2025) The Role of Connexin 36 Gap Junctions in Retinal Ganglion Cell Death After Corneal Alkali Burns. — *Investigative ophthalmology & visual science* [mouse] tags=cornea,retina v=v1.1
+- PMID41465361 (2025) Effects of Topography and Extracellular Matrix Composition on Focal Adhesion Patterning in Human Corneal Fibroblasts. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID39859409 (2025) Biomedical Application of MSCs in Corneal Regeneration and Repair. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID40806627 (2025) Stem Cell-Derived Corneal Epithelium: Engineering Barrier Function for Ocular Surface Repair. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID39940664 (2025) Endoplasmic Reticulum-Mitochondria Crosstalk in Fuchs Endothelial Corneal Dystrophy: Current Status and Future Prospects. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID39940950 (2025) Effects of Cell Seeding Density, Extracellular Matrix Composition, and Geometry on Yes-Associated Protein Translocation in Corneal Fibroblasts. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID40390022 (2025) Spatiotemporal single-cell analysis elucidates the cellular and molecular dynamics of human cornea aging. — *Genome medicine* [human] tags=cornea v=v2.0-new
+- PMID40558721 (2025) Advances in 3D Bioprinting for Corneal Regeneration. — *Gels (Basel, Switzerland)* [human] tags=cornea v=v2.0-new
+- PMID41294843 (2025) Potential Therapeutic Effects of Epithelial and Mesenchymal Stem Cell Secretome in Benzalkonium Chloride-Induced Limbal Stem Cell Dysfunction. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID41369340 (2025) Multimodal Imaging of the Corneal Endothelial Transition Zone Reveals Progenitor Cell Population. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID40940733 (2025) Mechanisms of Corneal Nerve Regeneration: Examining Molecular Regulators. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID39996731 (2025) Drug- and Cell-Type-Specific Effects of ROCK Inhibitors as a Potential Cause of Reticular Corneal Epithelial Edema. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID40149974 (2025) Efficient Fabrication of Human Corneal Stromal Cell Spheroids and Promoting Cell Stemness Based on 3D-Printed Derived PDMS Microwell Platform. — *Biomolecules* [human] tags=cornea v=v2.0-new
+- PMID41301117 (2025) Bioengineering Strategies for Corneal Endothelial Cell Injection Therapy: Advances, Challenges, and Clinical Translation. — *Bioengineering (Basel, Switzerland)* [human] tags=cornea v=v2.0-new
+- PMID40083774 (2025) In situ UNIversal Orthogonal Network (UNION) bioink deposition for direct delivery of corneal stromal stem cells to corneal wounds. — *Bioactive materials* [human] tags=cornea v=v2.0-new
+- PMID41300537 (2025) Hyperosmolarity-Induced Oxidative Stress Leads to Senescence in Human Corneal Epithelial Cells (HCEPC) via DNA Damage, Metabolic Disturbance and Mitophagy Decline. — *Antioxidants (Basel, Switzerland)* [human] tags=cornea v=v2.0-new
+- PMID40689077 (2025) Development of stromal corneal grafts using a novel decellularization method with sodium cocoyl glutamate on &lt;i&gt;GGTA1&lt;/i&gt;/&lt;i&gt;CMAH&lt;/i&gt;/&lt;i&gt;β4GalNT2&lt;/i&gt; knock-out porcine corneas. — *Annals of translational medicine* [human] tags=cornea v=v2.0-new
+- PMID39853921 (2025) Artificial Cornea Substitute Based on Hydrogel Skeletons with Natural Stromal Hierarchical Structure and Extracellular Matrix for Sutureless Transplantation. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [human] tags=cornea v=v2.0-new
+- PMID40734361 (2025) 3D Differentiation of Bone-Marrow Derived Mesenchymal Stromal Cells into the Keratocyte Lineage for Corneal Bioprinting. — *Advanced healthcare materials* [human] tags=cornea v=v2.0-new
+- PMID39838783 (2025) A Bioengineered Model of the Human Cornea for Preclinical Assessment of Human Ocular Exposure to Environmental Toxicants. — *Advanced healthcare materials* [human] tags=cornea v=v2.0-new
+- PMID39930756 (2025) Enhanced Bioprinting of 3D Corneal Stroma Patches with Reliability, Assessing Product Consistency and Quality through Optimized Electron Beam Sterilization. — *Advanced healthcare materials* [human] tags=cornea v=v2.0-new
+- PMID39639354 (2024) Trehalose extricates impaired mitochondrial and autophagy dysregulation in patient iPSC-derived macular corneal dystrophy disease model. — *Stem cell research & therapy* [human] tags=cornea v=v2.0-new
+- PMID38486306 (2024) Bioprinting of human pluripotent stem cell derived corneal endothelial cells with hydrazone crosslinked hyaluronic acid bioink. — *Stem cell research & therapy* [human] tags=cornea v=v2.0-new
+- PMID38514716 (2024) Single nuclei transcriptomics of the in situ human limbal stem cell niche. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID39443505 (2024) A unique and biocompatible corneal collagen crosslinking in vivo. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID39732756 (2024) Transcriptomic comparison of corneal endothelial cells in young versus old corneas. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID39075142 (2024) A novel tissue-engineered corneal epithelium based on ultra-thin amniotic membrane and mesenchymal stem cells. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID38704483 (2024) Transcription factor 4 promotes increased corneal endothelial cellular migration by altering microtubules in Fuchs endothelial corneal dystrophy. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID38379013 (2024) Modeling dry eye with an air-liquid interface in corneal epithelium-on-a-chip. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID39332053 (2024) TCF4 trinucleotide repeat expansions and UV irradiation increase susceptibility to ferroptosis in Fuchs endothelial corneal dystrophy. — *Redox biology* [human] tags=cornea v=v2.0-new
+- PMID38177186 (2024) The single-cell transcriptomic atlas and RORA-mediated 3D epigenomic remodeling in driving corneal epithelial differentiation. — *Nature communications* [human] tags=cornea v=v2.0-new
+- PMID38862465 (2024) Impact of keratocyte differentiation on corneal opacity resolution and visual function recovery in male rats. — *Nature communications* [human] tags=cornea v=v2.0-new
+- PMID38434572 (2024) Fabrication of bioengineered corneal endothelial grafts using an allogeneic cornea-derived matrix. — *Materials today. Bio* [human] tags=cornea v=v2.0-new
+- PMID39328788 (2024) Preparation, physico-biochemical characterization, and proteomic analysis of highly transparent corneal extracellular matrices for lamellar keratoplasty and tissue-engineered cornea construction. — *Materials today. Bio* [human] tags=cornea v=v2.0-new
+- PMID38226015 (2024) Novel strategy for multi-material 3D bioprinting of human stem cell based corneal stroma with heterogenous design. — *Materials today. Bio* [human] tags=cornea v=v2.0-new
+- PMID39728110 (2024) Development of Novel Squid Gladius Biomaterials for Cornea Tissue Engineering. — *Marine drugs* [human] tags=cornea v=v2.0-new
+- PMID39198892 (2024) Targeting limbal epithelial stem cells: master conductors of corneal epithelial regeneration from the bench to multilevel theranostics. — *Journal of translational medicine* [human] tags=cornea v=v2.0-new
+- PMID38750454 (2024) PAX6/CXCL14 regulatory axis promotes the repair of corneal injury by enhancing corneal epithelial cell proliferation. — *Journal of translational medicine* [human] tags=cornea v=v2.0-new
+- PMID38549081 (2024) Minocycline-loaded nHAP/PLGA microspheres for prevention of injury-related corneal angiogenesis. — *Journal of nanobiotechnology* [human] tags=cornea v=v2.0-new
+- PMID39595954 (2024) Factors Affecting the Density of Corneal Endothelial Cells Cultured from Donor Corneas. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID39273330 (2024) Hepatocyte Growth Factor Modulates Corneal Endothelial Wound Healing In Vitro. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID39684784 (2024) Drug-Dependent Inhibitory Effects on Corneal Epithelium Structure, Cell Viability, and Corneal Wound Healing by Local Anesthetics. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID39201288 (2024) Focal Adhesion Maturation Responsible for Behavioral Changes in Human Corneal Stromal Fibroblasts on Fibrillar Substrates. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID38612568 (2024) Mechanisms of PM<sub>10</sub> Disruption of the Nrf2 Pathway in Cornea. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID39273646 (2024) Anti-Inflammatory and Anti-(Lymph)angiogenic Properties of an ABCB5+ Limbal Mesenchymal Stem Cell Population. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID38339047 (2024) Protective Effect of Probiotics against <i>Pseudomonas aeruginosa</i> Infection of Human Corneal Epithelial Cells. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID38698981 (2024) Conditional reprogrammed human limbal epithelial cell model for anti-SARS-CoV-2 drug screening. — *Heliyon* [human] tags=cornea v=v2.0-new
+- PMID38961930 (2024) Brittle cornea syndrome: A novel mutation. — *Heliyon* [human] tags=cornea v=v2.0-new
+- PMID38356495 (2024) Contrast-enhanced Micro-CT 3D visualization of cell distribution in hydrated human cornea. — *Heliyon* [human] tags=cornea v=v2.0-new
+- PMID39386038 (2024) The time dependent influence of curvature and topography of biomaterials in the behavior of corneal endothelial cells. — *Frontiers in bioengineering and biotechnology* [human] tags=cornea v=v2.0-new
+- PMID39682768 (2024) Senescence and Stress Signaling Pathways in Corneal Cells After Nitrogen Mustard Injury. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID39682760 (2024) Towards Clinical Application: Calcium Waves for In Vitro Qualitative Assessment of Propagated Primary Human Corneal Endothelial Cells. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID38961590 (2024) Establishment of human corneal epithelial organoids for ex vivo modelling dry eye disease. — *Cell proliferation* [human] tags=cornea v=v2.0-new
+- PMID38247931 (2024) Electrospun Nanofiber Membrane for Cultured Corneal Endothelial Cell Transplantation. — *Bioengineering (Basel, Switzerland)* [human] tags=cornea v=v2.0-new
+- PMID39101028 (2024) Oriented cellulose hydrogel: Directed tissue regeneration for reducing corneal leukoplakia and managing fungal corneal ulcers. — *Bioactive materials* [human] tags=cornea v=v2.0-new
+- PMID39538248 (2024) Histological, histochemical, and immunohistochemical characterization of NANOULCOR nanostructured fibrin-agarose human cornea substitutes generated by tissue engineering. — *BMC medicine* [human] tags=cornea v=v2.0-new
+- PMID38513048 (2024) Cornea-Specific Human Adipose Stem Cell-Derived Extracellular Matrix for Corneal Stroma Tissue Engineering. — *ACS applied materials & interfaces* [human] tags=cornea v=v2.0-new
+- PMID38093301 (2023) New characterization and safety evaluation of human limbal stem cells used in clinical application: fidelity of mitotic process and mitotic spindle morphologies. — *Stem cell research & therapy* [human] tags=cornea v=v2.0-new
+- PMID37061739 (2023) Expansion and characterization of human limbus-derived stromal/mesenchymal stem cells in xeno-free medium for therapeutic applications. — *Stem cell research & therapy* [human] tags=cornea v=v2.0-new
+- PMID37291161 (2023) A single-cell RNA-seq analysis unravels the heterogeneity of primary cultured human corneal endothelial cells. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID36922551 (2023) Genetic analysis of allogenic donor cells after successful allo-limbal epithelial transplantation in simple and cultivated limbal epithelial transplantation procedures. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID37714879 (2023) Selective effects of estradiol on human corneal endothelial cells. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID37735479 (2023) Wnt activation as a potential therapeutic approach to treat partial limbal stem cell deficiency. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID37376309 (2023) The Reliability of PCL/Anti-VEGF Electrospun Scaffolds to Support Limbal Stem Cells for Corneal Repair. — *Polymers* [human] tags=cornea v=v2.0-new
+- PMID37376106 (2023) Phosphorylcholine and KR12-Containing Corneal Implants in HSV-1-Infected Rabbit Corneas. — *Pharmaceutics* [human] tags=cornea v=v2.0-new
+- PMID37895917 (2023) Spironolactone Eyedrop Favors Restoration of Corneal Integrity after Wound Healing in the Rat. — *Pharmaceuticals (Basel, Switzerland)* [human] tags=cornea v=v2.0-new
+- PMID37759270 (2023) Long-term PM2.5 exposure disrupts corneal epithelial homeostasis by impairing limbal stem/progenitor cells in humans and rat models. — *Particle and fibre toxicology* [human] tags=cornea v=v2.0-new
+- PMID36899356 (2023) ROS generation and p-38 activation contribute to montmorillonite-induced corneal toxicity in vitro and in vivo. — *Particle and fibre toxicology* [human] tags=cornea v=v2.0-new
+- PMID37856539 (2023) Identification of the regulatory circuit governing corneal epithelial fate determination and disease. — *PLoS biology* [human] tags=cornea v=v2.0-new
+- PMID38202631 (2023) Exploring the Role of <i>Lycium barbarum</i> Polysaccharide in Corneal Injury Repair and Investigating the Relevant Mechanisms through In Vivo and In Vitro Experiments. — *Molecules (Basel, Switzerland)* [human] tags=cornea v=v2.0-new
+- PMID37139464 (2023) Current microfluidic platforms for reverse engineering of cornea. — *Materials today. Bio* [human] tags=cornea v=v2.0-new
+- PMID37628793 (2023) The Role of Sensory Innervation in Homeostatic and Injury-Induced Corneal Epithelial Renewal. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID36982507 (2023) Corneal Reconstruction with EGFP-Labelled Limbal Mesenchymal Stem Cells in a Rabbit Model of Limbal Stem Cell Deficiency. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID36768672 (2023) Derivation of Limbal Stem Cells from Human Adult Mesenchymal Stem Cells for the Treatment of Limbal Stem Cell Deficiency. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID38069177 (2023) Influence of Organ Culture on the Characteristics of the Human Limbal Stem Cell Niche. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID37240280 (2023) Early Clinical Outcomes of the First Commercialized Human Autologous Ex Vivo Cultivated Oral Mucosal Epithelial Cell Transplantation for Limbal Stem Cell Deficiency: Two Case Reports and Literature Review. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID37108619 (2023) Mesenchymal Stem Cell Exosomes as Immunomodulatory Therapy for Corneal Scarring. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID36982917 (2023) Investigating the Functional Roles of Aldehyde Dehydrogenase 3A1 in Human Corneal Epithelial Cells. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID37539164 (2023) A composite hydrogel membrane with shape and water retention for corneal tissue engineering. — *Heliyon* [human] tags=cornea v=v2.0-new
+- PMID37528478 (2023) Ex vivo cultivated retinal pigment epithelial cell transplantation for the treatment of rabbit corneal endothelial dysfunction. — *Eye and vision (London, England)* [human] tags=RPE,cornea,retina v=v1.1
+- PMID37058418 (2023) Comparison of Novel Wide-Field In Vivo Corneal Confocal Microscopy With Skin Biopsy for Assessing Peripheral Neuropathy in Type 2 Diabetes. — *Diabetes* [human] tags=cornea v=v2.0-new
+- PMID37081200 (2023) Zeb1 facilitates corneal epithelial wound healing by maintaining corneal epithelial cell viability and mobility. — *Communications biology* [human] tags=cornea v=v2.0-new
+- PMID37443842 (2023) Single-Cell RNA Sequencing: Opportunities and Challenges for Studies on Corneal Biology in Health and Disease. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID37887302 (2023) Limbal Epithelial Stem Cells in the Diabetic Cornea. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID37626899 (2023) Opposing Roles of Blood-Borne Monocytes and Tissue-Resident Macrophages in Limbal Stem Cell Damage after Ocular Injury. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID36899873 (2023) A Novel Technique of Amniotic Membrane Preparation Mimicking Limbal Epithelial Crypts Enhances the Number of Progenitor Cells upon Expansion. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID37296653 (2023) Mustard Gas Exposure Actuates SMAD2/3 Signaling to Promote Myofibroblast Generation in the Cornea. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID37371094 (2023) Investigating the Role of TGF-β Signaling Pathways in Human Corneal Endothelial Cell Primary Culture. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID37095157 (2023) The biophysical property of the limbal niche maintains stemness through YAP. — *Cell death and differentiation* [human] tags=cornea v=v2.0-new
+- PMID37238641 (2023) The Cornea: No Difference in the Wound Healing Response to Injury Related to Whether, or Not, There's a Bowman's Layer. — *Biomolecules* [human] tags=cornea v=v2.0-new
+- PMID36671634 (2023) Cell-Laden Marine Gelatin Methacryloyl Hydrogels Enriched with Ascorbic Acid for Corneal Stroma Regeneration. — *Bioengineering (Basel, Switzerland)* [human] tags=cornea v=v2.0-new
+- PMID37476050 (2023) Decellularized squid mantle scaffolds as tissue-engineered corneal stroma for promoting corneal regeneration. — *Bioengineering & translational medicine* [human] tags=cornea v=v2.0-new
+- PMID36844364 (2023) A "T.E.S.T." hydrogel bioadhesive assisted by corneal cross-linking for in situ sutureless corneal repair. — *Bioactive materials* [human] tags=cornea v=v2.0-new
+- PMID37371958 (2023) Role of NADPH Oxidase 4 in Corneal Endothelial Cells Is Mediated by Endoplasmic Reticulum Stress and Autophagy. — *Antioxidants (Basel, Switzerland)* [human] tags=cornea v=v2.0-new
+- PMID37371916 (2023) A p-Tyr42 RhoA Inhibitor Promotes the Regeneration of Human Corneal Endothelial Cells by Ameliorating Cellular Senescence. — *Antioxidants (Basel, Switzerland)* [human] tags=cornea v=v2.0-new
+- PMID37449943 (2023) Toward Corneal Limbus In Vitro Model: Regulation of hPSC-LSC Phenotype by Matrix Stiffness and Topography During Cell Differentiation Process. — *Advanced healthcare materials* [human] tags=cornea v=v2.0-new
+- PMID35659288 (2022) Long-term observation after transplantation of cultured human corneal endothelial cells for corneal endothelial dysfunction. — *Stem cell research & therapy* [human] tags=cornea v=v2.0-new
+- PMID36577775 (2022) In situ transduction of cells in human corneal limbus using adeno-associated viruses: an ex vivo study. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID35690049 (2022) Fullerenol protects cornea from ultraviolet B exposure. — *Redox biology* [human] tags=cornea v=v2.0-new
+- PMID36712326 (2022) Single cell RNA-seq of human cornea organoids identifies cell fates of a developing immature cornea. — *PNAS nexus* [human] tags=cornea v=v2.0-new
+- PMID35269891 (2022) Efficient Isolation and Functional Characterization of Niche Cells from Human Corneal Limbus. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID35409392 (2022) Aldehyde Dehydrogenases Expression in Corneal Epithelial Cells with Limbal Stem Cell Deficiency. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID35897793 (2022) Transcriptomic Profiling of Human Limbus-Derived Stromal/Mesenchymal Stem Cells-Novel Mechanistic Insights into the Pathways Involved in Corneal Wound Healing. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID36614165 (2022) Therapeutic Potency of Induced Pluripotent Stem-Cell-Derived Corneal Endothelial-like Cells for Corneal Endothelial Dysfunction. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID36499014 (2022) Novel ROCK Inhibitors, Sovesudil and PHP-0961, Enhance Proliferation, Adhesion and Migration of Corneal Endothelial Cells. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID35628669 (2022) Fluctuations in Corneal Endothelial LAP2 Expression Levels Correlate with Passage Dependent Declines in Their Cell Proliferative Activity. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID36293057 (2022) Impact of Exosomes Released by Different Corneal Cell Types on the Wound Healing Properties of Human Corneal Epithelial Cells. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID35269714 (2022) Quantitative Proteomics Reveals Molecular Network Driving Stromal Cell Differentiation: Implications for Corneal Wound Healing. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID35280984 (2022) Molecular Characteristics and Distribution of Adult Human Corneal Immune Cell Types. — *Frontiers in immunology* [human] tags=cornea v=v2.0-new
+- PMID34172618 (2022) Curative effect and possible mechanism of taurine on early corneal alkali burns. — *Chinese medical journal* [human] tags=cornea v=v2.0-new
+- PMID36291115 (2022) Therapeutic Strategies for Restoring Perturbed Corneal Epithelial Homeostasis in Limbal Stem Cell Deficiency: Current Trends and Future Directions. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID35741104 (2022) P-Cadherin Is Expressed by Epithelial Progenitor Cells and Melanocytes in the Human Corneal Limbus. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID36611829 (2022) MiR-302a Regenerates Human Corneal Endothelial Cells against IFN-γ-Induced Cell Death. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID36078126 (2022) Influence of the Postmortem/Storage Time of Human Corneas on the Properties of Cultured Limbal Epithelial Cells. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID35053425 (2022) Fibrosis Is a Basement Membrane-Related Disease in the Cornea: Injury and Defective Regeneration of Basement Membranes May Underlie Fibrosis in Other Organs. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID36497012 (2022) Transcriptomic Landscape and Functional Characterization of Human Induced Pluripotent Stem Cell-Derived Limbal Epithelial Progenitor Cells. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID36671472 (2022) The Yin and Yang of Mesenchymal Cells in the Corneal Stromal Fibrosis Response to Injury: The Cornea as a Model of Fibrosis in Other Organs. — *Biomolecules* [human] tags=cornea v=v2.0-new
+- PMID35571395 (2022) Methodological study of directed differentiation of pluripotent stem cells into corneal endothelial cells. — *Annals of translational medicine* [human] tags=cornea v=v2.0-new
+- PMID36253148 (2022) Nanoneedles Induce Targeted siRNA Silencing of p16 in the Human Corneal Endothelium. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [human] tags=cornea v=v2.0-new
+- PMID36073832 (2022) Wireless-Powered Electrical Bandage Contact Lens for Facilitating Corneal Wound Healing. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [human] tags=cornea v=v2.0-new
+- PMID34930437 (2021) Corneal epithelial differentiation of human pluripotent stem cells generates ABCB5<sup>+</sup> and ∆Np63α<sup>+</sup> cells with limbal cell characteristics and high wound healing capacity. — *Stem cell research & therapy* [human] tags=cornea v=v2.0-new
+- PMID33741066 (2021) Process development and safety evaluation of ABCB5<sup>+</sup> limbal stem cells as advanced-therapy medicinal product to treat limbal stem cell deficiency. — *Stem cell research & therapy* [human] tags=cornea v=v2.0-new
+- PMID34809716 (2021) Multiocular organoids from human induced pluripotent stem cells displayed retinal, corneal, and retinal pigment epithelium lineages. — *Stem cell research & therapy* [human] tags=RPE,cornea v=v2.0-new
+- PMID34741068 (2021) Single cell transcriptomics reveals the heterogeneity of the human cornea to identify novel markers of the limbus and stroma. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID34381080 (2021) Molecular characteristics and spatial distribution of adult human corneal cell subtypes. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID34684011 (2021) Generation of a Biomimetic Substitute of the Corneal Limbus Using Decellularized Scaffolds. — *Pharmaceutics* [human] tags=cornea v=v2.0-new
+- PMID34576227 (2021) A Decellularized Human Limbal Scaffold for Limbal Stem Cell Niche Reconstruction. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+- PMID33897716 (2021) Macrophage-Mediated Tissue Vascularization: Similarities and Differences Between Cornea and Skin. — *Frontiers in immunology* [human] tags=cornea v=v2.0-new
+- PMID34976970 (2021) A Liquid Hydrogel to Restore Long Term Corneal Integrity After Perforating and Non-Perforating Trauma in Feline Eyes. — *Frontiers in bioengineering and biotechnology* [human] tags=cornea v=v2.0-new
+- PMID34571952 (2021) Corneal Epithelial Stem Cells-Physiology, Pathophysiology and Therapeutic Options. — *Cells* [human] tags=cornea v=v2.0-new
+- PMID33485387 (2021) Time-course single-cell RNA sequencing reveals transcriptional dynamics and heterogeneity of limbal stem cells derived from human pluripotent stem cells. — *Cell & bioscience* [human] tags=cornea v=v2.0-new
+- PMID33918484 (2021) Human Cadaveric Donor Cornea Derived Extra Cellular Matrix Microparticles for Minimally Invasive Healing/Regeneration of Corneal Wounds. — *Biomolecules* [human] tags=cornea v=v2.0-new
+- PMID32724480 (2020) Lentivirus-mediated IL-10-expressing Bone Marrow Mesenchymal Stem Cells promote corneal allograft survival <i>via</i> upregulating lncRNA 003946 in a rat model of corneal allograft rejection. — *Theranostics* [human] tags=cornea v=v2.0-new
+- PMID33067486 (2020) Isolation and enrichment of melanocytes from human corneal limbus using CD117 (c-Kit) as selection marker. — *Scientific reports* [human] tags=cornea v=v2.0-new
+- PMID32917640 (2020) LiQD Cornea: Pro-regeneration collagen mimetics as patches and alternatives to corneal transplantation. — *Science advances* [human] tags=cornea v=v2.0-new
+- PMID33096935 (2020) <i>rad21</i> Is Involved in Corneal Stroma Development by Regulating Neural Crest Migration. — *International journal of molecular sciences* [human] tags=cornea v=v2.0-new
+
+---
+<!-- KB1V2-WIKILINKS v1.1 -->
+## 判读层链接 (判读层链接版本: KB1v2 (2026-09-23, t_16c3e020))
+
+- **组成基线**: [kb/baselines/ocular_surface.md](/mnt/D/EyeKB/kb/baselines/ocular_surface.md) — 供者级条件参考分布 (锚定 registry 标准集或 t_6f5cc731 映射)
+- **RAG reason-tag**: 每条 PMID 的入库原因/论断关系/证据条件见 `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (键=pmid; 字段 inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` 命中自动联表带出
+- **概念 ID 映射**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
+- 红线: 本页与全部链接内容仅证据引用与 QC 旗, 禁入打分 (ANNOTATION_PROTOCOL_v1.1.md §0)

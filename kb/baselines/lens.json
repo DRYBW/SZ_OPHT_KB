@@ -1,0 +1,114 @@
+{
+ "schema": "eyekb-baseline/1.1",
+ "entry_id": "baseline_human_lens",
+ "tissue": "lens",
+ "species": "human",
+ "title": "组成基线骨架: 人 lens (字段全, 比例=待回填)",
+ "status": "skeleton_mapping_backfilled",
+ "organism_stage": "unknown",
+ "stage_note": "KB2c 发育轴: 骨架条=unknown (未实算)。回填时必须按发育轴单列 — adult 材料出 adult-only 主档 (>=18y 裁定 Q2), 胎儿/发育期材料另立条目, 禁止胎儿与成人同组织混档 (PI 红线)。",
+ "stage_axis": {
+  "field": "organism_stage",
+  "levels": [
+   "fetal",
+   "adult",
+   "developing",
+   "unknown"
+  ],
+  "adult_rule": "UBERON development_stage 数字化年龄 >= 18y 判 adult; 显式成年术语 (late/prime/middle/mature/human adult stage, 年代段>=3rd) 亦判 adult 并记 rule; 阈值改动须过裁定 (KB2c Q2, 2026-09-23)",
+  "developing_rule": "newborn/infant/postnatal stage 与 <18y 数字年龄/年龄段 → developing (KB2c Q2)",
+  "fetal_rule": "fetal/embryonic/gestation/Carnegie 术语 → fetal; 永不并入 adult 主档 (红线1)",
+  "unknown_rule": "无年龄列/未映射术语/organoid/年龄段跨阈值 → unknown, 必须披露行, 禁静默归 adult (红线2)",
+  "aging_note": ">=60 老年分层不在本轴 — aging 是正交独立轴, 将来单独立条目 (裁定 Q2)",
+  "source_col": "obs/development_stage (UBERON 原值逐行保留; 汇总见 stage_disclosure, 排除清单见 excluded_nonadult_units)",
+  "tier_ids": {
+   "adult_only": "baseline_human_lens__adult_only__kb2c",
+   "adult_pool": "baseline_human_lens__adult_pool__v1.0"
+  }
+ },
+ "generated": "2026-09-23",
+ "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c 发育轴单列 t_be336eee)",
+ "card": "t_16c3e020",
+ "anchor": {
+  "tier": "骨架 (t_6f5cc731 盘点映射已回填; 供者级比例未算)"
+ },
+ "mapping_from_t_6f5cc731": [
+  {
+   "acc": "HASA \"Lens\" (OA-D004/016)",
+   "sp": "人",
+   "scale": "13,900 cells(核)",
+   "annot": "portal",
+   "avail": "portal h5ad",
+   "note": "人晶状体portal注释源"
+  },
+  {
+   "acc": "GSE287919",
+   "sp": "人",
+   "scale": "16 lens(8对donor,<65/≥65岁)",
+   "annot": "paper(Gu2025 SCRT PMID40598599;6群含TAC/LPLC)",
+   "avail": "suppl目录空→数据走SRA(实测)",
+   "note": "人晶状体上皮+衰老图谱;纤维细胞晶状体蛋白主导需ambient防护"
+  },
+  {
+   "acc": "GSE113887",
+   "sp": "鼠",
+   "scale": "24样本 分化时间序列",
+   "annot": "—",
+   "avail": "suppl",
+   "note": "时序bulk为主(PMID29883638)"
+  },
+  {
+   "acc": "GSE215953",
+   "sp": "鼠",
+   "scale": "30样本 SuperSeries(RNA+ATAC)",
+   "annot": "paper",
+   "avail": "via subseries",
+   "note": "玻璃体诱导纤维分化"
+  },
+  {
+   "acc": "Zebrafish Dev Atlas(CELxGENE)",
+   "sp": "斑马鱼",
+   "scale": "lens标签1.2M(全鱼)",
+   "annot": "portal",
+   "avail": "portal",
+   "note": "发育跨物种佐证,非人参考"
+  }
+ ],
+ "verdict": "✅可建参考模型-限定（HASA Lens 13.9K+GSE287919人16-lens衰老图谱；仅上皮层可靠，纤维细胞=晶状体蛋白主导+ambient风险，参考模型应限LEC域）",
+ "local_file_pointer": null,
+ "t2_fields": {
+  "取样材料": "待定 (骨架: 建基线前必须先固定实际取样材料口径, Astra T2)",
+  "疾病阶段": "待定",
+  "治疗背景": "待定",
+  "scRNA_vs_snRNA": "待定",
+  "富集步骤": "待定",
+  "解离方法": "待定",
+  "供者数": "待定",
+  "计数分母": "待定",
+  "证据来源": "见 mapping_from_t_6f5cc731 各候选数据集"
+ },
+ "usage_scope": "用途口径 (Astra T2 裁定固化): 本基线 = 该取样材料在该实验流程下捕获到的细胞构成的身份参考 + 背景对照; **不得当组成达标线**。疾病手术材料的取样对象 ≠ 健康器官 (如 PDR 纤维血管膜不得对照健康视网膜组成验收); 注释数据出现清单外身份 → 触发 unexpected 旗即可, 不得强制改成清单内身份 (标签接受上下文一致性核查, 非白名单定位)。",
+ "evidence_grades": {
+  "A": "本地实测复算 (带文件路径+脚本)",
+  "B": "文献原文直接报告",
+  "C": "A 级源数据供者级/跨研究分布推得的经验区间",
+  "qualitative": "文献仅定性描述 → 只存定性, 不补造区间 (Astra T2)",
+  "not_estimable": "区间无法估计 —— 合法状态, 注释仍可开展 (Astra T2)"
+ },
+ "distribution_method": null,
+ "donor_level_main": null,
+ "composition_status": "区间无法估计 (合法状态, Astra T2) —— 待按映射候选数据集做供者级计算; 数据不在本地者须先过下载审批铁律",
+ "major_classes": [],
+ "backfill_path": "①候选数据本地化状态核实 → ②官方注释切片 (celltype-annotation-sourcing 纪律) → ③本脚本追加 build_<tissue>() 供者级复算 → ④基线状态改 filled_donor_level → ⑤KB2c 发育轴: 仅 adult (>=18y) 供者入主档, 非 adult 逐行披露; 胎儿/发育期材料单独立条目, 禁并入 adult",
+ "caveats": [
+  "骨架条目不得用于'该组织已有组成基线'的对外表述 (Astra T6: 工程一致性≠正确性证据)"
+ ],
+ "axis_version": "kb2c-1.1",
+ "development_stage": "unknown",
+ "development_stage_prohibition": "KB3 禁令 (PI 红线 2026-09-23): 发育期数据不得进成人基线统计池, 反之亦然 —— 同一组织胎儿≠成人, adult/fetal 不互为参照。",
+ "kb3_card": "t_5425a7ca",
+ "kb3_applicable_stage_at_backfill": "adult —— 适用锚=HRCA/D002 等成人锚 (写死); 但供者级比例未实算, development_stage 维持 unknown 直至回填, 禁提前写 adult (KB2c 红线2)",
+ "identity_signature": {
+  "baseline_human_lens__adult_only__kb2c": "sha256:c9b0105ed92482bbdfbae7b5038180a9c5ace8c6fcda38984ddb8a36e004613d"
+ }
+}

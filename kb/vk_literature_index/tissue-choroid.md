@@ -1,0 +1,237 @@
+---
+title: 文献索引: choroid
+created: 2026-09-23
+updated: 2026-09-23
+type: query
+tags: [literature, rag, index, choroid]
+sources: [literature_db v2.0_2026-09]
+confidence: high
+---
+
+# 文献: choroid (211 篇, 多标签口径)
+
+> RAG v2.0 中 tissue_labels 含 choroid 的论文清单（含与其他组织共标的论文），按年份倒序。
+> 溯源用 PMID 查询 RAG API: `stage3_retrieve.py --tissue choroid --db-dir literature_db/v2.0_2026-09 --cell-type <CT>`
+> 定位 (Claude5 冻结): 仅人机交互辅助引用, 不入打分。
+
+## 论文列表
+- PMID42111215 (2026) The choroidal macrophage polarization significantly influences myopia development in murine models. — *iScience* [mouse] tags=choroid v=v2.0-new
+- PMID41677389 (2026) A Highly Active Angiopoietin 1 Mimetic Potentiates Angiogenesis in Mouse Models of Choroidal Neovascularization. — *Translational vision science & technology* [mouse] tags=choroid v=v2.0-new
+- PMID42466938 (2026) Identification and Mapping of a Posterior Ocular Lymphatic Outflow (POLO) Pathway Through Choroidal Lymphatics. — *Translational vision science & technology* [mouse] tags=choroid v=v2.0-new
+- PMID42373614 (2026) Tetrahedral DNA nano-PROTACs enable enhanced ocular penetration and efficient nucleolin degradation for choroidal neovascularization therapy. — *Signal transduction and targeted therapy* [both] tags=choroid v=v2.0-new
+- PMID42579492 (2026) AAV-NRF2 protects retinal and choroidal vasculature in a GDF15-dependent manner in an oxidative damage model of AMD. — *Proceedings of the National Academy of Sciences of the United States of America* [mouse] tags=choroid v=v2.0-new
+- PMID42226771 (2026) IL-8 is a potential biomarker for retinal detachment secondary to choroidal melanoma. — *PeerJ* [human] tags=choroid v=v2.0-new
+- PMID42152120 (2026) Tissue-resident macrophages maintain choroidal homeostasis by complement dependent and independent mechanisms. — *Journal of neuroinflammation* [mouse] tags=choroid v=v2.0-new
+- PMID42063159 (2026) MSC-EVs attenuate subretinal fibrosis in choroidal neovascularization through miR-21-5p-mediated inhibition of EMT and MMT and suppression of inflammation. — *Journal of neuroinflammation* [both] tags=choroid v=v2.0-new
+- PMID42509588 (2026) Developmentally Regulated Expression and Activity of Sulphotransferases in the Rat Choroid Plexuses. — *Journal of neurochemistry* [human] tags=choroid v=v2.0-new
+- PMID42579800 (2026) Mononuclear phagocyte-specific cGAS/STING targeting suppresses experimental choroidal neovascularization. — *JCI insight* [both] tags=choroid v=v2.0-new
+- PMID41805150 (2026) Choroidal Vascular Findings in a Case of Multifocal Geographic Atrophy: A Clinicopathologic Correlation. — *Investigative ophthalmology & visual science* [human] tags=choroid v=v2.0-new
+- PMID41533899 (2026) Inhibition of Pathological Mitochondrial Fission in Retinal Pigment Epithelium Mitigates Choroidal Neovascularization. — *Investigative ophthalmology & visual science* [mouse] tags=choroid v=v2.0-new
+- PMID41533907 (2026) Levodopa Suppresses Choroidal Neovascularization Through a Tyrosinase-Dependent Dual Mechanism. — *Investigative ophthalmology & visual science* [mouse] tags=choroid v=v2.0-new
+- PMID41643211 (2026) An Eye-Opening Approach: Cancer of Unknown Primary Source With Choroidal Metastasis Case Report. — *Interactive journal of medical research* [human] tags=choroid v=v2.0-new
+- PMID42433372 (2026) Endothelial TGFβ signaling modulates choroidal neovascularization severity via myeloid-endothelial cell interaction. — *Frontiers in immunology* [mouse] tags=choroid v=v2.0-new
+- PMID41808823 (2026) Granzyme B from mast cells contributes to choroidal neovascularization in a model of wet age-related macular degeneration. — *Frontiers in immunology* [both] tags=choroid v=v2.0-new
+- PMID42156503 (2026) Adipocytes influence choroidal neovascularization via PRDM16. — *EMBO molecular medicine* [both] tags=choroid v=v2.0-new
+- PMID41528844 (2026) Single-cell multiome and enhancer connectome of human retinal pigment epithelium and choroid nominate causal variants in macular degeneration. — *Cell reports* [human] tags=RPE,choroid,retina v=v1.0
+- PMID41760600 (2026) STING activation induces polarized cytokine secretion of IFN-β and IL-17A promoting photoreceptor death and choroidal disruption in age-related macular degeneration. — *Cell death & disease* [both] tags=choroid v=v2.0-new
+- PMID42360388 (2026) Deletion of CEACAM1 does not affect retinal and choroidal morphology or transcriptome. — *Cell and tissue research* [mouse] tags=choroid v=v2.0-new
+- PMID42584788 (2026) Lysosomal channel TPC2 modulates microglia-endothelial signaling in choroidal angiogenesis. — *Angiogenesis* [both] tags=choroid v=v2.0-new
+- PMID41117141 (2026) Continuous Suppression of Pathological Retinal and Choroidal Neovascularization in Cynomolgus Monkeys via Noninvasive Ophthalmic Delivery of a Novel Anti-VEGFA Nanobody and Proprietary Penetratin Analog Formulation. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [human] tags=choroid v=v2.0-new
+- PMID41432545 (2025) Vascular endothelial-specific loss of TGF-beta signaling as a model for choroidal neovascularization and central nervous system vascular inflammation. — *eLife* [mouse] tags=choroid v=v2.0-new
+- PMID40858941 (2025) C-reactive protein dissociation drives choroidal neovascularization in age-related macular degeneration. — *Scientific reports* [both] tags=choroid v=v2.0-new
+- PMID40644543 (2025) Dynamically covalent lipid nanoparticles mediate CRISPR-Cas9 genome editing against choroidal neovascularization in mice. — *Science advances* [both] tags=choroid v=v2.0-new
+- PMID40946306 (2025) Protocol for generation of immortalized retinal, choroid, and brain endothelial cell lines. — *STAR protocols* [mouse] tags=choroid v=v2.0-new
+- PMID41049616 (2025) Lactylation-Boosted m&lt;sup&gt;5&lt;/sup&gt;C RNA Modification Drives Choroidal Neovascularization. — *Research (Washington, D.C.)* [mouse] tags=choroid v=v2.0-new
+- PMID39835893 (2025) Adenosine diphosphate stimulates VEGF-independent choroidal endothelial cell proliferation: A potential escape from anti-VEGF therapy. — *Proceedings of the National Academy of Sciences of the United States of America* [both] tags=choroid v=v2.0-new
+- PMID41399432 (2025) Safety and efficacy of AAV8-aflibercept in treating choroidal neovascularization via single-cell RNA sequencing. — *Molecular therapy. Methods & clinical development* [mouse] tags=choroid v=v2.0-new
+- PMID41425305 (2025) Nanobody-based gene therapy targeting complement component C3 reduces choroidal neovascularization in mice. — *Molecular therapy. Methods & clinical development* [mouse] tags=choroid v=v2.0-new
+- PMID41438708 (2025) Sustained suppression of choroidal neovascularization by intraocularly stable tetrahedral network encapsulated miR-22-3p. — *Materials today. Bio* [mouse] tags=choroid v=v2.0-new
+- PMID40055675 (2025) The role of myeloid cell heterogeneity during spontaneous choroidal neovascularization in Vldlr knockout mice. — *Journal of neuroinflammation* [mouse] tags=choroid v=v2.0-new
+- PMID40684170 (2025) Sex differences on laser-induced choroidal neovascularization and short-chain fatty acid treatment in a mouse model. — *Journal of neuroinflammation* [mouse] tags=choroid v=v2.0-new
+- PMID41316357 (2025) Novel MAFG-METTL14-SCD1 axis regulates lipid metabolism mediating choroidal melanoma distant metastasis. — *Journal of experimental & clinical cancer research : CR* [both] tags=choroid v=v2.0-new
+- PMID39908131 (2025) Retinal and Choriocapillaris Thickness Changes in Spontaneously Diabetic Macaques. — *Investigative ophthalmology & visual science* [human] tags=choroid v=v2.0-new
+- PMID40434345 (2025) Adrb2 Expression in Ocular-Infiltrating Macrophages Is Necessary for Interleukin-6 Expression and Choroidal Neovascularization. — *Investigative ophthalmology & visual science* [mouse] tags=choroid v=v2.0-new
+- PMID41222199 (2025) Choroidal Mast Cells and Their Degranulation Are a Pivotal Trigger for Myopia Development. — *Investigative ophthalmology & visual science* [mouse] tags=choroid v=v2.0-new
+- PMID40332908 (2025) Glucagon-Like Peptide 1 Receptor Agonist Stimulation Inhibits Laser-Induced Choroidal Neovascularization by Suppressing Intraocular Inflammation. — *Investigative ophthalmology & visual science* [mouse] tags=choroid v=v2.0-new
+- PMID40227177 (2025) A Narrowband 635 nm Autofluorescence Peak in Albino Mouse Eyes Found With Multi-Modal Imaging Reveals the Presence of Protoporphyrin IX in the Choroid. — *Investigative ophthalmology & visual science* [mouse] tags=choroid v=v2.0-new
+- PMID40868995 (2025) Antiangiogenic Activity of 6-O-Desulfated Modified Heparin: Suppression of Choroidal Neovascularization. — *International journal of molecular sciences* [human] tags=choroid v=v2.0-new
+- PMID40141227 (2025) The Role of the Mitogen-Activated Protein Kinase Pathway in the Development of Laser-Induced Choroidal Neovascularization. — *International journal of molecular sciences* [mouse] tags=choroid v=v2.0-new
+- PMID41373488 (2025) Retinal Organoid-Derived Exosomes Reduce CNV Lesion and Restore RPE Integrity in Mouse Laser-Induced Choroidal Neovascularization (CNV) Model. — *International journal of molecular sciences* [both] tags=choroid v=v2.0-new
+- PMID40183102 (2025) The role of atropine in myopia control: insights into choroidal and scleral mechanisms. — *Frontiers in pharmacology* [mouse] tags=choroid,sclera v=v2.0-new
+- PMID41427444 (2025) Long-term low-dose aspirin promotes laser-induced choroidal neovascularization through suppressing TSP-1 expression. — *Frontiers in cellular neuroscience* [both] tags=choroid v=v2.0-new
+- PMID40716081 (2025) TREM2-Mediated Myeloid Cells Protect Against Pathological Choroidal Neovascularization. — *FASEB journal : official publication of the Federation of American Societies for Experimental Biology* [mouse] tags=choroid v=v2.0-new
+- PMID40994539 (2025) The role of microglia and complement C5/C5a in the pathogenesis of rhegmatogenous retinal detachment with choroidal detachment. — *Computational and structural biotechnology journal* [human] tags=choroid,retina v=v1.0
+- PMID40358170 (2025) Isolation and Characterization of Mouse Choroidal Melanocytes and Their Proinflammatory Characteristics. — *Cells* [mouse] tags=choroid v=v2.0-new
+- PMID40670757 (2025) The SDF-1α/MTDH axis inhibits ferroptosis and promotes the formation of anti-VEGF-resistant choroidal neovascularization by facilitating the nuclear translocation of SREBP1. — *Cell biology and toxicology* [both] tags=choroid v=v2.0-new
+- PMID41008864 (2025) How Many Patients with Choroidal Melanoma Would Be Eligible for Neoadjuvant Systemic Therapy to Enable Ruthenium-106 Brachytherapy? — *Cancers* [human] tags=choroid v=v2.0-new
+- PMID40563706 (2025) Prognostic Biopsy of Choroidal Melanoma Before and After Ruthenium-106 Plaque Brachytherapy: Impact on Success of Cytogenetic Analysis. — *Cancers* [human] tags=choroid v=v2.0-new
+- PMID41374987 (2025) Linking Megalin, Cubilin, Caveolin-1, GIPC1 and Dab2IP Expression to Ocular Tumorigenesis: Profiles in Retinoblastoma, Choroidal Melanoma, and the Normal Human Eye. — *Cancers* [human] tags=choroid v=v2.0-new
+- PMID40395179 (2025) Immune Checkpoint PD-L1 Modulates Retinal Microglial Activation to Alleviate Vascular Leakage in Choroidal Neovascularization via ERK. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [both] tags=choroid v=v2.0-new
+- PMID38513000 (2024) The vascular geometry of the choriocapillaris is associated with spatially heterogeneous molecular exchange with the outer retina. — *The Journal of physiology* [human] tags=choroid v=v2.0-new
+- PMID38995681 (2024) SARS-CoV-2 infects neurons, astrocytes, choroid plexus epithelial cells and pericytes of the human central nervous system &lt;i&gt;in vitro&lt;/i&gt;. — *The Journal of general virology* [human] tags=choroid v=v2.0-new
+- PMID39012703 (2024) DRD2 activation inhibits choroidal neovascularization in patients with Parkinson's disease and age-related macular degeneration. — *The Journal of clinical investigation* [both] tags=choroid v=v2.0-new
+- PMID39384883 (2024) Genome-wide association study of subfoveal choroidal thickness in a longitudinal cohort of older adults. — *Scientific reports* [human] tags=choroid v=v2.0-new
+- PMID39227639 (2024) VEGFA may be a potential marker of myopic choroidal thickness and vascular density changes. — *Scientific reports* [human] tags=choroid v=v2.0-new
+- PMID39521855 (2024) The perspective of ceRNA regulation of circadian rhythm on choroidal neovascularization. — *Scientific reports* [mouse] tags=choroid v=v2.0-new
+- PMID38997397 (2024) Establishment of an in vitro choroid complex system for vascular response screening. — *Scientific reports* [both] tags=choroid v=v2.0-new
+- PMID39514305 (2024) Light-sensitive Ca&lt;sup&gt;2+&lt;/sup&gt; signaling in the mammalian choroid. — *Proceedings of the National Academy of Sciences of the United States of America* [mouse] tags=choroid v=v2.0-new
+- PMID39225143 (2024) A drug delivery system of <i>HIF-1α</i> siRNA nanoparticles loaded by mesenchymal stem cells on choroidal neovascularization. — *Nanomedicine (London, England)* [both] tags=choroid v=v2.0-new
+- PMID39354493 (2024) Mast cells promote choroidal neovascularization in a model of age-related macular degeneration. — *Journal of neuroinflammation* [both] tags=choroid v=v2.0-new
+- PMID39533430 (2024) Targeting glutamine synthetase with AS1411-modified exosome-liposome hybrid nanoparticles for inhibition of choroidal neovascularization. — *Journal of nanobiotechnology* [human] tags=choroid v=v2.0-new
+- PMID38630320 (2024) Artesunate attenuates the tumorigenesis of choroidal melanoma via inhibiting EFNA3 through Stat3/Akt signaling pathway. — *Journal of cancer research and clinical oncology* [human] tags=choroid v=v2.0-new
+- PMID38573618 (2024) The Pediatric and Young Adult Choroidal and Ciliary Body Melanoma Genetic Study, A Survey by the European Ophthalmic Oncology Group. — *Investigative ophthalmology & visual science* [human] tags=choroid,ciliary_body v=v2.0-new
+- PMID39641748 (2024) Elevation of Granulocyte Colony Stimulating Factor in Human AMD Donor RPE-Choroid. — *Investigative ophthalmology & visual science* [human] tags=RPE,choroid v=v2.0-new
+- PMID38958971 (2024) Differential Expression of Sex-Steroid Receptors in the Choroid Aligns With Central Serous Chorioretinopathy Sex Prevalence Across Different Ages. — *Investigative ophthalmology & visual science* [human] tags=choroid v=v2.0-new
+- PMID39620831 (2024) The Umbra and the Penumbra: Longitudinal Effects of Geographic Atrophy in AMD on the Outer Choroid by Imaging Analysis and Histopathological Correlation. — *Investigative ophthalmology & visual science* [human] tags=choroid v=v2.0-new
+- PMID38345554 (2024) 5-Aza-2'-Deoxycytidine Ameliorates Choroidal Neovascularization by Inhibiting the Wnt/β-Catenin Signaling Pathway. — *Investigative ophthalmology & visual science* [mouse] tags=choroid v=v2.0-new
+- PMID38967942 (2024) PlGF and VEGF-A/PlGF Heterodimer are Crucial for Recruitment and Activation of Immune Cells During Choroid Neovascularization. — *Investigative ophthalmology & visual science* [mouse] tags=choroid v=v2.0-new
+- PMID38187905 (2024) Topical Application of Cell-Penetrating Peptide Modified Anti-VEGF Drug Alleviated Choroidal Neovascularization in Mice. — *International journal of nanomedicine* [both] tags=choroid v=v2.0-new
+- PMID39518910 (2024) Intravitreal Metformin Protects Against Choroidal Neovascularization and Light-Induced Retinal Degeneration. — *International journal of molecular sciences* [mouse] tags=choroid v=v2.0-new
+- PMID38524531 (2024) Tocilizumab attenuates choroidal neovascularization by regulating macrophage polarization through the IL-6R/STAT3/VEGF pathway. — *Heliyon* [mouse] tags=choroid v=v2.0-new
+- PMID39185308 (2024) Integrating network pharmacology, molecular docking and experimental verification to reveal the mechanism of artesunate in inhibiting choroidal melanoma. — *Frontiers in pharmacology* [both] tags=choroid v=v2.0-new
+- PMID38745648 (2024) Metrnl inhibits choroidal neovascularization by attenuating the choroidal inflammation via inactivating the UCHL-1/NF-κB signaling pathway. — *Frontiers in immunology* [both] tags=choroid v=v2.0-new
+- PMID39151779 (2024) Melanopsin in the human and chicken choroid. — *Experimental eye research* [human] tags=choroid v=v2.0-new
+- PMID38232696 (2024) Targeting cell-type-specific, choroid-peripheral immune signaling to treat age-related macular degeneration. — *Cell reports. Medicine* [both] tags=choroid v=v2.0-new
+- PMID38672688 (2024) Deferral of Treatment for Small Choroidal Melanoma and the Risk of Metastasis: An Investigation Using the Liverpool Uveal Melanoma Prognosticator Online (LUMPO). — *Cancers* [human] tags=choroid v=v2.0-new
+- PMID39316206 (2024) Inflammasome activation aggravates choroidal neovascularization. — *Angiogenesis* [mouse] tags=choroid v=v2.0-new
+- PMID38498232 (2024) Granzyme B degrades extracellular matrix and promotes inflammation and choroidal neovascularization. — *Angiogenesis* [both] tags=choroid v=v2.0-new
+- PMID38115754 (2024) Human Pluripotent Stem Cells Derived Endothelial Cells Repair Choroidal Ischemia. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [human] tags=choroid v=v2.0-new
+- PMID39206706 (2024) Light-Activated Anti-Vascular Combination Therapy against Choroidal Neovascularization. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [both] tags=choroid v=v2.0-new
+- PMID37043336 (2023) Fiji-Assisted Automatic Quantitative Volumetric Analysis of Choroidal Neovascularization in a Laser-Induced Choroidal Neovascularization Mouse Model. — *Translational vision science & technology* [mouse] tags=choroid v=v2.0-new
+- PMID37330004 (2023) Role of HIF1α and HIF2α in Cre Recombinase-Induced Retinal Pigment Epithelium Pathology and Its Secondary Effect on Choroidal Neovascularization. — *The American journal of pathology* [mouse] tags=choroid v=v2.0-new
+- PMID37369771 (2023) A novel retinoic acid drug, EYE-502, inhibits choroidal neovascularization by targeting endothelial cells and pericytes. — *Scientific reports* [human] tags=choroid v=v2.0-new
+- PMID37072549 (2023) Micro-abnormalities in the retina and choroid induced by anti-CTLA4 treatment. — *Scientific reports* [mouse] tags=choroid v=v2.0-new
+- PMID36878916 (2023) CRISPR/Cas9 mediated specific ablation of vegfa in retinal pigment epithelium efficiently regresses choroidal neovascularization. — *Scientific reports* [both] tags=choroid v=v2.0-new
+- PMID37910617 (2023) An immunotherapeutic artificial vitreous body hydrogel to control choroidal melanoma and preserve vision after vitrectomy. — *Science advances* [mouse] tags=choroid v=v2.0-new
+- PMID37104301 (2023) Peripapillary choroidal microvasculature dropout is associated with poor prognosis in optic neuritis. — *PloS one* [human] tags=choroid v=v2.0-new
+- PMID36643635 (2023) Pemafibrate prevents choroidal neovascularization in a mouse model of neovascular age-related macular degeneration. — *PeerJ* [mouse] tags=choroid v=v2.0-new
+- PMID37253747 (2023) Antibody blockade of Jagged1 attenuates choroidal neovascularization. — *Nature communications* [both] tags=choroid v=v2.0-new
+- PMID37914992 (2023) 5α-Hydroxycostic acid inhibits choroidal neovascularization in rats through a dual signalling pathway mediated by VEGF and angiopoietin 2. — *Molecular medicine (Cambridge, Mass.)* [human] tags=choroid v=v2.0-new
+- PMID37355654 (2023) Targeting choroidal vasculopathy via up-regulation of tRNA-derived fragment tRF-22 expression for controlling progression of myopia. — *Journal of translational medicine* [human] tags=choroid v=v2.0-new
+- PMID36823538 (2023) Old age promotes retinal fibrosis in choroidal neovascularization through circulating fibrocytes and profibrotic macrophages. — *Journal of neuroinflammation* [both] tags=choroid,retina v=v1.0
+- PMID38007487 (2023) Protective role of IL-17-producing γδ T cells in a laser-induced choroidal neovascularization mouse model. — *Journal of neuroinflammation* [both] tags=choroid v=v2.0-new
+- PMID36836210 (2023) Liver X Receptor Agonist Inhibits Oxidized Low-Density Lipoprotein Induced Choroidal Neovascularization via the NF-κB Signaling Pathway. — *Journal of clinical medicine* [mouse] tags=choroid v=v2.0-new
+- PMID37070131 (2023) Lycopene inhibits endothelial-to-mesenchymal transition of choroidal vascular endothelial cells in laser-induced mouse choroidal neovascularization. — *Journal of cellular and molecular medicine* [both] tags=choroid v=v2.0-new
+- PMID36821388 (2023) CD11c+ macrophages are proangiogenic and necessary for experimental choroidal neovascularization. — *JCI insight* [both] tags=choroid v=v2.0-new
+- PMID37126359 (2023) IMI-The Dynamic Choroid: New Insights, Challenges, and Potential Significance for Human Myopia. — *Investigative ophthalmology & visual science* [human] tags=choroid v=v2.0-new
+- PMID36719700 (2023) MicroRNA-376b-3p Suppresses Choroidal Neovascularization by Regulating Glutaminolysis in Endothelial Cells. — *Investigative ophthalmology & visual science* [human] tags=choroid v=v2.0-new
+- PMID37504962 (2023) Molecular, Cellular, and Functional Heterogeneity of Retinal and Choroidal Endothelial Cells. — *Investigative ophthalmology & visual science* [human] tags=choroid v=v2.0-new
+- PMID37578424 (2023) Therapeutic Benefit of Melatonin in Choroidal Neovascularization During Aging Through the Regulation of Senescent Macrophage/Microglia Polarization. — *Investigative ophthalmology & visual science* [mouse] tags=choroid v=v2.0-new
+- PMID36901754 (2023) Transcriptome Analysis of Retinal and Choroidal Pathologies in Aged BALB/c Mice Following Systemic Neonatal Murine Cytomegalovirus Infection. — *International journal of molecular sciences* [mouse] tags=choroid,retina v=v1.1
+- PMID37686284 (2023) Insights into Novel Choroidal and Retinal Clinical Signs in Neurofibromatosis Type 1. — *International journal of molecular sciences* [human] tags=choroid,retina v=v1.1
+- PMID37445820 (2023) 3K3A-Activated Protein C Inhibits Choroidal Neovascularization Growth and Leakage and Reduces NLRP3 Inflammasome, IL-1β, and Inflammatory Cell Accumulation in the Retina. — *International journal of molecular sciences* [mouse] tags=choroid v=v2.0-new
+- PMID36645183 (2023) Single-cell RNA sequencing reveals transcriptional changes of human choroidal and retinal pigment epithelium cells during fetal development, in healthy adult and intermediate age-related macular degeneration. — *Human molecular genetics* [human] tags=RPE,choroid,retina v=v1.0
+- PMID37810031 (2023) LncRNA MALAT1 knockdown inhibits the development of choroidal neovascularization. — *Heliyon* [both] tags=choroid v=v2.0-new
+- PMID36891459 (2023) EFEMP1 is a potential biomarker of choroid thickness change in myopia. — *Frontiers in neuroscience* [human] tags=choroid v=v2.0-new
+- PMID37025993 (2023) Proteotranscriptomic analyses reveal distinct interferon-beta signaling pathways and therapeutic targets in choroidal neovascularization. — *Frontiers in immunology* [mouse] tags=choroid v=v2.0-new
+- PMID37508566 (2023) FITC-Labeled RGD Peptides as Novel Contrast Agents for Functional Fluorescent Angiographic Detection of Retinal and Choroidal Neovascularization. — *Cells* [human] tags=choroid v=v2.0-new
+- PMID36653340 (2023) HDAC7/c-Myc signaling pathway promotes the proliferation and metastasis of choroidal melanoma cells. — *Cell death & disease* [human] tags=choroid v=v2.0-new
+- PMID37914688 (2023) Prph2 knock-in mice recapitulate human central areolar choroidal dystrophy retinal degeneration and exhibit aberrant synaptic remodeling and microglial activation. — *Cell death & disease* [both] tags=choroid v=v2.0-new
+- PMID37371562 (2023) Emerging Role of Adiponectin/AdipoRs Signaling in Choroidal Neovascularization, Age-Related Macular Degeneration, and Diabetic Retinopathy. — *Biomolecules* [both] tags=choroid v=v2.0-new
+- PMID37760886 (2023) Neovascular Progression and Retinal Dysfunction in the Laser-Induced Choroidal Neovascularization Mouse Model. — *Biomedicines* [mouse] tags=choroid v=v2.0-new
+- PMID37509549 (2023) Anti-Scg3 Gene Therapy to Treat Choroidal Neovascularization in Mice. — *Biomedicines* [mouse] tags=choroid v=v2.0-new
+- PMID37107259 (2023) Matrix Metalloproteinase 13 Is Associated with Age-Related Choroidal Neovascularization. — *Antioxidants (Basel, Switzerland)* [both] tags=choroid v=v2.0-new
+- PMID36626253 (2023) Genetic deficiency and pharmacological modulation of RORα regulate laser-induced choroidal neovascularization. — *Aging* [both] tags=choroid v=v2.0-new
+- PMID37682293 (2023) The choroidal nervous system: a link between mineralocorticoid receptor and pachychoroid. — *Acta neuropathologica* [both] tags=choroid v=v2.0-new
+- PMID35311929 (2022) Characterization of Choriocapillaris and Choroidal Abnormalities in Alport Syndrome. — *Translational vision science & technology* [human] tags=choroid v=v2.0-new
+- PMID34546342 (2022) The Cortisol Response of Male and Female Choroidal Endothelial Cells: Implications for Central Serous Chorioretinopathy. — *The Journal of clinical endocrinology and metabolism* [human] tags=choroid v=v2.0-new
+- PMID34922346 (2022) Response to Letter to the Editor From Behar-Cohen et al.: The Cortisol Response of Male and Female Choroidal Endothelial Cells: Implications for Central Serous Chorioretinopathy. — *The Journal of clinical endocrinology and metabolism* [human] tags=choroid v=v2.0-new
+- PMID35995845 (2022) Alpinumisoflavone ameliorates choroidal neovascularisation and fibrosis in age-related macular degeneration in in vitro and in vivo models. — *Scientific reports* [both] tags=choroid v=v2.0-new
+- PMID35039609 (2022) Transcriptomic analysis of choroidal neovascularization reveals dysregulation of immune and fibrosis pathways that are attenuated by a novel anti-fibrotic treatment. — *Scientific reports* [both] tags=choroid v=v2.0-new
+- PMID35561216 (2022) Mast cell infiltration of the choroid and protease release are early events in age-related macular degeneration associated with genetic risk at both chromosomes 1q32 and 10q26. — *Proceedings of the National Academy of Sciences of the United States of America* [human] tags=choroid v=v2.0-new
+- PMID35696413 (2022) Suppression of choroidal neovascularization and epithelial-mesenchymal transition in retinal pigmented epithelium by adeno-associated virus-mediated overexpression of CCN5 in mice. — *PloS one* [mouse] tags=choroid v=v2.0-new
+- PMID36714840 (2022) Vascular endothelial growth factor from retinal pigment epithelium is essential in choriocapillaris and axial length maintenance. — *PNAS nexus* [both] tags=choroid v=v2.0-new
+- PMID35614998 (2022) CRISPR-based VEGF suppression using paired guide RNAs for treatment of choroidal neovascularization. — *Molecular therapy. Nucleic acids* [both] tags=choroid v=v2.0-new
+- PMID34983929 (2022) Widespread choroid plexus contamination in sampling and profiling of brain tissue. — *Molecular psychiatry* [human] tags=choroid v=v2.0-new
+- PMID35379313 (2022) Olfactory receptor 78 is expressed in hypothalamic vasopressin/oxytocin neurons, parenchymal microglia and choroidal macrophages in mice. — *Molecular brain* [mouse] tags=choroid v=v2.0-new
+- PMID35027063 (2022) Immune response and pathogen invasion at the choroid plexus in the onset of cerebral toxoplasmosis. — *Journal of neuroinflammation* [human] tags=choroid v=v2.0-new
+- PMID36127870 (2022) Delayed regression of laser-induced choroidal neovascularization in TNFα-null mice. — *Journal of cellular and molecular medicine* [both] tags=choroid v=v2.0-new
+- PMID35653189 (2022) ANGPTL4 influences the therapeutic response of patients with neovascular age-related macular degeneration by promoting choroidal neovascularization. — *JCI insight* [both] tags=choroid v=v2.0-new
+- PMID35394492 (2022) Identification of CD157-Positive Vascular Endothelial Stem Cells in Mouse Retinal and Choroidal Vessels: Fluorescence-Activated Cell Sorting Analysis. — *Investigative ophthalmology & visual science* [mouse] tags=choroid,retina v=v1.0
+- PMID35682601 (2022) The Expression of Connexin 37, 40, 43, 45 and Pannexin 1 in the Early Human Retina and Choroid Development and Tumorigenesis. — *International journal of molecular sciences* [human] tags=choroid v=v2.0-new
+- PMID36077073 (2022) Absence of Gut Microbiota Is Associated with RPE/Choroid Transcriptomic Changes Related to Age-Related Macular Degeneration Pathobiology and Decreased Choroidal Neovascularization. — *International journal of molecular sciences* [mouse] tags=choroid v=v2.0-new
+- PMID36142120 (2022) <i>HTRA1</i> Regulates Subclinical Inflammation and Activates Proangiogenic Response in the Retina and Choroid. — *International journal of molecular sciences* [mouse] tags=choroid v=v2.0-new
+- PMID36555236 (2022) Decreased Expression of Soluble Epoxide Hydrolase Suppresses Murine Choroidal Neovascularization. — *International journal of molecular sciences* [both] tags=choroid v=v2.0-new
+- PMID35181781 (2022) Choroidal endothelial and macrophage gene expression in atrophic and neovascular macular degeneration. — *Human molecular genetics* [human] tags=choroid v=v2.0-new
+- PMID36199690 (2022) Metabolomics study of treatment response to conbercept of patients with neovascular age-related macular degeneration and polypoidal choroidal vasculopathy. — *Frontiers in pharmacology* [human] tags=choroid v=v2.0-new
+- PMID35250585 (2022) Dihydroartemisinin Inhibits Laser-Induced Choroidal Neovascularization in a Mouse Model of Neovascular AMD. — *Frontiers in pharmacology* [mouse] tags=choroid v=v2.0-new
+- PMID35784301 (2022) Dabigatran and Wet AMD, Results From Retinal Pigment Epithelial Cell Monolayers, the Mouse Model of Choroidal Neovascularization, and Patients From the Medicare Data Base. — *Frontiers in immunology* [both] tags=choroid v=v2.0-new
+- PMID35265621 (2022) Long Non-Coding RNA PNKY Modulates the Development of Choroidal Neovascularization. — *Frontiers in cell and developmental biology* [both] tags=choroid v=v2.0-new
+- PMID36408112 (2022) Intercellular communication analysis of the human retinal pigment epithelial and choroidal cells predicts pathways associated with aging, cellular senescence and age-related macular degeneration. — *Frontiers in aging neuroscience* [human] tags=RPE,choroid,retina v=v1.0
+- PMID35659263 (2022) Transcriptional profiling of transport mechanisms and regulatory pathways in rat choroid plexus. — *Fluids and barriers of the CNS* [other:rat] tags=brain_choroid_plexus NOT_ocular_choroid v=v2.0-new <!-- KB1v2d 2026-09-23: 原标 tags=choroid/[both] 为词面撞库错标 (脑脉络丛≠眼脉络膜, species=大鼠), 已纠正并挂排除建议标记; 语料处置待用户拍板 -->
+- PMID35248156 (2022) Transcription factor Foxp1 is essential for the induction of choroidal neovascularization. — *Eye and vision (London, England)* [both] tags=choroid v=v2.0-new
+- PMID34779136 (2022) LIF, a mitogen for choroidal endothelial cells, protects the choriocapillaris: implications for prevention of geographic atrophy. — *EMBO molecular medicine* [both] tags=choroid v=v2.0-new
+- PMID36421348 (2022) Value of Combined Diagnosis for Choroidal Lymphoma: A Case Report. — *Current oncology (Toronto, Ont.)* [human] tags=choroid v=v2.0-new
+- PMID35027657 (2022) Human immunocompetent choroid-on-chip: a novel tool for studying ocular effects of biological drugs. — *Communications biology* [human] tags=choroid v=v2.0-new
+- PMID35326420 (2022) Fingolimod (FTY720), a Sphinogosine-1-Phosphate Receptor Agonist, Mitigates Choroidal Endothelial Proangiogenic Properties and Choroidal Neovascularization. — *Cells* [human] tags=choroid v=v2.0-new
+- PMID36010651 (2022) Intraocular RGD-Engineered Exosomes and Active Targeting of Choroidal Neovascularization (CNV). — *Cells* [mouse] tags=choroid v=v2.0-new
+- PMID35406581 (2022) Fundus Autofluorescence Imaging in Patients with Choroidal Melanoma. — *Cancers* [human] tags=choroid v=v2.0-new
+- PMID35830274 (2022) Suppression of myeloid PFKFB3-driven glycolysis protects mice from choroidal neovascularization. — *British journal of pharmacology* [mouse] tags=choroid v=v2.0-new
+- PMID35884958 (2022) Role of Erythropoietin Receptor Signaling in Macrophages or Choroidal Endothelial Cells in Choroidal Neovascularization. — *Biomedicines* [both] tags=choroid v=v2.0-new
+- PMID35884862 (2022) Matrix Metalloproteinase 10 Contributes to Choroidal Neovascularisation. — *Biomedicines* [both] tags=choroid v=v2.0-new
+- PMID35310341 (2022) Tetrahedral framework nucleic acids-based delivery of microRNA-155 inhibits choroidal neovascularization by regulating the polarization of macrophages. — *Bioactive materials* [both] tags=choroid v=v2.0-new
+- PMID35164755 (2022) Hyaluronidase-1-mediated glycocalyx impairment underlies endothelial abnormalities in polypoidal choroidal vasculopathy. — *BMC biology* [human] tags=choroid v=v2.0-new
+- PMID36267780 (2022) Regulator of G-protein signaling 1 promotes choroidal neovascularization in age-related macular degeneration. — *Annals of translational medicine* [both] tags=choroid v=v2.0-new
+- PMID34608867 (2021) Visually induced changes in cytokine production in the chick choroid. — *eLife* [human] tags=choroid v=v2.0-new
+- PMID32522791 (2021) Nuclear expression of BAP-1 in transvitreal incisional biopsies and subsequent enucleation of eyes with posterior choroidal melanoma. — *The British journal of ophthalmology* [human] tags=choroid v=v2.0-new
+- PMID34117330 (2021) Expression of purinergic receptors on microglia in the animal model of choroidal neovascularisation. — *Scientific reports* [mouse] tags=choroid v=v2.0-new
+- PMID34446787 (2021) Dendritic cells play no significant role in the laser-induced choroidal neovascularization model. — *Scientific reports* [mouse] tags=choroid v=v2.0-new
+- PMID34508129 (2021) Macrophage-derived interleukin-6 is necessary and sufficient for choroidal angiogenesis. — *Scientific reports* [both] tags=choroid v=v2.0-new
+- PMID34585146 (2021) Protocols for endothelial cell isolation from mouse tissues: brain, choroid, lung, and muscle. — *STAR protocols* [mouse] tags=choroid v=v2.0-new
+- PMID33513185 (2021) Low frequency mitochondrial DNA heteroplasmy SNPs in blood, retina, and [RPE+choroid] of age-related macular degeneration subjects. — *PloS one* [human] tags=choroid v=v2.0-new
+- PMID33507997 (2021) Choroidal congestion mouse model: Could it serve as a pachychoroid model? — *PloS one* [mouse] tags=choroid v=v2.0-new
+- PMID34452268 (2021) A Fully Human Monoclonal Antibody Targeting cKIT Is a Potent Inhibitor of Pathological Choroidal Neovascularization in Mice. — *Pharmaceutics* [both] tags=choroid v=v2.0-new
+- PMID34071184 (2021) A Pulmonary Pleomorphic Carcinoma Patient with Exudative Retinal Detachment Secondary to Choroid Metastasis as Initial Presentation-A Case Report. — *Medicina (Kaunas, Lithuania)* [human] tags=choroid v=v2.0-new
+- PMID34183443 (2021) TPC2 promotes choroidal angiogenesis and inflammation in a mouse model of neovascular age-related macular degeneration. — *Life science alliance* [both] tags=choroid v=v2.0-new
+- PMID34544421 (2021) The role of interferon regulatory factor 8 for retinal tissue homeostasis and development of choroidal neovascularisation. — *Journal of neuroinflammation* [mouse] tags=choroid,retina v=v1.0
+- PMID34304733 (2021) Progranulin deficiency in Iba-1<sup>+</sup> myeloid cells exacerbates choroidal neovascularization by perturbation of lysosomal function and abnormal inflammation. — *Journal of neuroinflammation* [mouse] tags=choroid v=v2.0-new
+- PMID34057287 (2021) The P300/XBP1s/Herpud1 axis promotes macrophage M2 polarization and the development of choroidal neovascularization. — *Journal of cellular and molecular medicine* [both] tags=choroid v=v2.0-new
+- PMID33729474 (2021) Choroidal and Retinal Changes After Systemic Adrenaline and Photodynamic Therapy in Non-Human Primates. — *Investigative ophthalmology & visual science* [human] tags=choroid v=v2.0-new
+- PMID34948115 (2021) Immunosenescence in Choroidal Neovascularization (CNV)-Transcriptional Profiling of Naïve and CNV-Associated Retinal Myeloid Cells during Aging. — *International journal of molecular sciences* [mouse] tags=choroid,retina v=v1.0
+- PMID34769482 (2021) The Anti-Inflammatory Effect of Hydrogen Gas Inhalation and Its Influence on Laser-Induced Choroidal Neovascularization in a Mouse Model of Neovascular Age-Related Macular Degeneration. — *International journal of molecular sciences* [mouse] tags=choroid v=v2.0-new
+- PMID34445595 (2021) Role of Activating Transcription Factor 4 in Murine Choroidal Neovascularization Model. — *International journal of molecular sciences* [both] tags=choroid v=v2.0-new
+- PMID34395527 (2021) Molecular and Cellular Studies Reveal Folding Defects of Human Ornithine Aminotransferase Variants Associated With Gyrate Atrophy of the Choroid and Retina. — *Frontiers in molecular biosciences* [human] tags=choroid v=v2.0-new
+- PMID33716674 (2021) Key Role of Microglial Matrix Metalloproteinases in Choroidal Neovascularization. — *Frontiers in cellular neuroscience* [both] tags=choroid v=v2.0-new
+- PMID33681224 (2021) SLC7A11 Reduces Laser-Induced Choroidal Neovascularization by Inhibiting RPE Ferroptosis and VEGF Production. — *Frontiers in cell and developmental biology* [both] tags=choroid v=v2.0-new
+- PMID34659513 (2021) Receptor-selective interleukin-4 mutein attenuates laser-induced choroidal neovascularization through the regulation of macrophage polarization in mice. — *Experimental and therapeutic medicine* [mouse] tags=choroid v=v2.0-new
+- PMID33876574 (2021) Myeloid-resident neuropilin-1 promotes choroidal neovascularization while mitigating inflammation. — *EMBO molecular medicine* [human] tags=choroid v=v2.0-new
+- PMID34688035 (2021) Myeloid lineage contributes to pathological choroidal neovascularization formation via SOCS3. — *EBioMedicine* [both] tags=choroid v=v2.0-new
+- PMID33804633 (2021) Cell-Matrix Interactions in the Eye: From Cornea to Choroid. — *Cells* [human] tags=choroid v=v2.0-new
+- PMID33922434 (2021) Glycine-Conjugated Bile Acids Protect RPE Tight Junctions against Oxidative Stress and Inhibit Choroidal Endothelial Cell Angiogenesis In Vitro. — *Biomolecules* [human] tags=RPE,choroid v=v2.0-new
+- PMID33652861 (2021) Activated Protein C (APC) and 3K3A-APC-Induced Regression of Choroidal Neovascularization (CNV) Is Accompanied by Vascular Endothelial Growth Factor (VEGF) Reduction. — *Biomolecules* [mouse] tags=choroid v=v2.0-new
+- PMID34819035 (2021) No differences in the long-term prognosis of iris and choroidal melanomas when adjusting for tumor thickness and diameter. — *BMC cancer* [human] tags=choroid,iris v=v2.0-new
+- PMID33952723 (2021) Intravitreal injection of anti-miRs against miR-142-3p reduces angiogenesis and microglia activation in a mouse model of laser-induced choroidal neovascularization. — *Aging* [both] tags=choroid v=v2.0-new
+- PMID33305736 (2020) Distinct effects of complement and of NLRP3- and non-NLRP3 inflammasomes for choroidal neovascularization. — *eLife* [mouse] tags=choroid v=v2.0-new
+- PMID32818091 (2020) A Two-Stage Laser-Induced Mouse Model of Subretinal Fibrosis Secondary to Choroidal Neovascularization. — *Translational vision science & technology* [mouse] tags=choroid v=v2.0-new
+- PMID32704424 (2020) VEGFR1-Targeted Contrast-Enhanced Ultrasound Imaging Quantification of Vasculogenic Mimicry Microcirculation in a Mouse Model of Choroidal Melanoma. — *Translational vision science & technology* [mouse] tags=choroid v=v2.0-new
+- PMID32509436 (2020) Visualization of Mouse Choroidal and Retinal Vasculature Using Fluorescent Tomato Lectin Perfusion. — *Translational vision science & technology* [mouse] tags=choroid v=v2.0-new
+- PMID32194869 (2020) Circular RNA-ZBTB44 regulates the development of choroidal neovascularization. — *Theranostics* [both] tags=choroid v=v2.0-new
+- PMID32196081 (2020) Single-cell profiling reveals an endothelium-mediated immunomodulatory pathway in the eye choroid. — *The Journal of experimental medicine* [mouse] tags=choroid v=v2.0-new
+- PMID32967716 (2020) Stepwise differentiation and functional characterization of human induced pluripotent stem cell-derived choroidal endothelial cells. — *Stem cell research & therapy* [human] tags=choroid v=v2.0-new
+- PMID33575527 (2020) Iris extramedullary hematopoiesis in choroidal melanoma. — *Saudi journal of ophthalmology : official journal of the Saudi Ophthalmological Society* [human] tags=choroid v=v2.0-new
+- PMID31910216 (2020) Relationship between diabetic macular edema and choroidal layer thickness. — *PloS one* [human] tags=choroid v=v2.0-new
+- PMID32128346 (2020) Factors Impacting Efficacy of AAV-Mediated CRISPR-Based Genome Editing for Treatment of Choroidal Neovascularization. — *Molecular therapy. Methods & clinical development* [both] tags=choroid v=v2.0-new
+- PMID32323767 (2020) Pirfenidone ameliorates the formation of choroidal neovascularization in mice. — *Molecular medicine reports* [mouse] tags=choroid v=v2.0-new
+- PMID33187533 (2020) Ocular macrophage origin and heterogeneity during steady state and experimental choroidal neovascularization. — *Journal of neuroinflammation* [both] tags=choroid v=v2.0-new
+- PMID32334433 (2020) Parsimonious Models for Predicting Mortality from Choroidal Melanoma. — *Investigative ophthalmology & visual science* [human] tags=choroid v=v2.0-new
+- PMID32692840 (2020) Retinal Glial and Choroidal Vascular Pathology in Donors Clinically Diagnosed With Stargardt Disease. — *Investigative ophthalmology & visual science* [human] tags=choroid v=v2.0-new
+- PMID32460310 (2020) Voluntary Exercise Suppresses Choroidal Neovascularization in Mice. — *Investigative ophthalmology & visual science* [mouse] tags=choroid v=v2.0-new
+- PMID32749462 (2020) A Clinical Metabolite of Azidothymidine Inhibits Experimental Choroidal Neovascularization and Retinal Pigmented Epithelium Degeneration. — *Investigative ophthalmology & visual science* [mouse] tags=choroid v=v2.0-new
+- PMID32245120 (2020) Alpha-Smooth Muscle Actin-Positive Perivascular Cells in Diabetic Retina and Choroid. — *International journal of molecular sciences* [mouse] tags=choroid v=v2.0-new
+- PMID31936463 (2020) Oral Delivery of a Tetrameric Tripeptide Inhibitor of VEGFR1 Suppresses Pathological Choroid Neovascularization. — *International journal of molecular sciences* [both] tags=choroid v=v2.0-new
+- PMID33536932 (2020) Effects of Simulated Microgravity on Ultrastructure and Apoptosis of Choroidal Vascular Endothelial Cells. — *Frontiers in physiology* [human] tags=choroid v=v2.0-new
+- PMID33585455 (2020) Secreted Phosphoprotein 1 Expression in Retinal Mononuclear Phagocytes Links Murine to Human Choroidal Neovascularization. — *Frontiers in cell and developmental biology* [both] tags=choroid,retina v=v1.0
+- PMID32678293 (2020) Combination of apolipoprotein-A-I/apolipoprotein-A-I binding protein and anti-VEGF treatment overcomes anti-VEGF resistance in choroidal neovascularization in mice. — *Communications biology* [both] tags=choroid v=v2.0-new
+- PMID32143276 (2020) Role of FGF and Hyaluronan in Choroidal Neovascularization in Sorsby Fundus Dystrophy. — *Cells* [both] tags=choroid v=v2.0-new
+- PMID33247124 (2020) Fruquintinib inhibits VEGF/VEGFR2 axis of choroidal endothelial cells and M1-type macrophages to protect against mouse laser-induced choroidal neovascularization. — *Cell death & disease* [both] tags=choroid v=v2.0-new
+- PMID33272243 (2020) Epidermal growth factor receptor-mutant non-small cell lung Cancer and Choroidal metastases: long-term outcome and response to epidermal growth factor receptor tyrosine kinase inhibitors. — *BMC cancer* [human] tags=choroid v=v2.0-new
+- PMID31973769 (2020) N-acetylcysteine inhibits bacterial lipopeptide-mediated neutrophil transmigration through the choroid plexus in the developing brain. — *Acta neuropathologica communications* [mouse] tags=choroid v=v2.0-new
+
+---
+<!-- KB1V2-WIKILINKS v1.1 -->
+## 判读层链接 (判读层链接版本: KB1v2 (2026-09-23, t_16c3e020))
+
+- **组成基线**: [kb/baselines/choroid.md](/mnt/D/EyeKB/kb/baselines/choroid.md) — 供者级条件参考分布 (锚定 registry 标准集或 t_6f5cc731 映射)
+- **RAG reason-tag**: 每条 PMID 的入库原因/论断关系/证据条件见 `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (键=pmid; 字段 inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` 命中自动联表带出
+- **概念 ID 映射**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
+- 红线: 本页与全部链接内容仅证据引用与 QC 旗, 禁入打分 (ANNOTATION_PROTOCOL_v1.1.md §0)

@@ -1,0 +1,440 @@
+{
+ "version": "cl-annot-v1.0",
+ "generated_at": "2026-09-24T23:33:55+0800",
+ "directive": "/mnt/D/OcularKB/WIKI/USER_DIRECTIVE_20260924_cell_ontology_naming.md",
+ "prereg": {
+  "file": "/mnt/D/EyeKB/plans/kb5v3_20260924/KB5V3_PREREG.md",
+  "sha256": "77a63bf8a85db6e1dbafa4242f7c554b0aef3d2201d227def85bbad1f5859325"
+ },
+ "card": "t_a1721931 (EyeKB-KB5v3)",
+ "ols_client": {
+  "api": "OLS4 (EBI)",
+  "tool": "/mnt/D/EyeKB/plans/kb5v3_20260924/cl_lookup.py + s2_ols_evidence.py",
+  "evidence_dir": "/mnt/D/EyeKB/plans/kb5v3_20260924/ols_evidence",
+  "rule": "所有 cl_id 均经 by-iri 直取回证; 凭记忆填号一律禁止"
+ },
+ "errata_cl_ids": {
+  "card_body_wrong": {
+   "claimed": {
+    "Astro": "CL:0000130",
+    "MG": "CL:0000644"
+   },
+   "actual_labels": {
+    "CL:0000130": "neuron associated cell (sensu Nematoda and Protostomia)",
+    "CL:0000644": "Bergmann glial cell"
+   },
+   "corrected": {
+    "Astro": "CL:0000127",
+    "MG": "CL:0000636"
+   }
+  },
+  "directive_example_wrong": {
+   "claimed": "CL:0000304 photoreceptor rod cell",
+   "actual": "obsolete IgA B cell",
+   "corrected_rod": "CL:0000604 retinal rod cell"
+  }
+ },
+ "annotations": {
+  "markers_v4.1_clean": {
+   "source_file": "/mnt/D/EyeKB/kb/markers/markers_v4.1_clean.json",
+   "words": {
+    "Rod": {
+     "cl_id": "CL:0000604",
+     "cl_label": "retinal rod cell",
+     "cl_def_summary": "One of the two photoreceptor cell types of the vertebrate retina. In rods the photopigment is in stacks of membranous disks separate from the outer cell membrane. Rods are more sensitive to light than cones, but rod mediated vision has less spatial and temporal resolution than cone vision.",
+     "cl_synonyms": [
+      "rod"
+     ],
+     "ols_evidence_file": "core_Rod_CL_0000604.json"
+    },
+    "Cone": {
+     "cl_id": "CL:0000573",
+     "cl_label": "retinal cone cell",
+     "cl_def_summary": "One of the two photoreceptor cell types in the vertebrate retina. In cones the photopigment is in invaginations of the cell membrane of the outer segment. Cones are less sensitive to light than rods, but they provide vision with higher spatial and temporal acuity, and the combination of signals from",
+     "cl_synonyms": [
+      "cone"
+     ],
+     "ols_evidence_file": "core_Cone_CL_0000573.json"
+    },
+    "BC": {
+     "cl_id": "CL:0000748",
+     "cl_label": "retinal bipolar neuron",
+     "cl_def_summary": "A bipolar neuron found in the retina and having connections with photoreceptors cells and neurons in the inner plexiform layer.",
+     "cl_synonyms": [],
+     "ols_evidence_file": "core_BC_CL_0000748.json"
+    },
+    "AC": {
+     "cl_id": "CL:0000561",
+     "cl_label": "amacrine cell",
+     "cl_def_summary": "Interneuron of the vertebrate retina. They integrate, modulate, and interpose a temporal domain in the visual message presented to the retinal ganglion cells, with which they synapse in the inner plexiform layer. They lack large axons.",
+     "cl_synonyms": [
+      "amacrine neuron"
+     ],
+     "ols_evidence_file": "core_AC_CL_0000561.json"
+    },
+    "HC": {
+     "cl_id": "CL:0000745",
+     "cl_label": "retina horizontal cell",
+     "cl_def_summary": "A neuron that laterally connects other neurons in the inner nuclear layer of the retina.",
+     "cl_synonyms": [
+      "horizontal cell"
+     ],
+     "ols_evidence_file": "core_HC_CL_0000745.json"
+    },
+    "RGC": {
+     "cl_id": "CL:0000740",
+     "cl_label": "retinal ganglion cell",
+     "cl_def_summary": "The set of neurons that receives neural inputs via bipolar, horizontal and amacrine cells. The axons of these cells make up the optic nerve.",
+     "cl_synonyms": [
+      "gangliocyte",
+      "ganglion cell of retina"
+     ],
+     "ols_evidence_file": "core_RGC_CL_0000740.json"
+    },
+    "MG": {
+     "cl_id": "CL:0000636",
+     "cl_label": "Mueller cell",
+     "cl_def_summary": "Astrocyte-like radial glial cell that extends vertically throughout the retina, with the nucleus are usually in the middle of the inner nuclear layer.",
+     "cl_synonyms": [
+      "Muller glia",
+      "Müller cell"
+     ],
+     "ols_evidence_file": "core_MG_CL_0000636.json",
+     "granularity_note": "MG/Astro 粒度限制(D001 实测): 现行 MG 词条 {RLBP1,GLUL,SOX9,VIM,S100B} 中 4/5 基因在参考系 best-class 非 MG 或无特异性(GLUL MG1908/Astro2099, SOX9 反向, VIM 共享, S100B MG≈0); 真 MG 优势基因(如 RLBP1 MG1018/Astro70)依赖 RPE 排除。Astro 词条强锚仅 GFAP(lfc3.56)+S100B。两词条共享 VIM/S100B → 判读端 n_shared 计数会误导(Q2::22 实测: 三方判 MG 而 v2_prod 细胞级 100% Astro)。修复路线=MG 词条按 D001 侧重导出(候选见 KB5V3 报告 §5, v6 另卡), 本注记不动面板。"
+    },
+    "Astro": {
+     "cl_id": "CL:0000127",
+     "cl_label": "astrocyte",
+     "cl_def_summary": "Astrocytes are reportedly CD68-negative, CD121a-positive, CD184-positive, CD192-positive, CRF-positive, EGFR-positive, GFAP-positive, GLUT1-positive, MBP-negative, and NGFR-positive.",
+     "cl_synonyms": [
+      "astrocytic glia"
+     ],
+     "ols_evidence_file": "core_Astro_CL_0000127.json",
+     "granularity_note": "MG/Astro 粒度限制(D001 实测): 现行 MG 词条 {RLBP1,GLUL,SOX9,VIM,S100B} 中 4/5 基因在参考系 best-class 非 MG 或无特异性(GLUL MG1908/Astro2099, SOX9 反向, VIM 共享, S100B MG≈0); 真 MG 优势基因(如 RLBP1 MG1018/Astro70)依赖 RPE 排除。Astro 词条强锚仅 GFAP(lfc3.56)+S100B。两词条共享 VIM/S100B → 判读端 n_shared 计数会误导(Q2::22 实测: 三方判 MG 而 v2_prod 细胞级 100% Astro)。修复路线=MG 词条按 D001 侧重导出(候选见 KB5V3 报告 §5, v6 另卡), 本注记不动面板。"
+    },
+    "Micro": {
+     "cl_id": "CL:0000129",
+     "cl_label": "microglial cell",
+     "cl_def_summary": "A transcriptomically distinct central nervous system macrophage found in the parenchyma of the central nervous system. Marker include CD11b-positive, F4/80-positive, and CD68-positive.",
+     "cl_synonyms": [
+      "MF.microglia.CNS",
+      "brain macrophage",
+      "brain-resident macrophage",
+      "hortega cells",
+      "microgliocyte"
+     ],
+     "ols_evidence_file": "core_Micro_CL_0000129.json"
+    },
+    "RPE": {
+     "cl_id": "CL:0002586",
+     "cl_label": "retinal pigment epithelial cell",
+     "cl_def_summary": "An epithelial cell of the retinal pigmented epithelium.",
+     "cl_synonyms": [],
+     "ols_evidence_file": "core_RPE_CL_0002586.json"
+    }
+   },
+   "source_sha256": "867877d56fd3df0ff73e8cdc8742ec0b05596539c89ffacca1a58642f3580669"
+  },
+  "markers_v5_retina_interneuron": {
+   "source_file": "/mnt/D/EyeKB/kb/markers/markers_v5_retina_interneuron.json",
+   "words": {
+    "Rod": {
+     "cl_id": "CL:0000604",
+     "cl_label": "retinal rod cell",
+     "cl_def_summary": "One of the two photoreceptor cell types of the vertebrate retina. In rods the photopigment is in stacks of membranous disks separate from the outer cell membrane. Rods are more sensitive to light than cones, but rod mediated vision has less spatial and temporal resolution than cone vision.",
+     "cl_synonyms": [
+      "rod"
+     ],
+     "ols_evidence_file": "core_Rod_CL_0000604.json"
+    },
+    "Cone": {
+     "cl_id": "CL:0000573",
+     "cl_label": "retinal cone cell",
+     "cl_def_summary": "One of the two photoreceptor cell types in the vertebrate retina. In cones the photopigment is in invaginations of the cell membrane of the outer segment. Cones are less sensitive to light than rods, but they provide vision with higher spatial and temporal acuity, and the combination of signals from",
+     "cl_synonyms": [
+      "cone"
+     ],
+     "ols_evidence_file": "core_Cone_CL_0000573.json"
+    },
+    "BC": {
+     "cl_id": "CL:0000748",
+     "cl_label": "retinal bipolar neuron",
+     "cl_def_summary": "A bipolar neuron found in the retina and having connections with photoreceptors cells and neurons in the inner plexiform layer.",
+     "cl_synonyms": [],
+     "ols_evidence_file": "core_BC_CL_0000748.json",
+     "subtype_refs": {
+      "RB": {
+       "cl_id": "CL:0000751",
+       "cl_label": "rod bipolar cell",
+       "cl_def_summary": "A bipolar neuron found in the retina that is synapsed by rod photoreceptor cells but not by cone photoreceptor cells.  These neurons depolarize in response to light.",
+       "cl_synonyms": [],
+       "ols_evidence_file": "subtype_RB_CL_0000751.json"
+      },
+      "DB1": {
+       "cl_id": "CL:4033027",
+       "cl_label": "diffuse bipolar 1 cell",
+       "cl_def_summary": "An OFF diffuse bipolar cell that makes synaptic contact with both L/M and S-cone photoreceptors and only minimal contact with rod photoreceptors.",
+       "cl_synonyms": [
+        "DB1 bipolar cell",
+        "DB1 bipolar",
+        "DB1 cell",
+        "Diffuse Bipolar Cell Type DB1"
+       ],
+       "ols_evidence_file": "subtype_DB1_CL_4033027.json"
+      },
+      "DB2": {
+       "cl_id": "CL:4033028",
+       "cl_label": "diffuse bipolar 2 cell",
+       "cl_def_summary": "An OFF diffuse bipolar cell that predominantly connects to ON parasol cells and lateral amacrine cells. This cell contains a large number of synaptic ribbons and a small axon arbor area.",
+       "cl_synonyms": [
+        "DB2 cell"
+       ],
+       "ols_evidence_file": "subtype_DB2_CL_4033028.json"
+      },
+      "DB5": {
+       "cl_id": "CL:4033085",
+       "cl_label": "diffuse bipolar 5 cell",
+       "cl_def_summary": "A diffuse bipolar 5 cell typically contacts 7–8 cone photoreceptors. The number and thickness of its dendritic processes are intermediate between those of a diffuse bipolar 6 cell (less dense and thinner) and a diffuse bipolar 4 cell (denser and thicker).",
+       "cl_synonyms": [
+        "DB5 cell"
+       ],
+       "ols_evidence_file": "subtype_DB5_CL_4033085.json"
+      },
+      "FMB": {
+       "cl_id": "CL:4033033",
+       "cl_label": "flat midget bipolar cell",
+       "cl_def_summary": "An OFF bipolar cell with a small dendritic tree that provides most of the triad-associated basal (flat) contacts at cone pedicles.",
+       "cl_synonyms": [
+        "FMB cell"
+       ],
+       "ols_evidence_file": "subtype_FMB_CL_4033033.json"
+      },
+      "IMB": {
+       "cl_id": "CL:4033034",
+       "cl_label": "invaginating midget bipolar cell",
+       "cl_def_summary": "An ON bipolar cell with a small dendritic tree that forms most of the central (invaginating) elements opposite the synaptic ribbon at the cone triad.",
+       "cl_synonyms": [
+        "IMB cell"
+       ],
+       "ols_evidence_file": "subtype_IMB_CL_4033034.json"
+      },
+      "ON-BC": {
+       "cl_id": "CL:0000749",
+       "cl_label": "ON-bipolar cell",
+       "cl_def_summary": "A bipolar neuron found in the retina and having connections with photoreceptors cells and neurons in the inner half of the inner plexiform layer. These cells depolarize in response to light stimulation of their corresponding photoreceptors.",
+       "cl_synonyms": [],
+       "ols_evidence_file": "subtype_ON_BC_CL_0000749.json"
+      },
+      "OFF-BC": {
+       "cl_id": "CL:0000750",
+       "cl_label": "OFF Bipolar cell",
+       "cl_def_summary": "A bipolar neuron found in the retina and having connections with photoreceptors cells and neurons in the outer half of the inner plexiform layer. These cells depolarize in response to light to dark transition.",
+       "cl_synonyms": [],
+       "ols_evidence_file": "subtype_OFF_BC_CL_0000750.json"
+      }
+     }
+    },
+    "AC": {
+     "cl_id": "CL:0000561",
+     "cl_label": "amacrine cell",
+     "cl_def_summary": "Interneuron of the vertebrate retina. They integrate, modulate, and interpose a temporal domain in the visual message presented to the retinal ganglion cells, with which they synapse in the inner plexiform layer. They lack large axons.",
+     "cl_synonyms": [
+      "amacrine neuron"
+     ],
+     "ols_evidence_file": "core_AC_CL_0000561.json",
+     "subtype_refs": {
+      "AII": "NO_MATCH",
+      "HAC2": "NO_MATCH",
+      "HAC3": "NO_MATCH",
+      "HAC4": "NO_MATCH",
+      "HAC5": "NO_MATCH",
+      "HAC6": "NO_MATCH"
+     }
+    },
+    "HC": {
+     "cl_id": "CL:0000745",
+     "cl_label": "retina horizontal cell",
+     "cl_def_summary": "A neuron that laterally connects other neurons in the inner nuclear layer of the retina.",
+     "cl_synonyms": [
+      "horizontal cell"
+     ],
+     "ols_evidence_file": "core_HC_CL_0000745.json",
+     "subtype_refs": {
+      "H1": {
+       "cl_id": "CL:0004217",
+       "cl_label": "H1 horizontal cell",
+       "cl_def_summary": "A horizontal cell with a large cell body, thick dendrites, and a large dendritic arbor.",
+       "cl_synonyms": [
+        "A Horizontal Cell"
+       ],
+       "ols_evidence_file": "subtype_H1_CL_0004217.json"
+      },
+      "H2": {
+       "cl_id": "CL:0004218",
+       "cl_label": "H2 horizontal cell",
+       "cl_def_summary": "A horizontal cell with a small cell body, thin dendrites, and small dendritic arbor.",
+       "cl_synonyms": [
+        "B Horizontal Cell"
+       ],
+       "ols_evidence_file": "subtype_H2_CL_0004218.json"
+      }
+     }
+    },
+    "RGC": {
+     "cl_id": "CL:0000740",
+     "cl_label": "retinal ganglion cell",
+     "cl_def_summary": "The set of neurons that receives neural inputs via bipolar, horizontal and amacrine cells. The axons of these cells make up the optic nerve.",
+     "cl_synonyms": [
+      "gangliocyte",
+      "ganglion cell of retina"
+     ],
+     "ols_evidence_file": "core_RGC_CL_0000740.json"
+    },
+    "MG": {
+     "cl_id": "CL:0000636",
+     "cl_label": "Mueller cell",
+     "cl_def_summary": "Astrocyte-like radial glial cell that extends vertically throughout the retina, with the nucleus are usually in the middle of the inner nuclear layer.",
+     "cl_synonyms": [
+      "Muller glia",
+      "Müller cell"
+     ],
+     "ols_evidence_file": "core_MG_CL_0000636.json",
+     "granularity_note": "MG/Astro 粒度限制(D001 实测): 现行 MG 词条 {RLBP1,GLUL,SOX9,VIM,S100B} 中 4/5 基因在参考系 best-class 非 MG 或无特异性(GLUL MG1908/Astro2099, SOX9 反向, VIM 共享, S100B MG≈0); 真 MG 优势基因(如 RLBP1 MG1018/Astro70)依赖 RPE 排除。Astro 词条强锚仅 GFAP(lfc3.56)+S100B。两词条共享 VIM/S100B → 判读端 n_shared 计数会误导(Q2::22 实测: 三方判 MG 而 v2_prod 细胞级 100% Astro)。修复路线=MG 词条按 D001 侧重导出(候选见 KB5V3 报告 §5, v6 另卡), 本注记不动面板。"
+    },
+    "Astro": {
+     "cl_id": "CL:0000127",
+     "cl_label": "astrocyte",
+     "cl_def_summary": "Astrocytes are reportedly CD68-negative, CD121a-positive, CD184-positive, CD192-positive, CRF-positive, EGFR-positive, GFAP-positive, GLUT1-positive, MBP-negative, and NGFR-positive.",
+     "cl_synonyms": [
+      "astrocytic glia"
+     ],
+     "ols_evidence_file": "core_Astro_CL_0000127.json",
+     "granularity_note": "MG/Astro 粒度限制(D001 实测): 现行 MG 词条 {RLBP1,GLUL,SOX9,VIM,S100B} 中 4/5 基因在参考系 best-class 非 MG 或无特异性(GLUL MG1908/Astro2099, SOX9 反向, VIM 共享, S100B MG≈0); 真 MG 优势基因(如 RLBP1 MG1018/Astro70)依赖 RPE 排除。Astro 词条强锚仅 GFAP(lfc3.56)+S100B。两词条共享 VIM/S100B → 判读端 n_shared 计数会误导(Q2::22 实测: 三方判 MG 而 v2_prod 细胞级 100% Astro)。修复路线=MG 词条按 D001 侧重导出(候选见 KB5V3 报告 §5, v6 另卡), 本注记不动面板。"
+    },
+    "Micro": {
+     "cl_id": "CL:0000129",
+     "cl_label": "microglial cell",
+     "cl_def_summary": "A transcriptomically distinct central nervous system macrophage found in the parenchyma of the central nervous system. Marker include CD11b-positive, F4/80-positive, and CD68-positive.",
+     "cl_synonyms": [
+      "MF.microglia.CNS",
+      "brain macrophage",
+      "brain-resident macrophage",
+      "hortega cells",
+      "microgliocyte"
+     ],
+     "ols_evidence_file": "core_Micro_CL_0000129.json"
+    },
+    "RPE": {
+     "cl_id": "CL:0002586",
+     "cl_label": "retinal pigment epithelial cell",
+     "cl_def_summary": "An epithelial cell of the retinal pigmented epithelium.",
+     "cl_synonyms": [],
+     "ols_evidence_file": "core_RPE_CL_0002586.json"
+    }
+   },
+   "source_sha256": "6e6cbf20e7b5f2601dda9575610b6b1872428c39ba5e4630854d84201b76a3ae"
+  },
+  "markers_membrane_v1": {
+   "source_file": "/mnt/D/EyeKB/kb/markers/markers_membrane_v1.json",
+   "words": {
+    "Keratocytes": {
+     "cl_id": "CL:0002363",
+     "cl_label": "keratocyte",
+     "cl_def_summary": "A keratocyte is a specialized fibroblast residing in the cornea stroma that has a flattened, dendritic morphology; located between the lamellae with a large flattened nucleus, and lengthy processes which communicate with neighboring cells. This corneal layer, representing about 85-90% of corneal thi",
+     "cl_synonyms": [
+      "corneal fibroblast",
+      "corneal keratocyte"
+     ],
+     "ols_evidence_file": "core_Keratocytes_CL_0002363.json"
+    },
+    "Corneal Endothelium": {
+     "cl_id": "CL:0000132",
+     "cl_label": "corneal endothelial cell",
+     "cl_def_summary": "",
+     "cl_synonyms": [],
+     "ols_evidence_file": "core_Corneal_Endothelium_CL_0000132.json"
+    }
+   },
+   "source_sha256": "63b91d7fbe3c603af973ed5ebd8361a32a56d81e22b75cde430e224607c47a4a"
+  }
+ },
+ "no_match": {
+  "subtype_terms": {
+   "AII": "cl_id: NO_MATCH (D001 作者标签/经典命名, CL 无 exact term; 禁硬挂近似条)",
+   "HAC2": "cl_id: NO_MATCH (D001 作者标签/经典命名, CL 无 exact term; 禁硬挂近似条)",
+   "HAC3": "cl_id: NO_MATCH (D001 作者标签/经典命名, CL 无 exact term; 禁硬挂近似条)",
+   "HAC4": "cl_id: NO_MATCH (D001 作者标签/经典命名, CL 无 exact term; 禁硬挂近似条)",
+   "HAC5": "cl_id: NO_MATCH (D001 作者标签/经典命名, CL 无 exact term; 禁硬挂近似条)",
+   "HAC6": "cl_id: NO_MATCH (D001 作者标签/经典命名, CL 无 exact term; 禁硬挂近似条)"
+  },
+  "membrane_other_words": "markers_membrane_v1 其余 21 词条 CL 回溯登记为 v3.1 待办",
+  "concepts_state_axis": "EYEKBC 状态轴/污染旗条目(level≠identity_major)不挂 CL identity, 仅 parent 提示"
+ },
+ "panel_gene_body": "UNCHANGED — 本件为旁挂注记, 三个源面板 JSON 字节零改动(sha 见 source_files)",
+ "v6_proposal_pointer": "/mnt/D/EyeKB/plans/kb5v3_20260924/KB5V3_COMPLETED_20260924.md §5",
+ "alias_convergence": {
+  "BC": {
+   "cl_id": "CL:0000748",
+   "cl_label": "retinal bipolar neuron",
+   "author_labels": [
+    "Q2:Bipolar"
+   ]
+  },
+  "Rod": {
+   "cl_id": "CL:0000604",
+   "cl_label": "retinal rod cell",
+   "author_labels": [
+    "Q2:Rod"
+   ]
+  },
+  "MG": {
+   "cl_id": "CL:0000636",
+   "cl_label": "Mueller cell",
+   "author_labels": [
+    "Q2:Muller"
+   ]
+  },
+  "AC": {
+   "cl_id": "CL:0000561",
+   "cl_label": "amacrine cell",
+   "author_labels": [
+    "Q2:Amacrine"
+   ]
+  },
+  "Cone": {
+   "cl_id": "CL:0000573",
+   "cl_label": "retinal cone cell",
+   "author_labels": [
+    "Q2:Cone"
+   ]
+  },
+  "Micro": {
+   "cl_id": "CL:0000129",
+   "cl_label": "microglial cell",
+   "author_labels": [
+    "Q2:Microglia"
+   ]
+  },
+  "Astro": {
+   "cl_id": "CL:0000127",
+   "cl_label": "astrocyte",
+   "author_labels": [
+    "Q2:Astrocytes"
+   ]
+  },
+  "HC": {
+   "cl_id": "CL:0000745",
+   "cl_label": "retina horizontal cell",
+   "author_labels": [
+    "Q2:Horizontal"
+   ]
+  },
+  "RGC": {
+   "cl_id": "CL:0000740",
+   "cl_label": "retinal ganglion cell",
+   "author_labels": [
+    "Q2:Ganglion"
+   ]
+  }
+ }
+}

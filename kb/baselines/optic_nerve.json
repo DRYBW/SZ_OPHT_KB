@@ -1,0 +1,4077 @@
+{
+ "schema": "eyekb-baseline/1.1",
+ "entry_id": "baseline_human_optic_nerve",
+ "tissue": "optic_nerve",
+ "species": "human",
+ "title": "组成基线: 人(正常)视神经+视神经盘 snRNA adult-only 主档 (OA-D003 HRA006282, 供者级条件参考分布, KB2c 发育轴单列)",
+ "status": "filled_donor_level",
+ "generated": "2026-09-23",
+ "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c 发育轴单列 t_be336eee)",
+ "card": "t_bad1fbab",
+ "anchor": {
+  "registry_row": "OA-D003 (CELLxGENE-OpticNerve)",
+  "registry_csv": "/mnt/D/OcularKB/registry/ocular_public_datasets_verified_v1.csv",
+  "local_path": "/mnt/D/OcularKB/data/HRA006282_optic_nerve/HRA006282_optic_nerve.h5ad",
+  "collection": "https://cellxgene.cziscience.com/collections/05e3d0fc-c9dd-4f14-9163-2b242b3bb5c2",
+  "tier": "T1 已注释标准集 (portal 官方注释, majorclass/author_cell_type/cell_type 三层)"
+ },
+ "t2_fields": {
+  "取样材料": "人视神经/视神经盘离体组织 (手术取材, 眼库供体; 区域构成: ONH (视神经盘/视乳头) 355,363核, ON (视神经) 604,266核)",
+  "疾病阶段": "normal (disease 列全 normal; 供者为系统性死亡捐献者, donor_cause_of_death 含肿瘤/脓毒症等, 眼球本身无眼病记录)",
+  "治疗背景": "未记录 (眼库捐献元数据无治疗列) —— 标'未记录', 不臆测",
+  "scRNA_vs_snRNA": "snRNA-seq (suspension_type=nucleus 100%; intronic_reads_counted=yes) —— 与 scRNA 细胞悬液条 (如 D002 眼表) 类比例不可直接互比",
+  "富集步骤": "无分选记录 (metadata 无 enrichment 列; 全组织核悬液直接上机)",
+  "解离方法": "mechanical dissociation,enzymatic dissociation×813,508核; mechanical dissociation,centrifugation×146,121核 (sample_preservation=frozen in liquid nitrogen; collection=surgical resection)",
+  "供者数": "主档 adult-only 74 donors / 98 供者单元; 对照档 adult_pool 83 donors / 107 单元 (含 9 非 adult 供者含 newborn 15,177 核 → 逐行见 excluded_nonadult_units)",
+  "计数分母": "959,629 核 (majorclass 全标注)",
+  "证据来源": "本地实测复算 (A) + CELLxGENE HRA006282 collection 官方注释 (portal) + 注册表 OA-D003"
+ },
+ "usage_scope": "用途口径 (Astra T2 裁定固化): 本基线 = 该取样材料在该实验流程下捕获到的细胞构成的身份参考 + 背景对照; **不得当组成达标线**。疾病手术材料的取样对象 ≠ 健康器官 (如 PDR 纤维血管膜不得对照健康视网膜组成验收); 注释数据出现清单外身份 → 触发 unexpected 旗即可, 不得强制改成清单内身份 (标签接受上下文一致性核查, 非白名单定位)。",
+ "evidence_grades": {
+  "A": "本地实测复算 (带文件路径+脚本)",
+  "B": "文献原文直接报告",
+  "C": "A 级源数据供者级/跨研究分布推得的经验区间",
+  "qualitative": "文献仅定性描述 → 只存定性, 不补造区间 (Astra T2)",
+  "not_estimable": "区间无法估计 —— 合法状态, 注释仍可开展 (Astra T2)"
+ },
+ "distribution_method": "供者级 (来源|部位|供者 单元); 部位(ON vs ONH)×研究来源先分层展示, main 为 adult 供者单元汇总 (KB2c: 非 adult 不并入主档) —— 视神经 ON 与 ONH 生物学构成差异大, 对照时优先看对应层区间 (Astra T2); pooled 仅对照",
+ "donor_level_main": {
+  "AC": {
+   "n_units": 98,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    1.58
+   ],
+   "range_pct": [
+    0.0,
+    6.7
+   ]
+  },
+  "Adipocyte": {
+   "n_units": 98,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "range_pct": [
+    0.0,
+    1.31
+   ]
+  },
+  "Astrocyte": {
+   "n_units": 98,
+   "median_pct": 28.53,
+   "iqr_pct": [
+    20.88,
+    35.01
+   ],
+   "range_pct": [
+    3.25,
+    57.81
+   ]
+  },
+  "BC": {
+   "n_units": 98,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    7.58
+   ],
+   "range_pct": [
+    0.0,
+    24.76
+   ]
+  },
+  "B_cell": {
+   "n_units": 98,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.02
+   ],
+   "range_pct": [
+    0.0,
+    0.83
+   ]
+  },
+  "Cone": {
+   "n_units": 98,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.73
+   ],
+   "range_pct": [
+    0.0,
+    4.63
+   ]
+  },
+  "Dendritic_cell": {
+   "n_units": 98,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.01
+   ],
+   "range_pct": [
+    0.0,
+    0.09
+   ]
+  },
+  "Endothelial_cell": {
+   "n_units": 98,
+   "median_pct": 3.08,
+   "iqr_pct": [
+    1.53,
+    4.88
+   ],
+   "range_pct": [
+    0.0,
+    29.36
+   ]
+  },
+  "Fibroblast": {
+   "n_units": 98,
+   "median_pct": 8.36,
+   "iqr_pct": [
+    2.83,
+    16.54
+   ],
+   "range_pct": [
+    0.42,
+    59.43
+   ]
+  },
+  "HC": {
+   "n_units": 98,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    1.2
+   ],
+   "range_pct": [
+    0.0,
+    3.44
+   ]
+  },
+  "MG": {
+   "n_units": 98,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    4.48
+   ],
+   "range_pct": [
+    0.0,
+    15.12
+   ]
+  },
+  "Macrophage": {
+   "n_units": 98,
+   "median_pct": 0.5,
+   "iqr_pct": [
+    0.18,
+    1.25
+   ],
+   "range_pct": [
+    0.0,
+    5.24
+   ]
+  },
+  "Mast_cell": {
+   "n_units": 98,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "range_pct": [
+    0.0,
+    0.3
+   ]
+  },
+  "Melanocyte": {
+   "n_units": 98,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.22
+   ],
+   "range_pct": [
+    0.0,
+    19.45
+   ]
+  },
+  "Microglia": {
+   "n_units": 98,
+   "median_pct": 4.09,
+   "iqr_pct": [
+    1.87,
+    6.08
+   ],
+   "range_pct": [
+    0.0,
+    19.1
+   ]
+  },
+  "Mural_cell": {
+   "n_units": 98,
+   "median_pct": 1.39,
+   "iqr_pct": [
+    0.66,
+    2.43
+   ],
+   "range_pct": [
+    0.0,
+    11.76
+   ]
+  },
+  "NK_cell": {
+   "n_units": 98,
+   "median_pct": 0.02,
+   "iqr_pct": [
+    0.0,
+    0.04
+   ],
+   "range_pct": [
+    0.0,
+    0.24
+   ]
+  },
+  "Oligodendrocyte": {
+   "n_units": 98,
+   "median_pct": 31.17,
+   "iqr_pct": [
+    12.58,
+    41.36
+   ],
+   "range_pct": [
+    0.0,
+    70.31
+   ]
+  },
+  "Oligodendrocyte_precursor_cell": {
+   "n_units": 98,
+   "median_pct": 0.51,
+   "iqr_pct": [
+    0.02,
+    2.72
+   ],
+   "range_pct": [
+    0.0,
+    8.05
+   ]
+  },
+  "Pigmented_cell": {
+   "n_units": 98,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "range_pct": [
+    0.0,
+    8.31
+   ]
+  },
+  "RGC": {
+   "n_units": 98,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.49
+   ],
+   "range_pct": [
+    0.0,
+    2.79
+   ]
+  },
+  "RPE": {
+   "n_units": 98,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.61
+   ],
+   "range_pct": [
+    0.0,
+    22.5
+   ]
+  },
+  "Rod": {
+   "n_units": 98,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    8.64
+   ],
+   "range_pct": [
+    0.0,
+    52.58
+   ]
+  },
+  "Schwann_cell": {
+   "n_units": 98,
+   "median_pct": 0.06,
+   "iqr_pct": [
+    0.0,
+    0.27
+   ],
+   "range_pct": [
+    0.0,
+    2.15
+   ]
+  },
+  "T_cell": {
+   "n_units": 98,
+   "median_pct": 0.13,
+   "iqr_pct": [
+    0.07,
+    0.28
+   ],
+   "range_pct": [
+    0.0,
+    1.59
+   ]
+  }
+ },
+ "pooled_adult_only_main": {
+  "AC": 1.11,
+  "Adipocyte": 0.06,
+  "Astrocyte": 27.35,
+  "BC": 3.47,
+  "B_cell": 0.04,
+  "Cone": 0.47,
+  "Dendritic_cell": 0.01,
+  "Endothelial_cell": 3.42,
+  "Fibroblast": 12.28,
+  "HC": 0.51,
+  "MG": 1.7,
+  "Macrophage": 1.05,
+  "Mast_cell": 0.02,
+  "Melanocyte": 0.9,
+  "Microglia": 5.02,
+  "Mural_cell": 1.73,
+  "NK_cell": 0.04,
+  "Oligodendrocyte": 30.24,
+  "Oligodendrocyte_precursor_cell": 1.82,
+  "Pigmented_cell": 0.32,
+  "RGC": 0.29,
+  "RPE": 0.99,
+  "Rod": 6.66,
+  "Schwann_cell": 0.2,
+  "T_cell": 0.31
+ },
+ "pooled_all_cells": {
+  "AC": 1.15,
+  "Adipocyte": 0.06,
+  "Astrocyte": 28.52,
+  "BC": 3.48,
+  "B_cell": 0.04,
+  "Cone": 0.45,
+  "Dendritic_cell": 0.01,
+  "Endothelial_cell": 3.64,
+  "Fibroblast": 12.39,
+  "HC": 0.5,
+  "MG": 1.68,
+  "Macrophage": 1.02,
+  "Mast_cell": 0.02,
+  "Melanocyte": 0.86,
+  "Microglia": 5.01,
+  "Mural_cell": 1.8,
+  "NK_cell": 0.04,
+  "Oligodendrocyte": 28.97,
+  "Oligodendrocyte_precursor_cell": 1.97,
+  "Pigmented_cell": 0.28,
+  "RGC": 0.37,
+  "RPE": 0.89,
+  "Rod": 6.32,
+  "Schwann_cell": 0.22,
+  "T_cell": 0.3
+ },
+ "strata": [
+  {
+   "study": "Chen",
+   "tissue_group": "ON (视神经)",
+   "n_donors": 56,
+   "n_cells": 551898,
+   "share_of_atlas_pct": 57.51,
+   "donor_level": {
+    "AC": {
+     "n_units": 56,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      2.57
+     ]
+    },
+    "Adipocyte": {
+     "n_units": 56,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.07
+     ],
+     "range_pct": [
+      0.0,
+      1.31
+     ]
+    },
+    "Astrocyte": {
+     "n_units": 56,
+     "median_pct": 29.14,
+     "iqr_pct": [
+      23.71,
+      35.09
+     ],
+     "range_pct": [
+      5.61,
+      57.81
+     ]
+    },
+    "BC": {
+     "n_units": 56,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      8.17
+     ]
+    },
+    "B_cell": {
+     "n_units": 56,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.01
+     ],
+     "range_pct": [
+      0.0,
+      0.45
+     ]
+    },
+    "Cone": {
+     "n_units": 56,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      1.15
+     ]
+    },
+    "Dendritic_cell": {
+     "n_units": 56,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.01
+     ],
+     "range_pct": [
+      0.0,
+      0.03
+     ]
+    },
+    "Endothelial_cell": {
+     "n_units": 56,
+     "median_pct": 4.19,
+     "iqr_pct": [
+      3.06,
+      5.63
+     ],
+     "range_pct": [
+      0.38,
+      31.24
+     ]
+    },
+    "Fibroblast": {
+     "n_units": 56,
+     "median_pct": 15.0,
+     "iqr_pct": [
+      8.26,
+      21.64
+     ],
+     "range_pct": [
+      0.82,
+      59.43
+     ]
+    },
+    "HC": {
+     "n_units": 56,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      1.43
+     ]
+    },
+    "MG": {
+     "n_units": 56,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      3.22
+     ]
+    },
+    "Macrophage": {
+     "n_units": 56,
+     "median_pct": 0.63,
+     "iqr_pct": [
+      0.3,
+      1.49
+     ],
+     "range_pct": [
+      0.0,
+      5.24
+     ]
+    },
+    "Mast_cell": {
+     "n_units": 56,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.3
+     ]
+    },
+    "Melanocyte": {
+     "n_units": 56,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      3.05
+     ]
+    },
+    "Microglia": {
+     "n_units": 56,
+     "median_pct": 5.59,
+     "iqr_pct": [
+      3.42,
+      8.38
+     ],
+     "range_pct": [
+      0.0,
+      19.1
+     ]
+    },
+    "Mural_cell": {
+     "n_units": 56,
+     "median_pct": 2.27,
+     "iqr_pct": [
+      1.57,
+      3.08
+     ],
+     "range_pct": [
+      0.09,
+      11.97
+     ]
+    },
+    "NK_cell": {
+     "n_units": 56,
+     "median_pct": 0.02,
+     "iqr_pct": [
+      0.0,
+      0.04
+     ],
+     "range_pct": [
+      0.0,
+      0.24
+     ]
+    },
+    "Oligodendrocyte": {
+     "n_units": 56,
+     "median_pct": 36.71,
+     "iqr_pct": [
+      26.16,
+      41.59
+     ],
+     "range_pct": [
+      0.0,
+      63.55
+     ]
+    },
+    "Oligodendrocyte_precursor_cell": {
+     "n_units": 56,
+     "median_pct": 1.86,
+     "iqr_pct": [
+      0.27,
+      3.94
+     ],
+     "range_pct": [
+      0.0,
+      8.05
+     ]
+    },
+    "Pigmented_cell": {
+     "n_units": 56,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.01
+     ]
+    },
+    "RGC": {
+     "n_units": 56,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      1.19
+     ]
+    },
+    "RPE": {
+     "n_units": 56,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.42
+     ]
+    },
+    "Rod": {
+     "n_units": 56,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      14.09
+     ]
+    },
+    "Schwann_cell": {
+     "n_units": 56,
+     "median_pct": 0.07,
+     "iqr_pct": [
+      0.03,
+      0.21
+     ],
+     "range_pct": [
+      0.0,
+      4.03
+     ]
+    },
+    "T_cell": {
+     "n_units": 56,
+     "median_pct": 0.15,
+     "iqr_pct": [
+      0.07,
+      0.27
+     ],
+     "range_pct": [
+      0.0,
+      1.48
+     ]
+    }
+   },
+   "donor_level_adult_only": {
+    "AC": {
+     "n_units": 53,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      2.57
+     ]
+    },
+    "Adipocyte": {
+     "n_units": 53,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.07
+     ],
+     "range_pct": [
+      0.0,
+      1.31
+     ]
+    },
+    "Astrocyte": {
+     "n_units": 53,
+     "median_pct": 29.33,
+     "iqr_pct": [
+      23.95,
+      35.06
+     ],
+     "range_pct": [
+      5.61,
+      57.81
+     ]
+    },
+    "BC": {
+     "n_units": 53,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      8.17
+     ]
+    },
+    "B_cell": {
+     "n_units": 53,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.01
+     ],
+     "range_pct": [
+      0.0,
+      0.45
+     ]
+    },
+    "Cone": {
+     "n_units": 53,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      1.15
+     ]
+    },
+    "Dendritic_cell": {
+     "n_units": 53,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.01
+     ],
+     "range_pct": [
+      0.0,
+      0.03
+     ]
+    },
+    "Endothelial_cell": {
+     "n_units": 53,
+     "median_pct": 4.18,
+     "iqr_pct": [
+      2.96,
+      5.58
+     ],
+     "range_pct": [
+      0.38,
+      29.36
+     ]
+    },
+    "Fibroblast": {
+     "n_units": 53,
+     "median_pct": 14.91,
+     "iqr_pct": [
+      8.31,
+      21.01
+     ],
+     "range_pct": [
+      0.82,
+      59.43
+     ]
+    },
+    "HC": {
+     "n_units": 53,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      1.43
+     ]
+    },
+    "MG": {
+     "n_units": 53,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      3.22
+     ]
+    },
+    "Macrophage": {
+     "n_units": 53,
+     "median_pct": 0.61,
+     "iqr_pct": [
+      0.3,
+      1.46
+     ],
+     "range_pct": [
+      0.0,
+      5.24
+     ]
+    },
+    "Mast_cell": {
+     "n_units": 53,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.3
+     ]
+    },
+    "Melanocyte": {
+     "n_units": 53,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.09
+     ]
+    },
+    "Microglia": {
+     "n_units": 53,
+     "median_pct": 5.54,
+     "iqr_pct": [
+      3.53,
+      8.34
+     ],
+     "range_pct": [
+      0.0,
+      19.1
+     ]
+    },
+    "Mural_cell": {
+     "n_units": 53,
+     "median_pct": 2.26,
+     "iqr_pct": [
+      1.56,
+      3.01
+     ],
+     "range_pct": [
+      0.09,
+      11.76
+     ]
+    },
+    "NK_cell": {
+     "n_units": 53,
+     "median_pct": 0.02,
+     "iqr_pct": [
+      0.0,
+      0.04
+     ],
+     "range_pct": [
+      0.0,
+      0.24
+     ]
+    },
+    "Oligodendrocyte": {
+     "n_units": 53,
+     "median_pct": 37.35,
+     "iqr_pct": [
+      26.3,
+      41.64
+     ],
+     "range_pct": [
+      0.0,
+      63.55
+     ]
+    },
+    "Oligodendrocyte_precursor_cell": {
+     "n_units": 53,
+     "median_pct": 1.81,
+     "iqr_pct": [
+      0.08,
+      3.24
+     ],
+     "range_pct": [
+      0.0,
+      8.05
+     ]
+    },
+    "Pigmented_cell": {
+     "n_units": 53,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.01
+     ]
+    },
+    "RGC": {
+     "n_units": 53,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      1.19
+     ]
+    },
+    "RPE": {
+     "n_units": 53,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.42
+     ]
+    },
+    "Rod": {
+     "n_units": 53,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      14.09
+     ]
+    },
+    "Schwann_cell": {
+     "n_units": 53,
+     "median_pct": 0.06,
+     "iqr_pct": [
+      0.03,
+      0.2
+     ],
+     "range_pct": [
+      0.0,
+      0.56
+     ]
+    },
+    "T_cell": {
+     "n_units": 53,
+     "median_pct": 0.14,
+     "iqr_pct": [
+      0.07,
+      0.27
+     ],
+     "range_pct": [
+      0.0,
+      1.48
+     ]
+    }
+   },
+   "n_units_adult_only": 53,
+   "adult_fallback_guard": null
+  },
+  {
+   "study": "Chen",
+   "tissue_group": "ONH (视神经盘/视乳头)",
+   "n_donors": 31,
+   "n_cells": 261610,
+   "share_of_atlas_pct": 27.26,
+   "donor_level": {
+    "AC": {
+     "n_units": 31,
+     "median_pct": 1.6,
+     "iqr_pct": [
+      0.39,
+      4.68
+     ],
+     "range_pct": [
+      0.0,
+      6.69
+     ]
+    },
+    "Adipocyte": {
+     "n_units": 31,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.04
+     ]
+    },
+    "Astrocyte": {
+     "n_units": 31,
+     "median_pct": 28.54,
+     "iqr_pct": [
+      19.68,
+      43.49
+     ],
+     "range_pct": [
+      3.25,
+      70.08
+     ]
+    },
+    "BC": {
+     "n_units": 31,
+     "median_pct": 7.71,
+     "iqr_pct": [
+      2.58,
+      13.27
+     ],
+     "range_pct": [
+      0.0,
+      24.76
+     ]
+    },
+    "B_cell": {
+     "n_units": 31,
+     "median_pct": 0.01,
+     "iqr_pct": [
+      0.0,
+      0.06
+     ],
+     "range_pct": [
+      0.0,
+      0.83
+     ]
+    },
+    "Cone": {
+     "n_units": 31,
+     "median_pct": 0.84,
+     "iqr_pct": [
+      0.2,
+      2.05
+     ],
+     "range_pct": [
+      0.0,
+      4.63
+     ]
+    },
+    "Dendritic_cell": {
+     "n_units": 31,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.01
+     ],
+     "range_pct": [
+      0.0,
+      0.09
+     ]
+    },
+    "Endothelial_cell": {
+     "n_units": 31,
+     "median_pct": 3.27,
+     "iqr_pct": [
+      2.16,
+      4.43
+     ],
+     "range_pct": [
+      0.53,
+      28.8
+     ]
+    },
+    "Fibroblast": {
+     "n_units": 31,
+     "median_pct": 7.26,
+     "iqr_pct": [
+      4.64,
+      10.11
+     ],
+     "range_pct": [
+      1.08,
+      21.25
+     ]
+    },
+    "HC": {
+     "n_units": 31,
+     "median_pct": 1.21,
+     "iqr_pct": [
+      0.61,
+      1.96
+     ],
+     "range_pct": [
+      0.0,
+      3.44
+     ]
+    },
+    "MG": {
+     "n_units": 31,
+     "median_pct": 5.37,
+     "iqr_pct": [
+      1.72,
+      7.63
+     ],
+     "range_pct": [
+      0.0,
+      15.12
+     ]
+    },
+    "Macrophage": {
+     "n_units": 31,
+     "median_pct": 0.65,
+     "iqr_pct": [
+      0.3,
+      1.37
+     ],
+     "range_pct": [
+      0.0,
+      3.33
+     ]
+    },
+    "Mast_cell": {
+     "n_units": 31,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.01
+     ],
+     "range_pct": [
+      0.0,
+      0.25
+     ]
+    },
+    "Melanocyte": {
+     "n_units": 31,
+     "median_pct": 0.69,
+     "iqr_pct": [
+      0.25,
+      1.26
+     ],
+     "range_pct": [
+      0.0,
+      19.45
+     ]
+    },
+    "Microglia": {
+     "n_units": 31,
+     "median_pct": 2.45,
+     "iqr_pct": [
+      1.23,
+      4.53
+     ],
+     "range_pct": [
+      0.02,
+      14.81
+     ]
+    },
+    "Mural_cell": {
+     "n_units": 31,
+     "median_pct": 1.11,
+     "iqr_pct": [
+      0.81,
+      1.75
+     ],
+     "range_pct": [
+      0.18,
+      3.98
+     ]
+    },
+    "NK_cell": {
+     "n_units": 31,
+     "median_pct": 0.01,
+     "iqr_pct": [
+      0.0,
+      0.05
+     ],
+     "range_pct": [
+      0.0,
+      0.23
+     ]
+    },
+    "Oligodendrocyte": {
+     "n_units": 31,
+     "median_pct": 9.37,
+     "iqr_pct": [
+      1.62,
+      23.74
+     ],
+     "range_pct": [
+      0.0,
+      45.17
+     ]
+    },
+    "Oligodendrocyte_precursor_cell": {
+     "n_units": 31,
+     "median_pct": 0.03,
+     "iqr_pct": [
+      0.0,
+      0.46
+     ],
+     "range_pct": [
+      0.0,
+      6.44
+     ]
+    },
+    "Pigmented_cell": {
+     "n_units": 31,
+     "median_pct": 0.01,
+     "iqr_pct": [
+      0.0,
+      0.09
+     ],
+     "range_pct": [
+      0.0,
+      8.31
+     ]
+    },
+    "RGC": {
+     "n_units": 31,
+     "median_pct": 0.49,
+     "iqr_pct": [
+      0.05,
+      1.95
+     ],
+     "range_pct": [
+      0.0,
+      3.7
+     ]
+    },
+    "RPE": {
+     "n_units": 31,
+     "median_pct": 1.03,
+     "iqr_pct": [
+      0.07,
+      1.95
+     ],
+     "range_pct": [
+      0.0,
+      22.5
+     ]
+    },
+    "Rod": {
+     "n_units": 31,
+     "median_pct": 8.89,
+     "iqr_pct": [
+      2.73,
+      16.76
+     ],
+     "range_pct": [
+      0.0,
+      44.85
+     ]
+    },
+    "Schwann_cell": {
+     "n_units": 31,
+     "median_pct": 0.2,
+     "iqr_pct": [
+      0.03,
+      0.41
+     ],
+     "range_pct": [
+      0.0,
+      1.33
+     ]
+    },
+    "T_cell": {
+     "n_units": 31,
+     "median_pct": 0.17,
+     "iqr_pct": [
+      0.08,
+      0.39
+     ],
+     "range_pct": [
+      0.0,
+      1.59
+     ]
+    }
+   },
+   "donor_level_adult_only": {
+    "AC": {
+     "n_units": 25,
+     "median_pct": 1.96,
+     "iqr_pct": [
+      0.93,
+      4.79
+     ],
+     "range_pct": [
+      0.0,
+      6.69
+     ]
+    },
+    "Adipocyte": {
+     "n_units": 25,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.04
+     ]
+    },
+    "Astrocyte": {
+     "n_units": 25,
+     "median_pct": 25.31,
+     "iqr_pct": [
+      13.99,
+      31.82
+     ],
+     "range_pct": [
+      3.25,
+      56.81
+     ]
+    },
+    "BC": {
+     "n_units": 25,
+     "median_pct": 8.64,
+     "iqr_pct": [
+      4.3,
+      13.6
+     ],
+     "range_pct": [
+      0.0,
+      24.76
+     ]
+    },
+    "B_cell": {
+     "n_units": 25,
+     "median_pct": 0.01,
+     "iqr_pct": [
+      0.0,
+      0.08
+     ],
+     "range_pct": [
+      0.0,
+      0.83
+     ]
+    },
+    "Cone": {
+     "n_units": 25,
+     "median_pct": 0.91,
+     "iqr_pct": [
+      0.44,
+      2.08
+     ],
+     "range_pct": [
+      0.0,
+      4.63
+     ]
+    },
+    "Dendritic_cell": {
+     "n_units": 25,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.01
+     ],
+     "range_pct": [
+      0.0,
+      0.09
+     ]
+    },
+    "Endothelial_cell": {
+     "n_units": 25,
+     "median_pct": 2.93,
+     "iqr_pct": [
+      2.13,
+      3.74
+     ],
+     "range_pct": [
+      0.53,
+      28.8
+     ]
+    },
+    "Fibroblast": {
+     "n_units": 25,
+     "median_pct": 7.14,
+     "iqr_pct": [
+      3.58,
+      9.55
+     ],
+     "range_pct": [
+      1.08,
+      21.25
+     ]
+    },
+    "HC": {
+     "n_units": 25,
+     "median_pct": 1.42,
+     "iqr_pct": [
+      0.98,
+      2.06
+     ],
+     "range_pct": [
+      0.0,
+      3.44
+     ]
+    },
+    "MG": {
+     "n_units": 25,
+     "median_pct": 6.55,
+     "iqr_pct": [
+      2.92,
+      8.13
+     ],
+     "range_pct": [
+      0.0,
+      15.12
+     ]
+    },
+    "Macrophage": {
+     "n_units": 25,
+     "median_pct": 0.8,
+     "iqr_pct": [
+      0.28,
+      1.5
+     ],
+     "range_pct": [
+      0.06,
+      3.33
+     ]
+    },
+    "Mast_cell": {
+     "n_units": 25,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.01
+     ],
+     "range_pct": [
+      0.0,
+      0.25
+     ]
+    },
+    "Melanocyte": {
+     "n_units": 25,
+     "median_pct": 0.69,
+     "iqr_pct": [
+      0.21,
+      1.26
+     ],
+     "range_pct": [
+      0.0,
+      19.45
+     ]
+    },
+    "Microglia": {
+     "n_units": 25,
+     "median_pct": 2.45,
+     "iqr_pct": [
+      1.3,
+      4.35
+     ],
+     "range_pct": [
+      0.34,
+      9.81
+     ]
+    },
+    "Mural_cell": {
+     "n_units": 25,
+     "median_pct": 1.03,
+     "iqr_pct": [
+      0.78,
+      1.41
+     ],
+     "range_pct": [
+      0.18,
+      3.98
+     ]
+    },
+    "NK_cell": {
+     "n_units": 25,
+     "median_pct": 0.01,
+     "iqr_pct": [
+      0.0,
+      0.03
+     ],
+     "range_pct": [
+      0.0,
+      0.23
+     ]
+    },
+    "Oligodendrocyte": {
+     "n_units": 25,
+     "median_pct": 9.37,
+     "iqr_pct": [
+      1.63,
+      20.06
+     ],
+     "range_pct": [
+      0.0,
+      45.17
+     ]
+    },
+    "Oligodendrocyte_precursor_cell": {
+     "n_units": 25,
+     "median_pct": 0.03,
+     "iqr_pct": [
+      0.0,
+      0.34
+     ],
+     "range_pct": [
+      0.0,
+      6.44
+     ]
+    },
+    "Pigmented_cell": {
+     "n_units": 25,
+     "median_pct": 0.03,
+     "iqr_pct": [
+      0.0,
+      0.11
+     ],
+     "range_pct": [
+      0.0,
+      8.31
+     ]
+    },
+    "RGC": {
+     "n_units": 25,
+     "median_pct": 0.84,
+     "iqr_pct": [
+      0.14,
+      1.95
+     ],
+     "range_pct": [
+      0.0,
+      2.79
+     ]
+    },
+    "RPE": {
+     "n_units": 25,
+     "median_pct": 1.38,
+     "iqr_pct": [
+      0.64,
+      2.08
+     ],
+     "range_pct": [
+      0.0,
+      22.5
+     ]
+    },
+    "Rod": {
+     "n_units": 25,
+     "median_pct": 13.31,
+     "iqr_pct": [
+      4.11,
+      19.31
+     ],
+     "range_pct": [
+      0.05,
+      44.85
+     ]
+    },
+    "Schwann_cell": {
+     "n_units": 25,
+     "median_pct": 0.14,
+     "iqr_pct": [
+      0.02,
+      0.42
+     ],
+     "range_pct": [
+      0.0,
+      1.33
+     ]
+    },
+    "T_cell": {
+     "n_units": 25,
+     "median_pct": 0.17,
+     "iqr_pct": [
+      0.09,
+      0.43
+     ],
+     "range_pct": [
+      0.0,
+      1.59
+     ]
+    }
+   },
+   "n_units_adult_only": 25,
+   "adult_fallback_guard": null
+  },
+  {
+   "study": "Sanes",
+   "tissue_group": "ON (视神经)",
+   "n_donors": 7,
+   "n_cells": 52368,
+   "share_of_atlas_pct": 5.46,
+   "donor_level": {
+    "AC": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Adipocyte": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.15
+     ]
+    },
+    "Astrocyte": {
+     "n_units": 7,
+     "median_pct": 32.62,
+     "iqr_pct": [
+      30.91,
+      35.64
+     ],
+     "range_pct": [
+      16.61,
+      44.89
+     ]
+    },
+    "BC": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "B_cell": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.02
+     ]
+    },
+    "Cone": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Dendritic_cell": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Endothelial_cell": {
+     "n_units": 7,
+     "median_pct": 0.28,
+     "iqr_pct": [
+      0.14,
+      0.52
+     ],
+     "range_pct": [
+      0.0,
+      1.57
+     ]
+    },
+    "Fibroblast": {
+     "n_units": 7,
+     "median_pct": 2.05,
+     "iqr_pct": [
+      1.46,
+      2.49
+     ],
+     "range_pct": [
+      0.42,
+      6.79
+     ]
+    },
+    "HC": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "MG": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Macrophage": {
+     "n_units": 7,
+     "median_pct": 0.09,
+     "iqr_pct": [
+      0.03,
+      0.12
+     ],
+     "range_pct": [
+      0.0,
+      0.24
+     ]
+    },
+    "Mast_cell": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Melanocyte": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Microglia": {
+     "n_units": 7,
+     "median_pct": 4.36,
+     "iqr_pct": [
+      4.11,
+      6.37
+     ],
+     "range_pct": [
+      3.17,
+      8.2
+     ]
+    },
+    "Mural_cell": {
+     "n_units": 7,
+     "median_pct": 0.05,
+     "iqr_pct": [
+      0.02,
+      0.16
+     ],
+     "range_pct": [
+      0.0,
+      0.82
+     ]
+    },
+    "NK_cell": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.03
+     ]
+    },
+    "Oligodendrocyte": {
+     "n_units": 7,
+     "median_pct": 54.62,
+     "iqr_pct": [
+      53.48,
+      57.6
+     ],
+     "range_pct": [
+      41.15,
+      70.31
+     ]
+    },
+    "Oligodendrocyte_precursor_cell": {
+     "n_units": 7,
+     "median_pct": 4.89,
+     "iqr_pct": [
+      1.68,
+      5.15
+     ],
+     "range_pct": [
+      0.12,
+      6.39
+     ]
+    },
+    "Pigmented_cell": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "RGC": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "RPE": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Rod": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Schwann_cell": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.16
+     ]
+    },
+    "T_cell": {
+     "n_units": 7,
+     "median_pct": 0.01,
+     "iqr_pct": [
+      0.0,
+      0.05
+     ],
+     "range_pct": [
+      0.0,
+      0.1
+     ]
+    }
+   },
+   "donor_level_adult_only": {
+    "AC": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Adipocyte": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.15
+     ]
+    },
+    "Astrocyte": {
+     "n_units": 7,
+     "median_pct": 32.62,
+     "iqr_pct": [
+      30.91,
+      35.64
+     ],
+     "range_pct": [
+      16.61,
+      44.89
+     ]
+    },
+    "BC": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "B_cell": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.02
+     ]
+    },
+    "Cone": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Dendritic_cell": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Endothelial_cell": {
+     "n_units": 7,
+     "median_pct": 0.28,
+     "iqr_pct": [
+      0.14,
+      0.52
+     ],
+     "range_pct": [
+      0.0,
+      1.57
+     ]
+    },
+    "Fibroblast": {
+     "n_units": 7,
+     "median_pct": 2.05,
+     "iqr_pct": [
+      1.46,
+      2.49
+     ],
+     "range_pct": [
+      0.42,
+      6.79
+     ]
+    },
+    "HC": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "MG": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Macrophage": {
+     "n_units": 7,
+     "median_pct": 0.09,
+     "iqr_pct": [
+      0.03,
+      0.12
+     ],
+     "range_pct": [
+      0.0,
+      0.24
+     ]
+    },
+    "Mast_cell": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Melanocyte": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Microglia": {
+     "n_units": 7,
+     "median_pct": 4.36,
+     "iqr_pct": [
+      4.11,
+      6.37
+     ],
+     "range_pct": [
+      3.17,
+      8.2
+     ]
+    },
+    "Mural_cell": {
+     "n_units": 7,
+     "median_pct": 0.05,
+     "iqr_pct": [
+      0.02,
+      0.16
+     ],
+     "range_pct": [
+      0.0,
+      0.82
+     ]
+    },
+    "NK_cell": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.03
+     ]
+    },
+    "Oligodendrocyte": {
+     "n_units": 7,
+     "median_pct": 54.62,
+     "iqr_pct": [
+      53.48,
+      57.6
+     ],
+     "range_pct": [
+      41.15,
+      70.31
+     ]
+    },
+    "Oligodendrocyte_precursor_cell": {
+     "n_units": 7,
+     "median_pct": 4.89,
+     "iqr_pct": [
+      1.68,
+      5.15
+     ],
+     "range_pct": [
+      0.12,
+      6.39
+     ]
+    },
+    "Pigmented_cell": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "RGC": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "RPE": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Rod": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.0
+     ]
+    },
+    "Schwann_cell": {
+     "n_units": 7,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.16
+     ]
+    },
+    "T_cell": {
+     "n_units": 7,
+     "median_pct": 0.01,
+     "iqr_pct": [
+      0.0,
+      0.05
+     ],
+     "range_pct": [
+      0.0,
+      0.1
+     ]
+    }
+   },
+   "n_units_adult_only": 7,
+   "adult_fallback_guard": null
+  },
+  {
+   "study": "Sanes",
+   "tissue_group": "ONH (视神经盘/视乳头)",
+   "n_donors": 13,
+   "n_cells": 93753,
+   "share_of_atlas_pct": 9.77,
+   "donor_level": {
+    "AC": {
+     "n_units": 13,
+     "median_pct": 4.86,
+     "iqr_pct": [
+      3.82,
+      5.96
+     ],
+     "range_pct": [
+      0.0,
+      6.7
+     ]
+    },
+    "Adipocyte": {
+     "n_units": 13,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.05
+     ]
+    },
+    "Astrocyte": {
+     "n_units": 13,
+     "median_pct": 17.52,
+     "iqr_pct": [
+      11.02,
+      31.21
+     ],
+     "range_pct": [
+      8.23,
+      56.59
+     ]
+    },
+    "BC": {
+     "n_units": 13,
+     "median_pct": 14.5,
+     "iqr_pct": [
+      7.28,
+      16.49
+     ],
+     "range_pct": [
+      0.0,
+      18.76
+     ]
+    },
+    "B_cell": {
+     "n_units": 13,
+     "median_pct": 0.02,
+     "iqr_pct": [
+      0.0,
+      0.03
+     ],
+     "range_pct": [
+      0.0,
+      0.21
+     ]
+    },
+    "Cone": {
+     "n_units": 13,
+     "median_pct": 1.83,
+     "iqr_pct": [
+      0.08,
+      2.23
+     ],
+     "range_pct": [
+      0.0,
+      2.94
+     ]
+    },
+    "Dendritic_cell": {
+     "n_units": 13,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.01
+     ]
+    },
+    "Endothelial_cell": {
+     "n_units": 13,
+     "median_pct": 0.95,
+     "iqr_pct": [
+      0.82,
+      1.38
+     ],
+     "range_pct": [
+      0.51,
+      1.78
+     ]
+    },
+    "Fibroblast": {
+     "n_units": 13,
+     "median_pct": 1.5,
+     "iqr_pct": [
+      1.05,
+      2.52
+     ],
+     "range_pct": [
+      0.51,
+      9.42
+     ]
+    },
+    "HC": {
+     "n_units": 13,
+     "median_pct": 2.1,
+     "iqr_pct": [
+      1.28,
+      2.53
+     ],
+     "range_pct": [
+      0.0,
+      2.9
+     ]
+    },
+    "MG": {
+     "n_units": 13,
+     "median_pct": 5.66,
+     "iqr_pct": [
+      3.34,
+      6.13
+     ],
+     "range_pct": [
+      0.0,
+      12.88
+     ]
+    },
+    "Macrophage": {
+     "n_units": 13,
+     "median_pct": 0.17,
+     "iqr_pct": [
+      0.14,
+      0.27
+     ],
+     "range_pct": [
+      0.0,
+      1.85
+     ]
+    },
+    "Mast_cell": {
+     "n_units": 13,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.1
+     ]
+    },
+    "Melanocyte": {
+     "n_units": 13,
+     "median_pct": 0.22,
+     "iqr_pct": [
+      0.09,
+      0.3
+     ],
+     "range_pct": [
+      0.0,
+      2.19
+     ]
+    },
+    "Microglia": {
+     "n_units": 13,
+     "median_pct": 1.06,
+     "iqr_pct": [
+      0.82,
+      2.33
+     ],
+     "range_pct": [
+      0.36,
+      3.08
+     ]
+    },
+    "Mural_cell": {
+     "n_units": 13,
+     "median_pct": 0.48,
+     "iqr_pct": [
+      0.33,
+      0.79
+     ],
+     "range_pct": [
+      0.23,
+      1.73
+     ]
+    },
+    "NK_cell": {
+     "n_units": 13,
+     "median_pct": 0.03,
+     "iqr_pct": [
+      0.02,
+      0.06
+     ],
+     "range_pct": [
+      0.0,
+      0.08
+     ]
+    },
+    "Oligodendrocyte": {
+     "n_units": 13,
+     "median_pct": 14.25,
+     "iqr_pct": [
+      8.97,
+      20.24
+     ],
+     "range_pct": [
+      0.0,
+      58.03
+     ]
+    },
+    "Oligodendrocyte_precursor_cell": {
+     "n_units": 13,
+     "median_pct": 0.06,
+     "iqr_pct": [
+      0.03,
+      0.5
+     ],
+     "range_pct": [
+      0.0,
+      1.5
+     ]
+    },
+    "Pigmented_cell": {
+     "n_units": 13,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.01
+     ],
+     "range_pct": [
+      0.0,
+      0.28
+     ]
+    },
+    "RGC": {
+     "n_units": 13,
+     "median_pct": 0.69,
+     "iqr_pct": [
+      0.58,
+      1.36
+     ],
+     "range_pct": [
+      0.0,
+      2.72
+     ]
+    },
+    "RPE": {
+     "n_units": 13,
+     "median_pct": 0.42,
+     "iqr_pct": [
+      0.37,
+      1.4
+     ],
+     "range_pct": [
+      0.0,
+      2.67
+     ]
+    },
+    "Rod": {
+     "n_units": 13,
+     "median_pct": 32.98,
+     "iqr_pct": [
+      7.26,
+      41.31
+     ],
+     "range_pct": [
+      0.0,
+      52.58
+     ]
+    },
+    "Schwann_cell": {
+     "n_units": 13,
+     "median_pct": 0.09,
+     "iqr_pct": [
+      0.0,
+      0.25
+     ],
+     "range_pct": [
+      0.0,
+      2.15
+     ]
+    },
+    "T_cell": {
+     "n_units": 13,
+     "median_pct": 0.13,
+     "iqr_pct": [
+      0.1,
+      0.3
+     ],
+     "range_pct": [
+      0.04,
+      0.97
+     ]
+    }
+   },
+   "donor_level_adult_only": {
+    "AC": {
+     "n_units": 13,
+     "median_pct": 4.86,
+     "iqr_pct": [
+      3.82,
+      5.96
+     ],
+     "range_pct": [
+      0.0,
+      6.7
+     ]
+    },
+    "Adipocyte": {
+     "n_units": 13,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.05
+     ]
+    },
+    "Astrocyte": {
+     "n_units": 13,
+     "median_pct": 17.52,
+     "iqr_pct": [
+      11.02,
+      31.21
+     ],
+     "range_pct": [
+      8.23,
+      56.59
+     ]
+    },
+    "BC": {
+     "n_units": 13,
+     "median_pct": 14.5,
+     "iqr_pct": [
+      7.28,
+      16.49
+     ],
+     "range_pct": [
+      0.0,
+      18.76
+     ]
+    },
+    "B_cell": {
+     "n_units": 13,
+     "median_pct": 0.02,
+     "iqr_pct": [
+      0.0,
+      0.03
+     ],
+     "range_pct": [
+      0.0,
+      0.21
+     ]
+    },
+    "Cone": {
+     "n_units": 13,
+     "median_pct": 1.83,
+     "iqr_pct": [
+      0.08,
+      2.23
+     ],
+     "range_pct": [
+      0.0,
+      2.94
+     ]
+    },
+    "Dendritic_cell": {
+     "n_units": 13,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.01
+     ]
+    },
+    "Endothelial_cell": {
+     "n_units": 13,
+     "median_pct": 0.95,
+     "iqr_pct": [
+      0.82,
+      1.38
+     ],
+     "range_pct": [
+      0.51,
+      1.78
+     ]
+    },
+    "Fibroblast": {
+     "n_units": 13,
+     "median_pct": 1.5,
+     "iqr_pct": [
+      1.05,
+      2.52
+     ],
+     "range_pct": [
+      0.51,
+      9.42
+     ]
+    },
+    "HC": {
+     "n_units": 13,
+     "median_pct": 2.1,
+     "iqr_pct": [
+      1.28,
+      2.53
+     ],
+     "range_pct": [
+      0.0,
+      2.9
+     ]
+    },
+    "MG": {
+     "n_units": 13,
+     "median_pct": 5.66,
+     "iqr_pct": [
+      3.34,
+      6.13
+     ],
+     "range_pct": [
+      0.0,
+      12.88
+     ]
+    },
+    "Macrophage": {
+     "n_units": 13,
+     "median_pct": 0.17,
+     "iqr_pct": [
+      0.14,
+      0.27
+     ],
+     "range_pct": [
+      0.0,
+      1.85
+     ]
+    },
+    "Mast_cell": {
+     "n_units": 13,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.0
+     ],
+     "range_pct": [
+      0.0,
+      0.1
+     ]
+    },
+    "Melanocyte": {
+     "n_units": 13,
+     "median_pct": 0.22,
+     "iqr_pct": [
+      0.09,
+      0.3
+     ],
+     "range_pct": [
+      0.0,
+      2.19
+     ]
+    },
+    "Microglia": {
+     "n_units": 13,
+     "median_pct": 1.06,
+     "iqr_pct": [
+      0.82,
+      2.33
+     ],
+     "range_pct": [
+      0.36,
+      3.08
+     ]
+    },
+    "Mural_cell": {
+     "n_units": 13,
+     "median_pct": 0.48,
+     "iqr_pct": [
+      0.33,
+      0.79
+     ],
+     "range_pct": [
+      0.23,
+      1.73
+     ]
+    },
+    "NK_cell": {
+     "n_units": 13,
+     "median_pct": 0.03,
+     "iqr_pct": [
+      0.02,
+      0.06
+     ],
+     "range_pct": [
+      0.0,
+      0.08
+     ]
+    },
+    "Oligodendrocyte": {
+     "n_units": 13,
+     "median_pct": 14.25,
+     "iqr_pct": [
+      8.97,
+      20.24
+     ],
+     "range_pct": [
+      0.0,
+      58.03
+     ]
+    },
+    "Oligodendrocyte_precursor_cell": {
+     "n_units": 13,
+     "median_pct": 0.06,
+     "iqr_pct": [
+      0.03,
+      0.5
+     ],
+     "range_pct": [
+      0.0,
+      1.5
+     ]
+    },
+    "Pigmented_cell": {
+     "n_units": 13,
+     "median_pct": 0.0,
+     "iqr_pct": [
+      0.0,
+      0.01
+     ],
+     "range_pct": [
+      0.0,
+      0.28
+     ]
+    },
+    "RGC": {
+     "n_units": 13,
+     "median_pct": 0.69,
+     "iqr_pct": [
+      0.58,
+      1.36
+     ],
+     "range_pct": [
+      0.0,
+      2.72
+     ]
+    },
+    "RPE": {
+     "n_units": 13,
+     "median_pct": 0.42,
+     "iqr_pct": [
+      0.37,
+      1.4
+     ],
+     "range_pct": [
+      0.0,
+      2.67
+     ]
+    },
+    "Rod": {
+     "n_units": 13,
+     "median_pct": 32.98,
+     "iqr_pct": [
+      7.26,
+      41.31
+     ],
+     "range_pct": [
+      0.0,
+      52.58
+     ]
+    },
+    "Schwann_cell": {
+     "n_units": 13,
+     "median_pct": 0.09,
+     "iqr_pct": [
+      0.0,
+      0.25
+     ],
+     "range_pct": [
+      0.0,
+      2.15
+     ]
+    },
+    "T_cell": {
+     "n_units": 13,
+     "median_pct": 0.13,
+     "iqr_pct": [
+      0.1,
+      0.3
+     ],
+     "range_pct": [
+      0.04,
+      0.97
+     ]
+    }
+   },
+   "n_units_adult_only": 13,
+   "adult_fallback_guard": null
+  }
+ ],
+ "major_classes": [
+  {
+   "class": "AC",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    1.58
+   ],
+   "donor_range_pct": [
+    0.0,
+    6.7
+   ],
+   "pooled_pct_for_reference_only": 1.15,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": "视网膜来源类 — 视盘取材带入, 见 caveats/flags"
+  },
+  {
+   "class": "Adipocyte",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "donor_range_pct": [
+    0.0,
+    1.31
+   ],
+   "pooled_pct_for_reference_only": 0.06,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "Astrocyte",
+   "donor_median_pct": 28.53,
+   "donor_iqr_pct": [
+    20.88,
+    35.01
+   ],
+   "donor_range_pct": [
+    3.25,
+    57.81
+   ],
+   "pooled_pct_for_reference_only": 28.52,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "BC",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    7.58
+   ],
+   "donor_range_pct": [
+    0.0,
+    24.76
+   ],
+   "pooled_pct_for_reference_only": 3.48,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": "视网膜来源类 — 视盘取材带入, 见 caveats/flags"
+  },
+  {
+   "class": "B_cell",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    0.02
+   ],
+   "donor_range_pct": [
+    0.0,
+    0.83
+   ],
+   "pooled_pct_for_reference_only": 0.04,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "Cone",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    0.73
+   ],
+   "donor_range_pct": [
+    0.0,
+    4.63
+   ],
+   "pooled_pct_for_reference_only": 0.45,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": "视网膜来源类 — 视盘取材带入, 见 caveats/flags"
+  },
+  {
+   "class": "Dendritic_cell",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    0.01
+   ],
+   "donor_range_pct": [
+    0.0,
+    0.09
+   ],
+   "pooled_pct_for_reference_only": 0.01,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "Endothelial_cell",
+   "donor_median_pct": 3.08,
+   "donor_iqr_pct": [
+    1.53,
+    4.88
+   ],
+   "donor_range_pct": [
+    0.0,
+    29.36
+   ],
+   "pooled_pct_for_reference_only": 3.64,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "Fibroblast",
+   "donor_median_pct": 8.36,
+   "donor_iqr_pct": [
+    2.83,
+    16.54
+   ],
+   "donor_range_pct": [
+    0.42,
+    59.43
+   ],
+   "pooled_pct_for_reference_only": 12.39,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "HC",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    1.2
+   ],
+   "donor_range_pct": [
+    0.0,
+    3.44
+   ],
+   "pooled_pct_for_reference_only": 0.5,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": "视网膜来源类 — 视盘取材带入, 见 caveats/flags"
+  },
+  {
+   "class": "MG",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    4.48
+   ],
+   "donor_range_pct": [
+    0.0,
+    15.12
+   ],
+   "pooled_pct_for_reference_only": 1.68,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "Macrophage",
+   "donor_median_pct": 0.5,
+   "donor_iqr_pct": [
+    0.18,
+    1.25
+   ],
+   "donor_range_pct": [
+    0.0,
+    5.24
+   ],
+   "pooled_pct_for_reference_only": 1.02,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "Mast_cell",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "donor_range_pct": [
+    0.0,
+    0.3
+   ],
+   "pooled_pct_for_reference_only": 0.02,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "Melanocyte",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    0.22
+   ],
+   "donor_range_pct": [
+    0.0,
+    19.45
+   ],
+   "pooled_pct_for_reference_only": 0.86,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "Microglia",
+   "donor_median_pct": 4.09,
+   "donor_iqr_pct": [
+    1.87,
+    6.08
+   ],
+   "donor_range_pct": [
+    0.0,
+    19.1
+   ],
+   "pooled_pct_for_reference_only": 5.01,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "Mural_cell",
+   "donor_median_pct": 1.39,
+   "donor_iqr_pct": [
+    0.66,
+    2.43
+   ],
+   "donor_range_pct": [
+    0.0,
+    11.76
+   ],
+   "pooled_pct_for_reference_only": 1.8,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "NK_cell",
+   "donor_median_pct": 0.02,
+   "donor_iqr_pct": [
+    0.0,
+    0.04
+   ],
+   "donor_range_pct": [
+    0.0,
+    0.24
+   ],
+   "pooled_pct_for_reference_only": 0.04,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "Oligodendrocyte",
+   "donor_median_pct": 31.17,
+   "donor_iqr_pct": [
+    12.58,
+    41.36
+   ],
+   "donor_range_pct": [
+    0.0,
+    70.31
+   ],
+   "pooled_pct_for_reference_only": 28.97,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "Oligodendrocyte_precursor_cell",
+   "donor_median_pct": 0.51,
+   "donor_iqr_pct": [
+    0.02,
+    2.72
+   ],
+   "donor_range_pct": [
+    0.0,
+    8.05
+   ],
+   "pooled_pct_for_reference_only": 1.97,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "Pigmented_cell",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "donor_range_pct": [
+    0.0,
+    8.31
+   ],
+   "pooled_pct_for_reference_only": 0.28,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": "色素/RPE 来源类 — 同上"
+  },
+  {
+   "class": "RGC",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    0.49
+   ],
+   "donor_range_pct": [
+    0.0,
+    2.79
+   ],
+   "pooled_pct_for_reference_only": 0.37,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": "视网膜来源类 — 视盘取材带入, 见 caveats/flags"
+  },
+  {
+   "class": "RPE",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    0.61
+   ],
+   "donor_range_pct": [
+    0.0,
+    22.5
+   ],
+   "pooled_pct_for_reference_only": 0.89,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": "色素/RPE 来源类 — 同上"
+  },
+  {
+   "class": "Rod",
+   "donor_median_pct": 0.0,
+   "donor_iqr_pct": [
+    0.0,
+    8.64
+   ],
+   "donor_range_pct": [
+    0.0,
+    52.58
+   ],
+   "pooled_pct_for_reference_only": 6.32,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": "视网膜来源类 — 视盘取材带入, 见 caveats/flags"
+  },
+  {
+   "class": "Schwann_cell",
+   "donor_median_pct": 0.06,
+   "donor_iqr_pct": [
+    0.0,
+    0.27
+   ],
+   "donor_range_pct": [
+    0.0,
+    2.15
+   ],
+   "pooled_pct_for_reference_only": 0.22,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  },
+  {
+   "class": "T_cell",
+   "donor_median_pct": 0.13,
+   "donor_iqr_pct": [
+    0.07,
+    0.28
+   ],
+   "donor_range_pct": [
+    0.0,
+    1.59
+   ],
+   "pooled_pct_for_reference_only": 0.3,
+   "evidence": "A",
+   "source_ids": [
+    "ON_LOCAL",
+    "ON_PORTAL"
+   ],
+   "note": ""
+  }
+ ],
+ "fine_types": {
+  "denominator_note": "author_cell_type 类内占比 (pooled within class, 供参考); ON/ONH/retina 后缀=portal 官方位置亚型标注"
+ },
+ "states": null,
+ "flags": {
+  "expected_low_but_present": [
+   "T/B/NK/DC/Mast 合计 <1% (正常神经组织免疫稀少)",
+   "Schwann_cell 0.22% (PN 髓鞘支持细胞; 核悬液下 PN 富集度受限于中枢段)",
+   "Mural_cell 1.8% / Endothelial_cell 3.6% (血管支持层)"
+  ],
+  "unexpected": [
+   "视网膜神经元类 (Rod/Cone/BC/HC/AC/RGC) pooled 12.27% + RPE/色素类 1.17% —— 视盘取材带入盘旁视网膜/脉络膜组织, 属捕获构成非视神经本体真组成; 疾病样本对照时不得把该层当'视神经应有比例'"
+  ],
+  "contamination_suspect": [
+   "Melanocyte 0.86% (软脑膜/色素组织附带, 正常范围内偏高需结合取材平面解读)"
+  ]
+ },
+ "caveats": [
+  "MG=Müller 胶质细胞 (1.7%) 与 Microglia=小胶质细胞 (5.0%) 为两套不同身份, portal 词表并存 —— 下游引用勿混; 同规则适用 AC(无长细胞)/BC(双极细胞)等视网膜缩写。",
+  "Chen (Baylor, ~85%) 与 Sanes (Harvard) 两供体池规模悬殊, 已按 来源×部位 分 4 层展示; main 供者级每单元等权, 大池不再压秤, 但层间差异需看 strata 而非只看 main。",
+  "本条计数分母含视盘旁视网膜来源类 (~15%); 如需'纯视神经'参考区间, 用 strata 中 ON (cranial nerve II) 层。",
+  "snRNA 口径 (核悬液, 内含子 reads 计入) 与 scRNA 数据比较须谨慎 (Astra T2)。",
+  "v1.1 (KB2c t_be336eee): 主档=adult-only (>=18y, 裁定 Q2); v1.0 混口径 (含 newborn/3-17 岁) 保留于 donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0), 两档身份签名分离不混用。"
+ ],
+ "sources": [
+  {
+   "sid": "ON_LOCAL",
+   "kind": "dataset",
+   "label": "本地文件 /mnt/D/OcularKB/data/HRA006282_optic_nerve/HRA006282_optic_nerve.h5ad",
+   "path": "/mnt/D/OcularKB/data/HRA006282_optic_nerve/HRA006282_optic_nerve.h5ad",
+   "computation": "/mnt/D/EyeKB/scripts/baselines/build_baselines.py build_optic_nerve()"
+  },
+  {
+   "sid": "ON_PORTAL",
+   "kind": "dataset",
+   "label": "Human Optic Nerve / Optic Nerve Head Atlas, CELLxGENE collection HRA006282 (portal 官方注释; registry OA-D003, verified 2026-08-11)",
+   "url": "https://cellxgene.cziscience.com/collections/05e3d0fc-c9dd-4f14-9163-2b242b3bb5c2"
+  }
+ ],
+ "organism_stage": "adult",
+ "stage_axis": {
+  "field": "organism_stage",
+  "levels": [
+   "fetal",
+   "adult",
+   "developing",
+   "unknown"
+  ],
+  "adult_rule": "UBERON development_stage 数字化年龄 >= 18y 判 adult; 显式成年术语 (late/prime/middle/mature/human adult stage, 年代段>=3rd) 亦判 adult 并记 rule; 阈值改动须过裁定 (KB2c Q2, 2026-09-23)",
+  "developing_rule": "newborn/infant/postnatal stage 与 <18y 数字年龄/年龄段 → developing (KB2c Q2)",
+  "fetal_rule": "fetal/embryonic/gestation/Carnegie 术语 → fetal; 永不并入 adult 主档 (红线1)",
+  "unknown_rule": "无年龄列/未映射术语/organoid/年龄段跨阈值 → unknown, 必须披露行, 禁静默归 adult (红线2)",
+  "aging_note": ">=60 老年分层不在本轴 — aging 是正交独立轴, 将来单独立条目 (裁定 Q2)",
+  "source_col": "obs/development_stage (UBERON 原值逐行保留; 汇总见 stage_disclosure, 排除清单见 excluded_nonadult_units)",
+  "tier_ids": {
+   "adult_only": "baseline_human_optic_nerve__adult_only__kb2c",
+   "adult_pool": "baseline_human_optic_nerve__adult_pool__v1.0"
+  }
+ },
+ "stage_disclosure": {
+  "43-year-old stage": {
+   "cells": 78263,
+   "n_donors": 3,
+   "organism_stage": "adult",
+   "rule": "数字年龄 43y vs 阈值 18y"
+  },
+  "69-year-old stage": {
+   "cells": 73699,
+   "n_donors": 5,
+   "organism_stage": "adult",
+   "rule": "数字年龄 69y vs 阈值 18y"
+  },
+  "64-year-old stage": {
+   "cells": 68748,
+   "n_donors": 5,
+   "organism_stage": "adult",
+   "rule": "数字年龄 64y vs 阈值 18y"
+  },
+  "71-year-old stage": {
+   "cells": 56868,
+   "n_donors": 4,
+   "organism_stage": "adult",
+   "rule": "数字年龄 71y vs 阈值 18y"
+  },
+  "62-year-old stage": {
+   "cells": 54875,
+   "n_donors": 3,
+   "organism_stage": "adult",
+   "rule": "数字年龄 62y vs 阈值 18y"
+  },
+  "67-year-old stage": {
+   "cells": 35962,
+   "n_donors": 3,
+   "organism_stage": "adult",
+   "rule": "数字年龄 67y vs 阈值 18y"
+  },
+  "77-year-old stage": {
+   "cells": 32893,
+   "n_donors": 5,
+   "organism_stage": "adult",
+   "rule": "数字年龄 77y vs 阈值 18y"
+  },
+  "65-year-old stage": {
+   "cells": 30565,
+   "n_donors": 4,
+   "organism_stage": "adult",
+   "rule": "数字年龄 65y vs 阈值 18y"
+  },
+  "16-year-old stage": {
+   "cells": 27212,
+   "n_donors": 3,
+   "organism_stage": "developing",
+   "rule": "数字年龄 16y vs 阈值 18y"
+  },
+  "72-year-old stage": {
+   "cells": 26225,
+   "n_donors": 4,
+   "organism_stage": "adult",
+   "rule": "数字年龄 72y vs 阈值 18y"
+  },
+  "81-year-old stage": {
+   "cells": 23537,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "数字年龄 81y vs 阈值 18y"
+  },
+  "70-year-old stage": {
+   "cells": 19483,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 70y vs 阈值 18y"
+  },
+  "21-year-old stage": {
+   "cells": 19210,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 21y vs 阈值 18y"
+  },
+  "10-year-old stage": {
+   "cells": 18998,
+   "n_donors": 1,
+   "organism_stage": "developing",
+   "rule": "数字年龄 10y vs 阈值 18y"
+  },
+  "61-year-old stage": {
+   "cells": 18682,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "数字年龄 61y vs 阈值 18y"
+  },
+  "42-year-old stage": {
+   "cells": 17776,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 42y vs 阈值 18y"
+  },
+  "27-year-old stage": {
+   "cells": 16928,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "数字年龄 27y vs 阈值 18y"
+  },
+  "32-year-old stage": {
+   "cells": 16501,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 32y vs 阈值 18y"
+  },
+  "34-year-old stage": {
+   "cells": 16364,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "数字年龄 34y vs 阈值 18y"
+  },
+  "25-year-old stage": {
+   "cells": 16269,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 25y vs 阈值 18y"
+  },
+  "33-year-old stage": {
+   "cells": 16010,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 33y vs 阈值 18y"
+  },
+  "18-year-old stage": {
+   "cells": 15449,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 18y vs 阈值 18y"
+  },
+  "newborn stage (0-28 days)": {
+   "cells": 15177,
+   "n_donors": 1,
+   "organism_stage": "developing",
+   "rule": "newborn/infant 产后早期→developing (裁定 Q2)"
+  },
+  "60-year-old stage": {
+   "cells": 14758,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "数字年龄 60y vs 阈值 18y"
+  },
+  "76-year-old stage": {
+   "cells": 14488,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "数字年龄 76y vs 阈值 18y"
+  },
+  "56-year-old stage": {
+   "cells": 14406,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 56y vs 阈值 18y"
+  },
+  "30-year-old stage": {
+   "cells": 14224,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 30y vs 阈值 18y"
+  },
+  "3-year-old stage": {
+   "cells": 13748,
+   "n_donors": 1,
+   "organism_stage": "developing",
+   "rule": "数字年龄 3y vs 阈值 18y"
+  },
+  "85-year-old stage": {
+   "cells": 13362,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 85y vs 阈值 18y"
+  },
+  "52-year-old stage": {
+   "cells": 13317,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 52y vs 阈值 18y"
+  },
+  "15-year-old stage": {
+   "cells": 13317,
+   "n_donors": 1,
+   "organism_stage": "developing",
+   "rule": "数字年龄 15y vs 阈值 18y"
+  },
+  "58-year-old stage": {
+   "cells": 12874,
+   "n_donors": 2,
+   "organism_stage": "adult",
+   "rule": "数字年龄 58y vs 阈值 18y"
+  },
+  "47-year-old stage": {
+   "cells": 12845,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 47y vs 阈值 18y"
+  },
+  "75-year-old stage": {
+   "cells": 12130,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 75y vs 阈值 18y"
+  },
+  "82-year-old stage": {
+   "cells": 10532,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 82y vs 阈值 18y"
+  },
+  "46-year-old stage": {
+   "cells": 10451,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 46y vs 阈值 18y"
+  },
+  "68-year-old stage": {
+   "cells": 10357,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 68y vs 阈值 18y"
+  },
+  "63-year-old stage": {
+   "cells": 8965,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 63y vs 阈值 18y"
+  },
+  "90 year-old and over stage": {
+   "cells": 8900,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "'90 year-old and over' 下界>=阈值"
+  },
+  "17-year-old stage": {
+   "cells": 8175,
+   "n_donors": 1,
+   "organism_stage": "developing",
+   "rule": "数字年龄 17y vs 阈值 18y"
+  },
+  "45-year-old stage": {
+   "cells": 7777,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 45y vs 阈值 18y"
+  },
+  "74-year-old stage": {
+   "cells": 7776,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 74y vs 阈值 18y"
+  },
+  "54-year-old stage": {
+   "cells": 6753,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 54y vs 阈值 18y"
+  },
+  "50-year-old stage": {
+   "cells": 4676,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 50y vs 阈值 18y"
+  },
+  "37-year-old stage": {
+   "cells": 3687,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 37y vs 阈值 18y"
+  },
+  "11-year-old stage": {
+   "cells": 3443,
+   "n_donors": 1,
+   "organism_stage": "developing",
+   "rule": "数字年龄 11y vs 阈值 18y"
+  },
+  "53-year-old stage": {
+   "cells": 2974,
+   "n_donors": 1,
+   "organism_stage": "adult",
+   "rule": "数字年龄 53y vs 阈值 18y"
+  }
+ },
+ "excluded_nonadult_units": [
+  {
+   "donor_id": "MMD_23_17738",
+   "cells": 18998,
+   "uberon": "10-year-old stage",
+   "organism_stage": "developing",
+   "rule": "数字年龄 10y vs 阈值 18y"
+  },
+  {
+   "donor_id": "BCM_22_0698",
+   "cells": 15177,
+   "uberon": "newborn stage (0-28 days)",
+   "organism_stage": "developing",
+   "rule": "newborn/infant 产后早期→developing (裁定 Q2)"
+  },
+  {
+   "donor_id": "BCM_23_0491",
+   "cells": 14845,
+   "uberon": "16-year-old stage",
+   "organism_stage": "developing",
+   "rule": "数字年龄 16y vs 阈值 18y"
+  },
+  {
+   "donor_id": "MMD_23_22486",
+   "cells": 13748,
+   "uberon": "3-year-old stage",
+   "organism_stage": "developing",
+   "rule": "数字年龄 3y vs 阈值 18y"
+  },
+  {
+   "donor_id": "MMD_23_21623",
+   "cells": 13317,
+   "uberon": "15-year-old stage",
+   "organism_stage": "developing",
+   "rule": "数字年龄 15y vs 阈值 18y"
+  },
+  {
+   "donor_id": "BCM_23_0131",
+   "cells": 10136,
+   "uberon": "16-year-old stage",
+   "organism_stage": "developing",
+   "rule": "数字年龄 16y vs 阈值 18y"
+  },
+  {
+   "donor_id": "MMD_23_21999",
+   "cells": 8175,
+   "uberon": "17-year-old stage",
+   "organism_stage": "developing",
+   "rule": "数字年龄 17y vs 阈值 18y"
+  },
+  {
+   "donor_id": "BCM_22_0769",
+   "cells": 3443,
+   "uberon": "11-year-old stage",
+   "organism_stage": "developing",
+   "rule": "数字年龄 11y vs 阈值 18y"
+  },
+  {
+   "donor_id": "MMD_23_20181",
+   "cells": 2231,
+   "uberon": "16-year-old stage",
+   "organism_stage": "developing",
+   "rule": "数字年龄 16y vs 阈值 18y"
+  }
+ ],
+ "donor_level_adult_pool_contrast": {
+  "AC": {
+   "n_units": 107,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    1.57
+   ],
+   "range_pct": [
+    0.0,
+    6.7
+   ]
+  },
+  "Adipocyte": {
+   "n_units": 107,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "range_pct": [
+    0.0,
+    1.31
+   ]
+  },
+  "Astrocyte": {
+   "n_units": 107,
+   "median_pct": 28.94,
+   "iqr_pct": [
+    21.17,
+    35.39
+   ],
+   "range_pct": [
+    3.25,
+    70.08
+   ]
+  },
+  "BC": {
+   "n_units": 107,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    7.56
+   ],
+   "range_pct": [
+    0.0,
+    24.76
+   ]
+  },
+  "B_cell": {
+   "n_units": 107,
+   "median_pct": 0.01,
+   "iqr_pct": [
+    0.0,
+    0.02
+   ],
+   "range_pct": [
+    0.0,
+    0.83
+   ]
+  },
+  "Cone": {
+   "n_units": 107,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.61
+   ],
+   "range_pct": [
+    0.0,
+    4.63
+   ]
+  },
+  "Dendritic_cell": {
+   "n_units": 107,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.01
+   ],
+   "range_pct": [
+    0.0,
+    0.09
+   ]
+  },
+  "Endothelial_cell": {
+   "n_units": 107,
+   "median_pct": 3.27,
+   "iqr_pct": [
+    1.69,
+    5.24
+   ],
+   "range_pct": [
+    0.0,
+    31.24
+   ]
+  },
+  "Fibroblast": {
+   "n_units": 107,
+   "median_pct": 8.92,
+   "iqr_pct": [
+    3.24,
+    16.72
+   ],
+   "range_pct": [
+    0.42,
+    59.43
+   ]
+  },
+  "HC": {
+   "n_units": 107,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    1.2
+   ],
+   "range_pct": [
+    0.0,
+    3.44
+   ]
+  },
+  "MG": {
+   "n_units": 107,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    3.72
+   ],
+   "range_pct": [
+    0.0,
+    15.12
+   ]
+  },
+  "Macrophage": {
+   "n_units": 107,
+   "median_pct": 0.51,
+   "iqr_pct": [
+    0.2,
+    1.28
+   ],
+   "range_pct": [
+    0.0,
+    5.24
+   ]
+  },
+  "Mast_cell": {
+   "n_units": 107,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "range_pct": [
+    0.0,
+    0.3
+   ]
+  },
+  "Melanocyte": {
+   "n_units": 107,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.29
+   ],
+   "range_pct": [
+    0.0,
+    19.45
+   ]
+  },
+  "Microglia": {
+   "n_units": 107,
+   "median_pct": 4.08,
+   "iqr_pct": [
+    1.8,
+    6.3
+   ],
+   "range_pct": [
+    0.0,
+    19.1
+   ]
+  },
+  "Mural_cell": {
+   "n_units": 107,
+   "median_pct": 1.49,
+   "iqr_pct": [
+    0.72,
+    2.45
+   ],
+   "range_pct": [
+    0.0,
+    11.97
+   ]
+  },
+  "NK_cell": {
+   "n_units": 107,
+   "median_pct": 0.02,
+   "iqr_pct": [
+    0.0,
+    0.04
+   ],
+   "range_pct": [
+    0.0,
+    0.24
+   ]
+  },
+  "Oligodendrocyte": {
+   "n_units": 107,
+   "median_pct": 27.96,
+   "iqr_pct": [
+    10.59,
+    40.67
+   ],
+   "range_pct": [
+    0.0,
+    70.31
+   ]
+  },
+  "Oligodendrocyte_precursor_cell": {
+   "n_units": 107,
+   "median_pct": 0.64,
+   "iqr_pct": [
+    0.02,
+    2.98
+   ],
+   "range_pct": [
+    0.0,
+    8.05
+   ]
+  },
+  "Pigmented_cell": {
+   "n_units": 107,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.0
+   ],
+   "range_pct": [
+    0.0,
+    8.31
+   ]
+  },
+  "RGC": {
+   "n_units": 107,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.49
+   ],
+   "range_pct": [
+    0.0,
+    3.7
+   ]
+  },
+  "RPE": {
+   "n_units": 107,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    0.47
+   ],
+   "range_pct": [
+    0.0,
+    22.5
+   ]
+  },
+  "Rod": {
+   "n_units": 107,
+   "median_pct": 0.0,
+   "iqr_pct": [
+    0.0,
+    7.66
+   ],
+   "range_pct": [
+    0.0,
+    52.58
+   ]
+  },
+  "Schwann_cell": {
+   "n_units": 107,
+   "median_pct": 0.07,
+   "iqr_pct": [
+    0.02,
+    0.3
+   ],
+   "range_pct": [
+    0.0,
+    4.03
+   ]
+  },
+  "T_cell": {
+   "n_units": 107,
+   "median_pct": 0.13,
+   "iqr_pct": [
+    0.06,
+    0.28
+   ],
+   "range_pct": [
+    0.0,
+    1.59
+   ]
+  }
+ },
+ "pooled_adult_pool_contrast": {
+  "AC": 1.15,
+  "Adipocyte": 0.06,
+  "Astrocyte": 28.52,
+  "BC": 3.48,
+  "B_cell": 0.04,
+  "Cone": 0.45,
+  "Dendritic_cell": 0.01,
+  "Endothelial_cell": 3.64,
+  "Fibroblast": 12.39,
+  "HC": 0.5,
+  "MG": 1.68,
+  "Macrophage": 1.02,
+  "Mast_cell": 0.02,
+  "Melanocyte": 0.86,
+  "Microglia": 5.01,
+  "Mural_cell": 1.8,
+  "NK_cell": 0.04,
+  "Oligodendrocyte": 28.97,
+  "Oligodendrocyte_precursor_cell": 1.97,
+  "Pigmented_cell": 0.28,
+  "RGC": 0.37,
+  "RPE": 0.89,
+  "Rod": 6.32,
+  "Schwann_cell": 0.22,
+  "T_cell": 0.3
+ },
+ "adult_only_meta": {
+  "n_donors_adult": 74,
+  "n_donors_excluded_nonadult": 9,
+  "n_cells_adult": 859559,
+  "n_units_adult_main": 98,
+  "n_units_pool": 107
+ },
+ "axis_version": "kb2c-1.1",
+ "development_stage": "adult",
+ "development_stage_prohibition": "KB3 禁令 (PI 红线 2026-09-23): 发育期数据不得进成人基线统计池, 反之亦然 —— 同一组织胎儿≠成人, adult/fetal 不互为参照。",
+ "kb3_card": "t_5425a7ca",
+ "identity_signature": {
+  "baseline_human_optic_nerve__adult_only__kb2c": "sha256:04ed21d9e901a33d18bc424e039086fc35c699e1efafa7955b7dfd067ed48169",
+  "baseline_human_optic_nerve__adult_pool__v1.0": "sha256:ae33cb20e12c6b8a3e1e87af05fb9d76b821b046796ff17dec0ff2e9bd06eac9"
+ }
+}

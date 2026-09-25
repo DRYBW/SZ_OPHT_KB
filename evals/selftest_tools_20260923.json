@@ -1,0 +1,62 @@
+{
+ "started": "2026-09-23 19:33:14",
+ "checks": [
+  {
+   "name": "initialize 握手",
+   "ok": true,
+   "detail": "eyekb vP1-0.1"
+  },
+  {
+   "name": "list_tools == 三工具",
+   "ok": true,
+   "detail": "['get_kb_page', 'query_marker', 'search_literature']"
+  },
+  {
+   "name": "query_marker(cell_type=MG)",
+   "ok": true,
+   "detail": "{'mode': 'cell_type', 'query': 'MG', 'found': True, 'markers': {'MG': ['RLBP1', 'GLUL', 'SOX9', 'VIM', 'S100B']}, 'detail': {}, 'provenance': {'source': '/mnt/D/EyeKB/kb/markers/markers_v4.1_clean.json', 'version': 'v4.1-clean-P0.4', 'note': 'P0.3 Endo/Peri 删除 + P0.4 数据驱动 Micro/RPE marker（AUC>0.65 全"
+  },
+  {
+   "name": "query_marker(genes 反查)",
+   "ok": true,
+   "detail": "[{'cell_type': 'Rod', 'n_shared': 1, 'shared_genes': ['RHO']}, {'cell_type': 'Astro', 'n_shared': 1, 'shared_genes': ['GFAP']}]"
+  },
+  {
+   "name": "query_marker(空=类目清单)",
+   "ok": true,
+   "detail": "['AC', 'Astro', 'BC', 'Cone', 'HC', 'MG', 'Micro', 'RGC', 'RPE', 'Rod']"
+  },
+  {
+   "name": "get_kb_page(index)",
+   "ok": true,
+   "detail": "/mnt/D/EyeKB/kb/vk_literature_index/INDEX.md"
+  },
+  {
+   "name": "get_kb_page(tissue=cornea)",
+   "ok": true,
+   "detail": "/mnt/D/EyeKB/kb/vk_literature_index/tissue-cornea.md"
+  },
+  {
+   "name": "get_kb_page 越界拒绝",
+   "ok": true,
+   "detail": "name 含非法字符 (白名单 [A-Za-z0-9_-]): '../../etc/passwd'"
+  },
+  {
+   "name": "get_kb_page 不存在→回清单",
+   "ok": true,
+   "detail": "27"
+  },
+  {
+   "name": "search_literature 首轮(9s 含加载)",
+   "ok": true,
+   "detail": "['35167652', '36277849', '40531615', '36977817', '35212809']"
+  },
+  {
+   "name": "search_literature 复用(1s)",
+   "ok": true,
+   "detail": "['34741068', '39732756', '34381080']"
+  }
+ ],
+ "pass": 11,
+ "fail": 0
+}

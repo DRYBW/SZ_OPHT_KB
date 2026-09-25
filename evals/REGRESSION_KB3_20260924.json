@@ -1,0 +1,254 @@
+{
+ "card": "t_5425a7ca",
+ "date": "2026-09-24",
+ "suite": "REGRESSION_KB3_20260924",
+ "pass": 49,
+ "fail": 0,
+ "checks": [
+  {
+   "check": "11 条全带 development_stage",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "枚举合法 (5 值, mixed 未新建)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "5 个 adult 实数档 → development_stage=adult (与 organism_stage 一致)",
+   "pass": true,
+   "detail": "['retina', 'ocular_surface', 'optic_nerve', 'trabecular_meshwork', 'ciliary_body']"
+  },
+  {
+   "check": "RPE=unknown 不静默归 adult (KB2c 红线2 继承)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "骨架=unknown+适用锚写死",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "禁令字段在位 11/11",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "MD 头行+参考分布段禁令 11/11",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "概念条 development_stage=fetal_developing+禁令",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "三锚核实表 verdict 正确",
+   "pass": true,
+   "detail": "{'GSE268630': 'AVAILABLE_WITH_LABELS', 'GSE234963': 'AVAILABLE_NO_PUBLISHED_LABELS', 'GSE138002': 'AVAILABLE_MIXED_CONTENT'}"
+  },
+  {
+   "check": "概念条 candidates 原数组未动 (KB2c 回归 6 候选锁)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "独立文件在位 (.json/.md)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "schema=eyekb-baseline-development/1.0 (MCP 成人扫描不可见前缀)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "development_stage=fetal_developing 枚举合法 + mixed 未用",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "entry_id 与成人条分离",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "GSE268630 数字与聚合素材全等",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "GSE138002 胎层数字与素材全等 (Hgw9-27)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "排除层在位: Adult/organoid 只登记不并入",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "GSE234963 数据卡: 无据不建 (composition=None)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "新生层单列 postnatal_neonatal (枚举第三值有据)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "发育条 MD 禁令+非引擎声明",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "索引 entries=11 (成人数组未混入发育条)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "索引 development_entries 登记",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "索引 entries 全带 development_stage",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "12 行全带 development_axis=adult",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "ROP 预留格在位且只立不填",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PDR 条目 development_stage+organism_stage 双显式 adult",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PDR MD 头显式 development_stage=adult",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "矩阵 MD 含 development_axis 列+ROP 预留",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "KB3-ADJ 增补段在位",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "冻结件本体零改动 (前缀逐字节全等)",
+   "pass": true,
+   "detail": "增补为纯追加"
+  },
+  {
+   "check": "RUN1 复查: Q8 两行 behavior_only=True",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "RUN1 复查: Q8 无成人评分字段",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "RUN1 复查: paired_delta 无 Q8",
+   "pass": true,
+   "detail": "['Q1', 'Q2', 'Q3', 'Q4', 'Q5b']"
+  },
+  {
+   "check": "sidecar schema/行数=3696 papers",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "final 枚举三值合法",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "chunk 级不做=声明在位",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "sidecar paper_id 集合与 evidence_meta 全等",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "人工抽验 30 篇表在位 (30 行+表头, manual_call 全填)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "retrieve_v3 --dev-stage 参数+默认不过滤",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "dev_stage_map 装载 3696 条",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "meta 缺失→None (过滤自动禁用)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "OcularKB WIKI §6 发育轴红线",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "EyeKB README 红线第 5 条",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "当前状态: KB3 行在位",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "MCP retina: 全等不破 + development_stage=adult 透传",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "MCP 成人查询零发育条泄漏",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "MCP fetal 查询仍=概念条 (不泄漏发育数据; 指针允许)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "MCP development_stage=adult 显式查询不泄漏发育数据",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "search_literature 结果 schema 未加 dev_stage (旧行为不变)",
+   "pass": true,
+   "detail": "['pmid', 'title', 'journal', 'year', 'species', 'tissue_labels', 'section', 'snippet', '_full_text', 'cell_type_mentioned', 'marker_genes', 'relevance_score', 'inclusion_reason', 'reason_confidence', 'reason_method', 'inclusion_reasons', 'claim_relation', 'evidence_context', 'evidence_verification_status']"
+  }
+ ]
+}

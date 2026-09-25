@@ -1,0 +1,121 @@
+{
+ "schema": "eyekb-disease-matrix/1.1",
+ "generated": "2026-09-23",
+ "generator": "build_disease_v2.py (KB1v2 t_16c3e020)",
+ "card": "t_be336eee",
+ "stage_axis_note": "KB2c 裁定 Q3: 格子键=(disease, material, organism_stage) 三键。现网全部格=adult (疾病手术材料皆成人); 发育期/胎儿样本不进成人疾病格 (PI 指令条款2: '即使是一个组织也不对的')。",
+ "rows": [
+  {
+   "disease": "PDR",
+   "material": "fibrovascular_membrane",
+   "status": "FILLED (示例格)",
+   "note": "PDR__fibrovascular_membrane.md",
+   "organism_stage": "adult",
+   "development_axis": "adult"
+  },
+  {
+   "disease": "PDR",
+   "material": "vitreous",
+   "status": "placeholder",
+   "note": "定性锚已有 (B: PMID 39220810, T 91.6%); 未达最小可用标准的独立条目门槛 — 暂记于示例格 cross_material_note",
+   "organism_stage": "adult",
+   "development_axis": "adult"
+  },
+  {
+   "disease": "PDR",
+   "material": "retina_adjacent",
+   "status": "placeholder",
+   "note": "B 级文献锚 (MG_EARLY_DR/DR_RETINA_SC/MULLER_REDD1)",
+   "organism_stage": "adult",
+   "development_axis": "adult"
+  },
+  {
+   "disease": "NPDR/DME",
+   "material": "retina",
+   "status": "placeholder",
+   "note": "与 PDR 不同阶段不同材料, 不得并入 (T6: 不合成一个组成基线)",
+   "organism_stage": "adult",
+   "development_axis": "adult"
+  },
+  {
+   "disease": "nAMD/GA",
+   "material": "RPE_choroid",
+   "status": "placeholder",
+   "note": "组织基线侧 RPE/choroid 现为骨架 → 先回填 W1 骨架再谈疾病格",
+   "organism_stage": "adult",
+   "development_axis": "adult"
+  },
+  {
+   "disease": "RRD",
+   "material": "subretinal/ERM membrane",
+   "status": "placeholder",
+   "note": "GSE165784 RRD-ERM n=1 —— 单样本只可报告'该样本中观察到', 不建普遍条目 (T3)",
+   "organism_stage": "adult",
+   "development_axis": "adult"
+  },
+  {
+   "disease": "ERM (特发性)",
+   "material": "membrane",
+   "status": "placeholder",
+   "note": "与 PDR 膜同材料不同病 —— 复用概念 ID, 另立格子",
+   "organism_stage": "adult",
+   "development_axis": "adult"
+  },
+  {
+   "disease": "glaucoma",
+   "material": "optic_nerve_RGC",
+   "status": "placeholder",
+   "note": "组织侧 optic_nerve 骨架已回填映射 (HRA006282 本地可算)",
+   "organism_stage": "adult",
+   "development_axis": "adult"
+  },
+  {
+   "disease": "keratoconus",
+   "material": "cornea",
+   "status": "placeholder",
+   "note": "组织侧 ocular_surface 基线已 filled → 该格证据门槛最低",
+   "organism_stage": "adult",
+   "development_axis": "adult"
+  },
+  {
+   "disease": "Fuchs/内皮失代偿",
+   "material": "corneal_endothelium",
+   "status": "placeholder",
+   "note": "D002 内皮层仅 404 细胞, 基线侧先扩",
+   "organism_stage": "adult",
+   "development_axis": "adult"
+  },
+  {
+   "disease": "uveitis (中间型)",
+   "material": "vitreous",
+   "status": "placeholder",
+   "note": "与 PDR__vitreous 共享材料概念",
+   "organism_stage": "adult",
+   "development_axis": "adult"
+  },
+  {
+   "disease": "cataract",
+   "material": "lens",
+   "status": "placeholder",
+   "note": "组织侧 lens 骨架=LEC 域裁定",
+   "organism_stage": "adult",
+   "development_axis": "adult"
+  }
+ ],
+ "development_axis_reservations": [
+  {
+   "disease": "ROP",
+   "material": "developing_retina_vascular",
+   "development_axis": "fetal_neonatal",
+   "organism_stage": "developing",
+   "status": "RESERVED (只立格不填内容)",
+   "note": "早产儿视网膜病变 = 发育轴侧血管增殖病 (PI 红线配套格): 与 PDR 成人膜格严格分离, 永不并格、永不互为参照 (胎儿/早产儿的这些和成人的即使是一个组织也不对的)。填格前提 = 拿到发育期材料/文献锚 (如 ROP 视网膜类器官方或尸材料单细胞——均先过发育轴单列纪律); 填格动作须过裁定并同步改回归双锁 (rows/reservations)。",
+   "reserved_by": {
+    "card": "t_5425a7ca",
+    "date": "2026-09-24"
+   }
+  }
+ ],
+ "kb3_note": "KB3 (t_5425a7ca): 发育轴升为矩阵显式列 development_axis; 现网 12 格全 adult (写死); 发育轴侧疾病格走 development_axis_reservations 占位 (防与成人格混池, 回归双锁)。",
+ "kb3_card": "t_5425a7ca"
+}

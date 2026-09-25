@@ -1,0 +1,101 @@
+{
+ "schema": "eyekb-baseline-concept/1.0",
+ "entry_id": "fetal_development_transitions",
+ "title": "胎儿/发育期 眼组织 转换态概念条目 (KB2c 裁定 Q5 — 非成人桶分身, 不实算组成)",
+ "generated": "2026-09-23",
+ "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c 发育轴单列 t_be336eee)",
+ "card": "t_be336eee",
+ "organism_stage": [
+  "fetal",
+  "developing"
+ ],
+ "nature": "本条目=概念占位: 登记未来的 fetal/developing 基线候选与其前提, **不是组成基线** —— 胎儿的这些和成人的即使是一个组织也不对 (PI 红线), 禁止把本条目当任何组织的成人桶引用或反向借用。",
+ "current_facts": {
+  "filled_adult_baselines": 6,
+  "fetal_stage_nuclei_in_filled_sources": 0,
+  "nonadult_in_filled_sources": "newborn/儿童/青少年供者 (逐行见 _STAGE_DISCLOSURE.md), 已从 adult 主档剔除; 未来 developing 基线的本地素材",
+  "engine_applicability": "现役判读引擎 (OcularKB M3 等) 训练/适用域=成人组织 —— 现役引擎不适用 fetal/发育期样本, 对这类材料必须弃权 (评估层 E4=OOD_严格, 指令条款3); 需另建 fetal 参考管线后方可立组成条目"
+ },
+ "candidates": [
+  {
+   "acc": "GSE268630",
+   "desc": "人胎视网膜 multiome ~22万核",
+   "tier": "fetal",
+   "local": true,
+   "note": "指令条款4 首选候选; 入基线前需 fetal 参考管线任务"
+  },
+  {
+   "acc": "GSE137828",
+   "desc": "人胎视网膜 (fetal)",
+   "tier": "fetal",
+   "local": "待核",
+   "note": "指令条款4 列名"
+  },
+  {
+   "acc": "GSE137863",
+   "desc": "人胎视网膜发育 (fetal)",
+   "tier": "fetal",
+   "local": "待核",
+   "note": "指令条款4 列名"
+  },
+  {
+   "acc": "GSE138002",
+   "desc": "视网膜类器官",
+   "tier": "organoid→unknown+旗标 (裁定 Q1)",
+   "local": "待核",
+   "note": "类器官≠胎儿组织, 也≠成人; 单列"
+  },
+  {
+   "acc": "GSE234963",
+   "desc": "类器官集",
+   "tier": "organoid→unknown+旗标",
+   "local": "待核",
+   "note": "指令条款4 列名"
+  },
+  {
+   "acc": "GSE235577",
+   "desc": "类器官/多组学",
+   "tier": "organoid→unknown+旗标",
+   "local": "待核",
+   "note": "08-28 盘点实为 snATAC/多组学 ATAC 组分 — 转换前须重核平台口径"
+  }
+ ],
+ "out_of_scope": "胎儿/发育期组成实算=另批任务 (裁定 Q5); >=60 老年分层=正交 aging 轴, 不在发育轴内。",
+ "usage_redline": "本条目所有候选不得并入任何 adult 条; 引用本条目必须连带'需 fetal 参考管线, 现役引擎不适用'声明。",
+ "development_stage": "fetal_developing",
+ "development_stage_prohibition": "KB3 禁令 (PI 红线 2026-09-23): 发育期数据不得进成人基线统计池, 反之亦然 —— 同一组织胎儿≠成人, adult/fetal 不互为参照。",
+ "kb3_card": "t_5425a7ca",
+ "kb3_anchor_verification": {
+  "generated": "2026-09-24",
+  "card": "t_5425a7ca",
+  "method": "盘上 find + 文件内容实测 + registry (ocular_public_datasets_verified_v1.csv, ocularkb_ingest_registry_20260818.csv) 交叉核对",
+  "anchors": [
+   {
+    "acc": "GSE268630",
+    "verdict": "AVAILABLE_WITH_LABELS",
+    "evidence": "/mnt/D/OcularKB/data/GSE268630/gse268630_cellxgene.h5ad (226,506 细胞, portal 注释含 majorclass/subclass/development_stage/donor_id); GSM 面 25 单样本矩阵在盘",
+    "identity_note": "候选条 desc='multiome ~22万核' 与 portal 面一致; KB3 发育条目实采 portal 转录组注释"
+   },
+   {
+    "acc": "GSE234963",
+    "verdict": "AVAILABLE_NO_PUBLISHED_LABELS",
+    "evidence": "24×h5ad @ /mnt/D/OcularKB/data/backlog_h5ad/ (obs 列=空, 无标签) + RAW.tar @ data/GSE234963/; registry OA-D009: 'Human fetal retinal progenitor scRNA-seq', Fetal ~7.5-21 PCW, 24 samples/13 时间点, 'no standalone GEO label file confirmed'",
+    "identity_note": "候选条 desc='类器官集' 系 KB2c 笔误 —— registry 权威行=胎 RPC (与任务书'人胎 RPC 24 样本'一致); 无公开标签 → 只立数据卡不实算"
+   },
+   {
+    "acc": "GSE138002",
+    "verdict": "AVAILABLE_MIXED_CONTENT",
+    "evidence": "data/GSE138002/ 4×suppl (mtx/barcodes/genes); Final_barcodes.csv.gz 118,555 细胞含 umap2_CellType 标签; 样本面=Hgw9-27 胎网 + Hpnd8 新生 + Adult 对照 + 24-59_Day 类器官",
+    "identity_note": "候选条 desc='视网膜类器官' 不完整 —— registry OA-D010 权威标题 'developing human retina AND retinal organoids'; 任务书 '(GW9-19)' 实测胎网面到 GW27; 混内容必须按样本级拆层, Adult/类器官段不进发育条目"
+   }
+  ],
+  "kb3_outcome": "retina__fetal_developing 独立条目已建 (GSE268630 + GSE138002 标签聚合); GSE234963 数据卡在条目内、组成待 fetal 管线回填。"
+ },
+ "kb3_first_entry_pointer": {
+  "file": "retina__fetal_developing.json",
+  "entry_id": "baseline_human_retina__fetal_developing__kb3",
+  "card": "t_5425a7ca",
+  "date": "2026-09-24",
+  "note": "概念条=候选总表/查询入口; 该文件=已发布标签分布参考条 (首个发育期实数据条目)。并存。"
+ }
+}

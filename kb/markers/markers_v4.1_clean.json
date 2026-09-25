@@ -1,0 +1,245 @@
+{
+  "version": "v4.1-clean-P0.4",
+  "created": "2026-08-12 15:50:59",
+  "markers": {
+    "Rod": [
+      "RHO",
+      "NRL",
+      "NR2E3",
+      "PDE6B",
+      "GNAT1"
+    ],
+    "Cone": [
+      "OPN1SW",
+      "OPN1MW",
+      "ARR3",
+      "PDE6H",
+      "GNAT2"
+    ],
+    "BC": [
+      "VSX2",
+      "GRM6",
+      "CACNA1S",
+      "ISL1",
+      "OTX2"
+    ],
+    "AC": [
+      "TFAP2A",
+      "GAD1",
+      "GAD2",
+      "SLC6A9",
+      "ONECUT2"
+    ],
+    "HC": [
+      "ONECUT1",
+      "ONECUT3",
+      "GAD1",
+      "ISL1",
+      "CX3CR1"
+    ],
+    "RGC": [
+      "RBPMS",
+      "SLC17A6",
+      "POU4F1",
+      "POU4F2",
+      "NEFL"
+    ],
+    "MG": [
+      "RLBP1",
+      "GLUL",
+      "SOX9",
+      "VIM",
+      "S100B"
+    ],
+    "Astro": [
+      "GFAP",
+      "AQP4",
+      "S100B",
+      "VIM",
+      "SLC1A3"
+    ],
+    "Micro": [
+      "C1QB"
+    ],
+    "RPE": [
+      "BEST1",
+      "RPE65",
+      "TTR",
+      "LRAT",
+      "RDH5",
+      "MITF"
+    ]
+  },
+  "note": "P0.3 Endo/Peri 删除 + P0.4 数据驱动 Micro/RPE marker（AUC>0.65 全入选）；其余 8 类沿用 v4 marker 表（待 P1 冻结）",
+  "micro_detail": {
+    "candidates": [
+      "IRF8",
+      "C1QA",
+      "C1QB",
+      "TYROBP",
+      "AIF1",
+      "HEXB"
+    ],
+    "legacy_v4": [
+      "CX3CR1",
+      "P2RY12",
+      "TMEM119"
+    ],
+    "auc_table": [
+      {
+        "gene": "IRF8",
+        "auc": 0.5879114800603092,
+        "target_median": 0.0,
+        "Astro_median": 0.0,
+        "source": "candidate"
+      },
+      {
+        "gene": "C1QA",
+        "auc": 0.616117844250845,
+        "target_median": 0.0,
+        "Astro_median": 0.0,
+        "source": "candidate"
+      },
+      {
+        "gene": "C1QB",
+        "auc": 0.6500996371445733,
+        "target_median": 0.0,
+        "Astro_median": 0.0,
+        "source": "candidate"
+      },
+      {
+        "gene": "TYROBP",
+        "auc": 0.6379811815525613,
+        "target_median": 0.0,
+        "Astro_median": 0.0,
+        "source": "candidate"
+      },
+      {
+        "gene": "AIF1",
+        "auc": 0.5417977443278559,
+        "target_median": 0.0,
+        "Astro_median": 0.0,
+        "source": "candidate"
+      },
+      {
+        "gene": "HEXB",
+        "auc": 0.536856246126368,
+        "target_median": 0.0,
+        "Astro_median": 0.0,
+        "source": "candidate"
+      },
+      {
+        "gene": "CX3CR1",
+        "auc": 0.5575667642200918,
+        "target_median": 0.0,
+        "Astro_median": 0.0,
+        "source": "legacy(v4)"
+      },
+      {
+        "gene": "P2RY12",
+        "auc": 0.5236421450224186,
+        "target_median": 0.0,
+        "Astro_median": 0.0,
+        "source": "legacy(v4)"
+      },
+      {
+        "gene": "TMEM119",
+        "auc": 0.5122709086959817,
+        "target_median": 0.0,
+        "Astro_median": 0.0,
+        "source": "legacy(v4)"
+      }
+    ],
+    "selected_auc_gt065": [
+      "C1QB"
+    ],
+    "final_markers": [
+      "C1QB"
+    ],
+    "negative_check_class": "Astro",
+    "note": "入选=候选基因 AUC>0.65 且 Micro 中位表达 > Astro 中位表达；legacy 仅诊断对比不参与入选"
+  },
+  "rpe_detail": {
+    "candidates": [
+      "RPE65",
+      "RDH5",
+      "LRAT",
+      "BEST1",
+      "MITF",
+      "TTR"
+    ],
+    "legacy_v4": [
+      "RLBP1"
+    ],
+    "auc_table": [
+      {
+        "gene": "RPE65",
+        "auc": 0.9569385379025931,
+        "target_median": 2.5562081336975098,
+        "MG_median": 0.0,
+        "source": "candidate"
+      },
+      {
+        "gene": "RDH5",
+        "auc": 0.8191038321248146,
+        "target_median": 1.1759238243103027,
+        "MG_median": 0.0,
+        "source": "candidate"
+      },
+      {
+        "gene": "LRAT",
+        "auc": 0.8477093453900093,
+        "target_median": 1.0853731632232666,
+        "MG_median": 0.0,
+        "source": "candidate"
+      },
+      {
+        "gene": "BEST1",
+        "auc": 0.9611042569316788,
+        "target_median": 2.3577470779418945,
+        "MG_median": 0.0,
+        "source": "candidate"
+      },
+      {
+        "gene": "MITF",
+        "auc": 0.6748182193519637,
+        "target_median": 0.2777682840824127,
+        "MG_median": 0.0,
+        "source": "candidate"
+      },
+      {
+        "gene": "TTR",
+        "auc": 0.8970194689147982,
+        "target_median": 1.870225429534912,
+        "MG_median": 0.0,
+        "source": "candidate"
+      },
+      {
+        "gene": "RLBP1",
+        "auc": 0.8899296755296289,
+        "target_median": 1.9920427799224854,
+        "MG_median": 1.5770267248153687,
+        "source": "legacy(v4)"
+      }
+    ],
+    "selected_auc_gt065": [
+      "RPE65",
+      "RDH5",
+      "LRAT",
+      "BEST1",
+      "MITF",
+      "TTR"
+    ],
+    "final_markers": [
+      "RPE65",
+      "RDH5",
+      "LRAT",
+      "BEST1",
+      "MITF",
+      "TTR"
+    ],
+    "negative_check_class": "MG",
+    "note": "入选=候选基因 AUC>0.65 且 RPE 中位表达 > MG 中位表达；legacy 仅诊断对比不参与入选"
+  },
+  "auc_threshold": 0.65
+}

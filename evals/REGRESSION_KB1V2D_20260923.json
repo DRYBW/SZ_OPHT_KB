@@ -1,0 +1,91 @@
+{
+ "checks": [
+  {
+   "name": "manifest 计数=parquet 行数",
+   "ok": true,
+   "detail": "(220571, 220571)"
+  },
+  {
+   "name": "papers.jsonl 行数=3696 (含 v2.1 遗留 15 ghost)",
+   "ok": true,
+   "detail": "3696"
+  },
+  {
+   "name": "unique papers=3681",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "v2.1 三文件 sha 复核零改动",
+   "ok": true,
+   "detail": "{'chunks.parquet': True, 'papers.jsonl': True, 'manifest.yaml': True}"
+  },
+  {
+   "name": "7 D0 verification_status=D0_critical",
+   "ok": true,
+   "detail": "{'35061025': 'D0_critical_review_20260923', '37917183': 'D0_critical_review_20260923', '39220810': 'D0_critical_review_20260923', '40069725': 'D0_critical_review_20260923', '40562775': 'D0_critical_review_20260923', '41578023': 'D0_critical_review_20260923', '42601615': 'D0_critical_review_20260923'"
+  },
+  {
+   "name": "7 D0 source_db 指针=v2.2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "sidecar 覆盖数与新库一致",
+   "ok": true,
+   "detail": "3696"
+  },
+  {
+   "name": "D0 admission_lane 全登记",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "abstract_only 两篇标记正确",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D0 is_preprint=0 (正刊不混预印本)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "abstract-only 行 full_text_available=0",
+   "ok": true,
+   "detail": "2"
+  },
+  {
+   "name": "全文 D0 行 full_text_available=1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "pointer 含 v2.2 且 default 仍 v2.0 (切默认待拍板)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "撞库三篇在库未删 (423/36/2)",
+   "ok": true,
+   "detail": "{'35659263': 423, '33298129': 36, '22388286': 2}"
+  },
+  {
+   "name": "collision_impact.json 在场 (五情景)",
+   "ok": true,
+   "detail": "33"
+  },
+  {
+   "name": "v2.2 黄金集无回退 10/10",
+   "ok": true,
+   "detail": "10"
+  },
+  {
+   "name": "anchor 检索性 (7 篇全部 dense 可检索)",
+   "ok": true,
+   "detail": "{'35061025': 1, '37917183': 69, '39220810': 1, '40069725': None, '40562775': 1, '41578023': 1, '42601615': 1}"
+  }
+ ],
+ "pass": 17,
+ "fail": 0
+}

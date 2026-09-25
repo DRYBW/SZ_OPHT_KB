@@ -1,0 +1,984 @@
+{
+ "date": "2026-09-23",
+ "task": "EyeKB P1d MCP-vs-direct 黄金集回归",
+ "n_cases": 41,
+ "n_consistent": 0,
+ "verdict": "FAIL",
+ "db": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09",
+ "results": [
+  {
+   "group": "golden_retina",
+   "cell_type": "Rod",
+   "species": "human",
+   "tissue": "retina",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "34006945",
+    "36261438",
+    "40531615",
+    "36630901",
+    "35212809"
+   ],
+   "scores": [
+    0.8454,
+    0.8411,
+    0.8407,
+    0.8393,
+    0.8382
+   ],
+   "secs_mcp": 13.41
+  },
+  {
+   "group": "golden_retina",
+   "cell_type": "Cone",
+   "species": "human",
+   "tissue": "retina",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "34006945",
+    "40531615",
+    "40660409",
+    "36261438",
+    "32023475"
+   ],
+   "scores": [
+    0.8392,
+    0.8367,
+    0.8367,
+    0.8362,
+    0.8362
+   ],
+   "secs_mcp": 1.04
+  },
+  {
+   "group": "golden_retina",
+   "cell_type": "Retinal Pigment Epithelium",
+   "species": "human",
+   "tissue": "retina",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "34977041",
+    "37156914",
+    "36231108",
+    "38334673",
+    "39804630"
+   ],
+   "scores": [
+    0.8519,
+    0.828,
+    0.8222,
+    0.8191,
+    0.8183
+   ],
+   "secs_mcp": 1.05
+  },
+  {
+   "group": "golden_retina",
+   "cell_type": "Muller Glia",
+   "species": "human",
+   "tissue": "retina",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "35167652",
+    "36277849",
+    "40531615",
+    "36977817",
+    "35212809"
+   ],
+   "scores": [
+    0.8726,
+    0.8471,
+    0.8465,
+    0.84,
+    0.8382
+   ],
+   "secs_mcp": 1.03
+  },
+  {
+   "group": "golden_retina",
+   "cell_type": "Astrocyte",
+   "species": "human",
+   "tissue": "retina",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "41892278",
+    "36277849",
+    "37749651",
+    "35212809",
+    "34341398"
+   ],
+   "scores": [
+    0.8374,
+    0.8371,
+    0.8326,
+    0.8293,
+    0.8214
+   ],
+   "secs_mcp": 1.02
+  },
+  {
+   "group": "golden_retina",
+   "cell_type": "Microglia",
+   "species": "human",
+   "tissue": "retina",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "35212809",
+    "38409074",
+    "34006945",
+    "40858363",
+    "34341398"
+   ],
+   "scores": [
+    0.8533,
+    0.8495,
+    0.8447,
+    0.8437,
+    0.8381
+   ],
+   "secs_mcp": 1.02
+  },
+  {
+   "group": "golden_retina",
+   "cell_type": "Retinal Ganglion Cell",
+   "species": "human",
+   "tissue": "retina",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "34946963",
+    "34006945",
+    "38903914",
+    "32557945",
+    "37880369"
+   ],
+   "scores": [
+    0.8575,
+    0.8502,
+    0.8425,
+    0.8424,
+    0.833
+   ],
+   "secs_mcp": 1.06
+  },
+  {
+   "group": "golden_retina",
+   "cell_type": "Rod Bipolar Cell",
+   "species": "human",
+   "tissue": "retina",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "33665228",
+    "34006945",
+    "41632798",
+    "36277849",
+    "35615708"
+   ],
+   "scores": [
+    0.8432,
+    0.8423,
+    0.8366,
+    0.8337,
+    0.832
+   ],
+   "secs_mcp": 1.01
+  },
+  {
+   "group": "golden_retina",
+   "cell_type": "Horizontal Cell",
+   "species": "human",
+   "tissue": "retina",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "35615708",
+    "35212809",
+    "35325233",
+    "34006945",
+    "40660409"
+   ],
+   "scores": [
+    0.8329,
+    0.8291,
+    0.8286,
+    0.8278,
+    0.8269
+   ],
+   "secs_mcp": 1.03
+  },
+  {
+   "group": "golden_retina",
+   "cell_type": "Amacrine Cell",
+   "species": "human",
+   "tissue": "retina",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "34006945",
+    "35615708",
+    "35212809",
+    "36277849",
+    "40531615"
+   ],
+   "scores": [
+    0.846,
+    0.842,
+    0.8329,
+    0.8319,
+    0.8251
+   ],
+   "secs_mcp": 1.1
+  },
+  {
+   "group": "spot_cornea",
+   "cell_type": "corneal epithelium",
+   "species": "human",
+   "tissue": "cornea",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "34381080",
+    "37443842",
+    "40390022",
+    "38177186",
+    "42194275"
+   ],
+   "scores": [
+    0.8538,
+    0.8303,
+    0.8233,
+    0.8232,
+    0.8216
+   ],
+   "secs_mcp": 1.02
+  },
+  {
+   "group": "spot_cornea",
+   "cell_type": "corneal endothelium",
+   "species": "human",
+   "tissue": "cornea",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "34741068",
+    "39732756",
+    "34381080",
+    "42194275",
+    "37443842"
+   ],
+   "scores": [
+    0.8248,
+    0.8168,
+    0.8164,
+    0.8136,
+    0.8066
+   ],
+   "secs_mcp": 1.0
+  },
+  {
+   "group": "spot_cornea",
+   "cell_type": "keratocyte",
+   "species": "human",
+   "tissue": "cornea",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "34381080",
+    "37443842",
+    "40390022",
+    "34741068",
+    "38177186"
+   ],
+   "scores": [
+    0.847,
+    0.8377,
+    0.8224,
+    0.8199,
+    0.8065
+   ],
+   "secs_mcp": 1.01
+  },
+  {
+   "group": "spot_cornea",
+   "cell_type": "limbal stem cell",
+   "species": "human",
+   "tissue": "cornea",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "37443842",
+    "34381080",
+    "37389178",
+    "34741068",
+    "38514716"
+   ],
+   "scores": [
+    0.8833,
+    0.8489,
+    0.8458,
+    0.8396,
+    0.8308
+   ],
+   "secs_mcp": 1.01
+  },
+  {
+   "group": "spot_conjunctiva",
+   "cell_type": "goblet cell",
+   "species": "human",
+   "tissue": "conjunctiva",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "37389178",
+    "37443842",
+    "34638869",
+    "37507439",
+    "36932081"
+   ],
+   "scores": [
+    0.8261,
+    0.8097,
+    0.7853,
+    0.7705,
+    0.7694
+   ],
+   "secs_mcp": 1.15
+  },
+  {
+   "group": "spot_conjunctiva",
+   "cell_type": "conjunctival epithelium",
+   "species": "human",
+   "tissue": "conjunctiva",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "37389178",
+    "37443842",
+    "34381080",
+    "32502616",
+    "42589107"
+   ],
+   "scores": [
+    0.8546,
+    0.8381,
+    0.8245,
+    0.8224,
+    0.8163
+   ],
+   "secs_mcp": 0.86
+  },
+  {
+   "group": "spot_conjunctiva",
+   "cell_type": "fibroblast",
+   "species": "human",
+   "tissue": "conjunctiva",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "40238113",
+    "37569323",
+    "38177186",
+    "40576432",
+    "38514716"
+   ],
+   "scores": [
+    0.7902,
+    0.7834,
+    0.7803,
+    0.7722,
+    0.7701
+   ],
+   "secs_mcp": 0.86
+  },
+  {
+   "group": "spot_sclera",
+   "cell_type": "fibroblast",
+   "species": "human",
+   "tissue": "sclera",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 4,
+   "top_pmids": [
+    "40402520",
+    "40576432",
+    "40677403",
+    "42378569"
+   ],
+   "scores": [
+    0.8666,
+    0.8477,
+    0.8185,
+    0.8076
+   ],
+   "secs_mcp": 0.83
+  },
+  {
+   "group": "spot_sclera",
+   "cell_type": "chondrocyte",
+   "species": "human",
+   "tissue": "sclera",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "40576432",
+    "40402520",
+    "41803895",
+    "40677403",
+    "42378569"
+   ],
+   "scores": [
+    0.8141,
+    0.8049,
+    0.8037,
+    0.7884,
+    0.7812
+   ],
+   "secs_mcp": 0.84
+  },
+  {
+   "group": "spot_sclera",
+   "cell_type": "smooth muscle",
+   "species": "human",
+   "tissue": "sclera",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 4,
+   "top_pmids": [
+    "41803895",
+    "40576432",
+    "40402520",
+    "40677403"
+   ],
+   "scores": [
+    0.8238,
+    0.8198,
+    0.8146,
+    0.8058
+   ],
+   "secs_mcp": 0.84
+  },
+  {
+   "group": "spot_trabecular_meshwork",
+   "cell_type": "trabecular meshwork cell",
+   "species": "human",
+   "tissue": "trabecular_meshwork",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "42291280",
+    "40728983",
+    "39952952",
+    "40423739",
+    "35627267"
+   ],
+   "scores": [
+    0.8249,
+    0.82,
+    0.8129,
+    0.8065,
+    0.7942
+   ],
+   "secs_mcp": 0.86
+  },
+  {
+   "group": "spot_trabecular_meshwork",
+   "cell_type": "schlemm canal endothelium",
+   "species": "human",
+   "tissue": "trabecular_meshwork",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "39422453",
+    "41636427",
+    "32832237",
+    "38394161",
+    "34754027"
+   ],
+   "scores": [
+    0.8421,
+    0.8257,
+    0.8033,
+    0.7904,
+    0.7771
+   ],
+   "secs_mcp": 0.86
+  },
+  {
+   "group": "spot_trabecular_meshwork",
+   "cell_type": "endothelial cell",
+   "species": "human",
+   "tissue": "trabecular_meshwork",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "39422453",
+    "32832237",
+    "40126508",
+    "41636427",
+    "38173510"
+   ],
+   "scores": [
+    0.7872,
+    0.7585,
+    0.7565,
+    0.7506,
+    0.7408
+   ],
+   "secs_mcp": 0.86
+  },
+  {
+   "group": "spot_iris",
+   "cell_type": "iris smooth muscle",
+   "species": "human",
+   "tissue": "iris",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 2,
+   "top_pmids": [
+    "41309590",
+    "36092714"
+   ],
+   "scores": [
+    0.8524,
+    0.7498
+   ],
+   "secs_mcp": 0.8
+  },
+  {
+   "group": "spot_iris",
+   "cell_type": "iris pigment epithelium",
+   "species": "human",
+   "tissue": "iris",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "41309590",
+    "36582303",
+    "38587075",
+    "38670973",
+    "36645183"
+   ],
+   "scores": [
+    0.8414,
+    0.7932,
+    0.7823,
+    0.7764,
+    0.7574
+   ],
+   "secs_mcp": 0.83
+  },
+  {
+   "group": "spot_iris",
+   "cell_type": "astrocyte",
+   "species": "human",
+   "tissue": "iris",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "41309590",
+    "36582303",
+    "38587075",
+    "38670973",
+    "36645183"
+   ],
+   "scores": [
+    0.7818,
+    0.7454,
+    0.7315,
+    0.7154,
+    0.7128
+   ],
+   "secs_mcp": 0.83
+  },
+  {
+   "group": "spot_ciliary_body",
+   "cell_type": "ciliary epithelium",
+   "species": "human",
+   "tissue": "ciliary_body",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "36163311",
+    "39273233",
+    "41805112",
+    "41057298",
+    "41290721"
+   ],
+   "scores": [
+    0.8108,
+    0.7537,
+    0.7427,
+    0.735,
+    0.7349
+   ],
+   "secs_mcp": 0.87
+  },
+  {
+   "group": "spot_ciliary_body",
+   "cell_type": "endothelial cell",
+   "species": "human",
+   "tissue": "ciliary_body",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "36163311",
+    "39422453",
+    "36821388",
+    "41528844",
+    "33936569"
+   ],
+   "scores": [
+    0.8043,
+    0.7835,
+    0.7443,
+    0.7369,
+    0.7336
+   ],
+   "secs_mcp": 0.87
+  },
+  {
+   "group": "spot_ciliary_body",
+   "cell_type": "smooth muscle",
+   "species": "human",
+   "tissue": "ciliary_body",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "36163311",
+    "40055379",
+    "41528844",
+    "38989623",
+    "36582303"
+   ],
+   "scores": [
+    0.8154,
+    0.8126,
+    0.7894,
+    0.7873,
+    0.7686
+   ],
+   "secs_mcp": 0.84
+  },
+  {
+   "group": "spot_lens",
+   "cell_type": "lens fiber cell",
+   "species": "human",
+   "tissue": "lens",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "40598599",
+    "38643244",
+    "41989229",
+    "34946854",
+    "37048143"
+   ],
+   "scores": [
+    0.8011,
+    0.7982,
+    0.7849,
+    0.7673,
+    0.7639
+   ],
+   "secs_mcp": 0.83
+  },
+  {
+   "group": "spot_lens",
+   "cell_type": "lens epithelium",
+   "species": "human",
+   "tissue": "lens",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "40598599",
+    "41020554",
+    "40408092",
+    "40643341",
+    "40507153"
+   ],
+   "scores": [
+    0.8323,
+    0.7859,
+    0.7796,
+    0.7792,
+    0.7783
+   ],
+   "secs_mcp": 0.8
+  },
+  {
+   "group": "spot_lens",
+   "cell_type": "fiber cell",
+   "species": "human",
+   "tissue": "lens",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "38643244",
+    "40598599",
+    "41989229",
+    "37048143",
+    "34946854"
+   ],
+   "scores": [
+    0.8039,
+    0.7984,
+    0.7823,
+    0.7794,
+    0.771
+   ],
+   "secs_mcp": 0.83
+  },
+  {
+   "group": "spot_optic_nerve",
+   "cell_type": "oligodendrocyte",
+   "species": "human",
+   "tissue": "optic_nerve",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "40567162",
+    "41856199",
+    "37681863",
+    "33981197",
+    "39198924"
+   ],
+   "scores": [
+    0.8037,
+    0.7924,
+    0.7879,
+    0.7656,
+    0.7625
+   ],
+   "secs_mcp": 0.87
+  },
+  {
+   "group": "spot_optic_nerve",
+   "cell_type": "astrocyte",
+   "species": "human",
+   "tissue": "optic_nerve",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "37681863",
+    "33627831",
+    "37749651",
+    "41856199",
+    "37759301"
+   ],
+   "scores": [
+    0.8292,
+    0.8285,
+    0.7993,
+    0.7943,
+    0.7942
+   ],
+   "secs_mcp": 0.84
+  },
+  {
+   "group": "spot_optic_nerve",
+   "cell_type": "microglia",
+   "species": "human",
+   "tissue": "optic_nerve",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "41856199",
+    "37681863",
+    "41705242",
+    "40567162",
+    "35309305"
+   ],
+   "scores": [
+    0.815,
+    0.8065,
+    0.8018,
+    0.7812,
+    0.7797
+   ],
+   "secs_mcp": 0.86
+  },
+  {
+   "group": "spot_optic_nerve",
+   "cell_type": "retinal ganglion cell",
+   "species": "human",
+   "tissue": "optic_nerve",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "33499292",
+    "41856199",
+    "38903914",
+    "34946963",
+    "41601638"
+   ],
+   "scores": [
+    0.82,
+    0.8062,
+    0.8039,
+    0.8032,
+    0.7962
+   ],
+   "secs_mcp": 0.89
+  },
+  {
+   "group": "spot_RPE",
+   "cell_type": "retinal pigment epithelium",
+   "species": "human",
+   "tissue": "RPE",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "34977041",
+    "38528525",
+    "40882639",
+    "35882847",
+    "41851144"
+   ],
+   "scores": [
+    0.8767,
+    0.8442,
+    0.8429,
+    0.841,
+    0.8392
+   ],
+   "secs_mcp": 0.94
+  },
+  {
+   "group": "spot_RPE",
+   "cell_type": "endothelial cell",
+   "species": "human",
+   "tissue": "RPE",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "41254671",
+    "38528525",
+    "37528478",
+    "39888634",
+    "36645183"
+   ],
+   "scores": [
+    0.7824,
+    0.7779,
+    0.7771,
+    0.7745,
+    0.7674
+   ],
+   "secs_mcp": 0.94
+  },
+  {
+   "group": "spot_choroid",
+   "cell_type": "choriocapillaris endothelium",
+   "species": "human",
+   "tissue": "choroid",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "35181781",
+    "38115754",
+    "37504962",
+    "34546342",
+    "38232696"
+   ],
+   "scores": [
+    0.8112,
+    0.7883,
+    0.7829,
+    0.7799,
+    0.7798
+   ],
+   "secs_mcp": 0.85
+  },
+  {
+   "group": "spot_choroid",
+   "cell_type": "melanocyte",
+   "species": "human",
+   "tissue": "choroid",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "38232696",
+    "37289546",
+    "41528844",
+    "42579800",
+    "36645183"
+   ],
+   "scores": [
+    0.8185,
+    0.7964,
+    0.7935,
+    0.791,
+    0.7907
+   ],
+   "secs_mcp": 0.81
+  },
+  {
+   "group": "spot_choroid",
+   "cell_type": "pericyte",
+   "species": "human",
+   "tissue": "choroid",
+   "consistent": false,
+   "diff": ".results[0].claim_relation: only-in-MCP",
+   "n_results": 5,
+   "top_pmids": [
+    "36645183",
+    "34779136",
+    "41528844",
+    "38232696",
+    "41230906"
+   ],
+   "scores": [
+    0.804,
+    0.7897,
+    0.7891,
+    0.7863,
+    0.7862
+   ],
+   "secs_mcp": 0.85
+  }
+ ]
+}

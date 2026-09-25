@@ -1,0 +1,207 @@
+---
+title: 文献索引: lens
+created: 2026-09-23
+updated: 2026-09-23
+type: query
+tags: [literature, rag, index, lens]
+sources: [literature_db v2.0_2026-09]
+confidence: high
+---
+
+# 文献: lens (181 篇, 多标签口径)
+
+> RAG v2.0 中 tissue_labels 含 lens 的论文清单（含与其他组织共标的论文），按年份倒序。
+> 溯源用 PMID 查询 RAG API: `stage3_retrieve.py --tissue lens --db-dir literature_db/v2.0_2026-09 --cell-type <CT>`
+> 定位 (Claude5 冻结): 仅人机交互辅助引用, 不入打分。
+
+## 论文列表
+- PMID42034848 (2026) USP10 inhibits the apoptosis of lens epithelial cells and delays the progression of diabetic cataract via the deubiquitination and stabilization of MCL1. — *Scientific reports* [unknown] tags=lens v=v2.0-new
+- PMID41577330 (2026) Aging, oxidative stress, and cataracts: Therapeutic prospects and translational insights into peroxiredoxin 6. — *Progress in retinal and eye research* [human] tags=lens v=v2.0-new
+- PMID41945556 (2026) Metformin attenuates TBHP-induced oxidative injury in human lens epithelial cells and is associated with SIRT1/FOXO1-related autophagy. — *PloS one* [human] tags=lens v=v2.0-new
+- PMID40580389 (2026) Cataract Aggravates Alzheimer-Like Pathologies and Cognitive Deficits in an APP/PS1 Mouse Model. — *Neuroscience bulletin* [mouse] tags=lens v=v2.0-new
+- PMID41723479 (2026) Micheliolide suppresses epithelial-mesenchymal transition of lens epithelial cells via downregulating matrix metalloproteinase 8 to ameliorate posterior capsular opacification. — *Journal of translational medicine* [human] tags=lens v=v2.0-new
+- PMID42323614 (2026) A three-pronged strategy with minimalist nattokinase nanocomposite eye drops breaks the vicious cycle in ultraviolet-B-induced cataract. — *Journal of nanobiotechnology* [both] tags=lens v=v2.0-new
+- PMID41989229 (2026) A Novel CRYBB2 Splicing Mutation Is Associated With Lens Extracellular Matrix Remodeling and Vascular Alterations in Congenital Cataract. — *Investigative ophthalmology & visual science* [human] tags=lens v=v2.0-new
+- PMID41533902 (2026) METTL16 Inhibits Lens Epithelial Cells Function in Diabetic Cataract via m6A-Modified DKK1-Mediated Wnt/β-Catenin Signaling. — *Investigative ophthalmology & visual science* [human] tags=lens v=v2.0-new
+- PMID42233724 (2026) The Role of lncRNA GAS5 in Oxidative Stress and Mitochondrial Dysfunction in Age-Related Cataracts: Insights From Transcriptome Profiling. — *Investigative ophthalmology & visual science* [human] tags=lens v=v2.0-new
+- PMID42047666 (2026) PANK4 Regulates YAP to Modulate the Glycolytic Pathway in LEC for Driving LECs-EMT in Early Diabetic Cataract Pathogenesis. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID42149027 (2026) The Human Lens Fiber Cytoskeletome Reveals Neuronal Signatures and the Presence of Chaperonins, Proteasome, Signaling, and Redox Regulators. — *Investigative ophthalmology & visual science* [both] tags=lens v=v2.0-new
+- PMID41596224 (2026) Gigantol Preserves Lens Biophysical Homeostasis by Restoring Cytoskeletal Integrity and Membrane Fluidity in a Diabetic Cataract Model. — *International journal of molecular sciences* [human] tags=lens v=v2.0-new
+- PMID41614402 (2026) [Corrigendum] Role of Smad3 signaling in the epithelial‑mesenchymal transition of the lens epithelium following injury. — *International journal of molecular medicine* [unknown] tags=lens v=v2.0-new
+- PMID41294008 (2026) C-terminal extension of HSPB6 in a family with myopathy and cataract. — *Human molecular genetics* [human] tags=lens v=v2.0-new
+- PMID41858782 (2026) Lens epithelial cells senescence in cataract pathogenesis and emerging therapeutic opportunities. — *Frontiers in cell and developmental biology* [unknown] tags=lens v=v2.0-new
+- PMID42505373 (2026) Transcriptome Changes Driving Multiple Regulatory Pathways Involved in TGF-β-Induced Anterior Subcapsular Cataract. — *Cells* [both] tags=lens v=v2.0-new
+- PMID42619284 (2026) Study on the Role of FGF9/ERK/MMP9 Pathway in Age-Related Cataract and in (-)-Epigallocatechin-3-gallate Protecting Lens Epithelial Cells From Apoptosis. — *Cell biochemistry and function* [mouse] tags=lens v=v2.0-new
+- PMID41751271 (2026) Inflammation-Mediated Immune Imbalance in the Pathogenesis of Diabetic Cataracts. — *Biomedicines* [human] tags=lens v=v2.0-new
+- PMID42587300 (2026) Expression and mechanistic roles of long non-coding RNAs in diabetic cataract: a systematic review and meta-analysis. — *Biology direct* [human] tags=lens v=v2.0-new
+- PMID42072227 (2026) Cellular Senescence of Lens Epithelial Cells and Age-Related Cataract: A Systematic Review. — *Bioengineering (Basel, Switzerland)* [human] tags=lens v=v2.0-new
+- PMID41323208 (2026) Cell-penetrating peptide-functionalized biomimetic nanovesicles for efficient cataract treatment via enhanced corneal penetration and lens-mitochondria dual targeting. — *Bioactive materials* [unknown] tags=lens v=v2.0-new
+- PMID41596176 (2026) Fullerenol Eye Drops Mitigate UVB-Induced Cataract Progression by Inhibiting Oxidative Stress and Cellular Senescence. — *Antioxidants (Basel, Switzerland)* [both] tags=lens v=v2.0-new
+- PMID41876404 (2026) Senescence-Driven IL-17A Inflammatory Circuit Promotes Epithelial-Mesenchymal Transition (EMT) and Progression in Age-Related Posterior Subcapsular Cataracts. — *Aging cell* [human] tags=lens v=v2.0-new
+- PMID42555200 (2026) Deconstruction of Human Age-Related Cataract Capsules Defines Aging. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [human] tags=lens v=v2.0-new
+- PMID39662835 (2025) The transcription factor CREB regulates epithelial-mesenchymal transition of lens epithelial cells by phosphorylation-dependent and phosphorylation-independent mechanisms. — *The Journal of biological chemistry* [both] tags=lens v=v2.0-new
+- PMID40036306 (2025) Exosomes containing miR-148a-3p derived from mesenchymal stem cells suppress epithelial-mesenchymal transition in lens epithelial cells. — *Stem cells translational medicine* [both] tags=lens v=v2.0-new
+- PMID40598599 (2025) A single-cell transcriptomic atlas of human lens epithelium: identification and functional insights into lens stem/progenitor cells. — *Stem cell research & therapy* [both] tags=lens v=v2.0-new
+- PMID41407891 (2025) Mendelian randomization and bioinformatics analysis identify the association between plasma proteins and cataract. — *Scientific reports* [human] tags=lens v=v2.0-new
+- PMID41044127 (2025) Quantitative spatial analysis of crystallin proteins in human lens epithelial cells. — *Scientific reports* [human] tags=lens v=v2.0-new
+- PMID40595094 (2025) Endoplasmic reticulum stress involved in age-related nuclear cataract induced by sodium selenite. — *Scientific reports* [other] tags=lens v=v2.0-new
+- PMID40229517 (2025) Ameliorating effect of the aldose reductase inhibitor 1-Acetyl-5-phenyl-1 H-pyrrol-3-ylacetate on galactose-induced cataract. — *Scientific reports* [other] tags=lens v=v2.0-new
+- PMID40126102 (2025) Nucleolar ribosomal RNA synthesis continues in differentiating lens fiber cells until abrupt nuclear degradation required for ocular lens transparency. — *RNA biology* [mouse] tags=lens v=v2.0-new
+- PMID40622998 (2025) G91-deletion in βA3/A1-crystallin induces cellular and molecular changes in mouse lenses leading to congenital cataract development. — *PloS one* [both] tags=lens v=v2.0-new
+- PMID40507153 (2025) Nutrient-Driven Antioxidant Interventions for Prevention of Age-Related and Diabetic Cataracts. — *Nutrients* [human] tags=lens v=v2.0-new
+- PMID41006301 (2025) Ocular delivery of lipid nanoparticles-formulated mRNA encoding lanosterol synthase ameliorates cataract in rats. — *Nature communications* [human] tags=lens v=v2.0-new
+- PMID40274784 (2025) TGF-β1-induced m6A modifications accelerate onset of nuclear cataract in high myopia by modulating the PCP pathway. — *Nature communications* [both] tags=lens v=v2.0-new
+- PMID38771421 (2025) Role of C/EBP Homologous Protein (CHOP) and Nupr1 Interaction in Endoplasmic Reticulum Stress-Induced Apoptosis of Lens Epithelial Cells. — *Molecular biotechnology* [human] tags=lens v=v2.0-new
+- PMID40704014 (2025) A multifunctional hydrogel system with synergistic effects against &lt;i&gt;Staphylococcus aureus&lt;/i&gt; infections and inflammation in perioperative cataract surgery. — *Materials today. Bio* [unknown] tags=lens v=v2.0-new
+- PMID41074164 (2025) Drug loaded cerium oxide nanozymes prevent radiation-Induced cataracts via suppressing the cGAS-STING pathway. — *Journal of nanobiotechnology* [mouse] tags=lens v=v2.0-new
+- PMID40336002 (2025) Cyclic cell-penetrating peptide-engineered ceria nanoparticles for non-invasive alleviation of ultraviolet radiation-induced cataract. — *Journal of nanobiotechnology* [both] tags=lens v=v2.0-new
+- PMID40131364 (2025) SEC24C deficiency causes trafficking and glycosylation abnormalities in an epileptic encephalopathy with cataracts and dyserythropoeisis. — *JCI insight* [human] tags=lens v=v2.0-new
+- PMID40643341 (2025) Transcriptomic Analysis of Human Lens Epithelium Tissue With and Without Cataract Surgery: Uncovering Novel Pathways of Post-Surgical Lens Epithelium Remodeling. — *Investigative ophthalmology & visual science* [human] tags=lens v=v2.0-new
+- PMID39804629 (2025) Targeted Activation of OGG1 Inhibits Paraptosis in Lens Epithelial Cells of Early Age-Related Cortical Cataract. — *Investigative ophthalmology & visual science* [human] tags=lens v=v2.0-new
+- PMID41020554 (2025) PGC1A Restores Mitochondrial Health to Attenuate EMT During Lens Epithelial Fibrosis via Regulating TFAM. — *Investigative ophthalmology & visual science* [human] tags=lens v=v2.0-new
+- PMID40266593 (2025) Macrophage-Hosted Porphyromonas gingivalis Is a Risk Factor for Cataract Development. — *Investigative ophthalmology & visual science* [human] tags=lens v=v2.0-new
+- PMID41230902 (2025) Abnormal Splicing in the Final Intron of PRX Results in Dominant Congenital Cataract Without Neurological Phenotype. — *Investigative ophthalmology & visual science* [human] tags=lens v=v2.0-new
+- PMID40238114 (2025) Transcriptome Meta-Analysis Uncovers Cell-Specific Regulatory Relationships in Embryonic, Juvenile, Adult, and Aged Mouse Lens Epithelium and Fibers. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID41358657 (2025) The 3D Genome Structure of a Blcap-Linked Silencer Loop Regulates Terminal Differentiation During Lens Fiber Cell Denucleation. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID40679332 (2025) LIRTS Viewer: A Web-Based Resource to View the Transcriptional Response of Lens Epithelial Cells to Injury. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID41533928 (2025) Glutaredoxin 2 Protects Lens Epithelial Cells From Ferroptosis by Preventing HNRNPA2B1 S-Glutathionylation in Diabetes-Mediated Cataractogenesis. — *Investigative ophthalmology & visual science* [both] tags=lens v=v2.0-new
+- PMID40408092 (2025) PERK Regulates Epithelial-Mesenchymal Transition Through Autophagy and Lipid Metabolism in Lens Epithelial Cells. — *Investigative ophthalmology & visual science* [both] tags=lens v=v2.0-new
+- PMID40650128 (2025) NGF, BDNF, and NO in Myopic Subjects: Relationships Between Aqueous Levels and Lens Epithelial Cells' Activation. — *International journal of molecular sciences* [human] tags=lens v=v2.0-new
+- PMID40635755 (2025) Protocatechualdehyde attenuates oxidative stress in diabetic cataract via GLO1-mediated inhibition of AGE/RAGE glycosylation. — *Frontiers in pharmacology* [human] tags=lens v=v2.0-new
+- PMID41320777 (2025) Impacts of leukocyte telomere length on incidence and severity of age-related cataract: a cross-cohort analysis. — *Eye and vision (London, England)* [human] tags=lens v=v2.0-new
+- PMID40585754 (2025) Cataract-Causing Mutant R188C of βB2 Crystallin With Low Structural Stability is Sensitive to Environmental Stresses and Prone to Aggregates Formation. — *Exploration (Beijing, China)* [unknown] tags=lens v=v2.0-new
+- PMID40745490 (2025) Biallelic MED29 variants cause pontocerebellar hypoplasia with cataracts. — *European journal of human genetics : EJHG* [both] tags=lens v=v2.0-new
+- PMID40234585 (2025) Upregulation of ferroptosis in glucocorticoids-induced posterior subcapsular cataracts. — *Communications biology* [human] tags=lens v=v2.0-new
+- PMID41299222 (2025) Loss of alpha-kinase 1 contributes to the formation of congenital cataracts in mice. — *Cellular & molecular biology letters* [mouse] tags=lens v=v2.0-new
+- PMID39900894 (2025) Enhanced ferroptosis sensitivity promotes the formation of highly myopic cataract via the DDR2-Hippo pathway. — *Cell death & disease* [both] tags=lens v=v2.0-new
+- PMID40569566 (2025) SIRT1 Prevents Lens Epithelial Cell Senescence During Age-Related Cataract via Regulating p66Shc. — *Aging cell* [human] tags=lens v=v2.0-new
+- PMID38994020 (2024) Lens autophagy protein ATG16L1: a potential target for cataract treatment. — *Theranostics* [human] tags=lens v=v2.0-new
+- PMID39286982 (2024) Reversible cold-induced lens opacity in a hibernator reveals a molecular target for treating cataracts. — *The Journal of clinical investigation* [other] tags=lens v=v2.0-new
+- PMID39443626 (2024) Histopathologic findings of the lens capsule and persistent hyperplastic primary vitreous in Korean pediatric cataract patients. — *Scientific reports* [human] tags=lens v=v2.0-new
+- PMID38669339 (2024) Prevention of age-related truncation of γ-glutamylcysteine ligase catalytic subunit (GCLC) delays cataract formation. — *Science advances* [both] tags=lens v=v2.0-new
+- PMID39560644 (2024) Deficiency in glutathione peroxidase 4 (GPX4) results in abnormal lens development and newborn cataract. — *Proceedings of the National Academy of Sciences of the United States of America* [both] tags=lens v=v2.0-new
+- PMID39576825 (2024) Long-term visual outcomes and histopathologic findings after cataract surgery in Ebola virus disease survivors in the Ebola virus RNA persistence in ocular tissues and fluids (EVICT) study. — *PLoS neglected tropical diseases* [human] tags=lens v=v2.0-new
+- PMID39333897 (2024) Targeting PYK2, entrectinib allays anterior subcapsular cataracts in mice by regulating TGFβ2 signaling pathway. — *Molecular medicine (Cambridge, Mass.)* [both] tags=lens v=v2.0-new
+- PMID38598298 (2024) TGFβ overcomes FGF-induced transinhibition of EGFR in lens cells to enable fibrotic secondary cataract. — *Molecular biology of the cell* [human] tags=lens v=v2.0-new
+- PMID39106056 (2024) Biologically Relevant Laminin-511 Moderates the Derivation and Proliferation of Human Lens Epithelial Stem/Progenitor-Like Cells. — *Investigative ophthalmology & visual science* [human] tags=lens v=v2.0-new
+- PMID39287589 (2024) Altered Cell Clusters and Upregulated Aqp1 in Connexin 50 Knockout Lens Epithelium. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID39652067 (2024) Mefunidone Inhibits Inflammation, Oxidative Stress, and Epithelial-Mesenchymal Transition in Lens Epithelial Cells. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID38558092 (2024) Dysregulation of Autophagy Occurs During Congenital Cataract Development in βA3ΔG91 Mice. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID38324299 (2024) Smurf1 Modulates Smad Signaling Pathway in Fibrotic Cataract Formation. — *Investigative ophthalmology & visual science* [both] tags=lens v=v2.0-new
+- PMID39201542 (2024) Human Primary Lens Epithelial Cultures on Basal Laminas Studied by Synchrotron-Based FTIR Microspectroscopy for Understanding Posterior Capsular Opacification. — *International journal of molecular sciences* [human] tags=lens v=v2.0-new
+- PMID39201727 (2024) The Synergistic Effects of Polyol Pathway-Induced Oxidative and Osmotic Stress in the Aetiology of Diabetic Cataracts. — *International journal of molecular sciences* [human] tags=lens v=v2.0-new
+- PMID39834393 (2024) Differentiation of mesenchymal stem cells towards lens epithelial stem cells based on three-dimensional bio-printed matrix. — *Frontiers in cell and developmental biology* [unknown] tags=lens v=v2.0-new
+- PMID38643244 (2024) Analysis of long-range chromatin contacts, compartments and looping between mouse embryonic stem cells, lens epithelium and lens fibers. — *Epigenetics & chromatin* [both] tags=lens v=v2.0-new
+- PMID39056803 (2024) A Transcriptomics Analysis of the Regulation of Lens Fiber Cell Differentiation in the Absence of FGFRs and PTEN. — *Cells* [mouse] tags=lens v=v2.0-new
+- PMID38334649 (2024) A Cataract-Causing Mutation in the TRPM3 Cation Channel Disrupts Calcium Dynamics in the Lens. — *Cells* [both] tags=lens v=v2.0-new
+- PMID38461179 (2024) Uric acid-driven NLRP3 inflammasome activation triggers lens epithelial cell senescence and cataract formation. — *Cell death discovery* [human] tags=lens v=v2.0-new
+- PMID36852280 (2023) Protein kinase A activation alleviates cataract formation via increased gap junction intercellular communication. — *iScience* [unknown] tags=lens v=v2.0-new
+- PMID37159192 (2023) MicroRNA-22-3p Regulates the Apoptosis of Lens Epithelial Cells Through Targeting KLF6 in Diabetic Cataracts. — *Translational vision science & technology* [human] tags=lens v=v2.0-new
+- PMID37356717 (2023) Cataract-causing Y204X mutation of crystallin protein CRYβB1 promotes its C-terminal degradation and higher-order oligomerization. — *The Journal of biological chemistry* [human] tags=lens v=v2.0-new
+- PMID37331601 (2023) A crystallin mutant cataract with mineral deposits. — *The Journal of biological chemistry* [mouse] tags=lens v=v2.0-new
+- PMID36964267 (2023) Phase separation of α-crystallin-GFP protein and its implication in cataract disease. — *Scientific reports* [human] tags=lens v=v2.0-new
+- PMID37677999 (2023) Unbalanced redox status network as an early pathological event in congenital cataracts. — *Redox biology* [both] tags=lens v=v2.0-new
+- PMID37513520 (2023) Preventative Effects of <i>Cordyceps cicadae</i> Mycelial Extracts on the Early-Stage Development of Cataracts in UVB-Induced Mice Cataract Model. — *Nutrients* [mouse] tags=lens v=v2.0-new
+- PMID36769461 (2023) The Differential Expression of Circular RNAs and the Role of circAFF1 in Lens Epithelial Cells of High-Myopic Cataract. — *Journal of clinical medicine* [human] tags=lens v=v2.0-new
+- PMID37418274 (2023) ErbBs in Lens Cell Fibrosis and Secondary Cataract. — *Investigative ophthalmology & visual science* [human] tags=lens v=v2.0-new
+- PMID36881408 (2023) SIRT1 Inhibits High Glucose-Induced TXNIP/NLRP3 Inflammasome Activation and Cataract Formation. — *Investigative ophthalmology & visual science* [human] tags=lens v=v2.0-new
+- PMID37870847 (2023) Single-Cell RNA Sequencing Analysis of the Early Postnatal Mouse Lens Epithelium. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID38095908 (2023) JAM-C Is Important for Lens Epithelial Cell Proliferation and Lens Fiber Maturation in Murine Lens Development. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID36734965 (2023) Repurposing a Cyclin-Dependent Kinase 1 (CDK1) Mitotic Regulatory Network to Complete Terminal Differentiation in Lens Fiber Cells. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID37103007 (2023) Endoplasmic Reticulum Stress and the Lysosomal Pathway Play Crucial Roles in the Progression of βB2-Crystallin Mutation-Induced Congenital Cataracts in Mice. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID37310354 (2023) The Long Noncoding RNA H19 Promotes Fibrotic Processes in Lens Epithelial Cells. — *Investigative ophthalmology & visual science* [both] tags=lens v=v2.0-new
+- PMID37043340 (2023) BMP-4 and BMP-7 Inhibit EMT in a Model of Anterior Subcapsular Cataract in Part by Regulating the Notch Signaling Pathway. — *Investigative ophthalmology & visual science* [both] tags=lens v=v2.0-new
+- PMID37324433 (2023) The human lens is capable of trilineage differentiation towards osteo-, chondro-, and adipogenesis-a model for studying cataract pathogenesis. — *Frontiers in bioengineering and biotechnology* [human] tags=lens v=v2.0-new
+- PMID36880430 (2023) Charged multivesicular body protein 4b forms complexes with gap junction proteins during lens fiber cell differentiation. — *FASEB journal : official publication of the Federation of American Societies for Experimental Biology* [both] tags=lens v=v2.0-new
+- PMID36935417 (2023) Ribonuclease inhibitor 1 (RNH1) deficiency cause congenital cataracts and global developmental delay with infection-induced psychomotor regression and anemia. — *European journal of human genetics : EJHG* [both] tags=lens v=v2.0-new
+- PMID37185343 (2023) lncRNA TUG1 regulates Smac/DIABLO expression by competitively inhibiting miR-29b and modulates the apoptosis of lens epithelial cells in age-related cataracts. — *Chinese medical journal* [human] tags=lens v=v2.0-new
+- PMID37443739 (2023) Role of Chondroitin Sulfate Proteoglycan 5 in Steroid-Induced Cataract. — *Cells* [human] tags=lens v=v2.0-new
+- PMID37048143 (2023) High-Throughput Transcriptomics of <i>Celf1</i> Conditional Knockout Lens Identifies Downstream Networks Linked to Cataract Pathology. — *Cells* [both] tags=lens v=v2.0-new
+- PMID37947618 (2023) Identification of Small Molecules for Prevention of Lens Epithelium-Derived Cataract Using Zebrafish. — *Cells* [other] tags=lens v=v2.0-new
+- PMID36766843 (2023) Lens Epithelial Explants Treated with Vitreous Humor Undergo Alterations in Chromatin Landscape with Concurrent Activation of Genes Associated with Fiber Cell Differentiation and Innate Immune Response. — *Cells* [other] tags=lens v=v2.0-new
+- PMID36980168 (2023) FGF-2 Differentially Regulates Lens Epithelial Cell Behaviour during TGF-β-Induced EMT. — *Cells* [other] tags=lens v=v2.0-new
+- PMID37865680 (2023) The involvement of caspases in the process of nuclear removal during lens fiber cell differentiation. — *Cell death discovery* [unknown] tags=lens v=v2.0-new
+- PMID37723490 (2023) Arginase-1 promotes lens epithelial-to-mesenchymal transition in different models of anterior subcapsular cataract. — *Cell communication and signaling : CCS* [both] tags=lens v=v2.0-new
+- PMID37759728 (2023) Biomarker Signature in Aqueous Humor Mirrors Lens Epithelial Cell Activation: New Biomolecular Aspects from Cataractogenic Myopia. — *Biomolecules* [human] tags=lens v=v2.0-new
+- PMID37238733 (2023) Insight into Pathogenic Mechanism Underlying the Hereditary Cataract Caused by βB2-G149V Mutation. — *Biomolecules* [human] tags=lens v=v2.0-new
+- PMID38136638 (2023) Understanding the Role of Yes-Associated Protein (YAP) Signaling in the Transformation of Lens Epithelial Cells (EMT) and Fibrosis. — *Biomolecules* [both] tags=lens v=v2.0-new
+- PMID37372033 (2023) Glycolysis Aids in Human Lens Epithelial Cells' Adaptation to Hypoxia. — *Antioxidants (Basel, Switzerland)* [human] tags=lens v=v2.0-new
+- PMID37196116 (2023) Pantothenate Kinase 4 Governs Lens Epithelial Fibrosis by Negatively Regulating Pyruvate Kinase M2-Related Glycolysis. — *Aging and disease* [both] tags=lens v=v2.0-new
+- PMID37414399 (2023) MIR34A modulates lens epithelial cell apoptosis and cataract development via the HK1/caspase 3 signaling pathway. — *Aging* [both] tags=lens v=v2.0-new
+- PMID37683133 (2023) SUMO1-regulated DBC1 promotes p53-dependent stress-induced apoptosis of lens epithelial cells. — *Aging* [both] tags=lens v=v2.0-new
+- PMID35023829 (2022) Disruption of PIKFYVE causes congenital cataract in human and zebrafish. — *eLife* [human] tags=lens v=v2.0-new
+- PMID35363260 (2022) Intracameral Bacteriophage Injection as Postoperative Prophylaxis for Enterococcus faecalis-Induced Endophthalmitis After Cataract Surgery in Rabbits. — *Translational vision science & technology* [unknown] tags=lens v=v2.0-new
+- PMID35120923 (2022) Cataract-linked serine mutations in the gap junction protein connexin50 expose a sorting signal that promotes its lysosomal degradation. — *The Journal of biological chemistry* [human] tags=lens v=v2.0-new
+- PMID35058548 (2022) Essential function of adaptor protein Nck1 in platelet-derived growth factor receptor signaling in human lens epithelial cells. — *Scientific reports* [human] tags=lens v=v2.0-new
+- PMID36104669 (2022) The interaction between autophagy and the epithelial-mesenchymal transition mediated by NICD/ULK1 is involved in the formation of diabetic cataracts. — *Molecular medicine (Cambridge, Mass.)* [human] tags=lens v=v2.0-new
+- PMID36557426 (2022) Characterization of Femtosecond Laser and Porcine Crystalline Lens Interactions by Optical Microscopy. — *Micromachines* [other] tags=lens v=v2.0-new
+- PMID36662053 (2022) Reduction in Lens Epithelial Cell Senescence Burden through Dasatinib Plus Quercetin or Rapamycin Alleviates D-Galactose-Induced Cataract Progression. — *Journal of functional biomaterials* [other] tags=lens v=v2.0-new
+- PMID35435923 (2022) The E3 Ligase RNF157 Inhibits Lens Epithelial Cell Apoptosis by Negatively Regulating p53 in Age-Related Cataracts. — *Investigative ophthalmology & visual science* [human] tags=lens v=v2.0-new
+- PMID36454558 (2022) Insufficient Dose of ERCC8 Protein Caused by a Frameshift Mutation Is Associated With Keratoconus With Congenital Cataracts. — *Investigative ophthalmology & visual science* [human] tags=lens v=v2.0-new
+- PMID36048019 (2022) Deficiency of Jamc Leads to Congenital Nuclear Cataract and Activates the Unfolded Protein Response in Mouse Lenses. — *Investigative ophthalmology & visual science* [both] tags=lens v=v2.0-new
+- PMID35758908 (2022) TFEB-Mediated Lysosomal Restoration Alleviates High Glucose-Induced Cataracts Via Attenuating Oxidative Stress. — *Investigative ophthalmology & visual science* [other] tags=lens v=v2.0-new
+- PMID36430917 (2022) TGF-β/Smad Signalling Activation by HTRA1 Regulates the Function of Human Lens Epithelial Cells and Its Mechanism in Posterior Subcapsular Congenital Cataract. — *International journal of molecular sciences* [both] tags=lens v=v2.0-new
+- PMID36171977 (2022) Loss of fiber cell communication may contribute to the development of cataracts of many different etiologies. — *Frontiers in physiology* [mouse] tags=lens v=v2.0-new
+- PMID35899124 (2022) Acetyl-11-Keto-Beta Boswellic Acid (AKBA) Protects Lens Epithelial Cells Against H<sub>2</sub>O<sub>2</sub>-Induced Oxidative Injury and Attenuates Cataract Progression by Activating Keap1/Nrf2/HO-1 Signaling. — *Frontiers in pharmacology* [human] tags=lens v=v2.0-new
+- PMID36059984 (2022) Postponement of the opacification of lentoid bodies derived from human induced pluripotent stem cells after lanosterol treatment-the first use of the lens aging model <i>in vitro</i> in cataract drug screening. — *Frontiers in pharmacology* [human] tags=lens v=v2.0-new
+- PMID35359596 (2022) Cataract-Causing S93R Mutant Destabilized Structural Conformation of βB1 Crystallin Linking With Aggregates Formation and Cellular Viability. — *Frontiers in molecular biosciences* [human] tags=lens v=v2.0-new
+- PMID35531093 (2022) Identification of a New Mutation p.P88L in Connexin 50 Associated with Dominant Congenital Cataract. — *Frontiers in cell and developmental biology* [human] tags=lens v=v2.0-new
+- PMID35656546 (2022) Lens Fibrosis: Understanding the Dynamics of Cell Adhesion Signaling in Lens Epithelial-Mesenchymal Transition. — *Frontiers in cell and developmental biology* [unknown] tags=lens v=v2.0-new
+- PMID35362222 (2022) S1P defects cause a new entity of cataract, alopecia, oral mucosal disorder, and psoriasis-like syndrome. — *EMBO molecular medicine* [human] tags=lens v=v2.0-new
+- PMID35406761 (2022) Oxidative Stress-Induced TRPV2 Expression Increase Is Involved in Diabetic Cataracts and Apoptosis of Lens Epithelial Cells in a High-Glucose Environment. — *Cells* [human] tags=lens v=v2.0-new
+- PMID36359852 (2022) The Immediate Early Response of Lens Epithelial Cells to Lens Injury. — *Cells* [mouse] tags=lens v=v2.0-new
+- PMID36139360 (2022) Levels and Modifications of Both Lens Fiber Cell Connexins Are Affected in Connexin Mutant Mice. — *Cells* [mouse] tags=lens v=v2.0-new
+- PMID36010635 (2022) Long Non-Coding RNA &lt;i&gt;H19&lt;/i&gt; Prevents Lens Fibrosis through Maintaining Lens Epithelial Cell Phenotypes. — *Cells* [both] tags=lens v=v2.0-new
+- PMID35805085 (2022) Aged Lens Epithelial Cells Suppress Proliferation and Epithelial-Mesenchymal Transition-Relevance for Posterior Capsule Opacification. — *Cells* [both] tags=lens v=v2.0-new
+- PMID35013122 (2022) Autophagy facilitates age-related cell apoptosis-a new insight from senile cataract. — *Cell death & disease* [human] tags=lens v=v2.0-new
+- PMID33500475 (2021) Absence of S100A4 in the mouse lens induces an aberrant retina-specific differentiation program and cataract. — *Scientific reports* [mouse] tags=lens v=v2.0-new
+- PMID34215815 (2021) Loss of FYCO1 leads to cataract formation. — *Scientific reports* [both] tags=lens v=v2.0-new
+- PMID33436915 (2021) Effect of postoperative corticosteroids on surgical outcome and aqueous autotaxin following combined cataract and microhook ab interno trabeculotomy. — *Scientific reports* [both] tags=lens v=v2.0-new
+- PMID33420301 (2021) Thermoresponsive GenisteinNLC-dexamethasone-moxifloxacin multi drug delivery system in lens capsule bag to prevent complications after cataract surgery. — *Scientific reports* [unknown] tags=lens v=v2.0-new
+- PMID36249298 (2021) PAX8 Expression in the Crystalline Lens and Lens-Derived Lesions. — *Ophthalmology science* [unknown] tags=lens v=v2.0-new
+- PMID34599192 (2021) Modeling congenital cataract in vitro using patient-specific induced pluripotent stem cells. — *NPJ Regenerative medicine* [human] tags=lens v=v2.0-new
+- PMID34430272 (2021) Whole mount staining of lenses for visualization of lens epithelial cell proteins. — *MethodsX* [unknown] tags=lens v=v2.0-new
+- PMID34296521 (2021) Metformin alleviates oxidative stress-induced senescence of human lens epithelial cells via AMPK activation and autophagic flux restoration. — *Journal of cellular and molecular medicine* [human] tags=lens v=v2.0-new
+- PMID34967856 (2021) Mitotic Activation Around Wound Edges and Epithelialization Repair in UVB-Induced Capsular Cataracts. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID34882206 (2021) Aged Nrf2-Null Mice Develop All Major Types of Age-Related Cataracts. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID34156426 (2021) Early Onset of Age-Related Cataracts in Cystine/Glutamate Antiporter Knockout Mice. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID33917258 (2021) A Potential Role for Fructosamine-3-Kinase in Cataract Treatment. — *International journal of molecular sciences* [both] tags=lens v=v2.0-new
+- PMID33632302 (2021) Biallelic variants in COPB1 cause a novel, severe intellectual disability syndrome with cataracts and variable microcephaly. — *Genome medicine* [human] tags=lens v=v2.0-new
+- PMID34946854 (2021) Transcriptomics Analysis of Lens from Patients with Posterior Subcapsular Congenital Cataract. — *Genes* [human] tags=lens v=v2.0-new
+- PMID33665188 (2021) Genome-Wide Analysis of Differentially Expressed miRNAs and Their Associated Regulatory Networks in Lenses Deficient for the Congenital Cataract-Linked Tudor Domain Containing Protein TDRD7. — *Frontiers in cell and developmental biology* [both] tags=lens v=v2.0-new
+- PMID33747177 (2021) Resveratrol protects against high glucose-induced oxidative damage in human lens epithelial cells by activating autophagy. — *Experimental and therapeutic medicine* [human] tags=lens v=v2.0-new
+- PMID34650623 (2021) Whole-exome sequencing identification of a recurrent <i>CRYBB2</i> variant in a four-generation Chinese family with congenital nuclear cataracts. — *Experimental and therapeutic medicine* [unknown] tags=lens v=v2.0-new
+- PMID33707565 (2021) Development of a potent embryonic chick lens model for studying congenital cataracts in vivo. — *Communications biology* [human] tags=lens v=v2.0-new
+- PMID33784009 (2021) Orai3 exacerbates apoptosis of lens epithelial cells by disrupting Ca<sup>2+</sup> homeostasis in diabetic cataract. — *Clinical and translational medicine* [unknown] tags=lens v=v2.0-new
+- PMID34439816 (2021) Nanogel-Facilitated In-Situ Delivery of a Cataract Inhibitor. — *Biomolecules* [both] tags=lens v=v2.0-new
+- PMID33472493 (2021) Rapamycin relieves the cataract caused by ablation of Gja8b through stimulating autophagy in zebrafish. — *Autophagy* [human] tags=lens v=v2.0-new
+- PMID34356319 (2021) 3H-1,2-Dithiole-3-Thione Protects Lens Epithelial Cells against Fructose-Induced Epithelial-Mesenchymal Transition via Activation of AMPK to Eliminate AKR1B1-Induced Oxidative Stress in Diabetes Mellitus. — *Antioxidants (Basel, Switzerland)* [human] tags=lens v=v2.0-new
+- PMID33508783 (2021) CircMRE11A_013 binds to UBXN1 and integrates ATM activation enhancing lens epithelial cells senescence in age-related cataract. — *Aging* [both] tags=lens v=v2.0-new
+- PMID33303795 (2020) DNA damage in lens epithelial cells exposed to occupationally-relevant X-ray doses and role in cataract formation. — *Scientific reports* [human] tags=lens v=v2.0-new
+- PMID31992794 (2020) Calponin-3 deficiency augments contractile activity, plasticity, fibrogenic response and Yap/Taz transcriptional activation in lens epithelial cells and explants. — *Scientific reports* [both] tags=lens v=v2.0-new
+- PMID32901881 (2020) ITCH regulates oxidative stress induced by high glucose through thioredoxin interacting protein in cultured human lens epithelial cells. — *Molecular medicine reports* [human] tags=lens v=v2.0-new
+- PMID32626969 (2020) Overexpression of ATG4a promotes autophagy and proliferation, and inhibits apoptosis in lens epithelial cells via the AMPK and Akt pathways. — *Molecular medicine reports* [human] tags=lens v=v2.0-new
+- PMID33276722 (2020) microRNA-199a-5p regulates epithelial-to-mesenchymal transition in diabetic cataract by targeting SP1 gene. — *Molecular medicine (Cambridge, Mass.)* [human] tags=lens v=v2.0-new
+- PMID33297931 (2020) High-expression of ROCK1 modulates the apoptosis of lens epithelial cells in age-related cataracts by targeting p53 gene. — *Molecular medicine (Cambridge, Mass.)* [both] tags=lens v=v2.0-new
+- PMID32761139 (2020) Identification and Characterization of N6-Methyladenosine CircRNAs and Methyltransferases in the Lens Epithelium Cells From Age-Related Cataract. — *Investigative ophthalmology & visual science* [human] tags=lens v=v2.0-new
+- PMID32492110 (2020) Tropomyosin 3.1 Association With Actin Stress Fibers is Required for Lens Epithelial to Mesenchymal Transition. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID33085740 (2020) Heterozygous Loss of Yap1 in Mice Causes Progressive Cataracts. — *Investigative ophthalmology & visual science* [mouse] tags=lens v=v2.0-new
+- PMID32182330 (2020) Connexin 50-R205G Mutation Perturbs Lens Epithelial Cell Proliferation and Differentiation. — *Investigative ophthalmology & visual science* [both] tags=lens v=v2.0-new
+- PMID32915983 (2020) Cohen Syndrome-Associated Cataract Is Explained by VPS13B Functions in Lens Homeostasis and Is Modified by Additional Genetic Factors. — *Investigative ophthalmology & visual science* [both] tags=lens v=v2.0-new
+- PMID32420594 (2020) The Tudor-domain protein TDRD7, mutated in congenital cataract, controls the heat shock protein HSPB1 (HSP27) and lens fiber cell morphology. — *Human molecular genetics* [both] tags=lens v=v2.0-new
+- PMID32568043 (2020) Approach to Cataract Surgery in an Ebola Virus Disease Survivor with Prior Ocular Viral Persistence. — *Emerging infectious diseases* [human] tags=lens v=v2.0-new
+- PMID32500975 (2020) Proteasome subunit PSMC3 variants cause neurosensory syndrome combining deafness and cataract due to proteotoxic stress. — *EMBO molecular medicine* [human] tags=lens v=v2.0-new
+- PMID32985730 (2020) MiR-22-3p inhibits fibrotic cataract through inactivation of HDAC6 and increase of α-tubulin acetylation. — *Cell proliferation* [human] tags=lens v=v2.0-new
+- PMID32218152 (2020) AKR1B1-Induced Epithelial-Mesenchymal Transition Mediated by RAGE-Oxidative Stress in Diabetic Cataract Lens. — *Antioxidants (Basel, Switzerland)* [human] tags=lens v=v2.0-new
+- PMID32355786 (2020) Association of adjuvant aromatase inhibitor with cataract risk in postmenopausal women with breast cancer. — *Annals of translational medicine* [human] tags=lens v=v2.0-new
+- PMID32567221 (2020) Vitamin C is a source of oxoaldehyde and glycative stress in age-related cataract and neurodegenerative diseases. — *Aging cell* [both] tags=lens v=v2.0-new
+- PMID32038277 (2019) Contribution of Connexin Hemichannels to the Decreases in Cell Viability Induced by Linoleic Acid in the Human Lens Epithelial Cells (HLE-B3). — *Frontiers in physiology* [human] tags=lens v=v2.0-new
+
+---
+<!-- KB1V2-WIKILINKS v1.1 -->
+## 判读层链接 (判读层链接版本: KB1v2 (2026-09-23, t_16c3e020))
+
+- **组成基线**: [kb/baselines/lens.md](/mnt/D/EyeKB/kb/baselines/lens.md) — 供者级条件参考分布 (锚定 registry 标准集或 t_6f5cc731 映射)
+- **RAG reason-tag**: 每条 PMID 的入库原因/论断关系/证据条件见 `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (键=pmid; 字段 inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` 命中自动联表带出
+- **概念 ID 映射**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
+- 红线: 本页与全部链接内容仅证据引用与 QC 旗, 禁入打分 (ANNOTATION_PROTOCOL_v1.1.md §0)

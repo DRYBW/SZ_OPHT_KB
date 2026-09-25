@@ -1,0 +1,6061 @@
+{
+ "version": "v1-membrane-20260924",
+ "created": "2026-09-23 20:47:21",
+ "scope": "人眼膜/血管/间质/免疫四面板 (PDR/RRD 纤维血管膜及通用眼球非视网膜类); 闭 v1 待确认第5条 (视网膜10类外 0 命中缺口); +角膜面板 (t_e1febb8e 2026-09-24)",
+ "panels": {
+  "endothelial": [
+   "Endo",
+   "Endo_Patho"
+  ],
+  "mural_pericyte_smc": [
+   "Pericyte",
+   "SMC"
+  ],
+  "fibroblast_myofibroblast": [
+   "Fibroblast",
+   "Myofibroblast"
+  ],
+  "immune": [
+   "Mono_Classical",
+   "Mono_Nonclassical",
+   "Mac_Tissue",
+   "Mac_DAM_LAM",
+   "Microglia",
+   "APC_MHCII_high",
+   "cDC1",
+   "cDC2",
+   "pDC",
+   "T",
+   "NK",
+   "B",
+   "Plasma",
+   "Granulocyte",
+   "Proliferating"
+  ],
+  "cornea": [
+   "Keratocytes",
+   "Corneal Endothelium"
+  ]
+ },
+ "markers": {
+  "Endo": [
+   "CLDN5",
+   "PECAM1",
+   "CDH5",
+   "VWF",
+   "TM4SF1",
+   "RAMP2",
+   "ESAM",
+   "FLT1",
+   "KDR",
+   "ADGRL4",
+   "ECSCR",
+   "GNG11",
+   "PLVAP"
+  ],
+  "Endo_Patho": [
+   "PLVAP",
+   "ICAM1",
+   "VCAM1",
+   "DLL4",
+   "NDUFA4L2",
+   "HIF1A"
+  ],
+  "Pericyte": [
+   "RGS5",
+   "RGS4",
+   "PDGFRB",
+   "NOTCH3",
+   "HIGD1B",
+   "PRRX1",
+   "COL1A2",
+   "MGP",
+   "THY1",
+   "ITGA1",
+   "IGFBP7",
+   "CALD1"
+  ],
+  "SMC": [
+   "ACTA2",
+   "CNN1",
+   "MYH11",
+   "TAGLN",
+   "MYL9",
+   "DES",
+   "CALD1",
+   "LMOD1"
+  ],
+  "Fibroblast": [
+   "COL1A1",
+   "COL1A2",
+   "COL3A1",
+   "DCN",
+   "LUM",
+   "FBN1",
+   "FN1",
+   "PTGDS",
+   "MMP2",
+   "THY1"
+  ],
+  "Myofibroblast": [
+   "ACTA2",
+   "TAGLN",
+   "MYL9",
+   "POSTN",
+   "TPM1",
+   "TPM2",
+   "FN1",
+   "COL1A1",
+   "COL1A2",
+   "CTHRC1",
+   "TIMP1",
+   "PRRX1"
+  ],
+  "Mono_Classical": [
+   "FCN1",
+   "VCAN",
+   "S100A8",
+   "S100A9",
+   "S100A12",
+   "SELL",
+   "CD14",
+   "LYZ",
+   "MNDA",
+   "CTSS",
+   "SERPINA1"
+  ],
+  "Mono_Nonclassical": [
+   "FCGR3A",
+   "LST1",
+   "MS4A7",
+   "CX3CR1",
+   "IL1B"
+  ],
+  "Mac_Tissue": [
+   "SELENOP",
+   "MRC1",
+   "FOLR2",
+   "LYVE1",
+   "CD163",
+   "C1QA",
+   "C1QB",
+   "C1QC",
+   "VSIG4",
+   "CD5L",
+   "STAB1",
+   "MAF",
+   "F13A1",
+   "ITM2B",
+   "SLC40A1"
+  ],
+  "Mac_DAM_LAM": [
+   "GPNMB",
+   "LIPA",
+   "CTSD",
+   "LGMN",
+   "PLD3",
+   "ASAH1",
+   "FTL",
+   "FTH1",
+   "TREM2",
+   "SPP1",
+   "CD9",
+   "APOE",
+   "OLR1",
+   "MMP9",
+   "CCL3",
+   "CCL4",
+   "HMOX1"
+  ],
+  "Microglia": [
+   "P2RY12",
+   "TMEM119",
+   "CX3CR1",
+   "SIGLEC11",
+   "AIF1",
+   "IRF8",
+   "TYROBP",
+   "SALL1",
+   "HEXB",
+   "GPR34",
+   "OLFML3",
+   "FCER1G"
+  ],
+  "APC_MHCII_high": [
+   "HLA-DRA",
+   "HLA-DRB1",
+   "HLA-DPA1",
+   "HLA-DPB1",
+   "HLA-DQA1",
+   "HLA-DQB1",
+   "CD74",
+   "HLA-DMB",
+   "FCGR1A",
+   "RGS1"
+  ],
+  "cDC1": [
+   "CLEC9A",
+   "XCR1",
+   "C1S",
+   "C1R",
+   "CADM1",
+   "ZBTB46",
+   "FLT3",
+   "IRF8"
+  ],
+  "cDC2": [
+   "CD1C",
+   "FCER1A",
+   "CLEC10A",
+   "CD4",
+   "HLA-DRA",
+   "S100A10"
+  ],
+  "pDC": [
+   "LILRA4",
+   "IL3RA",
+   "IRF7",
+   "GZMB",
+   "PLD4",
+   "CLEC4C",
+   "TCF4",
+   "SERPINF1",
+   "JCHAIN"
+  ],
+  "T": [
+   "CD3D",
+   "CD3E",
+   "CD3G",
+   "CD2",
+   "TRAC",
+   "TRBC2",
+   "IL7R",
+   "CCL5",
+   "CD69",
+   "LCK",
+   "SKAP1"
+  ],
+  "NK": [
+   "GNLY",
+   "NKG7",
+   "KLRD1",
+   "KLRF1",
+   "FGFBP2",
+   "NCR3",
+   "PRF1"
+  ],
+  "B": [
+   "MS4A1",
+   "CD79A",
+   "CD79B",
+   "PAX5",
+   "BANK1",
+   "IGKC",
+   "TCL1A"
+  ],
+  "Plasma": [
+   "MZB1",
+   "JCHAIN",
+   "XBP1",
+   "IGHG1",
+   "SEC11C",
+   "DERL3",
+   "SSR4",
+   "SLAMF7",
+   "TNFRSF17"
+  ],
+  "Granulocyte": [
+   "CSF3R",
+   "C5AR1",
+   "ANXA1",
+   "ELANE",
+   "MPO",
+   "CAMP",
+   "LTF",
+   "IL1RN",
+   "CXCR2",
+   "FCGR3B",
+   "TIMP1",
+   "TGFBI",
+   "CD36"
+  ],
+  "Proliferating": [
+   "MKI67",
+   "TOP2A",
+   "CENPF",
+   "BIRC5",
+   "H2AFZ",
+   "NUSAP1",
+   "STMN1",
+   "PTTG1"
+  ],
+  "Keratocytes": [
+   "KERA",
+   "ALDH3A1",
+   "NNMT"
+  ],
+  "Corneal Endothelium": [
+   "SLC4A11",
+   "CDH2",
+   "CA3"
+  ]
+ },
+ "provenance": {
+  "Endo": {
+   "CLDN5": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl16",
+     "wilcoxon_rank": 1
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "PECAM1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl16",
+     "wilcoxon_rank": 13
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CDH5": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "VWF": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl16",
+     "wilcoxon_rank": 2
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TM4SF1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl16",
+     "wilcoxon_rank": 3
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "RAMP2": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl16",
+     "wilcoxon_rank": 8
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "ESAM": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl16",
+     "wilcoxon_rank": 6
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "FLT1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl16",
+     "wilcoxon_rank": 30
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "KDR": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "ADGRL4": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl16",
+     "wilcoxon_rank": 4
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "ECSCR": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl16",
+     "wilcoxon_rank": 7
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "GNG11": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl16",
+     "wilcoxon_rank": 9
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "PLVAP": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "Endo_Patho": {
+   "PLVAP": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "ICAM1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "VCAM1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "DLL4": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "NDUFA4L2": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl19",
+     "wilcoxon_rank": 7
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "HIF1A": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41827851",
+     "note": "Claudins in Retinal Disease",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "Pericyte": {
+   "RGS5": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl19",
+     "wilcoxon_rank": 13
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "RGS4": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "PDGFRB": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "NOTCH3": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "HIGD1B": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "PRRX1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "COL1A2": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl19",
+     "wilcoxon_rank": 8
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "MGP": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl19",
+     "wilcoxon_rank": 4
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "THY1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl19",
+     "wilcoxon_rank": 3
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "ITGA1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl19",
+     "wilcoxon_rank": 14
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "IGFBP7": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl19",
+     "wilcoxon_rank": 1
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CALD1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl19",
+     "wilcoxon_rank": 2
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "SMC": {
+   "ACTA2": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 13
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl19",
+     "wilcoxon_rank": 24
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CNN1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "MYH11": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TAGLN": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 1
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl19",
+     "wilcoxon_rank": 29
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "MYL9": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 5
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl19",
+     "wilcoxon_rank": 16
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "DES": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CALD1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 7
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl19",
+     "wilcoxon_rank": 2
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "LMOD1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42018650",
+     "note": "Spatial proteomic mapping human/mouse retina IBEX",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36277849",
+     "note": "single-cell multiome human retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "Fibroblast": {
+   "COL1A1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 8
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "COL1A2": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 6
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl1",
+     "wilcoxon_rank": 8
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "COL3A1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 11
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "DCN": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl5",
+     "wilcoxon_rank": 18
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "LUM": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "FBN1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 30
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "FN1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "PTGDS": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "MMP2": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "THY1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "Myofibroblast": {
+   "ACTA2": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 13
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TAGLN": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 1
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "MYL9": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 5
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "POSTN": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 14
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TPM1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 4
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TPM2": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 9
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "FN1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "COL1A1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 8
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "COL1A2": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl17",
+     "wilcoxon_rank": 6
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CTHRC1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl5",
+     "wilcoxon_rank": 6
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TIMP1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl5",
+     "wilcoxon_rank": 10
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "PRRX1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41230906",
+     "note": "PRRX1 Pericyte-Myofibroblast Transition",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36231108",
+     "note": "Transcriptional reprogramming RPE/stroma",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "Mono_Classical": {
+   "FCN1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl12",
+     "wilcoxon_rank": 1
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "VCAN": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl12",
+     "wilcoxon_rank": 5
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "S100A8": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl12",
+     "wilcoxon_rank": 8
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "S100A9": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl12",
+     "wilcoxon_rank": 6
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "S100A12": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl12",
+     "wilcoxon_rank": 24
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "SELL": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CD14": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "LYZ": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl12",
+     "wilcoxon_rank": 2
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "MNDA": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl12",
+     "wilcoxon_rank": 4
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CTSS": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl12",
+     "wilcoxon_rank": 3
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "SERPINA1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl12",
+     "wilcoxon_rank": 7
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "Mono_Nonclassical": {
+   "FCGR3A": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "LST1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "MS4A7": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CX3CR1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "IL1B": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "Mac_Tissue": {
+   "SELENOP": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl9",
+     "wilcoxon_rank": 1
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "MRC1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl9",
+     "wilcoxon_rank": 2
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "FOLR2": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl9",
+     "wilcoxon_rank": 3
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "LYVE1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CD163": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl9",
+     "wilcoxon_rank": 18
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "C1QA": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl9",
+     "wilcoxon_rank": 12
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "C1QB": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "C1QC": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl9",
+     "wilcoxon_rank": 8
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "VSIG4": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CD5L": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "STAB1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl9",
+     "wilcoxon_rank": 11
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "MAF": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl9",
+     "wilcoxon_rank": 5
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "F13A1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl9",
+     "wilcoxon_rank": 7
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "ITM2B": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl9",
+     "wilcoxon_rank": 6
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "SLC40A1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl9",
+     "wilcoxon_rank": 4
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "Mac_DAM_LAM": {
+   "GPNMB": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl6",
+     "wilcoxon_rank": 7
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "LIPA": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl6",
+     "wilcoxon_rank": 2
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CTSD": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl6",
+     "wilcoxon_rank": 1
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl11",
+     "wilcoxon_rank": 18
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl15",
+     "wilcoxon_rank": 2
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "LGMN": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl6",
+     "wilcoxon_rank": 5
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "PLD3": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl6",
+     "wilcoxon_rank": 6
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "ASAH1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl6",
+     "wilcoxon_rank": 9
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "FTL": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl6",
+     "wilcoxon_rank": 3
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl11",
+     "wilcoxon_rank": 17
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "FTH1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl6",
+     "wilcoxon_rank": 4
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl11",
+     "wilcoxon_rank": 19
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TREM2": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "SPP1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl11",
+     "wilcoxon_rank": 10
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CD9": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "APOE": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl11",
+     "wilcoxon_rank": 5
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl15",
+     "wilcoxon_rank": 4
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "OLR1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "MMP9": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CCL3": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl11",
+     "wilcoxon_rank": 1
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CCL4": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl11",
+     "wilcoxon_rank": 9
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "HMOX1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl6",
+     "wilcoxon_rank": 18
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl11",
+     "wilcoxon_rank": 2
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl15",
+     "wilcoxon_rank": 18
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "Microglia": {
+   "P2RY12": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TMEM119": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CX3CR1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "SIGLEC11": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "AIF1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "IRF8": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TYROBP": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl0",
+     "wilcoxon_rank": 4
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl2",
+     "wilcoxon_rank": 6
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "SALL1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "HEXB": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "GPR34": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "OLFML3": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "FCER1G": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl0",
+     "wilcoxon_rank": 5
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl2",
+     "wilcoxon_rank": 4
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "APC_MHCII_high": {
+   "HLA-DRA": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl10",
+     "wilcoxon_rank": 2
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl7",
+     "wilcoxon_rank": 7
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl13",
+     "wilcoxon_rank": 6
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "HLA-DRB1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl10",
+     "wilcoxon_rank": 3
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl7",
+     "wilcoxon_rank": 9
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl13",
+     "wilcoxon_rank": 5
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "HLA-DPA1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl10",
+     "wilcoxon_rank": 4
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl7",
+     "wilcoxon_rank": 6
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl13",
+     "wilcoxon_rank": 2
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "HLA-DPB1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl10",
+     "wilcoxon_rank": 5
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl7",
+     "wilcoxon_rank": 8
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl13",
+     "wilcoxon_rank": 1
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "HLA-DQA1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl10",
+     "wilcoxon_rank": 6
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl7",
+     "wilcoxon_rank": 4
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl13",
+     "wilcoxon_rank": 3
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "HLA-DQB1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl10",
+     "wilcoxon_rank": 7
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl7",
+     "wilcoxon_rank": 16
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl13",
+     "wilcoxon_rank": 7
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CD74": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl10",
+     "wilcoxon_rank": 1
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl7",
+     "wilcoxon_rank": 2
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl13",
+     "wilcoxon_rank": 4
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "HLA-DMB": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl10",
+     "wilcoxon_rank": 10
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl7",
+     "wilcoxon_rank": 30
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl13",
+     "wilcoxon_rank": 13
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "FCGR1A": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl10",
+     "wilcoxon_rank": 20
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl7",
+     "wilcoxon_rank": 5
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "RGS1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl10",
+     "wilcoxon_rank": 8
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl7",
+     "wilcoxon_rank": 1
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl13",
+     "wilcoxon_rank": 19
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "cDC1": {
+   "CLEC9A": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "XCR1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "C1S": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "C1R": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CADM1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "ZBTB46": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "FLT3": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "IRF8": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "cDC2": {
+   "CD1C": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "FCER1A": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CLEC10A": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CD4": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "HLA-DRA": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl10",
+     "wilcoxon_rank": 2
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "S100A10": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "pDC": {
+   "LILRA4": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "IL3RA": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl20",
+     "wilcoxon_rank": 29
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "IRF7": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl20",
+     "wilcoxon_rank": 5
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "GZMB": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl20",
+     "wilcoxon_rank": 1
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "PLD4": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl20",
+     "wilcoxon_rank": 7
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CLEC4C": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TCF4": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "SERPINF1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl20",
+     "wilcoxon_rank": 6
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "JCHAIN": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl20",
+     "wilcoxon_rank": 4
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:37272764",
+     "note": "Sortilin diabetic retina",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "T": {
+   "CD3D": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl8",
+     "wilcoxon_rank": 6
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CD3E": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl8",
+     "wilcoxon_rank": 27
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CD3G": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl8",
+     "wilcoxon_rank": 14
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CD2": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl8",
+     "wilcoxon_rank": 3
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TRAC": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl8",
+     "wilcoxon_rank": 5
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TRBC2": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl8",
+     "wilcoxon_rank": 4
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "IL7R": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl4",
+     "wilcoxon_rank": 6
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CCL5": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CD69": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl8",
+     "wilcoxon_rank": 10
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "LCK": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "SKAP1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "NK": {
+   "GNLY": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "NKG7": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "KLRD1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "KLRF1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "FGFBP2": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "NCR3": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "PRF1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "B": {
+   "MS4A1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CD79A": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl18",
+     "wilcoxon_rank": 10
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CD79B": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "PAX5": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "BANK1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "IGKC": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl18",
+     "wilcoxon_rank": 21
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TCL1A": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "Plasma": {
+   "MZB1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl18",
+     "wilcoxon_rank": 1
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "JCHAIN": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl18",
+     "wilcoxon_rank": 5
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "XBP1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl18",
+     "wilcoxon_rank": 3
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "IGHG1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl18",
+     "wilcoxon_rank": 8
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "SEC11C": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl18",
+     "wilcoxon_rank": 6
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "DERL3": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl18",
+     "wilcoxon_rank": 7
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "SSR4": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl18",
+     "wilcoxon_rank": 2
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "SLAMF7": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl18",
+     "wilcoxon_rank": 9
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TNFRSF17": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl18",
+     "wilcoxon_rank": 26
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36350619",
+     "note": "Conjunctiva resident gd T cells",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "Granulocyte": {
+   "CSF3R": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "C5AR1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl14",
+     "wilcoxon_rank": 2
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "ANXA1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl14",
+     "wilcoxon_rank": 10
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "ELANE": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "MPO": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CAMP": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "LTF": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "IL1RN": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CXCR2": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "FCGR3B": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TIMP1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl14",
+     "wilcoxon_rank": 1
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TGFBI": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl14",
+     "wilcoxon_rank": 9
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CD36": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl14",
+     "wilcoxon_rank": 8
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:38409074",
+     "note": "unique retinal microglia types early DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:40999978",
+     "note": "retinal microglia in DR review",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36119084",
+     "note": "activated retinal microglia metabolic reprogramming",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "Proliferating": {
+   "MKI67": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl3",
+     "wilcoxon_rank": 2
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "TOP2A": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl3",
+     "wilcoxon_rank": 7
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "CENPF": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl3",
+     "wilcoxon_rank": 8
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "BIRC5": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl3",
+     "wilcoxon_rank": 9
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "H2AFZ": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl3",
+     "wilcoxon_rank": 1
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "NUSAP1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl3",
+     "wilcoxon_rank": 3
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "STMN1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl3",
+     "wilcoxon_rank": 4
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ],
+   "PTTG1": [
+    {
+     "type": "canonical"
+    },
+    {
+     "type": "data_driven",
+     "id": "GSE165784_v1:cl3",
+     "wilcoxon_rank": 10
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:34006945",
+     "note": "scRNA human retina DR",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:41390488",
+     "note": "Endothelial RAB5IF retinal angiogenesis",
+     "semantics": "该类注释的文献语境 (v1 MCP 检索实证), 非该基因的逐条引用"
+    }
+   ]
+  },
+  "Keratocytes": {
+   "KERA": [
+    {
+     "type": "canonical",
+     "note": "cornea-specific 小富亮氨酸蛋白聚糖 (keratocan)"
+    },
+    {
+     "type": "pmid",
+     "id": "PMID:34741068",
+     "gene_symbol": "KERA",
+     "species": "human",
+     "tissue": "健康成人角膜 (19,472 细胞, 10x scRNA-seq, 在体解离)",
+     "evidence": "正文: 'KERA is corneal stromal–specific' (Fig.1c) 与 'clusters S0, S1 and S2 were stromal keratocytes' (Fig.5b); 摘要: NNMT/KERA 句",
+     "method": "scRNA-seq + RNAscope 佐证体系",
+     "semantics": "逐基因表达定位 (本卡经 v2.2 库内 chunk 正文抽取核验, 2026-09-24)"
+    }
+   ],
+   "ALDH3A1": [
+    {
+     "type": "pmid",
+     "id": "PMID:34741068",
+     "gene_symbol": "ALDH3A1",
+     "species": "human",
+     "tissue": "健康成人角膜 (在体)",
+     "evidence": "正文: 'stromal keratocyte markers LUM, KERA, or ALDH3A1... S0/S1/S2 were stromal keratocytes'",
+     "semantics": "逐基因表达定位 (库内 chunk 核验)"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:36982917",
+     "note": "角膜上皮 (HCE-2) 亦有 ALDH3A1 功能研究 —— 上皮共表达限制, 单基因不可区分基质与上皮"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:39652089",
+     "note": "应变上调人角膜细胞 ALDH3A1 (FASEB J 2024; 细胞实验语境)"
+    }
+   ],
+   "NNMT": [
+    {
+     "type": "pmid",
+     "id": "PMID:34741068",
+     "gene_symbol": "NNMT",
+     "species": "human",
+     "tissue": "健康成人角膜 (在体)",
+     "evidence": "摘要+正文: 'NNMT was exclusively expressed by stromal keratocytes' (该研究的新发现基质 keratocyte marker)",
+     "semantics": "逐基因表达定位 (库内 chunk 核验)"
+    }
+   ],
+   "_aux_evidence_not_in_default_markers": {
+    "LUM": [
+     {
+      "type": "pmid",
+      "id": "PMID:34741068",
+      "note": "keratocyte 关联成立 (Fig.5b) 但与其他组织成纤维共享, 非亚型独立判据 —— astra 降级带注记"
+     },
+     {
+      "type": "pmid_context",
+      "id": "PMID:34381080",
+      "note": "人角膜 Stro 簇表达谱语境"
+     }
+    ],
+    "DCN": [
+     {
+      "type": "canonical",
+      "note": "角膜基质 SLRP 背景; 'Fibro=DCN+' 不构成 keratocyte 特异证据 —— astra 降级 canonical-only"
+     }
+    ],
+    "PTGDS": [
+     {
+      "type": "pmid",
+      "id": "PMID:11328728",
+      "note": "培养牛角膜 keratocyte 产 PGD 合酶 —— 种属+培养口径, 不外推成人在体鉴别 marker"
+     }
+    ],
+    "MIME1_identity_note": "任务书候选 'MIME1'(mimecan) 的人类官方符号身份映射未核实 (OGN 为待核实替代符号); 未经核验不得默改入库 —— astra 弃用当前基因键"
+   },
+   "_disambiguation": {
+    "hierarchy": "Keratocytes = 角膜基质驻留细胞亚型; 在 Q6 既有分类体系中对应 Fibroblasts 超类 (D002 基线 fine_types 已含 Corneal Stromal Keratocytes), 非与其互斥的并列类。",
+    "vs_corneal_endothelium": "角膜内皮身份应见 SLC4A11/CA3/CDH2 组合表达; KERA/ALDH3A1/NNMT 组合阳性提示基质 keratocyte 身份而非内皮 —— 组合证据说明, 不构成单基因阳性/阴性机械排除规则。",
+    "vs_fibroblast_shared": "DCN/LUM/PTGDS 与膜库 Fibroblast 类共享非判别; 基质驻留身份靠 KERA/NNMT/ALDH3A1 组合。",
+    "evidence_limits": "ALDH3A1 角膜上皮亦表达; 混合眼表材料中基质/上皮信号可互混 (34741068 E3 簇教训); 本卡不将 D002 内皮供者中位数=0 转读为身份排除证据或捕获机制结论。"
+   }
+  },
+  "Corneal Endothelium": {
+   "SLC4A11": [
+    {
+     "type": "canonical",
+     "note": "人角膜内皮最广泛引用的特异标志之一"
+    },
+    {
+     "type": "pmid",
+     "id": "PMID:34741068",
+     "gene_symbol": "SLC4A11",
+     "species": "human",
+     "tissue": "健康成人角膜 (在体)",
+     "evidence": "正文: 'SLC4A11 is corneal endothelial–specific' (Fig.1c)",
+     "semantics": "逐基因表达定位 (库内 chunk 核验)"
+    },
+    {
+     "type": "pmid_context",
+     "id": "PMID:42115719",
+     "note": "SLC4A11 高表达转录本角膜内皮特异 (Sci Rep 2026; 转录本层面, 绝对特异宣称仍受限)"
+    }
+   ],
+   "CDH2": [
+    {
+     "type": "pmid",
+     "id": "PMID:41060151",
+     "gene_symbol": "CDH2",
+     "species": "human",
+     "tissue": "人角膜分隔比较 (scRNA+snRNA)",
+     "evidence": "正文: 'stromal keratocytes... endothelial cells (Endo, CA3+, CDH2+, and SLC4A11+)' —— 内皮群",
+     "semantics": "逐基因群定位; 非特异性辅助 marker (连接元件身份本身不证细胞类型) —— astra 采纳带注记"
+    }
+   ],
+   "CA3": [
+    {
+     "type": "pmid",
+     "id": "PMID:41060151",
+     "gene_symbol": "CA3",
+     "species": "human",
+     "tissue": "人角膜 (sc/snRNA)",
+     "evidence": "同上句: 'Endo, CA3+, CDH2+, and SLC4A11+'",
+     "semantics": "辅助候选 (非特异); 发布口径=群定位, 不宣称单基因特异"
+    }
+   ],
+   "_aux_evidence_not_in_default_markers": {
+    "COL8A1": [
+     {
+      "type": "canonical",
+      "note": "Descemet 膜结构胶原背景; 无逐基因在人角膜内皮群的表达定位文献 (41060151 内皮群句不含 COL8A1) —— astra 降级 canonical-only"
+     }
+    ],
+    "COL8A2": [
+     {
+      "type": "pmid",
+      "id": "PMID:15914606",
+      "note": "COL8A2 L450W 早发 Fuchs —— 疾病遗传关联, ≠正常成人单细胞表达特异性 (降级带注记)"
+     },
+     {
+      "type": "pmid",
+      "id": "PMID:40838019",
+      "note": "库内集成研究: CEC 簇 unique expression CA3/COL8A2/SLC4A11 (chunk 定位) —— 支持方向但未达发布级默认 marker"
+     }
+    ],
+    "TJP1": [
+     {
+      "type": "canonical",
+      "note": "ZO-1 连接结构背景; 未定位人角膜内皮单细胞逐基因表达证据, 不得补造 PMID —— astra 降级 canonical-only"
+     }
+    ],
+    "ALCAM_abandon_note": "任务书建议起点 ALCAM: 本卡未检索到可核实的角膜内皮基因级支持 → 弃用 (任务书'不得照抄'条款执行)。"
+   },
+   "_disambiguation": {
+    "hierarchy": "Corneal Endothelium = 角膜后界膜单层 (非血管内皮) —— 与膜库 Endo (血管内皮: CLDN5/PECAM1/CDH5 系) 不同层级语境, 判读先分辨材料语境。",
+    "vs_keratocytes": "KERA/ALDH3A1/NNMT 组合阳性不支持内皮身份; 反之 SLC4A11/CA3/CDH2 组合阳性支持内皮。组合证据说明, 非单基因机械排除; 也不将当前采样的供者中位数 0 转读为生物学不存在。",
+    "prohibition_note": "互斥=同一分类层级身份互斥 (内皮≠基质), 不解释为两组基因绝不共表达。"
+   }
+  }
+ },
+ "note": "溯源三态: canonical=教科书共识(显式标) / pmid=经 v1 MCP 检索留痕核验 / data_driven=GSE165784 v1 cluster_markers.csv 真实 wilcoxon 排名。RAG 证据只引用不打分 (冻结裁定)。与 retina v4.1 并列, query_marker(library) 选择。 | v1-membrane-20260924: 追加 Keratocytes + Corneal Endothelium 两类 (卡片 t_e1febb8e; v1 两库 31 类对角膜零覆盖实证修复; 逐基因内容级溯源经 v2.2 库内 chunk 正文抽取+eutils 题录核验, 降级/弃用清单按外部审稿裁定; 层级映射与互斥说明见 provenance._disambiguation; 词表本体更新属下一评测系列, 本库条目不声称修复词表)"
+}

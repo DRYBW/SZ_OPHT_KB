@@ -1,0 +1,148 @@
+{
+ "started": "2026-09-23 22:11:15",
+ "checks": [
+  {
+   "name": "initialize 握手",
+   "ok": true,
+   "detail": "P1-0.2"
+  },
+  {
+   "name": "list_tools == 5",
+   "ok": true,
+   "detail": "['get_disease_prior', 'get_kb_page', 'get_tissue_composition', 'query_marker', 'search_literature']"
+  },
+  {
+   "name": "旧行为: retina 10 类不变",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "retina→baseline 条",
+   "ok": true,
+   "detail": "/mnt/D/EyeKB/kb/baselines/retina.json"
+  },
+  {
+   "name": "retina 供者级分布与源文件全等",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "retina p≡file (pooled/strata)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "retina T2 字段完备",
+   "ok": true,
+   "detail": "['取样材料', '疾病阶段', '治疗背景', '平台', '富集步骤', '解离方法', '供者数', '计数分母', '证据来源']"
+  },
+  {
+   "name": "retina 用途口径写死(不得当达标线)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "retina rows=10 带 marker",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "ocular_surface 与源文件全等",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "眼表 scRNA 口径标注",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "骨架条: 状态+映射回填+区间无法估计合法",
+   "ok": true,
+   "detail": "✅可建参考模型（HASA 1.1M核portal底座+GSE148371人源19"
+  },
+  {
+   "name": "骨架数 == 9",
+   "ok": true,
+   "detail": "['choroid', 'ciliary_body', 'conjunctiva', 'iris', 'lens', 'optic_nerve', 'RPE', 'sclera', 'trabecular_meshwork']"
+  },
+  {
+   "name": "PDR→v2 薄层条",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "错配警示在场",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "身份层级 7 + 状态轴 7",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "签名证据条件 (T4)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "unexpected 四分队列",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "最小可用标准在场",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "中文别名命中 v2 条",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "组织过滤 (膜格)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "红线=T3 扩展表述",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "矩阵文件存在",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "search 命中带三字段",
+   "ok": true,
+   "detail": "[['disease_mechanism_background'], ['composition_baseline']]"
+  },
+  {
+   "name": "sidecar 覆盖 2713 篇",
+   "ok": true,
+   "detail": "2713"
+  },
+  {
+   "name": "D0 复核状态透传",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "检索语义不变 (剥 sidecar 全等)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "无 PDR 中心目录/文件名",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 28,
+ "fail": 0,
+ "verdict": "PASS"
+}

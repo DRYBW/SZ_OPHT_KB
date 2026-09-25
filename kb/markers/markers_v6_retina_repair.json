@@ -1,0 +1,2738 @@
+{
+ "version": "v6.0-retina-repair-20260925",
+ "created": "2026-09-25",
+ "card": "t_2e5e103a",
+ "prereg_sha": "621b1e5bdf7a881a5e6d649a505e9b708f6753b049662b5ac208d703245f6989",
+ "scope": "KB7 D1/D3: KB6 17 红条处置 + REVCAND top-8 文献门重写 + RGC 观察名单; 不覆盖 v4.1/v5/baselines/membrane 冻结面 (消费方接线另行卡)",
+ "markers": {
+  "Rod": [
+   "RHO",
+   "NRL",
+   "NR2E3",
+   "PDE6B",
+   "GNAT1"
+  ],
+  "Cone": [
+   "OPN1SW",
+   "OPN1MW",
+   "ARR3",
+   "PDE6H",
+   "GNAT2"
+  ],
+  "BC": [
+   "NETO1",
+   "SAMSN1",
+   "CA10",
+   "TRPM1",
+   "GABRA5",
+   "GRM6",
+   "GABRR2",
+   "DGKB",
+   "IGSF21",
+   "VSX1",
+   "PLXDC1",
+   "GABRR1",
+   "IGF1",
+   "WFDC1",
+   "MFSD4A",
+   "FAM171B",
+   "RAPGEF5",
+   "PDE1A",
+   "TMEM215",
+   "KHDRBS3",
+   "GRIK1",
+   "TACR3",
+   "GRM7",
+   "BCAT1",
+   "ZNF804B",
+   "HS3ST4",
+   "ADGRL2",
+   "MCC",
+   "PRKCA",
+   "SDK1",
+   "TMEM196",
+   "GRM5",
+   "NPHS1",
+   "BACH1",
+   "COL19A1",
+   "TMEM132C",
+   "VSX2",
+   "ISL1",
+   "GPR179"
+  ],
+  "AC": [
+   "GRM8",
+   "DCC",
+   "GAD1",
+   "OLFM3",
+   "PTPRK",
+   "GAD2",
+   "GABRA2",
+   "FGF13",
+   "TFAP2C",
+   "CACNA1E",
+   "CAMK2A",
+   "CAMKV",
+   "CHRM2",
+   "C1QL2",
+   "GABRA3",
+   "GRIN3A",
+   "SCN3B",
+   "GRIK2",
+   "SHISA6",
+   "ZFPM2",
+   "SPHKAP",
+   "LRRN3",
+   "EYA4",
+   "GABRG1",
+   "RASGRF1",
+   "CPNE5",
+   "ITGA11",
+   "TFAP2A",
+   "SLC6A9"
+  ],
+  "HC": [
+   "FRMPD4",
+   "TNR",
+   "PCSK6",
+   "CACNA1C",
+   "ONECUT2",
+   "DOCK10",
+   "ONECUT1",
+   "TPM3",
+   "ADAMTS17",
+   "ONECUT3",
+   "SESTD1",
+   "CMYA5",
+   "BEGAIN",
+   "GFRA2",
+   "B3GAT2",
+   "SLC4A3",
+   "GJA10",
+   "FBXL7",
+   "C8ORF76",
+   "MEGF11",
+   "CACNG7",
+   "FAM107B",
+   "LHX1",
+   "FAM135A",
+   "VAT1L",
+   "NAALAD2"
+  ],
+  "RGC": [
+   "RBPMS",
+   "SLC17A6",
+   "POU4F1",
+   "POU4F2",
+   "NEFL",
+   "UCHL1"
+  ],
+  "MG": [
+   "RLBP1",
+   "PRSS56"
+  ],
+  "Astro": [
+   "GFAP",
+   "S100B",
+   "TNC"
+  ],
+  "Micro": [
+   "C1QB"
+  ],
+  "RPE": [
+   "BEST1",
+   "RPE65",
+   "TTR",
+   "LRAT",
+   "RDH5",
+   "MFRP",
+   "HMGCS2",
+   "CLIC6",
+   "OR51E2"
+  ]
+ },
+ "marker_blocks": {
+  "BC": [
+   {
+    "gene": "NETO1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 5.787,
+     "mincons": 1.0,
+     "cpm": 1477.48
+    }
+   },
+   {
+    "gene": "SAMSN1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 YELLOW"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 1.06,
+     "mincons": 0.65,
+     "cpm": 1126.71
+    }
+   },
+   {
+    "gene": "CA10",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 4.528,
+     "mincons": 1.0,
+     "cpm": 3127.52
+    }
+   },
+   {
+    "gene": "TRPM1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 YELLOW"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": -0.81,
+     "mincons": 0.11,
+     "cpm": 1427.72
+    }
+   },
+   {
+    "gene": "GABRA5",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 3.87,
+     "mincons": 1.0,
+     "cpm": 395.41
+    }
+   },
+   {
+    "gene": "GRM6",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 4.585,
+     "mincons": 1.0,
+     "cpm": 512.7
+    }
+   },
+   {
+    "gene": "GABRR2",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 4.706,
+     "mincons": 1.0,
+     "cpm": 630.82
+    }
+   },
+   {
+    "gene": "DGKB",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 4.359,
+     "mincons": 1.0,
+     "cpm": 999.35
+    }
+   },
+   {
+    "gene": "IGSF21",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 YELLOW"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": -0.003,
+     "mincons": 0.16,
+     "cpm": 326.28
+    }
+   },
+   {
+    "gene": "VSX1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 4.425,
+     "mincons": 1.0,
+     "cpm": 352.24
+    }
+   },
+   {
+    "gene": "PLXDC1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.568,
+     "mincons": 1.0,
+     "cpm": 455.16
+    }
+   },
+   {
+    "gene": "GABRR1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 4.903,
+     "mincons": 1.0,
+     "cpm": 194.83
+    }
+   },
+   {
+    "gene": "IGF1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.833,
+     "mincons": 0.96,
+     "cpm": 196.89
+    }
+   },
+   {
+    "gene": "WFDC1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 YELLOW"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": -1.839,
+     "mincons": 0.11,
+     "cpm": 175.39
+    }
+   },
+   {
+    "gene": "MFSD4A",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.348,
+     "mincons": 0.99,
+     "cpm": 221.06
+    }
+   },
+   {
+    "gene": "FAM171B",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.045,
+     "mincons": 1.0,
+     "cpm": 407.01
+    }
+   },
+   {
+    "gene": "RAPGEF5",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.604,
+     "mincons": 0.95,
+     "cpm": 298.56
+    }
+   },
+   {
+    "gene": "PDE1A",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 3.424,
+     "mincons": 0.89,
+     "cpm": 268.88
+    }
+   },
+   {
+    "gene": "TMEM215",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.633,
+     "mincons": 0.99,
+     "cpm": 197.12
+    }
+   },
+   {
+    "gene": "KHDRBS3",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 YELLOW"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 0.386,
+     "mincons": 0.46,
+     "cpm": 568.55
+    }
+   },
+   {
+    "gene": "GRIK1",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "FMB",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "FMB"
+   },
+   {
+    "gene": "TACR3",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "FMB",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "FMB"
+   },
+   {
+    "gene": "GRM7",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "FMB",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "FMB"
+   },
+   {
+    "gene": "BCAT1",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "FMB",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "FMB"
+   },
+   {
+    "gene": "ZNF804B",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "IMB",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "IMB"
+   },
+   {
+    "gene": "HS3ST4",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "IMB",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "IMB"
+   },
+   {
+    "gene": "ADGRL2",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "IMB",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "IMB"
+   },
+   {
+    "gene": "MCC",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "IMB",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "IMB"
+   },
+   {
+    "gene": "PRKCA",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "RB",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "RB"
+   },
+   {
+    "gene": "SDK1",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "RB",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "RB"
+   },
+   {
+    "gene": "TMEM196",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "RB",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "RB"
+   },
+   {
+    "gene": "GRM5",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "RB",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "RB"
+   },
+   {
+    "gene": "NPHS1",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "DB2",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "DB2"
+   },
+   {
+    "gene": "BACH1",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "DB2",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "DB2"
+   },
+   {
+    "gene": "COL19A1",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "DB5",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "DB5"
+   },
+   {
+    "gene": "TMEM132C",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "DB5",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "DB5"
+   },
+   {
+    "gene": "VSX2",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 YELLOW"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 1.14,
+     "mincons": 0.58,
+     "cpm": 261.32
+    }
+   },
+   {
+    "gene": "ISL1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "BC 词条现成员携带; KB6 v1 判级 YELLOW"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 1.01,
+     "mincons": 0.46,
+     "cpm": 152.86
+    }
+   },
+   {
+    "gene": "GPR179",
+    "evidence": [
+     {
+      "type": "pmid",
+      "id": "PMID:42124641",
+      "gene_symbol": "GPR179",
+      "species": "human",
+      "tissue": "retina (CSNB 遗传学)",
+      "evidence": "GPR179 (OR74A) mGluR6 信号通路 ON-bipolar 突触传递——CSNB 基因型-表型综述 (摘要共现)",
+      "semantics": "eutils human 共现"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::BC::rank12"
+     },
+     {
+      "type": "canonical",
+      "note": "ON-bipolar 树突尖信号复合物教科书成员 (GRM6/TRPM1/GPR179)"
+     }
+    ],
+    "stats": {
+     "target": "BC",
+     "revcand_rank": "12",
+     "min_lfc_F": "4.137",
+     "min_lfc_E": "4.230",
+     "min_cons_F": "0.975",
+     "min_cons_E": "0.974",
+     "cpm": "42.53",
+     "det": "0.159"
+    }
+   }
+  ],
+  "AC": [
+   {
+    "gene": "GRM8",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.568,
+     "mincons": 1.0,
+     "cpm": 892.1
+    }
+   },
+   {
+    "gene": "DCC",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 3.779,
+     "mincons": 0.96,
+     "cpm": 523.95
+    }
+   },
+   {
+    "gene": "GAD1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 3.969,
+     "mincons": 0.99,
+     "cpm": 337.93
+    }
+   },
+   {
+    "gene": "OLFM3",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 1.908,
+     "mincons": 0.87,
+     "cpm": 868.96
+    }
+   },
+   {
+    "gene": "PTPRK",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 YELLOW"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 1.478,
+     "mincons": 0.63,
+     "cpm": 863.95
+    }
+   },
+   {
+    "gene": "GAD2",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 3.821,
+     "mincons": 0.98,
+     "cpm": 227.48
+    }
+   },
+   {
+    "gene": "GABRA2",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 1.942,
+     "mincons": 0.94,
+     "cpm": 224.66
+    }
+   },
+   {
+    "gene": "FGF13",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.009,
+     "mincons": 0.92,
+     "cpm": 448.8
+    }
+   },
+   {
+    "gene": "TFAP2C",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 4.988,
+     "mincons": 0.95,
+     "cpm": 71.17
+    }
+   },
+   {
+    "gene": "CACNA1E",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 4.293,
+     "mincons": 0.99,
+     "cpm": 211.27
+    }
+   },
+   {
+    "gene": "CAMK2A",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 4.535,
+     "mincons": 0.99,
+     "cpm": 61.9
+    }
+   },
+   {
+    "gene": "CAMKV",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 3.997,
+     "mincons": 0.99,
+     "cpm": 72.23
+    }
+   },
+   {
+    "gene": "CHRM2",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 3.355,
+     "mincons": 0.97,
+     "cpm": 173.01
+    }
+   },
+   {
+    "gene": "C1QL2",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 3.994,
+     "mincons": 0.95,
+     "cpm": 99.57
+    }
+   },
+   {
+    "gene": "GABRA3",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.417,
+     "mincons": 0.98,
+     "cpm": 93.81
+    }
+   },
+   {
+    "gene": "GRIN3A",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 3.812,
+     "mincons": 0.95,
+     "cpm": 76.43
+    }
+   },
+   {
+    "gene": "SCN3B",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.456,
+     "mincons": 0.95,
+     "cpm": 122.81
+    }
+   },
+   {
+    "gene": "GRIK2",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "AII",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "AII"
+   },
+   {
+    "gene": "SHISA6",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "AII",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "AII"
+   },
+   {
+    "gene": "ZFPM2",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "HAC2",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "HAC2"
+   },
+   {
+    "gene": "SPHKAP",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "HAC3",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "HAC3"
+   },
+   {
+    "gene": "LRRN3",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "HAC3",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "HAC3"
+   },
+   {
+    "gene": "EYA4",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "HAC3",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "HAC3"
+   },
+   {
+    "gene": "GABRG1",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "HAC4",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "HAC4"
+   },
+   {
+    "gene": "RASGRF1",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "HAC4",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "HAC4"
+   },
+   {
+    "gene": "CPNE5",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "HAC5",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "HAC5"
+   },
+   {
+    "gene": "ITGA11",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "HAC6",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "HAC6"
+   },
+   {
+    "gene": "TFAP2A",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 YELLOW"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 1.157,
+     "mincons": 0.57,
+     "cpm": 155.85
+    }
+   },
+   {
+    "gene": "SLC6A9",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "AC 词条现成员携带; KB6 v1 判级 YELLOW"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 1.08,
+     "mincons": 0.47,
+     "cpm": 75.27
+    }
+   }
+  ],
+  "HC": [
+   {
+    "gene": "FRMPD4",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.291,
+     "mincons": 0.95,
+     "cpm": 3411.7
+    }
+   },
+   {
+    "gene": "TNR",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.862,
+     "mincons": 1.0,
+     "cpm": 1816.52
+    }
+   },
+   {
+    "gene": "PCSK6",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 3.024,
+     "mincons": 1.0,
+     "cpm": 1875.94
+    }
+   },
+   {
+    "gene": "CACNA1C",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 1.74,
+     "mincons": 0.95,
+     "cpm": 3175.94
+    }
+   },
+   {
+    "gene": "ONECUT2",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.607,
+     "mincons": 1.0,
+     "cpm": 726.89
+    }
+   },
+   {
+    "gene": "DOCK10",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 YELLOW"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 0.843,
+     "mincons": 0.43,
+     "cpm": 978.4
+    }
+   },
+   {
+    "gene": "ONECUT1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.944,
+     "mincons": 1.0,
+     "cpm": 1095.4
+    }
+   },
+   {
+    "gene": "TPM3",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.466,
+     "mincons": 0.93,
+     "cpm": 872.95
+    }
+   },
+   {
+    "gene": "ADAMTS17",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 3.252,
+     "mincons": 0.99,
+     "cpm": 1353.25
+    }
+   },
+   {
+    "gene": "ONECUT3",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 6.23,
+     "mincons": 1.0,
+     "cpm": 345.49
+    }
+   },
+   {
+    "gene": "SESTD1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.622,
+     "mincons": 1.0,
+     "cpm": 900.66
+    }
+   },
+   {
+    "gene": "CMYA5",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.765,
+     "mincons": 0.95,
+     "cpm": 663.15
+    }
+   },
+   {
+    "gene": "BEGAIN",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 YELLOW"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 1.165,
+     "mincons": 0.46,
+     "cpm": 258.61
+    }
+   },
+   {
+    "gene": "GFRA2",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 1.852,
+     "mincons": 0.94,
+     "cpm": 334.96
+    }
+   },
+   {
+    "gene": "B3GAT2",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.778,
+     "mincons": 1.0,
+     "cpm": 376.49
+    }
+   },
+   {
+    "gene": "SLC4A3",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.748,
+     "mincons": 1.0,
+     "cpm": 328.98
+    }
+   },
+   {
+    "gene": "GJA10",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 9.033,
+     "mincons": 1.0,
+     "cpm": 181.88
+    }
+   },
+   {
+    "gene": "FBXL7",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 1.554,
+     "mincons": 0.93,
+     "cpm": 1940.33
+    }
+   },
+   {
+    "gene": "C8ORF76",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 1.707,
+     "mincons": 0.89,
+     "cpm": 288.65
+    }
+   },
+   {
+    "gene": "MEGF11",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 3.08,
+     "mincons": 0.99,
+     "cpm": 1182.38
+    }
+   },
+   {
+    "gene": "CACNG7",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HC 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.242,
+     "mincons": 1.0,
+     "cpm": 373.38
+    }
+   },
+   {
+    "gene": "FAM107B",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "H1",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "H1"
+   },
+   {
+    "gene": "LHX1",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "H1",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "H1"
+   },
+   {
+    "gene": "FAM135A",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "H2",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "H2"
+   },
+   {
+    "gene": "VAT1L",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "H2",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "H2"
+   },
+   {
+    "gene": "NAALAD2",
+    "evidence": [
+     {
+      "type": "data_driven_subtype_anchor",
+      "subtype": "H2",
+      "note": "绿/黄锚保留平铺 (v5 语义; R2 仅降级 RED 锚)"
+     }
+    ],
+    "flag": null,
+    "anchor_of": "H2"
+   }
+  ],
+  "MG": [
+   {
+    "gene": "RLBP1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "MG 词条现成员携带; KB6 v1 判级 YELLOW"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": -0.714,
+     "mincons": 0.0,
+     "cpm": 1018.23
+    }
+   },
+   {
+    "gene": "PRSS56",
+    "evidence": [
+     {
+      "type": "pmid",
+      "id": "PMID:29561967",
+      "gene_symbol": "PRSS56",
+      "species": "mouse",
+      "tissue": "Müller glia",
+      "evidence": "Müller glia-derived PRSS56 is required to sustain ocular axial growth (摘要标题级)",
+      "semantics": "eutils 共现 (功能在小鼠, 物种如实标)"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::MG::rank9"
+     }
+    ],
+    "stats": {
+     "target": "MG",
+     "revcand_rank": "9",
+     "min_lfc_F": "5.819",
+     "min_lfc_E": "5.840",
+     "min_cons_F": "0.987",
+     "min_cons_E": "0.986",
+     "cpm": "106.38",
+     "det": "0.167"
+    }
+   }
+  ],
+  "Astro": [
+   {
+    "gene": "GFAP",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "Astro 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 3.572,
+     "mincons": 0.96,
+     "cpm": 1161.38
+    }
+   },
+   {
+    "gene": "S100B",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "Astro 词条现成员携带; KB6 v1 判级 YELLOW"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 2.03,
+     "mincons": 0.65,
+     "cpm": 33.65
+    }
+   },
+   {
+    "gene": "TNC",
+    "evidence": [
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::Astrocyte::rank3",
+      "note": "D001 全邻域 min_lfc 7.30/cons 1.0"
+     },
+     {
+      "type": "pmid_context",
+      "note": "文献语境=反应性星胶/神经炎症程序 (人/鼠均有)",
+      "semantics": "SUBTYPE 语境旗: core 保留因 D001 稳态参考系判据全过, 炎症语境已标"
+     }
+    ],
+    "stats": {
+     "target": "Astrocyte",
+     "revcand_rank": "3",
+     "min_lfc_F": "7.298",
+     "min_lfc_E": "7.225",
+     "min_cons_F": "1.000",
+     "min_cons_E": "1.000",
+     "cpm": "973.32",
+     "det": "0.757"
+    }
+   }
+  ],
+  "RPE": [
+   {
+    "gene": "BEST1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "RPE 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 6.79,
+     "mincons": 1.0,
+     "cpm": 2346.39
+    }
+   },
+   {
+    "gene": "RPE65",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "RPE 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 6.275,
+     "mincons": 1.0,
+     "cpm": 3047.67
+    }
+   },
+   {
+    "gene": "TTR",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "RPE 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 4.506,
+     "mincons": 1.0,
+     "cpm": 2119.6
+    }
+   },
+   {
+    "gene": "LRAT",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "RPE 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 4.756,
+     "mincons": 1.0,
+     "cpm": 607.64
+    }
+   },
+   {
+    "gene": "RDH5",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "RPE 词条现成员携带; KB6 v1 判级 GREEN"
+     }
+    ],
+    "flag": null,
+    "stats_frozen": {
+     "minlfc": 3.99,
+     "mincons": 1.0,
+     "cpm": 724.8
+    }
+   },
+   {
+    "gene": "MFRP",
+    "evidence": [
+     {
+      "type": "pmid",
+      "id": "PMID:40228796",
+      "gene_symbol": "MFRP",
+      "species": "human",
+      "tissue": "RPE",
+      "evidence": "MFRP is a molecular hub that organizes the apical membrane of RPE cells (PNAS 摘要共现)",
+      "semantics": "eutils human GENERIC"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::RPE::rank7"
+     },
+     {
+      "type": "canonical",
+      "note": "melanoreceptor——种属差异注记: 人 RPE 特异/鼠 Cone 侧"
+     }
+    ],
+    "stats": {
+     "target": "RPE",
+     "revcand_rank": "7",
+     "min_lfc_F": "8.612",
+     "min_lfc_E": "8.674",
+     "min_cons_F": "0.789",
+     "min_cons_E": "0.778",
+     "cpm": "35.17",
+     "det": "0.161"
+    }
+   },
+   {
+    "gene": "HMGCS2",
+    "evidence": [
+     {
+      "type": "pmid",
+      "id": "PMID:38749583",
+      "note": "RPE ketogenesis (HMGCS2) 人 RPE/ES-RPE 再评估 (共现)"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::RPE::rank3"
+     }
+    ],
+    "stats": {
+     "target": "RPE",
+     "revcand_rank": "3",
+     "min_lfc_F": "9.817",
+     "min_lfc_E": "9.650",
+     "min_cons_F": "0.842",
+     "min_cons_E": "0.833",
+     "cpm": "138.31",
+     "det": "0.320"
+    }
+   },
+   {
+    "gene": "CLIC6",
+    "evidence": [
+     {
+      "type": "pmid",
+      "id": "PMID:39385205",
+      "note": "RPESC-RPE IND-enabling 安全性研究 CLIC6 人 RPE (本地主库共现 human)"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::RPE::rank1"
+     },
+     {
+      "type": "canonical",
+      "note": "RPE 高表达 chloride channel (眼科先例: TV-RPE 线)"
+     }
+    ],
+    "stats": {
+     "target": "RPE",
+     "revcand_rank": "1",
+     "min_lfc_F": "11.308",
+     "min_lfc_E": "11.235",
+     "min_cons_F": "1.000",
+     "min_cons_E": "1.000",
+     "cpm": "1044.59",
+     "det": "0.838"
+    }
+   },
+   {
+    "gene": "OR51E2",
+    "evidence": [
+     {
+      "type": "pmid",
+      "id": "PMID:36167259",
+      "note": "OR51E2 agonist β-ionone regulates RPE cell mitophagy (人 RPE 摘要共现 GENERIC)"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::RPE::rank8"
+     }
+    ],
+    "stats": {
+     "target": "RPE",
+     "revcand_rank": "8",
+     "min_lfc_F": "8.422",
+     "min_lfc_E": "8.353",
+     "min_cons_F": "0.842",
+     "min_cons_E": "0.833",
+     "cpm": "20.28",
+     "det": "0.090"
+    }
+   }
+  ],
+  "RGC": [
+   {
+    "gene": "RBPMS",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "v4.1/v5 现成员携带 (KB6 GREEN)"
+     }
+    ],
+    "flag": null
+   },
+   {
+    "gene": "SLC17A6",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "v4.1/v5 现成员携带 (KB6 GREEN)"
+     }
+    ],
+    "flag": null
+   },
+   {
+    "gene": "POU4F1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "v4.1/v5 现成员携带 (KB6 GREEN)"
+     }
+    ],
+    "flag": null
+   },
+   {
+    "gene": "POU4F2",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "v4.1/v5 现成员携带 (KB6 GREEN)"
+     }
+    ],
+    "flag": null
+   },
+   {
+    "gene": "NEFL",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "v4.1/v5 现成员携带 (KB6 GREEN)"
+     }
+    ],
+    "flag": null
+   },
+   {
+    "gene": "UCHL1",
+    "evidence": [
+     {
+      "type": "pmid",
+      "id": "PMID:24449362",
+      "gene_symbol": "UCHL1",
+      "species": "human",
+      "tissue": "retina",
+      "evidence": "Induction of the ganglion cell differentiation program in human retinal progenitors (UCHL1+ RGC 谱系; 摘要共现)",
+      "semantics": "eutils human 共现 + 本地人科共现 (Early Retinal UCHL1 Dysregulation)"
+     },
+     {
+      "type": "data_driven",
+      "id": "kb7_recalc::RGC (min_lfc 1.48, 全邻域过)"
+     }
+    ],
+    "stats": {
+     "min_lfc_F": "1.477",
+     "min_lfc_E": "1.447",
+     "min_cons_F": "0.802",
+     "cpm": "395.20",
+     "det": "0.946",
+     "note": "观察名单转正 (PREREG §2-R5 全门过)"
+    }
+   }
+  ]
+ },
+ "micro_detail": {
+  "candidates": [
+   "IRF8",
+   "C1QA",
+   "C1QB",
+   "TYROBP",
+   "AIF1",
+   "HEXB"
+  ],
+  "legacy_v4": [
+   "CX3CR1",
+   "P2RY12",
+   "TMEM119"
+  ],
+  "auc_table": [
+   {
+    "gene": "IRF8",
+    "auc": 0.5879114800603092,
+    "target_median": 0.0,
+    "Astro_median": 0.0,
+    "source": "candidate"
+   },
+   {
+    "gene": "C1QA",
+    "auc": 0.616117844250845,
+    "target_median": 0.0,
+    "Astro_median": 0.0,
+    "source": "candidate"
+   },
+   {
+    "gene": "C1QB",
+    "auc": 0.6500996371445733,
+    "target_median": 0.0,
+    "Astro_median": 0.0,
+    "source": "candidate"
+   },
+   {
+    "gene": "TYROBP",
+    "auc": 0.6379811815525613,
+    "target_median": 0.0,
+    "Astro_median": 0.0,
+    "source": "candidate"
+   },
+   {
+    "gene": "AIF1",
+    "auc": 0.5417977443278559,
+    "target_median": 0.0,
+    "Astro_median": 0.0,
+    "source": "candidate"
+   },
+   {
+    "gene": "HEXB",
+    "auc": 0.536856246126368,
+    "target_median": 0.0,
+    "Astro_median": 0.0,
+    "source": "candidate"
+   },
+   {
+    "gene": "CX3CR1",
+    "auc": 0.5575667642200918,
+    "target_median": 0.0,
+    "Astro_median": 0.0,
+    "source": "legacy(v4)"
+   },
+   {
+    "gene": "P2RY12",
+    "auc": 0.5236421450224186,
+    "target_median": 0.0,
+    "Astro_median": 0.0,
+    "source": "legacy(v4)"
+   },
+   {
+    "gene": "TMEM119",
+    "auc": 0.5122709086959817,
+    "target_median": 0.0,
+    "Astro_median": 0.0,
+    "source": "legacy(v4)"
+   }
+  ],
+  "selected_auc_gt065": [
+   "C1QB"
+  ],
+  "final_markers": [
+   "C1QB"
+  ],
+  "negative_check_class": "Astro",
+  "note": "入选=候选基因 AUC>0.65 且 Micro 中位表达 > Astro 中位表达；legacy 仅诊断对比不参与入选"
+ },
+ "rpe_detail": {
+  "candidates": [
+   "RPE65",
+   "RDH5",
+   "LRAT",
+   "BEST1",
+   "MITF",
+   "TTR"
+  ],
+  "legacy_v4": [
+   "RLBP1"
+  ],
+  "auc_table": [
+   {
+    "gene": "RPE65",
+    "auc": 0.9569385379025931,
+    "target_median": 2.5562081336975098,
+    "MG_median": 0.0,
+    "source": "candidate"
+   },
+   {
+    "gene": "RDH5",
+    "auc": 0.8191038321248146,
+    "target_median": 1.1759238243103027,
+    "MG_median": 0.0,
+    "source": "candidate"
+   },
+   {
+    "gene": "LRAT",
+    "auc": 0.8477093453900093,
+    "target_median": 1.0853731632232666,
+    "MG_median": 0.0,
+    "source": "candidate"
+   },
+   {
+    "gene": "BEST1",
+    "auc": 0.9611042569316788,
+    "target_median": 2.3577470779418945,
+    "MG_median": 0.0,
+    "source": "candidate"
+   },
+   {
+    "gene": "MITF",
+    "auc": 0.6748182193519637,
+    "target_median": 0.2777682840824127,
+    "MG_median": 0.0,
+    "source": "candidate"
+   },
+   {
+    "gene": "TTR",
+    "auc": 0.8970194689147982,
+    "target_median": 1.870225429534912,
+    "MG_median": 0.0,
+    "source": "candidate"
+   },
+   {
+    "gene": "RLBP1",
+    "auc": 0.8899296755296289,
+    "target_median": 1.9920427799224854,
+    "MG_median": 1.5770267248153687,
+    "source": "legacy(v4)"
+   }
+  ],
+  "selected_auc_gt065": [
+   "RPE65",
+   "RDH5",
+   "LRAT",
+   "BEST1",
+   "MITF",
+   "TTR"
+  ],
+  "final_markers": [
+   "RPE65",
+   "RDH5",
+   "LRAT",
+   "BEST1",
+   "MITF",
+   "TTR"
+  ],
+  "negative_check_class": "MG",
+  "note": "入选=候选基因 AUC>0.65 且 RPE 中位表达 > MG 中位表达；legacy 仅诊断对比不参与入选"
+ },
+ "auc_threshold": 0.65,
+ "subtype_anchor_layer": {
+  "BC": [
+   {
+    "gene": "TENM3",
+    "anchor_subtype": "FMB",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "RELN",
+    "anchor_subtype": "IMB",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "SLC24A3",
+    "anchor_subtype": "DB2",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "ADARB2",
+    "anchor_subtype": "DB5",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "KCNMB2",
+    "anchor_subtype": "DB5",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "NTNG1",
+    "anchor_subtype": "DB1",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "NXPH2",
+    "anchor_subtype": "DB1",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "LAMA3",
+    "anchor_subtype": "DB1",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "CDH8",
+    "anchor_subtype": "DB1",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   }
+  ],
+  "AC": [
+   {
+    "gene": "CHAT",
+    "anchor_subtype": "cholinergic AC (SAC)",
+    "evidence": [
+     {
+      "type": "pmid_context",
+      "id": "PMID:41037735",
+      "note": "cholinergic cell triad (CHAT)",
+      "semantics": "摘要共现 human query"
+     },
+     {
+      "type": "canonical",
+      "note": "胆碱能 AC 程序标记 (教科书)"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::AC::rank7"
+     }
+    ],
+    "note": "胆碱能亚型 (SAC≈AC 少数) 非泛 AC core"
+   },
+   {
+    "gene": "SLC5A7",
+    "anchor_subtype": "cholinergic AC (SAC)",
+    "evidence": [
+     {
+      "type": "pmid",
+      "id": "PMID:33393903",
+      "gene_symbol": "SLC5A7",
+      "species": "chick",
+      "tissue": "retina scRNA-seq",
+      "evidence": "AC7/AC25 表达 choline acetyltransferase (CHAT), choline transporter (SLC5A7) — SAC identity",
+      "semantics": "本地主库全文共现 (非人类, 如实标)"
+     },
+     {
+      "type": "canonical",
+      "note": "高亲和胆碱转运体=胆碱能谱系通签"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::AC::rank3"
+     }
+    ]
+   },
+   {
+    "gene": "VIP",
+    "anchor_subtype": "VIP-ergic (nitrergic) AC",
+    "evidence": [
+     {
+      "type": "pmid",
+      "id": "PMID:38087179",
+      "gene_symbol": "VIP",
+      "species": "human",
+      "tissue": "retina",
+      "evidence": "VIP amacrine cells / VIP-ergic AC population (摘要共现)",
+      "semantics": "eutils 摘要共现 human"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::AC::rank11"
+     }
+    ]
+   },
+   {
+    "gene": "SLC35F3",
+    "anchor_subtype": "AII",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "ZNF804A",
+    "anchor_subtype": "AII",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "GLCE",
+    "anchor_subtype": "AII",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "CHRM3",
+    "anchor_subtype": "HAC2",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "NXPH2",
+    "anchor_subtype": "HAC2",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "TMEM132D",
+    "anchor_subtype": "HAC2",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "AK5",
+    "anchor_subtype": "HAC2",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "LNX1",
+    "anchor_subtype": "HAC3",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "ROBO1",
+    "anchor_subtype": "HAC3",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "ATP8B4",
+    "anchor_subtype": "HAC4",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "DOCK2",
+    "anchor_subtype": "HAC4",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "GREB1L",
+    "anchor_subtype": "HAC5",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "CUX2",
+    "anchor_subtype": "HAC5",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "SNTG1",
+    "anchor_subtype": "HAC5",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "DACH2",
+    "anchor_subtype": "HAC6",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "CNTN5",
+    "anchor_subtype": "HAC6",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "MAF",
+    "anchor_subtype": "HAC6",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   }
+  ],
+  "HC": [
+   {
+    "gene": "NAT16",
+    "anchor_subtype": "H1",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   },
+   {
+    "gene": "PCDH11X",
+    "anchor_subtype": "H2",
+    "flat_verdict": "RED",
+    "note": "R2: 锚基因判红——移出平铺 core 入 subtype_anchor_layer, 按亚型消费 (KB6 v2 §5/§8)"
+   }
+  ],
+  "MG": [],
+  "Astro": [],
+  "RPE": []
+ },
+ "microglia_repair": {
+  "core": [
+   {
+    "gene": "TMEM119",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "membrane v1 携带 (KB6 GREEN)"
+     }
+    ]
+   },
+   {
+    "gene": "CX3CR1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "membrane v1 携带 (KB6 GREEN)"
+     }
+    ]
+   },
+   {
+    "gene": "SIGLEC11",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "携带带黄旗 (SIGLEC11 donor-cons)"
+     }
+    ],
+    "flag": "YELLOW_with_note"
+   },
+   {
+    "gene": "AIF1",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "membrane v1 携带 (KB6 GREEN)"
+     }
+    ]
+   },
+   {
+    "gene": "IRF8",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "membrane v1 携带 (KB6 GREEN)"
+     }
+    ]
+   },
+   {
+    "gene": "TYROBP",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "membrane v1 携带 (KB6 GREEN)"
+     }
+    ]
+   },
+   {
+    "gene": "GPR34",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "membrane v1 携带 (KB6 GREEN)"
+     }
+    ]
+   },
+   {
+    "gene": "FCER1G",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "membrane v1 携带 (KB6 GREEN)"
+     }
+    ]
+   },
+   {
+    "gene": "TAL1",
+    "evidence": [
+     {
+      "type": "pmid",
+      "id": "PMID:28696901",
+      "gene_symbol": "TAL1",
+      "species": "human",
+      "tissue": "cortex (purified microglia)",
+      "evidence": "transcriptomic analysis of purified human cortical microglia (TAL1/CD34 axis) 摘要共现",
+      "semantics": "人小胶质签名; 视网膜内由 D001 统计独立支持"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::Microglia::rank1"
+     },
+     {
+      "type": "canonical",
+      "note": "人小胶质/巨噬 TAL1 签名 (canonical)"
+     }
+    ],
+    "stats": {
+     "revcand_rank": "1",
+     "min_lfc_F": "11.656",
+     "min_cons_F": "0.938",
+     "cpm": "28.27",
+     "det": "0.071"
+    }
+   },
+   {
+    "gene": "OLR1",
+    "evidence": [
+     {
+      "type": "pmid",
+      "id": "PMID:40153135",
+      "note": "microglial OLR1/NF-kB inflammatory loop (摘要共现 human query)",
+      "semantics": "炎症语境旗"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::Microglia::rank2"
+     },
+     {
+      "type": "canonical",
+      "note": "清道夫受体 CD369/LOX-1, 髓系家族"
+     }
+    ],
+    "stats": {
+     "revcand_rank": "2",
+     "min_lfc_F": "11.040",
+     "min_cons_F": "0.987",
+     "cpm": "973.12",
+     "det": "0.634"
+    }
+   },
+   {
+    "gene": "ITGAX",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "CD11b——髓系教科书 (人 snRNA-seq AD 摘要共现)"
+     },
+     {
+      "type": "pmid",
+      "id": "PMID:41665199",
+      "note": "ITGAX microglia human snRNA-seq"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::Microglia::rank3"
+     }
+    ],
+    "stats": {
+     "revcand_rank": "3",
+     "min_lfc_F": "11.013",
+     "min_cons_F": "0.987",
+     "cpm": "445.85",
+     "det": "0.588"
+    }
+   },
+   {
+    "gene": "CLEC7A",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "Clec7a/DAP12——小胶质签名 (人摘要共现×5)"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::Microglia::rank4"
+     }
+    ],
+    "stats": {
+     "revcand_rank": "4",
+     "min_lfc_F": "10.973",
+     "min_cons_F": "0.987",
+     "cpm": "502.87",
+     "det": "0.597"
+    }
+   },
+   {
+    "gene": "PIK3R5",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "p110 调节亚基, 髓系限制性表达 (PI3Kγ 非经典信号人科共现)"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::Microglia::rank5"
+     }
+    ],
+    "stats": {
+     "revcand_rank": "5",
+     "min_lfc_F": "10.953",
+     "min_cons_F": "1.000",
+     "cpm": "357.43",
+     "det": "0.491"
+    }
+   },
+   {
+    "gene": "LILRB2",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "免疫球蛋白超家族抑制受体, 人单核/小胶质表达"
+     },
+     {
+      "type": "pmid",
+      "id": "PMID:41349939",
+      "note": "microglial phagocytosis review"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::Microglia::rank6"
+     }
+    ],
+    "stats": {
+     "revcand_rank": "6",
+     "min_lfc_F": "10.848",
+     "min_cons_F": "0.938",
+     "cpm": "25.69",
+     "det": "0.068"
+    }
+   },
+   {
+    "gene": "CYTH4",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "HAC1——白系限制性 Rho 激活蛋白 (人微胶质共现 GENERIC)"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::Microglia::rank7"
+     }
+    ],
+    "stats": {
+     "revcand_rank": "7",
+     "min_lfc_F": "10.735",
+     "min_cons_F": "0.988",
+     "cpm": "135.73",
+     "det": "0.291"
+    }
+   },
+   {
+    "gene": "CLEC1A",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "C型凝集素家族, CNS 巨噬细胞签名 (共现 GENERIC)"
+     },
+     {
+      "type": "data_driven",
+      "id": "REVCAND_KB6_v2::Microglia::rank8"
+     }
+    ],
+    "stats": {
+     "revcand_rank": "8",
+     "min_lfc_F": "10.600",
+     "min_cons_F": "0.914",
+     "cpm": "25.55",
+     "det": "0.061"
+    }
+   }
+  ],
+  "state_anchors": [
+   {
+    "gene": "P2RY12",
+    "anchor_subtype": "homeostatic microglia state",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "稳态小胶质教科书标记"
+     },
+     {
+      "type": "pmid_context",
+      "id": "PMID:KB6-v2::§2-6",
+      "note": "D001 平铺判红 (vs MG-pool lfc 0.066; Müller 本底 CPM 67)——降级为状态语境锚, 不作全邻类判据"
+     }
+    ],
+    "note": ""
+   },
+   {
+    "gene": "SALL1",
+    "anchor_subtype": "microglia TF",
+    "evidence": [
+     {
+      "type": "canonical",
+      "note": "小胶质发育 TF (人科)——D001 对 Cone 反向 lfc -2.67, 平铺降级"
+     }
+    ],
+    "note": ""
+   }
+  ],
+  "applies_to": [
+   "membrane::Microglia",
+   "baseline::retina::Microglia"
+  ],
+  "note": "D001 参考系 membrane/baseline Microglia 词条修复 (17 红条 #13/#14)"
+ },
+ "baseline_retina4_disposition": {
+  "baseline::retina::Microglia": {
+   "action": "修复语义随 membrane 修条 (同基因集处置)",
+   "removed": [
+    "P2RY12→状态锚",
+    "SALL1→状态锚",
+    "HEXB"
+   ],
+   "carried": [
+    "TMEM119",
+    "CX3CR1",
+    "IRF8",
+    "C1QA",
+    "C1QB",
+    "TYROBP",
+    "AIF1"
+   ],
+   "added_ref": "microglia_repair.core"
+  },
+  "baseline::retina::Müller glia": {
+   "action": "R1删除+重写",
+   "removed": [
+    "GLUL",
+    "SOX9",
+    "S100B",
+    "VIM",
+    "AQP4"
+   ],
+   "carried": [
+    "RLBP1(Y)"
+   ],
+   "added_ref": "markers.MG"
+  },
+  "baseline::retina::RPE": {
+   "action": "R1删除",
+   "removed": [
+    "MITF"
+   ],
+   "carried": [
+    "BEST1",
+    "RPE65",
+    "LRAT",
+    "RDH5",
+    "TTR"
+   ],
+   "added_ref": "markers.RPE"
+  },
+  "baseline::retina::Astrocyte": {
+   "action": "R1删除+重写",
+   "removed": [
+    "AQP4",
+    "SLC1A3"
+   ],
+   "carried": [
+    "GFAP",
+    "S100B(Y)"
+   ],
+   "added_ref": "markers.Astro"
+  },
+  "_note": "基线 JSON 本体零改动 (冻结面+消费方兼容); 接线随 v6 路由卡。"
+ },
+ "rgc_watchlist": [
+  {
+   "gene": "UCHL1",
+   "decision": "core",
+   "note": "观察名单转正: 发育/跨类泛表达语境注记 (pan-neuronal PGP9.5)"
+  },
+  {
+   "gene": "PRPH",
+   "decision": "drop",
+   "note": "观察名单: eutils 人科 RGC 共现 0 (hit=zebrafish 等); 统计过门但文献不足——不入 (缺口)"
+  },
+  {
+   "gene": "PVALB",
+   "decision": "drop",
+   "note": "反例旗 (KB5v3 §5): D001 best=HC——永久禁作 RGC 增补"
+  },
+  {
+   "gene": "PCP4",
+   "decision": "drop",
+   "note": "反例旗: D001 best=HC——禁 RGC"
+  },
+  {
+   "gene": "STMN2",
+   "decision": "drop",
+   "note": "W1 统计门不过 (min_cons_F 0.631<0.75)——不入"
+  },
+  {
+   "gene": "SNCG",
+   "decision": "drop",
+   "note": "W1 统计门不过 (min_cons 0.688; 鱼类泛表达先例)——不入"
+  }
+ ],
+ "granularity_notes": {
+  "MG_Astro_bidirectional_blindzone": "KB6 v2: GLUL/SOX9/VIM/S100B 对 Astrocyte 全反向; AQP4/SLC1A3/VIM 对 MG 零区分——两类 core 现仅含全邻域过门基因 (MG 依赖 RPE 排除的 RLBP1 带注记)",
+  "RLBP1": "MG 侧 YELLOW: 对 RPE 反向依赖排除 (MG CPM1018/Astro70 真优势), 不可单独定类",
+  "MITF": "RPE 词条删除: 对 RGC 大 pool lfc 0.59 + Cone/HC ambient 供体旗 (KB6 §7)",
+  "stomal_shared": "壁细胞家族共 marker——详见文件B granularity_note (D4 软提示为 prompt 侧另行卡)"
+ },
+ "bans": {
+  "PAX5": "ARTIFACT-KB5v3 禁用旗——未入任何层 (REVCAND rank2 保留统计排名记录)",
+  "PAX8": "同 (rank17)",
+  "EYA1": "KB5v3 禁用待审——未入 (rank16)",
+  "PVALB/PCP4": "禁作 RGC (反例旗); PCP4 亦经文献门弃作 SMC (跨组织语义)"
+ },
+ "cl_alignment": {
+  "Rod": {
+   "cl_id": "CL:0000604",
+   "label": "retinal rod cell",
+   "def_summary": "One of the two photoreceptor cell types of the vertebrate retina. In rods the photopigment is in stacks of membranous disks separate from the outer cell membrane. Rods are more sen",
+   "verify": "ols_evidence_kb7/"
+  },
+  "Cone": {
+   "cl_id": "CL:0000749",
+   "label": "ON-bipolar cell",
+   "def_summary": "A bipolar neuron found in the retina and having connections with photoreceptors cells and neurons in the inner half of the inner plexiform layer. These cells depolarize in response",
+   "verify": "ols_evidence_kb7/"
+  },
+  "BC": {
+   "cl_id": "CL:0000748",
+   "label": "retinal bipolar neuron",
+   "def_summary": "A bipolar neuron found in the retina and having connections with photoreceptors cells and neurons in the inner plexiform layer.",
+   "verify": "ols_evidence_kb7/"
+  },
+  "AC": {
+   "cl_id": "CL:0000561",
+   "label": "amacrine cell",
+   "def_summary": "Interneuron of the vertebrate retina. They integrate, modulate, and interpose a temporal domain in the visual message presented to the retinal ganglion cells, with which they synap",
+   "verify": "ols_evidence_kb7/"
+  },
+  "HC": {
+   "cl_id": "CL:0000745",
+   "label": "retina horizontal cell",
+   "def_summary": "A neuron that laterally connects other neurons in the inner nuclear layer of the retina.",
+   "verify": "ols_evidence_kb7/"
+  },
+  "RGC": {
+   "cl_id": "CL:0000740",
+   "label": "retinal ganglion cell",
+   "def_summary": "The set of neurons that receives neural inputs via bipolar, horizontal and amacrine cells. The axons of these cells make up the optic nerve.",
+   "verify": "ols_evidence_kb7/"
+  },
+  "MG": {
+   "cl_id": "CL:0000636",
+   "label": "Mueller cell",
+   "def_summary": "Astrocyte-like radial glial cell that extends vertically throughout the retina, with the nucleus are usually in the middle of the inner nuclear layer.",
+   "verify": "ols_evidence_kb7/"
+  },
+  "Astro": {
+   "cl_id": "CL:0000127",
+   "label": "astrocyte",
+   "def_summary": "A class of large neuroglial (macroglial) cells in the central nervous system - the largest and most numerous neuroglial cells in the brain and spinal cord. Astrocytes (from 'star' ",
+   "verify": "ols_evidence_kb7/"
+  },
+  "Micro": {
+   "cl_id": "CL:0000129",
+   "label": "microglial cell",
+   "def_summary": "A central nervous system macrophage found in the parenchyma of the central nervous system. Marker include CD11b-positive, F4/80-positive, and CD68-positive.",
+   "verify": "ols_evidence_kb7/"
+  },
+  "RPE": {
+   "cl_id": "CL:0002586",
+   "label": "retinal pigment epithelial cell",
+   "def_summary": "An epithelial cell of the retinal pigmented epithelium.",
+   "verify": "ols_evidence_kb7/"
+  }
+ },
+ "note": "版本化发布; 详见 plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md 与 out/ 台账。"
+}

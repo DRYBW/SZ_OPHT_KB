@@ -1,0 +1,28 @@
+# 数据与工件（体积大/含私有患者衍生数据，永不入库）
+plans/
+*.h5ad
+*.h5ad.gz
+*.npz
+percell/
+*.pkl
+# 第三方公共数据原始文件（保留取数脚本，数据不入库）
+scripts/baselines/data/*.csv
+
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# 系统与编辑器
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# 密钥面（本仓应无，双保险）
+.env
+*.key
+*credentials*
+config_local*

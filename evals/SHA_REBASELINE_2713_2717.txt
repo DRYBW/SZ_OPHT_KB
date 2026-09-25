@@ -1,0 +1,24 @@
+# KB1V2B sidecar 覆盖常量重基线 (2713→2717) sha 台账 — t_502a23b7, 2026-09-25 16:15:23
+# 背景: t_d6f2a0a0 软提示卡改动前三态对账确认现役权威①唯一 FAIL=「sidecar 覆盖 2713 篇」(实际 2717)，
+#   漂移源自 09-25 晨 t_f3fa8c95 EyeKB-RAG v2.3 角膜引文增补 (evidence_meta_v2.0_2026-09.jsonl 2713→2717 行)，
+#   非软提示卡所致 (out/zero_touch_and_failset.json 五态同一失败集)。
+# 处置: "发布件重基线"纪律 — 冻结原件不动，新版本号套件 regression_kb1v2b_20260925.py (唯一实质变化=常量 2713→2717)。
+# 重跑证据: 56/56 PASS ×2 (第二次用最终件), 见 regression_kb1v2b_20260925_run.log。
+
+## PRE (冻结原件 + 真值源, 改前后均核验零漂移)
+4af63ad7e84ef6e552e4f32fe7138d221009fe1382d65d954b6fccbe7ffcbb13  regression_kb1v2b_20260923.py
+d871036bacb74680a1084141877595c5027b7c153f4b63a710f57e5e83ed9af3  REGRESSION_KB1V2B_20260923.json
+bdac516c46e0b4fcdacf2200d3d4f6634c65b88da5d7ed474c1c83da97b8f2d2  /mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl
+
+## .bak 前像 (逐字节等于原件)
+4af63ad7e84ef6e552e4f32fe7138d221009fe1382d65d954b6fccbe7ffcbb13  regression_kb1v2b_20260923.py.bak_pre_rebaseline2717
+d871036bacb74680a1084141877595c5027b7c153f4b63a710f57e5e83ed9af3  REGRESSION_KB1V2B_20260923.json.bak_pre_rebaseline2717
+
+## POST (新增件)
+477bff563cc018cdc498c0d02561b12955ae827d2a3faea7047cab690769bbd3  regression_kb1v2b_20260925.py
+0743b3bbaaedd4db5f1defcd9a6e44ab4f45893837b07ace31fb60c79208e94e  REGRESSION_KB1V2B_20260925.json
+b809b5357060c120d62fe18565a7c541660080c1eb98b68ede806a559c468271  regression_kb1v2b_20260925_run.log
+
+## 核验
+- sha256sum -c PRE: 三件全部 OK (原件与 sidecar jsonl 本卡全程零触碰)
+- 禁改区: kb/ 词条、mcp_server/、sidecar jsonl 本体 — 均未动 (本卡仅新增 evals/ 三件+两前像+一登记)

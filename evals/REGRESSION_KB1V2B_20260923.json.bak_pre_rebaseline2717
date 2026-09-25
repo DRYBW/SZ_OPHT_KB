@@ -1,0 +1,288 @@
+{
+ "started": "2026-09-24 21:55:35",
+ "checks": [
+  {
+   "name": "initialize 握手",
+   "ok": true,
+   "detail": "KB1v2-0.1"
+  },
+  {
+   "name": "list_tools == 5",
+   "ok": true,
+   "detail": "['get_disease_prior', 'get_kb_page', 'get_tissue_composition', 'query_marker', 'search_literature']"
+  },
+  {
+   "name": "旧行为: retina 10 类不变",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "retina→baseline 条",
+   "ok": true,
+   "detail": "/mnt/D/EyeKB/kb/baselines/retina.json"
+  },
+  {
+   "name": "retina 供者级分布与源文件全等",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "retina p≡file (pooled/strata)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "retina T2 字段完备",
+   "ok": true,
+   "detail": "['取样材料', '疾病阶段', '治疗背景', '平台', '富集步骤', '解离方法', '供者数', '计数分母', '证据来源']"
+  },
+  {
+   "name": "retina 用途口径写死(不得当达标线)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "retina rows=10 带 marker",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "ocular_surface 与源文件全等",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "眼表 scRNA 口径标注",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "骨架条(conjunctiva): 状态+映射回填+区间无法估计合法",
+   "ok": true,
+   "detail": "⚠️数据不足（无成人正常结膜专门单细胞图谱；只有类器官模型GSE191232+发"
+  },
+  {
+   "name": "KB1v2b: 骨架数 == 5 (ON/RPE/TM/CB 已回填)",
+   "ok": true,
+   "detail": "['choroid', 'conjunctiva', 'iris', 'lens', 'sclera']"
+  },
+  {
+   "name": "baselines.json 索引 filled=6/skeleton=5",
+   "ok": true,
+   "detail": "{'filled_donor_level': 6, 'skeleton_mapping_backfilled': 5}"
+  },
+  {
+   "name": "optic_nerve→filled_donor_level 条",
+   "ok": true,
+   "detail": "/mnt/D/EyeKB/kb/baselines/optic_nerve.json"
+  },
+  {
+   "name": "optic_nerve 供者级分布与源文件全等",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "optic_nerve T2 九字段完备",
+   "ok": true,
+   "detail": "['取样材料', '疾病阶段', '治疗背景', 'scRNA_vs_snRNA', '富集步骤', '解离方法', '供者数', '计数分母', '证据来源']"
+  },
+  {
+   "name": "optic_nerve 用途口径写死",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "optic_nerve rows=25 (portal majorclass 词表)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "optic_nerve 4 分层 (来源×部位)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "optic_nerve 视网膜混入旗在位",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "RPE→filled_donor_level 条",
+   "ok": true,
+   "detail": "/mnt/D/EyeKB/kb/baselines/RPE.json"
+  },
+  {
+   "name": "RPE 供者级分布与源文件全等",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "RPE T2 九字段完备",
+   "ok": true,
+   "detail": "['取样材料', '疾病阶段', '治疗背景', 'scRNA_vs_snRNA', '富集步骤', '解离方法', '供者数', '计数分母', '证据来源']"
+  },
+  {
+   "name": "RPE rows=5 canonical 类",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "RPE marker 推断口径声明在位 (非作者官方命名 caveat)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "RPE 状态层 26 簇全列",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "RPE 干细候群'无法估计'合法态声明",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "RPE 行内 source_ids 可解析 (无 MISSING)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "trabecular_meshwork→filled_donor_level 条",
+   "ok": true,
+   "detail": "/mnt/D/EyeKB/kb/baselines/trabecular_meshwork.json"
+  },
+  {
+   "name": "trabecular_meshwork 供者级分布与源文件全等",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "trabecular_meshwork T2 九字段完备",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "trabecular_meshwork rows=9",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "trabecular_meshwork 用途口径写死",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "trabecular_meshwork 行内 source_ids 可解析",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "ciliary_body→filled_donor_level 条",
+   "ok": true,
+   "detail": "/mnt/D/EyeKB/kb/baselines/ciliary_body.json"
+  },
+  {
+   "name": "ciliary_body 供者级分布与源文件全等",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "ciliary_body T2 九字段完备",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "ciliary_body rows=9",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "ciliary_body 用途口径写死",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "ciliary_body 行内 source_ids 可解析",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "PDR→v2 薄层条",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "错配警示在场",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "身份层级 7 + 状态轴 7",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "签名证据条件 (T4)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "unexpected 四分队列",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "最小可用标准在场",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "中文别名命中 v2 条",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "组织过滤 (膜格)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "红线=T3 扩展表述",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "矩阵文件存在",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "search 命中带三字段",
+   "ok": true,
+   "detail": "[['disease_mechanism_background'], ['composition_baseline']]"
+  },
+  {
+   "name": "sidecar 覆盖 2713 篇",
+   "ok": true,
+   "detail": "2713"
+  },
+  {
+   "name": "D0 复核状态透传",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "检索语义不变 (剥 sidecar 全等)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "无 PDR 中心目录/文件名",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 56,
+ "fail": 0,
+ "verdict": "PASS"
+}

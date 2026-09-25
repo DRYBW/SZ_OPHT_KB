@@ -1,0 +1,466 @@
+{
+ "schema": "eyekb-prior/1.0",
+ "entry_id": "human_pdr_membrane",
+ "title": "组成基线: 人 PDR 纤维血管膜 (fibrovascular membrane)",
+ "species": "human",
+ "tissue": "fibrovascular_membrane",
+ "disease": "proliferative diabetic retinopathy",
+ "frozen_date": "2026-09-23",
+ "card": "t_39182aa2",
+ "evidence_grades": {
+  "A": "本地实测复算(带路径)",
+  "B": "文献原文直接报告",
+  "C": "跨研究经验区间"
+ },
+ "sources": [
+  {
+   "sid": "GSE165784V2",
+   "kind": "dataset",
+   "label": "GSE165784 人 PDR 纤维血管膜+RRD 膜 scRNA, v2 整合轨 Track B (harmonypy, 17 簇, 10,069 细胞; PDR-only 7,142)",
+   "pmid": "35061025",
+   "path": "/mnt/D/EyeKB/plans/demo_gse165784/proc/v2/cluster_composition_B.csv",
+   "computation": "本卡 t_39182aa2 复算 (build_priors.py recompute_gse165784)"
+  },
+  {
+   "sid": "PDR_HU2022",
+   "kind": "paper",
+   "pmid": "35061025",
+   "label": "Hu et al. Single-Cell Transcriptomics Reveals Novel Role of Microglia in Fibrovascular Membrane of PDR. Diabetes 2022 (GSE165784 原文)"
+  },
+  {
+   "sid": "PDR_JCI2023",
+   "kind": "paper",
+   "pmid": "37917183",
+   "label": "Single-cell transcriptomics analysis of PDR fibrovascular membranes. JCI Insight 2023"
+  },
+  {
+   "sid": "PDR_SOX15",
+   "kind": "paper",
+   "pmid": "42601615",
+   "label": "Human single-cell atlas of PDR reveals a SOX15-overexpressing stromal population. J Transl Med 2026"
+  },
+  {
+   "sid": "PDR_MKI67MG",
+   "kind": "paper",
+   "pmid": "40069725",
+   "label": "Single-cell analysis identifies MKI67+ microglia as drivers of neovascularization in PDR. J Transl Med 2025"
+  },
+  {
+   "sid": "PDR_NICHE",
+   "kind": "paper",
+   "pmid": "40562775",
+   "label": "Metabolic reprogramming of the neovascular niche promotes regenerative angiogenesis in proliferative retinopathies. Nat Commun 2025"
+  },
+  {
+   "sid": "PRRX1",
+   "kind": "paper",
+   "pmid": "41230906",
+   "in_lib": true,
+   "label": "PRRX1 Orchestrates Pericyte-Myofibroblast Transition in Pathological Retinal Fibrosis. IOVS 2025 (库内)"
+  },
+  {
+   "sid": "RAB5IF",
+   "kind": "paper",
+   "pmid": "41390488",
+   "in_lib": true,
+   "label": "Endothelial RAB5IF is required for pathological and developmental retinal angiogenesis. Nat Commun 2025 (库内)"
+  },
+  {
+   "sid": "VITREOUS_T",
+   "kind": "paper",
+   "pmid": "39220810",
+   "label": "Liquid Biopsy for PDR: Single-Cell Transcriptomics of Human Vitreous. Ophthalmol Sci 2024 — PDR 玻璃体 T 细胞 91.6% (对照组织: 玻璃体≠膜)"
+  },
+  {
+   "sid": "MEMLIB",
+   "kind": "kb",
+   "label": "本地膜 marker 库 markers_membrane_v1.json v1-membrane-20260923 (逐基因溯源)",
+   "path": "/mnt/D/EyeKB/kb/markers/markers_membrane_v1.json"
+  },
+  {
+   "sid": "MULLER_REDD1",
+   "kind": "paper",
+   "pmid": "35167652",
+   "in_lib": true,
+   "label": "Müller Glial Expression of REDD1 Is Required for Retinal Neurodegeneration... Diabetes 2022 (库内; 反应性胶质背景)"
+  },
+  {
+   "sid": "GLIA_RDG",
+   "kind": "paper",
+   "pmid": "32069977",
+   "in_lib": true,
+   "label": "scRNA-seq in Human Retinal Degeneration Reveals Distinct Glial Cell Populations. Cells 2020 (库内; 人视网膜退变胶质状态)"
+  },
+  {
+   "sid": "DR_RETINA_SC",
+   "kind": "paper",
+   "pmid": "34006945",
+   "in_lib": true,
+   "label": "In-depth transcriptomic analysis of human retina reveals molecular mechanisms underlying DR. Sci Rep 2021 (库内)"
+  },
+  {
+   "sid": "MG_EARLY_DR",
+   "kind": "paper",
+   "pmid": "38409074",
+   "in_lib": true,
+   "label": "scRNA-seq reveals roles of unique retinal microglia types in early DR. DMS 2024 (库内)"
+  },
+  {
+   "sid": "TIPCELL_DEV",
+   "kind": "paper",
+   "pmid": "34273276",
+   "in_lib": true,
+   "label": "Specialized endothelial tip cells guide neuroretina vascularization and blood-retina-barrier formation. Nat Commun 2021 (库内; tip/stalk 生物学来源, 发育/模型证据→PDR 外推 C 级)"
+  }
+ ],
+ "major_compartments": [
+  {
+   "compartment": "myeloid",
+   "label_cn": "髓系合计 (巨噬/单核/DC/pDC, Track B 簇归属)",
+   "pct_pdr_only": 79.5,
+   "pct_all_samples": 82.28,
+   "n_pdr": 5677,
+   "evidence": "A(计数)+B(定性)",
+   "note": "PDR 膜以髓系为主是文献共识 (B: PDR_HU2022/PDR_JCI2023) 且本地实测一致 (A)",
+   "source_ids": [
+    "GSE165784V2",
+    "PDR_HU2022",
+    "PDR_JCI2023"
+   ]
+  },
+  {
+   "compartment": "stromal_myofibro",
+   "label_cn": "肌成纤维 (COL1A1/COL1A2/ACTA2/TAGLN/POSTN/PRRX1)",
+   "pct_pdr_only": 4.4,
+   "pct_all_samples": 3.69,
+   "n_pdr": 317,
+   "evidence": "A(计数)+B(定性)",
+   "note": "纤维成分 = 膜标本命名主体; 周细胞→肌成纤维转变由 PRRX1 驱动 (B)",
+   "source_ids": [
+    "GSE165784V2",
+    "PRRX1",
+    "MEMLIB"
+   ]
+  },
+  {
+   "compartment": "stromal_pericyte",
+   "label_cn": "周细胞 (RGS5/PDGFRB/NOTCH3/PRRX1)",
+   "pct_pdr_only": 3.5,
+   "pct_all_samples": 2.48,
+   "n_pdr": 250,
+   "evidence": "A(计数)+B(定性)",
+   "note": "血管壁细胞, 与内皮共同构成'纤维血管'三件套",
+   "source_ids": [
+    "GSE165784V2",
+    "PRRX1",
+    "MEMLIB"
+   ]
+  },
+  {
+   "compartment": "endothelial",
+   "label_cn": "内皮 (CLDN5/VWF/PECAM1; 病理态 PLVAP/DLL4/NDUFA4L2)",
+   "pct_pdr_only": 3.8,
+   "pct_all_samples": 2.68,
+   "n_pdr": 270,
+   "evidence": "A(计数)+B(定性)",
+   "note": "增殖血管端; tip/stalk 亚态证据主要来自发育/OIR 模型 (C 级外推)",
+   "source_ids": [
+    "GSE165784V2",
+    "TIPCELL_DEV",
+    "RAB5IF",
+    "MEMLIB"
+   ]
+  },
+  {
+   "compartment": "lymphoid_T",
+   "label_cn": "T 细胞 (CD3D/CD2/CD69 活化)",
+   "pct_pdr_only": 4.7,
+   "pct_all_samples": 3.52,
+   "n_pdr": 333,
+   "evidence": "A(计数)+B(定性)",
+   "note": "膜标本存在; 注意与玻璃体液 (T 91.6%) 区分组织端",
+   "source_ids": [
+    "GSE165784V2",
+    "VITREOUS_T"
+   ]
+  },
+  {
+   "compartment": "lymphoid_plasma",
+   "label_cn": "浆细胞 (MZB1/JCHAIN/IGHG1)",
+   "pct_pdr_only": 0.8,
+   "pct_all_samples": 0.61,
+   "n_pdr": 58,
+   "evidence": "A(计数)+B(定性)",
+   "note": "低比例存在即符合预期",
+   "source_ids": [
+    "GSE165784V2"
+   ]
+  },
+  {
+   "compartment": "proliferating",
+   "label_cn": "增殖群 (MKI67/TOP2A/CENPF; 来源混杂)",
+   "pct_pdr_only": 1.7,
+   "pct_all_samples": 3.12,
+   "n_pdr": 121,
+   "evidence": "A(计数)+B(定性)",
+   "note": "PDR-only 口径增殖占比低于全样本 (RRD 应激髓系贡献大); MKI67+ 小胶质驱动新生 (B: PDR_MKI67MG)",
+   "source_ids": [
+    "GSE165784V2",
+    "PDR_MKI67MG"
+   ]
+  },
+  {
+   "compartment": "glial_candidate",
+   "label_cn": "胶质候选 (Müller/反应性胶质瘢痕; CRYAB/CLU, RLBP1 缺)",
+   "pct_pdr_only": 1.6,
+   "pct_all_samples": 1.62,
+   "n_pdr": 116,
+   "evidence": "A(计数)+B(定性)",
+   "note": "纤维化膜含胶质瘢痕成分 (B: GLIA_RDG/MULLER_REDD1); 但本簇 marker 不完整 → 分不开旗, 不硬标",
+   "source_ids": [
+    "GSE165784V2",
+    "GLIA_RDG",
+    "MULLER_REDD1"
+   ]
+  }
+ ],
+ "myeloid_states": [
+  {
+   "cell_type": "Macrophage",
+   "state": "homeostatic-like",
+   "markers_desc": "组织型驻留巨噬 SELENOP/MRC1/FOLR2/STAB1/CD163",
+   "clusters": "B13+mye sub7",
+   "pct_all_samples": [
+    7.0
+   ],
+   "pct_pdr_only": [
+    9.6
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "GSE165784V2",
+    "MEMLIB",
+    "PDR_HU2022"
+   ]
+  },
+  {
+   "cell_type": "Macrophage",
+   "state": "foam_DAM_LAM",
+   "markers_desc": "泡沫样/脂质噬溶酶体 GPNMB/LIPA/PLD3/CTSD/TREM2/SPP1",
+   "clusters": "B5+sub10/sub12",
+   "pct_all_samples": [
+    10.0
+   ],
+   "pct_pdr_only": [
+    14.0
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "GSE165784V2",
+    "MEMLIB",
+    "PDR_HU2022"
+   ]
+  },
+  {
+   "cell_type": "Macrophage",
+   "state": "MHCII-high_APC",
+   "markers_desc": "MHC-II 高呈递 HLA-DR/DQ/CD74 (B1/B3/B4 合并)",
+   "clusters": "B1+B3+B4",
+   "pct_all_samples": [
+    25.5
+   ],
+   "pct_pdr_only": [
+    28.7
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "GSE165784V2",
+    "MEMLIB",
+    "PDR_HU2022"
+   ]
+  },
+  {
+   "cell_type": "Macrophage",
+   "state": "inflammatory_heme",
+   "markers_desc": "炎症/血红素应激 HMOX1/CCL3/CXCL8",
+   "clusters": "B2+sub8",
+   "pct_all_samples": [
+    10.7
+   ],
+   "pct_pdr_only": [
+    13.2
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "GSE165784V2",
+    "MEMLIB",
+    "PDR_HU2022"
+   ]
+  },
+  {
+   "cell_type": "Monocyte",
+   "state": "classical_blood",
+   "markers_desc": "外周血经典单核 FCN1/LYZ/VCAN/S100A8/9 (血液混入旗主体)",
+   "clusters": "B10+sub14",
+   "pct_all_samples": [
+    6.8
+   ],
+   "pct_pdr_only": [
+    9.5
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "GSE165784V2",
+    "MEMLIB",
+    "PDR_HU2022"
+   ]
+  },
+  {
+   "cell_type": "Monocyte",
+   "state": "nonclassical",
+   "markers_desc": "非经典 FCGR3A+/CD14低",
+   "clusters": "B4",
+   "pct_all_samples": [
+    8.2
+   ],
+   "pct_pdr_only": [
+    9.0
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "GSE165784V2",
+    "MEMLIB",
+    "PDR_HU2022"
+   ]
+  },
+  {
+   "cell_type": "Microglia",
+   "state": "homeostatic",
+   "markers_desc": "驻留小胶质 P2RY12/TMEM119/CX3CR1 低比例; 膜标本中难与巨噬区分",
+   "clusters": "B0 部分",
+   "pct_all_samples": null,
+   "pct_pdr_only": null,
+   "evidence": "B",
+   "source_ids": [
+    "GSE165784V2",
+    "MEMLIB",
+    "PDR_HU2022"
+   ]
+  },
+  {
+   "cell_type": "Macrophage",
+   "state": "RRD_stress",
+   "markers_desc": "RRD 标本高MT/低氧应激态 (S100A8/9/NUPR1/FABP5/MMP9) — 非 PDR 特异",
+   "clusters": "B0+B6+sub0/1/2/11",
+   "pct_all_samples": [
+    21.7
+   ],
+   "pct_pdr_only": [
+    3.9
+   ],
+   "evidence": "A",
+   "source_ids": [
+    "GSE165784V2",
+    "MEMLIB",
+    "PDR_HU2022"
+   ]
+  }
+ ],
+ "caveats": [
+  "GSE165784 = PDR 膜 + RRD(孔源性视网膜脱离) 膜混合数据集; RRD 占 29.1% 细胞。PDR 特异读数看 PDR-only 口径 (n=7,142); B0/B6/sub0/1/2/11 的应激态由 RRD 样本驱动, 不是 PDR 生物学 (v2 草稿留痕)。",
+  "膜标本 ≠ 全视网膜: Rod/BC/AC/HC 神经元无独立簇属预期, 不打 unexpected 旗。",
+  "n=1~2 PDR donor 级差异大, 比例区间只到'量级'精度; 库内尚无第二套自算 PDR 膜数据交叉验证 (B 级文献锚未给精确%)。",
+  "PI 提醒: PDR 公开数据自注释不一定准 —— B 级条目只作定性方向, 数值裁决以 A 级本地复算为准。"
+ ],
+ "flags": {
+  "expected": [
+   "髓系主导 (70~85%)",
+   "内皮+周细胞+肌成纤维三件套",
+   "泡沫样/DAM-LAM 巨噬",
+   "MHC-II 高 APC",
+   "T/浆细胞少量"
+  ],
+  "unexpected": [
+   "视网膜神经元大簇 (>5% → 标本疑含视网膜本体, 与'膜'命名冲突)",
+   "progenitor/类器官特征 (膜标本不应有)",
+   "RPE 大簇 (>3% → 疑非膜组织或取材含 RPE-脉络膜)"
+  ],
+  "contamination_suspect": [
+   "血液来源髓系 (FCN1/LYZ/S100A8 经典单核高) —— 手术标本血残留, 比例解读注意",
+   "血小板基因信号 (PF4/PPBP)",
+   "玻璃体 T 细胞优势成分混入 (对照 VITREOUS_T: 玻璃体 T 91.6%)"
+  ]
+ },
+ "_computed": {
+  "n_all": 10069,
+  "n_pdr": 7142,
+  "comp_all": {
+   "endothelial": [
+    270,
+    2.68
+   ],
+   "glial_candidate": [
+    163,
+    1.62
+   ],
+   "lymphoid_T": [
+    354,
+    3.52
+   ],
+   "lymphoid_plasma": [
+    61,
+    0.61
+   ],
+   "myeloid": [
+    8285,
+    82.28
+   ],
+   "proliferating": [
+    314,
+    3.12
+   ],
+   "stromal_myofibro": [
+    372,
+    3.69
+   ],
+   "stromal_pericyte": [
+    250,
+    2.48
+   ]
+  },
+  "comp_pdr": {
+   "endothelial": [
+    270,
+    3.78
+   ],
+   "glial_candidate": [
+    116,
+    1.62
+   ],
+   "lymphoid_T": [
+    333,
+    4.66
+   ],
+   "lymphoid_plasma": [
+    58,
+    0.81
+   ],
+   "myeloid": [
+    5677,
+    79.49
+   ],
+   "proliferating": [
+    121,
+    1.69
+   ],
+   "stromal_myofibro": [
+    317,
+    4.44
+   ],
+   "stromal_pericyte": [
+    250,
+    3.5
+   ]
+  }
+ }
+}

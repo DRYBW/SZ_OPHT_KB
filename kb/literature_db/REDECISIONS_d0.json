@@ -1,0 +1,154 @@
+{
+ "_meta": "KB1v2d D0 关键引用复核判定 (7 篇, 单判读员 pi-chief/t_bb170f1b, 2026-09-23; 标题+摘要级判读; 判据=摘要原文逐篇读)",
+ "35061025": {
+  "inclusion_reasons": [
+   "disease_cell_composition",
+   "disease_mechanism_background"
+  ],
+  "inclusion_reason": "disease_cell_composition",
+  "claim_relation": [
+   {
+    "axis": "composition",
+    "relation": "support",
+    "note": "PDR-FVM 膜 8 类细胞组成, 小胶质为主要成分之一"
+   },
+   {
+    "axis": "mechanism_background",
+    "relation": "support"
+   }
+  ],
+  "note": "confirm(GSE165784 原文=演示数据集主锚)。纠正: 移除 composition_baseline——疾病膜组织图谱非健康组成基线。abstract_only 条目: 判读=标题+摘要原文, 正文级细节(亚群定量)不可引用。",
+  "status": "D0_critical_review_20260923",
+  "reviewer": "pi-chief(t_bb170f1b) 单判读员, 标题+摘要级 (D0 lane 摘要可得; abstract-only 条目仅摘要可支撑)"
+ },
+ "37917183": {
+  "inclusion_reasons": [
+   "disease_cell_composition",
+   "disease_mechanism_background"
+  ],
+  "inclusion_reason": "disease_cell_composition",
+  "claim_relation": [
+   {
+    "axis": "composition",
+    "relation": "support",
+    "note": "独立 PDR 眼前膜 scRNA-seq 细胞群组成"
+   },
+   {
+    "axis": "mechanism_background",
+    "relation": "support"
+   }
+  ],
+  "note": "confirm。纠正: 移除 composition_baseline (疾病队列)。AEBP1 相关靶点论断限摘要陈述。",
+  "status": "D0_critical_review_20260923",
+  "reviewer": "pi-chief(t_bb170f1b) 单判读员, 标题+摘要级 (D0 lane 摘要可得; abstract-only 条目仅摘要可支撑)"
+ },
+ "39220810": {
+  "inclusion_reasons": [
+   "disease_cell_composition",
+   "disease_mechanism_background"
+  ],
+  "inclusion_reason": "disease_cell_composition",
+  "claim_relation": [
+   {
+    "axis": "composition",
+    "relation": "support",
+    "note": "PDR 玻璃体液单细胞图谱 (case series)"
+   },
+   {
+    "axis": "mechanism_background",
+    "relation": "support",
+    "note": "炎症通路/可靶向细胞类型"
+   }
+  ],
+  "note": "confirm。纠正: 移除 composition_baseline (疾病样本)。",
+  "status": "D0_critical_review_20260923",
+  "reviewer": "pi-chief(t_bb170f1b) 单判读员, 标题+摘要级 (D0 lane 摘要可得; abstract-only 条目仅摘要可支撑)"
+ },
+ "40069725": {
+  "inclusion_reasons": [
+   "disease_cell_composition",
+   "state_signature",
+   "disease_mechanism_background"
+  ],
+  "inclusion_reason": "disease_cell_composition",
+  "claim_relation": [
+   {
+    "axis": "composition",
+    "relation": "support"
+   },
+   {
+    "axis": "state",
+    "relation": "support",
+    "note": "MKI67+ 增殖型小胶质细胞状态子集"
+   },
+   {
+    "axis": "mechanism_background",
+    "relation": "support",
+    "note": "乳酸-MKI67+ MG-新生血管轴 (限摘要陈述)"
+   }
+  ],
+  "note": "confirm。补充: 加 state_signature——MKI67+ 是状态标记非独立细胞类型; 组成/机制/状态三票均有摘要支撑。",
+  "status": "D0_critical_review_20260923",
+  "reviewer": "pi-chief(t_bb170f1b) 单判读员, 标题+摘要级 (D0 lane 摘要可得; abstract-only 条目仅摘要可支撑)"
+ },
+ "40562775": {
+  "inclusion_reasons": [
+   "disease_mechanism_background"
+  ],
+  "inclusion_reason": "disease_mechanism_background",
+  "claim_relation": [
+   {
+    "axis": "mechanism_background",
+    "relation": "support",
+    "note": "FAO 代谢重编程定义新生血管命运 (人和小鼠)"
+   }
+  ],
+  "note": "confirm (auto 单票正确): 机制背景论文, 不构成组成/身份级论断; conf low→已复核。",
+  "status": "D0_critical_review_20260923",
+  "reviewer": "pi-chief(t_bb170f1b) 单判读员, 标题+摘要级 (D0 lane 摘要可得; abstract-only 条目仅摘要可支撑)"
+ },
+ "41578023": {
+  "inclusion_reasons": [
+   "composition_baseline"
+  ],
+  "inclusion_reason": "composition_baseline",
+  "claim_relation": [
+   {
+    "axis": "composition",
+    "relation": "support",
+    "note": "HRCA 人视网膜双模态参考图谱 (3.9M cells/125 donors) = D001 锚"
+   }
+  ],
+  "note": "confirm(D001 主锚)。abstract_only 条目: 具体 donor/细胞数细节以摘要陈述为限, 正文表格不可引用。",
+  "status": "D0_critical_review_20260923",
+  "reviewer": "pi-chief(t_bb170f1b) 单判读员, 标题+摘要级 (D0 lane 摘要可得; abstract-only 条目仅摘要可支撑)"
+ },
+ "42601615": {
+  "inclusion_reasons": [
+   "disease_cell_composition",
+   "state_signature",
+   "disease_mechanism_background"
+  ],
+  "inclusion_reason": "disease_cell_composition",
+  "claim_relation": [
+   {
+    "axis": "composition",
+    "relation": "support",
+    "note": "人 PDR 单细胞图谱 SOX15 高表达 stromal 亚群"
+   },
+   {
+    "axis": "state",
+    "relation": "support",
+    "note": "SOX15-high 为亚群状态签名"
+   },
+   {
+    "axis": "mechanism_background",
+    "relation": "support",
+    "note": "纤维化/膜收缩背景"
+   }
+  ],
+  "note": "confirm。补充: 加 state_signature (SOX15-overexpressing population 是签名级); 移除 composition_baseline (疾病图谱)。",
+  "status": "D0_critical_review_20260923",
+  "reviewer": "pi-chief(t_bb170f1b) 单判读员, 标题+摘要级 (D0 lane 摘要可得; abstract-only 条目仅摘要可支撑)"
+ }
+}
