@@ -1,0 +1,111 @@
+---
+name: annotation-eval-ops
+description: 单细胞注释质量评估线（冻结评估集+证据面digest+双盲判读+一致率/kappa+分歧表+RUN报告回填）——EyeKB/OcularKB KB2 类工作流。触发词：评估集/双盲/盲注/判读员/一致率/kappa/分歧表/考卷冻结/证据面/RUN2/评测跑一轮。
+---
+
+# 注释质量评估线（冻结考卷 → 双盲判读 → 一致率）
+
+适用：给"任何注释产出（引擎/判读层/人）"建立可验证的质量问题。核心原则（PI 铁律）：**考卷全用现成已注释标准数据集，先冻结再开考（防挑数据）；弃权是合法输出；评估章程阈值待校准，首轮只出分布不设及格线；PDR 等无真值数据只作挑战层不计对错**。
+
+## 总流程（RUN 循环）
+
+1. **冻结考卷**：分层成员表（真外部/held-out/域外/OOD/挑战层逐层声明）+ 冻结聚类（seed 写死）+ 冻结选簇（每成员 top-N 规模簇 + rng 抽样，规则成文落 `cluster_selection.json`）
+2. **构建证据面 digest**：从冻结数据给每簇产一张证据卡（top 基因/KB marker 命中/基线组成参考/qc），落 `EV_DIGEST_SLIM.jsonl` + sha256 入 manifest。**判读员只见证据面，禁见真值**
+3. **双盲判读**：两名判读员同一证据面独立出注释（schema：cluster_id/identity/level/grade/gates 三门/flag/why≤40字；identity 必须用成员词表原样词——保字符串可比对）
+4. **结构验收**（协调者执行，不看内容防泄盲）：行数/簇号集合与 digest 逐一对齐、schema 与枚举合法、why 长度
+5. **合并**：槽位 A/B 两份 JSONL 合并前验簇号集合一致
+6. **评分**：bscore 脚本出 per-member 簇准确率/弃权率/ident_agree/kappa（determinate 子集）+ 分歧表 TSV
+7. **回填 RUN 报告**：§4/§5 预留回填位，回填带日期、数字全部引 scoring 产物、槽位构成如实披露
+8. **分歧表上报 PI 裁决**：语义分诊先行（多数分歧=分辨率/保守度差，非生物学冲突；真冲突单列）
+
+## 证据面构建三大坑（RUN1 实证）
+
+- **int/str 簇号类型错配 = 静默空输出**：CSV 读回的 leiden 列是 int、obs astype(str) 后组均值字典键是 str，`c not in gm` 恒真静默返回空列表、无异常无日志。防御：①选簇/取值统一 `astype(str)`；②兜底分支必须 `log(WARN)`；③**产 digest 后必跑非空断言**（45/45 top_genes 非空才算交付）——worker 对着 40/45 空证据拒绝判读并上报，是正确行为不是故障
+- **anndata 版本环境错配**：旧 env（0.11.4）读不了新版写的 h5ad（`IOSpec null` 于 /uns 等元素报 IORegistryError）。防御：跑前先探测"能读全部输入文件"的 env（逐 env `read_h5ad(backed='r')` 试读），**选写出该文件的产线同款 env**（本机 scrnaseq=0.13.2 可读全站）
+- **重跑不得改考卷**：修复重跑后必须验证冻结选簇逐成员不变（旧新 selection 集合比对 9/9 IDENTICAL），rng 调用序不变才保选簇不变
+
+## 版本纪律（errata-source-fix）
+
+缺陷件**保留不删**（`*_r1_defective.*` 后缀），修复件升版落 canonical 名；新旧 sha256 全部追加进 sha 日志（含修复内容/env/log 位置/验收结果四行注释）；判读产物 sha 落 manifest。禁止原地静默覆盖。
+
+## 双盲判读纪律
+
+- 判读卡（任务书）红线逐条：禁读 clustering（含逐细胞 truth 列）/defs/engine/scoring/RUN 报告/ERRATA 取证/**对方判读件**；禁外部检索（lit 口径属后续轮）
+- 判读员受污染（误读真值/看过取证）必须自曝并换干净卡重开——旧卡 reclaim+block 留痕，新卡 body 注明取代关系
+- 结构验收只查计数/schema/簇号集合，**协调者不读判读内容**（协调者已看过引擎结果，读了就是泄盲）
+- 证据面等价：两判读员对 ENSG 形式基因用**同一张中性公共映射表**解码（GENCODE 型，禁用项目内 marker 定义），声明留痕
+
+## PI-in-the-loop 判读模式（2026-09-24 用户实证，默认采用）
+
+PI 时间贵，全人工判不现实；纯 AI 互判缺临床锚。标准折中：
+1. **PI 只判最高临床价值批次**（如 PDR 膜 Q9，5 簇，MSG_PLATFORM 大白话回，协调者转录成 schema JSONL，原话存 verbatim 侧车件）
+2. **PI 的判读交外部 LLM 评审**（逐簇同意/异议+等级是否恰当+漏检身份），评审意见回 PI，**PI 一字裁定**（"降 C"）后落定
+3. **其余批次委托 LLM 判读员**（如LLM_CHANNEL qwen3.8-max），产出与 PI 簇合并成槽位 A
+4. 槽位构成必须如实披露（判读报告写明哪几簇是人、哪几簇是模型）；transcribe 不许改动 PI 语义
+5. 人类锚的价值实测：Q9 挑战层两个 AI 全塌缩成 coarse "Immune Cells"，PI 给出 SPP1⁺炎性巨噬/FOLR2⁺驻留/pDC 细分——人类分辨率优势就是评估的发现之一
+
+## 外部 LLM 判读员接入（LLM_CHANNEL qwen3.8-max 实证）
+
+- 通道发现：用户点名模型时扫 profile 配置反查（grep 各 profile config.yaml 的模型 ID → 找到 provider 段的 base_url+key；详见 multi-profile-provider-switch skill）
+- **hybrid reasoning 模型直调必加 `enable_thinking: false`**（兼容模式两种写法都探：`enable_thinking:false` / `thinking:{type:disabled}`）：默认开思考时 3K token 输出能把 540s 读超时烧穿；关掉后亚秒级
+- **按成员分包**（每包 5 簇）+ 每包重试≤3 + 断点续跑缓存（`.done.json` 记已完成的成员）——单大包 40 簇会整体超时归零；每包 prompt=冻结判读规则原文+证据卡+严格 JSONL 输出要求（禁解释性文字）
+- 输出解析容错：逐行 try json.loads，缺簇二轮补判；解析后跑同款结构验收
+- temperature 0.2；判读类任务关思考不损质量（有规则有证据的分类活）
+
+## 评分与分歧分诊
+
+- bscore 输出四件：object_B_table.tsv（逐簇）/ object_B_summary.json（per-member acc/abstain/ident_agree/kappa/gates 分布）/ disagreement_table.tsv / kappa（determinate 双方非弃权子集）
+- **json 序列化坑**：pandas value_counts 多列产出 tuple 键，直接 json.dump 会 TypeError 崩在半路（summary 截断+分歧表未落盘）——转 `{str(k): int(v)}`
+- 分歧语义分诊三分类：分辨率差（fine vs coarse，A⊂B 无冲突）/ 保守度差（一方弃权）/ 真冲突（互斥身份）；真冲突才需要 PI 逐行裁
+- 解读纪律：字符串一致率是下界（措辞不同≠生物学分歧）；E5 胎儿层看 correct-rejection 不是 acc；挑战层（无真值）只看等级/弃权行为
+
+## RUN 报告回填与留痕
+
+冻结报告的 §4/§5 预留回填位：回填块带日期、指向独立完成件（`EVAL_RUN<n>_OBJECT_B_COMPLETED_<日期>.md`）、写明执行链与原计划的差异点、槽位构成、全部产物 sha；历史文字保留不删。WIKI 当前状态.md 同步收口。旧卡 comment 留痕（位置参数形态）后维持 blocked。**同步纪律补注（09-25 实测）**：当前状态.md 常滞后数天，追加式时间线以 WIKI/INDEX.md 为事件前沿源；向 PI 汇总"待拍板"清单时装配/大白话格式走 scientific-result-reporting 核心方法 13（含 USER_DIRECTIVE 排除已拍项一步——本线 Q2 主口径"待PI"实测已被 directive 提前拍掉）。
+
+## RUN 轮间升级与对比（RUN2 实证 2026-09-24）
+
+- **证据面升级必须预注册**：RUN1 冻结注释里写明"lit 全 top-3 留二轮"——RUN2 的每个升级点都能引用 RUN1 留痕，非结果驱动
+- **MCP 采集器喂词库前先解码**：ENSG 形式 top_genes 直接喂 symbol 键 marker 库=查询全空（kb_rank/lit 16/45→中性解码后 31/45）；判读员证据卡用的中性解码同样必须前置于一切下游查询
+- **评分器按轮参数化**：bscore v3=argv 传 A/B 路径 + 输出 run2_ 前缀——新 RUN 严禁覆盖上一轮 scoring 产物（v2 硬编码路径差点覆盖 RUN1 三件）
+- **基因 ID 双列 schema（PI 2026-09-24 原话指令"加一列对应的gene"，RUN2 后生效）**：证据面构建**禁止原地替换 ENSG**——`top_genes` 保留原 ID 不动，新增 `top_genes_sym` 旁列按位放对应 symbol（1:1，映射不上留空串），marker/lit 查询用 sym（空则回退原 ID），判读卡渲染 `SYMBOL(ENSGxxx)` 两列都带。采集器/组装器以 `KB2_FACE_TAG` 环境变量版本化输出（默认 v3），已冻结面永不被后续构建覆盖。实例落地：`scripts/kb2_mcp_v2.py` v2.2（docstring 含 schema_note）
+- **轮间对比三件**：双盲一致率/kappa（RUN1 30/45、0.568 → RUN2 28/45、0.539）、各判读员自稳定性（身份不变 A 位 30/40、B 位 27/45）、真值命中（A 26→22、B 24→20 每 30）
+- **诚实解读：证据面升级≠判读变好**。文献面使双方更保守（更多 coarse/弃权），exact-match 记错但谱系方向多没错——先区分"对冲"与"认错"再下结论；同时看分层收益（Q9 疾病层 B2 从全塌 "Immune Cells" 变 Mac_DAM_LAM/APC_MHCII/pDC 细分=真改善）
+- **评估即 KB 缺口探测器**：Q6 词表无 Keratocytes 条目→两轮两名 AI 把 ALDH3A1+KERA（keratocyte 经典标记）簇系统性误标"Corneal Endothelium"——评估轮产出可直接转化为 marker 库/词表补录卡
+- 工具坑：/mnt/D 共享挂载上 `sed -i` 报"保留权限不允许的操作"——改文件一律用 patch 工具（实测可用）
+
+## RUN3-mini：KB 修复后的预注册迷你盲验证轮（2026-09-24，标准动作）
+
+KB 词条/词表修复落地后，**不重跑全量评测**——只对受影响簇发迷你盲测轮：新证据面（face 升版 TAG）+ 两独立判读员（外部 LLM A + 干净卡 B）+ **判据先于判读写死**（写入 B 任务书：主判定=修复目标簇的身份；补充=该层一致率轨迹）。实例：keratocyte 补录后 Q6 五簇一轮——主判定 PASS（Q6::15 双判读员均 Fibroblasts[B]，RUN2 误判消失），Q6 层一致率 2/5→3/5→**5/5**；Q6::24 SMC vs Pericytes 相邻谱系真模糊如实挂账（非词条缺陷）。意义："评测发现缺口→补录→盲验证消除"闭环走通，修复效果不靠自我宣称。配方与实录：`references/kb2-run3mini-20260924.md`
+
+## RUN3 全量轮设计（2026-09-24，PI"不用下了，用已有数据"拍板）
+
+- **扩考卷前先做本地普查，别急着提新数据集**：PI 对"RUN3 方向"的第一反应是"你考卷都考完了？"——抽样评测后先数冻结聚类的完整名册（九成员 305 簇、≥100 细胞 290 簇、已考仅 45）。**"用已有数据"是默认立场**，下载新数据集需要另行理由与报批
+- **名册+锚卷结构**：主卷=名册减已考（246 新簇）；**锚卷=已考簇在新证据面全部重发**（M5 配对分析=分解"证据面效应 vs 判读随机性"）；预注册件（RUN3_DESIGN_prereg.md）把五条判据（一致率/kappa/真值命中/弃权率/新词表缺口热点/锚卷翻转率）先于执行写死
+- **规模偏差要预注册声明，禁止无声换架构**：worker 会话卡实测容量 ~45 行（RUN1/2 各 11 分钟交付 45 簇），290 簇超容量 → B 侧从干净会话卡改为**跨厂商独立模型 runner**（A=qwen 系、B=glm 系），偏差与独立性论证写进预注册件，判据不变
+- **判读员模型三选一只认实测**：候选冒烟判据=短请求 **content 非空**（Agents-A1 config 里 key 是脱敏占位不可用；deepseek-v4-pro 回 200 但 content='' reasoning 吃光——都淘汰；glm-5.1 实答正常=采用）。宁换模型不带疑上线
+- **通用双判读 runner**：`annotation/run_annotator_run3.py <model> <stem>` 参数化复用——同面同规则同温度，A/B 各独立进程+独立断点文件互不可见；固定 5 簇/批+每批重试≤3；空 content 自动回退读 reasoning_content；META 记 face sha 前 16 位（面中途变更可查）
+- **全量面成本参考**：290 簇 mean-diff digest ~8 分钟（9 个 h5ad 载入为大宗，串行防爆内存）、MCP 采集 ~1000 调用 ~10 分钟；先跑名册脚本（kb2_roster_v3full.py）再喂 digest；digest 里 n_cells 用 ncmap[c] 直取（roster 必有，勿写 len(c) 之类字符串长度兜底）
+- 实录：`references/kb2-run3-fullscale-20260924.md`
+
+## KB 词条/面板升级的评测面保护（2026-09-25 KB7→WIRE 卡对实证）
+
+词典修复是评测系列的干扰源：RUN 轮间的对比前提是"证据面/词表面不变"，改词条中途落地会让在跑与后续轮失去可比性。标准拆两步（任务书互相引用）：
+
+- **发布卡**（KB7 型）= 版本化新文件落地（v6 JSON、旧面板字节不动、邻域火灾审计、append-only 覆盖层修 baseline 红词），**消费方零感知**——服务代码不动；
+- **接线卡**（WIRE 型）= 服务登记可选路由但**默认不激活**（现役输出机读自证零变化，如 off 态 18/18 规范序列化全等），激活切换等评测系列（RUN6 型）全部收口后统一批——"未做激活切换"写进红线自证。
+- 两卡各自回归三件套（GOLDEN41/KB2C/自检球门不降）；改服务代码与改 kb/ 文件的卡领地互斥（并行派时任务书点名禁写对方目录）。
+- 新数据入库→词条建设的衔接卡（KB8 型）沿用"评测即缺口探测器"闭环：registry 登记与健康/体外两池分开记账（类器官不作体内基线）、挂起项照实登记不硬凑（GB 级被裁不批的腺体 scRNA 写"挂起态"）。
+
+## 协调者活服务自探针（PI 问"你测试过没/效果咋样"的验收动作，2026-09-25 实证）
+
+PI 三连问"测试咋样/内容咋样/效果好不好"时，转述 worker 回归报告=不合格，要协调者亲跑一遍。配方（EyeKB MCP 实例，结构可迁移到任何 stdio MCP 服务）：
+- `/home/ubuntu/training-venv/bin/python` + `from mcp import ClientSession, StdioServerParameters` + `stdio_client(...)` 真起 server 子进程（command=venv python，args=[/mnt/D/EyeKB/mcp_server/server.py]）；软提示类功能用 env 覆写 `EYEKB_MCP_SOFTFLAGS=0` 测熔断开关
+- 用例三件套：**正例**（自建基因组合应触发提示）+ **反例**（干净场景不得误触发——证明不是乱报警）+ **开关**（off 后整块消失）；再配**直读发布 JSON 核词条内容**（本轮判红的基因真从 core 删除、新锚真在）——"修复完成"的宣称要落在数据上不是报告上
+- **自己的探针 FAIL 先疑探针**：本次"no microglia entry"实为探针脚本结构假设错（词条在另一层级、core 元素是 `{gene:...}` dict 非字符串）——先 print 顶层 keys 读原件结构再定性，"worker 报错了"与"我探针错了"两类缺陷分开上报，禁把后者转述成前者（同族教训：Q6::24 二手转述误报）
+- 鼠/跨物种推断收卡专查**基因 symbol 大小写**：BMR 冒烟六样本全 `panel_present=0` 即症状=人源大写 panel 未做 ortholog/大小写映射（FACEQUANT 曾定性"大写惯例匹配=非 1:1 ortholog 表回证"）；鼠版交付验收须确认改用正式 ortholog 表或大小写不敏感匹配修复，勿把红旗数字当模型效果收
+
+## 会话级细节
+
+KB2 RUN1 完整实录（目录结构/int-str bug 修复 patch/anndata 环境表/qwen 通道参数/bscore v2 修复/结果数字）：`references/kb2-run1-20260924.md`
+KB2 RUN2 完整实录（文献证据面 v2 采集链/ENSG 前置解码/评分器 v3 参数化/轮间对比数字/keratocyte 词表缺口）：`references/kb2-run2-20260924.md`

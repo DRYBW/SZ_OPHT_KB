@@ -1,0 +1,45 @@
+# Marker 注释项目 WIKI — INDEX
+
+> 本 WIKI 专属「单细胞 marker 细胞类型注释」项目（RAG 文献库 + 注释引擎 + 取数纪律），**本项目唯一主页**。
+> 旧 `ocularkb/vk/` 内容（retina 17 主题页 + 11 组织索引页）**已并入本 WIKI 作为「文献索引层」**（文件原地保留、逻辑上归本项目所有，见检索索引.md）。
+> 建站：2026-09-23（PI 拍板"新建单独的 wiki，旧的也一起收进来"）| 维护：协调者（AGENT_ROLE）
+
+## 项目一句话
+
+给眼科单细胞数据做**自动细胞类型注释**：文献证据库（RAG）+ 注释引擎（HRCA 参考 + LR 模型 + marker 反向排除）+ marker 取数纪律 skill。对标"眼科版 CellTypist"——图谱是教材、工具是裁判（对 PI 汇报标准话术，勿堆术语）。
+
+## 导航（六件套 + 文献索引层）
+
+| 层 | 件 | 用途 |
+|---|---|---|
+| 核心 | ① 本文件 | 定位 + 导航 |
+| 核心 | ② [结论速查.md](结论速查.md) | **任何会话先读**：冻结裁定 + 关键事实 + 红线 |
+| 核心 | ③ [数据资产.md](数据资产.md) | RAG 三版本 / 模型 / 数据集 / 脚本管线 全清单 |
+| 核心 | ④ [决策记录.md](决策记录.md) | PI 拍板史（带日期可溯） |
+| 核心 | ⑤ [当前状态.md](当前状态.md) | 已完成 / 在跑 / 待拍板 |
+| 核心 | ⑥ [检索索引.md](检索索引.md) | 怎么查 RAG、文档地图、命令示例、文献索引层入口 |
+| 文献索引层 | `ocularkb/vk/literature/`（收编） | 27 篇主题/组织索引页：11 组织页（v2.0 新建）+ 17 主题页（retina 旧藏） |
+
+## 快速上手（新会话/新 agent 接手）
+
+1. 先读本文件 + 结论速查.md（2 分钟）
+2. 要查文献 → 检索索引.md 的 RAG 查询命令（species/tissue/cell_type 三维过滤）+ 文献索引层入口
+3. 要注释数据 → 先确认适用域（结论速查 §2）：现役引擎只认**人成人视网膜**
+4. 任何动作前检查当前状态.md 的"在跑"区，勿与在跑任务双写
+- 2026-09-24 **RUN3 errata v1.1 + KB5 返工**：Q2 真值勘误收口（审计=作者标签存疑，C18 错标/C19 doublet，管线每环忠实；α 口径头条 A 60.9%/B 70.05%，M1/M5 不变；M4 靶 23→22；训练池 BC 类 4.1% 污染=PI 决策项，冻结件追加 [E7] 段）。KB5-v0 面板自检 8/23 FAIL→未发布（防火墙纪律：不调门凑命中），返工卡 t_9714f560 在跑（门重设计，球门 ≥15/22 不降）；准绳更新已评论送达。RUN4-hotspot 预注册待触发（R1 修复线+R2 对照线）。详见 evalset/Q2_TRUTH_AUDIT_20260924.md + logs/truthfix_rescore.log。
+- 2026-09-24 **IMPACT 卡反转（t_cb355200 done）**：v2_prod"训练池 4.1% 污染"=伪命题——GSE155288 实为外部验证集（META.json 四路证据），[E7b] 血缘勘误落 FREEZE+审计件，重训决策项撤销；真值修正仅 ΔF1 −0.0008，维持 v2_prod 决策不动。**新挂账（更有意思）**：C18 细胞 77.7% 被 v2_prod 判 BC 而机制非训练污染（BC 类杆 marker 9/9 全负）——拉动力全来自非 panel 维度；C18 系真实视杆但杆幅仅真杆 33%（ambient 已排除），提示模型"部分杆程序→BC"盲区+AMD 队列低杆幅视杆亚群生物学问题，另卡评估。报告=OcularKB/models/V2PROD_CONTAMINATION_IMPACT_20260924.md。
+- 2026-09-24 **源头勘误落纸（t_7c43ea11 done）**：Q2_TRUTH_AUDIT→v1.1、EVALSET_FREEZE→v1.2、EVAL_RUN3_COMPLETED 连带——「4.1% 训练池污染」缺陷原句已**就地改写**（.bak 真前像+PRE/POST sha 台账+独立验收 26/26+全树扫描 0 待裁定）。交付=evalset/ERRATA_V2PROD_CONTAM_CLAIM_t_7c43ea11_20260924.md。真污染=0 cells 定稿；PI 决定项（Q2 主口径切 truth_corrected 与否）与 C18 盲区线（t_c298e308）不受影响继续挂账。
+- 2026-09-24 **盲区卡结案（t_c298e308 done）——对我此前口述数据的纠偏**：373,212 cells 只读推理+真值过滤决定性检验：**系统性盲区不成立**——"低杆带 27-47% 判 BC"是 ambient 陷阱（rod3 10-20 档真杆仅占 1.02%，绝大多数是沾杆 ambient RNA 的真 BC）；排除 C18 后真杆判 BC=2/48,517（0.004%）。C18=孤立簇（669 cells，归因方向=degenerating/低质量 rod：stress 1.41×/mito 2.08×，precursor 与 doublet 假设均被数据排除）。生产评级=低，建议不设硬旗标、LLM 判读提示词加"rod 主导却判 BC→复核"软提示（待派），MCP 未动。报告=OcularKB/models/V2PROD_ROD_BC_BLINDSPOT_20260925.md（sha 台账 24/24）。待办：GSE221042 1,505 cell 口径差异、普遍性验证需新下载（PI 审批）、Q2 主口径切换与否=PI 决定项。
+- 2026-09-24 **口径决定落文**：Q2 主口径切 truth_corrected（PI ok，USER_DIRECTIVE_20260924_q2_maincaliber.md 代录）——RUN3 头条以 errata v1.1 α 口径对外（n=197，A60.9%/B70.05%），v1.0 降历史档案；RUN4 起 Q2 判读全走 corrected。
+- 2026-09-24 **RUN4-hotspot FAIL 收口**：R1=13/22(球门15)+R2=2翻(容1)双违，不宣告闭环、球门未动。分解：9 未修中真面板缺口仅 3（另 3=双判 strict 协议的判读非决、2=预期不可修、1=胶质粒度词条线）；R2 两翻全为 B 侧弃权位移、A 侧零翻转=抖动非面板致害。中间神经元主靶 18 簇面板命中 ~72-89%——**瓶颈一半在双判一致协议不在面板**。v5 保留不回滚。裁决件 scoring/run4_verdict.json，收口件 EVAL_RUN4HOTSPOT_FAIL_20260924.md。待 PI 拍板：RUN4-r 共识投票协议（推荐）/KB5-v3 缺口增补。
+- 2026-09-24 **RUN4-r PASS 闭环**：三票共识协议（C=deepseek-v3.2 选型落笔预注册卡）R1'=15/22 踩线+R2'=1/23 达标；新增修复恰为 RUN4 两单侧定名簇（Q4::19/Q5b::23）零丢失——协议诊断被验证。中间神经元缺口正式关闭=面板 v5+投票协议双件。残余 7 簇：预期不可修 2+胶质词条 1+三票分裂 2+真缺口 2 → KB5-v3（Cell Ontology 规范，directive 0924 已立）。RUN4 FAIL 原档永久保留。seal 件=scoring/RUN4R_PREREG_SHA.txt+RUN4-r 收口件。
+- 2026-09-24 **KB5v3 收口（t_a1721931 done）——残余 5 簇清零 + CL 命名规范首跑**：五簇全数归因且**无一需靠加面板基因救**：Q4::15/Q5b::13=(b)亚型分辨不够结案；Q3::13=(c)考卷侧(Smart-seq rod3 med 107>真Rod中位75, 模型同被骗)结案；Q5b::43=(a)面板有强锚(DGKB lfc4.33)但窗口命中密度不足→转 v6+协议建议；Q2::22=(a)**MG 词条 4/5 基因在 D001 无 MG→Astro 区分度**(GLUL 反向 1908/2099; 三判读员被词典误导, v2_prod 728/728 判对)→概念条 EYEKBC-0023/0024 落地(CL 规范首跑)。CL 号勘误(OLS 回证)：**卡体 CL:0000130/CL:0000644 皆错**(=Nematoda 神经相关细胞/Bergmann 胶质), 正解 Astro=CL:0000127/MG=CL:0000636, 指令件示例 CL:0000304 亦错(真 rod=CL:0000604)；新红线=CL 号一律 OLS 回证(27 份原始回函留 ols_evidence/)。subtypes RB/IMB/FMB/DB1/2/5/H1/H2/ON/OFF-BC **CL 全有真条**(指令件"若 CL 无条"预设被推翻)；AII/HAC2-6=NO_MATCH(检索空 exact 留痕)。BINLAB 错位勘误(step3 分箱标签 9/9 后移一档, 已发布数值/VERDICT 零影响, ERRATA_BINLAB.md)。sidecar=kb/markers/markers_cl_alignment_v1.json(22 cl_id 全可回溯, 面板 JSON 字节不动)。判读可达性三建议+MG 词条重导出候选(GABRG3/CPA6/MYO3A/TSHZ2/GABRB1/HKDC1)=**待 PI 拍板**, 详见 EyeKB/plans/kb5v3_20260924/KB5V3_COMPLETED_20260924.md。
+- 2026-09-24 **KB5-v3 收口（t_a1721931 done，AGENT_ROLE 自主跑完）**：RUN4-r 残余 5 簇全量归因**清零，无一需加面板基因**——Q2::22=**词典误导判读**（MG 词条 4/5 基因在 D001 无 MG→Astro 区分度，v2_prod 不用词典反而 728/728 判对）；Q3::13=**考卷侧 rod-ambient**（作者标 RGC 的簇 rod3 中位 107>本集真 Rod 75，模型同被骗）；Q4::15/Q5b::13=亚型分辨墙结案；Q5b::43=强锚(DGKB)密度不足转 v6。CL 规范首跑兑现：OLS 逐号回证+**揪出协调者卡体凭记忆写的假 CL 号（130/644→正解 127/636）**，sidecar=kb/markers/markers_cl_alignment_v1.json（22 号全回证）+概念条 EYEKBC-0023/0024，另修盲区卡遗留 BINLAB 错位。预注册 sha 77a63bf8。
+- 2026-09-24 深夜追加：**KB6 全库词条区分度审计立项**（t_6bb1a46d，BRIEF=plans/kb6_audit_20260924/，MG 案系统延伸，三色判级+CL 联动+软提示合稿，只审不改）+ **RUN5-face 预注册开跑**（t_d1ca11b0，sha 3972da24，Q6 眼表 33 簇用 h5ad 作者标签做非循环真值重测：P1≥24/33、P2 防循环反污染≤1/33——证伪式检验"KB 词条是帮助还是污染判读"，三票制复用 RUN4-r 已验证协议）。RAG 切 v2.2 与 D0 三字段核验两卡白天已 done 确认。
+- 2026-09-25 凌晨 **KB6+RUN5 双出分**：①KB6 全库审计=47 词条三色 **绿8/红17/OUT22**（MG 案复现+Astro 3/5 反证+基线 retina.json 内嵌 4 条 homeostatic 全红；红条修订候选已提名待 PI；REVIEWER_LLM 夜间送审 8 断，子卡 t_611186cc 白天补送）②RUN5-face：P1 21/33 FAIL（主因=眼表覆盖弱~9 簇非污染）+**P2 抓到词条反噬第一案 Q6::24**（98.7% 纯 Pericytes 簇被新补 Keratocytes 词条拉走——上午救 Q6::15 的钥匙开错了别人的门；眼表词条用视网膜图谱审不了的 OUT 代价显形）→复审卡 t_6ab5df4b。收口件 EVAL_RUN5FACE_20260925.md。挂账：kanban worker rc=0 不调 complete 已 3 次，白天立流程卡。
+- 2026-09-25 03:3x **INDEX 勘误（KB6b 复核改判）**：上条 Q6::24"三票被 Keratocytes 词条拉走"系协调者转述错误，原始落盘证实**三票全=Smooth Muscle Cells、kb_top1=Myofibroblast**（Keratocytes 未成任何一票）——词条源头卡 §归因②由勘误卡 t_133f7dea 就地修正（.bak+sha 台账待其 done）。改判后案件更重而非更轻：**眼表基质家族（Keratocytes/Fibro/Pericyte/SMC）四词条 KB6b 三色门全红**=家族级集体无区分度（NNMT 方向反转假锚、ALDH3A1 上皮池化交叉、KERA 唯一幸存真锚），Q6::24 属"基质家族 prior 集体致盲"非单词条反噬。keratocyte 面板自身在眼表 1/3 基因红——mini 盲验证只证"能救 Q6::15"，未证"不点着邻居"，此教训进 KB 验收模板。存活锚清单+COX4I2/PCP4/DCN 双队列候选待 v6；stromal 共-marker 警示提案+附属器入库决策件已落。
+- 2026-09-25 上午 **PI 批量放行（"ok"整链授权）四卡齐发**：决定落 USER_DIRECTIVE_20260925_eyekb_downstream_batch.md（D1-D5）。①t_2e5e103a KB7=17 红词条照 REVCAND_KB6_v2.tsv 修订 + B1 眼表词条增量 + v6 面板候选收录（邻域火灾审计首次写进发布验收；与软提示卡领地互斥）②t_d6f2a0a0 MCP 两条软复核提示（rod 主导判 BC + mural 串扰，不改打分不设硬旗）③t_e5f13ed1 泪腺/睑板腺入库预检（批准入库≠批准下载，零下载出 HEAD 实测报批清单）④t_9b7f2a28 流程卡：worker 收尾必落卡硬断言沉淀（rc=0 不落卡前科 3 次首次立卡）。D5 记账=Q2 外部评估主口径维持 alpha（beta 留敏感性）。后置等 PI 点名：三条考卷规则提案、P1 demo 审阅、鼠版模型、M1 论文。
+- 2026-09-25 午 **二波零下载放行（PI"你还能干啥，你干了"）**：三卡齐发只做前置不代拍——t_517aba0e FACEQUANT（用盘上冻结评测产物反事实量化三提案收益/风险，产出勾选表供 PI）；t_a5d05be3 MOUSE-PRE（GSE243413 在盘预检+知识库迁移盘点+工序级资源实测+轻中重三档报价，零训练零建版）；t_cc5a0fd7 M1PREP（六案素材池+同类资源文图骨架+PI 决定项缺口表，不写正文）。directive 追加节已落。
+- 2026-09-25 下午 **一波四卡全 done（协调者验收过）**：①**KB7 发布**（t_2e5e103a）：17 红词条逐条处置台账落地（MG↔Astro 双向盲区重写/RPE+Microglia 重导出/HC 组 8 候选文献门全不过=弱证据弃用如实登记/UCHL1 转正 RGC，PRPH/STMN2/SNCG 不过门不增补；PAX5/PAX8/EYA1 禁入旗全守）+ B1 新条结膜基底/浅层两词条 + 间质四红条 repair + v6 双文件版本化发布（旧面板字节不动，消费方零感知，接线留后续卡）。自检 v6 S1 17/22 过球门（唯一 miss Q2::22=删除误导词条的预期代价）+RAG 16/16+MCP 黄金 41/41。两件工程事故已披露处置（G3 脚本自覆盖历史件→.bak+字节还原；pre 快照丢失→确定性重建留痕）。②**SOFTFLAG**（t_d6f2a0a0）：两提示上线 KB1v2-0.2-softflags，REVIEWER_LLM 四轮外审收敛 7->6->2->0 终 PASS；机读开关+三态回归；真实流量触发率留 RUN6-face 型评估。③**ADNEXA 报批清单**（t_e5f13ed1）：全程零下载 HEAD 实测——泪腺唯一真图谱 GSE164403 仅 13.9MB 含 cell 级注释（P0 即批）；睑板腺人 scRNA 全世界仅 SRP497138 且 SRA-only 171.7GB FASTQ 需自跑 cellranger（单独批，D 盘余 1.4T 可行）；Tabula Sapiens Eye 子集 1.4GB 为 registry 锚。④**FLOW**（t_9b7f2a28）：退出前硬自检断言入共享 kanban-worker SKILL v2.1.0+四副本注入+修 7 profile 丢 --skills 根因（symlink 补全），本卡自身即断言首次实战。遗留：KB7 接线卡/HC 文献面缺口/D002 纤维细分待外部数据/RUN6-face；t_3fe4f5ec 副本整合；KB1V2B 重基线 t_502a23b7。
+- 2026-09-25 下午 **二波三卡全 done（零下载，验收过）**：①FACEQUANT（t_517aba0e）三提案反事实量化落 FACE_QUANT_FOR_PI.md——提案1 pred 引入：可检出收益 52 簇 vs 带偏风险 2 簇，份额≥0.9 门控捕获 45/52 且已检出风险归零（建议档 B，盲区 41+33 簇如实声明）；提案2 窗口：63 簇/81 达标锚卡 21-25 位，优先占位=top30 同增益零新计算（建议档 B）；顺手勘正 KB5V3 §4.2"强锚被挤出"旧口径（DGKB 实为窗内 rank1，真问题是达标锚密度 2/29）；提案3 质量旗：三向 join 不支持"低深度→命中低"强命题（Q3::13 单例外），建议档 A 纯描述旗。勾选归 PI，勾选后仍需新预注册。②MOUSE-PRE（t_a5d05be3）关键发现=**鼠版不是从零建**：v1.4（08-25 sol 终审闭环）已有参考集/配方/CV 证据，净缺口仅 prod pkl 未落盘；中档复建纯计算 <1h（峰值 14-16GB 已实测外推+MemoryMax 托管方案齐）/工期 2-3 天（评审链为主），建议 GO 中档+10 类+Endo/Peri 拒识探针；重档触发 GB 下载（与 PI"gb 就算了"冲突，除非要做对外资产）。面板迁移结论=不移植人面板、鼠原生重选 HVG（人面板仅 61.6% 严格 1:1）。③M1PREP（t_cc5a0fd7）M1_MATERIALS_INDEX.md 731 行：六案素材池+图目录草案+PI 决定项缺口表，开工即启动写作卡。
+- 2026-09-25 傍晚 **三波三卡全 done（协调者盘上实证过）**：①ADNEXA-DOWN（t_6fec256c）批准 5 项全部入库 133.7MiB（17 文件逐文件校验/未触 1GB 红线），GSE164403 泪腺组装成标准 h5ad 3,071×39,009 回读 V1-V6 全 PASS（协调者 ls 复核在盘），其余四项登记路线未强跑，数据资产.md 追加登记 50→125 行。②KB7-WIRE（t_38b99a15）v6 双库登记为可选路由**默认不激活**（现役输出机读自证零变化），baseline 4 红词走 append 覆盖层（retina.json 字节不动），软提示合稿 RELEASE_NOTE 落盘防双提醒，全量回归 41/41+33/33+75/75 PASS，服务版本 KB1v2-0.3-kb7wire；激活切换等 RUN6 系列收口另卡。③HC-LITRE（t_dc1fc2aa）**诚实阴性**：15 基因对三通道重审（RAG 句级+PubMed 定向+深查）全部维持弃用、0 达再准入线，v6.1 申请清单为空；KB7 horizontal-margin 假匹配修复验证+新登记两例符号双义假匹配（FAP=息肉病/HDC=超维计算）+自曝修复对照脚本 bug。HC 词条缺口定性=文献面固有稀缺（非检索不力），出账。遗留新增：泪腺/睑板腺词条建设卡（GSE164403 已可用，等 PI 三提案勾选+鼠版 GO 一并排）。
