@@ -71,9 +71,16 @@ async def stdio_test():
             tools = await s.list_tools()
             ck("stdio-list-tools-5", len(tools.tools) == 5, len(tools.tools))
             res = await s.call_tool("query_marker", {"library": "k9_ocs"})
-            sc = getattr(res, "structured_content", None)
-            body = sc.get("result", sc) if isinstance(sc, dict) else None
-            ck("stdio-k9-route", sorted((body or {}).get("cell_types", [])) == sorted(K9N), str(body)[:120])
+            if res.is_error:
+                body = {"__isError__": [c.text for c in res.content]}
+            else:
+                sc = getattr(res, "structured_content", None)
+                if isinstance(sc, dict):
+                    body = sc.get("result", sc) if set(sc.keys()) == {"result"} else sc
+                else:
+                    texts = [c.text for c in res.content if getattr(c, "type", "") == "text"]
+                    body = json.loads(texts[0]) if texts else None
+            ck("stdio-k9-route", sorted((body or {}).get("cell_types", [])) == sorted(K9N), str(body)[:160])
 
 
 asyncio.run(stdio_test())
