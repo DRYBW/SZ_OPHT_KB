@@ -1,7 +1,7 @@
 # EyeKB / SZ_OPHT_KB — 眼科知识库 MCP·RAG·Wiki·Skill 四层体系（可克隆运行镜像）
 
 > **仓库定性（PI 2026-09-27 纠正）**：本仓 = EyeKB 四层体系的**可克隆运行镜像**，不是文档备份、不是快照存档。任何人 clone 后按本 README 配好依赖即可：①起 MCP 证据服务 ②拉 Release 恢复 RAG 语料 ③在 docs/wiki 读项目当前态 ④用 docs/skills + docs/plans 复现判读与评测流程。
-> 项目本体：眼科文献二级知识库 · 证据服务（2026-09-23 PI 拍板立项）。服务版本 = `KB1v2-0.4-actv6`（与 `mcp_server/server.py` 一致）。
+> 项目本体：眼科文献二级知识库 · 证据服务（2026-09-23 PI 拍板立项）。服务版本 = `KB1v2-0.5-k9reg`（与 `mcp_server/server.py` 一致）。
 
 ## 四层体系地图
 
@@ -55,6 +55,7 @@ huggingface-cli download BAAI/bge-large-en-v1.5 --local-dir ./models/bge-large-e
 | `EYEKB_ACT_V6` | **ON**：query_marker 默认 `library=all` 并入 retina_v6+face_v6（同名类 `<库>::<类>` 别名消歧） | OFF：回退现役三库；off 态响应与 pre 基线逐字节全等（A5 机读验收） | KB7 红词条修复面板激活开关（PI 2026-09-26 批准激活；lacrimal_v6 **任何态不入默认**，仅显式查询——PI A3 暂不切） |
 | `EYEKB_MCP_SOFTFLAGS` | **ON**：响应附 `soft_flags`（两口径：flag#1 rod-BC 参数并列组 / flag#2 mural TOP3 边界提醒） | OFF：`soft_flags` 整 key 不出现 | 软复核提示层（第三态=响应内无该 key，消费方按缺省处理） |
 | `EYEKB_MCP_TRACE_TAG` | 留痕记录 tag 为空（真实流量） | 自设字符串 | 自测流量打标；OBS-2 统计器默认排除带 tag 记录 |
+| （无 env，硬编码 OFF） | `library=k9_ocs` 仅显式查询可达（KB9 案 B 眼表 4 新条，注册默认 OFF） | 任何态不入默认 all | KB9REG-EXEC t_4bb75b26（PI D17 注册批准 2026-09-28；激活需 §10-6 义务 run+PI 另批；lacrimal_v6 同理维持 A3 登记态） |
 
 三工具契约 + KB1v2 判读层两工具：
 
