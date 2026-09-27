@@ -1,72 +1,135 @@
-# EyeKB — 眼科文献二级知识库 · 证据服务
+# EyeKB / SZ_OPHT_KB — 眼科知识库 MCP·RAG·Wiki·Skill 四层体系（可克隆运行镜像）
 
-独立知识库项目（2026-09-23 PI 拍板立项，见 `plans/USER_DIRECTIVE_20260923_EyeKB_GO.md`）。
-打包三层资产，通过 **MCP（本地 stdio）** 对外提供证据检索：
+> **仓库定性（PI 2026-09-27 纠正）**：本仓 = EyeKB 四层体系的**可克隆运行镜像**，不是文档备份、不是快照存档。任何人 clone 后按本 README 配好依赖即可：①起 MCP 证据服务 ②拉 Release 恢复 RAG 语料 ③在 docs/wiki 读项目当前态 ④用 docs/skills + docs/plans 复现判读与评测流程。
+> 项目本体：眼科文献二级知识库 · 证据服务（2026-09-23 PI 拍板立项）。服务版本 = `KB1v2-0.4-actv6`（与 `mcp_server/server.py` 一致）。
 
-| 层 | 内容 | 物理位置 (P1) |
+## 四层体系地图
+
+| 层 | 内容 | 仓内位置 |
 |---|---|---|
-| RAG 文献库 | v2.0 全眼：11 组织 / 2,713 篇 / 174,616 chunks | 引用 OcularKB 现路径（只读，见 `kb/literature_db/EYEKB_DB_POINTER.yaml`；P2 才物理迁移） |
-| VK 索引层 | 1 总目录 + 16 主题页 + 10 组织页（27 页） | `kb/vk_literature_index/`（P1a copy 收编，sha256 与源一致） |
-| Marker 权威层 | markers_v4.1_clean.json（视网膜 10 类本地权威 marker） | `kb/markers/`（P0 复制品，源哈希已核） |
-| **判读层 (KB1v2/KB2c)** | 眼科通用组成基线：供者级条件参考分布，D001 retina + D002 ocular_surface + optic_nerve/RPE/TM/CB 已建、5 组织骨架映射已回填；**KB2c 发育轴单列：全部 11 条重渲染为 adult-only 主档（donor≥18y）+ adult_pool 对照档双身份，非 adult 供者逐行披露**；疾病×组织×发育档矩阵（示例格 PDR__纤维血管膜）；fetal/developing 转换态概念条目；概念 ID 映射；RAG 三字段 sidecar | `kb/baselines/`（含 `_STAGE_DISCLOSURE.md` + `fetal_development_transitions.md`）+ `kb/priors/disease/` + `kb/priors/concepts.tsv` + `kb/literature_db/evidence_meta_v2.0_2026-09.jsonl`；使用流程=`plans/ANNOTATION_PROTOCOL_v1.1.md`（先冻结后对照）；裁定=`plans/KB2C_ADJUDICATION_20260923.md` |
+| **MCP 服务层** | stdio 证据服务（5 工具）+ 调用留痕层 + 软旗层 | `mcp_server/`（server.py / eyekb_core.py / calllog.py / softflags.py） |
+| **RAG 文献层** | 全眼文献库（v2.0 现役默认 174,616 chunks / 2,713 papers；v2.2/v2.3 见指针与 Release） | 元数据 `rag_snapshots/v2.3_2026-09/`；主库 = Release `v2.3-rag-assets`（6 件）；内核 `clients/ocularkb/rag/scripts/stage3_retrieve.py` |
+| **Wiki 知识层** | 项目当前态/决策/红线/directive（脱敏镜像，含冻结哈希锚） | `docs/wiki/`（14 件，含 PROTOCOL_VOTING_v2_C2b） |
+| **Skill+判读层** | 两技能镜像 + 判读协议件 + 09-26/27 各判读卡全量证据链 | `docs/skills/`（annotation-eval-ops、knowledge-guided-cell-annotation、protocols/）；`docs/plans/`（1439 件）；知识资产 `kb/`（100 件） |
 
-**判读层图例（KB2c 发育轴，2026-09-23 深夜裁定固化）**：
+## 一、MCP 服务层：clone 后跑起来
 
-- 顶层轴 `organism_stage` ∈ **{fetal, adult, developing, unknown}**（产物用 4 级；PI 指令 5 值集映射：postnatal→developing，organoid→unknown+旗标）；逐行 UBERON 原值可溯源（`stage_disclosure`/`excluded_nonadult_units`）。
-- **adult = donor_age ≥ 18 岁**（裁定 Q2；阈值写入产物字段，改动须过裁定）；newborn/儿童/青少年→developing。**≥60 老年分层不在本轴**——aging 是正交独立轴，将来单独立条目。
-- **双档身份**：主档 `..._adult_only__kb2c`（剔除非 adult 供者单元重算）与对照档 `..._adult_pool__v1.0`（v1.0 混口径原样保留）entry_id/sha256 身份签名分离，引用旧数字只能挂对照档。
-- **红线**：胎儿/发育期数据**永不并入 adult 主档**（即使同一组织）；unknown（如无年龄列的 GSE158629 RPE）必须披露行，禁静默归 adult；fetal/developing 查询返回转换态概念条目（现役引擎不适用声明），禁成人桶代答。
+### 1.1 依赖
 
-**判读层定位（Astra T2 裁定固化，写死）**：基线与疾病条目 = 身份参考 + 背景对照 + QC 旗，
-**不得当组成达标线**；清单外身份触发 unexpected 旗但不得强制改成清单内身份；禁入一切打分
-（module score/标签加权/置信度加分/候选排序分/复合 QC 分）。
+服务端本体只需 **Python ≥3.10 + `mcp`（stdio server SDK，实验室实测 v2.0.0）+ numpy + pandas + pyarrow**；检索嵌入另需 `sentence-transformers`（CPU 推理即可，GPU 留科研）。
 
-## 快速开始（MCP stdio）
+```bash
+python -m venv .venv && . .venv/bin/activate
+pip install mcp numpy pandas pyarrow sentence-transformers
+```
+
+嵌入模型 = HuggingFace 公开模型 **bge-large-en-v1.5**（权重不进仓）：
+
+```bash
+huggingface-cli download BAAI/bge-large-en-v1.5 --local-dir ./models/bge-large-en-v1.5
+```
+
+并把 `clients/ocularkb/rag/scripts/stage3_retrieve.py` 顶部 `MODEL_DIR` 与 `BASE` 改为你本地路径（该内核是 OcularKB 逐字复制件，默认指向实验室工作盘）。
+
+**关联环境注意（判读/评测脚本涉及 h5ad 时）**：本实验室读取评测集 h5ad 用 scrnaseq 环境（**anndata 0.13.2**，已验证 backed raw 模式可读）；**pipeline_env（anndata 0.11.4）对本组矩阵不兼容**（nullable-string 列加载返回 object dtype 致下游崩溃，声明为不可用环境；如坚持 0.11+ 写 h5ad 需 `anndata.settings.allow_write_nullable_strings=False`）。纯 MCP 服务与 docs 复算脚本不依赖 anndata。
+
+### 1.2 stdio 注册样例（任意 MCP 客户端）
 
 ```json
 {
   "mcpServers": {
     "eyekb": {
-      "command": "/home/ubuntu/training-venv/bin/python",
-      "args": ["/mnt/D/EyeKB/mcp_server/server.py"]
+      "command": "/path/to/.venv/bin/python",
+      "args": ["/path/to/SZ_OPHT_KB/mcp_server/server.py"]
     }
   }
 }
 ```
 
-三工具契约（设计稿 §3）：
+`server.py` 内 `kb_root` 按文件自身位置相对解析，clone 后即可读到 `kb/`；仅 `search_literature` 需要把 RAG 库路径指到恢复后的 literature_db（见 §二与 `kb/literature_db/EYEKB_DB_POINTER.yaml`）。本地 stdio，不开任何网络端口（SSE/远程属 P3 未授权）。
 
-- `search_literature(cell_type, species?, tissue?, top_k?, query?, db?)`
-  → 文献片段 + PMID + 期刊年份 + marker 共现 + 相关度（stage3 v2.0 内核）
+### 1.3 env 开关矩阵
+
+| 变量 | 未设/其他值 | ∈ {0,false,off,no}（strip+casefold） | 语义 |
+|---|---|---|---|
+| `EYEKB_ACT_V6` | **ON**：query_marker 默认 `library=all` 并入 retina_v6+face_v6（同名类 `<库>::<类>` 别名消歧） | OFF：回退现役三库；off 态响应与 pre 基线逐字节全等（A5 机读验收） | KB7 红词条修复面板激活开关（PI 2026-09-26 批准激活；lacrimal_v6 **任何态不入默认**，仅显式查询——PI A3 暂不切） |
+| `EYEKB_MCP_SOFTFLAGS` | **ON**：响应附 `soft_flags`（两口径：flag#1 rod-BC 参数并列组 / flag#2 mural TOP3 边界提醒） | OFF：`soft_flags` 整 key 不出现 | 软复核提示层（第三态=响应内无该 key，消费方按缺省处理） |
+| `EYEKB_MCP_TRACE_TAG` | 留痕记录 tag 为空（真实流量） | 自设字符串 | 自测流量打标；OBS-2 统计器默认排除带 tag 记录 |
+
+三工具契约 + KB1v2 判读层两工具：
+
+- `search_literature(cell_type, species?, tissue?, top_k?, query?, db?)` → 片段+PMID+期刊年份+marker 共现+相关度（v2.0 起带 inclusion_reasons/claim_relation/evidence_context 三字段联表）
 - `get_kb_page(scope=index|topic|tissue, name)` → VK 索引页原文（白名单路径防越界）
-- `query_marker(genes? | cell_type?)` → 本地权威 marker 命中（先本地后联网的机器化）
+- `query_marker(genes?|cell_type?, library?)` → 本地权威 marker 命中（先本地后联网的机器化）
+- `get_tissue_composition(species, tissue, disease?, development_stage?)` → 供者级组成基线（KB2c 发育轴双档：adult_only 主档 + adult_pool 对照档；fetal/developing 返回转换态概念条目，禁成人桶代答）
+- `get_disease_prior(disease, tissue?)` → 疾病×组织矩阵薄层条目（身份层级+状态轴+取样材料错配警示）
 
-## 纪律红线
+### 1.4 调用留痕层（calllog.py，OBS-1）
 
-1. **证据服务不进打分**——本服务只提供检索与引用（Claude5 冻结裁定的服务级升级）；
-   任何分类器/模型打分流程禁止消费本服务输出来产生分数。
-2. **本地 stdio，不开网络端口**（SSE/远程属 P3，未授权）。
-3. **copy 不 move**——OcularKB 是引擎项目，本库 P1 对其零改动、只读引用。
-4. 全部引用带 PMID 可溯源；注释产物默认 = 草稿待 PI 确认（human-in-loop）。
-5. **发育轴红线（KB3，PI 指令 2026-09-23/24 固化，2026-09-24 t_5425a7ca 落地）：发育数据一律单列，任何组织层面 adult/fetal 不互为参照。** 基线/疾病矩阵/评估集/检索元数据四层全单列：成人档条目 `development_stage=adult` 写死+禁令入参考分布段；发育期条目独立文件（`kb/baselines/retina__fetal_developing.{json,md}`，schema `eyekb-baseline-development/1.0`，MCP 成人查询不可见）；疾病矩阵 12 格全 adult + ROP 发育轴预留格；E5(GSE268630) 与成人统计池永久分离（冻结件 KB3-ADJ 段成文）；RAG papers 级 `dev_stage` sidecar（`kb/literature_db/dev_stage_meta_v2.2_2026-09.jsonl`）+ `stage3_retrieve_v3.py --dev-stage` 过滤。执行日志 = `plans/kb3_dev_axis_log.md`。
+只加日志、零行为改动：每次工具响应落盘 `logs/mcp_trace/calls_YYYY-MM-DD.jsonl`（O_APPEND 行级原子写；>200MB 续写 `.partN`；不自动删除）。记录 = 工具名/入参（检索词属领域信息非个人敏感）/响应**结构摘要**（flag_id 与类目名，不记 notes 全文与片段正文）/env 态/进程 uuid+pid+宿主。观察窗统计口径见 `docs/plans/obs_followup`（09-26 卡）与 WIKI 当前态。
 
-## 目录
+## 二、RAG 层：Release 恢复语料（v2.3）
 
-```
-kb/            三层知识资产 + 库路径指针
-mcp_server/    server.py (MCP 传输层) + eyekb_core.py (工具内核)
-clients/       ocularkb 检索内核 verbatim 复制品 (stage3_retrieve.py / qa_v2.py)
-evals/         自测 + MCP-vs-直调黄金集回归 (41/41 PASS, 2026-09-23)
-plans/         directive + demo 线 (GSE165784 PDR 膜注释 demo)
-logs/          运行日志
+主库 937MB 超 GitHub 单文件墙，走 **Release `v2.3-rag-assets` 分卷**（5×192MB parts + `.tar.sha256`，共 6 件）：
+
+```bash
+gh release download v2.3-rag-assets --repo <owner>/SZ_OPHT_KB --pattern '*'
+cat EYEKB_RAG_v2.3.tar.part_* > EYEKB_RAG_v2.3.tar
+sha256sum -c EYEKB_RAG_v2.3.tar.sha256          # 判据=字节数与哈希，缺一不解
+tar -xf EYEKB_RAG_v2.3.tar                       # 得 literature_db/v2.3_2026-09/{chunks.parquet,papers.jsonl,manifest.yaml,build_stats.json}
 ```
 
-## 状态
+随后把 `kb/literature_db/EYEKB_DB_POINTER.yaml` 的 `default` 指向解包目录（当前 default=v2.0，v2.2/v2.3 标 latest 待 PI 拍板切换——**勿擅改**）。仓内 `rag_snapshots/v2.3_2026-09/` 存元数据三面（papers.jsonl/manifest.yaml/build_stats.json，与线上 v2.3 目录逐字节一致）；更完整的三路径重建说明（预置件解包/按书目重建/无文献层降级）见 `docs/RAG_REBUILD.md`。
 
-- P0 骨架 + P1（三工具 / 回归 / demo）：**完成** 2026-09-23；
-  验收证据与决策记录 = `plans/P1_DECISION_LOG_20260923.md`
-  (P1a copy 零漂移 / P1c 自测 11/11 / P1d 回归 41/41 / demo = GSE165784 注释草稿待 PI 确认)
-- KB1v2/KB1v2b（判读层眼科通用 + 供者级回填）：**完成** 2026-09-23（回归 28/28）
-- **KB2c（发育轴单列，t_be336eee）：完成** 2026-09-23 深夜——11 条基线双档重渲染+逐行披露+矩阵三键+MCP development_stage 过滤+fetal 转换态概念条目；执行日志=`plans/kb2c_dev_axis_log.md`，回归=`evals/REGRESSION_KB2C_20260923.json`
-- **KB3（发育轴全量单列，t_5425a7ca）：完成** 2026-09-24——四层落地：W1 全部基线条目 `development_stage` 必填+禁令入参考分布段+首个发育期实数据参考条 `retina__fetal_developing`（GSE268630 portal 226,506 + GSE138002 胎层 88,013，作者/portal 标签聚合，非引擎产物）；W2 疾病矩阵 `development_axis` 列+ROP 预留格；W3 E5 分离规则成文（冻结件 KB3-ADJ 增补段）+RUN1 复查无混池；W4 RAG papers 级 dev_stage sidecar+检索 `--dev-stage` 参数；W5 本 README 红线+OcularKB WIKI §6。日志=`plans/kb3_dev_axis_log.md`，回归=`evals/REGRESSION_KB3_20260924.json`
-- P2（物理迁移/OcularKB 切消费路径）、P3（远程/增量更新）：**未授权，待 PI 看 demo 后拍板**
+**Release 资产纪律（09-27 REPOSYNC 实核）**：v2.3 语料侧自 09-25 打包后线上零变动（chunks.parquet/papers.jsonl/manifest.yaml/build_stats.json mtime 均 ≤09-25 08:19；papers.jsonl 与 manifest.yaml 哈希对账 rag_snapshots 全等）。Release 六件**不重传不改动**；若未来发现语料变动，如实报告并走新 tag，不覆盖。
+
+## 三、Wiki 层
+
+`docs/wiki/` = OcularKB/WIKI 的脱敏镜像（当前态/决策记录/结论速查/INDEX/红线与 directive 链，含 PROTOCOL_VOTING_v2_C2b.md 票规 v2 决策件）。口径：镜像件与线上件**唯一差异=脱敏标签替换**（见 `docs/DESENS_SCAN_REPORT_20260927.md`），PI 原话保留、账号形态零命中。
+
+## 四、Skill+判读层：评测复算入口
+
+- **协议件**（注释判读必读，四阶段"先冻结后对照"）：`docs/skills/protocols/ANNOTATION_PROTOCOL_v1.1.md` / `v1.2.md`（判读层使用流程权威文本；红线②操作定义见 WIKI 红线改写件追加节）+ `PROTOCOL_VOTING_v2_C2b.md`（同名词票规 v2 决策件，落款后预注册 run 生效、历史裁决不回改）。
+- **技能镜像**：`docs/skills/annotation-eval-ops/`（Run1–Run7+ 全量票台账与功效结论，含 run6b-run7rg 效率参考件）、`docs/skills/knowledge-guided-cell-annotation/`（KB 判读层设计与修复周期）。
+- **判读卡全量证据链** `docs/plans/`（09-26/27 各卡，VERDICT/PREREG/判读表/票档/脚本成对收录）：
+  - `evidence_scoring_20260926/`（E1 打分实验收口）· `e2_decontam_20260926/`（E2 去污染腿）· `e3_rescue_20260927/`（E3 救援腿 + `AUDIT_SOP_v1.0.md` 全量重跑审计 SOP）
+  - `e2r_s5audit_20260927/`（E2-R S5 逐行审计）· `btest_20260927/`（自由查询 A/B 验证：PREREG+票档 annotation/*.jsonl+toolcalls+判读表）
+  - `tiep_20260927/`（平票/弃权协议反事实评估）· `panel_pmid_20260927/`+`batch2/`（PME/PME2 证据链补录两批：338 键台账+pme_accounts.tsv）
+  - `kb9_ocs_20260927/`（KB9 眼表注册包：五轮外审 prompt/reply 全留痕+BUILD_REPORT+REGISTER_PACKAGE v2）· `proto_v2_20260927/`（票规 v2 决策件落点）· `rag_anno_usability_20260927/` · `sync_scSOP_20260927/` · `repo_sync_20260927/`（本镜像同步任务书）
+  - 各卡复算 = 进该卡 `scripts/`，输入指针在其 PREREG/NOTE 头注；数值证据面（tsv/json/jsonl）未经任何数值改动。
+- **哈希锚例外**：`btest/BTEST_PREREG_v1.0.md.sha256` 锚定线上原件（镜像内脱敏致 `sha256sum -c` 预期 FAIL），见脱敏报告"冻结哈希锚例外登记"。
+
+## 五、对账表（镜像 ↔ 线上）
+
+`docs/recon/RECON_kb_mcp_20260927.tsv`：kb/ 100 文件 + mcp_server 4 文件逐文件 sha256 对线上清单，**104/104 MATCH**（09-27 REPOSYNC 时点）；clients/scripts/evals/figures 四目录汇总 IDENTICAL（同表附页）。文档/判读层镜像为脱敏副本，不做逐字节对账（差异=标签替换，逐文件命中统计见脱敏报告）。
+
+## 纪律红线（不变项）
+
+1. **证据服务禁入打分**（红线改写 v2 条文）：任何分类器/模型打分流程禁止消费本服务输出生成分数；`soft_flags.notes` 只作可选复核线索。
+2. **本地 stdio，不开网络端口**。
+3. **copy 不 move**：对上游 OcularKB 零改动、只读引用。
+4. 全部引用带 PMID 可溯源；注释产物默认=草稿待 PI 确认（human-in-the-loop）。
+5. 判读层使用必须走 ANNOTATION_PROTOCOL（先冻结后对照）；基线/疾病条目=身份参考+背景对照+QC 旗，**不得当组成达标线**。
+
+---
+
+## 附录 A — 未入镜像的大表与再生产方式
+
+| 面 | 体积 | 内容 | 再生产 |
+|---|---|---|---|
+| `EyeKB/plans/panel_pmid_20260927/ledgers/raw/` | 111MB / 280 件 | PubMed efetch 原始响应缓存 | 跑 `docs/plans/panel_pmid_20260927/scripts/`（efetch 抓取脚本），输入=仓内 PMID 清单 tsv（sha 见同卡 ledgers/*.tsv 台账行） |
+| `EyeKB/plans/panel_pmid_20260927/batch2/ledgers/raw2/` | 59MB / 103 件 | efetch 二次检索缓存 | `batch2/scripts/` 同法（PME2 批次） |
+| `EyeKB/plans/evalset/`（仓外） | 21GB 级 | 冻结考卷（含 h5ad/逐细胞预测表） | **永不入仓**（患者/项目衍生数据红线）；恢复需 OcularKB 工作盘权限 |
+
+已入镜像的缓存面（小体量、审计价值高于体积）：`e2r/ledgers/api/` 3.6MB、`panel_pmid/ledgers/raw_uniprot/` 0.57MB、`kb9/ledgers/epmc_raw*、ols_evidence_kb9/` <1MB。
+
+## 附录 B — 脱敏与镜像口径
+
+- 规则三元组 = project-github-export skill 现行清单（渠道商名→LLM_CHANNEL、裁决商名→REVIEWER_LLM、IM 平台→MSG_PLATFORM、agent 角色→AGENT_ROLE、主机名→HOST、端口→PORT（仅散文类）、密钥形态→REDACTED_SECRET（兜底实测零命中）、第三方作者邮箱→CONTACT_EMAIL）。
+- 文件名+内容双扫描；改名 21 件+1 目录；替换后二次扫描零命中（幂等）。
+- 个别句子有标签生硬感——本仓为安全牺牲可读性（PI 知情选择）；组内精读请回工作盘原件。
+
+## 维护
+
+- 下次结构变更后重同步检查项清单 = `docs/REPOSYNC_NOTE_20260927.md` 末节（供未来收口卡继承）。
+- 本 README 与镜像由 2026-09-27 REPOSYNC（任务书 `docs/plans/repo_sync_20260927/BRIEF_REPOSYNC.md`）生成。
