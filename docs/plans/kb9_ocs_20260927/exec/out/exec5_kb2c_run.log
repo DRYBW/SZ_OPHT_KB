@@ -1,0 +1,36 @@
+[PASS] 11 条 schema=eyekb-baseline/1.1  
+[PASS] 11 条顶层 organism_stage+stage_axis 全在位  
+[PASS] 阈值 >=18y 写入产物字段 (红线3)  
+[PASS] 4 级枚举一致 {fetal,adult,developing,unknown}  
+[PASS] aging 正交轴声明在位 (裁定 Q2)  
+[PASS] 5 adult 条: 双档 entry_id+sha256 身份签名分离  
+[PASS] 两档全等性逻辑+披露对账 (adult+excluded=全量)  
+[PASS] fetal 禁入 adult 主档实核: 5 条 disclosure 无 fetal 期 (实测=0, 污染源=新生儿/儿童)  
+[PASS] 非 adult 披露全部归 developing/unknown (无静默 adult)  
+[PASS] 成人主档有真实剔除: retina 7 / surface 9 / ON 9 / TM 0(全成人) / CB 4 供者  [7, 9, 9, 0, 4]
+[PASS] RPE=unknown 档 + 披露行 + 禁成人引用 caveat  
+[PASS] 骨架=5 且全带 unknown+回填路径含发育轴  
+[PASS] 索引 schema 1.1 + card t_be336eee + 11 条全带 organism_stage  
+[PASS] 索引 filled=6/skeleton=5 不变  
+[PASS] _STAGE_DISCLOSURE.md/.json 在位  
+[PASS] fetal 转换态概念条目: 候选>=6 + '现役引擎不适用'声明 + 不实算  
+[PASS] 疾病矩阵 1.1: 12 格全带 organism_stage=adult + 三键说明  
+[PASS] PDR 示例格 organism_stage=adult + 发育期不进格声明  
+[PASS] classify_uberon 用例表锁 14/14  {}
+[PASS] MCP initialize  
+[PASS] list_tools == 5  ['get_disease_prior', 'get_kb_page', 'get_tissue_composition', 'query_marker', 'search_literature']
+[PASS] schema 含 development_stage 参数  
+[PASS] 默认查询=adult 主档 (entry_id/baseline_status/os)  
+[PASS] MCP donor_level_main(adult-only)≡文件全等  
+[PASS] 对照档/披露/签名透传 ≡文件  
+[PASS] development_stage=adult ≡ 默认  
+[PASS] 红线1: retina+fetal → 转换态概念 (禁借成人桶)  
+[PASS] postnatal→developing 映射 (裁定 Q1) 亦回概念条  
+[PASS] unknown 过滤命中 RPE 披露条  
+[PASS] retina+unknown → no_unknown_stage_entry 拒替代  
+[PASS] 疾病条透传 organism_stage=adult (条款6)  
+[PASS] MCP JSON == 直调 get_tissue_composition (retina)  
+[PASS] MCP JSON == 直调 (fetal 概念路径)  
+
+KB2C REGRESSION: 33 PASS / 0 FAIL → /mnt/D/EyeKB/plans/kb9_ocs_20260927/exec/out/exec5_REGRESSION_KB2C_after.json
+KB2C_RC=0

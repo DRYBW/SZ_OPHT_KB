@@ -1,0 +1,3036 @@
+{
+  "_embedded" : {
+    "terms" : [ {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "has_obo_namespace" : [ "cell" ],
+        "id" : [ "CL:0000057" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "aeo",
+      "ontology_prefix" : "AEO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/aeo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : null,
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "A.11.329.228",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : null,
+          "id" : "http://63.198.234.228/OpenFMA/Fibroblast.html",
+          "description" : null,
+          "url" : "http://63.198.234.228/OpenFMA/Fibroblast.html"
+        } ]
+      } ],
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aeo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aeo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aeo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aeo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aeo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aeo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aeo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "aism",
+      "ontology_prefix" : "AISM",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/aism.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : null,
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        },
+        "develops_from" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.", "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "VHOG:0001482" ],
+        "has_obo_namespace" : [ "cell" ],
+        "imported from" : [ "http://purl.obolibrary.org/obo/cl.owl" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "bcgo",
+      "ontology_prefix" : null,
+      "ontology_iri" : "http://purl.obolibrary.org/obo/bcgo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        },
+        "develops_from" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482", "ZFA:0009026" ],
+        "preferred label" : [ "fibroblast" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "cl",
+      "ontology_prefix" : "CL",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/cl.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : true,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "human_subset", "mouse_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009026",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009026"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.", "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482", "ZFA:0009026" ],
+        "imported from" : [ "http://purl.obolibrary.org/obo/cl.owl" ],
+        "preferred label" : [ "fibroblast" ],
+        "present in taxon" : [ "http://purl.obolibrary.org/obo/NCBITaxon_9606" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "clo",
+      "ontology_prefix" : "CLO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/clo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "human_subset", "mouse_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : null,
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009026",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009026"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ ],
+      "synonyms" : [ ],
+      "annotation" : { },
+      "label" : "fibroblast",
+      "ontology_name" : "doid",
+      "ontology_prefix" : "DOID",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/doid/translations/doid-international.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/doid/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/doid/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/doid/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/doid/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/doid/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/doid/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/doid/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482" ],
+        "present in taxon" : [ "http://purl.obolibrary.org/obo/NCBITaxon_9606" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "ecao",
+      "ontology_prefix" : "ECAO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/ecao.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "general_cell_types_upper_slim", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482" ],
+        "has_obo_namespace" : [ "cell" ],
+        "id" : [ "CL:0000057" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "ecocore",
+      "ontology_prefix" : "ECOCORE",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/ecocore.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : null,
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "comment" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative." ],
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "NCIt:C12482", "NIFSTD:nlx_cell_20090201", "SNOMEDCT:52547004", "VHOG:0001482", "ZFA:0009026" ],
+        "preferred label" : [ "fibroblast" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "efo",
+      "ontology_prefix" : "EFO",
+      "ontology_iri" : "http://www.ebi.ac.uk/efo/efo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "human_subset", "mouse_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "NCIt",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "NIFSTD",
+        "id" : "nlx_cell_20090201",
+        "description" : null,
+        "url" : null
+      }, {
+        "database" : "SNOMEDCT",
+        "id" : "52547004",
+        "description" : null,
+        "url" : "http://purl.bioontology.org/ontology/SNOMEDCT/52547004"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009026",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009026"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        },
+        "located_in" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0001025"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "has_obo_namespace" : [ "cell" ],
+        "id" : [ "CL:0000057" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "ehdaa2",
+      "ontology_prefix" : null,
+      "ontology_iri" : "http://purl.obolibrary.org/obo/ehdaa2.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : null,
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "A.11.329.228",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : null,
+          "id" : "http://63.198.234.228/OpenFMA/Fibroblast.html",
+          "description" : null,
+          "url" : "http://63.198.234.228/OpenFMA/Fibroblast.html"
+        } ]
+      } ],
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ehdaa2/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ehdaa2/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ehdaa2/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ehdaa2/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ehdaa2/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ehdaa2/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ehdaa2/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "flopo",
+      "ontology_prefix" : "FLOPO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/flopo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "general_cell_types_upper_slim", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482", "ZFA:0009026" ],
+        "present in taxon" : [ "http://purl.obolibrary.org/obo/NCBITaxon_9606" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "fovt",
+      "ontology_prefix" : "FOVT",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/fovt.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009026",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009026"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482", "ZFA:0009026" ],
+        "preferred label" : [ "fibroblast" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "go",
+      "ontology_prefix" : "GO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/go/extensions/go-plus.ofn",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009026",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009026"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "alternative label" : [ "mouse embryonic fibroblast", "primary dermal fibroblast" ],
+        "comment" : [ "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules.", "A connective-tissue cell of mesenchymal origin that secretes proteins and especially molecular collagen from which the extracellular fibrillar matrix of connective tissue forms.", "A large, flat, oval cell found in connective tissue and responsible for the formation of fibers.", "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative." ],
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "VHOG:0001482" ],
+        "definition source" : [ "BTO:0000452", "CL:0000057", "NIFSTD:nlx_cell_20090201" ],
+        "has_obo_namespace" : [ "cell" ],
+        "imported from" : [ "http://purl.obolibrary.org/obo/cl.owl", "http://purl.obolibrary.org/obo/uberon.owl" ],
+        "preferred label" : [ "Fibroblast" ],
+        "present in taxon" : [ "http://purl.obolibrary.org/obo/NCBITaxon_9606" ],
+        "seeAlso" : [ "EFO_URI: http://www.ebi.ac.uk/efo/EFO_0000496", "URI: http://www.ebi.ac.uk/cellline#fibroblast" ],
+        "term editor" : [ "James Malone", "Tomasz Adamusiak" ]
+      },
+      "label" : "Fibroblast",
+      "ontology_name" : "hcao",
+      "ontology_prefix" : "HCAO",
+      "ontology_iri" : "http://ontology.data.humancellatlas.org/ontologies/hcao",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        },
+        "develops_from" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "hp",
+      "ontology_prefix" : "HP",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/hp/hp-international.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "ccf_asctb_type" : [ "CT" ],
+        "ccf_ct_isa" : [ "http://purl.obolibrary.org/obo/CL_0000000", "http://purl.obolibrary.org/obo/CL_0000499", "http://purl.obolibrary.org/obo/CL_0002574" ],
+        "ccf_is_provisional" : [ false ],
+        "ccf_located_in" : [ "http://purl.obolibrary.org/obo/UBERON_0000059", "http://purl.obolibrary.org/obo/UBERON_0000159", "http://purl.obolibrary.org/obo/UBERON_0000165", "http://purl.obolibrary.org/obo/UBERON_0000314", "http://purl.obolibrary.org/obo/UBERON_0000317", "http://purl.obolibrary.org/obo/UBERON_0000320", "http://purl.obolibrary.org/obo/UBERON_0000399", "http://purl.obolibrary.org/obo/UBERON_0000569", "http://purl.obolibrary.org/obo/UBERON_0000947", "http://purl.obolibrary.org/obo/UBERON_0000948", "http://purl.obolibrary.org/obo/UBERON_0000955", "http://purl.obolibrary.org/obo/UBERON_0001044", "http://purl.obolibrary.org/obo/UBERON_0001052", "http://purl.obolibrary.org/obo/UBERON_0001069", "http://purl.obolibrary.org/obo/UBERON_0001070", "http://purl.obolibrary.org/obo/UBERON_0001071", "http://purl.obolibrary.org/obo/UBERON_0001153", "http://purl.obolibrary.org/obo/UBERON_0001154", "http://purl.obolibrary.org/obo/UBERON_0001156", "http://purl.obolibrary.org/obo/UBERON_0001157", "http://purl.obolibrary.org/obo/UBERON_0001158", "http://purl.obolibrary.org/obo/UBERON_0001159", "http://purl.obolibrary.org/obo/UBERON_0001182", "http://purl.obolibrary.org/obo/UBERON_0001183", "http://purl.obolibrary.org/obo/UBERON_0001184", "http://purl.obolibrary.org/obo/UBERON_0001185", "http://purl.obolibrary.org/obo/UBERON_0001186", "http://purl.obolibrary.org/obo/UBERON_0001187", "http://purl.obolibrary.org/obo/UBERON_0001188", "http://purl.obolibrary.org/obo/UBERON_0001189", "http://purl.obolibrary.org/obo/UBERON_0001190", "http://purl.obolibrary.org/obo/UBERON_0001191", "http://purl.obolibrary.org/obo/UBERON_0001192", "http://purl.obolibrary.org/obo/UBERON_0001194", "http://purl.obolibrary.org/obo/UBERON_0001195", "http://purl.obolibrary.org/obo/UBERON_0001196", "http://purl.obolibrary.org/obo/UBERON_0001197", "http://purl.obolibrary.org/obo/UBERON_0001198", "http://purl.obolibrary.org/obo/UBERON_0001213", "http://purl.obolibrary.org/obo/UBERON_0001245", "http://purl.obolibrary.org/obo/UBERON_0001264", "http://purl.obolibrary.org/obo/UBERON_0001308", "http://purl.obolibrary.org/obo/UBERON_0001309", "http://purl.obolibrary.org/obo/UBERON_0001310", "http://purl.obolibrary.org/obo/UBERON_0001311", "http://purl.obolibrary.org/obo/UBERON_0001312", "http://purl.obolibrary.org/obo/UBERON_0001313", "http://purl.obolibrary.org/obo/UBERON_0001314", "http://purl.obolibrary.org/obo/UBERON_0001315", "http://purl.obolibrary.org/obo/UBERON_0001340", "http://purl.obolibrary.org/obo/UBERON_0001354", "http://purl.obolibrary.org/obo/UBERON_0001355", "http://purl.obolibrary.org/obo/UBERON_0001356", "http://purl.obolibrary.org/obo/UBERON_0001357", "http://purl.obolibrary.org/obo/UBERON_0001358", "http://purl.obolibrary.org/obo/UBERON_0001394", "http://purl.obolibrary.org/obo/UBERON_0001395", "http://purl.obolibrary.org/obo/UBERON_0001396", "http://purl.obolibrary.org/obo/UBERON_0001397", "http://purl.obolibrary.org/obo/UBERON_0001398", "http://purl.obolibrary.org/obo/UBERON_0001399", "http://purl.obolibrary.org/obo/UBERON_0001404", "http://purl.obolibrary.org/obo/UBERON_0001406", "http://purl.obolibrary.org/obo/UBERON_0001410", "http://purl.obolibrary.org/obo/UBERON_0001496", "http://purl.obolibrary.org/obo/UBERON_0001508", "http://purl.obolibrary.org/obo/UBERON_0001514", "http://purl.obolibrary.org/obo/UBERON_0001516", "http://purl.obolibrary.org/obo/UBERON_0001529", "http://purl.obolibrary.org/obo/UBERON_0001530", "http://purl.obolibrary.org/obo/UBERON_0001531", "http://purl.obolibrary.org/obo/UBERON_0001532", "http://purl.obolibrary.org/obo/UBERON_0001533", "http://purl.obolibrary.org/obo/UBERON_0001534", "http://purl.obolibrary.org/obo/UBERON_0001535", "http://purl.obolibrary.org/obo/UBERON_0001536", "http://purl.obolibrary.org/obo/UBERON_0001537", "http://purl.obolibrary.org/obo/UBERON_0001538", "http://purl.obolibrary.org/obo/UBERON_0001539", "http://purl.obolibrary.org/obo/UBERON_0001540", "http://purl.obolibrary.org/obo/UBERON_0001541", "http://purl.obolibrary.org/obo/UBERON_0001552", "http://purl.obolibrary.org/obo/UBERON_0001553", "http://purl.obolibrary.org/obo/UBERON_0001561", "http://purl.obolibrary.org/obo/UBERON_0001584", "http://purl.obolibrary.org/obo/UBERON_0001610", "http://purl.obolibrary.org/obo/UBERON_0001611", "http://purl.obolibrary.org/obo/UBERON_0001612", "http://purl.obolibrary.org/obo/UBERON_0001613", "http://purl.obolibrary.org/obo/UBERON_0001614", "http://purl.obolibrary.org/obo/UBERON_0001615", "http://purl.obolibrary.org/obo/UBERON_0001616", "http://purl.obolibrary.org/obo/UBERON_0001617", "http://purl.obolibrary.org/obo/UBERON_0001618", "http://purl.obolibrary.org/obo/UBERON_0001619", "http://purl.obolibrary.org/obo/UBERON_0001620", "http://purl.obolibrary.org/obo/UBERON_0001622", "http://purl.obolibrary.org/obo/UBERON_0001623", "http://purl.obolibrary.org/obo/UBERON_0001624", "http://purl.obolibrary.org/obo/UBERON_0001625", "http://purl.obolibrary.org/obo/UBERON_0001626", "http://purl.obolibrary.org/obo/UBERON_0001627", "http://purl.obolibrary.org/obo/UBERON_0001628", "http://purl.obolibrary.org/obo/UBERON_0001633", "http://purl.obolibrary.org/obo/UBERON_0001634", "http://purl.obolibrary.org/obo/UBERON_0001635", "http://purl.obolibrary.org/obo/UBERON_0001636", "http://purl.obolibrary.org/obo/UBERON_0001640", "http://purl.obolibrary.org/obo/UBERON_0001651", "http://purl.obolibrary.org/obo/UBERON_0001652", "http://purl.obolibrary.org/obo/UBERON_0001736", "http://purl.obolibrary.org/obo/UBERON_0001828", "http://purl.obolibrary.org/obo/UBERON_0001829", "http://purl.obolibrary.org/obo/UBERON_0001831", "http://purl.obolibrary.org/obo/UBERON_0001832", "http://purl.obolibrary.org/obo/UBERON_0002011", "http://purl.obolibrary.org/obo/UBERON_0002040", "http://purl.obolibrary.org/obo/UBERON_0002056", "http://purl.obolibrary.org/obo/UBERON_0002067", "http://purl.obolibrary.org/obo/UBERON_0002070", "http://purl.obolibrary.org/obo/UBERON_0002078", "http://purl.obolibrary.org/obo/UBERON_0002080", "http://purl.obolibrary.org/obo/UBERON_0002084", "http://purl.obolibrary.org/obo/UBERON_0002094", "http://purl.obolibrary.org/obo/UBERON_0002108", "http://purl.obolibrary.org/obo/UBERON_0002114", "http://purl.obolibrary.org/obo/UBERON_0002115", "http://purl.obolibrary.org/obo/UBERON_0002190", "http://purl.obolibrary.org/obo/UBERON_0002249", "http://purl.obolibrary.org/obo/UBERON_0002250", "http://purl.obolibrary.org/obo/UBERON_0002270", "http://purl.obolibrary.org/obo/UBERON_0002333", "http://purl.obolibrary.org/obo/UBERON_0002345", "http://purl.obolibrary.org/obo/UBERON_0002348", "http://purl.obolibrary.org/obo/UBERON_0002349", "http://purl.obolibrary.org/obo/UBERON_0002371", "http://purl.obolibrary.org/obo/UBERON_0002373", "http://purl.obolibrary.org/obo/UBERON_0002384", "http://purl.obolibrary.org/obo/UBERON_0002439", "http://purl.obolibrary.org/obo/UBERON_0002456", "http://purl.obolibrary.org/obo/UBERON_0002493", "http://purl.obolibrary.org/obo/UBERON_0002505", "http://purl.obolibrary.org/obo/UBERON_0003329", "http://purl.obolibrary.org/obo/UBERON_0003331", "http://purl.obolibrary.org/obo/UBERON_0003336", "http://purl.obolibrary.org/obo/UBERON_0003337", "http://purl.obolibrary.org/obo/UBERON_0003342", "http://purl.obolibrary.org/obo/UBERON_0003346", "http://purl.obolibrary.org/obo/UBERON_0003383", "http://purl.obolibrary.org/obo/UBERON_0003468", "http://purl.obolibrary.org/obo/UBERON_0003470", "http://purl.obolibrary.org/obo/UBERON_0003471", "http://purl.obolibrary.org/obo/UBERON_0003498", "http://purl.obolibrary.org/obo/UBERON_0003729", "http://purl.obolibrary.org/obo/UBERON_0003889", "http://purl.obolibrary.org/obo/UBERON_0003984", "http://purl.obolibrary.org/obo/UBERON_0004212", "http://purl.obolibrary.org/obo/UBERON_0004537", "http://purl.obolibrary.org/obo/UBERON_0004639", "http://purl.obolibrary.org/obo/UBERON_0004640", "http://purl.obolibrary.org/obo/UBERON_0004646", "http://purl.obolibrary.org/obo/UBERON_0004688", "http://purl.obolibrary.org/obo/UBERON_0004723", "http://purl.obolibrary.org/obo/UBERON_0004927", "http://purl.obolibrary.org/obo/UBERON_0004928", "http://purl.obolibrary.org/obo/UBERON_0004989", "http://purl.obolibrary.org/obo/UBERON_0004991", "http://purl.obolibrary.org/obo/UBERON_0004992", "http://purl.obolibrary.org/obo/UBERON_0004993", "http://purl.obolibrary.org/obo/UBERON_0005192", "http://purl.obolibrary.org/obo/UBERON_0005431", "http://purl.obolibrary.org/obo/UBERON_0005436", "http://purl.obolibrary.org/obo/UBERON_0005438", "http://purl.obolibrary.org/obo/UBERON_0005464", "http://purl.obolibrary.org/obo/UBERON_0005608", "http://purl.obolibrary.org/obo/UBERON_0005628", "http://purl.obolibrary.org/obo/UBERON_0005742", "http://purl.obolibrary.org/obo/UBERON_0006137", "http://purl.obolibrary.org/obo/UBERON_0006198", "http://purl.obolibrary.org/obo/UBERON_0006345", "http://purl.obolibrary.org/obo/UBERON_0006564", "http://purl.obolibrary.org/obo/UBERON_0006632", "http://purl.obolibrary.org/obo/UBERON_0006636", "http://purl.obolibrary.org/obo/UBERON_0006664", "http://purl.obolibrary.org/obo/UBERON_0006764", "http://purl.obolibrary.org/obo/UBERON_0006958", "http://purl.obolibrary.org/obo/UBERON_0007146", "http://purl.obolibrary.org/obo/UBERON_0007149", "http://purl.obolibrary.org/obo/UBERON_0007150", "http://purl.obolibrary.org/obo/UBERON_0007153", "http://purl.obolibrary.org/obo/UBERON_0007177", "http://purl.obolibrary.org/obo/UBERON_0007178", "http://purl.obolibrary.org/obo/UBERON_0007315", "http://purl.obolibrary.org/obo/UBERON_0007316", "http://purl.obolibrary.org/obo/UBERON_0007317", "http://purl.obolibrary.org/obo/UBERON_0007324", "http://purl.obolibrary.org/obo/UBERON_0007693", "http://purl.obolibrary.org/obo/UBERON_0008320", "http://purl.obolibrary.org/obo/UBERON_0008321", "http://purl.obolibrary.org/obo/UBERON_0008322", "http://purl.obolibrary.org/obo/UBERON_0008323", "http://purl.obolibrary.org/obo/UBERON_0009040", "http://purl.obolibrary.org/obo/UBERON_0009041", "http://purl.obolibrary.org/obo/UBERON_0009654", "http://purl.obolibrary.org/obo/UBERON_0009687", "http://purl.obolibrary.org/obo/UBERON_0009688", "http://purl.obolibrary.org/obo/UBERON_0009689", "http://purl.obolibrary.org/obo/UBERON_0009708", "http://purl.obolibrary.org/obo/UBERON_0009885", "http://purl.obolibrary.org/obo/UBERON_0010047", "http://purl.obolibrary.org/obo/UBERON_0010132", "http://purl.obolibrary.org/obo/UBERON_0010249", "http://purl.obolibrary.org/obo/UBERON_0010250", "http://purl.obolibrary.org/obo/UBERON_0010251", "http://purl.obolibrary.org/obo/UBERON_0010399", "http://purl.obolibrary.org/obo/UBERON_0010401", "http://purl.obolibrary.org/obo/UBERON_0010408", "http://purl.obolibrary.org/obo/UBERON_0011189", "http://purl.obolibrary.org/obo/UBERON_0011820", "http://purl.obolibrary.org/obo/UBERON_0012173", "http://purl.obolibrary.org/obo/UBERON_0012187", "http://purl.obolibrary.org/obo/UBERON_0012255", "http://purl.obolibrary.org/obo/UBERON_0012318", "http://purl.obolibrary.org/obo/UBERON_0012319", "http://purl.obolibrary.org/obo/UBERON_0012321", "http://purl.obolibrary.org/obo/UBERON_0012322", "http://purl.obolibrary.org/obo/UBERON_0012324", "http://purl.obolibrary.org/obo/UBERON_0012375", "http://purl.obolibrary.org/obo/UBERON_0012377", "http://purl.obolibrary.org/obo/UBERON_0012398", "http://purl.obolibrary.org/obo/UBERON_0012399", "http://purl.obolibrary.org/obo/UBERON_0012489", "http://purl.obolibrary.org/obo/UBERON_0012648", "http://purl.obolibrary.org/obo/UBERON_0013132", "http://purl.obolibrary.org/obo/UBERON_0013133", "http://purl.obolibrary.org/obo/UBERON_0013648", "http://purl.obolibrary.org/obo/UBERON_0014693", "http://purl.obolibrary.org/obo/UBERON_0014694", "http://purl.obolibrary.org/obo/UBERON_0014695", "http://purl.obolibrary.org/obo/UBERON_0014696", "http://purl.obolibrary.org/obo/UBERON_0014772", "http://purl.obolibrary.org/obo/UBERON_0014773", "http://purl.obolibrary.org/obo/UBERON_0015157", "http://purl.obolibrary.org/obo/UBERON_0015160", "http://purl.obolibrary.org/obo/UBERON_0015171", "http://purl.obolibrary.org/obo/UBERON_0015173", "http://purl.obolibrary.org/obo/UBERON_0015174", "http://purl.obolibrary.org/obo/UBERON_0015350", "http://purl.obolibrary.org/obo/UBERON_0015480", "http://purl.obolibrary.org/obo/UBERON_0015481", "http://purl.obolibrary.org/obo/UBERON_0015482", "http://purl.obolibrary.org/obo/UBERON_0015834", "http://purl.obolibrary.org/obo/UBERON_0016632", "http://purl.obolibrary.org/obo/UBERON_0018231", "http://purl.obolibrary.org/obo/UBERON_0018234", "http://purl.obolibrary.org/obo/UBERON_0018243", "http://purl.obolibrary.org/obo/UBERON_0018255", "http://purl.obolibrary.org/obo/UBERON_0018397", "http://purl.obolibrary.org/obo/UBERON_0018674", "http://purl.obolibrary.org/obo/UBERON_0022276", "http://purl.obolibrary.org/obo/UBERON_0022277", "http://purl.obolibrary.org/obo/UBERON_0034693", "http://purl.obolibrary.org/obo/UBERON_0034727", "http://purl.obolibrary.org/obo/UBERON_0034927", "http://purl.obolibrary.org/obo/UBERON_0034964", "http://purl.obolibrary.org/obo/UBERON_0035040", "http://purl.obolibrary.org/obo/UBERON_0035042", "http://purl.obolibrary.org/obo/UBERON_0035180", "http://purl.obolibrary.org/obo/UBERON_0035183", "http://purl.obolibrary.org/obo/UBERON_0035222", "http://purl.obolibrary.org/obo/UBERON_0035225", "http://purl.obolibrary.org/obo/UBERON_0035261", "http://purl.obolibrary.org/obo/UBERON_0035273", "http://purl.obolibrary.org/obo/UBERON_0035322", "http://purl.obolibrary.org/obo/UBERON_0035374", "http://purl.obolibrary.org/obo/UBERON_0035404", "http://purl.obolibrary.org/obo/UBERON_0035422", "http://purl.obolibrary.org/obo/UBERON_0035462", "http://purl.obolibrary.org/obo/UBERON_0035492", "http://purl.obolibrary.org/obo/UBERON_0035529", "http://purl.obolibrary.org/obo/UBERON_0035539", "http://purl.obolibrary.org/obo/UBERON_0035640", "http://purl.obolibrary.org/obo/UBERON_0035829", "http://purl.obolibrary.org/obo/UBERON_0035830", "http://purl.obolibrary.org/obo/UBERON_0039232", "http://purl.obolibrary.org/obo/UBERON_8000011", "http://purl.obolibrary.org/obo/UBERON_8000012", "http://purl.obolibrary.org/obo/UBERON_8000013", "http://purl.obolibrary.org/obo/UBERON_8000014", "http://purl.obolibrary.org/obo/UBERON_8410010", "http://purl.obolibrary.org/obo/UBERON_8410022", "http://purl.obolibrary.org/obo/UBERON_8410023", "http://purl.obolibrary.org/obo/UBERON_8470002", "http://purl.obolibrary.org/obo/UBERON_8600060", "http://purl.obolibrary.org/obo/UBERON_8600062", "http://purl.obolibrary.org/obo/UBERON_8600063", "http://purl.obolibrary.org/obo/UBERON_8600064", "http://purl.obolibrary.org/obo/UBERON_8600077", "http://purl.obolibrary.org/obo/UBERON_8600078", "http://purl.obolibrary.org/obo/UBERON_8600079", "http://purl.obolibrary.org/obo/UBERON_8600080", "http://purl.obolibrary.org/obo/UBERON_8600081", "http://purl.obolibrary.org/obo/UBERON_8600086", "http://purl.obolibrary.org/obo/UBERON_8600094", "http://purl.obolibrary.org/obo/UBERON_8600095", "http://purl.obolibrary.org/obo/UBERON_8600096", "http://purl.obolibrary.org/obo/UBERON_8600097", "http://purl.obolibrary.org/obo/UBERON_8600098", "http://purl.obolibrary.org/obo/UBERON_8600099", "http://purl.obolibrary.org/obo/UBERON_8600100", "http://purl.obolibrary.org/obo/UBERON_8600101", "http://purl.obolibrary.org/obo/UBERON_8600102", "http://purl.org/sig/ont/fma/fma0323595", "http://purl.org/sig/ont/fma/fma0323596", "http://purl.org/sig/ont/fma/fma0323597", "http://purl.org/sig/ont/fma/fma0323777", "http://purl.org/sig/ont/fma/fma0323778", "http://purl.org/sig/ont/fma/fma0327481", "http://purl.org/sig/ont/fma/fma10641", "http://purl.org/sig/ont/fma/fma10648", "http://purl.org/sig/ont/fma/fma10649", "http://purl.org/sig/ont/fma/fma10650", "http://purl.org/sig/ont/fma/fma10651", "http://purl.org/sig/ont/fma/fma10652", "http://purl.org/sig/ont/fma/fma10653", "http://purl.org/sig/ont/fma/fma10654", "http://purl.org/sig/ont/fma/fma10655", "http://purl.org/sig/ont/fma/fma10656", "http://purl.org/sig/ont/fma/fma10657", "http://purl.org/sig/ont/fma/fma10663", "http://purl.org/sig/ont/fma/fma13279", "http://purl.org/sig/ont/fma/fma13281", "http://purl.org/sig/ont/fma/fma14738", "http://purl.org/sig/ont/fma/fma14739", "http://purl.org/sig/ont/fma/fma14740", "http://purl.org/sig/ont/fma/fma14741", "http://purl.org/sig/ont/fma/fma14742", "http://purl.org/sig/ont/fma/fma14743", "http://purl.org/sig/ont/fma/fma14744", "http://purl.org/sig/ont/fma/fma14745", "http://purl.org/sig/ont/fma/fma14746", "http://purl.org/sig/ont/fma/fma14747", "http://purl.org/sig/ont/fma/fma14755", "http://purl.org/sig/ont/fma/fma14756", "http://purl.org/sig/ont/fma/fma14762", "http://purl.org/sig/ont/fma/fma14763", "http://purl.org/sig/ont/fma/fma14776", "http://purl.org/sig/ont/fma/fma14782", "http://purl.org/sig/ont/fma/fma14784", "http://purl.org/sig/ont/fma/fma14787", "http://purl.org/sig/ont/fma/fma14792", "http://purl.org/sig/ont/fma/fma14793", "http://purl.org/sig/ont/fma/fma14794", "http://purl.org/sig/ont/fma/fma14816", "http://purl.org/sig/ont/fma/fma14817", "http://purl.org/sig/ont/fma/fma14818", "http://purl.org/sig/ont/fma/fma14819", "http://purl.org/sig/ont/fma/fma14820", "http://purl.org/sig/ont/fma/fma14824", "http://purl.org/sig/ont/fma/fma14828", "http://purl.org/sig/ont/fma/fma14829", "http://purl.org/sig/ont/fma/fma14835", "http://purl.org/sig/ont/fma/fma14902", "http://purl.org/sig/ont/fma/fma14903", "http://purl.org/sig/ont/fma/fma14926", "http://purl.org/sig/ont/fma/fma14966", "http://purl.org/sig/ont/fma/fma18826", "http://purl.org/sig/ont/fma/fma18832", "http://purl.org/sig/ont/fma/fma18849", "http://purl.org/sig/ont/fma/fma18850", "http://purl.org/sig/ont/fma/fma18855", "http://purl.org/sig/ont/fma/fma18871", "http://purl.org/sig/ont/fma/fma20701", "http://purl.org/sig/ont/fma/fma20798", "http://purl.org/sig/ont/fma/fma20804", "http://purl.org/sig/ont/fma/fma20805", "http://purl.org/sig/ont/fma/fma20811", "http://purl.org/sig/ont/fma/fma20840", "http://purl.org/sig/ont/fma/fma20853", "http://purl.org/sig/ont/fma/fma20886", "http://purl.org/sig/ont/fma/fma20966", "http://purl.org/sig/ont/fma/fma21120", "http://purl.org/sig/ont/fma/fma21121", "http://purl.org/sig/ont/fma/fma22420", "http://purl.org/sig/ont/fma/fma22506", "http://purl.org/sig/ont/fma/fma22511", "http://purl.org/sig/ont/fma/fma22536", "http://purl.org/sig/ont/fma/fma22584", "http://purl.org/sig/ont/fma/fma22585", "http://purl.org/sig/ont/fma/fma22680", "http://purl.org/sig/ont/fma/fma22684", "http://purl.org/sig/ont/fma/fma22706", "http://purl.org/sig/ont/fma/fma22710", "http://purl.org/sig/ont/fma/fma22748", "http://purl.org/sig/ont/fma/fma22750", "http://purl.org/sig/ont/fma/fma22752", "http://purl.org/sig/ont/fma/fma22755", "http://purl.org/sig/ont/fma/fma22761", "http://purl.org/sig/ont/fma/fma22763", "http://purl.org/sig/ont/fma/fma22800", "http://purl.org/sig/ont/fma/fma22803", "http://purl.org/sig/ont/fma/fma22806", "http://purl.org/sig/ont/fma/fma22810", "http://purl.org/sig/ont/fma/fma22811", "http://purl.org/sig/ont/fma/fma22817", "http://purl.org/sig/ont/fma/fma22820", "http://purl.org/sig/ont/fma/fma22824", "http://purl.org/sig/ont/fma/fma22838", "http://purl.org/sig/ont/fma/fma22854", "http://purl.org/sig/ont/fma/fma22855", "http://purl.org/sig/ont/fma/fma22857", "http://purl.org/sig/ont/fma/fma23046", "http://purl.org/sig/ont/fma/fma23047", "http://purl.org/sig/ont/fma/fma23048", "http://purl.org/sig/ont/fma/fma23062", "http://purl.org/sig/ont/fma/fma23065", "http://purl.org/sig/ont/fma/fma23066", "http://purl.org/sig/ont/fma/fma23067", "http://purl.org/sig/ont/fma/fma23119", "http://purl.org/sig/ont/fma/fma23120", "http://purl.org/sig/ont/fma/fma23179", "http://purl.org/sig/ont/fma/fma31933", "http://purl.org/sig/ont/fma/fma322901", "http://purl.org/sig/ont/fma/fma322902", "http://purl.org/sig/ont/fma/fma322903", "http://purl.org/sig/ont/fma/fma322905", "http://purl.org/sig/ont/fma/fma322906", "http://purl.org/sig/ont/fma/fma3818", "http://purl.org/sig/ont/fma/fma3823", "http://purl.org/sig/ont/fma/fma3835", "http://purl.org/sig/ont/fma/fma3840", "http://purl.org/sig/ont/fma/fma3851", "http://purl.org/sig/ont/fma/fma3860", "http://purl.org/sig/ont/fma/fma3902", "http://purl.org/sig/ont/fma/fma3994", "http://purl.org/sig/ont/fma/fma4146", "http://purl.org/sig/ont/fma/fma4147", "http://purl.org/sig/ont/fma/fma4165", "http://purl.org/sig/ont/fma/fma4168", "http://purl.org/sig/ont/fma/fma4170", "http://purl.org/sig/ont/fma/fma4173", "http://purl.org/sig/ont/fma/fma4176", "http://purl.org/sig/ont/fma/fma4183", "http://purl.org/sig/ont/fma/fma4184", "http://purl.org/sig/ont/fma/fma4199", "http://purl.org/sig/ont/fma/fma4222", "http://purl.org/sig/ont/fma/fma4245", "http://purl.org/sig/ont/fma/fma4268", "http://purl.org/sig/ont/fma/fma4291", "http://purl.org/sig/ont/fma/fma4314", "http://purl.org/sig/ont/fma/fma4337", "http://purl.org/sig/ont/fma/fma4360", "http://purl.org/sig/ont/fma/fma4383", "http://purl.org/sig/ont/fma/fma43888", "http://purl.org/sig/ont/fma/fma43889", "http://purl.org/sig/ont/fma/fma43902", "http://purl.org/sig/ont/fma/fma43903", "http://purl.org/sig/ont/fma/fma43904", "http://purl.org/sig/ont/fma/fma43905", "http://purl.org/sig/ont/fma/fma43918", "http://purl.org/sig/ont/fma/fma43926", "http://purl.org/sig/ont/fma/fma43933", "http://purl.org/sig/ont/fma/fma43934", "http://purl.org/sig/ont/fma/fma43942", "http://purl.org/sig/ont/fma/fma43959", "http://purl.org/sig/ont/fma/fma43960", "http://purl.org/sig/ont/fma/fma43961", "http://purl.org/sig/ont/fma/fma43962", "http://purl.org/sig/ont/fma/fma44033", "http://purl.org/sig/ont/fma/fma44034", "http://purl.org/sig/ont/fma/fma4406", "http://purl.org/sig/ont/fma/fma4429", "http://purl.org/sig/ont/fma/fma4452", "http://purl.org/sig/ont/fma/fma44595", "http://purl.org/sig/ont/fma/fma44630", "http://purl.org/sig/ont/fma/fma44647", "http://purl.org/sig/ont/fma/fma44648", "http://purl.org/sig/ont/fma/fma44649", "http://purl.org/sig/ont/fma/fma44650", "http://purl.org/sig/ont/fma/fma4475", "http://purl.org/sig/ont/fma/fma4498", "http://purl.org/sig/ont/fma/fma4521", "http://purl.org/sig/ont/fma/fma4544", "http://purl.org/sig/ont/fma/fma4567", "http://purl.org/sig/ont/fma/fma4590", "http://purl.org/sig/ont/fma/fma4634", "http://purl.org/sig/ont/fma/fma4654", "http://purl.org/sig/ont/fma/fma4708", "http://purl.org/sig/ont/fma/fma4712", "http://purl.org/sig/ont/fma/fma49477", "http://purl.org/sig/ont/fma/fma49480", "http://purl.org/sig/ont/fma/fma49483", "http://purl.org/sig/ont/fma/fma49506", "http://purl.org/sig/ont/fma/fma49558", "http://purl.org/sig/ont/fma/fma49580", "http://purl.org/sig/ont/fma/fma49599", "http://purl.org/sig/ont/fma/fma49602", "http://purl.org/sig/ont/fma/fma49608", "http://purl.org/sig/ont/fma/fma49618", "http://purl.org/sig/ont/fma/fma49621", "http://purl.org/sig/ont/fma/fma49628", "http://purl.org/sig/ont/fma/fma49631", "http://purl.org/sig/ont/fma/fma49641", "http://purl.org/sig/ont/fma/fma49644", "http://purl.org/sig/ont/fma/fma49647", "http://purl.org/sig/ont/fma/fma49660", "http://purl.org/sig/ont/fma/fma49669", "http://purl.org/sig/ont/fma/fma49692", "http://purl.org/sig/ont/fma/fma49699", "http://purl.org/sig/ont/fma/fma49702", "http://purl.org/sig/ont/fma/fma49745", "http://purl.org/sig/ont/fma/fma49746", "http://purl.org/sig/ont/fma/fma49751", "http://purl.org/sig/ont/fma/fma49771", "http://purl.org/sig/ont/fma/fma49796", "http://purl.org/sig/ont/fma/fma49804", "http://purl.org/sig/ont/fma/fma49809", "http://purl.org/sig/ont/fma/fma49817", "http://purl.org/sig/ont/fma/fma49962", "http://purl.org/sig/ont/fma/fma50327", "http://purl.org/sig/ont/fma/fma50329", "http://purl.org/sig/ont/fma/fma50330", "http://purl.org/sig/ont/fma/fma50337", "http://purl.org/sig/ont/fma/fma50437", "http://purl.org/sig/ont/fma/fma50466", "http://purl.org/sig/ont/fma/fma50469", "http://purl.org/sig/ont/fma/fma50475", "http://purl.org/sig/ont/fma/fma50479", "http://purl.org/sig/ont/fma/fma50560", "http://purl.org/sig/ont/fma/fma50624", "http://purl.org/sig/ont/fma/fma50629", "http://purl.org/sig/ont/fma/fma50630", "http://purl.org/sig/ont/fma/fma50631", "http://purl.org/sig/ont/fma/fma50638", "http://purl.org/sig/ont/fma/fma51965", "http://purl.org/sig/ont/fma/fma52239", "http://purl.org/sig/ont/fma/fma52242", "http://purl.org/sig/ont/fma/fma52246", "http://purl.org/sig/ont/fma/fma52492", "http://purl.org/sig/ont/fma/fma55221", "http://purl.org/sig/ont/fma/fma61437", "http://purl.org/sig/ont/fma/fma66241", "http://purl.org/sig/ont/fma/fma66421", "http://purl.org/sig/ont/fma/fma68193", "http://purl.org/sig/ont/fma/fma68194", "http://purl.org/sig/ont/fma/fma68847", "http://purl.org/sig/ont/fma/fma68848", "http://purl.org/sig/ont/fma/fma69460", "http://purl.org/sig/ont/fma/fma69513", "http://purl.org/sig/ont/fma/fma69585", "http://purl.org/sig/ont/fma/fma69586", "http://purl.org/sig/ont/fma/fma69587", "http://purl.org/sig/ont/fma/fma69588", "http://purl.org/sig/ont/fma/fma69589", "http://purl.org/sig/ont/fma/fma69601", "http://purl.org/sig/ont/fma/fma69604", "http://purl.org/sig/ont/fma/fma69607", "http://purl.org/sig/ont/fma/fma69610", "http://purl.org/sig/ont/fma/fma69613", "http://purl.org/sig/ont/fma/fma69797", "http://purl.org/sig/ont/fma/fma69798", "http://purl.org/sig/ont/fma/fma70150", "http://purl.org/sig/ont/fma/fma70175", "http://purl.org/sig/ont/fma/fma70195", "http://purl.org/sig/ont/fma/fma70370", "http://purl.org/sig/ont/fma/fma70438", "http://purl.org/sig/ont/fma/fma70442", "http://purl.org/sig/ont/fma/fma70443", "http://purl.org/sig/ont/fma/fma70445", "http://purl.org/sig/ont/fma/fma70446", "http://purl.org/sig/ont/fma/fma70449", "http://purl.org/sig/ont/fma/fma70450", "http://purl.org/sig/ont/fma/fma70452", "http://purl.org/sig/ont/fma/fma70453", "http://purl.org/sig/ont/fma/fma70471", "http://purl.org/sig/ont/fma/fma70479", "http://purl.org/sig/ont/fma/fma70480", "http://purl.org/sig/ont/fma/fma70494", "http://purl.org/sig/ont/fma/fma70499", "http://purl.org/sig/ont/fma/fma70500", "http://purl.org/sig/ont/fma/fma70501", "http://purl.org/sig/ont/fma/fma70502", "http://purl.org/sig/ont/fma/fma70503", "http://purl.org/sig/ont/fma/fma70777", "http://purl.org/sig/ont/fma/fma70778", "http://purl.org/sig/ont/fma/fma71479", "http://purl.org/sig/ont/fma/fma71492", "http://purl.org/sig/ont/fma/fma71523", "http://purl.org/sig/ont/fma/fma71525", "http://purl.org/sig/ont/fma/fma71534", "http://purl.org/sig/ont/fma/fma71544", "http://purl.org/sig/ont/fma/fma71675", "http://purl.org/sig/ont/fma/fma76767", "http://purl.org/sig/ont/fma/fma77439", "http://purl.org/sig/ont/fma/fma79211", "http://purl.org/sig/ont/fma/fma79658", "http://purl.org/sig/ont/fma/fma85107", "http://purl.org/sig/ont/fma/fma85108", "http://purl.org/sig/ont/fma/fma85111", "http://purl.org/sig/ont/fma/fma85114", "http://purl.org/sig/ont/fma/fma8616", "http://purl.org/sig/ont/fma/fma8617", "http://purl.org/sig/ont/fma/fma8618", "http://purl.org/sig/ont/fma/fma8619", "http://purl.org/sig/ont/fma/fma8620", "http://purl.org/sig/ont/fma/fma8627", "http://purl.org/sig/ont/fma/fma8628", "http://purl.org/sig/ont/fma/fma8630", "http://purl.org/sig/ont/fma/fma8631", "http://purl.org/sig/ont/fma/fma8632", "http://purl.org/sig/ont/fma/fma8639", "http://purl.org/sig/ont/fma/fma8640", "http://purl.org/sig/ont/fma/fma8642", "http://purl.org/sig/ont/fma/fma8644", "http://purl.org/sig/ont/fma/fma8645", "http://purl.org/sig/ont/fma/fma8646", "http://purl.org/sig/ont/fma/fma8647", "http://purl.org/sig/ont/fma/fma8755", "http://purl.org/sig/ont/fma/fma9284", "https://purl.org/ccf/ASCTB-TEMP_alveolar-mucosa-arteriole", "https://purl.org/ccf/ASCTB-TEMP_anterior-internal-frontal-artery", "https://purl.org/ccf/ASCTB-TEMP_anterior-lingual-gland-arteriole", "https://purl.org/ccf/ASCTB-TEMP_anterior-segmental-medullary-artery", "https://purl.org/ccf/ASCTB-TEMP_apicoanterior-trunk-of-left-pulmonary-artery", "https://purl.org/ccf/ASCTB-TEMP_bronchial-arteriole", "https://purl.org/ccf/ASCTB-TEMP_buccal-mucosa-arteriole", "https://purl.org/ccf/ASCTB-TEMP_bulbourethral-artery", "https://purl.org/ccf/ASCTB-TEMP_cavernosal-artery", "https://purl.org/ccf/ASCTB-TEMP_circular-longitudinal-muscle", "https://purl.org/ccf/ASCTB-TEMP_connective-tissue", "https://purl.org/ccf/ASCTB-TEMP_cutaneous-arteriole", "https://purl.org/ccf/ASCTB-TEMP_cutaneous-branch-of-medial-proper-palmar-digital-artery-of-fifth-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_deep-parotid-gland-arteriole", "https://purl.org/ccf/ASCTB-TEMP_dorsal-branch-of-lateral-proper-palmar-digital-artery-of-fifth-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_dorsal-branch-of-lateral-proper-palmar-digital-artery-of-fourth-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_dorsal-branch-of-lateral-proper-palmar-digital-artery-of-second-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_dorsal-branch-of-lateral-proper-palmar-digital-artery-of-third-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_dorsal-branch-of-medial-proper-palmar-digital-artery-of-fifth-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_dorsal-branch-of-medial-proper-palmar-digital-artery-of-fourth-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_dorsal-branch-of-medial-proper-palmar-digital-artery-of-second-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_dorsal-branch-of-medial-proper-palmar-digital-artery-of-third-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_dorsal-digital-artery-of-first-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_dorsal-meningeal-artery", "https://purl.org/ccf/ASCTB-TEMP_eustachian-branch-of-ascending-pharyngeal-artery", "https://purl.org/ccf/ASCTB-TEMP_first-common-plantar-digital-artery", "https://purl.org/ccf/ASCTB-TEMP_first-palmar-metacarpal-artery", "https://purl.org/ccf/ASCTB-TEMP_first-posterior-perforating-branch-of-plantar-arch", "https://purl.org/ccf/ASCTB-TEMP_fourth-common-plantar-digital-artery", "https://purl.org/ccf/ASCTB-TEMP_hepatic-arteriole", "https://purl.org/ccf/ASCTB-TEMP_high-truncus-anterior-of-right-pulmonary-artery", "https://purl.org/ccf/ASCTB-TEMP_hypoglossal-branch-of-ascending-pharyngeal-artery", "https://purl.org/ccf/ASCTB-TEMP_inferior-labial-gland-arteriole", "https://purl.org/ccf/ASCTB-TEMP_inferior-lobar-artery-of-spleen", "https://purl.org/ccf/ASCTB-TEMP_inferior-parietal-artery", "https://purl.org/ccf/ASCTB-TEMP_inferior-pharyngeal-artery", "https://purl.org/ccf/ASCTB-TEMP_interdental-septa-arteriole", "https://purl.org/ccf/ASCTB-TEMP_interlobular-artery-of-pancreas", "https://purl.org/ccf/ASCTB-TEMP_intralobular-arteriole-of-pancreas", "https://purl.org/ccf/ASCTB-TEMP_intramural-segment-of-fallopian-tube", "https://purl.org/ccf/ASCTB-TEMP_jejunal-arcade", "https://purl.org/ccf/ASCTB-TEMP_jugular-branch-of-ascending-pharyngeal-artery", "https://purl.org/ccf/ASCTB-TEMP_lamina-propria-fallopian-tube-ampulla", "https://purl.org/ccf/ASCTB-TEMP_lamina-propria-gut-associated-lymphoid-tissue-galt-", "https://purl.org/ccf/ASCTB-TEMP_lamina-propria-of-fallopian-tube-fimbria", "https://purl.org/ccf/ASCTB-TEMP_lamina-propria-of-fallopian-tube-infundibulum", "https://purl.org/ccf/ASCTB-TEMP_lamina-propria-of-fallopian-tube-intramural-segment", "https://purl.org/ccf/ASCTB-TEMP_lamina-propria-of-fallopian-tube-isthmus", "https://purl.org/ccf/ASCTB-TEMP_lateral-calcaneal-artery", "https://purl.org/ccf/ASCTB-TEMP_lateral-dorsal-digital-artery-of-fifth-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_lateral-dorsal-digital-artery-of-fourth-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_lateral-dorsal-digital-artery-of-second-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_lateral-dorsal-digital-artery-of-third-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_lateral-proper-palmar-digital-artery-of-first-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_lateral-proper-palmar-digital-artery-of-second-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_lateral-proper-plantar-digital-artery-of-fifth-digit-of-foot", "https://purl.org/ccf/ASCTB-TEMP_lateral-proper-plantar-digital-artery-of-first-digit-of-foot", "https://purl.org/ccf/ASCTB-TEMP_lateral-proper-plantar-digital-artery-of-fourth-digit-of-foot", "https://purl.org/ccf/ASCTB-TEMP_lateral-proper-plantar-digital-artery-of-second-digit-of-foot", "https://purl.org/ccf/ASCTB-TEMP_lateral-proper-plantar-digital-artery-of-third-digit-of-foot", "https://purl.org/ccf/ASCTB-TEMP_lateral-supramalleolar-artery", "https://purl.org/ccf/ASCTB-TEMP_lateral-sural-artery", "https://purl.org/ccf/ASCTB-TEMP_left-artery-of-caudate-lobe", "https://purl.org/ccf/ASCTB-TEMP_left-lateral-hepatic-artery", "https://purl.org/ccf/ASCTB-TEMP_left-medial-hepatic-artery", "https://purl.org/ccf/ASCTB-TEMP_lingual-branch-of-inferior-alveolar-artery", "https://purl.org/ccf/ASCTB-TEMP_lingular-artery-of-left-lung", "https://purl.org/ccf/ASCTB-TEMP_lobar-artery-of-spleen", "https://purl.org/ccf/ASCTB-TEMP_lobular-artery-of-pancreas", "https://purl.org/ccf/ASCTB-TEMP_long-branch-of-vasa-recta-of-colon", "https://purl.org/ccf/ASCTB-TEMP_main-cochlear-artery", "https://purl.org/ccf/ASCTB-TEMP_mandibular-pulp-arteriole", "https://purl.org/ccf/ASCTB-TEMP_maxillary-pulp-arteriole", "https://purl.org/ccf/ASCTB-TEMP_meandering-mesenteric-artery", "https://purl.org/ccf/ASCTB-TEMP_medial-calcaneal-artery", "https://purl.org/ccf/ASCTB-TEMP_medial-dorsal-digital-artery-of-fifth-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_medial-dorsal-digital-artery-of-fourth-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_medial-dorsal-digital-artery-of-second-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_medial-dorsal-digital-artery-of-third-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_medial-lenticulostriate-artery", "https://purl.org/ccf/ASCTB-TEMP_medial-proper-palmar-digital-artery-of-first-digit-of-hand", "https://purl.org/ccf/ASCTB-TEMP_medial-proper-plantar-digital-artery-of-fifth-digit-of-foot", "https://purl.org/ccf/ASCTB-TEMP_medial-proper-plantar-digital-artery-of-first-digit-of-foot", "https://purl.org/ccf/ASCTB-TEMP_medial-proper-plantar-digital-artery-of-fourth-digit-of-foot", "https://purl.org/ccf/ASCTB-TEMP_medial-proper-plantar-digital-artery-of-second-digit-of-foot", "https://purl.org/ccf/ASCTB-TEMP_medial-proper-plantar-digital-artery-of-third-digit-of-foot", "https://purl.org/ccf/ASCTB-TEMP_medial-sural-artery", "https://purl.org/ccf/ASCTB-TEMP_meningohypophyseal-artery", "https://purl.org/ccf/ASCTB-TEMP_middle-internal-frontal-artery", "https://purl.org/ccf/ASCTB-TEMP_middle-pharyngeal-artery", "https://purl.org/ccf/ASCTB-TEMP_mucosa", "https://purl.org/ccf/ASCTB-TEMP_mucosal-arteriole-of-colon", "https://purl.org/ccf/ASCTB-TEMP_muscularis-externa", "https://purl.org/ccf/ASCTB-TEMP_neuromeningeal-trunk", "https://purl.org/ccf/ASCTB-TEMP_non-penicillar-arteriole-of-spleen", "https://purl.org/ccf/ASCTB-TEMP_odontoid-arcade", "https://purl.org/ccf/ASCTB-TEMP_orbitofrontal-branch-of-anterior-cerebral-artery", "https://purl.org/ccf/ASCTB-TEMP_orbitofrontal-branch-of-middle-cerebral-artery", "https://purl.org/ccf/ASCTB-TEMP_palatine-gland-arteriole", "https://purl.org/ccf/ASCTB-TEMP_palatine-tonsil-arteriole", "https://purl.org/ccf/ASCTB-TEMP_palmar-carpal-arterial-arch", "https://purl.org/ccf/ASCTB-TEMP_pancreatic-islet-afferent-arteriole", "https://purl.org/ccf/ASCTB-TEMP_paracentral-artery", "https://purl.org/ccf/ASCTB-TEMP_periductal-arteriole-of-accessory-pancreatic-duct", "https://purl.org/ccf/ASCTB-TEMP_periductal-arteriole-of-interlobular-duct-of-pancreas", "https://purl.org/ccf/ASCTB-TEMP_periductal-arteriole-of-main-pancreatic-duct", "https://purl.org/ccf/ASCTB-TEMP_periductal-branch-of-interlobular-artery-of-pancreas", "https://purl.org/ccf/ASCTB-TEMP_periductal-branch-of-lobular-artery-of-pancreas", "https://purl.org/ccf/ASCTB-TEMP_periodontal-ligament-arteriole", "https://purl.org/ccf/ASCTB-TEMP_pharyngeal-trunk", "https://purl.org/ccf/ASCTB-TEMP_posterior-branch-of-obturator-artery", "https://purl.org/ccf/ASCTB-TEMP_posterior-internal-frontal-artery", "https://purl.org/ccf/ASCTB-TEMP_posterior-lateral-nasal-branch-of-sphenopalatine-artery", "https://purl.org/ccf/ASCTB-TEMP_posterior-segmental-medullary-artery", "https://purl.org/ccf/ASCTB-TEMP_posterior-vestibular-artery", "https://purl.org/ccf/ASCTB-TEMP_prostatic-arteriole", "https://purl.org/ccf/ASCTB-TEMP_pterygovaginal-artery", "https://purl.org/ccf/ASCTB-TEMP_radial-artery-of-uterus", "https://purl.org/ccf/ASCTB-TEMP_recurrent-muscular-branch-of-submucosal-artery-of-colon", "https://purl.org/ccf/ASCTB-TEMP_right-anterior-hepatic-artery", "https://purl.org/ccf/ASCTB-TEMP_right-artery-of-caudate-lobe", "https://purl.org/ccf/ASCTB-TEMP_right-posterior-hepatic-artery", "https://purl.org/ccf/ASCTB-TEMP_second-common-plantar-digital-artery", "https://purl.org/ccf/ASCTB-TEMP_second-palmar-metacarpal-artery", "https://purl.org/ccf/ASCTB-TEMP_second-posterior-perforating-branch-of-plantar-arch", "https://purl.org/ccf/ASCTB-TEMP_secondary-follicle-arteriole-of-spleen", "https://purl.org/ccf/ASCTB-TEMP_segmental-branch-of-lobar-artery-of-spleen", "https://purl.org/ccf/ASCTB-TEMP_segmental-hepatic-artery", "https://purl.org/ccf/ASCTB-TEMP_segmental-spinal-artery", "https://purl.org/ccf/ASCTB-TEMP_segmental-spinal-artery-2", "https://purl.org/ccf/ASCTB-TEMP_segmental-spinal-artery-3", "https://purl.org/ccf/ASCTB-TEMP_segmental-spinal-artery-4", "https://purl.org/ccf/ASCTB-TEMP_segmental-spinal-artery-5", "https://purl.org/ccf/ASCTB-TEMP_seminal-vesicle-arterial-branches-of-prostatic-artery", "https://purl.org/ccf/ASCTB-TEMP_septal-perforating-artery-2", "https://purl.org/ccf/ASCTB-TEMP_serosa", "https://purl.org/ccf/ASCTB-TEMP_short-branch-of-vasa-recta-of-colon", "https://purl.org/ccf/ASCTB-TEMP_stylomastoid-branch-of-occipital-artery", "https://purl.org/ccf/ASCTB-TEMP_sublingual-gland-arteriole", "https://purl.org/ccf/ASCTB-TEMP_submandibular-gland-arteriole", "https://purl.org/ccf/ASCTB-TEMP_submandibular-gland-branch-of-submental-artery", "https://purl.org/ccf/ASCTB-TEMP_submucosal-arteriole-of-colon", "https://purl.org/ccf/ASCTB-TEMP_submucosal-artery-of-colon", "https://purl.org/ccf/ASCTB-TEMP_subserous-artery-of-colon", "https://purl.org/ccf/ASCTB-TEMP_subserous-artery-of-colon-2", "https://purl.org/ccf/ASCTB-TEMP_sulcal-artery", "https://purl.org/ccf/ASCTB-TEMP_superficial-branch-of-lateral-plantar-artery", "https://purl.org/ccf/ASCTB-TEMP_superior-labial-gland-arteriole", "https://purl.org/ccf/ASCTB-TEMP_superior-lobar-artery-of-spleen", "https://purl.org/ccf/ASCTB-TEMP_superior-parietal-artery", "https://purl.org/ccf/ASCTB-TEMP_superior-parotid-gland-arteriole", "https://purl.org/ccf/ASCTB-TEMP_superior-pharyngeal-artery", "https://purl.org/ccf/ASCTB-TEMP_supraperiosteal-arteriole", "https://purl.org/ccf/ASCTB-TEMP_tentorial-artery", "https://purl.org/ccf/ASCTB-TEMP_third-common-plantar-digital-artery", "https://purl.org/ccf/ASCTB-TEMP_third-palmar-metacarpal-artery", "https://purl.org/ccf/ASCTB-TEMP_third-posterior-perforating-branch-of-plantar-arch", "https://purl.org/ccf/ASCTB-TEMP_thymic-arteriole", "https://purl.org/ccf/ASCTB-TEMP_tongue-arteriole", "https://purl.org/ccf/ASCTB-TEMP_transverse-pancreatic-artery", "https://purl.org/ccf/ASCTB-TEMP_vasa-recta-of-colon", "https://purl.org/ccf/ASCTB-TEMP_vasa-recta-of-ileum", "https://purl.org/ccf/ASCTB-TEMP_vasa-recta-of-jejunum", "https://purl.org/ccf/ASCTB-TEMP_weber-s-gland-arteriole", "https://purl.org/ccf/ASCTB-TEMP_zygomaticofacial-artery", "https://purl.org/ccf/ASCTB-TEMP_zygomaticotemporal-artery" ],
+        "ccf_pref_label" : [ "Fibroblast", "Fibroblasts", "fibroblast" ],
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482", "ZFA:0009026" ],
+        "preferred label" : [ "Fibroblast", "Fibroblasts", "fibroblast", "fibroblasts", "periacinar fibroblast" ]
+      },
+      "label" : "Fibroblast",
+      "ontology_name" : "hra",
+      "ontology_prefix" : null,
+      "ontology_iri" : "https://purl.humanatlas.io/collection/hra-ols",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009026",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009026"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        },
+        "part_of" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000050"
+        },
+        "has_characterizing_marker_set" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0015004"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "maxo",
+      "ontology_prefix" : "MAXO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/maxo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : null,
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ ],
+      "synonyms" : [ ],
+      "annotation" : { },
+      "label" : "fibroblast",
+      "ontology_name" : "mondo",
+      "ontology_prefix" : "MONDO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/mondo/mondo-international.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "mp",
+      "ontology_prefix" : "MP",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/mp/mp-international.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules.", "A connective-tissue cell of mesenchymal origin that secretes proteins and especially molecular collagen from which the extracellular fibrillar matrix of connective tissue forms.", "A large, flat, oval cell found in connective tissue and responsible for the formation of fibers." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "NCI_Thesaurus_definition_citation" : [ "NCIt:C12482" ],
+        "NIFSTD_definition_citation" : [ "NIFSTD:nlx_cell_20090201" ],
+        "SNOMEDCT_definition_citation" : [ "SNOMEDCT:52547004" ],
+        "term editor" : [ "James Malone", "Tomasz Adamusiak" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "ngbo",
+      "ontology_prefix" : "NGBO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/ngbo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative." ],
+      "synonyms" : [ ],
+      "annotation" : { },
+      "label" : "fibroblast",
+      "ontology_name" : "oba",
+      "ontology_prefix" : "OBA",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/oba.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : { },
+      "label" : "fibroblast",
+      "ontology_name" : "obi",
+      "ontology_prefix" : "OBI",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/obi.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/obi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/obi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/obi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/obi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/obi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/obi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/obi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        },
+        "part_of" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/obi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000050"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "editor preferred term" : [ "fibroblast" ],
+        "imported from" : [ "http://purl.obolibrary.org/obo/cl.owl" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "one",
+      "ontology_prefix" : "ONE",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/ONE",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/one/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/one/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/one/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/one/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/one/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/one/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/one/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "pato",
+      "ontology_prefix" : "PATO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/pato.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "general_cell_types_upper_slim", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482", "ZFA:0009026" ],
+        "present in taxon" : [ "http://purl.obolibrary.org/obo/NCBITaxon_9606" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "pcl",
+      "ontology_prefix" : "PCL",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/pcl.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "general_cell_types_upper_slim", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009026",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009026"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "phipo",
+      "ontology_prefix" : "PHIPO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/phipo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "human_subset", "mouse_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "comment" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative." ],
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482" ],
+        "definition" : [ "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "prefer",
+      "ontology_prefix" : "PREFER",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/prefer.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "comment" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative." ],
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "NCIt:C12482", "NIFSTD:nlx_cell_20090201", "SNOMEDCT:52547004", "VHOG:0001482", "ZFA:0009026" ],
+        "definition" : [ "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+        "preferred label" : [ "fibroblast" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "pride",
+      "ontology_prefix" : "PRIDE",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/pride.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "human_subset", "mouse_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : null,
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "NCIt",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "NIFSTD",
+        "id" : "nlx_cell_20090201",
+        "description" : null,
+        "url" : null
+      }, {
+        "database" : "SNOMEDCT",
+        "id" : "52547004",
+        "description" : null,
+        "url" : "http://purl.bioontology.org/ontology/SNOMEDCT/52547004"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009026",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009026"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        },
+        "located_in" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0001025"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "VHOG:0001482" ],
+        "present in taxon" : [ "http://purl.obolibrary.org/obo/NCBITaxon_9606" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "rbo",
+      "ontology_prefix" : "RBO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/rbo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        },
+        "develops_from" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "FMA:63877" ],
+        "imported from" : [ "http://purl.obolibrary.org/obo/cl.owl" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "txpo",
+      "ontology_prefix" : "TXPO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/txpo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/txpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/txpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/txpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/txpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/txpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/txpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/txpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/txpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/txpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/txpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/txpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482", "ZFA:0009026" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "uberon",
+      "ontology_prefix" : "UBERON",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/uberon.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009026",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009026"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482", "ZFA:0009026" ],
+        "preferred label" : [ "fibroblast" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "upheno",
+      "ontology_prefix" : "UPHENO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/upheno.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009026",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009026"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000057",
+      "lang" : "en",
+      "description" : [ "These cells may be vimentin-positive, fibronectin-positive, fsp1-positive, MMP-1-positive, collagen I-positive, collagen III-positive, and alpha-SMA-negative.", "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000452", "CALOHA:TS-0362", "FMA:63877", "NCIT:C12482", "VHOG:0001482" ]
+      },
+      "label" : "fibroblast",
+      "ontology_name" : "xpo",
+      "ontology_prefix" : "XPO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/xpo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000057",
+      "obo_id" : "CL:0000057",
+      "in_subset" : [ "cellxgene_subset", "general_cell_types_upper_slim", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+        "oboXrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0517223651",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0517223651"
+        }, {
+          "database" : "MESH",
+          "id" : "D005347",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D005347"
+        }, {
+          "database" : null,
+          "id" : "http://en.wikipedia.org/wiki/Fibroblast",
+          "description" : null,
+          "url" : "http://en.wikipedia.org/wiki/Fibroblast"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000452",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000452"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0362",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0362"
+      }, {
+        "database" : "FMA",
+        "id" : "63877",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/63877"
+      }, {
+        "database" : "NCIT",
+        "id" : "C12482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12482"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001482",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001482"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000057/graph"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://www.ebi.ac.uk/ols4/api/terms?iri=http%3A//purl.obolibrary.org/obo/CL_0000057&page=0&size=1000"
+    }
+  },
+  "page" : {
+    "size" : 1000,
+    "totalElements" : 33,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}

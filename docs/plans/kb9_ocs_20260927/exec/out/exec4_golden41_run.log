@@ -1,0 +1,141 @@
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 46/391 [00:00<00:00, 404.20it/s]Loading weights:  22%|██▏       | 87/391 [00:00<00:01, 252.40it/s]Loading weights:  30%|██▉       | 116/391 [00:00<00:01, 244.99it/s]Loading weights:  36%|███▋      | 142/391 [00:00<00:01, 235.75it/s]Loading weights:  43%|████▎     | 167/391 [00:00<00:01, 206.70it/s]Loading weights:  48%|████▊     | 189/391 [00:00<00:01, 197.73it/s]Loading weights:  54%|█████▍    | 213/391 [00:00<00:00, 208.32it/s]Loading weights:  60%|██████    | 235/391 [00:01<00:00, 193.23it/s]Loading weights:  66%|██████▋   | 260/391 [00:01<00:00, 196.98it/s]Loading weights:  73%|███████▎  | 284/391 [00:01<00:00, 207.57it/s]Loading weights:  81%|████████  | 316/391 [00:01<00:00, 223.91it/s]Loading weights:  87%|████████▋ | 339/391 [00:01<00:00, 207.91it/s]Loading weights:  92%|█████████▏| 361/391 [00:01<00:00, 208.31it/s]Loading weights:  98%|█████████▊| 383/391 [00:01<00:00, 207.00it/s]Loading weights: 100%|██████████| 391/391 [00:01<00:00, 220.23it/s]
+库: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09 | 174616 chunks, 6 species
+direct side done 41 82s
+[09/27/26 21:17:17] INFO     JAX version 0.10.2 available.         config.py:125
+                    INFO     Loading SentenceTransformer model     model.py:1080
+                             from                                               
+                             /mnt/D/OcularKB/models/bge-large-en-v              
+                             1.5.                                               
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 8160.86it/s]
+库: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09 | 174616 chunks, 6 species
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 10.26it/s]
+[OK ] golden_retina          Rod                            
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 28.50it/s]
+[OK ] golden_retina          Cone                           
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 20.81it/s]
+[OK ] golden_retina          Retinal Pigment Epithelium     
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.85it/s]
+[OK ] golden_retina          Muller Glia                    
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 28.18it/s]
+[OK ] golden_retina          Astrocyte                      
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 19.23it/s]
+[OK ] golden_retina          Microglia                      
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.10it/s]
+[OK ] golden_retina          Retinal Ganglion Cell          
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.89it/s]
+[OK ] golden_retina          Rod Bipolar Cell               
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 28.84it/s]
+[OK ] golden_retina          Horizontal Cell                
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.44it/s]
+[OK ] golden_retina          Amacrine Cell                  
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 22.60it/s]
+[OK ] spot_cornea            corneal epithelium             
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 23.07it/s]
+[OK ] spot_cornea            corneal endothelium            
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.79it/s]
+[OK ] spot_cornea            keratocyte                     
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 28.29it/s]
+[OK ] spot_cornea            limbal stem cell               
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 22.65it/s]
+[OK ] spot_conjunctiva       goblet cell                    
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 22.44it/s]
+[OK ] spot_conjunctiva       conjunctival epithelium        
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 23.26it/s]
+[OK ] spot_conjunctiva       fibroblast                     
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 26.88it/s]
+[OK ] spot_sclera            fibroblast                     
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.82it/s]
+[OK ] spot_sclera            chondrocyte                    
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.70it/s]
+[OK ] spot_sclera            smooth muscle                  
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 20.88it/s]
+[OK ] spot_trabecular_meshwork trabecular meshwork cell       
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.11it/s]
+[OK ] spot_trabecular_meshwork schlemm canal endothelium      
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.72it/s]
+[OK ] spot_trabecular_meshwork endothelial cell               
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 28.49it/s]
+[OK ] spot_iris              iris smooth muscle             
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.54it/s]
+[OK ] spot_iris              iris pigment epithelium        
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 28.98it/s]
+[OK ] spot_iris              astrocyte                      
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.34it/s]
+[OK ] spot_ciliary_body      ciliary epithelium             
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 22.27it/s]
+[OK ] spot_ciliary_body      endothelial cell               
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.18it/s]
+[OK ] spot_ciliary_body      smooth muscle                  
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 28.73it/s]
+[OK ] spot_lens              lens fiber cell                
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.87it/s]
+[OK ] spot_lens              lens epithelium                
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 28.73it/s]
+[OK ] spot_lens              fiber cell                     
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 20.97it/s]
+[OK ] spot_optic_nerve       oligodendrocyte                
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.52it/s]
+[OK ] spot_optic_nerve       astrocyte                      
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 25.14it/s]
+[OK ] spot_optic_nerve       microglia                      
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.07it/s]
+[OK ] spot_optic_nerve       retinal ganglion cell          
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 21.72it/s]
+[OK ] spot_RPE               retinal pigment epithelium     
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 26.57it/s]
+[OK ] spot_RPE               endothelial cell               
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 20.99it/s]
+[OK ] spot_choroid           choriocapillaris endothelium   
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 26.83it/s]
+[OK ] spot_choroid           melanocyte                     
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 27.50it/s]
+[OK ] spot_choroid           pericyte                       
+  + Exception Group Traceback (most recent call last):
+  |   File "/mnt/D/EyeKB/plans/kb9_ocs_20260927/exec/scripts/exec4_golden41_copy.py", line 135, in <module>
+  |     if __name__=="__main__": sys.exit(asyncio.run(main()))
+  |                                       ~~~~~~~~~~~^^^^^^^^
+  |   File "/usr/lib/python3.14/asyncio/runners.py", line 204, in run
+  |     return runner.run(main)
+  |            ~~~~~~~~~~^^^^^^
+  |   File "/usr/lib/python3.14/asyncio/runners.py", line 127, in run
+  |     return self._loop.run_until_complete(task)
+  |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  |   File "/usr/lib/python3.14/asyncio/base_events.py", line 719, in run_until_complete
+  |     return future.result()
+  |            ~~~~~~~~~~~~~^^
+  |   File "/mnt/D/EyeKB/plans/kb9_ocs_20260927/exec/scripts/exec4_golden41_copy.py", line 77, in main
+  |     async with stdio_client(params) as (rd,wr):
+  |                ~~~~~~~~~~~~^^^^^^^^
+  |   File "/usr/lib/python3.14/contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "/home/ubuntu/training-venv/lib/python3.14/site-packages/mcp/client/stdio.py", line 200, in stdio_client
+  |     async with anyio.create_task_group() as tg:
+  |                ~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "/home/ubuntu/training-venv/lib/python3.14/site-packages/anyio/_backends/_asyncio.py", line 815, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "/home/ubuntu/training-venv/lib/python3.14/site-packages/mcp/client/stdio.py", line 204, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "/mnt/D/EyeKB/plans/kb9_ocs_20260927/exec/scripts/exec4_golden41_copy.py", line 78, in main
+    |     async with ClientSession(rd,wr) as s:
+    |                ~~~~~~~~~~~~~^^^^^^^
+    |   File "/home/ubuntu/training-venv/lib/python3.14/site-packages/mcp/client/session.py", line 481, in __aexit__
+    |     result = await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/ubuntu/training-venv/lib/python3.14/site-packages/anyio/_backends/_asyncio.py", line 815, in __aexit__
+    |     raise BaseExceptionGroup(
+    |         "unhandled errors in a TaskGroup", self._exceptions
+    |     ) from None
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "/mnt/D/EyeKB/plans/kb9_ocs_20260927/exec/scripts/exec4_golden41_copy.py", line 110, in main
+      |     assert sorted(rebuilt) == sorted(pre_all), \
+      |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      | AssertionError: 历史快照与当前剥别名重建不一致 (真实漂移则停车)
+      +------------------------------------
+G41_RC=1

@@ -1,0 +1,48 @@
+--- pre_images/eyekb_core.py.bak_pre_kb9reg	2026-09-26 21:27:14.653506400 +0800
++++ /mnt/D/EyeKB/mcp_server/eyekb_core.py	2026-09-27 21:12:59.680432400 +0800
+@@ -128,6 +128,14 @@
+ #       源文件零改动; granularity_note_stromal_caution 随命中类附注)
+ #   library="lacrimal_v6" → markers_v6_lacrimal_increment.json (v6.0-lacrimal, KB8: 泪腺分泌/
+ #       导管/肌上皮警示条 3 条; 同样读入派生; 仅显式查询可达, 默认 all 永不含——PI A3 暂不切)
++#   library="k9_ocs" → markers_k9_ocs_increment.json (k9.0-ocs-registered-v1, KB9 案 B 眼表 4 新条:
++#       Melanocyte/Schwann/Conj_epithelium_suprabasal/Limbus_Sclera_fibroblast_C1, 均
++#       applicability=ocular_surface_only; 逐条带 CL id+OLS 回证+逐基因 PMID 链。
++#       [KB9REG-EXEC t_4bb75b26 · PI D17 批准注册, 2026-09-28 波] REGISTERED_DEFAULT_OFF:
++#       仅显式路由可达, 任何态不入默认 all (不入 V6_DEFAULT_LIBS 白名单, 与 lacrimal_v6 同纪律);
++#       激活需 §10-6 义务 run + PI 另批, 本登记不含激活机制。
++#       配套屏蔽/适用性规则+装配规则 v2=同目录 _k9_ocs_rules_overlay_v1.json (惰性数据件,
++#       本 loader 不读, MCP 运行时不消费; 消费面=评测/判读 run 直读文件)。
+ MARKER_DIR = (KB / "markers")
+ MARKER_LIBS = {"retina": MARKER_JSON,
+                "membrane": MARKER_DIR / "markers_membrane_v1.json",
+@@ -137,7 +145,10 @@
+     # lacrimal_v6 = KB8 首个眼附属器词条库 (t_e7ec73ab, 2026-09-25): 3 条 (分泌/导管/肌上皮警示条)
+     #   + reference_layer; 无 markers 顶层键, 读入时由 lacrimal_increment.core 归一派生 (本体零改动)
+     #   [t_5d5853c9] PI A3=暂不切: 禁入 V6_DEFAULT_LIBS 白名单, 仅显式路由可达
+-    "lacrimal_v6": MARKER_DIR / "markers_v6_lacrimal_increment.json"}
++    "lacrimal_v6": MARKER_DIR / "markers_v6_lacrimal_increment.json",
++    # k9_ocs = KB9 案 B 眼表 4 新条 (t_4bb75b26 注册, 默认 OFF; 顶层 markers 键=注册时派生落盘,
++    #   读入直取无需运行时派生; 与 build 底件 copy 不 move, 底件 sha 在件内 registration_provenance)
++    "k9_ocs": MARKER_DIR / "markers_k9_ocs_increment.json"}
+ 
+ # [ACT t_5d5853c9] 默认 all 的 v6 并入白名单——硬编码, env 值只能整体开关, 不能注入任何库
+ V6_DEFAULT_LIBS = ("retina_v6", "face_v6")
+@@ -159,7 +170,7 @@
+         names = [lib]
+     else:
+         raise ValueError("library 必须是 retina|membrane|retina_interneuron|retina_v6|"
+-                         "face_v6|lacrimal_v6|all, 收到: " + repr(library))
++                         "face_v6|lacrimal_v6|k9_ocs|all, 收到: " + repr(library))
+     dbs = []
+     for n in names:
+         p = MARKER_LIBS[n]
+@@ -193,6 +204,9 @@
+     (USER_DIRECTIVE_20260926 A1/A2): 默认 all 含 retina_v6+face_v6, env EYEKB_ACT_V6=0
+     |false|off|no 回退=现役三库 (与激活前 pre 基线全等); lacrimal_v6 任何态不入默认
+     (PI A3 暂不切, 仅显式路由); 查询时 v6 发布文件本体只读。
++    library=k9_ocs (t_4bb75b26 注册, PI D17): KB9 案 B 眼表 4 新条 REGISTERED_DEFAULT_OFF——
++    任何态不入默认 all (不入 V6_DEFAULT_LIBS, 无激活 env), 仅显式查询可达; 激活需
++    §10-6 义务 run + PI 另批。
+     """
+     dbs = _load_marker_dbs(library)
+     markers, owner = {}, {}

@@ -1,0 +1,173 @@
+{
+ "started": "2026-09-27 21:22:43",
+ "card": "t_be336eee",
+ "checks": [
+  {
+   "name": "11 条 schema=eyekb-baseline/1.1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "11 条顶层 organism_stage+stage_axis 全在位",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "阈值 >=18y 写入产物字段 (红线3)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "4 级枚举一致 {fetal,adult,developing,unknown}",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "aging 正交轴声明在位 (裁定 Q2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "5 adult 条: 双档 entry_id+sha256 身份签名分离",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "两档全等性逻辑+披露对账 (adult+excluded=全量)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "fetal 禁入 adult 主档实核: 5 条 disclosure 无 fetal 期 (实测=0, 污染源=新生儿/儿童)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "非 adult 披露全部归 developing/unknown (无静默 adult)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "成人主档有真实剔除: retina 7 / surface 9 / ON 9 / TM 0(全成人) / CB 4 供者",
+   "ok": true,
+   "detail": "[7, 9, 9, 0, 4]"
+  },
+  {
+   "name": "RPE=unknown 档 + 披露行 + 禁成人引用 caveat",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "骨架=5 且全带 unknown+回填路径含发育轴",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "索引 schema 1.1 + card t_be336eee + 11 条全带 organism_stage",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "索引 filled=6/skeleton=5 不变",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "_STAGE_DISCLOSURE.md/.json 在位",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "fetal 转换态概念条目: 候选>=6 + '现役引擎不适用'声明 + 不实算",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "疾病矩阵 1.1: 12 格全带 organism_stage=adult + 三键说明",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "PDR 示例格 organism_stage=adult + 发育期不进格声明",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "classify_uberon 用例表锁 14/14",
+   "ok": true,
+   "detail": "{}"
+  },
+  {
+   "name": "MCP initialize",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "list_tools == 5",
+   "ok": true,
+   "detail": "['get_disease_prior', 'get_kb_page', 'get_tissue_composition', 'query_marker', 'search_literature']"
+  },
+  {
+   "name": "schema 含 development_stage 参数",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "默认查询=adult 主档 (entry_id/baseline_status/os)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "MCP donor_level_main(adult-only)≡文件全等",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "对照档/披露/签名透传 ≡文件",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "development_stage=adult ≡ 默认",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "红线1: retina+fetal → 转换态概念 (禁借成人桶)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "postnatal→developing 映射 (裁定 Q1) 亦回概念条",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "unknown 过滤命中 RPE 披露条",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "retina+unknown → no_unknown_stage_entry 拒替代",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "疾病条透传 organism_stage=adult (条款6)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "MCP JSON == 直调 get_tissue_composition (retina)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "MCP JSON == 直调 (fetal 概念路径)",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 33,
+ "fail": 0
+}
