@@ -27,7 +27,7 @@
 ## 人类 PI 判读槽位（槽位 A）
 
 - 同证据面下"临床专家 vs AI"一致率比双 AI 互判更贴 KB 人机交互定位；PI 走 MSG_PLATFORM 分批判读包：每批=一个成员 5 簇（top 基因 + KB 命中 + KB 排名 + n_cells），大白话回"身份+等级 A/B/C+一句话依据"，协调者忠实转录 JSONL 不加工。
-- 槽位文件名保持评分脚本兼容（kb2_bscore.py 硬编码 ANN_A_pi-chief.jsonl/ANN_B_second.jsonl），来源换人时文件名不动、README/任务书声明实际判读员身份。
+- 槽位文件名保持评分脚本兼容（kb2_bscore.py 硬编码 ANN_A_AGENT_ROLE.jsonl/ANN_B_second.jsonl），来源换人时文件名不动、README/任务书声明实际判读员身份。
 - 发证据卡前须自查不泄露：不给 truth、不给引擎预测、不给另一判读员意见；KB 排名要注明"检索副产物非置信度"。
 
 ## 一句话教训

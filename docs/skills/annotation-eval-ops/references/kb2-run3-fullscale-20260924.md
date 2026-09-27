@@ -12,7 +12,7 @@ PI："RUN3 方向？"→"你考卷都考完了？不用下了，用已有数据�
 RUN3_DESIGN_prereg.md：判据 M1 一致率+kappa（基线 RUN2 28/45、0.539）/ M2 真值逐成员命中（基线 A26 B24 每30）/ M3 弃权率分布（不设及格线）/ M4 新分歧热点→KB 缺口候选（只报告禁自修）/ M5 锚卷 44 簇跨面翻转率。stopping rules：qwen 批 3 败列缺失不伪造；面 sha 中途变=停判重冻。
 
 ## 模型通道选定（冒烟判据=content 非空）
-- A = qwen3.8-max @ LLM_CHANNEL LLM_CHANNEL/compatible-mode/v1（key 从 AGENT_ROLE config "name: bailian" 段 re.search 提取，禁进命令行）
+- A = qwen3.8-max @ LLM_CHANNEL LLM_CHANNEL.cn-beijing.LLM_CHANNEL/compatible-mode/v1（key 从 AGENT_ROLE config "name: LLM_CHANNEL" 段 re.search 提取，禁进命令行）
 - B = glm-5.1（同通道）。淘汰：Agents-A1（discovery-api 站 config 里 key 是脱敏占位不可用）、deepseek-v4-pro（200 但 content=''，reasoning 吃光 max_tokens）
 - 规模偏差写进 prereg：worker 卡 2h 容量约 45 行撑不了 290，B 从会话卡改跨厂商 runner；A=Qwen 系 B=GLM 系保独立性
 

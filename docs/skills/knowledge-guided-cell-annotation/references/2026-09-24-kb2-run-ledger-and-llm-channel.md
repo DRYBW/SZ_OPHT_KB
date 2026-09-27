@@ -1,8 +1,8 @@
 # KB2 RUN 系列台账与通道细节（2026-09-24）
 
-## LLM_CHANNEL（Bailian）通道
-- base_url: `https://LLM_CHANNEL/compatible-mode/v1`（OpenAI 兼容）
-- 可用 key：AGENT_ROLE profile config.yaml 里 `name: bailian` 条目的 api_key（sk-sp- 前缀，全文存储可用）；`name: LLM_CHANNEL` 条目（LLM_CHANNEL）的 key 在 config 里**脱敏存储**（"sk-b21...12c2"），脚本不可用
+## LLM_CHANNEL（LLM_CHANNEL）通道
+- base_url: `https://LLM_CHANNEL.cn-beijing.LLM_CHANNEL/compatible-mode/v1`（OpenAI 兼容）
+- 可用 key：AGENT_ROLE profile config.yaml 里 `name: LLM_CHANNEL` 条目的 api_key（sk-sp- 前缀，全文存储可用）；`name: LLM_CHANNEL` 条目（LLM_CHANNEL）的 key 在 config 里**脱敏存储**（"sk-b21...12c2"），脚本不可用
 - 模型清单可 GET /v1/models 实查：含 qwen3.8-max / qwen3.8-flash / glm-5.1 / kimi-k2.6 / deepseek-v4-pro 等
 - **坑：PI 口中的模型名先对齐通道**。实例：说"qwen3.8MAX"被理解成本地 LOCAL_LLM 的 Qwen3.8-27B-NVFP4（:PORT），实际指**LLM_CHANNEL的 qwen3.8-max**（"你不知道的话问下其他的agent就知道了"——扫各 profile config 的 provider/model 即得）
 - qwen3.8-max 默认开思维链：批量任务必带 `enable_thinking:false`，否则大输出请求读超时（>540s）
