@@ -1,4 +1,4 @@
-# kb+mcp 逐文件 sha256 对账 (repo vs 线上权威 /mnt/D/EyeKB) — KB9REG-EXEC t_4bb75b26 2026-09-27 21:38:10
+# kb+mcp 逐文件 sha256 对账 (repo vs 线上权威 /mnt/D/EyeKB) — KB9REG-EXEC t_4bb75b26 2026-09-27 21:39:31
 relpath	online_path	repo_sha256	online_sha256	status
 kb/baselines/RPE.json	/mnt/D/EyeKB/kb/baselines/RPE.json	4732953b48132a0b2c93b3fecee083c79dc8c28f645443f9c8168d9e8e8acc55	4732953b48132a0b2c93b3fecee083c79dc8c28f645443f9c8168d9e8e8acc55	MATCH
 kb/baselines/RPE.md	/mnt/D/EyeKB/kb/baselines/RPE.md	d6974352afb99a28289d0fd93c11eef4207a706749870c71e354f903c2340cef	d6974352afb99a28289d0fd93c11eef4207a706749870c71e354f903c2340cef	MATCH
@@ -105,4 +105,4 @@ kb/vk_literature_index/visual-function.md	/mnt/D/EyeKB/kb/vk_literature_index/vi
 mcp_server/calllog.py	/mnt/D/EyeKB/mcp_server/calllog.py	840b0e9189a318e4e8d935d6a57ff38d94f832689d06152fe974ab1dc60be968	840b0e9189a318e4e8d935d6a57ff38d94f832689d06152fe974ab1dc60be968	MATCH
 mcp_server/eyekb_core.py	/mnt/D/EyeKB/mcp_server/eyekb_core.py	1988685b36a6fe3a502badc69d679062e783d32266089e738290885675b73cd8	0c552d3f3a77a956c7a3ef01745bf5ab8e5e689995be19a86764af91d640847e	DESENS
 mcp_server/server.py	/mnt/D/EyeKB/mcp_server/server.py	b28a23e37237677ca0954191715da360449a70918b227c385df697d7833541b8	cb373361620e1c596f900b6bc0523a93624a8d9d3bdc92c038b438df431a1ce2	DESENS
-mcp_server/softflags.py	/mnt/D/EyeKB/mcp_server/softflags.py	dbc6d5f854ce9ae3d80523570d9735916512406d3705ee3219f7642fb53f84d9	6434c84e096de614a78528cd94998f99ee9f0379ffc950250520712ae4af79df	DRIFT!!
+mcp_server/softflags.py	/mnt/D/EyeKB/mcp_server/softflags.py	dbc6d5f854ce9ae3d80523570d9735916512406d3705ee3219f7642fb53f84d9	6434c84e096de614a78528cd94998f99ee9f0379ffc950250520712ae4af79df	PRIOR_DESENS(c4a8f53 注释级脱敏, 协调者已批)
