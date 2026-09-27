@@ -1,0 +1,3974 @@
+{
+ "schema": "eyekb-k9-rules-overlay/1.0",
+ "version": "k9.0-rules-registered-v1",
+ "registered_at": "2026-09-27 21:12:25",
+ "card": "t_4bb75b26",
+ "status": "INERT_REGISTERED_DATA — 非可查询库：不在 MARKER_LIBS、不在任何加载 glob、MCP 运行时不读本件；消费面=评测/判读 run 直接按路径读取（激活前义务 run 亦以此为准）。注册=数据落库留档，非行为变更。",
+ "positioning_limitation_statement": "本件所辖词条与证据装配规则，属开发集（D002 眼表 578K，作者标签参与规则开发）上的定向修复+回归检查：规则开发消费了 D002 作者分组标签，参考池与评价在数据来源上完全同源；自检 P1=22/33（FAIL 如实报）与P2=0/33 均为该开发集上的工程验收结果，不构成独立验证的性能增益；24/33 不可作有依据的预测。（§0 标题页级限定声明，随一切下游文本强制携带；全文见 REGISTER_PACKAGE_v2.md §0/§2）",
+ "registration_provenance": {
+  "approved_by": "PI D17（同 markers_k9_ocs_increment.json）",
+  "external_review": "REVIEWER_LLM xhigh 五轮 ACCEPTED（2026-09-27）",
+  "package_version": "reg-v2.2-20260927",
+  "vote_face_note_c2b": "案 B 票面 P1 22/33 FAIL 属 C4 历史口径，本注册不改写该记录；票规 v2=C2b（PI 09-27 D11 批准向前生效）下同票机械重算=29/33 过 ≥24 门（反事实实证，零翻案），来源 /mnt/D/EyeKB/plans/tiep_20260927/TIEP_PROPOSAL.md；本附注仅为口径登记，C2b 生效范围=落款后预注册 run，不追溯本案 B 票面。",
+  "sources": {
+   "build_file": "/mnt/D/EyeKB/plans/kb9_ocs_20260927/build/markers_k9_ocs_increment.json",
+   "build_file_sha256": "22c445ecd7b2521869205b6d01012427c8d186500239bbd6618dc07d6edda55a",
+   "register_package": "/mnt/D/EyeKB/plans/kb9_ocs_20260927/register/REGISTER_PACKAGE_v2.md",
+   "register_package_sha256": "4810bbe47a7a1faefa26c44e50dbbb35bdd9e400daffb18685acc78499bc0aea",
+   "a06_scope_table_sha256": "8c7aa4098750768bb0f0dc40ecdeb51e7d31353deb075dd2a6b6e56683c70bc3",
+   "shield_tsv_sha256": "5f930c3d9384ec787ea67b7535061d621a488d4ea653705a965984219bb07ba4",
+   "face_effective_genesets_sha256": "6a18aafbf023680d2eb7db1526d920cdd6a2a6866cd02d1874dca59a0752514e",
+   "crosswalk_ext_sha256": "8d82b6191067e983d15b0e33c4c8044a8abccb960bf82faa99622bd46462c36f",
+   "a09_snapshot_sha256": "fcf851e5d19a44cd5f3a7e4fb37993545d731d0509440b656303cd8c2e87f344",
+   "a03_registry_sha256": "586616e67c46ceaaf9398b2e868acb2edea3bc77c86a1606f17e004d944efec6",
+   "a19_by_entry_sha256": "d0397bde786a67fbdd94deaea5b812a2c5cc13e5769e687f9eb7bd76c4169b1e",
+   "ols_parsed_ledger_sha256": "3c917c8d6e6a1f3514466f4df4f967772b204fa8ed2d59ef0373f9e6399ca9f5",
+   "limbus_ols_recheck_raw_sha256": "50a504cf74733cc0a52a0b419acc8db576f1686f0bb970b3ffaf48da4185abcc",
+   "pmid_ledger": "/mnt/D/EyeKB/plans/kb9_ocs_20260927/ledgers/PMID_LEDGER.tsv",
+   "pmid_ledger_sha256": "83ea5b7325e39dd9b2131263872fac444003eec11473354886aa314070c1d318"
+  }
+ },
+ "r1_item_scope_table": {
+  "semantics": "规则语义=逐条目 scope 判定（弃\"来源文件整批排除\"）：视网膜神经元 6 类（Rod/Cone/BC/AC/HC/RGC）与 MG/Astro/Micro/RPE（共 10 类×3 载体文件=30 行）scope=retina_only→眼表面证据装配不计入 kb_marker_ranking，对命中来源不作穷尽断言；身份统一口径 MG=Müller 胶质(RLBP1/GLUL/SOX9/S100B)、Astro=星形胶质(GFAP/AQP4/SLC1A3)、Micro=microglia(C1QB)；反向=4 新条 scope=ocular_surface_only→视网膜材料不计入（火灾审计格二规则臂实证泄漏 0）。排除依据=组织解剖学+细胞谱系，不以作者词表缺席作生物学不存在证明。",
+  "rows": [
+   {
+    "entry_id": "Rod",
+    "class": "Rod",
+    "owner_file_firstload": "markers_v4.1_clean.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "视杆光感受器：组织解剖学上仅存在于视网膜神经层（marker 身份锚 RHO/NRL/NR2E3），角膜/limbus/巩膜/结膜无此细胞层，该条 scope=retina_only：眼表面材料证据装配不计入其 kb_marker_ranking（对命中来源不作穷尽断言）",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "Cone",
+    "class": "Cone",
+    "owner_file_firstload": "markers_v4.1_clean.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "同 Rod（视锥光感受器，仅视网膜外神经层）",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "BC",
+    "class": "BC",
+    "owner_file_firstload": "markers_v4.1_clean.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "双极细胞：视网膜内神经元，仅存在于视网膜内神经层，眼表面组织无该层",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "AC",
+    "class": "AC",
+    "owner_file_firstload": "markers_v4.1_clean.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "无长突细胞：视网膜内神经元，同上",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "HC",
+    "class": "HC",
+    "owner_file_firstload": "markers_v4.1_clean.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "水平细胞：视网膜内神经元，同上",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "RGC",
+    "class": "RGC",
+    "owner_file_firstload": "markers_v4.1_clean.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "神经节细胞：视网膜输出神经元，胞体位于视网膜神经节细胞层（眼球后极），角膜/limbus/巩膜/结膜 portal 取材范围不含该层",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "MG",
+    "class": "MG",
+    "owner_file_firstload": "markers_v4.1_clean.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "细胞身份=Müller 胶质（v4.1 基因锚 RLBP1/GLUL/SOX9/S100B；冻结 crosswalk 别名注=Müller glia 视网膜特有）：视网膜专属巨胶质，眼表面组织无 Müller 细胞",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "Astro",
+    "class": "Astro",
+    "owner_file_firstload": "markers_v4.1_clean.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "细胞身份=星形胶质（v4.1 基因锚 GFAP/AQP4/SLC1A3；冻结 crosswalk 别名注=astrocyte 视网膜/中枢）：视网膜内星形胶质，与眼表面组织学细胞群不同实体；RUN5 实证 Q6::13/22/16 被 MG|Astro 接管即此二类",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "Micro",
+    "class": "Micro",
+    "owner_file_firstload": "markers_v4.1_clean.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "细胞身份=microglia（v4.1 基因锚 C1QB 等小胶质标志）：CNS 常驻巨噬谱系词条；眼表面髓系信号由 Macrophages/Monocytes 词条承载（其 kept 行为见遮蔽表），本条在眼表面装配中不计入排名",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "RPE",
+    "class": "RPE",
+    "owner_file_firstload": "markers_v4.1_clean.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "视网膜色素上皮（基因锚 BEST1/RPE65 类/LRAT/RDH5/MITF）：单层色素上皮位于视网膜侧，与角膜/结膜上皮不同胚胎起源（神经外胚层诱导 vs 表面外胚层），组织解剖学上不在眼表面 portal 取材层",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_interneuron::Rod",
+    "class": "Rod",
+    "owner_file_firstload": "markers_v5_retina_interneuron.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "视杆光感受器：组织解剖学上仅存在于视网膜神经层（marker 身份锚 RHO/NRL/NR2E3），角膜/limbus/巩膜/结膜无此细胞层，该条 scope=retina_only：眼表面材料证据装配不计入其 kb_marker_ranking（对命中来源不作穷尽断言）",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_interneuron::Cone",
+    "class": "Cone",
+    "owner_file_firstload": "markers_v5_retina_interneuron.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "同 Rod（视锥光感受器，仅视网膜外神经层）",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_interneuron::BC",
+    "class": "BC",
+    "owner_file_firstload": "markers_v5_retina_interneuron.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "双极细胞：视网膜内神经元，仅存在于视网膜内神经层，眼表面组织无该层",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_interneuron::AC",
+    "class": "AC",
+    "owner_file_firstload": "markers_v5_retina_interneuron.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "无长突细胞：视网膜内神经元，同上",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_interneuron::HC",
+    "class": "HC",
+    "owner_file_firstload": "markers_v5_retina_interneuron.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "水平细胞：视网膜内神经元，同上",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_interneuron::RGC",
+    "class": "RGC",
+    "owner_file_firstload": "markers_v5_retina_interneuron.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "神经节细胞：视网膜输出神经元，胞体位于视网膜神经节细胞层（眼球后极），角膜/limbus/巩膜/结膜 portal 取材范围不含该层",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_interneuron::MG",
+    "class": "MG",
+    "owner_file_firstload": "markers_v5_retina_interneuron.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "细胞身份=Müller 胶质（v4.1 基因锚 RLBP1/GLUL/SOX9/S100B；冻结 crosswalk 别名注=Müller glia 视网膜特有）：视网膜专属巨胶质，眼表面组织无 Müller 细胞",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_interneuron::Astro",
+    "class": "Astro",
+    "owner_file_firstload": "markers_v5_retina_interneuron.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "细胞身份=星形胶质（v4.1 基因锚 GFAP/AQP4/SLC1A3；冻结 crosswalk 别名注=astrocyte 视网膜/中枢）：视网膜内星形胶质，与眼表面组织学细胞群不同实体；RUN5 实证 Q6::13/22/16 被 MG|Astro 接管即此二类",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_interneuron::Micro",
+    "class": "Micro",
+    "owner_file_firstload": "markers_v5_retina_interneuron.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "细胞身份=microglia（v4.1 基因锚 C1QB 等小胶质标志）：CNS 常驻巨噬谱系词条；眼表面髓系信号由 Macrophages/Monocytes 词条承载（其 kept 行为见遮蔽表），本条在眼表面装配中不计入排名",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_interneuron::RPE",
+    "class": "RPE",
+    "owner_file_firstload": "markers_v5_retina_interneuron.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "视网膜色素上皮（基因锚 BEST1/RPE65 类/LRAT/RDH5/MITF）：单层色素上皮位于视网膜侧，与角膜/结膜上皮不同胚胎起源（神经外胚层诱导 vs 表面外胚层），组织解剖学上不在眼表面 portal 取材层",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_v6::Rod",
+    "class": "Rod",
+    "owner_file_firstload": "markers_v6_retina_repair.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "视杆光感受器：组织解剖学上仅存在于视网膜神经层（marker 身份锚 RHO/NRL/NR2E3），角膜/limbus/巩膜/结膜无此细胞层，该条 scope=retina_only：眼表面材料证据装配不计入其 kb_marker_ranking（对命中来源不作穷尽断言）",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_v6::Cone",
+    "class": "Cone",
+    "owner_file_firstload": "markers_v6_retina_repair.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "同 Rod（视锥光感受器，仅视网膜外神经层）",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_v6::BC",
+    "class": "BC",
+    "owner_file_firstload": "markers_v6_retina_repair.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "双极细胞：视网膜内神经元，仅存在于视网膜内神经层，眼表面组织无该层",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_v6::AC",
+    "class": "AC",
+    "owner_file_firstload": "markers_v6_retina_repair.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "无长突细胞：视网膜内神经元，同上",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_v6::HC",
+    "class": "HC",
+    "owner_file_firstload": "markers_v6_retina_repair.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "水平细胞：视网膜内神经元，同上",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_v6::RGC",
+    "class": "RGC",
+    "owner_file_firstload": "markers_v6_retina_repair.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "神经节细胞：视网膜输出神经元，胞体位于视网膜神经节细胞层（眼球后极），角膜/limbus/巩膜/结膜 portal 取材范围不含该层",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_v6::MG",
+    "class": "MG",
+    "owner_file_firstload": "markers_v6_retina_repair.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "细胞身份=Müller 胶质（v4.1 基因锚 RLBP1/GLUL/SOX9/S100B；冻结 crosswalk 别名注=Müller glia 视网膜特有）：视网膜专属巨胶质，眼表面组织无 Müller 细胞",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_v6::Astro",
+    "class": "Astro",
+    "owner_file_firstload": "markers_v6_retina_repair.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "细胞身份=星形胶质（v4.1 基因锚 GFAP/AQP4/SLC1A3；冻结 crosswalk 别名注=astrocyte 视网膜/中枢）：视网膜内星形胶质，与眼表面组织学细胞群不同实体；RUN5 实证 Q6::13/22/16 被 MG|Astro 接管即此二类",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_v6::Micro",
+    "class": "Micro",
+    "owner_file_firstload": "markers_v6_retina_repair.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "细胞身份=microglia（v4.1 基因锚 C1QB 等小胶质标志）：CNS 常驻巨噬谱系词条；眼表面髓系信号由 Macrophages/Monocytes 词条承载（其 kept 行为见遮蔽表），本条在眼表面装配中不计入排名",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "retina_v6::RPE",
+    "class": "RPE",
+    "owner_file_firstload": "markers_v6_retina_repair.json",
+    "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
+    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
+    "bio_reason": "视网膜色素上皮（基因锚 BEST1/RPE65 类/LRAT/RDH5/MITF）：单层色素上皮位于视网膜侧，与角膜/结膜上皮不同胚胎起源（神经外胚层诱导 vs 表面外胚层），组织解剖学上不在眼表面 portal 取材层",
+    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
+    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+   },
+   {
+    "entry_id": "Melanocyte (KB9 build)",
+    "class": "Melanocyte",
+    "owner_file_firstload": "markers_k9_ocs_increment.json (build)",
+    "all_files_carrying_class": "build only（未注册）",
+    "scope": "ocular_surface_only → 视网膜材料不计入（R1 镜像；火灾审计格二规则臂实证泄漏 0）",
+    "bio_reason": "眼表黑色素细胞词条 marker（TRPM1 等）在视网膜双极/杆体语境有真表达（火灾审计无规则臂实测 2/22 簇泄漏），须适用性隔离",
+    "dup_handling": "单文件条目",
+    "impl_note": "注册后禁全库默认态混用（BUILD_REPORT §4 口径）"
+   },
+   {
+    "entry_id": "Schwann (KB9 build)",
+    "class": "Schwann",
+    "owner_file_firstload": "markers_k9_ocs_increment.json (build)",
+    "all_files_carrying_class": "build only（未注册）",
+    "scope": "ocular_surface_only → 视网膜材料不计入",
+    "bio_reason": "MPZ/SCN7A 等在有髓神经相关组织共享；视网膜节细胞轴突段（视神经头）语境存在误入风险",
+    "dup_handling": "单文件条目",
+    "impl_note": "同上"
+   },
+   {
+    "entry_id": "Conj_epithelium_suprabasal (KB9 build)",
+    "class": "Conj_epithelium_suprabasal",
+    "owner_file_firstload": "markers_k9_ocs_increment.json (build)",
+    "all_files_carrying_class": "build only（未注册）",
+    "scope": "ocular_surface_only → 视网膜材料不计入",
+    "bio_reason": "S100A8/9 髓系共享表达（见 recheck/判件），适用性隔离为前提",
+    "dup_handling": "单文件条目",
+    "impl_note": "去留待 PI（A15 子项判件 register/SUPRABASAL_RECHECK.md）"
+   },
+   {
+    "entry_id": "Limbus_Sclera_fibroblast_C1 (KB9 build)",
+    "class": "Limbus_Sclera_fibroblast_C1",
+    "owner_file_firstload": "markers_k9_ocs_increment.json (build)",
+    "all_files_carrying_class": "build only（未注册）",
+    "scope": "ocular_surface_only → 视网膜材料不计入",
+    "bio_reason": "DPT/LEPR/LAMA2 为眼表间质域；防泛间质回渗视网膜簇",
+    "dup_handling": "单文件条目",
+    "impl_note": "同上"
+   }
+  ],
+  "n_rows": 34
+ },
+ "r2r3_shield": {
+  "semantics": {
+   "R2_pan_immune_shield": "泛免疫类基因∈任一非 Immune truth 类 top60（冻结件 author_class_markers_data.tsv 口径）→ 眼表面装配中该基因贡献记 0",
+   "R3_pan_stromal_shield": "泛间质类（含 Melanocyte/Schwann/Conj_*/Fib 亚型）基因∈任一其它 truth 类 top60 → 同法记 0（对称）",
+   "asymmetry_note": "top60 共现删除条件与\"不进入其他类 top60 不证明特异\"的不对称性=已登记残留限制（REVIEWER_LLM §2）"
+  },
+  "rows": [
+   {
+    "class": "Rod",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Cone",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "BC",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "AC",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "HC",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "RGC",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "MG",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Astro",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Micro",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "RPE",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo",
+    "gene": "CLDN5",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo",
+    "gene": "PECAM1",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo",
+    "gene": "CDH5",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo",
+    "gene": "VWF",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo",
+    "gene": "TM4SF1",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo",
+    "gene": "RAMP2",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo",
+    "gene": "ESAM",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo",
+    "gene": "FLT1",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo",
+    "gene": "KDR",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo",
+    "gene": "ADGRL4",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo",
+    "gene": "ECSCR",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo",
+    "gene": "GNG11",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo",
+    "gene": "PLVAP",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo_Patho",
+    "gene": "ICAM1",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "Corneal Endothelium",
+    "note": ""
+   },
+   {
+    "class": "Endo_Patho",
+    "gene": "PLVAP",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo_Patho",
+    "gene": "VCAM1",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo_Patho",
+    "gene": "DLL4",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo_Patho",
+    "gene": "NDUFA4L2",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Endo_Patho",
+    "gene": "HIF1A",
+    "action": "kept",
+    "truth_fold": "Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Pericyte",
+    "gene": "RGS5",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "Smooth Muscle Cells",
+    "note": ""
+   },
+   {
+    "class": "Pericyte",
+    "gene": "COL1A2",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "Fibroblasts",
+    "note": ""
+   },
+   {
+    "class": "Pericyte",
+    "gene": "MGP",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "Fibroblasts",
+    "note": ""
+   },
+   {
+    "class": "Pericyte",
+    "gene": "RGS4",
+    "action": "kept",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Pericyte",
+    "gene": "PDGFRB",
+    "action": "kept",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Pericyte",
+    "gene": "NOTCH3",
+    "action": "kept",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Pericyte",
+    "gene": "HIGD1B",
+    "action": "kept",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Pericyte",
+    "gene": "PRRX1",
+    "action": "kept",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Pericyte",
+    "gene": "THY1",
+    "action": "kept",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Pericyte",
+    "gene": "ITGA1",
+    "action": "kept",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Pericyte",
+    "gene": "IGFBP7",
+    "action": "kept",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Pericyte",
+    "gene": "CALD1",
+    "action": "kept",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "SMC",
+    "gene": "ACTA2",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Smooth Muscle Cells",
+    "blocked_in_truths": "Pericytes",
+    "note": ""
+   },
+   {
+    "class": "SMC",
+    "gene": "MYH11",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Smooth Muscle Cells",
+    "blocked_in_truths": "Pericytes",
+    "note": ""
+   },
+   {
+    "class": "SMC",
+    "gene": "TAGLN",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Smooth Muscle Cells",
+    "blocked_in_truths": "Pericytes",
+    "note": ""
+   },
+   {
+    "class": "SMC",
+    "gene": "MYL9",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Smooth Muscle Cells",
+    "blocked_in_truths": "Pericytes",
+    "note": ""
+   },
+   {
+    "class": "SMC",
+    "gene": "CNN1",
+    "action": "kept",
+    "truth_fold": "Smooth Muscle Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "SMC",
+    "gene": "DES",
+    "action": "kept",
+    "truth_fold": "Smooth Muscle Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "SMC",
+    "gene": "CALD1",
+    "action": "kept",
+    "truth_fold": "Smooth Muscle Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "SMC",
+    "gene": "LMOD1",
+    "action": "kept",
+    "truth_fold": "Smooth Muscle Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Fibroblast",
+    "gene": "COL1A1",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Fibroblast",
+    "gene": "COL1A2",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Fibroblast",
+    "gene": "COL3A1",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Fibroblast",
+    "gene": "DCN",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Fibroblast",
+    "gene": "LUM",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Fibroblast",
+    "gene": "FBN1",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Fibroblast",
+    "gene": "FN1",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Fibroblast",
+    "gene": "PTGDS",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Fibroblast",
+    "gene": "MMP2",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Fibroblast",
+    "gene": "THY1",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Myofibroblast",
+    "gene": "ACTA2",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Fibroblasts|Smooth Muscle Cells",
+    "blocked_in_truths": "Pericytes",
+    "note": ""
+   },
+   {
+    "class": "Myofibroblast",
+    "gene": "TAGLN",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Fibroblasts|Smooth Muscle Cells",
+    "blocked_in_truths": "Pericytes",
+    "note": ""
+   },
+   {
+    "class": "Myofibroblast",
+    "gene": "MYL9",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Fibroblasts|Smooth Muscle Cells",
+    "blocked_in_truths": "Pericytes",
+    "note": ""
+   },
+   {
+    "class": "Myofibroblast",
+    "gene": "TPM1",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Fibroblasts|Smooth Muscle Cells",
+    "blocked_in_truths": "Pericytes",
+    "note": ""
+   },
+   {
+    "class": "Myofibroblast",
+    "gene": "TPM2",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Fibroblasts|Smooth Muscle Cells",
+    "blocked_in_truths": "Pericytes",
+    "note": ""
+   },
+   {
+    "class": "Myofibroblast",
+    "gene": "POSTN",
+    "action": "kept",
+    "truth_fold": "Fibroblasts|Smooth Muscle Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Myofibroblast",
+    "gene": "FN1",
+    "action": "kept",
+    "truth_fold": "Fibroblasts|Smooth Muscle Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Myofibroblast",
+    "gene": "COL1A1",
+    "action": "kept",
+    "truth_fold": "Fibroblasts|Smooth Muscle Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Myofibroblast",
+    "gene": "COL1A2",
+    "action": "kept",
+    "truth_fold": "Fibroblasts|Smooth Muscle Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Myofibroblast",
+    "gene": "CTHRC1",
+    "action": "kept",
+    "truth_fold": "Fibroblasts|Smooth Muscle Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Myofibroblast",
+    "gene": "TIMP1",
+    "action": "kept",
+    "truth_fold": "Fibroblasts|Smooth Muscle Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Myofibroblast",
+    "gene": "PRRX1",
+    "action": "kept",
+    "truth_fold": "Fibroblasts|Smooth Muscle Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mono_Classical",
+    "gene": "S100A8",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "Epithelium",
+    "note": ""
+   },
+   {
+    "class": "Mono_Classical",
+    "gene": "S100A9",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "Epithelium",
+    "note": ""
+   },
+   {
+    "class": "Mono_Classical",
+    "gene": "FCN1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mono_Classical",
+    "gene": "VCAN",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mono_Classical",
+    "gene": "S100A12",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mono_Classical",
+    "gene": "SELL",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mono_Classical",
+    "gene": "CD14",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mono_Classical",
+    "gene": "LYZ",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mono_Classical",
+    "gene": "MNDA",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mono_Classical",
+    "gene": "CTSS",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mono_Classical",
+    "gene": "SERPINA1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mono_Nonclassical",
+    "gene": "FCGR3A",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mono_Nonclassical",
+    "gene": "LST1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mono_Nonclassical",
+    "gene": "MS4A7",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mono_Nonclassical",
+    "gene": "CX3CR1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mono_Nonclassical",
+    "gene": "IL1B",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_Tissue",
+    "gene": "SELENOP",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_Tissue",
+    "gene": "MRC1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_Tissue",
+    "gene": "FOLR2",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_Tissue",
+    "gene": "LYVE1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_Tissue",
+    "gene": "CD163",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_Tissue",
+    "gene": "C1QA",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_Tissue",
+    "gene": "C1QB",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_Tissue",
+    "gene": "C1QC",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_Tissue",
+    "gene": "VSIG4",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_Tissue",
+    "gene": "CD5L",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_Tissue",
+    "gene": "STAB1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_Tissue",
+    "gene": "MAF",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_Tissue",
+    "gene": "F13A1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_Tissue",
+    "gene": "ITM2B",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_Tissue",
+    "gene": "SLC40A1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "FTH1",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "Epithelium",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "APOE",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "Melanocytes",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "GPNMB",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "LIPA",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "CTSD",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "LGMN",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "PLD3",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "ASAH1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "FTL",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "TREM2",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "SPP1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "CD9",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "OLR1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "MMP9",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "CCL3",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "CCL4",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Mac_DAM_LAM",
+    "gene": "HMOX1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Microglia",
+    "gene": "P2RY12",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Microglia",
+    "gene": "TMEM119",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Microglia",
+    "gene": "CX3CR1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Microglia",
+    "gene": "SIGLEC11",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Microglia",
+    "gene": "AIF1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Microglia",
+    "gene": "IRF8",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Microglia",
+    "gene": "TYROBP",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Microglia",
+    "gene": "SALL1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Microglia",
+    "gene": "HEXB",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Microglia",
+    "gene": "GPR34",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Microglia",
+    "gene": "OLFML3",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Microglia",
+    "gene": "FCER1G",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "APC_MHCII_high",
+    "gene": "HLA-DRA",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "Endothelium",
+    "note": ""
+   },
+   {
+    "class": "APC_MHCII_high",
+    "gene": "HLA-DRB1",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "Endothelium",
+    "note": ""
+   },
+   {
+    "class": "APC_MHCII_high",
+    "gene": "CD74",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "Endothelium",
+    "note": ""
+   },
+   {
+    "class": "APC_MHCII_high",
+    "gene": "HLA-DPA1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "APC_MHCII_high",
+    "gene": "HLA-DPB1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "APC_MHCII_high",
+    "gene": "HLA-DQA1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "APC_MHCII_high",
+    "gene": "HLA-DQB1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "APC_MHCII_high",
+    "gene": "HLA-DMB",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "APC_MHCII_high",
+    "gene": "FCGR1A",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "APC_MHCII_high",
+    "gene": "RGS1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "cDC1",
+    "gene": "CADM1",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "Schwann Cells",
+    "note": ""
+   },
+   {
+    "class": "cDC1",
+    "gene": "CLEC9A",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "cDC1",
+    "gene": "XCR1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "cDC1",
+    "gene": "C1S",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "cDC1",
+    "gene": "C1R",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "cDC1",
+    "gene": "ZBTB46",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "cDC1",
+    "gene": "FLT3",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "cDC1",
+    "gene": "IRF8",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "cDC2",
+    "gene": "HLA-DRA",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "Endothelium",
+    "note": ""
+   },
+   {
+    "class": "cDC2",
+    "gene": "CD1C",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "cDC2",
+    "gene": "FCER1A",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "cDC2",
+    "gene": "CLEC10A",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "cDC2",
+    "gene": "CD4",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "cDC2",
+    "gene": "S100A10",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "pDC",
+    "gene": "TCF4",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "Endothelium,Fibroblasts",
+    "note": ""
+   },
+   {
+    "class": "pDC",
+    "gene": "LILRA4",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "pDC",
+    "gene": "IL3RA",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "pDC",
+    "gene": "IRF7",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "pDC",
+    "gene": "GZMB",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "pDC",
+    "gene": "PLD4",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "pDC",
+    "gene": "CLEC4C",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "pDC",
+    "gene": "SERPINF1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "pDC",
+    "gene": "JCHAIN",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "T",
+    "gene": "CD3D",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "T",
+    "gene": "CD3E",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "T",
+    "gene": "CD3G",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "T",
+    "gene": "CD2",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "T",
+    "gene": "TRAC",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "T",
+    "gene": "TRBC2",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "T",
+    "gene": "IL7R",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "T",
+    "gene": "CCL5",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "T",
+    "gene": "CD69",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "T",
+    "gene": "LCK",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "T",
+    "gene": "SKAP1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "NK",
+    "gene": "GNLY",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "NK",
+    "gene": "NKG7",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "NK",
+    "gene": "KLRD1",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "NK",
+    "gene": "KLRF1",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "NK",
+    "gene": "FGFBP2",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "NK",
+    "gene": "NCR3",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "NK",
+    "gene": "PRF1",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "B",
+    "gene": "MS4A1",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "B",
+    "gene": "CD79A",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "B",
+    "gene": "CD79B",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "B",
+    "gene": "PAX5",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "B",
+    "gene": "BANK1",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "B",
+    "gene": "IGKC",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "B",
+    "gene": "TCL1A",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Plasma",
+    "gene": "MZB1",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Plasma",
+    "gene": "JCHAIN",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Plasma",
+    "gene": "XBP1",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Plasma",
+    "gene": "IGHG1",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Plasma",
+    "gene": "SEC11C",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Plasma",
+    "gene": "DERL3",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Plasma",
+    "gene": "SSR4",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Plasma",
+    "gene": "SLAMF7",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Plasma",
+    "gene": "TNFRSF17",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Granulocyte",
+    "gene": "IL1RN",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "Epithelium",
+    "note": ""
+   },
+   {
+    "class": "Granulocyte",
+    "gene": "TIMP1",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "Fibroblasts",
+    "note": ""
+   },
+   {
+    "class": "Granulocyte",
+    "gene": "CSF3R",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Granulocyte",
+    "gene": "C5AR1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Granulocyte",
+    "gene": "ANXA1",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Granulocyte",
+    "gene": "ELANE",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Granulocyte",
+    "gene": "MPO",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Granulocyte",
+    "gene": "CAMP",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Granulocyte",
+    "gene": "LTF",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Granulocyte",
+    "gene": "CXCR2",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Granulocyte",
+    "gene": "FCGR3B",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Granulocyte",
+    "gene": "TGFBI",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Granulocyte",
+    "gene": "CD36",
+    "action": "kept",
+    "truth_fold": "Immune Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Proliferating",
+    "gene": "MKI67",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Proliferating",
+    "gene": "TOP2A",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Proliferating",
+    "gene": "CENPF",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Proliferating",
+    "gene": "BIRC5",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Proliferating",
+    "gene": "H2AFZ",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Proliferating",
+    "gene": "NUSAP1",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Proliferating",
+    "gene": "STMN1",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Proliferating",
+    "gene": "PTTG1",
+    "action": "kept",
+    "truth_fold": "UNMAPPED",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Keratocytes",
+    "gene": "ALDH3A1",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "Epithelium",
+    "note": ""
+   },
+   {
+    "class": "Keratocytes",
+    "gene": "KERA",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Keratocytes",
+    "gene": "NNMT",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Corneal Endothelium",
+    "gene": "SLC4A11",
+    "action": "kept",
+    "truth_fold": "Corneal Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Corneal Endothelium",
+    "gene": "CDH2",
+    "action": "kept",
+    "truth_fold": "Corneal Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Corneal Endothelium",
+    "gene": "CA3",
+    "action": "kept",
+    "truth_fold": "Corneal Endothelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_interneuron::Rod",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_interneuron::Cone",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_interneuron::BC",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_interneuron::AC",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_interneuron::HC",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_interneuron::RGC",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_interneuron::MG",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_interneuron::Astro",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_interneuron::Micro",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_interneuron::RPE",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_v6::Rod",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_v6::Cone",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_v6::BC",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_v6::AC",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_v6::HC",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_v6::RGC",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_v6::MG",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_v6::Astro",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_v6::Micro",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "retina_v6::RPE",
+    "gene": "*",
+    "action": "R1_drop_retina_specific",
+    "truth_fold": "",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "face_v6::Keratocytes",
+    "gene": "KERA",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "face_v6::Pericyte",
+    "gene": "NOTCH3",
+    "action": "kept",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "face_v6::Pericyte",
+    "gene": "HIGD1B",
+    "action": "kept",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "face_v6::Pericyte",
+    "gene": "CALD1",
+    "action": "kept",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "face_v6::Pericyte",
+    "gene": "COX4I2",
+    "action": "kept",
+    "truth_fold": "Pericytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "face_v6::SMC",
+    "gene": "MYH11",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Smooth Muscle Cells",
+    "blocked_in_truths": "Pericytes",
+    "note": ""
+   },
+   {
+    "class": "face_v6::SMC",
+    "gene": "MYL9",
+    "action": "R2R3_shield_block",
+    "truth_fold": "Smooth Muscle Cells",
+    "blocked_in_truths": "Pericytes",
+    "note": ""
+   },
+   {
+    "class": "face_v6::SMC",
+    "gene": "CNN1",
+    "action": "kept",
+    "truth_fold": "Smooth Muscle Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "face_v6::SMC",
+    "gene": "DES",
+    "action": "kept",
+    "truth_fold": "Smooth Muscle Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "face_v6::SMC",
+    "gene": "LMOD1",
+    "action": "kept",
+    "truth_fold": "Smooth Muscle Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Conj_epithelium_basal",
+    "gene": "KRT13",
+    "action": "kept",
+    "truth_fold": "Epithelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Conj_epithelium_basal",
+    "gene": "KRT4",
+    "action": "kept",
+    "truth_fold": "Epithelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Conj_epithelium_basal",
+    "gene": "AQP5",
+    "action": "kept",
+    "truth_fold": "Epithelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Conj_epithelium_basal",
+    "gene": "CXCL17",
+    "action": "kept",
+    "truth_fold": "Epithelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Conj_epithelium_basal",
+    "gene": "LCN2",
+    "action": "kept",
+    "truth_fold": "Epithelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Conj_epithelium_basal",
+    "gene": "KRT19",
+    "action": "kept",
+    "truth_fold": "Epithelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Conj_epithelium_superficial",
+    "gene": "SCGB3A1",
+    "action": "kept",
+    "truth_fold": "Epithelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Conj_epithelium_superficial",
+    "gene": "FDCSP",
+    "action": "kept",
+    "truth_fold": "Epithelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Melanocyte",
+    "gene": "TRPM1",
+    "action": "kept",
+    "truth_fold": "Melanocytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Melanocyte",
+    "gene": "MLANA",
+    "action": "kept",
+    "truth_fold": "Melanocytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Melanocyte",
+    "gene": "TYRP1",
+    "action": "kept",
+    "truth_fold": "Melanocytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Melanocyte",
+    "gene": "PMEL",
+    "action": "kept",
+    "truth_fold": "Melanocytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Melanocyte",
+    "gene": "DCT",
+    "action": "kept",
+    "truth_fold": "Melanocytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Melanocyte",
+    "gene": "TYR",
+    "action": "kept",
+    "truth_fold": "Melanocytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Melanocyte",
+    "gene": "GAPDHS",
+    "action": "kept",
+    "truth_fold": "Melanocytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Melanocyte",
+    "gene": "GPR143",
+    "action": "kept",
+    "truth_fold": "Melanocytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Melanocyte",
+    "gene": "SLC24A5",
+    "action": "kept",
+    "truth_fold": "Melanocytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Melanocyte",
+    "gene": "ABCB5",
+    "action": "kept",
+    "truth_fold": "Melanocytes",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Schwann",
+    "gene": "MPZ",
+    "action": "kept",
+    "truth_fold": "Schwann Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Schwann",
+    "gene": "SCN7A",
+    "action": "kept",
+    "truth_fold": "Schwann Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Schwann",
+    "gene": "SOX2",
+    "action": "kept",
+    "truth_fold": "Schwann Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Schwann",
+    "gene": "NRXN1",
+    "action": "kept",
+    "truth_fold": "Schwann Cells",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Conj_epithelium_suprabasal",
+    "gene": "S100A8",
+    "action": "kept",
+    "truth_fold": "Epithelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Conj_epithelium_suprabasal",
+    "gene": "S100A9",
+    "action": "kept",
+    "truth_fold": "Epithelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Conj_epithelium_suprabasal",
+    "gene": "KRT4",
+    "action": "kept",
+    "truth_fold": "Epithelium",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Limbus_Sclera_fibroblast_C1",
+    "gene": "DPT",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Limbus_Sclera_fibroblast_C1",
+    "gene": "LEPR",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   },
+   {
+    "class": "Limbus_Sclera_fibroblast_C1",
+    "gene": "LAMA2",
+    "action": "kept",
+    "truth_fold": "Fibroblasts",
+    "blocked_in_truths": "",
+    "note": ""
+   }
+  ],
+  "n_rows": 283,
+  "action_counts": {
+   "R1_drop_retina_specific": 30,
+   "kept": 225,
+   "R2R3_shield_block": 28
+  },
+  "face_effective_genesets": {
+   "Endo": {
+    "truth_fold": [
+     "Endothelium"
+    ],
+    "fold_provenance": "KB9_ext:KB 缩写=endothelial cell=super_map 叶",
+    "face_effective_genes": [
+     "CLDN5",
+     "PECAM1",
+     "CDH5",
+     "VWF",
+     "TM4SF1",
+     "RAMP2",
+     "ESAM",
+     "FLT1",
+     "KDR",
+     "ADGRL4",
+     "ECSCR",
+     "GNG11",
+     "PLVAP"
+    ],
+    "blocked": []
+   },
+   "Endo_Patho": {
+    "truth_fold": [
+     "Endothelium"
+    ],
+    "fold_provenance": "KB9_ext:血管内皮病理态",
+    "face_effective_genes": [
+     "PLVAP",
+     "VCAM1",
+     "DLL4",
+     "NDUFA4L2",
+     "HIF1A"
+    ],
+    "blocked": [
+     {
+      "gene": "ICAM1",
+      "in_top60_of": [
+       "Corneal Endothelium"
+      ]
+     }
+    ]
+   },
+   "Pericyte": {
+    "truth_fold": [
+     "Pericytes"
+    ],
+    "fold_provenance": "frozen_crosswalk:alias",
+    "face_effective_genes": [
+     "RGS4",
+     "PDGFRB",
+     "NOTCH3",
+     "HIGD1B",
+     "PRRX1",
+     "THY1",
+     "ITGA1",
+     "IGFBP7",
+     "CALD1"
+    ],
+    "blocked": [
+     {
+      "gene": "RGS5",
+      "in_top60_of": [
+       "Smooth Muscle Cells"
+      ]
+     },
+     {
+      "gene": "COL1A2",
+      "in_top60_of": [
+       "Fibroblasts"
+      ]
+     },
+     {
+      "gene": "MGP",
+      "in_top60_of": [
+       "Fibroblasts"
+      ]
+     }
+    ]
+   },
+   "SMC": {
+    "truth_fold": [
+     "Smooth Muscle Cells"
+    ],
+    "fold_provenance": "frozen_crosswalk:alias",
+    "face_effective_genes": [
+     "CNN1",
+     "DES",
+     "CALD1",
+     "LMOD1"
+    ],
+    "blocked": [
+     {
+      "gene": "ACTA2",
+      "in_top60_of": [
+       "Pericytes"
+      ]
+     },
+     {
+      "gene": "MYH11",
+      "in_top60_of": [
+       "Pericytes"
+      ]
+     },
+     {
+      "gene": "TAGLN",
+      "in_top60_of": [
+       "Pericytes"
+      ]
+     },
+     {
+      "gene": "MYL9",
+      "in_top60_of": [
+       "Pericytes"
+      ]
+     }
+    ]
+   },
+   "Fibroblast": {
+    "truth_fold": [
+     "Fibroblasts"
+    ],
+    "fold_provenance": "frozen_crosswalk:alias",
+    "face_effective_genes": [
+     "COL1A1",
+     "COL1A2",
+     "COL3A1",
+     "DCN",
+     "LUM",
+     "FBN1",
+     "FN1",
+     "PTGDS",
+     "MMP2",
+     "THY1"
+    ],
+    "blocked": []
+   },
+   "Myofibroblast": {
+    "truth_fold": [
+     "Fibroblasts",
+     "Smooth Muscle Cells"
+    ],
+    "fold_provenance": "frozen_crosswalk:ambiguous",
+    "face_effective_genes": [
+     "POSTN",
+     "FN1",
+     "COL1A1",
+     "COL1A2",
+     "CTHRC1",
+     "TIMP1",
+     "PRRX1"
+    ],
+    "blocked": [
+     {
+      "gene": "ACTA2",
+      "in_top60_of": [
+       "Pericytes"
+      ]
+     },
+     {
+      "gene": "TAGLN",
+      "in_top60_of": [
+       "Pericytes"
+      ]
+     },
+     {
+      "gene": "MYL9",
+      "in_top60_of": [
+       "Pericytes"
+      ]
+     },
+     {
+      "gene": "TPM1",
+      "in_top60_of": [
+       "Pericytes"
+      ]
+     },
+     {
+      "gene": "TPM2",
+      "in_top60_of": [
+       "Pericytes"
+      ]
+     }
+    ]
+   },
+   "Mono_Classical": {
+    "truth_fold": [
+     "Immune Cells"
+    ],
+    "fold_provenance": "frozen_crosswalk:alias",
+    "face_effective_genes": [
+     "FCN1",
+     "VCAN",
+     "S100A12",
+     "SELL",
+     "CD14",
+     "LYZ",
+     "MNDA",
+     "CTSS",
+     "SERPINA1"
+    ],
+    "blocked": [
+     {
+      "gene": "S100A8",
+      "in_top60_of": [
+       "Epithelium"
+      ]
+     },
+     {
+      "gene": "S100A9",
+      "in_top60_of": [
+       "Epithelium"
+      ]
+     }
+    ]
+   },
+   "Mono_Nonclassical": {
+    "truth_fold": [
+     "Immune Cells"
+    ],
+    "fold_provenance": "frozen_crosswalk:alias",
+    "face_effective_genes": [
+     "FCGR3A",
+     "LST1",
+     "MS4A7",
+     "CX3CR1",
+     "IL1B"
+    ],
+    "blocked": []
+   },
+   "Mac_Tissue": {
+    "truth_fold": [
+     "Immune Cells"
+    ],
+    "fold_provenance": "KB9_ext:组织巨噬",
+    "face_effective_genes": [
+     "SELENOP",
+     "MRC1",
+     "FOLR2",
+     "LYVE1",
+     "CD163",
+     "C1QA",
+     "C1QB",
+     "C1QC",
+     "VSIG4",
+     "CD5L",
+     "STAB1",
+     "MAF",
+     "F13A1",
+     "ITM2B",
+     "SLC40A1"
+    ],
+    "blocked": []
+   },
+   "Mac_DAM_LAM": {
+    "truth_fold": [
+     "Immune Cells"
+    ],
+    "fold_provenance": "frozen_crosswalk:alias",
+    "face_effective_genes": [
+     "GPNMB",
+     "LIPA",
+     "CTSD",
+     "LGMN",
+     "PLD3",
+     "ASAH1",
+     "FTL",
+     "TREM2",
+     "SPP1",
+     "CD9",
+     "OLR1",
+     "MMP9",
+     "CCL3",
+     "CCL4",
+     "HMOX1"
+    ],
+    "blocked": [
+     {
+      "gene": "FTH1",
+      "in_top60_of": [
+       "Epithelium"
+      ]
+     },
+     {
+      "gene": "APOE",
+      "in_top60_of": [
+       "Melanocytes"
+      ]
+     }
+    ]
+   },
+   "Microglia": {
+    "truth_fold": [
+     "Immune Cells"
+    ],
+    "fold_provenance": "KB9_ext:小胶质=免疫叶",
+    "face_effective_genes": [
+     "P2RY12",
+     "TMEM119",
+     "CX3CR1",
+     "SIGLEC11",
+     "AIF1",
+     "IRF8",
+     "TYROBP",
+     "SALL1",
+     "HEXB",
+     "GPR34",
+     "OLFML3",
+     "FCER1G"
+    ],
+    "blocked": []
+   },
+   "APC_MHCII_high": {
+    "truth_fold": [
+     "Immune Cells"
+    ],
+    "fold_provenance": "frozen_crosswalk:alias",
+    "face_effective_genes": [
+     "HLA-DPA1",
+     "HLA-DPB1",
+     "HLA-DQA1",
+     "HLA-DQB1",
+     "HLA-DMB",
+     "FCGR1A",
+     "RGS1"
+    ],
+    "blocked": [
+     {
+      "gene": "HLA-DRA",
+      "in_top60_of": [
+       "Endothelium"
+      ]
+     },
+     {
+      "gene": "HLA-DRB1",
+      "in_top60_of": [
+       "Endothelium"
+      ]
+     },
+     {
+      "gene": "CD74",
+      "in_top60_of": [
+       "Endothelium"
+      ]
+     }
+    ]
+   },
+   "cDC1": {
+    "truth_fold": [
+     "Immune Cells"
+    ],
+    "fold_provenance": "KB9_ext",
+    "face_effective_genes": [
+     "CLEC9A",
+     "XCR1",
+     "C1S",
+     "C1R",
+     "ZBTB46",
+     "FLT3",
+     "IRF8"
+    ],
+    "blocked": [
+     {
+      "gene": "CADM1",
+      "in_top60_of": [
+       "Schwann Cells"
+      ]
+     }
+    ]
+   },
+   "cDC2": {
+    "truth_fold": [
+     "Immune Cells"
+    ],
+    "fold_provenance": "KB9_ext",
+    "face_effective_genes": [
+     "CD1C",
+     "FCER1A",
+     "CLEC10A",
+     "CD4",
+     "S100A10"
+    ],
+    "blocked": [
+     {
+      "gene": "HLA-DRA",
+      "in_top60_of": [
+       "Endothelium"
+      ]
+     }
+    ]
+   },
+   "pDC": {
+    "truth_fold": [
+     "Immune Cells"
+    ],
+    "fold_provenance": "frozen_crosswalk:alias",
+    "face_effective_genes": [
+     "LILRA4",
+     "IL3RA",
+     "IRF7",
+     "GZMB",
+     "PLD4",
+     "CLEC4C",
+     "SERPINF1",
+     "JCHAIN"
+    ],
+    "blocked": [
+     {
+      "gene": "TCF4",
+      "in_top60_of": [
+       "Endothelium",
+       "Fibroblasts"
+      ]
+     }
+    ]
+   },
+   "T": {
+    "truth_fold": [
+     "Immune Cells"
+    ],
+    "fold_provenance": "frozen_crosswalk:alias",
+    "face_effective_genes": [
+     "CD3D",
+     "CD3E",
+     "CD3G",
+     "CD2",
+     "TRAC",
+     "TRBC2",
+     "IL7R",
+     "CCL5",
+     "CD69",
+     "LCK",
+     "SKAP1"
+    ],
+    "blocked": []
+   },
+   "NK": {
+    "truth_fold": "UNMAPPED",
+    "fold_provenance": "UNMAPPED:不参与屏蔽(如实登记)",
+    "face_effective_genes": [
+     "GNLY",
+     "NKG7",
+     "KLRD1",
+     "KLRF1",
+     "FGFBP2",
+     "NCR3",
+     "PRF1"
+    ],
+    "blocked": []
+   },
+   "B": {
+    "truth_fold": "UNMAPPED",
+    "fold_provenance": "UNMAPPED:不参与屏蔽(如实登记)",
+    "face_effective_genes": [
+     "MS4A1",
+     "CD79A",
+     "CD79B",
+     "PAX5",
+     "BANK1",
+     "IGKC",
+     "TCL1A"
+    ],
+    "blocked": []
+   },
+   "Plasma": {
+    "truth_fold": "UNMAPPED",
+    "fold_provenance": "UNMAPPED:不参与屏蔽(如实登记)",
+    "face_effective_genes": [
+     "MZB1",
+     "JCHAIN",
+     "XBP1",
+     "IGHG1",
+     "SEC11C",
+     "DERL3",
+     "SSR4",
+     "SLAMF7",
+     "TNFRSF17"
+    ],
+    "blocked": []
+   },
+   "Granulocyte": {
+    "truth_fold": [
+     "Immune Cells"
+    ],
+    "fold_provenance": "KB9_ext",
+    "face_effective_genes": [
+     "CSF3R",
+     "C5AR1",
+     "ANXA1",
+     "ELANE",
+     "MPO",
+     "CAMP",
+     "LTF",
+     "CXCR2",
+     "FCGR3B",
+     "TGFBI",
+     "CD36"
+    ],
+    "blocked": [
+     {
+      "gene": "IL1RN",
+      "in_top60_of": [
+       "Epithelium"
+      ]
+     },
+     {
+      "gene": "TIMP1",
+      "in_top60_of": [
+       "Fibroblasts"
+      ]
+     }
+    ]
+   },
+   "Proliferating": {
+    "truth_fold": "UNMAPPED",
+    "fold_provenance": "KB9_ext:状态类不折叠(不参与屏蔽)",
+    "face_effective_genes": [
+     "MKI67",
+     "TOP2A",
+     "CENPF",
+     "BIRC5",
+     "H2AFZ",
+     "NUSAP1",
+     "STMN1",
+     "PTTG1"
+    ],
+    "blocked": []
+   },
+   "Keratocytes": {
+    "truth_fold": [
+     "Fibroblasts"
+    ],
+    "fold_provenance": "frozen_crosswalk:alias",
+    "face_effective_genes": [
+     "KERA",
+     "NNMT"
+    ],
+    "blocked": [
+     {
+      "gene": "ALDH3A1",
+      "in_top60_of": [
+       "Epithelium"
+      ]
+     }
+    ]
+   },
+   "Corneal Endothelium": {
+    "truth_fold": [
+     "Corneal Endothelium"
+    ],
+    "fold_provenance": "KB9_ext:名=truth 名",
+    "face_effective_genes": [
+     "SLC4A11",
+     "CDH2",
+     "CA3"
+    ],
+    "blocked": []
+   },
+   "face_v6::Keratocytes": {
+    "truth_fold": [
+     "Fibroblasts"
+    ],
+    "fold_provenance": "KB9_ext:keratocyte 叶∈Fibroblasts",
+    "face_effective_genes": [
+     "KERA"
+    ],
+    "blocked": []
+   },
+   "face_v6::Fibroblast": {
+    "truth_fold": [
+     "Fibroblasts"
+    ],
+    "fold_provenance": "KB9_ext",
+    "face_effective_genes": [],
+    "blocked": []
+   },
+   "face_v6::Pericyte": {
+    "truth_fold": [
+     "Pericytes"
+    ],
+    "fold_provenance": "KB9_ext",
+    "face_effective_genes": [
+     "NOTCH3",
+     "HIGD1B",
+     "CALD1",
+     "COX4I2"
+    ],
+    "blocked": []
+   },
+   "face_v6::SMC": {
+    "truth_fold": [
+     "Smooth Muscle Cells"
+    ],
+    "fold_provenance": "KB9_ext",
+    "face_effective_genes": [
+     "CNN1",
+     "DES",
+     "LMOD1"
+    ],
+    "blocked": [
+     {
+      "gene": "MYH11",
+      "in_top60_of": [
+       "Pericytes"
+      ]
+     },
+     {
+      "gene": "MYL9",
+      "in_top60_of": [
+       "Pericytes"
+      ]
+     }
+    ]
+   },
+   "face_v6::Myofibroblast": {
+    "truth_fold": [
+     "Fibroblasts",
+     "Smooth Muscle Cells"
+    ],
+    "fold_provenance": "KB9_ext:ambiguous 照原链",
+    "face_effective_genes": [],
+    "blocked": []
+   },
+   "Conj_epithelium_basal": {
+    "truth_fold": [
+     "Epithelium"
+    ],
+    "fold_provenance": "KB9_ext",
+    "face_effective_genes": [
+     "KRT13",
+     "KRT4",
+     "AQP5",
+     "CXCL17",
+     "LCN2",
+     "KRT19"
+    ],
+    "blocked": []
+   },
+   "Conj_epithelium_superficial": {
+    "truth_fold": [
+     "Epithelium"
+    ],
+    "fold_provenance": "KB9_ext",
+    "face_effective_genes": [
+     "SCGB3A1",
+     "FDCSP"
+    ],
+    "blocked": []
+   },
+   "Melanocyte": {
+    "truth_fold": [
+     "Melanocytes"
+    ],
+    "fold_provenance": "KB9_new:CL:0000148",
+    "face_effective_genes": [
+     "TRPM1",
+     "MLANA",
+     "TYRP1",
+     "PMEL",
+     "DCT",
+     "TYR",
+     "GAPDHS",
+     "GPR143",
+     "SLC24A5",
+     "ABCB5"
+    ],
+    "blocked": []
+   },
+   "Schwann": {
+    "truth_fold": [
+     "Schwann Cells"
+    ],
+    "fold_provenance": "KB9_new:CL:0002573",
+    "face_effective_genes": [
+     "MPZ",
+     "SCN7A",
+     "SOX2",
+     "NRXN1"
+    ],
+    "blocked": []
+   },
+   "Conj_epithelium_suprabasal": {
+    "truth_fold": [
+     "Epithelium"
+    ],
+    "fold_provenance": "KB9_new:CL:1000432 借父条+layer",
+    "face_effective_genes": [
+     "S100A8",
+     "S100A9",
+     "KRT4"
+    ],
+    "blocked": []
+   },
+   "Limbus_Sclera_fibroblast_C1": {
+    "truth_fold": [
+     "Fibroblasts"
+    ],
+    "fold_provenance": "KB9_new:CL:0000057",
+    "face_effective_genes": [
+     "DPT",
+     "LEPR",
+     "LAMA2"
+    ],
+    "blocked": []
+   }
+  }
+ },
+ "assembly_rules_v2": {
+  "AV2-1_top3_admission": "屏蔽后 n_shared=0 的类别不得进入 kb_marker_ranking/top3。实现语义=得分仅对 n>0 构建（k9_query 实测口径，G1 保真 33/33 全等）。",
+  "AV2-2_insufficient_candidates": "有效候选（n_shared>0）少于 3 时如实输出不足三席，禁止靠加载顺序补齐第四/五候选。",
+  "AV2-3_load_position_frozen": "本包新条（R-1 四条）加载位置=库序尾部追加（retina→membrane→retina_interneuron→retina_v6→face_v6→k9），冻结入注册文本；后续加条一律尾部追加+登记，禁插位。",
+  "AV2-4_tie_rule_frozen": "ranking 按 n_shared 降序；同分平票按条目插入序（先加载者在前），排序稳定性（stable sort）保证确定性复现。已知后果显式冻结：同分时新条让位于旧条；改平票语义（并列输出/转弃权）属规则变更，须新版本注册，不在本注册生效范围。",
+  "AV2-5_fidelity_gates": "(a) OFF 历史态门——RUN5 冻结证据面 ranking 复刻，KB9 实测 G0=33/33；对账对象=RUN5 存档票的输入面。(b) 现役 ON 态门——自实现 matcher 对当前生产 query_marker 逐簇全等，KB9 实测 G1=33/33；仅证明装配复刻当前生产语义。(c) 历史 ON 态门【未完成，下游强制项】——须把复用票时刻的库版本/装配参数/ranking 与 RUN5 run 当时完整请求/存档快照逐字段对账；KB9 无 RUN5 时刻完整请求留档且库态此后已变（Q6::21/29 回退=KB7 条激活实证），G1 不得写成历史 ON 保真已证；任何复用存档票的后续 run 须先建此门（含批组成快照）。"
+ },
+ "crosswalk_ext": {
+  "columns": [
+   "kb_name",
+   "q6_vocab_class",
+   "matched_leaf",
+   "provenance",
+   "alias_source"
+  ],
+  "rows": [
+   {
+    "kb_name": "Melanocyte",
+    "q6_vocab_class": "Melanocytes",
+    "matched_leaf": "melanocyte",
+    "provenance": "alias",
+    "alias_source": "KB9_new:CL:0000148 label=melanocyte, 单数化"
+   },
+   {
+    "kb_name": "Schwann",
+    "q6_vocab_class": "Schwann Cells",
+    "matched_leaf": "Schwann cell",
+    "provenance": "alias",
+    "alias_source": "KB9_new:CL:0002573"
+   },
+   {
+    "kb_name": "Conj_epithelium_suprabasal",
+    "q6_vocab_class": "Epithelium",
+    "matched_leaf": "conjunctival epithelial cell",
+    "provenance": "alias",
+    "alias_source": "KB9_new:CL:1000432 借父条+layer"
+   },
+   {
+    "kb_name": "Limbus_Sclera_fibroblast_C1",
+    "q6_vocab_class": "Fibroblasts",
+    "matched_leaf": "fibroblast",
+    "provenance": "alias",
+    "alias_source": "KB9_new:CL:0000057 挂父条+subtype"
+   },
+   {
+    "kb_name": "Conj_epithelium_basal",
+    "q6_vocab_class": "Epithelium",
+    "matched_leaf": "conjunctival epithelial cell",
+    "provenance": "alias",
+    "alias_source": "KB7 face_v6 条 (激活态在库), KB9 补折叠"
+   },
+   {
+    "kb_name": "Conj_epithelium_superficial",
+    "q6_vocab_class": "Epithelium",
+    "matched_leaf": "conjunctival epithelial cell",
+    "provenance": "alias",
+    "alias_source": "KB7 face_v6 条, KB9 补折叠"
+   },
+   {
+    "kb_name": "face_v6::Keratocytes",
+    "q6_vocab_class": "Fibroblasts",
+    "matched_leaf": "keratocyte",
+    "provenance": "alias",
+    "alias_source": "KB6b/KB7 repair 消歧名, keratocyte 叶∈Fibroblasts"
+   },
+   {
+    "kb_name": "face_v6::Fibroblast",
+    "q6_vocab_class": "Fibroblasts",
+    "matched_leaf": "fibroblast",
+    "provenance": "alias",
+    "alias_source": "KB7 repair 消歧名"
+   },
+   {
+    "kb_name": "face_v6::Pericyte",
+    "q6_vocab_class": "Pericytes",
+    "matched_leaf": "pericyte",
+    "provenance": "alias",
+    "alias_source": "KB7 repair 消歧名"
+   },
+   {
+    "kb_name": "face_v6::SMC",
+    "q6_vocab_class": "Smooth Muscle Cells",
+    "matched_leaf": "smooth muscle cell",
+    "provenance": "alias",
+    "alias_source": "KB7 repair 消歧名"
+   },
+   {
+    "kb_name": "face_v6::Myofibroblast",
+    "q6_vocab_class": "Fibroblasts|Smooth Muscle Cells",
+    "matched_leaf": "",
+    "provenance": "ambiguous",
+    "alias_source": "KB7 警示条 (core 空), 映射歧义照原链"
+   }
+  ],
+  "n_rows": 11,
+  "freeze_note": "扩展表先于投票落盘（投票前冻结）；既有名称映射零改动；Keratocytes→Fibroblasts 冻结映射见注册包 §5/A09。"
+ },
+ "a09_vocab_mapping_snapshot": {
+  "rows": [
+   {
+    "kb_candidate": "APC_MHCII_high",
+    "fold_9class": "Immune Cells",
+    "provenance": "alias",
+    "carrier_runtime": "frozen(t_d1ca11b0)"
+   },
+   {
+    "kb_candidate": "Astro",
+    "fold_9class": "(空=不参与R3屏蔽)",
+    "provenance": "no_counterpart",
+    "carrier_runtime": "frozen(t_d1ca11b0)"
+   },
+   {
+    "kb_candidate": "Conj_epithelium_basal",
+    "fold_9class": "Epithelium",
+    "provenance": "KB9_ext",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "Conj_epithelium_superficial",
+    "fold_9class": "Epithelium",
+    "provenance": "KB9_ext",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "Conj_epithelium_suprabasal",
+    "fold_9class": "Epithelium",
+    "provenance": "KB9_new:CL:1000432 借父条+layer",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "Corneal Endothelium",
+    "fold_9class": "Corneal Endothelium",
+    "provenance": "KB9_ext:名=truth 名",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "Endo",
+    "fold_9class": "Endothelium",
+    "provenance": "KB9_ext:KB 缩写=endothelial cell=super_map 叶",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "Endo_Patho",
+    "fold_9class": "Endothelium",
+    "provenance": "KB9_ext:血管内皮病理态",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "Fibroblast",
+    "fold_9class": "Fibroblasts",
+    "provenance": "alias",
+    "carrier_runtime": "frozen(t_d1ca11b0)"
+   },
+   {
+    "kb_candidate": "Granulocyte",
+    "fold_9class": "Immune Cells",
+    "provenance": "KB9_ext",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "Keratocytes",
+    "fold_9class": "Fibroblasts",
+    "provenance": "alias",
+    "carrier_runtime": "frozen(t_d1ca11b0)"
+   },
+   {
+    "kb_candidate": "Limbus_Sclera_fibroblast_C1",
+    "fold_9class": "Fibroblasts",
+    "provenance": "KB9_new:CL:0000057",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "MG",
+    "fold_9class": "(空=不参与R3屏蔽)",
+    "provenance": "no_counterpart",
+    "carrier_runtime": "frozen(t_d1ca11b0)"
+   },
+   {
+    "kb_candidate": "Mac_DAM_LAM",
+    "fold_9class": "Immune Cells",
+    "provenance": "alias",
+    "carrier_runtime": "frozen(t_d1ca11b0)"
+   },
+   {
+    "kb_candidate": "Mac_Tissue",
+    "fold_9class": "Immune Cells",
+    "provenance": "KB9_ext:组织巨噬",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "Mast",
+    "fold_9class": "Immune Cells",
+    "provenance": "x",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "Melanocyte",
+    "fold_9class": "Melanocytes",
+    "provenance": "KB9_new:CL:0000148",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "Microglia",
+    "fold_9class": "Immune Cells",
+    "provenance": "KB9_ext:小胶质=免疫叶",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "Mono_Classical",
+    "fold_9class": "Immune Cells",
+    "provenance": "alias",
+    "carrier_runtime": "frozen(t_d1ca11b0)"
+   },
+   {
+    "kb_candidate": "Mono_Nonclassical",
+    "fold_9class": "Immune Cells",
+    "provenance": "alias",
+    "carrier_runtime": "frozen(t_d1ca11b0)"
+   },
+   {
+    "kb_candidate": "Myofibroblast",
+    "fold_9class": "Fibroblasts|Smooth Muscle Cells",
+    "provenance": "ambiguous",
+    "carrier_runtime": "frozen(t_d1ca11b0)"
+   },
+   {
+    "kb_candidate": "Pericyte",
+    "fold_9class": "Pericytes",
+    "provenance": "alias",
+    "carrier_runtime": "frozen(t_d1ca11b0)"
+   },
+   {
+    "kb_candidate": "Proliferating",
+    "fold_9class": "(空=不参与R3屏蔽)",
+    "provenance": "KB9_ext:状态类不折叠(不参与屏蔽)",
+    "carrier_runtime": "k4_ext(显式空)"
+   },
+   {
+    "kb_candidate": "RPE",
+    "fold_9class": "Epithelium",
+    "provenance": "alias",
+    "carrier_runtime": "frozen(t_d1ca11b0)"
+   },
+   {
+    "kb_candidate": "SMC",
+    "fold_9class": "Smooth Muscle Cells",
+    "provenance": "alias",
+    "carrier_runtime": "frozen(t_d1ca11b0)"
+   },
+   {
+    "kb_candidate": "Schwann",
+    "fold_9class": "Schwann Cells",
+    "provenance": "KB9_new:CL:0002573",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "T",
+    "fold_9class": "Immune Cells",
+    "provenance": "alias",
+    "carrier_runtime": "frozen(t_d1ca11b0)"
+   },
+   {
+    "kb_candidate": "cDC1",
+    "fold_9class": "Immune Cells",
+    "provenance": "KB9_ext",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "cDC2",
+    "fold_9class": "Immune Cells",
+    "provenance": "KB9_ext",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "face_v6::Fibroblast",
+    "fold_9class": "Fibroblasts",
+    "provenance": "KB9_ext",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "face_v6::Keratocytes",
+    "fold_9class": "Fibroblasts",
+    "provenance": "KB9_ext:keratocyte 叶∈Fibroblasts",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "face_v6::Myofibroblast",
+    "fold_9class": "Fibroblasts|Smooth Muscle Cells",
+    "provenance": "KB9_ext:ambiguous 照原链",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "face_v6::Pericyte",
+    "fold_9class": "Pericytes",
+    "provenance": "KB9_ext",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "face_v6::SMC",
+    "fold_9class": "Smooth Muscle Cells",
+    "provenance": "KB9_ext",
+    "carrier_runtime": "k4_ext(运行时生效)"
+   },
+   {
+    "kb_candidate": "pDC",
+    "fold_9class": "Immune Cells",
+    "provenance": "alias",
+    "carrier_runtime": "frozen(t_d1ca11b0)"
+   },
+   {
+    "kb_candidate": "B",
+    "fold_9class": "(空=不参与R3屏蔽)",
+    "provenance": "UNMAPPED:不参与屏蔽(如实登记)",
+    "carrier_runtime": "runtime_unmapped"
+   },
+   {
+    "kb_candidate": "NK",
+    "fold_9class": "(空=不参与R3屏蔽)",
+    "provenance": "UNMAPPED:不参与屏蔽(如实登记)",
+    "carrier_runtime": "runtime_unmapped"
+   },
+   {
+    "kb_candidate": "Plasma",
+    "fold_9class": "(空=不参与R3屏蔽)",
+    "provenance": "UNMAPPED:不参与屏蔽(如实登记)",
+    "carrier_runtime": "runtime_unmapped"
+   }
+  ],
+  "n_rows": 38,
+  "disposition_rule": "ambiguous 照原链双折叠不猜；no_counterpart 判空=不参与 R3 屏蔽；Proliferating=状态类显式不折叠；UNMAPPED(B/NK/Plasma)=如实登记不参与屏蔽。"
+ },
+ "a03_overlap_registry": {
+  "rows": [
+   {
+    "term": "Melanocyte",
+    "pool_members": "Melanocytes",
+    "pool_cells_h5ad": "7209",
+    "pool_cells_npz_layer": "7209",
+    "eval33_cells_in_pool": "1230",
+    "pool_studies_n": "9",
+    "eval_studies_in_pool_n": "9",
+    "pool_donors_n": "46",
+    "eval_donors_in_pool_n": "46",
+    "pool_study_breakdown": "chen_limbus=3536;chen_sclera=898;shi_GSE157474=723;chen_cornea=706;li_GSE147979=472;lako_adult_GSE155683=311;chen_pub_GSE153515=254;chakravarti_GSE218123=231;dickman_GSE186433=78"
+   },
+   {
+    "term": "Schwann",
+    "pool_members": "Schwann_M|Schwann_N",
+    "pool_cells_h5ad": "6059",
+    "pool_cells_npz_layer": "6059",
+    "eval33_cells_in_pool": "977",
+    "pool_studies_n": "7",
+    "eval_studies_in_pool_n": "7",
+    "pool_donors_n": "48",
+    "eval_donors_in_pool_n": "48",
+    "pool_study_breakdown": "chen_limbus=2617;chen_sclera=2466;chakravarti_GSE218123=308;shi_GSE157474=291;chen_cornea=246;lako_adult_GSE155683=101;li_GSE147979=30"
+   },
+   {
+    "term": "Conj_epithelium_suprabasal",
+    "pool_members": "Conj_suprabasal",
+    "pool_cells_h5ad": "7264",
+    "pool_cells_npz_layer": "7264",
+    "eval33_cells_in_pool": "1278",
+    "pool_studies_n": "9",
+    "eval_studies_in_pool_n": "6",
+    "pool_donors_n": "36",
+    "eval_donors_in_pool_n": "25",
+    "pool_study_breakdown": "chen_limbus=7039;shi_GSE157474=130;chen_pub_GSE153515=38;chen_cornea=38;dickman_GSE186433=6;lako_adult_GSE155683=6;chen_sclera=3;li_GSE147979=2;chakravarti_GSE218123=2"
+   },
+   {
+    "term": "Limbus_Sclera_fibroblast_C1",
+    "pool_members": "Limbus/Sclera Fibroblasts - C1",
+    "pool_cells_h5ad": "33033",
+    "pool_cells_npz_layer": "33033",
+    "eval33_cells_in_pool": "5714",
+    "pool_studies_n": "9",
+    "eval_studies_in_pool_n": "9",
+    "pool_donors_n": "67",
+    "eval_donors_in_pool_n": "62",
+    "pool_study_breakdown": "chen_limbus=20081;chen_sclera=9066;chen_cornea=1948;chakravarti_GSE218123=770;lako_adult_GSE155683=638;shi_GSE157474=310;li_GSE147979=125;dickman_GSE186433=83;chen_pub_GSE153515=12"
+   }
+  ],
+  "n_rows": 4,
+  "conclusion": "四参考池细胞均取自 D002，与评价数据来源完全同源；不存在独立供体验证（本件 §0/注册包 §2）。"
+ },
+ "a19_minpool_exempt_by_entry": {
+  "rows": [
+   {
+    "entry_id": "Melanocyte",
+    "parent_group": "Melanocytes",
+    "comparator": "CornealEndo",
+    "level": "group",
+    "pool": "432",
+    "applies_to_entry": "适用（在本条火灾域 9 组内）",
+    "exempt_link": "lfc 否决与 cons 参考均不纳入；fire_audit small-record 行留痕"
+   },
+   {
+    "entry_id": "Melanocyte",
+    "parent_group": "Melanocytes",
+    "comparator": "B Cells",
+    "level": "author_sibling(全局小池)",
+    "pool": "212",
+    "applies_to_entry": "不适用（其父组归属=Fibroblast-stroma≠本条父组，本不在本条比较域）",
+    "exempt_link": "不计作已实施比较后的豁免"
+   },
+   {
+    "entry_id": "Melanocyte",
+    "parent_group": "Melanocytes",
+    "comparator": "Monocytes",
+    "level": "author_sibling(全局小池)",
+    "pool": "253",
+    "applies_to_entry": "不适用（其父组归属=Epithelium≠本条父组，本不在本条比较域）",
+    "exempt_link": "不计作已实施比较后的豁免"
+   },
+   {
+    "entry_id": "Melanocyte",
+    "parent_group": "Melanocytes",
+    "comparator": "Corneal_Endo",
+    "level": "author_sibling(全局小池)",
+    "pool": "432",
+    "applies_to_entry": "不适用（其父组归属=Keratocytes≠本条父组，本不在本条比较域）",
+    "exempt_link": "不计作已实施比较后的豁免"
+   },
+   {
+    "entry_id": "Melanocyte",
+    "parent_group": "Melanocytes",
+    "comparator": "(组级：火灾域 9 组中 8 组 pool≥500 实际参与否决)",
+    "level": "group(active)",
+    "pool": "-1",
+    "applies_to_entry": "适用",
+    "exempt_link": "对照行：证明比较域实际执行"
+   },
+   {
+    "entry_id": "Schwann",
+    "parent_group": "Schwann",
+    "comparator": "CornealEndo",
+    "level": "group",
+    "pool": "432",
+    "applies_to_entry": "适用（在本条火灾域 9 组内）",
+    "exempt_link": "lfc 否决与 cons 参考均不纳入；fire_audit small-record 行留痕"
+   },
+   {
+    "entry_id": "Schwann",
+    "parent_group": "Schwann",
+    "comparator": "B Cells",
+    "level": "author_sibling(全局小池)",
+    "pool": "212",
+    "applies_to_entry": "不适用（其父组归属=Fibroblast-stroma≠本条父组，本不在本条比较域）",
+    "exempt_link": "不计作已实施比较后的豁免"
+   },
+   {
+    "entry_id": "Schwann",
+    "parent_group": "Schwann",
+    "comparator": "Monocytes",
+    "level": "author_sibling(全局小池)",
+    "pool": "253",
+    "applies_to_entry": "不适用（其父组归属=Epithelium≠本条父组，本不在本条比较域）",
+    "exempt_link": "不计作已实施比较后的豁免"
+   },
+   {
+    "entry_id": "Schwann",
+    "parent_group": "Schwann",
+    "comparator": "Corneal_Endo",
+    "level": "author_sibling(全局小池)",
+    "pool": "432",
+    "applies_to_entry": "不适用（其父组归属=Keratocytes≠本条父组，本不在本条比较域）",
+    "exempt_link": "不计作已实施比较后的豁免"
+   },
+   {
+    "entry_id": "Schwann",
+    "parent_group": "Schwann",
+    "comparator": "(组级：火灾域 9 组中 8 组 pool≥500 实际参与否决)",
+    "level": "group(active)",
+    "pool": "-1",
+    "applies_to_entry": "适用",
+    "exempt_link": "对照行：证明比较域实际执行"
+   },
+   {
+    "entry_id": "Conj_epithelium_suprabasal",
+    "parent_group": "Epithelium",
+    "comparator": "CornealEndo",
+    "level": "group",
+    "pool": "432",
+    "applies_to_entry": "适用（在本条火灾域 9 组内）",
+    "exempt_link": "lfc 否决与 cons 参考均不纳入；fire_audit small-record 行留痕"
+   },
+   {
+    "entry_id": "Conj_epithelium_suprabasal",
+    "parent_group": "Epithelium",
+    "comparator": "Monocytes",
+    "level": "author_sibling",
+    "pool": "253",
+    "applies_to_entry": "适用（同父兄弟域内）",
+    "exempt_link": "记录不否决（lfc 与 cons 均不纳入）"
+   },
+   {
+    "entry_id": "Conj_epithelium_suprabasal",
+    "parent_group": "Epithelium",
+    "comparator": "B Cells",
+    "level": "author_sibling(全局小池)",
+    "pool": "212",
+    "applies_to_entry": "不适用（其父组归属=Fibroblast-stroma≠本条父组，本不在本条比较域）",
+    "exempt_link": "不计作已实施比较后的豁免"
+   },
+   {
+    "entry_id": "Conj_epithelium_suprabasal",
+    "parent_group": "Epithelium",
+    "comparator": "Corneal_Endo",
+    "level": "author_sibling(全局小池)",
+    "pool": "432",
+    "applies_to_entry": "不适用（其父组归属=Keratocytes≠本条父组，本不在本条比较域）",
+    "exempt_link": "不计作已实施比较后的豁免"
+   },
+   {
+    "entry_id": "Conj_epithelium_suprabasal",
+    "parent_group": "Epithelium",
+    "comparator": "(组级：火灾域 9 组中 8 组 pool≥500 实际参与否决)",
+    "level": "group(active)",
+    "pool": "-1",
+    "applies_to_entry": "适用",
+    "exempt_link": "对照行：证明比较域实际执行"
+   },
+   {
+    "entry_id": "Limbus_Sclera_fibroblast_C1",
+    "parent_group": "Fibroblast-stroma",
+    "comparator": "CornealEndo",
+    "level": "group",
+    "pool": "432",
+    "applies_to_entry": "适用（在本条火灾域 9 组内）",
+    "exempt_link": "lfc 否决与 cons 参考均不纳入；fire_audit small-record 行留痕"
+   },
+   {
+    "entry_id": "Limbus_Sclera_fibroblast_C1",
+    "parent_group": "Fibroblast-stroma",
+    "comparator": "B Cells",
+    "level": "author_sibling",
+    "pool": "212",
+    "applies_to_entry": "适用（同父兄弟域内）",
+    "exempt_link": "记录不否决（lfc 与 cons 均不纳入）"
+   },
+   {
+    "entry_id": "Limbus_Sclera_fibroblast_C1",
+    "parent_group": "Fibroblast-stroma",
+    "comparator": "Monocytes",
+    "level": "author_sibling(全局小池)",
+    "pool": "253",
+    "applies_to_entry": "不适用（其父组归属=Epithelium≠本条父组，本不在本条比较域）",
+    "exempt_link": "不计作已实施比较后的豁免"
+   },
+   {
+    "entry_id": "Limbus_Sclera_fibroblast_C1",
+    "parent_group": "Fibroblast-stroma",
+    "comparator": "Corneal_Endo",
+    "level": "author_sibling(全局小池)",
+    "pool": "432",
+    "applies_to_entry": "不适用（其父组归属=Keratocytes≠本条父组，本不在本条比较域）",
+    "exempt_link": "不计作已实施比较后的豁免"
+   },
+   {
+    "entry_id": "Limbus_Sclera_fibroblast_C1",
+    "parent_group": "Fibroblast-stroma",
+    "comparator": "(组级：火灾域 9 组中 8 组 pool≥500 实际参与否决)",
+    "level": "group(active)",
+    "pool": "-1",
+    "applies_to_entry": "适用",
+    "exempt_link": "对照行：证明比较域实际执行"
+   }
+  ],
+  "n_rows": 20,
+  "forced_wording": "低于 MINPOOL 或因其他资格条件未进入否决计算的比较对象，均须逐项登记，不得计作特异性检验通过。MINCORE=3 自本次注册生效，不得追认为原 KB9 build 前已冻结的预注册门槛。"
+ },
+ "residual_limits": [
+  "开发集同源（§2 实算）：规则、词条、评测同一 D002 study/donor 宇宙，P1/P2=工程验收非独立验证；案 A 无独立票面证据。",
+  "R2/R3 屏蔽为非对称删除规则：top60 共现提示跨谱系/状态/环境 RNA 效应，非判别价值否定；真免疫证据保留依赖 A07 诊断表实证而非规则保证。",
+  "混合票集统计边界（§9/A11）：8 复用簇票=缓存混合结果，非当期全量复测。",
+  "屏蔽副作用：kb 空率 27%→39%（BUILD_REPORT P3 行原样）。",
+  "suprabasal 生物学限制：S100A8/9 髓系及炎性共享表达、参考池 96.9% 来自 chen_limbus；未触发 §1.2 数值否决≠已证明结膜 suprabasal 特异性。",
+  "本轮未完成义务=下行 obligations_before_activation 四项；注册条款的确立不等于这些检查已经通过。"
+ ],
+ "obligations_before_activation": [
+  {
+   "id": "OB-1",
+   "item": "AV2-5(c) 历史 ON 态门",
+   "detail": "RUN5 时刻完整请求/存档快照逐字段对账（含批组成快照）；G1≠历史 ON 保真",
+   "status": "未清（激活前强制）"
+  },
+  {
+   "id": "OB-2",
+   "item": "A07 投票前诊断表首跑",
+   "detail": "pre_vote_diagnostics.tsv 列规格见注册包 §6；票面与诊断表不一致=run 作废；Q6::26 型掏空回退须可指认",
+   "status": "未清（激活前强制）"
+  },
+  {
+   "id": "OB-3",
+   "item": "22 视网膜簇 Arm1/Arm2 完整 ranking 一致性补查",
+   "detail": "排序/去重/加载序副作用；注册包 §8-4/§10-6",
+   "status": "未清（下一波强制输出）"
+  },
+  {
+   "id": "OB-4",
+   "item": "lit 逐条同源排除筛查留档",
+   "detail": "KB9 实跑未落筛查记录；每次 lit 重建落盘命中列表/判定/剔除动作（注册包 §9）",
+   "status": "未清（每次 run 义务）"
+  },
+  {
+   "id": "OB-5",
+   "item": "PI 另批激活",
+   "detail": "本注册仅路由登记默认 OFF；禁在本卡内激活/接线生效（D17 边界）",
+   "status": "永久门（激活前 PI）"
+  }
+ ]
+}

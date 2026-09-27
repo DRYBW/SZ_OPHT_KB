@@ -37,7 +37,7 @@ from mcp.server import MCPServer  # noqa: E402
 app = MCPServer(
     name="eyekb",
     title="EyeKB 眼科知识库证据服务",
-    version="KB1v2-0.4-actv6",
+    version="KB1v2-0.5-k9reg",
     description=("眼科文献 RAG 检索 (v2.0 全眼库 174,616 chunks/2,713 papers, KB1v2 起带 "
                  "inclusion_reasons/claim_relation/evidence_context 三字段+复核状态) + VK 索引页 + "
                  "本地权威 marker 库 + 判读层: 眼科通用组成基线 (kb/baselines 供者级条件参考分布, "
@@ -51,7 +51,12 @@ app = MCPServer(
                  "env EYEKB_ACT_V6=0|false|off|no 回退=现役三库, off 态规范序列化与 pre 基线"
                  "全等 (A5 机读验收); lacrimal_v6 任何态不入默认 (PI A3 暂不切, 仅显式查询)。"
                  "kb/baselines 红词修正经 append 式覆盖层生效 (原基线文件字节不动, "
-                 "返回体 entry 级 marker_repair 台账可审计)。"),
+                 "返回体 entry 级 marker_repair 台账可审计)。"
+                 "t_4bb75b26 KB9REG-EXEC (PI D17 注册批准, 2026-09-28 波): 新增可选库 "
+                 "library=k9_ocs (KB9 案 B 眼表 4 新条 Melanocyte/Schwann/"
+                 "Conj_epithelium_suprabasal/Limbus_Sclera_fibroblast_C1, REGISTERED_"
+                 "DEFAULT_OFF——仅显式查询可达, 任何态不入默认 all; 激活需义务 run+PI 另批; "
+                 "默认行为与本登记前字节级一致, A5 式机读自证见 plans/kb9_ocs_20260927/exec/out/)。"),
     instructions=("EyeKB 五工具: query_marker 先查本地 marker; search_literature 取文献证据"
                   "(全部带 PMID 可溯源); get_kb_page 读组织/主题索引页; "
                   "注释前按 ANNOTATION_PROTOCOL_v1.1 四阶段用 get_tissue_composition "
@@ -107,7 +112,13 @@ def query_marker(genes: list[str] | None = None, cell_type: str = "",
     文件本体只读;
     lacrimal_v6=markers_v6_lacrimal_increment.json v6.0-lacrimal (t_e7ec73ab KB8 发布+登记同卡):
     首个眼附属器词条库——泪腺分泌/导管/肌上皮警示条 3 条; PI A3 裁定暂不切, 任何态不入
-    默认 all, 仅显式 library=lacrimal_v6 查询可达))。
+    默认 all, 仅显式 library=lacrimal_v6 查询可达;
+    k9_ocs=markers_k9_ocs_increment.json k9.0-ocs-registered-v1 (t_4bb75b26 KB9REG-EXEC 注册,
+    PI D17 批准): KB9 案 B 眼表 4 新条 (Melanocyte/Schwann/Conj_epithelium_suprabasal/
+    Limbus_Sclera_fibroblast_C1, 均 ocular_surface_only, 逐条带 CL id+OLS 回证+逐基因 PMID 链)
+    ——REGISTERED_DEFAULT_OFF: 任何态不入默认 all, 仅显式 library=k9_ocs 查询可达;
+    激活需 §10-6 义务 run + PI 另批; 屏蔽/装配规则 v2 旁挂件 _k9_ocs_rules_overlay_v1.json
+    为惰性数据 (MCP 运行时不读))。
     给 genes → 反查基因命中哪些细胞类型 + 类排名 (n_shared);
     给 cell_type → 该类的 marker 列表 (Micro/RPE 附 detail; membrane 类附 provenance);
     都给空 → 返回类目清单。library=retina 精确复现 P1 旧行为。

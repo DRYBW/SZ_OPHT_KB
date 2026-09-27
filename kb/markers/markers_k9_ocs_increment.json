@@ -1,0 +1,574 @@
+{
+ "version": "k9.0-ocs-registered-v1",
+ "created": "2026-09-27",
+ "registered_at": "2026-09-27 21:12:25",
+ "card": "t_4bb75b26",
+ "build_card": "t_6df5b739",
+ "prereg_sha": "47045d9fedb642da6241c272b4bc452f8441ac246a87bf3dc83bd8432627eca4",
+ "status": "REGISTERED_DEFAULT_OFF — PI D17（USER_DIRECTIVE_20260928_eyekb_improve_wave.md 追加一）批准注册，路由登记但默认不纳入响应：仅显式 library=k9_ocs 可达，任何态不入默认 all；激活需 §10-6 义务 run（见 obligations_before_activation）+ PI 另批（本卡禁）。",
+ "scope": "KB9 眼表词条缺口建设：Melanocyte/Schwann 零词条补建 + 结膜分层 suprabasal 细分 + 角膜/巩膜成纤维细分（部分诚实阴性）+ 泛免疫/泛间质 applicability 修复候选（R1/R2/R3 证据装配规则，词条文件本体不改）",
+ "positioning_limitation_statement": "本件所辖词条与证据装配规则，属开发集（D002 眼表 578K，作者标签参与规则开发）上的定向修复+回归检查：规则开发消费了 D002 作者分组标签，参考池与评价在数据来源上完全同源；自检 P1=22/33（FAIL 如实报）与P2=0/33 均为该开发集上的工程验收结果，不构成独立验证的性能增益；24/33 不可作有依据的预测。（§0 标题页级限定声明，随一切下游文本强制携带；全文见 REGISTER_PACKAGE_v2.md §0/§2）",
+ "registration_provenance": {
+  "approved_by": "PI 2026-09-28 波指令追加一 D17（缺文献的补文献、缺 wiki 的补）",
+  "external_review": "REVIEWER_LLM xhigh 五轮 ACCEPTED（2026-09-27，签发语=可送 PI 批注册，不授权激活）",
+  "review_chain": "/mnt/D/EyeKB/plans/kb9_ocs_20260927/register/ROUNDTWO_VERDICT_20260927.md",
+  "package_version": "reg-v2.2-20260927",
+  "case": "案 B 全量（R-1 四词条 + R-2/R-3 屏蔽/适用性规则 + R-4 装配规则 v2）",
+  "vote_face_note_c2b": "案 B 票面 P1 22/33 FAIL 属 C4 历史口径，本注册不改写该记录；票规 v2=C2b（PI 09-27 D11 批准向前生效）下同票机械重算=29/33 过 ≥24 门（反事实实证，零翻案），来源 /mnt/D/EyeKB/plans/tiep_20260927/TIEP_PROPOSAL.md；本附注仅为口径登记，C2b 生效范围=落款后预注册 run，不追溯本案 B 票面。",
+  "sources": {
+   "build_file": "/mnt/D/EyeKB/plans/kb9_ocs_20260927/build/markers_k9_ocs_increment.json",
+   "build_file_sha256": "22c445ecd7b2521869205b6d01012427c8d186500239bbd6618dc07d6edda55a",
+   "register_package": "/mnt/D/EyeKB/plans/kb9_ocs_20260927/register/REGISTER_PACKAGE_v2.md",
+   "register_package_sha256": "4810bbe47a7a1faefa26c44e50dbbb35bdd9e400daffb18685acc78499bc0aea",
+   "a06_scope_table_sha256": "8c7aa4098750768bb0f0dc40ecdeb51e7d31353deb075dd2a6b6e56683c70bc3",
+   "shield_tsv_sha256": "5f930c3d9384ec787ea67b7535061d621a488d4ea653705a965984219bb07ba4",
+   "face_effective_genesets_sha256": "6a18aafbf023680d2eb7db1526d920cdd6a2a6866cd02d1874dca59a0752514e",
+   "crosswalk_ext_sha256": "8d82b6191067e983d15b0e33c4c8044a8abccb960bf82faa99622bd46462c36f",
+   "a09_snapshot_sha256": "fcf851e5d19a44cd5f3a7e4fb37993545d731d0509440b656303cd8c2e87f344",
+   "a03_registry_sha256": "586616e67c46ceaaf9398b2e868acb2edea3bc77c86a1606f17e004d944efec6",
+   "a19_by_entry_sha256": "d0397bde786a67fbdd94deaea5b812a2c5cc13e5769e687f9eb7bd76c4169b1e",
+   "ols_parsed_ledger_sha256": "3c917c8d6e6a1f3514466f4df4f967772b204fa8ed2d59ef0373f9e6399ca9f5",
+   "limbus_ols_recheck_raw_sha256": "50a504cf74733cc0a52a0b419acc8db576f1686f0bb970b3ffaf48da4185abcc",
+   "pmid_ledger": "/mnt/D/EyeKB/plans/kb9_ocs_20260927/ledgers/PMID_LEDGER.tsv",
+   "pmid_ledger_sha256": "83ea5b7325e39dd9b2131263872fac444003eec11473354886aa314070c1d318"
+  }
+ },
+ "data_source": {
+  "agg": "/mnt/D/EyeKB/plans/kb6b_face_20260925/out/agg_kb6b_v1.npz",
+  "agg_prereg_sha": "22df3a2c564988fe022c144c09ee870bf313feabfa025ca7da2f7a9646fd7a1f",
+  "constants": "KB7-W2 冻结: CPM_FLOOR=5 LFC_T=1.0 CONS_T=0.75 DR=2 MIND=10 TOPN=12 MINPOOL=500",
+  "fire_audit": "out/kb9_fire_audit.tsv (全格)"
+ },
+ "ols_evidence": {
+  "dir": "ledgers/ols_evidence_kb9/",
+  "errata_rejected_candidates": {
+   "CL_0000134": "回函 label=mesenchymal cell 不符→拒 (USER_DIRECTIVE_20260924 首拦实证)",
+   "CL_0000049": "回函 label=common myeloid progenitor 不符→拒"
+  }
+ },
+ "markers": {
+  "Melanocyte": [
+   "TRPM1",
+   "MLANA",
+   "TYRP1",
+   "PMEL",
+   "DCT",
+   "TYR",
+   "GAPDHS",
+   "GPR143",
+   "SLC24A5",
+   "ABCB5"
+  ],
+  "Schwann": [
+   "MPZ",
+   "SCN7A",
+   "SOX2",
+   "NRXN1"
+  ],
+  "Conj_epithelium_suprabasal": [
+   "S100A8",
+   "S100A9",
+   "KRT4"
+  ],
+  "Limbus_Sclera_fibroblast_C1": [
+   "DPT",
+   "LEPR",
+   "LAMA2"
+  ]
+ },
+ "new_terms": {
+  "Melanocyte": {
+   "display_name": "melanocyte (D002 眼表源: author Melanocytes 7,209 cells)",
+   "cl_id": "CL:0000148",
+   "label": "melanocyte",
+   "definition_ols": "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules.",
+   "applicability": "ocular_surface_only (R1 镜像: 视网膜材料不计入)",
+   "q6_truth_fold": "Melanocytes",
+   "core": [
+    {
+     "gene": "TRPM1",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9_fire_audit::Melanocyte rank1 (min_lfc_fire 8.80, cons 1.000, valid 34)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:40869148",
+       "note": "TRPM1×melanocyte/melanoma 语境同现 (ledgers/PMID_LEDGER.tsv)"
+      }
+     ]
+    },
+    {
+     "gene": "MLANA",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank2 (8.71, 1.000, 34)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:42629955"
+      }
+     ]
+    },
+    {
+     "gene": "TYRP1",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank3 (8.68, 1.000, 34)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:42720426"
+      }
+     ]
+    },
+    {
+     "gene": "PMEL",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank4 (8.40, 1.000, 34)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:42720426"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:41945932"
+      }
+     ]
+    },
+    {
+     "gene": "DCT",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank5 (8.32, 1.000, 34)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:42601941"
+      }
+     ]
+    },
+    {
+     "gene": "TYR",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank6 (7.61, 1.000, 34)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:42406579"
+      },
+      {
+       "type": "canonical",
+       "note": "酪氨酸酶=黑色素合成限速酶教科书锚"
+      }
+     ]
+    },
+    {
+     "gene": "GAPDHS",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank7 (7.37, 0.971, 35)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:34249897"
+      }
+     ]
+    },
+    {
+     "gene": "GPR143",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank8 (6.71, 1.000, 34)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:42170303"
+      },
+      {
+       "type": "canonical",
+       "note": "OA2 眼白化病基因, 黑色素体膜受体"
+      }
+     ]
+    },
+    {
+     "gene": "SLC24A5",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank10 (6.28, 0.971, 35)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:41103068"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:42462966"
+      }
+     ]
+    },
+    {
+     "gene": "ABCB5",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank12 (6.07, 0.912, 34)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:41681896"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:42482451"
+      }
+     ]
+    }
+   ],
+   "removed_note": [
+    "BCAN: TOP12 内但文献通道 weak_evidence (EuropePMC top5 无基因×语境同现可核) → 弃用登记 (HC-LITRE 先例)",
+    "GALNTL6: 仅 pmid_context 共现级 → 降级弃用 (E2R 宽容口径教训前置)",
+    "MITF: 数据全绿(mlfc 3.32 cons 0.978) 但 TOPN=12 口径按 min_lfc_fire 排序落在 12 名外——照 KB7 冻结口径不回填 (禁择优挑基因); 且 MITF 与视网膜 RPE 条共享, 保留待外部证据"
+   ],
+   "ols_recheck": {
+    "obo_id": "CL:0000148",
+    "ols_label": "melanocyte",
+    "ols_def": "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.",
+    "synonyms": [
+     "melanophore"
+    ],
+    "iri": "http://purl.obolibrary.org/obo/CL_0000148",
+    "label_match": true,
+    "raw_response_file": "/mnt/D/EyeKB/plans/kb9_ocs_20260927/ledgers/ols_evidence_kb9/Melanocyte_CL_0000148.json",
+    "raw_response_sha256": "e0994e12ff360ef6356e2b83e0915e78e6995c08af49eb98969c4cd0c446c023",
+    "retrieved_at": "2026-09-27T09:30:19+0800",
+    "provenance": "build 时点 k2_ols_evidence.py"
+   },
+   "ols_recheck_note": "OLS 回证=词条级命名/CL 身份证据，非逐基因 marker 证据（注册包 §8-5/A19 降格口径）；KB9 命名卫生实证：假号 CL:0000134/0000049 被 OLS 回函拒（见 ols_evidence.errata_rejected_candidates）。逐基因支持=文献实际表达关系+数据统计（同源面按 §0 限定）。"
+  },
+  "Schwann": {
+   "display_name": "Schwann cell (D002 眼表源: author Schwann_N 5,403 ∪ Schwann_M 656 = 6,059 cells)",
+   "cl_id": "CL:0002573",
+   "label": "Schwann cell",
+   "definition_ols": "A glial cell that ensheathes axons of neurons in the peripheral nervous system.",
+   "applicability": "ocular_surface_only (R1 镜像)",
+   "q6_truth_fold": "Schwann Cells",
+   "core": [
+    {
+     "gene": "MPZ",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9_fire_audit::Schwann rank2 (min_lfc_fire 6.99, cons 0.957, valid 47)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:42539570"
+      },
+      {
+       "type": "canonical",
+       "note": "P0 髓鞘蛋白基因, CMT1B"
+      }
+     ]
+    },
+    {
+     "gene": "SCN7A",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank3 (6.68, 1.000, 42)"
+      },
+      {
+       "type": "canonical",
+       "note": "GNT1/Nav-P 外周神经鞘钠通道, Schwann 膜特异 (文本教科书锚; EuropePMC 通道 weak_evidence 如实登记)"
+      },
+      {
+       "type": "pmid_context",
+       "id": "Q6::17 top_genes 直证 (RUN5 top10 含 SCN7A)"
+      }
+     ]
+    },
+    {
+     "gene": "SOX2",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank4 (6.51, 0.976→0.889 精算域, 42)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:42760604"
+      },
+      {
+       "type": "note_caveat",
+       "note": "多效 TF: limbal 上皮/视网膜前体亦表达——D002 火灾域全绿+R1 屏蔽保护视网膜面; 眼表外应用禁"
+      }
+     ]
+    },
+    {
+     "gene": "NRXN1",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank6 (6.01, 1.000, 42)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:41739556"
+      }
+     ]
+    }
+   ],
+   "removed_note": [
+    "XKR4/FRMD5/MYOT/NTM/GRIK2/CADM2: 数据全绿但文献仅 pmid_context → 降级弃用登记",
+    "NRXN3/COL28A1/PLP1/MBP/NGFR/EGR2/PMP22/SOX10: 数据门未过 (CPM floor/det/lfc——PLP1/MBP 等成熟髓鞘基因在 D002 解离细胞中低检出)——如实登记, 禁为成条放宽判据",
+    "CDH19: 数据全绿(3.73, cons 1.000)且为 Q6::17 top_genes 首位, 但 TOPN=12 按 min_lfc_fire 排序居 21 名外——冻结口径不回填 (诚实)"
+   ],
+   "ols_recheck": {
+    "obo_id": "CL:0002573",
+    "ols_label": "Schwann cell",
+    "ols_def": "A glial cell that ensheathes axons of neuron in the peripheral nervous system and are necessary for their maintainance and function.",
+    "synonyms": [],
+    "iri": "http://purl.obolibrary.org/obo/CL_0002573",
+    "label_match": true,
+    "raw_response_file": "/mnt/D/EyeKB/plans/kb9_ocs_20260927/ledgers/ols_evidence_kb9/Schwann_CL_0002573.json",
+    "raw_response_sha256": "d25d3ac216352af635ac4a764e0b172c038e072b8c2107227c0e0fe3bc735224",
+    "retrieved_at": "2026-09-27T09:30:32+0800",
+    "provenance": "build 时点 k2_ols_evidence.py"
+   },
+   "ols_recheck_note": "OLS 回证=词条级命名/CL 身份证据，非逐基因 marker 证据（注册包 §8-5/A19 降格口径）；KB9 命名卫生实证：假号 CL:0000134/0000049 被 OLS 回函拒（见 ols_evidence.errata_rejected_candidates）。逐基因支持=文献实际表达关系+数据统计（同源面按 §0 限定）。"
+  },
+  "Conj_epithelium_suprabasal": {
+   "display_name": "conjunctival_epithelium_suprabasal (D002: Conj_suprabasal 7,264 cells; KB7 三分层缺口之剩余细分)",
+   "cl_id": "CL:1000432",
+   "label": "conjunctival epithelial cell",
+   "layer_descriptor": "suprabasal (author label 语境, CL 无分层条——照 KB7 Conj_epithelium_basal 先例借父条, 禁硬挂近似 term)",
+   "applicability": "ocular_surface_only",
+   "q6_truth_fold": "Epithelium",
+   "kb7_discrepancy_note": "KB7 发布件断言 Conj_suprabasal 'D002 判据 0 基因全过', 但其 fullaudit 未落盘 suprabasal 行 (out-of-disk claim)。KB9 以同冻结常量+author 池独立复算=26 基因过 lfc 火灾域、10 基因过 donor cons——分歧如实登记 (out/kb9_fire_audit.tsv 全格可审), 本条以 KB9 盘上证据成条, 判据未放宽。",
+   "core": [
+    {
+     "gene": "S100A8",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9_fire_audit::Conj_suprabasal rank1 (cpm 19161, min_lfc_fire 2.14, cons 0.824)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:41638552"
+      },
+      {
+       "type": "shield_note",
+       "note": "∈ Immune Cells top60 → R2 屏蔽: 眼表面证据装配不计其贡献 (对称屏蔽, 防反接管); 词条知识保留"
+      }
+     ]
+    },
+    {
+     "gene": "S100A9",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank3 (cpm 34812, 2.13, cons 0.824)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:41991541"
+      },
+      {
+       "type": "shield_note",
+       "note": "同上, R2 屏蔽"
+      }
+     ]
+    },
+    {
+     "gene": "KRT4",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank8 (2.19k cpm, 1.59, cons 0.875)"
+      },
+      {
+       "type": "canonical",
+       "note": "黏膜型分化角质素 (非角化复层上皮; THP/WS 综合征锚)——EuropePMC 通道 weak_evidence 如实登记"
+      }
+     ]
+    }
+   ],
+   "removed_note": [
+    "KLK12/KLK13/SPINK5/PDZK1IP1: 数据全绿但文献仅 pmid_context → 降级弃用",
+    "SPRR3/RHCG/PITX1/SERPINB13: 文献通道未过/未查→弃用登记 (PITX1/SERPINB13 未入文献查询清单, 属诚实缺口非阴性证明)",
+    "KRTDAP/IVL/SPINK5/SLURP2/ADGRV1 等: donor cons 未过 (精算域 KB7 口径) → 数据门否决"
+   ],
+   "face_effective_note": "实测: S100A8/S100A9 不在 D002 其余 8 类作者标签 top60 (该数据集免疫层 top60 由 T/肥大/DC 基因主导), 故三条眼表有效基因全保留 (out/kb9_face_effective_genesets.json); 屏蔽规则仍按对称原则实现, 数据说话",
+   "ols_recheck": {
+    "obo_id": "CL:1000432",
+    "ols_label": "conjunctival epithelial cell",
+    "ols_def": "An epithelial cell that is part of the conjunctiva.",
+    "synonyms": [
+     "epithelial cell of conjunctiva"
+    ],
+    "iri": "http://purl.obolibrary.org/obo/CL_1000432",
+    "label_match": true,
+    "raw_response_file": "/mnt/D/EyeKB/plans/kb9_ocs_20260927/ledgers/ols_evidence_kb9/Conj_epithelium_suprabasal_CL_1000432.json",
+    "raw_response_sha256": "cce9bb1b9f70d7244375c7efa8147a6e3f18787ecdce06931b1dc00aac2a2e81",
+    "retrieved_at": "2026-09-27T09:30:38+0800",
+    "provenance": "build 时点 k2_ols_evidence.py"
+   },
+   "definition_ols": "An epithelial cell that is part of the conjunctiva.",
+   "definition_ols_note": "父条定义（本条=借父条/subtype 自造，见 layer_descriptor）",
+   "ols_recheck_note": "OLS 回证=词条级命名/CL 身份证据，非逐基因 marker 证据（注册包 §8-5/A19 降格口径）；KB9 命名卫生实证：假号 CL:0000134/0000049 被 OLS 回函拒（见 ols_evidence.errata_rejected_candidates）。逐基因支持=文献实际表达关系+数据统计（同源面按 §0 限定）。"
+  },
+  "Limbus_Sclera_fibroblast_C1": {
+   "display_name": "limbus/sclera_fibroblast_C1 (D002: 'Limbus/Sclera Fibroblasts - C1' 33,033 cells)",
+   "cl_id": "CL:0000057",
+   "label": "fibroblast",
+   "layer_descriptor": "subtype (CL 无纤维亚型条, 按 CL 命名规范自造并挂父条)",
+   "applicability": "ocular_surface_only",
+   "q6_truth_fold": "Fibroblasts",
+   "honesty_note": "P1 价值有限: truth 折叠同归 Fibroblasts (9 词表), 本条主要修复纤维簇证据质量(替代 MG/Astro/Pericyte 接管)。文献为泛纤维/基质语境, 非眼科特异——如实标注",
+   "core": [
+    {
+     "gene": "DPT",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9_fire_audit::LimScl_C1 (LEPR 3.01, DPT 2.92, cons 全绿)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:42729537",
+       "note": "泛成纤维细胞异质性语境, 非眼科特异"
+      }
+     ]
+    },
+    {
+     "gene": "LEPR",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank (min_lfc_fire 3.01)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:42166552",
+       "note": "LepR+ 纤维母细胞谱系标记 (泛组织)"
+      }
+     ]
+    },
+    {
+     "gene": "LAMA2",
+     "evidence": [
+      {
+       "type": "data_driven",
+       "id": "kb9::rank (1.87, cons 绿)"
+      },
+      {
+       "type": "pmid",
+       "id": "PMID:42678737",
+       "note": "基质/纤维语境, 非眼科特异"
+      }
+     ]
+    }
+   ],
+   "removed_note": [
+    "VCAN: ∈ Mono_Classical 词条基因且免疫 top60 → 屏蔽必死, 不入 core",
+    "诚实阴性登记: 'Limbus Fibroblasts'/'Limbus/Sclera Fibroblasts - C2'/'Sclera Fibroblasts' 三亚型 donor cons 精算域 0 基因全过 (out/kb9_term_candidates.json)——KB7 '纤维四细分 0 全过' 断言在 KB9 口径下部分成立 (3/4 亚型仍零; C1 有 3 基因), 差异归因 KB7 全格未落盘+池定义 (GROUP 父池 vs author 亚型池), 判据常量未动"
+   ],
+   "ols_recheck": {
+    "obo_id": "CL:0000057",
+    "ols_label": "fibroblast",
+    "ols_def": "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+    "synonyms": [],
+    "iri": "http://purl.obolibrary.org/obo/CL_0000057",
+    "label_match": true,
+    "raw_response_file": "/mnt/D/EyeKB/plans/kb9_ocs_20260927/ledgers/ols_evidence_kb9/Limbus_Sclera_fibroblast_C1_CL_0000057_recheck_t4bb75b26.json",
+    "raw_response_sha256": "50a504cf74733cc0a52a0b419acc8db576f1686f0bb970b3ffaf48da4185abcc",
+    "retrieved_at": "2026-09-27T21:10:58+0800",
+    "provenance": "本卡 t_4bb75b26 KB9REG-EXEC 补回证（D17「缺回证的补」；照 k2 双通道先例，by_iri 回函 obo_id+label 判定，禁凭记忆写号）"
+   },
+   "definition_ols": "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped.",
+   "definition_ols_note": "父条定义（本条=借父条/subtype 自造，见 layer_descriptor）",
+   "ols_recheck_note": "OLS 回证=词条级命名/CL 身份证据，非逐基因 marker 证据（注册包 §8-5/A19 降格口径）；KB9 命名卫生实证：假号 CL:0000134/0000049 被 OLS 回函拒（见 ols_evidence.errata_rejected_candidates）。逐基因支持=文献实际表达关系+数据统计（同源面按 §0 限定）。"
+  }
+ },
+ "applicability_revision_candidates": {
+  "note": "以下均为证据装配规则候选 (out/kb9_shared_gene_shield.tsv + out/kb9_face_effective_genesets.json), 不改任何现库词条基因集本体; 注册/接线等 PI",
+  "R1_tissue_applicability": {
+   "rule": "material.tissue=='ocular_surface' 时, 来源文件∈{markers_v4.1_clean.json, markers_v5_retina_interneuron.json, markers_v6_retina_repair.json} 的类不计入 ranking; 反向: applicability=ocular_surface_only 的类在视网膜材料不计入",
+   "evidence": "RUN5 实证 MG|Astro 接管 Q6::13/22/16 等 6 簇; crosswalk no_counterpart 行"
+  },
+  "R2_pan_immune_shield": {
+   "rule": "泛免疫类 (APC_MHCII_high/Mac_*/Mono_*/cDC*/pDC/T/B/NK/Plasma/Granulocyte/Microglia) 基因若∈任一非 Immune truth 类 top60 (冻结件 author_class_markers_data.tsv), 眼表面装配中该基因贡献记 0",
+   "evidence": "Q6::11 (CD74/HLA-DRA∈Endothelium top60→接管内皮), Q6::3 (S100A8/9∈Epithelium top60→接管上皮)"
+  },
+  "R3_pan_stromal_shield": {
+   "rule": "泛间质类 (Fibroblast/Pericyte/SMC/Myofibroblast/Keratocytes/Conj_*/Fib 亚型/Melanocyte/Schwann) 基因若∈任一其它 truth 类 top60, 同法记 0 (对称)",
+   "evidence": "Q6::24 mural 链 (ACTA2/TAGLN/MYL9∈Pericytes top60); Q6::15/28 KERA∈Fibroblasts top60; 防新条反接管 (S100A8/9 自 suprabasal 屏蔽)"
+  },
+  "keratocytes_Q620_disposition": {
+   "rule": "Keratocytes 条在眼表面证据中 KERA/ALDH3A1/NNMT 全被 R3 屏蔽 (∈Fibroblasts top60) → 眼表面 ranking 自然退场; 词条保留于基质语境 (D001/在体角膜分层)。词表映射建议: 判读词表将 Keratocytes 折叠入 Fibroblasts (super_map 已如此), runner 禁词表外定名",
+   "status": "候选, 等 PI"
+  }
+ },
+ "rules_overlay": {
+  "file": "/mnt/D/EyeKB/kb/markers/_k9_ocs_rules_overlay_v1.json",
+  "note": "屏蔽表/R1 scope 表/AV2 装配规则 v2/crosswalk/A09/A03/A19 全量旁挂于此件（惰性数据，MCP loader 不读）；本件 applicability_revision_candidates 仅为语义摘要指针。"
+ },
+ "known_limits": [
+  "D001 审计盲区依旧: 眼表条×视网膜邻类审计只能靠混合面抽样 (out/kb9_fire_audit_mixedface.tsv), 非全视网膜图谱",
+  "suprabasal 眼表有效基因=1 (KRT4), 薄条目; Q6::24 型 pericyte/SMC 生物学不可分未解决 (KB6b §3), 预期代价表在册",
+  "文献通道泛语境 (非眼科特异) 已逐条标注; PITX1/SERPINB13 未查=诚实缺口",
+  "cons 精算域实现: donor 级两侧 MIND>=10, 域=pool>=5000 邻组+pool 最大 3 兄弟亚型 (KB7 §口径); 与 KB7 全格件逐行比对未做 (其 suprabasal/fib 行未落盘)",
+  "开发集同源（§2 实算）：规则、词条、评测同一 D002 study/donor 宇宙，P1/P2=工程验收非独立验证；案 A 无独立票面证据。",
+  "R2/R3 屏蔽为非对称删除规则：top60 共现提示跨谱系/状态/环境 RNA 效应，非判别价值否定；真免疫证据保留依赖 A07 诊断表实证而非规则保证。",
+  "混合票集统计边界（§9/A11）：8 复用簇票=缓存混合结果，非当期全量复测。",
+  "屏蔽副作用：kb 空率 27%→39%（BUILD_REPORT P3 行原样）。",
+  "suprabasal 生物学限制：S100A8/9 髓系及炎性共享表达、参考池 96.9% 来自 chen_limbus；未触发 §1.2 数值否决≠已证明结膜 suprabasal 特异性。",
+  "本轮未完成义务=下行 obligations_before_activation 四项；注册条款的确立不等于这些检查已经通过。"
+ ],
+ "obligations_before_activation": [
+  {
+   "id": "OB-1",
+   "item": "AV2-5(c) 历史 ON 态门",
+   "detail": "RUN5 时刻完整请求/存档快照逐字段对账（含批组成快照）；G1≠历史 ON 保真",
+   "status": "未清（激活前强制）"
+  },
+  {
+   "id": "OB-2",
+   "item": "A07 投票前诊断表首跑",
+   "detail": "pre_vote_diagnostics.tsv 列规格见注册包 §6；票面与诊断表不一致=run 作废；Q6::26 型掏空回退须可指认",
+   "status": "未清（激活前强制）"
+  },
+  {
+   "id": "OB-3",
+   "item": "22 视网膜簇 Arm1/Arm2 完整 ranking 一致性补查",
+   "detail": "排序/去重/加载序副作用；注册包 §8-4/§10-6",
+   "status": "未清（下一波强制输出）"
+  },
+  {
+   "id": "OB-4",
+   "item": "lit 逐条同源排除筛查留档",
+   "detail": "KB9 实跑未落筛查记录；每次 lit 重建落盘命中列表/判定/剔除动作（注册包 §9）",
+   "status": "未清（每次 run 义务）"
+  },
+  {
+   "id": "OB-5",
+   "item": "PI 另批激活",
+   "detail": "本注册仅路由登记默认 OFF；禁在本卡内激活/接线生效（D17 边界）",
+   "status": "永久门（激活前 PI）"
+  }
+ ]
+}
