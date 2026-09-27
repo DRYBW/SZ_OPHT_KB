@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """EyeKB MCP 软复核提示层 (t_d6f2a0a0 / D4 放行, PI 2026-09-25)
-v0.2 · 按 REVIEWER_LLM CONDITIONAL 回函七项必修重写 (review/REVIEWER_LLMSOFTFLAG_v01_verdict.md)
+v0.2 · 按 REVIEWER_LLM CONDITIONAL 回函七项必修重写（评审回函原件为线上侧文件，未随仓收录）
 
 两条软提示 (reminder, 非硬旗标, 不新增定名/弃权/候选排除条件):
   1) rod_bc_review  —— 依据 /mnt/D/OcularKB/models/V2PROD_ROD_BC_BLINDSPOT_20260925.md
