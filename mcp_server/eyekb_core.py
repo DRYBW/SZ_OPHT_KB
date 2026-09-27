@@ -106,18 +106,28 @@ def get_kb_page(scope, name=""):
 #   library="membrane" → markers_membrane_v1.json (四面板膜/血管/间质/免疫)
 #   library="retina_interneuron" → markers_v5_retina_interneuron.json (v5.0, KB5v2 t_9714f560 发布;
 #       BC/AC/HC 泛型 core+亚型锚补录, v4.1 严格超集; 单库查询时类名即正名 BC/AC/HC) [t_d07ab64f 接线]
-#   library="all"      → 三库合并 (默认; provenance 按文件分列; v5 与 v4.1 同名 10 类经
-#       消歧规则以 "retina_interneuron::<类>" 别名行呈现, v4.1 正名/语义零变动)
-#   —— 以下两库 = KB7 v6 发布登记 (t_38b99a15 接线, 上游 t_2e5e103a 发布) ——
+#   library="all"      → 现役集合合并 (provenance 按文件分列; 同名类经消歧规则以
+#       "<库>::<类>" 别名行呈现, 先注册库正名/语义零变动; v5 对 v4.1 即此形态)。
+#       [ACT t_5d5853c9 · USER_DIRECTIVE_20260926 A1/A2/A5 激活切换, PI 2026-09-26 批准]
+#       现役集合由 env EYEKB_ACT_V6 控制 (每调用读取, 与 softflags 同风格):
+#         未设/非 off 值 = ON (激活默认态): 五库 = 现役三库 + retina_v6 + face_v6。
+#           retina_v6 10 类与 v4.1 同名 → "retina_v6::<类>" 别名行并入;
+#           face_v6 间质 Keratocytes/Fibroblast/Pericyte/Myofibroblast 与 membrane 同名
+#           → "face_v6::<类>" 别名, SMC 与 Conj_epithelium_basal/superficial 为新增正名类。
+#           Micro/RPE 查询的 micro_detail/rpe_detail 按 dbs 载入顺序末位覆盖 →
+#           ON 态取 v6 发布件 detail (修复面板并入语义, 已完成态声明于收口件)。
+#         ∈ {0,false,off,no} = OFF (回退态): 现役三库, 响应与 pre_change 基线
+#           规范序列化全等 (A5 机读验收, sf13 同款自证)。
+#       白名单硬编码 {retina_v6, face_v6} —— lacrimal_v6 任何态禁入默认路径
+#       (PI A3 裁定暂不切; 仅显式 library=lacrimal_v6 路由维持 t_e7ec73ab 登记原状)。
+#   —— 显式库路由 (登记自 t_38b99a15/t_e7ec73ab, 激活前既可达, 激活不改其语义) ——
 #   library="retina_v6" → markers_v6_retina_repair.json (v6.0-retina-repair: 10 类红词条修复
 #       + subtype_anchor_layer + microglia_repair; 文件只读, 禁改本体)
 #   library="face_v6"   → markers_v6_face_increment.json (v6.0-face: 眼表间质 4 红条 repair +
 #       B1 新条; 无 markers 顶层键, 读入时由 stromal_repair/face_increment.core 归一派生,
 #       源文件零改动; granularity_note_stromal_caution 随命中类附注)
-#   library="lacrimal_v6" → markers_v6_lacrimal_increment.json (v6.0-lacrimal, KB8 t_e7ec73ab:
-#       首个眼附属器词条库——泪腺分泌(CL:0000315)/导管(PRR27 单基因)/肌上皮(警示条 core=[]);
-#       无 markers 顶层键, 读入时由 lacrimal_increment.core 归一派生; granularity_note_* 随命中附注)
-#   **默认 "all" 不含 v6 库** —— v6 为可选登记版本, 激活时机属评测系列协调 (本接线不切默认)。
+#   library="lacrimal_v6" → markers_v6_lacrimal_increment.json (v6.0-lacrimal, KB8: 泪腺分泌/
+#       导管/肌上皮警示条 3 条; 同样读入派生; 仅显式查询可达, 默认 all 永不含——PI A3 暂不切)
 MARKER_DIR = (KB / "markers")
 MARKER_LIBS = {"retina": MARKER_JSON,
                "membrane": MARKER_DIR / "markers_membrane_v1.json",
@@ -126,13 +136,25 @@ MARKER_LIBS = {"retina": MARKER_JSON,
                "face_v6": MARKER_DIR / "markers_v6_face_increment.json",
     # lacrimal_v6 = KB8 首个眼附属器词条库 (t_e7ec73ab, 2026-09-25): 3 条 (分泌/导管/肌上皮警示条)
     #   + reference_layer; 无 markers 顶层键, 读入时由 lacrimal_increment.core 归一派生 (本体零改动)
+    #   [t_5d5853c9] PI A3=暂不切: 禁入 V6_DEFAULT_LIBS 白名单, 仅显式路由可达
     "lacrimal_v6": MARKER_DIR / "markers_v6_lacrimal_increment.json"}
+
+# [ACT t_5d5853c9] 默认 all 的 v6 并入白名单——硬编码, env 值只能整体开关, 不能注入任何库
+V6_DEFAULT_LIBS = ("retina_v6", "face_v6")
+
+
+def _v6_act_enabled():
+    """env EYEKB_ACT_V6 ∈ {0,false,off,no} (casefold) = OFF 回退; 未设/其余值 = ON 激活。"""
+    v = (os.environ.get("EYEKB_ACT_V6") or "").strip().casefold()
+    return v not in {"0", "false", "off", "no"}
 
 
 def _load_marker_dbs(library="all"):
     lib = (library or "all").strip().lower()
     if lib == "all":
-        names = ["retina", "membrane", "retina_interneuron"]  # 默认=现役三库; v6 为可选登记
+        names = ["retina", "membrane", "retina_interneuron"]  # 现役三库 (OFF 态=全量)
+        if _v6_act_enabled():
+            names = names + list(V6_DEFAULT_LIBS)  # 白名单 append; lacrimal_v6 永不在此
     elif lib in MARKER_LIBS:
         names = [lib]
     else:
@@ -167,8 +189,10 @@ def query_marker(genes=None, cell_type=None, library="all"):
     - genes 模式: 每个基因反向命中哪些类
     genes: list[str] 或逗号/空格分隔 str。两类都空 → 返回类目清单。
     类名跨库冲突时以 "库名::类名" 消歧 (v1 无冲突; 冲突清单见 provenance.conflicts)。
-    library=retina_v6|face_v6 (t_38b99a15 登记): KB7 v6 修复面板, 可选版本——默认 all
-    不含 v6, 激活切换属评测系列协调; 查询时 v6 发布文件本体只读。
+    library=retina_v6|face_v6 (t_38b99a15 登记): KB7 v6 修复面板; t_5d5853c9 激活
+    (USER_DIRECTIVE_20260926 A1/A2): 默认 all 含 retina_v6+face_v6, env EYEKB_ACT_V6=0
+    |false|off|no 回退=现役三库 (与激活前 pre 基线全等); lacrimal_v6 任何态不入默认
+    (PI A3 暂不切, 仅显式路由); 查询时 v6 发布文件本体只读。
     """
     dbs = _load_marker_dbs(library)
     markers, owner = {}, {}
@@ -216,8 +240,8 @@ def query_marker(genes=None, cell_type=None, library="all"):
                 if pp and db.get("version", "").startswith("v1-membrane"):
                     extra[f"provenance_{raw}"] = pp
         # face_v6 (t_38b99a15 接线) / lacrimal_v6 (t_e7ec73ab 接线): 命中 v6 条时附发布文件内
-        # granularity_note_* 警示注记 (数据侧原文, 仅显式 library= 查询路径可达;
-        # 默认 all 不含 v6 库 → 现役响应零变化)
+        # granularity_note_* 警示注记 (数据侧原文)。t_5d5853c9 激活后 face_v6 在默认 all 内
+        # → 同名间质类 (含 membrane 正名行) 查询可附 stromal caution; lacrimal_v6 仅显式路由。
         for name, path, db in dbs:
             for gkey, gval in db.items():
                 if not str(gkey).startswith("granularity_note_"):
@@ -449,8 +473,8 @@ def get_tissue_composition(species, tissue, disease="", development_stage=""):
             "provenance": _resolve_sources(entry),
             "source_file": entry["_file"],
             "usage_redline": ("判读对照与 QC 旗专用; 禁止转成 module score/标签加权/置信度加分/候选排序分/"
-                              "复合 QC 分数 (KB1v2 红线1, Astra T3 扩展表述全继承)")}
-    # KB1v2 (Astra T2): baseline 条透传口径字段; 骨架条明确标"区间无法估计"
+                              "复合 QC 分数 (KB1v2 红线1, REVIEWER_LLM T3 扩展表述全继承)")}
+    # KB1v2 (REVIEWER_LLM T2): baseline 条透传口径字段; 骨架条明确标"区间无法估计"
     if entry.get("_kind") == "baseline":
         resp.update({
             "baseline_status": entry.get("status"),
@@ -535,7 +559,7 @@ def get_disease_prior(disease, tissue=""):
             "caveats": entry.get("caveats"),
             "provenance": src, "source_file": entry["_file"],
             "usage_redline": ("判读对照与 QC 旗专用; 禁止转成 module score/标签加权/置信度加分/候选排序分/"
-                              "复合 QC 分数 (KB1v2 红线1, Astra T3 扩展表述全继承)")}
+                              "复合 QC 分数 (KB1v2 红线1, REVIEWER_LLM T3 扩展表述全继承)")}
     # KB1v2-W2 (T4/T2): 薄层条目透传身份层级/状态轴/证据条件/错配警示
     if entry.get("_kind") == "disease_v2":
         resp.update({
@@ -576,7 +600,7 @@ def _reason_map():
                         "inclusion_reason": d["inclusion_reason"],
                         "reason_confidence": d["confidence"],
                         "reason_method": d.get("matched_rule", ""),
-                        # KB1v2-W4 (Astra T5) 三字段透传: 多选 + 论断关系 + 证据条件
+                        # KB1v2-W4 (REVIEWER_LLM T5) 三字段透传: 多选 + 论断关系 + 证据条件
                         "inclusion_reasons": d.get("inclusion_reasons"),
                         "claim_relation": d.get("claim_relation"),
                         "evidence_context": d.get("evidence_context"),

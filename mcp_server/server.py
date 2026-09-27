@@ -16,7 +16,7 @@
 
 ═══ 服务级红线 ═══
 1. 本服务只提供【证据与引用】。禁止把返回内容接进任何打分/分类流程
-   (Claude5 冻结裁定 + Astra T3 扩展: 不得转成 module score/标签加权/置信度加分/候选排序分/复合 QC 分)。
+   (Claude5 冻结裁定 + REVIEWER_LLM T3 扩展: 不得转成 module score/标签加权/置信度加分/候选排序分/复合 QC 分)。
 2. 传输 = 本地 stdio, 不开任何网络端口 (P3 才议 SSE)。
 3. P1 阶段 RAG 库/embedding 模型按 kb/literature_db/EYEKB_DB_POINTER.yaml
    引用 OcularKB 现路径, 全部只读; OcularKB 文件零改动 (copy 不 move)。
@@ -30,22 +30,26 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import eyekb_core as core  # noqa: E402
+import calllog  # OBS1 t_c754c4fc 调用留痕层（只加日志、零行为改动；见 mcp_server/calllog.py 头注）
 
 from mcp.server import MCPServer  # noqa: E402
 
 app = MCPServer(
     name="eyekb",
     title="EyeKB 眼科知识库证据服务",
-    version="KB1v2-0.3-kb7wire",
+    version="KB1v2-0.4-actv6",
     description=("眼科文献 RAG 检索 (v2.0 全眼库 174,616 chunks/2,713 papers, KB1v2 起带 "
                  "inclusion_reasons/claim_relation/evidence_context 三字段+复核状态) + VK 索引页 + "
                  "本地权威 marker 库 + 判读层: 眼科通用组成基线 (kb/baselines 供者级条件参考分布, "
                  "锚 D001/D002) + 疾病×组织矩阵薄层条目 (身份层级+状态轴+错配警示)。"
-                 "仅证据服务, 禁入打分 (Astra T3 扩展表述)。"
+                 "仅证据服务, 禁入打分 (REVIEWER_LLM T3 扩展表述)。"
                  "t_d6f2a0a0 起 query_marker 可附 soft_flags 软复核提示 (rod-BC/mural)。"
                  "t_38b99a15 起 query_marker 可选 library=retina_v6|face_v6 (KB7 v6 修复面板"
-                 "登记为可选版本; t_e7ec73ab 起增 library=lacrimal_v6 (KB8 首个眼附属器词条库); "
-                 "默认 library=all 保持现役三库不含 v6——激活时机属评测系列协调); "
+                 "登记; t_e7ec73ab 起增 library=lacrimal_v6, KB8 眼附属器词条库)。"
+                 "t_5d5853c9 激活 (USER_DIRECTIVE_20260926 A1/A2, PI 2026-09-26 批准): 默认 "
+                 "library=all 纳入 retina_v6+face_v6 (同名类经 '<库>::<类>' 别名消歧并入); "
+                 "env EYEKB_ACT_V6=0|false|off|no 回退=现役三库, off 态规范序列化与 pre 基线"
+                 "全等 (A5 机读验收); lacrimal_v6 任何态不入默认 (PI A3 暂不切, 仅显式查询)。"
                  "kb/baselines 红词修正经 append 式覆盖层生效 (原基线文件字节不动, "
                  "返回体 entry 级 marker_repair 台账可审计)。"),
     instructions=("EyeKB 五工具: query_marker 先查本地 marker; search_literature 取文献证据"
@@ -70,9 +74,13 @@ def search_literature(cell_type: str, top_k: int = 5, species: str = "",
     tissue: v2.0 多标签组织过滤 (retina/cornea/RPE/choroid/...)。
     query: 显式检索句; 留空则用 cell_type 模板句。db: 留空=v2.0_2026-09, 或给绝对路径。
     """
-    return core.search_literature(
+    resp = core.search_literature(
         cell_type, species=species or None, tissue=tissue or None,
         top_k=top_k, query=query or None, db=db or None)
+    calllog.trace("search_literature",
+                  {"cell_type": cell_type, "species": species, "tissue": tissue,
+                   "top_k": top_k, "query": query, "db": db}, resp)
+    return resp
 
 
 @app.tool()
@@ -80,7 +88,9 @@ def get_kb_page(scope: str, name: str = "") -> dict:
     """读 VK 文献索引页原文。scope=index → 总目录; scope=topic, name=主题 (如 vascular);
     scope=tissue, name=组织 (如 cornea/RPE/trabecular_meshwork)。
     白名单: 仅 kb/vk_literature_index/ 下 *.md, 非法路径拒绝并回可用页面清单。"""
-    return core.get_kb_page(scope, name)
+    resp = core.get_kb_page(scope, name)
+    calllog.trace("get_kb_page", {"scope": scope, "name": name}, resp)
+    return resp
 
 
 @app.tool()
@@ -91,10 +101,13 @@ def query_marker(genes: list[str] | None = None, cell_type: str = "",
     retina_interneuron=markers_v5_retina_interneuron.json v5.0 (BC/AC/HC 泛型 core+亚型锚,
     v4.1 严格超集; library=all 时与 v4.1 同名类以 "retina_interneuron::<类>" 别名列示);
     retina_v6=markers_v6_retina_repair.json v6.0-retina-repair 与 face_v6=markers_v6_face_increment.json
-    v6.0-face (t_2e5e103a 发布 / t_38b99a15 登记): KB7 红词条修复面板——可选版本, 默认 all
-    不含 v6, 激活切换属评测系列协调; v6 发布文件本体只读;
+    v6.0-face (t_2e5e103a 发布 / t_38b99a15 登记 / t_5d5853c9 激活, USER_DIRECTIVE_20260926
+    A1/A2): KB7 红词条修复面板——默认 all 含之 (env EYEKB_ACT_V6=0|false|off|no 回退
+    =现役三库, 与激活前基线全等; 同名类 "retina_v6::/face_v6::<类>" 别名列示); v6 发布
+    文件本体只读;
     lacrimal_v6=markers_v6_lacrimal_increment.json v6.0-lacrimal (t_e7ec73ab KB8 发布+登记同卡):
-    首个眼附属器词条库——泪腺分泌/导管/肌上皮警示条 3 条, 同样默认 all 不含))。
+    首个眼附属器词条库——泪腺分泌/导管/肌上皮警示条 3 条; PI A3 裁定暂不切, 任何态不入
+    默认 all, 仅显式 library=lacrimal_v6 查询可达))。
     给 genes → 反查基因命中哪些细胞类型 + 类排名 (n_shared);
     给 cell_type → 该类的 marker 列表 (Micro/RPE 附 detail; membrane 类附 provenance);
     都给空 → 返回类目清单。library=retina 精确复现 P1 旧行为。
@@ -102,8 +115,11 @@ def query_marker(genes: list[str] | None = None, cell_type: str = "",
     自 t_d6f2a0a0: 命中软复核规则时返回体可附 soft_flags.notes (rod_bc_review /
     mural_crosstalk)——仅为可选复核线索, 不新增定名/弃权/排除条件, 禁入打分;
     环境开关 EYEKB_MCP_SOFTFLAGS=0|false|off|no 可整体关闭 (关闭时该 key 不出现)。"""
-    return core.query_marker(genes=genes, cell_type=cell_type or None,
+    resp = core.query_marker(genes=genes, cell_type=cell_type or None,
                              library=library or "all")
+    calllog.trace("query_marker",
+                  {"genes": genes, "cell_type": cell_type, "library": library}, resp)
+    return resp
 
 
 @app.tool()
@@ -118,7 +134,11 @@ def get_tissue_composition(species: str, tissue: str, disease: str = "",
     fetal|developing=返回转换态概念条目——成人桶不得代答胎儿问题 (PI 红线, 即使同一组织);
     unknown=只看无年龄列的披露档条目 (如 GSE158629 RPE)。
     红线: 只做对照与 QC 旗, 禁止接进任何打分; v1.0 混口径旧数字只能挂 adult_pool 对照档身份。"""
-    return core.get_tissue_composition(species, tissue, disease, development_stage)
+    resp = core.get_tissue_composition(species, tissue, disease, development_stage)
+    calllog.trace("get_tissue_composition",
+                  {"species": species, "tissue": tissue, "disease": disease,
+                   "development_stage": development_stage}, resp)
+    return resp
 
 
 @app.tool()
@@ -127,7 +147,9 @@ def get_disease_prior(disease: str, tissue: str = "") -> dict:
     disease='PDR'/'proliferative diabetic retinopathy'/... (别名已内置); tissue 可选过滤
     组织端 (fibrovascular_membrane/vitreous/retina_adjacent)。
     先验≠真理: 与数据打架 → 输出打架清单上报, 不许硬凑; 禁止接进任何打分。"""
-    return core.get_disease_prior(disease, tissue)
+    resp = core.get_disease_prior(disease, tissue)
+    calllog.trace("get_disease_prior", {"disease": disease, "tissue": tissue}, resp)
+    return resp
 
 
 if __name__ == "__main__":

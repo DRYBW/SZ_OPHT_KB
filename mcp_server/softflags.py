@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """EyeKB MCP 软复核提示层 (t_d6f2a0a0 / D4 放行, PI 2026-09-25)
-v0.2 · 按 astra CONDITIONAL 回函七项必修重写 (review/ASTRA_SOFTFLAG_v01_verdict.md)
+v0.2 · 按 REVIEWER_LLM CONDITIONAL 回函七项必修重写 (review/REVIEWER_LLMSOFTFLAG_v01_verdict.md)
 
 两条软提示 (reminder, 非硬旗标, 不新增定名/弃权/候选排除条件):
   1) rod_bc_review  —— 依据 /mnt/D/OcularKB/models/V2PROD_ROD_BC_BLINDSPOT_20260925.md
@@ -10,7 +10,7 @@ v0.2 · 按 astra CONDITIONAL 回函七项必修重写 (review/ASTRA_SOFTFLAG_v0
      + STROMAL_WARNING_DRAFT.md; 措辞基线 = EVAL_RUN5FACE_20260925.md v1.1 勘误
      (Q6::24 = Myofibroblast/SMC mural 词条接管链, 不是 Keratocytes)。
 
-纪律 (astra §3.6/§3.7/B4/B5/B7):
+纪律 (REVIEWER_LLM §3.6/§3.7/B4/B5/B7):
 - 注记只在既有结果产生后附加; 不反馈改变候选/分数/排序/原有字段; 不新增可被解释为
   权重/风险分的字段 (severity 类字段已按 §3.7 删除)。
 - 同分并列组 (TOP) 语义消除 dict 插入序依赖; 不给 ranking 加二级排序。
@@ -26,14 +26,14 @@ import os
 
 SCHEMA = "eyekb-softflag/1.0"
 
-# ---- flag#1 参数 (§2 + astra Q1/Q2 裁决: TOP 并列组, 不扩到严格次位) ----
+# ---- flag#1 参数 (§2 + REVIEWER_LLM Q1/Q2 裁决: TOP 并列组, 不扩到严格次位) ----
 ROD_MIN_HITS = 2         # |R| ≥ 2 (基因证据级启发式; 非表达主导性观测)
-ROD_GE_BCCORE = True     # |R| ≥ |B| 条款保留 (astra Q1: 不为扩命中删比较项)
+ROD_GE_BCCORE = True     # |R| ≥ |B| 条款保留 (REVIEWER_LLM Q1: 不为扩命中删比较项)
 
-# ---- flag#2 参数 (§3 + astra Q3 裁决 A: 单命中=“家族面板关联提醒”) ----
+# ---- flag#2 参数 (§3 + REVIEWER_LLM Q3 裁决 A: 单命中=“家族面板关联提醒”) ----
 MURAL_RANK_BOUNDARY = 3  # TOP3 = 第三个不同类别的命中数边界及其全部同分类别
 
-# canonical 归一 (astra §3.1): 去空白 → 取 "::" 后缀 → casefold → 有限同义词表;
+# canonical 归一 (REVIEWER_LLM §3.1): 去空白 → 取 "::" 后缀 → casefold → 有限同义词表;
 # 仅用于 notes 判据, 不回写响应/词条解析; 表外名称不做模糊匹配。
 _SYNONYM = {
     "pericyte": "Pericyte", "pericytes": "Pericyte",
@@ -134,7 +134,7 @@ def _top_groups(ranking):
         return {}, set(), set()
     mx = max(h.values())
     top = {c for c, v in h.items() if v == mx}
-    # TOP3 = 第三个不同**类别**的命中数边界及其全部同分类别 (astra R2 必修4:
+    # TOP3 = 第三个不同**类别**的命中数边界及其全部同分类别 (REVIEWER_LLM R2 必修4:
     # 每类别保留一个分数、不去重分数层; 与"前三个不同分数层级"的反例已区分)
     scores = sorted(h.values(), reverse=True)   # 按类别计, 不去重 set()
     b3 = scores[min(2, len(scores) - 1)]
@@ -272,7 +272,7 @@ def build_notes(markers, mode, query_genes=None, ranking=None, found_classes=Non
                 " 已证伪措辞提醒: RUN5-face Q6::24 (truth=Pericytes 98.7% 纯) 的归因是"
                 " Myofibroblast/SMC mural 词条接管链 (kb_top1=Myofibroblast, 三票=SMC,"
                 " Pericyte 词条未上榜) 之表达层相容证据, 不是 Keratocytes; 查询引擎侧排序"
-                " 机制未审 (KB6b astra A10 边界)。"
+                " 机制未审 (KB6b REVIEWER_LLM A10 边界)。"
                 + ("".join(" 逐基因角色 " + ln + ";" for ln in role_lines[:14]))
                 + SUFFIX),
             "evidence": {
