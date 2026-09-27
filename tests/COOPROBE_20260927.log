@@ -1,0 +1,12 @@
+# 协调者独立探针（PI 指令"测试过再上传"验收记录，2026-09-27）
+# 对象=从远端全新 clone 的仓副本 /tmp/repo_verify（非线上目录）
+[PASS] kb/ 100 文件 sha256 与线上逐字节全等
+[PASS] mcp_server 代码差异=仅脱敏标签替换(Astra→REVIEWER_LLM)；server.py 版本行 KB1v2-0.4-actv6 与线上一致
+[PASS] calllog.py 与线上全等
+[PASS] 仓副本 stdio 起服：initialize OK，5 工具在列，版本=KB1v2-0.4-actv6
+[PASS] 黄金式查询 MG 基因集(7基因) → top1=Microglia n_shared=5
+[PASS] ON/OFF 开关判别：face_v6::Keratocytes 行仅 ON 态可见，OFF 态消失（EYEKB_ACT_V6）
+[PASS] 泪腺硬禁：ON 态响应无任何 lacrimal/腺泡/导管类
+[PASS] protocols 三件套与 skills 双镜像在位（docs/skills, docs/protocols）
+[NOTE]  worker 四分层 commit 先于测试门评论送达（时序），本探针即补全的测试门；Release v2.3 六件资产昨日已验字节+哈希，本轮未重下载。
+[OPEN-P2] 脱敏把注释内文件指针 review/ASTRA_SOFTFLAG_v01_verdict.md 一并改名为 REVIEWER_LLMSOFTFLAG_...，该目标文件是否随仓收录待下次同步核（不阻塞）。
