@@ -1,0 +1,2889 @@
+{
+ "version": "evidence-chain-supplement-v2.0",
+ "generated_at": "2026-09-27T13:12:07",
+ "card": "t_95cbb3ec (EyeKB-PME2)",
+ "caliber_header": "口径由 PI 锁定（USER_DIRECTIVE_20260927 D7）：\"expressed in <该细胞类型>\" 算 membership 型支持=中等档，为现行正式口径；类特异严格档若启用须全库对称重判另卡。",
+ "prereg": {
+  "file": "batch2/PME2_PREREG_v1.md",
+  "sha256_pre_run": [
+   "c88af7b6cc7f2d37f758e234e5ee040f28c1c9b640ced9ea0459c4e0ad58ed33"
+  ],
+  "sha256_all_amendments": [
+   "c88af7b6cc7f2d37f758e234e5ee040f28c1c9b640ced9ea0459c4e0ad58ed33",
+   "689c7672e3e86275759a36bbdb28003e3882546d7eb5141ee3385299a35c157d"
+  ],
+  "amendment_A1p": "裸 sort=CITED 被 EBI 503（一批 84/84 二遍全灭根因，取证 ledgers/raw/）；二批改 sort=CITED desc 实测 75/75 生效。一批数字不改，其账=单遍 relevance 口径。"
+ },
+ "scope": "batch2_backlog 103 非 strong 键（50 weak+53 none）；别名表全类对称（data/alias_gene_v2.tsv，UniProt human+reviewed 源，留弃全登记）；pmid_context 通道零使用（E2R 告诫继承）",
+ "europepmc_client": {
+  "api": "Europe PMC REST search (SRC:MED, resultType=core, pageSize=50, route-2 aliased query, 2 passes relevance+CITED desc)",
+  "tool": "batch2/scripts/pme2_search.py",
+  "rule": "分级规则=一批 PREREG §4 同构，G/C 扩展为 符号∪UniProt别名 / 类doc_re∪§2.1扩展；M 一字未改。strong=单句 G∧C∧M；weak=文档级 G∧C；none 诚实阴性。零 LLM，worker 自审 15 键 strong→weak（ledgers/audit_fixes_v2.tsv），原始引擎判定不掩。"
+ },
+ "kb_files_untouched": true,
+ "batch1_untouched": true,
+ "counts_keys_103": {
+  "none": 44,
+  "strong": 20,
+  "weak": 39
+ },
+ "counts_keys_combined_280": {
+  "strong": 197,
+  "none": 44,
+  "weak": 39
+ },
+ "counts_rows_338_combined": {
+  "strong": 250,
+  "weak": 44,
+  "none": 44
+ },
+ "per_class_rows_combined": {
+  "face_v6|Pericyte": {
+   "strong": 3
+  },
+  "face_v6|SMC": {
+   "strong": 5
+  },
+  "membrane|APC_MHCII_high": {
+   "strong": 4,
+   "weak": 5,
+   "none": 1
+  },
+  "membrane|B": {
+   "strong": 6,
+   "weak": 1
+  },
+  "membrane|Endo": {
+   "strong": 11,
+   "weak": 1,
+   "none": 1
+  },
+  "membrane|Endo_Patho": {
+   "strong": 4,
+   "none": 1,
+   "weak": 1
+  },
+  "membrane|Fibroblast": {
+   "strong": 10
+  },
+  "membrane|Granulocyte": {
+   "strong": 11,
+   "weak": 2
+  },
+  "membrane|Mac_DAM_LAM": {
+   "strong": 6,
+   "weak": 3,
+   "none": 8
+  },
+  "membrane|Mac_Tissue": {
+   "strong": 14,
+   "weak": 1
+  },
+  "membrane|Microglia": {
+   "strong": 11,
+   "weak": 1
+  },
+  "membrane|Mono_Classical": {
+   "weak": 4,
+   "strong": 6,
+   "none": 1
+  },
+  "membrane|Mono_Nonclassical": {
+   "strong": 2,
+   "none": 2,
+   "weak": 1
+  },
+  "membrane|Myofibroblast": {
+   "strong": 10,
+   "weak": 2
+  },
+  "membrane|NK": {
+   "strong": 7
+  },
+  "membrane|Pericyte": {
+   "strong": 9,
+   "weak": 2,
+   "none": 1
+  },
+  "membrane|Plasma": {
+   "strong": 7,
+   "none": 1,
+   "weak": 1
+  },
+  "membrane|Proliferating": {
+   "strong": 6,
+   "weak": 2
+  },
+  "membrane|SMC": {
+   "strong": 8
+  },
+  "membrane|T": {
+   "strong": 10,
+   "weak": 1
+  },
+  "membrane|cDC1": {
+   "strong": 5,
+   "none": 2,
+   "weak": 1
+  },
+  "membrane|cDC2": {
+   "weak": 3,
+   "strong": 2,
+   "none": 1
+  },
+  "membrane|pDC": {
+   "strong": 7,
+   "none": 2
+  },
+  "retina_interneuron|AC": {
+   "weak": 2,
+   "strong": 1
+  },
+  "retina_interneuron|Astro": {
+   "strong": 5
+  },
+  "retina_interneuron|BC": {
+   "strong": 3,
+   "weak": 1
+  },
+  "retina_interneuron|Cone": {
+   "strong": 5
+  },
+  "retina_interneuron|HC": {
+   "strong": 2,
+   "weak": 1
+  },
+  "retina_interneuron|MG": {
+   "strong": 4,
+   "weak": 1
+  },
+  "retina_interneuron|RGC": {
+   "strong": 5
+  },
+  "retina_interneuron|Rod": {
+   "strong": 5
+  },
+  "retina_v6|AC": {
+   "strong": 2,
+   "none": 8
+  },
+  "retina_v6|BC": {
+   "strong": 4,
+   "weak": 2,
+   "none": 10
+  },
+  "retina_v6|Cone": {
+   "strong": 5
+  },
+  "retina_v6|HC": {
+   "none": 4,
+   "strong": 1
+  },
+  "retina_v6|RGC": {
+   "strong": 5
+  },
+  "retina_v6|Rod": {
+   "strong": 5
+  },
+  "retina|AC": {
+   "weak": 2,
+   "strong": 3
+  },
+  "retina|Astro": {
+   "strong": 5
+  },
+  "retina|BC": {
+   "strong": 4,
+   "weak": 1
+  },
+  "retina|Cone": {
+   "strong": 5
+  },
+  "retina|HC": {
+   "strong": 3,
+   "none": 1,
+   "weak": 1
+  },
+  "retina|MG": {
+   "strong": 4,
+   "weak": 1
+  },
+  "retina|RGC": {
+   "strong": 5
+  },
+  "retina|Rod": {
+   "strong": 5
+  }
+ },
+ "transitions_103": {
+  "unchanged": 78,
+  "weak->strong": 16,
+  "none->strong": 4,
+  "none->weak": 5
+ },
+ "rescued_strong": [
+  "AC/GAD2",
+  "AC/GRIK2",
+  "AC/SLC6A9",
+  "BC/GRIK1",
+  "BC/GRM5",
+  "BC/GRM7",
+  "BC/ISL1",
+  "Endo_Patho/DLL4",
+  "Granulocyte/FCGR3B",
+  "HC/GAD1",
+  "MG/GLUL",
+  "Mono_Classical/SELL",
+  "NK/KLRF1",
+  "NK/NKG7",
+  "Pericyte/CALD1",
+  "Proliferating/NUSAP1",
+  "SMC/DES",
+  "SMC/LMOD1",
+  "SMC/MYL9",
+  "cDC2/FCER1A"
+ ],
+ "none_residual_two_state": {
+  "AC|EYA4": "摘要级不可核(有候选无G∧C)",
+  "AC|GABRG1": "摘要级不可核(有候选无G∧C)",
+  "AC|ITGA11": "摘要级不可核(有候选无G∧C)",
+  "AC|LRRN3": "摘要级不可核(有候选无G∧C)",
+  "AC|RASGRF1": "摘要级不可核(有候选无G∧C)",
+  "AC|SHISA6": "摘要级不可核(有候选无G∧C)",
+  "AC|SPHKAP": "摘要级不可核(有候选无G∧C)",
+  "AC|ZFPM2": "摘要级不可核(有候选无G∧C)",
+  "APC_MHCII_high|RGS1": "摘要级不可核(有候选无G∧C)",
+  "BC|ADGRL2": "摘要级不可核(有候选无G∧C)",
+  "BC|BACH1": "摘要级不可核(有候选无G∧C)",
+  "BC|BCAT1": "摘要级不可核(有候选无G∧C)",
+  "BC|COL19A1": "真缺文献(四遍零候选)",
+  "BC|HS3ST4": "真缺文献(四遍零候选)",
+  "BC|MCC": "摘要级不可核(有候选无G∧C)",
+  "BC|NPHS1": "摘要级不可核(有候选无G∧C)",
+  "BC|TMEM132C": "真缺文献(四遍零候选)",
+  "BC|TMEM196": "真缺文献(四遍零候选)",
+  "BC|ZNF804B": "摘要级不可核(有候选无G∧C)",
+  "Endo|GNG11": "摘要级不可核(有候选无G∧C)",
+  "Endo_Patho|NDUFA4L2": "摘要级不可核(有候选无G∧C)",
+  "HC|FAM107B": "摘要级不可核(有候选无G∧C)",
+  "HC|FAM135A": "摘要级不可核(有候选无G∧C)",
+  "HC|NAALAD2": "摘要级不可核(有候选无G∧C)",
+  "HC|ONECUT3": "摘要级不可核(有候选无G∧C)",
+  "HC|VAT1L": "摘要级不可核(有候选无G∧C)",
+  "Mac_DAM_LAM|ASAH1": "摘要级不可核(有候选无G∧C)",
+  "Mac_DAM_LAM|FTH1": "摘要级不可核(有候选无G∧C)",
+  "Mac_DAM_LAM|FTL": "摘要级不可核(有候选无G∧C)",
+  "Mac_DAM_LAM|HMOX1": "摘要级不可核(有候选无G∧C)",
+  "Mac_DAM_LAM|LGMN": "摘要级不可核(有候选无G∧C)",
+  "Mac_DAM_LAM|MMP9": "摘要级不可核(有候选无G∧C)",
+  "Mac_DAM_LAM|OLR1": "摘要级不可核(有候选无G∧C)",
+  "Mac_DAM_LAM|PLD3": "摘要级不可核(有候选无G∧C)",
+  "Mono_Classical|LYZ": "摘要级不可核(有候选无G∧C)",
+  "Mono_Nonclassical|LST1": "摘要级不可核(有候选无G∧C)",
+  "Mono_Nonclassical|MS4A7": "摘要级不可核(有候选无G∧C)",
+  "Pericyte|ITGA1": "摘要级不可核(有候选无G∧C)",
+  "Plasma|SEC11C": "摘要级不可核(有候选无G∧C)",
+  "cDC1|C1R": "摘要级不可核(有候选无G∧C)",
+  "cDC1|C1S": "摘要级不可核(有候选无G∧C)",
+  "cDC2|HLA-DRA": "摘要级不可核(有候选无G∧C)",
+  "pDC|JCHAIN": "摘要级不可核(有候选无G∧C)",
+  "pDC|SERPINF1": "摘要级不可核(有候选无G∧C)"
+ },
+ "final_reading_vs_e2_567": {
+  "e2_baseline_pairs": 567,
+  "e2_infile_verifiable": 30,
+  "e2_internal_derived": 199,
+  "e2_no_record_rows": 338,
+  "no_record_strong_rows_b1": 222,
+  "no_record_strong_rows_b1b2_combined": 250,
+  "verifiable_chain_pairs_combined": 280,
+  "verifiable_chain_coverage_pct_of_567": 49.38,
+  "note": "E2 数字零改动；本读数仅为未来评测口径修订提供账。S1 弃权面线性预估（同一批公式）=17.35pp×strong/338=12.83pp（结构估计，非重跑）"
+ },
+ "annotations": {
+  "face_v6": {
+   "Pericyte": {
+    "CALD1": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "33060592",
+       "title": "Transplantation of hPSC-derived pericyte-like cells promotes functional recovery in ischemic stroke mice.",
+       "sentence": "Here, we generate pericyte-like cells (PCs) from human pluripotent stem cells (hPSCs) through the intermediate stage of the cranial neural crest (CNC) and reveal that the cranial neural crest-derived pericyte-like cells (hPSC-CNC PCs) express typical pericyte markers including PDGFRβ, CD146, NG2, CD13, Caldesmon, and Vimentin, and display distinct contractile properties, vasculogenic potential and",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(pericyte) AND (CALD1 OR \"Caldesmon\") AND (SRC:MED)",
+     "aliases_used": [
+      "Caldesmon"
+     ],
+     "hitCount_route2": 464,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Pericyte__CALD1.json"
+    }
+   },
+   "SMC": {
+    "MYL9": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "40980809",
+       "title": "Altered actin isoforms expression and enhanced airway responsiveness in asthma: the crucial role of β-cytoplasmic actin.",
+       "sentence": "The expression of ACTA2, β-cytoplasmic actin (ACTB), and myosin light chains (MYL9) increased, while γ-cytoplasmic actin 1 (ACTG1) was reduced in the bronchial smooth muscle compared to controls.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"smooth muscle cell\" OR \"smooth muscle\") AND (MYL9 OR \"LC20\" OR \"MLC-2C\" OR \"MRLC1\" OR \"MYRL2\" OR \"Myosin RLC\" OR \"Myosin regulatory light chain 2, smooth muscle isoform\" OR \"Myosin regulatory light chain 9\" OR \"Myosin regulatory light chain MRLC1\" OR \"Myosin regulatory light polypeptide 9\") AND (SRC:MED)",
+     "aliases_used": [
+      "LC20",
+      "MLC-2C",
+      "MRLC1",
+      "MYRL2",
+      "Myosin RLC",
+      "Myosin regulatory light chain 2, smooth muscle isoform",
+      "Myosin regulatory light chain 9",
+      "Myosin regulatory light chain MRLC1",
+      "Myosin regulatory light polypeptide 9"
+     ],
+     "hitCount_route2": 4808,
+     "raw_ledger_route2": "batch2/ledgers/raw2/SMC__MYL9.json"
+    },
+    "DES": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "42638206",
+       "title": "Metastatic Leiomyosarcoma Involving Bone and Kidney in an Adult Budgerigar (Melopsittacus undulatus).",
+       "sentence": "To confirm the diagnosis, immunohistochemical staining was performed using antibodies to alpha-smooth muscle actin (α-SMA), vimentin and desmin.",
+       "why": "abstract-sentence"
+      },
+      {
+       "pmid": "42074233",
+       "title": "Identification of Misplaced Endometrial Glands and Stroma in the Myometrium of Foetal Uteri Evocative of Developmental Adenomyosis.",
+       "sentence": "Additionally, the surrounding periglandular component consistently expressed the vimentin and CD10 stromal cell markers, while the myometrial smooth muscle cells revealed the strong expression of both alpha-Smooth Muscle Actin (α-SMA) and desmin marker proteins.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"smooth muscle cell\" OR \"smooth muscle\") AND (DES OR \"Desmin\") AND (SRC:MED)",
+     "aliases_used": [
+      "Desmin"
+     ],
+     "hitCount_route2": 35864,
+     "raw_ledger_route2": "batch2/ledgers/raw2/SMC__DES.json"
+    },
+    "LMOD1": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "37601452",
+       "title": "Nodding syndrome is unlikely to be an autoimmune reaction to leiomodin-1 after infection by <i>Onchocerca volvulus</i>.",
+       "sentence": "We found that immunostaining for leiomodin-1 follows a smooth muscle cell specific pattern.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"smooth muscle cell\" OR \"smooth muscle\") AND (LMOD1 OR \"Leiomodin, muscle form\" OR \"Leiomodin-1\" OR \"SM-Lmod\" OR \"Smooth muscle leiomodin\" OR \"Thyroid-associated ophthalmopathy autoantigen\") AND (SRC:MED)",
+     "aliases_used": [
+      "Leiomodin, muscle form",
+      "Leiomodin-1",
+      "SM-Lmod",
+      "Smooth muscle leiomodin",
+      "Thyroid-associated ophthalmopathy autoantigen"
+     ],
+     "hitCount_route2": 655,
+     "raw_ledger_route2": "batch2/ledgers/raw2/SMC__LMOD1.json"
+    }
+   }
+  },
+  "membrane": {
+   "Endo": {
+    "ECSCR": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "循环：类词由本基因全名展开(Endothelial Cell Surface...)注入；句归属=MDA-MB-231 乳腺细胞系（镜像一批 A5 HLA 案）"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"endothelial cell\" OR endothelium) AND (ECSCR OR \"ARIA\" OR \"Apoptosis regulator through modulating IAP expression\" OR \"ECSM2\" OR \"Endothelial cell-specific chemotaxis regulator\" OR \"Endothelial cell-specific molecule 2\") AND (SRC:MED)",
+     "aliases_used": [
+      "ARIA",
+      "Apoptosis regulator through modulating IAP expression",
+      "ECSM2",
+      "Endothelial cell-specific chemotaxis regulator",
+      "Endothelial cell-specific molecule 2"
+     ],
+     "hitCount_route2": 3460,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Endo__ECSCR.json"
+    },
+    "GNG11": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"endothelial cell\" OR endothelium) AND (GNG11 OR \"GNGT11\" OR \"Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-11\") AND (SRC:MED)",
+     "aliases_used": [
+      "GNGT11",
+      "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-11"
+     ],
+     "hitCount_route2": 376,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Endo__GNG11.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    }
+   },
+   "Endo_Patho": {
+    "DLL4": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "16219802",
+       "title": "Up-regulation of the Notch ligand Delta-like 4 inhibits VEGF-induced endothelial cell function.",
+       "sentence": "Delta-like 4 (Dll4), a membrane-bound ligand for Notch1 and Notch4, is selectively expressed in the developing endothelium and in some tumor endothelium, and it is induced by vascular endothelial growth factor (VEGF)-A and hypoxia.",
+       "why": "abstract-sentence"
+      },
+      {
+       "pmid": "18056450",
+       "title": "Delta-like 4 Notch ligand regulates tumor angiogenesis, improves tumor vascular function, and promotes tumor growth in vivo.",
+       "sentence": "DLL4 expressed in the tumor cells activated Notch signaling in host stromal/endothelial cells, increased blood vessel size, and improved vascular function within tumors.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"tumor endothelial\" OR \"tumor endothelium\" OR \"neovascular endothelium\" OR \"endothelial activation\" OR \"activated endothelium\" OR \"pathological endothelium\") AND (DLL4 OR \"Delta-like protein 4\" OR \"Delta4\" OR \"Drosophila Delta homolog 4\") AND (SRC:MED)",
+     "aliases_used": [
+      "Delta-like protein 4",
+      "Delta4",
+      "Drosophila Delta homolog 4"
+     ],
+     "hitCount_route2": 1200,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Endo_Patho__DLL4.json"
+    },
+    "NDUFA4L2": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"tumor endothelial\" OR \"tumor endothelium\" OR \"neovascular endothelium\" OR \"endothelial activation\" OR \"activated endothelium\" OR \"pathological endothelium\") AND NDUFA4L2 AND (SRC:MED)",
+     "aliases_used": [],
+     "hitCount_route2": 50,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Endo_Patho__NDUFA4L2.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "HIF1A": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "42511933",
+       "title": "Evidence of Hypoxia Signaling and Endothelial Activation in Migraine: Relationships Between HIF-1α, VEGF-A, and Arginine Metabolism."
+      },
+      {
+       "pmid": "42576559",
+       "title": "Osteoblast-Derived HIF-1α Drives Compartment-Specific H-Type Angiogenesis in Knee Osteoarthritis via VEGFA Signaling."
+      }
+     ],
+     "query_route2": "(\"tumor endothelial\" OR \"tumor endothelium\" OR \"neovascular endothelium\" OR \"endothelial activation\" OR \"activated endothelium\" OR \"pathological endothelium\") AND (HIF1A OR \"ARNT-interacting protein\" OR \"BHLHE78\" OR \"Basic-helix-loop-helix-PAS protein MOP1\" OR \"Class E basic helix-loop-helix protein 78\" OR \"HIF-1-alpha\" OR \"HIF1-alpha\" OR \"Hypoxia-inducible factor 1-alpha\" OR \"MOP1\" OR \"Member of PAS protein 1\" OR \"PAS domain-containing protein 8\" OR \"PASD8\" OR \"bHLHe78\") AND (SRC:MED)",
+     "aliases_used": [
+      "ARNT-interacting protein",
+      "BHLHE78",
+      "Basic-helix-loop-helix-PAS protein MOP1",
+      "Class E basic helix-loop-helix protein 78",
+      "HIF-1-alpha",
+      "HIF1-alpha",
+      "Hypoxia-inducible factor 1-alpha",
+      "MOP1",
+      "Member of PAS protein 1",
+      "PAS domain-containing protein 8",
+      "PASD8",
+      "bHLHe78"
+     ],
+     "hitCount_route2": 7558,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Endo_Patho__HIF1A.json"
+    }
+   },
+   "Pericyte": {
+    "COL1A2": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "42694848",
+       "title": "COL1A2 and APOLD1 Define a Dual-Axis Molecular Framework for Diabetic Nephropathy-Retinopathy Comorbidity: An Integrative Multiomics and Machine Learning Study in Mouse Models."
+      },
+      {
+       "pmid": "41830491",
+       "title": "Fibroblast histone deacetylase-1 promotes kidney interstitial fibrosis following ischemia-reperfusion injury."
+      }
+     ],
+     "query_route2": "(pericyte) AND (COL1A2 OR \"Alpha-2 type I collagen\" OR \"Collagen alpha-2(I) chain\") AND (SRC:MED)",
+     "aliases_used": [
+      "Alpha-2 type I collagen",
+      "Collagen alpha-2(I) chain"
+     ],
+     "hitCount_route2": 3784,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Pericyte__COL1A2.json"
+    },
+    "THY1": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "归属错误：THY1 列于 mesenchymal stromal cell markers，非周细胞 marker"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(pericyte) AND (THY1 OR \"CDw90\" OR \"Thy-1 antigen\" OR \"Thy-1 membrane glycoprotein\") AND (SRC:MED)",
+     "aliases_used": [
+      "CDw90",
+      "Thy-1 antigen",
+      "Thy-1 membrane glycoprotein"
+     ],
+     "hitCount_route2": 590,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Pericyte__THY1.json"
+    },
+    "ITGA1": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(pericyte) AND (ITGA1 OR \"CD49 antigen-like family member A\" OR \"Integrin alpha-1\" OR \"Laminin and collagen receptor\" OR \"VLA-1\") AND (SRC:MED)",
+     "aliases_used": [
+      "CD49 antigen-like family member A",
+      "Integrin alpha-1",
+      "Laminin and collagen receptor",
+      "VLA-1"
+     ],
+     "hitCount_route2": 368,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Pericyte__ITGA1.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "CALD1": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "33060592",
+       "title": "Transplantation of hPSC-derived pericyte-like cells promotes functional recovery in ischemic stroke mice.",
+       "sentence": "Here, we generate pericyte-like cells (PCs) from human pluripotent stem cells (hPSCs) through the intermediate stage of the cranial neural crest (CNC) and reveal that the cranial neural crest-derived pericyte-like cells (hPSC-CNC PCs) express typical pericyte markers including PDGFRβ, CD146, NG2, CD13, Caldesmon, and Vimentin, and display distinct contractile properties, vasculogenic potential and",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(pericyte) AND (CALD1 OR \"Caldesmon\") AND (SRC:MED)",
+     "aliases_used": [
+      "Caldesmon"
+     ],
+     "hitCount_route2": 464,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Pericyte__CALD1.json"
+    }
+   },
+   "SMC": {
+    "MYL9": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "40980809",
+       "title": "Altered actin isoforms expression and enhanced airway responsiveness in asthma: the crucial role of β-cytoplasmic actin.",
+       "sentence": "The expression of ACTA2, β-cytoplasmic actin (ACTB), and myosin light chains (MYL9) increased, while γ-cytoplasmic actin 1 (ACTG1) was reduced in the bronchial smooth muscle compared to controls.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"smooth muscle cell\" OR \"smooth muscle\") AND (MYL9 OR \"LC20\" OR \"MLC-2C\" OR \"MRLC1\" OR \"MYRL2\" OR \"Myosin RLC\" OR \"Myosin regulatory light chain 2, smooth muscle isoform\" OR \"Myosin regulatory light chain 9\" OR \"Myosin regulatory light chain MRLC1\" OR \"Myosin regulatory light polypeptide 9\") AND (SRC:MED)",
+     "aliases_used": [
+      "LC20",
+      "MLC-2C",
+      "MRLC1",
+      "MYRL2",
+      "Myosin RLC",
+      "Myosin regulatory light chain 2, smooth muscle isoform",
+      "Myosin regulatory light chain 9",
+      "Myosin regulatory light chain MRLC1",
+      "Myosin regulatory light polypeptide 9"
+     ],
+     "hitCount_route2": 4808,
+     "raw_ledger_route2": "batch2/ledgers/raw2/SMC__MYL9.json"
+    },
+    "DES": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "42638206",
+       "title": "Metastatic Leiomyosarcoma Involving Bone and Kidney in an Adult Budgerigar (Melopsittacus undulatus).",
+       "sentence": "To confirm the diagnosis, immunohistochemical staining was performed using antibodies to alpha-smooth muscle actin (α-SMA), vimentin and desmin.",
+       "why": "abstract-sentence"
+      },
+      {
+       "pmid": "42074233",
+       "title": "Identification of Misplaced Endometrial Glands and Stroma in the Myometrium of Foetal Uteri Evocative of Developmental Adenomyosis.",
+       "sentence": "Additionally, the surrounding periglandular component consistently expressed the vimentin and CD10 stromal cell markers, while the myometrial smooth muscle cells revealed the strong expression of both alpha-Smooth Muscle Actin (α-SMA) and desmin marker proteins.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"smooth muscle cell\" OR \"smooth muscle\") AND (DES OR \"Desmin\") AND (SRC:MED)",
+     "aliases_used": [
+      "Desmin"
+     ],
+     "hitCount_route2": 35864,
+     "raw_ledger_route2": "batch2/ledgers/raw2/SMC__DES.json"
+    },
+    "LMOD1": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "37601452",
+       "title": "Nodding syndrome is unlikely to be an autoimmune reaction to leiomodin-1 after infection by <i>Onchocerca volvulus</i>.",
+       "sentence": "We found that immunostaining for leiomodin-1 follows a smooth muscle cell specific pattern.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"smooth muscle cell\" OR \"smooth muscle\") AND (LMOD1 OR \"Leiomodin, muscle form\" OR \"Leiomodin-1\" OR \"SM-Lmod\" OR \"Smooth muscle leiomodin\" OR \"Thyroid-associated ophthalmopathy autoantigen\") AND (SRC:MED)",
+     "aliases_used": [
+      "Leiomodin, muscle form",
+      "Leiomodin-1",
+      "SM-Lmod",
+      "Smooth muscle leiomodin",
+      "Thyroid-associated ophthalmopathy autoantigen"
+     ],
+     "hitCount_route2": 655,
+     "raw_ledger_route2": "batch2/ledgers/raw2/SMC__LMOD1.json"
+    }
+   },
+   "Myofibroblast": {
+    "TPM1": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "机制句：Tpm1.6 silencing 降低 MF markers（required-for），非表达断言"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(myofibroblast) AND (TPM1 OR \"Alpha-tropomyosin\" OR \"C15orf13\" OR \"Tropomyosin alpha-1 chain\" OR \"Tropomyosin-1\") AND (SRC:MED)",
+     "aliases_used": [
+      "Alpha-tropomyosin",
+      "C15orf13",
+      "Tropomyosin alpha-1 chain",
+      "Tropomyosin-1"
+     ],
+     "hitCount_route2": 338,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Myofibroblast__TPM1.json"
+    },
+    "TPM2": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "42393881",
+       "title": "A Multi-Gene Myofibroblast Framework Stratifies Prognostic and Immune Landscapes in HCC."
+      }
+     ],
+     "query_route2": "(myofibroblast) AND (TPM2 OR \"Beta-tropomyosin\" OR \"TMSB\" OR \"Tropomyosin beta chain\" OR \"Tropomyosin-2\") AND (SRC:MED)",
+     "aliases_used": [
+      "Beta-tropomyosin",
+      "TMSB",
+      "Tropomyosin beta chain",
+      "Tropomyosin-2"
+     ],
+     "hitCount_route2": 510,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Myofibroblast__TPM2.json"
+    }
+   },
+   "Mono_Classical": {
+    "FCN1": {
+     "combined_final": "weak",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "34143756",
+       "title": "COVID-19 and RA share an SPP1 myeloid pathway that drives PD-L1+ neutrophils and CD14+ monocytes."
+      }
+     ],
+     "query_route2": "(\"classical monocyte\" OR \"monocyte subsets\" OR \"CD14+ monocyte\" OR \"CD14 high monocyte\") AND (FCN1 OR \"Collagen/fibrinogen domain-containing protein 1\" OR \"FCNM\" OR \"Ficolin-1\" OR \"Ficolin-A\" OR \"Ficolin-alpha\" OR \"M-ficolin\") AND (SRC:MED)",
+     "aliases_used": [
+      "Collagen/fibrinogen domain-containing protein 1",
+      "FCNM",
+      "Ficolin-1",
+      "Ficolin-A",
+      "Ficolin-alpha",
+      "M-ficolin"
+     ],
+     "hitCount_route2": 512,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mono_Classical__FCN1.json"
+    },
+    "SELL": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "39281780",
+       "title": "Expansion of a Novel Subset of L-Selectin<sup>+</sup> Classical Monocytes in Kawasaki Disease.",
+       "sentence": "Results Classical monocytes (CM) expressed the highest levels of L-selectin in children with KD.",
+       "why": "abstract-sentence"
+      },
+      {
+       "pmid": "36514074",
+       "title": "Phenotypic and functional alterations of monocyte subsets with aging.",
+       "sentence": "Older adults had a greater percentage of intermediate and non-classical monocyte subsets, along with increased levels of the immune activation markers human leukocyte antigen-DR (HLA-DR), and adhesion molecules cluster of differentiation molecule 11b (CD11b) and L-selectin (CD62L).",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"classical monocyte\" OR \"monocyte subsets\" OR \"CD14+ monocyte\" OR \"CD14 high monocyte\") AND (SELL OR \"CD62 antigen-like family member L\" OR \"L-selectin\" OR \"LAM-1\" OR \"LECAM1\" OR \"LNHR\" OR \"LYAM1\" OR \"Leukocyte adhesion molecule 1\" OR \"Leukocyte surface antigen Leu-8\" OR \"Leukocyte-endothelial cell adhesion molecule 1\" OR \"Lymph node homing receptor\" OR \"gp90-MEL\") AND (SRC:MED)",
+     "aliases_used": [
+      "CD62 antigen-like family member L",
+      "L-selectin",
+      "LAM-1",
+      "LECAM1",
+      "LNHR",
+      "LYAM1",
+      "Leukocyte adhesion molecule 1",
+      "Leukocyte surface antigen Leu-8",
+      "Leukocyte-endothelial cell adhesion molecule 1",
+      "Lymph node homing receptor",
+      "gp90-MEL"
+     ],
+     "hitCount_route2": 651,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mono_Classical__SELL.json"
+    },
+    "LYZ": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"classical monocyte\" OR \"monocyte subsets\" OR \"CD14+ monocyte\" OR \"CD14 high monocyte\") AND (LYZ OR \"Lysozyme C\") AND (SRC:MED)",
+     "aliases_used": [
+      "Lysozyme C"
+     ],
+     "hitCount_route2": 704,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mono_Classical__LYZ.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "MNDA": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "19712453",
+       "title": "Transcriptional profiling reveals developmental relationship and distinct biological functions of CD16+ and CD16- monocyte subsets."
+      }
+     ],
+     "query_route2": "(\"classical monocyte\" OR \"monocyte subsets\" OR \"CD14+ monocyte\" OR \"CD14 high monocyte\") AND (MNDA OR \"Myeloid cell nuclear differentiation antigen\") AND (SRC:MED)",
+     "aliases_used": [
+      "Myeloid cell nuclear differentiation antigen"
+     ],
+     "hitCount_route2": 92,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mono_Classical__MNDA.json"
+    },
+    "CTSS": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "31319889",
+       "title": "Differential effects of specific cathepsin S inhibition in biocompartments from patients with primary Sjögren syndrome."
+      }
+     ],
+     "query_route2": "(\"classical monocyte\" OR \"monocyte subsets\" OR \"CD14+ monocyte\" OR \"CD14 high monocyte\") AND (CTSS OR \"Cathepsin S\") AND (SRC:MED)",
+     "aliases_used": [
+      "Cathepsin S"
+     ],
+     "hitCount_route2": 248,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mono_Classical__CTSS.json"
+    },
+    "SERPINA1": {
+     "combined_final": "weak",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "40943425",
+       "title": "Next-Generation Regenerative Therapies for Alpha-1 Antitrypsin Deficiency: Molecular Pathogenesis to Clinical Translation."
+      },
+      {
+       "pmid": "30827477",
+       "title": "Blood monocyte profiles in COPD patients with PiMM and PiZZ α1-antitrypsin."
+      }
+     ],
+     "query_route2": "(\"classical monocyte\" OR \"monocyte subsets\" OR \"CD14+ monocyte\" OR \"CD14 high monocyte\") AND (SERPINA1 OR \"Alpha-1 protease inhibitor\" OR \"Alpha-1-antiproteinase\" OR \"Alpha-1-antitrypsin\" OR \"Serpin A1\") AND (SRC:MED)",
+     "aliases_used": [
+      "Alpha-1 protease inhibitor",
+      "Alpha-1-antiproteinase",
+      "Alpha-1-antitrypsin",
+      "Serpin A1"
+     ],
+     "hitCount_route2": 254,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mono_Classical__SERPINA1.json"
+    }
+   },
+   "Mono_Nonclassical": {
+    "LST1": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"nonclassical monocyte\" OR \"non-classical monocyte\" OR \"patrolling monocyte\") AND (LST1 OR \"B144\" OR \"Leukocyte-specific transcript 1 protein\" OR \"Protein B144\") AND (SRC:MED)",
+     "aliases_used": [
+      "B144",
+      "Leukocyte-specific transcript 1 protein",
+      "Protein B144"
+     ],
+     "hitCount_route2": 26,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mono_Nonclassical__LST1.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "MS4A7": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"nonclassical monocyte\" OR \"non-classical monocyte\" OR \"patrolling monocyte\") AND (MS4A7 OR \"CD20 antigen-like 4\" OR \"CD20/FC-epsilon-RI-beta family member 4\" OR \"CD20L4\" OR \"CFFM4\" OR \"Four-span transmembrane protein 2\" OR \"Membrane-spanning 4-domains subfamily A member 7\") AND (SRC:MED)",
+     "aliases_used": [
+      "CD20 antigen-like 4",
+      "CD20/FC-epsilon-RI-beta family member 4",
+      "CD20L4",
+      "CFFM4",
+      "Four-span transmembrane protein 2",
+      "Membrane-spanning 4-domains subfamily A member 7"
+     ],
+     "hitCount_route2": 60,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mono_Nonclassical__MS4A7.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "IL1B": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "40183401",
+       "title": "Single-cell transcriptional profiling reveals cellular senescence and inflammatory persistence as key features of type 1 diabetes partial remission."
+      },
+      {
+       "pmid": "36979631",
+       "title": "Newborns from Mothers Who Intensely Consumed Sucralose during Pregnancy Are Heavier and Exhibit Markers of Metabolic Alteration and Low-Grade Systemic Inflammation: A Cross-Sectional, Prospective Stud"
+      }
+     ],
+     "query_route2": "(\"nonclassical monocyte\" OR \"non-classical monocyte\" OR \"patrolling monocyte\") AND (IL1B OR \"Catabolin\" OR \"IL-1 beta\" OR \"IL1F2\" OR \"Interleukin-1 beta\") AND (SRC:MED)",
+     "aliases_used": [
+      "Catabolin",
+      "IL-1 beta",
+      "IL1F2",
+      "Interleukin-1 beta"
+     ],
+     "hitCount_route2": 494,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mono_Nonclassical__IL1B.json"
+    }
+   },
+   "Mac_Tissue": {
+    "ITM2B": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "41354963",
+       "title": "Pathological mechanisms of motor dysfunction in familial Danish dementia: insights from a knock-in rat model."
+      },
+      {
+       "pmid": "41319268",
+       "title": "ITM2B Truncation Promotes Migrasome Formation to Accelerate Renal Cell Carcinoma Growth."
+      }
+     ],
+     "query_route2": "(\"tissue macrophage\" OR \"resident macrophage\" OR macrophage) AND (ITM2B OR \"BRI2\" OR \"Immature BRI2\" OR \"Integral membrane protein 2B\" OR \"Protein E25B\" OR \"Transmembrane protein BRI\" OR \"imBRI2\") AND (SRC:MED)",
+     "aliases_used": [
+      "BRI2",
+      "Immature BRI2",
+      "Integral membrane protein 2B",
+      "Protein E25B",
+      "Transmembrane protein BRI",
+      "imBRI2"
+     ],
+     "hitCount_route2": 540,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mac_Tissue__ITM2B.json"
+    }
+   },
+   "Mac_DAM_LAM": {
+    "CTSD": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "40900124",
+       "title": "A human-mouse atlas of intrarenal myeloid cells identifies conserved disease-associated macrophages in lupus nephritis."
+      }
+     ],
+     "query_route2": "(\"disease-associated macrophage\" OR \"lipid-associated macrophage\") AND (CTSD OR \"CPSD\" OR \"Cathepsin D\") AND (SRC:MED)",
+     "aliases_used": [
+      "CPSD",
+      "Cathepsin D"
+     ],
+     "hitCount_route2": 66,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mac_DAM_LAM__CTSD.json"
+    },
+    "LGMN": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"disease-associated macrophage\" OR \"lipid-associated macrophage\") AND (LGMN OR \"Asparaginyl endopeptidase\" OR \"Legumain\" OR \"PRSC1\" OR \"Protease, cysteine 1\") AND (SRC:MED)",
+     "aliases_used": [
+      "Asparaginyl endopeptidase",
+      "Legumain",
+      "PRSC1",
+      "Protease, cysteine 1"
+     ],
+     "hitCount_route2": 34,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mac_DAM_LAM__LGMN.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "PLD3": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"disease-associated macrophage\" OR \"lipid-associated macrophage\") AND (PLD3 OR \"HindIII K4L homolog\" OR \"Hu-K4\" OR \"Phospholipase D3\") AND (SRC:MED)",
+     "aliases_used": [
+      "HindIII K4L homolog",
+      "Hu-K4",
+      "Phospholipase D3"
+     ],
+     "hitCount_route2": 8,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mac_DAM_LAM__PLD3.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "ASAH1": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"disease-associated macrophage\" OR \"lipid-associated macrophage\") AND (ASAH1 OR \"ACDase\" OR \"ASAH\" OR \"Acid CDase\" OR \"Acid ceramidase\" OR \"Acylsphingosine deacylase\" OR \"Glycosylceramide deacylase\" OR \"N-acylethanolamine hydrolase ASAH1\" OR \"N-acylsphingosine amidohydrolase\" OR \"PHP32\") AND (SRC:MED)",
+     "aliases_used": [
+      "ACDase",
+      "ASAH",
+      "Acid CDase",
+      "Acid ceramidase",
+      "Acylsphingosine deacylase",
+      "Glycosylceramide deacylase",
+      "N-acylethanolamine hydrolase ASAH1",
+      "N-acylsphingosine amidohydrolase",
+      "PHP32"
+     ],
+     "hitCount_route2": 10,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mac_DAM_LAM__ASAH1.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "FTL": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"disease-associated macrophage\" OR \"lipid-associated macrophage\") AND (FTL OR \"Ferritin L subunit\" OR \"Ferritin light chain\") AND (SRC:MED)",
+     "aliases_used": [
+      "Ferritin L subunit",
+      "Ferritin light chain"
+     ],
+     "hitCount_route2": 42,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mac_DAM_LAM__FTL.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "FTH1": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"disease-associated macrophage\" OR \"lipid-associated macrophage\") AND (FTH1 OR \"Cell proliferation-inducing gene 15 protein\" OR \"FTHL6\" OR \"Ferritin H subunit\" OR \"Ferritin heavy chain\") AND (SRC:MED)",
+     "aliases_used": [
+      "Cell proliferation-inducing gene 15 protein",
+      "FTHL6",
+      "Ferritin H subunit",
+      "Ferritin heavy chain"
+     ],
+     "hitCount_route2": 32,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mac_DAM_LAM__FTH1.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "OLR1": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"disease-associated macrophage\" OR \"lipid-associated macrophage\") AND (OLR1 OR \"C-type lectin domain family 8 member A\" OR \"CLEC8A\" OR \"LOX-1\" OR \"LOX1\" OR \"Lectin-like oxLDL receptor 1\" OR \"Lectin-like oxidized LDL receptor 1\" OR \"Lectin-type oxidized LDL receptor 1\" OR \"Ox-LDL receptor 1\" OR \"Oxidized low-density lipoprotein receptor 1\" OR \"hLOX-1\") AND (SRC:MED)",
+     "aliases_used": [
+      "C-type lectin domain family 8 member A",
+      "CLEC8A",
+      "LOX-1",
+      "LOX1",
+      "Lectin-like oxLDL receptor 1",
+      "Lectin-like oxidized LDL receptor 1",
+      "Lectin-type oxidized LDL receptor 1",
+      "Ox-LDL receptor 1",
+      "Oxidized low-density lipoprotein receptor 1",
+      "hLOX-1"
+     ],
+     "hitCount_route2": 36,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mac_DAM_LAM__OLR1.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "MMP9": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"disease-associated macrophage\" OR \"lipid-associated macrophage\") AND (MMP9 OR \"CLG4B\" OR \"GELB\" OR \"Gelatinase B\" OR \"MMP-9\" OR \"Matrix metalloproteinase-9\") AND (SRC:MED)",
+     "aliases_used": [
+      "CLG4B",
+      "GELB",
+      "Gelatinase B",
+      "MMP-9",
+      "Matrix metalloproteinase-9"
+     ],
+     "hitCount_route2": 178,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mac_DAM_LAM__MMP9.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "CCL3": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "跨亚群归属：CCL3 归于 classical monocyte-derived macrophage(MDM)亚群，非 DAM/LAM"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"disease-associated macrophage\" OR \"lipid-associated macrophage\") AND (CCL3 OR \"C-C motif chemokine 3\" OR \"G0/G1 switch regulatory protein 19-1\" OR \"G0S19-1\" OR \"MIP-1-alpha\" OR \"MIP1A\" OR \"Macrophage inflammatory protein 1-alpha\" OR \"PAT 464.1\" OR \"SCYA3\" OR \"SIS-beta\" OR \"Small-inducible cytokine A3\" OR \"Tonsillar lymphocyte LD78 alpha protein\") AND (SRC:MED)",
+     "aliases_used": [
+      "C-C motif chemokine 3",
+      "G0/G1 switch regulatory protein 19-1",
+      "G0S19-1",
+      "MIP-1-alpha",
+      "MIP1A",
+      "Macrophage inflammatory protein 1-alpha",
+      "PAT 464.1",
+      "SCYA3",
+      "SIS-beta",
+      "Small-inducible cytokine A3",
+      "Tonsillar lymphocyte LD78 alpha protein"
+     ],
+     "hitCount_route2": 70,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mac_DAM_LAM__CCL3.json"
+    },
+    "CCL4": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "41608614",
+       "title": "Immune Cell Infiltration and Kynurenine Pathway Activation Define Early Injury and Progression in Diabetic Nephropathy."
+      }
+     ],
+     "query_route2": "(\"disease-associated macrophage\" OR \"lipid-associated macrophage\") AND (CCL4 OR \"ACT-2\" OR \"C-C motif chemokine 4\" OR \"G-26 T-lymphocyte-secreted protein\" OR \"HC21\" OR \"LAG-1\" OR \"Lymphocyte activation gene 1 protein\" OR \"MIP-1-beta\" OR \"MIP-1-beta(1-69)\" OR \"MIP1B\" OR \"Macrophage inflammatory protein 1-beta\" OR \"PAT 744\" OR \"Protein H400\" OR \"SCYA4\" OR \"SIS-gamma\" OR \"Small-inducible cytokine A4\" OR \"T-cell activation protein 2\") AND (SRC:MED)",
+     "aliases_used": [
+      "ACT-2",
+      "C-C motif chemokine 4",
+      "G-26 T-lymphocyte-secreted protein",
+      "HC21",
+      "LAG-1",
+      "Lymphocyte activation gene 1 protein",
+      "MIP-1-beta",
+      "MIP-1-beta(1-69)",
+      "MIP1B",
+      "Macrophage inflammatory protein 1-beta",
+      "PAT 744",
+      "Protein H400",
+      "SCYA4",
+      "SIS-gamma",
+      "Small-inducible cytokine A4",
+      "T-cell activation protein 2"
+     ],
+     "hitCount_route2": 166,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mac_DAM_LAM__CCL4.json"
+    },
+    "HMOX1": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"disease-associated macrophage\" OR \"lipid-associated macrophage\") AND (HMOX1 OR \"HO-1\" OR \"Heme oxygenase 1\") AND (SRC:MED)",
+     "aliases_used": [
+      "HO-1",
+      "Heme oxygenase 1"
+     ],
+     "hitCount_route2": 84,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Mac_DAM_LAM__HMOX1.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    }
+   },
+   "Microglia": {
+    "TYROBP": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "通路富集/功能性句（DEG enrichment; KO 细胞反应），非表达归属句；slot2 同为 KO 机制"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(microglia OR microglial) AND (TYROBP OR \"DAP12\" OR \"DNAX-activation protein 12\" OR \"KAR-associated protein\" OR \"KARAP\" OR \"Killer-activating receptor-associated protein\" OR \"TYRO protein tyrosine kinase-binding protein\") AND (SRC:MED)",
+     "aliases_used": [
+      "DAP12",
+      "DNAX-activation protein 12",
+      "KAR-associated protein",
+      "KARAP",
+      "Killer-activating receptor-associated protein",
+      "TYRO protein tyrosine kinase-binding protein"
+     ],
+     "hitCount_route2": 3681,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Microglia__TYROBP.json"
+    }
+   },
+   "APC_MHCII_high": {
+    "HLA-DPA1": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "42398735",
+       "title": "Mapping of class II HLA restriction of SepSecS-specific CD4 T-cell epitopes in autoimmune hepatitis."
+      },
+      {
+       "pmid": "30380364",
+       "title": "Immune Escape of Relapsed AML Cells after Allogeneic Transplantation."
+      }
+     ],
+     "query_route2": "(\"MHC class II\" OR \"antigen-presenting cell\" OR \"HLA-DR\") AND (HLA-DPA1 OR \"DP alpha 1 chain\" OR \"DP(W3)\" OR \"DP(W4)\" OR \"HLA class II histocompatibility antigen, DP alpha 1 chain\" OR \"HLA-DP1A\" OR \"HLA-SB alpha chain\" OR \"HLASB\" OR \"MHC class II DP3-alpha\" OR \"MHC class II DPA1\") AND (SRC:MED)",
+     "aliases_used": [
+      "DP alpha 1 chain",
+      "DP(W3)",
+      "DP(W4)",
+      "HLA class II histocompatibility antigen, DP alpha 1 chain",
+      "HLA-DP1A",
+      "HLA-SB alpha chain",
+      "HLASB",
+      "MHC class II DP3-alpha",
+      "MHC class II DPA1"
+     ],
+     "hitCount_route2": 8684,
+     "raw_ledger_route2": "batch2/ledgers/raw2/APC_MHCII_high__HLA-DPA1.json"
+    },
+    "HLA-DQA1": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "42448663",
+       "title": "Integrative multi-omics reveals MHC class II-mediated neuroinflammation and systemic metabolic dysregulation as transdiagnostic drivers in major brain disorders."
+      }
+     ],
+     "query_route2": "(\"MHC class II\" OR \"antigen-presenting cell\" OR \"HLA-DR\") AND (HLA-DQA1 OR \"DC-1 alpha chain\" OR \"DC-alpha\" OR \"DQ alpha 1 chain\" OR \"HLA class II histocompatibility antigen, DQ alpha 1 chain\" OR \"HLA-DCA\" OR \"MHC class II DQA1\") AND (SRC:MED)",
+     "aliases_used": [
+      "DC-1 alpha chain",
+      "DC-alpha",
+      "DQ alpha 1 chain",
+      "HLA class II histocompatibility antigen, DQ alpha 1 chain",
+      "HLA-DCA",
+      "MHC class II DQA1"
+     ],
+     "hitCount_route2": 51110,
+     "raw_ledger_route2": "batch2/ledgers/raw2/APC_MHCII_high__HLA-DQA1.json"
+    },
+    "HLA-DQB1": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "42448663",
+       "title": "Integrative multi-omics reveals MHC class II-mediated neuroinflammation and systemic metabolic dysregulation as transdiagnostic drivers in major brain disorders."
+      }
+     ],
+     "query_route2": "(\"MHC class II\" OR \"antigen-presenting cell\" OR \"HLA-DR\") AND (HLA-DQB1 OR \"DQ beta 1 chain\" OR \"HLA class II histocompatibility antigen, DQ beta 1 chain\" OR \"HLA-DQB\" OR \"MHC class II antigen DQB1\") AND (SRC:MED)",
+     "aliases_used": [
+      "DQ beta 1 chain",
+      "HLA class II histocompatibility antigen, DQ beta 1 chain",
+      "HLA-DQB",
+      "MHC class II antigen DQB1"
+     ],
+     "hitCount_route2": 23588,
+     "raw_ledger_route2": "batch2/ledgers/raw2/APC_MHCII_high__HLA-DQB1.json"
+    },
+    "HLA-DMB": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "42670432",
+       "title": "Iron Dyshomeostasis and Divergent Antigen Presentation Remodeling in Bronchiectasis: A Dual-Dataset Transcriptomic Analysis."
+      },
+      {
+       "pmid": "39917362",
+       "title": "HLA-DMB correlates with antitumor immunity and an improved prognosis in endometrial carcinoma tumors."
+      }
+     ],
+     "query_route2": "(\"MHC class II\" OR \"antigen-presenting cell\" OR \"HLA-DR\") AND (HLA-DMB OR \"DM beta chain\" OR \"HLA class II histocompatibility antigen, DM beta chain\" OR \"MHC class II antigen DMB\" OR \"RING7\" OR \"Really interesting new gene 7 protein\") AND (SRC:MED)",
+     "aliases_used": [
+      "DM beta chain",
+      "HLA class II histocompatibility antigen, DM beta chain",
+      "MHC class II antigen DMB",
+      "RING7",
+      "Really interesting new gene 7 protein"
+     ],
+     "hitCount_route2": 2088,
+     "raw_ledger_route2": "batch2/ledgers/raw2/APC_MHCII_high__HLA-DMB.json"
+    },
+    "FCGR1A": {
+     "combined_final": "weak",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "2804814",
+       "title": "Immune system response in Alzheimer's disease."
+      }
+     ],
+     "query_route2": "(\"MHC class II\" OR \"antigen-presenting cell\" OR \"HLA-DR\") AND (FCGR1A OR \"FCG1\" OR \"FCGR1\" OR \"Fc-gamma RI\" OR \"Fc-gamma RIA\" OR \"FcRI\" OR \"FcgammaRIa\" OR \"High affinity immunoglobulin gamma Fc receptor I\" OR \"IGFR1\" OR \"IgG Fc receptor I\") AND (SRC:MED)",
+     "aliases_used": [
+      "FCG1",
+      "FCGR1",
+      "Fc-gamma RI",
+      "Fc-gamma RIA",
+      "FcRI",
+      "FcgammaRIa",
+      "High affinity immunoglobulin gamma Fc receptor I",
+      "IGFR1",
+      "IgG Fc receptor I"
+     ],
+     "hitCount_route2": 2150,
+     "raw_ledger_route2": "batch2/ledgers/raw2/APC_MHCII_high__FCGR1A.json"
+    },
+    "RGS1": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"MHC class II\" OR \"antigen-presenting cell\" OR \"HLA-DR\") AND (RGS1 OR \"B-cell activation protein BL34\" OR \"BL34\" OR \"Early response protein 1R20\" OR \"IER1\" OR \"Regulator of G protein signaling 1\") AND (SRC:MED)",
+     "aliases_used": [
+      "B-cell activation protein BL34",
+      "BL34",
+      "Early response protein 1R20",
+      "IER1",
+      "Regulator of G protein signaling 1"
+     ],
+     "hitCount_route2": 704,
+     "raw_ledger_route2": "batch2/ledgers/raw2/APC_MHCII_high__RGS1.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    }
+   },
+   "cDC1": {
+    "C1S": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(cDC1 OR \"type 1 conventional dendritic\" OR \"cross-presenting dendritic\") AND (C1S OR \"C1 esterase\" OR \"Complement C1s subcomponent\" OR \"Complement component 1 subcomponent s\") AND (SRC:MED)",
+     "aliases_used": [
+      "C1 esterase",
+      "Complement C1s subcomponent",
+      "Complement component 1 subcomponent s"
+     ],
+     "hitCount_route2": 56,
+     "raw_ledger_route2": "batch2/ledgers/raw2/cDC1__C1S.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "C1R": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(cDC1 OR \"type 1 conventional dendritic\" OR \"cross-presenting dendritic\") AND (C1R OR \"Complement C1r subcomponent\" OR \"Complement component 1 subcomponent r\") AND (SRC:MED)",
+     "aliases_used": [
+      "Complement C1r subcomponent",
+      "Complement component 1 subcomponent r"
+     ],
+     "hitCount_route2": 40,
+     "raw_ledger_route2": "batch2/ledgers/raw2/cDC1__C1R.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "ZBTB46": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "跨类归属：cDC1-specific 修饰的是 Batf3-/-；Zbtb46 为 pan-DC 报告（句内归属错位）"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(cDC1 OR \"type 1 conventional dendritic\" OR \"cross-presenting dendritic\") AND (ZBTB46 OR \"BTB/POZ domain-containing protein 4\" OR \"BTBD4\" OR \"ZNF340\" OR \"Zinc finger and BTB domain-containing protein 46\" OR \"Zinc finger protein 340\") AND (SRC:MED)",
+     "aliases_used": [
+      "BTB/POZ domain-containing protein 4",
+      "BTBD4",
+      "ZNF340",
+      "Zinc finger and BTB domain-containing protein 46",
+      "Zinc finger protein 340"
+     ],
+     "hitCount_route2": 382,
+     "raw_ledger_route2": "batch2/ledgers/raw2/cDC1__ZBTB46.json"
+    }
+   },
+   "cDC2": {
+    "CD1C": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "42128522",
+       "title": "Feeder-free generation of functional dendritic cells from human pluripotent stem cells."
+      },
+      {
+       "pmid": "42292480",
+       "title": "Tumor immune microenvironment states inferred from TLS-associated immune-cell composition stratify prognosis in hepatocellular carcinoma."
+      }
+     ],
+     "query_route2": "(cDC2 OR \"type 2 conventional dendritic\") AND (CD1C OR \"T-cell surface glycoprotein CD1c\") AND (SRC:MED)",
+     "aliases_used": [
+      "T-cell surface glycoprotein CD1c"
+     ],
+     "hitCount_route2": 2714,
+     "raw_ledger_route2": "batch2/ledgers/raw2/cDC2__CD1C.json"
+    },
+    "FCER1A": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "27837108",
+       "title": "Characterization and Transcriptomic Analysis of Porcine Blood Conventional and Plasmacytoid Dendritic Cells Reveals Striking Species-Specific Differences.",
+       "sentence": "As described in other species, only cDC1 express BATF3 and XCR1, cDC2 express FCER1A and FCGR2B, and only pDCs express TCF4 and NRP1 Nevertheless, despite these cross-species conserved subset-specific transcripts, porcine pDCs differed from the species described so far in many expressed genes and transcriptomic profiling clustered pDCs more distantly from cDCs than monocytes.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(cDC2 OR \"type 2 conventional dendritic\") AND (FCER1A OR \"FCE1A\" OR \"Fc-epsilon RI-alpha\" OR \"FcERI\" OR \"High affinity immunoglobulin epsilon receptor subunit alpha\" OR \"IgE Fc receptor subunit alpha\") AND (SRC:MED)",
+     "aliases_used": [
+      "FCE1A",
+      "Fc-epsilon RI-alpha",
+      "FcERI",
+      "High affinity immunoglobulin epsilon receptor subunit alpha",
+      "IgE Fc receptor subunit alpha"
+     ],
+     "hitCount_route2": 664,
+     "raw_ledger_route2": "batch2/ledgers/raw2/cDC2__FCER1A.json"
+    },
+    "CD4": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "归属错误：CD4 归 CD4+ T 细胞（cDC2-CD4+ T axis 为互作对，非 cDC2 表达）"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(cDC2 OR \"type 2 conventional dendritic\") AND (CD4 OR \"T-cell surface antigen T4/Leu-3\" OR \"T-cell surface glycoprotein CD4\") AND (SRC:MED)",
+     "aliases_used": [
+      "T-cell surface antigen T4/Leu-3",
+      "T-cell surface glycoprotein CD4"
+     ],
+     "hitCount_route2": 5764,
+     "raw_ledger_route2": "batch2/ledgers/raw2/cDC2__CD4.json"
+    },
+    "HLA-DRA": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(cDC2 OR \"type 2 conventional dendritic\") AND (HLA-DRA OR \"DR alpha chain\" OR \"HLA class II histocompatibility antigen, DR alpha chain\" OR \"HLA-DRA1\" OR \"MHC class II antigen DRA\") AND (SRC:MED)",
+     "aliases_used": [
+      "DR alpha chain",
+      "HLA class II histocompatibility antigen, DR alpha chain",
+      "HLA-DRA1",
+      "MHC class II antigen DRA"
+     ],
+     "hitCount_route2": 574,
+     "raw_ledger_route2": "batch2/ledgers/raw2/cDC2__HLA-DRA.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "S100A10": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "21757473",
+       "title": "Brilliant Cresyl Blue stain selects largest oocytes with highest mitochondrial activity, maturation-promoting factor activity and embryo developmental competence in prepubertal sheep."
+      }
+     ],
+     "query_route2": "(cDC2 OR \"type 2 conventional dendritic\") AND (S100A10 OR \"ANX2LG\" OR \"CAL1L\" OR \"CLP11\" OR \"Calpactin I light chain\" OR \"Calpactin-1 light chain\" OR \"Cellular ligand of annexin II\" OR \"Protein S100-A10\" OR \"S100 calcium-binding protein A10\" OR \"p10 protein\") AND (SRC:MED)",
+     "aliases_used": [
+      "ANX2LG",
+      "CAL1L",
+      "CLP11",
+      "Calpactin I light chain",
+      "Calpactin-1 light chain",
+      "Cellular ligand of annexin II",
+      "Protein S100-A10",
+      "S100 calcium-binding protein A10",
+      "p10 protein"
+     ],
+     "hitCount_route2": 204,
+     "raw_ledger_route2": "batch2/ledgers/raw2/cDC2__S100A10.json"
+    }
+   },
+   "pDC": {
+    "SERPINF1": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"plasmacytoid dendritic\" OR pDC) AND (SERPINF1 OR \"Cell proliferation-inducing gene 35 protein\" OR \"EPC-1\" OR \"PEDF\" OR \"Pigment epithelium-derived factor\" OR \"Serpin F1\") AND (SRC:MED)",
+     "aliases_used": [
+      "Cell proliferation-inducing gene 35 protein",
+      "EPC-1",
+      "PEDF",
+      "Pigment epithelium-derived factor",
+      "Serpin F1"
+     ],
+     "hitCount_route2": 284,
+     "raw_ledger_route2": "batch2/ledgers/raw2/pDC__SERPINF1.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "JCHAIN": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"plasmacytoid dendritic\" OR pDC) AND (JCHAIN OR \"IGCJ\" OR \"Immunoglobulin J chain\" OR \"Joining chain of multimeric IgA and IgM\") AND (SRC:MED)",
+     "aliases_used": [
+      "IGCJ",
+      "Immunoglobulin J chain",
+      "Joining chain of multimeric IgA and IgM"
+     ],
+     "hitCount_route2": 884,
+     "raw_ledger_route2": "batch2/ledgers/raw2/pDC__JCHAIN.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    }
+   },
+   "T": {
+    "TRAC": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "循环：类词来自基因全名 T-cell receptor α constant；两句均为基因编辑工程语境（一批 A5 同型）"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"T cell\" OR \"T lymphocyte\") AND (TRAC OR \"T cell receptor alpha chain constant\" OR \"TCRA\") AND (SRC:MED)",
+     "aliases_used": [
+      "T cell receptor alpha chain constant",
+      "TCRA"
+     ],
+     "hitCount_route2": 7648,
+     "raw_ledger_route2": "batch2/ledgers/raw2/T__TRAC.json"
+    }
+   },
+   "NK": {
+    "NKG7": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "42682208",
+       "title": "Single-cell RNA sequencing reveals distinct immune interaction networks in primary and reactivated HHV-6B infection.",
+       "sentence": "Results Primary HHV-6B infection was characterized by marked expansion of proliferating natural killer (NK) cells, which expressed cytotoxic effector genes including GNLY and NKG7.",
+       "why": "abstract-sentence"
+      },
+      {
+       "pmid": "42614581",
+       "title": "Distinct T Cell Repertoires in Spinal Entheses and Synovial Fluids in Ankylosing Spondylitis.",
+       "sentence": "Differential expression and pathway analyses revealed that senescence-related genes, such as calmodulin 1 ( CALM1 ) and cyclin-dependent kinase inhibitor 1A ( CDKN1A ), were enriched in SL, suggesting the presence of senescent T cells, and cytotoxic genes, including natural killer cell granule protein 7 ( NKG7 ), were enriched in synovial fluids.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"natural killer cell\" OR \"NK cell\") AND (NKG7 OR \"G-CSF-induced gene 1 protein\" OR \"GIG-1 protein\" OR \"GMP-17\" OR \"Granule membrane protein of 17 kDa\" OR \"Natural killer cell protein 7\" OR \"Protein NKG7\" OR \"p15-TIA-1\") AND (SRC:MED)",
+     "aliases_used": [
+      "G-CSF-induced gene 1 protein",
+      "GIG-1 protein",
+      "GMP-17",
+      "Granule membrane protein of 17 kDa",
+      "Natural killer cell protein 7",
+      "Protein NKG7",
+      "p15-TIA-1"
+     ],
+     "hitCount_route2": 2369,
+     "raw_ledger_route2": "batch2/ledgers/raw2/NK__NKG7.json"
+    },
+    "KLRF1": {
+     "combined_final": "strong",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "36583228",
+       "title": "KLRF1, a novel marker of CD56&lt;sup&gt;bright&lt;/sup&gt; NK cells, predicts improved survival for patients with locally advanced bladder cancer.",
+       "sentence": "KLRF1, a novel marker of CD56&lt;sup&gt;bright&lt;/sup&gt; NK cells, predicts improved survival for patients with locally advanced bladder cancer.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"natural killer cell\" OR \"NK cell\") AND (KLRF1 OR \"Activating coreceptor NKp80\" OR \"C-type lectin domain family 5 member C\" OR \"CLEC5C\" OR \"Killer cell lectin-like receptor subfamily F member 1\" OR \"Lectin-like receptor F1\") AND (SRC:MED)",
+     "aliases_used": [
+      "Activating coreceptor NKp80",
+      "C-type lectin domain family 5 member C",
+      "CLEC5C",
+      "Killer cell lectin-like receptor subfamily F member 1",
+      "Lectin-like receptor F1"
+     ],
+     "hitCount_route2": 683,
+     "raw_ledger_route2": "batch2/ledgers/raw2/NK__KLRF1.json"
+    }
+   },
+   "B": {
+    "IGKC": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "41728814",
+       "title": "Distinct Tumor Infiltrating Immune Cell Profiles in Mice by Non-Steroidal Anti-Inflammatory Drugs (Aspirin and Naproxen) During TMPRSS2-ERG (Fusion)-Driven and Non-Fusion Driven Prostate Cancer."
+      },
+      {
+       "pmid": "41913413",
+       "title": "Integrating tumor and immune cell transcriptomics to predict immune checkpoint inhibitor primary resistance in metastatic melanoma."
+      }
+     ],
+     "query_route2": "(\"B cell\" OR \"B lymphocyte\") AND (IGKC OR \"Ig kappa chain C region\" OR \"Ig kappa chain C region AG\" OR \"Ig kappa chain C region CUM\" OR \"Ig kappa chain C region EU\" OR \"Ig kappa chain C region OU\" OR \"Ig kappa chain C region ROY\" OR \"Ig kappa chain C region TI\" OR \"Immunoglobulin kappa constant\") AND (SRC:MED)",
+     "aliases_used": [
+      "Ig kappa chain C region",
+      "Ig kappa chain C region AG",
+      "Ig kappa chain C region CUM",
+      "Ig kappa chain C region EU",
+      "Ig kappa chain C region OU",
+      "Ig kappa chain C region ROY",
+      "Ig kappa chain C region TI",
+      "Immunoglobulin kappa constant"
+     ],
+     "hitCount_route2": 3070,
+     "raw_ledger_route2": "batch2/ledgers/raw2/B__IGKC.json"
+    }
+   },
+   "Plasma": {
+    "SEC11C": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"plasma cell\" OR plasmablast) AND (SEC11C OR \"Microsomal signal peptidase 21 kDa subunit\" OR \"SEC11 homolog C\" OR \"SEC11-like protein 3\" OR \"SEC11L3\" OR \"SPC21\" OR \"SPCS4C\" OR \"SPase 21 kDa subunit\" OR \"Signal peptidase complex catalytic subunit SEC11C\") AND (SRC:MED)",
+     "aliases_used": [
+      "Microsomal signal peptidase 21 kDa subunit",
+      "SEC11 homolog C",
+      "SEC11-like protein 3",
+      "SEC11L3",
+      "SPC21",
+      "SPCS4C",
+      "SPase 21 kDa subunit",
+      "Signal peptidase complex catalytic subunit SEC11C"
+     ],
+     "hitCount_route2": 42,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Plasma__SEC11C.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "DERL3": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "组织水平基因列表上调+\"implicating plasma cell differentiation\"推断从句，非 PC 表达归属"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"plasma cell\" OR plasmablast) AND (DERL3 OR \"C22orf14\" OR \"DER3\" OR \"DERtrin-3\" OR \"Degradation in endoplasmic reticulum protein 3\" OR \"Der1-like protein 3\" OR \"Derlin-3\" OR \"LLN2\") AND (SRC:MED)",
+     "aliases_used": [
+      "C22orf14",
+      "DER3",
+      "DERtrin-3",
+      "Degradation in endoplasmic reticulum protein 3",
+      "Der1-like protein 3",
+      "Derlin-3",
+      "LLN2"
+     ],
+     "hitCount_route2": 112,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Plasma__DERL3.json"
+    }
+   },
+   "Granulocyte": {
+    "FCGR3B": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "41967397",
+       "title": "Clinical validation of CD16b as a standardized biomarker for inherited GPI deficiencies.",
+       "sentence": "Methods We analyzed granulocyte expression of CD16b in 29 IGD patients and 101 controls (21 non-IGD and 80 healthy adults).",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(granulocyte OR neutrophil) AND (FCGR3B OR \"CD16-I\" OR \"CD16B\" OR \"Fc-gamma RIII\" OR \"Fc-gamma RIII-beta\" OR \"Fc-gamma RIIIb\" OR \"FcR-10\" OR \"FcRIII\" OR \"FcRIIIb\" OR \"IgG Fc receptor III-1\" OR \"Low affinity immunoglobulin gamma Fc region receptor III-B\") AND (SRC:MED)",
+     "aliases_used": [
+      "CD16-I",
+      "CD16B",
+      "Fc-gamma RIII",
+      "Fc-gamma RIII-beta",
+      "Fc-gamma RIIIb",
+      "FcR-10",
+      "FcRIII",
+      "FcRIIIb",
+      "IgG Fc receptor III-1",
+      "Low affinity immunoglobulin gamma Fc region receptor III-B"
+     ],
+     "hitCount_route2": 16755,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Granulocyte__FCGR3B.json"
+    },
+    "TGFBI": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "42136238",
+       "title": "Macrophage-related Genes were Discovered by Applying Highdimensional Weighted Gene Co-expression Network Analysis as Biomarkers for Esophageal Squamous Cell Carcinoma."
+      },
+      {
+       "pmid": "41979832",
+       "title": "Machine Learning-Based Identification of Molecular Signatures in PTOA Cell Subtypes via Single-Cell Transcriptomics in a Mouse Model."
+      }
+     ],
+     "query_route2": "(granulocyte OR neutrophil) AND (TGFBI OR \"BIGH3\" OR \"Beta ig-h3\" OR \"Kerato-epithelin\" OR \"RGD-CAP\" OR \"RGD-containing collagen-associated protein\" OR \"Transforming growth factor-beta-induced protein ig-h3\") AND (SRC:MED)",
+     "aliases_used": [
+      "BIGH3",
+      "Beta ig-h3",
+      "Kerato-epithelin",
+      "RGD-CAP",
+      "RGD-containing collagen-associated protein",
+      "Transforming growth factor-beta-induced protein ig-h3"
+     ],
+     "hitCount_route2": 4530,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Granulocyte__TGFBI.json"
+    },
+    "CD36": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "归属错误：CD36 在 Kupffer 细胞（\"neutrophil-derived\"为他基因 TSP-1 的修饰语）"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(granulocyte OR neutrophil) AND (CD36 OR \"Fatty acid translocase\" OR \"GP3B\" OR \"GPIIIB\" OR \"GPIV\" OR \"Glycoprotein IIIb\" OR \"Leukocyte differentiation antigen CD36\" OR \"PAS IV\" OR \"PAS-4\" OR \"Platelet collagen receptor\" OR \"Platelet glycoprotein 4\" OR \"Platelet glycoprotein IV\" OR \"Thrombospondin receptor\") AND (SRC:MED)",
+     "aliases_used": [
+      "Fatty acid translocase",
+      "GP3B",
+      "GPIIIB",
+      "GPIV",
+      "Glycoprotein IIIb",
+      "Leukocyte differentiation antigen CD36",
+      "PAS IV",
+      "PAS-4",
+      "Platelet collagen receptor",
+      "Platelet glycoprotein 4",
+      "Platelet glycoprotein IV",
+      "Thrombospondin receptor"
+     ],
+     "hitCount_route2": 12288,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Granulocyte__CD36.json"
+    }
+   },
+   "Proliferating": {
+    "BIRC5": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "机制句：regulator of proliferation（PREREG §3 Proliferating 行明示：调控类句不升 strong）"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(proliferation OR \"proliferating cell\") AND (BIRC5 OR \"API4\" OR \"Apoptosis inhibitor 4\" OR \"Apoptosis inhibitor survivin\" OR \"Baculoviral IAP repeat-containing protein 5\" OR \"IAP4\") AND (SRC:MED)",
+     "aliases_used": [
+      "API4",
+      "Apoptosis inhibitor 4",
+      "Apoptosis inhibitor survivin",
+      "Baculoviral IAP repeat-containing protein 5",
+      "IAP4"
+     ],
+     "hitCount_route2": 10341,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Proliferating__BIRC5.json"
+    },
+    "H2AFZ": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "机制句：H2AFZ-driven proliferative subpopulation（driver 非 marker）"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(proliferation OR \"proliferating cell\") AND H2AFZ AND (SRC:MED)",
+     "aliases_used": [],
+     "hitCount_route2": 756,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Proliferating__H2AFZ.json"
+    },
+    "NUSAP1": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "40605080",
+       "title": "The role and therapeutic value of NUSAP1 in human cancers.",
+       "sentence": "NUSAP1 is located on chromosome 15q15.1 and is typically expressed in proliferating cells, suggesting a potential oncogenic role.",
+       "why": "abstract-sentence"
+      },
+      {
+       "pmid": "41580426",
+       "title": "SHP2 promotes osteosarcoma via regulating STAT3/TET3/HOXB2 signaling.",
+       "sentence": "HOXB2 further upregulate the expression of c-Myc, NANOG and NUSAP1, ultimately driving the proliferation, migration and invasion of osteosarcoma and promoting tumor progression.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(proliferation OR \"proliferating cell\") AND (NUSAP1 OR \"ANKT\" OR \"NuSAP\" OR \"Nucleolar and spindle-associated protein 1\") AND (SRC:MED)",
+     "aliases_used": [
+      "ANKT",
+      "NuSAP",
+      "Nucleolar and spindle-associated protein 1"
+     ],
+     "hitCount_route2": 2403,
+     "raw_ledger_route2": "batch2/ledgers/raw2/Proliferating__NUSAP1.json"
+    }
+   }
+  },
+  "retina": {
+   "BC": {
+    "ISL1": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "18003851",
+       "title": "Islet-1 controls the differentiation of retinal bipolar and cholinergic amacrine cells.",
+       "sentence": "Expression of the ON- and OFF-bipolar cell differentiation factors Bhlhb4 and Vsx1, respectively, requires the presence of Isl1, whereas the early bipolar cell marker Prox1 initially did not.",
+       "why": "abstract-sentence"
+      },
+      {
+       "pmid": "17480014",
+       "title": "Expression of the LIM-homeodomain protein Isl1 in the developing and mature mouse retina.",
+       "sentence": "Among bipolar interneurons, Isl1 expression commences at postnatal day (P)5 and is later restricted to ON-bipolar cells.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (ISL1 OR \"Insulin gene enhancer protein ISL-1\" OR \"Islet-1\") AND (SRC:MED)",
+     "aliases_used": [
+      "Insulin gene enhancer protein ISL-1",
+      "Islet-1"
+     ],
+     "hitCount_route2": 452,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__ISL1.json"
+    },
+    "OTX2": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "机制句：Otx2 水平影响 BC 命运/成熟（\"not bipolar cell fate / impairs maturation\"），非 BC 表达断言"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (OTX2 OR \"Homeobox protein OTX2\" OR \"Orthodenticle homolog 2\") AND (SRC:MED)",
+     "aliases_used": [
+      "Homeobox protein OTX2",
+      "Orthodenticle homolog 2"
+     ],
+     "hitCount_route2": 349,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__OTX2.json"
+    }
+   },
+   "AC": {
+    "TFAP2A": {
+     "combined_final": "weak",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "机制句：Tfap2a/2b 为 AC/HC 分化调控级联组分，非表达/marker 归属断言（降 strong→weak，文档级 G∧C 成立）"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (TFAP2A OR \"AP-2\" OR \"AP-2 transcription factor\" OR \"AP2-alpha\" OR \"AP2TF\" OR \"Activating enhancer-binding protein 2-alpha\" OR \"Activator protein 2\" OR \"TFAP2\" OR \"Transcription factor AP-2-alpha\") AND (SRC:MED)",
+     "aliases_used": [
+      "AP-2",
+      "AP-2 transcription factor",
+      "AP2-alpha",
+      "AP2TF",
+      "Activating enhancer-binding protein 2-alpha",
+      "Activator protein 2",
+      "TFAP2",
+      "Transcription factor AP-2-alpha"
+     ],
+     "hitCount_route2": 252,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__TFAP2A.json"
+    },
+    "GAD2": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "28456934",
+       "title": "Lhx9 Is Required for the Development of Retinal Nitric Oxide-Synthesizing Amacrine Cell Subtype.",
+       "sentence": "Our cell lineage-tracing studies show that Lhx9-expressing cells give rise to both the GAD65 and GAD67 expressing sub-populations of GABAergic amacrine cells.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (GAD2 OR \"GAD-65\" OR \"GAD65\" OR \"Glutamate decarboxylase 2\" OR \"Glutamate decarboxylase 65 kDa isoform\") AND (SRC:MED)",
+     "aliases_used": [
+      "GAD-65",
+      "GAD65",
+      "Glutamate decarboxylase 2",
+      "Glutamate decarboxylase 65 kDa isoform"
+     ],
+     "hitCount_route2": 325,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__GAD2.json"
+    },
+    "SLC6A9": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "40417401",
+       "title": "Changes in glycinergic neurotransmission alter mammalian retinal information processing.",
+       "sentence": "We have previously shown that the high-affinity glycine transporter 1 (GlyT1), that is commonly used as a reliable marker for glycinergic amacrine cells in the retina, is essential for glycinergic neurotransmission by these cells.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (SLC6A9 OR \"GlyT-1\" OR \"GlyT1\" OR \"Sodium- and chloride-dependent glycine transporter 1\" OR \"Solute carrier family 6 member 9\") AND (SRC:MED)",
+     "aliases_used": [
+      "GlyT-1",
+      "GlyT1",
+      "Sodium- and chloride-dependent glycine transporter 1",
+      "Solute carrier family 6 member 9"
+     ],
+     "hitCount_route2": 249,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__SLC6A9.json"
+    },
+    "ONECUT2": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "33806574",
+       "title": "Analysis of mir-9 Expression Pattern in Rat Retina during Postnatal Development."
+      },
+      {
+       "pmid": "25228773",
+       "title": "Onecut1 and Onecut2 redundantly regulate early retinal cell fates during development."
+      }
+     ],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (ONECUT2 OR \"HNF-6-beta\" OR \"HNF6B\" OR \"Hepatocyte nuclear factor 6-beta\" OR \"OC-2\" OR \"One cut domain family member 2\" OR \"One cut homeobox 2\" OR \"Transcription factor ONECUT-2\") AND (SRC:MED)",
+     "aliases_used": [
+      "HNF-6-beta",
+      "HNF6B",
+      "Hepatocyte nuclear factor 6-beta",
+      "OC-2",
+      "One cut domain family member 2",
+      "One cut homeobox 2",
+      "Transcription factor ONECUT-2"
+     ],
+     "hitCount_route2": 232,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__ONECUT2.json"
+    }
+   },
+   "HC": {
+    "ONECUT3": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"horizontal cell\" OR \"retinal horizontal cell\") AND (ONECUT3 OR \"OC-3\" OR \"One cut domain family member 3\" OR \"One cut homeobox 3\" OR \"Transcription factor ONECUT-3\") AND (SRC:MED)",
+     "aliases_used": [
+      "OC-3",
+      "One cut domain family member 3",
+      "One cut homeobox 3",
+      "Transcription factor ONECUT-3"
+     ],
+     "hitCount_route2": 24,
+     "raw_ledger_route2": "batch2/ledgers/raw2/HC__ONECUT3.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "GAD1": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "34209226",
+       "title": "Profile of miR-23 Expression and Possible Role in Regulation of Glutamic Acid Decarboxylase during Postnatal Retinal Development.",
+       "sentence": "Horizontal cells at P7, amacrine cells at P15 and P21, and some cells in the ganglion cell layer at several time points were double labelled with miR-23 and GAD67.",
+       "why": "abstract-sentence"
+      },
+      {
+       "pmid": "20565821",
+       "title": "Assembly of the outer retina in the absence of GABA synthesis in horizontal cells.",
+       "sentence": "To explore the possibility that transient GABA expression in mouse neonatal horizontal cells influences the structural development of synaptic connectivity in the outer retina, we examined a mutant in which expression of GAD67, the major synthesizing enzyme for GABA, is selectively knocked out in the retina.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"horizontal cell\" OR \"retinal horizontal cell\") AND (GAD1 OR \"GAD-67\" OR \"GAD67\" OR \"Glutamate decarboxylase 1\" OR \"Glutamate decarboxylase 67 kDa isoform\") AND (SRC:MED)",
+     "aliases_used": [
+      "GAD-67",
+      "GAD67",
+      "Glutamate decarboxylase 1",
+      "Glutamate decarboxylase 67 kDa isoform"
+     ],
+     "hitCount_route2": 102,
+     "raw_ledger_route2": "batch2/ledgers/raw2/HC__GAD1.json"
+    },
+    "CX3CR1": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "23592324",
+       "title": "Early degeneration of photoreceptor synapse in Ccl2/Cx3cr1-deficient mice on Crb1(rd8) background."
+      }
+     ],
+     "query_route2": "(\"horizontal cell\" OR \"retinal horizontal cell\") AND (CX3CR1 OR \"Beta chemokine receptor-like 1\" OR \"C-X3-C CKR-1\" OR \"CMK-BRL-1\" OR \"CMK-BRL1\" OR \"CMKBRL1\" OR \"CX3C chemokine receptor 1\" OR \"Fractalkine receptor\" OR \"G protein-coupled receptor 13\" OR \"GPR13\") AND (SRC:MED)",
+     "aliases_used": [
+      "Beta chemokine receptor-like 1",
+      "C-X3-C CKR-1",
+      "CMK-BRL-1",
+      "CMK-BRL1",
+      "CMKBRL1",
+      "CX3C chemokine receptor 1",
+      "Fractalkine receptor",
+      "G protein-coupled receptor 13",
+      "GPR13"
+     ],
+     "hitCount_route2": 82,
+     "raw_ledger_route2": "batch2/ledgers/raw2/HC__CX3CR1.json"
+    }
+   },
+   "MG": {
+    "GLUL": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "10908613",
+       "title": "Genetic inactivation of an inwardly rectifying potassium channel (Kir4.1 subunit) in mice: phenotypic impact in retina.",
+       "sentence": "Müller cells from Kir4.1 -/- mice were not labeled with an anti-Kir4.1 antibody, although they appeared morphologically normal when stained with an anti-glutamine synthetase antibody.",
+       "why": "abstract-sentence"
+      },
+      {
+       "pmid": "9519752",
+       "title": "Müller cell changes in human diabetic retinopathy.",
+       "sentence": "In this study, we sought evidence for diabetes-induced Müller cell abnormalities by testing the expression of three proteins (Bcl-2, glutamine synthetase [GS], and glial fibrillar acidic protein [GFAP]) that are solely or predominantly expressed in Müller cells and show a reproducible pattern of changes in the context of retinal injuries or degenerations.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"muller glia\" OR \"muller cell\" OR \"Müller glia\" OR Mueller OR \"muller glial cell\" OR \"retinal muller\" OR \"Müller glial cell\") AND (GLUL OR \"Glutamate--ammonia ligase\" OR \"Glutamine synthetase\" OR \"Palmitoyltransferase GLUL\") AND (SRC:MED)",
+     "aliases_used": [
+      "Glutamate--ammonia ligase",
+      "Glutamine synthetase",
+      "Palmitoyltransferase GLUL"
+     ],
+     "hitCount_route2": 4184,
+     "raw_ledger_route2": "batch2/ledgers/raw2/MG__GLUL.json"
+    },
+    "S100B": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "反向证据：句明确 S100B 代表星形胶质、GS(-)对照 MG——非 MG 支持句"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"muller glia\" OR \"muller cell\" OR \"Müller glia\" OR Mueller OR \"muller glial cell\" OR \"retinal muller\" OR \"Müller glial cell\") AND (S100B OR \"Protein S100-B\" OR \"S-100 protein beta chain\" OR \"S-100 protein subunit beta\" OR \"S100 calcium-binding protein B\") AND (SRC:MED)",
+     "aliases_used": [
+      "Protein S100-B",
+      "S-100 protein beta chain",
+      "S-100 protein subunit beta",
+      "S100 calcium-binding protein B"
+     ],
+     "hitCount_route2": 601,
+     "raw_ledger_route2": "batch2/ledgers/raw2/MG__S100B.json"
+    }
+   }
+  },
+  "retina_interneuron": {
+   "BC": {
+    "ISL1": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "18003851",
+       "title": "Islet-1 controls the differentiation of retinal bipolar and cholinergic amacrine cells.",
+       "sentence": "Expression of the ON- and OFF-bipolar cell differentiation factors Bhlhb4 and Vsx1, respectively, requires the presence of Isl1, whereas the early bipolar cell marker Prox1 initially did not.",
+       "why": "abstract-sentence"
+      },
+      {
+       "pmid": "17480014",
+       "title": "Expression of the LIM-homeodomain protein Isl1 in the developing and mature mouse retina.",
+       "sentence": "Among bipolar interneurons, Isl1 expression commences at postnatal day (P)5 and is later restricted to ON-bipolar cells.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (ISL1 OR \"Insulin gene enhancer protein ISL-1\" OR \"Islet-1\") AND (SRC:MED)",
+     "aliases_used": [
+      "Insulin gene enhancer protein ISL-1",
+      "Islet-1"
+     ],
+     "hitCount_route2": 452,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__ISL1.json"
+    },
+    "OTX2": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "机制句：Otx2 水平影响 BC 命运/成熟（\"not bipolar cell fate / impairs maturation\"），非 BC 表达断言"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (OTX2 OR \"Homeobox protein OTX2\" OR \"Orthodenticle homolog 2\") AND (SRC:MED)",
+     "aliases_used": [
+      "Homeobox protein OTX2",
+      "Orthodenticle homolog 2"
+     ],
+     "hitCount_route2": 349,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__OTX2.json"
+    }
+   },
+   "AC": {
+    "TFAP2A": {
+     "combined_final": "weak",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "机制句：Tfap2a/2b 为 AC/HC 分化调控级联组分，非表达/marker 归属断言（降 strong→weak，文档级 G∧C 成立）"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (TFAP2A OR \"AP-2\" OR \"AP-2 transcription factor\" OR \"AP2-alpha\" OR \"AP2TF\" OR \"Activating enhancer-binding protein 2-alpha\" OR \"Activator protein 2\" OR \"TFAP2\" OR \"Transcription factor AP-2-alpha\") AND (SRC:MED)",
+     "aliases_used": [
+      "AP-2",
+      "AP-2 transcription factor",
+      "AP2-alpha",
+      "AP2TF",
+      "Activating enhancer-binding protein 2-alpha",
+      "Activator protein 2",
+      "TFAP2",
+      "Transcription factor AP-2-alpha"
+     ],
+     "hitCount_route2": 252,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__TFAP2A.json"
+    },
+    "SLC6A9": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "40417401",
+       "title": "Changes in glycinergic neurotransmission alter mammalian retinal information processing.",
+       "sentence": "We have previously shown that the high-affinity glycine transporter 1 (GlyT1), that is commonly used as a reliable marker for glycinergic amacrine cells in the retina, is essential for glycinergic neurotransmission by these cells.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (SLC6A9 OR \"GlyT-1\" OR \"GlyT1\" OR \"Sodium- and chloride-dependent glycine transporter 1\" OR \"Solute carrier family 6 member 9\") AND (SRC:MED)",
+     "aliases_used": [
+      "GlyT-1",
+      "GlyT1",
+      "Sodium- and chloride-dependent glycine transporter 1",
+      "Solute carrier family 6 member 9"
+     ],
+     "hitCount_route2": 249,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__SLC6A9.json"
+    },
+    "ONECUT2": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "33806574",
+       "title": "Analysis of mir-9 Expression Pattern in Rat Retina during Postnatal Development."
+      },
+      {
+       "pmid": "25228773",
+       "title": "Onecut1 and Onecut2 redundantly regulate early retinal cell fates during development."
+      }
+     ],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (ONECUT2 OR \"HNF-6-beta\" OR \"HNF6B\" OR \"Hepatocyte nuclear factor 6-beta\" OR \"OC-2\" OR \"One cut domain family member 2\" OR \"One cut homeobox 2\" OR \"Transcription factor ONECUT-2\") AND (SRC:MED)",
+     "aliases_used": [
+      "HNF-6-beta",
+      "HNF6B",
+      "Hepatocyte nuclear factor 6-beta",
+      "OC-2",
+      "One cut domain family member 2",
+      "One cut homeobox 2",
+      "Transcription factor ONECUT-2"
+     ],
+     "hitCount_route2": 232,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__ONECUT2.json"
+    }
+   },
+   "HC": {
+    "GAD1": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "34209226",
+       "title": "Profile of miR-23 Expression and Possible Role in Regulation of Glutamic Acid Decarboxylase during Postnatal Retinal Development.",
+       "sentence": "Horizontal cells at P7, amacrine cells at P15 and P21, and some cells in the ganglion cell layer at several time points were double labelled with miR-23 and GAD67.",
+       "why": "abstract-sentence"
+      },
+      {
+       "pmid": "20565821",
+       "title": "Assembly of the outer retina in the absence of GABA synthesis in horizontal cells.",
+       "sentence": "To explore the possibility that transient GABA expression in mouse neonatal horizontal cells influences the structural development of synaptic connectivity in the outer retina, we examined a mutant in which expression of GAD67, the major synthesizing enzyme for GABA, is selectively knocked out in the retina.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"horizontal cell\" OR \"retinal horizontal cell\") AND (GAD1 OR \"GAD-67\" OR \"GAD67\" OR \"Glutamate decarboxylase 1\" OR \"Glutamate decarboxylase 67 kDa isoform\") AND (SRC:MED)",
+     "aliases_used": [
+      "GAD-67",
+      "GAD67",
+      "Glutamate decarboxylase 1",
+      "Glutamate decarboxylase 67 kDa isoform"
+     ],
+     "hitCount_route2": 102,
+     "raw_ledger_route2": "batch2/ledgers/raw2/HC__GAD1.json"
+    },
+    "CX3CR1": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "23592324",
+       "title": "Early degeneration of photoreceptor synapse in Ccl2/Cx3cr1-deficient mice on Crb1(rd8) background."
+      }
+     ],
+     "query_route2": "(\"horizontal cell\" OR \"retinal horizontal cell\") AND (CX3CR1 OR \"Beta chemokine receptor-like 1\" OR \"C-X3-C CKR-1\" OR \"CMK-BRL-1\" OR \"CMK-BRL1\" OR \"CMKBRL1\" OR \"CX3C chemokine receptor 1\" OR \"Fractalkine receptor\" OR \"G protein-coupled receptor 13\" OR \"GPR13\") AND (SRC:MED)",
+     "aliases_used": [
+      "Beta chemokine receptor-like 1",
+      "C-X3-C CKR-1",
+      "CMK-BRL-1",
+      "CMK-BRL1",
+      "CMKBRL1",
+      "CX3C chemokine receptor 1",
+      "Fractalkine receptor",
+      "G protein-coupled receptor 13",
+      "GPR13"
+     ],
+     "hitCount_route2": 82,
+     "raw_ledger_route2": "batch2/ledgers/raw2/HC__CX3CR1.json"
+    }
+   },
+   "MG": {
+    "GLUL": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "10908613",
+       "title": "Genetic inactivation of an inwardly rectifying potassium channel (Kir4.1 subunit) in mice: phenotypic impact in retina.",
+       "sentence": "Müller cells from Kir4.1 -/- mice were not labeled with an anti-Kir4.1 antibody, although they appeared morphologically normal when stained with an anti-glutamine synthetase antibody.",
+       "why": "abstract-sentence"
+      },
+      {
+       "pmid": "9519752",
+       "title": "Müller cell changes in human diabetic retinopathy.",
+       "sentence": "In this study, we sought evidence for diabetes-induced Müller cell abnormalities by testing the expression of three proteins (Bcl-2, glutamine synthetase [GS], and glial fibrillar acidic protein [GFAP]) that are solely or predominantly expressed in Müller cells and show a reproducible pattern of changes in the context of retinal injuries or degenerations.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"muller glia\" OR \"muller cell\" OR \"Müller glia\" OR Mueller OR \"muller glial cell\" OR \"retinal muller\" OR \"Müller glial cell\") AND (GLUL OR \"Glutamate--ammonia ligase\" OR \"Glutamine synthetase\" OR \"Palmitoyltransferase GLUL\") AND (SRC:MED)",
+     "aliases_used": [
+      "Glutamate--ammonia ligase",
+      "Glutamine synthetase",
+      "Palmitoyltransferase GLUL"
+     ],
+     "hitCount_route2": 4184,
+     "raw_ledger_route2": "batch2/ledgers/raw2/MG__GLUL.json"
+    },
+    "S100B": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "audit_fix_v2": {
+      "to": "weak",
+      "note": "反向证据：句明确 S100B 代表星形胶质、GS(-)对照 MG——非 MG 支持句"
+     },
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"muller glia\" OR \"muller cell\" OR \"Müller glia\" OR Mueller OR \"muller glial cell\" OR \"retinal muller\" OR \"Müller glial cell\") AND (S100B OR \"Protein S100-B\" OR \"S-100 protein beta chain\" OR \"S-100 protein subunit beta\" OR \"S100 calcium-binding protein B\") AND (SRC:MED)",
+     "aliases_used": [
+      "Protein S100-B",
+      "S-100 protein beta chain",
+      "S-100 protein subunit beta",
+      "S100 calcium-binding protein B"
+     ],
+     "hitCount_route2": 601,
+     "raw_ledger_route2": "batch2/ledgers/raw2/MG__S100B.json"
+    }
+   }
+  },
+  "retina_v6": {
+   "BC": {
+    "GRIK1": {
+     "combined_final": "strong",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "12508320",
+       "title": "Immunocytochemical description of five bipolar cell types of the mouse retina.",
+       "sentence": "GluR5 was expressed at flat bipolar cell contacts;",
+       "why": "abstract-sentence"
+      },
+      {
+       "pmid": "1310870",
+       "title": "Differential expression of glutamate receptor genes (GluR1-5) in the rat retina.",
+       "sentence": "Transcripts for GluR1, GluR2, and GluR5 are found in the somata within the middle third of the inner nuclear layer, which is where the bipolar cell somata are located, and GluR2 probes label freshly dissociated rod bipolar cells.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (GRIK1 OR \"EAA3\" OR \"Excitatory amino acid receptor 3\" OR \"GLUR5\" OR \"GluK1\" OR \"GluR-5\" OR \"GluR5\" OR \"Glutamate receptor 5\" OR \"Glutamate receptor ionotropic, kainate 1\" OR \"kainate 1\") AND (SRC:MED)",
+     "aliases_used": [
+      "EAA3",
+      "Excitatory amino acid receptor 3",
+      "GLUR5",
+      "GluK1",
+      "GluR-5",
+      "GluR5",
+      "Glutamate receptor 5",
+      "Glutamate receptor ionotropic, kainate 1",
+      "kainate 1"
+     ],
+     "hitCount_route2": 454,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__GRIK1.json"
+    },
+    "TACR3": {
+     "combined_final": "weak",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "23172916",
+       "title": "Regulation of retinal interneuron subtype identity by the Iroquois homeobox gene Irx6."
+      },
+      {
+       "pmid": "14689473",
+       "title": "Types of bipolar cells in the mouse retina."
+      }
+     ],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (TACR3 OR \"NK-3 receptor\" OR \"NK-3R\" OR \"NK3R\" OR \"Neurokinin B receptor\" OR \"Neuromedin-K receptor\" OR \"TAC3R\" OR \"Tachykinin receptor 3\") AND (SRC:MED)",
+     "aliases_used": [
+      "NK-3 receptor",
+      "NK-3R",
+      "NK3R",
+      "Neurokinin B receptor",
+      "Neuromedin-K receptor",
+      "TAC3R",
+      "Tachykinin receptor 3"
+     ],
+     "hitCount_route2": 250,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__TACR3.json"
+    },
+    "GRM7": {
+     "combined_final": "strong",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "17553999",
+       "title": "A novel connection between rods and ON cone bipolar cells revealed by ectopic metabotropic glutamate receptor 7 (mGluR7) in mGluR6-deficient mouse retinas.",
+       "sentence": "In finding that metabotropic glutamate receptor 7 (mGluR7) was uniquely expressed in dendrites of ON cone bipolar cells in the mGluR6-deficient mouse retina, we used this ectopic mGluR7 immunoreactivity as a specific marker for the ON cone bipolar to search for its rod connection.",
+       "why": "abstract-sentence"
+      },
+      {
+       "pmid": "8764662",
+       "title": "Compartmental localization of a metabotropic glutamate receptor (mGluR7): two different active sites at a retinal synapse.",
+       "sentence": "Double-labeling experiments suggested that mGluR7 is expressed at the synaptic terminals of certain cone bipolar cells.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (GRM7 OR \"GPRC1G\" OR \"MGLUR7\" OR \"Metabotropic glutamate receptor 7\" OR \"mGluR7\") AND (SRC:MED)",
+     "aliases_used": [
+      "GPRC1G",
+      "MGLUR7",
+      "Metabotropic glutamate receptor 7",
+      "mGluR7"
+     ],
+     "hitCount_route2": 52,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__GRM7.json"
+    },
+    "BCAT1": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (BCAT1 OR \"BCAT(c)\" OR \"BCT1\" OR \"Branched-chain-amino-acid aminotransferase\" OR \"Branched-chain-amino-acid aminotransferase, cytosolic\" OR \"ECA39\" OR \"cytosolic\") AND (SRC:MED)",
+     "aliases_used": [
+      "BCAT(c)",
+      "BCT1",
+      "Branched-chain-amino-acid aminotransferase",
+      "Branched-chain-amino-acid aminotransferase, cytosolic",
+      "ECA39",
+      "cytosolic"
+     ],
+     "hitCount_route2": 1410,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__BCAT1.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "ZNF804B": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (ZNF804B OR \"Zinc finger protein 804B\") AND (SRC:MED)",
+     "aliases_used": [
+      "Zinc finger protein 804B"
+     ],
+     "hitCount_route2": 2,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__ZNF804B.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "HS3ST4": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (HS3ST4 OR \"Heparan sulfate 3-O-sulfotransferase 4\" OR \"Heparan sulfate D-glucosaminyl 3-O-sulfotransferase 4\" OR \"Heparan sulfate glucosamine 3-O-sulfotransferase 4\" OR \"h3-OST-4\") AND (SRC:MED)",
+     "aliases_used": [
+      "Heparan sulfate 3-O-sulfotransferase 4",
+      "Heparan sulfate D-glucosaminyl 3-O-sulfotransferase 4",
+      "Heparan sulfate glucosamine 3-O-sulfotransferase 4",
+      "h3-OST-4"
+     ],
+     "hitCount_route2": 0,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__HS3ST4.json",
+     "none_residual_state": "真缺文献(四遍零候选)"
+    },
+    "ADGRL2": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (ADGRL2 OR \"Adhesion G protein-coupled receptor L2\" OR \"CIRL-2\" OR \"Calcium-independent alpha-latrotoxin receptor 2\" OR \"KIAA0786\" OR \"LEC1\" OR \"LPHH1\" OR \"LPHN2\" OR \"Latrophilin homolog 1\" OR \"Latrophilin-2\" OR \"Lectomedin-1\") AND (SRC:MED)",
+     "aliases_used": [
+      "Adhesion G protein-coupled receptor L2",
+      "CIRL-2",
+      "Calcium-independent alpha-latrotoxin receptor 2",
+      "KIAA0786",
+      "LEC1",
+      "LPHH1",
+      "LPHN2",
+      "Latrophilin homolog 1",
+      "Latrophilin-2",
+      "Lectomedin-1"
+     ],
+     "hitCount_route2": 10,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__ADGRL2.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "MCC": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (MCC OR \"Colorectal mutant cancer protein\" OR \"Protein MCC\") AND (SRC:MED)",
+     "aliases_used": [
+      "Colorectal mutant cancer protein",
+      "Protein MCC"
+     ],
+     "hitCount_route2": 44,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__MCC.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "SDK1": {
+     "combined_final": "weak",
+     "grade_b1_final": "weak",
+     "grade_b2_engine": "weak",
+     "evidence_route2": [],
+     "weak_refs_route2": [
+      {
+       "pmid": "34545809",
+       "title": "The cell adhesion molecule Sdk1 shapes assembly of a retinal circuit that detects localized edges."
+      }
+     ],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (SDK1 OR \"Protein sidekick-1\") AND (SRC:MED)",
+     "aliases_used": [
+      "Protein sidekick-1"
+     ],
+     "hitCount_route2": 30,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__SDK1.json"
+    },
+    "TMEM196": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (TMEM196 OR \"Transmembrane protein 196\") AND (SRC:MED)",
+     "aliases_used": [
+      "Transmembrane protein 196"
+     ],
+     "hitCount_route2": 0,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__TMEM196.json",
+     "none_residual_state": "真缺文献(四遍零候选)"
+    },
+    "GRM5": {
+     "combined_final": "strong",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "16638174",
+       "title": "Immunolocalization of metabotropic glutamate receptors 1 and 5 in the synaptic layers of the chicken retina.",
+       "sentence": "In the IPL, labeling for mGluR5 was found on bipolar cell terminals and amacrine cell processes.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (GRM5 OR \"GPRC1E\" OR \"MGLUR5\" OR \"Metabotropic glutamate receptor 5\" OR \"mGluR5\") AND (SRC:MED)",
+     "aliases_used": [
+      "GPRC1E",
+      "MGLUR5",
+      "Metabotropic glutamate receptor 5",
+      "mGluR5"
+     ],
+     "hitCount_route2": 71,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__GRM5.json"
+    },
+    "NPHS1": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (NPHS1 OR \"NPHN\" OR \"Nephrin\" OR \"Renal glomerulus-specific cell adhesion receptor\") AND (SRC:MED)",
+     "aliases_used": [
+      "NPHN",
+      "Nephrin",
+      "Renal glomerulus-specific cell adhesion receptor"
+     ],
+     "hitCount_route2": 10,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__NPHS1.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "BACH1": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (BACH1 OR \"BTB and CNC homolog 1\" OR \"HA2303\" OR \"Transcription regulator protein BACH1\") AND (SRC:MED)",
+     "aliases_used": [
+      "BTB and CNC homolog 1",
+      "HA2303",
+      "Transcription regulator protein BACH1"
+     ],
+     "hitCount_route2": 8,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__BACH1.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "COL19A1": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (COL19A1 OR \"Collagen alpha-1(XIX) chain\" OR \"Collagen alpha-1(Y) chain\") AND (SRC:MED)",
+     "aliases_used": [
+      "Collagen alpha-1(XIX) chain",
+      "Collagen alpha-1(Y) chain"
+     ],
+     "hitCount_route2": 0,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__COL19A1.json",
+     "none_residual_state": "真缺文献(四遍零候选)"
+    },
+    "TMEM132C": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"retinal bipolar cell\" OR \"bipolar cell\" OR \"rod bipolar cell\" OR \"cone bipolar cell\" OR \"ON bipolar cell\" OR \"OFF bipolar cell\") AND (TMEM132C OR \"Transmembrane protein 132C\") AND (SRC:MED)",
+     "aliases_used": [
+      "Transmembrane protein 132C"
+     ],
+     "hitCount_route2": 0,
+     "raw_ledger_route2": "batch2/ledgers/raw2/BC__TMEM132C.json",
+     "none_residual_state": "真缺文献(四遍零候选)"
+    }
+   },
+   "AC": {
+    "GRIK2": {
+     "combined_final": "strong",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "strong",
+     "evidence_route2": [
+      {
+       "pmid": "7952290",
+       "title": "Expression of NMDA and high-affinity kainate receptor subunit mRNAs in the adult rat retina.",
+       "sentence": "The GluR6, NR2A, NR2B and NR2C subunits were expressed by subsets of amacrine cells.",
+       "why": "abstract-sentence"
+      }
+     ],
+     "weak_refs_route2": [],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (GRIK2 OR \"EAA4\" OR \"Excitatory amino acid receptor 4\" OR \"GLUR6\" OR \"GluK2\" OR \"GluR-6\" OR \"GluR6\" OR \"Glutamate receptor 6\" OR \"Glutamate receptor ionotropic, kainate 2\" OR \"kainate 2\") AND (SRC:MED)",
+     "aliases_used": [
+      "EAA4",
+      "Excitatory amino acid receptor 4",
+      "GLUR6",
+      "GluK2",
+      "GluR-6",
+      "GluR6",
+      "Glutamate receptor 6",
+      "Glutamate receptor ionotropic, kainate 2",
+      "kainate 2"
+     ],
+     "hitCount_route2": 458,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__GRIK2.json"
+    },
+    "SHISA6": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (SHISA6 OR \"Protein shisa-6\") AND (SRC:MED)",
+     "aliases_used": [
+      "Protein shisa-6"
+     ],
+     "hitCount_route2": 8,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__SHISA6.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "ZFPM2": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (ZFPM2 OR \"FOG-2\" OR \"FOG2\" OR \"Friend of GATA 2\" OR \"Friend of GATA protein 2\" OR \"ZNF89B\" OR \"Zinc finger protein 89B\" OR \"Zinc finger protein ZFPM2\" OR \"Zinc finger protein multitype 2\" OR \"hFOG-2\") AND (SRC:MED)",
+     "aliases_used": [
+      "FOG-2",
+      "FOG2",
+      "Friend of GATA 2",
+      "Friend of GATA protein 2",
+      "ZNF89B",
+      "Zinc finger protein 89B",
+      "Zinc finger protein ZFPM2",
+      "Zinc finger protein multitype 2",
+      "hFOG-2"
+     ],
+     "hitCount_route2": 6,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__ZFPM2.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "SPHKAP": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (SPHKAP OR \"A-kinase anchor protein SPHKAP\" OR \"KIAA1678\" OR \"SPHK1-interactor and AKAP domain-containing protein\" OR \"Sphingosine kinase type 1-interacting protein\") AND (SRC:MED)",
+     "aliases_used": [
+      "A-kinase anchor protein SPHKAP",
+      "KIAA1678",
+      "SPHK1-interactor and AKAP domain-containing protein",
+      "Sphingosine kinase type 1-interacting protein"
+     ],
+     "hitCount_route2": 14,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__SPHKAP.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "LRRN3": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (LRRN3 OR \"Leucine-rich repeat neuronal protein 3\" OR \"NLRR-3\" OR \"Neuronal leucine-rich repeat protein 3\") AND (SRC:MED)",
+     "aliases_used": [
+      "Leucine-rich repeat neuronal protein 3",
+      "NLRR-3",
+      "Neuronal leucine-rich repeat protein 3"
+     ],
+     "hitCount_route2": 18,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__LRRN3.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "EYA4": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (EYA4 OR \"Eyes absent homolog 4\" OR \"Protein phosphatase EYA4\") AND (SRC:MED)",
+     "aliases_used": [
+      "Eyes absent homolog 4",
+      "Protein phosphatase EYA4"
+     ],
+     "hitCount_route2": 6,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__EYA4.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "GABRG1": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (GABRG1 OR \"GABA(A) receptor subunit gamma-1\" OR \"GABAAR subunit gamma-1\" OR \"Gamma-aminobutyric acid receptor subunit gamma-1\") AND (SRC:MED)",
+     "aliases_used": [
+      "GABA(A) receptor subunit gamma-1",
+      "GABAAR subunit gamma-1",
+      "Gamma-aminobutyric acid receptor subunit gamma-1"
+     ],
+     "hitCount_route2": 22,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__GABRG1.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "RASGRF1": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (RASGRF1 OR \"CDC25\" OR \"GNRP\" OR \"Guanine nucleotide-releasing protein\" OR \"Ras-GRF1\" OR \"Ras-specific guanine nucleotide-releasing factor 1\" OR \"Ras-specific nucleotide exchange factor CDC25\") AND (SRC:MED)",
+     "aliases_used": [
+      "CDC25",
+      "GNRP",
+      "Guanine nucleotide-releasing protein",
+      "Ras-GRF1",
+      "Ras-specific guanine nucleotide-releasing factor 1",
+      "Ras-specific nucleotide exchange factor CDC25"
+     ],
+     "hitCount_route2": 90,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__RASGRF1.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "ITGA11": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(amacrine OR \"amacrine cell\" OR \"amacrine neuron\" OR \"retinal amacrine\") AND (ITGA11 OR \"Integrin alpha-11\") AND (SRC:MED)",
+     "aliases_used": [
+      "Integrin alpha-11"
+     ],
+     "hitCount_route2": 4,
+     "raw_ledger_route2": "batch2/ledgers/raw2/AC__ITGA11.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    }
+   },
+   "HC": {
+    "FAM107B": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"horizontal cell\" OR \"retinal horizontal cell\") AND (FAM107B OR \"C10orf45\" OR \"Protein FAM107B\") AND (SRC:MED)",
+     "aliases_used": [
+      "C10orf45",
+      "Protein FAM107B"
+     ],
+     "hitCount_route2": 2,
+     "raw_ledger_route2": "batch2/ledgers/raw2/HC__FAM107B.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "FAM135A": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"horizontal cell\" OR \"retinal horizontal cell\") AND (FAM135A OR \"KIAA1411\" OR \"Protein FAM135A\") AND (SRC:MED)",
+     "aliases_used": [
+      "KIAA1411",
+      "Protein FAM135A"
+     ],
+     "hitCount_route2": 2,
+     "raw_ledger_route2": "batch2/ledgers/raw2/HC__FAM135A.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "VAT1L": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"horizontal cell\" OR \"retinal horizontal cell\") AND (VAT1L OR \"KIAA1576\" OR \"Synaptic vesicle membrane protein VAT-1 homolog-like\" OR \"Vesicle amine transport 1 like\") AND (SRC:MED)",
+     "aliases_used": [
+      "KIAA1576",
+      "Synaptic vesicle membrane protein VAT-1 homolog-like",
+      "Vesicle amine transport 1 like"
+     ],
+     "hitCount_route2": 4,
+     "raw_ledger_route2": "batch2/ledgers/raw2/HC__VAT1L.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    },
+    "NAALAD2": {
+     "combined_final": "none",
+     "grade_b1_final": "none",
+     "grade_b2_engine": "none",
+     "evidence_route2": [],
+     "weak_refs_route2": [],
+     "query_route2": "(\"horizontal cell\" OR \"retinal horizontal cell\") AND (NAALAD2 OR \"GCPIII\" OR \"Glutamate carboxypeptidase III\" OR \"N-acetylated-alpha-linked acidic dipeptidase 2\" OR \"N-acetylated-alpha-linked acidic dipeptidase II\" OR \"NAALADase II\") AND (SRC:MED)",
+     "aliases_used": [
+      "GCPIII",
+      "Glutamate carboxypeptidase III",
+      "N-acetylated-alpha-linked acidic dipeptidase 2",
+      "N-acetylated-alpha-linked acidic dipeptidase II",
+      "NAALADase II"
+     ],
+     "hitCount_route2": 16,
+     "raw_ledger_route2": "batch2/ledgers/raw2/HC__NAALAD2.json",
+     "none_residual_state": "摘要级不可核(有候选无G∧C)"
+    }
+   }
+  }
+ }
+}

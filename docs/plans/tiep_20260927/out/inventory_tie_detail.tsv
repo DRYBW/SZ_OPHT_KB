@@ -1,0 +1,188 @@
+face	cid	truth	mode	label_A	label_B	label_C	grade_A	grade_B	grade_C
+FACEV21	Q1::1	Rod	tie@1	undetermined	undetermined	Rod	C	C	B
+FACEV21	Q1::9	Rod	tie@1	undetermined	undetermined	Rod	C	C	B
+FACEV21	Q3::13	RGC	tie@1	Rod	coarse:RGC	undetermined	B	C	C
+KB9	Q6::12	Fibroblasts	abstain3	undetermined	coarse:Immune Cells	undetermined	C	C	C
+KB9	Q6::16	Fibroblasts	tie@1	coarse:Fibroblasts	Fibroblasts	Fibroblasts	C	B	C
+KB9	Q6::18	Fibroblasts	tie@1	undetermined	Fibroblasts	undetermined	C	B	C
+KB9	Q6::21	Fibroblasts	tie@2	Fibroblasts	coarse:Fibroblasts	Keratocytes	B	B	B
+KB9	Q6::26	Immune Cells	tie@1	Immune Cells	coarse:Immune Cells	Immune Cells	B	B	C
+KB9	Q6::27	Fibroblasts	tie@1	undetermined	Immune Cells	undetermined	C	B	C
+KB9	Q6::28	Fibroblasts	tie@1	Fibroblasts	coarse:Fibroblasts	coarse:Keratocytes	B	B	C
+KB9	Q6::29	Epithelium	tie@1	Epithelium	coarse:Epithelium	Epithelium	B	B	C
+KB9	Q6::30	Epithelium	tie@1	Epithelium	undetermined	Epithelium	B	C	C
+KB9	Q6::31	Fibroblasts	abstain3	coarse:Fibroblasts	coarse:Fibroblasts	undetermined	C	B	C
+RUN3	Q1::1	Rod	abstain3	undetermined	undetermined		C	C	
+RUN3	Q1::12	BC	tie@1	undetermined	BC		C	B	
+RUN3	Q1::14	AC	abstain3	coarse:neuron	AC		B	C	
+RUN3	Q1::3	Rod	tie@1	undetermined	Rod		C	B	
+RUN3	Q1::9	Rod	abstain3	undetermined	undetermined		C	C	
+RUN3	Q2::0	MG	tie@1	MG	undetermined		B	C	
+RUN3	Q2::10	BC	tie@1	undetermined	BC		C	B	
+RUN3	Q2::11	BC	tie@1	undetermined	AC		C	B	
+RUN3	Q2::13	BC	tie@1	undetermined	BC		C	B	
+RUN3	Q2::15	BC	tie@1	coarse:BC	BC		C	B	
+RUN3	Q2::16	BC	tie@1	coarse:AC	AC		C	B	
+RUN3	Q2::17	BC	tie@1	coarse:BC	BC		C	B	
+RUN3	Q2::19		abstain3	BC	BC		C	C	
+RUN3	Q2::20	AC	tie@2	AC	HC		B	B	
+RUN3	Q2::24		tie@1	Endothelium	coarse:Endothelium		B	C	
+RUN3	Q2::25	HC	tie@2	AC	HC		B	B	
+RUN3	Q2::3	MG	tie@1	MG	undetermined		B	C	
+RUN3	Q2::5		abstain3	coarse:Pericyte	coarse:Pericyte		B	B	
+RUN3	Q2::9	BC	tie@1	coarse:BC	BC		C	B	
+RUN3	Q3::10	MG	tie@1	MG	coarse:MG		B	C	
+RUN3	Q3::11	HC	tie@2	AC	HC		B	B	
+RUN3	Q3::13	RGC	abstain3	undetermined	undetermined		C	C	
+RUN3	Q3::3	AC	abstain3	coarse:Neuron	undetermined		C	C	
+RUN3	Q3::5	BC	abstain3	undetermined	undetermined		C	C	
+RUN3	Q3::7	MG	tie@1	MG	MG		B	C	
+RUN3	Q3::9	BC	tie@1	coarse:BC	BC		C	B	
+RUN3	Q4::1	AC	tie@1	undetermined	AC		C	B	
+RUN3	Q4::14	BC	abstain3	undetermined	undetermined		C	C	
+RUN3	Q4::15	BC	abstain3	undetermined	undetermined		C	C	
+RUN3	Q4::19	BC	abstain3	coarse:BC	coarse:BC		C	C	
+RUN3	Q4::2	AC	abstain3	coarse:AC	AC		C	C	
+RUN3	Q4::20	MG	tie@1	coarse:MG/Astro	MG		C	B	
+RUN3	Q4::22	BC	abstain3	coarse:neuronal	undetermined		C	C	
+RUN3	Q4::25	BC	tie@1	coarse:BC	BC		C	B	
+RUN3	Q4::26	BC	tie@1	coarse:BC	BC		C	B	
+RUN3	Q4::27	BC	tie@1	coarse:BC/HC	BC		C	B	
+RUN3	Q4::30	MG	tie@1	MG	coarse:MG		B	C	
+RUN3	Q4::31	Astro	tie@1	coarse:glial	MG		C	B	
+RUN3	Q4::34		abstain3	coarse:vascular	coarse:Pericyte		C	C	
+RUN3	Q4::4	AC	tie@1	coarse:AC/HC	AC		C	B	
+RUN3	Q4::5	AC	tie@1	coarse:AC/HC	AC		C	B	
+RUN3	Q4::8	HC	tie@1	coarse:AC/HC	HC		C	B	
+RUN3	Q4::9	BC	abstain3	undetermined	undetermined		C	C	
+RUN3	Q5b::10	BC	abstain3	undetermined	coarse:AC		C	C	
+RUN3	Q5b::12		tie@1	coarse:neural	MG		C	B	
+RUN3	Q5b::13	BC	abstain3	coarse:BC	coarse:AC		C	C	
+RUN3	Q5b::14	BC	abstain3	undetermined	coarse:AC		C	C	
+RUN3	Q5b::15	BC	tie@1	BC	coarse:BC		B	C	
+RUN3	Q5b::16	BC	abstain3	undetermined	undetermined		C	C	
+RUN3	Q5b::19	HC	abstain3	undetermined	undetermined		C	C	
+RUN3	Q5b::20	HC	abstain3	undetermined	undetermined		C	C	
+RUN3	Q5b::22	BC	abstain3	coarse:BC/AC	undetermined		C	C	
+RUN3	Q5b::23	BC	abstain3	coarse:AC	coarse:AC		C	C	
+RUN3	Q5b::25	AC	tie@1	undetermined	AC		C	B	
+RUN3	Q5b::27	AC	tie@1	undetermined	AC		C	B	
+RUN3	Q5b::28	BC	tie@1	undetermined	BC		C	B	
+RUN3	Q5b::30	AC	abstain3	undetermined	coarse:AC		C	C	
+RUN3	Q5b::31	AC	abstain3	undetermined	undetermined		C	C	
+RUN3	Q5b::32	AC	abstain3	coarse:neuron	coarse:AC		C	C	
+RUN3	Q5b::33	AC	abstain3	undetermined	coarse:AC		C	C	
+RUN3	Q5b::35	AC	abstain3	undetermined	undetermined		C	C	
+RUN3	Q5b::36	AC	tie@1	undetermined	RGC		C	B	
+RUN3	Q5b::37	AC	abstain3	undetermined	coarse:AC		C	C	
+RUN3	Q5b::38	AC	abstain3	coarse:interneuron	undetermined		C	C	
+RUN3	Q5b::39		tie@2	MG	Astro		B	B	
+RUN3	Q5b::41	AC	abstain3	undetermined	coarse:neuron		C	C	
+RUN3	Q5b::42	AC	abstain3	undetermined	undetermined		C	C	
+RUN3	Q5b::43	BC	abstain3	coarse:BC	coarse:AC		C	C	
+RUN3	Q5b::44	AC	abstain3	undetermined	coarse:AC		C	C	
+RUN3	Q5b::45	AC	abstain3	undetermined	undetermined		C	C	
+RUN3	Q5b::46		tie@1	coarse:glial	MG		C	B	
+RUN3	Q5b::47	AC	abstain3	undetermined	coarse:AC		C	C	
+RUN3	Q6::0	Epithelium	tie@1	Epithelium	coarse:Epithelium		B	C	
+RUN3	Q6::1	Epithelium	tie@1	Epithelium	coarse:Epithelium		B	C	
+RUN3	Q6::12	Fibroblasts	abstain3	coarse:Inflammatory/Stromal	coarse:Fibroblasts		C	C	
+RUN3	Q6::13	Fibroblasts	tie@1	Fibroblasts	Fibroblasts		C	B	
+RUN3	Q6::14	Fibroblasts	abstain3	coarse:stromal	coarse:Fibroblasts		C	C	
+RUN3	Q6::16	Fibroblasts	tie@1	coarse:stromal	Fibroblasts		C	B	
+RUN3	Q6::18	Fibroblasts	abstain3	coarse:stromal	coarse:Fibroblasts		C	C	
+RUN3	Q6::2	Epithelium	tie@1	Epithelium	coarse:Epithelium		B	C	
+RUN3	Q6::26	Immune Cells	tie@1	Immune Cells	coarse:Immune Cells		B	B	
+RUN3	Q6::27	Fibroblasts	abstain3	undetermined	coarse:Immune Cells		C	C	
+RUN3	Q6::28	Fibroblasts	tie@1	Fibroblasts	coarse:Fibroblasts		B	B	
+RUN3	Q6::3	Epithelium	tie@1	Immune Cells	undetermined		B	C	
+RUN3	Q6::30	Epithelium	abstain3	coarse:Epithelium-Immune	undetermined		C	C	
+RUN3	Q6::31	Fibroblasts	tie@2	Fibroblasts	Pericytes		B	B	
+RUN3	Q6::8	Immune Cells	tie@1	Immune Cells	coarse:Immune Cells		B	B	
+RUN3	Q7::1	BC	abstain3	coarse:BC	coarse:BC		C	C	
+RUN3	Q7::10	AC	abstain3	coarse:AC	coarse:AC		C	C	
+RUN3	Q7::11	AC	tie@1	AC	coarse:AC		B	C	
+RUN3	Q7::15	BC	tie@1	Cone	undetermined		B	C	
+RUN3	Q7::20	Rod	tie@1	Rod	coarse:Rod		B	C	
+RUN3	Q7::21	BC	abstain3	coarse:BC_or_Cone	undetermined		C	C	
+RUN3	Q7::22	BC	abstain3	coarse:BC	undetermined		C	C	
+RUN3	Q7::23	BC	abstain3	coarse:BC_or_Cone	undetermined		C	C	
+RUN3	Q7::24	AC	tie@1	undetermined	AC		C	B	
+RUN3	Q7::26	BC	tie@1	coarse:BC	AC		C	B	
+RUN3	Q7::27	BC	abstain3	coarse:BC	undetermined		C	C	
+RUN3	Q7::30	BC	abstain3	coarse:neuron	undetermined		C	C	
+RUN3	Q7::36	RGC	tie@1	RGC	undetermined		B	C	
+RUN3	Q7::38	BC	tie@1	coarse:BC_HC	BC		C	B	
+RUN3	Q7::40	BC	abstain3	coarse:interneuron	undetermined		C	C	
+RUN3	Q7::5	MG	abstain3	coarse:vascular	coarse:Endothelium		C	C	
+RUN3	Q7::54	BC	tie@1	coarse:BC	BC		C	B	
+RUN3	Q7::57	RGC	tie@1	RGC	undetermined		B	C	
+RUN3	Q7::61	AC	abstain3	undetermined	coarse:AC		C	C	
+RUN3	Q7::62	BC	tie@1	coarse:BC/HC	BC		C	B	
+RUN3	Q7::9	AC	tie@1	coarse:AC/HC	AC		C	B	
+RUN3	Q8::0	retinal bipolar neuron	abstain3	coarse:dev-progenitor	coarse:BC		C	C	
+RUN3	Q8::1	retinal progenitor cell	abstain3	undetermined	undetermined		C	C	
+RUN3	Q8::10	retinal rod cell	abstain3	coarse:dev-photoreceptor	coarse:dev-Photoreceptor		C	C	
+RUN3	Q8::11	diffuse bipolar 1 cell	abstain3	undetermined	coarse:dev-interneuron		C	C	
+RUN3	Q8::12	invaginating midget bipolar cell	abstain3	undetermined	coarse:dev-BC		C	C	
+RUN3	Q8::13	retinal ganglion cell	abstain3	coarse:dev-neuron	coarse:dev-neuron		C	C	
+RUN3	Q8::14	retinal progenitor cell	abstain3	coarse:dev-progenitor	coarse:dev-RPC		C	B	
+RUN3	Q8::15	retinal progenitor cell	abstain3	undetermined	undetermined		C	C	
+RUN3	Q8::16	retinal progenitor cell	abstain3	undetermined	undetermined		C	C	
+RUN3	Q8::17	retinal progenitor cell	abstain3	undetermined	coarse:dev-Glial		C	C	
+RUN3	Q8::18	retinal progenitor cell	tie@1	coarse:dev-glial	Astro		C	B	
+RUN3	Q8::19	GABAergic amacrine cell	abstain3	undetermined	coarse:dev-AC		C	C	
+RUN3	Q8::2	retinal rod cell	abstain3	coarse:dev-photoreceptor	coarse:dev-photoreceptor		C	C	
+RUN3	Q8::20	GABAergic amacrine cell	abstain3	coarse:dev-neuron	coarse:dev-BC		C	B	
+RUN3	Q8::21	retinal progenitor cell	tie@1	coarse:dev-progenitor	RPC		B	B	
+RUN3	Q8::22	GABAergic amacrine cell	abstain3	coarse:dev-neuron	coarse:dev-AC		C	B	
+RUN3	Q8::23	GABAergic amacrine cell	abstain3	undetermined	coarse:dev-interneuron		C	C	
+RUN3	Q8::24	amacrine cell	abstain3	coarse:dev-neuron	coarse:HC		C	C	
+RUN3	Q8::25	retinal progenitor cell	abstain3	coarse:dev-neuron	coarse:dev-interneuron		C	C	
+RUN3	Q8::26	retina horizontal cell	abstain3	coarse:dev-interneuron	coarse:AC		C	C	
+RUN3	Q8::27	starburst amacrine cell	abstain3	undetermined	coarse:dev-AC		C	C	
+RUN3	Q8::28	retinal progenitor cell	abstain3	coarse:dev-glial	coarse:dev-glia		C	C	
+RUN3	Q8::29	retinal cone cell	abstain3	coarse:dev-photoreceptor	undetermined		C	C	
+RUN3	Q8::30	retinal cone cell	abstain3	coarse:dev-photoreceptor	coarse:dev-PR		C	B	
+RUN3	Q8::31	diffuse bipolar 3b cell	abstain3	coarse:dev-neuron	coarse:dev-interneuron		C	C	
+RUN3	Q8::32	ON-bipolar cell	abstain3	coarse:dev-neuron	coarse:dev-BC		C	C	
+RUN3	Q8::33	flat midget bipolar cell	abstain3	undetermined	coarse:dev-interneuron		C	C	
+RUN3	Q8::34	retinal progenitor cell	abstain3	undetermined	coarse:dev-AC		C	C	
+RUN3	Q8::4	retinal ganglion cell	tie@1	coarse:dev-RGC	RGC		B	B	
+RUN3	Q8::5	midget ganglion cell of retina	tie@1	coarse:dev-RGC	RGC		C	B	
+RUN3	Q8::6	midget ganglion cell of retina	tie@1	coarse:dev-RGC	RGC		B	B	
+RUN3	Q8::7	retinal ganglion cell	abstain3	coarse:dev-neuron	coarse:dev-RGC		C	B	
+RUN3	Q8::8	glycinergic amacrine cell	abstain3	undetermined	coarse:dev-neuron		C	C	
+RUN3	Q8::9	GABAergic amacrine cell	abstain3	coarse:dev-neuron	coarse:HC		C	C	
+RUN3	Q9::0		abstain3	coarse:Myeloid	undetermined		C	C	
+RUN3	Q9::1		abstain3	coarse:Mesenchymal	coarse:Myofibroblast		C	B	
+RUN3	Q9::10		tie@2	Micro	Immune Cells		B	B	
+RUN3	Q9::11		tie@1	coarse:Mac_DAM_LAM	Mac_DAM_LAM		B	B	
+RUN3	Q9::12		tie@1	coarse:Immune Cells	Immune Cells		B	B	
+RUN3	Q9::13		abstain3	coarse:APC_MHCII_high	coarse:Immune Cells		B	C	
+RUN3	Q9::14		abstain3	coarse:Immune Cells	undetermined		C	C	
+RUN3	Q9::15		tie@1	coarse:Immune Cells	Immune Cells		B	B	
+RUN3	Q9::17		tie@1	Fibroblasts	coarse:Myofibroblast		B	B	
+RUN3	Q9::2		tie@1	coarse:Mac_DAM_LAM	Mac_DAM_LAM		B	B	
+RUN3	Q9::3		abstain3	coarse:Proliferating	coarse:Proliferating		B	B	
+RUN3	Q9::6		tie@1	coarse:Mac_DAM_LAM	Mac_DAM_LAM		B	B	
+RUN3	Q9::7		tie@1	coarse:Immune Cells	Immune Cells		B	B	
+RUN3	Q9::8		tie@1	coarse:Immune Cells	Immune Cells		B	B	
+RUN3	Q9::9		tie@1	coarse:Mac_Tissue	Mac_Tissue		B	B	
+RUN4-r	Q1::1	Rod	abstain3	undetermined	undetermined	undetermined	C	C	C
+RUN4-r	Q1::4	Rod	tie@1	Rod	coarse:Photoreceptor	undetermined	B	C	C
+RUN4-r	Q1::9	Rod	abstain3	undetermined	undetermined	undetermined	C	C	C
+RUN4-r	Q4::15	BC	tie@1	coarse:interneuron	BC	undetermined	C	B	C
+RUN4-r	Q5b::13	BC	tie@1	undetermined	AC	undetermined	C	B	C
+RUN4-r	Q5b::43	BC	abstain3	coarse:interneuron	coarse:retina_interneuron	undetermined	C	C	C
+RUN5	Q6::12	Fibroblasts	abstain3	undetermined	coarse:Immune Cells	undetermined	C	C	C
+RUN5	Q6::13	Fibroblasts	tie@1	Fibroblasts	Fibroblasts	undetermined	C	B	C
+RUN5	Q6::15	Fibroblasts	tie@1	Fibroblasts	coarse:Fibroblasts	coarse:Keratocytes	B	B	B
+RUN5	Q6::16	Fibroblasts	abstain3	undetermined	coarse:Fibroblasts	undetermined	C	B	C
+RUN5	Q6::18	Fibroblasts	tie@1	coarse:Stromal	Fibroblasts	Pericytes	C	C	B
+RUN5	Q6::2	Epithelium	tie@1	Epithelium	undetermined	undetermined	B	C	C
+RUN5	Q6::22	Fibroblasts	abstain3	coarse:Fibroblasts	coarse:Fibroblasts	undetermined	C	B	C
+RUN5	Q6::27	Fibroblasts	tie@1	undetermined	Immune Cells	undetermined	C	B	C
+RUN5	Q6::28	Fibroblasts	tie@1	coarse:Fibroblasts	coarse:Fibroblasts	Keratocytes	B	B	B
+RUN5	Q6::30	Epithelium	abstain3	coarse:Epithelial-Immune	undetermined	Immune Cells	C	C	C
+RUN5	Q6::31	Fibroblasts	tie@1	Fibroblasts	Pericytes	Pericytes	C	C	B

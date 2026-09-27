@@ -1,0 +1,7 @@
+run	seat	n_clusters	api_calls	tool_calls	tool_calls_exec	tools_by_name	wall_s_total	wall_s_mean	prompt_tokens	completion_tokens	reminders	forced_final
+run1	A	45	220	175	175	"{""query_marker"": 80, ""search_literature"": 52, ""get_tissue_composition"": 43}"	621.8	13.8	1588141	15913	0	0
+run1	B	45	231	316	316	"{""query_marker"": 147, ""get_tissue_composition"": 45, ""search_literature"": 124}"	2250.6	50.0	2880027	148641	0	12
+run1	C	45	256	211	211	"{""query_marker"": 107, ""get_tissue_composition"": 47, ""search_literature"": 57}"	1234.5	27.4	2104280	40473	0	5
+run2	A	45	221	176	176	"{""query_marker"": 81, ""search_literature"": 50, ""get_tissue_composition"": 45}"	506.9	11.3	1594553	15832	0	0
+run2	B	45	248	320	320	"{""query_marker"": 140, ""get_tissue_composition"": 44, ""search_literature"": 136}"	2320.6	51.6	3150458	155785	0	15
+run2	C	45	253	208	208	"{""query_marker"": 101, ""search_literature"": 62, ""get_tissue_composition"": 45}"	1261.5	28.0	2055267	38203	0	5

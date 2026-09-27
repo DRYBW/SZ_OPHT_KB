@@ -1,0 +1,81 @@
+{
+  "schema": "eyekb-e2-deconrules/1.0",
+  "card": "t_35d45b74",
+  "date": "2026-09-26",
+  "purpose": "去同源判据的机读定义 = gene x panel x PMID 矩阵规则（禁点名单；判据先于跑数冻结）。配套 E2_PREREG_v1.0.md。",
+  "panel_rows_on_state": "按 eyekb_core._load_marker_dbs(library=all, V6 激活 ON) 只读复刻：库载入序 retina(v4.1) -> membrane -> retina_interneuron(v5) -> retina_v6 -> face_v6；face_v6 读入派生 = stromal_repair/face_increment 各 core[].gene；类名首注者得正名行，同名后来者成 '<lib>::<类>' 别名行。",
+  "gene_evidence_layers": {
+    "explicit_pmids_S": "该 (lib,class_raw,gene) 的基因级证据记录中可正则提取的 PMID(5-8位)：face_v6 type=pmid 的 id 字段、v5 provenance 各记录 note/id 文本、v6 marker_blocks/microglia_repair 记录的 id/note 文本、membrane 基因级 type=pmid 记录。显式排除 membrane 的 pmid_context 记录（其 semantics 字段原文自证为类级语境、非该基因逐条引用）与 v5 pmid_context（无 PMID 可提取）。",
+    "hrca_tag": "证据含 data_driven id 匹配 'HRCA_D001' 或 'kb5v2_gate'，或 (v6 marker_blocks 行含 stats_frozen)，或证据 note 匹配 'REVCAND|KB6 v[12] 判级|kb5v3' 且无膜携带注记；另加 v4.1 P0.4 数据驱动集 = micro_detail.final_markers ∪ rpe_detail.final_markers（含其在 v5/v6 的无记录继承行）。",
+    "mem_tag": "data_driven id 以 'GSE165784' 开头，或 note 含 'membrane v1 携带'。mem_tag 优先：命中则撤销该基因 hrca_tag（派生数据=PDR 演示集 Q9，非任何真值成员）。",
+    "face_tag": "data_driven id 匹配 'kb6b|kb7_w2|REVCAND_KB6b'（D002 可支撑范围门）= face_v6 面板数据派生旗。",
+    "no_record": "以上皆无 = 文件内无证据记录（文献先验、早于 HRCA 门；v4.1 八类与 v5/v6 的无 provenance 类属此层）。"
+  },
+  "contamination_axis": {
+    "hrca_tag": ["Q3", "Q4", "Q5b"],
+    "face_tag": ["Q6"],
+    "其他": []
+  },
+  "blacklists": {
+    "B_src_per_member": {
+      "Q1": ["31436334"],
+      "Q2": ["34341398", "35705048", "35784369"],
+      "Q3": ["31653841"],
+      "Q4": [],
+      "Q5b": ["37388908"],
+      "Q6": [],
+      "Q7": ["38812536"],
+      "Q8": []
+    },
+    "B_note": "逐字取自 e1_leak_lineage.json source_pmids（Q4/Q6/Q8 源论文不可解析=空）。",
+    "B_axis_panel_derivation": {
+      "retina_v41_v5_v6_rows": ["41578023"],
+      "note": "面板派生源论文 PMID=HRCA 本体论文，视网膜系面板 (v4.1/v5/retina_v6 行) 消费时并入 B；membrane/face_v6 行不并入。"
+    }
+  },
+  "keep_rule": "对簇 c (成员 m) 的候选行 (L,C) 基因 G：A=axis(G)（mem_tag 已撤销者按 ∅），S=explicit_pmids(G)。keep ⟺ [若 m∈A: S \\ (B_src(m) ∪ B_axis(L)) ≠ ∅] 且 [若 S≠∅: S \\ B_src(m) ≠ ∅]。S=∅ 且 m∉A → keep（无记录文献先验行不罚）。",
+  "lit_channel_decon": "逐簇 canonical 候选的 lit PMID 集 − B_src(m)（源论文引用剔除）；B_src(m)=∅ 成员（Q4/Q6/Q8）lit 通道不可去污，登记 limitation 不改分。",
+  "scores": {
+    "marker_decon": "n_shared_decon = |top10(c) ∩ kept_genes(L,C)|；并类与破并列 = 复用 e1_class_map.json 冻结规则（canonical max、(n_shared desc, canonical asc)）。",
+    "lit_decon": "n_papers_decon = |去污后 PMID 集|。",
+    "composite_decon": "③ = 0.5*(n_decon/簇内 max n_decon) + 0.5*(min(n_papers_decon,4)/4)；排序 (③ desc, n_decon desc, canon asc)。",
+    "hit_rule": "top1 canonical 经 e1_class_map 映射==truth；AMBIG 主口径=miss；弃权=miss。全部沿用 E1 冻结口径。"
+  },
+  "sens_variants": {
+    "S1_main": "上述 keep_rule 主规则。",
+    "S2_strict_litonly": "所有成员所有簇统一要求 S \\ B_src(m) ≠ ∅（无记录文献先验基因也剔除）——量化『文件内无链基因』承载的原始效果量。",
+    "S3_e1_rowdrop_repro": "复算 E1『剔除 Q5b 行』敏感性列（判据点名单，仅作对照），验收锚 = e1_sensitivity_grid.tsv 的 58.04/55.36/71.43。",
+    "S4_p04_axis_none": "假定 v4.1 P0.4 数据驱动 Micro/RPE 源自 GSE165784（非真值）→ 其轴改 ∅ 重算。",
+    "S5_pmidcontext_external": "v5 pmid_context (n_hits>0) 视为有效外部链重算（对『PMID 身份不可考』的宽容端）。",
+    "S6_lit_raw": "marker 去同源但 lit 不去污（隔离两通道贡献）。"
+  },
+  "faces": {
+    "F_RET": "run3 v1.1 表 truth 非空 且 member ∈ {Q1,Q2,Q3,Q4,Q5b,Q7} = 196 行（主面，头条判读列）",
+    "F_3SEAT": "FACEV21 retina 45 ∪ RUN5 Q6 33 = 78 行（副面，构造面球门不平等声明沿用 E1）",
+    "F_OCS": "RUN5 Q6 33 行（面板级 sanity，循环注记）"
+  },
+  "calibers": {
+    "c1_conservative_full": "分母=面内全部真值行；共识未定义/弃权=miss（E1 延续主口径）。",
+    "c2_defined_subset": "行集=基线共识已定义行，证据与基线同子集重算。",
+    "parallel_rule": "两口径并列全报，禁择好看列；头条 Δ 固定 = ①_decon vs AB共识 @ F-RET 全196 @ c1；①③ 分别定档，跨档=边界案交 PI（E1 先例）。"
+  },
+  "w_matrix_binding": {
+    "primary_delta": "Δ主 = ①_decon top1% − AB共识 top1%（c1 口径，F-RET@196），③ 同列并报。",
+    "veto": "若 Δ(vs 最强单席 B) <+5pp 即使 Δ主 达 W1 线也封顶 W2（E1 F-A 教训的预注册化：替代对象是最强基线）。",
+    "operating_point_gate": "W1 需存在 θ 使 特异度≥80% 且 灵敏度≥30%（30% 防真空守卫为本卡预注册所加，BRIEF 未写数字，先落纸防事后调球门）。",
+    "continuity_column": "F-RET@无泄漏155 列以 decon 分重算并作连续性列（E1 矩阵输入列的同分母对照）。"
+  },
+  "flag_roc": {
+    "flag_event": "ev_decon top1(映射) ≠ 基线共识(ABcons 或三席多数)",
+    "outcome": "共识(映射后)≠truth = 真错（被拦对象）",
+    "sweep": "θ ∈ {0,1,2,3,4}: 旗标条件加 n_decon(top1) − n_decon(共识候选行映射后最高分行) ≥ θ；θ=0 即纯分歧旗标。",
+    "rows": "共识已定义行（c2 子集）；未定义行数单列并报。",
+    "metrics": "sens=拦真错/全部真错；spec=未误报/全部共识对；prec=TP/(TP+FP)；flag_rate。F-3SEAT 同构复算。"
+  },
+  "homology_water": {
+    "tableA_cluster_side": "成员 ∈ {Q3,Q4,Q5b,Q6} + lit有泄漏13行：n真值行、raw top1%、decon top1%、水分pp、该成员各面板行被剔基因数/总数。",
+    "tableB_panel_side": "每 (lib,class) 行：n_genes、|S≠∅ 外部链|、仅内部派生、无记录——结构水分占比。",
+    "tableC_history": "E1 已登记受垫高数字清单（67.74%/68.39%、Q5b 43行93.0%、F-3SEAT、F-OCS）+ 本卡修正值；只出表，不改历史冻结件。"
+  },
+  "verification_gate": "跑 decon 前：本地复刻 raw 分与 e1_scores_ON.tsv 逐 (cid,canon) 全等（n_shared、lit_n；shared_genes 允许仅 max-n 平票行序差异并登记），且主表关键格复现 72.45/67.74/68.39 与矩阵 +16.77/+3.23/−23.40——不过闸禁出 decon 结论。"
+}

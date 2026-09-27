@@ -1,0 +1,12 @@
+channel: {'Q1': 'closed', 'Q2': 'open', 'Q3': 'closed', 'Q4': 'unresolved', 'Q5b': 'open', 'Q6': 'unresolved', 'Q7': 'open', 'Q8': 'unresolved', 'Q9': 'n/a'}
+state ON: n_classes=60
+ON: clusters_with_empty_ranking=32
+state OFF: n_classes=43
+OFF: clusters_with_empty_ranking=35
+OFF-MISMATCH Q1::12 arch= [('BC', 1), ('HC', 1)] mine= [('retina_interneuron::BC', 2), ('BC', 1), ('HC', 1)]
+OFF-MISMATCH Q1::10 arch= [('Cone', 2)] mine= [('Cone', 2), ('retina_interneuron::Cone', 2)]
+OFF-MISMATCH Q1::2 arch= [('MG', 2), ('Mac_DAM_LAM', 2), ('Astro', 1)] mine= [('MG', 2), ('Mac_DAM_LAM', 2), ('retina_interneuron::MG', 2)]
+OFF-MISMATCH Q1::11 arch= [('MG', 2), ('Mac_DAM_LAM', 2), ('Astro', 1)] mine= [('MG', 2), ('Mac_DAM_LAM', 2), ('retina_interneuron::MG', 2)]
+OFF-MISMATCH Q1::5 arch= [('MG', 2), ('Astro', 1), ('Fibroblast', 1)] mine= [('MG', 2), ('retina_interneuron::MG', 2), ('Astro', 1)]
+OFF-consistency: checked=178 mismatch=111
+wrote_at 2026-09-26 22:53:15.829651

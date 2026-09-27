@@ -1,0 +1,164 @@
+[
+ {
+  "ts": "2026-09-27T15:49:00.613293+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "Sncg",
+    "Calb2",
+    "Ebf1",
+    "Lingo2",
+    "Atp1b1",
+    "Thy1",
+    "Nrg1",
+    "Kirrel3",
+    "Cartpt",
+    "Stmn2",
+    "Rbfox1",
+    "Nefm",
+    "Vsnl1",
+    "Nrn1",
+    "Ncam2",
+    "Il1rapl1",
+    "Lrrc4c",
+    "Opcml",
+    "Kctd16",
+    "Galntl6"
+   ]
+  },
+  "executed": true,
+  "result_chars": 6971
+ },
+ {
+  "ts": "2026-09-27T15:49:00.627766+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "RGC"
+  },
+  "executed": true,
+  "result_chars": 3639
+ },
+ {
+  "ts": "2026-09-27T15:49:00.652023+08:00",
+  "tool": "get_tissue_composition",
+  "args": {
+   "species": "mouse",
+   "tissue": "retina"
+  },
+  "executed": true,
+  "result_chars": 1833
+ },
+ {
+  "ts": "2026-09-27T15:49:11.427658+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "Sncg Thy1 RGC retinal ganglion cell mouse retina marker",
+   "cell_type": "RGC",
+   "species": "mouse",
+   "tissue": "retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:49:11.432748+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "AC"
+  },
+  "executed": true,
+  "result_chars": 3636
+ },
+ {
+  "ts": "2026-09-27T15:49:27.687060+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "Sncg retinal ganglion cell subtype marker mouse single cell",
+   "species": "mouse",
+   "tissue": "retina",
+   "cell_type": "RGC",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 7199
+ },
+ {
+  "ts": "2026-09-27T15:49:30.447061+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "Sncg Calb2 Ebf1 Nefm RGC amacrine cell identity mouse retina scRNA-seq",
+   "species": "mouse",
+   "tissue": "retina",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:49:32.976429+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "Sncg-expressing retinal ganglion cell subtype Calb2 Ebf1 Nefm Thy1 Kirrel3",
+   "species": "mouse",
+   "tissue": "retina",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:49:34.262540+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "BC"
+  },
+  "executed": true,
+  "result_chars": 3632
+ },
+ {
+  "ts": "2026-09-27T15:49:34.267830+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "HC"
+  },
+  "executed": true,
+  "result_chars": 3637
+ },
+ {
+  "ts": "2026-09-27T15:49:35.764381+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "RBPMS",
+    "POU4F1",
+    "POU4F2",
+    "NEFL",
+    "SLC17A6"
+   ]
+  },
+  "executed": true,
+  "result_chars": 4508
+ },
+ {
+  "ts": "2026-09-27T15:49:38.081446+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "Sncg",
+    "Calb2",
+    "Ebf1",
+    "Nefm",
+    "Thy1",
+    "Nrg1",
+    "Kirrel3",
+    "Cartpt",
+    "Stmn2",
+    "Rbfox1"
+   ],
+   "cell_type": "RGC"
+  },
+  "executed": true,
+  "result_chars": 3639
+ }
+]

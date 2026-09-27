@@ -1,0 +1,30 @@
+{
+ "matrix_row": "ROW2_keep_strict",
+ "gate": {
+  "verifiable_rate_ge50": true,
+  "non_hrca_self_majority": true,
+  "mass_offtopic": true,
+  "matrix_row": "ROW2_keep_strict"
+ },
+ "stats": {
+  "n_pairs": 120,
+  "unverifiable": 20,
+  "self_only": 0,
+  "creditable_offtopic": 79,
+  "creditable_rel": 21,
+  "verifiable_any": 100,
+  "creditable_any": 100,
+  "first_is_hrca": 2,
+  "verifiable_rate": 0.8333,
+  "not_self_share_among_verifiable": 1.0,
+  "offtopic_share_among_creditable": 0.79
+ },
+ "q5b_water": {
+  "S1": 32.55,
+  "S5b": 0.0,
+  "S5b_rel": 30.23,
+  "S5": 0.0
+ },
+ "interval_note": "水分读数区间按三口径升序报，W 档零改动",
+ "ran_from": "e2r_metrics.json+identity_summary"
+}

@@ -1,0 +1,24 @@
+{
+ "stats": {
+  "n_pairs": 120,
+  "unverifiable": 20,
+  "self_only": 0,
+  "creditable_offtopic": 79,
+  "creditable_rel": 21,
+  "verifiable_any": 100,
+  "creditable_any": 100,
+  "first_is_hrca": 2,
+  "verifiable_rate": 0.8333,
+  "not_self_share_among_verifiable": 1.0,
+  "offtopic_share_among_creditable": 0.79
+ },
+ "gate": {
+  "verifiable_rate_ge50": true,
+  "non_hrca_self_majority": true,
+  "mass_offtopic": true,
+  "matrix_row": "ROW2_keep_strict"
+ },
+ "n_titles_resolved": 147,
+ "titles_unresolvable": 2,
+ "ran": "2026-09-27 09:46:11.317806"
+}

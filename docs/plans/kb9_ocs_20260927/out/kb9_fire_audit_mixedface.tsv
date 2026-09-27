@@ -1,0 +1,23 @@
+cluster	member	n_cells	top10	ranking_no_rules	ranking_with_rules	k9_leak_no_rules
+Q1::3	Q1	6139	MALAT1;RP1;AHI1;EPB41L2;MYO9A;MPP4;NTM;GNGT1;GNB1;NBPF19		(空)	
+Q1::0	Q1	3155	RBP3;ENSG00000215861;IMPG1;MT-RNR2;GNGT1;MT-ATP6;MT-ND1;MT-CO2;CPE;MT-ND5		(空)	
+Q1::4	Q1	2871	IMPG1;RBP3;GNGT1;MT-ND3;MT-CO3;MT-ATP6;MT-ND2;MT-ND5;MT-ND4;MT-CO1		(空)	
+Q2::8	Q2	13606	RHO;SAG;PDE6G;RCVRN;GNGT1;GNAT1;ROM1;NRL;AIPL1;CNGA1	Rod(n=3) | retina_interneuron::Rod(n=3) | retina_v6::Rod(n=3)	Rod(n=3) | retina_interneuron::Rod(n=3) | retina_v6::Rod(n=3)	
+Q2::7	Q2	8935	SAG;PDE6G;RHO;GNGT1;RCVRN;GNAT1;PDE6A;ROM1;AIPL1;PDC	Rod(n=2) | retina_interneuron::Rod(n=2) | retina_v6::Rod(n=2)	Rod(n=2) | retina_interneuron::Rod(n=2) | retina_v6::Rod(n=2)	
+Q2::2	Q2	7397	GPX3;CRABP1;MT2A;APOE;CLU;PTGDS;MIR9-1HG;FABP7;VIM;GLUL	MG(n=2) | retina_interneuron::MG(n=2) | Astro(n=1)	MG(n=2) | retina_interneuron::MG(n=2) | Astro(n=1)	
+Q3::0	Q3	6214	NR2E3;YPEL2;MFGE8;MPP4;SCAPER;ZMYND19;OSBP2;LENG8;CNGB1;SORBS2	Rod(n=1) | retina_interneuron::Rod(n=1) | retina_v6::Rod(n=1)	Rod(n=1) | retina_interneuron::Rod(n=1) | retina_v6::Rod(n=1)	
+Q3::7	Q3	3028	VIM;APOE;CRABP1;CLU;GPX3;TF;GLUL;RLBP1;PTGDS;FRZB	MG(n=3) | retina_interneuron::MG(n=3) | Astro(n=1)	MG(n=3) | retina_interneuron::MG(n=3) | Astro(n=1)	
+Q3::13	Q3	1637	RHO;PVALB;NEFL;SNCG;TMSB10;PCP4;FTH1;NEFM;UCHL1;PRPH	retina_v6::RGC(n=2) | Rod(n=1) | RGC(n=1)	retina_v6::RGC(n=2) | Rod(n=1) | RGC(n=1)	
+Q4::16	Q4	6316	NEFL;UCHL1;STMN2;NEFM;SNCG;PVALB;MAP1B;ATP1B1;AHNAK2;PRPH	retina_v6::RGC(n=2) | RGC(n=1) | retina_interneuron::RGC(n=1)	retina_v6::RGC(n=2) | RGC(n=1) | retina_interneuron::RGC(n=1)	
+Q4::24	Q4	5711	GNG13;TRPM1;LRTM1;GNB3;VSX1;PCP4L1;CAMK2B;BCAT1;TMSB4X;ITM2C	retina_interneuron::BC(n=3) | retina_v6::BC(n=3) | Melanocyte(n=1)	retina_interneuron::BC(n=3) | retina_v6::BC(n=3)	Melanocyte
+Q4::36	Q4	5430	APOE;PTGDS;FRZB;GLUL;WIF1;RGR;CLU;CRABP1;VIM;HES1	MG(n=2) | retina_interneuron::MG(n=2) | Astro(n=1)	MG(n=2) | retina_interneuron::MG(n=2) | Astro(n=1)	
+Q5b::3	Q5b	4501	ABCA4;AIPL1;RHO;CASZ1;RPGRIP1;ZPBP;IGF2BP2;CDH12;NRL;GRM1	Rod(n=2) | retina_interneuron::Rod(n=2) | retina_v6::Rod(n=2)	Rod(n=2) | retina_interneuron::Rod(n=2) | retina_v6::Rod(n=2)	
+Q5b::7	Q5b	3337	ABCA4;RHO;AIPL1;CASZ1;NRL;IGF2BP2;ARL17B;ZPBP;RPGRIP1;ANXA6	Rod(n=2) | retina_interneuron::Rod(n=2) | retina_v6::Rod(n=2)	Rod(n=2) | retina_interneuron::Rod(n=2) | retina_v6::Rod(n=2)	
+Q5b::1	Q5b	3324	ABCA4;RHO;AIPL1;CASZ1;NRL;IGF2BP2;ZPBP;RPGRIP1;ARL4D;CDH12	Rod(n=2) | retina_interneuron::Rod(n=2) | retina_v6::Rod(n=2)	Rod(n=2) | retina_interneuron::Rod(n=2) | retina_v6::Rod(n=2)	
+Q7::29	Q7	7163	Prkca;Pcp2;Lrrtm4;Gng13;Gm20754;Gpc6;Trpm1;Asic2;Prkg1;Ntng1	retina_interneuron::BC(n=3) | retina_v6::BC(n=2) | Melanocyte(n=1)	retina_interneuron::BC(n=3) | retina_v6::BC(n=2)	Melanocyte
+Q7::17	Q7	7073	Rho;Pdc;Sag;Gngt1;Pde6g;Prph2;Gnat1;Rp1;Gnb1;Rcvrn	Rod(n=2) | retina_interneuron::Rod(n=2) | retina_v6::Rod(n=2)	Rod(n=2) | retina_interneuron::Rod(n=2) | retina_v6::Rod(n=2)	
+Q7::1	Q7	5431	Cdh18;Cck;Unc13c;Gng13;Cdh8;Gpc6;Unc5d;Ntng1;Samsn1;Fam135b	retina_interneuron::BC(n=3) | retina_v6::BC(n=1)	retina_interneuron::BC(n=3) | retina_v6::BC(n=1)	
+Q8::16	Q8	10475	PCDH11X;CLVS1;COL25A1;SHROOM3;PCDH7;NALCN-AS1;GRB10;ZHX2;LINC01515;MIR924HG	retina_interneuron::HC(n=1)	retina_interneuron::HC(n=1)	
+Q8::2	Q8	9554	EYS;MARCHF1;ZNF385B;PTPN13;RP1;TMEM108;ANO2;EPS8;USH2A;OTX2-AS1		(空)	
+Q8::10	Q8	6654	EYS;GPC5;USH2A;DMD;RP1;MARCHF1;OTX2-AS1;TMEM108;PTPN13;ZNF385B		(空)	
+Q9::0	Q9	1619	FN1;MT-ND6;SPP1;RNASE1;CHI3L1;S100A8;FABP5;FBP1;MT2A;RPL10P9	Fibroblast(n=1) | Myofibroblast(n=1) | Mono_Classical(n=1)	Fibroblast(n=1) | Myofibroblast(n=1) | Mono_Classical(n=1)	

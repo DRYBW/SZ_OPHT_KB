@@ -1,0 +1,45 @@
+[
+ {
+  "ts": "2026-09-27T15:23:32.254080+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "PDE6H",
+    "ARR3",
+    "TTR",
+    "GUCA1C",
+    "OPN1LW",
+    "GUCA1A",
+    "PDC",
+    "RCVRN",
+    "KCNV2",
+    "GNGT2",
+    "RTBDN",
+    "MPP4",
+    "AIPL1",
+    "RS1"
+   ]
+  },
+  "executed": true,
+  "result_chars": 4926
+ },
+ {
+  "ts": "2026-09-27T15:23:33.386454+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "Cone"
+  },
+  "executed": true,
+  "result_chars": 3639
+ },
+ {
+  "ts": "2026-09-27T15:23:34.593875+08:00",
+  "tool": "get_tissue_composition",
+  "args": {
+   "species": "human",
+   "tissue": "retina"
+  },
+  "executed": true,
+  "result_chars": 8014
+ }
+]

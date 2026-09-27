@@ -1,0 +1,3307 @@
+{
+  "_embedded" : {
+    "terms" : [ {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "aism",
+      "ontology_prefix" : "AISM",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/aism.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : null,
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/aism/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.", "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059)." ],
+      "synonyms" : [ "CFU-GEMM", "CFU-S", "CMP", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "common myeloid precursor", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730" ],
+        "has_obo_namespace" : [ "cell" ],
+        "imported from" : [ "http://purl.obolibrary.org/obo/cl.owl" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "bcgo",
+      "ontology_prefix" : null,
+      "ontology_iri" : "http://purl.obolibrary.org/obo/bcgo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.", "The common myeloid progenitor (CMP) is a multipotent cell that serves as a crucial intermediary within the overall framework of hematopoietic cell differentiation, which is the process of blood cell production. This part of the hematopoiesis process leads to the formation of myeloid lineage cells, which includes granulocytes (neutrophils, eosinophils, and basophils), monocytes, erythrocytes (red blood cells), and megakaryocytes (platelet-forming cells). \nThe primary function of common myeloid progenitors is differentiation and proliferation into various types of mature blood cells, thereby providing a critical contribution to maintaining homeostasis within the body's immune and circulatory systems. Single-cell analyses have shown that the CMP cell population is heterogeneous with at least two distinct subpopulations, characterized by different cell surface markers and likely already committed to downstream differentiation into either the granulocyte/macrophage lineage or the megakaryocyte/erythrocyte lineage-restricted progenitor. \nThe destiny of a CMP is influenced by numerous cytokines and growth factors in its environment that promote differentiation along specific lineages. For example, IL-3 and GM-CSF stimulate the production of eosinophils, which are essential for the body’s defense against allergens and help fight fungal and parasitic infections. \nBy being able to differentiate into a wide range of different immune cells, common myeloid progenitors play a crucial role in the body's ability to respond to injuries, infections, and other physiological challenges.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)" ],
+      "synonyms" : [ "common myeloid precursor", "CFU-GEMM", "CFU-S", "CMP", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730", "ZFA:0009021" ],
+        "preferred label" : [ "common myeloid progenitor" ],
+        "seeAlso" : [ "https://cellxgene.cziscience.com/cellguide/CL_0000049" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "cl",
+      "ontology_prefix" : "CL",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/cl.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : true,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_subset", "mouse_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      }, {
+        "definition" : "The common myeloid progenitor (CMP) is a multipotent cell that serves as a crucial intermediary within the overall framework of hematopoietic cell differentiation, which is the process of blood cell production. This part of the hematopoiesis process leads to the formation of myeloid lineage cells, which includes granulocytes (neutrophils, eosinophils, and basophils), monocytes, erythrocytes (red blood cells), and megakaryocytes (platelet-forming cells). \nThe primary function of common myeloid progenitors is differentiation and proliferation into various types of mature blood cells, thereby providing a critical contribution to maintaining homeostasis within the body's immune and circulatory systems. Single-cell analyses have shown that the CMP cell population is heterogeneous with at least two distinct subpopulations, characterized by different cell surface markers and likely already committed to downstream differentiation into either the granulocyte/macrophage lineage or the megakaryocyte/erythrocyte lineage-restricted progenitor. \nThe destiny of a CMP is influenced by numerous cytokines and growth factors in its environment that promote differentiation along specific lineages. For example, IL-3 and GM-CSF stimulate the production of eosinophils, which are essential for the body’s defense against allergens and help fight fungal and parasitic infections. \nBy being able to differentiate into a wide range of different immune cells, common myeloid progenitors play a crucial role in the body's ability to respond to injuries, infections, and other physiological challenges.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)",
+        "oboXrefs" : [ {
+          "database" : "DOI",
+          "id" : "10.1038/35004599",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.1038/ni.3412",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.1111/j.1600-065X.2010.00963.x",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.7554/eLife.60939",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : null,
+          "id" : "https://www.sciencedirect.com/topics/engineering/myeloid-progenitor-cell",
+          "description" : null,
+          "url" : "https://www.sciencedirect.com/topics/engineering/myeloid-progenitor-cell"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009021",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009021"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "CFU-GEMM",
+        "scope" : "hasRelatedSynonym",
+        "type" : "abbreviation",
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-S",
+        "scope" : "hasRelatedSynonym",
+        "type" : "abbreviation",
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CMP",
+        "scope" : "hasRelatedSynonym",
+        "type" : "abbreviation",
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor", "CFU-GEMM", "CFU-S", "CMP", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730" ],
+        "present in taxon" : [ "http://purl.obolibrary.org/obo/NCBITaxon_9606" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "ecao",
+      "ontology_prefix" : "ECAO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/ecao.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "CFU-GEMM",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-S",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CMP",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "CFU-GEMM", "CFU-S", "CMP", "common myeloid precursor", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730" ],
+        "has_obo_namespace" : [ "cell" ],
+        "id" : [ "CL:0000049" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "ecocore",
+      "ontology_prefix" : "ECOCORE",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/ecocore.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : null,
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ecocore/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor", "CFU-GEMM", "CFU-S", "CMP", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "Description" : [ "The common myeloid progenitor (CMP) is a multipotent cell that serves as a crucial intermediary within the overall framework of hematopoietic cell differentiation, which is the process of blood cell production. This part of the hematopoiesis process leads to the formation of myeloid lineage cells, which includes granulocytes (neutrophils, eosinophils, and basophils), monocytes, erythrocytes (red blood cells), and megakaryocytes (platelet-forming cells). \nThe primary function of common myeloid progenitors is differentiation and proliferation into various types of mature blood cells, thereby providing a critical contribution to maintaining homeostasis within the body's immune and circulatory systems. Single-cell analyses have shown that the CMP cell population is heterogeneous with at least two distinct subpopulations, characterized by different cell surface markers and likely already committed to downstream differentiation into either the granulocyte/macrophage lineage or the megakaryocyte/erythrocyte lineage-restricted progenitor. \nThe destiny of a CMP is influenced by numerous cytokines and growth factors in its environment that promote differentiation along specific lineages. For example, IL-3 and GM-CSF stimulate the production of eosinophils, which are essential for the body’s defense against allergens and help fight fungal and parasitic infections. \nBy being able to differentiate into a wide range of different immune cells, common myeloid progenitors play a crucial role in the body's ability to respond to injuries, infections, and other physiological challenges.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)" ],
+        "comment" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059)." ],
+        "database_cross_reference" : [ "BTO:0004730", "ZFA:0009021" ],
+        "preferred label" : [ "common myeloid progenitor" ],
+        "seeAlso" : [ "https://cellxgene.cziscience.com/cellguide/CL_0000049" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "efo",
+      "ontology_prefix" : "EFO",
+      "ontology_iri" : "http://www.ebi.ac.uk/efo/efo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_subset", "mouse_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009021",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009021"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "CFU-GEMM",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-S",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CMP",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "flopo",
+      "ontology_prefix" : "FLOPO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/flopo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/flopo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor", "CFU-GEMM", "CFU-S", "CMP", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730", "ZFA:0009021" ],
+        "present in taxon" : [ "http://purl.obolibrary.org/obo/NCBITaxon_9606" ],
+        "seeAlso" : [ "https://cellxgene.cziscience.com/cellguide/CL_0000049" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "fovt",
+      "ontology_prefix" : "FOVT",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/fovt.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009021",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009021"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "CFU-GEMM",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-S",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CMP",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/fovt/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.", "The common myeloid progenitor (CMP) is a multipotent cell that serves as a crucial intermediary within the overall framework of hematopoietic cell differentiation, which is the process of blood cell production. This part of the hematopoiesis process leads to the formation of myeloid lineage cells, which includes granulocytes (neutrophils, eosinophils, and basophils), monocytes, erythrocytes (red blood cells), and megakaryocytes (platelet-forming cells). \nThe primary function of common myeloid progenitors is differentiation and proliferation into various types of mature blood cells, thereby providing a critical contribution to maintaining homeostasis within the body's immune and circulatory systems. Single-cell analyses have shown that the CMP cell population is heterogeneous with at least two distinct subpopulations, characterized by different cell surface markers and likely already committed to downstream differentiation into either the granulocyte/macrophage lineage or the megakaryocyte/erythrocyte lineage-restricted progenitor. \nThe destiny of a CMP is influenced by numerous cytokines and growth factors in its environment that promote differentiation along specific lineages. For example, IL-3 and GM-CSF stimulate the production of eosinophils, which are essential for the body’s defense against allergens and help fight fungal and parasitic infections. \nBy being able to differentiate into a wide range of different immune cells, common myeloid progenitors play a crucial role in the body's ability to respond to injuries, infections, and other physiological challenges.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)" ],
+      "synonyms" : [ "common myeloid precursor", "CFU-GEMM", "CFU-S", "CMP", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730", "ZFA:0009021" ],
+        "preferred label" : [ "common myeloid progenitor" ],
+        "seeAlso" : [ "https://cellxgene.cziscience.com/cellguide/CL_0000049" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "go",
+      "ontology_prefix" : "GO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/go/extensions/go-plus.ofn",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      }, {
+        "definition" : "The common myeloid progenitor (CMP) is a multipotent cell that serves as a crucial intermediary within the overall framework of hematopoietic cell differentiation, which is the process of blood cell production. This part of the hematopoiesis process leads to the formation of myeloid lineage cells, which includes granulocytes (neutrophils, eosinophils, and basophils), monocytes, erythrocytes (red blood cells), and megakaryocytes (platelet-forming cells). \nThe primary function of common myeloid progenitors is differentiation and proliferation into various types of mature blood cells, thereby providing a critical contribution to maintaining homeostasis within the body's immune and circulatory systems. Single-cell analyses have shown that the CMP cell population is heterogeneous with at least two distinct subpopulations, characterized by different cell surface markers and likely already committed to downstream differentiation into either the granulocyte/macrophage lineage or the megakaryocyte/erythrocyte lineage-restricted progenitor. \nThe destiny of a CMP is influenced by numerous cytokines and growth factors in its environment that promote differentiation along specific lineages. For example, IL-3 and GM-CSF stimulate the production of eosinophils, which are essential for the body’s defense against allergens and help fight fungal and parasitic infections. \nBy being able to differentiate into a wide range of different immune cells, common myeloid progenitors play a crucial role in the body's ability to respond to injuries, infections, and other physiological challenges.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)",
+        "oboXrefs" : [ {
+          "database" : "DOI",
+          "id" : "10.1038/35004599",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.1038/ni.3412",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.1111/j.1600-065X.2010.00963.x",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.7554/eLife.60939",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : null,
+          "id" : "https://www.sciencedirect.com/topics/engineering/myeloid-progenitor-cell",
+          "description" : null,
+          "url" : "https://www.sciencedirect.com/topics/engineering/myeloid-progenitor-cell"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009021",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009021"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "CFU-GEMM",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-S",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CMP",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor", "CFU-GEMM", "CFU-S", "CMP", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "comment" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059)." ],
+        "database_cross_reference" : [ "BTO:0004730" ],
+        "has_obo_namespace" : [ "cell" ],
+        "imported from" : [ "http://purl.obolibrary.org/obo/cl.owl", "http://purl.obolibrary.org/obo/uberon.owl" ],
+        "present in taxon" : [ "http://purl.obolibrary.org/obo/NCBITaxon_9606" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "hcao",
+      "ontology_prefix" : "HCAO",
+      "ontology_iri" : "http://ontology.data.humancellatlas.org/ontologies/hcao",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "CMP",
+        "scope" : "hasExactSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-GEMM",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-S",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor", "CFU-GEMM", "CFU-S", "CMP", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "hp",
+      "ontology_prefix" : "HP",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/hp/hp-international.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "CFU-GEMM",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-S",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CMP",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.", "The common myeloid progenitor (CMP) is a multipotent cell that serves as a crucial intermediary within the overall framework of hematopoietic cell differentiation, which is the process of blood cell production. This part of the hematopoiesis process leads to the formation of myeloid lineage cells, which includes granulocytes (neutrophils, eosinophils, and basophils), monocytes, erythrocytes (red blood cells), and megakaryocytes (platelet-forming cells). \nThe primary function of common myeloid progenitors is differentiation and proliferation into various types of mature blood cells, thereby providing a critical contribution to maintaining homeostasis within the body's immune and circulatory systems. Single-cell analyses have shown that the CMP cell population is heterogeneous with at least two distinct subpopulations, characterized by different cell surface markers and likely already committed to downstream differentiation into either the granulocyte/macrophage lineage or the megakaryocyte/erythrocyte lineage-restricted progenitor. \nThe destiny of a CMP is influenced by numerous cytokines and growth factors in its environment that promote differentiation along specific lineages. For example, IL-3 and GM-CSF stimulate the production of eosinophils, which are essential for the body’s defense against allergens and help fight fungal and parasitic infections. \nBy being able to differentiate into a wide range of different immune cells, common myeloid progenitors play a crucial role in the body's ability to respond to injuries, infections, and other physiological challenges.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)" ],
+      "synonyms" : [ "common myeloid precursor", "CFU-GEMM", "CFU-S", "CMP", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "ccf_asctb_type" : [ "CT" ],
+        "ccf_ct_isa" : [ "http://purl.obolibrary.org/obo/CL_0000837" ],
+        "ccf_is_provisional" : [ false ],
+        "ccf_located_in" : [ "http://purl.obolibrary.org/obo/UBERON_0002371" ],
+        "ccf_pref_label" : [ "common myeloid progenitor" ],
+        "database_cross_reference" : [ "BTO:0004730", "ZFA:0009021" ],
+        "preferred label" : [ "common myeloid progenitor" ],
+        "seeAlso" : [ "https://cellxgene.cziscience.com/cellguide/CL_0000049" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "hra",
+      "ontology_prefix" : null,
+      "ontology_iri" : "https://purl.humanatlas.io/collection/hra-ols",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      }, {
+        "definition" : "The common myeloid progenitor (CMP) is a multipotent cell that serves as a crucial intermediary within the overall framework of hematopoietic cell differentiation, which is the process of blood cell production. This part of the hematopoiesis process leads to the formation of myeloid lineage cells, which includes granulocytes (neutrophils, eosinophils, and basophils), monocytes, erythrocytes (red blood cells), and megakaryocytes (platelet-forming cells). \nThe primary function of common myeloid progenitors is differentiation and proliferation into various types of mature blood cells, thereby providing a critical contribution to maintaining homeostasis within the body's immune and circulatory systems. Single-cell analyses have shown that the CMP cell population is heterogeneous with at least two distinct subpopulations, characterized by different cell surface markers and likely already committed to downstream differentiation into either the granulocyte/macrophage lineage or the megakaryocyte/erythrocyte lineage-restricted progenitor. \nThe destiny of a CMP is influenced by numerous cytokines and growth factors in its environment that promote differentiation along specific lineages. For example, IL-3 and GM-CSF stimulate the production of eosinophils, which are essential for the body’s defense against allergens and help fight fungal and parasitic infections. \nBy being able to differentiate into a wide range of different immune cells, common myeloid progenitors play a crucial role in the body's ability to respond to injuries, infections, and other physiological challenges.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)",
+        "oboXrefs" : [ {
+          "database" : "DOI",
+          "id" : "10.1038/35004599",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.1038/ni.3412",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.1111/j.1600-065X.2010.00963.x",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.7554/eLife.60939",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : null,
+          "id" : "https://www.sciencedirect.com/topics/engineering/myeloid-progenitor-cell",
+          "description" : null,
+          "url" : "https://www.sciencedirect.com/topics/engineering/myeloid-progenitor-cell"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009021",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009021"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "CFU-GEMM",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-S",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CMP",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        },
+        "develops_from" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+        },
+        "has_characterizing_marker_set" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0015004"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor", "CFU-GEMM", "CFU-S", "CMP", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "maxo",
+      "ontology_prefix" : "MAXO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/maxo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : null,
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "CFU-GEMM",
+        "scope" : "hasRelatedSynonym",
+        "type" : "abbreviation",
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-S",
+        "scope" : "hasRelatedSynonym",
+        "type" : "abbreviation",
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CMP",
+        "scope" : "hasRelatedSynonym",
+        "type" : "abbreviation",
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/maxo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ ],
+      "synonyms" : [ ],
+      "annotation" : { },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "mondo",
+      "ontology_prefix" : "MONDO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/mondo/mondo-international.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "mp",
+      "ontology_prefix" : "MP",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/mp/mp-international.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ ],
+      "synonyms" : [ ],
+      "annotation" : { },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "ngbo",
+      "ontology_prefix" : "NGBO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/ngbo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059)." ],
+      "synonyms" : [ ],
+      "annotation" : { },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "oba",
+      "ontology_prefix" : "OBA",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/oba.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "pato",
+      "ontology_prefix" : "PATO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/pato.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pato/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor", "CFU-GEMM", "CFU-S", "CMP", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730", "ZFA:0009021" ],
+        "present in taxon" : [ "http://purl.obolibrary.org/obo/NCBITaxon_9606" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "pcl",
+      "ontology_prefix" : "PCL",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/pcl.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009021",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009021"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "CFU-GEMM",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-S",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CMP",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pcl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "phipo",
+      "ontology_prefix" : "PHIPO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/phipo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_subset", "mouse_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/phipo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ ],
+      "synonyms" : [ "common myeloid precursor", "CFU-GEMM", "CFU-S", "CMP", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "comment" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059)." ],
+        "database_cross_reference" : [ "BTO:0004730" ],
+        "definition" : [ "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "prefer",
+      "ontology_prefix" : "PREFER",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/prefer.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "CFU-GEMM",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-S",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CMP",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/prefer/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ ],
+      "synonyms" : [ "common myeloid precursor", "CFU-GEMM", "CFU-S", "CMP", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "Description" : [ "The common myeloid progenitor (CMP) is a multipotent cell that serves as a crucial intermediary within the overall framework of hematopoietic cell differentiation, which is the process of blood cell production. This part of the hematopoiesis process leads to the formation of myeloid lineage cells, which includes granulocytes (neutrophils, eosinophils, and basophils), monocytes, erythrocytes (red blood cells), and megakaryocytes (platelet-forming cells). \nThe primary function of common myeloid progenitors is differentiation and proliferation into various types of mature blood cells, thereby providing a critical contribution to maintaining homeostasis within the body's immune and circulatory systems. Single-cell analyses have shown that the CMP cell population is heterogeneous with at least two distinct subpopulations, characterized by different cell surface markers and likely already committed to downstream differentiation into either the granulocyte/macrophage lineage or the megakaryocyte/erythrocyte lineage-restricted progenitor. \nThe destiny of a CMP is influenced by numerous cytokines and growth factors in its environment that promote differentiation along specific lineages. For example, IL-3 and GM-CSF stimulate the production of eosinophils, which are essential for the body’s defense against allergens and help fight fungal and parasitic infections. \nBy being able to differentiate into a wide range of different immune cells, common myeloid progenitors play a crucial role in the body's ability to respond to injuries, infections, and other physiological challenges.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)" ],
+        "comment" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059)." ],
+        "database_cross_reference" : [ "BTO:0004730", "ZFA:0009021" ],
+        "definition" : [ "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+        "preferred label" : [ "common myeloid progenitor" ],
+        "seeAlso" : [ "https://cellxgene.cziscience.com/cellguide/CL_0000049" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "pride",
+      "ontology_prefix" : "PRIDE",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/pride.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_subset", "mouse_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : null,
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009021",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009021"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "CFU-GEMM",
+        "scope" : "hasRelatedSynonym",
+        "type" : "abbreviation",
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-S",
+        "scope" : "hasRelatedSynonym",
+        "type" : "abbreviation",
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CMP",
+        "scope" : "hasRelatedSynonym",
+        "type" : "abbreviation",
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor", "CFU-GEMM", "CFU-S", "CMP", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730" ],
+        "present in taxon" : [ "http://purl.obolibrary.org/obo/NCBITaxon_9606" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "rbo",
+      "ontology_prefix" : "RBO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/rbo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "CMP",
+        "scope" : "hasExactSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-GEMM",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-S",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/rbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor", "CFU-GEMM", "CFU-S", "CMP", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730", "ZFA:0009021" ],
+        "seeAlso" : [ "https://cellxgene.cziscience.com/cellguide/CL_0000049" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "uberon",
+      "ontology_prefix" : "UBERON",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/uberon.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009021",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009021"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "CFU-GEMM",
+        "scope" : "hasRelatedSynonym",
+        "type" : "abbreviation",
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CFU-S",
+        "scope" : "hasRelatedSynonym",
+        "type" : "abbreviation",
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "CMP",
+        "scope" : "hasRelatedSynonym",
+        "type" : "abbreviation",
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730", "ZFA:0009021" ],
+        "preferred label" : [ "common myeloid progenitor" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "upheno",
+      "ontology_prefix" : "UPHENO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/upheno.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009021",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009021"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000049",
+      "lang" : "en",
+      "description" : [ "This cell type is intended to be compatible with any vertebrate common myeloid progenitor.  For mammalian CMP known to be CD34-positive, please use the term 'common myeloid progenitor, CD34-positive' (CL_0001059).", "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages." ],
+      "synonyms" : [ "common myeloid precursor", "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte", "multipotential myeloid stem cell", "myeloid stem cell", "pluripotent stem cell (bone marrow)" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0004730" ]
+      },
+      "label" : "common myeloid progenitor",
+      "ontology_name" : "xpo",
+      "ontology_prefix" : "XPO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/xpo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000049",
+      "obo_id" : "CL:0000049",
+      "in_subset" : [ "cellxgene_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A progenitor cell committed to myeloid lineage, including the megakaryocyte and erythroid lineages.",
+        "oboXrefs" : [ {
+          "database" : "GOC",
+          "id" : "add",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        }, {
+          "database" : "MESH",
+          "id" : "D023461",
+          "description" : null,
+          "url" : "http://id.nlm.nih.gov/mesh/D023461"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0004730",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0004730"
+      } ],
+      "obo_synonym" : [ {
+        "name" : "colony forming unit granulocyte, erythrocyte, macrophage, and megakaryocyte",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "multipotential myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "myeloid stem cell",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      }, {
+        "name" : "pluripotent stem cell (bone marrow)",
+        "scope" : "hasRelatedSynonym",
+        "type" : null,
+        "xrefs" : [ {
+          "database" : "ISBN",
+          "id" : "0878932437",
+          "description" : null,
+          "url" : "https://www.worldcat.org/search?q=bn%3A0878932437"
+        } ]
+      } ],
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/xpo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000049/graph"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://www.ebi.ac.uk/ols4/api/terms?iri=http%3A//purl.obolibrary.org/obo/CL_0000049&page=0&size=1000"
+    }
+  },
+  "page" : {
+    "size" : 1000,
+    "totalElements" : 26,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}

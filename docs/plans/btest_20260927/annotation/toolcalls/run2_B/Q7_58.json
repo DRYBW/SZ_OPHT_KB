@@ -1,0 +1,147 @@
+[
+ {
+  "ts": "2026-09-27T16:29:46.658679+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "Calb2",
+    "Sncg",
+    "Galntl6",
+    "Nrn1",
+    "Tac1",
+    "Thy1",
+    "Stmn2",
+    "Pvalb",
+    "Lingo2",
+    "Atp1b1",
+    "Pex5l",
+    "Tppp3",
+    "Sgcz",
+    "Cplx2",
+    "Chrm3",
+    "Cntnap2",
+    "Trpm3",
+    "Cpne4",
+    "Nefm"
+   ]
+  },
+  "executed": true,
+  "result_chars": 7115
+ },
+ {
+  "ts": "2026-09-27T16:29:46.673224+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "RGC"
+  },
+  "executed": true,
+  "result_chars": 3639
+ },
+ {
+  "ts": "2026-09-27T16:29:46.686874+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "AC"
+  },
+  "executed": true,
+  "result_chars": 3636
+ },
+ {
+  "ts": "2026-09-27T16:29:55.038145+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "Sncg Thy1 Calb2 RGC marker mouse retina single cell",
+   "cell_type": "RGC",
+   "species": "mouse",
+   "tissue": "retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T16:29:55.919398+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "Calb2 Sncg amacrine cell vs RGC mouse retina",
+   "cell_type": "AC",
+   "species": "mouse",
+   "tissue": "retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T16:30:13.876557+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "Sncg Calb2 retinal ganglion cell subtype marker single cell RNA-seq mouse",
+   "species": "mouse",
+   "tissue": "retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T16:30:16.412280+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "Calb2 Sncg Nrn1 Tac1 amacrine cell marker mouse retina scRNA-seq",
+   "species": "mouse",
+   "tissue": "retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T16:30:18.799370+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "Sncg Calb2 Nrn1 Tac1 Pvalb amacrine cell subtype GABAergic mouse retina single cell",
+   "species": "mouse",
+   "tissue": "retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T16:30:21.495024+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "Sncg-expressing amacrine cells Calb2 Nrn1 mouse retina scRNA-seq cluster annotation",
+   "species": "mouse",
+   "tissue": "retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T16:30:24.778968+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "Sncg Calb2 Nrn1 Tac1 Pvalb retinal ganglion cell vs amacrine cell transcriptomic signature mouse",
+   "species": "mouse",
+   "tissue": "retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T16:30:58.565157+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "Rbpms Pou4f2 Slc17a6 RGC marker absent Calb2 Sncg amacrine vs RGC distinction retina",
+   "species": "mouse",
+   "tissue": "retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ }
+]

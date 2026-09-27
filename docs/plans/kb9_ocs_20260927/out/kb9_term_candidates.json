@@ -1,0 +1,2558 @@
+{
+ "Melanocyte": {
+  "pool_cells": 7209,
+  "parents": [
+   "Melanocytes"
+  ],
+  "lfc_fire_pass_genes": [
+   {
+    "gene": "TRPM1",
+    "cpm": 1550.1,
+    "det": 0.83,
+    "min_lfc_fire": 8.797,
+    "min_donor_cons": 1.0,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "MLANA",
+    "cpm": 1944.9,
+    "det": 0.927,
+    "min_lfc_fire": 8.705,
+    "min_donor_cons": 1.0,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "TYRP1",
+    "cpm": 6041.2,
+    "det": 0.927,
+    "min_lfc_fire": 8.679,
+    "min_donor_cons": 1.0,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "PMEL",
+    "cpm": 4563.8,
+    "det": 0.944,
+    "min_lfc_fire": 8.405,
+    "min_donor_cons": 1.0,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "DCT",
+    "cpm": 4382.3,
+    "det": 0.893,
+    "min_lfc_fire": 8.325,
+    "min_donor_cons": 1.0,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "TYR",
+    "cpm": 669.3,
+    "det": 0.697,
+    "min_lfc_fire": 7.605,
+    "min_donor_cons": 1.0,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "GAPDHS",
+    "cpm": 265.4,
+    "det": 0.533,
+    "min_lfc_fire": 7.37,
+    "min_donor_cons": 0.971,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "GPR143",
+    "cpm": 328.8,
+    "det": 0.64,
+    "min_lfc_fire": 6.714,
+    "min_donor_cons": 1.0,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "GALNTL6",
+    "cpm": 301.1,
+    "det": 0.422,
+    "min_lfc_fire": 6.521,
+    "min_donor_cons": 1.0,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "SLC24A5",
+    "cpm": 108.4,
+    "det": 0.337,
+    "min_lfc_fire": 6.28,
+    "min_donor_cons": 0.971,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "BCAN",
+    "cpm": 161.5,
+    "det": 0.437,
+    "min_lfc_fire": 6.226,
+    "min_donor_cons": 1.0,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "ABCB5",
+    "cpm": 185.3,
+    "det": 0.279,
+    "min_lfc_fire": 6.066,
+    "min_donor_cons": 0.912,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "GMPR",
+    "cpm": 430.2,
+    "det": 0.679,
+    "min_lfc_fire": 5.306,
+    "min_donor_cons": 1.0,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "SLC6A15",
+    "cpm": 190.6,
+    "det": 0.49,
+    "min_lfc_fire": 5.271,
+    "min_donor_cons": 0.976,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "DNAI3",
+    "cpm": 300.5,
+    "det": 0.49,
+    "min_lfc_fire": 5.095,
+    "min_donor_cons": 0.957,
+    "donor_valid": 46,
+    "cons_pass": true
+   },
+   {
+    "gene": "CAPN3",
+    "cpm": 673.3,
+    "det": 0.724,
+    "min_lfc_fire": 5.088,
+    "min_donor_cons": 1.0,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "CHCHD6",
+    "cpm": 552.9,
+    "det": 0.671,
+    "min_lfc_fire": 4.895,
+    "min_donor_cons": 1.0,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "TRIM63",
+    "cpm": 130.3,
+    "det": 0.369,
+    "min_lfc_fire": 4.6,
+    "min_donor_cons": 1.0,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "OCA2",
+    "cpm": 481.4,
+    "det": 0.514,
+    "min_lfc_fire": 4.415,
+    "min_donor_cons": 0.905,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "MCOLN3",
+    "cpm": 121.5,
+    "det": 0.375,
+    "min_lfc_fire": 4.4,
+    "min_donor_cons": 0.905,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "ALX1",
+    "cpm": 91.1,
+    "det": 0.329,
+    "min_lfc_fire": 4.033,
+    "min_donor_cons": 0.952,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "CITED1",
+    "cpm": 195.0,
+    "det": 0.256,
+    "min_lfc_fire": 4.012,
+    "min_donor_cons": 0.857,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "ROPN1B",
+    "cpm": 98.0,
+    "det": 0.34,
+    "min_lfc_fire": 4.011,
+    "min_donor_cons": 0.943,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "MFSD12",
+    "cpm": 708.6,
+    "det": 0.61,
+    "min_lfc_fire": 3.875,
+    "min_donor_cons": 0.848,
+    "donor_valid": 46,
+    "cons_pass": true
+   },
+   {
+    "gene": "QPCT",
+    "cpm": 863.4,
+    "det": 0.731,
+    "min_lfc_fire": 3.74,
+    "min_donor_cons": 1.0,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "CYB561A3",
+    "cpm": 377.6,
+    "det": 0.509,
+    "min_lfc_fire": 3.64,
+    "min_donor_cons": 0.881,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "CABLES1",
+    "cpm": 370.9,
+    "det": 0.612,
+    "min_lfc_fire": 3.624,
+    "min_donor_cons": 0.971,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "MLPH",
+    "cpm": 218.7,
+    "det": 0.555,
+    "min_lfc_fire": 3.435,
+    "min_donor_cons": 0.953,
+    "donor_valid": 43,
+    "cons_pass": true
+   },
+   {
+    "gene": "MITF",
+    "cpm": 820.8,
+    "det": 0.76,
+    "min_lfc_fire": 3.32,
+    "min_donor_cons": 0.978,
+    "donor_valid": 46,
+    "cons_pass": true
+   },
+   {
+    "gene": "APOE",
+    "cpm": 3685.0,
+    "det": 0.877,
+    "min_lfc_fire": 3.131,
+    "min_donor_cons": 0.921,
+    "donor_valid": 38,
+    "cons_pass": true
+   },
+   {
+    "gene": "LZTS1",
+    "cpm": 125.4,
+    "det": 0.411,
+    "min_lfc_fire": 3.126,
+    "min_donor_cons": 0.974,
+    "donor_valid": 38,
+    "cons_pass": true
+   },
+   {
+    "gene": "CCL28",
+    "cpm": 63.9,
+    "det": 0.255,
+    "min_lfc_fire": 3.11,
+    "min_donor_cons": 0.914,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "TFAP2A",
+    "cpm": 508.4,
+    "det": 0.677,
+    "min_lfc_fire": 3.004,
+    "min_donor_cons": 0.953,
+    "donor_valid": 43,
+    "cons_pass": true
+   },
+   {
+    "gene": "SMC6",
+    "cpm": 283.8,
+    "det": 0.579,
+    "min_lfc_fire": 3.002,
+    "min_donor_cons": 0.971,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "OSTM1",
+    "cpm": 377.4,
+    "det": 0.653,
+    "min_lfc_fire": 2.956,
+    "min_donor_cons": 0.943,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "ST8SIA6",
+    "cpm": 203.3,
+    "det": 0.431,
+    "min_lfc_fire": 2.944,
+    "min_donor_cons": 0.822,
+    "donor_valid": 45,
+    "cons_pass": true
+   },
+   {
+    "gene": "GCNT2",
+    "cpm": 358.1,
+    "det": 0.594,
+    "min_lfc_fire": 2.933,
+    "min_donor_cons": 0.889,
+    "donor_valid": 45,
+    "cons_pass": true
+   },
+   {
+    "gene": "ZNF749",
+    "cpm": 128.3,
+    "det": 0.346,
+    "min_lfc_fire": 2.921,
+    "min_donor_cons": 0.911,
+    "donor_valid": 45,
+    "cons_pass": true
+   },
+   {
+    "gene": "DSTYK",
+    "cpm": 327.6,
+    "det": 0.559,
+    "min_lfc_fire": 2.913,
+    "min_donor_cons": 0.857,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "TRIB2",
+    "cpm": 205.5,
+    "det": 0.508,
+    "min_lfc_fire": 2.84,
+    "min_donor_cons": 0.921,
+    "donor_valid": 38,
+    "cons_pass": true
+   },
+   {
+    "gene": "SGCD",
+    "cpm": 381.7,
+    "det": 0.6,
+    "min_lfc_fire": 2.766,
+    "min_donor_cons": 0.882,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "KIT",
+    "cpm": 271.9,
+    "det": 0.518,
+    "min_lfc_fire": 2.758,
+    "min_donor_cons": 0.933,
+    "donor_valid": 45,
+    "cons_pass": true
+   },
+   {
+    "gene": "VEPH1",
+    "cpm": 95.3,
+    "det": 0.252,
+    "min_lfc_fire": 2.757,
+    "min_donor_cons": 0.833,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "SLC1A4",
+    "cpm": 171.9,
+    "det": 0.419,
+    "min_lfc_fire": 2.692,
+    "min_donor_cons": 0.826,
+    "donor_valid": 46,
+    "cons_pass": true
+   },
+   {
+    "gene": "TBC1D16",
+    "cpm": 198.8,
+    "det": 0.492,
+    "min_lfc_fire": 2.663,
+    "min_donor_cons": 0.857,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "PLEKHA5",
+    "cpm": 1367.4,
+    "det": 0.893,
+    "min_lfc_fire": 2.641,
+    "min_donor_cons": 1.0,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "CDK2",
+    "cpm": 134.6,
+    "det": 0.424,
+    "min_lfc_fire": 2.629,
+    "min_donor_cons": 0.971,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "SLC6A17",
+    "cpm": 82.8,
+    "det": 0.274,
+    "min_lfc_fire": 2.617,
+    "min_donor_cons": 0.947,
+    "donor_valid": 38,
+    "cons_pass": true
+   },
+   {
+    "gene": "MRPL44",
+    "cpm": 181.8,
+    "det": 0.427,
+    "min_lfc_fire": 2.606,
+    "min_donor_cons": 0.914,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "MYO5A",
+    "cpm": 702.4,
+    "det": 0.774,
+    "min_lfc_fire": 2.602,
+    "min_donor_cons": 0.935,
+    "donor_valid": 46,
+    "cons_pass": true
+   },
+   {
+    "gene": "CYGB",
+    "cpm": 276.0,
+    "det": 0.545,
+    "min_lfc_fire": 2.509,
+    "min_donor_cons": 0.778,
+    "donor_valid": 45,
+    "cons_pass": true
+   },
+   {
+    "gene": "ST3GAL4",
+    "cpm": 432.0,
+    "det": 0.7,
+    "min_lfc_fire": 2.495,
+    "min_donor_cons": 0.93,
+    "donor_valid": 43,
+    "cons_pass": true
+   },
+   {
+    "gene": "RB1",
+    "cpm": 824.4,
+    "det": 0.733,
+    "min_lfc_fire": 2.487,
+    "min_donor_cons": 0.844,
+    "donor_valid": 45,
+    "cons_pass": true
+   },
+   {
+    "gene": "FMN1",
+    "cpm": 1254.6,
+    "det": 0.83,
+    "min_lfc_fire": 2.438,
+    "min_donor_cons": 0.957,
+    "donor_valid": 46,
+    "cons_pass": true
+   },
+   {
+    "gene": "HPS4",
+    "cpm": 94.9,
+    "det": 0.326,
+    "min_lfc_fire": 2.397,
+    "min_donor_cons": 0.857,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "C19ORF12",
+    "cpm": 140.1,
+    "det": 0.389,
+    "min_lfc_fire": 2.378,
+    "min_donor_cons": 0.882,
+    "donor_valid": 34,
+    "cons_pass": true
+   },
+   {
+    "gene": "PLXNC1",
+    "cpm": 402.8,
+    "det": 0.659,
+    "min_lfc_fire": 2.37,
+    "min_donor_cons": 0.891,
+    "donor_valid": 46,
+    "cons_pass": true
+   },
+   {
+    "gene": "STXBP6",
+    "cpm": 98.1,
+    "det": 0.33,
+    "min_lfc_fire": 2.245,
+    "min_donor_cons": 0.778,
+    "donor_valid": 45,
+    "cons_pass": true
+   },
+   {
+    "gene": "RAB32",
+    "cpm": 585.5,
+    "det": 0.665,
+    "min_lfc_fire": 2.238,
+    "min_donor_cons": 0.857,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "ILVBL",
+    "cpm": 180.5,
+    "det": 0.482,
+    "min_lfc_fire": 2.238,
+    "min_donor_cons": 0.907,
+    "donor_valid": 43,
+    "cons_pass": true
+   }
+  ],
+  "core": [
+   "TRPM1",
+   "MLANA",
+   "TYRP1",
+   "PMEL",
+   "DCT",
+   "TYR",
+   "GAPDHS",
+   "GPR143",
+   "GALNTL6",
+   "SLC24A5",
+   "BCAN",
+   "ABCB5",
+   "GMPR",
+   "SLC6A15",
+   "DNAI3",
+   "CAPN3",
+   "CHCHD6",
+   "TRIM63",
+   "OCA2",
+   "MCOLN3",
+   "ALX1",
+   "CITED1",
+   "ROPN1B",
+   "MFSD12",
+   "QPCT",
+   "CYB561A3",
+   "CABLES1",
+   "MLPH",
+   "MITF",
+   "APOE",
+   "LZTS1",
+   "CCL28",
+   "TFAP2A",
+   "SMC6",
+   "OSTM1",
+   "ST8SIA6",
+   "GCNT2",
+   "ZNF749",
+   "DSTYK",
+   "TRIB2",
+   "SGCD",
+   "KIT",
+   "VEPH1",
+   "SLC1A4",
+   "TBC1D16",
+   "PLEKHA5",
+   "CDK2",
+   "SLC6A17",
+   "MRPL44",
+   "MYO5A",
+   "CYGB",
+   "ST3GAL4",
+   "RB1",
+   "FMN1",
+   "HPS4",
+   "C19ORF12",
+   "PLXNC1",
+   "STXBP6",
+   "RAB32",
+   "ILVBL"
+  ]
+ },
+ "Schwann": {
+  "pool_cells": 6059,
+  "parents": [
+   "Schwann"
+  ],
+  "lfc_fire_pass_genes": [
+   {
+    "gene": "XKR4",
+    "cpm": 756.5,
+    "det": 0.525,
+    "min_lfc_fire": 7.702,
+    "min_donor_cons": 0.952,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "MPZ",
+    "cpm": 800.1,
+    "det": 0.447,
+    "min_lfc_fire": 6.985,
+    "min_donor_cons": 0.957,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "SCN7A",
+    "cpm": 1144.9,
+    "det": 0.695,
+    "min_lfc_fire": 6.677,
+    "min_donor_cons": 1.0,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "SOX2",
+    "cpm": 207.8,
+    "det": 0.316,
+    "min_lfc_fire": 6.508,
+    "min_donor_cons": 0.976,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "FRMD5",
+    "cpm": 746.0,
+    "det": 0.511,
+    "min_lfc_fire": 6.373,
+    "min_donor_cons": 1.0,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "NRXN1",
+    "cpm": 2643.5,
+    "det": 0.826,
+    "min_lfc_fire": 6.009,
+    "min_donor_cons": 1.0,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "MYOT",
+    "cpm": 131.4,
+    "det": 0.25,
+    "min_lfc_fire": 5.445,
+    "min_donor_cons": 0.976,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "NRXN3",
+    "cpm": 721.5,
+    "det": 0.637,
+    "min_lfc_fire": 5.443,
+    "min_donor_cons": 1.0,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "NTM",
+    "cpm": 418.0,
+    "det": 0.42,
+    "min_lfc_fire": 5.261,
+    "min_donor_cons": 0.936,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "COL28A1",
+    "cpm": 267.6,
+    "det": 0.406,
+    "min_lfc_fire": 5.102,
+    "min_donor_cons": 0.976,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "GRIK2",
+    "cpm": 498.0,
+    "det": 0.485,
+    "min_lfc_fire": 5.079,
+    "min_donor_cons": 0.929,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "CADM2",
+    "cpm": 1022.6,
+    "det": 0.7,
+    "min_lfc_fire": 4.708,
+    "min_donor_cons": 1.0,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "SHC4",
+    "cpm": 191.1,
+    "det": 0.31,
+    "min_lfc_fire": 4.452,
+    "min_donor_cons": 0.971,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "EGFL8",
+    "cpm": 313.4,
+    "det": 0.359,
+    "min_lfc_fire": 4.134,
+    "min_donor_cons": 0.936,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "PPP2R2B",
+    "cpm": 395.3,
+    "det": 0.412,
+    "min_lfc_fire": 4.094,
+    "min_donor_cons": 0.915,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "LRRC4C",
+    "cpm": 176.3,
+    "det": 0.293,
+    "min_lfc_fire": 3.999,
+    "min_donor_cons": 0.979,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "KCNMB4",
+    "cpm": 370.0,
+    "det": 0.502,
+    "min_lfc_fire": 3.942,
+    "min_donor_cons": 0.952,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "SCN9A",
+    "cpm": 156.5,
+    "det": 0.303,
+    "min_lfc_fire": 3.895,
+    "min_donor_cons": 0.979,
+    "donor_valid": 48,
+    "cons_pass": true
+   },
+   {
+    "gene": "ART3",
+    "cpm": 129.4,
+    "det": 0.25,
+    "min_lfc_fire": 3.879,
+    "min_donor_cons": 0.952,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "ASTN2",
+    "cpm": 185.1,
+    "det": 0.302,
+    "min_lfc_fire": 3.805,
+    "min_donor_cons": 0.957,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "CDH19",
+    "cpm": 2815.3,
+    "det": 0.913,
+    "min_lfc_fire": 3.727,
+    "min_donor_cons": 1.0,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "TMOD2",
+    "cpm": 161.3,
+    "det": 0.306,
+    "min_lfc_fire": 3.694,
+    "min_donor_cons": 0.896,
+    "donor_valid": 48,
+    "cons_pass": true
+   },
+   {
+    "gene": "RELN",
+    "cpm": 262.3,
+    "det": 0.353,
+    "min_lfc_fire": 3.526,
+    "min_donor_cons": 0.917,
+    "donor_valid": 48,
+    "cons_pass": true
+   },
+   {
+    "gene": "NEGR1",
+    "cpm": 427.2,
+    "det": 0.428,
+    "min_lfc_fire": 3.464,
+    "min_donor_cons": 0.936,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "IL1RAPL1",
+    "cpm": 351.2,
+    "det": 0.426,
+    "min_lfc_fire": 3.323,
+    "min_donor_cons": 0.943,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "SORCS1",
+    "cpm": 901.6,
+    "det": 0.705,
+    "min_lfc_fire": 3.313,
+    "min_donor_cons": 0.943,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "FOXD3",
+    "cpm": 132.8,
+    "det": 0.253,
+    "min_lfc_fire": 3.248,
+    "min_donor_cons": 0.976,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "NKAIN3",
+    "cpm": 237.8,
+    "det": 0.342,
+    "min_lfc_fire": 3.241,
+    "min_donor_cons": 0.8,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "COL9A3",
+    "cpm": 117.0,
+    "det": 0.267,
+    "min_lfc_fire": 3.183,
+    "min_donor_cons": 0.979,
+    "donor_valid": 48,
+    "cons_pass": true
+   },
+   {
+    "gene": "NCAM2",
+    "cpm": 786.9,
+    "det": 0.625,
+    "min_lfc_fire": 3.165,
+    "min_donor_cons": 0.971,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "SAMHD1",
+    "cpm": 346.8,
+    "det": 0.49,
+    "min_lfc_fire": 3.158,
+    "min_donor_cons": 0.851,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "TMEM176B",
+    "cpm": 443.2,
+    "det": 0.486,
+    "min_lfc_fire": 2.979,
+    "min_donor_cons": 0.872,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "ANK3",
+    "cpm": 701.8,
+    "det": 0.63,
+    "min_lfc_fire": 2.972,
+    "min_donor_cons": 0.936,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "EHBP1",
+    "cpm": 657.3,
+    "det": 0.607,
+    "min_lfc_fire": 2.893,
+    "min_donor_cons": 0.929,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "TMEM176A",
+    "cpm": 266.8,
+    "det": 0.375,
+    "min_lfc_fire": 2.888,
+    "min_donor_cons": 0.723,
+    "donor_valid": 47,
+    "cons_pass": false
+   },
+   {
+    "gene": "STARD13",
+    "cpm": 1020.7,
+    "det": 0.719,
+    "min_lfc_fire": 2.837,
+    "min_donor_cons": 0.979,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "LGI4",
+    "cpm": 430.4,
+    "det": 0.515,
+    "min_lfc_fire": 2.772,
+    "min_donor_cons": 0.851,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "ADGRB3",
+    "cpm": 1087.4,
+    "det": 0.653,
+    "min_lfc_fire": 2.75,
+    "min_donor_cons": 0.851,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "SEMA3B",
+    "cpm": 278.9,
+    "det": 0.475,
+    "min_lfc_fire": 2.611,
+    "min_donor_cons": 0.857,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "MATN2",
+    "cpm": 198.8,
+    "det": 0.332,
+    "min_lfc_fire": 2.595,
+    "min_donor_cons": 0.881,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "AATK",
+    "cpm": 126.4,
+    "det": 0.253,
+    "min_lfc_fire": 2.563,
+    "min_donor_cons": 0.881,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "CHL1",
+    "cpm": 486.2,
+    "det": 0.576,
+    "min_lfc_fire": 2.522,
+    "min_donor_cons": 0.881,
+    "donor_valid": 42,
+    "cons_pass": true
+   },
+   {
+    "gene": "CADM1",
+    "cpm": 655.6,
+    "det": 0.656,
+    "min_lfc_fire": 2.507,
+    "min_donor_cons": 0.957,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "VWA1",
+    "cpm": 338.4,
+    "det": 0.445,
+    "min_lfc_fire": 2.483,
+    "min_donor_cons": 0.812,
+    "donor_valid": 48,
+    "cons_pass": true
+   },
+   {
+    "gene": "SPATA13",
+    "cpm": 269.1,
+    "det": 0.392,
+    "min_lfc_fire": 2.451,
+    "min_donor_cons": 0.872,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "PTPRZ1",
+    "cpm": 279.0,
+    "det": 0.396,
+    "min_lfc_fire": 2.43,
+    "min_donor_cons": 0.857,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "FIGN",
+    "cpm": 246.4,
+    "det": 0.386,
+    "min_lfc_fire": 2.406,
+    "min_donor_cons": 0.914,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "S100B",
+    "cpm": 1087.3,
+    "det": 0.625,
+    "min_lfc_fire": 2.376,
+    "min_donor_cons": 0.914,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "SCCPDH",
+    "cpm": 170.2,
+    "det": 0.333,
+    "min_lfc_fire": 2.374,
+    "min_donor_cons": 0.957,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "ZNF536",
+    "cpm": 228.4,
+    "det": 0.388,
+    "min_lfc_fire": 2.351,
+    "min_donor_cons": 0.894,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "MARCHF1",
+    "cpm": 310.0,
+    "det": 0.308,
+    "min_lfc_fire": 2.286,
+    "min_donor_cons": 0.66,
+    "donor_valid": 47,
+    "cons_pass": false
+   },
+   {
+    "gene": "RASSF4",
+    "cpm": 168.3,
+    "det": 0.316,
+    "min_lfc_fire": 2.198,
+    "min_donor_cons": 0.872,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "NKAIN2",
+    "cpm": 226.7,
+    "det": 0.283,
+    "min_lfc_fire": 2.179,
+    "min_donor_cons": 0.714,
+    "donor_valid": 42,
+    "cons_pass": false
+   },
+   {
+    "gene": "HSPA12A",
+    "cpm": 243.4,
+    "det": 0.433,
+    "min_lfc_fire": 2.146,
+    "min_donor_cons": 0.686,
+    "donor_valid": 35,
+    "cons_pass": false
+   },
+   {
+    "gene": "SIPA1L2",
+    "cpm": 255.5,
+    "det": 0.418,
+    "min_lfc_fire": 2.103,
+    "min_donor_cons": 0.643,
+    "donor_valid": 42,
+    "cons_pass": false
+   },
+   {
+    "gene": "ABCA8",
+    "cpm": 282.9,
+    "det": 0.406,
+    "min_lfc_fire": 2.077,
+    "min_donor_cons": 0.468,
+    "donor_valid": 47,
+    "cons_pass": false
+   },
+   {
+    "gene": "IL1RAP",
+    "cpm": 231.4,
+    "det": 0.294,
+    "min_lfc_fire": 2.067,
+    "min_donor_cons": 0.723,
+    "donor_valid": 47,
+    "cons_pass": false
+   },
+   {
+    "gene": "NDRG2",
+    "cpm": 268.1,
+    "det": 0.429,
+    "min_lfc_fire": 2.051,
+    "min_donor_cons": 0.766,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "DAG1",
+    "cpm": 160.0,
+    "det": 0.316,
+    "min_lfc_fire": 2.043,
+    "min_donor_cons": 0.857,
+    "donor_valid": 35,
+    "cons_pass": true
+   },
+   {
+    "gene": "CTNNA3",
+    "cpm": 258.2,
+    "det": 0.295,
+    "min_lfc_fire": 2.025,
+    "min_donor_cons": 0.681,
+    "donor_valid": 47,
+    "cons_pass": false
+   }
+  ],
+  "core": [
+   "XKR4",
+   "MPZ",
+   "SCN7A",
+   "SOX2",
+   "FRMD5",
+   "NRXN1",
+   "MYOT",
+   "NRXN3",
+   "NTM",
+   "COL28A1",
+   "GRIK2",
+   "CADM2",
+   "SHC4",
+   "EGFL8",
+   "PPP2R2B",
+   "LRRC4C",
+   "KCNMB4",
+   "SCN9A",
+   "ART3",
+   "ASTN2",
+   "CDH19",
+   "TMOD2",
+   "RELN",
+   "NEGR1",
+   "IL1RAPL1",
+   "SORCS1",
+   "FOXD3",
+   "NKAIN3",
+   "COL9A3",
+   "NCAM2",
+   "SAMHD1",
+   "TMEM176B",
+   "ANK3",
+   "EHBP1",
+   "STARD13",
+   "LGI4",
+   "ADGRB3",
+   "SEMA3B",
+   "MATN2",
+   "AATK",
+   "CHL1",
+   "CADM1",
+   "VWA1",
+   "SPATA13",
+   "PTPRZ1",
+   "FIGN",
+   "S100B",
+   "SCCPDH",
+   "ZNF536",
+   "RASSF4",
+   "NDRG2",
+   "DAG1"
+  ]
+ },
+ "Conj_suprabasal": {
+  "pool_cells": 7264,
+  "parents": [
+   "Epithelium"
+  ],
+  "lfc_fire_pass_genes": [
+   {
+    "gene": "SLURP2",
+    "cpm": 355.4,
+    "det": 0.394,
+    "min_lfc_fire": 4.384,
+    "min_donor_cons": 0.688,
+    "donor_valid": 16,
+    "cons_pass": false
+   },
+   {
+    "gene": "KRTDAP",
+    "cpm": 110.5,
+    "det": 0.283,
+    "min_lfc_fire": 2.161,
+    "min_donor_cons": 0.625,
+    "donor_valid": 16,
+    "cons_pass": false
+   },
+   {
+    "gene": "S100A8",
+    "cpm": 19161.1,
+    "det": 0.751,
+    "min_lfc_fire": 2.144,
+    "min_donor_cons": 0.824,
+    "donor_valid": 17,
+    "cons_pass": true
+   },
+   {
+    "gene": "KLK12",
+    "cpm": 71.5,
+    "det": 0.325,
+    "min_lfc_fire": 2.142,
+    "min_donor_cons": 0.882,
+    "donor_valid": 17,
+    "cons_pass": true
+   },
+   {
+    "gene": "S100A9",
+    "cpm": 34812.4,
+    "det": 0.755,
+    "min_lfc_fire": 2.126,
+    "min_donor_cons": 0.824,
+    "donor_valid": 17,
+    "cons_pass": true
+   },
+   {
+    "gene": "SPINK5",
+    "cpm": 352.7,
+    "det": 0.623,
+    "min_lfc_fire": 2.105,
+    "min_donor_cons": 0.294,
+    "donor_valid": 17,
+    "cons_pass": false
+   },
+   {
+    "gene": "KLK13",
+    "cpm": 35.7,
+    "det": 0.295,
+    "min_lfc_fire": 2.055,
+    "min_donor_cons": 0.824,
+    "donor_valid": 17,
+    "cons_pass": true
+   },
+   {
+    "gene": "ADGRV1",
+    "cpm": 101.3,
+    "det": 0.304,
+    "min_lfc_fire": 2.03,
+    "min_donor_cons": 0.312,
+    "donor_valid": 16,
+    "cons_pass": false
+   },
+   {
+    "gene": "SPRR3",
+    "cpm": 2363.9,
+    "det": 0.396,
+    "min_lfc_fire": 2.003,
+    "min_donor_cons": 0.75,
+    "donor_valid": 16,
+    "cons_pass": true
+   },
+   {
+    "gene": "LY6D",
+    "cpm": 1109.7,
+    "det": 0.75,
+    "min_lfc_fire": 1.939,
+    "min_donor_cons": 0.5,
+    "donor_valid": 16,
+    "cons_pass": false
+   },
+   {
+    "gene": "IVL",
+    "cpm": 448.6,
+    "det": 0.589,
+    "min_lfc_fire": 1.874,
+    "min_donor_cons": 0.688,
+    "donor_valid": 16,
+    "cons_pass": false
+   },
+   {
+    "gene": "PDZK1IP1",
+    "cpm": 160.8,
+    "det": 0.553,
+    "min_lfc_fire": 1.832,
+    "min_donor_cons": 0.75,
+    "donor_valid": 16,
+    "cons_pass": true
+   },
+   {
+    "gene": "ALDH3B2",
+    "cpm": 18.7,
+    "det": 0.282,
+    "min_lfc_fire": 1.622,
+    "min_donor_cons": 0.625,
+    "donor_valid": 16,
+    "cons_pass": false
+   },
+   {
+    "gene": "RHCG",
+    "cpm": 586.2,
+    "det": 0.583,
+    "min_lfc_fire": 1.596,
+    "min_donor_cons": 0.812,
+    "donor_valid": 16,
+    "cons_pass": true
+   },
+   {
+    "gene": "KRT4",
+    "cpm": 2194.3,
+    "det": 0.491,
+    "min_lfc_fire": 1.587,
+    "min_donor_cons": 0.875,
+    "donor_valid": 16,
+    "cons_pass": true
+   },
+   {
+    "gene": "SERPINB1",
+    "cpm": 3057.5,
+    "det": 0.982,
+    "min_lfc_fire": 1.341,
+    "min_donor_cons": 0.188,
+    "donor_valid": 16,
+    "cons_pass": false
+   },
+   {
+    "gene": "CALML3",
+    "cpm": 580.2,
+    "det": 0.766,
+    "min_lfc_fire": 1.322,
+    "min_donor_cons": 0.25,
+    "donor_valid": 16,
+    "cons_pass": false
+   },
+   {
+    "gene": "OAS1",
+    "cpm": 200.3,
+    "det": 0.548,
+    "min_lfc_fire": 1.276,
+    "min_donor_cons": 0.25,
+    "donor_valid": 16,
+    "cons_pass": false
+   },
+   {
+    "gene": "LYPD2",
+    "cpm": 2208.3,
+    "det": 0.364,
+    "min_lfc_fire": 1.274,
+    "min_donor_cons": 0.5,
+    "donor_valid": 16,
+    "cons_pass": false
+   },
+   {
+    "gene": "PITX1",
+    "cpm": 588.7,
+    "det": 0.684,
+    "min_lfc_fire": 1.235,
+    "min_donor_cons": 0.75,
+    "donor_valid": 16,
+    "cons_pass": true
+   },
+   {
+    "gene": "SERPINB13",
+    "cpm": 98.4,
+    "det": 0.48,
+    "min_lfc_fire": 1.185,
+    "min_donor_cons": 0.812,
+    "donor_valid": 16,
+    "cons_pass": true
+   },
+   {
+    "gene": "CALML5",
+    "cpm": 427.0,
+    "det": 0.558,
+    "min_lfc_fire": 1.172,
+    "min_donor_cons": 0.562,
+    "donor_valid": 16,
+    "cons_pass": false
+   },
+   {
+    "gene": "KRT24",
+    "cpm": 2130.7,
+    "det": 0.716,
+    "min_lfc_fire": 1.159,
+    "min_donor_cons": 0.188,
+    "donor_valid": 16,
+    "cons_pass": false
+   },
+   {
+    "gene": "AHCY",
+    "cpm": 88.8,
+    "det": 0.698,
+    "min_lfc_fire": 1.105,
+    "min_donor_cons": 0.0,
+    "donor_valid": 17,
+    "cons_pass": false
+   },
+   {
+    "gene": "S100P",
+    "cpm": 312.9,
+    "det": 0.43,
+    "min_lfc_fire": 1.065,
+    "min_donor_cons": 0.688,
+    "donor_valid": 16,
+    "cons_pass": false
+   },
+   {
+    "gene": "JPT1",
+    "cpm": 600.2,
+    "det": 0.955,
+    "min_lfc_fire": 1.048,
+    "min_donor_cons": 0.125,
+    "donor_valid": 16,
+    "cons_pass": false
+   }
+  ],
+  "core": [
+   "S100A8",
+   "KLK12",
+   "S100A9",
+   "KLK13",
+   "SPRR3",
+   "PDZK1IP1",
+   "RHCG",
+   "KRT4",
+   "PITX1",
+   "SERPINB13"
+  ]
+ },
+ "Limbus_Fib": {
+  "pool_cells": 42132,
+  "parents": [
+   "Fibroblast-stroma"
+  ],
+  "lfc_fire_pass_genes": [
+   {
+    "gene": "NMB",
+    "cpm": 1183.1,
+    "det": 0.376,
+    "min_lfc_fire": 3.522,
+    "min_donor_cons": 0.208,
+    "donor_valid": 24,
+    "cons_pass": false
+   },
+   {
+    "gene": "MMP1",
+    "cpm": 6403.6,
+    "det": 0.472,
+    "min_lfc_fire": 2.992,
+    "min_donor_cons": 0.258,
+    "donor_valid": 31,
+    "cons_pass": false
+   },
+   {
+    "gene": "AKR1B1",
+    "cpm": 441.2,
+    "det": 0.443,
+    "min_lfc_fire": 2.176,
+    "min_donor_cons": 0.179,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "DNER",
+    "cpm": 153.8,
+    "det": 0.378,
+    "min_lfc_fire": 2.155,
+    "min_donor_cons": 0.458,
+    "donor_valid": 24,
+    "cons_pass": false
+   },
+   {
+    "gene": "MMP3",
+    "cpm": 25698.9,
+    "det": 0.75,
+    "min_lfc_fire": 2.072,
+    "min_donor_cons": 0.359,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "CYP1B1",
+    "cpm": 1163.0,
+    "det": 0.682,
+    "min_lfc_fire": 1.492,
+    "min_donor_cons": 0.29,
+    "donor_valid": 31,
+    "cons_pass": false
+   },
+   {
+    "gene": "AKR1C2",
+    "cpm": 2365.0,
+    "det": 0.62,
+    "min_lfc_fire": 1.478,
+    "min_donor_cons": 0.231,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "SERPINE2",
+    "cpm": 1667.6,
+    "det": 0.718,
+    "min_lfc_fire": 1.457,
+    "min_donor_cons": 0.355,
+    "donor_valid": 31,
+    "cons_pass": false
+   },
+   {
+    "gene": "SRXN1",
+    "cpm": 60.5,
+    "det": 0.277,
+    "min_lfc_fire": 1.434,
+    "min_donor_cons": 0.333,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "TNFRSF11B",
+    "cpm": 505.7,
+    "det": 0.47,
+    "min_lfc_fire": 1.368,
+    "min_donor_cons": 0.154,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "CEMIP",
+    "cpm": 1706.3,
+    "det": 0.464,
+    "min_lfc_fire": 1.332,
+    "min_donor_cons": 0.077,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "GSTO1",
+    "cpm": 1053.4,
+    "det": 0.821,
+    "min_lfc_fire": 1.302,
+    "min_donor_cons": 0.12,
+    "donor_valid": 25,
+    "cons_pass": false
+   },
+   {
+    "gene": "SEC22B",
+    "cpm": 204.8,
+    "det": 0.592,
+    "min_lfc_fire": 1.224,
+    "min_donor_cons": 0.167,
+    "donor_valid": 24,
+    "cons_pass": false
+   },
+   {
+    "gene": "OSGIN2",
+    "cpm": 107.2,
+    "det": 0.381,
+    "min_lfc_fire": 1.205,
+    "min_donor_cons": 0.231,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "MPC2",
+    "cpm": 415.7,
+    "det": 0.68,
+    "min_lfc_fire": 1.204,
+    "min_donor_cons": 0.167,
+    "donor_valid": 24,
+    "cons_pass": false
+   },
+   {
+    "gene": "SDF2L1",
+    "cpm": 283.1,
+    "det": 0.497,
+    "min_lfc_fire": 1.174,
+    "min_donor_cons": 0.36,
+    "donor_valid": 25,
+    "cons_pass": false
+   },
+   {
+    "gene": "LRRC59",
+    "cpm": 138.2,
+    "det": 0.524,
+    "min_lfc_fire": 1.156,
+    "min_donor_cons": 0.161,
+    "donor_valid": 31,
+    "cons_pass": false
+   },
+   {
+    "gene": "AKR1C1",
+    "cpm": 2491.3,
+    "det": 0.786,
+    "min_lfc_fire": 1.15,
+    "min_donor_cons": 0.308,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "SRPRB",
+    "cpm": 87.5,
+    "det": 0.381,
+    "min_lfc_fire": 1.124,
+    "min_donor_cons": 0.256,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "TXNRD1",
+    "cpm": 1027.4,
+    "det": 0.835,
+    "min_lfc_fire": 1.061,
+    "min_donor_cons": 0.258,
+    "donor_valid": 31,
+    "cons_pass": false
+   },
+   {
+    "gene": "CCBE1",
+    "cpm": 135.4,
+    "det": 0.32,
+    "min_lfc_fire": 1.049,
+    "min_donor_cons": 0.226,
+    "donor_valid": 31,
+    "cons_pass": false
+   },
+   {
+    "gene": "BMERB1",
+    "cpm": 368.4,
+    "det": 0.663,
+    "min_lfc_fire": 1.035,
+    "min_donor_cons": 0.032,
+    "donor_valid": 31,
+    "cons_pass": false
+   }
+  ],
+  "core": []
+ },
+ "LimScl_C1": {
+  "pool_cells": 33033,
+  "parents": [
+   "Fibroblast-stroma"
+  ],
+  "lfc_fire_pass_genes": [
+   {
+    "gene": "DPT",
+    "cpm": 200.4,
+    "det": 0.363,
+    "min_lfc_fire": 2.923,
+    "min_donor_cons": 0.871,
+    "donor_valid": 31,
+    "cons_pass": true
+   },
+   {
+    "gene": "CFD",
+    "cpm": 1753.7,
+    "det": 0.446,
+    "min_lfc_fire": 2.214,
+    "min_donor_cons": 0.66,
+    "donor_valid": 47,
+    "cons_pass": false
+   },
+   {
+    "gene": "LAMA2",
+    "cpm": 413.9,
+    "det": 0.532,
+    "min_lfc_fire": 1.745,
+    "min_donor_cons": 0.83,
+    "donor_valid": 47,
+    "cons_pass": true
+   },
+   {
+    "gene": "EFEMP1",
+    "cpm": 119.2,
+    "det": 0.271,
+    "min_lfc_fire": 1.688,
+    "min_donor_cons": 0.516,
+    "donor_valid": 31,
+    "cons_pass": false
+   },
+   {
+    "gene": "LEPR",
+    "cpm": 526.1,
+    "det": 0.589,
+    "min_lfc_fire": 1.672,
+    "min_donor_cons": 0.839,
+    "donor_valid": 56,
+    "cons_pass": true
+   },
+   {
+    "gene": "VCAN",
+    "cpm": 196.7,
+    "det": 0.388,
+    "min_lfc_fire": 1.582,
+    "min_donor_cons": 0.821,
+    "donor_valid": 56,
+    "cons_pass": true
+   },
+   {
+    "gene": "DCLK1",
+    "cpm": 142.1,
+    "det": 0.357,
+    "min_lfc_fire": 1.428,
+    "min_donor_cons": 0.612,
+    "donor_valid": 49,
+    "cons_pass": false
+   },
+   {
+    "gene": "ABCA9",
+    "cpm": 109.8,
+    "det": 0.315,
+    "min_lfc_fire": 1.344,
+    "min_donor_cons": 0.673,
+    "donor_valid": 49,
+    "cons_pass": false
+   },
+   {
+    "gene": "COL3A1",
+    "cpm": 757.8,
+    "det": 0.488,
+    "min_lfc_fire": 1.21,
+    "min_donor_cons": 0.5,
+    "donor_valid": 52,
+    "cons_pass": false
+   },
+   {
+    "gene": "SEMA3A",
+    "cpm": 211.1,
+    "det": 0.256,
+    "min_lfc_fire": 1.12,
+    "min_donor_cons": 0.581,
+    "donor_valid": 31,
+    "cons_pass": false
+   },
+   {
+    "gene": "DIO2",
+    "cpm": 282.5,
+    "det": 0.426,
+    "min_lfc_fire": 1.036,
+    "min_donor_cons": 0.477,
+    "donor_valid": 44,
+    "cons_pass": false
+   },
+   {
+    "gene": "VIT",
+    "cpm": 124.0,
+    "det": 0.359,
+    "min_lfc_fire": 1.033,
+    "min_donor_cons": 0.341,
+    "donor_valid": 44,
+    "cons_pass": false
+   }
+  ],
+  "core": [
+   "DPT",
+   "LAMA2",
+   "LEPR",
+   "VCAN"
+  ]
+ },
+ "LimScl_C2": {
+  "pool_cells": 42047,
+  "parents": [
+   "Fibroblast-stroma"
+  ],
+  "lfc_fire_pass_genes": [
+   {
+    "gene": "COL11A1",
+    "cpm": 158.3,
+    "det": 0.32,
+    "min_lfc_fire": 2.399,
+    "min_donor_cons": 0.5,
+    "donor_valid": 28,
+    "cons_pass": false
+   },
+   {
+    "gene": "CPXM1",
+    "cpm": 105.9,
+    "det": 0.278,
+    "min_lfc_fire": 2.398,
+    "min_donor_cons": 0.708,
+    "donor_valid": 24,
+    "cons_pass": false
+   },
+   {
+    "gene": "COL1A1",
+    "cpm": 5225.9,
+    "det": 0.666,
+    "min_lfc_fire": 1.873,
+    "min_donor_cons": 0.068,
+    "donor_valid": 44,
+    "cons_pass": false
+   },
+   {
+    "gene": "ANGPT1",
+    "cpm": 172.1,
+    "det": 0.435,
+    "min_lfc_fire": 1.707,
+    "min_donor_cons": 0.535,
+    "donor_valid": 43,
+    "cons_pass": false
+   },
+   {
+    "gene": "PCOLCE",
+    "cpm": 747.0,
+    "det": 0.671,
+    "min_lfc_fire": 1.698,
+    "min_donor_cons": 0.282,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "RBP4",
+    "cpm": 184.5,
+    "det": 0.374,
+    "min_lfc_fire": 1.679,
+    "min_donor_cons": 0.545,
+    "donor_valid": 44,
+    "cons_pass": false
+   },
+   {
+    "gene": "OGN",
+    "cpm": 360.2,
+    "det": 0.428,
+    "min_lfc_fire": 1.616,
+    "min_donor_cons": 0.477,
+    "donor_valid": 44,
+    "cons_pass": false
+   },
+   {
+    "gene": "CLEC11A",
+    "cpm": 253.4,
+    "det": 0.581,
+    "min_lfc_fire": 1.574,
+    "min_donor_cons": 0.41,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "COL1A2",
+    "cpm": 4090.8,
+    "det": 0.801,
+    "min_lfc_fire": 1.533,
+    "min_donor_cons": 0.051,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "HAAO",
+    "cpm": 67.7,
+    "det": 0.263,
+    "min_lfc_fire": 1.481,
+    "min_donor_cons": 0.5,
+    "donor_valid": 44,
+    "cons_pass": false
+   },
+   {
+    "gene": "EIF2B3",
+    "cpm": 143.6,
+    "det": 0.252,
+    "min_lfc_fire": 1.394,
+    "min_donor_cons": 0.205,
+    "donor_valid": 44,
+    "cons_pass": false
+   },
+   {
+    "gene": "CHPF",
+    "cpm": 115.6,
+    "det": 0.374,
+    "min_lfc_fire": 1.325,
+    "min_donor_cons": 0.077,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "MYH10",
+    "cpm": 227.3,
+    "det": 0.463,
+    "min_lfc_fire": 1.325,
+    "min_donor_cons": 0.318,
+    "donor_valid": 44,
+    "cons_pass": false
+   },
+   {
+    "gene": "CRABP1",
+    "cpm": 108.2,
+    "det": 0.293,
+    "min_lfc_fire": 1.313,
+    "min_donor_cons": 0.455,
+    "donor_valid": 44,
+    "cons_pass": false
+   },
+   {
+    "gene": "PIGH",
+    "cpm": 77.0,
+    "det": 0.307,
+    "min_lfc_fire": 1.219,
+    "min_donor_cons": 0.487,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "MRNIP",
+    "cpm": 109.6,
+    "det": 0.286,
+    "min_lfc_fire": 1.185,
+    "min_donor_cons": 0.091,
+    "donor_valid": 44,
+    "cons_pass": false
+   },
+   {
+    "gene": "COL8A2",
+    "cpm": 282.9,
+    "det": 0.631,
+    "min_lfc_fire": 1.174,
+    "min_donor_cons": 0.256,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "PRELP",
+    "cpm": 1045.7,
+    "det": 0.867,
+    "min_lfc_fire": 1.137,
+    "min_donor_cons": 0.477,
+    "donor_valid": 44,
+    "cons_pass": false
+   },
+   {
+    "gene": "PDZRN4",
+    "cpm": 129.4,
+    "det": 0.303,
+    "min_lfc_fire": 1.128,
+    "min_donor_cons": 0.568,
+    "donor_valid": 44,
+    "cons_pass": false
+   },
+   {
+    "gene": "COPZ2",
+    "cpm": 181.4,
+    "det": 0.483,
+    "min_lfc_fire": 1.1,
+    "min_donor_cons": 0.128,
+    "donor_valid": 39,
+    "cons_pass": false
+   },
+   {
+    "gene": "COL8A1",
+    "cpm": 516.9,
+    "det": 0.696,
+    "min_lfc_fire": 1.063,
+    "min_donor_cons": 0.359,
+    "donor_valid": 39,
+    "cons_pass": false
+   }
+  ],
+  "core": []
+ },
+ "Sclera_Fib": {
+  "pool_cells": 9288,
+  "parents": [
+   "Fibroblast-stroma"
+  ],
+  "lfc_fire_pass_genes": [
+   {
+    "gene": "SLC9B1",
+    "cpm": 176.5,
+    "det": 0.25,
+    "min_lfc_fire": 3.327,
+    "min_donor_cons": 0.333,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "FAT1",
+    "cpm": 1458.8,
+    "det": 0.775,
+    "min_lfc_fire": 3.201,
+    "min_donor_cons": 0.444,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "HIVEP3",
+    "cpm": 701.0,
+    "det": 0.641,
+    "min_lfc_fire": 3.151,
+    "min_donor_cons": 0.222,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "FGGY",
+    "cpm": 537.3,
+    "det": 0.487,
+    "min_lfc_fire": 2.939,
+    "min_donor_cons": 0.333,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "BDKRB1",
+    "cpm": 269.4,
+    "det": 0.354,
+    "min_lfc_fire": 2.793,
+    "min_donor_cons": 0.375,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "H2BC11",
+    "cpm": 470.1,
+    "det": 0.585,
+    "min_lfc_fire": 2.276,
+    "min_donor_cons": 0.125,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "CGNL1",
+    "cpm": 246.4,
+    "det": 0.521,
+    "min_lfc_fire": 2.266,
+    "min_donor_cons": 0.111,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "TMEM63B",
+    "cpm": 151.1,
+    "det": 0.452,
+    "min_lfc_fire": 2.222,
+    "min_donor_cons": 0.0,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "FOXC2",
+    "cpm": 417.0,
+    "det": 0.458,
+    "min_lfc_fire": 2.131,
+    "min_donor_cons": 0.444,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "LRRC49",
+    "cpm": 490.7,
+    "det": 0.603,
+    "min_lfc_fire": 2.07,
+    "min_donor_cons": 0.111,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "SLC25A37",
+    "cpm": 558.0,
+    "det": 0.631,
+    "min_lfc_fire": 2.059,
+    "min_donor_cons": 0.111,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "MED27",
+    "cpm": 193.7,
+    "det": 0.254,
+    "min_lfc_fire": 2.045,
+    "min_donor_cons": 0.125,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "SGSM1",
+    "cpm": 108.3,
+    "det": 0.265,
+    "min_lfc_fire": 1.856,
+    "min_donor_cons": 0.111,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "ARC",
+    "cpm": 265.6,
+    "det": 0.266,
+    "min_lfc_fire": 1.729,
+    "min_donor_cons": 0.333,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "H2BC5",
+    "cpm": 185.7,
+    "det": 0.332,
+    "min_lfc_fire": 1.675,
+    "min_donor_cons": 0.167,
+    "donor_valid": 6,
+    "cons_pass": false
+   },
+   {
+    "gene": "FMNL2",
+    "cpm": 1558.8,
+    "det": 0.879,
+    "min_lfc_fire": 1.654,
+    "min_donor_cons": 0.375,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "CACNA1A",
+    "cpm": 195.2,
+    "det": 0.369,
+    "min_lfc_fire": 1.652,
+    "min_donor_cons": 0.25,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "CXCL2",
+    "cpm": 6743.6,
+    "det": 0.858,
+    "min_lfc_fire": 1.638,
+    "min_donor_cons": 0.333,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "SLCO5A1",
+    "cpm": 94.0,
+    "det": 0.275,
+    "min_lfc_fire": 1.635,
+    "min_donor_cons": 0.222,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "PHF10",
+    "cpm": 227.2,
+    "det": 0.536,
+    "min_lfc_fire": 1.614,
+    "min_donor_cons": 0.111,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "H2BC18",
+    "cpm": 154.5,
+    "det": 0.325,
+    "min_lfc_fire": 1.612,
+    "min_donor_cons": 0.375,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "TNFAIP2",
+    "cpm": 499.1,
+    "det": 0.623,
+    "min_lfc_fire": 1.601,
+    "min_donor_cons": 0.111,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "CHI3L1",
+    "cpm": 7246.7,
+    "det": 0.799,
+    "min_lfc_fire": 1.574,
+    "min_donor_cons": 0.0,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "IGF2R",
+    "cpm": 434.5,
+    "det": 0.58,
+    "min_lfc_fire": 1.514,
+    "min_donor_cons": 0.0,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "BAIAP2",
+    "cpm": 298.3,
+    "det": 0.577,
+    "min_lfc_fire": 1.51,
+    "min_donor_cons": 0.125,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "IL6",
+    "cpm": 2779.4,
+    "det": 0.745,
+    "min_lfc_fire": 1.484,
+    "min_donor_cons": 0.111,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "LARGE1",
+    "cpm": 1026.9,
+    "det": 0.883,
+    "min_lfc_fire": 1.474,
+    "min_donor_cons": 0.0,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "GPC5",
+    "cpm": 293.9,
+    "det": 0.364,
+    "min_lfc_fire": 1.472,
+    "min_donor_cons": 0.25,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "IER3",
+    "cpm": 19488.7,
+    "det": 0.96,
+    "min_lfc_fire": 1.453,
+    "min_donor_cons": 0.25,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "HDLBP",
+    "cpm": 702.0,
+    "det": 0.819,
+    "min_lfc_fire": 1.43,
+    "min_donor_cons": 0.0,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "GFPT2",
+    "cpm": 454.3,
+    "det": 0.726,
+    "min_lfc_fire": 1.417,
+    "min_donor_cons": 0.222,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "ADNP2",
+    "cpm": 187.8,
+    "det": 0.521,
+    "min_lfc_fire": 1.396,
+    "min_donor_cons": 0.111,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "CTH",
+    "cpm": 190.6,
+    "det": 0.407,
+    "min_lfc_fire": 1.371,
+    "min_donor_cons": 0.0,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "CDH11",
+    "cpm": 759.2,
+    "det": 0.802,
+    "min_lfc_fire": 1.33,
+    "min_donor_cons": 0.0,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "CPAMD8",
+    "cpm": 275.2,
+    "det": 0.43,
+    "min_lfc_fire": 1.294,
+    "min_donor_cons": 0.111,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "CYLD",
+    "cpm": 561.0,
+    "det": 0.758,
+    "min_lfc_fire": 1.292,
+    "min_donor_cons": 0.0,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "MAFG",
+    "cpm": 307.9,
+    "det": 0.617,
+    "min_lfc_fire": 1.284,
+    "min_donor_cons": 0.0,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "PENK",
+    "cpm": 521.2,
+    "det": 0.352,
+    "min_lfc_fire": 1.283,
+    "min_donor_cons": 0.0,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "VEGFA",
+    "cpm": 429.6,
+    "det": 0.617,
+    "min_lfc_fire": 1.27,
+    "min_donor_cons": 0.0,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "SRGAP1",
+    "cpm": 464.3,
+    "det": 0.684,
+    "min_lfc_fire": 1.269,
+    "min_donor_cons": 0.0,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "SLC35F2",
+    "cpm": 106.0,
+    "det": 0.318,
+    "min_lfc_fire": 1.268,
+    "min_donor_cons": 0.444,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "INHBA",
+    "cpm": 466.6,
+    "det": 0.446,
+    "min_lfc_fire": 1.242,
+    "min_donor_cons": 0.111,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "AZIN2",
+    "cpm": 77.3,
+    "det": 0.28,
+    "min_lfc_fire": 1.238,
+    "min_donor_cons": 0.0,
+    "donor_valid": 6,
+    "cons_pass": false
+   },
+   {
+    "gene": "SLC41A2",
+    "cpm": 281.8,
+    "det": 0.537,
+    "min_lfc_fire": 1.218,
+    "min_donor_cons": 0.111,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "SDK1",
+    "cpm": 713.2,
+    "det": 0.559,
+    "min_lfc_fire": 1.203,
+    "min_donor_cons": 0.0,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "BAG3",
+    "cpm": 919.3,
+    "det": 0.728,
+    "min_lfc_fire": 1.196,
+    "min_donor_cons": 0.0,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "NOTCH2",
+    "cpm": 470.0,
+    "det": 0.697,
+    "min_lfc_fire": 1.186,
+    "min_donor_cons": 0.111,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "DYM",
+    "cpm": 441.1,
+    "det": 0.668,
+    "min_lfc_fire": 1.179,
+    "min_donor_cons": 0.111,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "TNIP1",
+    "cpm": 354.7,
+    "det": 0.558,
+    "min_lfc_fire": 1.156,
+    "min_donor_cons": 0.0,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "USP13",
+    "cpm": 68.9,
+    "det": 0.259,
+    "min_lfc_fire": 1.151,
+    "min_donor_cons": 0.125,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "HIVEP2",
+    "cpm": 973.0,
+    "det": 0.869,
+    "min_lfc_fire": 1.111,
+    "min_donor_cons": 0.0,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "GCH1",
+    "cpm": 214.2,
+    "det": 0.524,
+    "min_lfc_fire": 1.101,
+    "min_donor_cons": 0.125,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "DENND5A",
+    "cpm": 472.2,
+    "det": 0.709,
+    "min_lfc_fire": 1.081,
+    "min_donor_cons": 0.111,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "SLC37A3",
+    "cpm": 70.1,
+    "det": 0.269,
+    "min_lfc_fire": 1.069,
+    "min_donor_cons": 0.0,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "XYLT1",
+    "cpm": 389.5,
+    "det": 0.675,
+    "min_lfc_fire": 1.064,
+    "min_donor_cons": 0.125,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "RASEF",
+    "cpm": 127.0,
+    "det": 0.342,
+    "min_lfc_fire": 1.056,
+    "min_donor_cons": 0.25,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "DYRK3",
+    "cpm": 150.2,
+    "det": 0.478,
+    "min_lfc_fire": 1.05,
+    "min_donor_cons": 0.125,
+    "donor_valid": 8,
+    "cons_pass": false
+   },
+   {
+    "gene": "FBXO32",
+    "cpm": 636.6,
+    "det": 0.581,
+    "min_lfc_fire": 1.03,
+    "min_donor_cons": 0.222,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "FGFR1",
+    "cpm": 954.5,
+    "det": 0.884,
+    "min_lfc_fire": 1.025,
+    "min_donor_cons": 0.111,
+    "donor_valid": 9,
+    "cons_pass": false
+   },
+   {
+    "gene": "NCOA5",
+    "cpm": 89.5,
+    "det": 0.326,
+    "min_lfc_fire": 1.019,
+    "min_donor_cons": 0.125,
+    "donor_valid": 8,
+    "cons_pass": false
+   }
+  ],
+  "core": []
+ },
+ "meta": {
+  "constants": {
+   "CPM_FLOOR": 5.0,
+   "LFC_T": 1.0,
+   "CONS_T": 0.75,
+   "DR": 2.0,
+   "MIND": 10,
+   "TOPN": 12,
+   "MINPOOL": 500
+  },
+  "agg": "/mnt/D/EyeKB/plans/kb6b_face_20260925/out/agg_kb6b_v1.npz",
+  "agg_prereg_sha": "22df3a2c564988fe022c144c09ee870bf313feabfa025ca7da2f7a9646fd7a1f",
+  "agg_h5_sha": "9a941bb3c29472113f6491763a2f1ee67f1d7c3508171c9959d03b34b3bff770"
+ }
+}

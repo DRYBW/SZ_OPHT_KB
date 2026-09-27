@@ -1,0 +1,284 @@
+class	gene	action	truth_fold	blocked_in_truths	note
+Rod	*	R1_drop_retina_specific			
+Cone	*	R1_drop_retina_specific			
+BC	*	R1_drop_retina_specific			
+AC	*	R1_drop_retina_specific			
+HC	*	R1_drop_retina_specific			
+RGC	*	R1_drop_retina_specific			
+MG	*	R1_drop_retina_specific			
+Astro	*	R1_drop_retina_specific			
+Micro	*	R1_drop_retina_specific			
+RPE	*	R1_drop_retina_specific			
+Endo	CLDN5	kept	Endothelium		
+Endo	PECAM1	kept	Endothelium		
+Endo	CDH5	kept	Endothelium		
+Endo	VWF	kept	Endothelium		
+Endo	TM4SF1	kept	Endothelium		
+Endo	RAMP2	kept	Endothelium		
+Endo	ESAM	kept	Endothelium		
+Endo	FLT1	kept	Endothelium		
+Endo	KDR	kept	Endothelium		
+Endo	ADGRL4	kept	Endothelium		
+Endo	ECSCR	kept	Endothelium		
+Endo	GNG11	kept	Endothelium		
+Endo	PLVAP	kept	Endothelium		
+Endo_Patho	ICAM1	R2R3_shield_block	Endothelium	Corneal Endothelium	
+Endo_Patho	PLVAP	kept	Endothelium		
+Endo_Patho	VCAM1	kept	Endothelium		
+Endo_Patho	DLL4	kept	Endothelium		
+Endo_Patho	NDUFA4L2	kept	Endothelium		
+Endo_Patho	HIF1A	kept	Endothelium		
+Pericyte	RGS5	R2R3_shield_block	Pericytes	Smooth Muscle Cells	
+Pericyte	COL1A2	R2R3_shield_block	Pericytes	Fibroblasts	
+Pericyte	MGP	R2R3_shield_block	Pericytes	Fibroblasts	
+Pericyte	RGS4	kept	Pericytes		
+Pericyte	PDGFRB	kept	Pericytes		
+Pericyte	NOTCH3	kept	Pericytes		
+Pericyte	HIGD1B	kept	Pericytes		
+Pericyte	PRRX1	kept	Pericytes		
+Pericyte	THY1	kept	Pericytes		
+Pericyte	ITGA1	kept	Pericytes		
+Pericyte	IGFBP7	kept	Pericytes		
+Pericyte	CALD1	kept	Pericytes		
+SMC	ACTA2	R2R3_shield_block	Smooth Muscle Cells	Pericytes	
+SMC	MYH11	R2R3_shield_block	Smooth Muscle Cells	Pericytes	
+SMC	TAGLN	R2R3_shield_block	Smooth Muscle Cells	Pericytes	
+SMC	MYL9	R2R3_shield_block	Smooth Muscle Cells	Pericytes	
+SMC	CNN1	kept	Smooth Muscle Cells		
+SMC	DES	kept	Smooth Muscle Cells		
+SMC	CALD1	kept	Smooth Muscle Cells		
+SMC	LMOD1	kept	Smooth Muscle Cells		
+Fibroblast	COL1A1	kept	Fibroblasts		
+Fibroblast	COL1A2	kept	Fibroblasts		
+Fibroblast	COL3A1	kept	Fibroblasts		
+Fibroblast	DCN	kept	Fibroblasts		
+Fibroblast	LUM	kept	Fibroblasts		
+Fibroblast	FBN1	kept	Fibroblasts		
+Fibroblast	FN1	kept	Fibroblasts		
+Fibroblast	PTGDS	kept	Fibroblasts		
+Fibroblast	MMP2	kept	Fibroblasts		
+Fibroblast	THY1	kept	Fibroblasts		
+Myofibroblast	ACTA2	R2R3_shield_block	Fibroblasts|Smooth Muscle Cells	Pericytes	
+Myofibroblast	TAGLN	R2R3_shield_block	Fibroblasts|Smooth Muscle Cells	Pericytes	
+Myofibroblast	MYL9	R2R3_shield_block	Fibroblasts|Smooth Muscle Cells	Pericytes	
+Myofibroblast	TPM1	R2R3_shield_block	Fibroblasts|Smooth Muscle Cells	Pericytes	
+Myofibroblast	TPM2	R2R3_shield_block	Fibroblasts|Smooth Muscle Cells	Pericytes	
+Myofibroblast	POSTN	kept	Fibroblasts|Smooth Muscle Cells		
+Myofibroblast	FN1	kept	Fibroblasts|Smooth Muscle Cells		
+Myofibroblast	COL1A1	kept	Fibroblasts|Smooth Muscle Cells		
+Myofibroblast	COL1A2	kept	Fibroblasts|Smooth Muscle Cells		
+Myofibroblast	CTHRC1	kept	Fibroblasts|Smooth Muscle Cells		
+Myofibroblast	TIMP1	kept	Fibroblasts|Smooth Muscle Cells		
+Myofibroblast	PRRX1	kept	Fibroblasts|Smooth Muscle Cells		
+Mono_Classical	S100A8	R2R3_shield_block	Immune Cells	Epithelium	
+Mono_Classical	S100A9	R2R3_shield_block	Immune Cells	Epithelium	
+Mono_Classical	FCN1	kept	Immune Cells		
+Mono_Classical	VCAN	kept	Immune Cells		
+Mono_Classical	S100A12	kept	Immune Cells		
+Mono_Classical	SELL	kept	Immune Cells		
+Mono_Classical	CD14	kept	Immune Cells		
+Mono_Classical	LYZ	kept	Immune Cells		
+Mono_Classical	MNDA	kept	Immune Cells		
+Mono_Classical	CTSS	kept	Immune Cells		
+Mono_Classical	SERPINA1	kept	Immune Cells		
+Mono_Nonclassical	FCGR3A	kept	Immune Cells		
+Mono_Nonclassical	LST1	kept	Immune Cells		
+Mono_Nonclassical	MS4A7	kept	Immune Cells		
+Mono_Nonclassical	CX3CR1	kept	Immune Cells		
+Mono_Nonclassical	IL1B	kept	Immune Cells		
+Mac_Tissue	SELENOP	kept	Immune Cells		
+Mac_Tissue	MRC1	kept	Immune Cells		
+Mac_Tissue	FOLR2	kept	Immune Cells		
+Mac_Tissue	LYVE1	kept	Immune Cells		
+Mac_Tissue	CD163	kept	Immune Cells		
+Mac_Tissue	C1QA	kept	Immune Cells		
+Mac_Tissue	C1QB	kept	Immune Cells		
+Mac_Tissue	C1QC	kept	Immune Cells		
+Mac_Tissue	VSIG4	kept	Immune Cells		
+Mac_Tissue	CD5L	kept	Immune Cells		
+Mac_Tissue	STAB1	kept	Immune Cells		
+Mac_Tissue	MAF	kept	Immune Cells		
+Mac_Tissue	F13A1	kept	Immune Cells		
+Mac_Tissue	ITM2B	kept	Immune Cells		
+Mac_Tissue	SLC40A1	kept	Immune Cells		
+Mac_DAM_LAM	FTH1	R2R3_shield_block	Immune Cells	Epithelium	
+Mac_DAM_LAM	APOE	R2R3_shield_block	Immune Cells	Melanocytes	
+Mac_DAM_LAM	GPNMB	kept	Immune Cells		
+Mac_DAM_LAM	LIPA	kept	Immune Cells		
+Mac_DAM_LAM	CTSD	kept	Immune Cells		
+Mac_DAM_LAM	LGMN	kept	Immune Cells		
+Mac_DAM_LAM	PLD3	kept	Immune Cells		
+Mac_DAM_LAM	ASAH1	kept	Immune Cells		
+Mac_DAM_LAM	FTL	kept	Immune Cells		
+Mac_DAM_LAM	TREM2	kept	Immune Cells		
+Mac_DAM_LAM	SPP1	kept	Immune Cells		
+Mac_DAM_LAM	CD9	kept	Immune Cells		
+Mac_DAM_LAM	OLR1	kept	Immune Cells		
+Mac_DAM_LAM	MMP9	kept	Immune Cells		
+Mac_DAM_LAM	CCL3	kept	Immune Cells		
+Mac_DAM_LAM	CCL4	kept	Immune Cells		
+Mac_DAM_LAM	HMOX1	kept	Immune Cells		
+Microglia	P2RY12	kept	Immune Cells		
+Microglia	TMEM119	kept	Immune Cells		
+Microglia	CX3CR1	kept	Immune Cells		
+Microglia	SIGLEC11	kept	Immune Cells		
+Microglia	AIF1	kept	Immune Cells		
+Microglia	IRF8	kept	Immune Cells		
+Microglia	TYROBP	kept	Immune Cells		
+Microglia	SALL1	kept	Immune Cells		
+Microglia	HEXB	kept	Immune Cells		
+Microglia	GPR34	kept	Immune Cells		
+Microglia	OLFML3	kept	Immune Cells		
+Microglia	FCER1G	kept	Immune Cells		
+APC_MHCII_high	HLA-DRA	R2R3_shield_block	Immune Cells	Endothelium	
+APC_MHCII_high	HLA-DRB1	R2R3_shield_block	Immune Cells	Endothelium	
+APC_MHCII_high	CD74	R2R3_shield_block	Immune Cells	Endothelium	
+APC_MHCII_high	HLA-DPA1	kept	Immune Cells		
+APC_MHCII_high	HLA-DPB1	kept	Immune Cells		
+APC_MHCII_high	HLA-DQA1	kept	Immune Cells		
+APC_MHCII_high	HLA-DQB1	kept	Immune Cells		
+APC_MHCII_high	HLA-DMB	kept	Immune Cells		
+APC_MHCII_high	FCGR1A	kept	Immune Cells		
+APC_MHCII_high	RGS1	kept	Immune Cells		
+cDC1	CADM1	R2R3_shield_block	Immune Cells	Schwann Cells	
+cDC1	CLEC9A	kept	Immune Cells		
+cDC1	XCR1	kept	Immune Cells		
+cDC1	C1S	kept	Immune Cells		
+cDC1	C1R	kept	Immune Cells		
+cDC1	ZBTB46	kept	Immune Cells		
+cDC1	FLT3	kept	Immune Cells		
+cDC1	IRF8	kept	Immune Cells		
+cDC2	HLA-DRA	R2R3_shield_block	Immune Cells	Endothelium	
+cDC2	CD1C	kept	Immune Cells		
+cDC2	FCER1A	kept	Immune Cells		
+cDC2	CLEC10A	kept	Immune Cells		
+cDC2	CD4	kept	Immune Cells		
+cDC2	S100A10	kept	Immune Cells		
+pDC	TCF4	R2R3_shield_block	Immune Cells	Endothelium,Fibroblasts	
+pDC	LILRA4	kept	Immune Cells		
+pDC	IL3RA	kept	Immune Cells		
+pDC	IRF7	kept	Immune Cells		
+pDC	GZMB	kept	Immune Cells		
+pDC	PLD4	kept	Immune Cells		
+pDC	CLEC4C	kept	Immune Cells		
+pDC	SERPINF1	kept	Immune Cells		
+pDC	JCHAIN	kept	Immune Cells		
+T	CD3D	kept	Immune Cells		
+T	CD3E	kept	Immune Cells		
+T	CD3G	kept	Immune Cells		
+T	CD2	kept	Immune Cells		
+T	TRAC	kept	Immune Cells		
+T	TRBC2	kept	Immune Cells		
+T	IL7R	kept	Immune Cells		
+T	CCL5	kept	Immune Cells		
+T	CD69	kept	Immune Cells		
+T	LCK	kept	Immune Cells		
+T	SKAP1	kept	Immune Cells		
+NK	GNLY	kept	UNMAPPED		
+NK	NKG7	kept	UNMAPPED		
+NK	KLRD1	kept	UNMAPPED		
+NK	KLRF1	kept	UNMAPPED		
+NK	FGFBP2	kept	UNMAPPED		
+NK	NCR3	kept	UNMAPPED		
+NK	PRF1	kept	UNMAPPED		
+B	MS4A1	kept	UNMAPPED		
+B	CD79A	kept	UNMAPPED		
+B	CD79B	kept	UNMAPPED		
+B	PAX5	kept	UNMAPPED		
+B	BANK1	kept	UNMAPPED		
+B	IGKC	kept	UNMAPPED		
+B	TCL1A	kept	UNMAPPED		
+Plasma	MZB1	kept	UNMAPPED		
+Plasma	JCHAIN	kept	UNMAPPED		
+Plasma	XBP1	kept	UNMAPPED		
+Plasma	IGHG1	kept	UNMAPPED		
+Plasma	SEC11C	kept	UNMAPPED		
+Plasma	DERL3	kept	UNMAPPED		
+Plasma	SSR4	kept	UNMAPPED		
+Plasma	SLAMF7	kept	UNMAPPED		
+Plasma	TNFRSF17	kept	UNMAPPED		
+Granulocyte	IL1RN	R2R3_shield_block	Immune Cells	Epithelium	
+Granulocyte	TIMP1	R2R3_shield_block	Immune Cells	Fibroblasts	
+Granulocyte	CSF3R	kept	Immune Cells		
+Granulocyte	C5AR1	kept	Immune Cells		
+Granulocyte	ANXA1	kept	Immune Cells		
+Granulocyte	ELANE	kept	Immune Cells		
+Granulocyte	MPO	kept	Immune Cells		
+Granulocyte	CAMP	kept	Immune Cells		
+Granulocyte	LTF	kept	Immune Cells		
+Granulocyte	CXCR2	kept	Immune Cells		
+Granulocyte	FCGR3B	kept	Immune Cells		
+Granulocyte	TGFBI	kept	Immune Cells		
+Granulocyte	CD36	kept	Immune Cells		
+Proliferating	MKI67	kept	UNMAPPED		
+Proliferating	TOP2A	kept	UNMAPPED		
+Proliferating	CENPF	kept	UNMAPPED		
+Proliferating	BIRC5	kept	UNMAPPED		
+Proliferating	H2AFZ	kept	UNMAPPED		
+Proliferating	NUSAP1	kept	UNMAPPED		
+Proliferating	STMN1	kept	UNMAPPED		
+Proliferating	PTTG1	kept	UNMAPPED		
+Keratocytes	ALDH3A1	R2R3_shield_block	Fibroblasts	Epithelium	
+Keratocytes	KERA	kept	Fibroblasts		
+Keratocytes	NNMT	kept	Fibroblasts		
+Corneal Endothelium	SLC4A11	kept	Corneal Endothelium		
+Corneal Endothelium	CDH2	kept	Corneal Endothelium		
+Corneal Endothelium	CA3	kept	Corneal Endothelium		
+retina_interneuron::Rod	*	R1_drop_retina_specific			
+retina_interneuron::Cone	*	R1_drop_retina_specific			
+retina_interneuron::BC	*	R1_drop_retina_specific			
+retina_interneuron::AC	*	R1_drop_retina_specific			
+retina_interneuron::HC	*	R1_drop_retina_specific			
+retina_interneuron::RGC	*	R1_drop_retina_specific			
+retina_interneuron::MG	*	R1_drop_retina_specific			
+retina_interneuron::Astro	*	R1_drop_retina_specific			
+retina_interneuron::Micro	*	R1_drop_retina_specific			
+retina_interneuron::RPE	*	R1_drop_retina_specific			
+retina_v6::Rod	*	R1_drop_retina_specific			
+retina_v6::Cone	*	R1_drop_retina_specific			
+retina_v6::BC	*	R1_drop_retina_specific			
+retina_v6::AC	*	R1_drop_retina_specific			
+retina_v6::HC	*	R1_drop_retina_specific			
+retina_v6::RGC	*	R1_drop_retina_specific			
+retina_v6::MG	*	R1_drop_retina_specific			
+retina_v6::Astro	*	R1_drop_retina_specific			
+retina_v6::Micro	*	R1_drop_retina_specific			
+retina_v6::RPE	*	R1_drop_retina_specific			
+face_v6::Keratocytes	KERA	kept	Fibroblasts		
+face_v6::Pericyte	NOTCH3	kept	Pericytes		
+face_v6::Pericyte	HIGD1B	kept	Pericytes		
+face_v6::Pericyte	CALD1	kept	Pericytes		
+face_v6::Pericyte	COX4I2	kept	Pericytes		
+face_v6::SMC	MYH11	R2R3_shield_block	Smooth Muscle Cells	Pericytes	
+face_v6::SMC	MYL9	R2R3_shield_block	Smooth Muscle Cells	Pericytes	
+face_v6::SMC	CNN1	kept	Smooth Muscle Cells		
+face_v6::SMC	DES	kept	Smooth Muscle Cells		
+face_v6::SMC	LMOD1	kept	Smooth Muscle Cells		
+Conj_epithelium_basal	KRT13	kept	Epithelium		
+Conj_epithelium_basal	KRT4	kept	Epithelium		
+Conj_epithelium_basal	AQP5	kept	Epithelium		
+Conj_epithelium_basal	CXCL17	kept	Epithelium		
+Conj_epithelium_basal	LCN2	kept	Epithelium		
+Conj_epithelium_basal	KRT19	kept	Epithelium		
+Conj_epithelium_superficial	SCGB3A1	kept	Epithelium		
+Conj_epithelium_superficial	FDCSP	kept	Epithelium		
+Melanocyte	TRPM1	kept	Melanocytes		
+Melanocyte	MLANA	kept	Melanocytes		
+Melanocyte	TYRP1	kept	Melanocytes		
+Melanocyte	PMEL	kept	Melanocytes		
+Melanocyte	DCT	kept	Melanocytes		
+Melanocyte	TYR	kept	Melanocytes		
+Melanocyte	GAPDHS	kept	Melanocytes		
+Melanocyte	GPR143	kept	Melanocytes		
+Melanocyte	SLC24A5	kept	Melanocytes		
+Melanocyte	ABCB5	kept	Melanocytes		
+Schwann	MPZ	kept	Schwann Cells		
+Schwann	SCN7A	kept	Schwann Cells		
+Schwann	SOX2	kept	Schwann Cells		
+Schwann	NRXN1	kept	Schwann Cells		
+Conj_epithelium_suprabasal	S100A8	kept	Epithelium		
+Conj_epithelium_suprabasal	S100A9	kept	Epithelium		
+Conj_epithelium_suprabasal	KRT4	kept	Epithelium		
+Limbus_Sclera_fibroblast_C1	DPT	kept	Fibroblasts		
+Limbus_Sclera_fibroblast_C1	LEPR	kept	Fibroblasts		
+Limbus_Sclera_fibroblast_C1	LAMA2	kept	Fibroblasts		

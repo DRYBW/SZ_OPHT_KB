@@ -1,0 +1,18 @@
+1x "ROOT = '/mnt/D/EyeKB/plans/e2_decontam_20260926'"
+1x '"""E2-2/3/4/5 指标：'
+1x '    per = {v: load_scores(f\'{ROOT}/data/e2_scores_{"raw_repl'
+1x "    P('ANCHOR PASS: raw 列全部复现 E1 冻结值')"
+1x "    P('GATE:', json.dumps(gate, ensure_ascii=False))"
+1x "    wa = open(f'{ROOT}/out/e2_homology_water.tsv', 'w')\n    "
+1x "    # ---- 历史登记 C\n    hist = open(f'{ROOT}/out/e2_history_re"
+1x "    pw = open(f'{ROOT}/out/e2_panel_water.tsv', 'w')"
+1x "    pw.write(open(f'{ROOT}/data/e2_matrix_rows_summary.tsv')"
+1x 'out/e2_truth_region_table_decon.tsv'
+1x 'out/e2_flag_operating_points.tsv'
+1x 'out/e2_row_compare.tsv'
+1x 'out/e2_by_class_decon.tsv'
+1x 'out/e2_sensitivity_grid.tsv'
+1x 'out/e2_metrics.json'
+1x "    for v in ('S1', 'S2', 'S4', 'S5', 'S6', 'raw'):"
+1x "    print('E2_METRICS_DONE')"
+1x '    json.dump(dict(anchors=anchors, metrics=out_m, gate=gate'

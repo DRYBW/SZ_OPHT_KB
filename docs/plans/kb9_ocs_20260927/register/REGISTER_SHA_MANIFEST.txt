@@ -1,0 +1,114 @@
+# REGISTER_SHA_MANIFEST — 输入只读 sha 台账 + 新产物 sha（t_62bb0dfe，2026-09-27）
+
+## 1. 输入只读件（本卡全部为读；除 BUILD_REPORT 文末追加外零写入非 register/ 路径）
+47045d9fedb642da6241c272b4bc452f8441ac246a87bf3dc83bd8432627eca4  KB9_PREREG.md
+d73dc17f957b9d180f87fd6de3b802113b84d4113e895b5a1ff7798c5ccc2b74  KB9_BUILD_REPORT.md
+22c445ecd7b2521869205b6d01012427c8d186500239bbd6618dc07d6edda55a  build/markers_k9_ocs_increment.json
+8d82b6191067e983d15b0e33c4c8044a8abccb960bf82faa99622bd46462c36f  build/KB9_CROSSWALK_ext.tsv
+ba76b6ce1af1654ef4421dc81c404edda57f7842ebfc5c26178b8ddcd60be934  build/face_q6_k9/EV_DIGEST_SLIM_q6_k9.jsonl
+5f930c3d9384ec787ea67b7535061d621a488d4ea653705a965984219bb07ba4  out/kb9_shared_gene_shield.tsv
+67921e65bbd8785dec0226896adb9cd6683e4d02aee9ea0208bc713c6f690ad1  out/kb9_term_candidates.json
+8d2abff1084f25d5e876b0a24adda61a73c37d12cff63e21e7c1580c52ffd2da  out/kb9_fire_audit.tsv
+0083ff5ff8566f4c052942643b15c186326e80d576c4362e9f4469a7566b812c  out/kb9_donor_cons.tsv
+96a294db63d2a6841a259c6c203eb8f070544a39105a33840f761953858bea53  out/kb9_verdict.json
+8e3dda589a3eaf9967a360fb899c876551fe01cfb7277b677de6b2c923e5e7b4  out/kb9_truth_table.tsv
+b266e84d1c0a205b7168246c0c92d0b12a403afefea483398ed023aa3fb7e289  recheck/RECHECK_REPLY_20260927.md
+accc5eeababefc9910ace2088799e7159738ffdb1d09a424882cf97b967e3dc3  recheck/RECHECK_ACTIONS.md
+f083dd60ee4e4eb945c35e0bb69976dc6641f82f3b549a4a6c914873e0f9403c  /mnt/D/EyeKB/plans/evalset/digest/face_q6/EV_DIGEST_SLIM_q6.jsonl
+21f4b52fa3bbabe5fed0e51dd9de6e056e80aadf7b510b1c00fec740e0b0b42d  /mnt/D/EyeKB/plans/evalset/clustering/Q6_clusters.tsv
+d23e13f4cd6a253a2ad8d62013d38aa10faf97f1cadc30d6eb26b2a40f4379cb  /mnt/D/EyeKB/plans/kb6b_face_20260925/out/agg_kb6b_v1.npz
+6d1855dfbfc7447168ea804669b629717ff6145017ed82884bad1cd03374714d  /mnt/D/EyeKB/plans/kb7_v6_20260925/scripts/kb7_w2_face_calc.py
+786362d8cce5d14f8d16cdac76773516a6812ee4e28135074951f06f4f79c32b  /mnt/D/EyeKB/plans/kb7_v6_20260925/out/kb7_face_summary.tsv
+711e3065193f71cd09a5fc8eaa45f088c7ca8c73c02d46b15a46066a71a5133b  /mnt/D/OcularKB/WIKI/USER_DIRECTIVE_20260927_scoring_wave.md
+
+## 2. 台账说明
+- KB9_BUILD_REPORT.md 本卡唯一被修改的既有件：仅文末追加 EDITORIAL_NOTE（原文前 7485 字节 sha=f48268263852f8771924d98b9f71b50533909895d8d348a71e166a0472364a80 与追加前入账一致；追加后全长 9845B，上表所列即追加后 sha=当前态）。
+- agg_kb6b_v1.npz sha 与 ledgers/SHA_PRE_KB9.txt L26 对账（d23e13f4… 见下行输出）:
+d23e13f4cd6a253a2ad8d62013d38aa10faf97f1cadc30d6eb26b2a40f4379cb  /mnt/D/EyeKB/plans/kb6b_face_20260925/out/agg_kb6b_v1.npz
+
+## 3. register/ 新产物
+586616e67c46ceaaf9398b2e868acb2edea3bc77c86a1606f17e004d944efec6  register/A03_OVERLAP_REGISTRY.tsv
+45eda01ad5b14520e066d20fcfd54900fbd6cd4c8918bf9c95cff14b65511fdd  register/A06_R1_ITEM_SCOPE_TABLE.tsv
+d73dc17f957b9d180f87fd6de3b802113b84d4113e895b5a1ff7798c5ccc2b74  register/KB9_BUILD_REPORT_postnote_copy.md
+7d1ff041a10d29bf33f3aa686c449b4a2a001bfbf111f9fd3d77451d041b0ecb  register/recheck_kb7/out/kb7_face_dominant_study.tsv
+e0382ee7bb0b2ff6737d29ac1fee682e2d497a27f85036f19d1046ba2b7ca9c0  register/recheck_kb7/out/kb7_face_fullaudit.tsv
+786362d8cce5d14f8d16cdac76773516a6812ee4e28135074951f06f4f79c32b  register/recheck_kb7/out/kb7_face_summary.tsv
+42d35b9e49fb6c4238707e27a41fbe9dc4e202e742ce35e4696a06eb6d99cd4a  register/recheck_run/out/kb9_donor_cons.tsv
+40f0762e19875268eaa0b67cd17d9c678ae827bf4056c47310b491475a400e43  register/recheck_run/out/kb9_fire_audit.tsv
+5508d15427aca2c4acee0e889673d9ab7e244c1f35088821425050ec45430271  register/recheck_run/out/kb9_term_candidates.json
+39c23eb256a882fc475a6a9baed6eba37cabfe7a58f29fa42c685a03a6abdc81  register/REGISTER_PACKAGE_v2.md
+fb1d03fd2279207e8d51307f95b55126ea78794915daeaaa2ebc8b9d5e0192e2  register/REGISTER_SHA_MANIFEST.txt
+175cf7eed75d4300c24be46394609692633a50d3540f1d90102107bc48adeaf1  register/scripts/a03_overlap_calc.py
+1cc4e579e98148da116ad6e92a17a6a1e7558addb97decb9e0d7098c39204a52  register/scripts/a06_scope_table.py
+48c65cd1deb02334e17047a6da94c91c50c01c875fb452dab4d4e903acf0813b  register/scripts/kb7_w2_sandbox.py
+56d21bedc863a8925839a0b7100a5befa888008273217acf96a6730df9c488d1  register/scripts/sb12_recheck.py
+70f85a3b34afacf5faac10ba17d47716dc74847b4aba675bd01c61a024baeaf1  register/SUPRABASAL_RECHECK_EVIDENCE.txt
+40c3ad7ef08599465e33b0c87246f51f704f0bb2ecfeeb2e17a7d9d12f7697e9  register/SUPRABASAL_RECHECK.md
+
+## 4. v2.0→v2.1 原位升级与送审件完整性记录（诚实登记）
+- 注册包与判件为原位升版（v2.0 字节未单独留档）：v2.0 曾送二审，其 prompt sha256=8f4f1c0fb62301bb58397f38a9a7b5bc2450dd2b9d1f2cf7ef8b5501b1cb5a73（发送时打印入账；后因 build_round2_prompt.py 重跑，round2/REVIEWER_LLMROUND2_PROMPT.txt 与 round2/PROMPT_SHA256.txt 已被 v2.1 内容再生覆盖——二审回稿 REVIEWER_LLMROUND2_REPLY_RAW.md/REVIEWER_LLMROUND2_REPLY_high_PRECHECK.md 完整未动，判词全文在案）。教训入账：送审件应版本化新建而非原位重写；round3 起送审件按轮次目录冻结。
+- 三审送审件：round3/REVIEWER_LLMROUND3_PROMPT.txt（v2.1 全文 verbatim + 判件 v2 + EDITORIAL_NOTE + 二轮判词闭合对照），发送时 sha 见 round3/PROMPT_SHA256.txt。
+- 通道留痕：round2=REVIEWER_LLM 直连 attempt=1×2（high 预检件 chars=4684/175s + xhigh 正式件 chars=4244/378s，log=round2/REVIEWER_LLMsend.log）；round3=REVIEWER_LLM xhigh。
+- 差异登记（2026-09-27 三审发出后）：round3 对照表称"'KB9 生效口径'字样已删"，而送出字节 §8-6① 括注仍含该字样（③处生效时点话术已在位）；盘上已改为"自本次注册生效+事实注"。如本轮因此判未闭合，按第四轮重发处理。
+
+## 5. 终态登记（ACCEPTED 后）
+- 审链终态：round5 ACCEPTED（可送 PI 批注册）；状态行已更新入 REGISTER_PACKAGE_v2.md。
+- 领地自证：kb/、mcp_server/、out/、build/、recheck/ 于本卡运行窗口（15:00 起）新近修改文件数=0/0/0（find -newermt 实测）；KB9_BUILD_REPORT.md 原文前 7485 字节 sha=f4826826…364a80 追加前后一致。
+- 注：本节上一次误落 kb9 根目录的临时台账文件已删除（操作失误登记于此），台账唯一载体=register/REGISTER_SHA_MANIFEST.txt。
+
+  4810bbe47a7a1faefa26c44e50dbbb35bdd9e400daffb18685acc78499bc0aea  REGISTER_PACKAGE_v2.md
+  910961ecd49a2c2e3f0f9509bb25ecbcb34659f9a7062b82de792d5cda5ee9d3  SUPRABASAL_RECHECK.md
+  85a6da3649f1a701a58c48937acb62876b516cf2cd3fa406b2eb4fd66b3e9021  ROUNDTWO_VERDICT_20260927.md
+  e6559a75e34107225513eefc902a54044465203b2fb07d445e2ca567a243ba4d  round2/REVIEWER_LLMROUND2_REPLY_RAW.md
+  14a6e23d31cf4676fa6eefbf643e3b8d59771407e6c7566f87e5eb1591746218  round3/REVIEWER_LLMROUND3_REPLY_RAW.md
+  192be7cf99126526af02369e1afcb03c2e2202cb302b28651b8a0cddb8d2c837  round4/REVIEWER_LLMROUND4_REPLY_RAW.md
+  ae074bc3b7a992084f07b02d3f03431c65cf006757626200e6a5fdac61af5e68  round5/REVIEWER_LLMROUND5_PROMPT.txt
+  9fcd46d4527d90a2f126034770ea895a80fbc17099fcbda2c658a0fb8d3cce15  round5/REVIEWER_LLMROUND5_REPLY_RAW.md
+- register/ 终盘清单（47 文件）：
+  A03_OVERLAP_REGISTRY.tsv
+  A06_R1_ITEM_SCOPE_TABLE.tsv
+  A09_VOCAB_MAPPING_SNAPSHOT.tsv
+  A19_MINPOOL_EXEMPT_BY_ENTRY.tsv
+  A19_MINPOOL_EXEMPT_REGISTRY.tsv
+  KB9_BUILD_REPORT_postnote_copy.md
+  REGISTER_PACKAGE_v2.md
+  REGISTER_SHA_MANIFEST.txt
+  ROUNDTWO_VERDICT_20260927.md
+  SUPRABASAL_RECHECK.md
+  SUPRABASAL_RECHECK_EVIDENCE.txt
+  recheck_kb7/out/kb7_face_dominant_study.tsv
+  recheck_kb7/out/kb7_face_fullaudit.tsv
+  recheck_kb7/out/kb7_face_summary.tsv
+  recheck_kb7_cf/out/kb7_face_dominant_study.tsv
+  recheck_kb7_cf/out/kb7_face_fullaudit.tsv
+  recheck_kb7_cf/out/kb7_face_summary.tsv
+  recheck_run/out/kb9_donor_cons.tsv
+  recheck_run/out/kb9_fire_audit.tsv
+  recheck_run/out/kb9_term_candidates.json
+  round2/REVIEWER_LLMROUND2_PROMPT.txt
+  round2/REVIEWER_LLMROUND2_REPLY_RAW.md
+  round2/REVIEWER_LLMROUND2_REPLY_high_PRECHECK.md
+  round2/PROMPT_SHA256.txt
+  round2/REVIEWER_LLMsend.log
+  round3/REVIEWER_LLMROUND3_PROMPT.txt
+  round3/REVIEWER_LLMROUND3_REPLY_RAW.md
+  round3/PROMPT_SHA256.txt
+  round3/REVIEWER_LLMsend.log
+  round4/REVIEWER_LLMROUND4_PROMPT.txt
+  round4/REVIEWER_LLMROUND4_REPLY_RAW.md
+  round4/PROMPT_SHA256.txt
+  round4/REVIEWER_LLMsend.log
+  round5/REVIEWER_LLMROUND5_PROMPT.txt
+  round5/REVIEWER_LLMROUND5_REPLY_RAW.md
+  round5/PROMPT_SHA256.txt
+  round5/REVIEWER_LLMsend.log
+  scripts/a03_overlap_calc.py
+  scripts/a06_scope_table.py
+  scripts/REVIEWER_LLMxhigh.py
+  scripts/build_round2_prompt.py
+  scripts/build_round3_prompt.py
+  scripts/build_round4_prompt.py
+  scripts/build_round5_prompt.py
+  scripts/kb7_w2_cf.py
+  scripts/kb7_w2_sandbox.py
+  scripts/sb12_recheck.py

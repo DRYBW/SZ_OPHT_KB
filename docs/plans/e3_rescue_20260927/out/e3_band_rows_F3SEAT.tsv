@@ -1,0 +1,29 @@
+cluster_id	member	truth	arm	named_label	top1_canon	n_shared	shared_genes	lit_n	cand_count	abstain_reason	correct
+Q1::1	Q1	Rod	incumbent						0	no_candidate	
+Q1::9	Q1	Rod	incumbent						0	no_candidate	
+Q3::13	Q3	RGC	incumbent	RGC	RGC	2	NEFL;UCHL1	2	3	named	1
+Q6::13	Q6	Fibroblasts	incumbent		Astro	1	VIM	2	4	nomap	
+Q6::15	Q6	Fibroblasts	incumbent	Fibroblasts	Keratocytes	3	ALDH3A1;KERA;NNMT	2	3	named	1
+Q6::12	Q6	Fibroblasts	incumbent						0	no_candidate	
+Q6::2	Q6	Epithelium	incumbent	Epithelium	Conj_epithelium_basal	3	KRT13;KRT19;AQP5	0	2	named	1
+Q6::18	Q6	Fibroblasts	incumbent	Pericytes	Pericyte	1	MGP	2	1	named	0
+Q6::27	Q6	Fibroblasts	incumbent						0	no_candidate	
+Q6::22	Q6	Fibroblasts	incumbent		Astro	1	VIM	2	6	nomap	
+Q6::16	Q6	Fibroblasts	incumbent		Astro	1	VIM	2	2	nomap	
+Q6::28	Q6	Fibroblasts	incumbent	Fibroblasts	Keratocytes	3	KERA;ALDH3A1;NNMT	2	1	named	1
+Q6::31	Q6	Fibroblasts	incumbent	Pericytes	Pericyte	1	MGP	2	1	named	0
+Q6::30	Q6	Epithelium	incumbent	Epithelium	Conj_epithelium_basal	2	LCN2;KRT19	0	2	named	1
+Q1::1	Q1	Rod	improved						0	no_candidate	
+Q1::9	Q1	Rod	improved						0	no_candidate	
+Q3::13	Q3	RGC	improved	RGC	RGC	2	NEFL;UCHL1	2	3	named	1
+Q6::13	Q6	Fibroblasts	improved		Astro	1	VIM	2	4	weak_hit(maxn=1)	
+Q6::15	Q6	Fibroblasts	improved	Fibroblasts	Keratocytes	3	ALDH3A1;KERA;NNMT	2	3	named	1
+Q6::12	Q6	Fibroblasts	improved						0	no_candidate	
+Q6::2	Q6	Epithelium	improved	Epithelium	Conj_epithelium_basal	3	KRT13;KRT19;AQP5	0	2	named	1
+Q6::18	Q6	Fibroblasts	improved		Pericyte	1	MGP	2	1	weak_hit(maxn=1)	
+Q6::27	Q6	Fibroblasts	improved						0	no_candidate	
+Q6::22	Q6	Fibroblasts	improved		Astro	1	VIM	2	6	weak_hit(maxn=1)	
+Q6::16	Q6	Fibroblasts	improved		Astro	1	VIM	2	2	weak_hit(maxn=1)	
+Q6::28	Q6	Fibroblasts	improved	Fibroblasts	Keratocytes	3	KERA;ALDH3A1;NNMT	2	1	named	1
+Q6::31	Q6	Fibroblasts	improved		Pericyte	1	MGP	2	1	weak_hit(maxn=1)	
+Q6::30	Q6	Epithelium	improved		Conj_epithelium_basal	2	LCN2;KRT19	0	2	conflict(n=2,k=2)	

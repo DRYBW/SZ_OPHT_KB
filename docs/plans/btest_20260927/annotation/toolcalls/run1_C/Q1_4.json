@@ -1,0 +1,84 @@
+[
+ {
+  "ts": "2026-09-27T15:26:10.446580+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "IMPG1",
+    "RBP3",
+    "GNGT1",
+    "MT-ND3",
+    "MT-CO3",
+    "MT-ATP6",
+    "MT-ND2",
+    "MT-ND5",
+    "MT-ND4",
+    "MT-CO1",
+    "ST3GAL3-AS1",
+    "MT-RNR2",
+    "MTATP6P1",
+    "RTBDN",
+    "MT-ND1",
+    "CPE",
+    "MT-CO2",
+    "MT-RNR1",
+    "MT-ND4L",
+    "RPL39"
+   ]
+  },
+  "executed": true,
+  "result_chars": 4085
+ },
+ {
+  "ts": "2026-09-27T15:26:13.119040+08:00",
+  "tool": "get_tissue_composition",
+  "args": {
+   "species": "human",
+   "tissue": "retina"
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:26:18.305152+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "IMPG1 RBP3 GNGT1 retina photoreceptor",
+   "species": "human",
+   "tissue": "retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:26:22.828836+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "RBP3 retina photoreceptor marker",
+   "species": "human",
+   "tissue": "retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:26:24.906683+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "Rod"
+  },
+  "executed": true,
+  "result_chars": 3632
+ },
+ {
+  "ts": "2026-09-27T15:26:26.773321+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "Cone"
+  },
+  "executed": true,
+  "result_chars": 3639
+ }
+]

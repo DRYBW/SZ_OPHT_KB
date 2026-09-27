@@ -1,0 +1,13 @@
+import pandas as pd
+ft = pd.read_csv('/mnt/D/EyeKB/plans/face_v21_20260926/out/per_cluster_flip_table_facev21.tsv', sep='\t')
+print("flip members:", ft.cluster_id.str.split('::').str[0].value_counts().to_dict())
+print("v21_mode:", ft.v21_mode.value_counts().to_dict())
+print("v21_consensus nonnull:", ft.v21_consensus.notna().sum(), "| truth nonnull:", ft.truth.notna().sum())
+print(ft[['cluster_id','truth','v21_mode','v21_consensus']].head(8).to_string())
+r5 = pd.read_csv('/mnt/D/EyeKB/plans/evalset/scoring/run5_truth_table.tsv', sep='\t')
+print("\nrun5 mode:", r5['mode'].value_counts().to_dict(), "| consensus nonnull:", r5.consensus.notna().sum())
+df = pd.read_csv('/mnt/D/EyeKB/plans/evalset/scoring/run3_object_B_table_v1.1.tsv', sep='\t')
+mask = df.truth.notna() & df.member.isin(['Q1','Q2','Q3','Q4','Q5b','Q7'])
+print("\nrun3 truth-rows alpha:", mask.sum())
+print("run3 Q6 truth rows:", (df.truth.notna() & (df.member=='Q6')).sum())
+print("ann uniq:", sorted(set(df.ann_A.dropna()))[:25])

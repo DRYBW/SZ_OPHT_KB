@@ -1,0 +1,16 @@
+class	gene	final_grade	note
+AC	TFAP2A	weak	机制句：Tfap2a/2b 为 AC/HC 分化调控级联组分，非表达/marker 归属断言（降 strong→weak，文档级 G∧C 成立）
+BC	OTX2	weak	机制句：Otx2 水平影响 BC 命运/成熟（"not bipolar cell fate / impairs maturation"），非 BC 表达断言
+Endo	ECSCR	weak	循环：类词由本基因全名展开(Endothelial Cell Surface...)注入；句归属=MDA-MB-231 乳腺细胞系（镜像一批 A5 HLA 案）
+Granulocyte	CD36	weak	归属错误：CD36 在 Kupffer 细胞（"neutrophil-derived"为他基因 TSP-1 的修饰语）
+MG	S100B	weak	反向证据：句明确 S100B 代表星形胶质、GS(-)对照 MG——非 MG 支持句
+Mac_DAM_LAM	CCL3	weak	跨亚群归属：CCL3 归于 classical monocyte-derived macrophage(MDM)亚群，非 DAM/LAM
+Microglia	TYROBP	weak	通路富集/功能性句（DEG enrichment; KO 细胞反应），非表达归属句；slot2 同为 KO 机制
+Myofibroblast	TPM1	weak	机制句：Tpm1.6 silencing 降低 MF markers（required-for），非表达断言
+Pericyte	THY1	weak	归属错误：THY1 列于 mesenchymal stromal cell markers，非周细胞 marker
+Plasma	DERL3	weak	组织水平基因列表上调+"implicating plasma cell differentiation"推断从句，非 PC 表达归属
+Proliferating	BIRC5	weak	机制句：regulator of proliferation（PREREG §3 Proliferating 行明示：调控类句不升 strong）
+Proliferating	H2AFZ	weak	机制句：H2AFZ-driven proliferative subpopulation（driver 非 marker）
+T	TRAC	weak	循环：类词来自基因全名 T-cell receptor α constant；两句均为基因编辑工程语境（一批 A5 同型）
+cDC2	CD4	weak	归属错误：CD4 归 CD4+ T 细胞（cDC2-CD4+ T axis 为互作对，非 cDC2 表达）
+cDC1	ZBTB46	weak	跨类归属：cDC1-specific 修饰的是 Batf3-/-；Zbtb46 为 pan-DC 报告（句内归属错位）

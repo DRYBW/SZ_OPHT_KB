@@ -1,0 +1,1515 @@
+{
+  "_embedded" : {
+    "terms" : [ {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance." ],
+      "synonyms" : [ "melanophore" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000847", "CALOHA:TS-0613", "FMA:70545", "VHOG:0001679" ],
+        "has_alternative_id" : [ "CL:0000572" ],
+        "has_obo_namespace" : [ "cell" ],
+        "imported from" : [ "http://purl.obolibrary.org/obo/cl.owl" ]
+      },
+      "label" : "melanocyte",
+      "ontology_name" : "bcgo",
+      "ontology_prefix" : null,
+      "ontology_iri" : "http://purl.obolibrary.org/obo/bcgo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000847",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000847"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0613",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0613"
+      }, {
+        "database" : "FMA",
+        "id" : "70545",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/70545"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001679",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001679"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        },
+        "has_part" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000051"
+        },
+        "develops_from" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/bcgo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.", "Melanocytes are specialized cells prevalently found in the skin, but also present in the hair follicles, eyes, inner ear, bones, heart, and brain. Their primary function is the synthesis of melanin, a pigment responsible for coloration of skin, hair, and eyes. The presence and distribution of this pigment play a crucial role in the body's defense mechanism against harmful ultraviolet radiation.\nIn addition to melanin production, melanocytes also engage in a variety of other biological functions. They play a fundamental role in the immune response, owing to their ability to present antigens to T cells. Furthermore, they contribute to the maintenance of the skin's homeostasis by regulating processes such as extracellular matrix remodeling and cytokine production. A balance in melanocyte function is pivotal, as dysfunctions often result in dermatological disorders. For instance, the loss of melanocytes or reduction in their function may lead to hypopigmentation conditions such as vitiligo, whereas an abnormal increase could result in hyperpigmentation disorders or melanoma, a dangerous type of skin cancer.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)" ],
+      "synonyms" : [ "melanophore" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000847", "CALOHA:TS-0613", "FMA:70545", "MESH:D008544", "VHOG:0001679", "ZFA:0009091" ],
+        "seeAlso" : [ "https://cellxgene.cziscience.com/cellguide/CL_0000148" ]
+      },
+      "label" : "melanocyte",
+      "ontology_name" : "cl",
+      "ontology_prefix" : "CL",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/cl.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : true,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : [ "cellxgene_subset", "general_cell_types_upper_slim", "human_subset", "mouse_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.",
+        "oboXrefs" : [ {
+          "database" : "SANBI",
+          "id" : "mhl",
+          "description" : null,
+          "url" : null
+        } ]
+      }, {
+        "definition" : "Melanocytes are specialized cells prevalently found in the skin, but also present in the hair follicles, eyes, inner ear, bones, heart, and brain. Their primary function is the synthesis of melanin, a pigment responsible for coloration of skin, hair, and eyes. The presence and distribution of this pigment play a crucial role in the body's defense mechanism against harmful ultraviolet radiation.\nIn addition to melanin production, melanocytes also engage in a variety of other biological functions. They play a fundamental role in the immune response, owing to their ability to present antigens to T cells. Furthermore, they contribute to the maintenance of the skin's homeostasis by regulating processes such as extracellular matrix remodeling and cytokine production. A balance in melanocyte function is pivotal, as dysfunctions often result in dermatological disorders. For instance, the loss of melanocytes or reduction in their function may lead to hypopigmentation conditions such as vitiligo, whereas an abnormal increase could result in hyperpigmentation disorders or melanoma, a dangerous type of skin cancer.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)",
+        "oboXrefs" : [ {
+          "database" : "DOI",
+          "id" : "10.1002/med.21754",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.1038/nrc.2016.37",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.1111/j.1751-1097.2007.00226.x",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.3390/ijms21249769",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : null,
+          "id" : "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/melanocyte",
+          "description" : null,
+          "url" : "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/melanocyte"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000847",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000847"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0613",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0613"
+      }, {
+        "database" : "FMA",
+        "id" : "70545",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/70545"
+      }, {
+        "database" : "MESH",
+        "id" : "D008544",
+        "description" : null,
+        "url" : "http://id.nlm.nih.gov/mesh/D008544"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001679",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001679"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009091",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009091"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        },
+        "has_part" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000051"
+        },
+        "develops_from" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/cl/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.", "Melanocytes are specialized cells prevalently found in the skin, but also present in the hair follicles, eyes, inner ear, bones, heart, and brain. Their primary function is the synthesis of melanin, a pigment responsible for coloration of skin, hair, and eyes. The presence and distribution of this pigment play a crucial role in the body's defense mechanism against harmful ultraviolet radiation.\nIn addition to melanin production, melanocytes also engage in a variety of other biological functions. They play a fundamental role in the immune response, owing to their ability to present antigens to T cells. Furthermore, they contribute to the maintenance of the skin's homeostasis by regulating processes such as extracellular matrix remodeling and cytokine production. A balance in melanocyte function is pivotal, as dysfunctions often result in dermatological disorders. For instance, the loss of melanocytes or reduction in their function may lead to hypopigmentation conditions such as vitiligo, whereas an abnormal increase could result in hyperpigmentation disorders or melanoma, a dangerous type of skin cancer.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)" ],
+      "synonyms" : [ "melanophore" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000847", "CALOHA:TS-0613", "FMA:70545", "MESH:D008544", "VHOG:0001679", "ZFA:0009091" ],
+        "imported from" : [ "http://purl.obolibrary.org/obo/cl.owl" ],
+        "present in taxon" : [ "http://purl.obolibrary.org/obo/NCBITaxon_9606" ],
+        "seeAlso" : [ "https://cellxgene.cziscience.com/cellguide/CL_0000148" ]
+      },
+      "label" : "melanocyte",
+      "ontology_name" : "clo",
+      "ontology_prefix" : "CLO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/clo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : [ "cellxgene_subset", "general_cell_types_upper_slim", "human_subset", "mouse_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : null,
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000847",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000847"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0613",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0613"
+      }, {
+        "database" : "FMA",
+        "id" : "70545",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/70545"
+      }, {
+        "database" : "MESH",
+        "id" : "D008544",
+        "description" : null,
+        "url" : "http://id.nlm.nih.gov/mesh/D008544"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001679",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001679"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009091",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009091"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/clo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ ],
+      "synonyms" : [ ],
+      "annotation" : { },
+      "label" : "melanocyte",
+      "ontology_name" : "doid",
+      "ontology_prefix" : "DOID",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/doid/translations/doid-international.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/doid/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/doid/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/doid/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/doid/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/doid/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/doid/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/doid/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance." ],
+      "synonyms" : [ "melanophore" ],
+      "annotation" : {
+        "Description" : [ "Melanocytes are specialized cells prevalently found in the skin, but also present in the hair follicles, eyes, inner ear, bones, heart, and brain. Their primary function is the synthesis of melanin, a pigment responsible for coloration of skin, hair, and eyes. The presence and distribution of this pigment play a crucial role in the body's defense mechanism against harmful ultraviolet radiation.\nIn addition to melanin production, melanocytes also engage in a variety of other biological functions. They play a fundamental role in the immune response, owing to their ability to present antigens to T cells. Furthermore, they contribute to the maintenance of the skin's homeostasis by regulating processes such as extracellular matrix remodeling and cytokine production. A balance in melanocyte function is pivotal, as dysfunctions often result in dermatological disorders. For instance, the loss of melanocytes or reduction in their function may lead to hypopigmentation conditions such as vitiligo, whereas an abnormal increase could result in hyperpigmentation disorders or melanoma, a dangerous type of skin cancer.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)" ],
+        "database_cross_reference" : [ "BTO:0000847", "CALOHA:TS-0613", "FMA:70545", "MESH:D008544", "NCIt:C12591", "SNOMEDCT:9683001", "VHOG:0001679", "ZFA:0009091" ],
+        "seeAlso" : [ "https://cellxgene.cziscience.com/cellguide/CL_0000148" ]
+      },
+      "label" : "melanocyte",
+      "ontology_name" : "efo",
+      "ontology_prefix" : "EFO",
+      "ontology_iri" : "http://www.ebi.ac.uk/efo/efo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : [ "cellxgene_subset", "general_cell_types_upper_slim", "human_subset", "mouse_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.",
+        "oboXrefs" : [ {
+          "database" : "SANBI",
+          "id" : "mhl",
+          "description" : null,
+          "url" : null
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000847",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000847"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0613",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0613"
+      }, {
+        "database" : "FMA",
+        "id" : "70545",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/70545"
+      }, {
+        "database" : "MESH",
+        "id" : "D008544",
+        "description" : null,
+        "url" : "http://id.nlm.nih.gov/mesh/D008544"
+      }, {
+        "database" : "NCIt",
+        "id" : "C12591",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12591"
+      }, {
+        "database" : "SNOMEDCT",
+        "id" : "9683001",
+        "description" : null,
+        "url" : "http://purl.bioontology.org/ontology/SNOMEDCT/9683001"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001679",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001679"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009091",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009091"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        },
+        "located_in" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/efo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0001025"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.", "Melanocytes are specialized cells prevalently found in the skin, but also present in the hair follicles, eyes, inner ear, bones, heart, and brain. Their primary function is the synthesis of melanin, a pigment responsible for coloration of skin, hair, and eyes. The presence and distribution of this pigment play a crucial role in the body's defense mechanism against harmful ultraviolet radiation.\nIn addition to melanin production, melanocytes also engage in a variety of other biological functions. They play a fundamental role in the immune response, owing to their ability to present antigens to T cells. Furthermore, they contribute to the maintenance of the skin's homeostasis by regulating processes such as extracellular matrix remodeling and cytokine production. A balance in melanocyte function is pivotal, as dysfunctions often result in dermatological disorders. For instance, the loss of melanocytes or reduction in their function may lead to hypopigmentation conditions such as vitiligo, whereas an abnormal increase could result in hyperpigmentation disorders or melanoma, a dangerous type of skin cancer.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)" ],
+      "synonyms" : [ "melanophore" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000847", "CALOHA:TS-0613", "FMA:70545", "MESH:D008544", "VHOG:0001679", "ZFA:0009091" ],
+        "seeAlso" : [ "https://cellxgene.cziscience.com/cellguide/CL_0000148" ]
+      },
+      "label" : "melanocyte",
+      "ontology_name" : "go",
+      "ontology_prefix" : "GO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/go/extensions/go-plus.ofn",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : [ "cellxgene_subset", "general_cell_types_upper_slim", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.",
+        "oboXrefs" : [ {
+          "database" : "SANBI",
+          "id" : "mhl",
+          "description" : null,
+          "url" : null
+        } ]
+      }, {
+        "definition" : "Melanocytes are specialized cells prevalently found in the skin, but also present in the hair follicles, eyes, inner ear, bones, heart, and brain. Their primary function is the synthesis of melanin, a pigment responsible for coloration of skin, hair, and eyes. The presence and distribution of this pigment play a crucial role in the body's defense mechanism against harmful ultraviolet radiation.\nIn addition to melanin production, melanocytes also engage in a variety of other biological functions. They play a fundamental role in the immune response, owing to their ability to present antigens to T cells. Furthermore, they contribute to the maintenance of the skin's homeostasis by regulating processes such as extracellular matrix remodeling and cytokine production. A balance in melanocyte function is pivotal, as dysfunctions often result in dermatological disorders. For instance, the loss of melanocytes or reduction in their function may lead to hypopigmentation conditions such as vitiligo, whereas an abnormal increase could result in hyperpigmentation disorders or melanoma, a dangerous type of skin cancer.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)",
+        "oboXrefs" : [ {
+          "database" : "DOI",
+          "id" : "10.1002/med.21754",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.1038/nrc.2016.37",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.1111/j.1751-1097.2007.00226.x",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.3390/ijms21249769",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : null,
+          "id" : "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/melanocyte",
+          "description" : null,
+          "url" : "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/melanocyte"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000847",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000847"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0613",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0613"
+      }, {
+        "database" : "FMA",
+        "id" : "70545",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/70545"
+      }, {
+        "database" : "MESH",
+        "id" : "D008544",
+        "description" : null,
+        "url" : "http://id.nlm.nih.gov/mesh/D008544"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001679",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001679"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009091",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009091"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        },
+        "has_part" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000051"
+        },
+        "develops_from" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/go/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance." ],
+      "synonyms" : [ "melanophore" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000847", "CALOHA:TS-0613", "FMA:70545", "MESH:D008544", "VHOG:0001679" ],
+        "preferred label" : [ "Melanocyte" ],
+        "present in taxon" : [ "http://purl.obolibrary.org/obo/NCBITaxon_9606" ]
+      },
+      "label" : "Melanocyte",
+      "ontology_name" : "hcao",
+      "ontology_prefix" : "HCAO",
+      "ontology_iri" : "http://ontology.data.humancellatlas.org/ontologies/hcao",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : [ "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.",
+        "oboXrefs" : [ {
+          "database" : "SANBI",
+          "id" : "mhl",
+          "description" : null,
+          "url" : null
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000847",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000847"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0613",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0613"
+      }, {
+        "database" : "FMA",
+        "id" : "70545",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/70545"
+      }, {
+        "database" : "MESH",
+        "id" : "D008544",
+        "description" : null,
+        "url" : "http://id.nlm.nih.gov/mesh/D008544"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001679",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001679"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        },
+        "has_part" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000051"
+        },
+        "develops_from" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hcao/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance." ],
+      "synonyms" : [ "melanophore" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000847", "CALOHA:TS-0613", "FMA:70545", "MESH:D008544", "VHOG:0001679" ]
+      },
+      "label" : "melanocyte",
+      "ontology_name" : "hp",
+      "ontology_prefix" : "HP",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/hp/hp-international.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : [ "cellxgene_subset", "general_cell_types_upper_slim", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.",
+        "oboXrefs" : [ {
+          "database" : "SANBI",
+          "id" : "mhl",
+          "description" : null,
+          "url" : null
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000847",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000847"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0613",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0613"
+      }, {
+        "database" : "FMA",
+        "id" : "70545",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/70545"
+      }, {
+        "database" : "MESH",
+        "id" : "D008544",
+        "description" : null,
+        "url" : "http://id.nlm.nih.gov/mesh/D008544"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001679",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001679"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        },
+        "has_part" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000051"
+        },
+        "develops_from" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.", "Melanocytes are specialized cells prevalently found in the skin, but also present in the hair follicles, eyes, inner ear, bones, heart, and brain. Their primary function is the synthesis of melanin, a pigment responsible for coloration of skin, hair, and eyes. The presence and distribution of this pigment play a crucial role in the body's defense mechanism against harmful ultraviolet radiation.\nIn addition to melanin production, melanocytes also engage in a variety of other biological functions. They play a fundamental role in the immune response, owing to their ability to present antigens to T cells. Furthermore, they contribute to the maintenance of the skin's homeostasis by regulating processes such as extracellular matrix remodeling and cytokine production. A balance in melanocyte function is pivotal, as dysfunctions often result in dermatological disorders. For instance, the loss of melanocytes or reduction in their function may lead to hypopigmentation conditions such as vitiligo, whereas an abnormal increase could result in hyperpigmentation disorders or melanoma, a dangerous type of skin cancer.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)" ],
+      "synonyms" : [ "melanophore" ],
+      "annotation" : {
+        "ccf_asctb_type" : [ "CT" ],
+        "ccf_ct_isa" : [ "http://purl.obolibrary.org/obo/CL_0000000" ],
+        "ccf_is_provisional" : [ false ],
+        "ccf_located_in" : [ "http://purl.obolibrary.org/obo/UBERON_0000059", "http://purl.obolibrary.org/obo/UBERON_0000159", "http://purl.obolibrary.org/obo/UBERON_0000165", "http://purl.obolibrary.org/obo/UBERON_0001003", "http://purl.obolibrary.org/obo/UBERON_0001245", "http://purl.obolibrary.org/obo/UBERON_0001828", "http://purl.obolibrary.org/obo/UBERON_0003342", "http://purl.obolibrary.org/obo/UBERON_0003729", "http://purl.obolibrary.org/obo/UBERON_0015716", "http://purl.obolibrary.org/obo/UBERON_8000014" ],
+        "ccf_pref_label" : [ "melanocyte" ],
+        "database_cross_reference" : [ "BTO:0000847", "CALOHA:TS-0613", "FMA:70545", "MESH:D008544", "VHOG:0001679", "ZFA:0009091" ],
+        "preferred label" : [ "melanocyte" ],
+        "seeAlso" : [ "https://cellxgene.cziscience.com/cellguide/CL_0000148" ]
+      },
+      "label" : "melanocyte",
+      "ontology_name" : "hra",
+      "ontology_prefix" : null,
+      "ontology_iri" : "https://purl.humanatlas.io/collection/hra-ols",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : [ "cellxgene_subset", "general_cell_types_upper_slim", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.",
+        "oboXrefs" : [ {
+          "database" : "SANBI",
+          "id" : "mhl",
+          "description" : null,
+          "url" : null
+        } ]
+      }, {
+        "definition" : "Melanocytes are specialized cells prevalently found in the skin, but also present in the hair follicles, eyes, inner ear, bones, heart, and brain. Their primary function is the synthesis of melanin, a pigment responsible for coloration of skin, hair, and eyes. The presence and distribution of this pigment play a crucial role in the body's defense mechanism against harmful ultraviolet radiation.\nIn addition to melanin production, melanocytes also engage in a variety of other biological functions. They play a fundamental role in the immune response, owing to their ability to present antigens to T cells. Furthermore, they contribute to the maintenance of the skin's homeostasis by regulating processes such as extracellular matrix remodeling and cytokine production. A balance in melanocyte function is pivotal, as dysfunctions often result in dermatological disorders. For instance, the loss of melanocytes or reduction in their function may lead to hypopigmentation conditions such as vitiligo, whereas an abnormal increase could result in hyperpigmentation disorders or melanoma, a dangerous type of skin cancer.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)",
+        "oboXrefs" : [ {
+          "database" : "DOI",
+          "id" : "10.1002/med.21754",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.1038/nrc.2016.37",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.1111/j.1751-1097.2007.00226.x",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.3390/ijms21249769",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : null,
+          "id" : "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/melanocyte",
+          "description" : null,
+          "url" : "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/melanocyte"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000847",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000847"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0613",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0613"
+      }, {
+        "database" : "FMA",
+        "id" : "70545",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/70545"
+      }, {
+        "database" : "MESH",
+        "id" : "D008544",
+        "description" : null,
+        "url" : "http://id.nlm.nih.gov/mesh/D008544"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001679",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001679"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009091",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009091"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        },
+        "has_characterizing_marker_set" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/hra/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0015004"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ ],
+      "synonyms" : [ ],
+      "annotation" : { },
+      "label" : "melanocyte",
+      "ontology_name" : "mondo",
+      "ontology_prefix" : "MONDO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/mondo/mondo-international.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        },
+        "has_part" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000051"
+        },
+        "develops_from" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance." ],
+      "synonyms" : [ "melanophore" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000847", "CALOHA:TS-0613", "FMA:70545", "MESH:D008544", "VHOG:0001679" ]
+      },
+      "label" : "melanocyte",
+      "ontology_name" : "mp",
+      "ontology_prefix" : "MP",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/mp/mp-international.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : [ "cellxgene_subset", "general_cell_types_upper_slim", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.",
+        "oboXrefs" : [ {
+          "database" : "SANBI",
+          "id" : "mhl",
+          "description" : null,
+          "url" : null
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000847",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000847"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0613",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0613"
+      }, {
+        "database" : "FMA",
+        "id" : "70545",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/70545"
+      }, {
+        "database" : "MESH",
+        "id" : "D008544",
+        "description" : null,
+        "url" : "http://id.nlm.nih.gov/mesh/D008544"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001679",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001679"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        },
+        "has_part" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000051"
+        },
+        "develops_from" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/mp/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.", "An epidermal cell that produces melanin." ],
+      "synonyms" : [ ],
+      "annotation" : {
+        "NCI_Thesaurus_definition_citation" : [ "NCIt:C12591" ],
+        "SNOMEDCT_definition_citation" : [ "SNOMEDCT:9683001" ],
+        "term editor" : [ "Tomasz Adamusiak" ]
+      },
+      "label" : "melanocyte",
+      "ontology_name" : "ngbo",
+      "ontology_prefix" : "NGBO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/ngbo.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/ngbo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ ],
+      "synonyms" : [ ],
+      "annotation" : { },
+      "label" : "melanocyte",
+      "ontology_name" : "oba",
+      "ontology_prefix" : "OBA",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/oba.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : null,
+      "obo_definition_citation" : null,
+      "obo_xref" : null,
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        },
+        "has_part" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000051"
+        },
+        "develops_from" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/oba/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ ],
+      "synonyms" : [ "melanophore" ],
+      "annotation" : {
+        "Description" : [ "Melanocytes are specialized cells prevalently found in the skin, but also present in the hair follicles, eyes, inner ear, bones, heart, and brain. Their primary function is the synthesis of melanin, a pigment responsible for coloration of skin, hair, and eyes. The presence and distribution of this pigment play a crucial role in the body's defense mechanism against harmful ultraviolet radiation.\nIn addition to melanin production, melanocytes also engage in a variety of other biological functions. They play a fundamental role in the immune response, owing to their ability to present antigens to T cells. Furthermore, they contribute to the maintenance of the skin's homeostasis by regulating processes such as extracellular matrix remodeling and cytokine production. A balance in melanocyte function is pivotal, as dysfunctions often result in dermatological disorders. For instance, the loss of melanocytes or reduction in their function may lead to hypopigmentation conditions such as vitiligo, whereas an abnormal increase could result in hyperpigmentation disorders or melanoma, a dangerous type of skin cancer.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)" ],
+        "database_cross_reference" : [ "BTO:0000847", "CALOHA:TS-0613", "FMA:70545", "MESH:D008544", "NCIt:C12591", "SNOMEDCT:9683001", "VHOG:0001679", "ZFA:0009091" ],
+        "definition" : [ "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance." ],
+        "seeAlso" : [ "https://cellxgene.cziscience.com/cellguide/CL_0000148" ]
+      },
+      "label" : "melanocyte",
+      "ontology_name" : "pride",
+      "ontology_prefix" : "PRIDE",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/pride.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : false,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : [ "cellxgene_subset", "general_cell_types_upper_slim", "human_subset", "mouse_subset", "human_reference_atlas" ],
+      "obo_definition_citation" : null,
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000847",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000847"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0613",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0613"
+      }, {
+        "database" : "FMA",
+        "id" : "70545",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/70545"
+      }, {
+        "database" : "MESH",
+        "id" : "D008544",
+        "description" : null,
+        "url" : "http://id.nlm.nih.gov/mesh/D008544"
+      }, {
+        "database" : "NCIt",
+        "id" : "C12591",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/NCIT_C12591"
+      }, {
+        "database" : "SNOMEDCT",
+        "id" : "9683001",
+        "description" : null,
+        "url" : "http://purl.bioontology.org/ontology/SNOMEDCT/9683001"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001679",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001679"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009091",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009091"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        },
+        "located_in" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/pride/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0001025"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance." ],
+      "synonyms" : [ "melanophore" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000847", "CALOHA:TS-0613", "FMA:70545", "MESH:D008544", "VHOG:0001679", "ZFA:0009091" ],
+        "seeAlso" : [ "https://cellxgene.cziscience.com/cellguide/CL_0000148" ]
+      },
+      "label" : "melanocyte",
+      "ontology_name" : "uberon",
+      "ontology_prefix" : "UBERON",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/uberon.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : [ "cellxgene_subset", "general_cell_types_upper_slim", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.",
+        "oboXrefs" : [ {
+          "database" : "SANBI",
+          "id" : "mhl",
+          "description" : null,
+          "url" : null
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000847",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000847"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0613",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0613"
+      }, {
+        "database" : "FMA",
+        "id" : "70545",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/70545"
+      }, {
+        "database" : "MESH",
+        "id" : "D008544",
+        "description" : null,
+        "url" : "http://id.nlm.nih.gov/mesh/D008544"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001679",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001679"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009091",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009091"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        },
+        "has_part" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000051"
+        },
+        "develops_from" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+        }
+      }
+    }, {
+      "iri" : "http://purl.obolibrary.org/obo/CL_0000148",
+      "lang" : "en",
+      "description" : [ "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.", "Melanocytes are specialized cells prevalently found in the skin, but also present in the hair follicles, eyes, inner ear, bones, heart, and brain. Their primary function is the synthesis of melanin, a pigment responsible for coloration of skin, hair, and eyes. The presence and distribution of this pigment play a crucial role in the body's defense mechanism against harmful ultraviolet radiation.\nIn addition to melanin production, melanocytes also engage in a variety of other biological functions. They play a fundamental role in the immune response, owing to their ability to present antigens to T cells. Furthermore, they contribute to the maintenance of the skin's homeostasis by regulating processes such as extracellular matrix remodeling and cytokine production. A balance in melanocyte function is pivotal, as dysfunctions often result in dermatological disorders. For instance, the loss of melanocytes or reduction in their function may lead to hypopigmentation conditions such as vitiligo, whereas an abnormal increase could result in hyperpigmentation disorders or melanoma, a dangerous type of skin cancer.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)" ],
+      "synonyms" : [ "melanophore" ],
+      "annotation" : {
+        "database_cross_reference" : [ "BTO:0000847", "CALOHA:TS-0613", "FMA:70545", "MESH:D008544", "VHOG:0001679", "ZFA:0009091" ]
+      },
+      "label" : "melanocyte",
+      "ontology_name" : "upheno",
+      "ontology_prefix" : "UPHENO",
+      "ontology_iri" : "http://purl.obolibrary.org/obo/upheno.owl",
+      "is_obsolete" : false,
+      "term_replaced_by" : null,
+      "is_defining_ontology" : false,
+      "has_children" : true,
+      "is_root" : false,
+      "short_form" : "CL_0000148",
+      "obo_id" : "CL:0000148",
+      "in_subset" : [ "cellxgene_subset", "general_cell_types_upper_slim", "human_reference_atlas" ],
+      "obo_definition_citation" : [ {
+        "definition" : "A pigment cell derived from the neural crest. Contains melanin-filled pigment granules, which gives a brown to black appearance.",
+        "oboXrefs" : [ {
+          "database" : "SANBI",
+          "id" : "mhl",
+          "description" : null,
+          "url" : null
+        } ]
+      }, {
+        "definition" : "Melanocytes are specialized cells prevalently found in the skin, but also present in the hair follicles, eyes, inner ear, bones, heart, and brain. Their primary function is the synthesis of melanin, a pigment responsible for coloration of skin, hair, and eyes. The presence and distribution of this pigment play a crucial role in the body's defense mechanism against harmful ultraviolet radiation.\nIn addition to melanin production, melanocytes also engage in a variety of other biological functions. They play a fundamental role in the immune response, owing to their ability to present antigens to T cells. Furthermore, they contribute to the maintenance of the skin's homeostasis by regulating processes such as extracellular matrix remodeling and cytokine production. A balance in melanocyte function is pivotal, as dysfunctions often result in dermatological disorders. For instance, the loss of melanocytes or reduction in their function may lead to hypopigmentation conditions such as vitiligo, whereas an abnormal increase could result in hyperpigmentation disorders or melanoma, a dangerous type of skin cancer.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)",
+        "oboXrefs" : [ {
+          "database" : "DOI",
+          "id" : "10.1002/med.21754",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.1038/nrc.2016.37",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.1111/j.1751-1097.2007.00226.x",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : "DOI",
+          "id" : "10.3390/ijms21249769",
+          "description" : null,
+          "url" : null
+        }, {
+          "database" : null,
+          "id" : "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/melanocyte",
+          "description" : null,
+          "url" : "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/melanocyte"
+        } ]
+      } ],
+      "obo_xref" : [ {
+        "database" : "BTO",
+        "id" : "0000847",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/BTO_0000847"
+      }, {
+        "database" : "CALOHA",
+        "id" : "TS-0613",
+        "description" : null,
+        "url" : "https://www.nextprot.org/term/TS-0613"
+      }, {
+        "database" : "FMA",
+        "id" : "70545",
+        "description" : null,
+        "url" : "http://purl.org/sig/ont/fma/70545"
+      }, {
+        "database" : "MESH",
+        "id" : "D008544",
+        "description" : null,
+        "url" : "http://id.nlm.nih.gov/mesh/D008544"
+      }, {
+        "database" : "VHOG",
+        "id" : "0001679",
+        "description" : null,
+        "url" : "http://purl.obolibrary.org/obo/VHOG_0001679"
+      }, {
+        "database" : "ZFA",
+        "id" : "0009091",
+        "description" : null,
+        "url" : "https://zfin.org/action/ontology/term/ZFA:0009091"
+      } ],
+      "obo_synonym" : null,
+      "is_preferred_root" : false,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148?lang=en"
+        },
+        "parents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/parents"
+        },
+        "ancestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/ancestors"
+        },
+        "hierarchicalParents" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalParents"
+        },
+        "hierarchicalAncestors" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalAncestors"
+        },
+        "jstree" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/jstree"
+        },
+        "children" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/children"
+        },
+        "descendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/descendants"
+        },
+        "hierarchicalChildren" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalChildren"
+        },
+        "hierarchicalDescendants" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/hierarchicalDescendants"
+        },
+        "graph" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/graph"
+        },
+        "has_part" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000051"
+        },
+        "develops_from" : {
+          "href" : "http://www.ebi.ac.uk/ols4/api/ontologies/upheno/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCL_0000148/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO_0002202"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://www.ebi.ac.uk/ols4/api/terms?iri=http%3A//purl.obolibrary.org/obo/CL_0000148&page=0&size=1000"
+    }
+  },
+  "page" : {
+    "size" : 1000,
+    "totalElements" : 16,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}

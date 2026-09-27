@@ -1,0 +1,54 @@
+[
+ {
+  "ts": "2026-09-27T15:17:42.496827+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "RHO",
+    "NEFL",
+    "UCHL1",
+    "TTR",
+    "PDE6H",
+    "PVALB",
+    "SNCG",
+    "PCP4",
+    "PRPH",
+    "STMN2"
+   ]
+  },
+  "executed": true,
+  "result_chars": 5723
+ },
+ {
+  "ts": "2026-09-27T15:17:44.292829+08:00",
+  "tool": "get_tissue_composition",
+  "args": {
+   "species": "human",
+   "tissue": "retina"
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:17:47.631727+08:00",
+  "tool": "search_literature",
+  "args": {
+   "cell_type": "Rod",
+   "species": "human",
+   "tissue": "retina",
+   "query": "RHO NEFL PDE6H co-expression rod photoreceptor contamination",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:17:49.159997+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "Rod"
+  },
+  "executed": true,
+  "result_chars": 3632
+ }
+]

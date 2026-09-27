@@ -1,0 +1,58 @@
+[
+ {
+  "ts": "2026-09-27T15:22:44.016187+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "DGKB",
+    "GRIK2",
+    "TMEM132C",
+    "PDE1A",
+    "GRM5",
+    "TENM3",
+    "PTPRO",
+    "CDH20",
+    "LRRC7",
+    "TENM2"
+   ]
+  },
+  "executed": true,
+  "result_chars": 4711
+ },
+ {
+  "ts": "2026-09-27T15:22:46.820223+08:00",
+  "tool": "search_literature",
+  "args": {
+   "cell_type": "BC",
+   "species": "human",
+   "tissue": "retina",
+   "query": "DGKB GRIK2 GRM5 PDE1A bipolar cell marker human retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:22:48.078284+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "BC"
+  },
+  "executed": true,
+  "result_chars": 3632
+ },
+ {
+  "ts": "2026-09-27T15:22:49.527849+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "GRIK2",
+    "LRRC7",
+    "OPCML",
+    "SLC24A3"
+   ]
+  },
+  "executed": true,
+  "result_chars": 4212
+ }
+]

@@ -1,0 +1,174 @@
+[
+ {
+  "ts": "2026-09-27T15:54:06.733992+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "FTH1P10",
+    "MYO9A",
+    "GPX3",
+    "RPL39",
+    "NTM",
+    "XIST",
+    "EEF1A1",
+    "RPS15P4",
+    "SYCE1L",
+    "PCAT4",
+    "ST3GAL3-AS1",
+    "RPL32P18",
+    "LENG8",
+    "RPL13AP5",
+    "LINC02115",
+    "RPL36A",
+    "ZMYND19",
+    "RPL41P2",
+    "DRAIC",
+    "MPP4"
+   ]
+  },
+  "executed": true,
+  "result_chars": 4085
+ },
+ {
+  "ts": "2026-09-27T15:54:06.754984+08:00",
+  "tool": "get_tissue_composition",
+  "args": {
+   "species": "human",
+   "tissue": "retina"
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:54:24.501080+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "MPP4 retina photoreceptor rod marker",
+   "tissue": "retina",
+   "species": "human",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:54:26.108744+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "NTM neurotrimin retina cell type expression",
+   "tissue": "retina",
+   "species": "human",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:54:26.114268+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "Rod"
+  },
+  "executed": true,
+  "result_chars": 3632
+ },
+ {
+  "ts": "2026-09-27T15:54:40.497006+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "MPP4 MAGUK photoreceptor synapse retina expression",
+   "species": "human",
+   "tissue": "retina",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:54:41.922116+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "XIST single cell cluster ribosomal pseudogene artifact low quality",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:54:46.030617+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "MPP4 membrane protein palmitoylated 4 retina photoreceptor",
+   "species": "human",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:54:47.397373+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "GPX3 retina cell type expression",
+   "species": "human",
+   "tissue": "retina",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:54:50.328387+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "MPP4 MAGUK p55 photoreceptor outer segment retina rod",
+   "species": "mouse",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:54:51.713630+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "MYO9A retina cell type expression",
+   "species": "human",
+   "tissue": "retina",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:54:55.389201+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "MPP4 MAGUK protein photoreceptor outer segment periphery retina",
+   "species": "mouse",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:54:59.902403+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "MPP4 membrane protein palmitoylated 4 retina photoreceptor synapse",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:55:03.972097+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "MPP4 MPP5 MAGUK photoreceptor outer segment periphery retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ }
+]

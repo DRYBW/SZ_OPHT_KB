@@ -1,5 +1,8 @@
 # 数据与工件（体积大/含私有患者衍生数据，永不入库）
-plans/
+# 2026-09-27 REPOSYNC: 仅排除仓根 plans/（施工现场）；判读层镜像在 docs/plans/ 下入库
+/plans/
+docs/plans/*/ledgers/raw/
+docs/plans/*/batch2/ledgers/raw2/
 *.h5ad
 *.h5ad.gz
 *.npz

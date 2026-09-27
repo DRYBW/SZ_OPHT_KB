@@ -1,0 +1,34 @@
+{
+ "keys_103": {
+  "none": 44,
+  "strong": 20,
+  "weak": 39
+ },
+ "keys_280_combined": {
+  "strong": 197,
+  "none": 44,
+  "weak": 39
+ },
+ "rows_338_combined": {
+  "strong": 250,
+  "weak": 44,
+  "none": 44
+ },
+ "transitions": {
+  "unchanged": 78,
+  "weak->strong": 16,
+  "none->strong": 4,
+  "none->weak": 5
+ },
+ "final_reading": {
+  "e2_baseline_pairs": 567,
+  "e2_infile_verifiable": 30,
+  "e2_internal_derived": 199,
+  "e2_no_record_rows": 338,
+  "no_record_strong_rows_b1": 222,
+  "no_record_strong_rows_b1b2_combined": 250,
+  "verifiable_chain_pairs_combined": 280,
+  "verifiable_chain_coverage_pct_of_567": 49.38,
+  "note": "E2 数字零改动；本读数仅为未来评测口径修订提供账。S1 弃权面线性预估（同一批公式）=17.35pp×strong/338=12.83pp（结构估计，非重跑）"
+ }
+}

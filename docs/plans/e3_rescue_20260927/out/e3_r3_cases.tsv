@@ -1,0 +1,6 @@
+cluster_id	truth	e1_raw_top1	e1_raw_n	consensus	incumbent_S1_named	incumbent_hit	improved_named	improved_reason	status
+Q2::22	Astro	MG	2	Astro	MG	0	MG	named	not_repaired(still_wrong:MG)
+Q6::11	Endothelium	APC_MHCII_high	2	Endothelium	Immune Cells	0	Immune Cells	named	not_repaired(still_wrong:Immune Cells)
+Q6::3	Epithelium	Mono_Classical	2	Epithelium	Immune Cells	0	Immune Cells	named	not_repaired(still_wrong:Immune Cells)
+Q2::14	BC	RPE	1	BC	RPE	0		weak_hit(maxn=1)	not_repaired(abstained:weak_hit(maxn=1))
+Q6::20	Epithelium	Keratocytes	1	Epithelium	Fibroblasts	0		weak_hit(maxn=1)	not_repaired(abstained:weak_hit(maxn=1))

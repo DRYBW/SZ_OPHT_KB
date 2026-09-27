@@ -1,0 +1,26 @@
+faces: F-RET=196 F-OCS=33 F-3SEAT=78 (flip-retina=45)
+leak split all-truth-rows: {'不可判': 52, '无': 164, '有': 13}
+  leak Q1 {'无': 16}
+  leak Q2 {'无': 26, '有': 1}
+  leak Q3 {'无': 16}
+  leak Q4 {'不可判': 29, '无': 11}
+  leak Q5b {'无': 47}
+  leak Q6 {'不可判': 24, '无': 9}
+  leak Q7 {'无': 47, '有': 12}
+  leak Q8 {'无': 26, '不可判': 9}
+  leak Q9 {'无': 17}
+F-RET -> {'全部': 0.724, '无泄漏': 0.677, '有泄漏': 0.846, '不可判': 0.929}
+F-OCS -> {'全部': 0.394, '无泄漏': 0.333, '不可判': 0.417}
+F-3SEAT -> {'全部': 0.603, '无泄漏': 0.66, '有泄漏': 1.0, '不可判': 0.483}
+MATRIX:
+  F-RET:ev1:ABcons@无泄漏 {'evidence': 67.74, 'baseline': 50.97, 'delta_pp': 16.77, 'tier': 'V1', 'n': 155}
+  F-RET:ev3:ABcons@无泄漏 {'evidence': 68.39, 'baseline': 50.97, 'delta_pp': 17.42, 'tier': 'V1', 'n': 155}
+  F-3SEAT:ev1:3seat@无泄漏 {'evidence': 65.96, 'baseline': 89.36, 'delta_pp': -23.4, 'tier': 'V3', 'n': 47}
+  F-3SEAT:ev3:3seat@无泄漏 {'evidence': 65.96, 'baseline': 89.36, 'delta_pp': -23.4, 'tier': 'V3', 'n': 47}
+  F-3SEAT:ev1:3seat@全部 {'delta_pp': -20.51, 'tier': 'V3', 'n': 78}
+  F-RET:ev1:B@无泄漏 {'delta_pp': 3.23, 'tier': 'V2', 'n': 155}
+  leak_column_gap_F-RET {'with_leak': 84.62, 'without': 67.74, 'gap_pp': 16.87}
+  leak_column_gap_F-3SEAT {'with_leak': 100.0, 'without': 65.96, 'gap_pp': 34.04}
+E1-4 no-truth: rows=26 both-defined=2 agree=2
+E1-5 divergence candidates: 8 Q2::22 in div: True
+ran 2026-09-26 22:56:27.279091

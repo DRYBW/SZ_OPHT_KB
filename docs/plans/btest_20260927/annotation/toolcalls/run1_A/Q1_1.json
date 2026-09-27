@@ -1,0 +1,88 @@
+[
+ {
+  "ts": "2026-09-27T15:16:31.788603+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "FTH1P10",
+    "MYO9A",
+    "GPX3",
+    "RPL39",
+    "NTM",
+    "XIST",
+    "EEF1A1",
+    "RPS15P4",
+    "SYCE1L",
+    "PCAT4",
+    "ST3GAL3-AS1",
+    "RPL32P18",
+    "LENG8",
+    "RPL13AP5",
+    "LINC02115",
+    "RPL36A",
+    "ZMYND19",
+    "RPL41P2",
+    "DRAIC",
+    "MPP4"
+   ]
+  },
+  "executed": true,
+  "result_chars": 4085
+ },
+ {
+  "ts": "2026-09-27T15:16:34.114623+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "MPP4",
+    "NTM"
+   ]
+  },
+  "executed": true,
+  "result_chars": 3639
+ },
+ {
+  "ts": "2026-09-27T15:16:53.494374+08:00",
+  "tool": "search_literature",
+  "args": {
+   "cell_type": "Rod",
+   "tissue": "retina",
+   "query": "MPP4 NTM marker retina",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:16:56.752338+08:00",
+  "tool": "search_literature",
+  "args": {
+   "tissue": "retina",
+   "query": "MPP4 photoreceptor marker human retina",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:17:00.239062+08:00",
+  "tool": "search_literature",
+  "args": {
+   "tissue": "retina",
+   "query": "XIST lncRNA retina cell type specific expression",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:17:01.754405+08:00",
+  "tool": "get_tissue_composition",
+  "args": {
+   "species": "human",
+   "tissue": "retina"
+  },
+  "executed": true,
+  "result_chars": 8014
+ }
+]

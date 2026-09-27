@@ -1,0 +1,158 @@
+[
+ {
+  "ts": "2026-09-27T16:27:48.949130+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "Sncg",
+    "Calb2",
+    "Ebf1",
+    "Lingo2",
+    "Atp1b1",
+    "Thy1",
+    "Nrg1",
+    "Kirrel3",
+    "Cartpt",
+    "Stmn2",
+    "Rbfox1",
+    "Nefm",
+    "Vsnl1",
+    "Nrn1",
+    "Ncam2",
+    "Il1rapl1",
+    "Lrrc4c",
+    "Opcml",
+    "Kctd16",
+    "Galntl6"
+   ]
+  },
+  "executed": true,
+  "result_chars": 6971
+ },
+ {
+  "ts": "2026-09-27T16:27:48.956376+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "RGC"
+  },
+  "executed": true,
+  "result_chars": 3639
+ },
+ {
+  "ts": "2026-09-27T16:27:48.969638+08:00",
+  "tool": "get_tissue_composition",
+  "args": {
+   "species": "mouse",
+   "tissue": "retina"
+  },
+  "executed": true,
+  "result_chars": 1833
+ },
+ {
+  "ts": "2026-09-27T16:28:02.209605+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "Sncg RGC marker mouse retina single cell",
+   "cell_type": "RGC",
+   "species": "mouse",
+   "tissue": "retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T16:28:02.942779+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "Ebf1 Calb2 Thy1 Nefm retinal ganglion cell subtype mouse",
+   "cell_type": "RGC",
+   "species": "mouse",
+   "tissue": "retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T16:28:14.524094+08:00",
+  "tool": "search_literature",
+  "args": {
+   "query": "Sncg-positive retinal ganglion cell subtype transcriptome mouse scRNA-seq",
+   "species": "mouse",
+   "tissue": "retina",
+   "cell_type": "RGC",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T16:28:25.651420+08:00",
+  "tool": "search_literature",
+  "args": {
+   "cell_type": "RGC",
+   "query": "Sncg Ebf1 Lingo2 Kirrel3 Nrg1 Cartpt RGC subtype marker Tran mouse retina",
+   "species": "mouse",
+   "tissue": "retina",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T16:28:27.978504+08:00",
+  "tool": "search_literature",
+  "args": {
+   "cell_type": "RGC",
+   "query": "Tran 2019 mouse RGC classification Sncg Ebf1 Calb2 Lingo2 Kirrel3 subtype markers",
+   "species": "mouse",
+   "tissue": "retina",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T16:28:30.666242+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "AC"
+  },
+  "executed": true,
+  "result_chars": 3636
+ },
+ {
+  "ts": "2026-09-27T16:28:30.679756+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "BC"
+  },
+  "executed": true,
+  "result_chars": 3632
+ },
+ {
+  "ts": "2026-09-27T16:28:32.940485+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "HC"
+  },
+  "executed": true,
+  "result_chars": 3637
+ },
+ {
+  "ts": "2026-09-27T16:28:34.602609+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "Rbpms",
+    "Pou4f1",
+    "Pou4f2",
+    "Nefl",
+    "Slc17a6"
+   ]
+  },
+  "executed": true,
+  "result_chars": 4508
+ }
+]

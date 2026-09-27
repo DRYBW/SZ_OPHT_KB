@@ -1,0 +1,707 @@
+{
+ "Endo": {
+  "truth_fold": [
+   "Endothelium"
+  ],
+  "fold_provenance": "KB9_ext:KB 缩写=endothelial cell=super_map 叶",
+  "face_effective_genes": [
+   "CLDN5",
+   "PECAM1",
+   "CDH5",
+   "VWF",
+   "TM4SF1",
+   "RAMP2",
+   "ESAM",
+   "FLT1",
+   "KDR",
+   "ADGRL4",
+   "ECSCR",
+   "GNG11",
+   "PLVAP"
+  ],
+  "blocked": []
+ },
+ "Endo_Patho": {
+  "truth_fold": [
+   "Endothelium"
+  ],
+  "fold_provenance": "KB9_ext:血管内皮病理态",
+  "face_effective_genes": [
+   "PLVAP",
+   "VCAM1",
+   "DLL4",
+   "NDUFA4L2",
+   "HIF1A"
+  ],
+  "blocked": [
+   {
+    "gene": "ICAM1",
+    "in_top60_of": [
+     "Corneal Endothelium"
+    ]
+   }
+  ]
+ },
+ "Pericyte": {
+  "truth_fold": [
+   "Pericytes"
+  ],
+  "fold_provenance": "frozen_crosswalk:alias",
+  "face_effective_genes": [
+   "RGS4",
+   "PDGFRB",
+   "NOTCH3",
+   "HIGD1B",
+   "PRRX1",
+   "THY1",
+   "ITGA1",
+   "IGFBP7",
+   "CALD1"
+  ],
+  "blocked": [
+   {
+    "gene": "RGS5",
+    "in_top60_of": [
+     "Smooth Muscle Cells"
+    ]
+   },
+   {
+    "gene": "COL1A2",
+    "in_top60_of": [
+     "Fibroblasts"
+    ]
+   },
+   {
+    "gene": "MGP",
+    "in_top60_of": [
+     "Fibroblasts"
+    ]
+   }
+  ]
+ },
+ "SMC": {
+  "truth_fold": [
+   "Smooth Muscle Cells"
+  ],
+  "fold_provenance": "frozen_crosswalk:alias",
+  "face_effective_genes": [
+   "CNN1",
+   "DES",
+   "CALD1",
+   "LMOD1"
+  ],
+  "blocked": [
+   {
+    "gene": "ACTA2",
+    "in_top60_of": [
+     "Pericytes"
+    ]
+   },
+   {
+    "gene": "MYH11",
+    "in_top60_of": [
+     "Pericytes"
+    ]
+   },
+   {
+    "gene": "TAGLN",
+    "in_top60_of": [
+     "Pericytes"
+    ]
+   },
+   {
+    "gene": "MYL9",
+    "in_top60_of": [
+     "Pericytes"
+    ]
+   }
+  ]
+ },
+ "Fibroblast": {
+  "truth_fold": [
+   "Fibroblasts"
+  ],
+  "fold_provenance": "frozen_crosswalk:alias",
+  "face_effective_genes": [
+   "COL1A1",
+   "COL1A2",
+   "COL3A1",
+   "DCN",
+   "LUM",
+   "FBN1",
+   "FN1",
+   "PTGDS",
+   "MMP2",
+   "THY1"
+  ],
+  "blocked": []
+ },
+ "Myofibroblast": {
+  "truth_fold": [
+   "Fibroblasts",
+   "Smooth Muscle Cells"
+  ],
+  "fold_provenance": "frozen_crosswalk:ambiguous",
+  "face_effective_genes": [
+   "POSTN",
+   "FN1",
+   "COL1A1",
+   "COL1A2",
+   "CTHRC1",
+   "TIMP1",
+   "PRRX1"
+  ],
+  "blocked": [
+   {
+    "gene": "ACTA2",
+    "in_top60_of": [
+     "Pericytes"
+    ]
+   },
+   {
+    "gene": "TAGLN",
+    "in_top60_of": [
+     "Pericytes"
+    ]
+   },
+   {
+    "gene": "MYL9",
+    "in_top60_of": [
+     "Pericytes"
+    ]
+   },
+   {
+    "gene": "TPM1",
+    "in_top60_of": [
+     "Pericytes"
+    ]
+   },
+   {
+    "gene": "TPM2",
+    "in_top60_of": [
+     "Pericytes"
+    ]
+   }
+  ]
+ },
+ "Mono_Classical": {
+  "truth_fold": [
+   "Immune Cells"
+  ],
+  "fold_provenance": "frozen_crosswalk:alias",
+  "face_effective_genes": [
+   "FCN1",
+   "VCAN",
+   "S100A12",
+   "SELL",
+   "CD14",
+   "LYZ",
+   "MNDA",
+   "CTSS",
+   "SERPINA1"
+  ],
+  "blocked": [
+   {
+    "gene": "S100A8",
+    "in_top60_of": [
+     "Epithelium"
+    ]
+   },
+   {
+    "gene": "S100A9",
+    "in_top60_of": [
+     "Epithelium"
+    ]
+   }
+  ]
+ },
+ "Mono_Nonclassical": {
+  "truth_fold": [
+   "Immune Cells"
+  ],
+  "fold_provenance": "frozen_crosswalk:alias",
+  "face_effective_genes": [
+   "FCGR3A",
+   "LST1",
+   "MS4A7",
+   "CX3CR1",
+   "IL1B"
+  ],
+  "blocked": []
+ },
+ "Mac_Tissue": {
+  "truth_fold": [
+   "Immune Cells"
+  ],
+  "fold_provenance": "KB9_ext:组织巨噬",
+  "face_effective_genes": [
+   "SELENOP",
+   "MRC1",
+   "FOLR2",
+   "LYVE1",
+   "CD163",
+   "C1QA",
+   "C1QB",
+   "C1QC",
+   "VSIG4",
+   "CD5L",
+   "STAB1",
+   "MAF",
+   "F13A1",
+   "ITM2B",
+   "SLC40A1"
+  ],
+  "blocked": []
+ },
+ "Mac_DAM_LAM": {
+  "truth_fold": [
+   "Immune Cells"
+  ],
+  "fold_provenance": "frozen_crosswalk:alias",
+  "face_effective_genes": [
+   "GPNMB",
+   "LIPA",
+   "CTSD",
+   "LGMN",
+   "PLD3",
+   "ASAH1",
+   "FTL",
+   "TREM2",
+   "SPP1",
+   "CD9",
+   "OLR1",
+   "MMP9",
+   "CCL3",
+   "CCL4",
+   "HMOX1"
+  ],
+  "blocked": [
+   {
+    "gene": "FTH1",
+    "in_top60_of": [
+     "Epithelium"
+    ]
+   },
+   {
+    "gene": "APOE",
+    "in_top60_of": [
+     "Melanocytes"
+    ]
+   }
+  ]
+ },
+ "Microglia": {
+  "truth_fold": [
+   "Immune Cells"
+  ],
+  "fold_provenance": "KB9_ext:小胶质=免疫叶",
+  "face_effective_genes": [
+   "P2RY12",
+   "TMEM119",
+   "CX3CR1",
+   "SIGLEC11",
+   "AIF1",
+   "IRF8",
+   "TYROBP",
+   "SALL1",
+   "HEXB",
+   "GPR34",
+   "OLFML3",
+   "FCER1G"
+  ],
+  "blocked": []
+ },
+ "APC_MHCII_high": {
+  "truth_fold": [
+   "Immune Cells"
+  ],
+  "fold_provenance": "frozen_crosswalk:alias",
+  "face_effective_genes": [
+   "HLA-DPA1",
+   "HLA-DPB1",
+   "HLA-DQA1",
+   "HLA-DQB1",
+   "HLA-DMB",
+   "FCGR1A",
+   "RGS1"
+  ],
+  "blocked": [
+   {
+    "gene": "HLA-DRA",
+    "in_top60_of": [
+     "Endothelium"
+    ]
+   },
+   {
+    "gene": "HLA-DRB1",
+    "in_top60_of": [
+     "Endothelium"
+    ]
+   },
+   {
+    "gene": "CD74",
+    "in_top60_of": [
+     "Endothelium"
+    ]
+   }
+  ]
+ },
+ "cDC1": {
+  "truth_fold": [
+   "Immune Cells"
+  ],
+  "fold_provenance": "KB9_ext",
+  "face_effective_genes": [
+   "CLEC9A",
+   "XCR1",
+   "C1S",
+   "C1R",
+   "ZBTB46",
+   "FLT3",
+   "IRF8"
+  ],
+  "blocked": [
+   {
+    "gene": "CADM1",
+    "in_top60_of": [
+     "Schwann Cells"
+    ]
+   }
+  ]
+ },
+ "cDC2": {
+  "truth_fold": [
+   "Immune Cells"
+  ],
+  "fold_provenance": "KB9_ext",
+  "face_effective_genes": [
+   "CD1C",
+   "FCER1A",
+   "CLEC10A",
+   "CD4",
+   "S100A10"
+  ],
+  "blocked": [
+   {
+    "gene": "HLA-DRA",
+    "in_top60_of": [
+     "Endothelium"
+    ]
+   }
+  ]
+ },
+ "pDC": {
+  "truth_fold": [
+   "Immune Cells"
+  ],
+  "fold_provenance": "frozen_crosswalk:alias",
+  "face_effective_genes": [
+   "LILRA4",
+   "IL3RA",
+   "IRF7",
+   "GZMB",
+   "PLD4",
+   "CLEC4C",
+   "SERPINF1",
+   "JCHAIN"
+  ],
+  "blocked": [
+   {
+    "gene": "TCF4",
+    "in_top60_of": [
+     "Endothelium",
+     "Fibroblasts"
+    ]
+   }
+  ]
+ },
+ "T": {
+  "truth_fold": [
+   "Immune Cells"
+  ],
+  "fold_provenance": "frozen_crosswalk:alias",
+  "face_effective_genes": [
+   "CD3D",
+   "CD3E",
+   "CD3G",
+   "CD2",
+   "TRAC",
+   "TRBC2",
+   "IL7R",
+   "CCL5",
+   "CD69",
+   "LCK",
+   "SKAP1"
+  ],
+  "blocked": []
+ },
+ "NK": {
+  "truth_fold": "UNMAPPED",
+  "fold_provenance": "UNMAPPED:不参与屏蔽(如实登记)",
+  "face_effective_genes": [
+   "GNLY",
+   "NKG7",
+   "KLRD1",
+   "KLRF1",
+   "FGFBP2",
+   "NCR3",
+   "PRF1"
+  ],
+  "blocked": []
+ },
+ "B": {
+  "truth_fold": "UNMAPPED",
+  "fold_provenance": "UNMAPPED:不参与屏蔽(如实登记)",
+  "face_effective_genes": [
+   "MS4A1",
+   "CD79A",
+   "CD79B",
+   "PAX5",
+   "BANK1",
+   "IGKC",
+   "TCL1A"
+  ],
+  "blocked": []
+ },
+ "Plasma": {
+  "truth_fold": "UNMAPPED",
+  "fold_provenance": "UNMAPPED:不参与屏蔽(如实登记)",
+  "face_effective_genes": [
+   "MZB1",
+   "JCHAIN",
+   "XBP1",
+   "IGHG1",
+   "SEC11C",
+   "DERL3",
+   "SSR4",
+   "SLAMF7",
+   "TNFRSF17"
+  ],
+  "blocked": []
+ },
+ "Granulocyte": {
+  "truth_fold": [
+   "Immune Cells"
+  ],
+  "fold_provenance": "KB9_ext",
+  "face_effective_genes": [
+   "CSF3R",
+   "C5AR1",
+   "ANXA1",
+   "ELANE",
+   "MPO",
+   "CAMP",
+   "LTF",
+   "CXCR2",
+   "FCGR3B",
+   "TGFBI",
+   "CD36"
+  ],
+  "blocked": [
+   {
+    "gene": "IL1RN",
+    "in_top60_of": [
+     "Epithelium"
+    ]
+   },
+   {
+    "gene": "TIMP1",
+    "in_top60_of": [
+     "Fibroblasts"
+    ]
+   }
+  ]
+ },
+ "Proliferating": {
+  "truth_fold": "UNMAPPED",
+  "fold_provenance": "KB9_ext:状态类不折叠(不参与屏蔽)",
+  "face_effective_genes": [
+   "MKI67",
+   "TOP2A",
+   "CENPF",
+   "BIRC5",
+   "H2AFZ",
+   "NUSAP1",
+   "STMN1",
+   "PTTG1"
+  ],
+  "blocked": []
+ },
+ "Keratocytes": {
+  "truth_fold": [
+   "Fibroblasts"
+  ],
+  "fold_provenance": "frozen_crosswalk:alias",
+  "face_effective_genes": [
+   "KERA",
+   "NNMT"
+  ],
+  "blocked": [
+   {
+    "gene": "ALDH3A1",
+    "in_top60_of": [
+     "Epithelium"
+    ]
+   }
+  ]
+ },
+ "Corneal Endothelium": {
+  "truth_fold": [
+   "Corneal Endothelium"
+  ],
+  "fold_provenance": "KB9_ext:名=truth 名",
+  "face_effective_genes": [
+   "SLC4A11",
+   "CDH2",
+   "CA3"
+  ],
+  "blocked": []
+ },
+ "face_v6::Keratocytes": {
+  "truth_fold": [
+   "Fibroblasts"
+  ],
+  "fold_provenance": "KB9_ext:keratocyte 叶∈Fibroblasts",
+  "face_effective_genes": [
+   "KERA"
+  ],
+  "blocked": []
+ },
+ "face_v6::Fibroblast": {
+  "truth_fold": [
+   "Fibroblasts"
+  ],
+  "fold_provenance": "KB9_ext",
+  "face_effective_genes": [],
+  "blocked": []
+ },
+ "face_v6::Pericyte": {
+  "truth_fold": [
+   "Pericytes"
+  ],
+  "fold_provenance": "KB9_ext",
+  "face_effective_genes": [
+   "NOTCH3",
+   "HIGD1B",
+   "CALD1",
+   "COX4I2"
+  ],
+  "blocked": []
+ },
+ "face_v6::SMC": {
+  "truth_fold": [
+   "Smooth Muscle Cells"
+  ],
+  "fold_provenance": "KB9_ext",
+  "face_effective_genes": [
+   "CNN1",
+   "DES",
+   "LMOD1"
+  ],
+  "blocked": [
+   {
+    "gene": "MYH11",
+    "in_top60_of": [
+     "Pericytes"
+    ]
+   },
+   {
+    "gene": "MYL9",
+    "in_top60_of": [
+     "Pericytes"
+    ]
+   }
+  ]
+ },
+ "face_v6::Myofibroblast": {
+  "truth_fold": [
+   "Fibroblasts",
+   "Smooth Muscle Cells"
+  ],
+  "fold_provenance": "KB9_ext:ambiguous 照原链",
+  "face_effective_genes": [],
+  "blocked": []
+ },
+ "Conj_epithelium_basal": {
+  "truth_fold": [
+   "Epithelium"
+  ],
+  "fold_provenance": "KB9_ext",
+  "face_effective_genes": [
+   "KRT13",
+   "KRT4",
+   "AQP5",
+   "CXCL17",
+   "LCN2",
+   "KRT19"
+  ],
+  "blocked": []
+ },
+ "Conj_epithelium_superficial": {
+  "truth_fold": [
+   "Epithelium"
+  ],
+  "fold_provenance": "KB9_ext",
+  "face_effective_genes": [
+   "SCGB3A1",
+   "FDCSP"
+  ],
+  "blocked": []
+ },
+ "Melanocyte": {
+  "truth_fold": [
+   "Melanocytes"
+  ],
+  "fold_provenance": "KB9_new:CL:0000148",
+  "face_effective_genes": [
+   "TRPM1",
+   "MLANA",
+   "TYRP1",
+   "PMEL",
+   "DCT",
+   "TYR",
+   "GAPDHS",
+   "GPR143",
+   "SLC24A5",
+   "ABCB5"
+  ],
+  "blocked": []
+ },
+ "Schwann": {
+  "truth_fold": [
+   "Schwann Cells"
+  ],
+  "fold_provenance": "KB9_new:CL:0002573",
+  "face_effective_genes": [
+   "MPZ",
+   "SCN7A",
+   "SOX2",
+   "NRXN1"
+  ],
+  "blocked": []
+ },
+ "Conj_epithelium_suprabasal": {
+  "truth_fold": [
+   "Epithelium"
+  ],
+  "fold_provenance": "KB9_new:CL:1000432 借父条+layer",
+  "face_effective_genes": [
+   "S100A8",
+   "S100A9",
+   "KRT4"
+  ],
+  "blocked": []
+ },
+ "Limbus_Sclera_fibroblast_C1": {
+  "truth_fold": [
+   "Fibroblasts"
+  ],
+  "fold_provenance": "KB9_new:CL:0000057",
+  "face_effective_genes": [
+   "DPT",
+   "LEPR",
+   "LAMA2"
+  ],
+  "blocked": []
+ }
+}

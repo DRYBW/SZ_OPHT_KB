@@ -1,0 +1,6 @@
+faces F-RET=196 F-OCS=33 F-3SEAT=78
+anchors: {"FRET_all_ev1": 72.45, "FRET_noleak_ev1": 67.74, "FRET_noleak_ev3": 68.39, "d_vs_AB_noleak": 16.77, "d_vs_B_noleak": 3.23, "F3_all_ev1": 60.26, "F3_all_cons3": 80.77}
+ANCHOR PASS: raw 列全部复现 E1 冻结值
+GATE: {"delta_primary_ev1": 7.66, "delta_ev3": 7.66, "delta_vs_B": -6.63, "usable_operating_point": false, "tier_1": "W1线", "tier_3": "W1线", "cross_tier": false, "verdict_line": "W2(无可用工作点)", "note": "①③分档不同=跨档边界案交PI(E1先例); W1需可用工作点+否决条款"}
+OBS(附加): {"F-RET_cons_undef_rows": 85, "F-RET_S1_labels_given": 48, "F-RET_S1_labels_correct": 41, "F-RET_S1_cov3": 69.39, "F-RET_S1_f1": 0.6513, "F-3SEAT_cons_undef_rows": 14, "F-3SEAT_S1_labels_given": 7, "F-3SEAT_S1_labels_correct": 5, "F-3SEAT_S1_cov3": 62.82, "F-3SEAT_S1_f1": 0.452}
+ran 2026-09-26 23:58:46.119596

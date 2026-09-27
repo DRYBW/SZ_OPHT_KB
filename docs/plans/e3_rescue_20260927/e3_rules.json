@@ -1,0 +1,71 @@
+{
+  "schema": "eyekb-e3-rescuerules/1.0",
+  "card": "t_7b5a5fb3",
+  "date": "2026-09-27",
+  "purpose": "E3 弃权带回捞工具预注册判据的机读定义；配套 E3_PREREG_v1.0.md。sha 先于跑数。",
+  "inherits": {
+    "scoring_rule": "e2_decon_rules.json sha256=349285823974ded3224617b7505683930d1cc489896b0e02a8d34efdad67e360 原样只读复用（S1 主规则 + keep_rule + 面板复刻 + class_map 口径）",
+    "replica_scripts": "scripts/e2_common.copy.py（打分原语）+ 本卡 e3_*.py；不 import eyekb_core",
+    "seat_ballots": "run3_object_B_table_v1.1.tsv / per_cluster_flip_table_facev21.tsv / run5_truth_table.tsv 存档直读，禁重跑 LLM"
+  },
+  "faces": {
+    "F_RET": "run3 表 truth 非空且 member∈{Q1,Q2,Q3,Q4,Q5b,Q7}（预期 196）",
+    "F_3SEAT": "flip 表 truth 非空非 nan 且 member∈视网膜系（预期 45） ∪ run5 全表（预期 33） = 预期 78"
+  },
+  "band_definition": {
+    "F_RET": "consensus_undefined = NOT(ann_A and ann_B and ann_A==ann_B and not ann_A.startswith('undetermined') and not ann_A.startswith('coarse:'))",
+    "F_3SEAT_retina45": "consensus_undefined = NOT(v21_mode=='majority' and v21_consensus truthy and != 'nan')",
+    "F_3SEAT_run5": "consensus_undefined = NOT(consensus truthy and != 'nan')",
+    "note": "逐字复刻 e2_metrics.copy.py 的 ab_consensus/v21_consensus/r5_consensus 函数语义"
+  },
+  "tool_spec": {
+    "trigger": "面内 truth 非空行 ∩ band_definition",
+    "score_source": "S1 去同源 ① top1 = 候选按 (-n_shared, canon) 排序首位",
+    "named_rule": "top1 候选 canon 经 e1_class_map.map[canon][panel]（panel=ocular 若 cluster 以 Q6 开头，否则 retina）得 str 标签=具名；None/AMBIG[...]/无候选=弃权",
+    "hit_rule": "具名标签==truth 字符串全等；弃权/AMBIG=miss",
+    "output_row_fields": ["cluster_id", "member", "truth", "arm", "named_label", "n_shared", "shared_genes", "lit_n", "candidate_count", "correct"]
+  },
+  "gates": {
+    "R1": {"face": "F_RET", "band": "AB 两席无共识", "precision_min": 80.0, "named_min": 40, "and": true},
+    "R2": {"face": "F_3SEAT", "band": "三席存档共识未定义", "named_min": 15, "precision_min": 70.0, "and": true},
+    "R3": {
+      "arm": "IMPROVED（现役 S1 之上的规则叠加层）",
+      "precision_floor": "改良臂具名精确率 >= 现役臂具名精确率（每面独立；改良臂具名=0 该面记 FAIL）",
+      "case_table": "e1_divergence_cases.tsv 全 5 例逐例状态 ∈ {repaired, not_repaired(如实记录), not_applicable}",
+      "fallback": "改良臂不达标 → 现役臂按原样入 SOP"
+    }
+  },
+  "improved_arm_overlays": {
+    "3A_prime": "no-op（打分器无降级通路；透传登记）",
+    "Q7_prime": "member=='Q7' → 不具名（=弃权）。来源=FACEV21 §4(b) 整行撤 kb_gene_hits/kb_celltype_ranking 的打分侧等价：撤面板 ranking 输出通道",
+    "C_prime": {
+      "strong_threshold": "n_shared>=2",
+      "logic": [
+        "rank = sort(cands, key=(-n, canon)); maxn = rank[0].n; layer = 全部 n==maxn 候选",
+        "maxn<=1 → weak_hit_no_name（不具名）",
+        "maxn>=2 且 len(layer)==1 → named(layer[0])",
+        "maxn>=2 且 len(layer)>=2 → conflict_no_name（真核心共存冲突未决，不具名）"
+      ],
+      "mapping_note": "n_shared≤1 谱系不构成冲突亦不单独定名；≥2 类同时 n≥2 = 核心共存 → 判读侧 resolution:fail 的打分侧对应 = 冲突未决不具名",
+      "design_provenance": "仅由 FACE_PROTOCOL_V2_1_PREREG §4(c) 冻结文本推导；落纸前未查询带内结果分布择优（防事后选尺）"
+    },
+    "implementation": "对同一 S1 分数表的后处理层；不重打分；不 import 生产码"
+  },
+  "replication_gates": {
+    "G0": "本卡复刻 S1 分数表 == E2 冻结 data/e2_scores_S1.tsv 逐 (cluster_id,cand_canon) 等值（n、lit_n 全等；shared_genes 按集合等值；行序差异登记）",
+    "G1": "现役臂计数 == E2 observation_addendum 逐值：F-RET 85/48/41；F-3SEAT 14/7/5",
+    "G2": "sha_ledger PRE==POST（21 件零触碰）",
+    "enforcement": "任一不过 exit 2 中止，禁出判读结论"
+  },
+  "decision_matrix": [
+    {"R1": "PASS", "R2": "PASS", "accounting": "辅助工具双面成立，SOP 草案交 PI 阅（仍不接线）"},
+    {"R1": "PASS", "R2": "FAIL", "accounting": "限视网膜面成立，SOP 标注泛化边界"},
+    {"R1": "FAIL", "R2": "任意", "accounting": "如实记'观测数字未过正式化检验'，SOP 不产出，E2 观察性附加勘正注记（本卡目录侧登记，不回写 E2 件）"}
+  ],
+  "redlines": [
+    "产物仅落 /mnt/D/EyeKB/plans/e3_rescue_20260927/",
+    "零 LLM、零网络、零生产写、禁重跑席位票、禁移动球门",
+    "勿写 e2r_s5audit_20260927/（E2R 并行卡领地）",
+    "kb/、mcp_server/、E1/E2/evalset/face_v21/run7rg 只读 + PRE/POST sha"
+  ]
+}

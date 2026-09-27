@@ -1,0 +1,60 @@
+[
+ {
+  "ts": "2026-09-27T15:23:19.549281+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "IMPG1",
+    "RBP3",
+    "GNGT1",
+    "RTBDN",
+    "CPE"
+   ]
+  },
+  "executed": true,
+  "result_chars": 3705
+ },
+ {
+  "ts": "2026-09-27T15:23:20.925316+08:00",
+  "tool": "query_marker",
+  "args": {
+   "cell_type": "Rod"
+  },
+  "executed": true,
+  "result_chars": 3632
+ },
+ {
+  "ts": "2026-09-27T15:23:24.232391+08:00",
+  "tool": "search_literature",
+  "args": {
+   "cell_type": "Rod",
+   "tissue": "retina",
+   "query": "IMPG1 RBP3 GNGT1 rod photoreceptor marker human retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:23:27.366315+08:00",
+  "tool": "search_literature",
+  "args": {
+   "cell_type": "Rod",
+   "tissue": "retina",
+   "query": "RBP3 GNGT1 rod photoreceptor specific marker human",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:23:28.688227+08:00",
+  "tool": "get_tissue_composition",
+  "args": {
+   "species": "human",
+   "tissue": "retina"
+  },
+  "executed": true,
+  "result_chars": 8014
+ }
+]

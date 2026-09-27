@@ -1,0 +1,26 @@
+# SUPRABASAL_RECHECK 证据记录（重放生成，2026-09-27）
+
+## 1. KB7 原样重放（scripts/kb7_w2_sandbox.py，仅输出重定向）stdout:
+Conj_basal: pool=18732 floor=10345 fullpass+cons=582 top=[np.str_('KRT13'), np.str_('AQP5'), np.str_('KRT4'), np.str_('CXCL17'), np.str_('LCN2'), np.str_('KLK11'), np.str_('SPRR2F'), np.str_('SLC6A14')]
+Conj_suprabasal: pool=7264 floor=8475 fullpass+cons=0 top=[]
+Conj_superficial: pool=3546 floor=10672 fullpass+cons=5 top=[np.str_('SCGB3A1'), np.str_('SPTSSB'), np.str_('ANXA9'), np.str_('FDCSP'), np.str_('KLK12')]
+Limbus Fibroblasts: pool=42132 floor=10867 fullpass+cons=0 top=[]
+Limbus/Sclera Fibroblasts - C1: pool=33033 floor=11373 fullpass+cons=0 top=[]
+Limbus/Sclera Fibroblasts - C2: pool=42047 floor=11781 fullpass+cons=0 top=[]
+Sclera Fibroblasts: pool=9288 floor=9919 fullpass+cons=0 top=[]
+
+## 2. KB7 发布件对账: diff recheck_kb7/out vs /mnt/D/EyeKB/plans/kb7_v6_20260925/out →
+0
+kb7_face_summary.tsv BYTE_IDENTICAL
+kb7_face_fullaudit.tsv BYTE_IDENTICAL
+kb7_face_dominant_study.tsv BYTE_IDENTICAL
+
+## 3. 反事实复算（仅 KB7 L69 父组归属行改 score-argmax，其余逐字不变；scripts/kb7_w2_cf.py）stdout:
+Conj_basal: pool=18732 floor=10345 fullpass+cons=28 top=[np.str_('PIGR'), np.str_('ALKAL1'), np.str_('CEL'), np.str_('ERN2'), np.str_('LINC02395'), np.str_('HNF4G'), np.str_('KRTAP3-1'), np.str_('ENSG00000260645')]
+Conj_suprabasal: pool=7264 floor=8475 fullpass+cons=15 top=[np.str_('DYNAP'), np.str_('TMPRSS11E'), np.str_('SPRR2F'), np.str_('KLK12'), np.str_('KLK13'), np.str_('S100A8'), np.str_('S100A9'), np.str_('SPRR3')]
+Conj_superficial: pool=3546 floor=10672 fullpass+cons=4 top=[np.str_('SPTSSB'), np.str_('ANXA9'), np.str_('FDCSP'), np.str_('KLK12')]
+Limbus Fibroblasts: pool=42132 floor=10867 fullpass+cons=0 top=[]
+Limbus/Sclera Fibroblasts - C1: pool=33033 floor=11373 fullpass+cons=10 top=[np.str_('WIF1'), np.str_('DPT'), np.str_('SP5'), np.str_('PI16'), np.str_('FOXL2'), np.str_('LAMA2'), np.str_('LEPR'), np.str_('OSR1')]
+Limbus/Sclera Fibroblasts - C2: pool=42047 floor=11781 fullpass+cons=7 top=[np.str_('ODAD2'), np.str_('MKX'), np.str_('PDE11A'), np.str_('SMPX'), np.str_('HPD'), np.str_('SCGB3A2'), np.str_('HP')]
+Sclera Fibroblasts: pool=9288 floor=9919 fullpass+cons=121 top=[np.str_('ENSG00000250038'), np.str_('ENSG00000236823'), np.str_('KRTAP21-2'), np.str_('ENSG00000274766'), np.str_('ESM1'), np.str_('ENSG00000249642'), np.str_('LINC00366'), np.str_('LINC00605')]
+KB7-W2 done

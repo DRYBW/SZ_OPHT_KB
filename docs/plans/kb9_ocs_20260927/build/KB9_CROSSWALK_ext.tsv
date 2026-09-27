@@ -1,0 +1,12 @@
+kb_name	q6_vocab_class	matched_leaf	provenance	alias_source
+Melanocyte	Melanocytes	melanocyte	alias	KB9_new:CL:0000148 label=melanocyte, 单数化
+Schwann	Schwann Cells	Schwann cell	alias	KB9_new:CL:0002573
+Conj_epithelium_suprabasal	Epithelium	conjunctival epithelial cell	alias	KB9_new:CL:1000432 借父条+layer
+Limbus_Sclera_fibroblast_C1	Fibroblasts	fibroblast	alias	KB9_new:CL:0000057 挂父条+subtype
+Conj_epithelium_basal	Epithelium	conjunctival epithelial cell	alias	KB7 face_v6 条 (激活态在库), KB9 补折叠
+Conj_epithelium_superficial	Epithelium	conjunctival epithelial cell	alias	KB7 face_v6 条, KB9 补折叠
+face_v6::Keratocytes	Fibroblasts	keratocyte	alias	KB6b/KB7 repair 消歧名, keratocyte 叶∈Fibroblasts
+face_v6::Fibroblast	Fibroblasts	fibroblast	alias	KB7 repair 消歧名
+face_v6::Pericyte	Pericytes	pericyte	alias	KB7 repair 消歧名
+face_v6::SMC	Smooth Muscle Cells	smooth muscle cell	alias	KB7 repair 消歧名
+face_v6::Myofibroblast	Fibroblasts|Smooth Muscle Cells		ambiguous	KB7 警示条 (core 空), 映射歧义照原链

@@ -1,0 +1,865 @@
+{
+ "G0_off_fidelity": {
+  "equal": 30,
+  "of": 33,
+  "mismatches": [
+   [
+    "Q6::16",
+    [
+     {
+      "cell_type": "MG",
+      "n_shared": 1
+     },
+     {
+      "cell_type": "Astro",
+      "n_shared": 1
+     }
+    ],
+    [
+     {
+      "cell_type": "MG",
+      "n_shared": 1
+     },
+     {
+      "cell_type": "Astro",
+      "n_shared": 1
+     },
+     {
+      "cell_type": "retina_interneuron::MG",
+      "n_shared": 1
+     }
+    ]
+   ],
+   [
+    "Q6::17",
+    [
+     {
+      "cell_type": "MG",
+      "n_shared": 1
+     },
+     {
+      "cell_type": "Astro",
+      "n_shared": 1
+     }
+    ],
+    [
+     {
+      "cell_type": "MG",
+      "n_shared": 1
+     },
+     {
+      "cell_type": "Astro",
+      "n_shared": 1
+     },
+     {
+      "cell_type": "retina_interneuron::MG",
+      "n_shared": 1
+     }
+    ]
+   ],
+   [
+    "Q6::8",
+    [
+     {
+      "cell_type": "T",
+      "n_shared": 1
+     }
+    ],
+    [
+     {
+      "cell_type": "T",
+      "n_shared": 1
+     },
+     {
+      "cell_type": "retina_interneuron::BC",
+      "n_shared": 1
+     }
+    ]
+   ]
+  ]
+ },
+ "G1_matcher_fidelity": {
+  "equal": 33,
+  "of": 33,
+  "mismatches": []
+ },
+ "armA_off_ref": {
+  "Q6::13": [
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Astro",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Pericyte",
+    "n_shared": 1
+   }
+  ],
+  "Q6::15": [
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 3
+   },
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Astro",
+    "n_shared": 1
+   }
+  ],
+  "Q6::23": [],
+  "Q6::24": [
+   {
+    "cell_type": "Myofibroblast",
+    "n_shared": 4
+   },
+   {
+    "cell_type": "SMC",
+    "n_shared": 3
+   },
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   }
+  ],
+  "Q6::6": [
+   {
+    "cell_type": "Mac_DAM_LAM",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::9": [],
+  "Q6::12": [],
+  "Q6::11": [
+   {
+    "cell_type": "APC_MHCII_high",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Endo",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "pDC",
+    "n_shared": 1
+   }
+  ],
+  "Q6::21": [
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::20": [
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::1": [],
+  "Q6::4": [],
+  "Q6::2": [
+   {
+    "cell_type": "Mono_Classical",
+    "n_shared": 2
+   }
+  ],
+  "Q6::0": [],
+  "Q6::19": [
+   {
+    "cell_type": "Pericyte",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Fibroblast",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Myofibroblast",
+    "n_shared": 2
+   }
+  ],
+  "Q6::5": [],
+  "Q6::14": [
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::18": [
+   {
+    "cell_type": "Pericyte",
+    "n_shared": 1
+   }
+  ],
+  "Q6::27": [],
+  "Q6::3": [
+   {
+    "cell_type": "Mono_Classical",
+    "n_shared": 2
+   }
+  ],
+  "Q6::22": [
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Astro",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Pericyte",
+    "n_shared": 1
+   }
+  ],
+  "Q6::33": [
+   {
+    "cell_type": "Fibroblast",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Myofibroblast",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Pericyte",
+    "n_shared": 1
+   }
+  ],
+  "Q6::16": [
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Astro",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "retina_interneuron::MG",
+    "n_shared": 1
+   }
+  ],
+  "Q6::25": [
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Astro",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "RPE",
+    "n_shared": 1
+   }
+  ],
+  "Q6::28": [
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 3
+   }
+  ],
+  "Q6::31": [
+   {
+    "cell_type": "Pericyte",
+    "n_shared": 1
+   }
+  ],
+  "Q6::17": [
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Astro",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "retina_interneuron::MG",
+    "n_shared": 1
+   }
+  ],
+  "Q6::8": [
+   {
+    "cell_type": "T",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "retina_interneuron::BC",
+    "n_shared": 1
+   }
+  ],
+  "Q6::26": [
+   {
+    "cell_type": "APC_MHCII_high",
+    "n_shared": 3
+   },
+   {
+    "cell_type": "Mac_DAM_LAM",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Mono_Nonclassical",
+    "n_shared": 1
+   }
+  ],
+  "Q6::29": [],
+  "Q6::7": [
+   {
+    "cell_type": "Endo",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Astro",
+    "n_shared": 1
+   }
+  ],
+  "Q6::32": [
+   {
+    "cell_type": "Myofibroblast",
+    "n_shared": 5
+   },
+   {
+    "cell_type": "SMC",
+    "n_shared": 4
+   }
+  ],
+  "Q6::30": [
+   {
+    "cell_type": "Mono_Classical",
+    "n_shared": 2
+   }
+  ]
+ },
+ "armB_prod_on": {
+  "Q6::13": [
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Astro",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Pericyte",
+    "n_shared": 1
+   }
+  ],
+  "Q6::15": [
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 3
+   },
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Astro",
+    "n_shared": 1
+   }
+  ],
+  "Q6::23": [],
+  "Q6::24": [
+   {
+    "cell_type": "Myofibroblast",
+    "n_shared": 4
+   },
+   {
+    "cell_type": "SMC",
+    "n_shared": 3
+   },
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   }
+  ],
+  "Q6::6": [
+   {
+    "cell_type": "Mac_DAM_LAM",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::9": [],
+  "Q6::12": [],
+  "Q6::11": [
+   {
+    "cell_type": "APC_MHCII_high",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Endo",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "pDC",
+    "n_shared": 1
+   }
+  ],
+  "Q6::21": [
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "face_v6::Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::20": [
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::1": [],
+  "Q6::4": [
+   {
+    "cell_type": "Conj_epithelium_basal",
+    "n_shared": 1
+   }
+  ],
+  "Q6::2": [
+   {
+    "cell_type": "Conj_epithelium_basal",
+    "n_shared": 3
+   },
+   {
+    "cell_type": "Mono_Classical",
+    "n_shared": 2
+   }
+  ],
+  "Q6::0": [],
+  "Q6::19": [
+   {
+    "cell_type": "Pericyte",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Fibroblast",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Myofibroblast",
+    "n_shared": 2
+   }
+  ],
+  "Q6::5": [
+   {
+    "cell_type": "Conj_epithelium_basal",
+    "n_shared": 1
+   }
+  ],
+  "Q6::14": [
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::18": [
+   {
+    "cell_type": "Pericyte",
+    "n_shared": 1
+   }
+  ],
+  "Q6::27": [],
+  "Q6::3": [
+   {
+    "cell_type": "Mono_Classical",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Conj_epithelium_basal",
+    "n_shared": 1
+   }
+  ],
+  "Q6::22": [
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Astro",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Pericyte",
+    "n_shared": 1
+   }
+  ],
+  "Q6::33": [
+   {
+    "cell_type": "Fibroblast",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Myofibroblast",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Pericyte",
+    "n_shared": 1
+   }
+  ],
+  "Q6::16": [
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Astro",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "retina_interneuron::MG",
+    "n_shared": 1
+   }
+  ],
+  "Q6::25": [
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Astro",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "RPE",
+    "n_shared": 1
+   }
+  ],
+  "Q6::28": [
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 3
+   },
+   {
+    "cell_type": "face_v6::Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::31": [
+   {
+    "cell_type": "Pericyte",
+    "n_shared": 1
+   }
+  ],
+  "Q6::17": [
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Astro",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "retina_interneuron::MG",
+    "n_shared": 1
+   }
+  ],
+  "Q6::8": [
+   {
+    "cell_type": "T",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "retina_interneuron::BC",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "retina_v6::BC",
+    "n_shared": 1
+   }
+  ],
+  "Q6::26": [
+   {
+    "cell_type": "APC_MHCII_high",
+    "n_shared": 3
+   },
+   {
+    "cell_type": "Mac_DAM_LAM",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Mono_Nonclassical",
+    "n_shared": 1
+   }
+  ],
+  "Q6::29": [
+   {
+    "cell_type": "Conj_epithelium_basal",
+    "n_shared": 1
+   }
+  ],
+  "Q6::7": [
+   {
+    "cell_type": "Endo",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "MG",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Astro",
+    "n_shared": 1
+   }
+  ],
+  "Q6::32": [
+   {
+    "cell_type": "Myofibroblast",
+    "n_shared": 5
+   },
+   {
+    "cell_type": "SMC",
+    "n_shared": 4
+   },
+   {
+    "cell_type": "face_v6::SMC",
+    "n_shared": 2
+   }
+  ],
+  "Q6::30": [
+   {
+    "cell_type": "Mono_Classical",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Conj_epithelium_basal",
+    "n_shared": 2
+   }
+  ]
+ },
+ "armC_kb9": {
+  "Q6::13": [
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::15": [
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "face_v6::Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::23": [],
+  "Q6::24": [],
+  "Q6::6": [],
+  "Q6::9": [],
+  "Q6::12": [],
+  "Q6::11": [
+   {
+    "cell_type": "Endo",
+    "n_shared": 1
+   }
+  ],
+  "Q6::21": [
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "face_v6::Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::20": [],
+  "Q6::1": [],
+  "Q6::4": [
+   {
+    "cell_type": "Conj_epithelium_basal",
+    "n_shared": 1
+   }
+  ],
+  "Q6::2": [
+   {
+    "cell_type": "Conj_epithelium_basal",
+    "n_shared": 3
+   },
+   {
+    "cell_type": "Conj_epithelium_suprabasal",
+    "n_shared": 2
+   }
+  ],
+  "Q6::0": [],
+  "Q6::19": [
+   {
+    "cell_type": "Fibroblast",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Myofibroblast",
+    "n_shared": 2
+   }
+  ],
+  "Q6::5": [
+   {
+    "cell_type": "Conj_epithelium_basal",
+    "n_shared": 1
+   }
+  ],
+  "Q6::14": [
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::18": [],
+  "Q6::27": [],
+  "Q6::3": [
+   {
+    "cell_type": "Conj_epithelium_suprabasal",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Conj_epithelium_basal",
+    "n_shared": 1
+   }
+  ],
+  "Q6::22": [
+   {
+    "cell_type": "Fibroblast",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Myofibroblast",
+    "n_shared": 1
+   },
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::33": [
+   {
+    "cell_type": "Fibroblast",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Myofibroblast",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::16": [],
+  "Q6::25": [
+   {
+    "cell_type": "Melanocyte",
+    "n_shared": 5
+   }
+  ],
+  "Q6::28": [
+   {
+    "cell_type": "Keratocytes",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "face_v6::Keratocytes",
+    "n_shared": 1
+   }
+  ],
+  "Q6::31": [],
+  "Q6::17": [
+   {
+    "cell_type": "Schwann",
+    "n_shared": 2
+   }
+  ],
+  "Q6::8": [
+   {
+    "cell_type": "T",
+    "n_shared": 1
+   }
+  ],
+  "Q6::26": [
+   {
+    "cell_type": "Mac_DAM_LAM",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Mono_Nonclassical",
+    "n_shared": 1
+   }
+  ],
+  "Q6::29": [
+   {
+    "cell_type": "Conj_epithelium_basal",
+    "n_shared": 1
+   }
+  ],
+  "Q6::7": [
+   {
+    "cell_type": "Endo",
+    "n_shared": 2
+   }
+  ],
+  "Q6::32": [],
+  "Q6::30": [
+   {
+    "cell_type": "Conj_epithelium_basal",
+    "n_shared": 2
+   },
+   {
+    "cell_type": "Conj_epithelium_suprabasal",
+    "n_shared": 2
+   }
+  ]
+ },
+ "changed_clusters": [
+  "Q6::13",
+  "Q6::15",
+  "Q6::24",
+  "Q6::6",
+  "Q6::11",
+  "Q6::21",
+  "Q6::20",
+  "Q6::4",
+  "Q6::2",
+  "Q6::19",
+  "Q6::5",
+  "Q6::18",
+  "Q6::3",
+  "Q6::22",
+  "Q6::33",
+  "Q6::16",
+  "Q6::25",
+  "Q6::28",
+  "Q6::31",
+  "Q6::17",
+  "Q6::26",
+  "Q6::29",
+  "Q6::7",
+  "Q6::32",
+  "Q6::30"
+ ]
+}

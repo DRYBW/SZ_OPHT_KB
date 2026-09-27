@@ -1,0 +1,46 @@
+cluster_id	role	truth	b_run1_a	b_run1_b	b_run1_c	b_run1_mode	b_run1_consensus	b_run2_consensus	b_c2b_run1	b_c2b_run2	a_consensus	a_c2b	r4r_consensus	r3_double_ok	st_vs_facev21	st_vs_run4r	b1_why
+Q1::1	hotspot	Rod	undetermined	coarse:Rod	undetermined	abstain3								False	still_wrong	still_wrong	top基因多为假基因/lncRNA/核糖体，无视网膜细胞类型特异marker命中
+Q1::4	control	Rod	Rod	Rod	coarse:photoreceptor	majority	Rod	Rod	Rod	Rod	Rod	Rod		True	still_right	newly_fixed	RBP3/GNGT1/IMPG1为Rod标志,文献支持;无混合谱系
+Q1::9	hotspot	Rod	Rod	coarse:Rod	undetermined	tie			Rod	Rod				False	still_wrong	still_wrong	RP1/IMPG1/GPM6B支持Rod；HSPA1A/B/DDIT4/FOS/JUN为应激签名，缺经典RHO/PDE6B
+Q2::22	hotspot	Astro	MG	MG	coarse:glia	majority	MG	MG	MG	MG	Astro	Astro	MG	False	lost	still_wrong	GLUL/VIM/CLU/GFAP强命中MG；GFAP为反应性标志，不排除MG
+Q2::27	control	Cone	Cone	Cone	Cone	majority	Cone	Cone	Cone	Cone	Cone	Cone	Cone	True	still_right	still_right	PDE6H/ARR3/GUCA1C/OPN1LW等Cone核心marker强命中，无Rod/RPE混杂
+Q2::4	control	MG	MG	MG	coarse:glial	majority	MG	MG	MG	MG	MG	MG	MG	True	still_right	still_right	MG核心(RLBP1/GLUL/VIM)强命中，但混入Rod RHO与Mac APOE/SPP1，疑双细胞
+Q3::13	hotspot	RGC	Rod	coarse:RGC	RGC	tie			RGC				Rod	False	still_wrong	still_wrong	RHO主导支持Rod，但NEFL/PDE6H/TTR共存提示RGC/Cone/RPE谱系混合
+Q3::4	control	BC	BC	BC	BC	majority	BC	BC	BC	BC	BC	BC	BC	True	still_right	still_right	TRPM1/GRM6/PRKCA/TMEM215/NETO1强命中BC；无AC/RGC/MG核心marker混杂
+Q3::5	hotspot	BC	BC	BC	coarse:BC	majority	BC	BC	BC	BC	BC	BC	BC	False	still_right	still_right	GRIK1/NETO1/TMEM215强命中BC；文献支持OFF-BC签名
+Q3::8	control	MG	MG	MG	MG	majority	MG	MG	MG	MG	MG	MG	MG	True	still_right	still_right	RLBP1/GLUL/VIM/CRABP1强命中MG；文献支持成熟MG签名；无谱系混合
+Q4::14	hotspot	BC	BC	BC	BC	majority	BC	BC	BC	BC	BC	BC	BC	False	still_right	still_right	WFDC1/GRIK1/CA10/IGSF21强命中BC；文献PMID39574940佐证CA10/GRIK1为BC标记
+Q4::15	hotspot	BC	BC	BC	BC	majority	BC	BC	BC	BC	BC	BC		False	still_right	newly_fixed	GRIK1/PLXDC1/IGSF21强命中BC；文献支持GRIK1为OFF-BC标记
+Q4::19	hotspot	BC	BC	BC	BC	majority	BC	BC	BC	BC	BC	BC	BC	False	still_right	still_right	VSX1/TRPM1/BCAT1/TMEM215强命中BC marker库；文献支持TRPM1为BC标志
+Q4::23	control	BC	BC	BC	BC	majority	BC	BC	BC	BC	BC	BC	BC	True	still_right	still_right	GRM6/TRPM1/CA10强命中BC；TTR为RPE标记但仅1基因，BC证据主导
+Q4::24	control	BC	BC	BC	BC	majority	BC	BC	BC	BC	BC	BC	BC	True	still_right	still_right	TRPM1/VSX1/IGSF21强命中BC；文献支持ON-BC标记；无谱系混合
+Q4::29	control	BC	BC	BC	BC	majority	BC	BC	BC	BC	BC	BC	BC	True	still_right	still_right	TRPM1/GRM6/ISL1/PRKCA/GNG13/PCP2强命中ON-BC；文献支持；无混合谱系
+Q4::32	control	MG	MG	MG	MG	majority	MG	MG	MG	MG	MG	MG	MG	True	still_right	still_right	RLBP1/GLUL/VIM强命中MG；APOE/SPP1为反应性MG兼容，无互斥谱系混合
+Q4::37	control	MG	MG	MG	MG	majority	MG	MG	MG	MG	MG	MG	MG	True	still_right	still_right	GLUL/VIM命中MG核心marker；应激基因谱与文献MG反应态一致
+Q4::39	control	Rod	Rod	Rod	Rod	majority	Rod	Rod	Rod	Rod	Rod	Rod	Rod	True	still_right	still_right	NRL/RHO/GNAT1等视杆核心marker强命中，无Cone/BC混杂
+Q4::9	hotspot	BC	BC	BC	BC	majority	BC	BC	BC	BC	BC	BC	BC	False	still_right	still_right	GRIK1/IGSF21为OFF-BC标志，文献支持；无他谱系核心marker混杂
+Q5b::13	hotspot	BC	BC	undetermined	BC	majority	BC	BC	BC	BC	BC	BC		False	still_right	newly_fixed	NPHS1/PDE1A/TENM3命中BC库；top基因符合双极细胞转录谱
+Q5b::16	hotspot	BC	BC	BC	BC	majority	BC	BC	BC	BC	BC	BC	BC	False	still_right	still_right	DGKB/PDE1A/NPHS1/SLC24A3/TENM3强命中BC库；无他谱系核心marker共存
+Q5b::17	control	BC	BC	BC	BC	majority	BC	BC	BC	BC	BC	BC	BC	True	still_right	still_right	PRKCA/GRM6等8基因强命中BC库；无AC/RGC核心marker共存
+Q5b::19	hotspot	HC	HC	HC	HC	majority	HC	HC	HC	HC	HC	HC	HC	False	still_right	still_right	top25中13基因命中HC权威marker(ONECUT1/FRMPD4等)，无其他谱系核心共存
+Q5b::2	control	Rod	Rod	Rod	Rod	majority	Rod	Rod	Rod	Rod	Rod	Rod	Rod	True	still_right	still_right	RHO/NRL/ABCA4/AIPL1/RDH8等强命中Rod，无他谱系核心marker混杂
+Q5b::20	hotspot	HC	HC	HC	HC	majority	HC	HC	HC	HC	HC	HC	HC	False	still_right	still_right	top20中12基因命中HC权威marker(ONECUT1/FRMPD4/PCSK6等)，无他谱系核心共存
+Q5b::23	hotspot	BC	BC	BC	coarse:BC	majority	BC	BC	BC	BC	BC	BC	BC	False	still_right	still_right	DGKB/TENM3/NTNG1命中BC；ERBB4/DSCAM文献支持OFF-BC亚型
+Q5b::3	control	Rod	Rod	Rod	Rod	majority	Rod	Rod	Rod	Rod	Rod	Rod	Rod	True	still_right	still_right	RHO/NRL/ABCA4/AIPL1等视杆核心marker强命中，无其他谱系混杂
+Q5b::31	hotspot	AC	AC	AC	AC	majority	AC	AC	AC	AC	AC	AC	AC	False	still_right	still_right	GRM8/FGF13/DCC/CACNA1E/SNTG1/CNTN5强命中AC(v5 n=6)，无BC/RGC/MG核心marker混杂
+Q5b::32	hotspot	AC	AC	AC	AC	majority	AC	AC	AC	AC	AC	AC	AC	False	still_right	still_right	GRM8/FGF13/OLFM3强命中AC(v5/v6);TFAP2B支持;无他谱系核心marker
+Q5b::35	hotspot	AC	AC	AC	undetermined	tie			AC	AC	AC	AC	AC	False	lost	lost	仅GRM8弱命中AC，缺TFAP2A/GAD1等核心marker，证据不足
+Q5b::42	hotspot	AC	AC	AC	AC	majority	AC	AC	AC	AC	AC	AC	AC	False	still_right	still_right	GRIK2/ZNF804A/SLC35F3/GLCE命中AC marker库；无他谱系核心marker共存
+Q5b::43	hotspot	BC	BC	BC	undetermined	majority	BC	BC	BC	BC	BC	BC		False	still_right	newly_fixed	DGKB/GRM5/PDE1A/TMEM132C强命中BC；GRIK2单基因不构成交叉谱系混合
+Q5b::45	hotspot	AC	AC	AC	AC	majority	AC	AC	AC	AC	AC	AC	AC	False	still_right	still_right	GRIK2/SNTG1/ZNF804A命中AC marker库；无BC/RGC/MG核心marker混杂
+Q5b::8	control	Rod	Rod	Rod	Rod	majority	Rod	Rod	Rod	Rod	Rod	Rod	Rod	True	still_right	still_right	RHO/ABCA4/AIPL1/RPGRIP1强命中Rod光感受器签名，无他谱系核心marker共存
+Q7::1	hotspot	BC	BC	BC	BC	majority	BC	BC	BC	BC	BC	BC	BC	False	still_right	still_right	Trpm1/Grm5/Gng13/Samsn1强命中鼠ON双极细胞，无AC/RGC核心marker混杂
+Q7::10	hotspot	AC	AC	AC	AC	majority	AC	AC	AC	AC	AC	AC	AC	False	still_right	still_right	Gad1+PTPRK+ROBO1强命中AC；无BC/HC/RGC核心marker混杂
+Q7::18	control	Rod	Rod	Rod	Rod	majority	Rod	Rod	Rod	Rod	Rod	Rod	Rod	True	still_right	still_right	Rho/Gnat1/Nrl等杆体核心marker强命中，无混合谱系信号
+Q7::3	control	Micro	Micro	Micro	Micro	majority	Micro	Micro	Micro	Micro	Micro	Micro	Micro	True	still_right	still_right	C1qb/Cst3/Trem2/Cx3cr1强命中鼠视网膜小胶质文献(PMID:35371110)
+Q7::42	control	AC	AC	AC	AC	majority	AC	AC	AC	AC	AC	AC	AC	True	still_right	still_right	Gad1/C1ql2/Grik2/Slc6a1强命中AC核心marker，无HC/RGC混杂
+Q7::46	control	RGC	RGC	RGC	undetermined	majority	RGC	RGC	RGC	RGC	RGC	RGC	RGC	True	still_right	still_right	Sncg/Ebf1/Cartpt/Thy1/Nefm为鼠RGC亚型标志,文献支持;无混合谱系证据
+Q7::52	control	RGC	AC	coarse:RGC	undetermined	tie					RGC	RGC	RGC	True	lost	lost	Grin3a为AC特异marker；Sncg/Calb2/Pvalb支持AC亚群；无RGC核心marker
+Q7::58	control	RGC	AC	AC	coarse:neuron	majority	AC		AC		RGC	RGC	RGC	True	lost	lost	Calb2/Tac1/Pvalb/Sncg为AC亚型标志;Thy1/Nrn1提示RGC混杂,缺GAD1/TFAP2A核心锚
+Q7::63	control	BC	BC	BC	BC	majority	BC	BC	BC	BC	BC	BC	BC	True	still_right	still_right	Trpm1/Grm6/Vsx1/Isl1/Otx2强命中鼠BC(ON型)marker组合
+Q7::8	control	AC	AC	AC	AC	majority	AC	AC	AC	AC	AC	AC	AC	True	still_right	still_right	Gad1/Slc6a1/Tfap2b/Meis2强命中AC；无HC/RGC核心marker共存

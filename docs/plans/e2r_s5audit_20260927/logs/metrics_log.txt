@@ -1,0 +1,9 @@
+faces F-RET=196 F-OCS=33 F-3SEAT=78
+anchors: {"FRET_all_ev1": 72.45, "FRET_noleak_ev1": 67.74, "FRET_noleak_ev3": 68.39, "d_vs_AB_noleak": 16.77, "d_vs_B_noleak": 3.23, "F3_all_ev1": 60.26, "F3_all_cons3": 80.77}
+ANCHOR PASS: raw 列全部复现 E1 冻结值
+E2R ANCHOR PASS: S1/S5 复刻列与 E2 冻结值全等 {"S1_all": 63.27, "S5_all": 71.94, "S1_noleak": 56.77, "S5_noleak": 67.74}
+GATE: {"delta_primary_ev1": 7.66, "delta_ev3": 7.66, "delta_vs_B": -6.63, "usable_operating_point": false, "tier_1": "W1线", "tier_3": "W1线", "cross_tier": false, "verdict_line": "W2(无可用工作点)", "note": "①③分档不同=跨档边界案交PI(E1先例); W1需可用工作点+否决条款"}
+E2R GATE PASS: W 门复算与 E2 冻结件等值（W2 零改动，信息性断言）
+E2R WATER ANCHOR PASS: Q5b raw=93.02 S1=60.47
+OBS(附加): {"F-RET_cons_undef_rows": 85, "F-RET_S1_labels_given": 48, "F-RET_S1_labels_correct": 41, "F-RET_S1_cov3": 69.39, "F-RET_S1_f1": 0.6513, "F-3SEAT_cons_undef_rows": 14, "F-3SEAT_S1_labels_given": 7, "F-3SEAT_S1_labels_correct": 5, "F-3SEAT_S1_cov3": 62.82, "F-3SEAT_S1_f1": 0.452}
+ran 2026-09-27 09:48:39.110490

@@ -1,0 +1,92 @@
+[
+ {
+  "ts": "2026-09-27T15:17:10.681513+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "EEF1A1",
+    "HSPA1A",
+    "LENG8",
+    "DRAIC",
+    "HSPA1B",
+    "MPP4",
+    "DDIT4",
+    "MIF",
+    "PLA2G4C-AS1",
+    "XIST",
+    "IMPG1",
+    "FOS",
+    "JUN",
+    "GPX3",
+    "RP1",
+    "FTH1P11",
+    "GPM6B",
+    "NTM",
+    "GNB1",
+    "MALAT1"
+   ]
+  },
+  "executed": true,
+  "result_chars": 4037
+ },
+ {
+  "ts": "2026-09-27T15:17:12.426374+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "RP1",
+    "IMPG1",
+    "GPM6B",
+    "NTM"
+   ]
+  },
+  "executed": true,
+  "result_chars": 3681
+ },
+ {
+  "ts": "2026-09-27T15:17:16.395800+08:00",
+  "tool": "search_literature",
+  "args": {
+   "cell_type": "Rod",
+   "tissue": "retina",
+   "query": "RP1 IMPG1 GPM6B NTM rod photoreceptor marker human retina",
+   "top_k": 5
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:17:19.796111+08:00",
+  "tool": "search_literature",
+  "args": {
+   "cell_type": "Rod",
+   "tissue": "retina",
+   "query": "RP1 rod photoreceptor specific marker human retina single cell",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:17:23.468799+08:00",
+  "tool": "search_literature",
+  "args": {
+   "cell_type": "Rod",
+   "tissue": "retina",
+   "query": "HSPA1A HSPA1B DDIT4 FOS JUN stress response rod photoreceptor retina",
+   "top_k": 3
+  },
+  "executed": true,
+  "result_chars": 8014
+ },
+ {
+  "ts": "2026-09-27T15:17:26.625224+08:00",
+  "tool": "get_tissue_composition",
+  "args": {
+   "species": "human",
+   "tissue": "retina"
+  },
+  "executed": true,
+  "result_chars": 8014
+ }
+]

@@ -1,0 +1,11 @@
+e2r_common.py: 1x  "ROOT = '/mnt/D/EyeKB/plans/e2_decontam_20260926'" -> "ROOT = '/mnt/D/EyeKB/plans/e2r_s5audit_20260927'"
+e2r_common.py: 1x  '"""E2 共享层' -> '"""E2R 共享层（E2 脚本拷贝改参；E2 原件零触碰）'
+e2r_common.py: 1x  "    return {'S': S, 'axis': axis, 'p04': p04, 'pcx': pcx,\n            " -> "    key = f'{lib}::{cls}::{gene}'\n    return {'S': S, 'axis': axis, 'p"
+e2r_common.py: 1x  "    if variant == 'S5' and gene_ev['pcx'] and not S:\n        S = {'PCX" -> "    if variant == 'S5' and gene_ev['pcx'] and not S:\n        S = {'PCX"
+e2r_common.py: 1x  "B_AXIS_RETINA = {'41578023'}  # HRCA 本体论文（视网膜系面板行的派生源）" -> "B_AXIS_RETINA = {'41578023'}  # HRCA 本体论文（视网膜系面板行的派生源）\nimport os as _o"
+e2r_score.py: 1x  'from e2_common import' -> 'from e2r_common import'
+e2r_score.py: 1x  "variants = ['raw', 'S1', 'S2', 'S4', 'S5', 'S6'] if VAR == 'ALL' else " -> "variants = ['raw', 'S1', 'S5', 'S5b', 'S5b_rel'] if VAR == 'ALL' else "
+e2r_score.py: 1x  "path = f'{ROOT}/data/e2_scores_raw_replica.tsv' if v == 'raw' else f'{" -> "path = f'{ROOT}/data/e2r_scores_raw_replica.tsv' if v == 'raw' else f'"
+e2r_score.py: 1x  "if v in ('S1', 'S2', 'S4', 'S5'):" -> "if v in ('S1', 'S2', 'S4', 'S5', 'S5b', 'S5b_rel'):"
+e2r_score.py: 1x  '"E2-2 打分：raw 复刻（验收闸）+ S1 主去同源 + 敏感性变体 S2/S4/S5/S6。' -> 'E2R-3 打分：E2 复刻（raw/S1/S5 与 E2 冻结件逐行全等为闸）+ S5b/S5b_rel 新口径。'
+e2r_score.py: 1x  "open(f'{ROOT}/logs/score_log.txt', 'w')" -> "open(f'{ROOT}/logs/score_log.txt', 'w')"

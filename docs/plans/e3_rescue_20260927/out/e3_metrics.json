@@ -1,0 +1,94 @@
+{
+ "replication": {
+  "G0": "PASS",
+  "G1": "PASS",
+  "G2": "see sha_ledger_POST_inputs.txt"
+ },
+ "arms": {
+  "F_RET": {
+   "incumbent": {
+    "band": 85,
+    "named": 48,
+    "correct": 41,
+    "precision": 85.42
+   },
+   "improved": {
+    "band": 85,
+    "named": 10,
+    "correct": 10,
+    "precision": 100.0
+   }
+  },
+  "F_3SEAT": {
+   "incumbent": {
+    "band": 14,
+    "named": 7,
+    "correct": 5,
+    "precision": 71.43
+   },
+   "improved": {
+    "band": 14,
+    "named": 4,
+    "correct": 4,
+    "precision": 100.0
+   }
+  }
+ },
+ "gates": {
+  "R1": {
+   "named": 48,
+   "correct": 41,
+   "precision_pct": 85.42,
+   "prec_ge_80": true,
+   "named_ge_40": true,
+   "PASS": true
+  },
+  "R2": {
+   "named": 7,
+   "correct": 5,
+   "precision_pct": 71.43,
+   "named_ge_15": false,
+   "prec_ge_70": true,
+   "PASS": false
+  },
+  "R3": {
+   "face_floors": {
+    "F-RET": {
+     "inc_named": 48,
+     "inc_prec": 85.42,
+     "imp_named": 10,
+     "imp_correct": 10,
+     "imp_prec": 100.0,
+     "floor_met": true
+    },
+    "F-3SEAT": {
+     "inc_named": 7,
+     "inc_prec": 71.43,
+     "imp_named": 4,
+     "imp_correct": 4,
+     "imp_prec": 100.0,
+     "floor_met": true
+    }
+   },
+   "floor_all_faces": true,
+   "q2_22_status": "not_repaired(still_wrong:MG)",
+   "cases_recorded": 5,
+   "PASS": true
+  }
+ },
+ "decision_matrix_line": "限视网膜面成立（R1 PASS/R2 FAIL）：SOP 标注泛化边界",
+ "faces": {
+  "F_RET": 196,
+  "band_F_RET": 85,
+  "F_3SEAT": 78,
+  "band_F_3SEAT": 14
+ },
+ "tool_spec": {
+  "scoring": "S1 decon ①top1 (e2_decon_rules sha 34928582)",
+  "improved_overlays": [
+   "3A: no-op passthrough",
+   "Q7: strip ranking -> abstain",
+   "C: weak(maxn<=1) no-name; strong-layer tie -> conflict no-name"
+  ]
+ }
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "eyekb-e1-leaklineage/1.0",
+  "card": "t_a7515c0b",
+  "date": "2026-09-26",
+  "question": "真值数据集的源论文（GSE→PMID）是否在 RAG 语料（literature_db v2.0_2026-09 = search_literature 默认库）内 = lit 通道能否背答案。",
+  "cluster_rule": "逐簇 evidence_self_reference ∈ {yes,no,indeterminate}：lit 引用集为空→no；成员源论文可解析→被引用=yes、未引用=no；成员源论文本地不可解析且 lit 引用非空→indeterminate。相关性列 lit_cites_source_pmid 逐簇记录。",
+  "marker_channel_note": "marker 通道结构性自参照（面板派生血缘）单列记录，不并入 lit 列；明细见 members[].marker_channel。",
+  "members": {
+    "Q1": {"gse": "GSE137400 (Lukowski2019)", "source_pmids": ["31436334"], "basis": "OcularKB registry OA-D055 publication_url + uns DOI 10.15252/embj.2018100811", "lit_channel": "closed (PMID∉v2.0 且 DOI∉v2.0，实测见 ledger)"},
+    "Q2": {"gse": "GSE155288", "source_pmids": ["34341398", "35705048", "35784369"], "basis": "本地 /mnt/D/OcularKB/data/GSE155288/age_verification_report.md + LABEL_QUALITY_NOTE_E7_20260925.md（关联 PubMed 三篇）", "lit_channel": "open (三篇均∈v2.0 corpus，实测)"},
+    "Q3": {"gse": "GSE137537", "source_pmids": ["31653841"], "basis": "OcularKB registry OA-D013 publication_url", "lit_channel": "closed (∉v2.0)", "marker_channel": "HRCA constituent（M31_P1_HCA_CONSTITUENTS_20260829）→ v4.1/v5/v6 retina 面板若含 D001 衍生基因与 Q3 细胞重叠，结构性弱自参照，登记不作主分裂"},
+    "Q4": {"gse": "GSE148077", "source_pmids": [], "basis": "registry 无 publication_url；本地无引用件；eutils 网络不可达", "lit_channel": "unresolved → 有 lit 引用的簇=indeterminate", "marker_channel": "HRCA constituent（同上）"},
+    "Q5b": {"gse": "GSE226108", "source_pmids": ["37388908"], "basis": "OcularKB registry OA-D006 publication_url", "lit_channel": "open (∈v2.0)", "marker_channel": "强自参照：v5/v6 retina 面板 derivation=HRCA_D001（PMID 41578023，面板文件 derivation 字段原文）；Q5b=226108⊂HRCA 88% barcode、5/6 donor 重叠（M31 五集合审计）——真值即 HRCA/portal 作者标注本身"},
+    "Q6": {"gse": "D002 CELLxGENE-OcularSurface（collection）", "source_pmids": [], "basis": "registry OA-D002 无单一出版物（集合级）", "lit_channel": "unresolved", "marker_channel": "结构性循环（RUN3 已声明'D002 基线同源只作 sanity'）：face_v6 scope='D002 可支撑范围'、membrane 面板含 GSE165784_v1 数据驱动基因（Q9 非真值）"},
+    "Q7": {"gse": "GSE243413 (mouse)", "source_pmids": ["38812536"], "basis": "本地 /mnt/D/OcularKB/data/GSE243413/annotation_report/annotation_report.md（Li J iScience 2024）", "lit_channel": "open (∈v2.0)"},
+    "Q8": {"gse": "GSE268630 (fetal)", "source_pmids": [], "basis": "registry OA-D008 无 publication_url；本地无引用件", "lit_channel": "unresolved（Q8 不进命中主表，E5 发育轴单独记账）"},
+    "Q9": {"gse": "GSE165784 (PDR demo)", "source_pmids": [], "basis": "无真值成员，泄漏审计不适用", "lit_channel": "n/a"}
+  },
+  "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09/papers.jsonl (2713 papers, paper_id=PMID)",
+  "verification": "corpus 成员关系全部由脚本运行时对 papers.jsonl 实测重算，本件仅固化'哪个 GSE 对应哪些候选 PMID'的映射与依据。"
+}

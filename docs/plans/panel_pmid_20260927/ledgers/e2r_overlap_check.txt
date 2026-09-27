@@ -1,0 +1,3 @@
+E2R 120-pair scope = pmid_context hits (pcx_ext=Y). Independent recount of our 338 rows: no_record=338, of which pcx_ext=Y overlap=0
+method: python re-split of e2_gene_panel_pmid.tsv col4(explicit_pmids)=='' and col10(axis_members)=='' (col9=pcx_ext)
+result: overlap 0 -> lists disjoint, no handover needed. captured 2026-09-27T09:13:30.074428

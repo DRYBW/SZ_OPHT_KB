@@ -1,0 +1,30 @@
+[
+ {
+  "ts": "2026-09-27T16:00:39.568326+08:00",
+  "tool": "query_marker",
+  "args": {
+   "genes": [
+    "RHO",
+    "NRL",
+    "ABCA4",
+    "AIPL1",
+    "CASZ1",
+    "RPGRIP1",
+    "CLUL1",
+    "RDH12"
+   ]
+  },
+  "executed": true,
+  "result_chars": 4312
+ },
+ {
+  "ts": "2026-09-27T16:00:41.025758+08:00",
+  "tool": "get_tissue_composition",
+  "args": {
+   "species": "human",
+   "tissue": "retina"
+  },
+  "executed": true,
+  "result_chars": 8014
+ }
+]

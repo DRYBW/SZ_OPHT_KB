@@ -1,0 +1,21 @@
+entry_id	parent_group	comparator	level	pool	applies_to_entry	exempt_link
+Melanocyte	Melanocytes	CornealEndo	group	432	适用（在本条火灾域 9 组内）	lfc 否决与 cons 参考均不纳入；fire_audit small-record 行留痕
+Melanocyte	Melanocytes	B Cells	author_sibling(全局小池)	212	不适用（其父组归属=Fibroblast-stroma≠本条父组，本不在本条比较域）	不计作已实施比较后的豁免
+Melanocyte	Melanocytes	Monocytes	author_sibling(全局小池)	253	不适用（其父组归属=Epithelium≠本条父组，本不在本条比较域）	不计作已实施比较后的豁免
+Melanocyte	Melanocytes	Corneal_Endo	author_sibling(全局小池)	432	不适用（其父组归属=Keratocytes≠本条父组，本不在本条比较域）	不计作已实施比较后的豁免
+Melanocyte	Melanocytes	(组级：火灾域 9 组中 8 组 pool≥500 实际参与否决)	group(active)	-1	适用	对照行：证明比较域实际执行
+Schwann	Schwann	CornealEndo	group	432	适用（在本条火灾域 9 组内）	lfc 否决与 cons 参考均不纳入；fire_audit small-record 行留痕
+Schwann	Schwann	B Cells	author_sibling(全局小池)	212	不适用（其父组归属=Fibroblast-stroma≠本条父组，本不在本条比较域）	不计作已实施比较后的豁免
+Schwann	Schwann	Monocytes	author_sibling(全局小池)	253	不适用（其父组归属=Epithelium≠本条父组，本不在本条比较域）	不计作已实施比较后的豁免
+Schwann	Schwann	Corneal_Endo	author_sibling(全局小池)	432	不适用（其父组归属=Keratocytes≠本条父组，本不在本条比较域）	不计作已实施比较后的豁免
+Schwann	Schwann	(组级：火灾域 9 组中 8 组 pool≥500 实际参与否决)	group(active)	-1	适用	对照行：证明比较域实际执行
+Conj_epithelium_suprabasal	Epithelium	CornealEndo	group	432	适用（在本条火灾域 9 组内）	lfc 否决与 cons 参考均不纳入；fire_audit small-record 行留痕
+Conj_epithelium_suprabasal	Epithelium	Monocytes	author_sibling	253	适用（同父兄弟域内）	记录不否决（lfc 与 cons 均不纳入）
+Conj_epithelium_suprabasal	Epithelium	B Cells	author_sibling(全局小池)	212	不适用（其父组归属=Fibroblast-stroma≠本条父组，本不在本条比较域）	不计作已实施比较后的豁免
+Conj_epithelium_suprabasal	Epithelium	Corneal_Endo	author_sibling(全局小池)	432	不适用（其父组归属=Keratocytes≠本条父组，本不在本条比较域）	不计作已实施比较后的豁免
+Conj_epithelium_suprabasal	Epithelium	(组级：火灾域 9 组中 8 组 pool≥500 实际参与否决)	group(active)	-1	适用	对照行：证明比较域实际执行
+Limbus_Sclera_fibroblast_C1	Fibroblast-stroma	CornealEndo	group	432	适用（在本条火灾域 9 组内）	lfc 否决与 cons 参考均不纳入；fire_audit small-record 行留痕
+Limbus_Sclera_fibroblast_C1	Fibroblast-stroma	B Cells	author_sibling	212	适用（同父兄弟域内）	记录不否决（lfc 与 cons 均不纳入）
+Limbus_Sclera_fibroblast_C1	Fibroblast-stroma	Monocytes	author_sibling(全局小池)	253	不适用（其父组归属=Epithelium≠本条父组，本不在本条比较域）	不计作已实施比较后的豁免
+Limbus_Sclera_fibroblast_C1	Fibroblast-stroma	Corneal_Endo	author_sibling(全局小池)	432	不适用（其父组归属=Keratocytes≠本条父组，本不在本条比较域）	不计作已实施比较后的豁免
+Limbus_Sclera_fibroblast_C1	Fibroblast-stroma	(组级：火灾域 9 组中 8 组 pool≥500 实际参与否决)	group(active)	-1	适用	对照行：证明比较域实际执行

@@ -1,0 +1,205 @@
+face	rule	cid	truth	c4_name	new_name	flip	ballots
+RUN3	C1_default	Q1::12	BC		BC	FIXED(翻正)	A=undet/C B=BC/B C=missing/None
+RUN3	C3b	Q1::12	BC		BC	FIXED(翻正)	A=undet/C B=BC/B C=missing/None
+RUN3	C1_default	Q1::14	AC		AC	FIXED(翻正)	A=coarse:neuron/B B=AC/C C=missing/None
+RUN3	C1_default	Q1::3	Rod		Rod	FIXED(翻正)	A=undet/C B=Rod/B C=missing/None
+RUN3	C1_default	Q2::0	MG		MG	FIXED(翻正)	A=MG/B B=undet/C C=missing/None
+RUN3	C3b	Q2::0	MG		MG	FIXED(翻正)	A=MG/B B=undet/C C=missing/None
+RUN3	C1_default	Q2::10	BC		BC	FIXED(翻正)	A=undet/C B=BC/B C=missing/None
+RUN3	C1_default	Q2::11	BC		AC	BROKEN(新错名)	A=undet/C B=AC/B C=missing/None
+RUN3	C1_default	Q2::13	BC		BC	FIXED(翻正)	A=undet/C B=BC/B C=missing/None
+RUN3	C3b	Q2::13	BC		BC	FIXED(翻正)	A=undet/C B=BC/B C=missing/None
+RUN3	C1_default	Q2::15	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C2b	Q2::15	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C3b	Q2::15	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C1_default	Q2::16	BC		AC	BROKEN(新错名)	A=coarse:AC/C B=AC/B C=missing/None
+RUN3	C2b	Q2::16	BC		AC	BROKEN(新错名)	A=coarse:AC/C B=AC/B C=missing/None
+RUN3	C1_default	Q2::17	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C2b	Q2::17	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C1_default	Q2::19			BC	unjudgeable(truth缺失)	A=BC/C B=BC/C C=missing/None
+RUN3	C2a	Q2::19			BC	unjudgeable(truth缺失)	A=BC/C B=BC/C C=missing/None
+RUN3	C2b	Q2::19			BC	unjudgeable(truth缺失)	A=BC/C B=BC/C C=missing/None
+RUN3	C1_default	Q2::24			Endothelium	unjudgeable(truth缺失)	A=Endothelium/B B=coarse:Endothelium/C C=missing/None
+RUN3	C2b	Q2::24			Endothelium	unjudgeable(truth缺失)	A=Endothelium/B B=coarse:Endothelium/C C=missing/None
+RUN3	C1_default	Q2::3	MG		MG	FIXED(翻正)	A=MG/B B=undet/C C=missing/None
+RUN3	C3b	Q2::3	MG		MG	FIXED(翻正)	A=MG/B B=undet/C C=missing/None
+RUN3	C2b	Q2::5			Pericyte	unjudgeable(truth缺失)	A=coarse:Pericyte/B B=coarse:Pericyte/B C=missing/None
+RUN3	C1_default	Q2::9	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C2b	Q2::9	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C3b	Q2::9	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C1_default	Q3::10	MG		MG	FIXED(翻正)	A=MG/B B=coarse:MG/C C=missing/None
+RUN3	C2b	Q3::10	MG		MG	FIXED(翻正)	A=MG/B B=coarse:MG/C C=missing/None
+RUN3	C3b	Q3::10	MG		MG	FIXED(翻正)	A=MG/B B=coarse:MG/C C=missing/None
+RUN3	C1_default	Q3::7	MG		MG	FIXED(翻正)	A=MG/B B=MG/C C=missing/None
+RUN3	C2a	Q3::7	MG		MG	FIXED(翻正)	A=MG/B B=MG/C C=missing/None
+RUN3	C2b	Q3::7	MG		MG	FIXED(翻正)	A=MG/B B=MG/C C=missing/None
+RUN3	C3b	Q3::7	MG		MG	FIXED(翻正)	A=MG/B B=MG/C C=missing/None
+RUN3	C1_default	Q3::9	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C2b	Q3::9	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C3b	Q3::9	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C1_default	Q4::1	AC		AC	FIXED(翻正)	A=undet/C B=AC/B C=missing/None
+RUN3	C2b	Q4::19	BC		BC	FIXED(翻正)	A=coarse:BC/C B=coarse:BC/C C=missing/None
+RUN3	C1_default	Q4::2	AC		AC	FIXED(翻正)	A=coarse:AC/C B=AC/C C=missing/None
+RUN3	C2b	Q4::2	AC		AC	FIXED(翻正)	A=coarse:AC/C B=AC/C C=missing/None
+RUN3	C1_default	Q4::20	MG		MG	FIXED(翻正)	A=coarse:MG/Astro/C B=MG/B C=missing/None
+RUN3	C3b	Q4::20	MG		MG	FIXED(翻正)	A=coarse:MG/Astro/C B=MG/B C=missing/None
+RUN3	C1_default	Q4::25	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C2b	Q4::25	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C1_default	Q4::26	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C2b	Q4::26	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C3b	Q4::26	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C1_default	Q4::27	BC		BC	FIXED(翻正)	A=coarse:BC/HC/C B=BC/B C=missing/None
+RUN3	C3b	Q4::27	BC		BC	FIXED(翻正)	A=coarse:BC/HC/C B=BC/B C=missing/None
+RUN3	C1_default	Q4::30	MG		MG	FIXED(翻正)	A=MG/B B=coarse:MG/C C=missing/None
+RUN3	C2b	Q4::30	MG		MG	FIXED(翻正)	A=MG/B B=coarse:MG/C C=missing/None
+RUN3	C3b	Q4::30	MG		MG	FIXED(翻正)	A=MG/B B=coarse:MG/C C=missing/None
+RUN3	C1_default	Q4::31	Astro		MG	BROKEN(新错名)	A=coarse:glial/C B=MG/B C=missing/None
+RUN3	C3b	Q4::31	Astro		MG	BROKEN(新错名)	A=coarse:glial/C B=MG/B C=missing/None
+RUN3	C1_default	Q4::4	AC		AC	FIXED(翻正)	A=coarse:AC/HC/C B=AC/B C=missing/None
+RUN3	C3b	Q4::4	AC		AC	FIXED(翻正)	A=coarse:AC/HC/C B=AC/B C=missing/None
+RUN3	C1_default	Q4::5	AC		AC	FIXED(翻正)	A=coarse:AC/HC/C B=AC/B C=missing/None
+RUN3	C3b	Q4::5	AC		AC	FIXED(翻正)	A=coarse:AC/HC/C B=AC/B C=missing/None
+RUN3	C1_default	Q4::8	HC		HC	FIXED(翻正)	A=coarse:AC/HC/C B=HC/B C=missing/None
+RUN3	C3b	Q4::8	HC		HC	FIXED(翻正)	A=coarse:AC/HC/C B=HC/B C=missing/None
+RUN3	C1_default	Q5b::12			MG	unjudgeable(truth缺失)	A=coarse:neural/C B=MG/B C=missing/None
+RUN3	C1_default	Q5b::15	BC		BC	FIXED(翻正)	A=BC/B B=coarse:BC/C C=missing/None
+RUN3	C2b	Q5b::15	BC		BC	FIXED(翻正)	A=BC/B B=coarse:BC/C C=missing/None
+RUN3	C3b	Q5b::15	BC		BC	FIXED(翻正)	A=BC/B B=coarse:BC/C C=missing/None
+RUN3	C2b	Q5b::23	BC		AC	BROKEN(新错名)	A=coarse:AC/C B=coarse:AC/C C=missing/None
+RUN3	C1_default	Q5b::25	AC		AC	FIXED(翻正)	A=undet/C B=AC/B C=missing/None
+RUN3	C1_default	Q5b::27	AC		AC	FIXED(翻正)	A=undet/C B=AC/B C=missing/None
+RUN3	C1_default	Q5b::28	BC		BC	FIXED(翻正)	A=undet/C B=BC/B C=missing/None
+RUN3	C3b	Q5b::28	BC		BC	FIXED(翻正)	A=undet/C B=BC/B C=missing/None
+RUN3	C1_default	Q5b::36	AC		RGC	BROKEN(新错名)	A=undet/C B=RGC/B C=missing/None
+RUN3	C3a	Q5b::39			Astro	unjudgeable(truth缺失)	A=MG/B B=Astro/B C=missing/None
+RUN3	C3b	Q5b::39			Astro	unjudgeable(truth缺失)	A=MG/B B=Astro/B C=missing/None
+RUN3	C1_default	Q5b::46			MG	unjudgeable(truth缺失)	A=coarse:glial/C B=MG/B C=missing/None
+RUN3	C3b	Q5b::46			MG	unjudgeable(truth缺失)	A=coarse:glial/C B=MG/B C=missing/None
+RUN3	C1_default	Q6::0	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=coarse:Epithelium/C C=missing/None
+RUN3	C2b	Q6::0	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=coarse:Epithelium/C C=missing/None
+RUN3	C1_default	Q6::1	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=coarse:Epithelium/C C=missing/None
+RUN3	C2b	Q6::1	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=coarse:Epithelium/C C=missing/None
+RUN3	C1_default	Q6::13	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/C B=Fibroblasts/B C=missing/None
+RUN3	C2a	Q6::13	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/C B=Fibroblasts/B C=missing/None
+RUN3	C2b	Q6::13	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/C B=Fibroblasts/B C=missing/None
+RUN3	C3b	Q6::13	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/C B=Fibroblasts/B C=missing/None
+RUN3	C1_default	Q6::16	Fibroblasts		Fibroblasts	FIXED(翻正)	A=coarse:stromal/C B=Fibroblasts/B C=missing/None
+RUN3	C1_default	Q6::2	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=coarse:Epithelium/C C=missing/None
+RUN3	C2b	Q6::2	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=coarse:Epithelium/C C=missing/None
+RUN3	C3b	Q6::2	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=coarse:Epithelium/C C=missing/None
+RUN3	C1_default	Q6::26	Immune Cells		Immune Cells	FIXED(翻正)	A=Immune Cells/B B=coarse:Immune Cells/B C=missing/None
+RUN3	C2b	Q6::26	Immune Cells		Immune Cells	FIXED(翻正)	A=Immune Cells/B B=coarse:Immune Cells/B C=missing/None
+RUN3	C3b	Q6::26	Immune Cells		Immune Cells	FIXED(翻正)	A=Immune Cells/B B=coarse:Immune Cells/B C=missing/None
+RUN3	C1_default	Q6::28	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/B B=coarse:Fibroblasts/B C=missing/None
+RUN3	C2b	Q6::28	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/B B=coarse:Fibroblasts/B C=missing/None
+RUN3	C3b	Q6::28	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/B B=coarse:Fibroblasts/B C=missing/None
+RUN3	C1_default	Q6::3	Epithelium		Immune Cells	BROKEN(新错名)	A=Immune Cells/B B=undet/C C=missing/None
+RUN3	C3b	Q6::3	Epithelium		Immune Cells	BROKEN(新错名)	A=Immune Cells/B B=undet/C C=missing/None
+RUN3	C3a	Q6::31	Fibroblasts		Pericytes	BROKEN(新错名)	A=Fibroblasts/B B=Pericytes/B C=missing/None
+RUN3	C3b	Q6::31	Fibroblasts		Pericytes	BROKEN(新错名)	A=Fibroblasts/B B=Pericytes/B C=missing/None
+RUN3	C1_default	Q6::8	Immune Cells		Immune Cells	FIXED(翻正)	A=Immune Cells/B B=coarse:Immune Cells/B C=missing/None
+RUN3	C2b	Q6::8	Immune Cells		Immune Cells	FIXED(翻正)	A=Immune Cells/B B=coarse:Immune Cells/B C=missing/None
+RUN3	C3b	Q6::8	Immune Cells		Immune Cells	FIXED(翻正)	A=Immune Cells/B B=coarse:Immune Cells/B C=missing/None
+RUN3	C2b	Q7::1	BC		BC	FIXED(翻正)	A=coarse:BC/C B=coarse:BC/C C=missing/None
+RUN3	C2b	Q7::10	AC		AC	FIXED(翻正)	A=coarse:AC/C B=coarse:AC/C C=missing/None
+RUN3	C1_default	Q7::11	AC		AC	FIXED(翻正)	A=AC/B B=coarse:AC/C C=missing/None
+RUN3	C2b	Q7::11	AC		AC	FIXED(翻正)	A=AC/B B=coarse:AC/C C=missing/None
+RUN3	C3b	Q7::11	AC		AC	FIXED(翻正)	A=AC/B B=coarse:AC/C C=missing/None
+RUN3	C1_default	Q7::15	BC		Cone	BROKEN(新错名)	A=Cone/B B=undet/C C=missing/None
+RUN3	C1_default	Q7::20	Rod		Rod	FIXED(翻正)	A=Rod/B B=coarse:Rod/C C=missing/None
+RUN3	C2b	Q7::20	Rod		Rod	FIXED(翻正)	A=Rod/B B=coarse:Rod/C C=missing/None
+RUN3	C3b	Q7::20	Rod		Rod	FIXED(翻正)	A=Rod/B B=coarse:Rod/C C=missing/None
+RUN3	C1_default	Q7::24	AC		AC	FIXED(翻正)	A=undet/C B=AC/B C=missing/None
+RUN3	C3b	Q7::24	AC		AC	FIXED(翻正)	A=undet/C B=AC/B C=missing/None
+RUN3	C1_default	Q7::26	BC		AC	BROKEN(新错名)	A=coarse:BC/C B=AC/B C=missing/None
+RUN3	C1_default	Q7::36	RGC		RGC	FIXED(翻正)	A=RGC/B B=undet/C C=missing/None
+RUN3	C1_default	Q7::38	BC		BC	FIXED(翻正)	A=coarse:BC_HC/C B=BC/B C=missing/None
+RUN3	C3b	Q7::38	BC		BC	FIXED(翻正)	A=coarse:BC_HC/C B=BC/B C=missing/None
+RUN3	C1_default	Q7::54	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C2b	Q7::54	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C3b	Q7::54	BC		BC	FIXED(翻正)	A=coarse:BC/C B=BC/B C=missing/None
+RUN3	C1_default	Q7::57	RGC		RGC	FIXED(翻正)	A=RGC/B B=undet/C C=missing/None
+RUN3	C1_default	Q7::62	BC		BC	FIXED(翻正)	A=coarse:BC/HC/C B=BC/B C=missing/None
+RUN3	C3b	Q7::62	BC		BC	FIXED(翻正)	A=coarse:BC/HC/C B=BC/B C=missing/None
+RUN3	C1_default	Q7::9	AC		AC	FIXED(翻正)	A=coarse:AC/HC/C B=AC/B C=missing/None
+RUN3	C3b	Q7::9	AC		AC	FIXED(翻正)	A=coarse:AC/HC/C B=AC/B C=missing/None
+RUN3	C2b	Q8::13	retinal ganglion cell		dev-neuron	BROKEN(新错名)	A=coarse:dev-neuron/C B=coarse:dev-neuron/C C=missing/None
+RUN3	C1_default	Q8::18	retinal progenitor cell		Astro	BROKEN(新错名)	A=coarse:dev-glial/C B=Astro/B C=missing/None
+RUN3	C3b	Q8::18	retinal progenitor cell		Astro	BROKEN(新错名)	A=coarse:dev-glial/C B=Astro/B C=missing/None
+RUN3	C2b	Q8::2	retinal rod cell		dev-photoreceptor	BROKEN(新错名)	A=coarse:dev-photoreceptor/C B=coarse:dev-photoreceptor/C C=missing/None
+RUN3	C1_default	Q8::21	retinal progenitor cell		RPC	BROKEN(新错名)	A=coarse:dev-progenitor/B B=RPC/B C=missing/None
+RUN3	C1_default	Q8::4	retinal ganglion cell		RGC	BROKEN(新错名)	A=coarse:dev-RGC/B B=RGC/B C=missing/None
+RUN3	C3b	Q8::4	retinal ganglion cell		RGC	BROKEN(新错名)	A=coarse:dev-RGC/B B=RGC/B C=missing/None
+RUN3	C1_default	Q8::5	midget ganglion cell of retina		RGC	BROKEN(新错名)	A=coarse:dev-RGC/C B=RGC/B C=missing/None
+RUN3	C3b	Q8::5	midget ganglion cell of retina		RGC	BROKEN(新错名)	A=coarse:dev-RGC/C B=RGC/B C=missing/None
+RUN3	C1_default	Q8::6	midget ganglion cell of retina		RGC	BROKEN(新错名)	A=coarse:dev-RGC/B B=RGC/B C=missing/None
+RUN3	C3b	Q8::6	midget ganglion cell of retina		RGC	BROKEN(新错名)	A=coarse:dev-RGC/B B=RGC/B C=missing/None
+RUN3	C1_default	Q9::11			Mac_DAM_LAM	unjudgeable(truth缺失)	A=coarse:Mac_DAM_LAM/B B=Mac_DAM_LAM/B C=missing/None
+RUN3	C2b	Q9::11			Mac_DAM_LAM	unjudgeable(truth缺失)	A=coarse:Mac_DAM_LAM/B B=Mac_DAM_LAM/B C=missing/None
+RUN3	C1_default	Q9::12			Immune Cells	unjudgeable(truth缺失)	A=coarse:Immune Cells/B B=Immune Cells/B C=missing/None
+RUN3	C2b	Q9::12			Immune Cells	unjudgeable(truth缺失)	A=coarse:Immune Cells/B B=Immune Cells/B C=missing/None
+RUN3	C1_default	Q9::15			Immune Cells	unjudgeable(truth缺失)	A=coarse:Immune Cells/B B=Immune Cells/B C=missing/None
+RUN3	C2b	Q9::15			Immune Cells	unjudgeable(truth缺失)	A=coarse:Immune Cells/B B=Immune Cells/B C=missing/None
+RUN3	C1_default	Q9::17			Fibroblasts	unjudgeable(truth缺失)	A=Fibroblasts/B B=coarse:Myofibroblast/B C=missing/None
+RUN3	C1_default	Q9::2			Mac_DAM_LAM	unjudgeable(truth缺失)	A=coarse:Mac_DAM_LAM/B B=Mac_DAM_LAM/B C=missing/None
+RUN3	C2b	Q9::2			Mac_DAM_LAM	unjudgeable(truth缺失)	A=coarse:Mac_DAM_LAM/B B=Mac_DAM_LAM/B C=missing/None
+RUN3	C2b	Q9::3			Proliferating	unjudgeable(truth缺失)	A=coarse:Proliferating/B B=coarse:Proliferating/B C=missing/None
+RUN3	C1_default	Q9::6			Mac_DAM_LAM	unjudgeable(truth缺失)	A=coarse:Mac_DAM_LAM/B B=Mac_DAM_LAM/B C=missing/None
+RUN3	C2b	Q9::6			Mac_DAM_LAM	unjudgeable(truth缺失)	A=coarse:Mac_DAM_LAM/B B=Mac_DAM_LAM/B C=missing/None
+RUN3	C1_default	Q9::7			Immune Cells	unjudgeable(truth缺失)	A=coarse:Immune Cells/B B=Immune Cells/B C=missing/None
+RUN3	C2b	Q9::7			Immune Cells	unjudgeable(truth缺失)	A=coarse:Immune Cells/B B=Immune Cells/B C=missing/None
+RUN3	C1_default	Q9::8			Immune Cells	unjudgeable(truth缺失)	A=coarse:Immune Cells/B B=Immune Cells/B C=missing/None
+RUN3	C2b	Q9::8			Immune Cells	unjudgeable(truth缺失)	A=coarse:Immune Cells/B B=Immune Cells/B C=missing/None
+RUN3	C1_default	Q9::9			Mac_Tissue	unjudgeable(truth缺失)	A=coarse:Mac_Tissue/B B=Mac_Tissue/B C=missing/None
+RUN3	C2b	Q9::9			Mac_Tissue	unjudgeable(truth缺失)	A=coarse:Mac_Tissue/B B=Mac_Tissue/B C=missing/None
+RUN4-r	C1_default	Q1::4	Rod		Rod	FIXED(翻正)	A=Rod/B B=coarse:Photoreceptor/C C=undet/C
+RUN4-r	C1_default	Q4::15	BC		BC	FIXED(翻正)	A=coarse:interneuron/C B=BC/B C=undet/C
+RUN4-r	C1_default	Q5b::13	BC		AC	BROKEN(新错名)	A=undet/C B=AC/B C=undet/C
+RUN5	C1_default	Q6::13	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/C B=Fibroblasts/B C=undet/C
+RUN5	C2a	Q6::13	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/C B=Fibroblasts/B C=undet/C
+RUN5	C2b	Q6::13	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/C B=Fibroblasts/B C=undet/C
+RUN5	C3b	Q6::13	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/C B=Fibroblasts/B C=undet/C
+RUN5	C1_default	Q6::15	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/B B=coarse:Fibroblasts/B C=coarse:Keratocytes/B
+RUN5	C2b	Q6::15	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/B B=coarse:Fibroblasts/B C=coarse:Keratocytes/B
+RUN5	C3b	Q6::15	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/B B=coarse:Fibroblasts/B C=coarse:Keratocytes/B
+RUN5	C1_default	Q6::2	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=undet/C C=undet/C
+RUN5	C3b	Q6::2	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=undet/C C=undet/C
+RUN5	C1_default	Q6::18	Fibroblasts		Pericytes	BROKEN(新错名)	A=coarse:Stromal/C B=Fibroblasts/C C=Pericytes/B
+RUN5	C3b	Q6::18	Fibroblasts		Pericytes	BROKEN(新错名)	A=coarse:Stromal/C B=Fibroblasts/C C=Pericytes/B
+RUN5	C1_default	Q6::27	Fibroblasts		Immune Cells	BROKEN(新错名)	A=undet/C B=Immune Cells/B C=undet/C
+RUN5	C2b	Q6::22	Fibroblasts		Fibroblasts	FIXED(翻正)	A=coarse:Fibroblasts/C B=coarse:Fibroblasts/B C=undet/C
+RUN5	C1_default	Q6::28	Fibroblasts		Keratocytes	BROKEN(新错名)	A=coarse:Fibroblasts/B B=coarse:Fibroblasts/B C=Keratocytes/B
+RUN5	C2b	Q6::28	Fibroblasts		Fibroblasts	FIXED(翻正)	A=coarse:Fibroblasts/B B=coarse:Fibroblasts/B C=Keratocytes/B
+RUN5	C1_default	Q6::31	Fibroblasts		Pericytes	BROKEN(新错名)	A=Fibroblasts/C B=Pericytes/C C=Pericytes/B
+RUN5	C2a	Q6::31	Fibroblasts		Pericytes	BROKEN(新错名)	A=Fibroblasts/C B=Pericytes/C C=Pericytes/B
+RUN5	C2b	Q6::31	Fibroblasts		Pericytes	BROKEN(新错名)	A=Fibroblasts/C B=Pericytes/C C=Pericytes/B
+RUN5	C3b	Q6::31	Fibroblasts		Pericytes	BROKEN(新错名)	A=Fibroblasts/C B=Pericytes/C C=Pericytes/B
+RUN5	C1_default	Q6::30	Epithelium		Immune Cells	BROKEN(新错名)	A=coarse:Epithelial-Immune/C B=undet/C C=Immune Cells/C
+KB9	C2b	Q6::21	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/B B=coarse:Fibroblasts/B C=Keratocytes/B
+KB9	C3a	Q6::21	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/B B=coarse:Fibroblasts/B C=Keratocytes/B
+KB9	C3b	Q6::21	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/B B=coarse:Fibroblasts/B C=Keratocytes/B
+KB9	C1_default	Q6::18	Fibroblasts		Fibroblasts	FIXED(翻正)	A=undet/C B=Fibroblasts/B C=undet/C
+KB9	C1_default	Q6::27	Fibroblasts		Immune Cells	BROKEN(新错名)	A=undet/C B=Immune Cells/B C=undet/C
+KB9	C1_default	Q6::16	Fibroblasts		Fibroblasts	FIXED(翻正)	A=coarse:Fibroblasts/C B=Fibroblasts/B C=Fibroblasts/C
+KB9	C2a	Q6::16	Fibroblasts		Fibroblasts	FIXED(翻正)	A=coarse:Fibroblasts/C B=Fibroblasts/B C=Fibroblasts/C
+KB9	C2b	Q6::16	Fibroblasts		Fibroblasts	FIXED(翻正)	A=coarse:Fibroblasts/C B=Fibroblasts/B C=Fibroblasts/C
+KB9	C1_default	Q6::28	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/B B=coarse:Fibroblasts/B C=coarse:Keratocytes/C
+KB9	C2b	Q6::28	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/B B=coarse:Fibroblasts/B C=coarse:Keratocytes/C
+KB9	C3b	Q6::28	Fibroblasts		Fibroblasts	FIXED(翻正)	A=Fibroblasts/B B=coarse:Fibroblasts/B C=coarse:Keratocytes/C
+KB9	C2b	Q6::31	Fibroblasts		Fibroblasts	FIXED(翻正)	A=coarse:Fibroblasts/C B=coarse:Fibroblasts/B C=undet/C
+KB9	C1_default	Q6::26	Immune Cells		Immune Cells	FIXED(翻正)	A=Immune Cells/B B=coarse:Immune Cells/B C=Immune Cells/C
+KB9	C2a	Q6::26	Immune Cells		Immune Cells	FIXED(翻正)	A=Immune Cells/B B=coarse:Immune Cells/B C=Immune Cells/C
+KB9	C2b	Q6::26	Immune Cells		Immune Cells	FIXED(翻正)	A=Immune Cells/B B=coarse:Immune Cells/B C=Immune Cells/C
+KB9	C3b	Q6::26	Immune Cells		Immune Cells	FIXED(翻正)	A=Immune Cells/B B=coarse:Immune Cells/B C=Immune Cells/C
+KB9	C1_default	Q6::29	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=coarse:Epithelium/B C=Epithelium/C
+KB9	C2a	Q6::29	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=coarse:Epithelium/B C=Epithelium/C
+KB9	C2b	Q6::29	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=coarse:Epithelium/B C=Epithelium/C
+KB9	C3b	Q6::29	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=coarse:Epithelium/B C=Epithelium/C
+KB9	C1_default	Q6::30	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=undet/C C=Epithelium/C
+KB9	C2a	Q6::30	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=undet/C C=Epithelium/C
+KB9	C2b	Q6::30	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=undet/C C=Epithelium/C
+KB9	C3b	Q6::30	Epithelium		Epithelium	FIXED(翻正)	A=Epithelium/B B=undet/C C=Epithelium/C
+FACEV21	C1_default	Q1::1	Rod		Rod	FIXED(翻正)	A=undet/C B=undet/C C=Rod/B
+FACEV21	C1_default	Q1::9	Rod		Rod	FIXED(翻正)	A=undet/C B=undet/C C=Rod/B
+FACEV21	C1_default	Q3::13	RGC		Rod	BROKEN(新错名)	A=Rod/B B=coarse:RGC/C C=undet/C
+FACEV21	C3b	Q3::13	RGC		Rod	BROKEN(新错名)	A=Rod/B B=coarse:RGC/C C=undet/C
