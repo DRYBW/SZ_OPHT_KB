@@ -1,0 +1,752 @@
+{
+ "at": "2026-09-28 15:15:50",
+ "card": "t_8960c7e0",
+ "n_checks": 148,
+ "n_fails": 0,
+ "fails": [],
+ "checks": [
+  {
+   "check": "off==pre::qm_list_all",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::qm_list_retina",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::qm_ct_MG",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::qm_ct_BC",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::qm_ct_Keratocytes",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::qm_ct_Pericyte",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::qm_ct_Endo",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::qm_genes_selftest",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::qm_genes_run4w_v5",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::qm_genes_rod_dom",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::qm_genes_pure_bc",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::qm_genes_rodbcmix",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::qm_genes_bcdom_rod2",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::qm_genes_mural_smc",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::qm_genes_mural_kera",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::qm_genes_rod_bc_f3ish",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::gk_index",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::gk_tissue_cornea",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::act_ct_retv6_MG",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::act_ct_retv6_Astro",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::act_ct_facev6_Kera",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::act_ct_conj_basal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::act_ct_conj_superf",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::act_genes_v6_retina",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::act_genes_face_new",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::act_lac_genes",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::act_lac_ct",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::act_exp_retv6_MG",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::act_exp_facev6_Kera",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::act_exp_lac_v6",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::act_ct_Micro",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::act_ct_RPE",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::gtc_retina",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::k9leak_ct_Melanocyte",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::k9leak_ct_Schwann",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::k9leak_ct_suprabasal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::k9leak_ct_limbusC1",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::k9leak_genes_mel_core",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::k9leak_genes_schw_core",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::k9leak_genes_supra_core",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::k9leak_genes_limC1_core",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off==pre::k9leak_default_list",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::qm_list_all",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::qm_list_retina",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::qm_ct_MG",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::qm_ct_BC",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::qm_ct_Keratocytes",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::qm_ct_Pericyte",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::qm_ct_Endo",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::qm_genes_selftest",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::qm_genes_run4w_v5",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::qm_genes_rod_dom",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::qm_genes_pure_bc",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::qm_genes_rodbcmix",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::qm_genes_bcdom_rod2",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::qm_genes_mural_smc",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::qm_genes_mural_kera",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::qm_genes_rod_bc_f3ish",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::gk_index",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::gk_tissue_cornea",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::act_ct_retv6_MG",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::act_ct_retv6_Astro",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::act_ct_facev6_Kera",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::act_ct_conj_basal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::act_ct_conj_superf",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::act_genes_v6_retina",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::act_genes_face_new",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::act_lac_genes",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-emptyranking-addfield::act_lac_genes",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::act_lac_ct",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::act_exp_retv6_MG",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::act_exp_facev6_Kera",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::act_exp_lac_v6",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::act_ct_Micro",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::act_ct_RPE",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::gtc_retina",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::k9leak_ct_Melanocyte",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::k9leak_ct_Schwann",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::k9leak_ct_suprabasal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::k9leak_ct_limbusC1",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::k9leak_genes_mel_core",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-emptyranking-addfield::k9leak_genes_mel_core",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::k9leak_genes_schw_core",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-emptyranking-addfield::k9leak_genes_schw_core",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::k9leak_genes_supra_core",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-changed::k9leak_genes_limC1_core",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-emptyranking-addfield::k9leak_genes_limC1_core",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "on-untouched::k9leak_default_list",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off-no-govkeys::qm_list_all",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::qm_list_retina",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::qm_ct_MG",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::qm_ct_BC",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::qm_ct_Keratocytes",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::qm_ct_Pericyte",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::qm_ct_Endo",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::qm_genes_selftest",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::qm_genes_run4w_v5",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::qm_genes_rod_dom",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::qm_genes_pure_bc",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::qm_genes_rodbcmix",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::qm_genes_bcdom_rod2",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::qm_genes_mural_smc",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::qm_genes_mural_kera",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::qm_genes_rod_bc_f3ish",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::gk_index",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::gk_tissue_cornea",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::act_ct_retv6_MG",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::act_ct_retv6_Astro",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::act_ct_facev6_Kera",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::act_ct_conj_basal",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::act_ct_conj_superf",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::act_genes_v6_retina",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::act_genes_face_new",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::act_lac_genes",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::act_lac_ct",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::act_exp_retv6_MG",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::act_exp_facev6_Kera",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::act_exp_lac_v6",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::act_ct_Micro",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::act_ct_RPE",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::gtc_retina",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::k9leak_ct_Melanocyte",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::k9leak_ct_Schwann",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::k9leak_ct_suprabasal",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::k9leak_ct_limbusC1",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::k9leak_genes_mel_core",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::k9leak_genes_schw_core",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::k9leak_genes_supra_core",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::k9leak_genes_limC1_core",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "off-no-govkeys::k9leak_default_list",
+   "pass": true,
+   "detail": "extra=set()"
+  },
+  {
+   "check": "version-0.6-kbgov5",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "srv-version-string",
+   "pass": true,
+   "detail": "server.py version"
+  },
+  {
+   "check": "core-version-bump-no-regression-of-k9reg-note",
+   "pass": true,
+   "detail": "旧版本串残留=0"
+  },
+  {
+   "check": "V6_DEFAULT_LIBS-unchanged",
+   "pass": true,
+   "detail": "('retina_v6', 'face_v6')"
+  },
+  {
+   "check": "no-k9-in-default",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "no-lacrimal-in-default",
+   "pass": true,
+   "detail": "lacrimal leak"
+  },
+  {
+   "check": "k9-route-reachable",
+   "pass": true,
+   "detail": "['Conj_epithelium_suprabasal', 'Limbus_Sclera_fibroblast_C1', 'Melanocyte', 'Schwann']"
+  },
+  {
+   "check": "lacrimal-route-reachable",
+   "pass": true,
+   "detail": "True"
+  },
+  {
+   "check": "vocab-byte-identical",
+   "pass": true,
+   "detail": "9b504a2e7cdc975b"
+  },
+  {
+   "check": "vocab-loads",
+   "pass": true,
+   "detail": "262000"
+  },
+  {
+   "check": "failsoft-vocab-missing==legacy",
+   "pass": true,
+   "detail": "missing-vocab 响应应==OFF/legacy"
+  },
+  {
+   "check": "failsoft-recovery",
+   "pass": true,
+   "detail": "词表恢复后 ON 语义复原"
+  },
+  {
+   "check": "celltype-mode-no-gov-keys",
+   "pass": true,
+   "detail": "cell_type 模式不在 B5 管辖"
+  },
+  {
+   "check": "switch-casefold-off",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "switch-0",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "switch-1-on",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "switch-true-on",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "switch-unset-on",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "rollback_tsv": "/mnt/D/EyeKB/plans/kbgov_b5impl_20260928/out/B5IMPL_A5_ROLLBACK.tsv",
+ "probes_total": 42,
+ "probes_genes": 16
+}

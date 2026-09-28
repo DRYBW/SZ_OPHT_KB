@@ -1,0 +1,40 @@
+PASS G1 parquet行数=build_stats | (220654, 220654)
+PASS G1 行数=220571+83 | 220654
+PASS G1 papers.jsonl含4 KC | 
+PASS G1 4 KC chunk均>0 | {'11328728': 1, '15914606': 1, '41060151': 41, '42115719': 40}
+PASS G1 abstract-only两篇 行级标识正确 | ({0}, {'abstract'})
+PASS G1 admission_lane 标注 | 
+PASS G2 A' paper_id序列与v2.2一致 | 
+PASS G2 A' text零改动 | 
+PASS G2 A' 抽样500向量逐位一致(零重算) | 
+PASS G2 向量范数≈1 | (np.float32(0.99999994), np.float32(1.0000001))
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 7438.02it/s]
+G3 golden Rod                          v2.2=5/5 v2.3=5/5 OK
+G3 golden Cone                         v2.2=5/5 v2.3=5/5 OK
+G3 golden Retinal Pigment Epithelium   v2.2=4/4 v2.3=4/4 OK
+G3 golden Muller Glia                  v2.2=3/3 v2.3=3/3 OK
+G3 golden Astrocyte                    v2.2=3/4 v2.3=3/4 OK
+G3 golden Microglia                    v2.2=4/4 v2.3=4/4 OK
+G3 golden Retinal Ganglion Cell        v2.2=3/3 v2.3=3/3 OK
+G3 golden Rod Bipolar Cell             v2.2=3/4 v2.3=3/4 OK
+G3 golden Horizontal Cell              v2.2=4/4 v2.3=4/4 OK
+G3 golden Amacrine Cell                v2.2=3/2 v2.3=3/2 OK
+PASS G3 黄金回归 v2.3 无回退(vs v2.2 记录) | 10/10
+G4 anchor 41060151: raw=4 cornea=4
+G4 anchor 42115719: raw=1 cornea=1
+G4 anchor 11328728: raw=1 cornea=1
+G4 anchor 15914606: raw=1 cornea=1
+PASS G4 锚召回4篇全命中(raw top-50内) | {'41060151': 4, '42115719': 1, '11328728': 1, '15914606': 1}
+PASS G4 锚召回4篇全命中(cornea 过滤 top-50内) | {'41060151': 4, '42115719': 1, '11328728': 1, '15914606': 1}
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 12683.37it/s]
+库: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.3_2026-09 | 220654 chunks, 6 species
+G5a topic 41060151 [corneal endothelium]: hit=True rank=6 reason=composition_baseline
+G5a topic 42115719 [corneal endothelium]: hit=True rank=1 reason=composition_baseline
+G5a topic 11328728 [corneal keratocyte]: hit=True rank=1 reason=state_signature
+G5a topic 15914606 [corneal keratocyte]: hit=True rank=1 reason=disease_mechanism_background
+PASS G5a 主题化查询4/4命中且带 reason 联表 | {'41060151': (6, 'composition_baseline'), '42115719': (1, 'composition_baseline'), '11328728': (1, 'state_signature'), '15914606': (1, 'dise
+G5b generic [corneal keratocyte] hits: ['34381080', '37443842', '41060151', '34741068', '40390022', '33865984', '38177186', 'PPR_PPR197834', '40838019', '42194275']
+G5b generic [corneal endothelium] hits: ['41060151', '34741068', '39732756', '34381080', '42194275', '42115719', '40136389', '37443842', '37291161', '34769520']
+PASS G5b 泛化合成查询覆盖 (记录性; 措辞敏感缺陷沿 d0 先例如实登记) | generic union=['41060151', '42115719']/4 — 11328728/15914606 为非-scrna 历史文献, 泛 composition 查询下排序靠后 (既有检索层行为, 非覆盖缺口)
+PASS G6 冻结库/检索脚本 sha == 开卡基线 | mismatch=[]
+VERDICT: 16/16 PASS

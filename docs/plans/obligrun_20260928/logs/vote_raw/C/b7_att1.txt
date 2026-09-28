@@ -1,0 +1,3 @@
+{"cluster_id":"Q6::7","identity":"Endothelium","level":"majority","grade":"B","gates":{"identity_evidence":"pass","resolution":"pass","technical":"na"},"flag":"none","why":"top_genes含内皮marker CLDN5/VIM/ANGPT2；kb_celltype_ranking命中Endo；lit支持"}
+{"cluster_id":"Q6::32","identity":"Smooth Muscle Cells","level":"majority","grade":"B","gates":{"identity_evidence":"pass","resolution":"pass","technical":"na"},"flag":"none","why":"top_genes强表达平滑肌标志ACTA2/MYH11/TAGLN/MYL9；无冲突marker"}
+{"cluster_id":"Q6::30","identity":"Epithelium","level":"coarse","grade":"C","gates":{"identity_evidence":"pass","resolution":"fail","technical":"na"},"flag":"technical_suspect","why":"kb_celltype_ranking命中Conj_epithelium_basal/suprabasal；但top_genes含免疫S100A8/A9；疑双细胞"}

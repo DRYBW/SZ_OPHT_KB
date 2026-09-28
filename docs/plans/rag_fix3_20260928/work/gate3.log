@@ -1,0 +1,6 @@
+A units = 92 (expect 92), rows = 232 (expect 232)
+new-paper chunks scanned = 22274 (9772+1281+11221)
+{"units_total": 92, "units_eliminated": 87, "unit_elimination_rate": 0.9457, "rows_eliminated": 216, "row_elimination_rate": 0.931, "verdict": "PASS"}
+by_ctx units elim [tot,elim]: {'face': [3, 3], 'kb9': [3, 3], 'lacrimal': [7, 7], 'membrane': [21, 21], 'retina': [58, 53]}
+RA3 newly eliminated: [['COL19A1', 'retina'], ['FAM107B', 'retina'], ['FAM135A', 'retina'], ['LILRB2', 'retina'], ['LMOD1', 'face'], ['SLC24A3', 'retina'], ['SSR4', 'membrane'], ['XCR1', 'membrane'], ['ZNF804B', 'retina']]
+rc=0

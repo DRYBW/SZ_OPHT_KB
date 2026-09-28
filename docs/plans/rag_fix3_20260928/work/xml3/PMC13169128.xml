@@ -1,0 +1,837 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="humu6845605" xml:lang="en" article-type="research-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Hum Mutat</journal-id><journal-id journal-id-type="iso-abbrev">Hum Mutat</journal-id><journal-id journal-id-type="pmc-domain-id">4659</journal-id><journal-id journal-id-type="pmc-domain">humu</journal-id><journal-id journal-id-type="nlm-id">9215429</journal-id><journal-id journal-id-type="publisher-id">HUMU</journal-id><journal-title-group><journal-title>Human Mutation</journal-title></journal-title-group><issn pub-type="ppub">1059-7794</issn><issn pub-type="epub">1098-1004</issn><?publisher_abbrev blackwell?><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13169128</article-id><article-id pub-id-type="pmcid-ver">PMC13169128.1</article-id><article-id pub-id-type="pmcaid">13169128</article-id><article-id pub-id-type="pmcaiid">13169128</article-id><article-id pub-id-type="pmid">42136961</article-id><article-id pub-id-type="doi">10.1155/humu/6845605</article-id><article-id pub-id-type="publisher-id">HUMU6845605</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Research Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Article</subject></subj-group></article-categories><title-group><article-title>Integrated Bulk and Single‐Cell Transcriptomic Analysis Reveals Xenobiotic Metabolism Genes Drive Progression From Liver Cirrhosis to Hepatocellular Carcinoma</article-title></title-group><contrib-group><contrib id="cr-0001" contrib-type="author"><name name-style="western"><surname>Xu</surname><given-names initials="H">Hao</given-names></name><xref rid="aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="cr-0002" contrib-type="author"><name name-style="western"><surname>Li</surname><given-names initials="Y">Yanpeng</given-names></name><xref rid="aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="cr-0003" contrib-type="author"><name name-style="western"><surname>Zhao</surname><given-names initials="R">Rui</given-names></name><xref rid="aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="cr-0004" contrib-type="author"><name name-style="western"><surname>Ma</surname><given-names initials="S">Shaowei</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0004-4166-1064</contrib-id><xref rid="aff-0004" ref-type="aff">
+<sup>4</sup>
+</xref></contrib><contrib id="cr-0005" contrib-type="author" corresp="yes"><name name-style="western"><surname>Hu</surname><given-names initials="N">Ning</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0002-0327-080X</contrib-id><xref rid="aff-0005" ref-type="aff">
+<sup>5</sup>
+</xref><address><email>huning@hebmu.edu.cn</email></address></contrib><contrib id="cr-0006" contrib-type="author" corresp="yes"><name name-style="western"><surname>Yu</surname><given-names initials="S">Shuo</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0008-0080-5307</contrib-id><xref rid="aff-0005" ref-type="aff">
+<sup>5</sup>
+</xref><address><email>yushuo53342022@163.com</email></address></contrib><contrib id="cr-0007" contrib-type="author" corresp="yes"><name name-style="western"><surname>Lv</surname><given-names initials="X">Xuefeng</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-4388-1317</contrib-id><xref rid="aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><address><email>2312712402@qq.com</email></address></contrib></contrib-group><contrib-group><contrib id="cr-0008" contrib-type="editor"><name name-style="western"><surname>Shi</surname><given-names initials="R">Run</given-names></name><address><email>shirun@njmu.edu.cn</email></address></contrib></contrib-group><aff id="aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Department of Laboratory Medicine</named-content>, <institution>The Third Affiliated Hospital of Zhengzhou University</institution>, <city>Zhengzhou</city>, <named-content content-type="country-part">Henan</named-content>, <country>China</country>, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://zdsfy.net" ext-link-type="uri">zdsfy.net</ext-link>
+</aff><aff id="aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Zhengzhou Key Laboratory for In Vitro Diagnosis of Hypertensive Disorders of Pregnancy</named-content>, <city>Zhengzhou</city>, <named-content content-type="country-part">Henan</named-content>, <country>China</country>
+</aff><aff id="aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Department of Emergency</named-content>, <named-content content-type="organisation-division">Hebei General Hospital</named-content>, <city>Shijiazhuang</city>, <named-content content-type="country-part">Hebei</named-content>, <country>China</country>, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://hebmu.edu.cn" ext-link-type="uri">hebmu.edu.cn</ext-link>
+</aff><aff id="aff-0004">
+<label>
+<sup>4</sup>
+</label>
+<named-content content-type="organisation-division">Department of Gastrointestinal Surgery</named-content>, <institution>The Second Hospital of Hebei Medical University</institution>, <city>Shijiazhuang</city>, <named-content content-type="country-part">Hebei</named-content>, <country>China</country>, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://hebmu.edu.cn" ext-link-type="uri">hebmu.edu.cn</ext-link>
+</aff><aff id="aff-0005">
+<label>
+<sup>5</sup>
+</label>
+<named-content content-type="organisation-division">Department of Surgical Oncology</named-content>, <institution>The Second Hospital of Hebei Medical University</institution>, <city>Shijiazhuang</city>, <named-content content-type="country-part">Hebei</named-content>, <country>China</country>, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://hebmu.edu.cn" ext-link-type="uri">hebmu.edu.cn</ext-link>
+</aff><pub-date pub-type="epub"><day>13</day><month>5</month><year>2026</year></pub-date><pub-date pub-type="collection"><year>2026</year></pub-date><volume>2026</volume><issue-id pub-id-type="pmc-issue-id">503686</issue-id><elocation-id>6845605</elocation-id><history>
+<date date-type="rev-recd"><day>02</day><month>4</month><year>2026</year></date>
+<date date-type="received"><day>20</day><month>12</month><year>2025</year></date>
+<date date-type="accepted"><day>21</day><month>4</month><year>2026</year></date>
+</history><pub-history><event event-type="pmc-release"><date><day>13</day><month>05</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>14</day><month>05</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-09-25 11:57:05.683"><day>25</day><month>09</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">Copyright © 2026 Hao Xu et al. Human Mutation published by John Wiley &amp; Sons Ltd.</copyright-statement><copyright-year>2026</copyright-year><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="HUMU-2026-6845605.pdf"><?pdf-name HUMU-2026-6845605.pdf?><?pdf-size 9718398?><?pdf-md5 078bd6e3f62e4d3738cfba0e9a4b96e1?><?pdf-image-server-status NEVER_LOAD?><?pdf-cloudpmc-urn urn:app:cdb8/13169128/078bd6e3f62e/HUMU-2026-6845605.pdf?></self-uri><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:HUMU-2026-6845605.pdf"/><abstract><sec id="sec-0001"><title>Background</title><p>Hepatocellular carcinoma (HCC) is one of the most prevalent malignant tumors globally, with liver cirrhosis (LC) recognized as a significant precursor. Xenobiotic metabolism plays a pivotal role in liver diseases, where the liver′s primary function as a detoxifying organ directly influences health and tumor development. Therefore, exploring the function of genes associated with xenobiotic metabolism in patients with HCC and LC is crucial for advancing diagnosis and treatment strategies.</p></sec><sec id="sec-0002"><title>Methods</title><p>This study integrated bulk transcriptome RNA sequencing and single‐cell RNA sequencing data of HCC and LC from the GEO database. Differential expression analysis, GO and DO enrichment analyses, and PPI network construction were performed to identify hub genes. ROC curve analysis was used to assess the diagnostic value of these genes, and potential therapeutic drugs were predicted using drug databases. The expression of the identified hub genes was validated in clinical tissue samples (≥ 10 pairs) by qRT‐PCR and Western blot. Functional assays, including wound healing, transwell migration, and invasion assays, were conducted following siRNA‐mediated knockdown of selected hub genes in Huh7 hepatoma cells.</p></sec><sec id="sec-0003"><title>Results</title><p>We identified five key xenobiotic metabolism‐related hub genes: AKR1C3, CYB5A, ADH1C, MAOA, and ALDH2. These genes were significantly overexpressed in HCC and LC tissues compared with normal tissues and were associated with xenobiotic metabolism, substance abuse, alcohol use disorders, and cancer. ROC curve analysis indicated that these hub genes have high diagnostic value in HCC and LC. Potential drug prediction identified six compounds, including retinal, isopropanol, and disulfiram, which may have therapeutic effects. Clinical tissue validation confirmed that all five hub genes were significantly upregulated at both mRNA and protein levels in HCC and LC tissues compared with normal controls (<italic toggle="yes">p</italic> &lt; 0.05). Functional experiments demonstrated that knockdown of ALDH2 or AKR1C3 significantly impaired the migration and invasion abilities of Huh7 cells, with a reduction of over 50% in transwell assays (<italic toggle="yes">p</italic> &lt; 0.05).</p></sec><sec id="sec-0004"><title>Conclusion</title><p>This study systematically analyzed the expression characteristics and functional significance of xenobiotic metabolism‐related genes in HCC and LC by integrating multiple high‐throughput sequencing technologies. Experimental validation confirmed the upregulation of these hub genes in clinical tissues and demonstrated that ALDH2 and AKR1C3 promote hepatoma cell migration and invasion, providing experimental evidence for their potential roles in disease progression. Potential drugs targeting these hub genes were preliminarily investigated.</p></sec></abstract><kwd-group><title>Keywords</title><kwd id="kwd-0001">hepatocellular carcinoma</kwd><kwd id="kwd-0002">liver cirrhosis</kwd><kwd id="kwd-0003">machine leaning</kwd><kwd id="kwd-0004">single-cell RNA-seq</kwd><kwd id="kwd-0005">xenobiotic metabolism</kwd></kwd-group><funding-group><award-group id="funding-0001"><funding-source>
+<institution-wrap><institution>Medical Science Research Project of Hebei</institution></institution-wrap>
+</funding-source><award-id>20230362</award-id></award-group></funding-group><counts><fig-count count="10"/><table-count count="0"/><ref-count count="24"/><page-count count="16"/><word-count count="5188"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.6 mode:remove_FC converted:13.05.2026</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation publication-type="journal" id="humu6845605-cit-2001">
+<string-name name-style="western">
+<surname>Xu</surname>, <given-names>Hao</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Li</surname>, <given-names>Yanpeng</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Zhao</surname>, <given-names>Rui</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ma</surname>, <given-names>Shaowei</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Hu</surname>, <given-names>Ning</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Yu</surname>, <given-names>Shuo</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Lv</surname>, <given-names>Xuefeng</given-names>
+</string-name>, 
+<article-title>Integrated Bulk and Single‐Cell Transcriptomic Analysis Reveals Xenobiotic Metabolism Genes Drive Progression From Liver Cirrhosis to Hepatocellular Carcinoma</article-title>, 
+<source>Human Mutation</source>, <volume>2026</volume>, <elocation-id>6845605</elocation-id>, 16 pages, <year>2026</year>. 
+<pub-id pub-id-type="doi">10.1155/humu/6845605</pub-id>
+<pub-id pub-id-type="pmcid">PMC13169128</pub-id><pub-id pub-id-type="pmid">42136961</pub-id></mixed-citation>
+</p><fn-group><fn id="note-0001"><p>
+<bold>Guest Editor:</bold> Run Shi</p></fn></fn-group></notes></front><body><sec id="sec-0005"><title>1. Introduction</title><p>Hepatocellular carcinoma (HCC) is one of the most common malignant tumors worldwide, characterized by high incidence and mortality rates [<xref rid="bib-0001" ref-type="bibr">1</xref>]. The pathogenesis of HCC is complex, involving various genetic mutations and dysregulated signaling pathways [<xref rid="bib-0002" ref-type="bibr">2</xref>, <xref rid="bib-0003" ref-type="bibr">3</xref>]. Liver cirrhosis (LC) is a significant precursor to HCC, with approximately 80%–90% of HCC patients having an underlying cirrhotic condition [<xref rid="bib-0004" ref-type="bibr">4</xref>, <xref rid="bib-0005" ref-type="bibr">5</xref>]. Therefore, understanding the molecular links between HCC and LC is crucial for early diagnosis and treatment.</p><p>Xenobiotic metabolism refers to the metabolic processes of exogenous chemical substances, including drugs, environmental pollutants, and food additives [<xref rid="bib-0006" ref-type="bibr">6</xref>, <xref rid="bib-0007" ref-type="bibr">7</xref>]. These xenobiotic compounds undergo biotransformation primarily through the liver′s metabolic enzyme system, ultimately being excreted from the body [<xref rid="bib-0008" ref-type="bibr">8</xref>, <xref rid="bib-0009" ref-type="bibr">9</xref>]. As the central detoxification organ, the liver plays a pivotal role in xenobiotic metabolism [<xref rid="bib-0010" ref-type="bibr">10</xref>]. Abnormalities in these metabolic pathways can lead to liver cell damage and carcinogenesis, closely associated with the development and progression of LC and HCC [<xref rid="bib-0011" ref-type="bibr">11</xref>, <xref rid="bib-0012" ref-type="bibr">12</xref>].</p><p>With the advancement of high‐throughput sequencing technologies, integrating large‐scale bulk RNA‐seq and single‐cell RNA‐seq data have provided new insights into the complex heterogeneity of the tumor microenvironment. This integrative analysis approach not only reveals differences between tumor and normal tissues but also delves into the functional roles of different cell types in xenobiotic metabolism [<xref rid="bib-0013" ref-type="bibr">13</xref>]. This is crucial for understanding the molecular mechanisms of HCC and identifying new prognostic markers.</p><p>Although several studies have examined xenobiotic metabolism genes in liver cancer or fibrosis individually [<xref rid="bib-0014" ref-type="bibr">14</xref>, <xref rid="bib-0015" ref-type="bibr">15</xref>], few have simultaneously characterized these genes across both HCC and LC using integrated bulk and single‐cell transcriptomic data. This integrated approach is crucial because HCC predominantly arises from a background of LC, creating a clinical and biological continuum. Analyzing both conditions together allows us to identify molecular alterations that persist from premalignant stages into overt cancer, potentially revealing key drivers of tumor initiation and progression. Our study not only evaluates these genes from a prognostic perspective across multiple cohorts but also explores their relevance to immune infiltration and therapeutic repurposing. In this study, we perform a comprehensive analysis.</p></sec><sec id="sec-0006"><title>2. Methods</title><sec id="sec-0007"><title>2.1. Data Preprocessing</title><p>HCC and LC bulk transcriptome RNA‐seq and scRNA‐seq data were retrieved from the GEO database (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.ncbi.nlm.nih.gov/geo/" ext-link-type="uri">https://www.ncbi.nlm.nih.gov/geo/</ext-link>), including <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmc:entrez-geo" xlink:href="GSE146115">GSE146115</ext-link>, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmc:entrez-geo" xlink:href="GSE76247">GSE76247</ext-link>, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmc:entrez-geo" xlink:href="GSE136103">GSE136103</ext-link>, and <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmc:entrez-geo" xlink:href="GSE14323">GSE14323</ext-link>. All samples from these datasets contained complete clinical and survival information; therefore, no samples were excluded due to missing data (<italic toggle="yes">n</italic> = 0 excluded). The “limma” and “sva” R packages were utilized for background correction, quantile normalization, and batch effect removal. All bulk transcriptome data were normalized based on the log2‐converted FPKM (fragments per kilobase of transcript per million mapped reads) values for sequent analysis.</p></sec><sec id="sec-0008"><title>2.2. scRNA‐Seq Analysis</title><p>All scRNA‐seq data were analyzed in conjunction with the “Seurat” and “SingleR” R packages, including filtering, normalization, and unsupervised clustering. Similarly, mitochondrial counts over 5% and cells with unique feature counts below 200 or over 10,000 were eliminated from the analysis. A normalization operation was done on the filtered matrix using Seurat′s NormalizeData function. The obtained matrix was converted into a Seurat object using the “Seurat” R package and integrated using “Harmony” R package. To address potential batch effects between the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmc:entrez-geo" xlink:href="GSE146115">GSE146115</ext-link> and <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmc:entrez-geo" xlink:href="GSE136103">GSE136103</ext-link> datasets, we applied the Harmony algorithm (v1.0) on the Top 30 principal components derived from the merged Seurat object. Harmony‐corrected embeddings were then used for subsequent dimensionality reduction (UMAP), clustering, and downstream analyses. All procedures followed the standard pipeline recommended by the Harmony developers [<xref rid="bib-0016" ref-type="bibr">16</xref>].</p><p>UMAP was generated from the principal component analysis (PCA) output using “RunUMAP” function. Clustering analysis was carried out using “FindClusters” function with Top 15 principal components and a resolution of 0.5. The “FindAllMarkers” function was performed to screen differentially expressed genes (DEGs) of each cluster within the criteria of log2 fold change (FC) &gt; 0.5 and adjusted <italic toggle="yes">p</italic> &lt; 0.05. “SingleR” R package was conducted for cell‐type annotation.</p></sec><sec id="sec-0009"><title>2.3. Identification of Hallmark Genes</title><p>DEGs for HCC and LC were identified from the bulk transcriptome RNA‐seq data by comparing tumor/cirrhosis samples versus normal samples using the “limma” R package. Genes with |log2 FC| &gt; 1 and adjusted <italic toggle="yes">p</italic> value of &lt; 0.05 were considered statistically significant DEGs and were defined as “HCC marker genes” and “LC marker genes” in the context of this study. The hallmark genes related to xenobiotic metabolism were obtained from the MSigDB database (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.gsea-msigdb.org/gsea/msigdb" ext-link-type="uri">https://www.gsea-msigdb.org/gsea/msigdb</ext-link>, HALLMARK_XENOBIOTIC_METABOLISM). An intersection among xenobiotic metabolism hallmark genes, HCC DEGs, and LC DEGs was mapped using the Venn diagram tool (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bioinformatics.psb.ugent.be/webtools/Venn/" ext-link-type="uri">https://bioinformatics.psb.ugent.be/webtools/Venn/</ext-link>). The “limma” R package was used to analyze differential expression levels of the intersection genes, which were visualized by heatmap.</p></sec><sec id="sec-0010"><title>2.4. Function Enrichment Analysis</title><p>Gene ontology (GO) and disease ontology (DO) enrichment analyses were performed for each candidate gene using “ClusterProfiler” R package to determine the functional roles and related pathways. Visualization of the results was performed using R packages “circlize” and “GOplot” R package.</p></sec><sec id="sec-0011"><title>2.5. Analysis of Protein–Protein Interaction (PPI)</title><p>PPI network was produced by STRING (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://string-db.org/" ext-link-type="uri">http://string-db.org/</ext-link>) based on uploading the intersection genes. It provides a critical assessment and integration of direct and indirect (physical) PPIs. Genes with a combined significance score above 0.7 were deemed as hubs. “Limma” R package was performed for acquiring differential expression levels of hub genes. Receiver operating characteristic (ROC) curve of these hub genes was produced by the “pROC” R package.</p></sec><sec id="sec-0012"><title>2.6. Correlation Analysis of Hub Genes With Immue Cells</title><p>The expression correlation diagram was drawn using the “corrplot” R package. The CIBERSORT algorithm was used to estimate the relative proportions of 22 immune cell types based on the gene expression profiles. To assess the correlation between hub gene expression and immune cell fractions, Pearson correlation coefficients were calculated. To account for multiple testing and control for false positives, <italic toggle="yes">p</italic> values were adjusted using the Benjamini–Hochberg false discovery rate (FDR) method. Correlations with an adjusted <italic toggle="yes">p</italic> value of &lt; 0.05 were considered statistically significant.</p></sec><sec id="sec-0013"><title>2.7. Protential Drug Prediction</title><p>Drug Signatures database (DSigDB, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tanlab.ucdenver.edu/dsigdb" ext-link-type="uri">http://tanlab.ucdenver.edu/dsigdb</ext-link>), an online database of unique compounds and corresponding genes, holds thousands of gene sets. DSigDB was utilized to predict protein–drug interactions and identify potential pharmacological compounds for the hub genes, which benefit HCC or LC. PubChem (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubchem.ncbi.nlm.nih.gov" ext-link-type="uri">https://pubchem.ncbi.nlm.nih.gov</ext-link>) provided SDF versions of the two‐dimensional structural data of potential drugs.</p></sec><sec id="sec-0014"><title>2.8. mRNA Purification and Reverse Transcription Quantitative PCR (RT‐qPCR)</title><p>Total RNA was isolated from clinical specimens using TRIzol reagent (Sigma‐Aldrich, Cat. No. T9424, United States) following the manufacturer′s protocol. First‐strand complementary DNA (cDNA) was synthesized from total RNA with the HiFi II 1st Strand cDNA Synthesis Kit (Yeasen, Cat. No. 11119ES60, China). Quantitative real‐time PCR (qPCR) was performed using SYBR Green Master Mix (Yeasen, Cat. No. 11184ES03, China) on an Applied Biosystems real‐time PCR system. Relative mRNA expression levels were determined using the 2<sup>−<italic toggle="yes">Δ</italic>
+<italic toggle="yes">Δ</italic>
+<italic toggle="yes">C</italic>
+<italic toggle="yes">t</italic>
+</sup> method and normalized to GAPDH. All samples were analyzed in triplicate. Primer sequences are listed in Table S1.</p></sec><sec id="sec-0015"><title>2.9. Western Blot Analysis</title><p>Tissues were lysed in RIPA buffer supplemented with protease and phosphatase inhibitors. Protein concentrations were determined using a BCA protein assay kit. Equal amounts of protein (20 <italic toggle="yes">μ</italic>g) were separated by SDS–PAGE and transferred onto NC membranes.</p><p>Membranes were blocked with 5% nonfat milk in TBST for 1 h at room temperature and then incubated with primary antibodies overnight at 4°C. The following primary antibodies were used: Anti‐AKR1C3 Polyclonal Antibody (Proteintech, Cat. No. 84872‐5‐RR, United States); anti‐ADH1C polyclonal antibody (Proteintech, Cat. No. 18897‐1‐AP, United States); anti‐CYB5A polyclonal antibody (Proteintech, Cat. No. 12365‐1‐AP, Unites States); anti‐ALDH2 polyclonal antibody (Proteintech, Cat. No. 15310‐1‐AP, United States); anti‐MAOA polyclonal antibody (Proteintech, Cat. No. 10539‐1‐AP, United States); and anti‐alpha tubulin polyclonal antibody (Proteintech, Cat. No. 80762‐1‐RR, United States). After washing with TBST, membranes were incubated with HRP‐conjugated secondary antibodies for 1 h at room temperature. Protein bands were visualized using an enhanced chemiluminescence (ECL) detection system and quantified by ImageJ software. Alpha‐tubulin was used as the loading control.</p></sec><sec id="sec-0016"><title>2.10. RNA Interference (RNAi)</title><p>For transient knockdown of AKR1C3 or ALDH2, cells were transfected with a pool of three gene‐specific siRNAs targeting AKR1C3 (sense sequences: 5 <sup>′</sup>‐CCUGAAGAAGUGGAAGAUA‐3 <sup>′</sup>, 5 <sup>′</sup>‐GCAUGAAGAUGGAGAAGAU‐3 <sup>′</sup>, and 5 <sup>′</sup>‐GAAGCUGCAUUGACUACAAU‐3 <sup>′</sup>) or ALDH2 (sense sequences: 5 <sup>′</sup>‐GCAUGAAGGAACUGAAGAA‐3 <sup>′</sup>, 5 <sup>′</sup>‐CCGCAGCUGUCUUCACAAA‐3 <sup>′</sup>, and 5 <sup>′</sup>‐GGAGAAGCUUACCAACAU A‐3 <sup>′</sup>). A nontargeting siRNA was used as a negative control. Transfections were performed using X‐tremeGENE siRNA Transfection Reagent (Roche, Cat. No. 4476115001, Switzerland) following the manufacturer′s protocol.</p></sec><sec id="sec-0017"><title>2.11. Wound‐Healing Assay</title><p>The transfected cells were cultured in a 12‐well plate. Upon reaching confluence, a pipette tip was used to introduce a vertical scratch, followed by the replacement of the culture medium with a serum‐free medium. The initial scratch width was recorded, and the healed scratch width was measured after a specified time interval.</p></sec><sec id="sec-0018"><title>2.12. Transwell Migration and Invasion Assays, and Transendothelial Migration (TEM) Models</title><p>For the migration assay, transfected cells (Huh7: 4 × 10<sup>4</sup>/well) were resuspended in a serum‐free medium and seeded into the upper chamber of a transwell system (Corning, Cat. No. 3422, United States). A complete medium containing 20% FBS was added to the lower chamber. After a specific incubation period (24 h), cells that had migrated through the membrane and adhered to the underside were fixed with 4% paraformaldehyde for 20 min, stained with crystal violet for 25 min, and counted under an IX73 fluorescence microscope. For the invasion assay, the lower chamber was precoated with Matrigel (Corning, Cat. No. 354248, United States), and all other procedures were identical to the migration assay.</p></sec><sec id="sec-0019"><title>2.13. Statistical Analysis</title><p>Data analysis was performed using the R software (Version 4.2.2). Wilcoxon signature rank sum test was used for paired comparison, and Kruskal rank sum test was used for multigroup comparison. The correlation was calculated by Pearson method. Statistical significance was defined as <italic toggle="yes">p</italic> &lt; 0.05.</p></sec></sec><sec id="sec-0020"><title>3. Results</title><sec id="sec-0021"><title>3.1. ScRNA‐Seq Analysis of HCC and LC Samples</title><p>Gene expression profiles of a total of 3200 cells from 4 HCC samples were retrieved from <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmc:entrez-geo" xlink:href="GSE146115">GSE146115</ext-link> and analyzed in Figure <xref rid="fig-0001" ref-type="fig">1</xref>A–B. Eighteen distinct clusters were identified after UMAP analysis. As shown in Figure <xref rid="fig-0001" ref-type="fig">1</xref>C, Cluster 7 corresponded to macrophage cells, Clusters 10 and 16 corresponded to B cells, Clusters 5 and 15 corresponded to T cells, and other clusters corresponded to hepatocytes. Expressions of the Top 20 marker genes in different cell clusters are shown in Figure <xref rid="fig-0001" ref-type="fig">1</xref>D, including APOA2, APOB, RBP4, APOH, CRP, CD2, CD52, TTN, IFITM1, CCL5, AIF1, CIQA, HLA‐DRA, CD74, RNASE1, MZB1, JCHAIN, ELK2AP, IGLL5, and SSR4. The percentages of cells within each cell cycle phase are depicted by density plots (Figure <xref rid="fig-0001" ref-type="fig">1</xref>E). The distribution of cell cycle phases of each cell type in Figure <xref rid="fig-0001" ref-type="fig">1</xref>F shows that immune cells like T cells, B cells, and macrophages mainly focus on G2 compared with other phases. UMAP plot (Figure <xref rid="fig-0001" ref-type="fig">1</xref>G) indicates the transcriptional cell cycle identity per cell.</p><fig position="float" fig-type="Figure" id="fig-0001" orientation="portrait"><label>Figure 1</label><caption><p>ScRNA‐seq analysis of four HCC samples. (A–B) t‐SNE plot from four primary HCC samples before and after batch effect removal. (C) UMAP of the distribution of 18 cell clusters. (D) Heatmap of the expressions of Top 20 marker genes in 18 cell clusters. (E) Density plot of different cell cycle phases of each cell type. (F) Bar chart of distribution of cell cycle phases in each cell type. (G) UMAP plot of cell cycle phases of single cells.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="HUMU-2026-6845605-g010.jpg"><?image-name HUMU-2026-6845605-g010.jpg?><?image-size 101317?><?image-md5 e364d2de60889b327b6c4696067a0f08?><?image-image-server-status NEVER_LOAD?><?image-original-height 599?><?image-original-width 600?><?image-scaled-height 599?><?image-scaled-width 600?><?image-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/e364d2de6088/HUMU-2026-6845605-g010.jpg?><?thumb-name HUMU-2026-6845605-g010.gif?><?thumb-size 4981?><?thumb-md5 4fd779956f691b84ba63da5d774c1477?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 100?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/4fd779956f69/HUMU-2026-6845605-g010.gif?></graphic></fig><p>Similarly, gene expression profiles from seven LC samples were obtained from <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmc:entrez-geo" xlink:href="GSE136103">GSE136103</ext-link> and analyzed in Figure <xref rid="fig-0002" ref-type="fig">2</xref>A–B. Twenty distinct clusters were identified after UMAP analysis. As shown in Figure <xref rid="fig-0002" ref-type="fig">2</xref>C, Clusters 9 and 10 correspond to B cells, Clusters 0 and 1 correspond to NK cells, Cluster 4, 5, and 8 correspond to monocytesC cluster 12 corresponds to stem cells, and Cluster 3, 7, 11, and 17 correspond to hepatocytes; other clusters correspond to smooth muscle cells and endothelial cells. Expressions of Top 35 marker genes in various cell clusters are exhibited in Figure <xref rid="fig-0002" ref-type="fig">2</xref>D, including NKG7, GZMA, PRF1, CCL5, GNLY, RAMP2, GNG11, CLDN5, DNASE1L3, CCL21, DEFB1, VTN, AMBP, SERPINA1, ALB, C1QC, HLA‐DRA, FTL, C1QB, C1QA, IGKC, IGHG1, IGHA1, IGLC3, IGLC2, TPM2, RGS5, ACTA2, TAGLN, MYL9, LUM, COL1A1, DCN, COL1A2, and COL3A1. The percentages of cells within each cell cycle phase are depicted by density plots (Figure <xref rid="fig-0002" ref-type="fig">2</xref>E). The distribution of cell cycle phases of each cell type in Figure <xref rid="fig-0002" ref-type="fig">2</xref>F shows that immune cells like NK cells, B cells, and macrophages mainly focus on G2 compared with other phases. UMAP plot (Figure <xref rid="fig-0002" ref-type="fig">2</xref>G) indicates the transcriptional cell cycle identity per cell.</p><fig position="float" fig-type="Figure" id="fig-0002" orientation="portrait"><label>Figure 2</label><caption><p>ScRNA‐seq analysis of seven LC samples. (A–B) t‐SNE plot from seven primary LC samples before and after batch effect removal. (C) UMAP of the distribution of 20 cell clusters. (D) Heatmap of the expressions of Top 35 marker genes in 20 cell clusters. (E) Density plot of different cell cycle phases of each cell type. (F) Bar chart of distribution of cell cycle phases in each cell type. (G) UMAP plot of cell cycle phases of single cells.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="HUMU-2026-6845605-g009.jpg"><?image-name HUMU-2026-6845605-g009.jpg?><?image-size 110438?><?image-md5 c01851392264dce7cd77dae4a3bc0940?><?image-image-server-status NEVER_LOAD?><?image-original-height 657?><?image-original-width 600?><?image-scaled-height 657?><?image-scaled-width 600?><?image-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/c01851392264/HUMU-2026-6845605-g009.jpg?><?thumb-name HUMU-2026-6845605-g009.gif?><?thumb-size 5342?><?thumb-md5 f75813eeac56003304f10d70caebdc38?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 110?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/f75813eeac56/HUMU-2026-6845605-g009.gif?></graphic></fig></sec><sec id="sec-0022"><title>3.2. Identification of Hallmark Genes</title><p>Classical pathway analysis in HCC and LC tissues indicated that the HALLMARK–XENOBIOTIC−METABOLISM pathway was enormously correlated with the cluster of hepatocytes and immune cells in Figure <xref rid="fig-0003" ref-type="fig">3</xref>A–B. Totally 27 genes were obtained from the intersection of xenobiotic metabolism‐related hallmark genes, HCC marker genes, and LC marker genes (Figure <xref rid="fig-0003" ref-type="fig">3</xref>C). The expression levels of intersection genes in HCC and LC bulk transcriptome data were visualized in Figure <xref rid="fig-0003" ref-type="fig">3</xref>D–E.</p><fig position="float" fig-type="Figure" id="fig-0003" orientation="portrait"><label>Figure 3</label><caption><p>Identification of xenobiotic metabolism‐related genes dysregulated in both HCC and LC. (A) Heatmap of classical carcinogenic pathway analysis of HCC samples. (B) Heatmap of classical carcinogenic pathway analysis of LC samples. (C) Venn diagram showing the intersection of xenobiotic metabolism‐related hallmark genes (from MSigDB), HCC marker genes, and LC marker genes. In this study, “HCC marker genes” and “LC marker genes” refer to differentially expressed genes (DEGs) identified from bulk transcriptome data by comparing HCC or LC samples versus normal samples (|log2FC| &gt; 1, adjusted <italic toggle="yes">p</italic> &lt; 0.05). (D) Heatmap of intersection genes expression levels in HCC bulk transcriptome data. (E) Heatmap of intersection genes expression levels in LC bulk transcriptome data. ∗<italic toggle="yes">p</italic> &lt; 0.05, ∗∗<italic toggle="yes">p</italic> &lt; 0.01, and ∗∗∗<italic toggle="yes">p</italic> &lt; 0.001.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="HUMU-2026-6845605-g008.jpg"><?image-name HUMU-2026-6845605-g008.jpg?><?image-size 132655?><?image-md5 4ed96bcd04b46b33d4892ee4fc16ce68?><?image-image-server-status NEVER_LOAD?><?image-original-height 727?><?image-original-width 600?><?image-scaled-height 727?><?image-scaled-width 600?><?image-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/4ed96bcd04b4/HUMU-2026-6845605-g008.jpg?><?thumb-name HUMU-2026-6845605-g008.gif?><?thumb-size 6426?><?thumb-md5 60d3cae32fdc8d52c30ce29139ec578c?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 121?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/60d3cae32fdc/HUMU-2026-6845605-g008.gif?></graphic></fig></sec><sec id="sec-0023"><title>3.3. PPI Network and Function Enrichment Analysis</title><p>The PPI network was constructed based on the hallmark genes and hub genes were identified, including AKR1C3, CYB5A, ADH1C, MAOA, and ALDH2 (Figure <xref rid="fig-0004" ref-type="fig">4</xref>A). ADH1C, MAOA, and ALDH2 had close relations and interactions, whereas CYB5A and AKR1C3 were bound up with other genes. We performed GO and DO enrichment analyses to investigate the functional annotation of above genes. The DO terms showed hub genes were enriched in substance abuse, alcohol use disorder, head and neck squamous cell carcinoma, head and neck cancer, head and neck carcinoma, and substance‐related disorder (Figure <xref rid="fig-0004" ref-type="fig">4</xref>B). The annotation results of the GO analysis exhibited in Figure <xref rid="fig-0004" ref-type="fig">4</xref>C–D. Enriched Top 5 biological processes are organic hydroxy compound catabolic process, primary alcohol catabolic process, dopamine metabolic process, alcohol catabolic process, and catecholamine metabolic process. These enrichment terms strengthened that hub genes were appropriately annotated and reliable for marker screening. Hub genes expression profiles in HCC (Figure <xref rid="fig-0004" ref-type="fig">4</xref>E) and LC (Figure <xref rid="fig-0004" ref-type="fig">4</xref>E) bulk transcriptome data were compared. There was a significant difference in the expression levels of ADH1C, AKR1C3, and ALDH2 in HCC groups compared with the normal groups. The significant difference in the expression levels of CYB5A, MAOA, AKR1C3, and ALDH2 was identified between the cirrhosis and healthy groups.</p><fig position="float" fig-type="Figure" id="fig-0004" orientation="portrait"><label>Figure 4</label><caption><p>Validation of hub genes in HCC and LC tissues. (A) PPI network of hub genes. (B) Bar diagram of DO enrichment analysis based on hub genes. (C) Bubble map of GO enrichment analysis based on hub genes. (D) Circle diagram of GO enrichment analysis based on hub genes. (E) Expression levels of ADH1C, ALDH2, MAOA, AKR1C3, and CYB5A in HCC bulk transcriptome data. (F) Boxplot of expression levels of ADH1C, ALDH2, MAOA, AKR1C3, and CYB5A in LC bulk transcriptome data. ns, not significant; ∗∗∗<italic toggle="yes">p</italic> &lt; 0.001.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="HUMU-2026-6845605-g007.jpg"><?image-name HUMU-2026-6845605-g007.jpg?><?image-size 110324?><?image-md5 b09ebda058da0e09374281dce7ed8145?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 809?><?image-original-width 600?><?image-scaled-height 809?><?image-scaled-width 600?><?image-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/b09ebda058da/HUMU-2026-6845605-g007.jpg?><?thumb-name HUMU-2026-6845605-g007.gif?><?thumb-size 4886?><?thumb-md5 c26ac23ec192e5497f87ba69c9de98f4?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 135?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/c26ac23ec192/HUMU-2026-6845605-g007.gif?></graphic></fig></sec><sec id="sec-0024"><title>3.4. Diagnostic Value, Prognostic Potential, and Cellular Localization of Hub Genes</title><p>First, we evaluated the diagnostic value of the hub genes using ROC curve analysis. The area under the ROC curve (AUC) of ADH1C, AKR1C3, and ALDH2 was 0.781, 0.916, and 0.966, respectively, in the HCC cohort, whereas AUC of AKR1C3, ALDH2, CYB5A, and MAOA was 0.869, 0.911, 0.899, and 0.982, respectively, in the LC cohort (Figure <xref rid="fig-0005" ref-type="fig">5</xref>A–B). These results indicate that these hub genes possess high sensitivity and specificity as diagnostic biomarkers for distinguishing HCC or LC patients from healthy individuals. UMAP plot in Figure <xref rid="fig-0005" ref-type="fig">5</xref>C–D highlighted gene expression level per cell for five hub genes. The expression levels of hub genes in various cell types were visualized in Figure <xref rid="fig-0005" ref-type="fig">5</xref>E,F. In Figure <xref rid="fig-0005" ref-type="fig">5</xref>E, AKR1C3, CYB5A, MAOA, and ALDH2 exist extensively in hepatocytes and macrophages in HCC cohort. In Figure <xref rid="fig-0005" ref-type="fig">5</xref>FF, all hub genes are widely expressed in hepatocytes in LC cohort, whereas different expression levels of hub genes are identified in other celltypes. Besides, ALDH2 widely distribute in smooth muscle cells, stem cells, and monocytes, whereas CYB5A in smooth muscle cells, stem cells, and endothelial cells. AKR1C3 is also highly expressed in NK cells.</p><fig-group position="float" id="fig-0005" content-type="Figure" orientation="portrait"><label>Figure 5</label><caption><p>Validation of five hub genes (ADH1C, ALDH2, MAOA, AKR1C3, and CYB5A) in HCC and LC tissues. (A) ROC curve of five hub genes in HCC cohort. (B) ROC curve of five hub genes in LC cohort. (C) UMAP of the distribution of five hub genes in HCC scRNA‐seq data. (D) Umap of the distribution of five hub genes in LC scRNA‐seq data. (E) Violin diagram of expression levels of hub genes in each cell population of HCC scRNA‐seq data. (F) Violin diagram of expression levels of hub genes in each cell population of LC scRNA‐seq data.</p></caption><fig position="anchor" fig-type="Figure" id="figpt-0001" orientation="portrait"><caption><p>(A)</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="HUMU-2026-6845605-g006.jpg"><?image-name HUMU-2026-6845605-g006.jpg?><?image-size 89596?><?image-md5 39b7fbc1602b99a7de2ba5a2444d8770?><?image-image-server-status NEVER_LOAD?><?image-original-height 615?><?image-original-width 600?><?image-scaled-height 615?><?image-scaled-width 600?><?image-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/39b7fbc1602b/HUMU-2026-6845605-g006.jpg?><?thumb-name HUMU-2026-6845605-g006.gif?><?thumb-size 4634?><?thumb-md5 4ed8bcb2fd10059642c0c1c3903207ff?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 103?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/4ed8bcb2fd10/HUMU-2026-6845605-g006.gif?></graphic></fig><fig position="anchor" fig-type="Figure" id="figpt-0002" orientation="portrait"><caption><p>(B)</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-11" orientation="portrait" xlink:href="HUMU-2026-6845605-g005.jpg"><?image-name HUMU-2026-6845605-g005.jpg?><?image-size 64631?><?image-md5 5749c6d323489b3c7ce46cb1d5bf71fc?><?image-image-server-status NEVER_LOAD?><?image-original-height 534?><?image-original-width 600?><?image-scaled-height 534?><?image-scaled-width 600?><?image-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/5749c6d32348/HUMU-2026-6845605-g005.jpg?><?thumb-name HUMU-2026-6845605-g005.gif?><?thumb-size 3450?><?thumb-md5 03b4997ac087becb5fc6af13f77150d2?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 89?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/03b4997ac087/HUMU-2026-6845605-g005.gif?></graphic></fig></fig-group></sec><sec id="sec-0025"><title>3.5. Correlation of Hub Genes With Immune Cells</title><p>Based on the correlation analysis between hub genes, the results exhibite that both ADH1C and MAOA have significantly positive correlationships with ALDH2 and CYB5A in HCC cohort, respectively (Figure <xref rid="fig-0006" ref-type="fig">6</xref>A–B). Correlation analysis of hub genes with immune cells was identified in HCC and LC cohort (Figure <xref rid="fig-0006" ref-type="fig">6</xref>C–D). After FDR correction for multiple testing (Benjamini–Hochberg method), the following correlations remained statistically significant (adjusted <italic toggle="yes">p</italic> &lt; 0.05). As shown in Figure <xref rid="fig-0006" ref-type="fig">6</xref>E, in the HCC cohort, ALDH2 was negatively associated with CD8+ T cells (adjusted <italic toggle="yes">p</italic> &lt; 0.01) and plasma cells (adjusted <italic toggle="yes">p</italic> &lt; 0.05), whereas positively associated with resting CD4+ memory T cells and naive B cells (adjusted <italic toggle="yes">p</italic> &lt; 0.05). CYB5A and MAOA were negatively correlated with CD8+ T cells (adjusted <italic toggle="yes">p</italic> &lt; 0.05).</p><fig-group position="float" id="fig-0006" content-type="Figure" orientation="portrait"><label>Figure 6</label><caption><p>Correlation analysis of five hub genes in HCC and LC cohort. (A) Pie chart of hub gene correlation analysis in HCC cohort. (B) Circle diagram of hub gene correlation analysis in HCC cohort. (C) Pie chart of hub gene correlation analysis in LC cohort. (D) Circle diagram of hub gene correlation analysis in LC cohort. (E) Heatmap of correlation between hub gene and immune cells in HCC cohort. (F) Heatmap of correlation between hub gene and immune cells in LC cohort. ∗<italic toggle="yes">p</italic> &lt; 0.05, ∗∗<italic toggle="yes">p</italic> &lt; 0.01, and ∗∗∗<italic toggle="yes">p</italic> &lt; 0.001.</p></caption><fig position="anchor" fig-type="Figure" id="figpt-0003" orientation="portrait"><caption><p>(A)</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-13" orientation="portrait" xlink:href="HUMU-2026-6845605-g004.jpg"><?image-name HUMU-2026-6845605-g004.jpg?><?image-size 90437?><?image-md5 d44c9a295ed0670a334a89df0f79c373?><?image-image-server-status NEVER_LOAD?><?image-original-height 580?><?image-original-width 600?><?image-scaled-height 580?><?image-scaled-width 600?><?image-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/d44c9a295ed0/HUMU-2026-6845605-g004.jpg?><?thumb-name HUMU-2026-6845605-g004.gif?><?thumb-size 5115?><?thumb-md5 9685469e4393978bdcb1019b55adbcdc?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 97?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/9685469e4393/HUMU-2026-6845605-g004.gif?></graphic></fig><fig position="anchor" fig-type="Figure" id="figpt-0004" orientation="portrait"><caption><p>(B)</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-15" orientation="portrait" xlink:href="HUMU-2026-6845605-g003.jpg"><?image-name HUMU-2026-6845605-g003.jpg?><?image-size 114274?><?image-md5 09a7b63d78e4294ea38e12613262fe1f?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 818?><?image-original-width 600?><?image-scaled-height 818?><?image-scaled-width 600?><?image-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/09a7b63d78e4/HUMU-2026-6845605-g003.jpg?><?thumb-name HUMU-2026-6845605-g003.gif?><?thumb-size 5883?><?thumb-md5 f3d2eb7fd231fbadb9897375c079a5f6?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 136?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/f3d2eb7fd231/HUMU-2026-6845605-g003.gif?></graphic></fig></fig-group><p>In the LC cohort, after FDR correction, ALDH2 had a significantly positive correlation with CD8+ T cells (adjusted <italic toggle="yes">p</italic> &lt; 0.001), regulatory T cells (adjusted <italic toggle="yes">p</italic> &lt; 0.01), and plasma cells (adjusted <italic toggle="yes">p</italic> &lt; 0.05), whereas a negative correlation with gamma delta T cells and resting CD4+ memory T cells (adjusted <italic toggle="yes">p</italic> &lt; 0.05). ADH1C had a significantly positive correlation with CD8+ T cells (adjusted <italic toggle="yes">p</italic> &lt; 0.01) and activated dendritic cells (adjusted <italic toggle="yes">p</italic> &lt; 0.05), whereas a negative correlation with M0 macrophages (adjusted <italic toggle="yes">p</italic> &lt; 0.01). A negative correlation between AKR1C3 and CD8+ T cells (adjusted <italic toggle="yes">p</italic> &lt; 0.05) and a negative correlation between CYB5A and resting CD4+ memory T cells (adjusted <italic toggle="yes">p</italic> &lt; 0.05) were identified in the LC cohort (Figure <xref rid="fig-0006" ref-type="fig">6</xref>F).</p></sec><sec id="sec-0026"><title>3.6. Potential Therapeutic Compounds Prediction Based on Hub Genes</title><p>Potential compound prediction based on the hub gene signature identified six bioactive molecules with known interactions to our gene set, including retinal, isopropanol, disulfiram, tetradioxin, progesterone, and acetaldehyde (Figure <xref rid="fig-0007" ref-type="fig">7</xref>). The enrichment of molecules involved in alcohol metabolism (e.g., isopropanol and acetaldehyde) strongly corroborates the central role of our hub genes in this critical pathway.</p><fig position="float" fig-type="Figure" id="fig-0007" orientation="portrait"><label>Figure 7</label><caption><p>Molecular formulas and two‐dimensional structures of the top six potential therapeutic compounds or pathway modulators identified for HCC and LC based on hub gene signature.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-17" orientation="portrait" xlink:href="HUMU-2026-6845605-g002.jpg"><?image-name HUMU-2026-6845605-g002.jpg?><?image-size 34349?><?image-md5 cc070d27500dc31e773f1721009ac4ef?><?image-image-server-status NEVER_LOAD?><?image-original-height 433?><?image-original-width 600?><?image-scaled-height 433?><?image-scaled-width 600?><?image-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/cc070d27500d/HUMU-2026-6845605-g002.jpg?><?thumb-name HUMU-2026-6845605-g002.gif?><?thumb-size 2403?><?thumb-md5 d67741c754ed58f92810f8872740a261?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 79?><?thumb-scaled-width 110?><?thumb-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/d67741c754ed/HUMU-2026-6845605-g002.gif?></graphic></fig></sec><sec id="sec-0027"><title>3.7. Metabolism Hub Genes in HCC and LC: Identification and Functional Verification</title><p>This study successfully identified five key hub genes related to xenobiotic metabolism, namely AKR1C3, CYB5A, ADH1C, MAOA, and ALDH2, through bioinformatics analysis. Further differential expression analysis showed that the expression levels of these five hub genes were significantly higher in HCC tissues and LC tissues than in normal liver tissues, with statistical significance (<italic toggle="yes">p</italic> &lt; 0.05). Functional association analysis indicated that the above five genes were closely related to biological processes such as xenobiotic metabolism, substance abuse, alcohol use disorder, and cancer development, suggesting that they may play an important regulatory role in liver tissue lesions, especially the malignant progression of HCC.</p><p>To verify the reliability of the bioinformatics screening results, this study conducted clinical tissue verification experiments, collecting ≥ 10 pairs of HCC tumor tissues and paired adjacent normal tissues, as well as LC lesions and corresponding normal liver tissues under the same criteria. qRT‐PCR confirmed that the mRNA expression levels of the five hub genes in LC (Figure <xref rid="fig-0008" ref-type="fig">8</xref>A) and HCC (Figure <xref rid="fig-0008" ref-type="fig">8</xref>B) tissues were significantly higher than those in normal tissues, and Western Blot further verified that their protein expression levels were synchronously increased (Figure <xref rid="fig-0008" ref-type="fig">8</xref>C). Subsequently, ALDH2 and AKR1C3 were selected for siRNA knockdown in Huh7 human hepatoma cells. qRT‐PCR (Figure <xref rid="fig-0008" ref-type="fig">8</xref>D) and Western Blot (Figure <xref rid="fig-0008" ref-type="fig">8</xref>E) confirmed that the knockdown efficiency was more than 70%; cell scratch and transwell migration and invasion experiments showed that after knockdown of the two genes, the migration and invasion abilities of Huh7 cells were significantly decreased, and the number of transmembrane cells was reduced by more than 50% compared with the control group (Figure <xref rid="fig-0008" ref-type="fig">8</xref>F) (<italic toggle="yes">p</italic> &lt; 0.05). In conclusion, the five hub genes are abnormally highly expressed in HCC and LC tissues, and ALDH2 and AKR1C3 can promote the migration and invasion of hepatoma cells, providing an experimental basis for subsequent studies.</p><fig position="float" fig-type="Figure" id="fig-0008" orientation="portrait"><label>Figure 8</label><caption><p>Metabolism hub genes in HCC and LC: identification and functional verification. (A‐B) mRNA expression levels of AKR1C3, CYB5A, ADH1C, MAOA, and ALDH2 in HCC tissues, LC tissues, and corresponding normal tissues were detected by qRT‐PCR. (C) Protein expression levels of the five hub genes in HCC tissues, LC tissues, and normal liver tissues were verified by Western blot analysis. All experiments were performed using at least 10 pairs of HCC tumor/adjacent normal tissues and LC lesion/normal liver tissues. (D–E) The knockdown efficiency of ALDH2 and AKR1C3 in Huh7 cells transfected with specific siRNAs was evaluated by qRT‐PCR and Western blot. (F) The effects of ALDH2 or AKR1C3 knockdown on the migration and invasion abilities of Huh7 cells were assessed by cell scratch assay, transwell migration assay, and transwell invasion assay.∗<italic toggle="yes">p</italic> &lt; 0.05, ∗∗<italic toggle="yes">p</italic> &lt; 0.01, and ∗∗∗<italic toggle="yes">p</italic> &lt; 0.001.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-19" orientation="portrait" xlink:href="HUMU-2026-6845605-g001.jpg"><?image-name HUMU-2026-6845605-g001.jpg?><?image-size 159684?><?image-md5 573f7f955f86b542b587ecf2b2afa423?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 931?><?image-original-width 600?><?image-scaled-height 931?><?image-scaled-width 600?><?image-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/573f7f955f86/HUMU-2026-6845605-g001.jpg?><?thumb-name HUMU-2026-6845605-g001.gif?><?thumb-size 7275?><?thumb-md5 bc5cbddffa4fbd406631e28e1f8f57f8?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 155?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/cdb8/13169128/bc5cbddffa4f/HUMU-2026-6845605-g001.gif?></graphic></fig></sec></sec><sec id="sec-0028"><title>4. Discussion</title><p>Unlike earlier studies that focused on xenobiotic enzymes in isolation or within a single disease context [<xref rid="bib-0014" ref-type="bibr">14</xref>, <xref rid="bib-0015" ref-type="bibr">15</xref>], our approach bridges molecular changes in both LC and HCC. We deliberately analyzed LC and HCC in parallel based on the established “cirrhosis‐HCC axis,” where LC serves as the major precursor for HCC development. This design is pivotal for identifying biomarkers relevant not only for diagnosis of established cancer but also for risk stratification in patients with premalignant cirrhotic disease. The consistent dysregulation of these hub genes across both bulk and single‐cell platforms in LC and HCC suggests their potential involvement in the fibrotic‐to‐malignant transition.</p><p>Through integrated transcriptomic analysis, we identified five xenobiotic metabolism‐related hub genes—AKR1C3, CYB5A, ADH1C, MAOA, and ALDH2—with significant diagnostic value in LC and HCC. Functional enrichment analysis revealed that these genes are primarily involved in organic hydroxy compound catabolism, alcohol catabolism, and catecholamine metabolism, processes closely linked to the liver′s detoxification functions. DO enrichment further associated these genes with substance abuse and alcohol use disorders, reinforcing their critical role in liver pathophysiology.</p><p>Based on our findings and established literature, we propose several mechanistic hypotheses for how these hub genes may contribute to HCC progression within the LC–HCC continuum. First, their role in detoxification suggests that dysregulation may lead to the accumulation of genotoxic metabolites (e.g., acetaldehyde from impaired ADH1C/ALDH2 activity) that drive DNA damage and mutagenesis. Second, beyond detoxification, these genes influence key signaling pathways [<xref rid="bib-0017" ref-type="bibr">17</xref>]; AKR1C3 modulates steroid hormone metabolism, potentially altering estrogen receptor signaling linked to HCC proliferation [<xref rid="bib-0018" ref-type="bibr">18</xref>], whereas MAOA regulates serotonin and dopamine levels that may activate profibrotic pathways via neurotransmitter receptors [<xref rid="bib-0019" ref-type="bibr">19</xref>]. Third, byproducts of xenobiotic metabolism (e.g., reactive oxygen species from CYB5A‐involved cytochrome P450 cycles) can create a pro‐oxidant microenvironment fostering chronic inflammation and oncogenic transformation [<xref rid="bib-0020" ref-type="bibr">20</xref>].</p><p>To experimentally validate our bioinformatics findings, we examined the five hub genes in clinical tissue samples and performed functional assays. qRT‐PCR and Western blot confirmed significant upregulation of all five genes at both mRNA and protein levels in HCC and LC tissues compared with normal controls (Figure <xref rid="fig-0008" ref-type="fig">8</xref>A–C). Given their high diagnostic AUC values and established roles in alcohol metabolism, we selected ALDH2 and AKR1C3 for functional characterization. siRNA‐mediated knockdown of either gene in Huh7 hepatoma cells significantly impaired cell migration and invasion, with &gt; 50% reduction in transwell assays (Figure <xref rid="fig-0008" ref-type="fig">8</xref>D–F) (<italic toggle="yes">p</italic> &lt; 0.05). These results provide direct evidence that ALDH2 and AKR1C3 promote hepatoma cell motility and invasiveness, supporting their active participation in HCC progression beyond being passive biomarkers.</p><p>We also explored the relationship between hub genes and the tumor immune microenvironment. Immune tolerance is a key characteristic of HCC, with complex interactions among infiltrating immune cells and suppressive signaling [<xref rid="bib-0021" ref-type="bibr">21</xref>, <xref rid="bib-0022" ref-type="bibr">22</xref>]. In our analysis, ALDH2 and CYB5A showed significant correlations with CD8+ T cells, regulatory T cells, and other immune populations, with distinct patterns between HCC and LC cohorts. These findings suggest that xenobiotic metabolism genes may influence immune cell infiltration and function, though the underlying mechanisms require further investigation.</p><p>Additionally, we employed the hub gene signature to predict potentially relevant bioactive compounds. The prediction identified six molecules, including retinal, isopropanol, disulfiram, and acetaldehyde. The strong association with alcohol metabolism‐related molecules computationally validates the pivotal role of our hub genes in this pathway. Notably, acetaldehyde—a known carcinogen—is the substrate detoxified by ALDH2, reinforcing ALDH2 as a compelling therapeutic target. Disulfiram, an FDA‐approved ALDH2 inhibitor, has shown antitumor effects in various cancers [<xref rid="bib-0023" ref-type="bibr">23</xref>], making it a particularly interesting candidate for repurposing in HCC. Retinal and progesterone implicate retinoic acid and hormonal signaling pathways, both with established roles in liver pathophysiology [<xref rid="bib-0024" ref-type="bibr">24</xref>].</p><p>Several limitations should be acknowledged. Our study relies heavily on bioinformatic analyses, and while we provided experimental validation for expression and selected functional assays, direct evidence from in vivo animal models and more comprehensive mechanistic studies are still needed. The sample size for clinical validation was limited, and immune correlation analyses require further confirmation through experimental approaches such as coculture models. Additionally, the diagnostic performance of this gene signature has not been validated in independent prospective cohorts. Future work should focus on elucidating the functional mechanisms of these genes in hepatocytes and stellate cells, their regulation of relevant signaling pathways, and their interactions with immune cells to facilitate clinical translation.</p></sec><sec id="sec-0029"><title>5. Conclusion</title><p>This study identified five xenobiotic metabolism‐related hub genes (AKR1C3, CYB5A, ADH1C, MAOA, and ALDH2) that were significantly overexpressed in HCC and LC tissues with high diagnostic value. Clinical validation confirmed their upregulation, and functional assays demonstrated that ALDH2 and AKR1C3 promote hepatoma cell migration and invasion. These findings provide new insights into the role of xenobiotic metabolism genes in the cirrhosis‐to‐HCC progression and lay a foundation for future studies.</p></sec><sec id="sec-0030"><title>Author Contributions</title><p>
+<bold>Hao Xu:</bold> visualization, software, formal analysis, writing – original draft. <bold>Yanpeng Li:</bold> methodology, investigation, funding acquisition, writing – original draft. <bold>Rui Zhao:</bold> visualization, software, data curation, writing – original draft. <bold>Shaowei Ma:</bold> project administration, investigation, writing – original draft. <bold>Ning Hu:</bold> conceptualization, resources, writing – review &amp; editing. <bold>Shuo Yu:</bold> supervision, resources, writing – review &amp; editing. <bold>Xuefeng Lv:</bold> conceptualization, resources, validation, supervision, writing – review &amp; editing. <bold>Hao Xu</bold> and <bold>Yanpeng Li</bold> contributed equally to this work.</p></sec><sec id="sec-0032"><title>Funding</title><p>This study was supported by the Medical Science Research Project of Hebei (20230362).</p></sec><sec id="sec-0033"><title>Ethics Statement</title><p>Our study is not involved in the use of human subjects and animals. No ethical approval and informed consents are required.</p></sec><sec id="sec-0034"><title>Consent</title><p>This study was approved by the Ethics Committee of the Second Hospital of Hebei Medical University (Approval No. 2025‐R172). Informed consent was obtained from all participating patients.</p></sec><sec sec-type="COI-statement" id="sec-0035"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="link-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Supporting Information</bold> Additional supporting information can be found online in the Supporting Information section. Table S1: The sequences of primers for RT‐qPCR.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="HUMU-2026-6845605-s001.docx" position="float" orientation="portrait"><?suppdata-name HUMU-2026-6845605-s001.docx?><?suppdata-size 11799?><?suppdata-md5 2bf8e6b02be0bf27520aefcca291e55f?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type vnd.openxmlformats-officedocument.wordprocessingml.document?><?suppdata-cloudpmc-urn urn:app:cdb8/13169128/2bf8e6b02be0/HUMU-2026-6845605-s001.docx?></media></supplementary-material></sec></body><back><ack id="sec-0031"><title>Acknowledgments</title><p>The authors have nothing to report.</p></ack><sec sec-type="data-availability" id="sec-0037"><title>Data Availability Statement</title><p>The data that support the findings of this study are available from the corresponding authors upon reasonable request.</p></sec><ref-list><ref id="bib-0001"><label>1</label><mixed-citation publication-type="journal" id="cit-0001">
+<string-name name-style="western">
+<surname>Forner</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Reig</surname>
+<given-names>M.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Bruix</surname>
+<given-names>J.</given-names>
+</string-name>, <article-title>Hepatocellular Carcinoma</article-title>, <source>Lancet</source>. (<year>2018</year>) <volume>391</volume>, no. 10127, <fpage>1301</fpage>–<lpage>1314</lpage>, <pub-id pub-id-type="doi">10.1016/S0140-6736(18)30010-2</pub-id>, 2-s2.0-85039957749.<pub-id pub-id-type="pmid">29307467</pub-id>
+</mixed-citation></ref><ref id="bib-0002"><label>2</label><mixed-citation publication-type="journal" id="cit-0002">
+<string-name name-style="western">
+<surname>Ganesan</surname>
+<given-names>P.</given-names>
+</string-name> and 
+<string-name name-style="western">
+<surname>Kulik</surname>
+<given-names>L. M.</given-names>
+</string-name>, <article-title>Hepatocellular Carcinoma</article-title>, <source>Clinics in Liver Disease</source>. (<year>2023</year>) <volume>27</volume>, no. 1, <fpage>85</fpage>–<lpage>102</lpage>, <pub-id pub-id-type="doi">10.1016/j.cld.2022.08.004</pub-id>.<pub-id pub-id-type="pmid">36400469</pub-id>
+</mixed-citation></ref><ref id="bib-0003"><label>3</label><mixed-citation publication-type="journal" id="cit-0003">
+<string-name name-style="western">
+<surname>Wei</surname>
+<given-names>Z.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Guo</surname>
+<given-names>X.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Li</surname>
+<given-names>D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wang</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Lin</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Tan</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wang</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Zhu</surname>
+<given-names>X.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Tan</surname>
+<given-names>S.</given-names>
+</string-name>, <article-title>Prognostic Value of CMTM6 Protein in Hepatocellular Carcinoma Involving the Regulation of the Immune Microenvironment</article-title>, <source>International Journal of Biological Macromolecules</source>. (<year>2024</year>) <volume>275</volume>, part 2, <elocation-id>133618</elocation-id>, <pub-id pub-id-type="doi">10.1016/j.ijbiomac.2024.133618</pub-id>, 38971275.<pub-id pub-id-type="pmid">38971275</pub-id>
+</mixed-citation></ref><ref id="bib-0004"><label>4</label><mixed-citation publication-type="journal" id="cit-0004">
+<string-name name-style="western">
+<surname>Polyzos</surname>
+<given-names>S. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Chrysavgis</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Vachliotis</surname>
+<given-names>I. D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Chartampilas</surname>
+<given-names>E.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Cholongitas</surname>
+<given-names>E.</given-names>
+</string-name>, <article-title>Nonalcoholic Fatty Liver Disease and Hepatocellular carcinoma:Insights in Epidemiology, Pathogenesis, imaging, prevention and therapy</article-title>, <source>Seminars in Cancer Biology</source>. (<year>2023</year>) <volume>93</volume>, <fpage>20</fpage>–<lpage>35</lpage>, <pub-id pub-id-type="doi">10.1016/j.semcancer.2023.04.010</pub-id>, 37149203.<pub-id pub-id-type="pmid">37149203</pub-id>
+</mixed-citation></ref><ref id="bib-0005"><label>5</label><mixed-citation publication-type="journal" id="cit-0005">
+<string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gu</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Zhao</surname>
+<given-names>F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Chen</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Xia</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gao</surname>
+<given-names>D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Yuan</surname>
+<given-names>Q.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Bai</surname>
+<given-names>X.</given-names>
+</string-name>, <article-title>Targeting the ANXA2-CD63-Exosomal PD-L1 Axis in Hepatocellular Carcinoma: A Novel Mechanism of Immune Evasion and Its Implications for Precision Immunotherapy</article-title>, <source>Neoplasia</source>. (<year>2026</year>) <volume>73</volume>, <elocation-id>101280</elocation-id>, <pub-id pub-id-type="doi">10.1016/j.neo.2026.101280</pub-id>, 41679170.<pub-id pub-id-type="pmid">41679170</pub-id>
+<pub-id pub-id-type="pmcid">PMC12914813</pub-id></mixed-citation></ref><ref id="bib-0006"><label>6</label><mixed-citation publication-type="journal" id="cit-0006">
+<string-name name-style="western">
+<surname>Gao</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ran</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Qi</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Han</surname>
+<given-names>X.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wei</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wang</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wu</surname>
+<given-names>X.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Sun</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Li</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wang</surname>
+<given-names>W.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Xie</surname>
+<given-names>W.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Liu</surname>
+<given-names>K.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Shi</surname>
+<given-names>H.</given-names>
+</string-name>, <article-title>Integrating Single-Cell and Spatial Transcriptomics to Dissect Mast-Cell Heterogeneity and Arginine-Metabolism-Associated Markers in BRCA</article-title>, <source>Neoplasia</source>. (<year>2026</year>) <volume>73</volume>, <elocation-id>101281</elocation-id>, <pub-id pub-id-type="doi">10.1016/j.neo.2026.101281</pub-id>, 41655499.<pub-id pub-id-type="pmid">41655499</pub-id>
+<pub-id pub-id-type="pmcid">PMC12907235</pub-id></mixed-citation></ref><ref id="bib-0007"><label>7</label><mixed-citation publication-type="journal" id="cit-0007">
+<string-name name-style="western">
+<surname>Gonzalez</surname>
+<given-names>F. J.</given-names>
+</string-name>, <article-title>Transgenic Models in Xenobiotic Metabolism and Toxicology</article-title>, <source>Toxicology</source>. (<year>2002</year>) <volume>181</volume>, <fpage>237</fpage>–<lpage>239</lpage>, <pub-id pub-id-type="doi">10.1016/s0300-483x(02)00288-3</pub-id>, 2-s2.0-0037184858.<pub-id pub-id-type="pmid">12505317</pub-id>
+</mixed-citation></ref><ref id="bib-0008"><label>8</label><mixed-citation publication-type="journal" id="cit-0008">
+<string-name name-style="western">
+<surname>Cai</surname>
+<given-names>X.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Young</surname>
+<given-names>G. M.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Xie</surname>
+<given-names>W.</given-names>
+</string-name>, <article-title>The Xenobiotic Receptors PXR and CAR in Liver Physiology, an Update</article-title>, <source>Biochimica et Biophysica Acta (BBA)-Molecular Basis of Disease</source>. (<year>2021</year>) <volume>1867</volume>, no. 6, <elocation-id>166101</elocation-id>, <pub-id pub-id-type="doi">10.1016/j.bbadis.2021.166101</pub-id>, 33600998.<pub-id pub-id-type="pmid">33600998</pub-id>
+<pub-id pub-id-type="pmcid">PMC8026720</pub-id></mixed-citation></ref><ref id="bib-0009"><label>9</label><mixed-citation publication-type="journal" id="cit-0009">
+<string-name name-style="western">
+<surname>Klaassen</surname>
+<given-names>C. D.</given-names>
+</string-name> and 
+<string-name name-style="western">
+<surname>Slitt</surname>
+<given-names>A. L.</given-names>
+</string-name>, <article-title>Regulation of Hepatic Transporters by Xenobiotic Receptors</article-title>, <source>Current Drug Metabolism</source>. (<year>2005</year>) <volume>6</volume>, no. 4, <fpage>309</fpage>–<lpage>328</lpage>, <pub-id pub-id-type="doi">10.2174/1389200054633826</pub-id>, 2-s2.0-23144456286.<pub-id pub-id-type="pmid">16101571</pub-id>
+</mixed-citation></ref><ref id="bib-0010"><label>10</label><mixed-citation publication-type="journal" id="cit-0010">
+<string-name name-style="western">
+<surname>Sturgill</surname>
+<given-names>M. G.</given-names>
+</string-name> and 
+<string-name name-style="western">
+<surname>Lambert</surname>
+<given-names>G. H.</given-names>
+</string-name>, <article-title>Xenobiotic-Induced Hepatotoxicity: Mechanisms of Liver Injury and Methods of Monitoring Hepatic Function</article-title>, <source>Clinical Chemistry</source>. (<year>1997</year>) <volume>43</volume>, no. 8, <fpage>1512</fpage>–<lpage>1526</lpage>, <pub-id pub-id-type="doi">10.1093/clinchem/43.8.1512</pub-id>, 9265903.<pub-id pub-id-type="pmid">9265903</pub-id>
+</mixed-citation></ref><ref id="bib-0011"><label>11</label><mixed-citation publication-type="journal" id="cit-0011">
+<string-name name-style="western">
+<surname>Massart</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Begriche</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Corlu</surname>
+<given-names>A.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Fromenty</surname>
+<given-names>B.</given-names>
+</string-name>, <article-title>Xenobiotic-Induced Aggravation of Metabolic-Associated Fatty Liver Disease</article-title>, <source>International Journal of Molecular Sciences</source>. (<year>2022</year>) <volume>23</volume>, no. 3, <pub-id pub-id-type="doi">10.3390/ijms23031062</pub-id>, 35162986.<pub-id pub-id-type="pmcid">PMC8834714</pub-id><pub-id pub-id-type="pmid">35162986</pub-id></mixed-citation></ref><ref id="bib-0012"><label>12</label><mixed-citation publication-type="journal" id="cit-0012">
+<string-name name-style="western">
+<surname>Ferreira</surname>
+<given-names>G. D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Fernandes</surname>
+<given-names>G. M. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Penteado</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Cória</surname>
+<given-names>V. R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Galbiatti-Dias</surname>
+<given-names>A. L. S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Russo</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Castanhole-Nunes</surname>
+<given-names>M. M. U.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Silva</surname>
+<given-names>R. F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Silva</surname>
+<given-names>R. C. M. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Pavarino</surname>
+<given-names>É. C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Torreglosa Ruiz Cintra</surname>
+<given-names>M.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Goloni-Bertollo</surname>
+<given-names>E. M.</given-names>
+</string-name>, <article-title>Polymorphisms in Xenobiotic Metabolism-Related Genes in Patients With Hepatocellular Carcinoma: A Case-Control Study</article-title>, <source>Xenobiotica</source>. (<year>2021</year>) <volume>51</volume>, no. 6, <fpage>737</fpage>–<lpage>744</lpage>, <pub-id pub-id-type="doi">10.1080/00498254.2021.1893408</pub-id>, 33896378.<pub-id pub-id-type="pmid">33896378</pub-id>
+</mixed-citation></ref><ref id="bib-0013"><label>13</label><mixed-citation publication-type="journal" id="cit-0013">
+<string-name name-style="western">
+<surname>Lin</surname>
+<given-names>Z.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Zhou</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Liu</surname>
+<given-names>Z.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Nie</surname>
+<given-names>W.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Cao</surname>
+<given-names>H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Li</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Li</surname>
+<given-names>X.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Zhu</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Lin</surname>
+<given-names>G.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ding</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Jiang</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gu</surname>
+<given-names>Z.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Xu</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Zhao</surname>
+<given-names>Z.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Cai</surname>
+<given-names>H.</given-names>
+</string-name>, <article-title>Deciphering the Tumor Immune Microenvironment: Single-Cell and Spatial Transcriptomic Insights Into Cervical Cancer Fibroblasts</article-title>, <source>Journal of Experimental and Clinical Cancer Research</source>. (<year>2025</year>) <volume>44</volume>, no. 1, <pub-id pub-id-type="doi">10.1186/s13046-025-03432-5</pub-id>, 40616092.<pub-id pub-id-type="pmcid">PMC12228347</pub-id><pub-id pub-id-type="pmid">40616092</pub-id></mixed-citation></ref><ref id="bib-0014"><label>14</label><mixed-citation publication-type="journal" id="cit-0014">
+<string-name name-style="western">
+<surname>Karri</surname>
+<given-names>K.</given-names>
+</string-name> and 
+<string-name name-style="western">
+<surname>Waxman</surname>
+<given-names>D. J.</given-names>
+</string-name>, <article-title>Widespread Dysregulation of Long Noncoding Genes Associated With Fatty Acid Metabolism, Cell Division, and Immune Response Gene Networks in Xenobiotic-Exposed Rat Liver</article-title>, <source>Toxicological Sciences</source>. (<year>2020</year>) <volume>174</volume>, no. 2, <fpage>291</fpage>–<lpage>310</lpage>, <pub-id pub-id-type="doi">10.1093/toxsci/kfaa001</pub-id>, 31926019.<pub-id pub-id-type="pmid">31926019</pub-id>
+<pub-id pub-id-type="pmcid">PMC7098378</pub-id></mixed-citation></ref><ref id="bib-0015"><label>15</label><mixed-citation publication-type="journal" id="cit-0015">
+<string-name name-style="western">
+<surname>Kurzawski</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Dziedziejko</surname>
+<given-names>V.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Post</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wójcicki</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Urasińska</surname>
+<given-names>E.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Miętkiewski</surname>
+<given-names>J.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Droździk</surname>
+<given-names>M.</given-names>
+</string-name>, <article-title>Expression of Genes Involved in Xenobiotic Metabolism and Transport in End-Stage Liver Disease: Up-Regulation of ABCC4 and CYP1B1</article-title>, <source>Pharmacological Reports</source>. (<year>2012</year>) <volume>64</volume>, no. 4, <fpage>927</fpage>–<lpage>939</lpage>, <pub-id pub-id-type="doi">10.1016/s1734-1140(12)70888-5</pub-id>, 2-s2.0-84867662827, 23087145.<pub-id pub-id-type="pmid">23087145</pub-id>
+</mixed-citation></ref><ref id="bib-0016"><label>16</label><mixed-citation publication-type="journal" id="cit-0016">
+<string-name name-style="western">
+<surname>Korsunsky</surname>
+<given-names>I.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Millard</surname>
+<given-names>N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Fan</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Slowikowski</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wei</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Baglaenko</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Brenner</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Loh</surname>
+<given-names>P. R.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Raychaudhuri</surname>
+<given-names>S.</given-names>
+</string-name>, <article-title>Fast, Sensitive and Accurate Integration of Single-Cell Data With Harmony</article-title>, <source>Nature Methods</source>. (<year>2019</year>) <volume>16</volume>, no. 12, <fpage>1289</fpage>–<lpage>1296</lpage>, <pub-id pub-id-type="doi">10.1038/s41592-019-0619-0</pub-id>, 31740819.<pub-id pub-id-type="pmid">31740819</pub-id>
+<pub-id pub-id-type="pmcid">PMC6884693</pub-id></mixed-citation></ref><ref id="bib-0017"><label>17</label><mixed-citation publication-type="journal" id="cit-0017">
+<string-name name-style="western">
+<surname>Gao</surname>
+<given-names>N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Chen</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Qi</surname>
+<given-names>B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Zhao</surname>
+<given-names>T.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Guo</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Fang</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Han</surname>
+<given-names>Z.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Qiao</surname>
+<given-names>H. L.</given-names>
+</string-name>, <article-title>Effects of Gene Polymorphisms, Metabolic Activity, and Content of Alcohol Dehydrogenase and Acetaldehyde Dehydrogenases on Prognosis of Hepatocellular Carcinoma Patients</article-title>, <source>Turkish Journal of Gastroenterology</source>. (<year>2022</year>) <volume>33</volume>, no. 7, <fpage>606</fpage>–<lpage>614</lpage>, <pub-id pub-id-type="doi">10.5152/tjg.2022.21340</pub-id>, 35879918.<pub-id pub-id-type="pmcid">PMC9404678</pub-id><pub-id pub-id-type="pmid">35879918</pub-id></mixed-citation></ref><ref id="bib-0018"><label>18</label><mixed-citation publication-type="journal" id="cit-0018">
+<string-name name-style="western">
+<surname>Zhu</surname>
+<given-names>P.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Feng</surname>
+<given-names>R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Lu</surname>
+<given-names>X.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Liao</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>du</surname>
+<given-names>Z.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Zhai</surname>
+<given-names>W.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Chen</surname>
+<given-names>K.</given-names>
+</string-name>, <article-title>Diagnostic and Prognostic Values of AKR1C3 and AKR1D1 in Hepatocellular Carcinoma</article-title>, <source>Aging</source>. (<year>2021</year>) <volume>13</volume>, no. 3, <fpage>4138</fpage>–<lpage>4156</lpage>, <pub-id pub-id-type="doi">10.18632/aging.202380</pub-id>, 33493134.<pub-id pub-id-type="pmid">33493134</pub-id>
+<pub-id pub-id-type="pmcid">PMC7906155</pub-id></mixed-citation></ref><ref id="bib-0019"><label>19</label><mixed-citation publication-type="journal" id="cit-0019">
+<string-name name-style="western">
+<surname>Li</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Yang</surname>
+<given-names>X. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wang</surname>
+<given-names>Y. H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Feng</surname>
+<given-names>M. X.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Liu</surname>
+<given-names>X. J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>Y. L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Huang</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wu</surname>
+<given-names>Z.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Xue</surname>
+<given-names>F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Qin</surname>
+<given-names>W. X.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gu</surname>
+<given-names>J. R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Xia</surname>
+<given-names>Q.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>Z. G.</given-names>
+</string-name>, <article-title>Monoamine Oxidase A Suppresses Hepatocellular Carcinoma Metastasis by Inhibiting the Adrenergic System and Its Transactivation of EGFR Signaling</article-title>, <source>Journal of Hepatology</source>. (<year>2014</year>) <volume>60</volume>, no. 6, <fpage>1225</fpage>–<lpage>1234</lpage>, <pub-id pub-id-type="doi">10.1016/j.jhep.2014.02.025</pub-id>, 2-s2.0-84901188671, 24607627.<pub-id pub-id-type="pmid">24607627</pub-id>
+</mixed-citation></ref><ref id="bib-0020"><label>20</label><mixed-citation publication-type="journal" id="cit-0020">
+<string-name name-style="western">
+<surname>Ma</surname>
+<given-names>M. Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Deng</surname>
+<given-names>G.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Zhu</surname>
+<given-names>W. Z.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Sun</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Jiang</surname>
+<given-names>L. Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Li</surname>
+<given-names>W. H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Liu</surname>
+<given-names>Y. B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Guo</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Song</surname>
+<given-names>B. L.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Zhao</surname>
+<given-names>X.</given-names>
+</string-name>, <article-title>Defects in CYB5A and CYB5B Impact Sterol-C4 Oxidation in Cholesterol Biosynthesis and Demonstrate Regulatory Roles of Dimethyl Sterols</article-title>, <source>Cell Reports</source>. (<year>2024</year>) <volume>43</volume>, no. 11, <elocation-id>114912</elocation-id>, <pub-id pub-id-type="doi">10.1016/j.celrep.2024.114912</pub-id>, 39489939.<pub-id pub-id-type="pmid">39489939</pub-id>
+</mixed-citation></ref><ref id="bib-0021"><label>21</label><mixed-citation publication-type="journal" id="cit-0021">
+<string-name name-style="western">
+<surname>Fang</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Lowther</surname>
+<given-names>D. E.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Meizlish</surname>
+<given-names>M. L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Anderson</surname>
+<given-names>R. C. E.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Bruce</surname>
+<given-names>J. N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Devine</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Huttner</surname>
+<given-names>A. J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kleinstein</surname>
+<given-names>S. H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Lee</surname>
+<given-names>J. Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Stern</surname>
+<given-names>J. N. H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Yaari</surname>
+<given-names>G.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Lovato</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Cronk</surname>
+<given-names>K. M.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>O′Connor</surname>
+<given-names>K. C.</given-names>
+</string-name>, <article-title>The Immune Cell Infiltrate Populating Meningiomas Is Composed of Mature, Antigen-Experienced T and B Cells</article-title>, <source>Neuro-oncology</source>. (<year>2013</year>) <volume>15</volume>, no. 11, <fpage>1479</fpage>–<lpage>1490</lpage>, <pub-id pub-id-type="doi">10.1093/neuonc/not110</pub-id>, 2-s2.0-84891847993, 23978377.<pub-id pub-id-type="pmid">23978377</pub-id>
+<pub-id pub-id-type="pmcid">PMC3813416</pub-id></mixed-citation></ref><ref id="bib-0022"><label>22</label><mixed-citation publication-type="journal" id="cit-0022">
+<string-name name-style="western">
+<surname>Ye</surname>
+<given-names>S. L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Li</surname>
+<given-names>X. Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Zhao</surname>
+<given-names>K.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Feng</surname>
+<given-names>T.</given-names>
+</string-name>, <article-title>High Expression of CD8 Predicts Favorable Prognosis in Patients With Lung Adenocarcinoma: A Cohort Study</article-title>, <source>Medicine</source>. (<year>2017</year>) <volume>96</volume>, no. 15, <pub-id pub-id-type="doi">10.1097/MD.0000000000006472</pub-id>, 2-s2.0-85017626303, 28403077.<pub-id pub-id-type="pmcid">PMC5403074</pub-id><pub-id pub-id-type="pmid">28403077</pub-id></mixed-citation></ref><ref id="bib-0023"><label>23</label><mixed-citation publication-type="journal" id="cit-0023">
+<string-name name-style="western">
+<surname>Skrott</surname>
+<given-names>Z.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Majera</surname>
+<given-names>D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gursky</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Buchtova</surname>
+<given-names>T.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Hajduch</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Mistrik</surname>
+<given-names>M.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Bartek</surname>
+<given-names>J.</given-names>
+</string-name>, <article-title>Disulfiram′s Anti-Cancer Activity Reflects Targeting NPL4, not Inhibition of Aldehyde Dehydrogenase</article-title>, <source>Oncogene</source>. (<year>2019</year>) <volume>38</volume>, no. 40, <fpage>6711</fpage>–<lpage>6722</lpage>, <pub-id pub-id-type="doi">10.1038/s41388-019-0915-2</pub-id>, 2-s2.0-85070250842, 31391554.<pub-id pub-id-type="pmid">31391554</pub-id>
+</mixed-citation></ref><ref id="bib-0024"><label>24</label><mixed-citation publication-type="journal" id="cit-0024">
+<string-name name-style="western">
+<surname>Trovato</surname>
+<given-names>F. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Zia</surname>
+<given-names>R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Napoli</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wolfer</surname>
+<given-names>K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Huang</surname>
+<given-names>X.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Morgan</surname>
+<given-names>P. E.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Husbyn</surname>
+<given-names>H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Elgosbi</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Lucangeli</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Miquel</surname>
+<given-names>R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wilson</surname>
+<given-names>I.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Heaton</surname>
+<given-names>N. D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Heneghan</surname>
+<given-names>M. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Auzinger</surname>
+<given-names>G.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Antoniades</surname>
+<given-names>C. G.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Wendon</surname>
+<given-names>J. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Patel</surname>
+<given-names>V. C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Coen</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Triantafyllou</surname>
+<given-names>E.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>McPhail</surname>
+<given-names>M. J.</given-names>
+</string-name>, <article-title>Dysregulation of the Lysophosphatidylcholine/Autotaxin/Lysophosphatidic Acid Axis in Acute-on-Chronic Liver Failure Is Associated With Mortality and Systemic Inflammation by Lysophosphatidic Acid-Dependent Monocyte Activation</article-title>, <source>Hepatology</source>. (<year>2021</year>) <volume>74</volume>, no. 2, <fpage>907</fpage>–<lpage>925</lpage>, <pub-id pub-id-type="doi">10.1002/hep.31738</pub-id>, 33908067.<pub-id pub-id-type="pmid">33908067</pub-id>
+</mixed-citation></ref></ref-list></back></article>

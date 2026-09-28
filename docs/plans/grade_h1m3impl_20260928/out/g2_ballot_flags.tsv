@@ -1,0 +1,14 @@
+cluster_id	seat	model	name	truth	gate_ie	gate_res	gate_tech	anchor_applied	namedC_noanchor	counted_c2b
+Q6::1	C	deepseek-v3.2	Epithelium	Epithelium	unresolved	pass	na	True	False	True
+Q6::2	B	glm-5.1	Epithelium	Epithelium	unresolved	unresolved	na	False	True	True
+Q6::2	C	deepseek-v3.2	Epithelium	Epithelium	unresolved	pass	na	True	False	True
+Q6::0	C	deepseek-v3.2	Epithelium	Epithelium	unresolved	pass	na	True	False	True
+Q6::5	C	deepseek-v3.2	Epithelium	Epithelium	pass	pass	na	True	False	True
+Q6::14	C	deepseek-v3.2	Fibroblasts	Fibroblasts	pass	pass	na	True	False	True
+Q6::3	C	deepseek-v3.2	Epithelium	Epithelium	pass	pass	na	True	False	True
+Q6::8	B	glm-5.1	Immune Cells	Immune Cells	unresolved	pass	na	True	False	True
+Q6::8	C	deepseek-v3.2	Immune Cells	Immune Cells	pass	pass	na	True	False	True
+Q6::26	B	glm-5.1	Immune Cells	Immune Cells	unresolved	pass	na	True	False	True
+Q6::26	C	deepseek-v3.2	Immune Cells	Immune Cells	pass	unresolved	na	True	False	True
+Q6::30	B	glm-5.1	Epithelium	Epithelium	unresolved	unresolved	na	False	True	True
+Q6::30	C	deepseek-v3.2	Epithelium	Epithelium	pass	fail	na	True	False	True

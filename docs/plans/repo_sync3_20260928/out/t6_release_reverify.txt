@@ -1,0 +1,12 @@
+note: fresh fetch failed, used REPOSYNC2 archive only
+1) remote-vs-archive: names-equal=True digest-drift=[] -> NO-DRIFT(零触碰实证)
+2) tar bytes=981678080 == sum(5 part sizes) OK
+EYEKB_RAG_v2.3.tar.part_00: local-slice=ea5fb68b13c666e4… digest=MATCH size=OK
+EYEKB_RAG_v2.3.tar.part_01: local-slice=04f723175c39d864… digest=MATCH size=OK
+EYEKB_RAG_v2.3.tar.part_02: local-slice=6b5f07a79c12d714… digest=MATCH size=OK
+EYEKB_RAG_v2.3.tar.part_03: local-slice=cf8d0eae06a2e85b… digest=MATCH size=OK
+EYEKB_RAG_v2.3.tar.part_04: local-slice=55f1079a141b847c… digest=MATCH size=OK
+3) merged recompute=4e7089f3f4abfd08… vs local ledger MATCH
+4) ledger-file digest=a66dcaef2f8f529d… vs github asset digest MATCH
+assets count=6
+RESULT=PASS

@@ -1,0 +1,818 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="pcmr70033" xml:lang="en" article-type="research-article" dtd-version="1.4"><?da-xref-anchor-style autodetect?><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Pigment Cell Melanoma Res</journal-id><journal-id journal-id-type="iso-abbrev">Pigment Cell Melanoma Res</journal-id><journal-id journal-id-type="pmc-domain-id">379</journal-id><journal-id journal-id-type="pmc-domain">blackwellopen</journal-id><journal-id journal-id-type="nlm-id">101318927</journal-id><journal-id journal-id-type="publisher-id">PCMR</journal-id><journal-title-group><journal-title>Pigment Cell &amp; Melanoma Research</journal-title></journal-title-group><issn pub-type="ppub">1755-1471</issn><issn pub-type="epub">1755-148X</issn><?publisher_abbrev blackwell?><custom-meta-group><custom-meta><meta-name>pmc-is-collection-domain</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-collection-title</meta-name><meta-value>Wiley Open Access Collection</meta-value></custom-meta></custom-meta-group></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC12171348</article-id><article-id pub-id-type="pmcid-ver">PMC12171348.1</article-id><article-id pub-id-type="pmcaid">12171348</article-id><article-id pub-id-type="pmcaiid">12171348</article-id><article-id pub-id-type="pmid">40524449</article-id><article-id pub-id-type="doi">10.1111/pcmr.70033</article-id><article-id pub-id-type="publisher-id">PCMR70033</article-id><article-id pub-id-type="other">25-OA-015</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Original Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Original Article</subject></subj-group></article-categories><title-group><article-title>Disruption of <italic toggle="no">mc1r</italic> Disturbs Skin Pigmentation in <italic toggle="no">Xenopus tropicalis</italic>
+</article-title></title-group><contrib-group><contrib id="pcmr70033-cr-0001" contrib-type="author"><name name-style="western"><surname>Li</surname><given-names initials="L">Lanxin</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0002-8222-3736</contrib-id><xref rid="pcmr70033-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="pcmr70033-cr-0002" contrib-type="author"><name name-style="western"><surname>Huang</surname><given-names initials="J">Jixuan</given-names></name><xref rid="pcmr70033-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="pcmr70033-cr-0003" contrib-type="author" corresp="yes"><name name-style="western"><surname>Chen</surname><given-names initials="Y">Yonglong</given-names></name><xref rid="pcmr70033-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>chenyl@sustech.edu.cn</email></address></contrib><contrib id="pcmr70033-cr-0004" contrib-type="author" corresp="yes"><name name-style="western"><surname>Ran</surname><given-names initials="R">Rensen</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0001-9863-4735</contrib-id><xref rid="pcmr70033-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="pcmr70033-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><xref rid="pcmr70033-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref><xref rid="pcmr70033-aff-0004" ref-type="aff">
+<sup>4</sup>
+</xref><address><email>sankeshumy@163.com</email></address></contrib></contrib-group><aff id="pcmr70033-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Department of Biology, Guangdong Provincial Key Laboratory of Cell Microenvironment and Disease Research, Shenzhen Key Laboratory of Cell Microenvironment, School of Life Sciences</named-content>
+<institution>Southern University of Science and Technology</institution>
+<city>Shenzhen</city>
+<country country="CN">China</country>
+</aff><aff id="pcmr70033-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">State Key Laboratory of Female Fertility Promotion, Center for Reproductive Medicine, Department of Obstetrics and Gynecology</named-content>
+<institution>Peking University Third Hospital</institution>
+<city>Beijing</city>
+<country country="CN">China</country>
+</aff><aff id="pcmr70033-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">National Clinical Research Center for Obstetrics and Gynecology</named-content>
+<institution>Peking University Third Hospital</institution>
+<city>Beijing</city>
+<country country="CN">China</country>
+</aff><aff id="pcmr70033-aff-0004">
+<label>
+<sup>4</sup>
+</label>
+<named-content content-type="organisation-division">Key Laboratory of Assisted Reproduction, Ministry of Education, Beijing Key Laboratory of Reproductive Endocrinology and Assisted Reproductive Technology</named-content>
+<institution>Peking University</institution>
+<city>Beijing</city>
+<country country="CN">China</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold>
+<break/>
+Yonglong Chen (<email>chenyl@sustech.edu.cn</email>)<break/>
+Rensen Ran (<email>sankeshumy@163.com</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>16</day><month>6</month><year>2025</year></pub-date><pub-date pub-type="ppub"><month>7</month><year>2025</year></pub-date><volume>38</volume><issue seq="70">4</issue><issue-id pub-id-type="pmc-issue-id">490848</issue-id><issue-id pub-id-type="doi">10.1111/pcmr.v38.4</issue-id><elocation-id>e70033</elocation-id><history>
+<date date-type="rev-recd"><day>15</day><month>5</month><year>2025</year></date>
+<date date-type="received"><day>11</day><month>1</month><year>2025</year></date>
+<date date-type="accepted"><day>05</day><month>6</month><year>2025</year></date>
+</history><pub-history><event event-type="pmc-release"><date><day>17</day><month>06</month><year>2025</year></date></event><event event-type="pmc-live"><date><day>18</day><month>06</month><year>2025</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2025-06-19 14:25:14.863"><day>19</day><month>06</month><year>2025</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2025 The Author(s). <italic toggle="yes">Pigment Cell &amp; Melanoma Research</italic> published by John Wiley &amp; Sons Ltd.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbyncndlicense">https://creativecommons.org/licenses/by-nc-nd/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc-nd/4.0/">http://creativecommons.org/licenses/by-nc-nd/4.0/</ext-link> License, which permits use and distribution in any medium, provided the original work is properly cited, the use is non‐commercial and no modifications or adaptations are made.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="PCMR-38-0.pdf"><?pdf-name PCMR-38-0.pdf?><?pdf-size 3921895?><?pdf-md5 290d70951825c9bd905de223e4b28430?><?pdf-image-server-status NEVER_LOAD?><?pdf-cloudpmc-urn urn:app:adfe/12171348/290d70951825/PCMR-38-0.pdf?></self-uri><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:PCMR-38-0.pdf"/><abstract><title>ABSTRACT</title><p>The melanocortin 1 receptor (MC1R) is well‐established as a pivotal regulator of pigmentation in various species. Despite a wealth of research focused on mammals and fish, the role of Mc1r in amphibians has remained largely unexplored. This study was designed to elucidate the contribution of Mc1r in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content>. Our results reveal that targeted ablation of <italic toggle="no">mc1r</italic> in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> led to a significant reduction in dorsal skin pigmentation, while simultaneously accelerating the onset of melanophore pigmentation in the ventral region. This dual effect resulted in a perturbation of the canonical countershading pattern. Additionally, knockout of <italic toggle="no">mc1r</italic> disrupted the expression of multiple genes primarily associated with pigmentation. Collectively, these findings underscore the critical role of MC1R in the regulation of pigmentation and the development of countershading in amphibians, contributing to the growing body of literature on the evolution and function of MC1R across vertebrate species.</p></abstract><abstract abstract-type="graphical"><p>
+<boxed-text position="anchor" content-type="graphic" id="pcmr70033-blkfxd-0011" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="PCMR-38-0-g007.jpg"><?image-name PCMR-38-0-g007.jpg?><?image-size 24624?><?image-md5 46a2d183e378c08afb49e3ecbc9580c5?><?image-image-server-status NEVER_LOAD?><?image-original-height 190?><?image-original-width 331?><?image-scaled-height 190?><?image-scaled-width 331?><?image-cloudpmc-urn urn:cdn:blobs/adfe/12171348/46a2d183e378/PCMR-38-0-g007.jpg?></graphic></boxed-text>
+</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="pcmr70033-kwd-0001">countershading</kwd><kwd id="pcmr70033-kwd-0002">CRISPR‐Cas9</kwd><kwd id="pcmr70033-kwd-0003"><italic toggle="no">Mc1r</italic></kwd><kwd id="pcmr70033-kwd-0004">pigmentation</kwd><kwd id="pcmr70033-kwd-0005"><styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content></kwd></kwd-group><funding-group><award-group id="funding-0001"><funding-source>Shenzhen Science and Technology Program</funding-source><award-id>JCYJ20210324120205015</award-id></award-group><award-group id="funding-0002"><funding-source>Guangdong Provincial Key Laboratory of Cell Microenvironment and Disease Research</funding-source><award-id>2017B030301018</award-id></award-group><award-group id="funding-0003"><funding-source>Shenzhen Key Laboratory of Cell Microenvironment</funding-source><award-id>ZDSYS20140509142721429</award-id></award-group></funding-group><counts><fig-count count="10"/><table-count count="1"/><page-count count="16"/><word-count count="8900"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC-ND</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>July 2025</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.5.7 mode:remove_FC converted:17.06.2025</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation publication-type="journal" id="pcmr70033-cit-1001">
+<string-name name-style="western">
+<surname>Li</surname>, <given-names>L.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Huang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Chen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Ran</surname>
+</string-name>. <year>2025</year>. “<article-title>Disruption of <italic toggle="no">mc1r</italic> Disturbs Skin Pigmentation in <italic toggle="no">Xenopus tropicalis</italic>
+</article-title>.” <source>Pigment Cell &amp; Melanoma Research</source>
+<volume>38</volume>, no. <issue>4</issue>: <elocation-id>e70033</elocation-id>. <pub-id pub-id-type="doi">10.1111/pcmr.70033</pub-id>.<pub-id pub-id-type="pmid">40524449</pub-id></mixed-citation>
+</p><fn-group id="pcmr70033-ntgp-0001"><fn fn-type="funding" id="pcmr70033-note-0001"><p>
+<bold>Funding:</bold> This work was supported by Shenzhen Science and Technology Program (JCYJ20210324120205015), Guangdong Provincial Key Laboratory of Cell Microenvironment and Disease Research (2017B030301018), and Shenzhen Key Laboratory of Cell Microenvironment (ZDSYS20140509142721429).</p></fn></fn-group></notes></front><body id="pcmr70033-body-0001"><p>
+<boxed-text position="anchor" content-type="box" id="pcmr70033-blkfxd-0001" orientation="portrait"><caption><title>Summary</title></caption><p>
+<list list-type="bullet" id="pcmr70033-list-0001"><list-item id="pcmr70033-li-0001"><p>The role of MC1R in dorsoventral pigmentation of <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> is revealed for the first time.</p></list-item><list-item id="pcmr70033-li-0002"><p>In <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content>, <italic toggle="yes">mc1r</italic> knockout via CRISPR‐Cas9 significantly reduced dorsal pigmentation and advanced ventral melanophore appearance, disrupting the canonical countershading pattern.</p></list-item><list-item id="pcmr70033-li-0003"><p>Loss of <italic toggle="yes">mc1r</italic> alters the expression of multiple pigmentation‐related genes, highlighting its central role in the pigment regulatory network.</p></list-item><list-item id="pcmr70033-li-0004"><p>This study advances understanding of the conserved and divergent functions of MC1R in vertebrates, providing new insights into pigmentation regulation in amphibians and its evolutionary context.</p></list-item></list>
+</p></boxed-text>
+</p><sec id="pcmr70033-sec-0004"><label>1</label><title>Introduction</title><p>Skin pigmentation is a vital phenotypic trait in vertebrates, serving roles in camouflage, UV protection, and social communication. It is influenced by genetic, environmental, and endocrine factors. In various animals, including fish, amphibians, and mammals, skin coloration is determined by the distribution, density, and activity of pigment cells such as melanophores (melanocytes in mammals), iridophores, and xanthophores. The regulation of pigment production and pigment cell behavior involves complex genetic and hormonal signaling pathways, with the MC1R being a key regulator of melanin synthesis and melanophore function (Stefania et al. <xref rid="pcmr70033-bib-0044" ref-type="bibr">2024</xref>; Upadhyay et al. <xref rid="pcmr70033-bib-0048" ref-type="bibr">2024</xref>; Yang <xref rid="pcmr70033-bib-0052" ref-type="bibr">2011</xref>; Mun et al. <xref rid="pcmr70033-bib-0030" ref-type="bibr">2023</xref>). MC1R is a seven‐transmembrane G protein‐coupled receptor primarily located on the surface of melanocytes. It features a conserved DRY (Asp‐Arg‐Tyr) motif at the junction of the third transmembrane domain, an N‐linked glycosylation site at the extracellular N‐terminus, and a palmitoylation site at the intracellular C‐terminus (Wenbo et al. <xref rid="pcmr70033-bib-0050" ref-type="bibr">2025</xref>; Yang <xref rid="pcmr70033-bib-0052" ref-type="bibr">2011</xref>). Encoded by the <italic toggle="yes">extension</italic> locus, MC1R's role in pigmentation was first identified in 1968 (Mountjoy et al. <xref rid="pcmr70033-bib-0029" ref-type="bibr">1992</xref>; Robbins et al. <xref rid="pcmr70033-bib-0038" ref-type="bibr">1993</xref>; Searle <xref rid="pcmr70033-bib-0039" ref-type="bibr">1968</xref>). Activation of MC1R by its ligand, α‐melanocyte‐stimulating hormone (α‐MSH), stimulates eumelanin production, leading to darker pigmentation through the activation of intracellular cAMP/PKA signaling (Stefania et al. <xref rid="pcmr70033-bib-0044" ref-type="bibr">2024</xref>; Upadhyay et al. <xref rid="pcmr70033-bib-0048" ref-type="bibr">2024</xref>; Yang <xref rid="pcmr70033-bib-0052" ref-type="bibr">2011</xref>; Mun et al. <xref rid="pcmr70033-bib-0030" ref-type="bibr">2023</xref>).</p><p>Extensive studies in mammals, reptiles, and fish have demonstrated the essential role of MC1R/Mc1r in pigmentation, particularly in regulating melanin synthesis, including both eumelanin and pheomelanin (Alan et al. <xref rid="pcmr70033-bib-0002" ref-type="bibr">2024</xref>; Stefania et al. <xref rid="pcmr70033-bib-0044" ref-type="bibr">2024</xref>; Upadhyay et al. <xref rid="pcmr70033-bib-0048" ref-type="bibr">2024</xref>; Yang <xref rid="pcmr70033-bib-0052" ref-type="bibr">2011</xref>; Mun et al. <xref rid="pcmr70033-bib-0030" ref-type="bibr">2023</xref>). Melanin is a versatile biopolymer present in various organisms, including animals, plants, fungi, and bacteria. Its diverse functions encompass photoprotection, pigmentation, antioxidant activity, thermoregulation, immune defense, and metal ion chelation (Graça and Michael S <xref rid="pcmr70033-bib-0020" ref-type="bibr">2007</xref>; Jane et al. <xref rid="pcmr70033-bib-0022" ref-type="bibr">2004</xref>; Liliana and Matthew D <xref rid="pcmr70033-bib-0025" ref-type="bibr">2018</xref>; Slominski et al. <xref rid="pcmr70033-bib-0042" ref-type="bibr">2022</xref>). Upon ultraviolet (UV) radiation, human and mouse keratinocytes upregulate POMC via the p53 pathway, producing α‐MSH (the cleavage product of POMC), which activates the cAMP/PKA/MITF/TYR signaling cascade in melanocytes to promote eumelanin synthesis (Böhm et al. <xref rid="pcmr70033-bib-0006" ref-type="bibr">2025</xref>; Cui et al. <xref rid="pcmr70033-bib-0015" ref-type="bibr">2007</xref>; Murase et al. <xref rid="pcmr70033-bib-0031" ref-type="bibr">2009</xref>). This increases the eumelanin‐to‐pheomelanin ratio in melanocytes and facilitates eumelanin transfer to keratinocytes, protecting the skin from UV‐induced damage. Consequently, individuals with specific MC1R polymorphisms (e.g., red hair/fair skin, commonly known as RHC variants‐Red Hair Color) that impair eumelanin production are more susceptible to melanoma (Mitra et al. <xref rid="pcmr70033-bib-0027" ref-type="bibr">2012</xref>; Sturm et al. <xref rid="pcmr70033-bib-0045" ref-type="bibr">2003</xref>). Given its protective function, MC1R is considered a promising target for clinical therapies (Chen et al. <xref rid="pcmr70033-bib-0013" ref-type="bibr">2017</xref>; Guida et al. <xref rid="pcmr70033-bib-0021" ref-type="bibr">2022</xref>; Mun et al. <xref rid="pcmr70033-bib-0030" ref-type="bibr">2023</xref>). Although UV radiation induces MC1R‐dependent melanin synthesis via the POMC‐derived peptide α‐MSH, hair follicle development and eumelanin deposition remain normal in the dorsal skin of <italic toggle="yes">Pomc</italic>
+<sup>
+<italic toggle="yes">−/−</italic>
+</sup> mice (Slominski et al. <xref rid="pcmr70033-bib-0040" ref-type="bibr">2005</xref>). This suggests that mouse MC1R may possess sufficient basal activity to sustain eumelanogenesis or that alternative non‐melanocortin pathways compensate for the absence of α‐MSH. Additionally, Mc1r regulates melanosome dispersion, contributing to adaptive background‐dependent color changes (Fujii <xref rid="pcmr70033-bib-0019" ref-type="bibr">2000</xref>; Richardson et al. <xref rid="pcmr70033-bib-0037" ref-type="bibr">2008</xref>). Moreover, MC1R, together with agouti signaling protein (ASIP), plays a pivotal role in countershading—a camouflage strategy characterized by a dark dorsal side and light ventral side. ASIP antagonizes α‐MSH by competitively binding MC1R, promoting pheomelanin synthesis and inhibiting melanocyte development (Aberdam et al. <xref rid="pcmr70033-bib-0001" ref-type="bibr">1998</xref>; Bultman et al. <xref rid="pcmr70033-bib-0009" ref-type="bibr">1992</xref>). Thus, asymmetric ASIP expression in the ventral region, along with MC1R activity, establishes countershading across species (Cal, Suarez‐Bregua, Braasch, et al. <xref rid="pcmr70033-bib-0010" ref-type="bibr">2019</xref>; Cal, Suarez‐Bregua, Comesana, et al. <xref rid="pcmr70033-bib-0011" ref-type="bibr">2019</xref>; Manceau et al. <xref rid="pcmr70033-bib-0026" ref-type="bibr">2011</xref>; Vrieling et al. <xref rid="pcmr70033-bib-0049" ref-type="bibr">1994</xref>). However, the specific function of Mc1r in amphibian pigmentation, particularly in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content>, remains largely unexplored.</p><p>
+<styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> has emerged as a valuable model organism for developmental and genetic studies due to its diploid genome, short generation time, and well‐established genome editing tools (Carotenuto et al. <xref rid="pcmr70033-bib-0012" ref-type="bibr">2023</xref>; El Mir et al. <xref rid="pcmr70033-bib-0017" ref-type="bibr">2025</xref>; Ran, Li, Cheng, et al. <xref rid="pcmr70033-bib-0034" ref-type="bibr">2024</xref>; Ran et al. <xref rid="pcmr70033-bib-0035" ref-type="bibr">2022</xref>; Ran, Li, Xu, et al. <xref rid="pcmr70033-bib-0036" ref-type="bibr">2024</xref>; Willsey et al. <xref rid="pcmr70033-bib-0051" ref-type="bibr">2024</xref>; Yi et al. <xref rid="pcmr70033-bib-0053" ref-type="bibr">2025</xref>). Despite its utility, the genetic mechanisms underlying skin pigmentation in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> have not been thoroughly investigated (El Mir et al. <xref rid="pcmr70033-bib-0017" ref-type="bibr">2025</xref>; Liang et al. <xref rid="pcmr70033-bib-0024" ref-type="bibr">2024</xref>; Yi et al. <xref rid="pcmr70033-bib-0053" ref-type="bibr">2025</xref>). Understanding the function of pigmentation‐related genes like <italic toggle="yes">mc1r</italic> in this species could provide valuable insights into the evolutionary conservation and diversification of pigmentation pathways across vertebrates. In this study, we investigate the role of <italic toggle="yes">mc1r</italic> in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> by generating a loss‐of‐function mutation using CRISPR‐Cas9 genome editing. We examine how <italic toggle="yes">mc1r</italic> disruption affects melanophore distribution, melanin synthesis, and overall skin pigmentation during development. Our findings demonstrate that <italic toggle="yes">mc1r</italic> is essential for normal pigmentation in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content>, expanding our understanding of pigment cell biology in vertebrates. These results not only enhance our understanding of amphibian pigmentation but also contribute to broader studies on the evolutionary genetics of coloration.</p></sec><sec id="pcmr70033-sec-0005"><label>2</label><title>Methods and Materials</title><sec id="pcmr70033-sec-0006"><label>2.1</label><title>Maintenance of <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content>
+</title><p>In this study, <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> were procured from Nasco (Fort Atkinson, WI, USA; <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.enasco.com" ext-link-type="uri">http://www.enasco.com</ext-link>). The maintenance and husbandry of the frogs were conducted in accordance with established laboratory protocols (Ran, Li, Cheng, et al. <xref rid="pcmr70033-bib-0034" ref-type="bibr">2024</xref>; Ran et al. <xref rid="pcmr70033-bib-0035" ref-type="bibr">2022</xref>; Ran, Li, Xu, et al. <xref rid="pcmr70033-bib-0036" ref-type="bibr">2024</xref>; Yi et al. <xref rid="pcmr70033-bib-0053" ref-type="bibr">2025</xref>). Ethical approval for all animal experiments involving <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> was granted by the Institutional Animal Care and Use Committee of the Southern University of Science and Technology. The developmental stages of <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> were classified using the staging criteria outlined by Nieuwkoop and Faber (Nieuwkoop and Faber <xref rid="pcmr70033-bib-0032" ref-type="bibr">1994</xref>).</p></sec><sec id="pcmr70033-sec-0007"><label>2.2</label><title>
+<styled-content style="fixed-case" toggle="no">CRISPR</styled-content>‐Cas9‐Mediated Gene Knockout and Efficiency Assessment</title><p>To obtain gRNA (guide RNA), first, the pCS2‐SpCas9 plasmid was subjected to linearization using the restriction enzyme Not I and subsequently transcribed utilizing the mMessage mMachine SP6 Kit (Ambion, Austin, TX, USA). The target sequence for <italic toggle="yes">mc1r</italic> is 5′‐GGCCCCAAGAAAGGAGAGAGAGG‐3′. The gRNA template was synthesized through PCR amplification from the pUC57‐T7‐gRNA scaffold vector, employing a Trac‐reverse primer and a gRNA forward primer that included a T7 promoter sequence, the <italic toggle="yes">mc1r</italic> gRNA target sequence, and the scaffold sequence. Primer sequences are detailed in Table <xref rid="pcmr70033-supitem-0001" ref-type="supplementary-material">S1</xref>. In vitro transcription of the gRNA was facilitated by the Transcript Aid T7 High Yield Transcription Kit (Thermo Fisher Scientific, Rockford, IL, USA). Cas9 mRNA and gRNA were purified using the RNeasy Mini Kit and miRNeasy Mini Kit (Qiagen, Hilden, Germany), respectively.</p><p>For microinjection, the fertilized eggs of <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> were collected via hormone‐induced mating, where adult male and female frogs were pre‐treated with 20 units of human chorionic gonadotropin (HCG) 24 h prior, followed by a full dose of 145 units of HCG approximately 2–3 h before embryo collection. A mixture of Cas9 mRNA (300 pg per egg) and <italic toggle="yes">mc1r</italic> gRNA (200 pg per egg) was injected into fertilized eggs (2 nL per egg) from the animal pole.</p><p>To assess the efficiency of targeted <italic toggle="yes">mc1r</italic> disruption, genomic DNA was extracted from pooled healthy embryos 24 h post‐microinjection, and the targeted region was amplified by PCR. The purified PCR products were then cloned into the pMD18‐T vector (Takara, Katsu, Japan) using TA cloning. Randomly selected single colonies were subjected to Sanger DNA sequencing to detect indel (insertion or deletion) mutations. Mating of G0 frogs led to the production of homozygous <italic toggle="yes">mc1r</italic> disrupted frogs. Adult frogs were genotyped using small nail clippings, with genotyping PCR primer sequences provided in Table <xref rid="pcmr70033-supitem-0001" ref-type="supplementary-material">S1</xref>.</p><p>For odd‐target testing, potential off‐target sites were identified by mapping the <italic toggle="yes">mc1r</italic> gRNA target site to the <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> genome (JGI 9.0) using CRISPOR, focusing on genomic loci with up to five mismatches relative to the <italic toggle="yes">mc1r</italic> gRNA coding sequence and following the NGG PAM sequence. Ten pairs of primers were designed for RT‐PCR amplification and subsequent Sanger DNA sequencing analysis based on the NCBI database, as listed in Table <xref rid="pcmr70033-supitem-0001" ref-type="supplementary-material">S1</xref>.</p></sec><sec id="pcmr70033-sec-0008"><label>2.3</label><title>Reverse Transcription‐Polymerase Chain Reaction (<styled-content style="fixed-case" toggle="no">RT</styled-content>‐<styled-content style="fixed-case" toggle="no">PCR</styled-content>)</title><p>Total RNA was extracted from embryos at various developmental stages and from distinct tissues harvested from adult <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> using the TransZol Up Plus RNA Kit (Catalog Number: ER501‐01; Transgen Biotech, Beijing, China). Subsequently, reverse transcription was performed to generate a complementary DNA (cDNA) library, employing the <italic toggle="yes">TransScript</italic> Uni OneStep gDNA Removal and cDNA Synthesis SuperMix (Catalog Number: AU311‐03; Transgen Biotech, Beijing, China). The amplification of the gene of interest was achieved through polymerase chain reaction (PCR), utilizing primers whose sequences are detailed in Table <xref rid="pcmr70033-supitem-0001" ref-type="supplementary-material">S1</xref>. The relative expression levels of the transcripts were assessed by comparing the band intensities on agarose gels following gel electrophoresis.</p></sec><sec id="pcmr70033-sec-0009"><label>2.4</label><title>Whole Mount In Situ Hybridization (<styled-content style="fixed-case" toggle="no">WISH</styled-content>)</title><p>To elucidate the spatial and temporal expression patterns of specific genes during embryonic development, whole mount in situ hybridization (WISH) was conducted in accordance with methodologies previously described in the literature (Broadbent and Read <xref rid="pcmr70033-bib-0008" ref-type="bibr">1999</xref>; Ran, Li, Xu, et al. <xref rid="pcmr70033-bib-0036" ref-type="bibr">2024</xref>). Primer sequences utilized for the amplification of the target genes were detailed in Table <xref rid="pcmr70033-supitem-0001" ref-type="supplementary-material">S1</xref>.</p></sec><sec id="pcmr70033-sec-0010"><label>2.5</label><title>
+<styled-content style="fixed-case" toggle="no">RNA</styled-content> Sequencing and Verification by Quantitative <styled-content style="fixed-case" toggle="no">PCR</styled-content> (<styled-content style="fixed-case" toggle="no">qPCR</styled-content>)</title><p>Six wild‐type and six <italic toggle="yes">mc1r</italic> null adult frogs were picked randomly, and three replicates were set, including two frogs in each replicate. Total RNA extraction was the same as the method in RT‐PCR.</p><p>For RNA sequencing, mRNA was enriched by mRNA Capture Beads (Cat. N401‐02; Vazyme, Nanjing, China), and cDNA library was built through VAHTS Universal DNA Library Prep Kit for Illumina V3 (Cat. ND607; Vazyme, Nanjing, China). The cDNA libraries were sent to Annoroad Gene Technology Company (Beijing, China) and sequenced. Transcriptome data were analyzed using our established protocol (Ran, Li, Cheng, et al. <xref rid="pcmr70033-bib-0034" ref-type="bibr">2024</xref>; Yi et al. <xref rid="pcmr70033-bib-0053" ref-type="bibr">2025</xref>). RNA‐seq data has been uploaded to the National Center for Biotechnology Information (NCBI) with the accession number PRJNA1256923.</p><p>In qPCR, some key genes in RNA sequencing analysis were selected to be verified, and the QuantiNova SYBR Green PCR Kit (Cat. 208056, QIAGEN, Hilden, Germany) was implemented as manipulation. The sequence of primers used in qPCR was listed in Table <xref rid="pcmr70033-supitem-0001" ref-type="supplementary-material">S1</xref>. Three technical replicates were set in every sample. The data was analyzed with Excel and visualized by GraphPad Prism 8.0.</p></sec><sec id="pcmr70033-sec-0011"><label>2.6</label><title>Protein–Protein Interaction (<styled-content style="fixed-case" toggle="no">PPI</styled-content>) Network Analysis</title><p>The list of genes was uploaded and analyzed in the online STRING tool (Szklarczyk et al. <xref rid="pcmr70033-bib-0046" ref-type="bibr">2023</xref>). Given the scarcity of interaction data available for the species <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content>, we opted to utilize the <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Homo sapiens</italic>
+</styled-content> database as a surrogate for our analysis. The PPI result was visualized with Cytoscape software. The single nodes without edges were deleted in the picture.</p></sec><sec id="pcmr70033-sec-0012"><label>2.7</label><title>Transmission Electron Microscopy</title><p>The skin was cut from frogs on ice. The sample was cut smaller than 1 × 1 mm, and then immersed in 2% glutaraldehyde in 1 × PBS as soon as possible, fixed overnight at 4°C. Then the sample was washed with 1 × PBS, and postfixed in 1% osmic acid at room temperature for 3 h, followed by washing with 1 × PBS and ddH<sub>2</sub>O. The skin was contrasted with 2% uranyl acetate overnight at 4°C, then washed with ddH<sub>2</sub>O at room temperature. Dehydration was implemented with acetone concentrated at 30% once, 50% once, 75% once, 100% twice, followed by embedding with acetone diluted epoxy resin concentrated at 25% once, 50% once, 75% once, and 100% twice. Then the sample was embedded in the box. Solidification was done at 65°C for 48 h. Ultrathin sectioning was done with an ultramicrotome (EM UC7; Leica, Wetzlar, Germany) and diamond knife (16DIA DU4530; Leica, Wetzlar, Germany). Sections were observed with an electron microscope (HT7700; Hitachi, Tokyo, Japan). Some samples were disposed of by Servicebio, Wuhan, China.</p></sec><sec id="pcmr70033-sec-0013"><label>2.8</label><title>Statistics and Reproducibility</title><p>Data were analyzed using GraphPad Prism version 9 (GraphPad Prism Software Inc., CA, USA) and expressed as means ± SD. Two‐way ANOVA was used to compare groups, with <italic toggle="yes">p</italic> &lt; 0.05 considered significant. All experiments were replicated at least three times, and detailed methods are included in figure legends.</p></sec></sec><sec sec-type="results" id="pcmr70033-sec-0014"><label>3</label><title>Results</title><sec id="pcmr70033-sec-0015"><label>3.1</label><title>Establishment of <italic toggle="no">mc1r</italic> Null <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> Line</title><p>To establish an <italic toggle="yes">mc1r</italic> null <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> line, we initially characterized the expression pattern of <italic toggle="yes">mc1r</italic> during embryonic development. RT‐PCR result showed that expression of <italic toggle="yes">mc1r</italic> began and dramatically increased between Stage 27–32, and increased along with development (Figure <xref rid="pcmr70033-fig-0001" ref-type="fig">1A</xref>). The result is consistent with RNA‐seq data obtained from Xenbase database (Bowes et al. <xref rid="pcmr70033-bib-0007" ref-type="bibr">2010</xref>). In wild‐type tadpoles, the melanophores can be observed first at Stage 33/34. In tissues, <italic toggle="yes">mc1r</italic> were highly expressed in eye, dorsal skin, ventral skin where melanophores distributed (Figure <xref rid="pcmr70033-fig-0001" ref-type="fig">1B</xref>).</p><fig position="float" fig-type="FIGURE" id="pcmr70033-fig-0001" orientation="portrait"><label>FIGURE 1</label><caption><p>Temporal expression pattern during tadpole development and spatial expression pattern in adult <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> of <italic toggle="yes">mc1r</italic> through RT‐PCR. The result of RT‐PCR in (A) embryos at different stages and in (B) different organs of adult frog is shown. st, stage.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="PCMR-38-0-g002.jpg"><?image-name PCMR-38-0-g002.jpg?><?image-size 31339?><?image-md5 077a17da7f51251b8ba6df6de6fd39cc?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 341?><?image-original-width 1064?><?image-scaled-height 227?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/adfe/12171348/077a17da7f51/PCMR-38-0-g002.jpg?><?thumb-name PCMR-38-0-g002.gif?><?thumb-size 5016?><?thumb-md5 4937c42ce801b4a32b3b536050b3cc18?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 64?><?thumb-scaled-width 200?><?thumb-cloudpmc-urn urn:cdn:blobs/adfe/12171348/4937c42ce801/PCMR-38-0-g002.gif?></graphic></fig><p>In our RT‐PCR assays, we used equal amounts of total RNA for each reaction to ensure comparability between samples. However, we observed that the expression of <italic toggle="yes">gapdh</italic>, while commonly used as a loading control, is not uniform across different tissues in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content>. This observation was consistent across repeated experiments and suggests tissue‐specific variation in <italic toggle="yes">gapdh</italic> expression at the mRNA level. Therefore, in this study, <italic toggle="yes">gapdh</italic> was not used for normalization. Instead, the results presented in Figure <xref rid="pcmr70033-fig-0001" ref-type="fig">1B</xref> reflect relative <italic toggle="yes">mc1r</italic> expression using equal RNA input across tissues. Notably, higher <italic toggle="yes">mc1r</italic> expression was detected in tissues rich in melanophores, such as the eye, dorsal skin, and ventral skin. This expression pattern supports the hypothesis that <italic toggle="yes">mc1r</italic> is involved in melanophore development and pigmentation.</p><p>As a GPCR protein, the DRY motif is conserved across various species, including <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> Mc1r protein based on the homology analysis of protein sequence (Tai et al. <xref rid="pcmr70033-bib-0047" ref-type="bibr">2022</xref>). Thus, we picked the upstream sequence of the DRY coding sequence as the SpCas9 knockout target for <italic toggle="yes">mc1r</italic> knockout (Figure <xref rid="pcmr70033-fig-0002" ref-type="fig">2</xref>). To detect the knockout efficiency in G0, PCR was done and the PCR product was inserted into a blunt plasmid followed by sequencing. Multiple insertions and deletions were created, and some of them were shown (Figure <xref rid="pcmr70033-fig-0002" ref-type="fig">2B</xref>). The efficiency of inducing mutations in G0 is 69.2% (9/13) (Table <xref rid="pcmr70033-supitem-0001" ref-type="supplementary-material">S2</xref>). To obtain the homozygote of the <italic toggle="yes">mc1r</italic> mutation, adult G0 frogs were crossed with adult wild‐type frogs to obtain the F1 generation; then, heterozygote F1 adult frogs were picked and crossed with each other to obtain the homozygote F2 generation. Through generation passage, the homozygotic mutants were obtained.</p><fig position="float" fig-type="FIGURE" id="pcmr70033-fig-0002" orientation="portrait"><label>FIGURE 2</label><caption><p>
+<italic toggle="yes">mc1r</italic> knockout through CRISPR‐Cas9. (A) The target sequence is at nucleotide 6037–6059 in the <italic toggle="yes">mc1r</italic> gene indicated by an orange arrow head. The orange box indicates the exon, grey boxes indicate the untranslated regions (UTR) and the dotted line indicates the intron. (B) The sequence of the wild‐type target sequence (shown in orange) and some different insert/deletion (INDEL) situations in G0. bp, base pair (C) The mutated amino acid sequence led by a 4 bp deletion. TM, transmembrane; DRY, Asp‐Arg‐Tyr.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="PCMR-38-0-g008.jpg"><?image-name PCMR-38-0-g008.jpg?><?image-size 106632?><?image-md5 2d4a9fb22f50156450a0826b2168d81a?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 543?><?image-original-width 1064?><?image-scaled-height 362?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/adfe/12171348/2d4a9fb22f50/PCMR-38-0-g008.jpg?><?thumb-name PCMR-38-0-g008.gif?><?thumb-size 6050?><?thumb-md5 f799fb430bed9e43b36a8856ace3045b?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 80?><?thumb-scaled-width 156?><?thumb-cloudpmc-urn urn:cdn:blobs/adfe/12171348/f799fb430bed/PCMR-38-0-g008.gif?></graphic></fig></sec><sec id="pcmr70033-sec-0016"><label>3.2</label><title>
+<italic toggle="no">mc1r</italic> Knockout Disturbs Melanophore Pattern in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content>
+</title><p>The phenotypes of different <italic toggle="yes">mc1r</italic> mutant lines are undistinguishable, thus we focus on one line, <italic toggle="yes">mc1r</italic>
+<sup>△4/△4</sup> (Figure <xref rid="pcmr70033-fig-0002" ref-type="fig">2B,C</xref>), which is referred as <italic toggle="yes">mc1r</italic> null line in the following. With 4 bp deletion, the mutated Mc1r is predicted with a stop codon in advance (Figure <xref rid="pcmr70033-fig-0002" ref-type="fig">2C</xref>). Then two adult heterozygotic <italic toggle="yes">mc1r</italic>
+<sup>+/△4</sup> frogs were picked and inbred. The pigment pattern of their offspring was observed and compared with wild‐type tadpoles. At first, the pigment pattern of these tadpoles was similar. Until Stage 43, two pigment patterns could be distinguished first time in the same batch through stereoscope observation (Figure <xref rid="pcmr70033-fig-0003" ref-type="fig">3A</xref>). The melanophores in some tadpoles became sparse both in head and trunk, while melanophores in others were dark and tight as wild‐type tadpoles. Tadpoles with normal or abnormal pigment pattern were picked to sequence the <italic toggle="yes">mc1r</italic> gene respectively. The genotype of tadpoles with abnormal pigment pattern was confirmed to <italic toggle="yes">mc1r</italic> null (about one quarter) while that of tadpoles with normal pigment pattern was wild‐type and heterozygous <italic toggle="yes">mc1r</italic> (about three quarters).</p><fig position="float" fig-type="FIGURE" id="pcmr70033-fig-0003" orientation="portrait"><label>FIGURE 3</label><caption><p>
+<italic toggle="yes">mc1r</italic> knockout disturbs pigment pattern of post‐stage 43 tadpoles and frogs. (A) The tadpoles at stage 43, (B) the tadpoles at stage 52, (C) the tadpoles during metamorphosis at Stage 56–57, (D) the tadpoles at the end of metamorphosis at stage 59, (E) the froglets have finished metamorphosis, and (F) the adult frogs are shown in black boxes. The detailed pigment pattern marked with blue or orange boxes on tadpoles or frogs is shown in the boxes on right or bottom with corresponding colors respectively. The blue arrowheads indicate melanophores.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="PCMR-38-0-g009.jpg"><?image-name PCMR-38-0-g009.jpg?><?image-size 158214?><?image-md5 fe773a9b36f88e1a3ec8bf2cab664933?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1102?><?image-original-width 1064?><?image-scaled-height 734?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/adfe/12171348/fe773a9b36f8/PCMR-38-0-g009.jpg?><?thumb-name PCMR-38-0-g009.gif?><?thumb-size 10677?><?thumb-md5 5dc0dca1ee351ab2b6e9ceffaea0795f?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 104?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/adfe/12171348/5dc0dca1ee35/PCMR-38-0-g009.gif?></graphic></fig><p>Then when the tadpoles developed to about Stage 52, the <italic toggle="yes">mc1r</italic> null tadpoles looked much lighter than wild‐type tadpoles in dorsal view (Figure <xref rid="pcmr70033-fig-0003" ref-type="fig">3B</xref>). The melanophores on the surface of the brain and on the surface of some neurons or blood vessels observed in the <italic toggle="yes">mc1r</italic> null tadpoles were much fewer than in wild‐type tadpoles. There were few melanophores observed in the dorsal lateral skin in the head of mutants while there were groups of melanophores at the same location of wild‐type tadpoles. At this stage, few melanophores were observed in the ventral skin of both types of tadpoles.</p><p>When the tadpoles developed to metamorphotic stage (about Stage 55–58), the morphology of melanophores in the dorsal skin in wild‐type tadpoles and mutants was different (Figure <xref rid="pcmr70033-fig-0003" ref-type="fig">3C</xref>). In the head skin behind the nasals, there were two types of melanophores observed in wild‐type tadpoles, one looked much stronger, darker, and larger (indicated with I in Figure <xref rid="pcmr70033-fig-0003" ref-type="fig">3C</xref>) while another one looked much thinner and lighter (indicated with II in Figure <xref rid="pcmr70033-fig-0003" ref-type="fig">3C</xref>). Type I melanophores looked like flowers with many petals while type II melanophores looked like some thin strings. However, there were only type II melanophores that were thin and light observed in mutants at same location. Besides, in the lateral region of head skin, the melanophores of wild‐type tadpoles were also darker and larger than that in mutants. The melanophores in wild‐type tadpoles at this location were irregular dark dots with branches, while the branches of melanophores in mutants were hard to distinguish which made the melanophores look like round light dots at the same location.</p><p>Then at the end of metamorphosis (about Stage 59–62), there were more melanophores in dorsal skin, and they distributed much tightly in wild‐type tadpoles (Figure <xref rid="pcmr70033-fig-0003" ref-type="fig">3D</xref>). Surprisingly, there were melanophores observed already in the ventral skin of <italic toggle="yes">mc1r</italic> null tadpoles, while there were no melanophores observed in the ventral skin of wild‐type tadpoles at the same stage. Interestingly, this phenomenon lasted until the froglet stage that they had finished metamorphosis (Figure <xref rid="pcmr70033-fig-0003" ref-type="fig">3E</xref>). When there were melanophores scattered all over the ventral skin of mutants, there were few melanophores observed in the ventral skin of wild‐type froglets. This phenotype, which persists through metamorphosis and results in an atypical distribution of melanophores in post‐metamorphic froglets and adults, suggests a fundamental alteration in the spatiotemporal regulation of melanophore differentiation in the absence of <italic toggle="yes">mc1r</italic>. One possible explanation is that the Mc1r signaling pathway may act as a spatial regulator of melanophore development, not only promoting melanophore differentiation but also restricting their localization during development. In wild‐type tadpoles, the absence of melanophores in the ventral skin might reflect a tightly controlled spatial patterning mechanism that suppresses premature or ectopic melanophore differentiation in ventral regions. The loss of <italic toggle="yes">mc1r</italic> could impair this restriction, leading to a precocious and ectopic appearance of melanophores in the ventral skin. Furthermore, <italic toggle="yes">mc1r</italic> is known to be involved in melanocortin signaling, which can influence melanophore fate decisions and pigment production via cAMP‐mediated pathways (Stefania et al. <xref rid="pcmr70033-bib-0044" ref-type="bibr">2024</xref>; Upadhyay et al. <xref rid="pcmr70033-bib-0048" ref-type="bibr">2024</xref>; Mun et al. <xref rid="pcmr70033-bib-0030" ref-type="bibr">2023</xref>). The disruption of this pathway may uncouple the usual dorsal–ventral gradients of melanophore‐inducing signals, leading to the derepression of melanophore differentiation in ventral regions. This finding contrasts with the delayed and denser accumulation of melanophores in dorsal skin of wild‐type animals, suggesting a complex, region‐specific regulation of pigment cell patterning that is perturbed in <italic toggle="yes">mc1r</italic> mutants. Future studies will be necessary to dissect the precise molecular and cellular mechanisms underlying this ventral‐specific phenotype, possibly by analyzing gene expression profiles of melanophore lineage cells along the dorsoventral axis in both wild‐type and mutant animals.</p><p>As they grow older, the skin of mutants looked much lighter than that of wild‐type frogs in dorsal view in the adult frogs, while the ventral skin looked a little darker than that of wild‐type frogs while there were high inter‐individual differences of ventral skin color between wild‐type frogs, some were darker while some were lighter (Figure <xref rid="pcmr70033-fig-0003" ref-type="fig">3F</xref>). In the dorsal skin, the melanophores in wild‐type frogs distributed tightly around the glands, intersected with each other, and it was difficult to count them. However, melanophores in the mutants distributed sparsely, more contracted, and it was easier to distinguish each other. The morphology of melanophores of ventral melanophores was similar in mutants and wild‐type frogs, which suggested that the differentiation of ventral melanophores was inhibited during metamorphosis and froglet stage, but the inhibition was partly released in following growth.</p><p>To conduct a numerical analysis of skin pigmentation, photographs were taken of equivalent dorsal and ventral regions from adult frogs. ImageJ software was then used to process the images. Due to the intersecting distribution of melanophores in wild‐type frogs, it was not feasible to count individual melanophores accurately. Instead, the ratio of pigmented areas relative to the total image area was quantified and analyzed (Figure <xref rid="pcmr70033-fig-0004" ref-type="fig">4A</xref>). The results indicated a significant reduction in dorsal pigmentation coverage in <italic toggle="yes">mc1r</italic> mutants compared to wild‐type controls. In contrast, the ratio of ventral pigmentation in wild‐type individuals exhibited considerable inter‐individual variation, making direct comparison inconclusive (Figure <xref rid="pcmr70033-fig-0004" ref-type="fig">4B</xref>).</p><fig position="float" fig-type="FIGURE" id="pcmr70033-fig-0004" orientation="portrait"><label>FIGURE 4</label><caption><p>Numerical analysis shows the reduction of pigmentation in the dorsal skin of <italic toggle="yes">mc1r</italic> knockout frogs and the high inter‐individual variation in the ventral skin. (A) The method of numerical analysis. Photos are taken of equivalent dorsal and ventral regions from adult <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> individuals. ImageJ is used to process the images. The ratio of pigmented areas relative to the total image area is quantified and analyzed. (B) Pigmentation ratio is compared among WT‐DS, <italic toggle="yes">mc1r</italic>KO‐DS, WT‐VS, and <italic toggle="yes">mc1r</italic>KO‐VS. DS, dorsal skin, VS, ventral skin.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="PCMR-38-0-g003.jpg"><?image-name PCMR-38-0-g003.jpg?><?image-size 81020?><?image-md5 e3be867c81c385b9fd74df89424db2d0?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 735?><?image-original-width 1064?><?image-scaled-height 490?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/adfe/12171348/e3be867c81c3/PCMR-38-0-g003.jpg?><?thumb-name PCMR-38-0-g003.gif?><?thumb-size 5091?><?thumb-md5 729e92a53842444854d07daf45a01723?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 79?><?thumb-scaled-width 115?><?thumb-cloudpmc-urn urn:cdn:blobs/adfe/12171348/729e92a53842/PCMR-38-0-g003.gif?></graphic></fig><p>From the results above, it can be inferred that the development of melanophores is not disturbed by <italic toggle="yes">mc1r</italic> knockout at early stages (before Stage 43), but the amount and morphology of visible melanophores are disturbed along with growth. During metamorphosis, the onset of emergence of melanophores in ventral skin is in advance in <italic toggle="yes">mc1r</italic> mutants. In adult frogs, the dorsal skin of <italic toggle="yes">mc1r</italic> mutants is noticeably lighter in coloration compared to that of wild‐type individuals. In contrast, the ventral skin exhibits substantial inter‐individual variation, making reliable comparison difficult.</p></sec><sec id="pcmr70033-sec-0017"><label>3.3</label><title>The Development and Distribution of Melanoblasts in Embryonic Stages Are Not Disrupted by <italic toggle="no">mc1r</italic> Knockout</title><p>To test the development and distribution of melanoblasts in early developmental stages, whole mount in situ hybridization (WISH) was applied in embryos (Figure <xref rid="pcmr70033-fig-0005" ref-type="fig">5</xref>). <italic toggle="yes">Dopachrome tautomerase</italic> (<italic toggle="yes">dct</italic>) gene, <italic toggle="yes">premelanosome protein</italic> (<italic toggle="yes">pmel</italic>) gene, which are the markers of melanoblasts, and <italic toggle="yes">tyrosinase</italic> (<italic toggle="yes">tyr</italic>) gene, which is the marker of differentiating and differentiated melanophores were picked (Baxter and Pavan <xref rid="pcmr70033-bib-0005" ref-type="bibr">2003</xref>; Mort et al. <xref rid="pcmr70033-bib-0028" ref-type="bibr">2015</xref>). Five stages were picked from Stage 20 to 40. In both wild‐type and <italic toggle="yes">mc1r</italic> null embryos, there were melanoblast signals observed at Stage 20 with <italic toggle="yes">pmel</italic> and <italic toggle="yes">dct</italic> probes, while almost no signal was observed at this stage with the <italic toggle="yes">tyr</italic> probe. Then the melanophore signals were high in the eyes and dorsolateral region with <italic toggle="yes">pmel</italic>, <italic toggle="yes">dct</italic>, and <italic toggle="yes">tyr</italic> probes in embryos from Stage 26 to 40. There were no signals observed in the ventral region. The expression pattern in <italic toggle="yes">mc1r</italic> null tadpoles was similar to that in wild‐type tadpoles, suggesting that the loss of <italic toggle="yes">mc1r</italic> may not affect the initial formation and early differentiation of melanophore lineage cells. One possible explanation is that compensatory mechanisms may exist during early embryonic stages to maintain normal development of the melanophore lineage. For example, other members of the melanocortin receptor family, such as <italic toggle="yes">mc5r</italic> or <italic toggle="yes">mc4r</italic>, might partially compensate for the loss of <italic toggle="yes">mc1r</italic> signaling or regulate cAMP levels to support proper melanoblast differentiation. In addition, the early melanophore lineage may rely more on coordinated regulation by other factors such as <italic toggle="yes">mitf</italic>, <italic toggle="yes">sox10</italic>, and <italic toggle="yes">foxd3</italic>, rather than solely depending on <italic toggle="yes">mc1r</italic> signaling, which could explain the absence of an observable phenotype at this stage (Alessandro and Elizabeth <xref rid="pcmr70033-bib-0003" ref-type="bibr">2024</xref>; Steel et al. <xref rid="pcmr70033-bib-0043" ref-type="bibr">1992</xref>). Furthermore, we observed that although there were no significant differences in differentiation signals and distribution patterns during early development, regional changes in melanophore distribution emerged during later metamorphic stages. This suggests that the regulatory role of <italic toggle="yes">mc1r</italic> may be more prominent in later stages of development, particularly in fine‐tuning processes such as melanophore migration, spatial distribution, or pigment deposition, rather than in the initial establishment of the melanophore lineage.</p><fig position="float" fig-type="FIGURE" id="pcmr70033-fig-0005" orientation="portrait"><label>FIGURE 5</label><caption><p>Whole mount in situ hybridization result of <italic toggle="yes">pmel</italic>, <italic toggle="yes">dct</italic>, and <italic toggle="yes">tyr</italic> in wild‐type and <italic toggle="yes">mc1r</italic> null tadpoles at different stages is shown.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-11" orientation="portrait" xlink:href="PCMR-38-0-g004.jpg"><?image-name PCMR-38-0-g004.jpg?><?image-size 66238?><?image-md5 3c98a9ac01d5ff6caa22ad462d9d60e3?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 464?><?image-original-width 1064?><?image-scaled-height 309?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/adfe/12171348/3c98a9ac01d5/PCMR-38-0-g004.jpg?><?thumb-name PCMR-38-0-g004.gif?><?thumb-size 12473?><?thumb-md5 a5aa9655533f0f8b722750c58c8aeb2a?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 80?><?thumb-scaled-width 183?><?thumb-cloudpmc-urn urn:cdn:blobs/adfe/12171348/a5aa9655533f/PCMR-38-0-g004.gif?></graphic></fig></sec><sec id="pcmr70033-sec-0018"><label>3.4</label><title>
+<italic toggle="no">mc1r</italic> Knockout Disturbed Expression of Multiple Pigmentation‐Related Genes in Skin of Adult <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content>
+</title><p>Next, we tested the differentiated gene expression disturbed by <italic toggle="yes">mc1r</italic> knockout in adult frogs, both in dorsal skin and ventral skin. RNA sequencing was implemented, and the differentiated expression genes (DEGs) were filtered. The results showed that there were 315 genes up‐regulated and 95 genes down‐regulated in dorsal skin (DS), while 336 genes up‐regulated and 98 genes down‐regulated in ventral skin (VS) because of <italic toggle="yes">mc1r</italic> knockout. Six essential melanophore‐related genes were picked (<italic toggle="yes">tyrp1</italic>, <italic toggle="yes">tyr</italic>, <italic toggle="yes">slc24a5</italic>, <italic toggle="yes">pmel</italic>, <italic toggle="yes">mlana</italic>, <italic toggle="yes">dct</italic>) to analyze both in DS and VS (Figure <xref rid="pcmr70033-fig-0006" ref-type="fig">6A</xref>). Specifically, Tyr (tyrosinase) is the rate‐limiting enzyme in melanin biosynthesis, catalyzing the initial steps of tyrosine conversion to DOPA and dopaquinone (Liliana and Matthew D <xref rid="pcmr70033-bib-0025" ref-type="bibr">2018</xref>). Tyrp1 and Dct (also known as Tyrp2) act downstream in the pathway, modulating the type of melanin produced (Liliana and Matthew D <xref rid="pcmr70033-bib-0025" ref-type="bibr">2018</xref>). Pmel encodes a structural protein essential for the formation of melanosomal fibrils, serving as a scaffold for melanin deposition (Liliana and Matthew D <xref rid="pcmr70033-bib-0025" ref-type="bibr">2018</xref>). Mlana (Melan‐A) is involved in melanosome maturation and cooperates with Pmel (Liliana and Matthew D <xref rid="pcmr70033-bib-0025" ref-type="bibr">2018</xref>). Slc24a5 encodes a sodium/potassium/calcium exchanger protein that helps maintain ion balance within melanosomes and influences pigmentation (Ellen E and Mark D <xref rid="pcmr70033-bib-0018" ref-type="bibr">2008</xref>). The expression levels of these genes serve as indicators of melanophore differentiation status and melanin production activity. Therefore, we analyzed their expression patterns in both DS and VS to further understand the effects of <italic toggle="yes">mc1r</italic> knockout on melanophore distribution and function.</p><fig position="float" fig-type="FIGURE" id="pcmr70033-fig-0006" orientation="portrait"><label>FIGURE 6</label><caption><p>The differentiated expression genes related with melanophores are analyzed by RNA‐seq and verified by qPCR. (A) The essential genes related with melanophore are selected and analyzed based on the RNA‐seq result. The blue dots indicate the genes are downregulated while the pink dots mean the genes are not disturbed obviously. (B) Three essential melanophore related genes downregulated in DS analyzed by RNA‐seq (<italic toggle="yes">tyr</italic>, <italic toggle="yes">dct</italic>, and <italic toggle="yes">pmel</italic>) are selected and tested by qPCR, accorded with RNA‐seq result.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-13" orientation="portrait" xlink:href="PCMR-38-0-g006.jpg"><?image-name PCMR-38-0-g006.jpg?><?image-size 45595?><?image-md5 2d4c30847bab16f92751329d69b62023?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 591?><?image-original-width 1064?><?image-scaled-height 394?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/adfe/12171348/2d4c30847bab/PCMR-38-0-g006.jpg?><?thumb-name PCMR-38-0-g006.gif?><?thumb-size 4019?><?thumb-md5 0349bfda3a3f4da7d298ebbdadb55b76?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 80?><?thumb-scaled-width 144?><?thumb-cloudpmc-urn urn:cdn:blobs/adfe/12171348/0349bfda3a3f/PCMR-38-0-g006.gif?></graphic></fig><p>Data analysis showed that all of them were downregulated in DS with extremely low <italic toggle="yes">p</italic>‐value (high reliability), while there was no obvious disturbance led by <italic toggle="yes">mc1r</italic> knockout in VS with relatively high <italic toggle="yes">p</italic>‐value (low reliability) (Table <xref rid="pcmr70033-supitem-0001" ref-type="supplementary-material">S3</xref>). The data showed that the expression level of these genes in ventral skin among different wild‐type frogs was highly variable, which inferred that the mechanisms regulating the ventral skin color were complicated, leading to such high inter‐individual difference. The result was accorded with observations in adult frogs as mentioned above. Following RNA‐seq, qPCR was applied to verify the result. The expression level of three key melanophore‐related genes <italic toggle="yes">tyr</italic>, <italic toggle="yes">pmel</italic>, and <italic toggle="yes">dct</italic> was tested in dorsal skin (Figure <xref rid="pcmr70033-fig-0006" ref-type="fig">6B</xref>). All of them were downregulated accorded with the RNA‐seq result. Thus, it could be concluded that <italic toggle="yes">mc1r</italic> knockout decreased the expression level of melanophore‐related genes in dorsal skin of adult frogs, leading to lighter skin color observed from the top.</p><p>Then, the intersected genes that up‐/down‐regulated in both DS and VS were filtered (Table <xref rid="pcmr70033-supitem-0001" ref-type="supplementary-material">S4</xref>). The GO enrichment and KEGG pathway enrichment of 179 upregulated genes together with 26 downregulated genes with clear gene names were analyzed with DAVID tool (Figure <xref rid="pcmr70033-fig-0007" ref-type="fig">7</xref>, Table <xref rid="pcmr70033-tbl-0001" ref-type="table">1</xref>). Firstly, the GO‐BP (biological process) result (Figure <xref rid="pcmr70033-fig-0007" ref-type="fig">7A</xref>) showed that 20 genes were enriched in phosphorylation, while phosphorylation is essential in signal transduction of mitogen‐activated protein kinase (MAPK) signaling pathway (Peterson et al. <xref rid="pcmr70033-bib-0033" ref-type="bibr">2022</xref>), an important pathway in melanin synthesis (D'Mello et al. <xref rid="pcmr70033-bib-0016" ref-type="bibr">2016</xref>). Among the list, <italic toggle="yes">Map3k15 (MAPK/ERK</italic> Kinase <italic toggle="yes">Kinase 15</italic>) and <italic toggle="yes">Map4k1</italic> (<italic toggle="yes">MAPK/ERK Kinase Kinase Kinase 1</italic>) translated by <italic toggle="yes">map3k15</italic>, <italic toggle="yes">map4k1</italic> are the upstream kinases of MAPK signaling. It could be inferred that MAPK signaling might be disturbed in <italic toggle="yes">mc1r</italic> mutants. Secondly, the GO‐CC result (Figure <xref rid="pcmr70033-fig-0007" ref-type="fig">7B</xref>) showed that most of the proteins translated by disturbed genes were in the cytoplasm. Thirdly, in GO‐MF analysis (Figure <xref rid="pcmr70033-fig-0007" ref-type="fig">7C</xref>), 26 genes were enriched in ATP binding function. Whether this result was led by cAMP signaling pathway disturbance still needed further research. Besides, 9 genes were enriched in DNA binding function. Based on GeneCards database, their differentiated expression might disturb immune response, circadian clock, and cellular growth and differentiation. Finally, in KEGG pathway result (Figure <xref rid="pcmr70033-fig-0007" ref-type="fig">7D</xref>), 9 genes were enriched in endocytosis. Based on GeneCards database, they might be related to vesicular transport, endosome and lysosome, protein trafficking, and so on. So, their disturbance might affect melanosome formation and transport directly or indirectly. Interestingly, the genes <italic toggle="yes">cldn17.1</italic> and <italic toggle="yes">cldn17.3</italic> which encode a tight junction protein <italic toggle="yes">Claudin17</italic> were highly upregulated both in dorsal skin and ventral skin in our RNA‐seq data. <italic toggle="yes">Claudin17</italic> forms tight junction channels with distinct anion selectivity in claudin family (Conrad et al. <xref rid="pcmr70033-bib-0014" ref-type="bibr">2016</xref>; Krug et al. <xref rid="pcmr70033-bib-0023" ref-type="bibr">2012</xref>). The route from <italic toggle="yes">Mc1r</italic> to <italic toggle="yes">cldn17</italic> gene expression, and the effect led by increased <italic toggle="yes">cldn17</italic> gene expression level still needed further research.</p><fig position="float" fig-type="FIGURE" id="pcmr70033-fig-0007" orientation="portrait"><label>FIGURE 7</label><caption><p>The GO and KEGG pathways analysis of differentiated expression genes. The analysis results of (A) GO‐BP (biological process), (B) the GO‐CC (cellular component), (C) the MF (molecular function), and (D) KEGG pathways are shown.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-15" orientation="portrait" xlink:href="PCMR-38-0-g005.jpg"><?image-name PCMR-38-0-g005.jpg?><?image-size 59819?><?image-md5 77e708088e792e9f5399e27801b8f4ad?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 668?><?image-original-width 1064?><?image-scaled-height 445?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/adfe/12171348/77e708088e79/PCMR-38-0-g005.jpg?><?thumb-name PCMR-38-0-g005.gif?><?thumb-size 3453?><?thumb-md5 f9ea28b9d8dad9476226713656fb7b87?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 80?><?thumb-scaled-width 127?><?thumb-cloudpmc-urn urn:cdn:blobs/adfe/12171348/f9ea28b9d8da/PCMR-38-0-g005.gif?></graphic></fig><table-wrap position="float" id="pcmr70033-tbl-0001" content-type="TABLE" orientation="portrait"><label>TABLE 1</label><caption><p>The detailed list of differentiated expressed genes classified in GO and KEGG analysis.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Category</th><th align="center" valign="bottom" rowspan="1" colspan="1">Term</th><th align="center" valign="bottom" rowspan="1" colspan="1">Count</th><th align="center" valign="bottom" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic>
+</th><th align="center" valign="bottom" rowspan="1" colspan="1">Genes</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0006564~L‐serine biosynthetic process</td><td align="center" valign="top" rowspan="1" colspan="1">3</td><td align="center" valign="top" rowspan="1" colspan="1">2.70E‐04</td><td align="center" valign="top" rowspan="1" colspan="1">Up: PSAT1, PHGDH, PSPH</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0016310~phosphorylation</td><td align="center" valign="top" rowspan="1" colspan="1">20</td><td align="center" valign="top" rowspan="1" colspan="1">0.005479003</td><td align="center" valign="top" rowspan="1" colspan="1">Up: MAP4K1, PLK5, SRC, STYK1, MOB2.2, PRKCZ, STK10, NUAK1, MAP3K15, NUAK2, LCK, DGKQ, PIP5K1A, EPS8L1, EPS8L2, ULK1, CAMK1, JAK3, SKAP1, MARK2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0006935~chemotaxis</td><td align="center" valign="top" rowspan="1" colspan="1">4</td><td align="center" valign="top" rowspan="1" colspan="1">0.007965628</td><td align="center" valign="top" rowspan="1" colspan="1">Up: CXCL10, XCR1, CCL5, CCR2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0035023~regulation of Rho protein signal transduction</td><td align="center" valign="top" rowspan="1" colspan="1">3</td><td align="center" valign="top" rowspan="1" colspan="1">0.015373351</td><td align="center" valign="top" rowspan="1" colspan="1">Up: ARHGEF28, EPS8L1, EPS8L2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0032922~circadian regulation of gene expression</td><td align="center" valign="top" rowspan="1" colspan="1">3</td><td align="center" valign="top" rowspan="1" colspan="1">0.027193476</td><td align="center" valign="top" rowspan="1" colspan="1">Up: NR1D1; Down: PER1, PER3</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0035020~regulation of Rac protein signal transduction</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">0.028370973</td><td align="center" valign="top" rowspan="1" colspan="1">Up: CADM4, ARHGAP17</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0007266~Rho protein signal transduction</td><td align="center" valign="top" rowspan="1" colspan="1">3</td><td align="center" valign="top" rowspan="1" colspan="1">0.035146452</td><td align="center" valign="top" rowspan="1" colspan="1">Up: PLEKHG7, EPS8L1, EPS8L2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0016042~lipid catabolic process</td><td align="center" valign="top" rowspan="1" colspan="1">4</td><td align="center" valign="top" rowspan="1" colspan="1">0.042429186</td><td align="center" valign="top" rowspan="1" colspan="1">Up: LIPE, PLA2G4F, PLA2G4D; Down: PLA2G7</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0007015~actin filament organization</td><td align="center" valign="top" rowspan="1" colspan="1">4</td><td align="center" valign="top" rowspan="1" colspan="1">0.056452923</td><td align="center" valign="top" rowspan="1" colspan="1">Up: SH3D21, MYO5B, TRPV3; Down: TRPV4L</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0006897~endocytosis</td><td align="center" valign="top" rowspan="1" colspan="1">4</td><td align="center" valign="top" rowspan="1" colspan="1">0.06103877</td><td align="center" valign="top" rowspan="1" colspan="1">Up: EPN3, SH3GL3, FNBP1L, MARCHF3</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0055085~transmembrane transport</td><td align="center" valign="top" rowspan="1" colspan="1">9</td><td align="center" valign="top" rowspan="1" colspan="1">0.06109477</td><td align="center" valign="top" rowspan="1" colspan="1">Up: ABCA1, ABCC2, SLC44A4, SLCO2B1, SLC2A12, TRPV3; Down: SLC22A4, TRPV4L, SLC39A2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0007231~osmosensory signaling pathway</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">0.064958592</td><td align="center" valign="top" rowspan="1" colspan="1">Up: TRPV3; Down: TRPV4L</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0046777~protein autophosphorylation</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">0.064958592</td><td align="center" valign="top" rowspan="1" colspan="1">Up: STK10, ULK1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0000045~autophagosome assembly</td><td align="center" valign="top" rowspan="1" colspan="1">3</td><td align="center" valign="top" rowspan="1" colspan="1">0.068672316</td><td align="center" valign="top" rowspan="1" colspan="1">Up: GABARAPL2, TP53INP2, ULK1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:1900029~positive regulation of ruffle assembly</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">0.07388954</td><td align="center" valign="top" rowspan="1" colspan="1">Up: EPS8L1, EPS8L2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0046475~glycerophospholipid catabolic process</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">0.08273573</td><td align="center" valign="top" rowspan="1" colspan="1">Up: PLA2G4F, PLA2G4D</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_BP_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0043153~entrainment of circadian clock by photoperiod</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">0.08273573</td><td align="center" valign="top" rowspan="1" colspan="1">Down: PER1, PER3</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_CC_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0031982~vesicle</td><td align="center" valign="top" rowspan="1" colspan="1">6</td><td align="center" valign="top" rowspan="1" colspan="1">4.35E‐04</td><td align="center" valign="top" rowspan="1" colspan="1">Up: SLC34A2, PLA2G4F, MYO5B, EPS8L1, EPS8L2, FNBP1L</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_CC_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0005737~cytoplasm</td><td align="center" valign="top" rowspan="1" colspan="1">56</td><td align="center" valign="top" rowspan="1" colspan="1">0.001342672</td><td align="center" valign="top" rowspan="1" colspan="1">Up: SH3GL3, ACY3, SH2D4A, TESK1, FNBP1L, ALDH1L2, CAPN15, CDC14B, STK10, GRAP2, MAP4K1, PLA2G4F, PLA2G4D, ARRDC1, ARAP2, EPN3, NT5C3A, PTP4A3, IRF1, ULK1, SKAP1, ARHGEF28, ARHGAP17, ABHD5, MOB2.2, NT5C2, PRKCZ,NUAK1,NUAK2, TP53INP2, NPHP1, STAT4, PIP5K1A, MARK2, WWTR1, PLK5, PPP1R14C, GADD45B, GADD45A, NEBL, IRX3, TREX2, CARD9, SUCO, NR1D1, MCC, CAPN14, DNMBP, MYO5B, LNX1; Down: CYP2K1.8,CYP2A6.6, DPP3, MLXIPL,PER1, PER3</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_CC_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0032587~ruffle membrane</td><td align="center" valign="top" rowspan="1" colspan="1">4</td><td align="center" valign="top" rowspan="1" colspan="1">0.002209839</td><td align="center" valign="top" rowspan="1" colspan="1">Up: PLA2G4F, EPS8L1, EPS8L2, AIF1L</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_CC_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0005829~cytosol</td><td align="center" valign="top" rowspan="1" colspan="1">19</td><td align="center" valign="top" rowspan="1" colspan="1">0.015771204</td><td align="center" valign="top" rowspan="1" colspan="1">Up: GABARAPL2, PLA2G4F, STARD4, ACY3, PLA2G4D, ASNS, ARHGAP17, AMPD3, PPM1K, NT5C2, LIPE, BAG4, LCK, INPPL1B, CAMK2N2, ITGB7, ULK1, LPIN2, JAK3</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_CC_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0042105~alpha‐beta T cell receptor complex</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">0.027766987</td><td align="center" valign="top" rowspan="1" colspan="1">Up: CD3G, CD247</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_CC_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0005923~bicellular tight junction</td><td align="center" valign="top" rowspan="1" colspan="1">4</td><td align="center" valign="top" rowspan="1" colspan="1">0.045360985</td><td align="center" valign="top" rowspan="1" colspan="1">Up: CLDN17.1, CLDN17.3, CGN, VSIG8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_CC_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0031234~extrinsic component of cytoplasmic side of plasma membrane</td><td align="center" valign="top" rowspan="1" colspan="1">3</td><td align="center" valign="top" rowspan="1" colspan="1">0.053696326</td><td align="center" valign="top" rowspan="1" colspan="1">Up: LCK, SRC, ESYT3</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_MF_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0016787~hydrolase activity</td><td align="center" valign="top" rowspan="1" colspan="1">14</td><td align="center" valign="top" rowspan="1" colspan="1">0.013015486</td><td align="center" valign="top" rowspan="1" colspan="1">Up: PLA2G4F, ACY3, ENTPD1, USP53, PLA2G4D, ABHD5, AMPD3, NT5C2, NT5C3A, LIPE, PPT2, LPIN2, PSPH; Down: PLA2G7</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_MF_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0016301~kinase activity</td><td align="center" valign="top" rowspan="1" colspan="1">12</td><td align="center" valign="top" rowspan="1" colspan="1">0.017306943</td><td align="center" valign="top" rowspan="1" colspan="1">Up: NUAK1, MAP3K15, NUAK2, DGKQ, STYK1, PIP5K1A, EPS8L1, ULK1, EPS8L2, MOB2.2, MARK2, SKAP1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_MF_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0003700~DNA‐binding transcription factor activity</td><td align="center" valign="top" rowspan="1" colspan="1">9</td><td align="center" valign="top" rowspan="1" colspan="1">0.026743421</td><td align="center" valign="top" rowspan="1" colspan="1">Up: FOSL1, HLF, DBP, IRF1, STAT4, NR1D1, IKZF3; Down: MLXIPL, THIBZ</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_MF_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0001222~transcription corepressor binding</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">0.028870536</td><td align="center" valign="top" rowspan="1" colspan="1">Down: PER1, PER3</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_MF_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0005524~ATP binding</td><td align="center" valign="top" rowspan="1" colspan="1">26</td><td align="center" valign="top" rowspan="1" colspan="1">0.033857005</td><td align="center" valign="top" rowspan="1" colspan="1">Up: SRC, TESK1, ATP10B, NT5C2, PRKCZ, STK10, NUAK1, NUAK2, PIP5K1A, JAK3, MARK2, MAP4K1, ABCA1, ENTPD1, PLK5, ABCC2, STYK1, ASNS, MAP3K15, LCK, MYO5B, DGKQ, ULK1, CAMK1; Down: ABCF2, TRAP1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_MF_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0003779~actin binding</td><td align="center" valign="top" rowspan="1" colspan="1">7</td><td align="center" valign="top" rowspan="1" colspan="1">0.03547127</td><td align="center" valign="top" rowspan="1" colspan="1">Up: SPTBN5, ACY3, PDLIM2, NEBL, MYO5B, EPS8L1, EPS8L2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_MF_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0106411~XMP 5'‐nucleosidase activity</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">0.038308774</td><td align="center" valign="top" rowspan="1" colspan="1">Up: NT5C3A, NT5C2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GOTERM_MF_DIRECT</td><td align="center" valign="top" rowspan="1" colspan="1">GO:0004715~non‐membrane spanning protein tyrosine kinase activity</td><td align="center" valign="top" rowspan="1" colspan="1">3</td><td align="center" valign="top" rowspan="1" colspan="1">0.045293033</td><td align="center" valign="top" rowspan="1" colspan="1">Up: LCK, SRC, JAK3</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">KEGG_PATHWAY</td><td align="center" valign="top" rowspan="1" colspan="1">xtr04144:Endocytosis</td><td align="center" valign="top" rowspan="1" colspan="1">9</td><td align="center" valign="top" rowspan="1" colspan="1">0.006077661</td><td align="center" valign="top" rowspan="1" colspan="1">Up: EPN3, SH3GL3, RAB11FIP1, SRC, CHMP4C, ARAP2, PIP5K1A, PRKCZ, CCR2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">KEGG_PATHWAY</td><td align="center" valign="top" rowspan="1" colspan="1">xtr01230:Biosynthesis of amino acids</td><td align="center" valign="top" rowspan="1" colspan="1">5</td><td align="center" valign="top" rowspan="1" colspan="1">0.007497816</td><td align="center" valign="top" rowspan="1" colspan="1">Up: PSAT1, ASNS, PHGDH, PSPH; Down: SDS</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">KEGG_PATHWAY</td><td align="center" valign="top" rowspan="1" colspan="1">xtr00260:Glycine, serine and threonine metabolism</td><td align="center" valign="top" rowspan="1" colspan="1">4</td><td align="center" valign="top" rowspan="1" colspan="1">0.011930165</td><td align="center" valign="top" rowspan="1" colspan="1">Up: PSAT1, PHGDH, PSPH; Down: SDS</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">KEGG_PATHWAY</td><td align="center" valign="top" rowspan="1" colspan="1">xtr04530:Tight junction</td><td align="center" valign="top" rowspan="1" colspan="1">6</td><td align="center" valign="top" rowspan="1" colspan="1">0.052777731</td><td align="center" valign="top" rowspan="1" colspan="1">Up: SRC, CLDN17.1, CLDN17.3, ARHGAP17, CGN, PRKCZ</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">KEGG_PATHWAY</td><td align="center" valign="top" rowspan="1" colspan="1">xtr01232:Nucleotide metabolism</td><td align="center" valign="top" rowspan="1" colspan="1">4</td><td align="center" valign="top" rowspan="1" colspan="1">0.068703522</td><td align="center" valign="top" rowspan="1" colspan="1">Up: NT5C3A, ENTPD1, AMPD3, NT5C2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">KEGG_PATHWAY</td><td align="center" valign="top" rowspan="1" colspan="1">xtr00565:Ether lipid metabolism</td><td align="center" valign="top" rowspan="1" colspan="1">3</td><td align="center" valign="top" rowspan="1" colspan="1">0.096177817</td><td align="center" valign="top" rowspan="1" colspan="1">Up: PLA2G4F, PLA2G4D; Down: PLA2G7</td></tr></tbody></table></table-wrap><p>At the same time, the protein–protein interaction (PPI) was analyzed with the STRING database and visualized with Cytoscape software (Figure <xref rid="pcmr70033-fig-0008" ref-type="fig">8</xref>). Due to the limited availability of PPI data for <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content>, the human (<styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Homo sapiens</italic>
+</styled-content>) PPI database was employed in this study. The results revealed that SRC occupies a central node within the network, interacting with numerous proteins. Besides, CD3G, CD247, NR1D1, CCL5, and GRAP2 are associated with relatively fewer proteins, forming smaller regulatory hubs. Additionally, proteins such as PER3, SKAP1, PER1, LAT, MAP4K1, CXCL10, and IRF1 were found to interact with a limited number of neighboring proteins, forming localized regulatory networks. The PPI analysis suggests that <italic toggle="yes">mc1r</italic> knockout may disrupt the normal physiological activity of melanophores and surrounding tissues by interfering with these protein regulatory networks. These proteins may themselves act either as downstream targets affected by other factors or as upstream regulators influencing other proteins (i.e., cause or result).</p><fig position="float" fig-type="FIGURE" id="pcmr70033-fig-0008" orientation="portrait"><label>FIGURE 8</label><caption><p>STRING analysis of PPI (protein–protein interaction) and visualized by Cytoscape. Darker color means higher degree.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-17" orientation="portrait" xlink:href="PCMR-38-0-g010.jpg"><?image-name PCMR-38-0-g010.jpg?><?image-size 92465?><?image-md5 f1012ece30a3956b85eac683c97a3c91?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 690?><?image-original-width 1064?><?image-scaled-height 460?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/adfe/12171348/f1012ece30a3/PCMR-38-0-g010.jpg?><?thumb-name PCMR-38-0-g010.gif?><?thumb-size 6100?><?thumb-md5 2b6626ceed7b367103b50487722f0e4f?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 80?><?thumb-scaled-width 123?><?thumb-cloudpmc-urn urn:cdn:blobs/adfe/12171348/2b6626ceed7b/PCMR-38-0-g010.gif?></graphic></fig></sec><sec id="pcmr70033-sec-0019"><label>3.5</label><title>The Ultrastructure of Melanosome Is Not Disrupted by <italic toggle="no">mc1r</italic> Knockout</title><p>Further, the ultrastructure of melanosomes was tested under transmission electron microscopy (TEM). The <italic toggle="yes">MC1R</italic> gene is known to regulate the synthesis of eumelanin and pheomelanin, while previous studies have reported that eumelanin and pheomelanin display distinct ultrastructural characteristics under TEM (Slominski et al. <xref rid="pcmr70033-bib-0041" ref-type="bibr">2004</xref>). Therefore, it is worthwhile to investigate whether melanin synthesis is affected in <italic toggle="yes">
+<styled-content style="fixed-case" toggle="no">Xenopus tropicalis</styled-content> mc1r</italic> mutants.</p><p>TEM is available for analyzing organelles in chromatophores, and it is the gold standard of chromatophore determination. The chromatophores can be distinguished based on their specific organelles: melanophores have melanosomes, which are black ovals (Figure <xref rid="pcmr70033-fig-0009" ref-type="fig">9B</xref>, “M”), xanthophores have pterinosomes, which are spherical with some internal concentric lamellae (Figure <xref rid="pcmr70033-fig-0009" ref-type="fig">9B</xref>, “X”), and iridophores have reflecting platelets, which are elongated hollows (Figure <xref rid="pcmr70033-fig-0009" ref-type="fig">9B</xref>, “I”) (Bagnara et al. <xref rid="pcmr70033-bib-0004" ref-type="bibr">1968</xref>). They distribute in the dermis layer under the basal membrane. The ultrastructure of melanosomes in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> melanophores is distinctive compared with that in mammals (Slominski et al. <xref rid="pcmr70033-bib-0041" ref-type="bibr">2004</xref>), while melanosomes in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> are more amorphous than in mammals. In the dorsal skin of froglets (Figure <xref rid="pcmr70033-fig-0009" ref-type="fig">9A</xref>), both wild‐type and <italic toggle="yes">mc1r</italic> null melanophores were filled with vacuoles, each containing a black oval in the center with some little dots around the oval. In adult frogs (Figure <xref rid="pcmr70033-fig-0009" ref-type="fig">9B</xref>), the distribution and ultrastructure of chromatophores of <italic toggle="yes">mc1r</italic> null frogs in dorsal skin were not disrupted compared with those of wild‐type frogs. In a magnified view, both amorphous ovals and regular ellipses can be observed in wild‐type and <italic toggle="yes">mc1r</italic> null melanosomes in adult frogs (Figure <xref rid="pcmr70033-fig-0009" ref-type="fig">9C</xref>). Based on the undiscernible ultrastructure of melanosome, it can be inferred that the melanin type synthesized in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> is not disrupted by <italic toggle="yes">mc1r</italic> knockout. However, the quantity and the ratio of pheomelanin and eumelanin still need further measurement through other physicochemical methods.</p><fig position="float" fig-type="FIGURE" id="pcmr70033-fig-0009" orientation="portrait"><label>FIGURE 9</label><caption><p>Transmission electron microscopy result is shown. (A) The ultrastructure of melanophores in wild‐type and <italic toggle="yes">mc1r</italic> null froglets (×8k). (B) The overall chromatophore distribution under basal membrane (×1k) and (C) ultrastructure of melanosomes (×12k) in wild‐type and <italic toggle="yes">mc1r</italic> null adult frogs. BM, basal membrane; I, iridophore; M, melanophore; X, xanthophore. Black arrowheads indicate melanosomes.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-19" orientation="portrait" xlink:href="PCMR-38-0-g001.jpg"><?image-name PCMR-38-0-g001.jpg?><?image-size 182739?><?image-md5 6b4aadfc1a935ae77f2d0e0a0bf7c56a?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1089?><?image-original-width 1064?><?image-scaled-height 726?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/adfe/12171348/6b4aadfc1a93/PCMR-38-0-g001.jpg?><?thumb-name PCMR-38-0-g001.gif?><?thumb-size 8074?><?thumb-md5 af2cb60bcccfb154ab9cf0eae7a4c1ae?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 102?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/adfe/12171348/af2cb60bcccf/PCMR-38-0-g001.gif?></graphic></fig></sec></sec><sec sec-type="discussion" id="pcmr70033-sec-0020"><label>4</label><title>Discussion</title><p>In this study, <italic toggle="yes">mc1r</italic> was knocked out using CRISPR‐Cas9 in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content>. Prior to metamorphosis, <italic toggle="yes">mc1r</italic>‐null tadpoles exhibited fewer dorsal melanophores than wild‐type, with minimal ventral pigmentation in both. Wild‐type tadpoles displayed two melanophore morphologies—dense, dark cells and sparse, lighter ones—whereas only the latter was seen in mutants. By metamorphosis completion, melanophores appeared in the ventral skin of <italic toggle="yes">mc1r</italic>‐null tadpoles earlier than in wild‐type, a difference that persisted into the froglet stage. In adulthood, despite similar melanosome ultrastructure between groups, <italic toggle="yes">mc1r</italic>‐null frogs showed visibly lighter dorsal skin and earlier, more extensive ventral pigmentation, disrupting the typical countershading pattern.</p><p>Notably, the early appearance of melanophores in the ventral skin of <italic toggle="yes">mc1r</italic>‐null tadpoles was unexpected and persisted through metamorphosis, eventually leading to an aberrant melanophore distribution in froglets and adult frogs. This observation suggests that loss of <italic toggle="yes">mc1r</italic> may fundamentally alter the spatiotemporal regulation of melanophore differentiation. A possible explanation for this phenotype is that <italic toggle="yes">mc1r</italic> signaling may not only promote melanophore differentiation but also restrict their spatial distribution during development. In wild‐type animals, the absence of melanophores in the ventral skin during early stages may reflect a tightly regulated patterning mechanism that prevents premature or ectopic melanophore differentiation. In contrast, <italic toggle="yes">mc1r</italic> deletion may disrupt this regulation, resulting in premature and ectopic melanophore development in the ventral region. This is further supported by our observation that only the lighter, loosely distributed melanophore type was present in <italic toggle="yes">mc1r</italic>‐null tadpoles, while wild‐type tadpoles exhibited both light and dark melanophores. Previous studies have shown that <italic toggle="yes">mc1r</italic> mediates melanocortin signaling via a cAMP‐dependent pathway, which governs both pigment production and cell fate decisions in melanophores (Alan et al. <xref rid="pcmr70033-bib-0002" ref-type="bibr">2024</xref>; Alessandro and Elizabeth <xref rid="pcmr70033-bib-0003" ref-type="bibr">2024</xref>; Böhm et al. <xref rid="pcmr70033-bib-0006" ref-type="bibr">2025</xref>; Stefania et al. <xref rid="pcmr70033-bib-0044" ref-type="bibr">2024</xref>; Upadhyay et al. <xref rid="pcmr70033-bib-0048" ref-type="bibr">2024</xref>; Wenbo et al. <xref rid="pcmr70033-bib-0050" ref-type="bibr">2025</xref>; Mun et al. <xref rid="pcmr70033-bib-0030" ref-type="bibr">2023</xref>). Disruption of this pathway may interfere with the dorsal‐ventral gradient of melanogenic signals, effectively removing inhibitory cues that restrict ventral melanophore differentiation. This leads to a reversal or loss of the typical countershading pattern, where pigmentation is normally denser dorsally and reduced ventrally. Despite the similar melanosome ultrastructure observed in adult <italic toggle="yes">mc1r</italic>‐null and wild‐type frogs, the dorsal skin of mutants appeared significantly lighter. This discrepancy suggests that <italic toggle="yes">mc1r</italic> also regulates melanophore morphology or pigment content beyond early differentiation. Taken together, our findings reveal a novel role for <italic toggle="yes">mc1r</italic> in the spatial patterning of melanophores along the dorsal‐ventral axis and highlight metamorphosis as a critical window for pigment pattern establishment. Future studies should explore the underlying molecular and cellular mechanisms—such as the spatial expression profiles of melanophore lineage genes—to further dissect how <italic toggle="yes">mc1r</italic> influences regional melanophore development and patterning in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content>. Moreover, due to its extended metamorphic period, <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content> offers a longer window to observe pigment pattern establishment than zebrafish, making it an ideal model for future research.</p><p>In conclusion, <italic toggle="yes">mc1r</italic> knockout alters melanophore distribution and morphology post‐stage 43, advancing ventral pigmentation onset and disrupting normal countershading in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content>.</p></sec><sec id="pcmr70033-sec-0026"><title>Author Contributions</title><p>Rensen Ran and Yonglong Chen conceived the project. Rensen Ran and Lanxin Li performed the experiments and analyzed the data together with Jixuan Huang. Lanxin Li wrote the manuscript with input from all the authors. Yonglong Chen supervised and funded the study. Rensen Ran reviewed drafts of the manuscript. All authors read and approved the final manuscript.</p></sec><sec id="pcmr70033-sec-0021"><title>Ethics Statement</title><p>The authors have nothing to report.</p></sec><sec sec-type="conclusions" id="pcmr70033-sec-0022"><title>Consent</title><p>The authors have nothing to report.</p></sec><sec sec-type="COI-statement" id="pcmr70033-sec-0025"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="pcmr70033-supitem-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>
+Table S1.
+</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="PCMR-38-0-s002.xlsx" position="float" orientation="portrait"><?suppdata-name PCMR-38-0-s002.xlsx?><?suppdata-size 26595?><?suppdata-md5 a6dd7e0d65174e3bbb9208762a0001d0?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type vnd.openxmlformats-officedocument.spreadsheetml.sheet?><?suppdata-cloudpmc-urn urn:app:adfe/12171348/a6dd7e0d6517/PCMR-38-0-s002.xlsx?></media></supplementary-material><supplementary-material id="pcmr70033-supitem-0002" position="float" content-type="local-data" orientation="portrait"><caption><p>
+Figure S1.
+</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="PCMR-38-0-s001.docx" position="float" orientation="portrait"><?suppdata-name PCMR-38-0-s001.docx?><?suppdata-size 751437?><?suppdata-md5 476cc94fbba86cae1b053f3df1279e96?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type vnd.openxmlformats-officedocument.wordprocessingml.document?><?suppdata-cloudpmc-urn urn:app:adfe/12171348/476cc94fbba8/PCMR-38-0-s001.docx?></media></supplementary-material></sec></body><back><ack id="pcmr70033-sec-0027"><title>Acknowledgements</title><p>This work was supported by Shenzhen Science and Technology Program (JCYJ20210324120205015), Guangdong Provincial Key Laboratory of Cell Microenvironment and Disease Research (2017B030301018), and Shenzhen Key Laboratory of Cell Microenvironment (ZDSYS20140509142721429). We would like to express our gratitude to members in Chen lab for providing meaningful suggestions for this work. We thank Jiarong Wu for her technical support and Pingyuan Zou for frog husbandry.</p></ack><sec sec-type="data-availability" id="pcmr70033-sec-0024"><title>Data Availability Statement</title><p>The data that support the findings of this study are available from the corresponding author upon reasonable request.</p></sec><ref-list content-type="cited-references" id="pcmr70033-bibl-0001"><title>References</title><ref id="pcmr70033-bib-0001"><mixed-citation publication-type="journal" id="pcmr70033-cit-0001">
+<string-name name-style="western">
+<surname>Aberdam</surname>, <given-names>E.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Bertolotto</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. V.</given-names>
+<surname>Sviderskaya</surname>
+</string-name>, et al. <year>1998</year>. “<article-title>Involvement of Microphthalmia in the Inhibition of Melanocyte Lineage Differentiation and of Melanogenesis by Agouti Signal Protein</article-title>.” <source>Journal of Biological Chemistry</source>
+<volume>273</volume>, no. <issue>31</issue>: <fpage>19560</fpage>–<lpage>19565</lpage>. <pub-id pub-id-type="doi">10.1074/jbc.273.31.19560</pub-id>.<pub-id pub-id-type="pmid">9677380</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0002"><mixed-citation publication-type="journal" id="pcmr70033-cit-0002">
+<string-name name-style="western">
+<surname>Alan</surname>, <given-names>G.‐E.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L. R.</given-names>
+<surname>Heather</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. A.</given-names>
+<surname>Jaren</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>A Ball Python Colour Morph Implicates MC1R in Melanophore‐Xanthophore Distribution and Pattern Formation</article-title>.” <source>Pigment Cell &amp; Melanoma Research</source>
+<volume>38</volume>, no. <issue>1</issue>: <elocation-id>e13215</elocation-id>. <pub-id pub-id-type="doi">10.1111/pcmr.13215</pub-id>.<pub-id pub-id-type="pmid">39609249</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0003"><mixed-citation publication-type="journal" id="pcmr70033-cit-0003">
+<string-name name-style="western">
+<surname>Alessandro</surname>, <given-names>B.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Elizabeth</surname>
+</string-name>. <year>2024</year>. “<article-title>Melanocyte Lineage Dynamics in Development, Growth and Disease</article-title>.” <source>Development (Cambridge, England)</source>
+<volume>151</volume>, no. <issue>15</issue>: <elocation-id>dev201266</elocation-id>. <pub-id pub-id-type="doi">10.1242/dev.201266</pub-id>.<pub-id pub-id-type="pmid">39092608</pub-id>
+<pub-id pub-id-type="pmcid">PMC11317096</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0004"><mixed-citation publication-type="journal" id="pcmr70033-cit-0004">
+<string-name name-style="western">
+<surname>Bagnara</surname>, <given-names>J. T.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Taylor</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. E.</given-names>
+<surname>Hadley</surname>
+</string-name>. <year>1968</year>. “<article-title>Dermal Chromatophore Unit</article-title>.” <source>Journal of Cell Biology</source>
+<volume>38</volume>, no. <issue>1</issue>: <fpage>67</fpage>–<lpage>79</lpage>. <pub-id pub-id-type="doi">10.1083/jcb.38.1.67</pub-id>.<pub-id pub-id-type="pmid">5691979</pub-id>
+<pub-id pub-id-type="pmcid">PMC2107474</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0005"><mixed-citation publication-type="journal" id="pcmr70033-cit-0005">
+<string-name name-style="western">
+<surname>Baxter</surname>, <given-names>L. L.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>W. J.</given-names>
+<surname>Pavan</surname>
+</string-name>. <year>2003</year>. “<article-title>Pmell17 Expression Is Mitf‐Dependent and Reveals Cranial Melanoblast Migration During Murine Development</article-title>.” <source>Gene Expression Patterns</source>
+<volume>3</volume>, no. <issue>6</issue>: <fpage>703</fpage>–<lpage>707</lpage>. <pub-id pub-id-type="doi">10.1016/j.modgep.2003.07.002</pub-id>.<pub-id pub-id-type="pmid">14643677</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0006"><mixed-citation publication-type="journal" id="pcmr70033-cit-0006">
+<string-name name-style="western">
+<surname>Böhm</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Robert</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Malhotra</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Clément</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Farooqi</surname>
+</string-name>. <year>2025</year>. “<article-title>An Overview of Benefits and Risks of Chronic Melanocortin‐1 Receptor Activation</article-title>.” <source>Journal of the European Academy of Dermatology and Venereology</source>
+<volume>39</volume>, no. <issue>1</issue>: <fpage>39</fpage>–<lpage>51</lpage>. <pub-id pub-id-type="doi">10.1111/jdv.20269</pub-id>.<pub-id pub-id-type="pmid">39082868</pub-id>
+<pub-id pub-id-type="pmcid">PMC11664455</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0007"><mixed-citation publication-type="journal" id="pcmr70033-cit-0007">
+<string-name name-style="western">
+<surname>Bowes</surname>, <given-names>J. B.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K. A.</given-names>
+<surname>Snyder</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Segerdell</surname>
+</string-name>, et al. <year>2010</year>. “<article-title>Xenbase: Gene Expression and Improved Integration</article-title>.” <source>Nucleic Acids Research</source>
+<volume>38</volume>: <fpage>D607</fpage>–<lpage>D612</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gkp953</pub-id>.<pub-id pub-id-type="pmid">19884130</pub-id>
+<pub-id pub-id-type="pmcid">PMC2808955</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0008"><mixed-citation publication-type="journal" id="pcmr70033-cit-0008">
+<string-name name-style="western">
+<surname>Broadbent</surname>, <given-names>J.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>E. M.</given-names>
+<surname>Read</surname>
+</string-name>. <year>1999</year>. “<article-title>Wholemount In Situ Hybridization of Xenopus and Zebrafish Embryos</article-title>.” <source>Methods in Molecular Biology</source>
+<volume>127</volume>: <fpage>57</fpage>–<lpage>67</lpage>. <pub-id pub-id-type="doi">10.1385/1-59259-678-9:57</pub-id>.<pub-id pub-id-type="pmid">10503224</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0009"><mixed-citation publication-type="journal" id="pcmr70033-cit-0009">
+<string-name name-style="western">
+<surname>Bultman</surname>, <given-names>S. J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>E. J.</given-names>
+<surname>Michaud</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R. P.</given-names>
+<surname>Woychik</surname>
+</string-name>. <year>1992</year>. “<article-title>Molecular Characterization of the Mouse Agouti Locus</article-title>.” <source>Cell</source>
+<volume>71</volume>, no. <issue>7</issue>: <fpage>1195</fpage>–<lpage>1204</lpage>. <pub-id pub-id-type="doi">10.1016/S0092-8674(05)80067-4</pub-id>.<pub-id pub-id-type="pmid">1473152</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0010"><mixed-citation publication-type="journal" id="pcmr70033-cit-0010">
+<string-name name-style="western">
+<surname>Cal</surname>, <given-names>L.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Suarez‐Bregua</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Braasch</surname>
+</string-name>, et al. <year>2019</year>. “<article-title>Loss‐Of‐Function Mutations in the Melanocortin 1 Receptor Cause Disruption of Dorso‐Ventral Countershading in Teleost Fish</article-title>.” <source>Pigment Cell &amp; Melanoma Research</source>
+<volume>32</volume>, no. <issue>6</issue>: <fpage>817</fpage>–<lpage>828</lpage>. <pub-id pub-id-type="doi">10.1111/pcmr.12806</pub-id>.<pub-id pub-id-type="pmid">31251842</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0011"><mixed-citation publication-type="journal" id="pcmr70033-cit-0011">
+<string-name name-style="western">
+<surname>Cal</surname>, <given-names>L.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Suarez‐Bregua</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Comesana</surname>
+</string-name>, et al. <year>2019</year>. “<article-title>Countershading in Zebrafish Results From an Asip1 Controlled Dorsoventral Gradient of Pigment Cell Differentiation</article-title>.” <source>Scientific Reports</source>
+<volume>9</volume>, no. <issue>1</issue>: <elocation-id>3449</elocation-id>. <pub-id pub-id-type="doi">10.1038/s41598-019-40251-z</pub-id>.<pub-id pub-id-type="pmid">30837630</pub-id>
+<pub-id pub-id-type="pmcid">PMC6401153</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0012"><mixed-citation publication-type="journal" id="pcmr70033-cit-0012">
+<string-name name-style="western">
+<surname>Carotenuto</surname>, <given-names>R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Pallotta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Tussellino</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Fogliano</surname>
+</string-name>. <year>2023</year>. “<article-title>
+<italic toggle="yes">Xenopus laevis</italic> (Daudin, 1802) as a Model Organism for Bioscience: A Historic Review and Perspective</article-title>.” <source>Biology</source>
+<volume>12</volume>, no. <issue>6</issue>: <elocation-id>890</elocation-id>. <pub-id pub-id-type="doi">10.3390/biology12060890</pub-id>.<pub-id pub-id-type="pmid">37372174</pub-id>
+<pub-id pub-id-type="pmcid">PMC10295250</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0013"><mixed-citation publication-type="journal" id="pcmr70033-cit-0013">
+<string-name name-style="western">
+<surname>Chen</surname>, <given-names>S. Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Zhu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. Q.</given-names>
+<surname>Yin</surname>
+</string-name>, et al. <year>2017</year>. “<article-title>Palmitoylation‐Dependent Activation of MC1R Prevents Melanomagenesis</article-title>.” <source>Nature</source>
+<volume>549</volume>, no. <issue>7672</issue>: <fpage>399</fpage>. <pub-id pub-id-type="doi">10.1038/nature23887</pub-id>.<pub-id pub-id-type="pmid">28869973</pub-id>
+<pub-id pub-id-type="pmcid">PMC5902815</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0014"><mixed-citation publication-type="journal" id="pcmr70033-cit-0014">
+<string-name name-style="western">
+<surname>Conrad</surname>, <given-names>M. P.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Piontek</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Günzel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Fromm</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Krug</surname>
+</string-name>. <year>2016</year>. “<article-title>Molecular Basis of Claudin‐17 Anion Selectivity</article-title>.” <source>Cellular and Molecular Life Sciences</source>
+<volume>73</volume>, no. <issue>1</issue>: <fpage>185</fpage>–<lpage>200</lpage>. <pub-id pub-id-type="doi">10.1007/s00018-015-1987-y</pub-id>.<pub-id pub-id-type="pmid">26194246</pub-id>
+<pub-id pub-id-type="pmcid">PMC11108356</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0015"><mixed-citation publication-type="journal" id="pcmr70033-cit-0015">
+<string-name name-style="western">
+<surname>Cui</surname>, <given-names>R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>H. R.</given-names>
+<surname>Widlund</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Feige</surname>
+</string-name>, et al. <year>2007</year>. “<article-title>Central Role of p53 in the Suntan Response and Pathologic Hyperpigmentation</article-title>.” <source>Cell</source>
+<volume>128</volume>, no. <issue>5</issue>: <fpage>853</fpage>–<lpage>864</lpage>. <pub-id pub-id-type="doi">10.1016/j.cell.2006.12.045</pub-id>.<pub-id pub-id-type="pmid">17350573</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0016"><mixed-citation publication-type="journal" id="pcmr70033-cit-0016">
+<string-name name-style="western">
+<surname>D'Mello</surname>, <given-names>S. A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>G. J.</given-names>
+<surname>Finlay</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. C.</given-names>
+<surname>Baguley</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. E.</given-names>
+<surname>Askarian‐Amiri</surname>
+</string-name>. <year>2016</year>. “<article-title>Signaling Pathways in Melanogenesis</article-title>.” <source>International Journal of Molecular Sciences</source>
+<volume>17</volume>, no. <issue>7</issue>: <elocation-id>1144</elocation-id>. <pub-id pub-id-type="doi">10.3390/ijms17071144</pub-id>.<pub-id pub-id-type="pmid">27428965</pub-id>
+<pub-id pub-id-type="pmcid">PMC4964517</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0017"><mixed-citation publication-type="journal" id="pcmr70033-cit-0017">
+<string-name name-style="western">
+<surname>El Mir</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Nasrallah</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Thézé</surname>
+</string-name>, et al. <year>2025</year>. “<article-title>Xenopus as a Model System for Studying Pigmentation and Pigmentary Disorders</article-title>.” <source>Pigment Cell &amp; Melanoma Research</source>
+<volume>38</volume>, no. <issue>1</issue>: <elocation-id>e13178</elocation-id>. <pub-id pub-id-type="doi">10.1111/pcmr.13178</pub-id>.<pub-id pub-id-type="pmid">38849973</pub-id>
+<pub-id pub-id-type="pmcid">PMC11681847</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0018"><mixed-citation publication-type="journal" id="pcmr70033-cit-0018">
+<string-name name-style="western">
+<surname>Ellen E</surname>, <given-names>Q.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Mark D</surname>
+</string-name>. <year>2008</year>. “<article-title>SLC24A5: Exchanging Genetic and Biochemical Knowledge</article-title>.” <source>Pigment Cell &amp; Melanoma Research</source>
+<volume>21</volume>, no. <issue>3</issue>: <fpage>344</fpage>–<lpage>345</lpage>. <pub-id pub-id-type="doi">10.1111/j.1755-148X.2008.00456.x</pub-id>.<pub-id pub-id-type="pmid">18397209</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0019"><mixed-citation publication-type="journal" id="pcmr70033-cit-0019">
+<string-name name-style="western">
+<surname>Fujii</surname>, <given-names>R.</given-names>
+</string-name>
+<year>2000</year>. “<article-title>The Regulation of Motile Activity in Fish Chromatophores</article-title>.” <source>Pigment Cell Research</source>
+<volume>13</volume>, no. <issue>5</issue>: <fpage>300</fpage>–<lpage>319</lpage>. <pub-id pub-id-type="doi">10.1034/j.1600-0749.2000.130502.x</pub-id>.<pub-id pub-id-type="pmid">11041206</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0020"><mixed-citation publication-type="journal" id="pcmr70033-cit-0020">
+<string-name name-style="western">
+<surname>Graça</surname>, <given-names>R.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Michael S</surname>
+</string-name>. <year>2007</year>. “<article-title>Melanosomes‐Dark Organelles Enlighten Endosomal Membrane Transport</article-title>.” <source>Nature Reviews Molecular Cell Biology</source>
+<volume>8</volume>, no. <issue>10</issue>: <fpage>786</fpage>–<lpage>797</lpage>. <pub-id pub-id-type="doi">10.1038/nrm2258</pub-id>.<pub-id pub-id-type="pmid">17878918</pub-id>
+<pub-id pub-id-type="pmcid">PMC2786984</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0021"><mixed-citation publication-type="journal" id="pcmr70033-cit-0021">
+<string-name name-style="western">
+<surname>Guida</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Guida</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C. R.</given-names>
+<surname>Goding</surname>
+</string-name>. <year>2022</year>. “<article-title>MC1R Functions, Expression, and Implications for Targeted Therapy</article-title>.” <source>Journal of Investigative Dermatology</source>
+<volume>142</volume>, no. <issue>2</issue>: <fpage>293</fpage>–<lpage>302</lpage>. <pub-id pub-id-type="doi">10.1016/j.jid.2021.06.018</pub-id>.<pub-id pub-id-type="pmid">34362555</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0022"><mixed-citation publication-type="journal" id="pcmr70033-cit-0022">
+<string-name name-style="western">
+<surname>Jane</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Giovanna</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Gillian M</surname>
+</string-name>. <year>2004</year>. “<article-title>Linking Albinism and Immunity: The Secrets of Secretory Lysosomes</article-title>.” <source>Science</source>
+<volume>305</volume>, no. <issue>5680</issue>: <fpage>55</fpage>–<lpage>59</lpage>. <pub-id pub-id-type="doi">10.1126/science.1095291</pub-id>.<pub-id pub-id-type="pmid">15232098</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0023"><mixed-citation publication-type="journal" id="pcmr70033-cit-0023">
+<string-name name-style="western">
+<surname>Krug</surname>, <given-names>S. M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Günzel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. P.</given-names>
+<surname>Conrad</surname>
+</string-name>, et al. <year>2012</year>. “<article-title>Claudin‐17 Forms Tight Junction Channels With Distinct Anion Selectivity</article-title>.” <source>Cellular and Molecular Life Sciences</source>
+<volume>69</volume>, no. <issue>16</issue>: <fpage>2765</fpage>–<lpage>2778</lpage>. <pub-id pub-id-type="doi">10.1007/s00018-012-0949-x</pub-id>.<pub-id pub-id-type="pmid">22402829</pub-id>
+<pub-id pub-id-type="pmcid">PMC11115135</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0024"><mixed-citation publication-type="journal" id="pcmr70033-cit-0024">
+<string-name name-style="western">
+<surname>Liang</surname>, <given-names>W.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Jiang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Ran</surname>
+</string-name>. <year>2024</year>. “<article-title>Decoding the Molecular Mechanisms of BRAFV600E‐Induced Nevi Formation</article-title>.” <source>Biomedical and Environmental Sciences</source>
+<volume>37</volume>, no. <issue>7</issue>: <fpage>774</fpage>. <pub-id pub-id-type="doi">10.3967/bes2024.095</pub-id>.<pub-id pub-id-type="pmid">39198241</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0025"><mixed-citation publication-type="journal" id="pcmr70033-cit-0025">
+<string-name name-style="western">
+<surname>Liliana</surname>, <given-names>D. A.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Matthew D</surname>
+</string-name>. <year>2018</year>. “<article-title>Melanosomes: Biogenesis, Properties, and Evolution of an Ancient Organelle</article-title>.” <source>Physiological Reviews</source>
+<volume>99</volume>, no. <issue>1</issue>: <fpage>1</fpage>–<lpage>19</lpage>. <pub-id pub-id-type="doi">10.1152/physrev.00059.2017</pub-id>.<pub-id pub-id-type="pmid">30255724</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0026"><mixed-citation publication-type="journal" id="pcmr70033-cit-0026">
+<string-name name-style="western">
+<surname>Manceau</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>V. S.</given-names>
+<surname>Domingues</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Mallarino</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H. E.</given-names>
+<surname>Hoekstra</surname>
+</string-name>. <year>2011</year>. “<article-title>The Developmental Role of Agouti in Color Pattern Evolution</article-title>.” <source>Science</source>
+<volume>331</volume>, no. <issue>6020</issue>: <fpage>1062</fpage>–<lpage>1065</lpage>. <pub-id pub-id-type="doi">10.1126/science.1200684</pub-id>.<pub-id pub-id-type="pmid">21350176</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0027"><mixed-citation publication-type="journal" id="pcmr70033-cit-0027">
+<string-name name-style="western">
+<surname>Mitra</surname>, <given-names>D.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Luo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Morgan</surname>
+</string-name>, et al. <year>2012</year>. “<article-title>An Ultraviolet‐Radiation‐Independent Pathway to Melanoma Carcinogenesis in the Red Hair/Fair Skin Background</article-title>.” <source>Nature</source>
+<volume>491</volume>, no. <issue>7424</issue>: <fpage>449</fpage>–<lpage>453</lpage>. <pub-id pub-id-type="doi">10.1038/nature11624</pub-id>.<pub-id pub-id-type="pmid">23123854</pub-id>
+<pub-id pub-id-type="pmcid">PMC3521494</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0028"><mixed-citation publication-type="journal" id="pcmr70033-cit-0028">
+<string-name name-style="western">
+<surname>Mort</surname>, <given-names>R. L.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>I. J.</given-names>
+<surname>Jackson</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>E. E.</given-names>
+<surname>Patton</surname>
+</string-name>. <year>2015</year>. “<article-title>The Melanocyte Lineage in Development and Disease</article-title>.” <source>Development</source>
+<volume>142</volume>, no. <issue>4</issue>: <fpage>620</fpage>–<lpage>632</lpage>. <pub-id pub-id-type="doi">10.1242/dev.106567</pub-id>.<pub-id pub-id-type="pmid">25670789</pub-id>
+<pub-id pub-id-type="pmcid">PMC4325379</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0029"><mixed-citation publication-type="journal" id="pcmr70033-cit-0029">
+<string-name name-style="western">
+<surname>Mountjoy</surname>, <given-names>K. G.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L. S.</given-names>
+<surname>Robbins</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. T.</given-names>
+<surname>Mortrud</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R. D.</given-names>
+<surname>Cone</surname>
+</string-name>. <year>1992</year>. “<article-title>The Cloning of a Family of Genes That Encode the Melanocortin Receptors</article-title>.” <source>Science</source>
+<volume>257</volume>, no. <issue>5074</issue>: <fpage>1248</fpage>–<lpage>1251</lpage>. <pub-id pub-id-type="doi">10.1126/science.1325670</pub-id>.<pub-id pub-id-type="pmid">1325670</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0030"><mixed-citation publication-type="journal" id="pcmr70033-cit-0030">
+<string-name name-style="western">
+<surname>Mun</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Kim</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Shin</surname>
+</string-name>. <year>2023</year>. “<article-title>Melanocortin 1 Receptor (MC1R): Pharmacological and Therapeutic Aspects</article-title>.” <source>International Journal of Molecular Sciences</source>
+<volume>24</volume>, no. <issue>15</issue>: <elocation-id>12152</elocation-id>. <pub-id pub-id-type="doi">10.3390/ijms241512152</pub-id>.<pub-id pub-id-type="pmid">37569558</pub-id>
+<pub-id pub-id-type="pmcid">PMC10418475</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0031"><mixed-citation publication-type="journal" id="pcmr70033-cit-0031">
+<string-name name-style="western">
+<surname>Murase</surname>, <given-names>D.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Hachiya</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Amano</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Ohuchi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kitahara</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Takema</surname>
+</string-name>. <year>2009</year>. “<article-title>The Essential Role of p53 in Hyperpigmentation of the Skin via Regulation of Paracrine Melanogenic Cytokine Receptor Signaling*</article-title>.” <source>Journal of Biological Chemistry</source>
+<volume>284</volume>, no. <issue>7</issue>: <fpage>4343</fpage>–<lpage>4353</lpage>. <pub-id pub-id-type="doi">10.1074/jbc.M805570200</pub-id>.<pub-id pub-id-type="pmid">19098008</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0032"><mixed-citation publication-type="book" id="pcmr70033-cit-0032">
+<string-name name-style="western">
+<surname>Nieuwkoop</surname>, <given-names>P. D.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Faber</surname>
+</string-name>. <year>1994</year>. “<part-title>Systematical and Chronological Survey of the Development From the Fertilized Egg Till the End of Metamorphosis</part-title>.” In <source>Normal Table of Xenopus laevis Daudin</source>, <edition designator="1">1st ed.</edition>
+<publisher-name>Taylor and Francis Group</publisher-name>.</mixed-citation></ref><ref id="pcmr70033-bib-0033"><mixed-citation publication-type="journal" id="pcmr70033-cit-0033">
+<string-name name-style="western">
+<surname>Peterson</surname>, <given-names>A. F.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Ingram</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. J.</given-names>
+<surname>Huang</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Systematic Analysis of the MAPK Signaling Network Reveals MAP3K‐Driven Control of Cell Fate</article-title>.” <source>Cell Systems</source>
+<volume>13</volume>, no. <issue>11</issue>: <fpage>885</fpage>. <pub-id pub-id-type="doi">10.1016/j.cels.2022.10.003</pub-id>.<pub-id pub-id-type="pmid">36356576</pub-id>
+<pub-id pub-id-type="pmcid">PMC9923805</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0034"><mixed-citation publication-type="journal" id="pcmr70033-cit-0034">
+<string-name name-style="western">
+<surname>Ran</surname>, <given-names>R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Cheng</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>High Frequency of Melanoma in cdkn2b−/−/tp53−/− <italic toggle="yes">Xenopus tropicalis</italic>
+</article-title>.” <source>Theranostics</source>
+<volume>14</volume>, no. <issue>19</issue>: <fpage>7470</fpage>–<lpage>7487</lpage>. <pub-id pub-id-type="doi">10.7150/thno.97475</pub-id>.<pub-id pub-id-type="pmid">39659584</pub-id>
+<pub-id pub-id-type="pmcid">PMC11626935</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0035"><mixed-citation publication-type="journal" id="pcmr70033-cit-0035">
+<string-name name-style="western">
+<surname>Ran</surname>, <given-names>R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Shi</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Disruption of tp53 Leads to Cutaneous Nevus and Melanoma Formation in <italic toggle="yes">Xenopus tropicalis</italic>
+</article-title>.” <source>Molecular Oncology</source>
+<volume>16</volume>, no. <issue>19</issue>: <fpage>3554</fpage>–<lpage>3567</lpage>. <pub-id pub-id-type="doi">10.1002/1878-0261.13301</pub-id>.<pub-id pub-id-type="pmid">35981147</pub-id>
+<pub-id pub-id-type="pmcid">PMC9533689</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0036"><mixed-citation publication-type="journal" id="pcmr70033-cit-0036">
+<string-name name-style="western">
+<surname>Ran</surname>, <given-names>R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Huang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>He</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Chen</surname>
+</string-name>. <year>2024</year>. “<article-title>Revealing Mitf Functions and Visualizing Allografted Tumor Metastasis in Colorless and Immunodeficient <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Xenopus tropicalis</italic>
+</styled-content>
+</article-title>.” <source>Communications Biology</source>
+<volume>7</volume>, no. <issue>1</issue>: <fpage>275</fpage>. <pub-id pub-id-type="doi">10.1038/s42003-024-05967-3</pub-id>.<pub-id pub-id-type="pmid">38443437</pub-id>
+<pub-id pub-id-type="pmcid">PMC10915148</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0037"><mixed-citation publication-type="journal" id="pcmr70033-cit-0037">
+<string-name name-style="western">
+<surname>Richardson</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P. R.</given-names>
+<surname>Lundegaard</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N. L.</given-names>
+<surname>Reynolds</surname>
+</string-name>, et al. <year>2008</year>. “<article-title>mc1r Pathway Regulation of Zebrafish Melanosome Dispersion</article-title>.” <source>Zebrafish</source>
+<volume>5</volume>, no. <issue>4</issue>: <fpage>289</fpage>–<lpage>295</lpage>. <pub-id pub-id-type="doi">10.1089/zeb.2008.0541</pub-id>.<pub-id pub-id-type="pmid">19133827</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0038"><mixed-citation publication-type="journal" id="pcmr70033-cit-0038">
+<string-name name-style="western">
+<surname>Robbins</surname>, <given-names>L. S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. H.</given-names>
+<surname>Nadeau</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. R.</given-names>
+<surname>Johnson</surname>
+</string-name>, et al. <year>1993</year>. “<article-title>Pigmentation Phenotypes of Variant Extension Locus Alleles Result From Point Mutations That Alter Msh Receptor Function</article-title>.” <source>Cell</source>
+<volume>72</volume>, no. <issue>6</issue>: <fpage>827</fpage>–<lpage>834</lpage>. <pub-id pub-id-type="doi">10.1016/0092-8674(93)90572-8</pub-id>.<pub-id pub-id-type="pmid">8458079</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0039"><mixed-citation publication-type="journal" id="pcmr70033-cit-0039">
+<string-name name-style="western">
+<surname>Searle</surname>, <given-names>A. G.</given-names>
+</string-name>
+<year>1968</year>. “<article-title>An Extension Series in the Mouse</article-title>.” <source>Journal of Heredity</source>
+<volume>59</volume>, no. <issue>6</issue>: <fpage>341</fpage>–<lpage>342</lpage>. <pub-id pub-id-type="doi">10.1093/oxfordjournals.jhered.a107739</pub-id>.<pub-id pub-id-type="pmid">5713934</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0040"><mixed-citation publication-type="journal" id="pcmr70033-cit-0040">
+<string-name name-style="western">
+<surname>Slominski</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P. M.</given-names>
+<surname>Plonka</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Pisarchik</surname>
+</string-name>, et al. <year>2005</year>. “<article-title>Preservation of Eumelanin Hair Pigmentation in Proopiomelanocortin‐Deficient Mice on a Nonagouti (a/a) Genetic Background</article-title>.” <source>Endocrinology</source>
+<volume>146</volume>, no. <issue>3</issue>: <fpage>1245</fpage>–<lpage>1253</lpage>. <pub-id pub-id-type="doi">10.1210/en.2004-0733</pub-id>.<pub-id pub-id-type="pmid">15564334</pub-id>
+<pub-id pub-id-type="pmcid">PMC1201461</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0041"><mixed-citation publication-type="journal" id="pcmr70033-cit-0041">
+<string-name name-style="western">
+<surname>Slominski</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D. J.</given-names>
+<surname>Tobin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Shibahara</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Wortsman</surname>
+</string-name>. <year>2004</year>. “<article-title>Melanin Pigmentation in Mammalian Skin and Its Hormonal Regulation</article-title>.” <source>Physiological Reviews</source>
+<volume>84</volume>, no. <issue>4</issue>: <fpage>1155</fpage>–<lpage>1228</lpage>. <pub-id pub-id-type="doi">10.1152/physrev.00044.2003</pub-id>.<pub-id pub-id-type="pmid">15383650</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0042"><mixed-citation publication-type="journal" id="pcmr70033-cit-0042">
+<string-name name-style="western">
+<surname>Slominski</surname>, <given-names>R. M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Sarna</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. M.</given-names>
+<surname>Płonka</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Raman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. A.</given-names>
+<surname>Brożyna</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A. T.</given-names>
+<surname>Slominski</surname>
+</string-name>. <year>2022</year>. “<article-title>Melanoma, Melanin, and Melanogenesis: The Yin and Yang Relationship</article-title>.” <source>Frontiers in Oncology</source>
+<volume>12</volume>: <elocation-id>842496</elocation-id>. <pub-id pub-id-type="doi">10.3389/fonc.2022.842496</pub-id>.<pub-id pub-id-type="pmid">35359389</pub-id>
+<pub-id pub-id-type="pmcid">PMC8963986</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0043"><mixed-citation publication-type="journal" id="pcmr70033-cit-0043">
+<string-name name-style="western">
+<surname>Steel</surname>, <given-names>K. P.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D. R.</given-names>
+<surname>Davidson</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>I. J.</given-names>
+<surname>Jackson</surname>
+</string-name>. <year>1992</year>. “<article-title>Trp‐2/Dt, a New Early Melanoblast Marker, Shows That Steel Growth‐Factor (C‐Kit Ligand) is a Survival Factor</article-title>.” <source>Development (Cambridge, England)</source>
+<volume>115</volume>, no. <issue>4</issue>: <fpage>1111</fpage>–<lpage>1119</lpage>. <pub-id pub-id-type="doi">10.1242/dev.115.4.1111</pub-id>.<pub-id pub-id-type="pmid">1280558</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0044"><mixed-citation publication-type="journal" id="pcmr70033-cit-0044">
+<string-name name-style="western">
+<surname>Stefania</surname>, <given-names>G.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Susana</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. R.</given-names>
+<surname>Chiara</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>Melanocortin‐1 Receptor (MC1R): A Review for Dermatologists</article-title>.” <source>Italian Journal of Dermatology and Venereology</source>
+<volume>159</volume>, no. <issue>3</issue>: <fpage>285</fpage>–<lpage>293</lpage>. <pub-id pub-id-type="doi">10.23736/s2784-8671.24.07839-3</pub-id>.<pub-id pub-id-type="pmid">38376504</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0045"><mixed-citation publication-type="journal" id="pcmr70033-cit-0045">
+<string-name name-style="western">
+<surname>Sturm</surname>, <given-names>R. A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D. L.</given-names>
+<surname>Duffy</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N. F.</given-names>
+<surname>Box</surname>
+</string-name>, et al. <year>2003</year>. “<article-title>The Role of Melanocortin‐1 Receptor Polymorphism in Skin Cancer Risk Phenotypes</article-title>.” <source>Pigment Cell Research</source>
+<volume>16</volume>, no. <issue>3</issue>: <fpage>266</fpage>–<lpage>272</lpage>. <pub-id pub-id-type="doi">10.1034/j.1600-0749.2003.00041.x</pub-id>.<pub-id pub-id-type="pmid">12753400</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0046"><mixed-citation publication-type="journal" id="pcmr70033-cit-0046">
+<string-name name-style="western">
+<surname>Szklarczyk</surname>, <given-names>D.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Kirsch</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Koutrouli</surname>
+</string-name>, et al. <year>2023</year>. “<article-title>The STRING Database in 2023: Protein‐Protein Association Networks and Functional Enrichment Analyses for Any Sequenced Genome of Interest</article-title>.” <source>Nucleic Acids Research</source>
+<volume>51</volume>, no. <issue>D1</issue>: <fpage>D638</fpage>–<lpage>D646</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gkac1000</pub-id>.<pub-id pub-id-type="pmid">36370105</pub-id>
+<pub-id pub-id-type="pmcid">PMC9825434</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0047"><mixed-citation publication-type="journal" id="pcmr70033-cit-0047">
+<string-name name-style="western">
+<surname>Tai</surname>, <given-names>X.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Yao</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Pharmacological Modulation of Melanocortin 1 Receptor Signaling by Mrap Proteins in <italic toggle="yes">Xenopus tropicalis</italic>
+</article-title>.” <source>Frontiers in Endocrinology</source>
+<volume>13</volume>: <elocation-id>892407</elocation-id>. <pub-id pub-id-type="doi">10.3389/fendo.2022.892407</pub-id>.<pub-id pub-id-type="pmid">35795143</pub-id>
+<pub-id pub-id-type="pmcid">PMC9251544</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0048"><mixed-citation publication-type="journal" id="pcmr70033-cit-0048">
+<string-name name-style="western">
+<surname>Upadhyay</surname>, <given-names>P. R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>V. B.</given-names>
+<surname>Swope</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. J.</given-names>
+<surname>Starner</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Koikov</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Z. A.</given-names>
+<surname>Abdel‐Malek</surname>
+</string-name>. <year>2024</year>. “<article-title>Journey Through the Spectacular Landscape of Melanocortin 1 Receptor</article-title>.” <source>Pigment Cell &amp; Melanoma Research</source>
+<volume>37</volume>, no. <issue>5</issue>: <fpage>667</fpage>–<lpage>680</lpage>. <pub-id pub-id-type="doi">10.1111/pcmr.13180</pub-id>.<pub-id pub-id-type="pmid">38857302</pub-id>
+<pub-id pub-id-type="pmcid">PMC11479856</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0049"><mixed-citation publication-type="journal" id="pcmr70033-cit-0049">
+<string-name name-style="western">
+<surname>Vrieling</surname>, <given-names>H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D. M. J.</given-names>
+<surname>Duhl</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. E.</given-names>
+<surname>Millar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. A.</given-names>
+<surname>Miller</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G. S.</given-names>
+<surname>Barsh</surname>
+</string-name>. <year>1994</year>. “<article-title>Differences in Dorsal and Ventral Pigmentation Result From Regional Expression of the Mouse Agouti Gene</article-title>.” <source>Proceedings of the National Academy of Sciences of the United States of America</source>
+<volume>91</volume>, no. <issue>12</issue>: <fpage>5667</fpage>–<lpage>5671</lpage>. <pub-id pub-id-type="doi">10.1073/pnas.91.12.5667</pub-id>.<pub-id pub-id-type="pmid">8202545</pub-id>
+<pub-id pub-id-type="pmcid">PMC44057</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0050"><mixed-citation publication-type="journal" id="pcmr70033-cit-0050">
+<string-name name-style="western">
+<surname>Wenbo</surname>, <given-names>F.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Qingtong</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Chang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Dehua</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Ming‐Wei</surname>
+</string-name>. <year>2025</year>. “<article-title>Structural Basis for the Constitutive Activity of the Melanocortin Receptor Family</article-title>.” <source>Structure</source>
+<volume>33</volume>, no. <issue>6</issue>: <fpage>1074</fpage>–<lpage>1087</lpage>. <pub-id pub-id-type="doi">10.1016/j.str.2025.03.004</pub-id>.<pub-id pub-id-type="pmid">40157361</pub-id>
+</mixed-citation></ref><ref id="pcmr70033-bib-0051"><mixed-citation publication-type="journal" id="pcmr70033-cit-0051">
+<string-name name-style="western">
+<surname>Willsey</surname>, <given-names>H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Seaby</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Godwin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Ennis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Guille</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Grainger</surname>
+</string-name>. <year>2024</year>. “<article-title>Modelling Human Genetic Disorders in <italic toggle="yes">Xenopus tropicalis</italic>
+</article-title>.” <source>Disease Models &amp; Mechanisms</source>
+<volume>17</volume>, no. <issue>5</issue>: <elocation-id>dmm050754</elocation-id>. <pub-id pub-id-type="doi">10.1242/dmm.050754</pub-id>.<pub-id pub-id-type="pmid">38832520</pub-id>
+<pub-id pub-id-type="pmcid">PMC11179720</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0052"><mixed-citation publication-type="journal" id="pcmr70033-cit-0052">
+<string-name name-style="western">
+<surname>Yang</surname>, <given-names>Y.</given-names>
+</string-name>
+<year>2011</year>. “<article-title>Structure, Function and Regulation of the Melanocortin Receptors</article-title>.” <source>European Journal of Pharmacology</source>
+<volume>660</volume>, no. <issue>1</issue>: <fpage>125</fpage>–<lpage>130</lpage>. <pub-id pub-id-type="doi">10.1016/j.ejphar.2010.12.020</pub-id>.<pub-id pub-id-type="pmid">21208602</pub-id>
+<pub-id pub-id-type="pmcid">PMC3095696</pub-id></mixed-citation></ref><ref id="pcmr70033-bib-0053"><mixed-citation publication-type="journal" id="pcmr70033-cit-0053">
+<string-name name-style="western">
+<surname>Yi</surname>, <given-names>H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Liang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Yang</surname>
+</string-name>, et al. <year>2025</year>. “<article-title>Melanin Deposition and Key Molecular Features in <italic toggle="yes">Xenopus tropicalis</italic> Oocytes</article-title>.” <source>BMC Biology</source>
+<volume>23</volume>, no. <issue>1</issue>: <fpage>62</fpage>. <pub-id pub-id-type="doi">10.1186/s12915-025-02168-0</pub-id>.<pub-id pub-id-type="pmid">40016733</pub-id>
+<pub-id pub-id-type="pmcid">PMC11866844</pub-id></mixed-citation></ref></ref-list></back></article>

@@ -1,0 +1,58 @@
+cluster_id	entry_id	raw_hit_genes	n_raw	shielded_hit_genes	n_shielded	n_remaining	rank_pre_shield	rank_post_shield	top3_flag_post	immune_support_flag
+Q6::13	Keratocytes	NNMT	1		0	1	2	1	True	
+Q6::13	Pericyte	MGP	1	MGP	1	0	1		False	
+Q6::15	Keratocytes	ALDH3A1;KERA;NNMT	3	ALDH3A1	1	2	1	1	True	
+Q6::15	face_v6::Keratocytes	KERA	1		0	1	2	2	True	
+Q6::24	Myofibroblast	ACTA2;MYL9;TAGLN;TPM2	4	ACTA2;MYL9;TAGLN;TPM2	4	0	1		False	
+Q6::24	SMC	ACTA2;MYL9;TAGLN	3	ACTA2;MYL9;TAGLN	3	0	2		False	
+Q6::24	face_v6::SMC	MYL9	1	MYL9	1	0	3		False	
+Q6::6	Mac_DAM_LAM	FTH1	1	FTH1	1	0	1		False	n_remaining>0:N|top3:N
+Q6::6	Keratocytes	ALDH3A1	1	ALDH3A1	1	0	2		False	
+Q6::11	Endo	ADGRL4	1		0	1	2	1	True	
+Q6::11	APC_MHCII_high	CD74;HLA-DRB1	2	CD74;HLA-DRB1	2	0	1		False	n_remaining>0:N|top3:N
+Q6::11	pDC	TCF4	1	TCF4	1	0	3		False	n_remaining>0:N|top3:N
+Q6::21	Keratocytes	KERA	1		0	1	1	1	True	
+Q6::21	face_v6::Keratocytes	KERA	1		0	1	2	2	True	
+Q6::20	Keratocytes	ALDH3A1	1	ALDH3A1	1	0	1		False	
+Q6::4	Conj_epithelium_basal	KRT19	1		0	1	1	1	True	
+Q6::2	Conj_epithelium_basal	AQP5;KRT13;KRT19	3		0	3	1	1	True	
+Q6::2	Conj_epithelium_suprabasal	S100A8;S100A9	2		0	2	3	2	True	
+Q6::2	Mono_Classical	S100A8;S100A9	2	S100A8;S100A9	2	0	2		False	n_remaining>0:N|top3:N
+Q6::19	Fibroblast	COL1A1;COL1A2	2		0	2	2	1	True	
+Q6::19	Myofibroblast	COL1A1;COL1A2	2		0	2	3	2	True	
+Q6::19	Pericyte	COL1A2;MGP	2	COL1A2;MGP	2	0	1		False	
+Q6::5	Conj_epithelium_basal	KRT19	1		0	1	1	1	True	
+Q6::14	Keratocytes	NNMT	1		0	1	1	1	True	
+Q6::18	Pericyte	MGP	1	MGP	1	0	1		False	
+Q6::3	Conj_epithelium_suprabasal	S100A8;S100A9	2		0	2	2	1	True	
+Q6::3	Conj_epithelium_basal	KRT13	1		0	1	3	2	True	
+Q6::3	Mono_Classical	S100A8;S100A9	2	S100A8;S100A9	2	0	1		False	n_remaining>0:N|top3:N
+Q6::22	Fibroblast	COL1A2	1		0	1	2	1	True	
+Q6::22	Myofibroblast	COL1A2	1		0	1	3	2	True	
+Q6::22	Keratocytes	KERA	1		0	1	4	3	True	
+Q6::22	face_v6::Keratocytes	KERA	1		0	1	5	4	False	
+Q6::22	Pericyte	COL1A2	1	COL1A2	1	0	1		False	
+Q6::33	Fibroblast	COL1A1;COL1A2	2		0	2	1	1	True	
+Q6::33	Myofibroblast	COL1A1;COL1A2	2		0	2	2	2	True	
+Q6::33	Keratocytes	KERA	1		0	1	4	3	True	
+Q6::33	face_v6::Keratocytes	KERA	1		0	1	5	4	False	
+Q6::33	Pericyte	COL1A2	1	COL1A2	1	0	3		False	
+Q6::25	Melanocyte	DCT;MLANA;PMEL;TRPM1;TYRP1	5		0	5	1	1	True	
+Q6::25	Mac_DAM_LAM	APOE	1	APOE	1	0	2		False	n_remaining>0:N|top3:N
+Q6::28	Keratocytes	ALDH3A1;KERA;NNMT	3	ALDH3A1	1	2	1	1	True	
+Q6::28	face_v6::Keratocytes	KERA	1		0	1	2	2	True	
+Q6::31	Pericyte	MGP	1	MGP	1	0	1		False	
+Q6::17	Schwann	NRXN1;SCN7A	2		0	2	1	1	True	
+Q6::8	T	IL7R	1		0	1	1	1	True	n_remaining>0:Y|top3:Y
+Q6::26	Mac_DAM_LAM	CCL3;CCL4	2		0	2	2	1	True	n_remaining>0:Y|top3:Y
+Q6::26	Mono_Nonclassical	IL1B	1		0	1	3	2	True	n_remaining>0:Y|top3:Y
+Q6::26	APC_MHCII_high	CD74;HLA-DRA;HLA-DRB1	3	CD74;HLA-DRA;HLA-DRB1	3	0	1		False	n_remaining>0:N|top3:N
+Q6::26	cDC2	HLA-DRA	1	HLA-DRA	1	0	4		False	n_remaining>0:N|top3:N
+Q6::29	Conj_epithelium_basal	KRT13	1		0	1	1	1	True	
+Q6::7	Endo	CLDN5;GNG11	2		0	2	1	1	True	
+Q6::32	Myofibroblast	ACTA2;MYL9;TAGLN;TPM1;TPM2	5	ACTA2;MYL9;TAGLN;TPM1;TPM2	5	0	1		False	
+Q6::32	SMC	ACTA2;MYH11;MYL9;TAGLN	4	ACTA2;MYH11;MYL9;TAGLN	4	0	2		False	
+Q6::32	face_v6::SMC	MYH11;MYL9	2	MYH11;MYL9	2	0	3		False	
+Q6::30	Conj_epithelium_basal	KRT19;LCN2	2		0	2	2	1	True	
+Q6::30	Conj_epithelium_suprabasal	S100A8;S100A9	2		0	2	3	2	True	
+Q6::30	Mono_Classical	S100A8;S100A9	2	S100A8;S100A9	2	0	1		False	n_remaining>0:N|top3:N

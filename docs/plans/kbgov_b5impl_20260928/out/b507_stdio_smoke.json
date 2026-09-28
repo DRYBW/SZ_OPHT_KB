@@ -1,0 +1,76 @@
+{
+ "card": "t_8960c7e0",
+ "off_state": {
+  "version": "KB1v2-0.6-kbgov5",
+  "tools": 5,
+  "mg_top1": "Microglia",
+  "mg_len": 5,
+  "krt_seq": [
+   "Keratocytes",
+   "face_v6::Keratocytes"
+  ],
+  "lac_leak": [],
+  "mg_keys": [
+   "auc_threshold",
+   "celltype_ranking",
+   "gene_to_celltypes",
+   "mode",
+   "provenance",
+   "query"
+  ]
+ },
+ "on_state": {
+  "version": "KB1v2-0.6-kbgov5",
+  "tools": 5,
+  "mg_top1": "Microglia",
+  "mg_len": 5,
+  "krt_seq": [
+   "Keratocytes",
+   "face_v6::Keratocytes"
+  ],
+  "lac_leak": [],
+  "mg_keys": [
+   "auc_threshold",
+   "celltype_ranking",
+   "gene_to_celltypes",
+   "input_species",
+   "mode",
+   "provenance",
+   "query"
+  ]
+ },
+ "seat_smoke": {
+  "calls": 0,
+  "genes": 163,
+  "refused": 34,
+  "human": 129,
+  "flagged": 0,
+  "errors": 0,
+  "per_seat": {
+   "run1_A": {
+    "calls": 48,
+    "genes": 48,
+    "refused": 10,
+    "human": 38,
+    "errors": []
+   },
+   "run1_B": {
+    "calls": 69,
+    "genes": 69,
+    "refused": 14,
+    "human": 55,
+    "errors": []
+   },
+   "run1_C": {
+    "calls": 46,
+    "genes": 46,
+    "refused": 10,
+    "human": 36,
+    "errors": []
+   }
+  }
+ },
+ "checks_n": 13,
+ "fails": [],
+ "verdict": "PASS"
+}

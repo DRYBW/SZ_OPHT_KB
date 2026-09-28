@@ -1,0 +1,7 @@
+[A] 读 v2.4.1 parquet (继承 embedding)...
+    A: 231707 chunks, papers=3766, cols=19
+[RA3] 新 chunks: 11221, papers: 103
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 4212.21it/s]
+    模型就绪 bge-large-en-v1.5 (cpu, fp32, normalize=True)
+[5] SAVED /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/chunks.parquet: 242928 rows, 1076.4 MB (614s)
+DONE {"n_chunks": 242928, "n_papers": 3869, "n_papers_preprint": 229, "n_papers_fulltext_absent": 257, "parquet_MB": 1076.4}

@@ -1,0 +1,71 @@
+你是单细胞注释双盲评测的判读员（槽位 C）。对以下 3 个聚类逐一盲注。只依据证据卡判读，禁止臆测证据之外的来源。
+
+## 判读规则（冻结件原文，必须遵守）
+# KB2 对象B 盲注指令（两位判读员同一份，冻结件）
+
+你是双盲判读员之一。输入 = `EV_DIGEST.jsonl`（每行一簇的证据卡）。
+禁止事项：禁读本目录以外标注真值/引擎预测/另一位判读员意见；禁把证据转成分数（红线：只判读不打分）。
+
+## 每簇输出一行 JSON（JSONL）：
+```json
+{"cluster_id":"Q?::K",
+ "identity":"<标签或 coarse:<名> 或 undetermined>",
+ "level":"majority|coarse|fine-cap",
+ "grade":"A|B|C",
+ "gates":{"identity_evidence":"pass|fail|unresolved","resolution":"pass|fail|unresolved","technical":"pass|fail|unresolved|na"},
+ "flag":"none|out_of_baseline_coverage|conflicts_with_literature|technical_suspect|candidate_biology",
+ "why":"≤40字依据（marker/文献/基线相容性）"}
+```
+
+## 标签词表（按成员）
+- Q1/Q2/Q3/Q4/Q5b（人视网膜）：Rod, BC, AC, RGC, MG(Müller), Cone, HC, Astro, Micro(小胶质), RPE
+- Q6（人眼表）：Epithelium, Corneal Endothelium, Endothelium, Fibroblasts, Immune Cells, Melanocytes, Pericytes, Schwann Cells, Smooth Muscle Cells
+- Q7（鼠视网膜）：同 Q1 十类镜像（鼠 MG=Müller 同名）
+- Q8（胎儿视网膜）：**发育身份合法**（如 RPC/progenitor、immature neuron 等 `coarse:dev-*`）；只有强证据才给成人十类；十类强分而证据薄=错误行为样本
+- Q9（PDR 纤维血管膜，疾病材料）：词表=眼表/视网膜/免疫/间质任一合理身份或 `coarse:`；E6 不计对错，A/B/C 等级与三门口径照打；digest 附 disease_prior 仅作 phase② 上下文旗，不得用作身份依据（"更符合疾病预期"不是修改理由）。
+
+## 等级（EVAL_Rubric_v1 §2 原义）
+- **A**：独立实验级证据支持（正交验证共定位/形态位置——digest 内通常给不到，慎用）
+- **B**：转录证据（top genes 强命中）+ 相邻候选可排除 +（终版等级由双人一致确认）
+- **C**：技术疑点/候选冲突/分辨率不足 → 粗标签或 undetermined
+- 弃权（undetermined）= 合法结论，不是失败。不许为填满而硬注。
+
+## 三门（EVAL_Rubric §1 / 协议 v1.1 §3）
+- 身份证据：支持+反证+相邻候选区分是否足以定身份层级
+- 群体解析度：是否互斥谱系程序混合（一个簇内出现两谱系核心 marker 共存→resolution:fail+考虑技术双细胞 flag=technical_suspect）
+- 技术可信度：digest 无 QC 字段时填 na（Q9 有 n_genes/percent_mito 可判）
+- 组成相容性：tissue_composition 是**参考分布不是达标线**；超出 range→flag 注明，不强制改身份。
+
+## 阅读 digest 字段
+- top_genes: 簇内 wilcoxon 排名 top25（盲：无人工预筛）
+- kb_marker: query_marker 本地权威 marker 命中与 celltype_ranking（排序=检索副产物，**不是置信度**）
+- tissue_composition: 该组织供者级参考分布（同材料优先，禁跨材料套用）
+- lit: 对应候选类的文献片段摘要（PMID 可溯源）
+- disease_prior_phase2: 仅 Q9，上下文旗
+- n_cells/material: 判读语境（物种/实际取样材料已按协议①保留）
+
+
+## 证据卡（3 簇；cluster_id 必须原样返回：Q6::7 / Q6::32 / Q6::30）
+说明：基因以 symbol(原ENSG ID) 双列呈现；lit 为本地文献库检索证据（排序是检索副产物不是置信度）。
+
+[Q6::7] member=Q6 material=species:human/tissue:ocular_surface n_cells=601 qc=na
+top_genes(按序, symbol(原ID)): CCL21(ENSG00000137077), MMRN1(ENSG00000138722), TFPI(ENSG00000003436), CLDN5(ENSG00000184113), VIM(ENSG00000026025), ANGPT2(ENSG00000091879), GNG11(ENSG00000127920), ENSG00000291237, AKAP12(ENSG00000131016), TFF3(ENSG00000160180), ZFPM2(ENSG00000169946), TSHZ2(ENSG00000182463), PKHD1L1(ENSG00000205038), CNKSR3(ENSG00000153721), SEMA3A(ENSG00000075213), LYVE1(ENSG00000133800), NFKBIA(ENSG00000100906), PALM2AKAP2(ENSG00000157654), PTPRE(ENSG00000132334), TC2N(ENSG00000165929)
+kb_gene_hits: 无
+kb_celltype_ranking: Endo(n=2); MG(n=1); Astro(n=1)
+lit(文献证据): Endo|PMID:34381080|Molecular characteristics and spatial distribution of adult human corn ; Endo|PMID:36712326|Single cell RNA-seq of human cornea organoids identifies cell fates of ; MG|PMID:37443842|Single-Cell RNA Sequencing: Opportunities and Challenges for Studies o ; MG|PMID:40448612|SUMOylation is a Translatable Target in Hypoxic MNPs Regulating Retina ; Astro|PMID:41892278|Astrocyte Heterogeneity and Metabolic Reprogramming: Mechanisms Govern ; Astro|PMID:41856199|The role of prostanoids in the retina and optic nerve in health and di
+[Q6::32] member=Q6 material=species:human/tissue:ocular_surface n_cells=471 qc=na
+top_genes(按序, symbol(原ID)): PCP4(ENSG00000183036), TPM1(ENSG00000140416), TAGLN(ENSG00000149591), MYL9(ENSG00000101335), MYH11(ENSG00000133392), ACTA2(ENSG00000107796), TPM2(ENSG00000198467), PLCB4(ENSG00000101333), CKB(ENSG00000166165), MYLK(ENSG00000065534), SORBS2(ENSG00000154556), CHRM3(ENSG00000133019), RGS2(ENSG00000116741), DES(ENSG00000175084), SYNPO2(ENSG00000172403), PPP1R12B(ENSG00000077157), KALRN(ENSG00000160145), DGKI(ENSG00000157680), A2M(ENSG00000175899), GNG7(ENSG00000176533)
+kb_gene_hits: 无
+kb_celltype_ranking: Myofibroblast(n=5); SMC(n=4)
+lit(文献证据): Myofibroblast|PMID:40402520|Distinct Transcriptomic Profiles of Cultured Anterior and Posterior Po ; Myofibroblast|PMID:38177186|The single-cell transcriptomic atlas and RORA-mediated 3D epigenomic r ; SMC|PMID:37443842|Single-Cell RNA Sequencing: Opportunities and Challenges for Studies o ; SMC|PMID:37389178|Identification of BST2 as a conjunctival epithelial stem/progenitor ce
+[Q6::30] member=Q6 material=species:human/tissue:ocular_surface n_cells=126 qc=na
+top_genes(按序, symbol(原ID)): S100A9(ENSG00000163220), SLPI(ENSG00000124107), LCN2(ENSG00000148346), S100A8(ENSG00000143546), PSCA(ENSG00000167653), KRT19(ENSG00000171345), C15orf48(ENSG00000166920), KRT7(ENSG00000135480), KRT15(ENSG00000171346), SAA2(ENSG00000134339), KRT13(ENSG00000171401), UPK3BL1(ENSG00000267368), DHRS9(ENSG00000073737), ALDH1A3(ENSG00000184254), F3(ENSG00000117525), MUC16(ENSG00000181143), C3(ENSG00000125730), CEACAM6(ENSG00000086548), CDKN2A(ENSG00000147889), NEAT1(ENSG00000245532)
+kb_gene_hits: 无
+kb_celltype_ranking: Mono_Classical(n=2)
+lit(文献证据): Mono_Classical|PMID:37443842|Single-Cell RNA Sequencing: Opportunities and Challenges for Studies o ; Mono_Classical|PMID:39422453|Transcriptomic profiling of Schlemm’s canal cells reveals a lymphatic-
+
+## 输出要求
+只输出 JSONL，共 3 行，顺序与证据卡一致。每行字段：cluster_id / identity / level / grade / gates / flag / why。
+identity 必须用该 member 词表原样词，或 coarse:<词>，或 undetermined；不得自造同义词、不得加中文注释。
+level: majority|coarse|fine-cap；grade: A|B|C（A 仅独立实验级证据，本证据面下不给）；gates 三键(identity_evidence/resolution/technical) 取 pass|fail|unresolved|na；flag: none|out_of_baseline_coverage|conflicts_with_literature|technical_suspect|candidate_biology；why ≤40字。
+证据不足给 undetermined/coarse，合法，禁止硬注。不要输出任何解释文字。

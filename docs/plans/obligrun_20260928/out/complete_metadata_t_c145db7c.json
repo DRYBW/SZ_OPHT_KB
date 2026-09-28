@@ -1,0 +1,16 @@
+{
+  "verdict": "READY",
+  "ruling_path": "OBLIGRUN_RULING_1.md 案A 续跑闭环",
+  "face_v21_sha256": "2c0649dcc2001c8b3fe485dab35761a90a4f2c297df88e7a16739e3ec23929bb",
+  "prereg_add1_sha256": "92c2a53891246462f315119c1cc3a5b018d2d248f280f56a329b36b99ed72dcf",
+  "exclusion_hits": "按规则复算=恰2行 {Q6::7,Endo,36712326},{Q6::11,Endo,36712326}（非点名；血缘外部解析补登记 GSE155683→33865984 Collin）",
+  "zero_drift": "33/33 逐字节对账 PASS；OB-2 v2.1 重算 57/57 行 delta=zero（含 31 未涉簇对照）",
+  "obligations": {"OB1": "清", "OB2": "PASS 33/33", "OB3": "清(继承,ranking零动)", "OB4": "复筛0残留"},
+  "vote": {"ballots": "99/99", "budget": "99/150", "seats": "A=qwen3.8-max B=glm-5.1 C=deepseek-v3.2", "enable_thinking_false": true, "retries": 0, "channel_failures": 0},
+  "gates": {"P1_c2b": "26/33 >= 24/33 PASS", "P2_strict": "0/33 <= 1/33 PASS", "P2_any": "0/33", "modes": {"named": 28, "tie": 3, "split3": 1, "abstain3": 1}, "missed": ["Q6::12","Q6::15","Q6::16","Q6::18","Q6::24","Q6::27","Q6::28"]},
+  "territory": "POST 复验 60 件：59 UNCHANGED + USER_DIRECTIVE owner-legal（与 v1 POST 一致）；本 run 0 写入",
+  "no_activation": true,
+  "ob5": "归 PI 另批；建议票=out/ACTIVATION_READINESS.md",
+  "artifacts_dir": "/mnt/D/EyeKB/plans/obligrun_20260928/",
+  "key_files": ["VERDICT_OBLIGRUN_v2.md", "PREREG_OBLIGRUN_ADD1.md", "face/kb9_face_v2.1.jsonl", "out/oblig_verdict.json", "out/oblig_percluster.tsv", "out/ACTIVATION_READINESS.md", "ledgers/SHA_POST_OBLIGRUN_v2.txt", "ledgers/SHA_NEW_ARTIFACTS_OBLIGRUN_v2.txt", "scripts/o5..o10_*_t_c145db7c.py"]
+}

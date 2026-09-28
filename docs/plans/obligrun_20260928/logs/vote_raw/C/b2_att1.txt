@@ -1,0 +1,5 @@
+{"cluster_id":"Q6::9","identity":"Epithelium","level":"majority","grade":"B","gates":{"identity_evidence":"pass","resolution":"pass","technical":"na"},"flag":"none","why":"top_genes KRT14/KRT15/KRT17 强表达，符合角膜上皮 marker"}
+{"cluster_id":"Q6::12","identity":"undetermined","level":"coarse","grade":"C","gates":{"identity_evidence":"fail","resolution":"pass","technical":"na"},"flag":"candidate_biology","why":"MMP3/CXCL8 炎症相关，但缺乏明确谱系 marker，身份证据不足"}
+{"cluster_id":"Q6::11","identity":"Endothelium","level":"majority","grade":"B","gates":{"identity_evidence":"pass","resolution":"pass","technical":"na"},"flag":"none","why":"kb_celltype_ranking 命中 Endo，lit 支持，top_genes PECAM1/CLDN5 内皮标志"}
+{"cluster_id":"Q6::21","identity":"Fibroblasts","level":"coarse","grade":"B","gates":{"identity_evidence":"pass","resolution":"pass","technical":"na"},"flag":"none","why":"kb_celltype_ranking 命中 Keratocytes，lit 支持，top_genes COL5A2/COL6A3 胶原表达"}
+{"cluster_id":"Q6::20","identity":"Epithelium","level":"majority","grade":"B","gates":{"identity_evidence":"pass","resolution":"pass","technical":"na"},"flag":"none","why":"top_genes KRT12/KRT14 角膜上皮特异表达，ALDH3A1 角膜上皮标志"}

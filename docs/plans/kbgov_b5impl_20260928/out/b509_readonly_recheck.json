@@ -1,0 +1,67 @@
+{
+ "at": "2026-09-28 15:34:41",
+ "card": "t_8960c7e0",
+ "summary": {
+  "ledger_kb9": {
+   "label": "kb9exec_pre_excl_mcp",
+   "ok": 102,
+   "fail": 0,
+   "skip": 4,
+   "bad": [],
+   "attributed_preexisting": [
+    [
+     "/mnt/D/OcularKB/WIKI/数据资产.md",
+     "drift 存在于卡窗口之前(mtime=2026-09-27 21:16:42, 非本卡作为)"
+    ],
+    [
+     "/mnt/D/OcularKB/WIKI/决策记录.md",
+     "drift 存在于卡窗口之前(mtime=2026-09-27 21:16:42, 非本卡作为)"
+    ],
+    [
+     "/mnt/D/OcularKB/WIKI/体系盘点_MCP-RAG-Wiki-Skill_20260924.md",
+     "drift 存在于卡窗口之前(mtime=2026-09-27 21:17:12, 非本卡作为)"
+    ],
+    [
+     "/mnt/D/OcularKB/WIKI/检索索引.md",
+     "drift 存在于卡窗口之前(mtime=2026-09-27 21:17:12, 非本卡作为)"
+    ]
+   ]
+  },
+  "ledger_kbgov_inputs": {
+   "checked": 34,
+   "ok": 34,
+   "bad": []
+  },
+  "ledger_b5pre": {
+   "label": "b5_pre_ledger_excl_mcp_code",
+   "ok": 9,
+   "fail": 0,
+   "skip": 4,
+   "bad": [],
+   "attributed_preexisting": []
+  },
+  "manifest_kbgov": {
+   "label": "kb_gov_sha_manifest",
+   "ok": 32,
+   "fail": 0,
+   "skip": 0,
+   "bad": [],
+   "attributed_preexisting": []
+  },
+  "window_scan": {
+   "mcp_server_changed": [
+    "eyekb_core.py",
+    "kbgov_vocab.json.gz",
+    "server.py"
+   ],
+   "mcp_unexpected": [],
+   "outside_hits": [],
+   "outside_n": 0,
+   "attributed_other_cards": {
+    "/mnt/D/EyeKB/plans/ANNOTATION_PROTOCOL_v1.3.md": "并行卡 t_e0f94d4f H1M3 判序锚协议 v1.3（文件头自署卡片号；本卡领地=mcp_server 零触碰协议面）"
+   }
+  }
+ },
+ "fails": [],
+ "verdict": "PASS"
+}

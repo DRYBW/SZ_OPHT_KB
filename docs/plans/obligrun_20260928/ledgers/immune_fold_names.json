@@ -1,0 +1,17 @@
+{
+ "immune_fold": [
+  "APC_MHCII_high",
+  "Granulocyte",
+  "Mac_DAM_LAM",
+  "Mac_Tissue",
+  "Microglia",
+  "Mono_Classical",
+  "Mono_Nonclassical",
+  "T",
+  "cDC1",
+  "cDC2",
+  "pDC"
+ ],
+ "source": "kb9_face_effective_genesets.json truth_fold 列（frozen crosswalk+ext 折叠，注册包 §5）",
+ "note": "R1 剔除后实际入面者以 run 表内出现为准（Microglia 等视网膜专属不出现在眼表面装配）"
+}

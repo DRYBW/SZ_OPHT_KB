@@ -1,0 +1,117 @@
+{
+ "p1": {
+  "rule": "v2 C2b 定名且 consensus==truth",
+  "count": 26,
+  "total": 33,
+  "rate": 0.7879,
+  "gate": ">=24/33",
+  "passed": true,
+  "hit_clusters": [
+   "Q6::0",
+   "Q6::1",
+   "Q6::11",
+   "Q6::13",
+   "Q6::14",
+   "Q6::17",
+   "Q6::19",
+   "Q6::2",
+   "Q6::20",
+   "Q6::21",
+   "Q6::22",
+   "Q6::23",
+   "Q6::25",
+   "Q6::26",
+   "Q6::29",
+   "Q6::3",
+   "Q6::30",
+   "Q6::31",
+   "Q6::32",
+   "Q6::33",
+   "Q6::4",
+   "Q6::5",
+   "Q6::6",
+   "Q6::7",
+   "Q6::8",
+   "Q6::9"
+  ],
+  "missed_clusters": [
+   "Q6::12",
+   "Q6::15",
+   "Q6::16",
+   "Q6::18",
+   "Q6::24",
+   "Q6::27",
+   "Q6::28"
+  ],
+  "missed_modes": {
+   "Q6::12": "tie",
+   "Q6::15": "split3",
+   "Q6::16": "abstain3",
+   "Q6::18": "tie",
+   "Q6::24": "named",
+   "Q6::27": "tie",
+   "Q6::28": "named"
+  }
+ },
+ "p2": {
+  "strict": {
+   "count": 0,
+   "total": 33,
+   "gate": "<=1/33(strict; any 并报)",
+   "passed": true,
+   "violation_clusters": [],
+   "evidence": []
+  },
+  "any": {
+   "count": 0,
+   "total": 33,
+   "gate": "<=1/33(strict; any 并报)",
+   "passed": null,
+   "violation_clusters": [],
+   "evidence": []
+  }
+ },
+ "p3": {
+  "kb_empty_n": 13,
+  "kb_empty_clusters": [
+   "Q6::0",
+   "Q6::1",
+   "Q6::12",
+   "Q6::16",
+   "Q6::18",
+   "Q6::20",
+   "Q6::23",
+   "Q6::24",
+   "Q6::27",
+   "Q6::31",
+   "Q6::32",
+   "Q6::6",
+   "Q6::9"
+  ],
+  "note": "照旧记录不入门"
+ },
+ "modes": {
+  "named": 28,
+  "split3": 1,
+  "tie": 3,
+  "abstain3": 1
+ },
+ "inputs": {
+  "obligations": {
+   "OB1": "清（v1 run 落表 out/OB1_ledger.tsv 339 行；ADD1 A4 继承：v2.1 面与 v1 面差异仅 2 lit 行=许可漂移字段内，31 簇零差异）",
+   "OB2": "PASS（v2.1 机械重算 57/57 零漂移+硬断言 33/33；out/pre_vote_diagnostics_v21.tsv）",
+   "OB3": "清（v1 run 落表 out/OB3_consistency.tsv 22/22；案 A ranking 零动→结论可继承，裁定理由3）",
+   "OB4": "复筛通过（v2.1 面 62 条/11 PMID 残留 0；out/OB4_lit_screening_v21.md）"
+  },
+  "face_sha": "2c0649dcc2001c8b3fe485dab35761a90a4f2c297df88e7a16739e3ec23929bb",
+  "budget_per_seat_latest": [
+   33,
+   66,
+   99
+  ]
+ },
+ "matrix": {
+  "rule": "OB全清 AND P1 pass AND P2 strict pass → READY",
+  "ready": true
+ }
+}

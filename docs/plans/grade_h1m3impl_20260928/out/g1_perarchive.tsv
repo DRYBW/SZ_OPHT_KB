@@ -1,0 +1,10 @@
+archive	match	diffs	n_promoted	hit	transitions	ref_transitions	named	R1	R2cf
+RUN4-r	True		0		"{""unchanged"": 45}"	"{""unchanged"": 45}"	39->39	15->15	"[""Q1::4""]"
+RUN7RG	True		5	0.8	"{""rectified_from_none"": 1, ""unchanged"": 44}"	"{""rectified_from_none"": 1, ""unchanged"": 44}"	37->38	17->17	"[""Q4::23"", ""Q7::52"", ""Q7::58""]"
+FACEV21	True		0		"{""unchanged"": 45}"	"{""unchanged"": 45}"	42->42	19->19	[]
+BTEST-run1	True		5	1.0	"{""rectified_from_none"": 1, ""unchanged"": 44}"	"{""rectified_from_none"": 1, ""unchanged"": 44}"	40->41	17->18	"[""Q7::52"", ""Q7::58""]"
+BTEST-run2	True		0		"{""unchanged"": 45}"	"{""unchanged"": 45}"	39->39	17->17	"[""Q7::52"", ""Q7::58""]"
+RUN5	True		4	0.75	"{""rectified_from_none"": 1, ""unchanged"": 32}"	"{""rectified_from_none"": 1, ""unchanged"": 32}"	22->23	None->None	null
+RUN6A	True		2	1.0	"{""unchanged"": 33}"	"{""unchanged"": 33}"	24->24	None->None	null
+RUN6B	True		1	1.0	"{""unchanged"": 33}"	"{""unchanged"": 33}"	23->23	None->None	null
+KB9	True		7	1.0	"{""rectified_from_none"": 4, ""unchanged"": 21}"	"{""rectified_from_none"": 4, ""unchanged"": 21}"	17->21	None->None	null

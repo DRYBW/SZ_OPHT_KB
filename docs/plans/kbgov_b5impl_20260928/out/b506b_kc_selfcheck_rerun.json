@@ -1,0 +1,261 @@
+{
+ "checks": [
+  {
+   "name": "G1 parquet行数=build_stats",
+   "pass": true,
+   "detail": "(220654, 220654)"
+  },
+  {
+   "name": "G1 行数=220571+83",
+   "pass": true,
+   "detail": "220654"
+  },
+  {
+   "name": "G1 papers.jsonl含4 KC",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "G1 4 KC chunk均>0",
+   "pass": true,
+   "detail": "{'11328728': 1, '15914606': 1, '41060151': 41, '42115719': 40}"
+  },
+  {
+   "name": "G1 abstract-only两篇 行级标识正确",
+   "pass": true,
+   "detail": "({0}, {'abstract'})"
+  },
+  {
+   "name": "G1 admission_lane 标注",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "G2 A' paper_id序列与v2.2一致",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "G2 A' text零改动",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "G2 A' 抽样500向量逐位一致(零重算)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "G2 向量范数≈1",
+   "pass": true,
+   "detail": "(np.float32(0.99999994), np.float32(1.0000001))"
+  },
+  {
+   "name": "G3 黄金回归 v2.3 无回退(vs v2.2 记录)",
+   "pass": true,
+   "detail": "10/10"
+  },
+  {
+   "name": "G4 锚召回4篇全命中(raw top-50内)",
+   "pass": true,
+   "detail": "{'41060151': 4, '42115719': 1, '11328728': 1, '15914606': 1}"
+  },
+  {
+   "name": "G4 锚召回4篇全命中(cornea 过滤 top-50内)",
+   "pass": true,
+   "detail": "{'41060151': 4, '42115719': 1, '11328728': 1, '15914606': 1}"
+  },
+  {
+   "name": "G5a 主题化查询4/4命中且带 reason 联表",
+   "pass": true,
+   "detail": "{'41060151': (6, 'composition_baseline'), '42115719': (1, 'composition_baseline'), '11328728': (1, 'state_signature'), '15914606': (1, 'disease_mechanism_background')}"
+  },
+  {
+   "name": "G5b 泛化合成查询覆盖 (记录性; 措辞敏感缺陷沿 d0 先例如实登记)",
+   "pass": true,
+   "detail": "generic union=['41060151', '42115719']/4 — 11328728/15914606 为非-scrna 历史文献, 泛 composition 查询下排序靠后 (既有检索层行为, 非覆盖缺口)"
+  },
+  {
+   "name": "G6 冻结库/检索脚本 sha == 开卡基线",
+   "pass": true,
+   "detail": "mismatch=[]"
+  }
+ ],
+ "anchor_rank": {
+  "41060151": {
+   "raw_paper_rank": 4,
+   "cornea_paper_rank": 4,
+   "abstract_only": false,
+   "query": "Comparative Transcriptomic Profiling of Corneal Compartments Single-Cell Single-"
+  },
+  "42115719": {
+   "raw_paper_rank": 1,
+   "cornea_paper_rank": 1,
+   "abstract_only": false,
+   "query": "High expression of the underexplored SLC4A11 protein-coding transcript is specif"
+  },
+  "11328728": {
+   "raw_paper_rank": 1,
+   "cornea_paper_rank": 1,
+   "abstract_only": true,
+   "query": "Production of prostaglandin D synthase as a keratan sulfate proteoglycan by cult"
+  },
+  "15914606": {
+   "raw_paper_rank": 1,
+   "cornea_paper_rank": 1,
+   "abstract_only": true,
+   "query": "Inheritance of a novel COL8A2 mutation defines a distinct early-onset subtype of"
+  }
+ },
+ "golden": [
+  {
+   "cell_type": "Rod",
+   "v23_retina": 5,
+   "v23_all": 5,
+   "v22_retina": 5,
+   "v22_all": 5,
+   "no_degrade_vs_v22": true
+  },
+  {
+   "cell_type": "Cone",
+   "v23_retina": 5,
+   "v23_all": 5,
+   "v22_retina": 5,
+   "v22_all": 5,
+   "no_degrade_vs_v22": true
+  },
+  {
+   "cell_type": "Retinal Pigment Epithelium",
+   "v23_retina": 4,
+   "v23_all": 4,
+   "v22_retina": 4,
+   "v22_all": 4,
+   "no_degrade_vs_v22": true
+  },
+  {
+   "cell_type": "Muller Glia",
+   "v23_retina": 3,
+   "v23_all": 3,
+   "v22_retina": 3,
+   "v22_all": 3,
+   "no_degrade_vs_v22": true
+  },
+  {
+   "cell_type": "Astrocyte",
+   "v23_retina": 3,
+   "v23_all": 4,
+   "v22_retina": 3,
+   "v22_all": 4,
+   "no_degrade_vs_v22": true
+  },
+  {
+   "cell_type": "Microglia",
+   "v23_retina": 4,
+   "v23_all": 4,
+   "v22_retina": 4,
+   "v22_all": 4,
+   "no_degrade_vs_v22": true
+  },
+  {
+   "cell_type": "Retinal Ganglion Cell",
+   "v23_retina": 3,
+   "v23_all": 3,
+   "v22_retina": 3,
+   "v22_all": 3,
+   "no_degrade_vs_v22": true
+  },
+  {
+   "cell_type": "Rod Bipolar Cell",
+   "v23_retina": 3,
+   "v23_all": 4,
+   "v22_retina": 3,
+   "v22_all": 4,
+   "no_degrade_vs_v22": true
+  },
+  {
+   "cell_type": "Horizontal Cell",
+   "v23_retina": 4,
+   "v23_all": 4,
+   "v22_retina": 4,
+   "v22_all": 4,
+   "no_degrade_vs_v22": true
+  },
+  {
+   "cell_type": "Amacrine Cell",
+   "v23_retina": 3,
+   "v23_all": 2,
+   "v22_retina": 3,
+   "v22_all": 2,
+   "no_degrade_vs_v22": true
+  }
+ ],
+ "e2e": {
+  "topic": {
+   "41060151": {
+    "cell_type": "corneal endothelium",
+    "rank": 6,
+    "inclusion_reason": "composition_baseline"
+   },
+   "42115719": {
+    "cell_type": "corneal endothelium",
+    "rank": 1,
+    "inclusion_reason": "composition_baseline"
+   },
+   "11328728": {
+    "cell_type": "corneal keratocyte",
+    "rank": 1,
+    "inclusion_reason": "state_signature"
+   },
+   "15914606": {
+    "cell_type": "corneal keratocyte",
+    "rank": 1,
+    "inclusion_reason": "disease_mechanism_background"
+   }
+  },
+  "generic_record": {
+   "corneal keratocyte": {
+    "hit_pmids": [
+     "34381080",
+     "37443842",
+     "41060151",
+     "34741068",
+     "40390022",
+     "33865984",
+     "38177186",
+     "PPR_PPR197834",
+     "40838019",
+     "42194275"
+    ],
+    "kc_hits": [
+     "41060151"
+    ]
+   },
+   "corneal endothelium": {
+    "hit_pmids": [
+     "41060151",
+     "34741068",
+     "39732756",
+     "34381080",
+     "42194275",
+     "42115719",
+     "40136389",
+     "37443842",
+     "37291161",
+     "34769520"
+    ],
+    "kc_hits": [
+     "41060151",
+     "42115719"
+    ]
+   }
+  }
+ },
+ "reason_union_table": {
+  "41060151": "composition_baseline",
+  "42115719": "composition_baseline",
+  "11328728": "state_signature",
+  "15914606": "disease_mechanism_background"
+ },
+ "verdict": "16/16 PASS",
+ "exit": 0
+}

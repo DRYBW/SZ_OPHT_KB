@@ -1,0 +1,29 @@
+A) md=32 empty=0 no-final-newline=0
+B) py=48 compile-fail=0
+C) INTAKE entries=392 recheck-rc=0 stderr=
+D) {'OK': 90, 'FAIL-EXPECTED-DESENS': 17, 'FAIL-EXPECTED-EXCLUDED': 8, 'OUTSIDE-REPO': 324, 'REAL-FAIL': 0}
+  EXCLUDED docs/plans/kbgov_b5impl_20260928/ledgers/SHA_POST_B5IMPL.txt -> MCP
+  EXCLUDED docs/plans/kbgov_b5impl_20260928/ledgers/SHA_POST_B5IMPL.txt -> MCP
+  EXCLUDED docs/plans/kbgov_b5impl_20260928/ledgers/SHA_POST_B5IMPL.txt -> MCP
+  EXCLUDED docs/plans/kbgov_b5impl_20260928/ledgers/SHA_POST_B5IMPL.txt -> MCP
+  EXCLUDED docs/plans/kbgov_b5impl_20260928/ledgers/SHA_POST_B5IMPL.txt -> MCP
+  DESENS docs/plans/obligrun_20260928/ledgers/SHA_ADD1_OBLIGRUN.txt -> docs/plans/obligrun_20260928/PREREG_OBLIGRUN_ADD1.md
+  DESENS docs/plans/obligrun_20260928/ledgers/SHA_ADD1_OBLIGRUN.txt -> docs/plans/obligrun_20260928/BRIEF_OBLIGRUN.md
+  DESENS docs/plans/obligrun_20260928/ledgers/SHA_ADD1_OBLIGRUN.txt -> docs/plans/obligrun_20260928/PREREG_OBLIGRUN.md
+  DESENS docs/plans/obligrun_20260928/ledgers/SHA_NEW_ARTIFACTS_OBLIGRUN_v2.txt -> docs/plans/obligrun_20260928/PREREG_OBLIGRUN_ADD1.md
+  DESENS docs/plans/obligrun_20260928/ledgers/SHA_NEW_ARTIFACTS_OBLIGRUN_v2.txt -> docs/plans/obligrun_20260928/VERDICT_OBLIGRUN_v2.md
+  DESENS docs/plans/obligrun_20260928/ledgers/SHA_NEW_ARTIFACTS_OBLIGRUN_v2.txt -> docs/plans/obligrun_20260928/scripts/o8_seat_probe_t_c145db7c.py
+  DESENS docs/plans/obligrun_20260928/ledgers/SHA_NEW_ARTIFACTS_OBLIGRUN_v2.txt -> docs/plans/obligrun_20260928/scripts/o9_vote_t_c145db7c.py
+  DESENS docs/plans/obligrun_20260928/ledgers/PREREG_OBLIGRUN_SHA.txt -> docs/plans/obligrun_20260928/PREREG_OBLIGRUN.md
+  EXCLUDED docs/plans/obligrun_20260928/ledgers/SHA_POST_OBLIGRUN_v2.txt -> ；v1
+  EXCLUDED docs/plans/obligrun_20260928/ledgers/SHA_POST_OBLIGRUN.txt -> new=23f7ab764a8d393c138df23b9bdff42230a5fa4deed3592dac4a4371862c09df
+  DESENS docs/plans/mouse_ext_precheck_20260928/SHA_MANIFEST.txt -> docs/plans/mouse_ext_precheck_20260928/MOUSEEXT_NOTE.md
+  DESENS docs/plans/rag_fix3_20260928/ledgers/SHA_DELIVERABLES_20260928.txt -> docs/plans/rag_fix3_20260928/out/DECISION_MATRIX_RAGFIX3.md
+  DESENS docs/plans/rag_fix3_20260928/ledgers/SHA_DELIVERABLES_20260928.txt -> docs/plans/rag_fix3_20260928/work/ra3_meta.jsonl
+  EXCLUDED docs/plans/rag_fix3_20260928/ledgers/SHA_DELIVERABLES_20260928.txt -> work/chunks_ra3_raw.jsonl
+  DESENS docs/plans/rag_fix3_20260928/ledgers/SHA_DELIVERABLES_20260928.txt -> docs/plans/rag_fix3_20260928/RAGFIX3_NOTE.md
+  DESENS docs/plans/rag_fix3_20260928/ledgers/SHA_DELIVERABLES_20260928.txt -> docs/plans/rag_fix3_20260928/scripts/pointer_register3.py
+  DESENS docs/plans/rag_fix3_20260928/ledgers/SHA_DELIVERABLES_20260928.txt -> docs/plans/rag_fix3_20260928/scripts/ra3_fetch.py
+  DESENS docs/plans/rag_fix3_20260928/ledgers/SHA_DELIVERABLES_20260928.txt -> docs/plans/rag_fix3_20260928/scripts/ra3_merge.py
+  DESENS docs/plans/rag_fix3_20260928/ledgers/SHA_DELIVERABLES_20260928.txt -> docs/plans/rag_fix3_20260928/scripts/ra3_scan.py
+  DESENS docs/plans/rag_fix3_20260928/ledgers/SHA_DECISION_MATRIX.txt -> docs/plans/rag_fix3_20260928/out/DECISION_MATRIX_RAGFIX3.md

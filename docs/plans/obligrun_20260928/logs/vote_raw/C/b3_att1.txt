@@ -1,0 +1,5 @@
+{"cluster_id":"Q6::1","identity":"Epithelium","level":"coarse","grade":"C","gates":{"identity_evidence":"unresolved","resolution":"pass","technical":"na"},"flag":"none","why":"top_genes 含 KRT12/KRT3 等角膜上皮标志，但缺乏明确基底/表层区分证据。"}
+{"cluster_id":"Q6::4","identity":"Epithelium","level":"coarse","grade":"B","gates":{"identity_evidence":"pass","resolution":"pass","technical":"na"},"flag":"none","why":"KRT15/KRT14 基底标志强，kb_celltype_ranking 与 lit 均支持 Conj_epithelium_basal。"}
+{"cluster_id":"Q6::2","identity":"Epithelium","level":"coarse","grade":"C","gates":{"identity_evidence":"unresolved","resolution":"pass","technical":"na"},"flag":"none","why":"KRT13/KRT4 提示表层分化，但 kb_celltype_ranking 同时命中基底与表层，证据冲突。"}
+{"cluster_id":"Q6::0","identity":"Epithelium","level":"coarse","grade":"C","gates":{"identity_evidence":"unresolved","resolution":"pass","technical":"na"},"flag":"none","why":"KRT6A/SPRR1B 等提示增殖/应激状态，缺乏明确谱系归属，身份证据不足。"}
+{"cluster_id":"Q6::19","identity":"Fibroblasts","level":"fine-cap","grade":"B","gates":{"identity_evidence":"pass","resolution":"pass","technical":"na"},"flag":"none","why":"top_genes 强表达 COL1A1/COL3A1/SPARC 等成纤维标志，kb_celltype_ranking 与 lit 支持。"}

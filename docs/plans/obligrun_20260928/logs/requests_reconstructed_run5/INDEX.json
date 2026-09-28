@@ -1,0 +1,293 @@
+{
+ "note": "RUN5 完整请求确定性重渲染（三件钉定=runner sha 7bdfce9444a1db35 / 指令 sha 3318177471f254ef / 面件 sha f083dd60…；RUN5 当时未逐字节留档原文，替代取证形态登记 PREREG §6(c)）",
+ "runs": [
+  {
+   "seat": "A",
+   "model": "qwen3.8-max",
+   "batch": 1,
+   "clusters": [
+    "Q6::13",
+    "Q6::15",
+    "Q6::23",
+    "Q6::24",
+    "Q6::6"
+   ],
+   "request_sha256": "4cf15b0f9c39621d0b40f670de03fbe577852883fd4d882e74c7d8005ecdf98d",
+   "bytes": 9714
+  },
+  {
+   "seat": "A",
+   "model": "qwen3.8-max",
+   "batch": 2,
+   "clusters": [
+    "Q6::9",
+    "Q6::12",
+    "Q6::11",
+    "Q6::21",
+    "Q6::20"
+   ],
+   "request_sha256": "81b330f101210afc467c18c4b31c14d701fe3984ee47e3b7a0ec13f4f4f197e8",
+   "bytes": 8570
+  },
+  {
+   "seat": "A",
+   "model": "qwen3.8-max",
+   "batch": 3,
+   "clusters": [
+    "Q6::1",
+    "Q6::4",
+    "Q6::2",
+    "Q6::0",
+    "Q6::19"
+   ],
+   "request_sha256": "b49c01cd7cefb97adf6ae9eb54ec280eadd03339c8abb7164af30cfba6babe10",
+   "bytes": 8406
+  },
+  {
+   "seat": "A",
+   "model": "qwen3.8-max",
+   "batch": 4,
+   "clusters": [
+    "Q6::5",
+    "Q6::14",
+    "Q6::18",
+    "Q6::27",
+    "Q6::3"
+   ],
+   "request_sha256": "f3adf0e5a31056b3382437dd6f9f4864e484266c908c9edad83ac87e325bc2e5",
+   "bytes": 8136
+  },
+  {
+   "seat": "A",
+   "model": "qwen3.8-max",
+   "batch": 5,
+   "clusters": [
+    "Q6::22",
+    "Q6::33",
+    "Q6::16",
+    "Q6::25",
+    "Q6::28"
+   ],
+   "request_sha256": "376000dde2ee28fb01655eaccd36528bd74467d5dde49553182aea1abc32d91b",
+   "bytes": 9857
+  },
+  {
+   "seat": "A",
+   "model": "qwen3.8-max",
+   "batch": 6,
+   "clusters": [
+    "Q6::31",
+    "Q6::17",
+    "Q6::8",
+    "Q6::26",
+    "Q6::29"
+   ],
+   "request_sha256": "369c6acd0249fa7417e81a8f1b4163e5eff1cf4509a79ab27a7c47989b830cda",
+   "bytes": 8938
+  },
+  {
+   "seat": "A",
+   "model": "qwen3.8-max",
+   "batch": 7,
+   "clusters": [
+    "Q6::7",
+    "Q6::32",
+    "Q6::30"
+   ],
+   "request_sha256": "fa03509b63db95e98ec5483e4c5dd767e03db2ad78a1e3d7e855a0162acbd8f6",
+   "bytes": 7397
+  },
+  {
+   "seat": "B",
+   "model": "glm-5.1",
+   "batch": 1,
+   "clusters": [
+    "Q6::13",
+    "Q6::15",
+    "Q6::23",
+    "Q6::24",
+    "Q6::6"
+   ],
+   "request_sha256": "84470c9ef0fdcf0c52f761f3500db0f23c52296e615484fd3c30e84eea4095f8",
+   "bytes": 9714
+  },
+  {
+   "seat": "B",
+   "model": "glm-5.1",
+   "batch": 2,
+   "clusters": [
+    "Q6::9",
+    "Q6::12",
+    "Q6::11",
+    "Q6::21",
+    "Q6::20"
+   ],
+   "request_sha256": "e4c84d6719f046594f57c3718c2432e0e80eff44e9b65c03151d15af7d5281b2",
+   "bytes": 8570
+  },
+  {
+   "seat": "B",
+   "model": "glm-5.1",
+   "batch": 3,
+   "clusters": [
+    "Q6::1",
+    "Q6::4",
+    "Q6::2",
+    "Q6::0",
+    "Q6::19"
+   ],
+   "request_sha256": "55977f8e09d9a27727b7267f419ab309a30a3809fd7433302eae323a0f7d6ca3",
+   "bytes": 8406
+  },
+  {
+   "seat": "B",
+   "model": "glm-5.1",
+   "batch": 4,
+   "clusters": [
+    "Q6::5",
+    "Q6::14",
+    "Q6::18",
+    "Q6::27",
+    "Q6::3"
+   ],
+   "request_sha256": "4a6c4a47ac64310324944d51d6b6a77e37b6ecf5b59a5e5f7ca76a079e1c0a13",
+   "bytes": 8136
+  },
+  {
+   "seat": "B",
+   "model": "glm-5.1",
+   "batch": 5,
+   "clusters": [
+    "Q6::22",
+    "Q6::33",
+    "Q6::16",
+    "Q6::25",
+    "Q6::28"
+   ],
+   "request_sha256": "786adc0d5036ba64254540ba250c09553b6798f930a11d3854d32ce3c2201734",
+   "bytes": 9857
+  },
+  {
+   "seat": "B",
+   "model": "glm-5.1",
+   "batch": 6,
+   "clusters": [
+    "Q6::31",
+    "Q6::17",
+    "Q6::8",
+    "Q6::26",
+    "Q6::29"
+   ],
+   "request_sha256": "92bd009dbb43cc76b518bab688707f0cbe0cdfa65b4462e7b0a2cebf397fbe1d",
+   "bytes": 8938
+  },
+  {
+   "seat": "B",
+   "model": "glm-5.1",
+   "batch": 7,
+   "clusters": [
+    "Q6::7",
+    "Q6::32",
+    "Q6::30"
+   ],
+   "request_sha256": "9d076f209e356fb9206755c26daa3a8fee76596f43a820d52555387bda91a402",
+   "bytes": 7397
+  },
+  {
+   "seat": "C",
+   "model": "deepseek-v3.2",
+   "batch": 1,
+   "clusters": [
+    "Q6::13",
+    "Q6::15",
+    "Q6::23",
+    "Q6::24",
+    "Q6::6"
+   ],
+   "request_sha256": "1d7cd6148ce76d6a8968e9ac8931440e611b850a89f56232d0130b0aa6c75231",
+   "bytes": 9714
+  },
+  {
+   "seat": "C",
+   "model": "deepseek-v3.2",
+   "batch": 2,
+   "clusters": [
+    "Q6::9",
+    "Q6::12",
+    "Q6::11",
+    "Q6::21",
+    "Q6::20"
+   ],
+   "request_sha256": "7b4328ee1a5cd9dcae236cc5c8e6ff773d7be866026ae427b38c068e634980b5",
+   "bytes": 8570
+  },
+  {
+   "seat": "C",
+   "model": "deepseek-v3.2",
+   "batch": 3,
+   "clusters": [
+    "Q6::1",
+    "Q6::4",
+    "Q6::2",
+    "Q6::0",
+    "Q6::19"
+   ],
+   "request_sha256": "bda303239e52b99dad60d990c6ad259a0d84d36b43dedd9324cc012cbe021791",
+   "bytes": 8406
+  },
+  {
+   "seat": "C",
+   "model": "deepseek-v3.2",
+   "batch": 4,
+   "clusters": [
+    "Q6::5",
+    "Q6::14",
+    "Q6::18",
+    "Q6::27",
+    "Q6::3"
+   ],
+   "request_sha256": "f597786c1b73e6bf634a11d03e6fcba35040a2f739df6837166f754d7603030e",
+   "bytes": 8136
+  },
+  {
+   "seat": "C",
+   "model": "deepseek-v3.2",
+   "batch": 5,
+   "clusters": [
+    "Q6::22",
+    "Q6::33",
+    "Q6::16",
+    "Q6::25",
+    "Q6::28"
+   ],
+   "request_sha256": "b6ec4691ec92b5b564d890770ab58416d7e7c5b2c7963c8d0e39597094f89236",
+   "bytes": 9857
+  },
+  {
+   "seat": "C",
+   "model": "deepseek-v3.2",
+   "batch": 6,
+   "clusters": [
+    "Q6::31",
+    "Q6::17",
+    "Q6::8",
+    "Q6::26",
+    "Q6::29"
+   ],
+   "request_sha256": "0746ca8ec9b65448a76f12f3d506518a4fb62b5b0597100e794a70e26dba865a",
+   "bytes": 8938
+  },
+  {
+   "seat": "C",
+   "model": "deepseek-v3.2",
+   "batch": 7,
+   "clusters": [
+    "Q6::7",
+    "Q6::32",
+    "Q6::30"
+   ],
+   "request_sha256": "fe3a9a6f9adde4a7e3cf84f299af9efb71a4564eca3de7de4e6a39b3ebfcec8c",
+   "bytes": 7397
+  }
+ ]
+}

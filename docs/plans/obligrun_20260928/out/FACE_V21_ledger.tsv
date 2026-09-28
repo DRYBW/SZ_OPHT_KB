@@ -1,0 +1,48 @@
+cluster_id	era	chakravarti_cells	n_lit_entries_v1	hit_entries	action
+Q6::13	变化簇	177	2		无
+Q6::15	变化簇	144	4		无
+Q6::23	冻结簇	53	0		无
+Q6::24	变化簇	12	0		无
+Q6::6	变化簇	385	0		无
+Q6::9	冻结簇	424	0		无
+Q6::12	冻结簇	9	0		无
+Q6::11	变化簇	3	2	Endo:36712326	剔除
+Q6::21	变化簇	34	4		无
+Q6::20	变化簇	103	0		无
+Q6::1	冻结簇	195	0		无
+Q6::4	变化簇	130	2		无
+Q6::2	变化簇	59	4		无
+Q6::0	冻结簇	0	0		无
+Q6::19	变化簇	12	4		无
+Q6::5	变化簇	6	2		无
+Q6::14	冻结簇	1394	2		无
+Q6::18	变化簇	0	0		无
+Q6::27	冻结簇	0	0		无
+Q6::3	变化簇	1	4		无
+Q6::22	变化簇	2	6		无
+Q6::33	变化簇	0	6		无
+Q6::16	变化簇	0	0		无
+Q6::25	变化簇	37	2		无
+Q6::28	变化簇	1100	4		无
+Q6::31	变化簇	0	0		无
+Q6::17	变化簇	42	2		无
+Q6::8	冻结簇	4	2		无
+Q6::26	变化簇	46	4		无
+Q6::29	变化簇	1	2		无
+Q6::7	变化簇	12	2	Endo:36712326	剔除
+Q6::32	变化簇	3	0		无
+Q6::30	变化簇	0	4		无
+# lineage registry basis:
+# chakravarti_GSE218123 | source_pmid=36712326 | GEO 系列题名与 PubMed 36712326(Maiti G; PNAS Nexus 2022) 题名逐字一致 + 论文 Data Availability 自存 GSE218123 + D002 obs.study 直读 4,388 评测细胞（OB-4 v1 三重证据链）
+# lako_adult_GSE155683 | source_pmid=33865984 | GEO 题名→PubMed 题名检索命中 33865984(Collin J; Ocul Surf 2021)——不在票面 12 PMID 集内，无剔除贡献；38177186(Li M)对其 GSE155683 提及=下载输入（第三方再分析，沿 OB-4 v1 披露）；34381080(Ligocki) 本地语料 46 chunk 零 GSE 提及，非其来源
+# shi_GSE157474 | source_pmid=None | 系列题名与票面 12 PMID 题名零匹配（逐条比对表见 FACE_V21_ledger 附注）——无剔除贡献
+# chen_pub_GSE153515 | source_pmid=None | 题名与票面 12 PMID 零匹配——无剔除贡献
+# li_GSE147979 | source_pmid=None | 题名与票面 12 PMID 零匹配——无剔除贡献
+# dickman_GSE186433 | source_pmid=None | 题名与票面 12 PMID 零匹配——无剔除贡献
+# chen_cornea | source_pmid=None | obs 无 accession，本地不可解析 source paper（残余限制沿 v1；12 PMID 首作者无 chen 系）
+# chen_limbus | source_pmid=None | 同上
+# chen_sclera | source_pmid=None | 同上
+# hits_total=2 extra_vs_named=[] missing_vs_named=[]
+# v1_sha=ba76b6ce1af1654ef4421dc81c404edda57f7842ebfc5c26178b8ddcd60be934
+# v2.1_sha=2c0649dcc2001c8b3fe485dab35761a90a4f2c297df88e7a16739e3ec23929bb
+# changed_clusters=['Q6::11', 'Q6::7']；31 未涉簇行逐字节相等；2 变化簇除 lit 收缩外全字段逐字节相等（含 kb_marker_ranking 零动）

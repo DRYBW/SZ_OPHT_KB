@@ -1,0 +1,45 @@
+{
+ "n_scanned": 104,
+ "decisions": {
+  "INTAKE_FULLTEXT": 93,
+  "INTAKE_ABS_ONLY": 10,
+  "REJECT_IN_LIBRARY_DOUBLECOUNT": 1
+ },
+ "n_intake": 103,
+ "n_intake_fulltext": 93,
+ "n_intake_abs_only": 10,
+ "intake_covering_7units": {
+  "C8ORF76": [
+   "37287642",
+   "30572641"
+  ],
+  "COL19A1": [
+   "41193841",
+   "42428548"
+  ],
+  "FAM107B": [
+   "38003067",
+   "42074142"
+  ],
+  "SLC24A3": [
+   "36614039",
+   "38731230"
+  ],
+  "SSR4": [
+   "42136961",
+   "38612470"
+  ],
+  "XCR1": [
+   "42330349",
+   "42724236"
+  ],
+  "ZNF804B": [
+   "41014753",
+   "34529728"
+  ]
+ },
+ "rejected": {
+  "40171795": "REJECT_IN_LIBRARY_DOUBLECOUNT (RA2 白名单成员, 已在 v2.4.1 库)"
+ },
+ "note": "字段修正=本地台账重算 (原表达式笔误); 判读零影响 (RA3_SCAN_SUMMARY 仅登记件, 非判据)"
+}

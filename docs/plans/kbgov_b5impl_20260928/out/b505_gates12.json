@@ -1,0 +1,1401 @@
+{
+ "at": "2026-09-28 15:18:04",
+ "card": "t_8960c7e0",
+ "gates": {
+  "g1_lesion7": {
+   "Q7::11": {
+    "tier": "mouse_suspected",
+    "off_ranking": [
+     "retina_interneuron::AC",
+     "retina_interneuron::HC",
+     "retina_v6::AC",
+     "AC",
+     "HC",
+     "Pericyte",
+     "retina_v6::HC"
+    ],
+    "evidence": {
+     "title_frac": 1.0,
+     "msp": 0,
+     "m_only": 0,
+     "msp_examples": [],
+     "m_only_examples": []
+    }
+   },
+   "Q7::15": {
+    "tier": "mouse_confirmed",
+    "off_ranking": [
+     "retina_interneuron::AC",
+     "retina_interneuron::BC",
+     "retina_v6::AC"
+    ],
+    "evidence": {
+     "title_frac": 1.0,
+     "msp": 2,
+     "m_only": 2,
+     "msp_examples": [
+      "Gm30382",
+      "Gm20754"
+     ],
+     "m_only_examples": [
+      "Gm30382",
+      "Gm20754"
+     ]
+    }
+   },
+   "Q7::21": {
+    "tier": "mouse_confirmed",
+    "off_ranking": [
+     "retina_interneuron::BC",
+     "retina_interneuron::AC",
+     "retina_v6::BC",
+     "retina_v6::AC"
+    ],
+    "evidence": {
+     "title_frac": 1.0,
+     "msp": 2,
+     "m_only": 2,
+     "msp_examples": [
+      "Gm20754",
+      "Gm30382"
+     ],
+     "m_only_examples": [
+      "Gm20754",
+      "Gm30382"
+     ]
+    }
+   },
+   "Q7::22": {
+    "tier": "mouse_confirmed",
+    "off_ranking": [
+     "retina_interneuron::BC",
+     "retina_v6::BC",
+     "retina_interneuron::AC"
+    ],
+    "evidence": {
+     "title_frac": 1.0,
+     "msp": 1,
+     "m_only": 1,
+     "msp_examples": [
+      "Gm30382"
+     ],
+     "m_only_examples": [
+      "Gm30382"
+     ]
+    }
+   },
+   "Q7::52": {
+    "tier": "mouse_confirmed",
+    "off_ranking": [
+     "Pericyte",
+     "Fibroblast",
+     "retina_interneuron::AC",
+     "retina_v6::AC"
+    ],
+    "evidence": {
+     "title_frac": 0.96,
+     "msp": 1,
+     "m_only": 1,
+     "msp_examples": [
+      "D130079A08Rik"
+     ],
+     "m_only_examples": [
+      "D130079A08Rik"
+     ]
+    }
+   },
+   "Q7::58": {
+    "tier": "mouse_confirmed",
+    "off_ranking": [
+     "Pericyte",
+     "Fibroblast",
+     "retina_interneuron::AC"
+    ],
+    "evidence": {
+     "title_frac": 0.96,
+     "msp": 1,
+     "m_only": 1,
+     "msp_examples": [
+      "D130079A08Rik"
+     ],
+     "m_only_examples": [
+      "D130079A08Rik"
+     ]
+    }
+   },
+   "Q7::61": {
+    "tier": "mouse_confirmed",
+    "off_ranking": [
+     "AC",
+     "Astro",
+     "retina_interneuron::BC",
+     "retina_interneuron::AC",
+     "retina_interneuron::Astro",
+     "retina_v6::AC"
+    ],
+    "evidence": {
+     "title_frac": 1.0,
+     "msp": 0,
+     "m_only": 1,
+     "msp_examples": [],
+     "m_only_examples": [
+      "Zfp804a"
+     ]
+    }
+   }
+  },
+  "g2_shift": {
+   "n_shift": 0,
+   "shift_rate_pct": 0.0,
+   "n_reg": 230
+  },
+  "mouse_refused": 59
+ },
+ "mouse_ledger": [
+  {
+   "cluster_id": "Q7::0",
+   "tier": "mouse_suspected",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::1",
+   "tier": "mouse_suspected",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::10",
+   "tier": "mouse_suspected",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::11",
+   "tier": "mouse_suspected",
+   "a_named_n": 7,
+   "b5_named": [],
+   "unranked_n": 7,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::12",
+   "tier": "mouse_suspected",
+   "a_named_n": 7,
+   "b5_named": [],
+   "unranked_n": 7,
+   "evidence": {
+    "title_frac": 0.9,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::13",
+   "tier": "mouse_suspected",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::14",
+   "tier": "mouse_confirmed",
+   "a_named_n": 8,
+   "b5_named": [],
+   "unranked_n": 8,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 1,
+    "msp_examples": [],
+    "m_only_examples": [
+     "Car14"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::15",
+   "tier": "mouse_confirmed",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 2,
+    "m_only": 2,
+    "msp_examples": [
+     "Gm30382",
+     "Gm20754"
+    ],
+    "m_only_examples": [
+     "Gm30382",
+     "Gm20754"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::17",
+   "tier": "mouse_suspected",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::18",
+   "tier": "mouse_confirmed",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 1,
+    "m_only": 0,
+    "msp_examples": [
+     "Gm42418"
+    ],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::19",
+   "tier": "mouse_confirmed",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 1,
+    "msp_examples": [],
+    "m_only_examples": [
+     "Pdzph1"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::20",
+   "tier": "mouse_confirmed",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 1,
+    "m_only": 2,
+    "msp_examples": [
+     "Gm42418"
+    ],
+    "m_only_examples": [
+     "Pdzph1",
+     "Bc1"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::21",
+   "tier": "mouse_confirmed",
+   "a_named_n": 4,
+   "b5_named": [],
+   "unranked_n": 4,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 2,
+    "m_only": 2,
+    "msp_examples": [
+     "Gm20754",
+     "Gm30382"
+    ],
+    "m_only_examples": [
+     "Gm20754",
+     "Gm30382"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::22",
+   "tier": "mouse_confirmed",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 1,
+    "m_only": 1,
+    "msp_examples": [
+     "Gm30382"
+    ],
+    "m_only_examples": [
+     "Gm30382"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::23",
+   "tier": "mouse_confirmed",
+   "a_named_n": 4,
+   "b5_named": [],
+   "unranked_n": 4,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 1,
+    "msp_examples": [],
+    "m_only_examples": [
+     "Cntnap5a"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::24",
+   "tier": "mouse_suspected",
+   "a_named_n": 5,
+   "b5_named": [],
+   "unranked_n": 5,
+   "evidence": {
+    "title_frac": 0.9,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::25",
+   "tier": "mouse_confirmed",
+   "a_named_n": 4,
+   "b5_named": [],
+   "unranked_n": 4,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 1,
+    "msp_examples": [],
+    "m_only_examples": [
+     "Zfp804a"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::26",
+   "tier": "mouse_confirmed",
+   "a_named_n": 4,
+   "b5_named": [],
+   "unranked_n": 4,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 1,
+    "m_only": 2,
+    "msp_examples": [
+     "Gm20754"
+    ],
+    "m_only_examples": [
+     "Gm20754",
+     "Cntnap5a"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::27",
+   "tier": "mouse_confirmed",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 1,
+    "m_only": 1,
+    "msp_examples": [
+     "Gm20754"
+    ],
+    "m_only_examples": [
+     "Gm20754"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::29",
+   "tier": "mouse_confirmed",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 2,
+    "m_only": 3,
+    "msp_examples": [
+     "Gm20754",
+     "C130073E24Rik"
+    ],
+    "m_only_examples": [
+     "Gm20754",
+     "C130073E24Rik",
+     "Car8"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::3",
+   "tier": "mouse_suspected",
+   "a_named_n": 10,
+   "b5_named": [],
+   "unranked_n": 10,
+   "evidence": {
+    "title_frac": 0.8,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::30",
+   "tier": "mouse_confirmed",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 1,
+    "m_only": 1,
+    "msp_examples": [
+     "Gm30382"
+    ],
+    "m_only_examples": [
+     "Gm30382"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::31",
+   "tier": "mouse_suspected",
+   "a_named_n": 5,
+   "b5_named": [],
+   "unranked_n": 5,
+   "evidence": {
+    "title_frac": 0.9,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::32",
+   "tier": "mouse_confirmed",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 1,
+    "m_only": 1,
+    "msp_examples": [
+     "A730046J19Rik"
+    ],
+    "m_only_examples": [
+     "A730046J19Rik"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::33",
+   "tier": "mouse_suspected",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::34",
+   "tier": "mouse_confirmed",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 1,
+    "m_only": 1,
+    "msp_examples": [
+     "6330411D24Rik"
+    ],
+    "m_only_examples": [
+     "6330411D24Rik"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::35",
+   "tier": "mouse_suspected",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::36",
+   "tier": "mouse_suspected",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::37",
+   "tier": "mouse_suspected",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::38",
+   "tier": "mouse_confirmed",
+   "a_named_n": 5,
+   "b5_named": [],
+   "unranked_n": 5,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 1,
+    "m_only": 3,
+    "msp_examples": [
+     "Gm534"
+    ],
+    "m_only_examples": [
+     "Car8",
+     "Gm534",
+     "Zfp365"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::39",
+   "tier": "mouse_confirmed",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 1,
+    "msp_examples": [],
+    "m_only_examples": [
+     "Zfp804a"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::4",
+   "tier": "mouse_confirmed",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 2,
+    "m_only": 3,
+    "msp_examples": [
+     "Gm20754",
+     "C130073E24Rik"
+    ],
+    "m_only_examples": [
+     "Gm20754",
+     "C130073E24Rik",
+     "Car8"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::40",
+   "tier": "mouse_confirmed",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 1,
+    "m_only": 1,
+    "msp_examples": [
+     "Gm32884"
+    ],
+    "m_only_examples": [
+     "Gm32884"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::41",
+   "tier": "mouse_confirmed",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 1,
+    "m_only": 1,
+    "msp_examples": [
+     "D130079A08Rik"
+    ],
+    "m_only_examples": [
+     "D130079A08Rik"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::42",
+   "tier": "mouse_suspected",
+   "a_named_n": 5,
+   "b5_named": [],
+   "unranked_n": 5,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::43",
+   "tier": "mouse_confirmed",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 1,
+    "m_only": 1,
+    "msp_examples": [
+     "Gm32647"
+    ],
+    "m_only_examples": [
+     "Gm32647"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::44",
+   "tier": "mouse_suspected",
+   "a_named_n": 5,
+   "b5_named": [],
+   "unranked_n": 5,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::46",
+   "tier": "mouse_suspected",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::47",
+   "tier": "mouse_suspected",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::48",
+   "tier": "mouse_suspected",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::49",
+   "tier": "mouse_suspected",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::5",
+   "tier": "mouse_confirmed",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 2,
+    "msp_examples": [],
+    "m_only_examples": [
+     "Ly6c1",
+     "Slco1a4"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::50",
+   "tier": "mouse_suspected",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::51",
+   "tier": "mouse_suspected",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::52",
+   "tier": "mouse_confirmed",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 1,
+    "m_only": 1,
+    "msp_examples": [
+     "D130079A08Rik"
+    ],
+    "m_only_examples": [
+     "D130079A08Rik"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::53",
+   "tier": "mouse_confirmed",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 1,
+    "m_only": 1,
+    "msp_examples": [
+     "D130079A08Rik"
+    ],
+    "m_only_examples": [
+     "D130079A08Rik"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::54",
+   "tier": "mouse_confirmed",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 2,
+    "m_only": 3,
+    "msp_examples": [
+     "Gm20754",
+     "C130073E24Rik"
+    ],
+    "m_only_examples": [
+     "Gm20754",
+     "C130073E24Rik",
+     "Car8"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::57",
+   "tier": "mouse_confirmed",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 0.9,
+    "msp": 2,
+    "m_only": 2,
+    "msp_examples": [
+     "D130009I18Rik",
+     "D130079A08Rik"
+    ],
+    "m_only_examples": [
+     "D130009I18Rik",
+     "D130079A08Rik"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::58",
+   "tier": "mouse_confirmed",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 1,
+    "m_only": 1,
+    "msp_examples": [
+     "D130079A08Rik"
+    ],
+    "m_only_examples": [
+     "D130079A08Rik"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::59",
+   "tier": "mouse_confirmed",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 0,
+    "m_only": 1,
+    "msp_examples": [],
+    "m_only_examples": [
+     "Zfp365"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::6",
+   "tier": "mouse_confirmed",
+   "a_named_n": 6,
+   "b5_named": [],
+   "unranked_n": 6,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 1,
+    "msp_examples": [],
+    "m_only_examples": [
+     "Abca8a"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::60",
+   "tier": "mouse_suspected",
+   "a_named_n": 5,
+   "b5_named": [],
+   "unranked_n": 5,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::61",
+   "tier": "mouse_confirmed",
+   "a_named_n": 6,
+   "b5_named": [],
+   "unranked_n": 6,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 1,
+    "msp_examples": [],
+    "m_only_examples": [
+     "Zfp804a"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::62",
+   "tier": "mouse_confirmed",
+   "a_named_n": 5,
+   "b5_named": [],
+   "unranked_n": 5,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 1,
+    "msp_examples": [],
+    "m_only_examples": [
+     "Zfp365"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::63",
+   "tier": "mouse_suspected",
+   "a_named_n": 5,
+   "b5_named": [],
+   "unranked_n": 5,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::64",
+   "tier": "mouse_suspected",
+   "a_named_n": 2,
+   "b5_named": [],
+   "unranked_n": 2,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::7",
+   "tier": "mouse_confirmed",
+   "a_named_n": 3,
+   "b5_named": [],
+   "unranked_n": 3,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 2,
+    "m_only": 3,
+    "msp_examples": [
+     "A930001A20Rik",
+     "Gm11418"
+    ],
+    "m_only_examples": [
+     "Zfp804a",
+     "A930001A20Rik",
+     "Gm11418"
+    ]
+   }
+  },
+  {
+   "cluster_id": "Q7::8",
+   "tier": "mouse_suspected",
+   "a_named_n": 5,
+   "b5_named": [],
+   "unranked_n": 5,
+   "evidence": {
+    "title_frac": 0.95,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  },
+  {
+   "cluster_id": "Q7::9",
+   "tier": "mouse_suspected",
+   "a_named_n": 7,
+   "b5_named": [],
+   "unranked_n": 7,
+   "evidence": {
+    "title_frac": 1.0,
+    "msp": 0,
+    "m_only": 0,
+    "msp_examples": [],
+    "m_only_examples": []
+   }
+  }
+ ],
+ "checks_n": 57,
+ "fails": [],
+ "checks": [
+  {
+   "check": "g1-named-empty::Q7::11",
+   "pass": true,
+   "detail": "ON 具名残留=[]"
+  },
+  {
+   "check": "g1-refuse-fields::Q7::11",
+   "pass": true,
+   "detail": "{'input_species': 'mouse_suspected', 'no_named_ranking_for': 'mouse_input'}"
+  },
+  {
+   "check": "g1-unranked-mirror::Q7::11",
+   "pass": true,
+   "detail": "moved=['retina_interneuron::AC', 'retina_interneuron::HC', 'retina_v6::AC', 'AC'] vs A=['retina_interneuron::AC', 'retina_interneuron::HC', 'retina_v6::AC', 'AC']"
+  },
+  {
+   "check": "g1-dual-source-tier::Q7::11",
+   "pass": true,
+   "detail": "prod=mouse_suspected replica=mouse_suspected"
+  },
+  {
+   "check": "g1-dual-source-named::Q7::11",
+   "pass": true,
+   "detail": "replica B5_named=[]"
+  },
+  {
+   "check": "g1-off-restores-artifacts::Q7::11",
+   "pass": true,
+   "detail": "off=['retina_interneuron::AC', 'retina_interneuron::HC', 'retina_v6::AC', 'AC'] vs A=['retina_interneuron::AC', 'retina_interneuron::HC', 'retina_v6::AC', 'AC']"
+  },
+  {
+   "check": "g1-named-empty::Q7::15",
+   "pass": true,
+   "detail": "ON 具名残留=[]"
+  },
+  {
+   "check": "g1-refuse-fields::Q7::15",
+   "pass": true,
+   "detail": "{'input_species': 'mouse_confirmed', 'no_named_ranking_for': 'mouse_input'}"
+  },
+  {
+   "check": "g1-unranked-mirror::Q7::15",
+   "pass": true,
+   "detail": "moved=['retina_interneuron::AC', 'retina_interneuron::BC', 'retina_v6::AC'] vs A=['retina_interneuron::AC', 'retina_interneuron::BC', 'retina_v6::AC']"
+  },
+  {
+   "check": "g1-dual-source-tier::Q7::15",
+   "pass": true,
+   "detail": "prod=mouse_confirmed replica=mouse_confirmed"
+  },
+  {
+   "check": "g1-dual-source-named::Q7::15",
+   "pass": true,
+   "detail": "replica B5_named=[]"
+  },
+  {
+   "check": "g1-off-restores-artifacts::Q7::15",
+   "pass": true,
+   "detail": "off=['retina_interneuron::AC', 'retina_interneuron::BC', 'retina_v6::AC'] vs A=['retina_interneuron::AC', 'retina_interneuron::BC', 'retina_v6::AC']"
+  },
+  {
+   "check": "g1-named-empty::Q7::21",
+   "pass": true,
+   "detail": "ON 具名残留=[]"
+  },
+  {
+   "check": "g1-refuse-fields::Q7::21",
+   "pass": true,
+   "detail": "{'input_species': 'mouse_confirmed', 'no_named_ranking_for': 'mouse_input'}"
+  },
+  {
+   "check": "g1-unranked-mirror::Q7::21",
+   "pass": true,
+   "detail": "moved=['retina_interneuron::BC', 'retina_interneuron::AC', 'retina_v6::BC', 'retina_v6::AC'] vs A=['retina_interneuron::BC', 'retina_interneuron::AC', 'retina_v6::BC', 'retina_v6::AC']"
+  },
+  {
+   "check": "g1-dual-source-tier::Q7::21",
+   "pass": true,
+   "detail": "prod=mouse_confirmed replica=mouse_confirmed"
+  },
+  {
+   "check": "g1-dual-source-named::Q7::21",
+   "pass": true,
+   "detail": "replica B5_named=[]"
+  },
+  {
+   "check": "g1-off-restores-artifacts::Q7::21",
+   "pass": true,
+   "detail": "off=['retina_interneuron::BC', 'retina_interneuron::AC', 'retina_v6::BC', 'retina_v6::AC'] vs A=['retina_interneuron::BC', 'retina_interneuron::AC', 'retina_v6::BC', 'retina_v6::AC']"
+  },
+  {
+   "check": "g1-named-empty::Q7::22",
+   "pass": true,
+   "detail": "ON 具名残留=[]"
+  },
+  {
+   "check": "g1-refuse-fields::Q7::22",
+   "pass": true,
+   "detail": "{'input_species': 'mouse_confirmed', 'no_named_ranking_for': 'mouse_input'}"
+  },
+  {
+   "check": "g1-unranked-mirror::Q7::22",
+   "pass": true,
+   "detail": "moved=['retina_interneuron::BC', 'retina_v6::BC', 'retina_interneuron::AC'] vs A=['retina_interneuron::BC', 'retina_v6::BC', 'retina_interneuron::AC']"
+  },
+  {
+   "check": "g1-dual-source-tier::Q7::22",
+   "pass": true,
+   "detail": "prod=mouse_confirmed replica=mouse_confirmed"
+  },
+  {
+   "check": "g1-dual-source-named::Q7::22",
+   "pass": true,
+   "detail": "replica B5_named=[]"
+  },
+  {
+   "check": "g1-off-restores-artifacts::Q7::22",
+   "pass": true,
+   "detail": "off=['retina_interneuron::BC', 'retina_v6::BC', 'retina_interneuron::AC'] vs A=['retina_interneuron::BC', 'retina_v6::BC', 'retina_interneuron::AC']"
+  },
+  {
+   "check": "g1-named-empty::Q7::52",
+   "pass": true,
+   "detail": "ON 具名残留=[]"
+  },
+  {
+   "check": "g1-refuse-fields::Q7::52",
+   "pass": true,
+   "detail": "{'input_species': 'mouse_confirmed', 'no_named_ranking_for': 'mouse_input'}"
+  },
+  {
+   "check": "g1-unranked-mirror::Q7::52",
+   "pass": true,
+   "detail": "moved=['Pericyte', 'Fibroblast', 'retina_interneuron::AC', 'retina_v6::AC'] vs A=['Pericyte', 'Fibroblast', 'retina_interneuron::AC', 'retina_v6::AC']"
+  },
+  {
+   "check": "g1-dual-source-tier::Q7::52",
+   "pass": true,
+   "detail": "prod=mouse_confirmed replica=mouse_confirmed"
+  },
+  {
+   "check": "g1-dual-source-named::Q7::52",
+   "pass": true,
+   "detail": "replica B5_named=[]"
+  },
+  {
+   "check": "g1-off-restores-artifacts::Q7::52",
+   "pass": true,
+   "detail": "off=['Pericyte', 'Fibroblast', 'retina_interneuron::AC', 'retina_v6::AC'] vs A=['Pericyte', 'Fibroblast', 'retina_interneuron::AC', 'retina_v6::AC']"
+  },
+  {
+   "check": "g1-named-empty::Q7::58",
+   "pass": true,
+   "detail": "ON 具名残留=[]"
+  },
+  {
+   "check": "g1-refuse-fields::Q7::58",
+   "pass": true,
+   "detail": "{'input_species': 'mouse_confirmed', 'no_named_ranking_for': 'mouse_input'}"
+  },
+  {
+   "check": "g1-unranked-mirror::Q7::58",
+   "pass": true,
+   "detail": "moved=['Pericyte', 'Fibroblast', 'retina_interneuron::AC'] vs A=['Pericyte', 'Fibroblast', 'retina_interneuron::AC']"
+  },
+  {
+   "check": "g1-dual-source-tier::Q7::58",
+   "pass": true,
+   "detail": "prod=mouse_confirmed replica=mouse_confirmed"
+  },
+  {
+   "check": "g1-dual-source-named::Q7::58",
+   "pass": true,
+   "detail": "replica B5_named=[]"
+  },
+  {
+   "check": "g1-off-restores-artifacts::Q7::58",
+   "pass": true,
+   "detail": "off=['Pericyte', 'Fibroblast', 'retina_interneuron::AC'] vs A=['Pericyte', 'Fibroblast', 'retina_interneuron::AC']"
+  },
+  {
+   "check": "g1-named-empty::Q7::61",
+   "pass": true,
+   "detail": "ON 具名残留=[]"
+  },
+  {
+   "check": "g1-refuse-fields::Q7::61",
+   "pass": true,
+   "detail": "{'input_species': 'mouse_confirmed', 'no_named_ranking_for': 'mouse_input'}"
+  },
+  {
+   "check": "g1-unranked-mirror::Q7::61",
+   "pass": true,
+   "detail": "moved=['AC', 'Astro', 'retina_interneuron::BC', 'retina_interneuron::AC'] vs A=['AC', 'Astro', 'retina_interneuron::BC', 'retina_interneuron::AC']"
+  },
+  {
+   "check": "g1-dual-source-tier::Q7::61",
+   "pass": true,
+   "detail": "prod=mouse_confirmed replica=mouse_confirmed"
+  },
+  {
+   "check": "g1-dual-source-named::Q7::61",
+   "pass": true,
+   "detail": "replica B5_named=[]"
+  },
+  {
+   "check": "g1-off-restores-artifacts::Q7::61",
+   "pass": true,
+   "detail": "off=['AC', 'Astro', 'retina_interneuron::BC', 'retina_interneuron::AC'] vs A=['AC', 'Astro', 'retina_interneuron::BC', 'retina_interneuron::AC']"
+  },
+  {
+   "check": "g1-all7-zero-named",
+   "pass": true,
+   "detail": "7"
+  },
+  {
+   "check": "g1-Q2x22-order-kept",
+   "pass": true,
+   "detail": "on=['MG', 'Astro', 'retina_interneuron::MG', 'retina_interneuron::Astro'] A=['MG', 'Astro', 'retina_interneuron::MG', 'retina_interneuron::Astro']"
+  },
+  {
+   "check": "g1-Q2x22-flags-dual-source",
+   "pass": true,
+   "detail": "prod={'MG', 'retina_interneuron::MG'} replica={'MG', 'retina_interneuron::MG'}"
+  },
+  {
+   "check": "g1-Q2x22-tier-human",
+   "pass": true,
+   "detail": "human_assumed"
+  },
+  {
+   "check": "g1-Q2x22-flag-reason",
+   "pass": true,
+   "detail": "reason 文本"
+  },
+  {
+   "check": "g1-Q5b35-kept-bare",
+   "pass": true,
+   "detail": "flags=[]"
+  },
+  {
+   "check": "g2-set-size==230",
+   "pass": true,
+   "detail": "230"
+  },
+  {
+   "check": "g2-shift==0",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "g2-shift-rate==0.0",
+   "pass": true,
+   "detail": "0.0"
+  },
+  {
+   "check": "g2-tier-dual-source==0-mismatch",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "g2-candidate-metrics-agree",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "check": "g2-signals290-dual-source-all-equal",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "g2-mouse-set==59",
+   "pass": true,
+   "detail": "59"
+  },
+  {
+   "check": "g2-mouse-all-refused",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "g2-mouse-dual-source",
+   "pass": true,
+   "detail": "replica B5_named≠[] rows=[]"
+  }
+ ],
+ "verdict": "PASS"
+}

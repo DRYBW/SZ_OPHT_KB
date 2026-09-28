@@ -1,0 +1,6 @@
+/mnt/D/OcularKB/ocularkb/rag/scripts/stage2a_parse_xml_v2.py:47: FutureWarning: Truth-testing of elements was a source of confusion and will always return True in future versions. Use specific 'len(elem)' or 'elem is not None' test instead.
+  cap = tw.find(".//caption") or tw.find(".//title")
+ERR PMC12589139: ParsePI: PI ori space expected, line 3, column 27484 (PMC12589139.xml, line 3) -> fallback abstract-only
+ERR PMC13587881: Specification mandates value for attribute cont, line 323, column 1029 (PMC13587881.xml, line 323) -> fallback abstract-only
+DONE: 103 papers -> 11221 chunks -> /mnt/D/EyeKB/plans/rag_fix3_20260928/work/chunks_ra3_raw.jsonl
+zero-chunk: []

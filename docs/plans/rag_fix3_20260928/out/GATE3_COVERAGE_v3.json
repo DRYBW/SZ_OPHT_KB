@@ -1,0 +1,79 @@
+{
+ "gate": ">=0.80 单元级消除 (分母92/阈值80%/判据=gate3_coverage.py 逐字, 新增面=closed64∪RA2_17∪RA3_103)",
+ "card": "t_b94d0999",
+ "corpus": "v2.4.2",
+ "units_total": 92,
+ "units_eliminated": 87,
+ "unit_elimination_rate": 0.9457,
+ "rows_total": 232,
+ "rows_eliminated": 216,
+ "row_elimination_rate": 0.931,
+ "verdict": "PASS",
+ "baseline_v241": {
+  "units_eliminated": 78,
+  "rate": 0.8478,
+  "monotonicity_verified": true
+ },
+ "new_eliminated_ra3": [
+  [
+   "COL19A1",
+   "retina"
+  ],
+  [
+   "FAM107B",
+   "retina"
+  ],
+  [
+   "FAM135A",
+   "retina"
+  ],
+  [
+   "LILRB2",
+   "retina"
+  ],
+  [
+   "LMOD1",
+   "face"
+  ],
+  [
+   "SLC24A3",
+   "retina"
+  ],
+  [
+   "SSR4",
+   "membrane"
+  ],
+  [
+   "XCR1",
+   "membrane"
+  ],
+  [
+   "ZNF804B",
+   "retina"
+  ]
+ ],
+ "by_ctx": {
+  "face": [
+   3,
+   3
+  ],
+  "kb9": [
+   3,
+   3
+  ],
+  "lacrimal": [
+   7,
+   7
+  ],
+  "membrane": [
+   21,
+   21
+  ],
+  "retina": [
+   58,
+   53
+  ]
+ },
+ "new_corpus_chunks": 22274,
+ "evidence_sha_check": "chunks_ra_raw==43d02db6... PASS; chunks_ra2_raw==ab941a8a... PASS"
+}

@@ -1,0 +1,81 @@
+你是单细胞注释双盲评测的判读员（槽位 C）。对以下 5 个聚类逐一盲注。只依据证据卡判读，禁止臆测证据之外的来源。
+
+## 判读规则（冻结件原文，必须遵守）
+# KB2 对象B 盲注指令（两位判读员同一份，冻结件）
+
+你是双盲判读员之一。输入 = `EV_DIGEST.jsonl`（每行一簇的证据卡）。
+禁止事项：禁读本目录以外标注真值/引擎预测/另一位判读员意见；禁把证据转成分数（红线：只判读不打分）。
+
+## 每簇输出一行 JSON（JSONL）：
+```json
+{"cluster_id":"Q?::K",
+ "identity":"<标签或 coarse:<名> 或 undetermined>",
+ "level":"majority|coarse|fine-cap",
+ "grade":"A|B|C",
+ "gates":{"identity_evidence":"pass|fail|unresolved","resolution":"pass|fail|unresolved","technical":"pass|fail|unresolved|na"},
+ "flag":"none|out_of_baseline_coverage|conflicts_with_literature|technical_suspect|candidate_biology",
+ "why":"≤40字依据（marker/文献/基线相容性）"}
+```
+
+## 标签词表（按成员）
+- Q1/Q2/Q3/Q4/Q5b（人视网膜）：Rod, BC, AC, RGC, MG(Müller), Cone, HC, Astro, Micro(小胶质), RPE
+- Q6（人眼表）：Epithelium, Corneal Endothelium, Endothelium, Fibroblasts, Immune Cells, Melanocytes, Pericytes, Schwann Cells, Smooth Muscle Cells
+- Q7（鼠视网膜）：同 Q1 十类镜像（鼠 MG=Müller 同名）
+- Q8（胎儿视网膜）：**发育身份合法**（如 RPC/progenitor、immature neuron 等 `coarse:dev-*`）；只有强证据才给成人十类；十类强分而证据薄=错误行为样本
+- Q9（PDR 纤维血管膜，疾病材料）：词表=眼表/视网膜/免疫/间质任一合理身份或 `coarse:`；E6 不计对错，A/B/C 等级与三门口径照打；digest 附 disease_prior 仅作 phase② 上下文旗，不得用作身份依据（"更符合疾病预期"不是修改理由）。
+
+## 等级（EVAL_Rubric_v1 §2 原义）
+- **A**：独立实验级证据支持（正交验证共定位/形态位置——digest 内通常给不到，慎用）
+- **B**：转录证据（top genes 强命中）+ 相邻候选可排除 +（终版等级由双人一致确认）
+- **C**：技术疑点/候选冲突/分辨率不足 → 粗标签或 undetermined
+- 弃权（undetermined）= 合法结论，不是失败。不许为填满而硬注。
+
+## 三门（EVAL_Rubric §1 / 协议 v1.1 §3）
+- 身份证据：支持+反证+相邻候选区分是否足以定身份层级
+- 群体解析度：是否互斥谱系程序混合（一个簇内出现两谱系核心 marker 共存→resolution:fail+考虑技术双细胞 flag=technical_suspect）
+- 技术可信度：digest 无 QC 字段时填 na（Q9 有 n_genes/percent_mito 可判）
+- 组成相容性：tissue_composition 是**参考分布不是达标线**；超出 range→flag 注明，不强制改身份。
+
+## 阅读 digest 字段
+- top_genes: 簇内 wilcoxon 排名 top25（盲：无人工预筛）
+- kb_marker: query_marker 本地权威 marker 命中与 celltype_ranking（排序=检索副产物，**不是置信度**）
+- tissue_composition: 该组织供者级参考分布（同材料优先，禁跨材料套用）
+- lit: 对应候选类的文献片段摘要（PMID 可溯源）
+- disease_prior_phase2: 仅 Q9，上下文旗
+- n_cells/material: 判读语境（物种/实际取样材料已按协议①保留）
+
+
+## 证据卡（5 簇；cluster_id 必须原样返回：Q6::31 / Q6::17 / Q6::8 / Q6::26 / Q6::29）
+说明：基因以 symbol(原ENSG ID) 双列呈现；lit 为本地文献库检索证据（排序是检索副产物不是置信度）。
+
+[Q6::31] member=Q6 material=species:human/tissue:ocular_surface n_cells=1203 qc=na
+top_genes(按序, symbol(原ID)): PLA2G2A(ENSG00000188257), ANGPTL7(ENSG00000171819), IGFBP5(ENSG00000115461), MGP(ENSG00000111341), SERPINA3(ENSG00000196136), MYOC(ENSG00000034971), ENSG00000286533, FBLN1(ENSG00000077942), MEG8(ENSG00000225746), CHI3L1(ENSG00000133048), FBXL7(ENSG00000183580), ENSG00000260971, ARHGAP26(ENSG00000145819), TIMP3(ENSG00000100234), SAA1(ENSG00000173432), PRUNE2(ENSG00000106772), CCN2(ENSG00000118523), TSC22D2(ENSG00000196428), SLIT2(ENSG00000145147), NEAT1(ENSG00000245532)
+kb_gene_hits: 无
+kb_celltype_ranking: Pericyte(n=1)
+lit(文献证据): Pericyte|PMID:41230906|PRRX1  Orchestrates Pericyte–Myofibroblast Transition in Pathological  ; Pericyte|PMID:40449651|Pericytes in the optic nerve head ☆
+[Q6::17] member=Q6 material=species:human/tissue:ocular_surface n_cells=982 qc=na
+top_genes(按序, symbol(原ID)): CDH19(ENSG00000071991), NRXN1(ENSG00000179915), GPM6B(ENSG00000046653), CRYAB(ENSG00000109846), SCN7A(ENSG00000136546), VIM(ENSG00000026025), CADM2(ENSG00000175161), ADGRB3(ENSG00000135298), SORCS1(ENSG00000108018), STARD13(ENSG00000133121), NRXN3(ENSG00000021645), NCAM2(ENSG00000154654), S100B(ENSG00000160307), DST(ENSG00000151914), XKR4(ENSG00000206579), HSPA1A(ENSG00000204389), PLP1(ENSG00000123560), ANK3(ENSG00000151150), DLC1(ENSG00000164741), CADM1(ENSG00000182985)
+kb_gene_hits: 无
+kb_celltype_ranking: MG(n=1); Astro(n=1)
+lit(文献证据): MG|PMID:37443842|Single-Cell RNA Sequencing: Opportunities and Challenges for Studies o ; MG|PMID:40448612|SUMOylation is a Translatable Target in Hypoxic MNPs Regulating Retina ; Astro|PMID:41892278|Astrocyte Heterogeneity and Metabolic Reprogramming: Mechanisms Govern ; Astro|PMID:41856199|The role of prostanoids in the retina and optic nerve in health and di
+[Q6::8] member=Q6 material=species:human/tissue:ocular_surface n_cells=972 qc=na
+top_genes(按序, symbol(原ID)): PTPRC(ENSG00000081237), SRGN(ENSG00000122862), SAMSN1(ENSG00000155307), FYN(ENSG00000010810), SYTL3(ENSG00000164674), IL7R(ENSG00000168685), CXCR4(ENSG00000121966), CBLB(ENSG00000114423), PARP8(ENSG00000151883), CLEC2D(ENSG00000069493), CCL5(ENSG00000271503), STAT4(ENSG00000138378), CD69(ENSG00000110848), MALAT1(ENSG00000251562), CD96(ENSG00000153283), CREM(ENSG00000095794), CYTIP(ENSG00000115165), PDE3B(ENSG00000152270), RUNX3(ENSG00000020633), DUSP2(ENSG00000158050)
+kb_gene_hits: 无
+kb_celltype_ranking: T(n=1)
+lit(文献证据): T|PMID:40882639|Single-cell transcriptome and surfaceome profiling of the adult human  ; T|PMID:37156914|Multimodal spatiotemporal phenotyping of human retinal organoid develo
+[Q6::26] member=Q6 material=species:human/tissue:ocular_surface n_cells=885 qc=na
+top_genes(按序, symbol(原ID)): CXCL8(ENSG00000169429), CCL3(ENSG00000277632), HLA-DRA(ENSG00000204287), SRGN(ENSG00000122862), IL1B(ENSG00000125538), CD74(ENSG00000019582), CCL4(ENSG00000275302), ENSG00000291237, CCL3L1(ENSG00000276085), HLA-DRB1(ENSG00000196126), CD83(ENSG00000112149), DOCK4(ENSG00000128512), KYNU(ENSG00000115919), CXCL3(ENSG00000163734), HLA-DPB1(ENSG00000223865), BCL2A1(ENSG00000140379), HLA-DPA1(ENSG00000231389), TYROBP(ENSG00000011600), IFI30(ENSG00000216490), CXCL2(ENSG00000081041)
+kb_gene_hits: 无
+kb_celltype_ranking: APC_MHCII_high(n=3); Mac_DAM_LAM(n=2); Mono_Nonclassical(n=1)
+lit(文献证据): APC_MHCII_high|PMID:37443842|Single-Cell RNA Sequencing: Opportunities and Challenges for Studies o ; APC_MHCII_high|PMID:35615708|Quantitative single-cell transcriptome-based ranking of engineered AAV ; Mac_DAM_LAM|PMID:37443842|Single-Cell RNA Sequencing: Opportunities and Challenges for Studies o ; Mac_DAM_LAM|PMID:39422453|Transcriptomic profiling of Schlemm’s canal cells reveals a lymphatic- ; Mono_Nonclassical|PMID:37443842|Single-Cell RNA Sequencing: Opportunities and Challenges for Studies o ; Mono_Nonclassical|PMID:39422453|Transcriptomic profiling of Schlemm’s canal cells reveals a lymphatic-
+[Q6::29] member=Q6 material=species:human/tissue:ocular_surface n_cells=785 qc=na
+top_genes(按序, symbol(原ID)): APOBEC3A(ENSG00000128383), CLDN4(ENSG00000189143), KRT13(ENSG00000171401), KRT12(ENSG00000187242), UPK3BL1(ENSG00000267368), ADIRF(ENSG00000148671), H19(ENSG00000130600), FABP5(ENSG00000164687), KRT3(ENSG00000186442), FGFBP1(ENSG00000137440), KRT19(ENSG00000171345), KRT17(ENSG00000128422), LGALSL(ENSG00000119862), DSG3(ENSG00000134757), NRARP(ENSG00000198435), S100A14(ENSG00000189334), SERPINB1(ENSG00000021355), SERPINB2(ENSG00000197632), RHOV(ENSG00000104140), S100A11(ENSG00000163191)
+kb_gene_hits: 无
+kb_celltype_ranking: 无
+lit(文献证据): 无
+
+## 输出要求
+只输出 JSONL，共 5 行，顺序与证据卡一致。每行字段：cluster_id / identity / level / grade / gates / flag / why。
+identity 必须用该 member 词表原样词，或 coarse:<词>，或 undetermined；不得自造同义词、不得加中文注释。
+level: majority|coarse|fine-cap；grade: A|B|C（A 仅独立实验级证据，本证据面下不给）；gates 三键(identity_evidence/resolution/technical) 取 pass|fail|unresolved|na；flag: none|out_of_baseline_coverage|conflicts_with_literature|technical_suspect|candidate_biology；why ≤40字。
+证据不足给 undetermined/coarse，合法，禁止硬注。不要输出任何解释文字。
