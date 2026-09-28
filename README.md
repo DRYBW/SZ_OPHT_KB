@@ -12,6 +12,15 @@
 | **Wiki 知识层** | 项目当前态/决策/红线/directive（脱敏镜像，含冻结哈希锚） | `docs/wiki/`（15 件，含 PROTOCOL_VOTING_v2_C2b） |
 | **Skill+判读层** | 两技能镜像 + 判读协议件 + 09-26/27/28 各判读卡全量证据链 | `docs/skills/`（annotation-eval-ops、knowledge-guided-cell-annotation、protocols/）；`docs/plans/`（2260 件）；知识资产 `kb/`（104 件） |
 
+## 体系跑出来长什么样（demo 真产物）
+
+![EyeKB demo v2 判读产物——PDR 玻璃体膜髓系亚群 UMAP](figures/umap_myeloid_sub.png)
+
+![质检视图——compartment 分布 + doublet 打标](figures/umap_compartment_doublet.png)
+
+- 上图（封面）= 数据集 GSE165784（PDR 玻璃体膜，scRNA）的 EyeKB demo v2 判读产物：harmonypy 批次整合 + Scrublet doublet 质检 + 髓系亚群深挖（Microglia/Macrophage/Mono/DAM-LAM 细分），KB 词条参与判读；下图 = 质检视图（compartment 分布 + doublet 打标，打标不删）。生成脚本随图收录于 `docs/plans/figure_uplift_20260928/scripts/`（逐文件 sha 台账见 `docs/recon/RECON_figures_20260928.tsv`）。
+- demo 性质沿 WIKI 口径：标签 = agent 提议 + KB 证据、经 PI 逐簇确认后才为定稿；两图仅示体系工作方式，不构成任何疗效或临床结论。旧 v1 图（umap_cluster/umap_sample）移入 `figures/v1_legacy/` 仅留痕，README 不再引用。
+
 ## 一、MCP 服务层：clone 后跑起来
 
 ### 1.1 依赖
