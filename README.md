@@ -8,9 +8,9 @@
 | 层 | 内容 | 仓内位置 |
 |---|---|---|
 | **MCP 服务层** | stdio 证据服务（5 工具）+ 调用留痕层 + 软旗层 | `mcp_server/`（server.py / eyekb_core.py / calllog.py / softflags.py） |
-| **RAG 文献层** | 全眼文献库（v2.0 现役默认 174,616 chunks / 2,713 papers；v2.2/v2.3 见指针与 Release） | 元数据 `rag_snapshots/v2.3_2026-09/`；主库 = Release `v2.3-rag-assets`（6 件）；内核 `clients/ocularkb/rag/scripts/stage3_retrieve.py` |
-| **Wiki 知识层** | 项目当前态/决策/红线/directive（脱敏镜像，含冻结哈希锚） | `docs/wiki/`（14 件，含 PROTOCOL_VOTING_v2_C2b） |
-| **Skill+判读层** | 两技能镜像 + 判读协议件 + 09-26/27 各判读卡全量证据链 | `docs/skills/`（annotation-eval-ops、knowledge-guided-cell-annotation、protocols/）；`docs/plans/`（1439 件）；知识资产 `kb/`（100 件） |
+| **RAG 文献层** | 全眼文献库（v2.0 现役默认 174,616 chunks / 2,713 papers；v2.2–v2.4.1 见指针与 Release） | 元数据 `rag_snapshots/v2.3_2026-09/`；主库 = Release `v2.3-rag-assets`（6 件）；内核 `clients/ocularkb/rag/scripts/stage3_retrieve.py` |
+| **Wiki 知识层** | 项目当前态/决策/红线/directive（脱敏镜像，含冻结哈希锚） | `docs/wiki/`（15 件，含 PROTOCOL_VOTING_v2_C2b） |
+| **Skill+判读层** | 两技能镜像 + 判读协议件 + 09-26/27/28 各判读卡全量证据链 | `docs/skills/`（annotation-eval-ops、knowledge-guided-cell-annotation、protocols/）；`docs/plans/`（2260 件）；知识资产 `kb/`（104 件） |
 
 ## 一、MCP 服务层：clone 后跑起来
 
@@ -80,9 +80,23 @@ sha256sum -c EYEKB_RAG_v2.3.tar.sha256          # 判据=字节数与哈希，�
 tar -xf EYEKB_RAG_v2.3.tar                       # 得 literature_db/v2.3_2026-09/{chunks.parquet,papers.jsonl,manifest.yaml,build_stats.json}
 ```
 
-随后把 `kb/literature_db/EYEKB_DB_POINTER.yaml` 的 `default` 指向解包目录（当前 default=v2.0，v2.2/v2.3 标 latest 待 PI 拍板切换——**勿擅改**）。仓内 `rag_snapshots/v2.3_2026-09/` 存元数据三面（papers.jsonl/manifest.yaml/build_stats.json，与线上 v2.3 目录逐字节一致）；更完整的三路径重建说明（预置件解包/按书目重建/无文献层降级）见 `docs/RAG_REBUILD.md`。
+随后把 `kb/literature_db/EYEKB_DB_POINTER.yaml` 的 `default` 指向解包目录（当前 default=v2.0，v2.2/v2.3 标 latest 待 PI 拍板切换——**勿擅改**；09-28 起指针另含 **v2.4 / v2.4.1 两块 = 冻结只读暂存，MCP/stage3 default 未切，v2.0 不变**，见下"版本注记"）。仓内 `rag_snapshots/v2.3_2026-09/` 存元数据三面（papers.jsonl/manifest.yaml/build_stats.json，与线上 v2.3 目录逐字节一致）；更完整的三路径重建说明（预置件解包/按书目重建/无文献层降级）见 `docs/RAG_REBUILD.md`。
 
-**Release 资产纪律（09-27 REPOSYNC 实核）**：v2.3 语料侧自 09-25 打包后线上零变动（chunks.parquet/papers.jsonl/manifest.yaml/build_stats.json mtime 均 ≤09-25 08:19；papers.jsonl 与 manifest.yaml 哈希对账 rag_snapshots 全等）。Release 六件**不重传不改动**；若未来发现语料变动，如实报告并走新 tag，不覆盖。
+**Release 资产纪律（09-27 REPOSYNC 实核）**：v2.3 语料侧自 09-25 打包后线上零变动（chunks.parquet/papers.jsonl/manifest.yaml/build_stats.json mtime 均 ≤09-25 08:19；papers.jsonl 与 manifest.yaml 哈希对账 rag_snapshots 全等）。Release 六件**不重传不改动**；若未来发现语料变动，如实报告并走新 tag，不覆盖。（09-28 REPOSYNC2 本地重验：tar 重切 5 卷逐卷 sha == Release 附件 digest、合并 sha == 台账，六件完整零漂移，见 `docs/plans/repo_sync2_20260928/out/t6_release_reverify.txt`。）
+
+### 版本注记 — 09-28 改进波（REPOSYNC2）
+
+- **RAG 指针 v2.4 / v2.4.1 两块**（`kb/literature_db/EYEKB_DB_POINTER.yaml`，终态 sha256=c7f2e0f7…，与登记件逐字对账）：
+  - v2.4 = v2.3 全量继承零重算 + RAGGAP A 档 64 篇（230,426 chunks / 3,749 unique papers；卡 t_d0bea5a6 D19）。
+  - v2.4.1 = v2.4 全量继承零重算 + RAGFIX2 白名单 17 篇（231,707 chunks / 3,766 unique papers；卡 t_6848d3de D21）。
+  - **两块均为冻结只读暂存：MCP/stage3 default 未切换（v2.0 不变），本仓面不构成"已启用"语义**；切换权在 PI。主库本体（1.02–1.03GB 级）在 OcularKB 侧，不入本仓（沿 Release 大文件纪律）。
+  - 门号链（仓面口径，逐字照登记件）：v2.4 门③（A 档覆盖）72.8% < 80% **FAIL 照实在案**；RAGFIX2 追补后 v2.4.1 门③ 原分母 92/原阈值 80%/原判据复算 78/92 = **84.8% PASS，取代 v2.4 的"最新可交付"地位**；两版本门①（黄金 41/41 off 态全等）与门②（严格 retina gate）均 PASS。v2.4→v2.4.1 单调性核 67 项零倒退。
+- **kb/markers/ 两件 INERT 旁挂**（字节镜像，sha 与登记件全等）：`_raggap_errata_v1.json`（LILRB2 撤证 + sample20 误引登记，10da875a…）、`_raggap_c_linkbackfill_v1.json`（C 档 830 行索引回填，默认 OFF，b832a694…）。两件**不被 mcp_server 任何代码路径引用**（REPOSYNC2 T1 静态断言 `raggap-inerts-unwired` 在案）。
+- **KBX 泪腺定量首考（t_0fb07fd6）定性照录**：O3 降档 = **考卷无效**（外部文献 Tier1 面板重建后 4/7 群 panel_unavailable），非词条判负；A3 lacrimal_v6 维持注册默认 OFF 不切；泪腺定量首考挂"待新数据"账（KBX_RULING_1 / KBX_VERDICT）。
+- **KBCHAIN 全库引用链审计（t_3a35a2cc）**：链账 8,531 实例全检 + 15% 抽检，确诊误引集中于决策表转录通道（取证件全入仓，kb 面零写）。
+- **RETRAIN 四对象冲击评估（t_ed4a3c52）**：结论 = **零重训**（以账回答：v2_prod/mouse_prod_v1/RAG 嵌入/面板衍生件均不读本次改动面），评估产物只读性质。
+- **KBGOV / PME3 / GRADE 三线**（`kb_gov_20260928/`、`panel_pmid_20260927/` 第三批（如有增量按 sha 复核随动）、`grade_anchor_20260928/`）：候选与分析性质，**零注册、零接线、零激活**。
+- docs/plans/ 新增八卡目录 + 本收尾卡目录；docs/wiki 全量刷至线上态（新增 USER_DIRECTIVE_20260928 改进波指令件）；docs/skills 镜像随动刷新。收录/排除清单与六门测试结果 = `docs/plans/repo_sync2_20260928/REPOSYNC2_COMPLETED.md`。
 
 ## 三、Wiki 层
 
@@ -97,12 +111,16 @@ tar -xf EYEKB_RAG_v2.3.tar                       # 得 literature_db/v2.3_2026-0
   - `e2r_s5audit_20260927/`（E2-R S5 逐行审计）· `btest_20260927/`（自由查询 A/B 验证：PREREG+票档 annotation/*.jsonl+toolcalls+判读表）
   - `tiep_20260927/`（平票/弃权协议反事实评估）· `panel_pmid_20260927/`+`batch2/`（PME/PME2 证据链补录两批：338 键台账+pme_accounts.tsv）
   - `kb9_ocs_20260927/`（KB9 眼表注册包：五轮外审 prompt/reply 全留痕+BUILD_REPORT+REGISTER_PACKAGE v2）· `proto_v2_20260927/`（票规 v2 决策件落点）· `rag_anno_usability_20260927/` · `sync_scSOP_20260927/` · `repo_sync_20260927/`（本镜像同步任务书）
+  - **09-28 改进波（REPOSYNC2 收录）**：`kbx_lacrimal_20260928/`（泪腺定量首考：PREREG v2+判读+票台+REVIEWER_LLM 送审件；两件簇级 h5ad 除外见附录 A）· `kb_chain_audit_20260928/`（全库引用链审计取证面含 epmc 批次台账 31MB 全收）· `rag_fix_20260928/`（RAGFIX v2.4 三门+errata；raw 抓取缓存 9MB 除外见附录 A）· `rag_fix2_v25_20260928/`（v2.4.1 白名单闭集+门③追补，全收）· `kb_gov_20260928/` · `rag_gap_20260928/`（三档报批清单）· `grade_anchor_20260928/` · `retrain_assess_20260928/` · `repo_sync2_20260928/`（本卡任务书+六门测试输出+收尾件）
   - 各卡复算 = 进该卡 `scripts/`，输入指针在其 PREREG/NOTE 头注；数值证据面（tsv/json/jsonl）未经任何数值改动。
-- **哈希锚例外**：`btest/BTEST_PREREG_v1.0.md.sha256` 锚定线上原件（镜像内脱敏致 `sha256sum -c` 预期 FAIL），见脱敏报告"冻结哈希锚例外登记"。
+- **哈希锚例外**：`btest/BTEST_PREREG_v1.0.md.sha256` 锚定线上原件（镜像内脱敏致 `sha256sum -c` 预期 FAIL），见脱敏报告"冻结哈希锚例外登记"。09-28 波同型例外逐件登记 = `docs/DESENS_SCAN_REPORT_REPOSYNC2_20260928.md`（关键件：`retrain_assess_20260928/ledgers/SHA_SELF_20260928.txt` 之 RETRAIN_VERDICT.md 行、`kb_chain_audit_20260928` 与 `rag_fix2_v25_20260928` 两卡 SHA_DELIVERABLES 中指向脱敏改名件/文本面的行、`rag_fix_20260928` 卡台账体本身含渠道字样被脱敏；另 `rag_gap_20260928/REPORT_RAGGAP.md` 与线上自身台账漂移见收尾件遗留节）。
 
 ## 五、对账表（镜像 ↔ 线上）
 
 `docs/recon/RECON_kb_mcp_20260927.tsv`：kb/ 100 文件 + mcp_server 4 文件逐文件 sha256 对线上清单，**104/104 MATCH**（09-27 REPOSYNC 时点）；clients/scripts/evals/figures 四目录汇总 IDENTICAL（同表附页）。文档/判读层镜像为脱敏副本，不做逐字节对账（差异=标签替换，逐文件命中统计见脱敏报告）。
+
+- **09-28 REPOSYNC2 新表**：`docs/recon/RECON_kb_mcp_reposync2_20260928.tsv`（kb/ 104 件 + mcp_server 4 件 = 108 件，含本波新增 2 INERT 旁挂与指针 v2.4/v2.4.1 块）：**103 MATCH + 4 DESSENS-VERIFIED（镜像=脱敏(线上)逐字节可复核：k9 两件 json + server/core 两件代码）+ 1 PRIOR_DESENS（softflags.py c4a8f53 注释级脱敏，协调者已批，仓 sha 与 09-28 表逐字全等）**；MISMATCH=0。
+- **收录台账**：`docs/recon/REPOSYNC2_INTAKE.sha256`（覆盖=八判读卡 767 件+本卡 BRIEF，重跑 `sha256sum -c` 一致；本卡 scripts/out 生成物完整性由收尾件+T3/T4 证据另录）。
 
 ## 纪律红线（不变项）
 
@@ -121,6 +139,9 @@ tar -xf EYEKB_RAG_v2.3.tar                       # 得 literature_db/v2.3_2026-0
 | `EyeKB/plans/panel_pmid_20260927/ledgers/raw/` | 111MB / 280 件 | PubMed efetch 原始响应缓存 | 跑 `docs/plans/panel_pmid_20260927/scripts/`（efetch 抓取脚本），输入=仓内 PMID 清单 tsv（sha 见同卡 ledgers/*.tsv 台账行） |
 | `EyeKB/plans/panel_pmid_20260927/batch2/ledgers/raw2/` | 59MB / 103 件 | efetch 二次检索缓存 | `batch2/scripts/` 同法（PME2 批次） |
 | `EyeKB/plans/evalset/`（仓外） | 21GB 级 | 冻结考卷（含 h5ad/逐细胞预测表） | **永不入仓**（患者/项目衍生数据红线）；恢复需 OcularKB 工作盘权限 |
+| `EyeKB/plans/kbx_lacrimal_20260928/out/kbx_clustered_organoid.h5ad` + `kbx_clustered_tissue.h5ad` | 105MB + 53MB | KBX 泪腺簇级 h5ad（表达层衍生件） | 跑 `docs/plans/kbx_lacrimal_20260928/scripts/kbx_p2_cluster_score.py`；输入=`GSE164403/GSE164403_annotated.h5ad`（sha 5e6d753d…，OcularKB 工作盘，不入仓）；参数族冻结于 `KBX_PREREG_v2.md`（seed random_state=20260928、scanpy 1.12.2、leiden flavor=igraph res=1.0）；台账=同卡 `ledgers/KBX_CLUSTER_TABLE*` 与 `out/KBX_LG_CROSSWALK.tsv` |
+| `EyeKB/plans/rag_fix_20260928/work/chunks_ra_raw.jsonl` | 9.0MB | RAGFIX A 档 64 篇抓取原始缓存 | 跑 `docs/plans/rag_fix_20260928/scripts/ra_fetch.py`（闭集=`out/closed_set_pmids.txt` 64 PMID，端点与重试见脚本头注；输入清单=仓内 `docs/plans/rag_gap_20260928/TIER_A_approval_list.md`）；产物对账=同卡 `work/ra_fetch.log`+`work/ra_availability.tsv`（已入仓） |
+| `OcularKB 侧 v2.4 / v2.4.1 主库` | 1.02GB / 1.03GB | RAG 增量主库（MCP/stage3 未切） | 不入仓（两份登记件默认裁定 + 大文件纪律）；重建路径 = Release v2.3 基座 + 各卡 `scripts/` 增量链（`docs/plans/rag_fix_20260928/`、`rag_fix2_v25_20260928/`）；库态与 sha 台账以 `kb/literature_db/EYEKB_DB_POINTER.yaml` 各块 manifest 行为准 |
 
 已入镜像的缓存面（小体量、审计价值高于体积）：`e2r/ledgers/api/` 3.6MB、`panel_pmid/ledgers/raw_uniprot/` 0.57MB、`kb9/ledgers/epmc_raw*、ols_evidence_kb9/` <1MB。
 
