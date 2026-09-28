@@ -9,8 +9,10 @@
    RAG 库与 embedding 模型 P1 阶段引用 OcularKB 现路径 (只读)。
 3. marker 查询顺序机器化: query_marker 是注释流程第一步, 未查本地不联网。
 """
+import gzip
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -160,6 +162,110 @@ def _v6_act_enabled():
     return v not in {"0", "false", "off", "no"}
 
 
+# ---------------------------------------------------------------- KBGOV-B5 跨物种 ranking 治理层
+# [B5IMPL t_8960c7e0 · USER_DIRECTIVE_20260928 追加五队列① · PI 预授权接线]
+# query_marker genes-mode 输入物种治理。判据唯一权威源 = plans/kb_gov_20260928/
+# KBGOV_CANDIDATE.md §G1/§G2/§G3（主候选 B5, 机械 A/B 双门证据在案; 冻结输入 sha 见
+# plans/kbgov_b5impl_20260928/ledgers/SHA_PRE_B5IMPL.txt）:
+#   G1 判定层: 三信号 title_frac(大小写惯例) / msp(Gm\d+|.*Rik$) / m_only(鼠独有符号),
+#       冻结阈值 T=0.4（校准件 kbgov_g1_calibration.json: 人源 231 簇 title_frac max=0.0,
+#       鼠源 59 簇 min=0.8, human_misdetections=[]）。
+#   G2 B5 口径: mouse_confirmed ∧ mouse_suspected 均拒答具名——celltype_ranking 全量转
+#       unranked_candidates（条目保留、非具名排名）, 顶层加 no_named_ranking_for=
+#       'mouse_input' + species_evidence; human_assumed 零干预（预注册回归门=230 人源簇
+#       ranking 位移 0.0%, 过杀线 >5%）。
+#   G3 标注档(不删序): shared_genes ⊆ AMBIG{GLUL,VIM,CLU} ∧ n_shared≥1 → 条目加
+#       no_naming_claim=true + reason='ambiguous_coexpression_only'; 排序与条目保留不动
+#       （消费方协议: 判读席禁以 flagged 条目作 identity 定名依据——归判读协议承接）。
+# env 开关 EYEKB_KBGOV_B5: 未设/其余值 = ON（0.6-kbgov5 实装默认态）;
+#   ∈{0,false,off,no} = OFF 回退态——genes-mode 响应与 pre 基线逐字节全等（A5 式机读
+#   自证, 对照表 out/B5IMPL_A5_ROLLBACK.tsv）。词表加载失败 → 整体降级 legacy 行为
+#   (fail-soft, stderr 一次性登记, 不 throw)。禁 import 实验复刻件——本层为生产码内
+#   独立实现, 与复刻件对账双源一致为门（b505/b506）。REGISTERED_DEFAULT_OFF 语义
+#   （k9_ocs/lacrimal_v6 不入默认）与本层正交, 不得破坏。
+KBGOV_VOCAB = Path(__file__).resolve().parent / "kbgov_vocab.json.gz"
+KBGOV_T_FROZEN = 0.4                                  # 冻结判据（改值=改预注册, 禁）
+KBGOV_AMBIG = frozenset({"GLUL", "VIM", "CLU"})       # 冻结锚集（不自扩——过杀放大器已实证）
+_KBGOV_RE_LETTER = re.compile(r"[A-Za-z]")
+_KBGOV_RE_TITLE = re.compile(r"^[A-Z][a-z]")
+_KBGOV_RE_GM = re.compile(r"^Gm\d+$")
+_KBGOV_RE_RIK = re.compile(r"Rik$")
+_kbgov_voc_cache = {"sig": None, "data": None, "warned": False}
+
+
+def _kbgov_b5_enabled():
+    """env EYEKB_KBGOV_B5 ∈ {0,false,off,no} (casefold) = OFF 回退; 未设/其余值 = ON 治理。"""
+    v = (os.environ.get("EYEKB_KBGOV_B5") or "").strip().casefold()
+    return v not in {"0", "false", "off", "no"}
+
+
+def _kbgov_vocab():
+    """惰性加载 sha 锚定词表 (mcp_server/kbgov_vocab.json.gz = KBGOV 冻结件逐字节副本,
+    sha256 9b504a2e...)。返回 (HUMSYM, MOUSYM_raw, MOUSYM_upper) 或 None（降级 legacy）。"""
+    st = _kbgov_voc_cache
+    sig = None
+    try:
+        p_st = KBGOV_VOCAB.stat()
+        sig = (p_st.st_mtime_ns, p_st.st_size)
+    except OSError:
+        pass
+    if sig is not None and st["sig"] == sig and st["data"] is not None:
+        return st["data"]
+    try:
+        with gzip.open(KBGOV_VOCAB, "rt", encoding="utf-8") as f:
+            v = json.load(f)
+        data = (frozenset(v["hum"]), frozenset(v["m_raw"]), frozenset(v["m_up"]))
+        st.update(sig=sig, data=data)
+        return data
+    except Exception as e:  # noqa: BLE001
+        if not st["warned"]:
+            sys.stderr.write(f"[kbgov-b5] vocab load failed ({type(e).__name__}: {e}) "
+                             f"-> B5 degraded to legacy behavior\n")
+            st["warned"] = True
+        return None
+
+
+def _kbgov_g1_tier(raw_genes, hum, m_raw, m_up):
+    """G1 输入物种判定（生产实现, 与复刻件 kbgov_ab.tier_of 判据逐字一致）。
+    输入=原始大小写基因名清单（upper 前）。返回 (tier, evidence)。"""
+    letters = [g for g in raw_genes if _KBGOV_RE_LETTER.search(g)]
+    title = [g for g in letters if (not g.isupper()) and _KBGOV_RE_TITLE.match(g)]
+    msp = [g for g in raw_genes if _KBGOV_RE_GM.match(g) or _KBGOV_RE_RIK.search(g)]
+    monly = [g for g in raw_genes
+             if g.upper() not in hum and (g.upper() in m_up or g in m_raw)]
+    tf = len(title) / max(len(letters), 1)
+    ev = {"title_frac": round(tf, 3), "msp": len(msp), "m_only": len(monly),
+          "msp_examples": list(msp)[:5], "m_only_examples": list(monly)[:5]}
+    if tf < KBGOV_T_FROZEN:
+        return "human_assumed", ev
+    return ("mouse_confirmed" if (msp or monly) else "mouse_suspected"), ev
+
+
+def _kbgov_govern_genes_resp(resp, raw_gl):
+    """B5 治理分支: 就地修改 genes-mode resp（G3 标注 → G2 拒答转列）。
+    词表不可用时零改动（fail-soft=legacy）。返回治理状态供留痕/测试。"""
+    voc = _kbgov_vocab()
+    if voc is None:
+        return {"applied": False, "reason": "vocab_unavailable"}
+    hum, m_raw, m_up = voc
+    tier, ev = _kbgov_g1_tier(raw_gl, hum, m_raw, m_up)
+    flagged = []
+    for e in resp["celltype_ranking"]:
+        sh = e.get("shared_genes") or []
+        if e.get("n_shared", 0) >= 1 and sh and set(sh) <= KBGOV_AMBIG:
+            e["no_naming_claim"] = True
+            e["reason"] = "ambiguous_coexpression_only"
+            flagged.append(e["cell_type"])
+    resp["input_species"] = tier
+    refused = tier in ("mouse_confirmed", "mouse_suspected")
+    if refused:
+        resp["unranked_candidates"] = resp["celltype_ranking"]
+        resp["celltype_ranking"] = []
+        resp["no_named_ranking_for"] = "mouse_input"
+        resp["species_evidence"] = ev
+    return {"applied": True, "tier": tier, "refused": refused, "flagged": flagged}
+
+
 def _load_marker_dbs(library="all"):
     lib = (library or "all").strip().lower()
     if lib == "all":
@@ -271,9 +377,10 @@ def query_marker(genes=None, cell_type=None, library="all"):
 
     if genes:
         if isinstance(genes, str):
-            gl = [g.strip().upper() for g in genes.replace(",", " ").split() if g.strip()]
+            raw_gl = [g.strip() for g in genes.replace(",", " ").split() if g.strip()]
         else:
-            gl = [str(g).strip().upper() for g in genes if str(g).strip()]
+            raw_gl = [str(g).strip() for g in genes if str(g).strip()]
+        gl = [g.upper() for g in raw_gl]  # 与旧逐元素 strip().upper() 逐字等价（OFF 全等门实证）
         hits = {g: gene2ct.get(g, []) for g in gl}
         score = {}
         for ct in markers:
@@ -287,6 +394,9 @@ def query_marker(genes=None, cell_type=None, library="all"):
         resp = {"mode": "genes", "query": gl, "gene_to_celltypes": hits,
                 "celltype_ranking": [{"cell_type": c, **s} for c, s in ranked],
                 "auc_threshold": auc, "provenance": prov}
+        # [KBGOV-B5] 治理分支——OFF 态整体跳过, resp 与 pre 基线全等（A5 验收门）
+        if _kbgov_b5_enabled():
+            _kbgov_govern_genes_resp(resp, raw_gl)
         return _sf.wrap_resp(resp, markers, "genes", query_genes=gl,
                              ranking=resp["celltype_ranking"], provenance=prov)
 

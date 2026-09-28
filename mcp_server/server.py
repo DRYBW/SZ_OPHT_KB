@@ -37,7 +37,7 @@ from mcp.server import MCPServer  # noqa: E402
 app = MCPServer(
     name="eyekb",
     title="EyeKB 眼科知识库证据服务",
-    version="KB1v2-0.5-k9reg",
+    version="KB1v2-0.6-kbgov5",
     description=("眼科文献 RAG 检索 (v2.0 全眼库 174,616 chunks/2,713 papers, KB1v2 起带 "
                  "inclusion_reasons/claim_relation/evidence_context 三字段+复核状态) + VK 索引页 + "
                  "本地权威 marker 库 + 判读层: 眼科通用组成基线 (kb/baselines 供者级条件参考分布, "
@@ -56,7 +56,13 @@ app = MCPServer(
                  "library=k9_ocs (KB9 案 B 眼表 4 新条 Melanocyte/Schwann/"
                  "Conj_epithelium_suprabasal/Limbus_Sclera_fibroblast_C1, REGISTERED_"
                  "DEFAULT_OFF——仅显式查询可达, 任何态不入默认 all; 激活需义务 run+PI 另批; "
-                 "默认行为与本登记前字节级一致, A5 式机读自证见 plans/kb9_ocs_20260927/exec/out/)。"),
+                 "默认行为与本登记前字节级一致, A5 式机读自证见 plans/kb9_ocs_20260927/exec/out/)。"
+                 "B5IMPL t_8960c7e0 (USER_DIRECTIVE_20260928 追加五队列①, PI 预授权接线): "
+                 "query_marker genes-mode 跨物种治理默认生效——鼠源输入 (G1 confirmed/suspected) "
+                 "具名排名清空转 unranked_candidates 并标 no_named_ranking_for; AMBIG{GLUL,VIM,CLU} "
+                 "纯共表达命中条目附 no_naming_claim 注记 (排序不动); env EYEKB_KBGOV_B5="
+                 "0|false|off|no 整体回退, 回退态与 pre 基线逐字节全等 (A5 式机读自证, "
+                 "plans/kbgov_b5impl_20260928); 判据冻结源 KBGOV_CANDIDATE §G1-G3。"),
     instructions=("EyeKB 五工具: query_marker 先查本地 marker; search_literature 取文献证据"
                   "(全部带 PMID 可溯源); get_kb_page 读组织/主题索引页; "
                   "注释前按 ANNOTATION_PROTOCOL_v1.1 四阶段用 get_tissue_composition "
@@ -125,7 +131,14 @@ def query_marker(genes: list[str] | None = None, cell_type: str = "",
     注释流程第一步: 未查本地不联网。
     自 t_d6f2a0a0: 命中软复核规则时返回体可附 soft_flags.notes (rod_bc_review /
     mural_crosstalk)——仅为可选复核线索, 不新增定名/弃权/排除条件, 禁入打分;
-    环境开关 EYEKB_MCP_SOFTFLAGS=0|false|off|no 可整体关闭 (关闭时该 key 不出现)。"""
+    环境开关 EYEKB_MCP_SOFTFLAGS=0|false|off|no 可整体关闭 (关闭时该 key 不出现)。
+    自 B5IMPL t_8960c7e0 (0.6-kbgov5, 默认 ON): genes-mode 附跨物种治理——返回体加
+    input_species (mouse_confirmed|mouse_suspected|human_assumed, G1 冻结阈值 T=0.4);
+    鼠源输入 (confirmed∨suspected) 具名排名清空: celltype_ranking=[], 原条目全量转
+    unranked_candidates + 顶层 no_named_ranking_for='mouse_input' + species_evidence;
+    shared_genes ⊆ {GLUL,VIM,CLU} 的条目附 no_naming_claim=true (排序不动)。判读席禁以
+    no_naming_claim/cross-species 条目作 identity 定名依据 (ANNOTATION_PROTOCOL 承接)。
+    环境开关 EYEKB_KBGOV_B5=0|false|off|no 整体回退=pre 基线逐字节全态。"""
     resp = core.query_marker(genes=genes, cell_type=cell_type or None,
                              library=library or "all")
     calllog.trace("query_marker",

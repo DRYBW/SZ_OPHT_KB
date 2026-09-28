@@ -60,3 +60,14 @@ embedding_model:
     token_verification: /mnt/D/EyeKB/plans/rag_fix2_v25_20260928/out/RA2_token_verification.tsv (词边界 token 终裁; CALD1 替补顶岗)
     gate_status: "③原分母92/原阈值80%/原判据复算 = 78/92 = 84.8% PASS (RA2 新兑现 11 单元含 CPNE5 副产品, 单调性核 v2.4 67 项零倒退; 残差 14 = 7 备选104覆盖单元(另案) + 6 诚实none(ATP8B4/FAM135A/FBXL7/LMOD1/LRRTM3/SHISA6) + LILRB2 撤证设计) ①黄金41/41 off全等 PASS (top5 与前轮逐字零漂移; all_list_plus10 失效仅绝对计数半句=前置轮旧快照期望过期, 两分句复证 TRUE, 非本卡) ②retina gate 8/10 用例级+10/10 gate 级 PASS (同 v2.1 形态)"
     # MCP/stage3 default 未切 (v2.0 不变, 沿先例待用户拍板; 回归门经 --db-dir 显式指向 v2.4.1 实测)
+  v2.4.2_2026-09:
+    path: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09
+    role: latest-ragfix3 (frozen read-only; = v2.4.1 全量继承零重算 + ragfix3_backup104_scan 103 篇 11,221 chunks; 卡 t_b94d0999, PI 整链授权=USER_DIRECTIVE_20260928 追加五)
+    chunks: 242928
+    unique_papers: 3869   # papers.jsonl 行数 = 3884 (含历史 0-chunk ghost 15)
+    manifest: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/manifest.yaml
+    increment_ledger: /mnt/D/EyeKB/plans/rag_fix3_20260928/work/ra3_availability.tsv (逐 PMID 下载成败+体积+物种; 19.33MB ≤ 100MB 波次预算, 零清单外下载, 零付费墙触碰)
+    scan_ledger: /mnt/D/EyeKB/plans/rag_fix3_20260928/work/ra3_scan_ledger.tsv (104 行机械四检零 LLM=题录可核∧不在库查重∧非HRCA自引∧OA实测curl -sI; 拒1=40171795 防双计)
+    decision_matrix: /mnt/D/EyeKB/plans/rag_fix3_20260928/out/DECISION_MATRIX_RAGFIX3.md (判读矩阵预注册 sha=b3787101187ceba27bdf9357662b6be501b0c6165e1d103015eb979982d80836, 开算前落纸)
+    gate_status: "③原分母92/原阈值80%/原判据复算 = 87/92 = 94.6% PASS (RA3 新兑现 9 单元=目标7中6+副产品 FAM135A/LILRB2/LMOD1, C8ORF76 诚实 MISS[两候选全文无词边界token]; 单调性核 v2.4.1 78 项零倒退; 残差 5 如实登记禁回调) ①黄金41/41 off全等+top5对ragfix2基线逐字零漂移 PASS; 接线契约8/9, all_list_plus10=前两轮astra已裁'绝对计数半句过期'形态(两分句超集∧reti::10计数本轮TRUE, 非本卡) ②retina gate 8/10用例级+10/10gate级 PASS(劣化点=RPE/Astrocyte同v2.1既有形态) 见 out/GATE2_RETINA_v242.json"
+    # MCP/stage3 default 未切 (v2.0 不变, 沿先例待用户拍板; 回归门经判据文件显式指向 v2.4.2 实测)
