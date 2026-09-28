@@ -151,9 +151,21 @@ EyeKB = **用结构化眼科知识库（KB，MCP 服务化）作证据面、RAG 
 - **判读失败的三层病因链**：词条层（可修，KB6/7 已修）→ 证据面协议层（可调，但 3A 旗被当降级依据=协议层自伤）→ **基因先验层（现无解）**。Q2::22 反向验证：删净误导词条+hint 后判读反而回 MG——GLUL/VIM/CLU 歧义共表达是基因层面生物学事实，词典修到满分也救不了。对外"修复提升命中率"措辞按三层分解，别让词条修复背基因层毒的账
 - **词条补录净益有限且只兑现在设计靶上**：眼表 33 簇重测净 +1（补位救回 4/丢 3），v6 眼表词条 ranking 空率反升（19/33 vs 老词表 9/33——空=不再给误导性视网膜先验，但判别带宽窄）。修复收益预期放在面板设计针对的靶簇，勿期待全面推动
 
+## RAG 暂存版本端到端验收三层法（2026-09-28 v2.4.2 亲验实证；write_file 通道故障故内嵌）
+
+PI 说"测试一下最新的这一版"=协调者亲起 stdio 真服务（/mnt/D/EyeKB/mcp_server/server.py，venv=/home/ubuntu/training-venv/bin/python），不引用 worker/门禁旧结论；验收只出 READY，激活决策仍属 PI。
+- **db 参数路**：search_literature 的 `db` 留空=v2.0 default、给绝对路径=显式测暂存库——测暂存版不动 default 不碰 env。
+- **三层判据**（按序缺一不闭合）：①数据层——增量台账 ok 行 PMID 集逐篇 count chunks（新版应有、前版应 0；实测 5 篇 174 chunks@v2.4.2 vs 0@v2.4.1）；②检索层——**论文标题原文**做 query 打两版库，新版可达/旧版不可达=判别干净（实测 2 例全过）；③治理层——黄金面（微依 top1=Microglia）+B5 鼠源拒答同场跑，升级库不扰既有行为。
+- **chunks.parquet 列名=`paper_id`**（字符串 PMID），没有 pmid 列（按 pmid 读必崩 ArrowInvalid）；计数用 pyarrow.dataset columns 投影+field('paper_id').isin，勿 pandas 全读（embedding 列巨大）。
+- **关键坑：模糊基因查询 top10 不浮出增量论文 ≠ 未入库**——门③"兑现"=单元覆盖（token 边界可达）非任意查询可见性，拿基因句当判别会全套假阴性（亲测差点误判 FAIL）；判别必须用标题原文或数据层直读。honest MISS 自洽=候选在库但三库查询皆不可达（C8ORF76 实证），勿当构建缺陷。
+- **台账抽验新疑点**：38003067 标 benefit_genes=FAM107B(retina)/human，实读标题=蛙/螈进化论文——下载四检全过但受益基因标注与内容相关性存疑。教训：兑现前对高权重标注做标题-基因一致性抽验，存疑项进激活前复查清单不阻断门数字。
+- 探针骨架复用 project-github-export/scripts/repo_mcp_probe.py 的 stdio client 模式；同一会话循环 db 参数打多库省 embedding 重载（每库首载 ~2min）。
+- **引擎对照/方法学探针的真值口径（2026-09-28 PI 拍板，与"评估真值只用 registry 已注释标准数据集"同源扩展）**：凡引入第二引擎/新工具做对照验收，参照集只用 /mnt/D/OcularKB/registry 里**逐细胞作者级注释**的标准数据集（Phase-0 实测 obs 列名+取值分布，分选池标签不算）；**禁拿自家共识注释（demo 卷、自家判读面）当答案——那是拿自己的判读验自己的判读=循环**。新引擎带预注册降级条款：装机/试点不达标即 NO-GO 结案落数字、现行单轨原样不动（PI"机器不能支持就只走另一条，你看着来"语义）；双轨产物=一致自动过+分歧簇送 PI 的裁决样本，不做"系统自选引擎"。
+
 ## 实例资产（2026-09-23 建成，直接参照）
 
 - EyeKB 项目 `/mnt/D/EyeKB/`：mcp_server（search_literature/get_kb_page/query_marker）+ kb/priors + kb/markers + plans/ANNOTATION_PROTOCOL_v1.md + demo 留痕
-- OcularKB `/mnt/D/OcularKB/`：RAG 现役 **v2.1_2026-09**（220,375 chunks/3,674 篇 = v2.0 继承 + 覆盖弱亚型专项 + 预印本轴（is_preprint 列可辨识可过滤）+ 空间转录组词族；**31 个 WEAK 二分裁决 = 面板偏 4 / 排序未顶出 7 / 真覆盖弱 0**——v2.0 的"覆盖弱"多为旧面板 retina 中心虚警，教训：判覆盖弱前先排面板偏；新面板逐 marker 带 PMID 溯源；stage3_retrieve_v3.py 加 --preprint/--tissue）+ WIKI/ 六件套 + 317 万细胞 LR 引擎；待 PI 拍板：附属器入库（泪腺 170/睑板腺 220/眼眶脂肪 126/眼外肌 46 OA 篇）+ v2.2 加 organism_stage 列（RAG 现无发育轴，胎儿文献混在 tissue 标签下）
+- **RAG 库规模/在离线状态的唯一权威源 = `/mnt/D/EyeKB/kb/literature_db/EYEKB_DB_POINTER.yaml`（09-28 实测定调，本 skill 与任何汇报旧数一律让位）**：PI 问"基于多少篇"类问题现场 cat 它作答，三纪律：①分"在线默认库 vs 货架暂存库"（截至 09-28：MCP default=v2.0, 2,713 篇；最新已建未激活=v2.4.2, 3,869 篇/242,928 chunks——"latest ≠ default"，勿再写"现役 v2.1"这类混口径）；②版本链=前版全量继承零重算+增量，报演进引各版 gate_status 行（门③ 72.8%→84.8%→94.6%）；③RAG 原文库（按篇）≠ KB 词条判读层（按 INTAKE 台账条数，09-28=392 条），两数不可互释。papers.jsonl 行数含 15 行 0-chunk ghost，引用以 pointer 的 unique_papers 为准。
+- OcularKB `/mnt/D/OcularKB/`：RAG 历史演进（v2.0→v2.4.2 各版构成与 gate 详情一律读上述 pointer，此处不存数字）。教训留档：v2.1 曾判 31 个 WEAK 二分裁决 = 面板偏 4 / 排序未顶出 7 / 真覆盖弱 0——"覆盖弱"多为 retina 中心旧面板虚警，**判覆盖弱前先排面板偏**；新面板逐 marker 带 PMID 溯源；stage3_retrieve_v3.py 加 --preprint/--tissue 开关；WIKI/ 六件套 + 317 万细胞 LR 引擎；v2.2 起 organism_stage 发育轴列（fetal 文献不再混 tissue 标签）。
 - GSE165784 PDR 膜 demo v1/v2 草稿（human-in-loop 首例，v2 含整合+髓系深挖+diff 表）
 - 设计稿：/mnt/D/OcularKB/plans/KB_SPINOUT_MCP_DESIGN_v0.md

@@ -87,13 +87,27 @@ def _ct_filter_keys(cell_type: str):
             return vals
     return None
 
+_EMB_CACHE = {}
+
 def retrieve(cell_type: str, species: str = None, top_k: int = 5, query: str = None,
              tissue: str = None, db_dir: str = None):
     model, df = load(db_dir or DEFAULT_DB_DIR)
     if query is None:
         query = f"{cell_type} marker genes {tissue or 'retina'} single cell RNA sequencing"
     emb = model.encode([query], normalize_embeddings=True)[0]
-    emb_matrix = np.stack(df["embedding"].values)
+    # fp16-slim 兼容分支（2026-09-28，REPOSYNC4）：embedding 列支持 float32-list 与
+    # float16 little-endian binary 两种存储；fp32 库行为与历史逐位一致（黄金41对账）。
+    cache_key = db_dir or DEFAULT_DB_DIR
+    if cache_key in _EMB_CACHE:
+        emb_matrix = _EMB_CACHE[cache_key]
+    else:
+        first = df["embedding"].iloc[0]
+        if isinstance(first, (bytes, bytearray, memoryview)):
+            emb_matrix = np.stack([np.frombuffer(bytes(c), dtype="<f2").astype(np.float32)
+                                   for c in df["embedding"].values])
+        else:
+            emb_matrix = np.stack(df["embedding"].values)
+        _EMB_CACHE[cache_key] = emb_matrix
     sims = emb_matrix @ emb
     df = df.assign(_sim=sims)
     if species:

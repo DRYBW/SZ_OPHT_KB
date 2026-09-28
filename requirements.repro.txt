@@ -1,0 +1,15 @@
+# EyeKB 镜像仓复现锁（VERIFY 契约 G1，2026-09-28 锚定本机实测版本）
+# 用途：任何电脑 clone 后按本文件安装，行为与本仓 expected 锚点同分布。
+# 推理仅 CPU 即可；GPU 机器装 cpu wheel 亦可运行（结果一致性只锁 CPU 路径）。
+# 装法：pip install -r requirements.repro.txt --extra-index-url https://download.pytorch.org/whl/cpu
+sentence-transformers==6.0.0
+torch==2.13.0
+transformers==5.13.1
+huggingface-hub==1.23.0
+numpy==2.4.6
+pandas==2.3.3
+pyarrow==25.0.0
+scipy==1.16.3
+mcp==2.0.0
+# 嵌入模型固定：BAAI/bge-large-en-v1.5（公开权重，1024 维，normalize_embeddings=True）
+# python: 3.11+（本锚在 3.14 生成；跨小版本允许，判据以 verify_repro 41/41 为准）

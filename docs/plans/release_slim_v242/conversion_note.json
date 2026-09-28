@@ -1,0 +1,14 @@
+{
+ "source": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/chunks.parquet",
+ "source_sha256": "2e1fa2df4659981097b018978b20a36e886ef34618a64e1163a9b963b3ac08b5",
+ "output": "/home/ubuntu/RAG_SLIM_V242/literature_db/v2.4.2_2026-09_slim/chunks.parquet",
+ "output_sha256": "207115be14124bcaddee592ff30afc461a81e923996909b91ea94b821799c90c",
+ "rows": 242928,
+ "source_rows": 242928,
+ "embedding_dtype_before": "float32 list",
+ "embedding_dtype_after": "float16 little-endian, pa.binary 2048B/row",
+ "max_abs_err_sampled": 0.00012183189392089844,
+ "dequant_recipe": "np.frombuffer(cell, dtype='<f2').astype(np.float32)",
+ "created": "2026-09-28 22:59:42",
+ "wall_s": 15.5
+}

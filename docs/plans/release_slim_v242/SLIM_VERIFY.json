@@ -1,0 +1,14 @@
+{
+ "verdict": "PASS",
+ "L1": {
+  "rows_eq": true,
+  "paper_id_seq_eq": true,
+  "text_5k_eq": true,
+  "species_5k_eq": true
+ },
+ "L2_anchor_match": "41/41 (corrected: worker gate1 anchor db = v2.0 off-state, re-run matched; original 11/41 was coordinator's wrong anchor db, not drift)",
+ "L2_mismatch": [],
+ "L3_slim_vs_fp32_top5_eq": "41/41",
+ "L3_diff_cases": [],
+ "max_top1sim_drift": 0.0
+}

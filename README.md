@@ -3,6 +3,38 @@
 > **仓库定性（PI 2026-09-27 纠正）**：本仓 = EyeKB 四层体系的**可克隆运行镜像**，不是文档备份、不是快照存档。任何人 clone 后按本 README 配好依赖即可：①起 MCP 证据服务 ②拉 Release 恢复 RAG 语料 ③在 docs/wiki 读项目当前态 ④用 docs/skills + docs/plans 复现判读与评测流程。
 > 项目本体：眼科文献二级知识库 · 证据服务（2026-09-23 PI 拍板立项）。服务版本 = `KB1v2-0.6-kbgov5`（与 `mcp_server/server.py` 一致；0.5-k9reg→0.6-kbgov5 变更=追加五队列① B5 跨物种治理实装，见版本注记）。
 
+## 🚀 5 分钟跑通（从零到检索出结果）
+
+```bash
+# 1) 克隆 + 依赖（Python 3.11+）
+git clone <仓库地址> && cd SZ_OPHT_KB
+python3 -m venv .venv && . .venv/bin/activate
+pip install "sentence-transformers>=3" pyarrow pandas numpy mcp
+
+# 2) 拉 RAG 语料预置件（fp16-slim 派生件，379MB，检索排序与 fp32 原件逐位全等，见件内 manifest）
+#    GitHub 网页: Releases -> v2.4.2-rag-assets 下载全部文件；或 gh CLI:
+gh release download v2.4.2-rag-assets --pattern '*'
+cat EYEKB_RAG_v2.4.2_slim.tar.part_* > EYEKB_RAG_v2.4.2_slim.tar
+sha256sum -c EYEKB_RAG_v2.4.2_slim.tar.sha256   # 判据=哈希，缺一不解
+tar -xf EYEKB_RAG_v2.4.2_slim.tar               # 得 literature_db/v2.4.2_2026-09_slim/
+
+# 3) 命令行直检一次（引擎自动识别 fp32/fp16 两种 embedding 存储）
+python clients/ocularkb/rag/scripts/stage3_retrieve.py \
+  --cell-type "Muller glia" --tissue retina --db-dir literature_db/v2.4.2_2026-09_slim
+
+# 4) 起 MCP stdio 证据服务（stdio，不开端口；接任意 MCP 客户端）
+python mcp_server/server.py
+#    search_literature 传 db="literature_db/v2.4.2_2026-09_slim" 即用最新库；
+#    不传 db = v2.0 默认面（预置件路径同款，见 docs/RAG_REBUILD.md）
+
+# 5) 同质化验收（可选但强烈建议）：本机输出是否与全仓锚点同分布，一条命令回答
+pip install -r requirements.repro.txt   # 若前面按锁装过则跳过
+python tests/verify_repro.py --db-dir literature_db/v2.4.2_2026-09_slim
+#    REPRO PASS: 41/41 = 同质；FAIL 按 docs/VERIFY_CONTRACT.md §4 三层排查，禁自改判据
+```
+
+依赖模型：`BAAI/bge-large-en-v1.5`（HuggingFace 公开权重，首次使用自动拉取；本仓不含权重）。
+
 ## 四层体系地图
 
 | 层 | 内容 | 仓内位置 |
