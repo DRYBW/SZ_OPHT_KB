@@ -1,0 +1,22 @@
+# T5 终版脱敏双扫描证据 — REPOSYNC2 t_719dd225 生成于 2026-09-28T09:59:33
+
+## A) v3 现行规则引擎（文件名+内容双扫描，扫描面=docs/wiki+docs/skills+docs/plans+mcp_server）
+结果: 改名 0 件；规则命中 0；命中文件 0 ——见机器侧 /tmp/desens_final_scan.txt 原样输出（含规则名，不落仓）。
+幂等性: 与前轮 apply 后复扫一致（0 命中），即替换后二次扫描零命中。
+
+## B) CJK 边界强化词形（比现行规则更严：CJK 相邻也可命中）· 全树逐面
+- docs: total=1 {'R04': 1}
+    !! R04: docs/DESENS_SCAN_REPORT_20260927.md
+- mcp_server: total=0 
+- kb: total=3570 {'R08': 3302, 'R12': 268}
+- scripts: total=38 {'R08': 36, 'R12': 2}
+- clients: total=0 
+- tests: total=2 {'R08': 2}
+- evals: total=0 
+- rag_snapshots: total=0 
+- figures: total=0 
+
+## 收录面判定
+本卡收录面（docs 新八卡+wiki+skills+本卡产物，及 mcp_server 零变动面）CJK 强化口径命中见上表 docs 行；
+非零者仅 = docs/DESENS_SCAN_REPORT_20260927.md 1 处 R04 词面（09-27 存量报告自引规则描述，非本卡面，登记不改）。
+kb/scripts/tests 面命中 = 上游字节镜像面存量（09-27 REPOSYNC 已定性：对账面脱敏=禁止，登记不擅动），计数如上，逐项清单见 out/t5_inventory_register.txt。

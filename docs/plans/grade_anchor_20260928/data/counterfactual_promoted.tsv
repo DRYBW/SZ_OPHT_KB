@@ -1,0 +1,101 @@
+archive	variant	cluster_id	seat	model	name	truth	hit
+RUN7RG	H1-M	Q2::22	B	glm-5.1	MG	Astro	0
+RUN7RG	H1-M	Q7::52	B	glm-5.1	RGC	RGC	1
+RUN7RG	H1-M2	Q2::22	B	glm-5.1	MG	Astro	0
+RUN7RG	H1-M2	Q2::27	B	glm-5.1	Cone	Cone	1
+RUN7RG	H1-M3	Q1::4	B	glm-5.1	Rod	Rod	1
+RUN7RG	H1-M3	Q2::22	B	glm-5.1	MG	Astro	0
+RUN7RG	H1-M3	Q2::27	B	glm-5.1	Cone	Cone	1
+RUN7RG	H1-M3	Q2::4	B	glm-5.1	MG	MG	1
+RUN7RG	H1-M3	Q5b::2	A	qwen3.8-max	Rod	Rod	1
+RUN7RG	H1-X	Q1::4	B	glm-5.1	Rod	Rod	1
+RUN7RG	H1-X	Q2::22	B	glm-5.1	MG	Astro	0
+RUN7RG	H1-X	Q2::27	B	glm-5.1	Cone	Cone	1
+RUN7RG	H1-X	Q2::4	B	glm-5.1	MG	MG	1
+RUN7RG	H1-X	Q5b::2	A	qwen3.8-max	Rod	Rod	1
+RUN7RG	H1-X	Q7::52	B	glm-5.1	RGC	RGC	1
+BTEST-run1	H1-S	Q4::19	C	deepseek-v3.2	BC	BC	1
+BTEST-run1	H1-M	Q4::19	C	deepseek-v3.2	BC	BC	1
+BTEST-run1	H1-M	Q5b::35	A	qwen3.8-max	AC	AC	1
+BTEST-run1	H1-M2	Q3::13	C	deepseek-v3.2	RGC	RGC	1
+BTEST-run1	H1-M2	Q4::19	C	deepseek-v3.2	BC	BC	1
+BTEST-run1	H1-M2	Q4::23	C	deepseek-v3.2	BC	BC	1
+BTEST-run1	H1-M2	Q4::32	C	deepseek-v3.2	MG	MG	1
+BTEST-run1	H1-M2	Q5b::35	A	qwen3.8-max	AC	AC	1
+BTEST-run1	H1-M3	Q3::13	C	deepseek-v3.2	RGC	RGC	1
+BTEST-run1	H1-M3	Q4::19	C	deepseek-v3.2	BC	BC	1
+BTEST-run1	H1-M3	Q4::23	C	deepseek-v3.2	BC	BC	1
+BTEST-run1	H1-M3	Q4::32	C	deepseek-v3.2	MG	MG	1
+BTEST-run1	H1-M3	Q5b::35	A	qwen3.8-max	AC	AC	1
+BTEST-run1	H1-X	Q3::13	C	deepseek-v3.2	RGC	RGC	1
+BTEST-run1	H1-X	Q4::19	C	deepseek-v3.2	BC	BC	1
+BTEST-run1	H1-X	Q4::23	C	deepseek-v3.2	BC	BC	1
+BTEST-run1	H1-X	Q4::32	C	deepseek-v3.2	MG	MG	1
+BTEST-run1	H1-X	Q5b::35	A	qwen3.8-max	AC	AC	1
+RUN5	H1-M	Q6::13	A	qwen3.8-max	Fibroblasts	Fibroblasts	1
+RUN5	H1-M	Q6::18	B	glm-5.1	Fibroblasts	Fibroblasts	1
+RUN5	H1-M	Q6::30	C	deepseek-v3.2	Immune Cells	Epithelium	0
+RUN5	H1-M	Q6::31	A	qwen3.8-max	Fibroblasts	Fibroblasts	1
+RUN5	H1-M	Q6::31	B	glm-5.1	Pericytes	Fibroblasts	0
+RUN5	H1-M2	Q6::0	C	deepseek-v3.2	Epithelium	Epithelium	1
+RUN5	H1-M2	Q6::13	A	qwen3.8-max	Fibroblasts	Fibroblasts	1
+RUN5	H1-M2	Q6::30	C	deepseek-v3.2	Immune Cells	Epithelium	0
+RUN5	H1-M2	Q6::31	A	qwen3.8-max	Fibroblasts	Fibroblasts	1
+RUN5	H1-M3	Q6::0	C	deepseek-v3.2	Epithelium	Epithelium	1
+RUN5	H1-M3	Q6::13	A	qwen3.8-max	Fibroblasts	Fibroblasts	1
+RUN5	H1-M3	Q6::30	C	deepseek-v3.2	Immune Cells	Epithelium	0
+RUN5	H1-M3	Q6::31	A	qwen3.8-max	Fibroblasts	Fibroblasts	1
+RUN5	H1-X	Q6::0	C	deepseek-v3.2	Epithelium	Epithelium	1
+RUN5	H1-X	Q6::13	A	qwen3.8-max	Fibroblasts	Fibroblasts	1
+RUN5	H1-X	Q6::18	B	glm-5.1	Fibroblasts	Fibroblasts	1
+RUN5	H1-X	Q6::30	C	deepseek-v3.2	Immune Cells	Epithelium	0
+RUN5	H1-X	Q6::31	A	qwen3.8-max	Fibroblasts	Fibroblasts	1
+RUN5	H1-X	Q6::31	B	glm-5.1	Pericytes	Fibroblasts	0
+RUN6A	H1-S	Q6::8	C	deepseek-v3.2	Immune Cells	Immune Cells	1
+RUN6A	H1-M	Q6::2	B	glm-5.1	Epithelium	Epithelium	1
+RUN6A	H1-M	Q6::8	C	deepseek-v3.2	Immune Cells	Immune Cells	1
+RUN6A	H1-M2	Q6::26	C	deepseek-v3.2	Immune Cells	Immune Cells	1
+RUN6A	H1-M2	Q6::8	C	deepseek-v3.2	Immune Cells	Immune Cells	1
+RUN6A	H1-M3	Q6::26	C	deepseek-v3.2	Immune Cells	Immune Cells	1
+RUN6A	H1-M3	Q6::8	C	deepseek-v3.2	Immune Cells	Immune Cells	1
+RUN6A	H1-X	Q6::2	B	glm-5.1	Epithelium	Epithelium	1
+RUN6A	H1-X	Q6::26	C	deepseek-v3.2	Immune Cells	Immune Cells	1
+RUN6A	H1-X	Q6::8	C	deepseek-v3.2	Immune Cells	Immune Cells	1
+RUN6B	H1-M	Q6::19	A	qwen3.8-max	Fibroblasts	Fibroblasts	1
+RUN6B	H1-M2	Q6::19	A	qwen3.8-max	Fibroblasts	Fibroblasts	1
+RUN6B	H1-M3	Q6::19	A	qwen3.8-max	Fibroblasts	Fibroblasts	1
+RUN6B	H1-X	Q6::19	A	qwen3.8-max	Fibroblasts	Fibroblasts	1
+KB9	H1-S	Q6::2	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-S	Q6::20	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-S	Q6::26	C	deepseek-v3.2	Immune Cells	Immune Cells	1
+KB9	H1-S	Q6::29	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-S	Q6::30	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-S	Q6::4	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-M	Q6::16	C	deepseek-v3.2	Fibroblasts	Fibroblasts	1
+KB9	H1-M	Q6::2	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-M	Q6::20	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-M	Q6::26	C	deepseek-v3.2	Immune Cells	Immune Cells	1
+KB9	H1-M	Q6::29	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-M	Q6::30	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-M	Q6::4	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-M2	Q6::16	C	deepseek-v3.2	Fibroblasts	Fibroblasts	1
+KB9	H1-M2	Q6::2	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-M2	Q6::20	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-M2	Q6::26	C	deepseek-v3.2	Immune Cells	Immune Cells	1
+KB9	H1-M2	Q6::29	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-M2	Q6::30	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-M2	Q6::4	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-M3	Q6::16	C	deepseek-v3.2	Fibroblasts	Fibroblasts	1
+KB9	H1-M3	Q6::2	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-M3	Q6::20	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-M3	Q6::26	C	deepseek-v3.2	Immune Cells	Immune Cells	1
+KB9	H1-M3	Q6::29	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-M3	Q6::30	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-M3	Q6::4	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-X	Q6::16	C	deepseek-v3.2	Fibroblasts	Fibroblasts	1
+KB9	H1-X	Q6::2	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-X	Q6::20	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-X	Q6::26	C	deepseek-v3.2	Immune Cells	Immune Cells	1
+KB9	H1-X	Q6::29	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-X	Q6::30	C	deepseek-v3.2	Epithelium	Epithelium	1
+KB9	H1-X	Q6::4	C	deepseek-v3.2	Epithelium	Epithelium	1

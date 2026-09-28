@@ -1,0 +1,12 @@
+tar bytes=981678080 == sum(5 part sizes) OK
+EYEKB_RAG_v2.3.tar.part_00: local-slice-sha=ea5fb68b13c666e4fddeb5c2f815a2b6fb16eeac72d69844786e9a79e08b80ee github-asset-digest=ea5fb68b13c666e4fddeb5c2f815a2b6fb16eeac72d69844786e9a79e08b80ee MATCH size=201326592==201326592:True
+EYEKB_RAG_v2.3.tar.part_01: local-slice-sha=04f723175c39d864943251a0aa0b088f6e1e5083a8ef39d87845ac4f7f9e6e98 github-asset-digest=04f723175c39d864943251a0aa0b088f6e1e5083a8ef39d87845ac4f7f9e6e98 MATCH size=201326592==201326592:True
+EYEKB_RAG_v2.3.tar.part_02: local-slice-sha=6b5f07a79c12d714eaa4f9dc726d4fb33757882e208b16cf26f3ece739507f72 github-asset-digest=6b5f07a79c12d714eaa4f9dc726d4fb33757882e208b16cf26f3ece739507f72 MATCH size=201326592==201326592:True
+EYEKB_RAG_v2.3.tar.part_03: local-slice-sha=cf8d0eae06a2e85bcd907ee7fe52a8dffce6fcca69c449922133f7ca0f2d664e github-asset-digest=cf8d0eae06a2e85bcd907ee7fe52a8dffce6fcca69c449922133f7ca0f2d664e MATCH size=201326592==201326592:True
+EYEKB_RAG_v2.3.tar.part_04: local-slice-sha=55f1079a141b847c92855b10a811f38a9eb98aafc26c88156990da557d4f3f66 github-asset-digest=55f1079a141b847c92855b10a811f38a9eb98aafc26c88156990da557d4f3f66 MATCH size=176371712==176371712:True
+merged-tar recompute=4e7089f3f4abfd08fa26586be62b60cf39211fd68be9db48593b8b6b5115dc6f
+local ledger (.tar.sha256 首行)=4e7089f3f4abfd08fa26586be62b60cf39211fd68be9db48593b8b6b5115dc6f MATCH
+.tar.sha256 附件本体: local=a66dcaef2f8f529d728ec4ace094027d13c77a19af9dd818f2d0be84a27b360c github-digest=a66dcaef2f8f529d728ec4ace094027d13c77a19af9dd818f2d0be84a27b360c MATCH
+assets-count=6 (expect 6)
+T6 语义: 本地 tar 重切 5 卷逐卷==Release 附件 digest ⇒ 本地合并态与 Release 分卷合并态逐字节同一；Release 零触碰。
+T6=PASS

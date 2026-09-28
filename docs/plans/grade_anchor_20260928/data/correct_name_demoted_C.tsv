@@ -1,0 +1,28 @@
+archive	seat	model	cluster_id	truth	base_c4	base_mode	rescue_1ballot	same_valid_others	gate_identity_evidence	gate_resolution	gate_technical	flag	why
+RUN3	A	qwen3.8-max	Q6::13	Fibroblasts		tie	1	1	unresolved	pass	na	none	VIM/APOD/MGP提示间质，但kb无眼表特异命中，证据不足
+RUN3MINI	A3	qwen3.8-max	Q6::13	Fibroblasts		tie	1	1	unresolved	pass	na	none	VIM/APOD/MGP提示间质，但ANGPTL7/CXCL混杂，kb仅命中视网膜类，证据不足
+RUN5	C	deepseek-v3.2	Q6::0	Epithelium	Epithelium	majority	0	2	fail	pass	na	candidate_biology	top_genes 表达 KRT6A, SPRR1B 等应激/分化标志，身份模糊
+RUN5	A	qwen3.8-max	Q6::13	Fibroblasts		tie	1	1	unresolved	pass	na	none	VIM/APOD/MGP提示间质，但kb无命中且候选冲突，证据不足
+RUN5	B	glm-5.1	Q6::18	Fibroblasts		tie	0	0	unresolved	unresolved	na	conflicts_with_literature	MYOC/COL8A1/FBLN1提示成纤维，与kb排名Pericyte冲突
+RUN5	A	qwen3.8-max	Q6::31	Fibroblasts		tie	0	0	unresolved	pass	na	none	ANGPTL7/MYOC/TIMP3提示间质/基质，kb仅命中Pericyte但证据薄
+RUN6A	B	glm-5.1	Q6::2	Epithelium	Epithelium	majority	0	2	unresolved	unresolved	na	candidate_biology	KRT13/4上皮与S100A8/9及单核排名冲突
+RUN6A	C	deepseek-v3.2	Q6::26	Immune Cells	Immune Cells	majority	0	2	pass	fail	na	technical_suspect	top_genes含MHCII与趋化因子，但核心marker共存，解析度不足
+RUN6A	C	deepseek-v3.2	Q6::8	Immune Cells	Immune Cells	majority	0	2	pass	pass	na	none	top_genes含PTPRC/IL7R/CXCR4，kb_ranking为T，但证据不足以细分
+RUN6B	A	qwen3.8-max	Q6::19	Fibroblasts	Fibroblasts	majority	0	2	unresolved	pass	na	none	COL1A1/COL1A2/VIM间质标志，缺KERA无法区分角膜细胞
+RUN7RG	B	glm-5.1	Q1::4	Rod	Rod	majority	0	2	unresolved	pass	fail	technical_suspect	MT主导且ambient极高，RBP3/GNGT1提示Rod但技术存疑
+RUN7RG	B	glm-5.1	Q2::27	Cone	Cone	majority	0	2	pass	fail	na	technical_suspect	ARR3/OPN1LW强命中Cone，含RPE核心TTR，疑双细胞
+RUN7RG	B	glm-5.1	Q2::4	MG	MG	majority	0	2	pass	unresolved	fail	technical_suspect	RLBP1/GLUL强命中MG，RHO共存且Rod ambient极高
+RUN7RG	A	qwen3.8-max	Q5b::2	Rod		tie	1	1	pass	unresolved	fail	technical_suspect	RHO/NRL阳性但rod ambient极高且深度极低，疑环境RNA污染
+RUN7RG	B	glm-5.1	Q7::52	RGC	AC	majority	0	0	unresolved	unresolved	na	candidate_biology	Sncg/Thy1/Nefm示RGC，但GRIN3A命中AC，缺Gad1难定
+BTEST-run1	C	deepseek-v3.2	Q3::13	RGC		tie	0	0	pass	fail	na	technical_suspect	NEFL+UCHL1强RGC标记，但共表达RHO/PDE6H/TTR多谱系标记
+BTEST-run1	C	deepseek-v3.2	Q4::19	BC	BC	majority	0	2	pass	pass	na	technical_suspect	VSX1/TRPM1/BCAT1/TMEM215均命中BC marker；文献支持TRPM1为ON bipolar；但MT基因多
+BTEST-run1	C	deepseek-v3.2	Q4::23	BC	BC	majority	0	2	pass	fail	na	technical_suspect	GRM6/TRPM1/CA10命中BC，但TTR共存提示谱系混合
+BTEST-run1	C	deepseek-v3.2	Q4::32	MG	MG	majority	0	2	pass	fail	na	technical_suspect	RLBP1/VIM/GLUL强命中MG；PTGDS/APOE/SPP1共存提示谱系混合
+BTEST-run1	A	qwen3.8-max	Q5b::35	AC		tie	1	1	unresolved	pass	na	none	仅GRM8弱命中AC，缺TFAP2A/GAD1等核心marker，证据不足
+KB9	C	deepseek-v3.2	Q6::16	Fibroblasts		tie	1	1	pass	unresolved	na	out_of_baseline_coverage	top_genes含MMP3、MMP1、COL6A3等成纤维细胞相关基因，无其他谱系强marker
+KB9	C	deepseek-v3.2	Q6::2	Epithelium	Epithelium	majority	0	2	pass	pass	na	none	top_genes KRT13/KRT19/KRT4 上皮标记；kb_celltype_ranking 混合 basal/suprabasal，证据不足细分
+KB9	C	deepseek-v3.2	Q6::20	Epithelium	Epithelium	majority	0	2	pass	pass	na	none	top_genes KRT12/KRT14/KRT3 强上皮标记；无 kb/lit 细分证据，给 coarse
+KB9	C	deepseek-v3.2	Q6::26	Immune Cells		tie	1	1	pass	pass	na	none	top_genes 含 HLA-DR, CD74, CCL3/4, CXCL8 等免疫激活基因；kb_ranking 指向 Mac/Mono
+KB9	C	deepseek-v3.2	Q6::29	Epithelium		tie	1	1	pass	pass	na	none	top_genes 含 KRT12/13/3/19, CLDN4, FABP5 等上皮 marker；kb_ranking 指向结膜上皮
+KB9	C	deepseek-v3.2	Q6::30	Epithelium		tie	1	1	pass	pass	na	none	top_genes 含 KRT7/13/15/19, UPK3BL1；kb_ranking 指向结膜上皮基底/基底上层
+KB9	C	deepseek-v3.2	Q6::4	Epithelium	Epithelium	majority	0	2	pass	pass	na	none	top_genes KRT15/KRT14/KRT19 基底上皮标记；kb_celltype_ranking 支持 Conj_epithelium_basal

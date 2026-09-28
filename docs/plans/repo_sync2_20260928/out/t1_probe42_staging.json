@@ -1,0 +1,416 @@
+{
+ "level": "规范序列化 (sort_keys JSON sha256); 响应对象层面; 被测=staging 仓副本 core",
+ "card": "t_719dd225-T1b",
+ "repo": "/home/ubuntu/EYEKB_REPO_STAGING_20260928",
+ "n_probes": 42,
+ "n_checks": 57,
+ "n_fails": 0,
+ "verdict": "PASS",
+ "n_byte_direct": 35,
+ "n_desens_explained": 7,
+ "n_fail": 0,
+ "desens_explained_fields": [
+  {
+   "probe": "qm_ct_Keratocytes",
+   "fields": [
+    [
+     "/soft_flags/notes[0]/message",
+     "串扰警示 (D002 眼表): Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratoc",
+     "串扰警示 (D002 眼表): Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratoc"
+    ]
+   ]
+  },
+  {
+   "probe": "qm_ct_Pericyte",
+   "fields": [
+    [
+     "/soft_flags/notes[0]/message",
+     "串扰警示 (D002 眼表): Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratoc",
+     "串扰警示 (D002 眼表): Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratoc"
+    ]
+   ]
+  },
+  {
+   "probe": "qm_genes_mural_smc",
+   "fields": [
+    [
+     "/soft_flags/notes[0]/message",
+     "串扰警示 (D002 眼表): Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratoc",
+     "串扰警示 (D002 眼表): Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratoc"
+    ]
+   ]
+  },
+  {
+   "probe": "qm_genes_mural_kera",
+   "fields": [
+    [
+     "/soft_flags/notes[0]/message",
+     "串扰警示 (D002 眼表): Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratoc",
+     "串扰警示 (D002 眼表): Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratoc"
+    ]
+   ]
+  },
+  {
+   "probe": "act_ct_facev6_Kera",
+   "fields": [
+    [
+     "/soft_flags/notes[0]/message",
+     "串扰警示 (D002 眼表): Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratoc",
+     "串扰警示 (D002 眼表): Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratoc"
+    ]
+   ]
+  },
+  {
+   "probe": "act_exp_facev6_Kera",
+   "fields": [
+    [
+     "/soft_flags/notes[0]/message",
+     "串扰警示 (D002 眼表): Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratoc",
+     "串扰警示 (D002 眼表): Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratoc"
+    ]
+   ]
+  },
+  {
+   "probe": "gtc_retina",
+   "fields": [
+    [
+     "/usage_redline",
+     "判读对照与 QC 旗专用; 禁止转成 module score/标签加权/置信度加分/候选排序分/复合 QC 分数 (KB1v2 红线1, REVIEWER_LLM T3 扩",
+     "判读对照与 QC 旗专用; 禁止转成 module score/标签加权/置信度加分/候选排序分/复合 QC 分数 (KB1v2 红线1, REVIEWER_L"
+    ]
+   ]
+  }
+ ],
+ "failures": [],
+ "checks": [
+  {
+   "check": "pre==post::qm_list_all",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::qm_list_retina",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::qm_ct_MG",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::qm_ct_BC",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::qm_ct_Keratocytes",
+   "pass": true,
+   "detail": "脱敏可解释差异 1 字段（代码面脱敏 vs kb面字节镜像）"
+  },
+  {
+   "check": "pre==post::qm_ct_Pericyte",
+   "pass": true,
+   "detail": "脱敏可解释差异 1 字段（代码面脱敏 vs kb面字节镜像）"
+  },
+  {
+   "check": "pre==post::qm_ct_Endo",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::qm_genes_selftest",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::qm_genes_run4w_v5",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::qm_genes_rod_dom",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::qm_genes_pure_bc",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::qm_genes_rodbcmix",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::qm_genes_bcdom_rod2",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::qm_genes_mural_smc",
+   "pass": true,
+   "detail": "脱敏可解释差异 1 字段（代码面脱敏 vs kb面字节镜像）"
+  },
+  {
+   "check": "pre==post::qm_genes_mural_kera",
+   "pass": true,
+   "detail": "脱敏可解释差异 1 字段（代码面脱敏 vs kb面字节镜像）"
+  },
+  {
+   "check": "pre==post::qm_genes_rod_bc_f3ish",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::gk_index",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::gk_tissue_cornea",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::act_ct_retv6_MG",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::act_ct_retv6_Astro",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::act_ct_facev6_Kera",
+   "pass": true,
+   "detail": "脱敏可解释差异 1 字段（代码面脱敏 vs kb面字节镜像）"
+  },
+  {
+   "check": "pre==post::act_ct_conj_basal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::act_ct_conj_superf",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::act_genes_v6_retina",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::act_genes_face_new",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::act_lac_genes",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::act_lac_ct",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::act_exp_retv6_MG",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::act_exp_facev6_Kera",
+   "pass": true,
+   "detail": "脱敏可解释差异 1 字段（代码面脱敏 vs kb面字节镜像）"
+  },
+  {
+   "check": "pre==post::act_exp_lac_v6",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::act_ct_Micro",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::act_ct_RPE",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::gtc_retina",
+   "pass": true,
+   "detail": "脱敏可解释差异 1 字段（代码面脱敏 vs kb面字节镜像）"
+  },
+  {
+   "check": "pre==post::k9leak_ct_Melanocyte",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::k9leak_ct_Schwann",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::k9leak_ct_suprabasal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::k9leak_ct_limbusC1",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::k9leak_genes_mel_core",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::k9leak_genes_schw_core",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::k9leak_genes_supra_core",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::k9leak_genes_limC1_core",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "pre==post::k9leak_default_list",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no-k9-in-default-list",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "default-list-count-stable",
+   "pass": true,
+   "detail": "post=60 pre=60"
+  },
+  {
+   "check": "k9-list==4",
+   "pass": true,
+   "detail": "['Conj_epithelium_suprabasal', 'Limbus_Sclera_fibroblast_C1', 'Melanocyte', 'Schwann']"
+  },
+  {
+   "check": "k9-ct::Melanocyte",
+   "pass": true,
+   "detail": "{'mode': 'cell_type', 'query': 'Melanocyte', 'found': True, 'markers': {'Melanocyte': ['TRPM1', 'MLANA', 'TYRP1', 'PMEL'"
+  },
+  {
+   "check": "k9-ct::Schwann",
+   "pass": true,
+   "detail": "{'mode': 'cell_type', 'query': 'Schwann', 'found': True, 'markers': {'Schwann': ['MPZ', 'SCN7A', 'SOX2', 'NRXN1']}, 'det"
+  },
+  {
+   "check": "k9-ct::Conj_epithelium_suprabasal",
+   "pass": true,
+   "detail": "{'mode': 'cell_type', 'query': 'Conj_epithelium_suprabasal', 'found': True, 'markers': {'Conj_epithelium_suprabasal': ['"
+  },
+  {
+   "check": "k9-ct::Limbus_Sclera_fibroblast_C1",
+   "pass": true,
+   "detail": "{'mode': 'cell_type', 'query': 'Limbus_Sclera_fibroblast_C1', 'found': True, 'markers': {'Limbus_Sclera_fibroblast_C1': "
+  },
+  {
+   "check": "k9-genes-route",
+   "pass": true,
+   "detail": "{'Schwann', 'Conj_epithelium_suprabasal', 'Melanocyte', 'Limbus_Sclera_fibroblast_C1'}"
+  },
+  {
+   "check": "enum-msg",
+   "pass": true,
+   "detail": "library 必须是 retina|membrane|retina_interneuron|retina_v6|face_v6|lacrimal_v6|k9_ocs|all, 收到: 'bogus_k9'"
+  },
+  {
+   "check": "V6_DEFAULT_LIBS-frozen",
+   "pass": true,
+   "detail": "白名单未扩"
+  },
+  {
+   "check": "k9-not-in-default-path",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "rules-overlay-inert",
+   "pass": true,
+   "detail": "rc=1 out="
+  },
+  {
+   "check": "raggap-inerts-unwired",
+   "pass": true,
+   "detail": "rc=1 out="
+  },
+  {
+   "check": "server-version-bump",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "off-state-no-k9",
+   "pass": true,
+   "detail": "43"
+  }
+ ],
+ "post_probe_shas": {
+  "qm_list_all": "ba83c9dbec8416ce7086e467879c8a375ee6d16c275c31f1457886ba74e3e9ef",
+  "qm_list_retina": "a3c1cb2d7ec87f66ba7f2f7c0eb458c93b6a533b0d88f5fa164fa31cc7a89fe5",
+  "qm_ct_MG": "29cc0aa843f5a55f8ddfa08e66f1a10ef6a560744ec409fe2c61a3f709281766",
+  "qm_ct_BC": "2b4f90ffdd29f906b10f295e84e75cdd5dac5a81012a573ccdcef8e1f1bf01e1",
+  "qm_ct_Keratocytes": "5fb37342d126e87344db0ab3b2a1b2fc5dd8a7192df49dc2378b04a575f6cbe1",
+  "qm_ct_Pericyte": "982305574422610c162e3acf34f70a13a88bd2c35c53fc279a5f4db8033a1363",
+  "qm_ct_Endo": "a404ff1b903d035e25397f576eacc65e34318a2b63d3c0cc1611c6df4f47e84c",
+  "qm_genes_selftest": "dc12ee5d2ebada23b5b392e1d4d7075abff9de0af98128a6bf46e84dbf49bbc3",
+  "qm_genes_run4w_v5": "d4d83c80f932632d21506dc96e96514b1f36fbb75f084d0de3f5a8f542dd360d",
+  "qm_genes_rod_dom": "d29be7f6e9536499086724b99913e9d5f8022647b24f74c50f0232159f2ad9e6",
+  "qm_genes_pure_bc": "cb0644edbd8c6a6927deb647c8c79e26f99a4b395141e1bb058bc1356a55ccf9",
+  "qm_genes_rodbcmix": "f66493e0ed861d7b77e405dd1d871778a820b7fd4ff87aabec5f2485d13c53fd",
+  "qm_genes_bcdom_rod2": "04535d2ec2f148b53c5d498f6f7ed2a18508b10d35e55168adb4a22d4d9f7bc3",
+  "qm_genes_mural_smc": "413b2cda8f502683e4c3ecdb17fedc3b4f610ca7a05a3edad8e19a5784f6eb56",
+  "qm_genes_mural_kera": "ef39cb84c414c539594b11da614d69cc4fd28b45cb3ce32d17e77105f480448d",
+  "qm_genes_rod_bc_f3ish": "19989728eba8bb80265d5d6a9193068b91540ee528e30b86969349bb23709f83",
+  "gk_index": "79daee2d8863ae2192ae652afba2f61ec467360128cf68e3ecf98c24ba5e723e",
+  "gk_tissue_cornea": "e9c7c091cf14e8b91e7daf9fb71b98484e1bfc797d21b4dc13bd8e2b5a9ca7f7",
+  "act_ct_retv6_MG": "a0e2994de58adbc5a3ea46aa91c20a4fdfa3ae154c344458f79b0f888d3e8785",
+  "act_ct_retv6_Astro": "a5978317d2f871cd2048f885f97ed33e2427d5ead6b8d4deb063f10104ce4557",
+  "act_ct_facev6_Kera": "7f0ee5a68869b0ba4e6d3ca7525460a082d23a227d1e89248c404f82b7d82bab",
+  "act_ct_conj_basal": "ad458100aa729f2c74db155ea2260ace07f3adf9b16defe158cc2ef08ecf1535",
+  "act_ct_conj_superf": "d40c9332ee12edb17a0c4f988e58dbe178c0bf7c6a8c23dff66d7dddb3659d94",
+  "act_genes_v6_retina": "0ed0522e52605a39d56da7de27326889cd5f90dee37081a16c911712dae536ec",
+  "act_genes_face_new": "1baf15062ea831cda99eb4c1e096d99bbff599e71f0a4cccb6c22a805f975260",
+  "act_lac_genes": "7fc57043ab2985f7fc416bca50370d2e1a426df6a6a3270fbeae27e92659ecb3",
+  "act_lac_ct": "9468c015b7c53a94f5f80f3c4e9ce2d3bcefd771da69a985c5a5f09a7e8bd6a8",
+  "act_exp_retv6_MG": "efb3a00a3d6d4759fd12847176725012254f341c4d3acb73db0e5c62d67c4212",
+  "act_exp_facev6_Kera": "48d8523ae3cd8e5935a2b1eae3e071b64ee15bc95e40ebe621f883dff00cc072",
+  "act_exp_lac_v6": "aaca643e989ec1a543114a16f2d909d9da3027cc90672fc8cdac2ce36061330e",
+  "act_ct_Micro": "d86677ad0529c02a1bbe26466a7972a832fdba730371f17b7de19d98e8983779",
+  "act_ct_RPE": "0454b6b31cc887979bef1867869170af7ec1a75d7e4df03278725ec44f7dcde4",
+  "gtc_retina": "26e0830e3403f5bd40fa0527c7cfee13be424220152c9acdb227b30efc9c3b2e",
+  "k9leak_ct_Melanocyte": "a2955ea700c278801615cdb6d0d24dcd3e75d80565b512b2d46f7c1956056b3f",
+  "k9leak_ct_Schwann": "22ca02063d7f928aa18ef954e281c4e6cbb1769dfbb1c5d72567d31ecd6eeb35",
+  "k9leak_ct_suprabasal": "26de68b6d2c833e451c198b166c17d87283f33f2141c55f10a900b79e52b3849",
+  "k9leak_ct_limbusC1": "feaa241b467399e0d982ef80e9a12d7cb30dea4bc4db063a82d11e00cf7535f2",
+  "k9leak_genes_mel_core": "ae3b6c278729cdf25e9363f7cf04a018a4de6ceee5e5a3f5096a58751245ba25",
+  "k9leak_genes_schw_core": "c61ac483414455b7d4b6a72a0e4635df5845f701378ed4cbf72e3f97507c63be",
+  "k9leak_genes_supra_core": "c11aa318fa5adbf5e49e3120f0b0ac31063a68cfab7f7ec13cc9af6eab53a153",
+  "k9leak_genes_limC1_core": "f92b1775892de1d7c912b6ec64ff949e7198d095a005c4a664bb26a03c548d53",
+  "k9leak_default_list": "ba83c9dbec8416ce7086e467879c8a375ee6d16c275c31f1457886ba74e3e9ef"
+ }
+}

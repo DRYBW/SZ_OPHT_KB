@@ -1,0 +1,293 @@
+{
+ "seed": 20260928,
+ "population_n": 55,
+ "sample_n": 20,
+ "counts": {
+  "CONSISTENT": 9,
+  "UNCLEAR": 1,
+  "MISMATCH": 10
+ },
+ "mismatch_rate": 0.5,
+ "rows": [
+  {
+   "file": "markers_v6_retina_repair.json",
+   "path": "/marker_blocks/BC[38]",
+   "gene": "GPR179",
+   "pmid": "42124641",
+   "note": "",
+   "epmc": {
+    "found": true,
+    "title": "Unified Transcriptome and Mechanics Map of the Intact Mammalian Preimplantation Embryo In Situ.",
+    "journal": "bioRxiv : the preprint server for biology",
+    "pubyear": "2026"
+   },
+   "verdict": "UNCLEAR"
+  },
+  {
+   "file": "markers_v6_lacrimal_increment.json",
+   "path": "/lacrimal_increment/Lacrimal_secretory_tearcell/core[2]",
+   "gene": "SCGB2A1",
+   "pmid": "16395610",
+   "note": "",
+   "epmc": {
+    "found": true,
+    "title": "Immunohistochemical analysis of secretoglobin SCGB 2A1 expression in human ocular glands and tissues.",
+    "journal": "Histochemistry and cell biology",
+    "pubyear": "2006"
+   },
+   "verdict": "CONSISTENT"
+  },
+  {
+   "file": "markers_k9_ocs_increment.json",
+   "path": "/new_terms/Conj_epithelium_suprabasal/core[1]",
+   "gene": "S100A9",
+   "pmid": "41991541",
+   "note": "",
+   "epmc": {
+    "found": true,
+    "title": "Cross-species transcriptomics identify mineralocorticoid receptor pathway overactivation as a central driver of ocular rosacea.",
+    "journal": "Nature communications",
+    "pubyear": "2026"
+   },
+   "verdict": "CONSISTENT"
+  },
+  {
+   "file": "markers_v6_retina_repair.json",
+   "path": "/marker_blocks/MG[1]",
+   "gene": "PRSS56",
+   "pmid": "29561967",
+   "note": "",
+   "epmc": {
+    "found": true,
+    "title": "Variables associated with mouth breathing diagnosis in children based on a multidisciplinary assessment.",
+    "journal": "CoDAS",
+    "pubyear": "2018"
+   },
+   "verdict": "MISMATCH"
+  },
+  {
+   "file": "markers_v6_retina_repair.json",
+   "path": "/subtype_anchor_layer/AC[1]",
+   "gene": "SLC5A7",
+   "pmid": "33393903",
+   "note": "",
+   "epmc": {
+    "found": true,
+    "title": "A cell atlas of the chick retina based on single-cell transcriptomics.",
+    "journal": "eLife",
+    "pubyear": "2021"
+   },
+   "verdict": "CONSISTENT"
+  },
+  {
+   "file": "markers_v6_retina_repair.json",
+   "path": "/marker_blocks/RPE[8]",
+   "gene": "OR51E2",
+   "pmid": "36167259",
+   "note": "OR51E2 agonist β-ionone regulates RPE cell mitophagy (人 RPE 摘要共现 GENERIC)",
+   "epmc": {
+    "found": true,
+    "title": "High speed homogenization assisted encapsulation of synergistic essential oils formulation: Characterization, in vitro release study, safety profile, and efficacy towards mitigation of aflatoxin B<sub>1</sub> induced deterioration in rice samples.",
+    "journal": "Food and chemical toxicology : an international journal published for the British Industrial Biological Research Association",
+    "pubyear": "2022"
+   },
+   "verdict": "MISMATCH"
+  },
+  {
+   "file": "markers_k9_ocs_increment.json",
+   "path": "/new_terms/Melanocyte/core[2]",
+   "gene": "TYRP1",
+   "pmid": "42720426",
+   "note": "",
+   "epmc": {
+    "found": true,
+    "title": "Establishment of Stable Immortalized Human Choroidal Melanocytes for Ocular Research.",
+    "journal": "Investigative ophthalmology & visual science",
+    "pubyear": "2026"
+   },
+   "verdict": "CONSISTENT"
+  },
+  {
+   "file": "markers_k9_ocs_increment.json",
+   "path": "/new_terms/Schwann/core[0]",
+   "gene": "MPZ",
+   "pmid": "42539570",
+   "note": "",
+   "epmc": {
+    "found": true,
+    "title": "Case Report: Schwann cell reprogramming and PDGF-driven nerve hypertrophy in an NF1 patient with CIDP-like autoimmunity.",
+    "journal": "Frontiers in immunology",
+    "pubyear": "2026"
+   },
+   "verdict": "MISMATCH"
+  },
+  {
+   "file": "markers_k9_ocs_increment.json",
+   "path": "/new_terms/Melanocyte/core[5]",
+   "gene": "TYR",
+   "pmid": "42406579",
+   "note": "",
+   "epmc": {
+    "found": true,
+    "title": "Heme Oxygenase-1 Differentially Controls Pigmentation in Physiological and Pathological Melanogenesis.",
+    "journal": "Pigment cell & melanoma research",
+    "pubyear": "2026"
+   },
+   "verdict": "MISMATCH"
+  },
+  {
+   "file": "markers_v6_face_increment.json",
+   "path": "/face_increment/Conj_epithelium_basal/core[5]",
+   "gene": "KRT19",
+   "pmid": "38528295",
+   "note": "Human forniceal region stem cell-rich zone of conjunctival epithelium (eutils 共现)",
+   "epmc": {
+    "found": true,
+    "title": "A real-world study of treatment sequences and second-line clinical outcomes in patients with HER2-positive metastatic breast cancer in US community practice.",
+    "journal": "International journal of clinical oncology",
+    "pubyear": "2024"
+   },
+   "verdict": "MISMATCH"
+  },
+  {
+   "file": "markers_v6_face_increment.json",
+   "path": "/stromal_repair/Pericyte/core[3]",
+   "gene": "COX4I2",
+   "pmid": "35920172",
+   "note": "人脑 pericyte 非典型线粒体亚基表达 (NDUFA4L2/COX4I2 语境)——eutils GENERIC 共现",
+   "epmc": {
+    "found": true,
+    "title": "Letter to the editor.",
+    "journal": "Journal of oral pathology & medicine : official publication of the International Association of Oral Pathologists and the American Academy of Oral Pathology",
+    "pubyear": "2022"
+   },
+   "verdict": "MISMATCH"
+  },
+  {
+   "file": "markers_v6_lacrimal_increment.json",
+   "path": "/lacrimal_increment/Lacrimal_secretory_tearcell/core[4]",
+   "gene": "CST1",
+   "pmid": "2029847",
+   "note": "",
+   "epmc": {
+    "found": true,
+    "title": "Cystatins in human tear fluid.",
+    "journal": "Current eye research",
+    "pubyear": "1991"
+   },
+   "verdict": "CONSISTENT"
+  },
+  {
+   "file": "markers_k9_ocs_increment.json",
+   "path": "/new_terms/Melanocyte/core[9]",
+   "gene": "ABCB5",
+   "pmid": "42482451",
+   "note": "",
+   "epmc": {
+    "found": true,
+    "title": "Functional validation of driver mutation-specific uveal melanoma biomarkers: role of COL9A3 in cancer cell plasticity.",
+    "journal": "The Journal of pathology",
+    "pubyear": "2026"
+   },
+   "verdict": "CONSISTENT"
+  },
+  {
+   "file": "markers_v6_face_increment.json",
+   "path": "/stromal_repair/Keratocytes/core[0]",
+   "gene": "KERA",
+   "pmid": "34741068",
+   "note": "",
+   "epmc": {
+    "found": true,
+    "title": "Single cell transcriptomics reveals the heterogeneity of the human cornea to identify novel markers of the limbus and stroma.",
+    "journal": "Scientific reports",
+    "pubyear": "2021"
+   },
+   "verdict": "CONSISTENT"
+  },
+  {
+   "file": "markers_v6_lacrimal_increment.json",
+   "path": "/lacrimal_increment/Lacrimal_secretory_tearcell/core[0]",
+   "gene": "LACRT",
+   "pmid": "42777860",
+   "note": "",
+   "epmc": {
+    "found": true,
+    "title": "Species-specific tear proteomic signatures in humans and rabbits: A DIA mass spectrometry comparative study.",
+    "journal": "The ocular surface",
+    "pubyear": "2026"
+   },
+   "verdict": "CONSISTENT"
+  },
+  {
+   "file": "markers_v6_retina_repair.json",
+   "path": "/marker_blocks/RGC[5]",
+   "gene": "UCHL1",
+   "pmid": "24449362",
+   "note": "",
+   "epmc": {
+    "found": true,
+    "title": "ABO blood group polymorphisms and risk for ischemic stroke and peripheral arterial disease.",
+    "journal": "Molecular biology reports",
+    "pubyear": "2014"
+   },
+   "verdict": "MISMATCH"
+  },
+  {
+   "file": "markers_v6_face_increment.json",
+   "path": "/face_increment/Conj_epithelium_superficial/core[0]",
+   "gene": "SCGB3A1",
+   "pmid": "37381815",
+   "note": "Pterygium/pingueula transcriptome SCGB3A1 conjunctival (本地 human×2)",
+   "epmc": {
+    "found": true,
+    "title": "A computational approach for positive genetic identification and relatedness detection from low-coverage shotgun sequencing data.",
+    "journal": "The Journal of heredity",
+    "pubyear": "2023"
+   },
+   "verdict": "MISMATCH"
+  },
+  {
+   "file": "markers_k9_ocs_increment.json",
+   "path": "/new_terms/Melanocyte/core[1]",
+   "gene": "MLANA",
+   "pmid": "42629955",
+   "note": "",
+   "epmc": {
+    "found": true,
+    "title": "Framework for Establishing a Specialized Biobank and Digital Information Platform for Skin-on-a-Chip Research in Plastic Surgery.",
+    "journal": "Biopreservation and biobanking",
+    "pubyear": "2026"
+   },
+   "verdict": "MISMATCH"
+  },
+  {
+   "file": "markers_k9_ocs_increment.json",
+   "path": "/new_terms/Conj_epithelium_suprabasal/core[0]",
+   "gene": "S100A8",
+   "pmid": "41638552",
+   "note": "",
+   "epmc": {
+    "found": true,
+    "title": "A comprehensive review of tear fluid proteome alterations in dry eye disease: Insights into pathophysiology and biomarker potential.",
+    "journal": "The ocular surface",
+    "pubyear": "2026"
+   },
+   "verdict": "CONSISTENT"
+  },
+  {
+   "file": "markers_v6_face_increment.json",
+   "path": "/face_increment/Conj_epithelium_basal/core[2]",
+   "gene": "AQP5",
+   "pmid": "35590283",
+   "note": "ocular surface aquaporins (干眼, 本地 human×5)",
+   "epmc": {
+    "found": true,
+    "title": "Syndrome of inappropriate antidiuretic hormone secretion is associated with different proton pump inhibitor use: a pharmacovigilance study.",
+    "journal": "BMC nephrology",
+    "pubyear": "2022"
+   },
+   "verdict": "MISMATCH"
+  }
+ ]
+}

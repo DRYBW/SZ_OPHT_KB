@@ -1,0 +1,20 @@
+panel(main) raw: {'ACINAR': 2, 'DUCT': 6, 'MYOEPITH': 5, 'IMMUNE': 3, 'ENDO': 0, 'NEUROGLIA': 2, 'STROMA': 2}
+after empty-well exclusion (3068, 39009)
+[main] ambient-excluded: []
+[main] groups after filter (>= 3 T1 genes): {'DUCT': 6, 'MYOEPITH': 5, 'IMMUNE': 3}
+[main] ambient-excluded: []
+[main] groups after filter (>= 3 T1 genes): {'DUCT': 6, 'MYOEPITH': 5, 'IMMUNE': 3}
+
+leak table:
+    group  n_panel overlap_genes  overlap_frac  leak_flag
+    DUCT        6                         0.0      False
+MYOEPITH        5                         0.0      False
+  IMMUNE        3                         0.0      False
+
+=== MAIN (res=1.0) tissue clusters n>=30: 10 ; anchored=1 ; qualified(non-leak)=1
+cluster  n_cells top_group  score_top  score_second
+TIS::10       87    IMMUNE       0.77         0.118
+group composition: {'IMMUNE': np.int64(1)} max_share=1.000
+
+PRECONDITIONS: {"qual_anchors": 1, "max_share": 1.0, "precondition_pass": false, "sens_anchors": {"sens08_tissue": 1, "sens08_organoid": 0, "sens12_tissue": 1, "sens12_organoid": 0}}
+DONE

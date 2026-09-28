@@ -1,0 +1,57 @@
+# 存量面命中登记（上游字节镜像策略面 + 09-27 前入仓面；CJK 强化词形口径；处置=登记不擅动，T2 逐字节对账纪律优先）
+# 依据: 09-27 REPOSYNC 口径（kb/clients/scripts/evals/figures=字节镜像对账面）+ KB9REG 对账表"存量命中登记不擅动"先例。
+
+## kb/
+  kb/baselines/RPE.json  {'R08': 4}
+  kb/baselines/RPE.md  {'R08': 5}
+  kb/baselines/choroid.json  {'R08': 6}
+  kb/baselines/choroid.md  {'R08': 7}
+  kb/baselines/ciliary_body.json  {'R08': 4}
+  kb/baselines/ciliary_body.md  {'R08': 5}
+  kb/baselines/conjunctiva.json  {'R08': 6}
+  kb/baselines/conjunctiva.md  {'R08': 7}
+  kb/baselines/iris.json  {'R08': 6}
+  kb/baselines/iris.md  {'R08': 7}
+  kb/baselines/lacrimal_gland.json  {'R08': 1}
+  kb/baselines/lacrimal_gland.md  {'R08': 1}
+  kb/baselines/lens.json  {'R08': 6}
+  kb/baselines/lens.md  {'R08': 7}
+  kb/baselines/ocular_surface.json  {'R08': 7}
+  kb/baselines/ocular_surface.md  {'R08': 6}
+  kb/baselines/optic_nerve.json  {'R08': 5}
+  kb/baselines/optic_nerve.md  {'R08': 5}
+  kb/baselines/retina.json  {'R08': 5}
+  kb/baselines/retina.md  {'R08': 6}
+  kb/baselines/retina__fetal_developing.json  {'R08': 2}
+  kb/baselines/retina__fetal_developing.md  {'R08': 2}
+  kb/baselines/sclera.json  {'R08': 6}
+  kb/baselines/sclera.md  {'R08': 7}
+  kb/baselines/trabecular_meshwork.json  {'R08': 4}
+  kb/baselines/trabecular_meshwork.md  {'R08': 5}
+  kb/evidence/D0_EVIDENCE_BRIEF.md  {'R08': 1}
+  kb/evidence/EVIDENCE_MODEL_TEMPLATE_v1.0.md  {'R08': 1}
+  kb/literature_db/EYEKB_DB_POINTER.yaml  {'R08': 1}
+  kb/literature_db/KBADD_KERATOCYTE_NOTES_20260924.md  {'R08': 1}
+  kb/literature_db/REDECISIONS_d0.json  {'R12': 8}
+  kb/literature_db/REDECISIONS_v2.json  {'R12': 1}
+  kb/literature_db/evidence_meta_v2.0_2026-09.jsonl  {'R08': 852, 'R12': 83}
+  kb/literature_db/evidence_meta_v2.2_2026-09.jsonl  {'R08': 1147, 'R12': 86}
+  kb/literature_db/evidence_meta_v2.3_2026-09.jsonl  {'R08': 1147, 'R12': 90}
+  kb/markers/markers_membrane_v1.json  {'R08': 6}
+  kb/priors/concepts.tsv  {'R08': 2}
+  kb/priors/disease/PDR__fibrovascular_membrane.json  {'R08': 4}
+  kb/priors/disease/PDR__fibrovascular_membrane.md  {'R08': 4}
+  kb/priors/disease/_DISEASE_TISSUE_MATRIX.md  {'R08': 2}
+  kb/vk_literature_index/INDEX.md  {'R08': 1}
+  kb/vk_literature_index/glial-microglia.md  {'R08': 1}
+
+## scripts/
+  scripts/baselines/build_baselines.py  {'R08': 18}
+  scripts/baselines/kb3_build_dev_entries.py  {'R08': 2}
+  scripts/disease/build_disease_v2.py  {'R08': 11}
+  scripts/rag_meta/classify_evidence_v2.py  {'R08': 3, 'R12': 1}
+  scripts/rag_meta/kc_sidecar_sync.py  {'R12': 1}
+  scripts/wiki/link_kb_pages_v2.py  {'R08': 2}
+
+## tests/
+  tests/COOPROBE_20260927.log  {'R08': 2}

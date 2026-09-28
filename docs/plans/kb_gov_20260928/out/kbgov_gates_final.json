@@ -1,0 +1,87 @@
+{
+ "B1": {
+  "lesion_mouse": {
+   "cleared": 0,
+   "qualified_only": 7,
+   "not": 0
+  },
+  "lesion_mouse_pass(lenient)": true,
+  "lesion_mouse_strict_cleared": 0,
+  "lesion_Q2x22": "kept_flagged",
+  "lesion_Q2x22_constrained": true,
+  "regression_shift_n": 0,
+  "regression_shift_rate": 0.0,
+  "regression_gate": "PASS",
+  "correct_name_casualty_n": 7,
+  "mouse_side_all_refused_n": 0,
+  "入围": true
+ },
+ "B2": {
+  "lesion_mouse": {
+   "cleared": 4,
+   "qualified_only": 3,
+   "not": 0
+  },
+  "lesion_mouse_pass(lenient)": true,
+  "lesion_mouse_strict_cleared": 4,
+  "lesion_Q2x22": "removed",
+  "lesion_Q2x22_constrained": true,
+  "regression_shift_n": 34,
+  "regression_shift_rate": 0.1478,
+  "regression_gate": "FAIL_OVERKILL",
+  "correct_name_casualty_n": 7,
+  "mouse_side_all_refused_n": 14,
+  "入围": false
+ },
+ "B3": {
+  "lesion_mouse": {
+   "cleared": 6,
+   "qualified_only": 1,
+   "not": 0
+  },
+  "lesion_mouse_pass(lenient)": true,
+  "lesion_mouse_strict_cleared": 6,
+  "lesion_Q2x22": "removed",
+  "lesion_Q2x22_constrained": true,
+  "regression_shift_n": 34,
+  "regression_shift_rate": 0.1478,
+  "regression_gate": "FAIL_OVERKILL",
+  "correct_name_casualty_n": 7,
+  "mouse_side_all_refused_n": 32,
+  "入围": false
+ },
+ "B4": {
+  "lesion_mouse": {
+   "cleared": 6,
+   "qualified_only": 1,
+   "not": 0
+  },
+  "lesion_mouse_pass(lenient)": true,
+  "lesion_mouse_strict_cleared": 6,
+  "lesion_Q2x22": "kept_flagged",
+  "lesion_Q2x22_constrained": true,
+  "regression_shift_n": 0,
+  "regression_shift_rate": 0.0,
+  "regression_gate": "PASS",
+  "correct_name_casualty_n": 7,
+  "mouse_side_all_refused_n": 32,
+  "入围": true
+ },
+ "B5": {
+  "lesion_mouse": {
+   "cleared": 7,
+   "qualified_only": 0,
+   "not": 0
+  },
+  "lesion_mouse_pass(lenient)": true,
+  "lesion_mouse_strict_cleared": 7,
+  "lesion_Q2x22": "kept_flagged",
+  "lesion_Q2x22_constrained": true,
+  "regression_shift_n": 0,
+  "regression_shift_rate": 0.0,
+  "regression_gate": "PASS",
+  "correct_name_casualty_n": 7,
+  "mouse_side_all_refused_n": 59,
+  "入围": true
+ }
+}

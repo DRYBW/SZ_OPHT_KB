@@ -1,0 +1,65 @@
+{
+ "card": "t_719dd225-T1a",
+ "repo": "/home/ubuntu/EYEKB_REPO_STAGING_20260928",
+ "n_checks": 11,
+ "n_fails": 0,
+ "verdict": "PASS",
+ "checks": [
+  {
+   "check": "baseline-mirror==online::postdiff(selfproof-hashfaces)",
+   "pass": true,
+   "detail": "post_probe_shas"
+  },
+  {
+   "check": "baseline-mirror==online::prebaseline(hashfaces)",
+   "pass": true,
+   "detail": "probe-spec+canon_sha"
+  },
+  {
+   "check": "repo-default-classes==online",
+   "pass": true,
+   "detail": "|r|=60"
+  },
+  {
+   "check": "repo-off-classes==43",
+   "pass": true,
+   "detail": "|off|=43"
+  },
+  {
+   "check": "repo-k9-list",
+   "pass": true,
+   "detail": "['Conj_epithelium_suprabasal', 'Limbus_Sclera_fibroblast_C1', 'Melanocyte', 'Schwann']"
+  },
+  {
+   "check": "repo-k9-genes==online",
+   "pass": true,
+   "detail": "{'Limbus_Sclera_fibroblast_C1': True, 'Melanocyte': True, 'Schwann': True, 'Conj_epithelium_suprabasal': True}"
+  },
+  {
+   "check": "repo-rules-counts",
+   "pass": true,
+   "detail": "(283, 34)"
+  },
+  {
+   "check": "stdio-server-title",
+   "pass": true,
+   "detail": "eyekb"
+  },
+  {
+   "check": "stdio-version",
+   "pass": true,
+   "detail": "KB1v2-0.5-k9reg"
+  },
+  {
+   "check": "stdio-list-tools-5",
+   "pass": true,
+   "detail": "5"
+  },
+  {
+   "check": "stdio-k9-route",
+   "pass": true,
+   "detail": "{'mode': 'list', 'cell_types': ['Conj_epithelium_suprabasal', 'Limbus_Sclera_fibroblast_C1', 'Melanocyte', 'Schwann'], 'provenance': {'library_requested': 'k9_o"
+  }
+ ],
+ "failures": []
+}

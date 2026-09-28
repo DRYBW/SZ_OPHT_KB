@@ -1,0 +1,242 @@
+{
+ "top1_shift_B2B3": [
+  "Q2::0",
+  "Q3::10",
+  "Q4::13",
+  "Q4::20",
+  "Q4::31",
+  "Q4::35",
+  "Q4::36",
+  "Q4::37",
+  "Q5b::46",
+  "Q6::13",
+  "Q6::16",
+  "Q6::25"
+ ],
+ "top1_shift_n": 12,
+ "midlist_only_shift_n": 22,
+ "midlist_only_shift": [
+  "Q1::11",
+  "Q1::2",
+  "Q1::5",
+  "Q1::7",
+  "Q2::1",
+  "Q2::2",
+  "Q2::3",
+  "Q2::4",
+  "Q3::6",
+  "Q3::7",
+  "Q3::8",
+  "Q4::21",
+  "Q4::30",
+  "Q4::32",
+  "Q5b::39",
+  "Q6::14",
+  "Q6::15",
+  "Q6::19",
+  "Q6::22",
+  "Q6::24",
+  "Q6::28",
+  "Q6::7"
+ ],
+ "correct_name_casualty": {
+  "B1": [
+   "Q2::0",
+   "Q3::10",
+   "Q4::13",
+   "Q4::20",
+   "Q4::35",
+   "Q4::36",
+   "Q4::37"
+  ],
+  "B2": [
+   "Q2::0",
+   "Q3::10",
+   "Q4::13",
+   "Q4::20",
+   "Q4::35",
+   "Q4::36",
+   "Q4::37"
+  ],
+  "B3": [
+   "Q2::0",
+   "Q3::10",
+   "Q4::13",
+   "Q4::20",
+   "Q4::35",
+   "Q4::36",
+   "Q4::37"
+  ],
+  "B4": [
+   "Q2::0",
+   "Q3::10",
+   "Q4::13",
+   "Q4::20",
+   "Q4::35",
+   "Q4::36",
+   "Q4::37"
+  ],
+  "B5": [
+   "Q2::0",
+   "Q3::10",
+   "Q4::13",
+   "Q4::20",
+   "Q4::35",
+   "Q4::36",
+   "Q4::37"
+  ]
+ },
+ "flag_casualty_note": "casualty 计数=truth==A_top1 且 B 剥夺具名（removed 或 kept_flagged）；B1/B4/B5 的 7 簇为 kept_flagged（具名资格受限、条目保留、序不变）",
+ "lesion_status": {
+  "Q7::52": {
+   "B1": "kept_annotated",
+   "B2": "refused",
+   "B3": "refused",
+   "B4": "refused",
+   "B5": "refused"
+  },
+  "Q7::58": {
+   "B1": "kept_annotated",
+   "B2": "refused",
+   "B3": "refused",
+   "B4": "refused",
+   "B5": "refused"
+  },
+  "Q7::11": {
+   "B1": "kept_annotated",
+   "B2": "kept_annotated",
+   "B3": "kept_annotated",
+   "B4": "kept_annotated",
+   "B5": "removed"
+  },
+  "Q7::15": {
+   "B1": "kept_annotated",
+   "B2": "kept_annotated",
+   "B3": "refused",
+   "B4": "refused",
+   "B5": "refused"
+  },
+  "Q7::21": {
+   "B1": "kept_annotated",
+   "B2": "removed",
+   "B3": "refused",
+   "B4": "refused",
+   "B5": "refused"
+  },
+  "Q7::22": {
+   "B1": "kept_annotated",
+   "B2": "kept_annotated",
+   "B3": "refused",
+   "B4": "refused",
+   "B5": "refused"
+  },
+  "Q7::61": {
+   "B1": "kept_annotated",
+   "B2": "refused",
+   "B3": "refused",
+   "B4": "refused",
+   "B5": "refused"
+  },
+  "Q2::22": {
+   "B1": "kept_flagged",
+   "B2": "removed",
+   "B3": "removed",
+   "B4": "kept_flagged",
+   "B5": "kept_flagged"
+  },
+  "Q5b::35": {
+   "B1": "kept_bare",
+   "B2": "kept_bare",
+   "B3": "kept_bare",
+   "B4": "kept_bare",
+   "B5": "kept_bare"
+  }
+ },
+ "gates": {
+  "B1": {
+   "lesion_mouse": {
+    "cleared": 0,
+    "qualified_only": 7,
+    "not": 0
+   },
+   "lesion_mouse_pass(lenient)": true,
+   "lesion_mouse_strict_cleared": 0,
+   "lesion_Q2x22": "kept_flagged",
+   "lesion_Q2x22_constrained": true,
+   "regression_shift_n": 0,
+   "regression_shift_rate": 0.0,
+   "regression_gate": "PASS",
+   "correct_name_casualty_n": 7,
+   "mouse_side_all_refused_n": 0,
+   "入围": true
+  },
+  "B2": {
+   "lesion_mouse": {
+    "cleared": 4,
+    "qualified_only": 3,
+    "not": 0
+   },
+   "lesion_mouse_pass(lenient)": true,
+   "lesion_mouse_strict_cleared": 4,
+   "lesion_Q2x22": "removed",
+   "lesion_Q2x22_constrained": true,
+   "regression_shift_n": 34,
+   "regression_shift_rate": 0.1478,
+   "regression_gate": "FAIL_OVERKILL",
+   "correct_name_casualty_n": 7,
+   "mouse_side_all_refused_n": 14,
+   "入围": false
+  },
+  "B3": {
+   "lesion_mouse": {
+    "cleared": 6,
+    "qualified_only": 1,
+    "not": 0
+   },
+   "lesion_mouse_pass(lenient)": true,
+   "lesion_mouse_strict_cleared": 6,
+   "lesion_Q2x22": "removed",
+   "lesion_Q2x22_constrained": true,
+   "regression_shift_n": 34,
+   "regression_shift_rate": 0.1478,
+   "regression_gate": "FAIL_OVERKILL",
+   "correct_name_casualty_n": 7,
+   "mouse_side_all_refused_n": 32,
+   "入围": false
+  },
+  "B4": {
+   "lesion_mouse": {
+    "cleared": 6,
+    "qualified_only": 1,
+    "not": 0
+   },
+   "lesion_mouse_pass(lenient)": true,
+   "lesion_mouse_strict_cleared": 6,
+   "lesion_Q2x22": "kept_flagged",
+   "lesion_Q2x22_constrained": true,
+   "regression_shift_n": 0,
+   "regression_shift_rate": 0.0,
+   "regression_gate": "PASS",
+   "correct_name_casualty_n": 7,
+   "mouse_side_all_refused_n": 32,
+   "入围": true
+  },
+  "B5": {
+   "lesion_mouse": {
+    "cleared": 7,
+    "qualified_only": 0,
+    "not": 0
+   },
+   "lesion_mouse_pass(lenient)": true,
+   "lesion_mouse_strict_cleared": 7,
+   "lesion_Q2x22": "kept_flagged",
+   "lesion_Q2x22_constrained": true,
+   "regression_shift_n": 0,
+   "regression_shift_rate": 0.0,
+   "regression_gate": "PASS",
+   "correct_name_casualty_n": 7,
+   "mouse_side_all_refused_n": 59,
+   "入围": true
+  }
+ }
+}

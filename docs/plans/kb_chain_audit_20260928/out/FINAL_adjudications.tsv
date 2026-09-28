@@ -1,0 +1,38 @@
+frame	surface	path	pmid	final_grade	action	rationale
+F1	markers_k9_ocs_increment.json	/new_terms/Melanocyte/core[0]/evidence[1]	40869148	context_ok	保留	"题名=TRP通道皮肤癌/黑色素瘤综述, 与 note 声称""melanocyte/melanoma 语境共现""一致; 组织位点=皮肤非眼, 已在 KB9 注册语境声明"
+F1	markers_k9_ocs_increment.json	/new_terms/Melanocyte/core[1]/evidence[1]	42629955	suspect	降weak	Skin-on-a-chip 生物样本库框架文, 题/刊零 melanocyte 词面; in-ledger(当日 query 合法返回) 但证据强度=全文级共现, 题录级不可核
+F1	markers_k9_ocs_increment.json	/new_terms/Melanocyte/core[3]/evidence[2]	41945932	suspect	降weak	黑色素瘤化疗前临床模型文(PMEL=黑色素瘤抗原常见流式标记), 题面零 PMEL; 全文共现型, 降 weak
+F1	markers_k9_ocs_increment.json	/new_terms/Melanocyte/core[4]/evidence[1]	42601941	context_ok	保留	CXCL1-CXCR2 抑制 melanogenesis 文 = DCT(黑色素合成酶)语境真实共现
+F1	markers_k9_ocs_increment.json	/new_terms/Melanocyte/core[5]/evidence[1]	42406579	context_ok	保留	Pigment Cell & Melanoma Res 刊, HO-1 控色素合成 = TYR 色素程序语境真实
+F1	markers_k9_ocs_increment.json	/new_terms/Melanocyte/core[7]/evidence[1]	42170303	suspect	降weak	题面零 GPR143; in-ledger; 全文共现型
+F1	markers_k9_ocs_increment.json	/new_terms/Melanocyte/core[8]/evidence[1]	41103068	suspect	降weak+物种注记	鸽子羽毛色素 SOX10 文 — 基因共现真实但物种=鸟类, 作人眼表黑色素细胞锚不适配
+F1	markers_k9_ocs_increment.json	/new_terms/Schwann/core[0]/evidence[1]	42539570	context_ok	保留	Schwann 细胞重编程病例报告 = MPZ(Schwann 髓鞘)语境真实
+F1	markers_k9_ocs_increment.json	/new_terms/Schwann/core[2]/evidence[1]	42760604	context_ok	保留	Glia 刊 Schwann 细胞鞘脂异质性 = SOX2 胶质语境真实
+F1	markers_k9_ocs_increment.json	/new_terms/Schwann/core[3]/evidence[1]	41739556	good	保留	题名含 neurexin 1 = NRXN1 全称词面命中 (机械档符号匹配漏全称, 已修正认知)
+F1	markers_k9_ocs_increment.json	/new_terms/Limbus_Sclera_fibroblast_C1/core[0]/evidence[1]	42729537	suspect	降weak	"CAF 异质性文; note 自声明""泛成纤维细胞异质性语境, 非眼科特异""——诚实旁证, 非误引"
+F1	markers_k9_ocs_increment.json	/new_terms/Limbus_Sclera_fibroblast_C1/core[2]/evidence[1]	42678737	suspect	降weak	题面零 LAMA2; in-ledger 全文共现型
+F1	markers_v6_face_increment.json	/stromal_repair/Pericyte/core[3]/evidence[0]	35920172	CONFIRMED_MISQUOTE	换PMID→35929074(待复核)	"题录=Journal of oral ""Letter to the editor"" (无题信); 当日 esearch 合法命中=35929074 (前4位同 3592); 转录数字变异型"
+F1	markers_v6_face_increment.json	/face_increment/Conj_epithelium_basal/core[0]/evidence[0]	33503899	CONFIRMED_MISQUOTE	撤证/找回	题录=人血管扩张症(telangiectasia) microRNA 签名, 与结膜上皮断言无关; off-ledger 无痕迹
+F1	markers_v6_face_increment.json	/face_increment/Conj_epithelium_basal/core[2]/evidence[0]	35590283	CONFIRMED_MISQUOTE	撤证/找回(15557451物种不符)	"RAGFIX 已确诊; note 称""ocular surface aquaporins 干眼"" vs 题录=SIADH 药物警戒 (BMC nephrology)"
+F1	markers_v6_face_increment.json	/face_increment/Conj_epithelium_basal/core[3]/evidence[0]	33201599	CONFIRMED_MISQUOTE	撤证	"题录=景观生态物种-栖息地网络 (Ecology letters), note 称""结膜共表达 SARS 入口基因研究"" — 完全异域, off-ledger"
+F1	markers_v6_face_increment.json	/face_increment/Conj_epithelium_basal/core[4]/evidence[0]	35021166	CONFIRMED_MISQUOTE	撤证	"题录=碘化亚铜缺陷簇第一性原理计算物理 (Nanotechnology), note 称""人眼表转录组"" — 异域; 同错号复用于 FDCSP"
+F1	markers_v6_face_increment.json	/face_increment/Conj_epithelium_basal/core[5]/evidence[0]	38528295	CONFIRMED_MISQUOTE	换PMID→25722207(待复核)	"RAGFIX 确诊; 乳腺癌真实世界研究 vs note""人穹窿部结膜干细胞富集区""; 找回候选 25722207 题逐字匹配"
+F1	markers_v6_face_increment.json	/face_increment/Conj_epithelium_superficial/core[0]/evidence[0]	37381815	CONFIRMED_MISQUOTE	撤证	"RAGFIX 确诊; 法医亲缘计算 (J hered) vs note""翼状胬肉/睑裂斑转录组"""
+F1	markers_v6_face_increment.json	/face_increment/Conj_epithelium_superficial/core[1]/evidence[0]	35021166	CONFIRMED_MISQUOTE	撤证/找回	"同 LCN2 错号 (35021166 物理文) 复用; note 称""角膜结膜表达谱""真文未找回"
+F1	markers_v6_lacrimal_increment.json	/lacrimal_increment/Lacrimal_secretory_tearcell/core[3]/evidence[0]	37894795	context_ok	降weak	题录=睑板腺功能障碍(MGD)泪液 Ig 低 (眼科语境真, EYE 词表缺 meibomian 属词表盲区); CST4 特异性全文级, 降 weak
+F1	markers_v6_lacrimal_increment.json	/lacrimal_increment/Lacrimal_secretory_tearcell/core[3]/evidence[1]	11879580	good	保留	题名 CST1-CST5 家族全称匹配 = 真家族表达谱锚
+F1	markers_v6_lacrimal_increment.json	/lacrimal_increment/Lacrimal_duct_epithelial/core[0]/evidence[0]	37591874	suspect	找回待验	多基因座调控元件文(Nat Commun); 建链日无痕迹, in-ledger 仅由 RAGFIX 09-28 闭集后置合法化; 题面零 PRR27
+F1	markers_v6_retina_repair.json	/marker_blocks/BC[38]/evidence[0]	42124641	CONFIRMED_MISQUOTE	撤证/找回	bioRxiv 着床前胚胎图纹文 vs BC 标记断言; 当日 idlist=42106701 (前3位同 421) — 变异型, RAGFIX 判 UNCLEAR 现升级确诊
+F1	markers_v6_retina_repair.json	/marker_blocks/MG[1]/evidence[0]	29561967	CONFIRMED_MISQUOTE	撤证/找回	RAGFIX 确诊; 儿童口呼吸(CoDAS) vs MG; 当日 idlist=29529029 (前3位同 295)
+F1	markers_v6_retina_repair.json	/marker_blocks/RPE[5]/evidence[0]	40228796	CONFIRMED_MISQUOTE	撤证	透析方式共享决策护理文 vs MFRP(视网膜); 当日 idlist=40249779 (前3位同 402)
+F1	markers_v6_retina_repair.json	/marker_blocks/RPE[6]/evidence[0]	38749583	CONFIRMED_MISQUOTE	撤证	"结肠息肉切除后延迟出血预防 vs note""RPE 生酮""; idlist=38857822 (前2位同)"
+F1	markers_v6_retina_repair.json	/marker_blocks/RPE[7]/evidence[0]	39385205	CONFIRMED_MISQUOTE	撤证	"心肌应变 CMR vs note""RPESC-RPE 安全性研究""; 本地通道无留账"
+F1	markers_v6_retina_repair.json	/marker_blocks/RPE[8]/evidence[0]	36167259	CONFIRMED_MISQUOTE	换PMID→29249973(待复核)	"精油封装食品化学文; note 描述≈当日合法命中 29249973""β-ionone Regulates RPE Cell Migration and Proliferation""(W4a+W4b 双账) — 转录错位确诊"
+F1	markers_v6_retina_repair.json	/marker_blocks/RGC[5]/evidence[0]	24449362	CONFIRMED_MISQUOTE	撤证	RAGFIX 确诊; ABO 血型-卒中 vs RGC; idlist 含 24339342 (Pacal 2014 Dev Dyn)
+F1	markers_v6_retina_repair.json	/subtype_anchor_layer/AC[0]/evidence[0]	41037735	CONFIRMED_MISQUOTE	撤证	髁突矢状倾斜𬌗垫记录(修复口腔科) vs CHAT 胆碱能三元组; idlist 无相近号=本地通道/裸回填型
+F1	markers_v6_retina_repair.json	/subtype_anchor_layer/AC[2]/evidence[0]	38087179	CONFIRMED_MISQUOTE	撤证	老年患者死亡率医院研究 vs VIP 肽能 AC; idlist=38066110 (前3位同 380)
+F1	markers_v6_retina_repair.json	/microglia_repair/core[8]/evidence[0]	28696901	CONFIRMED_MISQUOTE	撤证	双通道畸形记录: eutils 可解但空题录且 EPMC 无记录; idlist=28671693 (前3位同 286) — 变异后恰好命中残损记录
+F1	markers_v6_retina_repair.json	/microglia_repair/core[9]/evidence[0]	40153135	CONFIRMED_MISQUOTE	撤证(候选40140148待题验)	"流脑疫苗经济学 vs note""小胶质 OLR1/NF-kB 环路""; idlist=40140148 (前3位同 401)"
+F1	markers_v6_retina_repair.json	/microglia_repair/core[10]/evidence[1]	41665199	CONFIRMED_MISQUOTE	撤证(候选41683913待题验)	"ZIO 染色方法学文 vs note""ITGAX microglia human snRNA-seq""; idlist=41855773/41683913/41580850 前3位同 416 — 变异型"
+F2	e2r_whitelist	retina_interneuron::BC::LAMA3	33019822	good	保留	存储题名含 <i>/<sup> 标记残留, 题录=同一文 (X 连锁青年视网膜劈裂遗传救援) — round-trip 实过
+F3	markers_membrane_v1.json	/provenance/Keratocytes/_aux_evidence_not_in_default_markers/PTGDS[0]/id	11328728	good	保留	"IOVS 2001 ""keratan sulfate proteoglycan by cultured human keratocytes"" = 真角膜细胞文; EYE 词表缺 ophthalmology 致机械假阳性"

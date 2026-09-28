@@ -1,0 +1,87 @@
+{
+ "gate": ">=0.80 单元级消除 (分母92/阈值80%/判据=gate3_coverage.py 逐字, 新增面=closed64∪RA2_17)",
+ "card": "t_6848d3de",
+ "corpus": "v2.4.1",
+ "units_total": 92,
+ "units_eliminated": 78,
+ "unit_elimination_rate": 0.8478,
+ "rows_total": 232,
+ "rows_eliminated": 192,
+ "row_elimination_rate": 0.8276,
+ "verdict": "PASS",
+ "baseline_v24": {
+  "units_eliminated": 67,
+  "rate": 0.7283,
+  "monotonicity_verified": true
+ },
+ "new_eliminated_ra2": [
+  [
+   "CALD1",
+   "face"
+  ],
+  [
+   "CDH8",
+   "retina"
+  ],
+  [
+   "CPNE5",
+   "retina"
+  ],
+  [
+   "CST1",
+   "lacrimal"
+  ],
+  [
+   "CST4",
+   "lacrimal"
+  ],
+  [
+   "FCER1G",
+   "retina"
+  ],
+  [
+   "GPR143",
+   "kb9"
+  ],
+  [
+   "GRM5",
+   "retina"
+  ],
+  [
+   "MUC7",
+   "lacrimal"
+  ],
+  [
+   "PTPRK",
+   "retina"
+  ],
+  [
+   "SAMSN1",
+   "retina"
+  ]
+ ],
+ "by_ctx": {
+  "face": [
+   3,
+   2
+  ],
+  "kb9": [
+   3,
+   3
+  ],
+  "lacrimal": [
+   7,
+   7
+  ],
+  "membrane": [
+   21,
+   19
+  ],
+  "retina": [
+   58,
+   47
+  ]
+ },
+ "new_corpus_chunks": 11053,
+ "evidence_sha_check": "chunks_ra_raw.jsonl == 43d02db6... PASS"
+}

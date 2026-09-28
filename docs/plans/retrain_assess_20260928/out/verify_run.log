@@ -1,0 +1,16 @@
+[PASS] A1 v2_prod sha==META  d38af373462dc0bf
+[PASS] A2 LILRB2 in HVG-2000  pos=991
+     LILRB2 coef by class: {'AC': -0.0022, 'Astro': -0.0028, 'BC': -0.0019, 'Cone': -0.0014, 'HC': -0.0018, 'MG': -0.0014, 'Micro': 0.0166, 'RGC': -0.0023, 'RPE': -0.0013, 'Rod': -0.0015}
+[PASS] B1 mouse SHA256SUMS 全 OK  6 OK / 0 FAILED
+[PASS] B2 panel 2000 行全 ENSMUSG  2000 rows
+[PASS] C0 闭集 64 PMID  64
+[PASS] C1 行数 230,426  230426
+[PASS] C2 分割 9,772+220,654  new=9772 inherited=220654
+[PASS] C3 embedding null=0 空=0  null=0 empty=0
+[PASS] C4 维数全 1024  {np.int64(1024): np.int64(230426)}
+[PASS] C5 新 lane 编码齐  9772/9772
+[PASS] D1 v6 面板内嵌 41349939=1（撤证前设计使然，再导出候选）  
+[PASS] D2 linkbackfill 零误引 PMID  
+[PASS] D3 errata INERT 且目标=core[13]/LILRB2  
+
+RESULT: ALL PASS

@@ -1,0 +1,10 @@
+# KBX-LG 成员说明块（冻结文本，随 ANNOT_INSTRUCTIONS 原文附于每批 prompt；PREREG_v2 §7.2）
+
+本 run 成员=LG（人泪腺单细胞图谱，组织+类器官两池 SORT-seq）。
+词表（identity 必须用下列原样词，或 coarse:<词表名/谱系上位名>，或 undetermined）：
+Lacrimal_secretory_tearcell ｜ Lacrimal_duct_epithelial ｜ Lacrimal_myoepithelial ｜ Acinar_cell ｜ Ductal_cell ｜ Myoepithelial_cell ｜ Immune_cell ｜ Endothelial_cell ｜ Neuroglial_cell ｜ Stromal_cell
+证据卡字段说明：top_genes=簇内 vs 池内其余 wilcoxon 前20；kb_gene_hits/kb_celltype_ranking=本地泪腺词条库对簇前60基因池的检索副产物（排序不是置信度，可无视）；
+sorts=分选池构成（FACS 策略标签，非细胞类型）；donors=供体编号计数；qc=簇内中位 n_genes/线粒体比。
+本 run 证据面**无 lit 行、无组织组成参考、无模型旁证**；材料 pool=tissue 为体内泪腺。
+结构性限制先验披露：词条 Lacrimal_myoepithelial 的本地库 core 为空（警示条），故 kb_gene_hits 对本 run 肌上皮词条
+不存在可亮起的展示通道；判读员仍可用该名投票，但该名不构成库内证据支持。

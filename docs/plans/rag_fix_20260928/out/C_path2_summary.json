@@ -1,0 +1,19 @@
+{
+ "vocab_genes": 402,
+ "panel_genes_observed": 40,
+ "chunks_total": 230426,
+ "rows_with_extra": 13225,
+ "extra_genes_with_cooccurrence": 353,
+ "extra_genes_no_cooccurrence": [
+  "C8ORF76",
+  "COL19A1",
+  "CPNE5",
+  "CYTH4",
+  "LILRB2",
+  "MFSD4A",
+  "SCGB1D1",
+  "SSR4",
+  "ZNF804B"
+ ],
+ "note": "row_idx=v2.4 chunks.parquet 0-based 行序 (继承段=v2.3 原序, 增量段追加在后); 本表不改 parquet 任何字节; 激活=未来版本重算 marker_genes 列 (v2.2 先例) 或消费方合并读"
+}

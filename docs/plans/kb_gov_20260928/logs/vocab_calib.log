@@ -1,0 +1,211 @@
+HUMSYM: 262000
+MOUSYM raw: 52327 upper: 52323
+ORTH11: 12313
+{
+ "hu_title_min_max": [
+  0.0,
+  0.0
+ ],
+ "mo_title_min_max": [
+  0.8,
+  1.0
+ ],
+ "separator": {
+  "t": 0.4,
+  "gap": 0.8,
+  "grid_clean_range": [
+   0.05,
+   0.8
+  ]
+ },
+ "T_frozen": 0.4,
+ "mismatches": {
+  "human_msp_or_monly": [
+   "Q4::23",
+   "Q4::39",
+   "Q4::7",
+   "Q4::19",
+   "Q4::29",
+   "Q4::12",
+   "Q9::0",
+   "Q9::2",
+   "Q9::7",
+   "Q9::3"
+  ],
+  "mouse_no_corroboration": [
+   "Q7::17",
+   "Q7::1",
+   "Q7::10",
+   "Q7::35",
+   "Q7::8",
+   "Q7::49",
+   "Q7::51",
+   "Q7::0",
+   "Q7::36",
+   "Q7::13",
+   "Q7::46",
+   "Q7::12",
+   "Q7::33",
+   "Q7::37",
+   "Q7::48",
+   "Q7::24",
+   "Q7::47",
+   "Q7::50",
+   "Q7::44",
+   "Q7::3",
+   "Q7::64",
+   "Q7::60",
+   "Q7::42",
+   "Q7::63",
+   "Q7::31",
+   "Q7::11",
+   "Q7::9"
+  ]
+ },
+ "note": "T=最大间隙分隔点（PREREG §4）；mouse_no_corroboration=只靠大小写惯例判定的簇（suspected 档，边界样例逐簇列出）"
+}
+{
+ "Q7::52_run7rg_pool": {
+  "n": 25,
+  "title_frac": 0.96,
+  "msp_hits": 1,
+  "m_only": 1,
+  "not_in_human": 1,
+  "msp_ex": [
+   "D130079A08Rik"
+  ],
+  "m_only_ex": [
+   "D130079A08Rik"
+  ],
+  "nonhum_ex": [
+   "D130079A08Rik"
+  ]
+ },
+ "Q7::58_run7rg_pool": {
+  "n": 25,
+  "title_frac": 0.96,
+  "msp_hits": 1,
+  "m_only": 1,
+  "not_in_human": 1,
+  "msp_ex": [
+   "D130079A08Rik"
+  ],
+  "m_only_ex": [
+   "D130079A08Rik"
+  ],
+  "nonhum_ex": [
+   "D130079A08Rik"
+  ]
+ },
+ "Q2::22": {
+  "n": 20,
+  "title_frac": 0.0,
+  "msp_hits": 0,
+  "m_only": 0,
+  "not_in_human": 20,
+  "msp_ex": [],
+  "m_only_ex": [],
+  "nonhum_ex": [
+   "ENSG00000120885",
+   "ENSG00000156076",
+   "ENSG00000136732",
+   "ENSG00000107317",
+   "ENSG00000135821"
+  ]
+ },
+ "Q5b::35": {
+  "n": 20,
+  "title_frac": 0.0,
+  "msp_hits": 0,
+  "m_only": 0,
+  "not_in_human": 20,
+  "msp_ex": [],
+  "m_only_ex": [],
+  "nonhum_ex": [
+   "ENSG00000145075",
+   "ENSG00000168702",
+   "ENSG00000148408",
+   "ENSG00000169306",
+   "ENSG00000179603"
+  ]
+ },
+ "Q7::22": {
+  "n": 20,
+  "title_frac": 1.0,
+  "msp_hits": 1,
+  "m_only": 1,
+  "not_in_human": 1,
+  "msp_ex": [
+   "Gm30382"
+  ],
+  "m_only_ex": [
+   "Gm30382"
+  ],
+  "nonhum_ex": [
+   "Gm30382"
+  ]
+ },
+ "Q7::21": {
+  "n": 20,
+  "title_frac": 1.0,
+  "msp_hits": 2,
+  "m_only": 2,
+  "not_in_human": 2,
+  "msp_ex": [
+   "Gm20754",
+   "Gm30382"
+  ],
+  "m_only_ex": [
+   "Gm20754",
+   "Gm30382"
+  ],
+  "nonhum_ex": [
+   "Gm20754",
+   "Gm30382"
+  ]
+ },
+ "Q7::15": {
+  "n": 20,
+  "title_frac": 1.0,
+  "msp_hits": 2,
+  "m_only": 2,
+  "not_in_human": 2,
+  "msp_ex": [
+   "Gm30382",
+   "Gm20754"
+  ],
+  "m_only_ex": [
+   "Gm30382",
+   "Gm20754"
+  ],
+  "nonhum_ex": [
+   "Gm30382",
+   "Gm20754"
+  ]
+ },
+ "Q7::11": {
+  "n": 20,
+  "title_frac": 1.0,
+  "msp_hits": 0,
+  "m_only": 0,
+  "not_in_human": 0,
+  "msp_ex": [],
+  "m_only_ex": [],
+  "nonhum_ex": []
+ },
+ "Q7::61": {
+  "n": 20,
+  "title_frac": 1.0,
+  "msp_hits": 0,
+  "m_only": 1,
+  "not_in_human": 1,
+  "msp_ex": [],
+  "m_only_ex": [
+   "Zfp804a"
+  ],
+  "nonhum_ex": [
+   "Zfp804a"
+  ]
+ }
+}
+RC=0

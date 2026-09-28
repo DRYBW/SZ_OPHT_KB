@@ -1,0 +1,29 @@
+# KBX LG 判读词表与 crosswalk（冻结件，PREREG_v2 §5；票规 v2 §4.3 词表漂移条款）
+# 词表（判读员可用原样词）：
+#   被测词条名: Lacrimal_secretory_tearcell | Lacrimal_duct_epithelial | Lacrimal_myoepithelial
+#   参考通用名: Acinar_cell | Ductal_cell | Myoepithelial_cell | Immune_cell | Endothelial_cell | Neuroglial_cell | Stromal_cell
+#   另允 coarse:<任一词表名或谱系上位名> / undetermined
+# crosswalk 规则: norm_identity 后精确 token（大小写不敏感）匹配；coarse:X 的 X 同表映射；
+#   ambiguous/no_counterpart 不猜（票=定向该字面名，crosswalk 出 no_counterpart → P1 记未命中，P3 照记）。
+seat_name	reference_group	provenance
+Lacrimal_secretory_tearcell	ACINAR	被测词条→外部参考群 ACINAR（CL:0000315 定义=经泪腺分泌泪液=腺泡分泌功能域；映射依据=PMID 语境门面板，非 KB 通道）
+Acinar_cell	ACINAR	参考通用名恒等
+Lacrimal_duct_epithelial	DUCT	被测词条→外部参考群 DUCT（导管语境；PMID 面板）
+Ductal_cell	DUCT	参考通用名恒等
+Lacrimal_myoepithelial	MYOEPITH	被测词条→外部参考群 MYOEPITH（CL:0000185）
+Myoepithelial_cell	MYOEPITH	参考通用名恒等
+Immune_cell	IMMUNE	参考通用名恒等
+T_cell	IMMUNE	免疫亚型上卷（群粒度=泛免疫）
+B_cell	IMMUNE	免疫亚型上卷
+Plasma_cell	IMMUNE	免疫亚型上卷
+Macrophage	IMMUNE	免疫亚型上卷
+Myeloid_cell	IMMUNE	免疫亚型上卷
+Endothelial_cell	ENDO	参考通用名恒等
+Vascular_endothelial_cell	ENDO	别名
+Neuroglial_cell	NEUROGLIA	参考通用名恒等
+Schwann_cell	NEUROGLIA	周围神经胶质对应（面板=PLP1/S100B/SOX10 胶系）
+Neuron	no_counterpart	神经元胞体与胶系不同域，不折叠
+Stromal_cell	STROMA	参考通用名恒等
+Fibroblast	STROMA	间质上卷
+Smooth_muscle_cell	no_counterpart	泪腺 mural 域纠缠（KB6b 通签先例），禁折叠
+Glandular_epithelium	no_counterpart	ACINAR/DUCT 泛上皮歧义，不猜

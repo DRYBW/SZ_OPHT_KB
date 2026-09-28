@@ -1,0 +1,181 @@
+{
+ "card": "t_d0bea5a6",
+ "db": "v2.4_2026-09",
+ "case_level_no_degrade": "8/10",
+ "gate_level": "10/10",
+ "baseline_v21_case_level": "8/10",
+ "verdict": "PASS",
+ "rows": [
+  {
+   "cell_type": "Rod",
+   "v10_hits": 5,
+   "v21_retina_hits": 5,
+   "v21_all_hits": 5,
+   "v24_retina_hits": 5,
+   "v24_all_hits": 5,
+   "no_degrade_vs_v10": true,
+   "gate_3of5": true,
+   "top5_retina": [
+    "32081919",
+    "41152974",
+    "38652563",
+    "41684508",
+    "36331259"
+   ]
+  },
+  {
+   "cell_type": "Cone",
+   "v10_hits": 4,
+   "v21_retina_hits": 5,
+   "v21_all_hits": 5,
+   "v24_retina_hits": 5,
+   "v24_all_hits": 5,
+   "no_degrade_vs_v10": true,
+   "gate_3of5": true,
+   "top5_retina": [
+    "40660409",
+    "32081919",
+    "36331259",
+    "40250432",
+    "36114457"
+   ]
+  },
+  {
+   "cell_type": "Retinal Pigment Epithelium",
+   "v10_hits": 5,
+   "v21_retina_hits": 4,
+   "v21_all_hits": 4,
+   "v24_retina_hits": 4,
+   "v24_all_hits": 4,
+   "no_degrade_vs_v10": false,
+   "gate_3of5": true,
+   "top5_retina": [
+    "35705015",
+    "32555229",
+    "39532995",
+    "36645183",
+    "34977041"
+   ]
+  },
+  {
+   "cell_type": "Muller Glia",
+   "v10_hits": 3,
+   "v21_retina_hits": 3,
+   "v21_all_hits": 3,
+   "v24_retina_hits": 3,
+   "v24_all_hits": 3,
+   "no_degrade_vs_v10": true,
+   "gate_3of5": true,
+   "top5_retina": [
+    "34445064",
+    "36977817",
+    "37388919",
+    "40343286",
+    "42490430"
+   ]
+  },
+  {
+   "cell_type": "Astrocyte",
+   "v10_hits": 5,
+   "v21_retina_hits": 3,
+   "v21_all_hits": 4,
+   "v24_retina_hits": 3,
+   "v24_all_hits": 4,
+   "no_degrade_vs_v10": false,
+   "gate_3of5": true,
+   "top5_retina": [
+    "41892278",
+    "38195602",
+    "39574940",
+    "37163980",
+    "36582303"
+   ]
+  },
+  {
+   "cell_type": "Microglia",
+   "v10_hits": 4,
+   "v21_retina_hits": 4,
+   "v21_all_hits": 4,
+   "v24_retina_hits": 4,
+   "v24_all_hits": 4,
+   "no_degrade_vs_v10": true,
+   "gate_3of5": true,
+   "top5_retina": [
+    "38564108",
+    "40858363",
+    "36088481",
+    "36582303",
+    "39565860"
+   ]
+  },
+  {
+   "cell_type": "Retinal Ganglion Cell",
+   "v10_hits": 3,
+   "v21_retina_hits": 3,
+   "v21_all_hits": 3,
+   "v24_retina_hits": 3,
+   "v24_all_hits": 3,
+   "no_degrade_vs_v10": true,
+   "gate_3of5": true,
+   "top5_retina": [
+    "32523990",
+    "40425564",
+    "34946963",
+    "37665325",
+    "38698014"
+   ]
+  },
+  {
+   "cell_type": "Rod Bipolar Cell",
+   "v10_hits": 3,
+   "v21_retina_hits": 3,
+   "v21_all_hits": 4,
+   "v24_retina_hits": 3,
+   "v24_all_hits": 4,
+   "no_degrade_vs_v10": true,
+   "gate_3of5": true,
+   "top5_retina": [
+    "41152974",
+    "36331259",
+    "37988404",
+    "34420069",
+    "36041146"
+   ]
+  },
+  {
+   "cell_type": "Horizontal Cell",
+   "v10_hits": 4,
+   "v21_retina_hits": 4,
+   "v21_all_hits": 4,
+   "v24_retina_hits": 4,
+   "v24_all_hits": 4,
+   "no_degrade_vs_v10": true,
+   "gate_3of5": true,
+   "top5_retina": [
+    "37988404",
+    "38092908",
+    "35325233",
+    "40137771",
+    "34445064"
+   ]
+  },
+  {
+   "cell_type": "Amacrine Cell",
+   "v10_hits": 3,
+   "v21_retina_hits": 3,
+   "v21_all_hits": 2,
+   "v24_retina_hits": 3,
+   "v24_all_hits": 2,
+   "no_degrade_vs_v10": true,
+   "gate_3of5": true,
+   "top5_retina": [
+    "37988404",
+    "32555229",
+    "34445064",
+    "40425564",
+    "40660409"
+   ]
+  }
+ ],
+ "written_at": "2026-09-27 23:34:53"
+}

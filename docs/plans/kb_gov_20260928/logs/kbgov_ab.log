@@ -1,0 +1,97 @@
+A 基线锚定 PASS: Q7::52 含 AC 具名条目；Q2::22 top1=MG
+{
+ "shift_counts": {
+  "B1": 0,
+  "B2": 34,
+  "B3": 34,
+  "B4": 0,
+  "B5": 0
+ },
+ "shift_rate": {
+  "B1": 0.0,
+  "B2": 0.1478,
+  "B3": 0.1478,
+  "B4": 0.0,
+  "B5": 0.0
+ },
+ "gate_5pct": {
+  "B1": "PASS",
+  "B2": "FAIL_OVERKILL",
+  "B3": "FAIL_OVERKILL",
+  "B4": "PASS",
+  "B5": "PASS"
+ },
+ "mouse_side_shift_counts": {
+  "B1": 0,
+  "B2": 28,
+  "B3": 32,
+  "B4": 32,
+  "B5": 59
+ }
+}
+casualty: {"B1": ["Q2::0", "Q3::10", "Q4::13", "Q4::20", "Q4::35", "Q4::36", "Q4::37"], "B2": ["Q2::0", "Q3::10", "Q4::13", "Q4::20", "Q4::35", "Q4::36", "Q4::37"], "B3": ["Q2::0", "Q3::10", "Q4::13", "Q4::20", "Q4::35", "Q4::36", "Q4::37"], "B4": ["Q2::0", "Q3::10", "Q4::13", "Q4::20", "Q4::35", "Q4::36", "Q4::37"], "B5": ["Q2::0", "Q3::10", "Q4::13", "Q4::20", "Q4::35", "Q4::36", "Q4::37"]}
+lesion: {
+ "Q7::52": {
+  "B1": "qualified",
+  "B2": "cleared",
+  "B3": "cleared",
+  "B4": "cleared",
+  "B5": "cleared"
+ },
+ "Q7::58": {
+  "B1": "qualified",
+  "B2": "cleared",
+  "B3": "cleared",
+  "B4": "cleared",
+  "B5": "cleared"
+ },
+ "Q7::11": {
+  "B1": "qualified",
+  "B2": "NOT(annotated)",
+  "B3": "NOT(annotated)",
+  "B4": "NOT(annotated)",
+  "B5": "cleared"
+ },
+ "Q7::15": {
+  "B1": "qualified",
+  "B2": "partial:retina_interneuron::AC",
+  "B3": "cleared",
+  "B4": "cleared",
+  "B5": "cleared"
+ },
+ "Q7::21": {
+  "B1": "qualified",
+  "B2": "partial:retina_interneuron::AC",
+  "B3": "cleared",
+  "B4": "cleared",
+  "B5": "cleared"
+ },
+ "Q7::22": {
+  "B1": "qualified",
+  "B2": "NOT(annotated)",
+  "B3": "cleared",
+  "B4": "cleared",
+  "B5": "cleared"
+ },
+ "Q7::61": {
+  "B1": "qualified",
+  "B2": "cleared",
+  "B3": "cleared",
+  "B4": "cleared",
+  "B5": "cleared"
+ },
+ "Q2::22": {
+  "B1": "flag",
+  "B2": "partial:Astro,retina_interneuron::Astro,Fibroblast,retina_v6::Astro",
+  "B3": "partial:Astro,retina_interneuron::Astro,Fibroblast,retina_v6::Astro",
+  "B4": "NOT",
+  "B5": "NOT"
+ },
+ "Q5b::35": {
+  "B1": "none",
+  "B2": "NOT",
+  "B3": "NOT",
+  "B4": "NOT",
+  "B5": "NOT"
+ }
+}

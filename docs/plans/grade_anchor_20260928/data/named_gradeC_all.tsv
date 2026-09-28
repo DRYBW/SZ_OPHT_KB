@@ -1,0 +1,39 @@
+archive	dataset	seat	model	cluster_id	truth	identity	identity_norm	kind	level	grade	gate_identity_evidence	gate_resolution	gate_technical	flag	why	missing	truth_strict	truth_eq	is_truth
+RUN2	PILOT-2seat	B2	unrecorded	Q4::30		MG	MG	NAMED	majority	C	pass	pass	na	none	RLBP1/GLUL/FRZB Müller+FOS/JUN应激	0	False	False	False
+RUN2	PILOT-2seat	A	qwen3.8-max@LLM_CHANNEL-LLM_CHANNEL RUN2	Q7::20		Rod	Rod	NAMED	majority	C	pass	fail	na	technical_suspect	Rho/Sag等Rod基因强但混Calb2/Sncg非Rod标记疑污染	0	False	False	False
+RUN2	PILOT-2seat	B2	unrecorded	Q9::10		APC_MHCII_high	APC_MHCII_high	NAMED	fine-cap	C	pass	unresolved	na	none	HLA-DR/DQ强+CD14/CCL3-4单核混叠	0	False	False	False
+RUN3	FULL290	B	glm-5.1	Q1::14		AC	AC	NAMED	coarse	C	unresolved	unresolved	na	none	PAX6/TAGLN3/GNG3提示神经元，缺标记区分AC与RGC	0	False	False	False
+RUN3	FULL290	A	qwen3.8-max	Q2::19		BC	BC	NAMED	coarse	C	unresolved	fail	na	technical_suspect	TRPM1/GNG13(ON-BC)与ISL1(AC/RGC)共存，谱系冲突	0	False	False	False
+RUN3	FULL290	B	glm-5.1	Q2::19		BC	BC	NAMED	majority	C	unresolved	pass	na	none	PCP2/TRPM1等提示BC，但无KB/lit证据	0	False	False	False
+RUN3	FULL290	B	glm-5.1	Q3::7		MG	MG	NAMED	majority	C	pass	unresolved	na	candidate_biology	VIM/GLUL/RLBP1提示MG，但KB/lit含Astro/Fibro候选	0	False	False	False
+RUN3	FULL290	B	glm-5.1	Q4::2		AC	AC	NAMED	coarse	C	unresolved	unresolved	na	technical_suspect	LAMP5+CPLX3提示AC，但FOS/JUN应激基因主导	0	False	False	False
+RUN3	FULL290	A	qwen3.8-max	Q6::13	Fibroblasts	Fibroblasts	Fibroblasts	NAMED	coarse	C	unresolved	pass	na	none	VIM/APOD/MGP提示间质，但kb无眼表特异命中，证据不足	0	True	True	True
+RUN3MINI	PILOT-5	A3	qwen3.8-max	Q6::13	Fibroblasts	Fibroblasts	Fibroblasts	NAMED	coarse	C	unresolved	pass	na	none	VIM/APOD/MGP提示间质，但ANGPTL7/CXCL混杂，kb仅命中视网膜类，证据不足	0	True	True	True
+RUN5	Q6-33	C	deepseek-v3.2	Q6::0	Epithelium	Epithelium	Epithelium	NAMED	coarse	C	fail	pass	na	candidate_biology	top_genes 表达 KRT6A, SPRR1B 等应激/分化标志，身份模糊	0	True	True	True
+RUN5	Q6-33	A	qwen3.8-max	Q6::13	Fibroblasts	Fibroblasts	Fibroblasts	NAMED	coarse	C	unresolved	pass	na	none	VIM/APOD/MGP提示间质，但kb无命中且候选冲突，证据不足	0	True	True	True
+RUN5	Q6-33	B	glm-5.1	Q6::18	Fibroblasts	Fibroblasts	Fibroblasts	NAMED	coarse	C	unresolved	unresolved	na	conflicts_with_literature	MYOC/COL8A1/FBLN1提示成纤维，与kb排名Pericyte冲突	0	True	True	True
+RUN5	Q6-33	C	deepseek-v3.2	Q6::30	Epithelium	Immune Cells	Immune Cells	NAMED	coarse	C	pass	unresolved	na	candidate_biology	top_genes含S100A8/S100A9/LCN2等髓系标志；kb_ranking仅Mono_Classical，证据不足细分。	0	False	False	False
+RUN5	Q6-33	A	qwen3.8-max	Q6::31	Fibroblasts	Fibroblasts	Fibroblasts	NAMED	coarse	C	unresolved	pass	na	none	ANGPTL7/MYOC/TIMP3提示间质/基质，kb仅命中Pericyte但证据薄	0	True	True	True
+RUN5	Q6-33	B	glm-5.1	Q6::31	Fibroblasts	Pericytes	Pericytes	NAMED	coarse	C	unresolved	unresolved	na	candidate_biology	ANGPTL7/MYOC/FBLN1与成纤维细胞重叠，KB/Lit指周细胞	0	False	False	False
+RUN6A	Q6-33	B	glm-5.1	Q6::2	Epithelium	Epithelium	Epithelium	NAMED	majority	C	unresolved	unresolved	na	candidate_biology	KRT13/4上皮与S100A8/9及单核排名冲突	0	True	True	True
+RUN6A	Q6-33	C	deepseek-v3.2	Q6::26	Immune Cells	Immune Cells	Immune Cells	NAMED	coarse	C	pass	fail	na	technical_suspect	top_genes含MHCII与趋化因子，但核心marker共存，解析度不足	0	True	True	True
+RUN6A	Q6-33	C	deepseek-v3.2	Q6::8	Immune Cells	Immune Cells	Immune Cells	NAMED	coarse	C	pass	pass	na	none	top_genes含PTPRC/IL7R/CXCR4，kb_ranking为T，但证据不足以细分	0	True	True	True
+RUN6B	Q6-33	A	qwen3.8-max	Q6::19	Fibroblasts	Fibroblasts	Fibroblasts	NAMED	majority	C	unresolved	pass	na	none	COL1A1/COL1A2/VIM间质标志，缺KERA无法区分角膜细胞	0	True	True	True
+RUN7RG	RET45	B	glm-5.1	Q1::4	Rod	Rod	Rod	NAMED	majority	C	unresolved	pass	fail	technical_suspect	MT主导且ambient极高，RBP3/GNGT1提示Rod但技术存疑	0	True	True	True
+RUN7RG	RET45	B	glm-5.1	Q2::22	Astro	MG	MG	NAMED	coarse	C	pass	unresolved	na	none	GFAP+GLUL+VIM共存，KB指Astro但GLUL/VIM强支持MG，谱系冲突	0	False	False	False
+RUN7RG	RET45	B	glm-5.1	Q2::27	Cone	Cone	Cone	NAMED	majority	C	pass	fail	na	technical_suspect	ARR3/OPN1LW强命中Cone，含RPE核心TTR，疑双细胞	0	True	True	True
+RUN7RG	RET45	B	glm-5.1	Q2::4	MG	MG	MG	NAMED	majority	C	pass	unresolved	fail	technical_suspect	RLBP1/GLUL强命中MG，RHO共存且Rod ambient极高	0	True	True	True
+RUN7RG	RET45	A	qwen3.8-max	Q5b::2	Rod	Rod	Rod	NAMED	majority	C	pass	unresolved	fail	technical_suspect	RHO/NRL阳性但rod ambient极高且深度极低，疑环境RNA污染	0	True	True	True
+RUN7RG	RET45	B	glm-5.1	Q7::52	RGC	RGC	RGC	NAMED	majority	C	unresolved	unresolved	na	candidate_biology	Sncg/Thy1/Nefm示RGC，但GRIN3A命中AC，缺Gad1难定	0	True	True	True
+BTEST-run1	RET45	C	deepseek-v3.2	Q3::13	RGC	RGC	RGC	NAMED	majority	C	pass	fail	na	technical_suspect	NEFL+UCHL1强RGC标记，但共表达RHO/PDE6H/TTR多谱系标记	0	True	True	True
+BTEST-run1	RET45	C	deepseek-v3.2	Q4::19	BC	BC	BC	NAMED	majority	C	pass	pass	na	technical_suspect	VSX1/TRPM1/BCAT1/TMEM215均命中BC marker；文献支持TRPM1为ON bipolar；但MT基因多	0	True	True	True
+BTEST-run1	RET45	C	deepseek-v3.2	Q4::23	BC	BC	BC	NAMED	majority	C	pass	fail	na	technical_suspect	GRM6/TRPM1/CA10命中BC，但TTR共存提示谱系混合	0	True	True	True
+BTEST-run1	RET45	C	deepseek-v3.2	Q4::32	MG	MG	MG	NAMED	majority	C	pass	fail	na	technical_suspect	RLBP1/VIM/GLUL强命中MG；PTGDS/APOE/SPP1共存提示谱系混合	0	True	True	True
+BTEST-run1	RET45	A	qwen3.8-max	Q5b::35	AC	AC	AC	NAMED	coarse	C	unresolved	pass	na	none	仅GRM8弱命中AC，缺TFAP2A/GAD1等核心marker，证据不足	0	True	True	True
+KB9	Q6-25	C	deepseek-v3.2	Q6::16	Fibroblasts	Fibroblasts	Fibroblasts	NAMED	coarse	C	pass	unresolved	na	out_of_baseline_coverage	top_genes含MMP3、MMP1、COL6A3等成纤维细胞相关基因，无其他谱系强marker	0	True	True	True
+KB9	Q6-25	C	deepseek-v3.2	Q6::2	Epithelium	Epithelium	Epithelium	NAMED	coarse	C	pass	pass	na	none	top_genes KRT13/KRT19/KRT4 上皮标记；kb_celltype_ranking 混合 basal/suprabasal，证据不足细分	0	True	True	True
+KB9	Q6-25	C	deepseek-v3.2	Q6::20	Epithelium	Epithelium	Epithelium	NAMED	coarse	C	pass	pass	na	none	top_genes KRT12/KRT14/KRT3 强上皮标记；无 kb/lit 细分证据，给 coarse	0	True	True	True
+KB9	Q6-25	C	deepseek-v3.2	Q6::26	Immune Cells	Immune Cells	Immune Cells	NAMED	coarse	C	pass	pass	na	none	top_genes 含 HLA-DR, CD74, CCL3/4, CXCL8 等免疫激活基因；kb_ranking 指向 Mac/Mono	0	True	True	True
+KB9	Q6-25	C	deepseek-v3.2	Q6::29	Epithelium	Epithelium	Epithelium	NAMED	coarse	C	pass	pass	na	none	top_genes 含 KRT12/13/3/19, CLDN4, FABP5 等上皮 marker；kb_ranking 指向结膜上皮	0	True	True	True
+KB9	Q6-25	C	deepseek-v3.2	Q6::30	Epithelium	Epithelium	Epithelium	NAMED	coarse	C	pass	pass	na	none	top_genes 含 KRT7/13/15/19, UPK3BL1；kb_ranking 指向结膜上皮基底/基底上层	0	True	True	True
+KB9	Q6-25	C	deepseek-v3.2	Q6::4	Epithelium	Epithelium	Epithelium	NAMED	coarse	C	pass	pass	na	none	top_genes KRT15/KRT14/KRT19 基底上皮标记；kb_celltype_ranking 支持 Conj_epithelium_basal	0	True	True	True

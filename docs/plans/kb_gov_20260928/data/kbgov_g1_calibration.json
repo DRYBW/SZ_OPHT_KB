@@ -1,0 +1,49 @@
+{
+ "input_col": "top_genes_sym[:20]",
+ "T_frozen": 0.4,
+ "hu_title_min_max": [
+  0.0,
+  0.0
+ ],
+ "mo_title_min_max": [
+  0.8,
+  1.0
+ ],
+ "gap": 0.8,
+ "tiers_counts": {
+  "human_assumed": 231,
+  "mouse_confirmed": 32,
+  "mouse_suspected": 27
+ },
+ "human_misdetections": [],
+ "mouse_suspected_only_convention": [
+  "Q7::17",
+  "Q7::1",
+  "Q7::10",
+  "Q7::35",
+  "Q7::8",
+  "Q7::49",
+  "Q7::51",
+  "Q7::0",
+  "Q7::36",
+  "Q7::13",
+  "Q7::46",
+  "Q7::12",
+  "Q7::33",
+  "Q7::37",
+  "Q7::48",
+  "Q7::24",
+  "Q7::47",
+  "Q7::50",
+  "Q7::44",
+  "Q7::3",
+  "Q7::64",
+  "Q7::60",
+  "Q7::42",
+  "Q7::63",
+  "Q7::31",
+  "Q7::11",
+  "Q7::9"
+ ],
+ "note": "confirmed=suspected 之外的鼠源档需佐证（Gm/Rik/m_only）；suspected 仅惯例证据；人源误判清单=misdetections（B 位移前哨）"
+}

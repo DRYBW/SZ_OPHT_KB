@@ -1,0 +1,28 @@
+{
+ "spearman_pC_named_vs_hit": -0.171,
+ "n_units": 27,
+ "spearman_pC_total_vs_hit": -0.164,
+ "by_model": {
+  "deepseek-v3.2": {
+   "n": 9,
+   "mean_pC": 0.279,
+   "mean_pC_named": 0.069,
+   "mean_hit": 0.88,
+   "mean_hidden_acc": 0.875
+  },
+  "glm-5.1": {
+   "n": 9,
+   "mean_pC": 0.143,
+   "mean_pC_named": 0.029,
+   "mean_hit": 0.937,
+   "mean_hidden_acc": 0.767
+  },
+  "qwen3.8-max": {
+   "n": 9,
+   "mean_pC": 0.143,
+   "mean_pC_named": 0.018,
+   "mean_hit": 0.922,
+   "mean_hidden_acc": 1.0
+  }
+ }
+}
