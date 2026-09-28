@@ -1,0 +1,176 @@
+{
+ "schema": "eyekb-raggap-errata/1.0",
+ "version": "errata-registered-v1",
+ "registered_at": "2026-09-27 23:19:00",
+ "card": "t_d0bea5a6 (RAGFIX D19)",
+ "status": "INERT_REGISTERED_DATA — 不在 MARKER_LIBS、不在任何加载 glob、MCP 运行时不读本件；消费面=评测/判读 run 按路径读取并应用本勘误。面板核心文件字节零改动。 | 含 sample20 误引登记 (2026-09-28)",
+ "precedent": "CL 假号勘误 (kb/markers/markers_cl_alignment_v1.json, t_a1721931): 旁挂件+源文件只读+.bak 快照+双 sha 台账",
+ "retractions": [
+  {
+   "id": "ER-RAGFIX-001",
+   "target_file": "markers_v6_retina_repair.json",
+   "target_entry": "retina_v6/microglia_repair",
+   "target_gene": "LILRB2",
+   "target_json_path": "/microglia_repair/core[13]",
+   "evidence_types_surviving_after_retraction": [
+    "canonical",
+    "pmid",
+    "data_driven"
+   ],
+   "chain_claimed": {
+    "type": "pmid",
+    "id": "PMID:41349939",
+    "note_in_entry": "microglial phagocytosis review"
+   },
+   "evidence_actual": {
+    "found": true,
+    "title": "Urinary exosomes: Emerging biomarkers for urinary tract infection.",
+    "journal": "Clinica chimica acta; international journal of clinical chemistry",
+    "pubyear": "2026",
+    "mesh": [
+     "meshHeading"
+    ]
+   },
+   "finding": "PMID:41349939 经 EPMC 逐字复核为泌尿科论文 (Urinary exosomes / UTI), 与视网膜小胶质细胞 LILRB2 语境无关 = 建卡轮次误引 (RAGGAP 报告 §6.4)。",
+   "ruling": "撤证: 消费方读取本件后, 视 LILRB2 evidence 链中该 PMID 为已撤证, 不得作为视网膜/小胶质证据引用; 该链其余证据支 (见 evidence_types_surviving_after_retraction) 不受影响。",
+   "replacement": "不自动补链。候选替代 (GPR34/MG 语境必补已入库 41953651/42346024 为 MG-DR 综述, 未逐字核验其是否含 LILRB2 phagocytosis 论述, 留待 KB6 线词条卡复核后另批。",
+   "do_not_download": "41349939 不入库 (TIER_A 清单 ⛔ 行), 已在 ra 闭集排除并登记。"
+  }
+ ],
+ "channel_notes": [
+  {
+   "id": "CH-RAGFIX-001",
+   "target_entry": "lacrimal_v6 LACRT",
+   "chain_claimed": {
+    "type": "pmid",
+    "id": "PMID:42777860"
+   },
+   "epmc_check": {
+    "found": true,
+    "title": "Species-specific tear proteomic signatures in humans and rabbits: A DIA mass spectrometry comparative study.",
+    "journal": "The ocular surface",
+    "pubyear": "2026",
+    "mesh": []
+   },
+   "finding": "RAGGAP §6.4 (09-27): EPMC MEDLINE 未收录 (2026-09-23 刚上线), NCBI eutils 实证存在, 非假引。本卡执行日 (09-28) EPMC 实时复核 found=True——若已收录则按 MED 摘要级入库, 否则走 PubMed 摘要补录通道; 无论何道, 本轮以 abstract-only 入 v2.4 (fulltext_status=abstract_only)。"
+  }
+ ],
+ "sha_ledger": {
+  "markers_v6_retina_repair_pre": "884a62d9cfe1e4c0efee744fa14fbe866d7f6e526fa3dfb12d9772f5570556db",
+  "bak_copy": "/mnt/D/EyeKB/plans/rag_fix_20260928/work/markers_v6_retina_repair.json.bak_pre_ragfix",
+  "verify_cmd": "sha256sum 原件 应等于 markers_v6_retina_repair_pre (收尾复核)"
+ },
+ "sample20_findings": {
+  "registered_at": "2026-09-27 23:17:55",
+  "note": "既有链随机抽 20 (seed=20260928) 的题录复核结果登记。本件不修改这些链 (任务书红线=只登记不扩范围修); 消费方判读 retina_v6/face_v6/k9 相关条目时应知此风险面。",
+  "population_n": 55,
+  "confirmed_misquote": 6,
+  "suspect": 1,
+  "misquote_rate_confirmed": 0.3,
+  "misquote_rate_upper_bound": 0.35,
+  "systematic_pattern": "4/6 确诊误引的链 note 描述了一篇真实的眼科文献, 但 PMID 指向完全无关论文 = 建卡轮次 (KB6/KB9 时代, eutils 共现通道) PMID 错位而非凭空捏造; 修复方向=按 note 描述找回正确 PMID",
+  "wrong_chains": [
+   {
+    "pmid": "29561967",
+    "gene": "PRSS56",
+    "file": "markers_v6_retina_repair.json",
+    "path": "/marker_blocks/MG[1]",
+    "note_in_entry": "",
+    "adjudication": "CONFIRMED_MISQUOTE",
+    "adjudication_note": "PRSS56 链, 实际=儿童口呼吸诊断相关变量 (CoDAS, 无 note, 域无关)",
+    "actual_title": "Variables associated with mouth breathing diagnosis in children based on a multidisciplinary assessment."
+   },
+   {
+    "pmid": "36167259",
+    "gene": "OR51E2",
+    "file": "markers_v6_retina_repair.json",
+    "path": "/marker_blocks/RPE[8]",
+    "note_in_entry": "OR51E2 agonist β-ionone regulates RPE cell mitophagy (人 RPE 摘要共现 GENERIC)",
+    "adjudication": "CONFIRMED_MISQUOTE",
+    "adjudication_note": "note 声称='OR51E2 agonist β-ionone regulates RPE mitophagy 人RPE摘要共现'; 实际=食品精油微囊化抗黄曲霉 (Food Chem Toxicol), 摘要无 OR51E2——note 的摘要共现声明可证伪",
+    "actual_title": "High speed homogenization assisted encapsulation of synergistic essential oils formulation: Characterization, in vitro release study, safety profile, and efficacy towards mitigation of aflatoxin B<sub>1</sub> induced deterioration in rice samples."
+   },
+   {
+    "pmid": "38528295",
+    "gene": "KRT19",
+    "file": "markers_v6_face_increment.json",
+    "path": "/face_increment/Conj_epithelium_basal/core[5]",
+    "note_in_entry": "Human forniceal region stem cell-rich zone of conjunctival epithelium (eutils 共现)",
+    "adjudication": "CONFIRMED_MISQUOTE",
+    "adjudication_note": "note 声称=人穹窿部结膜上皮干细胞富集区 (eutils 共现); 实际=HER2+ 转移性乳腺癌真实世界研究, 全文题录摘要无 KRT19 眼语境",
+    "actual_title": "A real-world study of treatment sequences and second-line clinical outcomes in patients with HER2-positive metastatic breast cancer in US community practice."
+   },
+   {
+    "pmid": "35920172",
+    "gene": "COX4I2",
+    "file": "markers_v6_face_increment.json",
+    "path": "/stromal_repair/Pericyte/core[3]",
+    "note_in_entry": "人脑 pericyte 非典型线粒体亚基表达 (NDUFA4L2/COX4I2 语境)——eutils GENERIC 共现",
+    "adjudication": "SUSPECT",
+    "adjudication_note": "COX4I2 pericyte 链, 实际题录=无摘要 'Letter to the editor'; 题录摘要级不可判, 留人工",
+    "actual_title": "Letter to the editor."
+   },
+   {
+    "pmid": "24449362",
+    "gene": "UCHL1",
+    "file": "markers_v6_retina_repair.json",
+    "path": "/marker_blocks/RGC[5]",
+    "note_in_entry": "",
+    "adjudication": "CONFIRMED_MISQUOTE",
+    "adjudication_note": "UCHL1 链, 实际=ABO 血型多态性与卒中 (无 note, 域无关)",
+    "actual_title": "ABO blood group polymorphisms and risk for ischemic stroke and peripheral arterial disease."
+   },
+   {
+    "pmid": "37381815",
+    "gene": "SCGB3A1",
+    "file": "markers_v6_face_increment.json",
+    "path": "/face_increment/Conj_epithelium_superficial/core[0]",
+    "note_in_entry": "Pterygium/pingueula transcriptome SCGB3A1 conjunctival (本地 human×2)",
+    "adjudication": "CONFIRMED_MISQUOTE",
+    "adjudication_note": "note 声称=Pterygium/pingueula transcriptome SCGB3A1; 实际=低覆盖度测序亲缘鉴定计算方法 (J Hered), 无眼/无 SCGB3A1",
+    "actual_title": "A computational approach for positive genetic identification and relatedness detection from low-coverage shotgun sequencing data."
+   },
+   {
+    "pmid": "35590283",
+    "gene": "AQP5",
+    "file": "markers_v6_face_increment.json",
+    "path": "/face_increment/Conj_epithelium_basal/core[2]",
+    "note_in_entry": "ocular surface aquaporins (干眼, 本地 human×5)",
+    "adjudication": "CONFIRMED_MISQUOTE",
+    "adjudication_note": "note 声称=ocular surface aquaporins 干眼 human×5; 实际=SIADH×质子泵抑制剂药物警戒 (BMC nephrology), 摘要无 AQP5",
+    "actual_title": "Syndrome of inappropriate antidiuretic hormone secretion is associated with different proton pump inhibitor use: a pharmacovigilance study."
+   }
+  ],
+  "intended_paper_candidates": [
+   {
+    "wrong_pmid": "38528295",
+    "gene": "KRT19",
+    "entry": "face_v6 Conj_epithelium_basal",
+    "candidate_correct": "PMID:25722207 (Human Conjunctival Stem Cells are Predominantly Located in the Medial Canthal and Inferior Forniceal Areas, 2015)",
+    "status": "CANDIDATE 需 KB6 线人工确认"
+   },
+   {
+    "wrong_pmid": "35590283",
+    "gene": "AQP5",
+    "entry": "face_v6 Conj_epithelium_basal",
+    "candidate_correct": "PMID:15557451 (mouse ocular surface aquaporin) — 但 note 声称 human×5, 物种不符",
+    "status": "UNRESOLVED"
+   },
+   {
+    "wrong_pmid": "37381815",
+    "gene": "SCGB3A1",
+    "entry": "face_v6 Conj_epithelium_superficial",
+    "candidate_correct": null,
+    "status": "NOT_FOUND (TITLE:pterygium AND pingueula 0 命中)"
+   },
+   {
+    "wrong_pmid": "36167259",
+    "gene": "OR51E2",
+    "entry": "retina_v6 RPE[8]",
+    "candidate_correct": "β-ionone/OR51E2 现文=结直肠癌 (40088737), 非 RPE mitophagy",
+    "status": "UNRESOLVED"
+   }
+  ],
+  "detail_file_sha256": "3b1378a6255289639280ac7cab0b09886b378b217e18dbdb09f6038b68b89bd5"
+ }
+}

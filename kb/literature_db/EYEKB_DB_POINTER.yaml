@@ -38,3 +38,25 @@ rag_dbs:
 embedding_model:
   path: /mnt/D/OcularKB/models/bge-large-en-v1.5
   device: cpu
+  v2.4_2026-09:
+    path: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4_2026-09
+    role: latest-raggap (frozen read-only; = v2.3 全量继承零重算 + raggap_tier_a_eyekb 64 篇 9,772 chunks; 卡 t_d0bea5a6 D19)
+    chunks: 230426
+    unique_papers: 3749   # papers.jsonl 行数 = 3764 (含历史 0-chunk ghost 15)
+    manifest: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4_2026-09/manifest.yaml
+    increment_ledger: /mnt/D/EyeKB/plans/rag_fix_20260928/work/ra_availability.tsv (逐 PMID 成败+体积; 13.9MB << 85MB 预算)
+    errata: /mnt/D/EyeKB/kb/markers/_raggap_errata_v1.json (LILRB2 撤证 + sample20 误引登记, INERT)
+    c_sidecars: /mnt/D/EyeKB/kb/markers/_raggap_c_linkbackfill_v1.json (830 行链回填, INERT 默认 OFF)
+    gate_status: "①黄金41/41 off全等 PASS (top5 与冻结 20260924 逐字全等; all_list_plus10=旧快照期望过期, 非本卡所致) ②严格retina gate 8/10 级不劣化+10/10 gate 级 = PASS (同 v2.1 形态) ③A档92单元覆盖消除 72.8% < 80% FAIL (残差归因=16 个 was_S2_ctx_mismatch 单元 RAGGAP 必补表从未配文 + 8 单元仅备选104覆盖 + LILRB2 撤证设计缺口)——待 PI 裁定, 见 plans/rag_fix_20260928/RAGFIX_NOTE.md"
+    # MCP/stage3 default 未切 (v2.0 不变, 沿先例待用户拍板; 回归门经 --db-dir 显式指向 v2.4 实测)
+  v2.4.1_2026-09:
+    path: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.1_2026-09
+    role: latest-ragfix2 (frozen read-only; = v2.4 全量继承零重算 + ragfix2_v25_whitelist 17 篇 1,281 chunks; 卡 t_6848d3de D21)
+    chunks: 231707
+    unique_papers: 3766   # papers.jsonl 行数 = 3781 (含历史 0-chunk ghost 15)
+    manifest: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.1_2026-09/manifest.yaml
+    increment_ledger: /mnt/D/EyeKB/plans/rag_fix2_v25_20260928/work/ra2_availability.tsv (逐 PMID C2 复核+成败+体积; 2.34MB ≤ 6MB 上限)
+    whitelist_ledger: /mnt/D/EyeKB/plans/rag_fix2_v25_20260928/out/RA2_WHITELIST.tsv (三条件题录核验=断言词/PMID可核/非HRCA自引∧不在库防重蹈)
+    token_verification: /mnt/D/EyeKB/plans/rag_fix2_v25_20260928/out/RA2_token_verification.tsv (词边界 token 终裁; CALD1 替补顶岗)
+    gate_status: "③原分母92/原阈值80%/原判据复算 = 78/92 = 84.8% PASS (RA2 新兑现 11 单元含 CPNE5 副产品, 单调性核 v2.4 67 项零倒退; 残差 14 = 7 备选104覆盖单元(另案) + 6 诚实none(ATP8B4/FAM135A/FBXL7/LMOD1/LRRTM3/SHISA6) + LILRB2 撤证设计) ①黄金41/41 off全等 PASS (top5 与前轮逐字零漂移; all_list_plus10 失效仅绝对计数半句=前置轮旧快照期望过期, 两分句复证 TRUE, 非本卡) ②retina gate 8/10 用例级+10/10 gate 级 PASS (同 v2.1 形态)"
+    # MCP/stage3 default 未切 (v2.0 不变, 沿先例待用户拍板; 回归门经 --db-dir 显式指向 v2.4.1 实测)
