@@ -22,13 +22,15 @@
 需要 Python ≥ 3.11，一台普通 CPU 机器即可（不需要 GPU），约 4 GB 磁盘放数据。
 
 ```bash
-# 1) 克隆 + 装依赖
-git clone <仓库地址> && cd SZ_OPHT_KB
+# 1) 克隆 + 装依赖（需仓库维护者把你加为 collaborator）
+git clone https://github.com/DRYBW/SZ_OPHT_KB.git && cd SZ_OPHT_KB
 python3 -m venv .venv && . .venv/bin/activate
 pip install "sentence-transformers>=3" pyarrow pandas numpy mcp
 
-# 2) 下载文献语料（放在 Releases 页面，不进 git 仓库）
+# 2) 下载文献语料（在 Releases 页面，不进 git 仓库）
 gh release download v2.4.2-rag-assets --pattern '*'
+# 没装 gh CLI 的话，直接在浏览器打开 Releases 页手动下载这三个文件：
+#   EYEKB_RAG_v2.4.2_slim.tar.part_aa / part_ab / .sha256
 cat EYEKB_RAG_v2.4.2_slim.tar.part_* > EYEKB_RAG_v2.4.2_slim.tar
 sha256sum -c EYEKB_RAG_v2.4.2_slim.tar.sha256   # 三件齐全且哈希正确才继续
 tar -xf EYEKB_RAG_v2.4.2_slim.tar               # 解出 literature_db/v2.4.2_2026-09_slim/
@@ -38,7 +40,11 @@ python clients/ocularkb/rag/scripts/stage3_retrieve.py \
   --cell-type "Muller glia" --tissue retina --db-dir literature_db/v2.4.2_2026-09_slim
 ```
 
-第一次运行会自动从 HuggingFace 拉取嵌入模型 `BAAI/bge-large-en-v1.5`（公开权重，约 1.2 GB，本仓库不含）。
+第一次运行会自动从 HuggingFace 拉取嵌入模型 `BAAI/bge-large-en-v1.5`（公开权重，约 1.2 GB，本仓库不含）。**中国大陆网络拉不动时加一行镜像**：
+
+```bash
+export HF_ENDPOINT=https://hf-mirror.com   # 再跑上面第 3 步即可
+```
 
 能打出检索结果，就说明整套环境是通的。
 
@@ -57,7 +63,7 @@ python clients/ocularkb/rag/scripts/stage3_retrieve.py \
 }
 ```
 
-服务只走本地 stdio，不开任何网络端口。
+服务只走本地 stdio，不开任何网络端口。接好后，`search_literature` 需要知道文献库存放位置：把 `kb/literature_db/EYEKB_DB_POINTER.yaml` 里的 `default` 改成你第 2 步解出的目录名（如 `v2.4.2_2026-09_slim`）；其余四个工具只读仓库自带的 `kb/`，clone 后开箱即用。
 
 ### 可以问它的 5 件事
 
