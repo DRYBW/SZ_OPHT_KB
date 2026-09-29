@@ -1,0 +1,1479 @@
+[
+ {
+  "path": "<STORE>/data/shekhar_annotated/human_homo_sapiens_annotated.h5ad",
+  "exists": true,
+  "n_obs": 180093,
+  "n_var": 60671,
+  "size_MB": 525.9,
+  "obs_cols": [
+   "barcode",
+   "batch",
+   "shekhar_class",
+   "shekhar_cluster",
+   "shekhar_dendro",
+   "species"
+  ],
+  "layers": [],
+  "has_raw": false,
+  "var_probe": {
+   "sample_genes": null,
+   "n_ensg_prefix": 0
+  },
+  "X_sample": {
+   "n": 20000,
+   "min": 1.0,
+   "max": 707.0,
+   "mean": 1.6051000356674194,
+   "frac_int": 1.0,
+   "frac_nonneg": 1.0
+  },
+  "label_dists": {
+   "shekhar_class": {
+    "n_levels": 7,
+    "top": {
+     "RGC": 81085,
+     "Rod": 44903,
+     "AC": 37032,
+     "MG": 5615,
+     "BC": 4856,
+     "HC": 4577,
+     "Cone": 2025
+    }
+   }
+  },
+  "stage_dists": {},
+  "species_cols": {
+   "species": [
+    [
+     "human_homo_sapiens",
+     180093
+    ]
+   ]
+  }
+ },
+ {
+  "path": "<STORE>/data/GSE155288/GSE155288_annotated.h5ad",
+  "exists": true,
+  "n_obs": 33694,
+  "n_var": 33694,
+  "size_MB": 861.1,
+  "obs_cols": [
+   "author_cell_type",
+   "barcode",
+   "cell_id",
+   "developmental_stage_class",
+   "donor",
+   "donor_age",
+   "region",
+   "sample_id"
+  ],
+  "layers": [],
+  "has_raw": false,
+  "err": "TypeError: Accessing a group is done with bytes or str, not <class 'slice'>"
+ },
+ {
+  "path": "<STORE>/data/GSE137400/lukowski2019_retina.h5ad",
+  "exists": true,
+  "n_obs": 19694,
+  "n_var": 36475,
+  "size_MB": 178.9,
+  "obs_cols": [
+   "assay",
+   "assay_ontology_term_id",
+   "author_cell_type",
+   "cell_type",
+   "cell_type_ontology_term_id",
+   "development_stage",
+   "development_stage_ontology_term_id",
+   "disease",
+   "disease_ontology_term_id",
+   "donor_id",
+   "index",
+   "is_primary_data",
+   "n_counts",
+   "n_genes",
+   "observation_joinid",
+   "percent_mito",
+   "self_reported_ethnicity",
+   "self_reported_ethnicity_ontology_term_id",
+   "sex",
+   "sex_ontology_term_id",
+   "suspension_type",
+   "tissue",
+   "tissue_ontology_term_id",
+   "tissue_type"
+  ],
+  "layers": [],
+  "has_raw": true,
+  "var_probe": {
+   "sample_genes": [
+    "ENSG00000000003",
+    "ENSG00000000419",
+    "ENSG00000000457",
+    "ENSG00000000460",
+    "ENSG00000000938"
+   ],
+   "n_ensg_prefix": 5
+  },
+  "X_sample": {
+   "n": 20000,
+   "min": 1.2612378597259521,
+   "max": 9.564188957214355,
+   "mean": 2.809601306915283,
+   "frac_int": 0.0,
+   "frac_nonneg": 1.0
+  },
+  "label_dists": {
+   "author_cell_type": {
+    "n_levels": 14,
+    "top": {
+     "retinal rod cell type B": 6142,
+     "retinal rod cell type A": 5924,
+     "unannotated": 3248,
+     "retinal bipolar neuron type A": 714,
+     "Muller cell": 612,
+     "retinal cone cell": 583,
+     "retinal bipolar neuron type B": 566,
+     "unspecified": 456,
+     "retinal bipolar neuron type C": 421,
+     "retinal bipolar neuron type D": 369,
+     "amacrine cell": 281,
+     "retinal rod cell type C": 173,
+     "microglial cell": 142,
+     "retinal ganglion cell": 63
+    }
+   },
+   "cell_type": {
+    "n_levels": 9,
+    "top": {
+     "retinal rod cell": 12239,
+     "unknown": 3704,
+     "ON-bipolar cell": 1504,
+     "Mueller cell": 612,
+     "retinal cone cell": 583,
+     "OFF-bipolar cell": 566,
+     "amacrine cell": 281,
+     "microglial cell": 142,
+     "retinal ganglion cell": 63
+    }
+   },
+   "cell_type_ontology_term_id": {
+    "n_levels": 9,
+    "top": {
+     "CL:0000604": 12239,
+     "unknown": 3704,
+     "CL:0000749": 1504,
+     "CL:0000636": 612,
+     "CL:0000573": 583,
+     "CL:0000750": 566,
+     "CL:0000561": 281,
+     "CL:0000129": 142,
+     "CL:0000740": 63
+    }
+   }
+  },
+  "stage_dists": {
+   "development_stage": {
+    "42-year-old stage": 11475,
+    "53-year-old stage": 6409,
+    "80-year-old stage": 1810
+   },
+   "development_stage_ontology_term_id": {
+    "HsapDv:0000136": 11475,
+    "HsapDv:0000147": 6409,
+    "HsapDv:0000206": 1810
+   },
+   "donor_id": {
+    "Donor2": 11475,
+    "Donor3": 6409,
+    "Donor1": 1810
+   }
+  },
+  "species_cols": {}
+ },
+ {
+  "path": "<STORE>/data/GSE183320/GSE183320_choroid.h5ad",
+  "exists": true,
+  "n_obs": 30416,
+  "n_var": 38120,
+  "size_MB": 188.1,
+  "obs_cols": [
+   "MMP9(rs4810482)",
+   "PMI",
+   "UMAP_1",
+   "UMAP_2",
+   "age",
+   "barcode",
+   "celltype",
+   "disease_status",
+   "eye",
+   "library",
+   "mito.genes",
+   "nCount_RNA",
+   "nFeature_RNA",
+   "punch_size",
+   "ribo.genes",
+   "sex"
+  ],
+  "layers": [],
+  "has_raw": false,
+  "var_probe": {
+   "sample_genes": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "n_ensg_prefix": 0
+  },
+  "X_sample": {
+   "n": 20000,
+   "min": 0.5179113149642944,
+   "max": 7.559543132781982,
+   "mean": 1.3327395915985107,
+   "frac_int": 0.0,
+   "frac_nonneg": 1.0
+  },
+  "label_dists": {
+   "celltype": {
+    "n_levels": 15,
+    "top": {
+     "vein": 7272,
+     "artery": 5901,
+     "fibroblast": 3483,
+     "choriocapillaris": 2469,
+     "macrophage-inf": 2186,
+     "macrophage-res": 1694,
+     "pericyte": 1670,
+     "dendritic": 1263,
+     "SMC": 996,
+     "T-cell": 872,
+     "melanocyte": 763,
+     "Schwann": 738,
+     "Bcell": 452,
+     "rod_rpe": 407,
+     "ec_unknown": 250
+    }
+   }
+  },
+  "stage_dists": {
+   "age": {
+    "err": "'zip' object is not subscriptable"
+   }
+  },
+  "species_cols": {}
+ },
+ {
+  "path": "<STORE>/data/0f7d022a_ocularsurface/9ddcf89a-1329-46a6-b476-d8d3de1f7051.h5ad",
+  "exists": true,
+  "n_obs": 147484,
+  "n_var": 35477,
+  "size_MB": 1618.3,
+  "obs_cols": [
+   "alignment_software",
+   "assay",
+   "assay_ontology_term_id",
+   "author_cell_type",
+   "cell_number_loaded",
+   "cell_type",
+   "cell_type_ontology_term_id",
+   "development_stage",
+   "development_stage_ontology_term_id",
+   "disease",
+   "disease_ontology_term_id",
+   "donor_cause_of_death",
+   "donor_id",
+   "donor_living_at_sample_collection",
+   "gene_annotation_version",
+   "institute",
+   "intronic_reads_counted",
+   "is_primary_data",
+   "library_id",
+   "library_id_repository",
+   "majorclass",
+   "nCount_RNA",
+   "nFeature_RNA",
+   "observation_joinid",
+   "percent.mt",
+   "public_label",
+   "reference_genome",
+   "sample_collection_method",
+   "sample_id",
+   "sample_preservation_method",
+   "sampleid",
+   "self_reported_ethnicity",
+   "self_reported_ethnicity_ontology_term_id",
+   "sequenced_fragment",
+   "sex",
+   "sex_ontology_term_id",
+   "study",
+   "suspension_derivation_process",
+   "suspension_type",
+   "suspension_uuid",
+   "tissue",
+   "tissue_handling_interval",
+   "tissue_ontology_term_id",
+   "tissue_source",
+   "tissue_type"
+  ],
+  "layers": [],
+  "has_raw": true,
+  "var_probe": {
+   "sample_genes": [
+    "ENSG00000243485",
+    "ENSG00000237613",
+    "ENSG00000186092",
+    "ENSG00000239945",
+    "ENSG00000239906"
+   ],
+   "n_ensg_prefix": 5
+  },
+  "X_sample": {
+   "n": 20000,
+   "min": 0.0,
+   "max": 6.51535701751709,
+   "mean": 0.9400591850280762,
+   "frac_int": 0.0,
+   "frac_nonneg": 1.0
+  },
+  "label_dists": {
+   "author_cell_type": {
+    "n_levels": 26,
+    "top": {
+     "Epi-TDC": 50366,
+     "Corneal Stromal Keratocytes": 27541,
+     "Epi-PMC": 23875,
+     "Corneal Endothelium_C1": 8027,
+     "Corneal_Superficial_Epi": 5330,
+     "Corneal Endothelium_C2": 4905,
+     "Epi-TDC/PMC": 4174,
+     "LPC": 3111,
+     "CC_VenEndo": 2458,
+     "Conj-Epi": 1958,
+     "Smooth Muscle Cells": 1859,
+     "Epi-TAC": 1770,
+     "Limbus_Epi": 1719,
+     "Conj_Melanocytes": 1677,
+     "Macrophages/Monocytes": 1475,
+     "Lymphatic Endothelium": 1374,
+     "Limbus/Sclera Fibroblasts": 1179,
+     "Uveal/TM Fibroblasts": 859,
+     "NK/T Cells": 848,
+     "Vascular Endothelium": 832,
+     "Schwann_N": 706,
+     "Pericytes": 526,
+     "Uveal_Melanocytes": 334,
+     "Goblet": 312,
+     "Schlemm Endothelium": 251
+    }
+   },
+   "cell_type": {
+    "n_levels": 17,
+    "top": {
+     "epithelial cell": 81904,
+     "keratocyte": 27541,
+     "corneal endothelial cell": 18262,
+     "progenitor cell": 3111,
+     "endothelial cell": 2709,
+     "fibroblast": 2038,
+     "melanocyte": 2011,
+     "conjunctival epithelial cell": 1958,
+     "smooth muscle cell": 1859,
+     "myeloid leukocyte": 1475,
+     "endothelial cell of lymphatic vessel": 1374,
+     "lymphocyte": 848,
+     "blood vessel endothelial cell": 832,
+     "Schwann cell": 706,
+     "pericyte": 526,
+     "conjunctiva goblet cell": 312,
+     "myelinating Schwann cell": 18
+    }
+   },
+   "cell_type_ontology_term_id": {
+    "n_levels": 17,
+    "top": {
+     "CL:0000066": 81904,
+     "CL:0002363": 27541,
+     "CL:0000132": 18262,
+     "CL:0011026": 3111,
+     "CL:0000115": 2709,
+     "CL:0000057": 2038,
+     "CL:0000148": 2011,
+     "CL:1000432": 1958,
+     "CL:0000192": 1859,
+     "CL:0000766": 1475,
+     "CL:0002138": 1374,
+     "CL:0000542": 848,
+     "CL:0000071": 832,
+     "CL:0002573": 706,
+     "CL:0000669": 526,
+     "CL:2000084": 312,
+     "CL:0000218": 18
+    }
+   },
+   "majorclass": {
+    "n_levels": 10,
+    "top": {
+     "Epithelium": 92303,
+     "Fibroblasts": 29579,
+     "Corneal Endothelium": 12932,
+     "Endothelium": 4915,
+     "Immune Cells": 2323,
+     "Melanocytes": 2011,
+     "Smooth Muscle Cells": 1859,
+     "Schwann Cells": 724,
+     "Pericytes": 526,
+     "Goblet": 312
+    }
+   },
+   "public_label": {
+    "n_levels": 30,
+    "top": {
+     "NaN": 96498,
+     "K_Epi-Wing": 14316,
+     "K_Epi-Basal": 7201,
+     "K_Epi-Superficial": 6713,
+     "K_Endo": 4683,
+     "CC_VenEndo": 1797,
+     "Ciliary_Muscle": 1733,
+     "Conj_Melanocyte": 1518,
+     "K_Fibro": 1476,
+     "Conj_Epi-Superficial": 1374,
+     "Limbal_Epi-Basal": 1158,
+     "Limbal_Epi-Wing": 1123,
+     "Lymphatic_Endo": 995,
+     "Conj_Epi-Basal": 957,
+     "Conj_Epi-Wing": 901,
+     "Sclera_Fibro": 816,
+     "Uveal_Fibro": 736,
+     "VascEndo": 595,
+     "Schwann": 565,
+     "Macrophage": 350,
+     "K_Epi-TA": 301,
+     "Goblet": 289,
+     "Pericyte": 274,
+     "Lymphocyte": 230,
+     "Uveal_Melanocyte": 223
+    }
+   }
+  },
+  "stage_dists": {
+   "development_stage": {
+    "47-year-old stage": 18596,
+    "69-year-old stage": 16382,
+    "66-year-old stage": 15427,
+    "65-year-old stage": 14616,
+    "71-year-old stage": 12093,
+    "62-year-old stage": 11338,
+    "50-year-old stage": 8504,
+    "24-year-old stage": 7984,
+    "83-year-old stage": 6725,
+    "58-year-old stage": 5654,
+    "57-year-old stage": 5636,
+    "30-year-old stage": 5376,
+    "72-year-old stage": 5324,
+    "70-year-old stage": 5178,
+    "33-year-old stage": 5139
+   },
+   "development_stage_ontology_term_id": {
+    "HsapDv:0000141": 18596,
+    "HsapDv:0000163": 16382,
+    "HsapDv:0000160": 15427,
+    "HsapDv:0000159": 14616,
+    "HsapDv:0000165": 12093,
+    "HsapDv:0000156": 11338,
+    "HsapDv:0000144": 8504,
+    "HsapDv:0000118": 7984,
+    "HsapDv:0000209": 6725,
+    "HsapDv:0000152": 5654,
+    "HsapDv:0000151": 5636,
+    "HsapDv:0000124": 5376,
+    "HsapDv:0000166": 5324,
+    "HsapDv:0000164": 5178,
+    "HsapDv:0000127": 5139
+   },
+   "donor_cause_of_death": {
+    "unknown": 92617,
+    "Malignant Neoplasm": 18596,
+    "Septicemia,End Stage Liver Disease": 15427,
+    "Coronary Artery Disease": 10329,
+    "Septicemia": 5376,
+    "Colorectal Carcinoma": 5139
+   },
+   "donor_id": {
+    "Hu0220": 18596,
+    "Hu0216": 15427,
+    "Hu0218": 10329,
+    "BCM_23_1169": 9821,
+    "BCM_23_1448": 8504,
+    "BCM_23_0792": 8362,
+    "BCM_24_0080": 7984,
+    "BCM_24_0306": 6725,
+    "BCM_23_1517": 5636,
+    "BCM_23_0334": 5458,
+    "Hu0235": 5376,
+    "BCM_23_0390": 5324,
+    "BCM_22_0047": 5178,
+    "Hu14": 5139,
+    "BCM_23_0578": 4399
+   },
+   "donor_living_at_sample_collection": {
+    "False": 147484
+   }
+  },
+  "species_cols": {}
+ },
+ {
+  "path": "<STORE>/data/GSE289703/68493594-1bde-4b8b-8916-473a10caf035.h5ad",
+  "exists": true,
+  "n_obs": 182151,
+  "n_var": 35476,
+  "size_MB": 2649.8,
+  "obs_cols": [
+   "Developmental",
+   "Eye",
+   "Eye_tissue",
+   "PMT_in_hrs",
+   "Post_mortemtime",
+   "Region",
+   "Study",
+   "alignment_software",
+   "assay",
+   "assay_ontology_term_id",
+   "author_cell_type",
+   "cell_type",
+   "cell_type_ontology_term_id",
+   "development_stage",
+   "development_stage_ontology_term_id",
+   "disease",
+   "disease_ontology_term_id",
+   "donor_age",
+   "donor_id",
+   "donor_living_at_sample_collection",
+   "gene_annotation_version",
+   "institute",
+   "intronic_reads_counted",
+   "is_primary_data",
+   "library_id",
+   "library_id_repository",
+   "majorclass",
+   "nCount_RNA",
+   "nFeature_RNA",
+   "observation_joinid",
+   "percent.mt",
+   "reference_genome",
+   "reported_diseases",
+   "retinal_disease",
+   "sample_collection_method",
+   "sample_id",
+   "sample_preservation_method",
+   "sampleid",
+   "self_reported_ethnicity",
+   "self_reported_ethnicity_ontology_term_id",
+   "sequenced_fragment",
+   "sequencing_platform",
+   "sex",
+   "sex_ontology_term_id",
+   "suspension_depleted_cell_types",
+   "suspension_depletion_factors",
+   "suspension_derivation_process",
+   "suspension_dissociation_reagent",
+   "suspension_dissociation_time",
+   "suspension_enriched_cell_types",
+   "suspension_enrichment_factors",
+   "suspension_type",
+   "suspension_uuid",
+   "tissue",
+   "tissue_handling_interval",
+   "tissue_ontology_term_id",
+   "tissue_source",
+   "tissue_type"
+  ],
+  "layers": [],
+  "has_raw": true,
+  "var_probe": {
+   "sample_genes": [
+    "ENSG00000243485",
+    "ENSG00000237613",
+    "ENSG00000186092",
+    "ENSG00000239945",
+    "ENSG00000239906"
+   ],
+   "n_ensg_prefix": 5
+  },
+  "X_sample": {
+   "n": 20000,
+   "min": 0.0,
+   "max": 6.706846237182617,
+   "mean": 0.8639911413192749,
+   "frac_int": 0.0,
+   "frac_nonneg": 1.0
+  },
+  "label_dists": {
+   "author_cell_type": {
+    "n_levels": 27,
+    "top": {
+     "Melanocytes": 29947,
+     "Fibroblasts_COL25A1": 23284,
+     "Venules": 17639,
+     "T_cells": 16323,
+     "Fibroblasts_PI16": 14946,
+     "Macrophages_MRC1": 9845,
+     "Arteriole": 8669,
+     "Schwann_nonmyelinating": 7331,
+     "Smooth_muscle_cells": 7227,
+     "Pericytes": 6288,
+     "RPE": 5599,
+     "Fibroblasts_CCL2": 5128,
+     "Macrophages_PLTP": 4891,
+     "Monocytes_FCN1": 4500,
+     "B_cells": 3243,
+     "NK_cells_XCL1": 2605,
+     "RPE_Fetal_KCND2": 2545,
+     "Fibroblasts_PTPRD": 2057,
+     "Fenestrated_capillary": 2028,
+     "RPE_CDK2AP2": 1951,
+     "Plasma_cells": 1864,
+     "NK_cells_GNLY": 1601,
+     "Mast_cells": 1344,
+     "Monocytes_ADGRG3": 657,
+     "Schwann_myelinating": 251
+    }
+   },
+   "cell_type": {
+    "n_levels": 18,
+    "top": {
+     "fibroblast": 45415,
+     "melanocyte": 29947,
+     "endothelial cell of venule": 17639,
+     "T cell": 16323,
+     "macrophage": 14736,
+     "retinal pigment epithelial cell": 10327,
+     "endothelial cell of arteriole": 8669,
+     "non-myelinating Schwann cell": 7331,
+     "blood vessel smooth muscle cell": 7227,
+     "pericyte": 6288,
+     "monocyte": 5157,
+     "natural killer cell": 4206,
+     "B cell": 3243,
+     "fenestrated endothelial cell": 2028,
+     "plasma cell": 1864,
+     "mast cell": 1344,
+     "myelinating Schwann cell": 251,
+     "dendritic cell": 156
+    }
+   },
+   "cell_type_ontology_term_id": {
+    "n_levels": 18,
+    "top": {
+     "CL:0000057": 45415,
+     "CL:0000148": 29947,
+     "CL:1000414": 17639,
+     "CL:0000084": 16323,
+     "CL:0000235": 14736,
+     "CL:0002586": 10327,
+     "CL:1000412": 8669,
+     "CL:0002376": 7331,
+     "CL:0019018": 7227,
+     "CL:0000669": 6288,
+     "CL:0000576": 5157,
+     "CL:0000623": 4206,
+     "CL:0000236": 3243,
+     "CL:0000666": 2028,
+     "CL:0000786": 1864,
+     "CL:0000097": 1344,
+     "CL:0000218": 251,
+     "CL:0000451": 156
+    }
+   },
+   "majorclass": {
+    "n_levels": 15,
+    "top": {
+     "Fibroblasts": 45415,
+     "Melanocytes": 29947,
+     "Vascular_endothelium": 28336,
+     "T_cells": 16323,
+     "Macrophages": 14736,
+     "Mural_cells": 13515,
+     "Schwann_cells": 7582,
+     "RPE": 7550,
+     "Monocytes": 5157,
+     "NK_cells": 4206,
+     "B_cells": 3243,
+     "RPE_Fetal": 2777,
+     "Plasma_cells": 1864,
+     "Mast_cells": 1344,
+     "Dendritic_cells": 156
+    }
+   },
+   "suspension_depleted_cell_types": {
+    "n_levels": 2,
+    "top": {
+     "na": 172525,
+     "endothelial cell": 9626
+    }
+   },
+   "suspension_enriched_cell_types": {
+    "n_levels": 2,
+    "top": {
+     "na": 132658,
+     "endothelial cell": 49493
+    }
+   }
+  },
+  "stage_dists": {
+   "Post_mortemtime": {
+    "<6h": 51148,
+    "10h": 19616,
+    "8h": 14661,
+    "8h59m": 11897,
+    "1.5h": 8081,
+    "Unknown": 7032,
+    "3h": 6616,
+    "2.5h": 5147,
+    "4h44m": 4810,
+    "10h1m": 4075,
+    "3h21m": 4072,
+    "4h48m": 4054,
+    "5h40m": 3502,
+    "5h17m": 3148,
+    "5h4m": 3036
+   },
+   "development_stage": {
+    "90 year-old and over stage": 30778,
+    "84-year-old stage": 21474,
+    "64-year-old stage": 15024,
+    "newborn stage (0-28 days)": 13791,
+    "1-month-old stage": 11897,
+    "77-year-old stage": 7331,
+    "81-year-old stage": 6259,
+    "43-year-old stage": 5899,
+    "11-year-old stage": 5825,
+    "86-year-old stage": 5322,
+    "76-year-old stage": 5219,
+    "52-year-old stage": 5147,
+    "63-year-old stage": 4810,
+    "6-month-old stage": 4075,
+    "61-year-old stage": 4072
+   },
+   "development_stage_ontology_term_id": {
+    "HsapDv:0000274": 30778,
+    "HsapDv:0000210": 21474,
+    "HsapDv:0000158": 15024,
+    "HsapDv:0000262": 13791,
+    "HsapDv:0000273": 11897,
+    "HsapDv:0000171": 7331,
+    "HsapDv:0000207": 6259,
+    "HsapDv:0000137": 5899,
+    "HsapDv:0000105": 5825,
+    "HsapDv:0000212": 5322,
+    "HsapDv:0000170": 5219,
+    "HsapDv:0000146": 5147,
+    "HsapDv:0000157": 4810,
+    "HsapDv:0000179": 4075,
+    "HsapDv:0000155": 4072
+   },
+   "donor_age": {
+    ">89 years": 30778,
+    "84 years": 21474,
+    "64 years": 15024,
+    "1 day": 13791,
+    "0.1 years": 11897,
+    "77 years": 7331,
+    "81 years": 6259,
+    "43 years": 5899,
+    "11 years": 5825,
+    "86 years": 5322,
+    "76 years": 5219,
+    "52 years": 5147,
+    "63 years": 4810,
+    "0.5 years": 4075,
+    "61 years": 4072
+   },
+   "donor_id": {
+    "BCM_22_0500": 14661,
+    "stambolian_donor0715": 13949,
+    "BCM_22_0698": 13791,
+    "stambolian_donor0716": 12167,
+    "mullins_GSE149100_donor25": 11897,
+    "stambolian_donor0524": 5943,
+    "BCM_22_0784": 5899,
+    "BCM_22_0769": 5825,
+    "lako_Control_donor": 5147,
+    "stambolian_donor0727": 4897,
+    "mullins_GSE183320_Donor5": 4810,
+    "stambolian_donor0824": 4324,
+    "mullins_GSE149100_donor24": 4075,
+    "mullins_GSE183320_Donor3": 4072,
+    "mullins_GSE183320_Donor2": 4054
+   },
+   "donor_living_at_sample_collection": {
+    "False": 161393,
+    "na": 13552,
+    "True": 7206
+   }
+  },
+  "species_cols": {}
+ },
+ {
+  "path": "<STORE>/data/GSE289703/469d0939-0439-4255-a9d0-e85a51770d01.h5ad",
+  "exists": true,
+  "n_obs": 69244,
+  "n_var": 35475,
+  "size_MB": 791.1,
+  "obs_cols": [
+   "Developmental",
+   "Eye",
+   "PMT_in_hrs",
+   "Post_mortemtime",
+   "Region",
+   "Study",
+   "alignment_software",
+   "assay",
+   "assay_ontology_term_id",
+   "author_cell_type",
+   "cell_type",
+   "cell_type_ontology_term_id",
+   "development_stage",
+   "development_stage_ontology_term_id",
+   "disease",
+   "disease_ontology_term_id",
+   "donor_age",
+   "donor_cause_of_death",
+   "donor_id",
+   "donor_living_at_sample_collection",
+   "gene_annotation_version",
+   "institute",
+   "intronic_reads_counted",
+   "is_primary_data",
+   "library_id",
+   "library_id_repository",
+   "nCount_RNA",
+   "nFeature_RNA",
+   "observation_joinid",
+   "percent.mt",
+   "reference_genome",
+   "reported_diseases",
+   "sample_collection_method",
+   "sample_collection_year",
+   "sample_id",
+   "sample_preservation_method",
+   "sampleid",
+   "self_reported_ethnicity",
+   "self_reported_ethnicity_ontology_term_id",
+   "sequenced_fragment",
+   "sequencing_platform",
+   "sex",
+   "sex_ontology_term_id",
+   "suspension_derivation_process",
+   "suspension_type",
+   "suspension_uuid",
+   "tissue",
+   "tissue_handling_interval",
+   "tissue_ontology_term_id",
+   "tissue_source",
+   "tissue_type"
+  ],
+  "layers": [],
+  "has_raw": true,
+  "var_probe": {
+   "sample_genes": [
+    "ENSG00000243485",
+    "ENSG00000237613",
+    "ENSG00000186092",
+    "ENSG00000239945",
+    "ENSG00000239906"
+   ],
+   "n_ensg_prefix": 5
+  },
+  "X_sample": {
+   "n": 20000,
+   "min": 0.5357429385185242,
+   "max": 6.251946449279785,
+   "mean": 1.5030869245529175,
+   "frac_int": 0.0,
+   "frac_nonneg": 1.0
+  },
+  "label_dists": {
+   "author_cell_type": {
+    "n_levels": 5,
+    "top": {
+     "RPE_INSYN2B+": 29174,
+     "RPE_LGI1+": 23210,
+     "RPE_TENM4+": 7043,
+     "RPE_TUBA1A+": 5466,
+     "RPE_CST3+": 4351
+    }
+   },
+   "cell_type": {
+    "n_levels": 1,
+    "top": {
+     "retinal pigment epithelial cell": 69244
+    }
+   },
+   "cell_type_ontology_term_id": {
+    "n_levels": 1,
+    "top": {
+     "CL:0002586": 69244
+    }
+   }
+  },
+  "stage_dists": {
+   "Post_mortemtime": {
+    "6h": 12036,
+    "7h": 8160,
+    "8h": 6861,
+    "3h55m": 4792,
+    "3h": 4676,
+    "9.5h": 4122,
+    "2h36m": 3826,
+    "10h": 3797,
+    "8h45m": 2936,
+    "4h": 2315,
+    "4h48m": 2169,
+    "9h": 2069,
+    "6h30m": 1867,
+    "4h33m": 1646,
+    "2h59m": 1238
+   },
+   "development_stage": {
+    "43-year-old stage": 9096,
+    "62-year-old stage": 5775,
+    "50-year-old stage": 5227,
+    "69-year-old stage": 4419,
+    "32-year-old stage": 4320,
+    "53-year-old stage": 3826,
+    "65-year-old stage": 3761,
+    "64-year-old stage": 3731,
+    "21-year-old stage": 3242,
+    "60-year-old stage": 2925,
+    "newborn stage (0-28 days)": 2860,
+    "27-year-old stage": 2805,
+    "16-year-old stage": 2601,
+    "34-year-old stage": 2315,
+    "81-year-old stage": 2167
+   },
+   "development_stage_ontology_term_id": {
+    "HsapDv:0000137": 9096,
+    "HsapDv:0000156": 5775,
+    "HsapDv:0000144": 5227,
+    "HsapDv:0000163": 4419,
+    "HsapDv:0000126": 4320,
+    "HsapDv:0000147": 3826,
+    "HsapDv:0000159": 3761,
+    "HsapDv:0000158": 3731,
+    "HsapDv:0000115": 3242,
+    "HsapDv:0000154": 2925,
+    "HsapDv:0000262": 2860,
+    "HsapDv:0000121": 2805,
+    "HsapDv:0000110": 2601,
+    "HsapDv:0000128": 2315,
+    "HsapDv:0000207": 2167
+   },
+   "donor_age": {
+    "43 years": 9096,
+    "62 years": 5775,
+    "50 years": 5227,
+    "69 years": 4419,
+    "32 years": 4320,
+    "53 years": 3826,
+    "65 years": 3761,
+    "64 years": 3731,
+    "21 years": 3242,
+    "60 years": 2925,
+    "1 day": 2860,
+    "27 years": 2805,
+    "16 years": 2601,
+    "34 years": 2315,
+    "81 years": 2167
+   },
+   "donor_cause_of_death": {
+    "unknown": 59903,
+    "Septicemia": 5528,
+    "Coronary Artery Disease": 2936,
+    "Malignant Neoplasm": 817,
+    "Meningeal Sarcoma": 60
+   },
+   "donor_id": {
+    "BCM_22_0200": 4965,
+    "Hu0222": 4792,
+    "BCM_22_0434": 4320,
+    "BCM_22_0784": 3907,
+    "BCM_22_0849": 3893,
+    "MMD_19_D005": 3826,
+    "BCM_22_0183": 3242,
+    "Hu0218": 2936,
+    "BCM_23_0313": 2925,
+    "BCM_23_0334": 2912,
+    "BCM_22_0896": 2863,
+    "BCM_22_0698": 2860,
+    "BCM_23_0358": 2315,
+    "MMD_23_01524": 2169,
+    "BCM_23_0131": 1832
+   }
+  },
+  "species_cols": {}
+ },
+ {
+  "path": "<STORE>/data/GSE289703/fcf71676-322b-483a-a536-1b5fc61cb476.h5ad",
+  "exists": true,
+  "n_obs": 99457,
+  "n_var": 35475,
+  "size_MB": 737.6,
+  "obs_cols": [
+   "Developmental",
+   "Eye",
+   "PMT_in_hrs",
+   "Post_mortemtime",
+   "Region",
+   "Study",
+   "alignment_software",
+   "assay",
+   "assay_ontology_term_id",
+   "author_cell_type",
+   "cell_type",
+   "cell_type_ontology_term_id",
+   "development_stage",
+   "development_stage_ontology_term_id",
+   "disease",
+   "disease_ontology_term_id",
+   "donor_age",
+   "donor_cause_of_death",
+   "donor_id",
+   "donor_living_at_sample_collection",
+   "gene_annotation_version",
+   "institute",
+   "intronic_reads_counted",
+   "is_primary_data",
+   "library_id",
+   "library_id_repository",
+   "nCount_RNA",
+   "nFeature_RNA",
+   "observation_joinid",
+   "percent.mt",
+   "reference_genome",
+   "reported_diseases",
+   "sample_collection_method",
+   "sample_collection_year",
+   "sample_id",
+   "sample_preservation_method",
+   "sampleid",
+   "self_reported_ethnicity",
+   "self_reported_ethnicity_ontology_term_id",
+   "sequenced_fragment",
+   "sequencing_platform",
+   "sex",
+   "sex_ontology_term_id",
+   "suspension_derivation_process",
+   "suspension_type",
+   "suspension_uuid",
+   "tissue",
+   "tissue_handling_interval",
+   "tissue_ontology_term_id",
+   "tissue_source",
+   "tissue_type"
+  ],
+  "layers": [],
+  "has_raw": true,
+  "var_probe": {
+   "sample_genes": [
+    "ENSG00000243485",
+    "ENSG00000237613",
+    "ENSG00000186092",
+    "ENSG00000239945",
+    "ENSG00000239906"
+   ],
+   "n_ensg_prefix": 5
+  },
+  "X_sample": {
+   "n": 20000,
+   "min": 0.0,
+   "max": 6.485435962677002,
+   "mean": 2.11752986907959,
+   "frac_int": 0.0,
+   "frac_nonneg": 1.0
+  },
+  "label_dists": {
+   "author_cell_type": {
+    "n_levels": 5,
+    "top": {
+     "Fenestrated capillary": 31016,
+     "Venule": 25526,
+     "Arterial": 17903,
+     "Vein": 17220,
+     "Arteriole": 7792
+    }
+   },
+   "cell_type": {
+    "n_levels": 5,
+    "top": {
+     "fenestrated endothelial cell": 31016,
+     "endothelial cell of venule": 25526,
+     "endothelial cell of artery": 17903,
+     "vein endothelial cell": 17220,
+     "endothelial cell of arteriole": 7792
+    }
+   },
+   "cell_type_ontology_term_id": {
+    "n_levels": 5,
+    "top": {
+     "CL:0000666": 31016,
+     "CL:1000414": 25526,
+     "CL:1000413": 17903,
+     "CL:0002543": 17220,
+     "CL:1000412": 7792
+    }
+   }
+  },
+  "stage_dists": {
+   "Post_mortemtime": {
+    "6h": 12905,
+    "8h": 11713,
+    "7h": 11190,
+    "6h30m": 7148,
+    "10h": 6672,
+    "5h11m": 5537,
+    "9.5h": 4934,
+    "9h": 4425,
+    "3h": 3381,
+    "5h18m": 2990,
+    "8h1m": 2789,
+    "5h40m": 2450,
+    "7h31m": 2246,
+    "7h26m": 2204,
+    "6h5m": 1861
+   },
+   "development_stage": {
+    "43-year-old stage": 8943,
+    "10-year-old stage": 6170,
+    "16-year-old stage": 6150,
+    "69-year-old stage": 6082,
+    "65-year-old stage": 5771,
+    "64-year-old stage": 5499,
+    "21-year-old stage": 5327,
+    "62-year-old stage": 5319,
+    "60-year-old stage": 4722,
+    "32-year-old stage": 4383,
+    "34-year-old stage": 3567,
+    "58-year-old stage": 3397,
+    "newborn stage (0-28 days)": 3395,
+    "11-year-old stage": 3277,
+    "71-year-old stage": 2928
+   },
+   "development_stage_ontology_term_id": {
+    "HsapDv:0000137": 8943,
+    "HsapDv:0000104": 6170,
+    "HsapDv:0000110": 6150,
+    "HsapDv:0000163": 6082,
+    "HsapDv:0000159": 5771,
+    "HsapDv:0000158": 5499,
+    "HsapDv:0000115": 5327,
+    "HsapDv:0000156": 5319,
+    "HsapDv:0000154": 4722,
+    "HsapDv:0000126": 4383,
+    "HsapDv:0000128": 3567,
+    "HsapDv:0000152": 3397,
+    "HsapDv:0000262": 3395,
+    "HsapDv:0000105": 3277,
+    "HsapDv:0000165": 2928
+   },
+   "donor_age": {
+    "43 years": 8943,
+    "10 years": 6170,
+    "16 years": 6150,
+    "69 years": 6082,
+    "65 years": 5771,
+    "64 years": 5499,
+    "21 years": 5327,
+    "62 years": 5319,
+    "60 years": 4722,
+    "32 years": 4383,
+    "34 years": 3567,
+    "58 years": 3397,
+    "1 day": 3395,
+    "11 years": 3277,
+    "71 years": 2928
+   },
+   "donor_cause_of_death": {
+    "unknown": 96439,
+    "Meningeal Sarcoma": 1416,
+    "Malignant Neoplasm": 701,
+    "Septicemia": 667,
+    "Coronary Artery Disease": 234
+   },
+   "donor_id": {
+    "MMD_23_17738": 6170,
+    "MMD_22_20372": 5537,
+    "BCM_23_0131": 5458,
+    "BCM_22_0183": 5327,
+    "BCM_22_0200": 4393,
+    "BCM_22_0434": 4383,
+    "BCM_22_0396": 3397,
+    "BCM_22_0849": 3396,
+    "BCM_22_0698": 3395,
+    "BCM_22_0769": 3277,
+    "MMD_22_16860": 2990,
+    "BCM_23_0334": 2802,
+    "MMD_22_38029": 2789,
+    "BCM_22_0784": 2689,
+    "BCM_23_0231": 2686
+   }
+  },
+  "species_cols": {}
+ },
+ {
+  "path": "<STORE>/data/GSE226108_cellxgene/GSE226108_56K.h5ad",
+  "exists": true,
+  "n_obs": 56507,
+  "n_var": 30172,
+  "size_MB": 3319.1,
+  "obs_cols": [
+   "assay",
+   "assay_ontology_term_id",
+   "author_cell_type",
+   "cell_type",
+   "cell_type_ontology_term_id",
+   "development_stage",
+   "development_stage_ontology_term_id",
+   "disease",
+   "disease_ontology_term_id",
+   "donor_id",
+   "group",
+   "is_primary_data",
+   "library_uuid",
+   "mapped_reference_annotation",
+   "ml_class",
+   "n_counts",
+   "n_genes",
+   "n_genes_by_counts",
+   "observation_joinid",
+   "sample_preservation_method",
+   "sample_uuid",
+   "self_reported_ethnicity",
+   "self_reported_ethnicity_ontology_term_id",
+   "sex",
+   "sex_ontology_term_id",
+   "suspension_enriched_cell_types",
+   "suspension_enrichment_factors",
+   "suspension_type",
+   "suspension_uuid",
+   "tissue",
+   "tissue_ontology_term_id",
+   "tissue_type",
+   "total_counts"
+  ],
+  "layers": [],
+  "has_raw": true,
+  "var_probe": {
+   "sample_genes": [
+    "ENSG00000243485",
+    "ENSG00000237613",
+    "ENSG00000186092",
+    "ENSG00000239945",
+    "ENSG00000239906"
+   ],
+   "n_ensg_prefix": 5
+  },
+  "X_sample": {
+   "n": 20000,
+   "min": 0.009999999776482582,
+   "max": 6.75,
+   "mean": 0.2193799763917923,
+   "frac_int": 0.0,
+   "frac_nonneg": 1.0
+  },
+  "label_dists": {
+   "author_cell_type": {
+    "n_levels": 33,
+    "top": {
+     "AC0": 4921,
+     "AC1": 4343,
+     "AC2": 4233,
+     "AC3": 3799,
+     "AC4": 3552,
+     "AC5": 3413,
+     "AC6": 2949,
+     "AC7": 2768,
+     "AC8": 2764,
+     "AC9": 2549,
+     "AC10": 2360,
+     "AC12": 1800,
+     "AC15": 1689,
+     "AC13": 1602,
+     "AC11": 1527,
+     "AC14": 1382,
+     "AC17": 1224,
+     "AC16": 1149,
+     "AC18": 988,
+     "AC19": 961,
+     "AC21": 807,
+     "AC20": 784,
+     "AC29": 623,
+     "AC24": 596,
+     "AC23": 591
+    }
+   },
+   "cell_type": {
+    "n_levels": 1,
+    "top": {
+     "amacrine cell": 56507
+    }
+   },
+   "cell_type_ontology_term_id": {
+    "n_levels": 1,
+    "top": {
+     "CL:0000561": 56507
+    }
+   },
+   "ml_class": {
+    "n_levels": 3,
+    "top": {
+     "GABA_AC": 43043,
+     "Gly_AC": 8827,
+     "Both_AC": 4637
+    }
+   },
+   "suspension_enriched_cell_types": {
+    "n_levels": 2,
+    "top": {
+     "neuron": 46245,
+     "na": 10262
+    }
+   }
+  },
+  "stage_dists": {
+   "development_stage": {
+    "78-year-old stage": 21348,
+    "73-year-old stage": 21110,
+    "84-year-old stage": 8077,
+    "65-year-old stage": 4877,
+    "83-year-old stage": 1095
+   },
+   "development_stage_ontology_term_id": {
+    "HsapDv:0000172": 21348,
+    "HsapDv:0000167": 21110,
+    "HsapDv:0000210": 8077,
+    "HsapDv:0000159": 4877,
+    "HsapDv:0000209": 1095
+   },
+   "donor_id": {
+    "19D015": 21110,
+    "D001-12": 12467,
+    "19D013": 8881,
+    "19D014": 8077,
+    "17D013": 4877,
+    "19D016": 1095
+   }
+  },
+  "species_cols": {}
+ },
+ {
+  "path": "<STORE>/data/D002_ocularsurface/split/D002_dev_ocularsurface.h5ad",
+  "exists": true,
+  "n_obs": 124040,
+  "n_var": 35477,
+  "size_MB": 5199.5,
+  "obs_cols": [
+   "alignment_software",
+   "assay",
+   "assay_ontology_term_id",
+   "author_cell_type",
+   "cell_type",
+   "cell_type_ontology_term_id",
+   "celltype_legency",
+   "development_stage",
+   "development_stage_ontology_term_id",
+   "disease",
+   "disease_ontology_term_id",
+   "donor_age",
+   "donor_dev_class",
+   "donor_id",
+   "donor_living_at_sample_collection",
+   "gene_annotation_version",
+   "institute",
+   "intronic_reads_counted",
+   "is_primary_data",
+   "library_id",
+   "library_id_repository",
+   "majorclass",
+   "majorclass_legency",
+   "nCount_RNA",
+   "nFeature_RNA",
+   "observation_joinid",
+   "pANN",
+   "percent.mt",
+   "published_annotation",
+   "reference_genome",
+   "sample_collection_method",
+   "sample_id",
+   "sample_preservation_method",
+   "sampleid",
+   "self_reported_ethnicity",
+   "self_reported_ethnicity_ontology_term_id",
+   "sequenced_fragment",
+   "sex",
+   "sex_ontology_term_id",
+   "split_group",
+   "split_route",
+   "study",
+   "suspension_derivation_process",
+   "suspension_dissociation_reagent",
+   "suspension_dissociation_time",
+   "suspension_type",
+   "suspension_uuid",
+   "tissue",
+   "tissue_ontology_term_id",
+   "tissue_source",
+   "tissue_type"
+  ],
+  "layers": [],
+  "has_raw": true,
+  "err": "TypeError: Accessing a group is done with bytes or str, not <class 'slice'>"
+ },
+ {
+  "path": "<STORE>/data/GSE265774/query.h5ad",
+  "exists": true,
+  "n_obs": 11531,
+  "n_var": 9270,
+  "size_MB": 30.8,
+  "obs_cols": [
+   "majorclass"
+  ],
+  "layers": [],
+  "has_raw": false,
+  "var_probe": {
+   "sample_genes": [
+    "SAMD11",
+    "AL645608.7",
+    "HES4",
+    "ISG15",
+    "C1orf159"
+   ],
+   "n_ensg_prefix": 0
+  },
+  "X_sample": {
+   "n": 20000,
+   "min": 1.0,
+   "max": 81.0,
+   "mean": 2.382699966430664,
+   "frac_int": 1.0,
+   "frac_nonneg": 1.0
+  },
+  "label_dists": {
+   "majorclass": {
+    "n_levels": 6,
+    "top": {
+     "AC": 8203,
+     "RGC": 2559,
+     "Rod": 630,
+     "MG": 74,
+     "BC": 63,
+     "Cone": 2
+    }
+   }
+  },
+  "stage_dists": {},
+  "species_cols": {}
+ }
+]

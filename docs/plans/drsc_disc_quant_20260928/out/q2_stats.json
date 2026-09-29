@@ -1,0 +1,42 @@
+{
+ "seed": 20260928,
+ "n_draws": 50,
+ "n_bins": 10,
+ "hvg": 4000,
+ "rows_computed": 18,
+ "rows_too_few": [
+  "Q3_137537(counts层,n_genes)::Astrocyte",
+  "Q3_137537(counts层,n_genes)::RPE",
+  "Q3_137537(total_counts轴)::Astrocyte",
+  "Q3_137537(total_counts轴)::RPE",
+  "Q4_148077(n_genes代理)::RPE"
+ ],
+ "rows_depth_unmatchable": [
+  "Q3_137537(counts层,n_genes)::Cone(retention=0.0)",
+  "Q3_137537(counts层,n_genes)::HC(retention=0.0)",
+  "Q3_137537(counts层,n_genes)::RGC(retention=0.0)",
+  "Q3_137537(counts层,n_genes)::Microglia(retention=0.0)",
+  "Q3_137537(total_counts轴)::Cone(retention=0.0)",
+  "Q3_137537(total_counts轴)::HC(retention=0.0)",
+  "Q3_137537(total_counts轴)::RGC(retention=0.0)",
+  "Q3_137537(total_counts轴)::Microglia(retention=0.0)",
+  "Q4_148077(n_genes代理)::Rod(retention=0.0)",
+  "Q4_148077(n_genes代理)::Cone(retention=0.0)",
+  "Q4_148077(n_genes代理)::BC(retention=0.0)",
+  "Q4_148077(n_genes代理)::HC(retention=0.0)",
+  "Q4_148077(n_genes代理)::RGC(retention=0.0)",
+  "Q4_148077(n_genes代理)::Microglia(retention=0.0)",
+  "Q4_148077(n_genes代理)::Astrocyte(retention=0.0)",
+  "Q6_sub100k(nFeature_RNA)::Corneal Endothelium(retention=0.0)"
+ ],
+ "rows_no_anchor": [
+  "retina::RPE (Q3/Q4 无该标签)",
+  "面板 choroid/ciliary_body/iris/lens/sclera/trabecular_meshwork/optic_nerve/RPE/lacrimal/fetal: 盘上无带类标签 counts 锚点(或无 markers_local_lib) -> 不可算, 如实登记"
+ ],
+ "tier1_rows_top5_any": 11,
+ "tier2_rows_top10_ge3": 0,
+ "tier3_rows_highexpr_only": 11,
+ "tau_median_overall": 0.8003500875218805,
+ "top5_shift_median_overall": 1.0,
+ "top10_shift_median_overall": 1.0
+}

@@ -1,0 +1,416 @@
+{
+ "DS1": {
+  "ARI_S_vs_truth": 0.7483721861292497,
+  "NMI_S_vs_truth": 0.7298751955064139,
+  "ARI_P_vs_truth": 0.821217720520009,
+  "NMI_P_vs_truth": 0.7579988101092994,
+  "ARI_S_vs_P": 0.7522584804449857,
+  "NMI_S_vs_P": 0.7919340651290538,
+  "cell_counts": {
+   "total": 180093,
+   "truth_evaluable": 180093,
+   "EXCL": 0
+  },
+  "purity_by_truth_S": {
+   "AC": {
+    "n": 37032,
+    "modal_frac": 0.9994869302225102,
+    "modal": "AC"
+   },
+   "BC": {
+    "n": 4856,
+    "modal_frac": 0.9995881383855024,
+    "modal": "BC"
+   },
+   "Cone": {
+    "n": 2025,
+    "modal_frac": 1.0,
+    "modal": "Cone"
+   },
+   "HC": {
+    "n": 4577,
+    "modal_frac": 0.9949748743718593,
+    "modal": "AC"
+   },
+   "MG": {
+    "n": 5615,
+    "modal_frac": 0.6021371326803205,
+    "modal": "MG"
+   },
+   "RGC": {
+    "n": 81085,
+    "modal_frac": 0.9260405747055559,
+    "modal": "RGC"
+   },
+   "Rod": {
+    "n": 44903,
+    "modal_frac": 0.7616194909026123,
+    "modal": "Rod"
+   }
+  },
+  "purity_by_truth_P": {
+   "AC": {
+    "n": 37032,
+    "modal_frac": 0.9092406567293152,
+    "modal": "AC"
+   },
+   "BC": {
+    "n": 4856,
+    "modal_frac": 0.9785831960461285,
+    "modal": "BC"
+   },
+   "Cone": {
+    "n": 2025,
+    "modal_frac": 0.9940740740740741,
+    "modal": "Cone"
+   },
+   "HC": {
+    "n": 4577,
+    "modal_frac": 0.5385623771029059,
+    "modal": "MISS"
+   },
+   "MG": {
+    "n": 5615,
+    "modal_frac": 0.6179875333926982,
+    "modal": "MG"
+   },
+   "RGC": {
+    "n": 81085,
+    "modal_frac": 0.9824998458407843,
+    "modal": "RGC"
+   },
+   "Rod": {
+    "n": 44903,
+    "modal_frac": 0.7756497338707882,
+    "modal": "Rod"
+   }
+  },
+  "cluster_S_dominant_truth_match": {
+   "n_clusters": 24,
+   "matched": 17
+  },
+  "cluster_P_dominant_truth_match": {
+   "n_clusters": 17,
+   "matched": 15
+  },
+  "per_class": {
+   "AC": {
+    "n": 37032,
+    "S_agree": 0.9994869302225102,
+    "P_agree": 0.9092406567293152
+   },
+   "BC": {
+    "n": 4856,
+    "S_agree": 0.9995881383855024,
+    "P_agree": 0.9785831960461285
+   },
+   "Cone": {
+    "n": 2025,
+    "S_agree": 1.0,
+    "P_agree": 0.9940740740740741
+   },
+   "HC": {
+    "n": 4577,
+    "S_agree": 0.0,
+    "P_agree": 0.3736071662661132
+   },
+   "MG": {
+    "n": 5615,
+    "S_agree": 0.6021371326803205,
+    "P_agree": 0.6179875333926982
+   },
+   "RGC": {
+    "n": 81085,
+    "S_agree": 0.9260405747055559,
+    "P_agree": 0.9824998458407843
+   },
+   "Rod": {
+    "n": 44903,
+    "S_agree": 0.7616194909026123,
+    "P_agree": 0.7756497338707882
+   }
+  },
+  "n_changed_clusters": 8,
+  "disagree_clusters": [
+   {
+    "cluster_S": "11",
+    "n": 4621,
+    "S_call": "AC",
+    "P_dom": "RGC",
+    "P_frac": 0.976,
+    "truth_dom": "RGC",
+    "changed": true
+   },
+   {
+    "cluster_S": "15",
+    "n": 2600,
+    "S_call": "AC",
+    "P_dom": "MISS",
+    "P_frac": 0.936,
+    "truth_dom": "HC",
+    "changed": true
+   },
+   {
+    "cluster_S": "18",
+    "n": 1885,
+    "S_call": "AC",
+    "P_dom": "HC",
+    "P_frac": 0.906,
+    "truth_dom": "HC",
+    "changed": true
+   },
+   {
+    "cluster_S": "19",
+    "n": 1398,
+    "S_call": "AC",
+    "P_dom": "RGC",
+    "P_frac": 0.555,
+    "truth_dom": "Rod",
+    "changed": true
+   },
+   {
+    "cluster_S": "20",
+    "n": 1193,
+    "S_call": "AC",
+    "P_dom": "MISS",
+    "P_frac": 0.993,
+    "truth_dom": "MG",
+    "changed": true
+   },
+   {
+    "cluster_S": "21",
+    "n": 591,
+    "S_call": "RGC",
+    "P_dom": "Rod",
+    "P_frac": 0.968,
+    "truth_dom": "Rod",
+    "changed": true
+   },
+   {
+    "cluster_S": "22",
+    "n": 294,
+    "S_call": "AC",
+    "P_dom": "Rod",
+    "P_frac": 0.861,
+    "truth_dom": "AC",
+    "changed": true
+   },
+   {
+    "cluster_S": "9",
+    "n": 7669,
+    "S_call": "AC",
+    "P_dom": "MISS",
+    "P_frac": 0.477,
+    "truth_dom": "Rod",
+    "changed": true
+   }
+  ]
+ },
+ "DS2": {
+  "ARI_S_vs_truth": 0.3659347593692202,
+  "NMI_S_vs_truth": 0.5711936238247288,
+  "ARI_P_vs_truth": 0.82267479396016,
+  "NMI_P_vs_truth": 0.770386737350716,
+  "ARI_S_vs_P": 0.36042797875045374,
+  "NMI_S_vs_P": 0.5251551538264663,
+  "cell_counts": {
+   "total": 19694,
+   "truth_evaluable": 15990,
+   "EXCL": 3704
+  },
+  "purity_by_truth_S": {
+   "AC": {
+    "n": 281,
+    "modal_frac": 0.6725978647686833,
+    "modal": "AC"
+   },
+   "BC": {
+    "n": 2070,
+    "modal_frac": 0.9864734299516909,
+    "modal": "BC"
+   },
+   "Cone": {
+    "n": 583,
+    "modal_frac": 0.934819897084048,
+    "modal": "Cone"
+   },
+   "MG": {
+    "n": 612,
+    "modal_frac": 0.9526143790849673,
+    "modal": "MG"
+   },
+   "Micro": {
+    "n": 142,
+    "modal_frac": 0.9788732394366197,
+    "modal": "Rod"
+   },
+   "RGC": {
+    "n": 63,
+    "modal_frac": 0.873015873015873,
+    "modal": "RGC"
+   },
+   "Rod": {
+    "n": 12239,
+    "modal_frac": 0.545305989051393,
+    "modal": "Rod"
+   }
+  },
+  "purity_by_truth_P": {
+   "AC": {
+    "n": 281,
+    "modal_frac": 0.9501779359430605,
+    "modal": "MISS"
+   },
+   "BC": {
+    "n": 2070,
+    "modal_frac": 0.9821256038647344,
+    "modal": "BC"
+   },
+   "Cone": {
+    "n": 583,
+    "modal_frac": 0.9176672384219554,
+    "modal": "Cone"
+   },
+   "MG": {
+    "n": 612,
+    "modal_frac": 0.9705882352941176,
+    "modal": "MG"
+   },
+   "Micro": {
+    "n": 142,
+    "modal_frac": 0.9295774647887324,
+    "modal": "Micro"
+   },
+   "RGC": {
+    "n": 63,
+    "modal_frac": 0.5873015873015873,
+    "modal": "MISS"
+   },
+   "Rod": {
+    "n": 12239,
+    "modal_frac": 0.930304763461067,
+    "modal": "Rod"
+   }
+  },
+  "cluster_S_dominant_truth_match": {
+   "n_clusters": 21,
+   "matched": 13
+  },
+  "cluster_P_dominant_truth_match": {
+   "n_clusters": 22,
+   "matched": 16
+  },
+  "per_class": {
+   "AC": {
+    "n": 281,
+    "S_agree": 0.6725978647686833,
+    "P_agree": 0.0
+   },
+   "BC": {
+    "n": 2070,
+    "S_agree": 0.9864734299516909,
+    "P_agree": 0.9821256038647344
+   },
+   "Cone": {
+    "n": 583,
+    "S_agree": 0.934819897084048,
+    "P_agree": 0.9176672384219554
+   },
+   "MG": {
+    "n": 612,
+    "S_agree": 0.9526143790849673,
+    "P_agree": 0.9705882352941176
+   },
+   "Micro": {
+    "n": 142,
+    "S_agree": 0.0,
+    "P_agree": 0.9295774647887324
+   },
+   "RGC": {
+    "n": 63,
+    "S_agree": 0.873015873015873,
+    "P_agree": 0.30158730158730157
+   },
+   "Rod": {
+    "n": 12239,
+    "S_agree": 0.545305989051393,
+    "P_agree": 0.930304763461067
+   }
+  },
+  "n_changed_clusters": 8,
+  "disagree_clusters": [
+   {
+    "cluster_S": "0",
+    "n": 2568,
+    "S_call": "Cone",
+    "P_dom": "Rod",
+    "P_frac": 0.987,
+    "truth_dom": "Rod",
+    "changed": true
+   },
+   {
+    "cluster_S": "15",
+    "n": 349,
+    "S_call": "AC",
+    "P_dom": "MISS",
+    "P_frac": 0.897,
+    "truth_dom": "AC",
+    "changed": true
+   },
+   {
+    "cluster_S": "17",
+    "n": 187,
+    "S_call": "BC",
+    "P_dom": "Cone",
+    "P_frac": 0.396,
+    "truth_dom": "MG",
+    "changed": true
+   },
+   {
+    "cluster_S": "18",
+    "n": 142,
+    "S_call": "Rod",
+    "P_dom": "Micro",
+    "P_frac": 0.951,
+    "truth_dom": "Micro",
+    "changed": true
+   },
+   {
+    "cluster_S": "19",
+    "n": 114,
+    "S_call": "HC",
+    "P_dom": "MISS",
+    "P_frac": 0.895,
+    "truth_dom": "AC",
+    "changed": true
+   },
+   {
+    "cluster_S": "21",
+    "n": 71,
+    "S_call": "RGC",
+    "P_dom": "MISS",
+    "P_frac": 0.493,
+    "truth_dom": "RGC",
+    "changed": true
+   },
+   {
+    "cluster_S": "3",
+    "n": 1901,
+    "S_call": "Cone",
+    "P_dom": "Rod",
+    "P_frac": 0.995,
+    "truth_dom": "Rod",
+    "changed": true
+   },
+   {
+    "cluster_S": "7",
+    "n": 1023,
+    "S_call": "Cone",
+    "P_dom": "Rod",
+    "P_frac": 0.668,
+    "truth_dom": "Rod",
+    "changed": true
+   }
+  ]
+ }
+}

@@ -150,6 +150,14 @@ tar -xf EYEKB_RAG_v2.3.tar                       # 得 literature_db/v2.3_2026-0
 - **T8 §9 语料同源筛查前置盘点（只盘点不修库）**：v2.4/v2.4.1/v2.4.2 三版语料 × registry truth 血缘命中清单=`docs/plans/repo_sync3_20260928/S9_SCREENING.md`。
 - docs/plans/ 新增五卡目录（`kbgov_b5impl_20260928/` `grade_h1m3impl_20260928/` `obligrun_20260928/` `mouse_ext_precheck_20260928/` `rag_fix3_20260928/`）+ 本卡目录；docs/wiki 全量刷至线上态（USER_DIRECTIVE_20260928 追加四/五/六入仓，追加六为 masked 版）；docs/skills protocols 层 +v1.3。收录/排除与八门结果=`docs/plans/repo_sync3_20260928/REPOSYNC3_COMPLETED.md`。
 
+### 版本注记 — 09-28 晚/09-29 波（REPOSYNC5）
+
+- 新增 kb 层组成先验面 `kb/composition/`（EXPECTED_COMPOSITION_v0 = 正常成人眼各细胞类型比例区间，逐行挂 PMID，仅从盘上 registry 台账/文献索引派生，禁从自家聚类派生；**默认 OFF 不接线**，自检只出旗标清单 COMP_SELFFLAG_20260928.md）。
+- 新增 plans 面：`seurat_probe_20260928`（双轨探针收口件：报告+三数字+表+脚本；data/ 大件不收，见附录 A）、`drsc_disc_quant_20260928`（供体杠杆+深度位移只读量化，勾选表交 PI）、`comp_prior_20260928`（DISC-COMP/COMPV1 两任务书）、`QUEUE_20260929.md`（在办状态机）、`SYNC_NOTE_20260928_drsc_labels.md`（跨窗留言，masked）。
+- WIKI 面：directive 追加八（PI 常设自主推进令）masked 版入仓；当前状态/INDEX 增量；新增 项目梳理_20260928（全景接手件）。
+- 门体系：八门全过=本波 REPOSYNC5（T3 v4 幂等 scan=0 / T4 T7 永久门 HARD=0 / T5 黄金 41 逐位 / T6 新鲜克隆 / T2 冻结面 154 件前后全等）；证据=`docs/plans/repo_sync5_20260929/`。
+- 领地隔离：COMPV1（在跑卡）产物 `kb/composition/*v1*` 与 `plans/comp_prior_v1_*` 一律不收（mtime 横扫命中即剔，登记"待下轮"）。
+
 ## 三、Wiki 层
 
 `docs/wiki/` = OcularKB/WIKI 的脱敏镜像（当前态/决策记录/结论速查/INDEX/红线与 directive 链，含 PROTOCOL_VOTING_v2_C2b.md 票规 v2 决策件）。口径：镜像件与线上件**唯一差异=脱敏标签替换**（见 `docs/DESENS_SCAN_REPORT_20260927.md`），PI 原话保留、账号形态零命中。
@@ -200,6 +208,8 @@ tar -xf EYEKB_RAG_v2.3.tar                       # 得 literature_db/v2.3_2026-0
 | `EyeKB/plans/rag_fix3_20260928/work/chunks_ra3_raw.jsonl` | 12MB | RA3 103 篇抓取原始缓存（>10MB 先质疑规则） | 跑 `docs/plans/rag_fix3_20260928/scripts/ra3_fetch.py`（输入=仓内 `work/ra3_selected.jsonl` 闭集 103 PMID；对账=`work/ra3_fetch.log`+`work/ra3_bytes.json`+`work/xml3/` 93 篇源 XML 已入仓） |
 
 已入镜像的缓存面（小体量、审计价值高于体积）：`e2r/ledgers/api/` 3.6MB、`panel_pmid/ledgers/raw_uniprot/` 0.57MB、`kb9/ledgers/epmc_raw*、ols_evidence_kb9/` <1MB。
+
+- SEURATPROBE 数据大件（`/mnt/D` 侧 `plans/seurat_probe_20260928/data/`，mtx/rds 共 ~4.6GB，>50MB 不收仓）：再生产=仓内 `docs/plans/seurat_probe_20260928/scripts/export_counts.py` + `export_ds1_sub.py` + `export_ds2_fix.py`（自 registry 标准集导出，盘上源件留机器侧）；size 锚=仓内 `MANIFEST_SEURATPROBE.sha256` 的 SIZE-ONLY/DATA-EXCLUDED 行与 `out/t0_large_files_excluded.tsv`（REPOSYNC5 登记）。
 
 ## 附录 B — 脱敏与镜像口径
 

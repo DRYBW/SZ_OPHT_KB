@@ -1,0 +1,131 @@
+2 channel Terms of Service accepted
+Channels:
+ - conda-forge
+ - bioconda
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - done
+Solving environment: | / - \ | done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 26.5.3
+    latest version: 26.7.2
+
+Please update conda by running
+
+    $ conda update -n base -c conda-forge conda
+
+
+
+## Package Plan ##
+
+  environment location: <CONDA_ROOT>/envs/r_seurat_probe
+
+  added / updated specs:
+    - bioconductor-scrapper
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    bioconductor-biocmake-1.2.0|    r45hdfd78af_0         239 KB  bioconda
+    bioconductor-dir.expiry-1.18.0|    r45hdfd78af_0         311 KB  bioconda
+    bioconductor-rigraphlib-1.2.0|    r45ha27e39d_0         2.0 MB  bioconda
+    bioconductor-scrapper-1.4.0|    r45ha27e39d_0         1.9 MB  bioconda
+    ------------------------------------------------------------
+                                           Total:         4.4 MB
+
+The following NEW packages will be INSTALLED:
+
+  bioconductor-bioc~ bioconda/noarch::bioconductor-biocmake-1.2.0-r45hdfd78af_0 
+  bioconductor-dir.~ bioconda/noarch::bioconductor-dir.expiry-1.18.0-r45hdfd78af_0 
+  bioconductor-rigr~ bioconda/linux-64::bioconductor-rigraphlib-1.2.0-r45ha27e39d_0 
+  bioconductor-scra~ bioconda/linux-64::bioconductor-scrapper-1.4.0-r45ha27e39d_0 
+  r-filelock         conda-forge/linux-64::r-filelock-1.0.3-r45h54b55ab_2 
+
+
+
+Downloading and Extracting Packages: ...working...
+bioconductor-rigraph | 2.0 MB    |            |   0% 
+
+bioconductor-scrappe | 1.9 MB    |            |   0% [A
+
+
+bioconductor-dir.exp | 311 KB    |            |   0% [A[A
+
+
+
+bioconductor-biocmak | 239 KB    |            |   0% [A[A[A
+
+bioconductor-scrappe | 1.9 MB    |            |   1% [A
+
+
+bioconductor-dir.exp | 311 KB    | 5          |   5% [A[A
+
+
+
+bioconductor-biocmak | 239 KB    | 6          |   7% [A[A[A
+bioconductor-rigraph | 2.0 MB    |            |   1% 
+
+
+bioconductor-dir.exp | 311 KB    | ####6      |  46% [A[A
+
+bioconductor-scrappe | 1.9 MB    | 8          |   8% [A
+bioconductor-rigraph | 2.0 MB    | 4          |   5% 
+
+
+
+bioconductor-biocmak | 239 KB    | ####6      |  47% [A[A[A
+
+
+bioconductor-dir.exp | 311 KB    | ########## | 100% [A[A
+
+
+bioconductor-dir.exp | 311 KB    | ########## | 100% [A[A
+
+bioconductor-scrappe | 1.9 MB    | #9         |  20% [A
+
+
+
+bioconductor-biocmak | 239 KB    | ########## | 100% [A[A[A
+
+
+
+bioconductor-biocmak | 239 KB    | ########## | 100% [A[A[A
+bioconductor-rigraph | 2.0 MB    | #          |  11% 
+
+bioconductor-scrappe | 1.9 MB    | ###4       |  35% [A
+bioconductor-rigraph | 2.0 MB    | ##2        |  22% 
+
+bioconductor-scrappe | 1.9 MB    | ####8      |  48% [A
+bioconductor-rigraph | 2.0 MB    | ####1      |  42% 
+
+bioconductor-scrappe | 1.9 MB    | ######9    |  69% [A
+bioconductor-rigraph | 2.0 MB    | ######     |  60% 
+
+bioconductor-scrappe | 1.9 MB    | ########4  |  84% [A
+bioconductor-rigraph | 2.0 MB    | #######2   |  72% 
+
+bioconductor-scrappe | 1.9 MB    | #########8 |  98% [A
+
+bioconductor-scrappe | 1.9 MB    | ########## | 100% [A
+bioconductor-rigraph | 2.0 MB    | #########  |  90% 
+
+bioconductor-scrappe | 1.9 MB    | ########## | 100% [A
+bioconductor-rigraph | 2.0 MB    | ########## | 100% 
+bioconductor-rigraph | 2.0 MB    | ########## | 100% 
+                                                     
+
+                                                     [A
+
+
+                                                     [A[A
+
+
+
+                                                     [A[A[A done
+Preparing transaction: - done
+Verifying transaction: | / - \ done
+Executing transaction: / done

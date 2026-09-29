@@ -1,0 +1,32 @@
+[loaded] 94.1s
+警告: Feature names cannot have underscores ('_'), replacing with dashes ('-')
+[NormalizeData] 98.3s
+[HVG] 104.2s
+[ScaleData] 105.6s
+[PCA] 109.9s
+[Neighbors] 114.7s
+[Louvain] 117.1s
+[SingleR] 119.9s
+	Command being timed: "<CONDA_ROOT>/envs/r_seurat_probe/lib/R/bin/Rscript scripts/g2_seurat_singler.R DS2"
+	User time (seconds): 226.21
+	System time (seconds): 16.87
+	Percent of CPU this job got: 144%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:48.20
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 10053120
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 11117881
+	Voluntary context switches: 72930
+	Involuntary context switches: 912
+	Swaps: 0
+	File system inputs: 88
+	File system outputs: 386405
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

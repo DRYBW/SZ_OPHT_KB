@@ -1,0 +1,23 @@
+{
+ "tag": "DS1sub20k",
+ "n_cells": 20000,
+ "n_clusters": 15,
+ "marker_lib_sha256": {
+  "v4.1": "867877d56fd3df0ff73e8cdc8742ec0b05596539c89ffacca1a58642f3580669",
+  "v6": "884a62d9cfe1e4c0efee744fa14fbe866d7f6e526fa3dfb12d9772f5570556db"
+ },
+ "marker_union_n_classes": 10,
+ "classes": [
+  "AC",
+  "Astro",
+  "BC",
+  "Cone",
+  "HC",
+  "MG",
+  "Micro",
+  "RGC",
+  "RPE",
+  "Rod"
+ ],
+ "params": "HVG2000 seurat->PCA50->neighbors15->leiden res1.0 igraph; wilcoxon top30"
+}

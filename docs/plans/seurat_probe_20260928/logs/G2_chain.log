@@ -1,0 +1,28 @@
+STEP trackP_DS2 start 2026-09-28T23:27:17+08:00
+STEP trackP_DS2 rc=0 rss_kb=1801320 wall=mmss or m free_available_gb=236 end=2026-09-28T23:28:46+08:00
+STEP trackS_DS2 start 2026-09-28T23:28:46+08:00
+STEP trackS_DS2 rc=1 rss_kb=1937424 wall=mmss or m free_available_gb=235 end=2026-09-28T23:29:07+08:00
+CHAIN_FAIL trackS_DS2
+STEP trackS_DS2 start 2026-09-28T23:33:23+08:00
+STEP trackS_DS2 rc=1 rss_kb=10052676 free_available_gb=236 end=2026-09-28T23:35:28+08:00
+CHAIN_FAIL trackS_DS2
+STEP trackS_DS2 start 2026-09-28T23:41:22+08:00
+STEP trackS_DS2 rc=1 rss_kb=10053772 free_available_gb=236 end=2026-09-28T23:45:16+08:00
+CHAIN_FAIL trackS_DS2
+STEP trackS_DS2 start 2026-09-28T23:56:33+08:00
+STEP trackS_DS2 rc=1 rss_kb=10053080 free_available_gb=236 end=2026-09-29T00:00:27+08:00
+CHAIN_FAIL trackS_DS2
+STEP trackS_DS2 start 2026-09-29T00:04:39+08:00
+STEP trackS_DS2 start 2026-09-29T00:05:49+08:00
+STEP trackS_DS2 rc=1 rss_kb=10054168 free_available_gb=236 end=2026-09-29T00:07:57+08:00
+CHAIN_FAIL trackS_DS2
+STEP trackS_DS2 start 2026-09-29T00:14:32+08:00
+STEP trackS_DS2 rc=0 rss_kb=10053120 free_available_gb=236 end=2026-09-29T00:17:21+08:00
+STEP trackP_DS1 start 2026-09-29T00:17:21+08:00
+STEP trackP_DS1 rc=0 rss_kb=7856480 free_available_gb=236 end=2026-09-29T00:33:53+08:00
+STEP trackS_DS1 start 2026-09-29T00:33:53+08:00
+STEP trackS_DS1 start 2026-09-29T00:50:36+08:00
+STEP trackS_DS1 rc=0 rss_kb=18839720 free_available_gb=236 end=2026-09-29T00:57:22+08:00
+STEP metrics start 2026-09-29T00:57:22+08:00
+STEP metrics rc=0 rss_kb=294516 free_available_gb=236 end=2026-09-29T00:57:27+08:00
+CHAIN_DONE 2026-09-29T00:57:27+08:00

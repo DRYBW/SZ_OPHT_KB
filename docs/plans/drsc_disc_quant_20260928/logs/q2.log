@@ -1,0 +1,45 @@
+23:24:53 [retina|Q3_137537(counts层,n_genes)] load (20091, 19719)
+23:24:55   Rod n=9145 tau_med=0.7328 top5sh=1.0 top10sh=1.0 T1=True T2=False T3=True
+23:24:55   Cone n=211 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:24:55   BC n=3155 tau_med=0.7913 top5sh=1.0 top10sh=1.0 T1=True T2=False T3=True
+23:24:55   HC n=146 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:24:55   AC n=497 tau_med=0.5796 top5sh=0.0 top10sh=1.0 T1=False T2=False T3=False
+23:24:55   RGC n=1514 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:24:56   MG n=5267 tau_med=0.8575 top5sh=0.0 top10sh=0.0 T1=False T2=False T3=False
+23:24:56   Microglia n=62 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:24:56   Astrocyte: too few cells (9) -> registered
+23:24:56   RPE: too few cells (0) -> registered
+23:24:56 [retina|Q3_137537(total_counts轴)] load (20091, 19719)
+23:24:56   Rod n=9145 tau_med=0.7479 top5sh=1.0 top10sh=1.0 T1=True T2=False T3=True
+23:24:56   Cone n=211 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:24:56   BC n=3155 tau_med=0.8201 top5sh=1.0 top10sh=1.0 T1=True T2=False T3=True
+23:24:56   HC n=146 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:24:57   AC n=497 tau_med=0.5936 top5sh=1.0 top10sh=1.0 T1=True T2=False T3=True
+23:24:57   RGC n=1514 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:24:57   MG n=5267 tau_med=0.8094 top5sh=0.0 top10sh=0.0 T1=False T2=False T3=False
+23:24:57   Microglia n=62 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:24:57   Astrocyte: too few cells (9) -> registered
+23:24:57   RPE: too few cells (0) -> registered
+23:25:01 [retina|Q4_148077(n_genes代理)] load (84982, 33660)
+23:25:04   Rod n=7073 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:25:04   Cone n=1997 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:25:04   BC n=25708 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:25:04   HC n=2868 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:25:04   AC n=13807 tau_med=0.7651 top5sh=1.0 top10sh=1.0 T1=True T2=False T3=True
+23:25:04   RGC n=11404 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:25:05   MG n=19896 tau_med=0.7032 top5sh=1.0 top10sh=1.0 T1=True T2=False T3=True
+23:25:05   Microglia n=671 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:25:05   Astrocyte n=1149 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:25:05   RPE: too few cells (0) -> registered
+23:25:09 Q6 标签覆盖: 100000/100000 (EXCL/无标签 0 仅作背景)
+23:25:14 [ocular_surface|Q6_sub100k(nFeature_RNA)] load (100000, 35477)
+23:25:27   Epithelium n=43363 tau_med=0.9379 top5sh=0.0 top10sh=0.0 T1=False T2=False T3=False
+23:25:31   Fibroblasts n=39910 tau_med=0.9226 top5sh=0.0 top10sh=2.0 T1=False T2=False T3=False
+23:25:31   Immune Cells n=1715 tau_med=0.7737 top5sh=2.0 top10sh=2.0 T1=True T2=False T3=True
+23:25:31   Endothelium n=5745 tau_med=0.9146 top5sh=1.0 top10sh=0.0 T1=True T2=False T3=True
+23:25:31   Pericytes n=6504 tau_med=0.8210 top5sh=1.0 top10sh=0.0 T1=True T2=False T3=True
+23:25:31   Smooth Muscle Cells n=481 tau_med=0.8661 top5sh=0.0 top10sh=0.0 T1=False T2=False T3=False
+23:25:31   Corneal Endothelium n=75 DEPTH-UNMATCHABLE (N'=0) retention=0.000
+23:25:32   Melanocytes n=1230 tau_med=0.8377 top5sh=0.0 top10sh=1.0 T1=False T2=False T3=False
+23:25:32   Schwann Cells n=977 tau_med=0.7555 top5sh=1.0 top10sh=1.0 T1=True T2=False T3=True
+23:25:32 Q2 DONE {"seed": 20260928, "n_draws": 50, "n_bins": 10, "hvg": 4000, "rows_computed": 18, "rows_too_few": ["Q3_137537(counts层,n_genes)::Astrocyte", "Q3_137537(counts层,n_genes)::RPE", "Q3_137537(total_counts轴)::Astrocyte", "Q3_137537(total_counts轴)::RPE", "Q4_148077(n_genes代理)::RPE"], "rows_depth_unmatchable": ["Q3_137537(counts层,n_genes)::Cone(retention=0.0)", "Q3_137537(counts层,n_genes)::HC(retention=0.0)", "Q3_137537(counts层,n_genes)::RGC(retention=0.0)", "Q3_137537(counts层,n_genes)::Microglia(retention=0.0)", "Q3_137537(total_counts轴)::Cone(retention=0.0)", "Q3_137537(total_counts轴)::HC(retention=0.0)", "Q3_137537(total_counts轴)::RGC(retention=0.0)", "Q3_137537(total_counts轴)::Microglia(retention=0.0)", "Q4_148077(n_genes代理)::Rod(retention=0.0)", "Q4_148077(n_genes代理)::Cone(retention=0.0)", "Q4_148077(n_genes代理)::BC(retention=0.0)", "Q4_148077(n_genes代理)::HC(retention=0.0)", "Q4_148077(n_genes代理)::RGC(retention=0.0)", "Q4_148077(n_genes代理)::Microglia(retention=0.0)", "Q4_148077(n_genes代理)::Astrocyte(retention=0.0)", "Q6_sub100k(nFeature_RNA)::Corneal Endothelium(retention=0.0)"], "rows_no_anchor": ["retina::RPE (Q3/Q4 无该标签)", "面板 choroid/ciliary_body/iris/lens/sclera/trabecular_meshwork/optic_nerve/RPE/lacrimal/fetal: 盘上无带类标签 counts 锚点(或无 markers_local_lib) -> 不可算, 如实登记"], "tier1_rows_top5_any": 11, "tier2_rows_top10_ge3": 0, "tier3_rows_highexpr_only": 11, "tau_median_overall": 0.8003500875218805, "top5_shift_median_overall": 1.0, "top10_shift_median_overall": 1.0}

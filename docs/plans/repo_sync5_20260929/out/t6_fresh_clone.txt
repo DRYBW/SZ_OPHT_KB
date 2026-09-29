@@ -1,0 +1,10 @@
+T6-PASS
+clone OK HEAD match=True (3456c43)
+py_compile: files=258 fails=0 []
+gates-in-clone: T1=PASS T3=PASS T4=PASS
+verify_repro in clone: PASS 41/41 (REPRO PASS: 41/41 例 top5 逐位全等)
+git fsck rc=0 out=clean
+tracked files clone=2965 staging=2965 match=True
+tmpdir=/tmp/rs5_t6_x5yfrwqq cleaned=False
+
+注：本件为 amend 前克隆运行记录；最终 commit sha 因证据入册的哈希递归不可自含，权威 sha 以看板 summary 回传为准（REPOSYNC5_COMPLETED 三节-0 同型披露）。缓解=终态复跑门电池 6/6 PASS + tracked 对账全等 + 克隆 HEAD 与 staging HEAD 逐字一致。

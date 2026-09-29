@@ -1,0 +1,42 @@
+{
+ "T1": {
+  "pass": true,
+  "violations": [],
+  "compv1_leak": []
+ },
+ "T2": {
+  "pass": true,
+  "files_compared": 154,
+  "changed": []
+ },
+ "T3": {
+  "pass": true,
+  "engine_scan_zero": true,
+  "cjk_strict_hits": [],
+  "cjk_strict_count": 0
+ },
+ "T4": {
+  "pass": true,
+  "write_hard_files": [],
+  "hard_categories": {},
+  "advisory": 38,
+  "inventory_hard": []
+ },
+ "T5": {
+  "pass": true,
+  "note": "tests/verify_repro.py @ training-venv(锁版 st6.0.0/torch2.13.0/tf5.13.1), db=本地 Release 预置件 RAG_SLIM_V242, systemd-run MemoryMax=8G 峰值 6.1G"
+ },
+ "T6": {
+  "pass": true,
+  "evidence": "/home/ubuntu/EYEKB_REPO_STAGING_RS3_20260928/docs/plans/repo_sync5_20260929/out/t6_fresh_clone.txt"
+ },
+ "T7": {
+  "pass": true,
+  "machine_check": [],
+  "human_review_note": "4 件 masked 再生=rs5_wiki_mask.py 可复跑；QUEUE/SYNC_NOTE/BRIEF5/composition/drsc/seurat/comp_prior 逐件人查记录=本件+COMPLETED 表"
+ },
+ "T8": {
+  "pass": true,
+  "evidence": "/home/ubuntu/EYEKB_REPO_STAGING_RS3_20260928/docs/plans/repo_sync5_20260929/out/t8_topology.txt"
+ }
+}

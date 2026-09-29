@@ -1,0 +1,177 @@
+[
+ {
+  "dataset": "Q1_Lukowski2019",
+  "page": "retina",
+  "total_cells": 19694,
+  "n_flagged": 4,
+  "face_rows": 10,
+  "flag_pct": 40.0,
+  "reverseQC": "TRIGGER(>20%)",
+  "flagged": [
+   "Rod 62.1% vs [22,58]",
+   "BC 10.5% vs [12,33]",
+   "AC 1.4% vs [6,28]",
+   "HC 0.0% vs [1,8]"
+  ],
+  "off_face": [
+   "OTHER 18.8%"
+  ],
+  "meta": "E1 人正常成人视网膜 (作者注释真值); snRNA"
+ },
+ {
+  "dataset": "Q2_GSE155288",
+  "page": "retina",
+  "total_cells": 92385,
+  "n_flagged": 4,
+  "face_rows": 10,
+  "flag_pct": 40.0,
+  "reverseQC": "TRIGGER(>20%)",
+  "flagged": [
+   "AC 2.4% vs [6,28]",
+   "HC 0.7% vs [1,8]",
+   "MG 27.5% vs [3,12]",
+   "Micro 1.8% vs [0,1]"
+  ],
+  "off_face": [
+   "Pericytes 1.0%",
+   "Endothelium 0.4%"
+  ],
+  "meta": "E1 人正常成人视网膜 (作者注释真值)"
+ },
+ {
+  "dataset": "Q3",
+  "page": "retina",
+  "total_cells": 20091,
+  "n_flagged": 3,
+  "face_rows": 10,
+  "flag_pct": 30.0,
+  "reverseQC": "TRIGGER(>20%)",
+  "flagged": [
+   "AC 2.5% vs [6,28]",
+   "HC 0.7% vs [1,8]",
+   "MG 26.2% vs [3,12]"
+  ],
+  "off_face": [
+   "Other_mapped 0.4%"
+  ],
+  "meta": "E1 人正常 (Smart-seq 类, mapped_10class 真值)"
+ },
+ {
+  "dataset": "Q4",
+  "page": "retina",
+  "total_cells": 84982,
+  "n_flagged": 2,
+  "face_rows": 10,
+  "flag_pct": 20.0,
+  "reverseQC": "under",
+  "flagged": [
+   "Rod 8.3% vs [22,58]",
+   "MG 23.4% vs [3,12]"
+  ],
+  "off_face": [
+   "Other_mapped 0.5%"
+  ],
+  "meta": "E1 人正常但 CD73/CD90 分选设计 (mapped_10class)"
+ },
+ {
+  "dataset": "Q5b",
+  "page": "retina",
+  "total_cells": 412419,
+  "n_flagged": 0,
+  "face_rows": 10,
+  "flag_pct": 0.0,
+  "reverseQC": "under",
+  "flagged": [],
+  "off_face": [
+   "glial cell 4.4%"
+  ],
+  "meta": "E2 GSE226108=HRCA resub 域内参照 (cell_type→10 映射)"
+ },
+ {
+  "dataset": "Q7",
+  "page": "retina",
+  "total_cells": 361022,
+  "n_flagged": 5,
+  "face_rows": 10,
+  "flag_pct": 50.0,
+  "reverseQC": "not_counted(disease/发育/循环)",
+  "flagged": [
+   "Rod 9.4% vs [22,58]",
+   "BC 40.9% vs [12,33]",
+   "HC 0.1% vs [1,8]",
+   "RGC 22.6% vs [0,15]",
+   "MG 2.3% vs [3,12]"
+  ],
+  "off_face": [
+   "nan 10.3%",
+   "Endothelial 0.3%",
+   "Pericyte 0.1%"
+  ],
+  "meta": "E4 小鼠 GSE243413 — 物种外, 面不适用 (仅行为记录)"
+ },
+ {
+  "dataset": "Q8",
+  "page": "retina",
+  "total_cells": 226506,
+  "n_flagged": 4,
+  "face_rows": 10,
+  "flag_pct": 40.0,
+  "reverseQC": "not_counted(disease/发育/循环)",
+  "flagged": [
+   "Rod 16.9% vs [22,58]",
+   "BC 9.1% vs [12,33]",
+   "RGC 18.5% vs [0,15]",
+   "MG 2.9% vs [3,12]"
+  ],
+  "off_face": [
+   "retinal progenitor cell 32.5%",
+   "OFFx cell 0.2%"
+  ],
+  "meta": "E5 GSE268630 胎儿 — 发育轴外, 面不适用 (仅行为记录; def.classes 全类合计=226,506=全文件 ✓)"
+ },
+ {
+  "dataset": "Q6_D002_sub100k",
+  "page": "ocular_surface",
+  "total_cells": 100000,
+  "n_flagged": 1,
+  "face_rows": 9,
+  "flag_pct": 11.1,
+  "reverseQC": "not_counted(disease/发育/循环)",
+  "flagged": [
+   "Pericytes 6.5% vs [0,5]"
+  ],
+  "off_face": [],
+  "meta": "E3 眼表 (面构建同源=循环参照, 只 sanity)"
+ },
+ {
+  "dataset": "Q9_GSE165784_demo_v2",
+  "page": "retina",
+  "total_cells": 10069,
+  "n_flagged": 7,
+  "face_rows": 10,
+  "flag_pct": 70.0,
+  "reverseQC": "not_counted(disease/发育/循环)",
+  "flagged": [
+   "Rod 0.0% vs [22,58]",
+   "Cone 0.0% vs [1,7]",
+   "BC 0.0% vs [12,33]",
+   "AC 0.0% vs [6,28]",
+   "HC 0.0% vs [1,8]",
+   "MG 0.0% vs [3,12]",
+   "Micro 17.4% vs [0,1]"
+  ],
+  "off_face": [
+   "Mac_Inflam 10.7%",
+   "Mac_DAMLAM 10.0%",
+   "Mac_MHCII 9.4%",
+   "Mono_Nonclass 8.2%",
+   "Mac_DC 7.8%",
+   "Mac_Tissue 7.0%",
+   "Mono_Classical 6.8%",
+   "Mac_RRD 4.3%",
+   "Myofibroblast 3.7%",
+   "Tcell 3.5%"
+  ],
+  "meta": "E6 PDR/RRD 纤维血管膜 共识注释草稿 (疾病手术材料; usage_scope: 不得对照健康面验收; 展示旗标行为用)"
+ }
+]

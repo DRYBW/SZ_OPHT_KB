@@ -1,0 +1,20 @@
+dataset                flag face  rate%  reverseQC
+Q1_Lukowski2019           4   10   40.0  TRIGGER(>20%)
+      flags: Rod 62.1% vs [22,58]; BC 10.5% vs [12,33]; AC 1.4% vs [6,28]; HC 0.0% vs [1,8]
+Q2_GSE155288              4   10   40.0  TRIGGER(>20%)
+      flags: AC 2.4% vs [6,28]; HC 0.7% vs [1,8]; MG 27.5% vs [3,12]; Micro 1.8% vs [0,1]
+Q3                        3   10   30.0  TRIGGER(>20%)
+      flags: AC 2.5% vs [6,28]; HC 0.7% vs [1,8]; MG 26.2% vs [3,12]
+Q4                        2   10   20.0  under
+      flags: Rod 8.3% vs [22,58]; MG 23.4% vs [3,12]
+Q5b                       0   10    0.0  under
+      flags: -
+Q7                        5   10   50.0  not_counted(disease/发育/循环)
+      flags: Rod 9.4% vs [22,58]; BC 40.9% vs [12,33]; HC 0.1% vs [1,8]; RGC 22.6% vs [0,15]; MG 2.3% vs [3,12]
+Q8                        4   10   40.0  not_counted(disease/发育/循环)
+      flags: Rod 16.9% vs [22,58]; BC 9.1% vs [12,33]; RGC 18.5% vs [0,15]; MG 2.9% vs [3,12]
+Q6_D002_sub100k           1    9   11.1  not_counted(disease/发育/循环)
+      flags: Pericytes 6.5% vs [0,5]
+Q9_GSE165784_demo_v2      7   10   70.0  not_counted(disease/发育/循环)
+      flags: Rod 0.0% vs [22,58]; Cone 0.0% vs [1,7]; BC 0.0% vs [12,33]; AC 0.0% vs [6,28]; HC 0.0% vs [1,8]; MG 0.0% vs [3,12]; Micro 17.4% vs [0,1]
+md written: 14757 10840

@@ -1,0 +1,117 @@
+dataset	page	row	pct	low	high	status	in_scope	note
+Q1_Lukowski2019	retina	Rod	62.15	22	58	FLAG_ABOVE	yes	E1 人正常成人视网膜 (作者注释真值); snRNA
+Q1_Lukowski2019	retina	Cone	2.96	1	7	in_range	yes	E1 人正常成人视网膜 (作者注释真值); snRNA
+Q1_Lukowski2019	retina	BC	10.51	12	33	FLAG_BELOW	yes	E1 人正常成人视网膜 (作者注释真值); snRNA
+Q1_Lukowski2019	retina	AC	1.43	6	28	FLAG_BELOW	yes	E1 人正常成人视网膜 (作者注释真值); snRNA
+Q1_Lukowski2019	retina	HC	0.0	1	8	FLAG_BELOW	yes	E1 人正常成人视网膜 (作者注释真值); snRNA
+Q1_Lukowski2019	retina	RGC	0.32	0	15	in_range	yes	E1 人正常成人视网膜 (作者注释真值); snRNA
+Q1_Lukowski2019	retina	MG	3.11	3	12	in_range	yes	E1 人正常成人视网膜 (作者注释真值); snRNA
+Q1_Lukowski2019	retina	Astro	0.0	0	2	in_range	yes	E1 人正常成人视网膜 (作者注释真值); snRNA
+Q1_Lukowski2019	retina	Micro	0.72	0	1	in_range	yes	E1 人正常成人视网膜 (作者注释真值); snRNA
+Q1_Lukowski2019	retina	RPE	0.0	0	1	in_range	yes	E1 人正常成人视网膜 (作者注释真值); snRNA
+Q1_Lukowski2019	retina	OFF_FACE::OTHER	18.81			off_face_identity	yes	面外身份 — unexpected 披露, 非注释错误
+Q2_GSE155288	retina	Rod	30.01	22	58	in_range	yes	E1 人正常成人视网膜 (作者注释真值)
+Q2_GSE155288	retina	Cone	2.1	1	7	in_range	yes	E1 人正常成人视网膜 (作者注释真值)
+Q2_GSE155288	retina	BC	32.61	12	33	in_range	yes	E1 人正常成人视网膜 (作者注释真值)
+Q2_GSE155288	retina	AC	2.41	6	28	FLAG_BELOW	yes	E1 人正常成人视网膜 (作者注释真值)
+Q2_GSE155288	retina	HC	0.69	1	8	FLAG_BELOW	yes	E1 人正常成人视网膜 (作者注释真值)
+Q2_GSE155288	retina	RGC	0.63	0	15	in_range	yes	E1 人正常成人视网膜 (作者注释真值)
+Q2_GSE155288	retina	MG	27.51	3	12	FLAG_ABOVE	yes	E1 人正常成人视网膜 (作者注释真值)
+Q2_GSE155288	retina	Astro	0.79	0	2	in_range	yes	E1 人正常成人视网膜 (作者注释真值)
+Q2_GSE155288	retina	Micro	1.83	0	1	FLAG_ABOVE	yes	E1 人正常成人视网膜 (作者注释真值)
+Q2_GSE155288	retina	RPE	0.0	0	1	in_range	yes	E1 人正常成人视网膜 (作者注释真值)
+Q2_GSE155288	retina	OFF_FACE::Pericytes	0.97			off_face_identity	yes	面外身份 — unexpected 披露, 非注释错误
+Q2_GSE155288	retina	OFF_FACE::Endothelium	0.45			off_face_identity	yes	面外身份 — unexpected 披露, 非注释错误
+Q3	retina	Rod	45.52	22	58	in_range	yes	E1 人正常 (Smart-seq 类, mapped_10class 真值)
+Q3	retina	Cone	1.05	1	7	in_range	yes	E1 人正常 (Smart-seq 类, mapped_10class 真值)
+Q3	retina	BC	15.7	12	33	in_range	yes	E1 人正常 (Smart-seq 类, mapped_10class 真值)
+Q3	retina	AC	2.47	6	28	FLAG_BELOW	yes	E1 人正常 (Smart-seq 类, mapped_10class 真值)
+Q3	retina	HC	0.73	1	8	FLAG_BELOW	yes	E1 人正常 (Smart-seq 类, mapped_10class 真值)
+Q3	retina	RGC	7.54	0	15	in_range	yes	E1 人正常 (Smart-seq 类, mapped_10class 真值)
+Q3	retina	MG	26.22	3	12	FLAG_ABOVE	yes	E1 人正常 (Smart-seq 类, mapped_10class 真值)
+Q3	retina	Astro	0.04	0	2	in_range	yes	E1 人正常 (Smart-seq 类, mapped_10class 真值)
+Q3	retina	Micro	0.31	0	1	in_range	yes	E1 人正常 (Smart-seq 类, mapped_10class 真值)
+Q3	retina	RPE	0.0	0	1	in_range	yes	E1 人正常 (Smart-seq 类, mapped_10class 真值)
+Q3	retina	OFF_FACE::Other_mapped	0.42			off_face_identity	yes	面外身份 — unexpected 披露, 非注释错误
+Q4	retina	Rod	8.32	22	58	FLAG_BELOW	yes	E1 人正常但 CD73/CD90 分选设计 (mapped_10class)
+Q4	retina	Cone	2.35	1	7	in_range	yes	E1 人正常但 CD73/CD90 分选设计 (mapped_10class)
+Q4	retina	BC	30.25	12	33	in_range	yes	E1 人正常但 CD73/CD90 分选设计 (mapped_10class)
+Q4	retina	AC	16.25	6	28	in_range	yes	E1 人正常但 CD73/CD90 分选设计 (mapped_10class)
+Q4	retina	HC	3.37	1	8	in_range	yes	E1 人正常但 CD73/CD90 分选设计 (mapped_10class)
+Q4	retina	RGC	13.42	0	15	in_range	yes	E1 人正常但 CD73/CD90 分选设计 (mapped_10class)
+Q4	retina	MG	23.41	3	12	FLAG_ABOVE	yes	E1 人正常但 CD73/CD90 分选设计 (mapped_10class)
+Q4	retina	Astro	1.35	0	2	in_range	yes	E1 人正常但 CD73/CD90 分选设计 (mapped_10class)
+Q4	retina	Micro	0.79	0	1	in_range	yes	E1 人正常但 CD73/CD90 分选设计 (mapped_10class)
+Q4	retina	RPE	0.0	0	1	in_range	yes	E1 人正常但 CD73/CD90 分选设计 (mapped_10class)
+Q4	retina	OFF_FACE::Other_mapped	0.48			off_face_identity	yes	面外身份 — unexpected 披露, 非注释错误
+Q5b	retina	Rod	26.12	22	58	in_range	yes	E2 GSE226108=HRCA resub 域内参照 (cell_type→10 映射)
+Q5b	retina	Cone	5.64	1	7	in_range	yes	E2 GSE226108=HRCA resub 域内参照 (cell_type→10 映射)
+Q5b	retina	BC	25.72	12	33	in_range	yes	E2 GSE226108=HRCA resub 域内参照 (cell_type→10 映射)
+Q5b	retina	AC	27.4	6	28	in_range	yes	E2 GSE226108=HRCA resub 域内参照 (cell_type→10 映射)
+Q5b	retina	HC	3.56	1	8	in_range	yes	E2 GSE226108=HRCA resub 域内参照 (cell_type→10 映射)
+Q5b	retina	RGC	2.82	0	15	in_range	yes	E2 GSE226108=HRCA resub 域内参照 (cell_type→10 映射)
+Q5b	retina	MG	4.18	3	12	in_range	yes	E2 GSE226108=HRCA resub 域内参照 (cell_type→10 映射)
+Q5b	retina	Astro	0.14	0	2	in_range	yes	E2 GSE226108=HRCA resub 域内参照 (cell_type→10 映射)
+Q5b	retina	Micro	0.03	0	1	in_range	yes	E2 GSE226108=HRCA resub 域内参照 (cell_type→10 映射)
+Q5b	retina	RPE	0.02	0	1	in_range	yes	E2 GSE226108=HRCA resub 域内参照 (cell_type→10 映射)
+Q5b	retina	OFF_FACE::glial cell	4.37			off_face_identity	yes	面外身份 — unexpected 披露, 非注释错误
+Q7	retina	Rod	9.44	22	58	FLAG_BELOW	no	E4 小鼠 GSE243413 — 物种外, 面不适用 (仅行为记录)
+Q7	retina	Cone	1.34	1	7	in_range	no	E4 小鼠 GSE243413 — 物种外, 面不适用 (仅行为记录)
+Q7	retina	BC	40.91	12	33	FLAG_ABOVE	no	E4 小鼠 GSE243413 — 物种外, 面不适用 (仅行为记录)
+Q7	retina	AC	12.2	6	28	in_range	no	E4 小鼠 GSE243413 — 物种外, 面不适用 (仅行为记录)
+Q7	retina	HC	0.06	1	8	FLAG_BELOW	no	E4 小鼠 GSE243413 — 物种外, 面不适用 (仅行为记录)
+Q7	retina	RGC	22.59	0	15	FLAG_ABOVE	no	E4 小鼠 GSE243413 — 物种外, 面不适用 (仅行为记录)
+Q7	retina	MG	2.27	3	12	FLAG_BELOW	no	E4 小鼠 GSE243413 — 物种外, 面不适用 (仅行为记录)
+Q7	retina	Astro	0.0	0	2	in_range	no	E4 小鼠 GSE243413 — 物种外, 面不适用 (仅行为记录)
+Q7	retina	Micro	0.45	0	1	in_range	no	E4 小鼠 GSE243413 — 物种外, 面不适用 (仅行为记录)
+Q7	retina	RPE	0.11	0	1	in_range	no	E4 小鼠 GSE243413 — 物种外, 面不适用 (仅行为记录)
+Q7	retina	OFF_FACE::nan	10.27			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q7	retina	OFF_FACE::Endothelial	0.28			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q7	retina	OFF_FACE::Pericyte	0.08			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q8	retina	Rod	16.85	22	58	FLAG_BELOW	no	E5 GSE268630 胎儿 — 发育轴外, 面不适用 (仅行为记录; def.classes 全类合计=226,506=全文件 ✓)
+Q8	retina	Cone	4.12	1	7	in_range	no	E5 GSE268630 胎儿 — 发育轴外, 面不适用 (仅行为记录; def.classes 全类合计=226,506=全文件 ✓)
+Q8	retina	BC	9.05	12	33	FLAG_BELOW	no	E5 GSE268630 胎儿 — 发育轴外, 面不适用 (仅行为记录; def.classes 全类合计=226,506=全文件 ✓)
+Q8	retina	AC	11.65	6	28	in_range	no	E5 GSE268630 胎儿 — 发育轴外, 面不适用 (仅行为记录; def.classes 全类合计=226,506=全文件 ✓)
+Q8	retina	HC	4.21	1	8	in_range	no	E5 GSE268630 胎儿 — 发育轴外, 面不适用 (仅行为记录; def.classes 全类合计=226,506=全文件 ✓)
+Q8	retina	RGC	18.54	0	15	FLAG_ABOVE	no	E5 GSE268630 胎儿 — 发育轴外, 面不适用 (仅行为记录; def.classes 全类合计=226,506=全文件 ✓)
+Q8	retina	MG	2.89	3	12	FLAG_BELOW	no	E5 GSE268630 胎儿 — 发育轴外, 面不适用 (仅行为记录; def.classes 全类合计=226,506=全文件 ✓)
+Q8	retina	Astro	0.0	0	2	in_range	no	E5 GSE268630 胎儿 — 发育轴外, 面不适用 (仅行为记录; def.classes 全类合计=226,506=全文件 ✓)
+Q8	retina	Micro	0.0	0	1	in_range	no	E5 GSE268630 胎儿 — 发育轴外, 面不适用 (仅行为记录; def.classes 全类合计=226,506=全文件 ✓)
+Q8	retina	RPE	0.0	0	1	in_range	no	E5 GSE268630 胎儿 — 发育轴外, 面不适用 (仅行为记录; def.classes 全类合计=226,506=全文件 ✓)
+Q8	retina	OFF_FACE::retinal progenitor cell	32.48			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q8	retina	OFF_FACE::OFFx cell	0.21			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q6_D002_sub100k	ocular_surface	Corneal Endothelium	0.07	0	1	in_range	yes	E3 眼表 (面构建同源=循环参照, 只 sanity)
+Q6_D002_sub100k	ocular_surface	Endothelium	5.75	0	9	in_range	yes	E3 眼表 (面构建同源=循环参照, 只 sanity)
+Q6_D002_sub100k	ocular_surface	Epithelium	43.36	7	71	in_range	yes	E3 眼表 (面构建同源=循环参照, 只 sanity)
+Q6_D002_sub100k	ocular_surface	Fibroblasts	39.91	12	45	in_range	yes	E3 眼表 (面构建同源=循环参照, 只 sanity)
+Q6_D002_sub100k	ocular_surface	Immune Cells	1.72	0	3	in_range	yes	E3 眼表 (面构建同源=循环参照, 只 sanity)
+Q6_D002_sub100k	ocular_surface	Melanocytes	1.23	0	3	in_range	yes	E3 眼表 (面构建同源=循环参照, 只 sanity)
+Q6_D002_sub100k	ocular_surface	Pericytes	6.5	0	5	FLAG_ABOVE	yes	E3 眼表 (面构建同源=循环参照, 只 sanity)
+Q6_D002_sub100k	ocular_surface	Schwann Cells	0.98	0	2	in_range	yes	E3 眼表 (面构建同源=循环参照, 只 sanity)
+Q6_D002_sub100k	ocular_surface	Smooth Muscle Cells	0.48	0	1	in_range	yes	E3 眼表 (面构建同源=循环参照, 只 sanity)
+Q9_GSE165784_demo_v2	retina	Rod	0.0	22	58	FLAG_BELOW	no	E6 PDR/RRD 纤维血管膜 共识注释草稿 (疾病手术材料; usage_scope: 不得对照健康面验收; 展示旗标行为用)
+Q9_GSE165784_demo_v2	retina	Cone	0.0	1	7	FLAG_BELOW	no	E6 PDR/RRD 纤维血管膜 共识注释草稿 (疾病手术材料; usage_scope: 不得对照健康面验收; 展示旗标行为用)
+Q9_GSE165784_demo_v2	retina	BC	0.0	12	33	FLAG_BELOW	no	E6 PDR/RRD 纤维血管膜 共识注释草稿 (疾病手术材料; usage_scope: 不得对照健康面验收; 展示旗标行为用)
+Q9_GSE165784_demo_v2	retina	AC	0.0	6	28	FLAG_BELOW	no	E6 PDR/RRD 纤维血管膜 共识注释草稿 (疾病手术材料; usage_scope: 不得对照健康面验收; 展示旗标行为用)
+Q9_GSE165784_demo_v2	retina	HC	0.0	1	8	FLAG_BELOW	no	E6 PDR/RRD 纤维血管膜 共识注释草稿 (疾病手术材料; usage_scope: 不得对照健康面验收; 展示旗标行为用)
+Q9_GSE165784_demo_v2	retina	RGC	0.0	0	15	in_range	no	E6 PDR/RRD 纤维血管膜 共识注释草稿 (疾病手术材料; usage_scope: 不得对照健康面验收; 展示旗标行为用)
+Q9_GSE165784_demo_v2	retina	MG	0.0	3	12	FLAG_BELOW	no	E6 PDR/RRD 纤维血管膜 共识注释草稿 (疾病手术材料; usage_scope: 不得对照健康面验收; 展示旗标行为用)
+Q9_GSE165784_demo_v2	retina	Astro	0.0	0	2	in_range	no	E6 PDR/RRD 纤维血管膜 共识注释草稿 (疾病手术材料; usage_scope: 不得对照健康面验收; 展示旗标行为用)
+Q9_GSE165784_demo_v2	retina	Micro	17.4	0	1	FLAG_ABOVE	no	E6 PDR/RRD 纤维血管膜 共识注释草稿 (疾病手术材料; usage_scope: 不得对照健康面验收; 展示旗标行为用)
+Q9_GSE165784_demo_v2	retina	RPE	0.0	0	1	in_range	no	E6 PDR/RRD 纤维血管膜 共识注释草稿 (疾病手术材料; usage_scope: 不得对照健康面验收; 展示旗标行为用)
+Q9_GSE165784_demo_v2	retina	OFF_FACE::Mac_Inflam	10.73			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q9_GSE165784_demo_v2	retina	OFF_FACE::Mac_DAMLAM	10.01			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q9_GSE165784_demo_v2	retina	OFF_FACE::Mac_MHCII	9.42			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q9_GSE165784_demo_v2	retina	OFF_FACE::Mono_Nonclass	8.24			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q9_GSE165784_demo_v2	retina	OFF_FACE::Mac_DC	7.85			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q9_GSE165784_demo_v2	retina	OFF_FACE::Mac_Tissue	7.0			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q9_GSE165784_demo_v2	retina	OFF_FACE::Mono_Classical	6.82			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q9_GSE165784_demo_v2	retina	OFF_FACE::Mac_RRD	4.3			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q9_GSE165784_demo_v2	retina	OFF_FACE::Myofibroblast	3.69			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q9_GSE165784_demo_v2	retina	OFF_FACE::Tcell	3.52			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q9_GSE165784_demo_v2	retina	OFF_FACE::Proliferating	3.12			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q9_GSE165784_demo_v2	retina	OFF_FACE::Endo_vascular	2.68			off_face_identity	no	面含该身份但无区间(no_evidence 披露行)
+Q9_GSE165784_demo_v2	retina	OFF_FACE::Pericyte_vascular	2.48			off_face_identity	no	面含该身份但无区间(no_evidence 披露行)
+Q9_GSE165784_demo_v2	retina	OFF_FACE::MG(候选)	1.62			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q9_GSE165784_demo_v2	retina	OFF_FACE::Plasma	0.61			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误
+Q9_GSE165784_demo_v2	retina	OFF_FACE::pDC	0.52			off_face_identity	no	面外身份 — unexpected 披露, 非注释错误

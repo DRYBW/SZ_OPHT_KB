@@ -1,0 +1,40 @@
+panel	dataset	cls	status	n_class_cells	n_draws	alloc	retention	median_depth_class	median_depth_global	median_top5_shift_noise	median_top10_shift_noise	median_kendall_tau_noise	depth_effect_above_noise_flag	median_top5_shift	median_top10_shift	p90_top10_shift	median_kendall_tau	min_kendall_tau	median_hi_expr_top5_shift	tier1_top5_any	tier2_top10_ge3	tier3_highexpr_only	stored_lib_top10_control_survival	stored_lib_top10_matched_survival_median
+retina	Q3_137537(counts层,n_genes)	Rod	ok	9145	50.0	155;152;149;154;153;152;153;152;152;152	0.1666	426.0	495.0	1.0	1.0	0.7336121134531396	False	1.0	1.0	1.1000000000000014	0.7327551887971993	0.719134783695924	1.0	True	False	True	0.4	0.4
+retina	Q3_137537(counts层,n_genes)	Cone	depth_unmatchable	211			0.0	721.0	495.0															
+retina	Q3_137537(counts层,n_genes)	BC	ok	3155	50.0	121;119;117;121;120;119;120;119;119;120	0.3788	770.0	495.0	0.0	0.0	0.8290766441610402	True	1.0	1.0	2.0	0.7913354588647162	0.7831465366341586	1.0	True	False	True	0.2	0.2
+retina	Q3_137537(counts层,n_genes)	HC	depth_unmatchable	146			0.0	1147.0	495.0															
+retina	Q3_137537(counts层,n_genes)	AC	ok	497	50.0	8;8;8;8;8;8;8;8;8;8	0.161	767.0	495.0	1.0	1.0	0.6233367091772943	False	0.0	1.0	2.0	0.5796250312578144	0.5443560890222555	0.0	False	False	False	0.0	0.0
+retina	Q3_137537(counts层,n_genes)	RGC	depth_unmatchable	1514			0.0	319.0	495.0															
+retina	Q3_137537(counts层,n_genes)	MG	ok	5267	50.0	293;288;283;292;289;288;289;288;288;289	0.5481	757.0	495.0	0.0	0.0	0.9269887471867967	False	0.0	0.0	0.0	0.8574581145286322	0.8521345336334083	0.0	False	False	False	0.6	0.6
+retina	Q3_137537(counts层,n_genes)	Microglia	depth_unmatchable	62			0.0	1258.0	495.0															
+retina	Q3_137537(counts层,n_genes)	Astrocyte	too_few_cells	9																				
+retina	Q3_137537(counts层,n_genes)	RPE	too_few_cells	0																				
+retina	Q3_137537(total_counts轴)	Rod	ok	9145	50.0	188;189;193;189;189;190;190;190;190;189	0.2074	500.0	613.0	0.0	1.0	0.7628904726181545	False	1.0	1.0	1.0	0.7479187296824206	0.7374211052763191	1.0	True	False	True	0.4	0.4
+retina	Q3_137537(total_counts轴)	Cone	depth_unmatchable	211			0.0	870.0	613.0															
+retina	Q3_137537(total_counts轴)	BC	ok	3155	50.0	132;132;135;132;133;133;133;133;133;133	0.4212	919.0	613.0	0.0	0.0	0.8425396349087271	True	1.0	1.0	2.0	0.8200569773728426	0.8106783452537116	1.0	True	False	True	0.2	0.2
+retina	Q3_137537(total_counts轴)	HC	depth_unmatchable	146			0.0	1482.0	613.0															
+retina	Q3_137537(total_counts轴)	AC	ok	497	50.0	7;7;8;7;7;8;8;7;8;7	0.1489	896.0	613.0	1.0	1.0	0.6175463865966492	False	1.0	1.0	2.0	0.5936420355088772	0.5707659414853714	1.0	True	False	True	0.0	0.0
+retina	Q3_137537(total_counts轴)	RGC	depth_unmatchable	1514			0.0	377.0	613.0															
+retina	Q3_137537(total_counts轴)	MG	ok	5267	50.0	107;108;110;108;108;108;108;108;108;108	0.2052	1243.0	613.0	0.0	0.0	0.8502113028257064	False	0.0	0.0	0.0	0.8093647161790447	0.8021560390097524	0.0	False	False	False	0.6	0.6
+retina	Q3_137537(total_counts轴)	Microglia	depth_unmatchable	62			0.0	2403.5	613.0															
+retina	Q3_137537(total_counts轴)	Astrocyte	too_few_cells	9																				
+retina	Q3_137537(total_counts轴)	RPE	too_few_cells	0																				
+retina	Q4_148077(n_genes代理)	Rod	depth_unmatchable	7073			0.0	1194.0	1308.0															
+retina	Q4_148077(n_genes代理)	Cone	depth_unmatchable	1997			0.0	1308.0	1308.0															
+retina	Q4_148077(n_genes代理)	BC	depth_unmatchable	25708			0.0	1082.0	1308.0															
+retina	Q4_148077(n_genes代理)	HC	depth_unmatchable	2868			0.0	1057.0	1308.0															
+retina	Q4_148077(n_genes代理)	AC	ok	13807	50.0	87;88;87;87;87;88;87;87;87;87	0.0632	1604.0	1308.0	0.0	0.0	0.7781585895675572	True	1.0	1.0	1.0	0.765122410710978	0.7542000954491902	1.0	True	False	True	0.4	0.2
+retina	Q4_148077(n_genes代理)	RGC	depth_unmatchable	11404			0.0	5817.5	1308.0															
+retina	Q4_148077(n_genes代理)	MG	ok	19896	50.0	6;6;6;6;6;6;6;6;6;6	0.003	1275.0	1308.0	1.0	1.0	0.7211976433032172	False	1.0	1.0	1.0	0.7031753291521572	0.6791153609652122	1.0	True	False	True	0.4	0.4
+retina	Q4_148077(n_genes代理)	Microglia	depth_unmatchable	671			0.0	1431.0	1308.0															
+retina	Q4_148077(n_genes代理)	Astrocyte	depth_unmatchable	1149			0.0	1218.0	1308.0															
+retina	Q4_148077(n_genes代理)	RPE	too_few_cells	0																				
+ocular_surface	Q6_sub100k(nFeature_RNA)	Epithelium	ok	43363	50.0	1567;1572;1569;1565;1573;1568;1568;1570;1570;1568	0.3618	3107.0	2411.0	0.0	0.0	0.9607489372343085	False	0.0	0.0	0.0	0.9379213553388347	0.9323708427106777	0.0	False	False	False		
+ocular_surface	Q6_sub100k(nFeature_RNA)	Fibroblasts	ok	39910	50.0	1921;1926;1922;1918;1927;1921;1921;1923;1924;1921	0.4817	2105.0	2411.0	0.0	0.0	0.9436096524131032	True	0.0	2.0	2.0	0.9226166541635408	0.9188277069267315	0.0	False	False	False		
+ocular_surface	Q6_sub100k(nFeature_RNA)	Immune Cells	ok	1715	50.0	8;9;9;8;9;8;8;9;9;8	0.0496	1416.0	2411.0	1.0	1.0	0.7732170542635659	True	2.0	2.0	3.0	0.7736996749187297	0.7546649162290572	2.0	True	False	True		
+ocular_surface	Q6_sub100k(nFeature_RNA)	Endothelium	ok	5745	50.0	280;281;281;280;281;280;280;281;281;280	0.4883	1728.0	2411.0	0.0	0.5	0.9362138952288621	False	1.0	0.0	1.0	0.9145716429107278	0.9090227556889222	1.0	True	False	True		
+ocular_surface	Q6_sub100k(nFeature_RNA)	Pericytes	ok	6504	50.0	61;62;62;61;62;61;61;62;62;61	0.0946	1645.0	2411.0	0.5	0.0	0.8411815453863466	False	1.0	0.0	1.0	0.8209617404351088	0.8115226306576644	1.0	True	False	True		
+ocular_surface	Q6_sub100k(nFeature_RNA)	Smooth Muscle Cells	ok	481	50.0	18;18;18;18;18;18;18;18;18;18	0.3742	2303.0	2411.0	0.0	0.0	0.870086271567892	False	0.0	0.0	1.0	0.866088272068017	0.8567446861715429	0.0	False	False	False		
+ocular_surface	Q6_sub100k(nFeature_RNA)	Corneal Endothelium	depth_unmatchable	75			0.0	1849.0	2411.0															
+ocular_surface	Q6_sub100k(nFeature_RNA)	Melanocytes	ok	1230	50.0	21;22;22;21;22;21;21;22;22;21	0.1748	2027.5	2411.0	0.0	0.0	0.8416035258814702	True	0.0	1.0	1.0	0.8376746686671668	0.8250582645661415	0.0	False	False	False		
+ocular_surface	Q6_sub100k(nFeature_RNA)	Schwann Cells	ok	977	50.0	12;13;13;12;13;12;12;13;13;12	0.1279	1297.0	2411.0	0.5	1.0	0.7576233670137558	False	1.0	1.0	1.0	0.7555420966304949	0.7423205801450362	1.0	True	False	True		
