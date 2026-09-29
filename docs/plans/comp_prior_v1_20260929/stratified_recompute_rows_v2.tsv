@@ -1,0 +1,92 @@
+dataset	rule	layer	n	flagged	rate
+Q1_Lukowski2019	R0_v0_pooled	v0	10	4.0	40.0
+Q1_Lukowski2019	R1A_layer_Aonly(PREREG_HEADLINE)	RC1_unsorted_allregion	10	4.0	40.0
+Q1_Lukowski2019	R1B_layer_envelope(post-hoc-sens)	RC1_unsorted_allregion	10	3.0	30.0
+Q1_Lukowski2019	R2_unit|A	RC1_unsorted_allregion|unit=Donor1	10	3.0	30.0
+Q1_Lukowski2019	R2_unit|B	RC1_unsorted_allregion|unit=Donor1	10	2.0	20.0
+Q1_Lukowski2019	R2_unit|A	RC1_unsorted_allregion|unit=Donor2	10	5.0	50.0
+Q1_Lukowski2019	R2_unit|B	RC1_unsorted_allregion|unit=Donor2	10	4.0	40.0
+Q1_Lukowski2019	R2_unit|A	RC1_unsorted_allregion|unit=Donor3	10	4.0	40.0
+Q1_Lukowski2019	R2_unit|B	RC1_unsorted_allregion|unit=Donor3	10	4.0	40.0
+Q1_Lukowski2019	R2_MEAN(A-interval)	3 units	10	4.0	40.0
+Q1_Lukowski2019	R2_MEAN(B-interval)	3 units	10	3.33	33.3
+Q2_GSE155288	R0_v0_pooled	v0	10	4.0	40.0
+Q2_GSE155288	R1A_layer_Aonly(PREREG_HEADLINE)	RC1_unsorted_allregion	10	6.0	60.0
+Q2_GSE155288	R1B_layer_envelope(post-hoc-sens)	RC1_unsorted_allregion	10	4.0	40.0
+Q2_GSE155288	R2_unit|A	RC2_unsorted_central|unit=donor1_M	10	7.0	70.0
+Q2_GSE155288	R2_unit|B	RC2_unsorted_central|unit=donor1_M	10	7.0	70.0
+Q2_GSE155288	R2_unit|A	RC3_unsorted_peripheral|unit=donor1_P	10	6.0	60.0
+Q2_GSE155288	R2_unit|B	RC3_unsorted_peripheral|unit=donor1_P	10	4.0	40.0
+Q2_GSE155288	R2_unit|A	RC2_unsorted_central|unit=donor2_M	10	7.0	70.0
+Q2_GSE155288	R2_unit|B	RC2_unsorted_central|unit=donor2_M	10	7.0	70.0
+Q2_GSE155288	R2_unit|A	RC3_unsorted_peripheral|unit=donor2_P	10	6.0	60.0
+Q2_GSE155288	R2_unit|B	RC3_unsorted_peripheral|unit=donor2_P	10	6.0	60.0
+Q2_GSE155288	R2_MEAN(A-interval)	4 units	10	6.5	65.0
+Q2_GSE155288	R2_MEAN(B-interval)	4 units	10	6.0	60.0
+Q3	R0_v0_pooled	v0	10	3.0	30.0
+Q3	R1A_layer_Aonly(PREREG_HEADLINE)	RC1_unsorted_allregion	10	5.0	50.0
+Q3	R1B_layer_envelope(post-hoc-sens)	RC1_unsorted_allregion	10	3.0	30.0
+Q3	R2_unit|A	RC2_unsorted_central|unit=555_central	10	6.0	60.0
+Q3	R2_unit|B	RC2_unsorted_central|unit=555_central	10	4.0	40.0
+Q3	R2_unit|A	RC3_unsorted_peripheral|unit=555_peripheral	10	7.0	70.0
+Q3	R2_unit|B	RC3_unsorted_peripheral|unit=555_peripheral	10	5.0	50.0
+Q3	R2_unit|A	RC2_unsorted_central|unit=574_central	10	5.0	50.0
+Q3	R2_unit|B	RC2_unsorted_central|unit=574_central	10	4.0	40.0
+Q3	R2_unit|A	RC3_unsorted_peripheral|unit=574_peripheral	10	4.0	40.0
+Q3	R2_unit|B	RC3_unsorted_peripheral|unit=574_peripheral	10	2.0	20.0
+Q3	R2_unit|A	RC2_unsorted_central|unit=607_central	10	5.0	50.0
+Q3	R2_unit|B	RC2_unsorted_central|unit=607_central	10	5.0	50.0
+Q3	R2_unit|A	RC3_unsorted_peripheral|unit=607_peripheral	10	6.0	60.0
+Q3	R2_unit|B	RC3_unsorted_peripheral|unit=607_peripheral	10	4.0	40.0
+Q3	R2_MEAN(A-interval)	6 units	10	5.5	55.0
+Q3	R2_MEAN(B-interval)	6 units	10	4.0	40.0
+Q4	R0_v0_pooled	v0	10	2.0	20.0
+Q4	R1A_layer_Aonly(PREREG_HEADLINE)	RC4_sorted_or_targeted	10	4.0	40.0
+Q4	R1B_layer_envelope(post-hoc-sens)	RC4_sorted_or_targeted	10	1.0	10.0
+Q4	R2_unit|A	RC4_sorted_or_targeted|unit=H1	10	3.0	30.0
+Q4	R2_unit|B	RC4_sorted_or_targeted|unit=H1	10	2.0	20.0
+Q4	R2_unit|A	RC4_sorted_or_targeted|unit=H11	10	6.0	60.0
+Q4	R2_unit|B	RC4_sorted_or_targeted|unit=H11	10	3.0	30.0
+Q4	R2_unit|A	RC4_sorted_or_targeted|unit=H2	10	5.0	50.0
+Q4	R2_unit|B	RC4_sorted_or_targeted|unit=H2	10	4.0	40.0
+Q4	R2_unit|A	RC4_sorted_or_targeted|unit=H3	10	6.0	60.0
+Q4	R2_unit|B	RC4_sorted_or_targeted|unit=H3	10	4.0	40.0
+Q4	R2_unit|A	RC4_sorted_or_targeted|unit=H4	10	4.0	40.0
+Q4	R2_unit|B	RC4_sorted_or_targeted|unit=H4	10	1.0	10.0
+Q4	R2_unit|A	RC4_sorted_or_targeted|unit=H5	10	4.0	40.0
+Q4	R2_unit|B	RC4_sorted_or_targeted|unit=H5	10	2.0	20.0
+Q4	R2_unit|A	RC4_sorted_or_targeted|unit=H9	10	7.0	70.0
+Q4	R2_unit|B	RC4_sorted_or_targeted|unit=H9	10	3.0	30.0
+Q4	R2_MEAN(A-interval)	7 units	10	5.0	50.0
+Q4	R2_MEAN(B-interval)	7 units	10	2.71	27.1
+Q5b	R0_v0_pooled	v0	10	0.0	0.0
+Q5b	R1A_layer_Aonly(PREREG_HEADLINE)	RC1_unsorted_allregion	10	4.0	40.0
+Q5b	R1B_layer_envelope(post-hoc-sens)	RC1_unsorted_allregion	10	1.0	10.0
+Q5b	R2_unit|A	RC4_sorted_or_targeted|unit=D00012_per|NeuN	10	1.0	10.0
+Q5b	R2_unit|B	RC4_sorted_or_targeted|unit=D00012_per|NeuN	10	1.0	10.0
+Q5b	R2_unit|A	RC4_sorted_or_targeted|unit=D17D13_NeuNT|NeuN	10	1.0	10.0
+Q5b	R2_unit|B	RC4_sorted_or_targeted|unit=D17D13_NeuNT|NeuN	10	1.0	10.0
+Q5b	R2_unit|A	RC2_unsorted_central|unit=D19D013_fovea|na	10	4.0	40.0
+Q5b	R2_unit|B	RC2_unsorted_central|unit=D19D013_fovea|na	10	3.0	30.0
+Q5b	R2_unit|A	RC2_unsorted_central|unit=D19D013_macular|na	10	6.0	60.0
+Q5b	R2_unit|B	RC2_unsorted_central|unit=D19D013_macular|na	10	5.0	50.0
+Q5b	R2_unit|A	RC4_sorted_or_targeted|unit=D19D013_per|NeuN	10	2.0	20.0
+Q5b	R2_unit|B	RC4_sorted_or_targeted|unit=D19D013_per|NeuN	10	2.0	20.0
+Q5b	R2_unit|A	RC2_unsorted_central|unit=D19D014_fovea|na	10	4.0	40.0
+Q5b	R2_unit|B	RC2_unsorted_central|unit=D19D014_fovea|na	10	2.0	20.0
+Q5b	R2_unit|A	RC2_unsorted_central|unit=D19D014_macular|na	10	5.0	50.0
+Q5b	R2_unit|B	RC2_unsorted_central|unit=D19D014_macular|na	10	3.0	30.0
+Q5b	R2_unit|A	RC4_sorted_or_targeted|unit=D19D014_per|NeuN	10	2.0	20.0
+Q5b	R2_unit|B	RC4_sorted_or_targeted|unit=D19D014_per|NeuN	10	2.0	20.0
+Q5b	R2_unit|A	RC2_unsorted_central|unit=D19D015_fovea|na	10	5.0	50.0
+Q5b	R2_unit|B	RC2_unsorted_central|unit=D19D015_fovea|na	10	4.0	40.0
+Q5b	R2_unit|A	RC2_unsorted_central|unit=D19D015_macular|na	10	6.0	60.0
+Q5b	R2_unit|B	RC2_unsorted_central|unit=D19D015_macular|na	10	5.0	50.0
+Q5b	R2_unit|A	RC4_sorted_or_targeted|unit=D19D015_per|NeuN	10	4.0	40.0
+Q5b	R2_unit|B	RC4_sorted_or_targeted|unit=D19D015_per|NeuN	10	2.0	20.0
+Q5b	R2_unit|A	RC3_unsorted_peripheral|unit=D19D015_per|na	10	5.0	50.0
+Q5b	R2_unit|B	RC3_unsorted_peripheral|unit=D19D015_per|na	10	1.0	10.0
+Q5b	R2_unit|A	RC2_unsorted_central|unit=D19D016_macular|na	10	3.0	30.0
+Q5b	R2_unit|B	RC2_unsorted_central|unit=D19D016_macular|na	10	1.0	10.0
+Q5b	R2_MEAN(A-interval)	13 units	10	3.69	36.9
+Q5b	R2_MEAN(B-interval)	13 units	10	2.46	24.6

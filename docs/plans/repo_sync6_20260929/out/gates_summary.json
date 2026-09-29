@@ -1,0 +1,44 @@
+{
+ "T1": {
+  "pass": true,
+  "violations": [],
+  "missing_recyclables": [],
+  "comp_prior_v1_files_in_repo": 26
+ },
+ "T2": {
+  "pass": true,
+  "files_compared": 154,
+  "changed": []
+ },
+ "T3": {
+  "pass": true,
+  "engine_scan_zero": true,
+  "cjk_strict_hits": [],
+  "cjk_strict_count": 0
+ },
+ "T4": {
+  "pass": true,
+  "write_hard_files": [],
+  "hard_categories": {},
+  "advisory": 38,
+  "inventory_hard": []
+ },
+ "T5": {
+  "pass": true,
+  "note": "tests/verify_repro.py @ training-venv 锁版, db=本地 Release 预置件 RAG_SLIM_V242, systemd-run --user MemoryMax=8G MemorySwapMax=0 托管 unit=rs6-t5-golden41"
+ },
+ "T6": {
+  "pass": true,
+  "evidence": "/home/ubuntu/EYEKB_REPO_STAGING_RS3_20260928/docs/plans/repo_sync6_20260929/out/t6_fresh_clone.txt"
+ },
+ "T7": {
+  "pass": true,
+  "machine_check": [],
+  "ledger_rows": 36,
+  "human_review_note": "masked 件逐件=ledgers/T7_EXCLUSIONS_RS6.tsv；证据镜像面机器路径=沿 RS3/RS5 先例字节直收豁免登记；BRIEF6/QUEUE=rs6_pathnorm token 化后零残留（t2b 台账）"
+ },
+ "T8": {
+  "pass": true,
+  "evidence": "/home/ubuntu/EYEKB_REPO_STAGING_RS3_20260928/docs/plans/repo_sync6_20260929/out/t8_topology.txt"
+ }
+}

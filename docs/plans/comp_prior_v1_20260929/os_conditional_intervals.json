@@ -1,0 +1,694 @@
+{
+ "card": "t_37a35220",
+ "source": "kb/baselines/ocular_surface.json strata (A级)",
+ "support_gate": "n_units_adult_only>=5 否则 any_region 父行回落",
+ "interval_rule": "low=floor(stratum_iqr_low) high=ceil(stratum_iqr_high)",
+ "region_semantics": "行=类型×tissue_group; 禁跨区套用 (category_note 进面语义)",
+ "groups": {
+  "cornea (含角膜上皮/固有质)": {
+   "Corneal Endothelium": {
+    "n_units": 29,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.0
+    ],
+    "range_pct": [
+     0.0,
+     2.64
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 0
+   },
+   "Endothelium": {
+    "n_units": 29,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     1.35
+    ],
+    "range_pct": [
+     0.0,
+     15.6
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 2
+   },
+   "Epithelium": {
+    "n_units": 29,
+    "median_pct": 63.08,
+    "iqr_pct": [
+     29.31,
+     79.27
+    ],
+    "range_pct": [
+     4.83,
+     99.62
+    ],
+    "support_gate_pass": true,
+    "low_pct": 29,
+    "high_pct": 80
+   },
+   "Fibroblasts": {
+    "n_units": 29,
+    "median_pct": 32.09,
+    "iqr_pct": [
+     14.88,
+     67.25
+    ],
+    "range_pct": [
+     0.0,
+     93.77
+    ],
+    "support_gate_pass": true,
+    "low_pct": 14,
+    "high_pct": 68
+   },
+   "Immune Cells": {
+    "n_units": 29,
+    "median_pct": 0.55,
+    "iqr_pct": [
+     0.31,
+     1.58
+    ],
+    "range_pct": [
+     0.0,
+     9.5
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 2
+   },
+   "Melanocytes": {
+    "n_units": 29,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.71
+    ],
+    "range_pct": [
+     0.0,
+     6.6
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 1
+   },
+   "Pericytes": {
+    "n_units": 29,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.25
+    ],
+    "range_pct": [
+     0.0,
+     3.72
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 1
+   },
+   "Schwann Cells": {
+    "n_units": 29,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.0
+    ],
+    "range_pct": [
+     0.0,
+     3.31
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 0
+   },
+   "Smooth Muscle Cells": {
+    "n_units": 29,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.0
+    ],
+    "range_pct": [
+     0.0,
+     0.64
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 0
+   }
+  },
+  "corneal endothelium (单独层, 仅 404 细胞)": {
+   "Corneal Endothelium": {
+    "n_units": 2,
+    "median_pct": 100.0,
+    "iqr_pct": [
+     100.0,
+     100.0
+    ],
+    "range_pct": [
+     100.0,
+     100.0
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Endothelium": {
+    "n_units": 2,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.0
+    ],
+    "range_pct": [
+     0.0,
+     0.0
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Epithelium": {
+    "n_units": 2,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.0
+    ],
+    "range_pct": [
+     0.0,
+     0.0
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Fibroblasts": {
+    "n_units": 2,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.0
+    ],
+    "range_pct": [
+     0.0,
+     0.0
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Immune Cells": {
+    "n_units": 2,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.0
+    ],
+    "range_pct": [
+     0.0,
+     0.0
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Melanocytes": {
+    "n_units": 2,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.0
+    ],
+    "range_pct": [
+     0.0,
+     0.0
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Pericytes": {
+    "n_units": 2,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.0
+    ],
+    "range_pct": [
+     0.0,
+     0.0
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Schwann Cells": {
+    "n_units": 2,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.0
+    ],
+    "range_pct": [
+     0.0,
+     0.0
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Smooth Muscle Cells": {
+    "n_units": 2,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.0
+    ],
+    "range_pct": [
+     0.0,
+     0.0
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   }
+  },
+  "corneo-scleral junction (limbus 区)": {
+   "Corneal Endothelium": {
+    "n_units": 22,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.0
+    ],
+    "range_pct": [
+     0.0,
+     0.0
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 0
+   },
+   "Endothelium": {
+    "n_units": 22,
+    "median_pct": 7.25,
+    "iqr_pct": [
+     5.38,
+     12.02
+    ],
+    "range_pct": [
+     0.92,
+     18.67
+    ],
+    "support_gate_pass": true,
+    "low_pct": 5,
+    "high_pct": 13
+   },
+   "Epithelium": {
+    "n_units": 22,
+    "median_pct": 58.44,
+    "iqr_pct": [
+     36.9,
+     67.75
+    ],
+    "range_pct": [
+     0.0,
+     91.73
+    ],
+    "support_gate_pass": true,
+    "low_pct": 36,
+    "high_pct": 68
+   },
+   "Fibroblasts": {
+    "n_units": 22,
+    "median_pct": 26.39,
+    "iqr_pct": [
+     7.23,
+     37.8
+    ],
+    "range_pct": [
+     0.0,
+     89.24
+    ],
+    "support_gate_pass": true,
+    "low_pct": 7,
+    "high_pct": 38
+   },
+   "Immune Cells": {
+    "n_units": 22,
+    "median_pct": 1.8,
+    "iqr_pct": [
+     0.85,
+     2.66
+    ],
+    "range_pct": [
+     0.23,
+     37.71
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 3
+   },
+   "Melanocytes": {
+    "n_units": 22,
+    "median_pct": 1.66,
+    "iqr_pct": [
+     0.31,
+     4.75
+    ],
+    "range_pct": [
+     0.0,
+     21.21
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 5
+   },
+   "Pericytes": {
+    "n_units": 22,
+    "median_pct": 3.71,
+    "iqr_pct": [
+     2.58,
+     6.07
+    ],
+    "range_pct": [
+     0.0,
+     19.37
+    ],
+    "support_gate_pass": true,
+    "low_pct": 2,
+    "high_pct": 7
+   },
+   "Schwann Cells": {
+    "n_units": 22,
+    "median_pct": 0.7,
+    "iqr_pct": [
+     0.23,
+     1.06
+    ],
+    "range_pct": [
+     0.0,
+     20.52
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 2
+   },
+   "Smooth Muscle Cells": {
+    "n_units": 22,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.0
+    ],
+    "range_pct": [
+     0.0,
+     11.81
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 0
+   }
+  },
+  "ocular surface region (混合)": {
+   "Corneal Endothelium": {
+    "n_units": 4,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.0
+    ],
+    "range_pct": [
+     0.0,
+     0.0
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Endothelium": {
+    "n_units": 4,
+    "median_pct": 5.1,
+    "iqr_pct": [
+     3.98,
+     6.51
+    ],
+    "range_pct": [
+     2.45,
+     8.9
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Epithelium": {
+    "n_units": 4,
+    "median_pct": 58.19,
+    "iqr_pct": [
+     48.71,
+     67.9
+    ],
+    "range_pct": [
+     43.42,
+     73.92
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Fibroblasts": {
+    "n_units": 4,
+    "median_pct": 23.07,
+    "iqr_pct": [
+     17.06,
+     30.8
+    ],
+    "range_pct": [
+     16.93,
+     36.1
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Immune Cells": {
+    "n_units": 4,
+    "median_pct": 4.95,
+    "iqr_pct": [
+     3.7,
+     5.87
+    ],
+    "range_pct": [
+     2.2,
+     6.4
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Melanocytes": {
+    "n_units": 4,
+    "median_pct": 0.71,
+    "iqr_pct": [
+     0.28,
+     3.28
+    ],
+    "range_pct": [
+     0.0,
+     9.99
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Pericytes": {
+    "n_units": 4,
+    "median_pct": 2.11,
+    "iqr_pct": [
+     1.93,
+     2.59
+    ],
+    "range_pct": [
+     1.63,
+     3.79
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Schwann Cells": {
+    "n_units": 4,
+    "median_pct": 0.86,
+    "iqr_pct": [
+     0.55,
+     1.26
+    ],
+    "range_pct": [
+     0.27,
+     1.82
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   },
+   "Smooth Muscle Cells": {
+    "n_units": 4,
+    "median_pct": 0.53,
+    "iqr_pct": [
+     0.05,
+     1.04
+    ],
+    "range_pct": [
+     0.03,
+     1.13
+    ],
+    "support_gate_pass": false,
+    "low_pct": null,
+    "high_pct": null
+   }
+  },
+  "sclera": {
+   "Corneal Endothelium": {
+    "n_units": 10,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.0
+    ],
+    "range_pct": [
+     0.0,
+     0.0
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 0
+   },
+   "Endothelium": {
+    "n_units": 10,
+    "median_pct": 11.88,
+    "iqr_pct": [
+     8.63,
+     17.21
+    ],
+    "range_pct": [
+     6.56,
+     43.48
+    ],
+    "support_gate_pass": true,
+    "low_pct": 8,
+    "high_pct": 18
+   },
+   "Epithelium": {
+    "n_units": 10,
+    "median_pct": 0.15,
+    "iqr_pct": [
+     0.0,
+     2.71
+    ],
+    "range_pct": [
+     0.0,
+     9.73
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 3
+   },
+   "Fibroblasts": {
+    "n_units": 10,
+    "median_pct": 40.45,
+    "iqr_pct": [
+     34.26,
+     51.56
+    ],
+    "range_pct": [
+     3.04,
+     77.02
+    ],
+    "support_gate_pass": true,
+    "low_pct": 34,
+    "high_pct": 52
+   },
+   "Immune Cells": {
+    "n_units": 10,
+    "median_pct": 1.16,
+    "iqr_pct": [
+     0.51,
+     4.4
+    ],
+    "range_pct": [
+     0.0,
+     22.81
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 5
+   },
+   "Melanocytes": {
+    "n_units": 10,
+    "median_pct": 0.27,
+    "iqr_pct": [
+     0.0,
+     5.71
+    ],
+    "range_pct": [
+     0.0,
+     48.63
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 6
+   },
+   "Pericytes": {
+    "n_units": 10,
+    "median_pct": 16.4,
+    "iqr_pct": [
+     12.88,
+     34.62
+    ],
+    "range_pct": [
+     0.0,
+     41.31
+    ],
+    "support_gate_pass": true,
+    "low_pct": 12,
+    "high_pct": 35
+   },
+   "Schwann Cells": {
+    "n_units": 10,
+    "median_pct": 1.64,
+    "iqr_pct": [
+     0.28,
+     2.24
+    ],
+    "range_pct": [
+     0.0,
+     3.85
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 3
+   },
+   "Smooth Muscle Cells": {
+    "n_units": 10,
+    "median_pct": 0.0,
+    "iqr_pct": [
+     0.0,
+     0.41
+    ],
+    "range_pct": [
+     0.0,
+     63.33
+    ],
+    "support_gate_pass": true,
+    "low_pct": 0,
+    "high_pct": 1
+   }
+  }
+ }
+}

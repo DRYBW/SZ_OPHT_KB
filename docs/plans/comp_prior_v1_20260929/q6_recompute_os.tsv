@@ -1,0 +1,55 @@
+region	n_cells	n_units	cell_type	pct	low	high	status
+cornea	32881	29	Epithelium	50.23			support_gate_fail_region
+cornea	32881	29	Fibroblasts	44.7			support_gate_fail_region
+cornea	32881	29	Endothelium	1.93			support_gate_fail_region
+cornea	32881	29	Immune Cells	1.26			support_gate_fail_region
+cornea	32881	29	Pericytes	0.91			support_gate_fail_region
+cornea	32881	29	Melanocytes	0.61			support_gate_fail_region
+cornea	32881	29	Schwann Cells	0.28			support_gate_fail_region
+cornea	32881	29	Smooth Muscle Cells	0.06			support_gate_fail_region
+cornea	32881	29	Corneal Endothelium	0.02			support_gate_fail_region
+corneal endothelium (单独层, 仅 404 细胞)	70	2	Corneal Endothelium	100.0			not_evaluated_small_support
+corneal endothelium (单独层, 仅 404 细胞)	70	2	Endothelium	0.0			not_evaluated_small_support
+corneal endothelium (单独层, 仅 404 细胞)	70	2	Epithelium	0.0			not_evaluated_small_support
+corneal endothelium (单独层, 仅 404 细胞)	70	2	Fibroblasts	0.0			not_evaluated_small_support
+corneal endothelium (单独层, 仅 404 细胞)	70	2	Immune Cells	0.0			not_evaluated_small_support
+corneal endothelium (单独层, 仅 404 细胞)	70	2	Melanocytes	0.0			not_evaluated_small_support
+corneal endothelium (单独层, 仅 404 细胞)	70	2	Pericytes	0.0			not_evaluated_small_support
+corneal endothelium (单独层, 仅 404 细胞)	70	2	Schwann Cells	0.0			not_evaluated_small_support
+corneal endothelium (单独层, 仅 404 细胞)	70	2	Smooth Muscle Cells	0.0			not_evaluated_small_support
+corneo-scleral junction (limbus 区)	32273	22	Epithelium	49.07	36.0	68.0	in_range
+corneo-scleral junction (limbus 区)	32273	22	Fibroblasts	32.49	7.0	38.0	in_range
+corneo-scleral junction (limbus 区)	32273	22	Endothelium	7.89	5.0	13.0	in_range
+corneo-scleral junction (limbus 区)	32273	22	Pericytes	5.06	2.0	7.0	in_range
+corneo-scleral junction (limbus 区)	32273	22	Immune Cells	2.25	0.0	3.0	in_range
+corneo-scleral junction (limbus 区)	32273	22	Melanocytes	2.07	0.0	5.0	in_range
+corneo-scleral junction (limbus 区)	32273	22	Schwann Cells	1.05	0.0	2.0	in_range
+corneo-scleral junction (limbus 区)	32273	22	Smooth Muscle Cells	0.13	0.0	0.0	FLAG_ABOVE
+corneo-scleral junction (limbus 区)	32273	22	Corneal Endothelium	0.0	0.0	0.0	in_range
+ocular surface region (混合)	2585	4	Epithelium	63.02			support_gate_fail_region
+ocular surface region (混合)	2585	4	Fibroblasts	23.6			support_gate_fail_region
+ocular surface region (混合)	2585	4	Endothelium	4.33			support_gate_fail_region
+ocular surface region (混合)	2585	4	Immune Cells	3.37			support_gate_fail_region
+ocular surface region (混合)	2585	4	Pericytes	2.36			support_gate_fail_region
+ocular surface region (混合)	2585	4	Melanocytes	2.24			support_gate_fail_region
+ocular surface region (混合)	2585	4	Smooth Muscle Cells	0.62			support_gate_fail_region
+ocular surface region (混合)	2585	4	Schwann Cells	0.46			support_gate_fail_region
+ocular surface region (混合)	2585	4	Corneal Endothelium	0.0			support_gate_fail_region
+sclera	8899	10	Fibroblasts	48.14	34.0	52.0	in_range
+sclera	8899	10	Pericytes	27.34	12.0	35.0	in_range
+sclera	8899	10	Endothelium	12.09	8.0	18.0	in_range
+sclera	8899	10	Smooth Muscle Cells	3.1	0.0	1.0	FLAG_ABOVE
+sclera	8899	10	Epithelium	2.97	0.0	3.0	in_range
+sclera	8899	10	Immune Cells	2.19	0.0	5.0	in_range
+sclera	8899	10	Melanocytes	2.19	0.0	6.0	in_range
+sclera	8899	10	Schwann Cells	1.98	0.0	3.0	in_range
+sclera	8899	10	Corneal Endothelium	0.0	0.0	0.0	in_range
+ANY(v0 mixed, adult-only)	76708	41	Epithelium	44.64	7.0	71.0	in_range
+ANY(v0 mixed, adult-only)	76708	41	Fibroblasts	39.21	12.0	45.0	in_range
+ANY(v0 mixed, adult-only)	76708	41	Pericytes	5.77	0.0	5.0	FLAG_ABOVE
+ANY(v0 mixed, adult-only)	76708	41	Endothelium	5.69	0.0	9.0	in_range
+ANY(v0 mixed, adult-only)	76708	41	Immune Cells	1.86	0.0	3.0	in_range
+ANY(v0 mixed, adult-only)	76708	41	Melanocytes	1.46	0.0	3.0	in_range
+ANY(v0 mixed, adult-only)	76708	41	Schwann Cells	0.81	0.0	2.0	in_range
+ANY(v0 mixed, adult-only)	76708	41	Smooth Muscle Cells	0.46	0.0	1.0	in_range
+ANY(v0 mixed, adult-only)	76708	41	Corneal Endothelium	0.1	0.0	1.0	in_range

@@ -1,0 +1,16 @@
+dataset	rule	n_face_rows	n_flagged	flag_pct	reverseQC	reproduce_SELFFLAG
+Q1_Lukowski2019	R0_v0_pooled	10	4	40.0	TRIGGER	PASS
+Q1_Lukowski2019	R1_routed[RC1]	10	4	40.0	TRIGGER	n/a
+Q1_Lukowski2019	R2_unit_level(sensitivity)	10	3	40.0	3/3 units>20%	n/a
+Q2_GSE155288	R0_v0_pooled	10	4	40.0	TRIGGER	PASS
+Q2_GSE155288	R1_routed[RC1]	10	6	60.0	TRIGGER	n/a
+Q2_GSE155288	R2_unit_level(sensitivity)	10	4	65.0	4/4 units>20%	n/a
+Q3	R0_v0_pooled	10	3	30.0	TRIGGER	PASS
+Q3	R1_routed[RC1]	10	5	50.0	TRIGGER	n/a
+Q3	R2_unit_level(sensitivity)	10	6	55.0	6/6 units>20%	n/a
+Q4	R0_v0_pooled	10	2	20.0	under	PASS
+Q4	R1_routed[RC4]	10	4	40.0	TRIGGER	n/a
+Q4	R2_unit_level(sensitivity)	10	7	50.0	7/7 units>20%	n/a
+Q5b	R0_v0_pooled	10	0	0.0	under	PASS
+Q5b	R1_routed[RC1]	10	4	40.0	TRIGGER	n/a
+Q5b	R2_unit_level(sensitivity)	10	9	36.9	9/13 units>20%	n/a

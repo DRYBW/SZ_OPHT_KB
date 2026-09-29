@@ -1,0 +1,7 @@
+T8 拓扑验证（预检 commit=c2c587b563db2ced44e4d90328b298ab6704f95b，2026-09-29 13:05）— 权威终态 sha 见看板 t_5112f6d9 summary
+parent=fa4f1757093ca63252998bb289876466962ee50c == fa4f175? True
+remote a0ad857 ancestor(可快进)? True
+ahead(a0ad857..c2c587b563db2ced44e4d90328b298ab6704f95b)=3 (既有 1febfee+fa4f175 + 本卡恰 1)
+branch main 当前=fa4f175(本卡未动，正式 commit 由 main 快进至含 t6/t8 证据终态)
+历史零改写: rebase/amend/reset 未用（预检经 refs/heads/rs6-verify 临时 branch，正式 commit=git commit 常规生成，parent 同 fa4f175）
+T8-PASS(预检)

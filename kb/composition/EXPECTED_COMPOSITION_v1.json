@@ -1,0 +1,2712 @@
+{
+ "schema": "eyekb-composition-face/0.2",
+ "entry_id": "EXPECTED_COMPOSITION_v1",
+ "title": "组成先验面 v1 (COMPV1): 条件层化 — retina 建库/取材/分选策略分层 + 眼表类型×区域 + OB-1 检索声明 | 默认 OFF",
+ "generated": "2026-09-29",
+ "card": "t_37a35220",
+ "authority": "USER_DIRECTIVE_20260928_eyekb_improve_wave.md 追加八 (COMPV1 预授权); 任务书 plans/comp_prior_20260928/BRIEF_DISC_COMPV1.md; 规则预注册 plans/comp_prior_v1_20260929/PHASE0_INVENTORY_t_37a35220.md",
+ "wiring": "OFF — 未接线 (零 MCP/运行时引用; 本卡产物不得进任何运行时路径; 激活永远归 PI 点名)",
+ "status": "v1_candidate_selfcheck_only",
+ "inherits": {
+  "file": "EXPECTED_COMPOSITION_v0.json",
+  "sha256": "d7c6068c9d86510a6053c97ba3361daf55bbe7a215993957aa8f9528d472061e",
+  "note": "v0 两页面全部行原样保留于 v0 文件(零改动); 本 v1 = 在其上加条件层; design-free 行语义以 v0 为准"
+ },
+ "lineage_declaration": "条件层区间 = kb/baselines adult-only 供者级主档谱系(D001/D002 外部作者注释本地复算)按设计维重聚合 (obs 字段: suspension_enrichment_factors/tissue/study_name; D002 tissue_group strata); 全程未使用自家聚类/自家 demo 注释 (禁循环继承); OB-1 检索 = 盘上 RAG chunks.parquet 242,928 chunks 全量, 零外网",
+ "semantics_declarations": {
+  "interval_A_strict_donor_only": "设计层区间仅由该层 A 级供者 IQR 构成 (priors/文献fold=混合设计来源不可归因于单层) — 预注册主口径 (PHASE0 §2); 注意其本质=中央50%带, 天然比 v0 三重包络窄",
+  "interval_B_v0_formula_envelope": "v0 公式形状逐字保留 (low=floor(min(donor_iqr_low, priors_expected_low, fold_lit_low)) / high=ceil(max(...))), 仅将 donor_iqr 项替换为层内值 — 后验敏感性变体, 未参与预注册判定, 采哪套语义激活前归 PI",
+  "support_gate": "层/区域单元数>=5 否则回落 design-free 父行 (机械, 两页共用)",
+  "region_row_binding": "眼表 类型×区域 行仅可用于取材区域已知的样本; 禁跨区套用; 区域未知 → design-free 行",
+  "target_evaluation": "OB-3 目标(<20%)只按预注册 R1A 判 — 结果: 未达成, 如实报缺口 (见 ob3_recompute + V1_VERDICT)"
+ },
+ "retina_design_axis": {
+  "available_dimensions_on_disk": [
+   "enrichment(NeuN±/靶向研究声明)",
+   "tissue region(central=fovea+macula+proper / peripheral)",
+   "study"
+  ],
+  "no_contrast_dimensions": [
+   "suspension_type 全=D001 核悬液一层(细胞悬液 A 级缺层=平台轴残余)",
+   "解离全=机械+去污剂(无酶解vs机械对比)"
+  ],
+  "unit_key": "donor_id × tissue × enrichment, adult-only (KB2c 排除表)",
+  "targeted_layer_basis": "Chen_rgc+Shekhar_GSE237204 归靶向层 = baselines 盘上 caveat/t2 既有设计声明 (非本卡新造)"
+ },
+ "pages": {
+  "retina_normal_adult_human": {
+   "design_free_rows": "见 EXPECTED_COMPOSITION_v0.json pages.retina_normal_adult_human.rows (零改动继承)",
+   "conditional_layers": {
+    "RC1_unsorted_allregion": {
+     "definition": "design_layer",
+     "n_units_total": 130,
+     "classes": {
+      "AC": {
+       "n_units": 130,
+       "donor_median_pct": 7.89,
+       "donor_iqr_pct": [
+        5.73,
+        10.37
+       ],
+       "donor_range_pct": [
+        2.98,
+        16.59
+       ],
+       "interval_A_strict_donor_only": [
+        5,
+        11
+       ],
+       "interval_B_v0_formula_envelope": [
+        5,
+        28
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Astro": {
+       "n_units": 130,
+       "donor_median_pct": 0.54,
+       "donor_iqr_pct": [
+        0.1,
+        1.01
+       ],
+       "donor_range_pct": [
+        0.0,
+        5.38
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        2
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        2
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "BC": {
+       "n_units": 130,
+       "donor_median_pct": 21.81,
+       "donor_iqr_pct": [
+        15.6,
+        29.12
+       ],
+       "donor_range_pct": [
+        11.57,
+        49.97
+       ],
+       "interval_A_strict_donor_only": [
+        15,
+        30
+       ],
+       "interval_B_v0_formula_envelope": [
+        12,
+        33
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Cone": {
+       "n_units": 130,
+       "donor_median_pct": 3.68,
+       "donor_iqr_pct": [
+        2.73,
+        5.69
+       ],
+       "donor_range_pct": [
+        1.01,
+        15.88
+       ],
+       "interval_A_strict_donor_only": [
+        2,
+        6
+       ],
+       "interval_B_v0_formula_envelope": [
+        1,
+        7
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "HC": {
+       "n_units": 130,
+       "donor_median_pct": 3.33,
+       "donor_iqr_pct": [
+        1.53,
+        6.11
+       ],
+       "donor_range_pct": [
+        0.49,
+        13.25
+       ],
+       "interval_A_strict_donor_only": [
+        1,
+        7
+       ],
+       "interval_B_v0_formula_envelope": [
+        1,
+        8
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "MG": {
+       "n_units": 130,
+       "donor_median_pct": 9.08,
+       "donor_iqr_pct": [
+        6.08,
+        12.28
+       ],
+       "donor_range_pct": [
+        1.21,
+        24.66
+       ],
+       "interval_A_strict_donor_only": [
+        6,
+        13
+       ],
+       "interval_B_v0_formula_envelope": [
+        3,
+        13
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Micro": {
+       "n_units": 130,
+       "donor_median_pct": 0.15,
+       "donor_iqr_pct": [
+        0.0,
+        0.26
+       ],
+       "donor_range_pct": [
+        0.0,
+        3.22
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        1
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        1
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "RGC": {
+       "n_units": 130,
+       "donor_median_pct": 2.24,
+       "donor_iqr_pct": [
+        0.14,
+        5.24
+       ],
+       "donor_range_pct": [
+        0.0,
+        33.86
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        6
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        15
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "RPE": {
+       "n_units": 130,
+       "donor_median_pct": 0.0,
+       "donor_iqr_pct": [
+        0.0,
+        0.0
+       ],
+       "donor_range_pct": [
+        0.0,
+        0.99
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        0
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        1
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Rod": {
+       "n_units": 130,
+       "donor_median_pct": 50.95,
+       "donor_iqr_pct": [
+        32.09,
+        65.16
+       ],
+       "donor_range_pct": [
+        0.0,
+        77.97
+       ],
+       "interval_A_strict_donor_only": [
+        32,
+        66
+       ],
+       "interval_B_v0_formula_envelope": [
+        28,
+        66
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      }
+     }
+    },
+    "RC2_unsorted_central": {
+     "definition": "None",
+     "n_units_total": 82,
+     "classes": {
+      "AC": {
+       "n_units": 82,
+       "donor_median_pct": 9.52,
+       "donor_iqr_pct": [
+        7.45,
+        11.27
+       ],
+       "donor_range_pct": [
+        3.68,
+        16.59
+       ],
+       "interval_A_strict_donor_only": [
+        7,
+        12
+       ],
+       "interval_B_v0_formula_envelope": [
+        7,
+        28
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Astro": {
+       "n_units": 82,
+       "donor_median_pct": 0.7,
+       "donor_iqr_pct": [
+        0.21,
+        1.15
+       ],
+       "donor_range_pct": [
+        0.0,
+        5.38
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        2
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        2
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "BC": {
+       "n_units": 82,
+       "donor_median_pct": 27.25,
+       "donor_iqr_pct": [
+        21.44,
+        32.38
+       ],
+       "donor_range_pct": [
+        13.5,
+        49.97
+       ],
+       "interval_A_strict_donor_only": [
+        21,
+        33
+       ],
+       "interval_B_v0_formula_envelope": [
+        12,
+        33
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Cone": {
+       "n_units": 82,
+       "donor_median_pct": 4.58,
+       "donor_iqr_pct": [
+        3.39,
+        6.44
+       ],
+       "donor_range_pct": [
+        1.09,
+        15.88
+       ],
+       "interval_A_strict_donor_only": [
+        3,
+        7
+       ],
+       "interval_B_v0_formula_envelope": [
+        1,
+        7
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "HC": {
+       "n_units": 82,
+       "donor_median_pct": 5.2,
+       "donor_iqr_pct": [
+        3.52,
+        8.01
+       ],
+       "donor_range_pct": [
+        0.49,
+        13.25
+       ],
+       "interval_A_strict_donor_only": [
+        3,
+        9
+       ],
+       "interval_B_v0_formula_envelope": [
+        1,
+        9
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "MG": {
+       "n_units": 82,
+       "donor_median_pct": 10.54,
+       "donor_iqr_pct": [
+        6.8,
+        14.03
+       ],
+       "donor_range_pct": [
+        1.29,
+        24.66
+       ],
+       "interval_A_strict_donor_only": [
+        6,
+        15
+       ],
+       "interval_B_v0_formula_envelope": [
+        3,
+        15
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Micro": {
+       "n_units": 82,
+       "donor_median_pct": 0.15,
+       "donor_iqr_pct": [
+        0.01,
+        0.25
+       ],
+       "donor_range_pct": [
+        0.0,
+        3.22
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        1
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        1
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "RGC": {
+       "n_units": 82,
+       "donor_median_pct": 3.88,
+       "donor_iqr_pct": [
+        2.59,
+        8.34
+       ],
+       "donor_range_pct": [
+        0.0,
+        33.86
+       ],
+       "interval_A_strict_donor_only": [
+        2,
+        9
+       ],
+       "interval_B_v0_formula_envelope": [
+        2,
+        15
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "RPE": {
+       "n_units": 82,
+       "donor_median_pct": 0.0,
+       "donor_iqr_pct": [
+        0.0,
+        0.0
+       ],
+       "donor_range_pct": [
+        0.0,
+        0.99
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        0
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        1
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Rod": {
+       "n_units": 82,
+       "donor_median_pct": 35.56,
+       "donor_iqr_pct": [
+        17.03,
+        50.59
+       ],
+       "donor_range_pct": [
+        0.0,
+        68.17
+       ],
+       "interval_A_strict_donor_only": [
+        17,
+        51
+       ],
+       "interval_B_v0_formula_envelope": [
+        17,
+        56
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      }
+     }
+    },
+    "RC3_unsorted_peripheral": {
+     "definition": "None",
+     "n_units_total": 48,
+     "classes": {
+      "AC": {
+       "n_units": 48,
+       "donor_median_pct": 5.42,
+       "donor_iqr_pct": [
+        4.53,
+        6.97
+       ],
+       "donor_range_pct": [
+        2.98,
+        13.01
+       ],
+       "interval_A_strict_donor_only": [
+        4,
+        7
+       ],
+       "interval_B_v0_formula_envelope": [
+        4,
+        28
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Astro": {
+       "n_units": 48,
+       "donor_median_pct": 0.34,
+       "donor_iqr_pct": [
+        0.0,
+        0.84
+       ],
+       "donor_range_pct": [
+        0.0,
+        2.14
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        1
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        2
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "BC": {
+       "n_units": 48,
+       "donor_median_pct": 14.75,
+       "donor_iqr_pct": [
+        13.62,
+        16.08
+       ],
+       "donor_range_pct": [
+        11.57,
+        29.16
+       ],
+       "interval_A_strict_donor_only": [
+        13,
+        17
+       ],
+       "interval_B_v0_formula_envelope": [
+        12,
+        33
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Cone": {
+       "n_units": 48,
+       "donor_median_pct": 2.68,
+       "donor_iqr_pct": [
+        2.05,
+        3.1
+       ],
+       "donor_range_pct": [
+        1.01,
+        4.31
+       ],
+       "interval_A_strict_donor_only": [
+        2,
+        4
+       ],
+       "interval_B_v0_formula_envelope": [
+        1,
+        7
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "HC": {
+       "n_units": 48,
+       "donor_median_pct": 1.42,
+       "donor_iqr_pct": [
+        1.08,
+        1.75
+       ],
+       "donor_range_pct": [
+        0.68,
+        3.41
+       ],
+       "interval_A_strict_donor_only": [
+        1,
+        2
+       ],
+       "interval_B_v0_formula_envelope": [
+        1,
+        8
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "MG": {
+       "n_units": 48,
+       "donor_median_pct": 7.32,
+       "donor_iqr_pct": [
+        5.96,
+        9.75
+       ],
+       "donor_range_pct": [
+        1.21,
+        17.06
+       ],
+       "interval_A_strict_donor_only": [
+        5,
+        10
+       ],
+       "interval_B_v0_formula_envelope": [
+        3,
+        12
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Micro": {
+       "n_units": 48,
+       "donor_median_pct": 0.15,
+       "donor_iqr_pct": [
+        0.0,
+        0.27
+       ],
+       "donor_range_pct": [
+        0.0,
+        0.98
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        1
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        1
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "RGC": {
+       "n_units": 48,
+       "donor_median_pct": 0.09,
+       "donor_iqr_pct": [
+        0.0,
+        0.27
+       ],
+       "donor_range_pct": [
+        0.0,
+        0.93
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        1
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        15
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "RPE": {
+       "n_units": 48,
+       "donor_median_pct": 0.0,
+       "donor_iqr_pct": [
+        0.0,
+        0.0
+       ],
+       "donor_range_pct": [
+        0.0,
+        0.0
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        0
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        1
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Rod": {
+       "n_units": 48,
+       "donor_median_pct": 66.94,
+       "donor_iqr_pct": [
+        62.15,
+        69.48
+       ],
+       "donor_range_pct": [
+        41.55,
+        77.97
+       ],
+       "interval_A_strict_donor_only": [
+        62,
+        70
+       ],
+       "interval_B_v0_formula_envelope": [
+        28,
+        70
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      }
+     }
+    },
+    "RC4_sorted_or_targeted": {
+     "definition": "design_layer",
+     "n_units_total": 80,
+     "classes": {
+      "AC": {
+       "n_units": 80,
+       "donor_median_pct": 25.83,
+       "donor_iqr_pct": [
+        15.76,
+        44.26
+       ],
+       "donor_range_pct": [
+        1.42,
+        88.44
+       ],
+       "interval_A_strict_donor_only": [
+        15,
+        45
+       ],
+       "interval_B_v0_formula_envelope": [
+        8,
+        45
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Astro": {
+       "n_units": 80,
+       "donor_median_pct": 0.0,
+       "donor_iqr_pct": [
+        0.0,
+        0.2
+       ],
+       "donor_range_pct": [
+        0.0,
+        3.51
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        1
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        2
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "BC": {
+       "n_units": 80,
+       "donor_median_pct": 2.64,
+       "donor_iqr_pct": [
+        0.79,
+        17.63
+       ],
+       "donor_range_pct": [
+        0.0,
+        53.15
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        18
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        33
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Cone": {
+       "n_units": 80,
+       "donor_median_pct": 1.35,
+       "donor_iqr_pct": [
+        0.21,
+        4.16
+       ],
+       "donor_range_pct": [
+        0.0,
+        10.14
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        5
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        7
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "HC": {
+       "n_units": 80,
+       "donor_median_pct": 0.29,
+       "donor_iqr_pct": [
+        0.0,
+        0.75
+       ],
+       "donor_range_pct": [
+        0.0,
+        3.77
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        1
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        8
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "MG": {
+       "n_units": 80,
+       "donor_median_pct": 1.25,
+       "donor_iqr_pct": [
+        0.17,
+        4.61
+       ],
+       "donor_range_pct": [
+        0.0,
+        12.29
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        5
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        12
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Micro": {
+       "n_units": 80,
+       "donor_median_pct": 0.0,
+       "donor_iqr_pct": [
+        0.0,
+        0.15
+       ],
+       "donor_range_pct": [
+        0.0,
+        1.42
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        1
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        1
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "RGC": {
+       "n_units": 80,
+       "donor_median_pct": 27.12,
+       "donor_iqr_pct": [
+        0.45,
+        68.24
+       ],
+       "donor_range_pct": [
+        0.0,
+        92.69
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        69
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        69
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "RPE": {
+       "n_units": 80,
+       "donor_median_pct": 0.0,
+       "donor_iqr_pct": [
+        0.0,
+        0.0
+       ],
+       "donor_range_pct": [
+        0.0,
+        2.03
+       ],
+       "interval_A_strict_donor_only": [
+        0,
+        0
+       ],
+       "interval_B_v0_formula_envelope": [
+        0,
+        1
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      },
+      "Rod": {
+       "n_units": 80,
+       "donor_median_pct": 7.72,
+       "donor_iqr_pct": [
+        2.21,
+        26.48
+       ],
+       "donor_range_pct": [
+        0.14,
+        71.09
+       ],
+       "interval_A_strict_donor_only": [
+        2,
+        27
+       ],
+       "interval_B_v0_formula_envelope": [
+        2,
+        56
+       ],
+       "evidence": "A_layered",
+       "support_gate_pass": true
+      }
+     }
+    }
+   },
+   "ob3_recompute": [
+    {
+     "dataset": "Q1_Lukowski2019",
+     "rule": "R0_v0_pooled",
+     "layer": "v0",
+     "flagged": 4,
+     "face_rows": 10,
+     "flag_pct": 40.0
+    },
+    {
+     "dataset": "Q1_Lukowski2019",
+     "rule": "R1A_layer_Aonly(PREREG_HEADLINE)",
+     "layer": "RC1_unsorted_allregion",
+     "flagged": 4,
+     "face_rows": 10,
+     "flag_pct": 40.0
+    },
+    {
+     "dataset": "Q1_Lukowski2019",
+     "rule": "R1B_layer_envelope(post-hoc-sens)",
+     "layer": "RC1_unsorted_allregion",
+     "flagged": 3,
+     "face_rows": 10,
+     "flag_pct": 30.0
+    },
+    {
+     "dataset": "Q2_GSE155288",
+     "rule": "R0_v0_pooled",
+     "layer": "v0",
+     "flagged": 4,
+     "face_rows": 10,
+     "flag_pct": 40.0
+    },
+    {
+     "dataset": "Q2_GSE155288",
+     "rule": "R1A_layer_Aonly(PREREG_HEADLINE)",
+     "layer": "RC1_unsorted_allregion",
+     "flagged": 6,
+     "face_rows": 10,
+     "flag_pct": 60.0
+    },
+    {
+     "dataset": "Q2_GSE155288",
+     "rule": "R1B_layer_envelope(post-hoc-sens)",
+     "layer": "RC1_unsorted_allregion",
+     "flagged": 4,
+     "face_rows": 10,
+     "flag_pct": 40.0
+    },
+    {
+     "dataset": "Q3",
+     "rule": "R0_v0_pooled",
+     "layer": "v0",
+     "flagged": 3,
+     "face_rows": 10,
+     "flag_pct": 30.0
+    },
+    {
+     "dataset": "Q3",
+     "rule": "R1A_layer_Aonly(PREREG_HEADLINE)",
+     "layer": "RC1_unsorted_allregion",
+     "flagged": 5,
+     "face_rows": 10,
+     "flag_pct": 50.0
+    },
+    {
+     "dataset": "Q3",
+     "rule": "R1B_layer_envelope(post-hoc-sens)",
+     "layer": "RC1_unsorted_allregion",
+     "flagged": 3,
+     "face_rows": 10,
+     "flag_pct": 30.0
+    },
+    {
+     "dataset": "Q4",
+     "rule": "R0_v0_pooled",
+     "layer": "v0",
+     "flagged": 2,
+     "face_rows": 10,
+     "flag_pct": 20.0
+    },
+    {
+     "dataset": "Q4",
+     "rule": "R1A_layer_Aonly(PREREG_HEADLINE)",
+     "layer": "RC4_sorted_or_targeted",
+     "flagged": 4,
+     "face_rows": 10,
+     "flag_pct": 40.0
+    },
+    {
+     "dataset": "Q4",
+     "rule": "R1B_layer_envelope(post-hoc-sens)",
+     "layer": "RC4_sorted_or_targeted",
+     "flagged": 1,
+     "face_rows": 10,
+     "flag_pct": 10.0
+    },
+    {
+     "dataset": "Q5b",
+     "rule": "R0_v0_pooled",
+     "layer": "v0",
+     "flagged": 0,
+     "face_rows": 10,
+     "flag_pct": 0.0
+    },
+    {
+     "dataset": "Q5b",
+     "rule": "R1A_layer_Aonly(PREREG_HEADLINE)",
+     "layer": "RC1_unsorted_allregion",
+     "flagged": 4,
+     "face_rows": 10,
+     "flag_pct": 40.0
+    },
+    {
+     "dataset": "Q5b",
+     "rule": "R1B_layer_envelope(post-hoc-sens)",
+     "layer": "RC1_unsorted_allregion",
+     "flagged": 1,
+     "face_rows": 10,
+     "flag_pct": 10.0
+    },
+    {
+     "dataset": "Q1_Lukowski2019",
+     "rule": "R2_MEAN(A-interval)",
+     "layer": "3 units",
+     "flagged": 4.0,
+     "face_rows": 10,
+     "flag_pct": 40.0,
+     "unit": "mean over units"
+    },
+    {
+     "dataset": "Q1_Lukowski2019",
+     "rule": "R2_MEAN(B-interval)",
+     "layer": "3 units",
+     "flagged": 3.33,
+     "face_rows": 10,
+     "flag_pct": 33.3,
+     "unit": "mean over units"
+    },
+    {
+     "dataset": "Q2_GSE155288",
+     "rule": "R2_MEAN(A-interval)",
+     "layer": "4 units",
+     "flagged": 6.5,
+     "face_rows": 10,
+     "flag_pct": 65.0,
+     "unit": "mean over units"
+    },
+    {
+     "dataset": "Q2_GSE155288",
+     "rule": "R2_MEAN(B-interval)",
+     "layer": "4 units",
+     "flagged": 6.0,
+     "face_rows": 10,
+     "flag_pct": 60.0,
+     "unit": "mean over units"
+    },
+    {
+     "dataset": "Q3",
+     "rule": "R2_MEAN(A-interval)",
+     "layer": "6 units",
+     "flagged": 5.5,
+     "face_rows": 10,
+     "flag_pct": 55.0,
+     "unit": "mean over units"
+    },
+    {
+     "dataset": "Q3",
+     "rule": "R2_MEAN(B-interval)",
+     "layer": "6 units",
+     "flagged": 4.0,
+     "face_rows": 10,
+     "flag_pct": 40.0,
+     "unit": "mean over units"
+    },
+    {
+     "dataset": "Q4",
+     "rule": "R2_MEAN(A-interval)",
+     "layer": "7 units",
+     "flagged": 5.0,
+     "face_rows": 10,
+     "flag_pct": 50.0,
+     "unit": "mean over units"
+    },
+    {
+     "dataset": "Q4",
+     "rule": "R2_MEAN(B-interval)",
+     "layer": "7 units",
+     "flagged": 2.71,
+     "face_rows": 10,
+     "flag_pct": 27.1,
+     "unit": "mean over units"
+    },
+    {
+     "dataset": "Q5b",
+     "rule": "R2_MEAN(A-interval)",
+     "layer": "13 units",
+     "flagged": 3.69,
+     "face_rows": 10,
+     "flag_pct": 36.9,
+     "unit": "mean over units"
+    },
+    {
+     "dataset": "Q5b",
+     "rule": "R2_MEAN(B-interval)",
+     "layer": "13 units",
+     "flagged": 2.46,
+     "face_rows": 10,
+     "flag_pct": 24.6,
+     "unit": "mean over units"
+    }
+   ],
+   "residual_persists_rows": [
+    {
+     "dataset": "Q1_Lukowski2019",
+     "platform": "cell",
+     "row": "BC",
+     "pct_v0": 10.51,
+     "v0": "FLAG",
+     "A": "FLAG",
+     "B": "FLAG",
+     "verdict": "PERSISTS_all_rules"
+    },
+    {
+     "dataset": "Q1_Lukowski2019",
+     "platform": "cell",
+     "row": "AC",
+     "pct_v0": 1.43,
+     "v0": "FLAG",
+     "A": "FLAG",
+     "B": "FLAG",
+     "verdict": "PERSISTS_all_rules"
+    },
+    {
+     "dataset": "Q1_Lukowski2019",
+     "platform": "cell",
+     "row": "HC",
+     "pct_v0": 0.0,
+     "v0": "FLAG",
+     "A": "FLAG",
+     "B": "FLAG",
+     "verdict": "PERSISTS_all_rules"
+    },
+    {
+     "dataset": "Q2_GSE155288",
+     "platform": "cell",
+     "row": "AC",
+     "pct_v0": 2.41,
+     "v0": "FLAG",
+     "A": "FLAG",
+     "B": "FLAG",
+     "verdict": "PERSISTS_all_rules"
+    },
+    {
+     "dataset": "Q2_GSE155288",
+     "platform": "cell",
+     "row": "HC",
+     "pct_v0": 0.69,
+     "v0": "FLAG",
+     "A": "FLAG",
+     "B": "FLAG",
+     "verdict": "PERSISTS_all_rules"
+    },
+    {
+     "dataset": "Q2_GSE155288",
+     "platform": "cell",
+     "row": "MG",
+     "pct_v0": 27.51,
+     "v0": "FLAG",
+     "A": "FLAG",
+     "B": "FLAG",
+     "verdict": "PERSISTS_all_rules"
+    },
+    {
+     "dataset": "Q2_GSE155288",
+     "platform": "cell",
+     "row": "Micro",
+     "pct_v0": 1.83,
+     "v0": "FLAG",
+     "A": "FLAG",
+     "B": "FLAG",
+     "verdict": "PERSISTS_all_rules"
+    },
+    {
+     "dataset": "Q3",
+     "platform": "cell(smart-seq)",
+     "row": "AC",
+     "pct_v0": 2.47,
+     "v0": "FLAG",
+     "A": "FLAG",
+     "B": "FLAG",
+     "verdict": "PERSISTS_all_rules"
+    },
+    {
+     "dataset": "Q3",
+     "platform": "cell(smart-seq)",
+     "row": "HC",
+     "pct_v0": 0.73,
+     "v0": "FLAG",
+     "A": "FLAG",
+     "B": "FLAG",
+     "verdict": "PERSISTS_all_rules"
+    },
+    {
+     "dataset": "Q3",
+     "platform": "cell(smart-seq)",
+     "row": "MG",
+     "pct_v0": 26.22,
+     "v0": "FLAG",
+     "A": "FLAG",
+     "B": "FLAG",
+     "verdict": "PERSISTS_all_rules"
+    },
+    {
+     "dataset": "Q4",
+     "platform": "cell(sorted)",
+     "row": "MG",
+     "pct_v0": 23.41,
+     "v0": "FLAG",
+     "A": "FLAG",
+     "B": "FLAG",
+     "verdict": "PERSISTS_all_rules"
+    }
+   ],
+   "newflag_strict_layer_rows": [
+    {
+     "dataset": "Q1_Lukowski2019",
+     "platform": "cell",
+     "row": "MG",
+     "pct_v0": 3.11,
+     "v0": "ok",
+     "A": "FLAG",
+     "B": "ok",
+     "verdict": "NEWFLAG_under_strict_layer"
+    },
+    {
+     "dataset": "Q2_GSE155288",
+     "platform": "cell",
+     "row": "Rod",
+     "pct_v0": 30.01,
+     "v0": "ok",
+     "A": "FLAG",
+     "B": "ok",
+     "verdict": "NEWFLAG_under_strict_layer"
+    },
+    {
+     "dataset": "Q2_GSE155288",
+     "platform": "cell",
+     "row": "BC",
+     "pct_v0": 32.61,
+     "v0": "ok",
+     "A": "FLAG",
+     "B": "ok",
+     "verdict": "NEWFLAG_under_strict_layer"
+    },
+    {
+     "dataset": "Q3",
+     "platform": "cell(smart-seq)",
+     "row": "Cone",
+     "pct_v0": 1.05,
+     "v0": "ok",
+     "A": "FLAG",
+     "B": "ok",
+     "verdict": "NEWFLAG_under_strict_layer"
+    },
+    {
+     "dataset": "Q3",
+     "platform": "cell(smart-seq)",
+     "row": "RGC",
+     "pct_v0": 7.54,
+     "v0": "ok",
+     "A": "FLAG",
+     "B": "ok",
+     "verdict": "NEWFLAG_under_strict_layer"
+    },
+    {
+     "dataset": "Q4",
+     "platform": "cell(sorted)",
+     "row": "BC",
+     "pct_v0": 30.25,
+     "v0": "ok",
+     "A": "FLAG",
+     "B": "ok",
+     "verdict": "NEWFLAG_under_strict_layer"
+    },
+    {
+     "dataset": "Q4",
+     "platform": "cell(sorted)",
+     "row": "HC",
+     "pct_v0": 3.37,
+     "v0": "ok",
+     "A": "FLAG",
+     "B": "ok",
+     "verdict": "NEWFLAG_under_strict_layer"
+    },
+    {
+     "dataset": "Q4",
+     "platform": "cell(sorted)",
+     "row": "Astro",
+     "pct_v0": 1.35,
+     "v0": "ok",
+     "A": "FLAG",
+     "B": "ok",
+     "verdict": "NEWFLAG_under_strict_layer"
+    },
+    {
+     "dataset": "Q5b",
+     "platform": "nucleus",
+     "row": "Rod",
+     "pct_v0": 26.12,
+     "v0": "ok",
+     "A": "FLAG",
+     "B": "FLAG",
+     "verdict": "NEWFLAG_under_strict_layer"
+    },
+    {
+     "dataset": "Q5b",
+     "platform": "nucleus",
+     "row": "AC",
+     "pct_v0": 27.4,
+     "v0": "ok",
+     "A": "FLAG",
+     "B": "ok",
+     "verdict": "NEWFLAG_under_strict_layer"
+    },
+    {
+     "dataset": "Q5b",
+     "platform": "nucleus",
+     "row": "MG",
+     "pct_v0": 4.18,
+     "v0": "ok",
+     "A": "FLAG",
+     "B": "ok",
+     "verdict": "NEWFLAG_under_strict_layer"
+    },
+    {
+     "dataset": "Q5b",
+     "platform": "nucleus",
+     "row": "RPE",
+     "pct_v0": 0.02,
+     "v0": "ok",
+     "A": "FLAG",
+     "B": "ok",
+     "verdict": "NEWFLAG_under_strict_layer"
+    }
+   ],
+   "resolved_by_layering_rows": [
+    {
+     "dataset": "Q1_Lukowski2019",
+     "platform": "cell",
+     "row": "Rod",
+     "pct_v0": 62.15,
+     "v0": "FLAG",
+     "A": "ok",
+     "B": "ok",
+     "verdict": "RESOLVED_by_layering"
+    },
+    {
+     "dataset": "Q4",
+     "platform": "cell(sorted)",
+     "row": "Rod",
+     "pct_v0": 8.32,
+     "v0": "FLAG",
+     "A": "ok",
+     "B": "ok",
+     "verdict": "RESOLVED_by_layering"
+    }
+   ]
+  },
+  "ocular_surface_normal_adult_human": {
+   "design_free_rows": "见 v0 pages.ocular_surface_normal_adult_human.rows (零改动继承)",
+   "region_layers": {
+    "cornea (含角膜上皮/固有质)": {
+     "Corneal Endothelium": {
+      "n_units": 29,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.0
+      ],
+      "donor_range_pct": [
+       0.0,
+       2.64
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       0
+      ]
+     },
+     "Endothelium": {
+      "n_units": 29,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       1.35
+      ],
+      "donor_range_pct": [
+       0.0,
+       15.6
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       2
+      ]
+     },
+     "Epithelium": {
+      "n_units": 29,
+      "donor_median_pct": 63.08,
+      "donor_iqr_pct": [
+       29.31,
+       79.27
+      ],
+      "donor_range_pct": [
+       4.83,
+       99.62
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       29,
+       80
+      ]
+     },
+     "Fibroblasts": {
+      "n_units": 29,
+      "donor_median_pct": 32.09,
+      "donor_iqr_pct": [
+       14.88,
+       67.25
+      ],
+      "donor_range_pct": [
+       0.0,
+       93.77
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       14,
+       68
+      ]
+     },
+     "Immune Cells": {
+      "n_units": 29,
+      "donor_median_pct": 0.55,
+      "donor_iqr_pct": [
+       0.31,
+       1.58
+      ],
+      "donor_range_pct": [
+       0.0,
+       9.5
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       2
+      ]
+     },
+     "Melanocytes": {
+      "n_units": 29,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.71
+      ],
+      "donor_range_pct": [
+       0.0,
+       6.6
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       1
+      ]
+     },
+     "Pericytes": {
+      "n_units": 29,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.25
+      ],
+      "donor_range_pct": [
+       0.0,
+       3.72
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       1
+      ]
+     },
+     "Schwann Cells": {
+      "n_units": 29,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.0
+      ],
+      "donor_range_pct": [
+       0.0,
+       3.31
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       0
+      ]
+     },
+     "Smooth Muscle Cells": {
+      "n_units": 29,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.0
+      ],
+      "donor_range_pct": [
+       0.0,
+       0.64
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       0
+      ]
+     }
+    },
+    "corneal endothelium (单独层, 仅 404 细胞)": {
+     "Corneal Endothelium": {
+      "n_units": 2,
+      "donor_median_pct": 100.0,
+      "donor_iqr_pct": [
+       100.0,
+       100.0
+      ],
+      "donor_range_pct": [
+       100.0,
+       100.0
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Endothelium": {
+      "n_units": 2,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.0
+      ],
+      "donor_range_pct": [
+       0.0,
+       0.0
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Epithelium": {
+      "n_units": 2,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.0
+      ],
+      "donor_range_pct": [
+       0.0,
+       0.0
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Fibroblasts": {
+      "n_units": 2,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.0
+      ],
+      "donor_range_pct": [
+       0.0,
+       0.0
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Immune Cells": {
+      "n_units": 2,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.0
+      ],
+      "donor_range_pct": [
+       0.0,
+       0.0
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Melanocytes": {
+      "n_units": 2,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.0
+      ],
+      "donor_range_pct": [
+       0.0,
+       0.0
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Pericytes": {
+      "n_units": 2,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.0
+      ],
+      "donor_range_pct": [
+       0.0,
+       0.0
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Schwann Cells": {
+      "n_units": 2,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.0
+      ],
+      "donor_range_pct": [
+       0.0,
+       0.0
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Smooth Muscle Cells": {
+      "n_units": 2,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.0
+      ],
+      "donor_range_pct": [
+       0.0,
+       0.0
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     }
+    },
+    "corneo-scleral junction (limbus 区)": {
+     "Corneal Endothelium": {
+      "n_units": 22,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.0
+      ],
+      "donor_range_pct": [
+       0.0,
+       0.0
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       0
+      ]
+     },
+     "Endothelium": {
+      "n_units": 22,
+      "donor_median_pct": 7.25,
+      "donor_iqr_pct": [
+       5.38,
+       12.02
+      ],
+      "donor_range_pct": [
+       0.92,
+       18.67
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       5,
+       13
+      ]
+     },
+     "Epithelium": {
+      "n_units": 22,
+      "donor_median_pct": 58.44,
+      "donor_iqr_pct": [
+       36.9,
+       67.75
+      ],
+      "donor_range_pct": [
+       0.0,
+       91.73
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       36,
+       68
+      ]
+     },
+     "Fibroblasts": {
+      "n_units": 22,
+      "donor_median_pct": 26.39,
+      "donor_iqr_pct": [
+       7.23,
+       37.8
+      ],
+      "donor_range_pct": [
+       0.0,
+       89.24
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       7,
+       38
+      ]
+     },
+     "Immune Cells": {
+      "n_units": 22,
+      "donor_median_pct": 1.8,
+      "donor_iqr_pct": [
+       0.85,
+       2.66
+      ],
+      "donor_range_pct": [
+       0.23,
+       37.71
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       3
+      ]
+     },
+     "Melanocytes": {
+      "n_units": 22,
+      "donor_median_pct": 1.66,
+      "donor_iqr_pct": [
+       0.31,
+       4.75
+      ],
+      "donor_range_pct": [
+       0.0,
+       21.21
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       5
+      ]
+     },
+     "Pericytes": {
+      "n_units": 22,
+      "donor_median_pct": 3.71,
+      "donor_iqr_pct": [
+       2.58,
+       6.07
+      ],
+      "donor_range_pct": [
+       0.0,
+       19.37
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       2,
+       7
+      ]
+     },
+     "Schwann Cells": {
+      "n_units": 22,
+      "donor_median_pct": 0.7,
+      "donor_iqr_pct": [
+       0.23,
+       1.06
+      ],
+      "donor_range_pct": [
+       0.0,
+       20.52
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       2
+      ]
+     },
+     "Smooth Muscle Cells": {
+      "n_units": 22,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.0
+      ],
+      "donor_range_pct": [
+       0.0,
+       11.81
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       0
+      ]
+     }
+    },
+    "ocular surface region (混合)": {
+     "Corneal Endothelium": {
+      "n_units": 4,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.0
+      ],
+      "donor_range_pct": [
+       0.0,
+       0.0
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Endothelium": {
+      "n_units": 4,
+      "donor_median_pct": 5.1,
+      "donor_iqr_pct": [
+       3.98,
+       6.51
+      ],
+      "donor_range_pct": [
+       2.45,
+       8.9
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Epithelium": {
+      "n_units": 4,
+      "donor_median_pct": 58.19,
+      "donor_iqr_pct": [
+       48.71,
+       67.9
+      ],
+      "donor_range_pct": [
+       43.42,
+       73.92
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Fibroblasts": {
+      "n_units": 4,
+      "donor_median_pct": 23.07,
+      "donor_iqr_pct": [
+       17.06,
+       30.8
+      ],
+      "donor_range_pct": [
+       16.93,
+       36.1
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Immune Cells": {
+      "n_units": 4,
+      "donor_median_pct": 4.95,
+      "donor_iqr_pct": [
+       3.7,
+       5.87
+      ],
+      "donor_range_pct": [
+       2.2,
+       6.4
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Melanocytes": {
+      "n_units": 4,
+      "donor_median_pct": 0.71,
+      "donor_iqr_pct": [
+       0.28,
+       3.28
+      ],
+      "donor_range_pct": [
+       0.0,
+       9.99
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Pericytes": {
+      "n_units": 4,
+      "donor_median_pct": 2.11,
+      "donor_iqr_pct": [
+       1.93,
+       2.59
+      ],
+      "donor_range_pct": [
+       1.63,
+       3.79
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Schwann Cells": {
+      "n_units": 4,
+      "donor_median_pct": 0.86,
+      "donor_iqr_pct": [
+       0.55,
+       1.26
+      ],
+      "donor_range_pct": [
+       0.27,
+       1.82
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     },
+     "Smooth Muscle Cells": {
+      "n_units": 4,
+      "donor_median_pct": 0.53,
+      "donor_iqr_pct": [
+       0.05,
+       1.04
+      ],
+      "donor_range_pct": [
+       0.03,
+       1.13
+      ],
+      "support_gate_pass": false,
+      "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
+     }
+    },
+    "sclera": {
+     "Corneal Endothelium": {
+      "n_units": 10,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.0
+      ],
+      "donor_range_pct": [
+       0.0,
+       0.0
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       0
+      ]
+     },
+     "Endothelium": {
+      "n_units": 10,
+      "donor_median_pct": 11.88,
+      "donor_iqr_pct": [
+       8.63,
+       17.21
+      ],
+      "donor_range_pct": [
+       6.56,
+       43.48
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       8,
+       18
+      ]
+     },
+     "Epithelium": {
+      "n_units": 10,
+      "donor_median_pct": 0.15,
+      "donor_iqr_pct": [
+       0.0,
+       2.71
+      ],
+      "donor_range_pct": [
+       0.0,
+       9.73
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       3
+      ]
+     },
+     "Fibroblasts": {
+      "n_units": 10,
+      "donor_median_pct": 40.45,
+      "donor_iqr_pct": [
+       34.26,
+       51.56
+      ],
+      "donor_range_pct": [
+       3.04,
+       77.02
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       34,
+       52
+      ]
+     },
+     "Immune Cells": {
+      "n_units": 10,
+      "donor_median_pct": 1.16,
+      "donor_iqr_pct": [
+       0.51,
+       4.4
+      ],
+      "donor_range_pct": [
+       0.0,
+       22.81
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       5
+      ]
+     },
+     "Melanocytes": {
+      "n_units": 10,
+      "donor_median_pct": 0.27,
+      "donor_iqr_pct": [
+       0.0,
+       5.71
+      ],
+      "donor_range_pct": [
+       0.0,
+       48.63
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       6
+      ]
+     },
+     "Pericytes": {
+      "n_units": 10,
+      "donor_median_pct": 16.4,
+      "donor_iqr_pct": [
+       12.88,
+       34.62
+      ],
+      "donor_range_pct": [
+       0.0,
+       41.31
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       12,
+       35
+      ]
+     },
+     "Schwann Cells": {
+      "n_units": 10,
+      "donor_median_pct": 1.64,
+      "donor_iqr_pct": [
+       0.28,
+       2.24
+      ],
+      "donor_range_pct": [
+       0.0,
+       3.85
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       3
+      ]
+     },
+     "Smooth Muscle Cells": {
+      "n_units": 10,
+      "donor_median_pct": 0.0,
+      "donor_iqr_pct": [
+       0.0,
+       0.41
+      ],
+      "donor_range_pct": [
+       0.0,
+       63.33
+      ],
+      "support_gate_pass": true,
+      "interval_donor_only": [
+       0,
+       1
+      ]
+     }
+    }
+   },
+   "category_note": "行=类型×tissue_group (cornea/limbus/sclera/ocular surface region/corneal endothelium); 区域混合超级类仅可对照 design-free 行; 已知区域样本必须路由到对应区域行 — 禁跨区套用条款进面语义",
+   "q6_recompute": [
+    {
+     "region": "cornea",
+     "n_cells": 32881,
+     "n_units": 29,
+     "cell_type": "Epithelium",
+     "pct": 50.23,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "cornea",
+     "n_cells": 32881,
+     "n_units": 29,
+     "cell_type": "Fibroblasts",
+     "pct": 44.7,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "cornea",
+     "n_cells": 32881,
+     "n_units": 29,
+     "cell_type": "Endothelium",
+     "pct": 1.93,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "cornea",
+     "n_cells": 32881,
+     "n_units": 29,
+     "cell_type": "Immune Cells",
+     "pct": 1.26,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "cornea",
+     "n_cells": 32881,
+     "n_units": 29,
+     "cell_type": "Pericytes",
+     "pct": 0.91,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "cornea",
+     "n_cells": 32881,
+     "n_units": 29,
+     "cell_type": "Melanocytes",
+     "pct": 0.61,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "cornea",
+     "n_cells": 32881,
+     "n_units": 29,
+     "cell_type": "Schwann Cells",
+     "pct": 0.28,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "cornea",
+     "n_cells": 32881,
+     "n_units": 29,
+     "cell_type": "Smooth Muscle Cells",
+     "pct": 0.06,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "cornea",
+     "n_cells": 32881,
+     "n_units": 29,
+     "cell_type": "Corneal Endothelium",
+     "pct": 0.02,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "n_cells": 70,
+     "n_units": 2,
+     "cell_type": "Corneal Endothelium",
+     "pct": 100.0,
+     "low": NaN,
+     "high": NaN,
+     "status": "not_evaluated_small_support"
+    },
+    {
+     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "n_cells": 70,
+     "n_units": 2,
+     "cell_type": "Endothelium",
+     "pct": 0.0,
+     "low": NaN,
+     "high": NaN,
+     "status": "not_evaluated_small_support"
+    },
+    {
+     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "n_cells": 70,
+     "n_units": 2,
+     "cell_type": "Epithelium",
+     "pct": 0.0,
+     "low": NaN,
+     "high": NaN,
+     "status": "not_evaluated_small_support"
+    },
+    {
+     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "n_cells": 70,
+     "n_units": 2,
+     "cell_type": "Fibroblasts",
+     "pct": 0.0,
+     "low": NaN,
+     "high": NaN,
+     "status": "not_evaluated_small_support"
+    },
+    {
+     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "n_cells": 70,
+     "n_units": 2,
+     "cell_type": "Immune Cells",
+     "pct": 0.0,
+     "low": NaN,
+     "high": NaN,
+     "status": "not_evaluated_small_support"
+    },
+    {
+     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "n_cells": 70,
+     "n_units": 2,
+     "cell_type": "Melanocytes",
+     "pct": 0.0,
+     "low": NaN,
+     "high": NaN,
+     "status": "not_evaluated_small_support"
+    },
+    {
+     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "n_cells": 70,
+     "n_units": 2,
+     "cell_type": "Pericytes",
+     "pct": 0.0,
+     "low": NaN,
+     "high": NaN,
+     "status": "not_evaluated_small_support"
+    },
+    {
+     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "n_cells": 70,
+     "n_units": 2,
+     "cell_type": "Schwann Cells",
+     "pct": 0.0,
+     "low": NaN,
+     "high": NaN,
+     "status": "not_evaluated_small_support"
+    },
+    {
+     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "n_cells": 70,
+     "n_units": 2,
+     "cell_type": "Smooth Muscle Cells",
+     "pct": 0.0,
+     "low": NaN,
+     "high": NaN,
+     "status": "not_evaluated_small_support"
+    },
+    {
+     "region": "corneo-scleral junction (limbus 区)",
+     "n_cells": 32273,
+     "n_units": 22,
+     "cell_type": "Epithelium",
+     "pct": 49.07,
+     "low": 36.0,
+     "high": 68.0,
+     "status": "in_range"
+    },
+    {
+     "region": "corneo-scleral junction (limbus 区)",
+     "n_cells": 32273,
+     "n_units": 22,
+     "cell_type": "Fibroblasts",
+     "pct": 32.49,
+     "low": 7.0,
+     "high": 38.0,
+     "status": "in_range"
+    },
+    {
+     "region": "corneo-scleral junction (limbus 区)",
+     "n_cells": 32273,
+     "n_units": 22,
+     "cell_type": "Endothelium",
+     "pct": 7.89,
+     "low": 5.0,
+     "high": 13.0,
+     "status": "in_range"
+    },
+    {
+     "region": "corneo-scleral junction (limbus 区)",
+     "n_cells": 32273,
+     "n_units": 22,
+     "cell_type": "Pericytes",
+     "pct": 5.06,
+     "low": 2.0,
+     "high": 7.0,
+     "status": "in_range"
+    },
+    {
+     "region": "corneo-scleral junction (limbus 区)",
+     "n_cells": 32273,
+     "n_units": 22,
+     "cell_type": "Immune Cells",
+     "pct": 2.25,
+     "low": 0.0,
+     "high": 3.0,
+     "status": "in_range"
+    },
+    {
+     "region": "corneo-scleral junction (limbus 区)",
+     "n_cells": 32273,
+     "n_units": 22,
+     "cell_type": "Melanocytes",
+     "pct": 2.07,
+     "low": 0.0,
+     "high": 5.0,
+     "status": "in_range"
+    },
+    {
+     "region": "corneo-scleral junction (limbus 区)",
+     "n_cells": 32273,
+     "n_units": 22,
+     "cell_type": "Schwann Cells",
+     "pct": 1.05,
+     "low": 0.0,
+     "high": 2.0,
+     "status": "in_range"
+    },
+    {
+     "region": "corneo-scleral junction (limbus 区)",
+     "n_cells": 32273,
+     "n_units": 22,
+     "cell_type": "Smooth Muscle Cells",
+     "pct": 0.13,
+     "low": 0.0,
+     "high": 0.0,
+     "status": "FLAG_ABOVE"
+    },
+    {
+     "region": "corneo-scleral junction (limbus 区)",
+     "n_cells": 32273,
+     "n_units": 22,
+     "cell_type": "Corneal Endothelium",
+     "pct": 0.0,
+     "low": 0.0,
+     "high": 0.0,
+     "status": "in_range"
+    },
+    {
+     "region": "ocular surface region (混合)",
+     "n_cells": 2585,
+     "n_units": 4,
+     "cell_type": "Epithelium",
+     "pct": 63.02,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "ocular surface region (混合)",
+     "n_cells": 2585,
+     "n_units": 4,
+     "cell_type": "Fibroblasts",
+     "pct": 23.6,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "ocular surface region (混合)",
+     "n_cells": 2585,
+     "n_units": 4,
+     "cell_type": "Endothelium",
+     "pct": 4.33,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "ocular surface region (混合)",
+     "n_cells": 2585,
+     "n_units": 4,
+     "cell_type": "Immune Cells",
+     "pct": 3.37,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "ocular surface region (混合)",
+     "n_cells": 2585,
+     "n_units": 4,
+     "cell_type": "Pericytes",
+     "pct": 2.36,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "ocular surface region (混合)",
+     "n_cells": 2585,
+     "n_units": 4,
+     "cell_type": "Melanocytes",
+     "pct": 2.24,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "ocular surface region (混合)",
+     "n_cells": 2585,
+     "n_units": 4,
+     "cell_type": "Smooth Muscle Cells",
+     "pct": 0.62,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "ocular surface region (混合)",
+     "n_cells": 2585,
+     "n_units": 4,
+     "cell_type": "Schwann Cells",
+     "pct": 0.46,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "ocular surface region (混合)",
+     "n_cells": 2585,
+     "n_units": 4,
+     "cell_type": "Corneal Endothelium",
+     "pct": 0.0,
+     "low": NaN,
+     "high": NaN,
+     "status": "support_gate_fail_region"
+    },
+    {
+     "region": "sclera",
+     "n_cells": 8899,
+     "n_units": 10,
+     "cell_type": "Fibroblasts",
+     "pct": 48.14,
+     "low": 34.0,
+     "high": 52.0,
+     "status": "in_range"
+    },
+    {
+     "region": "sclera",
+     "n_cells": 8899,
+     "n_units": 10,
+     "cell_type": "Pericytes",
+     "pct": 27.34,
+     "low": 12.0,
+     "high": 35.0,
+     "status": "in_range"
+    },
+    {
+     "region": "sclera",
+     "n_cells": 8899,
+     "n_units": 10,
+     "cell_type": "Endothelium",
+     "pct": 12.09,
+     "low": 8.0,
+     "high": 18.0,
+     "status": "in_range"
+    },
+    {
+     "region": "sclera",
+     "n_cells": 8899,
+     "n_units": 10,
+     "cell_type": "Smooth Muscle Cells",
+     "pct": 3.1,
+     "low": 0.0,
+     "high": 1.0,
+     "status": "FLAG_ABOVE"
+    },
+    {
+     "region": "sclera",
+     "n_cells": 8899,
+     "n_units": 10,
+     "cell_type": "Epithelium",
+     "pct": 2.97,
+     "low": 0.0,
+     "high": 3.0,
+     "status": "in_range"
+    },
+    {
+     "region": "sclera",
+     "n_cells": 8899,
+     "n_units": 10,
+     "cell_type": "Immune Cells",
+     "pct": 2.19,
+     "low": 0.0,
+     "high": 5.0,
+     "status": "in_range"
+    },
+    {
+     "region": "sclera",
+     "n_cells": 8899,
+     "n_units": 10,
+     "cell_type": "Melanocytes",
+     "pct": 2.19,
+     "low": 0.0,
+     "high": 6.0,
+     "status": "in_range"
+    },
+    {
+     "region": "sclera",
+     "n_cells": 8899,
+     "n_units": 10,
+     "cell_type": "Schwann Cells",
+     "pct": 1.98,
+     "low": 0.0,
+     "high": 3.0,
+     "status": "in_range"
+    },
+    {
+     "region": "sclera",
+     "n_cells": 8899,
+     "n_units": 10,
+     "cell_type": "Corneal Endothelium",
+     "pct": 0.0,
+     "low": 0.0,
+     "high": 0.0,
+     "status": "in_range"
+    },
+    {
+     "region": "ANY(v0 mixed, adult-only)",
+     "n_cells": 76708,
+     "n_units": 41,
+     "cell_type": "Epithelium",
+     "pct": 44.64,
+     "low": 7.0,
+     "high": 71.0,
+     "status": "in_range"
+    },
+    {
+     "region": "ANY(v0 mixed, adult-only)",
+     "n_cells": 76708,
+     "n_units": 41,
+     "cell_type": "Fibroblasts",
+     "pct": 39.21,
+     "low": 12.0,
+     "high": 45.0,
+     "status": "in_range"
+    },
+    {
+     "region": "ANY(v0 mixed, adult-only)",
+     "n_cells": 76708,
+     "n_units": 41,
+     "cell_type": "Pericytes",
+     "pct": 5.77,
+     "low": 0.0,
+     "high": 5.0,
+     "status": "FLAG_ABOVE"
+    },
+    {
+     "region": "ANY(v0 mixed, adult-only)",
+     "n_cells": 76708,
+     "n_units": 41,
+     "cell_type": "Endothelium",
+     "pct": 5.69,
+     "low": 0.0,
+     "high": 9.0,
+     "status": "in_range"
+    },
+    {
+     "region": "ANY(v0 mixed, adult-only)",
+     "n_cells": 76708,
+     "n_units": 41,
+     "cell_type": "Immune Cells",
+     "pct": 1.86,
+     "low": 0.0,
+     "high": 3.0,
+     "status": "in_range"
+    },
+    {
+     "region": "ANY(v0 mixed, adult-only)",
+     "n_cells": 76708,
+     "n_units": 41,
+     "cell_type": "Melanocytes",
+     "pct": 1.46,
+     "low": 0.0,
+     "high": 3.0,
+     "status": "in_range"
+    },
+    {
+     "region": "ANY(v0 mixed, adult-only)",
+     "n_cells": 76708,
+     "n_units": 41,
+     "cell_type": "Schwann Cells",
+     "pct": 0.81,
+     "low": 0.0,
+     "high": 2.0,
+     "status": "in_range"
+    },
+    {
+     "region": "ANY(v0 mixed, adult-only)",
+     "n_cells": 76708,
+     "n_units": 41,
+     "cell_type": "Smooth Muscle Cells",
+     "pct": 0.46,
+     "low": 0.0,
+     "high": 1.0,
+     "status": "in_range"
+    },
+    {
+     "region": "ANY(v0 mixed, adult-only)",
+     "n_cells": 76708,
+     "n_units": 41,
+     "cell_type": "Corneal Endothelium",
+     "pct": 0.1,
+     "low": 0.0,
+     "high": 1.0,
+     "status": "in_range"
+    }
+   ]
+  }
+ },
+ "ob1_search_declaration": {
+  "rows": [
+   "ocular_surface_normal_adult_human:Pericytes",
+   "ocular_surface_normal_adult_human:Goblet_cell"
+  ],
+  "method": "盘上 /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/chunks.parquet (242,928 chunks) 全量窗口检索 + v0 ledgers/mine_ct_pct.json 交叉; 零外网",
+  "result_goblet": "480 chunks 命中; 眼表语境 12 窗; 0 句通过三重过滤(人+正常成人眼表+直接报告捕获组成%) — 数字命中全部为假阳性(试剂浓度/手术成功率/再上皮化面积率); 维持 null(no_evidence)",
+  "result_pericytes": "2,574 chunks 命中; 眼表定量组成 0 窗 — 维持 null(B_missing), A 级区间不变",
+  "verdict": "OB-1 = 检索义务完成, 两行维持 null; 禁编数条款执行",
+  "candidate_ledger": "plans/comp_prior_v1_20260929/ob1_lit_candidates.tsv (108 窗全量留痕)"
+ },
+ "activation_obligations_v1": {
+  "OB-1": "RESOLVED_AS_NULL — 两行 no_evidence 合法维持, 检索留痕可审",
+  "OB-2": "RESOLVED — 类型×区域行已出 (5 组 × 9 类, 1 组支撑门不过回落); Q6 分区重算 Pericytes 旗标消除/SMC 新旗如实报",
+  "OB-3": "PARTIAL — 分选×区域层已出并重算; 预注册主口径 <20% 未达成 (Q1-Q5 全部 30-60%); 残余触发维度=悬液平台轴+特定富集设计缺层 (见 V1_VERDICT), 禁改球门条款执行, 不达标如实报"
+ },
+ "caveats": [
+  "RGC/神经元类比例受核分选与建库设计影响 (NeuN±, RGC 富集) — 判异常前必查建库策略 (baselines caveat 继承)",
+  "snRNA(核) 与 scRNA(细胞) 类比例不可直接互比 (REVIEWER_LLM T2)",
+  "眼表 Immune 仅 1.7% 池: 眼表固有免疫稀少, 免疫比例不可对照炎症样本",
+  "Corneal Endothelium 主档中位 0%: 纯 CEC 材料(碎块层) 分母=100%, 不适用本行",
+  "Goblet/结膜细节行 = 数据与文献双缺项, 已标 no_evidence",
+  "PAPER 41578023 (HRCA) n_chunks=1 (入库增量非全 chunk 化) — j2 勉强过, 内容锚不依赖它",
+  "v1 条件层区间本质=中央50%带 (A 严格语义), 单样本越界率天然高于包络语义 — 语义选择激活前归 PI",
+  "细胞悬液(scRNA)与核悬液(snRNA)类比例不可直比 (REVIEWER_LLM T2 继承): Q1/Q2/Q3/Q4 全部平台错配, 面侧无 A 级细胞悬液层可路由",
+  "眼表 corneal endothelium 单独层 (2 单元/404 细胞) 支撑门不过=诚实回落, 不是数据缺陷",
+  "Q6 区域重算含 study 混合 (D002 内 li_GSE147979 等小组), 区域行区间仅由 chen_* 主研究供者单元构成时 SMC 3.1% 为真实跨研究差异信号"
+ ]
+}

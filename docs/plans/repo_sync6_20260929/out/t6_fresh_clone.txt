@@ -1,0 +1,11 @@
+T6-PASS
+clone OK target=c2c587b563db HEAD match=True
+py_compile: files=271 fails=0 []
+gates-in-clone: T1=PASS T3=PASS T4=PASS
+verify_repro in clone: PASS 41/41 (REPRO PASS: 41/41 例 top5 逐位全等)
+git fsck rc=0 out=clean
+tracked files clone=3008 staging@c2c587b563db=3008 match=True
+tmpdir=/tmp/rs6_t6_dsdxkzkj cleaned=False
+# 注：本件验证对象=预检 commit（commit-tree 生成 refs/rs6-verify）；正式 commit 在本证据件与 gates_summary、
+# REPOSYNC6_COMPLETED.md、T7_EXCLUSIONS_RS6 台账落盘后于其 tree 之上生成（parent=fa4f175 不变，线性可快进），
+# 终态 clone+tracked 对账复跑结果=登记于看板完成 summary（协调者可 `git clone file://<staging>` 独立复验）。

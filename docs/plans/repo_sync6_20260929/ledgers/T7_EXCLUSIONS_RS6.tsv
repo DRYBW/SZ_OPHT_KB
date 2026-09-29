@@ -1,0 +1,17 @@
+# RS6 T7 例外台账（token 不落字面；masked=仓面存脱敏版，线上原件留机器侧）
+relpath	note
+kb/composition/EXPECTED_COMPOSITION_v1.json	外部裁决商名字面 2 处→REVIEWER_LLM 占位（v4 引擎）；仓面=masked 派生版；盘上原件 /mnt/D/EyeKB/kb/composition/ 零改动（sha 原锚见 docs/plans/comp_prior_v1_20260929/MANIFEST_sha256.txt from= 注）
+kb/composition/EXPECTED_COMPOSITION_v1.md	sha 与原件全等（无 needle 命中）；镜像面机器路径零出现
+docs/plans/comp_prior_v1_20260929/V1_VERDICT.md	外部裁决商名字面 1 处→REVIEWER_LLM；含机器绝对路径=证据镜像面字节直收豁免（沿 RS3/RS5 comp_prior/drsc/seurat 先例）
+docs/plans/comp_prior_v1_20260929/scripts/s5_build_v1_t_37a35220.py	同上 masked 1 处；脚本内源路径=/mnt/D 字面，字节直收豁免登记
+docs/plans/comp_prior_v1_20260929/MANIFEST_sha256.txt	重锚版（仓相对路径+仓副本现 sha+from= 原锚追溯）；原件留机器侧为权威
+docs/plans/comp_prior_v1_20260929/（其余 21 件）	字节直收零命中零改动（tsv/json/log/py 为层化结果与日志；机器路径豁免沿证据镜像面先例；>50MB 件=0 登记 out/t0）
+docs/plans/QUEUE_20260929.md	⑥节新增行=v4 幂等+pathnorm token 化后入仓；在跑卡两行状态更新；线上原件=/home/ubuntu/QUEUE_常设任务_20260928.md + /mnt/D/EyeKB/plans/QUEUE_20260929.md（均零改动）
+docs/plans/repo_sync6_20260929/BRIEF_REPOSYNC6.md	任务书镜像：派发/执行方名→AGENT_ROLE 占位（v4 引擎 profile 规则）+机器路径 token 化（t2b 台账）+[仓面注]附注；T4 门条款凭据模式枚举字面=规范描述文本非凭据值→T7 机检豁免（沿 RS5 BRIEF5 先例）；原文其余逐字
+docs/plans/repo_sync6_20260929/scripts/rs6_gates.py	门脚本=self-clean（needle 运行期拼装，源面零连续字面；github 前缀 split-concat 防扫描器改写）
+docs/plans/repo_sync6_20260929/scripts/rs6_pathnorm.py	同上（NORM_MAP 命名避开 token 字面歧义）
+docs/plans/repo_sync6_20260929/scripts/rs6_finalize_mask.py	同上
+docs/plans/repo_sync6_20260929/scripts/rs6_ingest.py	收件脚本=self-clean
+docs/plans/repo_sync6_20260929/scripts/rs6_t6_clone.py	同上
+docs/plans/repo_sync6_20260929/out/	门运行证据件=out/ 豁免（沿 RS3/RS5）
+docs/wiki/（15 件）	本轮零漂移零触碰（masked 再生对账=唯一差异为 pathnorm token 形态，无 09-29 新行）——对账记录见 REPOSYNC6_COMPLETED.md §一
