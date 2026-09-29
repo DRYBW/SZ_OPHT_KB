@@ -163,7 +163,7 @@ python clients/ocularkb/rag/scripts/stage3_retrieve.py \
 }
 ```
 
-服务只走本地 stdio，不开任何网络端口。接好后，`search_literature` 需要知道文献库存放位置：把 `kb/literature_db/EYEKB_DB_POINTER.yaml` 里的 `default` 改成你第 2 步解出的目录名（如 `v2.4.2_2026-09_slim`）；其余四个工具只读仓库自带的 `kb/`，clone 后开箱即用。
+服务只走本地 stdio，不开任何网络端口。`search_literature` 的文献库位置按以下顺序自动解析：环境变量 `EYEKB_DB_DIR` → 指针文件 `kb/literature_db/EYEKB_DB_POINTER.yaml` 中 `role: default` 且实际存在的条目 → **本仓唯一一份已解包语料**（照上文第 2 步解包后无需任何配置即自动发现）；其余四个工具只读仓库自带的 `kb/`，clone 后开箱即用。
 
 ### 可以问它的 5 件事
 

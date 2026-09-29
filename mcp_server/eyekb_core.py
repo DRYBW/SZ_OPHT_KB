@@ -36,14 +36,45 @@ import stage3_retrieve as _s3  # noqa: E402
 
 
 # ---------------------------------------------------------------- 工具 1
+# 默认库解析链（外机可用修复，2026-09-30，PI 放行"验证过就上传"波）：
+# 1) env EYEKB_DB_DIR  2) 指针 role:default 条目（绝对或仓根相对）且存在
+# 3) 本仓唯一语料（Release 解包即自动发现）  4) 回退生产硬路径（行为与旧版恒等）
+def _default_db_dir():
+    env = os.environ.get("EYEKB_DB_DIR")
+    if env:
+        return env
+    try:
+        txt = POINTER_YAML.read_text(encoding="utf-8")
+        cur_path = None
+        for ln in txt.splitlines():
+            s = ln.strip()
+            if s.startswith("path:"):
+                cur_path = s.split("path:", 1)[1].strip()
+            elif s.startswith("role:") and "default" in s and cur_path:
+                p = Path(cur_path)
+                if not p.is_absolute():
+                    p = KB.parent / cur_path
+                if p.is_dir():
+                    return str(p)
+    except Exception:
+        pass
+    for base in (KB / "literature_db", KB.parent / "literature_db"):
+        if base.is_dir():
+            cands = sorted(d for d in base.iterdir()
+                           if d.is_dir() and (d / "chunks.parquet").is_file())
+            if len(cands) == 1:
+                return str(cands[0])
+    return str(DEFAULT_DB_DIR)
+
+
 def search_literature(cell_type, species=None, tissue=None, top_k=5,
                       query=None, db=None):
     """文献片段检索: 透传 stage3_retrieve.retrieve()。
 
-    db: None → v2.0_2026-09 (EyeKB 默认库); 或显式目录路径。
+    db: None → 按 _default_db_dir() 解析链选库; 或显式目录路径。
     species/tissue/cell_type 三维过滤透传 (Claude5 审核要求落地)。
     """
-    db_dir = str(db) if db else str(DEFAULT_DB_DIR)
+    db_dir = str(db) if db else _default_db_dir()
     res = _s3.retrieve(cell_type, species=species or None, top_k=int(top_k),
                        query=query or None, tissue=tissue, db_dir=db_dir)
     # K3 additive 联表: 每条命中挂 inclusion_reason (入库原因归类), 不触碰检索语义
