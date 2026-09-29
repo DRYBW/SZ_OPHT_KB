@@ -16,3 +16,8 @@
 
 ## 待 PI 拍板的更大方案（本卡未动）
 "整仓永久去模型"（golden 41 重建词法版锚、历史 RUN 数字定性为 dense 口径旧档、删 st/torch 依赖与模型附件）——属球门层决定，须 PI 点名+历史裁决口径注记，不在本次可选化范围内。
+
+## 追加：fp16 量化门（PI "我们不是量化了吗"，2026-09-29 午）
+- 语料侧本来就是 fp16-slim（Release v2.4.2）；模型侧初打包为 fp32 原版权重 1341MB——补齐。
+- 量化 A/B（bge_fp16_AB.py）：safetensors fp32→fp16 + config torch_dtype=float16；黄金41题 fp16 模型 **41/41 逐位全等，零差异** → 过门。
+- 结果：Release model-bge-large-en-v1.5 上 fp16 版（670MB，减半）；Release notes 声明"public MIT weights, fp16 dtype cast only, NOT trained here"+量化门数据。fp32 原件留本机（OcularKB 侧，不入仓）。
