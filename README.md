@@ -40,13 +40,22 @@ python clients/ocularkb/rag/scripts/stage3_retrieve.py \
   --cell-type "Muller glia" --tissue retina --db-dir literature_db/v2.4.2_2026-09_slim
 ```
 
-第一次运行会自动从 HuggingFace 拉取嵌入模型 `BAAI/bge-large-en-v1.5`（公开权重，约 1.2 GB，本仓库不含）。**中国大陆网络拉不动时加一行镜像**：
+**第 3 步需要一个嵌入模型**（把自由提问"翻译"成检索坐标的开源公开权重，不训练、不参与任何注释判断）。三种拿到方式，按推荐排序：
 
-```bash
-export HF_ENDPOINT=https://hf-mirror.com   # 再跑上面第 3 步即可
-```
+1. **本仓 Release 附件（推荐，免翻墙）**：下载 `bge-large-en-v1.5_model.tar`（约 1.3 GB，附 sha256），在仓库根目录解包即得到 `models/bge-large-en-v1.5/`，检索引擎会自动找到它：
+   ```bash
+   # 有 gh CLI：
+   gh release download model-bge-large-en-v1.5 --pattern '*' && tar -xf bge-large-en-v1.5_model.tar
+   # 或浏览器打开仓库 Releases 页手动下载两个文件后解包
+   ```
+2. **从 HuggingFace 拉原版公开权重** `BAAI/bge-large-en-v1.5`，解到 `models/` 同名目录或用环境变量指路：
+   ```bash
+   export HF_ENDPOINT=https://hf-mirror.com   # 中国大陆网络建议先设镜像
+   huggingface-cli download BAAI/bge-large-en-v1.5 --local-dir models/bge-large-en-v1.5
+   ```
+3. **都不用模型**：检索会自动降级为**纯词法模式**并明标（结果里带 `retrieval_mode: lexical_fallback`）。词典、组成基线、疾病先验、词条页四个工具本来就零模型，不受影响。
 
-能打出检索结果，就说明整套环境是通的。
+也可以用 `EYEKB_MODEL_DIR=/路径` 显式指定模型位置。能打出检索结果（无论哪种模式），就说明整套环境是通的。
 
 ## 接入你的 AI 工作流（MCP 服务）
 
@@ -93,7 +102,7 @@ python tests/verify_repro.py --db-dir literature_db/v2.4.2_2026-09_slim
 # 输出 REPRO PASS: 41/41 = 与全仓锚点同分布
 ```
 
-这 41 道"黄金题"是全项目的回归基准：检索排序逐位对齐。如果你的环境有一题对不上，按 `docs/VERIFY_CONTRACT.md` 的三层排查走，**不要改判据凑通过**。
+这 41 道"黄金题"是全项目的回归基准：检索排序逐位对齐。**复现门以官方 dense 模式为准**——请先按上文放好嵌入模型再跑（纯词法降级模式下结果不同，属预期，不算复现失败）。如果模型到位仍有一题对不上，按 `docs/VERIFY_CONTRACT.md` 的三层排查走，**不要改判据凑通过**。
 
 ## 目录结构
 
