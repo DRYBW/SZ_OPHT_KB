@@ -1,6 +1,6 @@
-# USER_DIRECTIVE_20260926_redline_rewrite — "证据禁入打分"红线改写（PI 拍板方案 A）
+# USER_DIRECTIVE_20260926_redline_rewrite — "证据禁入打分"红线改写（PI 决定方案 A）
 
-- 拍板：2026-09-26 夜，PI 回"A"=改写不取消（PI 原话要义：该红线本是给 OcularKB 的 GBDT 打分栈立的；EyeKB 现无打分模型、判读纯用文献 marker，旧条文空转且有"注释也不许用文献"的误读副作用）。
+- 决定：2026-09-26 夜，PI 回"A"=改写不取消（PI 原话要义：该红线本是给 OcularKB 的 GBDT 打分栈立的；EyeKB 现无打分模型、判读纯用文献 marker，旧条文空转且有"注释也不许用文献"的误读副作用）。
 - 被替代旧文（2026-08-12 Claude5 冻结裁定）："RAG 只做辅助引用、禁入打分/禁止融入任何打分流程"。
 
 ## 新条文：证据消费纪律 v2（现行有效，全项目统一措辞）
@@ -13,7 +13,7 @@
 
 - 后续一切任务书/协议/评估卡红线句统一用新条文（引用本件路径即可）。
 - **历史不回改**：已冻结任务书（plans/BRIEF_*、PROMPT_*）、RUN 预注册件、demo 草稿维持当时措辞，引用当时口径有效（评测可比性不受影响）。
-- 本次已改写落点：WIKI/检索索引.md、WIKI/结论速查.md、WIKI/决策记录.md（追加新行）、EyeKB/plans/ANNOTATION_PROTOCOL_v1.1.md（行内注记）、skill knowledge-guided-cell-annotation、skill research-project-knowledge-hub 引用件、EYEKB_REPO docs 镜像（随 commit 推送）、协调者记忆。
+- 本次已改写落点：WIKI/检索索引.md、WIKI/结论速查.md、WIKI/决策记录.md（追加新行）、EyeKB/plans/ANNOTATION_PROTOCOL_v1.1.md（行内注记）、skill knowledge-guided-cell-annotation、skill research-project-knowledge-hub 引用件、EYEKB_REPO docs 镜像（随 commit 推送）、项目维护方记忆。
 
 ## 追加一（同日夜，PI 原话："可以把全量重新跑一遍数据，然后把打分这个东西放上去，看一下对整个注释有没有提升"）
 
@@ -21,13 +21,13 @@
 - 范围=实验与量化，实验结论出来前生产判分链路（真值匹配/共识裁定）仍按 v2 第②条执行。
 - 预注册判读矩阵与任务书：/mnt/D/EyeKB/plans/evidence_scoring_20260926/BRIEF_E1.md。
 
-## 追加二（09-26 夜，E1 结果回来后 PI 回"ok"=按协调者建议票放行三项）
+## 追加二（09-26 夜，E1 结果回来后 PI 回"ok"=按项目维护方建议票放行三项）
 
 1. **E1 档位判定=V2+**（证据打分=预筛/分歧旗标定位成立，替代判读不成立；生产接线暂不做）——E1_VERDICT.md 保持机械执行件原样，本节为裁决记录。
 2. **E2 去同源重测 GO**：任务书 /mnt/D/EyeKB/plans/e2_decontam_20260926/BRIEF_E2.md（判读矩阵 W1/W2/W3 预注册；干净效果量+旗标工作点+评测面同源水分账）。
-3. **KB9 眼表词条缺口（Melanocyte/Schwann 零词条、上皮-免疫接管）入建设队列**，E2 收口后一并排（PI 拍板执行前不派卡）。
+3. **KB9 眼表词条缺口（Melanocyte/Schwann 零词条、上皮-免疫接管）入建设队列**，E2 完成后一并排（PI 决定执行前不分派任务）。
 
-## 追加三（09-27 凌晨，E2 收口报知）
+## 追加三（09-27 凌晨，E2 完成报知）
 
 E2 机械裁决=**W2**（干净 Δ+7.66pp 过不了旗标工作点门+否决列 −6.63pp）：证据面定位=仅离线审计用，V2+ 维持、生产提案关闭——**W2 生效无需 PI 动作**。留两个衍生选择（不阻塞）：①S5 宽容口径（EuropePMC 语境命中算不算外部链）若要认账须新预注册，两口径都到不了 W1；②338 个无记录文献先验基因补 PMID=KB 建设工程项（可并 KB9 一起排）。
 

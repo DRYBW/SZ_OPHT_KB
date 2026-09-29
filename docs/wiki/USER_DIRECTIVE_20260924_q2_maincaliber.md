@@ -1,4 +1,4 @@
-# USER_DIRECTIVE 2026-09-24：Q2 真值主口径切换（PI "ok" 确认，协调者代录）
+# USER_DIRECTIVE 2026-09-24：Q2 真值主口径切换（PI "ok" 确认，项目维护方代录）
 
 ## 决定
 自本件起，涉及 Q2 (GSE155288) 真值的对外数字，**主口径=truth_corrected**（truthfix_v1 派生列）：

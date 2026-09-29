@@ -1,4 +1,4 @@
-# KB2 RUN 系列台账与通道细节（2026-09-24）
+# KB2 RUN 系列记录表与通道细节（2026-09-24）
 
 ## LLM_CHANNEL（LLM_CHANNEL）通道
 - base_url: `https://LLM_CHANNEL.cn-beijing.LLM_CHANNEL/compatible-mode/v1`（OpenAI 兼容）
@@ -19,7 +19,7 @@ annotation/ANN_A_pi_VERBATIM_Q9.md     # PI 人类判读原话+转录映射（�
 annotation/.qwen_*_done.json           # runner 断点文件
 scoring/{,run2_,run3_}object_B_summary.json / *_table.tsv / disagreement_table.tsv
 scripts/kb2_digest2.py / kb2_mcp_v2.py / kb2_slim_v2.py / kb2_bscore_v{2,3,4}.py
-EVAL_RUN*_COMPLETED_*.md               # 各轮收口件（RUN3_DESIGN_prereg.md 含规模偏差声明）
+EVAL_RUN*_COMPLETED_*.md               # 各轮交付件（RUN3_DESIGN_prereg.md 含规模偏差声明）
 ```
 
 ## 脚本要点
@@ -31,7 +31,7 @@ EVAL_RUN*_COMPLETED_*.md               # 各轮收口件（RUN3_DESIGN_prereg.md
 ## 人类 PI 判读包 MSG_PLATFORM 分发格式（RUN1 Q9 批实证）
 - 每批=一成员 5 簇；卡面：cluster_id+细胞数 / top 基因 20 个 / KB 命中
 - 明示：等级表（A 慎用/B 转录强+可排除/C 存疑）、"证据不足合法"、大白话回复即可（"Q9::0 = 炎性巨噬，C"）
-- 协调者转录 JSONL（why ≤40 字压缩，原话进 VERBATIM 件）；**PI 判读后送独立 LLM 评审再回呈裁定**是本轮定型的 QA 环
+- 项目维护方转录 JSONL（why ≤40 字压缩，原话进 VERBATIM 件）；**PI 判读后送独立 LLM 评审再回呈裁定**是本轮定型的 QA 环
 
 ## RUN3 关键数字（供下轮对比锚）
 一致 63.8% / kappa 0.622 / 真值区 A 60% B 70% / Q5b 最难(0.42/0.47) / 热点 23=BC11+AC6+HC2 / 锚卷翻转 8/40

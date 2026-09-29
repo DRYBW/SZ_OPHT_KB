@@ -2,9 +2,9 @@
 
 > 版本: v1.2 | 生成: 2026-09-27 | 卡片: t_03808fff (PROTO 票规 v2 落地)
 > 取代关系: v1.1 (2026-09-23, t_16c3e020) **原地不动为历史冻结件**；本版=copy 不 move（惯例），正文 §0-§7 与 v1.1 逐字相同，唯一增补=§8 票规版本声明（引用决策件 /mnt/D/OcularKB/WIKI/PROTOCOL_VOTING_v2_C2b.md）。
-> 历史版本行（保留）: v1.1 | 生成: 2026-09-23 | 卡片: t_16c3e020 (KB1v2-W3)；v1.1 之取代关系（v1.0=BRIEF_KB1 K6 设计稿, t_39182aa2 未收口即被取代, 从未生效；按 BRIEF_KB1v2 W3 + REVIEWER_LLMANNOTATION_GUIDANCE_v1.md T1/T2/T3 落地）以 v1.1 原件为准。
+> 历史版本行（保留）: v1.1 | 生成: 2026-09-23 | 卡片: t_16c3e020 (KB1v2-W3)；v1.1 之取代关系（v1.0=BRIEF_KB1 K6 设计稿, t_39182aa2 未完成即被取代, 从未生效；按 BRIEF_KB1v2 W3 + REVIEWER_LLMANNOTATION_GUIDANCE_v1.md T1/T2/T3 落地）以 v1.1 原件为准。
 > 适用: EyeKB MCP 五工具消费方（OcularKB 引擎、T-ATLAS、DR/RP 线、任何 agent 的人机注释会话）。
-> 红线不变量（2026-09-26 PI 拍板改写为"证据消费纪律 v2"，USER_DIRECTIVE_20260926_redline_rewrite.md）：判读层证据可自由消费（本系统设计核心）；**判分/裁定侧禁食判读同源证据**（REVIEWER_LLM T3 扩展表述见 §0，历史冻结件按当时措辞仍有效）。
+> 红线不变量（2026-09-26 PI 决定改写为"证据消费纪律 v2"，USER_DIRECTIVE_20260926_redline_rewrite.md）：判读层证据可自由消费（本系统设计核心）；**判分/裁定侧禁食判读同源证据**（REVIEWER_LLM T3 扩展表述见 §0，历史冻结件按当时措辞仍有效）。
 
 ## 0. 红线（服务级，写入 MCP server 文档与返回体）
 
@@ -20,7 +20,7 @@ module score、标签加权、置信度加分、候选排序分、复合 QC 分�
 | ① 数据优先 | 隐去可隐去的疾病分组信息（保留物种、**实际取样材料**等必要元数据）；完成技术 QC、候选身份、替代解释、未定项 | 数据版本 + 标签版本 + 证据记录（三件哈希/时间戳落审计文件） | 本阶段不得调 `get_disease_prior`；`get_tissue_composition` 仅按实际取样材料查询，不得借"疾病发生在该器官"跨材料引用 |
 | ② 疾病对照 | 展示疾病条目，仅生成**上下文一致性/冲突旗**（expected / unexpected / contamination-suspect），补充引用 | 旗标清单 + 引用核验记录 | 不得改标签 |
 | ③ 复核变更 | 任何标签修改必须指出：新发现的数据证据 + 原候选为何不再成立 | 变更审计表（旧标签→新标签→新证据→否定理由） | **仅有"更符合疾病预期"不能作为修改理由** |
-| ④ PI 裁决 | 保留修改前后标签、依据、仍未解决问题；PI 拍板后定稿 | 裁决记录（含"证据不足"合法结论） | PI 不成为唯一真值来源（T7 第三步） |
+| ④ PI 裁决 | 保留修改前后标签、依据、仍未解决问题；PI 决定后定稿 | 裁决记录（含"证据不足"合法结论） | PI 不成为唯一真值来源（T7 第三步） |
 
 ## 2. unexpected 四分处置（REVIEWER_LLM T3；禁混流）
 
@@ -82,7 +82,7 @@ module score、标签加权、置信度加分、候选排序分、复合 QC 分�
 
 ## 8. 票规版本声明（v1.2 增补，2026-09-27；引用决策件）
 
-多席判读共识的计票规则已由 PI 拍板升版（USER_DIRECTIVE_20260927_scoring_wave 追加二 D11）：
+多席判读共识的计票规则已由 PI 决定升版（USER_DIRECTIVE_20260927_scoring_wave 追加二 D11）：
 
 - **决策件（唯一权威定义源）**：/mnt/D/OcularKB/WIKI/PROTOCOL_VOTING_v2_C2b.md
   - v1=**C4**（现行基线）：定名票 grade∈{A,B} 计票，≥2 同名定名；UNDET/coarse:/grade C 全弃。

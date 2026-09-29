@@ -20,7 +20,7 @@
 python tests/verify_repro.py --db-dir literature_db/v2.4.2_2026-09_slim
 ```
 - 判据：41 例 top5 PMID 与 `tests/REPRO_EXPECTED.json` **逐位全等**，PASS=本机与锚点同分布。
-- 锚点出身：v2.4.2 fp32 原件经三层验证（数据层列全等 / runner 锚对 worker 官方黄金 41/41 / slim-vs-fp32 top5 逐位全等、top1 相似度漂移 0.0）后由 slim 库直出落档（见 docs/plans/release_slim_v242/）。
+- 锚点出身：v2.4.2 fp32 原件经三层验证（数据层列全等 / runner 锚对 官方黄金 41/41 / slim-vs-fp32 top5 逐位全等、top1 相似度漂移 0.0）后由 slim 库直出落档（见 docs/plans/release_slim_v242/）。
 
 ## §4 FAIL 的三层排查顺序（禁改判据凑数）
 1. G2：预置件 sha 是否对上（最常见：拿错件/拼接顺序错）；

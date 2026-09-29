@@ -6,7 +6,7 @@
 2. 第二判读员（AGENT_ROLE，卡 t_0188c99f）验收输入时发现 **40/45 簇 top_genes 为空**（仅 Q9 五簇有值），拒绝在空证据上伪造"弃权"，发阻断报告——正确行为范本。
 3. 根因（其取证定位到行）：`kb2_digest2.py` 的 `member_clusters()` 走 pandas 读 clustering TSV，`leiden` 列为 int64 → 选中簇号是 int；而组均值字典键经 `.astype(str)` 是 str。`if c not in gm: out[c]=[]` 恒真 → **静默返回空列表，无异常无日志**。日志尾"Q1..Q9 genes done / GENES PART DONE"全部正常——空值路径不在 FAIL 分支内。
 
-## 修复循环（协调者按阻断报告第三节提案执行）
+## 修复循环（项目维护方按阻断报告第三节提案执行）
 
 1. **旧件保版本**：`cluster_selection/genes_part/EV_DIGEST_SLIM/脚本` 四件复制为 `*_r1_defective.*`，sha256 追加进 `digest/ERRATA_SOURCE_FIX_SHA_LOG.txt`（勿原地静默覆盖）。
 2. **最小补丁**：仅 2 处——`astype(str)` 统一 + 兜底 `c=str(c)` + 该分支加 WARN 日志（使同类缺陷不再无声）。照阻断报告提案原样执行，不自由发挥。
@@ -16,17 +16,17 @@
 6. **新件 sha 落日志**，canonical 文件名不变（下游引用不换名），defective 旧件永久保留。
 7. **重开判读槽位**：污染过的判读员不复用（其自曝读 clustering TSV 时暴露 2 个 barcode 真值 + 读过取证材料）——新开干净卡（t_7c1630fc），任务书带盲性红线清单 + 领地声明 + 落卡纪律。
 
-## 盲性红线清单（干净判读卡任务书模板要素）
+## 盲性红线清单（干净注释证据报告任务书模板要素）
 
 - 只许读：digest（指定 sha）+ 判读指令文件。
 - 禁读：clustering/（含逐细胞真值列）、defs/、engine/、scoring/、结果报告、任何 ERRATA/取证件、另一判读员产物（ANN_A_*）、defective 旧件、项目 WIKI。
 - 禁外部检索（首轮 lit 占位，两判读员同证据面）。
 - undetermined 是合法输出，禁为填满硬注。
-- 产出路径/行数/cluster_id 集合与 digest 逐一对应；协调者验收 = 计数+集合比对+schema 枚举+3 行抽查 why 对应证据。
+- 产出路径/行数/cluster_id 集合与 digest 逐一对应；项目维护方验收 = 计数+集合比对+schema 枚举+3 行抽查 why 对应证据。
 
 ## 人类 PI 判读槽位（槽位 A）
 
-- 同证据面下"临床专家 vs AI"一致率比双 AI 互判更贴 KB 人机交互定位；PI 走 MSG_PLATFORM 分批判读包：每批=一个成员 5 簇（top 基因 + KB 命中 + KB 排名 + n_cells），大白话回"身份+等级 A/B/C+一句话依据"，协调者忠实转录 JSONL 不加工。
+- 同证据面下"临床专家 vs AI"一致率比双 AI 互判更贴 KB 人机交互定位；PI 走 MSG_PLATFORM 分批判读包：每批=一个成员 5 簇（top 基因 + KB 命中 + KB 排名 + n_cells），大白话回"身份+等级 A/B/C+一句话依据"，项目维护方忠实转录 JSONL 不加工。
 - 槽位文件名保持评分脚本兼容（kb2_bscore.py 硬编码 ANN_A_AGENT_ROLE.jsonl/ANN_B_second.jsonl），来源换人时文件名不动、README/任务书声明实际判读员身份。
 - 发证据卡前须自查不泄露：不给 truth、不给引擎预测、不给另一判读员意见；KB 排名要注明"检索副产物非置信度"。
 

@@ -14,7 +14,7 @@ RUN3_DESIGN_prereg.md：判据 M1 一致率+kappa（基线 RUN2 28/45、0.539）
 ## 模型通道选定（冒烟判据=content 非空）
 - A = qwen3.8-max @ LLM_CHANNEL LLM_CHANNEL.cn-beijing.LLM_CHANNEL/compatible-mode/v1（key 从 AGENT_ROLE config "name: LLM_CHANNEL" 段 re.search 提取，禁进命令行）
 - B = glm-5.1（同通道）。淘汰：Agents-A1（discovery-api 站 config 里 key 是脱敏占位不可用）、deepseek-v4-pro（200 但 content=''，reasoning 吃光 max_tokens）
-- 规模偏差写进 prereg：worker 卡 2h 容量约 45 行撑不了 290，B 从会话卡改跨厂商 runner；A=Qwen 系 B=GLM 系保独立性
+- 规模偏差写进 prereg：执行脚本 卡 2h 容量约 45 行撑不了 290，B 从会话卡改跨厂商 runner；A=Qwen 系 B=GLM 系保独立性
 
 ## 脚本资产（可复用）
 - scripts/kb2_roster_v3full.py：名册（Q1-Q8 clustering TSV leiden value_counts>=100；Q9 backed 读 leiden_A）
@@ -24,7 +24,7 @@ RUN3_DESIGN_prereg.md：判据 M1 一致率+kappa（基线 RUN2 28/45、0.539）
 - scripts/kb2_bscore_v4.py：v3 的 run2_→run3_ 输出前缀版（评分器每轮复制改前缀，禁覆盖上一轮产物）
 
 ## 管道编排
-digest(~8min) -> MCP 采集(290x~3.5 调用) -> SLIM_v3full 冻结 sha -> A/B 并行盲判（各 58 批 x20-60s）-> bscore v4 -> 分歧表+锚卷翻转 -> WIKI 收口。后台链式 + notify；双侧断点文件按 stem 天然隔离。
+digest(~8min) -> MCP 采集(290x~3.5 调用) -> SLIM_v3full 冻结 sha -> A/B 并行盲判（各 58 批 x20-60s）-> bscore v4 -> 分歧表+锚卷翻转 -> WIKI 完成。后台链式 + notify；双侧断点文件按 stem 天然隔离。
 
 ## 结果（待本轮跑完追加）
 - M1-M5 读数：
