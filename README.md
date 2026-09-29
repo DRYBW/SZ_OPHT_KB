@@ -69,6 +69,18 @@
 
 **方法学纪律**：证据不足或无法分离的细胞群，输出"不确定"是合规结论，系统不会将存疑结果表述为确定结果。阶段 A 为行业通用流程；阶段 B 是本知识库的贡献；阶段 C 的最终判定权始终在研究者。
 
+## 批量注释（pipeline/）
+
+上面阶段 A+B 的七个步骤有一个可直接运行的入口：输入自己的数据（格式要求回链上文**《输入与输出》**一节：原始计数、注明物种与组织、样本可区分），逐簇产出五工具证据报告与待裁决清单。
+
+```bash
+python pipeline/run_pipeline.py --input data.h5ad --species human --tissue retina --group-col treatment --out results/run1        # h5ad 形态
+python pipeline/run_pipeline.py --input 10x_dir/ --species human --tissue retina --sample-group "S1=control;S2=case" --out results/run2  # 10X 三件套（父目录=多样本）
+python pipeline/run_pipeline.py --input data.h5ad --species human --tissue retina --ensg-map ids.tsv --out results/run3           # 输入只有 Ensembl ID 时
+```
+
+产出四件：处理后的 `.h5ad`（含批次校正与聚类标记）、质控图（线粒体比例、基因检出数、doublet、UMAP 前后）、`annotation_evidence_report.json/.md`（每簇 top 基因、marker 候选与得分、组成基线对照的越界旗标、疾病先验原文提及、文献片段+PMID、机械置信度分级）、`decisions_template.csv`（每簇一行，`decision` 列的 accept / modify / **abstain** 三值留空，由研究者填写——**弃权是合法输出，本入口不把存疑结果写成确定标签，也不含任何自动打分或自动命名逻辑**）。默认路径**零 LLM**：五工具是本地机械检索；可选 `--llm-assist` 只调用用户自备通道（读环境变量，仓内不含任何真实 key/URL），且只附加参考叙述、不改变分级。详见 `pipeline/README.md`。
+
 ## 知识库的组织结构
 
 | 层 | 位置 | 作用 |
@@ -77,6 +89,7 @@
 | **文献层** | `literature_db/`（经 Releases 下载） | 步骤 7 的检索对象；同时是词典条目的出处——任何断言均可回溯到原文 |
 | **操作规程层** | `docs/skills/` | 注释的标准作业程序（SOP）与验证规范：冻结评估集、双盲比对、弃权规则，约束步骤 4–9 的执行质量 |
 | **项目记录层** | `docs/wiki/`、`docs/VERSION_NOTES.md` | 项目状态、历史决定与逐版本变更记录——面向维护者，不进入单次分析流程 |
+| **批量入口层** | `pipeline/` | 步骤 1–7 的可执行入口（阶段 A 标准处理 + 阶段 B 逐簇证据采集），输出证据报告与待人工裁决清单；默认零 LLM |
 
 ## 长什么样
 
