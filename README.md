@@ -113,13 +113,19 @@ python clients/ocularkb/rag/scripts/stage3_retrieve.py \
 
 **第 3 步需要一个嵌入模型**（将自然语言查询转换为向量检索坐标的开源模型，BAAI bge-large-en-v1.5；本系统不训练模型，模型也不参与任何细胞注释判断）。三种获取方式，按推荐排序：
 
-1. **本仓 Release 附件（推荐，免翻墙）**：下载 `model-bge-large-en-v1.5` Release 里的 4 分卷 `bge-fp16.part_aa..ad`（合计约 640 MiB，fp16 量化版，黄金 41 题与 fp32 逐位一致），拼接校验后在仓库根目录解包即得到 `models/bge-large-en-v1.5/`，检索引擎会自动找到它：
+1. **本仓 Release 附件（推荐，免翻墙）**：首选单文件 `bge-large-en-v1.5_fp16.tar`（约 640 MiB，fp16 量化版，黄金 41 题与 fp32 逐位一致）；网络不佳可改用同 Release 的 4 分卷 `bge-fp16.part_aa..ad`。解包后仓库根目录即有 `models/bge-large-en-v1.5/`，检索引擎会自动找到它：
    ```bash
-   gh release download model-bge-large-en-v1.5
+   # 首选单文件：
+   gh release download model-bge-large-en-v1.5 -p 'bge-large-en-v1.5_fp16.tar*'
+   sha256sum -c bge-large-en-v1.5_fp16.tar.sha256   # 应输出 OK（21d5fa2e… 与分卷拼接件同物）
+   tar -xf bge-large-en-v1.5_fp16.tar
+   # 单文件下载失败（大文件偶发断流）时改用分卷：
+   gh release download model-bge-large-en-v1.5 -p 'bge-fp16*'
    cat bge-fp16.part_aa bge-fp16.part_ab bge-fp16.part_ac bge-fp16.part_ad > bge-fp16.tar
    sha256sum -c bge-fp16.tar.sha256   # 五条全过（拼接件 21d5fa2e… 与 4 分卷）才继续
    tar -xf bge-fp16.tar
    ```
+   两种途径解出的目录内容逐字节相同（同一 tar 流）。
 2. **从 HuggingFace 拉原版公开权重** `BAAI/bge-large-en-v1.5`，解到 `models/` 同名目录或用环境变量指路：
    ```bash
    export HF_ENDPOINT=https://hf-mirror.com   # 中国大陆网络建议先设镜像
