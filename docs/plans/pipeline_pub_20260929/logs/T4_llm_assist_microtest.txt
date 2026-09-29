@@ -1,0 +1,3 @@
+# --llm-assist 双向降级微测（llm_assist.assist 直调，2026-09-29）
+nokey: False | --llm-assist 已开但环境未设 API key 变量（OPENAI_API_KEY），按默认零 LLM 路径继续
+deadchannel: True errors: [{'cluster': '0', 'err': 'URLError'}] | cluster note: [LLM 辅助不可用，仅凭机械证据判读]

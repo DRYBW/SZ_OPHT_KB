@@ -1,0 +1,11 @@
+{
+ "out": "docs/plans/pipeline_pub_20260929/out/smoke_ensgmap",
+ "secs": 59.2,
+ "n_clusters": 14,
+ "grades": {
+  "mixed_or_insufficient": 3,
+  "evidence_consistent": 11
+ },
+ "empty_decision_cells": true,
+ "next_step": "逐簇在 decisions_template.csv 填 decision (accept|modify|abstain) 与 proposed_label；弃权合法"
+}

@@ -1,0 +1,30 @@
+[stageA] load: kind=h5ad shape=(2000, 31160) samples=['PDR-ERM-210630', 'RRD-ERM1']
+[stageA] gene_symbols: mode=ensembl_unmapped hint=给 --ensg-map <ENSG<TAB>SYMBOL 两列TSV> 可恢复符号检索
+[stageA] done: out=docs/plans/pipeline_pub_20260929/out/smoke_degraded/stage_a/processed.h5ad clusters=15
+[09/29/26 20:50:28] INFO     JAX version 0.10.2 available.         config.py:125
+[09/29/26 20:50:29] INFO     Loading SentenceTransformer model     model.py:1080
+                             from                                               
+                             /mnt/D/OcularKB/models/bge-large-en-v              
+                             1.5.                                               
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 7650.45it/s]
+库: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09 | 174616 chunks, 6 species
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  5.20it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  5.19it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 19.48it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 20.81it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 19.40it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 14.28it/s]
+[stageB] progress 5/15 clusters
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 25.21it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 20.46it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 19.68it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.83it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.83it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.92it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.90it/s]
+[stageB] progress 10/15 clusters
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 17.50it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 17.78it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 18.38it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 18.42it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 18.64it/s]
+[stageB] progress 15/15 clusters
+[stageB] done: clusters=15 report_sha=ac16bffa2dce7b37 grades={'evidence_consistent': 0, 'mixed_or_insufficient': 0, 'needs_review': 15} calls=32
+[pipeline] DONE {"out": "docs/plans/pipeline_pub_20260929/out/smoke_degraded", "secs": 50.9, "n_clusters": 15, "grades": {"needs_review": 15}, "empty_decision_cells": true, "next_step": "逐簇在 decisions_template.csv 填 decision (accept|modify|abstain) 与 proposed_label；弃权合法"}

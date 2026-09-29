@@ -1,0 +1,48 @@
+{"tool": "get_tissue_composition", "args": {"species": "human", "tissue": "fibrovascular_membrane"}, "secs": 0.01, "ok": true}
+{"tool": "get_disease_prior", "args": {"disease": "PDR", "tissue": "fibrovascular_membrane"}, "secs": 0.01, "ok": true}
+{"tool": "query_marker", "args": {"genes": "['CTSB', 'HMOX1', 'CTSD', 'APOE', 'FTL', 'GLUL', 'CTSL', 'GAPDH', 'LIPA', 'CREG1']"}, "secs": 0.09, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Mac_DAM_LAM", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 8.68, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "MG", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.55, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "retina_interneuron::MG", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.54, "ok": true}
+{"tool": "query_marker", "args": {"genes": "['CTSD', 'GLUL', 'LGMN', 'FUCA1', 'FTL', 'SDCBP', 'GRN', 'CREG1', 'FTH1', 'LIPA']"}, "secs": 0.01, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Mac_DAM_LAM", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.53, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "MG", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.54, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "retina_interneuron::MG", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.52, "ok": true}
+{"tool": "query_marker", "args": {"genes": "['MT-ND6', 'FN1', 'BRI3', 'MTATP6P1', 'MT-ND4L', 'MARCO', 'MT-RNR2', 'RNASE1', 'S100A11', 'FCER1G']"}, "secs": 0.01, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Fibroblast", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.89, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Myofibroblast", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.9, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Microglia", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.89, "ok": true}
+{"tool": "query_marker", "args": {"genes": "['MT-RNR2', 'MT-RNR1', 'MT-ND4L', 'RPL10P9', 'SH3BGRL3', 'S100A11', 'FCER1G', 'BHLHE41', 'EMP3', 'CDC42']"}, "secs": 0.01, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Microglia", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.89, "ok": true}
+{"tool": "query_marker", "args": {"genes": "['SELENOP', 'MRC1', 'FOLR2', 'STAB1', 'CD14', 'MAF', 'FCGRT', 'F13A1', 'ITM2B', 'SLC40A1']"}, "secs": 0.01, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Mac_Tissue", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.53, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Mono_Classical", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.51, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "retina_interneuron::AC", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.53, "ok": true}
+{"tool": "query_marker", "args": {"genes": "['GNG11', 'CRIP2', 'VWF', 'TM4SF1', 'ITM2A', 'FKBP1A', 'TCIM', 'IGFBP7', 'SPARC', 'SPARCL1']"}, "secs": 0.01, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Endo", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.93, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Pericyte", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.89, "ok": true}
+{"tool": "query_marker", "args": {"genes": "['LYZ', 'RPL30', 'RPL23A', 'CD52', 'ACTB', 'PABPC1', 'RPS29', 'MNDA', 'FCN1', 'RPS3A']"}, "secs": 0.01, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Mono_Classical", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.53, "ok": true}
+{"tool": "query_marker", "args": {"genes": "['C3', 'RGS1', 'CD74', 'HLA-DPA1', 'HLA-DRA', 'HLA-DPB1', 'HLA-DRB1', 'HLA-DQA1', 'RNASET2', 'HLA-DRB6']"}, "secs": 0.01, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "APC_MHCII_high", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.61, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "cDC2", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.62, "ok": true}
+{"tool": "query_marker", "args": {"genes": "['RGS5', 'SEPT4', 'FRZB', 'CCDC102B', 'THY1', 'CALD1', 'IGFBP7', 'MYL9', 'TPM2', 'TAGLN']"}, "secs": 0.01, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Pericyte", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 1.07, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "SMC", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.52, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Myofibroblast", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 1.06, "ok": true}
+{"tool": "query_marker", "args": {"genes": "['GZMB', 'CLEC4C', 'PLAC8', 'IRF7', 'ITM2C', 'JCHAIN', 'IGKC', 'C12orf75', 'IRF8', 'IL3RA']"}, "secs": 0.01, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "pDC", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.62, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Microglia", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 1.09, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "cDC1", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.6, "ok": true}
+{"tool": "query_marker", "args": {"genes": "['IGFBP7', 'CRYAB', 'TPM1', 'CNN3', 'CTHRC1', 'CALD1', 'SELENOM', 'RPS27L', 'CCDC80', 'SPARC']"}, "secs": 0.01, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Pericyte", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 1.07, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Myofibroblast", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 1.06, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "SMC", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.64, "ok": true}
+{"tool": "query_marker", "args": {"genes": "['CD52', 'TRAC', 'RPLP2', 'RPLP1', 'RPS29', 'CD3D', 'RPS3', 'IL32', 'CD2', 'RPS27']"}, "secs": 0.01, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "T", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 1.1, "ok": true}
+{"tool": "query_marker", "args": {"genes": "['CST7', 'S100B', 'SNU13', 'PPA1', 'SVIP', 'CCND2', 'IL7R', 'AL138899.1', 'ITM2C', 'PARM1']"}, "secs": 0.01, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "MG", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.62, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Astro", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 1.05, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "T", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 1.04, "ok": true}
+{"tool": "query_marker", "args": {"genes": "['H2AFZ', 'HMGB1', 'STMN1', 'MKI67', 'HMGN2', 'NUSAP1', 'PTMA', 'PTTG1', 'HMGB2', 'TOP2A']"}, "secs": 0.01, "ok": true}
+{"tool": "search_literature", "args": {"cell_type": "Proliferating", "species": "human", "tissue": "fibrovascular_membrane", "top_k": 4}, "secs": 0.54, "ok": true}

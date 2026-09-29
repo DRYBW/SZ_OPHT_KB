@@ -1,0 +1,58 @@
+{
+ "input": "docs/plans/pipeline_pub_20260929/fixtures/smoke_ensg.h5ad",
+ "species": "human",
+ "gene_id": {
+  "gene_id_mode": "ensembl_unmapped",
+  "symbol_source": "none (证据检索降级：marker 比对命中率会低)",
+  "degraded": true,
+  "n_mt_genes": 15
+ },
+ "group_present": true,
+ "qc_pre": {
+  "n_cells": 2000,
+  "n_genes": 31160,
+  "median_genes": 1596.0,
+  "median_pct_mt": 3.8297939888189454
+ },
+ "qc_post": {
+  "n_cells": 1977,
+  "n_genes": 17953,
+  "median_genes": 1599.0,
+  "median_pct_mt": 3.8167541989496123,
+  "removed_lowquality": 9,
+  "removed_doublets": 15,
+  "doublet_rate_kept": 0.0
+ },
+ "thresholds": {
+  "min_genes": 200,
+  "max_pct_mt": 20.0,
+  "min_cells": 3,
+  "expected_doublet_rate": 0.06
+ },
+ "n_samples": 2,
+ "samples": [
+  "PDR-ERM-210630",
+  "RRD-ERM1"
+ ],
+ "batch_correction": "harmony",
+ "resolution": 1.0,
+ "n_clusters": 15,
+ "cluster_sizes": {
+  "0": 305,
+  "1": 289,
+  "2": 157,
+  "3": 20,
+  "4": 265,
+  "5": 94,
+  "6": 38,
+  "7": 42,
+  "8": 87,
+  "9": 159,
+  "10": 181,
+  "11": 38,
+  "12": 128,
+  "13": 166,
+  "14": 8
+ },
+ "seed": 20260929
+}
