@@ -42,11 +42,13 @@ python clients/ocularkb/rag/scripts/stage3_retrieve.py \
 
 **第 3 步需要一个嵌入模型**（把自由提问"翻译"成检索坐标的开源公开权重，不训练、不参与任何注释判断）。三种拿到方式，按推荐排序：
 
-1. **本仓 Release 附件（推荐，免翻墙）**：下载 `bge-large-en-v1.5_model.tar`（约 1.3 GB，附 sha256），在仓库根目录解包即得到 `models/bge-large-en-v1.5/`，检索引擎会自动找到它：
+1. **本仓 Release 附件（推荐，免翻墙）**：下载 `bge-large-en-v1.5_fp16.tar`（约 670 MB，fp16 量化版，黄金 41 题与 fp32 逐位全等），在仓库根目录解包即得到 `models/bge-large-en-v1.5/`，检索引擎会自动找到它：
    ```bash
    # 有 gh CLI：
-   gh release download model-bge-large-en-v1.5 --pattern '*' && tar -xf bge-large-en-v1.5_model.tar
-   # 或浏览器打开仓库 Releases 页手动下载两个文件后解包
+   gh release download model-bge-large-en-v1.5 -p 'bge-large-en-v1.5_fp16.tar'
+   sha256sum bge-large-en-v1.5_fp16.tar   # 应等于 Release 里 bge-fp16.tar.sha256 首行的 21d5fa2e...
+   tar -xf bge-large-en-v1.5_fp16.tar
+   # 网络一般可改用 4 分卷下载：bge-fp16.part_aa..ad 拼成 bge-fp16.tar 后 tar -xf
    ```
 2. **从 HuggingFace 拉原版公开权重** `BAAI/bge-large-en-v1.5`，解到 `models/` 同名目录或用环境变量指路：
    ```bash
