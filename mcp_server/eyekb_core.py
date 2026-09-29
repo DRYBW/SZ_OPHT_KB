@@ -193,6 +193,15 @@ def _v6_act_enabled():
     return v not in {"0", "false", "off", "no"}
 
 
+K9_DEFAULT_LIBS = ("k9_ocs",)  # [ACT t_abfebe59 · KB9ACT 案A（PI 2026-09-30 放行, 义务门 OB-1..5 全清; 仿 ACT-v6 纪律）] 白名单硬编码——env 值只能整体开关, 不能注入任何库; lacrimal_v6 任何态禁入结构保持
+
+
+def _k9_act_enabled():
+    """env EYEKB_ACT_K9 ∈ {0,false,off,no} (casefold) = OFF 回退; 未设/其余值 = ON 激活。"""
+    v = (os.environ.get("EYEKB_ACT_K9") or "").strip().casefold()
+    return v not in {"0", "false", "off", "no"}
+
+
 # ---------------------------------------------------------------- KBGOV-B5 跨物种 ranking 治理层
 # [B5IMPL t_8960c7e0 · USER_DIRECTIVE_20260928 追加五队列① · PI 预授权接线]
 # query_marker genes-mode 输入物种治理。判据唯一权威源 = plans/kb_gov_20260928/
@@ -303,6 +312,8 @@ def _load_marker_dbs(library="all"):
         names = ["retina", "membrane", "retina_interneuron"]  # 现役三库 (OFF 态=全量)
         if _v6_act_enabled():
             names = names + list(V6_DEFAULT_LIBS)  # 白名单 append; lacrimal_v6 永不在此
+        if _k9_act_enabled():
+            names = names + list(K9_DEFAULT_LIBS)  # [ACT t_abfebe59] k9_ocs append; 不可注入库名
     elif lib in MARKER_LIBS:
         names = [lib]
     else:

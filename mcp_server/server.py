@@ -37,7 +37,7 @@ from mcp.server import MCPServer  # noqa: E402
 app = MCPServer(
     name="eyekb",
     title="EyeKB 眼科知识库证据服务",
-    version="KB1v2-0.6-kbgov5",
+    version="KB1v2-0.7-k9act",
     description=("眼科文献 RAG 检索 (v2.0 全眼库 174,616 chunks/2,713 papers, KB1v2 起带 "
                  "inclusion_reasons/claim_relation/evidence_context 三字段+复核状态) + VK 索引页 + "
                  "本地权威 marker 库 + 判读层: 眼科通用组成基线 (kb/baselines 供者级条件参考分布, "
@@ -123,6 +123,7 @@ def query_marker(genes: list[str] | None = None, cell_type: str = "",
     PI D17 批准): KB9 案 B 眼表 4 新条 (Melanocyte/Schwann/Conj_epithelium_suprabasal/
     Limbus_Sclera_fibroblast_C1, 均 ocular_surface_only, 逐条带 CL id+OLS 回证+逐基因 PMID 链)
     ——REGISTERED_DEFAULT_OFF: 任何态不入默认 all, 仅显式 library=k9_ocs 查询可达;
+    [KB9ACT t_abfebe59, PI 2026-09-30] 现态 ACTIVE_ON_DEFAULT: 默认 all 含 k9_ocs (上段 REGISTERED_DEFAULT_OFF 为历史注册态); env EYEKB_ACT_K9=0|false|off|no 整体回退=五库。
     激活需 §10-6 义务 run + PI 另批; 屏蔽/装配规则 v2 旁挂件 _k9_ocs_rules_overlay_v1.json
     为惰性数据 (MCP 运行时不读))。
     给 genes → 反查基因命中哪些细胞类型 + 类排名 (n_shared);
