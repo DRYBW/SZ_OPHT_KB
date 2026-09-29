@@ -36,7 +36,15 @@ import socket
 import time
 import uuid
 
-TRACE_DIR = "/mnt/D/EyeKB/logs/mcp_trace"
+# 留痕目录：优先 env 覆盖；本机生产路径存在则沿用（审计连续性）；
+# 否则退到仓内 logs/mcp_trace——外机 clone 不会尝试写他人绝对路径（2026-09-29 遗留#2 修复）。
+def _default_trace_dir() -> str:
+    cand = "/mnt/D/EyeKB/logs/mcp_trace"
+    if os.path.isdir(os.path.dirname(cand)) or os.path.isdir(cand):
+        return cand
+    return os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "logs", "mcp_trace")
+
+TRACE_DIR = os.environ.get("EYEKB_TRACE_DIR") or _default_trace_dir()
 MAX_DAY_BYTES = 200 * 1024 * 1024  # 200MB 后写 .part<N>
 
 _OFF_VALUES = {"0", "false", "off", "no"}
