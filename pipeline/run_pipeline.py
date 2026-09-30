@@ -46,6 +46,15 @@ import sys
 import time
 from pathlib import Path
 
+# ---- 数值确定性钉（ERRATA-E3, 2026-09-30）----
+# 实测：不钉线程时同一输入连跑可见 16/15/16 簇抖动（结果随机器负载与 BLAS/numba
+# 线程调度变化）；钉 OMP_NUM_THREADS=1 后两次运行逐字节一致（processed.h5ad sha 相同）。
+# 阶段 A（Scrublet/邻域图/Harmony/leiden）为串行实现，单线程耗时 ≈ 多线程（实测 110s），
+# 故以确定性优先。用 setdefault 保留显式覆盖（复现契约=保持默认钉）。
+for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS",
+           "NUMEXPR_NUM_THREADS", "VECLIB_MAXIMUM_THREADS"):
+    os.environ.setdefault(_v, "1")
+
 HERE = Path(__file__).resolve().parent
 REPO_ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
