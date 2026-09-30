@@ -1,0 +1,267 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "page_type": "cells",
+ "entries": [
+  {
+   "claim_id": "KC-B1-025",
+   "scope": {
+    "species": [
+     "mouse"
+    ],
+    "tissue": [
+     "retina"
+    ],
+    "assay": [
+     "scRNA"
+    ],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "成体鼠 RGC 单细胞捕获率极低（Drop-seq 系原始限制）：RGC≈0 是制备域偏移非生物学",
+   "observable_signature": "snRNA 对照可回收 RGC；急性解离方案下 RGC 近零",
+   "risk_level": "medium",
+   "mitigation": "鼠 RGC 主张须注明平台（snRNA vs scRNA vs 急性分离）；RGC 占比跨研究比较前核对解离方案；RGC≈0 时先出 QC/制备说明段再讨论生物学。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "mouse__retina"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/mouse_mid_20260925/MOUSE_MID_REPORT.md §3.4 RGC≈0 域偏移条"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "mouse__retina",
+    "b1_order": 4,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "限鼠×视网膜（RGC 捕获为视网膜解离特有），assay=scRNA"
+   }
+  },
+  {
+   "claim_id": "KC-B1-026",
+   "scope": {
+    "species": [
+     "mouse"
+    ],
+    "tissue": [
+     "retina"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "MRCA 系参考为人工富集设计（分选靶标），类占比外推到天然酶消样本必翻车",
+   "observable_signature": "训练域 BC 46.7% vs 天然构成差量级；同设计层内对照才稳定",
+   "risk_level": "medium",
+   "mitigation": "用 MRCA 系参考做组成对照前，先声明其富集设计层（分选靶标列）；类占比对照只在同设计层内做，跨层只比身份不比比例。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "mouse__retina"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/mouse_mid_20260925/MOUSE_MID_REPORT.md §3.4 先验不可比条"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "mouse__retina",
+    "b1_order": 5,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "参考设计层声明，锚鼠视网膜参考"
+   }
+  },
+  {
+   "claim_id": "KC-B1-027",
+   "scope": {
+    "species": [
+     "mouse"
+    ],
+    "tissue": [
+     "retina"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "鼠引擎适用域硬边界：限成人（P28+）视网膜；血管/免疫态与 P<28 出域",
+   "observable_signature": "出域样本仍被强制具名（域外硬标前科）；过发育轴门后只出旗不改名",
+   "risk_level": "high",
+   "mitigation": "低龄/血管/免疫模型数据进鼠引擎前先过 S0 判卷或发育轴门；域外样本只出旗不强制改名。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "mouse__retina"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/mouse_mid_20260925/MOUSE_MID_REPORT.md 使用声明(67行)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "mouse__retina",
+    "b1_order": 6,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "自家引擎声明（answer 无关）"
+   }
+  },
+  {
+   "claim_id": "KC-B1-029",
+   "scope": {
+    "species": [
+     "mouse"
+    ],
+    "tissue": [
+     "retina"
+    ],
+    "assay": [
+     "scRNA",
+     "spatial"
+    ],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "鼠侧捕获偏倚有方法学文献原点（Drop-seq 系）；需解离不敏感证据时走空间转录组",
+   "observable_signature": "文献两系对照可复现；空间路线回收解离丢失类",
+   "risk_level": "low",
+   "mitigation": "鼠亚型词表以 Drop-seq 系文献为对账基准；需要解离不敏感证据时用空间转录组补。",
+   "evidence_source_type": "peer_reviewed_literature",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "mouse__retina"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "PMID:26000488;PMID:32457074;PMID:27565351;PMID:38812536;PMID:31784286;PMID:37582959;PMID:32804550（snRNA 减解离偏倚回收稀有类——方法学对照锚）"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "mouse__retina",
+    "b1_order": 8,
+    "legacy_grade": "B文献PMID",
+    "legacy_code_in_legend": "PIT-E2",
+    "report_confidence": "high",
+    "home_rationale": "B 档题录池锚本格"
+   }
+  },
+  {
+   "claim_id": "KC-B1-030",
+   "scope": {
+    "species": [
+     "mouse"
+    ],
+    "tissue": [
+     "retina"
+    ],
+    "assay": [
+     "scRNA"
+    ],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "社区经验：解离应激与 doublet 工具坑（操作提示级）",
+   "observable_signature": "（社区帖观察，未本地复算）",
+   "risk_level": "low",
+   "mitigation": "社区帖仅作操作提示，禁作词表/证据。",
+   "evidence_source_type": "community_lead",
+   "source_check": "unchecked",
+   "home": {
+    "kind": "cell",
+    "id": "mouse__retina"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "https://github.com/satijalab/seurat/issues/6730 ；https://github.com/scverse/scanpy/issues/3837 ；https://github.com/scverse/scanpy/issues/3070 ；https://www.biostars.org/p/468524"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "mouse__retina",
+    "b1_order": 9,
+    "legacy_grade": "C社区经验",
+    "legacy_code_in_legend": "PIT-E3",
+    "report_confidence": "high",
+    "home_rationale": "C 档内容条；community_lead 仅核查要求"
+   },
+   "note": "community_lead"
+  }
+ ],
+ "pointers": [
+  {
+   "ref_id": "KC-B1-003",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-004",
+   "context_note": "scope-hit (internal_observation/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-007",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-009",
+   "context_note": "scope-hit (internal_observation/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-010",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-016",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-022",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-023",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-024",
+   "context_note": "scope-hit (internal_observation/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-028",
+   "context_note": "scope-hit (internal_observation/medium/blind_safe=True)"
+  }
+ ]
+}

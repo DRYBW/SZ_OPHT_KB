@@ -16,15 +16,35 @@ python pipeline/run_pipeline.py --input data.h5ad --species human --tissue retin
 python pipeline/run_pipeline.py --input 10x_dir/ --species human --tissue retina \
     --sample-group "S1=control;S2=case" --out results/run2
 
+# 形态三：不指定物种/组织——由 S0 样本预判门自动判定并回填（默认行为）
+python pipeline/run_pipeline.py --input data.h5ad --out results/run4
+
 # 输入是 Ensembl ID 而没带符号列时：
 python pipeline/run_pipeline.py --input data.h5ad --species human --tissue retina \
     --ensg-map ensg2symbol.tsv --out results/run3
 ```
 
-参数要点：`--species` 必选 `human|mouse`；`--tissue` 用词典已知组织
-（`--list-tissues` 打印清单，如 `retina`、`fibrovascular_membrane`、`ocular_surface`…）；
-`--group-col` / `--sample-group` 提供分组信息，疾病背景先验比对才会启用。
-对输入的完整要求见仓根 README《输入与输出》一节。
+参数要点：`--species`（`human|mouse|auto`，默认 `auto`）与 `--tissue`（词典已知组织，
+`--list-tissues` 打印清单，如 `retina`、`fibrovascular_membrane`、`ocular_surface`…，
+默认 `auto`）——auto 时由 S0 门自动判定；显式给定视为人工覆盖（报告中留痕
+`s0_overridden_by_user`）。`--group-col` / `--sample-group` 提供分组信息，
+疾病背景先验比对才会启用。对输入的完整要求见仓根 README《输入与输出》一节。
+
+## S0 样本预判门（默认启用；本批=shadow 不阻断）
+
+阶段 A 之前先过 S0：三证据（基因 ID 构成 / symbol 惯例与 marker 互打 / 组成打分）
+自动判定物种 × 组织，六条硬门（物种矛盾、组织分差不足、域外、深度不足、
+疑似胎儿期材料等）任一命中即记 abstain。**Phase 1=shadow：弃权不阻断运行**——
+落 `s0_gate_report.json` + `REPORT_ABSTAIN.md`（记录件）后照常执行；阻断式硬门
+为 Phase 3（WIRE-2 另批）能力，经 `EYEKB_S0_ENFORCE=1` 切换后 abstain 才停止
+（fail-closed）。弃权是合法读数，与逐簇 abstain 同理。
+判过门后触发 known-claims 结构化消费（`pipeline/pitfalls/`，见其 README）：
+本格适用条目的**风险旗标**渲染进证据报告头段（仅结构化表，无自由文本）与
+`decisions_template.csv` 的 `pitfall_risk_flags` / `pitfall_review_required`
+两列（人工裁决参考；**不自动改写分级/票面**，自动具名/降级变化恒=0；
+answer_dependency≠none 的条目判读后才开放）。
+整体回退：环境变量 `EYEKB_S0_GATE=0` 恢复接线前的纯人工参数行为
+（此时 `--species/--tissue` 必填；不产任何 S0/旗标件，用于无网基线对比）。阈值覆盖 `--s0-thr <json>`。
 
 ## 产出（全部落 --out）
 
@@ -35,7 +55,10 @@ python pipeline/run_pipeline.py --input data.h5ad --species human --tissue retin
 | `stage_a/cluster_markers.csv` | 每簇 Wilcoxon top30 基因 |
 | `annotation_evidence_report.json` / `.md` | 每簇五字段：top 基因 / `query_marker` 候选与得分 / `get_tissue_composition` 对照（越界旗标）/ `get_disease_prior` 比对（有分组才启用）/ `search_literature` 片段+PMID；外加机械置信度分级 |
 | `decisions_template.csv` | 每簇一行，`decision`（accept/modify/abstain）与 `proposed_label` 列**留空交研究者填写** |
-| `mcp_calls.jsonl` | 全部证据服务调用留痕（工具、参数、耗时、成败） |
+| `mcp_calls.jsonl` | 全部证据服务调用留痕（工具、参数、成败、耗时） |
+| `s0_gate_report.json` | （S0 门启用时）三证据全读数+门因+override 留痕 |
+| `REPORT_ABSTAIN.md` | （仅弃权时）停手报人件——此时阶段 A/B 未执行 |
+| `pitfalls_attention.json` / `pitfall_override_audit.jsonl` | （S0 门启用时）本格注意清单机读件 + 覆盖建议逐条审计（裁决书 T5.3 机制） |
 
 ## 三条纪律
 

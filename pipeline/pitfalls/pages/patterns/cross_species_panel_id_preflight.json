@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B1-022",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "跨物种上面板前不验基因 ID 体系 → 特征空间异名，面板命中率归零（0/2000 血案）",
+   "observable_signature": "panel_present=0；桥=正式 ortholog 表+大小写不敏感匹配后可恢复",
+   "risk_level": "high",
+   "mitigation": "跨物种上任何面板前先验 var ID 体系（head(20) 肉眼判）；桥=正式 ortholog 表+大小写不敏感匹配；逐样本逐基因未命中清单强制落盘，输出按 panel-incomplete 口径阅读。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "cross_species_panel_id_preflight"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/mouse_mid_20260925/MOUSE_MID_REPORT.md 两次失败修复节(§2)+panel-incomplete 口径节(§3.4)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "mouse__retina",
+    "b1_order": 1,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "血案在鼠格，规则文本全量化（任何物种任何面板）"
+   }
+  }
+ ],
+ "pointers": []
+}

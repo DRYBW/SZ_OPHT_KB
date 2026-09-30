@@ -1,0 +1,52 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B1-016",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "disease_or_treatment": [
+     "PDR"
+    ],
+    "assay": [],
+    "preparation": []
+   },
+   "failure_mode": "疾病材料≠健康器官：拿疾病样本对照健康组织组成做『达标线』误读材料类别",
+   "observable_signature": "疾病材料组成天然偏离健康基线；三用途口径（身份参考/背景对照/QC 旗）外的对照即误用",
+   "risk_level": "high",
+   "mitigation": "基线对膜样本只有三用途（身份参考/背景对照/QC 旗），禁当达标线；清单外身份触发 unexpected 旗但保留原判；对照锚用 PDR 专格 prior（已建）非健康视网膜格。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "disease_material_vs_healthy_baseline"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/kb/baselines/RPE.md 用途口径段 与 /mnt/D/EyeKB/kb/priors/disease/PDR__fibrovascular_membrane.md 同口径段（Astra T2 裁定固化）"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__pdr_membrane",
+    "b1_order": 3,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "规则由 Astra T2 固化为膜格口径，但失效模式本身疾病材料通用"
+   }
+  }
+ ],
+ "pointers": []
+}

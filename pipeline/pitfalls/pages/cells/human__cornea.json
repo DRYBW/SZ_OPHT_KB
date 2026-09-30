@@ -1,0 +1,343 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "page_type": "cells",
+ "entries": [
+  {
+   "claim_id": "KC-B1-037",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "cornea"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "角膜单细胞材料=眼库捐献/移植内皮边缘碎块（尸体材料学），『正常』标签掩盖材料缺陷",
+   "observable_signature": "死亡至固定时距与材料来源缺失时 unexpected 旗按在册清单命中",
+   "risk_level": "medium",
+   "mitigation": "角膜单细胞主张必须报材料来源（供体眼库/手术瓣膜/离体全角膜）与死亡至固定时距；离体培养样本与新鲜材料分列；出现 unexpected 清单签名先按在册旗处理不读作新发现。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__cornea"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/kb/baselines/ocular_surface.md 取样材料(26-28行)+expected_low_but_present/unexpected 条(213-215行)；B档培养漂移锚 PMID:40574692"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__cornea",
+    "b1_order": 1,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "角膜材料学特有；报来源+时距为强制缓解"
+   }
+  },
+  {
+   "claim_id": "KC-B1-038",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "cornea"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "无血管≠无血管签名：角膜缘/新生血管材料混入产生内皮/周细胞假簇",
+   "observable_signature": "CDH5/PTPRC 零检出=正常角膜门控；NEA/移植材料出现血管签名",
+   "risk_level": "medium",
+   "mitigation": "『角膜』样本报告先出血管化旗（CDH5/PTPRC 零检出为正常角膜门控）；NEA/移植材料进分析必须单列疾病档；眼表基质类互标一律挂『基质家族 prior 集体致盲』警示。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__cornea"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/OcularKB/WIKI/INDEX.md 09-25 03:3x KB6b 勘误条（基质四红条+NNMT/ALDH3A1/KERA）"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__cornea",
+    "b1_order": 2,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "角膜（无血管器官）特有"
+   }
+  },
+  {
+   "claim_id": "KC-B1-039",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "cornea"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "词条反噬：新词条上线点着邻域（Keratocytes 新词曾把 98.7% 纯周细胞簇拉走）",
+   "observable_signature": "mini 盲验证只证『能救』不证『不点邻居』时，发布后邻域簇标签漂移",
+   "risk_level": "high",
+   "mitigation": "眼表词条上线前强制『邻域火灾审计』（发布验收首次写进 KB7 纪律：mini 盲验证须同时证『不点着邻居』）；基质四联（Kerat/Fibro/Peri/SMC）互标对全数落表人工过目。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__cornea"
+   },
+   "visibility": "post_decision",
+   "blind_safe": false,
+   "answer_dependency": "dataset_specific",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/OcularKB/WIKI/INDEX.md 09-25 03:3x 勘误条+KB7 发布条（邻域火灾审计）"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__cornea",
+    "b1_order": 3,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "发布纪律（邻域火灾审计）属流程层 KB7；证据个案锚角膜格"
+   },
+   "note": "审计规则对 curator；失效观察对判读面"
+  },
+  {
+   "claim_id": "KC-B1-040",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "cornea"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "取材层位混合：眼表超级类（角膜/角膜缘/巩膜…）混池后层位比例全是假数",
+   "observable_signature": "whole mount 默认含角膜缘干龛+结膜过渡带；跨区套基线时占比失真",
+   "risk_level": "high",
+   "mitigation": "角膜分析先锁取材域（central/limbal/whole mount）；whole mount 默认含角膜缘干龛+结膜过渡带，比例结论只到域层；禁跨区套用类目/基线。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__cornea"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/kb/composition/EXPECTED_COMPOSITION_v0.md L76+L134（禁跨区套用/OB-2 分层义务）；/mnt/D/OcularKB/WIKI/数据资产.md L30（D002 条）"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__cornea",
+    "b1_order": 4,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "D002 超级类结构事实；锁取材域为强制缓解"
+   }
+  },
+  {
+   "claim_id": "KC-B1-042",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "cornea"
+    ],
+    "preparation": [
+     "paired_donor_tissue"
+    ],
+    "assay": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "单供体杠杆在眼表更极端：供眼例数天然个位数",
+   "observable_signature": "n≤4 donor 研究中稀有类 hit 随单 donor 删除翻转",
+   "risk_level": "medium",
+   "mitigation": "角膜结论强制报 donor 数与 top-donor 占比；双眼材料统计按配对/供体随机效应处理；稀有细胞类在 n≤4 donor 研究里只描述不检验。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__cornea"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/drsc_disc_quant_20260928/DECISION_TABLE_composition_gates.md D-2 节"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__cornea",
+    "b1_order": 6,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "角膜材料结构特有（通用规则在 single_donor_leverage）"
+   }
+  },
+  {
+   "claim_id": "KC-B1-043",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "cornea"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "角膜/眼表亚型词表须以图谱文献为基准；培养系引用带漂移声明",
+   "observable_signature": "词表无图谱对账时亚型不可判",
+   "risk_level": "low",
+   "mitigation": "亚型词表以 PMID:33865984/32439707 型图谱为基准；培养系数据引用带漂移声明。",
+   "evidence_source_type": "peer_reviewed_literature",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__cornea"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "PMID:33865984;PMID:39330987;PMID:41060151;PMID:40574692;PMID:38942029;PMID:41421445;PMID:34741068"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__cornea",
+    "b1_order": 7,
+    "legacy_grade": "B文献PMID",
+    "legacy_code_in_legend": "PIT-E2",
+    "report_confidence": "high",
+    "home_rationale": "B 档题录池锚本格"
+   }
+  },
+  {
+   "claim_id": "KC-B1-044",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "cornea"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "社区通用 QC/整合层坑可外推眼表，但须注明非角膜实证",
+   "observable_signature": "（社区观察，本地未复算）",
+   "risk_level": "low",
+   "mitigation": "通用坑外推时注明『社区经验非角膜实证』。",
+   "evidence_source_type": "community_lead",
+   "source_check": "unchecked",
+   "home": {
+    "kind": "cell",
+    "id": "human__cornea"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "https://www.biostars.org/p/482228 ；https://www.biostars.org/p/315869 ；https://bioconductor.org/books/3.13/OSCA.multisample/ambient-problems.html"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__cornea",
+    "b1_order": 8,
+    "legacy_grade": "C社区经验",
+    "legacy_code_in_legend": "PIT-E3",
+    "report_confidence": "high",
+    "home_rationale": "C 档内容条"
+   },
+   "note": "community_lead"
+  }
+ ],
+ "pointers": [
+  {
+   "ref_id": "KC-B1-003",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-007",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-009",
+   "context_note": "scope-hit (internal_observation/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-010",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-016",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-022",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-023",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-028",
+   "context_note": "scope-hit (internal_observation/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-041",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  }
+ ]
+}

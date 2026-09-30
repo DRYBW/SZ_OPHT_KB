@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B1-010",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "MG 二义缩写（Müller glia vs microglia）跨体系撞车，裸写在交付件中致命名歧义",
+   "observable_signature": "同一缩写在不同体系指向不同类（CL 回证：CL:0000636=Müller cell）",
+   "risk_level": "high",
+   "mitigation": "任何交付件禁用裸『MG』——一律 Müller glia / microglia 全称或 CL 号锚定（本库 CL:0000636=Müller cell 系 KB5v3 经 OLS 逐号回证的正解，Astro=CL:0000127；引用他库 CL 号必须 OLS 回证禁凭记忆）。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "nomenclature_mg_ambiguity"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/drsc_reann_test_20260930/DRSC_REANN_REPORT.md §6 DEV-2；/mnt/D/OcularKB/WIKI/INDEX.md 09-24 KB5v3 CL 勘误条；/mnt/D/EyeKB/plans/mouse_model_20260925/MOUSE_PRE_CHECK.md §CL 消歧"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__retina",
+    "b1_order": 10,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "文本明示『任何交付件禁用裸 MG』=全局交付纪律"
+   }
+  }
+ ],
+ "pointers": []
+}

@@ -1,0 +1,52 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B1-003",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [
+     "scRNA"
+    ],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "解离诱导应激转录组（HSPA1A/FOS/JUN 类）刷屏，劫持证据窗口",
+   "observable_signature": "簇 top 基因被热休克/IEG 类主导且与解离方案共变",
+   "risk_level": "high",
+   "mitigation": "判读前核应激分离分；解离方案优先冷蛋白酶/短解离/冰上操作（B 档文献支撑）；含应激刷屏的簇不进对外定名。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "dissociation_stress_transcriptome"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/drsc_reann_test_20260930/DRSC_PI_ADJUDICATION_sheet_20260930.md 簇3 行"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__retina",
+    "b1_order": 3,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "跨物种跨组织的方法学坑：本条缓解自引 B 档人/鼠两系解离对比文献（PMID:32487174）"
+   }
+  }
+ ],
+ "pointers": []
+}

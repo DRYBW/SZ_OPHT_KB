@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B1-023",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "基因大小写惯例（人全大写/鼠首字母大写）撞车致物种旗误判与 join 失败",
+   "observable_signature": "面板命中率<50% 且生物学解释前，先查大小写/ID 体系即可复位",
+   "risk_level": "high",
+   "mitigation": "symbol 匹配一律 .str.upper() 后 join + ortholog 表（HGNC/MGI 正式映射）；任何面板命中率<50% 先查大小写/ID 体系再谈生物学。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "symbol_case_ortholog_join"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/kbgov_b5impl_20260928/B5IMPL_COMPLETED.md §1(27行)+降级开关节；/mnt/D/EyeKB/plans/kb_gov_20260928/KBGOV_CANDIDATE.md §边界(81行)；/mnt/D/EyeKB/plans/s0_probe_20260930/BRIEF_S0PROBE.md 物种节"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "mouse__retina",
+    "b1_order": 2,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "B5 治理本体跨物种；规则文本全量化"
+   }
+  }
+ ],
+ "pointers": []
+}

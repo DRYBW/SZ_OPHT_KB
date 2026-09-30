@@ -1,0 +1,299 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "page_type": "cells",
+ "entries": [
+  {
+   "claim_id": "KC-B1-031",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "trabecular_meshwork"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "词表无 TM 专类（TM 梁/JCT/SC 内皮行缺失）：TM 组织被硬分进 Fibroblast/Ciliary_Muscle/Endothelium",
+   "observable_signature": "TM 样本 top 候选全落非 TM 词表类；『引擎出域』旗可复现",
+   "risk_level": "high",
+   "mitigation": "TM 研究禁用视网膜侧 10 类词表硬套；用 TM 专格 B 档词表（Patel 12 类锚，PMID:32439707）+自建 beam/JCT/SC 内皮三层判据（LMX1B/ANGPT1/PROX1 类文献锚先查库再定）；TM 格标『引擎出域』。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__trabecular_meshwork"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/kb/baselines/trabecular_meshwork.md 主参考表（无 TM 专类行）+计数分母节"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__trabecular_meshwork",
+    "b1_order": 1,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "本体系词表事实，锚 TM 格"
+   }
+  },
+  {
+   "claim_id": "KC-B1-032",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "trabecular_meshwork"
+    ],
+    "preparation": [
+     "blunt_strip_TM"
+    ],
+    "assay": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "取材边界混入：TM 条带带 uvea/睫状体/角膜缘成分，解剖邻近决定组成",
+   "observable_signature": "虹膜括约肌/睫状肌签名出现在 TM 样本=取材正常污染",
+   "risk_level": "medium",
+   "mitigation": "引用 TM 组成必须带取材方案描述（blunt strip / 带不带 SC / 有无 iridocorneal 角）；『TM 样本里出现虹膜括约肌/睫状肌签名』判正常污染不判双细胞。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__trabecular_meshwork"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/kb/baselines/trabecular_meshwork.md 取样材料+解离方法节"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__trabecular_meshwork",
+    "b1_order": 2,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "TM 解剖邻近特有"
+   }
+  },
+  {
+   "claim_id": "KC-B1-033",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "trabecular_meshwork"
+    ],
+    "assay": [
+     "snRNA"
+    ],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "核悬液平台丢失 TM 细胞质转录本（收缩装置/ECM 相关基因）",
+   "observable_signature": "snRNA 读数系统性缺失胞质签名；scRNA 培养对照不同",
+   "risk_level": "medium",
+   "mitigation": "TM 收缩/ECM 相关主张禁裸用核悬液读数，标 intronic 风险；跨平台比较（snRNA vs 培养 scRNA）分列，不平均。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__trabecular_meshwork"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/kb/baselines/trabecular_meshwork.md scRNA_vs_snRNA+解离方法节"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__trabecular_meshwork",
+    "b1_order": 3,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "TM+核悬液组合特有（平台轴通用部分在 platform_nucleus_vs_cell）"
+   }
+  },
+  {
+   "claim_id": "KC-B1-034",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "trabecular_meshwork"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "零方差行带[0,0]区间工件：邻近极低类占比对照假旗",
+   "observable_signature": "donor_range 退化为 [0,0] 的基线行触发越界旗",
+   "risk_level": "low",
+   "mitigation": "零方差行是否给最小带宽=改判据，另案待 PI（已登记 V1_VERDICT 残余5）；引用前先验区间是否退化为 [0,0]。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__trabecular_meshwork"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/comp_prior_v1_20260929/V1_VERDICT.md 残余维度5(零带宽工件)；/mnt/D/EyeKB/kb/baselines/trabecular_meshwork.md 组成表 Pericyte 行"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__trabecular_meshwork",
+    "b1_order": 4,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "证据锚 TM Pericyte 行；改判据另案待最终决定，不升"
+   }
+  },
+  {
+   "claim_id": "KC-B1-035",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "trabecular_meshwork"
+    ],
+    "preparation": [
+     "cultured_cell_line"
+    ],
+    "assay": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "永生化细胞系表型漂移：TM 文献大量用永生化系，与原代表型有公开发表差异",
+   "observable_signature": "传代代次与供体系差异在文献记录在案",
+   "risk_level": "medium",
+   "mitigation": "永生化系数据入 TM 分析前查供体系与传代代次并在图表注记；该条升 A 需补做永生化 vs 原代对照（已入二批建议清单候选）。",
+   "evidence_source_type": "peer_reviewed_literature",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__trabecular_meshwork"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "PMID:32439707（Patel G et al., PNAS 2020——人原位 outflow 12 类分子分类，可作原代基准）"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__trabecular_meshwork",
+    "b1_order": 5,
+    "legacy_grade": "B文献PMID",
+    "legacy_code_in_legend": "PIT-E2",
+    "report_confidence": "medium(库外先验)",
+    "home_rationale": "B 档库外先验登记限 TM"
+   }
+  },
+  {
+   "claim_id": "KC-B1-036",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "trabecular_meshwork"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "人 outflow 专格文献题录池：TM/SC 亚型词表对账与跨物种同源性核查锚",
+   "observable_signature": "词表无对账基准时跨物种主张不可判",
+   "risk_level": "low",
+   "mitigation": "TM/SC 亚型词表以上述为对账基准；跨物种主张先过 PMID:32341164 的同源性核查。",
+   "evidence_source_type": "peer_reviewed_literature",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__trabecular_meshwork"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "PMID:32439707;PMID:35858321;PMID:32341164;PMID:37867950;PMID:42396508;PMID:42084939"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__trabecular_meshwork",
+    "b1_order": 6,
+    "legacy_grade": "B文献PMID",
+    "legacy_code_in_legend": "PIT-E2",
+    "report_confidence": "high",
+    "home_rationale": "B 档题录池锚本格"
+   }
+  }
+ ],
+ "pointers": [
+  {
+   "ref_id": "KC-B1-003",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-007",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-009",
+   "context_note": "scope-hit (internal_observation/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-010",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-016",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-022",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-023",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-028",
+   "context_note": "scope-hit (internal_observation/medium/blind_safe=True)"
+  }
+ ]
+}

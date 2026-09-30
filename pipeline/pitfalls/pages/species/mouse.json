@@ -1,0 +1,87 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "page_type": "species",
+ "entries": [
+  {
+   "claim_id": "KC-B1-024",
+   "scope": {
+    "species": [
+     "mouse"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "鼠参考侧 Müller 常记作 Astrocytes（含 SingleR/厂商口径）：跨体系标注漂移",
+   "observable_signature": "同一簇在厂商口径与本词表间标签类别漂移（Müller↔Astro）",
+   "risk_level": "medium",
+   "mitigation": "鼠侧一律写全称（Müller glia / microglia）或 CL 号；跨物种对照先建词表 crosswalk（dr-sc 重注的 crosswalk 先落 sha 纪律同型）；与厂商注释对分只到映射后口径。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "species",
+    "id": "mouse"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/mouse_mid_20260925/MOUSE_MID_REPORT.md §3.3※注(52行)；/mnt/D/EyeKB/plans/mouse_model_20260925/MOUSE_PRE_CHECK.md CL 二义消歧节(60-71行)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "mouse__retina",
+    "b1_order": 3,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "鼠侧通用标注惯例（文本不限组织）→ SPECIES/mouse"
+   }
+  }
+ ],
+ "pointers": [
+  {
+   "ref_id": "KC-B1-003",
+   "context_note": "pattern covers species"
+  },
+  {
+   "ref_id": "KC-B1-004",
+   "context_note": "pattern covers species"
+  },
+  {
+   "ref_id": "KC-B1-007",
+   "context_note": "pattern covers species"
+  },
+  {
+   "ref_id": "KC-B1-009",
+   "context_note": "pattern covers species"
+  },
+  {
+   "ref_id": "KC-B1-010",
+   "context_note": "pattern covers species"
+  },
+  {
+   "ref_id": "KC-B1-016",
+   "context_note": "pattern covers species"
+  },
+  {
+   "ref_id": "KC-B1-022",
+   "context_note": "pattern covers species"
+  },
+  {
+   "ref_id": "KC-B1-023",
+   "context_note": "pattern covers species"
+  },
+  {
+   "ref_id": "KC-B1-028",
+   "context_note": "pattern covers species"
+  }
+ ]
+}

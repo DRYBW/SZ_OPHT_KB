@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B1-009",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "供体杠杆：罕见类 hit 可被单 donor 删除即翻转",
+   "observable_signature": "留一供体复算翻转（LODO flip）",
+   "risk_level": "medium",
+   "mitigation": "hit 单元附杠杆 donor 占比；『单 donor 删除即翻』级旗标（建议档见勾选表，PI 拍板）；对外结论需≥2 donor 支撑。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "single_donor_leverage"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/drsc_disc_quant_20260928/DECISION_TABLE_composition_gates.md D-2 节"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__retina",
+    "b1_order": 9,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "通用统计纪律（出自组成门决策表 D-2 节，文本不限格）"
+   }
+  }
+ ],
+ "pointers": []
+}

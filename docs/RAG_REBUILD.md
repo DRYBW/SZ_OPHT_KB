@@ -14,3 +14,6 @@ chunks.parquet ≈ 935 MB 单文件 > GitHub 100MB 硬限。两个获取途径�
 
 ## 服务接线（一步）
 python 3.11+ 环境装 sentence-transformers/pyarrow/pandas 与 mcp sdk；启动 `python mcp_server/server.py`（stdio，不开端口）；search_literature 自动读指针。
+
+## 语料边界禁令（2026-09-30 接线批）
+known-issues（已知问题库）结构化页与其文本字段**永不并入本 RAG 语料/任何索引构建输入**——全量声明与机检口径见 `docs/PITFALLS_RAG_ISOLATION.md`。

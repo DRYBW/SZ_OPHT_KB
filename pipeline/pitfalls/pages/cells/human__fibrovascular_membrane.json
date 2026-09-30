@@ -1,0 +1,266 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "page_type": "cells",
+ "entries": [
+  {
+   "claim_id": "KC-B1-014",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "fibrovascular_membrane"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "髓样占比压谱：膜样本 79.5-85% 髓系，全局聚类下罕见类被压没",
+   "observable_signature": "全池聚类罕见类占比≈0；compartment 门控亚聚后重现",
+   "risk_level": "high",
+   "mitigation": "髓系 compartment 门控单独亚聚类（O2 轨：髓系→15 亚簇后重归一），非髓系独立亚聚类；『先 compartment 门、后类内细分』为膜样本默认工序。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__fibrovascular_membrane"
+   },
+   "visibility": "post_decision",
+   "blind_safe": false,
+   "answer_dependency": "dataset_specific",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.md major_compartments 表；/mnt/D/EyeKB/plans/demo_gse165784/ANNOTATION_DRAFT_GSE165784_V2_20260923.md §O2(13行)+整合后髓系85%条(75行)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__pdr_membrane",
+    "b1_order": 1,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "比例为膜格实测（在册 GSE165784 系）"
+   }
+  },
+  {
+   "claim_id": "KC-B1-017",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "fibrovascular_membrane"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "组织驻留巨噬 vs 小胶质在膜内不可分；『microglia 驱动新生血管』主张须先证驻留",
+   "observable_signature": "谱系锚与状态锚分簇依据缺失时跨样本整合并簇假象",
+   "risk_level": "medium",
+   "mitigation": "MG/mac 结论一律标注分簇依据（谱系锚 vs 状态锚）；跨样本整合用 harmonypy(sample) 后仍报逐样本占比防并簇假象。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__fibrovascular_membrane"
+   },
+   "visibility": "post_decision",
+   "blind_safe": false,
+   "answer_dependency": "sample_specific",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/demo_gse165784/ANNOTATION_DRAFT_GSE165784_V2_20260923.md B1/B13 行；/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.md 髓系状态层"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__pdr_membrane",
+    "b1_order": 4,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "证据膜格实测（B1/B13 在册）"
+   }
+  },
+  {
+   "claim_id": "KC-B1-018",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "fibrovascular_membrane"
+    ],
+    "disease_or_treatment": [
+     "PDR",
+     "RRD"
+    ],
+    "assay": [],
+    "preparation": []
+   },
+   "failure_mode": "RRD 与 PDR 混样改变比例口径：增殖占比随口径翻转",
+   "observable_signature": "两套疾病口径的占比表分别计算结果不同；MT 高簇随样本处理差异变化",
+   "risk_level": "medium",
+   "mitigation": "膜研究汇报强制注明疾病口径（PDR-only / PDR+RRD）；两套占比分别落表禁平均；MT 高簇按样本处理差异披露非生物学。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__fibrovascular_membrane"
+   },
+   "visibility": "post_decision",
+   "blind_safe": false,
+   "answer_dependency": "dataset_specific",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.json major_compartments.proliferating.note+B0 行（demo 报告 29 行）"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__pdr_membrane",
+    "b1_order": 5,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "疾病口径问题限膜格（PDR/RRD 材料）"
+   }
+  },
+  {
+   "claim_id": "KC-B1-019",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "fibrovascular_membrane"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "增殖群（MKI67/TOP2A）跨谱系并簇：细胞周期签名劫持归因",
+   "observable_signature": "增殖簇内多谱系 marker 共检；并簇上做 DE 结果不可归因",
+   "risk_level": "medium",
+   "mitigation": "增殖簇拆分依据=簇内谱系 marker 共检（双标签并报）；增殖相关 DE 须先按谱系分层再比，禁在并簇上做。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__fibrovascular_membrane"
+   },
+   "visibility": "post_decision",
+   "blind_safe": false,
+   "answer_dependency": "sample_specific",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/demo_gse165784/ANNOTATION_DRAFT_GSE165784_V2_20260923.md B11 行（增殖细胞群，来源归属仍待 PI）"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__pdr_membrane",
+    "b1_order": 6,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "证据=膜格 B11 行；跨谱系并簇疑似通用坑但未到他格证据，不升（hint 已记）"
+   }
+  },
+  {
+   "claim_id": "KC-B1-021",
+   "scope": {
+    "species": [
+     "human"
+    ],
+    "tissue": [
+     "fibrovascular_membrane"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "写 FVM/髓系主张不带文献锚（方法+组成题录池）致出处不可溯",
+   "observable_signature": "对外主张缺 PMID 锚",
+   "risk_level": "low",
+   "mitigation": "写 FVM/髓系主张时引用上述锚；PMID:39512888 可作本室湿实验规程对照。",
+   "evidence_source_type": "peer_reviewed_literature",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "cell",
+    "id": "human__fibrovascular_membrane"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "PMID:35061025;PMID:37917183;PMID:42601615;PMID:40069725;PMID:38977459;PMID:38409074;PMID:34273276;PMID:39512888"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__pdr_membrane",
+    "b1_order": 8,
+    "legacy_grade": "B文献PMID",
+    "legacy_code_in_legend": "PIT-E2",
+    "report_confidence": "high",
+    "home_rationale": "B 档题录池锚本格"
+   }
+  }
+ ],
+ "pointers": [
+  {
+   "ref_id": "KC-B1-003",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-007",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-009",
+   "context_note": "scope-hit (internal_observation/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-010",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-015",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-016",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-020",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-022",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-023",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-028",
+   "context_note": "scope-hit (internal_observation/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B1-049",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  }
+ ]
+}

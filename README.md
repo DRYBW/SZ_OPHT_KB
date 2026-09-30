@@ -77,9 +77,24 @@
 python pipeline/run_pipeline.py --input data.h5ad --species human --tissue retina --group-col treatment --out results/run1        # h5ad 形态
 python pipeline/run_pipeline.py --input 10x_dir/ --species human --tissue retina --sample-group "S1=control;S2=case" --out results/run2  # 10X 三件套（父目录=多样本）
 python pipeline/run_pipeline.py --input data.h5ad --species human --tissue retina --ensg-map ids.tsv --out results/run3           # 输入只有 Ensembl ID 时
+python pipeline/run_pipeline.py --input data.h5ad --out results/run4                                                                    # 物种/组织不填=自动预判（默认）
 ```
 
-产出四件：处理后的 `.h5ad`（含批次校正与聚类标记）、质控图（线粒体比例、基因检出数、doublet、UMAP 前后）、`annotation_evidence_report.json/.md`（每簇 top 基因、marker 候选与得分、组成基线对照的越界旗标、疾病先验原文提及、文献片段+PMID、机械置信度分级）、`decisions_template.csv`（每簇一行，`decision` 列的 accept / modify / **abstain** 三值留空，由研究者填写——**弃权是合法输出，本入口不把存疑结果写成确定标签，也不含任何自动打分或自动命名逻辑**）。默认路径**零 LLM**：五工具是本地机械检索；可选 `--llm-assist` 只调用用户自备通道（读环境变量，仓内不含任何真实 key/URL），且只附加参考叙述、不改变分级。详见 `pipeline/README.md`。
+前置样本预判（S0 门，默认启用，**shadow 语义=判不过不阻断**）：任何输入先做物种 ×
+组织自动判定（基因 ID 构成 / symbol 惯例与 marker 互打 / 组成打分三证据 + 六条硬门：
+物种矛盾、组织分差不足、域外、深度不足、疑似胎儿期材料等）。弃权时 pipeline **继续运行**
+（本批 Phase 1=shadow：S0 结论只是记录），输出 `REPORT_ABSTAIN.md`（人读记录件）与
+`s0_gate_report.json`（三证据全读数）——"分不开就报审，不硬标"是方法学原则，阻断式硬门
+留待 Phase 3（WIRE-2 另批验收）经 `EYEKB_S0_ENFORCE=1` 切换，届时判不过才停止执行。
+显式传 `--species/--tissue` 视为人工覆盖，在报告记 `s0_overridden_by_user` 留痕。环境变量
+`EYEKB_S0_GATE=0` 为整体回退开关（恢复纯人工参数旧行为，用于对照与应急）。
+判定通过后，对应（物种 × 组织）坐标的 known-claims 结构化条目（`pipeline/pitfalls/`，
+原子 claim 契约）会以**风险旗标**注入证据报告头段与待裁决清单两列
+（`pitfall_risk_flags` / `pitfall_review_required`）——只提示复核方向，
+**不自动改写任何分级/票面/具名**（自动具名变化恒=0，盲评前不注入条目自由文本，
+含答案依赖的条目判读后才开放；见 `docs/PITFALLS_RAG_ISOLATION.md`）。
+
+产出五件：处理后的 `.h5ad`（含批次校正与聚类标记）、质控图（线粒体比例、基因检出数、doublet、UMAP 前后）、`annotation_evidence_report.json/.md`（每簇 top 基因、marker 候选与得分、组成基线对照的越界旗标、疾病先验原文提及、文献片段+PMID、机械置信度分级）、`decisions_template.csv`（每簇一行，`decision` 列的 accept / modify / **abstain** 三值留空，由研究者填写——**弃权是合法输出，本入口不把存疑结果写成确定标签，也不含任何自动打分或自动命名逻辑**）、`s0_gate_report.json`（S0 样本预判三证据读数与留痕，回退态不产出）。默认路径**零 LLM**：五工具是本地机械检索；可选 `--llm-assist` 只调用用户自备通道（读环境变量，仓内不含任何真实 key/URL），且只附加参考叙述、不改变分级。详见 `pipeline/README.md`。
 
 ## 知识库的组织结构
 

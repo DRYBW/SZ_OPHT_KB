@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B1-028",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "sklearn proba 列序按 classes_ 字母序而非自定义类序：猜列=结果全反",
+   "observable_signature": "对调二分类概率列后判别结果系统性反转",
+   "risk_level": "medium",
+   "mitigation": "消费任何 sklearn 概率输出前先 print classes_ 对列；META.predict_proba_note 固定披露（鼠侧已挂）；禁止按外部类表猜列。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "sklearn_proba_column_order"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/mouse_mid_20260925/MOUSE_MID_REPORT.md 使用声明(67行)+META.json"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "mouse__retina",
+    "b1_order": 7,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "『消费任何 sklearn 概率输出前先 print classes_』全量化；两撞车例在册"
+   }
+  }
+ ],
+ "pointers": []
+}

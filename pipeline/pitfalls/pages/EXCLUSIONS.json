@@ -1,0 +1,60 @@
+{
+ "schema": "eyekb-known-claims-exclusions/1.0",
+ "reason": "盲区声明/社区空白登记=无失效模式无签名，按 REV-1 不入账为 claim；保留可追溯",
+ "items": [
+  {
+   "origin_cell": "human__retina",
+   "b1_order": 14,
+   "kind": "declaration_not_claim",
+   "why": "本格盲区声明=检索留痕元信息，无失效模式无签名"
+  },
+  {
+   "origin_cell": "human__pdr_membrane",
+   "b1_order": 9,
+   "kind": "absence_note",
+   "why": "社区讨论空白登记（无任何具体失效观察）"
+  },
+  {
+   "origin_cell": "human__pdr_membrane",
+   "b1_order": 10,
+   "kind": "declaration_not_claim",
+   "why": "本格盲区声明"
+  },
+  {
+   "origin_cell": "mouse__retina",
+   "b1_order": 10,
+   "kind": "declaration_not_claim",
+   "why": "本格盲区声明"
+  },
+  {
+   "origin_cell": "human__trabecular_meshwork",
+   "b1_order": 7,
+   "kind": "absence_note",
+   "why": "社区零命中登记"
+  },
+  {
+   "origin_cell": "human__trabecular_meshwork",
+   "b1_order": 8,
+   "kind": "declaration_not_claim",
+   "why": "本格盲区声明"
+  },
+  {
+   "origin_cell": "human__cornea",
+   "b1_order": 9,
+   "kind": "declaration_not_claim",
+   "why": "本格盲区声明"
+  },
+  {
+   "origin_cell": "human__vitreous",
+   "b1_order": 7,
+   "kind": "absence_note",
+   "why": "专贴未检得登记（通用坑外推另有条目）"
+  },
+  {
+   "origin_cell": "human__vitreous",
+   "b1_order": 8,
+   "kind": "declaration_not_claim",
+   "why": "本格盲区声明"
+  }
+ ]
+}

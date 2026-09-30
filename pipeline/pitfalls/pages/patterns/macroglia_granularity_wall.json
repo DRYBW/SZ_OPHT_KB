@@ -1,0 +1,51 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B1-004",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "retina",
+     "optic_nerve"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "MG↔Astro 在证据面难分（宏观胶质粒度墙），词典误导判读有前科",
+   "observable_signature": "宏观胶质两类互标高频出现；DR 反应性胶质化（GFAP↑）场景加剧",
+   "risk_level": "medium",
+   "mitigation": "宏观胶质两类互标必须挂『粒度墙』注记；MG 词条禁用 GLUL/VIM/CLU 类歧义共表达基因（KB7 修订已做）；DR 反应性胶质化（GFAP↑）场景 Astro/MG 判定升为人工复核项。",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "macroglia_granularity_wall"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "migrated_draft_pending_audit",
+   "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/drsc_reann_test_20260930/DRSC_REANN_REPORT.md §4 桶②；/mnt/D/OcularKB/WIKI/INDEX.md 09-24 KB5v3 收口条（Q2::22）；/mnt/D/EyeKB/plans/kb5v3_20260924/KB5V3_COMPLETED_20260924.md"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "human__retina",
+    "b1_order": 4,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "墙本身跨组织成立（视网膜/视神经宏观胶质），证据面为人类→pattern 挂双组织"
+   }
+  }
+ ],
+ "pointers": []
+}
