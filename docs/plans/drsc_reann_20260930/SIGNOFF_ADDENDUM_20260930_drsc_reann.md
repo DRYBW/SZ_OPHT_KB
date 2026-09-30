@@ -29,3 +29,6 @@
 - 协议成本两例（13/26 差 1 票）与 k9 敏感位（15）已由三档制吸收；协议级"低置信具名"修订（方案二）留档未启动，需要时另卡预注册。
 
 登记：default4 协调者，2026-09-30 14:3x。
+
+## 5. GitHub 同步（追加，同日下午）
+本套 DRSC-REANN 证据件（PREREG/REPORT/三席票面/CONSISTENCY/终版签字表 xlsx/UMAP 图/本追加件）+ KB9ACT 激活记录与观察规程 + 悬液旁挂面（not_activated）已入仓：远端 main=**a7deb78**（44 文件 +4189 行；密钥/自产数据双扫描 0 命中；API 通道三件逐字节对账 local==remote）。VERIFY_CONTRACT G3 复现门跑批中。
