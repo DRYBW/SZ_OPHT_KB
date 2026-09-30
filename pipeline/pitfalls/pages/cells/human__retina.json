@@ -1,6 +1,6 @@
 {
  "schema": "eyekb-known-claims-page/1.0",
- "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
  "page_type": "cells",
  "entries": [
   {
@@ -105,7 +105,7 @@
    "risk_level": "medium",
    "mitigation": "引用『某带被误判』前必须同做 ambient 占比分解（decontX/cellbender 级），不得拿沾 ambient 的真 BC 当误判证据；杆主导簇却判 BC 时按软提示复核。",
    "evidence_source_type": "internal_observation",
-   "source_check": "unchecked",
+   "source_check": "locator_verified",
    "home": {
     "kind": "cell",
     "id": "human__retina"
@@ -389,6 +389,42 @@
   {
    "ref_id": "KC-B1-049",
    "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-001",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-002",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-003",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-004",
+   "context_note": "scope-hit (internal_observation/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-005",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-006",
+   "context_note": "scope-hit (peer_reviewed_literature/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-007",
+   "context_note": "scope-hit (peer_reviewed_literature/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-008",
+   "context_note": "scope-hit (peer_reviewed_literature/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-009",
+   "context_note": "scope-hit (peer_reviewed_literature/medium/blind_safe=True)"
   }
  ]
 }

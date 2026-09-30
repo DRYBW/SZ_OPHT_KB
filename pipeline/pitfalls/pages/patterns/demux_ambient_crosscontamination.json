@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-006",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "环境 RNA/液滴串扰在组合索引与多组学实验系统性破坏样本归属与稀有群体推断——串扰伪影呈现为\"低丰度细胞型\"",
+   "observable_signature": "题录：PMID:39975005 与 PMID:39989953（single-nucleus multiome 去多重标注受 ambient 污染影响，预印+再版双登记）、PMID:42779630（组合索引法 ambient 污染的实证估计）、PMID:40185305（ambient+doublet 对肿瘤单细胞分析的缓解）",
+   "risk_level": "medium",
+   "mitigation": "demultiplexing 前置 ambient 取证（multi-reference mapping/空滴对照）；稀有类结论对 ambient 校正方式报告敏感性；多组学件默认降级处理",
+   "evidence_source_type": "peer_reviewed_literature",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "demux_ambient_crosscontamination"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/known_issues_b1_20260930/pubmed_B_verified.json verified 键（eutils 题录核验留痕）"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 6,
+    "legacy_grade": "B文献PMID",
+    "legacy_code_in_legend": "PIT-E2",
+    "report_confidence": "medium",
+    "home_rationale": "平台级归属失效由 assay 条件决定→PATTERN（分支4）"
+   }
+  }
+ ],
+ "pointers": []
+}

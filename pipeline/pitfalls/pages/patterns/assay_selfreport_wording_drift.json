@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-001",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "平台自报措辞（核悬液/细胞悬液）与实际制备不符→核-细胞平台轴错归：ambient 校正与稀有类先验按错平台反向套用",
+   "observable_signature": "案例登记：一处盘上注记页眉标 snRNA-seq，一手摘要与 GEO Series 明文均为细胞悬液（~93,000 cells 口径），按措辞误差裁决并勘误留痕（原件不回改）；同 dataset 平台判读修正牵动两处既有误记",
+   "risk_level": "high",
+   "mitigation": "平台词条以一手摘要+GEO 系列明文逐面确认，注记/页眉仅作线索；实测与自报冲突→登记勘误不回改原件；消费侧核-细胞轴前先逐面确认一次",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "assay_selfreport_wording_drift"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/compv1x_20260930/COMPV1X_REPORT.md Q2 裁决节"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 1,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "平台措辞误差跨组织普适（assay 轴正打自家平台标注误差教训=astra T1 定向；v0 词表 bulk/snRNA 混用风险同型）"
+   }
+  }
+ ],
+ "pointers": []
+}

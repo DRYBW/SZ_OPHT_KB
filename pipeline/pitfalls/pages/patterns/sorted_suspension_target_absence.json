@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-003",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "分选/板法悬液物理不携带目标细胞类型→复算层\"零检出\"被误读为生物缺席或词条缺失，实为检测通道缺口",
+   "observable_signature": "案例：腺泡细胞酶原程序独立复算不可检出（PRSS1 全簇 det=0.000、CTRB1≤0.006、PNLIP≈0），分选悬液不载腺泡+板法设计——即便命名 oracle 也无法命名腺泡（RULING 预判与复算一致）",
+   "risk_level": "high",
+   "mitigation": "\"细胞类型缺席\"结论前先过制备敏感性筛查（分选标记/板法孔径设计核查）；平台不携带→登记为检测缺口，禁具名生物缺席",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "sorted_suspension_target_absence"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/kbx_lacrimal_20260928/KBX_VERDICT.md ②平台/数据缺口节"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 3,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "制备通道缺口跨组织普适（泪腺为案例源，TM/玻璃体分选线同型风险）"
+   }
+  }
+ ],
+ "pointers": []
+}

@@ -1,0 +1,53 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-007",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [
+     "snRNA",
+     "scRNA"
+    ],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "依赖线粒体基因型的去多重/ambient 工具在人-类人猿等近缘物种并池时基因型不相容而静默偏置，基于基因型的归属失效",
+   "observable_signature": "题录：PMID:40166335（CellBouncer 统一工具包揭示 Hominid Mitochondrial Incompatibilities）",
+   "risk_level": "medium",
+   "mitigation": "跨物种并池前检查 MT 基因型兼容性（工具文档+参考线粒体基因组版本）；不相容→改 SNP/hashtag 归属；同型教训复用 cross_species_panel_id_preflight 预检纪律",
+   "evidence_source_type": "peer_reviewed_literature",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "cross_species_mt_genotype_demux"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/known_issues_b1_20260930/pubmed_B_verified.json verified 键"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 7,
+    "legacy_grade": "B文献PMID",
+    "legacy_code_in_legend": "PIT-E2",
+    "report_confidence": "medium",
+    "home_rationale": "物种×工具交互失效=条件驱动普适条（不与争议坐标绑定）"
+   }
+  }
+ ],
+ "pointers": []
+}

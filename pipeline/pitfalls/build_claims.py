@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""build_claims.py — 六格 B1 → 原子 claim 契约（WIRE-P1 交付2 · REV-1/astra 定盘版）。
+"""build_claims.py — 六格 B1 → 原子 claim 契约（WIRE-P1 交付2 · REV-1/astra 定盘版）
++ KNOWNISSUES-B2 存量检索批（B2_ITEMS：assay/制备/疾病轴 PATTERN 扩页，KC-B2-001..009）。
 
 单一事实源：本脚本 = claim 逐条裁决表 + 派生规则的唯一落盘处（pages/ 与 MANIFEST
 均为机器产物，不手改；改裁决改本表重跑）。六格原稿 /mnt/D/EyeKB/kb/known_issues/
@@ -326,10 +327,95 @@ EXCLUDED = {
     (VI, 8): ("declaration_not_claim", "本格盲区声明"),
 }
 
+# ---------------------------------------------------------------- B2 批（KNOWNISSUES-B2 存量检索件）
+# 来源=自家盘上件+题录在册 B 检件（assay/制备/疾病轴优先，astra T1 定向）。
+# home 一律 pattern（分支4 条件驱动），scope.species/tissue=["*"]——不引用任何
+# 待裁争议坐标（C1-C14 批复与本批无关）；词表内填不进的槽（sorting/system/bulk/
+# stage 词）留空并在 note 登记，禁自造词。状态=draft_pending_audit（新件，非迁移件；
+# 审计流水线同路，见 plans/known_issues_b2_20261001/out/audit_pipeline/）。
+PREP_VOCAB = ["enzymatic_dissociation", "short_dissociation_cold_protease",
+              "nuclear_extraction", "surgical_stripped_membrane", "excised_whole_mount",
+              "vitrectomy_cassette_wash", "blunt_strip_TM", "cultured_cell_line",
+              "paired_donor_tissue"]
+DISEASE_VOCAB = ["PDR", "RRD", "diabetic_retinopathy_nonPNR", "glaucoma_TM",
+                 "aging", "anti_VEGT_treated", "none_healthy"]
+B2_ITEMS = [
+    dict(pid="assay_selfreport_wording_drift", est="internal_observation", risk="high",
+         ad="none", conf="high", prep=[], assay=[], disease=[],
+         fm="平台自报措辞（核悬液/细胞悬液）与实际制备不符→核-细胞平台轴错归：ambient 校正与稀有类先验按错平台反向套用",
+         obs="案例登记：一处盘上注记页眉标 snRNA-seq，一手摘要与 GEO Series 明文均为细胞悬液（~93,000 cells 口径），按措辞误差裁决并勘误留痕（原件不回改）；同 dataset 平台判读修正牵动两处既有误记",
+         mit="平台词条以一手摘要+GEO 系列明文逐面确认，注记/页眉仅作线索；实测与自报冲突→登记勘误不回改原件；消费侧核-细胞轴前先逐面确认一次",
+         ref="/mnt/D/EyeKB/plans/compv1x_20260930/COMPV1X_REPORT.md Q2 裁决节",
+         why="平台措辞误差跨组织普适（assay 轴正打自家平台标注误差教训=astra T1 定向；v0 词表 bulk/snRNA 混用风险同型）"),
+    dict(pid="mixed_prep_protocol_within_dataset", est="internal_observation", risk="high",
+         ad="none", conf="high", prep=[], assay=[], disease=[],
+         fm="同 dataset 内混合不同取材/分选亚设计（未分选臂与免疫正/负分选臂并池）且元数据未表征→分层可比性破坏，分选臂组成系统性偏置被当全数据集事实",
+         obs="取证案例：12 中央凹未分选样本 55,736 细胞 + 外周 CD73 耗杆/CD90 富 RGC 分选 29,246 细胞（仅 2 批次含分选），cellId 前缀+一手方法取证拆分；预注册后不改规则，拆分路径登记为后续选项",
+         mit="pooling 前样本级制备策略取证表（cellId 前缀/摘要方法/分选标记三列）；不可分层数据集组成指标只可描述不可对照；预注册规则不因取证回改，拆分作后续选项",
+         ref="/mnt/D/EyeKB/plans/compv1x_20260930/ledgers/q4_sample_strategy_forensics.tsv 全件",
+         why="亚设计混合=制备条件驱动失效，非某格专属（分支4→PATTERN）"),
+    dict(pid="sorted_suspension_target_absence", est="internal_observation", risk="high",
+         ad="none", conf="high", prep=[], assay=[], disease=[],
+         fm="分选/板法悬液物理不携带目标细胞类型→复算层\"零检出\"被误读为生物缺席或词条缺失，实为检测通道缺口",
+         obs="案例：腺泡细胞酶原程序独立复算不可检出（PRSS1 全簇 det=0.000、CTRB1≤0.006、PNLIP≈0），分选悬液不载腺泡+板法设计——即便命名 oracle 也无法命名腺泡（RULING 预判与复算一致）",
+         mit="\"细胞类型缺席\"结论前先过制备敏感性筛查（分选标记/板法孔径设计核查）；平台不携带→登记为检测缺口，禁具名生物缺席",
+         ref="/mnt/D/EyeKB/plans/kbx_lacrimal_20260928/KBX_VERDICT.md ②平台/数据缺口节",
+         why="制备通道缺口跨组织普适（泪腺为案例源，TM/玻璃体分选线同型风险）"),
+    dict(pid="single_study_pilot_surface_reference", est="internal_observation", risk="medium",
+         ad="none", conf="high", prep=[], assay=[], disease=[],
+         fm="单研究、无供体级区间的\"试点面\"被当作组成对照参照→单批次偏置转成系统性假旗，且无供体级置信带可查",
+         obs="状态登记实证：一面 status=observed_single_study_pilot（无供体级区间），组成对照不参与打分判据已在册（评审停令6：≠无风险≠无 marker）",
+         mit="试点/单研究面入组成对照前自动挂 coverage/panel_gap 旗标；组成打分禁用，只可描述；面板补录候选转建设线工单",
+         ref="/mnt/D/EyeKB/kb/baselines/lacrimal_gland.json status 字段",
+         why="面状态语义失效与坐标无关（任何组织试点期同型→PATTERN）"),
+    dict(pid="fetal_adult_stage_mixing", est="internal_observation", risk="high",
+         ad="none", conf="high", prep=[], assay=[], disease=[],
+         fm="胎儿/发育期样本混入成年组织判读面：发育签名劫持注释与年龄轴，成年词表下发育细胞型被错标或稀有类被压平",
+         obs="建面即证据：发育视网膜独立成面（status=development_annotated_aggregate）与过渡件在册，正因混入风险存在；S0 疑似胎儿硬门原型已完成对公开样本面板输入的冒烟（结构门驱动）",
+         mit="stage 正交轴判定先于命名（S0 硬门）：fetal/developing 疑似样本→弃权/单列，禁强命名成年词表；判读面前按 stage 分组报告",
+         ref="/mnt/D/EyeKB/kb/baselines/retina__fetal_developing.json + /mnt/D/EyeKB/kb/baselines/fetal_development_transitions.json",
+         why="发育混入=stage 条件驱动（C11 裁定归 PATTERN 分支4，不建 CELL 变体格）"),
+    dict(pid="demux_ambient_crosscontamination", est="peer_reviewed_literature", risk="medium",
+         ad="none", conf="medium", prep=[], assay=[], disease=[],
+         fm="环境 RNA/液滴串扰在组合索引与多组学实验系统性破坏样本归属与稀有群体推断——串扰伪影呈现为\"低丰度细胞型\"",
+         obs="题录：PMID:39975005 与 PMID:39989953（single-nucleus multiome 去多重标注受 ambient 污染影响，预印+再版双登记）、PMID:42779630（组合索引法 ambient 污染的实证估计）、PMID:40185305（ambient+doublet 对肿瘤单细胞分析的缓解）",
+         mit="demultiplexing 前置 ambient 取证（multi-reference mapping/空滴对照）；稀有类结论对 ambient 校正方式报告敏感性；多组学件默认降级处理",
+         ref="/mnt/D/EyeKB/plans/known_issues_b1_20260930/pubmed_B_verified.json verified 键（eutils 题录核验留痕）",
+         why="平台级归属失效由 assay 条件决定→PATTERN（分支4）"),
+    dict(pid="cross_species_mt_genotype_demux", est="peer_reviewed_literature", risk="medium",
+         ad="none", conf="medium", prep=[], assay=["snRNA", "scRNA"], disease=[],
+         fm="依赖线粒体基因型的去多重/ambient 工具在人-类人猿等近缘物种并池时基因型不相容而静默偏置，基于基因型的归属失效",
+         obs="题录：PMID:40166335（CellBouncer 统一工具包揭示 Hominid Mitochondrial Incompatibilities）",
+         mit="跨物种并池前检查 MT 基因型兼容性（工具文档+参考线粒体基因组版本）；不相容→改 SNP/hashtag 归属；同型教训复用 cross_species_panel_id_preflight 预检纪律",
+         ref="/mnt/D/EyeKB/plans/known_issues_b1_20260930/pubmed_B_verified.json verified 键",
+         why="物种×工具交互失效=条件驱动普适条（不与争议坐标绑定）"),
+    dict(pid="organoid_developing_reference_mixing", est="peer_reviewed_literature", risk="medium",
+         ad="none", conf="medium", prep=["cultured_cell_line"], assay=[], disease=[],
+         fm="类器官/iPSC 衍生体系与成年组织同框：体系发育签名被当成年细胞型证据，器官级参照进一步污染成年类型定义与训练参照",
+         obs="题录：PMID:32946783（人视网膜与其类器官同框图谱）、PMID:39117640（人发育视网膜双组学图谱）、PMID:38942029（hPSC 来源角膜缘干细胞异质性）",
+         mit="命名与训练参照前先分体系轴（organoid/iPSC vs 原位 tissue）；无 system 词时 scope 留空并登记缺口（待 C11/C9 词表扩后回写）；器官级参照禁单独作成年细胞型定义",
+         ref="/mnt/D/EyeKB/plans/known_issues_b1_20260930/pubmed_B_verified.json verified 键",
+         why="体系条件驱动（词表暂无 system 轴→note 登记缺口，禁自造词）"),
+    dict(pid="cross_species_atlas_reference_transfer", est="peer_reviewed_literature", risk="medium",
+         ad="none", conf="medium", prep=[], assay=[], disease=[],
+         fm="模式物种图谱/词表直接迁移人（或反向）作细胞型参照：同源组织存在结构与分子差异，迁移产出\"伪缺/伪有\"细胞型",
+         obs="题录：PMID:32341164（人+四模式物种房水外流通路图谱，物种差异为主题）、PMID:35858321（人眼前段图谱，组织特异与共享型并存）",
+         mit="参照迁移前逐条列同源结构对照表（含物种专有类型清单）；引用模式物种词表必带 species 轴标注；与 symbol_case/panel_id_preflight 同族但失效面不同（参照迁移≠ID 冲突）",
+         ref="/mnt/D/EyeKB/plans/known_issues_b1_20260930/pubmed_B_verified.json verified 键",
+         why="跨物种参照条件驱动普适条（C10 物种轴未裁仍可立 PATTERN——不建争议格）"),
+]
+
 # ---------------------------------------------------------------- 装配
 def _pointer_exists_in_source(ref):
-    m = re.search(r"/mnt/\S+", str(ref))
-    return bool(m) and Path(m.group(0)).exists()
+    """B2 起升级：从 ref 串提取候选路径（支持全角括号/+拼接尾注），任一存在即核过。"""
+    toks = re.findall(r"/mnt/\S+", str(ref))
+    for t in toks:
+        if Path(t).exists():
+            return True
+        m = re.match(r"^(.*?(?:\.(?:md|json|tsv|csv|h5ad|txt|log|tar|gz|png)))", t)
+        if m and Path(m.group(1)).exists():
+            return True
+    return bool(toks) and False
 
 
 # ---- 入仓清洗（红线：自家样本号禁入仓；工作盘原件不回改，仓侧构建产物统一过此层）----
@@ -421,6 +507,53 @@ def build():
             if d["note"]:
                 claim["note"] = d["note"]
             claims.append(claim)
+    # ---- B2 存量检索件（home=pattern，词表校验同规；状态=draft_pending_audit 新件）----
+    for j, it in enumerate(B2_ITEMS, 1):
+        cid = f"KC-B2-{j:03d}"
+        est = it["est"]
+        assert est in EST_BY_GRADE.values(), f"{cid}: EST 枚举非法"
+        scv = (("locator_verified" if _pointer_exists_in_source(it["ref"]) else "unchecked")
+               if est == "internal_observation" else
+               ("locator_verified" if est == "peer_reviewed_literature" else "unchecked"))
+        for a in it["assay"]:
+            assert a in ASSAY_VOCAB, f"{cid}: assay {a} 不在受控词表（bulk 缺失登记，禁私加）"
+        for p_ in it["prep"]:
+            assert p_ in PREP_VOCAB, f"{cid}: preparation {p_} 不在受控词表"
+        for ds in it["disease"]:
+            assert ds in DISEASE_VOCAB, f"{cid}: disease {ds} 不在受控词表"
+        ad = it["ad"]
+        blind = (ad == "none")
+        scope = {"species": ["*"], "tissue": ["*"], "assay": list(it["assay"]),
+                 "preparation": list(it["prep"]), "disease_or_treatment": list(it["disease"])}
+        claim = {
+            "claim_id": cid,
+            "scope": scope,
+            "failure_mode": it["fm"],
+            "observable_signature": it["obs"],
+            "risk_level": it["risk"],
+            "mitigation": it["mit"],
+            "evidence_source_type": est,
+            "source_check": scv,
+            "home": {"kind": "pattern", "id": it["pid"]},
+            "visibility": "pre_annotation" if blind else "post_decision",
+            "blind_safe": blind,
+            "answer_dependency": ad,
+            "status": "draft_pending_audit",
+            "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+            "last_reviewed": None,
+            "links": [str(it["ref"])],
+            "conflicts": [],
+            "provenance": {
+                "origin_cell": "b2_stock_20260930", "b1_order": j,
+                "legacy_grade": {"internal_observation": "A库内实证",
+                                 "peer_reviewed_literature": "B文献PMID",
+                                 "community_lead": "C社区经验"}[est],
+                "legacy_code_in_legend": HIST_GRADE[est],
+                "report_confidence": it["conf"],
+                "home_rationale": it["why"],
+            },
+        }
+        claims.append(claim)
     return claims
 
 
@@ -436,7 +569,7 @@ def pages_of(claims):
     def page(name):
         return pages.setdefault(name, {
             "schema": "eyekb-known-claims-page/1.0",
-            "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+            "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
             "page_type": name.split("/")[0], "entries": [], "pointers": []})
     by_home = {}
     for c in claims:
@@ -548,7 +681,8 @@ def write_pages(claims, pages, excl):
 
 def validate(claims, pages):
     ids = [c["claim_id"] for c in claims]
-    assert len(ids) == len(set(ids)) == 50, f"claim 数={len(set(ids))}（预期 50=59−9 不入账）"
+    assert len(ids) == len(set(ids)) == 59, \
+        f"claim 数={len(set(ids))}（预期 59=迁移批 50(59−9 不入账)+B2 存量批 9）"
     homes = {}
     for c in claims:
         assert c["home"]["kind"] in ("cell", "species", "tissue", "pattern", "unmapped")

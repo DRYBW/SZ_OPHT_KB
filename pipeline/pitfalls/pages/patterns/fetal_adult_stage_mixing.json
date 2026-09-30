@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-005",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "胎儿/发育期样本混入成年组织判读面：发育签名劫持注释与年龄轴，成年词表下发育细胞型被错标或稀有类被压平",
+   "observable_signature": "建面即证据：发育视网膜独立成面（status=development_annotated_aggregate）与过渡件在册，正因混入风险存在；S0 疑似胎儿硬门原型已完成对公开样本面板输入的冒烟（结构门驱动）",
+   "risk_level": "high",
+   "mitigation": "stage 正交轴判定先于命名（S0 硬门）：fetal/developing 疑似样本→弃权/单列，禁强命名成年词表；判读面前按 stage 分组报告",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "fetal_adult_stage_mixing"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/kb/baselines/retina__fetal_developing.json + /mnt/D/EyeKB/kb/baselines/fetal_development_transitions.json"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 5,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "发育混入=stage 条件驱动（C11 裁定归 PATTERN 分支4，不建 CELL 变体格）"
+   }
+  }
+ ],
+ "pointers": []
+}

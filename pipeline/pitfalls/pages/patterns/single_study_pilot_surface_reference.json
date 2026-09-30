@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-004",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "单研究、无供体级区间的\"试点面\"被当作组成对照参照→单批次偏置转成系统性假旗，且无供体级置信带可查",
+   "observable_signature": "状态登记实证：一面 status=observed_single_study_pilot（无供体级区间），组成对照不参与打分判据已在册（评审停令6：≠无风险≠无 marker）",
+   "risk_level": "medium",
+   "mitigation": "试点/单研究面入组成对照前自动挂 coverage/panel_gap 旗标；组成打分禁用，只可描述；面板补录候选转建设线工单",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "single_study_pilot_surface_reference"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/kb/baselines/lacrimal_gland.json status 字段"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 4,
+    "legacy_grade": "A库内实证",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "面状态语义失效与坐标无关（任何组织试点期同型→PATTERN）"
+   }
+  }
+ ],
+ "pointers": []
+}

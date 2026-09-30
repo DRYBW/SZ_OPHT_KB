@@ -1,6 +1,6 @@
 {
  "schema": "eyekb-known-claims-page/1.0",
- "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
  "page_type": "cells",
  "entries": [
   {
@@ -107,7 +107,7 @@
    "risk_level": "high",
    "mitigation": "玻璃体研究对照必须明写对照材料的真实背景；禁『健康玻璃体组成』表述（无此物）；跨研究比前先比对照定义。",
    "evidence_source_type": "internal_observation",
-   "source_check": "unchecked",
+   "source_check": "locator_verified",
    "home": {
     "kind": "cell",
     "id": "human__vitreous"
@@ -149,7 +149,7 @@
    "risk_level": "medium",
    "mitigation": "玻璃体数据 QC 报每样本 nFeature 分布+ambient 估计（decontX 级）；稀有类主张需过『非 ambient』门（表达占比+双细胞联合检验）。",
    "evidence_source_type": "internal_observation",
-   "source_check": "unchecked",
+   "source_check": "locator_verified",
    "home": {
     "kind": "cell",
     "id": "human__vitreous"
@@ -260,6 +260,42 @@
   {
    "ref_id": "KC-B1-049",
    "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-001",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-002",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-003",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-004",
+   "context_note": "scope-hit (internal_observation/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-005",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-006",
+   "context_note": "scope-hit (peer_reviewed_literature/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-007",
+   "context_note": "scope-hit (peer_reviewed_literature/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-008",
+   "context_note": "scope-hit (peer_reviewed_literature/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-009",
+   "context_note": "scope-hit (peer_reviewed_literature/medium/blind_safe=True)"
   }
  ]
 }

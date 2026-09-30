@@ -1,6 +1,6 @@
 {
  "schema": "eyekb-known-claims-page/1.0",
- "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1)",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
  "page_type": "cells",
  "entries": [
   {
@@ -262,6 +262,42 @@
   {
    "ref_id": "KC-B1-028",
    "context_note": "scope-hit (internal_observation/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-001",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-002",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-003",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-004",
+   "context_note": "scope-hit (internal_observation/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-005",
+   "context_note": "scope-hit (internal_observation/high/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-006",
+   "context_note": "scope-hit (peer_reviewed_literature/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-007",
+   "context_note": "scope-hit (peer_reviewed_literature/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-008",
+   "context_note": "scope-hit (peer_reviewed_literature/medium/blind_safe=True)"
+  },
+  {
+   "ref_id": "KC-B2-009",
+   "context_note": "scope-hit (peer_reviewed_literature/medium/blind_safe=True)"
   }
  ]
 }

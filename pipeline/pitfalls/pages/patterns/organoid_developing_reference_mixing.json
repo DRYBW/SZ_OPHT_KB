@@ -1,0 +1,52 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-008",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [
+     "cultured_cell_line"
+    ],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "类器官/iPSC 衍生体系与成年组织同框：体系发育签名被当成年细胞型证据，器官级参照进一步污染成年类型定义与训练参照",
+   "observable_signature": "题录：PMID:32946783（人视网膜与其类器官同框图谱）、PMID:39117640（人发育视网膜双组学图谱）、PMID:38942029（hPSC 来源角膜缘干细胞异质性）",
+   "risk_level": "medium",
+   "mitigation": "命名与训练参照前先分体系轴（organoid/iPSC vs 原位 tissue）；无 system 词时 scope 留空并登记缺口（待 C11/C9 词表扩后回写）；器官级参照禁单独作成年细胞型定义",
+   "evidence_source_type": "peer_reviewed_literature",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "organoid_developing_reference_mixing"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/known_issues_b1_20260930/pubmed_B_verified.json verified 键"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 8,
+    "legacy_grade": "B文献PMID",
+    "legacy_code_in_legend": "PIT-E2",
+    "report_confidence": "medium",
+    "home_rationale": "体系条件驱动（词表暂无 system 轴→note 登记缺口，禁自造词）"
+   }
+  }
+ ],
+ "pointers": []
+}
