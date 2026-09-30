@@ -74,7 +74,7 @@
   "EXCLUSIONS.json": "a94d05b58dbcd5a22bef420e00ab401a05118d8a4fcd0ec273b00de96bc22482",
   "cells/human__cornea.json": "780968d6a4f3645b1ce8a6143020d72c3da3bd06ca28aa6d38837815f65908a9",
   "cells/human__fibrovascular_membrane.json": "a74f23b6ade287c6fa0b3b7d64490336eb6dd0fe2a14daa2ab8cfab5769e70c2",
-  "cells/human__retina.json": "927c382e9ee7c973146d2f51bfcda9535a35f85e6067fa6d45e5d1a3377e5171",
+  "cells/human__retina.json": "8dfd2ec7f80967fc8da8fc84870a8261d740947a0a5b2f73ce48e0397f415813",
   "cells/human__trabecular_meshwork.json": "e3f5840fa4c2b6401b94a486541ea4864de3e7c26f40f32f1583b2c45f67f57e",
   "cells/human__vitreous.json": "86d17117e55a1162e574fe26d0bbdb11ba500a53f590bb9945ed76fd55a5a5bc",
   "cells/mouse__retina.json": "6dee8fbbb4e179ba1acb763c1012d5b1ce131146deec1e04fb565c4c9b2b5ae2",
@@ -144,6 +144,7 @@
    "medium": "需降级注记或单列",
    "low": "操作提示"
   },
+  "region_axis": "v1 §3.1（C8 批复）正交区域注记：值 fovea/macula_peripheral_mix/peripheral/not_recorded；仅带 region_scope 注记的 claim 在 scope 含 region 键（本批=KC-B1-008）；not_recorded 禁当 fovea/peripheral 单面套用",
   "conflict_schema": "claim.conflicts 追加对象字段（astra T5）：conflict_id/claim_id/panel_version/decision_record_id/scope/initial_decision/final_decision/rule_applied/reviewer/coordinator_recalculation/timestamp——shadow 阶段恒空，冲突由人工裁决/Phase 3 票规流程写入",
   "note": "A/B/C 裸字母全局废止（T3）；历史映射仅 legend 内保留"
  }

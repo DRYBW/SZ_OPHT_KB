@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """build_claims.py — 六格 B1 → 原子 claim 契约（WIRE-P1 交付2 · REV-1/astra 定盘版）
-+ KNOWNISSUES-B2 存量检索批（B2_ITEMS：assay/制备/疾病轴 PATTERN 扩页，KC-B2-001..009）。
++ KNOWNISSUES-B2 存量检索批（B2_ITEMS：assay/制备/疾病轴 PATTERN 扩页，KC-B2-001..009）
++ B2 裁决波（ARBITRATION_RULING_C1-C14_v1，2026-09-30 批复）：词表升 v1——
+  assay 轴补 `bulk`（C9 放行校验）、region 正交轴入 scope 语法（C8，KC-B1-008 补
+  region_scope 注记重生成）、C12 治疗三态登记纪律落词表（本批 claim 对象=0，如实登记）。
 
 单一事实源：本脚本 = claim 逐条裁决表 + 派生规则的唯一落盘处（pages/ 与 MANIFEST
 均为机器产物，不手改；改裁决改本表重跑）。六格原稿 /mnt/D/EyeKB/kb/known_issues/
@@ -19,7 +22,7 @@
   - 一 scope 一 claim；跨部分组织非全覆/由 assay·疾病·制备条件决定 → PATTERN。
   - 盲区声明（6 条）与"社区空白"记录（3 条）= 无量纲无失效签名 → **不入账**，
     登记 pages/EXCLUSIONS.json（可追溯）。
-  - 映射不进受控词表（COORDINATE_TAXONOMY_v0.md）→ UNMAPPED_SCOPE，禁自动注入。
+  - 映射不进受控词表（COORDINATE_TAXONOMY_v1.md）→ UNMAPPED_SCOPE，禁自动注入。
   - 禁裸 A/B/C：来源类型全枚举 internal_observation|peer_reviewed_literature|
     community_lead；核验状态另立 source_check（题录/指针核过 ≠ claim 成立）。
 
@@ -47,7 +50,7 @@ HERE = Path(__file__).resolve().parent
 SRC = Path("/mnt/D/EyeKB/kb/known_issues")
 PAGES = HERE / "pages"
 
-# 六格坐标系 → canonical 组织 id（COORDINATE_TAXONOMY_v0.md §6；仅 pdr 改名，余直通）
+# 六格坐标系 → canonical 组织 id（COORDINATE_TAXONOMY_v1.md §6，C6/C7 批复定案；仅 pdr 改名，余直通）
 TISSUE_CANON = {"retina": "retina", "pdr_membrane": "fibrovascular_membrane",
                 "trabecular_meshwork": "trabecular_meshwork", "cornea": "cornea",
                 "vitreous": "vitreous"}
@@ -57,7 +60,10 @@ CANON_TISSUES = ["retina", "RPE", "ciliary_body", "optic_nerve", "ocular_surface
                  "trabecular_meshwork", "lacrimal_gland", "choroid", "conjunctiva",
                  "iris", "lens", "sclera", "cornea", "fibrovascular_membrane", "vitreous"]
 SPECIES_PAGE = ["human", "mouse"]
-ASSAY_VOCAB = ["scRNA", "snRNA", "spatial"]          # bulk 缺失登记在词表，禁私加
+# C9 批复（2026-09-30 裁决件）：bulk 补入受控词表，校验同步放行；未列词仍禁私加
+ASSAY_VOCAB = ["scRNA", "snRNA", "spatial", "bulk"]
+# C8 批复：region 正交轴（claim 级 scope 注记，不占组织轴位；词表见 COORDINATE_TAXONOMY_v1.md §3.1）
+REGION_VOCAB = ["fovea", "macula_peripheral_mix", "peripheral", "not_recorded"]
 EST_BY_GRADE = {"A库内实证": "internal_observation",
                 "B文献PMID": "peer_reviewed_literature",
                 "C社区经验": "community_lead"}
@@ -111,7 +117,10 @@ v(HR, 7, ("pattern", "platform_nucleus_vs_cell"), "none", "high",
 v(HR, 8, ("cell",), "sample_specific", "medium",
   "区域混合假旗：中央凹 vs 周边取材差异被当作组成异常",
   "同组织不同区域样本的组成占比呈双峰",
-  "fovea/peripheral 为人视网膜解剖特有；取材区域轴未入词表（缺失登记）")
+  "fovea/peripheral 为人视网膜解剖特有；region 正交轴已随 C8 批复立轴（v1 §3.1），"
+  "本条补 region_scope 注记——缓解『对照先对齐区域』语法上可执行",
+  sc_ex={"region": ["fovea", "macula_peripheral_mix", "peripheral", "not_recorded"]},
+  note="region_scope 四值语义见 v1 §3.1；not_recorded 样本按混面报告，禁当 fovea/peripheral 单面套用")
 v(HR, 9, ("pattern", "single_donor_leverage"), "none", "medium",
   "供体杠杆：罕见类 hit 可被单 donor 删除即翻转",
   "留一供体复算翻转（LODO flip）",
@@ -458,7 +467,7 @@ def build():
                 scope = {"species": ["*"], "tissue": ["*"]}
             else:
                 scope = {"species": [], "tissue": []}
-            for axis in ("species", "tissue", "assay", "preparation", "disease_or_treatment"):
+            for axis in ("species", "tissue", "assay", "preparation", "disease_or_treatment", "region"):
                 if axis in d["sc"]:
                     scope[axis] = d["sc"][axis]
             for axis in ("assay", "preparation", "disease_or_treatment"):
@@ -469,7 +478,9 @@ def build():
             for s_ in scope["species"]:
                 assert s_ == "*" or s_ in SPECIES_PAGE, f"{cid}: species {s_} 不在受控词表"
             for a in scope["assay"]:
-                assert a in ASSAY_VOCAB, f"{cid}: assay {a} 不在受控词表（bulk 缺失登记，禁私加）"
+                assert a in ASSAY_VOCAB, f"{cid}: assay {a} 不在受控词表（v1 词表见 COORDINATE_TAXONOMY_v1.md §4）"
+            for r_ in scope.get("region", []):
+                assert r_ in REGION_VOCAB, f"{cid}: region {r_} 不在 v1 §3.1 region 轴词表"
             if est == "internal_observation":
                 scv = "locator_verified" if _pointer_exists_in_source(it["source_ref"]) else "unchecked"
             elif est == "peer_reviewed_literature":
@@ -516,7 +527,7 @@ def build():
                if est == "internal_observation" else
                ("locator_verified" if est == "peer_reviewed_literature" else "unchecked"))
         for a in it["assay"]:
-            assert a in ASSAY_VOCAB, f"{cid}: assay {a} 不在受控词表（bulk 缺失登记，禁私加）"
+            assert a in ASSAY_VOCAB, f"{cid}: assay {a} 不在受控词表（v1 §4，C9 批复后 bulk 合法）"
         for p_ in it["prep"]:
             assert p_ in PREP_VOCAB, f"{cid}: preparation {p_} 不在受控词表"
         for ds in it["disease"]:
@@ -665,6 +676,9 @@ def write_pages(claims, pages, excl):
                       "risk_level": {"high": "结论级翻车/系统性不可信",
                                      "medium": "需降级注记或单列",
                                      "low": "操作提示"},
+                      "region_axis": ("v1 §3.1（C8 批复）正交区域注记：值 fovea/macula_peripheral_mix/"
+                                      "peripheral/not_recorded；仅带 region_scope 注记的 claim 在 scope 含 "
+                                      "region 键（本批=KC-B1-008）；not_recorded 禁当 fovea/peripheral 单面套用"),
                       "conflict_schema": ("claim.conflicts 追加对象字段（astra T5）：conflict_id/"
                                           "claim_id/panel_version/decision_record_id/scope/"
                                           "initial_decision/final_decision/rule_applied/reviewer/"

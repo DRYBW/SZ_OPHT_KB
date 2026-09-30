@@ -181,6 +181,12 @@
     "tissue": [
      "retina"
     ],
+    "region": [
+     "fovea",
+     "macula_peripheral_mix",
+     "peripheral",
+     "not_recorded"
+    ],
     "assay": [],
     "preparation": [],
     "disease_or_treatment": []
@@ -211,8 +217,9 @@
     "legacy_grade": "A库内实证",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "fovea/peripheral 为人视网膜解剖特有；取材区域轴未入词表（缺失登记）"
-   }
+    "home_rationale": "fovea/peripheral 为人视网膜解剖特有；region 正交轴已随 C8 批复立轴（v1 §3.1），本条补 region_scope 注记——缓解『对照先对齐区域』语法上可执行"
+   },
+   "note": "region_scope 四值语义见 v1 §3.1；not_recorded 样本按混面报告，禁当 fovea/peripheral 单面套用"
   },
   {
    "claim_id": "KC-B1-011",

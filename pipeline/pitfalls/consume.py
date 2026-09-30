@@ -87,10 +87,11 @@ def class_match(candidate, applies):
     return False
 
 
-# 词典组织名 → canonical 页坐标（COORDINATE_TAXONOMY_v0.md §6）
+# 词典组织名 → canonical 页坐标（COORDINATE_TAXONOMY_v1.md §6，C6/C7 批复；服务词典零改动）
 PULL_TISSUE_ALIAS = {"fibrovascular_membrane": "fibrovascular_membrane",
                      "fibrovascular membrane": "fibrovascular_membrane",
-                     "pdr_membrane": "fibrovascular_membrane"}
+                     "pdr_membrane": "fibrovascular_membrane",
+                     "lacrimal": "lacrimal_gland"}
 
 
 def _load(fname):

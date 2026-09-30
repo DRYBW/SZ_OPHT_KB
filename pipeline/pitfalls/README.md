@@ -10,10 +10,12 @@ status=draft_for_PI 的内容层由 KNOWNISSUES-B1 卡维护）。本模块=**�
 
 | 件 | 作用 |
 |---|---|
-| `COORDINATE_TAXONOMY_v0.md` | 词表前置件：物种×组织×assay 受控词表 + 基线面↔设计组织映射 + 缺失登记（"17 面"口径核实=12 组织面+5 元/变体件）。归属以它为准，映射不进词表=UNMAPPED |
+| `COORDINATE_TAXONOMY_v1.md` | 词表前置件（RATIFIED v1，C1-C14 批复 2026-09-30）：物种×组织×assay×region 受控词表 + 基线面↔设计组织映射（"17 面"口径核实=12 组织面+5 元/变体件；canonical 组织轴=15 面）。归属以它为准，映射不进词表=UNMAPPED |
+| `matrix/MATRIX_GRID.json` + `matrix/GRID_LEDGER.csv` | 90 格占位矩阵（6 物种×15 面，C10 批复面积；`build_matrix.py` 机器生成、零手写）——占位≠激活，本批激活=0 |
+| `build_matrix.py` | 占位矩阵生成器（五态如实登记+面板状态实测+自家 `MANIFEST.sha256`；`--check`=确定性门） |
 | `build_claims.py` | 59 条→原子 claim（一 scope 一 claim）；逐条裁决表+派生规则+机械校验（词表合规/唯一 Home/链接 100% 解析/字段完整性）；`--check`=脚本↔产物互证门 |
 | `pages/cells/*.json` | CELL 页（species__tissue）：本格 Home 条目 + 被引指针（pattern/species 覆盖条） |
-| `pages/species/*.json`、`pages/tissue/*.json`、`pages/patterns/*.json` | SPECIES/TISSUE/PATTERN 页（五支树；本批 tally：cell 36 / species 1 / tissue 0 / pattern 13 / unmapped 0=50 条入账） |
+| `pages/species/*.json`、`pages/tissue/*.json`、`pages/patterns/*.json` | SPECIES/TISSUE/PATTERN 页（五支树；本批 tally：cell 36 / species 1 / tissue 0 / pattern 22 / unmapped 0=59 条入账=B1 迁移 50+B2 存量 9） |
 | `pages/EXCLUSIONS.json` | 不入账登记（9 条：6 盲区声明+3 社区空白——无失效模式/无量纲，不得当 claim） |
 | `pages/INDEX.json` | claim 清单 + 各页 sha + **legend**（全部枚举含义，禁裸 A/B/C，历史映射仅存 legend） |
 | `consume.py` | 运行时 shadow 消费：按坐标拉页→风险旗标（**无 cap/无 override**）→人类面渲染+审计件 |
@@ -56,5 +58,7 @@ known-issues 文本永不并入 RAG 语料；WIRE 全程锁现役 RAG（禁顺�
 
 ## 范围
 
-Phase 1=六格闭环（本批）。Phase 2（72 格占位/24 格深补/全网重构）**未做**，
-等本批验收与交叉审；扩展限额与五态格子状态机见词表件 §5。
+Phase 1=六格闭环（已验收）；Phase 2（KNOWNISSUES-B2）=90 格全占位（`matrix/`，C10 批复面积
+6×15，占位≠激活、本批达标候选=0 如实口径）+ PATTERN 存量扩 13→22（claim 50→59）+
+人工审计流水线（plans/known_issues_b2_20261001/out/audit_pipeline/）。24 格深补与
+RESERVED 物种升格=二批起逐申请预注册通道（限额+人工审计门）。扩展限额与五态格子状态机见词表件 §5。
