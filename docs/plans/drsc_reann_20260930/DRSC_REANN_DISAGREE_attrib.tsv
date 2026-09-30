@@ -1,0 +1,9 @@
+cluster	anno_v2	E2ON	E2OFF	E1	bucket	old_grade	lineage_ON	basis_ON	to_PI
+3	Rod	NO_CONSENSUS	NO_CONSENSUS	Rod	弃权/无共识(单列不计错)	high	na	[]	True
+4	Rod	NO_CONSENSUS	NO_CONSENSUS	Rod	豁免组(不计头条)	high	na	[]	True
+11	Rod	MG	MG	Rod	豁免组(不计头条)	high	mismatch	[{"name": "MG", "grade": "C", "coarse": true, "off_vocab": false}, {"name": "MG", "grade": "B", "coarse": false, "off_vocab": false}, {"name": "MG", "grade": "C", "coarse": true, "off_vocab": false}]	True
+13	Rod	NO_CONSENSUS	NO_CONSENSUS	Rod	弃权/无共识(单列不计错)	high	na	[{"name": "Rod", "grade": "C", "coarse": true, "off_vocab": false}]	True
+14	MG	NO_CONSENSUS	NO_CONSENSUS	MG	弃权/无共识(单列不计错)	high	na	[{"name": "RGC", "grade": "C", "coarse": true, "off_vocab": false}]	True
+15	AC	NO_CONSENSUS	RGC	AC	弃权/无共识(单列不计错)	high	na	[]	True
+23	Astro	MG	MG	Astro	②粒度墙	high	match	[{"name": "MG", "grade": "C", "coarse": true, "off_vocab": false}, {"name": "MG", "grade": "B", "coarse": false, "off_vocab": false}]	True
+26	Micro	NO_CONSENSUS	NO_CONSENSUS	Micro	弃权/无共识(单列不计错)	high	na	[{"name": "Micro", "grade": "B", "coarse": false, "off_vocab": false}]	True

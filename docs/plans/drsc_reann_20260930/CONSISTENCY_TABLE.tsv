@@ -1,0 +1,33 @@
+cluster	n_cells	anno_v2	old_grade	exempt	exempt_reason	E2ON_name	E2ON_mode	E2OFF_name	E2OFF_mode	E1_mode	E1_proba	strict_ON	strict_OFF	lineage_ON	lineage_OFF	E1_strict	E1_lineage	flip_ON_vs_OFF	votes_ON	votes_OFF
+0	35835	Rod	high	True	E-c Rod质量轴	Rod	named	Rod	named	Rod	Rod	match	match	match	match	match	match	False	{"A": "Rod", "B": "Rod", "C": "Rod"}	{"A": "Rod", "B": "Rod", "C": "Rod"}
+1	32792	Rod	high	False		Rod	named	Rod	named	Rod	Rod	match	match	match	match	match	match	False	{"A": "coarse:Rod", "B": "Rod", "C": "undetermined"}	{"A": "coarse:Rod", "B": "Rod", "C": "undetermined"}
+2	28652	Rod	high	False		Rod	named	Rod	named	Rod	Rod	match	match	match	match	match	match	False	{"A": "coarse:Rod", "B": "Rod", "C": "undetermined"}	{"A": "coarse:Rod", "B": "Rod", "C": "undetermined"}
+3	23374	Rod	high	False		NO_CONSENSUS	abstain3	NO_CONSENSUS	single_vote	Rod	Rod	na	na	na	na	match	match	False	{"A": "undetermined", "B": "undetermined", "C": "undetermined"}	{"A": "undetermined", "B": "coarse:Rod", "C": "undetermined"}
+4	21163	Rod	high	True	E-c Rod质量轴(点名)	NO_CONSENSUS	abstain3	NO_CONSENSUS	abstain3	Rod	Rod	na	na	na	na	match	match	False	{"A": "undetermined", "B": "undetermined", "C": "undetermined"}	{"A": "undetermined", "B": "undetermined", "C": "undetermined"}
+5	18636	MG	high	False		MG	named	MG	named	MG	MG	match	match	match	match	match	match	False	{"A": "coarse:MG", "B": "MG(Müller)", "C": "coarse:MG"}	{"A": "MG", "B": "MG(Müller)", "C": "coarse:MG"}
+6	15731	Rod	high	True	E-c Rod质量轴	Rod	named	Rod	named	Rod	Rod	match	match	match	match	match	match	False	{"A": "coarse:Rod", "B": "coarse:Rod", "C": "undetermined"}	{"A": "coarse:Rod", "B": "Rod", "C": "undetermined"}
+7	11288	MG	provisional	True	E-a provisional骑墙(MG/Astro未决)	MG	named	MG	named	MG	MG	match	match	match	match	match	match	False	{"A": "coarse:MG", "B": "MG(Müller)", "C": "coarse:MG"}	{"A": "MG", "B": "MG(Müller)", "C": "coarse:MG"}
+8	11120	Rod	high	True	E-c Rod质量轴	Rod	named	Rod	named	Rod	Rod	match	match	match	match	match	match	False	{"A": "Rod", "B": "Rod", "C": "Rod"}	{"A": "Rod", "B": "Rod", "C": "Rod"}
+9	8808	BC	high	False		BC	named	BC	named	BC	BC	match	match	match	match	match	match	False	{"A": "BC", "B": "BC", "C": "BC"}	{"A": "BC", "B": "BC", "C": "coarse:BC"}
+10	8170	Micro	high	False		Micro	named	Micro	named	Micro	Micro	match	match	match	match	match	match	False	{"A": "Micro", "B": "Micro(小胶质)", "C": "Micro"}	{"A": "Micro", "B": "Micro(小胶质)", "C": "Micro"}
+11	7005	Rod	high	True	E-c Rod质量轴	MG	named	MG	named	Rod	Rod	mismatch	mismatch	mismatch	mismatch	match	match	False	{"A": "coarse:MG", "B": "MG(Müller)", "C": "coarse:MG"}	{"A": "coarse:MG", "B": "coarse:MG(Müller)", "C": "coarse:MG"}
+12	6896	Cone	high	False		Cone	named	Cone	named	Cone	Cone	match	match	match	match	match	match	False	{"A": "Cone", "B": "Cone", "C": "Cone"}	{"A": "Cone", "B": "Cone", "C": "Cone"}
+13	5787	Rod	high	False		NO_CONSENSUS	single_vote	NO_CONSENSUS	abstain3	Rod	Rod	na	na	na	na	match	match	False	{"A": "undetermined", "B": "coarse:Rod", "C": "undetermined"}	{"A": "undetermined", "B": "undetermined", "C": "undetermined"}
+14	3544	MG	high	False		NO_CONSENSUS	single_vote	NO_CONSENSUS	single_vote	MG	MG	na	na	na	na	match	match	False	{"A": "undetermined", "B": "coarse:RGC", "C": "undetermined"}	{"A": "undetermined", "B": "coarse:RGC", "C": "undetermined"}
+15	3474	AC	high	False		NO_CONSENSUS	abstain3	RGC	named	AC	AC	na	mismatch	na	mismatch	match	match	True	{"A": "undetermined", "B": "undetermined", "C": "undetermined"}	{"A": "coarse:RGC", "B": "coarse:RGC", "C": "RGC"}
+16	3028	HC	high	False		HC	named	HC	named	HC	HC	match	match	match	match	match	match	False	{"A": "HC", "B": "HC", "C": "HC"}	{"A": "HC", "B": "HC", "C": "HC"}
+17	2861	BC	high	False		BC	named	BC	named	BC	BC	match	match	match	match	match	match	False	{"A": "BC", "B": "BC", "C": "BC"}	{"A": "BC", "B": "BC", "C": "BC"}
+18	2561	BC	high	False		BC	named	BC	named	BC	BC	match	match	match	match	match	match	False	{"A": "BC", "B": "BC", "C": "BC"}	{"A": "BC", "B": "BC", "C": "BC"}
+19	2475	BC	high	False		BC	named	BC	named	BC	BC	match	match	match	match	match	match	False	{"A": "coarse:BC", "B": "BC", "C": "BC"}	{"A": "coarse:BC", "B": "BC", "C": "BC"}
+20	1957	BC	high	False		BC	named	BC	named	BC	BC	match	match	match	match	match	match	False	{"A": "BC", "B": "coarse:BC", "C": "BC"}	{"A": "BC", "B": "BC", "C": "BC"}
+21	1685	BC	high	False		BC	named	BC	named	BC	BC	match	match	match	match	match	match	False	{"A": "BC", "B": "coarse:BC", "C": "BC"}	{"A": "BC", "B": "BC", "C": "BC"}
+22	1554	BC	high	False		BC	named	BC	named	BC	BC	match	match	match	match	match	match	False	{"A": "BC", "B": "coarse:BC", "C": "BC"}	{"A": "BC", "B": "BC", "C": "BC"}
+23	1266	Astro	high	False		MG	named	MG	named	Astro	Astro	lineage_only	lineage_only	match	match	match	match	False	{"A": "coarse:MG", "B": "MG(Müller)", "C": "undetermined"}	{"A": "MG", "B": "coarse:MG", "C": "undetermined"}
+24	1257	BC	high	False		BC	named	BC	named	BC	BC	match	match	match	match	match	match	False	{"A": "BC", "B": "undetermined", "C": "BC"}	{"A": "coarse:BC", "B": "undetermined", "C": "BC"}
+25	1187	RGC	high	False		RGC	named	RGC	named	RGC	RGC	match	match	match	match	match	match	False	{"A": "RGC", "B": "RGC", "C": "RGC"}	{"A": "RGC", "B": "RGC", "C": "RGC"}
+26	1130	Micro	high	False		NO_CONSENSUS	single_vote	NO_CONSENSUS	single_vote	Micro	Micro	na	na	na	na	match	match	False	{"A": "Micro", "B": "undetermined", "C": "undetermined"}	{"A": "Micro", "B": "undetermined", "C": "undetermined"}
+27	1002	BC	high	False		BC	named	BC	named	BC	BC	match	match	match	match	match	match	False	{"A": "BC", "B": "BC", "C": "coarse:BC"}	{"A": "BC", "B": "BC", "C": "BC"}
+28	991	BC	high	False		BC	named	BC	named	BC	BC	match	match	match	match	match	match	False	{"A": "coarse:BC", "B": "BC", "C": "coarse:BC"}	{"A": "coarse:BC", "B": "BC", "C": "BC"}
+29	868	Rod	high	False		Rod	named	Rod	named	Rod	Rod	match	match	match	match	match	match	False	{"A": "Rod", "B": "Rod", "C": "Rod"}	{"A": "Rod", "B": "Rod", "C": "Rod"}
+30	565	dissent	dissent	False		AC	named	AC	named	AC	AC	na	na	na	na	mismatch	na	False	{"A": "AC", "B": "AC", "C": "AC"}	{"A": "AC", "B": "AC", "C": "AC"}
+31	530	Endo	marker-only	True	E-b Endo参考缺类伪影	Endo	named	Endo	named	Micro	Micro	match	match	match	match	mismatch	mismatch	False	{"A": "coarse:Endo", "B": "Endo", "C": "undetermined"}	{"A": "coarse:Endo", "B": "Endo", "C": "undetermined"}
