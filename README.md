@@ -7,7 +7,7 @@
 
 当你分析眼球单细胞数据、面对一个尚未命名的细胞群时，可以用它回答三个问题：这个群最可能是什么细胞？依据哪些标志基因？支撑判断的文献是哪几篇？
 
-服务当前版本 `0.6`。由眼科研究组维护，用于课题组及合作者的单细胞注释质量控制。
+服务当前版本 `KB1v2-0.7-k9act`。由眼科研究组维护，用于课题组及合作者的单细胞注释质量控制。
 
 **定位边界**：本系统是研究辅助工具，不是临床诊断工具，也不是黑盒分类器。每一条检索结果都带 PubMed 文献号，可逐条核查；所有注释结论须经研究者确认（human-in-the-loop）后方为有效。
 
@@ -225,7 +225,7 @@ figures/             上文两张示例图
 ```
 EyeKB / SZ_OPHT_KB: an evidence-backed cell-type knowledge base and
 literature retrieval service for ocular single-cell annotation.
-GitHub repository, version 0.6 (2026). RAG corpus snapshot v2.4.2 (2026-09).
+GitHub repository, version 0.7 (2026). RAG corpus snapshot v2.4.2 (2026-09).
 ```
 
 同时请引用你实际消费到的具体词条所附的原始文献（每条返回都带 PMID）。

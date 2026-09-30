@@ -1,0 +1,77 @@
+# =====================================================================
+# EyeKB house style v1.0  (ARCH-GOV t_9b244bd7, 2026-09-30)
+# ---------------------------------------------------------------------
+# 用法（两种任选）:
+#   1) Python:  import matplotlib.pyplot as plt
+#               plt.style.use("<repo>/scripts/eyekb_house.mplstyle")
+#   2) 命令行:  matplotlib 脚本前先 mplrc（或拷贝本文件路径给 style.use）
+# 约定（出图验收线）:
+#   - 屏显图 savefig 至少 150 dpi（本主题默认出图 300 dpi，屏显 png 由
+#     渲染端降采样时不得低于 150 dpi）；
+#   - 每张结果图的标注区必须含两行：①样本量/单元数 ②数据口径
+#     （数据集 accession / 库版本 / 服务版本），缺一不得对外；
+#   - 中文标注依赖 Noto Sans CJK；无该字体的机器会回退 DejaVu（中文变方框），
+#     发布前必须在装字体的机器上重渲染确认；
+#   - 配色避开 matplotlib 高饱和默认色，使用低饱和学术八色序列；
+#     语义惯例：第1色=主体/对照，第2色=疾病/处理，第3色=谱系或次要分组，
+#     第4色=警示旗标，末位灰=背景/不显著。
+# 权威位置: 本文件（仓 scripts/）；生产盘 plans 与 WIKI 只引用路径，
+#   不复制内容（改色改字号一律改本文件）。
+# =====================================================================
+
+# ---- 分辨率与导出 ----
+figure.dpi: 150
+savefig.dpi: 300
+savefig.bbox: tight
+savefig.pad_inches: 0.06
+figure.facecolor: white
+axes.facecolor: white
+savefig.facecolor: white
+
+# ---- 字体 ----
+text.usetex: False
+font.family: sans-serif
+font.sans-serif: Noto Sans CJK SC, Noto Sans CJK JP, Noto Sans CJK TC, DejaVu Sans, Arial
+axes.unicode_minus: False
+
+font.size: 9.0
+axes.titlesize: 11.0
+axes.titleweight: bold
+axes.labelsize: 9.5
+xtick.labelsize: 8.0
+ytick.labelsize: 8.0
+legend.fontsize: 8.0
+figure.titlesize: 12.5
+figure.titleweight: bold
+
+# ---- 配色序列（低饱和八色）----
+axes.prop_cycle: cycler('color', ['2E5E7E', 'C77B3F', '4F7942', '9E3B3B', '5B5F97', '4FA3A5', '7A6A53', '8C8C8C'])
+
+# ---- 坐标轴与网格 ----
+axes.spines.top: False
+axes.spines.right: False
+axes.linewidth: 0.8
+axes.grid: True
+axes.axisbelow: True
+grid.color: D9D9D9
+grid.linewidth: 0.6
+grid.alpha: 0.7
+
+# ---- 刻度 ----
+xtick.direction: out
+ytick.direction: out
+xtick.major.size: 3.0
+ytick.major.size: 3.0
+xtick.major.width: 0.8
+ytick.major.width: 0.8
+
+# ---- 图例 / line / marker ----
+legend.frameon: False
+legend.loc: best
+lines.linewidth: 1.4
+lines.markersize: 4.5
+patch.linewidth: 0.6
+patch.force_edgecolor: True
+
+# ---- 色边 ----
+patch.edgecolor: 555555
