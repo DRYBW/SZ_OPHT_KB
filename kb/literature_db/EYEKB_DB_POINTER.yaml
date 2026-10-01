@@ -3,7 +3,7 @@
 rag_dbs:
   v2.0_2026-09:
     path: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09
-    role: default   # EyeKB MCP search_literature 默认库
+    role: v2.0-legacy (frozen read-only; 2026-10-01 前为 search_literature 默认库，现移交 v2.4.2——PI 有条件批准"新版更好就换"，证据链见 plans/rag_fix3_20260928/ 三门记录与本文件 v2.4.2 块)
     chunks: 174616
     unique_papers: 2713
     manifest: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09/manifest.yaml
@@ -62,7 +62,7 @@ embedding_model:
     # MCP/stage3 default 未切 (v2.0 不变, 沿先例待用户拍板; 回归门经 --db-dir 显式指向 v2.4.1 实测)
   v2.4.2_2026-09:
     path: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09
-    role: latest-ragfix3 (frozen read-only; = v2.4.1 全量继承零重算 + ragfix3_backup104_scan 103 篇 11,221 chunks; 卡 t_b94d0999, PI 整链授权=USER_DIRECTIVE_20260928 追加五)
+    role: default   # EyeKB MCP search_literature 默认库 (2026-10-01 自 v2.0 切换; 历史角色 latest-ragfix3; = v2.4.1 全量继承零重算 + ragfix3_backup104_scan 103 篇 11,221 chunks; 卡 t_b94d0999; 切换依据=门①黄金41/41+门②8/10用例级10/10门级+门③87/92=94.6% 全PASS且单调性零倒退; 与 G2/G3 复现语料同库=内外机默认态同质)
     chunks: 242928
     unique_papers: 3869   # papers.jsonl 行数 = 3884 (含历史 0-chunk ghost 15)
     manifest: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/manifest.yaml
