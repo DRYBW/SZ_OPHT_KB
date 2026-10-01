@@ -131,7 +131,9 @@ python pipeline/run_pipeline.py --input data.h5ad --out results/run4            
 
 ## 5 分钟跑通
 
-需要 Python ≥ 3.11，普通 CPU 机器即可（不需要 GPU），约 4 GB 磁盘存放数据。
+需要 Python ≥ 3.11，普通 CPU 机器即可（不需要 GPU），建议预留 ≥4 GB 磁盘。
+
+**下载量透明清单**：必选=文献语料 slim 件约 **398 MB**（2 卷，拼接后解包约 0.45 GB）；可选=嵌入权重约 **671 MB**（单文件或 4 分卷同内容）。**不下载权重也能跑**——检索自动降级为纯词法模式，41 项自检同样全过（实测逐位），返回结果里 `mode` 字段会明标 `lexical_fallback`，复杂语义查询精度低于向量模式。
 
 ```bash
 # 1) 克隆 + 装依赖
