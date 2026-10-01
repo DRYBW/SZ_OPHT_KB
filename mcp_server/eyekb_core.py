@@ -28,7 +28,7 @@ import softflags as _sf  # noqa: E402
 
 # OcularKB 侧只读常量 (P1 引用现路径; P2 物理迁移后改指 EyeKB 本地)
 OCULARKB_RAG = Path("/mnt/D/OcularKB/ocularkb/rag")
-DEFAULT_DB_DIR = OCULARKB_RAG / "literature_db" / "v2.0_2026-09"
+DEFAULT_DB_DIR = OCULARKB_RAG / "literature_db" / "v2.4.2_2026-09"  # 2026-10-01 审计修正：最后回退档与默认库对齐（旧值 v2.0 为切库前遗留）
 
 # 导入复制品检索内核 (verbatim copy of ocularkb/rag/scripts/stage3_retrieve.py)
 sys.path.insert(0, str(CLIENTS / "ocularkb" / "rag" / "scripts"))
