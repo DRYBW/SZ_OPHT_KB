@@ -29,6 +29,42 @@ python tests/verify_repro.py --db-dir literature_db/v2.4.2_2026-09_slim
 ```
 python tests/verify_pipeline.py
 ```
+
+### G4.1 解释器 = 契约的一部分（KB10d，2026-10-01 立）
+
+**本门驱动管线所用的解释器钉在 `pipeline_env`，不继承调用方 `sys.executable`**——这是 G4 判据
+成立的前提，不是可选项。旧版靠继承解释器：同一命令在 terminal / systemd-run scope / 另一 venv
+里起手会落到不同的库栈上，同代码同 fixture 产出不同字节 ⇒ 跨环境必假 FAIL。
+
+| 项 | 值 |
+|---|---|
+| 钉的解释器（生成锚的那个） | `/home/ubuntu/.conda/envs/pipeline_env/bin/python` |
+| 覆盖口（唯一回退） | `EYEKB_G4_PY=<python 路径>`；非默认解释器会打印 `[g4] 注意:` 提示 |
+| 钉的解释器缺失/不可执行 | `rc=2` + `ENV ERROR`（含修法），**不静默回退到当前解释器** |
+| 门脚本自身 | 仅用标准库，可由任意 `python3`（3.10+）启动 |
+| 每次运行 | 打印 `[g4] 解释器: <路径> (python X.Y, 来源: …)`，作为差异报告的必要附件 |
+
+对解释器敏感的原因：`stage_a/processed.h5ad` 的字节取决于 anndata/numpy/scipy/sklearn 的
+float32 写入路径。实测三栈三值（`obs`/`leiden`/counts 层全同，差异集中在
+`X_pca`/`X_umap`/`var`/`dispersions` 的末位）：
+
+| 解释器栈 | python / scanpy / anndata / numpy / scipy / sklearn | `stage_a/processed.h5ad` sha256 |
+|---|---|---|
+| **pipeline_env（=锚所在）** | 3.10.20 / 1.11.5 / 0.11.4 / 2.2.6 / 1.15.3 / 1.7.2 | `dbc657fa…` ✅ 锚 |
+| training-venv | 3.14.4 / 1.12.2 / 0.12.19 / 2.4.6 / 1.16.3 / 1.9.0 | `f7a461f9…` |
+| 离线 venv / scrnaseq | 3.14.4–3.12 / 1.12.2–1.12.1 / 0.13.2 / 2.4.6 / 1.16.3 / 1.9.0 | `10cfbe…` |
+
+⇒ 外机两条路：①装等价批注栈后 `EYEKB_G4_PY=/path/to/python` 指过去（**非默认解释器的差异，
+除非同时命中锚，否则不算新发现**）；②提交差异报告时**必须**附门打印的 `[g4] 解释器:` 行——
+缺该行的差异报告无法判读：维护者无法区分"栈不对"与"真发现"。
+
+G4 FAIL 排查顺序（与 §4 同纪律：先查环境，禁改判据凑数）：
+1. 看 `[g4] 解释器:` 行 = 不是 `pipeline_env` → **环境问题，不是判据问题**，按 G4.1 修环境重跑；
+2. fixture sha 未命中 → 仓库内容漂移（对照 `G4_EXPECTED.json:fixture_sha256`）；
+3. `ENV ERROR: run_pipeline rc≠0` → 批注栈依赖缺失，按本文件顶部补装；
+4. 上面三条都干净仍 FAIL = 真发现：带三件 `got/expected` **+ 解释器行**回报维护者，
+   不要自行重锚 expected、不要改 `--seed`、不要换 fixture。
+
 判据 = `tests/G4_EXPECTED.json` 三件锚：`stage_a/processed.h5ad` 与 `decisions_template.csv` 原始字节锚；`annotation_evidence_report.md` 先做时间戳/输出路径归一化再取 sha（报告含运行时刻，原始字节锚不可能是稳定判据——此为设计教训，v1 版锚含报告原始字节，作废）。输入 fixture = 公开 GEO 系列（GSE165784）矩阵抽样的 600 细胞子集（`pipeline/fixtures/`，无患者字段，来源注记见其 README）。
 
 锚点出身：2026-10-01 三跑一致（生产 fp32 默认库 ×2、Release slim 库 ×1，逐字节/归一化两级全等后落档）。S0 门所需资产 `pipeline/assets/s0/species_assets.pkl` 已随仓分发（外机实测发现缺失后补入；可由 `assets/s0/build_assets.py` 从公开的 NCBI orthologs/gene_info 重建）。

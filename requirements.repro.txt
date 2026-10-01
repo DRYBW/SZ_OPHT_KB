@@ -2,6 +2,20 @@
 # 用途：任何电脑 clone 后按本文件安装，行为与本仓 expected 锚点同分布。
 # 推理仅 CPU 即可；GPU 机器装 cpu wheel 亦可运行（结果一致性只锁 CPU 路径）。
 # 装法：pip install -r requirements.repro.txt --extra-index-url https://download.pytorch.org/whl/cpu
+# --- 附注 KB10d（2026-10-01）：本文件锁的是**检索层**（G1/G3），不是批注管线栈（G4）---
+# 只读对账（pipeline_env 实测；**未改任何锁值、未升级任何包**）：9 行锁中 2 行合
+# （torch 2.13.0、pandas 2.3.3），7 行不合：
+#   sentence-transformers 6.0.0→5.7.0 / transformers 5.13.1→5.15.0 /
+#   huggingface-hub 1.23.0→1.27.0 / numpy 2.4.6→2.2.6 / pyarrow 25.0.0→25.0.1 /
+#   scipy 1.16.3→1.15.3 / mcp 2.0.0→2.2.0
+# 属既定分层：pipeline_env 是 embedding/批注环境，不按本锁装（两套口径并存，按层各论）。
+# G4 判据依赖的批注栈 —— scanpy 1.11.5 / anndata 0.11.4 / h5py 3.16.0 / numba 0.66.0 /
+# llvmlite 0.48.0 / statsmodels 0.14.6 / igraph 1.0.0 / leidenalg 0.12.0 /
+# scikit-learn 1.7.2 / numpy 2.2.6 / scipy 1.15.3 —— **本文件未锁其中任一项**，
+# 故 G4 的同质性由「解释器钉 + 三件锚」承担，见 docs/VERIFY_CONTRACT.md §G4.1。
+# 另：G1 声明 Python 3.11+，pipeline_env 实测 3.10.20（G4 锚即在其上生成）。
+# 复算：KB10d 卡内只读探测脚本 r3_reconcile_requirements.py（零包变更）；
+
 sentence-transformers==6.0.0
 torch==2.13.0
 transformers==5.13.1
