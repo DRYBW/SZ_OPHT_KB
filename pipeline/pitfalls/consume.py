@@ -4,7 +4,7 @@
 
 消费语义（astra T4/T5/T6 定盘，取更严者；推翻 qwen 代审版 PITFALL_OVERRIDE）：
   - **shadow：只记旗标与复核要求，禁任何自动改标/降档/覆票**。
-    判读改判仍走原三席票与 S0 硬门。本模块不产生 suggested_grade_cap（该列已废止）。
+    判读改判仍走原三独立判读票与 S0 硬门。本模块不产生 suggested_grade_cap（该列已废止）。
   - 拉页：(species, tissue) → cells 页全量 + species/tissue/pattern 页被引指针解析
     → 合并本格适用 claim 集。
   - 可见性防火墙（T6）：answer_dependency≠none（=blind_safe=false）的条目，

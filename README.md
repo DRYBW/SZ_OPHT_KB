@@ -85,7 +85,7 @@ python pipeline/run_pipeline.py --input data.h5ad --out results/run4            
 物种矛盾、组织分差不足、域外、深度不足、疑似胎儿期材料等）。弃权时 pipeline **继续运行**
 （本批 Phase 1=shadow：S0 结论只是记录），输出 `REPORT_ABSTAIN.md`（人读记录件）与
 `s0_gate_report.json`（三证据全读数）——"分不开就报审，不硬标"是方法学原则，阻断式硬门
-留待 Phase 3（WIRE-2 另批验收）经 `EYEKB_S0_ENFORCE=1` 切换，届时判不过才停止执行。
+留待 Phase 3（后续验收阶段 另批验收）经 `EYEKB_S0_ENFORCE=1` 切换，届时判不过才停止执行。
 显式传 `--species/--tissue` 视为人工覆盖，在报告记 `s0_overridden_by_user` 留痕。环境变量
 `EYEKB_S0_GATE=0` 为整体回退开关（恢复纯人工参数旧行为，用于对照与应急）。
 判定通过后，对应（物种 × 组织）坐标的 known-claims 结构化条目（`pipeline/pitfalls/`，
@@ -107,6 +107,43 @@ python pipeline/run_pipeline.py --input data.h5ad --out results/run4            
   即得逐簇的复核提示旗标与该坐标的证据状态。**输出只提示复核方向，绝不改写、降级或更名任何已有标签，也不构成对标签正确性的判定**；
 - **证据纪律**：条目来源与核验状态逐条登记（题录已核 / 人工复审通过）。当前首批条目处于"题录已核、人工复审进行中"，旗标按线索对待——这一状态在工具输出中如实透出，不夸大证据链。
 
+### 机制细目（条目/旗标/五态阶梯）
+
+词典与基线回答"这群细胞像什么"；已知问题网回答另一类问题——**这类样本在判读时容易犯什么错**。它是按"物种 × 组织 × 制样条件"归位的注释踩坑记录库，随仓库分发、离线可用。
+
+**条目怎么组织**。每条坑拆成**原子 claim**：一条只讲一个坐标下的一个失效模式，带出处指针（内部观测的文件级指针，或 PubMed 文献号）与证据分级——`internal_observation`（自家实证观察）/ `peer_reviewed_literature`（同行评审文献）/ `community_lead`（社区线索，只能产生复核提示，不产生硬性结论）。归属坐标由受控词表统一：`pipeline/pitfalls/COORDINATE_TAXONOMY_v1.md`（状态 RATIFIED v1，2026-09-30 定案；物种轴 6 项——human/mouse 有证据在册，macaque/rat/rabbit/zebrafish 为预留位；组织轴 15 个规范面），映射不进词表的条目只登记、不注入。**当前在册 59 条**：36 条归"物种×组织"单格（6 个单格页）、1 条归物种页、22 条归跨坐标模式页（共 21 页，其中一页承载两条）；另有 9 条线索级记录登记为不入账（缺失效模式或缺量纲，不得当作 claim）。
+
+**怎么工作（shadow 语义——只举旗，不改判）**。批量入口的样本预门（S0，见上文《批量注释》）判定物种 × 组织坐标后，自动拉取该格、该物种、该组织与模式页中适用的 claim，把结果注入两处：证据报告头段的注意清单表，以及待裁决清单的两列 `pitfall_risk_flags`（旗标形如 `REVIEW:KC-B1-014(high)`，多条以分号分隔）与 `pitfall_review_required`（yes/no）。旗标**只提供复核方向，不执行任何自动改档、降档或改名**——每个 run 的机读审计件 `shadow_flags.jsonl` 中"自动具名/降级变化"恒为 0，这是监控项也是红线。条目自由文本（失效模式描述与对策）不进入预判读面，判读完成后才在人类面开放；结论依赖特定样本/数据集的条目（answer_dependency 非 none）同样判读后才开放。这是设计纪律而非缺陷：坑页文本若先于判读进入视野，会对研究者形成先验暗示、污染证据独立性。known-issues 文本永不并入 RAG 文献语料，两边物理隔离（`docs/PITFALLS_RAG_ISOLATION.md`）。
+
+**格子怎么长**。每个坐标格沿五态阶梯推进：`UNMAPPED`（不进词表，仅登记）→ `PLACEHOLDER`（预留物种/未定面，无知识）→ `LEAD_ONLY`（有线索，无可定位出处）→ `EVIDENCE_READY`（≥3 条不同失效模式、出处经机械核验）→ `WORKFLOW_READY`（人工审计完成）。升格必须经人工审计门，不由脚本自行推进。**覆盖现状如实**：90 格（6×15）已全数占位登记——**6 格建成**（human×{retina、trabecular_meshwork、cornea、fibrovascular_membrane、vitreous} 与 mouse×retina，均处 EVIDENCE_READY 暂定态、尚未过人工审计门）、**24 格未探**（human/mouse 其余组织面，UNEXPLORED）、**60 格占位**（四个预留物种×15 面，PLACEHOLDER）；**激活格数=0**——占位不等于激活，本层不随词表批复激活任何格。三态分布见下图：
+
+![已知问题覆盖矩阵：6 物种 × 15 组织面，90 格三态（蓝=证据就绪/绿=未探/橙=占位），激活=0](pipeline/pitfalls/matrix/matrix_coverage_90.png)
+
+维护入口：`pipeline/pitfalls/README.md`（条目契约、生成脚本 `build_claims.py` / `build_matrix.py` 与校验门 `--check` 的说明；`pages/` 与 `matrix/` 为机器产物，改动一律回脚本重生成）。
+
+# 4) 查某个（物种 × 组织）坐标适用的已知问题条目（只读仓库自带结构化条目，
+#    不需要文献语料、不需要模型——离线即可运行）
+python - <<'PY'
+import sys; sys.path.insert(0, "pipeline/pitfalls")
+import consume
+claims, dangling = consume.pull_claims("mouse", "retina")
+print(f"mouse×retina 适用 {len(claims)} 条，悬空指针 {len(dangling)}")
+for c in claims[:3]:
+    print(f"- {c['claim_id']} risk={c['risk_level']}")
+PY
+# 输出样例行（鼠 × 视网膜，节选前 3 条）：
+# mouse×retina 适用 26 条，悬空指针 0
+# - KC-B1-003 risk=high
+# - KC-B1-004 risk=medium
+# - KC-B1-007 risk=high
+批量注释入口（`pipeline/run_pipeline.py`）默认把线性代数后端钉为单线程（`OMP_NUM_THREADS` 等五个线程变量以 `setdefault` 方式置 1，用户显式设置仍可覆盖）：实测未钉线程时同一输入的重复运行聚类结果会随 BLAS 多线程数值抖动漂移，钉后逐字节一致。**做逐字节复现请保持该默认，勿改钉线程值**。
+
+pipeline/            批量注释入口（run_pipeline.py 等；阶段 A/B + 样本预门 S0）
+pipeline/pitfalls/   已知问题网：59 条原子 claim + 受控词表 + 90 格覆盖矩阵
+tests/               41 题复现基准与验收脚本（含内部用词扫描门）
+evals/               回归与事故记录（MCP 回归快照等）
+scripts/             维护脚本（house style 主题 mplstyle、对账工具等）
+
 **验证状态（2026-10-01 如实登记）**：对照能力当前为**线索生成器**（citation-linked flag generator）。其对真实标注错误的敏感度、在正确标签上的误报率，尚未在外部数据上完成盲法验证——验证方案已冻结立项（先盲法评审建立参考、天然正负样本齐备、与无清单工作流对照、预设指标与阈值），完成前本节不宣称"评价注释质量"。逐条出处的文献支持性人工复审（59 条）与之为并行前置。
 
 ## 知识库的组织结构
@@ -115,6 +152,7 @@ python pipeline/run_pipeline.py --input data.h5ad --out results/run4            
 |---|---|---|
 | **词典层** | `kb/`（markers / composition / priors） | 步骤 4–6 的对照基准。每条断言附 PMID；按物种、组织、发育阶段（胎儿/成人分列）管理 |
 | **文献层** | `literature_db/`（经 Releases 下载） | 步骤 7 的检索对象；同时是词典条目的出处——任何断言均可回溯到原文 |
+| **已知问题网** | `pipeline/pitfalls/` | "这类样本判读时容易犯什么错"的结构化条目库（59 条在册+90 格坐标账），以风险旗标进入复核面；离线可读，见《注释复核线索》一节 |
 | **操作规程层** | `docs/skills/` | 注释的标准作业程序（SOP）与验证规范：冻结评估集、双盲比对、弃权规则，约束步骤 4–9 的执行质量 |
 | **项目记录层** | `docs/wiki/`、`docs/VERSION_NOTES.md` | 项目状态、历史决定与逐版本变更记录——面向维护者，不进入单次分析流程 |
 | **批量入口层** | `pipeline/` | 步骤 1–7 的可执行入口（阶段 A 标准处理 + 阶段 B 逐簇证据采集），输出证据报告与待人工裁决清单；默认零 LLM |

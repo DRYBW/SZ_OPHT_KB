@@ -13,10 +13,10 @@ S0 样本预判（WIRE-P1，REV-1=astra 定盘：Phase-1 为 shadow mode）:
     报告记 s0_overridden_by_user 留痕）。
   - **shadow 语义：判不过（abstain）不阻断运行**——写 REPORT_ABSTAIN.md（人读记录件，
     非终止件）后继续执行（前提：物种/组织仍可从人工参数解析；均不可解析时按缺参退出）。
-    阻断式硬门=Phase 3（WIRE-2 另批验收后经 `EYEKB_S0_ENFORCE=1` 切换，本批默认不阻断）。
+    阻断式硬门=Phase 3（后续验收阶段后经 `EYEKB_S0_ENFORCE=1` 切换，本批默认不阻断）。
   - 已知问题消费同为 shadow：风险旗标+复核要求进 decisions 两列与报告头段
     （pipeline/pitfalls/，盲评安全条带短规则；非盲评安全条只出结构化旗标）；
-    **禁止任何自动改标/降档/覆票**——判读改判仍走原三席票与硬门。
+    **禁止任何自动改标/降档/覆票**——判读改判仍走原三独立判读票与硬门。
   - 整体回退：`EYEKB_S0_GATE=0` = 接线前旧行为（不跑 S0、不产旗标、
     --species/--tissue 必填），用于无网基线对比（astra T4.3）与应急。
 
@@ -130,8 +130,8 @@ def run_s0_gate(input_path, sample_col, species_arg, tissue_arg, out, thr_json=N
                  f"- 模式：shadow（本批默认）。" +
                  ("已按人工参数继续运行" if (species and tissue) else
                   "无法继续：物种/组织不可解析（缺参退出，非硬门阻断）"),
-                 "- 判读改判通道：三席票与既有硬门；本件不改任何标签。"
-                 "Phase 3（WIRE-2 另批验收）切换 EYEKB_S0_ENFORCE=1 后本弃权才阻断。",
+                 "- 判读改判通道：三独立判读票与既有硬门；本件不改任何标签。"
+                 "Phase 3（后续验收阶段）切换 EYEKB_S0_ENFORCE=1 后本弃权才阻断。",
                  "- 完整读数：`s0_gate_report.json`（同目录）。"]
         (out / "REPORT_ABSTAIN.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
         meta["abstain"] = True
