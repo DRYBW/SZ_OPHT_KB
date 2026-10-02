@@ -25,6 +25,12 @@ POINTER_YAML = KB / "literature_db" / "EYEKB_DB_POINTER.yaml"
 
 # 软复核提示层 (t_d6f2a0a0 / D4): 只在既有结果后附加注记, 不改任何候选/排序/打分
 import softflags as _sf  # noqa: E402
+# 查询改写层 (2026-10-03): 中文题→英文检索式, env EYEKB_CN_REWRITE 默认关;
+# off 态 rewrite_query 直通零触碰。缺文件/缺桥表=惰态零扰动, 外机照常运行。
+try:
+    import rewrite_cn as _rw  # noqa: E402
+except Exception:
+    _rw = None
 
 # OcularKB 侧只读常量 (P1 引用现路径; P2 物理迁移后改指 EyeKB 本地)
 OCULARKB_RAG = Path("/mnt/D/OcularKB/ocularkb/rag")
@@ -75,8 +81,12 @@ def search_literature(cell_type, species=None, tissue=None, top_k=5,
     species/tissue/cell_type 三维过滤透传 (Claude5 审核要求落地)。
     """
     db_dir = str(db) if db else _default_db_dir()
+    # 查询改写层接线点: 仅显式 query 且开关 on 时改写; off/空 query 零触碰。
+    query_used, rw_meta = (query, None)
+    if _rw is not None and query:
+        query_used, rw_meta = _rw.rewrite_query(query)
     res = _s3.retrieve(cell_type, species=species or None, top_k=int(top_k),
-                       query=query or None, tissue=tissue, db_dir=db_dir)
+                       query=query_used or None, tissue=tissue, db_dir=db_dir)
     # K3 additive 联表: 每条命中挂 inclusion_reason (入库原因归类), 不触碰检索语义
     try:
         rm = _reason_map()
@@ -86,6 +96,9 @@ def search_literature(cell_type, species=None, tissue=None, top_k=5,
                 hit.update(tag)
     except Exception:
         pass
+    if rw_meta is not None and isinstance(res, dict):
+        # 开关 on 态才存在的可审计披露键 (关闭态响应零新增键)
+        res["rewrite_meta"] = rw_meta
     return res
 
 

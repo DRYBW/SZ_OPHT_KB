@@ -37,7 +37,7 @@ from mcp.server import MCPServer  # noqa: E402
 app = MCPServer(
     name="eyekb",
     title="EyeKB 眼科知识库证据服务",
-    version="KB1v2-0.7-k9act",
+    version="KB1v2-0.8-cnrewrite",
     description=("眼科文献 RAG 检索 (v2.0 全眼库 174,616 chunks/2,713 papers, KB1v2 起带 "
                  "inclusion_reasons/claim_relation/evidence_context 三字段+复核状态) + VK 索引页 + "
                  "本地权威 marker 库 + 判读层: 眼科通用组成基线 (kb/baselines 供者级条件参考分布, "
@@ -84,6 +84,10 @@ def search_literature(cell_type: str, top_k: int = 5, species: str = "",
     可传空串但建议给出。species: human|mouse|"" (不过滤)。
     tissue: v2.0 多标签组织过滤 (retina/cornea/RPE/choroid/...)。
     query: 显式检索句; 留空则用 cell_type 模板句。db: 留空=v2.0_2026-09, 或给绝对路径。
+    中文检索句可经查询改写层翻成英文检索式再查 (2026-10-03):
+    开关 = 环境变量 EYEKB_CN_REWRITE ∈ {1,true,on,yes} 每次调用读取, 默认关闭;
+    关闭态服务行为与历史逐字节一致, 开启态响应附 rewrite_meta 披露键 (仅证据披露,
+    禁入任何打分/排序输入)。工具签名与 MCP schema 未变。
     """
     resp = core.search_literature(
         cell_type, species=species or None, tissue=tissue or None,
