@@ -1,190 +1,190 @@
 ---
 name: annotation-eval-ops
-description: 单细胞注释质量评估线（冻结评估集+证据面digest+双盲判读+一致率/kappa+分歧表+RUN报告回填）——EyeKB/OcularKB KB2 类工作流。触发词：评估集/双盲/盲注/判读员/一致率/kappa/分歧表/考卷冻结/证据面/RUN2/评测跑一轮。
+description: Single-cell annotation quality evaluation line (frozen evaluation set + evidence-surface digest + double-blind readings + agreement rate/kappa + disagreement table + RUN-report backfill) — EyeKB/OcularKB KB2-style workflows. Trigger terms: evaluation set/double-blind/blinded annotation/reader/agreement rate/kappa/disagreement table/exam freeze/evidence surface/RUN2/run an eval round.
 ---
 
-# 注释质量评估线（冻结考卷 → 双盲判读 → 一致率）
+# Annotation quality evaluation line (frozen exam → double-blind reading → agreement rate)
 
-适用：给"任何注释产出（引擎/判读层/人）"建立可验证的质量问题。核心原则（PI 铁律）：**考卷全用现成已注释标准数据集，先冻结再开考（防挑数据）；弃权是合法输出；评估章程阈值待校准，首轮只出分布不设及格线；PDR 等无真值数据只作挑战层不计对错**。
+Applies to: establishing verifiable quality questions for "any annotation output (engine/reading layer/human)". Core principles (the PI's iron rules): **the exam uses only off-the-shelf, already-annotated standard datasets; freeze first, then open the exam (prevents cherry-picking data); abstention is a legitimate output; the evaluation-charter thresholds are pending calibration — the first round reports only the distribution and sets no passing line; data without ground truth, such as PDR, serves only as a challenge layer and is not scored for right/wrong**.
 
-## 总流程（RUN 循环）
+## Overall process (the RUN loop)
 
-1. **冻结考卷**：分层成员表（真外部/held-out/域外/OOD/挑战层逐层声明）+ 冻结聚类（seed 写死）+ 冻结选簇（每成员 top-N 规模簇 + rng 抽样，规则成文落 `cluster_selection.json`）
-2. **构建证据面 digest**：从冻结数据给每簇产一张证据卡（top 基因/KB marker 命中/基线组成参考/qc），落 `EV_DIGEST_SLIM.jsonl` + sha256 入 manifest。**判读员只见证据面，禁见真值**
-3. **双盲判读**：两名判读员同一证据面独立出注释（schema：cluster_id/identity/level/grade/gates 三门/flag/why≤40字；identity 必须用成员词表原样词——保字符串可比对）
-4. **结构验收**（项目维护方执行，不看内容防泄盲）：行数/簇号集合与 digest 逐一对齐、schema 与枚举合法、why 长度
-5. **合并**：槽位 A/B 两份 JSONL 合并前验簇号集合一致
-6. **评分**：bscore 脚本出 per-member 簇准确率/弃权率/ident_agree/kappa（determinate 子集）+ 分歧表 TSV
-7. **回填 RUN 报告**：§4/§5 预留回填位，回填带日期、数字全部引 scoring 产物、槽位构成如实披露
-8. **分歧表上报 PI 裁决**：语义分诊先行（多数分歧=分辨率/保守度差，非生物学冲突；真冲突单列）
+1. **Freeze the exam**: tiered member table (declared tier by tier: truly external / held-out / out-of-domain / OOD / challenge layer) + frozen clustering (seed hard-coded) + frozen cluster selection (per member: top-N largest clusters + rng sampling; rules written into `cluster_selection.json`)
+2. **Build the evidence-surface digest**: from the frozen data, produce one evidence card per cluster (top genes / KB marker hits / baseline composition reference / qc), written to `EV_DIGEST_SLIM.jsonl` + sha256 recorded in the manifest. **Readers see only the evidence surface; they MUST NOT see the ground truth**
+3. **Double-blind reading**: two readers independently produce annotations from the same evidence surface (schema: cluster_id/identity/level/grade/gates three gates/flag/why ≤40 characters; identity MUST use as-is terms from the member lexicon — to keep strings comparable)
+4. **Structural acceptance** (performed by the project maintainer without reading content, to prevent blinding leaks): row count / cluster-ID set aligned one-to-one with the digest, schema and enums legal, why length
+5. **Merge**: verify the two slot A/B JSONL files have identical cluster-ID sets before merging
+6. **Scoring**: the bscore script outputs per-member cluster accuracy / abstention rate / ident_agree / kappa (determinate subset) + disagreement-table TSV
+7. **Backfill the RUN report**: §4/§5 carry reserved backfill slots; each backfill carries a date, all numbers cite the scoring artifacts, and the slot composition is disclosed as-is
+8. **Submit the disagreement table to the PI for adjudication**: semantic triage first (most disagreements = resolution/conservativeness gaps, not biological conflicts; true conflicts get a separate category)
 
-## 证据面构建三大坑（RUN1 实证）
+## Three major pitfalls in evidence-surface construction (RUN1-proven)
 
-- **int/str 簇号类型错配 = 静默空输出**：CSV 读回的 leiden 列是 int、obs astype(str) 后组均值字典键是 str，`c not in gm` 恒真静默返回空列表、无异常无日志。防御：①选簇/取值统一 `astype(str)`；②兜底分支必须 `log(WARN)`；③**产 digest 后必跑非空断言**（45/45 top_genes 非空才算交付）——执行脚本 对着 40/45 空证据拒绝判读并上报，是正确行为不是故障
-- **anndata 版本环境错配**：旧 env（0.11.4）读不了新版写的 h5ad（`IOSpec null` 于 /uns 等元素报 IORegistryError）。防御：跑前先探测"能读全部输入文件"的 env（逐 env `read_h5ad(backed='r')` 试读），**选写出该文件的产线同款 env**（本机 scrnaseq=0.13.2 可读全站）
-- **重跑不得改考卷**：修复重跑后必须验证冻结选簇逐成员不变（旧新 selection 集合比对 9/9 IDENTICAL），rng 调用序不变才保选簇不变
+- **int/str cluster-ID type mismatch = silent empty output**: the leiden column read back from CSV is int, while after obs astype(str) the group-mean dict keys are str, so `c not in gm` is always true and silently returns empty lists — no exception, no log. Defenses: ① unify cluster selection/value lookup with `astype(str)`; ② the fallback branch MUST include `log(WARN)`; ③ **after producing the digest, non-empty assertions MUST run** (delivery counts only when top_genes is non-empty 45/45) — the runner script refusing to read on 40/45 empty evidence and reporting it is correct behavior, not a malfunction
+- **anndata version/environment mismatch**: the old env (0.11.4) cannot read h5ad written by newer versions (`IOSpec null` at /uns and other elements raises IORegistryError). Defense: before running, probe for an env that "can read all input files" (trial-read env by env with `read_h5ad(backed='r')`), and **pick the same env as the production line that wrote the file** (on this machine scrnaseq=0.13.2 reads everything)
+- **Reruns must not alter the exam**: after a fixed rerun, the frozen cluster selection MUST be verified unchanged per member (old/new selection set comparison 9/9 IDENTICAL); only an unchanged rng call sequence guarantees an unchanged selection
 
-## 版本纪律（errata-source-fix）
+## Version discipline (errata-source-fix)
 
-缺陷件**保留不删**（`*_r1_defective.*` 后缀），修复件升版落 canonical 名；新旧 sha256 全部追加进 sha 日志（含修复内容/env/log 位置/验收结果四行注释）；判读产物 sha 落 manifest。禁止原地静默覆盖。
+Defective artifacts are **kept, never deleted** (`*_r1_defective.*` suffix); fixed artifacts are version-bumped onto the canonical name; old and new sha256 are all appended to the sha log (with the four-line comment: fix content / env / log location / acceptance result); reading-artifact shas are recorded in the manifest. Silent in-place overwrite is forbidden (MUST NOT).
 
-## 双盲判读纪律
+## Double-blind reading discipline
 
-- 注释证据报告（任务书）红线逐条：禁读 clustering（含逐细胞 truth 列）/defs/engine/scoring/RUN 报告/ERRATA 取证/**对方判读件**；禁外部检索（lit 口径属后续轮）
-- 判读员受污染（误读真值/看过取证）必须自曝并换干净卡重开——旧卡 reclaim+block 留痕，新任务 body 注明取代关系
-- 结构验收只查计数/schema/簇号集合，**项目维护方不读判读内容**（项目维护方已看过引擎结果，读了就是泄盲）
-- 证据面等价：两判读员对 ENSG 形式基因用**同一张中性公共映射表**解码（GENCODE 型，禁用项目内 marker 定义），声明留痕
+- Red lines of the annotation-evidence report (task brief), item by item: MUST NOT read clustering/ (contains per-cell truth columns), defs/, engine/, scoring/, RUN reports, ERRATA forensics, **the other reader's artifacts**; external retrieval forbidden (lit queries belong to later rounds)
+- A reader who was contaminated (misread ground truth / saw forensics material) MUST self-report and reopen the slot with a clean card — the old card is reclaimed+blocked with a trail, and the new task body states the supersession relationship
+- Structural acceptance checks only counts/schema/cluster-ID sets; **the project maintainer does not read the reading content** (the project maintainer has already seen the engine results — reading them would break the blinding)
+- Evidence-surface equivalence: both readers decode ENSG-form genes with **the same neutral public mapping table** (GENCODE style; project-internal marker definitions MUST NOT be used), declaration kept on record
 
-## PI-in-the-loop 判读模式（2026-09-24 用户实证，默认采用）
+## PI-in-the-loop reading mode (validated with the user 2026-09-24; adopted by default)
 
-PI 时间贵，全人工判不现实；纯 AI 互判缺临床锚。标准折中：
-1. **PI 只判最高临床价值批次**（如 PDR 膜 Q9，5 簇，MSG_PLATFORM 大白话回，项目维护方转录成 schema JSONL，原话存 verbatim 侧车件）
-2. **PI 的判读交外部 LLM 评审**（逐簇同意/异议+等级是否恰当+漏检身份），评审意见回 PI，**PI 一字裁定**（"降 C"）后落定
-3. **其余批次委托 LLM 判读员**（如LLM_CHANNEL qwen3.8-max），产出与 PI 簇合并成槽位 A
-4. 槽位构成必须如实披露（判读报告写明哪几簇是人、哪几簇是模型）；transcribe 不许改动 PI 语义
-5. 人类锚的价值实测：Q9 挑战层两个 AI 全塌缩成 coarse "Immune Cells"，PI 给出 SPP1⁺炎性巨噬/FOLR2⁺驻留/pDC 细分——人类分辨率优势就是评估的发现之一
+PI time is precious; fully manual reading is impractical; pure AI-vs-AI reading lacks a clinical anchor. The standard compromise:
+1. **The PI reads only the highest-clinical-value batch** (e.g., PDR membrane Q9, 5 clusters; answered in plain language via MSG_PLATFORM, transcribed by the project maintainer into schema JSONL, with the original wording kept in a as-is sidecar file)
+2. **The PI's reading is reviewed by an external LLM** (per-cluster agree/disagree + whether the grade is appropriate + missed identities); review comments go back to the PI, who issues a **one-word ruling** (e.g., "downgrade to C") to settle it
+3. **The remaining batches are delegated to an LLM reader** (e.g., LLM_CHANNEL qwen3.8-max); its output is merged with the PI's clusters into slot A
+4. Slot composition MUST be disclosed truthfully (the reading report states which clusters were human and which were model); transcription must not alter the PI's semantics
+5. Measured value of the human anchor: on the Q9 challenge layer both AIs collapsed to coarse "Immune Cells" while the PI gave the SPP1⁺ inflammatory macrophage / FOLR2⁺ resident / pDC subdivisions — the human resolution advantage is itself one of the evaluation's findings
 
-## 外部 LLM 判读员接入（LLM_CHANNEL qwen3.8-max 实证）
+## External LLM reader onboarding (validated on LLM_CHANNEL qwen3.8-max)
 
-- 通道发现：用户点名模型时扫 profile 配置反查（grep 各 profile config.yaml 的模型 ID → 找到 provider 段的 base_url+key；详见 multi-profile-provider-switch skill）
-- **hybrid reasoning 模型直调必加 `enable_thinking: false`**（兼容模式两种写法都探：`enable_thinking:false` / `thinking:{type:disabled}`）：默认开思考时 3K token 输出能把 540s 读超时烧穿；关掉后亚秒级
-- **按成员分包**（每包 5 簇）+ 每包重试≤3 + 断点续跑缓存（`.done.json` 记已完成的成员）——单大包 40 簇会整体超时归零；每包 prompt=冻结判读规则原文+证据卡+严格 JSONL 输出要求（禁解释性文字）
-- 输出解析容错：逐行 try json.loads，缺簇二轮补判；解析后跑同款结构验收
-- temperature 0.2；判读类任务关思考不损质量（有规则有证据的分类活）
+- Channel discovery: when the user names a model, scan the profile configs to back it out (grep model IDs across profile config.yaml files → find the base_url+key in the provider section; see the multi-profile-provider-switch skill)
+- **Direct calls to hybrid-reasoning models MUST add `enable_thinking: false`** (probe both spellings in compatible mode: `enable_thinking:false` / `thinking:{type:disabled}`): with thinking on by default, a 3K-token output can burn through a 540s read timeout; with it off, latency is sub-second
+- **Batch per member** (5 clusters per package) + ≤3 retries per package + resume cache (`.done.json` records completed members) — one big 40-cluster package times out as a whole and yields nothing; each package's prompt = as-is frozen reading rules + evidence cards + strict JSONL output requirements (explanatory text forbidden)
+- Output-parsing fault tolerance: line-by-line try json.loads; missing clusters get a second-round supplementary reading; after parsing, run the same structural acceptance
+- temperature 0.2; for reading tasks, disabling thinking costs no quality (it is a classification job with rules and evidence in hand)
 
-## 评分与分歧分诊
+## Scoring and disagreement triage
 
-- bscore 输出四件：object_B_table.tsv（逐簇）/ object_B_summary.json（per-member acc/abstain/ident_agree/kappa/gates 分布）/ disagreement_table.tsv / kappa（determinate 双方非弃权子集）
-- **json 序列化坑**：pandas value_counts 多列产出 tuple 键，直接 json.dump 会 TypeError 崩在半路（summary 截断+分歧表未落盘）——转 `{str(k): int(v)}`
-- 分歧语义分诊三分类：分辨率差（fine vs coarse，A⊂B 无冲突）/ 保守度差（一方弃权）/ 真冲突（互斥身份）；真冲突才需要 PI 逐行裁
-- 解读纪律：字符串一致率是下界（措辞不同≠生物学分歧）；E5 胎儿层看 correct-rejection 不是 acc；挑战层（无真值）只看等级/弃权行为
+- bscore outputs four artifacts: object_B_table.tsv (per cluster) / object_B_summary.json (per-member acc/abstain/ident_agree/kappa/gates distribution) / disagreement_table.tsv / kappa (the determinate subset where neither side abstained)
+- **JSON serialization pitfall**: pandas value_counts over multiple columns yields tuple keys; feeding them straight to json.dump crashes midway with a TypeError (truncated summary + disagreement table not persisted) — convert to `{str(k): int(v)}`
+- Semantic triage of disagreements into three classes: resolution gap (fine vs coarse, A⊂B, no conflict) / conservativeness gap (one side abstains) / true conflict (mutually exclusive identities); only true conflicts need line-by-line PI adjudication
+- Interpretation discipline: the string agreement rate is a lower bound (different wording ≠ biological divergence); for the E5 fetal layer look at correct-rejection, not acc; for the challenge layer (no ground truth) look only at grade/abstention behavior
 
-## RUN 报告回填与留痕
+## RUN report backfill and audit trail
 
-冻结报告的 §4/§5 预留回填位：回填块带日期、指向独立完成件（`EVAL_RUN<n>_OBJECT_B_COMPLETED_<日期>.md`）、写明执行链与原计划的差异点、槽位构成、全部产物 sha；历史文字保留不删。WIKI 当前状态.md 同步完成。旧卡 comment 留痕（位置参数形态）后维持 blocked。**同步纪律补注（09-25 实测）**：当前状态.md 常滞后数天，追加式时间线以 WIKI/INDEX.md 为事件前沿源；向 PI 汇总"待决定"清单时装配/大白话格式走 scientific-result-reporting 核心方法 13（含 USER_DIRECTIVE 排除已拍项一步——本线 Q2 主口径"待PI"实测已被 directive 提前拍掉）。
+The frozen report's §4/§5 carry reserved backfill slots: each backfill block carries a date, points to the standalone completion file (`EVAL_RUN<n>_OBJECT_B_COMPLETED_<date>.md`), states the deviations of the executed chain from the original plan, the slot composition, and the shas of all artifacts; historical text is kept, never deleted. WIKI CURRENT_STATUS.md is updated in sync. Comments on the old card keep the trail (positional-argument form) and the card stays blocked. **Sync-discipline addendum (measured 09-25)**: CURRENT_STATUS.md often lags by days; for the append-only timeline treat WIKI/INDEX.md as the front source of events; when assembling the "pending decisions" list for the PI, use the assembly/plain-language format of scientific-result-reporting core method 13 (including the USER_DIRECTIVE step that excludes already-decided items — this line's Q2 headline "awaiting PI" was in fact already decided earlier by a directive).
 
-## RUN 轮间升级与对比（RUN2 实证 2026-09-24）
+## Cross-round upgrades and comparison (RUN2, validated 2026-09-24)
 
-- **证据面升级必须预注册**：RUN1 冻结注释里写明"lit 全 top-3 留二轮"——RUN2 的每个升级点都能引用 RUN1 留痕，非结果驱动
-- **MCP 采集器喂词库前先解码**：ENSG 形式 top_genes 直接喂 symbol 键 marker 库=查询全空（kb_rank/lit 16/45→中性解码后 31/45）；判读员证据卡用的中性解码同样必须前置于一切下游查询
-- **评分器按轮参数化**：bscore v3=argv 传 A/B 路径 + 输出 run2_ 前缀——新 RUN 严禁覆盖上一轮 scoring 产物（v2 硬编码路径差点覆盖 RUN1 三件）
-- **基因 ID 双列 schema（PI 2026-09-24 原话指令"加一列对应的gene"，RUN2 后生效）**：证据面构建**禁止原地替换 ENSG**——`top_genes` 保留原 ID 不动，新增 `top_genes_sym` 旁列按位放对应 symbol（1:1，映射不上留空串），marker/lit 查询用 sym（空则回退原 ID），注释证据报告渲染 `SYMBOL(ENSGxxx)` 两列都带。采集器/组装器以 `KB2_FACE_TAG` 环境变量版本化输出（默认 v3），已冻结面永不被后续构建覆盖。实例落地：`scripts/kb2_mcp_v2.py` v2.2（docstring 含 schema_note）
-- **轮间对比三件**：双盲一致率/kappa（RUN1 30/45、0.568 → RUN2 28/45、0.539）、各判读员自稳定性（身份不变 A 位 30/40、B 位 27/45）、真值命中（A 26→22、B 24→20 每 30）
-- **诚实解读：证据面升级≠判读变好**。文献面使双方更保守（更多 coarse/弃权），exact-match 记错但谱系方向多没错——先区分"对冲"与"认错"再下结论；同时看分层收益（Q9 疾病层 B2 从全塌 "Immune Cells" 变 Mac_DAM_LAM/APC_MHCII/pDC 细分=真改善）
-- **评估即 KB 缺口探测器**：Q6 词表无 Keratocytes 条目→两轮两名 AI 把 ALDH3A1+KERA（keratocyte 经典标记）簇系统性误标"Corneal Endothelium"——评估轮产出可直接转化为 marker 库/词表补录卡
-- 工具坑：/mnt/D 共享挂载上 `sed -i` 报"保留权限不允许的操作"——改文件一律用 patch 工具（实测可用）
+- **Evidence-surface upgrades MUST be preregistered**: the RUN1 frozen notes state explicitly "all lit top-3 reserved for round two" — every RUN2 upgrade point can cite the RUN1 trail, so the upgrade is not result-driven
+- **Decode before feeding the MCP collector to the marker library**: ENSG-form top_genes fed directly into a symbol-keyed marker library = all queries empty (kb_rank/lit 16/45 → 31/45 after neutral decoding); the same neutral decoding used for readers' evidence cards MUST precede all downstream queries
+- **Parameterize the scorer per round**: bscore v3 = A/B paths via argv + `run2_` output prefix — a new RUN MUST NOT overwrite the previous round's scoring artifacts (v2's hard-coded paths nearly overwrote the three RUN1 artifacts)
+- **Gene-ID dual-column schema (PI as-is instruction 2026-09-24 "add a column with the corresponding gene"; in effect after RUN2)**: evidence-surface construction **MUST NOT replace ENSG in place** — `top_genes` keeps the original IDs untouched, and a new side column `top_genes_sym` holds the corresponding symbols by position (1:1; unmapped slots stay empty strings); marker/lit queries use sym (fall back to the original ID when empty); the annotation-evidence report renders `SYMBOL(ENSGxxx)` carrying both columns. Collectors/assemblers version their output via the `KB2_FACE_TAG` environment variable (default v3); frozen surfaces are never overwritten by later builds. Landed as: `scripts/kb2_mcp_v2.py` v2.2 (docstring includes the schema_note)
+- **Three cross-round comparisons**: double-blind agreement rate/kappa (RUN1 30/45, 0.568 → RUN2 28/45, 0.539), each reader's self-stability (identity unchanged: A seat 30/40, B seat 27/45), ground-truth hits (A 26→22, B 24→20 per 30)
+- **Honest reading: an evidence-surface upgrade ≠ better readings**. The literature surface made both sides more conservative (more coarse/abstentions); exact-match counted them wrong, but the lineage direction was mostly right — distinguish "hedging" from "misidentification" before concluding; also check per-layer gains (Q9 disease layer: B2 went from a full collapse to "Immune Cells" to the Mac_DAM_LAM/APC_MHCII/pDC subdivisions = genuine improvement)
+- **Evaluation is a KB-gap detector**: the Q6 lexicon had no Keratocytes entry → in both rounds both AIs systematically mislabeled the ALDH3A1+KERA cluster (classic keratocyte markers) as "Corneal Endothelium" — evaluation-round findings can be converted directly into marker-library/lexicon backfill cards
+- Tool pitfall: on the /mnt/D shared mount, `sed -i` errors with "Operation not permitted to preserve permissions" — file edits MUST always go through the patch tool (verified working)
 
-## RUN3-mini：KB 修复后的预注册迷你盲验证轮（2026-09-24，标准动作）
+## RUN3-mini: preregistered mini blind-verification round after a KB fix (2026-09-24; standard move)
 
-KB 词条/词表修复落地后，**不重跑全量评测**——只对受影响簇发迷你盲测轮：新证据面（face 升版 TAG）+ 两独立判读员（外部 LLM A + 干净卡 B）+ **判据先于判读写死**（写入 B 任务书：主判定=修复目标簇的身份；补充=该层一致率轨迹）。实例：keratocyte 补录后 Q6 五簇一轮——主判定 PASS（Q6::15 双判读员均 Fibroblasts[B]，RUN2 误判消失），Q6 层一致率 2/5→3/5→**5/5**；Q6::24 SMC vs Pericytes 相邻谱系真模糊如实挂账（非词条缺陷）。意义："评测发现缺口→补录→盲验证消除"闭环走通，修复效果不靠自我宣称。配方与实录：`references/kb2-run3mini-20260924.md`
+After a KB-entry/lexicon fix lands, **do not rerun the full evaluation** — instead run a mini blind-test round on only the affected clusters: new evidence surface (version-upgraded face TAG) + two independent readers (external LLM A + clean card B) + **criteria hard-coded before any reading** (written into the B task brief: primary verdict = the identity of the fixed target clusters; supplementary = the layer's agreement-rate trajectory). Instance: after the keratocyte backfill, one round over Q6's five clusters — primary verdict PASS (both readers gave Q6::15 Fibroblasts[B]; RUN2's misjudgment disappeared), Q6-layer agreement 2/5→3/5→**5/5**; Q6::24 SMC vs Pericytes — genuine adjacent-lineage ambiguity, recorded on the ledger as-is (not an entry defect). Significance: the closed loop "evaluation finds the gap → backfill → blind verification eliminates it" ran through, so fix efficacy is not self-declared. Recipe and record: `references/kb2-run3mini-20260924.md`
 
-## RUN3 全量轮设计（2026-09-24，PI"不用下了，用已有数据"决定）
+## RUN3 full-scale round design (2026-09-24; PI decision "no more downloads, use the existing data")
 
-- **扩考卷前先做本地普查，别急着提新数据集**：PI 对"RUN3 方向"的第一反应是"你考卷都考完了？"——抽样评测后先数冻结聚类的完整名册（九成员 305 簇、≥100 细胞 290 簇、已考仅 45）。**"用已有数据"是默认立场**，下载新数据集需要另行理由与报批
-- **名册+锚卷结构**：主卷=名册减已考（246 新簇）；**锚卷=已考簇在新证据面全部重发**（M5 配对分析=分解"证据面效应 vs 判读随机性"）；预注册件（RUN3_DESIGN_prereg.md）把五条判据（一致率/kappa/真值命中/弃权率/新词表缺口热点/锚卷翻转率）先于执行写死
-- **规模偏差要预注册声明，禁止无声换架构**：执行脚本 会话卡实测容量 ~45 行（RUN1/2 各 11 分钟交付 45 簇），290 簇超容量 → B 侧从干净会话卡改为**跨厂商独立模型 runner**（A=qwen 系、B=glm 系），偏差与独立性论证写进预注册件，判据不变
-- **判读员模型三选一只认实测**：候选冒烟判据=短请求 **content 非空**（Agents-A1 config 里 key 是脱敏占位不可用；deepseek-v4-pro 回 200 但 content='' reasoning 吃光——都淘汰；glm-5.1 实答正常=采用）。宁换模型不带疑上线
-- **通用双判读 runner**：`annotation/run_annotator_run3.py <model> <stem>` 参数化复用——同面同规则同温度，A/B 各独立进程+独立断点文件互不可见；固定 5 簇/批+每批重试≤3；空 content 自动回退读 reasoning_content；META 记 face sha 前 16 位（面中途变更可查）
-- **全量面成本参考**：290 簇 mean-diff digest ~8 分钟（9 个 h5ad 载入为大宗，串行防爆内存）、MCP 采集 ~1000 调用 ~10 分钟；先跑名册脚本（kb2_roster_v3full.py）再喂 digest；digest 里 n_cells 用 ncmap[c] 直取（roster 必有，勿写 len(c) 之类字符串长度兜底）
-- 实录：`references/kb2-run3-fullscale-20260924.md`
+- **Before expanding the exam, run a local census; don't rush to request new datasets**: the PI's first reaction to "RUN3 direction?" was "you've finished the whole exam already?" — after a sampled evaluation, first count the complete roster of the frozen clustering (nine members, 305 clusters; ≥100 cells: 290 clusters; only 45 ever tested). **"Use existing data" is the default stance**; downloading new datasets requires separate justification and approval
+- **Roster + anchor-set structure**: main volume = roster minus already-tested (246 new clusters); **anchor set = all previously tested clusters reissued on the new evidence surface** (M5 paired analysis = decomposing "evidence-surface effect vs reading randomness"); the preregistration file (RUN3_DESIGN_prereg.md) hard-codes the five criteria (agreement rate/kappa / ground-truth hits / abstention rate / new-lexicon-gap hotspots / anchor-set flip rate) before execution
+- **Scale deviations must be declared in the preregistration; the architecture MUST NOT be swapped silently**: the runner script's session card has a measured capacity of ~45 rows (RUN1/2 each delivered 45 clusters in 11 minutes); 290 clusters exceeds capacity → the B side switched from a clean session card to a **cross-vendor independent-model runner** (A=Qwen family, B=GLM family); the deviation and the independence argument go into the preregistration, and the criteria do not change
+- **Reader-model pick, judged only by measurement**: candidate smoke criterion = short request returns **non-empty content** (Agents-A1: the key in config is a redacted placeholder — unusable; deepseek-v4-pro: returns 200 but content='' — reasoning consumed all max_tokens — eliminated; glm-5.1 answered normally = adopted). Rather swap models than ship with doubts
+- **Generic dual-reader runner**: `annotation/run_annotator_run3.py <model> <stem>` parameterized for reuse — same surface, same rules, same temperature; A/B run as independent processes with independent breakpoint files, mutually invisible; fixed 5 clusters/batch + ≤3 retries per batch; empty content automatically falls back to reasoning_content; META records the first 16 chars of the face sha (mid-round surface changes remain auditable)
+- **Full-scale surface cost reference**: mean-diff digest for 290 clusters ~8 minutes (loading the 9 h5ad files dominates; run serially to keep memory in check), MCP collection ~1000 calls ~10 minutes; run the roster script first (kb2_roster_v3full.py), then feed the digest; in the digest take n_cells directly from ncmap[c] (always present in the roster — never write a len(c)-style string-length fallback)
+- Record: `references/kb2-run3-fullscale-20260924.md`
 
-## KB 词条/面板升级的评测面保护（2026-09-25 KB7→WIRE 卡对实证）
+## Protecting the evaluation surface while upgrading KB entries/panels (KB7→WIRE card pair, validated 2026-09-25)
 
-词典修复是评测系列的干扰源：RUN 轮间的对比前提是"证据面/词表面不变"，改词条中途落地会让在跑与后续轮失去可比性。标准拆两步（任务书互相引用）：
+Dictionary fixes are a disturbance source for evaluation series: cross-round comparison presupposes "evidence surface / lexicon surface unchanged"; landing an entry change mid-flight destroys comparability for the running and subsequent rounds. Standard split into two steps (the two task briefs cross-reference each other):
 
-- **发布卡**（KB7 型）= 版本化新文件落地（v6 JSON、旧面板字节不动、邻域火灾审计、append-only 覆盖层修 baseline 红词），**消费方零感知**——服务代码不动；
-- **接线卡**（WIRE 型）= 服务登记可选路由但**默认不激活**（现役输出机读自证零变化，如 off 态 18/18 规范序列化全等），激活切换等评测系列（RUN6 型）全部完成后统一批——"未做激活切换"写进红线自证。
-- 两卡各自回归三件套（GOLDEN41/KB2C/自检球门不降）；改服务代码与改 kb/ 文件的卡领地互斥（并行派时任务书点名禁写对方目录）。
-- 新数据入库→词条建设的衔接卡（KB8 型）沿用"评测即缺口探测器"闭环：registry 登记与健康/体外两池分开记账（类器官不作体内基线）、挂起项照实登记不硬凑（GB 级被裁不批的腺体 scRNA 写"挂起态"）。
+- **Release card** (KB7 type) = land a versioned new file (v6 JSON; old panels byte-untouched; neighborhood-fire audit; an append-only overlay fixes baseline red-flagged entries), with **zero awareness on the consumer side** — service code untouched;
+- **Wiring card** (WIRE type) = the service registers an optional route but **does not activate it by default** (the live output self-proves zero change in machine-readable form, e.g., 18/18 canonical serializations identical in the OFF state); the activation switch is batched for approval only after the whole evaluation series (RUN6 type) completes — "no activation switch performed" is written into the red-line self-proof.
+- Each card carries its own regression trio (GOLDEN41/KB2C/self-check goalposts not lowered); the card territories "service code" and "kb/ files" are mutually exclusive (when dispatching in parallel, the task brief explicitly forbids writing to the other's directory).
+- The handoff card (KB8 type) from new-data intake to entry building follows the "evaluation is the gap detector" closed loop: registry registration and the healthy/in-vitro pools are kept on separate ledgers (organoids are never used as an in vivo baseline); pending items are registered as-is without force-fitting (the GB-scale gland scRNA rejected by adjudication is written up as "pending state").
 
-## 项目维护方活服务自探针（PI 问"你测试过没/效果咋样"的验收动作，2026-09-25 实证）
+## Project-maintainer self-probe against the live service (the acceptance move when the PI asks "have you tested it / how does it behave", validated 2026-09-25)
 
-PI 三连问"测试咋样/内容咋样/效果好不好"时，转述 执行脚本 回归报告=不合格，要项目维护方亲跑一遍。配方（EyeKB MCP 实例，结构可迁移到任何 stdio MCP 服务）：
-- `/home/ubuntu/training-venv/bin/python` + `from mcp import ClientSession, StdioServerParameters` + `stdio_client(...)` 真起 server 子进程（command=venv python，args=[/mnt/D/EyeKB/mcp_server/server.py]）；软提示类功能用 env 覆写 `EYEKB_MCP_SOFTFLAGS=0` 测熔断开关
-- 用例三件套：**正例**（自建基因组合应触发提示）+ **反例**（干净场景不得误触发——证明不是乱报警）+ **开关**（off 后整块消失）；再配**直读发布 JSON 核词条内容**（本轮判红的基因真从 core 删除、新锚真在）——"修复完成"的宣称要落在数据上不是报告上
-- **自己的探针 FAIL 先疑探针**：本次"no microglia entry"实为探针脚本结构假设错（词条在另一层级、core 元素是 `{gene:...}` dict 非字符串）——先 print 顶层 keys 读原件结构再定性，"执行脚本 报错了"与"我探针错了"两类缺陷分开上报，禁把后者转述成前者（同族教训：Q6::24 二手转述误报）
-- 鼠/跨物种推断收卡专查**基因 symbol 大小写**：BMR 冒烟六样本全 `panel_present=0` 即症状=人源大写 panel 未做 ortholog/大小写映射（FACEQUANT 曾定性"大写惯例匹配=非 1:1 ortholog 表回证"）；鼠版交付验收须确认改用正式 ortholog 表或大小写不敏感匹配修复，勿把红旗数字当模型效果收
+When the PI asks the triple "how is the testing / what's in it / does it work well?", relaying the runner script's regression report = fail; the project maintainer must run it personally. Recipe (EyeKB MCP instance; the structure ports to any stdio MCP service):
+- `/home/ubuntu/training-venv/bin/python` + `from mcp import ClientSession, StdioServerParameters` + `stdio_client(...)` to actually spawn the server subprocess (command=venv python, args=[/mnt/D/EyeKB/mcp_server/server.py]); for soft-prompt features, override via env `EYEKB_MCP_SOFTFLAGS=0` to test the kill switch
+- Test-case trio: **positive** (a constructed gene set should trigger the prompt) + **negative** (a clean scenario must not fire spuriously — proving it doesn't cry wolf) + **switch** (the whole block disappears when off); plus **directly read the published JSON to verify entry content** (the genes flagged red this round are really deleted from core, the new anchors really present) — claims of "fix complete" must land on data, not on reports
+- **When your own probe FAILs, suspect the probe first**: this round's "no microglia entry" was actually a wrong structural assumption in the probe script (the entry lives on another level; core elements are `{gene:...}` dicts, not strings) — print the top-level keys and read the original structure before characterizing; report "the runner script errored" and "my probe was wrong" as two distinct defect classes, and never relay the latter as the former (same-family lesson: the Q6::24 second-hand relay misreport)
+- On checkout of mouse/cross-species inference cards, check **gene-symbol case** specifically: the symptom of all six BMR smoke samples returning `panel_present=0` = human-uppercase panels with no ortholog/case mapping (FACEQUANT once characterized "uppercase-convention matching" = unbacked by any 1:1 ortholog table); acceptance of mouse-version deliveries must confirm the fix uses a formal ortholog table or case-insensitive matching — do not accept red-flag numbers as model efficacy
 
-## 疗效重考轮（D8 型"修复后重测"）设计要点（2026-09-25 双系列实证）
+## Efficacy-retest rounds (D8-type "retest after fix") — design essentials (dual series, validated 2026-09-25)
 
-- **双门判定**：修复线（靶簇集 ≥ 基线球门，球门一字不降）∧ 不伤害线（对照池=前轮双判对簇的翻错数 ≤ 阈值）——**双过才有激活建议资格**；单过单破=总 FAIL、激活建议阴性（RUN7RG 实证：R1 17/22 过线仍因 R2 4/23 破门不激活）
-- 对照池与前轮目标集一字继承（同靶同线），新预注册先 sha 后跑；防移动球门=本文档不追加协议再测，与历史轮结果并列归档
-- **反向验证位要预置**：对已知毒词条簇预设"修复生效判定"（如 Q2::22 删词条后 MG 不该再顶）——反向验证可能暴露更深毒源（本次暴露基因先验层，见 knowledge-guided-cell-annotation「疗效重考时代」节）
-- 新观察项（如软提示跟票率）**只报不裁**、无阈值披露、禁调参凑数；交付必带簇×席全量矩阵 TSV 而非概览比
-- 实录：`references/run6b-run7rg-efficacy-20260925.md`
+- **Two-gate verdict**: repair line (target-cluster set ≥ baseline goalposts, goalposts not lowered by one word) ∧ no-harm line (control pool = the prior round's both-readers-correct clusters, flipped-to-wrong count ≤ threshold) — **only passing both qualifies for an activation recommendation**; pass one and breach one = overall FAIL, activation recommendation negative (RUN7RG evidence: R1 17/22 passed the line yet activation was withheld because R2 4/23 broke the gate)
+- The control pool and the prior round's target set are inherited as-is (same targets, same lines); new preregistrations sha first, then run; goalpost-move guard = this document does not append protocol re-tests, and archives side by side with historical-round results
+- **Reverse-validation slots must be pre-set**: for known toxic-entry clusters, pre-set a "repair took effect" judgment (e.g., after deleting the entry, MG should no longer top Q2::22) — reverse validation can expose a deeper poisoning source (this time it exposed the gene-prior layer; see the "era of efficacy retests" section in knowledge-guided-cell-annotation)
+- New observables (e.g., the soft-prompt bandwagon rate) are **reported only, not adjudicated**, disclosed without thresholds, and parameter-tuning to pad numbers is forbidden; deliveries must include the full cluster×seat matrix TSV rather than an overview comparison
+- Record: `references/run6b-run7rg-efficacy-20260925.md`
 
-## 红线放宽即量化：E 型对照实验轮（2026-09-26 E1 实证设计）
+## Relax a red line, quantify it the same day: E-type controlled-experiment rounds (E1 validated design 2026-09-26)
 
-PI 决定放宽某条纪律当天，通常同夜批准把它转成**预注册量化实验**（"把打分放上去全量跑一遍看有没有提升"）——项目维护方动作链=directive 追加节记批准 + BRIEF 落盘 + 发执行卡。设计五件（缺一不可）：
-1. **输入全用盘上冻结件**：全量评测面 + registry 真值区 + 三席判读存档当基线（**禁重跑 LLM**——省钱且保可比）。
-2. **多分数主口径预注册两报**：如 marker 重合分/文献分/合成分，预先写死报哪两条，禁跑完挑好看列当主；权重网格全表只作敏感性落盘。
-3. **泄漏（背答案）审计为诚实核心**：真值数据集源论文是否在其对应语料内，逐簇标有/无/不可判，主表按泄漏分列重算，结论以无泄漏列为准；泄漏列高出 >10pp 时结论首行必标"背答案效应主导"。这一审计同时检验了原纪律"判分侧禁食同源证据"值不值。
-4. **±阈值三档判读矩阵预注册**：优于基线 +5pp → 出生产化提案书**等 PI 再批不实装**；区间内 → 降为预筛/旗标定位；劣于 −5pp → 结案并反向给原红线当量化背书。
-5. 实验分数只进实验表，**禁写入生产判分/共识裁定代码**（实验批准≠生产切换批准）。
-实例卡：t_a7515c0b（BRIEF 与判读矩阵在 /mnt/D/EyeKB/plans/evidence_scoring_20260926/BRIEF_E1.md，可作模板）。
+On the very day the PI decides to relax a discipline, they usually approve, that same night, converting it into a **preregistered quantitative experiment** ("put the scoring in and run the full set once to see whether it improves") — the project maintainer's action chain = record the approval in a directive addendum section + write the BRIEF to disk + dispatch the execution card. Five design elements (none optional):
+1. **Inputs all from frozen artifacts on disk**: the full evaluation surface + the registry ground-truth zone + the three-seat reading archive as baseline (**LLM reruns forbidden** — saves cost and preserves comparability).
+2. **Preregister the headline calibers for multiple scores — exactly two reports**: e.g., marker-overlap score / literature score / composite score — hard-code in advance which two are reported; never run first and then pick the best-looking column as the headline; the full weight grid is persisted only as sensitivity.
+3. **The leakage (answer-rote) audit is the honesty core**: whether the ground-truth dataset's source paper sits inside its own corpus — mark per cluster yes/no/undecidable; recompute the main table split by the leakage column, and base conclusions on the no-leakage column; if the leakage column exceeds by >10pp, the first line of the conclusion must state "answer-memorization effect dominates". The same audit simultaneously tests the value of the original red line "the scoring side MUST NOT consume same-source evidence".
+4. **Preregister the ±threshold three-tier verdict matrix**: better than baseline by +5pp → produce a productionization proposal, **await further PI approval; do not implement**; within the band → demote to pre-screen/flag positioning; worse by −5pp → close the case and give retroactive quantitative endorsement to the original red line.
+5. Experimental scores go only into experimental tables; **they MUST NOT be written into production scoring/consensus-adjudication code** (approving the experiment ≠ approving the production switch).
+Instance card: t_a7515c0b (the BRIEF and the verdict matrix are at /mnt/D/EyeKB/plans/evidence_scoring_20260926/BRIEF_E1.md, usable as a template).
 
-### 项目维护方独立复算的口径对齐纪律（E1 收卡复验实证）
-复算判读件头条数字时，**首次对不上大概率是协作者的 join 口径与 执行脚本 不同，不是数字错**——先对齐五件再定性差异：①成员集（按 class_map 的 rule 字段取，别按 cluster_id 前缀猜——漏 Q7 型成员会整列偏）②真值空行（run3 表有 truth='' 行，执行脚本 剔除、naive join 计入分母）③平手规则（执行脚本 字母序破缺 vs 复算弃权跳过）④**分母惯例**（保守分母=无共识/无排名行计错保留分母 vs 只在成对可判行比较——两口径可差 15pp+，Δ 类结论对分母惯例极敏感）⑤标签映射方向（class_map 是 {canonical:{retina,ocular}} 嵌套，直取顶层键恒 False）。**强验证信号=命中簇计数逐位吻合**（本例 105=105、Q5b 40/44 复现即坐实），命中数一致+分母可解释=确认通过；未对齐口径前禁向 PI 报"数字不符"。复算脚本落盘可复用（e1_precise_check.py 模式）。
+### Caliber-alignment discipline for the project maintainer's independent recompute (E1 checkout re-verification, evidenced)
+When recomputing the headline numbers of a reading artifact, **a first-pass mismatch most likely means the collaborator's join caliber differs from the runner script's, not that the numbers are wrong** — align the five points below before characterizing the difference: ① member set (take it from the `rule` field of class_map; don't guess by cluster_id prefix — missing Q7-type members biases the whole column) ② empty-truth rows (the run3 table contains truth='' rows; the runner script drops them while a naive join counts them in the denominator) ③ tie rule (the runner script breaks ties alphabetically vs the recompute skipping abstentions) ④ **denominator convention** (conservative denominator = rows with no consensus/no ranking count as wrong but stay in the denominator vs comparing only on pairwise-decidable rows — the two calibers can differ by 15pp+, and Δ-style conclusions are extremely sensitive to the denominator convention) ⑤ label-mapping direction (class_map is nested as {canonical:{retina,ocular}}; grabbing top-level keys directly is always False). **The strong verification signal = hit-cluster counts matching digit by digit** (here 105=105; reproducing Q5b 40/44 nails it down); identical hit counts + an explainable denominator = confirmation passed. Before calibers are aligned, do not report "numbers disagree" to the PI. Persist the recompute script for reuse (the e1_precise_check.py pattern).
 
-## 效果量头条前的"同源审计"硬门（E1/E2 打分实验 2026-09-27 闭环沉淀，任何 A-vs-B 比较类评测适用）
-任何"资产 X 强于基线 Y"的头条数字，上报前必须先过泄漏/同源审计，禁先报头条后补审计（E1 实测：+16.8pp 的表面优势经审计=面板同源（真值 HRCA、面板派生自 HRCA，derivation 字段白纸黑字）+ 文献背答案（有/无泄漏列差 16.9pp）双通道垫高；去污后 +2.7pp、对最强单席反而 −13.4pp）。配方要点：
-- 审计先行入预注册：逐行标自参照三态（源论文 GSE→PMID→语料可解析），主表按列分拆；结构性同源（面板 derivation vs 真值来源）单列一轴，不与可解析泄漏混桶
-- 去同源重测轮：机读规则件+sha 先落纸再跑数；实验侧复刻生产打分逻辑并以上一轮全表逐行证明等价（禁 import 生产码但须证等价）；上轮锚点值全复现才许出结论（锚点断言 FAIL 即退出）
-- 敏感性变体全落表不进头条：最宽认账口径单列并声明"若 PI 认可须新预注册改判读门，禁事后换尺"
-- 失败模式分工 > 平均数：整体 Δ 打平时按基线子态分层找互补用途（本案：LLM 判读错误基数极小但弃权带大，证据分在弃权带具名精确率 85.4%——"在线旗标"门失败而"离线审计回捞"成立；工作点全阈值扫描后才定用途档）
-- 水分账落独立登记表面不改历史冻结件，供未来 RUN 口径修订引用
+## The "same-source audit" hard gate before any effect-size headline (E1/E2 scoring experiments, distilled 2026-09-27; applies to any A-vs-B comparison-style evaluation)
+Any headline number of the form "asset X beats baseline Y" MUST pass the leakage/same-source audit before reporting; you MUST NOT publish the headline first and backfill the audit later (E1 measurement: the apparent +16.8pp edge, audited, = panel same-sourcing (ground truth HRCA, panel derived from HRCA — stated black on white in the derivation field) + literature answer-rote-learning (with/without-leakage columns differ by 16.9pp) inflating through two channels; after de-contamination +2.7pp, and vs the strongest single seat actually −13.4pp). Recipe essentials:
+- Put the audit-first policy into the preregistration: label self-reference per row in three states (source-paper GSE→PMID→corpus resolvable); split the main table by those columns; structural same-sourcing (panel derivation vs ground-truth origin) gets its own axis and is never bucketed with resolvable leakage
+- De-sourced retest round: machine-readable rule artifacts + sha committed to paper before any numbers run; the experiment side replicates the production scoring logic and proves equivalence row-by-row against the previous round's full table (importing production code forbidden, but equivalence must be proven); conclusions are allowed only when all previous-round anchor values reproduce (anchor assertion FAIL ⇒ exit)
+- Sensitivity variants are all persisted into the table but stay out of headlines: the most-lenient credit caliber gets its own column with the declaration "if the PI accepts it, a new preregistration must change the reading gate — the yardstick MUST NOT be switched after the fact"
+- Failure-mode division of labor > averages: when the overall Δ ties, stratify by baseline sub-state to find complementary uses (this case: the LLM reading errors were a tiny base while the abstention band was large; on the abstention band the evidence score's named precision was 85.4% — the "online flag" gate failed while "offline audit rescue" held; the use tier is decided only after a full threshold scan for the working point)
+- The inflation ledger goes onto an independent registration surface without touching historical frozen artifacts, for future RUN caliber revisions to cite
 
-## 观察性数字的正式化复测轮（E3 型"工具转正考试"，2026-09-27 设计）
+## Formalization retest of observational numbers (E3-type "tool promotion exam", designed 2026-09-27)
 
-判读件里的**观察性附加**（post-hoc、非预注册门，如 E2 §3"弃权带具名 48/对 41=85.4%"）要升级为工具定位（SOP/用途档）前，必须过一道正式化复测——观察数字不可直接当卖点交付：
-1. **工具规格冻结**：触发条件、输出定义、弃权定义逐条写死进预注册（sha 先落纸），口径与观察数所在轮一字对齐（同分母同规则件），否则转正结果与观察数不可比。
-2. **双门结构**：主门=观察数所在面复算（精确率+具名量双条件，量下限防"缩到无关痛痒仍 PASS"）；**泛化门=第二个独立面**（构造面/小分母面的球门不平等必须预注册声明，标准可宽不可隐形）。
-3. **改良臂**：把判读侧已验证的规则修复（如拆弹判序规则）以规则叠加层复刻进实验侧打分器复跑，作为对照臂——过门标准=不低于现役臂+已知同坑案例的修复/未修复如实记录；不达标则现役版原样入 SOP，改良留档。
-4. **全阴性处置预写**：主门 FAIL → 不产出 SOP，且要在实验侧登记对上游观察数的**勘正注记**（旁挂，不回写原判读件）——正式化检验也可能推翻催生它的观察数，这是该轮的存在理由。
-5. **否决列（veto column）设计**（E2 同款，适用一切 W/V 档矩阵）：预注册一个次级对照指标（如"vs 最强单席"），**即便主门过线也封顶档位**——防止在弱基线上刷出的优势被读成绝对能力；否决列各口径恒定则整案无翻案空间，省去争议。
-6. 交付上限=SOP 草案（含"仅离线/禁入生产判分/面板版本变动须重跑校验"条款），接线永远另卡等 PI。实例卡 t_7b5a5fb3（BRIEF 在 /mnt/D/EyeKB/plans/e3_rescue_20260927/）。
-   **E3 实测完成（2026-09-27）**：R1 PASS（具名 48/对 41=85.4% 过正式化，观察数转正）∧ R2 FAIL（构造面弃权带总共 14 行 <15 体量门=结构性不可达，读数限视网膜面、禁外推）∧ R3 过精确率地板但具名量 48→10 塌缩 → SOP 采**双层结构**：现役臂=主通道、改良臂=高置信子层（自动上报免人工复核）。通用判则：**改良臂"精确率封顶但覆盖塌缩"时选分层不选替换**；错行集中源（本案 5/7=跨物种人面板打鼠簇）与不可修案（Q2::22 共表达词条坑）如实归类转词条建设线，打分规则层不硬修。复算验证走项目维护方独立聚合（band 逐行表 groupby 对 VERDICT 逐位吻合后再播报）。
+Before an **observational add-on** in a reading artifact (post-hoc, not a preregistered gate; e.g., E2 §3 "abstention band named 48/correct 41 = 85.4%") is upgraded into a tool positioning (SOP/use tier), it MUST pass a formalization retest — observational numbers may not be delivered directly as selling points:
+1. **Freeze the tool specification**: trigger conditions, output definition, and abstention definition hard-coded clause by clause into the preregistration (sha committed to paper first), with the caliber aligned as-is to the round that produced the observation (same denominator, same rule artifacts); otherwise the promotion result is incomparable with the observational number.
+2. **Two-gate structure**: primary gate = recompute on the surface where the observation lives (precision + named volume, two conditions, with a volume floor to guard against "shrinking until painless and still PASSing"); **generalization gate = a second independent surface** (goalpost inequality for constructed/small-denominator surfaces MUST be declared in the preregistration — the standard may be wider, but never invisible).
+3. **Improved arm**: replicate reading-side validated rule fixes (e.g., the defuse decision-order rule) as a rule-overlay layer inside the experiment-side scorer and rerun it as the comparator — the passing standard = no worse than the incumbent arm, with fixes/non-fixes for known same-pitfall cases recorded truthfully; if it falls short, the incumbent version goes into the SOP unchanged and the improvement is archived.
+4. **Pre-write the all-negative disposition**: primary gate FAIL → no SOP is produced, and the experiment side registers a **corrective annotation** on the upstream observational number (side-mounted, never written back into the original reading artifact) — formalization testing may overturn the very observation that motivated it, and that is this round's raison d'être.
+5. **Veto column design** (same as E2, applicable to all W/V tier matrices): preregister a secondary comparison metric (e.g., "vs strongest single seat") that **caps the tier even when the primary gate passes** — preventing an advantage measured against a weak baseline from being read as absolute capability; if the veto column is constant across calibers, the whole case has no room for reversal, saving controversy.
+6. Delivery ceiling = SOP draft (including the clauses "offline only / MUST NOT enter production scoring / panel version changes require a validation rerun"); wiring always waits for the PI on a separate card. Instance card t_7b5a5fb3 (BRIEF at /mnt/D/EyeKB/plans/e3_rescue_20260927/).
+   **E3 measurement complete (2026-09-27)**: R1 PASS (named 48/correct 41 = 85.4% passed formalization; the observational number was promoted) ∧ R2 FAIL (the constructed surface's abstention band totals 14 rows < the volume gate of 15 = structurally unreachable; readings limited to the retina surface, extrapolation forbidden) ∧ R3 passed the precision floor but named volume collapsed 48→10 → the SOP adopts a **two-tier structure**: the incumbent arm = main channel, the improved arm = high-confidence sublayer (auto-reported, exempt from manual re-check). General rule: **when the improved arm is "precision-capped but coverage-collapsed", choose stratification, not replacement**; concentrated error sources (here 5/7 = a cross-species human panel applied to mouse clusters) and unfixable cases (Q2::22, the co-expression entry pitfall) are classified as-is and transferred to the entry-building line; the scoring-rule layer does not force-fix them. Recompute verification goes through the project maintainer's independent aggregation (band: group-by the per-row table and match the VERDICT digit by digit before announcing).
 
-## 取证方式 A/B 轮（BTEST 型"自由查询 vs 固定证据面"，2026-09-27 实证，外部无先例对照）
+## Forensics-mode A/B round (BTEST-type "free query vs fixed evidence surface", validated 2026-09-27; no external precedent for this comparison)
 
-要回答"RAG/MCP 现场自由取证的判读形态行不行"（=B 形态）时的完整配方，实例卡 t_fb660dfe、件 /mnt/D/EyeKB/plans/btest_20260927/：
+The complete recipe for answering "does the reading form based on on-demand free RAG/MCP retrieval work" (= the B form); instance card t_fb660dfe, artifacts at /mnt/D/EyeKB/plans/btest_20260927/:
 
-1. **唯一变量=取证方式**：B 臂注释证据报告撤 EV_DIGEST，给 MCP 五工具会话权限（ON 态 60 类）；其余全冻结——考卷复用已验证面（sha 逐字节同卷）、三席同模型同温度、投票规则、球门一字不降、双基线并列（原线+现值）。B 臂基线读用同规则逐字复刻校验（45/45 对已发布票档全等）才许开跑。
-2. **稳定性门先行**（自由查询天然非确定）：B 臂全量独立跑 2 次，簇级共识名一致率 ≥90% 方有资格进 A/B 对比；不过门判"不判、先治非确定性"。稳定性税要入账（复现要求=成本×2）。席位级一致率分别报（实测梯度大：44/39/45 中的 31——最弱席是方差主源）。
-3. **防泄漏静态检查**：B 臂 prompt  grep 无 truth/kb/lit/hint 字样（禁把提示词层残留当"自由"）；逐簇 calllog 非空硬断言（服务端留痕×时间窗×pid 归因，零缺失才计有效票）。
-4. **主读+并列读零成本双票规**：主判读钉现行协议（与基线可比），新批准的票规用同批票机械重算并列一列——**档位结论对票规不敏感时是强证据**（本案 C2b 把 B 的 R1 抬过 A 基线但 R2 恒破 → 伤害属取证方式非破平规则）。
-5. **成本必录**：API 调用数/工具执行数/prompt+completion tokens/墙钟/forced_final 摩擦，全进对照表（实测 B 一考=82× prompt tokens——裸检索取证形态的代价账）。
-6. **核心机制教训（判读层修复的作用域）**：卡片渲染层做的拆弹（撤行/判序注记/hint）**不覆盖工具路径**——自由查询臂席位拿原始基因查库，库侧 ranking 伪影与基因共表达先误导原样回流（Q7 两簇 AC 接管、Q2::22 MG 复发）。推论=**换取证方式≠换证据**；一切判读侧修复须声明作用域（卡片层/会话层/库层），要 B 形态可行必须把治理下沉到 query_marker 库侧。对外红线：B 不达则 19/22 等数字仅属 A 形态冻结面，禁以任何档位外推。
-7. 判读矩阵四格预注册（双过/B 可用；修过伤破/B 禁；双不过/维持 A；稳定性门不过/先治非确定性），全阴性合法且=可对外发表的领域空白对照（外部五大同类系统无一做过该 A/B）。
+1. **Single variable = forensics mode**: the B arm's annotation-evidence report drops EV_DIGEST and grants MCP five-tool session permissions (60 classes in the ON state); everything else stays frozen — the exam reuses the validated surface (byte-identical sha, same paper), the three seats use the same models and temperature, the voting rule is fixed, goalposts not lowered by one word, dual baselines side by side (original line + current value). The B arm's baseline reading MUST be validated by a as-is replication of the same rules (45/45 identical to published ballots) before the run may start.
+2. **Stability gate first** (free queries are inherently non-deterministic): the B arm runs the full set independently twice; only with a cluster-level consensus-name agreement rate ≥90% does it qualify for the A/B comparison; failing the gate is judged "no verdict — fix non-determinism first". The stability tax must be booked (the reproducibility requirement = cost × 2). Seat-level agreement rates are reported separately (measured gradient is large: 31 among 44/39/45 — the weakest seat is the main variance source).
+3. **Static leakage guards**: grep the B-arm prompt — no truth/kb/lit/hint tokens left (prompt-layer residue MUST NOT masquerade as "free"); per-cluster calllog non-empty hard assertion (server-side trail × time window × pid attribution — a ballot counts as valid only with zero missing).
+4. **Primary reading + parallel reading = zero-cost dual voting rules**: pin the primary reading to the current protocol (comparable with the baseline); the newly approved rule is recomputed mechanically on the same ballots and shown in a parallel column — **when the tier conclusion is insensitive to the voting rule, that is strong evidence** (this case: C2b raised B's R1 above the A baseline, but R2 was always breached → the harm belongs to the forensics mode, not the tie-break rule).
+5. **Costs must be recorded**: API call counts / tool execution counts / prompt+completion tokens / wall clock / forced_final friction, all into the comparison table (measured: B's single exam = 82× prompt tokens — the price tag of the raw-retrieval forensics form).
+6. **Core mechanism lesson (the scope of reading-layer fixes)**: defusing done at the card-rendering layer (row retraction / decision-order annotation / hint) **does not cover the tool path** — the free-query arm's seats query the library with raw genes, and the library-side ranking artifacts and the gene co-expression priors' misleading flow straight back (Q7 two clusters: AC takeover; Q2::22: MG recurrence). Corollary = **changing the forensics mode ≠ changing the evidence**; every reading-side fix MUST declare its scope (card layer / session layer / library layer); to make the B form viable, governance MUST sink to the query_marker library side. External red line: if B fails to meet the bar, numbers such as 19/22 belong only to the A-form frozen surface, and they MUST NOT be extrapolated to any tier.
+7. Preregister the four cells of the verdict matrix (both pass → B usable; repair passes but harm breaks → B banned; both fail → keep A; stability gate fails → fix non-determinism first); an all-negative outcome is legitimate and = a publishable domain-gap control (none of the five major external peer systems has ever run this A/B).
 
-## 协议改动零 LLM 反事实评估轮（TIEP 型，2026-09-27 实证）
+## Zero-LLM counterfactual evaluation round for protocol changes (TIEP type, validated 2026-09-27)
 
-投票/裁定类协议要换档（如实例：三票多数制→法定人数+粗判入数）时，**先用已发布票档做机械重投票，零新判读**出决策弹药，批准后才"向前生效"：
-- 复刻基线先对账：重实现脚本对全部历史面复算 consensus/mode，与已发布件逐行全等（四面 156 行）+ 历史头条数字锚点复现，才许进反事实——不然差异是 bug 不是协议效应。
-- 候选规则 × 历史面全矩阵：每格报 翻正/翻错/具名量/对已发布球门的影响；**OVERTURN=0 硬校验**（任何改动既有"已定名且正确"结论的案例全量逐条列出票面原文进 flip_lists——这是向 PI 证明"改动只发生在无名簇"的证据件）。
-- 结构诊断优先于数字：本案发现"平票"名义下 90% 实为单有效票（其余票被弃票规则废掉）——先测真并列发生率再设计破平规则，多数候选规则会因此"无的放矢"（真并列全盘仅 1 例时 S1 破平线自然不立项）。
-- 敏感性证明结论稳健：档位参数网格（24 档）伤害模式不变则写明"调参救不了结构"，帮 PI 一次定档。
-- 批准落地三件套：决策件（操作定义逐字+生效范围+每 run 预注册须声明票规版本）+ runner 影响盘点（只列不改，warmup 卡照单分叉）+ **历史冻结裁决零回改**；旧 run 若恰在窗口（如 BTEST），按 directive 写"主读旧规+并列读新规机械重算零额外票"，并声明"结论对票规不敏感"本身是强证据。
-实例：/mnt/D/EyeKB/plans/tiep_20260927/ + WIKI/PROTOCOL_VOTING_v2_C2b.md。
+When a voting/adjudication protocol is about to switch tiers (e.g., majority-of-3 → quorum + coarse counted), **first run a mechanical re-vote over the published ballots — zero new readings** — to produce the decision ammunition; only after approval does it "take effect prospectively":
+- Reconcile the replicated baseline first: the re-implementation script recomputes consensus/mode over all historical surfaces and MUST match the published artifacts line by line exactly (four surfaces, 156 rows) + reproduce the historical headline anchor numbers before any counterfactual runs — otherwise the difference is a bug, not a protocol effect.
+- Candidate rules × all historical surfaces, full matrix: each cell reports flips-to-correct / flips-to-wrong / named volume / impact on published goalposts; **OVERTURN=0 hard verification** (every case that would alter an existing "named and correct" verdict must be listed exhaustively, with the original ballot text, into flip_lists — the evidence file proving to the PI that "changes only touch unnamed clusters").
+- Structural diagnosis before numbers: this case found that under the "tie" label, 90% were actually single-valid-ballot cases (the other ballots were voided by the abstention rule) — measure the true-tie incidence first, then design tie-breakers; most candidate rules thereby become "shooting at no target" (with only 1 true tie across the whole set, the S1 tie-break line naturally does not get off the ground).
+- Sensitivity proves robustness: if the harm pattern is unchanged across the tier-parameter grid (24 tiers), state plainly "parameter tuning cannot rescue the structure", helping the PI settle the tier in one pass.
+- The approval-landing trio: decision artifact (as-is operational definition + scope of effect + each run's preregistration MUST declare the voting-rule version) + runner-impact inventory (listed only, not modified; each warmup card forks per the list) + **zero retroactive change to historical frozen adjudications**; if an old run happens to fall inside the window (e.g., BTEST), write per the directive "primary reading on the old rule + parallel reading mechanically recomputed on the new rule, zero extra ballots", and declare that "the conclusion is insensitive to the voting rule" is itself strong evidence.
+Instance: /mnt/D/EyeKB/plans/tiep_20260927/ + WIKI/PROTOCOL_VOTING_v2_C2b.md.
 
-## 会话级细节
+## Session-level details
 
-KB2 RUN1 完整实录（目录结构/int-str bug 修复 patch/anndata 环境表/qwen 通道参数/bscore v2 修复/结果数字）：`references/kb2-run1-20260924.md`
-KB2 RUN2 完整实录（文献证据面 v2 采集链/ENSG 前置解码/评分器 v3 参数化/轮间对比数字/keratocyte 词表缺口）：`references/kb2-run2-20260924.md`
-09-27/28 打分线+BTEST+KBX/RAGFIX/KBCHAIN 迭代实录（判读层作用域教训/建卷真值取证/引用链 30% 误引/O3 降档实例/仓测试门）：`references/scoring-line-20260927-28.md`
+Full KB2 RUN1 record (directory structure / int-str bug-fix patch / anndata environment table / qwen channel parameters / bscore v2 fix / result numbers): `references/kb2-run1-20260924.md`
+Full KB2 RUN2 record (literature evidence-surface v2 collection chain / ENSG pre-decoding / scorer v3 parameterization / cross-round comparison numbers / keratocyte lexicon gap): `references/kb2-run2-20260924.md`
+09-27/28 scoring line + BTEST + KBX/RAGFIX/KBCHAIN iteration record (reading-layer scope lesson / exam-building ground-truth forensics / 30% miscitation on citation chains / the O3 downgrade instance / repo test gates): `references/scoring-line-20260927-28.md`
 
-## 建卷类任务书的真值取证前置门（KBX 实证 2026-09-28，防项目维护方二手描述进任务书）
+## Ground-truth forensics as a pre-gate for exam-building task briefs (KBX, validated 2026-09-28; prevents second-hand project-maintainer descriptions from entering task briefs)
 
-考卷建卷任务书写"真值=数据集作者注释/标签"前，**必须实测 obs 列存在性**（读 h5ad obs 全列名+取值分布）——入库预检时的二手描述会错：GSE164403 曾被记为"含 cell 级注释"，实为 FACS 分选池标签（{All/Epcam+/Ngfr+/empty}），无逐细胞类型列；assemble_report 里 `author_cell_type_available=false` 早就写了，转述者没读。执行脚本 的正确行为=Phase-0 取证+block 上报三出路（不硬考、不用同源自建聚类当真值——那是循环），这套要当标准动作夸而非故障。真值缺失三出路预注册写法：**O1** 追原论文标签映射表（付费墙/人工摘录=不可复现，一般不采）；**O2** 外部文献 marker 参考系建卷（外建面板逐基因挂可核 PMID、禁派生自被测 KB/自建聚类，另加防循环硬项：外部面板×被测词条 core 重叠>50% 的群打泄漏旗不计主门分母）；**O3** 无真值定性 sanity（只报命中拓扑，明写"不构成疗效数字"）；**降档触发线写死进预注册**（如合格锚定簇<8 → 自动 O3），零票收卡也算 done。实例：plans/kbx_lacrimal_20260928/KBX_RULING_1.md + KBX_PHASE0_FORENSICS.md。
+Before an exam-building task brief writes "ground truth = the dataset authors' annotations/labels", it **MUST empirically verify obs-column existence** (read all h5ad obs column names + value distributions) — second-hand descriptions from intake prechecks can be wrong: GSE164403 was once recorded as "contains cell-level annotation", but it is actually FACS-sorted-pool labels ({All/Epcam+/Ngfr+/empty}) with no per-cell-type column; assemble_report had already stated `author_cell_type_available=false` — the relayer never read it. The runner script's correct behavior = Phase-0 forensics + block + report the three exits (don't force the exam; don't use self-built same-source clustering as ground truth — that is circularity); this should be praised as the standard move, not treated as a fault. Preregistration wording for the three exits when ground truth is missing: **O1** chase the original paper's label-mapping table (paywall / manual excerpt = unreproducible, generally not adopted); **O2** build the exam on an external-literature marker reference frame (every gene of the external panel carries a checkable PMID; the panel MUST NOT be derived from the KB under test or self-built clustering; plus an anti-circularity hard clause: populations whose external-panel × tested-entry core overlap >50% get a leakage flag and are excluded from the primary-gate denominator); **O3** ground-truth-free qualitative sanity (report only the hit topology, explicitly stating "does not constitute efficacy numbers"); **the downgrade trigger line is hard-coded into the preregistration** (e.g., qualified anchored clusters <8 → automatic O3); a task checkout with zero ballots still counts as done. Instance: plans/kbx_lacrimal_20260928/KBX_RULING_1.md + KBX_PHASE0_FORENSICS.md.
 
-## 引用链误引的分层审计轮（KBCHAIN/RAGFIX 实证 2026-09-28，KB 公信力底梁）
+## Tiered audit round for citation-chain miscitations (KBCHAIN/RAGFIX, validated 2026-09-28; the load beam of KB credibility)
 
-抽 20 条既有"逐基因挂 PMID"引用链 EPMC 题录复核=**6 确诊误引（30%）**——模式是 eutils 建链通道 PMID 错位（note 描述真实眼科文献、PMID 指向无关论文，LILRB2 案引泌尿科论文）。教训：**"链存在"≠"链可信"，建链通道要按渠道分开定界可信率**。标准轮设计：S1 高危面全检（按建链批次/通道圈定）+S2 其余分层随机抽 15%（seed 冻结）；逐链三判据（PMID 可解析/标题与基因词面相关/与断言语境相符）；输出分档误引率（抽检层带二项 95%CI）+撤证候选清单**只列不动 kb**（修链等 PI 看账）+通道缺陷归因（后续建链卡继承"禁裸用该通道回填"告诫）。配套判则：覆盖类补录门的残差先归因分桶再定罪——RAGFIX 门③ 72.8%<80% FAIL 的 25 残差=16"清单组装时从未配文"（上游口径缺口非语料问题）+8"仅备选覆盖"（等 PI 批）+1 设计性撤证留空，三分互斥口径写进裁定件，禁一句"补录失败"带过。外部独立裁定升级实践：门级 FAIL 送 REVIEWER_LLM xhigh 裁"卡级整体验收+选项建议"，执行脚本 不得自决追补范围（追加轮=另出逐篇题录核验白名单+锁体积+原分母原阈值重跑，获批不追认已过门）。
+A sample of 20 existing "per-gene PMID" citation chains, re-checked against EPMC bibliographic records = **6 confirmed miscitations (30%)** — the pattern is PMID misalignment in the eutils link-building channel (the note describes a real ophthalmic paper while the PMID points to an unrelated one — the LILRB2 case cited a urology paper). Lesson: **"a chain exists" ≠ "a chain is trustworthy"; link-building channels MUST have their trustworthiness rate bounded per channel**. Standard round design: S1 full check of high-risk surfaces (scoped by link-building batch/channel) + S2 stratified random sampling of 15% of the remainder (seed frozen); three criteria per chain (PMID resolvable / title lexically related to the gene / consistent with the claim's context); output = tiered miscitation rates (the sampled tier carries a binomial 95% CI) + an evidence-withdrawal candidate list **listed only, kb untouched** (chain repairs wait for the PI to review the books) + channel-defect attribution (subsequent link-building cards inherit the "no raw backfill via this channel" caveat). Accompanying rule: for coverage-backfill gates, triage the residual into attribution buckets before convicting — the 25 residuals of RAGFIX gate ③ 72.8%<80% FAIL = 16 "never paired with any text at list assembly" (an upstream caliber gap, not a corpus problem) + 8 "covered only as alternatives" (awaiting PI approval) + 1 design-driven evidence withdrawal left blank; the three mutually exclusive calibers are written into the ruling; it MUST NOT be dismissed in one sentence as "backfill failed". External independent adjudication upgrade practice: gate-level FAIL is sent to REVIEWER_LLM xhigh to rule "card-level overall acceptance + option recommendation"; the runner script MUST NOT decide follow-up scope by itself (a follow-up round = a separately published per-paper bibliographic-verification whitelist + a locked volume + a rerun with the original denominator and original threshold; approval does not retroactively credit already-passed gates).
 
-## 激活前置义务 run（OBLIGRUN 型）：票面污染裁定 + 生产码活探针（2026-09-28 KB9 k9_ocs）
+## Activation-prerequisite obligation run (OBLIGRUN type): ballot-face contamination ruling + live probes on production code (2026-09-28, KB9 k9_ocs)
 
-词条注册（默认 OFF→入默认）激活前须 §10-6 义务门全清 + 正式三席票达标。四点新判则：
-- **预注册矩阵第三支=票面作废条件**：OB-4 同源筛查确诊冻结票面含 2 条 lit 行是该票 truth 来源论文本身（PMID 36712326=D002 构成研究 source paper=E1"lit 背答案"机制实例）。执行脚本 铁律**不开跑正式票（0/150）、block 上报、作废留痕不粉饰**——不产出"带污染面 P1 数字"供下游误用。收此类零票 block 按"票面污染=数据缺陷走修复裁定"，非 执行脚本 过错。
-- **项目维护方裁定文件（案 A vs 案 B）授权**：改任务书钉定票面=超执行卡权限须裁定。案 A（采）=按规则最小剔除（"lit 行 PMID 与该簇 truth 来源论文同源即剔"——**非点名钉 2 行，多命中全剔如实报**），新面 v2.1 新文件+sha 入 PREREG 追加节（原件不回改），非剔除字段逐字节零漂移断言→OB-1/3 结论继承、只机械重算 OB-2+OB-4 复筛。案 B（lit 重建轮加管线过滤器）与在跑 RAGFIX 语料领地冲突+拖激活，不采。裁定理由落 `<线>_RULING_1.md`，标 PI 整链授权执行细节档可改判。
-- **独立复算须协议语义对齐**（同 E1 口径五件，本例新变量=coarse 语义）：朴素三席多数（`coarse:X` 当独立标签）named=31，C2b 视 `coarse:Stromal`/`Fibroblasts` 同源归一后 named=28。**强验证信号=hit 簇集合逐位吻合 执行脚本**（26/33），named 计数可因 coarse 归一差异、不作失败判据。
-- **生产码活探针（B5IMPL）**：治理实装进生产 mcp_server（版本 0.5→0.6）后，项目维护方起**生产码**（非 staging）真 stdio 三态断言：人源基因具名零干预（input_species=human_assumed）/鼠源（Thy1·Grin3a 惯例 + Gm*·Rik 确证）拒答（celltype_ranking=[]、no_named_ranking_for=mouse_input、全量转 unranked_candidates）/ env `EYEKB_KBGOV_B5=0` 回退=legacy。**部署坑：已在运行的 server 进程（gateway 未重启）仍旧代码，stdio 随新会话按需启动才切新版——活探针须自起生产码进程，勿把内存常驻旧 server 当新版误判"未生效"**。RAGFIX3 门③ 87/92=94.6% 首破 80%（分母/阈值/判据零移动+单调零倒退）=禁移动球门正范例。实录：`references/activation-obligation-run-20260928.md`。
+Before activating entry registration (default OFF → become default), all §10-6 obligation gates must be cleared + the formal three-seat ballot must meet the bar. Four new rules:
+- **The third leg of the preregistration matrix = ballot-void conditions**: OB-4's same-source screening confirmed that the frozen ballot face contains 2 lit rows that are the very source paper of that ballot's truth (PMID 36712326 = the D002 constitutive-study source paper = a live instance of E1's "lit answer-rote" mechanism). The runner script's iron law: **do not start the formal ballot run (0/150), block and report, void with a trail and no whitewashing** — never produce "P1 numbers on a contaminated surface" for downstream misuse. Such a zero-ballot block is received under "ballot contamination = a data defect routed to repair adjudication", not a runner-script fault.
+- **Authorization of project-maintainer ruling files (option A vs option B)**: changing the ballot face pinned by a task brief exceeds an execution card's authority and requires a ruling. Option A (adopted) = minimal rule-based removal ("remove any lit row whose PMID is same-source with the cluster's truth source paper" — **not hand-pinning 2 rows; every extra hit is removed and reported as-is**), with the new v2.1 surface as a new file + sha written into a PREREG addendum section (the original is never back-edited), byte-level zero-drift assertions on non-removed fields → OB-1/3 conclusions inherited, only OB-2 recomputed mechanically + OB-4 rescreened. Option B (add a pipeline filter to a lit-rebuild round) conflicts with the in-flight RAGFIX corpus territory and delays activation — not adopted. The ruling rationale goes into `<line>_RULING_1.md`, flagged that under PI whole-chain authorization the execution-detail tier may be re-adjudicated.
+- **Independent recomputes must align on protocol semantics** (same five caliber points as E1; new variable here = coarse semantics): a naive three-seat majority (treating `coarse:X` as an independent label) gives named=31; under C2b, normalizing `coarse:Stromal`/`Fibroblasts` as same-source gives named=28. **The strong verification signal = the hit-cluster set matching the runner script digit by digit** (26/33); the named count may legitimately differ due to coarse normalization and is not a failure criterion.
+- **Live probes on production code (B5IMPL)**: after governance lands in the production mcp_server (version 0.5→0.6), the project maintainer launches **production code** (not staging) over real stdio and asserts the three states: human genes named with zero intervention (input_species=human_assumed) / mouse-derived (Thy1·Grin3a convention + Gm*·Rik confirmed) refused (celltype_ranking=[], no_named_ranking_for=mouse_input, all moved to unranked_candidates) / env `EYEKB_KBGOV_B5=0` falls back to legacy. **Deployment pitfall: server processes already running (gateway not restarted) keep the old code — the new version takes effect only when stdio spawns with each new session on demand; live probes MUST spawn their own production-code process; do not mistake a memory-resident old server for the new build and misjudge "not in effect"**. RAGFIX3 gate ③ 87/92=94.6%, the first breach of 80% (zero movement of denominator/threshold/criteria + monotone with zero regressions) = the model example of the no-moving-goalposts rule. Record: `references/activation-obligation-run-20260928.md`.

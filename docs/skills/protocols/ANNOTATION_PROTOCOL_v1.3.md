@@ -1,148 +1,147 @@
-# 注释协议 v1.2（EyeKB 判读层 · 先冻结后对照）
+# Annotation Protocol v1.2 (EyeKB reading layer · freeze first, then compare)
 
-> 版本: v1.3 | 生成: 2026-09-28 | 卡片: t_e0f94d4f (H1M3-GRADE 判序锚实装·追加五队列②)
-> 取代关系: v1.2 (2026-09-27, t_03808fff) 与 v1.1 (2026-09-23, t_16c3e020) **原地不动为历史冻结件**；本版=copy 不 move（惯例），正文 §0-§8 与 v1.2 逐字相同，唯一增补=**§9 判序锚（H1）条款**（H1-M3 实装，依据 /mnt/D/EyeKB/plans/grade_anchor_20260928/GRADE_ANCHOR.md §3-§5 + USER_DIRECTIVE_20260928 追加五 PI 整链授权；生效制见 §9.4）。
-> 历史版本行（保留）: v1.1 | 生成: 2026-09-23 | 卡片: t_16c3e020 (KB1v2-W3)；v1.1 之取代关系（v1.0=BRIEF_KB1 K6 设计稿, t_39182aa2 未完成即被取代, 从未生效；按 BRIEF_KB1v2 W3 + REVIEWER_LLMANNOTATION_GUIDANCE_v1.md T1/T2/T3 落地）以 v1.1 原件为准。
-> 适用: EyeKB MCP 五工具消费方（OcularKB 引擎、T-ATLAS、DR/RP 线、任何 agent 的人机注释会话）。
-> 红线不变量（2026-09-26 PI 决定改写为"证据消费纪律 v2"，USER_DIRECTIVE_20260926_redline_rewrite.md）：判读层证据可自由消费（本系统设计核心）；**判分/裁定侧禁食判读同源证据**（REVIEWER_LLM T3 扩展表述见 §0，历史冻结件按当时措辞仍有效）。
+> Version: v1.3 | Generated: 2026-09-28 | Card: t_e0f94d4f (H1M3-GRADE reading-sequence anchor implementation · directive addendum V, queue ②)
+> Supersession: v1.2 (2026-09-27, t_03808fff) and v1.1 (2026-09-23, t_16c3e020) **stay in place as historical frozen artifacts**; this version = copy, not move (convention); body §0–§8 is as-is identical to v1.2; the sole addition = **§9 reading-sequence anchor (H1) clause** (H1-M3 implementation, per /mnt/D/EyeKB/plans/grade_anchor_20260928/GRADE_ANCHOR.md §3–§5 + USER_DIRECTIVE_20260928 addendum V, PI whole-chain authorization; effectiveness regime in §9.4).
+> Historical version line (retained): v1.1 | generated 2026-09-23 | card t_16c3e020 (KB1v2-W3); v1.1's supersession record (v1.0 = BRIEF_KB1 K6 design draft, t_39182aa2 superseded before completion and never in force; implemented per BRIEF_KB1v2 W3 + REVIEWER_LLMANNOTATION_GUIDANCE_v1.md T1/T2/T3) is governed by the v1.1 original.
+> Scope: consumers of the five EyeKB MCP tools (the OcularKB engine, T-ATLAS, the DR/RP lines, and any agent's human-in-the-loop annotation sessions).
+> Red-line invariant (rewritten as "evidence-consumption discipline v2" by PI decision 2026-09-26, USER_DIRECTIVE_20260926_redline_rewrite.md): reading-layer evidence may be consumed freely (a core of this system's design); **the scoring/adjudication side MUST NOT consume evidence from the same source as the readings** (the extended REVIEWER_LLM T3 wording is in §0; historical frozen artifacts remain in force as worded at their freeze time).
 
-## 0. 红线（服务级，写入 MCP server 文档与返回体）
+## 0. Red lines (service-level, written into the MCP server docs and response bodies)
 
-RAG/基线/疾病条目的任何签名、比例区间、预期清单**不得**转换为：
-module score、标签加权、置信度加分、候选排序分、复合 QC 分数。
-文献可以支持人工判读；疾病规则只产生非打分的上下文旗标。两者都不得悄然进入自动判别流程。
-（Claude5 冻结裁定的 T3 扩展表述全继承；REVIEWER_LLM 指出"不进分数≠不影响"，故另加 §1 顺序管制。）
+No signature, proportion range, or expectation list from RAG/baseline/disease entries **may be** converted into:
+module scores, label weighting, confidence bonuses, candidate-ranking scores, or composite QC scores.
+Literature may support human reading; disease rules produce only unscored context flags. Neither may slip into automated discrimination pipelines.
+(The extended T3 wording of the Claude5 frozen ruling is fully inherited; REVIEWER_LLM noted "not entering the score ≠ having no influence", hence the sequencing control added in §1.)
 
-## 1. 先冻结后对照 —— 四阶段流程（REVIEWER_LLM T3）
+## 1. Freeze first, then compare — four-stage process (REVIEWER_LLM T3)
 
-| 阶段 | 做什么 | 冻结物 | 禁止 |
+| Stage | What to do | Frozen artifact | Prohibited |
 |---|---|---|---|
-| ① 数据优先 | 隐去可隐去的疾病分组信息（保留物种、**实际取样材料**等必要元数据）；完成技术 QC、候选身份、替代解释、未定项 | 数据版本 + 标签版本 + 证据记录（三件哈希/时间戳落审计文件） | 本阶段不得调 `get_disease_prior`；`get_tissue_composition` 仅按实际取样材料查询，不得借"疾病发生在该器官"跨材料引用 |
-| ② 疾病对照 | 展示疾病条目，仅生成**上下文一致性/冲突旗**（expected / unexpected / contamination-suspect），补充引用 | 旗标清单 + 引用核验记录 | 不得改标签 |
-| ③ 复核变更 | 任何标签修改必须指出：新发现的数据证据 + 原候选为何不再成立 | 变更审计表（旧标签→新标签→新证据→否定理由） | **仅有"更符合疾病预期"不能作为修改理由** |
-| ④ PI 裁决 | 保留修改前后标签、依据、仍未解决问题；PI 决定后定稿 | 裁决记录（含"证据不足"合法结论） | PI 不成为唯一真值来源（T7 第三步） |
+| ① Data first | Mask the disease-group information that can be masked (retain essential metadata such as species and **actual sampled material**); complete technical QC, candidate identities, alternative explanations, and undetermined items | data version + label version + evidence record (hashes/timestamps of the three artifacts recorded in the audit file) | `get_disease_prior` MUST NOT be called in this stage; `get_tissue_composition` may be queried only by the actual sampled material — cross-material citation via "the disease occurs in this organ" is not allowed |
+| ② Disease comparison | Present the disease entries and generate **context consistency/conflict flags only** (expected / unexpected / contamination-suspect); supplement citations | flag list + citation-verification record | Labels MUST NOT be changed |
+| ③ Review changes | Any label modification MUST state: newly found data evidence + why the original candidate no longer holds | change audit table (old label → new label → new evidence → rejection reason) | **"Better fits disease expectations" alone MUST NOT serve as a modification reason** |
+| ④ PI adjudication | Retain pre-/post-modification labels, rationale, and still-unresolved issues; finalize after the PI decides | adjudication record (including "insufficient evidence" as a legitimate conclusion) | The PI must not become the sole source of truth (T7, third step) |
 
-## 2. unexpected 四分处置（REVIEWER_LLM T3；禁混流）
+## 2. Four-way disposition of unexpected findings (REVIEWER_LLM T3; no mixing of queues)
 
-| 队列 | 语义 | 去向 |
+| Queue | Semantics | Destination |
 |---|---|---|
-| `out_of_baseline_coverage` | 超出基线覆盖范围（基线是骨架/区间无法估计/材料不匹配） | 记录 → 评估扩基线（回填 W1 骨架映射） |
-| `conflicts_with_literature` | 与现有资料冲突 | 逐条引用核验 + "先验与数据打架清单"上报 PI |
-| `technical_suspect` | 技术可疑（双细胞/ambient RNA/低质量/应激/批次） | 进 §3 技术可信度门复核队列 |
-| `candidate_biology` | 候选生物学现象 | 走 T3 固定处置链：确认观测（单细胞内协调表达？少数异常细胞驱动？）→ 排除技术 → 身份与状态限定（细胞周期≠血管新生）→ 临床上下文 → 独立验证（其他供者/队列/空间定位） |
+| `out_of_baseline_coverage` | Beyond baseline coverage (baseline is a skeleton / range not estimable / material mismatch) | Record → evaluate baseline expansion (backfill the W1 skeleton mapping) |
+| `conflicts_with_literature` | Conflicts with existing literature | Per-item citation verification + escalate the "priors-vs-data conflict list" to the PI |
+| `technical_suspect` | Technically suspect (doublets/ambient RNA/low quality/stress/batch) | Enter the §3 technical-credibility gate review queue |
+| `candidate_biology` | Candidate biological phenomenon | Follow the fixed T3 disposition chain: confirm the observation (coordinated expression within single cells? driven by a few outlier cells?) → exclude technical causes → identity-and-state qualification (cell cycle ≠ angiogenesis) → clinical context → independent validation (other donors/cohorts/spatial localization) |
 
-清单外身份只触发 `out_of_baseline_coverage` 旗，**不得被强制改成清单内身份**（T2）。
+An identity outside the list triggers only the `out_of_baseline_coverage` flag and **MUST NOT be force-retagged to a listed identity** (T2).
 
-## 3. 验收三门（REVIEWER_LLM T1 表格原样嵌入）+ 三分处置
+## 3. Three acceptance gates (REVIEWER_LLM T1 table embedded as-is) + three-way disposition
 
-| 验收对象 | 应检查什么 | 检查结果如何使用 |
+| Acceptance target | What to check | How the result is used |
 |---|---|---|
-| 身份证据 | 候选身份的支持证据、反证、相邻候选的区别；参考映射的适用域和不确定性 | 决定能标到大类、细类型，还是需要保留未定 |
-| 群体解析度 | 单细胞层面是否存在互斥谱系程序混合；重采样、邻居参数和分辨率变化后，身份边界是否保留 | 决定保留当前层级、继续分析或报告未解析 |
-| 技术可信度 | 双细胞、环境 RNA、低质量、供者／批次效应、整合引入的结构变化，以及周期等协变量 | 判断标签或细分是否可能由技术因素驱动 |
+| Identity evidence | Supporting evidence for the candidate identity, counter-evidence, distinctions from adjacent candidates; the applicability domain and uncertainty of the reference mapping | Decide whether the cluster can be labeled at broad-class level, at fine-subtype level, or must be kept undetermined |
+| Population resolution | Whether mutually exclusive lineage programs are mixed at the single-cell level; whether identity boundaries persist after resampling, neighbor-parameter, and resolution changes | Decide to keep the current level, continue analysis, or report unresolved |
+| Technical credibility | Doublets, ambient RNA, low quality, donor/batch effects, structural changes introduced by integration, and covariates such as the cell cycle | Judge whether labels or fine subdivisions may be driven by technical factors |
 
-实施口径（T1 关键调整，逐条固化）：
-- 双细胞率是**技术指标不是解析度指标**；按文库/供者×细胞大类×标签层级校准，不用全局固定阈值判所有簇；结合谱系混合、表达复杂度等独立线索复核。
-- 整合前后 marker 一致性只是必要检查之一；另查整合是否消除供者分裂、是否错误合并不同身份。批次混合更充分本身不是成功证据。
-- 分辨率稳定性评估"**身份结论**"而非簇编号/簇数稳定。
-- UMAP 距离、silhouette、批次混合指标不得单独设为通过门（辅助诊断）。
-- 阈值校准流程：先定允许错误类型与验收指标 → 开发集选阈值 → 独立供者/队列验证 → 冻结；新测试集不得边看结果边调。**联合报告接受标签错误率、覆盖率、弃权率、各类召回、跨供者稳定性**，防止靠大量弃权刷准确率。当前无校准数据 → 具体阈值一律"待校准"（EVAL_Rubric_v1.md）。
+Implementation rules (T1 key adjustments, fixed item by item):
+- The doublet rate is a **technical metric, not a resolution metric**; calibrate per library/donor × cell broad class × label level — do not judge all clusters with one global fixed threshold; re-check with independent clues such as lineage mixing and expression complexity.
+- Marker consistency before/after integration is only one of the required checks; also check whether integration eliminated donor splitting and whether it wrongly merged distinct identities. More thorough batch mixing is by itself not evidence of success.
+- Resolution stability evaluates the **identity conclusion**, not the stability of cluster IDs/cluster counts.
+- UMAP distance, silhouette, and batch-mixing metrics MUST NOT be set as standalone pass gates (supporting diagnostics only).
+- Threshold-calibration procedure: first define the allowed error types and acceptance metrics → select thresholds on a development set → validate on independent donors/cohorts → freeze; a new test set MUST NOT be tuned while inspecting results. **Report jointly: accepted-label error rate, coverage, abstention rate, per-class recall, and cross-donor stability** — to prevent inflating accuracy through mass abstention. No calibration data exist yet → all concrete thresholds remain "pending calibration" (EVAL_Rubric_v1.md).
 
-**split-or-report 三分处置（替代旧"拆分默认"）**：判"分不开"的群体按序选择——
-① 有证据支持拆分 → 拆；② 无拆分证据 → **保留更粗标签**；③ 呈连续结构（如 pericyte→myofibroblast 转变、MG→巨噬活化）→ **报告连续/未解析群体**。
-"拆分"不是默认补救动作；强迫连续状态分开会把测序深度/供者效应制造成新亚型。
+**split-or-report three-way disposition (replaces the old "split by default")**: for a population judged inseparable, choose in order —
+① evidence supports splitting → split; ② no evidence for splitting → **keep the coarser label**; ③ the population shows continuous structure (e.g. pericyte→myofibroblast transition, MG→macrophage activation) → **report the continuous/unresolved population**.
+"Split" is not the default remediation; forcing continuous states apart manufactures new subtypes out of sequencing depth/donor effects.
 
-## 4. 组成基线使用规则（REVIEWER_LLM T2；对应 kb/baselines/）
+## 4. Composition-baseline usage rules (REVIEWER_LLM T2; corresponds to kb/baselines/)
 
-1. 基线按**实际取样材料**选取（PDR 膜≠健康视网膜≠玻璃体；GSE165784 主锚=同材料 PDR 膜数据）。
-2. 比例是**供者级条件参考分布**（median/IQR/range across donors），不是必须满足的目标；
-   pooled 全局值有大供者压秤问题，仅对照展示。
-3. 基线优先级：同物种同材料同阶段可比 → 同材料近病 → 同材料他病/非病理 → 解剖相关图谱/文献（降级参考并标注不匹配处）。
-4. "区间无法估计"合法；缺比例资料不得阻断新组织注释。
-5. 比例反映"特定实验流程下捕获到的细胞构成"，非组织无偏真值。
-6. 富集/分选/平台（scRNA vs snRNA）不同的层**不得混用**（如 D001 NeuN+ 层 vs naive 层）。
+1. Select the baseline by the **actual sampled material** (PDR membrane ≠ healthy retina ≠ vitreous; the primary anchor for GSE165784 = same-material PDR membrane data).
+2. Proportions are **donor-level conditional reference distributions** (median/IQR/range across donors), not targets that must be met;
+   pooled global values suffer the large-donor leverage problem and are for comparative display only.
+3. Baseline priority: same species, same material, comparable developmental stage → same material, closely related disease → same material, other disease/non-pathological → anatomy-related atlases/literature (downgraded reference; annotate the mismatches).
+4. "Range not estimable" is legitimate; missing proportion data MUST NOT block annotation of a new tissue.
+5. Proportions reflect "the cell composition captured under a specific experimental workflow", not an unbiased ground truth of the tissue.
+6. Layers differing in enrichment/sorting/platform (scRNA vs snRNA) **MUST NOT be mixed** (e.g. the D001 NeuN+ layer vs the naive layer).
 
-## 5. 身份层级 × 状态轴（REVIEWER_LLM T4；对应疾病条目 schema eyekb-disease/1.1）
+## 5. Identity hierarchy × state axes (REVIEWER_LLM T4; corresponds to disease-entry schema eyekb-disease/1.1)
 
-- 每个注释对象分别保存：身份层级（大类/细类型/可支持最深级）、状态轴（增殖/炎症/ECM 重塑等，可共存）、上下文（物种/材料/疾病/适用条件）、证据与不确定性。
-- "某类巨噬细胞伴 ECM 重塑状态" > 新立"疾病特异巨噬细胞类型"；连续状态不强制二分。
-- 概念合并只按表达程序/谱系/上下文（`kb/priors/concepts.tsv` 概念 ID 映射），不按文字相似度；名称相似不自动合并，名称不同不自动拆分。
-- 来源判定（如微胶质 vs 单核来源）证据只能支持转录相似性时，结论封顶在转录相似层级。
+- For each annotated object, store separately: identity hierarchy (broad class / fine subtype / deepest supportable level), state axes (proliferation/inflammation/ECM remodeling etc., may coexist), context (species/material/disease/applicability conditions), and evidence with uncertainty.
+- "A macrophage population with an ECM-remodeling state" > inventing a new "disease-specific macrophage type"; do not force-binarize continuous states.
+- Concept merging follows expression programs/lineages/context only (the concept-ID mapping in `kb/priors/concepts.tsv`), never lexical similarity; similar names do not merge automatically, and different names do not split automatically.
+- When provenance evidence (e.g. microglial vs monocyte-derived) supports only transcriptional similarity, cap the conclusion at the transcriptional-similarity level.
 
-## 6. 单样本与对照纪律（REVIEWER_LLM T3 实例规则，全项目通用）
+## 6. Single-sample and control discipline (REVIEWER_LLM T3 case rules; project-wide)
 
-- 单一样本（如 RRD n=1）只可报告"该样本中观察到……"，不得认定为该疾病的普遍特征，不得据其建立疾病间富集结论；RRD 是另一种病理状态，**不是健康阴性对照**。
-- "缺某个 marker"不得机械当反证（掉落/深度/疾病表达变化）；混合簇不能只看平均表达。
-- 盲法基线声明：已经历膜相关知识补充的产物（如 GSE165784 v2 草稿）**不得声称**为完全未受先验影响的盲法基线，只能作为"规则关闭"基线；估计知识暴露影响需新盲评设计或新数据。
+- A single sample (e.g. RRD n=1) may be reported only as "observed in this sample…"; it MUST NOT be declared a general feature of the disease, and no cross-disease enrichment conclusions may be built on it; RRD is a different pathological state, **not a healthy negative control**.
+- "A marker is missing" MUST NOT be mechanically treated as counter-evidence (dropout/depth/disease-driven expression change); a mixed cluster must not be judged from mean expression alone.
+- Blinded-baseline declaration: artifacts that have already gone through membrane-related knowledge augmentation (e.g. the GSE165784 v2 draft) **MUST NOT be claimed** to be fully prior-free blinded baselines; they may serve only as "rules-off" baselines. Estimating the effect of knowledge exposure requires a new blinded-review design or new data.
 
-## 7. 会话留痕（可审计性）
+## 7. Session trail (auditability)
 
-每次注释会话落：调用的工具+参数+返回摘要（mcp_calls*.jsonl）、冻结三件哈希、旗标清单、
-变更审计表、PI 裁决记录。wiki 页面带版本号（T5：仅文献链接不足以审计）。
+Every annotation session must record: tools called + parameters + response summaries (mcp_calls*.jsonl), the hashes of the three frozen artifacts, the flag list,
+the change audit table, and the PI adjudication record. Wiki pages carry version numbers (T5: literature links alone are insufficient for audit).
 
-## 8. 票规版本声明（v1.2 增补，2026-09-27；引用决策件）
+## 8. Voting-rule version declaration (added in v1.2, 2026-09-27; cites the decision document)
 
-多席判读共识的计票规则已由 PI 决定升版（USER_DIRECTIVE_20260927_scoring_wave 追加二 D11）：
+The vote-counting rule for multi-seat reading consensus has been upgraded by PI decision (USER_DIRECTIVE_20260927_scoring_wave addendum II, D11):
 
-- **决策件（唯一权威定义源）**：/mnt/D/OcularKB/WIKI/PROTOCOL_VOTING_v2_C2b.md
-  - v1=**C4**（现行基线）：定名票 grade∈{A,B} 计票，≥2 同名定名；UNDET/coarse:/grade C 全弃。
-  - v2=**C2b**（法定人数+粗判入数）：定名票任意 grade 计数，coarse:X 计入标签 X 法定人数，≥2 席同名即定名；平票残余维持无名（S1 破平禁用）。
-- **每 run 预注册必须声明适用票规版本**（`v1=C4` 或 `v2=C2b` 二选一写进 PREREG），未声明=不得冻结、不得开跑。
-- **生效范围**：v2 仅约束决策件落款（2026-09-27）之后预注册的 run；历史冻结裁决一律不回改。
-- **过渡条款**：D9 B-test=主读 C4+并列 C2b（零额外席位票），仅此一个 run，不构成双主读先例。
-- runner 分叉盘点（只列不改）：/mnt/D/EyeKB/plans/proto_v2_20260927/RUNNER_WATCHLIST.md。
-- 本节与 §0-§7 无冲突：§0 红线不变量（判分/裁定侧禁食判读同源证据）对 v1/v2 两版票规同等生效。
+- **Decision document (sole authoritative definition source)**: /mnt/D/OcularKB/WIKI/PROTOCOL_VOTING_v2_C2b.md
+  - v1 = **C4** (current baseline): naming ballots with grade∈{A,B} are counted; ≥2 seats with the same name establish the name; UNDET/coarse:/grade C are all discarded.
+  - v2 = **C2b** (quorum + coarse ballots counted): naming ballots of any grade are counted; coarse:X counts toward label X's quorum; ≥2 seats with the same name establish the name; residual ties keep the cluster unnamed (S1 tie-breaking disabled).
+- **Every run's preregistration MUST declare the applicable voting-rule version** (write one of `v1=C4` or `v2=C2b` into the PREREG); no declaration = no freeze, no start.
+- **Effective scope**: v2 binds only runs preregistered after the decision document's sign-off date (2026-09-27); historical frozen adjudications are never retroactively altered.
+- **Transition clause**: D9 B-test = primary reading on C4 + C2b computed mechanically in parallel (zero extra seat ballots), for that one run only; it sets no dual-primary-reading precedent.
+- Runner-fork inventory (list only, no changes): /mnt/D/EyeKB/plans/proto_v2_20260927/RUNNER_WATCHLIST.md.
+- This section does not conflict with §0–§7: the §0 red-line invariant (the scoring/adjudication side must not consume reading-side same-source evidence) applies equally to both voting-rule versions.
 
-## 9. 判序锚 H1（v1.3 增补，2026-09-28；实装卡 t_e0f94d4f，预注册 PREREG_H1M3 sha 14fc3f8f…）
+## 9. Reading-sequence anchor H1 (added in v1.3, 2026-09-28; implementation card t_e0f94d4f, preregistration PREREG_H1M3 sha 14fc3f8f…)
 
-九档期反事实证据（GRADE_ANCHOR §2/§4）：判读席 grade 漂移主形态=**系统性过度保守丢正确名**
-（具名∧C 票 28 张中 25 张隐藏名==truth，89.3%），非噪声过滤；本条款以协议下限治 grade 语义漂移。
+Nine-epoch counterfactual evidence (GRADE_ANCHOR §2/§4): the dominant form of reading-seat grade drift is **systematic over-conservatism that loses correct names**
+(25 of the 28 named∧C ballots had hidden name == truth, 89.3%), not noise filtering; this clause cures grade-semantics drift with a protocol floor.
 
-**9.1 条款正文（协议下限）**：具名票（identity=具体标签，非 coarse:X/undetermined）必须 **grade≥B**；
-"具名∧grade-C" 为**非法票形**。协议本意：C=不可区分→只能粗判（coarse:<名>）或弃权（undetermined）；
-能具名=已排除相邻候选→至少 B。席位若坚持 C 而票面具名，runner 按 §9.3 模式处置。
+**9.1 Clause text (protocol floor)**: a named ballot (identity = a concrete label, not coarse:X/undetermined) MUST carry **grade≥B**;
+"named∧grade-C" is an **illegal ballot shape**. Protocol intent: C = indistinguishable → the only legitimate outputs are a coarse call (coarse:<name>) or abstention (undetermined);
+if you can name it = adjacent candidates have been excluded → at least B. If a seat insists on C while the ballot is named, the runner handles it per the §9.3 mode.
 
-**9.2 档位（每 run 预注册必须声明）**：对具名∧C 票是否施 grade 下限 B，按档位谓词判定——
-档位族 `none / S / M / M2 / M3 / X`（谓词逐字=GRADE_ANCHOR §3 表；gates 三字段为席位自评申报，
-信任门申报假设与 C2b 用 grade 申报同级）。**本版实装推荐档=H1-M3：`identity_evidence=pass ∨ resolution=pass`
-→ 下限化 B**（"具名+至少一门判别门 pass=至少 B"；technical 三门不参与判序——3A 禁降级项同构）。
-未过门的具名∧C 票**不升**（§9.5 通胀案即由此挡住）。每 run PREREG 必须声明
-`H1档位: none|S|M|M2|M3|X` 与 `H1模式: A|B`；未声明=不得冻结、不得开跑（与 §8 票规版本声明并列为硬条款）。
+**9.2 Tiers (each run's preregistration MUST declare)**: whether the grade floor B is applied to named∧C ballots is decided by the tier predicate —
+tier family `none / S / M / M2 / M3 / X` (predicates as-is = the GRADE_ANCHOR §3 table; the three gates fields are seat self-reports,
+and trusting gate self-reports is at the same assumption level as trusting grade self-reports under C2b). **The recommended tier implemented in this version = H1-M3: `identity_evidence=pass ∨ resolution=pass`
+→ floor to B** ("named + at least one discriminating gate passed = at least B"; the technical gate does not participate in the anchoring — isomorphic to the 3A no-demotion prohibition).
+Named∧C ballots that pass no gate are **not raised** (the §9.5 inflation case is blocked exactly this way). Each run's PREREG MUST declare
+`H1_tier: none|S|M|M2|M3|X` and `H1_mode: A|B`; no declaration = no freeze, no start (a hard clause alongside the §8 voting-rule version declaration).
 
-**9.3 处置模式（PREREG 二选一声明）**：
-- **模式 A（强）=拒收回炉**：具名∧C 一律不收，该席该簇本票作废重投（重投额度计入预算）；
-- **模式 B（弱，本波两门验证实装档）=自动下限化**：档位过门→生效 grade 置 B 并记 `anchor_applied` 旗
-  （逐票入判读记录表）；未过门→保持 C 并记 `namedC_noanchor` 旗（不改动票面原文，登记后按现行票规计票）。
-每 run 预注册门指标建议钉死（沿 GRADE_ANCHOR §5.4）：模式 A=具名∧C 存量收后=0；模式 B=anchor_applied 数
-与翻正/新错逐案账；**R1/R2/稳定性球门不动**——grade 锚净效应以"翻正案账"单独列报，防归因混淆。
+**9.3 Disposition modes (declare one of the two in the PREREG)**:
+- **Mode A (strong) = reject and re-vote**: named∧C ballots are never accepted; that seat's ballot for that cluster is voided and re-voted (re-votes count against the ballot budget);
+- **Mode B (weak; the implementation tier of this wave's two-gate validation) = automatic flooring**: tier gate passed → the effective grade is set to B and an `anchor_applied` flag is recorded
+  (per ballot, in the reading record table); gate not passed → keep C and record a `namedC_noanchor` flag (the ballot's original text is untouched; it is counted under the current voting rule after registration).
+Per-run preregistered gate metrics RECOMMENDED to be pinned (following GRADE_ANCHOR §5.4): Mode A = named∧C stock remaining after acceptance = 0; Mode B = anchor_applied counts
+with a case-by-case ledger of flips-to-correct / new errors; **the R1/R2/stability gates do not move** — the grade anchor's net effect is reported separately as a "flips-to-correct ledger" to prevent attribution confusion.
 
-**9.4 生效边界（向前生效，C2b 同款）**：本条款仅约束**落款日（2026-09-28）之后预注册**的 run；
-历史冻结判读与已发布裁决（RUN2-RUN7RG/FACEV21/KB9/BTEST/OBLIGRUN 当期 26/33 等）**一律不回改**。
-本条款治 grade 排序语义，**不改写已批准票规的计票语义**：v1=C4 下未升具名∧C 本就不入数；
-v2=C2b 下任意 grade 具名票照计（锚件 §4"吸收性"：下限化不改 NAMED/COARSE 票形→C2b 共识结构恒等，
-t≠tie/abstain 处理沿 C2b 逐字不动）。H1 与 C2b 互补不冲突——H1 治 grade 语义漂移，C2b 治粗票入数。
+**9.4 Effective boundary (prospective effect, same regime as C2b)**: this clause binds only runs preregistered **after the sign-off date (2026-09-28)**;
+historical frozen readings and published adjudications (RUN2-RUN7RG/FACEV21/KB9/BTEST/OBLIGRUN current-period 26/33 etc.) are **never retroactively altered**.
+This clause governs grade ordering semantics and **does not rewrite the counting semantics of the approved voting rules**: under v1=C4 a non-raised named∧C was not counted anyway;
+under v2=C2b named ballots of any grade are counted as-is (anchor document §4 "absorbability": flooring does not change NAMED/COARSE ballot shapes → the C2b consensus structure is identical;
+non-tie/non-abstain handling stays as-is as in C2b). H1 and C2b are complementary, not conflicting — H1 cures grade-semantics drift; C2b cures coarse-ballot counting.
 
-**9.5 H1-X 处置说明（grade 通胀案，X 禁选）**：纯一致性锚 H1-X（具名∧C 一律升）在九档反事实中制造
-**唯一实证通胀案 RUN5 Q6::31**：B 席 `Pericytes∧C`（identity_evidence=unresolved ∧ resolution=unresolved）
-与 C 席 `Pericytes∧B` 两张错误名票经降C入数后**互相坐实成假多数**，把"无名"翻成"错名"（新错 +1；
-机制=双错名互为佐证幻觉）。H1-M3 的"至少一门判别门 pass"条件恰好挡住该案（该票两门皆未 pass→不升）。
-故 **X 档禁作为新 run 预注册档位**；如需纯一致性锚语义，必须连同 H3 旗（§9.7）shadow 一并预注册方准议。
+**9.5 H1-X disposition note (the grade-inflation case; X is banned as a tier)**: the pure-consistency anchor H1-X (raise every named∧C) produced, in the nine-epoch counterfactuals,
+**the single empirical inflation case RUN5 Q6::31**: seat B's `Pericytes∧C` (identity_evidence=unresolved ∧ resolution=unresolved)
+and seat C's `Pericytes∧B` — two wrong-name ballots, once the C-floor was counted — **mutually corroborated into a false majority**, flipping "unnamed" into "wrongly named" (new errors +1;
+mechanism = the two-wrong-names corroborating-each-other hallucination). H1-M3's "at least one discriminating gate passed" condition blocks exactly this case (that ballot passed neither gate → not raised).
+Therefore the **X tier is banned as a preregistration tier for new runs**; if pure-consistency-anchor semantics are needed, they MUST be preregistered together with the H3 flag (§9.7) shadow before deliberation may be allowed.
 
-**9.6 实装组件与验证留痕（本文档登记）**：runner 定名链组件
-`/mnt/D/EyeKB/plans/grade_h1m3impl_20260928/scripts/h1m3_runner_t_e0f94d4f.py`（票形解析=C2b 决策件 §5
-参考实现逐字语义；下限化/拒收=本条款 §9.3；C4/C2b 计票不动）。验证两门：
-**G1 复算门 PASS**——9 归档（RUN4-r/RUN7RG/FACEV21/BTEST-run1/2/RUN5/RUN6A/RUN6B/KB9）经组件重放
-H1-M3，与 GRADE_ANCHOR 锚件**逐档全等**（升 24 / 隐藏名正确 22/24=91.7% / 翻正 7 / 新错 0 / 回归 0；
-out/g1_verdict.json）；**G2 回归门 PASS**——OBLIGRUN v2 票面 99 票：C2b 主列基线复现 26/33 逐簇 33/33 全等，
-C2b∘M3 敏感性列 26/33、delta=0（吸收性预言在当期新票面复核成立；具名∧C 13 票=升 11/未升 2，
-out/g2_ballot_flags.tsv，13 票隐藏名全为正确名=漂移形态再证）；C4 参考列 18→23/33（+5 簇，登记不入门）。
-kb/、mcp_server/ 两处生产票面校验实现的本条款接线=本文档禁动领地，**组件+条款交 REPOSYNC3 收编同源**
-（沿 GRADE_ANCHOR §5.2"实装前先对齐 kb/mcp 两处实现"）。
+**9.6 Implementation components and validation trail (registered in this document)**: runner naming-chain component
+`/mnt/D/EyeKB/plans/grade_h1m3impl_20260928/scripts/h1m3_runner_t_e0f94d4f.py` (ballot-shape parsing = as-is semantics of the C2b decision document §5
+reference implementation; flooring/rejection = this clause §9.3; C4/C2b counting untouched). Two validation gates:
+**G1 recomputation gate PASS** — 9 archives (RUN4-r/RUN7RG/FACEV21/BTEST-run1/2/RUN5/RUN6A/RUN6B/KB9) replayed through the component under H1-M3, **exactly equal
+to the GRADE_ANCHOR reference document on every epoch** (raised 24 / hidden-name correct 22/24 = 91.7% / flips-to-correct 7 / new errors 0 / regressions 0;
+out/g1_verdict.json); **G2 regression gate PASS** — OBLIGRUN v2 ballots, 99 votes: the C2b primary-column baseline reproduced 26/33, cluster-by-cluster 33/33 exact equality;
+the C2b∘M3 sensitivity column 26/33, delta=0 (the absorbability prediction re-confirmed on the current-period new ballots; named∧C 13 votes = raised 11 / not raised 2;
+out/g2_ballot_flags.tsv; all 13 hidden names are correct names — a re-confirmation of the drift pattern); the C4 reference column 18→23/33 (+5 clusters, registered, not gated).
+Wiring this clause into the two production ballot-validation implementations under kb/ and mcp_server/ is in territory this document must not touch — the **component + clause are handed to REPOSYNC3 for same-source adoption**
+(following GRADE_ANCHOR §5.2 "align the two kb/mcp implementations before implementing").
 
-**9.7 配套待命项（本文档不实装，边界声明）**：H2 席间校准软提示（注释证据报告尾句入冻结件=激活类动作，另报 PI）；
-H3 单席 C 率超阈值旗（A4 复盘层，先 shadow 只记旗不接线）；ANNOT_INSTRUCTIONS.md §等级 反例教学行
-（Q5b::35 run1 席 A 票形——kb/ 领地禁写，登记交 REPOSYNC3）。
+**9.7 Standby companion items (not implemented in this document; boundary statement)**: H2 inter-seat calibration soft prompt (adding the annotation-evidence-report tail sentence into the frozen artifact = an activation-class action, report separately to the PI);
+H3 single-seat C-rate threshold-exceedance flag (A4 review layer, shadow first — record the flag only, no wiring); the counter-example teaching line in ANNOT_INSTRUCTIONS.md §grade-levels
+(the Q5b::35 run1 seat-A ballot shape — kb/ territory, writes forbidden; registered for hand-off to REPOSYNC3).
 
-**9.8 红线不变量**：§0 红线（判分/裁定侧禁食判读同源证据）对 H1 全档位同等生效——锚判据只取票面自评
-字段（identity/grade/gates），零标签派生、零打分侧口径、零新票。
-
+**9.8 Red-line invariant**: the §0 red line (the scoring/adjudication side must not consume reading-side same-source evidence) applies equally to all H1 tiers — the anchor's decision inputs are the ballot's
+self-report fields only (identity/grade/gates); zero label derivation, zero scoring-side inputs, zero new ballots.

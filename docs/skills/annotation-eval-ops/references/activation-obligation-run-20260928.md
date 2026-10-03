@@ -1,38 +1,38 @@
-# 激活前置义务 run 实录 — 2026-09-28（OBLIGRUN / B5IMPL / H1M3 / RAGFIX3 / MOUSEEXT / REPOSYNC3）
+# Activation-prerequisite obligation run record — 2026-09-28 (OBLIGRUN / B5IMPL / H1M3 / RAGFIX3 / MOUSEEXT / REPOSYNC3)
 
-## OBLIGRUN 两轮链（plans/obligrun_20260928/）
+## OBLIGRUN two-round chain (plans/obligrun_20260928/)
 
-时间线：BRIEF（判读矩阵预注册）→ run1：OB-1 清（339 行记录表，RUN5 请求确定性重渲染逐字节等价 21/21 替代未留档原文）/ OB-2 PASS（诊断表 57 行 11 列，硬断言 post_shield top3==票面 33/33）/ OB-3 清（22/22）/ **OB-4 不清→票面作废分支**→ 0 票 block。项目维护方 RULING_1=案 A → comment 指路 + unblock 原地续跑 → run2 全绿 done。
+Timeline: BRIEF (reading-matrix preregistration) → run1: OB-1 clear (339-row record table; RUN5 requests deterministically re-rendered byte-for-byte equivalent 21/21, standing in for the unarchived originals) / OB-2 PASS (diagnostic table 57 rows × 11 columns; hard assertion post_shield top3==ballot face 33/33) / OB-3 clear (22/22) / **OB-4 not clear → ballot-face void branch** → blocked with 0 ballots. Project maintainer RULING_1 = option A → comment pointing the way + unblock to resume in place → run2 all green, done.
 
-终局数字：**P1(C2b)=26/33**（named 28，missed 7 簇全落 Fibroblasts/Pericytes 谱系带：5 无名+2 named-but-wrong）、**P2 strict=0/33**、票预算 99/150 零缺票、三席 face_sha 一致。VERDICT_OBLIGRUN_v2.md=READY；ACTIVATION_READINESS.md=建议票（激活仍归 PI OB-5）；v1 作废留痕件不回改、互引。
+Final numbers: **P1(C2b)=26/33** (named 28; the 7 missed clusters all fall in the Fibroblasts/Pericytes lineage band: 5 unnamed + 2 named-but-wrong), **P2 strict=0/33**, ballot budget 99/150 with zero missing ballots, face_sha identical across the three seats. VERDICT_OBLIGRUN_v2.md = READY; ACTIVATION_READINESS.md = advisory ballot (activation still rests with the PI via OB-5); the voided v1 is kept as a trail artifact, never altered, cross-referenced.
 
-关键件：PREREG_OBLIGRUN.md（sha bfd8836d）/ PREREG_OBLIGRUN_ADD1.md（案 A 追加节 sha 92c2a538）/ OBLIGRUN_RULING_1.md / face/kb9_face_v2.1.jsonl（sha 2c0649dc）/ out/FACE_V21_ledger.tsv（31 簇整行逐字节等）/ pre_vote_diagnostics_v21.tsv（delta_vs_v1 列）/ OB4_lit_screening_v21.md（0 残留）。
+Key artifacts: PREREG_OBLIGRUN.md (sha bfd8836d) / PREREG_OBLIGRUN_ADD1.md (option-A addendum section, sha 92c2a538) / OBLIGRUN_RULING_1.md / face/kb9_face_v2.1.jsonl (sha 2c0649dc) / out/FACE_V21_ledger.tsv (31 clusters, full rows byte-identical) / pre_vote_diagnostics_v21.tsv (delta_vs_v1 column) / OB4_lit_screening_v21.md (0 residue).
 
-案 A 命中的论文三重证据配方（可复用为同源判据模板）：①论文 Data Availability 自存 GSE accession ②GEO 系列题名与论文题名逐字一致 ③评测对象 obs.study×GSM 直读细胞数吻合。chen_* 无 accession 不可解析=残余限制如实登记（获权威映射须重跑筛查）。
+The triple paper-evidence recipe that option A hit (reusable as a same-source criterion template): ① the paper's Data Availability declares its own GSE accession; ② the GEO series title matches the paper title as-is; ③ the evaluation object's obs.study × GSM directly-read cell counts agree. chen_* has no accession and cannot be resolved = residual limitation registered as-is (if an authoritative mapping is obtained, rerun the screening).
 
-## 项目维护方复算脚本坑（verify recipe）
+## Project-maintainer recompute-script pitfalls (verify recipe)
 
-- naive 三席多数：把 `coarse:Fibroblasts` 当独立标签 → named=31；C2b 语义 `coarse:X`≡`X` 归一 → named=28；**hit 集合两版都=执行脚本 的 26 簇全等**→ 判 PASS。字段：ANN 行 = cluster_id/identity/level/grade/gates/flag/why。
-- truth 表在 kb9 build 目录 out/kb9_truth_table.tsv（列含 consensus/p1_hit 等当期字段，复算只用 truth 列防循环）。
+- Naive three-seat majority: treats `coarse:Fibroblasts` as an independent label → named=31; under C2b semantics, normalizing `coarse:X`≡`X` → named=28; **the hit set in both versions is exactly equal to the runner script's 26 clusters** → judged PASS. Fields: an ANN row = cluster_id/identity/level/grade/gates/flag/why.
+- The truth table lives in the kb9 build directory, out/kb9_truth_table.tsv (columns include current-period fields such as consensus/p1_hit; the recompute uses only the truth column to prevent circularity).
 
-## B5IMPL（plans/kbgov_b5impl_20260928/）
+## B5IMPL (plans/kbgov_b5impl_20260928/)
 
-B5=鼠源输入（title_frac 惯例 + Gm\d+/.*Rik$/m_only 三信号，冻结阈值 T=0.4）→ celltype_ranking=[] + unranked_candidates 全保留 + no_named_ranking_for；AMBIG{GLUL,VIM,CLU} 共表达仅 no_naming_claim 标注不删序。人源零干预；cell_type/list-mode 三工具零扰动（管辖面=genes-mode）。五门全 PASS（病灶 7/7、人源 230 簇位移 0.0%、鼠侧 59/59 全拒、黄金 41/41 off 全等、回退 42 探针逐字节、只读零写入）。fail-soft：词表缺失自动降级 legacy（==OFF 态实证）。
-**已知残余风险**：真人源 title-case 送上游会误拒（本数据 misdetections=0 但不保证）→ T+7 calllog 逐例复核，误拒>0 报 PI 切 B4 档（suspected 仅标注不拒答）——改档=方法判据变更须 PI 批，env 粒度同接线不分叉。
-项目维护方活探针三态脚本：training-venv stdio 起生产码；HUM KERA/ALDH3A1（具名 human_assumed）、MOUSE Thy1+Grin3a（suspected 拒答）、Gm3339 组（confirmed 拒答）；B5=0 对照还原 legacy。
+B5 = mouse-derived input (title_frac convention + the three signals Gm\d+/.*Rik$/m_only, frozen threshold T=0.4) → celltype_ranking=[] + all unranked_candidates retained + no_named_ranking_for; AMBIG{GLUL,VIM,CLU} co-expression only gets a no_naming_claim annotation, never an order deletion. Human input sees zero intervention; the three cell_type/list-mode tools see zero perturbation (governed surface = genes-mode). All five gates PASS (defect cases 7/7, human-side displacement 0.0% across 230 clusters, mouse side 59/59 all rejected, GOLDEN 41/41 identical when off, 42-probe fallback byte-identical, read-only with zero writes). Fail-soft: a missing lexicon automatically degrades to legacy (empirically identical to the OFF state).
+**Known residual risk**: genuine mouse title-case input sent upstream would be falsely rejected (misdetections=0 on this data, but no guarantee) → case-by-case calllog review at T+7; if false rejections >0, report to the PI and switch to the B4 tier (suspected = annotate only, never refuse to answer) — changing tiers = a change of methodological criteria and MUST be approved by the PI; the same wiring applies at env granularity, no fork.
+Project-maintainer live-probe tri-state script: production code started via training-venv stdio; HUM KERA/ALDH3A1 (named, human_assumed), MOUSE Thy1+Grin3a (suspected → refusal), Gm3339 group (confirmed → refusal); B5=0 control restores legacy.
 
-## H1M3（plans/grade_h1m3impl_20260928/）
+## H1M3 (plans/grade_h1m3impl_20260928/)
 
-判读协议 v1.3 §9=H1-M3 定名资格 `ie=pass ∨ res=pass`（technical 三门不参与），**向前生效**（落款日后预注册 run 起），9 归档反事实复算与锚件全等（升 24/翻正 7/新错 0/回归 0）；对 OBLIGRUN v2.1 面 99 票做 H1-M3 敏感性对照 delta=0 单独成列（主口径 26/33 不回改）。执行脚本 自曝 PREREG 手抄表 RUN6A"23→23"笔误（真值 24→24）→ ERRATA_PREREG 增量件：判据对照对象是冻结 json 锚件非手抄表，门有效性零影响——手抄表单格笔误+勘误件模式可复用。
+Reading protocol v1.3 §9 = H1-M3 naming eligibility `ie=pass ∨ res=pass` (the three technical gates do not participate), **prospective effect** (from runs preregistered after the sign-off date); the counterfactual recompute against the 9 archives is identical to the anchor artifacts (raised 24 / flipped correct 7 / new errors 0 / regressions 0); an H1-M3 sensitivity comparison on the 99 ballots of the OBLIGRUN v2.1 surface gives delta=0 and is kept in a separate column (the headline 26/33 is not retroactively altered). The runner script self-reported a transcription typo in the hand-copied PREREG table for RUN6A, "23→23" (true value 24→24) → ERRATA_PREREG incremental artifact: the criterion's comparison object is the frozen json anchor file, not the hand-copied table, so gate validity is entirely unaffected — the hand-copied-table single-cell typo + errata-artifact pattern is reusable.
 
-## RAGFIX3 三门（v2.4.2=242,928 chunks/3,869 篇）
+## RAGFIX3 three gates (v2.4.2 = 242,928 chunks / 3,869 papers)
 
-门③ 87/92=94.6% 首破 80%（原分母原阈值原判据；78→87 单调零倒退）；104 行→准入 103 拒 1（防双计）；7 目标单元兑现 6+C8ORF76 诚实 MISS（全文在库但无词边界 token）+副产品 3；下载 19.33MB≤100MB 预算零 >1GB；CPU embedding 链（禁 GPU 条款下可行）。
+Gate ③ 87/92 = 94.6%, the first breach of 80% (original denominator, original threshold, original criterion; 78→87 monotone with zero regressions); 104 rows → 103 admitted, 1 rejected (double counting prevented); of the 7 target units, 6 delivered + C8ORF76 honest MISS (full text in the corpus but no word-boundary token) + 3 side products; downloads 19.33MB, within the ≤100MB budget, nothing >1GB; the CPU embedding chain (viable under the no-GPU clause).
 
-## MOUSEEXT 重档判死（plans/mouse_ext_precheck_20260928/）
+## MOUSEEXT — the heavy tier is judged dead (plans/mouse_ext_precheck_20260928/)
 
-7 候选行级取证全不收/悬案：GSE137400/81905=训练池母系列（GSM 级实锤 10/10、6/6 包含）；GSE255520=训练细胞重测（收=循环）；GSE63472=P14 发育域+标签不在 GEO；GSE150703/184933=发育/扰动域无标签；唯一悬案 GSE201402（在盘 1.3GB 零下载，7/10 类但 panel 覆盖 50.25%<90% 冻结断言待补检）。**教训句式：标签达标≠独立性达标**；公开资源补不出真第二外部 F1=08-26 limitation 的钉死确认。
+Row-level forensics on the 7 candidates admits none, with one open case: GSE137400/81905 = mother series of the training pool (GSM-level smoking guns: 10/10, 6/6 containment); GSE255520 = re-profiled training cells (admitting = circular); GSE63472 = P14 developmental domain + labels not in GEO; GSE150703/184933 = developmental/perturbation domains without labels; the sole open case GSE201402 (already on disk, 1.3GB, zero downloads; 7/10 classes but panel coverage 50.25% < 90% — the frozen assertion awaits further checks). **Lesson phrasing: meeting the labeling bar ≠ meeting the independence bar**; public resources cannot supplement a true second external set — the 08-26 limitation note on F1 is confirmed beyond doubt.
 
-## REPOSYNC3 八门 + GitHub 凭据过期（push 通道）
+## REPOSYNC3 eight gates + expired GitHub credentials (push channel)
 
-T1-T8 全过（含 T7 自家数据 token 扫描首跑=HARD 0/masked 例外 2 件登记；T8 §9 三版语料筛查=36712326 自 v2.0 在库非本波引入，own-deposit+指派句式复核在案；ra3 103 篇零 watch 交集）。四层 commit 本地就绪（11f9649→73e9cd3→1f547f3→cf254ab，树净 main）后 **push 卡死=gh token 静默过期**（hosts.yml 空壳、缓存令牌 401、SSH key 未注册）→ 项目维护方设备码流救场（配方在 research-repo-publish）：curl device/code（**Accept: application/json 必须带，否则返回 form-encoded，双格式解析兜底**）→ user_code 发 PI → 轮询取 token → 自动 push。网络异常期 pgrep/全量 ps 扫 /proc 会卡死（某进程 D 态），单命令 echo/date 正常——诊断用定点命令勿全表扫描。
+T1-T8 all passed (including the first run of the T7 own-data token scan = HARD 0 / masked exceptions — 2 items registered; the T8 §9 three-version corpus screen = 36712326 has been in the corpus since v2.0, not introduced by this wave, own-deposit + attributed-phrasing review on file; ra3's 103 papers have zero intersection with the watch list). With the four local commits staged (11f9649→73e9cd3→1f547f3→cf254ab, clean tree on main), the **push stalled = the gh token had silently expired** (hosts.yml an empty shell, cached token returns 401, SSH key not registered) → rescued by the project maintainer's device-code flow (recipe in research-repo-publish): curl device/code (**the `Accept: application/json` header MUST be sent, otherwise the response is form-encoded — parse both formats as a fallback**) → send user_code to the PI → poll for the token → push automatically. During network anomalies, pgrep / a full `ps` sweep of /proc hangs (some process in D state) while single commands such as echo/date work fine — diagnose with targeted commands, never with full-table scans.
