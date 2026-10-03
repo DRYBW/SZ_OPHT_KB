@@ -428,14 +428,16 @@ def _pointer_exists_in_source(ref):
 
 
 # ---- Repository Cleaning (Red Line: internal sample IDs prohibited in repository; original working disk files not modified, repository-side build products uniformly pass through this layer)----
-_SCRUB = [
-    ("In-house YAS-2 vitreous humor samples", "In-house vitreous humor samples"),  # patient sample id -> generic wording (claim body = a literature protocol, not a derivative)
+# Regex-only rules (no batch-id literals anywhere in repo-side code or artifacts).
+_SCRUB_RE = [
+    (re.compile("本室 YAS-\\d+ 玻璃体液样本"), "本室玻璃体液样本"),
+    (re.compile("In-house YAS-\\d+"), "In-house"),
+    (re.compile("YAS-\\d+"), "in-house batch"),
+    (re.compile("BMR\\d+"), "in-house mouse dataset"),
 ]
 def _scrub_text(s: str) -> str:
-    for a, b in _SCRUB:
-        s = s.replace(a, b)
-    s = re.sub(r"YAS-\d+", "In-house samples", s)      # fallback: any YAS sample id
-    s = re.sub(r"BMR\d+", "In-house mouse dataset", s)  # fallback: BMR dataset ids
+    for pat, rep in _SCRUB_RE:
+        s = pat.sub(rep, s)
     return s
 
 _EN_MAP = None
@@ -461,12 +463,13 @@ def _en_render(o):
         if isinstance(x, list):
             return [walk(v) for v in x]
         if isinstance(x, str) and re.search(r"[\u4e00-\u9fff]", x):
-            t = _EN_MAP.get(x)
+            x2 = _scrub_text(x)  # redline scrub BEFORE lookup: sidecar keys are the scrubbed forms
+            t = _EN_MAP.get(x2, _EN_MAP.get(x))
             if t is None:
-                miss.append(x[:80])
-                return x
-            return t
-        return x
+                miss.append(x2[:80])
+                return x2
+            return _scrub_text(t)
+        return _scrub_text(x) if isinstance(x, str) else x
     r = walk(o)
     if miss:
         raise SystemExit("EN_RENDER_MAP missing %d unit(s): %s" % (len(miss), " | ".join(miss[:5])))
