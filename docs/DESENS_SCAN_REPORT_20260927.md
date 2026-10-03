@@ -1,49 +1,49 @@
-# 脱敏双扫描报告 — 2026-09-27 REPOSYNC
+# Sanitization double-scan report — 2026-09-27 REPOSYNC
 
-范围：docs/wiki（14 件）+ docs/skills（两套 skill 镜像 + protocols 3 件）+ docs/plans（判读层 1439 件）+ mcp_server（4 件代码）。
-规则三元组 = project-github-export 现行清单同源（R01–R16 编号见下表），本轮新增面：二手渠道商端点串、第三方作者邮箱、本地代理端口、内部 agent 角色名。
-**本报告不复现任何渠道商名/裁决商名/端点串**——规则名一律以代号+语义描述，全量映射留在本地脱敏器脚本与 git commit message（仓外）。
+Scope: docs/wiki (14 files) + docs/skills (two skill mirrors + 3 protocols files) + docs/plans (interpretation layer, 1439 files) + mcp_server (4 code files).
+The rule triples share their source with the current project-github-export checklist (R01–R16 codenames in the table below); surfaces newly covered this round: second-hand channel-vendor endpoint strings, third-party author emails, local proxy ports, internal agent role names.
+**This report reproduces no channel-vendor name / adjudicator name / endpoint string** — rules are referred to only by codename plus semantic description; the full mapping stays in the local sanitizer script and the git commit message (outside the repo).
 
-## 规则代号表（命中数）
+## Rule codename table (hit counts)
 
-| 代号 | 语义 | 标签 | 命中 |
+| Codename | Semantics | Label | Hits |
 |---|---|---|---|
-| R01 | 自家 DR 样本编号 | OWN_MOUSE_DR_DATASET | 2 |
-| R02 | IM 会话 ID 前缀形态 | CONTACT_ID | 0 |
-| R03 | 工作机主机名 | HOST | 0 |
-| R04 | 渠道商 A（中文俗称）及端点/裸别名（token-plan 类字样） | LLM_CHANNEL | 44 |
-| R05 | 渠道商 B（.fan/.fun 双域名系） | LLM_CHANNEL | 2 |
-| R06 | 渠道商 C（俗称+数字端点） | LLM_CHANNEL | 14 |
-| R07 | 渠道商 D（intern 域） | LLM_CHANNEL | 2 |
-| R08 | 外部裁决 LLM 别名（含裁决商 A$_ 前缀文件名；词边界防误伤 astrocyte 类子串） | REVIEWER_LLM | 353 |
-| R09 | IM 平台名（企微系） | MSG_PLATFORM | 7 |
-| R10 | 密钥形态兜底（sk-/github_pat_/gh*_/PRIVATE KEY） | REDACTED_SECRET | **0** |
-| R11 | 本地 LLM 栈名 | LOCAL_LLM | 1 |
-| R12 | 内部 agent 角色/profile 名 | AGENT_ROLE | 29 |
-| R13 | 第三方联系邮箱（论文通讯作者，API 缓存内） | CONTACT_EMAIL | 259 |
-| R14 | 内部服务端口（仅散文类生效） | PORT | 1 |
-| R15 | 本地代理端口（仅散文类生效；tsv/json/jsonl 数值证据面不触碰，防破坏可复算数字） | PORT | 4 |
-| R16 | 会话标识形态（session/conversation/chat/trace id） | SESSION_ID | **0** |
+| R01 | Own DR sample identifiers | OWN_MOUSE_DR_DATASET | 2 |
+| R02 | IM conversation-ID prefix shapes | CONTACT_ID | 0 |
+| R03 | Workstation hostnames | HOST | 0 |
+| R04 | Channel vendor A (Chinese nickname) and its endpoints/bare aliases ("token-plan" style strings) | LLM_CHANNEL | 44 |
+| R05 | Channel vendor B (.fan/.fun dual-domain family) | LLM_CHANNEL | 2 |
+| R06 | Channel vendor C (nickname + numeric endpoint) | LLM_CHANNEL | 14 |
+| R07 | Channel vendor D (intern domain) | LLM_CHANNEL | 2 |
+| R08 | External adjudication LLM aliases (incl. adjudicator A's `$_`-prefixed filenames; word boundary prevents collateral hits on substrings like "astrocyte") | REVIEWER_LLM | 353 |
+| R09 | IM platform names (WeCom family) | MSG_PLATFORM | 7 |
+| R10 | Secret-shape catch-all (sk-/github_pat_/gh*_/PRIVATE KEY) | REDACTED_SECRET | **0** |
+| R11 | Local LLM stack name | LOCAL_LLM | 1 |
+| R12 | Internal agent role/profile names | AGENT_ROLE | 29 |
+| R13 | Third-party contact emails (corresponding authors, inside API caches) | CONTACT_EMAIL | 259 |
+| R14 | Internal service ports (prose-type files only) | PORT | 1 |
+| R15 | Local proxy ports (prose-type files only; numeric evidence surfaces in tsv/json/jsonl are not touched, to avoid breaking recomputable numbers) | PORT | 4 |
+| R16 | Session-identifier shapes (session/conversation/chat/trace id) | SESSION_ID | **0** |
 
-## 文件名扫描（改名 21 件 + 1 目录）
+## Filename scan (21 renames + 1 directory)
 
-- knowledge-guided skill 引用件 1 份：文件名含渠道商 A 字样 → `<…>-llm-channel.md`（与 09-25 首导出仓内同名件对齐，内容刷新至 09-26 版）
-- kb9_ocs_20260927 五轮送审件 17 份（PROMPT/REPLY/send.log）：文件名裁决商前缀 → `REVIEWER_LLM_*`；正文引用同步替换，改名后引用与文件名逐一对应
-- kb9 脚本原名含 R08 词干 → `REVIEWER_LLM_xhigh.py`；out/recheck 留痕件 6 份同规则
-- 目录 `docs/plans/sync_<profile名>_scSOP_20260927` → `sync_scSOP_20260927`（profile 名不落目录面）
+- 1 reference file of the knowledge-guided skill: filename contained channel-vendor A wording → `<…>-llm-channel.md` (realigns with the same-named file in the 09-25 first-export repo; content refreshed to the 09-26 version)
+- 17 five-round review-submission files of kb9_ocs_20260927 (PROMPT/REPLY/send.log): adjudicator prefix in filenames → `REVIEWER_LLM_*`; in-text references replaced in sync, so after renaming each reference corresponds one-to-one with a filename
+- kb9 script whose original name contained the R08 stem → `REVIEWER_LLM_xhigh.py`; the 6 out/recheck audit-trail files follow the same rule
+- Directory `docs/plans/sync_<profile-name>_scSOP_20260927` → `sync_scSOP_20260927` (profile names do not land in directory names)
 
-## 零命中兜底（红线复查）
+## Zero-hit fallbacks (redline recheck)
 
-- 密钥形态（R10）：**0**；IM chat_id（R02）：**0**；主机名（R03）：**0**；会话标识（R16）：**0**（票档 toolcalls 实测仅 ts+tool+args+结果摘要，无会话字段）
-- 患者/DR 衍生数据：镜像面内 0 个 csv/percell/patient 文件；>5MB 大表与 raw 缓存目录整体未入镜像（体积与再生产方式见主 README 附录）
-- PI 原话：directive/简报中 PI 引语按原话保留（脱敏仅替换账号/渠道/邮箱形态，未删语句）
+- Secret shapes (R10): **0**; IM chat_id (R02): **0**; hostnames (R03): **0**; session identifiers (R16): **0** (ballot archives' toolcalls measured to carry only ts+tool+args+result summary, no session fields)
+- Patient/DR-derived data: 0 csv/percell/patient files inside the mirror surface; >5MB large tables and raw fetch-cache directories were kept out of the mirror entirely (sizes and regeneration path in the main README appendix)
+- PI verbatim: PI quotations in directives/briefs are kept word-for-word (sanitization replaces only account/channel/email patterns; no sentences were deleted)
 
-## 幂等验证
+## Idempotency verification
 
-替换后二次全规则扫描：0 命中、0 改名（各标签不与任何规则模式再匹配）。
+Second full-rule scan after replacement: 0 hits, 0 renames (no label re-matches any rule pattern).
 
-## 冻结哈希锚例外登记（重要）
+## Frozen hash-anchor exception register (important)
 
-- `docs/plans/btest_20260927/BTEST_PREREG_v1.0.md` 有 2 行经 R04/R12 脱敏（卡归属与通道字样）。
-- 其 sidecar `BTEST_PREREG_v1.0.md.sha256` **保持原样未重写**：其中哈希锚定的是线上原件（`/mnt/D/EyeKB/plans/...`，已实证 sha256 相符）。预注册锚不可被镜像方改写。
-- 因此在本镜像内执行 `sha256sum -c` 对该件**预期 FAIL**——这是脱敏差异，不是篡改。原件完整性以线上盘/证据包为准。
+- 2 lines in `docs/plans/btest_20260927/BTEST_PREREG_v1.0.md` were sanitized under R04/R12 (card-attribution and channel wording).
+- Its sidecar `BTEST_PREREG_v1.0.md.sha256` was **left as-is, not rewritten**: the hash anchors the live original (`/mnt/D/EyeKB/plans/...`, sha256 confirmed matching). A preregistration anchor must not be rewritten by the mirroring side.
+- Consequently, running `sha256sum -c` inside this mirror is **expected to FAIL** for that file — this is a sanitization difference, not tampering. Original integrity is judged against the live disk / evidence bundle.
