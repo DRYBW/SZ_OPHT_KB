@@ -365,7 +365,7 @@ def main():
     (DIS_DIR / "_DISEASE_TISSUE_MATRIX.md").write_text(render_matrix_md(), encoding="utf-8")
     ct = Path("/mnt/D/EyeKB/kb/priors/concepts.tsv")
     with open(ct, "w", encoding="utf-8") as f:
-        f.write("concept_id\tcanonical_name\tname_cn\tsynonyms\tsource_namings\tlevel\tnotes\n")
+        f.write("concept_id\tcanonical_name\tcommon_name\tsynonyms\tsource_namings\tlevel\tnotes\n")
         for row in CONCEPTS:
             f.write("\t".join(row) + "\n")
     print("W2 written:", DIS_DIR / "PDR__fibrovascular_membrane.md", "|", ct)
