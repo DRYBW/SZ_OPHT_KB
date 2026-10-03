@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""EyeKB pipeline — 阶段 A：标准单细胞处理（Scanpy / Harmony / Scrublet）。
+"""EyeKB pipeline — Stage A: standard single-cell processing (Scanpy / Harmony / Scrublet).
 
-输入  : 10X 目录（matrix.mtx + barcodes.tsv + genes.tsv，支持 .gz；可多子目录=多样本）
-        或 .h5ad（raw counts）。
-输出  : processed.h5ad（obs 含 QC 过滤、doublet 标记、Harmony 校正标记、leiden 聚类）
-        + cluster_markers.csv（每簇 wilcoxon top-N）+ 质控图（线粒体/基因检出/doublet/UMAP 前后）
-        + stage_a_metrics.json。
+Input   : a 10X directory (matrix.mtx + barcodes.tsv + genes.tsv, .gz supported; multiple
+          subdirectories = multiple samples) or a .h5ad (raw counts).
+Output  : processed.h5ad (obs carries QC filtering, doublet flags, Harmony correction marks,
+          leiden clustering) + cluster_markers.csv (per-cluster wilcoxon top-N) + QC figures
+          (mitochondrial %, genes detected, doublets, UMAP before/after) + stage_a_metrics.json.
 
-纪律红线（与 README 同步，勿删）：
-- 本脚本是标准处理，不调用任何 LLM，不产出任何"注释结论标签"；
-  聚类簇号只是待判读单元，不是细胞类型名。
-- 阈值全部可由命令行覆盖，默认值来自仓内已实测流程（docs/plans/figure_uplift_20260928/
-  scripts/v2_o1o3_harmony_scrublet_20260923.py 的协议），不做隐性自动调参。
+Discipline redlines (kept in sync with the README, do not remove):
+- This script is standard processing: it calls no LLM and produces no annotation-conclusion
+  labels; cluster IDs are units awaiting review, not cell-type names.
+- Every threshold is overridable on the command line; default values come from the
+  repo-validated protocol (docs/plans/figure_uplift_20260928/
+  scripts/v2_o1o3_harmony_scrublet_20260923.py); no hidden auto-tuning.
 """
 from __future__ import annotations
 
@@ -28,7 +29,8 @@ import pandas as pd
 
 ad.settings.allow_write_nullable_strings = False
 
-# 人/鼠线粒体基因 ENSG 常量（QC 用，公开参考数据；符号名可直接前缀匹配）
+# Human/mouse mitochondrial gene ENSG constants (for QC; public reference data;
+# symbol names also match by prefix)
 MT_ENSG = {
     "human": {
         "ENSG00000198804", "ENSG00000198712", "ENSG00000194631", "ENSG00000189043",
@@ -56,10 +58,10 @@ def _log(logf, step, **kw):
     print(f"[stageA] {step}: " + " ".join(f"{k}={v}" for k, v in kw.items()), flush=True)
 
 
-# ---------------------------------------------------------------- 输入装载
+# ---------------------------------------------------------------- input loading
 def _looks_ensg(names) -> bool:
     arr = list(names)
-    step = max(1, len(arr) // 2000)  # 均匀抽样整个基因轴（首段常被无 ENSG 映射的克隆/基因座符号占满，前缀顺序抽样会系统性低估）
+    step = max(1, len(arr) // 2000)  # sample the gene axis uniformly (the leading block is often filled with clone/locus symbols lacking ENSG mapping; prefix-ordered sampling would systematically underestimate)
     s = pd.Series([str(x) for x in arr[::step]])
     return float(s.str.match(r"^(ENS[GPT]\d{9,}|ENS\w{2,5}G\d{9,}\b)").mean()) > 0.5
 
@@ -73,18 +75,18 @@ def _symbol_column(adata: ad.AnnData) -> str | None:
 
 def resolve_gene_symbols(adata: ad.AnnData, species: str, logf,
                          symbol_col: str = "", ensg_map: str = "") -> tuple[ad.AnnData, dict]:
-    """把 var_names 变成 gene symbol（证据检索用）。优先级：
-    --gene-symbol-col > var 自带符号列 > var_names 已是符号 > --ensg-map 映射 > 降级（保留原 ID 并在报告注明）。
-    同时补 .var['mt'] 布尔列（线粒体 QC，符号前缀 MT-/mt-* 或内置 ENSG 常量）。"""
+    """Turn var_names into gene symbols (for evidence retrieval). Priority:
+    --gene-symbol-col > a symbol column already in var > var_names already symbols > --ensg-map mapping > degraded (keep original IDs and note it in the report).
+    Also fills .var['mt'] boolean column (mitochondrial QC; symbol prefix MT-/mt-* or built-in ENSG constants)."""
     note = {"gene_id_mode": "", "symbol_source": "", "degraded": False}
     vn = adata.var_names.astype(str)
     if symbol_col:
         if symbol_col not in adata.var.columns:
-            raise SystemExit(f"--gene-symbol-col={symbol_col!r} 不在 var 列里: {list(adata.var.columns)}")
+            raise SystemExit(f"--gene-symbol-col={symbol_col!r} is not among the var columns: {list(adata.var.columns)}")
         adata.var_names = pd.Index(adata.var[symbol_col].astype(str).str.upper().to_numpy())
         note.update(gene_id_mode="symbols", symbol_source=f"--gene-symbol-col:{symbol_col}")
     elif _symbol_column(adata) and not _looks_ensg(vn):
-        pass  # var_names 本身就是符号
+        pass  # var_names are already symbols
         note.update(gene_id_mode="symbols", symbol_source="var_names")
     elif not _looks_ensg(vn):
         note.update(gene_id_mode="symbols", symbol_source="var_names")
@@ -103,11 +105,11 @@ def resolve_gene_symbols(adata: ad.AnnData, species: str, logf,
                 mapped = None
         if mapped is None:
             note.update(gene_id_mode="ensembl_unmapped",
-                        symbol_source="none (证据检索降级：marker 比对命中率会低)",
+                        symbol_source="none (evidence retrieval degraded: marker-hit rates will be low)",
                         degraded=True)
             _log(logf, "gene_symbols", mode="ensembl_unmapped",
-                 hint="给 --ensg-map <ENSG<TAB>SYMBOL 两列TSV> 可恢复符号检索")
-    # 符号去重（映射后可能撞名）——保留首个，标记
+                 hint="pass --ensg-map <two-column ENSG<TAB>SYMBOL TSV> to restore symbol retrieval")
+    # symbol dedup after mapping (collisions possible) — keep the first, mark it
     dup = adata.var_names.duplicated()
     if dup.any():
         keep = adata.var[~dup].copy()
@@ -124,7 +126,7 @@ def resolve_gene_symbols(adata: ad.AnnData, species: str, logf,
 
 
 def load_input(input_path: Path, logf, sample_col: str = "") -> ad.AnnData:
-    """支持 .h5ad / 单 10X 目录 / 父目录（每个子目录一份 10X 三件套 = 一个样本）。"""
+    """Supports .h5ad / a single 10X directory / a parent directory (each subdir = one 10X triplet = one sample)."""
     import scanpy as sc
     input_path = Path(input_path)
     if input_path.is_file() and input_path.suffix in (".h5ad",):
@@ -145,24 +147,24 @@ def load_input(input_path: Path, logf, sample_col: str = "") -> ad.AnnData:
         a.obs["sample"] = input_path.stem
         return a
     if not input_path.is_dir():
-        raise SystemExit(f"输入不存在: {input_path}")
+        raise SystemExit(f"input does not exist: {input_path}")
 
     def _read_triplet(d: Path) -> ad.AnnData:
-        # 10X mtx 三件套（.gz 可选）；genes.tsv 两列/三列(feature protocol)都吃
+        # 10X mtx triplet (.gz optional); genes.tsv two-column/three-column (feature protocol) both accepted
         mtx = next((p for p in (d / "matrix.mtx", d / "matrix.mtx.gz") if p.exists()), None)
         bc = next((p for p in (d / "barcodes.tsv", d / "barcodes.tsv.gz") if p.exists()), None)
         gg = next((p for p in (d / "genes.tsv", d / "genes.tsv.gz",
                                d / "features.tsv", d / "features.tsv.gz",
                                d / "features.tsv.csv") if p.exists()), None)
         if not (mtx and bc and gg):
-            raise SystemExit(f"目录 {d} 不是 10X 三件套（缺 matrix.mtx/barcodes.tsv/genes.tsv）")
+            raise SystemExit(f"directory {d} is not a 10X triplet (missing matrix.mtx/barcodes.tsv/genes.tsv)")
         import scipy.io as sio
         import scipy.sparse as sp
         m = sp.csc_matrix(sio.mmread(mtx)).T  # genes x cells -> cells x genes
         cells = pd.read_csv(bc, sep="\t", header=None, dtype=str).iloc[:, 0].tolist()
         gdf = pd.read_csv(gg, sep="\t", header=None, dtype=str)
         if gdf.shape[1] >= 3 and gdf.iloc[:, 2].astype(str).str.contains("Gene Expression").any():
-            gdf = gdf.iloc[:, :2]  # cellranger v3 feature 协议前两列= ensg, symbol
+            gdf = gdf.iloc[:, :2]  # cellranger v3 feature protocol: first two columns = ensg, symbol
         gdf.columns = ["gene_id", "gene_symbol"][: gdf.shape[1]]
         obs = pd.DataFrame(index=pd.Index(cells, name="barcode"))
         var = gdf.set_index("gene_id" if "gene_id" in gdf else gdf.columns[0])
@@ -183,11 +185,11 @@ def load_input(input_path: Path, logf, sample_col: str = "") -> ad.AnnData:
                any((sub / n).exists() for n in ("barcodes.tsv", "barcodes.tsv.gz")):
                 tri_dirs.append(sub)
     if not tri_dirs:
-        raise SystemExit(f"{input_path}: 既不是 .h5ad，也不是（含多份）10X 三件套目录")
+        raise SystemExit(f"{input_path}: neither a .h5ad nor a (multi-)10X triplet directory")
     parts = [_read_triplet(d) for d in tri_dirs]
     a = ad.concat(parts, join="outer", label=None, merge="same")
     dup = int(a.obs_names.duplicated().sum())
-    if dup:  # 跨样本相同 barcode 是真实场景（如 GSE183320 127 例）：去重命名，否则下游 .loc 重排会爆炸
+    if dup:  # identical barcodes across samples are a real scenario (e.g. GSE183320 127 cases): rename to unique, otherwise downstream .loc reordering explodes
         a.obs_names_make_unique(join="-")
         _log(logf, "obs_names_make_unique", duplicates_fixed=dup)
     a.obs["sample"] = a.obs["sample"].astype(str)
@@ -197,7 +199,7 @@ def load_input(input_path: Path, logf, sample_col: str = "") -> ad.AnnData:
     return a
 
 
-# ---------------------------------------------------------------- 主流程
+# ---------------------------------------------------------------- main flow
 def run_stage_a(input_path, out_dir, species, sample_col="", gene_symbol_col="",
                 ensg_map="", group_col="", min_genes=200, max_pct_mt=20.0,
                 min_cells=3, resolution=1.0, n_top_genes=2000, n_pcs=50,
@@ -218,7 +220,7 @@ def run_stage_a(input_path, out_dir, species, sample_col="", gene_symbol_col="",
     a, gene_note = resolve_gene_symbols(a, species, logf, symbol_col=gene_symbol_col,
                                         ensg_map=ensg_map)
     if group_col and "=" in group_col:
-        # 三件套形态无 obs 列：用 "样本名=组名;样本名=组名" 映射构造分组
+        # triplet inputs have no obs column: build the grouping from a "sample=group;sample=group" mapping
         mp = dict(kv.split("=", 1) for kv in group_col.split(";") if "=" in kv)
         a.obs["group"] = a.obs["sample"].astype(str).map(lambda s: mp.get(s, s)).astype(str)
     elif group_col and group_col in a.obs.columns:
@@ -226,15 +228,15 @@ def run_stage_a(input_path, out_dir, species, sample_col="", gene_symbol_col="",
     elif "disease" in a.obs.columns:
         a.obs["group"] = a.obs["disease"].astype(str)
 
-    # raw counts 校验（只警告不拒收：全零/归一化输入会给出明确诊断）
+    # raw-counts validation (warn only, never reject: all-zero/normalized inputs get an explicit diagnosis)
     X = a.X
     frac_nonint = float(np.asarray((X[:300].toarray() % 1 != 0).mean()) if hasattr(X, "toarray")
                         else (X[:300] % 1 != 0).mean())
     if frac_nonint > 0.01:
-        _log(logf, "warn", note=f"X 非整数比例 {frac_nonint:.3f} —— 疑似已归一化输入（README 要求 raw counts），继续但请自查")
+        _log(logf, "warn", note=f"non-integer fraction of X is {frac_nonint:.3f} — input looks pre-normalized (README requires raw counts); continuing, please self-check")
     a.layers["counts"] = X.copy()
 
-    # ---- QC 统计与过滤
+    # ---- QC statistics and filtering
     sc.pp.filter_cells(a, min_genes=0)
     a.var["mt"] = a.var["mt"].astype(bool)
     sc.pp.calculate_qc_metrics(a, qc_vars=["mt"], percent_top=None, log1p=False, inplace=True)
@@ -242,12 +244,12 @@ def run_stage_a(input_path, out_dir, species, sample_col="", gene_symbol_col="",
            "median_genes": float(np.median(a.obs["n_genes_by_counts"])),
            "median_pct_mt": float(np.median(a.obs["pct_counts_mt"]))}
     keep = (a.obs["n_genes_by_counts"] >= min_genes) & (a.obs["pct_counts_mt"] <= max_pct_mt)
-    # 基因至少出现在 min_cells 个细胞
+    # genes must appear in at least min_cells cells
     keep_g = np.asarray((a[keep.to_numpy()].X != 0).sum(axis=0)).ravel() >= min_cells
     dbl_call = np.zeros(a.shape[0], dtype=bool)
     dbl_score = np.full(a.shape[0], np.nan)
     if not no_scrublet:
-        import scrublet as _sb  # noqa: F401  (走 scanpy 封装，与仓内实测一致)
+        import scrublet as _sb  # noqa: F401  (via the scanpy wrapper, consistent with the repo-validated flow)
         ac = a.copy()
         ac.X = ac.layers["counts"]
         sc.pp.scrublet(ac, batch_key="sample", expected_doublet_rate=expected_doublet_rate,
@@ -269,7 +271,7 @@ def run_stage_a(input_path, out_dir, species, sample_col="", gene_symbol_col="",
             "doublet_rate_kept": float(a_qc.obs["flag_doublet"].mean())}
     a = a_qc
 
-    # ---- 标准化 / HVG / PCA（顺序与仓内实测锚点一致）
+    # ---- normalization / HVG / PCA (order matches the repo-validated anchor)
     a.layers["counts"] = a.X.copy()
     sc.pp.normalize_total(a, target_sum=1e4)
     sc.pp.log1p(a)
@@ -289,7 +291,7 @@ def run_stage_a(input_path, out_dir, species, sample_col="", gene_symbol_col="",
     else:
         rep = "X_pca"
 
-    # ---- 双空间 UMAP + 聚类（聚类在判读空间 = harmony 空间，若启用）
+    # ---- dual-space UMAP + clustering (clustering in the review space = harmony space, when enabled)
     sc.pp.neighbors(a, n_neighbors=15, use_rep="X_pca", random_state=seed)
     sc.tl.umap(a, random_state=seed)
     a.obsm["X_umap_uncorrected"] = a.obsm["X_umap"].copy()
@@ -301,7 +303,7 @@ def run_stage_a(input_path, out_dir, species, sample_col="", gene_symbol_col="",
     if use_harmony:
         a.obsm["X_umap_harmony"] = a.obsm["X_umap"].copy()
 
-    # ---- marker 表
+    # ---- marker table
     sc.tl.rank_genes_groups(a, "leiden", method="wilcoxon", n_genes=30)
     gr = a.uns["rank_genes_groups"]
     names_df = pd.DataFrame(gr["names"]); scores_df = pd.DataFrame(gr["scores"])
@@ -319,7 +321,7 @@ def run_stage_a(input_path, out_dir, species, sample_col="", gene_symbol_col="",
     pd.DataFrame({"cluster": sizes.index.astype(str), "n_cells": sizes.values}) \
         .to_csv(out / "cluster_sizes.csv", index=False)
 
-    # ---- 质控图（绝对路径保存，scanpy save= 相对 CWD 教训固化）
+    # ---- QC figures (absolute-path saving; the scanpy save=-relative-to-CWD lesson is baked in)
     a.obs["cluster"] = a.obs["leiden"].astype(str)
     fig, axes = plt.subplots(1, 3, figsize=(14, 4))
     axes[0].hist(a.obs["pct_counts_mt"], bins=50, color="#c44")
@@ -371,14 +373,14 @@ def run_stage_a(input_path, out_dir, species, sample_col="", gene_symbol_col="",
 
 
 def main():
-    ap = argparse.ArgumentParser(description="EyeKB pipeline 阶段 A（标准处理，零 LLM）")
-    ap.add_argument("--input", required=True, help=".h5ad / 10X 三件套目录 / 多三件套父目录")
+    ap = argparse.ArgumentParser(description="EyeKB pipeline Stage A (standard processing, zero LLM)")
+    ap.add_argument("--input", required=True, help=".h5ad / 10X triplet directory / parent dir of multiple triplets")
     ap.add_argument("--species", required=True, choices=["human", "mouse"])
-    ap.add_argument("--out", required=True, help="输出目录")
-    ap.add_argument("--sample-col", default="", help="h5ad 里样本列名（默认用 obs.sample 或输入名）")
-    ap.add_argument("--group-col", default="", help="分组列名（对照/疾病等，供疾病先验比对启用）")
-    ap.add_argument("--gene-symbol-col", default="", help="var 里符号列名（输入是 ENSG 时）")
-    ap.add_argument("--ensg-map", default="", help="ENSG<TAB>SYMBOL 两列 TSV（离线映射）")
+    ap.add_argument("--out", required=True, help="output directory")
+    ap.add_argument("--sample-col", default="", help="sample column name in h5ad (defaults to obs.sample or the input name)")
+    ap.add_argument("--group-col", default="", help="grouping column name (control/disease etc., enables disease-prior comparison)")
+    ap.add_argument("--gene-symbol-col", default="", help="symbol column name in var (when the input uses ENSG)")
+    ap.add_argument("--ensg-map", default="", help="ENSG<TAB>SYMBOL two-column TSV (offline mapping)")
     ap.add_argument("--min-genes", type=int, default=200)
     ap.add_argument("--max-pct-mt", type=float, default=20.0)
     ap.add_argument("--min-cells", type=int, default=3)

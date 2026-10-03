@@ -1,26 +1,29 @@
 version: v2.3_2026-09
 created: '2026-09-25'
 description: >
-  v2.3 全量继承 v2.2，并新增固定清单中的四篇角膜 kbadd 引用文献
-  (EyeKB-RAG 增补卡 t_f3fa8c95 定向通道, 上游=KB 补录卡 t_e1febb8e sidecar
-  kbadd_KERATOCYTE_20260924.jsonl 中标注 PENDING_MAIN_DB 的 4 篇, 已 eutils 题录核验)。
-  常规正刊通道仍要求 OA (isOpenAccess=Y 且有 PMCID)、IF>3 (OpenAlex 2yr_mean_citedness,
-  全库同源口径) 及组织核验；本版另设定向通道 (admission_lane=kbadd_keratocyte_targeted)，
-  逐篇登记不满足常规条件的例外及其理由 (data_kc/kc_admission.json)。
-  PMID 11328728、15914606 的 OA 状态为 N (均无 PMCID → abstract-only)。
-  全文获取状态与实际收录范围分别登记: abstract-only 条目 (fulltext_status=abstract_only,
-  chunk 级 full_text_available=0) 仅提供摘要中可核验的证据，不代表已取得或核验正文。
-  这些条目为已发表正刊, is_preprint=0; v2.1 预印本通道及默认排除预印本的检索语义保持不变。
-  本定向通道不泛化为所有非 OA 正刊的入口。
+  v2.3 fully inherits v2.2 and adds the four cornea kbadd reference papers of the fixed list
+  (EyeKB-RAG supplement card t_f3fa8c95 targeted lane, upstream = KB-supplement card t_e1febb8e
+  sidecar kbadd_KERATOCYTE_20260924.jsonl, the 4 entries marked PENDING_MAIN_DB, verified via
+  eutils bibliographic check). The regular main-journal lane still requires OA (isOpenAccess=Y
+  with a PMCID), IF>3 (OpenAlex 2yr_mean_citedness, same source across the library) and tissue
+  verification; this version additionally defines a targeted lane (admission_lane=kbadd_keratocyte_targeted),
+  registering per-paper the exceptions to regular conditions and their rationale (data_kc/kc_admission.json).
+  OA status of PMID 11328728 and 15914606 is N (neither has a PMCID → abstract-only).
+  Full-text acquisition status and actual inclusion scope are registered separately: abstract-only
+  entries (fulltext_status=abstract_only, chunk-level full_text_available=0) provide only evidence
+  verifiable from the abstract, which does not mean the body text was obtained or verified.
+  These entries are published main-journal papers, is_preprint=0; the v2.1 preprint lane and the
+  default preprint-excluding retrieval semantics remain unchanged. This targeted lane is not
+  generalized into an entrance for non-OA main-journal papers.
 inheritance:
   v2.2: >-
-    literature_db/v2.2_2026-09/chunks.parquet 220571 chunks 原样继承
-    (文本/向量/全部列零改动; v2.2 已含 full_text_available 列, 本版无 schema 变更)
+    literature_db/v2.2_2026-09/chunks.parquet 220571 chunks inherited as-is
+    (text/vectors/all columns zero changes; v2.2 already has the full_text_available column, no schema change in this version)
   v2.2_frozen_sha256: {"v2.2 chunks.parquet": "e8d71734301da265e4814c2d788216c9b305dc390872d5565375283187c39eac", "v2.2 papers.jsonl": "bf115cf07dea0aee8751b93c0aff49ac712c8ec621476eb9d91991291abac243", "v2.2 manifest.yaml": "1c602e3ed58cae4b834ee484de17b5832476188eb38c35a01e056adc083d8b6d", "v2.1 chunks.parquet": "a371a860b10a4a6d94e5596e76cd45fc6f95fbb25aacb927d25f500d26937004", "v2.0 chunks.parquet": "f8bb3ef25fef31a633c78a4121746dddaec57ed31cb94dd77654be91c92047f5", "v2.0 papers.jsonl": "cb0420dc39af12796e41222b0ad7cb408b03aa65900dbdeb832bf8d3310433a1"}
-  baseline_recorded_at: data_kc/v22_sha256_baseline_20260925.txt (开卡前快照; 收尾复核一致=零改动证明)
+  baseline_recorded_at: data_kc/v22_sha256_baseline_20260925.txt (pre-card snapshot; closing recheck identical = proof of zero changes)
 increment_lane:
-  name: kbadd_keratocyte_targeted (t_f3fa8c95, parent=t_e1febb8e sidecar PENDING_MAIN_DB 闭环,
-    人工圈定 4 PMID, 非检索式准入)
+  name: kbadd_keratocyte_targeted (t_f3fa8c95, parent=t_e1febb8e sidecar PENDING_MAIN_DB closure,
+    4 PMIDs hand-picked, not query-based admission)
   pmids: ["41060151", "42115719", "11328728", "15914606"]
   n_papers: 4
   n_chunks: 83
@@ -28,22 +31,22 @@ increment_lane:
   availability_ledger: data_kc/kc_availability.tsv
   admission_register: data_kc/kc_admission.json
   upstream_sidecar: /mnt/D/EyeKB/kb/literature_db/kbadd_KERATOCYTE_20260924.jsonl
-  exceptions: {"11328728": "KB 补录定向引用 (t_e1febb8e sidecar, PTGDS 牛/培养口径降级辅助); 偏离: OA=N 且无 PMCID (fullTextXML 不可得→abstract-only); kbadd_keratocyte_targeted 通道例外", "15914606": "KB 补录定向引用 (t_e1febb8e sidecar, COL8A2 Fuchs 遗传语境降级辅助); 偏离: OA=N 且无 PMCID (fullTextXML 不可得→abstract-only); kbadd_keratocyte_targeted 通道例外"}
+  exceptions: {"11328728": "KB-supplement targeted citation (t_e1febb8e sidecar, PTGDS bovine/culture-scope downgraded support); deviation: OA=N and no PMCID (fullTextXML unavailable → abstract-only); exception of the kbadd_keratocyte_targeted lane", "15914606": "KB-supplement targeted citation (t_e1febb8e sidecar, COL8A2 Fuchs genetic-context downgraded support); deviation: OA=N and no PMCID (fullTextXML unavailable → abstract-only); exception of the kbadd_keratocyte_targeted lane"}
 embedding_provenance:
   model: bge-large-en-v1.5 (/mnt/D/OcularKB/models/bge-large-en-v1.5, fp32, normalize=True)
-  device: cpu (本机纪律 GPU 留科研; 与 v2.2 Part D0 的 CPU fp32 路径同模型同精度)
+  device: cpu (local discipline reserves GPU for research; same model and precision as v2.2 Part D0's CPU fp32 path)
 counts:
   n_chunks: 220654
-  n_papers: 3685  # = parquet unique paper_id (与 v2.1/v2.2 报数口径一致)
+  n_papers: 3685  # = parquet unique paper_id (consistent with the v2.1/v2.2 counting convention)
   papers_jsonl_lines: 3700
-  papers_jsonl_zero_chunk_ghosts: 15  # 历史遗留 (v1.0/v2.0/v2.1 时期 selected 但 0 chunk), 自 v2.2 原样继承, 非本卡引入; 本卡 4 篇全部 >0 chunk
+  papers_jsonl_zero_chunk_ghosts: 15  # historical residue (selected with 0 chunks in the v1.0/v2.0/v2.1 era), inherited as-is since v2.2, not introduced by this card; all 4 papers of this card have >0 chunks
   n_papers_preprint: 229
   n_papers_fulltext_absent: 233
   parquet_MB: 980.3
 collision_candidates_unresolved:
-  note: 3 篇词面撞库候选 (35659263/33298129/22388286) 自 v2.2 原样继承, 本卡未删除 —
-    排除影响面评估见 data_d0/collision_impact.json; 删除与否仍待用户拍板
+  note: 3 lexical-collision candidates (35659263/33298129/22388286) inherited as-is since v2.2, not deleted by this card —
+    exclusion impact assessment in data_d0/collision_impact.json; whether to delete still awaits the user's ruling
 redlines:
   v2.2_zero_change_verified: {"v2.2 chunks.parquet": true, "v2.2 papers.jsonl": true, "v2.2 manifest.yaml": true, "v2.1 chunks.parquet": true, "v2.0 chunks.parquet": true, "v2.0 papers.jsonl": true}
-  v2.1_v2.0_v1x_untouched: true (本卡全程只读)
-  evalset_untouched: true (plans/evalset/ 禁触红线, 全程未写入)
+  v2.1_v2.0_v1x_untouched: true (this card was read-only throughout)
+  evalset_untouched: true (plans/evalset/ untouchable red line, never written throughout)

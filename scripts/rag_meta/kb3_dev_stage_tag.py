@@ -1,19 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""KB3 W4: RAG papers 级 dev_stage 标签 sidecar (additive; chunk 级本次不做)。
+"""KB3 W4: RAG paper-level dev_stage label sidecar (additive; chunk level not done this round).
 
-输入: /mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.2_2026-09.jsonl (3,696 paper 行, 含 title)
-输出: /mnt/D/EyeKB/kb/literature_db/dev_stage_meta_v2.2_2026-09.jsonl
-      —— 新文件 (v2.2 sidecar 本体零改动, OcularKB 库零改动);
-      plans/kb3_evidence/REVIEW_SHEET_devstage.tsv (人工抽验 30 篇留痕)
-口径:
-  - 三值起步 adult / fetal_developing / unknown (任务书 W4); mixed 信号 (两侧同中) → unknown
-    + conflict 旗, 禁造 mixed。
-  - 规则=标题正则 (词表见下, 全落文件头供溯源); 抽验=分层随机 30 篇人工判 ok/mismatch,
-    mismatch 改判并记录 (matched_terms 保留原值, final 字段覆盖)。
-  - chunk 级 development_stage 明确不做 → 留 v2.3+ 语料迭代 (任务书"本次不做, 写明")。
-用法: python3 kb3_dev_stage_tag.py            # 全量打标 + 出抽验表
-      python3 kb3_dev_stage_tag.py --apply-review  # 读回人工判定后重建 final sidecar
+Input: /mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.2_2026-09.jsonl (3,696 paper rows, with titles)
+Output: /mnt/D/EyeKB/kb/literature_db/dev_stage_meta_v2.2_2026-09.jsonl
+      -- new file (v2.2 sidecar itself untouched, OcularKB library untouched);
+      plans/kb3_evidence/REVIEW_SHEET_devstage.tsv (manual spot-check of 30 papers, with audit trail)
+Scope:
+  - three values to start: adult / fetal_developing / unknown (task brief W4); mixed signals
+    (both sides hit) -> unknown + conflict flag; fabricating a mixed value is forbidden.
+  - rule = title regex (vocabulary below, all in the file header for provenance); spot-check =
+    stratified random 30 papers manually judged ok/mismatch; mismatches are reassigned and
+    recorded (matched_terms keeps the original value, the final fields override).
+  - chunk-level development_stage explicitly out of scope -> deferred to v2.3+ corpus iteration
+    (task brief: "not this round, state it").
+Usage: python3 kb3_dev_stage_tag.py            # full tagging + emit review sheet
+      python3 kb3_dev_stage_tag.py --apply-review  # rebuild final sidecar after manual review
 """
 import csv
 import json
@@ -33,20 +35,21 @@ FETAL_RE = re.compile(
     r"infant\w*|juvenile|pediatric|paediatric|developing|organoids?\b|hESC|iPSC|"
     r"pluripotent stem cell\w*|retinal progenitor|time.?course of (retinal )?development|"
     r"in vitro (retinal )?differentiation)\b"
-    # v1.1 (人工抽验 30 篇修正, 见 REVIEW_SHEET_devstage.tsv #23): 发育名词搭配类。
-    # 只收 组织+development 搭配, 不收裸 development (防 'drug development' 方法学假 hits)。
+    # v1.1 (corrections from manual review of 30 papers, see REVIEW_SHEET_devstage.tsv #23): developmental-noun collocations.
+    # Only accept tissue+development collocations, never bare development (avoids 'drug development' methodology false hits).
     r"|\b(ocular|retinal|retina|eye|corneal|cornea|lens|neural retina|visual system)\s+"
     r"development(?! of \w*(?:drug|therap|marker|method|tool|pipeline|model system))", re.I)
 ADULT_RE = re.compile(
     r"\b(adult\w*|aged|aging|age-?related|senile|geriatric|mature\w*\s+(donor|eye|retina)|"
     r"(older|elderly)\s+adult\w*)\b", re.I)
-# adult 词表注意: "mature" 裸词歧义大(成熟剪接), 只收 mature+名词搭配; AMD 类疾病词不判 adult
-# (年龄相关疾病文献主体是成人, 但标题不含 adult 字样者按 unknown 处理, 保守)。
+# adult vocabulary note: bare "mature" is highly ambiguous (mature splicing); only mature+noun collocations accepted; AMD-type disease terms do not count as adult
+# (age-related disease literature is mostly adult, but titles lacking the word "adult" are treated as unknown, conservative).
 
 
 def tag(title, ab=None):
-    """v1.2 合并: title 信号优先; title 无信号看 abstract (只中一侧→该侧+abs_only 旗;
-    两侧同中/双无→unknown)。title 与 abstract 各中一侧互斥 → conflict→unknown。"""
+    """v1.2 merge: title signal takes priority; if the title has no signal, fall back to the abstract
+    (only one side hits -> that side + abs_only flag; both sides / neither -> unknown).
+    Title and abstract hitting opposite sides is mutually exclusive -> conflict -> unknown."""
     f, a = FETAL_RE.findall(title), ADULT_RE.findall(title)
     tf = bool(f)
     ta = bool(a)
@@ -56,15 +59,15 @@ def tag(title, ab=None):
     terms = {"fetal": f, "adult": [x if isinstance(x, str) else x[0] for x in a]}
     if tf and ta:
         return "unknown", {**terms, "conflict": "title_both"}
-    if tf and aa and not af:      # title 发育 vs abstract 成人 → 矛盾, 保守
+    if tf and aa and not af:      # title developmental vs abstract adult -> conflict, conservative
         return "unknown", {**terms, "conflict": "title_fetal_abstract_adult"}
-    if ta and af and not aa:      # title 成人 vs abstract 发育 → 矛盾, 保守
+    if ta and af and not aa:      # title adult vs abstract developmental -> conflict, conservative
         return "unknown", {**terms, "conflict": "title_adult_abstract_fetal"}
     if tf:
         return "fetal_developing", terms
     if ta:
         return "adult", terms
-    # title 无信号 → abstract 层
+    # no title signal -> abstract layer
     if ab:
         terms["abstract"] = {"fetal": ab.get("fetal_hits", []),
                              "adult": ab.get("adult_hits", [])}
@@ -97,16 +100,16 @@ def build(apply_review=False):
                 if r.get("manual_call") in ("adult", "fetal_developing", "unknown"):
                     review_map[r["paper_id"]] = r["manual_call"]
     head = {"schema": "eyekb-dev-stage-meta/1.0", "generated": "2026-09-24",
-            "card": CARD, "source_db": "v2.2_2026-09 (OcularKB, 只读) ← titles via "
+            "card": CARD, "source_db": "v2.2_2026-09 (OcularKB, read-only) ← titles via "
                                         "evidence_meta_v2.2 sidecar (EyeKB)",
-            "method": "title+abstract regex v1.2 (词表单一真源="
-                      "scripts/rag_meta/kb3_dev_stage_tag.py; abstract 命中素材="
+            "method": "title+abstract regex v1.2 (vocabulary single source of truth = "
+                      "scripts/rag_meta/kb3_dev_stage_tag.py; abstract hit material = "
                       "plans/kb3_evidence/abstract_dev_stage_hits_20260924.json, "
-                      "merge=title 优先/互斥矛盾保守 unknown/abs_only 旗) + "
-                      "人工抽验 30 篇 (REVIEW_SHEET_devstage.tsv)",
+                      "merge = title priority / mutually exclusive conflicts conservatively unknown / abs_only flag) + "
+                      "manual spot-check of 30 papers (REVIEW_SHEET_devstage.tsv)",
             "values": ["adult", "fetal_developing", "unknown"],
-            "scope_note": "papers 级标签; **chunk 级 development_stage 本次不做**, 留 v2.3+ "
-                          "语料迭代 (KB3 任务书 W4)。两侧同中=unknown+conflict 旗, 禁造 mixed。"}
+            "scope_note": "paper-level labels; **chunk-level development_stage not done this round**, deferred to v2.3+ "
+                          "corpus iteration (KB3 task brief W4). Both sides hitting = unknown + conflict flag; fabricating a mixed value is forbidden."}
     ab_hits = {}
     if ABSTRACTS.is_file():
         ab_hits = json.loads(ABSTRACTS.read_text(encoding="utf-8")).get("hits", {})
@@ -124,7 +127,7 @@ def build(apply_review=False):
         if terms.get("abs_only"):
             stats["abs_only"] += 1
         tagged.append(row)
-    # 抽验 30: 每类 10, 不足则补 unknown; 确定性 seed=20260924
+    # spot-check 30: 10 per class, top up with unknown if short; deterministic seed=20260924
     rng = random.Random(20260924)
     sample = []
     for v in ("adult", "fetal_developing", "unknown"):
@@ -142,7 +145,7 @@ def build(apply_review=False):
         out.append(r)
     OUT.write_text("\n".join(json.dumps(x, ensure_ascii=False) for x in out) + "\n",
                    encoding="utf-8")
-    if not apply_review:  # 首轮: 出待人工表 (judgment 列留空)
+    if not apply_review:  # first pass: emit the pending-manual sheet (judgment columns left blank)
         with open(REV, "w", newline="", encoding="utf-8") as fh:
             w = csv.writer(fh, delimiter="\t")
             w.writerow(["paper_id", "auto_call", "matched", "title", "manual_call", "note"])

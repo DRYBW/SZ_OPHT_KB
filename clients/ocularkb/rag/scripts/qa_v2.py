@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""OCB-RAG2 W6 QA: ①retina 黄金集回归 (v1.0 基线 vs v2.0) ②逐组织 recall 抽查 (3-5 典型细胞类型)
-判据与 v1.0 stage4 一致 (Claude5 审核): Top-5 论文中 >=3 篇命中期望 marker (论文级, top-5 chunks 任一)
-回归判据: v2.0 每个用例的论文命中数 >= v1.0 基线 (不劣化)
-输出: literature_db/v2.0_2026-09/QA_V2.md + qa_v2.json
+"""OCB-RAG2 W6 QA: (1) retina golden-set regression (v1.0 baseline vs v2.0); (2) per-tissue recall spot check (3-5 typical cell types)
+Criteria identical to v1.0 stage4 (Claude5 review): >=3 of the Top-5 papers hit an expected marker (paper level; any of the top-5 chunks)
+Regression criterion: for every case, v2.0 paper-hit count >= v1.0 baseline (no degradation)
+Output: literature_db/v2.0_2026-09/QA_V2.md + qa_v2.json
 """
 import json, os, re, sys, time
 import numpy as np
@@ -30,7 +30,7 @@ def marker_hit(text, expected):
 def paper_level_recall(model, df, emb_matrix, case, tissue=None,
                        top_chunks_per_paper=5, n_papers=5, top_n=100):
     ct, sp, markers = case["cell_type"], case["species"], case["expected_markers"]
-    q = f"{ct} marker genes"  # 回归必须同 query (任务书: 与 v1.1 同 query 对比; tissue 只做过滤)
+    q = f"{ct} marker genes"  # regression must use the same query (task brief: compare against v1.1 with the same query; tissue is filter-only)
     emb = model.encode([q], normalize_embeddings=True)[0]
     sims = emb_matrix @ emb
     d = df.assign(_sim=sims)
@@ -61,7 +61,7 @@ def paper_level_recall(model, df, emb_matrix, case, tissue=None,
     return sum(1 for _, h in top_papers if h), [p for p, _ in top_papers]
 
 
-# ---- ① retina 黄金集 (v1.0 stage4 同款 10 用例) ----
+# ---- (1) retina golden set (same 10 cases as v1.0 stage4) ----
 GOLDEN = [
     {"cell_type": "Rod", "species": "human",
      "expected_markers": ["RHO", "rhodopsin", "NRL", "PDE6B", "GNAT1", "transducin"]},
@@ -87,7 +87,7 @@ GOLDEN = [
      "expected_markers": ["GAD1", "GAD2", "SLC32A1", "VGAT", "TFAP2A"]},
 ]
 
-# ---- ② 逐组织抽查 (典型细胞类型 2-4 个/组织; marker=文献共识启发式, 仅 QA 判读用) ----
+# ---- (2) per-tissue spot check (2-4 typical cell types per tissue; markers = literature-consensus heuristics, for QA reading only) ----
 TISSUE_SPOT = {
     "cornea": [
         {"cell_type": "corneal epithelium", "species": "human",
@@ -185,7 +185,7 @@ def main():
     m20 = np.stack(df20["embedding"].values)
     print(f"  v1.0: {len(df10)} chunks | v2.0: {len(df20)} chunks", flush=True)
 
-    # ---- retina 黄金回归 ----
+    # ---- retina golden regression ----
     golden = []
     for case in GOLDEN:
         h10, _ = paper_level_recall(model, df10, m10, case)
@@ -197,7 +197,7 @@ def main():
         print(f"golden {case['cell_type']:28s} v1.0={h10}/5 v2.0(retina)={h20}/5 "
               f"{'OK' if ok else 'DEGRADED'}", flush=True)
 
-    # ---- 逐组织抽查 ----
+    # ---- per-tissue spot check ----
     spot = {}
     for tissue, cases in TISSUE_SPOT.items():
         rows = []
@@ -217,26 +217,26 @@ def main():
     json.dump(out, open(f"{V20}/qa_v2.json", "w"), indent=1, ensure_ascii=False)
 
     with open(f"{V20}/QA_V2.md", "w") as f:
-        f.write("# OCB-RAG2 v2.0 QA 报告 (2026-09-23)\n\n")
-        f.write("判据 (与 v1.0 stage4 一致, Claude5 审核): Top-5 论文中 ≥3 篇命中期望 marker "
-                "(论文级: 每篇 top-5 chunks 任一命中即算)。\n\n")
-        f.write("## ① retina 黄金集回归 (v1.0 基线 vs v2.0)\n\n")
-        f.write("| 细胞类型 | v1.0 命中/5 | v2.0(retina过滤) 命中/5 | v2.0(无过滤) | 不劣化 |\n")
+        f.write("# OCB-RAG2 v2.0 QA report (2026-09-23)\n\n")
+        f.write("Criterion (same as v1.0 stage4, Claude5 review): >=3 of the Top-5 papers hit an expected marker "
+                "(paper level: a hit in any of each paper's top-5 chunks counts).\n\n")
+        f.write("## (1) retina golden-set regression (v1.0 baseline vs v2.0)\n\n")
+        f.write("| cell type | v1.0 hits/5 | v2.0 (retina filter) hits/5 | v2.0 (no filter) | no degradation |\n")
         f.write("|---|---|---|---|---|\n")
         for g in golden:
             f.write(f"| {g['cell_type']} | {g['v10_hits']} | {g['v20_retina_hits']} | "
                     f"{g['v20_all_hits']} | {'✅' if g['no_degrade'] else '❌'} |\n")
         npass = sum(1 for g in golden if g["no_degrade"])
-        f.write(f"\n**回归判定: {npass}/{len(golden)} 用例不劣化**"
-                f"{' — PASS' if npass == len(golden) else ' — 见逐用例说明 (红线7: 只陈述库内容事实)'}\n\n")
-        f.write("## ② 逐组织 recall 抽查 (v2.0, tissue 过滤开启)\n\n")
+        f.write(f"\n**Regression verdict: {npass}/{len(golden)} cases show no degradation**"
+                f"{' — PASS' if npass == len(golden) else ' — see per-case notes (redline 7: state library-content facts only)'}\n\n")
+        f.write("## (2) per-tissue recall spot check (v2.0, tissue filter on)\n\n")
         for tissue, rows in spot.items():
-            f.write(f"### {tissue}\n\n| 细胞类型 | 命中/5 | 判定 | Top PMIDs |\n|---|---|---|---|\n")
+            f.write(f"### {tissue}\n\n| cell type | hits/5 | verdict | Top PMIDs |\n|---|---|---|---|\n")
             for r in rows:
                 f.write(f"| {r['cell_type']} | {r['hits']} | "
-                        f"{'✅' if r['passed'] else '⚠️ 覆盖弱'} | {','.join(r['top_pmids'])} |\n")
+                        f"{'✅' if r['passed'] else '⚠️ weak coverage'} | {','.join(r['top_pmids'])} |\n")
             f.write("\n")
-        f.write("注: marker 为文献共识启发式, 仅用于 QA 判读, 不构成知识库断言。\n")
+        f.write("Note: markers are literature-consensus heuristics used only for QA reading; they are not knowledge-base assertions.\n")
     print("-> QA_V2.md + qa_v2.json", flush=True)
 
 

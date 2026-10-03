@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
-"""OcularKB RAG Stage 3: 检索接口 retrieve_references()
-用法:
+"""OcularKB RAG Stage 3: retrieval interface retrieve_references()
+Usage:
   python stage3_retrieve.py --cell-type "Rod Bipolar Cell" --species human --top-k 5
   python stage3_retrieve.py --query "Muller glia marker genes" --species mouse
-  # v2.0 全眼库 (推荐): 加 --db-dir 指向 v2.0 + --tissue 过滤
+  # v2.0 whole-eye library (recommended): add --db-dir pointing to v2.0 + --tissue filtering
   python stage3_retrieve.py --cell-type "corneal endothelium" --tissue cornea --db-dir <...>/v2.0_2026-09
-输出: 文献片段 + marker 共现 + PMID (可溯源)
-v2.0 变更 (2026-09-23, OCB-RAG2):
-  - 新增 --db-dir (默认仍为 v1.0_2026-08 → 旧调用行为不变) 与 --tissue 过滤
-  - 三维过滤 species+tissue+cell_type (Claude5 审核要求落地); 各维过滤后不足 top_k*3 回退全量
-  - tissue 过滤命中 tissue_labels 多标签列 (任一命中); v1.0 库无该列时忽略该参数并告警
+Output: literature snippets + marker co-occurrence + PMID (traceable)
+v2.0 changes (2026-09-23, OCB-RAG2):
+  - new --db-dir (default stays v1.0_2026-08 → old call behavior unchanged) and --tissue filtering
+  - three-dimensional filtering species+tissue+cell_type (landed per Claude5 review requirements); when a
+    dimension leaves fewer than top_k*3 hits, fall back to the full set
+  - the tissue filter hits the tissue_labels multi-label column (any-label match); on a v1.0 library without
+    that column the parameter is ignored with a warning
 """
 import argparse, json, os, sys
 import numpy as np
@@ -19,10 +21,11 @@ BASE = "/mnt/D/OcularKB/ocularkb/rag"
 DEFAULT_DB_DIR = f"{BASE}/literature_db/v1.0_2026-08"
 MODEL_DIR = "/mnt/D/OcularKB/models/bge-large-en-v1.5"
 
-# 2026-09-29 零模型可选化 (PI: "不要那个模型不行吗"):
-#   模型目录三级查找 EYEKB_MODEL_DIR(env) > 仓内 models/bge-large-en-v1.5 > 旧绝对路径;
-#   全部不可得时检索走纯词法兜底 (lexical_fallback, 返回体明确标注降级),
-#   dense 主路径与黄金41判据在模型可得时行为逐位不变。
+# 2026-09-29 model made optional (PI: "can we do without that model?"):
+#   three-level model-directory lookup EYEKB_MODEL_DIR(env) > in-repo models/bge-large-en-v1.5 > old absolute path;
+#   when none is available, retrieval falls back to pure lexical matching (lexical_fallback, the response body
+#   explicitly marks the degradation); the dense main path and the golden-41 criteria are bit-for-bit unchanged
+#   whenever the model is available.
 def _resolve_model_dir():
     env = os.environ.get("EYEKB_MODEL_DIR")
     if env:
@@ -44,29 +47,29 @@ def load(db_dir=None):
         import os.path as _p
         if not _p.isfile(_p.join(db_dir or DEFAULT_DB_DIR, "chunks.parquet")):
             raise SystemExit(
-                "ERROR: 文献库不存在。请先从 Releases 下载语料并解包, 再用 --db-dir 指向"
-                "解包目录 (见 README '5 分钟跑通' 第 2-3 步)。")
+                "ERROR: literature database not found. Download the corpus from Releases, unpack it, "
+                "and point --db-dir at the unpacked directory (see README '5-minute quickstart' steps 2-3).")
         md = _resolve_model_dir()
         if md:
             try:
                 from sentence_transformers import SentenceTransformer
-                _model = SentenceTransformer(md, device="cpu")  # GPU 留科研 (与 stage2c 一致)
+                _model = SentenceTransformer(md, device="cpu")  # GPU reserved for research (consistent with stage2c)
             except Exception as e:
-                print(f"WARN: embedding 模型不可用 ({type(e).__name__}), "
-                      "文献检索降级为纯词法 lexical_fallback (排序与官方 dense 版不同)",
+                print(f"WARN: embedding model unavailable ({type(e).__name__}), "
+                      "literature retrieval degraded to pure lexical_fallback (ranking differs from the official dense version)",
                       file=sys.stderr)
                 _model = None
         else:
-            print("INFO: 未找到 bge-large-en-v1.5 模型目录 (可用 EYEKB_MODEL_DIR 或仓内 "
-                  "models/ 指定), 文献检索走纯词法 lexical_fallback, 零模型可用。",
+            print("INFO: bge-large-en-v1.5 model directory not found (set it via EYEKB_MODEL_DIR or the "
+                  "in-repo models/ path); literature retrieval uses pure lexical_fallback — works with zero models.",
                   file=sys.stderr)
             _model = None
         _df = pd.read_parquet(f"{db_dir}/chunks.parquet")
         _db_dir = db_dir
-        print(f"库: {db_dir} | {len(_df)} chunks, {_df['species'].nunique()} species", file=sys.stderr)
+        print(f"DB: {db_dir} | {len(_df)} chunks, {_df['species'].nunique()} species", file=sys.stderr)
     return _model, _df
 
-# 细胞类型 → cell_type_mentioned 词表映射 (chunking 时提取的元数据)
+# cell type -> cell_type_mentioned vocabulary mapping (metadata extracted at chunking time)
 CT_MAP = {
     "rod": ["Rod"],
     "cone": ["Cone"],
@@ -82,7 +85,7 @@ CT_MAP = {
     "rod bipolar cell": ["BC"],
     "horizontal cell": ["HC"],
     "amacrine cell": ["AC"],
-    # --- v2.0 全眼组织细胞类型 ---
+    # --- v2.0 whole-eye-tissue cell types ---
     "corneal epithelial": ["CornealEpithelial"],
     "corneal epithelium": ["CornealEpithelial"],
     "corneal endothelial": ["CornealEndothelial"],
@@ -110,11 +113,11 @@ CT_MAP = {
 }
 
 def _ct_filter_keys(cell_type: str):
-    """把查询细胞类型名映射到 cell_type_mentioned 词表键 (大小写不敏感)"""
+    """Map a query cell-type name to cell_type_mentioned vocabulary keys (case-insensitive)"""
     k = cell_type.strip().lower()
     if k in CT_MAP:
         return CT_MAP[k]
-    # 模糊匹配: 包含关系
+    # fuzzy match: containment
     for key, vals in CT_MAP.items():
         if key in k or k in key:
             return vals
@@ -124,8 +127,8 @@ _EMB_CACHE = {}
 _LEX_HAY = {}
 
 def _lexical_scores(df, query, db_dir):
-    """零模型纯词法相关度: 词元覆盖率 (全文+标题) + 结构化元数据加权命中。
-    确定性无随机: 分数相同按 parquet 原行序稳定排序, 可复算。"""
+    """Zero-model pure-lexical relevance: token coverage (full text + title) + weighted hits on structured metadata.
+    Deterministic, no randomness: on tied scores, rows keep the stable parquet original order; recomputable."""
     import re
     toks = sorted({t for t in re.findall(r"[a-z0-9][a-z0-9\-]{1,}", query.lower())})
     if not toks:
@@ -158,8 +161,9 @@ def retrieve(cell_type: str, species: str = None, top_k: int = 5, query: str = N
     else:
         retrieval_mode = "dense_bge"
         emb = model.encode([query], normalize_embeddings=True)[0]
-        # fp16-slim 兼容分支（2026-09-28，REPOSYNC4）：embedding 列支持 float32-list 与
-        # float16 little-endian binary 两种存储；fp32 库行为与历史逐位一致（黄金41对账）。
+        # fp16-slim compatibility branch (2026-09-28, REPOSYNC4): the embedding column supports both
+        # float32-list and float16 little-endian binary storage; fp32 libraries behave bit-identically
+        # to the historical version (golden-41 reconciliation).
         if db_key in _EMB_CACHE:
             emb_matrix = _EMB_CACHE[db_key]
         else:
@@ -173,28 +177,28 @@ def retrieve(cell_type: str, species: str = None, top_k: int = 5, query: str = N
         df = df.assign(_sim=emb_matrix @ emb)
     if species:
         df = df[df["species"].isin([species, "both"])]
-    # tissue 多标签过滤 (v2.0 列; 任一命中; 不足 top_k*3 回退)
+    # tissue multi-label filter (v2.0 column; any-label match; fall back when fewer than top_k*3 remain)
     if tissue:
         if "tissue_labels" not in df.columns:
-            print("WARN: 当前库无 tissue_labels 列, --tissue 忽略", file=sys.stderr)
+            print("WARN: current library has no tissue_labels column; --tissue ignored", file=sys.stderr)
         else:
             df_t = df[df["tissue_labels"].apply(
                 lambda labs: labs is not None and tissue in labs)]
             if len(df_t) >= top_k * 3:
                 df = df_t
-    # cell_type_mentioned 元数据过滤 (Claude5 审核要求: 检索过滤 species+tissue/cell_type)
+    # cell_type_mentioned metadata filter (Claude5 review requirement: retrieval filters species+tissue/cell_type)
     ct_keys = _ct_filter_keys(cell_type)
     if ct_keys is not None:
         df_ct = df[df["cell_type_mentioned"].apply(
             lambda ctm: ctm is not None and any(k in ctm for k in ct_keys))]
-        # 过滤后不足 top_k*3 时回退到全量 (避免漏检)
+        # fall back to the full set when fewer than top_k*3 remain after filtering (avoid misses)
         if len(df_ct) >= top_k * 3:
             df = df_ct
     if model is None:
         df = df.sort_values("_sim", ascending=False, kind="stable").head(top_k * 3)
     else:
         df = df.sort_values("_sim", ascending=False).head(top_k * 3)
-    # 按 paper 去重, 每篇最多 2 条
+    # dedupe by paper, at most 2 entries per paper
     out, seen_papers = [], set()
     for _, r in df.iterrows():
         if r["paper_id"] in seen_papers:
@@ -211,7 +215,7 @@ def retrieve(cell_type: str, species: str = None, top_k: int = 5, query: str = N
             "tissue_labels": list(r["tissue_labels"]) if r.get("tissue_labels") is not None else [r.get("tissue", "unknown")],
             "section": r["section"],
             "snippet": r["text"][:500],
-            "_full_text": r["text"],  # 完整 chunk 文本 (质检 marker 匹配用)
+            "_full_text": r["text"],  # full chunk text (for QC marker matching)
             "cell_type_mentioned": list(ctm) if ctm is not None and len(ctm) else [],
             "marker_genes": list(mg) if mg is not None and len(mg) else [],
             "relevance_score": round(float(r["_sim"]), 4),
@@ -221,7 +225,8 @@ def retrieve(cell_type: str, species: str = None, top_k: int = 5, query: str = N
     return {"query": query, "species": species, "tissue": tissue,
             "retrieval_mode": retrieval_mode,
             "degraded": retrieval_mode == "lexical_fallback",
-            "note": ("纯词法兜底检索(零模型): 排序与官方 dense_bge 版不同, 若需官方同款排序请放置 bge-large-en-v1.5 模型目录"
+            "note": ("pure-lexical fallback retrieval (zero model): ranking differs from the official dense_bge version; "
+                     "place the bge-large-en-v1.5 model directory to get the official ranking"
                      if retrieval_mode == "lexical_fallback" else None),
             "results": out}
 
@@ -232,7 +237,7 @@ if __name__ == "__main__":
     ap.add_argument("--top-k", type=int, default=5)
     ap.add_argument("--query", default=None)
     ap.add_argument("--tissue", default=None)
-    ap.add_argument("--db-dir", default=None, help=f"chunks.parquet 所在目录 (默认 {DEFAULT_DB_DIR})")
+    ap.add_argument("--db-dir", default=None, help=f"directory containing chunks.parquet (default {DEFAULT_DB_DIR})")
     args = ap.parse_args()
     res = retrieve(args.cell_type, args.species, args.top_k, args.query,
                    tissue=args.tissue, db_dir=args.db_dir)

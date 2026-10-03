@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""EyeKB 镜像仓同质化验收器（VERIFY 契约 G3）。
-本机跑出的检索结果是否与仓锚点同分布？一条命令回答。
+"""EyeKB mirror-repo homogeneity verifier (VERIFY contract G3).
+Do the retrieval results produced on this machine match the distribution of the repo's anchors? One command answers.
 
-用法（仓根目录）：
+Usage (from repo root):
   python tests/verify_repro.py --db-dir literature_db/v2.4.2_2026-09_slim
-判据：41 例 top5 PMID 序列与 tests/REPRO_EXPECTED.json 逐位全等。
-退出码 0=PASS(同质) 1=FAIL(打印逐例差异与三层排查顺序)。
-依赖=requirements.repro.txt；引擎=clients/ocularkb/rag/scripts/stage3_retrieve.py（双格式分支）。
+Criterion: the top5 PMID sequence of all 41 cases is position-by-position identical to tests/REPRO_EXPECTED.json.
+Exit codes: 0=PASS (homogeneous); 1=FAIL (prints per-case diffs and the three-layer triage order).
+Dependencies = requirements.repro.txt; engine = clients/ocularkb/rag/scripts/stage3_retrieve.py (dual-format branch).
 """
 import argparse, json, os, sys, importlib.util
 
@@ -20,8 +20,8 @@ def main():
     a = ap.parse_args()
 
     if not os.path.isdir(a.db_dir):
-        print("FAIL: 找不到语料目录", a.db_dir)
-        print("排查顺序: G2 先做——从 Release 下载预置件并 sha256sum -c（见 README 5 分钟跑通 步骤2）。重建路径产物不作数（契约 G2）。")
+        print("FAIL: corpus directory not found", a.db_dir)
+        print("Triage order: do G2 first — download the prebuilt release from Releases and run sha256sum -c (see README 5-minute quickstart, step 2). Products of a rebuild path do not count (contract G2).")
         return 1
 
     spec = importlib.util.spec_from_file_location(
@@ -40,11 +40,11 @@ def main():
             mis.append({"case": f'{c["cell_type"]}/{c.get("species")}/{c.get("tissue")}',
                         "expected": c["top_pmids"], "got": got})
     ok = not mis
-    print(f"REPRO {'PASS' if ok else 'FAIL'}: {n-len(mis)}/{n} 例 top5 逐位全等")
+    print(f"REPRO {'PASS' if ok else 'FAIL'}: {n-len(mis)}/{n} cases with position-by-position identical top5")
     if mis:
         print(json.dumps(mis[:10], ensure_ascii=False, indent=1))
-        print("排查顺序: G2 预置件 sha 是否对上 -> G1 依赖版本是否按 requirements.repro.txt -> 模型是否 BAAI/bge-large-en-v1.5。")
-        print("勿改判据勿调参凑数：漂移本身就是要报的信息（docs/VERIFY_CONTRACT.md §4）。")
+        print("Triage order: does the G2 prebuilt-release sha match -> are G1 dependency versions per requirements.repro.txt -> is the model BAAI/bge-large-en-v1.5.")
+        print("Do not adjust criteria or tune parameters to force a pass: the drift itself is the information to report (docs/VERIFY_CONTRACT.md §4).")
     return 0 if ok else 1
 
 sys.exit(main())

@@ -22,7 +22,7 @@ async def run_case(env_extra, label):
             if isinstance(rank, list) and rank:
                 first = rank[0]
                 top = first.get("celltype") or first.get("class") or str(first)[:40]
-            # 类目规模:统计 ranking 长度
+            # class-count: measure the ranking length
             n = len(rank) if isinstance(rank, list) else 0
             print(json.dumps({"case": label, "server_version": ver, "tools": len(tools), "top1_MG_query": top, "ranking_len": n}, ensure_ascii=False))
             return ver, len(tools), top, n

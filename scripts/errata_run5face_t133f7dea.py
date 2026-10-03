@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-errata_run5face_t133f7dea.py — EVAL_RUN5FACE_20260925.md 归因②就地勘误落纸器
-卡: t_133f7dea (2026-09-25)
-缺陷: §归因② 与 §定性 将 Q6::24 的 kb_top1 与三票共识错归为 Keratocytes；
-     落地件（truth_table/p2_strict/verdict 三件互证）= Myofibroblast/SMC mural 接管链。
-纪律: errata-source-fix —— .bak 真前像(只建一次) + PRE sha 断言 + 锚点 count==1 否则
-     abort 不落盘 + 版本行 + 卷末勘误记录 + 幂等重入(ALREADY_APPLIED)。
-红线: 只改该句相关两段；其余判据/数字零触碰。P1 21/33、P2 1/33、PASS/FAIL 结论不动。
+errata_run5face_t133f7dea.py — in-place erratum applier for EVAL_RUN5FACE_20260925.md, attribution ②
+Card: t_133f7dea (2026-09-25)
+Defect: §attribution② and §qualitative wrongly attributed Q6::24's kb_top1 and the three-vote consensus to Keratocytes;
+     the landed artifacts (truth_table/p2_strict/verdict, mutually corroborating) = a Myofibroblast/SMC mural takeover chain.
+Discipline: errata-source-fix —— true .bak pre-image (created once only) + PRE sha assertion + anchor count==1 else
+     abort without landing + version line + end-of-document erratum record + idempotent re-entry (ALREADY_APPLIED).
+Red line: only touch the two passages bound to the sentence; all other criteria/numbers untouched. P1 21/33, P2 1/33, PASS/FAIL conclusions unchanged.
+NOTE: string literals below are the historical run's embedded content (matched against and written into the
+frozen erratum document); they are intentionally untranslated per the NEVER-TOUCH rule. Only comments were translated.
 """
 import hashlib
 import json
@@ -24,7 +26,7 @@ PRE_CANON = os.path.join(OUTDIR, "PRE_CANONICAL_sha.txt")
 
 PRE_SHA_EXPECT = "d77ec739daeb4544dcbcbd0404768e60eb50c5ee3a5e1aded91482ac50cbdc1b"
 
-# ---- 锚点与替换（整行精确） ----
+# ---- anchors and replacements (full-line exact) ----
 OLD_L18 = "② **Keratocytes 词条过火（P2 实证 1 簇 + 疑似连坐）**：Q6::24 author=Pericytes 6477/6565（98.7% 纯壁细胞），kb_top1=Keratocytes，三票共识跟词条判 Keratocytes——**上午 keratocyte 闭环救回 Q6::15 的同一把钥匙，这轮把 Pericytes 簇开成了别人的门**。KERA/ALDH3A1/NNMT 面板对 pericyte 的交叉反应从未被检过（keratocyte 补录时的 D001 审计盲区：眼表词条用视网膜图谱做不了邻类审计，OUT 22 类的代价此刻显形）。"
 
 NEW_L18 = "② **Myofibroblast/SMC mural 词条接管链（P2 实证 1 簇）**：Q6::24 author=Pericytes 6477/6565（98.7% 纯壁细胞），kb_top1=Myofibroblast，kb_names=Myofibroblast|SMC|MG（Pericyte 词条未上榜），三票共识=Smooth Muscle Cells——这轮把 Pericytes 簇开成别人门的是 Myofibroblast/SMC mural 词条接管链（映射歧义 Myofibroblast→Fibroblasts|Smooth Muscle Cells ambiguous），不是 Keratocytes。原稿把本簇词条归属与三票共识错记为 Keratocytes，经 KB6b 卡落地件核对（run5_truth_table.tsv / run5_p2_pollution_table_strict.tsv / run5_verdict.json 三件互证一致）证伪，已按落地件改写并见卷末★勘误记录。Keratocytes 的真实交叉信号在 Q6::20（truth=Epithelium，kb_top1=Keratocytes）：判读员正确覆盖词条判 Epithelium（P1 命中）；kb_top1=Keratocytes 的 5 簇（Q6::15/21/20/14/28）无一产生跟票（3 簇正确覆盖、2 簇平票），原「疑似连坐」一并证伪。KERA/ALDH3A1/NNMT 面板对 pericyte 的交叉反应从未被检过（keratocyte 补录时的 D001 审计盲区：眼表词条用视网膜图谱做不了邻类审计，OUT 22 类的代价此刻显形）——该残留限制仍成立，但与本案无关，本案机制在 mural 词条链。"
@@ -68,13 +70,13 @@ def main():
         sys.exit(2)
     cur = raw.decode("utf-8")
 
-    # 幂等守卫
+    # idempotency guard
     if "## ★勘误记录（v1.0→v1.1 · t_133f7dea · 2026-09-25）" in cur:
         log("ALREADY_APPLIED（幂等重入）：目标件已含本卡勘误记录，零写入退出。", lines_log)
         open(LOG, "a", encoding="utf-8").write("\n".join(lines_log) + "\n")
         sys.exit(0)
 
-    # PRE sha 断言（对当前态，落纸前）
+    # PRE sha assertion (against current state, before landing)
     pre_sha = sha(TGT)
     if pre_sha != PRE_SHA_EXPECT:
         print("ABORT: PRE sha 不匹配（可能有并发写入），不落盘")
@@ -82,7 +84,7 @@ def main():
         print("  want:", PRE_SHA_EXPECT)
         sys.exit(3)
 
-    # .bak 真前像只建一次
+    # true .bak pre-image created once only
     if not os.path.exists(BAK):
         shutil.copy2(TGT, BAK)
         log("前像已建: %s (sha==PRE 断言: %s)" % (os.path.basename(BAK), sha(BAK) == pre_sha), lines_log)
@@ -98,7 +100,7 @@ def main():
 
     lines = cur.split("\n")
 
-    # 锚点 count==1 断言
+    # anchor count==1 assertions
     ops = []
     def one_hit(pred, desc):
         hits = [i for i, l in enumerate(lines) if pred(l)]
@@ -121,11 +123,11 @@ def main():
     lines[i23] = NEW_L23
     ops.append({"op": "replace_line", "pre_line": i23 + 1, "tag": "定性节KB6b指针行改写",
                 "old_len": len(OLD_L23), "new_len": len(NEW_L23)})
-    # 插入顺序：先插入靠后的 i23? 注意插入会使行号漂移——按从后往前插入避免错位
-    # 版本行：插在裁决件行之后
+    # insertion order: note that inserting shifts line numbers -- insert back-to-front to avoid misalignment
+    # version line: inserted after the verdict-artifact line
     lines.insert(iver + 1, VER_LINE)
     ops.append({"op": "insert_after_line", "pre_line": iver + 1, "tag": "版本行 v1.1"})
-    # 卷末勘误记录
+    # end-of-document erratum record
     body = "\n".join(lines)
     if not body.endswith("\n"):
         body += "\n"
@@ -136,7 +138,7 @@ def main():
     post_sha = sha(TGT)
     log("落纸完成 PRE=%s POST=%s" % (pre_sha, post_sha), lines_log)
 
-    # 重放证明：对 .bak 施加同一 ops 必须逐字节复现现件
+    # replay proof: applying the same ops to .bak must reproduce the current file byte-for-byte
     blines = open(BAK, "rb").read().decode("utf-8").split("\n")
     j18 = [i for i, l in enumerate(blines) if l == OLD_L18][0]
     j23 = [i for i, l in enumerate(blines) if l == OLD_L23][0]
@@ -151,7 +153,7 @@ def main():
     replay_ok = (bbody.encode("utf-8") == open(TGT, "rb").read())
     log("重放证明（.bak+声明ops==现件逐字节）: %s" % ("PASS" if replay_ok else "FAIL"), lines_log)
 
-    # 零主张残留：缺陷句不得再以主张形态存在
+    # zero-claim residue: the defective sentence must not persist in assertive form
     residue = body.count(OLD_L18) + body.count(OLD_L23)
     log("缺陷原句残留计数: %d（应=0）" % residue, lines_log)
 

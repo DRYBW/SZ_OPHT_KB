@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""tests/test_s0_gate.py — S0 + claim 契约黄金回归（WIRE-P1 REV-1=astra 定盘版）。
+"""tests/test_s0_gate.py — S0 + claim contract golden regression (WIRE-P1, REV-1=astra ruling).
 
-判据（全部本地、零联网、零 LLM）：
-  T1 人视网膜真实切片（仓内 fixture）→ S0 不弃权，species=human，top1=human_retina。
-  T2 混染扰动 → 弃权（species_mixed_id_prefixes）。
-  T3 空面板扰动 → 弃权（empty_or_zero_counts）。
-  T4 防火墙源码断言（ast 级）：判读面模块不 import/引用 pitfalls/known_issues。
-  T5 契约一致性：build_claims.py --check（脚本↔pages 互证）+ INDEX 链接 100% 解析
-     + 全 claim 带 scope/evidence_source_type/owner/status/visibility/blind_safe/
-     answer_dependency + 唯一 Home + 无 GLOBAL 残留（五支树）。
-  T6 shadow 语义：consume 不产生任何 cap/override 旗标字样（禁自动改标断言），
-     非盲评安全条在预标注渲染中无自由文本。
-用法: python tests/test_s0_gate.py （exit 0=PASS；无 pytest 依赖）
+Criteria (all local, zero network, zero LLM):
+  T1 real human-retina slice (in-repo fixture) -> S0 does not abstain; species=human, top1=human_retina.
+  T2 contamination perturbation -> abstain (species_mixed_id_prefixes).
+  T3 empty-panel perturbation -> abstain (empty_or_zero_counts).
+  T4 firewall source assertion (AST level): review-surface modules do not import/reference pitfalls/known_issues.
+  T5 contract consistency: build_claims.py --check (script<->pages mutual proof) + INDEX links resolve 100%
+     + every claim carries scope/evidence_source_type/owner/status/visibility/blind_safe/
+     answer_dependency + unique Home + no GLOBAL residue (five-branch tree).
+  T6 shadow semantics: consume emits no cap/override flag wording (auto-relabel forbidden assertion),
+     non-blind-safe claims carry no free text in the pre-annotation rendering.
+Usage: python tests/test_s0_gate.py (exit 0=PASS; no pytest dependency)
 """
 import gzip
 import importlib
@@ -55,7 +55,7 @@ def main():
     for i, ln in enumerate(lines[1:], 1):
         parts = ln.rstrip("\n").split(",")
         if i in idxset and parts[0].startswith("ENSG"):
-            parts[0] = "ENSMUSG" + parts[0][4:]  # ENSG 前缀 4 字符，数字 11 位=RE_M 合法形态
+            parts[0] = "ENSMUSG" + parts[0][4:]  # ENSG prefix is 4 chars; the 11 digits keep it a valid RE_M form
         mixed.append(",".join(parts) + "\n")
     f2 = probe_csv("".join(mixed), "t2")["final"]
     ok2 = f2["abstain"] and any("species_mixed" in g for g in f2["gate_reasons"])
@@ -100,7 +100,7 @@ def main():
 
     r = subprocess.run([sys.executable, str(ROOT / "pipeline/pitfalls/build_claims.py"),
                         "--check"], capture_output=True, text=True)
-    # 链接 100% + 字段完整（validate 已在 --check 内跑；此处再核 INDEX）
+    # links 100% + fields complete (validate already runs inside --check; INDEX re-checked here)
     idx = json.loads((ROOT / "pipeline/pitfalls/pages/INDEX.json").read_text(encoding="utf-8"))
     ids = set(idx["claim_ids"])
     dangling, missing_fields = [], []
@@ -121,7 +121,7 @@ def main():
     print("T5", "PASS" if ok5 else f"FAIL check_rc={r.returncode} dangling={dangling[:3]} missing={missing_fields[:3]}")
     fails += [] if ok5 else ["T5"]
 
-    # T6 shadow 语义：渲染中非盲评安全条无自由文本；不出现 cap/override 字样
+    # T6 shadow semantics: no free text for non-blind-safe claims in the rendering; no cap/override wording appears
     sys.path.insert(0, str(ROOT / "pipeline/pitfalls"))
     consume = importlib.import_module("consume")
     lns, machine, claims, dang = consume.attention_section("human", "fibrovascular_membrane",
@@ -130,7 +130,7 @@ def main():
     red_claims = [c for c in claims if not c.get("blind_safe", True)]
     leak = [c["claim_id"] for c in red_claims if c["failure_mode"] in body or c["mitigation"] in body]
     banned = [w for w in ("PITFALL_OVERRIDE", "suggested_grade_cap", "C-TENTATIVE") if w in body]
-    # 类锚命中旗标也必须是 REVIEW:（非 override/非降级）
+    # class-anchor hit flags must also be REVIEW: (not override, not downgrade)
     fl, audit = consume.cluster_flags(claims, ["Mac_DAM_LAM", "Endothelial cell"])
     badflags = [x for x in fl if not x.startswith("REVIEW:")]
     ok6 = (not leak) and (not banned) and (not badflags) and all(

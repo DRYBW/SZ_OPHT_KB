@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""t_f3fa8c95 kc_sidecar_sync: EyeKB 侧元数据/标注层同步 (不碰检索语义, additive)
-1) evidence_meta_v2.0_2026-09.jsonl += 4 行 (live reason sidecar — eyekb_core._reason_map
-   硬编码读取该文件; 不 append 则验收"带 reason 联表"无法兑现. 无 sha 锚定, 无 evalset 引用)
-2) evidence_meta_v2.3_2026-09.jsonl 新建 = v2.2 全量 3696 行复制 + 4 新行 (版本完备表, POINTER 登记)
-3) EYEKB_DB_POINTER.yaml 追加 v2.3 条目 (role: latest-kbadd; default 未切, 沿先例待用户拍板)
-4) kbadd_KERATOCYTE_20260924.jsonl 4 行 retrieval_status → IN_MAIN_DB (实测结果由 selfcheck 传入)
-幂等: 已存在的 pmid 行跳过 (按 pmid 判重, 不重复追加)。
-红线: 不触 plans/evalset/; 不改 _reason_map 既有行。
+"""t_f3fa8c95 kc_sidecar_sync: EyeKB-side metadata/annotation layer sync (does not touch retrieval semantics, additive)
+1) evidence_meta_v2.0_2026-09.jsonl += 4 rows (live reason sidecar — eyekb_core._reason_map
+   hard-codes reading this file; without appending, the acceptance criterion "reason-joined table" cannot be met. No sha anchoring, no evalset reference)
+2) evidence_meta_v2.3_2026-09.jsonl created = full v2.2 copy of 3696 rows + 4 new rows (version-complete table, POINTER-registered)
+3) EYEKB_DB_POINTER.yaml appends the v2.3 entry (role: latest-kbadd; default not switched, following precedent pending user sign-off)
+4) kbadd_KERATOCYTE_20260924.jsonl 4 rows retrieval_status -> IN_MAIN_DB (measured results passed in by selfcheck)
+Idempotent: rows for pmids that already exist are skipped (dedup by pmid, no duplicate appends).
+Red line: do not touch plans/evalset/; do not modify existing _reason_map rows.
 """
 import json, os, re, sys
 from pathlib import Path
@@ -25,7 +25,7 @@ for l in open(LIT / "kbadd_KERATOCYTE_20260924.jsonl", encoding="utf-8"):
     d = json.loads(l)
     side[str(d["pmid"])] = d
 
-# selfcheck 实测结果 (可选, 用于 kbadd 状态行的 retrievable 注记)
+# selfcheck measured results (optional, used for the retrievable annotation on kbadd status rows)
 retr_note = {}
 sc_path = f"{BASE}/data_kc/kc_selfcheck.json"
 if os.path.exists(sc_path):
@@ -33,7 +33,7 @@ if os.path.exists(sc_path):
     for pm, v in (sc.get("anchor_rank") or {}).items():
         retr_note[pm] = v
 
-# reason → claim_relation axis 映射 (沿 KB1v2-W4 三字段语义)
+# reason -> claim_relation axis mapping (following KB1v2-W4 three-field semantics)
 AXIS_MAP = {
     "composition_baseline": ("composition", "support"),
     "state_signature": ("state", "qualify"),
@@ -59,7 +59,7 @@ def make_row(pm, with_source_db):
         "inclusion_reason": a["inclusion_reason"],
         "inclusion_reasons": [a["inclusion_reason"]],
         "confidence": "high",
-        "matched_rule": "kbadd-keratocyte-targeted(t_e1febb8e sidecar; eutils 题录核验)",
+        "matched_rule": "kbadd-keratocyte-targeted(t_e1febb8e sidecar; eutils bibliographic verification)",
         "claim_relation": [{
             "axis": axis, "relation": rel,
             "note": (a.get("upstream_reason_detail") or "")[:300],
@@ -70,13 +70,13 @@ def make_row(pm, with_source_db):
             "materials_hint": [],
             "disease_hint": (["fuchs"] if pm == "15914606" else []),
             "methods": ["transcriptomics"],
-            "locator_anchor": ("upstream sidecar 证据句内嵌 provenance (t_e1febb8e)"
-                               + ("; abstract-only (非OA 无 PMCID)" if abstract_only else "")),
+            "locator_anchor": ("upstream sidecar evidence sentences carry embedded provenance (t_e1febb8e)"
+                               + ("; abstract-only (non-OA, no PMCID)" if abstract_only else "")),
         },
         "n_chunks": int(per.get(pm, 0)),
         "verification_status": "kbadd_review_20260925",
         "reviewer": "pi-chief",
-        "review_note": ("PENDING_MAIN_DB→v2.3_2026-09 入库闭环 (t_f3fa8c95)"
+        "review_note": ("PENDING_MAIN_DB->v2.3_2026-09 admission loop closed (t_f3fa8c95)"
                         + ("; abstract-only" if abstract_only else "")),
         "review_track": "kbadd_keratocyte",
     }
@@ -103,15 +103,15 @@ def append_unique(path, rows, tag):
 import argparse
 ap = argparse.ArgumentParser()
 ap.add_argument("--stage", choices=["meta", "status", "all"], default="all",
-                help="meta=evidence_meta+POINTER(自检前跑); status=kbadd 4 行状态回填(自检后跑); all=顺序两步")
+                help="meta=evidence_meta+POINTER (run before selfcheck); status=backfill the 4 kbadd status rows (run after selfcheck); all=both steps in order")
 STAGE = ap.parse_args().stage
 
-# 1) live sidecar (v2.0 文件) append — eyekb_core._reason_map 读取对象
+# 1) live sidecar (v2.0 file) append — the object eyekb_core._reason_map reads
 if STAGE in ("meta", "all"):
     rows_v20 = [make_row(pm, with_source_db=False) for pm in KC_PMIDS]
     append_unique(LIT / "evidence_meta_v2.0_2026-09.jsonl", rows_v20, "evidence_meta_v2.0(live)")
 
-    # 2) v2.3 版本完备表 = v2.2 复制 + 4 行
+    # 2) v2.3 version-complete table = v2.2 copy + 4 rows
     out23 = LIT / "evidence_meta_v2.3_2026-09.jsonl"
     if not out23.exists():
         src = open(LIT / "evidence_meta_v2.2_2026-09.jsonl", encoding="utf-8").read()
@@ -123,32 +123,32 @@ if STAGE in ("meta", "all"):
     else:
         append_unique(out23, [make_row(pm, with_source_db=True) for pm in KC_PMIDS], "evidence_meta_v2.3")
 
-    # 3) POINTER.yaml 登记 v2.3 (幂等)
+    # 3) register v2.3 in POINTER.yaml (idempotent)
     ptr_path = LIT / "EYEKB_DB_POINTER.yaml"
     ptr = ptr_path.read_text(encoding="utf-8")
     if "v2.3_2026-09:" not in ptr:
         entry = """  v2.3_2026-09:
     path: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.3_2026-09
-    role: latest-kbadd (frozen read-only; = v2.2 全量继承零重算 + kbadd_keratocyte_targeted 4 篇; 卡 t_f3fa8c95)
+    role: latest-kbadd (frozen read-only; = v2.2 full inheritance with zero recompute + kbadd_keratocyte_targeted 4 papers; card t_f3fa8c95)
     chunks: CHUNKS_PLACEHOLDER
-    unique_papers: PAPERS_PLACEHOLDER   # papers.jsonl 行数 = LINES_PLACEHOLDER (含历史 0-chunk ghost)
+    unique_papers: PAPERS_PLACEHOLDER   # papers.jsonl line count = LINES_PLACEHOLDER (includes historical 0-chunk ghosts)
     sidecar: /mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.3_2026-09.jsonl
     manifest: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.3_2026-09/manifest.yaml
-    # MCP/stage3 default 未切 (服务行为变更, 沿先例待用户拍板; 本卡验收经 db 参数显式指向 v2.3 实测)
+    # MCP/stage3 default not switched (service behavior change, pending user sign-off per precedent; this card's acceptance was measured with the db parameter explicitly pointed at v2.3)
 """
         st = json.load(open(f"{BASE}/literature_db/v2.3_2026-09/build_stats.json"))
         nlines = sum(1 for _ in open(f"{BASE}/literature_db/v2.3_2026-09/papers.jsonl"))
         entry = (entry.replace("CHUNKS_PLACEHOLDER", str(st["n_chunks"]))
                      .replace("PAPERS_PLACEHOLDER", str(st["n_papers"]))
                      .replace("LINES_PLACEHOLDER", str(nlines)))
-        # 插到 embedding_model: 段之前
+        # insert before the embedding_model: section
         ptr = ptr.replace("embedding_model:", entry + "embedding_model:")
         ptr_path.write_text(ptr, encoding="utf-8")
         print("[POINTER] v2.3 registered")
     else:
         print("[POINTER] v2.3 already registered (skip)")
 
-# 4) kbadd jsonl 状态行更新 (PENDING_MAIN_DB → IN_MAIN_DB, 附实测 rank)
+# 4) update kbadd jsonl status rows (PENDING_MAIN_DB -> IN_MAIN_DB, with measured rank appended)
 if STAGE in ("status", "all"):
     kbadd = LIT / "kbadd_KERATOCYTE_20260924.jsonl"
     lines = [json.loads(l) for l in open(kbadd, encoding="utf-8")]
@@ -158,7 +158,7 @@ if STAGE in ("status", "all"):
         if pm in KC_PMIDS and d.get("retrieval_status", "").startswith("PENDING"):
             rk = retr_note.get(pm, {})
             rank = rk.get("raw_paper_rank")
-            d["retrieval_status"] = (f"IN_MAIN_DB (v2.3_2026-09, 入库+实测 2026-09-25 t_f3fa8c95"
+            d["retrieval_status"] = (f"IN_MAIN_DB (v2.3_2026-09, admitted+measured 2026-09-25 t_f3fa8c95"
                                      + (f"; anchor title-query paper rank={rank}" if rank else "") + ")")
             n_up += 1
     if n_up:

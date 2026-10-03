@@ -1,40 +1,47 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""EyeKB MCP 软复核提示层 (t_d6f2a0a0 / D4 放行, PI 2026-09-25)
-v0.2 · 按 REVIEWER_LLM CONDITIONAL 回函七项必修重写（评审回函原件为线上侧文件，未随仓收录）
+"""EyeKB MCP soft-review hint layer (t_d6f2a0a0 / D4 released, PI 2026-09-25)
+v0.2 · rewritten per the seven mandatory items of the REVIEWER_LLM CONDITIONAL reply
+(the original reply is an online-side file, not included in this repo)
 
-两条软提示 (reminder, 非硬旗标, 不新增定名/弃权/候选排除条件):
-  1) rod_bc_review  —— 依据 /mnt/D/OcularKB/models/V2PROD_ROD_BC_BLINDSPOT_20260925.md
-     (C18 案: 清洁窗口排除 C18 后 2/48,517; 孤立簇非系统性盲区 → 只软提示不设旗标)
-  2) mural_crosstalk —— 依据 /mnt/D/EyeKB/plans/kb6b_face_20260925/AUDIT_KB6b_D002_separation.md
-     + STROMAL_WARNING_DRAFT.md; 措辞基线 = EVAL_RUN5FACE_20260925.md v1.1 勘误
-     (Q6::24 = Myofibroblast/SMC mural 词条接管链, 不是 Keratocytes)。
+Two soft hints (reminders, not hard flags; no new naming/abstention/candidate-exclusion conditions):
+  1) rod_bc_review  —— basis /mnt/D/OcularKB/models/V2PROD_ROD_BC_BLINDSPOT_20260925.md
+     (C18 case: 2/48,517 in the clean window excluding C18; an isolated cluster is not a systematic
+     blind spot → soft hint only, no flag)
+  2) mural_crosstalk —— basis /mnt/D/EyeKB/plans/kb6b_face_20260925/AUDIT_KB6b_D002_separation.md
+     + STROMAL_WARNING_DRAFT.md; wording baseline = EVAL_RUN5FACE_20260925.md v1.1 errata
+     (Q6::24 = Myofibroblast/SMC mural entry takeover chain, NOT Keratocytes).
 
-纪律 (REVIEWER_LLM §3.6/§3.7/B4/B5/B7):
-- 注记只在既有结果产生后附加; 不反馈改变候选/分数/排序/原有字段; 不新增可被解释为
-  权重/风险分的字段 (severity 类字段已按 §3.7 删除)。
-- 同分并列组 (TOP) 语义消除 dict 插入序依赖; 不给 ranking 加二级排序。
-- 角色三层: 已审计共享/反向证据 / 目标类别存活锚 / 仅面板成员事实。
-- 运行时消息不输出未经本执行件 OLS 回证的 CL 标识符 (红线3); 本体包含关系以已审计
-  定义文本引用 (出处 = KB6b §2 要点4, 其 OLS 引文在册)。
-- 面板 = 当次 query_marker 实际加载的 markers 快照 (来源/版本随 trigger 落字),
-  不隐式汇总历史或未来版本。
-- 开关: env EYEKB_MCP_SOFTFLAGS 每调用读一次; strip().casefold() ∈ {0,false,off,no}
-  → off; 其余值一律 on; off 时整 key 不存在。
+Discipline (REVIEWER_LLM §3.6/§3.7/B4/B5/B7):
+- Notes are attached only after existing results are produced; no feedback onto candidates/scores/
+  ordering/original fields; no new field that could be read as a weight/risk score (severity-type
+  fields were removed per §3.7).
+- The tied-score group (TOP) semantics remove dict insertion-order dependence; no secondary sort is
+  added to ranking.
+- Three role tiers: audited shared/reverse evidence / target-class survival anchor / panel-membership
+  fact only.
+- Runtime messages never output CL identifiers not corroborated by OLS through this executor
+  (red line 3); ontology subsumption is quoted from audited definition text (source = KB6b §2
+  point 4, whose OLS citation is on file).
+- Panel = the markers snapshot actually loaded by the current query_marker call (source/version
+  written into the trigger), never an implicit rollup of historical or future versions.
+- Switch: env EYEKB_MCP_SOFTFLAGS read once per call; strip().casefold() ∈ {0,false,off,no}
+  → off; all other values → on; when off the whole key is absent.
 """
 import os
 
 SCHEMA = "eyekb-softflag/1.0"
 
-# ---- flag#1 参数 (§2 + REVIEWER_LLM Q1/Q2 裁决: TOP 并列组, 不扩到严格次位) ----
-ROD_MIN_HITS = 2         # |R| ≥ 2 (基因证据级启发式; 非表达主导性观测)
-ROD_GE_BCCORE = True     # |R| ≥ |B| 条款保留 (REVIEWER_LLM Q1: 不为扩命中删比较项)
+# ---- flag#1 parameters (§2 + REVIEWER_LLM Q1/Q2 ruling: TOP tie group, not extended to the strict runner-up) ----
+ROD_MIN_HITS = 2         # |R| >= 2 (gene-evidence-level heuristic; not an expression-dominance observation)
+ROD_GE_BCCORE = True     # |R| >= |B| clause retained (REVIEWER_LLM Q1: do not delete the comparison term to widen hits)
 
-# ---- flag#2 参数 (§3 + REVIEWER_LLM Q3 裁决 A: 单命中=“家族面板关联提醒”) ----
-MURAL_RANK_BOUNDARY = 3  # TOP3 = 第三个不同类别的命中数边界及其全部同分类别
+# ---- flag#2 parameters (§3 + REVIEWER_LLM Q3 ruling A: single hit = "family-panel association reminder") ----
+MURAL_RANK_BOUNDARY = 3  # TOP3 = the hit-count boundary of the 3rd distinct class and all classes tied with it
 
-# canonical 归一 (REVIEWER_LLM §3.1): 去空白 → 取 "::" 后缀 → casefold → 有限同义词表;
-# 仅用于 notes 判据, 不回写响应/词条解析; 表外名称不做模糊匹配。
+# canonical normalization (REVIEWER_LLM §3.1): strip whitespace → take the "::" suffix → casefold →
+# finite synonym table; used only for notes criteria, never written back into responses/entry parsing;
+# no fuzzy matching for names outside the table.
 _SYNONYM = {
     "pericyte": "Pericyte", "pericytes": "Pericyte",
     "fibroblast": "Fibroblast", "fibroblasts": "Fibroblast",
@@ -52,49 +59,66 @@ def _canon(ct):
     return _SYNONYM.get(s.casefold(), None) if s.casefold() in _SYNONYM else s
 
 
-# 角色三层 (证据分层, 不夸大):
-#   T2 = KB6b 逐格三色审计在册的 共享/反向 证据 (文件+节号随消息披露)
-#   T2a = STROMAL_WARNING_DRAFT 在册的方向反转/上皮源/通签判读
-#   T3 = 仅"面板成员"事实 (无独立审计角色) —— 不得被读作已证串扰
+# Three role tiers (evidence layering, no overclaiming):
+#   T2 = shared/reverse evidence on file in the KB6b per-cell three-color audit (file + section
+#        number disclosed with the message)
+#   T2a = direction-reversal / epithelial-origin / blanket-signature readings on file in
+#         STROMAL_WARNING_DRAFT
+#   T3 = panel-membership fact only (no independent audit role) — must not be read as proven crosstalk
 ROLES = {
-    "audited_shared": {  # KB6b §2 逐格红判据在册 (T2)
-        "NNMT": "已审计: Keratocytes 词条反向假锚——对纤维基质 donor 一致率 0.167, 方向反转"
-                " (KB6b §2 要点2)",
-        "ALDH3A1": "已审计: 对角膜上皮亚型反向——Corneal_suprabasal_PMC lfc=-0.32/cons=0.125,"
-                   " 系角膜上皮分化程序基因, pooled 掩盖致 RED (KB6b §2 要点3)",
-        "DCN": "已审计: 对 Keratocytes 反向 lfc≤-1.96 (Fibroblast 词条红基因, KB6b §2 表)",
-        "LUM": "已审计: 对 Keratocytes 反向 lfc≤-1.96 (同上)",
-        "PTGDS": "已审计: 对 Keratocytes 反向 lfc≤-1.96 (同上)",
-        "COL1A2": "已审计: Fibroblast 与 Pericyte 两词条共同红基因; 对 Keratocytes 反向 -1.99、"
-                  "对纤维基质 -2.81 (KB6b §2 表)",
-        "ACTA2": "已审计: SMC 词条红基因, lfc 0.83@Pericytes (被邻组触发, KB6b §2 表)",
-        "TAGLN": "已审计: SMC 红基因 (-0.25@Pericytes) 且 Myofibroblast 词条最高负荷组"
-                 "=Pericytes (KB6b §2 表/§3)",
-        "PRRX1": "已审计: Pericyte 词条红基因 (KB6b §2 表)",
-        "MGP": "已审计: Pericyte 词条红基因 (KB6b §2 表)",
-        "ITGA1": "已审计: Pericyte 词条红基因 (KB6b §2 表)",
-        "THY1": "已审计: Pericyte 词条红基因; Fibroblast 的 THY1/COL3A1 对 Schwann/动脉亚型"
-                "亦失败 (KB6b §2 表/§4)",
-        "FN1": "已审计: Fibroblast 词条红基因 (KB6b §2 表)",
+    "audited_shared": {  # KB6b §2 per-cell red criteria on file (T2)
+        "NNMT": "audited: reverse false anchor for the Keratocytes entry — donor agreement rate 0.167 "
+                "against fibrous stroma, direction reversed"
+                " (KB6b §2 point 2)",
+        "ALDH3A1": "audited: reverse against corneal-epithelium subtypes — Corneal_suprabasal_PMC "
+                   "lfc=-0.32/cons=0.125;"
+                   " a corneal-epithelium differentiation-program gene, masked by pooling → RED "
+                   "(KB6b §2 point 3)",
+        "DCN": "audited: reverse against Keratocytes lfc≤-1.96 (red gene of the Fibroblast entry, "
+               "KB6b §2 table)",
+        "LUM": "audited: reverse against Keratocytes lfc≤-1.96 (same as above)",
+        "PTGDS": "audited: reverse against Keratocytes lfc≤-1.96 (same as above)",
+        "COL1A2": "audited: common red gene of both the Fibroblast and Pericyte entries; reverse "
+                  "-1.99 against Keratocytes, "
+                  "-2.81 against fibrous stroma (KB6b §2 table)",
+        "ACTA2": "audited: red gene of the SMC entry, lfc 0.83@Pericytes (triggered by the neighbour "
+                 "group, KB6b §2 table)",
+        "TAGLN": "audited: SMC red gene (-0.25@Pericytes) and the highest-loading group of the "
+                 "Myofibroblast entry "
+                 "= Pericytes (KB6b §2 table/§3)",
+        "PRRX1": "audited: red gene of the Pericyte entry (KB6b §2 table)",
+        "MGP": "audited: red gene of the Pericyte entry (KB6b §2 table)",
+        "ITGA1": "audited: red gene of the Pericyte entry (KB6b §2 table)",
+        "THY1": "audited: red gene of the Pericyte entry; Fibroblast's THY1/COL3A1 also fail against "
+                "Schwann/arterial subtypes"
+                " (KB6b §2 table/§4)",
+        "FN1": "audited: red gene of the Fibroblast entry (KB6b §2 table)",
     },
-    "survival_anchor": {  # KB6b §2 要点5/§8 存活锚, 按目标类别语境 (B2 修复: 不跨类计数)
-        "KERA": "Keratocytes 侧存活锚 (D002 三色全绿, 对 9 邻组全绿)——拟定 Keratocytes 请复核"
-                " KERA 及角膜基质语境",
-        "NOTCH3": "Pericyte 侧存活锚——用于 Pericyte 邻类比较, 不替代其他类支持证据",
-        "HIGD1B": "Pericyte 侧存活锚——同上",
-        "CALD1": "Pericyte 侧存活锚 (亦为壁细胞通签成员, 两种语境各按其审计条目解读)",
-        "CNN1": "SMC 侧存活锚——用于 SMC 邻类比较, 不替代其他类支持证据",
-        "MYH11": "SMC 侧存活锚——同上",
-        "MYL9": "SMC 侧存活锚; 同时是 SMC/Myofibroblast 面板共有成员 (语境分开)",
-        "DES": "SMC 侧存活锚——同上 (结构零审计仅涉 SMC·DES 一格, KB6b §7 A4)",
-        "LMOD1": "SMC 侧存活锚——同上",
+    "survival_anchor": {  # KB6b §2 point 5/§8 survival anchors, by target-class context (B2 fix: no cross-class counting)
+        "KERA": "survival anchor on the Keratocytes side (D002 three-color all-green, all-green against "
+                "all 9 neighbour groups) — if naming Keratocytes, re-check"
+                " KERA and the corneal-stroma context",
+        "NOTCH3": "survival anchor on the Pericyte side — used for Pericyte neighbour-class comparison; "
+                  "does not substitute for support evidence of other classes",
+        "HIGD1B": "survival anchor on the Pericyte side — same as above",
+        "CALD1": "survival anchor on the Pericyte side (also a member of the mural-cell general signature; "
+                 "each of the two contexts is read per its own audit entry)",
+        "CNN1": "survival anchor on the SMC side — used for SMC neighbour-class comparison; does not "
+                "substitute for support evidence of other classes",
+        "MYH11": "survival anchor on the SMC side — same as above",
+        "MYL9": "survival anchor on the SMC side; also a shared member of the SMC/Myofibroblast panels "
+                "(keep the contexts separate)",
+        "DES": "survival anchor on the SMC side — same as above (the structural-zero audit touches only "
+               "the SMC·DES cell, KB6b §7 A4)",
+        "LMOD1": "survival anchor on the SMC side — same as above",
     },
 }
 
 
 def panel_member_note(gene):
-    """T3: 未列入审计角色表的家族面板基因——只报面板成员事实。"""
-    return "面板成员事实 (当次 markers 快照中位于 mural 家族面板; 本执行件未含其独立审计角色)"
+    """T3: family-panel genes not listed in the audit role table — report the panel-membership fact only."""
+    return ("panel-membership fact (in the mural family panel of the markers snapshot loaded by this "
+            "call; this executor carries no independent audit role for it)")
 
 
 def enabled():
@@ -103,7 +127,7 @@ def enabled():
 
 
 def _class_hits(markers):
-    """从当次 markers 快照派生 (canonical 类名→基因 set) 与 文件版本清单。"""
+    """Derive (canonical class name → gene set) from the current markers snapshot, plus the file-version list."""
     per_class = {}
     for ct, gs in markers.items():
         c = _canon(ct)
@@ -118,8 +142,8 @@ def _snapshot_sources(prov):
 
 
 def _top_groups(ranking):
-    """h(c) = canonical 类 c 各行现有 n_shared 的最大值 (不相加, 不生成新排名输出)。
-    TOP = 达全局最大 h 的类集合。"""
+    """h(c) = the maximum of the existing n_shared across rows of canonical class c (no summing, no
+    new ranking output). TOP = the set of classes reaching the global max h."""
     h = {}
     for e in ranking or []:
         try:
@@ -127,35 +151,39 @@ def _top_groups(ranking):
         except (TypeError, ValueError):
             n = 0
         if n <= 0:
-            continue  # 零命中行不构成证据
+            continue  # zero-hit rows do not constitute evidence
         c = _canon(e.get("cell_type", ""))
         h[c] = max(h.get(c, 0), n)
     if not h:
         return {}, set(), set()
     mx = max(h.values())
     top = {c for c, v in h.items() if v == mx}
-    # TOP3 = 第三个不同**类别**的命中数边界及其全部同分类别 (REVIEWER_LLM R2 必修4:
-    # 每类别保留一个分数、不去重分数层; 与"前三个不同分数层级"的反例已区分)
-    scores = sorted(h.values(), reverse=True)   # 按类别计, 不去重 set()
+    # TOP3 = the hit-count boundary of the 3rd distinct **class** and all classes tied with it
+    # (REVIEWER_LLM R2 mandatory-fix 4: keep one score per class, no dedup of the score layer;
+    #  already distinguished from the "top three distinct score tiers" counterexample)
+    scores = sorted(h.values(), reverse=True)   # counted per class, no set() dedup
     b3 = scores[min(2, len(scores) - 1)]
     top3 = {c for c, v in h.items() if v >= b3}
     return h, top, top3
 
 
-SUFFIX = ("本提示非硬旗标, 不构成定名或弃权条件; 其出现不代表误注释; "
-          "不得用于 module score、标签加权、置信度加分或候选排序输入 (服务级红线)。")
+SUFFIX = ("this hint is not a hard flag and constitutes neither a naming condition nor an abstention "
+          "condition; its presence does not indicate mis-annotation; "
+          "it must not be used for module score, label weighting, confidence bonus, or candidate "
+          "ranking input (service-level red line).")
 
 
 def build_notes(markers, mode, query_genes=None, ranking=None, found_classes=None,
                 provenance=None):
-    """返回 notes list (可为空)。纯注记: 不触碰 ranking/其他字段。"""
+    """Return the notes list (may be empty). Pure annotation: does not touch ranking/other fields."""
     if not enabled():
         return []
     per_class = _class_hits(markers)
     rod = per_class.get("Rod", set())
     bc_all = per_class.get("BC", set())
-    # BC core = canonical BC 的 v4.1 正名面板 (显示名恰为 "BC" 者); 若当次库无 "BC"
-    # 显示名 (如 library=retina_interneuron 单库), core 退化为该 BC 面板本身。
+    # BC core = the v4.1 canonical-naming panel of canonical BC (the one whose display name is exactly
+    # "BC"); if the current libraries have no "BC" display name (e.g. library=retina_interneuron alone),
+    # the core degrades to that BC panel itself.
     bc_core = set()
     for ct, gs in markers.items():
         if str(ct).strip() == "BC":
@@ -167,7 +195,8 @@ def build_notes(markers, mode, query_genes=None, ranking=None, found_classes=Non
         if c in MURAL_CLASSES:
             mural_union |= gs
 
-    # 符号集合 U = 核心匹配用的当次规范序列去重 (query 已被 core 大写; 不改其输出)
+    # Symbol set U = the deduplicated canonical per-call sequence used for core matching (the query was
+    # already uppercased by core; its output is not modified)
     u = {str(g).strip().upper() for g in (query_genes or []) if str(g).strip()}
     r_hits = sorted(u & rod)
     b_hits_n = len(u & bc_core)
@@ -175,7 +204,7 @@ def build_notes(markers, mode, query_genes=None, ranking=None, found_classes=Non
     notes = []
     src = _snapshot_sources(provenance)
 
-    # ---------- flag#1 rod_bc_review (genes 模式 only) ----------
+    # ---------- flag#1 rod_bc_review (genes mode only) ----------
     if mode == "genes" and "BC" in top and len(r_hits) >= ROD_MIN_HITS \
             and (not ROD_GE_BCCORE or len(r_hits) >= b_hits_n):
         bc_max = h_map.get("BC", 0)
@@ -191,26 +220,31 @@ def build_notes(markers, mode, query_genes=None, ranking=None, found_classes=Non
                 "bc_core_hits_n": b_hits_n,
                 "bc_h": bc_max,
                 "max_tied_classes": tied,
-                "rule": ("mode==genes ∧ BC∈TOP(最高命中并列组) ∧ |R|≥%d ∧ |R|≥|B_core|"
+                "rule": ("mode==genes ∧ BC∈TOP(highest-hit tie group) ∧ |R|≥%d ∧ |R|≥|B_core|"
                          % ROD_MIN_HITS),
                 "data_snapshot": src,
             },
             "message": (
-                "复核提醒: 本查询基因证据含视杆面板基因 " + ",".join(r_hits) +
-                ", 且 BC 处于本工具 ranking 的最高命中并列组"
-                + (f" (与 {'|'.join(x for x in tied if x != 'BC') or '—'} 同分)" if len(tied) > 1 else "")
-                + "。若拟采用 BC 定名, 请结合表达量 (rod3/bc3 per-10k 口径) 与共表达背景复核;"
-                " 本工具未观测表达主导性, 也未观测最终注释。历史审计背景 (口径=训练池外"
-                " truth=Rod∧rod_dominant 清洁窗口, 非当前基因集代理规则的准确率,"
-                " 亦非当前查询的风险估计): 排除 C18 单簇后"
-                " 2/48,517 (0.004%); C18 同口径 511/660 (77.42%); 含 C18 为 513/49,177"
-                " (1.043%)——盲区为 GSE155288 C18 孤立簇样态 (方向指向退化/低质量 rod),"
-                " 非系统性低幅度盲区, 且该汇总含 Q8 胎儿集不构成成人总体率; 勿用无真值"
-                " 过滤的低杆带率外表述盲区规模。" + SUFFIX),
+                "review reminder: the gene evidence of this query contains rod-panel genes " + ",".join(r_hits) +
+                ", and BC sits in the highest-hit tie group of this tool's ranking"
+                + (f" (tied with {'|'.join(x for x in tied if x != 'BC') or '—'})" if len(tied) > 1 else "")
+                + ". If you intend to name BC, re-check together with expression levels (rod3/bc3 per-10k "
+                "caliber) and the co-expression background;"
+                " this tool observes neither expression dominance nor the final annotation. Historical audit "
+                "background (caliber = out-of-training-pool"
+                " truth=Rod∧rod_dominant clean window; not the accuracy of a proxy rule on the current gene "
+                "set,"
+                " nor a risk estimate for the current query): excluding the C18 single cluster"
+                " 2/48,517 (0.004%); C18 at the same caliber 511/660 (77.42%); including C18 513/49,177"
+                " (1.043%) — the blind spot is the isolated-cluster pattern of GSE155288 C18 (direction "
+                "pointing at degenerated/low-quality rod),"
+                " not a systematic low-margin blind spot; this summary includes the Q8 fetal set and so does "
+                "not constitute an adult population rate — do not extrapolate the size of the blind spot from"
+                " low-bar band rates computed without truth filtering." + SUFFIX),
             "evidence": {
                 "interpretation_source":
                     "/mnt/D/OcularKB/models/V2PROD_ROD_BC_BLINDSPOT_20260925.md",
-                "note": "本条为基因集层复核启发式, 非表达主导性检测器。"},
+                "note": "this note is a gene-set-layer review heuristic, not an expression-dominance detector."},
         })
 
     # ---------- flag#2 mural_crosstalk ----------
@@ -220,23 +254,25 @@ def build_notes(markers, mode, query_genes=None, ranking=None, found_classes=Non
         hit_classes = sorted({_canon(ct) for ct in (found_classes or []) if ct})
         fam = [c for c in hit_classes if c in MURAL_CLASSES]
         if fam:
-            conditions.append("词条查询命中家族类: " + "|".join(fam))
+            conditions.append("entry query hit family classes: " + "|".join(fam))
     elif mode == "genes":
         gene_hits = sorted(u & mural_union)
         if gene_hits:
-            conditions.append(f"家族面板关联提醒: 输入基因命中 mural 家族面板"
-                              f" {len(gene_hits)} 个: " + ",".join(gene_hits) +
-                              " (单命中即附注, 不构成已发现串扰的证据)")
+            conditions.append(f"family-panel association reminder: {len(gene_hits)} of the input genes"
+                              f" hit the mural family panel: " + ",".join(gene_hits) +
+                              " (a single hit already gets an annotation; this is not evidence of "
+                              "discovered crosstalk)")
             for g in gene_hits:
                 role = ROLES["audited_shared"].get(g) or ROLES["survival_anchor"].get(g) \
                     or panel_member_note(g)
-                kind = ("T2-已审计共享/反向证据" if g in ROLES["audited_shared"] else
-                        "T2a-目标类别存活锚" if g in ROLES["survival_anchor"] else
-                        "T3-仅面板成员事实")
+                kind = ("T2-audited shared/reverse evidence" if g in ROLES["audited_shared"] else
+                        "T2a-target-class survival anchor" if g in ROLES["survival_anchor"] else
+                        "T3-panel-membership fact only")
                 role_lines.append(f"[{kind}] {g}: {role}")
         fam_top3 = sorted(c for c in top3 if c in MURAL_CLASSES)
         if fam_top3:
-            conditions.append("ranking 最高命中并列组/第三类别边界内出现家族类: "
+            conditions.append("family classes appear inside the ranking's highest-hit tie group / the "
+                              "3rd-class boundary: "
                               + "|".join(fam_top3))
     if conditions:
         notes.append({
@@ -246,42 +282,60 @@ def build_notes(markers, mode, query_genes=None, ranking=None, found_classes=Non
             "trigger": {
                 "mode": mode,
                 "conditions": conditions,
-                "rule": ("cell_type: found 词条 canonical∈家族; genes: U∩家族面板≠∅ 或 "
-                         "TOP3∩家族≠∅ (TOP3=第三不同类别命中数边界含并列)"),
+                "rule": ("cell_type: found entry canonical∈family; genes: U∩family panel≠∅ or "
+                         "TOP3∩family≠∅ (TOP3 = the hit-count boundary of the 3rd distinct class, ties "
+                         "included)"),
                 "data_snapshot": src,
             },
             "message": (
-            "串扰警示 (D002 眼表): Pericytes/Smooth Muscle Cells/Fibroblasts/"
-            "Myofibroblasts/Keratocytes 家族存在共 marker 判读风险——KB6b 三色复审下"
-            " 4 词条全红、纤维基质词条 0 绿; 已审计定义 (OLS 原文见 KB6b §2 要点4,"
-            " 本运行时消息按红线3 不转抄 CL 号): keratocyte 为驻角膜基质的特化成纤维"
-            " 细胞 (keratocyte⊂fibroblast 本体含义)。判读涉及本家族时——"
-            " ①NNMT 为已审计反向假锚 (donor 一致率 0.167, 方向反转), 该审计不支持以它"
-            "作为间质区分证据;"
-            " ②ALDH3A1 为已审计上皮程序基因 (对 suprabasal PMC 反向), 见它先查上皮语境;"
-            " ③方向关系按 KB6b 逐格表: DCN/LUM/PTGDS 已审计对 Keratocytes 反向"
-            " (lfc≤-1.96), COL1A2 已审计对 Keratocytes 反向 (-1.99) 且对纤维基质 -2.81;"
-            " FN1 等其余红基因成员: 红基因身份不隐含对特定邻类的方向, 以对应表项为准;"
-            " Keratocytes↔Fibroblast 互判建议对照 KB6b 红/绿判据复核, 其中 Keratocytes"
-            " 侧唯一全绿锚为 KERA——拟定 Keratocytes 请复核 KERA 及角膜基质语境;"
-            " Pericyte 侧存活锚 NOTCH3/HIGD1B/CALD1 与 SMC 侧 CNN1/MYH11/MYL9/DES/LMOD1"
-            " 各用于其目标类邻类比较, 不跨类计数、不替代彼此支持证据;"
-            " ④比较 Pericyte vs SMC vs Myofibroblast 时, 建议结合共表达背景解释;"
-            " ⑤Myofibroblast 词条: KB6b §3 交叉扫描登记其在 D002 眼表无一专属高表达"
-            " 立足组 (见该节逐格表), 判读引用它时注意此审计背景。"
-                " 已证伪措辞提醒: RUN5-face Q6::24 (truth=Pericytes 98.7% 纯) 的归因是"
-                " Myofibroblast/SMC mural 词条接管链 (kb_top1=Myofibroblast, 三票=SMC,"
-                " Pericyte 词条未上榜) 之表达层相容证据, 不是 Keratocytes; 查询引擎侧排序"
-                " 机制未审 (KB6b REVIEWER_LLM A10 边界)。"
-                + ("".join(" 逐基因角色 " + ln + ";" for ln in role_lines[:14]))
+            "crosstalk warning (D002 ocular surface): the Pericytes/Smooth Muscle Cells/Fibroblasts/"
+            "Myofibroblasts/Keratocytes family carries a shared-marker reading risk — under the KB6b "
+            "three-color re-review"
+            " 4 entries are all-red and the fibrous-stroma entry has 0 green; audited definition "
+            "(OLS original text in KB6b §2 point 4,"
+            " this runtime message does not transcribe CL identifiers, per red line 3): a keratocyte is a "
+            "fibroblast specialised for residence in the corneal stroma (keratocyte⊂fibroblast in the "
+            "ontological sense). When a reading involves this family—"
+            " ① NNMT is an audited reverse false anchor (donor agreement rate 0.167, direction reversed); "
+            "that audit does not support using it "
+            "as interstitium-discrimination evidence;"
+            " ② ALDH3A1 is an audited epithelial-program gene (reverse against suprabasal PMC); when you see "
+            "it, check the epithelial context first;"
+            " ③ direction relations follow the KB6b per-cell table: DCN/LUM/PTGDS are audited reverse "
+            "against Keratocytes"
+            " (lfc≤-1.96); COL1A2 is audited reverse against Keratocytes (-1.99) and -2.81 against fibrous "
+            "stroma;"
+            " for the remaining red-gene members such as FN1: red-gene identity does not imply a direction "
+            "toward a particular neighbour class — the corresponding table cell is authoritative;"
+            " for Keratocytes↔Fibroblast mutual calls, re-check against the KB6b red/green criteria; the only"
+            " all-green anchor on the Keratocytes side is KERA — if you intend to name Keratocytes, re-check "
+            "KERA and the corneal-stroma context;"
+            " the Pericyte-side survival anchors NOTCH3/HIGD1B/CALD1 and the SMC-side "
+            "CNN1/MYH11/MYL9/DES/LMOD1"
+            " are each used for neighbour-class comparison within their own target class — no cross-class "
+            "counting and no substituting for each other's support evidence;"
+            " ④ when comparing Pericyte vs SMC vs Myofibroblast, interpret them together with the "
+            "co-expression background;"
+            " ⑤ the Myofibroblast entry: the KB6b §3 cross-scan records that it has no exclusive "
+            "high-expression home group"
+            " on the D002 ocular surface (see that section's per-cell table); keep this audit background in "
+            "mind when a reading cites it."
+                " Falsified-wording reminder: the attribution of RUN5-face Q6::24 (truth=Pericytes 98.7% pure) "
+                "is"
+                " expression-layer-compatible evidence of the Myofibroblast/SMC mural entry takeover chain "
+                "(kb_top1=Myofibroblast, three votes=SMC,"
+                " the Pericyte entry never ranked), not Keratocytes; the query-engine-side ranking"
+                " mechanism is unaudited (KB6b REVIEWER_LLM A10 boundary)."
+                + ("".join(" per-gene role " + ln + ";" for ln in role_lines[:14]))
                 + SUFFIX),
             "evidence": {
                 "interpretation_source": [
                     "/mnt/D/EyeKB/plans/kb6b_face_20260925/AUDIT_KB6b_D002_separation.md",
                     "/mnt/D/EyeKB/plans/kb6b_face_20260925/STROMAL_WARNING_DRAFT.md",
-                    "/mnt/D/EyeKB/plans/evalset/EVAL_RUN5FACE_20260925.md (v1.1 勘误)"],
-                "role_layers": "T2=KB6b 逐格审计在册; T2a=存活锚按目标类语境; "
-                               "T3=仅当次面板成员事实 (无独立审计角色)"},
+                    "/mnt/D/EyeKB/plans/evalset/EVAL_RUN5FACE_20260925.md (v1.1 errata)"],
+                "role_layers": "T2=on file in the KB6b per-cell audit; T2a=survival anchors by target-class "
+                               "context; "
+                               "T3=panel-membership fact of this call only (no independent audit role)"},
         })
 
     notes.sort(key=lambda n: n["flag_id"])
@@ -289,8 +343,9 @@ def build_notes(markers, mode, query_genes=None, ranking=None, found_classes=Non
 
 
 def wrap_resp(resp, markers, mode, provenance=None, **kw):
-    """eyekb_core 挂载 helper: 有 note 才加 soft_flags key (off/空 → 不挂 key;
-    与改前输出的等价性按规范序列化层由 sf13 验证, 不声称会话级字节一致)。"""
+    """eyekb_core mounting helper: add the soft_flags key only when notes exist (off/empty → key not
+    mounted; equivalence with the pre-change output is verified by sf13 at the canonical serialization
+    layer — no claim of session-level byte identity)."""
     notes = build_notes(markers, mode, provenance=provenance, **kw)
     if notes:
         resp["soft_flags"] = {"schema": SCHEMA, "enabled": True, "notes": notes}

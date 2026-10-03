@@ -1,34 +1,41 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""calllog — EyeKB MCP 服务端调用留痕层（OBS1 t_c754c4fc，2026-09-26）
+"""calllog — EyeKB MCP server-side call-tracing layer (OBS1 t_c754c4fc, 2026-09-26)
 
-═══ 定位与红线 ═══
-- **只加日志、零行为改动**：本模块只读取工具响应做结构摘要后落盘，绝不修改
-  resp / 返回值 / 排序 / soft_flags；trace() 整体 try/except 兜底，留痕失败
-  绝不影响服务（返回路径无新异常源）。
-- 依据：BRIEF_OBS1.md OBS-1（盘点结论=服务端零留痕，须补日志层）+
-  USER_DIRECTIVE_20260926 A2 观察条款（一周真实流量跟票采样需要调用侧数据源）。
-- 不动 server.py 的异常语义：工具函数抛错时 trace 不被调用（与改前一致）。
+═══ Purpose and red lines ═══
+- **Logging only, zero behavior change**: this module only reads the tool response, builds a
+  structural digest, and writes it to disk; it never modifies resp / return values / ordering /
+  soft_flags; trace() is fully wrapped in try/except — a tracing failure must never affect the
+  service (no new exception sources on the return path).
+- Basis: BRIEF_OBS1.md OBS-1 (inventory conclusion = zero server-side tracing, a logging layer
+  must be added) + USER_DIRECTIVE_20260926 A2 observation clause (the one-week real-traffic
+  follow-vote sampling needs a call-side data source).
+- server.py exception semantics untouched: when a tool function raises, trace is not called
+  (same as before the change).
 
-═══ 落盘与轮转 ═══
-- 路径：/mnt/D/EyeKB/logs/mcp_trace/calls_YYYY-MM-DD.jsonl（本地日期，按日
-  自然轮转；单文件超 200MB 时续写 calls_YYYY-MM-DD.part<N>.jsonl）。
-- 追加式（O_APPEND 行级原子写，多会话并发 spawn 安全）；不自动删除——
-  观察窗证据保留满一月复盘后由协调者裁定归档（A4 卡）。
+═══ Persistence and rotation ═══
+- Path: /mnt/D/EyeKB/logs/mcp_trace/calls_YYYY-MM-DD.jsonl (local date, natural daily rotation;
+  when a single file exceeds 200MB, writing continues into calls_YYYY-MM-DD.part<N>.jsonl).
+- Append-only (O_APPEND line-level atomic writes, safe for concurrent multi-session spawns); no
+  automatic deletion — after the observation window keeps evidence for a full month and is
+  reviewed, the coordinator rules on archiving (A4 card).
 
-═══ 脱敏口径 ═══
-- 记：工具名、入参（科学检索词：基因/细胞类型/组织/文献 query——领域信息，
-  非个人敏感）、响应**结构摘要**（mode、found、类目名清单、soft_flag 的
-  flag_id 列表、provenance 库集与 lacrimal 布尔、命中计数）。
-- 不记：soft_flags notes 全文、文献片段正文、detail 面板基因全表、基线数值表
-  内容（体积与语料落盘控制；flag_id 与类目名已足够支撑 OBS-2 两口径统计）。
-- 会话侧信息：进程 uuid/pid/宿主/父进程 cmdline（消费方归因）+ 可选 env
-  EYEKB_MCP_TRACE_TAG（自测流量打标，统计器默认排除；真实消费不设即空）。
+═══ Redaction policy ═══
+- Recorded: tool name, input args (scientific search terms: genes/cell types/tissues/literature
+  query — domain information, not personal data), and a **structural digest** of the response
+  (mode, found, class-name lists, soft_flag flag_id lists, the provenance library set and the
+  lacrimal boolean, hit counts).
+- Not recorded: full soft_flags notes text, literature snippet bodies, full gene tables of the
+  detail panels, baseline numeric-table contents (volume and corpus-landing control; flag_ids and
+  class names already suffice for OBS-2 two-caliber statistics).
+- Session-side info: process uuid/pid/host/parent cmdline (consumer attribution) + optional env
+  EYEKB_MCP_TRACE_TAG (tags self-test traffic; the statistics tool excludes it by default; real
+  consumers leave it unset → empty).
 
-═══ 环境态 ═══
-- 每条记录附 EYEKB_ACT_V6 与 EYEKB_MCP_SOFTFLAGS 的 raw 值 + effective 判定
-  （ON/OFF 与 softflags 开关语义逐字照抄 _v6_act_enabled()/softflags.enabled()
-  的 {0,false,off,no} casefold 集合，不另造判定）。
+═══ Environment state ═══
+- Every record carries the raw values of EYEKB_ACT_V6 and EYEKB_MCP_SOFTFLAGS + the effective
+  verdict (the ON/OFF wording copies _v6_act_enabled()/softflags.enabled() semantics verbatim —
+  the {0,false,off,no} casefold set — with no independently invented logic).
 """
 import json
 import os
@@ -36,8 +43,9 @@ import socket
 import time
 import uuid
 
-# 留痕目录：优先 env 覆盖；本机生产路径存在则沿用（审计连续性）；
-# 否则退到仓内 logs/mcp_trace——外机 clone 不会尝试写他人绝对路径（2026-09-29 遗留#2 修复）。
+# Trace dir: env override first; if the production path exists on this host, keep using it
+# (audit continuity); otherwise fall back to the in-repo logs/mcp_trace — a clone on an
+# external machine never tries to write someone else's absolute path (2026-09-29 leftover#2 fix).
 def _default_trace_dir() -> str:
     cand = "/mnt/D/EyeKB/logs/mcp_trace"
     if os.path.isdir(os.path.dirname(cand)) or os.path.isdir(cand):
@@ -45,7 +53,7 @@ def _default_trace_dir() -> str:
     return os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "logs", "mcp_trace")
 
 TRACE_DIR = os.environ.get("EYEKB_TRACE_DIR") or _default_trace_dir()
-MAX_DAY_BYTES = 200 * 1024 * 1024  # 200MB 后写 .part<N>
+MAX_DAY_BYTES = 200 * 1024 * 1024  # after 200MB write into .part<N>
 
 _OFF_VALUES = {"0", "false", "off", "no"}
 
@@ -61,7 +69,7 @@ _SESSION = {
 
 
 def _caller_cmdline():
-    """父进程 cmdline（消费方归因，best-effort，300 字符截断）。"""
+    """Parent-process cmdline (consumer attribution, best-effort, truncated at 300 chars)."""
     try:
         with open(f"/proc/{_SESSION['ppid']}/cmdline", "rb") as f:
             return f.read().replace(b"\0", b" ").decode("utf-8", "replace")\
@@ -80,9 +88,9 @@ def _env_state():
     act = os.environ.get("EYEKB_ACT_V6")
     sf = os.environ.get("EYEKB_MCP_SOFTFLAGS")
     act_off = (act or "").strip().casefold() in _OFF_VALUES
-    # softflags.enabled() 语义核对：softflags.py L100-103 为
-    # strip().casefold() ∈ {0,false,off,no} → off；其余值（含未设）一律 on。
-    # EYEKB_ACT_V6 语义：未设/其余值 = ON（eyekb_core._v6_act_enabled）。
+    # softflags.enabled() semantics check: softflags.py L100-103 is
+    # strip().casefold() ∈ {0,false,off,no} → off; all other values (incl. unset) → on.
+    # EYEKB_ACT_V6 semantics: unset/any other value = ON (eyekb_core._v6_act_enabled).
     sf_off = (sf or "").strip().casefold() in _OFF_VALUES if sf is not None else False
     return {
         "EYEKB_ACT_V6_raw": act, "act_v6_on": (not act_off),
@@ -104,7 +112,7 @@ def _args_safe(args, limit=6000):
 
 
 def _resp_digest(tool, resp):
-    """响应结构摘要（只读；任何解析失败退化为 keys 清单）。"""
+    """Structural digest of the response (read-only; any parse failure degrades to a keys list)."""
     d = {"resp_type": type(resp).__name__}
     try:
         if not isinstance(resp, dict):
@@ -172,7 +180,7 @@ def _target_file():
 
 
 def trace(tool, args, resp):
-    """工具返回后调用一次；只写盘、只读、异常全兜底。"""
+    """Call once after a tool returns; write-only to disk, read-only on resp, all exceptions swallowed."""
     try:
         rec = {
             "ts": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
@@ -189,5 +197,6 @@ def trace(tool, args, resp):
         with open(_target_file(), "a", encoding="utf-8") as f:
             f.write(line + "\n")
     except Exception:
-        # 留痕失败绝不允许影响服务行为（静默；不打 stdout——stdio 协议通道）
+        # A tracing failure must never affect service behavior (silent; never print to
+        # stdout — that is the stdio protocol channel)
         pass

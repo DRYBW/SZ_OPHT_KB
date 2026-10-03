@@ -1,11 +1,11 @@
-# pipeline/ 依赖锁（2026-09-29 本机 training-venv 实测版本，Python 3.14）
-# 安装：pip install -r pipeline/requirements.txt
-# 文献检索的嵌入模型与语料获取见仓根 README《5 分钟跑通》（不装模型自动词法降级）。
+# pipeline/ dependency lock (versions measured on the local training-venv, 2026-09-29, Python 3.14)
+# Install: pip install -r pipeline/requirements.txt
+# For the literature-retrieval embedding model and corpus acquisition see the repo-root README "5-minute quickstart" (without the model installed, retrieval auto-degrades to lexical matching).
 anndata==0.12.19
 scanpy==1.12.2
 harmonypy==2.0.0
 scrublet==0.2.3
-# scanpy 运行链（Leiden igraph flavor + UMAP）实测锚点：
+# scanpy runtime chain (Leiden igraph flavor + UMAP) measured anchors:
 igraph==1.0.0
 umap-learn==0.5.12
 numba==0.66.0

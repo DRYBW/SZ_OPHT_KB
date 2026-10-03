@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
-"""verify_errata_run5face_t133f7dea.py — 独立验收器（不复用落纸器代码路径）
-判据:
- V1 改动面可穷举: 现件 vs .bak —— 被删行恰={OLD_L18,OLD_L23}，新增行含版本行/改写两段/卷末勘误块，
-    其余每一行逐字节同序不变（红线=零触碰的机械证明）。
- V2 判据数字守恒: P1 21/33、P2 1/33(Q6::24)、6477/6565、98.7%、prereg sha 前缀、投票模型行 逐条在位。
- V3 修正内容在位: kb_top1=Myofibroblast / 三票共识=Smooth Muscle Cells / Q6::20 交叉信号 /
-    KB6b 指针 plans/kb6b_face_20260925/ / 版本行 v1.1。
- V4 缺陷主张零残留: 「三票共识跟词条判」「Keratocytes 词条过火」整词 0 命中（勘误记录以描述式引用，不复活原句）。
- V5 台账/前像自洽: ledger.pre==bak sha==d77ec739…，ledger.post==现件 sha，replay==True。
+"""verify_errata_run5face_t133f7dea.py — independent verifier (does not reuse the applier's code path)
+NOTE: match strings below are historical-run embedded literals (checked against the frozen erratum
+document); they are intentionally untranslated per the NEVER-TOUCH rule. Only comments were translated.
+Criteria:
+ V1 change surface exhaustible: current file vs .bak -- deleted lines exactly {OLD_L18, OLD_L23}, added lines contain the version line / two rewritten passages / end-of-document erratum block,
+    every other line byte-identical in the same order (mechanical proof of the zero-touch red line).
+ V2 criteria numbers conserved: P1 21/33, P2 1/33(Q6::24), 6477/6565, 98.7%, prereg sha prefix, vote-model line -- each verified present.
+ V3 corrections present: kb_top1=Myofibroblast / three-vote consensus=Smooth Muscle Cells / Q6::20 cross signal /
+    KB6b pointer plans/kb6b_face_20260925/ / version line v1.1.
+ V4 zero residue of the defective claim: "三票共识跟词条判" and "Keratocytes 词条过火" exact phrases 0 hits (the erratum record references them descriptively, never reviving the original sentence).
+ V5 ledger/pre-image self-consistency: ledger.pre==bak sha==d77ec739..., ledger.post==current sha, replay==True.
 """
 import difflib
 import hashlib
@@ -32,7 +34,7 @@ def ck(name, ok, detail=""):
 pre = open(BAK, "rb").read().decode("utf-8").split("\n")
 cur = open(TGT, "rb").read().decode("utf-8").split("\n")
 
-# V1: opcode 级改动面
+# V1: opcode-level change surface
 sm = difflib.SequenceMatcher(None, pre, cur, autojunk=False)
 deleted, inserted = [], []
 for tag, i1, i2, j1, j2 in sm.get_opcodes():

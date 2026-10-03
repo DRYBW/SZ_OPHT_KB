@@ -1,25 +1,27 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-scan_jargon.py — EyeKB 内部工作词（黑话）扫描门
-================================================
-来源：ARCH-GOV t_9b244bd7（2026-09-30），把 2026-09-29/30 一次性人工
-"黑话终扫"固化为可复跑脚本。词表与豁免清单 = 同目录 jargon_glossary.json
-（唯一权威源，改词表改 JSON，不改本脚本）。
+scan_jargon.py — EyeKB internal-jargon scanner gate
+===================================================
+Origin: ARCH-GOV t_9b244bd7 (2026-09-30), turning the one-off manual
+"final jargon sweep" of 2026-09-29/30 into a re-runnable script. The term list
+and exemption list = jargon_glossary.json in this directory (the single source
+of truth — to change terms, change the JSON, not this script).
 
-扫描对象：仓内 Markdown（README.md + docs/ 全部 .md）。
-默认口径（--scope outward）：应用 JSON 中 exempt_patterns —— 历史原件/内部
-记录层（docs/plans、docs/wiki、docs/recon、legacy 备份、脱敏报告、同步注记）
-不追溯；对外活文档不豁免。
---scope all 时仅豁免词表与本脚本自身（全量审计用）。
+Scanned: repo Markdown (README.md + all .md under docs/).
+Default scope (--scope outward): applies exempt_patterns from the JSON — historical
+originals / internal record layers (docs/plans, docs/wiki, docs/recon, legacy backups,
+desensitization reports, sync notes) are not retroactively enforced; outward-facing
+live docs get no exemption.
+With --scope all, only the glossary and this script itself are exempt (full audit).
 
-用法：
-    python tests/scan_jargon.py                 # 从仓根或任意位置跑，自动定位仓根
+Usage:
+    python tests/scan_jargon.py                 # run from repo root or anywhere; locates the repo root automatically
     python tests/scan_jargon.py --root /path/to/repo --json out.json
     python tests/scan_jargon.py --scope all
-    python tests/scan_jargon.py --fail-on-hit   # 有命中则 exit 1（可挂 CI/同步门）
+    python tests/scan_jargon.py --fail-on-hit   # exit 1 on any hit (hookable into CI / sync gates)
 
-退出码：0 = 完成（无论是否有命中，除非 --fail-on-hit 且命中>0 → 1）；2 = 参数/文件错误。
+Exit codes: 0 = completed (regardless of hits, unless --fail-on-hit and hits>0 → 1); 2 = argument/file error.
 """
 import argparse
 import json
@@ -46,25 +48,25 @@ def iter_markdown(root):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="EyeKB 内部工作词扫描门")
+    ap = argparse.ArgumentParser(description="EyeKB internal-jargon scanner gate")
     default_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    ap.add_argument("--root", default=default_root, help="仓库根目录（默认=脚本所在仓）")
+    ap.add_argument("--root", default=default_root, help="repository root (default = the repo this script lives in)")
     ap.add_argument("--scope", choices=["outward", "all"], default="outward",
-                    help="outward=豁免历史原件（默认）；all=全仓扫描（仅豁免词表与本脚本）")
-    ap.add_argument("--json", dest="json_out", default=None, help="机读结果输出路径")
-    ap.add_argument("--fail-on-hit", action="store_true", help="命中>0 时退出码 1")
-    ap.add_argument("--context", type=int, default=0, help="每命中打印上下文长度（字符，0=不打印）")
+                    help="outward=exempt historical originals (default); all=scan the whole repo (only the glossary and this script are exempt)")
+    ap.add_argument("--json", dest="json_out", default=None, help="path for the machine-readable result")
+    ap.add_argument("--fail-on-hit", action="store_true", help="exit code 1 when hits>0")
+    ap.add_argument("--context", type=int, default=0, help="context length printed per hit (chars, 0=no context)")
     args = ap.parse_args()
 
     root = os.path.abspath(args.root)
     if not os.path.isdir(root):
-        print(f"ERROR: root 不存在: {root}", file=sys.stderr)
+        print(f"ERROR: root does not exist: {root}", file=sys.stderr)
         return 2
     glossary_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "jargon_glossary.json")
     try:
         gl = load_glossary(glossary_path)
     except Exception as exc:  # noqa: BLE001
-        print(f"ERROR: 词表读取失败 {glossary_path}: {exc}", file=sys.stderr)
+        print(f"ERROR: failed to read the glossary {glossary_path}: {exc}", file=sys.stderr)
         return 2
 
     terms = [(t["term"], t.get("replacement", ""), t.get("category", "")) for t in gl.get("terms", [])]
@@ -87,7 +89,7 @@ def main():
             with open(path, "r", encoding="utf-8", errors="replace") as fh:
                 text = fh.read()
         except OSError as exc:
-            print(f"WARN: 读取失败 {rel}: {exc}", file=sys.stderr)
+            print(f"WARN: read failed {rel}: {exc}", file=sys.stderr)
             continue
         files_scanned += 1
         hits = []
@@ -104,21 +106,21 @@ def main():
             total += sum(h["count"] for h in hits)
             results.append({"file": rel, "hits": sorted(hits, key=lambda h: -h["count"])})
 
-    print(f"# EyeKB 黑话扫描  scope={args.scope}  root={root}")
-    print(f"# 词表 {len(terms)} 词 | 扫描 {files_scanned} 个 Markdown 文件")
+    print(f"# EyeKB jargon scan  scope={args.scope}  root={root}")
+    print(f"# glossary {len(terms)} terms | scanned {files_scanned} Markdown files")
     if results:
         for r in results:
             per = sum(h["count"] for h in r["hits"])
             terms_str = ", ".join(f"{h['term']}x{h['count']}" for h in r["hits"])
-            print(f"  {r['file']}  残留 {per}  ({terms_str})")
-    print(f"残留合计: {total} （命中文件 {files_hit} 个）")
+            print(f"  {r['file']}  residue {per}  ({terms_str})")
+    print(f"total residue: {total} (files hit: {files_hit})")
 
     if args.json_out:
         with open(args.json_out, "w", encoding="utf-8") as fh:
             json.dump({"scope": args.scope, "glossary_terms": len(terms),
                        "files_scanned": files_scanned, "files_hit": files_hit,
                        "total_hits": total, "results": results}, fh, ensure_ascii=False, indent=1)
-        print(f"机读结果: {args.json_out}")
+        print(f"machine-readable result: {args.json_out}")
 
     if args.fail_on_hit and total > 0:
         return 1

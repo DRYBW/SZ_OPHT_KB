@@ -1,35 +1,42 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""EyeKB KB1v2-W1 + KB2c: 组成基线层构建 (kb/baselines/)
+"""EyeKB KB1v2-W1 + KB2c: composition-baseline layer builder (kb/baselines/)
 
-KB2c (t_be336eee, 2026-09-23 深夜裁定 plans/KB2C_ADJUDICATION_20260923.md):
-  - 发育轴单列: 所有产物顶层轴 organism_stage ∈ {fetal, adult, developing, unknown}
-  - adult 主档 = donor_age >= 18y 供者单元 (裁定 Q2); v1.0 混口径降为 adult_pool 对照档,
-    两档 entry_id/身份签名分离不混用
-  - 非 adult 供者与 unknown 源逐行披露 (stage_disclosure/excluded_nonadult_units/
-    _STAGE_DISCLOSURE.md) —— 禁静默归 adult (红线2)
-  - fetal/developing 不实算, 只建转换态概念条目 fetal_development_transitions (裁定 Q5)
+KB2c (t_be336eee, late-night adjudication 2026-09-23, plans/KB2C_ADJUDICATION_20260923.md):
+  - Separate developmental axis: every product carries a top-level axis
+    organism_stage ∈ {fetal, adult, developing, unknown}
+  - adult main tier = donor units with donor_age >= 18y (adjudication Q2); the v1.0 mixed-scope
+    tier is demoted to the adult_pool contrast tier — the two tiers keep separate
+    entry_id/identity signatures and are never mixed
+  - Non-adult donors and unknown sources are disclosed row by row
+    (stage_disclosure/excluded_nonadult_units/_STAGE_DISCLOSURE.md) —— silent assignment to
+    adult is forbidden (red line 2)
+  - fetal/developing are not recomputed; only the transition-state concept entry
+    fetal_development_transitions is built (adjudication Q5)
 
-口径 = BRIEF_KB1v2_20260923.md W1 + ASTRA_ANNOTATION_GUIDANCE_v1.md T2:
-  - 比例 = 供者级条件参考分布 (先算每个供者的组成, 再总结供者间分布;
-    禁止全细胞合并后大供者压秤 —— pooled 值仅作对照展示)
-  - 分层展示 (研究 × 富集策略 × 取材部位), 足够可比才合并
-  - 每条至少记录: 取样材料/疾病阶段/治疗背景/scRNA vs snRNA/富集步骤/
-    解离方法/供者数/计数分母/证据来源
-  - 文献只有定性就存定性; "区间无法估计"是合法状态, 不得凑数
-  - 用途口径写死: 身份参考 + 背景对照; 不得当组成达标线
+Scope = BRIEF_KB1v2_20260923.md W1 + ASTRA_ANNOTATION_GUIDANCE_v1.md T2:
+  - Fractions = donor-level conditional reference distribution (compute each donor's
+    composition first, then summarize the between-donor distribution; never pool all cells
+    where large donors dominate —— pooled values are shown for contrast only)
+  - Stratified display (study × enrichment strategy × sampling region); merge only when
+    sufficiently comparable
+  - Every entry records at least: sampling_material/disease_stage/treatment_background/
+    scRNA vs snRNA/enrichment_step/dissociation_method/donor_count/counting_denominator/evidence_source
+  - If the literature is qualitative only, store qualitative; "interval not estimable" is a
+    legal state, never pad numbers
+  - Usage scope fixed: identity reference + background contrast; never a composition compliance line
 
 输入 (全部只读):
   /mnt/D/OcularKB/data/HRCA_cellxgene/HRCA_allcells_annotated.h5ad  (D001, obs-only)
   /mnt/D/OcularKB/data/D002_ocularsurface/D002_allcells_578K.h5ad   (D002, obs-only)
-  /mnt/D/OcularKB/plans/tissue_reference_inventory_20260923/inventory.json  (t_6f5cc731 盘点)
-  /mnt/D/EyeKB/kb/priors/composition/human_retina.json              (旧 KB1 条目, 继承亚型/状态/旗标)
+  /mnt/D/OcularKB/plans/tissue_reference_inventory_20260923/inventory.json  (t_6f5cc731 inventory)
+  /mnt/D/EyeKB/kb/priors/composition/human_retina.json              (old KB1 entry; inherits subtypes/states/flags)
 
-输出:
-  /mnt/D/EyeKB/kb/baselines/baselines.json          (索引)
-  /mnt/D/EyeKB/kb/baselines/<tissue>.json|.md       (2 条实数据 + 9 条骨架, 映射已回填)
+Outputs:
+  /mnt/D/EyeKB/kb/baselines/baselines.json          (index)
+  /mnt/D/EyeKB/kb/baselines/<tissue>.json|.md       (2 filled entries + 9 skeletons, mappings backfilled)
 
-本文件由 t_16c3e020 派发; 改内容改本脚本重跑, 手改 MD 会被覆盖。
+This file is dispatched by t_16c3e020; to change content edit this script and rerun — hand edits to the MD are overwritten.
 """
 import json
 import sys
@@ -48,20 +55,23 @@ HRCA = "/mnt/D/OcularKB/data/HRCA_cellxgene/HRCA_allcells_annotated.h5ad"
 D002 = "/mnt/D/OcularKB/data/D002_ocularsurface/D002_allcells_578K.h5ad"
 INVENTORY = "/mnt/D/OcularKB/plans/tissue_reference_inventory_20260923/inventory.json"
 OLD_RETINA = EYEKB / "kb/priors/composition/human_retina.json"
-GEN = "build_baselines.py (KB1v2 t_16c3e020; KB2c 发育轴单列 t_be336eee)"
+GEN = "build_baselines.py (KB1v2 t_16c3e020; KB2c separate developmental axis t_be336eee)"
 TODAY = "2026-09-23"
 
-USAGE_SCOPE = ("用途口径 (Astra T2 裁定固化): 本基线 = 该取样材料在该实验流程下捕获到的细胞构成的"
-               "身份参考 + 背景对照; **不得当组成达标线**。疾病手术材料的取样对象 ≠ 健康器官 "
-               "(如 PDR 纤维血管膜不得对照健康视网膜组成验收); 注释数据出现清单外身份 → 触发 "
-               "unexpected 旗即可, 不得强制改成清单内身份 (标签接受上下文一致性核查, 非白名单定位)。")
+USAGE_SCOPE = ("Usage scope (fixed by the Astra T2 adjudication): this baseline = identity reference + "
+               "background contrast for the cellular composition captured from that sampling material under "
+               "that experimental workflow; **never a composition compliance line**. The sampling target of "
+               "disease surgical material ≠ the healthy organ (e.g. a PDR fibrovascular membrane must not be "
+               "acceptance-checked against healthy-retina composition); if annotated data shows an identity "
+               "outside the list → raise the unexpected flag only; labels must never be forced into listed "
+               "identities (labels undergo context-consistency checks, not whitelist enforcement).")
 
 EVIDENCE_GRADES = {
-    "A": "本地实测复算 (带文件路径+脚本)",
-    "B": "文献原文直接报告",
-    "C": "A 级源数据供者级/跨研究分布推得的经验区间",
-    "qualitative": "文献仅定性描述 → 只存定性, 不补造区间 (Astra T2)",
-    "not_estimable": "区间无法估计 —— 合法状态, 注释仍可开展 (Astra T2)",
+    "A": "local recomputation from measured data (file paths + script included)",
+    "B": "directly reported in the primary literature",
+    "C": "empirical intervals derived from donor-level / cross-study distributions of grade-A source data",
+    "qualitative": "literature is qualitative only → store qualitative only, never fabricate intervals (Astra T2)",
+    "not_estimable": "interval not estimable —— a legal state; annotation can still proceed (Astra T2)",
 }
 
 
@@ -76,7 +86,7 @@ def obs_col(f, k):
 
 
 def donor_stats(df_rows, classes):
-    """df_rows: list of (unit_key, cls). 每 unit 组成% → 跨 unit 分布统计。"""
+    """df_rows: list of (unit_key, cls). Per-unit composition % → distribution stats across units."""
     per_unit = defaultdict(Counter)
     for u, c in df_rows:
         per_unit[u][c] += 1
@@ -106,66 +116,70 @@ def pct_table(counts, classes):
 
 
 # =============================================================================
-# KB2c 发育轴单列 (t_be336eee, 2026-09-23) — 裁定: plans/KB2C_ADJUDICATION_20260923.md
-# PI 原话: "发育的还要全部单列, 胎儿的这些和成人的即使是一个组织也不对的"
-# 红线: ①fetal/developing 永不并入 adult 主档 ②unknown 必须披露行禁静默归 adult
-#       ③阈值(>=18y)写入产物字段, 改动须过裁定 ④完成/遇阻落卡
+# KB2c separate developmental axis (t_be336eee, 2026-09-23) — adjudication: plans/KB2C_ADJUDICATION_20260923.md
+# PI verbatim: "developmental samples must all be listed separately; fetal ones vs adult ones are
+#               not the same even for one and the same tissue"
+# Red lines: 1) fetal/developing never merged into the adult main tier
+#            2) unknown must be disclosed row by row; silent assignment to adult forbidden
+#            3) the threshold (>=18y) is written into product fields; changes require re-adjudication
+#            4) completion/blocking is logged to the card
 # =============================================================================
-ADULT_MIN_YEARS = 18  # 裁定 Q2: adult = donor_age >= 18y; 改动须过裁定
+ADULT_MIN_YEARS = 18  # adjudication Q2: adult = donor_age >= 18y; changes require re-adjudication
 DECADE_WORD = {"first": 1, "second": 2, "third": 3, "fourth": 4, "fifth": 5,
                "sixth": 6, "seventh": 7, "eighth": 8, "ninth": 9, "tenth": 10}
 
 
 def classify_uberon(stage):
-    """UBERON development_stage 原值 -> organism_stage 4 级 (裁定 Q1/Q2)。返回 (cls, rule)。
-    未映射术语一律 unknown + 披露, 禁止猜测归 adult (红线2)。"""
+    """Map raw UBERON development_stage -> organism_stage 4 levels (adjudication Q1/Q2).
+    Returns (cls, rule). Unmapped terms are always unknown + disclosed; guessing adult is
+    forbidden (red line 2)."""
     s = (stage or "").strip().lower()
     if not s or s in ("nan", "none", "unknown", "na", ""):
-        return "unknown", "空值/缺失→unknown (禁静默归 adult)"
+        return "unknown", "empty/missing → unknown (silent adult assignment forbidden)"
     if "organoid" in s:
-        return "unknown", "organoid→unknown+旗标 (裁定 Q1 映射)"
+        return "unknown", "organoid → unknown + flag (adjudication Q1 mapping)"
     if any(t in s for t in ("fetal", "foetal", "embryonic", "embryo", "gestation",
                             "carnegie", "conceptus")):
-        return "fetal", "fetal/胚胎期术语 (红线1: 永不并入 adult)"
+        return "fetal", "fetal/embryonic term (red line 1: never merged into adult)"
     m = _re.match(r"^(\d+)[-\s]year-old stage$", s)
     if m:
         y = int(m.group(1))
         return (("adult" if y >= ADULT_MIN_YEARS else "developing"),
-                f"数字年龄 {y}y vs 阈值 {ADULT_MIN_YEARS}y")
+                f"numeric age {y}y vs threshold {ADULT_MIN_YEARS}y")
     m = _re.match(r"^(\d+)[-\s]year-old and over stage$", s)
     if m:
         y = int(m.group(1))
         return (("adult" if y >= ADULT_MIN_YEARS else "unknown"),
-                f"'{y} year-old and over' 下界>=阈值" if y >= ADULT_MIN_YEARS
-                else f"'{y} year-old and over' 下界跨阈值→unknown")
+                f"'{y} year-old and over' lower bound >= threshold" if y >= ADULT_MIN_YEARS
+                else f"'{y} year-old and over' lower bound straddles threshold → unknown")
     m = _re.match(r"^(\d+)-(\d+)[-\s]year-old stage$", s)
     if m:
         lo, hi = int(m.group(1)), int(m.group(2))
         if lo >= ADULT_MIN_YEARS:
-            return "adult", f"年龄段 {lo}-{hi} 下界>=阈值"
+            return "adult", f"age band {lo}-{hi} lower bound >= threshold"
         if hi < ADULT_MIN_YEARS:
-            return "developing", f"年龄段 {lo}-{hi} 上界<阈值"
-        return "unknown", f"年龄段 {lo}-{hi} 跨阈值→unknown (不判档)"
+            return "developing", f"age band {lo}-{hi} upper bound < threshold"
+        return "unknown", f"age band {lo}-{hi} straddles threshold → unknown (no tier call)"
     m = _re.match(r"^(\w+)\s+decade stage$", s)
     if m and m.group(1) in DECADE_WORD:
         lo = (DECADE_WORD[m.group(1)] - 1) * 10
         hi = lo + 9
         if lo >= ADULT_MIN_YEARS:
-            return "adult", f"{m.group(1)} decade = {lo}-{hi}y 下界>=阈值"
+            return "adult", f"{m.group(1)} decade = {lo}-{hi}y lower bound >= threshold"
         if hi < ADULT_MIN_YEARS:
-            return "developing", f"{m.group(1)} decade = {lo}-{hi}y 上界<阈值"
-        return "unknown", f"{m.group(1)} decade = {lo}-{hi}y 跨阈值→unknown"
+            return "developing", f"{m.group(1)} decade = {lo}-{hi}y upper bound < threshold"
+        return "unknown", f"{m.group(1)} decade = {lo}-{hi}y straddles threshold → unknown"
     if "newborn" in s or "infant" in s:
-        return "developing", "newborn/infant 产后早期→developing (裁定 Q2)"
+        return "developing", "newborn/infant early-postnatal → developing (adjudication Q2)"
     if s == "postnatal stage":
-        return "developing", "postnatal→developing (裁定 Q1 映射)"
+        return "developing", "postnatal → developing (adjudication Q1 mapping)"
     if _re.search(r"\b(?:late|prime|middle|old|mature|human)?\s*adult stage\b", s):
-        return "adult", "UBERON 成年术语档 (无数字年龄; 映射规则见 stage_axis)"
-    return "unknown", "未映射术语→unknown (禁猜测, 披露待裁)"
+        return "adult", "UBERON adult term tier (no numeric age; mapping rules in stage_axis)"
+    return "unknown", "unmapped term → unknown (no guessing; disclosed pending adjudication)"
 
 
 def donor_stage_map(donor_arr, stage_arr):
-    """donor -> (uberon_raw, organism_stage, rule); donor 内多值冲突→unknown+旗标。"""
+    """donor -> (uberon_raw, organism_stage, rule); conflicting values within one donor → unknown + flag."""
     per = defaultdict(set)
     for d, s in zip(donor_arr.tolist(), stage_arr.tolist()):
         per[d].add(s)
@@ -177,13 +191,13 @@ def donor_stage_map(donor_arr, stage_arr):
             out[d] = (raw, cls, rule)
         else:
             out[d] = ("|".join(sorted(ss)), "unknown",
-                      "donor 内多 stage 值 (数据缺陷)→unknown")
+                      "multiple stage values within donor (data defect) → unknown")
             amb.append(d)
     return out, amb
 
 
 def stage_tally(donor_arr, stage_arr, dsm):
-    """逐 UBERON 原值汇总: {uberon: {cells, n_donors, organism_stage, rule}}。"""
+    """Tally per raw UBERON value: {uberon: {cells, n_donors, organism_stage, rule}}."""
     tal = {}
     for d, s in zip(donor_arr.tolist(), stage_arr.tolist()):
         t = tal.setdefault(s, {"cells": 0, "donors": set(),
@@ -196,7 +210,7 @@ def stage_tally(donor_arr, stage_arr, dsm):
 
 
 def excluded_units(donor_arr, mc_arr, dsm, classes):
-    """被排除出 adult 主档的逐供者披露行 (红线2: 逐行披露)。"""
+    """Per-donor disclosure rows excluded from the adult main tier (red line 2: row-by-row disclosure)."""
     rows = defaultdict(lambda: {"cells": 0, "uberon": "", "organism_stage": "", "rule": ""})
     for i, d in enumerate(donor_arr.tolist()):
         raw, cls, rule = dsm[d]
@@ -210,29 +224,33 @@ def excluded_units(donor_arr, mc_arr, dsm, classes):
             sorted(rows.items(), key=lambda kv: -kv[1]["cells"])]
 
 
-# ---- KB3 (t_5425a7ca) 发育轴全量单列: 常量与判定 (任务书 BRIEF_KB3_DEVELOPMENT_AXIS) ----
+# ---- KB3 (t_5425a7ca) full separate developmental axis: constants and decision rules (brief BRIEF_KB3_DEVELOPMENT_AXIS) ----
 KB3_CARD = "t_5425a7ca"
-KB3_PROHIBITION = ("KB3 禁令 (PI 红线 2026-09-23): 发育期数据不得进成人基线统计池, 反之亦然 "
-                   "—— 同一组织胎儿≠成人, adult/fetal 不互为参照。")
+KB3_PROHIBITION = ("KB3 prohibition (PI red line 2026-09-23): developmental-stage data must not enter the "
+                   "adult baseline statistics pool and vice versa —— fetal ≠ adult for the same tissue; "
+                   "adult/fetal are never mutual references.")
 KB3_DEV_ENUM = ("adult", "fetal_developing", "postnatal_neonatal",
-                "mixed_not_separable", "unknown")  # mixed 禁止新建, 存量必须拆/降级
+                "mixed_not_separable", "unknown")  # mixed: no new entries; existing ones must be split/downgraded
 
 
 def kb3_dev_stage(e):
-    """KB3 必填字段 development_stage (organism_stage 的 KB3 5 值投影)。
-    adult 档=adult; 其余(骨架未实算/RPE 无年龄源)=unknown —— 禁静默归 adult (KB2c 红线2)。"""
+    """KB3 required field development_stage (the KB3 5-value projection of organism_stage).
+    adult tier = adult; everything else (skeleton not recomputed / RPE has no age source) = unknown
+    —— silent assignment to adult is forbidden (KB2c red line 2)."""
     return "adult" if e.get("organism_stage") == "adult" else "unknown"
 
 
 def kb3_applicable_note(e):
-    """把适用阶段写死进文件头 (任务书 W1): 回填时的目标档, 不代表现值。"""
+    """Hard-code the applicable stage into the file header (brief W1): the target tier at backfill time, not the current value."""
     if e.get("organism_stage") == "adult":
         return None
     if e.get("status") == "skeleton_mapping_backfilled":
-        return ("adult —— 适用锚=HRCA/D002 等成人锚 (写死); 但供者级比例未实算, "
-                "development_stage 维持 unknown 直至回填, 禁提前写 adult (KB2c 红线2)")
-    return ("unknown —— 主档源 (如 GSE158629 RPE) 无 donor 年龄列; 须逐 donor 年龄补齐"
-            "后另裁方可升 adult (KB2c 范围外条目); 禁静默归 adult")
+        return ("adult —— applicable anchor = adult anchors such as HRCA/D002 (hard-coded); but donor-level "
+                "fractions are not recomputed, so development_stage stays unknown until backfill; writing adult "
+                "early is forbidden (KB2c red line 2)")
+    return ("unknown —— the source tier (e.g. GSE158629 RPE) has no donor-age column; per-donor ages must be "
+            "completed and a further adjudication passed before upgrading to adult (out-of-scope KB2c item); "
+            "silent assignment to adult is forbidden")
 
 
 def kb3_augment(e):
@@ -247,18 +265,22 @@ def kb3_augment(e):
 
 
 def stage_axis_block(eid):
-    """裁定口径全量写入产物字段 (红线3: 阈值入产物, 改动须过裁定)。"""
+    """Write the full adjudication scope into product fields (red line 3: thresholds live in products; changes require re-adjudication)."""
     return {
         "field": "organism_stage",
         "levels": ["fetal", "adult", "developing", "unknown"],
-        "adult_rule": (f"UBERON development_stage 数字化年龄 >= {ADULT_MIN_YEARS}y 判 adult; "
-                       "显式成年术语 (late/prime/middle/mature/human adult stage, 年代段>=3rd) 亦判 adult "
-                       "并记 rule; 阈值改动须过裁定 (KB2c Q2, 2026-09-23)"),
-        "developing_rule": "newborn/infant/postnatal stage 与 <18y 数字年龄/年龄段 → developing (KB2c Q2)",
-        "fetal_rule": "fetal/embryonic/gestation/Carnegie 术语 → fetal; 永不并入 adult 主档 (红线1)",
-        "unknown_rule": "无年龄列/未映射术语/organoid/年龄段跨阈值 → unknown, 必须披露行, 禁静默归 adult (红线2)",
-        "aging_note": ">=60 老年分层不在本轴 — aging 是正交独立轴, 将来单独立条目 (裁定 Q2)",
-        "source_col": "obs/development_stage (UBERON 原值逐行保留; 汇总见 stage_disclosure, 排除清单见 excluded_nonadult_units)",
+        "adult_rule": (f"UBERON development_stage with digitized age >= {ADULT_MIN_YEARS}y is called adult; "
+                       "explicit adult terms (late/prime/middle/mature/human adult stage, decade band >=3rd) are "
+                       "also called adult with the rule recorded; threshold changes require re-adjudication "
+                       "(KB2c Q2, 2026-09-23)"),
+        "developing_rule": "newborn/infant/postnatal stage and <18y numeric ages/age bands → developing (KB2c Q2)",
+        "fetal_rule": "fetal/embryonic/gestation/Carnegie terms → fetal; never merged into the adult main tier (red line 1)",
+        "unknown_rule": "no age column / unmapped term / organoid / age band straddling the threshold → unknown; "
+                        "rows must be disclosed, silent assignment to adult is forbidden (red line 2)",
+        "aging_note": ">=60 aging stratification is not on this axis — aging is an orthogonal independent axis, "
+                      "to be listed as its own entry later (adjudication Q2)",
+        "source_col": "obs/development_stage (raw UBERON values kept row by row; tallies in stage_disclosure, "
+                      "exclusion list in excluded_nonadult_units)",
         "tier_ids": {"adult_only": f"{eid}__adult_only__kb2c",
                      "adult_pool": f"{eid}__adult_pool__v1.0"},
     }
@@ -271,7 +293,7 @@ def sha256_obj(obj):
 
 def kb2c_adult_entry(e, tally, excluded, pool_stats, pool_nd, pool_pooled,
                      n_donors_all, n_cells_adult):
-    """4 个 h5ad filled 条的 adult-only 双档接线 (主档 donor_level_main 已换 adult-only)。"""
+    """Wire the adult-only dual tiers for the 4 filled h5ad entries (donor_level_main is already adult-only)."""
     eid = e["entry_id"]
     e["organism_stage"] = "adult"
     e["stage_axis"] = stage_axis_block(eid)
@@ -290,7 +312,7 @@ def kb2c_adult_entry(e, tally, excluded, pool_stats, pool_nd, pool_pooled,
 
 
 def kb2c_unknown_entry(e, note, disclosure):
-    """无年龄列源 (RPE 等): unknown 档, 披露行, 禁静默归 adult (红线2)。"""
+    """Sources without an age column (RPE etc.): unknown tier, disclosure rows, no silent adult assignment (red line 2)."""
     eid = e["entry_id"]
     e["organism_stage"] = "unknown"
     e["stage_axis"] = stage_axis_block(eid)
@@ -315,7 +337,7 @@ def build_retina(old):
     classes = sorted(set(mc.tolist()))
     dsm, amb = donor_stage_map(donor, dev)
     tally = stage_tally(donor, dev, dsm)
-    # 富集层: NeuN+ 分选 vs naive
+    # enrichment strata: NeuN+ sorted vs naive
     enrich = np.array(["NeuN+" if "NeuN" in e else "naive" for e in enr])
     units, stratum_rows = [], defaultdict(list)
     for i in range(n):
@@ -333,8 +355,8 @@ def build_retina(old):
             guard = None
         else:
             stats_a, nu_a = None, 0
-            guard = ("FALLBACK_BLOCKED: 该层无 adult 供者, adult-only 分布不存在 —— "
-                     "禁静默回退 pool (KB2c 红线2); donor_level=pool 口径仅供对照")
+            guard = ("FALLBACK_BLOCKED: this stratum has no adult donors, the adult-only distribution does not "
+                     "exist —— silent fallback to pool is forbidden (KB2c red line 2); donor_level=pool is for contrast only")
         cells = len(rows_s)
         strata.append({
             "study": s[0], "enrichment": s[1], "n_donors": nu, "n_cells": cells,
@@ -345,7 +367,8 @@ def build_retina(old):
             "adult_fallback_guard": guard,
             "sorted_design_flag": (s[0] == "Chen_rgc") or (s[1] == "NeuN+"),
         })
-    # 主参考 = 排除分选设计层 (Chen_rgc 全层 + 各研究 NeuN+ 层) 后、再按 KB2c 剔除非 adult 供者单元
+    # main reference = after excluding sorted-design strata (all Chen_rgc + each study's NeuN+ strata),
+    # then dropping non-adult donor units per KB2c
     main_rows = [r for k, v in stratum_rows.items()
                  if k[0] != "Chen_rgc" and k[1] != "NeuN+" for r in v]
     pool_stats, pool_nd = donor_stats(main_rows, classes)
@@ -359,15 +382,15 @@ def build_retina(old):
     f.close()
 
     per_study_diss = {
-        "Chen_a": "0.02% NP40 (核提取)", "Chen_ancestry": "0.02% NP40 (核提取)",
-        "Chen_b_GSE226108": "0.02% NP40 (核提取)", "Chen_c_GSE247157": "0.02% NP40 (核提取)",
-        "Chen_rgc": "0.02% NP40 (核提取)", "Shekhar_GSE237204": "unknown",
+        "Chen_a": "0.02% NP40 (nuclei extraction)", "Chen_ancestry": "0.02% NP40 (nuclei extraction)",
+        "Chen_b_GSE226108": "0.02% NP40 (nuclei extraction)", "Chen_c_GSE247157": "0.02% NP40 (nuclei extraction)",
+        "Chen_rgc": "0.02% NP40 (nuclei extraction)", "Shekhar_GSE237204": "unknown",
     }
     entry = {
         "schema": "eyekb-baseline/1.0",
         "entry_id": "baseline_human_retina",
         "tissue": "retina", "species": "human",
-        "title": "组成基线: 人(正常)神经视网膜 adult-only 主档 (D001 HRCA, 供者级条件参考分布, KB2c 发育轴单列)",
+        "title": "Composition baseline: human (normal) neural retina adult-only main tier (D001 HRCA, donor-level conditional reference distribution, KB2c separate developmental axis)",
         "status": "filled_donor_level",
         "generated": TODAY, "generator": GEN, "card": "t_16c3e020",
         "anchor": {
@@ -375,49 +398,54 @@ def build_retina(old):
             "registry_csv": "/mnt/D/OcularKB/registry/ocular_public_datasets_verified_v1.csv",
             "local_path": HRCA,
             "pmid": "41578023",
-            "tier": "T1 已注释标准集",
+            "tier": "T1 annotated standard set",
         },
         "t2_fields": {
-            "取样材料": "人神经视网膜离体组织 (区域构成: "
+            "sampling_material": "human neural retina ex vivo tissue (regional composition: "
                        + ", ".join(f"{k} {v:,}" for k, v in regions.items()) + ")",
-            "疾病阶段": "normal (disease 列全 normal; 供者以老年为主, 90+ 岁段最大)",
-            "治疗背景": "未记录 (公开 atlas 元数据无治疗列) —— 标'未记录', 不臆测",
-            "平台": "snRNA-seq (suspension_type=nucleus 100%, 核悬液)",
-            "富集步骤": "分层: 多数 naive; 1,334,033 核经 NeuN+ 神经元核分选 (Chen_a/ancestry 部分); "
-                       "Chen_rgc 研究整层为 RGC 富集设计",
-            "解离方法": "; ".join(f"{k}={v}" for k, v in per_study_diss.items()),
-            "供者数": "104 唯一 donor_id; 按 study|donor|富集 分层共 %d 个供者单元" % len(set(units)),
-            "计数分母": f"{n:,} 核 (majorclass 全标注)",
-            "证据来源": "本地实测复算 (A) + HRCA 论文 (B, PMID 41578023) + 旧 KB1 文献锚",
+            "disease_stage": "normal (disease column all normal; donors predominantly elderly, the 90+ age band is the largest)",
+            "treatment_background": "not recorded (public atlas metadata has no treatment column) —— marked 'not recorded', no speculation",
+            "platform": "snRNA-seq (suspension_type=nucleus 100%, nuclear suspension)",
+            "enrichment_step": "stratified: mostly naive; 1,334,033 nuclei went through NeuN+ neuronal-nuclei sorting "
+                       "(part of Chen_a/ancestry); the entire Chen_rgc study stratum is an RGC-enriched design",
+            "dissociation_method": "; ".join(f"{k}={v}" for k, v in per_study_diss.items()),
+            "donor_count": "104 unique donor_id; %d donor units when stratified by study|donor|enrichment" % len(set(units)),
+            "counting_denominator": f"{n:,} nuclei (majorclass fully annotated)",
+            "evidence_source": "local recomputation (A) + HRCA paper (B, PMID 41578023) + old KB1 literature anchors",
         },
         "usage_scope": USAGE_SCOPE,
         "evidence_grades": EVIDENCE_GRADES,
-        "distribution_method": ("供者级: 每供者单元先算 10 类占比, 再跨供者汇总 median/IQR/range; "
-                                "分层=研究×富集(×部位, D002 侧); pooled 列仅对照, 有大供者压秤问题"),
-        "primary_reference_stratum": ("主档=6 研究排除 Chen_rgc (RGC 富集设计) 与各研究 NeuN+ 分选层、"
-                                      "且仅 organism_stage=adult (>=18y) 供者单元 %d 个" % main_nd),
+        "distribution_method": ("donor-level: per donor unit compute the 10-class shares first, then aggregate "
+                                "median/IQR/range across donors; strata = study × enrichment (× region, D002 side); "
+                                "pooled columns are contrast only and suffer large-donor domination"),
+        "primary_reference_stratum": ("main tier = %d donor units from the 6 studies after excluding Chen_rgc "
+                                      "(RGC-enriched design) and each study's NeuN+ sorted strata, keeping only "
+                                      "organism_stage=adult (>=18y)" % main_nd),
         "donor_level_main": main_stats,
         "pooled_adult_only_main": pooled_adult_main,
         "pooled_all_cells": pooled,
         "strata": strata,
-        "major_classes": [],   # 工具兼容视图, 下方填
+        "major_classes": [],   # tool-compatibility view, filled below
         "fine_types": old.get("fine_types"),
         "states": old.get("states"),
         "flags": old.get("flags"),
         "caveats": (old.get("caveats") or []) + [
-            "v1.1 (本条): 比例口径已从'全细胞 pooled + 跨研究 spread'升级为'供者级分层分布' (Astra T2); "
-            "旧 pooled 值保留于 pooled_all_cells 仅作对照 —— 3.17M 核中 Chen_ancestry 占 42.6%, pooled 大供者压秤。",
-            "NeuN+ 分选层系统性抬升神经元类/压低 MG·Astro·RPE; 对照样本是否做过核分选前, 不得混用两层区间。",
-            "suspension_type 全核 —— snRNA 内含子 reads 计入 (intronic_reads_counted=yes), "
-            "与 scRNA 细胞悬液数据的类比例不可直接互比 (Astra T2: scRNA vs snRNA 差别足以改变观察组成)。",
+            "v1.1 (this entry): fraction scope upgraded from 'all-cell pooled + cross-study spread' to "
+            "'donor-level stratified distribution' (Astra T2); old pooled values are kept in pooled_all_cells for "
+            "contrast only —— Chen_ancestry is 42.6% of the 3.17M nuclei, so pooled values are dominated by large donors.",
+            "The NeuN+ sorted stratum systematically elevates neuronal classes and depresses MG/Astro/RPE; until "
+            "control samples' nuclear-sorting status is known, the two strata's intervals must not be mixed.",
+            "suspension_type is all nuclei —— snRNA intronic reads are counted (intronic_reads_counted=yes), so class "
+            "fractions are not directly comparable with scRNA cell-suspension data (Astra T2: the scRNA vs snRNA "
+            "difference alone can change the observed composition).",
         ],
         "sources": old.get("sources", []) + [
             {"sid": "D001_DONOR_LEVEL", "kind": "dataset", "pmid": "41578023",
-             "label": f"本条供者级分布由 {GEN} 从 {HRCA} obs 复算", "path": HRCA,
+             "label": f"this entry's donor-level distribution recomputed from {HRCA} obs by {GEN}", "path": HRCA,
              "computation": f"{__file__} build_retina()"},
         ],
     }
-    # 工具兼容 major_classes 行: markers/来源继承旧条, 区间换成供者级统计
+    # tool-compatible major_classes rows: markers/sources inherited from the old entry, intervals replaced with donor-level stats
     old_rows = {r["class"]: r for r in old.get("major_classes", [])}
     for c in classes:
         src = old_rows.get(c, {})
@@ -432,14 +460,15 @@ def build_retina(old):
                 s for s in src.get("source_ids", []) if s != "HRCA317M"],
             "note": src.get("note", ""),
         })
-    entry["t2_fields"]["供者数"] = (
-        f"主档 adult-only {sum(1 for v in dsm.values() if v[1] == 'adult')} donors / "
-        f"{main_nd} 供者单元; 对照档 adult_pool {len(set(donor.tolist()))} donors / {pool_nd} 单元 "
-        f"(含 {len(excluded)} 非 adult 供者 → 逐行见 excluded_nonadult_units, KB2c 裁定 Q2 阈值>=18y)")
+    entry["t2_fields"]["donor_count"] = (
+        f"main tier adult-only {sum(1 for v in dsm.values() if v[1] == 'adult')} donors / "
+        f"{main_nd} donor units; contrast tier adult_pool {len(set(donor.tolist()))} donors / {pool_nd} units "
+        f"(includes {len(excluded)} non-adult donors → see excluded_nonadult_units row by row; KB2c adjudication Q2 threshold >=18y)")
     entry["caveats"].append(
-        "v1.1 (KB2c t_be336eee): 主档口径升级为 adult-only (donor_age>=18y, 裁定 Q2) —— v1.0 混口径"
-        "(曾含 3-17 岁发育期供者; 实测胎儿期 0 核) 完整保留于 donor_level_adult_pool_contrast "
-        "(tier_id=...__adult_pool__v1.0), 引用 v1.0 数字必须挂对照档身份, 两档签名不混用 (红线)。")
+        "v1.1 (KB2c t_be336eee): the main tier was upgraded to adult-only scope (donor_age>=18y, adjudication Q2) "
+        "—— the v1.0 mixed scope (which once included 3-17-year-old developmental donors; measured fetal nuclei = 0) "
+        "is fully preserved in donor_level_adult_pool_contrast (tier_id=...__adult_pool__v1.0); citing v1.0 numbers "
+        "must attach the contrast-tier identity; the two tier signatures are never mixed (red line).")
     entry["_tmp_main_nd"] = main_nd
     kb2c_adult_entry(entry, tally, excluded, pool_stats, pool_nd, pooled,
                      len(set(donor.tolist())), len(all_adult))
@@ -527,7 +556,7 @@ def build_ocular_surface():
             "registry_csv": "/mnt/D/OcularKB/registry/ocular_public_datasets_verified_v1.csv",
             "local_path": D002,
             "collection": "https://cellxgene.cziscience.com/collections/0f7d022a-46c7-4e64-be4c-e34adbb78089",
-            "tier": "T1 已注释标准集",
+            "tier": "T1 annotated standard set",
         },
         "category_note": ("眼表为超级类 (cornea/limbus/sclera/conjunctiva 合并口径, 类目=per-region 多套禁跨区套用); "
                           "conjunctiva/sclera 独立骨架另立 (t_6f5cc731 裁定: 结膜=数据不足, 建议并入眼表亚群标注)。"),

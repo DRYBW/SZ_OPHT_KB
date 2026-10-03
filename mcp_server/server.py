@@ -1,28 +1,33 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""EyeKB MCP stdio server — 眼科文献二级知识库证据服务 (P1 三工具 + KB1 判读层两工具 + KB1v2 眼科通用升级)
+"""EyeKB MCP stdio server — ophthalmic literature second-tier knowledge-base evidence service
+(P1 three tools + KB1 interpretation-layer two tools + KB1v2 general-ophthalmology upgrade)
 
-工具清单 (契约 = KB_SPINOUT_MCP_DESIGN_v0 §3 + BRIEF_KB1v2 W1-W3):
-  search_literature(cell_type, species?, tissue?, top_k?, query?, db?) → 文献片段+PMID+marker 共现+相关度
-      (+KB1v2: evidence_meta 三字段联表 inclusion_reasons/claim_relation/evidence_context/verification_status)
-  get_kb_page(scope, name)     → VK 索引页原文 (白名单路径, 防越界)
-  query_marker(genes?, cell_type?) → 本地权威 marker 库命中 (先查本地再联网的机器化)
-  get_tissue_composition(species, tissue, disease?, development_stage?) → 组成基线 (KB1v2: kb/baselines/
-      供者级条件参考分布优先于 v1 composition 存档; 骨架条明确标"区间无法估计";
-      KB2c 发育轴: adult 主档=adult-only(donor>=18y)+adult_pool 对照档双身份, fetal/developing
-      查询返回转换态概念条目——成人桶禁代答胎儿问题, unknown 档必须披露)
-  get_disease_prior(disease, tissue?) → 疾病条目 (KB1v2: 疾病×组织矩阵薄层, 身份层级+状态轴 T4 骨架
-      + 取样材料错配警示 + unexpected 四分队列; v1 条保留存档)
+Tool inventory (contract = KB_SPINOUT_MCP_DESIGN_v0 §3 + BRIEF_KB1v2 W1-W3):
+  search_literature(cell_type, species?, tissue?, top_k?, query?, db?) → literature snippets + PMID + marker co-occurrence + relevance
+      (+KB1v2: evidence_meta three-field join inclusion_reasons/claim_relation/evidence_context/verification_status)
+  get_kb_page(scope, name)     → raw VK index page (whitelisted paths, traversal-proof)
+  query_marker(genes?, cell_type?) → hits in the local authoritative marker library (local-before-web, mechanized)
+  get_tissue_composition(species, tissue, disease?, development_stage?) → composition baselines (KB1v2: kb/baselines/
+      donor-level conditional reference distributions take precedence over the v1 composition archive; skeleton rows
+      are explicitly marked "interval not estimable";
+      KB2c developmental axis: adult master file = adult-only (donor>=18y) + adult_pool contrast file — a dual
+      identity; fetal/developing queries return transition-state concept entries — the adult bucket must never
+      answer fetal questions by proxy; the unknown stage must be disclosed)
+  get_disease_prior(disease, tissue?) → disease entries (KB1v2: disease×tissue matrix thin layer, identity hierarchy +
+      status axis T4 skeleton + sampling-material mismatch warnings + unexpected four-sub-queue; v1 entries kept as archive)
 
-═══ 服务级红线 ═══
-1. 本服务只提供【证据与引用】。禁止把返回内容接进任何打分/分类流程
-   (Claude5 冻结裁定 + REVIEWER_LLM T3 扩展: 不得转成 module score/标签加权/置信度加分/候选排序分/复合 QC 分)。
-2. 传输 = 本地 stdio, 不开任何网络端口 (P3 才议 SSE)。
-3. P1 阶段 RAG 库/embedding 模型按 kb/literature_db/EYEKB_DB_POINTER.yaml
-   引用 OcularKB 现路径, 全部只读; OcularKB 文件零改动 (copy 不 move)。
-4. 判读层使用流程必须走 plans/ANNOTATION_PROTOCOL_v1.1.md (先冻结后对照四阶段)。
+═══ Service-level red lines ═══
+1. This service provides [EVIDENCE AND CITATIONS] only. Feeding the returned content into any scoring/classification
+   pipeline is forbidden (Claude5 frozen ruling + REVIEWER_LLM T3 extension: it must not be converted into module
+   score / label weighting / confidence bonus / candidate-ranking score / composite QC score).
+2. Transport = local stdio; no network port is opened (SSE is only discussed at P3).
+3. During P1 the RAG library / embedding model reference the current OcularKB paths via
+   kb/literature_db/EYEKB_DB_POINTER.yaml; everything is read-only; zero modification of OcularKB
+   files (copy, never move).
+4. Interpretation-layer usage must follow plans/ANNOTATION_PROTOCOL_v1.1.md (freeze first, then contrast; four stages).
 
-启动 (供 MCP 客户端配置):
+Startup (for MCP client configuration):
   /home/ubuntu/training-venv/bin/python /mnt/D/EyeKB/mcp_server/server.py
 """
 import sys
@@ -30,64 +35,81 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import eyekb_core as core  # noqa: E402
-import calllog  # OBS1 t_c754c4fc 调用留痕层（只加日志、零行为改动；见 mcp_server/calllog.py 头注）
+import calllog  # OBS1 t_c754c4fc call-tracing layer (adds logging only, zero behavior change; see header note in mcp_server/calllog.py)
 
 from mcp.server import MCPServer  # noqa: E402
 
 app = MCPServer(
     name="eyekb",
-    title="EyeKB 眼科知识库证据服务",
+    title="EyeKB ophthalmic knowledge-base evidence service",
     version="KB1v2-0.8-cnrewrite",
-    description=("眼科文献 RAG 检索 (v2.0 全眼库 174,616 chunks/2,713 papers, KB1v2 起带 "
-                 "inclusion_reasons/claim_relation/evidence_context 三字段+复核状态) + VK 索引页 + "
-                 "本地权威 marker 库 + 判读层: 眼科通用组成基线 (kb/baselines 供者级条件参考分布, "
-                 "锚 D001/D002) + 疾病×组织矩阵薄层条目 (身份层级+状态轴+错配警示)。"
-                 "仅证据服务, 禁入打分 (REVIEWER_LLM T3 扩展表述)。"
-                 "t_d6f2a0a0 起 query_marker 可附 soft_flags 软复核提示 (rod-BC/mural)。"
-                 "t_38b99a15 起 query_marker 可选 library=retina_v6|face_v6 (KB7 v6 修复面板"
-                 "登记; t_e7ec73ab 起增 library=lacrimal_v6, KB8 眼附属器词条库)。"
-                 "t_5d5853c9 激活 (USER_DIRECTIVE_20260926 A1/A2, PI 2026-09-26 批准): 默认 "
-                 "library=all 纳入 retina_v6+face_v6 (同名类经 '<库>::<类>' 别名消歧并入); "
-                 "env EYEKB_ACT_V6=0|false|off|no 回退=现役三库, off 态规范序列化与 pre 基线"
-                 "全等 (A5 机读验收); lacrimal_v6 任何态不入默认 (PI A3 暂不切, 仅显式查询)。"
-                 "kb/baselines 红词修正经 append 式覆盖层生效 (原基线文件字节不动, "
-                 "返回体 entry 级 marker_repair 台账可审计)。"
-                 "t_4bb75b26 KB9REG-EXEC (PI D17 注册批准, 2026-09-28 波): 新增可选库 "
-                 "library=k9_ocs (KB9 案 B 眼表 4 新条 Melanocyte/Schwann/"
-                 "Conj_epithelium_suprabasal/Limbus_Sclera_fibroblast_C1, REGISTERED_"
-                 "DEFAULT_OFF——仅显式查询可达, 任何态不入默认 all; 激活需义务 run+PI 另批; "
-                 "默认行为与本登记前字节级一致, A5 式机读自证见 plans/kb9_ocs_20260927/exec/out/)。"
-                 "B5IMPL t_8960c7e0 (USER_DIRECTIVE_20260928 追加五队列①, PI 预授权接线): "
-                 "query_marker genes-mode 跨物种治理默认生效——鼠源输入 (G1 confirmed/suspected) "
-                 "具名排名清空转 unranked_candidates 并标 no_named_ranking_for; AMBIG{GLUL,VIM,CLU} "
-                 "纯共表达命中条目附 no_naming_claim 注记 (排序不动); env EYEKB_KBGOV_B5="
-                 "0|false|off|no 整体回退, 回退态与 pre 基线逐字节全等 (A5 式机读自证, "
-                 "plans/kbgov_b5impl_20260928); 判据冻结源 KBGOV_CANDIDATE §G1-G3。"),
-    instructions=("EyeKB 五工具: query_marker 先查本地 marker; search_literature 取文献证据"
-                  "(全部带 PMID 可溯源); get_kb_page 读组织/主题索引页; "
-                  "注释前按 ANNOTATION_PROTOCOL_v1.1 四阶段用 get_tissue_composition "
-                  "(按实际取样材料!) / get_disease_prior (仅在冻结后的疾病对照阶段调用)。"
-                  "红线: 返回内容只作人工判读证据与 QC 旗, 不得成为任何打分/加权/排序/复合 QC 分输入。"
-                  "soft_flags.notes (t_d6f2a0a0): 提供可选复核线索, 建议结合原始证据检查; "
-                  "其出现不代表误注释, 不新增定名、弃权或候选排除条件, 且不得作为任何打分、"
-                  "加权、置信度或排序输入; 注记仅在既有结果产生后附加, 不反馈改变候选、分数、"
-                  "排序或原有 QC 字段。"),
+    description=("Ophthalmic literature RAG retrieval (v2.0 whole-eye-bank 174,616 chunks / 2,713 papers; "
+                 "from KB1v2 onward carries the inclusion_reasons/claim_relation/evidence_context three fields "
+                 "+ verification status) + VK index pages + local authoritative marker library + "
+                 "interpretation layer: general-ophthalmology composition baselines (kb/baselines "
+                 "donor-level conditional reference distributions, anchored D001/D002) + disease×tissue "
+                 "matrix thin-layer entries (identity hierarchy + status axis + sampling mismatch warnings). "
+                 "Evidence service only, forbidden in scoring (REVIEWER_LLM T3 extended wording). "
+                 "From t_d6f2a0a0 query_marker may attach soft_flags review hints (rod-BC/mural). "
+                 "From t_38b99a15 query_marker accepts library=retina_v6|face_v6 (KB7 v6 repair panels "
+                 "registered; from t_e7ec73ab adds library=lacrimal_v6, KB8 ocular-adnexa entry library). "
+                 "t_5d5853c9 activation (USER_DIRECTIVE_20260926 A1/A2, PI approved 2026-09-26): default "
+                 "library=all now includes retina_v6+face_v6 (same-named classes merged via "
+                 "'<library>::<class>' alias disambiguation); env EYEKB_ACT_V6=0|false|off|no reverts to "
+                 "the three active libraries — the off-state canonical serialization is byte-equal to the "
+                 "pre baseline (A5 machine-readable acceptance); lacrimal_v6 never enters the default in "
+                 "any state (PI A3: not switched yet, explicit queries only). "
+                 "kb/baselines red-word corrections take effect via an append-style overlay (the original "
+                 "baseline files are untouched byte-wise; auditable through the entry-level marker_repair "
+                 "ledger in the response body). "
+                 "t_4bb75b26 KB9REG-EXEC (PI D17 registration approval, 2026-09-28 wave): new optional "
+                 "library=k9_ocs (KB9 plan-B ocular-surface 4 new entries Melanocyte/Schwann/"
+                 "Conj_epithelium_suprabasal/Limbus_Sclera_fibroblast_C1, REGISTERED_DEFAULT_OFF — "
+                 "reachable only by explicit query, never in the default all in any state; activation needs "
+                 "the mandatory run + separate PI approval; default behavior is byte-identical to before "
+                 "this registration, A5-style machine-readable self-proof in plans/kb9_ocs_20260927/exec/out/). "
+                 "B5IMPL t_8960c7e0 (USER_DIRECTIVE_20260928 five-queue item ①, PI pre-authorized wiring): "
+                 "query_marker genes-mode cross-species governance is ON by default — mouse-derived input "
+                 "(G1 confirmed/suspected) has its named ranking cleared into unranked_candidates and is "
+                 "marked no_named_ranking_for; AMBIG{GLUL,VIM,CLU} pure co-expression hit entries get a "
+                 "no_naming_claim note attached (ordering unchanged); env EYEKB_KBGOV_B5=0|false|off|no "
+                 "reverts the whole feature, the reverted state is byte-equal to the pre baseline "
+                 "(A5-style machine-readable self-proof, plans/kbgov_b5impl_20260928); frozen criteria "
+                 "source KBGOV_CANDIDATE §G1-G3."),
+    instructions=("EyeKB five tools: query_marker checks the local marker library first; "
+                  "search_literature retrieves literature evidence (everything traceable via PMID); "
+                  "get_kb_page reads tissue/topic index pages; before annotating, follow the four stages of "
+                  "ANNOTATION_PROTOCOL_v1.1 using get_tissue_composition (against the actual sampling "
+                  "material!) / get_disease_prior (call it only in the post-freeze disease-contrast stage). "
+                  "Red line: returned content is for human interpretation evidence and QC flags only, and "
+                  "must not become input to any score/weighting/ranking/composite QC score. "
+                  "soft_flags.notes (t_d6f2a0a0): optional review clues — check them against the original "
+                  "evidence; their presence does not imply mis-annotation, they add no naming/abstention/"
+                  "candidate-exclusion conditions, and they must not be used as input to any score, "
+                  "weighting, confidence, or ranking; notes are attached only after existing results are "
+                  "produced and never feed back to change candidates, scores, ordering, or original QC "
+                  "fields."),
 )
 
 
 @app.tool()
 def search_literature(cell_type: str, top_k: int = 5, species: str = "",
                       tissue: str = "", query: str = "", db: str = "") -> dict:
-    """检索眼科文献库 (RAG v2.0 默认), 返回文献片段+PMID+期刊年份+marker 共现+相关度。
+    """Search the ophthalmic literature library (RAG v2.0 by default); returns literature
+    snippets + PMID + journal year + marker co-occurrence + relevance.
 
-    cell_type: 细胞类型 (如 "Muller glia"/"corneal endothelium"), 用于元数据过滤;
-    可传空串但建议给出。species: human|mouse|"" (不过滤)。
-    tissue: v2.0 多标签组织过滤 (retina/cornea/RPE/choroid/...)。
-    query: 显式检索句; 留空则用 cell_type 模板句。db: 留空=v2.0_2026-09, 或给绝对路径。
-    中文检索句可经查询改写层翻成英文检索式再查 (2026-10-03):
-    开关 = 环境变量 EYEKB_CN_REWRITE ∈ {1,true,on,yes} 每次调用读取, 默认关闭;
-    关闭态服务行为与历史逐字节一致, 开启态响应附 rewrite_meta 披露键 (仅证据披露,
-    禁入任何打分/排序输入)。工具签名与 MCP schema 未变。
+    cell_type: cell type (e.g. "Muller glia"/"corneal endothelium"), used for metadata
+    filtering; an empty string is accepted but providing one is recommended.
+    species: human|mouse|"" (no filter).
+    tissue: v2.0 multi-label tissue filter (retina/cornea/RPE/choroid/...).
+    query: explicit search sentence; if empty, a cell_type template sentence is used.
+    db: empty = v2.0_2026-09, or give an absolute path.
+    Chinese search sentences can be translated into English search expressions by the
+    query-rewrite layer before retrieval (2026-10-03):
+    switch = env var EYEKB_CN_REWRITE ∈ {1,true,on,yes}, read per call, off by default;
+    in the off state the service behaves byte-identically to history; in the on state the
+    response attaches a rewrite_meta disclosure key (evidence disclosure only, forbidden as
+    input to any score/ranking). Tool signature and MCP schema unchanged.
     """
     resp = core.search_literature(
         cell_type, species=species or None, tissue=tissue or None,
@@ -100,9 +122,10 @@ def search_literature(cell_type: str, top_k: int = 5, species: str = "",
 
 @app.tool()
 def get_kb_page(scope: str, name: str = "") -> dict:
-    """读 VK 文献索引页原文。scope=index → 总目录; scope=topic, name=主题 (如 vascular);
-    scope=tissue, name=组织 (如 cornea/RPE/trabecular_meshwork)。
-    白名单: 仅 kb/vk_literature_index/ 下 *.md, 非法路径拒绝并回可用页面清单。"""
+    """Read raw VK literature index pages. scope=index → master catalog; scope=topic,
+    name=topic (e.g. vascular); scope=tissue, name=tissue (e.g. cornea/RPE/trabecular_meshwork).
+    Whitelist: only *.md under kb/vk_literature_index/; illegal paths are rejected and a list
+    of available pages is returned."""
     resp = core.get_kb_page(scope, name)
     calllog.trace("get_kb_page", {"scope": scope, "name": name}, resp)
     return resp
@@ -111,39 +134,50 @@ def get_kb_page(scope: str, name: str = "") -> dict:
 @app.tool()
 def query_marker(genes: list[str] | None = None, cell_type: str = "",
                  library: str = "all") -> dict:
-    """查本地权威 marker 库 (多库: retina=markers_v4.1_clean.json v4.1-clean-P0.4;
-    membrane=markers_membrane_v1.json 四面板膜/血管/间质/免疫, 逐基因带溯源;
-    retina_interneuron=markers_v5_retina_interneuron.json v5.0 (BC/AC/HC 泛型 core+亚型锚,
-    v4.1 严格超集; library=all 时与 v4.1 同名类以 "retina_interneuron::<类>" 别名列示);
-    retina_v6=markers_v6_retina_repair.json v6.0-retina-repair 与 face_v6=markers_v6_face_increment.json
-    v6.0-face (t_2e5e103a 发布 / t_38b99a15 登记 / t_5d5853c9 激活, USER_DIRECTIVE_20260926
-    A1/A2): KB7 红词条修复面板——默认 all 含之 (env EYEKB_ACT_V6=0|false|off|no 回退
-    =现役三库, 与激活前基线全等; 同名类 "retina_v6::/face_v6::<类>" 别名列示); v6 发布
-    文件本体只读;
-    lacrimal_v6=markers_v6_lacrimal_increment.json v6.0-lacrimal (t_e7ec73ab KB8 发布+登记同卡):
-    首个眼附属器词条库——泪腺分泌/导管/肌上皮警示条 3 条; PI A3 裁定暂不切, 任何态不入
-    默认 all, 仅显式 library=lacrimal_v6 查询可达;
-    k9_ocs=markers_k9_ocs_increment.json k9.0-ocs-registered-v1 (t_4bb75b26 KB9REG-EXEC 注册,
-    PI D17 批准): KB9 案 B 眼表 4 新条 (Melanocyte/Schwann/Conj_epithelium_suprabasal/
-    Limbus_Sclera_fibroblast_C1, 均 ocular_surface_only, 逐条带 CL id+OLS 回证+逐基因 PMID 链)
-    ——REGISTERED_DEFAULT_OFF: 任何态不入默认 all, 仅显式 library=k9_ocs 查询可达;
-    [KB9ACT t_abfebe59, PI 2026-09-30] 现态 ACTIVE_ON_DEFAULT: 默认 all 含 k9_ocs (上段 REGISTERED_DEFAULT_OFF 为历史注册态); env EYEKB_ACT_K9=0|false|off|no 整体回退=五库。
-    激活需 §10-6 义务 run + PI 另批; 屏蔽/装配规则 v2 旁挂件 _k9_ocs_rules_overlay_v1.json
-    为惰性数据 (MCP 运行时不读))。
-    给 genes → 反查基因命中哪些细胞类型 + 类排名 (n_shared);
-    给 cell_type → 该类的 marker 列表 (Micro/RPE 附 detail; membrane 类附 provenance);
-    都给空 → 返回类目清单。library=retina 精确复现 P1 旧行为。
-    注释流程第一步: 未查本地不联网。
-    自 t_d6f2a0a0: 命中软复核规则时返回体可附 soft_flags.notes (rod_bc_review /
-    mural_crosstalk)——仅为可选复核线索, 不新增定名/弃权/排除条件, 禁入打分;
-    环境开关 EYEKB_MCP_SOFTFLAGS=0|false|off|no 可整体关闭 (关闭时该 key 不出现)。
-    自 B5IMPL t_8960c7e0 (0.6-kbgov5, 默认 ON): genes-mode 附跨物种治理——返回体加
-    input_species (mouse_confirmed|mouse_suspected|human_assumed, G1 冻结阈值 T=0.4);
-    鼠源输入 (confirmed∨suspected) 具名排名清空: celltype_ranking=[], 原条目全量转
-    unranked_candidates + 顶层 no_named_ranking_for='mouse_input' + species_evidence;
-    shared_genes ⊆ {GLUL,VIM,CLU} 的条目附 no_naming_claim=true (排序不动)。判读席禁以
-    no_naming_claim/cross-species 条目作 identity 定名依据 (ANNOTATION_PROTOCOL 承接)。
-    环境开关 EYEKB_KBGOV_B5=0|false|off|no 整体回退=pre 基线逐字节全态。"""
+    """Query the local authoritative marker library (multi-library:
+    retina=markers_v4.1_clean.json v4.1-clean-P0.4;
+    membrane=markers_membrane_v1.json four panels membrane/vascular/stroma/immune, per-gene provenance;
+    retina_interneuron=markers_v5_retina_interneuron.json v5.0 (BC/AC/HC generic core+subtype anchors,
+    strict superset of v4.1; under library=all, same-named classes are listed alongside v4.1 under the
+    "retina_interneuron::<class>" alias);
+    retina_v6=markers_v6_retina_repair.json v6.0-retina-repair and face_v6=markers_v6_face_increment.json
+    v6.0-face (t_2e5e103a release / t_38b99a15 registration / t_5d5853c9 activation,
+    USER_DIRECTIVE_20260926 A1/A2): KB7 red-word repair panels — the default all includes them
+    (env EYEKB_ACT_V6=0|false|off|no reverts to the three active libraries, byte-equal to the
+    pre-activation baseline; same-named classes listed under the "retina_v6::/face_v6::<class>"
+    alias); the v6 release files themselves are read-only;
+    lacrimal_v6=markers_v6_lacrimal_increment.json v6.0-lacrimal (t_e7ec73ab KB8 release+registration
+    on the same card): the first ocular-adnexa entry library — lacrimal secretion/duct/myoepithelial
+    warning entries, 3 in total; PI A3 ruling: not switched for now, never in the default all in any
+    state, reachable only via explicit library=lacrimal_v6 queries;
+    k9_ocs=markers_k9_ocs_increment.json k9.0-ocs-registered-v1 (t_4bb75b26 KB9REG-EXEC registration,
+    PI D17 approval): KB9 plan-B ocular-surface 4 new entries (Melanocyte/Schwann/
+    Conj_epithelium_suprabasal/Limbus_Sclera_fibroblast_C1, all ocular_surface_only, each carrying
+    CL id + OLS corroboration + per-gene PMID links) — REGISTERED_DEFAULT_OFF: never in the default
+    all in any state, reachable only via explicit library=k9_ocs queries;
+    [KB9ACT t_abfebe59, PI 2026-09-30] current state ACTIVE_ON_DEFAULT: the default all includes
+    k9_ocs (the REGISTERED_DEFAULT_OFF above is the historical registration state); env
+    EYEKB_ACT_K9=0|false|off|no reverts to the five libraries.
+    Activation requires the §10-6 mandatory run + separate PI approval; the masking/assembly rule v2
+    sidecar _k9_ocs_rules_overlay_v1.json is inert data (not read by the MCP runtime)).
+    Give genes → which cell types the genes hit + class ranking (n_shared);
+    give cell_type → the marker list of that class (Micro/RPE attach detail; membrane classes attach
+    provenance);
+    give neither → return the class inventory. library=retina exactly reproduces the old P1 behavior.
+    First step of the annotation workflow: never go online before checking local.
+    Since t_d6f2a0a0: when a soft-review rule hits, the response body may attach soft_flags.notes
+    (rod_bc_review / mural_crosstalk) — optional review clues only, no new naming/abstention/exclusion
+    conditions, forbidden in scoring; env switch EYEKB_MCP_SOFTFLAGS=0|false|off|no disables the whole
+    feature (the key does not appear when off).
+    Since B5IMPL t_8960c7e0 (0.6-kbgov5, default ON): genes-mode attaches cross-species governance —
+    the response body adds input_species (mouse_confirmed|mouse_suspected|human_assumed, G1 frozen
+    threshold T=0.4); for mouse-derived input (confirmed∨suspected) the named ranking is cleared:
+    celltype_ranking=[], original entries fully moved to unranked_candidates + top-level
+    no_named_ranking_for='mouse_input' + species_evidence; entries with
+    shared_genes ⊆ {GLUL,VIM,CLU} attach no_naming_claim=true (ordering unchanged). Interpreters must
+    not use no_naming_claim/cross-species entries as the basis for identity naming (carried by
+    ANNOTATION_PROTOCOL). Env switch EYEKB_KBGOV_B5=0|false|off|no reverts to the byte-equal pre
+    baseline in the full state."""
     resp = core.query_marker(genes=genes, cell_type=cell_type or None,
                              library=library or "all")
     calllog.trace("query_marker",
@@ -154,15 +188,21 @@ def query_marker(genes: list[str] | None = None, cell_type: str = "",
 @app.tool()
 def get_tissue_composition(species: str, tissue: str, disease: str = "",
                            development_stage: str = "") -> dict:
-    """组成基线 (判读层): 该物种该组织的细胞组成清单+比例区间+每条出处 (PMID/数据集+证据等级)。
-    species=human|mouse; tissue=retina|fibrovascular_membrane|...; disease 可选 (如
-    'proliferative diabetic')。注释前先调本工具对照"该组织应有什么、大致多少";
-    出现区间外成分 → 按 flags 判 expected/unexpected/contamination-suspect 并旗标。
-    development_stage (KB2c 发育轴, 必填意识): 留空/adult=成人主档 (adult-only, donor>=18y,
-    供者级分布已剔除非成人供者, 逐行见返回的 stage_disclosure/excluded_nonadult_units);
-    fetal|developing=返回转换态概念条目——成人桶不得代答胎儿问题 (PI 红线, 即使同一组织);
-    unknown=只看无年龄列的披露档条目 (如 GSE158629 RPE)。
-    红线: 只做对照与 QC 旗, 禁止接进任何打分; v1.0 混口径旧数字只能挂 adult_pool 对照档身份。"""
+    """Composition baseline (interpretation layer): cell composition list + proportion
+    intervals + per-entry provenance (PMID/dataset + evidence level) for this species and
+    tissue.
+    species=human|mouse; tissue=retina|fibrovascular_membrane|...; disease optional (e.g.
+    'proliferative diabetic'). Call this tool before annotation to contrast "what the tissue
+    should contain, and roughly how much"; out-of-interval components → per flags judge
+    expected/unexpected/contamination-suspect and raise a flag.
+    development_stage (KB2c developmental axis, mind that it is required): empty/adult = the
+    adult master file (adult-only, donor>=18y; the donor-level distribution has non-adult
+    donors removed, row by row in the returned stage_disclosure/excluded_nonadult_units);
+    fetal|developing = returns the transition-state concept entry — the adult bucket must not
+    answer fetal questions by proxy (PI red line, even for the same tissue);
+    unknown = only entries in disclosure files without an age column (e.g. GSE158629 RPE).
+    Red line: contrast and QC flags only; feeding into any scoring is forbidden; the mixed-
+    caliber v1.0 old numbers may only carry the adult_pool contrast-file identity."""
     resp = core.get_tissue_composition(species, tissue, disease, development_stage)
     calllog.trace("get_tissue_composition",
                   {"species": species, "tissue": tissue, "disease": disease,
@@ -172,10 +212,12 @@ def get_tissue_composition(species: str, tissue: str, disease: str = "",
 
 @app.tool()
 def get_disease_prior(disease: str, tissue: str = "") -> dict:
-    """疾病先验 (判读层): 预期 细胞×状态 矩阵 + 非预期旗 + 污染旗 + marker 签名 + 出处。
-    disease='PDR'/'proliferative diabetic retinopathy'/... (别名已内置); tissue 可选过滤
-    组织端 (fibrovascular_membrane/vitreous/retina_adjacent)。
-    先验≠真理: 与数据打架 → 输出打架清单上报, 不许硬凑; 禁止接进任何打分。"""
+    """Disease prior (interpretation layer): expected cell×status matrix + unexpected flags +
+    contamination flags + marker signature + provenance.
+    disease='PDR'/'proliferative diabetic retinopathy'/... (aliases built in); tissue
+    optionally filters the tissue side (fibrovascular_membrane/vitreous/retina_adjacent).
+    Prior ≠ truth: when it clashes with the data → output the clash list and escalate; do not
+    force a fit; feeding into any scoring is forbidden."""
     resp = core.get_disease_prior(disease, tissue)
     calllog.trace("get_disease_prior", {"disease": disease, "tissue": tissue}, resp)
     return resp

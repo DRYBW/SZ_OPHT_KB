@@ -1,5 +1,5 @@
-# 数据与工件（体积大/含私有患者衍生数据，永不入库）
-# 2026-09-27 REPOSYNC: 仅排除仓根 plans/（施工现场）；判读层镜像在 docs/plans/ 下入库
+# Data and artifacts (large / contain private patient-derived data — never committed)
+# 2026-09-27 REPOSYNC: exclude only the repo-root plans/ (construction site); the review-layer mirror is committed under docs/plans/
 /plans/
 docs/plans/*/ledgers/raw/
 docs/plans/*/batch2/ledgers/raw2/
@@ -10,7 +10,7 @@ docs/plans/*/batch2/ledgers/raw2/
 percell/
 *.pkl
 !pipeline/assets/s0/species_assets.pkl
-# 第三方公共数据原始文件（保留取数脚本，数据不入库）
+# Raw files of third-party public data (fetch scripts are kept; data not committed)
 scripts/baselines/data/*.csv
 
 # python
@@ -20,13 +20,13 @@ __pycache__/
 .venv/
 venv/
 
-# 系统与编辑器
+# OS and editors
 .DS_Store
 *.swp
 .idea/
 .vscode/
 
-# 密钥面（本仓应无，双保险）
+# Secret surface (should be absent from this repo; belt and braces)
 .env
 *.key
 *credentials*

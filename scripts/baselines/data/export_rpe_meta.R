@@ -1,5 +1,5 @@
 #!/usr/bin/env Rscript
-# KB1v2b RPE 回填: 导出 GSE158629 RData -> 细胞级 metadata + cluster marker 表 (v2 稀疏crossprod)
+# KB1v2b RPE backfill: export GSE158629 RData -> cell-level metadata + cluster marker tables (v2 sparse crossprod)
 load("/mnt/D/OcularKB/data/GSE158629/extracted/RPE_donors1-4.RData")
 suppressMessages(library(Matrix))
 outdir <- "/home/ubuntu/.hermes/kanban/boards/pi-briefing/workspaces/t_16c3e020"
@@ -30,7 +30,7 @@ for (o in objs) {
   for (g in colnames(mn)) {
     rest <- rowMeans(mn[, colnames(mn) != g, drop = FALSE])
     score <- mn[, g] - rest
-    score[detm[, g] < 0.5] <- -Inf   # 要求簇内表达细胞分数>=50%
+    score[detm[, g] < 0.5] <- -Inf   # require >=50% expressing cells within the cluster
     top <- head(order(score, decreasing = TRUE), 25)
     mk_all[[paste0(o, "_", g)]] <- data.frame(
       donor = donor, tech = tech, object = o, cluster = g,

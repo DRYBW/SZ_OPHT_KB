@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-# S0PROBE build_assets.py — 物种 symbol universe + ortholog 对表缓存
-# 只读源: /mnt/D/OcularKB/data/ncbi_orthologs (compara104, gene_info), 输出 assets.pkl
-# 写盘仅限本 plans 目录。
+# S0PROBE build_assets.py — species symbol universe + ortholog pair-table cache
+# Read-only sources: /mnt/D/OcularKB/data/ncbi_orthologs (compara104, gene_info); output assets.pkl
+# Writes are confined to this plans directory.
 import gzip, pickle, sys, os
 
 IN = '/mnt/D/OcularKB/data/ncbi_orthologs'
@@ -10,7 +10,7 @@ OUT = '/mnt/D/EyeKB/plans/s0_probe_20260930/assets'
 os.makedirs(OUT, exist_ok=True)
 
 def parse_gene_info(path):
-    """return symbol_set(main+syn), sym2ensg, main_sym_set(官方大小写本体, 用于 cs 判别)"""
+    """return symbol_set(main+syn), sym2ensg, main_sym_set(official-case universe, for cs discrimination)"""
     syms, s2e, main = set(), {}, set()
     with gzip.open(path, 'rt', encoding='utf-8', errors='ignore') as f:
         header = f.readline()
@@ -71,7 +71,7 @@ with gzip.open(f'{IN}/homo_sapiens_compara104.tsv.gz', 'rt') as f:
 print('mouse-ortholog rows:', all_cnt, 'high-conf pairs (unique directions):', n_hi,
       'h-side:', len(pairs_h2m), 'm-side:', len(pairs_m2h))
 
-# 正式 ortholog: one2one 优先；many 保留全集用于 symbol 桥（B5 教训: 面板映射用并集但记录歧义）
+# official orthologs: one2one preferred; many-mapped kept in full for the symbol bridge (B5 lesson: panel mapping uses the union but records the ambiguity)
 def bridge_maps(pairs, src2sym, dst2sym):
     """src gene-id -> set(dst symbols)"""
     out = {}

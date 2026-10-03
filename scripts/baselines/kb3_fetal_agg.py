@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""KB3 W1: 发育期锚点数据标签聚合 (只读源, 产出 retina__fetal_developing 条目素材)。
+"""KB3 W1: developmental-stage anchor data label aggregation (read-only sources,
+produces material for the retina__fetal_developing entry).
 
-源 1 GSE268630 portal h5ad: obs[majorclass, cell_type, development_stage, donor_id, tissue]
-    → 全细胞标签直方图 (portal 作者注释, 非现役引擎推断)。
-源 2 GSE138002 Final_barcodes.csv.gz: col[umap2_CellType, sample]
-    → 按样本面拆层: Hgw*=胎网(收录), Hpnd8*=新生, Adult=成人对照, *_Day=类器官 (后三类只列不并入)。
-源 3 GSE234963: 无公开标签 (obs 空) → 只出数据卡。
-纪律: 本脚本不实算组成分类 (无 fetal 参考管线), 仅聚合**作者/portal 已发布标签**的分布 ——
-      "只写有据条目"的"据"= 官方注释标签本身。
-产物: plans/kb3_evidence/fetal_agg_20260924.json
+Source 1 GSE268630 portal h5ad: obs[majorclass, cell_type, development_stage, donor_id, tissue]
+    -> whole-cell label histogram (portal author annotations, not live-engine inference).
+Source 2 GSE138002 Final_barcodes.csv.gz: col[umap2_CellType, sample]
+    -> stratified by sample face: Hgw*=fetal retina (included), Hpnd8*=neonatal, Adult=adult control,
+       *_Day=organoid (last three listed only, never merged).
+Source 3 GSE234963: no public labels (obs empty) -> data card only.
+Discipline: this script does not recompute compositional classification (no fetal reference
+pipeline); it only aggregates the distribution of **author/portal published labels** —
+the "evidence" in "write only evidenced entries" = the official annotation labels themselves.
+Output: plans/kb3_evidence/fetal_agg_20260924.json
 """
 import gzip
 import json
@@ -35,7 +38,7 @@ def cat_col(f, name):
     return [cats[c] if c >= 0 else "" for c in codes]
 
 
-# ---- 源1: GSE268630 ----
+# ---- Source 1: GSE268630 ----
 res268 = {}
 with h5py.File(H268, "r") as f:
     n = f["obs/_index"].shape[0]
@@ -51,7 +54,7 @@ res268 = {"cells_total": int(n), "n_donors": len(donors),
           "tissue_hist": dict(dt.most_common()),
           "cell_type_hist_top30": dict(ct.most_common(30))}
 
-# ---- 源2: GSE138002 Final (作者注释) ----
+# ---- Source 2: GSE138002 Final (author annotations) ----
 strata = {"fetal_Hgw": Counter(), "postnatal_Hpnd": Counter(),
           "adult_Adult": Counter(), "organoid_Day": Counter()}
 samp = {"fetal_Hgw": set(), "postnatal_Hpnd": set(),
@@ -81,14 +84,14 @@ with gzip.open(H138, "rt") as fh:
             continue
         strata[key][c] += 1
         samp[key].add(s)
-res138 = {"cells_final_total": total, "fetal_gw_range": "Hgw9-Hgw27 (任务书写 GW9-19, 实测含至 GW27)",
+res138 = {"cells_final_total": total, "fetal_gw_range": "Hgw9-Hgw27 (task brief stated GW9-19; measured range extends to GW27)",
           "layers": {k: {"n_cells": int(sum(v.values())),
                          "celltype_pct": {c: round(100 * x / max(1, sum(v.values())), 2)
                                           for c, x in v.most_common()},
                       "samples": sorted(samp.get(k, []))}
                    for k, v in strata.items()}}
 kb = json.dumps({"GSE268630_portal": res268, "GSE138002_final_author_labels": res138,
-                 "GSE234963": {"cells": "176,849 (24 h5ad, obs 无标签列 — 实测 iloc 全空)",
+                 "GSE234963": {"cells": "176,849 (24 h5ad, no label columns in obs — verified empty via iloc)",
                                "composition": None,
                                "registry": "OA-D009 Human fetal retinal progenitor, ~7.5-21 PCW, "
                                            "24 samples/13 time points (SRA PRJNA983820)",

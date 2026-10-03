@@ -1,41 +1,48 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""EyeKB pipeline — 一键批注入口（S0 样本预判 shadow 层 + 阶段 A 标准处理 + 阶段 B 逐簇证据采集）。
+"""EyeKB pipeline — one-command annotation entry point (S0 sample pre-check shadow layer + Stage A standard processing + Stage B per-cluster evidence collection).
 
-用法（仓根目录）:
-  python pipeline/run_pipeline.py --input <10X目录|多10X父目录|data.h5ad> \
-      [--species human|mouse|auto] [--tissue <词典名|auto>] --out results/run1 \
+Usage (from repo root):
+  python pipeline/run_pipeline.py --input <10X dir|multi-10X parent dir|data.h5ad> \\
+      [--species human|mouse|auto] [--tissue <dictionary name|auto>] --out results/run1 \\
       [--group-col treatment]
 
-S0 样本预判（WIRE-P1，REV-1=astra 定盘：Phase-1 为 shadow mode）:
-  - 默认运行：三证据+六硬门自动判定物种 × 组织，读数全量落 `s0_gate_report.json`；
-    判定过门 → 回填阶段 A/B 参数（人工显式 --species/--tissue 视为 override，
-    报告记 s0_overridden_by_user 留痕）。
-  - **shadow 语义：判不过（abstain）不阻断运行**——写 REPORT_ABSTAIN.md（人读记录件，
-    非终止件）后继续执行（前提：物种/组织仍可从人工参数解析；均不可解析时按缺参退出）。
-    阻断式硬门=Phase 3（后续验收阶段后经 `EYEKB_S0_ENFORCE=1` 切换，本批默认不阻断）。
-  - 已知问题消费同为 shadow：风险旗标+复核要求进 decisions 两列与报告头段
-    （pipeline/pitfalls/，盲评安全条带短规则；非盲评安全条只出结构化旗标）；
-    **禁止任何自动改标/降档/覆票**——判读改判仍走原三独立判读票与硬门。
-  - 整体回退：`EYEKB_S0_GATE=0` = 接线前旧行为（不跑 S0、不产旗标、
-    --species/--tissue 必填），用于无网基线对比（astra T4.3）与应急。
+S0 sample pre-check (WIRE-P1, REV-1=astra ruling: Phase-1 runs in shadow mode):
+  - Default run: three evidence channels + six hard gates decide species x tissue automatically;
+    all readings are written in full to `s0_gate_report.json`; gate passed -> Stage A/B parameters
+    are backfilled (an explicit human --species/--tissue counts as an override, recorded in the
+    report as s0_overridden_by_user for the audit trail).
+  - **Shadow semantics: a failed gate (abstain) does not block the run** — REPORT_ABSTAIN.md is
+    written (a human-readable record, not a terminal artifact) and execution continues (provided
+    species/tissue remain resolvable from human parameters; if neither is resolvable, the run
+    exits on missing arguments).
+    Blocking hard gate = Phase 3 (switched on via `EYEKB_S0_ENFORCE=1` after later acceptance
+    stages; this batch defaults to non-blocking).
+  - Known-issues consumption is also shadow: risk flags + review requirements go into two
+    decisions columns and the report header block (pipeline/pitfalls/, short rules for the
+    blind-review-safe strip; non-blind-safe rules emit structured flags only);
+    **no automatic relabeling/downgrading/vote-overriding** — adjudication changes still go
+    through the original three independent reviewer votes and the hard gates.
+  - Full rollback: `EYEKB_S0_GATE=0` = pre-wiring legacy behavior (no S0, no flags,
+    --species/--tissue mandatory), used for air-gapped baseline comparison (astra T4.3) and emergencies.
 
-产出（全部落 --out）:
-  stage_a/processed.h5ad          处理后矩阵（QC/归一化/Harmony 标记/leiden）
-  stage_a/figures/*.png           质控图（线粒体、基因检出、doublet、UMAP 前后）
-  stage_a/cluster_markers.csv     每簇 wilcoxon top30
-  annotation_evidence_report.json 每簇五字段证据（结构=接线前口径，known-issues 不进本件）
-  annotation_evidence_report.md    证据报告（S0 启用时头段附本格注意清单=人类面 shadow 注入）
-  decisions_template.csv          每簇一行待人工裁决（decision/proposed_label 留空；
-                                   S0 启用时附 pitfall_risk_flags / pitfall_review_required
-                                   两列——仅风险提示，无自动改判列）
-  mcp_calls.jsonl                 证据服务调用留痕
-  s0_gate_report.json             S0 三证据读数+门因+全排名+override 留痕（回退态无）
-  shadow_attention.json           本格适用 claim 清单（含盲评安全/判读后开放标注）
-  shadow_flags.jsonl              逐簇风险旗标审计（自动具名/降级变化恒=0）
+Outputs (all under --out):
+  stage_a/processed.h5ad          processed matrix (QC/normalization/Harmony marks/leiden)
+  stage_a/figures/*.png           QC figures (mitochondrial %, genes detected, doublets, UMAP before/after)
+  stage_a/cluster_markers.csv     per-cluster wilcoxon top30
+  annotation_evidence_report.json per-cluster five-field evidence (structure = pre-wiring contract; known-issues excluded)
+  annotation_evidence_report.md   evidence report (with S0 enabled, header block carries the applicable-claim list = human-side shadow injection)
+  decisions_template.csv          one row per cluster awaiting human adjudication (decision/proposed_label left empty;
+                                   with S0 enabled, pitfall_risk_flags / pitfall_review_required
+                                   columns appended — risk hints only, no auto-relabel column)
+  mcp_calls.jsonl                 evidence-service call audit trail
+  s0_gate_report.json             S0 three-evidence readings + gate reasons + full ranking + override audit trail (absent in rollback state)
+  shadow_attention.json           applicable-claim list for this cell type (incl. blind-safe / post-review open flags)
+  shadow_flags.jsonl              per-cluster risk-flag audit (auto-rename/auto-downgrade changes always = 0)
 
-纪律红线：默认路径**零 LLM**；本入口不含任何自动打分/自动定标逻辑；
-needs_review/弃权是合法输出；证据→结论的最后一步永远由研究者完成。
+Discipline redlines: the default path is **zero LLM**; this entry point contains no automatic
+scoring/auto-naming logic; needs_review/abstention is a legal output; the last step from evidence
+to conclusion is always completed by the researcher.
 """
 from __future__ import annotations
 
@@ -46,11 +53,13 @@ import sys
 import time
 from pathlib import Path
 
-# ---- 数值确定性钉（ERRATA-E3, 2026-09-30）----
-# 实测：不钉线程时同一输入连跑可见 16/15/16 簇抖动（结果随机器负载与 BLAS/numba
-# 线程调度变化）；钉 OMP_NUM_THREADS=1 后两次运行逐字节一致（processed.h5ad sha 相同）。
-# 阶段 A（Scrublet/邻域图/Harmony/leiden）为串行实现，单线程耗时 ≈ 多线程（实测 110s），
-# 故以确定性优先。用 setdefault 保留显式覆盖（复现契约=保持默认钉）。
+# ---- numeric determinism pins (ERRATA-E3, 2026-09-30) ----
+# Measured: without pinned threads, consecutive runs of the same input show 16/15/16 cluster
+# jitter (results vary with machine load and BLAS/numba thread scheduling); with
+# OMP_NUM_THREADS=1 two runs are byte-identical (processed.h5ad sha matches). Stage A
+# (Scrublet/neighborhood graph/Harmony/leiden) is a serial implementation and single-thread
+# wall time ~= multithread (measured 110 s), so determinism wins. setdefault preserves explicit
+# overrides (reproduction contract = keep the default pins).
 for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS",
            "NUMEXPR_NUM_THREADS", "VECLIB_MAXIMUM_THREADS"):
     os.environ.setdefault(_v, "1")
@@ -61,7 +70,7 @@ sys.path.insert(0, str(HERE))
 
 
 def known_tissues():
-    """词典已知组织清单 = kb/baselines 主档 + 判读层条目 tissue 字段（机械枚举，不硬编码）。"""
+    """Known tissue dictionary = kb/baselines main entries + tissue fields of review-layer entries (mechanically enumerated, never hardcoded)."""
     tis = set()
     for p in (REPO_ROOT / "kb" / "baselines").glob("*.json"):
         if not p.name.startswith(("_", "fetal", "retina__")):
@@ -87,13 +96,13 @@ def _s0_enabled():
 
 
 def _s0_enforce():
-    """Phase-3 前瞻开关：显式 EYEKB_S0_ENFORCE=1 才阻断；本批默认 shadow 不阻断。"""
+    """Phase-3 forward switch: blocking only when EYEKB_S0_ENFORCE=1 is set explicitly; this batch defaults to shadow (non-blocking)."""
     return (os.environ.get("EYEKB_S0_ENFORCE", "") or "").strip().casefold() in (
         "1", "true", "on", "yes")
 
 
 def run_s0_gate(input_path, sample_col, species_arg, tissue_arg, out, thr_json=None):
-    """S0 判卷。返回 (can_run, species, tissue, meta)。always 落 s0_gate_report.json。"""
+    """S0 scoring. Returns (can_run, species, tissue, meta). Always writes s0_gate_report.json."""
     import s0_check
     if thr_json:
         s0_check.THR.update(json.load(open(thr_json)))
@@ -122,17 +131,17 @@ def run_s0_gate(input_path, sample_col, species_arg, tissue_arg, out, thr_json=N
         tissue, note = s0_check.map_tissue_to_dict(final["tissue_top1"])
         meta["tissue_map_note"] = note
     if final["abstain"]:
-        lines = ["# REPORT_ABSTAIN — S0 样本预判弃权记录（shadow：不阻断运行）", "",
-                 f"- 输入：`{input_path}`",
-                 f"- 时间：{time.strftime('%F %T')}",
-                 f"- 物种判定：`{final['species_call']}`；组织 top1：`{final['tissue_top1']}`",
-                 f"- 门因（任一命中即记弃权）：{'; '.join(final['gate_reasons'])}",
-                 f"- 模式：shadow（本批默认）。" +
-                 ("已按人工参数继续运行" if (species and tissue) else
-                  "无法继续：物种/组织不可解析（缺参退出，非硬门阻断）"),
-                 "- 判读改判通道：三独立判读票与既有硬门；本件不改任何标签。"
-                 "Phase 3（后续验收阶段）切换 EYEKB_S0_ENFORCE=1 后本弃权才阻断。",
-                 "- 完整读数：`s0_gate_report.json`（同目录）。"]
+        lines = ["# REPORT_ABSTAIN — S0 sample pre-check abstention record (shadow: run not blocked)", "",
+                 f"- Input: `{input_path}`",
+                 f"- Time: {time.strftime('%F %T')}",
+                 f"- Species call: `{final['species_call']}`; tissue top1: `{final['tissue_top1']}`",
+                 f"- Gate reasons (any hit records an abstention): {'; '.join(final['gate_reasons'])}",
+                 f"- Mode: shadow (default for this batch). " +
+                 ("continued with human-supplied parameters" if (species and tissue) else
+                  "cannot continue: species/tissue unresolvable (exit on missing args, not a hard-gate block)"),
+                 "- Adjudication channel for label changes: the three independent reviewer votes and the existing hard gates; this record changes no labels."
+                 " Under Phase 3 (later acceptance stage), with EYEKB_S0_ENFORCE=1 this abstention would block.",
+                 "- Full readings: `s0_gate_report.json` (same directory)."]
         (out / "REPORT_ABSTAIN.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
         meta["abstain"] = True
         meta["continued"] = bool(species and tissue)
@@ -141,7 +150,7 @@ def run_s0_gate(input_path, sample_col, species_arg, tissue_arg, out, thr_json=N
             return False, None, None, meta
         if not (species and tissue):
             return False, None, None, meta
-    # 人工 override 与判定的分歧留痕
+    # audit trail for divergence between manual override and the S0 call
     if species_arg != "auto" and final["species_call"] not in ("undetermined", "conflicted", "out_of_domain") \
             and final["species_call"] != species_arg:
         meta["s0_conflict_manual_vs_auto"] = {"s0": final["species_call"], "manual": species_arg}
@@ -158,8 +167,8 @@ def _candidates_of(rep_cluster):
 
 
 def inject_shadow(out, species, tissue, meta):
-    """人类面 shadow 注入：md 头段注意清单 + decisions 两列旗标 + 机读/审计件。
-    证据 JSON 零改动（喂料面防火墙）；不写任何自动改标列。"""
+    """Human-side shadow injection: md-header attention block + two decisions flag columns + machine-readable/audit artifacts.
+    Evidence JSON untouched (feed-face firewall); no auto-relabel column is ever written."""
     sys.path.insert(0, str(HERE / "pitfalls"))
     import consume
     lines, machine, claims, dangling = consume.attention_section(species, tissue, {
@@ -194,7 +203,7 @@ def inject_shadow(out, species, tissue, meta):
     md_path = out / "annotation_evidence_report.md"
     if md_path.exists():
         txt = md_path.read_text(encoding="utf-8")
-        idx = txt.find("## 簇 ")
+        idx = txt.find("## Cluster ")
         block = "\n".join(lines) + "\n"
         txt = (txt[:idx] + block + txt[idx:]) if idx >= 0 else (txt + "\n" + block)
         md_path.write_text(txt, encoding="utf-8")
@@ -204,23 +213,23 @@ def inject_shadow(out, species, tissue, meta):
 
 def main():
     ap = argparse.ArgumentParser(
-        description="EyeKB 批量注释证据入口（阶段 S0(shadow)+A+B；默认零 LLM）")
+        description="EyeKB batch-annotation evidence entry point (Stage S0(shadow)+A+B; zero LLM by default)")
     ap.add_argument("--input", required=True,
-                    help="10X 三件套目录 / 含多份三件套子目录的父目录 / .h5ad")
+                    help="10X triplet directory / parent directory containing multiple triplet subdirs / .h5ad")
     ap.add_argument("--species", default="auto", choices=["human", "mouse", "auto"],
-                    help="默认 auto（S0 判定回填）；显式指定=S0 override 留痕（回退态必填）")
+                    help="default auto (S0-decided backfill); an explicit value = S0 override, recorded (mandatory in rollback state)")
     ap.add_argument("--tissue", default="auto",
-                    help="词典已知组织（见 --list-tissues）或 auto（S0 判定回填）")
-    ap.add_argument("--out", required=True, help="输出目录（不存在则创建）")
-    ap.add_argument("--sample-col", default="", help="h5ad 样本列（默认 obs.sample/输入名）")
+                    help="known tissue dictionary name (see --list-tissues) or auto (S0-decided backfill)")
+    ap.add_argument("--out", required=True, help="output directory (created if absent)")
+    ap.add_argument("--sample-col", default="", help="h5ad sample column (defaults to obs.sample / input name)")
     ap.add_argument("--sample-group", default="", dest="group_col",
-                    help="分组：h5ad 列名，或三件套形态的 '样本名=组名;…' 映射"
-                         "（提供分组才启用疾病先验比对）")
+                    help="grouping: h5ad column name, or for triplet inputs a 'sample=group;...' mapping"
+                         " (disease-prior comparison is enabled only when grouping is provided)")
     ap.add_argument("--group-col", default="", dest="group_col",
-                    help="同 --sample-group（别名）")
-    ap.add_argument("--disease", default="", help="疾病名（配合分组；默认用非对照分组标签查询）")
+                    help="alias of --sample-group")
+    ap.add_argument("--disease", default="", help="disease name (used with grouping; by default queries the labels of non-control groups)")
     ap.add_argument("--gene-symbol-col", default="")
-    ap.add_argument("--ensg-map", default="", help="ENSG<TAB>SYMBOL 两列 TSV")
+    ap.add_argument("--ensg-map", default="", help="ENSG<TAB>SYMBOL two-column TSV")
     ap.add_argument("--resolution", type=float, default=1.0)
     ap.add_argument("--min-genes", type=int, default=200)
     ap.add_argument("--max-pct-mt", type=float, default=20.0)
@@ -229,10 +238,10 @@ def main():
     ap.add_argument("--no-scrublet", action="store_true")
     ap.add_argument("--no-harmony", action="store_true")
     ap.add_argument("--s0-thr", default=None, dest="s0_thr",
-                    help="S0 阈值覆盖 JSON（灵敏度扫描用；默认写死阈值）")
-    ap.add_argument("--list-tissues", action="store_true", help="打印词典已知组织后退出")
+                    help="S0 threshold-override JSON (for sensitivity sweeps; hardcoded thresholds by default)")
+    ap.add_argument("--list-tissues", action="store_true", help="print the known tissue dictionary and exit")
     ap.add_argument("--llm-assist", action="store_true",
-                    help="可选开关：调用用户自备通道生成证据摘要草稿（默认关闭，不影响分级）")
+                    help="optional switch: call a user-supplied channel to generate evidence-summary drafts (off by default; does not affect grading)")
     a = ap.parse_args()
 
     if a.list_tissues:
@@ -243,10 +252,10 @@ def main():
     out = Path(a.out)
     meta = None
     if not gate:
-        # 回退态（无网基线对比/应急）：与接线前逐字节等价的旧语义——人工参数必填
+        # rollback state (air-gapped baseline comparison / emergency): legacy semantics byte-equivalent to pre-wiring — human parameters mandatory
         if a.species == "auto" or a.tissue == "auto":
-            print("[run_pipeline] EYEKB_S0_GATE=0（回退态）要求 --species 与 --tissue "
-                  "显式给定（旧版必填语义）。", file=sys.stderr)
+            print("[run_pipeline] EYEKB_S0_GATE=0 (rollback state) requires explicit "
+                  "--species and --tissue (legacy mandatory-argument semantics).", file=sys.stderr)
             return 2
         species, tissue = a.species, a.tissue
     else:
@@ -254,24 +263,25 @@ def main():
                                                 a.species, a.tissue, out, a.s0_thr)
         if not ok:
             if _s0_enforce() and meta["final"]["abstain"]:
-                print("[run_pipeline] S0 硬门（enforce 模式，Phase-3 前瞻开关）弃权："
-                      f"pipeline 停止。见 {out/'REPORT_ABSTAIN.md'}", file=sys.stderr)
+                print("[run_pipeline] S0 hard gate (enforce mode, Phase-3 forward switch) abstained: "
+                      f"pipeline stopped. See {out/'REPORT_ABSTAIN.md'}", file=sys.stderr)
                 return 3
-            print("[run_pipeline] S0 弃权且物种/组织不可解析（人工参数缺失）："
-                  "缺参退出（非硬门阻断）。请显式补 --species/--tissue，"
-                  f"或查看 {out/'REPORT_ABSTAIN.md'}", file=sys.stderr)
+            print("[run_pipeline] S0 abstained and species/tissue unresolvable (human parameters missing): "
+                  "exit on missing arguments (not a hard-gate block). Supply --species/--tissue explicitly, "
+                  f"or see {out/'REPORT_ABSTAIN.md'}", file=sys.stderr)
             return 4
         mode = meta.get("mode", "shadow")
-        extra = "（弃权 shadow 继续）" if meta.get("abstain") else ""
-        print(f"[run_pipeline] S0 判定：species={species} tissue={tissue}"
-              f"（confidence={meta['final']['confidence']}，mode={mode}{extra}"
-              f"{ '，manual override 留痕' if meta['s0_overridden_by_user'] else ''}）",
+        extra = " (abstained, shadow continued)" if meta.get("abstain") else ""
+        print(f"[run_pipeline] S0 call: species={species} tissue={tissue}"
+              f" (confidence={meta['final']['confidence']}, mode={mode}{extra}"
+              f"{ ', manual override recorded' if meta['s0_overridden_by_user'] else ''})",
               flush=True)
 
     kt = known_tissues()
     if tissue.lower() not in {t.lower() for t in kt}:
-        print(f"[warn] --tissue={tissue!r} 不在词典已知组织清单（继续执行，"
-              f"组成对照可能返回无匹配条目并如实记入报告）。清单: {', '.join(kt)}",
+        print(f"[warn] --tissue={tissue!r} is not in the known tissue dictionary (execution continues; "
+              f"the composition comparison may return no matching entries and records that faithfully in the report). "
+              f"List: {', '.join(kt)}",
               file=sys.stderr)
 
     (out / "stage_a").mkdir(parents=True, exist_ok=True)
@@ -299,8 +309,8 @@ def main():
     summary = {"out": str(out), "secs": round(time.time() - t0, 1),
                "n_clusters": len(rep["clusters"]), "grades": grades,
                "empty_decision_cells": True,
-               "next_step": "逐簇在 decisions_template.csv 填 decision "
-                            "(accept|modify|abstain) 与 proposed_label；弃权合法"}
+               "next_step": "fill decisions_template.csv per cluster with decision "
+                            "(accept|modify|abstain) and proposed_label; abstention is legal"}
     if gate:
         summary["s0"] = {"species": species, "tissue": tissue,
                          "confidence": meta["final"]["confidence"],

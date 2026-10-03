@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""tests/test_cn_rewrite.py — 查询改写层（默认关）回归测试。
+"""tests/test_cn_rewrite.py — regression test for the query-rewrite layer (off by default).
 
-零依赖：不加载语料/模型（纯函数层）；桥表缺失时规则断言自动 SKIP。
-运行：python tests/test_cn_rewrite.py   （退出码 0=PASS，可挂 CI/同步门）
+Zero dependencies: loads no corpus/model (pure function layer); rule assertions auto-SKIP when the
+bridge table is absent.
+Run: python tests/test_cn_rewrite.py   (exit code 0=PASS; hookable into CI / sync gates)
 
-覆盖：
-  T1 开关语义  env EYEKB_CN_REWRITE ∈ {1,true,on,yes} → 开；未设/0/off/no/其他 → 关
-  T2 关闭态直通  rewrite_query(q) == (q, None)（响应零新增键的服务层前提）
-  T3 空输入直通  query 空/None → (q, None)（模板句路径永不改写）
-  T4 桥表缺失安全  开动态桥表不存在 → (q, {status:bridge_missing}) 不抛错
-  T5 规则样例（需桥表，缺失 SKIP）  视泡发育→optic vesicle / 圆锥角膜→Keratoconus /
-     水平细胞 视网膜→HC / 视网膜色素上皮细胞的标志物→RPE / 缪勒胶质细胞→no_rewrite
+Coverage:
+  T1 switch semantics  env EYEKB_CN_REWRITE ∈ {1,true,on,yes} -> on; unset/0/off/no/other -> off
+  T2 off-path passthrough  rewrite_query(q) == (q, None) (service-layer premise of no new response keys)
+  T3 empty-input passthrough  query empty/None -> (q, None) (template-query path is never rewritten)
+  T4 missing-bridge safety  dynamic bridge table absent -> (q, {status:bridge_missing}), no exception
+  T5 rule samples (bridge table required, SKIP when missing)  optic-vesicle-development term ->
+     "optic vesicle" / keratoconus term -> "Keratoconus" / horizontal-cell + retina term -> HC /
+     RPE-marker-term -> RPE / Mueller-glia term -> no_rewrite
+     (the actual case inputs are the Chinese query literals in EXPECT5 below — deliberately kept)
 """
 import os
 import sys
@@ -42,11 +45,11 @@ def t1_t3():
     os.environ.pop("EYEKB_CN_REWRITE", None)
     q = "视网膜色素上皮细胞的标志物"
     out, meta = rw.rewrite_query(q)
-    check("T2 off 直通 (q,None)", out == q and meta is None)
+    check("T2 off-path passthrough (q,None)", out == q and meta is None)
     os.environ["EYEKB_CN_REWRITE"] = "1"
     for bad in ("", None, "   "):
         o2, m2 = rw.rewrite_query(bad)
-        check(f"T3 空输入直通 {bad!r}", o2 == bad and m2 is None)
+        check(f"T3 empty-input passthrough {bad!r}", o2 == bad and m2 is None)
 
 
 def t4():
@@ -57,7 +60,7 @@ def t4():
         rw._cache.update({"key": None, "rows": None, "sha": None})
         q = "圆锥角膜"
         o, m = rw.rewrite_query(q)
-        check("T4 桥表缺失→bridge_missing 不抛错",
+        check("T4 bridge file missing → bridge_missing, no exception",
               o == q and m and m.get("status") == "bridge_missing", str(m)[:80])
     finally:
         if keep is None:
@@ -80,8 +83,8 @@ def t5():
     os.environ["EYEKB_CN_REWRITE"] = "1"
     path = os.environ.get("EYEKB_CN_BRIDGE_TSV") or rw.BRIDGE_DEFAULT
     if not os.path.isfile(path):
-        skips.append("T5 规则样例 SKIP（桥表未提供：设 EYEKB_CN_BRIDGE_TSV 后重跑）")
-        print("[SKIP] T5 规则样例（桥表缺失）")
+        skips.append("T5 rule samples SKIP (bridge table not provided: set EYEKB_CN_BRIDGE_TSV and rerun)")
+        print("[SKIP] T5 rule samples (bridge file missing)")
         return
     for q, (want_status, want_phrase) in EXPECT5.items():
         o, m = rw.rewrite_query(q)

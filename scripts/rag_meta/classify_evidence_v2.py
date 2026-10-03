@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""EyeKB KB1v2-W4: RAG 入库归类三字段化 (Astra T5, additive)
+"""EyeKB KB1v2-W4: RAG admission reclassified into three fields (Astra T5, additive)
 
-只动 EyeKB 侧元数据/标注层 (kb/literature_db/ sidecar), 不重抓语料、不重算 embedding、
-不写 v2.x 库目录 (那是 t_08f0741e v2.1 领地, 并行隔离; v2.0 只读)。
+Touches only the EyeKB-side metadata/annotation layer (kb/literature_db/ sidecar); no corpus
+recrawl, no embedding recompute, no writes into v2.x library directories (that is t_08f0741e
+v2.1 territory, parallel-isolated; v2.0 read-only).
 
-三字段 (schema eyekb-evidence-meta/1.0):
-  inclusion_reason(s)  为什么入库 —— 五类保留, 改多选
-  claim_relation       支撑哪个具体论断 (组成/身份/状态/技术伪影 × 支持/反驳/限定)
-  evidence_context     什么条件下用什么方法得出 (物种/材料/疾病/方法/定位锚点)
-+ verification_status  auto_draft | human_single_review_20260923 (复核改分层抽样, 弃随机50篇作验收)
+Three fields (schema eyekb-evidence-meta/1.0):
+  inclusion_reason(s)  why admitted -- five categories retained, now multi-select
+  claim_relation       which specific claim it supports (composition/identity/state/technical artifact x support/refute/qualify)
+  evidence_context     under what conditions, with what method (species/material/disease/method/locator anchor)
++ verification_status  auto_draft | human_single_review_20260923 (review switched to stratified sampling; random-50 acceptance dropped)
 
-用法:
-  pass1: python classify_evidence_v2.py            → evidence_meta_v2.0_2026-09.jsonl (全 auto_draft)
-                                                    + REVIEW_SHEET_v2.tsv (待复核清单) + 分层计数
+Usage:
+  pass1: python classify_evidence_v2.py            -> evidence_meta_v2.0_2026-09.jsonl (all auto_draft)
+                                                    + REVIEW_SHEET_v2.tsv (pending review list) + stratum counts
   pass2: python classify_evidence_v2.py --overlay REDECISIONS.json
-        → 合并人工判定, 更新 verification_status (可反复重跑, 幂等)
+        -> merge manual decisions, update verification_status (re-runnable, idempotent)
 """
 import json
 import re
@@ -25,8 +26,8 @@ from collections import Counter
 from pathlib import Path
 
 EYEKB = Path("/mnt/D/EyeKB")
-PAPERS = Path("/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09/papers.jsonl")  # 只读
-OLD_SIDE = EYEKB / "kb/literature_db/inclusion_reason_v2.0_2026-09.jsonl"  # v1 单标签存档, 只读
+PAPERS = Path("/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09/papers.jsonl")  # read-only
+OLD_SIDE = EYEKB / "kb/literature_db/inclusion_reason_v2.0_2026-09.jsonl"  # v1 single-label archive, read-only
 OUT = EYEKB / "kb/literature_db/evidence_meta_v2.0_2026-09.jsonl"
 SHEET = EYEKB / "kb/literature_db/REVIEW_SHEET_v2.tsv"
 DISEASES_IN_USE = EYEKB / "kb/priors/disease/PDR__fibrovascular_membrane.json"
@@ -105,7 +106,7 @@ def classify(title, species, tissues, old):
         mr = str(old.get("matched_rule", ""))
         strong = (not any(w in mr for w in ("fallback", "weak"))
                   and mr != "normal-development-biology")
-        reasons.append(old["inclusion_reason"])  # v1 票 (additive; 弱票仅兜底不主导)
+        reasons.append(old["inclusion_reason"])  # v1 vote (additive; weak votes only fall back, never lead)
         rules.append(("v1-inherit:" if strong else "v1-weak-inherit:") + mr)
     reasons = [r for r in uniq(reasons) if r in LABELS]
     if not reasons:
@@ -119,7 +120,7 @@ def classify(title, species, tissues, old):
             conf = "low"
         elif conf != "high":
             conf = "medium"
-    # claim_relation (论文级粗, 论断级精核=人工复核层)
+    # claim_relation (coarse at paper level; claim-level precision = manual review layer)
     claims = []
     if any(r in ("composition_baseline", "disease_cell_composition") for r in reasons):
         claims.append({"axis": "composition", "relation": "support"})
@@ -131,7 +132,7 @@ def classify(title, species, tissues, old):
         claims.append({"axis": "technical_artifact", "relation": "qualify"})
     if "disease_mechanism_background" in reasons and not claims:
         claims.append({"axis": "mechanism_background", "relation": "support",
-                       "note": "机制背景, 不构成组成/身份/状态级判读论断 (Astra T4: 勿把相关性升为功能证明)"})
+                       "note": "mechanistic background; does not constitute a composition/identity/state-level interpretation claim (Astra T4: do not upgrade correlation to functional proof)"})
     materials = uniq([m.group(0).lower() for m in RE_MATERIAL.finditer(t)])
     methods = uniq([m.group(0).lower() for m in RE_METHODSEQ.finditer(t)])
     dset = uniq([d.group(0).lower() for d in RE_DISEASE.finditer(t)])
@@ -141,13 +142,13 @@ def classify(title, species, tissues, old):
         "materials_hint": materials,
         "disease_hint": dset,
         "methods": methods,
-        "locator_anchor": "title-level rules; 摘要/图表定位锚点待复核补充",
+        "locator_anchor": "title-level rules; abstract/figure locator anchors to be added at review",
     }
     return reasons, conf, rules, claims, ev_ctx
 
 
 def d0_critical_pmids():
-    """直接支撑 D0 规则/基线的关键论断 PMID (逐条人工核验清单, Astra T5)。"""
+    """PMIDs of key claims directly supporting D0 rules/baselines (item-by-item manual verification list, Astra T5)."""
     s = set()
     for p in (DISEASES_IN_USE, BASELINES, SURFACE):
         try:
@@ -190,8 +191,8 @@ def main(overlay_path=None, papers_path=None, out_path=None, sheet_path=None,
                    "paper_id": pmid, "pmid": pmid, "pmcid": d.get("pmcid"),
                    "title": d.get("title"), "year": d.get("year"),
                    "journal": d.get("journal"),
-                   "inclusion_reason": reasons[0],       # 兼容旧键=主标签
-                   "inclusion_reasons": reasons,          # T5 多选
+                   "inclusion_reason": reasons[0],       # legacy key compatibility = primary label
+                   "inclusion_reasons": reasons,          # T5 multi-select
                    "confidence": conf, "matched_rule": ";".join(rules),
                    "claim_relation": claims,
                    "evidence_context": ctx,
@@ -204,7 +205,7 @@ def main(overlay_path=None, papers_path=None, out_path=None, sheet_path=None,
                 low += 1
             cnt[tuple(sorted(reasons))[:1]] += 1
             recs.append(rec)
-    # 复核集 = D0 关键 (全量) ∪ 分层配额抽样 (5 主类 × 置信层; 低置信层加倍, 多标签优先)
+    # review set = D0 critical (all) union stratified quota sample (5 primary classes x confidence tier; low-confidence tier doubled, multi-label prioritized)
     d0 = d0_critical_pmids()
     rng = random.Random(20260923)
     by_strata = {}
@@ -242,7 +243,7 @@ def main(overlay_path=None, papers_path=None, out_path=None, sheet_path=None,
             r.update({k: v for k, v in ov.items() if k in (
                 "inclusion_reasons", "inclusion_reason", "claim_relation")})
             r["verification_status"] = ov.get("status", "human_single_review_20260923")
-            r["reviewer"] = ov.get("reviewer", "pi-chief(t_16c3e020) 单判读员")
+            r["reviewer"] = ov.get("reviewer", "pi-chief(t_16c3e020) single reviewer")
             r["review_note"] = ov.get("note")
             n_ver += 1
     with open(out_path, "w", encoding="utf-8") as f:
@@ -256,7 +257,7 @@ def main(overlay_path=None, papers_path=None, out_path=None, sheet_path=None,
                                             r["evidence_context"]["species"], r["n_chunks"],
                                             r["confidence"], "|".join(r["inclusion_reasons"]),
                                             (r["title"] or "")[:220]])) + "\n")
-    # 统计输出
+    # stats output
     prim = Counter(r["inclusion_reason"] for r in recs)
     multi = Counter(l for r in recs for l in r["inclusion_reasons"])
     print("papers:", len(recs), "| low-conf:", low, "| review set:",
@@ -270,7 +271,7 @@ def main(overlay_path=None, papers_path=None, out_path=None, sheet_path=None,
 
 if __name__ == "__main__":
     import argparse
-    ap = argparse.ArgumentParser(description="KB1v2-W4 evidence sidecar (v2.2 参数化 by KB1v2d t_bb170f1b)")
+    ap = argparse.ArgumentParser(description="KB1v2-W4 evidence sidecar (parametrized in v2.2 by KB1v2d t_bb170f1b)")
     ap.add_argument("--overlay", nargs="*", default=None)
     ap.add_argument("--papers", default=None)
     ap.add_argument("--out", default=None)

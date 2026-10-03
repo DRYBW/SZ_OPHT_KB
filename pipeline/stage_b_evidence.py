@@ -1,20 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""EyeKB pipeline — 阶段 B：逐簇五工具证据采集（MCP stdio 起仓内 mcp_server）。
+"""EyeKB pipeline — Stage B: per-cluster five-tool evidence collection (MCP stdio, spawning the in-repo mcp_server).
 
-本文件复制改写自 /mnt/D/EyeKB/plans/evalset/scripts/kb2_mcp_v2.py（原文件冻结未动）。
-解绑内容：不再绑 evalset 冻结卷 / 不再读外部 ENSG 映射 / 不再硬编码组织映射，
-改为消费阶段 A 的产物（processed.h5ad + cluster_markers.csv）。
+This file is a copied-and-adapted version of /mnt/D/EyeKB/plans/evalset/scripts/kb2_mcp_v2.py (the original is frozen, untouched).
+Decoupled: no longer bound to the evalset frozen volume / no longer reads an external ENSG mapping / no longer hardcodes tissue mappings;
+it now consumes Stage A outputs (processed.h5ad + cluster_markers.csv).
 
-═══ 纪律红线（与服务端红线一致，勿改）═══
-1. 默认路径**零 LLM**——五个查询工具是本地机械检索，只出证据、不出结论。
-2. 本脚本不含任何自动打分/自动定标/自动命名逻辑。下面的"置信度分级"是
-   预注册的机械 QC 旗（触发条件逐条写进报告，可复核），不是注释结论；
-   needs_review / 弃权是合法输出，禁止把 needs_review 写成确定标签。
-3. decisions_template.csv 的 decision/proposed_label 列一律留空，交研究者裁决
-   （accept / modify / abstain 三值由人来填）。
-4. 服务端 B5 跨物种治理对鼠源输入清空具名排名（no_named_ranking_for），本脚本
-   原样透传，不绕过、不补名次。
+═══ Discipline redlines (identical to the server-side redlines, do not change) ═══
+1. The default path is **zero LLM** — the five query tools do local mechanical retrieval,
+   emitting evidence only, never conclusions.
+2. This script contains no automatic scoring/auto-naming logic. The "confidence grade" below
+   is a pre-registered mechanical QC flag (trigger conditions written item-by-item into the
+   report, auditable), not an annotation conclusion; needs_review / abstention is a legal
+   output — never write needs_review as a definite label.
+3. The decision/proposed_label columns of decisions_template.csv are always left empty for the
+   researcher to adjudicate (the three values accept / modify / abstain are filled by a human).
+4. Server-side B5 cross-species governance clears named rankings for mouse-origin input
+   (no_named_ranking_for); this script passes it through verbatim — no bypassing, no backfilling ranks.
 """
 from __future__ import annotations
 
@@ -41,7 +43,7 @@ def _log(logf, step, **kw):
 
 
 def parse_mcp(res):
-    """MCP CallToolResult -> dict（与 kb2_mcp_v2 同法）。"""
+    """MCP CallToolResult -> dict (same method as kb2_mcp_v2)."""
     if res.is_error:
         return {"__isError__": True, "text": [c.text for c in res.content]}
     sc_ = getattr(res, "structured_content", None)
@@ -51,13 +53,13 @@ def parse_mcp(res):
     return json.loads(texts[0]) if texts else None
 
 
-# ---------------------------------------------------------------- 机械 QC 旗
+# ---------------------------------------------------------------- mechanical QC flags
 def _norm(s: str) -> str:
     return re.sub(r"[^a-z0-9]", "", str(s).lower())
 
 
 def _find_baseline_row(rows, cand):
-    """候选类名 ↔ 基线行 class/label 的机械匹配（规范化全等，或包含且长度>=4）。"""
+    """Mechanical match between a candidate class name and a baseline row class/label (normalized equality, or containment with length>=4)."""
     nc = _norm(cand)
     if len(nc) < 2:
         return None
@@ -70,13 +72,13 @@ def _find_baseline_row(rows, cand):
 
 
 def composition_flag(rows, candidate, fraction_pct):
-    """簇比例（%细胞）对照基线供者级区间 —— 只做旗标，不做打分。"""
+    """Cluster fraction (% of cells) versus the donor-level baseline interval — flags only, never scores."""
     if not candidate:
-        return {"flag": "no_candidate", "note": "query_marker 无具名候选，不比对"}
+        return {"flag": "no_candidate", "note": "query_marker produced no named candidate; no comparison"}
     row = _find_baseline_row(rows, candidate)
     if row is None:
         return {"flag": "no_baseline_row",
-                "note": f"候选 {candidate!r} 在该组织组成基线中无对应行，不比对"}
+                "note": f"candidate {candidate!r} has no matching row in this tissue's composition baseline; no comparison"}
     lo_hi = row.get("donor_range_pct")
     iqr = row.get("donor_iqr_pct")
     out = {"flag": "", "candidate": candidate, "baseline_class": row.get("class"),
@@ -87,7 +89,7 @@ def composition_flag(rows, candidate, fraction_pct):
                           for s in (row.get("sources_resolved") or [])][:6]}
     if not lo_hi:
         out["flag"] = "range_not_estimated"
-        out["note"] = "基线行未提供供者级区间（骨架条/样本不足），不判越界"
+        out["note"] = "baseline row provides no donor-level interval (skeleton entry / too few samples); no out-of-range verdict"
     elif fraction_pct < lo_hi[0] or fraction_pct > lo_hi[1]:
         out["flag"] = "outside_range"
     elif iqr and not (iqr[0] <= fraction_pct <= iqr[1]):
@@ -98,7 +100,7 @@ def composition_flag(rows, candidate, fraction_pct):
 
 
 def prior_hits_for_cluster(dp, candidates):
-    """疾病先验 expected_cell_state_matrix 中对候选类的机械提及（证据摘录，非一致性打分）。"""
+    """Mechanical mentions of the candidate classes in the disease prior's expected_cell_state_matrix (evidence excerpts, not a consistency score)."""
     if not dp or dp.get("error") or dp.get("__isError__"):
         return []
     hits = []
@@ -115,9 +117,9 @@ def prior_hits_for_cluster(dp, candidates):
 
 
 def grade_cluster(kb_marker, comp, lit, group_present, gene_degraded):
-    """预注册机械分级规则（顺序即优先级；触发原因写入报告，可复核）。
-    输出三值之一: evidence_consistent | mixed_or_insufficient | needs_review
-    —— 这是判读顺序提示旗，不是注释结论，不参与任何打分。"""
+    """Pre-registered mechanical grading rules (order = priority; fired reasons are written into the report, auditable).
+    Outputs one of three values: evidence_consistent | mixed_or_insufficient | needs_review
+    — these are review-order hint flags, not annotation conclusions, and feed into no scoring."""
     ranking = (kb_marker or {}).get("celltype_ranking") or []
     unranked = (kb_marker or {}).get("unranked_candidates") or []
     no_named = (kb_marker or {}).get("no_named_ranking_for")
@@ -129,9 +131,9 @@ def grade_cluster(kb_marker, comp, lit, group_present, gene_degraded):
         degraded = bool((lit or {}).get("degraded"))
     rules = []
     if gene_degraded:
-        rules.append("gene_ids_unmapped: 输入基因 ID 未映射到符号，marker 比对不可靠")
+        rules.append("gene_ids_unmapped: input gene IDs are not mapped to symbols; marker comparison unreliable")
     if no_named:
-        rules.append(f"named_ranking_removed_by_server: {no_named}（服务端跨物种治理，具名排名不可用）")
+        rules.append(f"named_ranking_removed_by_server: {no_named} (server-side cross-species governance; named ranking unavailable)")
     if not ranking:
         rules.append("no_named_marker_candidates")
     if n_lit == 0:
@@ -141,19 +143,19 @@ def grade_cluster(kb_marker, comp, lit, group_present, gene_degraded):
     reasons = list(rules)
     top1 = ranking[0]
     if top1.get("n_shared", 0) <= 1:
-        reasons.append("weak_marker_match: top1 共享基因数 <=1")
+        reasons.append("weak_marker_match: top1 shared-gene count <=1")
     if len(ranking) > 1 and ranking[1].get("n_shared") == top1.get("n_shared"):
-        reasons.append("candidate_tie: top1/top2 共享基因数并列")
+        reasons.append("candidate_tie: top1/top2 tied on shared-gene count")
     if comp.get("flag") == "outside_range":
         reasons.append("composition_outside_baseline_range")
     if degraded:
-        reasons.append("literature_degraded: 检索降级（向量模型/语料不可用），片段仅供参考")
+        reasons.append("literature_degraded: retrieval degraded (embedding model/corpus unavailable); snippets are for reference only")
     if reasons:
         return "mixed_or_insufficient", reasons
     return "evidence_consistent", ["marker_candidate+within_baseline+literature_present"]
 
 
-# ---------------------------------------------------------------- 主流程
+# ---------------------------------------------------------------- main flow
 def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue,
                 disease="", group_col="group", gene_degraded=False, top_genes_n=10,
                 llm_assist=False, logf=None):
@@ -171,7 +173,7 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
     total_cells = int(sizes["n_cells"].sum())
     clusters = [str(c) for c in sizes["cluster"].astype(str)]
 
-    try:  # 组标签（供疾病先验启用判断 + 簇级分组比例证据）
+    try:  # group labels (for the disease-prior enable check + per-cluster group-fraction evidence)
         import anndata as ad
         a = ad.read_h5ad(processed_h5ad, backed="r")
         gcol = None
@@ -184,13 +186,13 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
             obs = a.obs[["sample", gcol]].copy()
             obs["cluster"] = a.obs["leiden"].astype(str)
         del a
-    except Exception as e:  # 读不到不影响证据主流程，如实记录
-        _log(logf, "warn", note=f"group 列读取失败: {e!r}")
+    except Exception as e:  # a failed read does not affect the evidence main flow; record it faithfully
+        _log(logf, "warn", note=f"failed to read the group column: {e!r}")
         obs = None
     group_present = bool(obs is not None and obs[gcol].nunique() >= 2)
 
     calls = []
-    dp_cache = {}  # run 级疾病先验缓存（闭包内填充，报告段读取）
+    dp_cache = {}  # run-level disease-prior cache (filled inside the closure, read by the report section)
 
     async def collect():
         params = StdioServerParameters(command=sys.executable, args=[str(SERVER)], env=None)
@@ -207,7 +209,7 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
                                   "secs": round(time.time() - t0, 2), "ok": ok})
                     return res
 
-                # 组织基线与疾病先验都是 run 级缓存（同参数只查一次）
+                # tissue baseline and disease priors are both run-level caches (queried once per argument set)
                 tc = await call("get_tissue_composition", {"species": species, "tissue": tissue})
                 rows = (tc or {}).get("rows") or []
                 dp_cache.clear()
@@ -236,7 +238,7 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
                             lit["per_celltype"][ct] = await call(
                                 "search_literature",
                                 {"cell_type": ct, "species": species, "tissue": tissue, "top_k": 4})
-                    else:  # 无候选：用 top 基因做词法查询，仍出证据不出结论
+                    else:  # no candidates: use the top genes for a lexical query — still evidence, no conclusion
                         lit["gene_query"] = await call(
                             "search_literature",
                             {"cell_type": "", "species": species, "tissue": tissue,
@@ -267,7 +269,7 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
                         "disease_prior": ({"group_fractions_pct": gf, "per_disease": dp_hits}
                                           if group_present else
                                           {"enabled": False,
-                                           "reason": "未提供分组列或分组只有一组（--group-col），疾病先验比对不启用"}),
+                                           "reason": "no grouping column provided or only one group (--group-col); disease-prior comparison not enabled"}),
                         "literature": _trim_lit(lit),
                         "confidence": grade,
                         "confidence_rules_fired": reasons,
@@ -278,8 +280,8 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
 
     tc, per_cluster = anyio.run(collect)
 
-    # 可选 LLM 辅助（默认关闭；只写证据摘要叙述，不改分级、不定标签）
-    llm_meta = {"enabled": False, "note": "默认零 LLM；--llm-assist 才启用，且需用户自备通道"}
+    # optional LLM assist (off by default; writes evidence-summary narratives only, never changes grades or assigns labels)
+    llm_meta = {"enabled": False, "note": "zero LLM by default; enabled only with --llm-assist, and a user-supplied channel is required"}
     if llm_assist:
         from llm_assist import assist  # noqa: E402
         llm_meta = assist(per_cluster, out)
@@ -292,10 +294,10 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
                    "disease_queried": list(dp_cache.keys()) if group_present else [],
                    "top_genes_n": top_genes_n},
         "redlines": [
-            "默认路径零 LLM；本文件由本地五工具机械检索生成",
-            "置信度分级是预注册机械 QC 旗（规则触发原因逐条可查），不是注释结论",
-            "弃权(needs_review)/复核(mixed_or_insufficient) 是合法输出；禁止把 QC 旗当确定标签",
-            "全部证据（marker 命中/基线区间/疾病先验提及/文献片段）带出处，供人工裁决",
+            "zero LLM on the default path; this file is produced by local five-tool mechanical retrieval",
+            "the confidence grade is a pre-registered mechanical QC flag (rule triggers individually auditable), not an annotation conclusion",
+            "abstention (needs_review) / review (mixed_or_insufficient) are legal outputs; never treat a QC flag as a definite label",
+            "all evidence (marker hits / baseline intervals / disease-prior mentions / literature snippets) carries provenance for human adjudication",
         ],
         "baseline_entry": {"entry_id": (tc or {}).get("entry_id"),
                            "tissue": (tc or {}).get("tissue"),
@@ -334,7 +336,7 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
 
 
 def _trim_lit(lit):
-    """文献片段瘦身：每个候选保留 top3 结果、snippet 截 300 字符（证据报告可读性）。"""
+    """Slim down literature snippets: keep the top3 results per candidate and truncate snippets to 300 characters (evidence-report readability)."""
     out = {}
     for k, v in (lit or {}).items():
         if k == "per_celltype":
@@ -361,41 +363,43 @@ def _trim_lit(lit):
 
 
 def render_md(rep):
-    L = ["# 注释证据报告（EyeKB pipeline 阶段 B 输出）", "",
-         f"- 生成时间：{rep['generated_at']}",
-         f"- 输入：`{rep['inputs']['processed_h5ad']}`（物种 {rep['inputs']['species']}，"
-         f"组织 {rep['inputs']['tissue']}，疾病先验{'启用' if rep['inputs']['group_col_enabled'] else '未启用（无分组）'}）",
-         f"- MCP 调用：{rep['mcp_calls']['total']} 次，错误 {rep['mcp_calls']['errors']} 次",
-         "- **阅读须知**：本报告只呈现证据与机械 QC 旗，不含注释结论；每簇的最终命名由研究者在 "
-         "decisions_template.csv 填写 accept / modify / abstain。弃权是合法输出。", ""]
+    L = ["# Annotation Evidence Report (EyeKB pipeline Stage B output)", "",
+         f"- Generated at: {rep['generated_at']}",
+         f"- Input: `{rep['inputs']['processed_h5ad']}` (species {rep['inputs']['species']}, "
+         f"tissue {rep['inputs']['tissue']}, disease prior "
+         f"{'enabled' if rep['inputs']['group_col_enabled'] else 'not enabled (no grouping)'})",
+         f"- MCP calls: {rep['mcp_calls']['total']} total, {rep['mcp_calls']['errors']} errors",
+         "- **How to read**: this report presents evidence and mechanical QC flags only, with no annotation conclusions; "
+         "the final naming of each cluster is filled in by the researcher in decisions_template.csv as accept / modify / abstain. "
+         "Abstention is a legal output.", ""]
     for r in rep["redlines"]:
-        L.append(f"- 红线：{r}")
+        L.append(f"- Redline: {r}")
     L.append("")
     for c in rep["clusters"]:
         qm = c["kb_marker"] or {}
         cr = qm.get("celltype_ranking") or []
         ur = qm.get("unranked_candidates") or []
         comp = c["tissue_composition"]["observed_vs_baseline"]
-        L += [f"## 簇 {c['cluster']}（{c['n_cells']} 细胞，占 {c['fraction_pct']}%）",
-              f"- 置信度分级（机械 QC 旗）：**{c['confidence']}**",
-              f"  - 触发规则: {', '.join(c['confidence_rules_fired'])}",
-              f"- top 基因: {', '.join(c['top_genes'])}",
-              "- query_marker 候选: " + (
+        L += [f"## Cluster {c['cluster']} ({c['n_cells']} cells, {c['fraction_pct']}%)",
+              f"- Confidence grade (mechanical QC flag): **{c['confidence']}**",
+              f"  - Rules fired: {', '.join(c['confidence_rules_fired'])}",
+              f"- top genes: {', '.join(c['top_genes'])}",
+              "- query_marker candidates: " + (
                   "; ".join(f"{x['cell_type']} (n_shared={x['n_shared']}, "
                             f"{','.join(x.get('shared_genes', [])[:4])})" for x in cr[:3])
-                  or ("无具名候选" + (f"（unranked: {', '.join(x['cell_type'] for x in ur[:3])}；"
-                                       f"{qm.get('no_named_ranking_for', '')}）" if ur else ""))),
-              f"- 组成对照（基线条 {c['tissue_composition'].get('baseline_entry_id')}）: "
+                  or ("no named candidates" + (f" (unranked: {', '.join(x['cell_type'] for x in ur[:3])}; "
+                                               f"{qm.get('no_named_ranking_for', '')})" if ur else ""))),
+              f"- Composition check (baseline row {c['tissue_composition'].get('baseline_entry_id')}): "
               f"flag={comp.get('flag')}" + (
-                  f"；观测 {comp.get('observed_pct')}% vs 供者中位 {comp.get('donor_median_pct')}%"
-                  f"（IQR {comp.get('donor_iqr_pct')}，range {comp.get('donor_range_pct')}）"
+                  f"; observed {comp.get('observed_pct')}% vs donor median {comp.get('donor_median_pct')}%"
+                  f" (IQR {comp.get('donor_iqr_pct')}, range {comp.get('donor_range_pct')})"
                   if comp.get("observed_pct") is not None and comp.get("flag") not in
                   ("no_candidate", "no_baseline_row") else ""),
-              "- 疾病先验: " + (
-                  "; ".join(f"{k}: {v.get('entry_id')} 提及 {len(v.get('mentions') or [])} 条"
+              "- Disease prior: " + (
+                  "; ".join(f"{k}: {v.get('entry_id')} — {len(v.get('mentions') or [])} mention(s)"
                             for k, v in (c["disease_prior"].get("per_disease") or {}).items())
                   if c["disease_prior"].get("per_disease") else str(c["disease_prior"].get("reason"))),
-              "- 文献片段（top3，逐条带 PMID）:"]
+              "- Literature snippets (top3, each with a PMID):"]
         lit = c["literature"] or {}
         anyres = False
         for ct, resp in (lit.get("per_celltype") or {}).items():
@@ -411,30 +415,30 @@ def render_md(rep):
                 L.append(f"  - [gene_query] PMID {h.get('pmid')} ({h.get('journal')} "
                          f"{h.get('year')}): {str(h.get('snippet'))[:140]}…")
         if not anyres:
-            L.append("  - （无检索结果——按弃权路径处理）")
+            L.append("  - (no retrieval results — handled via the abstention path)")
         if c["disease_prior"].get("group_fractions_pct"):
-            L.append(f"- 分组构成（%细胞）: {c['disease_prior']['group_fractions_pct']}")
+            L.append(f"- Group composition (% of cells): {c['disease_prior']['group_fractions_pct']}")
         L.append("")
-    L.append("---\n*本报告由 EyeKB 仓内 `pipeline/` 生成；服务红线：证据只作人工判读与 QC 旗，"
-             "禁止接进任何打分/加权/排序。*")
+    L.append("---\n*This report was generated by the in-repo `pipeline/` of EyeKB; service redline: "
+             "evidence feeds human review and QC flags only — never wire it into any scoring/weighting/ranking.*")
     return "\n".join(L)
 
 
 def main():
-    ap = argparse.ArgumentParser(description="EyeKB pipeline 阶段 B（逐簇五工具证据采集，默认零 LLM）")
-    ap.add_argument("--processed", required=True, help="阶段 A 的 processed.h5ad")
-    ap.add_argument("--markers", required=True, help="阶段 A 的 cluster_markers.csv")
-    ap.add_argument("--sizes", required=True, help="阶段 A 的 cluster_sizes.csv")
+    ap = argparse.ArgumentParser(description="EyeKB pipeline Stage B (per-cluster five-tool evidence collection, zero LLM by default)")
+    ap.add_argument("--processed", required=True, help="Stage A's processed.h5ad")
+    ap.add_argument("--markers", required=True, help="Stage A's cluster_markers.csv")
+    ap.add_argument("--sizes", required=True, help="Stage A's cluster_sizes.csv")
     ap.add_argument("--out", required=True)
     ap.add_argument("--species", required=True, choices=["human", "mouse"])
-    ap.add_argument("--tissue", required=True, help="词典已知组织（如 retina / fibrovascular_membrane / ocular_surface …）")
-    ap.add_argument("--disease", default="", help="疾病名（不填则尝试用分组标签查疾病条目）")
+    ap.add_argument("--tissue", required=True, help="known tissue dictionary name (e.g. retina / fibrovascular_membrane / ocular_surface …)")
+    ap.add_argument("--disease", default="", help="disease name (if omitted, group labels are used to query disease entries)")
     ap.add_argument("--group-col", default="group")
     ap.add_argument("--top-genes-n", type=int, default=10)
     ap.add_argument("--gene-degraded", action="store_true",
-                    help="阶段 A 报告基因 ID 未映射为符号时置位（影响分级）")
+                    help="set when Stage A reports gene IDs unmapped to symbols (affects grading)")
     ap.add_argument("--llm-assist", action="store_true",
-                    help="可选：调用用户自备 OpenAI 兼容通道生成证据摘要（默认关闭；不影响分级）")
+                    help="optional: call a user-supplied OpenAI-compatible channel to generate evidence summaries (off by default; does not affect grading)")
     a = ap.parse_args()
     run_stage_b(a.processed, a.markers, a.sizes, a.out, a.species, a.tissue,
                 disease=a.disease, group_col=a.group_col,

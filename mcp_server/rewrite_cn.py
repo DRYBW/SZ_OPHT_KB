@@ -1,22 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""EyeKB MCP 查询改写层 (query-rewrite layer, 2026-10-03)
+"""EyeKB MCP query-rewrite layer (2026-10-03)
 
-一句话：中文检索句在送入英文嵌入面之前，先经中文术语桥机械翻译成英文检索式；
-默认关闭，关闭态服务行为与历史逐字节一致。
+In one sentence: before a Chinese search sentence is fed to the English embedding surface, it is
+mechanically translated into an English search expression via the Chinese-term bridge; off by
+default, and in the off state the service behaves byte-identically to history.
 
-规则来源：预注册冻结规则（M1 词级子串包含 >=2 字 / M2 题面 token(>=4) 被桥词
-包含 / 最长匹配优先 / row_id 平序 / 检索式=英文锚词+题面相关别名英文部分，
-CJK 与全角清洗，<2 或纯符号 token 丢弃）。运行时读冻结桥表 TSV，零重打词表、
-零人工挑选。
+Rule source: pre-registered frozen rules (M1 word-level substring containment >=2 chars /
+M2 query token (>=4) contained in a bridge term / longest match wins / row_id tie-break order /
+search expression = English anchor + the English parts of query-relevant alias pairs, with CJK and
+full-width cleanup, tokens <2 chars or purely symbolic are dropped). At runtime the frozen bridge
+TSV is read; zero vocabulary re-typing, zero manual picking.
 
-开关：env EYEKB_CN_REWRITE 每调用读一次；strip().casefold() ∈ {1,true,on,yes}
-→ 开，未设/其余值一律关。关闭态本模块零触碰（调用方直通短路）。
-桥表路径：env EYEKB_CN_BRIDGE_TSV 覆盖；未设时用默认绝对路径。桥表缺失/损坏时
-开动态全题按原题走并披露 status=bridge_missing（不抛错、不崩服务）。
+Switch: env EYEKB_CN_REWRITE read once per call; strip().casefold() ∈ {1,true,on,yes} → on;
+unset/any other value → off. In the off state this module touches nothing (callers short-circuit
+straight through). Bridge path: env EYEKB_CN_BRIDGE_TSV overrides; when unset the default absolute
+path is used. If the bridge is missing/corrupted, the on state runs every query as-is and
+discloses status=bridge_missing (no raise, no service crash).
 
-红线：本模块纯函数+只读文件；返回的 rewrite_meta 仅作可审计披露，禁止作为
-任何打分/加权/排序输入。
+Red line: this module is pure functions + read-only files; the returned rewrite_meta is for
+auditable disclosure only and is forbidden as input to any score/weighting/ranking.
 """
 import csv
 import hashlib
@@ -27,7 +30,7 @@ BRIDGE_DEFAULT = ("/mnt/D/EyeKB/plans/devline_cnbridge_20261002/"
                   "out/CN_BRIDGE_MERGED_v1.tsv")
 ON_VALUES = {"1", "true", "on", "yes"}
 
-# —— 以下 norm / CJK_RE / clean_part 与 d1_rewrite_rules.py 冻结版逐字一致 ——
+# —— the norm / CJK_RE / clean_part below are verbatim-identical to the frozen d1_rewrite_rules.py ——
 CJK_RE = re.compile(r'[\u3000-\u303f\u4e00-\u9fff\uff00-\uffef\u3400-\u4dbf]')
 
 
@@ -36,7 +39,7 @@ def norm(s):
 
 
 def clean_part(s):
-    """删 CJK/全角，切 token，去纯符号与短 token。"""
+    """Drop CJK/full-width chars, split into tokens, remove purely symbolic and short tokens."""
     s = CJK_RE.sub(' ', s or '')
     toks = [t for t in re.split(r'\s+', s) if t]
     out = []
@@ -51,7 +54,7 @@ def enabled():
     return (os.environ.get("EYEKB_CN_REWRITE") or "").strip().casefold() in ON_VALUES
 
 
-# —— 桥表加载: 进程内缓存 (path, mtime, size) 键控，模式同 stage3 _dev_map ——
+# —— bridge loading: in-process cache keyed by (path, mtime, size), same pattern as stage3 _dev_map ——
 _cache = {"key": None, "rows": None, "sha": None}
 
 
@@ -83,7 +86,7 @@ def _load_bridge():
 
 
 def rewrite_query(q):
-    """单题改写。q=原始检索句 (str)。返回 (query_used, meta|None)。"""
+    """Rewrite a single query. q = the original search sentence (str). Returns (query_used, meta|None)."""
     if not enabled():
         return q, None
     if not q or not str(q).strip():
@@ -92,7 +95,7 @@ def rewrite_query(q):
     if bridge is None:
         return q, {"status": "bridge_missing", "bridge_file": p}
     qn = norm(q)
-    cands = []  # (matchlen, mode, row, fragment) —— 与 d1 冻结规则逐条一致
+    cands = []  # (matchlen, mode, row, fragment) — one-for-one identical to the d1 frozen rules
     for b in bridge:
         tn = norm(b['cn_term'])
         if len(tn) >= 2 and tn in qn:

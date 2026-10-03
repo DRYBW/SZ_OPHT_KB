@@ -1,31 +1,36 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""S0 样本预判层（species × tissue 自动判定 + 硬门弃权）— WIRE-P1 接线版。
+"""S0 sample pre-check layer (species x tissue automatic decision + hard-gate abstention) — WIRE-P1 wired version.
 
-来源与血统
-    逻辑逐字移植自 plans/s0_probe_20260930/scripts/s0_probe.py（S0PROBE 冒烟原型，
-    t_7d4e404f，2026-09-30）。三证据 = A 基因 ID 构成 / B symbol 惯例 + marker 互打
-    （大小写不敏感 + 正式 ortholog）/ C baselines 组成打分；六硬门全部默认 ON。
-    移植纪律：数值语义零改动——同一 pb.csv 输入在本模块与原型脚本上的输出必须逐字段
-    全等（G2 门用 verdict_table.csv 对账）。
+Origin and lineage
+    Logic ported verbatim from plans/s0_probe_20260930/scripts/s0_probe.py (S0PROBE smoke
+    prototype, t_7d4e404f, 2026-09-30). Three evidence channels = A gene-ID composition /
+    B symbol conventions + marker cross-hits (case-insensitive + official orthologs) /
+    C baselines composition scoring; all six hard gates default ON.
+    Porting discipline: zero numeric-semantics changes — for the same pb.csv input, the output
+    of this module and of the prototype script must be field-by-field identical (the G2 gate
+    reconciles via verdict_table.csv).
 
-与原型的环境差异（仅路径，无算法差异）
-    - 资产：仓内 pipeline/assets/s0/species_assets.pkl（预烘焙，运行时零联网）。
-    - 词典：仓内 kb/markers、kb/baselines、kb/priors/composition
-      （markers_k9_ocs_increment.json 与生产盘唯一差异 = registration_provenance
-      元数据字段，面板内容逐类全等，sha 核对记录见 plans/wire_p1_20260930/logs/）。
+Environment differences vs the prototype (paths only, no algorithm differences)
+    - Assets: in-repo pipeline/assets/s0/species_assets.pkl (pre-baked, zero network at runtime).
+    - Dictionaries: in-repo kb/markers, kb/baselines, kb/priors/composition
+      (the only difference of markers_k9_ocs_increment.json from the production disk = the
+      registration_provenance metadata field; panel content is class-by-class identical,
+      sha cross-check records in plans/wire_p1_20260930/logs/).
 
-硬约束（架构评审裁决书 astra_review/ROUTER_V0_ASTRa_R1.md + REV-1 定盘，T6 防火墙写死）
-    - 本模块是判读面：禁读本仓 kb/known_issues/ 与 pipeline/pitfalls/ 的任何
-      自然语言文本。模块内不出现任何坑页文本读取路径；grep 本文件 + 本模块运行
-      输入/输出 = 零 pitfall 措辞（G4 机检）。
-    - 判不过 → abstain=True 记入读数。接线侧（run_pipeline.py）Phase-1 = shadow：
-      abstain 不阻断运行，只落 s0_gate_report.json + REPORT_ABSTAIN.md（人读记录件）；
-      阻断硬门=Phase 3（EYEKB_S0_ENFORCE=1 切换，本批默认关）。整体回退开关
-      EYEKB_S0_GATE=0 由 run_pipeline 消费，本模块自身不含开关逻辑
-      （判卷引擎与回退语义解耦）。
+Hard constraints (architecture-review ruling astra_review/ROUTER_V0_ASTRa_R1.md + REV-1 decision, T6 firewall hardwired)
+    - This module is a review-side surface: reading any natural-language text under this repo's
+      kb/known_issues/ or pipeline/pitfalls/ is forbidden. No pitfall-page read path may appear
+      in this module; grep of this file + the module's runtime inputs/outputs = zero pitfall
+      wording (G4 machine check).
+    - Failed gate -> abstain=True recorded in the readings. The wiring side (run_pipeline.py)
+      Phase-1 = shadow: abstain does not block the run, it only writes s0_gate_report.json +
+      REPORT_ABSTAIN.md (human-readable record); the blocking hard gate = Phase 3 (switched via
+      EYEKB_S0_ENFORCE=1, off by default this batch). The overall rollback switch
+      EYEKB_S0_GATE=0 is consumed by run_pipeline; this module contains no switch logic itself
+      (scoring engine decoupled from rollback semantics).
 
-用法（独立冒烟，与原型 CLI 同形）:
+Usage (standalone smoke, same CLI shape as the prototype):
     python pipeline/s0_check.py <pb.csv> [--name X] [--out outdir] [--thr-json t.json]
 """
 from __future__ import annotations
@@ -47,18 +52,18 @@ KBM = str(REPO_ROOT / "kb" / "markers")
 KBB = str(REPO_ROOT / "kb" / "baselines")
 KBP = str(REPO_ROOT / "kb" / "priors" / "composition")
 
-# ---------- 阈值（与原型逐字同值；全部"待校准"，灵敏度扫描用 --thr-json 覆盖） ----------
+# ---------- Thresholds (verbatim values from the prototype; all "pending calibration", override via --thr-json for sensitivity sweeps) ----------
 THR = {
-    'id_decisive_frac': 0.80,     # ENSG(或ENSMUSG)占比>=此值判物种（ID路定案）
-    'id_mixed_frac': 0.05,        # 两种 ENS 前缀同时>=此值 -> 矛盾
-    'sp_margin': 0.15,            # symbol路 人-鼠 打分差下限
-    'sp_floor': 0.20,             # symbol路 任一侧最低打分
-    'tissue_gap': 0.10,           # 组织 top1-top2 相对分差下限
-    'tissue_domain_floor': 0.0,   # 全部对比得分为负 -> 域外组织
-    'tissue_sim_floor': 0.25,     # 组成余弦相似上限<此值 -> 域外组织（待校准）
-    'min_genes_detected': 1000,   # 检出基因下限（深度门）
-    'min_total_counts': 5000,     # 伪bulk总计数下限
-    'fetal_ratio': 1.0,           # fetal对比得分 >= adult视网膜对比得分×此比值 判疑似胎儿
+    'id_decisive_frac': 0.80,     # ENSG (or ENSMUSG) share >= this value decides species (ID-path conclusive)
+    'id_mixed_frac': 0.05,        # both ENS prefixes >= this value at once -> conflict
+    'sp_margin': 0.15,            # symbol path: human-mouse score-difference lower bound
+    'sp_floor': 0.20,             # symbol path: minimum score on either side
+    'tissue_gap': 0.10,           # tissue top1-top2 relative score-gap lower bound
+    'tissue_domain_floor': 0.0,   # all contrast scores negative -> out-of-domain tissue
+    'tissue_sim_floor': 0.25,     # composition-cosine similarity max < this value -> out-of-domain tissue (pending calibration)
+    'min_genes_detected': 1000,   # genes-detected lower bound (depth gate)
+    'min_total_counts': 5000,     # pseudobulk total-count lower bound
+    'fetal_ratio': 1.0,           # fetal contrast score >= adult-retina contrast score x this ratio -> suspected fetal
 }
 
 RE_H = re.compile(r'^ENSG\d{11}$')
@@ -66,13 +71,13 @@ RE_M = re.compile(r'^ENSMUSG\d{11}$')
 RE_R = re.compile(r'^ENSRNOG\d{11}$')
 RE_E = re.compile(r'^ENS[A-Z]+G\d+$')
 
-# 面板名 -> 仓内组织词典名（run_pipeline.known_tissues()）映射；不在表内的按去物种前缀处理
+# Panel name -> in-repo tissue dictionary name (run_pipeline.known_tissues()); names not in the table are handled by stripping the species prefix
 TISSUE_TO_DICT = {
     'human_pdr_membrane': 'fibrovascular_membrane',
 }
 
 
-# ---------- marker 面板: kb 取源 + 原型手挑补全（kb_origin 标记区分） ----------
+# ---------- Marker panels: kb-sourced + prototype hand-picked completion (kb_origin flag distinguishes) ----------
 def load_markers():
     mk = {}
     kb = {}
@@ -89,7 +94,7 @@ def load_markers():
             if gs: mk[c] = list(gs); kb[c] = True
     except Exception:
         pass
-    # 手挑 canonical（kb 缺该类的面板；仅原型用，报告中标注）
+    # hand-picked canonicals (panel classes the kb lacks; prototype use only, annotated in the report)
     picked = {
         'Oligodendrocyte': ['MBP', 'MOG', 'MOBP', 'PLP1', 'MAL', 'CNP'],
         'OPC': ['PDGFRA', 'CSPG4', 'CXCR4', 'DCX?', 'SOX10', 'TCN2'],
@@ -135,7 +140,7 @@ def load_tissue_panels():
         'PRPC': 'PRPC_fetal', 'NRPC': 'NRPC_fetal',
         'Pericyte': 'Pericyte', 'Pericytes': 'Pericyte',
         'MG': 'MG', 'Micro': 'Micro',
-        # PDR 膜 prior 室名 -> marker 类
+        # PDR-membrane prior compartment names -> marker classes
         'endothelial': 'Endo', 'glial_candidate': 'MG', 'lymphoid_T': 'T_cell',
         'lymphoid_plasma': 'Plasma', 'myeloid': 'Mac_Tissue',
         'proliferating': 'Proliferating', 'stromal_myofibro': 'Myofibroblast',
@@ -167,7 +172,7 @@ def load_tissue_panels():
     return panels
 
 
-# ---------- 证据 A: ID 构成 ----------
+# ---------- Evidence A: ID composition ----------
 def id_evidence(gene_ids):
     n = len(gene_ids)
     if n == 0:
@@ -193,13 +198,13 @@ def id_evidence(gene_ids):
     elif f['frac_ens_other'] >= 0.5:
         call = 'nonhumanmouse_ens_out_of_domain' if f['frac_h'] < 0.5 else 'human'
     else:
-        call = 'none'   # symbol 数据，ID 路无判断力
+        call = 'none'   # symbol data; the ID path carries no decision power
     f['call'] = call
     f['path'] = 'id'
     return f
 
 
-# ---------- 证据 B: symbol 惯例 + marker 互打（大小写不敏感 + 正式 ortholog） ----------
+# ---------- Evidence B: symbol conventions + marker cross-hits (case-insensitive + official orthologs) ----------
 def symbol_evidence(symbols, assets, human_panel):
     S = [s for s in symbols if s and s not in ('NA', '-', '--')]
     if not S:
@@ -209,12 +214,12 @@ def symbol_evidence(symbols, assets, human_panel):
     ms = assets.get('mouse_main', assets['mouse_symbols'])
     Hu_upper = {x.upper() for x in hs}
     Mu_upper = {x.upper() for x in ms}
-    # 宇宙命中: 大小写敏感（惯例信号本体）+ 不敏感（B5 保底 sanity）
+    # universe hits: case-sensitive (the convention signal itself) + case-insensitive (B5 floor sanity)
     cs_h = sum(1 for s in S if s in hs) / len(S)
     cs_m = sum(1 for s in S if s in ms) / len(S)
     ci_h = sum(1 for s in Su if s in Hu_upper) / len(Su)
     ci_m = sum(1 for s in Su if s in Mu_upper) / len(Su)
-    # 人面板互打: 人面板(原符号)与鼠面板(ortholog映射原生大小写) 各做 cs/ci 命中率
+    # human-panel cross-hits: the human panel (original symbols) and the mouse panel (ortholog-mapped native case) each get cs/ci hit rates
     P_h = set(human_panel)
     global _PM_CACHE
     try:
@@ -232,11 +237,11 @@ def symbol_evidence(symbols, assets, human_panel):
     cs_m_panel = len({s for s in S if s in P_m}) / max(1, len(P_m))
     ci_h_panel = len({s.upper() for s in S} & {s.upper() for s in P_h}) / max(1, len(P_h))
     ci_m_panel = len({s.upper() for s in S} & {s.upper() for s in P_m}) / max(1, len(P_m))
-    # MT 惯例: 人 MT-CO1 vs 鼠 mt-Co1
+    # MT convention: human MT-CO1 vs mouse mt-Co1
     mt_h = sum(1 for s in S if s.startswith('MT-'))
     mt_m = sum(1 for s in S if s.lower().startswith('mt-') and not s.startswith('MT-'))
     mt_sig = 0.5 if mt_h > mt_m else (-0.5 if mt_m > mt_h else 0)
-    # 综合: 宇宙 cs 差值 + 面板 cs 差值 各半，再加 MT 惯例项
+    # composite: half universe-cs delta + half panel-cs delta, plus the MT-convention term
     score_h = 0.5 * cs_h + 0.5 * cs_h_panel + (mt_sig if mt_sig > 0 else 0)
     score_m = 0.5 * cs_m + 0.5 * cs_m_panel + (-mt_sig if mt_sig < 0 else 0)
     return dict(path='symbol', score_h=round(score_h, 4), score_m=round(score_m, 4),
@@ -250,7 +255,7 @@ def symbol_evidence(symbols, assets, human_panel):
                       'ambiguous'))
 
 
-# ---------- 映射到 human symbol 空间（打分共用） ----------
+# ---------- Mapping into human-symbol space (shared by scoring) ----------
 def to_human_symbol(df, assets):
     m2h = {}
     for hs, msyms in assets['h2m_symbols'].items():
@@ -271,7 +276,7 @@ def to_human_symbol(df, assets):
         elif s and s not in ('NA', '-'):
             out.append(s)
         elif g and not RE_E.match(g):
-            out.append(g)   # gene_id 列本身是 symbol（dr-sc 形态）
+            out.append(g)   # the gene_id column itself holds symbols (dr-sc shape)
         else:
             out.append('NA')
     res = []
@@ -283,11 +288,11 @@ def to_human_symbol(df, assets):
         elif x.upper() in m2h:
             res.append(m2h[x.upper()])
         else:
-            res.append(x)  # 原样（可能匹配不上，打分时被弃）
+            res.append(x)  # as-is (may fail to match and then be dropped during scoring)
     return np.array(res)
 
 
-# ---------- 证据 C: 组织打分（对比式组成富集，全排名不硬裁） ----------
+# ---------- Evidence C: tissue scoring (contrast-based composition enrichment, full ranking, no hard curation) ----------
 def tissue_scores(df_hsym, counts, panels, mk):
     # pseudobulk -> CPM log2
     tot = counts.sum()
@@ -306,8 +311,10 @@ def tissue_scores(df_hsym, counts, panels, mk):
     s = np.array([cs[c] for c in classes])
     raw = W @ s
     contrast = (W - W.mean(axis=0)) @ s
-    # ---- sim 指标只在成人面板集上算（fetal 面板经 PRPC/NRPC 类在成人 bulk 上有
-    #      CRX/VSX2 等共享表达 → 组成余弦虚高，改由胎儿门单独处理；原型已知限制，报告披露）
+    # ---- the sim metric is computed only over the adult panel set (the fetal panel shares
+    #      CRX/VSX2 etc. expression with adult bulk through the PRPC/NRPC classes -> inflated
+    #      composition cosine; handled separately by the fetal gate instead; known prototype
+    #      limitation, disclosed in the report)
     adult_idx = [i for i, p in enumerate(panels) if p.get('stage') != 'fetal']
     adult_cls = sorted({c for i in adult_idx for c in panels[i]['weights']})
     Wa = np.array([[panels[i]['weights'].get(c, 0.0) / 100.0 for c in adult_cls] for i in adult_idx])
@@ -344,7 +351,7 @@ def tissue_scores(df_hsym, counts, panels, mk):
                 best_raw=float(raw.max()))
 
 
-# ---------- 主判卷 ----------
+# ---------- Main scoring ----------
 def probe(pb_csv, name, assets, mk, panels, human_panel):
     rec = dict(name=name, file=str(pb_csv))
     thr_snapshot = dict(THR)
@@ -354,10 +361,10 @@ def probe(pb_csv, name, assets, mk, panels, human_panel):
 
 
 def probe_df(df, rec, assets, mk, panels, human_panel):
-    """probe 的 DataFrame 内核：probe()（读 csv）与 gate_from_input()（内存伪bulk）共用。"""
+    """DataFrame core of probe(): shared by probe() (reads a csv) and gate_from_input() (in-memory pseudobulk)."""
     rec.setdefault("thresholds", dict(THR))
     counts = pd.to_numeric(df.get('counts'), errors='coerce').fillna(0).values
-    # 丰度语义探测: 全为整数且 max>=100 -> 原始 counts；否则视为 log/归一化丰度(跳总计数门)
+    # abundance-semantics probe: all integers and max>=100 -> raw counts; otherwise treated as log/normalized abundance (total-count gate skipped)
     is_counts = bool(len(counts)) and float(np.nanmax(counts)) >= 100 and np.allclose(counts, np.round(counts))
     rec['input_kind'] = 'raw_counts' if is_counts else ('empty' if len(counts) == 0 else 'normalized_abundance')
     rec['evidence_A_id'] = id_evidence(df['gene_id'].astype(str).values)
@@ -366,7 +373,7 @@ def probe_df(df, rec, assets, mk, panels, human_panel):
     syms_in = (df['symbol'].astype(str).values if 'symbol' in df else [])
     rec['evidence_B_symbol'] = symbol_evidence(list(syms_in) + id_as_sym, assets, human_panel)
     gates = []
-    # 深度门
+    # depth gate
     if len(df) == 0 or (df['counts'].sum() if 'counts' in df else 0) == 0:
         gates.append('empty_or_zero_counts')
     detected = int((counts > 0).sum())
@@ -374,7 +381,7 @@ def probe_df(df, rec, assets, mk, panels, human_panel):
         gates.append(f'low_depth_detected={detected}')
     if is_counts and counts.sum() < THR['min_total_counts']:
         gates.append(f'low_total_counts={int(counts.sum())}')
-    # 物种综合: A 优先, B 交叉验证
+    # species composite: A takes priority, B cross-validates
     a, b = rec['evidence_A_id']['call'], rec['evidence_B_symbol']['call']
     species_call, sp_conf = None, 0.0
     if a in ('human', 'mouse'):
@@ -388,14 +395,14 @@ def probe_df(df, rec, assets, mk, panels, human_panel):
     elif a in ('rat_out_of_domain', 'nonhumanmouse_ens_out_of_domain'):
         gates.append('species_out_of_domain')
         species_call = 'out_of_domain'
-    else:  # ID 路无判断力 -> symbol 路
+    else:  # ID path carries no decision power -> symbol path
         if b in ('human', 'mouse'):
             species_call = b
             sp_conf = max(0.3, abs(rec['evidence_B_symbol']['score_h'] - rec['evidence_B_symbol']['score_m']))
         else:
             species_call = 'undetermined'
             gates.append('species_unresolvable')
-    # 组织打分仅在物种可用时做（人鼠皆可映射；域外物种跳过=硬门"停手"）
+    # tissue scoring runs only when the species is usable (human/mouse both mappable; out-of-domain species skipped = hard-gate "stop")
     rec['evidence_C_tissue'] = None
     if species_call in ('human', 'mouse'):
         hs = to_human_symbol(df, assets)
@@ -411,7 +418,7 @@ def probe_df(df, rec, assets, mk, panels, human_panel):
             if C['top1'] != 'human_retina_fetal':
                 if C['gap'] < THR['tissue_gap']:
                     gates.append(f"tissue_low_gap={C['gap']}")
-            # 胎儿门: fetal 面板对比得分压过成人视网膜面板 -> 疑似胎儿材料，停手报人
+            # fetal gate: the fetal panel's contrast score overtakes the adult-retina panel -> suspected fetal material, stop and report to the human
             rmap = {r['tissue']: r['contrast'] for r in C['ranking']}
             fet, ad = rmap.get('human_retina_fetal', -9), rmap.get('human_retina', -9)
             if fet > 0 and fet >= ad * THR['fetal_ratio']:
@@ -425,12 +432,12 @@ def probe_df(df, rec, assets, mk, panels, human_panel):
     return rec
 
 
-# ---------- 接线门面（run_pipeline.py 消费） ----------
+# ---------- Wiring facade (consumed by run_pipeline.py) ----------
 _CTOR = {}
 
 
 def _ctx():
-    """资产/面板惰性单例（进程级；判卷引擎禁读 pitfalls 文本，见模块头注）。"""
+    """Lazy singleton for assets/panels (process-level; the scoring engine is forbidden to read pitfalls text, see module header)."""
     if not _CTOR:
         _CTOR['assets'] = pickle.load(open(ASSETS, 'rb'))
         _CTOR['mk'], _CTOR['kbflag'] = load_markers()
@@ -441,9 +448,9 @@ def _ctx():
 
 
 def pseudobulk_from_anndata(adata, sample=None):
-    """AnnData（raw counts 或归一化值均可，语义由 probe 探测）→ 伪bulk DataFrame
-    （列 gene_id[, symbol], counts——与 s0_probe inputs/pb/*.csv 同形）。
-    backed 模式分块求和，不整载（内存铁律第①条）。"""
+    """AnnData (raw counts or normalized values, semantics probed downstream) -> pseudobulk DataFrame
+    (columns gene_id[, symbol], counts — same shape as s0_probe inputs/pb/*.csv).
+    Backed mode sums in chunks and never loads the whole matrix (memory iron rule #1)."""
     import scipy.sparse as sp
     n_genes = adata.shape[1]
     tot = np.zeros(n_genes, dtype=np.float64)
@@ -479,7 +486,7 @@ def var_names_of(adata):
 
 
 def map_tissue_to_dict(panel_top1):
-    """S0 面板名 → 词典组织名；返回 (dict_name, in_dict_or_alias_note)。"""
+    """S0 panel name -> dictionary tissue name; returns (dict_name, in_dict_or_alias_note)."""
     if panel_top1 in TISSUE_TO_DICT:
         return TISSUE_TO_DICT[panel_top1], 'alias-map'
     for pref in ('human_', 'mouse_'):
@@ -490,14 +497,14 @@ def map_tissue_to_dict(panel_top1):
 
 
 def gate_from_input(input_path, sample_col='', name=None):
-    """接线门：读入 input（stage_a loader，h5ad 走 backed）→ 伪bulk → probe。
-    返回 (rec, tmp_df)；不写任何文件、不做 override——由 run_pipeline 消费。"""
-    from stage_a_processing import load_input  # 同目录模块
+    """Wiring gate: read input (stage_a loader, h5ad via backed) -> pseudobulk -> probe.
+    Returns (rec, tmp_df); writes no files and applies no override — consumed by run_pipeline."""
+    from stage_a_processing import load_input  # same-directory module
     p = Path(input_path)
     name = name or p.name
     if p.is_file() and p.suffix == '.h5ad':
         import anndata as ad
-        a = ad.read_h5ad(p, backed='r')  # 内存铁律：backed 读
+        a = ad.read_h5ad(p, backed='r')  # memory iron rule: backed read
         pb = pseudobulk_from_anndata(a)
         del a
     else:
@@ -514,11 +521,11 @@ def gate_from_input(input_path, sample_col='', name=None):
 
 def main():
     import argparse
-    ap = argparse.ArgumentParser(description="S0 样本预判层独立冒烟（原型 CLI 同形）")
+    ap = argparse.ArgumentParser(description="S0 sample pre-check layer, standalone smoke (same CLI shape as the prototype)")
     ap.add_argument('pb')
     ap.add_argument('--name', default=None)
     ap.add_argument('--out', default=None,
-                    help="省略=不落 JSON，只打印 final 行")
+                    help="omit = do not write JSON, only print the final line")
     ap.add_argument('--thr-json', default=None)
     a = ap.parse_args()
     if a.thr_json:
