@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""gen_md.py — 从 EXPECTED_COMPOSITION_v0.json + selfcheck 产物渲染人读版 md (v0, 2026-09-28)"""
+"""gen_md.py — renders human-readable md from EXPECTED_COMPOSITION_v0.json + selfcheck artifacts (v0, 2026-09-28)"""
 import json, pathlib, csv, collections
 KB=pathlib.Path("<EYEKB>/kb/composition")
 face=json.load(open(KB/"EXPECTED_COMPOSITION_v0.json"))
@@ -8,25 +8,25 @@ summ=json.load(open(KB/"selfcheck/summary.json"))
 flags=list(csv.DictReader(open(KB/"selfcheck/flags.tsv"),delimiter="\t"))
 
 # ---------- EXPECTED_COMPOSITION_v0.md
-L=["# EXPECTED_COMPOSITION_v0 — 正常成人眼组成先验面（人读版）",
+L=["# EXPECTED_COMPOSITION_v0 — Normal Adult Eye Composition Prior Surface (Human-readable Version)",
 "",
-f"> 生成 {face['generated']} | 卡 {face['card']} | 授权：{face['authority']}",
+f"> Generated {face['generated']} | Card {face['card']} | Authority: {face['authority']}",
 ">",
-"> **⛔ 接线状态：`"+face["wiring"]+"`** —— 本面任何运行时消费（MCP/baselines/打分/门控）须另卡另批、PI 拍板。",
+"> **⛔ Wiring status: `"+face["wiring"]+"`** — any runtime consumption on this facet (MCP/baselines/scoring/gating) requires a separate card and approval, PI decision.",
 "",
-"## 0. 定位与口径（先读这里）",
-f"- 面语义：**{face['denominator_semantics']}**",
-"- 证据等级：" + "；".join(f"{k}={v}" for k,v in face["evidence_grades"].items()),
-"- 谱系声明（禁循环条款）：" + face["lineage_declaration"],
-"- 区间机械规则（预注册）：" + face["interval_rule"],
-"- 范围：" + json.dumps(face["scope"],ensure_ascii=False),
+"## 0. Positioning and Scope (Read This First)",
+f"- Face semantics: **{face['denominator_semantics']}**",
+"- Evidence level:" + "；".join(f"{k}={v}" for k,v in face["evidence_grades"].items()),
+"- Lineage declaration (anti-circularity clause):" + face["lineage_declaration"],
+"- Interval mechanical rules (pre-registered):" + face["interval_rule"],
+"- Scope:" + json.dumps(face["scope"],ensure_ascii=False),
 "",]
 for page,p in face["pages"].items():
-    L.append(f"## 1.{list(face['pages']).index(page)+1} 页: {page}")
-    L.append(f"- registry 锚: {p['registry_anchor']}")
-    L.append(f"- 供者级主档: {p['donor_main']}")
+    L.append(f"## 1.{list(face['pages']).index(page)+1} page: {page}")
+    L.append(f"- registry anchor: {p['registry_anchor']}")
+    L.append(f"- donor-level master record: {p['donor_main']}")
     L.append("")
-    L.append("| 细胞类型 | 低% | 中% | 高% | 证据 | B 状态 | 逐行 PMID | 供者级实测(median/iqr/range) |")
+    L.append("| Cell Type | Low % | Mid % | High % | Evidence | B Status | Row-wise PMID | Donor-level Measured (median/iqr/range) |")
     L.append("|---|---|---|---|---|---|---|---|")
     for r in p["rows"]:
         am=r.get("a_measured") or {}
@@ -34,80 +34,80 @@ for page,p in face["pages"].items():
         lo,mi,hi=(r['low_pct'],r['mid_pct'],r['high_pct'])
         L.append(f"| {r['cell_type']} ({r['label_cn']}) | {lo if lo is not None else 'null'} | {mi if mi is not None else 'null'} | {hi if hi is not None else 'null'} | {r['evidence']} | {r['grade_b_status']} | {', '.join(r['pmids']) or '—'} | {meas} |")
     L.append("")
-    L.append("### 逐行文献锚点（盘上已入库文献原文句，B 级可定位）")
+    L.append("### Row-wise Literature Anchors (On-disk ingested literature original sentences, B-level locatable)")
     for r in p["rows"]:
         if not r["literature_anchors"]: continue
         L.append(f"- **{r['cell_type']}**")
         for a in r["literature_anchors"]:
-            q=("“"+a["quote"]+"”") if a.get("quote") else "(题录锚, 无逐字句)"
+            q=("“"+a["quote"]+"”") if a.get("quote") else "(Bibliographic anchor; no verbatim text)"
             L.append(f"  - PMID {a['pmid']} [{a['kind']}] {q} — {a['note']}")
     L.append("")
-L.append("## 2. PMID 题录三判据自检")
+L.append("## 2. PMID Bibliographic Triple-Criteria Self-Check")
 v=face["pmid_verification"]
-L.append(f"- 判据：{v['criteria']}；PMID 总数 {v['pmids_total']}，台账不合格行 {v['ledger_fail_rows']}")
-L.append("- 逐条明细见 `ledgers/PROVENANCE_COMP_v0.tsv`")
+L.append(f"- Criteria: {v['criteria']}; total PMIDs {v['pmids_total']}, non-compliant ledger rows {v['ledger_fail_rows']}")
+L.append("- Itemized details in `ledgers/PROVENANCE_COMP_v0.tsv`")
 L.append("")
-L.append("## 3. 已知限制与 caveat")
+L.append("## 3. Known Limitations and Caveats")
 for c in face["caveats"]: L.append(f"- {c}")
 if face.get("rows_missing_pmid"):
-    L.append(f"- 缺逐行 PMID 的行（激活前义务 OB-1）：{', '.join(face['rows_missing_pmid'])}")
-for ob in face.get("activation_obligations",[]): L.append(f"- 激活义务 {ob}")
-L.append("- 疾病态比例不建（PDR 注释不可靠口径维持）；发育轴（fetal/organoid）数值折叠排除，引用记录留痕。")
-L.append("- “INTAKE 台账 392 条”按任务书原文并入“盘上已入库 RAG 文献（papers.jsonl v2.4.2）元数据可核者”口径执行（deviation 声明：盘上未寻得名含 INTAKE 且恰 392 条的文献台账文件；methods-scrna 索引页恰 392 篇，作为可核集之一纳入）。")
+    L.append(f"- Rows missing line-by-line PMID (pre-activation obligation OB-1): {', '.join(face['rows_missing_pmid'])}")
+for ob in face.get("activation_obligations",[]): L.append(f"- Activation obligation {ob}")
+L.append("- Disease-state proportions not built (PDR annotation unreliable scope maintained); developmental axis (fetal/organoid) values folded out, citation records retained.")
+L.append("- 'INTAKE ledger 392 entries' executed per task specification original text, incorporated into 'on-disk ingested RAG literature (papers.jsonl v2.4.2) metadata verifiable' scope (deviation statement: no literature ledger file named INTAKE with exactly 392 entries found on disk; methods-scrna index page has exactly 392 papers, included as one of the verifiable sets).")
 L.append("")
-L.append("## 4. 自检与激活")
-L.append("- 自检旗标报告：`COMP_SELFFLAG_20260928.md`（只出旗标清单与比例分布，不出注释错误结论）。")
-L.append("- 本面默认 OFF；接入判读层（unexpected 旗标器）为另卡另批事项。")
+L.append("## 4. Self-check and Activation")
+L.append("- Self-check flag report: `COMP_SELFFLAG_20260928.md` (outputs only flag list and proportion distribution, no erroneous annotation conclusions).")
+L.append("- This face defaults OFF; wiring it into the interpretation layer (unexpected flagger) is a separate-card, separate-batch item.")
 (KB/"EXPECTED_COMPOSITION_v0.md").write_text("\n".join(L),encoding="utf-8")
 
 # ---------- COMP_SELFFLAG_20260928.md
-R=["# COMP_SELFFLAG_20260928 — EXPECTED_COMPOSITION_v0 自检旗标报告（只读，出旗标不出结论）",
+R=["# COMP_SELFFLAG_20260928 — EXPECTED_COMPOSITION_v0 self-check flag report (read-only, outputs flags not conclusions)",
 "",
-f"> 卡 {face['card']} | 输入：`EXPECTED_COMPOSITION_v0.json` × 盘上冻结产物（kb/baselines, plans/evalset 冻结件, demo_gse165784 v2 共识草稿表）",
-"> **⛔ 本面未接线。旗标=提示复核，不等于注释错误；接线与激活另卡另批（PI 拍板）。**",
+f"> Card {face['card']} | Input: `EXPECTED_COMPOSITION_v0.json` × on-disk frozen artifacts (kb/baselines, plans/evalset frozen items, demo_gse165784 v2 consensus draft table)",
+"> **⛔ This face is not wired. Flags = prompts for re-review, not annotation errors; wiring and activation require separate cards and approval (PI decision).**",
 "",
-"## 0. 方法",
-"- 对账对象：评估卷各成员真值组成（Q1–Q9，真值=作者级/portal 注释或 mapped_10class；非自家聚类重标注）+ demo GSE165784 v2 Track B 共识注释草稿（疾病材料，展示门行为）。",
-"- 旗标规则：pct < low → BELOW；pct > high → ABOVE；面外身份（T/巨噬/成纤维/前体…）→ off_face_identity 披露行；比例分母=该数据集全部细胞。",
-"- 反向质检内建条款：健康公开集被旗标类型占比 >20% → 如实报告“面太窄=面的问题不是数据的问题”。",
-"- 域外轴（不计入反向质检分母）：Q7 小鼠（物种轴）、Q8 胎儿（发育轴）、Q6（与眼表面同构建源=循环参照）、Q9 demo（疾病手术材料，usage_scope 禁当达标对照）。",
+"## 0. Method",
+"- Reconciliation targets: Ground truth composition of each member in the evaluation volume (Q1–Q9, ground truth = author-level/portal annotations or mapped_10class; not re-annotation by own clustering) + demo GSE165784 v2 Track B consensus annotation draft (disease material, demonstrating gate behavior).",
+"- Flag rules: pct < low → BELOW; pct > high → ABOVE; off-face identities (T / macrophage / fibroblast / progenitor …) → off_face_identity disclosure row; the proportion denominator is all cells of the dataset.",
+"- Built-in reverse quality check clause: If flagged type proportion >20% in healthy public sets → honestly report \"face too narrow = issue with the face definition, not the data\".",
+"- Out-of-domain axes (excluded from reverse quality check denominator): Q7 mouse (species axis), Q8 fetal (developmental axis), Q6 (same construction source as ocular surface = circular reference), Q9 demo (disease surgical material, usage_scope prohibits use as standard control).",
 "",
-"## 1. 汇总旗标率",
+"## 1. Summary Flag Rate",
 "",
-"| 数据集 | 面 | 细胞数 | 旗标行数/面行数 | 旗标率 | 反向质检 |",
+"| Dataset | Face | Cell Count | Flagged Rows/Face Rows | Flag Rate | Reverse Quality Check |",
 "|---|---|---|---|---|---|"]
 for s in summ:
     R.append(f"| {s['dataset']} | {s['page']} | {s['total_cells']:,} | {s['n_flagged']}/{s['face_rows']} | {s['flag_pct']}% | {s['reverseQC']} |")
 R+=["",
-"## 2. 旗标明细（逐行 数据集×细胞类型）","",
-"| 数据集 | 行 | 观测% | 面区间[低,高] | 状态 |","|---|---|---|---|---|"]
+"## 2. Flag Details (Row-by-Row Dataset × Cell Type)","",
+"| Dataset | Row | Observed % | Surface Interval [Low, High] | Status |","|---|---|---|---|---|"]
 byd=collections.defaultdict(list)
 for f in flags: byd[f["dataset"]].append(f)
 for ds,rows in byd.items():
     for f in rows:
-        iv=f"[{f['low']},{f['high']}]" if f["low"] not in (None,"") else "null(披露行)"
+        iv=f"[{f['low']},{f['high']}]" if f["low"] not in (None,"") else "null (disclosure row)"
         R.append(f"| {ds} | {f['row']} | {f['pct']} | {iv} | {f['status']} |")
-R+=["","## 3. 反向质检验算（内建条款）",""]
+R+=["","## 3. Reverse Quality Control Verification (Built-in Clauses)",""]
 trig=[s for s in summ if s["reverseQC"].startswith("TRIGGER")]
 cnt=sum(1 for s in summ if s["in_scope"]=="yes") if False else sum(1 for s in summ if s["dataset"] in ("Q1_Lukowski2019","Q2_GSE155288","Q3","Q4","Q5b"))
-R+=[f"- 计入反向质检的健康公开集：Q1/Q2/Q3/Q4/Q5b（共 {cnt} 个，人·正常·成人视网膜）。",
-    f"- **触发（>20% 类型被旗标）：{len(trig)} 个 —— " + "; ".join(f"{s['dataset']} {s['flag_pct']}%" for s in trig) + "**" if trig else "- 无触发。",
-    "- 判读（照实，非结论）：按内建条款，这首先说明 **v0 区间对“跨平台/跨取材区域/分选设计”过窄**，是面的问题不是数据的问题。具体可归因：Q1/Q2=中央凹取材+scRNA 细胞悬液（面主档为 snRNA 核悬液，Astra T2 已声明两口径不可直比）；Q3/Q4=Macroglia 签名拆分口径+CD73/CD90 分选设计抬 BC/MG 压 Rod；Q5b 与面主档同源（HRCA 内部构成）旗标率 0 是**循环自证的上界，不是泛化好**。",
-    "- 处置建议（不代拍，激活另卡另批时随文呈 PI）：v1 按 suspension_type（核/细胞）与取材区域（中央凹/周边/全视网膜/分选）分层出区间；或把“先验面”定义为带设计豁免的条件面。",
+R+=[f"- Healthy public sets included in reverse quality control: Q1/Q2/Q3/Q4/Q5b (total {cnt}, human, normal, adult retina).",
+    f"- **Trigger (>20% of types flagged): {len(trig)} items —— " + "; ".join(f"{s['dataset']} {s['flag_pct']}%" for s in trig) + "**" if trig else "- No trigger.",
+    "- Reading (factual, not conclusion): Per built-in clauses, this first indicates that the **v0 interval is too narrow for cross-platform/cross-sampling-region/sorting designs**, a scope issue rather than a data issue. Specific attributions: Q1/Q2 = foveal sampling + scRNA cell suspension (main face archive uses snRNA nuclear suspension; Astra T2 has declared the two metrics are not directly comparable); Q3/Q4 = Macroglia signature splitting criteria + CD73/CD90 sorting design elevating BC/MG and suppressing Rods; Q5b shares origin with main face archive (HRCA internal composition), flag rate 0 represents an **upper bound of circular self-validation, not good generalization**.",
+    "- Disposition Recommendation (not auto-approved; submit to PI alongside text when activating separate cards/approvals): Stratify v1 intervals by suspension_type (nuclear/cell) and sampling region (fovea/peripheral/whole retina/sorted); or define the 'prior surface' as a conditional surface with design exemptions.",
     "",
-"## 4. 面外身份披露（非旗标，informational）","",
-"### Q8 胎儿（域外轴行为记录）",
-"- retinal progenitor cell 为最大类 73,566/226,506=32.5%（分母经复核=def.classes 全类合计=全文件）—— 成人面无 progenitor 行，全部入 off_face_identity；发育材料对照成人面的预期行为。",
+"## 4. Off-Surface Identity Disclosure (Non-flagged, informational)","",
+"### Q8 Fetal (Out-of-Domain Axis Behavior Record)",
+"- retinal progenitor cell is the largest class at 73,569/226,506=32.5% (denominator re-reviewed = def.classes total sum = full file) — The adult surface lacks a progenitor row, so all entries fall into off_face_identity; expected behavior of developmental material against the adult surface.",
 "",
-"### 各集面外身份 Top 行"]
+"### Top Off-Surface Identity Rows per Dataset"]
 for ds,rows in byd.items():
     offs=[f for f in rows if f["status"]=="off_face_identity"][:8]
     if offs: R.append(f"- **{ds}**: "+ "; ".join(f"{f['row'].split('::',1)[1]} {f['pct']}%" for f in offs))
 R+=["",
-"## 5. 声明",
-"- 本报告只输出旗标清单与比例分布；旗标≠注释错误；不据本报告判定任何既有注释的对错。",
-"- 本面未接线、默认 OFF；接线与激活另卡另批。",
-"- 复现：`python3 scripts/build_expected_composition_v0.py && python3 scripts/selfcheck_comp_v0.py && python3 scripts/gen_md.py`（日志 logs/selfcheck_run.log）。",
+"## 5. Declaration",
+"- This report outputs only the flag list and proportion distribution; flags ≠ annotation errors; no existing annotations are judged correct or incorrect based on this report.",
+"- This face is unwired, default OFF; wiring and activation require a separate task card and approval batch.",
+"- Reproduction: `python3 scripts/build_expected_composition_v0.py && python3 scripts/selfcheck_comp_v0.py && python3 scripts/gen_md.py` (logs logs/selfcheck_run.log).",
 ""]
 (KB/"COMP_SELFFLAG_20260928.md").write_text("\n".join(R),encoding="utf-8")
 print("md written:", (KB/'EXPECTED_COMPOSITION_v0.md').stat().st_size, (KB/'COMP_SELFFLAG_20260928.md').stat().st_size)

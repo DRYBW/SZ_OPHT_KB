@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""consume.py — 已知问题 claim 的 shadow 消费（拉页 + 风险旗标）。WIRE-P1 交付3（REV-1 定盘版）。
+"""consume.py — shadow-mode consumption of known-issues claims (page pulls + risk flags); WIRE-P1 deliverable 3 (REV-1 finalized).
 
-消费语义（astra T4/T5/T6 定盘，取更严者；推翻 qwen 代审版 PITFALL_OVERRIDE）：
-  - **shadow：只记旗标与复核要求，禁任何自动改标/降档/覆票**。
-    判读改判仍走原三独立判读票与 S0 硬门。本模块不产生 suggested_grade_cap（该列已废止）。
-  - 拉页：(species, tissue) → cells 页全量 + species/tissue/pattern 页被引指针解析
-    → 合并本格适用 claim 集。
-  - 可见性防火墙（T6）：answer_dependency≠none（=blind_safe=false）的条目，
-    在**预标注人类面**（evidence_report.md 头段 + decisions_template.csv）
-    只输出结构化旗标（claim_id + risk_level + review_required），
-    failure_mode/mitigation 自由文本**不注入**（留 post_decision/curator 面）；
-    blind_safe=true 的通用方法学条可随带 mitigation 短规则。
-  - 本模块只在判读完成段被 run_pipeline 调用；判读证据 JSON/喂料件/盲评 digest
-    不 import 本模块（tests/test_s0_gate.py T4 ast 级机检 + firewall grep）。
+Consumption semantics (astra T4/T5/T6 anchoring, take stricter; overrides qwen proxy-audit version PITFALL_OVERRIDE):
+  - **shadow: Record flags and re-review requirements only; automatic relabeling/downgrading/vote overriding is prohibited.**
+    Reading revisions still follow the original three independent reading votes and S0 hard gate. This module does not generate suggested_grade_cap (this column is deprecated).
+  - Page pull: (species, tissue) → full cells page + resolution of citation pointers on species/tissue/pattern pages
+    → Merge applicable claim sets for this cell.
+  - Visibility firewall (T6): entries with answer_dependency≠none (=blind_safe=false),
+    On the **pre-annotated human surface** (evidence_report.md header + decisions_template.csv)
+    Output only structured flags (claim_id + risk_level + review_required),
+    failure_mode/mitigation free text is **not injected** (left to post_decision/curator surface);
+    general methodological entries with blind_safe=true may include short mitigation rules.
+  - This module is invoked by run_pipeline only during the reading completion phase; reading evidence JSON/feed items/blind review digest
+    Do not import this module (tests/test_s0_gate.py T4 AST-level machine check + firewall grep).
 
-审计：每次风险旗标命中写 shadow_flags.jsonl
+Audit: write to shadow_flags.jsonl on every risk flag hit
   {ts, run_id, claim_id, cluster_id, risk_level, evidence_source_type,
    answer_dependency, blind_safe, action:"risk_flag_only(no_auto_override)"}。
 """
@@ -29,7 +29,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 PAGES = HERE / "pages"
 
-# 类锚 token（词首匹配）→ 受控类名。变量名避开 *TOKENS 关键词族（网关脱敏陷阱，2026-09-29 实证）。
+# Class-anchor tokens (prefix match) → controlled class names. Variable names avoid the *TOKENS keyword family (gateway sanitization trap, empirically verified 2026-09-29).
 def _anchor_vocab():
     return {
         "Endo": ["endo", "endothel"], "Micro": ["microglia", "micro"],
@@ -47,17 +47,17 @@ def _anchor_vocab():
 
 CLASS_MAP_VOCAB = _anchor_vocab()
 
-# claim 的 applies_to_classes 未落原子契约（astra schema 无此类锚字段）；
-# 本批为消费侧增强：按 origin 的 failure_mode 关键词推断类锚，仅作**风险提示命中**，
-# 绝不驱动改判。命中逻辑保守：仅当候选类名与失效模式文本里的类直接对应才挂旗。
+# The applies_to_classes field in claims does not conform to the atomic contract (astra schema lacks such anchor fields);
+# This batch is a consumer-side enhancement: infers class anchors based on failure_mode keywords from origin, used only for **risk flag hits**,
+# Never drives adjudication changes. Hit logic is conservative: flags are raised only when candidate class names directly correspond to classes mentioned in the failure mode text.
 _ANCHOR_HINTS = {
-    "endothel": ["Endo"], "内皮": ["Endo"], "microglia": ["Micro"], "小胶质": ["Micro"],
-    "müller": ["MG"], "星形": ["Astro"], "astrocyte": ["Astro"],
-    "视杆": ["Rod"], "rod": ["Rod"], "双极": ["BC"], "bipolar": ["BC"],
-    "rpe": ["RPE"], "增殖": ["Proliferating"], "proliferat": ["Proliferating"],
-    "髓系": ["Mac_Tissue", "Micro"], "myeloid": ["Mac_Tissue", "Micro"],
-    "血液": ["Erythroid"], "blood": ["Erythroid"], "上皮": ["Epithelium_generic"],
-    "epithel": ["Epithelium_generic"], "周细胞": ["Pericyte"], "pericyte": ["Pericyte"],
+    "endothel": ["Endo"], "Endothelium": ["Endo"], "microglia": ["Micro"], "Microglia": ["Micro"],
+    "müller": ["MG"], "Astrocyte": ["Astro"], "astrocyte": ["Astro"],
+    "Rod": ["Rod"], "rod": ["Rod"], "Bipolar": ["BC"], "bipolar": ["BC"],
+    "rpe": ["RPE"], "Proliferative": ["Proliferating"], "proliferat": ["Proliferating"],
+    "Myeloid lineage": ["Mac_Tissue", "Micro"], "myeloid": ["Mac_Tissue", "Micro"],
+    "Blood": ["Erythroid"], "blood": ["Erythroid"], "Epithelium": ["Epithelium_generic"],
+    "epithel": ["Epithelium_generic"], "Pericytes": ["Pericyte"], "pericyte": ["Pericyte"],
     "granularity": ["MG", "Astro"], "ambient": ["Rod", "BC"],
 }
 
@@ -87,7 +87,7 @@ def class_match(candidate, applies):
     return False
 
 
-# 词典组织名 → canonical 页坐标（COORDINATE_TAXONOMY_v1.md §6，C6/C7 批复；服务词典零改动）
+# Dictionary organization name → canonical page coordinates (COORDINATE_TAXONOMY_v1.md §6, C6/C7 approval; zero changes to service dictionary)
 PULL_TISSUE_ALIAS = {"fibrovascular_membrane": "fibrovascular_membrane",
                      "fibrovascular membrane": "fibrovascular_membrane",
                      "pdr_membrane": "fibrovascular_membrane",
@@ -102,9 +102,9 @@ def _load(fname):
 
 
 def pull_claims(species, tissue):
-    """返回 (本格适用 claim 全量, 悬空 ref_id 列表)。claim 全量=各可见页 entries ∪ 被引指针解析。"""
+    """Return (full set of applicable claims for this cell, list of dangling ref_ids). Full claim set = entries from all visible pages ∪ resolved cited pointers."""
     tissue = PULL_TISSUE_ALIAS.get(tissue, tissue)
-    # 全局 claim 索引（用于指针解析）
+    # Global claim index (for pointer resolution)
     gidx = {}
     for pg in (PAGES.rglob("*.json")):
         if pg.name in ("INDEX.json", "EXCLUSIONS.json"):
@@ -140,36 +140,36 @@ def pull_claims(species, tissue):
 
 
 def _pre_annotation_line(c):
-    """预标注人类面短行。blind_safe=false 只结构化旗标，不放自由文本。"""
+    """Pre-annotated short human lexical surface lines. blind_safe=false structures flags only, no free text."""
     if c.get("blind_safe", True):
         mit = c.get("mitigation") or c.get("failure_mode", "")
         return (f"- `{c['claim_id']}` [{c['evidence_source_type']}/"
                 f"risk={c['risk_level']}] {mit}")
     return (f"- `{c['claim_id']}` [risk={c['risk_level']}/"
-            f"review_required=manual_post_decision]（自由文本判读后开放）")
+            f"review_required=manual_post_decision] (open after free-text reading)")
 
 
 def attention_section(species, tissue, s0_meta=None):
     claims, dangling = pull_claims(species, tissue)
     pub = [c for c in claims if c.get("blind_safe", True)]
     red = [c for c in claims if not c.get("blind_safe", True)]
-    lines = ["## 本格注意清单（known-issues shadow：只记旗标，不改判；本段无自由文本）", "",
-             f"- 判定坐标：species=`{species}`，tissue=`{tissue}`"
-             + (f"（来源 `{(s0_meta or {}).get('source', 'manual')}`"
-                + ("，override 留痕：s0_overridden_by_user"
+    lines = ["## This-slot attention list (known-issues shadow: log flags only, do not alter readings; no free text in this segment)", "",
+             f"- Judgment coordinates: species=`{species}`, tissue=`{tissue}`"
+             + (f"(Source `{(s0_meta or {}).get('source', 'manual')}`"
+                + (", override audit trail: s0_overridden_by_user"
                    if (s0_meta or {}).get("overridden_by_user") else "") + "）"
                 if s0_meta else ""),
-             f"- 适用 claim：{len(claims)} 条（盲评安全 {len(pub)} / 判读后开放 {len(red)}）。"
-             "本段仅结构化旗标（astra 保守默认：盲评前不给 known-issues 自由文本）；"
-             "短规则与出处见 `shadow_attention.json`（判读后人类面），"
-             "自动具名/降级变化恒=0。", "",
-             "| claim_id | risk | source_type | blind_safe | 复核要求 |",
+             f"- Applicable claims: {len(claims)} entries (blind-evaluation safe {len(pub)} / open after reading {len(red)})."
+             "This segment contains only structured flags (astra conservative default: no free-text known-issues before blind review);"
+             "Short rules and sources see `shadow_attention.json` (human-facing after reading),"
+             "Automatic naming/downgrade change always = 0.", "",
+             "| claim_id | risk | source_type | blind_safe | re-review requirement |",
              "|---|---|---|---|---|"]
     for c in claims:
         lines.append(f"| `{c['claim_id']}` | {c['risk_level']} | "
                      f"{c['evidence_source_type']} | {str(c['blind_safe']).lower()} | "
-                     + ("判读后人工复核（自由文本 post_decision）"
-                        if not c["blind_safe"] else "可选复核（通用方法学短规则见机读件）")
+                     + ("Manual re-review after reading (free-text post_decision)"
+                        if not c["blind_safe"] else "Optional re-review (general methodological short rules in machine-readable file)")
                      + " |")
     lines.append("")
     machine = {"schema": "eyekb-shadow-attention/1.0", "species": species, "tissue": tissue,
@@ -182,7 +182,7 @@ def attention_section(species, tissue, s0_meta=None):
 
 
 def cluster_flags(claims, cluster_top_candidates):
-    """逐簇：类锚命中的风险旗标。**无 cap、无 override**，只给复核要求。"""
+    """Per cluster: risk flags for class anchor hits. **No cap, no override**, only review requirements."""
     flags, audit = [], []
     for c in claims:
         anchors = _claim_class_anchors(c)
@@ -206,7 +206,7 @@ def cluster_flags(claims, cluster_top_candidates):
 def write_outputs(out_dir, species, tissue, claims, per_cluster_audit, run_id, dangling):
     out_dir = Path(out_dir)
     def _red(c, k):
-        # 非盲评安全条：全记录文件内也按 post_decision 口径脱敏自由文本
+        # Non-blind-safe entries: free text sanitized to post_decision standard even within full record files
         if not c.get("blind_safe", True) and k in ("failure_mode", "mitigation",
                                                    "observable_signature"):
             return "REDACTED:post_decision"
@@ -228,6 +228,6 @@ def write_outputs(out_dir, species, tissue, claims, per_cluster_audit, run_id, d
                                ensure_ascii=False) + "\n")
             n += 1
     with open(out_dir / "shadow_flags.jsonl", "a", encoding="utf-8") as f:
-        f.write(f"# shadow：本 run 风险旗标数={n}；全部为复核提示，自动具名/降级变化=0"
-                "（终止条件监控：坑致自动改标必须恒为 0）\n")
+        f.write(f"# shadow: risk flags in this run = {n}; all are review prompts only, automatic naming/downgrade changes = 0"
+                "(Termination condition monitoring: auto-relabeling due to pitfalls must always be 0)\\n")
     return att, n

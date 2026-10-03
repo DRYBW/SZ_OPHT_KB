@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""audit_annotations.py — 对外部注释结果的已知问题对照（只举旗，不改写标签）。
+"""audit_annotations.py — check external annotation results against the known-issues layer (flags only; labels are never rewritten).
 
-输入：CSV，列至少含 cluster_id,label；species/tissue 可逐行给，或用
---species/--tissue 全局默认（行内值优先）。tissue 名走本仓受控词表别名表。
-输出：<out>/annotations_audit.csv 逐簇旗标 + <out>/audit_summary.json 汇总。
-语义纪律（与运行时提示注入一致）：
-  - 只产生 REVIEW 提示与坐标证据状态，绝不改写/降级/更名任何注释标签；
-  - 条目核验状态如实登记：首批全部为"题录已核、人工复审进行中"，提示按参考对待。
+Input: CSV with columns including at least cluster_id, label; species/tissue can be specified row-wise or via
+--species/--tissue global defaults (inline values take precedence). Tissue names use the controlled vocabulary alias table of this repository.
+Output: <out>/annotations_audit.csv per-cluster flags + <out>/audit_summary.json summary.
+Semantic discipline (consistent with runtime prompt injection):
+  - Generate only REVIEW prompts and coordinate evidence status; never rewrite/downgrade/rename any annotation labels;
+  - entry verification status is registered as-is: the first batch is entirely "Bibliographic record verified; manual re-review in progress"; treat the hints accordingly.
 """
 import argparse, csv, json, sys
 from pathlib import Path

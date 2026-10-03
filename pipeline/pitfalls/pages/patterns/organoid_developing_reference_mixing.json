@@ -18,10 +18,10 @@
     ],
     "disease_or_treatment": []
    },
-   "failure_mode": "类器官/iPSC 衍生体系与成年组织同框：体系发育签名被当成年细胞型证据，器官级参照进一步污染成年类型定义与训练参照",
-   "observable_signature": "题录：PMID:32946783（人视网膜与其类器官同框图谱）、PMID:39117640（人发育视网膜双组学图谱）、PMID:38942029（hPSC 来源角膜缘干细胞异质性）",
+   "failure_mode": "Organoid/iPSC-derived systems framed with adult tissue: system developmental signatures mistaken for adult cell type evidence, organ-level references further contaminate adult type definitions and training references",
+   "observable_signature": "Bibliographic records: PMID:32946783 (Human retina and its organoid atlas), PMID:39117640 (Human developing retina multi-omics atlas), PMID:38942029 (Heterogeneity of hPSC-derived limbal stem cells)",
    "risk_level": "medium",
-   "mitigation": "命名与训练参照前先分体系轴（organoid/iPSC vs 原位 tissue）；无 system 词时 scope 留空并登记缺口（待 C11/C9 词表扩后回写）；器官级参照禁单独作成年细胞型定义",
+   "mitigation": "Before naming and training references, distinguish the system axis (organoid/iPSC vs in situ tissue); if no 'system' term is present, leave scope blank and register a gap (to be backfilled after C11/C9 vocabulary expansion); organ-level references must not solely define adult cell types",
    "evidence_source_type": "peer_reviewed_literature",
    "source_check": "locator_verified",
    "home": {
@@ -35,16 +35,16 @@
    "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/known_issues_b1_20260930/pubmed_B_verified.json verified 键"
+    "/mnt/D/EyeKB/plans/known_issues_b1_20260930/pubmed_B_verified.json verified key"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "b2_stock_20260930",
     "b1_order": 8,
-    "legacy_grade": "B文献PMID",
+    "legacy_grade": "Tier B bibliographic record PMID",
     "legacy_code_in_legend": "PIT-E2",
     "report_confidence": "medium",
-    "home_rationale": "体系条件驱动（词表暂无 system 轴→note 登记缺口，禁自造词）"
+    "home_rationale": "System-condition driven (vocabulary currently lacks system axis → note registers gap; do not invent terms)"
    }
   }
  ],

@@ -142,15 +142,35 @@ for c in claims[:3]:
 | **Project record layer** | `docs/wiki/`, `docs/VERSION_NOTES.md` | Project status, historical decisions, per-version change records — for maintainers; not part of any single analysis run |
 | **Batch entry layer** | `pipeline/` | Executable entry for steps 1–7 (Phase A standard processing + Phase B per-cluster evidence collection), outputting evidence reports and a human-decision list; zero-LLM by default |
 
-## What it produces
+## What the workflow produces, end to end
 
-The two figures below are outputs of the system on real data (annotation-assist workflow on the PDR vitreous-membrane single-cell dataset GSE165784: batch integration → doublet QC → myeloid subset refinement; knowledge-base entries informed the reading; labels were confirmed cluster by cluster by the researcher):
+The four figures below are real outputs on public data, in processing order — three of them come straight from the shipped batch entry (`pipeline/run_pipeline.py`) run on a 600-cell demo subset of the PDR vitreous-membrane dataset GSE165784:
 
-![UMAP of myeloid subsets in a PDR vitreous membrane](figures/umap_myeloid_sub.png)
+**① QC and doublet filtering** (mitochondrial fraction, detected genes, Scrublet scores):
+
+![Stage A QC: mitochondrial fraction, gene detection, doublet scores](figures/workflow_run/01_qc_filter_doublet.png)
+
+**② Batch correction and clustering** (UMAP before vs after Harmony integration):
+
+![UMAP before and after Harmony batch correction](figures/workflow_run/02_umap_before_after.png)
+
+**③ Cluster structure** (sizes feeding the per-cluster evidence collection):
+
+![Cluster sizes after Leiden clustering](figures/workflow_run/03_cluster_sizes.png)
+
+Each cluster then receives the evidence report of §Phase B (markers, composition checks, disease priors, literature passages — each with its PMID), and `decisions_template.csv` stays blank until a researcher fills it in.
+
+**④ Final annotated result** — after the human review stage, the full GSE165784 run (10,069 cells, 32 clusters) with labels accepted by the study PI; ballots, per-cluster tables and the signed audit trail are in `docs/plans/drsc_reann_20260930/`:
+
+![Final annotated UMAP of the full GSE165784 run with PI-accepted cluster labels](figures/04_final_annotation_umap.png)
+
+A closer look at the same dataset's myeloid compartment — knowledge-base entries informed the reading; labels were confirmed cluster by cluster (these two panels are the annotation-assist refinement on the full run):
+
+![PDR vitreous membrane myeloid subsets UMAP](figures/umap_myeloid_sub.png)
 
 ![QC view: compartment distribution and doublet calls](figures/umap_compartment_doublet.png)
 
-(The two figures illustrate the working mode only and constitute no therapeutic or clinical conclusion. The generating scripts are archived with the figures under `docs/plans/figure_uplift_20260928/scripts/`.)
+(All figures illustrate the working mode only and constitute no therapeutic or clinical conclusion. The ①–③ run is reproducible with `pipeline/run_pipeline.py --input pipeline/fixtures/pdr600.h5ad --species human --tissue fibrovascular_membrane`; the full-run figure scripts are archived under `docs/plans/figure_uplift_20260928/scripts/`.)
 
 ## 5-minute quickstart
 
@@ -236,7 +256,7 @@ The server runs over local stdio only and opens no network port. The literature-
 
 - **Literature layer**: default corpus = the v2.4.2 frozen build (~243,000 chunks / 3,869 papers, with a preprint-flag column). As of 2026-10-01 the default switched from v2.0 (~175,000 chunks / 2,713 papers, kept as read-only legacy) after coverage, regression, and golden-set gates all passed and the corpus was confirmed identical to the G2/G3 reproduction assets; internal and external default states now match. Everything comes from public ophthalmology and single-cell literature; every item traces to a PMID.
 - **Known-issues catalog** (`pipeline/pitfalls/`): 59 citation-backed atomic entries + the 90-cell evidence-state matrix; the comparison entry for external annotations is `audit_annotations.py` (see above).
-- **Dictionary layer** (`kb/`, 100+ files): cell-type marker dictionaries for the human eye and mouse retina, tissue composition baselines (v0 mixed-design build + v1 stratified build), disease-prior matrices.
+- **Dictionary layer** (`kb/`, 100+ files): cell-type marker dictionaries for the human eye and mouse retina, tissue composition baselines (v0 mixed-design build + v1 stratified build), disease-prior matrices. Entries are written in English; Chinese search terms can be routed into the English vocabulary by the optional query-rewrite layer (off by default).
 - **Protocols and validation records** (`docs/`): standard operating procedures for cell annotation and the complete evidence of successive blinded validations (task definitions, decision tables, ballots, scripts) — about 2,300 files, all recomputable.
 
 ## Verify that your install matches our results

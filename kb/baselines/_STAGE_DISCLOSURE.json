@@ -2,7 +2,7 @@
  "schema": "eyekb-stage-disclosure/1.0",
  "generated": "2026-09-23",
  "card": "t_be336eee",
- "note": "KB2c 红线2: adult 基线中全部非 adult 供者/unknown 源逐行披露; fetal 期实测=0 (污染源实为 newborn/儿童/青少年)。",
+ "note": "KB2c Red Line 2: All non-adult donors/unknown sources in adult baselines disclosed row-by-row; fetal period measured = 0 (contamination sources are actually newborn/children/adolescents).",
  "by_tissue": {
   "retina": {
    "organism_stage_main": "adult",
@@ -11,325 +11,325 @@
      "cells": 369477,
      "n_donors": 5,
      "organism_stage": "adult",
-     "rule": "'90 year-old and over' 下界>=阈值"
+     "rule": "'90 year-old and over' lower bound >= threshold"
     },
     "69-year-old stage": {
      "cells": 170764,
      "n_donors": 6,
      "organism_stage": "adult",
-     "rule": "数字年龄 69y vs 阈值 18y"
+     "rule": "Digital age 69y vs threshold 18y"
     },
     "64-year-old stage": {
      "cells": 170635,
      "n_donors": 4,
      "organism_stage": "adult",
-     "rule": "数字年龄 64y vs 阈值 18y"
+     "rule": "Digital age 64y vs threshold 18y"
     },
     "73-year-old stage": {
      "cells": 164811,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 73y vs 阈值 18y"
+     "rule": "Digital age 73y vs threshold 18y"
     },
     "82-year-old stage": {
      "cells": 162339,
      "n_donors": 3,
      "organism_stage": "adult",
-     "rule": "数字年龄 82y vs 阈值 18y"
+     "rule": "Digital age 82y vs threshold 18y"
     },
     "86-year-old stage": {
      "cells": 133685,
      "n_donors": 3,
      "organism_stage": "adult",
-     "rule": "数字年龄 86y vs 阈值 18y"
+     "rule": "Digital age 86y vs threshold 18y"
     },
     "71-year-old stage": {
      "cells": 130930,
      "n_donors": 5,
      "organism_stage": "adult",
-     "rule": "数字年龄 71y vs 阈值 18y"
+     "rule": "Digital age 71y vs threshold 18y"
     },
     "77-year-old stage": {
      "cells": 110926,
      "n_donors": 5,
      "organism_stage": "adult",
-     "rule": "数字年龄 77y vs 阈值 18y"
+     "rule": "Digital age 77y vs threshold 18y"
     },
     "67-year-old stage": {
      "cells": 105577,
      "n_donors": 4,
      "organism_stage": "adult",
-     "rule": "数字年龄 67y vs 阈值 18y"
+     "rule": "Digital age 67y vs threshold 18y"
     },
     "81-year-old stage": {
      "cells": 95313,
      "n_donors": 3,
      "organism_stage": "adult",
-     "rule": "数字年龄 81y vs 阈值 18y"
+     "rule": "Digital age 81y vs threshold 18y"
     },
     "68-year-old stage": {
      "cells": 94341,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 68y vs 阈值 18y"
+     "rule": "Digital age 68y vs threshold 18y"
     },
     "43-year-old stage": {
      "cells": 85308,
      "n_donors": 3,
      "organism_stage": "adult",
-     "rule": "数字年龄 43y vs 阈值 18y"
+     "rule": "Digital age 43y vs threshold 18y"
     },
     "80-year-old stage": {
      "cells": 82752,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 80y vs 阈值 18y"
+     "rule": "Digital age 80y vs threshold 18y"
     },
     "65-year-old stage": {
      "cells": 80114,
      "n_donors": 4,
      "organism_stage": "adult",
-     "rule": "数字年龄 65y vs 阈值 18y"
+     "rule": "Digital age 65y vs threshold 18y"
     },
     "66-year-old stage": {
      "cells": 72396,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 66y vs 阈值 18y"
+     "rule": "Digital age 66y vs threshold 18y"
     },
     "85-year-old stage": {
      "cells": 66992,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 85y vs 阈值 18y"
+     "rule": "Digital age 85y vs threshold 18y"
     },
     "72-year-old stage": {
      "cells": 66338,
      "n_donors": 3,
      "organism_stage": "adult",
-     "rule": "数字年龄 72y vs 阈值 18y"
+     "rule": "Digital age 72y vs threshold 18y"
     },
     "21-year-old stage": {
      "cells": 65728,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 21y vs 阈值 18y"
+     "rule": "Numeric age 21y vs threshold 18y"
     },
     "78-year-old stage": {
      "cells": 64271,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 78y vs 阈值 18y"
+     "rule": "Numeric age 78y vs threshold 18y"
     },
     "62-year-old stage": {
      "cells": 60886,
      "n_donors": 3,
      "organism_stage": "adult",
-     "rule": "数字年龄 62y vs 阈值 18y"
+     "rule": "Numeric age 62y vs threshold 18y"
     },
     "late adult stage": {
      "cells": 56087,
      "n_donors": 3,
      "organism_stage": "adult",
-     "rule": "UBERON 成年术语档 (无数字年龄; 映射规则见 stage_axis)"
+     "rule": "UBERON adult term tier (no numeric age; mapping rules see stage_axis)"
     },
     "88-year-old stage": {
      "cells": 55003,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 88y vs 阈值 18y"
+     "rule": "Numeric age 88y vs threshold 18y"
     },
     "84-year-old stage": {
      "cells": 54100,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 84y vs 阈值 18y"
+     "rule": "Numeric age 84y vs threshold 18y"
     },
     "52-year-old stage": {
      "cells": 48328,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 52y vs 阈值 18y"
+     "rule": "Numeric age 52y vs threshold 18y"
     },
     "32-year-old stage": {
      "cells": 45370,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 32y vs 阈值 18y"
+     "rule": "Numeric age 32y vs threshold 18y"
     },
     "25-year-old stage": {
      "cells": 40614,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 25y vs 阈值 18y"
+     "rule": "Numeric age 25y vs threshold 18y"
     },
     "53-year-old stage": {
      "cells": 39355,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 53y vs 阈值 18y"
+     "rule": "Numeric age 53y vs threshold 18y"
     },
     "60-year-old stage": {
      "cells": 38614,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 60y vs 阈值 18y"
+     "rule": "Numeric age 60y vs threshold 18y"
     },
     "83-year-old stage": {
      "cells": 37829,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 83y vs 阈值 18y"
+     "rule": "Numeric age 83y vs threshold 18y"
     },
     "75-year-old stage": {
      "cells": 35801,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 75y vs 阈值 18y"
+     "rule": "Numeric age 75y vs threshold 18y"
     },
     "16-year-old stage": {
      "cells": 35683,
      "n_donors": 2,
      "organism_stage": "developing",
-     "rule": "数字年龄 16y vs 阈值 18y"
+     "rule": "Numeric age 16y vs threshold 18y"
     },
     "63-year-old stage": {
      "cells": 27655,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 63y vs 阈值 18y"
+     "rule": "Numeric age 63y vs threshold 18y"
     },
     "27-year-old stage": {
      "cells": 26380,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 27y vs 阈值 18y"
+     "rule": "Numeric age 27y vs threshold 18y"
     },
     "34-year-old stage": {
      "cells": 25985,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 34y vs 阈值 18y"
+     "rule": "Numeric age 34y vs threshold 18y"
     },
     "80 year-old and over stage": {
      "cells": 23946,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "'80 year-old and over' 下界>=阈值"
+     "rule": "'80 year-old and over' lower bound >= threshold"
     },
     "46-year-old stage": {
      "cells": 23916,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 46y vs 阈值 18y"
+     "rule": "Numeric age 46y vs threshold 18y"
     },
     "11-year-old stage": {
      "cells": 20466,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 11y vs 阈值 18y"
+     "rule": "Numeric age 11y vs threshold 18y"
     },
     "58-year-old stage": {
      "cells": 20118,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 58y vs 阈值 18y"
+     "rule": "Numeric age 58y vs threshold 18y"
     },
     "prime adult stage": {
      "cells": 16640,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "UBERON 成年术语档 (无数字年龄; 映射规则见 stage_axis)"
+     "rule": "UBERON adult term tier (no numeric age; mapping rules see stage_axis)"
     },
     "eighth decade stage": {
      "cells": 16459,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "eighth decade = 70-79y 下界>=阈值"
+     "rule": "eighth decade = 70-79y lower bound >= threshold"
     },
     "50-year-old stage": {
      "cells": 14949,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 50y vs 阈值 18y"
+     "rule": "Numeric age 50y vs threshold 18y"
     },
     "30-year-old stage": {
      "cells": 13026,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 30y vs 阈值 18y"
+     "rule": "Numeric age 30y vs threshold 18y"
     },
     "17-year-old stage": {
      "cells": 12347,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 17y vs 阈值 18y"
+     "rule": "Numeric age 17y vs threshold 18y"
     },
     "15-year-old stage": {
      "cells": 11892,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 15y vs 阈值 18y"
+     "rule": "Numeric age 15y vs threshold 18y"
     },
     "47-year-old stage": {
      "cells": 11732,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 47y vs 阈值 18y"
+     "rule": "Numeric age 47y vs threshold 18y"
     },
     "10-year-old stage": {
      "cells": 10625,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 10y vs 阈值 18y"
+     "rule": "Numeric age 10y vs threshold 18y"
     },
     "18-year-old stage": {
      "cells": 10613,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 18y vs 阈值 18y"
+     "rule": "Numeric age 18y vs threshold 18y"
     },
     "70-year-old stage": {
      "cells": 9690,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 70y vs 阈值 18y"
+     "rule": "Numeric age 70y vs threshold 18y"
     },
     "3-year-old stage": {
      "cells": 8925,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 3y vs 阈值 18y"
+     "rule": "Numeric age 3y vs threshold 18y"
     },
     "76-year-old stage": {
      "cells": 8685,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 76y vs 阈值 18y"
+     "rule": "Numeric age 76y vs threshold 18y"
     },
     "60-79 year-old stage": {
      "cells": 8475,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "年龄段 60-79 下界>=阈值"
+     "rule": "Age range 60-79 lower bound >= threshold"
     },
     "74-year-old stage": {
      "cells": 6401,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 74y vs 阈值 18y"
+     "rule": "Numeric age 74y vs threshold 18y"
     },
     "41-year-old stage": {
      "cells": 4827,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 41y vs 阈值 18y"
+     "rule": "Numeric age 41y vs threshold 18y"
     },
     "24-year-old stage": {
      "cells": 3191,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 24y vs 阈值 18y"
+     "rule": "Numeric age 24y vs threshold 18y"
     }
    },
    "excluded_nonadult_units": [
@@ -338,49 +338,49 @@
      "cells": 26671,
      "uberon": "16-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 16y vs 阈值 18y"
+     "rule": "Numeric age 16y vs threshold 18y"
     },
     {
      "donor_id": "BCM_22_0769",
      "cells": 20466,
      "uberon": "11-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 11y vs 阈值 18y"
+     "rule": "Numeric age 11y vs threshold 18y"
     },
     {
      "donor_id": "MMD_23_21999",
      "cells": 12347,
      "uberon": "17-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 17y vs 阈值 18y"
+     "rule": "Numeric age 17y vs threshold 18y"
     },
     {
      "donor_id": "MMD_23_21623",
      "cells": 11892,
      "uberon": "15-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 15y vs 阈值 18y"
+     "rule": "Numeric age 15y vs threshold 18y"
     },
     {
      "donor_id": "MMD_23_17738",
      "cells": 10625,
      "uberon": "10-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 10y vs 阈值 18y"
+     "rule": "Numeric age 10y vs threshold 18y"
     },
     {
      "donor_id": "MMD_23_20181",
      "cells": 9012,
      "uberon": "16-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 16y vs 阈值 18y"
+     "rule": "Numeric age 16y vs threshold 18y"
     },
     {
      "donor_id": "MMD_23_22486",
      "cells": 8925,
      "uberon": "3-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 3y vs 阈值 18y"
+     "rule": "Numeric age 3y vs threshold 18y"
     }
    ],
    "source": "/mnt/D/OcularKB/data/HRCA_cellxgene/HRCA_allcells_annotated.h5ad"
@@ -392,235 +392,235 @@
      "cells": 56324,
      "n_donors": 3,
      "organism_stage": "adult",
-     "rule": "数字年龄 64y vs 阈值 18y"
+     "rule": "Digital age 64y vs threshold 18y"
     },
     "43-year-old stage": {
      "cells": 45727,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 43y vs 阈值 18y"
+     "rule": "Digital age 43y vs threshold 18y"
     },
     "32-year-old stage": {
      "cells": 39770,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 32y vs 阈值 18y"
+     "rule": "Numeric age 32y vs threshold 18y"
     },
     "72-year-old stage": {
      "cells": 30149,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 72y vs 阈值 18y"
+     "rule": "Digital age 72y vs threshold 18y"
     },
     "2-year-old stage": {
      "cells": 27157,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 2y vs 阈值 18y"
+     "rule": "Numeric age 2y vs threshold 18y"
     },
     "25-year-old stage": {
      "cells": 26051,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 25y vs 阈值 18y"
+     "rule": "Numeric age 25y vs threshold 18y"
     },
     "newborn stage (0-28 days)": {
      "cells": 25018,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "newborn/infant 产后早期→developing (裁定 Q2)"
+     "rule": "newborn/infant early postnatal → developing (adjudication Q2)"
     },
     "1-year-old stage": {
      "cells": 23364,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 1y vs 阈值 18y"
+     "rule": "Numeric age 1y vs threshold 18y"
     },
     "55-year-old stage": {
      "cells": 22600,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 55y vs 阈值 18y"
+     "rule": "Numeric age 55y vs threshold 18y"
     },
     "67-year-old stage": {
      "cells": 22556,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 67y vs 阈值 18y"
+     "rule": "Digital age 67y vs threshold 18y"
     },
     "11-year-old stage": {
      "cells": 22308,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 11y vs 阈值 18y"
+     "rule": "Numeric age 11y vs threshold 18y"
     },
     "70-year-old stage": {
      "cells": 21432,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 70y vs 阈值 18y"
+     "rule": "Numeric age 70y vs threshold 18y"
     },
     "87-year-old stage": {
      "cells": 19901,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 87y vs 阈值 18y"
+     "rule": "Digital age 87y vs threshold 18y"
     },
     "61-year-old stage": {
      "cells": 19093,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 61y vs 阈值 18y"
+     "rule": "Digital age 61y vs threshold 18y"
     },
     "51-year-old stage": {
      "cells": 17436,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 51y vs 阈值 18y"
+     "rule": "Digital age 51y vs threshold 18y"
     },
     "10-year-old stage": {
      "cells": 15667,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 10y vs 阈值 18y"
+     "rule": "Numeric age 10y vs threshold 18y"
     },
     "27-year-old stage": {
      "cells": 15052,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 27y vs 阈值 18y"
+     "rule": "Numeric age 27y vs threshold 18y"
     },
     "34-year-old stage": {
      "cells": 12347,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 34y vs 阈值 18y"
+     "rule": "Numeric age 34y vs threshold 18y"
     },
     "53-year-old stage": {
      "cells": 11393,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 53y vs 阈值 18y"
+     "rule": "Numeric age 53y vs threshold 18y"
     },
     "75-year-old stage": {
      "cells": 10823,
      "n_donors": 4,
      "organism_stage": "adult",
-     "rule": "数字年龄 75y vs 阈值 18y"
+     "rule": "Numeric age 75y vs threshold 18y"
     },
     "postnatal stage": {
      "cells": 10550,
      "n_donors": 2,
      "organism_stage": "developing",
-     "rule": "postnatal→developing (裁定 Q1 映射)"
+     "rule": "postnatal→developing (adjudication Q1 mapping)"
     },
     "65-year-old stage": {
      "cells": 9813,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 65y vs 阈值 18y"
+     "rule": "Digital age 65y vs threshold 18y"
     },
     "41-year-old stage": {
      "cells": 8904,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 41y vs 阈值 18y"
+     "rule": "Numeric age 41y vs threshold 18y"
     },
     "13-year-old stage": {
      "cells": 8281,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 13y vs 阈值 18y"
+     "rule": "Digital age 13y vs threshold 18y"
     },
     "90 year-old and over stage": {
      "cells": 7997,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "'90 year-old and over' 下界>=阈值"
+     "rule": "'90 year-old and over' lower bound >= threshold"
     },
     "74-year-old stage": {
      "cells": 7504,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 74y vs 阈值 18y"
+     "rule": "Numeric age 74y vs threshold 18y"
     },
     "33-year-old stage": {
      "cells": 7159,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 33y vs 阈值 18y"
+     "rule": "Digital age 33y vs threshold 18y"
     },
     "69-year-old stage": {
      "cells": 6063,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 69y vs 阈值 18y"
+     "rule": "Digital age 69y vs threshold 18y"
     },
     "84-year-old stage": {
      "cells": 4320,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 84y vs 阈值 18y"
+     "rule": "Numeric age 84y vs threshold 18y"
     },
     "86-year-old stage": {
      "cells": 4293,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 86y vs 阈值 18y"
+     "rule": "Digital age 86y vs threshold 18y"
     },
     "77-year-old stage": {
      "cells": 3352,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 77y vs 阈值 18y"
+     "rule": "Digital age 77y vs threshold 18y"
     },
     "48-year-old stage": {
      "cells": 3224,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 48y vs 阈值 18y"
+     "rule": "Digital age 48y vs threshold 18y"
     },
     "62-year-old stage": {
      "cells": 3047,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 62y vs 阈值 18y"
+     "rule": "Numeric age 62y vs threshold 18y"
     },
     "22-year-old stage": {
      "cells": 2533,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 22y vs 阈值 18y"
+     "rule": "Digital age 22y vs threshold 18y"
     },
     "16-year-old stage": {
      "cells": 2245,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 16y vs 阈值 18y"
+     "rule": "Numeric age 16y vs threshold 18y"
     },
     "45-year-old stage": {
      "cells": 1879,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 45y vs 阈值 18y"
+     "rule": "Digital age 45y vs threshold 18y"
     },
     "83-year-old stage": {
      "cells": 1595,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 83y vs 阈值 18y"
+     "rule": "Numeric age 83y vs threshold 18y"
     },
     "39-year-old stage": {
      "cells": 732,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 39y vs 阈值 18y"
+     "rule": "Digital age 39y vs threshold 18y"
     },
     "eighth decade stage": {
      "cells": 198,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "eighth decade = 70-79y 下界>=阈值"
+     "rule": "eighth decade = 70-79y lower bound >= threshold"
     }
    },
    "excluded_nonadult_units": [
@@ -629,63 +629,63 @@
      "cells": 27157,
      "uberon": "2-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 2y vs 阈值 18y"
+     "rule": "Numeric age 2y vs threshold 18y"
     },
     {
      "donor_id": "BCM_22_0698",
      "cells": 25018,
      "uberon": "newborn stage (0-28 days)",
      "organism_stage": "developing",
-     "rule": "newborn/infant 产后早期→developing (裁定 Q2)"
+     "rule": "newborn/infant early postnatal → developing (adjudication Q2)"
     },
     {
      "donor_id": "BCM_22_0485",
      "cells": 23364,
      "uberon": "1-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 1y vs 阈值 18y"
+     "rule": "Numeric age 1y vs threshold 18y"
     },
     {
      "donor_id": "BCM_22_0769",
      "cells": 22308,
      "uberon": "11-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 11y vs 阈值 18y"
+     "rule": "Numeric age 11y vs threshold 18y"
     },
     {
      "donor_id": "BCM_21_0999",
      "cells": 15667,
      "uberon": "10-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 10y vs 阈值 18y"
+     "rule": "Numeric age 10y vs threshold 18y"
     },
     {
      "donor_id": "shi_donor1",
      "cells": 8281,
      "uberon": "13-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 13y vs 阈值 18y"
+     "rule": "Digital age 13y vs threshold 18y"
     },
     {
      "donor_id": "chen_donor1",
      "cells": 6249,
      "uberon": "postnatal stage",
      "organism_stage": "developing",
-     "rule": "postnatal→developing (裁定 Q1 映射)"
+     "rule": "postnatal→developing (adjudication Q1 mapping)"
     },
     {
      "donor_id": "chen_donor2",
      "cells": 4301,
      "uberon": "postnatal stage",
      "organism_stage": "developing",
-     "rule": "postnatal→developing (裁定 Q1 映射)"
+     "rule": "postnatal→developing (adjudication Q1 mapping)"
     },
     {
      "donor_id": "BCM_23_0131",
      "cells": 2245,
      "uberon": "16-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 16y vs 阈值 18y"
+     "rule": "Numeric age 16y vs threshold 18y"
     }
    ],
    "source": "/mnt/D/OcularKB/data/D002_ocularsurface/D002_allcells_578K.h5ad"
@@ -697,283 +697,283 @@
      "cells": 78263,
      "n_donors": 3,
      "organism_stage": "adult",
-     "rule": "数字年龄 43y vs 阈值 18y"
+     "rule": "Digital age 43y vs threshold 18y"
     },
     "69-year-old stage": {
      "cells": 73699,
      "n_donors": 5,
      "organism_stage": "adult",
-     "rule": "数字年龄 69y vs 阈值 18y"
+     "rule": "Digital age 69y vs threshold 18y"
     },
     "64-year-old stage": {
      "cells": 68748,
      "n_donors": 5,
      "organism_stage": "adult",
-     "rule": "数字年龄 64y vs 阈值 18y"
+     "rule": "Digital age 64y vs threshold 18y"
     },
     "71-year-old stage": {
      "cells": 56868,
      "n_donors": 4,
      "organism_stage": "adult",
-     "rule": "数字年龄 71y vs 阈值 18y"
+     "rule": "Digital age 71y vs threshold 18y"
     },
     "62-year-old stage": {
      "cells": 54875,
      "n_donors": 3,
      "organism_stage": "adult",
-     "rule": "数字年龄 62y vs 阈值 18y"
+     "rule": "Numeric age 62y vs threshold 18y"
     },
     "67-year-old stage": {
      "cells": 35962,
      "n_donors": 3,
      "organism_stage": "adult",
-     "rule": "数字年龄 67y vs 阈值 18y"
+     "rule": "Digital age 67y vs threshold 18y"
     },
     "77-year-old stage": {
      "cells": 32893,
      "n_donors": 5,
      "organism_stage": "adult",
-     "rule": "数字年龄 77y vs 阈值 18y"
+     "rule": "Digital age 77y vs threshold 18y"
     },
     "65-year-old stage": {
      "cells": 30565,
      "n_donors": 4,
      "organism_stage": "adult",
-     "rule": "数字年龄 65y vs 阈值 18y"
+     "rule": "Digital age 65y vs threshold 18y"
     },
     "16-year-old stage": {
      "cells": 27212,
      "n_donors": 3,
      "organism_stage": "developing",
-     "rule": "数字年龄 16y vs 阈值 18y"
+     "rule": "Numeric age 16y vs threshold 18y"
     },
     "72-year-old stage": {
      "cells": 26225,
      "n_donors": 4,
      "organism_stage": "adult",
-     "rule": "数字年龄 72y vs 阈值 18y"
+     "rule": "Digital age 72y vs threshold 18y"
     },
     "81-year-old stage": {
      "cells": 23537,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 81y vs 阈值 18y"
+     "rule": "Digital age 81y vs threshold 18y"
     },
     "70-year-old stage": {
      "cells": 19483,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 70y vs 阈值 18y"
+     "rule": "Numeric age 70y vs threshold 18y"
     },
     "21-year-old stage": {
      "cells": 19210,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 21y vs 阈值 18y"
+     "rule": "Numeric age 21y vs threshold 18y"
     },
     "10-year-old stage": {
      "cells": 18998,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 10y vs 阈值 18y"
+     "rule": "Numeric age 10y vs threshold 18y"
     },
     "61-year-old stage": {
      "cells": 18682,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 61y vs 阈值 18y"
+     "rule": "Digital age 61y vs threshold 18y"
     },
     "42-year-old stage": {
      "cells": 17776,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 42y vs 阈值 18y"
+     "rule": "Digital age 42y vs threshold 18y"
     },
     "27-year-old stage": {
      "cells": 16928,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 27y vs 阈值 18y"
+     "rule": "Numeric age 27y vs threshold 18y"
     },
     "32-year-old stage": {
      "cells": 16501,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 32y vs 阈值 18y"
+     "rule": "Numeric age 32y vs threshold 18y"
     },
     "34-year-old stage": {
      "cells": 16364,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 34y vs 阈值 18y"
+     "rule": "Numeric age 34y vs threshold 18y"
     },
     "25-year-old stage": {
      "cells": 16269,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 25y vs 阈值 18y"
+     "rule": "Numeric age 25y vs threshold 18y"
     },
     "33-year-old stage": {
      "cells": 16010,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 33y vs 阈值 18y"
+     "rule": "Digital age 33y vs threshold 18y"
     },
     "18-year-old stage": {
      "cells": 15449,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 18y vs 阈值 18y"
+     "rule": "Numeric age 18y vs threshold 18y"
     },
     "newborn stage (0-28 days)": {
      "cells": 15177,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "newborn/infant 产后早期→developing (裁定 Q2)"
+     "rule": "newborn/infant early postnatal → developing (adjudication Q2)"
     },
     "60-year-old stage": {
      "cells": 14758,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 60y vs 阈值 18y"
+     "rule": "Numeric age 60y vs threshold 18y"
     },
     "76-year-old stage": {
      "cells": 14488,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 76y vs 阈值 18y"
+     "rule": "Numeric age 76y vs threshold 18y"
     },
     "56-year-old stage": {
      "cells": 14406,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 56y vs 阈值 18y"
+     "rule": "Digital age 56y vs threshold 18y"
     },
     "30-year-old stage": {
      "cells": 14224,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 30y vs 阈值 18y"
+     "rule": "Numeric age 30y vs threshold 18y"
     },
     "3-year-old stage": {
      "cells": 13748,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 3y vs 阈值 18y"
+     "rule": "Numeric age 3y vs threshold 18y"
     },
     "85-year-old stage": {
      "cells": 13362,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 85y vs 阈值 18y"
+     "rule": "Digital age 85y vs threshold 18y"
     },
     "52-year-old stage": {
      "cells": 13317,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 52y vs 阈值 18y"
+     "rule": "Numeric age 52y vs threshold 18y"
     },
     "15-year-old stage": {
      "cells": 13317,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 15y vs 阈值 18y"
+     "rule": "Numeric age 15y vs threshold 18y"
     },
     "58-year-old stage": {
      "cells": 12874,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 58y vs 阈值 18y"
+     "rule": "Numeric age 58y vs threshold 18y"
     },
     "47-year-old stage": {
      "cells": 12845,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 47y vs 阈值 18y"
+     "rule": "Numeric age 47y vs threshold 18y"
     },
     "75-year-old stage": {
      "cells": 12130,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 75y vs 阈值 18y"
+     "rule": "Numeric age 75y vs threshold 18y"
     },
     "82-year-old stage": {
      "cells": 10532,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 82y vs 阈值 18y"
+     "rule": "Digital age 82y vs threshold 18y"
     },
     "46-year-old stage": {
      "cells": 10451,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 46y vs 阈值 18y"
+     "rule": "Numeric age 46y vs threshold 18y"
     },
     "68-year-old stage": {
      "cells": 10357,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 68y vs 阈值 18y"
+     "rule": "Digital age 68y vs threshold 18y"
     },
     "63-year-old stage": {
      "cells": 8965,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 63y vs 阈值 18y"
+     "rule": "Numeric age 63y vs threshold 18y"
     },
     "90 year-old and over stage": {
      "cells": 8900,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "'90 year-old and over' 下界>=阈值"
+     "rule": "'90 year-old and over' lower bound >= threshold"
     },
     "17-year-old stage": {
      "cells": 8175,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 17y vs 阈值 18y"
+     "rule": "Numeric age 17y vs threshold 18y"
     },
     "45-year-old stage": {
      "cells": 7777,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 45y vs 阈值 18y"
+     "rule": "Digital age 45y vs threshold 18y"
     },
     "74-year-old stage": {
      "cells": 7776,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 74y vs 阈值 18y"
+     "rule": "Numeric age 74y vs threshold 18y"
     },
     "54-year-old stage": {
      "cells": 6753,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 54y vs 阈值 18y"
+     "rule": "Digital age 54y vs threshold 18y"
     },
     "50-year-old stage": {
      "cells": 4676,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 50y vs 阈值 18y"
+     "rule": "Numeric age 50y vs threshold 18y"
     },
     "37-year-old stage": {
      "cells": 3687,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 37y vs 阈值 18y"
+     "rule": "Digital age 37y vs threshold 18y"
     },
     "11-year-old stage": {
      "cells": 3443,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 11y vs 阈值 18y"
+     "rule": "Numeric age 11y vs threshold 18y"
     },
     "53-year-old stage": {
      "cells": 2974,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 53y vs 阈值 18y"
+     "rule": "Numeric age 53y vs threshold 18y"
     }
    },
    "excluded_nonadult_units": [
@@ -982,63 +982,63 @@
      "cells": 18998,
      "uberon": "10-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 10y vs 阈值 18y"
+     "rule": "Numeric age 10y vs threshold 18y"
     },
     {
      "donor_id": "BCM_22_0698",
      "cells": 15177,
      "uberon": "newborn stage (0-28 days)",
      "organism_stage": "developing",
-     "rule": "newborn/infant 产后早期→developing (裁定 Q2)"
+     "rule": "newborn/infant early postnatal → developing (adjudication Q2)"
     },
     {
      "donor_id": "BCM_23_0491",
      "cells": 14845,
      "uberon": "16-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 16y vs 阈值 18y"
+     "rule": "Numeric age 16y vs threshold 18y"
     },
     {
      "donor_id": "MMD_23_22486",
      "cells": 13748,
      "uberon": "3-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 3y vs 阈值 18y"
+     "rule": "Numeric age 3y vs threshold 18y"
     },
     {
      "donor_id": "MMD_23_21623",
      "cells": 13317,
      "uberon": "15-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 15y vs 阈值 18y"
+     "rule": "Numeric age 15y vs threshold 18y"
     },
     {
      "donor_id": "BCM_23_0131",
      "cells": 10136,
      "uberon": "16-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 16y vs 阈值 18y"
+     "rule": "Numeric age 16y vs threshold 18y"
     },
     {
      "donor_id": "MMD_23_21999",
      "cells": 8175,
      "uberon": "17-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 17y vs 阈值 18y"
+     "rule": "Numeric age 17y vs threshold 18y"
     },
     {
      "donor_id": "BCM_22_0769",
      "cells": 3443,
      "uberon": "11-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 11y vs 阈值 18y"
+     "rule": "Numeric age 11y vs threshold 18y"
     },
     {
      "donor_id": "MMD_23_20181",
      "cells": 2231,
      "uberon": "16-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 16y vs 阈值 18y"
+     "rule": "Numeric age 16y vs threshold 18y"
     }
    ],
    "source": "/mnt/D/OcularKB/data/HRA006282_optic_nerve/HRA006282_optic_nerve.h5ad"
@@ -1050,127 +1050,127 @@
      "cells": 22052,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 53y vs 阈值 18y"
+     "rule": "Numeric age 53y vs threshold 18y"
     },
     "68-year-old stage": {
      "cells": 20418,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 68y vs 阈值 18y"
+     "rule": "Digital age 68y vs threshold 18y"
     },
     "80 year-old and over stage": {
      "cells": 16802,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "'80 year-old and over' 下界>=阈值"
+     "rule": "'80 year-old and over' lower bound >= threshold"
     },
     "69-year-old stage": {
      "cells": 16533,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 69y vs 阈值 18y"
+     "rule": "Digital age 69y vs threshold 18y"
     },
     "66-year-old stage": {
      "cells": 12159,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 66y vs 阈值 18y"
+     "rule": "Digital age 66y vs threshold 18y"
     },
     "20-year-old stage": {
      "cells": 10682,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 20y vs 阈值 18y"
+     "rule": "Digital age 20y vs threshold 18y"
     },
     "72-year-old stage": {
      "cells": 8741,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 72y vs 阈值 18y"
+     "rule": "Digital age 72y vs threshold 18y"
     },
     "56-year-old stage": {
      "cells": 8567,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 56y vs 阈值 18y"
+     "rule": "Digital age 56y vs threshold 18y"
     },
     "58-year-old stage": {
      "cells": 8501,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 58y vs 阈值 18y"
+     "rule": "Numeric age 58y vs threshold 18y"
     },
     "76-year-old stage": {
      "cells": 8015,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 76y vs 阈值 18y"
+     "rule": "Numeric age 76y vs threshold 18y"
     },
     "57-year-old stage": {
      "cells": 7975,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 57y vs 阈值 18y"
+     "rule": "Digital age 57y vs threshold 18y"
     },
     "47-year-old stage": {
      "cells": 6492,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 47y vs 阈值 18y"
+     "rule": "Numeric age 47y vs threshold 18y"
     },
     "24-year-old stage": {
      "cells": 6284,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 24y vs 阈值 18y"
+     "rule": "Numeric age 24y vs threshold 18y"
     },
     "50-year-old stage": {
      "cells": 5526,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 50y vs 阈值 18y"
+     "rule": "Numeric age 50y vs threshold 18y"
     },
     "65-year-old stage": {
      "cells": 5270,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 65y vs 阈值 18y"
+     "rule": "Digital age 65y vs threshold 18y"
     },
     "64-year-old stage": {
      "cells": 4313,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 64y vs 阈值 18y"
+     "rule": "Digital age 64y vs threshold 18y"
     },
     "51-year-old stage": {
      "cells": 3889,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 51y vs 阈值 18y"
+     "rule": "Digital age 51y vs threshold 18y"
     },
     "30-year-old stage": {
      "cells": 3840,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 30y vs 阈值 18y"
+     "rule": "Numeric age 30y vs threshold 18y"
     },
     "34-year-old stage": {
      "cells": 3510,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 34y vs 阈值 18y"
+     "rule": "Numeric age 34y vs threshold 18y"
     },
     "61-year-old stage": {
      "cells": 2994,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 61y vs 阈值 18y"
+     "rule": "Digital age 61y vs threshold 18y"
     },
     "44-year-old stage": {
      "cells": 2359,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 44y vs 阈值 18y"
+     "rule": "Digital age 44y vs threshold 18y"
     }
    },
    "excluded_nonadult_units": [],
@@ -1183,235 +1183,235 @@
      "cells": 64491,
      "n_donors": 3,
      "organism_stage": "adult",
-     "rule": "数字年龄 62y vs 阈值 18y"
+     "rule": "Numeric age 62y vs threshold 18y"
     },
     "71-year-old stage": {
      "cells": 58911,
      "n_donors": 4,
      "organism_stage": "adult",
-     "rule": "数字年龄 71y vs 阈值 18y"
+     "rule": "Digital age 71y vs threshold 18y"
     },
     "69-year-old stage": {
      "cells": 52817,
      "n_donors": 3,
      "organism_stage": "adult",
-     "rule": "数字年龄 69y vs 阈值 18y"
+     "rule": "Digital age 69y vs threshold 18y"
     },
     "64-year-old stage": {
      "cells": 49788,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 64y vs 阈值 18y"
+     "rule": "Digital age 64y vs threshold 18y"
     },
     "46-year-old stage": {
      "cells": 38633,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 46y vs 阈值 18y"
+     "rule": "Numeric age 46y vs threshold 18y"
     },
     "72-year-old stage": {
      "cells": 38322,
      "n_donors": 4,
      "organism_stage": "adult",
-     "rule": "数字年龄 72y vs 阈值 18y"
+     "rule": "Digital age 72y vs threshold 18y"
     },
     "53-year-old stage": {
      "cells": 37753,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 53y vs 阈值 18y"
+     "rule": "Numeric age 53y vs threshold 18y"
     },
     "58-year-old stage": {
      "cells": 34884,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 58y vs 阈值 18y"
+     "rule": "Numeric age 58y vs threshold 18y"
     },
     "67-year-old stage": {
      "cells": 33062,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 67y vs 阈值 18y"
+     "rule": "Digital age 67y vs threshold 18y"
     },
     "16-year-old stage": {
      "cells": 32061,
      "n_donors": 2,
      "organism_stage": "developing",
-     "rule": "数字年龄 16y vs 阈值 18y"
+     "rule": "Numeric age 16y vs threshold 18y"
     },
     "70-year-old stage": {
      "cells": 30580,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 70y vs 阈值 18y"
+     "rule": "Numeric age 70y vs threshold 18y"
     },
     "77-year-old stage": {
      "cells": 26976,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 77y vs 阈值 18y"
+     "rule": "Digital age 77y vs threshold 18y"
     },
     "65-year-old stage": {
      "cells": 26593,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 65y vs 阈值 18y"
+     "rule": "Digital age 65y vs threshold 18y"
     },
     "60-year-old stage": {
      "cells": 23870,
      "n_donors": 2,
      "organism_stage": "adult",
-     "rule": "数字年龄 60y vs 阈值 18y"
+     "rule": "Numeric age 60y vs threshold 18y"
     },
     "18-year-old stage": {
      "cells": 23862,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 18y vs 阈值 18y"
+     "rule": "Numeric age 18y vs threshold 18y"
     },
     "68-year-old stage": {
      "cells": 23269,
      "n_donors": 3,
      "organism_stage": "adult",
-     "rule": "数字年龄 68y vs 阈值 18y"
+     "rule": "Digital age 68y vs threshold 18y"
     },
     "56-year-old stage": {
      "cells": 20318,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 56y vs 阈值 18y"
+     "rule": "Digital age 56y vs threshold 18y"
     },
     "17-year-old stage": {
      "cells": 17548,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 17y vs 阈值 18y"
+     "rule": "Numeric age 17y vs threshold 18y"
     },
     "81-year-old stage": {
      "cells": 16132,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 81y vs 阈值 18y"
+     "rule": "Digital age 81y vs threshold 18y"
     },
     "44-year-old stage": {
      "cells": 15736,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 44y vs 阈值 18y"
+     "rule": "Digital age 44y vs threshold 18y"
     },
     "73-year-old stage": {
      "cells": 15563,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 73y vs 阈值 18y"
+     "rule": "Digital age 73y vs threshold 18y"
     },
     "80 year-old and over stage": {
      "cells": 15231,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "'80 year-old and over' 下界>=阈值"
+     "rule": "'80 year-old and over' lower bound >= threshold"
     },
     "34-year-old stage": {
      "cells": 14892,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 34y vs 阈值 18y"
+     "rule": "Numeric age 34y vs threshold 18y"
     },
     "57-year-old stage": {
      "cells": 13965,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 57y vs 阈值 18y"
+     "rule": "Digital age 57y vs threshold 18y"
     },
     "51-year-old stage": {
      "cells": 13488,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 51y vs 阈值 18y"
+     "rule": "Digital age 51y vs threshold 18y"
     },
     "82-year-old stage": {
      "cells": 13017,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 82y vs 阈值 18y"
+     "rule": "Digital age 82y vs threshold 18y"
     },
     "85-year-old stage": {
      "cells": 12424,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 85y vs 阈值 18y"
+     "rule": "Digital age 85y vs threshold 18y"
     },
     "20-year-old stage": {
      "cells": 11952,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 20y vs 阈值 18y"
+     "rule": "Digital age 20y vs threshold 18y"
     },
     "15-year-old stage": {
      "cells": 11508,
      "n_donors": 1,
      "organism_stage": "developing",
-     "rule": "数字年龄 15y vs 阈值 18y"
+     "rule": "Numeric age 15y vs threshold 18y"
     },
     "78-year-old stage": {
      "cells": 9693,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 78y vs 阈值 18y"
+     "rule": "Numeric age 78y vs threshold 18y"
     },
     "27-year-old stage": {
      "cells": 9293,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 27y vs 阈值 18y"
+     "rule": "Numeric age 27y vs threshold 18y"
     },
     "63-year-old stage": {
      "cells": 9100,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 63y vs 阈值 18y"
+     "rule": "Numeric age 63y vs threshold 18y"
     },
     "47-year-old stage": {
      "cells": 8313,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 47y vs 阈值 18y"
+     "rule": "Numeric age 47y vs threshold 18y"
     },
     "43-year-old stage": {
      "cells": 8196,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 43y vs 阈值 18y"
+     "rule": "Digital age 43y vs threshold 18y"
     },
     "52-year-old stage": {
      "cells": 7149,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 52y vs 阈值 18y"
+     "rule": "Numeric age 52y vs threshold 18y"
     },
     "66-year-old stage": {
      "cells": 7089,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 66y vs 阈值 18y"
+     "rule": "Digital age 66y vs threshold 18y"
     },
     "21-year-old stage": {
      "cells": 6493,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 21y vs 阈值 18y"
+     "rule": "Numeric age 21y vs threshold 18y"
     },
     "50-year-old stage": {
      "cells": 6097,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 50y vs 阈值 18y"
+     "rule": "Numeric age 50y vs threshold 18y"
     },
     "30-year-old stage": {
      "cells": 4853,
      "n_donors": 1,
      "organism_stage": "adult",
-     "rule": "数字年龄 30y vs 阈值 18y"
+     "rule": "Numeric age 30y vs threshold 18y"
     }
    },
    "excluded_nonadult_units": [
@@ -1420,28 +1420,28 @@
      "cells": 19530,
      "uberon": "16-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 16y vs 阈值 18y"
+     "rule": "Numeric age 16y vs threshold 18y"
     },
     {
      "donor_id": "MMD_23_21999",
      "cells": 17548,
      "uberon": "17-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 17y vs 阈值 18y"
+     "rule": "Numeric age 17y vs threshold 18y"
     },
     {
      "donor_id": "MMD_23_20181",
      "cells": 12531,
      "uberon": "16-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 16y vs 阈值 18y"
+     "rule": "Numeric age 16y vs threshold 18y"
     },
     {
      "donor_id": "MMD_23_21623",
      "cells": 11508,
      "uberon": "15-year-old stage",
      "organism_stage": "developing",
-     "rule": "数字年龄 15y vs 阈值 18y"
+     "rule": "Numeric age 15y vs threshold 18y"
     }
    ],
    "source": "/mnt/D/OcularKB/data/HRA000728_tm_cb/HRA000728_tm_cb.h5ad"
@@ -1450,11 +1450,11 @@
    "organism_stage_main": "unknown",
    "stage_disclosure": [
     {
-     "source": "GSE158629 cells_meta (全 4 donor)",
+     "source": "GSE158629 cells_meta (all 4 donors)",
      "cells": 10917,
      "donors": 4,
      "organism_stage": "unknown",
-     "rule": "无年龄列 → 禁静默归 adult (红线2)",
+     "rule": "No age column → silent assignment to adult prohibited (Red Line 2)",
      "literature_grade_B": "GEO: 'RPE cells were isolated from four adult human donor eyes'"
     }
    ],

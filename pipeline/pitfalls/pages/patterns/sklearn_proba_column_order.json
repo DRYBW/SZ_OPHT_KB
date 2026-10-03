@@ -16,10 +16,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "sklearn proba 列序按 classes_ 字母序而非自定义类序：猜列=结果全反",
-   "observable_signature": "对调二分类概率列后判别结果系统性反转",
+   "failure_mode": "sklearn proba column order follows alphabetical order of classes_ rather than custom class order: guessing columns = completely reversed results",
+   "observable_signature": "Swapping binary classification probability columns systematically reverses discrimination results",
    "risk_level": "medium",
-   "mitigation": "消费任何 sklearn 概率输出前先 print classes_ 对列；META.predict_proba_note 固定披露（鼠侧已挂）；禁止按外部类表猜列。",
+   "mitigation": "Print classes_ to align columns before consuming any sklearn probability output; META.predict_proba_note fixed disclosure (mouse side attached); prohibit guessing columns based on external class tables.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -33,16 +33,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/mouse_mid_20260925/MOUSE_MID_REPORT.md 使用声明(67行)+META.json"
+    "/mnt/D/EyeKB/plans/mouse_mid_20260925/MOUSE_MID_REPORT.md usage statement (line 67) + META.json"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "mouse__retina",
     "b1_order": 7,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "『消费任何 sklearn 概率输出前先 print classes_』全量化；两撞车例在册"
+    "home_rationale": "'Print classes_ before consuming any sklearn probability output' fully quantified; two collision cases registered"
    }
   }
  ],

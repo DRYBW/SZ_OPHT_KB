@@ -3,13 +3,13 @@
  "version": "k9.0-rules-registered-v1",
  "registered_at": "2026-09-27 21:12:25",
  "card": "t_4bb75b26",
- "status": "INERT_REGISTERED_DATA — 非可查询库：不在 MARKER_LIBS、不在任何加载 glob、MCP 运行时不读本件；消费面=评测/判读 run 直接按路径读取（激活前义务 run 亦以此为准）。注册=数据落库留档，非行为变更。",
- "positioning_limitation_statement": "本件所辖词条与证据装配规则，属开发集（D002 眼表 578K，作者标签参与规则开发）上的定向修复+回归检查：规则开发消费了 D002 作者分组标签，参考池与评价在数据来源上完全同源；自检 P1=22/33（FAIL 如实报）与P2=0/33 均为该开发集上的工程验收结果，不构成独立验证的性能增益；24/33 不可作有依据的预测。（§0 标题页级限定声明，随一切下游文本强制携带；全文见 REGISTER_PACKAGE_v2.md §0/§2）",
+ "status": "INERT_REGISTERED_DATA — non-queryable library: not in MARKER_LIBS, not in any loading glob, MCP runtime does not read this file; consumption surface = evaluation/reading runs directly read by path (obligations before activation run also based on this). Registration = data archival, not behavioral change.",
+ "positioning_limitation_statement": "The entries and evidence assembly rules governed by this file belong to targeted fixes + regression checks on the development set (D002 ocular surface 578K, author labels involved in rule development): rule development consumed D002 author grouping labels, reference pool and evaluation are completely homologous in data source; self-check P1=22/33 (FAIL reported honestly) and P2=0/33 are both engineering acceptance results on this development set, not constituting independent validation performance gains; 24/33 cannot serve as grounded prediction. (§0 title-page level qualification statement, mandatorily carried with all downstream text; full text see REGISTER_PACKAGE_v2.md §0/§2)",
  "registration_provenance": {
-  "approved_by": "PI D17（同 markers_k9_ocs_increment.json）",
-  "external_review": "REVIEWER_LLM xhigh 五轮 ACCEPTED（2026-09-27）",
+  "approved_by": "PI D17 (same markers_k9_ocs_increment.json)",
+  "external_review": "REVIEWER_LLM xhigh five rounds ACCEPTED (2026-09-27)",
   "package_version": "reg-v2.2-20260927",
-  "vote_face_note_c2b": "案 B 票面 P1 22/33 FAIL 属 C4 历史口径，本注册不改写该记录；票规 v2=C2b（PI 09-27 D11 批准向前生效）下同票机械重算=29/33 过 ≥24 门（反事实实证，零翻案），来源 /mnt/D/EyeKB/plans/tiep_20260927/TIEP_PROPOSAL.md；本附注仅为口径登记，C2b 生效范围=落款后预注册 run，不追溯本案 B 票面。",
+  "vote_face_note_c2b": "Case B ballot P1 22/33 FAIL belongs to C4 historical caliber, this registration does not rewrite that record; ballot rule v2=C2b (PI 09-27 D11 approved forward effective) same ballot mechanical recalculation = 29/33 pass ≥24 gate (counterfactual empirical, zero overturn), source /mnt/D/EyeKB/plans/tiep_20260927/TIEP_PROPOSAL.md; this note is only for caliber registration, C2b effective scope = pre-registered runs after signature, not retroactive to Case B ballot.",
   "sources": {
    "build_file": "/mnt/D/EyeKB/plans/kb9_ocs_20260927/build/markers_k9_ocs_increment.json",
    "build_file_sha256": "22c445ecd7b2521869205b6d01012427c8d186500239bbd6618dc07d6edda55a",
@@ -29,356 +29,356 @@
   }
  },
  "r1_item_scope_table": {
-  "semantics": "规则语义=逐条目 scope 判定（弃\"来源文件整批排除\"）：视网膜神经元 6 类（Rod/Cone/BC/AC/HC/RGC）与 MG/Astro/Micro/RPE（共 10 类×3 载体文件=30 行）scope=retina_only→眼表面证据装配不计入 kb_marker_ranking，对命中来源不作穷尽断言；身份统一口径 MG=Müller 胶质(RLBP1/GLUL/SOX9/S100B)、Astro=星形胶质(GFAP/AQP4/SLC1A3)、Micro=microglia(C1QB)；反向=4 新条 scope=ocular_surface_only→视网膜材料不计入（火灾审计格二规则臂实证泄漏 0）。排除依据=组织解剖学+细胞谱系，不以作者词表缺席作生物学不存在证明。",
+  "semantics": "Rule semantics = per-entry scope adjudication (replacing whole-source-file batch exclusion): the 6 retinal neuron classes (Rod/Cone/BC/AC/HC/RGC) plus MG/Astro/Micro/RPE (10 classes × 3 carrier files = 30 rows in total) carry scope=retina_only → excluded from kb_marker_ranking when assembling ocular-surface evidence, with no exhaustiveness claim about hit sources; unified identity naming MG = Müller glia (RLBP1/GLUL/SOX9/S100B), Astro = astrocyte (GFAP/AQP4/SLC1A3), Micro = microglia (C1QB); reciprocally, the 4 new entries carry scope=ocular_surface_only → retinal material excluded (neighborhood fire-audit grid-2 rule arm: 0 demonstrated leaks). Exclusion basis = tissue anatomy + cell lineage; absence from an author's vocabulary is never proof of biological non-existence.",
   "rows": [
    {
     "entry_id": "Rod",
     "class": "Rod",
     "owner_file_firstload": "markers_v4.1_clean.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "视杆光感受器：组织解剖学上仅存在于视网膜神经层（marker 身份锚 RHO/NRL/NR2E3），角膜/limbus/巩膜/结膜无此细胞层，该条 scope=retina_only：眼表面材料证据装配不计入其 kb_marker_ranking（对命中来源不作穷尽断言）",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Rod photoreceptors: anatomically exist only in retinal neural layer (marker identity anchors RHO/NRL/NR2E3), cornea/limbus/sclera/conjunctiva lack this cell layer, this entry scope=retina_only: ocular surface material evidence assembly not counted in its kb_marker_ranking (no exhaustive assertion on hit sources)",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "Cone",
     "class": "Cone",
     "owner_file_firstload": "markers_v4.1_clean.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "同 Rod（视锥光感受器，仅视网膜外神经层）",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Same as Rod (cone photoreceptors, only retinal outer neural layer)",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "BC",
     "class": "BC",
     "owner_file_firstload": "markers_v4.1_clean.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "双极细胞：视网膜内神经元，仅存在于视网膜内神经层，眼表面组织无该层",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Bipolar cells: retinal interneurons, exist only in retinal inner neural layer, ocular surface tissues lack this layer",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "AC",
     "class": "AC",
     "owner_file_firstload": "markers_v4.1_clean.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "无长突细胞：视网膜内神经元，同上",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Amacrine cells: retinal interneurons, same as above",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "HC",
     "class": "HC",
     "owner_file_firstload": "markers_v4.1_clean.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "水平细胞：视网膜内神经元，同上",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Horizontal cells: retinal interneurons, same as above",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "RGC",
     "class": "RGC",
     "owner_file_firstload": "markers_v4.1_clean.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "神经节细胞：视网膜输出神经元，胞体位于视网膜神经节细胞层（眼球后极），角膜/limbus/巩膜/结膜 portal 取材范围不含该层",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Ganglion cells: retinal output neurons, somata located in retinal ganglion cell layer (posterior pole of eyeball), cornea/limbus/sclera/conjunctiva portal sampling range does not include this layer",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "MG",
     "class": "MG",
     "owner_file_firstload": "markers_v4.1_clean.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "细胞身份=Müller 胶质（v4.1 基因锚 RLBP1/GLUL/SOX9/S100B；冻结 crosswalk 别名注=Müller glia 视网膜特有）：视网膜专属巨胶质，眼表面组织无 Müller 细胞",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Cell identity=Müller glia (v4.1 gene anchors RLBP1/GLUL/SOX9/S100B; frozen crosswalk alias note=Müller glia retina-specific): Retina-exclusive macroglia; no Müller cells in ocular surface tissue",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "Astro",
     "class": "Astro",
     "owner_file_firstload": "markers_v4.1_clean.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "细胞身份=星形胶质（v4.1 基因锚 GFAP/AQP4/SLC1A3；冻结 crosswalk 别名注=astrocyte 视网膜/中枢）：视网膜内星形胶质，与眼表面组织学细胞群不同实体；RUN5 实证 Q6::13/22/16 被 MG|Astro 接管即此二类",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Cell identity=astrocyte (v4.1 gene anchors GFAP/AQP4/SLC1A3; frozen crosswalk alias note=astrocyte retina/CNS): Intra-retinal astrocytes, distinct entities from histological cell populations of the ocular surface; RUN5 empirical Q6::13/22/16 taken over by MG|Astro refers to these two classes",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "Micro",
     "class": "Micro",
     "owner_file_firstload": "markers_v4.1_clean.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "细胞身份=microglia（v4.1 基因锚 C1QB 等小胶质标志）：CNS 常驻巨噬谱系词条；眼表面髓系信号由 Macrophages/Monocytes 词条承载（其 kept 行为见遮蔽表），本条在眼表面装配中不计入排名",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Cell identity=microglia (v4.1 gene anchors C1QB etc. microglial markers): CNS-resident macrophage lineage entry; myeloid signals on the ocular surface are carried by Macrophages/Monocytes entries (see shadowing table for their kept behavior); this entry is excluded from ranking in ocular surface assembly",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "RPE",
     "class": "RPE",
     "owner_file_firstload": "markers_v4.1_clean.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "视网膜色素上皮（基因锚 BEST1/RPE65 类/LRAT/RDH5/MITF）：单层色素上皮位于视网膜侧，与角膜/结膜上皮不同胚胎起源（神经外胚层诱导 vs 表面外胚层），组织解剖学上不在眼表面 portal 取材层",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Retinal pigment epithelium (gene anchors BEST1/RPE65 class/LRAT/RDH5/MITF): Monolayer pigmented epithelium located on the retinal side, with different embryonic origin from corneal/conjunctival epithelium (neuroectoderm induction vs surface ectoderm); anatomically not within the sampling layer of the ocular surface portal",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_interneuron::Rod",
     "class": "Rod",
     "owner_file_firstload": "markers_v5_retina_interneuron.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "视杆光感受器：组织解剖学上仅存在于视网膜神经层（marker 身份锚 RHO/NRL/NR2E3），角膜/limbus/巩膜/结膜无此细胞层，该条 scope=retina_only：眼表面材料证据装配不计入其 kb_marker_ranking（对命中来源不作穷尽断言）",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Rod photoreceptors: anatomically exist only in retinal neural layer (marker identity anchors RHO/NRL/NR2E3), cornea/limbus/sclera/conjunctiva lack this cell layer, this entry scope=retina_only: ocular surface material evidence assembly not counted in its kb_marker_ranking (no exhaustive assertion on hit sources)",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_interneuron::Cone",
     "class": "Cone",
     "owner_file_firstload": "markers_v5_retina_interneuron.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "同 Rod（视锥光感受器，仅视网膜外神经层）",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Same as Rod (cone photoreceptors, only retinal outer neural layer)",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_interneuron::BC",
     "class": "BC",
     "owner_file_firstload": "markers_v5_retina_interneuron.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "双极细胞：视网膜内神经元，仅存在于视网膜内神经层，眼表面组织无该层",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Bipolar cells: retinal interneurons, exist only in retinal inner neural layer, ocular surface tissues lack this layer",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_interneuron::AC",
     "class": "AC",
     "owner_file_firstload": "markers_v5_retina_interneuron.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "无长突细胞：视网膜内神经元，同上",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Amacrine cells: retinal interneurons, same as above",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_interneuron::HC",
     "class": "HC",
     "owner_file_firstload": "markers_v5_retina_interneuron.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "水平细胞：视网膜内神经元，同上",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Horizontal cells: retinal interneurons, same as above",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_interneuron::RGC",
     "class": "RGC",
     "owner_file_firstload": "markers_v5_retina_interneuron.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "神经节细胞：视网膜输出神经元，胞体位于视网膜神经节细胞层（眼球后极），角膜/limbus/巩膜/结膜 portal 取材范围不含该层",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Ganglion cells: retinal output neurons, somata located in retinal ganglion cell layer (posterior pole of eyeball), cornea/limbus/sclera/conjunctiva portal sampling range does not include this layer",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_interneuron::MG",
     "class": "MG",
     "owner_file_firstload": "markers_v5_retina_interneuron.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "细胞身份=Müller 胶质（v4.1 基因锚 RLBP1/GLUL/SOX9/S100B；冻结 crosswalk 别名注=Müller glia 视网膜特有）：视网膜专属巨胶质，眼表面组织无 Müller 细胞",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Cell identity=Müller glia (v4.1 gene anchors RLBP1/GLUL/SOX9/S100B; frozen crosswalk alias note=Müller glia retina-specific): Retina-exclusive macroglia; no Müller cells in ocular surface tissue",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_interneuron::Astro",
     "class": "Astro",
     "owner_file_firstload": "markers_v5_retina_interneuron.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "细胞身份=星形胶质（v4.1 基因锚 GFAP/AQP4/SLC1A3；冻结 crosswalk 别名注=astrocyte 视网膜/中枢）：视网膜内星形胶质，与眼表面组织学细胞群不同实体；RUN5 实证 Q6::13/22/16 被 MG|Astro 接管即此二类",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Cell identity=astrocyte (v4.1 gene anchors GFAP/AQP4/SLC1A3; frozen crosswalk alias note=astrocyte retina/CNS): Intra-retinal astrocytes, distinct entities from histological cell populations of the ocular surface; RUN5 empirical Q6::13/22/16 taken over by MG|Astro refers to these two classes",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_interneuron::Micro",
     "class": "Micro",
     "owner_file_firstload": "markers_v5_retina_interneuron.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "细胞身份=microglia（v4.1 基因锚 C1QB 等小胶质标志）：CNS 常驻巨噬谱系词条；眼表面髓系信号由 Macrophages/Monocytes 词条承载（其 kept 行为见遮蔽表），本条在眼表面装配中不计入排名",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Cell identity=microglia (v4.1 gene anchors C1QB etc. microglial markers): CNS-resident macrophage lineage entry; myeloid signals on the ocular surface are carried by Macrophages/Monocytes entries (see shadowing table for their kept behavior); this entry is excluded from ranking in ocular surface assembly",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_interneuron::RPE",
     "class": "RPE",
     "owner_file_firstload": "markers_v5_retina_interneuron.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "视网膜色素上皮（基因锚 BEST1/RPE65 类/LRAT/RDH5/MITF）：单层色素上皮位于视网膜侧，与角膜/结膜上皮不同胚胎起源（神经外胚层诱导 vs 表面外胚层），组织解剖学上不在眼表面 portal 取材层",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Retinal pigment epithelium (gene anchors BEST1/RPE65 class/LRAT/RDH5/MITF): Monolayer pigmented epithelium located on the retinal side, with different embryonic origin from corneal/conjunctival epithelium (neuroectoderm induction vs surface ectoderm); anatomically not within the sampling layer of the ocular surface portal",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_v6::Rod",
     "class": "Rod",
     "owner_file_firstload": "markers_v6_retina_repair.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "视杆光感受器：组织解剖学上仅存在于视网膜神经层（marker 身份锚 RHO/NRL/NR2E3），角膜/limbus/巩膜/结膜无此细胞层，该条 scope=retina_only：眼表面材料证据装配不计入其 kb_marker_ranking（对命中来源不作穷尽断言）",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Rod photoreceptors: anatomically exist only in retinal neural layer (marker identity anchors RHO/NRL/NR2E3), cornea/limbus/sclera/conjunctiva lack this cell layer, this entry scope=retina_only: ocular surface material evidence assembly not counted in its kb_marker_ranking (no exhaustive assertion on hit sources)",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_v6::Cone",
     "class": "Cone",
     "owner_file_firstload": "markers_v6_retina_repair.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "同 Rod（视锥光感受器，仅视网膜外神经层）",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Same as Rod (cone photoreceptors, only retinal outer neural layer)",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_v6::BC",
     "class": "BC",
     "owner_file_firstload": "markers_v6_retina_repair.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "双极细胞：视网膜内神经元，仅存在于视网膜内神经层，眼表面组织无该层",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Bipolar cells: retinal interneurons, exist only in retinal inner neural layer, ocular surface tissues lack this layer",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_v6::AC",
     "class": "AC",
     "owner_file_firstload": "markers_v6_retina_repair.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "无长突细胞：视网膜内神经元，同上",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Amacrine cells: retinal interneurons, same as above",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_v6::HC",
     "class": "HC",
     "owner_file_firstload": "markers_v6_retina_repair.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "水平细胞：视网膜内神经元，同上",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Horizontal cells: retinal interneurons, same as above",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_v6::RGC",
     "class": "RGC",
     "owner_file_firstload": "markers_v6_retina_repair.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "神经节细胞：视网膜输出神经元，胞体位于视网膜神经节细胞层（眼球后极），角膜/limbus/巩膜/结膜 portal 取材范围不含该层",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Ganglion cells: retinal output neurons, somata located in retinal ganglion cell layer (posterior pole of eyeball), cornea/limbus/sclera/conjunctiva portal sampling range does not include this layer",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_v6::MG",
     "class": "MG",
     "owner_file_firstload": "markers_v6_retina_repair.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "细胞身份=Müller 胶质（v4.1 基因锚 RLBP1/GLUL/SOX9/S100B；冻结 crosswalk 别名注=Müller glia 视网膜特有）：视网膜专属巨胶质，眼表面组织无 Müller 细胞",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Cell identity=Müller glia (v4.1 gene anchors RLBP1/GLUL/SOX9/S100B; frozen crosswalk alias note=Müller glia retina-specific): Retina-exclusive macroglia; no Müller cells in ocular surface tissue",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_v6::Astro",
     "class": "Astro",
     "owner_file_firstload": "markers_v6_retina_repair.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "细胞身份=星形胶质（v4.1 基因锚 GFAP/AQP4/SLC1A3；冻结 crosswalk 别名注=astrocyte 视网膜/中枢）：视网膜内星形胶质，与眼表面组织学细胞群不同实体；RUN5 实证 Q6::13/22/16 被 MG|Astro 接管即此二类",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Cell identity=astrocyte (v4.1 gene anchors GFAP/AQP4/SLC1A3; frozen crosswalk alias note=astrocyte retina/CNS): Intra-retinal astrocytes, distinct entities from histological cell populations of the ocular surface; RUN5 empirical Q6::13/22/16 taken over by MG|Astro refers to these two classes",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_v6::Micro",
     "class": "Micro",
     "owner_file_firstload": "markers_v6_retina_repair.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "细胞身份=microglia（v4.1 基因锚 C1QB 等小胶质标志）：CNS 常驻巨噬谱系词条；眼表面髓系信号由 Macrophages/Monocytes 词条承载（其 kept 行为见遮蔽表），本条在眼表面装配中不计入排名",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Cell identity=microglia (v4.1 gene anchors C1QB etc. microglial markers): CNS-resident macrophage lineage entry; myeloid signals on the ocular surface are carried by Macrophages/Monocytes entries (see shadowing table for their kept behavior); this entry is excluded from ranking in ocular surface assembly",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "retina_v6::RPE",
     "class": "RPE",
     "owner_file_firstload": "markers_v6_retina_repair.json",
     "all_files_carrying_class": "markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json",
-    "scope": "retina_only → 眼表面(ocular_surface)证据装配不计入 kb_marker_ranking",
-    "bio_reason": "视网膜色素上皮（基因锚 BEST1/RPE65 类/LRAT/RDH5/MITF）：单层色素上皮位于视网膜侧，与角膜/结膜上皮不同胚胎起源（神经外胚层诱导 vs 表面外胚层），组织解剖学上不在眼表面 portal 取材层",
-    "dup_handling": "跨文件重复条目 3 份 (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json)，本表逐条目独立登记；生物学 scope 同源一致，处置=整组同退（无保留份）",
-    "impl_note": "排除依据=条目生物学分型（REVIEWER_LLM §2 R1 改法落地：文件仅为实现索引，不单独充当生物学依据）"
+    "scope": "retina_only → ocular surface(ocular_surface) evidence assembly not counted in kb_marker_ranking",
+    "bio_reason": "Retinal pigment epithelium (gene anchors BEST1/RPE65 class/LRAT/RDH5/MITF): Monolayer pigmented epithelium located on the retinal side, with different embryonic origin from corneal/conjunctival epithelium (neuroectoderm induction vs surface ectoderm); anatomically not within the sampling layer of the ocular surface portal",
+    "dup_handling": "Cross-file duplicate entries 3 copies (markers_v4.1_clean.json|markers_v5_retina_interneuron.json|markers_v6_retina_repair.json), this table registers independently per entry; biological scope homologous consistent, disposition = whole group simultaneous withdrawal (no retained copy)",
+    "impl_note": "Exclusion basis = entry biological typing (REVIEWER_LLM §2 R1 modification implementation: files serve only as implementation indices, do not singly act as biological basis)"
    },
    {
     "entry_id": "Melanocyte (KB9 build)",
     "class": "Melanocyte",
     "owner_file_firstload": "markers_k9_ocs_increment.json (build)",
-    "all_files_carrying_class": "build only（未注册）",
-    "scope": "ocular_surface_only → 视网膜材料不计入（R1 镜像；火灾审计格二规则臂实证泄漏 0）",
-    "bio_reason": "眼表黑色素细胞词条 marker（TRPM1 等）在视网膜双极/杆体语境有真表达（火灾审计无规则臂实测 2/22 簇泄漏），须适用性隔离",
-    "dup_handling": "单文件条目",
-    "impl_note": "注册后禁全库默认态混用（BUILD_REPORT §4 口径）"
+    "all_files_carrying_class": "build only (unregistered)",
+    "scope": "ocular_surface_only → retinal material excluded (R1 mirror; fire audit grid rule arm 2 empirical leakage 0)",
+    "bio_reason": "Ocular surface melanocyte entry marker (TRPM1 etc.) has true expression in retinal bipolar/rod context (fire audit no-rule-arm measured 2/22 cluster leakage); applicability isolation required",
+    "dup_handling": "Single-file entry",
+    "impl_note": "After registration, mixing with default library state prohibited (BUILD_REPORT §4 standard)"
    },
    {
     "entry_id": "Schwann (KB9 build)",
     "class": "Schwann",
     "owner_file_firstload": "markers_k9_ocs_increment.json (build)",
-    "all_files_carrying_class": "build only（未注册）",
-    "scope": "ocular_surface_only → 视网膜材料不计入",
-    "bio_reason": "MPZ/SCN7A 等在有髓神经相关组织共享；视网膜节细胞轴突段（视神经头）语境存在误入风险",
-    "dup_handling": "单文件条目",
-    "impl_note": "同上"
+    "all_files_carrying_class": "build only (unregistered)",
+    "scope": "ocular_surface_only → retinal material excluded",
+    "bio_reason": "MPZ/SCN7A etc. shared in myelinated nerve-related tissues; risk of misassignment in retinal ganglion cell axon segment (optic nerve head) context",
+    "dup_handling": "Single-file entry",
+    "impl_note": "Same as above"
    },
    {
     "entry_id": "Conj_epithelium_suprabasal (KB9 build)",
     "class": "Conj_epithelium_suprabasal",
     "owner_file_firstload": "markers_k9_ocs_increment.json (build)",
-    "all_files_carrying_class": "build only（未注册）",
-    "scope": "ocular_surface_only → 视网膜材料不计入",
-    "bio_reason": "S100A8/9 髓系共享表达（见 recheck/判件），适用性隔离为前提",
-    "dup_handling": "单文件条目",
-    "impl_note": "去留待 PI（A15 子项判件 register/SUPRABASAL_RECHECK.md）"
+    "all_files_carrying_class": "build only (unregistered)",
+    "scope": "ocular_surface_only → retinal material excluded",
+    "bio_reason": "S100A8/9 myeloid shared expression (see recheck/adjudication); applicability isolation is prerequisite",
+    "dup_handling": "Single-file entry",
+    "impl_note": "keep-or-drop pending PI decision (A15 sub-item adjudication: register/SUPRABASAL_RECHECK.md)"
    },
    {
     "entry_id": "Limbus_Sclera_fibroblast_C1 (KB9 build)",
     "class": "Limbus_Sclera_fibroblast_C1",
     "owner_file_firstload": "markers_k9_ocs_increment.json (build)",
-    "all_files_carrying_class": "build only（未注册）",
-    "scope": "ocular_surface_only → 视网膜材料不计入",
-    "bio_reason": "DPT/LEPR/LAMA2 为眼表间质域；防泛间质回渗视网膜簇",
-    "dup_handling": "单文件条目",
-    "impl_note": "同上"
+    "all_files_carrying_class": "build only (unregistered)",
+    "scope": "ocular_surface_only → retinal material excluded",
+    "bio_reason": "DPT/LEPR/LAMA2 are ocular surface stromal domain; prevent pan-stromal backflow into retinal clusters",
+    "dup_handling": "Single-file entry",
+    "impl_note": "Same as above"
    }
   ],
   "n_rows": 34
  },
  "r2r3_shield": {
   "semantics": {
-   "R2_pan_immune_shield": "泛免疫类基因∈任一非 Immune truth 类 top60（冻结件 author_class_markers_data.tsv 口径）→ 眼表面装配中该基因贡献记 0",
-   "R3_pan_stromal_shield": "泛间质类（含 Melanocyte/Schwann/Conj_*/Fib 亚型）基因∈任一其它 truth 类 top60 → 同法记 0（对称）",
-   "asymmetry_note": "top60 共现删除条件与\"不进入其他类 top60 不证明特异\"的不对称性=已登记残留限制（REVIEWER_LLM §2）"
+   "R2_pan_immune_shield": "Pan-immune genes ∈ top60 of any non-Immune truth class (frozen file author_class_markers_data.tsv standard) → contribution of this gene recorded as 0 in ocular surface assembly",
+   "R3_pan_stromal_shield": "Pan-stromal class (including Melanocyte/Schwann/Conj_*/Fib subtypes) genes ∈ top60 of any other truth class → recorded as 0 similarly (symmetric)",
+   "asymmetry_note": "Asymmetry between top60 co-occurrence deletion condition and \"not entering other class top60 does not prove specificity\" = registered residual limitation (REVIEWER_LLM §2)"
   },
   "rows": [
    {
@@ -2657,7 +2657,7 @@
     "truth_fold": [
      "Endothelium"
     ],
-    "fold_provenance": "KB9_ext:KB 缩写=endothelial cell=super_map 叶",
+    "fold_provenance": "KB9_ext: KB abbreviation=endothelial cell=super_map leaf",
     "face_effective_genes": [
      "CLDN5",
      "PECAM1",
@@ -2679,7 +2679,7 @@
     "truth_fold": [
      "Endothelium"
     ],
-    "fold_provenance": "KB9_ext:血管内皮病理态",
+    "fold_provenance": "KB9_ext: vascular endothelial pathological state",
     "face_effective_genes": [
      "PLVAP",
      "VCAM1",
@@ -2887,7 +2887,7 @@
     "truth_fold": [
      "Immune Cells"
     ],
-    "fold_provenance": "KB9_ext:组织巨噬",
+    "fold_provenance": "KB9_ext: tissue macrophage",
     "face_effective_genes": [
      "SELENOP",
      "MRC1",
@@ -2948,7 +2948,7 @@
     "truth_fold": [
      "Immune Cells"
     ],
-    "fold_provenance": "KB9_ext:小胶质=免疫叶",
+    "fold_provenance": "KB9_ext: microglia=immune leaf",
     "face_effective_genes": [
      "P2RY12",
      "TMEM119",
@@ -3091,7 +3091,7 @@
    },
    "NK": {
     "truth_fold": "UNMAPPED",
-    "fold_provenance": "UNMAPPED:不参与屏蔽(如实登记)",
+    "fold_provenance": "UNMAPPED: does not participate in shielding (registered as-is)",
     "face_effective_genes": [
      "GNLY",
      "NKG7",
@@ -3105,7 +3105,7 @@
    },
    "B": {
     "truth_fold": "UNMAPPED",
-    "fold_provenance": "UNMAPPED:不参与屏蔽(如实登记)",
+    "fold_provenance": "UNMAPPED: does not participate in shielding (registered as-is)",
     "face_effective_genes": [
      "MS4A1",
      "CD79A",
@@ -3119,7 +3119,7 @@
    },
    "Plasma": {
     "truth_fold": "UNMAPPED",
-    "fold_provenance": "UNMAPPED:不参与屏蔽(如实登记)",
+    "fold_provenance": "UNMAPPED: does not participate in shielding (registered as-is)",
     "face_effective_genes": [
      "MZB1",
      "JCHAIN",
@@ -3168,7 +3168,7 @@
    },
    "Proliferating": {
     "truth_fold": "UNMAPPED",
-    "fold_provenance": "KB9_ext:状态类不折叠(不参与屏蔽)",
+    "fold_provenance": "KB9_ext: state class not folded (does not participate in shielding)",
     "face_effective_genes": [
      "MKI67",
      "TOP2A",
@@ -3203,7 +3203,7 @@
     "truth_fold": [
      "Corneal Endothelium"
     ],
-    "fold_provenance": "KB9_ext:名=truth 名",
+    "fold_provenance": "KB9_ext: name=truth name",
     "face_effective_genes": [
      "SLC4A11",
      "CDH2",
@@ -3215,7 +3215,7 @@
     "truth_fold": [
      "Fibroblasts"
     ],
-    "fold_provenance": "KB9_ext:keratocyte 叶∈Fibroblasts",
+    "fold_provenance": "KB9_ext: keratocyte leaf ∈ Fibroblasts",
     "face_effective_genes": [
      "KERA"
     ],
@@ -3272,7 +3272,7 @@
      "Fibroblasts",
      "Smooth Muscle Cells"
     ],
-    "fold_provenance": "KB9_ext:ambiguous 照原链",
+    "fold_provenance": "KB9_ext: ambiguous follows original chain",
     "face_effective_genes": [],
     "blocked": []
    },
@@ -3338,7 +3338,7 @@
     "truth_fold": [
      "Epithelium"
     ],
-    "fold_provenance": "KB9_new:CL:1000432 借父条+layer",
+    "fold_provenance": "KB9_new: CL:1000432 borrows parent entry + layer",
     "face_effective_genes": [
      "S100A8",
      "S100A9",
@@ -3361,11 +3361,11 @@
   }
  },
  "assembly_rules_v2": {
-  "AV2-1_top3_admission": "屏蔽后 n_shared=0 的类别不得进入 kb_marker_ranking/top3。实现语义=得分仅对 n>0 构建（k9_query 实测口径，G1 保真 33/33 全等）。",
-  "AV2-2_insufficient_candidates": "有效候选（n_shared>0）少于 3 时如实输出不足三席，禁止靠加载顺序补齐第四/五候选。",
-  "AV2-3_load_position_frozen": "本包新条（R-1 四条）加载位置=库序尾部追加（retina→membrane→retina_interneuron→retina_v6→face_v6→k9），冻结入注册文本；后续加条一律尾部追加+登记，禁插位。",
-  "AV2-4_tie_rule_frozen": "ranking 按 n_shared 降序；同分平票按条目插入序（先加载者在前），排序稳定性（stable sort）保证确定性复现。已知后果显式冻结：同分时新条让位于旧条；改平票语义（并列输出/转弃权）属规则变更，须新版本注册，不在本注册生效范围。",
-  "AV2-5_fidelity_gates": "(a) OFF 历史态门——RUN5 冻结证据面 ranking 复刻，KB9 实测 G0=33/33；对账对象=RUN5 存档票的输入面。(b) 现役 ON 态门——自实现 matcher 对当前生产 query_marker 逐簇全等，KB9 实测 G1=33/33；仅证明装配复刻当前生产语义。(c) 历史 ON 态门【未完成，下游强制项】——须把复用票时刻的库版本/装配参数/ranking 与 RUN5 run 当时完整请求/存档快照逐字段对账；KB9 无 RUN5 时刻完整请求留档且库态此后已变（Q6::21/29 回退=KB7 条激活实证），G1 不得写成历史 ON 保真已证；任何复用存档票的后续 run 须先建此门（含批组成快照）。"
+  "AV2-1_top3_admission": "Categories with n_shared=0 after shielding must not enter kb_marker_ranking/top3. Implementation semantics=score constructed only for n>0 (k9_query measured standard, G1 fidelity 33/33 exact match).",
+  "AV2-2_insufficient_candidates": "When valid candidates (n_shared>0) are fewer than 3, output insufficiency honestly; prohibited to pad fourth/fifth candidates via loading order.",
+  "AV2-3_load_position_frozen": "New entries in this package (R-1 four items) loading position=appended at end of library sequence (retina→membrane→retina_interneuron→retina_v6→face_v6→k9), frozen into registration text; subsequent additions uniformly appended at end + registered, insertion prohibited.",
+  "AV2-4_tie_rule_frozen": "Ranking sorted by n_shared descending; ties resolved by entry insertion order (earlier loaded first), stable sort guarantees deterministic reproduction. Known consequences explicitly frozen: new entries yield to old entries in case of tie; changing tie-breaking semantics (parallel output/abstain conversion) constitutes rule change, requires new version registration, outside scope of this registration.",
+  "AV2-5_fidelity_gates": "(a) OFF historical state gate—RUN5 frozen evidence surface ranking replication, KB9 measured G0=33/33; reconciliation target=input surface of RUN5 archived votes. (b) Active ON state gate—self-implemented matcher exact match per cluster against current production query_marker, KB9 measured G1=33/33; proves only that assembly replicates current production semantics. (c) Historical ON state gate [incomplete, downstream mandatory]—must reconcile library version/assembly parameters/ranking at time of vote reuse field-by-field against complete request/archived snapshot of RUN5 run at that time; KB9 lacks complete request archive for RUN5 moment and library state has changed since (Q6::21/29 rollback=evidence of KB7 entry activation), G1 must not be written as proven historical ON fidelity; any subsequent run reusing archived votes must establish this gate first (including batch composition snapshot)."
  },
  "crosswalk_ext": {
   "columns": [
@@ -3381,7 +3381,7 @@
     "q6_vocab_class": "Melanocytes",
     "matched_leaf": "melanocyte",
     "provenance": "alias",
-    "alias_source": "KB9_new:CL:0000148 label=melanocyte, 单数化"
+    "alias_source": "KB9_new: CL:0000148 label=melanocyte, singularized"
    },
    {
     "kb_name": "Schwann",
@@ -3395,67 +3395,67 @@
     "q6_vocab_class": "Epithelium",
     "matched_leaf": "conjunctival epithelial cell",
     "provenance": "alias",
-    "alias_source": "KB9_new:CL:1000432 借父条+layer"
+    "alias_source": "KB9_new: CL:1000432 borrows parent entry + layer"
    },
    {
     "kb_name": "Limbus_Sclera_fibroblast_C1",
     "q6_vocab_class": "Fibroblasts",
     "matched_leaf": "fibroblast",
     "provenance": "alias",
-    "alias_source": "KB9_new:CL:0000057 挂父条+subtype"
+    "alias_source": "KB9_new: CL:0000057 attached to parent entry + subtype"
    },
    {
     "kb_name": "Conj_epithelium_basal",
     "q6_vocab_class": "Epithelium",
     "matched_leaf": "conjunctival epithelial cell",
     "provenance": "alias",
-    "alias_source": "KB7 face_v6 条 (激活态在库), KB9 补折叠"
+    "alias_source": "KB7 face_v6 entry (active state in library), KB9 supplementary folding"
    },
    {
     "kb_name": "Conj_epithelium_superficial",
     "q6_vocab_class": "Epithelium",
     "matched_leaf": "conjunctival epithelial cell",
     "provenance": "alias",
-    "alias_source": "KB7 face_v6 条, KB9 补折叠"
+    "alias_source": "KB7 face_v6 entry, KB9 supplementary folding"
    },
    {
     "kb_name": "face_v6::Keratocytes",
     "q6_vocab_class": "Fibroblasts",
     "matched_leaf": "keratocyte",
     "provenance": "alias",
-    "alias_source": "KB6b/KB7 repair 消歧名, keratocyte 叶∈Fibroblasts"
+    "alias_source": "KB6b/KB7 repair disambiguated names, keratocyte leaf ∈ Fibroblasts"
    },
    {
     "kb_name": "face_v6::Fibroblast",
     "q6_vocab_class": "Fibroblasts",
     "matched_leaf": "fibroblast",
     "provenance": "alias",
-    "alias_source": "KB7 repair 消歧名"
+    "alias_source": "KB7 repair disambiguated name"
    },
    {
     "kb_name": "face_v6::Pericyte",
     "q6_vocab_class": "Pericytes",
     "matched_leaf": "pericyte",
     "provenance": "alias",
-    "alias_source": "KB7 repair 消歧名"
+    "alias_source": "KB7 repair disambiguated name"
    },
    {
     "kb_name": "face_v6::SMC",
     "q6_vocab_class": "Smooth Muscle Cells",
     "matched_leaf": "smooth muscle cell",
     "provenance": "alias",
-    "alias_source": "KB7 repair 消歧名"
+    "alias_source": "KB7 repair disambiguated name"
    },
    {
     "kb_name": "face_v6::Myofibroblast",
     "q6_vocab_class": "Fibroblasts|Smooth Muscle Cells",
     "matched_leaf": "",
     "provenance": "ambiguous",
-    "alias_source": "KB7 警示条 (core 空), 映射歧义照原链"
+    "alias_source": "KB7 warning entry (core empty), mapping ambiguity follows original chain"
    }
   ],
   "n_rows": 11,
-  "freeze_note": "扩展表先于投票落盘（投票前冻结）；既有名称映射零改动；Keratocytes→Fibroblasts 冻结映射见注册包 §5/A09。"
+  "freeze_note": "Extension table persisted before voting (frozen prior to voting); existing name mappings unchanged; Keratocytes→Fibroblasts frozen mapping see Registration Package §5/A09."
  },
  "a09_vocab_mapping_snapshot": {
   "rows": [
@@ -3467,7 +3467,7 @@
    },
    {
     "kb_candidate": "Astro",
-    "fold_9class": "(空=不参与R3屏蔽)",
+    "fold_9class": "(Empty=excluded from R3 masking)",
     "provenance": "no_counterpart",
     "carrier_runtime": "frozen(t_d1ca11b0)"
    },
@@ -3475,37 +3475,37 @@
     "kb_candidate": "Conj_epithelium_basal",
     "fold_9class": "Epithelium",
     "provenance": "KB9_ext",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "Conj_epithelium_superficial",
     "fold_9class": "Epithelium",
     "provenance": "KB9_ext",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "Conj_epithelium_suprabasal",
     "fold_9class": "Epithelium",
-    "provenance": "KB9_new:CL:1000432 借父条+layer",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "provenance": "KB9_new: CL:1000432 borrows parent entry + layer",
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "Corneal Endothelium",
     "fold_9class": "Corneal Endothelium",
-    "provenance": "KB9_ext:名=truth 名",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "provenance": "KB9_ext: name=truth name",
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "Endo",
     "fold_9class": "Endothelium",
-    "provenance": "KB9_ext:KB 缩写=endothelial cell=super_map 叶",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "provenance": "KB9_ext: KB abbreviation=endothelial cell=super_map leaf",
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "Endo_Patho",
     "fold_9class": "Endothelium",
-    "provenance": "KB9_ext:血管内皮病理态",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "provenance": "KB9_ext: vascular endothelial pathological state",
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "Fibroblast",
@@ -3517,7 +3517,7 @@
     "kb_candidate": "Granulocyte",
     "fold_9class": "Immune Cells",
     "provenance": "KB9_ext",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "Keratocytes",
@@ -3529,11 +3529,11 @@
     "kb_candidate": "Limbus_Sclera_fibroblast_C1",
     "fold_9class": "Fibroblasts",
     "provenance": "KB9_new:CL:0000057",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "MG",
-    "fold_9class": "(空=不参与R3屏蔽)",
+    "fold_9class": "(Empty=excluded from R3 masking)",
     "provenance": "no_counterpart",
     "carrier_runtime": "frozen(t_d1ca11b0)"
    },
@@ -3546,26 +3546,26 @@
    {
     "kb_candidate": "Mac_Tissue",
     "fold_9class": "Immune Cells",
-    "provenance": "KB9_ext:组织巨噬",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "provenance": "KB9_ext: tissue macrophage",
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "Mast",
     "fold_9class": "Immune Cells",
     "provenance": "x",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "Melanocyte",
     "fold_9class": "Melanocytes",
     "provenance": "KB9_new:CL:0000148",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "Microglia",
     "fold_9class": "Immune Cells",
-    "provenance": "KB9_ext:小胶质=免疫叶",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "provenance": "KB9_ext: microglia=immune leaf",
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "Mono_Classical",
@@ -3593,9 +3593,9 @@
    },
    {
     "kb_candidate": "Proliferating",
-    "fold_9class": "(空=不参与R3屏蔽)",
-    "provenance": "KB9_ext:状态类不折叠(不参与屏蔽)",
-    "carrier_runtime": "k4_ext(显式空)"
+    "fold_9class": "(Empty=excluded from R3 masking)",
+    "provenance": "KB9_ext: state class not folded (does not participate in shielding)",
+    "carrier_runtime": "k4_ext(explicit empty)"
    },
    {
     "kb_candidate": "RPE",
@@ -3613,7 +3613,7 @@
     "kb_candidate": "Schwann",
     "fold_9class": "Schwann Cells",
     "provenance": "KB9_new:CL:0002573",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "T",
@@ -3625,43 +3625,43 @@
     "kb_candidate": "cDC1",
     "fold_9class": "Immune Cells",
     "provenance": "KB9_ext",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "cDC2",
     "fold_9class": "Immune Cells",
     "provenance": "KB9_ext",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "face_v6::Fibroblast",
     "fold_9class": "Fibroblasts",
     "provenance": "KB9_ext",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "face_v6::Keratocytes",
     "fold_9class": "Fibroblasts",
-    "provenance": "KB9_ext:keratocyte 叶∈Fibroblasts",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "provenance": "KB9_ext: keratocyte leaf ∈ Fibroblasts",
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "face_v6::Myofibroblast",
     "fold_9class": "Fibroblasts|Smooth Muscle Cells",
-    "provenance": "KB9_ext:ambiguous 照原链",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "provenance": "KB9_ext: ambiguous follows original chain",
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "face_v6::Pericyte",
     "fold_9class": "Pericytes",
     "provenance": "KB9_ext",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "face_v6::SMC",
     "fold_9class": "Smooth Muscle Cells",
     "provenance": "KB9_ext",
-    "carrier_runtime": "k4_ext(运行时生效)"
+    "carrier_runtime": "k4_ext(runtime effective)"
    },
    {
     "kb_candidate": "pDC",
@@ -3671,25 +3671,25 @@
    },
    {
     "kb_candidate": "B",
-    "fold_9class": "(空=不参与R3屏蔽)",
-    "provenance": "UNMAPPED:不参与屏蔽(如实登记)",
+    "fold_9class": "(Empty=excluded from R3 masking)",
+    "provenance": "UNMAPPED: does not participate in shielding (registered as-is)",
     "carrier_runtime": "runtime_unmapped"
    },
    {
     "kb_candidate": "NK",
-    "fold_9class": "(空=不参与R3屏蔽)",
-    "provenance": "UNMAPPED:不参与屏蔽(如实登记)",
+    "fold_9class": "(Empty=excluded from R3 masking)",
+    "provenance": "UNMAPPED: does not participate in shielding (registered as-is)",
     "carrier_runtime": "runtime_unmapped"
    },
    {
     "kb_candidate": "Plasma",
-    "fold_9class": "(空=不参与R3屏蔽)",
-    "provenance": "UNMAPPED:不参与屏蔽(如实登记)",
+    "fold_9class": "(Empty=excluded from R3 masking)",
+    "provenance": "UNMAPPED: does not participate in shielding (registered as-is)",
     "carrier_runtime": "runtime_unmapped"
    }
   ],
   "n_rows": 38,
-  "disposition_rule": "ambiguous 照原链双折叠不猜；no_counterpart 判空=不参与 R3 屏蔽；Proliferating=状态类显式不折叠；UNMAPPED(B/NK/Plasma)=如实登记不参与屏蔽。"
+  "disposition_rule": "ambiguous: follow original chain double-collapse without guessing; no_counterpart: judged empty=excluded from R3 masking; Proliferating=status class explicitly not collapsed; UNMAPPED(B/NK/Plasma)=registered as-is, excluded from masking."
  },
  "a03_overlap_registry": {
   "rows": [
@@ -3743,7 +3743,7 @@
    }
   ],
   "n_rows": 4,
-  "conclusion": "四参考池细胞均取自 D002，与评价数据来源完全同源；不存在独立供体验证（本件 §0/注册包 §2）。"
+  "conclusion": "All four reference pool cells derived from D002, fully homologous with evaluation data source; no independent donor validation exists (this document §0/Registration Package §2)."
  },
  "a19_minpool_exempt_by_entry": {
   "rows": [
@@ -3753,44 +3753,44 @@
     "comparator": "CornealEndo",
     "level": "group",
     "pool": "432",
-    "applies_to_entry": "适用（在本条火灾域 9 组内）",
-    "exempt_link": "lfc 否决与 cons 参考均不纳入；fire_audit small-record 行留痕"
+    "applies_to_entry": "Applicable (within the 9 groups of this fire domain)",
+    "exempt_link": "lfc veto and cons reference both excluded; fire_audit small-record rows retain audit trail"
    },
    {
     "entry_id": "Melanocyte",
     "parent_group": "Melanocytes",
     "comparator": "B Cells",
-    "level": "author_sibling(全局小池)",
+    "level": "author_sibling(global small pool)",
     "pool": "212",
-    "applies_to_entry": "不适用（其父组归属=Fibroblast-stroma≠本条父组，本不在本条比较域）",
-    "exempt_link": "不计作已实施比较后的豁免"
+    "applies_to_entry": "Not applicable (parent group=Fibroblast-stroma≠this entry's parent group, inherently outside this entry's comparison domain)",
+    "exempt_link": "Not counted as exemption after implemented comparison"
    },
    {
     "entry_id": "Melanocyte",
     "parent_group": "Melanocytes",
     "comparator": "Monocytes",
-    "level": "author_sibling(全局小池)",
+    "level": "author_sibling(global small pool)",
     "pool": "253",
-    "applies_to_entry": "不适用（其父组归属=Epithelium≠本条父组，本不在本条比较域）",
-    "exempt_link": "不计作已实施比较后的豁免"
+    "applies_to_entry": "Not applicable (parent group=Epithelium≠this entry's parent group, inherently outside this entry's comparison domain)",
+    "exempt_link": "Not counted as exemption after implemented comparison"
    },
    {
     "entry_id": "Melanocyte",
     "parent_group": "Melanocytes",
     "comparator": "Corneal_Endo",
-    "level": "author_sibling(全局小池)",
+    "level": "author_sibling(global small pool)",
     "pool": "432",
-    "applies_to_entry": "不适用（其父组归属=Keratocytes≠本条父组，本不在本条比较域）",
-    "exempt_link": "不计作已实施比较后的豁免"
+    "applies_to_entry": "Not applicable (parent group=Keratocytes≠this entry's parent group, inherently outside this entry's comparison domain)",
+    "exempt_link": "Not counted as exemption after implemented comparison"
    },
    {
     "entry_id": "Melanocyte",
     "parent_group": "Melanocytes",
-    "comparator": "(组级：火灾域 9 组中 8 组 pool≥500 实际参与否决)",
+    "comparator": "(Group-level: 8 of 9 fire-domain groups with pool≥500 actually participated in veto)",
     "level": "group(active)",
     "pool": "-1",
-    "applies_to_entry": "适用",
-    "exempt_link": "对照行：证明比较域实际执行"
+    "applies_to_entry": "Applicable",
+    "exempt_link": "Control row: proves comparison domain execution"
    },
    {
     "entry_id": "Schwann",
@@ -3798,44 +3798,44 @@
     "comparator": "CornealEndo",
     "level": "group",
     "pool": "432",
-    "applies_to_entry": "适用（在本条火灾域 9 组内）",
-    "exempt_link": "lfc 否决与 cons 参考均不纳入；fire_audit small-record 行留痕"
+    "applies_to_entry": "Applicable (within the 9 groups of this fire domain)",
+    "exempt_link": "lfc veto and cons reference both excluded; fire_audit small-record rows retain audit trail"
    },
    {
     "entry_id": "Schwann",
     "parent_group": "Schwann",
     "comparator": "B Cells",
-    "level": "author_sibling(全局小池)",
+    "level": "author_sibling(global small pool)",
     "pool": "212",
-    "applies_to_entry": "不适用（其父组归属=Fibroblast-stroma≠本条父组，本不在本条比较域）",
-    "exempt_link": "不计作已实施比较后的豁免"
+    "applies_to_entry": "Not applicable (parent group=Fibroblast-stroma≠this entry's parent group, inherently outside this entry's comparison domain)",
+    "exempt_link": "Not counted as exemption after implemented comparison"
    },
    {
     "entry_id": "Schwann",
     "parent_group": "Schwann",
     "comparator": "Monocytes",
-    "level": "author_sibling(全局小池)",
+    "level": "author_sibling(global small pool)",
     "pool": "253",
-    "applies_to_entry": "不适用（其父组归属=Epithelium≠本条父组，本不在本条比较域）",
-    "exempt_link": "不计作已实施比较后的豁免"
+    "applies_to_entry": "Not applicable (parent group=Epithelium≠this entry's parent group, inherently outside this entry's comparison domain)",
+    "exempt_link": "Not counted as exemption after implemented comparison"
    },
    {
     "entry_id": "Schwann",
     "parent_group": "Schwann",
     "comparator": "Corneal_Endo",
-    "level": "author_sibling(全局小池)",
+    "level": "author_sibling(global small pool)",
     "pool": "432",
-    "applies_to_entry": "不适用（其父组归属=Keratocytes≠本条父组，本不在本条比较域）",
-    "exempt_link": "不计作已实施比较后的豁免"
+    "applies_to_entry": "Not applicable (parent group=Keratocytes≠this entry's parent group, inherently outside this entry's comparison domain)",
+    "exempt_link": "Not counted as exemption after implemented comparison"
    },
    {
     "entry_id": "Schwann",
     "parent_group": "Schwann",
-    "comparator": "(组级：火灾域 9 组中 8 组 pool≥500 实际参与否决)",
+    "comparator": "(Group-level: 8 of 9 fire-domain groups with pool≥500 actually participated in veto)",
     "level": "group(active)",
     "pool": "-1",
-    "applies_to_entry": "适用",
-    "exempt_link": "对照行：证明比较域实际执行"
+    "applies_to_entry": "Applicable",
+    "exempt_link": "Control row: proves comparison domain execution"
    },
    {
     "entry_id": "Conj_epithelium_suprabasal",
@@ -3843,8 +3843,8 @@
     "comparator": "CornealEndo",
     "level": "group",
     "pool": "432",
-    "applies_to_entry": "适用（在本条火灾域 9 组内）",
-    "exempt_link": "lfc 否决与 cons 参考均不纳入；fire_audit small-record 行留痕"
+    "applies_to_entry": "Applicable (within the 9 groups of this fire domain)",
+    "exempt_link": "lfc veto and cons reference both excluded; fire_audit small-record rows retain audit trail"
    },
    {
     "entry_id": "Conj_epithelium_suprabasal",
@@ -3852,35 +3852,35 @@
     "comparator": "Monocytes",
     "level": "author_sibling",
     "pool": "253",
-    "applies_to_entry": "适用（同父兄弟域内）",
-    "exempt_link": "记录不否决（lfc 与 cons 均不纳入）"
+    "applies_to_entry": "Applicable (within same-parent sibling domain)",
+    "exempt_link": "Recorded but not vetoed (lfc and cons both excluded)"
    },
    {
     "entry_id": "Conj_epithelium_suprabasal",
     "parent_group": "Epithelium",
     "comparator": "B Cells",
-    "level": "author_sibling(全局小池)",
+    "level": "author_sibling(global small pool)",
     "pool": "212",
-    "applies_to_entry": "不适用（其父组归属=Fibroblast-stroma≠本条父组，本不在本条比较域）",
-    "exempt_link": "不计作已实施比较后的豁免"
+    "applies_to_entry": "Not applicable (parent group=Fibroblast-stroma≠this entry's parent group, inherently outside this entry's comparison domain)",
+    "exempt_link": "Not counted as exemption after implemented comparison"
    },
    {
     "entry_id": "Conj_epithelium_suprabasal",
     "parent_group": "Epithelium",
     "comparator": "Corneal_Endo",
-    "level": "author_sibling(全局小池)",
+    "level": "author_sibling(global small pool)",
     "pool": "432",
-    "applies_to_entry": "不适用（其父组归属=Keratocytes≠本条父组，本不在本条比较域）",
-    "exempt_link": "不计作已实施比较后的豁免"
+    "applies_to_entry": "Not applicable (parent group=Keratocytes≠this entry's parent group, inherently outside this entry's comparison domain)",
+    "exempt_link": "Not counted as exemption after implemented comparison"
    },
    {
     "entry_id": "Conj_epithelium_suprabasal",
     "parent_group": "Epithelium",
-    "comparator": "(组级：火灾域 9 组中 8 组 pool≥500 实际参与否决)",
+    "comparator": "(Group-level: 8 of 9 fire-domain groups with pool≥500 actually participated in veto)",
     "level": "group(active)",
     "pool": "-1",
-    "applies_to_entry": "适用",
-    "exempt_link": "对照行：证明比较域实际执行"
+    "applies_to_entry": "Applicable",
+    "exempt_link": "Control row: proves comparison domain execution"
    },
    {
     "entry_id": "Limbus_Sclera_fibroblast_C1",
@@ -3888,8 +3888,8 @@
     "comparator": "CornealEndo",
     "level": "group",
     "pool": "432",
-    "applies_to_entry": "适用（在本条火灾域 9 组内）",
-    "exempt_link": "lfc 否决与 cons 参考均不纳入；fire_audit small-record 行留痕"
+    "applies_to_entry": "Applicable (within the 9 groups of this fire domain)",
+    "exempt_link": "lfc veto and cons reference both excluded; fire_audit small-record rows retain audit trail"
    },
    {
     "entry_id": "Limbus_Sclera_fibroblast_C1",
@@ -3897,78 +3897,78 @@
     "comparator": "B Cells",
     "level": "author_sibling",
     "pool": "212",
-    "applies_to_entry": "适用（同父兄弟域内）",
-    "exempt_link": "记录不否决（lfc 与 cons 均不纳入）"
+    "applies_to_entry": "Applicable (within same-parent sibling domain)",
+    "exempt_link": "Recorded but not vetoed (lfc and cons both excluded)"
    },
    {
     "entry_id": "Limbus_Sclera_fibroblast_C1",
     "parent_group": "Fibroblast-stroma",
     "comparator": "Monocytes",
-    "level": "author_sibling(全局小池)",
+    "level": "author_sibling(global small pool)",
     "pool": "253",
-    "applies_to_entry": "不适用（其父组归属=Epithelium≠本条父组，本不在本条比较域）",
-    "exempt_link": "不计作已实施比较后的豁免"
+    "applies_to_entry": "Not applicable (parent group=Epithelium≠this entry's parent group, inherently outside this entry's comparison domain)",
+    "exempt_link": "Not counted as exemption after implemented comparison"
    },
    {
     "entry_id": "Limbus_Sclera_fibroblast_C1",
     "parent_group": "Fibroblast-stroma",
     "comparator": "Corneal_Endo",
-    "level": "author_sibling(全局小池)",
+    "level": "author_sibling(global small pool)",
     "pool": "432",
-    "applies_to_entry": "不适用（其父组归属=Keratocytes≠本条父组，本不在本条比较域）",
-    "exempt_link": "不计作已实施比较后的豁免"
+    "applies_to_entry": "Not applicable (parent group=Keratocytes≠this entry's parent group, inherently outside this entry's comparison domain)",
+    "exempt_link": "Not counted as exemption after implemented comparison"
    },
    {
     "entry_id": "Limbus_Sclera_fibroblast_C1",
     "parent_group": "Fibroblast-stroma",
-    "comparator": "(组级：火灾域 9 组中 8 组 pool≥500 实际参与否决)",
+    "comparator": "(Group-level: 8 of 9 fire-domain groups with pool≥500 actually participated in veto)",
     "level": "group(active)",
     "pool": "-1",
-    "applies_to_entry": "适用",
-    "exempt_link": "对照行：证明比较域实际执行"
+    "applies_to_entry": "Applicable",
+    "exempt_link": "Control row: proves comparison domain execution"
    }
   ],
   "n_rows": 20,
-  "forced_wording": "低于 MINPOOL 或因其他资格条件未进入否决计算的比较对象，均须逐项登记，不得计作特异性检验通过。MINCORE=3 自本次注册生效，不得追认为原 KB9 build 前已冻结的预注册门槛。"
+  "forced_wording": "Comparison objects below MINPOOL or failing other qualification criteria for veto calculation must be registered item-by-item, not counted as passing specificity tests. MINCORE=3 effective from this registration, cannot retroactively recognize pre-registration thresholds frozen before original KB9 build."
  },
  "residual_limits": [
-  "开发集同源（§2 实算）：规则、词条、评测同一 D002 study/donor 宇宙，P1/P2=工程验收非独立验证；案 A 无独立票面证据。",
-  "R2/R3 屏蔽为非对称删除规则：top60 共现提示跨谱系/状态/环境 RNA 效应，非判别价值否定；真免疫证据保留依赖 A07 诊断表实证而非规则保证。",
-  "混合票集统计边界（§9/A11）：8 复用簇票=缓存混合结果，非当期全量复测。",
-  "屏蔽副作用：kb 空率 27%→39%（BUILD_REPORT P3 行原样）。",
-  "suprabasal 生物学限制：S100A8/9 髓系及炎性共享表达、参考池 96.9% 来自 chen_limbus；未触发 §1.2 数值否决≠已证明结膜 suprabasal 特异性。",
-  "本轮未完成义务=下行 obligations_before_activation 四项；注册条款的确立不等于这些检查已经通过。"
+  "Development set homology (§2 actual calculation): rules, terms, and evaluation share the same D002 study/donor universe; P1/P2=engineering acceptance, not independent validation; Case A lacks independent ballot evidence.",
+  "R2/R3 masking are asymmetric deletion rules: top60 co-occurrence suggests cross-lineage/state/environment RNA effects, not negation of discriminative value; retention of true immune evidence relies on A07 diagnostic table empirical proof rather than rule guarantee.",
+  "Mixed ballot set statistical boundary (§9/A11): 8 reused cluster ballots=cached mixed results, not full re-testing in current period.",
+  "Masking side effect: kb empty rate 27%→39% (BUILD_REPORT P3 row verbatim).",
+  "Suprabasal biological limitation: S100A8/9 myeloid and inflammatory shared expression, reference pool 96.9% from chen_limbus; failure to trigger §1.2 numerical veto ≠ proven conjunctival suprabasal specificity.",
+  "Unfulfilled obligations this round=four items in downstream obligations_before_activation; establishment of registration clauses does not imply these checks have passed."
  ],
  "obligations_before_activation": [
   {
    "id": "OB-1",
-   "item": "AV2-5(c) 历史 ON 态门",
-   "detail": "RUN5 时刻完整请求/存档快照逐字段对账（含批组成快照）；G1≠历史 ON 保真",
-   "status": "未清（激活前强制）"
+   "item": "AV2-5(c) historical ON-state gate",
+   "detail": "Field-by-field reconciliation of complete request/archive snapshot at RUN5 time (including batch composition snapshot); G1≠historical ON fidelity",
+   "status": "Uncleared (mandatory before activation)"
   },
   {
    "id": "OB-2",
-   "item": "A07 投票前诊断表首跑",
-   "detail": "pre_vote_diagnostics.tsv 列规格见注册包 §6；票面与诊断表不一致=run 作废；Q6::26 型掏空回退须可指认",
-   "status": "未清（激活前强制）"
+   "item": "First run of A07 pre-vote diagnostic table",
+   "detail": "pre_vote_diagnostics.tsv column spec see Registration Package §6; inconsistency between ballot and diagnostic table=run void; Q6::26 type hollowing fallback must be identifiable",
+   "status": "Uncleared (mandatory before activation)"
   },
   {
    "id": "OB-3",
-   "item": "22 视网膜簇 Arm1/Arm2 完整 ranking 一致性补查",
-   "detail": "排序/去重/加载序副作用；注册包 §8-4/§10-6",
-   "status": "未清（下一波强制输出）"
+   "item": "Complete ranking consistency check for 22 retinal clusters Arm1/Arm2",
+   "detail": "Sorting/deduplication/loading order side effects; Registration Package §8-4/§10-6",
+   "status": "Uncleared (mandatory output next wave)"
   },
   {
    "id": "OB-4",
-   "item": "lit 逐条同源排除筛查留档",
-   "detail": "KB9 实跑未落筛查记录；每次 lit 重建落盘命中列表/判定/剔除动作（注册包 §9）",
-   "status": "未清（每次 run 义务）"
+   "item": "Archived item-by-item homology exclusion screening for lit",
+   "detail": "KB9 actual run did not record screening; each lit rebuild must persist hit list/judgment/exclusion action (Registration Package §9)",
+   "status": "Uncleared (obligation per run)"
   },
   {
    "id": "OB-5",
-   "item": "PI 另批激活",
-   "detail": "本注册仅路由登记默认 OFF；禁在本卡内激活/接线生效（D17 边界）",
-   "status": "永久门（激活前 PI）"
+   "item": "PI separate batch activation",
+   "detail": "This registration only routes the default OFF registry; activation/wiring effectuation is prohibited within this card (D17 boundary)",
+   "status": "Permanent gate (PI before activation)"
   }
  ]
 }

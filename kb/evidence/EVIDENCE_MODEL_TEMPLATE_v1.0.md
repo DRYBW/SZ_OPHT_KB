@@ -1,63 +1,63 @@
-# EyeKB 证据模型三字段模板 v1.0（D0 起步冻结）
+# EyeKB Evidence Model Three-Field Template v1.0 (D0 Initial Freeze)
 
-冻结日期: 2026-09-24 ｜ 来源卡: t_1e783e43 ｜ 上游任务书: `/mnt/D/EyeKB/kb/evidence/D0_EVIDENCE_BRIEF.md`
-适用范围: RAG/MCP 文献证据的**论断级**挂接。本模板为首版（v1.0），后续卡沿用；改字段定义必须 bump 版本并重跑存量校验。
+Freeze date: 2026-09-24 ｜ Source card: t_1e783e43 ｜ Upstream task brief: `/mnt/D/EyeKB/kb/evidence/D0_EVIDENCE_BRIEF.md`
+Scope: **Claim-level** attachment for RAG/MCP literature evidence. This template is the first version (v1.0), subsequent cards follow it; changing field definitions requires bumping the version and rerunning legacy validation.
 
-## 1. 记录结构（JSONL，一行一条论断）
+## 1. Record structure (JSONL, one claim per line)
 
 ```json
 {
  "claim_id": "D0C-NNN",
- "pmid": "8位数字",
- "title": "论文标题（自 admission 记录带入）",
- "inclusion_reason": "五类枚举之一",
- "claim_relation": "四类枚举之一",
+ "pmid": "8-digit number",
+ "title": "Paper title (carried over from admission record)",
+ "inclusion_reason": "One of five enumerated values",
+ "claim_relation": "One of four enumerated values",
  "evidence_context": {
-   "kb_target": "KB 条目/概念 id（允许 '#' 后缀指概念）",
-   "section": "文内定位（chunk 的 section 原值；空则用 chunk_type）",
-   "verbatim": "论断原文（英文，≤50 词，必须是库内 chunk 的字面子串）",
-   "limitation": "该论断适用边界一句话（必填，不得为空）"
+   "kb_target": "KB entry/concept id ('#' suffix allowed for concept reference)",
+   "section": "In-text location (original value of chunk section; use chunk_type if empty)",
+   "verbatim": "Original claim text (English, ≤50 words, must be a lexical substring of a library chunk)",
+   "limitation": "One-sentence applicability boundary for the claim (mandatory, cannot be empty)"
  },
  "provenance": {
-   "chunk_type": "abstract|paragraph|table_row（抽取命中的 chunk 类型）",
-   "ingested": "full_text|abstract_only（自 d0_admission.json）",
+   "chunk_type": "abstract|paragraph|table_row (type of chunk hit by extraction)",
+   "ingested": "full_text|abstract_only (from d0_admission.json)",
    "extract_mode": "scripted_probe_sentence|scripted_probe_fragment",
-   "generated_by": "产出脚本标识"
+   "generated_by": "Producing script identifier"
  }
 }
 ```
 
-## 2. 字段规范与填写规则
+## 2. Field Specifications and Filling Rules
 
-### 2.1 `inclusion_reason`（入库理由，五类，冻结枚举）
+### 2.1 `inclusion_reason` (Reason for Inclusion, Five Categories, Frozen Enum)
 
-| 枚举值 | 定义 | 判据 |
+| Enum Value | Definition | Criteria |
 |---|---|---|
-| `core_reference` | 某 KB 条目/概念的主证据文献 | 删掉这条，该 KB 概念失去最直接的文献支撑 |
-| `method_anchor` | 分析/处理**方法**的参照点（QC 阈值、整合策略、注释面板） | 论断内容关于"怎么做的"，不是"发现了什么" |
-| `data_anchor` | 数据集**身份/出处**锚（GEO accession、样本构成、原始文献绑定） | 论断回答"这份数据是什么/从哪来" |
-| `contradicting_evidence` | 与 KB 现行结论**方向相反**的论断 | 同一问题上的相反证据，必须保留不许删 |
-| `background` | 语境性/框架性陈述，不直接支撑某数值结论 | 帮助读者理解 scope/局限/来龙去脉 |
+| `core_reference` | Primary evidence literature for a KB entry/concept | Removing this entry causes the KB concept to lose its most direct literature support |
+| `method_anchor` | Reference point for analysis/processing **methods** (QC thresholds, integration strategies, annotation panels) | Claim content concerns "how it was done," not "what was found" |
+| `data_anchor` | Dataset **identity/provenance** anchor (GEO accession, sample composition, original literature binding) | Claim answers "what is this data / where did it come from" |
+| `contradicting_evidence` | Claims **opposite in direction** to current KB conclusions | Opposing evidence on the same issue must be retained, not deleted |
+| `background` | Contextual/framework statements that do not directly support specific numerical conclusions | Helps readers understand scope/limitations/context |
 
-### 2.2 `claim_relation`（与目标论断的关系，四类）
+### 2.2 `claim_relation` (Relation to Target Claim, Four Categories)
 
-| 枚举值 | 定义 |
+| Enum Value | Definition |
 |---|---|
-| `supports` | 支持 kb_target 的方向性陈述 |
-| `refutes` | 反驳 kb_target 或其某成分的方向性陈述 |
-| `qualifies` | 不改变方向，但限定成立条件/口径/适用边界 |
-| `context_only` | 仅语境挂接，不构成对 kb_target 的方向性证据 |
+| `supports` | Directional statement supporting kb_target |
+| `refutes` | Directional statement refuting kb_target or one of its components |
+| `qualifies` | Does not change direction but limits conditions/criteria/applicability boundaries |
+| `context_only` | Contextual linkage only, does not constitute directional evidence for kb_target |
 
-### 2.3 `evidence_context`（可审计上下文）
+### 2.3 `evidence_context` (Auditable Context)
 
-- **kb_target**: 只允许挂**已存在**的 KB id（前缀白名单：`baseline_human_retina`、`human_retina`、`human_pdr_membrane`、`PDR__fibrovascular_membrane`、`proliferative_DR`、`GSE165784V2`）；`#` 后可指到条目内概念（如 `human_pdr_membrane#myeloid_states.foam_DAM_LAM`）。禁止虚构未注册 id。
-- **section**: 逐字取所抽 chunk 的 `section` 原值，为空时用 `chunk_type` 顶替。
-- **verbatim**: 英文原文 ≤50 词；**必须是 v2.2 库中该 pmid 任一 chunk 的字面子串**（含原文的空格/大小写怪癖，如 `MKI67 +  microglia`）；由脚本从 chunk 抽取，禁止手打/手改。截长句时只允许从头/尾**连续**裁剪。
-- **limitation**: 一句话写明适用边界——物种/组织口径（膜≠视网膜≠玻璃体液）、样本量、推断层级（注释/拟时序/配受体推断≠实验验证）、abstract-only 等。**abstract-only 文献（full_text_available=0）的每条 limitation 必须注明 abstract-only。**
+- **kb_target**: Only existing KB ids are allowed (prefix whitelist: `baseline_human_retina`, `human_retina`, `human_pdr_membrane`, `PDR__fibrovascular_membrane`, `proliferative_DR`, `GSE165784V2`); `#` can refer to concepts within entries (e.g., `human_pdr_membrane#myeloid_states.foam_DAM_LAM`). Fabricating unregistered ids is prohibited.
+- **section**: Take the exact `section` value of the extracted chunk verbatim; substitute with `chunk_type` if empty.
+- **verbatim**: English original text ≤50 words; **must be a lexical substring of any chunk for that pmid in v2.2 library** (including original spacing/case quirks, e.g., `MKI67 +  microglia`); extracted by script from chunks, manual typing/modification prohibited. When truncating long sentences, only continuous trimming from start/end is allowed.
+- **limitation**: One sentence specifying applicability boundaries—species/tissue criteria (membrane ≠ retina ≠ vitreous fluid), sample size, inference level (annotation/pseudotime/ligand-receptor inference ≠ experimental validation), abstract-only, etc. **Each limitation for abstract-only literature (full_text_available=0) must explicitly note abstract-only.**
 
-## 3. 正反例
+## 3. Positive and Negative Examples
 
-### ✅ 正例（D0C-011，contradicting_evidence + refutes）
+### ✅ Positive Example (D0C-011, contradicting_evidence + refutes)
 ```json
 {"claim_id":"D0C-011","pmid":"37917183","inclusion_reason":"contradicting_evidence",
  "claim_relation":"refutes",
@@ -66,9 +66,9 @@
   "verbatim":"none of the inflammatory cells expressed microglia markers, such as  TMEM119  and  P2RY12 , in contrast to recent work that claimed microglial population as a main cell type involved in the fibrovascular membrane formation in PDR, with a subpopulation of microglia presenting fibrogenic properties ( 42 ).",
   "limitation":"Absence-of-evidence on TMEM119/P2RY12 in their own 4-sample dataset (homeostatic microglia markers can be lost upon activation/dissociation); refutes the microglial *identity* label, not the myeloid-dominant composition itself."}}
 ```
-为什么是正例: 字面子串可机检；五要素齐全；refutes 的边界说清（驳"身份标注"不驳"髓系占比"）；保留了与 GSE165784 原文献（D0C-002）的张力而不是删掉任何一方。
+Why positive: Lexical substring is machine-checkable; all five elements present; refutation boundary clearly stated (refutes "identity annotation" not "myeloid proportion"); retains tension with GSE165784 original literature (D0C-002) rather than deleting either side.
 
-### ❌ 反例（禁止写法）
+### ❌ Negative Example (Prohibited Writing)
 ```json
 {"claim_id":"BAD-001","pmid":"35061025","inclusion_reason":"supporting_evidence",
  "claim_relation":"supports",
@@ -77,20 +77,20 @@
   "verbatim":"Hu et al. reported that macrophages comprise roughly 80% of the membrane immune infiltrate.",
   "limitation":""}}
 ```
-为什么是反例（4 处违规）:
-1. `inclusion_reason` 造词（枚举只有五类）；
-2. `verbatim` 是**改写/外部知识补写**，库内任何 chunk 都不含该句，字面校验必挂；
-3. kb_target 把具体数值写进 id 且该粒度概念未注册；
-4. `limitation` 为空——abstract-only 文献（35061025）更是禁止配不到边界的条目。
+Why negative (4 violations):
+1. `inclusion_reason` uses non-enumerated term (only five categories exist);
+2. `verbatim` is a **rewrite/external knowledge addition**, no chunk in library contains this sentence, lexical check will fail;
+3. kb_target embeds specific numerical values into id and that granularity concept is unregistered;
+4. `limitation` is empty—abstract-only literature (35061025) strictly prohibits entries without defined boundaries.
 
-## 4. 校验规约（验收同口径）
+## 4. Validation Protocol (Same Criteria for Acceptance)
 
-- 独立校验脚本: `scripts/verify_d0_claims.py`（直读冻结库 `chunks.parquet`，不依赖中间产物），逐条查: 枚举合法 / kb_target 白名单 / verbatim ≤50 词且为字面子串 / limitation 非空 / abstract-only 条目的 provenance.chunk_type=abstract。
-- **通过率必须 100%**；任何未通过条目从 JSONL 删除并**全数**登记进当批报告的"未通过校验"节，不留痕外遗漏。
-- 中间产物（抽取脚本、draft JSON、chunk dump）随批保留，不得清理。
+- Independent verification script: `scripts/verify_d0_claims.py` (reads frozen library `chunks.parquet` directly, no dependency on intermediate artifacts), checks per item: valid enum / kb_target whitelist / verbatim ≤50 words and is a lexical surface substring / limitation non-empty / provenance.chunk_type=abstract for abstract-only entries.
+- **Pass rate must be 100%**; any failed items are removed from JSONL and **all** registered in the "Failed Verification" section of the current batch report, leaving no untracked omissions.
+- Intermediate artifacts (extraction scripts, draft JSON, chunk dump) are retained with the batch and must not be cleaned up.
 
-## 5. 教义边界（沿用任务书红线）
+## 5. Doctrinal Boundaries (following task brief red lines)
 
-- 本模型只覆盖 **D0 定向通道七篇**；全库铺开属后续卡，且须重新过 astra 评审。
-- 论断只从文献原文提取；**禁止外部知识补写**；提取不到就少提取，不凑数。
-- 禁动 `evalset/`（冻结件）、禁改 v2.1/v2.2 库文件本体、禁写 `kb/baselines`、`kb/markers`（他卡领地）。
+- This model covers only the **seven D0 targeted channel papers**; full library rollout belongs to subsequent cards and requires re-review by astra.
+- Claims are extracted only from original literature text; **external knowledge supplementation is prohibited**; if extraction fails, extract less, do not pad counts.
+- Prohibited actions: modifying `evalset/` (frozen files), altering v2.1/v2.2 library file bodies, writing to `kb/baselines`, `kb/markers` (territory of other cards).

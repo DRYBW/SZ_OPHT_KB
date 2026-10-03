@@ -1,7 +1,7 @@
 {
  "schema": "eyekb-prior/1.0",
  "entry_id": "proliferative_DR",
- "title": "疾病先验: 增殖期糖尿病视网膜病变 (PDR)",
+ "title": "Disease prior: Proliferative diabetic retinopathy (PDR)",
  "disease": "proliferative diabetic retinopathy",
  "tissue_scope": [
   "fibrovascular_membrane",
@@ -12,25 +12,25 @@
  "frozen_date": "2026-09-23",
  "card": "t_39182aa2",
  "evidence_grades": {
-  "A": "本地实测复算",
-  "B": "文献原文直接报告",
-  "C": "模型/发育证据外推",
-  "D": "综述背景(仅定性)"
+  "A": "Local empirical recalculation",
+  "B": "Direct report from original literature",
+  "C": "Model/developmental evidence extrapolation",
+  "D": "Review background (qualitative only)"
  },
  "sources": [
   {
    "sid": "GSE165784V2",
    "kind": "dataset",
-   "label": "GSE165784 人 PDR 纤维血管膜+RRD 膜 scRNA, v2 整合轨 Track B (harmonypy, 17 簇, 10,069 细胞; PDR-only 7,142)",
+   "label": "GSE165784 human PDR fibrovascular membrane+RRD membrane scRNA, v2 integration track Track B (harmonypy, 17 clusters, 10,069 cells; PDR-only 7,142)",
    "pmid": "35061025",
    "path": "/mnt/D/EyeKB/plans/demo_gse165784/proc/v2/cluster_composition_B.csv",
-   "computation": "本卡 t_39182aa2 复算 (build_priors.py recompute_gse165784)"
+   "computation": "This card t_39182aa2 recomputation (build_priors.py recompute_gse165784)"
   },
   {
    "sid": "PDR_HU2022",
    "kind": "paper",
    "pmid": "35061025",
-   "label": "Hu et al. Single-Cell Transcriptomics Reveals Novel Role of Microglia in Fibrovascular Membrane of PDR. Diabetes 2022 (GSE165784 原文)"
+   "label": "Hu et al. Single-Cell Transcriptomics Reveals Novel Role of Microglia in Fibrovascular Membrane of PDR. Diabetes 2022 (GSE165784 original)"
   },
   {
    "sid": "PDR_JCI2023",
@@ -61,25 +61,25 @@
    "kind": "paper",
    "pmid": "41230906",
    "in_lib": true,
-   "label": "PRRX1 Orchestrates Pericyte-Myofibroblast Transition in Pathological Retinal Fibrosis. IOVS 2025 (库内)"
+   "label": "PRRX1 Orchestrates Pericyte-Myofibroblast Transition in Pathological Retinal Fibrosis. IOVS 2025 (in library)"
   },
   {
    "sid": "RAB5IF",
    "kind": "paper",
    "pmid": "41390488",
    "in_lib": true,
-   "label": "Endothelial RAB5IF is required for pathological and developmental retinal angiogenesis. Nat Commun 2025 (库内)"
+   "label": "Endothelial RAB5IF is required for pathological and developmental retinal angiogenesis. Nat Commun 2025 (in library)"
   },
   {
    "sid": "VITREOUS_T",
    "kind": "paper",
    "pmid": "39220810",
-   "label": "Liquid Biopsy for PDR: Single-Cell Transcriptomics of Human Vitreous. Ophthalmol Sci 2024 — PDR 玻璃体 T 细胞 91.6% (对照组织: 玻璃体≠膜)"
+   "label": "Liquid Biopsy for PDR: Single-Cell Transcriptomics of Human Vitreous. Ophthalmol Sci 2024 — PDR vitreous T cells 91.6% (control tissue: vitreous≠membrane)"
   },
   {
    "sid": "MEMLIB",
    "kind": "kb",
-   "label": "本地膜 marker 库 markers_membrane_v1.json v1-membrane-20260923 (逐基因溯源)",
+   "label": "Local membrane marker library markers_membrane_v1.json v1-membrane-20260923 (gene-by-gene provenance)",
    "path": "/mnt/D/EyeKB/kb/markers/markers_membrane_v1.json"
   },
   {
@@ -87,48 +87,48 @@
    "kind": "paper",
    "pmid": "35167652",
    "in_lib": true,
-   "label": "Müller Glial Expression of REDD1 Is Required for Retinal Neurodegeneration... Diabetes 2022 (库内; 反应性胶质背景)"
+   "label": "Müller Glial Expression of REDD1 Is Required for Retinal Neurodegeneration... Diabetes 2022 (in library; reactive glia background)"
   },
   {
    "sid": "GLIA_RDG",
    "kind": "paper",
    "pmid": "32069977",
    "in_lib": true,
-   "label": "scRNA-seq in Human Retinal Degeneration Reveals Distinct Glial Cell Populations. Cells 2020 (库内; 人视网膜退变胶质状态)"
+   "label": "scRNA-seq in Human Retinal Degeneration Reveals Distinct Glial Cell Populations. Cells 2020 (in library; human retinal degeneration glial states)"
   },
   {
    "sid": "DR_RETINA_SC",
    "kind": "paper",
    "pmid": "34006945",
    "in_lib": true,
-   "label": "In-depth transcriptomic analysis of human retina reveals molecular mechanisms underlying DR. Sci Rep 2021 (库内)"
+   "label": "In-depth transcriptomic analysis of human retina reveals molecular mechanisms underlying DR. Sci Rep 2021 (in library)"
   },
   {
    "sid": "MG_EARLY_DR",
    "kind": "paper",
    "pmid": "38409074",
    "in_lib": true,
-   "label": "scRNA-seq reveals roles of unique retinal microglia types in early DR. DMS 2024 (库内)"
+   "label": "scRNA-seq reveals roles of unique retinal microglia types in early DR. DMS 2024 (in library)"
   },
   {
    "sid": "TIPCELL_DEV",
    "kind": "paper",
    "pmid": "34273276",
    "in_lib": true,
-   "label": "Specialized endothelial tip cells guide neuroretina vascularization and blood-retina-barrier formation. Nat Commun 2021 (库内; tip/stalk 生物学来源, 发育/模型证据→PDR 外推 C 级)"
+   "label": "Specialized endothelial tip cells guide neuroretina vascularization and blood-retina-barrier formation. Nat Commun 2021 (in library; tip/stalk biological origin, development/model evidence→PDR extrapolation Grade C)"
   }
  ],
  "expected_cell_state_matrix": [
   {
    "tissue": "fibrovascular_membrane",
    "expected": [
-    "Macrophage: 组织型驻留(SELENOP/FOLR2) + 招募型经典单核(FCN1/LYZ) + 泡沫样DAM-LAM(GPNMB/TREM2/SPP1) + MHC-II高APC + 血红素应激(HMOX1)",
-    "Endothelial: 病理态(PLVAP/NDUFA4L2/HIF1A/ICAM1/VCAM1) + tip/stak 亚态(DLL4; C级外推自 TIPCELL_DEV/RAB5IF)",
-    "Pericyte→Myofibroblast 连续转变 (PRRX1 驱动, B: PRRX1)",
-    "Stromal: COL1A1/COL3A1/FN1 高细胞外基质",
-    "Lymphoid: T(CD69 活化)、浆细胞低比例",
-    "Proliferating: MKI67+ 群存在 (含 MKI67+ 小胶质, B: PDR_MKI67MG)",
-    "Glial: Müller/反应性胶质瘢痕成分 (GFAP↑, B: GLIA_RDG)"
+    "Macrophages: tissue-resident (SELENOP/FOLR2) + recruited classical monocytes (FCN1/LYZ) + foamy DAM-LAM (GPNMB/TREM2/SPP1) + MHC-II-high APCs + heme-associated stress (HMOX1)",
+    "Endothelial: pathological state (PLVAP/NDUFA4L2/HIF1A/ICAM1/VCAM1) + tip/stalk sub-states (DLL4; Grade C extrapolated from TIPCELL_DEV/RAB5IF)",
+    "Pericyte→Myofibroblast continuous transition (PRRX1-driven, B: PRRX1)",
+    "Stromal: High extracellular matrix COL1A1/COL3A1/FN1",
+    "Lymphoid: T cells (CD69 activated), low plasma cell proportion",
+    "Proliferating: MKI67+ population present (including MKI67+ microglia, B: PDR_MKI67MG)",
+    "Glial: Müller/reactive glial scar components (GFAP↑, B: GLIA_RDG)"
    ],
    "evidence": "A+B",
    "source_ids": [
@@ -145,8 +145,8 @@
   {
    "tissue": "vitreous",
    "expected": [
-    "T 细胞绝对优势 (91.6%, B: VITREOUS_T), 中性粒细胞几乎缺如",
-    "解读: 玻璃体与膜标本组成完全不同 —— 组织端必须先分清"
+    "Absolute T cell dominance (91.6%, B: VITREOUS_T), neutrophils nearly absent",
+    "Interpretation: Vitreous and membrane specimen compositions are entirely different — tissue origin must be distinguished first"
    ],
    "evidence": "B",
    "source_ids": [
@@ -156,9 +156,9 @@
   {
    "tissue": "retina_adjacent",
    "expected": [
-    "早中期 DR 视网膜: 小胶质状态改变无大规模髓系涌入 (B: MG_EARLY_DR/DR_RETINA_SC)",
-    "Müller 反应性 (REDD1/gliosis, B: MULLER_REDD1)",
-    "神经元比例不因 PDR 本身大涨 —— 膜≠视网膜"
+    "Early-mid DR retina: Microglial state changes without large-scale myeloid influx (B: MG_EARLY_DR/DR_RETINA_SC)",
+    "Müller glia reactivity (REDD1/gliosis, B: MULLER_REDD1)",
+    "Neuron proportion does not significantly increase due to PDR itself — membrane ≠ retina"
    ],
    "evidence": "B",
    "source_ids": [
@@ -170,38 +170,38 @@
  ],
  "unexpected_flags": [
   {
-   "flag": "视网膜神经元 (Rod/Cone/BC/AC/HC) 大簇",
-   "when": "膜标本 >5%",
-   "action": "旗标: 标本疑含视网膜本体, 报PI"
+   "flag": "Large clusters of retinal neurons (Rod/Cone/BC/AC/HC)",
+   "when": "Membrane specimen >5%",
+   "action": "Flag: Specimen suspected to contain retina proper, report to PI"
   },
   {
-   "flag": "光感受器外节/裂解碎片高背景 (HBA 除外)",
-   "when": "线粒体+ROS 应激签名弥散",
-   "action": "解离应激旗, 不打疾病旗"
+   "flag": "High background of photoreceptor outer segments/lysis fragments (excluding HBA)",
+   "when": "Diffuse mitochondrial+ROS stress signature",
+   "action": "Dissociation stress flag, no disease flag"
   },
   {
-   "flag": "progenitor/类器官特征",
-   "when": "任何临床膜标本",
-   "action": "疑样本混入/注释错误, 旗标上报"
+   "flag": "Progenitor/organoid features",
+   "when": "Any clinical membrane specimen",
+   "action": "Suspected sample mixture/annotation error, flag and escalate"
   },
   {
-   "flag": "肥大细胞/嗜酸粒细胞富集群",
-   "when": "过敏背景",
+   "flag": "Mast cell/eosinophil enrichment clusters",
+   "when": "Allergic background",
    "action": "unexpected-report"
   }
  ],
  "contamination_flags": [
   {
-   "flag": "外周血 (经典单核 FCN1/LYZ/S100A8/9 + 血小板 PF4/PPBP + 中性粒 FCGR3B/CSF3R)",
-   "meaning": "手术标本血液涌入 —— 髓系计数解读必须先扣血源成分 (B: GSE165784 v2 B10/sub14 A级实测)"
+   "flag": "Peripheral blood (classical monocytes FCN1/LYZ/S100A8/9 + platelets PF4/PPBP + neutrophils FCGR3B/CSF3R)",
+   "meaning": "Blood influx in surgical specimens — myeloid count interpretation must first deduct blood-derived components (B: GSE165784 v2 B10/sub14 Grade A measured)"
   },
   {
-   "flag": "RPE/脉络膜色素成分 (BEST1/RPE65/TYR+黑素)",
-   "meaning": "穿透取材/合并孔源性脱离操作"
+   "flag": "RPE/choroidal pigmented components (BEST1/RPE65/TYR+melanin)",
+   "meaning": "Penetrating sampling/concurrent rhegmatogenous detachment procedures"
   },
   {
-   "flag": "玻璃体来源 T 优势 (对照 91.6%)",
-   "meaning": "玻璃体切除标本残留液相成分"
+   "flag": "Vitreous-derived T dominance (control 91.6%)",
+   "meaning": "Residual liquid-phase components in vitrectomy specimens"
   }
  ],
  "signatures": {
@@ -277,11 +277,11 @@
    "PPBP",
    "PF4"
   ],
-  "signature_source": "markers_membrane_v1.json (canonical/data_driven/pmid_context 三态溯源) + v2 实测簇"
+  "signature_source": "markers_membrane_v1.json (canonical/data_driven/pmid_context tri-state provenance) + v2 measured clusters"
  },
  "caveats": [
-  "tip/stalk 内皮亚态: 人 PDR 膜直接单细胞证据有限 (DLL4+ tip 生物学多来自发育/OIR), 标 C 级 —— 预期存在但比例不设区间。",
-  "PDR 与 RRD 膜的组成差异尚无充分独立对照 —— 任何'疾病特异簇'判定必须做疾病端对照后才可写 (v2 草稿 RRD 分层教训)。",
-  "PI: PDR 注释本身不一定准 → 本先验为对照与 QC 旗, 非真值; 与数据冲突时输出'先验与数据打架清单'上报。"
+  "Tip/stalk endothelial sub-states: limited direct single-cell evidence from human PDR membranes (DLL4+ tip biology mostly derived from development/OIR); marked Grade C — expected presence but no interval defined for proportions.",
+  "Composition differences between PDR and RRD membranes lack sufficient independent controls — any 'disease-specific cluster' determination must undergo disease-endpoint comparison before being written (lesson from v2 draft RRD stratification).",
+  "PI: PDR annotation itself may be inaccurate → this prior serves as a control and QC flag, not ground truth; when conflicting with data, output a 'prior-vs-data conflict list' for escalation."
  ]
 }

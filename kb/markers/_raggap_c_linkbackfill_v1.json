@@ -4,11 +4,11 @@
  "registered_at": "2026-09-27 23:36:18",
  "card": "t_d0bea5a6 (RAGFIX D19)",
  "upstream": "/mnt/D/EyeKB/plans/rag_gap_20260928/out/tier_C_backlog.tsv (sha256=736e9f8342bc568a8dd2b65c984b8042f777bc74abde5acc710928611096e70b)",
- "status": "INERT_REGISTERED_DATA — 非可查询库：不在 MARKER_LIBS、不在任何加载 glob、MCP 运行时不读本件。注册=数据落库留档，非行为变更；激活另需 PI 批。",
- "apply_rule": "按 library+entry+gene 在词条 JSON 定位 {gene, evidence} 节点, 向 evidence 追加 {\"type\":\"pmid\",\"id\":\"PMID:<X>\",\"in_corpus\":true,\"note\":\"RAGGAP-C backfill (t_d0bea5a6)\"}; 已含该 PMID 不重复追加 (KB1v2d 先例格式); 本件不自动改词条本体。",
+ "status": "INERT_REGISTERED_DATA — non-active registered data",
+ "apply_rule": "Locate {gene, evidence} nodes in entry JSON by library+entry+gene; append {\"type\":\"pmid\",\"id\":\"PMID:<X>\",\"in_corpus\":true,\"note\":\"RAGGAP-C backfill (t_d0bea5a6)\"} to evidence; do not duplicate if PMID already present (KB1v2d precedent format); this item does not automatically modify the entry body.",
  "caveats": [
-  "候选=词边界 token 匹配 (元数据级近似), 基因提及≠该文支持该基因作该语境 marker; 激活前需逐行语境抽检 (RAGGAP §5 局限原样继承)",
-  "0 行候选在 v2.3 全部不可证 in_corpus (ghost/absent), 回填价值=弱, 已逐候选标注状态"
+  "Candidate = word-boundary token match (metadata-level approximation); gene mention ≠ paper supports gene as marker in this context; line-by-line contextual spot-check required before activation (inherits RAGGAP §5 limitations verbatim).",
+  "0 candidate rows are all unverifiable in_corpus in v2.3 (ghost/absent); backfill value = weak; status annotated per candidate."
  ],
  "counts": {
   "rows": 830,

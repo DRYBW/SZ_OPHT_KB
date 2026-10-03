@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""build_matrix.py — KNOWNISSUES-B2 执行序②（ARBITRATION_RULING_C1-C14_v1 批复后）：
-6 物种 × 15 canonical 组织 = **90 格全占位矩阵**（C1/C10 批复面积；零手写，脚本生成）。
+"""build_matrix.py — KNOWNISSUES-B2 execution step 2 (after ARBITRATION_RULING_C1-C14_v1):
+6 species × 15 canonical tissues = **90-cell full placeholder matrix** (C1/C10 approved area; zero manual entry, script-generated).
 
-口径纪律（红线）：
-  - **占位≠激活**：本批达标候选=0 的如实口径维持（执行序 5）——不借任何 C 项批复激活格子；
-    WORKFLOW_READY 前置=人工审计门（claim_curated），EVIDENCE_READY 仅既有六格（provisional）。
-  - RESERVED 物种（macaque/rat/rabbit/zebrafish）按 C10 只能 PLACEHOLDER（升格走
-    "逐物种 ≥3 条有出处坑 + 人工审计门"预注册通道，逐申请批复，禁自控）。
-  - 词表坐标一律取 COORDINATE_TAXONOMY_v1.md 定案值（15 面+6 物种）；未入表物种/组织=UNMAPPED 不入统计。
-  - 格子/claim 变更全部走 build 重生成：本件产物 matrix/ 下三件（MATRIX_GRID.json /
-    GRID_LEDGER.csv / MANIFEST.sha256），禁手改；`--check`=脚本↔产物确定性门（临时目录重生成逐字节对拍）。
-  - 面板状态=盘上实测（kb/baselines/*.json status 字段），鼠侧/RESERVED 侧如实登记无面
-    （panel_backlog_worklist 的结构性义务，不在本件建面板）。
+Scope discipline (red line):
+  - **Placeholder ≠ Activation**: Maintain the honest reporting standard for this batch where qualifying candidates = 0 (Execution Order 5) — do not activate any grid cells via C-item approvals;
+    WORKFLOW_READY prerequisite = manual audit gate (claim_curated); EVIDENCE_READY limited to existing six cells (provisional).
+  - RESERVED species (macaque/rat/rabbit/zebrafish) are restricted to PLACEHOLDER status per C10 (promotion follows
+    pre-registered "≥3 sourced pitfalls per species + manual audit gate" channel, approved per application, self-promotion forbidden).
+  - Lexicon coordinates uniformly adopt finalized values from COORDINATE_TAXONOMY_v1.md (15 faces + 6 species); species/tissues not in the table are marked UNMAPPED and excluded from statistics.
+  - All grid/claim changes go through build regeneration: this artifact produces three files under matrix/ (MATRIX_GRID.json /
+    GRID_LEDGER.csv / MANIFEST.sha256); do not hand-edit; `--check` = deterministic script↔artifact gate (regenerate in a temp dir, byte-compare).
+  - Panel status = on-disk measurement (status field in kb/baselines/*.json), mouse-side/RESERVED side honestly registered as no panel
+    (Structural obligation of panel_backlog_worklist; do not build panels in this item).
 
-用法：
-  python build_matrix.py            # 生成 matrix/ 三件
-  python build_matrix.py --check    # 确定性门（不写盘）
+Usage:
+  python build_matrix.py            # Generate three items in matrix/
+  python build_matrix.py --check    # Determinism gate (no disk write)
 """
 from __future__ import annotations
 
@@ -38,17 +38,17 @@ RULING = "ARBITRATION_RULING_C1-C14_v1.md"
 RULING_SHA256 = ("aea4b4c592a092f115c78b4ee1ec81ecaf4eea1b9e2453c8ead39615f3b7fb8a")
 REQUEST_SHA256 = ("88996f1039042fbdea8a1fd4bd9c6f109cbbc170adbd3e6ca4cffae159dd37a3")
 
-# 词表从单一事实源 import（禁双写坐标清单）
+# Import vocabulary from single source of truth (double-writing coordinate lists prohibited)
 _spec = importlib.util.spec_from_file_location("_bc", HERE / "build_claims.py")
 _bc = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_bc)
-CANON = list(_bc.CANON_TISSUES)                       # 15 面（C1 批复）
+CANON = list(_bc.CANON_TISSUES)                       # 15 tissues (C1 approval)
 ACTIVE_SPECIES = list(_bc.SPECIES_PAGE)               # human, mouse
-RESERVED_SPECIES = ["macaque", "rat", "rabbit", "zebrafish"]  # v1 §2（C10 批复：只能占位）
-SPECIES = ACTIVE_SPECIES + RESERVED_SPECIES           # 6（矩阵行序）
+RESERVED_SPECIES = ["macaque", "rat", "rabbit", "zebrafish"]  # v1 §2 (C10 ruling: placeholder only)
+SPECIES = ACTIVE_SPECIES + RESERVED_SPECIES           # 6 (matrix row order)
 RESERVED_SET = set(RESERVED_SPECIES)
 
-# 六格既有坐标系（canonical 名，build_claims 派生，禁手写第二表）
+# Existing coordinate system for six cells (canonical names, derived by build_claims, second manual table prohibited)
 ACTIVE6 = {f"{c.split('__', 1)[0]}__{_bc.TISSUE_CANON[c.split('__', 1)[1]]}"
            for c in _bc.CELLS}
 
@@ -66,7 +66,7 @@ def panel_human(t):
 
 
 def panel_state(sp, t):
-    """baselines 现全为人面（盘上实测无任何 mouse/RESERVED 面文件）——禁拿人面板冒充。"""
+    """baselines are currently all human facets (disk measurement shows no mouse/RESERVED facet files) — do not substitute human facets."""
     if sp == "human":
         return panel_human(t)
     if sp == "mouse":
@@ -75,7 +75,7 @@ def panel_state(sp, t):
 
 
 def load_cell_claims():
-    """pages/cells/*.json 的 home=cell 本格条（pattern 覆盖条不算格专属——五态阈值按本格条）。"""
+    """home=cell entries in pages/cells/*.json (pattern coverage entries do not count as cell-specific—five-state thresholds follow the specific entry)."""
     out = {}
     for f in sorted(PAGES.glob("cells/*.json")):
         d = json.loads(f.read_text(encoding="utf-8"))
@@ -98,41 +98,41 @@ def build_grid():
                   and e["source_check"] == "locator_verified"]
             if sp in RESERVED_SET:
                 state = "PLACEHOLDER"
-                why = ("RESERVED 物种占位（C10 批复）——不得建知识格；升格走预注册通道"
-                       "（逐物种 ≥3 条有出处坑+人工审计门，逐申请批复，禁自控）；"
-                       "macaque×retina 转正=另案随二批深补呈报（素材最厚已登记）")
+                why = ("RESERVED species placeholder (C10 approval) — knowledge grids must not be created; promotion via pre-registration channel"
+                       "(≥3 sourced pitfall entries per species + manual audit gate, approved per request, self-control prohibited);"
+                       "macaque×retina formalization = separate case submitted with second batch deep supplementation (richest material registered)")
             elif cid in ACTIVE6:
                 state = "EVIDENCE_READY"
-                why = ("provisional——既有六格，≥3 条不同 failure mode 且指针机械核过；"
-                       "未过人工审计门（audit_pipeline），禁 WORKFLOW_READY/硬门")
+                why = ("provisional——existing six cells, ≥3 distinct failure modes and pointers mechanically verified;"
+                       "Failed manual audit gate (audit_pipeline); WORKFLOW_READY/hard gates prohibited")
             elif len(ok) >= 3 and len(fms) >= 3:
                 state = "CANDIDATE_EVIDENCE_READY"
-                why = "（本批不应出现——出现即限额违规，见执行序 5 如实口径）"
+                why = "(Should not appear in this batch—appearance indicates quota violation, see Execution Sequence 5 for accurate reporting)"
             else:
                 state = "UNEXPLORED"
-                why = ("本格专属可定位 claim <3（不同 failure mode）——达标候选=0 维持（执行序 5：不借批复激活）；"
-                       "深补队列见 plans/known_issues_b2_20261001/out/panel_backlog_worklist.md 与二批检索计划")
+                why = ("Fewer than 3 locatable claims specific to this cell (distinct failure modes)—0 qualifying candidates remain (execution order 5: do not activate via approval);"
+                       "Deep-fill queue see plans/known_issues_b2_20261001/out/panel_backlog_worklist.md and second-batch retrieval plan")
             rows.append(dict(species=sp, tissue=ti, cell_id=cid, grid_state=state,
                              panel=panel_state(sp, ti),
                              n_cell_claims=len(es), n_distinct_fm=len(fms), n_eligible=len(ok),
-                             activated="NO",  # 全表恒 NO——占位≠激活的机械断言位
+                             activated="NO",  # always NO across the table — the mechanical assertion slot for placeholder ≠ activated
                              why=why))
-    assert len(rows) == 90, f"矩阵面积必须=6×15=90（C10），实={len(rows)}"
-    assert all(r["activated"] == "NO" for r in rows), "activated 恒=NO 破坏（本批禁激活）"
+    assert len(rows) == 90, f"Matrix area must equal 6×15=90 (C10), actual={len(rows)}"
+    assert all(r["activated"] == "NO" for r in rows), "activated always=NO violation (activation prohibited in this batch)"
     assert not any(r["grid_state"] == "CANDIDATE_EVIDENCE_READY" for r in rows), \
-        "出现达标候选=违反执行序 5 如实口径"
+        "Appearance of compliant candidates = violation of Execution Sequence 5 'faithful reporting' standard."
     tally = {}
     for r in rows:
         tally[r["grid_state"]] = tally.get(r["grid_state"], 0) + 1
     grid = {"schema": "eyekb-matrix-grid/1.0",
-            "generated_by": "pipeline/pitfalls/build_matrix.py（零手写，禁手改产物）",
+            "generated_by": "pipeline/pitfalls/build_matrix.py (zero manual writing, manual modification of artifacts prohibited)",
             "taxonomy": "COORDINATE_TAXONOMY_v1.md（RATIFIED v1）",
             "ruling": {"file": "plans/known_issues_b2_20261001/out/" + RULING,
                        "sha256": RULING_SHA256, "request_sha256": REQUEST_SHA256},
-            "area": "6 species × 15 canonical tissues = 90 格全占位（C1/C10 批复）",
-            "activation_policy": ("占位≠激活：本批激活=0、达标候选=0（如实口径，执行序 5）；"
-                                  "WORKFLOW_READY 前置=人工审计门 claim_curated；"
-                                  "RESERVED 物种升格=逐申请预注册通道"),
+            "area": "6 species × 15 canonical tissues = 90 cells all placeholders (C1/C10 approval)",
+            "activation_policy": ("Placeholder ≠ activation: current batch activation=0, qualified candidates=0 (accurate metric, execution sequence 5);"
+                                  "WORKFLOW_READY prerequisite=manual audit gate claim_curated;"
+                                  "RESERVED species promotion=per-application pre-registration channel"),
             "grid_states_seen": tally, "cells": rows}
     return grid, rows
 

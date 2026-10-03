@@ -18,10 +18,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "同疾病不同腔室材料组成相反（PDR 玻璃体 T 系 vs 膜髓系），引用互串=结论反转",
-   "observable_signature": "PDR 玻璃体 T 91.6% vs 膜髓系 79.5% 双实测在册",
+   "failure_mode": "Composition opposite in different chambers for same disease (PDR vitreous T lineage vs membrane myeloid lineage), citation cross-contamination = conclusion reversal.",
+   "observable_signature": "PDR vitreous T 91.6% vs membrane myeloid 79.5% dual measurements on record.",
    "risk_level": "high",
-   "mitigation": "『PDR+单细胞』措辞必带材料词（膜/玻璃体/视网膜）；两格坑卡互引；跨材料比较只到通路层不到占比层。",
+   "mitigation": "'PDR+single-cell' wording must include material term (membrane/vitreous/retina); two grid pitfall cards cross-reference; cross-material comparison limited to pathway layer, not proportion layer.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -35,16 +35,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.json sources.VITREOUS_T（PDR 玻璃体 T 细胞 91.6%，对照组织：玻璃体≠膜）"
+    "/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.json sources.VITREOUS_T (PDR vitreous T cells 91.6%, control tissue: vitreous ≠ membrane)"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__pdr_membrane",
     "b1_order": 7,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "文本枚举膜/玻璃体/视网膜三格且两格互引 → 跨组织限人"
+    "home_rationale": "Text enumerates three grids of membrane/vitreous/retina with mutual cross-references → cross-tissue limited to human."
    }
   },
   {
@@ -62,10 +62,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "免疫优势群是材料属性非疾病属性：同病不同料（膜髓系 vs 玻璃体 T 系）",
-   "observable_signature": "患者级 paired 样本可分离腔室效应；类占比平均会掩盖",
+   "failure_mode": "Immune dominant group is a material attribute, not a disease attribute: same disease different materials (membrane myeloid vs vitreous T lineage).",
+   "observable_signature": "Patient-level paired samples can separate chamber effects; averaging class proportions will mask them.",
    "risk_level": "high",
-   "mitigation": "引用 PDR 免疫图谱必带腔室词（膜/玻璃体/视网膜三格）；跨腔室整合只在患者级（paired 样本）做，不做类占比平均。",
+   "mitigation": "Citing PDR immune maps must include chamber term (three grids: membrane/vitreous/retina); cross-chamber integration only done at patient level (paired samples), no averaging of class proportions.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -79,16 +79,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.md sources.VITREOUS_T 注（『PDR 玻璃体 T 细胞 91.6%（对照组织：玻璃体≠膜）』）"
+    "/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.md sources.VITREOUS_T note ('PDR vitreous T cells 91.6% (control tissue: vitreous ≠ membrane)')"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__vitreous",
     "b1_order": 5,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "与膜格同病不同料条共享 pattern（一 scope 一 claim，本条主语=归因方向）"
+    "home_rationale": "Shares pattern with 'same disease different materials' clause for membrane grid (one scope one claim, subject of this clause = attribution direction)."
    }
   }
  ],

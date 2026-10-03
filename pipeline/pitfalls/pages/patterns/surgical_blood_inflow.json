@@ -17,10 +17,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "手术标本血液涌入：髓系/血小板/中性粒签名混入，不扣血源直接计数=结论污染",
-   "observable_signature": "血源锚（FCN1/LYZ）与驻留锚（SELENOP/MRC1/FOLR2）双层可分离；PBMC 配对扣比后占比改变",
+   "failure_mode": "Surgical specimen blood influx: myeloid/platelet/neutrophil signatures mix in; counting without deducting blood source = conclusion contamination",
+   "observable_signature": "Two layers separable via blood-source anchors (FCN1/LYZ) and resident anchors (SELENOP/MRC1/FOLR2); proportions change after PBMC paired deduction",
    "risk_level": "high",
-   "mitigation": "髓系计数前先出『血源 vs 驻留』两层（SELENOP/MRC1/FOLR2 驻留锚 vs FCN1/LYZ 血源锚）；有 PBMC 对照样本时强制扣比；对外措辞禁裸写『巨噬细胞占 X%』不注血源口径。",
+   "mitigation": "Output 'blood source vs resident' two layers before myeloid counting (SELENOP/MRC1/FOLR2 resident anchors vs FCN1/LYZ blood-source anchors); mandatory deduction ratio when PBMC control samples exist; prohibit bare writing 'macrophages account for X%' without noting blood source caliber in external wording.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -34,16 +34,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/kb/priors/disease/PDR__fibrovascular_membrane.md 血液涌入条款（GSE165784 v2 B10/sub14 A级实测）；/mnt/D/EyeKB/plans/demo_gse165784/ANNOTATION_DRAFT_GSE165784_V2_20260923.md B13 行"
+    "/mnt/D/EyeKB/kb/priors/disease/PDR__fibrovascular_membrane.md blood influx clause (GSE165784 v2 B10/sub14 Grade A measured); /mnt/D/EyeKB/plans/demo_gse165784/ANNOTATION_DRAFT_GSE165784_V2_20260923.md Line B13"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__pdr_membrane",
     "b1_order": 2,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "跨组织成立：膜格实测+玻璃体条文本明记『血源扣减法同膜格』两格在册"
+    "home_rationale": "Established across tissues: membrane grid measurement + vitreous strip text explicitly notes 'blood source deduction method same as membrane grid', two grids registered"
    }
   }
  ],

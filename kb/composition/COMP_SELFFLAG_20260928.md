@@ -1,31 +1,31 @@
-# COMP_SELFFLAG_20260928 — EXPECTED_COMPOSITION_v0 自检旗标报告（只读，出旗标不出结论）
+# COMP_SELFFLAG_20260928 — EXPECTED_COMPOSITION_v0 self-check flag report (read-only, outputs flags not conclusions)
 
-> 卡 t_fa03e1d7 | 输入：`EXPECTED_COMPOSITION_v0.json` × 盘上冻结产物（kb/baselines, plans/evalset 冻结件, demo_gse165784 v2 共识草稿表）
-> **⛔ 本面未接线。旗标=提示复核，不等于注释错误；接线与激活另卡另批（PI 拍板）。**
+> Card t_fa03e1d7 | Input: `EXPECTED_COMPOSITION_v0.json` × frozen on-disk artifacts (kb/baselines, plans/evalset frozen files, demo_gse165784 v2 consensus draft table)
+> **⛔ This face is not wired. Flags = prompts for re-review, not annotation errors; wiring and activation require separate cards and approval (PI decision).**
 
-## 0. 方法
-- 对账对象：评估卷各成员真值组成（Q1–Q9，真值=作者级/portal 注释或 mapped_10class；非自家聚类重标注）+ demo GSE165784 v2 Track B 共识注释草稿（疾病材料，展示门行为）。
-- 旗标规则：pct < low → BELOW；pct > high → ABOVE；面外身份（T/巨噬/成纤维/前体…）→ off_face_identity 披露行；比例分母=该数据集全部细胞。
-- 反向质检内建条款：健康公开集被旗标类型占比 >20% → 如实报告“面太窄=面的问题不是数据的问题”。
-- 域外轴（不计入反向质检分母）：Q7 小鼠（物种轴）、Q8 胎儿（发育轴）、Q6（与眼表面同构建源=循环参照）、Q9 demo（疾病手术材料，usage_scope 禁当达标对照）。
+## 0. Method
+- Reconciliation targets: Ground truth composition of each member in the evaluation volume (Q1–Q9, ground truth = author-level/portal annotations or mapped_10class; not re-annotation by own clustering) + demo GSE165784 v2 Track B consensus annotation draft (disease material, demonstrating gate behavior).
+- flag rules: pct < low → BELOW; pct > high → ABOVE; off-face identities (T / macrophage / fibroblast / progenitor …) → off_face_identity disclosure row; the proportion denominator is all cells of the dataset.
+- Built-in reverse quality check clause: If flagged type proportion >20% in healthy public sets → honestly report "face too narrow = issue with the face definition, not the data".
+- Out-of-domain axes (excluded from reverse quality check denominator): Q7 mouse (species axis), Q8 fetal (developmental axis), Q6 (same construction source as ocular surface = circular reference), Q9 demo (disease surgical material, usage_scope prohibits use as standard control).
 
-## 1. 汇总旗标率
+## 1. Summary Flag Rate
 
-| 数据集 | 面 | 细胞数 | 旗标行数/面行数 | 旗标率 | 反向质检 |
+| Dataset | Face | Cell Count | Flagged Rows/Face Rows | Flag Rate | Reverse Quality Check |
 |---|---|---|---|---|---|
 | Q1_Lukowski2019 | retina | 19,694 | 4/10 | 40.0% | TRIGGER(>20%) |
 | Q2_GSE155288 | retina | 92,385 | 4/10 | 40.0% | TRIGGER(>20%) |
 | Q3 | retina | 20,091 | 3/10 | 30.0% | TRIGGER(>20%) |
 | Q4 | retina | 84,982 | 2/10 | 20.0% | under |
 | Q5b | retina | 412,419 | 0/10 | 0.0% | under |
-| Q7 | retina | 361,022 | 5/10 | 50.0% | not_counted(disease/发育/循环) |
-| Q8 | retina | 226,506 | 4/10 | 40.0% | not_counted(disease/发育/循环) |
-| Q6_D002_sub100k | ocular_surface | 100,000 | 1/9 | 11.1% | not_counted(disease/发育/循环) |
-| Q9_GSE165784_demo_v2 | retina | 10,069 | 7/10 | 70.0% | not_counted(disease/发育/循环) |
+| Q7 | retina | 361,022 | 5/10 | 50.0% | not_counted(disease/development/circular) |
+| Q8 | retina | 226,506 | 4/10 | 40.0% | not_counted(disease/development/circular) |
+| Q6_D002_sub100k | ocular_surface | 100,000 | 1/9 | 11.1% | not_counted(disease/development/circular) |
+| Q9_GSE165784_demo_v2 | retina | 10,069 | 7/10 | 70.0% | not_counted(disease/development/circulation) |
 
-## 2. 旗标明细（逐行 数据集×细胞类型）
+## 2. Flag Details (Row-by-Row Dataset × Cell Type)
 
-| 数据集 | 行 | 观测% | 面区间[低,高] | 状态 |
+| Dataset | Row | Observed % | Surface Interval [Low, High] | Status |
 |---|---|---|---|---|
 | Q1_Lukowski2019 | Rod | 62.15 | [22,58] | FLAG_ABOVE |
 | Q1_Lukowski2019 | Cone | 2.96 | [1,7] | in_range |
@@ -37,7 +37,7 @@
 | Q1_Lukowski2019 | Astro | 0.0 | [0,2] | in_range |
 | Q1_Lukowski2019 | Micro | 0.72 | [0,1] | in_range |
 | Q1_Lukowski2019 | RPE | 0.0 | [0,1] | in_range |
-| Q1_Lukowski2019 | OFF_FACE::OTHER | 18.81 | null(披露行) | off_face_identity |
+| Q1_Lukowski2019 | OFF_FACE::OTHER | 18.81 | null(disclosure row) | off_face_identity |
 | Q2_GSE155288 | Rod | 30.01 | [22,58] | in_range |
 | Q2_GSE155288 | Cone | 2.1 | [1,7] | in_range |
 | Q2_GSE155288 | BC | 32.61 | [12,33] | in_range |
@@ -48,8 +48,8 @@
 | Q2_GSE155288 | Astro | 0.79 | [0,2] | in_range |
 | Q2_GSE155288 | Micro | 1.83 | [0,1] | FLAG_ABOVE |
 | Q2_GSE155288 | RPE | 0.0 | [0,1] | in_range |
-| Q2_GSE155288 | OFF_FACE::Pericytes | 0.97 | null(披露行) | off_face_identity |
-| Q2_GSE155288 | OFF_FACE::Endothelium | 0.45 | null(披露行) | off_face_identity |
+| Q2_GSE155288 | OFF_FACE::Pericytes | 0.97 | null(disclosure row) | off_face_identity |
+| Q2_GSE155288 | OFF_FACE::Endothelium | 0.45 | null(disclosure row) | off_face_identity |
 | Q3 | Rod | 45.52 | [22,58] | in_range |
 | Q3 | Cone | 1.05 | [1,7] | in_range |
 | Q3 | BC | 15.7 | [12,33] | in_range |
@@ -60,7 +60,7 @@
 | Q3 | Astro | 0.04 | [0,2] | in_range |
 | Q3 | Micro | 0.31 | [0,1] | in_range |
 | Q3 | RPE | 0.0 | [0,1] | in_range |
-| Q3 | OFF_FACE::Other_mapped | 0.42 | null(披露行) | off_face_identity |
+| Q3 | OFF_FACE::Other_mapped | 0.42 | null(disclosure row) | off_face_identity |
 | Q4 | Rod | 8.32 | [22,58] | FLAG_BELOW |
 | Q4 | Cone | 2.35 | [1,7] | in_range |
 | Q4 | BC | 30.25 | [12,33] | in_range |
@@ -71,7 +71,7 @@
 | Q4 | Astro | 1.35 | [0,2] | in_range |
 | Q4 | Micro | 0.79 | [0,1] | in_range |
 | Q4 | RPE | 0.0 | [0,1] | in_range |
-| Q4 | OFF_FACE::Other_mapped | 0.48 | null(披露行) | off_face_identity |
+| Q4 | OFF_FACE::Other_mapped | 0.48 | null(disclosure row) | off_face_identity |
 | Q5b | Rod | 26.12 | [22,58] | in_range |
 | Q5b | Cone | 5.64 | [1,7] | in_range |
 | Q5b | BC | 25.72 | [12,33] | in_range |
@@ -82,7 +82,7 @@
 | Q5b | Astro | 0.14 | [0,2] | in_range |
 | Q5b | Micro | 0.03 | [0,1] | in_range |
 | Q5b | RPE | 0.02 | [0,1] | in_range |
-| Q5b | OFF_FACE::glial cell | 4.37 | null(披露行) | off_face_identity |
+| Q5b | OFF_FACE::glial cell | 4.37 | null(disclosure row) | off_face_identity |
 | Q7 | Rod | 9.44 | [22,58] | FLAG_BELOW |
 | Q7 | Cone | 1.34 | [1,7] | in_range |
 | Q7 | BC | 40.91 | [12,33] | FLAG_ABOVE |
@@ -93,9 +93,9 @@
 | Q7 | Astro | 0.0 | [0,2] | in_range |
 | Q7 | Micro | 0.45 | [0,1] | in_range |
 | Q7 | RPE | 0.11 | [0,1] | in_range |
-| Q7 | OFF_FACE::nan | 10.27 | null(披露行) | off_face_identity |
-| Q7 | OFF_FACE::Endothelial | 0.28 | null(披露行) | off_face_identity |
-| Q7 | OFF_FACE::Pericyte | 0.08 | null(披露行) | off_face_identity |
+| Q7 | OFF_FACE::nan | 10.27 | null(disclosure row) | off_face_identity |
+| Q7 | OFF_FACE::Endothelial | 0.28 | null(disclosure row) | off_face_identity |
+| Q7 | OFF_FACE::Pericyte | 0.08 | null(disclosure row) | off_face_identity |
 | Q8 | Rod | 16.85 | [22,58] | FLAG_BELOW |
 | Q8 | Cone | 4.12 | [1,7] | in_range |
 | Q8 | BC | 9.05 | [12,33] | FLAG_BELOW |
@@ -106,8 +106,8 @@
 | Q8 | Astro | 0.0 | [0,2] | in_range |
 | Q8 | Micro | 0.0 | [0,1] | in_range |
 | Q8 | RPE | 0.0 | [0,1] | in_range |
-| Q8 | OFF_FACE::retinal progenitor cell | 32.48 | null(披露行) | off_face_identity |
-| Q8 | OFF_FACE::OFFx cell | 0.21 | null(披露行) | off_face_identity |
+| Q8 | OFF_FACE::retinal progenitor cell | 32.48 | null(disclosure row) | off_face_identity |
+| Q8 | OFF_FACE::OFFx cell | 0.21 | null(disclosure row) | off_face_identity |
 | Q6_D002_sub100k | Corneal Endothelium | 0.07 | [0,1] | in_range |
 | Q6_D002_sub100k | Endothelium | 5.75 | [0,9] | in_range |
 | Q6_D002_sub100k | Epithelium | 43.36 | [7,71] | in_range |
@@ -127,36 +127,36 @@
 | Q9_GSE165784_demo_v2 | Astro | 0.0 | [0,2] | in_range |
 | Q9_GSE165784_demo_v2 | Micro | 17.4 | [0,1] | FLAG_ABOVE |
 | Q9_GSE165784_demo_v2 | RPE | 0.0 | [0,1] | in_range |
-| Q9_GSE165784_demo_v2 | OFF_FACE::Mac_Inflam | 10.73 | null(披露行) | off_face_identity |
-| Q9_GSE165784_demo_v2 | OFF_FACE::Mac_DAMLAM | 10.01 | null(披露行) | off_face_identity |
-| Q9_GSE165784_demo_v2 | OFF_FACE::Mac_MHCII | 9.42 | null(披露行) | off_face_identity |
-| Q9_GSE165784_demo_v2 | OFF_FACE::Mono_Nonclass | 8.24 | null(披露行) | off_face_identity |
-| Q9_GSE165784_demo_v2 | OFF_FACE::Mac_DC | 7.85 | null(披露行) | off_face_identity |
-| Q9_GSE165784_demo_v2 | OFF_FACE::Mac_Tissue | 7.0 | null(披露行) | off_face_identity |
-| Q9_GSE165784_demo_v2 | OFF_FACE::Mono_Classical | 6.82 | null(披露行) | off_face_identity |
-| Q9_GSE165784_demo_v2 | OFF_FACE::Mac_RRD | 4.3 | null(披露行) | off_face_identity |
-| Q9_GSE165784_demo_v2 | OFF_FACE::Myofibroblast | 3.69 | null(披露行) | off_face_identity |
-| Q9_GSE165784_demo_v2 | OFF_FACE::Tcell | 3.52 | null(披露行) | off_face_identity |
-| Q9_GSE165784_demo_v2 | OFF_FACE::Proliferating | 3.12 | null(披露行) | off_face_identity |
-| Q9_GSE165784_demo_v2 | OFF_FACE::Endo_vascular | 2.68 | null(披露行) | off_face_identity |
-| Q9_GSE165784_demo_v2 | OFF_FACE::Pericyte_vascular | 2.48 | null(披露行) | off_face_identity |
-| Q9_GSE165784_demo_v2 | OFF_FACE::MG(候选) | 1.62 | null(披露行) | off_face_identity |
-| Q9_GSE165784_demo_v2 | OFF_FACE::Plasma | 0.61 | null(披露行) | off_face_identity |
-| Q9_GSE165784_demo_v2 | OFF_FACE::pDC | 0.52 | null(披露行) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::Mac_Inflam | 10.73 | null(disclosure row) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::Mac_DAMLAM | 10.01 | null(disclosure row) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::Mac_MHCII | 9.42 | null(disclosure row) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::Mono_Nonclass | 8.24 | null(disclosure row) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::Mac_DC | 7.85 | null(disclosure row) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::Mac_Tissue | 7.0 | null(disclosure row) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::Mono_Classical | 6.82 | null(disclosure row) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::Mac_RRD | 4.3 | null(disclosure row) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::Myofibroblast | 3.69 | null(disclosure row) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::Tcell | 3.52 | null(disclosure row) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::Proliferating | 3.12 | null(disclosure row) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::Endo_vascular | 2.68 | null(disclosure row) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::Pericyte_vascular | 2.48 | null(disclosure row) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::MG(candidate) | 1.62 | null(disclosure row) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::Plasma | 0.61 | null(disclosure row) | off_face_identity |
+| Q9_GSE165784_demo_v2 | OFF_FACE::pDC | 0.52 | null(disclosure row) | off_face_identity |
 
-## 3. 反向质检验算（内建条款）
+## 3. Reverse Quality Control Verification (Built-in Clauses)
 
-- 计入反向质检的健康公开集：Q1/Q2/Q3/Q4/Q5b（共 5 个，人·正常·成人视网膜）。
-- **触发（>20% 类型被旗标）：3 个 —— Q1_Lukowski2019 40.0%; Q2_GSE155288 40.0%; Q3 30.0%**
-- 判读（照实，非结论）：按内建条款，这首先说明 **v0 区间对“跨平台/跨取材区域/分选设计”过窄**，是面的问题不是数据的问题。具体可归因：Q1/Q2=中央凹取材+scRNA 细胞悬液（面主档为 snRNA 核悬液，Astra T2 已声明两口径不可直比）；Q3/Q4=Macroglia 签名拆分口径+CD73/CD90 分选设计抬 BC/MG 压 Rod；Q5b 与面主档同源（HRCA 内部构成）旗标率 0 是**循环自证的上界，不是泛化好**。
-- 处置建议（不代拍，激活另卡另批时随文呈 PI）：v1 按 suspension_type（核/细胞）与取材区域（中央凹/周边/全视网膜/分选）分层出区间；或把“先验面”定义为带设计豁免的条件面。
+- Healthy public datasets included in reverse quality control: Q1/Q2/Q3/Q4/Q5b (total 5, human normal adult retina).
+- **Trigger (>20% types flagged): 3 instances —— Q1_Lukowski2019 40.0%; Q2_GSE155288 40.0%; Q3 30.0%**
+- Reading (factual, not conclusion): Per built-in clauses, this first indicates that the **v0 interval is too narrow for cross-platform/cross-sampling-region/sorting designs**, a scope issue rather than a data issue. Specific attributions: Q1/Q2 = foveal sampling + scRNA cell suspension (main face archive uses snRNA nuclear suspension; Astra T2 has declared the two metrics are not directly comparable); Q3/Q4 = Macroglia signature splitting criteria + CD73/CD90 sorting design elevating BC/MG and suppressing Rods; Q5b shares origin with main face archive (HRCA internal composition), flag rate 0 represents an **upper bound of circular self-validation, not good generalization**.
+- Disposition Recommendation (not auto-approved; submit to PI alongside text when activating separate cards/approvals): Stratify v1 intervals by suspension_type (nuclear/cell) and sampling region (fovea/peripheral/whole retina/sorted); or define the 'prior surface' as a conditional surface with design exemptions.
 
-## 4. 面外身份披露（非旗标，informational）
+## 4. Off-Surface Identity Disclosure (Non-flagged, informational)
 
-### Q8 胎儿（域外轴行为记录）
-- retinal progenitor cell 为最大类 73,566/226,506=32.5%（分母经复核=def.classes 全类合计=全文件）—— 成人面无 progenitor 行，全部入 off_face_identity；发育材料对照成人面的预期行为。
+### Q8 Fetal (Out-of-Domain Axis Behavior Record)
+- retinal progenitor cell is the largest class at 73,569/226,506=32.5% (denominator re-reviewed = def.classes total sum = full file) — The adult surface lacks a progenitor row, so all entries fall into off_face_identity; expected behavior of developmental material against the adult surface.
 
-### 各集面外身份 Top 行
+### Top Off-Surface Identity Rows per Dataset
 - **Q1_Lukowski2019**: OTHER 18.81%
 - **Q2_GSE155288**: Pericytes 0.97%; Endothelium 0.45%
 - **Q3**: Other_mapped 0.42%
@@ -166,7 +166,7 @@
 - **Q8**: retinal progenitor cell 32.48%; OFFx cell 0.21%
 - **Q9_GSE165784_demo_v2**: Mac_Inflam 10.73%; Mac_DAMLAM 10.01%; Mac_MHCII 9.42%; Mono_Nonclass 8.24%; Mac_DC 7.85%; Mac_Tissue 7.0%; Mono_Classical 6.82%; Mac_RRD 4.3%
 
-## 5. 声明
-- 本报告只输出旗标清单与比例分布；旗标≠注释错误；不据本报告判定任何既有注释的对错。
-- 本面未接线、默认 OFF；接线与激活另卡另批。
-- 复现：`python3 scripts/build_expected_composition_v0.py && python3 scripts/selfcheck_comp_v0.py && python3 scripts/gen_md.py`（日志 logs/selfcheck_run.log）。
+## 5. Declaration
+- This report outputs only the flag list and proportion distribution; flags ≠ annotation errors; no existing annotations are judged correct or incorrect based on this report.
+- this face is unwired, default OFF; wiring and activation require a separate task card and approval batch.
+- Reproduction: `python3 scripts/build_expected_composition_v0.py && python3 scripts/selfcheck_comp_v0.py && python3 scripts/gen_md.py` (logs logs/selfcheck_run.log).

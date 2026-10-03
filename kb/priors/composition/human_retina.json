@@ -1,37 +1,37 @@
 {
  "schema": "eyekb-prior/1.0",
  "entry_id": "human_retina",
- "title": "组成基线: 人(正常)神经视网膜细胞组成",
+ "title": "Composition baseline: Human (normal) neural retina cell composition",
  "species": "human",
  "tissue": "retina",
  "disease": null,
  "frozen_date": "2026-09-23",
  "card": "t_39182aa2",
  "evidence_grades": {
-  "A": "本地实测复算(带路径)",
-  "B": "文献原文直接报告",
-  "C": "A级源数据跨研究分布推得的经验区间"
+  "A": "Local empirical recomputation (with path)",
+  "B": "Direct report from original literature",
+  "C": "Empirical intervals derived from cross-study distribution of Grade A source data"
  },
  "sources": [
   {
    "sid": "HRCA317M",
    "kind": "dataset",
    "pmid": "41578023",
-   "label": "HRCA CELLxGENE 合并版 3,177,310 cells (10 majorclass, 全 normal, 6 研究/104 donors, fovea~periphery)",
+   "label": "HRCA CELLxGENE merged version 3,177,310 cells (10 majorclass, all normal, 6 studies/104 donors, fovea~periphery)",
    "path": "/mnt/D/OcularKB/data/HRCA_cellxgene/HRCA_allcells_annotated.h5ad",
-   "computation": "本卡 t_39182aa2 obs.majorclass 复算 (build_priors.py recompute_hrca)"
+   "computation": "This card t_39182aa2 obs.majorclass recomputation (build_priors.py recompute_hrca)"
   },
   {
    "sid": "HRCA_PAPER",
    "kind": "paper",
    "pmid": "41578023",
-   "label": "Li et al., Single-cell atlas of the transcriptome and chromatin accessibility in the human retina. Nat Genet 2026 (整版 ~3.9M cells, 123 RNA 类)"
+   "label": "Li et al., Single-cell atlas of the transcriptome and chromatin accessibility in the human retina. Nat Genet 2026 (full version ~3.9M cells, 123 RNA classes)"
   },
   {
    "sid": "FOVEA_PERIPH",
    "kind": "paper",
    "pmid": "32555229",
-   "label": "Cell Atlas of the Human Fovea and Peripheral Retina (2020) — 中央凹/周边共享类型但比例与表达有区域差"
+   "label": "Cell Atlas of the Human Fovea and Peripheral Retina (2020) — shared types between central fovea/periphery but regional differences in proportions and expression"
   },
   {
    "sid": "AGING_ATLAS",
@@ -55,19 +55,19 @@
    "sid": "DEV_DUAL",
    "kind": "paper",
    "pmid": "39117640",
-   "label": "Single cell dual-omic atlas of the human developing retina (2024) — 发育期含 progenitor, 成体基线不适用"
+   "label": "Single cell dual-omic atlas of the human developing retina (2024) — developmental stage includes progenitors, adult baseline not applicable"
   },
   {
    "sid": "RETLIB41",
    "kind": "kb",
-   "label": "本地 marker 库 markers_v4.1_clean.json v4.1-clean-P0.4",
+   "label": "Local marker library markers_v4.1_clean.json v4.1-clean-P0.4",
    "path": "/mnt/D/EyeKB/kb/markers/markers_v4.1_clean.json"
   }
  ],
  "major_classes": [
   {
    "class": "Rod",
-   "label_cn": "视杆光感受器",
+   "label_cn": "Rod photoreceptors",
    "pct_hrca317m": 33.55,
    "n_cells": 1066056,
    "expected_range_pct": [
@@ -99,7 +99,7 @@
   },
   {
    "class": "Cone",
-   "label_cn": "视锥光感受器",
+   "label_cn": "Cone photoreceptors",
    "pct_hrca317m": 4.0,
    "n_cells": 127060,
    "expected_range_pct": [
@@ -131,7 +131,7 @@
   },
   {
    "class": "BC",
-   "label_cn": "双极细胞",
+   "label_cn": "Bipolar cells",
    "pct_hrca317m": 21.75,
    "n_cells": 691008,
    "expected_range_pct": [
@@ -163,7 +163,7 @@
   },
   {
    "class": "AC",
-   "label_cn": "无长突细胞",
+   "label_cn": "Amacrine cells",
    "pct_hrca317m": 17.99,
    "n_cells": 571579,
    "expected_range_pct": [
@@ -195,7 +195,7 @@
   },
   {
    "class": "HC",
-   "label_cn": "水平细胞",
+   "label_cn": "Horizontal cells",
    "pct_hrca317m": 2.54,
    "n_cells": 80548,
    "expected_range_pct": [
@@ -227,7 +227,7 @@
   },
   {
    "class": "RGC",
-   "label_cn": "神经节细胞",
+   "label_cn": "Ganglion cells",
    "pct_hrca317m": 12.58,
    "n_cells": 399605,
    "expected_range_pct": [
@@ -256,11 +256,11 @@
     "AGING_ATLAS",
     "MULTIOMICS_ATLAS"
    ],
-   "enrichment_note": "RGC 靶向研究 (Chen_rgc pooled 46.2%, Shekhar_legacy 43.6%) 为分选/富集设计, 高比例≠异常"
+   "enrichment_note": "RGC-targeted studies (Chen_rgc pooled 46.2%, Shekhar_legacy 43.6%) use sorting/enrichment designs; high proportion ≠ abnormality"
   },
   {
    "class": "MG",
-   "label_cn": "Müller 胶质",
+   "label_cn": "Müller glia",
    "pct_hrca317m": 6.97,
    "n_cells": 221612,
    "expected_range_pct": [
@@ -292,7 +292,7 @@
   },
   {
    "class": "Astrocyte",
-   "label_cn": "星形胶质",
+   "label_cn": "Astrocytes",
    "pct_hrca317m": 0.44,
    "n_cells": 14085,
    "expected_range_pct": [
@@ -324,7 +324,7 @@
   },
   {
    "class": "Microglia",
-   "label_cn": "小胶质",
+   "label_cn": "Microglia",
    "pct_hrca317m": 0.15,
    "n_cells": 4894,
    "expected_range_pct": [
@@ -352,7 +352,7 @@
   },
   {
    "class": "RPE",
-   "label_cn": "视网膜色素上皮",
+   "label_cn": "Retinal pigment epithelium",
    "pct_hrca317m": 0.03,
    "n_cells": 863,
    "expected_range_pct": [
@@ -382,13 +382,13 @@
     "AGING_ATLAS",
     "MULTIOMICS_ATLAS"
    ],
-   "enrichment_note": "神经视网膜切片中 RPE 高比例提示 RPE/脉络膜混入 (非神经视网膜本体成分)"
+   "enrichment_note": "High RPE proportion in neural retina sections suggests RPE/choroid contamination (not native neural retina components)"
   }
  ],
  "fine_types": {
-  "denominator_note": "cell_type 列细分仅覆盖该 majorclass 已精细注释细胞; % 为亚型/类内注释细胞数",
+  "denominator_note": "cell_type column subdivision covers only finely annotated cells within this majorclass; % represents subtype/intra-class annotated cell counts",
   "BC": {
-   "basis": "BC 亚型注释细胞",
+   "basis": "BC subtype annotated cells",
    "top": [
     [
      "flat midget bipolar cell",
@@ -433,7 +433,7 @@
    ]
   },
   "AC": {
-   "basis": "AC 注释细胞",
+   "basis": "AC annotated cells",
    "top": [
     [
      "GABAergic amacrine",
@@ -454,7 +454,7 @@
    ]
   },
   "RGC": {
-   "basis": "RGC 注释细胞",
+   "basis": "RGC annotated cells",
    "top": [
     [
      "OFF midget GC",
@@ -465,7 +465,7 @@
      38.0
     ],
     [
-     "retinal ganglion cell (未分型)",
+     "retinal ganglion cell (untyped)",
      7.8
     ],
     [
@@ -479,7 +479,7 @@
    ]
   },
   "HC": {
-   "basis": "HC 注释细胞",
+   "basis": "HC annotated cells",
    "top": [
     [
      "H1",
@@ -492,7 +492,7 @@
    ]
   },
   "Cone": {
-   "basis": "Cone 注释细胞",
+   "basis": "Cone annotated cells",
    "top": [
     [
      "retinal cone cell",
@@ -525,7 +525,7 @@
     "RETLIB41",
     "MEMLIB"
    ],
-   "note": "retina 库 legacy_v4 + AUC 候选合并; 正常视网膜内占比极低 (HRCA 0.15%)"
+   "note": "retina library legacy_v4 + AUC candidate merge; extremely low proportion in normal retina (HRCA 0.15%)"
   },
   {
    "cell_type": "Müller glia",
@@ -536,7 +536,7 @@
     "SOX9",
     "S100B",
     "VIM",
-    "AQP4(低)"
+    "AQP4(low)"
    ],
    "evidence": "A",
    "source_ids": [
@@ -560,11 +560,11 @@
     "RETLIB41",
     "HRCA317M"
    ],
-   "note": "神经视网膜标本中 RPE 应近零; 出现即触发 RPE/脉络膜混入旗"
+   "note": "RPE should be near zero in neural retina specimens; presence triggers RPE/choroid contamination flag"
   },
   {
    "cell_type": "Astrocyte",
-   "state": "homeostatic (血管周围)",
+   "state": "homeostatic (perivascular)",
    "markers": [
     "GFAP",
     "AQP4",
@@ -576,29 +576,29 @@
     "RETLIB41",
     "HRCA317M"
    ],
-   "note": "GFAP 上调=反应性胶质旗, 见疾病条目"
+   "note": "GFAP upregulation = reactive gliosis flag, see disease entries"
   }
  ],
  "caveats": [
-  "单样本比例强烈受取材/分选设计影响 (NeuN± 核分选、RGC 富集、fovea vs 周边、lobe vs macular): 跨研究 spread (C 级区间推导依据) = Chen_a/Chen_b/Chen_c/MMD/BCM/Shekhar_legacy 6 组 pooled 的 min~max, 已排除 RGC 靶向组。",
-  "HRCA 10 类词表不含内皮/周细胞 (神经视网膜整合未收录血管类)。真实全视网膜含低比例血管成分; 注释数据出现 Endo/Pericyte 小簇属正常血管, 不打 contamination 旗 (对照疾病条目)。",
-  "RGC 富集样本 (如 Chen_rgc 46.2% RGC, Shekhar legacy 43.6%) 高比例是设计使然 —— 判'异常'前必须先查该数据集建库策略。",
-  "发育/类器官标本不适用本基线 (progenitor 与亚型比例完全不同, 锚 DEV_DUAL/RETINA_ORGANOIDS)。",
-  "PI 提醒: 公开数据自注释本身可能不准 —— 本条所有比例是'带证据等级的先验', 与数据打架时旗标上报, 不硬凑。"
+  "Single-sample proportions strongly influenced by sampling/sorting design (NeuN± nucleus sorting, RGC enrichment, fovea vs periphery, lobe vs macular): cross-study spread (basis for C-grade interval derivation) = min~max of pooled data from Chen_a/Chen_b/Chen_c/MMD/BCM/Shekhar_legacy 6 groups, excluding RGC-targeted groups.",
+  "HRCA 10-class lexical surface excludes endothelial/pericytes (neural retina integration does not include vascular classes). True whole retina contains low-proportion vascular components; small Endo/Pericyte clusters in annotated data represent normal vasculature, do not trigger contamination flag.",
+  "High RGC proportions in enriched samples (e.g., Chen_rgc 46.2% RGC, Shekhar legacy 43.6%) are by design; the dataset construction strategy must be checked before flagging as 'abnormal'.",
+  "Abundant mast cells/eosinophils",
+  "Single-sample proportions strongly influenced by sampling/sorting design (NeuN± nucleus sorting, RGC enrichment, fovea vs periphery, lobe vs macular): cross-study spread (basis for C-grade interval derivation) = min~max of pooled data from Chen_a/Chen_b/Chen_c/MMD/BCM/Shekhar_legacy 6 groups, excluding RGC-targeted groups."
  ],
  "flags": {
   "expected_low_but_present": [
    "Microglia (0.05~0.8%)",
-   "RPE (≈0, 混入即>1%)",
+   "RPE (≈0, >1% indicates contamination)",
    "Astrocyte (0.1~1.5%)"
   ],
   "contamination_suspect": [
-   "高 MT 光感受器碎片区 (解离应激, 见疾病条目)",
-   "外周血髓系大簇 (FCN1/LYZ) —— 全视网膜标本血液残留旗"
+   "High-MT photoreceptor debris zone (dissociation stress, see disease entries)",
+   "Peripheral blood myeloid large cluster (FCN1/LYZ) — blood residue flag for whole-retina specimens"
   ],
   "unexpected": [
-   "progenitor/PCNA+ 大簇 (成人视网膜)",
-   "大量肥大细胞/嗜酸细胞"
+   "Progenitor/PCNA+ large cluster (adult retina)",
+   "Abundant mast cells/eosinophils"
   ]
  },
  "_computed": {

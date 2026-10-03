@@ -1,5 +1,5 @@
 ---
-title: 文献索引: iris
+title: Literature Index: iris
 created: 2026-09-23
 updated: 2026-09-23
 type: query
@@ -8,13 +8,13 @@ sources: [literature_db v2.0_2026-09]
 confidence: high
 ---
 
-# 文献: iris (48 篇, 多标签口径)
+# Literature: iris (48 papers, multi-label scope)
 
-> RAG v2.0 中 tissue_labels 含 iris 的论文清单（含与其他组织共标的论文），按年份倒序。
-> 溯源用 PMID 查询 RAG API: `stage3_retrieve.py --tissue iris --db-dir literature_db/v2.0_2026-09 --cell-type <CT>`
-> 定位 (Claude5 冻结): 仅人机交互辅助引用, 不入打分。
+> List of papers in RAG v2.0 with 'iris' in tissue_labels (including co-labeled tissues), sorted by year descending.
+> Provenance PMID query via RAG API: `stage3_retrieve.py --tissue iris --db-dir literature_db/v2.0_2026-09 --cell-type <CT>`
+> Positioning (Claude5 frozen): For human-AI interaction auxiliary citation only, excluded from scoring.
 
-## 论文列表
+## Paper List
 - PMID41809158 (2026) Are iris masses in lung carcinoma always a metastasis: Two case reports. — *World journal of methodology* [human] tags=iris v=v2.0-new
 - PMID41751906 (2026) Early Transcriptomic Response of Human Iris Stromal Cells During Herpes Simplex Virus Entry Reveals Interplay Between Cell Glycocalyx and Viral Exploitation. — *International journal of molecular sciences* [human] tags=iris v=v2.0-new
 - PMID41309590 (2025) Neuroectoderm-derived iris muscle characterization at the single-cell resolution in native human iris and a pluripotent stem cell eye model. — *Nature communications* [both] tags=iris v=v2.0-new
@@ -66,9 +66,9 @@ confidence: high
 
 ---
 <!-- KB1V2-WIKILINKS v1.1 -->
-## 判读层链接 (判读层链接版本: KB1v2 (2026-09-23, t_16c3e020))
+## Reading Layer Links (Reading layer link version: KB1v2 (2026-09-23, t_16c3e020))
 
-- **组成基线**: [kb/baselines/iris.md](/mnt/D/EyeKB/kb/baselines/iris.md) — 供者级条件参考分布 (锚定 registry 标准集或 t_6f5cc731 映射)
-- **RAG reason-tag**: 每条 PMID 的入库原因/论断关系/证据条件见 `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (键=pmid; 字段 inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` 命中自动联表带出
-- **概念 ID 映射**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
-- 红线: 本页与全部链接内容仅证据引用与 QC 旗, 禁入打分 (ANNOTATION_PROTOCOL_v1.1.md §0)
+- **Composition baseline**: [kb/baselines/iris.md](/mnt/D/EyeKB/kb/baselines/iris.md) — Donor-level conditional reference distribution (anchored to registry standard set or t_6f5cc731 mapping)
+- **RAG reason-tag**: Inclusion reasons/claim relations/evidence conditions for each PMID are in `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (key=pmid; fields inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` hits automatically join this table
+- **Concept ID mapping**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
+- Red line: This page and all linked content are for evidence citation and QC flags only; scoring is prohibited (ANNOTATION_PROTOCOL_v1.1.md §0)

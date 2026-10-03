@@ -3,10 +3,10 @@
  "entry_id": "baseline_human_conjunctiva",
  "tissue": "conjunctiva",
  "species": "human",
- "title": "组成基线骨架: 人 conjunctiva (字段全, 比例=待回填)",
+ "title": "Composition baseline skeleton: Human conjunctiva (fields complete, proportions=pending backfill)",
  "status": "skeleton_mapping_backfilled",
  "organism_stage": "unknown",
- "stage_note": "KB2c 发育轴: 骨架条=unknown (未实算)。回填时必须按发育轴单列 — adult 材料出 adult-only 主档 (>=18y 裁定 Q2), 胎儿/发育期材料另立条目, 禁止胎儿与成人同组织混档 (PI 红线)。",
+ "stage_note": "KB2c developmental axis: Skeleton entry=unknown (not calculated). Backfill must follow developmental axis separation — adult materials go to adult-only primary tier (>=18y adjudication Q2), fetal/developmental materials establish separate entries, mixing fetal and adult same-tissue into one tier prohibited (PI red line).",
  "stage_axis": {
   "field": "organism_stage",
   "levels": [
@@ -15,99 +15,99 @@
    "developing",
    "unknown"
   ],
-  "adult_rule": "UBERON development_stage 数字化年龄 >= 18y 判 adult; 显式成年术语 (late/prime/middle/mature/human adult stage, 年代段>=3rd) 亦判 adult 并记 rule; 阈值改动须过裁定 (KB2c Q2, 2026-09-23)",
-  "developing_rule": "newborn/infant/postnatal stage 与 <18y 数字年龄/年龄段 → developing (KB2c Q2)",
-  "fetal_rule": "fetal/embryonic/gestation/Carnegie 术语 → fetal; 永不并入 adult 主档 (红线1)",
-  "unknown_rule": "无年龄列/未映射术语/organoid/年龄段跨阈值 → unknown, 必须披露行, 禁静默归 adult (红线2)",
-  "aging_note": ">=60 老年分层不在本轴 — aging 是正交独立轴, 将来单独立条目 (裁定 Q2)",
-  "source_col": "obs/development_stage (UBERON 原值逐行保留; 汇总见 stage_disclosure, 排除清单见 excluded_nonadult_units)",
+  "adult_rule": "UBERON development_stage digital age >= 18y judged adult; explicit adult terms (late/prime/middle/mature/human adult stage, decade >=3rd) also judged adult and rule recorded; threshold changes require adjudication (KB2c Q2, 2026-09-23)",
+  "developing_rule": "newborn/infant/postnatal stage and <18y digital age/age range → developing (KB2c Q2)",
+  "fetal_rule": "fetal/embryonic/gestation/Carnegie terms → fetal; never merged into adult main archive (Red Line 1)",
+  "unknown_rule": "No age column/unmapped terms/organoid/age range crossing threshold → unknown, disclosure line mandatory, silent assignment to adult prohibited (Red Line 2)",
+  "aging_note": ">=60 elderly stratification not on this axis — aging is an orthogonal independent axis, future separate entry (adjudication Q2)",
+  "source_col": "obs/development_stage (UBERON raw values preserved row-by-row; summary see stage_disclosure, exclusion list see excluded_nonadult_units)",
   "tier_ids": {
    "adult_only": "baseline_human_conjunctiva__adult_only__kb2c",
    "adult_pool": "baseline_human_conjunctiva__adult_pool__v1.0"
   }
  },
  "generated": "2026-09-23",
- "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c 发育轴单列 t_be336eee)",
+ "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c developmental axis single column t_be336eee)",
  "card": "t_16c3e020",
  "anchor": {
-  "tier": "骨架 (t_6f5cc731 盘点映射已回填; 供者级比例未算)"
+  "tier": "Skeleton (t_6f5cc731 inventory mapping backfilled; donor-level ratios not calculated)"
  },
  "mapping_from_t_6f5cc731": [
   {
    "acc": "GSE191232",
-   "sp": "人",
-   "scale": "7样本(成人conjunctival epithelium, C16/C15/C10分离物)",
-   "annot": "meta.txt含细胞群",
-   "avail": "counts+meta+umap 全处理件可直接拉",
-   "note": "唯一\"成人正常结膜上皮\"处理件；但样本=气液界面类器官模型,非新鲜组织图谱"
+   "sp": "Human",
+   "scale": "7 samples (adult conjunctival epithelium, C16/C15/C10 isolates)",
+   "annot": "cell types present in meta.txt",
+   "avail": "counts+meta+umap fully processed files can be pulled directly",
+   "note": "Only \"adult normal conjunctival epithelium\" processed dataset; but samples = air-liquid interface organoid models, not fresh tissue atlases"
   },
   {
    "acc": "GSE155683",
-   "sp": "人",
-   "scale": "17胎儿+4成人 conjunctiva",
+   "sp": "Human",
+   "scale": "17 fetal + 4 adult conjunctiva",
    "annot": "paper",
    "avail": "SRA+portal",
-   "note": "发育为主的附属覆盖"
+   "note": "Development-dominant accessory coverage"
   },
   {
    "acc": "GSE217707",
-   "sp": "人",
-   "scale": "10样本(conjunctival melanoma TME)",
+   "sp": "Human",
+   "scale": "10 samples (conjunctival melanoma TME)",
    "annot": "paper",
-   "avail": "仅RAW.tar",
-   "note": "肿瘤上下文,非正常参考"
+   "avail": "Only RAW.tar",
+   "note": "Tumor context, not normal reference"
   },
   {
    "acc": "Tabula Sapiens - Eye (34,273)",
-   "sp": "人",
-   "scale": "全身器官含conjunctiva标签,眼占比小",
+   "sp": "Human",
+   "scale": "Whole-body organs include conjunctiva label, ocular proportion small",
    "annot": "portal",
    "avail": "portal h5ad",
-   "note": "零散覆盖不构成图谱"
+   "note": "Scattered coverage does not constitute an atlas"
   },
   {
-   "acc": "OA-D002 眼表collection",
-   "sp": "人",
-   "scale": "portal tissue标签未单列conjunctiva(仅cornea/limbus/sclera)",
+   "acc": "OA-D002 ocular surface collection",
+   "sp": "Human",
+   "scale": "Portal tissue labels do not list conjunctiva separately (only cornea/limbus/sclera)",
    "annot": "portal",
    "avail": "portal",
-   "note": "⚠GEO原文有conjunctiva但portal label未透出——建结膜参考需从GSE155683原始注释切"
+   "note": "⚠GEO original text has conjunctiva but portal label did not expose it — building conjunctival reference requires cutting from GSE155683 original annotations"
   }
  ],
- "verdict": "⚠️数据不足（无成人正常结膜专门单细胞图谱；只有类器官模型GSE191232+发育附属GSE155683+Tabula零散。建议：并入眼表做\"conjunctival epithelium\"亚群标注，不单建11类之独立模型）",
+ "verdict": "⚠️Insufficient data (no dedicated single-cell atlas for adult normal conjunctiva; only organoid model GSE191232 + developmental accessory GSE155683 + Tabula scattered. Recommendation: integrate into ocular surface as \"conjunctival epithelium\" subgroup annotation; do not build independent model among the 11 classes)",
  "local_file_pointer": null,
  "t2_fields": {
-  "取样材料": "待定 (骨架: 建基线前必须先固定实际取样材料口径, Astra T2)",
-  "疾病阶段": "待定",
-  "治疗背景": "待定",
-  "scRNA_vs_snRNA": "待定",
-  "富集步骤": "待定",
-  "解离方法": "待定",
-  "供者数": "待定",
-  "计数分母": "待定",
-  "证据来源": "见 mapping_from_t_6f5cc731 各候选数据集"
+  "sampling_material": "Pending (skeleton: Must fix actual sampling material standards before building baseline, Astra T2)",
+  "disease_stage": "Pending",
+  "treatment_background": "Pending",
+  "scRNA_vs_snRNA": "Pending",
+  "enrichment_step": "Pending",
+  "dissociation_method": "Pending",
+  "donor_count": "Pending",
+  "counting_denominator": "Pending",
+  "evidence_source": "See mapping_from_t_6f5cc731 candidate datasets"
  },
- "usage_scope": "用途口径 (Astra T2 裁定固化): 本基线 = 该取样材料在该实验流程下捕获到的细胞构成的身份参考 + 背景对照; **不得当组成达标线**。疾病手术材料的取样对象 ≠ 健康器官 (如 PDR 纤维血管膜不得对照健康视网膜组成验收); 注释数据出现清单外身份 → 触发 unexpected 旗即可, 不得强制改成清单内身份 (标签接受上下文一致性核查, 非白名单定位)。",
+ "usage_scope": "Usage scope (Astra T2 adjudication fixed): This baseline = identity reference for cell composition captured by this sampling material under this experimental workflow + background control; **must not be treated as a composition compliance threshold**. Sampling subjects of disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition acceptance); appearance of identities outside the annotation data list → trigger unexpected flag only, do not force change to in-list identities (label acceptance requires contextual consistency check, not whitelist positioning).",
  "evidence_grades": {
-  "A": "本地实测复算 (带文件路径+脚本)",
-  "B": "文献原文直接报告",
-  "C": "A 级源数据供者级/跨研究分布推得的经验区间",
-  "qualitative": "文献仅定性描述 → 只存定性, 不补造区间 (Astra T2)",
-  "not_estimable": "区间无法估计 —— 合法状态, 注释仍可开展 (Astra T2)"
+  "A": "Local empirical recalculation (with file paths + scripts)",
+  "B": "Direct report from original literature",
+  "C": "Empirical intervals derived from donor-level/cross-study distribution of A-grade source data",
+  "qualitative": "Literature provides only qualitative description → store qualitative only, do not fabricate intervals (Astra T2)",
+  "not_estimable": "Interval cannot be estimated — legitimate state, annotation can proceed (Astra T2)"
  },
  "distribution_method": null,
  "donor_level_main": null,
- "composition_status": "区间无法估计 (合法状态, Astra T2) —— 待按映射候选数据集做供者级计算; 数据不在本地者须先过下载审批铁律",
+ "composition_status": "Interval cannot be estimated (legal status, Astra T2) — pending donor-level calculation based on mapped candidate datasets; data not local must first pass download approval iron rule",
  "major_classes": [],
- "backfill_path": "①候选数据本地化状态核实 → ②官方注释切片 (celltype-annotation-sourcing 纪律) → ③本脚本追加 build_<tissue>() 供者级复算 → ④基线状态改 filled_donor_level → ⑤KB2c 发育轴: 仅 adult (>=18y) 供者入主档, 非 adult 逐行披露; 胎儿/发育期材料单独立条目, 禁并入 adult",
+ "backfill_path": "①Verify localization status of candidate data → ②Official annotation slicing (celltype-annotation-sourcing discipline) → ③This script appends build_<tissue>() for donor-level recalculation → ④Change baseline status to filled_donor_level → ⑤KB2c developmental axis: Only adult (>=18y) donors enter primary tier, non-adult disclosed row-by-row; fetal/developmental materials establish separate entries, prohibited from merging into adult",
  "caveats": [
-  "骨架条目不得用于'该组织已有组成基线'的对外表述 (Astra T6: 工程一致性≠正确性证据)"
+  "Skeleton entries must not be used for external statements claiming 'composition baseline exists for this tissue' (Astra T6: Engineering consistency ≠ evidence of correctness)"
  ],
  "axis_version": "kb2c-1.1",
  "development_stage": "unknown",
- "development_stage_prohibition": "KB3 禁令 (PI 红线 2026-09-23): 发育期数据不得进成人基线统计池, 反之亦然 —— 同一组织胎儿≠成人, adult/fetal 不互为参照。",
+ "development_stage_prohibition": "KB3 Prohibition (PI Red Line 2026-09-23): Developmental data must not enter adult baseline statistical pool, and vice versa — same tissue fetal ≠ adult, adult/fetal do not serve as mutual references.",
  "kb3_card": "t_5425a7ca",
- "kb3_applicable_stage_at_backfill": "adult —— 适用锚=HRCA/D002 等成人锚 (写死); 但供者级比例未实算, development_stage 维持 unknown 直至回填, 禁提前写 adult (KB2c 红线2)",
+ "kb3_applicable_stage_at_backfill": "adult —— Applicable anchor = HRCA/D002 and other adult anchors (hardcoded); however, donor-level proportions are not yet computed; development_stage remains unknown until backfilled; premature labeling as 'adult' is prohibited (KB2c Red Line 2)",
  "identity_signature": {
   "baseline_human_conjunctiva__adult_only__kb2c": "sha256:dcccf0756583f985c20e22350059788d7573c5ec0cfdaf448b18d5408338ddf2"
  }

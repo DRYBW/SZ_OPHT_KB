@@ -16,10 +16,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "基因大小写惯例（人全大写/鼠首字母大写）撞车致物种旗误判与 join 失败",
-   "observable_signature": "面板命中率<50% 且生物学解释前，先查大小写/ID 体系即可复位",
+   "failure_mode": "Gene capitalization convention collisions (human all caps/mouse first letter cap) cause species flag misjudgment and join failures",
+   "observable_signature": "Before biological interpretation when panel hit rate <50%, first check capitalization/ID system to reset",
    "risk_level": "high",
-   "mitigation": "symbol 匹配一律 .str.upper() 后 join + ortholog 表（HGNC/MGI 正式映射）；任何面板命中率<50% 先查大小写/ID 体系再谈生物学。",
+   "mitigation": "Symbol matching always .str.upper() then join + ortholog table (HGNC/MGI official mapping); any panel hit rate <50% requires checking capitalization/ID system before discussing biology.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -33,16 +33,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/kbgov_b5impl_20260928/B5IMPL_COMPLETED.md §1(27行)+降级开关节；/mnt/D/EyeKB/plans/kb_gov_20260928/KBGOV_CANDIDATE.md §边界(81行)；/mnt/D/EyeKB/plans/s0_probe_20260930/BRIEF_S0PROBE.md 物种节"
+    "/mnt/D/EyeKB/plans/kbgov_b5impl_20260928/B5IMPL_COMPLETED.md §1(27 lines)+degradation switch; /mnt/D/EyeKB/plans/kb_gov_20260928/KBGOV_CANDIDATE.md §boundary(81 lines); /mnt/D/EyeKB/plans/s0_probe_20260930/BRIEF_S0PROBE.md species section"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "mouse__retina",
     "b1_order": 2,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "B5 治理本体跨物种；规则文本全量化"
+    "home_rationale": "B5 governance ontology cross-species; full quantification of rule text"
    }
   }
  ],

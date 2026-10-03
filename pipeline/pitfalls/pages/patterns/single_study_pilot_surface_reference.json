@@ -16,10 +16,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "单研究、无供体级区间的\"试点面\"被当作组成对照参照→单批次偏置转成系统性假旗，且无供体级置信带可查",
-   "observable_signature": "状态登记实证：一面 status=observed_single_study_pilot（无供体级区间），组成对照不参与打分判据已在册（评审停令6：≠无风险≠无 marker）",
+   "failure_mode": "Treating a 'pilot face' with single study/no donor-level intervals as a composition control reference converts single-batch bias into systematic false flags, with no donor-level confidence bands available for check",
+   "observable_signature": "Status registration evidence: one face status=observed_single_study_pilot (no donor-level intervals); composition control exclusion from scoring criteria already registered (Review Stop Order 6: ≠ no risk ≠ no marker)",
    "risk_level": "medium",
-   "mitigation": "试点/单研究面入组成对照前自动挂 coverage/panel_gap 旗标；组成打分禁用，只可描述；面板补录候选转建设线工单",
+   "mitigation": "Automatically attach coverage/panel_gap flags before pilot/single-study faces enter composition controls; composition scoring disabled, description only; panel supplementation candidates converted to construction line work orders",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -33,16 +33,16 @@
    "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/kb/baselines/lacrimal_gland.json status 字段"
+    "/mnt/D/EyeKB/kb/baselines/lacrimal_gland.json status field"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "b2_stock_20260930",
     "b1_order": 4,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "面状态语义失效与坐标无关（任何组织试点期同型→PATTERN）"
+    "home_rationale": "Face status semantic failure is coordinate-independent (any tissue pilot phase same pattern → PATTERN)"
    }
   }
  ],

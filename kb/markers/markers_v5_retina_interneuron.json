@@ -185,7 +185,7 @@
    "MITF"
   ]
  },
- "note": "v5 = v4.1-clean-P0.4 全量继承 + BC/AC/HC 泛型core(25/类)+高频亚型锚 补录 (t_9714f560 / plans/kb5_interneuron_20260924); 面板自 HRCA D001 author 注释 pairwise DE 供体分层门 (DERIVATION_v2.md 预注册, v0 门缺陷修复: 检出绝对差制+光感受器丰度轨+复合排序+高检出保证席+匿名出局+锚core强制互补), 逐基因溯源见 provenance; 查询侧现役库仍为 v4.1。发布依据 S1 版本B truth∈top-3 = 18/22 (热点清单按 truthfix errata v1.1: 原 23 簇移除作者错标不可修靶 Q2::18 (corrected truth=Rod, 审计 t_89d02fde), 球门 >=15/22 为分母真实收缩非降标准; 版本A=19/22 仅机制归因)",
+ "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)",
  "micro_detail": {
   "candidates": [
    "IRF8",
@@ -272,7 +272,7 @@
    "C1QB"
   ],
   "negative_check_class": "Astro",
-  "note": "入选=候选基因 AUC>0.65 且 Micro 中位表达 > Astro 中位表达；legacy 仅诊断对比不参与入选"
+  "note": "Selection = candidate gene AUC>0.65 AND Micro median expression > Astro median expression; legacy used only for diagnostic comparison, not for selection."
  },
  "rpe_detail": {
   "candidates": [
@@ -354,7 +354,7 @@
    "TTR"
   ],
   "negative_check_class": "MG",
-  "note": "入选=候选基因 AUC>0.65 且 RPE 中位表达 > MG 中位表达；legacy 仅诊断对比不参与入选"
+  "note": "Selection = candidate gene AUC>0.65 AND RPE median expression > MG median expression; legacy used only for diagnostic comparison, not for selection."
  },
  "auc_threshold": 0.65,
  "provenance": {
@@ -374,7 +374,7 @@
     },
     {
      "type": "canonical",
-     "note": "HRCA v1 正文点名 BC pan marker (PMID:41578023)"
+     "note": "HRCA v1 body text names BC pan marker (PMID:41578023)"
     },
     {
      "type": "pmid_context",
@@ -501,7 +501,7 @@
     },
     {
      "type": "canonical",
-     "note": "HRCA v1 正文点名 GRM6=ON-BC (PMID:41578023); v4.1 legacy 重合"
+     "note": "HRCA v1 body text names GRM6=ON-BC (PMID:41578023); overlap with v4.1 legacy."
     },
     {
      "type": "pmid_context",
@@ -601,7 +601,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"IGSF21\" AND (\"bipolar cell\"+词形变体) AND retina",
+     "query": "\"IGSF21\" AND (\"bipolar cell\"+lexical variants) AND retina",
      "n_hits": 4,
      "top_titles": [
       "2026:Human CRX regulates photoreceptor cells development via bidirectional transcriptional control in retinal organoids.",
@@ -744,13 +744,13 @@
     },
     {
      "type": "canonical",
-     "note": "HGNC 官方符号=SLC60A1 (Ensembl ENSG00000174514, MFSD4A 为别名); 蛋白编码",
-     "source": "HGNC/MyGene 在线回证 2026-09-24"
+     "note": "HGNC official symbol=SLC60A1 (Ensembl ENSG00000174514, MFSD4A is alias); protein-coding.",
+     "source": "HGNC/MyGene online verification 2026-09-24"
     },
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"MFSD4A\" AND (\"bipolar cell\"+词形变体) AND retina",
+     "query": "\"MFSD4A\" AND (\"bipolar cell\"+lexical variants) AND retina",
      "n_hits": 1,
      "top_titles": [
       "2025:The SLC-ome of membrane transport: From molecular discovery to physiology and clinical applications."
@@ -773,7 +773,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"FAM171B\" AND (\"bipolar cell\"+词形变体) AND retina",
+     "query": "\"FAM171B\" AND (\"bipolar cell\"+lexical variants) AND retina",
      "n_hits": 1,
      "top_titles": [
       "2026:ScRNA-seq Data Reveal Gene Upregulation and Downregulation in Oxygen-Induced Retinopathy."
@@ -889,7 +889,7 @@
     },
     {
      "type": "canonical",
-     "note": "HRCA v1 正文点名 GRIK1=OFF-BC (PMID:41578023); Liang2019 PMID:31436334"
+     "note": "HRCA v1 body text names GRIK1=OFF-BC (PMID:41578023); Liang2019 PMID:31436334"
     },
     {
      "type": "pmid_context",
@@ -1042,7 +1042,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"HS3ST4\" AND (\"bipolar cell\"+词形变体) AND retina",
+     "query": "\"HS3ST4\" AND (\"bipolar cell\"+lexical variants) AND retina",
      "n_hits": 2,
      "top_titles": [
       "2019:Transcriptomic Signatures of Postnatal and Adult Intrinsically Photosensitive Ganglion Cells.",
@@ -1067,7 +1067,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"ADGRL2\" AND (\"bipolar cell\"+词形变体) AND retina",
+     "query": "\"ADGRL2\" AND (\"bipolar cell\"+lexical variants) AND retina",
      "n_hits": 5,
      "top_titles": [
       "2025:Adhesion G-Protein Coupled Receptors in Neurological and Psychiatric Disorders.",
@@ -1196,7 +1196,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"TMEM196\" AND (\"bipolar cell\"+词形变体) AND retina",
+     "query": "\"TMEM196\" AND (\"bipolar cell\"+lexical variants) AND retina",
      "n_hits": 2,
      "top_titles": [
       "2026:Integrated Transcriptomics and Experimental Validation Reveal Müller Cell-Driven PANoptosis in Diabetic Retinopathy via PSAP-",
@@ -1270,7 +1270,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"SLC24A3\" AND (\"bipolar cell\"+词形变体) AND retina",
+     "query": "\"SLC24A3\" AND (\"bipolar cell\"+lexical variants) AND retina",
      "n_hits": 2,
      "top_titles": [
       "2023:Vision-Dependent and -Independent Molecular Maturation of Mouse Retinal Ganglion Cells.",
@@ -1320,7 +1320,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"COL19A1\" AND (\"bipolar cell\"+词形变体) AND retina",
+     "query": "\"COL19A1\" AND (\"bipolar cell\"+lexical variants) AND retina",
      "n_hits": 3,
      "top_titles": [
       "2024:Neural extracellular matrix regulates visual sensory motor integration.",
@@ -1393,7 +1393,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"TMEM132C\" AND (\"bipolar cell\"+词形变体) AND retina",
+     "query": "\"TMEM132C\" AND (\"bipolar cell\"+lexical variants) AND retina",
      "n_hits": 1,
      "top_titles": [
       "2022:Selecting Genetic Variants and Interactions Associated with Amyotrophic Lateral Sclerosis: A Group LASSO Approach."
@@ -1502,25 +1502,25 @@
    "VSX2": [
     {
      "type": "canonical",
-     "note": "v4.1 legacy 保留 (不删旧红线)"
+     "note": "v4.1 legacy retained (old red lines not deleted)"
     }
    ],
    "CACNA1S": [
     {
      "type": "canonical",
-     "note": "v4.1 legacy 保留 (不删旧红线)"
+     "note": "v4.1 legacy retained (old red lines not deleted)"
     }
    ],
    "ISL1": [
     {
      "type": "canonical",
-     "note": "v4.1 legacy 保留 (不删旧红线)"
+     "note": "v4.1 legacy retained (old red lines not deleted)"
     }
    ],
    "OTX2": [
     {
      "type": "canonical",
-     "note": "v4.1 legacy 保留 (不删旧红线)"
+     "note": "v4.1 legacy retained (old red lines not deleted)"
     }
    ]
   },
@@ -1588,7 +1588,7 @@
     },
     {
      "type": "canonical",
-     "note": "GABAergic amacrine canonical (人图谱通用); v4.1 legacy 重合"
+     "note": "GABAergic amacrine canonical (common in human atlases); overlap with v4.1 legacy."
     },
     {
      "type": "pmid_context",
@@ -1664,7 +1664,7 @@
     },
     {
      "type": "canonical",
-     "note": "GABAergic amacrine canonical; v4.1 legacy 重合"
+     "note": "GABAergic amacrine canonical; overlap with v4.1 legacy."
     },
     {
      "type": "pmid_context",
@@ -1765,7 +1765,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"LRRTM3\" AND (\"amacrine cell\"+词形变体) AND retina",
+     "query": "\"LRRTM3\" AND (\"amacrine cell\"+lexical variants) AND retina",
      "n_hits": 2,
      "top_titles": [
       "2026:Synergistic inhibition of Notch signaling and forced cell cycle re-entry drive Müller glia reprogramming in uninjured mouse r",
@@ -1860,7 +1860,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"CAMKV\" AND (\"amacrine cell\"+词形变体) AND retina",
+     "query": "\"CAMKV\" AND (\"amacrine cell\"+lexical variants) AND retina",
      "n_hits": 2,
      "top_titles": [
       "2017:Mechanisms regulating dendritic arbor patterning.",
@@ -1980,7 +1980,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"SCN3B\" AND (\"amacrine cell\"+词形变体) AND retina",
+     "query": "\"SCN3B\" AND (\"amacrine cell\"+lexical variants) AND retina",
      "n_hits": 1,
      "top_titles": [
       "2022:Single-Cell RNA-Seq Reveals the Cellular Diversity and Developmental Characteristics of the Retinas of an Infant and a Young "
@@ -2029,7 +2029,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"SLC35F3\" AND (\"amacrine cell\"+词形变体) AND retina",
+     "query": "\"SLC35F3\" AND (\"amacrine cell\"+lexical variants) AND retina",
      "n_hits": 1,
      "top_titles": [
       "2021:Photoreceptor cKO of OTX2 Enhances OTX2 Intercellular Transfer in the Retina and Causes Photophobia."
@@ -2101,7 +2101,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"GLCE\" AND (\"amacrine cell\"+词形变体) AND retina",
+     "query": "\"GLCE\" AND (\"amacrine cell\"+lexical variants) AND retina",
      "n_hits": 2,
      "top_titles": [
       "2014:MicroRNAs in the Neural Retina.",
@@ -2126,7 +2126,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"ZFPM2\" AND (\"amacrine cell\"+词形变体) AND retina",
+     "query": "\"ZFPM2\" AND (\"amacrine cell\"+lexical variants) AND retina",
      "n_hits": 3,
      "top_titles": [
       "2024:Single cell dual-omic atlas of the human developing retina.",
@@ -2199,7 +2199,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"TMEM132D\" AND (\"amacrine cell\"+词形变体) AND retina",
+     "query": "\"TMEM132D\" AND (\"amacrine cell\"+lexical variants) AND retina",
      "n_hits": 1,
      "top_titles": [
       "2026:Synergistic inhibition of Notch signaling and forced cell cycle re-entry drive Müller glia reprogramming in uninjured mouse r"
@@ -2223,7 +2223,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"AK5\" AND (\"amacrine cell\"+词形变体) AND retina",
+     "query": "\"AK5\" AND (\"amacrine cell\"+lexical variants) AND retina",
      "n_hits": 1,
      "top_titles": [
       "2016:The cellular and compartmental profile of mouse retinal glycolysis, tricarboxylic acid cycle, oxidative phosphorylation, and "
@@ -2247,7 +2247,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"SPHKAP\" AND (\"amacrine cell\"+词形变体) AND retina",
+     "query": "\"SPHKAP\" AND (\"amacrine cell\"+lexical variants) AND retina",
      "n_hits": 2,
      "top_titles": [
       "2023:Atlas of phosphoinositide signatures in the retina identifies heterogeneity between cell types.",
@@ -2272,7 +2272,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"LNX1\" AND (\"amacrine cell\"+词形变体) AND retina",
+     "query": "\"LNX1\" AND (\"amacrine cell\"+lexical variants) AND retina",
      "n_hits": 1,
      "top_titles": [
       "2023:Intralumenal docking of connexin 36 channels in the ER isolates mistrafficked protein."
@@ -2399,7 +2399,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"ATP8B4\" AND (\"amacrine cell\"+词形变体) AND retina",
+     "query": "\"ATP8B4\" AND (\"amacrine cell\"+lexical variants) AND retina",
      "n_hits": 2,
      "top_titles": [
       "2024:Remyelination protects neurons from DLK-mediated neurodegeneration.",
@@ -2473,7 +2473,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"GREB1L\" AND (\"amacrine cell\"+词形变体) AND retina",
+     "query": "\"GREB1L\" AND (\"amacrine cell\"+lexical variants) AND retina",
      "n_hits": 1,
      "top_titles": [
       "2019:Genetics and functions of the retinoic acid pathway, with special emphasis on the eye."
@@ -2546,7 +2546,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"SNTG1\" AND (\"amacrine cell\"+词形变体) AND retina",
+     "query": "\"SNTG1\" AND (\"amacrine cell\"+lexical variants) AND retina",
      "n_hits": 1,
      "top_titles": [
       "2023:Tissue- and cell-specific whole-transcriptome meta-analysis from brain and retina reveals differential expression of dystroph"
@@ -2570,7 +2570,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"DACH2\" AND (\"amacrine cell\"+词形变体) AND retina",
+     "query": "\"DACH2\" AND (\"amacrine cell\"+lexical variants) AND retina",
      "n_hits": 2,
      "top_titles": [
       "2024:Identifying X-chromosome variants associated with age-related macular degeneration.",
@@ -2659,19 +2659,19 @@
    "TFAP2A": [
     {
      "type": "canonical",
-     "note": "v4.1 legacy 保留 (不删旧红线)"
+     "note": "v4.1 legacy retained (old red lines not deleted)"
     }
    ],
    "SLC6A9": [
     {
      "type": "canonical",
-     "note": "v4.1 legacy 保留 (不删旧红线)"
+     "note": "v4.1 legacy retained (old red lines not deleted)"
     }
    ],
    "ONECUT2": [
     {
      "type": "canonical",
-     "note": "v4.1 legacy 保留 (不删旧红线)"
+     "note": "v4.1 legacy retained (old red lines not deleted)"
     }
    ]
   },
@@ -2692,7 +2692,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"FRMPD4\" AND (\"horizontal cell\"+词形变体) AND retina",
+     "query": "\"FRMPD4\" AND (\"horizontal cell\"+lexical variants) AND retina",
      "n_hits": 2,
      "top_titles": [
       "2026:Interleukin 27-induced photoreceptor survival is associated with suppression of a novel Muller glia subpopulation.",
@@ -2740,7 +2740,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"PCSK6\" AND (\"horizontal cell\"+词形变体) AND retina",
+     "query": "\"PCSK6\" AND (\"horizontal cell\"+lexical variants) AND retina",
      "n_hits": 3,
      "top_titles": [
       "2026:Protocol for retinal stress culture and single-cell analysis.",
@@ -2787,7 +2787,7 @@
     },
     {
      "type": "canonical",
-     "note": "HC 富集 (人/鼠 HC 文献; 亦 v4.1 AC legacy — 双类注记见 concepts)"
+     "note": "HC enrichment (human/mouse HC literature; also v4.1 AC legacy — dual-class annotation see concepts)"
     },
     {
      "type": "pmid_context",
@@ -2816,7 +2816,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"DOCK10\" AND (\"horizontal cell\"+词形变体) AND retina",
+     "query": "\"DOCK10\" AND (\"horizontal cell\"+lexical variants) AND retina",
      "n_hits": 2,
      "top_titles": [
       "2025:Single-Cell RNA-Seq Reveals Aging-Related Impairment of Microglial Efferocytosis Contributing to Apoptotic Cells Accumulation",
@@ -2839,7 +2839,7 @@
     },
     {
      "type": "canonical",
-     "note": "HC canonical (v4.1 legacy 同源; PMID:41578023)"
+     "note": "HC canonical (v4.1 legacy homologous; PMID:41578023)"
     },
     {
      "type": "pmid_context",
@@ -2913,7 +2913,7 @@
     },
     {
      "type": "canonical",
-     "note": "HC canonical (v4.1 legacy 同源)"
+     "note": "HC canonical (v4.1 legacy homologous)"
     },
     {
      "type": "pmid_context",
@@ -2942,7 +2942,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"SESTD1\" AND (\"horizontal cell\"+词形变体) AND retina",
+     "query": "\"SESTD1\" AND (\"horizontal cell\"+lexical variants) AND retina",
      "n_hits": 2,
      "top_titles": [
       "2024:Inhibition of oxidative stress-induced epithelial-mesenchymal transition in retinal pigment epithelial cells of age-related m",
@@ -2989,7 +2989,7 @@
     {
      "type": "pmid_context",
      "source": "EuropePMC",
-     "query": "\"BEGAIN\" AND (\"horizontal cell\"+词形变体) AND retina",
+     "query": "\"BEGAIN\" AND (\"horizontal cell\"+lexical variants) AND retina",
      "n_hits": 1,
      "top_titles": [
       "2019:Uveitis and Multiple Sclerosis: Potential Common Causal Mutations."
@@ -3248,7 +3248,7 @@
     },
     {
      "type": "canonical",
-     "note": "horizontal cell canonical (LHX1/LHX5 HC 发育文献)"
+     "note": "horizontal cell canonical (LHX1/LHX5 HC developmental literature)"
     },
     {
      "type": "pmid_context",
@@ -3361,19 +3361,19 @@
    "GAD1": [
     {
      "type": "canonical",
-     "note": "v4.1 legacy 保留 (不删旧红线)"
+     "note": "v4.1 legacy retained (old red lines not deleted)"
     }
    ],
    "ISL1": [
     {
      "type": "canonical",
-     "note": "v4.1 legacy 保留 (不删旧红线)"
+     "note": "v4.1 legacy retained (old red lines not deleted)"
     }
    ],
    "CX3CR1": [
     {
      "type": "canonical",
-     "note": "v4.1 legacy 保留 (不删旧红线)"
+     "note": "v4.1 legacy retained (old red lines not deleted)"
     }
    ]
   }
@@ -3381,39 +3381,39 @@
  "derivation": {
   "reference": "HRCA v1 (PMID 41578023, doi 10.1038/s41588-025-02454-1) /mnt/D/OcularKB/data/HRCA_cellxgene/HRCA_allcells_annotated.h5ad md5 ce5cb05e457093201df0b18ca02ea6fd; agg sha256 c5c99e88a548bf0401bb6149769fc752300a620a03420217713e78e470c11fb8",
   "method": "pseudobulk CPM pairwise (class vs each comparator majorclass >=5000 cells) + per-donor sign-consistency + detection absolute-diff (non-photoreceptor) + photoreceptor fold>=2 track + composite rank score + high-det quota (>=13/25) + anonymous-symbol drop + subtype anchors (<=5/sub, disjoint from core); gates pre-registered in plans/kb5_interneuron_20260924/DERIVATION_v2.md",
-  "leakage_disclosure": "v2 设计者已见 v0 逐簇失败诊断(含考卷侧基因名); 准入判据全部为 D001 侧统计与文献的函数, 判据冻结先于 S1; 验收原预注册 >=15/23; 执行中经独立真值审计 (t_89d02fde) + 协调者准绳更新 (2026-09-24 20:08 卡内评论) 分母收缩为 >=15/22 (移除不可修靶 Q2::18, 唯一差集), 属考卷侧真值勘误而非降标准; 见 §8 执行日志与 truthfix_rescore.log",
+  "leakage_disclosure": "v2 designer reviewed v0 per-cluster failure diagnostics (including exam-side gene names); admission criteria are all functions of D001-side statistics and literature, frozen prior to S1; acceptance originally pre-registered >=15/23; during execution, independent ground truth audit (t_89d02fde) + coordinator benchmark update (2026-09-24 20:08 card comment) reduced denominator to >=15/22 (removing unfixable target Q2::18, the sole difference set), constituting an exam-side ground truth correction rather than a standard lowering; see §8 execution log and truthfix_rescore.log",
   "curation_dropped": [
-   "BC:NYAP2(core) drop: R5-b 编码基因两路检索无 (类别+retina) 文献语境 → 类别支持缺失弃用",
-   "BC:SAMSN1-AS1(core) drop: R5-a 非编码(ncRNA)两路检索无 (类别+retina) 文献语境 → 弱证据弃用",
-   "BC:LINC00470(core) drop: R5-a 非编码(?)两路检索无 (类别+retina) 文献语境 → 弱证据弃用",
-   "BC:KCNMA1-AS1(core) drop: R5-a 非编码(ncRNA)两路检索无 (类别+retina) 文献语境 → 弱证据弃用",
-   "BC:SAMD5(anchor) drop: R5-b 编码基因两路检索无 (类别+retina) 文献语境 → 类别支持缺失弃用",
-   "BC:CTB-1I21.1(anchor) drop: R5-a 非编码(ncRNA)两路检索无 (类别+retina) 文献语境 → 弱证据弃用",
-   "BC:CRYBG3(anchor) drop: R5-b 编码基因两路检索无 (类别+retina) 文献语境 → 类别支持缺失弃用",
-   "BC:MRPS30-DT(anchor) drop: R5-a 非编码(ncRNA)两路检索无 (类别+retina) 文献语境 → 弱证据弃用",
-   "BC:LINC01091(anchor) drop: R5-a 非编码(ncRNA)两路检索无 (类别+retina) 文献语境 → 弱证据弃用",
-   "AC:STXBP5-AS1(core) drop: R5-a 非编码(ncRNA)两路检索无 (类别+retina) 文献语境 → 弱证据弃用",
-   "AC:PLPPR1(core) drop: R5-b 编码基因两路检索无 (类别+retina) 文献语境 → 类别支持缺失弃用",
-   "AC:ASXL3(core) drop: R5-b 编码基因两路检索无 (类别+retina) 文献语境 → 类别支持缺失弃用",
-   "AC:ANKRD30BL(core) drop: R5-b 编码基因两路检索无 (类别+retina) 文献语境 → 类别支持缺失弃用",
-   "AC:ABTB3(core) drop: R5-b 编码基因两路检索无 (类别+retina) 文献语境 → 类别支持缺失弃用",
-   "AC:CLMP(core) drop: R5-b 编码基因两路检索无 (类别+retina) 文献语境 → 类别支持缺失弃用",
-   "AC:INSYN2B(anchor) drop: R5-b 编码基因两路检索无 (类别+retina) 文献语境 → 类别支持缺失弃用",
-   "AC:DYNLRB2-AS1(anchor) drop: R5-a 非编码(?)两路检索无 (类别+retina) 文献语境 → 弱证据弃用",
-   "AC:GASK1B-AS1(anchor) drop: R5-a 非编码(ncRNA)两路检索无 (类别+retina) 文献语境 → 弱证据弃用",
-   "HC:IL12A-AS1(core) drop: R5-a 非编码(ncRNA)两路检索无 (类别+retina) 文献语境 → 弱证据弃用",
-   "HC:SH3GL3(core) drop: R5-b 编码基因两路检索无 (类别+retina) 文献语境 → 类别支持缺失弃用",
-   "HC:HECW1(core) drop: R5-b 编码基因两路检索无 (类别+retina) 文献语境 → 类别支持缺失弃用",
-   "HC:STK10(core) drop: R5-b 编码基因两路检索无 (类别+retina) 文献语境 → 类别支持缺失弃用",
-   "HC:SHISA8(anchor) drop: R5-b 编码基因两路检索无 (类别+retina) 文献语境 → 类别支持缺失弃用",
-   "HC:PLEKHD1(anchor) drop: R5-b 编码基因两路检索无 (类别+retina) 文献语境 → 类别支持缺失弃用",
-   "HC:HS3ST3A1(anchor) drop: R5-b 编码基因两路检索无 (类别+retina) 文献语境 → 类别支持缺失弃用"
+   "BC:NYAP2(core) drop: R5-b coding gene two-path search yielded no (category+retina) literature context → category support missing, discarded",
+   "BC:SAMSN1-AS1(core) drop: R5-a non-coding (ncRNA) two-path search yielded no (category+retina) literature context → weak evidence, discarded",
+   "BC:LINC00470(core) drop: R5-a non-coding (?) two-path search yielded no (category+retina) literature context → weak evidence, discarded",
+   "BC:KCNMA1-AS1(core) drop: R5-a non-coding (ncRNA) two-path search yielded no (category+retina) literature context → weak evidence, discarded",
+   "BC:SAMD5(anchor) drop: R5-b coding gene two-path search yielded no (category+retina) literature context → category support missing, discarded",
+   "BC:CTB-1I21.1(anchor) drop: R5-a non-coding (ncRNA) two-path search yielded no (category+retina) literature context → weak evidence, discarded",
+   "BC:CRYBG3(anchor) drop: R5-b coding gene two-path search yielded no (category+retina) literature context → category support missing, discarded",
+   "BC:MRPS30-DT(anchor) drop: R5-a non-coding (ncRNA) two-path search yielded no (category+retina) literature context → weak evidence, discarded",
+   "BC:LINC01091(anchor) drop: R5-a non-coding (ncRNA) two-path search yielded no (category+retina) literature context → weak evidence, discarded",
+   "AC:STXBP5-AS1(core) drop: R5-a non-coding (ncRNA) two-path search yielded no (category+retina) literature context → weak evidence, discarded",
+   "AC:PLPPR1(core) drop: R5-b coding gene two-path search yielded no (category+retina) literature context → category support missing, discarded",
+   "AC:ASXL3(core) drop: R5-b coding gene two-path search yielded no (category+retina) literature context → category support missing, discarded",
+   "AC:ANKRD30BL(core) drop: R5-b coding gene two-path search yielded no (category+retina) literature context → category support missing, discarded",
+   "AC:ABTB3(core) drop: R5-b coding gene two-path search yielded no (category+retina) literature context → category support missing, discarded",
+   "AC:CLMP(core) drop: R5-b coding gene two-path search yielded no (category+retina) literature context → category support missing, discarded",
+   "AC:INSYN2B(anchor) drop: R5-b coding gene two-path search yielded no (category+retina) literature context → category support missing, discarded",
+   "AC:DYNLRB2-AS1(anchor) drop: R5-a non-coding(?) dual search yielded no (category+retina) literature context → weak evidence, discarded",
+   "AC:GASK1B-AS1(anchor) drop: R5-a non-coding(ncRNA) dual search yielded no (category+retina) literature context → weak evidence, discarded",
+   "HC:IL12A-AS1(core) drop: R5-a non-coding(ncRNA) dual search yielded no (category+retina) literature context → weak evidence, discarded",
+   "HC:SH3GL3(core) drop: R5-b coding gene dual search yielded no (category+retina) literature context → category support missing, discarded",
+   "HC:HECW1(core) drop: R5-b coding gene dual search yielded no (category+retina) literature context → category support missing, discarded",
+   "HC:STK10(core) drop: R5-b coding gene dual search yielded no (category+retina) literature context → category support missing, discarded",
+   "HC:SHISA8(anchor) drop: R5-b coding gene dual search yielded no (category+retina) literature context → category support missing, discarded",
+   "HC:PLEKHD1(anchor) drop: R5-b coding gene dual search yielded no (category+retina) literature context → category support missing, discarded",
+   "HC:HS3ST3A1(anchor) drop: R5-b coding gene dual search yielded no (category+retina) literature context → category support missing, discarded"
   ],
-  "coverage_limits": "core=跨亚型稳定泛型基因(每类<=25); 锚仅覆盖各类细胞数前6高频亚型 (BC: FMB/IMB/RB/DB2/DB5/DB1; AC: AII/HAC2-6; HC: H1/H2), 每亚型<=5; 低频亚型 (SEG*/VIP/nNOS/多数稀有 HAC) 仅 core 或无覆盖 —— 见 concepts EYEKBC-0020/0021/0022 notes",
+  "coverage_limits": "core=stable pan-type genes across subtypes (<=25 per class); anchors cover only top 6 high-frequency subtypes by cell count per class (BC: FMB/IMB/RB/DB2/DB5/DB1; AC: AII/HAC2-6; HC: H1/H2), <=5 per subtype; low-frequency subtypes (SEG*/VIP/nNOS/most rare HAC) have core-only or no coverage — see concepts EYEKBC-0020/0021/0022 notes",
   "acceptance": {
    "run_at": "2026-09-24",
-   "hotspot_surface": "scoring/run3_object_B_table_v1.1.tsv BRIEF 过滤 -> 22 簇 (v1.0->v1.1 唯一差集 = 移除 Q2::18, 实测复算一致)",
-   "gate": ">=15/22 (truthfix errata; 原 >=15/23)",
+   "hotspot_surface": "scoring/run3_object_B_table_v1.1.tsv BRIEF filter -> 22 clusters (v1.0->v1.1 unique difference = removal of Q2::18, verified consistent with recomputation)",
+   "gate": ">=15/22 (truthfix errata; originally >=15/23)",
    "S1_versionA_mech_gate_full": "19/22",
    "S1_versionB_post_curation": "18/22",
    "S1_b_fails": [
@@ -3422,9 +3422,9 @@
     "Q4::15(BC)",
     "Q5b::13(BC)"
    ],
-   "S2a_live_lib_zero_disturb": "290/290 == 冻结 digest (判定前后均通过)",
-   "S2b_structure": "PASS (10 类全等; 7 未改类逐位相等; BC/AC/HC ⊇ v4.1)",
-   "S2c_interface": "PASS (33 类面切换模拟不变, 无冲突; 31 为 keratocyte 补录前旧口径)",
+   "S2a_live_lib_zero_disturb": "290/290 == frozen digest (passed both before and after adjudication)",
+   "S2b_structure": "PASS (10 classes fully equal; 7 unchanged classes bit-wise identical; BC/AC/HC ⊇ v4.1)",
+   "S2c_interface": "PASS (33 class-surface switch simulation invariant, no conflicts; 31 are old metrics prior to keratocyte supplementary record)",
    "curation_dropped_n": 25,
    "evidence_files": [
     "HOTSPOT_KB_RANK_CHECK_v2A.tsv",

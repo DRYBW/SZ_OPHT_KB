@@ -3,38 +3,38 @@
  "entry_id": "baseline_human_RPE",
  "tissue": "RPE",
  "species": "human",
- "title": "组成基线: 人(正常)新鲜分离 RPE 悬液 scRNA — 发育阶段=unknown 档 (OA GSE158629, 供者级 4 供者, 簇身份 marker 推断, KB2c 披露)",
+ "title": "Composition baseline: Human (normal) freshly isolated RPE suspension scRNA — developmental stage=unknown tier (OA GSE158629, donor-level 4 donors, cluster identity inferred from markers, KB2c disclosure)",
  "status": "filled_donor_level",
  "generated": "2026-09-23",
- "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c 发育轴单列 t_be336eee)",
+ "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c developmental axis single column t_be336eee)",
  "card": "t_bad1fbab",
  "anchor": {
-  "registry_row": "mapping_from_t_6f5cc731 GSE158629 行 (未单列 OA-D 号)",
+  "registry_row": "mapping_from_t_6f5cc731 GSE158629 row (OA-D number not listed separately)",
   "local_path": "/mnt/D/OcularKB/data/GSE158629/GSE158629_scrRNA_RPE_donors1-4.RData.gz",
   "geo": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158629",
-  "tier": "T2 处理件回填 (作者 Seurat RData; 无官方 celltype 列 → 本项目 marker 标注)"
+  "tier": "T2 processed file backfill (author Seurat RData; no official celltype column → marker annotation by this project)"
  },
  "t2_fields": {
-  "取样材料": "人新鲜分离 RPE 单层细胞 (4 具成人供体眼, stage=Fresh; GEO: 'RPE cells were isolated from four adult human donor eyes')",
-  "疾病阶段": "normal (健康供体; 处理件元数据无疾病列)",
-  "治疗背景": "未记录 (处理件元数据无治疗列) —— 标'未记录', 不臆测",
-  "scRNA_vs_snRNA": "scRNA-seq 全细胞 (donor1=10x 3'; donor2-4=ICELL8 液滴克隆) —— 与 snRNA 条 (retina/optic_nerve) 口径不同, 不可直接互比",
-  "富集步骤": "RPE 层机械+酶分离富集 (组织级); 无荧光分选记录 —— 分离流程本身即'富集'",
-  "解离方法": "新鲜眼离体后 RPE 分离 (GEO Methods; 处理件无解离试剂列, 细节未记录)",
-  "供者数": "4 (donor1=10x, donor2-4=ICELL8 —— 平台与供者完全捆绑, tech 分层=描述性) —— KB2c: cells_meta 无年龄列, 本条 organism_stage=unknown (GEO 文字记 'four adult human donor eyes' 为 B 级文献描述, 不可逐行核验, 禁静默归 adult)",
-  "计数分母": "10,917 cells (4 个 donor 对象 26 簇, 全标注)",
-  "证据来源": "本地实测复算 (A: 比例; RData→CSV 导出脚本 export_rpe_meta.R) + GEO 记录作者簇描述 (B: rod/cone/TF+SPP1/干细胞候选) + 本项目 marker 推断 (C)"
+  "sampling_material": "Human freshly isolated RPE monolayer cells (4 adult human donor eyes, stage=Fresh; GEO: 'RPE cells were isolated from four adult human donor eyes')",
+  "disease_stage": "normal (healthy donors; no disease column in processed file metadata)",
+  "treatment_background": "Not recorded (no treatment column in processed file metadata) — marked 'Not recorded', no speculation",
+  "scRNA_vs_snRNA": "scRNA-seq whole-cell (donor1=10x 3'; donor2-4=ICELL8 droplet cloning) — different scope from snRNA entries (retina/optic_nerve), not directly comparable",
+  "enrichment_step": "Mechanical + enzymatic dissociation enrichment of RPE layer (tissue level); no fluorescence sorting records —— the dissociation protocol itself constitutes 'enrichment'",
+  "dissociation_method": "RPE isolation from fresh enucleated eyes (GEO Methods; processing files lack dissociation reagent columns, details not recorded)",
+  "donor_count": "4 (donor1=10x, donor2-4=ICELL8 —— platform fully bundled with donors, tech stratification=descriptive) —— KB2c: cells_meta lacks age column, this entry organism_stage=unknown (GEO text states 'four adult human donor eyes' as B-grade literature description, cannot be verified row-by-row, silent assignment to adult prohibited)",
+  "counting_denominator": "10,917 cells (26 clusters across 4 donor objects, all annotated)",
+  "evidence_source": "Local empirical recalculation (A: proportions; RData→CSV export script export_rpe_meta.R) + GEO record author cluster descriptions (B: rod/cone/TF+SPP1/stem cell candidates) + project marker inference (C)"
  },
- "usage_scope": "用途口径 (Astra T2 裁定固化): 本基线 = 该取样材料在该实验流程下捕获到的细胞构成的身份参考 + 背景对照; **不得当组成达标线**。疾病手术材料的取样对象 ≠ 健康器官 (如 PDR 纤维血管膜不得对照健康视网膜组成验收); 注释数据出现清单外身份 → 触发 unexpected 旗即可, 不得强制改成清单内身份 (标签接受上下文一致性核查, 非白名单定位)。",
+ "usage_scope": "Usage scope (Astra T2 adjudication fixed): This baseline = identity reference for cell composition captured by this sampling material under this experimental workflow + background control; **must not be treated as a composition compliance threshold**. Sampling subjects of disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition acceptance); appearance of identities outside the annotation data list → trigger unexpected flag only, do not force change to in-list identities (label acceptance requires contextual consistency check, not whitelist positioning).",
  "evidence_grades": {
-  "A": "本地实测复算 (带文件路径+脚本)",
-  "B": "文献原文直接报告",
-  "C": "A 级源数据供者级/跨研究分布推得的经验区间",
-  "qualitative": "文献仅定性描述 → 只存定性, 不补造区间 (Astra T2)",
-  "not_estimable": "区间无法估计 —— 合法状态, 注释仍可开展 (Astra T2)"
+  "A": "Local empirical recalculation (with file paths + scripts)",
+  "B": "Direct report from original literature",
+  "C": "Empirical intervals derived from donor-level/cross-study distribution of A-grade source data",
+  "qualitative": "Literature provides only qualitative description → store qualitative only, do not fabricate intervals (Astra T2)",
+  "not_estimable": "Interval cannot be estimated — legitimate state, annotation can proceed (Astra T2)"
  },
- "distribution_method": "供者级 (4 供者单元; 每供者内先把 marker 同类簇合并成 canonical 类再算占比; 各 donor 对象独立聚类, 跨 donor 簇定义靠 marker 对齐 —— 见 caveats)",
- "main_heading": "主参考: 供者级条件参考分布 (n=4 供者; marker 推断 canonical 类)",
+ "distribution_method": "Donor-level (4 donor units; within each donor, merge marker-similar clusters into canonical classes before calculating proportions; independent clustering per donor object, cross-donor cluster definition aligned via markers — see caveats)",
+ "main_heading": "Primary reference: donor-level conditional reference distribution (n=4 donors; canonical classes inferred by markers)",
  "donor_level_main": {
   "RPE": {
    "n_units": 4,
@@ -123,7 +123,7 @@
     "RPE_LOCAL",
     "RPE_GEO"
    ],
-   "note": "canonical RPE: RPE65/BEST1/TTR/SERPINF1 核心"
+   "note": "Canonical RPE: RPE65/BEST1/TTR/SERPINF1 core"
   },
   {
    "class": "PR-associated",
@@ -142,7 +142,7 @@
     "RPE_LOCAL",
     "RPE_GEO"
    ],
-   "note": "身份=marker 推断 (C), 部分有作者簇描述锚 (B)"
+   "note": "Identity = marker-inferred (C), partially anchored by author's cluster descriptions (B)"
   },
   {
    "class": "neuron-like",
@@ -161,7 +161,7 @@
     "RPE_LOCAL",
     "RPE_GEO"
    ],
-   "note": "身份=marker 推断 (C), 部分有作者簇描述锚 (B)"
+   "note": "Identity = marker-inferred (C), partially anchored by author's cluster descriptions (B)"
   },
   {
    "class": "erythroid",
@@ -180,7 +180,7 @@
     "RPE_LOCAL",
     "RPE_GEO"
    ],
-   "note": "身份=marker 推断 (C), 部分有作者簇描述锚 (B)"
+   "note": "Identity = marker-inferred (C), partially anchored by author's cluster descriptions (B)"
   },
   {
    "class": "myeloid",
@@ -199,11 +199,11 @@
     "RPE_LOCAL",
     "RPE_GEO"
    ],
-   "note": "身份=marker 推断 (C), 部分有作者簇描述锚 (B)"
+   "note": "Identity = marker-inferred (C), partially anchored by author's cluster descriptions (B)"
   }
  ],
  "fine_types": {
-  "denominator_note": "donor × 原簇 → canonical 类 [状态标签] 占该 donor 细胞%; RData 原生簇编号原样保留"
+  "denominator_note": "donor × original cluster → canonical class [status label] % of that donor's cells; RData native cluster IDs preserved as-is"
  },
  "states": [
   {
@@ -221,13 +221,13 @@
   {
    "cell_type": "donor1 cl2",
    "state": "PR-associated: rod-program (SAG/PDE6A/RHO)",
-   "markers": "作者描述 rod RNA 簇 RHO/PDE6A (B) + marker (A)",
+   "markers": "Author-described rod RNA cluster RHO/PDE6A (B) + markers (A)",
    "evidence": "A+B/C"
   },
   {
    "cell_type": "donor1 cl3",
    "state": "RPE: TF+SPP1/VEGF state (VIM+/TF+/SPP1+/MT1X+)",
-   "markers": "作者描述 VEGF signaling 簇 TF/SPP1 (B) + marker (A)",
+   "markers": "Author-described VEGF signaling cluster TF/SPP1 (B) + markers (A)",
    "evidence": "A+B/C"
   },
   {
@@ -239,7 +239,7 @@
   {
    "cell_type": "donor1 cl5",
    "state": "PR-associated: rod/cone-mixed (SAG/GNAT1/PDE6G)",
-   "markers": "marker (A); 作者 cone 簇 ARR3/PDE6H 未入本簇 top25, 归属存疑 (C)",
+   "markers": "Markers (A); author's cone cluster ARR3/PDE6H not in this cluster's top 25, assignment uncertain (C)",
    "evidence": "A+B/C"
   },
   {
@@ -263,7 +263,7 @@
   {
    "cell_type": "donor2 cl1",
    "state": "RPE: mito-high",
-   "markers": "marker: MT-* 主导 + RPE65/BEST1 (A)",
+   "markers": "Markers: MT-* dominant + RPE65/BEST1 (A)",
    "evidence": "A+B/C"
   },
   {
@@ -293,7 +293,7 @@
   {
    "cell_type": "donor2 cl6",
    "state": "RPE: complement-high (C4A/C4B+/PMEL+/TRPM3+)",
-   "markers": "RPE 谱系 (TRPM3/PMEL) + 补体状态 (A)",
+   "markers": "RPE lineage (TRPM3/PMEL) + complement status (A)",
    "evidence": "A+B/C"
   },
   {
@@ -353,7 +353,7 @@
   {
    "cell_type": "donor4 cl3",
    "state": "RPE: TF/GPX3 stress state (TF#2/TRPM3+)",
-   "markers": "与 donor1 TF+SPP1 簇 marker 重叠 (C)",
+   "markers": "Overlap with donor1 TF+SPP1 cluster markers (C)",
    "evidence": "A+B/C"
   },
   {
@@ -365,37 +365,37 @@
  ],
  "flags": {
   "expected_low_but_present": [
-   "myeloid (CD74/AIF1/HLA-DR) 仅 donor2 检出; erythroid 仅 ICELL8 供者检出",
-   "干细胞候选群 (RPE65+/VIM/GNL3/MKI67, 作者描述 B): 未在任何簇 top25 浮现 —— 小群未量化, 区间无法估计 (合法状态, Astra T2)"
+   "Myeloid (CD74/AIF1/HLA-DR) detected only in donor2; erythroid detected only in ICELL8 donors",
+   "Stem cell candidate population (RPE65+/VIM/GNL3/MKI67, author description B): Not emerging in top25 of any cluster — small subpopulation unquantified, interval cannot be estimated (valid state, Astra T2)"
   ],
   "unexpected": [
-   "PR-associated 类 3.8–28.5%: 作者称 RPE 亚群 (cone/rod 转录本簇, B), 亦可为吞噬 PR 外节mRNA 或盘膜附着污染 —— 双重解释保留, 不下单一结论",
-   "neuron-like 类 (VSX1/ISL1/SNAP25) 仅 donor1 (10x) 检出 2.2% —— 视网膜神经污染或低丰度前体, 存疑"
+   "PR-associated class 3.8–28.5%: Authors describe an RPE subgroup (cone/rod transcript cluster, B), but it may also represent phagocytosed PR outer segment mRNA or disc membrane attachment contamination — dual interpretation retained, no single conclusion drawn",
+   "neuron-like class (VSX1/ISL1/SNAP25) detected only in donor1 (10x) at 2.2% — retinal neural contamination or low-abundance precursors, questionable"
   ],
   "contamination_suspect": [
-   "erythroid (HBG1/HBG2) 供者内最高 32.54% —— 血液残留"
+   "erythroid (HBG1/HBG2) highest within donors at 32.54% — residual blood"
   ]
  },
  "caveats": [
-  "身份标注非作者官方命名: 处理件只有 donor×cluster 编号, canonical 类标签为本项目 marker 推断 (证据 C), 仅 rod/cone/TF+SPP1/干细胞候选四类有 GEO 作者描述锚 (证据 B)。对外引用须带此口径。",
-  "n=4 供者, donor 级 median/IQR 极粗 (每供者权重 25%); 区间只作'新鲜分离 RPE 捕获构成'的描述性参考。",
-  "各 donor 对象独立聚类无全局整合; 同类簇跨 donor 合并依赖 marker 一致性 (RPE/PR/erythroid 清晰, neuron-like/状态细分谨慎)。",
-  "平台×供者完全捆绑 (10x n=1 / ICELL8 n=3): donor1 独有 neuron-like、donor2-4 独有 erythroid 的差异不能区分平台效应与供者变异。",
-  "本条=分离后 RPE 悬液的捕获构成 (计数分母不含非 RPE 组织的完整组织学), 不代表 RPE 层在完整眼球/脉络膜组织中的位置丰度; 组织学丰度参考须用带 RPE 的全组织条 (retina/choroid 骨架)。",
-  "KB2c t_be336eee 红线2: 本条无逐供者发育/年龄元数据 → 发育档=unknown + 披露行, 不得作为 '成人 RPE 基线' 引用; 升级 adult-only 需补逐 donor 年龄 (GEO 附表/作者通信) 后另裁。"
+  "Identity labels are not official author nomenclature: processed files contain only donor×cluster IDs; canonical class labels are inferred from project markers (evidence C); only rod/cone/TF+SPP1/stem cell candidate classes have GEO author description anchors (evidence B). External citations must include this caveat.",
+  "n=4 donors, donor-level median/IQR is very coarse (each donor weighted 25%); intervals serve only as descriptive reference for 'freshly isolated RPE capture composition'.",
+  "Each donor object clustered independently without global integration; merging same-class clusters across donors relies on marker consistency (RPE/PR/erythroid clear, neuron-like/state subdivision cautious).",
+  "Platform×donor fully confounded (10x n=1 / ICELL8 n=3): differences such as donor1-specific neuron-like and donor2-4-specific erythroid cannot distinguish platform effects from donor variability.",
+  "This entry = capture composition of post-dissociation RPE suspension (count denominator excludes complete histology of non-RPE tissues); does not represent positional abundance of the RPE layer in intact globe/choroid tissue; histological abundance reference requires full-tissue entries with RPE (retina/choroid skeleton).",
+  "KB2c t_be336eee Red Line 2: This entry lacks per-donor developmental/age metadata → development stage = unknown + disclosure line; must not be cited as 'adult RPE baseline'; upgrade to adult-only requires supplementing per-donor age (GEO supplementary tables/author correspondence) followed by separate adjudication."
  ],
  "sources": [
   {
    "sid": "RPE_LOCAL",
    "kind": "dataset",
-   "label": "作者处理件 /mnt/D/OcularKB/data/GSE158629/GSE158629_scrRNA_RPE_donors1-4.RData.gz (GSE158629); 导出件 /mnt/D/EyeKB/scripts/baselines/data/rpe_GSE158629_cells_meta.csv + /mnt/D/EyeKB/scripts/baselines/data/rpe_GSE158629_cluster_markers.csv (scripts/baselines/data/export_rpe_meta.R)",
+   "label": "Author processed file /mnt/D/OcularKB/data/GSE158629/GSE158629_scrRNA_RPE_donors1-4.RData.gz (GSE158629); exported files /mnt/D/EyeKB/scripts/baselines/data/rpe_GSE158629_cells_meta.csv + /mnt/D/EyeKB/scripts/baselines/data/rpe_GSE158629_cluster_markers.csv (scripts/baselines/data/export_rpe_meta.R)",
    "path": "/mnt/D/OcularKB/data/GSE158629/GSE158629_scrRNA_RPE_donors1-4.RData.gz",
    "computation": "/mnt/D/EyeKB/scripts/baselines/build_baselines.py build_RPE()"
   },
   {
    "sid": "RPE_GEO",
    "kind": "dataset",
-   "label": "GEO GSE158629 — Single-Cell RNA Sequencing Reveals the Heterogeneity of the Human RPE (摘要含 rod/cone/TF+SPP1/干细胞候选簇描述)",
+   "label": "GEO GSE158629 — Single-Cell RNA Sequencing Reveals the Heterogeneity of the Human RPE (abstract includes descriptions of rod/cone/TF+SPP1/stem cell candidate clusters)",
    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158629"
   }
  ],
@@ -408,24 +408,24 @@
    "developing",
    "unknown"
   ],
-  "adult_rule": "UBERON development_stage 数字化年龄 >= 18y 判 adult; 显式成年术语 (late/prime/middle/mature/human adult stage, 年代段>=3rd) 亦判 adult 并记 rule; 阈值改动须过裁定 (KB2c Q2, 2026-09-23)",
-  "developing_rule": "newborn/infant/postnatal stage 与 <18y 数字年龄/年龄段 → developing (KB2c Q2)",
-  "fetal_rule": "fetal/embryonic/gestation/Carnegie 术语 → fetal; 永不并入 adult 主档 (红线1)",
-  "unknown_rule": "无年龄列/未映射术语/organoid/年龄段跨阈值 → unknown, 必须披露行, 禁静默归 adult (红线2)",
-  "aging_note": ">=60 老年分层不在本轴 — aging 是正交独立轴, 将来单独立条目 (裁定 Q2)",
-  "source_col": "obs/development_stage (UBERON 原值逐行保留; 汇总见 stage_disclosure, 排除清单见 excluded_nonadult_units)",
+  "adult_rule": "UBERON development_stage digital age >= 18y judged adult; explicit adult terms (late/prime/middle/mature/human adult stage, decade >=3rd) also judged adult and rule recorded; threshold changes require adjudication (KB2c Q2, 2026-09-23)",
+  "developing_rule": "newborn/infant/postnatal stage and <18y digital age/age range → developing (KB2c Q2)",
+  "fetal_rule": "fetal/embryonic/gestation/Carnegie terms → fetal; never merged into adult main archive (Red Line 1)",
+  "unknown_rule": "No age column/unmapped terms/organoid/age range crossing threshold → unknown, disclosure line mandatory, silent assignment to adult prohibited (Red Line 2)",
+  "aging_note": ">=60 elderly stratification not on this axis — aging is an orthogonal independent axis, future separate entry (adjudication Q2)",
+  "source_col": "obs/development_stage (UBERON raw values preserved row-by-row; summary see stage_disclosure, exclusion list see excluded_nonadult_units)",
   "tier_ids": {
    "unknown_descriptive": "baseline_human_RPE__stage_unknown__kb2c"
   }
  },
- "stage_note": "本地 GSE158629 cells_meta (export_rpe_meta.R 导出) 仅 donor/cluster/tech 列, 无 development_stage/年龄列; GEO Summary 记 'four adult human donor eyes' (证据 B 级)。",
+ "stage_note": "Local GSE158629 cells_meta (exported by export_rpe_meta.R) contains only donor/cluster/tech columns, no development_stage/age columns; GEO Summary states 'four adult human donor eyes' (Evidence Level B).",
  "stage_disclosure": [
   {
-   "source": "GSE158629 cells_meta (全 4 donor)",
+   "source": "GSE158629 cells_meta (all 4 donors)",
    "cells": 10917,
    "donors": 4,
    "organism_stage": "unknown",
-   "rule": "无年龄列 → 禁静默归 adult (红线2)",
+   "rule": "No age column → silent assignment to adult prohibited (Red Line 2)",
    "literature_grade_B": "GEO: 'RPE cells were isolated from four adult human donor eyes'"
   }
  ],
@@ -433,9 +433,9 @@
  "adult_only_meta": null,
  "axis_version": "kb2c-1.1",
  "development_stage": "unknown",
- "development_stage_prohibition": "KB3 禁令 (PI 红线 2026-09-23): 发育期数据不得进成人基线统计池, 反之亦然 —— 同一组织胎儿≠成人, adult/fetal 不互为参照。",
+ "development_stage_prohibition": "KB3 Prohibition (PI Red Line 2026-09-23): Developmental data must not enter adult baseline statistical pool, and vice versa — same tissue fetal ≠ adult, adult/fetal do not serve as mutual references.",
  "kb3_card": "t_5425a7ca",
- "kb3_applicable_stage_at_backfill": "unknown —— 主档源 (如 GSE158629 RPE) 无 donor 年龄列; 须逐 donor 年龄补齐后另裁方可升 adult (KB2c 范围外条目); 禁静默归 adult",
+ "kb3_applicable_stage_at_backfill": "unknown — Main archive source (e.g., GSE158629 RPE) lacks donor age column; must supplement per-donor age and undergo separate adjudication before upgrading to adult (entry outside KB2c scope); silent assignment to adult prohibited",
  "identity_signature": {
   "baseline_human_RPE__stage_unknown__kb2c": "sha256:4b72841baaac133e80d4324a3e54b5a463a053f08856e737e8de5939f03c5126"
  }

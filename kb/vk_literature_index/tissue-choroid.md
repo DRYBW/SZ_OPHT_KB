@@ -1,5 +1,5 @@
 ---
-title: 文献索引: choroid
+title: Literature Index: choroid
 created: 2026-09-23
 updated: 2026-09-23
 type: query
@@ -8,13 +8,13 @@ sources: [literature_db v2.0_2026-09]
 confidence: high
 ---
 
-# 文献: choroid (211 篇, 多标签口径)
+# Literature: choroid (211 papers, multi-label scope)
 
-> RAG v2.0 中 tissue_labels 含 choroid 的论文清单（含与其他组织共标的论文），按年份倒序。
-> 溯源用 PMID 查询 RAG API: `stage3_retrieve.py --tissue choroid --db-dir literature_db/v2.0_2026-09 --cell-type <CT>`
-> 定位 (Claude5 冻结): 仅人机交互辅助引用, 不入打分。
+> List of papers in RAG v2.0 with tissue_labels containing choroid (including those co-labeled with other tissues), sorted by year descending.
+> Traceability via PMID query RAG API: `stage3_retrieve.py --tissue choroid --db-dir literature_db/v2.0_2026-09 --cell-type <CT>`
+> Positioning (Claude5 frozen): For human-AI interaction auxiliary citation only, excluded from scoring.
 
-## 论文列表
+## Paper List
 - PMID42111215 (2026) The choroidal macrophage polarization significantly influences myopia development in murine models. — *iScience* [mouse] tags=choroid v=v2.0-new
 - PMID41677389 (2026) A Highly Active Angiopoietin 1 Mimetic Potentiates Angiogenesis in Mouse Models of Choroidal Neovascularization. — *Translational vision science & technology* [mouse] tags=choroid v=v2.0-new
 - PMID42466938 (2026) Identification and Mapping of a Posterior Ocular Lymphatic Outflow (POLO) Pathway Through Choroidal Lymphatics. — *Translational vision science & technology* [mouse] tags=choroid v=v2.0-new
@@ -158,7 +158,7 @@ confidence: high
 - PMID35784301 (2022) Dabigatran and Wet AMD, Results From Retinal Pigment Epithelial Cell Monolayers, the Mouse Model of Choroidal Neovascularization, and Patients From the Medicare Data Base. — *Frontiers in immunology* [both] tags=choroid v=v2.0-new
 - PMID35265621 (2022) Long Non-Coding RNA PNKY Modulates the Development of Choroidal Neovascularization. — *Frontiers in cell and developmental biology* [both] tags=choroid v=v2.0-new
 - PMID36408112 (2022) Intercellular communication analysis of the human retinal pigment epithelial and choroidal cells predicts pathways associated with aging, cellular senescence and age-related macular degeneration. — *Frontiers in aging neuroscience* [human] tags=RPE,choroid,retina v=v1.0
-- PMID35659263 (2022) Transcriptional profiling of transport mechanisms and regulatory pathways in rat choroid plexus. — *Fluids and barriers of the CNS* [other:rat] tags=brain_choroid_plexus NOT_ocular_choroid v=v2.0-new <!-- KB1v2d 2026-09-23: 原标 tags=choroid/[both] 为词面撞库错标 (脑脉络丛≠眼脉络膜, species=大鼠), 已纠正并挂排除建议标记; 语料处置待用户拍板 -->
+- PMID35659263 (2022) Transcriptional profiling of transport mechanisms and regulatory pathways in rat choroid plexus. — *Fluids and barriers of the CNS* [other:rat] tags=brain_choroid_plexus NOT_ocular_choroid v=v2.0-new <!-- KB1v2d 2026-09-23: Original tags=choroid/[both] was a lexical surface collision mislabel (brain choroid plexus ≠ ocular choroid, species=rat); corrected and flagged for exclusion; corpus disposition pending user adjudication -->
 - PMID35248156 (2022) Transcription factor Foxp1 is essential for the induction of choroidal neovascularization. — *Eye and vision (London, England)* [both] tags=choroid v=v2.0-new
 - PMID34779136 (2022) LIF, a mitogen for choroidal endothelial cells, protects the choriocapillaris: implications for prevention of geographic atrophy. — *EMBO molecular medicine* [both] tags=choroid v=v2.0-new
 - PMID36421348 (2022) Value of Combined Diagnosis for Choroidal Lymphoma: A Case Report. — *Current oncology (Toronto, Ont.)* [human] tags=choroid v=v2.0-new
@@ -229,9 +229,9 @@ confidence: high
 
 ---
 <!-- KB1V2-WIKILINKS v1.1 -->
-## 判读层链接 (判读层链接版本: KB1v2 (2026-09-23, t_16c3e020))
+## Reading Layer Links (Reading layer link version: KB1v2 (2026-09-23, t_16c3e020))
 
-- **组成基线**: [kb/baselines/choroid.md](/mnt/D/EyeKB/kb/baselines/choroid.md) — 供者级条件参考分布 (锚定 registry 标准集或 t_6f5cc731 映射)
-- **RAG reason-tag**: 每条 PMID 的入库原因/论断关系/证据条件见 `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (键=pmid; 字段 inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` 命中自动联表带出
-- **概念 ID 映射**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
-- 红线: 本页与全部链接内容仅证据引用与 QC 旗, 禁入打分 (ANNOTATION_PROTOCOL_v1.1.md §0)
+- **Composition baseline**: [kb/baselines/choroid.md](/mnt/D/EyeKB/kb/baselines/choroid.md) — Donor-level conditional reference distribution (anchored to registry standard set or t_6f5cc731 mapping)
+- **RAG reason-tag**: Inclusion reasons/claim relations/evidence conditions for each PMID are in `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (key=pmid; fields inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` hits automatically join this table
+- **Concept ID mapping**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
+- Red line: This page and all linked content are for evidence citation and QC flags only; scoring is prohibited (ANNOTATION_PROTOCOL_v1.1.md §0)

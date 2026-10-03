@@ -19,10 +19,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "依赖线粒体基因型的去多重/ambient 工具在人-类人猿等近缘物种并池时基因型不相容而静默偏置，基于基因型的归属失效",
-   "observable_signature": "题录：PMID:40166335（CellBouncer 统一工具包揭示 Hominid Mitochondrial Incompatibilities）",
+   "failure_mode": "Demultiplexing/ambient tools dependent on mitochondrial genotype suffer silent bias due to genotype incompatibility when pooling humans-apes and other closely related species; genotype-based attribution fails.",
+   "observable_signature": "Bibliographic record: PMID:40166335 (CellBouncer unified toolkit reveals Hominid Mitochondrial Incompatibilities).",
    "risk_level": "medium",
-   "mitigation": "跨物种并池前检查 MT 基因型兼容性（工具文档+参考线粒体基因组版本）；不相容→改 SNP/hashtag 归属；同型教训复用 cross_species_panel_id_preflight 预检纪律",
+   "mitigation": "Check MT genotype compatibility before cross-species pooling (tool documentation + reference mitochondrial genome version); incompatible → switch to SNP/hashtag attribution; reuse preflight discipline from cross_species_panel_id_preflight for homologous lessons.",
    "evidence_source_type": "peer_reviewed_literature",
    "source_check": "locator_verified",
    "home": {
@@ -36,16 +36,16 @@
    "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/known_issues_b1_20260930/pubmed_B_verified.json verified 键"
+    "/mnt/D/EyeKB/plans/known_issues_b1_20260930/pubmed_B_verified.json verified key"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "b2_stock_20260930",
     "b1_order": 7,
-    "legacy_grade": "B文献PMID",
+    "legacy_grade": "Tier B bibliographic record PMID",
     "legacy_code_in_legend": "PIT-E2",
     "report_confidence": "medium",
-    "home_rationale": "物种×工具交互失效=条件驱动普适条（不与争议坐标绑定）"
+    "home_rationale": "Species × tool interaction failure = condition-driven universal clause (not bound to dispute coordinates)."
    }
   }
  ],

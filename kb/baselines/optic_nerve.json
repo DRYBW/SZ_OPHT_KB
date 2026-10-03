@@ -3,38 +3,38 @@
  "entry_id": "baseline_human_optic_nerve",
  "tissue": "optic_nerve",
  "species": "human",
- "title": "组成基线: 人(正常)视神经+视神经盘 snRNA adult-only 主档 (OA-D003 HRA006282, 供者级条件参考分布, KB2c 发育轴单列)",
+ "title": "Composition baseline: Human (normal) optic nerve + optic nerve head snRNA adult-only master file (OA-D003 HRA006282, donor-level conditional reference distribution, KB2c developmental axis listed separately).",
  "status": "filled_donor_level",
  "generated": "2026-09-23",
- "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c 发育轴单列 t_be336eee)",
+ "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c developmental axis single column t_be336eee)",
  "card": "t_bad1fbab",
  "anchor": {
   "registry_row": "OA-D003 (CELLxGENE-OpticNerve)",
   "registry_csv": "/mnt/D/OcularKB/registry/ocular_public_datasets_verified_v1.csv",
   "local_path": "/mnt/D/OcularKB/data/HRA006282_optic_nerve/HRA006282_optic_nerve.h5ad",
   "collection": "https://cellxgene.cziscience.com/collections/05e3d0fc-c9dd-4f14-9163-2b242b3bb5c2",
-  "tier": "T1 已注释标准集 (portal 官方注释, majorclass/author_cell_type/cell_type 三层)"
+  "tier": "T1 Annotated standard set (portal official annotations, three layers: majorclass/author_cell_type/cell_type)."
  },
  "t2_fields": {
-  "取样材料": "人视神经/视神经盘离体组织 (手术取材, 眼库供体; 区域构成: ONH (视神经盘/视乳头) 355,363核, ON (视神经) 604,266核)",
-  "疾病阶段": "normal (disease 列全 normal; 供者为系统性死亡捐献者, donor_cause_of_death 含肿瘤/脓毒症等, 眼球本身无眼病记录)",
-  "治疗背景": "未记录 (眼库捐献元数据无治疗列) —— 标'未记录', 不臆测",
-  "scRNA_vs_snRNA": "snRNA-seq (suspension_type=nucleus 100%; intronic_reads_counted=yes) —— 与 scRNA 细胞悬液条 (如 D002 眼表) 类比例不可直接互比",
-  "富集步骤": "无分选记录 (metadata 无 enrichment 列; 全组织核悬液直接上机)",
-  "解离方法": "mechanical dissociation,enzymatic dissociation×813,508核; mechanical dissociation,centrifugation×146,121核 (sample_preservation=frozen in liquid nitrogen; collection=surgical resection)",
-  "供者数": "主档 adult-only 74 donors / 98 供者单元; 对照档 adult_pool 83 donors / 107 单元 (含 9 非 adult 供者含 newborn 15,177 核 → 逐行见 excluded_nonadult_units)",
-  "计数分母": "959,629 核 (majorclass 全标注)",
-  "证据来源": "本地实测复算 (A) + CELLxGENE HRA006282 collection 官方注释 (portal) + 注册表 OA-D003"
+  "sampling_material": "Human optic nerve/optic nerve head ex vivo tissue (surgical sampling, eye bank donors; regional composition: ONH (optic nerve head/papilla) 355,363 nuclei, ON (optic nerve) 604,266 nuclei).",
+  "disease_stage": "Normal (disease column all normal; donors were systemic death donors, donor_cause_of_death includes tumor/sepsis etc., no ocular disease records for the globe itself).",
+  "treatment_background": "Not recorded (eye bank donation metadata lacks treatment column) — marked 'not recorded', no speculation.",
+  "scRNA_vs_snRNA": "snRNA-seq (suspension_type=nucleus 100%; intronic_reads_counted=yes) — cannot be directly compared to scRNA cell suspension entries (e.g., D002 ocular surface).",
+  "enrichment_step": "No sorting records (metadata lacks enrichment column; whole-tissue nuclear suspension loaded directly).",
+  "dissociation_method": "mechanical dissociation,enzymatic dissociation×813,508 nuclei; mechanical dissociation,centrifugation×146,121 nuclei (sample_preservation=frozen in liquid nitrogen; collection=surgical resection).",
+  "donor_count": "Primary tier adult-only 74 donors / 98 donor units; control tier adult_pool 83 donors / 107 units (includes 9 non-adult donors including newborn 15,177 nuclei → see excluded_nonadult_units row-by-row)",
+  "counting_denominator": "959,629 nuclei (majorclass fully annotated).",
+  "evidence_source": "Local empirical recalculation (A) + CELLxGENE HRA006282 collection official annotations (portal) + Registry OA-D003."
  },
- "usage_scope": "用途口径 (Astra T2 裁定固化): 本基线 = 该取样材料在该实验流程下捕获到的细胞构成的身份参考 + 背景对照; **不得当组成达标线**。疾病手术材料的取样对象 ≠ 健康器官 (如 PDR 纤维血管膜不得对照健康视网膜组成验收); 注释数据出现清单外身份 → 触发 unexpected 旗即可, 不得强制改成清单内身份 (标签接受上下文一致性核查, 非白名单定位)。",
+ "usage_scope": "Usage scope (Astra T2 adjudication fixed): This baseline = identity reference for cell composition captured by this sampling material under this experimental workflow + background control; **must not be treated as a composition compliance threshold**. Sampling subjects of disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition acceptance); appearance of identities outside the annotation data list → trigger unexpected flag only, do not force change to in-list identities (label acceptance requires contextual consistency check, not whitelist positioning).",
  "evidence_grades": {
-  "A": "本地实测复算 (带文件路径+脚本)",
-  "B": "文献原文直接报告",
-  "C": "A 级源数据供者级/跨研究分布推得的经验区间",
-  "qualitative": "文献仅定性描述 → 只存定性, 不补造区间 (Astra T2)",
-  "not_estimable": "区间无法估计 —— 合法状态, 注释仍可开展 (Astra T2)"
+  "A": "Local empirical recalculation (with file paths + scripts)",
+  "B": "Direct report from original literature",
+  "C": "Empirical intervals derived from donor-level/cross-study distribution of A-grade source data",
+  "qualitative": "Literature provides only qualitative description → store qualitative only, do not fabricate intervals (Astra T2)",
+  "not_estimable": "Interval cannot be estimated — legitimate state, annotation can proceed (Astra T2)"
  },
- "distribution_method": "供者级 (来源|部位|供者 单元); 部位(ON vs ONH)×研究来源先分层展示, main 为 adult 供者单元汇总 (KB2c: 非 adult 不并入主档) —— 视神经 ON 与 ONH 生物学构成差异大, 对照时优先看对应层区间 (Astra T2); pooled 仅对照",
+ "distribution_method": "Donor level (Source|Site|Donor unit); Site (ON vs ONH) × Study Source stratified first, main is aggregated adult donor units (KB2c: non-adults not merged into master file) — biological composition differences between Optic Nerve (ON) and Optic Nerve Head (ONH) are significant; when comparing, prioritize corresponding strata intervals (Astra T2); pooled is for comparison only.",
  "donor_level_main": {
   "AC": {
    "n_units": 98,
@@ -394,7 +394,7 @@
  "strata": [
   {
    "study": "Chen",
-   "tissue_group": "ON (视神经)",
+   "tissue_group": "ON (Optic Nerve)",
    "n_donors": 56,
    "n_cells": 551898,
    "share_of_atlas_pct": 57.51,
@@ -1007,7 +1007,7 @@
   },
   {
    "study": "Chen",
-   "tissue_group": "ONH (视神经盘/视乳头)",
+   "tissue_group": "ONH (Optic Nerve Head/Papilla)",
    "n_donors": 31,
    "n_cells": 261610,
    "share_of_atlas_pct": 27.26,
@@ -1620,7 +1620,7 @@
   },
   {
    "study": "Sanes",
-   "tissue_group": "ON (视神经)",
+   "tissue_group": "ON (Optic Nerve)",
    "n_donors": 7,
    "n_cells": 52368,
    "share_of_atlas_pct": 5.46,
@@ -2233,7 +2233,7 @@
   },
   {
    "study": "Sanes",
-   "tissue_group": "ONH (视神经盘/视乳头)",
+   "tissue_group": "ONH (Optic Nerve Head/Papilla)",
    "n_donors": 13,
    "n_cells": 93753,
    "share_of_atlas_pct": 9.77,
@@ -2863,7 +2863,7 @@
     "ON_LOCAL",
     "ON_PORTAL"
    ],
-   "note": "视网膜来源类 — 视盘取材带入, 见 caveats/flags"
+   "note": "Retina-derived classes — brought in by optic disc sampling, see caveats/flags."
   },
   {
    "class": "Adipocyte",
@@ -2920,7 +2920,7 @@
     "ON_LOCAL",
     "ON_PORTAL"
    ],
-   "note": "视网膜来源类 — 视盘取材带入, 见 caveats/flags"
+   "note": "Retina-derived classes — brought in by optic disc sampling, see caveats/flags."
   },
   {
    "class": "B_cell",
@@ -2958,7 +2958,7 @@
     "ON_LOCAL",
     "ON_PORTAL"
    ],
-   "note": "视网膜来源类 — 视盘取材带入, 见 caveats/flags"
+   "note": "Retina-derived classes — brought in by optic disc sampling, see caveats/flags."
   },
   {
    "class": "Dendritic_cell",
@@ -3034,7 +3034,7 @@
     "ON_LOCAL",
     "ON_PORTAL"
    ],
-   "note": "视网膜来源类 — 视盘取材带入, 见 caveats/flags"
+   "note": "Retina-derived classes — brought in by optic disc sampling, see caveats/flags."
   },
   {
    "class": "MG",
@@ -3224,7 +3224,7 @@
     "ON_LOCAL",
     "ON_PORTAL"
    ],
-   "note": "色素/RPE 来源类 — 同上"
+   "note": "Pigment/RPE-derived classes — same as above."
   },
   {
    "class": "RGC",
@@ -3243,7 +3243,7 @@
     "ON_LOCAL",
     "ON_PORTAL"
    ],
-   "note": "视网膜来源类 — 视盘取材带入, 见 caveats/flags"
+   "note": "Retina-derived classes — brought in by optic disc sampling, see caveats/flags."
   },
   {
    "class": "RPE",
@@ -3262,7 +3262,7 @@
     "ON_LOCAL",
     "ON_PORTAL"
    ],
-   "note": "色素/RPE 来源类 — 同上"
+   "note": "Pigment/RPE-derived classes — same as above."
   },
   {
    "class": "Rod",
@@ -3281,7 +3281,7 @@
     "ON_LOCAL",
     "ON_PORTAL"
    ],
-   "note": "视网膜来源类 — 视盘取材带入, 见 caveats/flags"
+   "note": "Retina-derived classes — brought in by optic disc sampling, see caveats/flags."
   },
   {
    "class": "Schwann_cell",
@@ -3323,41 +3323,41 @@
   }
  ],
  "fine_types": {
-  "denominator_note": "author_cell_type 类内占比 (pooled within class, 供参考); ON/ONH/retina 后缀=portal 官方位置亚型标注"
+  "denominator_note": "author_cell_type intra-class proportions (pooled within class, for reference); ON/ONH/retina suffixes = portal official location subtype annotations."
  },
  "states": null,
  "flags": {
   "expected_low_but_present": [
-   "T/B/NK/DC/Mast 合计 <1% (正常神经组织免疫稀少)",
-   "Schwann_cell 0.22% (PN 髓鞘支持细胞; 核悬液下 PN 富集度受限于中枢段)",
-   "Mural_cell 1.8% / Endothelial_cell 3.6% (血管支持层)"
+   "T/B/NK/DC/Mast total <1% (immune cells sparse in normal neural tissue).",
+   "Schwann_cell 0.22% (PN myelin supporting cells; PN enrichment limited to central segment under nuclear suspension).",
+   "Mural_cell 1.8% / Endothelial_cell 3.6% (vascular support layer)."
   ],
   "unexpected": [
-   "视网膜神经元类 (Rod/Cone/BC/HC/AC/RGC) pooled 12.27% + RPE/色素类 1.17% —— 视盘取材带入盘旁视网膜/脉络膜组织, 属捕获构成非视神经本体真组成; 疾病样本对照时不得把该层当'视神经应有比例'"
+   "Retinal neuron classes (Rod/Cone/BC/HC/AC/RGC) pooled 12.27% + RPE/pigment classes 1.17% — brought in by peripapillary retina/choroid tissue during optic disc sampling, representing capture composition rather than true optic nerve composition; do not treat this layer as 'expected proportion for optic nerve' when comparing with disease samples."
   ],
   "contamination_suspect": [
-   "Melanocyte 0.86% (软脑膜/色素组织附带, 正常范围内偏高需结合取材平面解读)"
+   "Melanocyte 0.86% (incidental leptomeningeal/pigmented tissue, slightly high within normal range, interpret in context of sampling plane)."
   ]
  },
  "caveats": [
-  "MG=Müller 胶质细胞 (1.7%) 与 Microglia=小胶质细胞 (5.0%) 为两套不同身份, portal 词表并存 —— 下游引用勿混; 同规则适用 AC(无长细胞)/BC(双极细胞)等视网膜缩写。",
-  "Chen (Baylor, ~85%) 与 Sanes (Harvard) 两供体池规模悬殊, 已按 来源×部位 分 4 层展示; main 供者级每单元等权, 大池不再压秤, 但层间差异需看 strata 而非只看 main。",
-  "本条计数分母含视盘旁视网膜来源类 (~15%); 如需'纯视神经'参考区间, 用 strata 中 ON (cranial nerve II) 层。",
-  "snRNA 口径 (核悬液, 内含子 reads 计入) 与 scRNA 数据比较须谨慎 (Astra T2)。",
-  "v1.1 (KB2c t_be336eee): 主档=adult-only (>=18y, 裁定 Q2); v1.0 混口径 (含 newborn/3-17 岁) 保留于 donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0), 两档身份签名分离不混用。"
+  "MG=Müller glia (1.7%) and Microglia=Microglia (5.0%) are two distinct identities, coexisting in the portal vocabulary — do not mix downstream references; same rule applies to retinal abbreviations such as AC(amacrine cells)/BC(bipolar cells).",
+  "Chen (Baylor, ~85%) and Sanes (Harvard) donor pools differ vastly in size, already displayed in 4 strata by Source×Site; main gives equal weight to each donor unit, large pools no longer dominate, but inter-stratum differences require viewing strata rather than just main.",
+  "Denominator for this entry includes peripapillary retina-derived classes (~15%); for a 'pure optic nerve' reference interval, use the ON (cranial nerve II) stratum.",
+  "Comparison between snRNA scope (nuclear suspension, intronic reads counted) and scRNA data requires caution (Astra T2).",
+  "v1.1 (KB2c t_be336eee): Master file=adult-only (>=18y, adjudication Q2); v1.0 mixed scope (including newborn/3-17 years) retained in donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0), identity signatures of the two tiers separated and not mixed."
  ],
  "sources": [
   {
    "sid": "ON_LOCAL",
    "kind": "dataset",
-   "label": "本地文件 /mnt/D/OcularKB/data/HRA006282_optic_nerve/HRA006282_optic_nerve.h5ad",
+   "label": "Local file /mnt/D/OcularKB/data/HRA006282_optic_nerve/HRA006282_optic_nerve.h5ad",
    "path": "/mnt/D/OcularKB/data/HRA006282_optic_nerve/HRA006282_optic_nerve.h5ad",
    "computation": "/mnt/D/EyeKB/scripts/baselines/build_baselines.py build_optic_nerve()"
   },
   {
    "sid": "ON_PORTAL",
    "kind": "dataset",
-   "label": "Human Optic Nerve / Optic Nerve Head Atlas, CELLxGENE collection HRA006282 (portal 官方注释; registry OA-D003, verified 2026-08-11)",
+   "label": "Human Optic Nerve / Optic Nerve Head Atlas, CELLxGENE collection HRA006282 (portal official annotations; registry OA-D003, verified 2026-08-11).",
    "url": "https://cellxgene.cziscience.com/collections/05e3d0fc-c9dd-4f14-9163-2b242b3bb5c2"
   }
  ],
@@ -3370,12 +3370,12 @@
    "developing",
    "unknown"
   ],
-  "adult_rule": "UBERON development_stage 数字化年龄 >= 18y 判 adult; 显式成年术语 (late/prime/middle/mature/human adult stage, 年代段>=3rd) 亦判 adult 并记 rule; 阈值改动须过裁定 (KB2c Q2, 2026-09-23)",
-  "developing_rule": "newborn/infant/postnatal stage 与 <18y 数字年龄/年龄段 → developing (KB2c Q2)",
-  "fetal_rule": "fetal/embryonic/gestation/Carnegie 术语 → fetal; 永不并入 adult 主档 (红线1)",
-  "unknown_rule": "无年龄列/未映射术语/organoid/年龄段跨阈值 → unknown, 必须披露行, 禁静默归 adult (红线2)",
-  "aging_note": ">=60 老年分层不在本轴 — aging 是正交独立轴, 将来单独立条目 (裁定 Q2)",
-  "source_col": "obs/development_stage (UBERON 原值逐行保留; 汇总见 stage_disclosure, 排除清单见 excluded_nonadult_units)",
+  "adult_rule": "UBERON development_stage digital age >= 18y judged adult; explicit adult terms (late/prime/middle/mature/human adult stage, decade >=3rd) also judged adult and rule recorded; threshold changes require adjudication (KB2c Q2, 2026-09-23)",
+  "developing_rule": "newborn/infant/postnatal stage and <18y digital age/age range → developing (KB2c Q2)",
+  "fetal_rule": "fetal/embryonic/gestation/Carnegie terms → fetal; never merged into adult main archive (Red Line 1)",
+  "unknown_rule": "No age column/unmapped terms/organoid/age range crossing threshold → unknown, disclosure line mandatory, silent assignment to adult prohibited (Red Line 2)",
+  "aging_note": ">=60 elderly stratification not on this axis — aging is an orthogonal independent axis, future separate entry (adjudication Q2)",
+  "source_col": "obs/development_stage (UBERON raw values preserved row-by-row; summary see stage_disclosure, exclusion list see excluded_nonadult_units)",
   "tier_ids": {
    "adult_only": "baseline_human_optic_nerve__adult_only__kb2c",
    "adult_pool": "baseline_human_optic_nerve__adult_pool__v1.0"
@@ -3386,283 +3386,283 @@
    "cells": 78263,
    "n_donors": 3,
    "organism_stage": "adult",
-   "rule": "数字年龄 43y vs 阈值 18y"
+   "rule": "Digital age 43y vs threshold 18y"
   },
   "69-year-old stage": {
    "cells": 73699,
    "n_donors": 5,
    "organism_stage": "adult",
-   "rule": "数字年龄 69y vs 阈值 18y"
+   "rule": "Digital age 69y vs threshold 18y"
   },
   "64-year-old stage": {
    "cells": 68748,
    "n_donors": 5,
    "organism_stage": "adult",
-   "rule": "数字年龄 64y vs 阈值 18y"
+   "rule": "Digital age 64y vs threshold 18y"
   },
   "71-year-old stage": {
    "cells": 56868,
    "n_donors": 4,
    "organism_stage": "adult",
-   "rule": "数字年龄 71y vs 阈值 18y"
+   "rule": "Digital age 71y vs threshold 18y"
   },
   "62-year-old stage": {
    "cells": 54875,
    "n_donors": 3,
    "organism_stage": "adult",
-   "rule": "数字年龄 62y vs 阈值 18y"
+   "rule": "Numeric age 62y vs threshold 18y"
   },
   "67-year-old stage": {
    "cells": 35962,
    "n_donors": 3,
    "organism_stage": "adult",
-   "rule": "数字年龄 67y vs 阈值 18y"
+   "rule": "Digital age 67y vs threshold 18y"
   },
   "77-year-old stage": {
    "cells": 32893,
    "n_donors": 5,
    "organism_stage": "adult",
-   "rule": "数字年龄 77y vs 阈值 18y"
+   "rule": "Digital age 77y vs threshold 18y"
   },
   "65-year-old stage": {
    "cells": 30565,
    "n_donors": 4,
    "organism_stage": "adult",
-   "rule": "数字年龄 65y vs 阈值 18y"
+   "rule": "Digital age 65y vs threshold 18y"
   },
   "16-year-old stage": {
    "cells": 27212,
    "n_donors": 3,
    "organism_stage": "developing",
-   "rule": "数字年龄 16y vs 阈值 18y"
+   "rule": "Numeric age 16y vs threshold 18y"
   },
   "72-year-old stage": {
    "cells": 26225,
    "n_donors": 4,
    "organism_stage": "adult",
-   "rule": "数字年龄 72y vs 阈值 18y"
+   "rule": "Digital age 72y vs threshold 18y"
   },
   "81-year-old stage": {
    "cells": 23537,
    "n_donors": 2,
    "organism_stage": "adult",
-   "rule": "数字年龄 81y vs 阈值 18y"
+   "rule": "Digital age 81y vs threshold 18y"
   },
   "70-year-old stage": {
    "cells": 19483,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 70y vs 阈值 18y"
+   "rule": "Numeric age 70y vs threshold 18y"
   },
   "21-year-old stage": {
    "cells": 19210,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 21y vs 阈值 18y"
+   "rule": "Numeric age 21y vs threshold 18y"
   },
   "10-year-old stage": {
    "cells": 18998,
    "n_donors": 1,
    "organism_stage": "developing",
-   "rule": "数字年龄 10y vs 阈值 18y"
+   "rule": "Numeric age 10y vs threshold 18y"
   },
   "61-year-old stage": {
    "cells": 18682,
    "n_donors": 2,
    "organism_stage": "adult",
-   "rule": "数字年龄 61y vs 阈值 18y"
+   "rule": "Digital age 61y vs threshold 18y"
   },
   "42-year-old stage": {
    "cells": 17776,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 42y vs 阈值 18y"
+   "rule": "Digital age 42y vs threshold 18y"
   },
   "27-year-old stage": {
    "cells": 16928,
    "n_donors": 2,
    "organism_stage": "adult",
-   "rule": "数字年龄 27y vs 阈值 18y"
+   "rule": "Numeric age 27y vs threshold 18y"
   },
   "32-year-old stage": {
    "cells": 16501,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 32y vs 阈值 18y"
+   "rule": "Numeric age 32y vs threshold 18y"
   },
   "34-year-old stage": {
    "cells": 16364,
    "n_donors": 2,
    "organism_stage": "adult",
-   "rule": "数字年龄 34y vs 阈值 18y"
+   "rule": "Numeric age 34y vs threshold 18y"
   },
   "25-year-old stage": {
    "cells": 16269,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 25y vs 阈值 18y"
+   "rule": "Numeric age 25y vs threshold 18y"
   },
   "33-year-old stage": {
    "cells": 16010,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 33y vs 阈值 18y"
+   "rule": "Digital age 33y vs threshold 18y"
   },
   "18-year-old stage": {
    "cells": 15449,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 18y vs 阈值 18y"
+   "rule": "Numeric age 18y vs threshold 18y"
   },
   "newborn stage (0-28 days)": {
    "cells": 15177,
    "n_donors": 1,
    "organism_stage": "developing",
-   "rule": "newborn/infant 产后早期→developing (裁定 Q2)"
+   "rule": "newborn/infant early postnatal → developing (adjudication Q2)"
   },
   "60-year-old stage": {
    "cells": 14758,
    "n_donors": 2,
    "organism_stage": "adult",
-   "rule": "数字年龄 60y vs 阈值 18y"
+   "rule": "Numeric age 60y vs threshold 18y"
   },
   "76-year-old stage": {
    "cells": 14488,
    "n_donors": 2,
    "organism_stage": "adult",
-   "rule": "数字年龄 76y vs 阈值 18y"
+   "rule": "Numeric age 76y vs threshold 18y"
   },
   "56-year-old stage": {
    "cells": 14406,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 56y vs 阈值 18y"
+   "rule": "Digital age 56y vs threshold 18y"
   },
   "30-year-old stage": {
    "cells": 14224,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 30y vs 阈值 18y"
+   "rule": "Numeric age 30y vs threshold 18y"
   },
   "3-year-old stage": {
    "cells": 13748,
    "n_donors": 1,
    "organism_stage": "developing",
-   "rule": "数字年龄 3y vs 阈值 18y"
+   "rule": "Numeric age 3y vs threshold 18y"
   },
   "85-year-old stage": {
    "cells": 13362,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 85y vs 阈值 18y"
+   "rule": "Digital age 85y vs threshold 18y"
   },
   "52-year-old stage": {
    "cells": 13317,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 52y vs 阈值 18y"
+   "rule": "Numeric age 52y vs threshold 18y"
   },
   "15-year-old stage": {
    "cells": 13317,
    "n_donors": 1,
    "organism_stage": "developing",
-   "rule": "数字年龄 15y vs 阈值 18y"
+   "rule": "Numeric age 15y vs threshold 18y"
   },
   "58-year-old stage": {
    "cells": 12874,
    "n_donors": 2,
    "organism_stage": "adult",
-   "rule": "数字年龄 58y vs 阈值 18y"
+   "rule": "Numeric age 58y vs threshold 18y"
   },
   "47-year-old stage": {
    "cells": 12845,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 47y vs 阈值 18y"
+   "rule": "Numeric age 47y vs threshold 18y"
   },
   "75-year-old stage": {
    "cells": 12130,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 75y vs 阈值 18y"
+   "rule": "Numeric age 75y vs threshold 18y"
   },
   "82-year-old stage": {
    "cells": 10532,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 82y vs 阈值 18y"
+   "rule": "Digital age 82y vs threshold 18y"
   },
   "46-year-old stage": {
    "cells": 10451,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 46y vs 阈值 18y"
+   "rule": "Numeric age 46y vs threshold 18y"
   },
   "68-year-old stage": {
    "cells": 10357,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 68y vs 阈值 18y"
+   "rule": "Digital age 68y vs threshold 18y"
   },
   "63-year-old stage": {
    "cells": 8965,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 63y vs 阈值 18y"
+   "rule": "Numeric age 63y vs threshold 18y"
   },
   "90 year-old and over stage": {
    "cells": 8900,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "'90 year-old and over' 下界>=阈值"
+   "rule": "'90 year-old and over' lower bound >= threshold"
   },
   "17-year-old stage": {
    "cells": 8175,
    "n_donors": 1,
    "organism_stage": "developing",
-   "rule": "数字年龄 17y vs 阈值 18y"
+   "rule": "Numeric age 17y vs threshold 18y"
   },
   "45-year-old stage": {
    "cells": 7777,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 45y vs 阈值 18y"
+   "rule": "Digital age 45y vs threshold 18y"
   },
   "74-year-old stage": {
    "cells": 7776,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 74y vs 阈值 18y"
+   "rule": "Numeric age 74y vs threshold 18y"
   },
   "54-year-old stage": {
    "cells": 6753,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 54y vs 阈值 18y"
+   "rule": "Digital age 54y vs threshold 18y"
   },
   "50-year-old stage": {
    "cells": 4676,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 50y vs 阈值 18y"
+   "rule": "Numeric age 50y vs threshold 18y"
   },
   "37-year-old stage": {
    "cells": 3687,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 37y vs 阈值 18y"
+   "rule": "Digital age 37y vs threshold 18y"
   },
   "11-year-old stage": {
    "cells": 3443,
    "n_donors": 1,
    "organism_stage": "developing",
-   "rule": "数字年龄 11y vs 阈值 18y"
+   "rule": "Numeric age 11y vs threshold 18y"
   },
   "53-year-old stage": {
    "cells": 2974,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 53y vs 阈值 18y"
+   "rule": "Numeric age 53y vs threshold 18y"
   }
  },
  "excluded_nonadult_units": [
@@ -3671,63 +3671,63 @@
    "cells": 18998,
    "uberon": "10-year-old stage",
    "organism_stage": "developing",
-   "rule": "数字年龄 10y vs 阈值 18y"
+   "rule": "Numeric age 10y vs threshold 18y"
   },
   {
    "donor_id": "BCM_22_0698",
    "cells": 15177,
    "uberon": "newborn stage (0-28 days)",
    "organism_stage": "developing",
-   "rule": "newborn/infant 产后早期→developing (裁定 Q2)"
+   "rule": "newborn/infant early postnatal → developing (adjudication Q2)"
   },
   {
    "donor_id": "BCM_23_0491",
    "cells": 14845,
    "uberon": "16-year-old stage",
    "organism_stage": "developing",
-   "rule": "数字年龄 16y vs 阈值 18y"
+   "rule": "Numeric age 16y vs threshold 18y"
   },
   {
    "donor_id": "MMD_23_22486",
    "cells": 13748,
    "uberon": "3-year-old stage",
    "organism_stage": "developing",
-   "rule": "数字年龄 3y vs 阈值 18y"
+   "rule": "Numeric age 3y vs threshold 18y"
   },
   {
    "donor_id": "MMD_23_21623",
    "cells": 13317,
    "uberon": "15-year-old stage",
    "organism_stage": "developing",
-   "rule": "数字年龄 15y vs 阈值 18y"
+   "rule": "Numeric age 15y vs threshold 18y"
   },
   {
    "donor_id": "BCM_23_0131",
    "cells": 10136,
    "uberon": "16-year-old stage",
    "organism_stage": "developing",
-   "rule": "数字年龄 16y vs 阈值 18y"
+   "rule": "Numeric age 16y vs threshold 18y"
   },
   {
    "donor_id": "MMD_23_21999",
    "cells": 8175,
    "uberon": "17-year-old stage",
    "organism_stage": "developing",
-   "rule": "数字年龄 17y vs 阈值 18y"
+   "rule": "Numeric age 17y vs threshold 18y"
   },
   {
    "donor_id": "BCM_22_0769",
    "cells": 3443,
    "uberon": "11-year-old stage",
    "organism_stage": "developing",
-   "rule": "数字年龄 11y vs 阈值 18y"
+   "rule": "Numeric age 11y vs threshold 18y"
   },
   {
    "donor_id": "MMD_23_20181",
    "cells": 2231,
    "uberon": "16-year-old stage",
    "organism_stage": "developing",
-   "rule": "数字年龄 16y vs 阈值 18y"
+   "rule": "Numeric age 16y vs threshold 18y"
   }
  ],
  "donor_level_adult_pool_contrast": {
@@ -4068,7 +4068,7 @@
  },
  "axis_version": "kb2c-1.1",
  "development_stage": "adult",
- "development_stage_prohibition": "KB3 禁令 (PI 红线 2026-09-23): 发育期数据不得进成人基线统计池, 反之亦然 —— 同一组织胎儿≠成人, adult/fetal 不互为参照。",
+ "development_stage_prohibition": "KB3 Prohibition (PI Red Line 2026-09-23): Developmental data must not enter adult baseline statistical pool, and vice versa — same tissue fetal ≠ adult, adult/fetal do not serve as mutual references.",
  "kb3_card": "t_5425a7ca",
  "identity_signature": {
   "baseline_human_optic_nerve__adult_only__kb2c": "sha256:04ed21d9e901a33d18bc424e039086fc35c699e1efafa7955b7dfd067ed48169",

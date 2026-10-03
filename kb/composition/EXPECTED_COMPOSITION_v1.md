@@ -1,12 +1,12 @@
-# EXPECTED_COMPOSITION_v1 — 组成先验面 v1（条件层化；默认 OFF）
+# EXPECTED_COMPOSITION_v1 — Composition Prior Face v1 (conditional stratification; default OFF)
 
-> 卡 t_37a35220 | 放行=USER_DIRECTIVE 追加八 | 规则预注册=PHASE0_INVENTORY_t_37a35220.md | v0 三件字节不动
+> Card t_37a35220 | Release=USER_DIRECTIVE addition eight | Rule pre-registration=PHASE0_INVENTORY_t_37a35220.md | v0 three items bytes unchanged
 
-> **⛔ 未接线；旗标=提示复核≠注释错误；激活永远归 PI。**
+> **⛔ unwired; flags = review prompts ≠ annotation errors; activation is forever reserved to the PI.**
 
-## 1. retina 条件层（建库/取材/分选策略；单元=donor×组织×富集，adult-only）
+## 1. Retina Condition Layer (library/sampling/sorting strategy; unit=donor×tissue×enrichment, adult-only)
 
-| 类 | v0 包络[低,高] | RC1 未分选全区域 A/B | RC2 未分选中央 A/B | RC3 未分选外周 A/B | RC4 分选/靶向 A/B |
+| Class | v0 envelope [low, high] | RC1 unsorted whole-region A/B | RC2 unsorted central A/B | RC3 unsorted peripheral A/B | RC4 sorted/targeted A/B |
 |---|---|---|---|---|---|
 | Rod | [22,58] | [32,66] / [28,66] (n=130) | [17,51] / [17,56] (n=82) | [62,70] / [28,70] (n=48) | [2,27] / [2,56] (n=80) |
 | Cone | [1,7] | [2,6] / [1,7] (n=130) | [3,7] / [1,7] (n=82) | [2,4] / [1,7] (n=48) | [0,5] / [0,7] (n=80) |
@@ -19,25 +19,25 @@
 | Micro | [0,1] | [0,1] / [0,1] (n=130) | [0,1] / [0,1] (n=82) | [0,1] / [0,1] (n=48) | [0,1] / [0,1] (n=80) |
 | RPE | [0,1] | [0,0] / [0,1] (n=130) | [0,0] / [0,1] (n=82) | [0,0] / [0,1] (n=48) | [0,0] / [0,1] (n=80) |
 
-注：A=严格供者带（预注册主口径），B=v0 公式逐字包络（后验敏感性）；A 本质=中央 50% 带，天然窄于 v0 三重包络——语义选择归 PI。
+Note: A = strict donor band (preregistered primary caliber), B = verbatim envelope of the v0 formula (post-hoc sensitivity); A is essentially the central-50% band and inherently narrower than the v0 triple envelope — the semantic choice belongs to the PI.
 
-RC4 成员=NeuN+ FACS ∪ Chen_rgc ∪ Shekhar_GSE237204（baselines 盘上既有靶向设计声明）。
+RC4 members=NeuN+ FACS ∪ Chen_rgc ∪ Shekhar_GSE237204 (baselines existing targeted design declarations on disk).
 
-## 2. OB-3 分层反向质检复算（20% 线不动；判定只看预注册 R1A）
+## 2. OB-3 Stratified Reverse QC Recalculation (20% line unchanged; judgment based only on pre-registered R1A)
 
-| 数据集 | 平台 | R0 v0 | R1A 层化(主) | R1B 包络(敏) | R2 单元均 A | R2 单元均 B | R1A 判定 |
+| Dataset | Platform | R0 v0 | R1A Stratified (primary) | R1B Envelope (sensitivity) | R2 Unit Mean A | R2 Unit Mean B | R1A Verdict |
 |---|---|---|---|---|---|---|---|
 | Q1_Lukowski2019 | cell | 4/10=40.0% | 4/10=40.0% | 3/10=30.0% | 4/10=40.0% | 3/10=33.3% | TRIGGER |
 | Q2_GSE155288 | cell | 4/10=40.0% | 6/10=60.0% | 4/10=40.0% | 6/10=65.0% | 6/10=60.0% | TRIGGER |
 | Q3 | smart-seq cell | 3/10=30.0% | 5/10=50.0% | 3/10=30.0% | 6/10=55.0% | 4/10=40.0% | TRIGGER |
-| Q4 | cell+CD73/90分选 | 2/10=20.0% | 4/10=40.0% | 1/10=10.0% | 5/10=50.0% | 3/10=27.1% | TRIGGER |
+| Q4 | cell+CD73/90 sorted | 2/10=20.0% | 4/10=40.0% | 1/10=10.0% | 5/10=50.0% | 3/10=27.1% | TRIGGER |
 | Q5b | nucleus | 0/10=0.0% | 4/10=40.0% | 1/10=10.0% | 4/10=36.9% | 2/10=24.6% | TRIGGER |
 
-**R0 复现门 5/5 PASS（含 Q5b 0/10）。R1A 下 5/5 全部 TRIGGER → OB-3 目标 <20% 未达成，如实报缺口（§4+V1_VERDICT）。**
+**R0 reproduction gate 5/5 PASS (incl. Q5b 0/10). Under R1A, 5/5 all TRIGGER → the OB-3 target <20% is not met; the gap is reported as-is (§4 + V1_VERDICT).**
 
-### 逐行归因（PERSISTS=三规则全旗 / NEWFLAG=仅严格层新增 / RESOLVED=层化消除）
+### Per-row Attribution (PERSISTS=all three rules flagged / NEWFLAG=only strict layer new / RESOLVED=stratification eliminated)
 
-| 数据集 | 行 | 观测% | v0 | A | B | verdict |
+| Dataset | Row | Observed % | v0 | A | B | verdict |
 |---|---|---|---|---|---|---|
 | Q1_Lukowski2019 | Rod | 62.15 | FLAG | ok | ok | RESOLVED_by_layering |
 | Q1_Lukowski2019 | BC | 10.51 | FLAG | FLAG | FLAG | PERSISTS_all_rules |
@@ -65,9 +65,9 @@ RC4 成员=NeuN+ FACS ∪ Chen_rgc ∪ Shekhar_GSE237204（baselines 盘上既�
 | Q5b | MG | 4.18 | ok | FLAG | ok | NEWFLAG_under_strict_layer |
 | Q5b | RPE | 0.02 | ok | FLAG | ok | NEWFLAG_under_strict_layer |
 
-## 3. OB-2 眼表 类型×区域行
+## 3. OB-2 Ocular Surface Type×Region Rows
 
-| 类型 | cornea | corneal endothelium | corneo-scleral junction | ocular surface region | sclera | v0 混合行[低,高] |
+| Type | cornea | corneal endothelium | corneo-scleral junction | ocular surface region | sclera | v0 mixed row [low, high] |
 |---|---|---|---|---|---|---|
 | Corneal Endothelium | [0,0] n=29 | gate-fail→v0 | [0,0] n=22 | gate-fail→v0 | [0,0] n=10 | [0,1] |
 | Endothelium | [0,2] n=29 | gate-fail→v0 | [5,13] n=22 | gate-fail→v0 | [8,18] n=10 | [0,9] |
@@ -79,30 +79,30 @@ RC4 成员=NeuN+ FACS ∪ Chen_rgc ∪ Shekhar_GSE237204（baselines 盘上既�
 | Schwann Cells | [0,0] n=29 | gate-fail→v0 | [0,2] n=22 | gate-fail→v0 | [0,3] n=10 | [0,2] |
 | Smooth Muscle Cells | [0,0] n=29 | gate-fail→v0 | [0,0] n=22 | gate-fail→v0 | [0,1] n=10 | [0,1] |
 
-### Q6（D002 sub100k，adult-only 76,708 细胞）分区域重算
+### Q6 (D002 sub100k, adult-only 76,708 cells) Regional Recalculation
 
-| 区域 | 评估行数 | 旗标 | 明细 |
+| Region | Evaluated Rows | Flags | Details |
 |---|---|---|---|
 | cornea | 0 | 0 | - |
-| corneal endothelium (单独层, 仅 404 细胞) | 0 | 0 | - |
-| corneo-scleral junction (limbus 区) | 9 | 1 | Smooth Muscle Cells 0.13% vs [0.0,0.0] FLAG_ABOVE |
-| ocular surface region (混合) | 0 | 0 | - |
+| corneal endothelium (separate layer, only 404 cells) | 0 | 0 | - |
+| corneo-scleral junction (limbus region) | 9 | 1 | Smooth Muscle Cells 0.13% vs [0.0,0.0] FLAG_ABOVE |
+| ocular surface region (mixed) | 0 | 0 | - |
 | sclera | 9 | 1 | Smooth Muscle Cells 3.1% vs [0.0,1.0] FLAG_ABOVE |
 | ANY(v0 mixed, adult-only) | 9 | 1 | Pericytes 5.77% vs [0.0,5.0] FLAG_ABOVE |
 
-v0 混合行的 Pericytes 旗标 (6.5%>[0,5]) 在区域行下全部消除=纯区域混合伪旗；SMC 在 limbus/sclera 新旗如实保留（区域行语义的代价与收益都在盘上）。
+v0 mixed row Pericytes flag (6.5%>[0,5]) fully eliminated under regional rows=pure regional mixing pseudo-flag; SMC new flags in limbus/sclera retained honestly (cost and benefit of regional row semantics both on disk).
 
-## 4. OB-1 检索声明（两行缺 PMID）
+## 4. OB-1 Search Declaration (two rows missing PMID)
 
-- 检索面：盘上 chunks.parquet 242,928 chunks 全量（零外网）+ v0 ledgers 交叉。
-- **Goblet_cell**：480 chunks 命中 → 眼表语境 12 窗 → 三重过滤后 **0 句**通过（数字全为试剂浓度/手术成功率/再上皮化面积率假阳性）→ **维持 null(no_evidence)**。
-- **Pericytes**：2,574 chunks 命中 → 眼表定量组成 **0 窗** → **维持 null**（A 级区间行不变）。
-- 候选全量 108 窗留痕：ob1_lit_candidates.tsv。
+- Search face: full chunks.parquet 242,928 chunks on disk (zero external network) + v0 ledgers cross-reference.
+- **Goblet_cell**: 480 chunks hit → 12 windows in ocular surface context → **0 sentences** passed after triple filtering (all numbers were false positives from reagent concentrations/surgical success rates/re-epithelialization area rates) → **maintain null(no_evidence)**.
+- **Pericytes**: 2,574 chunks hit → **0 windows** for quantitative ocular surface composition → **maintain null** (Grade A interval rows unchanged).
+- Audit trail for all 108 candidate windows: ob1_lit_candidates.tsv.
 
-## 5. 红线与边界声明
+## 5. Red Lines and Boundary Declarations
 
-- v0 冻结件与 evalset/票面/kb/mcp_server 零触碰（前后 sha 台账 logs/SHA_BASELINE_post 自证）。
-- wiring=OFF：本文件不进任何运行时路径；激活永远归 PI 点名。
-- 球门与判据不回调：20% 线、供者级分布法、支撑门（≥5 单元）、区间公式形状（含 B 变体的逐字 min/max 包络）全部形不动；分层=加维度。
-- 禁循环派生：区域/富集全部来自 D001/D002 portal 作者注释谱系 + baselines 盘上既有设计声明；未从自家聚类取数；Q6=循环参照仅 sanity 不入判定。
-- 分母语义继承 v0（捕获事件构成参考，非组织学真值，非达标线）；fetal/organoid/developing 排除继承。
+- Zero touch on v0 frozen artifacts and evalset/tickets/kb/mcp_server (self-proven via before/after sha ledger logs/SHA_BASELINE_post).
+- wiring=OFF: this file enters no runtime path; activation is forever reserved to an explicit PI decision.
+- Goals and criteria are not adjusted: The 20% line, donor-level distribution method, support gate (≥5 units), and interval formula shape (including verbatim min/max envelope for B variants) remain fixed; stratification = adding dimensions.
+- Prohibition of circular derivation: Regions/enrichments come entirely from D001/D002 portal author annotation lineages + existing design declarations on baselines disk; no data taken from own clustering; Q6=circular reference is sanity check only, not part of adjudication.
+- Denominator semantics inherited from v0 (capture event composition reference, not histological ground truth, not compliance threshold); exclusion of fetal/organoid/developing inherited.

@@ -1,42 +1,42 @@
-# 组成基线: 人(正常)trabecular_meshwork snRNA adult-only 主档 (trabecular_meshwork 切片 184,922 核 / 25 供者, 供者级条件参考分布, KB2c 发育轴单列)
+# Composition baseline: Human(normal) trabecular_meshwork snRNA adult-only main archive (trabecular_meshwork slice 184,922 nuclei / 25 donors, donor-level conditional reference distribution, KB2c developmental axis listed separately)
 
-> schema: `eyekb-baseline/1.1` | entry_id: `baseline_human_trabecular_meshwork` | 状态: filled_donor_level | 发育轴: **organism_stage=adult** | 生成: 2026-09-23 | 卡片: t_bad1fbab
-> **KB3 发育档 (卡片 t_5425a7ca)**: development_stage=**adult** —— KB3 禁令 (PI 红线 2026-09-23): 发育期数据不得进成人基线统计池, 反之亦然 —— 同一组织胎儿≠成人, adult/fetal 不互为参照。
-> 本文件由 `/mnt/D/EyeKB/scripts/baselines/build_baselines.py` 从同名 .json 自动渲染 —— 改内容改 JSON+脚本, 手改 MD 会被覆盖。
+> schema: `eyekb-baseline/1.1` | entry_id: `baseline_human_trabecular_meshwork` | status: filled_donor_level | developmental axis: **organism_stage=adult** | generated: 2026-09-23 | card: t_bad1fbab
+> **KB3 development record (Card t_5425a7ca)**: development_stage=**adult** —— KB3 prohibition (PI Red Line 2026-09-23): developmental data must not enter the adult baseline statistical pool, and vice versa —— fetal ≠ adult for the same tissue; adult/fetal do not serve as mutual references.
+> This file is automatically rendered from the corresponding .json by `/mnt/D/EyeKB/scripts/baselines/build_baselines.py` — modify content in JSON+script; manual MD edits will be overwritten.
 
-**用途口径 (Astra T2 裁定固化): 本基线 = 该取样材料在该实验流程下捕获到的细胞构成的身份参考 + 背景对照; **不得当组成达标线**。疾病手术材料的取样对象 ≠ 健康器官 (如 PDR 纤维血管膜不得对照健康视网膜组成验收); 注释数据出现清单外身份 → 触发 unexpected 旗即可, 不得强制改成清单内身份 (标签接受上下文一致性核查, 非白名单定位)。**
+**Usage scope (Astra T2 adjudication finalized): This baseline = identity reference + background control for cell composition captured from this sampling material under this experimental workflow; **must not be used as a composition compliance threshold**. Sampling targets for disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition); if annotation data yields identities outside the list → trigger unexpected flag only, do not force into listed identities (label acceptance requires contextual consistency check, not whitelist positioning).**
 
-## 证据等级口径
-- **A**: 本地实测复算 (带文件路径+脚本)
-- **B**: 文献原文直接报告
-- **C**: A 级源数据供者级/跨研究分布推得的经验区间
-- **qualitative**: 文献仅定性描述 → 只存定性, 不补造区间 (Astra T2)
-- **not_estimable**: 区间无法估计 —— 合法状态, 注释仍可开展 (Astra T2)
+## Evidence grade definitions
+- **A**: Local empirical recalculation (with file paths+scripts)
+- **B**: Direct reporting in original literature
+- **C**: Empirical intervals derived from A-grade source data at donor level/cross-study distribution
+- **qualitative**: Literature provides only qualitative description → store qualitative only, do not fabricate intervals (Astra T2)
+- **not_estimable**: Interval cannot be estimated — valid state, annotation may proceed (Astra T2)
 
-## 发育轴口径 (KB2c 裁定 2026-09-23 — 阈值改动须过裁定)
-- 顶层轴: `organism_stage` ∈ ['fetal', 'adult', 'developing', 'unknown']
-- **adult**: UBERON development_stage 数字化年龄 >= 18y 判 adult; 显式成年术语 (late/prime/middle/mature/human adult stage, 年代段>=3rd) 亦判 adult 并记 rule; 阈值改动须过裁定 (KB2c Q2, 2026-09-23)
-- **developing**: newborn/infant/postnatal stage 与 <18y 数字年龄/年龄段 → developing (KB2c Q2)
-- **fetal**: fetal/embryonic/gestation/Carnegie 术语 → fetal; 永不并入 adult 主档 (红线1)
-- **unknown**: 无年龄列/未映射术语/organoid/年龄段跨阈值 → unknown, 必须披露行, 禁静默归 adult (红线2)
-- aging 正交轴: >=60 老年分层不在本轴 — aging 是正交独立轴, 将来单独立条目 (裁定 Q2)
-- 两档身份: {'adult_only': 'baseline_human_trabecular_meshwork__adult_only__kb2c', 'adult_pool': 'baseline_human_trabecular_meshwork__adult_pool__v1.0'}
+## Developmental axis definitions (KB2c adjudication 2026-09-23 — threshold changes require adjudication)
+- Top-level axis: `organism_stage` ∈ ['fetal', 'adult', 'developing', 'unknown']
+- **adult**: UBERON development_stage digital age >= 18y judged adult; explicit adult terms (late/prime/middle/mature/human adult stage, decade>=3rd) also judged adult and rule recorded; threshold changes require adjudication (KB2c Q2, 2026-09-23)
+- **developing**: newborn/infant/postnatal stage and <18y digital age/age range → developing (KB2c Q2)
+- **fetal**: fetal/embryonic/gestation/Carnegie terms → fetal; never merged into adult main tier (red line 1)
+- **unknown**: No age column/unmapped terms/organoid/age range crossing thresholds → unknown, disclosure line required, silent assignment to adult prohibited (red line 2)
+- aging orthogonal axis: >=60 elderly stratification is not on this axis — aging is an orthogonal independent axis, to be established as a separate entry in the future (adjudication Q2)
+- Two-tier identity: {'adult_only': 'baseline_human_trabecular_meshwork__adult_only__kb2c', 'adult_pool': 'baseline_human_trabecular_meshwork__adult_pool__v1.0'}
 
-## Astra T2 元数据字段
-- **取样材料**: 人前节段手术取材中 trabecular_meshwork 解剖组分 (tissue 列='eye trabecular meshwork' 切片; 另有 uvea 分量 53,406 核未入本条)
-- **疾病阶段**: normal (disease 列全 normal; 供者系统性死亡眼库/手术材料)
-- **治疗背景**: 未记录 (元数据无治疗列) —— 标'未记录', 不臆测
+## Astra T2 metadata fields
+- **Sampling material**: Trabecular_meshwork anatomical component from human anterior segment surgical resection (tissue column='eye trabecular meshwork' slice; uvea component 53,406 nuclei not included in this entry)
+- **Disease Stage**: normal (disease column all normal; donor systemic death eye bank/surgical material)
+- **Treatment Context**: Not recorded (no treatment column in metadata) — marked 'Not recorded', no speculation
 - **scRNA_vs_snRNA**: snRNA-seq (suspension_type=nucleus 100%; intronic_reads_counted=yes)
-- **富集步骤**: 无分选记录 (全组织核悬液直接上机)
-- **解离方法**: mechanical dissociation,detergent solubilization×157,161核; mechanical dissociation,centrifugation×27,761核 (sample_collection_method=surgical resection)
-- **供者数**: 主档 adult-only 25 donors / 25 供者单元; 对照档 adult_pool 25 donors / 25 单元 (含 0 非 adult 供者 → 逐行见 excluded_nonadult_units)
-- **计数分母**: 184,922 核 (trabecular_meshwork 切片内 majorclass 全标注)
-- **证据来源**: 本地实测复算 (A) + portal/HASA 官方注释 (t_6f5cc731 判 'portal官方')
+- **Enrichment Steps**: No sorting records (whole-tissue nuclear suspension loaded directly onto instrument)
+- **Dissociation method**: mechanical dissociation,detergent solubilization×157,161 nuclei; mechanical dissociation,centrifugation×27,761 nuclei (sample_collection_method=surgical resection)
+- **Donor count**: Main archive adult-only 25 donors / 25 donor units; Control archive adult_pool 25 donors / 25 units (includes 0 non-adult donors → see excluded_nonadult_units row by row)
+- **Count denominator**: 184,922 nuclei (all annotated majorclass within trabecular_meshwork slice)
+- **Evidence Source**: Local empirical recalculation (A) + portal/HASA official annotation (t_6f5cc731 judged as 'portal official')
 
-## 主参考: 供者级条件参考分布 (排除分选设计层)
-> ⚠ KB3 禁令 (PI 红线 2026-09-23): 发育期数据不得进成人基线统计池, 反之亦然 —— 同一组织胎儿≠成人, adult/fetal 不互为参照。
+## Primary Reference: Donor-level conditional reference distribution (excluding sorting design layer)
+> ⚠ KB3 prohibition (PI red line 2026-09-23): Developmental-stage data must not enter adult baseline statistical pools, and vice versa —— fetal ≠ adult for the same tissue; adult/fetal are not mutual references.
 
-| 细胞类 | 供者中位% | 供者IQR% | 供者range% | n供者 |
+| Cell class | Donor median % | Donor IQR % | Donor range % | n donors |
 |---|---|---|---|---|
 | CB_NPCE | 0.0 | 0.0–0.0 | 0.0–2.81 | 25 |
 | CB_PCE | 0.0 | 0.0–0.0 | 0.0–4.9 | 25 |
@@ -48,9 +48,9 @@
 | Pericyte | 0.33 | 0.27–0.42 | 0.0–0.88 | 25 |
 | Schwann Cell | 11.58 | 7.72–13.6 | 3.73–22.85 | 25 |
 
-### 对照档 adult_pool (v1.0 混口径, 含非 adult 供者; tier=`baseline_human_trabecular_meshwork__adult_pool__v1.0`) —— 引用 v1.0 旧数字只能挂此档身份
+### Control archive adult_pool (v1.0 mixed scope, includes non-adult donors; tier=`baseline_human_trabecular_meshwork__adult_pool__v1.0`) —— citing v1.0 old numbers can only attach to this archive identity
 
-| 细胞类 | 供者中位% | 供者IQR% | 供者range% | n供者 |
+| Cell class | Donor median % | Donor IQR % | Donor range % | n donors |
 |---|---|---|---|---|
 | CB_NPCE | 0.0 | 0.0–0.0 | 0.0–2.81 | 25 |
 | CB_PCE | 0.0 | 0.0–0.0 | 0.0–4.9 | 25 |
@@ -62,33 +62,33 @@
 | Pericyte | 0.33 | 0.27–0.42 | 0.0–0.88 | 25 |
 | Schwann Cell | 11.58 | 7.72–13.6 | 3.73–22.85 | 25 |
 
-### 发育阶段逐行披露 (KB2c 红线2: 排除项/unknown 全部显式列出)
-| UBERON development_stage | organism_stage | 判级规则 | 核/细胞数 | 供者数 |
+### Developmental stage line-by-line disclosure (KB2c Red Line 2: exclusions/unknowns explicitly listed)
+| UBERON development_stage | organism_stage | Grading Rule | Nuclei/Cell Count | Number of Donors |
 |---|---|---|---|---|
-| 53-year-old stage | adult | 数字年龄 53y vs 阈值 18y | 22,052 | 2 |
-| 68-year-old stage | adult | 数字年龄 68y vs 阈值 18y | 20,418 | 2 |
-| 80 year-old and over stage | adult | '80 year-old and over' 下界>=阈值 | 16,802 | 2 |
-| 69-year-old stage | adult | 数字年龄 69y vs 阈值 18y | 16,533 | 2 |
-| 66-year-old stage | adult | 数字年龄 66y vs 阈值 18y | 12,159 | 1 |
-| 20-year-old stage | adult | 数字年龄 20y vs 阈值 18y | 10,682 | 1 |
-| 72-year-old stage | adult | 数字年龄 72y vs 阈值 18y | 8,741 | 1 |
-| 56-year-old stage | adult | 数字年龄 56y vs 阈值 18y | 8,567 | 1 |
-| 58-year-old stage | adult | 数字年龄 58y vs 阈值 18y | 8,501 | 1 |
-| 76-year-old stage | adult | 数字年龄 76y vs 阈值 18y | 8,015 | 1 |
-| 57-year-old stage | adult | 数字年龄 57y vs 阈值 18y | 7,975 | 1 |
-| 47-year-old stage | adult | 数字年龄 47y vs 阈值 18y | 6,492 | 1 |
-| 24-year-old stage | adult | 数字年龄 24y vs 阈值 18y | 6,284 | 1 |
-| 50-year-old stage | adult | 数字年龄 50y vs 阈值 18y | 5,526 | 1 |
-| 65-year-old stage | adult | 数字年龄 65y vs 阈值 18y | 5,270 | 1 |
-| 64-year-old stage | adult | 数字年龄 64y vs 阈值 18y | 4,313 | 1 |
-| 51-year-old stage | adult | 数字年龄 51y vs 阈值 18y | 3,889 | 1 |
-| 30-year-old stage | adult | 数字年龄 30y vs 阈值 18y | 3,840 | 1 |
-| 34-year-old stage | adult | 数字年龄 34y vs 阈值 18y | 3,510 | 1 |
-| 61-year-old stage | adult | 数字年龄 61y vs 阈值 18y | 2,994 | 1 |
-| 44-year-old stage | adult | 数字年龄 44y vs 阈值 18y | 2,359 | 1 |
+| 53-year-old stage | adult | Numeric age 53y vs threshold 18y | 22,052 | 2 |
+| 68-year-old stage | adult | Numeric age 68y vs threshold 18y | 20,418 | 2 |
+| 80 year-old and over stage | adult | '80 year-old and over' lower bound>=threshold | 16,802 | 2 |
+| 69-year-old stage | adult | Numeric age 69y vs threshold 18y | 16,533 | 2 |
+| 66-year-old stage | adult | Numeric age 66y vs threshold 18y | 12,159 | 1 |
+| 20-year-old stage | adult | Numeric age 20y vs threshold 18y | 10,682 | 1 |
+| 72-year-old stage | adult | Numeric age 72y vs threshold 18y | 8,741 | 1 |
+| 56-year-old stage | adult | Numeric age 56y vs threshold 18y | 8,567 | 1 |
+| 58-year-old stage | adult | Numeric age 58y vs threshold 18y | 8,501 | 1 |
+| 76-year-old stage | adult | Numeric age 76y vs threshold 18y | 8,015 | 1 |
+| 57-year-old stage | adult | Numeric age 57y vs threshold 18y | 7,975 | 1 |
+| 47-year-old stage | adult | Numeric age 47y vs threshold 18y | 6,492 | 1 |
+| 24-year-old stage | adult | Numeric age 24y vs threshold 18y | 6,284 | 1 |
+| 50-year-old stage | adult | Numeric age 50y vs threshold 18y | 5,526 | 1 |
+| 65-year-old stage | adult | Numeric age 65y vs threshold 18y | 5,270 | 1 |
+| 64-year-old stage | adult | Numeric age 64y vs threshold 18y | 4,313 | 1 |
+| 51-year-old stage | adult | Numeric age 51y vs threshold 18y | 3,889 | 1 |
+| 30-year-old stage | adult | Numeric age 30y vs threshold 18y | 3,840 | 1 |
+| 34-year-old stage | adult | Numeric age 34y vs threshold 18y | 3,510 | 1 |
+| 61-year-old stage | adult | Numeric age 61y vs threshold 18y | 2,994 | 1 |
+| 44-year-old stage | adult | Numeric age 44y vs threshold 18y | 2,359 | 1 |
 
-## 工具兼容主表 (major_classes)
-| 类 | 供者中位% | IQR% | range% | pooled%(仅对照) | 本地库marker | 证据 |
+## Tool compatibility main table (major_classes)
+| Class | Median % across donors | IQR% | range% | pooled% (control only) | Local library marker | Evidence |
 |---|---|---|---|---|---|---|
 | CB_NPCE | 0.0 | 0.0–0.0 | 0.0–2.81 | 0.18 |  | A |
 | CB_PCE | 0.0 | 0.0–0.0 | 0.0–4.9 | 0.31 |  | A |
@@ -100,10 +100,10 @@
 | Pericyte | 0.33 | 0.27–0.42 | 0.0–0.88 | 0.39 |  | A |
 | Schwann Cell | 11.58 | 7.72–13.6 | 3.73–22.85 | 12.11 |  | A |
 
-## 分层明细 (不同富集/部位先分层展示, 不跨层合并; KB2c: 各层表=adult-only, 括号内=层内 pool 供者数)
-### 层: chen_tm_cb|trabecular_meshwork  (n_donors=21, n_cells=157,161, 占图谱84.99%)
+## Stratified Details (Stratify by different enrichment/site priors for display; do not merge across layers; KB2c: Each layer table = adult-only, parentheses = number of pooled donors within the layer)
+### Layer: chen_tm_cb|trabecular_meshwork (n_donors=21, n_cells=157,161, 84.99% of atlas)
 
-| 细胞类 | 供者中位% | 供者IQR% | 供者range% | n供者 |
+| Cell class | Donor median % | Donor IQR % | Donor range % | n donors |
 |---|---|---|---|---|
 | CB_NPCE | 0.0 | 0.0–0.0 | 0.0–2.81 | 21 |
 | CB_PCE | 0.0 | 0.0–0.0 | 0.0–4.9 | 21 |
@@ -115,9 +115,9 @@
 | Pericyte | 0.31 | 0.26–0.36 | 0.0–0.77 | 21 |
 | Schwann Cell | 11.46 | 7.72–13.01 | 3.73–17.67 | 21 |
 
-### 层: sanes_GSE199013|trabecular_meshwork  (n_donors=4, n_cells=27,761, 占图谱15.01%)
+### Layer: sanes_GSE199013|trabecular_meshwork (n_donors=4, n_cells=27,761, 15.01% of atlas)
 
-| 细胞类 | 供者中位% | 供者IQR% | 供者range% | n供者 |
+| Cell class | Donor median % | Donor IQR % | Donor range % | n donors |
 |---|---|---|---|---|
 | CB_NPCE | 0.0 | 0.0–0.0 | 0.0–0.0 | 4 |
 | CB_PCE | 0.0 | 0.0–0.0 | 0.0–0.0 | 4 |
@@ -129,26 +129,26 @@
 | Pericyte | 0.72 | 0.67–0.78 | 0.55–0.88 | 4 |
 | Schwann Cell | 12.91 | 10.22–16.38 | 6.15–22.85 | 4 |
 
-## 亚型层 (类内注释细胞占比%, pooled within class 口径)
+## Subtype layer (% of annotated cells within class, pooled within class basis)
 
-## 旗标语义
-**expected_low_but_present**: Schwann Cell ~12% (神经支配组织); Pericyte ~0.4%
+## Flag semantics
+**expected_low_but_present**: Schwann Cell ~12% (innervated tissue); Pericyte ~0.4%
 
-**unexpected**: Melanocyte ~6% (葡萄膜色素组织附带, 取材平面相关)
+**unexpected**: Melanocyte ~6% (incidental uveal pigmented tissue, related to dissection plane)
 
-**contamination_suspect**: CB_PCE/CB_NPCE ~0.5% (取材越界到睫状体)
+**contamination_suspect**: CB_PCE/CB_NPCE ~0.5% (dissection boundary overrun into ciliary body)
 
-## 注意事项
-1. 本条=小梁网解剖组分取材切片: Ciliary_Muscle 占比高系紧邻的巩膜 spur/小梁肌一体取材, 属捕获构成非 TM 细胞层真值; 作者级 TM 特异亚型 (BeamA/BeamB/JCT, author_cell_type) 见 fine_types。
-2. Fibroblast 主表类在本切片 = TM 成纤维/梁细胞 (TMFibro) —— 勿与角膜/巩膜成纤维直接混比。
-3. CB_PCE/CB_NPCE 少量 (合计 ~0.5%) = 睫状体取材边界污染。
-4. 供者 25 但单元内供者规模不均; n=25 供者级区间仍属中等支撑, 疾病对照用后须复核方向。
-5. snRNA 口径, 与 scRNA 条不可直接互比 (Astra T2); uvea 分量 (53,406 核) 与巩膜/葡萄膜条另议。
-6. v1.1 (KB2c t_be336eee): 主档=adult-only (>=18y, 裁定 Q2) —— 本切片实测剔除 0 个 (本切片全部供者 >=18y → 两档数值合法全等, 仅身份签名分离); v1.0 混口径保留于 donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0), 两档签名分离。
+## Notes
+1. This entry = trabecular meshwork anatomical component dissection slice: High Ciliary_Muscle proportion results from integrated sampling of adjacent scleral spur/trabecular muscle; this reflects capture composition rather than ground truth for the TM cell layer; author-level TM-specific subtypes (BeamA/BeamB/JCT, author_cell_type) are found in fine_types.
+2. The primary Fibroblast class in this slice = TM fibroblasts/beam cells (TMFibro) — do not directly compare with corneal/scleral fibroblasts.
+3. Minor CB_PCE/CB_NPCE (total ~0.5%) = ciliary body dissection boundary contamination.
+4. Donor count is 25 but donor scale within units is uneven; n=25 donor-level interval remains moderate support; direction must be re-reviewed after disease control usage.
+5. snRNA scope, cannot be directly compared with scRNA entries (Astra T2); uvea component (53,406 nuclei) and sclera/uvea entries are discussed separately.
+6. v1.1 (KB2c t_be336eee): Primary archive = adult-only (>=18y, adjudication Q2) — measured exclusion of 0 items in this slice (all donors >=18y → values for both tiers are legally identical, only identity signatures separated); v1.0 mixed scope retained in donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0), two-tier signature separation.
 
-## 出处清单
-| sid | 类型 | 标签 |
+## Source List
+| sid | Type | Label |
 |---|---|---|
-| `TRABECULAR_MESHWORK_LOCAL` | dataset | 本地文件 /mnt/D/OcularKB/data/HRA000728_tm_cb/HRA000728_tm_cb.h5ad  |
-| `TRABECULAR_MESHWORK_HASA` | dataset | HASA/前节段 snRNA collection (t_6f5cc731 盘点映射 OA-D004/OA-D016; 本切片=其 chen_tm_cb+sanes 集成件的 trabecular_meshwork 分量)  |
+| `TRABECULAR_MESHWORK_LOCAL` | dataset | Local file /mnt/D/OcularKB/data/HRA000728_tm_cb/HRA000728_tm_cb.h5ad |
+| `TRABECULAR_MESHWORK_HASA` | dataset | HASA/anterior segment snRNA collection (t_6f5cc731 inventory mapping OA-D004/OA-D016; this slice = trabecular_meshwork component of its chen_tm_cb+sanes integration) |
 

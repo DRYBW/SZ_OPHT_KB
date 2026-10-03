@@ -16,10 +16,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "角膜单细胞材料=眼库捐献/移植内皮边缘碎块（尸体材料学），『正常』标签掩盖材料缺陷",
-   "observable_signature": "死亡至固定时距与材料来源缺失时 unexpected 旗按在册清单命中",
+   "failure_mode": "Corneal single-cell material = eye bank donation/transplant endothelial edge fragments (cadaveric material science); the 'normal' label masks material defects",
+   "observable_signature": "When time-to-fixation and material source are missing, unexpected flags trigger based on the registered checklist",
    "risk_level": "medium",
-   "mitigation": "角膜单细胞主张必须报材料来源（供体眼库/手术瓣膜/离体全角膜）与死亡至固定时距；离体培养样本与新鲜材料分列；出现 unexpected 清单签名先按在册旗处理不读作新发现。",
+   "mitigation": "Corneal single-cell claims must report material source (donor eye bank/surgical flap/ex vivo whole cornea) and time-to-fixation; ex vivo culture samples and fresh materials listed separately; unexpected list signatures treated as registered flags first, not new discoveries.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -33,16 +33,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/kb/baselines/ocular_surface.md 取样材料(26-28行)+expected_low_but_present/unexpected 条(213-215行)；B档培养漂移锚 PMID:40574692"
+    "/mnt/D/EyeKB/kb/baselines/ocular_surface.md Sampling material (lines 26-28) + expected_low_but_present/unexpected clauses (lines 213-215); Tier B culture drift anchor PMID:40574692"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__cornea",
     "b1_order": 1,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "角膜材料学特有；报来源+时距为强制缓解"
+    "home_rationale": "Specific to corneal material science; reporting source + time interval is mandatory mitigation"
    }
   },
   {
@@ -58,10 +58,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "无血管≠无血管签名：角膜缘/新生血管材料混入产生内皮/周细胞假簇",
-   "observable_signature": "CDH5/PTPRC 零检出=正常角膜门控；NEA/移植材料出现血管签名",
+   "failure_mode": "Avascular ≠ no vascular signature: limbal/neovascular material contamination produces false endothelial/pericyte clusters",
+   "observable_signature": "CDH5/PTPRC zero detection = normal corneal gating; NEA/transplant materials show vascular signatures",
    "risk_level": "medium",
-   "mitigation": "『角膜』样本报告先出血管化旗（CDH5/PTPRC 零检出为正常角膜门控）；NEA/移植材料进分析必须单列疾病档；眼表基质类互标一律挂『基质家族 prior 集体致盲』警示。",
+   "mitigation": "'Cornea' sample reports issue vascularization flag first (CDH5/PTPRC zero detection as normal corneal gate); NEA/transplant materials entering analysis must be listed in separate disease tier; ocular surface stromal cross-labeling always carries 'stromal family prior collective blindness' warning.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -75,16 +75,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/OcularKB/WIKI/INDEX.md 09-25 03:3x KB6b 勘误条（基质四红条+NNMT/ALDH3A1/KERA）"
+    "/mnt/D/OcularKB/WIKI/INDEX.md 09-25 03:3x KB6b erratum clause (four red stromal bars + NNMT/ALDH3A1/KERA)"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__cornea",
     "b1_order": 2,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "角膜（无血管器官）特有"
+    "home_rationale": "Specific to cornea (avascular organ)"
    }
   },
   {
@@ -100,10 +100,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "词条反噬：新词条上线点着邻域（Keratocytes 新词曾把 98.7% 纯周细胞簇拉走）",
-   "observable_signature": "mini 盲验证只证『能救』不证『不点邻居』时，发布后邻域簇标签漂移",
+   "failure_mode": "Entry backlash: launching new entries ignites neighborhoods (new Keratocytes entry previously pulled away a 98.7% pure pericyte cluster)",
+   "observable_signature": "Mini blind validation only proves 'can rescue' but not 'does not ignite neighbors'; post-release neighborhood cluster label drift occurs",
    "risk_level": "high",
-   "mitigation": "眼表词条上线前强制『邻域火灾审计』（发布验收首次写进 KB7 纪律：mini 盲验证须同时证『不点着邻居』）；基质四联（Kerat/Fibro/Peri/SMC）互标对全数落表人工过目。",
+   "mitigation": "Mandatory 'neighborhood fire audit' before ocular surface entry launch (release acceptance first written into KB7 discipline: mini blind validation must simultaneously prove 'does not ignite neighbors'); all four-way stromal cross-label pairs (Kerat/Fibro/Peri/SMC) manually reviewed against table.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -117,18 +117,18 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/OcularKB/WIKI/INDEX.md 09-25 03:3x 勘误条+KB7 发布条（邻域火灾审计）"
+    "/mnt/D/OcularKB/WIKI/INDEX.md 09-25 03:3x erratum clause + KB7 release clause (neighborhood fire audit)"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__cornea",
     "b1_order": 3,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "发布纪律（邻域火灾审计）属流程层 KB7；证据个案锚角膜格"
+    "home_rationale": "release discipline (neighborhood fire audit) belongs to the process layer KB7; the evidence case is anchored to the cornea grid"
    },
-   "note": "审计规则对 curator；失效观察对判读面"
+   "note": "Audit rules for curator; failure observations for reading interface"
   },
   {
    "claim_id": "KC-B1-040",
@@ -143,10 +143,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "取材层位混合：眼表超级类（角膜/角膜缘/巩膜…）混池后层位比例全是假数",
-   "observable_signature": "whole mount 默认含角膜缘干龛+结膜过渡带；跨区套基线时占比失真",
+   "failure_mode": "Sampling stratum mixing: pooling ocular surface superclasses (cornea/limbus/sclera...) makes stratum proportions entirely spurious",
+   "observable_signature": "Whole mount defaults include limbal stem niche + conjunctival transition zone; applying baselines across regions distorts proportions",
    "risk_level": "high",
-   "mitigation": "角膜分析先锁取材域（central/limbal/whole mount）；whole mount 默认含角膜缘干龛+结膜过渡带，比例结论只到域层；禁跨区套用类目/基线。",
+   "mitigation": "Corneal analysis first locks sampling domain (central/limbal/whole mount); whole mount defaults include limbal stem niche + conjunctival transition zone, proportion conclusions limited to domain level; prohibit cross-region application of categories/baselines.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -160,16 +160,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/kb/composition/EXPECTED_COMPOSITION_v0.md L76+L134（禁跨区套用/OB-2 分层义务）；/mnt/D/OcularKB/WIKI/数据资产.md L30（D002 条）"
+    "/mnt/D/EyeKB/kb/composition/EXPECTED_COMPOSITION_v0.md L76+L134 (no cross-region application / OB-2 stratification obligation); /mnt/D/OcularKB/WIKI/数据资产.md L30 (D002 entry)"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__cornea",
     "b1_order": 4,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "D002 超级类结构事实；锁取材域为强制缓解"
+    "home_rationale": "D002 superclass structural fact; locking sampling domain is mandatory mitigation"
    }
   },
   {
@@ -187,10 +187,10 @@
     "assay": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "单供体杠杆在眼表更极端：供眼例数天然个位数",
-   "observable_signature": "n≤4 donor 研究中稀有类 hit 随单 donor 删除翻转",
+   "failure_mode": "Single-donor leverage is more extreme in ocular surface: donor eye counts naturally single-digit",
+   "observable_signature": "In n≤4 donor studies, rare class hits flip upon deletion of a single donor",
    "risk_level": "medium",
-   "mitigation": "角膜结论强制报 donor 数与 top-donor 占比；双眼材料统计按配对/供体随机效应处理；稀有细胞类在 n≤4 donor 研究里只描述不检验。",
+   "mitigation": "Corneal conclusions mandate reporting donor count and top-donor proportion; bilateral material statistics handled via paired/donor random effects; rare cell classes in n≤4 donor studies described only, not tested.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -204,16 +204,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/drsc_disc_quant_20260928/DECISION_TABLE_composition_gates.md D-2 节"
+    "/mnt/D/EyeKB/plans/drsc_disc_quant_20260928/DECISION_TABLE_composition_gates.md Section D-2"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__cornea",
     "b1_order": 6,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "角膜材料结构特有（通用规则在 single_donor_leverage）"
+    "home_rationale": "Specific to corneal material structure (general rule in single_donor_leverage)"
    }
   },
   {
@@ -229,10 +229,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "角膜/眼表亚型词表须以图谱文献为基准；培养系引用带漂移声明",
-   "observable_signature": "词表无图谱对账时亚型不可判",
+   "failure_mode": "Corneal/ocular surface subtype vocabulary must benchmark against atlas literature; culture system citations carry drift declaration",
+   "observable_signature": "Subtypes undeterminable when vocabulary lacks atlas reconciliation",
    "risk_level": "low",
-   "mitigation": "亚型词表以 PMID:33865984/32439707 型图谱为基准；培养系数据引用带漂移声明。",
+   "mitigation": "Subtype vocabulary benchmarks against atlas types like PMID:33865984/32439707; culture system data citations carry drift declaration.",
    "evidence_source_type": "peer_reviewed_literature",
    "source_check": "locator_verified",
    "home": {
@@ -252,10 +252,10 @@
    "provenance": {
     "origin_cell": "human__cornea",
     "b1_order": 7,
-    "legacy_grade": "B文献PMID",
+    "legacy_grade": "Tier B bibliographic record PMID",
     "legacy_code_in_legend": "PIT-E2",
     "report_confidence": "high",
-    "home_rationale": "B 档题录池锚本格"
+    "home_rationale": "Tier B bibliographic pool anchored to this cell"
    }
   },
   {
@@ -271,10 +271,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "社区通用 QC/整合层坑可外推眼表，但须注明非角膜实证",
-   "observable_signature": "（社区观察，本地未复算）",
+   "failure_mode": "Community general QC/integration layer pitfalls extrapolatable to ocular surface, but must note non-corneal empirical basis",
+   "observable_signature": "(Community observation, locally unrecalculated)",
    "risk_level": "low",
-   "mitigation": "通用坑外推时注明『社区经验非角膜实证』。",
+   "mitigation": "When extrapolating general pitfalls, note 'community experience, not corneal empirical evidence'.",
    "evidence_source_type": "community_lead",
    "source_check": "unchecked",
    "home": {
@@ -294,10 +294,10 @@
    "provenance": {
     "origin_cell": "human__cornea",
     "b1_order": 8,
-    "legacy_grade": "C社区经验",
+    "legacy_grade": "Tier C community experience",
     "legacy_code_in_legend": "PIT-E3",
     "report_confidence": "high",
-    "home_rationale": "C 档内容条"
+    "home_rationale": "Tier C content clause"
    },
    "note": "community_lead"
   }

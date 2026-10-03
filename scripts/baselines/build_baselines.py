@@ -26,7 +26,7 @@ Scope = BRIEF_KB1v2_20260923.md W1 + ASTRA_ANNOTATION_GUIDANCE_v1.md T2:
     legal state, never pad numbers
   - Usage scope fixed: identity reference + background contrast; never a composition compliance line
 
-输入 (全部只读):
+Inputs (all read-only):
   /mnt/D/OcularKB/data/HRCA_cellxgene/HRCA_allcells_annotated.h5ad  (D001, obs-only)
   /mnt/D/OcularKB/data/D002_ocularsurface/D002_allcells_578K.h5ad   (D002, obs-only)
   /mnt/D/OcularKB/plans/tissue_reference_inventory_20260923/inventory.json  (t_6f5cc731 inventory)
@@ -477,14 +477,14 @@ def build_retina(old):
 
 # ------------------------------------------------------- ocular_surface (D002)
 TISSUE_GROUP = {
-    "cornea": "cornea (含角膜上皮/固有质)",
-    "substantia propria of cornea": "cornea (含角膜上皮/固有质)",
-    "corneal epithelium": "cornea (含角膜上皮/固有质)",
-    "corneal endothelium": "corneal endothelium (单独层, 仅 404 细胞)",
-    "corneo-scleral junction": "corneo-scleral junction (limbus 区)",
+    "cornea": "cornea (includes corneal epithelium/stroma)",
+    "substantia propria of cornea": "cornea (includes corneal epithelium/stroma)",
+    "corneal epithelium": "cornea (includes corneal epithelium/stroma)",
+    "corneal endothelium": "corneal endothelium (separate layer, only 404 cells)",
+    "corneo-scleral junction": "corneo-scleral junction (limbus region)",
     "sclera": "sclera",
     "tunica fibrosa of eyeball": "sclera",
-    "ocular surface region": "ocular surface region (混合)",
+    "ocular surface region": "ocular surface region (mixed)",
 }
 
 
@@ -517,14 +517,14 @@ def build_ocular_surface():
             guard = None
         else:
             stats_a, nu_a = None, 0
-            guard = ("FALLBACK_BLOCKED: 该组织组全部供者非 adult (如 newborn-only 层), "
-                     "adult-only 不存在 —— 禁静默回退 pool (KB2c 红线2)")
+            guard = ("FALLBACK_BLOCKED: All donors in this tissue group are non-adult (e.g., newborn-only layer), "
+                     "adult-only does not exist — silent fallback to pool prohibited (KB2c Red Line 2)")
         strata.append({"tissue_group": g, "n_donors": nu,
                        "n_cells": len(rows_s), "donor_level": stats,
                        "donor_level_adult_only": stats_a,
                        "n_units_adult_only": nu_a,
                        "adult_fallback_guard": guard})
-    # 主参考(KB2c)= 全库供者级(donor|组织组 单元)中仅 adult 供者; 对照档=旧 v1.0 全池口径
+    # Primary reference (KB2c)= adult donors only among full-library donor-level (donor|tissue group units); control tier= old v1.0 whole-pool scope"
     main_rows = [r for g in rows_by_g for r in rows_by_g[g]]
     pool_stats, pool_nd = donor_stats(main_rows, classes)
     main_rows_a = [r for r in main_rows if dsm[r[0][-1]][1] == "adult"]
@@ -533,7 +533,7 @@ def build_ocular_surface():
                          if main_rows_a else None)
     all_adult = [i for i in range(n) if dsm[donor[i]][1] == "adult"]
     excluded = excluded_units(donor, mc, dsm, classes)
-    # 类内 author_cell_type top (pooled within class, 口径标注)
+    # Top author_cell_type within class (pooled within class, criteria annotated)
     act = obs_col(f, "author_cell_type")
     fine = {}
     byc = defaultdict(Counter)
@@ -548,7 +548,7 @@ def build_ocular_surface():
         "schema": "eyekb-baseline/1.0",
         "entry_id": "baseline_human_ocular_surface",
         "tissue": "ocular_surface", "species": "human",
-        "title": "组成基线: 人(正常)眼表 adult-only 主档 — 角膜/limbus/巩膜超级类 (D002, 供者级条件参考分布, KB2c 发育轴单列)",
+        "title": "Composition baseline: Human (normal) ocular surface adult-only primary archive — Cornea/Limbus/Sclera super-class (D002, donor-level conditional reference distribution, KB2c developmental axis listed separately)",
         "status": "filled_donor_level",
         "generated": TODAY, "generator": GEN, "card": "t_16c3e020",
         "anchor": {
@@ -558,55 +558,55 @@ def build_ocular_surface():
             "collection": "https://cellxgene.cziscience.com/collections/0f7d022a-46c7-4e64-be4c-e34adbb78089",
             "tier": "T1 annotated standard set",
         },
-        "category_note": ("眼表为超级类 (cornea/limbus/sclera/conjunctiva 合并口径, 类目=per-region 多套禁跨区套用); "
-                          "conjunctiva/sclera 独立骨架另立 (t_6f5cc731 裁定: 结膜=数据不足, 建议并入眼表亚群标注)。"),
+        "category_note": ("Ocular surface is a super-class (merged scope of cornea/limbus/sclera/conjunctiva; category=per-region, cross-region application prohibited); "
+                          "conjunctiva/sclera independent skeleton established separately (t_6f5cc731 adjudication: conjunctiva=insufficient data, recommend merging into ocular surface subpopulation annotation)."),
         "t2_fields": {
-            "取样材料": "人眼表离体组织: cornea / corneo-scleral junction(limbus) / sclera / "
-                       "ocular surface region / corneal endothelium (移植角膜内皮边缘碎块)",
-            "疾病阶段": "normal (disease 列全 normal; 供者为眼库捐献角膜缘/巩膜环)",
-            "治疗背景": "未记录 (眼库捐献元数据无治疗列)",
-            "平台": "scRNA-seq (suspension_type=cell 100%, 10x 3' v2/v3) —— 与 D001 retina(核) 不同口径, 跨基线比较注意",
-            "富集步骤": "无细胞分选记录 (全组织解离直接上机)",
-            "解离方法": "机械+酶解离; 主要试剂: " + "; ".join(f"{k}×{v:,}细胞" for k, v in diss.items()),
-            "供者数": f"{len(set(donor.tolist()))} donors (本地 578K 文件); collection 级 registry 记 102 —— 本地为子集提取",
-            "计数分母": f"{n:,} cells (majorclass 全标注)",
-            "证据来源": "本地实测复算 (A) + CELLxGENE collection 官方注释 (portal)",
+            "Sampling material": "Human ocular surface ex vivo tissues: cornea / corneo-scleral junction(limbus) / sclera / "
+                       "ocular surface region / corneal endothelium (fragments from the edge of transplanted corneal endothelium)",
+            "Disease stage": "normal (disease column all normal; donors are eye bank donated limbus/scleral ring)",
+            "Treatment background": "Not recorded (eye bank donation metadata lacks treatment column)",
+            "Platform": "scRNA-seq (suspension_type=cell 100%, 10x 3' v2/v3) —— Different scope from D001 retina(nuclei), note when comparing across baselines",
+            "Enrichment steps": "No cell sorting records (whole tissue dissociation directly loaded onto machine)",
+            "Dissociation method": "Mechanical + enzymatic dissociation; key reagents: " + "; ".join(f"{k}×{v:,} cells" for k, v in diss.items()),
+            "Donor count": f"{len(set(donor.tolist()))} donors (local 578K file); collection-level registry records 102 — local is a subset extraction",
+            "Count denominator": f"{n:,} cells (majorclass fully annotated)",
+            "Evidence source": "Local empirical recalculation (A) + CELLxGENE collection official annotation (portal)",
         },
         "usage_scope": USAGE_SCOPE,
         "evidence_grades": EVIDENCE_GRADES,
-        "distribution_method": "供者级 (donor|组织组 单元); 组织组先分层, 不跨组合并 (Astra T2); KB2c: 主档仅 adult 供者单元; pooled 仅对照",
+        "distribution_method": "Donor-level (donor|tissue group unit); tissue groups stratified first, no cross-group merging (Astra T2); KB2c: primary archive contains only adult donor units; pooled used only for contrast",
         "donor_level_main": main_stats,
         "pooled_adult_only_main": pooled_adult_main,
         "pooled_all_cells": pooled,
         "strata": strata,
         "major_classes": [],
-        "fine_types": {"denominator_note": "author_cell_type 类内占比 (pooled within class, 供参考)",
+        "fine_types": {"denominator_note": "author_cell_type intra-class proportion (pooled within class, for reference)",
                        **fine},
         "states": None,
         "flags": {
             "expected_low_but_present": [
-                "Corneal Endothelium (pooled 0.07%) —— 仅眼库内皮边缘碎块贡献, 常规角膜缘样本近零",
+                "Corneal Endothelium (pooled 0.07%) —— Contributed only by eye bank endothelial edge fragments, near-zero in routine limbal samples",
                 "Melanocytes/Schwann Cells/Smooth Muscle Cells <2%"],
-            "unexpected": ["光感受器/视网膜神经元类出现 (取材越界到视网膜?)",
-                           "大量造血成熟标志 (FCN1/LYZ 粒系) —— 供体血液残留旗"],
+            "unexpected": ["Photoreceptor/retinal neuron classes appear (sampling overreach into retina?)",
+                           "High abundance of hematopoietic maturity markers (FCN1/LYZ granulocytic lineage) —— Donor blood residue flag"],
             "contamination_suspect": [
-                "published_annotation 列含 red blood cells 主导层 (525,617 标注) —— 血液残留是本库已知主污染, 见 caveat",
-                "黑素颗粒/色素组织污染 (色素性供者巩膜)"],
+                "published_annotation column dominated by red blood cells layer (525,617 annotations) —— Blood residue is known primary contamination in this library, see caveat",
+                "Melanin granule/pigmented tissue contamination (pigmented donor sclera)"],
         },
         "caveats": [
-            "本地 D002 文件 = 577,857 cells / 50 donors, 为 collection 级 (>1M/102) 的子集提取 (口径=本地实测); "
-            "回填全 collection 需下载审批, 列'待回填'。",
-            "'Majorclass=Immune Cells' 仅 1.7%: 眼表固有免疫稀少 + 无免疫富集步骤 —— 免疫比例不可对照炎症疾病样本。",
-            "published_annotation 与 majorclass 并存: published_annotation='red blood cells' 占大头说明 RBC 未从 "
-            "majorclass 里剔除干净? 不 —— majorclass 9 类无 RBC 类, RBC 信号散入各类, 计数分母含 RBC 污染核, "
-            "各类% 为'捕获事件构成'非组织真值 (Astra T2 口径声明)。",
-            "sclera/conjunctiva 独立条目见对应骨架文件; 本条 corneo-scleral junction 层 ≠ 独立结膜基线。",
+            "Local D002 file = 577,857 cells / 50 donors, a subset extraction from collection level (>1M/102) (metric=local measurement); "
+            "Backfilling the entire collection requires download approval; listed as 'pending backfill'.",
+            "'Majorclass=Immune Cells' only 1.7%: Ocular surface resident immunity scarce + no immune enrichment step —— Immune proportion cannot be compared against inflammatory disease samples.",
+            "published_annotation coexists with majorclass: published_annotation='red blood cells' predominance indicates RBCs not removed from "
+            "completely removed in majorclass? No — the 9 majorclass categories lack an RBC class; RBC signals are dispersed across all classes, and the count denominator includes RBC-contaminated nuclei,"
+            "Percentages per category represent 'captured event composition', not tissue ground truth (Astra T2 scope statement).",
+            "Sclera/conjunctiva independent entries see corresponding skeleton files; this entry's corneo-scleral junction layer ≠ independent conjunctival baseline.",
         ],
         "sources": [
-            {"sid": "D002_LOCAL", "kind": "dataset", "label": f"本地文件 {D002}", "path": D002,
+            {"sid": "D002_LOCAL", "kind": "dataset", "label": f"Local file {D002}", "path": D002,
              "computation": f"{__file__} build_ocular_surface()"},
             {"sid": "D002_PORTAL", "kind": "dataset",
-             "label": "Human Ocular Surface Cell Atlas, CELLxGENE collection (portal 官方注释)",
+             "label": "Human Ocular Surface Cell Atlas, CELLxGENE collection (portal official annotation)",
              "url": "https://cellxgene.cziscience.com/collections/0f7d022a-46c7-4e64-be4c-e34adbb78089"},
         ],
     }
@@ -619,15 +619,15 @@ def build_ocular_surface():
             "pooled_pct_for_reference_only": pooled[c],
             "evidence": "A", "source_ids": ["D002_LOCAL", "D002_PORTAL"],
         })
-    entry["t2_fields"]["供者数"] = (
-        f"主档 adult-only {sum(1 for v in dsm.values() if v[1] == 'adult')} donors / "
-        f"{main_nd} 供者单元; 对照档 adult_pool {len(set(donor.tolist()))} donors / {pool_nd} 单元 "
-        f"(含 {len(excluded)} 非 adult 供者如 newborn 0-28d → 逐行见 excluded_nonadult_units)")
+    entry["t2_fields"]["Donor count"] = (
+        f"Main file adult-only {sum(1 for v in dsm.values() if v[1] == 'adult')} donors / "
+        f"{main_nd} donor units; control adult_pool {len(set(donor.tolist()))} donors / {pool_nd} units "
+        f"(includes {len(excluded)} non-adult donors such as newborn 0-28d → see excluded_nonadult_units for line-by-line details)")
     entry["caveats"].append(
-        "v1.1 (KB2c t_be336eee): 主档=adult-only (>=18y); v1.0 混口径 (含 newborn 0-28d 25,018 细胞 + "
-        "postnatal/儿童青少年) 保留于 donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0)。"
-        "FALLBACK_BLOCKED 守卫已实装（组织组 0 adult 供者时触发禁回退）——本次实测 0 层触发, "
-        "各组织组 adult-only 均有真实支撑。")
+        "v1.1 (KB2c t_be336eee): Primary archive=adult-only (>=18y); v1.0 mixed scope (including newborn 0-28d 25,018 cells + "
+        "postnatal/children/adolescents) retained in donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0)."
+        "FALLBACK_BLOCKED guard implemented (triggers fallback prohibition when tissue group has 0 adult donors) — this run triggered 0 layers, "
+        "All adult-only tissue groups have real support.")
     entry["_tmp_main_nd"] = main_nd
     kb2c_adult_entry(entry, tally, excluded, pool_stats, pool_nd, pooled,
                      len(set(donor.tolist())), len(all_adult))
@@ -636,9 +636,9 @@ def build_ocular_surface():
 
 # ------------------------------------------------- optic_nerve (HRA006282 / OA-D003)
 ON = "/mnt/D/OcularKB/data/HRA006282_optic_nerve/HRA006282_optic_nerve.h5ad"
-ON_TISSUE_LABEL = {"cranial nerve II": "ON (视神经)",
-                   "optic disc": "ONH (视神经盘/视乳头)"}
-# ON/ONH 采集数据里会带入视盘旁视网膜组织 —— 这些类是"捕获构成"而非视神经本体真组成 (Astra T2)
+ON_TISSUE_LABEL = {"cranial nerve II": "ON (Optic Nerve)",
+                   "optic disc": "ONH (Optic Nerve Head/Papilla)"}
+# ON/ONH acquisition data includes peripapillary retinal tissue — these classes represent 'capture composition' rather than true optic nerve composition (Astra T2)
 ON_RETINA_ASSOC = {"Rod", "Cone", "BC", "HC", "AC", "RGC"}
 ON_RPE_ASSOC = {"RPE", "Pigmented_cell"}
 
@@ -672,8 +672,8 @@ def build_optic_nerve():
             guard = None
         else:
             stats_a, nu_a = None, 0
-            guard = ("FALLBACK_BLOCKED: 该来源×部位层无 adult 供者, adult-only 不存在 —— "
-                     "禁静默回退 pool (KB2c 红线2)")
+            guard = ("FALLBACK_BLOCKED: No adult donors in this source×site layer, adult-only does not exist —— "
+                     "Silent fallback to pool prohibited (KB2c red line 2)")
         strata.append({"study": s[0], "tissue_group": s[1], "n_donors": nu,
                        "n_cells": len(rows_s),
                        "share_of_atlas_pct": round(100.0 * len(rows_s) / n, 2),
@@ -706,7 +706,7 @@ def build_optic_nerve():
         "schema": "eyekb-baseline/1.0",
         "entry_id": "baseline_human_optic_nerve",
         "tissue": "optic_nerve", "species": "human",
-        "title": "组成基线: 人(正常)视神经+视神经盘 snRNA adult-only 主档 (OA-D003 HRA006282, 供者级条件参考分布, KB2c 发育轴单列)",
+        "title": "Composition baseline: Human (normal) optic nerve + optic nerve head snRNA adult-only master file (OA-D003 HRA006282, donor-level conditional reference distribution, KB2c developmental axis listed separately).",
         "status": "filled_donor_level",
         "generated": TODAY, "generator": GEN, "card": "t_bad1fbab",
         "anchor": {
@@ -714,63 +714,63 @@ def build_optic_nerve():
             "registry_csv": "/mnt/D/OcularKB/registry/ocular_public_datasets_verified_v1.csv",
             "local_path": ON,
             "collection": "https://cellxgene.cziscience.com/collections/05e3d0fc-c9dd-4f14-9163-2b242b3bb5c2",
-            "tier": "T1 已注释标准集 (portal 官方注释, majorclass/author_cell_type/cell_type 三层)",
+            "tier": "T1 Annotated standard set (portal official annotations, three layers: majorclass/author_cell_type/cell_type).",
         },
         "t2_fields": {
-            "取样材料": "人视神经/视神经盘离体组织 (手术取材, 眼库供体; 区域构成: "
-                       + ", ".join(f"{k} {v:,}核" for k, v in regions.items()) + ")",
-            "疾病阶段": "normal (disease 列全 normal; 供者为系统性死亡捐献者, "
-                       "donor_cause_of_death 含肿瘤/脓毒症等, 眼球本身无眼病记录)",
-            "治疗背景": "未记录 (眼库捐献元数据无治疗列) —— 标'未记录', 不臆测",
+            "Sampling material": "Human optic nerve/optic disc ex vivo tissues (surgical specimens, eye bank donors; regional composition: "
+                       + ", ".join(f"{k} {v:,} nuclei" for k, v in regions.items()) + ")",
+            "Disease stage": "normal (disease column entirely normal; donors are systemic death organ donors,"
+                       "donor_cause_of_death includes tumor/sepsis etc., no eye disease records for the globe itself)",
+            "Treatment background": "Not recorded (eye bank donation metadata lacks treatment column) — marked 'not recorded', no speculation.",
             "scRNA_vs_snRNA": "snRNA-seq (suspension_type=nucleus 100%; intronic_reads_counted=yes) —— "
-                              "与 scRNA 细胞悬液条 (如 D002 眼表) 类比例不可直接互比",
-            "富集步骤": "无分选记录 (metadata 无 enrichment 列; 全组织核悬液直接上机)",
-            "解离方法": "; ".join(f"{k}×{v:,}核" for k, v in diss.items())
+                              "Proportions cannot be directly compared with scRNA cell suspension entries (e.g., D002 ocular surface)",
+            "Enrichment steps": "No sorting records (metadata lacks enrichment column; whole-tissue nuclear suspension loaded directly).",
+            "Dissociation method": "; ".join(f"{k}×{v:,} nuclei" for k, v in diss.items())
                        + " (sample_preservation=frozen in liquid nitrogen; collection=surgical resection)",
-            "供者数": f"{n_donors} 唯一 donor_id; 按 研究来源|部位|供者 分层共 {main_nd} 个供者单元",
-            "计数分母": f"{n:,} 核 (majorclass 全标注)",
-            "证据来源": "本地实测复算 (A) + CELLxGENE HRA006282 collection 官方注释 (portal) + 注册表 OA-D003",
+            "Donor count": f"{n_donors} unique donor_id; stratified by source|site|donor yielding {main_nd} donor units",
+            "Count denominator": f"{n:,} nuclei (majorclass fully annotated)",
+            "Evidence source": "Local empirical recalculation (A) + CELLxGENE HRA006282 collection official annotations (portal) + Registry OA-D003.",
         },
         "usage_scope": USAGE_SCOPE,
         "evidence_grades": EVIDENCE_GRADES,
-        "distribution_method": "供者级 (来源|部位|供者 单元); 部位(ON vs ONH)×研究来源先分层展示, "
-                               "main 为 adult 供者单元汇总 (KB2c: 非 adult 不并入主档) —— 视神经 ON 与 ONH "
-                               "生物学构成差异大, 对照时优先看对应层区间 (Astra T2); pooled 仅对照",
+        "distribution_method": "Donor-level (Source|Site|Donor unit); stratified display by Site(ON vs ONH) × Study Source, "
+                               "main aggregates adult donor units (KB2c: non-adult not merged into main archive) — optic nerve ON and ONH"
+                               "Significant biological composition differences; prioritize corresponding layer intervals for controls (Astra T2); pooled data for control only",
         "donor_level_main": main_stats,
         "pooled_adult_only_main": pooled_adult_main,
         "pooled_all_cells": pooled,
         "strata": strata,
         "major_classes": [],
-        "fine_types": {"denominator_note": "author_cell_type 类内占比 (pooled within class, 供参考); "
-                                           "ON/ONH/retina 后缀=portal 官方位置亚型标注"},
+        "fine_types": {"denominator_note": "author_cell_type intra-class proportion (pooled within class, for reference); "
+                                           "ON/ONH/retina suffixes = official portal location subtype annotations"},
         "states": None,
         "flags": {
             "expected_low_but_present": [
-                "T/B/NK/DC/Mast 合计 <1% (正常神经组织免疫稀少)",
-                "Schwann_cell 0.22% (PN 髓鞘支持细胞; 核悬液下 PN 富集度受限于中枢段)",
-                "Mural_cell 1.8% / Endothelial_cell 3.6% (血管支持层)"],
+                "T/B/NK/DC/Mast total <1% (immune cells sparse in normal neural tissue).",
+                "Schwann_cell 0.22% (PN myelin supporting cells; PN enrichment limited to central segment under nuclear suspension).",
+                "Mural_cell 1.8% / Endothelial_cell 3.6% (vascular support layer)."],
             "unexpected": [
-                f"视网膜神经元类 (Rod/Cone/BC/HC/AC/RGC) pooled {ret_pct}% + RPE/色素类 {rpe_pct}% —— "
-                "视盘取材带入盘旁视网膜/脉络膜组织, 属捕获构成非视神经本体真组成; "
-                "疾病样本对照时不得把该层当'视神经应有比例'"],
+                f"Retinal neuron classes (Rod/Cone/BC/HC/AC/RGC) pooled {ret_pct}% + RPE/pigmented cells {rpe_pct}% —— "
+                "Optic disc sampling introduces peripapillary retina/choroid tissue; this reflects capture composition, not the true composition of the optic nerve itself."
+                "When controlling for disease samples, do not treat this layer as 'expected proportion for optic nerve'"],
             "contamination_suspect": [
-                "Melanocyte 0.86% (软脑膜/色素组织附带, 正常范围内偏高需结合取材平面解读)"],
+                "Melanocyte 0.86% (incidental leptomeningeal/pigmented tissue, slightly high within normal range, interpret in context of sampling plane)."],
         },
         "caveats": [
-            "MG=Müller 胶质细胞 (1.7%) 与 Microglia=小胶质细胞 (5.0%) 为两套不同身份, portal 词表并存 —— "
-            "下游引用勿混; 同规则适用 AC(无长细胞)/BC(双极细胞)等视网膜缩写。",
-            "Chen (Baylor, ~85%) 与 Sanes (Harvard) 两供体池规模悬殊, 已按 来源×部位 分 4 层展示; "
-            "main 供者级每单元等权, 大池不再压秤, 但层间差异需看 strata 而非只看 main。",
-            "本条计数分母含视盘旁视网膜来源类 (~15%); 如需'纯视神经'参考区间, 用 strata 中 "
-            "ON (cranial nerve II) 层。",
-            "snRNA 口径 (核悬液, 内含子 reads 计入) 与 scRNA 数据比较须谨慎 (Astra T2)。",
+            "MG=Müller glia (1.7%) and Microglia=microglia (5.0%) are two distinct identities, portal vocabulary coexists —— "
+            "downstream citations must not conflate them; the same rule applies to retinal abbreviations such as AC (amacrine, 'without a long process') / BC (bipolar cells).",
+            "Chen (Baylor, ~85%) and Sanes (Harvard) donor pools differ significantly in scale, displayed stratified by Source × Site into 4 layers;"
+            "main donor-level unit equal weighting, large pools no longer dominate, but inter-stratum differences require examining strata rather than only main.",
+            "The denominator for this count includes peripapillary retinal sources (~15%); for a 'pure optic nerve' reference interval, use strata containing "
+            "ON (cranial nerve II) layer.",
+            "Comparison between snRNA scope (nuclear suspension, intronic reads counted) and scRNA data requires caution (Astra T2).",
         ],
         "sources": [
-            {"sid": "ON_LOCAL", "kind": "dataset", "label": f"本地文件 {ON}", "path": ON,
+            {"sid": "ON_LOCAL", "kind": "dataset", "label": f"Local file {ON}", "path": ON,
              "computation": f"{__file__} build_optic_nerve()"},
             {"sid": "ON_PORTAL", "kind": "dataset",
              "label": "Human Optic Nerve / Optic Nerve Head Atlas, CELLxGENE collection HRA006282 "
-                      "(portal 官方注释; registry OA-D003, verified 2026-08-11)",
+                      "(portal official annotation; registry OA-D003, verified 2026-08-11)",
              "url": "https://cellxgene.cziscience.com/collections/05e3d0fc-c9dd-4f14-9163-2b242b3bb5c2"},
         ],
     }
@@ -782,16 +782,16 @@ def build_optic_nerve():
             "donor_range_pct": main_stats[c]["range_pct"],
             "pooled_pct_for_reference_only": pooled[c],
             "evidence": "A", "source_ids": ["ON_LOCAL", "ON_PORTAL"],
-            "note": ("视网膜来源类 — 视盘取材带入, 见 caveats/flags" if c in ON_RETINA_ASSOC
-                     else ("色素/RPE 来源类 — 同上" if c in ON_RPE_ASSOC else "")),
+            "note": ("Retina-derived classes — brought in by optic disc sampling, see caveats/flags." if c in ON_RETINA_ASSOC
+                     else ("Pigment/RPE-derived classes — same as above." if c in ON_RPE_ASSOC else "")),
         })
-    entry["t2_fields"]["供者数"] = (
-        f"主档 adult-only {sum(1 for v in dsm.values() if v[1] == 'adult')} donors / "
-        f"{main_nd} 供者单元; 对照档 adult_pool {n_donors} donors / {pool_nd} 单元 "
-        f"(含 {len(excluded)} 非 adult 供者含 newborn 15,177 核 → 逐行见 excluded_nonadult_units)")
+    entry["t2_fields"]["Donor count"] = (
+        f"Main file adult-only {sum(1 for v in dsm.values() if v[1] == 'adult')} donors / "
+        f"{main_nd} donor units; control adult_pool {n_donors} donors / {pool_nd} units "
+        f"(includes {len(excluded)} non-adult donors including newborn 15,177 nuclei → see excluded_nonadult_units for line-by-line details)")
     entry["caveats"].append(
-        "v1.1 (KB2c t_be336eee): 主档=adult-only (>=18y, 裁定 Q2); v1.0 混口径 (含 newborn/3-17 岁) "
-        "保留于 donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0), 两档身份签名分离不混用。")
+        "v1.1 (KB2c t_be336eee): Primary archive=adult-only (>=18y, adjudication Q2); v1.0 mixed scope (including newborn/ages 3-17) "
+        "Retained in donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0); two-tier identity signatures are separated and not mixed.")
     entry["_tmp_main_nd"] = main_nd
     kb2c_adult_entry(entry, tally, excluded, pool_stats, pool_nd, pooled,
                      n_donors, len(all_adult))
@@ -799,12 +799,12 @@ def build_optic_nerve():
 
 
 # ------------------------------------------------- TM + CB (HRA000728_tm_cb / HASA)
-# 本地文件实为 HASA 系前节段 snRNA 集成件 (obs study=chen_tm_cb + sanes_GSE199013);
-# t_6f5cc731 盘点: TM 主力参考底座 = GSE199013/HASA (OA-D004=OA-D016) snRNA 1,102,250核 ——
-# 与本文件实测 n=1,102,250 精确吻合, 判为同一资源。目录名 HRA000728 与 registry OA-D028
-# (Keratoconus cornea) 名称不符 —— 内容判决优先, 该 registry 错位另行登记, 本条不引用 OA-D028。
+# Local file is actually a HASA anterior segment snRNA integration artifact (obs study=chen_tm_cb + sanes_GSE199013);
+# t_6f5cc731 inventory: TM primary reference base = GSE199013/HASA (OA-D004=OA-D016) snRNA 1,102,250 nuclei ——
+# Precisely matches the measured n=1,102,250 in this file; identified as the same resource. Directory name HRA000728 and registry OA-D028
+# (Keratoconus cornea) Name mismatch — content adjudication takes precedence; registry misalignment logged separately; this entry does not cite OA-D028.
 TMCB = "/mnt/D/OcularKB/data/HRA000728_tm_cb/HRA000728_tm_cb.h5ad"
-TMCB_UVEA_EXCLUDED = 53406  # tissue=uvea 分量 (5 供者, 含 sanes 层) 不入 TM/CB 切片
+TMCB_UVEA_EXCLUDED = 53406  # tissue=uvea component (5 donors, including sanes layer) excluded from TM/CB sections
 
 
 def _build_tmcb(tissue_value, cn, extra_caveats, extra_flags_unexpected):
@@ -840,8 +840,8 @@ def _build_tmcb(tissue_value, cn, extra_caveats, extra_flags_unexpected):
             guard = None
         else:
             stats_a, nu_a = None, 0
-            guard = ("FALLBACK_BLOCKED: 该研究层无 adult 供者, adult-only 不存在 —— "
-                     "禁静默回退 pool (KB2c 红线2)")
+            guard = ("FALLBACK_BLOCKED: No adult donors in this study layer, adult-only does not exist —— "
+                     "Silent fallback to pool prohibited (KB2c red line 2)")
         strata.append({"study": st, "tissue_group": cn, "n_donors": nu,
                        "n_cells": len(rows_s),
                        "share_of_atlas_pct": round(100.0 * len(rows_s) / n, 2),
@@ -871,38 +871,38 @@ def _build_tmcb(tissue_value, cn, extra_caveats, extra_flags_unexpected):
         "schema": "eyekb-baseline/1.0",
         "entry_id": f"baseline_human_{cn}",
         "tissue": cn, "species": "human",
-        "title": f"组成基线: 人(正常){cn} snRNA adult-only 主档 ({cn} 切片 {n:,} 核 / {n_donors} 供者, 供者级条件参考分布, KB2c 发育轴单列)",
+        "title": f"Composition baseline: Human (normal){cn} snRNA adult-only main archive ({cn} slices {n:,} nuclei / {n_donors} donors, donor-level conditional reference distribution, KB2c developmental axis listed separately)",
         "status": "filled_donor_level",
         "generated": TODAY, "generator": GEN, "card": "t_bad1fbab",
         "anchor": {
-            "registry_row": "OA-D004=OA-D016 (GSE199013/HASA, t_6f5cc731 盘点 TM/CB 主力底座; "
-                            "本地件核数与 HASA 条目 1,102,250 精确吻合)",
+            "registry_row": "OA-D004=OA-D016 (GSE199013/HASA, t_6f5cc731 inventory TM/CB primary base; "
+                            "Local file nucleus count exactly matches HASA entry 1,102,250)",
             "registry_csv": "/mnt/D/OcularKB/registry/ocular_public_datasets_verified_v1.csv",
             "local_path": TMCB,
-            "tier": "T1 portal 官方注释 (majorclass/author_cell_type/cell_type; study=chen_tm_cb+sanes_GSE199013)",
+            "tier": "T1 portal official annotation (majorclass/author_cell_type/cell_type; study=chen_tm_cb+sanes_GSE199013)",
         },
         "t2_fields": {
-            "取样材料": f"人前节段手术取材中 {cn} 解剖组分 (tissue 列='{tissue_value}' 切片; "
-                       f"另有 uvea 分量 {TMCB_UVEA_EXCLUDED:,} 核未入本条)",
-            "疾病阶段": "normal (disease 列全 normal; 供者系统性死亡眼库/手术材料)",
-            "治疗背景": "未记录 (元数据无治疗列) —— 标'未记录', 不臆测",
+            "Sampling material": f"Human anterior segment surgical specimens with {cn} anatomical components (tissue column='{tissue_value}' slice; "
+                       f"Additionally, uvea component {TMCB_UVEA_EXCLUDED:,} nuclei not included in this entry)",
+            "Disease stage": "normal (disease column all normal; donors from systemic death eye banks/surgical materials)",
+            "Treatment background": "Not recorded (no treatment column in metadata) — labeled 'not recorded'; no speculation",
             "scRNA_vs_snRNA": "snRNA-seq (suspension_type=nucleus 100%; intronic_reads_counted=yes)",
-            "富集步骤": "无分选记录 (全组织核悬液直接上机)",
-            "解离方法": "; ".join(f"{k}×{v:,}核" for k, v in diss.items())
+            "Enrichment steps": "No sorting records (whole-tissue nuclear suspension loaded directly)",
+            "Dissociation method": "; ".join(f"{k}×{v:,} nuclei" for k, v in diss.items())
                        + " (sample_collection_method=surgical resection)",
-            "供者数": f"{n_donors} 唯一 donor_id; 按 研究|供者 分层共 {main_nd} 个供者单元",
-            "计数分母": f"{n:,} 核 ({cn} 切片内 majorclass 全标注)",
-            "证据来源": "本地实测复算 (A) + portal/HASA 官方注释 (t_6f5cc731 判 'portal官方')",
+            "Donor count": f"{n_donors} unique donor_id; stratified by study|donor yielding {main_nd} donor units",
+            "Count denominator": f"{n:,} nuclei (majorclass fully annotated within {cn} slices)",
+            "Evidence source": "Local empirical recalculation (A) + portal/HASA official annotation (t_6f5cc731 judged as 'portal official')",
         },
         "usage_scope": USAGE_SCOPE,
         "evidence_grades": EVIDENCE_GRADES,
-        "distribution_method": "供者级 (研究|供者 单元); 研究层先分层展示; KB2c: 主档仅 adult 供者单元; pooled 仅对照",
+        "distribution_method": "Donor level (study|donor unit); study layer stratified display first; KB2c: primary archive contains only adult donor units; pooled used only for control",
         "donor_level_main": main_stats,
         "pooled_adult_only_main": pooled_adult_main,
         "pooled_all_cells": pooled,
         "strata": strata,
         "major_classes": [],
-        "fine_types": {"denominator_note": "author_cell_type 类内占比 (pooled within class, 供参考)"},
+        "fine_types": {"denominator_note": "author_cell_type intra-class proportion (pooled within class, for reference)"},
         "states": None,
         "flags": {
             "expected_low_but_present": extra_flags_unexpected[0],
@@ -911,11 +911,11 @@ def _build_tmcb(tissue_value, cn, extra_caveats, extra_flags_unexpected):
         },
         "caveats": extra_caveats,
         "sources": [
-            {"sid": f"{cn.upper()}_LOCAL", "kind": "dataset", "label": f"本地文件 {TMCB}", "path": TMCB,
+            {"sid": f"{cn.upper()}_LOCAL", "kind": "dataset", "label": f"Local file {TMCB}", "path": TMCB,
              "computation": f"{__file__} _build_tmcb('{tissue_value}','{cn}')"},
             {"sid": f"{cn.upper()}_HASA", "kind": "dataset",
-             "label": "HASA/前节段 snRNA collection (t_6f5cc731 盘点映射 OA-D004/OA-D016; "
-                      "本切片=其 chen_tm_cb+sanes 集成件的 " + cn + " 分量)",
+             "label": "HASA/anterior segment snRNA collection (t_6f5cc731 inventory mapping OA-D004/OA-D016; "
+                      "This slice = its chen_tm_cb + sanes integration component's " + cn + " component)",
              "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE199013"},
         ],
     }
@@ -928,17 +928,17 @@ def _build_tmcb(tissue_value, cn, extra_caveats, extra_flags_unexpected):
             "pooled_pct_for_reference_only": pooled[c],
             "evidence": "A", "source_ids": [f"{cn.upper()}_LOCAL", f"{cn.upper()}_HASA"],
         })
-    entry["t2_fields"]["供者数"] = (
-        f"主档 adult-only {sum(1 for v in dsm.values() if v[1] == 'adult')} donors / "
-        f"{main_nd} 供者单元; 对照档 adult_pool {n_donors} donors / {pool_nd} 单元 "
-        f"(含 {len(excluded)} 非 adult 供者 → 逐行见 excluded_nonadult_units)")
+    entry["t2_fields"]["Donor count"] = (
+        f"Main file adult-only {sum(1 for v in dsm.values() if v[1] == 'adult')} donors / "
+        f"{main_nd} donor units; control adult_pool {n_donors} donors / {pool_nd} units "
+        f"(includes {len(excluded)} non-adult donors → see excluded_nonadult_units for line-by-line details)")
     entry["caveats"].append(
-        "v1.1 (KB2c t_be336eee): 主档=adult-only (>=18y, 裁定 Q2) —— 本切片实测剔除 "
-        + (f"{len(excluded)} 个非 adult 供者单元 (青少年段, 逐行见 excluded_nonadult_units); "
+        "v1.1 (KB2c t_be336eee): Primary archive=adult-only (>=18y, adjudication Q2) —— This slice empirically excludes "
+        + (f"{len(excluded)} non-adult donor units (adolescent segment, row-by-row see excluded_nonadult_units); "
            if excluded else
-           "0 个 (本切片全部供者 >=18y → 两档数值合法全等, 仅身份签名分离); ")
-        + "v1.0 混口径保留于 donor_level_adult_pool_contrast "
-        "(tier=...__adult_pool__v1.0), 两档签名分离。")
+           "0 entries (all donors in this slice >=18y → numerical equality across both tiers is valid, only identity signatures separated); ")
+        + "v1.0 mixed scope retained in donor_level_adult_pool_contrast "
+        "(tier=...__adult_pool__v1.0), two-tier signature separation.")
     entry["_tmp_main_nd"] = main_nd
     kb2c_adult_entry(entry, tally, excluded, pool_stats, pool_nd, pooled,
                      n_donors, all_adult)
@@ -949,17 +949,17 @@ def build_trabecular_meshwork():
     return _build_tmcb(
         "eye trabecular meshwork", "trabecular_meshwork",
         extra_caveats=[
-            "本条=小梁网解剖组分取材切片: Ciliary_Muscle 占比高系紧邻的巩膜 spur/小梁肌一体取材, "
-            "属捕获构成非 TM 细胞层真值; 作者级 TM 特异亚型 (BeamA/BeamB/JCT, author_cell_type) 见 fine_types。",
-            "Fibroblast 主表类在本切片 = TM 成纤维/梁细胞 (TMFibro) —— 勿与角膜/巩膜成纤维直接混比。",
-            "CB_PCE/CB_NPCE 少量 (合计 ~0.5%) = 睫状体取材边界污染。",
-            "供者 25 但单元内供者规模不均; n=25 供者级区间仍属中等支撑, 疾病对照用后须复核方向。",
-            "snRNA 口径, 与 scRNA 条不可直接互比 (Astra T2); uvea 分量 (53,406 核) 与巩膜/葡萄膜条另议。",
+            "This entry = trabecular meshwork anatomical component section: high Ciliary_Muscle proportion due to integrated sampling of adjacent scleral spur/trabecular muscle, "
+            "Belongs to capture composition, not TM cell layer ground truth; author-level TM-specific subtypes (BeamA/BeamB/JCT, author_cell_type) see fine_types.",
+            "Fibroblast main table class in this slice = TM fibroblasts/beam cells (TMFibro) — do not directly compare with corneal/scleral fibroblasts.",
+            "Small amount of CB_PCE/CB_NPCE (total ~0.5%) = contamination from ciliary body dissection boundary.",
+            "25 donors but uneven donor scale within unit; n=25 donor-level interval still moderate support; direction must be re-reviewed after disease control usage.",
+            "snRNA caliber, cannot be directly compared with scRNA entries (Astra T2); uvea component (53,406 nuclei) discussed separately with sclera/uvea entries.",
         ],
         extra_flags_unexpected=(
-            [["Schwann Cell ~12% (神经支配组织)", "Pericyte ~0.4%"],
-             ["Melanocyte ~6% (葡萄膜色素组织附带, 取材平面相关)"],
-             ["CB_PCE/CB_NPCE ~0.5% (取材越界到睫状体)"]]),
+            [["Schwann Cell ~12% (innervated tissue)", "Pericyte ~0.4%"],
+             ["Melanocyte ~6% (incidental uveal pigmented tissue, related to dissection plane)"],
+             ["CB_PCE/CB_NPCE ~0.5% (dissection overflow into ciliary body)"]]),
     )
 
 
@@ -967,53 +967,53 @@ def build_ciliary_body():
     return _build_tmcb(
         "ciliary body", "ciliary_body",
         extra_caveats=[
-            "本条=睫状体解剖组分取材切片: PCE/NPCE/睫状肌三主类为组织本体; "
-            "Melanocyte/Schwann Cell 比例为葡萄膜色素+神经支配层的捕获构成 —— 疾病对照注意 (Astra T2)。",
-            "Fibroblast 在本切片 = CB 成纤维 (CBFibro), 与 TM/角膜成纤维不同亚层 (author_cell_type 可辨)。",
-            "供者 59, 支撑较强; 但两研究层规模悬殊 (chen_tm_cb 主力 vs sanes uvea 分量在本切片外), "
-            "分层明细必看。",
-            "snRNA 口径 (核悬液, 内含子 reads 计入), 与 scRNA 条不可直接互比。",
+            "This entry = ciliary body anatomical component section: PCE/NPCE/ciliary muscle are the three main tissue classes; "
+            "Melanocyte/Schwann Cell ratio reflects the captured composition of uveal pigmentation and neural innervation layers — note for disease controls (Astra T2).",
+            "Fibroblast in this slice = CB fibroblasts (CBFibro), distinct sub-layers from TM/corneal fibroblasts (distinguishable by author_cell_type).",
+            "Donor 59, strong support; but significant scale disparity between study layers (chen_tm_cb dominant vs sanes uvea weight outside this slice), "
+            "Stratified details must be reviewed.",
+            "snRNA caliber (nuclear suspension, intronic reads included); not directly comparable with scRNA entries.",
         ],
         extra_flags_unexpected=(
-            [["Pericyte <1% (Endothelium 也仅 ~2%: 大血管为主, 毛细血管核捕获效率低)"],
-             ["Immune Cell ~5% (巨噬为主) 属固有免疫正常水平, 供炎症对照基线"],
-             ["无需额外污染旗 (切片边界即本组织)"]]),
+            [["Pericyte <1% (Endothelium also only ~2%: predominantly large vessels; low capture efficiency for capillary nuclei)"],
+             ["Immune Cell ~5% (predominantly macrophages) represents normal innate immunity levels; serves as inflammatory control baseline"],
+             ["No additional contamination flags required (slice boundary defines this tissue)"]]),
     )
 
 
 
 # ------------------------------------------------------------------- RPE (GSE158629)
-# KB1v2b: RPE 处理件为 Seurat v3 RData (4 donor 对象, 每对象独立聚类, 无官方 celltype 列)。
-# 簇→身份标注由本项目 marker 推断 (证据 C), 锚定 GEO 记录作者簇描述 (证据 B: rod/cone 转录本簇、
-# TF+SPP1 VEGF 簇、RPE65+/VIM/GNL3/MKI67 干细胞候选小群)。转换与导出脚本:
-#   scripts/baselines/data/export_rpe_meta.R -> cells_meta.csv + cluster_markers.csv (证据 A 输入)
+# KB1v2b: RPE processed files are Seurat v3 RData (4 donor objects, independent clustering per object, no official celltype column).
+# Cluster-to-identity annotation inferred from project markers (Evidence C), anchored to GEO record author cluster descriptions (Evidence B: rod/cone transcript clusters,
+# TF+SPP1 VEGF cluster, RPE65+/VIM/GNL3/MKI67 stem cell candidate subpopulation). Conversion and export scripts:
+#   scripts/baselines/data/export_rpe_meta.R -> cells_meta.csv + cluster_markers.csv (Evidence A input)
 RPE_DIR = Path(__file__).resolve().parent / "data"
 RPE_CELLS = (RPE_DIR / "rpe_GSE158629_cells_meta.csv").as_posix()
 RPE_MARKERS = (RPE_DIR / "rpe_GSE158629_cluster_markers.csv").as_posix()
 RPE_RDATA = "/mnt/D/OcularKB/data/GSE158629/GSE158629_scrRNA_RPE_donors1-4.RData.gz"
 
-# donor × cluster -> (canonical_class, state_label, 标注依据)
+# donor × cluster -> (canonical_class, state_label, annotation basis)
 RPE_CLUSTER_LABELS = {
     ("donor1", "0"): ("RPE", "pigment-high (TYRP1+/BEST1+/RPE65+)",
                       "marker: RPE65#3 TYRP1#11 BEST1#12 TIMP3#1 (A)"),
     ("donor1", "1"): ("RPE", "canonical (RBP1/RLBP1)", "marker (A)"),
     ("donor1", "2"): ("PR-associated", "rod-program (SAG/PDE6A/RHO)",
-                      "作者描述 rod RNA 簇 RHO/PDE6A (B) + marker (A)"),
+                      "Author-described rod RNA cluster RHO/PDE6A (B) + markers (A)"),
     ("donor1", "3"): ("RPE", "TF+SPP1/VEGF state (VIM+/TF+/SPP1+/MT1X+)",
-                      "作者描述 VEGF signaling 簇 TF/SPP1 (B) + marker (A)"),
+                      "Author-described VEGF signaling cluster TF/SPP1 (B) + markers (A)"),
     ("donor1", "4"): ("PR-associated", "rod-pure (RHO/RBP3/IMPG1/CNGA1)", "marker (A)"),
     ("donor1", "5"): ("PR-associated", "rod/cone-mixed (SAG/GNAT1/PDE6G)",
-                      "marker (A); 作者 cone 簇 ARR3/PDE6H 未入本簇 top25, 归属存疑 (C)"),
+                      "Markers (A); author's cone cluster ARR3/PDE6H not in this cluster's top 25, assignment uncertain (C)"),
     ("donor1", "6"): ("neuron-like", "VSX1+/SNAP25+ (bipolar/cone-like)", "marker (A)"),
     ("donor1", "7"): ("neuron-like", "ISL1+/SNAP25+ (amacrine-like)", "marker (A)"),
     ("donor2", "0"): ("RPE", "canonical", "marker: RPE65#7 TTR (A)"),
-    ("donor2", "1"): ("RPE", "mito-high", "marker: MT-* 主导 + RPE65/BEST1 (A)"),
+    ("donor2", "1"): ("RPE", "mito-high", "Markers: MT-* dominant + RPE65/BEST1 (A)"),
     ("donor2", "2"): ("PR-associated", "rod/cone-transcripts", "marker (A)"),
     ("donor2", "3"): ("RPE", "canonical (NDUFS7+)", "marker (A)"),
     ("donor2", "4"): ("RPE", "pigment (TYRP1+/BEST1+)", "marker (A)"),
     ("donor2", "5"): ("erythroid", "HBG1/HBG2+ribosomal", "marker (A)"),
     ("donor2", "6"): ("RPE", "complement-high (C4A/C4B+/PMEL+/TRPM3+)",
-                      "RPE 谱系 (TRPM3/PMEL) + 补体状态 (A)"),
+                      "RPE lineage (TRPM3/PMEL) + complement status (A)"),
     ("donor2", "7"): ("myeloid", "CD74/AIF1/HLA-DR/CCL3", "marker (A)"),
     ("donor3", "0"): ("RPE", "canonical", "marker: RPE65#2 (A)"),
     ("donor3", "1"): ("erythroid", "HBG+ribosomal", "marker (A)"),
@@ -1024,7 +1024,7 @@ RPE_CLUSTER_LABELS = {
     ("donor4", "1"): ("RPE", "mito-high", "marker (A)"),
     ("donor4", "2"): ("erythroid", "HBG+ribosomal", "marker (A)"),
     ("donor4", "3"): ("RPE", "TF/GPX3 stress state (TF#2/TRPM3+)",
-                      "与 donor1 TF+SPP1 簇 marker 重叠 (C)"),
+                      "Overlap with donor1 TF+SPP1 cluster markers (C)"),
     ("donor4", "4"): ("RPE", "canonical (HSP-high)", "marker (A)"),
 }
 
@@ -1060,7 +1060,7 @@ def build_RPE():
         pooled.update(cnt)
     pooled_pct = pct_table(pooled, classes)
     n_tot = sum(pooled.values())
-    # fine_types: donor × cluster 占比 + 状态标签
+    # fine_types: donor × cluster proportion + status labels
     mk = defaultdict(list)
     for r2 in rows:
         mk[(r2["donor"], r2["cluster"])].append(r2)
@@ -1083,72 +1083,72 @@ def build_RPE():
         "schema": "eyekb-baseline/1.0",
         "entry_id": "baseline_human_RPE",
         "tissue": "RPE", "species": "human",
-        "title": "组成基线: 人(正常)新鲜分离 RPE 悬液 scRNA — 发育阶段=unknown 档 (OA GSE158629, 供者级 4 供者, 簇身份 marker 推断, KB2c 披露)",
+        "title": "Composition baseline: Human (normal) freshly isolated RPE suspension scRNA — developmental stage=unknown tier (OA GSE158629, donor-level 4 donors, cluster identity inferred from markers, KB2c disclosure)",
         "status": "filled_donor_level",
         "generated": TODAY, "generator": GEN, "card": "t_bad1fbab",
         "anchor": {
-            "registry_row": "mapping_from_t_6f5cc731 GSE158629 行 (未单列 OA-D 号)",
+            "registry_row": "mapping_from_t_6f5cc731 GSE158629 row (OA-D number not listed separately)",
             "local_path": RPE_RDATA,
             "geo": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158629",
-            "tier": "T2 处理件回填 (作者 Seurat RData; 无官方 celltype 列 → 本项目 marker 标注)",
+            "tier": "T2 processed file backfill (author Seurat RData; no official celltype column → marker annotation by this project)",
         },
         "t2_fields": {
-            "取样材料": "人新鲜分离 RPE 单层细胞 (4 具成人供体眼, stage=Fresh; "
+            "Sampling material": "Human freshly isolated RPE monolayer cells (4 adult donor eyes, stage=Fresh; "
                        "GEO: 'RPE cells were isolated from four adult human donor eyes')",
-            "疾病阶段": "normal (健康供体; 处理件元数据无疾病列)",
-            "治疗背景": "未记录 (处理件元数据无治疗列) —— 标'未记录', 不臆测",
-            "scRNA_vs_snRNA": "scRNA-seq 全细胞 (donor1=10x 3'; donor2-4=ICELL8 液滴克隆) —— "
-                              "与 snRNA 条 (retina/optic_nerve) 口径不同, 不可直接互比",
-            "富集步骤": "RPE 层机械+酶分离富集 (组织级); 无荧光分选记录 —— 分离流程本身即'富集'",
-            "解离方法": "新鲜眼离体后 RPE 分离 (GEO Methods; 处理件无解离试剂列, 细节未记录)",
-            "供者数": "4 (donor1=10x, donor2-4=ICELL8 —— 平台与供者完全捆绑, tech 分层=描述性)",
-            "计数分母": f"{n_tot:,} cells (4 个 donor 对象 26 簇, 全标注)",
-            "证据来源": "本地实测复算 (A: 比例; RData→CSV 导出脚本 export_rpe_meta.R) + "
-                       "GEO 记录作者簇描述 (B: rod/cone/TF+SPP1/干细胞候选) + 本项目 marker 推断 (C)",
+            "Disease stage": "normal (healthy donors; no disease column in processed file metadata)",
+            "Treatment background": "Not recorded (no treatment column in processed file metadata) — marked 'Not recorded', no speculation",
+            "scRNA_vs_snRNA": "scRNA-seq whole-cell (donor1=10x 3'; donor2-4=ICELL8 droplet-based) —— "
+                              "Different scope than snRNA entries (retina/optic_nerve); direct comparison not permitted",
+            "Enrichment steps": "Mechanical + enzymatic dissociation enrichment of RPE layer (tissue level); no fluorescence sorting records —— the dissociation protocol itself constitutes 'enrichment'",
+            "Dissociation method": "RPE isolation from fresh enucleated eyes (GEO Methods; processing files lack dissociation reagent columns, details not recorded)",
+            "Donor count": "4 (donor1=10x, donor2-4=ICELL8 —— platform and donor fully confounded, tech stratification=descriptive)",
+            "Count denominator": f"{n_tot:,} cells (4 donor objects, 26 clusters, fully annotated)",
+            "Evidence source": "Local measured recomputation (A: proportions; RData→CSV export script export_rpe_meta.R) + "
+                       "GEO record author cluster description (B: rod/cone/TF+SPP1/stem cell candidates) + project marker inference (C)",
         },
         "usage_scope": USAGE_SCOPE,
         "evidence_grades": EVIDENCE_GRADES,
-        "distribution_method": "供者级 (4 供者单元; 每供者内先把 marker 同类簇合并成 canonical 类再算占比; "
-                               "各 donor 对象独立聚类, 跨 donor 簇定义靠 marker 对齐 —— 见 caveats)",
-        "main_heading": "主参考: 供者级条件参考分布 (n=4 供者; marker 推断 canonical 类)",
+        "distribution_method": "Donor-level (4 donor units; within each donor, merge marker-similar clusters into canonical classes before calculating proportions; "
+                               "Each donor object clustered independently; cross-donor cluster definitions rely on marker alignment — see caveats)",
+        "main_heading": "Primary reference: donor-level conditional reference distribution (n=4 donors; canonical classes inferred by markers)",
         "donor_level_main": main_stats,
         "pooled_all_cells": pooled_pct,
         "strata": None,
         "major_classes": [],
-        "fine_types": {"denominator_note": "donor × 原簇 → canonical 类 [状态标签] 占该 donor 细胞%; "
-                                           "RData 原生簇编号原样保留"},
+        "fine_types": {"denominator_note": "donor × original cluster → canonical class [status label] percentage of that donor's cells;"
+                                           "RData native cluster IDs retained as-is"},
         "states": states,
         "flags": {
             "expected_low_but_present": [
-                "myeloid (CD74/AIF1/HLA-DR) 仅 donor2 检出; erythroid 仅 ICELL8 供者检出",
-                "干细胞候选群 (RPE65+/VIM/GNL3/MKI67, 作者描述 B): 未在任何簇 top25 浮现 —— 小群未量化, "
-                "区间无法估计 (合法状态, Astra T2)"],
+                "Myeloid (CD74/AIF1/HLA-DR) detected only in donor2; erythroid detected only in ICELL8 donors",
+                "Stem cell candidate cluster (RPE65+/VIM/GNL3/MKI67, author description B): did not emerge in any cluster's top25 — small population unquantified, "
+                "Interval unestimable (valid state, Astra T2)"],
             "unexpected": [
-                "PR-associated 类 3.8–28.5%: 作者称 RPE 亚群 (cone/rod 转录本簇, B), 亦可为吞噬 PR 外节"
-                "mRNA 或盘膜附着污染 —— 双重解释保留, 不下单一结论",
-                "neuron-like 类 (VSX1/ISL1/SNAP25) 仅 donor1 (10x) 检出 2.2% —— 视网膜神经污染或低丰度前体, 存疑"],
+                "PR-associated class 3.8–28.5%: authors describe RPE subgroup (cone/rod transcript cluster, B), may also represent phagocytosed PR outer segments"
+                "mRNA or disk membrane attachment contamination — dual interpretation retained, no single conclusion drawn",
+                "neuron-like class (VSX1/ISL1/SNAP25) detected only in donor1 (10x) at 2.2% — retinal neural contamination or low-abundance precursors, questionable"],
             "contamination_suspect": [
-                f"erythroid (HBG1/HBG2) 供者内最高 {main_stats['erythroid']['range_pct'][1]}% —— 血液残留"],
+                f"erythroid (HBG1/HBG2) highest within donor {main_stats['erythroid']['range_pct'][1]}% —— blood residue"],
         },
         "caveats": [
-            "身份标注非作者官方命名: 处理件只有 donor×cluster 编号, canonical 类标签为本项目 marker 推断 "
-            "(证据 C), 仅 rod/cone/TF+SPP1/干细胞候选四类有 GEO 作者描述锚 (证据 B)。对外引用须带此口径。",
-            "n=4 供者, donor 级 median/IQR 极粗 (每供者权重 25%); 区间只作'新鲜分离 RPE 捕获构成'的描述性参考。",
-            "各 donor 对象独立聚类无全局整合; 同类簇跨 donor 合并依赖 marker 一致性 (RPE/PR/erythroid 清晰, "
-            "neuron-like/状态细分谨慎)。",
-            "平台×供者完全捆绑 (10x n=1 / ICELL8 n=3): donor1 独有 neuron-like、donor2-4 独有 erythroid 的差异"
-            "不能区分平台效应与供者变异。",
-            "本条=分离后 RPE 悬液的捕获构成 (计数分母不含非 RPE 组织的完整组织学), 不代表 RPE 层在完整眼球/脉络膜"
-            "组织中的位置丰度; 组织学丰度参考须用带 RPE 的全组织条 (retina/choroid 骨架)。",
+            "Identity annotations are not official author naming: processed files contain only donor×cluster IDs; canonical class labels are inferred via project markers."
+            "(Evidence C), only the four categories of rod/cone/TF+SPP1/stem cell candidates have GEO author description anchors (Evidence B). External citations must include this qualification.",
+            "n=4 donors, donor-level median/IQR is very coarse (each donor weighted 25%); intervals serve only as descriptive reference for 'freshly isolated RPE capture composition'.",
+            "Each donor object clustered independently without global integration; merging similar clusters across donors depends on marker consistency (RPE/PR/erythroid clear, "
+            "(exercise caution with neuron-like/state subdivision).",
+            "Platform×donor fully confounded (10x n=1 / ICELL8 n=3): differences where donor1 uniquely has neuron-like and donors 2-4 uniquely have erythroid"
+            "Cannot distinguish platform effects from donor variability.",
+            "This entry = capture composition of RPE suspension after dissociation (count denominator excludes intact histology of non-RPE tissue); does not represent the RPE layer in whole eye/choroid"
+            "Positional abundance in tissue; histological abundance reference must use whole-tissue strips including RPE (retina/choroid skeleton).",
         ],
         "sources": [
             {"sid": "RPE_LOCAL", "kind": "dataset",
-             "label": f"作者处理件 {RPE_RDATA} (GSE158629); 导出件 "
+             "label": f"Author-processed file {RPE_RDATA} (GSE158629); exported file "
                       f"{RPE_CELLS} + {RPE_MARKERS} (scripts/baselines/data/export_rpe_meta.R)",
              "path": RPE_RDATA, "computation": f"{__file__} build_RPE()"},
             {"sid": "RPE_GEO", "kind": "dataset",
              "label": "GEO GSE158629 — Single-Cell RNA Sequencing Reveals the Heterogeneity of the "
-                      "Human RPE (摘要含 rod/cone/TF+SPP1/干细胞候选簇描述)",
+                      "Human RPE (abstract includes rod/cone/TF+SPP1/stem cell candidate cluster descriptions)",
              "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158629"},
         ],
     }
@@ -1160,89 +1160,89 @@ def build_RPE():
             "donor_range_pct": main_stats[c]["range_pct"],
             "pooled_pct_for_reference_only": pooled_pct[c],
             "evidence": "A", "source_ids": ["RPE_LOCAL", "RPE_GEO"],
-            "note": ("身份=marker 推断 (C), 部分有作者簇描述锚 (B)" if c != "RPE"
-                     else "canonical RPE: RPE65/BEST1/TTR/SERPINF1 核心"),
+            "note": ("Identity = marker-inferred (C), partially anchored by author's cluster descriptions (B)" if c != "RPE"
+                     else "Canonical RPE: RPE65/BEST1/TTR/SERPINF1 core"),
         })
-    entry["t2_fields"]["供者数"] = (
-        entry["t2_fields"]["供者数"] + " —— KB2c: cells_meta 无年龄列, 本条 organism_stage=unknown "
-        "(GEO 文字记 'four adult human donor eyes' 为 B 级文献描述, 不可逐行核验, 禁静默归 adult)")
+    entry["t2_fields"]["Donor count"] = (
+        entry["t2_fields"]["Donor count"] + " —— KB2c: cells_meta lacks age column, this entry organism_stage=unknown "
+        "(GEO text records 'four adult human donor eyes' as B-level literature description, cannot be verified line-by-line, silent attribution to adult prohibited)")
     entry["caveats"].append(
-        "KB2c t_be336eee 红线2: 本条无逐供者发育/年龄元数据 → 发育档=unknown + 披露行, "
-        "不得作为 '成人 RPE 基线' 引用; 升级 adult-only 需补逐 donor 年龄 (GEO 附表/作者通信) 后另裁。")
+        "KB2c t_be336eee red line 2: this entry lacks per-donor development/age metadata → development stage=unknown + disclosure row, "
+        "Must not be cited as 'adult RPE baseline'; upgrade to adult-only requires supplementing per-donor age (GEO supplementary tables/author correspondence) followed by separate adjudication.")
     kb2c_unknown_entry(
         entry,
-        "本地 GSE158629 cells_meta (export_rpe_meta.R 导出) 仅 donor/cluster/tech 列, 无 "
-        "development_stage/年龄列; GEO Summary 记 'four adult human donor eyes' (证据 B 级)。",
-        [{"source": "GSE158629 cells_meta (全 4 donor)", "cells": n_tot, "donors": 4,
-          "organism_stage": "unknown", "rule": "无年龄列 → 禁静默归 adult (红线2)",
+        "Local GSE158629 cells_meta (exported by export_rpe_meta.R) contains only donor/cluster/tech columns, no "
+        "development_stage/age column; GEO Summary states 'four adult human donor eyes' (evidence grade B).",
+        [{"source": "GSE158629 cells_meta (all 4 donors)", "cells": n_tot, "donors": 4,
+          "organism_stage": "unknown", "rule": "No age column → silent assignment to adult prohibited (Red Line 2)",
           "literature_grade_B": "GEO: 'RPE cells were isolated from four adult human donor eyes'"}])
     return entry
 
 
 
-# ---------------------------------------------------------------- 9 组织骨架
+# ---------------------------------------------------------------- 9 Tissue skeleton
 SKELETON_TISSUES = ["RPE", "choroid", "ciliary_body", "iris", "lens",
                     "optic_nerve", "trabecular_meshwork", "conjunctiva", "sclera"]
-FILLED_EXTRAS = {}  # tissue -> builder; main() 中注册, 已回填者从骨架清单剔除
+FILLED_EXTRAS = {}  # tissue -> builder; registered in main(); already-backfilled tissues are dropped from the skeleton list
 
-LOCAL_POINTERS = {  # 本地已有文件 (实勘 2026-09-23, find 实证)
+LOCAL_POINTERS = {  # files already on the local disk (field-surveyed 2026-09-23, verified via find)
     "optic_nerve": "/mnt/D/OcularKB/data/HRA006282_optic_nerve/HRA006282_optic_nerve.h5ad",
-    "RPE": "/mnt/D/OcularKB/data/GSE158629/ (处理件 RData, 需转换; t_6f5cc731 标注'即拉即用')",
+    "RPE": "/mnt/D/OcularKB/data/GSE158629/ (processed RData files, conversion required; t_6f5cc731 annotated 'ready-to-use')",
 }
 
 
 def build_skeletons(inv):
     out = []
     for t in SKELETON_TISSUES:
-        if t in FILLED_EXTRAS:   # KB1v2b: 已回填供者级的组织不再出骨架
+        if t in FILLED_EXTRAS:   # KB1v2b: tissue with backfilled donor-level data no longer generates skeleton
             continue
         rows = inv.get(t, [])
-        verdict = (inv.get("verdicts") or {}).get(t, "见 TISSUE_REFERENCE_INVENTORY.md")
+        verdict = (inv.get("verdicts") or {}).get(t, "See TISSUE_REFERENCE_INVENTORY.md")
         entry = {
             "schema": "eyekb-baseline/1.0",
             "entry_id": f"baseline_human_{t}",
             "tissue": t, "species": "human",
-            "title": f"组成基线骨架: 人 {t} (字段全, 比例=待回填)",
+            "title": f"Composition baseline skeleton: Human {t} (fields complete, proportions=pending backfill)",
             "status": "skeleton_mapping_backfilled",
             "organism_stage": "unknown",
-            "stage_note": ("KB2c 发育轴: 骨架条=unknown (未实算)。回填时必须按发育轴单列 — "
-                           "adult 材料出 adult-only 主档 (>=18y 裁定 Q2), 胎儿/发育期材料另立条目, "
-                           "禁止胎儿与成人同组织混档 (PI 红线)。"),
+            "stage_note": ("KB2c developmental axis: skeleton entry=unknown (not actually calculated). Backfilling must list by developmental axis separately — "
+                           "adult material outputs adult-only main archive (>=18y adjudication Q2); fetal/developmental stage materials establish separate entries, "
+                           "Prohibited from mixing fetal and adult samples in the same tissue archive (PI red line)."),
             "stage_axis": stage_axis_block(f"baseline_human_{t}"),
             "generated": TODAY, "generator": GEN, "card": "t_16c3e020",
-            "anchor": {"tier": "骨架 (t_6f5cc731 盘点映射已回填; 供者级比例未算)"},
+            "anchor": {"tier": "Skeleton (t_6f5cc731 inventory mapping backfilled; donor-level ratios not calculated)"},
             "mapping_from_t_6f5cc731": [
                 {k: r.get(k) for k in ("acc", "sp", "scale", "annot", "avail", "note")}
                 for r in rows],
             "verdict": verdict,
             "local_file_pointer": LOCAL_POINTERS.get(t),
             "t2_fields": {
-                "取样材料": "待定 (骨架: 建基线前必须先固定实际取样材料口径, Astra T2)",
-                "疾病阶段": "待定", "治疗背景": "待定",
-                "scRNA_vs_snRNA": "待定", "富集步骤": "待定", "解离方法": "待定",
-                "供者数": "待定", "计数分母": "待定",
-                "证据来源": "见 mapping_from_t_6f5cc731 各候选数据集",
+                "Sampling material": "Pending (skeleton: Must fix actual sampling material standards before building baseline, Astra T2)",
+                "Disease stage": "Pending", "Treatment background": "Pending",
+                "scRNA_vs_snRNA": "Pending", "Enrichment steps": "Pending", "Dissociation method": "Pending",
+                "Donor count": "Pending", "Count denominator": "Pending",
+                "Evidence source": "See mapping_from_t_6f5cc731 candidate datasets",
             },
             "usage_scope": USAGE_SCOPE,
             "evidence_grades": EVIDENCE_GRADES,
             "distribution_method": None,
             "donor_level_main": None,
-            "composition_status": "区间无法估计 (合法状态, Astra T2) —— 待按映射候选数据集做供者级计算; "
-                                  "数据不在本地者须先过下载审批铁律",
+            "composition_status": "Interval unestimable (valid state, Astra T2) — pending donor-level computation based on mapped candidate datasets;"
+                                  "Data not stored locally must first pass the mandatory download approval rule",
             "major_classes": [],
-            "backfill_path": ("①候选数据本地化状态核实 → ②官方注释切片 (celltype-annotation-sourcing 纪律) → "
-                              "③本脚本追加 build_<tissue>() 供者级复算 → ④基线状态改 filled_donor_level → "
-                              "⑤KB2c 发育轴: 仅 adult (>=18y) 供者入主档, 非 adult 逐行披露; "
-                              "胎儿/发育期材料单独立条目, 禁并入 adult"),
-            "caveats": ["骨架条目不得用于'该组织已有组成基线'的对外表述 (Astra T6: 工程一致性≠正确性证据)"],
+            "backfill_path": ("① Verify local status of candidate data → ② Official annotation slice (celltype-annotation-sourcing discipline) → "
+                              "③ This script appends build_<tissue>() for donor-level recalculation → ④ Change baseline status to filled_donor_level → "
+                              "⑤KB2c developmental axis: only adult (>=18y) donors enter main archive, non-adult disclosed line by line; "
+                              "Fetal/developmental stage materials listed as separate entries, prohibited from merging into adult."),
+            "caveats": ["Skeleton entries must not be used for external statements claiming 'composition baseline exists for this tissue' (Astra T6: Engineering consistency ≠ evidence of correctness)"],
         }
         out.append(entry)
     return out
 
 
-# ---------------------------------------------------------------- 渲染
+# ---------------------------------------------------------------- Rendering
 def fmt_dist(stats, classes):
-    lines = ["| 细胞类 | 供者中位% | 供者IQR% | 供者range% | n供者 |",
+    lines = ["| Cell class | Donor median % | Donor IQR % | Donor range % | n donors |",
              "|---|---|---|---|---|"]
     for c in classes:
         s = stats[c]
@@ -1253,79 +1253,79 @@ def fmt_dist(stats, classes):
 
 def render_md(e):
     L = [f"# {e['title']}", ""]
-    L.append(f"> schema: `{e['schema']}` | entry_id: `{e['entry_id']}` | 状态: {e['status']} "
-             f"| 发育轴: **organism_stage={e.get('organism_stage', '—')}** "
-             f"| 生成: {e['generated']} | 卡片: {e['card']}")
+    L.append(f"> schema: `{e['schema']}` | entry_id: `{e['entry_id']}` | Status: {e['status']} "
+             f"| Developmental axis: **organism_stage={e.get('organism_stage', '—')}** "
+             f"| Generated: {e['generated']} | Card: {e['card']}")
     if e.get("development_stage"):
-        L.append(f"> **KB3 发育档 (卡片 {KB3_CARD})**: development_stage=**{e['development_stage']}**"
-                 + (f" | 适用档(回填时写死): {e['kb3_applicable_stage_at_backfill'].split(' ——')[0]}"
+        L.append(f"> **KB3 Developmental Profile (Card {KB3_CARD})**: development_stage=**{e['development_stage']}**"
+                 + (f" | Applicable tier (hardcoded at backfill): {e['kb3_applicable_stage_at_backfill'].split(' ——')[0]}"
                     if e.get("kb3_applicable_stage_at_backfill") else "")
                  + f" —— {KB3_PROHIBITION}")
-    L.append(f"> 本文件由 `/mnt/D/EyeKB/scripts/baselines/{Path(__file__).name}` 从同名 .json 自动渲染 "
-             f"—— 改内容改 JSON+脚本, 手改 MD 会被覆盖。")
+    L.append(f"> This file is auto-rendered from the same-name .json by `/mnt/D/EyeKB/scripts/baselines/{Path(__file__).name}` "
+             f"-- Modify content via JSON + scripts; manual MD edits will be overwritten.")
     if e.get("stage_note"):
-        L.append(f"> ⚠ 发育轴披露: {e['stage_note']}")
+        L.append(f"> ⚠ Developmental axis disclosure: {e['stage_note']}")
     L.append("")
     L.append(f"**{e['usage_scope']}**")
     L.append("")
-    L.append("## 证据等级口径")
+    L.append("## Evidence grade definitions")
     for k, v in e["evidence_grades"].items():
         L.append(f"- **{k}**: {v}")
     L.append("")
     if e.get("stage_axis"):
         sa = e["stage_axis"]
-        L.append("## 发育轴口径 (KB2c 裁定 2026-09-23 — 阈值改动须过裁定)")
-        L.append(f"- 顶层轴: `{sa['field']}` ∈ {sa['levels']}")
+        L.append("## Developmental axis definitions (KB2c adjudication 2026-09-23 — threshold changes require adjudication)")
+        L.append(f"- Top-level axis: `{sa['field']}` ∈ {sa['levels']}")
         L.append(f"- **adult**: {sa['adult_rule']}")
         L.append(f"- **developing**: {sa['developing_rule']}")
         L.append(f"- **fetal**: {sa['fetal_rule']}")
         L.append(f"- **unknown**: {sa['unknown_rule']}")
-        L.append(f"- aging 正交轴: {sa['aging_note']}")
-        L.append(f"- 两档身份: {sa['tier_ids']}")
+        L.append(f"- aging orthogonal axis: {sa['aging_note']}")
+        L.append(f"- two-tier identity: {sa['tier_ids']}")
         L.append("")
-    L.append("## Astra T2 元数据字段")
+    L.append("## Astra T2 metadata fields")
     for k, v in e["t2_fields"].items():
         L.append(f"- **{k}**: {v}")
     L.append("")
     if e["status"] == "filled_donor_level":
         classes = [r["class"] for r in e["major_classes"]]
         L.append("## " + (e.get("main_heading")
-                           or "主参考: 供者级条件参考分布 (排除分选设计层)"))
+                           or "Primary reference: donor-level conditional reference distribution (excluding sorting design layer)"))
         if e.get("primary_reference_stratum"):
-            L.append(f"> 分层口径: {e['primary_reference_stratum']}; 方法: {e['distribution_method']}")
+            L.append(f"> Stratification criterion: {e['primary_reference_stratum']}; Method: {e['distribution_method']}")
         L.append(f"> ⚠ {KB3_PROHIBITION}")
         L.append("")
         L.append(fmt_dist(e["donor_level_main"], classes))
         L.append("")
         if e.get("donor_level_adult_pool_contrast"):
-            L.append(f"### 对照档 adult_pool (v1.0 混口径, 含非 adult 供者; "
-                     f"tier=`{e['stage_axis']['tier_ids']['adult_pool']}`) —— 引用 v1.0 旧数字只能挂此档身份")
+            L.append(f"### Comparison record adult_pool (v1.0 mixed criteria, includes non-adult donors; "
+                     f"tier=`{e['stage_axis']['tier_ids']['adult_pool']}`) —— Citing v1.0 legacy figures only under this tier identity")
             L.append("")
             L.append(fmt_dist(e["donor_level_adult_pool_contrast"], classes))
             L.append("")
         if e.get("stage_disclosure"):
-            L.append("### 发育阶段逐行披露 (KB2c 红线2: 排除项/unknown 全部显式列出)")
+            L.append("### Developmental stage line-by-line disclosure (KB2c Red Line 2: exclusions/unknowns explicitly listed)")
             if isinstance(e["stage_disclosure"], list):
-                L.append("| 来源 | organism_stage | 规则 | 细胞数 | 供者数 | 文献级描述 (B) |")
+                L.append("| Source | organism_stage | Rule | Cell count | Donor count | Literature-level description (B) |")
                 L.append("|---|---|---|---|---|---|")
                 for x in e["stage_disclosure"]:
                     L.append(f"| {x.get('source','')} | {x.get('organism_stage','')} "
                              f"| {x.get('rule','')} | {x.get('cells', 0):,} | {x.get('donors','')} "
                              f"| {x.get('literature_grade_B','')} |")
             else:
-                L.append("| UBERON development_stage | organism_stage | 判级规则 | 核/细胞数 | 供者数 |")
+                L.append("| UBERON development_stage | organism_stage | Grading Rule | Nuclei/Cell Count | Number of Donors |")
                 L.append("|---|---|---|---|---|")
                 for ub, v in e["stage_disclosure"].items():
                     L.append(f"| {ub} | {v['organism_stage']} | {v['rule']} "
                              f"| {v['cells']:,} | {v['n_donors']} |")
                 if e.get("excluded_nonadult_units"):
                     L.append("")
-                    L.append(f"被剔出 adult 主档的供者 {len(e['excluded_nonadult_units'])} 个: "
+                    L.append(f"{len(e['excluded_nonadult_units'])} donors excluded from adult master archive: "
                              + "; ".join(f"`{x['donor_id']}`({x['organism_stage']}, {x['uberon']}, "
-                                         f"{x['cells']:,}核)" for x in e["excluded_nonadult_units"]))
+                                         f"{x['cells']:,} nuclei)" for x in e["excluded_nonadult_units"]))
             L.append("")
-        L.append("## 工具兼容主表 (major_classes)")
-        L.append("| 类 | 供者中位% | IQR% | range% | pooled%(仅对照) | 本地库marker | 证据 |")
+        L.append("## Tool compatibility main table (major_classes)")
+        L.append("| Class | Median % across donors | IQR% | range% | pooled% (control only) | Local library marker | Evidence |")
         L.append("|---|---|---|---|---|---|---|")
         for r in e["major_classes"]:
             mk = ", ".join(r.get("markers_local_lib") or [])
@@ -1334,27 +1334,27 @@ def render_md(e):
                      f"| {r['pooled_pct_for_reference_only']} | {mk} | {r['evidence']} |")
         L.append("")
         if e.get("strata"):
-            L.append("## 分层明细 (不同富集/部位先分层展示, 不跨层合并; KB2c: 各层表=adult-only, 括号内=层内 pool 供者数)")
+            L.append("## Stratified Details (Stratify by different enrichment/site priors for display; do not merge across layers; KB2c: Each layer table = adult-only, parentheses = number of pooled donors within the layer)")
             for s in e["strata"]:
                 key = (s.get("study") or "") + (f"|{s['enrichment']}" if "enrichment" in s
                                                 else f"|{s.get('tissue_group','')}")
-                flag = " ⚠分选设计层" if s.get("sorted_design_flag") else ""
+                flag = " ⚠ Sorting design layer" if s.get("sorted_design_flag") else ""
                 if s.get("adult_fallback_guard"):
                     flag += " ⚠FALLBACK_BLOCKED"
-                L.append(f"### 层: {key}{flag}  (n_donors={s['n_donors']}, n_cells={s['n_cells']:,}"
-                         + (f", 占图谱{s['share_of_atlas_pct']}%" if "share_of_atlas_pct" in s else "") + ")")
+                L.append(f"### Layer: {key}{flag}  (n_donors={s['n_donors']}, n_cells={s['n_cells']:,}"
+                         + (f", accounting for {s['share_of_atlas_pct']}% of the atlas" if "share_of_atlas_pct" in s else "") + ")")
                 L.append("")
                 if s.get("adult_fallback_guard"):
                     L.append(f"> {s['adult_fallback_guard']}")
                     L.append("")
-                    L.append("*下表=该层 pool 口径 (仅对照):*")
+                    L.append("*Table below = pool-level metrics for this layer (controls only):*")
                     L.append("")
                     L.append(fmt_dist(s["donor_level"], classes))
                 else:
                     L.append(fmt_dist(s["donor_level_adult_only"], classes))
                 L.append("")
         if e.get("fine_types"):
-            L.append("## 亚型层 (类内注释细胞占比%, pooled within class 口径)")
+            L.append("## Subtype layer (% of annotated cells within class, pooled within class basis)")
             for c, v in e["fine_types"].items():
                 if c == "denominator_note":
                     continue
@@ -1364,41 +1364,41 @@ def render_md(e):
                     L.append(f"- **{c}**: " + "; ".join(f"{k} {p}%" for k, p in v))
             L.append("")
         if e.get("states"):
-            L.append("## 状态层")
+            L.append("## State layer")
             for s in e["states"]:
                 L.append(f"- **{s['cell_type']}** [{s['state']}]: {', '.join(s['markers'])} "
-                         f"(证据 {s['evidence']})")
+                         f"(Evidence {s['evidence']})")
             L.append("")
     else:
-        L.append("## 组成数据状态")
+        L.append("## Composition data status")
         L.append(f"**{e['composition_status']}**")
         L.append("")
-        L.append("## 候选数据集映射 (t_6f5cc731 盘点回填)")
+        L.append("## Candidate dataset mapping (t_6f5cc731 inventory backfill)")
         for r in e["mapping_from_t_6f5cc731"]:
-            L.append(f"- `{r.get('acc')}` [{r.get('sp')}] {r.get('scale')} | 注释: {r.get('annot')} "
-                     f"| 可得性: {r.get('avail')} | {r.get('note') or ''}")
+            L.append(f"- `{r.get('acc')}` [{r.get('sp')}] {r.get('scale')} | Annotation: {r.get('annot')} "
+                     f"| Availability: {r.get('avail')} | {r.get('note') or ''}")
         L.append("")
-        L.append(f"**裁定 (t_6f5cc731)**: {e['verdict']}")
+        L.append(f"**Adjudication (t_6f5cc731)**: {e['verdict']}")
         L.append("")
         if e.get("local_file_pointer"):
-            L.append(f"**本地文件**: `{e['local_file_pointer']}`")
+            L.append(f"**Local file**: `{e['local_file_pointer']}`")
             L.append("")
-        L.append(f"**回填路径**: {e['backfill_path']}")
+        L.append(f"**Backfill path**: {e['backfill_path']}")
         L.append("")
     if e.get("flags"):
-        L.append("## 旗标语义")
+        L.append("## Flag semantics")
         for g in ("expected_low_but_present", "unexpected", "contamination_suspect"):
             if e["flags"].get(g):
                 L.append(f"**{g}**: " + "; ".join(e["flags"][g]))
                 L.append("")
     if e.get("caveats"):
-        L.append("## 注意事项")
+        L.append("## Notes")
         for i, c in enumerate(e["caveats"], 1):
             L.append(f"{i}. {c}")
         L.append("")
     if e.get("sources"):
-        L.append("## 出处清单")
-        L.append("| sid | 类型 | 标签 |")
+        L.append("## Source List")
+        L.append("| sid | Type | Label |")
         L.append("|---|---|---|")
         for s in e["sources"]:
             L.append(f"| `{s['sid']}` | {s.get('kind','')} | {s.get('label','')} "
@@ -1423,11 +1423,11 @@ def main():
     entries = ([build_retina(old), build_ocular_surface()]
                + [fn() for fn in FILLED_EXTRAS.values()]
                + build_skeletons(inv_wrapped))
-    # ---- KB2c finalize: schema 1.1 + 两档身份签名 (红线: 签名不混用) ----
+    # ---- KB2c finalize: schema 1.1 + dual-tier identity signatures (Red line: signatures must not be mixed) ----
     for e in entries:
         e["schema"] = "eyekb-baseline/1.1"
         e["axis_version"] = "kb2c-1.1"
-        kb3_augment(e)  # KB3 (t_5425a7ca): development_stage 必填 + 禁令入档
+        kb3_augment(e)  # KB3 (t_5425a7ca): development_stage mandatory + prohibition archived
         if e.get("organism_stage") == "adult":
             tids = e["stage_axis"]["tier_ids"]
             e["identity_signature"] = {
@@ -1450,13 +1450,13 @@ def main():
     index = {"schema": "eyekb-baselines-index/1.1", "generated": TODAY,
              "generator": GEN, "card": "t_be336eee",
              "supersedes": "index 1.0 (card t_16c3e020)",
-             "note": ("眼科通用架构 (PI 2026-09-23 口径): 组成基线按组织锚定 registry 已注释标准集; "
-                      "旧 kb/priors/composition/ 为 v1 口径存档, MCP get_tissue_composition 优先读本目录。"
-                      "KB2c (t_be336eee) 发育轴单列: 顶层轴 organism_stage 4 级 "
-                      "{fetal, adult, developing, unknown}; adult 主档=donor_age>=18y 供者单元 "
-                      "(裁定 Q2, 阈值改动须过裁定); v1.0 混口径降为 adult_pool 对照档, "
-                      "两档 entry_id/身份签名分离; unknown 必须披露行禁静默归 adult; "
-                      "fetal/developing 组成条目见 fetal_development_transitions。"),
+             "note": ("General ophthalmology architecture (PI 2026-09-23 standard): Composition baselines anchored to tissue registry annotated standard sets; "
+                      "Old kb/priors/composition/ is archived as v1 standard; MCP get_tissue_composition prioritizes reading this directory."
+                      "KB2c (t_be336eee) developmental axis listed separately: top-level axis organism_stage 4 levels "
+                      "{fetal, adult, developing, unknown}; adult master record=donor_age>=18y donor unit "
+                      "(adjudication Q2, threshold changes require adjudication); v1.0 mixed criteria downgraded to adult_pool contrast tier, "
+                      "Two-tier separation of entry_id/identity signature; unknown must disclose rows and silent assignment to adult is prohibited; "
+                      "See fetal_development_transitions for fetal/developing composition entries."),
              "stage_axis": stage_axis_block("baseline_human_<tissue>"),
              "entries": []}
     for e in entries:
@@ -1469,18 +1469,18 @@ def main():
             "organism_stage": e.get("organism_stage", "unknown"),
             "development_stage": e.get("development_stage", "unknown"),
             "anchor": (e.get("anchor") or {}).get("registry_row", "—"),
-            "n_donors": (e["t2_fields"].get("供者数") if e["status"] == "filled_donor_level"
+            "n_donors": (e["t2_fields"].get("Donor count") if e["status"] == "filled_donor_level"
                          else None),
             "tiers": (e.get("stage_axis") or {}).get("tier_ids"),
             "identity_signature": e.get("identity_signature")})
-    # ---- KB3 (t_5425a7ca): 发育期独立条目登记 (不进 entries=11 成人档数组; 见回归锁) ----
-    index["kb3_note"] = ("KB3 发育轴全量单列: 每条基线增 development_stage 必填字段 "
-                         "(枚举 adult/fetal_developing/postnatal_neonatal/mixed_not_separable/"
-                         "unknown); 发育期条目独立文件 (schema eyekb-baseline-development/1.0, "
-                         "MCP 成人查询不可见), 登记于 development_entries; 参考分布段禁令已入档。")
+    # ---- KB3 (t_5425a7ca): Developmental stage independent entry registration (not included in entries=11 adult archive array; see regression lock) ----
+    index["kb3_note"] = ("KB3 full single-column development axis: each baseline adds mandatory field development_stage "
+                         "(enumeration adult/fetal_developing/postnatal_neonatal/mixed_not_separable/"
+                         "unknown); Developmental stage entries in separate file (schema eyekb-baseline-development/1.0, "
+                         "MCP adult query invisible), registered in development_entries; prohibition on reference distribution segments archived.")
     _dev_files = sorted(OUT_DIR.glob("*__*.json"))
     _dev_recs = []
-    for p in _dev_files:  # KB3 修复 (run 1768): 原海象推导式 if 子句引用未绑定 d → UnboundLocalError
+    for p in _dev_files:  # KB3 fix (run 1768): original walrus operator if clause referenced unbound d → UnboundLocalError
         d = json.loads(p.read_text(encoding="utf-8"))
         if not (d.get("schema") or "").startswith("eyekb-baseline-development/"):
             continue
@@ -1490,7 +1490,7 @@ def main():
                           "anchors": [c["acc"] for c in d.get("anchors", [])],
                           "status": d.get("status")})
     index["development_entries"] = _dev_recs
-    # ---- KB2c: 汇总逐行披露表 (_STAGE_DISCLOSURE) ----
+    # ---- KB2c: Summary line-by-line disclosure table (_STAGE_DISCLOSURE) ----
     disc = {t: {"organism_stage_main": e.get("organism_stage"),
                 "stage_disclosure": e.get("stage_disclosure"),
                 "excluded_nonadult_units": e.get("excluded_nonadult_units"),
@@ -1499,83 +1499,83 @@ def main():
     (OUT_DIR / "_STAGE_DISCLOSURE.json").write_text(
         json.dumps({"schema": "eyekb-stage-disclosure/1.0", "generated": TODAY,
                     "card": "t_be336eee",
-                    "note": "KB2c 红线2: adult 基线中全部非 adult 供者/unknown 源逐行披露; "
-                            "fetal 期实测=0 (污染源实为 newborn/儿童/青少年)。",
+                    "note": "KB2c red line 2: in adult baseline, all non-adult donors/unknown sources disclosed row by row; "
+                            "fetal period measured value=0 (contamination source is actually newborn/child/adolescent).",
                     "by_tissue": disc}, ensure_ascii=False, indent=1), encoding="utf-8")
-    dl = ["# 发育轴逐行披露表 (KB2c t_be336eee — 红线2: 禁静默)", "",
-          f"> schema: eyekb-stage-disclosure/1.0 | 生成: {TODAY} | 生成器: {GEN}",
-          "> adult 主档 = donor_age>=18y (裁定 Q2); 下表列出每个 filled 条的全部非 adult 供者单元。",
-          "> 实测: 4 个 h5ad 源胎儿期核数=0 —— 红线条面'含胎儿 donor'实为 newborn/儿童/青少年混入, 已全部剔出主档。", ""]
+    dl = ["# Developmental Axis Row-by-Row Disclosure Table (KB2c t_be336eee — Red Line 2: Silent omission prohibited)", "",
+          f"> schema: eyekb-stage-disclosure/1.0 | Generated: {TODAY} | Generator: {GEN}",
+          "> Adult main archive = donor_age>=18y (Adjudication Q2); The table below lists all non-adult donor units for each filled entry.",
+          "> Measured: Fetal nucleus count in 4 h5ad sources = 0 —— The red-line lexical surface 'contains fetal donors' actually refers to mixed newborn/child/adolescent samples, which have been entirely excluded from the main archive.", ""]
     for t, d in disc.items():
-        dl.append(f"## {t} (主档 organism_stage={d['organism_stage_main']})")
+        dl.append(f"## {t} (main record organism_stage={d['organism_stage_main']})")
         if d.get("excluded_nonadult_units"):
-            dl.append("| 被剔供者 | organism_stage | UBERON 原值 | 核数 | 规则 |")
+            dl.append("| Excluded Donor | organism_stage | UBERON Original Value | Nucleus Count | Rule |")
             dl.append("|---|---|---|---|---|")
             for x in d["excluded_nonadult_units"]:
                 dl.append(f"| `{x['donor_id']}` | {x['organism_stage']} | {x['uberon']} "
                           f"| {x['cells']:,} | {x['rule']} |")
         elif isinstance(d.get("stage_disclosure"), list):
             for x in d["stage_disclosure"]:
-                dl.append(f"- unknown 披露: {x.get('source')} — {x.get('rule')}; "
-                          f"文献级: {x.get('literature_grade_B','')}")
+                dl.append(f"- unknown disclosure: {x.get('source')} — {x.get('rule')}; "
+                          f"Literature grade: {x.get('literature_grade_B','')}")
         dl.append("")
     (OUT_DIR / "_STAGE_DISCLOSURE.md").write_text("\n".join(dl) + "\n", encoding="utf-8")
-    # ---- KB2c Q5: fetal/developing 转换态概念条目 (不实算) ----
+    # ---- KB2c Q5: Fetal/developing transitional state concept entries (no actual computation) ----
     fetal = {
         "schema": "eyekb-baseline-concept/1.0",
         "entry_id": "fetal_development_transitions",
-        "title": "胎儿/发育期 眼组织 转换态概念条目 (KB2c 裁定 Q5 — 非成人桶分身, 不实算组成)",
+        "title": "Fetal/developmental eye tissue transitional state conceptual entry (KB2c adjudication Q5 — not a clone of the adult bucket, no composition calculation)",
         "generated": TODAY, "generator": GEN, "card": "t_be336eee",
         "organism_stage": ["fetal", "developing"],
-        "nature": ("本条目=概念占位: 登记未来的 fetal/developing 基线候选与其前提, "
-                   "**不是组成基线** —— 胎儿的这些和成人的即使是一个组织也不对 (PI 红线), "
-                   "禁止把本条目当任何组织的成人桶引用或反向借用。"),
+        "nature": ("This entry = conceptual placeholder: registers future fetal/developing baseline candidates and their prerequisites, "
+                   "**Not a composition baseline** — fetal samples are incompatible with adult ones even within the same tissue (PI red line), "
+                   "Prohibited from citing this entry as an adult bucket for any tissue or reverse borrowing."),
         "current_facts": {
             "filled_adult_baselines": 6,
             "fetal_stage_nuclei_in_filled_sources": 0,
-            "nonadult_in_filled_sources": ("newborn/儿童/青少年供者 (逐行见 _STAGE_DISCLOSURE.md), "
-                                           "已从 adult 主档剔除; 未来 developing 基线的本地素材"),
-            "engine_applicability": "现役判读引擎 (OcularKB M3 等) 训练/适用域=成人组织 —— 现役引擎"
-                                    "不适用 fetal/发育期样本, 对这类材料必须弃权 (评估层 E4=OOD_严格, "
-                                    "指令条款3); 需另建 fetal 参考管线后方可立组成条目",
+            "nonadult_in_filled_sources": ("newborn/child/adolescent donors (see _STAGE_DISCLOSURE.md line by line),"
+                                           "Already removed from adult master archive; local material for future developing baseline"),
+            "engine_applicability": "Active reading engine (OcularKB M3 etc.) training/applicability domain = adult tissue — active engine"
+                                    "Not applicable to fetal/developmental samples; must abstain for such materials (evaluation layer E4=OOD_strict, "
+                                    "Directive Clause 3); Composition entries can only be established after building a separate fetal reference pipeline",
         },
         "candidates": [
-            {"acc": "GSE268630", "desc": "人胎视网膜 multiome ~22万核", "tier": "fetal",
-             "local": True, "note": "指令条款4 首选候选; 入基线前需 fetal 参考管线任务"},
-            {"acc": "GSE137828", "desc": "人胎视网膜 (fetal)", "tier": "fetal",
-             "local": "待核", "note": "指令条款4 列名"},
-            {"acc": "GSE137863", "desc": "人胎视网膜发育 (fetal)", "tier": "fetal",
-             "local": "待核", "note": "指令条款4 列名"},
-            {"acc": "GSE138002", "desc": "视网膜类器官", "tier": "organoid→unknown+旗标 (裁定 Q1)",
-             "local": "待核", "note": "类器官≠胎儿组织, 也≠成人; 单列"},
-            {"acc": "GSE234963", "desc": "类器官集", "tier": "organoid→unknown+旗标",
-             "local": "待核", "note": "指令条款4 列名"},
-            {"acc": "GSE235577", "desc": "类器官/多组学", "tier": "organoid→unknown+旗标",
-             "local": "待核", "note": "08-28 盘点实为 snATAC/多组学 ATAC 组分 — 转换前须重核平台口径"},
+            {"acc": "GSE268630", "desc": "Human fetal retina multiome ~220k nuclei", "tier": "fetal",
+             "local": True, "note": "Instruction clause 4 preferred candidate; requires fetal reference pipeline task before baseline inclusion"},
+            {"acc": "GSE137828", "desc": "Human fetal retina (fetal)", "tier": "fetal",
+             "local": "To be verified", "note": "Instruction clause 4 named column"},
+            {"acc": "GSE137863", "desc": "Human fetal retinal development (fetal)", "tier": "fetal",
+             "local": "To be verified", "note": "Instruction clause 4 named column"},
+            {"acc": "GSE138002", "desc": "Retinal organoids", "tier": "organoid→unknown+flag (adjudication Q1)",
+             "local": "To be verified", "note": "Organoids ≠ fetal tissue, also ≠ adult; listed separately"},
+            {"acc": "GSE234963", "desc": "Organoid set", "tier": "organoid→unknown+flag",
+             "local": "To be verified", "note": "Instruction clause 4 named column"},
+            {"acc": "GSE235577", "desc": "Organoid/multi-omics", "tier": "organoid→unknown+flag",
+             "local": "To be verified", "note": "The 08-28 inventory was actually snATAC/multi-omics ATAC components — platform scope must be re-verified before conversion"},
         ],
-        "out_of_scope": ("胎儿/发育期组成实算=另批任务 (裁定 Q5); >=60 老年分层=正交 aging 轴, 不在发育轴内。"),
-        "usage_redline": ("本条目所有候选不得并入任何 adult 条; 引用本条目必须连带"
-                          "'需 fetal 参考管线, 现役引擎不适用'声明。"),
+        "out_of_scope": ("Fetal/developmental composition actual calculation = separate batch task (adjudication Q5); >=60 elderly stratification = orthogonal aging axis, not within the developmental axis."),
+        "usage_redline": ("All candidates in this entry must not be merged into any adult entry; citations of this entry must include"
+                          "'Requires fetal reference pipeline; current engine not applicable' declaration."),
     }
     (OUT_DIR / "fetal_development_transitions.json").write_text(
         json.dumps(fetal, ensure_ascii=False, indent=1), encoding="utf-8")
     fl = [f"# {fetal['title']}", "",
-          f"> schema: `{fetal['schema']}` | entry_id: `{fetal['entry_id']}` | 生成: {TODAY} | 卡片: {fetal['card']}",
-          f"> 本文件由 build_baselines.py (KB2c) 生成; 手改会被覆盖。", "",
-          fetal["nature"], "", "## 现状事实", ""]
+          f"> schema: `{fetal['schema']}` | entry_id: `{fetal['entry_id']}` | Generated: {TODAY} | Card: {fetal['card']}",
+          f"> This file is generated by build_baselines.py (KB2c); manual edits will be overwritten.", "",
+          fetal["nature"], "", "## Current Facts", ""]
     for k, v in fetal["current_facts"].items():
         fl.append(f"- **{k}**: {v}")
-    fl += ["", "## 候选数据集 (指令条款4 — 全部未入基线)", "",
-           "| accession | 描述 | 发育档 | 本地 | 备注 |", "|---|---|---|---|---|"]
+    fl += ["", "## Candidate Datasets (Instruction Clause 4 — All not yet included in baselines)", "",
+           "| accession | description | developmental stage | local | notes |", "|---|---|---|---|---|"]
     for c in fetal["candidates"]:
         fl.append(f"| `{c['acc']}` | {c['desc']} | {c['tier']} | {c['local']} | {c['note']} |")
-    fl += ["", f"**范围外**: {fetal['out_of_scope']}", "",
-           f"**使用红线**: {fetal['usage_redline']}", ""]
+    fl += ["", f"**Out of scope**: {fetal['out_of_scope']}", "",
+           f"**Usage redline**: {fetal['usage_redline']}", ""]
     (OUT_DIR / "fetal_development_transitions.md").write_text("\n".join(fl) + "\n", encoding="utf-8")
     (OUT_DIR / "baselines.json").write_text(
         json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
     print("written:", len(entries), "entries + _STAGE_DISCLOSURE + fetal transitions →", OUT_DIR)
-    # 快速自检: retina adult-only 主档 vs 对照档
+    # Quick self-check: retina adult-only primary archive vs control archive
     r = entries[0]
     print("retina main(adult-only) n_units:", r["donor_level_main"]["Rod"]["n_units"],
           "| pool n_units:", r["donor_level_adult_pool_contrast"]["Rod"]["n_units"],
@@ -1583,7 +1583,7 @@ def main():
     for c in ["Rod", "MG", "Microglia", "RPE"]:
         s = r["donor_level_main"][c]
         print(f"  {c}: adult-only median {s['median_pct']}% IQR {s['iqr_pct']} "
-              f"(pool对照 {r['donor_level_adult_pool_contrast'][c]['median_pct']}%)")
+              f"(pool contrast {r['donor_level_adult_pool_contrast'][c]['median_pct']}%)")
     o = entries[1]
     print("ocular_surface main n_units:", o["donor_level_main"]["Epithelium"]["n_units"])
     for c in ["Epithelium", "Fibroblasts", "Immune Cells", "Corneal Endothelium"]:

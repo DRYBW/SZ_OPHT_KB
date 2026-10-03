@@ -1,5 +1,5 @@
 ---
-title: 文献索引: metabolism
+title: Literature Index: metabolism
 created: 2026-08-22
 updated: 2026-08-22
 type: query
@@ -8,11 +8,11 @@ sources: [literature_db v1.0+v1.1]
 confidence: high
 ---
 
-# 文献: metabolism (192 篇)
+# Literature: metabolism (192 papers)
 
-> RAG 全库 metabolism 主题论文清单，按年份倒序。溯源用 PMID 查询 RAG API。
+> Full-corpus paper list for topic 'metabolism', reverse-chronological; trace provenance via the RAG API by PMID.
 
-## 论文列表
+## Paper List
 - PMID41513693 (2026) Soluble guanylate cyclase deficiency drives retinal ganglion cell neurodegeneration with age in female mice through disrupted oxidative metabolism. — *Scientific reports* [mouse]
 - PMID41560519 (2026) Spatiotemporal dynamics of ecto-5'-nucleotidase (CD73) in mouse retina under physiological conditions. — *Development (Cambridge, England)* [mouse]
 - PMID41706861 (2026) Disrupted energy metabolism is associated with retinal ganglion cell degeneration in autosomal dominant optic atrophy. — *Science advances* [both]
@@ -208,9 +208,9 @@ confidence: high
 
 ---
 <!-- KB1V2-WIKILINKS v1.1 -->
-## 判读层链接 (判读层链接版本: KB1v2 (2026-09-23, t_16c3e020))
+## Reading Layer Links (Reading layer link version: KB1v2 (2026-09-23, t_16c3e020))
 
-- **判读层锚**: 签名层 metabolic 相关走 evidence_context.methods
-- **RAG reason-tag**: 每条 PMID 的入库原因/论断关系/证据条件见 `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (键=pmid; 字段 inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` 命中自动联表带出
-- **概念 ID 映射**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
-- 红线: 本页与全部链接内容仅证据引用与 QC 旗, 禁入打分 (ANNOTATION_PROTOCOL_v1.1.md §0)
+- **Reading layer anchor**: Metabolic-related signature layers route through evidence_context.methods
+- **RAG reason-tag**: Inclusion reasons/claim relations/evidence conditions for each PMID are in `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (key=pmid; fields inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` hits automatically join this table
+- **Concept ID mapping**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
+- Red line: This page and all linked content are for evidence citation and QC flags only; scoring is prohibited (ANNOTATION_PROTOCOL_v1.1.md §0)

@@ -19,10 +19,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "snRNA vs scRNA 平台轴组成压谱：核悬液基线套细胞悬液数据产生系统性假旗",
-   "observable_signature": "跨设计池级组成越界旗高频触发；分层路由后消除",
+   "failure_mode": "snRNA vs scRNA platform axis composition suppresses spectrum: applying nuclear suspension baseline to cell suspension data generates systematic false flags",
+   "observable_signature": "Cross-design pool-level composition boundary flags trigger frequently; eliminated after stratified routing",
    "risk_level": "high",
-   "mitigation": "组成对照必须按平台分层路由（RC 层化已证可修跨设计伪旗：Q1 Rod 62.15 回到层内区间）；混设计池的池级旗标是分层的适用边界，不判数据错误。",
+   "mitigation": "Composition controls must be routed by platform stratification (RC layering proven to fix cross-design false flags: Q1 Rod 62.15 returns to intra-layer interval); pool-level flags in mixed designs are boundaries for stratification applicability, not data errors.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -36,16 +36,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/comp_prior_v1_20260929/V1_VERDICT.md OB-3+残余维度1+分层真实收益节"
+    "/mnt/D/EyeKB/plans/comp_prior_v1_20260929/V1_VERDICT.md OB-3 + residual dimension 1 + stratified real benefit section"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__retina",
     "b1_order": 7,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "平台轴为物种/组织无关的技术属性（词表 §4 assay 条件驱动）"
+    "home_rationale": "Platform axis is a technical attribute independent of species/tissue (vocabulary §4 assay condition-driven)"
    }
   }
  ],

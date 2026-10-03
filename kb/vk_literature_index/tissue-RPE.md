@@ -1,5 +1,5 @@
 ---
-title: 文献索引: RPE
+title: Literature Index: RPE
 created: 2026-09-23
 updated: 2026-09-23
 type: query
@@ -8,13 +8,13 @@ sources: [literature_db v2.0_2026-09]
 confidence: high
 ---
 
-# 文献: RPE (311 篇, 多标签口径)
+# Literature: RPE (311 papers, multi-label scope)
 
-> RAG v2.0 中 tissue_labels 含 RPE 的论文清单（含与其他组织共标的论文），按年份倒序。
-> 溯源用 PMID 查询 RAG API: `stage3_retrieve.py --tissue RPE --db-dir literature_db/v2.0_2026-09 --cell-type <CT>`
-> 定位 (Claude5 冻结): 仅人机交互辅助引用, 不入打分。
+> List of papers in RAG v2.0 with tissue_labels containing RPE (including those co-labeled with other tissues), sorted by year descending.
+> Traceability via PMID query RAG API: `stage3_retrieve.py --tissue RPE --db-dir literature_db/v2.0_2026-09 --cell-type <CT>`
+> Positioning (Claude5 frozen): For human-AI interaction auxiliary citation only, excluded from scoring.
 
-## 论文列表
+## Paper List
 - PMID41881262 (2026) Age-dependent induction of ER stress in retinal pigment epithelium impairs phagocytosis  via  ADAM17-dependent MERTK shedding — *The Journal of biological chemistry* [mouse] tags=RPE,retina v=v1.0
 - PMID41866494 (2026) Advances in retinal pigment epithelium transplantation for age-related macular degeneration: bridging biology to therapeutic frontiers. — *Stem cell research & therapy* [human] tags=RPE,retina v=v1.0
 - PMID42443308 (2026) Soft matrix promotes ciliogenesis in human retinal pigment epithelial cells. — *Scientific reports* [human] tags=RPE v=v2.0-new
@@ -332,9 +332,9 @@ confidence: high
 
 ---
 <!-- KB1V2-WIKILINKS v1.1 -->
-## 判读层链接 (判读层链接版本: KB1v2 (2026-09-23, t_16c3e020))
+## Reading Layer Links (Reading layer link version: KB1v2 (2026-09-23, t_16c3e020))
 
-- **组成基线**: [kb/baselines/RPE.md](/mnt/D/EyeKB/kb/baselines/RPE.md) — 供者级条件参考分布 (锚定 registry 标准集或 t_6f5cc731 映射)
-- **RAG reason-tag**: 每条 PMID 的入库原因/论断关系/证据条件见 `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (键=pmid; 字段 inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` 命中自动联表带出
-- **概念 ID 映射**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
-- 红线: 本页与全部链接内容仅证据引用与 QC 旗, 禁入打分 (ANNOTATION_PROTOCOL_v1.1.md §0)
+- **Composition baseline**: [kb/baselines/RPE.md](/mnt/D/EyeKB/kb/baselines/RPE.md) — Donor-level conditional reference distribution (anchored to registry standard set or t_6f5cc731 mapping)
+- **RAG reason-tag**: Inclusion reasons/claim relations/evidence conditions for each PMID are in `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (key=pmid; fields inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` hits automatically join this table
+- **Concept ID mapping**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
+- Red line: This page and all linked content are for evidence citation and QC flags only; scoring is prohibited (ANNOTATION_PROTOCOL_v1.1.md §0)

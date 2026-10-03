@@ -1,5 +1,5 @@
 {
- "_meta": "KB1v2d D0 关键引用复核判定 (7 篇, 单判读员 pi-chief/t_bb170f1b, 2026-09-23; 标题+摘要级判读; 判据=摘要原文逐篇读)",
+ "_meta": "KB1v2d D0 key citation re-review adjudication (7 papers, single reader pi-chief/t_bb170f1b, 2026-09-23; title+abstract level reading; criterion=verbatim abstract reading per paper).",
  "35061025": {
   "inclusion_reasons": [
    "disease_cell_composition",
@@ -10,16 +10,16 @@
    {
     "axis": "composition",
     "relation": "support",
-    "note": "PDR-FVM 膜 8 类细胞组成, 小胶质为主要成分之一"
+    "note": "PDR-FVM membrane 8-class cell composition, microglia as a major component."
    },
    {
     "axis": "mechanism_background",
     "relation": "support"
    }
   ],
-  "note": "confirm(GSE165784 原文=演示数据集主锚)。纠正: 移除 composition_baseline——疾病膜组织图谱非健康组成基线。abstract_only 条目: 判读=标题+摘要原文, 正文级细节(亚群定量)不可引用。",
+  "note": "confirm(GSE165784 original=demo dataset main anchor). Correction: remove composition_baseline—disease membrane tissue atlas is not a healthy composition baseline. abstract_only entries: reading=title+abstract verbatim, body-text details (subpopulation quantification) are not citable.",
   "status": "D0_critical_review_20260923",
-  "reviewer": "pi-chief(t_bb170f1b) 单判读员, 标题+摘要级 (D0 lane 摘要可得; abstract-only 条目仅摘要可支撑)"
+  "reviewer": "pi-chief(t_bb170f1b) single reader, title+abstract level (D0 lane abstracts available; abstract-only entries supported by abstracts only)."
  },
  "37917183": {
   "inclusion_reasons": [
@@ -31,16 +31,16 @@
    {
     "axis": "composition",
     "relation": "support",
-    "note": "独立 PDR 眼前膜 scRNA-seq 细胞群组成"
+    "note": "Independent PDR anterior membrane scRNA-seq cell population composition."
    },
    {
     "axis": "mechanism_background",
     "relation": "support"
    }
   ],
-  "note": "confirm。纠正: 移除 composition_baseline (疾病队列)。AEBP1 相关靶点论断限摘要陈述。",
+  "note": "confirm. Correction: remove composition_baseline (disease cohort). AEBP1-related target claims limited to abstract statements.",
   "status": "D0_critical_review_20260923",
-  "reviewer": "pi-chief(t_bb170f1b) 单判读员, 标题+摘要级 (D0 lane 摘要可得; abstract-only 条目仅摘要可支撑)"
+  "reviewer": "pi-chief(t_bb170f1b) single reader, title+abstract level (D0 lane abstracts available; abstract-only entries supported by abstracts only)."
  },
  "39220810": {
   "inclusion_reasons": [
@@ -52,17 +52,17 @@
    {
     "axis": "composition",
     "relation": "support",
-    "note": "PDR 玻璃体液单细胞图谱 (case series)"
+    "note": "PDR vitreous humor single-cell atlas (case series)."
    },
    {
     "axis": "mechanism_background",
     "relation": "support",
-    "note": "炎症通路/可靶向细胞类型"
+    "note": "Inflammatory pathways/targetable cell types."
    }
   ],
-  "note": "confirm。纠正: 移除 composition_baseline (疾病样本)。",
+  "note": "confirm. Correction: remove composition_baseline (disease samples).",
   "status": "D0_critical_review_20260923",
-  "reviewer": "pi-chief(t_bb170f1b) 单判读员, 标题+摘要级 (D0 lane 摘要可得; abstract-only 条目仅摘要可支撑)"
+  "reviewer": "pi-chief(t_bb170f1b) single reader, title+abstract level (D0 lane abstracts available; abstract-only entries supported by abstracts only)."
  },
  "40069725": {
   "inclusion_reasons": [
@@ -79,17 +79,17 @@
    {
     "axis": "state",
     "relation": "support",
-    "note": "MKI67+ 增殖型小胶质细胞状态子集"
+    "note": "MKI67+ proliferative microglial state subset."
    },
    {
     "axis": "mechanism_background",
     "relation": "support",
-    "note": "乳酸-MKI67+ MG-新生血管轴 (限摘要陈述)"
+    "note": "Lactate-MKI67+ MG-neovascularization axis (limited to abstract statements)."
    }
   ],
-  "note": "confirm。补充: 加 state_signature——MKI67+ 是状态标记非独立细胞类型; 组成/机制/状态三票均有摘要支撑。",
+  "note": "confirm. Supplement: add state_signature—MKI67+ is a state marker, not an independent cell type; composition/mechanism/state votes all supported by abstracts.",
   "status": "D0_critical_review_20260923",
-  "reviewer": "pi-chief(t_bb170f1b) 单判读员, 标题+摘要级 (D0 lane 摘要可得; abstract-only 条目仅摘要可支撑)"
+  "reviewer": "pi-chief(t_bb170f1b) single reader, title+abstract level (D0 lane abstracts available; abstract-only entries supported by abstracts only)."
  },
  "40562775": {
   "inclusion_reasons": [
@@ -100,12 +100,12 @@
    {
     "axis": "mechanism_background",
     "relation": "support",
-    "note": "FAO 代谢重编程定义新生血管命运 (人和小鼠)"
+    "note": "FAO metabolic reprogramming defines neovascular fate (human and mouse)."
    }
   ],
-  "note": "confirm (auto 单票正确): 机制背景论文, 不构成组成/身份级论断; conf low→已复核。",
+  "note": "confirm (auto single vote correct): mechanistic background paper, does not constitute composition/identity-level claims; conf low→re-reviewed.",
   "status": "D0_critical_review_20260923",
-  "reviewer": "pi-chief(t_bb170f1b) 单判读员, 标题+摘要级 (D0 lane 摘要可得; abstract-only 条目仅摘要可支撑)"
+  "reviewer": "pi-chief(t_bb170f1b) single reader, title+abstract level (D0 lane abstracts available; abstract-only entries supported by abstracts only)."
  },
  "41578023": {
   "inclusion_reasons": [
@@ -116,12 +116,12 @@
    {
     "axis": "composition",
     "relation": "support",
-    "note": "HRCA 人视网膜双模态参考图谱 (3.9M cells/125 donors) = D001 锚"
+    "note": "HRCA human retina bimodal reference atlas (3.9M cells/125 donors) = D001 anchor."
    }
   ],
-  "note": "confirm(D001 主锚)。abstract_only 条目: 具体 donor/细胞数细节以摘要陈述为限, 正文表格不可引用。",
+  "note": "confirm(D001 main anchor). abstract_only entries: specific donor/cell count details limited to abstract statements, body tables not citable.",
   "status": "D0_critical_review_20260923",
-  "reviewer": "pi-chief(t_bb170f1b) 单判读员, 标题+摘要级 (D0 lane 摘要可得; abstract-only 条目仅摘要可支撑)"
+  "reviewer": "pi-chief(t_bb170f1b) single reader, title+abstract level (D0 lane abstracts available; abstract-only entries supported by abstracts only)."
  },
  "42601615": {
   "inclusion_reasons": [
@@ -134,21 +134,21 @@
    {
     "axis": "composition",
     "relation": "support",
-    "note": "人 PDR 单细胞图谱 SOX15 高表达 stromal 亚群"
+    "note": "Human PDR single-cell atlas SOX15-high expressing stromal subpopulation."
    },
    {
     "axis": "state",
     "relation": "support",
-    "note": "SOX15-high 为亚群状态签名"
+    "note": "SOX15-high as subpopulation state signature."
    },
    {
     "axis": "mechanism_background",
     "relation": "support",
-    "note": "纤维化/膜收缩背景"
+    "note": "Fibrosis/membrane contraction context."
    }
   ],
-  "note": "confirm。补充: 加 state_signature (SOX15-overexpressing population 是签名级); 移除 composition_baseline (疾病图谱)。",
+  "note": "confirm. Supplement: add state_signature (SOX15-overexpressing population is signature-level); remove composition_baseline (disease atlas).",
   "status": "D0_critical_review_20260923",
-  "reviewer": "pi-chief(t_bb170f1b) 单判读员, 标题+摘要级 (D0 lane 摘要可得; abstract-only 条目仅摘要可支撑)"
+  "reviewer": "pi-chief(t_bb170f1b) single reader, title+abstract level (D0 lane abstracts available; abstract-only entries supported by abstracts only)."
  }
 }

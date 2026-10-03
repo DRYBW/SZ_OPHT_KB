@@ -1,44 +1,44 @@
-# OcularKB 文献索引 (RAG 全库)
+# OcularKB Literature Index (Full RAG Library)
 
-> ⚠️ 2026-09-23 (KB1v2) 更新: 现役库已升级 **v2.0_2026-09 = 2,713 篇 / 174,616 chunks / 11 类眼组织多标签**
-> (v1.0 684 + v1.1 500 的 1,189 篇口径已被取代; 本页各 tissue/topic 子页已按 v2.0 重生成)。
-> **判读层入口 (KB1v2)**: 组成基线 `/mnt/D/EyeKB/kb/baselines/` (眼科通用, 供者级条件参考分布, 锚 D001/D002) |
-> 疾病×组织矩阵 `kb/priors/disease/_DISEASE_TISSUE_MATRIX.md` (示例格 PDR__fibrovascular_membrane) |
-> 概念 ID 映射 `kb/priors/concepts.tsv` | RAG 三字段 sidecar `kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` |
-> 注释协议 `plans/ANNOTATION_PROTOCOL_v1.1.md` | 评估章程 `plans/EVAL_Rubric_v1.md`。
-> 定位 (Claude5 冻结 + Astra T3): 判读层只引用与旗标, 禁入打分。
+> ⚠️ 2026-09-23 (KB1v2) Update: Active library upgraded to **v2.0_2026-09 = 2,713 papers / 174,616 chunks / 11 ocular tissue multi-labels**
+> (The count of 1,189 papers from v1.0 [684] + v1.1 [500] has been superseded; all tissue/topic subpages on this site have been regenerated for v2.0).
+> **Reading Layer Entry Points (KB1v2)**: Composition baselines `/mnt/D/EyeKB/kb/baselines/` (general ophthalmology, donor-level conditional reference distributions, anchored to D001/D002) |
+> Disease × Tissue Matrix `kb/priors/disease/_DISEASE_TISSUE_MATRIX.md` (example cell PDR__fibrovascular_membrane) |
+> Concept ID Mapping `kb/priors/concepts.tsv` | RAG three-field sidecar `kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` |
+> Annotation Protocol `plans/ANNOTATION_PROTOCOL_v1.1.md` | Evaluation Rubric `plans/EVAL_Rubric_v1.md`.
+> Positioning (Claude5 frozen + Astra T3): The reading layer only cites and flags; scoring is prohibited.
 
-> 由 RAG literature_db (v1.0 684 + v1.1 500) 自动生成。每条 = PMID + 标题 + 期刊/年份/物种。
-> 用途：VK 知识页的文献溯源入口。全文检索请用 RAG API (stage3_retrieve.py)。
-> 生成: 2026-08-22 | 唯一论文: 1189 (历史口径)
+> Auto-generated from RAG literature_db (v1.0 684 + v1.1 500). Each entry = PMID + Title + Journal/Year/Species.
+> Purpose: Literature traceability entry point for VK knowledge pages. Use the RAG API (stage3_retrieve.py) for full-text retrieval.
+> Generated: 2026-08-22 | Unique papers: 1189 (historical metric)
 
-## 统计
-- 总唯一论文: 1189
-- 版本: v1.0 (684) + v1.1 (500) 去重
-- 年份: 2020-2026
-- 主题分类: 16 类
+## Statistics
+- Total unique papers: 1189
+- Versions: v1.0 (684) + v1.1 (500) deduplicated
+- Years: 2020-2026
+- Topic categories: 16 classes
 
-## 主题目录
-- **models** (1080 篇) → [详见](models.md)
-- **photoreceptor** (550 篇) → [详见](photoreceptor.md)
-- **retina-development** (449 篇) → [详见](retina-development.md)
-- **methods-scrna** (392 篇) → [详见](methods-scrna.md)
-- **inherited-disease** (322 篇) → [详见](inherited-disease.md)
-- **visual-function** (287 篇) → [详见](visual-function.md)
-- **aging** (286 篇) → [详见](aging.md)
-- **glial-microglia** (285 篇) → [详见](glial-microglia.md)
-- **glaucoma** (283 篇) → [详见](glaucoma.md)
-- **rpe** (226 篇) → [详见](rpe.md)
-- **vascular** (209 篇) → [详见](vascular.md)
-- **metabolism** (192 篇) → [详见](metabolism.md)
-- **amd** (182 篇) → [详见](amd.md)
-- **regeneration** (182 篇) → [详见](regeneration.md)
-- **dr-diabetic-retinopathy** (112 篇) → [详见](dr-diabetic-retinopathy.md)
-- **other** (4 篇) → [详见](other.md)
+## Topic Directory
+- **models** (1080 papers) → [Details](models.md)
+- **photoreceptor** (550 papers) → [Details](photoreceptor.md)
+- **retina-development** (449 papers) → [Details](retina-development.md)
+- **methods-scrna** (392 papers) → [Details](methods-scrna.md)
+- **inherited-disease** (322 papers) → [Details](inherited-disease.md)
+- **visual-function** (287 papers) → [Details](visual-function.md)
+- **aging** (286 papers) → [Details](aging.md)
+- **glial-microglia** (285 papers) → [Details](glial-microglia.md)
+- **glaucoma** (283 papers) → [Details](glaucoma.md)
+- **rpe** (226 papers) → [Details](rpe.md)
+- **vascular** (209 papers) → [Details](vascular.md)
+- **metabolism** (192 papers) → [Details](metabolism.md)
+- **amd** (182 papers) → [Details](amd.md)
+- **regeneration** (182 papers) → [Details](regeneration.md)
+- **dr-diabetic-retinopathy** (112 papers) → [Details](dr-diabetic-retinopathy.md)
+- **other** (4 papers) → [Details](other.md)
 
-## 分类明细
+## Category Details
 
-### aging (286 篇)
+### aging (286 papers)
 - PMID41577708 (2026) Endothelial stem cells of the retinal vasculature reside in the optic nerve. — *Nature communications* [mouse]
 - PMID41513693 (2026) Soluble guanylate cyclase deficiency drives retinal ganglion cell neurodegeneration with age in female mice through disrupted oxidative metabolism. — *Scientific reports* [mouse]
 - PMID41684508 (2026) Interpretable Aging Signatures in Human Retinal Cell Types Revealed by Single-Cell RNA Sequencing and Sparse Logistic Regression. — *Ophthalmology science* [human]
@@ -89,9 +89,9 @@
 - PMID40817252 (2025) Illuminating photoreceptors: TGFβ signaling modulates the severeness of retinal degeneration. — *Cell death discovery* [mouse]
 - PMID40868180 (2025) AI-Enhanced Fluorescein Angiography Detection of Diabetes-Induced Silent Retinal Capillary Dropout and RNA-Seq Identification of Pre-Symptomatic Biomarkers. — *Biomedicines* [other]
 - PMID40653679 (2025) Senescence Alters Antimicrobial Peptide Expression and Induces Amyloid-β Production in Retinal Pigment Epithelial Cells. — *Aging cell* [human]
-- ... 等 236 篇 (见分类页)
+- ... plus 236 others (see category page)
 
-### amd (182 篇)
+### amd (182 papers)
 - PMID41728092 (2026) IL1A enhances TNF-induced retinal ganglion cell death. — *Frontiers in aging neuroscience* [mouse]
 - PMID41528844 (2026) Single-cell multiome and enhancer connectome of human retinal pigment epithelium and choroid nominate causal variants in macular degeneration. — *Cell reports* [human]
 - PMID41960189 (2026) CircAFF3 modulation of p53-ID2 signaling in the retinal pigment epithelium links inflammation with cell death in dry age-related macular degeneration. — *Frontiers in cell and developmental biology* [unknown]
@@ -142,9 +142,9 @@
 - PMID41272236 (2025) Loss of retinal stem cell reserve and lipofuscin accumulation accelerates cone-rod degeneration and replicates Stargardt disease in  abca4b  null zebrafish — *Scientific reports* [human]
 - PMID41354925 (2025) Advances in nanomedicine-based retinal drug delivery: mechanisms and translational applications. — *Journal of nanobiotechnology* [human]
 - PMID40956390 (2025) Retinitis Pigmentosa-Associated Gene TRIM49 Regulates ULK1-Mediated Autophagy and Photoreceptor Phagocytosis by the Retinal Pigment Epithelium. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [human]
-- ... 等 132 篇 (见分类页)
+- ... plus 132 others (see category page)
 
-### dr-diabetic-retinopathy (112 篇)
+### dr-diabetic-retinopathy (112 papers)
 - PMID41190783 (2026) Single-Cell RNA Sequencing of Retina Reveals Nna1 Upregulation in Myopic Diabetic Retinopathy as a Protective Factor Against Diabetic Damage. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [mouse]
 - PMID41789631 (2026) Endothelial UNC5B regulates blood‑retinal barrier homeostasis. — *International journal of molecular medicine* [both]
 - PMID42080790 (2026) Suboptimal Responses to Anti-VEGF in Retinal Neurovascular Diseases: Linking Aging and Alternative Angioinflammatory Pathways. — *Investigative ophthalmology & visual science* [human]
@@ -195,9 +195,9 @@
 - PMID38789412 (2024) Mutant kri1l causes abnormal retinal development via cell cycle arrest and apoptosis induction. — *Cell death discovery* [human]
 - PMID39716241 (2024) Prostanoid signaling in retinal cells elicits inflammatory responses relevant to early-stage diabetic retinopathy. — *Journal of neuroinflammation* [human]
 - PMID39170385 (2024) MicroRNA-2861 regulates the proliferation and apoptosis of human retinal vascular endothelial cells treated with high glucose by targeting NDUFB7. — *Heliyon* [human]
-- ... 等 62 篇 (见分类页)
+- ... plus 62 others (see category page)
 
-### glaucoma (283 篇)
+### glaucoma (283 papers)
 - PMID41170746 (2026) Retinal light perception and biological rhythms: The role of light in sleep and mood from an ophthalmic perspective (Review). — *Molecular medicine reports* [human]
 - PMID41576160 (2026) Lrrn-mediated retinal ganglion cell targeting drives visual circuit assembly for brightness and contrast detection. — *Science advances* [other]
 - PMID41577708 (2026) Endothelial stem cells of the retinal vasculature reside in the optic nerve. — *Nature communications* [mouse]
@@ -248,9 +248,9 @@
 - PMID41427445 (2025) Microglial mechanisms of viable retinal ganglion cell elimination. — *Frontiers in cellular neuroscience* [unknown]
 - PMID41533933 (2025) HDAC4 Promotes Neuroprotection of Retinal Ganglion Cells After Optic Nerve Injury. — *Investigative ophthalmology & visual science* [mouse]
 - PMID41467179 (2025) Efficient derivation of hiPSC-derived photoreceptor precursor cells and their neuroprotective effects in retinal degeneration. — *iScience* [human]
-- ... 等 233 篇 (见分类页)
+- ... and 233 others (see category page)
 
-### glial-microglia (285 篇)
+### glial-microglia (285 papers)
 - PMID41562588 (2026) cxcl18b -defined transitional state-specific nitric oxide drives injury-induced Müller glia cell-cycle re-entry in the zebrafish retina — *eLife* [other]
 - PMID41535549 (2026) Microglial CX3CR1 deficiency regulates the selective vulnerability of cone photoreceptors via STAT3/CCL-ACKR1 signaling in the mouse retina. — *Experimental & molecular medicine* [mouse]
 - PMID41693810 (2026) Total RNA and MicroRNA Transcriptomic Responses of Human Retinal Müller Glial Cells to Infection with  Toxoplasma gondii  Tachyzoites — *Ophthalmology science* [human]
@@ -301,9 +301,9 @@
 - PMID39953740 (2025) PD-L1 Promotes Immunological Tolerance and Enhances Visual Protection of hESC-RPE Grafts in Retinal Degeneration. — *Cell proliferation* [both]
 - PMID40374315 (2025) Single‐Cell  RNA ‐Seq Reveals Aging‐Related Impairment of Microglial Efferocytosis Contributing to Apoptotic Cells Accumulation After Retinal Injury — *Aging cell* [mouse]
 - PMID40843317 (2025) Upregulation of SQSTM1 Regulates Ferroptosis and Oxidative Stress in Müller Cells of the Diabetic Neural Retina by Modulating ACSL4. — *Journal of diabetes research* [human]
-- ... 等 235 篇 (见分类页)
+- ... and 235 others (see category page)
 
-### inherited-disease (322 篇)
+### inherited-disease (322 papers)
 - PMID41477839 (2026) Genome-wide association study reveals genetic architecture and evolution of human retinal pigmentation. — *Science advances* [human]
 - PMID41576160 (2026) Lrrn-mediated retinal ganglion cell targeting drives visual circuit assembly for brightness and contrast detection. — *Science advances* [other]
 - PMID41594869 (2026) RNA Sequencing and Targeted Knockdown Reveal miR-142a-5p as a Driver of Retinal Degeneration in rd1 Mice. — *Biology* [mouse]
@@ -357,9 +357,9 @@
 - PMID40504625 (2025) Device-free isolation of photoreceptor cells from patient iPSC-derived retinal organoids. — *JCI insight* [human]
 - PMID40722628 (2025) Epigenetic Modifications in the Retinal Pigment Epithelium of the Eye During RPE-Related Regeneration or Retinal Diseases in Vertebrates. — *Biomedicines* [human]
 - PMID40448612 (2025) SUMOylation is a Translatable Target in Hypoxic MNPs Regulating Retinal Vasculopathy. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [both]
-- ... 等 272 篇 (见分类页)
+- ... and 272 others (see category page)
 
-### metabolism (192 篇)
+### metabolism (192 papers)
 - PMID41513693 (2026) Soluble guanylate cyclase deficiency drives retinal ganglion cell neurodegeneration with age in female mice through disrupted oxidative metabolism. — *Scientific reports* [mouse]
 - PMID41560519 (2026) Spatiotemporal dynamics of ecto-5'-nucleotidase (CD73) in mouse retina under physiological conditions. — *Development (Cambridge, England)* [mouse]
 - PMID41706861 (2026) Disrupted energy metabolism is associated with retinal ganglion cell degeneration in autosomal dominant optic atrophy. — *Science advances* [both]
@@ -410,9 +410,9 @@
 - PMID40002367 (2025) Evidence for a Functional Link Between the Nrf2 Signalling Pathway and Cytoprotective Effect of S-Petasin in Human Retinal Pigment Epithelium Cells Exposed to Oxidative Stress. — *Antioxidants (Basel, Switzerland)* [human]
 - PMID39861733 (2025) Neuroprotective Effect of Melatonin Loaded in Human Serum Albumin Nanoparticles Applied Subconjunctivally in a Retinal Degeneration Animal Model. — *Pharmaceutics* [human]
 - PMID41096710 (2025) Modulation of mTOR Within Retinal Pigment Epithelium Affects Cell Viability and Mitochondrial Pathology. — *International journal of molecular sciences* [human]
-- ... 等 142 篇 (见分类页)
+- ... and 142 others (see category page)
 
-### methods-scrna (392 篇)
+### methods-scrna (392 papers)
 - PMID41477839 (2026) Genome-wide association study reveals genetic architecture and evolution of human retinal pigmentation. — *Science advances* [human]
 - PMID41389328 (2026) Protocol for retinal stress culture and single-cell analysis. — *STAR protocols* [mouse]
 - PMID41535675 (2026) Longitudinal analysis of retinal cell state transitions in  RB1 -deficient retinal organoids reveals the nascent cone precursors are the earliest cell-origin of human retinoblastoma — *Cell death & disease* [both]
@@ -463,9 +463,9 @@
 - PMID39869549 (2025) "Energetics of the outer retina II: Calculation of a spatio-temporal energy budget in retinal pigment epithelium and photoreceptor cells based on quantification of cellular processes". — *PloS one* [human]
 - PMID39888634 (2025) Inhibition of Retinal Neovascularization by BEZ235: Targeting the Akt/4EBP1/Cyclin D1 Pathway in Endothelial Cells. — *Investigative ophthalmology & visual science* [both]
 - PMID39908128 (2025) Expression of Osteopontin in M2 and M4 Intrinsically Photosensitive Retinal Ganglion Cells in the Mouse Retina. — *Investigative ophthalmology & visual science* [mouse]
-- ... 等 342 篇 (见分类页)
+- ... and 342 others (see category page)
 
-### models (1080 篇)
+### models (1080 papers)
 - PMID41170746 (2026) Retinal light perception and biological rhythms: The role of light in sleep and mood from an ophthalmic perspective (Review). — *Molecular medicine reports* [human]
 - PMID41102017 (2026) DIO3 coordinates photoreceptor development timing and fate stability in human retinal organoids. — *Genes & development* [human]
 - PMID41535675 (2026) Longitudinal analysis of retinal cell state transitions in  RB1 -deficient retinal organoids reveals the nascent cone precursors are the earliest cell-origin of human retinoblastoma — *Cell death & disease* [both]
@@ -516,15 +516,15 @@
 - PMID42088349 (2026) Extrinsic polarity cues control lamination versus cluster-based organization in vertebrate retinal development. — *iScience* [unknown]
 - PMID41851144 (2026) Bst2-targeted senotherapy restores visual function by eliminating senescent retinal cells. — *Nature communications* [both]
 - PMID42080790 (2026) Suboptimal Responses to Anti-VEGF in Retinal Neurovascular Diseases: Linking Aging and Alternative Angioinflammatory Pathways. — *Investigative ophthalmology & visual science* [human]
-- ... 等 1030 篇 (见分类页)
+- ... and 1030 others (see category page)
 
-### other (4 篇)
+### other (4 papers)
 - PMID39995070 (2026) Efferocytosis and retinal clean-up: Role of histone deacetylase 3 in ischemic retinopathy. — *Neural regeneration research* [unknown]
 - PMID41491635 (2026) A 66-year-old man with acute retinal necrosis. — *Brain pathology (Zurich, Switzerland)* [human]
 - PMID39816683 (2025) Light-eye-body axis: exploring the network from retinal illumination to systemic regulation. — *Theranostics* [human]
 - PMID37566012 (2023) Cells Special Issue: "The Molecular and Cellular Basis of Retinal Diseases". — *Cells* [unknown]
 
-### photoreceptor (550 篇)
+### photoreceptor (550 papers)
 - PMID41477839 (2026) Genome-wide association study reveals genetic architecture and evolution of human retinal pigmentation. — *Science advances* [human]
 - PMID41102017 (2026) DIO3 coordinates photoreceptor development timing and fate stability in human retinal organoids. — *Genes & development* [human]
 - PMID41535675 (2026) Longitudinal analysis of retinal cell state transitions in  RB1 -deficient retinal organoids reveals the nascent cone precursors are the earliest cell-origin of human retinoblastoma — *Cell death & disease* [both]
@@ -575,9 +575,9 @@
 - PMID39804630 (2025) A Comprehensive Analysis of Sex-Biased Gene Expression in the Aging Human Retina Through a Combination of Single-Cell and Bulk RNA Sequencing. — *Investigative ophthalmology & visual science* [both]
 - PMID39833899 (2025) Genetic context modulates aging and degeneration in the murine retina. — *Molecular neurodegeneration* [both]
 - PMID39869549 (2025) "Energetics of the outer retina II: Calculation of a spatio-temporal energy budget in retinal pigment epithelium and photoreceptor cells based on quantification of cellular processes". — *PloS one* [human]
-- ... 等 500 篇 (见分类页)
+- ... and 500 others (see category page)
 
-### regeneration (182 篇)
+### regeneration (182 papers)
 - PMID41562588 (2026) cxcl18b -defined transitional state-specific nitric oxide drives injury-induced Müller glia cell-cycle re-entry in the zebrafish retina — *eLife* [other]
 - PMID41657893 (2026) Microtubule dynamics in adult retinal ganglion cells and dorsal root ganglion neurons. — *Frontiers in molecular neuroscience* [unknown]
 - PMID41691075 (2026) Müller glial and microglial responses coupled to recovery of cone photoreceptors following limited cone ablation in zebrafish retina. — *Scientific reports* [other]
@@ -628,9 +628,9 @@
 - PMID38650003 (2024) Interleukin-4 protects retinal ganglion cells and promotes axon regeneration. — *Cell communication and signaling : CCS* [mouse]
 - PMID38816767 (2024) Retinal organoids with X-linked retinoschisis  RS1  (E72K) mutation exhibit a photoreceptor developmental delay and are rescued by gene augmentation therapy — *Stem cell research & therapy* [human]
 - PMID38729157 (2024) Lhx2  promotes axon regeneration of adult retinal ganglion cells and rescues neurodegeneration in mouse models of glaucoma — *Cell reports. Medicine* [mouse]
-- ... 等 132 篇 (见分类页)
+- ... plus 132 others (see category page)
 
-### retina-development (449 篇)
+### retina-development (449 papers)
 - PMID41477839 (2026) Genome-wide association study reveals genetic architecture and evolution of human retinal pigmentation. — *Science advances* [human]
 - PMID41102017 (2026) DIO3 coordinates photoreceptor development timing and fate stability in human retinal organoids. — *Genes & development* [human]
 - PMID41535675 (2026) Longitudinal analysis of retinal cell state transitions in  RB1 -deficient retinal organoids reveals the nascent cone precursors are the earliest cell-origin of human retinoblastoma — *Cell death & disease* [both]
@@ -681,9 +681,9 @@
 - PMID40614201 (2025) SARS-CoV-2 induces Alzheimer's disease-related amyloid-β pathology in ex vivo human retinal explants and retinal organoids. — *Science advances* [human]
 - PMID40655949 (2025) Understanding amblyopia from the perspective of neurovascular units: changes in the retina and brain. — *Frontiers in cell and developmental biology* [human]
 - PMID40504625 (2025) Device-free isolation of photoreceptor cells from patient iPSC-derived retinal organoids. — *JCI insight* [human]
-- ... 等 399 篇 (见分类页)
+- ... and 399 others (see category page)
 
-### rpe (226 篇)
+### rpe (226 papers)
 - PMID41477839 (2026) Genome-wide association study reveals genetic architecture and evolution of human retinal pigmentation. — *Science advances* [human]
 - PMID41252217 (2026) Retinol tracing within murine neural retina reveals cell type-specific retinol transport and distribution. — *The Journal of clinical investigation* [both]
 - PMID41528844 (2026) Single-cell multiome and enhancer connectome of human retinal pigment epithelium and choroid nominate causal variants in macular degeneration. — *Cell reports* [human]
@@ -737,9 +737,9 @@
 - PMID40956390 (2025) Retinitis Pigmentosa-Associated Gene TRIM49 Regulates ULK1-Mediated Autophagy and Photoreceptor Phagocytosis by the Retinal Pigment Epithelium. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [human]
 - PMID40002367 (2025) Evidence for a Functional Link Between the Nrf2 Signalling Pathway and Cytoprotective Effect of S-Petasin in Human Retinal Pigment Epithelium Cells Exposed to Oxidative Stress. — *Antioxidants (Basel, Switzerland)* [human]
 - PMID41096710 (2025) Modulation of mTOR Within Retinal Pigment Epithelium Affects Cell Viability and Mitochondrial Pathology. — *International journal of molecular sciences* [human]
-- ... 等 176 篇 (见分类页)
+- ... and 176 others (see category page)
 
-### vascular (209 篇)
+### vascular (209 papers)
 - PMID41577708 (2026) Endothelial stem cells of the retinal vasculature reside in the optic nerve. — *Nature communications* [mouse]
 - PMID41190783 (2026) Single-Cell RNA Sequencing of Retina Reveals Nna1 Upregulation in Myopic Diabetic Retinopathy as a Protective Factor Against Diabetic Damage. — *Advanced science (Weinheim, Baden-Wurttemberg, Germany)* [mouse]
 - PMID41717290 (2026) An atlas of cGAS-STING signaling in pathophysiological angiogenesis and retinal vascular homeostasis across species. — *Molecular therapy. Nucleic acids* [both]
@@ -790,9 +790,9 @@
 - PMID41301509 (2025) Nanotechnology-Based Delivery Systems and Retinal Pigment Epithelium: Advances, Targeting Approaches, and Translational Challenges. — *Biomolecules* [human]
 - PMID41394857 (2025) Breach and restoration of retinal immune privilege: barrier failure, innate dysregulation, and adaptive autoimmunity. — *Frontiers in immunology* [human]
 - PMID39967853 (2025) MSCs act as biopatches for blood-retinal barrier preservation to enhance functional recovery after retinal I/R. — *Molecular therapy. Nucleic acids* [human]
-- ... 等 159 篇 (见分类页)
+- ... and 159 others (see category page)
 
-### visual-function (287 篇)
+### visual-function (287 papers)
 - PMID41477839 (2026) Genome-wide association study reveals genetic architecture and evolution of human retinal pigmentation. — *Science advances* [human]
 - PMID41576160 (2026) Lrrn-mediated retinal ganglion cell targeting drives visual circuit assembly for brightness and contrast detection. — *Science advances* [other]
 - PMID41577708 (2026) Endothelial stem cells of the retinal vasculature reside in the optic nerve. — *Nature communications* [mouse]
@@ -846,28 +846,28 @@
  RLBP1 
   Variants — *FASEB journal : official publication of the Federation of American Societies for Experimental Biology* [human]
 - PMID40660409 (2025) A scRNA-seq reference contrasting living and early post-mortem human retina across diverse donor states. — *Human genomics* [human]
-- ... 等 237 篇 (见分类页)
+- ... and 237 others (see category page)
 
-## v2.0 全眼组织目录 (RAG v2.0_2026-09, 2026-09-23)
+## v2.0 Whole-Eye Tissue Catalog (RAG v2.0_2026-09, 2026-09-23)
 
-> v2.0 全眼扩建: 唯一论文 2713 (retina 继承 1189 + 新组织 1524); 逐组织页为多标签口径 (一篇论文可出现在多个组织页)。
+> v2.0 whole-eye expansion: 2713 unique papers (retina inherited 1189 + new tissues 1524); per-tissue pages use multi-label criteria (one paper may appear on multiple tissue pages).
 
-- **cornea** (203 篇) → [详见](tissue-cornea.md)
-- **conjunctiva** (118 篇) → [详见](tissue-conjunctiva.md)
-- **sclera** (67 篇) → [详见](tissue-sclera.md)
-- **trabecular_meshwork** (122 篇) → [详见](tissue-trabecular_meshwork.md)
-- **iris** (48 篇) → [详见](tissue-iris.md)
-- **ciliary_body** (205 篇) → [详见](tissue-ciliary_body.md)
-- **lens** (181 篇) → [详见](tissue-lens.md)
-- **optic_nerve** (232 篇) → [详见](tissue-optic_nerve.md)
-- **RPE** (311 篇) → [详见](tissue-RPE.md)
-- **choroid** (211 篇) → [详见](tissue-choroid.md)
-- **retina** (1189 篇, 继承 v1.0/v1.1 + 多标签增补) → 主题分类见上
+- **cornea** (203 papers) → [details](tissue-cornea.md)
+- **conjunctiva** (118 papers) → [details](tissue-conjunctiva.md)
+- **sclera** (67 papers) → [details](tissue-sclera.md)
+- **trabecular_meshwork** (122 papers) → [details](tissue-trabecular_meshwork.md)
+- **iris** (48 papers) → [details](tissue-iris.md)
+- **ciliary_body** (205 papers) → [details](tissue-ciliary_body.md)
+- **lens** (181 papers) → [details](tissue-lens.md)
+- **optic_nerve** (232 papers) → [details](tissue-optic_nerve.md)
+- **RPE** (311 papers) → [details](tissue-RPE.md)
+- **choroid** (211 papers) → [details](tissue-choroid.md)
+- **retina** (1189 papers, inherited from v1.0/v1.1 + multi-label augmentation) → see topic categories above
 
 ---
 <!-- KB1V2-WIKILINKS v1.1 -->
-## 判读层链接 (判读层链接版本: KB1v2 (2026-09-23, t_16c3e020))
+## Reading Layer Links (Reading layer link version: KB1v2 (2026-09-23, t_16c3e020))
 
-- **RAG reason-tag**: 每条 PMID 的入库原因/论断关系/证据条件见 `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (键=pmid; 字段 inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` 命中自动联表带出
-- **概念 ID 映射**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
-- 红线: 本页与全部链接内容仅证据引用与 QC 旗, 禁入打分 (ANNOTATION_PROTOCOL_v1.1.md §0)
+- **RAG reason-tag**: Inclusion reasons/claim relations/evidence conditions for each PMID are in `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (key=pmid; fields inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` hits automatically join this table
+- **Concept ID mapping**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
+- Red line: This page and all linked content are for evidence citation and QC flags only; scoring is prohibited (ANNOTATION_PROTOCOL_v1.1.md §0)

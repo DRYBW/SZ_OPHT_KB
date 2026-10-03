@@ -16,10 +16,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "同 dataset 内混合不同取材/分选亚设计（未分选臂与免疫正/负分选臂并池）且元数据未表征→分层可比性破坏，分选臂组成系统性偏置被当全数据集事实",
-   "observable_signature": "取证案例：12 中央凹未分选样本 55,736 细胞 + 外周 CD73 耗杆/CD90 富 RGC 分选 29,246 细胞（仅 2 批次含分选），cellId 前缀+一手方法取证拆分；预注册后不改规则，拆分路径登记为后续选项",
+   "failure_mode": "Mixed sampling/sorting sub-designs within same dataset (unsorted arm pooled with positive/negative immune sorting arms) without metadata characterization → stratification comparability broken, systematic bias in sorted arm composition treated as whole-dataset fact",
+   "observable_signature": "Forensic case: 12 central fovea unsorted samples 55,736 cells + peripheral CD73 depleted/CD90 enriched RGC sorted 29,246 cells (only 2 batches contain sorting), split via cellId prefix + primary method forensics; rules unchanged after pre-registration, split path registered as subsequent option",
    "risk_level": "high",
-   "mitigation": "pooling 前样本级制备策略取证表（cellId 前缀/摘要方法/分选标记三列）；不可分层数据集组成指标只可描述不可对照；预注册规则不因取证回改，拆分作后续选项",
+   "mitigation": "Sample-level preparation strategy forensic table before pooling (cellId prefix/abstract method/sorting marker three columns); composition metrics for non-stratifiable datasets descriptive only, not comparable; pre-registered rules not retroactively changed by forensics, splitting as subsequent option",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -33,16 +33,16 @@
    "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/compv1x_20260930/ledgers/q4_sample_strategy_forensics.tsv 全件"
+    "/mnt/D/EyeKB/plans/compv1x_20260930/ledgers/q4_sample_strategy_forensics.tsv full file"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "b2_stock_20260930",
     "b1_order": 2,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "亚设计混合=制备条件驱动失效，非某格专属（分支4→PATTERN）"
+    "home_rationale": "Sub-design mixing = preparation condition driven failure, not exclusive to specific grid (branch 4 → PATTERN)"
    }
   }
  ],

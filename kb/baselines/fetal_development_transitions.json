@@ -1,101 +1,101 @@
 {
  "schema": "eyekb-baseline-concept/1.0",
  "entry_id": "fetal_development_transitions",
- "title": "胎儿/发育期 眼组织 转换态概念条目 (KB2c 裁定 Q5 — 非成人桶分身, 不实算组成)",
+ "title": "Fetal/developmental eye tissue transitional state conceptual entry (KB2c adjudication Q5 — not a clone of the adult bucket, no composition calculation)",
  "generated": "2026-09-23",
- "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c 发育轴单列 t_be336eee)",
+ "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c developmental axis single column t_be336eee)",
  "card": "t_be336eee",
  "organism_stage": [
   "fetal",
   "developing"
  ],
- "nature": "本条目=概念占位: 登记未来的 fetal/developing 基线候选与其前提, **不是组成基线** —— 胎儿的这些和成人的即使是一个组织也不对 (PI 红线), 禁止把本条目当任何组织的成人桶引用或反向借用。",
+ "nature": "This entry = conceptual placeholder: registers future fetal/developing baseline candidates and their prerequisites, **not a composition baseline** — fetal and adult profiles differ even for the same tissue (PI Red Line); prohibited to cite this entry as any tissue's adult bucket or borrow in reverse.",
  "current_facts": {
   "filled_adult_baselines": 6,
   "fetal_stage_nuclei_in_filled_sources": 0,
-  "nonadult_in_filled_sources": "newborn/儿童/青少年供者 (逐行见 _STAGE_DISCLOSURE.md), 已从 adult 主档剔除; 未来 developing 基线的本地素材",
-  "engine_applicability": "现役判读引擎 (OcularKB M3 等) 训练/适用域=成人组织 —— 现役引擎不适用 fetal/发育期样本, 对这类材料必须弃权 (评估层 E4=OOD_严格, 指令条款3); 需另建 fetal 参考管线后方可立组成条目"
+  "nonadult_in_filled_sources": "newborn/child/adolescent donors (see _STAGE_DISCLOSURE.md line-by-line), removed from the adult master file; local material for future developing baselines",
+  "engine_applicability": "Current reading engines (OcularKB M3, etc.) training/applicability domain = adult tissue — current engines are not applicable to fetal/developmental samples; abstention is mandatory for such materials (evaluation layer E4=OOD_strict, instruction clause 3); a separate fetal reference pipeline must be established before composition entries can be created"
  },
  "candidates": [
   {
    "acc": "GSE268630",
-   "desc": "人胎视网膜 multiome ~22万核",
+   "desc": "Human fetal retina multiome ~220k nuclei",
    "tier": "fetal",
    "local": true,
-   "note": "指令条款4 首选候选; 入基线前需 fetal 参考管线任务"
+   "note": "Instruction clause 4 preferred candidate; requires fetal reference pipeline task before baseline inclusion"
   },
   {
    "acc": "GSE137828",
-   "desc": "人胎视网膜 (fetal)",
+   "desc": "Human fetal retina (fetal)",
    "tier": "fetal",
-   "local": "待核",
-   "note": "指令条款4 列名"
+   "local": "To be verified",
+   "note": "Instruction clause 4 named column"
   },
   {
    "acc": "GSE137863",
-   "desc": "人胎视网膜发育 (fetal)",
+   "desc": "Human fetal retinal development (fetal)",
    "tier": "fetal",
-   "local": "待核",
-   "note": "指令条款4 列名"
+   "local": "To be verified",
+   "note": "Instruction clause 4 named column"
   },
   {
    "acc": "GSE138002",
-   "desc": "视网膜类器官",
-   "tier": "organoid→unknown+旗标 (裁定 Q1)",
-   "local": "待核",
-   "note": "类器官≠胎儿组织, 也≠成人; 单列"
+   "desc": "Retinal organoids",
+   "tier": "organoid→unknown+flag (adjudication Q1)",
+   "local": "To be verified",
+   "note": "Organoids ≠ fetal tissue, also ≠ adult; listed separately"
   },
   {
    "acc": "GSE234963",
-   "desc": "类器官集",
-   "tier": "organoid→unknown+旗标",
-   "local": "待核",
-   "note": "指令条款4 列名"
+   "desc": "Organoid set",
+   "tier": "organoid→unknown+flag",
+   "local": "To be verified",
+   "note": "Instruction clause 4 named column"
   },
   {
    "acc": "GSE235577",
-   "desc": "类器官/多组学",
-   "tier": "organoid→unknown+旗标",
-   "local": "待核",
-   "note": "08-28 盘点实为 snATAC/多组学 ATAC 组分 — 转换前须重核平台口径"
+   "desc": "Organoid/multi-omics",
+   "tier": "organoid→unknown+flag",
+   "local": "To be verified",
+   "note": "The 08-28 inventory was actually snATAC/multi-omics ATAC components — platform scope must be re-verified before conversion"
   }
  ],
- "out_of_scope": "胎儿/发育期组成实算=另批任务 (裁定 Q5); >=60 老年分层=正交 aging 轴, 不在发育轴内。",
- "usage_redline": "本条目所有候选不得并入任何 adult 条; 引用本条目必须连带'需 fetal 参考管线, 现役引擎不适用'声明。",
+ "out_of_scope": "Fetal/developmental composition actual calculation = separate batch task (adjudication Q5); >=60 elderly stratification = orthogonal aging axis, not within the developmental axis.",
+ "usage_redline": "All candidates in this entry must not be merged into any adult entry; citing this entry must include the statement 'requires fetal reference pipeline, current engines not applicable'.",
  "development_stage": "fetal_developing",
- "development_stage_prohibition": "KB3 禁令 (PI 红线 2026-09-23): 发育期数据不得进成人基线统计池, 反之亦然 —— 同一组织胎儿≠成人, adult/fetal 不互为参照。",
+ "development_stage_prohibition": "KB3 Prohibition (PI Red Line 2026-09-23): Developmental data must not enter adult baseline statistical pool, and vice versa — same tissue fetal ≠ adult, adult/fetal do not serve as mutual references.",
  "kb3_card": "t_5425a7ca",
  "kb3_anchor_verification": {
   "generated": "2026-09-24",
   "card": "t_5425a7ca",
-  "method": "盘上 find + 文件内容实测 + registry (ocular_public_datasets_verified_v1.csv, ocularkb_ingest_registry_20260818.csv) 交叉核对",
+  "method": "Cross-check via on-disk find + file content measurement + registry (ocular_public_datasets_verified_v1.csv, ocularkb_ingest_registry_20260818.csv)",
   "anchors": [
    {
     "acc": "GSE268630",
     "verdict": "AVAILABLE_WITH_LABELS",
-    "evidence": "/mnt/D/OcularKB/data/GSE268630/gse268630_cellxgene.h5ad (226,506 细胞, portal 注释含 majorclass/subclass/development_stage/donor_id); GSM 面 25 单样本矩阵在盘",
-    "identity_note": "候选条 desc='multiome ~22万核' 与 portal 面一致; KB3 发育条目实采 portal 转录组注释"
+    "evidence": "/mnt/D/OcularKB/data/GSE268630/gse268630_cellxgene.h5ad (226,506 cells, portal annotations include majorclass/subclass/development_stage/donor_id); GSM-level 25 single-sample matrices are on disk",
+    "identity_note": "Candidate entry desc='multiome ~220k nuclei' matches the portal level; KB3 developmental entry actually adopts portal transcriptome annotations"
    },
    {
     "acc": "GSE234963",
     "verdict": "AVAILABLE_NO_PUBLISHED_LABELS",
-    "evidence": "24×h5ad @ /mnt/D/OcularKB/data/backlog_h5ad/ (obs 列=空, 无标签) + RAW.tar @ data/GSE234963/; registry OA-D009: 'Human fetal retinal progenitor scRNA-seq', Fetal ~7.5-21 PCW, 24 samples/13 时间点, 'no standalone GEO label file confirmed'",
-    "identity_note": "候选条 desc='类器官集' 系 KB2c 笔误 —— registry 权威行=胎 RPC (与任务书'人胎 RPC 24 样本'一致); 无公开标签 → 只立数据卡不实算"
+    "evidence": "24×h5ad @ /mnt/D/OcularKB/data/backlog_h5ad/ (obs columns empty, no labels) + RAW.tar @ data/GSE234963/; registry OA-D009: 'Human fetal retinal progenitor scRNA-seq', Fetal ~7.5-21 PCW, 24 samples/13 time points, 'no standalone GEO label file confirmed'",
+    "identity_note": "Candidate entry desc='organoid set' is a KB2c typo — authoritative registry row = fetal RPC (consistent with task sheet 'human fetal RPC 24 samples'); no public labels → create data card only, do not calculate composition"
    },
    {
     "acc": "GSE138002",
     "verdict": "AVAILABLE_MIXED_CONTENT",
-    "evidence": "data/GSE138002/ 4×suppl (mtx/barcodes/genes); Final_barcodes.csv.gz 118,555 细胞含 umap2_CellType 标签; 样本面=Hgw9-27 胎网 + Hpnd8 新生 + Adult 对照 + 24-59_Day 类器官",
-    "identity_note": "候选条 desc='视网膜类器官' 不完整 —— registry OA-D010 权威标题 'developing human retina AND retinal organoids'; 任务书 '(GW9-19)' 实测胎网面到 GW27; 混内容必须按样本级拆层, Adult/类器官段不进发育条目"
+    "evidence": "data/GSE138002/ 4×suppl (mtx/barcodes/genes); Final_barcodes.csv.gz 118,555 cells containing umap2_CellType labels; sample level = Hgw9-27 fetal retina + Hpnd8 newborn + Adult control + 24-59_Day organoids",
+    "identity_note": "Candidate entry desc='retinal organoids' is incomplete — registry OA-D010 authoritative title 'developing human retina AND retinal organoids'; task sheet '(GW9-19)' measured fetal retina level up to GW27; mixed content must be stratified by sample level, Adult/organoid segments do not enter developmental entries"
    }
   ],
-  "kb3_outcome": "retina__fetal_developing 独立条目已建 (GSE268630 + GSE138002 标签聚合); GSE234963 数据卡在条目内、组成待 fetal 管线回填。"
+  "kb3_outcome": "Independent entry retina__fetal_developing created (GSE268630 + GSE138002 label aggregation); GSE234963 data card is within the entry, composition pending backfill by fetal pipeline."
  },
  "kb3_first_entry_pointer": {
   "file": "retina__fetal_developing.json",
   "entry_id": "baseline_human_retina__fetal_developing__kb3",
   "card": "t_5425a7ca",
   "date": "2026-09-24",
-  "note": "概念条=候选总表/查询入口; 该文件=已发布标签分布参考条 (首个发育期实数据条目)。并存。"
+  "note": "Concept entry = candidate summary table/query entry point; this file = published label distribution reference entry (first real-data entry for developmental stage). Coexist."
  }
 }

@@ -1,122 +1,122 @@
-# COORDINATE_TAXONOMY_v1.md — 物种×组织×assay 受控词表与新旧坐标映射（WIRE-P1 前置件 · v1 批复版）
+# COORDINATE_TAXONOMY_v1.md — Controlled vocabulary for species × tissue × assay and old/new coordinate mapping (WIRE-P1 prerequisite · v1 ratified version)
 
-**状态**: RATIFIED v1（2026-09-30 批复；批复件 `plans/known_issues_b2_20261001/out/ARBITRATION_RULING_C1-C14_v1.md`
-sha256=aea4b4c592a092f115c78b4ee1ec81ecaf4eea1b9e2453c8ead39615f3b7fb8a；请求件
+**Status**: RATIFIED v1 (approved on 2026-09-30; approval document `plans/known_issues_b2_20261001/out/ARBITRATION_RULING_C1-C14_v1.md`
+sha256=aea4b4c592a092f115c78b4ee1ec81ecaf4eea1b9e2453c8ead39615f3b7fb8a; request document
 `ARBITRATION_REQUEST_coordinates_C1-C14.md` sha256=88996f1039042fbdea8a1fd4bd9c6f109cbbc170adbd3e6ca4cffae159dd37a3）。
-C1-C14 全部按 v0 取严案批复。已知问题条目的归属表**以本件为准**；词表未覆盖的坐标一律 UNMAPPED，不得自动注入。
-依据：架构评审裁决书（Astra 正式审 T1/T2）「正式矩阵的组织词表尚未统一，需先解决」「17 面/12 组织/6 skeleton 口径冲突先修」。
+C1-C14 all approved per strict v0 proposal. The attribution table for known issue entries is **governed by this document**; coordinates not covered by the vocabulary are uniformly UNMAPPED and must not be auto-injected.
+Basis: Architecture review adjudication (Astra formal review T1/T2): 'The organizational lexical surface of the formal matrix is not yet unified; resolution required first'; 'Fix conflicts in 17 faces/12 tissues/6 skeleton definitions first'.
 
-## 1. 口径冲突的事实核对（"17 vs 12"）
+## 1. Fact-checking of definition conflicts ("17 vs 12")
 
-| 数字 | 实际所指 | 核对结果 |
+| Number | Actual Reference | Verification Result |
 |---|---|---|
-| 「17 面」 | `kb/baselines/*.json` 的**文件数** | 17 = 12 个组织面 + 5 个元/变体件（`baselines.json` 索引、`_STAGE_DISCLOSURE`、`_marker_repair_retina_v6`、`fetal_development_transitions`、`retina__fetal_developing` 发育变体）。**17 不是组织轴长度** |
-| 「12 组织」(设计稿 §2.1) | 交叉网提案的组织页清单 | retina, cornea, trabecular_meshwork, sclera, choroid, ciliary_body, lens, vitreous, optic_nerve, lacrimal, conjunctiva, pdr_membrane |
-| 「12 基线面」(实测) | `kb/baselines` 的组织面条目 | retina, RPE, ciliary_body, optic_nerve, ocular_surface, trabecular_meshwork, lacrimal_gland, choroid, conjunctiva, iris, lens, sclera |
-| 「6 skeleton」 | 无供体级组成数据的基线面 | choroid, conjunctiva, iris, lens, sclera（status=skeleton_mapping_backfilled）+ lacrimal_gland（observed_single_study_pilot，无供体级区间）——组成对照不参与打分，≠无风险≠无 marker（评审停令 6） |
+| "17 faces" | **File count** in `kb/baselines/*.json` | 17 = 12 tissue faces + 5 meta/variant files (`baselines.json` index, `_STAGE_DISCLOSURE`, `_marker_repair_retina_v6`, `fetal_development_transitions`, `retina__fetal_developing` developmental variant). **17 is not the length of the tissue axis** |
+| "12 tissues" (Design draft §2.1) | List of tissue pages in cross-network proposal | retina, cornea, trabecular_meshwork, sclera, choroid, ciliary_body, lens, vitreous, optic_nerve, lacrimal, conjunctiva, pdr_membrane |
+| "12 baseline faces" (Measured) | Tissue face entries in `kb/baselines` | retina, RPE, ciliary_body, optic_nerve, ocular_surface, trabecular_meshwork, lacrimal_gland, choroid, conjunctiva, iris, lens, sclera |
+| "6 skeletons" | Baseline faces lacking donor-level composition data | choroid, conjunctiva, iris, lens, sclera (status=skeleton_mapping_backfilled) + lacrimal_gland (observed_single_study_pilot, no donor-level intervals)—composition controls do not participate in scoring, ≠ no risk ≠ no marker (Review stop order 6) |
 
-**两个「12」不是同一个 12**：基线面含 RPE/iris/ocular_surface（超级类）而无 cornea/vitreous/pdr_membrane；
-设计轴反之。冲突面逐行登记于 §3，**C1-C14 已批复（2026-09-30）**：canonical 组织轴=15 面，矩阵面积=6×15=90 格全占位（C1/C10），
-占位矩阵为机器产物 `pipeline/pitfalls/matrix/MATRIX_GRID.json`（build 重生成，禁手改）；格子激活一律走人工审计门，**不随面积批复激活**。
+**The two "12s" are not the same 12**: Baseline faces include RPE/iris/ocular_surface (super-classes) but lack cornea/vitreous/pdr_membrane;
+The design axis is the reverse. Conflicting faces are registered line-by-line in §3, **C1-C14 approved (2026-09-30)**: canonical tissue axis = 15 faces, matrix area = 6×15=90 cells all placeholders (C1/C10),
+Placeholder matrix is a machine artifact `pipeline/pitfalls/matrix/MATRIX_GRID.json` (regenerated on build, manual modification prohibited); cell activation uniformly goes through manual audit gates, **does not activate with area approval**.
 
-## 2. 物种轴（受控词表）
+## 2. Species Axis (Controlled Vocabulary)
 
-| canonical id | 状态 | 备注 |
+| canonical id | Status | Notes |
 |---|---|---|
-| `human` | ACTIVE（证据在册） | 六格迁移中的 5 格 |
-| `mouse` | ACTIVE（证据在册） | 六格迁移中的 1 格 |
-| `rat` / `macaque` / `rabbit` / `zebrafish` | RESERVED（设计词表在册，无证据） | C10 批复：RESERVED 物种入矩阵=占位（只能 PLACEHOLDER/UNEXPLORED），**不得建知识格**；升格走"≥3 条有出处坑 + 人工审计门"预注册通道（逐申请批复，禁自控）。macaque×retina 转正不在本批，随二批深补素材另案呈报（素材最厚已登记）。S0 样本预判对 rat 现为域外弃权 |
+| `human` | ACTIVE (evidence on record) | 5 of the six migrated cells |
+| `mouse` | ACTIVE (evidence on record) | 1 of the six migrated cells |
+| `rat` / `macaque` / `rabbit` / `zebrafish` | RESERVED (design vocabulary on record, no evidence) | C10 Approval: RESERVED species entering matrix = placeholder (only PLACEHOLDER/UNEXPLORED allowed), **no knowledge cells to be built**; promotion via "≥3 sourced pitfalls + manual audit gate" pre-registration channel (per-application approval, self-control prohibited). macaque×retina regularization not in this batch, submitted separately with second-batch deep-supplement materials (thickest material registered). S0 sample prediction for rat is currently out-of-domain abstain |
 
-物种惯例差异（大小写/MT 前缀/ID 体系）作为受控观察登记于条目 scope.preparation/assay 之外的
-nomenclature 模式条目，不另立轴（C13 确认项）。
+Species convention differences (case sensitivity/MT prefix/ID system) are registered as controlled observations outside entry scope.preparation/assay
+in nomenclature pattern entries, not establishing a separate axis (C13 confirmation item).
 
-## 3. 组织轴（canonical id 定案 = 基线面 ∪ 设计组织的最小合并集，15 面）
+## 3. Tissue Axis (Canonical ID Finalization = Minimum Merge Set of Baseline Faces ∪ Design Tissues, 15 Faces)
 
-canonical id 优先沿用 `kb/baselines` 面名（不改动现有知识层主键）；设计轴独有的补入；
-映射与冲突逐行登记（C1 批复：15 面定案；各行裁定=批复结果）：
+Canonical IDs prioritize retaining `kb/baselines` face names (do not modify existing knowledge layer primary keys); unique items from design axis added;
+Mappings and conflicts registered line-by-line (C1 Approval: 15-face finalization; row rulings = approval results):
 
-| # | canonical tissue_id | 基线面映射 | 设计稿映射 | 数据面状态 | 冲突/裁定登记 |
+| # | canonical tissue_id | Baseline Face Mapping | Design Draft Mapping | Data Face Status | Conflict/Ruling Registration |
 |---|---|---|---|---|---|
-| 1 | `retina` | retina.json | retina | 组成 filled | 区域子轴已立 region 正交轴（§3.1，C8 批复）；条目 KC-B1-human-retina-08 补 region_scope 注记重生成 |
-| 2 | `RPE` | RPE.json | （无） | filled | 设计 12 缺 RPE——**C2 批复补入独立面**（眼病主角，类目服从生物学；"少"是 low-support 不是出局） |
-| 3 | `ciliary_body` | ciliary_body.json | ciliary_body | filled | 一致 |
-| 4 | `optic_nerve` | optic_nerve.json | optic_nerve | filled | 一致 |
-| 5 | `trabecular_meshwork` | trabecular_meshwork.json | trabecular_meshwork | filled | 一致 |
-| 6 | `lacrimal_gland` | lacrimal_gland.json | lacrimal | pilot（无供体级区间） | **C7 批复：命名统一取基线面名 lacrimal_gland**（设计稿 `lacrimal` 为别名，不另立面） |
-| 7 | `choroid` | choroid.json | choroid | skeleton | 组成面板建设队列（risk_notice 与 panel_gap 两独立对象，评审 T5） |
-| 8 | `conjunctiva` | conjunctiva.json | conjunctiva | skeleton | 同上 |
-| 9 | `iris` | iris.json | （无） | skeleton | **C3 批复保留基线面名**（坐标合法、状态如实 skeleton） |
-| 10 | `lens` | lens.json | lens | skeleton | 组成缺 |
-| 11 | `sclera` | sclera.json | sclera | skeleton | 组成缺 |
-| 12 | `ocular_surface` | ocular_surface.json | （cornea 的位置） | filled | **冲突①（C4 批复）**：cornea 作为独立 canonical（六格证据在 cornea 名下），同时在 ocular_surface 面挂指针；**"角膜组成对照必须锁取材域"为强制缓解**（基线超级类=角膜/角膜缘/巩膜混池，条目 KC-B1-human-cornea-04） |
-| 13 | `cornea` | （经 ocular_surface 间接） | cornea | 经超级类 | 见冲突①：C4 批复后 cornea 独立入轴 |
-| 14 | `vitreous` | （无组成面） | vitreous | **组成面缺失** | **冲突②（C5 批复）**：坐标合法、面板状态=missing（**不是 skeleton**——正常玻璃体近无细胞，"健康组成面"可能永远不成立）；建格转 panel_gap 评估；不建健康玻璃体组成面板（条目 KC-B1-human-vitreous-03 自证） |
-| 15 | `fibrovascular_membrane` | （组成在 priors/composition/human_pdr_membrane.json；疾病先验 priors/disease/PDR__fibrovascular_membrane.json；服务词典名 fibrovascular_membrane） | pdr_membrane | 有 priors 无 baselines 面 | **冲突③（C6 批复）**：canonical=`fibrovascular_membrane`（现役服务词典名，MCP 消费用）；`pdr_membrane` 保留为 provenance 名，拉页层做别名映射（consume.py PULL_TISSUE_ALIAS）；**现役 MCP 服务词典零改动**；登记 panel_gap=缺健康对照语义，禁"疾病材料对照健康器官组成"（C14 批复；条目 KC-B1-human-pdr_membrane-03）；面板补录义务登记≠建面板 |
+| 1 | `retina` | retina.json | retina | Composition filled | Regional sub-axis established as orthogonal region axis (§3.1, C8 Approval); entry KC-B1-human-retina-08 regenerated with region_scope annotation |
+| 2 | `RPE` | RPE.json | (None) | filled | Design 12 lacks RPE—**C2 Approval adds independent face** (main player in eye diseases, category follows biology; "few" means low-support, not exclusion) |
+| 3 | `ciliary_body` | ciliary_body.json | ciliary_body | filled | Consistent |
+| 4 | `optic_nerve` | optic_nerve.json | optic_nerve | filled | Consistent |
+| 5 | `trabecular_meshwork` | trabecular_meshwork.json | trabecular_meshwork | filled | Consistent |
+| 6 | `lacrimal_gland` | lacrimal_gland.json | lacrimal | pilot (no donor-level intervals) | **C7 Approval: Naming unified to baseline face name lacrimal_gland** (design draft `lacrimal` is alias, no separate face) |
+| 7 | `choroid` | choroid.json | choroid | skeleton | Composition panel construction queue (risk_notice and panel_gap are two independent objects, Review T5) |
+| 8 | `conjunctiva` | conjunctiva.json | conjunctiva | skeleton | Same as above |
+| 9 | `iris` | iris.json | (None) | skeleton | **C3 Approval retains baseline face name** (coordinates valid, status honestly skeleton) |
+| 10 | `lens` | lens.json | lens | skeleton | Composition missing |
+| 11 | `sclera` | sclera.json | sclera | skeleton | Composition missing |
+| 12 | `ocular_surface` | ocular_surface.json | (Position of cornea) | filled | **Conflict ① (C4 Approval)**: cornea as independent canonical (six-cell evidence under cornea name), simultaneously hanging pointer on ocular_surface face; **"Corneal composition control must lock sampling domain" is mandatory mitigation** (baseline super-class = mixed pool of cornea/corneal limbus/sclera, entry KC-B1-human-cornea-04) |
+| 13 | `cornea` | (Indirectly via ocular_surface) | cornea | Via super-class | See Conflict ①: After C4 Approval, cornea enters axis independently |
+| 14 | `vitreous` | (No composition face) | vitreous | **Composition face missing** | **Conflict ② (C5 Approval)**: Coordinates valid, panel status=missing (**not skeleton**—normal vitreous has nearly no cells, "healthy composition face" may never hold); cell building transferred to panel_gap assessment; do not build healthy vitreous composition panel (entry KC-B1-human-vitreous-03 self-proves) |
+| 15 | `fibrovascular_membrane` | (Composition in priors/composition/human_pdr_membrane.json; disease prior in priors/disease/PDR__fibrovascular_membrane.json; service dictionary name fibrovascular_membrane) | pdr_membrane | Has priors, no baselines face | **Conflict ③ (C6 Approval)**: canonical=`fibrovascular_membrane` (current service dictionary name, for MCP consumption); `pdr_membrane` retained as provenance name, pull-page layer performs alias mapping (consume.py PULL_TISSUE_ALIAS); **Current MCP service dictionary zero changes**; register panel_gap=lacking healthy control semantics, prohibit "disease material compared against healthy organ composition" (C14 Approval; entry KC-B1-human-pdr_membrane-03); panel supplementation obligation registration ≠ building panel |
 
-### 3.1 region 正交轴（C8 批复，2026-09-30）
+### 3.1 Region Orthogonal Axis (C8 Approval, 2026-09-30)
 
-`region ∈ {fovea, macula_peripheral_mix, peripheral, not_recorded}`——与 species/tissue/stage 正交，
-**不另占组织轴位、不建格子维度**。语义=claim 级/样本级 scope 注记轴：
-- human×retina 格的高风险条 KC-B1-008（区域混合假旗）的缓解动作"组成对照先对齐区域"以本轴为语法前提——
-  本轴立轴后该缓解可执行（此前登记"缺失子轴"，条目引用无落点）；
-- 消费侧（S0/判读）按样本 region_scope 分组对照；**`not_recorded` 不得当 `fovea` 或 `peripheral` 套用**
-  （登记纪律，同 C12 治疗三态的 not_recorded≠naive 同型）；
-- 历史条涉及区域观察的 scope 复位按深补批重生成（本批仅 KC-B1-008 补 region_scope 注记）。
+`region ∈ {fovea, macula_peripheral_mix, peripheral, not_recorded}`—orthogonal to species/tissue/stage,
+**Does not occupy tissue axis position, does not build grid dimension**. Semantics = claim-level/sample-level scope annotation axis:
+- Mitigation action for high-risk entry KC-B1-008 (regional mixing false flag) in human×retina cell, "align region in composition control first", uses this axis as grammatical prerequisite—
+  After establishing this axis, the mitigation is executable (previously registered as "missing sub-axis", with entry references having no landing point);
+- Consumer side (S0/reading) groups by sample region_scope for comparison; **`not_recorded` must not be applied as `fovea` or `peripheral`**
+  (Registration discipline, analogous to C12 treatment tri-state where not_recorded≠naive);
+- Historical entries involving regional observation scope reset are regenerated per deep-supplement batch (this batch only supplements region_scope annotation for KC-B1-008).
 
-stage（发育阶段）为**正交轴**，不占组织轴位：`adult | fetal | developing`（源 `retina__fetal_developing`
-与 `fetal_development_transitions`、`_STAGE_DISCLOSURE`）；S0 疑似胎儿硬门消费此轴。
-发育坑归 PATTERN（C11 批复，分支 4；stage 作 claim 级 scope 注记，不建 CELL 变体格）。
+stage (developmental stage) is an **orthogonal axis**, not occupying tissue axis position: `adult | fetal | developing` (source `retina__fetal_developing`
+and `fetal_development_transitions`, `_STAGE_DISCLOSURE`); S0 suspected fetal hard gate consumes this axis.
+Developmental pitfalls belong to PATTERN (C11 approval, branch 4; stage serves as claim-level scope annotation, do not create CELL variant grid).
 
-## 4. assay 轴（受控词表）
+## 4. assay axis (controlled vocabulary)
 
-| canonical assay_id | 备注 |
+| canonical assay_id | Notes |
 |---|---|
-| `scRNA` | 细胞悬液单细胞 |
-| `snRNA` | 核悬液（条目 KC-B1-human-retina-07 平台轴的左端） |
-| `spatial` | 空间转录组（鼠侧解离不敏感证据路线，KC-B1-mouse-retina-08） |
-| `bulk` | **C9 批复补词**（S0 主账含 GSE160306/179568 类 bulk 件；受控词表校验同步放行）。本批涉及 bulk 观察的现存条 scope 复位=按深补批重生成，本批仅放开词表与校验；bulk 均值化类失效另立 PATTERN 候选（P24，题录未核不入账） |
+| `scRNA` | Single-cell suspension |
+| `snRNA` | Nucleus suspension (left end of platform axis for entry KC-B1-human-retina-07) |
+| `spatial` | Spatial transcriptomics (mouse-side dissociation-insensitive evidence route, KC-B1-mouse-retina-08) |
+| `bulk` | **C9 approval supplemented term** (S0 main ledger includes GSE160306/179568 type bulk items; controlled vocabulary validation synchronously released). Scope reset for existing bulk observation entries in this batch = regenerate per deep-supplement batch, this batch only releases vocabulary and validation; bulk averaging-type failures establish separate PATTERN candidate (P24, bibliographic record unverified, not entered into ledger) |
 
-preparation 词表（最小提案，条目 scope.preparation 用）：
+preparation vocabulary (minimal proposal, used for entry scope.preparation):
 `enzymatic_dissociation`、`short_dissociation_cold_protease`、`nuclear_extraction`、
 `surgical_stripped_membrane`、`excised_whole_mount`、`vitrectomy_cassette_wash`、
 `blunt_strip_TM`、`cultured_cell_line`、`paired_donor_tissue`。
-不在词表内的制备描述 → 条目按 UNMAPPED_SCOPE 处理或留空并登记，不得自造词注入。
-分选制备族（immuno-sorting 类）扩词提案挂 C9 同批登记（U15），**批复词表以本件为准，未列词不得注入**。
+Preparation descriptions not in vocabulary → entries handled as UNMAPPED_SCOPE or left blank and registered, do not inject self-created terms.
+Sorting preparation family (immuno-sorting type) expanded term proposal attached to C9 same-batch registration (U15), **approved vocabulary is based on this document, unlisted terms must not be injected**.
 
-disease_or_treatment 词表（最小提案）：
+disease_or_treatment vocabulary (minimal proposal):
 `PDR`、`RRD`、`diabetic_retinopathy_nonPNR`、`glaucoma_TM`、`aging`、`anti_VEGT_treated`、`none_healthy`。
-冲突登记（**C12 批复**）：`anti_VEGT_treated` 词保留在册；治疗状态观察一律按三态登记
-`{treated, naive, not_recorded}`，**"not_recorded 不得当 naive"为强制缓解**（六格普遍无治疗记录=
-元数据缺口，不硬凑）；P23（治疗记录缺失混池）待盘上源核出后随深补批转 claim。
+Conflict registration (**C12 approval**): `anti_VEGT_treated` term retained in register; treatment status observations uniformly registered as tri-state
+`{treated, naive, not_recorded}`, **"not_recorded must not be treated as naive" is a mandatory mitigation** (six-grid generally lacks treatment records =
+metadata gap, do not force fit); P23 (mixed pool due to missing treatment records) awaits on-disk source verification then transfers to claim with deep-supplement batch.
 
-## 5. 归属裁决树（本批及 B2 一律按此五支执行）
+## 5. Attribution Adjudication Tree (This batch and B2 strictly execute per these five branches)
 
 ```text
-1 单物种全组织            → SPECIES/{species}
-2 单组织全物种            → TISSUE/{tissue}
-3 单物种×单组织坐标       → CELL/{species}__{tissue}
-4 多但非全 或 由 assay/制备/疾病/治疗条件决定 → PATTERN/{pattern_id}
-5 映射不进本词表          → UNMAPPED_SCOPE（禁自动注入，仅登记）
+1 Single species whole tissue            → SPECIES/{species}
+2 Single tissue all species             → TISSUE/{tissue}
+3 Single species × single tissue coordinate       → CELL/{species}__{tissue}
+4 Multiple but not all OR determined by assay/preparation/disease/treatment conditions → PATTERN/{pattern_id}
+5 Cannot map to this vocabulary          → UNMAPPED_SCOPE (automatic injection prohibited, registration only)
 ```
 
-- 无 GLOBAL 页型：跨物种跨组织的普适规律=第 4 支（assay/方法条件驱动）归 PATTERN。
-- 「更具体者优先」只用于确定适用范围，不决定知识真伪；低证据等级条目不得自动覆盖高证据共性（评审 T1）。
-- 纯社区经验（community_lead）只能产生线索/verification_task/manual_review_required，
-  不得产生 hard_gate/panel_activation/named_label（评审 T2）。
-- 格子五态（UNMAPPED/PLACEHOLDER/LEAD_ONLY/EVIDENCE_READY/WORKFLOW_READY）在页面元数据登记；
-  六格当前=EVIDENCE_READY（provisional）——≥3 条不同 failure mode 的原子条目且来源定位经
-  机械核验（文件指针存在性），**尚未**完成六格人工审计（WORKFLOW_READY 需人工审核，等审计门）。
-- 矩阵面积=6 物种×15 canonical 组织=**90 格全占位**（C10 批复；机器产物，零手写）：
-  human/mouse×15 计 30 格按五态如实登记，RESERVED 四物种×15 计 60 格一律 PLACEHOLDER/UNEXPLORED。
-  **占位≠激活**：本批达标候选=0 的口径维持（C 项批复不改变任何格的激活状态）。
+- No GLOBAL page type: Universal laws across species and tissues = Branch 4 (assay/method condition driven) attributed to PATTERN.
+- "More specific takes precedence" is only used to determine applicable scope, not knowledge truth; low evidence level entries must not automatically override high evidence commonalities (Review T1).
+- Pure community experience (community_lead) can only generate clues/verification_task/manual_review_required,
+  must not generate hard_gate/panel_activation/named_label (Review T2).
+- Grid five states (UNMAPPED/PLACEHOLDER/LEAD_ONLY/EVIDENCE_READY/WORKFLOW_READY) registered in page metadata;
+  Six grids currently = EVIDENCE_READY (provisional) — ≥3 atomic entries from different failure modes with source localization mechanically verified
+  (file pointer existence), **has not yet** completed six-grid manual audit (WORKFLOW_READY requires manual review, awaiting audit gate).
+- Matrix area = 6 species × 15 canonical tissues = **90 grids fully placeholder** (C10 approval; machine-generated product, zero handwriting):
+  human/mouse × 15 totaling 30 grids registered truthfully per five states, RESERVED four species × 15 totaling 60 grids uniformly PLACEHOLDER/UNEXPLORED.
+  **Placeholder ≠ Activation**: This batch's criteria for qualifying candidates = 0 maintained (C item approval does not change activation state of any grid).
 
-## 6. 迁移映射（六格坐标系 → canonical，C6/C7 批复定案）
+## 6. Migration Mapping (Six-grid coordinate system → canonical, C6/C7 approval finalized)
 
-| 六格文件系坐标 | canonical 坐标 | 说明 |
+| Six-grid file system coordinate | canonical coordinate | Description |
 |---|---|---|
-| human__retina | human×retina | 直通 |
-| mouse__retina | mouse×retina | 直通 |
-| human__pdr_membrane | human×fibrovascular_membrane | 别名映射（冲突③，C6 批复：canonical=fibrovascular_membrane，pdr_membrane 留 provenance 名） |
-| human__trabecular_meshwork | human×trabecular_meshwork | 直通 |
-| human__cornea | human×cornea | 冲突①（C4 批复）后合法：cornea 独立 canonical，ocular_surface 挂指针 |
-| human__vitreous | human×vitreous | 冲突②（C5 批复）：坐标合法、组成面 missing 登记（非 skeleton） |
+| human__retina | human×retina | Direct pass-through |
+| mouse__retina | mouse×retina | Direct pass-through |
+| human__pdr_membrane | human×fibrovascular_membrane | Alias mapping (Conflict ③, C6 approval: canonical=fibrovascular_membrane, pdr_membrane retained as provenance name) |
+| human__trabecular_meshwork | human×trabecular_meshwork | Direct pass-through |
+| human__cornea | human×cornea | Legal after Conflict ① (C4 approval): cornea is an independent canonical entity; ocular_surface holds a pointer |
+| human__vitreous | human×vitreous | Conflict ② (C5 approval): coordinates legal, composition aspect registered as missing (not skeleton) |

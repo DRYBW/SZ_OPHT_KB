@@ -1,41 +1,41 @@
 {
  "schema": "eyekb-composition-face/0.2",
  "entry_id": "EXPECTED_COMPOSITION_v1",
- "title": "组成先验面 v1 (COMPV1): 条件层化 — retina 建库/取材/分选策略分层 + 眼表类型×区域 + OB-1 检索声明 | 默认 OFF",
+ "title": "Composition prior surface v1 (COMPV1): conditional stratification — retina library/sampling/sorting strategy stratification + ocular surface type×region + OB-1 retrieval declaration | Default OFF",
  "generated": "2026-09-29",
  "card": "t_37a35220",
- "authority": "USER_DIRECTIVE_20260928_eyekb_improve_wave.md 追加八 (COMPV1 预授权); 任务书 plans/comp_prior_20260928/BRIEF_DISC_COMPV1.md; 规则预注册 plans/comp_prior_v1_20260929/PHASE0_INVENTORY_t_37a35220.md",
- "wiring": "OFF — 未接线 (零 MCP/运行时引用; 本卡产物不得进任何运行时路径; 激活永远归 PI 点名)",
+ "authority": "USER_DIRECTIVE_20260928_eyekb_improve_wave.md Appendix Eight (COMPV1 pre-authorization); task brief plans/comp_prior_20260928/BRIEF_DISC_COMPV1.md; rule pre-registration plans/comp_prior_v1_20260929/PHASE0_INVENTORY_t_37a35220.md",
+ "wiring": "OFF — not wired (zero MCP/runtime references; artifacts of this card must not enter any runtime path; activation always requires explicit PI designation)",
  "status": "v1_candidate_selfcheck_only",
  "inherits": {
   "file": "EXPECTED_COMPOSITION_v0.json",
   "sha256": "d7c6068c9d86510a6053c97ba3361daf55bbe7a215993957aa8f9528d472061e",
-  "note": "v0 两页面全部行原样保留于 v0 文件(零改动); 本 v1 = 在其上加条件层; design-free 行语义以 v0 为准"
+  "note": "All rows from both v0 pages preserved verbatim in v0 file (zero changes); this v1 adds a conditional layer on top; semantics of design-free rows follow v0"
  },
- "lineage_declaration": "条件层区间 = kb/baselines adult-only 供者级主档谱系(D001/D002 外部作者注释本地复算)按设计维重聚合 (obs 字段: suspension_enrichment_factors/tissue/study_name; D002 tissue_group strata); 全程未使用自家聚类/自家 demo 注释 (禁循环继承); OB-1 检索 = 盘上 RAG chunks.parquet 242,928 chunks 全量, 零外网",
+ "lineage_declaration": "Conditional layer intervals = re-aggregation by design dimension of kb/baselines adult-only donor-level main archive lineages (D001/D002 external author annotations locally recomputed) (obs fields: suspension_enrichment_factors/tissue/study_name; D002 tissue_group strata); no use of internal clustering/internal demo annotations throughout (circular inheritance prohibited); OB-1 retrieval = full on-disk RAG chunks.parquet 242,928 chunks, zero external network",
  "semantics_declarations": {
-  "interval_A_strict_donor_only": "设计层区间仅由该层 A 级供者 IQR 构成 (priors/文献fold=混合设计来源不可归因于单层) — 预注册主口径 (PHASE0 §2); 注意其本质=中央50%带, 天然比 v0 三重包络窄",
-  "interval_B_v0_formula_envelope": "v0 公式形状逐字保留 (low=floor(min(donor_iqr_low, priors_expected_low, fold_lit_low)) / high=ceil(max(...))), 仅将 donor_iqr 项替换为层内值 — 后验敏感性变体, 未参与预注册判定, 采哪套语义激活前归 PI",
-  "support_gate": "层/区域单元数>=5 否则回落 design-free 父行 (机械, 两页共用)",
-  "region_row_binding": "眼表 类型×区域 行仅可用于取材区域已知的样本; 禁跨区套用; 区域未知 → design-free 行",
-  "target_evaluation": "OB-3 目标(<20%)只按预注册 R1A 判 — 结果: 未达成, 如实报缺口 (见 ob3_recompute + V1_VERDICT)"
+  "interval_A_strict_donor_only": "Design layer intervals composed solely of Grade A donor IQR within that layer (priors/literature fold=mixed design sources, not attributable to single layer) — pre-registered primary metric (PHASE0 §2); note its essence = central 50% band, naturally narrower than v0 triple envelope",
+  "interval_B_v0_formula_envelope": "v0 formula shape preserved verbatim (low=floor(min(donor_iqr_low, priors_expected_low, fold_lit_low)) / high=ceil(max(...))), only replacing donor_iqr term with intra-layer values — posterior sensitivity variant, did not participate in pre-registered adjudication, choice of semantics before activation belongs to PI",
+  "support_gate": "Layer/region unit count >=5 otherwise fallback to design-free parent row (mechanical, shared by both pages)",
+  "region_row_binding": "Ocular surface type×region rows applicable only to samples with known sampling region; cross-region application prohibited; unknown region → design-free row",
+  "target_evaluation": "OB-3 target (<20%) judged strictly by pre-registered R1A — result: not achieved, gap reported honestly (see ob3_recompute + V1_VERDICT)"
  },
  "retina_design_axis": {
   "available_dimensions_on_disk": [
-   "enrichment(NeuN±/靶向研究声明)",
+   "enrichment(NeuN±/targeted study declaration)",
    "tissue region(central=fovea+macula+proper / peripheral)",
    "study"
   ],
   "no_contrast_dimensions": [
-   "suspension_type 全=D001 核悬液一层(细胞悬液 A 级缺层=平台轴残余)",
-   "解离全=机械+去污剂(无酶解vs机械对比)"
+   "suspension_type all=D001 nuclear suspension one layer (cell suspension Grade A missing layer=platform axis residual)",
+   "Dissociation all=mechanical+detergent (no enzymatic vs mechanical comparison)"
   ],
-  "unit_key": "donor_id × tissue × enrichment, adult-only (KB2c 排除表)",
-  "targeted_layer_basis": "Chen_rgc+Shekhar_GSE237204 归靶向层 = baselines 盘上 caveat/t2 既有设计声明 (非本卡新造)"
+  "unit_key": "donor_id × tissue × enrichment, adult-only (KB2c exclusion table)",
+  "targeted_layer_basis": "Chen_rgc+Shekhar_GSE237204 assigned to targeted layer = existing design declarations in baselines on-disk caveat/t2 (not newly created by this card)"
  },
  "pages": {
   "retina_normal_adult_human": {
-   "design_free_rows": "见 EXPECTED_COMPOSITION_v0.json pages.retina_normal_adult_human.rows (零改动继承)",
+   "design_free_rows": "See EXPECTED_COMPOSITION_v0.json pages.retina_normal_adult_human.rows (zero-change inheritance)",
    "conditional_layers": {
     "RC1_unsorted_allregion": {
      "definition": "design_layer",
@@ -1412,9 +1412,9 @@
    ]
   },
   "ocular_surface_normal_adult_human": {
-   "design_free_rows": "见 v0 pages.ocular_surface_normal_adult_human.rows (零改动继承)",
+   "design_free_rows": "See v0 pages.ocular_surface_normal_adult_human.rows (zero-change inheritance)",
    "region_layers": {
-    "cornea (含角膜上皮/固有质)": {
+    "cornea (includes corneal epithelium/stroma)": {
      "Corneal Endothelium": {
       "n_units": 29,
       "donor_median_pct": 0.0,
@@ -1569,7 +1569,7 @@
       ]
      }
     },
-    "corneal endothelium (单独层, 仅 404 细胞)": {
+    "corneal endothelium (separate layer, only 404 cells)": {
      "Corneal Endothelium": {
       "n_units": 2,
       "donor_median_pct": 100.0,
@@ -1697,7 +1697,7 @@
       "fallback": "mixed_region_v0_row (support_gate_fail: n_units<5)"
      }
     },
-    "corneo-scleral junction (limbus 区)": {
+    "corneo-scleral junction (limbus region)": {
      "Corneal Endothelium": {
       "n_units": 22,
       "donor_median_pct": 0.0,
@@ -1852,7 +1852,7 @@
       ]
      }
     },
-    "ocular surface region (混合)": {
+    "ocular surface region (mixed)": {
      "Corneal Endothelium": {
       "n_units": 4,
       "donor_median_pct": 0.0,
@@ -2136,7 +2136,7 @@
      }
     }
    },
-   "category_note": "行=类型×tissue_group (cornea/limbus/sclera/ocular surface region/corneal endothelium); 区域混合超级类仅可对照 design-free 行; 已知区域样本必须路由到对应区域行 — 禁跨区套用条款进面语义",
+   "category_note": "Row = type × tissue_group (cornea/limbus/sclera/ocular surface region/corneal endothelium); regional-mixed super-classes may only be compared against design-free rows; samples with known regions must be routed to corresponding regional rows — cross-region application of clauses into face semantics is prohibited",
    "q6_recompute": [
     {
      "region": "cornea",
@@ -2229,7 +2229,7 @@
      "status": "support_gate_fail_region"
     },
     {
-     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "region": "corneal endothelium (separate layer, only 404 cells)",
      "n_cells": 70,
      "n_units": 2,
      "cell_type": "Corneal Endothelium",
@@ -2239,7 +2239,7 @@
      "status": "not_evaluated_small_support"
     },
     {
-     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "region": "corneal endothelium (separate layer, only 404 cells)",
      "n_cells": 70,
      "n_units": 2,
      "cell_type": "Endothelium",
@@ -2249,7 +2249,7 @@
      "status": "not_evaluated_small_support"
     },
     {
-     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "region": "corneal endothelium (separate layer, only 404 cells)",
      "n_cells": 70,
      "n_units": 2,
      "cell_type": "Epithelium",
@@ -2259,7 +2259,7 @@
      "status": "not_evaluated_small_support"
     },
     {
-     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "region": "corneal endothelium (separate layer, only 404 cells)",
      "n_cells": 70,
      "n_units": 2,
      "cell_type": "Fibroblasts",
@@ -2269,7 +2269,7 @@
      "status": "not_evaluated_small_support"
     },
     {
-     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "region": "corneal endothelium (separate layer, only 404 cells)",
      "n_cells": 70,
      "n_units": 2,
      "cell_type": "Immune Cells",
@@ -2279,7 +2279,7 @@
      "status": "not_evaluated_small_support"
     },
     {
-     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "region": "corneal endothelium (separate layer, only 404 cells)",
      "n_cells": 70,
      "n_units": 2,
      "cell_type": "Melanocytes",
@@ -2289,7 +2289,7 @@
      "status": "not_evaluated_small_support"
     },
     {
-     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "region": "corneal endothelium (separate layer, only 404 cells)",
      "n_cells": 70,
      "n_units": 2,
      "cell_type": "Pericytes",
@@ -2299,7 +2299,7 @@
      "status": "not_evaluated_small_support"
     },
     {
-     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "region": "corneal endothelium (separate layer, only 404 cells)",
      "n_cells": 70,
      "n_units": 2,
      "cell_type": "Schwann Cells",
@@ -2309,7 +2309,7 @@
      "status": "not_evaluated_small_support"
     },
     {
-     "region": "corneal endothelium (单独层, 仅 404 细胞)",
+     "region": "corneal endothelium (separate layer, only 404 cells)",
      "n_cells": 70,
      "n_units": 2,
      "cell_type": "Smooth Muscle Cells",
@@ -2319,7 +2319,7 @@
      "status": "not_evaluated_small_support"
     },
     {
-     "region": "corneo-scleral junction (limbus 区)",
+     "region": "corneo-scleral junction (limbus region)",
      "n_cells": 32273,
      "n_units": 22,
      "cell_type": "Epithelium",
@@ -2329,7 +2329,7 @@
      "status": "in_range"
     },
     {
-     "region": "corneo-scleral junction (limbus 区)",
+     "region": "corneo-scleral junction (limbus region)",
      "n_cells": 32273,
      "n_units": 22,
      "cell_type": "Fibroblasts",
@@ -2339,7 +2339,7 @@
      "status": "in_range"
     },
     {
-     "region": "corneo-scleral junction (limbus 区)",
+     "region": "corneo-scleral junction (limbus region)",
      "n_cells": 32273,
      "n_units": 22,
      "cell_type": "Endothelium",
@@ -2349,7 +2349,7 @@
      "status": "in_range"
     },
     {
-     "region": "corneo-scleral junction (limbus 区)",
+     "region": "corneo-scleral junction (limbus region)",
      "n_cells": 32273,
      "n_units": 22,
      "cell_type": "Pericytes",
@@ -2359,7 +2359,7 @@
      "status": "in_range"
     },
     {
-     "region": "corneo-scleral junction (limbus 区)",
+     "region": "corneo-scleral junction (limbus region)",
      "n_cells": 32273,
      "n_units": 22,
      "cell_type": "Immune Cells",
@@ -2369,7 +2369,7 @@
      "status": "in_range"
     },
     {
-     "region": "corneo-scleral junction (limbus 区)",
+     "region": "corneo-scleral junction (limbus region)",
      "n_cells": 32273,
      "n_units": 22,
      "cell_type": "Melanocytes",
@@ -2379,7 +2379,7 @@
      "status": "in_range"
     },
     {
-     "region": "corneo-scleral junction (limbus 区)",
+     "region": "corneo-scleral junction (limbus region)",
      "n_cells": 32273,
      "n_units": 22,
      "cell_type": "Schwann Cells",
@@ -2389,7 +2389,7 @@
      "status": "in_range"
     },
     {
-     "region": "corneo-scleral junction (limbus 区)",
+     "region": "corneo-scleral junction (limbus region)",
      "n_cells": 32273,
      "n_units": 22,
      "cell_type": "Smooth Muscle Cells",
@@ -2399,7 +2399,7 @@
      "status": "FLAG_ABOVE"
     },
     {
-     "region": "corneo-scleral junction (limbus 区)",
+     "region": "corneo-scleral junction (limbus region)",
      "n_cells": 32273,
      "n_units": 22,
      "cell_type": "Corneal Endothelium",
@@ -2409,7 +2409,7 @@
      "status": "in_range"
     },
     {
-     "region": "ocular surface region (混合)",
+     "region": "ocular surface region (mixed)",
      "n_cells": 2585,
      "n_units": 4,
      "cell_type": "Epithelium",
@@ -2419,7 +2419,7 @@
      "status": "support_gate_fail_region"
     },
     {
-     "region": "ocular surface region (混合)",
+     "region": "ocular surface region (mixed)",
      "n_cells": 2585,
      "n_units": 4,
      "cell_type": "Fibroblasts",
@@ -2429,7 +2429,7 @@
      "status": "support_gate_fail_region"
     },
     {
-     "region": "ocular surface region (混合)",
+     "region": "ocular surface region (mixed)",
      "n_cells": 2585,
      "n_units": 4,
      "cell_type": "Endothelium",
@@ -2439,7 +2439,7 @@
      "status": "support_gate_fail_region"
     },
     {
-     "region": "ocular surface region (混合)",
+     "region": "ocular surface region (mixed)",
      "n_cells": 2585,
      "n_units": 4,
      "cell_type": "Immune Cells",
@@ -2449,7 +2449,7 @@
      "status": "support_gate_fail_region"
     },
     {
-     "region": "ocular surface region (混合)",
+     "region": "ocular surface region (mixed)",
      "n_cells": 2585,
      "n_units": 4,
      "cell_type": "Pericytes",
@@ -2459,7 +2459,7 @@
      "status": "support_gate_fail_region"
     },
     {
-     "region": "ocular surface region (混合)",
+     "region": "ocular surface region (mixed)",
      "n_cells": 2585,
      "n_units": 4,
      "cell_type": "Melanocytes",
@@ -2469,7 +2469,7 @@
      "status": "support_gate_fail_region"
     },
     {
-     "region": "ocular surface region (混合)",
+     "region": "ocular surface region (mixed)",
      "n_cells": 2585,
      "n_units": 4,
      "cell_type": "Smooth Muscle Cells",
@@ -2479,7 +2479,7 @@
      "status": "support_gate_fail_region"
     },
     {
-     "region": "ocular surface region (混合)",
+     "region": "ocular surface region (mixed)",
      "n_cells": 2585,
      "n_units": 4,
      "cell_type": "Schwann Cells",
@@ -2489,7 +2489,7 @@
      "status": "support_gate_fail_region"
     },
     {
-     "region": "ocular surface region (混合)",
+     "region": "ocular surface region (mixed)",
      "n_cells": 2585,
      "n_units": 4,
      "cell_type": "Corneal Endothelium",
@@ -2686,27 +2686,27 @@
    "ocular_surface_normal_adult_human:Pericytes",
    "ocular_surface_normal_adult_human:Goblet_cell"
   ],
-  "method": "盘上 /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/chunks.parquet (242,928 chunks) 全量窗口检索 + v0 ledgers/mine_ct_pct.json 交叉; 零外网",
-  "result_goblet": "480 chunks 命中; 眼表语境 12 窗; 0 句通过三重过滤(人+正常成人眼表+直接报告捕获组成%) — 数字命中全部为假阳性(试剂浓度/手术成功率/再上皮化面积率); 维持 null(no_evidence)",
-  "result_pericytes": "2,574 chunks 命中; 眼表定量组成 0 窗 — 维持 null(B_missing), A 级区间不变",
-  "verdict": "OB-1 = 检索义务完成, 两行维持 null; 禁编数条款执行",
-  "candidate_ledger": "plans/comp_prior_v1_20260929/ob1_lit_candidates.tsv (108 窗全量留痕)"
+  "method": "On-disk /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/chunks.parquet (242,928 chunks) full-window retrieval + v0 ledgers/mine_ct_pct.json cross-check; zero external network access",
+  "result_goblet": "480 chunks hit; 12 windows in ocular surface context; 0 sentences passed triple filter (human + normal adult ocular surface + direct reporting of captured composition %) — all numerical hits were false positives (reagent concentration/surgical success rate/re-epithelialization area rate); maintain null(no_evidence)",
+  "result_pericytes": "2,574 chunks hit; 0 windows for quantitative ocular surface composition — maintain null(B_missing), A-level interval unchanged",
+  "verdict": "OB-1 = retrieval obligation completed, both rows maintain null; no-fabricated-numbers clause enforced",
+  "candidate_ledger": "plans/comp_prior_v1_20260929/ob1_lit_candidates.tsv (full audit trail of 108 windows)"
  },
  "activation_obligations_v1": {
-  "OB-1": "RESOLVED_AS_NULL — 两行 no_evidence 合法维持, 检索留痕可审",
-  "OB-2": "RESOLVED — 类型×区域行已出 (5 组 × 9 类, 1 组支撑门不过回落); Q6 分区重算 Pericytes 旗标消除/SMC 新旗如实报",
-  "OB-3": "PARTIAL — 分选×区域层已出并重算; 预注册主口径 <20% 未达成 (Q1-Q5 全部 30-60%); 残余触发维度=悬液平台轴+特定富集设计缺层 (见 V1_VERDICT), 禁改球门条款执行, 不达标如实报"
+  "OB-1": "RESOLVED_AS_NULL — two rows legally maintained as no_evidence, retrieval audit trail reviewable",
+  "OB-2": "RESOLVED — type×region rows generated (5 groups × 9 classes, 1 group failed support gate and fell back); Q6 regional recalculation Pericytes flag eliminated/SMC new flag reported truthfully",
+  "OB-3": "PARTIAL — sorting×region layer generated and recalculated; pre-registered primary metric <20% not achieved (Q1-Q5 all 30-60%); residual trigger dimensions = suspension platform axis + missing specific enrichment design layers (see V1_VERDICT), no-goalpost-change clause enforced, non-compliance reported truthfully"
  },
  "caveats": [
-  "RGC/神经元类比例受核分选与建库设计影响 (NeuN±, RGC 富集) — 判异常前必查建库策略 (baselines caveat 继承)",
-  "snRNA(核) 与 scRNA(细胞) 类比例不可直接互比 (REVIEWER_LLM T2)",
-  "眼表 Immune 仅 1.7% 池: 眼表固有免疫稀少, 免疫比例不可对照炎症样本",
-  "Corneal Endothelium 主档中位 0%: 纯 CEC 材料(碎块层) 分母=100%, 不适用本行",
-  "Goblet/结膜细节行 = 数据与文献双缺项, 已标 no_evidence",
-  "PAPER 41578023 (HRCA) n_chunks=1 (入库增量非全 chunk 化) — j2 勉强过, 内容锚不依赖它",
-  "v1 条件层区间本质=中央50%带 (A 严格语义), 单样本越界率天然高于包络语义 — 语义选择激活前归 PI",
-  "细胞悬液(scRNA)与核悬液(snRNA)类比例不可直比 (REVIEWER_LLM T2 继承): Q1/Q2/Q3/Q4 全部平台错配, 面侧无 A 级细胞悬液层可路由",
-  "眼表 corneal endothelium 单独层 (2 单元/404 细胞) 支撑门不过=诚实回落, 不是数据缺陷",
-  "Q6 区域重算含 study 混合 (D002 内 li_GSE147979 等小组), 区域行区间仅由 chen_* 主研究供者单元构成时 SMC 3.1% 为真实跨研究差异信号"
+  "RGC/neuron-like proportions influenced by nuclear sorting and library design (NeuN±, RGC enrichment) — check library strategy before flagging anomalies (inherits baselines caveat)",
+  "snRNA(nucleus) and scRNA(cell) class proportions are not directly comparable (REVIEWER_LLM T2)",
+  "Ocular surface Immune pool is only 1.7%: inherent immune scarcity in ocular surface, immune proportions cannot be benchmarked against inflammatory samples",
+  "Corneal Endothelium main archive median 0%: pure CEC material (fragment layer) denominator=100%, this row does not apply",
+  "Goblet/conjunctival detail rows = dual absence of data and literature, marked no_evidence",
+  "PAPER 41578023 (HRCA) n_chunks=1 (incremental ingestion, not full chunking) — j2 barely passes, content anchor does not rely on it",
+  "v1 conditional layer intervals essentially represent the central 50% band (strict A semantics), single-sample out-of-bound rates are naturally higher than envelope semantics — semantic selection activation belongs to PI before activation",
+  "Cell suspension(scRNA) and nucleus suspension(snRNA) class proportions are not directly comparable (REVIEWER_LLM T2 inherited): Q1/Q2/Q3/Q4 all have platform mismatches, no A-level cell suspension layer available for routing on the face side",
+  "Ocular surface corneal endothelium separate layer (2 units/404 cells) failed support gate = honest fallback, not a data defect",
+  "Q6 regional recalculation includes study mixing (small groups like li_GSE147979 within D002), when regional row intervals are composed solely of chen_* main study donor units, SMC 3.1% represents true cross-study differential signal"
  ]
 }

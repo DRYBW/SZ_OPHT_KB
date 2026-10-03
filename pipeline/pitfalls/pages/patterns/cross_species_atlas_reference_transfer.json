@@ -16,10 +16,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "模式物种图谱/词表直接迁移人（或反向）作细胞型参照：同源组织存在结构与分子差异，迁移产出\"伪缺/伪有\"细胞型",
-   "observable_signature": "题录：PMID:32341164（人+四模式物种房水外流通路图谱，物种差异为主题）、PMID:35858321（人眼前段图谱，组织特异与共享型并存）",
+   "failure_mode": "Direct transfer of model species maps/vocabulary to human (or vice versa) as cell type reference: structural and molecular differences exist in homologous tissues, transfer produces 'pseudo-absent/pseudo-present' cell types.",
+   "observable_signature": "Bibliographic records: PMID:32341164 (Human + four model species aqueous humor outflow pathway map, species differences as theme), PMID:35858321 (Human anterior segment map, coexistence of tissue-specific and shared types).",
    "risk_level": "medium",
-   "mitigation": "参照迁移前逐条列同源结构对照表（含物种专有类型清单）；引用模式物种词表必带 species 轴标注；与 symbol_case/panel_id_preflight 同族但失效面不同（参照迁移≠ID 冲突）",
+   "mitigation": "List homologous structure comparison table item-by-item before reference transfer (including species-exclusive type lists); citing model species vocabulary must include species axis annotation; same family as symbol_case/panel_id_preflight but different failure surface (reference transfer ≠ ID conflict).",
    "evidence_source_type": "peer_reviewed_literature",
    "source_check": "locator_verified",
    "home": {
@@ -33,16 +33,16 @@
    "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/known_issues_b1_20260930/pubmed_B_verified.json verified 键"
+    "/mnt/D/EyeKB/plans/known_issues_b1_20260930/pubmed_B_verified.json verified key"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "b2_stock_20260930",
     "b1_order": 9,
-    "legacy_grade": "B文献PMID",
+    "legacy_grade": "Tier B bibliographic record PMID",
     "legacy_code_in_legend": "PIT-E2",
     "report_confidence": "medium",
-    "home_rationale": "跨物种参照条件驱动普适条（C10 物种轴未裁仍可立 PATTERN——不建争议格）"
+    "home_rationale": "Cross-species reference condition-driven universal clause (C10 species axis unadjudicated yet PATTERN can be established—no dispute grid built)."
    }
   }
  ],

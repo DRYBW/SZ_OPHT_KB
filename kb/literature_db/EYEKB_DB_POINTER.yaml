@@ -1,26 +1,26 @@
-# EyeKB RAG 文献库路径指针 (P1 引用现路径; P2 拆分收尾时物理迁移)
-# 纪律: OcularKB 侧冻结只读, EyeKB 仅读取
+# EyeKB RAG corpus path pointer (P1 references current paths; P2 will physically relocate at split closeout)
+# Discipline: the OcularKB side is frozen read-only; EyeKB reads only
 rag_dbs:
   v2.0_2026-09:
     path: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09
-    role: v2.0-legacy (frozen read-only; 2026-10-01 前为 search_literature 默认库，现移交 v2.4.2——PI 有条件批准"新版更好就换"，证据链见 plans/rag_fix3_20260928/ 三门记录与本文件 v2.4.2 块)
+    role: v2.0-legacy (frozen read-only; served as the search_literature built-in corpus before 2026-10-01, now handed over to v2.4.2 — PI conditional approval 'switch if the new build is better'; evidence chain = plans/rag_fix3_20260928/ three-gate records and the v2.4.2 block in this file)
     chunks: 174616
     unique_papers: 2713
     manifest: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09/manifest.yaml
   v2.1_2026-09:
     path: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.1_2026-09
-    role: candidate (frozen read-only; QA_V21 22/22 PASS; 含 is_preprint 标记列)
+    role: candidate (frozen read-only; QA_V21 22/22 PASS; carries the is_preprint flag column)
     chunks: 220375
-    unique_papers: 3674   # papers.jsonl 行数=3689, 其中 15 行 0-chunk 幽灵条目 (历史遗留, KB1v2d 发现并登记)
+    unique_papers: 3674   # papers.jsonl has 3689 lines, 15 of them 0-chunk ghost entries (historical residue, found and registered by KB1v2d)
     manifest: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.1_2026-09/manifest.yaml
   v2.2_2026-09:
     path: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.2_2026-09
-    role: latest (frozen read-only; = v2.1 全量继承零重算 + d0_targeted 7 篇; astra 裁定 B 口径入库)
+    role: latest (frozen read-only; = v2.1 fully inherited with zero recomputation + d0_targeted 7 papers; astra ruling B admission caliber)
     chunks: 220571
-    unique_papers: 3681   # papers.jsonl 行数 3696 (含同一批 ghost)
-    sidecar: /mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.2_2026-09.jsonl  # 3696 行, source_db 指针内嵌
+    unique_papers: 3681   # papers.jsonl 3696 lines (same batch of ghosts included)
+    sidecar: /mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.2_2026-09.jsonl  # 3696 lines, source_db pointers embedded
     manifest: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.2_2026-09/manifest.yaml
-    # KB1v2d (t_bb170f1b): MCP default 未切 (服务行为变更, 涉预印本过滤/降级标识透传) — 报用户拍板后另卡执行
+    # KB1v2d (t_bb170f1b): service built-in corpus not switched (service behavior change; preprint filtering / degradation-flag passthrough) — separate card after PI decision
   v1.0_2026-08:
     path: /mnt/D/OcularKB/ocularkb/rag/literature_db/v1.0_2026-08
     role: legacy-baseline (frozen read-only)
@@ -29,45 +29,45 @@ rag_dbs:
     role: legacy (frozen read-only)
   v2.3_2026-09:
     path: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.3_2026-09
-    role: latest-kbadd (frozen read-only; = v2.2 全量继承零重算 + kbadd_keratocyte_targeted 4 篇; 卡 t_f3fa8c95)
+    role: latest-kbadd (frozen read-only; = v2.2 fully inherited with zero recomputation + kbadd_keratocyte_targeted 4 papers; card t_f3fa8c95)
     chunks: 220654
-    unique_papers: 3685   # papers.jsonl 行数 = 3700 (含历史 0-chunk ghost)
+    unique_papers: 3685   # papers.jsonl 3700 lines (historical 0-chunk ghosts included)
     sidecar: /mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.3_2026-09.jsonl
     manifest: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.3_2026-09/manifest.yaml
-    # MCP/stage3 default 未切 (服务行为变更, 沿先例待用户拍板; 本卡验收经 db 参数显式指向 v2.3 实测)
+    # service built-in corpus not switched (behavior change; pending PI decision per precedent; this card's acceptance ran with an explicit --db-dir pointing at v2.3)
 embedding_model:
   path: /mnt/D/OcularKB/models/bge-large-en-v1.5
   device: cpu
   v2.4_2026-09:
     path: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4_2026-09
-    role: latest-raggap (frozen read-only; = v2.3 全量继承零重算 + raggap_tier_a_eyekb 64 篇 9,772 chunks; 卡 t_d0bea5a6 D19)
+    role: latest-raggap (frozen read-only; = v2.3 fully inherited with zero recomputation + raggap_tier_a_eyekb 64 papers 9,772 chunks; card t_d0bea5a6 D19)
     chunks: 230426
-    unique_papers: 3749   # papers.jsonl 行数 = 3764 (含历史 0-chunk ghost 15)
+    unique_papers: 3749   # papers.jsonl 3764 lines (15 historical 0-chunk ghosts included)
     manifest: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4_2026-09/manifest.yaml
-    increment_ledger: /mnt/D/EyeKB/plans/rag_fix_20260928/work/ra_availability.tsv (逐 PMID 成败+体积; 13.9MB << 85MB 预算)
-    errata: /mnt/D/EyeKB/kb/markers/_raggap_errata_v1.json (LILRB2 撤证 + sample20 误引登记, INERT)
-    c_sidecars: /mnt/D/EyeKB/kb/markers/_raggap_c_linkbackfill_v1.json (830 行链回填, INERT 默认 OFF)
-    gate_status: "①黄金41/41 off全等 PASS (top5 与冻结 20260924 逐字全等; all_list_plus10=旧快照期望过期, 非本卡所致) ②严格retina gate 8/10 级不劣化+10/10 gate 级 = PASS (同 v2.1 形态) ③A档92单元覆盖消除 72.8% < 80% FAIL (残差归因=16 个 was_S2_ctx_mismatch 单元 RAGGAP 必补表从未配文 + 8 单元仅备选104覆盖 + LILRB2 撤证设计缺口)——待 PI 裁定, 见 plans/rag_fix_20260928/RAGFIX_NOTE.md"
-    # MCP/stage3 default 未切 (v2.0 不变, 沿先例待用户拍板; 回归门经 --db-dir 显式指向 v2.4 实测)
+    increment_ledger: /mnt/D/EyeKB/plans/rag_fix_20260928/work/ra_availability.tsv (per-PMID success/failure + size; 13.9MB << 85MB budget)
+    errata: /mnt/D/EyeKB/kb/markers/_raggap_errata_v1.json (LILRB2 evidence retraction + sample20 mis-citation registration, INERT)
+    c_sidecars: /mnt/D/EyeKB/kb/markers/_raggap_c_linkbackfill_v1.json (830-row link backfill, INERT, off by default)
+    gate_status: "① golden 41/41 off-state identical PASS (top5 byte-identical with the frozen 20260924 snapshot; all_list_plus10 = stale expectation from the old snapshot, not caused by this card) ② strict retina gate 8/10 case-level non-degradation + 10/10 gate-level = PASS (same shape as v2.1) ③ tier-A 92-unit coverage 72.8% < 80% FAIL (residual attribution = 16 was_S2_ctx_mismatch units whose RAGGAP must-fill table never had text + 8 units covered only by the alternative-104 set + the LILRB2 retraction design gap) — pending PI ruling, see plans/rag_fix_20260928/RAGFIX_NOTE.md"
+    # service built-in corpus not switched (v2.0 unchanged; pending PI decision per precedent; regression gate ran with an explicit --db-dir pointing at v2.4)
   v2.4.1_2026-09:
     path: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.1_2026-09
-    role: latest-ragfix2 (frozen read-only; = v2.4 全量继承零重算 + ragfix2_v25_whitelist 17 篇 1,281 chunks; 卡 t_6848d3de D21)
+    role: latest-ragfix2 (frozen read-only; = v2.4 fully inherited with zero recomputation + ragfix2_v25_whitelist 17 papers 1,281 chunks; card t_6848d3de D21)
     chunks: 231707
-    unique_papers: 3766   # papers.jsonl 行数 = 3781 (含历史 0-chunk ghost 15)
+    unique_papers: 3766   # papers.jsonl 3781 lines (15 historical 0-chunk ghosts included)
     manifest: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.1_2026-09/manifest.yaml
-    increment_ledger: /mnt/D/EyeKB/plans/rag_fix2_v25_20260928/work/ra2_availability.tsv (逐 PMID C2 复核+成败+体积; 2.34MB ≤ 6MB 上限)
-    whitelist_ledger: /mnt/D/EyeKB/plans/rag_fix2_v25_20260928/out/RA2_WHITELIST.tsv (三条件题录核验=断言词/PMID可核/非HRCA自引∧不在库防重蹈)
-    token_verification: /mnt/D/EyeKB/plans/rag_fix2_v25_20260928/out/RA2_token_verification.tsv (词边界 token 终裁; CALD1 替补顶岗)
-    gate_status: "③原分母92/原阈值80%/原判据复算 = 78/92 = 84.8% PASS (RA2 新兑现 11 单元含 CPNE5 副产品, 单调性核 v2.4 67 项零倒退; 残差 14 = 7 备选104覆盖单元(另案) + 6 诚实none(ATP8B4/FAM135A/FBXL7/LMOD1/LRRTM3/SHISA6) + LILRB2 撤证设计) ①黄金41/41 off全等 PASS (top5 与前轮逐字零漂移; all_list_plus10 失效仅绝对计数半句=前置轮旧快照期望过期, 两分句复证 TRUE, 非本卡) ②retina gate 8/10 用例级+10/10 gate 级 PASS (同 v2.1 形态)"
-    # MCP/stage3 default 未切 (v2.0 不变, 沿先例待用户拍板; 回归门经 --db-dir 显式指向 v2.4.1 实测)
+    increment_ledger: /mnt/D/EyeKB/plans/rag_fix2_v25_20260928/work/ra2_availability.tsv (per-PMID C2 re-check + success/failure + size; 2.34MB ≤ 6MB cap)
+    whitelist_ledger: /mnt/D/EyeKB/plans/rag_fix2_v25_20260928/out/RA2_WHITELIST.tsv (three-condition bibliographic check = assertion word / PMID verifiable / non-HRCA self-citation ∧ not-already-in-library to avoid repeats)
+    token_verification: /mnt/D/EyeKB/plans/rag_fix2_v25_20260928/out/RA2_token_verification.tsv (word-boundary token final adjudication; CALD1 filled by the alternate)
+    gate_status: "③ recomputed on the original denominator 92 / original threshold 80% / original criteria = 78/92 = 84.8% PASS (RA2 newly fulfills 11 units incl. the CPNE5 by-product; monotonicity check over v2.4's 67 items, zero regressions; residual 14 = 7 alternative-104-covered units (separate case) + 6 honest none (ATP8B4/FAM135A/FBXL7/LMOD1/LRRTM3/SHISA6) + the LILRB2 retraction design) ① golden 41/41 off-state identical PASS (top5 zero verbatim drift vs the previous round; the all_list_plus10 invalidation is the stale absolute-count half-sentence from the prior snapshot expectation, both clauses re-verified TRUE, not this card) ② retina gate 8/10 case-level + 10/10 gate-level PASS (same shape as v2.1)"
+    # service built-in corpus not switched (v2.0 unchanged; pending PI decision per precedent; regression gate ran with an explicit --db-dir pointing at v2.4.1)
   v2.4.2_2026-09:
     path: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09
-    role: default   # EyeKB MCP search_literature 默认库 (2026-10-01 自 v2.0 切换; 历史角色 latest-ragfix3; = v2.4.1 全量继承零重算 + ragfix3_backup104_scan 103 篇 11,221 chunks; 卡 t_b94d0999; 切换依据=门①黄金41/41+门②8/10用例级10/10门级+门③87/92=94.6% 全PASS且单调性零倒退; 与 G2/G3 复现语料同库=内外机默认态同质)
+    role: default   # the EyeKB MCP search_literature corpus (switched from v2.0 on 2026-10-01; historical role latest-ragfix3; = v2.4.1 fully inherited with zero recomputation + ragfix3_backup104_scan 103 papers 11,221 chunks; card t_b94d0999; switch basis = gate ① golden 41/41 + gate ② 8/10 case-level 10/10 gate-level + gate ③ 87/92 = 94.6%, all PASS with zero monotonicity regressions; same library as the G2/G3 reproduction corpus = homogeneous default state on internal and external machines)
     chunks: 242928
-    unique_papers: 3869   # papers.jsonl 行数 = 3884 (含历史 0-chunk ghost 15)
+    unique_papers: 3869   # papers.jsonl 3884 lines (15 historical 0-chunk ghosts included)
     manifest: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/manifest.yaml
-    increment_ledger: /mnt/D/EyeKB/plans/rag_fix3_20260928/work/ra3_availability.tsv (逐 PMID 下载成败+体积+物种; 19.33MB ≤ 100MB 波次预算, 零清单外下载, 零付费墙触碰)
-    scan_ledger: /mnt/D/EyeKB/plans/rag_fix3_20260928/work/ra3_scan_ledger.tsv (104 行机械四检零 LLM=题录可核∧不在库查重∧非HRCA自引∧OA实测curl -sI; 拒1=40171795 防双计)
-    decision_matrix: /mnt/D/EyeKB/plans/rag_fix3_20260928/out/DECISION_MATRIX_RAGFIX3.md (判读矩阵预注册 sha=b3787101187ceba27bdf9357662b6be501b0c6165e1d103015eb979982d80836, 开算前落纸)
-    gate_status: "③原分母92/原阈值80%/原判据复算 = 87/92 = 94.6% PASS (RA3 新兑现 9 单元=目标7中6+副产品 FAM135A/LILRB2/LMOD1, C8ORF76 诚实 MISS[两候选全文无词边界token]; 单调性核 v2.4.1 78 项零倒退; 残差 5 如实登记禁回调) ①黄金41/41 off全等+top5对ragfix2基线逐字零漂移 PASS; 接线契约8/9, all_list_plus10=前两轮astra已裁'绝对计数半句过期'形态(两分句超集∧reti::10计数本轮TRUE, 非本卡) ②retina gate 8/10用例级+10/10gate级 PASS(劣化点=RPE/Astrocyte同v2.1既有形态) 见 out/GATE2_RETINA_v242.json"
-    # MCP/stage3 default 未切 (v2.0 不变, 沿先例待用户拍板; 回归门经判据文件显式指向 v2.4.2 实测)
+    increment_ledger: /mnt/D/EyeKB/plans/rag_fix3_20260928/work/ra3_availability.tsv (per-PMID download outcome + size + species; 19.33MB ≤ 100MB wave budget, zero off-list downloads, zero paywall touches)
+    scan_ledger: /mnt/D/EyeKB/plans/rag_fix3_20260928/work/ra3_scan_ledger.tsv (104 rows, four mechanical checks, zero LLM = verifiable citation ∧ dedup vs library ∧ non-HRCA self-citation ∧ OA checked via curl -sI; 1 rejected = 40171795 to prevent double counting)
+    decision_matrix: /mnt/D/EyeKB/plans/rag_fix3_20260928/out/DECISION_MATRIX_RAGFIX3.md (preregistered reading matrix sha=b3787101187ceba27bdf9357662b6be501b0c6165e1d103015eb979982d80836, written down before computation)
+    gate_status: "③ recomputed on the original denominator 92 / original threshold 80% / original criteria = 87/92 = 94.6% PASS (RA3 newly fulfills 9 units = 6 of the 7 targets + the FAM135A/LILRB2/LMOD1 by-products; C8ORF76 honest MISS [no word-boundary token in either candidate's full text]; monotonicity over v2.4.1's 78 items, zero regressions; residual 5 registered as-is, retroactive threshold changes forbidden) ① golden 41/41 off-state identical + top5 zero verbatim drift vs the ragfix2 baseline PASS; wiring contract 8/9, all_list_plus10 = the form already ruled by astra in the previous two rounds as the stale absolute-count half-sentence (superset of both clauses ∧ the reti::10 count TRUE this round, not this card) ② retina gate 8/10 case-level + 10/10 gate-level PASS (the degradation point = RPE/Astrocyte, the pre-existing v2.1 shape), see out/GATE2_RETINA_v242.json"
+    # this block IS the service built-in (role above); the comment repeats the pre-switch status line for the audit trail. regression gate ran against an explicit criteria file pointing at v2.4.2

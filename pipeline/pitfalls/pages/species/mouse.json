@@ -16,10 +16,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "鼠参考侧 Müller 常记作 Astrocytes（含 SingleR/厂商口径）：跨体系标注漂移",
-   "observable_signature": "同一簇在厂商口径与本词表间标签类别漂移（Müller↔Astro）",
+   "failure_mode": "Mouse reference side: Müller cells often labeled as Astrocytes (including SingleR/vendor conventions): cross-system annotation drift",
+   "observable_signature": "Label category drift for the same cluster between vendor conventions and this lexicon (Müller↔Astro)",
    "risk_level": "medium",
-   "mitigation": "鼠侧一律写全称（Müller glia / microglia）或 CL 号；跨物种对照先建词表 crosswalk（dr-sc 重注的 crosswalk 先落 sha 纪律同型）；与厂商注释对分只到映射后口径。",
+   "mitigation": "Mouse side always use full names (Müller glia / microglia) or CL IDs; build a lexicon crosswalk before cross-species comparison (dr-sc re-annotation crosswalk follows the same sha discipline); compare with vendor annotations only after mapping.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -33,16 +33,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/mouse_mid_20260925/MOUSE_MID_REPORT.md §3.3※注(52行)；/mnt/D/EyeKB/plans/mouse_model_20260925/MOUSE_PRE_CHECK.md CL 二义消歧节(60-71行)"
+    "/mnt/D/EyeKB/plans/mouse_mid_20260925/MOUSE_MID_REPORT.md §3.3*note(52 lines); /mnt/D/EyeKB/plans/mouse_model_20260925/MOUSE_PRE_CHECK.md CL ambiguity resolution section(60-71 lines)"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "mouse__retina",
     "b1_order": 3,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "鼠侧通用标注惯例（文本不限组织）→ SPECIES/mouse"
+    "home_rationale": "General mouse-side annotation convention (text not limited to tissue) → SPECIES/mouse"
    }
   }
  ],

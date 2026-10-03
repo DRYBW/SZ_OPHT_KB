@@ -18,10 +18,10 @@
     "assay": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "玻璃体坑主体在『样本有无与取材污染』不在注释：取材方式/对照/细胞数三问任一答不清即降级",
-   "observable_signature": "cassette washing vs 膜剥离、有无配对血/对照眼在标本记录中缺失",
+   "failure_mode": "Vitreous pitfall primarily concerns 'sample presence and collection contamination' rather than annotation: downgrade if any of the three questions (collection method/control/cell count) cannot be clearly answered",
+   "observable_signature": "Cassette washing vs. membrane stripping, presence of paired blood/control eye missing from specimen records",
    "risk_level": "high",
-   "mitigation": "分析玻璃体前先出三问：取材方式（切割回收液 cassette washing vs 玻切膜剥离）、有无对照眼/配对血、总细胞数与每眼细胞数——任一答不清即降级为描述性报告。",
+   "mitigation": "Before analyzing vitreous, answer three questions: collection method (cassette washing/recycling fluid vs. vitrectomy membrane stripping), presence of control eye/paired blood, total cell count and cells per eye—downgrade to descriptive report if any is unclear.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -35,16 +35,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.json sources.VITREOUS_T（PMID:39220810，玻璃体 T 细胞 91.6% 登记条）"
+    "/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.json sources.VITREOUS_T (PMID:39220810, vitreous T-cell 91.6% registration entry)"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__vitreous",
     "b1_order": 1,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "本格总坑（玻璃体特有）"
+    "home_rationale": "General pitfall for this domain (vitreous-specific)"
    }
   },
   {
@@ -60,10 +60,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "取材污染三源：视网膜撕脱碎片（光感受器/RPE）、膜组织混入、术中出血",
-   "observable_signature": "光感受器/RPE 签名在玻璃体样本=取材旗非新发现",
+   "failure_mode": "Three sources of collection contamination: retinal avulsion fragments (photoreceptors/RPE), membrane tissue inclusion, intraoperative bleeding",
+   "observable_signature": "Photoreceptor/RPE signature in vitreous samples = collection flag, not new discovery",
    "risk_level": "high",
-   "mitigation": "光感受器/RPE 签名在玻璃体样本=取材旗非新发现；血源扣减法同膜格（PBMC 配对）；标本记录未写取材方式者不进入组学结论池。",
+   "mitigation": "Photoreceptor/RPE signature in vitreous samples = collection flag, not new discovery; blood depletion method same as membrane domain (PBMC pairing); specimens lacking collection method documentation excluded from omics conclusion pool.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -77,16 +77,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.json VITREOUS_T+GSE165784V2 双条对照"
+    "/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.json VITREOUS_T + GSE165784V2 dual-entry comparison"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__vitreous",
     "b1_order": 2,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "玻璃体特有；血源扣减指针→surgical_blood_inflow"
+    "home_rationale": "Vitreous-specific; blood depletion pointer → surgical_blood_inflow"
    }
   },
   {
@@ -102,10 +102,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "近无细胞基线：正常玻璃体单细胞参照不存在，疾病对比无锚",
-   "observable_signature": "公开数据无正常玻璃体组成条（构建时核对在册）",
+   "failure_mode": "Near-zero cell baseline: normal vitreous single-cell reference does not exist, disease comparisons lack anchor",
+   "observable_signature": "Public data lacks normal vitreous composition entries (verified during construction)",
    "risk_level": "high",
-   "mitigation": "玻璃体研究对照必须明写对照材料的真实背景；禁『健康玻璃体组成』表述（无此物）；跨研究比前先比对照定义。",
+   "mitigation": "Vitreous study controls must explicitly state the true background of control material; prohibit 'healthy vitreous composition' phrasing (does not exist); compare control definitions before cross-study comparison.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -119,16 +119,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "登记=/mnt/D/EyeKB/kb/priors/disease/_DISEASE_TISSUE_MATRIX.md（玻璃体列无正常条，本次构建核对）"
+    "Registration = /mnt/D/EyeKB/kb/priors/disease/_DISEASE_TISSUE_MATRIX.md (no normal entries in vitreous column, verified during current build)"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__vitreous",
     "b1_order": 3,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "领域空白事实（词表 §3 冲突②组成面 missing 的依据）"
+    "home_rationale": "Domain gap fact (basis for vocabulary §3 conflict ② composition aspect missing)"
    }
   },
   {
@@ -144,10 +144,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "细胞数与测序深度双低：低质量空滴/ambient 在稀细胞材料里占比放大",
-   "observable_signature": "每样本 nFeature 分布左移+ambient 估计高；非 ambient 门（表达占比×双细胞联合检验）后稀有类存活",
+   "failure_mode": "Low cell count and sequencing depth: proportion of low-quality empty droplets/ambient RNA amplified in sparse cell materials",
+   "observable_signature": "Left-shifted nFeature distribution per sample + high ambient estimation; rare classes survive after non-ambient gate (expression fraction × doublet joint test)",
    "risk_level": "medium",
-   "mitigation": "玻璃体数据 QC 报每样本 nFeature 分布+ambient 估计（decontX 级）；稀有类主张需过『非 ambient』门（表达占比+双细胞联合检验）。",
+   "mitigation": "Vitreous data QC reports nFeature distribution per sample + ambient estimation (decontX level); rare class claims must pass 'non-ambient' gate (expression fraction + doublet joint test).",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -161,16 +161,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/OcularKB/models/V2PROD_ROD_BC_BLINDSPOT_20260925.md（ambient 方法学迁移）+ C 档社区同型条"
+    "/mnt/D/OcularKB/models/V2PROD_ROD_BC_BLINDSPOT_20260925.md (ambient methodology transfer) + C-tier community homologous entries"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__vitreous",
     "b1_order": 4,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "玻璃体材料特性（ambient 方法学通用部分在视网膜 ambient 条）"
+    "home_rationale": "Vitreous material characteristics (general ambient methodology part in retina ambient entries)"
    }
   },
   {
@@ -186,10 +186,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "玻璃体侧文献规程+免疫对照谱为题录池；中性粒两主张并存须带读出方法引用",
-   "observable_signature": "不同读出方法（流式 vs 单细胞）给出相反中性粒结论",
+   "failure_mode": "Vitreous-side literature protocols + immune control spectrum form bibliographic pool; two neutrophil claims coexist requiring readout method citation",
+   "observable_signature": "Different readout methods (flow cytometry vs. single-cell) yield contradictory neutrophil conclusions",
    "risk_level": "low",
-   "mitigation": "做本室玻璃体液样本时直接对照 PMID:40382772 规程；『玻璃体中性粒缺失 vs 出现』两主张（39220810 vs 41867378）并存——引用带读出方法。",
+   "mitigation": "For vitreous humor samples of donor In-house samples in this lab, directly follow the protocol in PMID:40382772; two competing claims ('absence vs. presence of neutrophils in vitreous') coexist (39220810 vs 41867378)—cite with reading method.",
    "evidence_source_type": "peer_reviewed_literature",
    "source_check": "locator_verified",
    "home": {
@@ -209,10 +209,10 @@
    "provenance": {
     "origin_cell": "human__vitreous",
     "b1_order": 6,
-    "legacy_grade": "B文献PMID",
+    "legacy_grade": "Tier B bibliographic record PMID",
     "legacy_code_in_legend": "PIT-E2",
     "report_confidence": "high",
-    "home_rationale": "B 档题录池锚本格"
+    "home_rationale": "Tier B bibliographic pool anchored to this cell"
    }
   }
  ],

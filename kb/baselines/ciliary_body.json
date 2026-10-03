@@ -3,37 +3,37 @@
  "entry_id": "baseline_human_ciliary_body",
  "tissue": "ciliary_body",
  "species": "human",
- "title": "组成基线: 人(正常)ciliary_body snRNA adult-only 主档 (ciliary_body 切片 863,922 核 / 59 供者, 供者级条件参考分布, KB2c 发育轴单列)",
+ "title": "Composition baseline: Human (normal) ciliary_body snRNA adult-only primary archive (ciliary_body slice: 863,922 nuclei / 59 donors; donor-level conditional reference distribution; KB2c developmental axis listed separately)",
  "status": "filled_donor_level",
  "generated": "2026-09-23",
- "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c 发育轴单列 t_be336eee)",
+ "generator": "build_baselines.py (KB1v2 t_16c3e020; KB2c developmental axis single column t_be336eee)",
  "card": "t_bad1fbab",
  "anchor": {
-  "registry_row": "OA-D004=OA-D016 (GSE199013/HASA, t_6f5cc731 盘点 TM/CB 主力底座; 本地件核数与 HASA 条目 1,102,250 精确吻合)",
+  "registry_row": "OA-D004=OA-D016 (GSE199013/HASA, t_6f5cc731 inventory TM/CB main base; local file nucleus count precisely matches HASA entry 1,102,250)",
   "registry_csv": "/mnt/D/OcularKB/registry/ocular_public_datasets_verified_v1.csv",
   "local_path": "/mnt/D/OcularKB/data/HRA000728_tm_cb/HRA000728_tm_cb.h5ad",
-  "tier": "T1 portal 官方注释 (majorclass/author_cell_type/cell_type; study=chen_tm_cb+sanes_GSE199013)"
+  "tier": "T1 portal official annotation (majorclass/author_cell_type/cell_type; study=chen_tm_cb+sanes_GSE199013)"
  },
  "t2_fields": {
-  "取样材料": "人前节段手术取材中 ciliary_body 解剖组分 (tissue 列='ciliary body' 切片; 另有 uvea 分量 53,406 核未入本条)",
-  "疾病阶段": "normal (disease 列全 normal; 供者系统性死亡眼库/手术材料)",
-  "治疗背景": "未记录 (元数据无治疗列) —— 标'未记录', 不臆测",
+  "sampling_material": "Anatomical components of ciliary_body in human anterior segment surgical specimens (tissue column='ciliary body' slice; additionally, uvea component with 53,406 nuclei excluded from this entry)",
+  "disease_stage": "normal (disease column all normal; donors from systemic death eye banks/surgical materials)",
+  "treatment_background": "Not recorded (no treatment column in metadata) — labeled 'not recorded'; no speculation",
   "scRNA_vs_snRNA": "snRNA-seq (suspension_type=nucleus 100%; intronic_reads_counted=yes)",
-  "富集步骤": "无分选记录 (全组织核悬液直接上机)",
-  "解离方法": "mechanical dissociation,detergent solubilization×824,681核; mechanical dissociation,centrifugation×29,948核; mechanical dissociation,enzymatic dissociation×9,293核 (sample_collection_method=surgical resection)",
-  "供者数": "主档 adult-only 55 donors / 55 供者单元; 对照档 adult_pool 59 donors / 59 单元 (含 4 非 adult 供者 → 逐行见 excluded_nonadult_units)",
-  "计数分母": "863,922 核 (ciliary_body 切片内 majorclass 全标注)",
-  "证据来源": "本地实测复算 (A) + portal/HASA 官方注释 (t_6f5cc731 判 'portal官方')"
+  "enrichment_step": "No sorting records (whole-tissue nuclear suspension loaded directly)",
+  "dissociation_method": "mechanical dissociation,detergent solubilization×824,681 nuclei; mechanical dissociation,centrifugation×29,948 nuclei; mechanical dissociation,enzymatic dissociation×9,293 nuclei (sample_collection_method=surgical resection)",
+  "donor_count": "Primary tier adult-only 55 donors / 55 donor units; control tier adult_pool 59 donors / 59 units (includes 4 non-adult donors → see excluded_nonadult_units row-by-row)",
+  "counting_denominator": "863,922 nuclei (all majorclass annotated within the ciliary_body slice)",
+  "evidence_source": "Local empirical recalculation (A) + portal/HASA official annotation (t_6f5cc731 judged as 'portal official')"
  },
- "usage_scope": "用途口径 (Astra T2 裁定固化): 本基线 = 该取样材料在该实验流程下捕获到的细胞构成的身份参考 + 背景对照; **不得当组成达标线**。疾病手术材料的取样对象 ≠ 健康器官 (如 PDR 纤维血管膜不得对照健康视网膜组成验收); 注释数据出现清单外身份 → 触发 unexpected 旗即可, 不得强制改成清单内身份 (标签接受上下文一致性核查, 非白名单定位)。",
+ "usage_scope": "Usage scope (Astra T2 adjudication fixed): This baseline = identity reference for cell composition captured by this sampling material under this experimental workflow + background control; **must not be treated as a composition compliance threshold**. Sampling subjects of disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition acceptance); appearance of identities outside the annotation data list → trigger unexpected flag only, do not force change to in-list identities (label acceptance requires contextual consistency check, not whitelist positioning).",
  "evidence_grades": {
-  "A": "本地实测复算 (带文件路径+脚本)",
-  "B": "文献原文直接报告",
-  "C": "A 级源数据供者级/跨研究分布推得的经验区间",
-  "qualitative": "文献仅定性描述 → 只存定性, 不补造区间 (Astra T2)",
-  "not_estimable": "区间无法估计 —— 合法状态, 注释仍可开展 (Astra T2)"
+  "A": "Local empirical recalculation (with file paths + scripts)",
+  "B": "Direct report from original literature",
+  "C": "Empirical intervals derived from donor-level/cross-study distribution of A-grade source data",
+  "qualitative": "Literature provides only qualitative description → store qualitative only, do not fabricate intervals (Astra T2)",
+  "not_estimable": "Interval cannot be estimated — legitimate state, annotation can proceed (Astra T2)"
  },
- "distribution_method": "供者级 (研究|供者 单元); 研究层先分层展示; KB2c: 主档仅 adult 供者单元; pooled 仅对照",
+ "distribution_method": "Donor level (study|donor unit); study layer stratified display first; KB2c: primary archive contains only adult donor units; pooled used only for control",
  "donor_level_main": {
   "CB_NPCE": {
    "n_units": 55,
@@ -791,39 +791,39 @@
   }
  ],
  "fine_types": {
-  "denominator_note": "author_cell_type 类内占比 (pooled within class, 供参考)"
+  "denominator_note": "author_cell_type intra-class proportion (pooled within class, for reference)"
  },
  "states": null,
  "flags": {
   "expected_low_but_present": [
-   "Pericyte <1% (Endothelium 也仅 ~2%: 大血管为主, 毛细血管核捕获效率低)"
+   "Pericyte <1% (Endothelium also only ~2%: predominantly large vessels; low capture efficiency for capillary nuclei)"
   ],
   "unexpected": [
-   "Immune Cell ~5% (巨噬为主) 属固有免疫正常水平, 供炎症对照基线"
+   "Immune Cell ~5% (predominantly macrophages) represents normal innate immunity levels; serves as inflammatory control baseline"
   ],
   "contamination_suspect": [
-   "无需额外污染旗 (切片边界即本组织)"
+   "No additional contamination flags required (slice boundary defines this tissue)"
   ]
  },
  "caveats": [
-  "本条=睫状体解剖组分取材切片: PCE/NPCE/睫状肌三主类为组织本体; Melanocyte/Schwann Cell 比例为葡萄膜色素+神经支配层的捕获构成 —— 疾病对照注意 (Astra T2)。",
-  "Fibroblast 在本切片 = CB 成纤维 (CBFibro), 与 TM/角膜成纤维不同亚层 (author_cell_type 可辨)。",
-  "供者 59, 支撑较强; 但两研究层规模悬殊 (chen_tm_cb 主力 vs sanes uvea 分量在本切片外), 分层明细必看。",
-  "snRNA 口径 (核悬液, 内含子 reads 计入), 与 scRNA 条不可直接互比。",
-  "v1.1 (KB2c t_be336eee): 主档=adult-only (>=18y, 裁定 Q2) —— 本切片实测剔除 4 个非 adult 供者单元 (青少年段, 逐行见 excluded_nonadult_units); v1.0 混口径保留于 donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0), 两档签名分离。"
+  "This entry = anatomical component sampling slice of the ciliary body: PCE/NPCE/Ciliary Muscle three main classes constitute the tissue proper; Melanocyte/Schwann Cell proportions reflect the capture composition of the uveal pigmented + neural innervation layers — note for disease controls (Astra T2).",
+  "Fibroblast in this slice = CB fibroblasts (CBFibro), distinct sub-layers from TM/corneal fibroblasts (distinguishable by author_cell_type).",
+  "59 donors provide strong support; however, scale disparity between two study layers (chen_tm_cb dominant vs. sanes uvea component outside this slice); stratified details must be reviewed.",
+  "snRNA caliber (nuclear suspension, intronic reads included); not directly comparable with scRNA entries.",
+  "v1.1 (KB2c t_be336eee): Primary archive = adult-only (>=18y, adjudication Q2) — this slice empirically excludes 4 non-adult donor units (adolescent stage, see excluded_nonadult_units line-by-line); v1.0 mixed caliber retained in donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0); signatures separated into two tiers."
  ],
  "sources": [
   {
    "sid": "CILIARY_BODY_LOCAL",
    "kind": "dataset",
-   "label": "本地文件 /mnt/D/OcularKB/data/HRA000728_tm_cb/HRA000728_tm_cb.h5ad",
+   "label": "Local file /mnt/D/OcularKB/data/HRA000728_tm_cb/HRA000728_tm_cb.h5ad",
    "path": "/mnt/D/OcularKB/data/HRA000728_tm_cb/HRA000728_tm_cb.h5ad",
    "computation": "/mnt/D/EyeKB/scripts/baselines/build_baselines.py _build_tmcb('ciliary body','ciliary_body')"
   },
   {
    "sid": "CILIARY_BODY_HASA",
    "kind": "dataset",
-   "label": "HASA/前节段 snRNA collection (t_6f5cc731 盘点映射 OA-D004/OA-D016; 本切片=其 chen_tm_cb+sanes 集成件的 ciliary_body 分量)",
+   "label": "HASA/anterior segment snRNA collection (t_6f5cc731 inventory mapping OA-D004/OA-D016; this slice = ciliary_body component of its chen_tm_cb+sanes integration)",
    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE199013"
   }
  ],
@@ -836,12 +836,12 @@
    "developing",
    "unknown"
   ],
-  "adult_rule": "UBERON development_stage 数字化年龄 >= 18y 判 adult; 显式成年术语 (late/prime/middle/mature/human adult stage, 年代段>=3rd) 亦判 adult 并记 rule; 阈值改动须过裁定 (KB2c Q2, 2026-09-23)",
-  "developing_rule": "newborn/infant/postnatal stage 与 <18y 数字年龄/年龄段 → developing (KB2c Q2)",
-  "fetal_rule": "fetal/embryonic/gestation/Carnegie 术语 → fetal; 永不并入 adult 主档 (红线1)",
-  "unknown_rule": "无年龄列/未映射术语/organoid/年龄段跨阈值 → unknown, 必须披露行, 禁静默归 adult (红线2)",
-  "aging_note": ">=60 老年分层不在本轴 — aging 是正交独立轴, 将来单独立条目 (裁定 Q2)",
-  "source_col": "obs/development_stage (UBERON 原值逐行保留; 汇总见 stage_disclosure, 排除清单见 excluded_nonadult_units)",
+  "adult_rule": "UBERON development_stage digital age >= 18y judged adult; explicit adult terms (late/prime/middle/mature/human adult stage, decade >=3rd) also judged adult and rule recorded; threshold changes require adjudication (KB2c Q2, 2026-09-23)",
+  "developing_rule": "newborn/infant/postnatal stage and <18y digital age/age range → developing (KB2c Q2)",
+  "fetal_rule": "fetal/embryonic/gestation/Carnegie terms → fetal; never merged into adult main archive (Red Line 1)",
+  "unknown_rule": "No age column/unmapped terms/organoid/age range crossing threshold → unknown, disclosure line mandatory, silent assignment to adult prohibited (Red Line 2)",
+  "aging_note": ">=60 elderly stratification not on this axis — aging is an orthogonal independent axis, future separate entry (adjudication Q2)",
+  "source_col": "obs/development_stage (UBERON raw values preserved row-by-row; summary see stage_disclosure, exclusion list see excluded_nonadult_units)",
   "tier_ids": {
    "adult_only": "baseline_human_ciliary_body__adult_only__kb2c",
    "adult_pool": "baseline_human_ciliary_body__adult_pool__v1.0"
@@ -852,235 +852,235 @@
    "cells": 64491,
    "n_donors": 3,
    "organism_stage": "adult",
-   "rule": "数字年龄 62y vs 阈值 18y"
+   "rule": "Numeric age 62y vs threshold 18y"
   },
   "71-year-old stage": {
    "cells": 58911,
    "n_donors": 4,
    "organism_stage": "adult",
-   "rule": "数字年龄 71y vs 阈值 18y"
+   "rule": "Digital age 71y vs threshold 18y"
   },
   "69-year-old stage": {
    "cells": 52817,
    "n_donors": 3,
    "organism_stage": "adult",
-   "rule": "数字年龄 69y vs 阈值 18y"
+   "rule": "Digital age 69y vs threshold 18y"
   },
   "64-year-old stage": {
    "cells": 49788,
    "n_donors": 2,
    "organism_stage": "adult",
-   "rule": "数字年龄 64y vs 阈值 18y"
+   "rule": "Digital age 64y vs threshold 18y"
   },
   "46-year-old stage": {
    "cells": 38633,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 46y vs 阈值 18y"
+   "rule": "Numeric age 46y vs threshold 18y"
   },
   "72-year-old stage": {
    "cells": 38322,
    "n_donors": 4,
    "organism_stage": "adult",
-   "rule": "数字年龄 72y vs 阈值 18y"
+   "rule": "Digital age 72y vs threshold 18y"
   },
   "53-year-old stage": {
    "cells": 37753,
    "n_donors": 2,
    "organism_stage": "adult",
-   "rule": "数字年龄 53y vs 阈值 18y"
+   "rule": "Numeric age 53y vs threshold 18y"
   },
   "58-year-old stage": {
    "cells": 34884,
    "n_donors": 2,
    "organism_stage": "adult",
-   "rule": "数字年龄 58y vs 阈值 18y"
+   "rule": "Numeric age 58y vs threshold 18y"
   },
   "67-year-old stage": {
    "cells": 33062,
    "n_donors": 2,
    "organism_stage": "adult",
-   "rule": "数字年龄 67y vs 阈值 18y"
+   "rule": "Digital age 67y vs threshold 18y"
   },
   "16-year-old stage": {
    "cells": 32061,
    "n_donors": 2,
    "organism_stage": "developing",
-   "rule": "数字年龄 16y vs 阈值 18y"
+   "rule": "Numeric age 16y vs threshold 18y"
   },
   "70-year-old stage": {
    "cells": 30580,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 70y vs 阈值 18y"
+   "rule": "Numeric age 70y vs threshold 18y"
   },
   "77-year-old stage": {
    "cells": 26976,
    "n_donors": 2,
    "organism_stage": "adult",
-   "rule": "数字年龄 77y vs 阈值 18y"
+   "rule": "Digital age 77y vs threshold 18y"
   },
   "65-year-old stage": {
    "cells": 26593,
    "n_donors": 2,
    "organism_stage": "adult",
-   "rule": "数字年龄 65y vs 阈值 18y"
+   "rule": "Digital age 65y vs threshold 18y"
   },
   "60-year-old stage": {
    "cells": 23870,
    "n_donors": 2,
    "organism_stage": "adult",
-   "rule": "数字年龄 60y vs 阈值 18y"
+   "rule": "Numeric age 60y vs threshold 18y"
   },
   "18-year-old stage": {
    "cells": 23862,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 18y vs 阈值 18y"
+   "rule": "Numeric age 18y vs threshold 18y"
   },
   "68-year-old stage": {
    "cells": 23269,
    "n_donors": 3,
    "organism_stage": "adult",
-   "rule": "数字年龄 68y vs 阈值 18y"
+   "rule": "Digital age 68y vs threshold 18y"
   },
   "56-year-old stage": {
    "cells": 20318,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 56y vs 阈值 18y"
+   "rule": "Digital age 56y vs threshold 18y"
   },
   "17-year-old stage": {
    "cells": 17548,
    "n_donors": 1,
    "organism_stage": "developing",
-   "rule": "数字年龄 17y vs 阈值 18y"
+   "rule": "Numeric age 17y vs threshold 18y"
   },
   "81-year-old stage": {
    "cells": 16132,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 81y vs 阈值 18y"
+   "rule": "Digital age 81y vs threshold 18y"
   },
   "44-year-old stage": {
    "cells": 15736,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 44y vs 阈值 18y"
+   "rule": "Digital age 44y vs threshold 18y"
   },
   "73-year-old stage": {
    "cells": 15563,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 73y vs 阈值 18y"
+   "rule": "Digital age 73y vs threshold 18y"
   },
   "80 year-old and over stage": {
    "cells": 15231,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "'80 year-old and over' 下界>=阈值"
+   "rule": "'80 year-old and over' lower bound >= threshold"
   },
   "34-year-old stage": {
    "cells": 14892,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 34y vs 阈值 18y"
+   "rule": "Numeric age 34y vs threshold 18y"
   },
   "57-year-old stage": {
    "cells": 13965,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 57y vs 阈值 18y"
+   "rule": "Digital age 57y vs threshold 18y"
   },
   "51-year-old stage": {
    "cells": 13488,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 51y vs 阈值 18y"
+   "rule": "Digital age 51y vs threshold 18y"
   },
   "82-year-old stage": {
    "cells": 13017,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 82y vs 阈值 18y"
+   "rule": "Digital age 82y vs threshold 18y"
   },
   "85-year-old stage": {
    "cells": 12424,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 85y vs 阈值 18y"
+   "rule": "Digital age 85y vs threshold 18y"
   },
   "20-year-old stage": {
    "cells": 11952,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 20y vs 阈值 18y"
+   "rule": "Digital age 20y vs threshold 18y"
   },
   "15-year-old stage": {
    "cells": 11508,
    "n_donors": 1,
    "organism_stage": "developing",
-   "rule": "数字年龄 15y vs 阈值 18y"
+   "rule": "Numeric age 15y vs threshold 18y"
   },
   "78-year-old stage": {
    "cells": 9693,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 78y vs 阈值 18y"
+   "rule": "Numeric age 78y vs threshold 18y"
   },
   "27-year-old stage": {
    "cells": 9293,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 27y vs 阈值 18y"
+   "rule": "Numeric age 27y vs threshold 18y"
   },
   "63-year-old stage": {
    "cells": 9100,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 63y vs 阈值 18y"
+   "rule": "Numeric age 63y vs threshold 18y"
   },
   "47-year-old stage": {
    "cells": 8313,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 47y vs 阈值 18y"
+   "rule": "Numeric age 47y vs threshold 18y"
   },
   "43-year-old stage": {
    "cells": 8196,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 43y vs 阈值 18y"
+   "rule": "Digital age 43y vs threshold 18y"
   },
   "52-year-old stage": {
    "cells": 7149,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 52y vs 阈值 18y"
+   "rule": "Numeric age 52y vs threshold 18y"
   },
   "66-year-old stage": {
    "cells": 7089,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 66y vs 阈值 18y"
+   "rule": "Digital age 66y vs threshold 18y"
   },
   "21-year-old stage": {
    "cells": 6493,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 21y vs 阈值 18y"
+   "rule": "Numeric age 21y vs threshold 18y"
   },
   "50-year-old stage": {
    "cells": 6097,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 50y vs 阈值 18y"
+   "rule": "Numeric age 50y vs threshold 18y"
   },
   "30-year-old stage": {
    "cells": 4853,
    "n_donors": 1,
    "organism_stage": "adult",
-   "rule": "数字年龄 30y vs 阈值 18y"
+   "rule": "Numeric age 30y vs threshold 18y"
   }
  },
  "excluded_nonadult_units": [
@@ -1089,28 +1089,28 @@
    "cells": 19530,
    "uberon": "16-year-old stage",
    "organism_stage": "developing",
-   "rule": "数字年龄 16y vs 阈值 18y"
+   "rule": "Numeric age 16y vs threshold 18y"
   },
   {
    "donor_id": "MMD_23_21999",
    "cells": 17548,
    "uberon": "17-year-old stage",
    "organism_stage": "developing",
-   "rule": "数字年龄 17y vs 阈值 18y"
+   "rule": "Numeric age 17y vs threshold 18y"
   },
   {
    "donor_id": "MMD_23_20181",
    "cells": 12531,
    "uberon": "16-year-old stage",
    "organism_stage": "developing",
-   "rule": "数字年龄 16y vs 阈值 18y"
+   "rule": "Numeric age 16y vs threshold 18y"
   },
   {
    "donor_id": "MMD_23_21623",
    "cells": 11508,
    "uberon": "15-year-old stage",
    "organism_stage": "developing",
-   "rule": "数字年龄 15y vs 阈值 18y"
+   "rule": "Numeric age 15y vs threshold 18y"
   }
  ],
  "donor_level_adult_pool_contrast": {
@@ -1243,7 +1243,7 @@
  },
  "axis_version": "kb2c-1.1",
  "development_stage": "adult",
- "development_stage_prohibition": "KB3 禁令 (PI 红线 2026-09-23): 发育期数据不得进成人基线统计池, 反之亦然 —— 同一组织胎儿≠成人, adult/fetal 不互为参照。",
+ "development_stage_prohibition": "KB3 Prohibition (PI Red Line 2026-09-23): Developmental data must not enter adult baseline statistical pool, and vice versa — same tissue fetal ≠ adult, adult/fetal do not serve as mutual references.",
  "kb3_card": "t_5425a7ca",
  "identity_signature": {
   "baseline_human_ciliary_body__adult_only__kb2c": "sha256:cae64435669886a46bca669fe454ee0f5a63e531bcde0dfb349e40e9d18dcb31",

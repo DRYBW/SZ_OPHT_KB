@@ -3,12 +3,12 @@
  "entry_id": "baseline_human_lacrimal_gland__observed__kb8",
  "tissue": "lacrimal_gland",
  "species": "human",
- "title": "组成基线·观察档 (pilot): 人泪腺组织 GSE164403 单数据集供者级实测 (KB8 首建)",
+ "title": "Composition baseline · observation archive (pilot): human lacrimal gland tissue GSE164403 single dataset donor-level actual measurement (KB3 first creation)",
  "status": "observed_single_study_pilot",
  "organism_stage": "unknown",
- "stage_note": "KB2c 发育轴: 源论文明示成人手术材料, 但 GEO/obs 无年龄列 ⇒ 按 unknown_rule 判 unknown 并披露, 禁静默归 adult (红线2)。类器官池 (供体标签 2/3/5) 永久不入本档 (organoid→unknown+旗标且源论文限定=导管模型, KB8 红线)。",
+ "stage_note": "KB2c developmental axis: Source paper explicitly states adult surgical material, but GEO/obs lacks age column ⇒ classified as unknown per unknown_rule and disclosed; silent assignment to adult is prohibited (Red Line 2). Organoid pool (donor labels 2/3/5) permanently excluded from this record (organoid→unknown+flagged; source paper limits scope=duct model, KB8 Red Line).",
  "generated": "2026-09-25",
- "generator": "KB8 t_e7ec73ab: scripts/kb8_w1_cluster.py → kb8_w2_qc_cluster.py (QC: n_genes>=200 ∧ pct_mt<25 ∧ total_counts>=500) → kb8_w3_audit.py; 参数族=KB2 EVALSET §2 (CP10K+log1p/HVG2000 seurat/PCA50/nn15/leiden igraph r1.0), seed=20260925",
+ "generator": "KB8 t_e7ec73ab: scripts/kb8_w1_cluster.py → kb8_w2_qc_cluster.py (QC: n_genes>=200 ∧ pct_mt<25 ∧ total_counts>=500) → kb8_w3_audit.py; parameter family=KB2 EVALSET §2 (CP10K+log1p/HVG2000 seurat/PCA50/nn15/leiden igraph r1.0), seed=20260925",
  "card": "t_e7ec73ab",
  "data_binding": {
   "source_h5ad": "/mnt/D/OcularKB/data/GSE164403/GSE164403_annotated.h5ad",
@@ -19,42 +19,95 @@
   "gse": "GSE164403",
   "registry": "plans/kb8_lacrimal_20260925/REGISTRY_ENTRY_Q10_GSE164403.md"
  },
- "anchor": {"tier": "观察档=单研究 3 供体标签 (patient 3=819/1076=76% 主导, 7=30, 8=227); 供者级跨研究分布未估计"},
- "t2_fields": {
-  "取样材料": "成人泪腺手术/尸检新鲜组织 (UMC Utrecht), FACS 分选后 SORT-seq 384 孔板",
-  "疾病阶段": "无疾病标注 (健康对照材料)",
-  "治疗背景": "未记载",
-  "scRNA_vs_snRNA": "scRNA (SORT-seq)",
-  "富集步骤": "FACS (All / Epcam+ / Epcam+/Ngfr+ 分选亚池; author_sort 列)",
-  "解离方法": "论文 Methods (单细胞悬液制备), 酶原腺泡回收失败嫌疑与此相关",
-  "供者数": "组织池供体标签 3 (7 与 8 与 3; s008=7&8 混板)",
-  "计数分母": "QC 后 1,076 细胞 (原始组织池 1,536)",
-  "证据来源": "本地实测复算 (A 级)"
+ "anchor": {
+  "tier": "Observation record=single study with 3 donor labels (patient 3=819/1076=76% dominant, 7=30, 8=227); donor-level cross-study distribution not estimated"
  },
- "usage_scope": "Astra T2 裁定口径沿用: 本观察档 = GSE164403 该取样材料/流程下捕获构成的身份参考+背景对照+QC 旗; **不得当组成达标线** (单研究、d3 供体 76% 主导、384 孔板 ambient 重); 禁入一切打分。清单外身份 → unexpected 旗即可, 禁强制改写。",
- "composition_status": "本卡实测组分区占比 = 下 major_classes; 跨研究供者级区间 not_estimable (人泪腺图谱全世界仅此一个数据集——缺口如实)",
+ "t2_fields": {
+  "sampling_material": "Adult lacrimal gland surgery/cadaver fresh tissue (UMC Utrecht), SORT-seq in 384-well plates after FACS sorting",
+  "disease_stage": "No disease annotation (healthy control material)",
+  "treatment_background": "Not recorded",
+  "scRNA_vs_snRNA": "scRNA (SORT-seq)",
+  "enrichment_step": "FACS (All / Epcam+ / Epcam+/Ngfr+ sorted sub-pools; author_sort column)",
+  "dissociation_method": "Paper Methods (single-cell suspension preparation), suspected failure of acinar zymogen recovery related to this",
+  "donor_count": "Tissue pool donor label 3 (7 & 8 & 3; s008=7&8 mixed plate)",
+  "counting_denominator": "1,076 cells post-QC (original tissue pool 1,536)",
+  "evidence_source": "Local empirical recalculation (Grade A)"
+ },
+ "usage_scope": "Astra T2 adjudication criteria applied: This observation record = identity reference + background control + QC flag for the capture composition under GSE164403 sampling material/protocol; **must not be treated as composition benchmark** (single study, d3 donor 76% dominance, heavy ambient in 384-well plates); prohibited from all scoring. Off-list identities → unexpected flag only, forced rewriting prohibited.",
+ "composition_status": "This card's empirical group partition proportions = major_classes below; cross-study donor-level intervals not_estimable (human lacrimal gland atlas has only one dataset worldwide—gap honestly reported)",
  "major_classes": [
-  {"class": "Lacrimal_secretory_tearcell", "n_cells": 65, "pct": 6.04, "markers_ref": "markers_v6_lacrimal_increment::Lacrimal_secretory_tearcell", "note": "LACRT+/SCGB1D1+/CST4+; 酶原程序不可检出缺口在词条文件 data_note_acinar_zymogen_gap"},
-  {"class": "Lacrimal_duct_epithelial", "n_cells": 455, "pct": 42.29, "markers_ref": "markers_v6_lacrimal_increment::Lacrimal_duct_epithelial", "note": "PRR27+; 上皮主体; plasma 携带致多基因判据失效"},
-  {"class": "Lacrimal_myoepithelial(caution)", "n_cells": 18, "pct": 1.67, "markers_ref": "markers_v6_lacrimal_increment::Lacrimal_myoepithelial", "note": "core=[] 警示条; 组合锚 KRT14∧ACTA2∧(CNN1|MYH11|LMOD1) 仅观察用"},
-  {"class": "T cells (既有膜v1面板)", "n_cells": 106, "pct": 9.85, "markers_ref": "markers_membrane_v1", "note": "参考层"},
-  {"class": "IgA plasma cells (既有)", "n_cells": 292, "pct": 27.14, "markers_ref": "markers_membrane_v1", "note": "参考层; 占比高=泪腺黏膜免疫常态+Ambient IGH 注意"},
-  {"class": "Endothelial (既有)", "n_cells": 14, "pct": 1.30, "markers_ref": "markers_membrane_v1", "note": "参考层; 仅 14 细胞支撑弱"},
-  {"class": "Fibroblast/stroma", "n_cells": 115, "pct": 10.69, "markers_ref": "KB6b 通签注记 (间质三角互缠)", "note": "COL1A1/COL3A1/FDCSP; 不入独立新词条 (D002 三角先例)"},
-  {"class": "Surface epithelium contaminant", "n_cells": 11, "pct": 1.02, "markers_ref": "face_v6::Conj_epithelium_basal/superficial (审计实证命中)", "note": "手术毗邻结膜混入; =审计阳性对照"}
+  {
+   "class": "Lacrimal_secretory_tearcell",
+   "n_cells": 65,
+   "pct": 6.04,
+   "markers_ref": "markers_v6_lacrimal_increment::Lacrimal_secretory_tearcell",
+   "note": "LACRT+/SCGB1D1+/CST4+; undetectable acinar zymogen program gap noted in lexical file data_note_acinar_zymogen_gap"
+  },
+  {
+   "class": "Lacrimal_duct_epithelial",
+   "n_cells": 455,
+   "pct": 42.29,
+   "markers_ref": "markers_v6_lacrimal_increment::Lacrimal_duct_epithelial",
+   "note": "PRR27+; epithelial main body; plasma carriage causes multi-gene criteria failure"
+  },
+  {
+   "class": "Lacrimal_myoepithelial(caution)",
+   "n_cells": 18,
+   "pct": 1.67,
+   "markers_ref": "markers_v6_lacrimal_increment::Lacrimal_myoepithelial",
+   "note": "core=[] warning bar; combinatorial anchor KRT14∧ACTA2∧(CNN1|MYH11|LMOD1) for observation only"
+  },
+  {
+   "class": "T cells (existing membrane v1 panel)",
+   "n_cells": 106,
+   "pct": 9.85,
+   "markers_ref": "markers_membrane_v1",
+   "note": "Reference layer"
+  },
+  {
+   "class": "IgA plasma cells (existing)",
+   "n_cells": 292,
+   "pct": 27.14,
+   "markers_ref": "markers_membrane_v1",
+   "note": "Reference layer; high proportion=lacrimal mucosal immunity norm + note Ambient IGH"
+  },
+  {
+   "class": "Endothelial (existing)",
+   "n_cells": 14,
+   "pct": 1.3,
+   "markers_ref": "markers_membrane_v1",
+   "note": "Reference layer; weak support with only 14 cells"
+  },
+  {
+   "class": "Fibroblast/stroma",
+   "n_cells": 115,
+   "pct": 10.69,
+   "markers_ref": "KB6b general annotation note (interstitial triangle interwoven)",
+   "note": "COL1A1/COL3A1/FDCSP; not entered as independent new entry (D002 triangle precedent)"
+  },
+  {
+   "class": "Surface epithelium contaminant",
+   "n_cells": 11,
+   "pct": 1.02,
+   "markers_ref": "face_v6::Conj_epithelium_basal/superficial (audit empirically hit)",
+   "note": "Contamination from adjacent conjunctiva during surgery; = audit positive control"
+  }
  ],
- "backfill_path": "①睑板腺 SRP497138 (171.7GB, PI 已裁不批)/Tabula Sapiens Eye (1.4GB 不批) 维持挂起; ②类器官池扩展须单列 developing/unknown 条目; ③本档升级 filled_donor_level 需第二个独立泪腺数据集——当前世界无, 登记为永久缺口直至新材料",
+ "backfill_path": "① Meibomian gland SRP497138 (171.7GB, PI ruled not approved)/Tabula Sapiens Eye (1.4GB not approved) remain suspended; ② organoid pool expansion requires separate developing/unknown entries; ③ upgrading this record to filled_donor_level requires a second independent lacrimal gland dataset—currently none exists globally, registered as permanent gap until new material",
  "caveats": [
-  "单研究 3 供体标签, d3 主导 76% —— 占比数字只描述 GSE164403 该材料, 不得对外表述为'人泪腺组成基线'",
-  "观察档 = 本卡自建聚类口径 (author 未沉积细胞类型标签, 18 簇全文不可得), 引用必须带口径",
-  "384 孔板 ambient: LYZ/LTF/IGH 板级携带 → 分泌/浆细胞占比上偏风险已披露",
-  "腺泡酶原缺口 (PRSS1/CTRB1/PNLIP 不可检出): '泪腺腺泡'在转录层未证, 本档分泌组=LACRT+ 血清黏液池",
-  "类器官 1,395 QC 细胞永久不入本档 (源论文限定 duct 模型; KB8 红线)"
+  "Single study with 3 donor labels, d3 dominant at 76% — proportion figures describe only GSE164403 material, must not be externally stated as 'human lacrimal gland composition baseline'",
+  "Observation record = self-built clustering criteria for this card (author did not deposit cell type labels, full text of 18 clusters unavailable), citations must include criteria",
+  "384-well plate ambient: LYZ/LTF/IGH plate-level carriage → risk of upward bias in secretory/plasma cell proportions disclosed",
+  "Acinar zymogen gap (PRSS1/CTRB1/PNLIP undetectable): 'lacrimal gland acini' unproven at transcriptional level, this record's secretome=LACRT+ serum mucus pool",
+  "Organoid 1,395 QC cells permanently excluded from this record (source paper limits scope=duct model; KB8 Red Line)"
  ],
  "axis_version": "kb2c-1.1",
  "development_stage": "unknown",
- "development_stage_prohibition": "KB3 禁令沿用: 发育期/类器官数据不得进成人基线统计池, 反之亦然。",
+ "development_stage_prohibition": "KB3 prohibition applied: developmental stage/organoid data must not enter adult baseline statistical pools, and vice versa.",
  "kb3_card": "t_5425a7ca",
  "kb8_card": "t_e7ec73ab",
- "identity_signature": {"baseline_human_lacrimal_gland__observed__kb8": "sha256:73706bc7f17404dd77d5131a331076a7d5a79753e6589f40ddf70dcd0011e810", "sig_note": "身份签名=绑定 QC 聚类 h5ad 数据哈希 (KB7-WIRE 同款做法: 内容哈希与身份分离, 本观察档无独立分布件哈希)"}
+ "identity_signature": {
+  "baseline_human_lacrimal_gland__observed__kb8": "sha256:73706bc7f17404dd77d5131a331076a7d5a79753e6589f40ddf70dcd0011e810",
+  "sig_note": "Identity signature = bound to QC clustering h5ad data hash (KB7-WIRE approach: content hash separated from identity; this observation archive has no independent distribution file hash)"
+ }
 }

@@ -16,10 +16,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "参考缺类伪影：10 majorclass 词表无独立内皮类，血管簇被引擎硬分给小胶质并呈高置信假象",
-   "observable_signature": "dr-sc 簇31：引擎臂 Micro share 83.4% vs 判读臂 Endo（E-b 在册）",
+   "failure_mode": "Reference gap artifact: The 10 majorclass vocabulary lacks an independent endothelial class; vascular clusters are forcibly assigned to microglia by the engine, creating high-confidence false positives.",
+   "observable_signature": "dr-sc cluster 31: Engine arm Micro share 83.4% vs. Reading arm Endo (E-b registered).",
    "risk_level": "high",
-   "mitigation": "血管/内皮类结论必须 marker 独立判读（PECA1/CDH5/PLVAP）并对『参考缺类』显式披露；引擎输出不得单独作 Endo 证据。",
+   "mitigation": "Vascular/endothelial conclusions must rely on independent marker reading (PECA1/CDH5/PLVAP) and explicitly disclose 'reference gaps'; engine output alone cannot serve as Endo evidence.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -33,16 +33,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/drsc_reann_test_20260930/DRSC_REANN_REPORT.md §2+§4（簇31 E-b 在册）"
+    "/mnt/D/EyeKB/plans/drsc_reann_test_20260930/DRSC_REANN_REPORT.md §2 + §4 (cluster 31 E-b registered)"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__retina",
     "b1_order": 1,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "证据仅人×视网膜格内实测（HRCA 词表+本引擎组合），无跨格双证据不升"
+    "home_rationale": "Evidence is only measured within human × retina grid (HRCA vocabulary + current engine combination); no cross-grid dual evidence, so not promoted."
    }
   },
   {
@@ -58,10 +58,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "降解/低质量视杆簇被劫持为胶质命名或集体弃权（Rod 质量轴）",
-   "observable_signature": "低深度+高 MT 簇的具名在引擎与判读间系统性漂移",
+   "failure_mode": "Degraded/low-quality rod clusters are hijacked into glial naming or collectively abstained (Rod quality axis).",
+   "observable_signature": "Named assignments for low-depth + high-MT clusters systematically drift between engine and reading.",
    "risk_level": "high",
-   "mitigation": "光感受器簇先挂质量旗（MT%/应激分离分）再进命名流程；Rod 质量轴簇（低深度+高MT）的具名一律降置信并单列。",
+   "mitigation": "Attach quality flags (MT%/stress dissociation score) to photoreceptor clusters before entering the naming workflow; named assignments for Rod quality axis clusters (low depth + high MT) must have reduced confidence and be listed separately.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -75,16 +75,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/drsc_reann_test_20260930/DRSC_REANN_PREREG.md E-c+REPORT §4 豁免组；DRSC_PI_ADJUDICATION_sheet_20260930.md 簇3/11/13/14 行"
+    "/mnt/D/EyeKB/plans/drsc_reann_test_20260930/DRSC_REANN_PREREG.md E-c + REPORT §4 exemption group; DRSC_PI_ADJUDICATION_sheet_20260930.md rows for clusters 3/11/13/14"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__retina",
     "b1_order": 2,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "光感受器质量轴为视网膜特有"
+    "home_rationale": "Photoreceptor quality axis is specific to retina."
    }
   },
   {
@@ -100,10 +100,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "低深度带 ambient 陷阱：真 BC 沾杆 ambient 被误读为『杆幅低→判双极』盲区带",
-   "observable_signature": "杆主导簇出现具名 BC；不做 ambient 分解时误判证据不可分",
+   "failure_mode": "Low-depth ambient trap: True BCs contaminated by rod ambient RNA are misread as 'low rod amplitude → bipolar cell' blind spot zone.",
+   "observable_signature": "Named BCs appear in rod-dominated clusters; without ambient decomposition, misjudgment evidence is inseparable.",
    "risk_level": "medium",
-   "mitigation": "引用『某带被误判』前必须同做 ambient 占比分解（decontX/cellbender 级），不得拿沾 ambient 的真 BC 当误判证据；杆主导簇却判 BC 时按软提示复核。",
+   "mitigation": "Before citing 'a band was misjudged', ambient proportion decomposition (decontX/cellbender level) must be performed simultaneously; do not use true BCs contaminated by ambient RNA as evidence of misjudgment; when rod-dominated clusters are judged as BCs, re-review as soft hints.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -117,16 +117,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/OcularKB/models/V2PROD_ROD_BC_BLINDSPOT_20260925.md（INDEX 09-24 盲区卡结案条）"
+    "/mnt/D/OcularKB/models/V2PROD_ROD_BC_BLINDSPOT_20260925.md (INDEX 09-24 blind spot card closure entry)"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__retina",
     "b1_order": 5,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "现象限视网膜光感受器主导材料；引用自家盲区卡在册证据"
+    "home_rationale": "Phenomenon limited to retina photoreceptor-dominated materials; cite registered evidence from internal blind spot cards."
    }
   },
   {
@@ -142,10 +142,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "本体系训练池 RPE 面板仅 863 细胞，10 类引擎/小面板词条不可产出 RPE 结论",
-   "observable_signature": "RPE 类 recall 塌陷/高置信错分（外部纯化数据对照下）",
+   "failure_mode": "The training pool of this system has only 863 cells for the RPE panel; 10-class engine/small panel entries cannot produce RPE conclusions.",
+   "observable_signature": "RPE class recall collapse/high-confidence misclassification (compared against external purified data).",
    "risk_level": "high",
-   "mitigation": "RPE 结论不得出自 10 类引擎/小面板词条；需外部纯化 RPE 数据（GSE189770 型）或独立 RPE 面板；引用旧结果注意 SIGNOFF 引用注意④。",
+   "mitigation": "RPE conclusions must not originate from 10-class engine/small panel entries; requires external purified RPE data (GSE189770 type) or an independent RPE panel; note SIGNOFF citation caution ④ when referencing old results.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -165,12 +165,12 @@
    "provenance": {
     "origin_cell": "human__retina",
     "b1_order": 6,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "系统适用域声明（answer 无关）；证据锚 D001 池规模=格内事实"
+    "home_rationale": "System applicability domain statement (answer-independent); evidence anchor D001 pool size = fact within grid."
    },
-   "note": "升外部数据或独立面板前对本体系 RPE 具名一律人工复核"
+   "note": "Manual re-review required for all RPE named assignments in this system until external data or independent panels are promoted."
   },
   {
    "claim_id": "KC-B1-008",
@@ -191,10 +191,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "区域混合假旗：中央凹 vs 周边取材差异被当作组成异常",
-   "observable_signature": "同组织不同区域样本的组成占比呈双峰",
+   "failure_mode": "Regional mixing false flag: fovea vs peripheral sampling differences misinterpreted as composition anomalies",
+   "observable_signature": "Composition proportions of samples from different regions within the same tissue exhibit bimodality",
    "risk_level": "medium",
-   "mitigation": "组成对照先对齐区域（macula/fovea/peripheral 列，无区域元数据=不可对照只可描述）；foveola 级参考缺口登记不硬凑。",
+   "mitigation": "Composition controls must first align by region (macula/fovea/peripheral columns; absence of region metadata = no control possible, description only); register gaps in foveola-level references without forcing alignment.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -208,18 +208,18 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/comp_prior_v1_20260929/V1_VERDICT.md 残余维度3"
+    "/mnt/D/EyeKB/plans/comp_prior_v1_20260929/V1_VERDICT.md residual dimension 3"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__retina",
     "b1_order": 8,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "fovea/peripheral 为人视网膜解剖特有；region 正交轴已随 C8 批复立轴（v1 §3.1），本条补 region_scope 注记——缓解『对照先对齐区域』语法上可执行"
+    "home_rationale": "fovea/peripheral are specific to human retinal anatomy; the orthogonal region axis was established with C8 approval (v1 §3.1),This entry adds a region_scope annotation to mitigate the syntactic executability of 'align control regions first'."
    },
-   "note": "region_scope 四值语义见 v1 §3.1；not_recorded 样本按混面报告，禁当 fovea/peripheral 单面套用"
+   "note": "See v1 §3.1 for the four-value semantics of region_scope; not_recorded samples are reported as mixed surfaces, prohibited from being applied as single-surface fovea/peripheral assumptions."
   },
   {
    "claim_id": "KC-B1-011",
@@ -234,10 +234,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "解离/储存偏倚有系统评估在案；稀有类回收依赖核悬液——读作生物学差异前须先扣方法学混杂",
-   "observable_signature": "scRNA/snRNA 稀有类回收率差在文献两系对比中可复现",
+   "failure_mode": "Systematic evaluation of dissociation/storage bias is on record; rare class recovery depends on nuclear suspensions—methodological confounders must be deducted before interpreting biological differences.",
+   "observable_signature": "Differences in rare class recovery rates between scRNA/snRNA are reproducible in literature comparisons of both systems.",
    "risk_level": "low",
-   "mitigation": "解离方案差异按方法学混杂披露，禁读作生物学差异。",
+   "mitigation": "Dissociation protocol differences are disclosed as methodological confounders, prohibited from interpretation as biological differences.",
    "evidence_source_type": "peer_reviewed_literature",
    "source_check": "locator_verified",
    "home": {
@@ -257,12 +257,12 @@
    "provenance": {
     "origin_cell": "human__retina",
     "b1_order": 11,
-    "legacy_grade": "B文献PMID",
+    "legacy_grade": "Tier B bibliographic record PMID",
     "legacy_code_in_legend": "PIT-E2",
     "report_confidence": "high",
-    "home_rationale": "B 档锚条：为本格 #3/#7 的题录证据，scope 随本格"
+    "home_rationale": "B-tier anchor entries: bibliographic evidence for #3/#7 in this cell, scope follows this cell."
    },
-   "note": "peer-reviewed 锚；不自动产生 hard_gate"
+   "note": "Peer-reviewed anchors; do not automatically generate hard_gate."
   },
   {
    "claim_id": "KC-B1-012",
@@ -277,10 +277,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "引用人视网膜组成区间用点值而非 per_study_spread 会夸大确定性",
-   "observable_signature": "跨研究组成点值互引时区间信息丢失",
+   "failure_mode": "Using point values instead of per_study_spread when citing human retinal composition intervals exaggerates certainty.",
+   "observable_signature": "Interval information is lost when cross-referencing composition point values across studies.",
    "risk_level": "low",
-   "mitigation": "引用人视网膜组成区间时带 per_study_spread 而非点值。",
+   "mitigation": "Cite human retinal composition intervals with per_study_spread rather than point values.",
    "evidence_source_type": "peer_reviewed_literature",
    "source_check": "locator_verified",
    "home": {
@@ -294,16 +294,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "PMID:41578023（HRCA, Nat Genet 2026）；PMID:31653841（Nat Commun 2019）；PMID:31436334（EMBO J 2019）；PMID:32555229（fovea/peripheral, Sci Rep 2020）；区间数据指针=/mnt/D/EyeKB/kb/priors/composition/human_retina.json"
+    "PMID:41578023 (HRCA, Nat Genet 2026); PMID:31653841 (Nat Commun 2019); PMID:31436334 (EMBO J 2019); PMID:32555229 (fovea/peripheral, Sci Rep 2020); interval data pointer=/mnt/D/EyeKB/kb/priors/composition/human_retina.json"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__retina",
     "b1_order": 12,
-    "legacy_grade": "B文献PMID",
+    "legacy_grade": "Tier B bibliographic record PMID",
     "legacy_code_in_legend": "PIT-E2",
     "report_confidence": "high",
-    "home_rationale": "B 档题录池锚本格；规则限人视网膜组成引用"
+    "home_rationale": "B-tier bibliographic pool anchors this cell; rules limit citations to human retinal composition."
    }
   },
   {
@@ -321,10 +321,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "线上参考映射工具（Azimuth 类）版本漂移破坏可复现性",
-   "observable_signature": "同数据不同工具版本映射结果不一致",
+   "failure_mode": "Version drift in online reference mapping tools (Azimuth-like) breaks reproducibility.",
+   "observable_signature": "Mapping results for the same data are inconsistent across different tool versions.",
    "risk_level": "low",
-   "mitigation": "社区经验仅供操作参考，禁作 marker/证据链依据；Azimuth 类线上参考映射工具须锁版本+预装备份路径。",
+   "mitigation": "Community experience is for operational reference only, prohibited as basis for markers/evidence chains; Azimuth-like online reference mapping tools must lock versions + pre-provision backup paths.",
    "evidence_source_type": "community_lead",
    "source_check": "unchecked",
    "home": {
@@ -344,12 +344,12 @@
    "provenance": {
     "origin_cell": "human__retina",
     "b1_order": 13,
-    "legacy_grade": "C社区经验",
+    "legacy_grade": "Tier C community experience",
     "legacy_code_in_legend": "PIT-E3",
     "report_confidence": "high",
-    "home_rationale": "社区操作提示；工具维护为方法学（限 scRNA 映射路径）"
+    "home_rationale": "Community operational tips; tool maintenance is methodological (limited to scRNA mapping paths)."
    },
-   "note": "community_lead：仅核查要求，不作证据依据"
+   "note": "community_lead: verification requirements only, not evidence basis."
   }
  ],
  "pointers": [

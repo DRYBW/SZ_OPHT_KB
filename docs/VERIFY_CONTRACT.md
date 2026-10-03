@@ -88,7 +88,13 @@ Anchor provenance: 2026-10-01, three runs consistent (production fp32 default li
 slim library ×1; committed after two-level identity — byte-for-byte and normalized). The S0 gate's
 required asset `pipeline/assets/s0/species_assets.pkl` is now distributed with the repo (added after
 an external machine found it missing; rebuildable from public NCBI orthologs/gene_info via
-`assets/s0/build_assets.py`).
+`assets/s0/build_assets.py`). **v2 re-anchor 2026-10-03**: the repository's public language moved to
+English (report templates and knowledge-base content now emit English), changing the
+`decisions_template.csv` and report bytes by design; the anchor was regenerated under the same
+discipline — three runs on the pinned interpreter (production fp32 ×2, Release slim ×1), all three
+artifacts byte-identical across runs, written to `tests/G4_EXPECTED.json` programmatically. The
+previous (v1, 2026-10-01) anchor set is kept verbatim in `tests/G4_EXPECTED_PRE-ENGMIG.json` and in
+git history, and is retired as a criterion.
 
 History: v1 (2026-10-01 morning) used maintainer-side three-file sha anchors; the same-day
 external-usability self-check exposed two real defects — ① the clone could not run without the S0

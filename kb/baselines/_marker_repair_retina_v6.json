@@ -1,65 +1,132 @@
 {
-  "schema": "eyekb-marker-repair/1.0",
-  "version": "v1-marker-repair-retina-20260925",
-  "created": "2026-09-25",
-  "card": "t_38b99a15",
-  "upstream_cards": ["t_2e5e103a (KB7 v6 发布)", "t_6f5cc731/t_be336eee (KB1v2/KB2c 基线本体)"],
-  "target_entry_id": "baseline_human_retina",
-  "target_file": "kb/baselines/retina.json",
-  "target_file_sha256_at_wiring": "c90786e0d1ad1dd48a6bc8251af39a607dd822292fe7958bfae5bd286d5f499b",
-  "disposition_source": "kb/markers/markers_v6_retina_repair.json#baseline_retina4_disposition (v6.0-retina-repair-20260925, t_2e5e103a 冻结发布; 唯一权威修复语义源)",
-  "landing_evidence": "plans/kb7_v6_20260925/out/KB7_DISPOSITION_17.tsv 行 baseline::retina::Microglia / Müller glia / Astrocyte / RPE (旧 n=10/6/4/6 与本文件 old_markers 逐字吻合, states 层行)",
-  "method_note": "append 式覆盖层: 原基线 JSON 本体零改动 (KB7WIRE out/SHA_PRE/POST 台账自证); eyekb_core._apply_marker_repairs 在内存态应用, 行匹配=cell_type+markers 逐字全等, 失败即跳过登记 (fail-closed)。只修 marker 描述层——组成比例/donor 分布/身份签名/发育轴全部仍为原文件值, usage_redline (对照与 QC 旗专用, 禁入打分) 不变。",
-  "row_fixes": [
-    {
-      "target_list": "states",
-      "cell_type": "Microglia",
-      "state": "homeostatic",
-      "disposition_action": "修复语义随 membrane 修条 (同基因集处置)",
-      "old_markers": ["P2RY12", "TMEM119", "CX3CR1", "IRF8", "C1QA/B", "TYROBP", "AIF1", "SALL1", "HEXB"],
-      "new_markers": ["TMEM119", "CX3CR1", "IRF8", "C1QA/B", "TYROBP", "AIF1"],
-      "removed": ["P2RY12→状态锚 (v6 microglia_repair.state_anchors: D001 平铺判红 lfc 0.066 vs Müller 本底, 降级不作全邻类判据)", "SALL1→状态锚 (D001 对 Cone 反向 lfc -2.67, 平铺降级)", "HEXB (地板审计删除)"],
-      "added_ref": "microglia_repair.core (v6 文件A, 16 基因修后面板+SIGLEC11 黄旗; 经 query_marker library=retina_v6/membrane 可达)",
-      "note": "carried=处置表 7 基因 (行内记法 C1QA/B 保留); P2RY12/SALL1 从 core 清单移出但保留其状态锚身份 (本行即 homeostatic 状态描述, 锚语义见 added_ref)"
-    },
-    {
-      "target_list": "states",
-      "cell_type": "Müller glia",
-      "state": "homeostatic",
-      "disposition_action": "R1删除+重写",
-      "old_markers": ["RLBP1", "GLUL", "SOX9", "S100B", "VIM", "AQP4(低)"],
-      "new_markers": ["RLBP1", "PRSS56"],
-      "removed": ["GLUL", "SOX9", "S100B", "VIM", "AQP4(低)"],
-      "added_ref": "markers.MG (v6 文件A core: RLBP1, PRSS56)",
-      "note": "MG↔Astro 双向盲区修复 (§1a); RLBP1 黄带注记随 v6 面板携带; PRSS56=R3 文献门过新基因"
-    },
-    {
-      "target_list": "states",
-      "cell_type": "Astrocyte",
-      "state": "homeostatic (血管周围)",
-      "disposition_action": "R1删除+重写",
-      "old_markers": ["GFAP", "AQP4", "SLC1A3", "S100B"],
-      "new_markers": ["GFAP", "S100B", "TNC"],
-      "removed": ["AQP4", "SLC1A3"],
-      "added_ref": "markers.Astro (v6 文件A core: GFAP, S100B, TNC)",
-      "note": "TNC 入册带炎症语境注记 (KB7 §1a); GFAP/S100B 携带"
-    },
-    {
-      "target_list": "states",
-      "cell_type": "RPE",
-      "state": "homeostatic",
-      "disposition_action": "R1删除",
-      "old_markers": ["BEST1", "RPE65", "LRAT", "RDH5", "MITF", "TTR"],
-      "new_markers": ["BEST1", "RPE65", "LRAT", "RDH5", "TTR"],
-      "removed": ["MITF"],
-      "added_ref": "markers.RPE (v6 文件A core: BEST1, RPE65, TTR, LRAT, RDH5, MFRP, HMGCS2, CLIC6, OR51E2)",
-      "note": "处置=R1删除 (无重写旗), new_markers=carried 5; v6 新增 4 基因 (MFRP/HMGCS2/CLIC6/OR51E2) 经 added_ref 面板可达, 不回灌基线状态行"
-    }
-  ],
-  "residual_observations": [
-    "major_classes 表的 MG/Astrocyte/RPE/HC/AC/BC 行仍含 KB6 判红基因 (与 priors v1 同源复制)——baseline4 处置范围仅 4 条 states 行 (old_n 6/4/6/10 逐字吻合), 未处置行登记不臆改, 交评测系列/PI 裁定是否扩面。",
-    "kb/priors/composition/human_retina.json (v1 存档条, schema eyekb-prior/1.0) 含同样的旧 markers 清单——查询时 baseline 条优先; 存档条按纪律不动。",
-    "kb/baselines/retina.md 人读版未改动 (原文不动纪律) —— JSON 返回体的 marker_repair/marker_revision 台账为权威修正记录。",
-    "identity_signature 两档 sha 指向底层分布, 本次修正不涉及分布数值, 签名语义不受影响。"
-  ]
+ "schema": "eyekb-marker-repair/1.0",
+ "version": "v1-marker-repair-retina-20260925",
+ "created": "2026-09-25",
+ "card": "t_38b99a15",
+ "upstream_cards": [
+  "t_2e5e103a (KB7 v6 release)",
+  "t_6f5cc731/t_be336eee (KB1v2/KB2c baseline ontology)"
+ ],
+ "target_entry_id": "baseline_human_retina",
+ "target_file": "kb/baselines/retina.json",
+ "target_file_sha256_at_wiring": "c90786e0d1ad1dd48a6bc8251af39a607dd822292fe7958bfae5bd286d5f499b",
+ "disposition_source": "kb/markers/markers_v6_retina_repair.json#baseline_retina4_disposition (v6.0-retina-repair-20260925, t_2e5e103a frozen release; sole authoritative repair semantic source)",
+ "landing_evidence": "plans/kb7_v6_20260925/out/KB7_DISPOSITION_17.tsv rows baseline::retina::Microglia / Müller glia / Astrocyte / RPE (old n=10/6/4/6 verbatim match with old_markers in this file, states layer rows)",
+ "method_note": "Append-style overlay: original baseline JSON ontology unchanged (KB7WIRE out/SHA_PRE/POST ledger self-evident); eyekb_core._apply_marker_repairs applied in-memory, row matching = cell_type+markers verbatim equality, failure triggers skip registration (fail-closed). Only marker description layer repaired—composition ratios/donor distribution/identity signatures/developmental axes remain original file values, usage_redline (exclusive for comparison and QC flags, prohibited in scoring) unchanged.",
+ "row_fixes": [
+  {
+   "target_list": "states",
+   "cell_type": "Microglia",
+   "state": "homeostatic",
+   "disposition_action": "Repair semantics accompany membrane correction items (same gene set disposition)",
+   "old_markers": [
+    "P2RY12",
+    "TMEM119",
+    "CX3CR1",
+    "IRF8",
+    "C1QA/B",
+    "TYROBP",
+    "AIF1",
+    "SALL1",
+    "HEXB"
+   ],
+   "new_markers": [
+    "TMEM119",
+    "CX3CR1",
+    "IRF8",
+    "C1QA/B",
+    "TYROBP",
+    "AIF1"
+   ],
+   "removed": [
+    "P2RY12→state anchor (v6 microglia_repair.state_anchors: D001 flat reading red flag lfc 0.066 vs Müller background, downgraded not used as full neighbor-class criterion)",
+    "SALL1→state anchor (D001 reverse lfc -2.67 against Cone, flat downgrade)",
+    "HEXB (floor audit deletion)"
+   ],
+   "added_ref": "microglia_repair.core (v6 File A, 16-gene post-repair panel + SIGLEC11 yellow flag; accessible via query_marker library=retina_v6/membrane)",
+   "note": "carried=disposition table 7 genes (inline notation C1QA/B retained); P2RY12/SALL1 moved from core list but retain state anchor identity (this row is homeostatic state description, anchor semantics see added_ref)"
+  },
+  {
+   "target_list": "states",
+   "cell_type": "Müller glia",
+   "state": "homeostatic",
+   "disposition_action": "R1 delete + rewrite",
+   "old_markers": [
+    "RLBP1",
+    "GLUL",
+    "SOX9",
+    "S100B",
+    "VIM",
+    "AQP4(low)"
+   ],
+   "new_markers": [
+    "RLBP1",
+    "PRSS56"
+   ],
+   "removed": [
+    "GLUL",
+    "SOX9",
+    "S100B",
+    "VIM",
+    "AQP4(low)"
+   ],
+   "added_ref": "markers.MG (v6 File A core: RLBP1, PRSS56)",
+   "note": "MG↔Astro bidirectional blind spot repair (§1a); RLBP1 yellow band annotation carried with v6 panel; PRSS56=R3 literature gate passed new gene"
+  },
+  {
+   "target_list": "states",
+   "cell_type": "Astrocyte",
+   "state": "homeostatic (perivascular)",
+   "disposition_action": "R1 delete + rewrite",
+   "old_markers": [
+    "GFAP",
+    "AQP4",
+    "SLC1A3",
+    "S100B"
+   ],
+   "new_markers": [
+    "GFAP",
+    "S100B",
+    "TNC"
+   ],
+   "removed": [
+    "AQP4",
+    "SLC1A3"
+   ],
+   "added_ref": "markers.Astro (v6 File A core: GFAP, S100B, TNC)",
+   "note": "TNC entry with inflammatory context annotation (KB7 §1a); GFAP/S100B carried"
+  },
+  {
+   "target_list": "states",
+   "cell_type": "RPE",
+   "state": "homeostatic",
+   "disposition_action": "R1 delete",
+   "old_markers": [
+    "BEST1",
+    "RPE65",
+    "LRAT",
+    "RDH5",
+    "MITF",
+    "TTR"
+   ],
+   "new_markers": [
+    "BEST1",
+    "RPE65",
+    "LRAT",
+    "RDH5",
+    "TTR"
+   ],
+   "removed": [
+    "MITF"
+   ],
+   "added_ref": "markers.RPE (v6 File A core: BEST1, RPE65, TTR, LRAT, RDH5, MFRP, HMGCS2, CLIC6, OR51E2)",
+   "note": "Disposition=R1 delete (no rewrite flag), new_markers=carried 5; v6 new 4 genes (MFRP/HMGCS2/CLIC6/OR51E2) accessible via added_ref panel, not backfilled to baseline state rows"
+  }
+ ],
+ "residual_observations": [
+  "major_classes table MG/Astrocyte/RPE/HC/AC/BC rows still contain KB6 red-flagged genes (homologous copy from priors v1)—baseline4 disposition scope limited to 4 states rows (old_n 6/4/6/10 verbatim match), unprocessed rows registered without speculative modification, referred to evaluation series/PI adjudication for scope expansion.",
+  "kb/priors/composition/human_retina.json (v1 archived record, schema eyekb-prior/1.0) contains same old markers list—baseline record takes priority at query time; archived record remains untouched per discipline.",
+  "kb/baselines/retina.md human-readable version unchanged (original text immutability discipline) — the marker_repair/marker_revision ledger in the JSON return body is the authoritative correction record.",
+  "The two-tier sha of identity_signature points to underlying distributions; this revision does not involve distribution values, so signature semantics remain unaffected."
+ ]
 }

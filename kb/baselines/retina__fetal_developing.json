@@ -3,13 +3,13 @@
  "entry_id": "baseline_human_retina__fetal_developing__kb3",
  "tissue": "retina",
  "species": "human",
- "title": "组成参考 (发育期): 人胎视网膜 fetal_developing (作者/portal 标签聚合, KB3 独立条)",
+ "title": "Composition reference (developmental stage): human fetal retina fetal_developing (author/portal label aggregation, KB3 independent entry)",
  "status": "development_annotated_aggregate",
  "generated": "2026-09-24",
- "generator": "kb3_build_dev_entries.py (KB3 t_5425a7ca) ← kb3_fetal_agg.py 实测素材",
+ "generator": "kb3_build_dev_entries.py (KB3 t_5425a7ca) ← kb3_fetal_agg.py measured materials",
  "card": "t_5425a7ca",
  "development_stage": "fetal_developing",
- "development_stage_prohibition": "KB3 禁令 (PI 红线 2026-09-23): 发育期数据不得进成人基线统计池, 反之亦然 —— 同一组织胎儿≠成人, adult/fetal 不互为参照。",
+ "development_stage_prohibition": "KB3 Prohibition (PI Red Line 2026-09-23): Developmental data must not enter adult baseline statistical pool, and vice versa — same tissue fetal ≠ adult, adult/fetal do not serve as mutual references.",
  "stage_axis": {
   "field": "development_stage",
   "levels": [
@@ -19,12 +19,12 @@
    "mixed_not_separable",
    "unknown"
   ],
-  "note": "KB3 枚举 (任务书 W1)。本条=发育期条, 与 adult 主档 (retina.json, organism_stage=adult) 身份永久分离; 引用本条数字禁止回填任何 adult 条, 反之亦然。"
+  "note": "KB3 enumeration (task specification W1). This entry = developmental stage entry, permanently separated from the adult main archive (retina.json, organism_stage=adult); citing numbers from this entry prohibits backfilling any adult entries, and vice versa."
  },
- "nature": "发育期**组成参考**条目: 数字=数据集作者/CELLxGENE portal 已发布细胞标签的**直接计数聚合**, 非现役成人引擎推断 (引擎对 fetal 必须弃权, E4/E5 OOD_严格 冻结件); 供者级 median/IQR 口径未建 (fetal 参考管线任务未启动, KB2c 裁定 Q5), 本条为标签分布级参考。",
- "usage_scope": "胎/发育期视网膜材料的身份参考 + OOD 行为对照锚 (E5 同源数据); 不得当组成达标线; 不得与 adult 主档互为参照 (PI 红线); 禁入一切打分 (Astra T2 全域继承)。",
+ "nature": "Developmental stage **composition reference** entry: numbers = **direct count aggregation** of cell labels published by dataset authors/CELLxGENE portal, not inference by the current adult engine (engine must abstain for fetal, E4/E5 OOD_strict frozen component); donor-level median/IQR metric not established (fetal reference pipeline task not started, KB2c adjudication Q5), this entry serves as a label-distribution-level reference.",
+ "usage_scope": "Identity reference for fetal/developmental retinal material + OOD behavior control anchor (E5 homologous data); must not be used as a composition benchmark; must not serve as mutual reference with the adult main archive (PI red line); prohibited from entering any scoring (Astra T2 global inheritance).",
  "evidence_grades": {
-  "A": "portal/作者发布标签的直接计数 (文件路径+聚合脚本可溯源)"
+  "A": "Direct counts of portal/author-published labels (file path + aggregation script traceable)"
  },
  "anchors": [
   {
@@ -34,14 +34,14 @@
    "file": "/mnt/D/OcularKB/data/GSE268630/gse268630_cellxgene.h5ad",
    "cells": 226506,
    "donors": 14,
-   "stage_range": "11w2d–23w4d post-fertilization (portal development_stage 14 档, 全档列表见 plans/kb3_evidence/fetal_agg_20260924.json)",
-   "tissue_note": "macula lutea 119,111 + peripheral 100,532 + retina(未标部位) 6,863",
-   "provenance": "CELLxGENE portal 注释 (author_cell_type/majorclass 列)"
+   "stage_range": "11w2d–23w4d post-fertilization (portal development_stage 14 tiers, full tier list see plans/kb3_evidence/fetal_agg_20260924.json)",
+   "tissue_note": "macula lutea 119,111 + peripheral 100,532 + retina(unlabeled site) 6,863",
+   "provenance": "CELLxGENE portal annotation (author_cell_type/majorclass columns)"
   },
   {
    "acc": "GSE138002",
    "role": "secondary_author_labels",
-   "tier": "fetal+postnatal 混面已拆",
+   "tier": "Fetal+postnatal mixed surface split",
    "file": "/mnt/D/OcularKB/data/GSE138002/GSE138002_Final_barcodes.csv.gz",
    "cells_final_total": 118555,
    "layer_split": {
@@ -71,18 +71,18 @@
     "Hgw27",
     "Hgw9"
    ],
-   "stage_range_note": "任务书写 GW9-19; 实测 portal 终版含 Hgw9–Hgw27 + Hpnd8 + Adult + 类器官 Days —— 混内容按样本面前缀硬拆, 非 fetal 面不入本条主体",
-   "provenance": "作者发布标签列 umap2_CellType (GEO suppl Final_barcodes)"
+   "stage_range_note": "Task specification wrote GW9-19; measured portal final version contains Hgw9–Hgw27 + Hpnd8 + Adult + Organoid Days — mixed content hard-split by sample surface prefix, non-fetal surfaces excluded from this entry's main body",
+   "provenance": "Author-published label column umap2_CellType (GEO suppl Final_barcodes)"
   },
   {
    "acc": "GSE234963",
    "role": "data_card_only",
    "tier": "fetal_RPC",
-   "cells": "176,849 (24 h5ad, obs 无标签列 — 实测 iloc 全空)",
+   "cells": "176,849 (24 h5ad, obs lacks label column — measured iloc all empty)",
    "registry": "OA-D009 Human fetal retinal progenitor, ~7.5-21 PCW, 24 samples/13 time points (SRA PRJNA983820)",
    "files": "/mnt/D/OcularKB/data/backlog_h5ad/GSE234963_*.h5ad + /mnt/D/OcularKB/data/GSE234963/GSE234963_RAW.tar",
    "composition": null,
-   "note": "obs 无标签列 (实测 24×h5ad obs 全空) + GEO 无独立标签文件 (registry 复核一致) → 只立数据卡, 组成待 fetal 参考管线/作者标签获取后回填; 无据不建 (KB3 纪律3)。"
+   "note": "obs lacks label column (measured 24×h5ad obs all empty) + GEO lacks independent label file (registry re-review consistent) → establish data card only, composition pending backfill after fetal reference pipeline/author label acquisition; no evidence, no construction (KB3 discipline 3)."
   }
  ],
  "portal_majorclass_reference": {
@@ -110,7 +110,7 @@
    "Cone": 9324,
    "MG": 6553
   },
-  "vocabulary_note": "PRPC=photoreceptor progenitor, NRPC=neural retina progenitor —— 发育专用类, **无成人 10 类对应物**, 禁映射进 adult 词表 (本体隔离)。"
+  "vocabulary_note": "PRPC=photoreceptor progenitor, NRPC=neural retina progenitor — development-specific classes, **no corresponding adult 10-class equivalents**, prohibited from mapping into adult vocabulary (ontology isolation)."
  },
  "author_labels_fetal_layer(GSE138002)": {
   "cells": 88013,
@@ -146,7 +146,7 @@
    "AC/HC_Precurs": 1.97,
    "Muller Glia": 0.39
   },
-  "vocabulary_note": "RPCs/Neurogenic Cells/BC.Photo_Precurs/AC.HC_Precurs 等前体词表同上 —— 禁成人化翻译。"
+  "vocabulary_note": "Precursor vocabularies such as RPCs/Neurogenic Cells/BC.Photo_Precurs/AC.HC_Precurs same as above — prohibited from adultized translation."
  },
  "postnatal_neonatal_layer(GSE138002)": {
   "cells": 7382,
@@ -164,12 +164,12 @@
    "Cones": 0.27
   },
   "development_stage": "postnatal_neonatal",
-  "note": "单列分层: 新生≠胎≠成人 (KB3 枚举第三值在此有据); 与胎层不互并。"
+  "note": "Separate stratification: neonatal≠fetal≠adult (KB3 enumeration third value justified here); do not merge with fetal layer."
  },
  "excluded_layers": {
   "adult_Adult": {
    "cells": 11618,
-   "disposition": "禁并入本发育条 (adult 对照材料归 adult 侧口径, 但 11.6K 细胞 非 D001 体系 — 不单建条目, 登记隔离)"
+   "disposition": "Prohibited from merging into this developmental entry (adult control materials belong to adult-side metrics, but 11.6K cells are not D001 system — do not create separate entry, register isolation)"
   },
   "organoid_Day": {
    "cells": 11542,
@@ -179,22 +179,22 @@
     "42_Day",
     "59_Day"
    ],
-   "disposition": "organoid → unknown+旗标 (KB2c 裁定 Q1: 类器官≠胎儿组织≠成人); 只列不并入任何发育/成人条"
+   "disposition": "organoid → unknown+flag (KB2c adjudication Q1: organoids≠fetal tissue≠adult); list only, do not merge into any developmental/adult entry"
   },
   "other": {
    "cells": 0,
-   "disposition": "非发育命名样本面 → 隔离"
+   "disposition": "Non-developmental naming sample surfaces → isolated"
   }
  },
- "cross_source_note": "两锚点词表不同 (portal majorclass 9 类 vs 作者 12+ 类) —— 本条并列展示, 不合成单一分布 (Astra T6 不合成口径的发育轴继承)。",
+ "cross_source_note": "Two anchor vocabularies differ (portal majorclass 9 classes vs author 12+ classes) — this entry displays them side-by-side, does not synthesize a single distribution (Astra T6 non-synthesized metric developmental axis inheritance).",
  "flags": {
-  "engine_applicability": "现役判读引擎=成人域, 对本条材料必须弃权; 本条数字不得被用作引擎对 fetal 输出'对错'的评分基准 (E5 仅行为描述)。",
-  "not_donor_level": "供者级区间口径未建 (fetal 管线另批), 引用时须带本旗。"
+  "engine_applicability": "Current reading engine = adult domain, must abstain for materials in this entry; numbers in this entry must not be used as scoring benchmarks for engine output correctness on fetal (E5 behavior description only).",
+  "not_donor_level": "Donor-level interval metric not established (fetal pipeline separate batch), citation requires this flag."
  },
  "caveats": [
-  "标签分布=发表注释的转录组面; GSE268630 同时含 multiome ATAC 面 GSM 矩阵 (未并入本条)。",
-  "GSE138002 'Final' 为作者清洗后集合 (118,555/全 138,672), All_barcodes 面无标签列, 聚合以 Final 为准。",
-  "本条=发育期**独立文件**; KB2c 概念条 fetal_development_transitions 仍是入口占位, 二者并存: 概念条答'有哪些候选', 本条答'胎视网膜标签分布实测是什么'。"
+  "Label distribution = transcriptomic surface of published annotations; GSE268630 also contains multiome ATAC surface GSM matrices (not merged into this entry).",
+  "GSE138002 'Final' is the author-cleaned set (118,555/out of total 138,672), All_barcodes surface lacks label column, aggregation based on Final.",
+  "This entry = developmental stage **independent file**; KB2c conceptual entry fetal_development_transitions remains an entry placeholder, both coexist: conceptual entry answers 'what candidates exist', this entry answers 'what is the measured fetal retina label distribution'."
  ],
  "sources": [
   {
@@ -218,7 +218,7 @@
   {
    "sid": "S4",
    "kind": "eval_anchor",
-   "note": "E5=Q8_GSE268630 (评估侧同数据, 行为隔离在先, 本条为其 KB 侧配套)"
+   "note": "E5=Q8_GSE268630 (evaluation side same data, behavioral isolation first, this entry is its KB-side companion)"
   }
  ],
  "identity_signature": {

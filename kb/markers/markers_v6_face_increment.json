@@ -3,7 +3,7 @@
  "created": "2026-09-25",
  "card": "t_2e5e103a",
  "prereg_sha": "621b1e5bdf7a881a5e6d649a505e9b708f6753b049662b5ac208d703245f6989",
- "scope": "KB7 B1 眼表词条增量 (D002 可支撑范围, 零下载) + KB6b 间质 4 红条 repair + STROMAL_WARNING 数据侧落地 (granularity_note); 不覆盖 membrane v1 冻结面",
+ "scope": "KB7 B1 ocular surface entry increment (within D002 support range, zero download) + KB6b stromal 4 red-bar repair + STROMAL_WARNING data-side implementation (granularity_note); does not overwrite membrane v1 frozen surface",
  "stromal_repair": {
   "Keratocytes": {
    "core": [
@@ -15,13 +15,13 @@
        "id": "PMID:34741068",
        "gene_symbol": "KERA",
        "species": "human",
-       "tissue": "角膜在体",
+       "tissue": "Cornea in situ",
        "evidence": "KERA corneal stromal–specific (keratocan)",
-       "semantics": "KB4 逐基因先例 (t_e1febb8e) + KB6b 唯一真锚全绿 (min_lfc 4.09)"
+       "semantics": "KB4 per-gene precedent (t_e1febb8e) + KB6b unique true anchor all green (min_lfc 4.09)"
       },
       {
        "type": "canonical",
-       "note": "角膜基质特异蛋白聚糖"
+       "note": "Corneal stroma-specific proteoglycans"
       },
       {
        "type": "data_driven",
@@ -31,11 +31,11 @@
     }
    ],
    "removed_note": [
-    "NNMT: 反向假锚 (纤维基质 donor 一致率 0.17, 方向反转)",
-    "ALDH3A1: 角膜上皮分化程序 (对 Suprabasal_PMC 反向)——见上皮语境再谈"
+    "NNMT: reverse false anchor (fibrous matrix donor consistency rate 0.17, direction reversed)",
+    "ALDH3A1: corneal epithelial differentiation program (reverse for Suprabasal_PMC)—re-evaluate upon epithelial context"
    ],
    "shared_markers": [
-    "DCN/LUM/PTGDS/COL1A2/FN1: 间质通签 (DCN 跨词条冲突裁定=不入任侧 core, PREREG §5)"
+    "DCN/LUM/PTGDS/COL1A2/FN1: stromal common tags (DCN cross-entry conflict adjudication=excluded from either side's core, PREREG §5)"
    ],
    "cl_id": "CL:0002363",
    "label": "keratocyte"
@@ -43,10 +43,10 @@
   "Fibroblast": {
    "core": [],
    "removed_note": [
-    "全部 10 基因判红 (KB6b 0/10 绿)——间质三角互缠; 保留通签注记, 无独立判据基因"
+    "All 10 genes judged red (KB6b 0/10 green)—stromal triangle entanglement; retain common tag notes, no independent criterion genes"
    ],
    "shared_markers": [
-    "DCN/LUM/PTGDS/FN1/COL1A2/COL3A1/FBN1/MMP2/THY1 全降级为 pan-stromal note"
+    "DCN/LUM/PTGDS/FN1/COL1A2/COL3A1/FBN1/MMP2/THY1 all downgraded to pan-stromal note"
    ],
    "cl_id": "CL:0000057",
    "label": "fibroblast"
@@ -58,7 +58,7 @@
      "evidence": [
       {
        "type": "canonical",
-       "note": "KB6b 存活锚 D002 三色全绿"
+       "note": "KB6b surviving anchors D002 three-color all green"
       }
      ]
     },
@@ -67,7 +67,7 @@
      "evidence": [
       {
        "type": "canonical",
-       "note": "KB6b 存活锚 D002 三色全绿"
+       "note": "KB6b surviving anchors D002 three-color all green"
       }
      ]
     },
@@ -76,7 +76,7 @@
      "evidence": [
       {
        "type": "canonical",
-       "note": "KB6b 存活锚 D002 三色全绿"
+       "note": "KB6b surviving anchors D002 three-color all green"
       }
      ]
     },
@@ -86,24 +86,24 @@
       {
        "type": "pmid",
        "id": "PMID:35920172",
-       "note": "人脑 pericyte 非典型线粒体亚基表达 (NDUFA4L2/COX4I2 语境)——eutils GENERIC 共现",
-       "semantics": "组织=脑, 跨血管壁组织注记"
+       "note": "Human brain pericyte atypical mitochondrial subunit expression (NDUFA4L2/COX4I2 context)—eutils GENERIC co-occurrence",
+       "semantics": "Tissue=brain, cross-vascular wall tissue annotation"
       },
       {
        "type": "data_driven",
-       "id": "REVCAND_KB6b::Pericyte (min_lfc 5.55, DISC/VER 联合)"
+       "id": "REVCAND_KB6b::Pericyte (min_lfc 5.55, DISC/VER joint)"
       },
       {
        "type": "pmid_context",
-       "note": "KB6b 壁细胞文献先例点名"
+       "note": "KB6b mural cell literature precedent named"
       }
      ],
      "stats": null,
-     "note": "D002 统计 DISC/VER (min_lfc 5.55) + 人脑壁细胞文献共现 (跨血管床组织注记)"
+     "note": "D002 statistical DISC/VER (min_lfc 5.55) + human brain mural cell literature co-occurrence (cross-vascular bed tissue annotation)"
     }
    ],
    "removed_note": [
-    "RGS4/PRRX1/COL1A2/MGP/ITGA1/IGFBP7 判红删除 (COL1A2 对 K -1.99 对纤维 -2.81)"
+    "RGS4/PRRX1/COL1A2/MGP/ITGA1/IGFBP7 judged red and deleted (COL1A2 vs K -1.99 vs fibroblast -2.81)"
    ],
    "cl_id": "CL:0000669",
    "label": "pericyte cell"
@@ -115,7 +115,7 @@
      "evidence": [
       {
        "type": "canonical",
-       "note": "KB6b 存活锚 D002 三色全绿"
+       "note": "KB6b surviving anchors D002 three-color all green"
       }
      ]
     },
@@ -124,7 +124,7 @@
      "evidence": [
       {
        "type": "canonical",
-       "note": "KB6b 存活锚 D002 三色全绿"
+       "note": "KB6b surviving anchors D002 three-color all green"
       }
      ]
     },
@@ -133,7 +133,7 @@
      "evidence": [
       {
        "type": "canonical",
-       "note": "KB6b 存活锚 D002 三色全绿"
+       "note": "KB6b surviving anchors D002 three-color all green"
       }
      ]
     },
@@ -142,7 +142,7 @@
      "evidence": [
       {
        "type": "canonical",
-       "note": "KB6b 存活锚 D002 三色全绿"
+       "note": "KB6b surviving anchors D002 three-color all green"
       }
      ]
     },
@@ -151,13 +151,13 @@
      "evidence": [
       {
        "type": "canonical",
-       "note": "KB6b 存活锚 D002 三色全绿"
+       "note": "KB6b surviving anchors D002 three-color all green"
       }
      ]
     }
    ],
    "removed_note": [
-    "ACTA2(lfc 0.83@Peri)/TAGLN(-0.25@Peri)/CALD1(0.03@Melano)——ACTA2/TAGLN 降级壁细胞通签; CALD1 保留 Peri 侧 (SMC 侧不过 Melano)"
+    "ACTA2(lfc 0.83@Peri)/TAGLN(-0.25@Peri)/CALD1(0.03@Melano)—ACTA2/TAGLN downgraded to mural cell common tags; CALD1 retained on Peri side (SMC side fails Melano)"
    ],
    "cl_id": "CL:0000192",
    "label": "smooth muscle cell"
@@ -165,7 +165,7 @@
   "Myofibroblast": {
    "core": [],
    "removed_note": [
-    "12 基因 11 高 CPM 无特异立足组 (KB6b §3)——Q6::24 型接管风险; 本条降为警示条目"
+    "12 genes, 11 high CPM, no specific anchor group (KB6b §3) — Q6::24-style takeover risk; this entry is demoted to a caution"
    ],
    "mural_caution": true
   }
@@ -175,7 +175,7 @@
    "display_name": "conjunctival_epithelium_basal (D002: Conj_basal)",
    "cl_id": "CL:1000432",
    "label": "conjunctival epithelial cell",
-   "layer_descriptor": "basal (author label 语境, CL 无分层条)",
+   "layer_descriptor": "basal (author label context, CL has no stratification entry)",
    "core": [
     {
      "gene": "KRT13",
@@ -185,8 +185,8 @@
        "id": "PMID:33503899",
        "gene_symbol": "KRT13",
        "species": "human",
-       "tissue": "角膜/结膜",
-       "evidence": "人角膜单细胞图谱 KRT13 非角化上皮 (本地主库 human×6)"
+       "tissue": "Cornea/conjunctiva",
+       "evidence": "Human corneal single-cell atlas KRT13 non-keratinized epithelium (local main library human×6)"
       },
       {
        "type": "data_driven",
@@ -208,7 +208,7 @@
       {
        "type": "pmid",
        "id": "PMID:36809816",
-       "note": "PAX6-dependent differentiation landscape of ocular surface (KRT4 conjunctival, 本地 human×5)"
+       "note": "PAX6-dependent differentiation landscape of ocular surface (KRT4 conjunctival, local human×5)"
       },
       {
        "type": "data_driven",
@@ -230,7 +230,7 @@
       {
        "type": "pmid",
        "id": "PMID:35590283",
-       "note": "ocular surface aquaporins (干眼, 本地 human×5)"
+       "note": "Ocular surface aquaporins (dry eye, local human×5)"
       },
       {
        "type": "data_driven",
@@ -252,7 +252,7 @@
       {
        "type": "pmid",
        "id": "PMID:33201599",
-       "note": "conjunctival/superficial 共表达 SARS 入口基因研究 (本地 human×3)"
+       "note": "conjunctival/superficial co-expression SARS entry gene study (local human×3)"
       },
       {
        "type": "data_driven",
@@ -274,11 +274,11 @@
       {
        "type": "pmid",
        "id": "PMID:35021166",
-       "note": "human ocular surface transcriptomics (本地 human×3)"
+       "note": "human ocular surface transcriptomics (local human×3)"
       },
       {
        "type": "data_driven",
-       "id": "kb7_w2::Conj_basal rank5 (min_lfc 1.05 弱——列尾)"
+       "id": "kb7_w2::Conj_basal rank5 (min_lfc 1.05 weak—list tail)"
       }
      ],
      "stats": {
@@ -296,7 +296,7 @@
       {
        "type": "pmid",
        "id": "PMID:38528295",
-       "note": "Human forniceal region stem cell-rich zone of conjunctival epithelium (eutils 共现)"
+       "note": "Human forniceal region stem cell-rich zone of conjunctival epithelium (eutils co-occurrence)"
       },
       {
        "type": "data_driven",
@@ -314,7 +314,7 @@
     }
    ],
    "pool_cells": 18732,
-   "single_study": "chen_limbus 主导 (D002 内; verflag=0 者非 chen 无父组读数——如实标)"
+   "single_study": "chen_limbus dominant (within D002; those with verflag=0 are non-chen without parent group readings—marked truthfully)"
   },
   "Conj_epithelium_superficial": {
    "display_name": "conjunctival_epithelium_superficial (D002: Conj_superficial)",
@@ -328,11 +328,11 @@
       {
        "type": "pmid",
        "id": "PMID:37381815",
-       "note": "Pterygium/pingueula transcriptome SCGB3A1 conjunctival (本地 human×2)"
+       "note": "Pterygium/pingueula transcriptome SCGB3A1 conjunctival (local human×2)"
       },
       {
        "type": "data_driven",
-       "id": "kb7_w2::Conj_superficial rank1 (min_lfc 2.59, cons 0.80; det 0.029 低检出——注记)"
+       "id": "kb7_w2::Conj_superficial rank1 (min_lfc 2.59, cons 0.80; det 0.029 low detection—note)"
       }
      ],
      "stats": {
@@ -350,7 +350,7 @@
       {
        "type": "pmid",
        "id": "PMID:35021166",
-       "note": "Corneal and Conjunctival expression profile (本地 human×1)"
+       "note": "Corneal and Conjunctival expression profile (local human×1)"
       },
       {
        "type": "data_driven",
@@ -368,20 +368,20 @@
     }
    ],
    "pool_cells": 3546,
-   "low_det_flag": "SCGB3A1 det 0.029/FDCSP 0.010——高幅度低检出, 消费须知"
+   "low_det_flag": "SCGB3A1 det 0.029/FDCSP 0.010—high magnitude low detection, consumption notice"
   }
  },
  "granularity_note_stromal_caution": {
-  "mount": "数据侧附注 (query_marker 接线后返回体携带); prompt 侧=D4 软提示卡 (领地隔离)",
-  "text": "[stromal-caution] 眼表间质/壁细胞类共享表达程序 (CL: keratocyte⊂fibroblast)。禁用为单独定类证据: NNMT (纤维侧常更高, donor 一致率 0.17), ALDH3A1 (角膜上皮反向), DCN/LUM/PTGDS/COL1A2/FN1 (K↔Fib 双向互证——定名需 KERA 或 ≥2 存活锚), ACTA2/TAGLN/MYL9/CALD1/PRRX1/THY1/MGP/ITGA1 (壁细胞三选一需共表达解释)。存活锚: KERA/NOTCH3/HIGD1B/CALD1(Peri侧)/CNN1/MYH11/MYL9/DES/LMOD1。",
+  "mount": "Data-side annotation (returned in body after query_marker wiring); prompt side=D4 soft hint card (territory isolation)",
+  "text": "[stromal-caution] Ocular-surface stromal/mural shared expression program (CL: keratocyte ⊂ fibroblast). Forbidden as standalone classifying evidence: NNMT (usually higher on the fibroblast side, donor agreement 0.17), ALDH3A1 (inverse in corneal epithelium), DCN/LUM/PTGDS/COL1A2/FN1 (K↔Fib bidirectional cross-support — naming requires KERA or ≥2 surviving anchors), ACTA2/TAGLN/MYL9/CALD1/PRRX1/THY1/MGP/ITGA1 (the mural three-way choice needs a co-expression reading). Surviving anchors: KERA/NOTCH3/HIGD1B/CALD1 (pericytic side)/CNN1/MYH11/MYL9/DES/LMOD1.",
   "source": "plans/kb6b_face_20260925/out/kb6b_gene_nbr.tsv, kb7_fire_audit_face.tsv"
  },
  "gaps": {
-  "Conj_suprabasal": "冻结判据 (PREREG §6) 0 基因全过——区分信号被 basal/superficial 占据; 登记不降门",
-  "fibroblast_subdivision": "Limbus/Sclera/LS-C1/LS-C2 四亚组 0 基因过全火灾域判据 (K↔Fib 信号互逆, KB6b §2-4 一致); CL 亦无 sclera/limbus fibroblast 条 (OLS 检索 0 命中, ols_evidence_kb7/)——待外部数据/指令",
-  "Corneal_Endothelium_tricolor": "目标组 432 细胞支撑不足 (KB6b §3), 三色补做需外部数据——缺口登记, 零下载 (D3/放行件)",
-  "KLK11_SPTSSB_ANXA9_KLK12_等": "W2 统计过/文献两通道不足——弃用清单见 kb7_drop_ledger.json",
-  "Pericyte_FHL5_TRPC6_SMTNL2_EBF2_PI15": "KB6b coding 候选不在 D3 放行池——待后续指令"
+  "Conj_suprabasal": "Freezing criteria (PREREG §6) 0 genes fully passed—discriminating signal occupied by basal/superficial; registration does not lower threshold",
+  "fibroblast_subdivision": "Limbus/Sclera/LS-C1/LS-C2 four subgroups 0 genes passed full fire-domain criteria (K↔Fib signals inverse, consistent with KB6b §2-4); CL also lacks sclera/limbus fibroblast entries (OLS search 0 hits, ols_evidence_kb7/)—awaiting external data/instructions",
+  "Corneal_Endothelium_tricolor": "Target group 432 cells insufficient support (KB6b §3), tricolor re-do requires external data—gap registered, zero downloads (D3/release item)",
+  "KLK11_SPTSSB_ANXA9_KLK12_etc.": "W2 statistics passed/literature two channels insufficient—deprecation list see kb7_drop_ledger.json",
+  "Pericyte_FHL5_TRPC6_SMTNL2_EBF2_PI15": "KB6b coding candidates not in D3 release pool—awaiting subsequent instructions"
  },
- "note": "火灾审计: out/kb7_fire_audit_face.tsv = W2 全格矩阵原样; B1 每新词条对全 9 互斥组+同 mc 兄弟亚型逐格在表。"
+ "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
 }

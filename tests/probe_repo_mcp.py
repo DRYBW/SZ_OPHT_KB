@@ -2,8 +2,8 @@ import asyncio, json, sys, os
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
-PY = "/home/ubuntu/training-venv/bin/python"
-SRV = "/tmp/repo_verify/mcp_server/server.py"
+PY = os.environ.get("EYEKB_PROBE_PY", sys.executable)
+SRV = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "mcp_server", "server.py")
 
 async def run_case(env_extra, label):
     env = dict(os.environ)

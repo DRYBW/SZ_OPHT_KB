@@ -18,10 +18,10 @@
     "assay": [],
     "preparation": []
    },
-   "failure_mode": "疾病材料≠健康器官：拿疾病样本对照健康组织组成做『达标线』误读材料类别",
-   "observable_signature": "疾病材料组成天然偏离健康基线；三用途口径（身份参考/背景对照/QC 旗）外的对照即误用",
+   "failure_mode": "Disease material ≠ healthy organ: using disease samples against healthy tissue composition as a 'benchmark' misreads material category",
+   "observable_signature": "Disease material composition naturally deviates from healthy baseline; comparisons outside the three-use protocol (identity reference/background control/QC flag) constitute misuse",
    "risk_level": "high",
-   "mitigation": "基线对膜样本只有三用途（身份参考/背景对照/QC 旗），禁当达标线；清单外身份触发 unexpected 旗但保留原判；对照锚用 PDR 专格 prior（已建）非健康视网膜格。",
+   "mitigation": "Baseline for membrane samples has only three uses (identity reference/background control/QC flag); prohibited as benchmark; off-list identities trigger unexpected flag but retain original judgment; use PDR-specific prior (established) not healthy retina grid for comparison anchor.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -35,16 +35,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/kb/baselines/RPE.md 用途口径段 与 /mnt/D/EyeKB/kb/priors/disease/PDR__fibrovascular_membrane.md 同口径段（Astra T2 裁定固化）"
+    "/mnt/D/EyeKB/kb/baselines/RPE.md usage protocol section and /mnt/D/EyeKB/kb/priors/disease/PDR__fibrovascular_membrane.md same protocol section (Astra T2 adjudication solidified)"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__pdr_membrane",
     "b1_order": 3,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "规则由 Astra T2 固化为膜格口径，但失效模式本身疾病材料通用"
+    "home_rationale": "Rule solidified into membrane grid protocol by Astra T2, but failure mode itself is generalizable to disease materials"
    }
   }
  ],

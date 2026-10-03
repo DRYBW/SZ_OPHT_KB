@@ -29,7 +29,7 @@ Usage:  python tests/verify_pipeline.py [--work OUTPUT_DIR]
         This gate itself uses only the standard library and can be launched by any python3 (3.10+).
 Exit codes: 0=PASS(3/3)   1=FAIL (per-artifact got/expected printed)   2=environment error
 
-NOTE on norm_report_sha below: the "生成时间" pattern matches the *pipeline-generated
+NOTE on norm_report_sha below: the "Generated at" pattern matches the *pipeline-generated
 report text* (produced in Chinese by the current pipeline release, which is itself
 byte-anchored); it must stay verbatim until the report template is re-anchored.
 """
@@ -51,7 +51,7 @@ def raw_sha(p: Path) -> str:
 
 def norm_report_sha(p: Path) -> str:
     t = p.read_text(encoding="utf-8")
-    t = re.sub(r"生成时间[:：]\s*[\d\- :]+", "生成时间:=TS", t)
+    t = re.sub(r"(?:Generated at|生成时间)[:：]?\s*[\d\- :T]+", "Generated at:=TS", t)
     t = re.sub(r"`[^`]*?/stage_a/", "`<RUN>/stage_a/", t)
     t = re.sub(r"(/tmp/[\w\-]+/|\$HOME/\S*?/pipeline/)", "<RUN>/", t)
     return hashlib.sha256(t.encode()).hexdigest()

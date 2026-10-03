@@ -16,10 +16,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "供体杠杆：罕见类 hit 可被单 donor 删除即翻转",
-   "observable_signature": "留一供体复算翻转（LODO flip）",
+   "failure_mode": "Donor leverage: rare class hits can flip upon deletion of a single donor",
+   "observable_signature": "Leave-one-donor-out re-computation flip (LODO flip)",
    "risk_level": "medium",
-   "mitigation": "hit 单元附杠杆 donor 占比；『单 donor 删除即翻』级旗标（建议档见勾选表，PI 拍板）；对外结论需≥2 donor 支撑。",
+   "mitigation": "Attach leverage donor proportion to hit units; flag level for 'flip upon single donor deletion' (suggested tier see checklist, PI decision); external conclusions require support from ≥2 donors.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -33,16 +33,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/drsc_disc_quant_20260928/DECISION_TABLE_composition_gates.md D-2 节"
+    "/mnt/D/EyeKB/plans/drsc_disc_quant_20260928/DECISION_TABLE_composition_gates.md Section D-2"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__retina",
     "b1_order": 9,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "通用统计纪律（出自组成门决策表 D-2 节，文本不限格）"
+    "home_rationale": "General statistical discipline (from composition gate decision table D-2 section, text not limited to grid)"
    }
   }
  ],

@@ -11,7 +11,7 @@
   "api": "OLS4 (EBI)",
   "tool": "/mnt/D/EyeKB/plans/kb5v3_20260924/cl_lookup.py + s2_ols_evidence.py",
   "evidence_dir": "/mnt/D/EyeKB/plans/kb5v3_20260924/ols_evidence",
-  "rule": "所有 cl_id 均经 by-iri 直取回证; 凭记忆填号一律禁止"
+  "rule": "All cl_id retrieved via direct by-iri verification; filling IDs from memory strictly prohibited."
  },
  "errata_cl_ids": {
   "card_body_wrong": {
@@ -100,7 +100,7 @@
       "Müller cell"
      ],
      "ols_evidence_file": "core_MG_CL_0000636.json",
-     "granularity_note": "MG/Astro 粒度限制(D001 实测): 现行 MG 词条 {RLBP1,GLUL,SOX9,VIM,S100B} 中 4/5 基因在参考系 best-class 非 MG 或无特异性(GLUL MG1908/Astro2099, SOX9 反向, VIM 共享, S100B MG≈0); 真 MG 优势基因(如 RLBP1 MG1018/Astro70)依赖 RPE 排除。Astro 词条强锚仅 GFAP(lfc3.56)+S100B。两词条共享 VIM/S100B → 判读端 n_shared 计数会误导(Q2::22 实测: 三方判 MG 而 v2_prod 细胞级 100% Astro)。修复路线=MG 词条按 D001 侧重导出(候选见 KB5V3 报告 §5, v6 另卡), 本注记不动面板。"
+     "granularity_note": "MG/Astro granularity limitation (D001 measured): In current MG entries {RLBP1,GLUL,SOX9,VIM,S100B}, 4/5 genes have best-class non-MG or no specificity in reference system (GLUL MG1908/Astro2099, SOX9 reverse, VIM shared, S100B MG≈0); true MG-dominant genes (e.g., RLBP1 MG1018/Astro70) rely on RPE exclusion. Astro entry strong anchors only GFAP(lfc3.56)+S100B. Two entries share VIM/S100B → n_shared count at reading end misleading (Q2::22 measured: three-way judged MG while v2_prod cell-level 100% Astro). Repair route = MG entries re-derived with D001 focus (candidates see KB5V3 report §5, v6 separate card); this annotation does not touch panel."
     },
     "Astro": {
      "cl_id": "CL:0000127",
@@ -110,7 +110,7 @@
       "astrocytic glia"
      ],
      "ols_evidence_file": "core_Astro_CL_0000127.json",
-     "granularity_note": "MG/Astro 粒度限制(D001 实测): 现行 MG 词条 {RLBP1,GLUL,SOX9,VIM,S100B} 中 4/5 基因在参考系 best-class 非 MG 或无特异性(GLUL MG1908/Astro2099, SOX9 反向, VIM 共享, S100B MG≈0); 真 MG 优势基因(如 RLBP1 MG1018/Astro70)依赖 RPE 排除。Astro 词条强锚仅 GFAP(lfc3.56)+S100B。两词条共享 VIM/S100B → 判读端 n_shared 计数会误导(Q2::22 实测: 三方判 MG 而 v2_prod 细胞级 100% Astro)。修复路线=MG 词条按 D001 侧重导出(候选见 KB5V3 报告 §5, v6 另卡), 本注记不动面板。"
+     "granularity_note": "MG/Astro granularity limitation (D001 measured): In current MG entries {RLBP1,GLUL,SOX9,VIM,S100B}, 4/5 genes have best-class non-MG or no specificity in reference system (GLUL MG1908/Astro2099, SOX9 reverse, VIM shared, S100B MG≈0); true MG-dominant genes (e.g., RLBP1 MG1018/Astro70) rely on RPE exclusion. Astro entry strong anchors only GFAP(lfc3.56)+S100B. Two entries share VIM/S100B → n_shared count at reading end misleading (Q2::22 measured: three-way judged MG while v2_prod cell-level 100% Astro). Repair route = MG entries re-derived with D001 focus (candidates see KB5V3 report §5, v6 separate card); this annotation does not touch panel."
     },
     "Micro": {
      "cl_id": "CL:0000129",
@@ -299,7 +299,7 @@
       "Müller cell"
      ],
      "ols_evidence_file": "core_MG_CL_0000636.json",
-     "granularity_note": "MG/Astro 粒度限制(D001 实测): 现行 MG 词条 {RLBP1,GLUL,SOX9,VIM,S100B} 中 4/5 基因在参考系 best-class 非 MG 或无特异性(GLUL MG1908/Astro2099, SOX9 反向, VIM 共享, S100B MG≈0); 真 MG 优势基因(如 RLBP1 MG1018/Astro70)依赖 RPE 排除。Astro 词条强锚仅 GFAP(lfc3.56)+S100B。两词条共享 VIM/S100B → 判读端 n_shared 计数会误导(Q2::22 实测: 三方判 MG 而 v2_prod 细胞级 100% Astro)。修复路线=MG 词条按 D001 侧重导出(候选见 KB5V3 报告 §5, v6 另卡), 本注记不动面板。"
+     "granularity_note": "MG/Astro granularity limitation (D001 measured): In current MG entries {RLBP1,GLUL,SOX9,VIM,S100B}, 4/5 genes have best-class non-MG or no specificity in reference system (GLUL MG1908/Astro2099, SOX9 reverse, VIM shared, S100B MG≈0); true MG-dominant genes (e.g., RLBP1 MG1018/Astro70) rely on RPE exclusion. Astro entry strong anchors only GFAP(lfc3.56)+S100B. Two entries share VIM/S100B → n_shared count at reading end misleading (Q2::22 measured: three-way judged MG while v2_prod cell-level 100% Astro). Repair route = MG entries re-derived with D001 focus (candidates see KB5V3 report §5, v6 separate card); this annotation does not touch panel."
     },
     "Astro": {
      "cl_id": "CL:0000127",
@@ -309,7 +309,7 @@
       "astrocytic glia"
      ],
      "ols_evidence_file": "core_Astro_CL_0000127.json",
-     "granularity_note": "MG/Astro 粒度限制(D001 实测): 现行 MG 词条 {RLBP1,GLUL,SOX9,VIM,S100B} 中 4/5 基因在参考系 best-class 非 MG 或无特异性(GLUL MG1908/Astro2099, SOX9 反向, VIM 共享, S100B MG≈0); 真 MG 优势基因(如 RLBP1 MG1018/Astro70)依赖 RPE 排除。Astro 词条强锚仅 GFAP(lfc3.56)+S100B。两词条共享 VIM/S100B → 判读端 n_shared 计数会误导(Q2::22 实测: 三方判 MG 而 v2_prod 细胞级 100% Astro)。修复路线=MG 词条按 D001 侧重导出(候选见 KB5V3 报告 §5, v6 另卡), 本注记不动面板。"
+     "granularity_note": "MG/Astro granularity limitation (D001 measured): In current MG entries {RLBP1,GLUL,SOX9,VIM,S100B}, 4/5 genes have best-class non-MG or no specificity in reference system (GLUL MG1908/Astro2099, SOX9 reverse, VIM shared, S100B MG≈0); true MG-dominant genes (e.g., RLBP1 MG1018/Astro70) rely on RPE exclusion. Astro entry strong anchors only GFAP(lfc3.56)+S100B. Two entries share VIM/S100B → n_shared count at reading end misleading (Q2::22 measured: three-way judged MG while v2_prod cell-level 100% Astro). Repair route = MG entries re-derived with D001 focus (candidates see KB5V3 report §5, v6 separate card); this annotation does not touch panel."
     },
     "Micro": {
      "cl_id": "CL:0000129",
@@ -360,17 +360,17 @@
  },
  "no_match": {
   "subtype_terms": {
-   "AII": "cl_id: NO_MATCH (D001 作者标签/经典命名, CL 无 exact term; 禁硬挂近似条)",
-   "HAC2": "cl_id: NO_MATCH (D001 作者标签/经典命名, CL 无 exact term; 禁硬挂近似条)",
-   "HAC3": "cl_id: NO_MATCH (D001 作者标签/经典命名, CL 无 exact term; 禁硬挂近似条)",
-   "HAC4": "cl_id: NO_MATCH (D001 作者标签/经典命名, CL 无 exact term; 禁硬挂近似条)",
-   "HAC5": "cl_id: NO_MATCH (D001 作者标签/经典命名, CL 无 exact term; 禁硬挂近似条)",
-   "HAC6": "cl_id: NO_MATCH (D001 作者标签/经典命名, CL 无 exact term; 禁硬挂近似条)"
+   "AII": "cl_id: NO_MATCH (D001 author labels/classical naming, CL has no exact term; hard-linking approximate terms prohibited).",
+   "HAC2": "cl_id: NO_MATCH (D001 author labels/classical naming, CL has no exact term; hard-linking approximate terms prohibited).",
+   "HAC3": "cl_id: NO_MATCH (D001 author labels/classical naming, CL has no exact term; hard-linking approximate terms prohibited).",
+   "HAC4": "cl_id: NO_MATCH (D001 author labels/classical naming, CL has no exact term; hard-linking approximate terms prohibited).",
+   "HAC5": "cl_id: NO_MATCH (D001 author labels/classical naming, CL has no exact term; hard-linking approximate terms prohibited).",
+   "HAC6": "cl_id: NO_MATCH (D001 author labels/classical naming, CL has no exact term; hard-linking approximate terms prohibited)."
   },
-  "membrane_other_words": "markers_membrane_v1 其余 21 词条 CL 回溯登记为 v3.1 待办",
-  "concepts_state_axis": "EYEKBC 状态轴/污染旗条目(level≠identity_major)不挂 CL identity, 仅 parent 提示"
+  "membrane_other_words": "markers_membrane_v1 remaining 21 entries CL backtracking registered as v3.1 TODO.",
+  "concepts_state_axis": "EYEKBC status axis/contamination flag entries (level≠identity_major) do not link CL identity, only parent hint."
  },
- "panel_gene_body": "UNCHANGED — 本件为旁挂注记, 三个源面板 JSON 字节零改动(sha 见 source_files)",
+ "panel_gene_body": "UNCHANGED — This file is a sidecar annotation; three source panel JSONs have zero byte changes (sha see source_files).",
  "v6_proposal_pointer": "/mnt/D/EyeKB/plans/kb5v3_20260924/KB5V3_COMPLETED_20260924.md §5",
  "alias_convergence": {
   "BC": {

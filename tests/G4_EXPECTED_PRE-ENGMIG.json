@@ -1,0 +1,14 @@
+{
+ "schema": "eyekb-g4-expected/1.0",
+ "seed": "20260929",
+ "fixture": "pipeline/fixtures/pdr600.h5ad",
+ "fixture_sha256": "fa8fc609c3920dd2506a7b81fafe5a6e363b98eb670ee523a3f411d5c913ce44",
+ "generated": "2026-10-01",
+ "provenance": "runs g4_fixture_20261001 run1(prod fp32 default db)==run3(Release slim db), byte-equal; report compared after timestamp/path normalization",
+ "anchors": {
+  "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
+  "decisions_template.csv": "2599107eff72a39c7a436e275b2974c08358023da1a17b20456c3aa7df632559",
+  "annotation_evidence_report.md__normalized": "802d9f9c5dae11cb1925c15f5dd9a9c1edff30d2d138d11508b441466cd609df"
+ },
+ "normalization": "生成时间置TS + stage_a 输入路径前缀置<RUN>/；实现=tests/verify_pipeline.py:norm_report_sha()（唯一事实源）"
+}

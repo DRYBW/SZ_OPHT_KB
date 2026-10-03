@@ -16,10 +16,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "髓样占比压谱：膜样本 79.5-85% 髓系，全局聚类下罕见类被压没",
-   "observable_signature": "全池聚类罕见类占比≈0；compartment 门控亚聚后重现",
+   "failure_mode": "Myeloid proportion suppresses spectrum: membrane samples 79.5-85% myeloid, global clustering suppresses rare classes",
+   "observable_signature": "Rare class proportion ≈0 in full-pool clustering; reappears after compartment-gated sub-clustering",
    "risk_level": "high",
-   "mitigation": "髓系 compartment 门控单独亚聚类（O2 轨：髓系→15 亚簇后重归一），非髓系独立亚聚类；『先 compartment 门、后类内细分』为膜样本默认工序。",
+   "mitigation": "Myeloid compartment gated separate sub-clustering (O2 track: myeloid → 15 sub-clusters then renormalized), non-myeloid independent sub-clustering; 'compartment gate first, then intra-class subdivision' is default procedure for membrane samples.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -33,16 +33,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.md major_compartments 表；/mnt/D/EyeKB/plans/demo_gse165784/ANNOTATION_DRAFT_GSE165784_V2_20260923.md §O2(13行)+整合后髓系85%条(75行)"
+    "/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.md major_compartments table; /mnt/D/EyeKB/plans/demo_gse165784/ANNOTATION_DRAFT_GSE165784_V2_20260923.md §O2 (13 rows) + integrated myeloid 85% entry (75 rows)"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__pdr_membrane",
     "b1_order": 1,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "比例为膜格实测（在册 GSE165784 系）"
+    "home_rationale": "Proportions are measured from membrane grid (registered GSE165784 series)."
    }
   },
   {
@@ -58,10 +58,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "组织驻留巨噬 vs 小胶质在膜内不可分；『microglia 驱动新生血管』主张须先证驻留",
-   "observable_signature": "谱系锚与状态锚分簇依据缺失时跨样本整合并簇假象",
+   "failure_mode": "Tissue-resident macrophages vs. microglia are indistinguishable within the membrane; claims that 'microglia drive neovascularization' require prior proof of residency.",
+   "observable_signature": "Lack of clustering basis for lineage anchors vs. state anchors leads to cross-sample integration artifacts (merged clusters).",
    "risk_level": "medium",
-   "mitigation": "MG/mac 结论一律标注分簇依据（谱系锚 vs 状态锚）；跨样本整合用 harmonypy(sample) 后仍报逐样本占比防并簇假象。",
+   "mitigation": "MG/mac conclusions must specify clustering basis (lineage anchor vs. state anchor); after cross-sample integration using harmonypy(sample), report per-sample proportions to prevent merged-cluster artifacts.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -75,16 +75,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/demo_gse165784/ANNOTATION_DRAFT_GSE165784_V2_20260923.md B1/B13 行；/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.md 髓系状态层"
+    "/mnt/D/EyeKB/plans/demo_gse165784/ANNOTATION_DRAFT_GSE165784_V2_20260923.md B1/B13 rows; /mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.md myeloid state layer"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__pdr_membrane",
     "b1_order": 4,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "证据膜格实测（B1/B13 在册）"
+    "home_rationale": "Evidence: measured from membrane grid (B1/B13 registered)."
    }
   },
   {
@@ -103,10 +103,10 @@
     "assay": [],
     "preparation": []
    },
-   "failure_mode": "RRD 与 PDR 混样改变比例口径：增殖占比随口径翻转",
-   "observable_signature": "两套疾病口径的占比表分别计算结果不同；MT 高簇随样本处理差异变化",
+   "failure_mode": "Mixed samples of RRD and PDR alter proportion metrics: proliferative fraction flips depending on metric definition.",
+   "observable_signature": "Proportion tables calculated separately for two disease definitions yield different results; high-MT clusters vary with sample processing differences.",
    "risk_level": "medium",
-   "mitigation": "膜研究汇报强制注明疾病口径（PDR-only / PDR+RRD）；两套占比分别落表禁平均；MT 高簇按样本处理差异披露非生物学。",
+   "mitigation": "Membrane studies must explicitly state disease definition (PDR-only / PDR+RRD); calculate proportions separately for both definitions without averaging; disclose high-MT clusters as non-biological due to sample processing differences.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -120,16 +120,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.json major_compartments.proliferating.note+B0 行（demo 报告 29 行）"
+    "/mnt/D/EyeKB/kb/priors/composition/human_pdr_membrane.json major_compartments.proliferating.note + B0 row (demo report line 29)"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__pdr_membrane",
     "b1_order": 5,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "疾病口径问题限膜格（PDR/RRD 材料）"
+    "home_rationale": "Disease definition issues limited to membrane grid (PDR/RRD materials)."
    }
   },
   {
@@ -145,10 +145,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "增殖群（MKI67/TOP2A）跨谱系并簇：细胞周期签名劫持归因",
-   "observable_signature": "增殖簇内多谱系 marker 共检；并簇上做 DE 结果不可归因",
+   "failure_mode": "Cross-lineage merging of proliferative cells (MKI67/TOP2A): cell cycle signature hijacks attribution.",
+   "observable_signature": "Co-detection of multi-lineage markers within proliferative clusters; DE results on merged clusters cannot be attributed.",
    "risk_level": "medium",
-   "mitigation": "增殖簇拆分依据=簇内谱系 marker 共检（双标签并报）；增殖相关 DE 须先按谱系分层再比，禁在并簇上做。",
+   "mitigation": "Splitting basis for proliferative clusters = co-detection of lineage markers within cluster (report dual labels); proliferative-related DE must stratify by lineage before comparison, prohibited on merged clusters.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -162,16 +162,16 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/demo_gse165784/ANNOTATION_DRAFT_GSE165784_V2_20260923.md B11 行（增殖细胞群，来源归属仍待 PI）"
+    "/mnt/D/EyeKB/plans/demo_gse165784/ANNOTATION_DRAFT_GSE165784_V2_20260923.md B11 row (proliferative cell population, source attribution pending PI)"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "human__pdr_membrane",
     "b1_order": 6,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "证据=膜格 B11 行；跨谱系并簇疑似通用坑但未到他格证据，不升（hint 已记）"
+    "home_rationale": "Evidence = membrane grid B11 row; suspected general pitfall for cross-lineage merging but lacks evidence in other grids, not promoted (hint recorded)."
    }
   },
   {
@@ -187,10 +187,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "写 FVM/髓系主张不带文献锚（方法+组成题录池）致出处不可溯",
-   "observable_signature": "对外主张缺 PMID 锚",
+   "failure_mode": "Writing FVM/myeloid claims without literature anchors (method + composition bibliographic pool) renders sources untraceable.",
+   "observable_signature": "External claims lack PMID anchors.",
    "risk_level": "low",
-   "mitigation": "写 FVM/髓系主张时引用上述锚；PMID:39512888 可作本室湿实验规程对照。",
+   "mitigation": "When writing FVM/myeloid claims, cite the aforementioned anchors; PMID:39512888 can serve as a control for this lab's wet-lab protocols.",
    "evidence_source_type": "peer_reviewed_literature",
    "source_check": "locator_verified",
    "home": {
@@ -210,10 +210,10 @@
    "provenance": {
     "origin_cell": "human__pdr_membrane",
     "b1_order": 8,
-    "legacy_grade": "B文献PMID",
+    "legacy_grade": "Tier B bibliographic record PMID",
     "legacy_code_in_legend": "PIT-E2",
     "report_confidence": "high",
-    "home_rationale": "B 档题录池锚本格"
+    "home_rationale": "Tier B bibliographic pool anchored to this cell"
    }
   }
  ],

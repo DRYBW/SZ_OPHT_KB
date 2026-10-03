@@ -1,25 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-build_expected_composition_v0.py — EyeKB DISC_COMP (D-1) 组成先验新面 v0 构建
-卡: t_fa03e1d7 | 任务书: <EYEKB>/plans/comp_prior_20260928/BRIEF_DISC_COMP.md
-放行: USER_DIRECTIVE_20260928_eyekb_improve_wave.md 追加七B (D-1)
+build_expected_composition_v0.py — EyeKB DISC_COMP (D-1) Composition Prior New Surface v0 Build
+Card: t_fa03e1d7 | Task brief: <EYEKB>/plans/comp_prior_20260928/BRIEF_DISC_COMP.md
+Release: USER_DIRECTIVE_20260928_eyekb_improve_wave.md appended Section VII-B (D-1)
 
-纪律:
-- 默认 OFF 不接线 (本目录零 MCP/运行时引用; 接线与激活另卡另批)
-- 逐行挂 PMID; 题录三判据机械自检
-- 禁从自家聚类/自家 demo 注释派生比例 (本脚本数值来源 = kb/baselines adult-only 主档
-  供者级分布 [A 级, 谱系=D001/D002 外部作者注释本地复算] + priors/composition v1
-  跨研究经验区间 [C 级, 同谱系] + 盘上已入库文献原文陈述 [B 级, chunks 逐字] )
-- fetal/organoid/非成年 条目不得混入 (数值折叠只收 human+adult+capture-composition 口径句);
-  疾病态比例不建
-- 全程 CPU 只读输入; 输出只写 kb/composition/
+Discipline:
+- Default OFF, unwired (zero MCP/runtime references in this directory; wiring & activation need a separate card and batch)
+- every row carries a PMID; three bibliographic criteria mechanically self-checked
+- Prohibit deriving proportions from own clustering/own demo annotations (this script's numerical source = kb/baselines adult-only master file
+  Donor-level distribution [Grade A, lineage=D001/D002 external author annotations recalculated locally] + priors/composition v1
+  Cross-study empirical intervals [C-level, same lineage] + original statements from literature already ingested on the disc [B-level, verbatim chunks]
+- fetal/organoid/non-adult entries must not be mixed in (numerical folding only accepts human+adult+capture-composition scope sentences);
+  Do not establish disease-state proportions
+- CPU-only read access throughout; output restricted to kb/composition/
 
-区间机械公式 (预注册):
+Mechanical interval formula (pre-registered):
   low  = floor( min( donor_iqr_low, priors_expected_low, folded_lit_low ) )
   high = ceil ( max( donor_iqr_high, priors_expected_high, folded_lit_high ) )
   mid  = round( donor_median_pct, 1 )
-  无 A 级数值来源的行 → low/mid/high = null, evidence = "no_evidence" (禁编数)
+  rows with no grade-A numeric source → low/mid/high = null, evidence = "no_evidence" (fabricated numbers forbidden)
 """
 import json, re, sys, datetime, math, pathlib
 
@@ -37,141 +37,141 @@ donor_r = {c["class"]: c for c in BR["major_classes"]}
 prior_r = {c["class"]: c for c in RET["major_classes"]}
 donor_o = {c["class"]: c for c in BO["major_classes"]}
 
-# ---------------------------------------------------------------- 文献锚表
-# kind: "fold"=可折叠进区间的定量句(human/adult/capture-composition 口径)
-#       "context"=口径不同/亚型/理论估计/密度, 只作定性锚不折叠
-#       "identity"=该类型在正常成人组织存在的直接文献支持
+# ---------------------------------------------------------------- Literature Anchor Table
+# kind: "fold"=quantitative sentence foldable into interval (human/adult/capture-composition scope)
+#       "context"=different scope/subtype/theoretical estimate/density, qualitative anchor only, not folded
+#       "identity"=direct literature support for existence of this type in normal adult tissue
 LIT = {
  "retina": {
   "Rod": [
     dict(pmid="38012720", kind="fold", bound=("high", 55.2),
          quote="the distributions of cell type proportions ... ranging from 2.5% RGC to 55.2% Rod",
-         note="snRNA+snATAC 多组学 跨样本组成极值 (人, adult)"),
+         note="snRNA+snATAC multi-omics cross-sample composition extremes (human, adult)"),
     dict(pmid="37388908", kind="identity",
          quote="the highest overlap (63.9%) is observed for the most abundant cell type, Rod",
-         note="人 snRNA-seq atlas: Rod 为最丰细胞类型 (定性)"),
+         note="Human snRNA-seq atlas: Rods are the most abundant cell type (qualitative)"),
     dict(pmid="41578023", kind="identity", quote=None,
-         note="HRCA 整合图谱 majorclass 收录 Rod (registry 台账 OA-D001)")],
+         note="HRCA integrated atlas majorclass includes Rods (registry ledger OA-D001)")],
   "Cone": [
     dict(pmid="37388908", kind="context",
          quote="S cones (0.07% of total retinal cells)",
-         note="S-cone 亚型口径, 不折叠; Cone 整体存在性支持"),
+         note="S-cone subtype definition, not collapsed; supports overall Cone presence"),
     dict(pmid="32555229", kind="identity", quote=None,
-         note="人中央凹/周边视网膜细胞图谱收录锥细胞"),
-    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass 收录 Cone")],
+         note="Human fovea/peripheral retina cell atlas includes cone cells"),
+    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass includes Cone")],
   "BC": [
     dict(pmid="37388908", kind="fold", bound=("high", 20.8),
          quote="AC, BC, and RGC, comprising 21.5%, 20.8%, and 4.1% of the cell population for this dataset",
-         note="人 snRNA-seq 该数据集层面双极细胞占比 (fold high)"),
-    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass 收录 BC")],
+         note="Human snRNA-seq dataset-level bipolar cell proportion (fold high)"),
+    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass includes BC")],
   "AC": [
     dict(pmid="37388908", kind="fold", bound=("high", 21.5),
          quote="AC, BC, and RGC, comprising 21.5%, 20.8%, and 4.1% of the cell population for this dataset",
-         note="同上数据集层 AC 占比 (fold high)"),
+         note="Same dataset AC proportion (fold high)"),
     dict(pmid="37388908", kind="context",
          quote="vGlut3 excitatory ACs (0.7% of total retinal cells)",
-         note="兴奋性 AC 亚型口径, 不折叠"),
-    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass 收录 AC")],
+         note="Excitatory AC subtype definition, not collapsed"),
+    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass includes AC")],
   "HC": [
     dict(pmid="37388908", kind="identity",
          quote="lowest overlap is observed for HC (49.0%)",
-         note="人图谱收录水平细胞 (定性)"),
-    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass 收录 HC")],
+         note="Human atlas includes horizontal cells (qualitative)"),
+    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass includes HC")],
   "RGC": [
     dict(pmid="37388908", kind="context",
          quote="the total number of RGCs only accounts for approximately 1% of the cell population in the retina",
-         quote_kind="theory", note="组织学理论估计口径, 不折叠; 方向锚"),
+         quote_kind="theory", note="Histological theoretical estimate definition, not collapsed; directional anchor"),
     dict(pmid="37388908", kind="fold", bound=("high", 4.1),
          quote="AC, BC, and RGC, comprising 21.5%, 20.8%, and 4.1% of the cell population for this dataset",
-         note="人数据集捕获层 RGC 占比 (fold high)"),
+         note="Human dataset capture-layer RGC proportion (fold high)"),
     dict(pmid="38012720", kind="fold", bound=("low", 2.5),
          quote="ranging from 2.5% RGC to 55.2% Rod",
-         note="跨样本 RGC 下界极值 (fold low)"),
-    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass 收录 RGC")],
+         note="Cross-sample RGC lower bound extreme (fold low)"),
+    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass includes RGC")],
   "MG": [
     dict(pmid="32069977", kind="identity",
          quote="Within the fovea, Müller cells and horizontal cells ...",
-         note="人中央凹 AIR 图谱确认 Müller 细胞存在 (定性)"),
-    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass 收录 MG")],
+         note="Human fovea AIR atlas confirms Müller cell presence (qualitative)"),
+    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass includes MG")],
   "Astro": [
     dict(pmid="32555229", kind="context",
          quote="depletion of astrocytes from fovea (0.9% of all non-neuronal cells in fovea and 12% in periphery)",
-         note="分母=非神经元细胞, 口径异, 不折叠; 区域差异方向锚"),
-    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass 收录 Astro")],
+         note="Denominator = non-neuronal cells, different definition, not collapsed; regional difference directional anchor"),
+    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass includes Astro")],
   "Micro": [
     dict(pmid="37017569", kind="context",
          quote="microglia (11 cells, 0.0146% of total cell count) directly mapped to the chromatin landscape",
-         note="scATAC 直接映射子集口径, 不折叠; 稀有性方向锚"),
-    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass 收录 Microglia")],
+         note="scATAC direct mapping subset definition, not collapsed; rarity directional anchor"),
+    dict(pmid="41578023", kind="identity", quote=None, note="HRCA majorclass includes Microglia")],
   "RPE": [
     dict(pmid="41578023", kind="identity", quote=None,
-         note="HRCA 神经视网膜 majorclass 收录 RPE (捕获 0.03%)"),
+         note="HRCA neural retina majorclass includes RPE (capture 0.03%)"),
     dict(pmid="32946783", kind="context",
          quote="pigment epithelial cells had 2% RPE65 (expression in organoids)",
-         note="器官类表达口径且涉 organoid, 不折叠不入面; 仅登记排除")],
+         note="Organoid expression definition involving organoids, not collapsed nor included in surface; registration exclusion only")],
  },
  "ocular_surface": {
   "Epithelium": [
     dict(pmid="34381080", kind="identity",
          quote="These 16 clusters correspond to 11 subtypes of epithelial cells, keratocytes, Langerhans cells, melanocytes, vascular endothelial cells and corneal endothelial cells",
-         note="成人人角膜单细胞目录: 上皮为大类 (定性)"),
+         note="Adult human corneal single-cell catalog: epithelium is a major class (qualitative)"),
     dict(pmid="34741068", kind="identity",
          quote="The cornea is composed of five layers: its outer surface is a stratified sheet of corneal epithelial cells",
-         note="人角膜分层结构 (定性)"),
+         note="Human corneal stratified structure (qualitative)"),
     dict(pmid="32502616", kind="identity", quote=None,
-         note="成人结膜/角膜缘/角膜上皮 scRNA 收录")],
+         note="Adult conjunctiva/limbus/corneal epithelium scRNA inclusion")],
   "Fibroblasts": [
     dict(pmid="34381080", kind="fold", bound=("low", 15),
          quote="Over 15% of cells in our analysis are keratocytes within a single cluster",
-         note="成人角膜 scRNA: keratocyte 单簇 >15% (fold low)"),
+         note="Adult corneal scRNA: keratocyte single cluster >15% (fold low)"),
     dict(pmid="40838019", kind="identity",
          quote="The corneal stroma, composed mainly of keratocytes",
-         note="角膜基质主驻留细胞为 keratocyte (定性)"),
+         note="Keratocytes are the primary resident cells of the corneal stroma (qualitative)"),
     dict(pmid="34741068", kind="identity",
-         quote="The keratocytes populate the corneal stroma", note="定性")],
+         quote="The keratocytes populate the corneal stroma", note="Qualitative")],
   "Corneal Endothelium": [
     dict(pmid="33865984", kind="context",
          quote="endothelial cells in humans are not endogenously renewed ... density declines at an average of approximately 0.6% per year",
-         note="细胞密度口径 (cell/mm^2), 非组成百分比, 不折叠; CEC 身份/稀有性锚"),
+         note="Cell density definition (cell/mm^2), not composition percentage, not collapsed; CEC identity/rarity anchor"),
     dict(pmid="34381080", kind="identity", quote=None,
-         note="角膜单细胞目录收录 corneal endothelial cells (CenC)")],
+         note="Corneal single-cell catalog includes corneal endothelial cells (CenC)")],
   "Endothelium": [
     dict(pmid="34381080", kind="identity", quote=None,
-         note="角膜单细胞目录收录 vascular endothelial cells")],
+         note="Corneal single-cell catalog includes vascular endothelial cells")],
   "Immune Cells": [
     dict(pmid="34381080", kind="identity", quote=None,
-         note="角膜单细胞目录收录 Langerhans cells (免疫)"),
+         note="Corneal single-cell catalog includes Langerhans cells (immune)"),
     dict(pmid="41552884", kind="identity", quote=None,
-         note="角膜巨噬细胞综述 (人源证据强调)")],
+         note="Corneal macrophage review (emphasis on human evidence)")],
   "Melanocytes": [
-    dict(pmid="34381080", kind="identity", quote=None, note="角膜单细胞目录收录 melanocytes"),
+    dict(pmid="34381080", kind="identity", quote=None, note="Corneal single-cell catalog includes melanocytes"),
     dict(pmid="40216818", kind="identity",
          quote="PAX3 expression in LM as well in the conjunctival melanocytes",
-         note="角膜缘/结膜黑色素细胞存在 (定性)")],
+         note="Presence of limbal/conjunctival melanocytes (qualitative)")],
   "Pericytes": [
     dict(pmid="D002-PORTAL-ONLY", kind="identity", quote=None,
-         note="无盘上成人眼表 pericyte 组成文献句; 身份仅 D002 官方注释 (A 级) — B 级缺项如实登记")],
+         note="No on-disk adult ocular surface pericyte composition literature statement; identity solely from D002 official annotation (Grade A) — Grade B missing items registered as-is")],
   "Schwann Cells": [
     dict(pmid="40649793", kind="context",
          quote="NGF ... corneal nerve regeneration",
-         note="眼表神经综述 (定性),  Schwann 组成%未钉死")],
+         note="Ocular surface nerve review (qualitative), Schwann cell composition % not pinned down")],
   "Smooth Muscle Cells": [
     dict(pmid="40649793", kind="context",
          quote="NGF has been found to be produced by ... smooth muscle cells",
-         note="综述提及眼表 SMC 存在 (定性)")],
+         note="Review mentions presence of ocular surface SMCs (qualitative)")],
   "_disclosure_conjunctival_epithelium": [
     dict(pmid="32502616", kind="identity", quote=None,
-         note="成人结膜上皮 scRNA; D002 无独立 super class (portal 标签归 Epithelium)")],
+         note="Adult conjunctival epithelium scRNA; D002 lacks independent super class (portal label assigned to Epithelium)")],
   "_disclosure_goblet": [],
  },
 }
 
 RETINA_CLASSES = ["Rod","Cone","BC","AC","HC","RGC","MG","Astro","Micro","RPE"]
-SRC_NAME = {"Astro":"Astrocyte","Micro":"Microglia"}  # 面短名 -> baselines/priors 键名
+SRC_NAME = {"Astro":"Astrocyte","Micro":"Microglia"}  # face short name -> baselines/priors key name
 CLASS_CN_R = {c: prior_r[SRC_NAME.get(c,c)]["label_cn"] for c in RETINA_CLASSES}
 OCS_CLASSES = list(donor_o.keys())
 
-# ------------------------------------------------- PMID 题录三判据机械自检
+# ------------------------------------------------- PMID bibliographic record three-criteria mechanical self-check
 def pmid_verify(pmids):
     need = {p for p in pmids if p and not p.startswith("D002")}
     rows = {}
@@ -192,7 +192,7 @@ def pmid_verify(pmids):
         j1 = bool(d and d.get("title") and d.get("journal") and d.get("year"))
         j2 = bool(d and (d.get("n_chunks") or 0) > 0)
         vkhit = ("PMID"+p in vktext) or (p in sidecar_ids)
-        # j3 = 性状元数据在盘可核 (species 或 tissues 非空) — 任务书口径: "papers.jsonl 元数据可核者"
+        # j3 = Primary data verifiable on disk (species or tissues non-empty) — Task brief standard: "papers.jsonl metadata verifiable"
         j3 = bool(d and (str(d.get("species") or "").strip() not in ("", "nan", "unknown")
                          or (d.get("tissues") or [])))
         out[p] = dict(j1_papers_jsonl=j1, j2_nonghost=j2, j3_trait_meta=j3, vk_or_sidecar_hit=vkhit,
@@ -201,7 +201,7 @@ def pmid_verify(pmids):
                       species=(d or {}).get("species"), tissues=(d or {}).get("tissues"))
     return out
 
-# ------------------------------------------------- 区间机械装配
+# ------------------------------------------------- Interval mechanical assembly
 def face_row(cls, cn, donor, pri, lit_list, denom_note, extra=None):
     lows, highs, mids = [], [], []
     if donor:
@@ -209,7 +209,7 @@ def face_row(cls, cn, donor, pri, lit_list, denom_note, extra=None):
             lows.append(float(donor["donor_iqr_pct"][0])); highs.append(float(donor["donor_iqr_pct"][1]))
         if donor.get("donor_median_pct") is not None:
             mids.append(float(donor["donor_median_pct"]))
-        # 并入口径: 供者级 IQR 上界塌缩为 0 时, 以 pooled 参考值兜住 high (防自旗标荒谬区间)
+        # Inclusion criterion: When donor-level IQR upper bound collapses to 0, use pooled reference value to cap high (prevent self-flagged absurd intervals)
         if float(donor.get("donor_iqr_pct",[0,0])[1]) == 0.0 and donor.get("pooled_pct_for_reference_only"):
             highs.append(float(donor["pooled_pct_for_reference_only"]))
     if pri:
@@ -249,7 +249,7 @@ def build():
         d = donor_r[SRC_NAME.get(c,c)]
         lit = LIT["retina"][c]
         r = face_row(c, CLASS_CN_R[c], d, pri, lit,
-                     "分母=人正常成人神经视网膜捕获事件构成 (snRNA-seq nuclei; D001 adult-only 供者级主档); 非组织学真值, 非达标线 (Astra T2 usage_scope)")
+                     "Denominator = human normal adult neural retina capture event composition (snRNA-seq nuclei; D001 adult-only donor-level master file); not histological ground truth, not a compliance threshold (Astra T2 usage_scope)")
         r["a_measured"] = dict(donor_median_pct=d["donor_median_pct"], donor_iqr_pct=d["donor_iqr_pct"],
                                donor_range_pct=d["donor_range_pct"],
                                pooled_adult_only_ref=d.get("pooled_pct_for_reference_only"))
@@ -257,21 +257,21 @@ def build():
                                per_study_spread_pct=pri.get("per_study_spread_pct"))
         if d.get("enrichment_note"): r["design_note"] = d["enrichment_note"]
         retina_rows.append(r)
-    # 血管 off-panel 两行: 无成人神经视网膜分母可用文献区间 → no_evidence 行 (禁编数)
-    retina_rows.append(face_row("Endo_vascular", "血管内皮 (off-panel)", None, None,
+    # Two vascular off-panel rows: No literature interval available for adult neural retina denominator → no_evidence row (no fabricated numbers)
+    retina_rows.append(face_row("Endo_vascular", "Vascular endothelium (off-panel)", None, None,
         [dict(pmid="41578023", kind="identity", quote=None,
-              note="HRCA 10 类词表不含血管类; 真实全视网膜含低比例血管成分, 出现小簇属正常 (baselines/retina.json caveat)")],
-        "无适用区间: 神经视网膜 snRNA 分母下文献百分比未钉死 → 仅 unexpected-identity 披露"))
-    retina_rows.append(face_row("Pericyte_vascular", "周细胞 (off-panel)", None, None,
+              note="HRCA 10-class vocabulary does not include vascular classes; true whole retina contains low-proportion vascular components, small clusters appearing is normal (baselines/retina.json caveat)")],
+        "No applicable interval: literature percentages under neural retina snRNA denominator not pinned down → unexpected-identity disclosure only"))
+    retina_rows.append(face_row("Pericyte_vascular", "Pericytes (off-panel)", None, None,
         [dict(pmid="41578023", kind="identity", quote=None,
-              note="同上 caveat: 血管 mural 成分出现不打 contamination 旗")],
-        "无适用区间 → 披露行"))
+              note="Same caveat: appearance of vascular mural components does not trigger contamination flag")],
+        "No applicable interval → disclosure line"))
 
     stroma_ref = BO.get("stromal_keratocyte_reference", {})
     for cls_name, o in donor_o.items():
         lit = LIT["ocular_surface"].get(cls_name, [])
         r = face_row(cls_name, cls_name, o, None, lit,
-                     "分母=人正常成人眼表 (cornea/limbus/sclera 超级类) 捕获事件构成 (D002 portal 作者注释, adult-only 供者级主档); 区域混合口径, 禁跨区套用 (category_note)")
+                     "Denominator = human normal adult ocular surface (cornea/limbus/sclera super-class) capture event composition (D002 portal author annotation, adult-only donor-level master file); mixed-region definition, prohibits cross-region application (category_note)")
         r["a_measured"] = dict(donor_median_pct=o.get("donor_median_pct"), donor_iqr_pct=o.get("donor_iqr_pct"),
                                donor_range_pct=o.get("donor_range_pct"),
                                pooled_adult_only_ref=o.get("pooled_pct_for_reference_only"))
@@ -280,15 +280,15 @@ def build():
                                          unit_median=stroma_ref["d002_measured"]["unit_level_adult"]["median_pct"],
                                          source="ocular_surface.json stromal_keratocyte_reference (t_e1febb8e)")
         ocs_rows.append(r)
-    # 结膜子类披露行 + goblet no_evidence 行
-    ocs_rows.append(face_row("Conjunctival_epithelium(sub)", "结膜上皮 (D002 内子类)", None, None,
+    # Conjunctival subclass disclosure row + goblet no_evidence row
+    ocs_rows.append(face_row("Conjunctival_epithelium(sub)", "Conjunctival epithelium (sub-category within D002)", None, None,
         LIT["ocular_surface"]["_disclosure_conjunctival_epithelium"],
-        "D002 无独立结膜 super class (portal 标签归 Epithelium); 结膜基线=骨架待回填 (kb/baselines/conjunctiva.json)"))
-    ocs_rows.append(face_row("Goblet_cell", "杯状细胞", None, None,
+        "D002 lacks independent conjunctival super class (portal label assigned to Epithelium); conjunctival baseline = skeleton pending backfill (kb/baselines/conjunctiva.json)"))
+    ocs_rows.append(face_row("Goblet_cell", "Goblet cells", None, None,
         LIT["ocular_surface"]["_disclosure_goblet"],
-        "盘上无成人结膜杯状细胞组成定量文献句 → no_evidence, 禁编数"))
+        "No on-disk quantitative literature statement for adult conjunctival goblet cell composition → no_evidence, fabrication prohibited"))
 
-    # 三判据自检
+    # Three-criteria self-check
     all_pm = sorted({p for rows in (retina_rows+ocs_rows) for p in rows["pmids"]})
     ver = pmid_verify(all_pm)
     ledger = []
@@ -309,47 +309,47 @@ def build():
     face = {
      "schema": "eyekb-composition-face/0.1",
      "entry_id": "EXPECTED_COMPOSITION_v0",
-     "title": "组成先验面 v0 (D-1): 正常成人视网膜 + 正常成人眼表/角膜-结膜 — 文献派生, 默认 OFF",
+     "title": "Composition prior surface v0 (D-1): Normal adult retina + normal adult ocular surface/cornea-conjunctiva — literature-derived, default OFF",
      "generated": generated,
      "card": "t_fa03e1d7",
-     "authority": "USER_DIRECTIVE_20260928_eyekb_improve_wave.md 追加七B (D-1); 任务书 plans/comp_prior_20260928/BRIEF_DISC_COMP.md",
-     "wiring": "OFF — 未接线 (零 MCP/运行时引用; 接线与激活另卡另批, 本面任何激活须 PI 拍板)",
+     "authority": "USER_DIRECTIVE_20260928_eyekb_improve_wave.md appended Seven B (D-1); task brief plans/comp_prior_20260928/BRIEF_DISC_COMP.md",
+     "wiring": "OFF — not wired (zero MCP/runtime references; wiring and activation on separate cards/batches, any activation of this surface requires PI decision)",
      "status": "v0_candidate_selfcheck_only",
      "scope": {"species": "human", "organism_stage": "adult_only",
-               "disease_states": "不建 (PDR 注释不可靠口径维持; 疾病材料不得对照健康面验收, Astra T2 usage_scope)",
-               "fetal_organoid_developing": "数值折叠排除; 引用记录中显式标注排除原因 (32946783 organoid 句/39117640 developing/36645183 fetal)",
-               "tissues_out_of_v0": "其余组织留 v1"},
-     "evidence_grades": {"A": "registry 台账外部作者注释本地复算 (kb/baselines adult-only 供者级主档, 带路径)",
-                         "B": "盘上已入库 RAG 文献原文直接报告 (chunks 逐字句)",
-                         "C": "跨研究经验区间 (kb/priors/composition/human_retina.json, 卡 t_39182aa2)",
-                         "no_evidence": "无 A/B/C 可用 → 不编数"},
-     "lineage_declaration": "比例区间来源 = D001(HRCA)/D002(OcularSurface) portal 作者注释复算 (经 kb/baselines v1.1 adult-only 主档) + priors v1 经验区间 + 已入库文献原文句; 全程未使用自家聚类/自家 demo 注释 (禁循环条款)",
-     "interval_rule": "low=floor(min(donor_iqr_low, priors_expected_low, fold_lit_low)); high=ceil(max(donor_iqr_high, priors_expected_high, fold_lit_high)); mid=donor_median; 无来源行=null(no_evidence)",
-     "denominator_semantics": "面=该取样材料在该实验流程下捕获事件的构成参考 (身份参考+背景对照), 非组织学真值, 非组成达标线; 旗标=提示复核≠注释错误",
+               "disease_states": "Not built (PDR annotation unreliable caliber maintained; disease materials must not be validated against healthy surface, Astra T2 usage_scope)",
+               "fetal_organoid_developing": "Numerical folding excluded; exclusion reasons explicitly marked in citation records (32946783 organoid sentence/39117640 developing/36645183 fetal)",
+               "tissues_out_of_v0": "Remaining tissues left for v1"},
+     "evidence_grades": {"A": "Registry ledger external author annotations locally recalculated (kb/baselines adult-only donor-level main archive, with paths)",
+                         "B": "On-disk ingested RAG literature original text directly reported (chunks verbatim sentences)",
+                         "C": "Cross-study empirical intervals (kb/priors/composition/human_retina.json, card t_39182aa2)",
+                         "no_evidence": "No A/B/C available → do not fabricate numbers"},
+     "lineage_declaration": "Proportion interval source = D001(HRCA)/D002(OcularSurface) portal author annotation recalculation (via kb/baselines v1.1 adult-only main archive) + priors v1 empirical intervals + ingested literature original sentences; No self-clustering/self-demo annotations used throughout (anti-circularity clause)",
+     "interval_rule": "low=floor(min(donor_iqr_low, priors_expected_low, fold_lit_low)); high=ceil(max(donor_iqr_high, priors_expected_high, fold_lit_high)); mid=donor_median; no source row=null(no_evidence)",
+     "denominator_semantics": "Surface = composition reference of capture events for this sampling material under this experimental workflow (identity reference + background control), not histological ground truth, not composition compliance line; Flag = prompt for re-review ≠ annotation error",
      "pmid_verification": {"papers_jsonl": PAPERS, "sidecar": SIDECAR,
-                           "criteria": "j1=题录在 v2.4.2 papers.jsonl 可解析(题录三要素非空); j2=非幽灵(n_chunks>0); j3=入库可溯(vk 页∨sidecar∨papers.jsonl)",
+                           "criteria": "j1=bibliographic record parseable in v2.4.2 papers.jsonl (three bibliographic elements non-empty); j2=not ghost (n_chunks>0); j3=ingestion traceable (vk page ∨ sidecar ∨ papers.jsonl)",
                            "pmids_total": len(all_pm), "ledger_fail_rows": n_fail},
      "rows_missing_pmid": missing_pmid_rows,
      "activation_obligations": [
-       "OB-1 缺逐行 PMID 的行 (D002 portal 身份, 盘上无组成文献句): 见 rows_missing_pmid — 激活前须补文献或维持 OFF",
-       "OB-2 眼表面=区域混合超级类 (D002 口径), 激活接线时须按 tissue_group 分层出区间或按区域路由 (category_note 禁跨区套用)",
-       "OB-3 反向质检已触发 (Q1/Q2/Q3 健康集旗标率>20%, 见 COMP_SELFFLAG_20260928.md §3): v0 区间对跨平台/跨取材区域/分选设计过窄, 属面侧已知限制 — 激活前须分层/豁免规则化并过 PI 拍板"
+       "OB-1 Rows missing per-line PMID (D002 portal identity, no composition literature sentences on disk): See rows_missing_pmid — must supplement literature or maintain OFF before activation",
+       "OB-2 Ocular surface = regional mixed super-class (D002 caliber), when activating wiring, stratify intervals by tissue_group or route by region (category_note prohibits cross-region application)",
+       "OB-3 reverse QC triggered (Q1/Q2/Q3 healthy set flag rate >20%, see COMP_SELFFLAG_20260928.md §3): v0 intervals are too narrow for cross-platform/cross-sampling region/sorting designs, representing a known limitation on the surface side; stratification/exemption rules must be formalized and approved by PI before activation"
      ],
      "pages": {"retina_normal_adult_human": {
         "registry_anchor": "OA-D001 (HCA-HRCA-v1.0), PMID 41578023, path <STORE>/data/HRCA_cellxgene/HRCA_allcells_annotated.h5ad",
-        "donor_main": "kb/baselines/retina.json adult-only 主档 (97 donors)",
+        "donor_main": "kb/baselines/retina.json adult-only master file (97 donors)",
         "rows": retina_rows},
        "ocular_surface_normal_adult_human": {
         "registry_anchor": "OA-D002 (CELLxGENE-OcularSurface), path <STORE>/data/D002_ocularsurface/D002_allcells_578K.h5ad",
-        "donor_main": "kb/baselines/ocular_surface.json adult-only 主档 (41 donors/67 单元); 超级类区域混合口径禁跨区套用",
+        "donor_main": "kb/baselines/ocular_surface.json adult-only master file (41 donors/67 units); super-class mixed-region definition prohibits cross-region application",
         "rows": ocs_rows}},
      "caveats": [
-       "RGC/神经元类比例受核分选与建库设计影响 (NeuN±, RGC 富集) — 判异常前必查建库策略 (baselines caveat 继承)",
-       "snRNA(核) 与 scRNA(细胞) 类比例不可直接互比 (Astra T2)",
-       "眼表 Immune 仅 1.7% 池: 眼表固有免疫稀少, 免疫比例不可对照炎症样本",
-       "Corneal Endothelium 主档中位 0%: 纯 CEC 材料(碎块层) 分母=100%, 不适用本行",
-       "Goblet/结膜细节行 = 数据与文献双缺项, 已标 no_evidence",
-       "PAPER 41578023 (HRCA) n_chunks=1 (入库增量非全 chunk 化) — j2 勉强过, 内容锚不依赖它"],
+       "RGC/neuron-like proportions influenced by nuclear sorting and library design (NeuN±, RGC enrichment) — check library strategy before flagging anomalies (inherits baselines caveat)",
+       "snRNA (nucleus) and scRNA (cell) proportions cannot be directly compared (Astra T2)",
+       "Ocular surface Immune pool is only 1.7%: inherent immune scarcity in ocular surface, immune proportions cannot be benchmarked against inflammatory samples",
+       "Corneal Endothelium main archive median 0%: pure CEC material (fragment layer) denominator=100%, this row does not apply",
+       "Goblet/conjunctival detail rows = dual absence of data and literature, marked no_evidence",
+       "PAPER 41578023 (HRCA) n_chunks=1 (incremental ingestion, not full chunking) — j2 barely passes, content anchor does not rely on it"],
     }
     OUT.mkdir(exist_ok=True)
     (OUT/"EXPECTED_COMPOSITION_v0.json").write_text(json.dumps(face, ensure_ascii=False, indent=1), encoding="utf-8")

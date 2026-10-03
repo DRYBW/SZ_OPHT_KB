@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""render_matrix.py — 90 格占位矩阵三态图（house style；执行序②正式件，随批复入仓）。
+"""render_matrix.py — tri-state figure of the 90-cell placeholder matrix (house style; formal artifact of execution step 2, shipped with the ruling batch).
 
-行=6 物种（human/mouse ACTIVE + macaque/rat/rabbit/zebrafish RESERVED），
-列=15 canonical 组织（COORDINATE_TAXONOMY_v1.md §3，C1 批复面积 6×15=90）。
-数据源=matrix/MATRIX_GRID.json（build_matrix.py 产物，零手写）。
-状态色：EVIDENCE_READY(provisional)=蓝 / UNEXPLORED=绿 / PLACEHOLDER(RESERVED 物种)=橙 /
-无值=灰。本批激活=0——占位≠激活（执行序 5 如实口径直接写在图注）。
+Rows=6 species (human/mouse ACTIVE + macaque/rat/rabbit/zebrafish RESERVED),
+Columns = 15 canonical tissues (COORDINATE_TAXONOMY_v1.md §3, C1 approved area 6×15=90).
+Data source=matrix/MATRIX_GRID.json (output of build_matrix.py, zero manual entry).
+State colors: EVIDENCE_READY(provisional)=blue / UNEXPLORED=green / PLACEHOLDER(RESERVED species)=orange /
+No value = gray. This batch activation count = 0 — placeholder ≠ activation (Execution sequence 5 states this directly in figure captions).
 
-用法: python render_matrix.py [--out DIR]
+Usage: python render_matrix.py [--out DIR]
 """
 import argparse
 import json
@@ -21,7 +21,7 @@ from matplotlib import colors
 import numpy as np
 
 HERE = Path(__file__).resolve().parent          # pipeline/pitfalls/matrix
-REPO = HERE.parent.parent.parent                # 仓根
+REPO = HERE.parent.parent.parent                # repo root
 STYLE = REPO / "scripts" / "eyekb_house.mplstyle"
 GRID = json.loads((HERE / "MATRIX_GRID.json").read_text(encoding="utf-8"))
 
@@ -50,15 +50,15 @@ for i in range(len(SPECIES)):
         ax.text(j, i, lab, ha="center", va="center", fontsize=6.5,
                 color="white" if v == 3.0 else "#262626")
 handles = [plt.Rectangle((0, 0), 1, 1, color=cmap(n)) for n in [3.5, 0.5, 1.5, -0.5]]
-ax.legend(handles, ["EVIDENCE_READY(provisional, 6 格待人工审计门)", "UNEXPLORED(达标候选=0 如实)",
-                    "PLACEHOLDER(RESERVED 物种占位, C10)", "词表外=UNMAPPED(不入矩阵)"],
+ax.legend(handles, ["EVIDENCE_READY(provisional, 6 cells pending manual audit gate)", "UNEXPLORED(qualified candidates=0 as-is)",
+                    "PLACEHOLDER(RESERVED species placeholder, C10)", "Out-of-vocabulary = UNMAPPED (excluded from matrix)"],
           loc="upper right", bbox_to_anchor=(1.30, 1.0), fontsize=7.5, frameon=False)
 tally = GRID["grid_states_seen"]
-ax.set_title("物种×组织 90 格占位矩阵（C1/C10 批复面积=6×15；build_matrix.py 零手写）\n"
-             f"占位≠激活：本批激活=0｜ER={tally.get('EVIDENCE_READY',0)} provisional｜"
+ax.set_title("Species × tissue 90-cell placeholder matrix (C1/C10 approved area = 6×15; build_matrix.py zero hand-writing)\\n"
+             f"Placeholder ≠ activation: current batch activation=0 | ER={tally.get('EVIDENCE_READY',0)} provisional |"
              f"PH={tally.get('PLACEHOLDER',0)} RESERVED｜UN={tally.get('UNEXPLORED',0)}",
              fontsize=9.5)
-ax.set_xlabel("canonical tissue（v1 §3 定案 15 面）")
+ax.set_xlabel("canonical tissue (v1 §3 finalized 15 facets)")
 fig.tight_layout()
 ap = argparse.ArgumentParser()
 ap.add_argument("--out", default=str(HERE))

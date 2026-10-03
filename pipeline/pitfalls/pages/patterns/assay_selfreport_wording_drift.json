@@ -16,10 +16,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "平台自报措辞（核悬液/细胞悬液）与实际制备不符→核-细胞平台轴错归：ambient 校正与稀有类先验按错平台反向套用",
-   "observable_signature": "案例登记：一处盘上注记页眉标 snRNA-seq，一手摘要与 GEO Series 明文均为细胞悬液（~93,000 cells 口径），按措辞误差裁决并勘误留痕（原件不回改）；同 dataset 平台判读修正牵动两处既有误记",
+   "failure_mode": "Platform self-reported wording (single-nucleus suspension/cell suspension) inconsistent with actual preparation → nucleus-cell platform axis misattribution: ambient correction and rare-class priors applied inversely based on wrong platform.",
+   "observable_signature": "Case registration: one disk annotation header labeled snRNA-seq, while primary abstract and GEO Series explicitly stated cell suspension (~93,000 cells scale); adjudicated as wording error with audit trail correction (originals not modified); platform reading correction for the same dataset triggered two existing misrecords.",
    "risk_level": "high",
-   "mitigation": "平台词条以一手摘要+GEO 系列明文逐面确认，注记/页眉仅作线索；实测与自报冲突→登记勘误不回改原件；消费侧核-细胞轴前先逐面确认一次",
+   "mitigation": "Platform entries confirmed face-by-face via primary abstract + GEO series explicit text; annotations/headers serve only as clues; conflict between measured and self-reported → register correction without modifying originals; consumer side must confirm face-by-face once before nucleus-cell axis application.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -33,16 +33,16 @@
    "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "/mnt/D/EyeKB/plans/compv1x_20260930/COMPV1X_REPORT.md Q2 裁决节"
+    "/mnt/D/EyeKB/plans/compv1x_20260930/COMPV1X_REPORT.md Q2 Adjudication Section"
    ],
    "conflicts": [],
    "provenance": {
     "origin_cell": "b2_stock_20260930",
     "b1_order": 1,
-    "legacy_grade": "A库内实证",
+    "legacy_grade": "Empirical evidence in Library A",
     "legacy_code_in_legend": "PIT-E1",
     "report_confidence": "high",
-    "home_rationale": "平台措辞误差跨组织普适（assay 轴正打自家平台标注误差教训=astra T1 定向；v0 词表 bulk/snRNA 混用风险同型）"
+    "home_rationale": "Platform wording errors are universal across tissues (assay axis directly hits own platform labeling error lesson = astra T1 orientation; v0 vocabulary bulk/snRNA mixing risk is homologous)"
    }
   }
  ],
