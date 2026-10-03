@@ -1,61 +1,61 @@
-# USER_DIRECTIVE 2026-09-25：EyeKB 下游批量放行（PI "ok"，项目维护方 AGENT_ROLE 代录）
+# USER_DIRECTIVE 2026-09-25: EyeKB downstream batch release (PI "ok"; recorded on the PI's behalf by the project maintainer AGENT_ROLE)
 
-## 语义
-PI 对项目维护方列出的 7 项待办（大白话清单）回复 "ok"。按既定决定语义 = **整条下游链授权**：
-凡清单中带"建议"的项按建议落地；无建议项不自动开工（见"后置"）。
+## Semantics
+The PI replied "ok" to the 7 pending items (plain-language checklist) the project maintainer listed. Per the established decision semantics = **authorization of the entire downstream chain**:
+items on the checklist marked "recommended" land as recommended; items without a recommendation do not auto-start (see "Deferred").
 
-## 放行项（本 directive 生效范围）
+## Released items (scope of this directive)
 
-| # | 决定 | 执行落点 |
+| # | Decision | Execution landing |
 |---|---|---|
-| D1 | KB6 审计 17 条红词条，**按 REVCAND_KB6_v2.tsv 修订候选表照单修**（重写/降级/删除按候选表建议；逐基因文献门照 KB4 六必修格式） | 卡 KB7（与 D2B1/D3 合并，同领地单卡防双写） |
-| D2 | 附属器入库：**A1 泪腺 + A2 睑板腺 = 收**；A3 眼眶脂肪挂起；A4 眼外肌不收；**B1 眼表词条内增量 = 即做**（并入 KB7 卡） | A1/A2 先派检索预检卡（零下载，出 accession+体积实测+直链清单**再报批**）；下载动作另行审批，禁自动执行 |
-| D3 | **v6 面板卡开**：MG 重导出候选 7 基因、RGC 观察名单（UCHL1/STMN2/PRPH/SNCG；反例 PVALB/PCP4 禁作 RGC）、Astro 候选（TNC/CLDN11/MGST1/GYPC）、眼表基质存活锚（KERA 真锚 + COX4I2/PCP4/DCN 双队列候选）入池，逐基因过文献门+OLS 回证后版本化发布 | KB7 卡 |
-| D4 | **两条软提示上 MCP**：a) rod 主导却判 BC 簇 -> 复核提醒；b) mural 家族（Pericyte/SMC/Fibroblast/Keratocyte/Myofibroblast）共 marker 串扰 -> 复核提醒。不设硬旗标、不改打分 | 软提示卡 |
-| D5 | Q2 外部评估主口径 = **维持 alpha**（C19 不逐出，A 64%/B 76%，与 USER_DIRECTIVE_20260924_q2_maincaliber.md 现行头条口径一致）；beta 作敏感性口径并列保留，引用任一数字须标口径 | 记账性决定，无计算 |
+| D1 | Of the KB6 audit, the 17 red entries are **revised per the REVCAND_KB6_v2.tsv revision-candidate table** (rewrite/downgrade/delete per the candidate table's suggestions; per-gene literature gates follow the KB4 six-mandatory format) | card KB7 (merged with D2 B1/D3; one card per territory to prevent double-writing) |
+| D2 | Adnexa ingestion: **A1 lacrimal gland + A2 meibomian gland = accept**; A3 orbital fat on hold; A4 extraocular muscle not accepted; **B1 ocular-surface entry increment = do immediately** (folded into the KB7 card) | A1/A2 first get a retrieval-precheck card (zero downloads; produce accession + measured volume + direct-link list, **then seek approval**); download actions need separate approval; automatic execution prohibited |
+| D3 | **v6 panel card opened**: the 7 genes of the MG re-export candidates, the RGC watchlist (UCHL1/STMN2/PRPH/SNCG; counter-examples PVALB/PCP4 banned as RGC), the Astro candidates (TNC/CLDN11/MGST1/GYPC), and the ocular-surface stroma surviving anchors (KERA true anchor + COX4I2/PCP4/DCN dual-cohort candidates) enter the pool; each gene passes the literature gate + OLS back-verification, then releases versioned | KB7 card |
+| D4 | **Two soft prompts onto MCP**: a) rod-dominant yet judged-BC clusters → review reminder; b) mural family (Pericyte/SMC/Fibroblast/Keratocyte/Myofibroblast) shared-marker crosstalk → review reminder. No hard flags, no scoring changes | soft-prompt card |
+| D5 | The Q2 external-evaluation primary caliber = **maintain alpha** (C19 not expelled, A 64%/B 76%, consistent with the current headline caliber of USER_DIRECTIVE_20260924_q2_maincaliber.md); beta is kept in parallel as a sensitivity caliber; any cited number must state its caliber | bookkeeping decision, no computation |
 
-## 后置（未放行，等 PI 点名）
-- 三条考卷规则提案（证据面引入模型分布 / top20 窗口截断 / 题面质量旗）——动 face 协议需重新预注册，等勾选。
-- P1 demo 审阅、鼠版注释模型、M1 论文开工——等 PI 日程。
+## Deferred (not released; awaiting the PI's call)
+- The three exam-paper rule proposals (putting the model distribution on the evidence surface / top20 window truncation / question-surface quality flags) — they touch the face protocol and need a fresh pre-registration; awaiting the checkboxes.
+- P1 demo review, mouse annotation model, starting the M1 paper — awaiting the PI's schedule.
 
-## 纪律红线（继承，全部写进任务书）
-1. 下载审批铁律：>1GB 先列清单获 PI 批准，禁静默下载；批准入库 != 批准下载。
-2. 冻结件零改动：面板 JSON 版本化另立新文件，禁原地覆盖；红条修订走 .bak 前像 + sha 记录表。
-3. CL 号一律 OLS 回证（含本 directive 与任务书内任何标识符，执行侧禁照抄）。
-4. 自检球门不降、禁调阈值凑命中；不达即如实 FAIL 不发布。
-5. 执行脚本 完成或遇阻必须调 kanban_complete/kanban_block 落卡（前科 3 次）。
-6. 中间产物（脚本/日志/图表/中间表）全保留禁删。
+## Discipline red lines (inherited, all written into the task briefs)
+1. Download-approval iron rule: >1GB requires listing the inventory and getting PI approval first; silent downloads prohibited; approved-for-ingestion != approved-for-download.
+2. Zero modification of frozen artifacts: panels get versioned new files; in-place overwriting prohibited; red-entry revisions go through .bak pre-images + a sha record table.
+3. All CL IDs must be OLS back-verified (including any identifier in this directive and in task briefs; the executing side must not copy them as-is).
+4. Self-check gates are never lowered; tuning thresholds to force hits is prohibited; if not met, report FAIL honestly and do not publish.
+5. The runner script must call kanban_complete/kanban_block to land the card upon completion or when blocked (3 prior offenses).
+6. All intermediate artifacts (scripts/logs/figures/intermediate tables) are retained; deletion prohibited.
 
-## 状态
-- PI 语义：2026-09-25 对 7 项大白话清单回复 ok（MSG_PLATFORM）
-- 生效：即时
-- D5 为项目维护方按 09-24 directive 现状默认落定（alpha），PI 可随时改判 beta。
+## Status
+- PI semantics: 2026-09-25, replied ok to the 7-item plain-language checklist (MSG_PLATFORM)
+- Effective: immediately
+- D5 was settled by the project maintainer as the current-state default (alpha) per the 09-24 directive; the PI may re-rule to beta at any time.
 
-## 追加（同日第二波）：PI "不用下载，你还能干啥，你干了"
-= 零下载可推进项全量放行，三卡齐发（均只读/轻计算，不触任何未授权写动作）：
-- t_（FACEQUANT）三条考卷规则提案的盘上反事实量化 -> 产出勾选表供 PI 决策；**本波不等于放行协议改动本身**，提案仍待 PI 勾选。
-- t_（MOUSE-PRE）鼠版模型前置预检+三档报价设计书（GSE243413 在盘零下载）；**不训练不建版**，GO 仍待 PI 看报价决定。
-- t_（M1-PREP）M1 素材索引+图表骨架+缺口清单（只读+web 检索）；**不写正文**，开工仍待 PI 点名。
-附属器 DNA：ADNEXA 预检卡照常出报批清单（清单本身零下载）。
+## Supplement (second wave, same day): PI "no downloads needed — whatever else you can do, do it"
+= full release of everything that can progress with zero downloads; three cards dispatched (all read-only/light compute, touching no unauthorized writes):
+- t_ (FACEQUANT) on-disk counterfactual quantification of the three exam-paper rule proposals → produce a checkbox sheet for the PI; **this wave does not release the protocol changes themselves**; the proposals still await the PI's checkboxes.
+- t_ (MOUSE-PRE) mouse-model prerequisite precheck + three-tier cost-quote design (GSE243413 on disk, zero downloads); **no training, no version build**; GO still awaits the PI seeing the quotes.
+- t_ (M1-PREP) M1 materials index + figure skeleton + gap list (read-only + web retrieval); **no body text written**; starting still awaits the PI's call.
+Adnexa DNA: the ADNEXA precheck card produces the approval-request list as usual (the list itself is zero-download).
 
-## 追加二（同日 16:4x）：附属器下载裁决 = "mb 的可以，gb 就算了"
-- **批准（MB 级，共约 140MB）**：GSE164403（泪腺唯一真图谱 13.9MB，P0）、GSE252058（泪囊疾病参考 93.4MB）、GSE174653（类器官 7.9MB）、GSE17822（睑板腺 MGD 芯片 10.2MB）、GSE288952（MG 细胞系 14.8MB）。
-- **本轮不批（GB 级，维持挂起，勿再列）**：Tabula Sapiens Eye 子集 1.4GB、SRP497138 睑板腺 scRNA 171.7GB。
-- 边界说明：C 臂线 GSE199013 角膜层 0.1095GB 属既有"<1GB 免批"纪律范围（已由 t_d8a41542/t_be247578 平行线处理），与本裁决不冲突。
-- 三波随之发车：ADNEXA-DOWN（批品下载入库）、KB7-WIRE（v6 接线 MCP+软提示合稿发布）、HC-LITRE（HC 8 候选+统计强文献弱名单再审计）。
+## Supplement 2 (same day 16:4x): adnexa download ruling = "the MB-scale ones are fine, forget the GB ones"
+- **Approved (MB-scale, ~140MB total)**: GSE164403 (the only true human lacrimal atlas, 13.9MB, P0), GSE252058 (lacrimal sac disease reference, 93.4MB), GSE174653 (organoid, 7.9MB), GSE17822 (meibomian gland MGD microarray, 10.2MB), GSE288952 (MG cell line, 14.8MB).
+- **Not approved this round (GB-scale, stay on hold; do not re-list)**: Tabula Sapiens Eye subset 1.4GB, SRP497138 meibomian scRNA 171.7GB.
+- Boundary note: the C-arm line GSE199013 corneal layers 0.1095GB falls within the existing "<1GB approval-free" discipline (already handled by the parallel lines t_d8a41542/t_be247578) and does not conflict with this ruling.
+- Wave three launches accordingly: ADNEXA-DOWN (download/ingest the approved items), KB7-WIRE (v6 wired into MCP + soft-prompt consolidated release), HC-LITRE (HC 8 candidates + statistically-strong-literature-weak list re-audit).
 
-## 追加三（同日傍晚）：PI "可以走" = 两枚放行
-- **D6 三提案勾选 = 按建议档 1B / 2B / 3A**（1B 模型预测仅 ≥0.9 高置信 hint 上证据面；2B 面板命中优先占位、窗口仍 20；3A 题面纯描述旗不过滤）。依据件=plans/face_protocol_quant_20260925/FACE_QUANT_FOR_PI.md 卷尾勾选表；勾选≠生效，仍需新预注册（FACE_QUANT 红线声明）。
-- **D7 鼠版中档 GO**（复建 v1.4 口径 10 类 production 模型+BMR 前瞻 agreement 报告制+轻档自然覆盖；重档不启动=无 GB 下载）。
-- KB8 泪腺词条卡（t_e7ec73ab）先行发车在跑；随 D6/D7 发 PREREG-FACEV2 卡与 MOUSE-MID 卡。
+## Supplement 3 (same day evening): PI "you can go ahead" = two releases
+- **D6 three-proposal checkboxes = per the recommended tiers 1B / 2B / 3A** (1B: model prediction enters the evidence surface only as a ≥0.9 high-confidence hint; 2B: panel hits get priority slots, window stays 20; 3A: purely descriptive question-surface flags, no filtering). Basis document = plans/face_protocol_quant_20260925/FACE_QUANT_FOR_PI.md tail-end checkbox table; checkbox ≠ effective — a fresh pre-registration is still required (the FACE_QUANT red-line statement).
+- **D7 mouse mid-tier GO** (rebuild the v1.4-caliber 10-class production model + BMR prospective agreement report-style + light-tier natural coverage; the heavy tier does not start = no GB downloads).
+- The KB8 lacrimal-entry card (t_e7ec73ab) launches first and is running; the PREREG-FACEV2 card and the MOUSE-MID card launch with D6/D7.
 
-## 追加四（同日晚）：PI "好" = 疗效重考链放行（D8）
-- **D8 = 双系列重考 GO**：①RUN6-B 眼表 33 簇重测（在 Q6_VOCAB2 冻结预注册框架内：v6 眼表词条+证据面 v2.0+两条软提示的真实流量跟票测量，基线=RUN5 21/33 与 P2 1/33）；②RUN7-RG 视网膜 22 热点靶重测（**新预注册先 sha 后跑**：v6 修复词条+face_v2 证据面，同靶同球门 >=15/22 一字不降，三票协议 RUN4-r 同款复用，基线=RUN4-r 15/22）。
-- 口径红线（预注册内写死）：本轮=疗效验证非生效宣告——**命中率提升数字出来前，对外不得写"修复提升 X%"**；RUN5/RUN4 原始 FAIL 档保持永久留档对照；软提示跟票率首次真实测量，触发率过高/过低都如实报告禁调参。
-- v6/泪腺词条的 MCP **激活切换仍不在本文档**——等两系列数字回来后由 PI 拍激活批。
+## Supplement 4 (same day late night): PI "good" = efficacy re-exam chain released (D8)
+- **D8 = dual-series re-exam GO**: ① RUN6-B ocular surface, 33 clusters re-tested (within the Q6_VOCAB2 frozen pre-registration framework: v6 ocular-surface entries + evidence surface v2.0 + the two soft prompts measured by ballot tracking on live traffic; baselines = RUN5 21/33 and P2 1/33); ② RUN7-RG retina, 22 hotspot targets re-tested (**fresh pre-registration, sha before run**: v6 repaired entries + face_v2 evidence surface; same targets same gate >=15/22 not lowered by one character; the three-ballot protocol reused as-is from RUN4-r; baseline = RUN4-r 15/22).
+- Caliber red line (hard-coded in the pre-registration): this round = efficacy validation, not a go-live declaration — **until the hit-rate-improvement numbers exist, external material must not write "repairs improved X%"**; the original RUN5/RUN4 FAIL files stay archived permanently as controls; the soft-prompt ballot-tracking rate is measured on live traffic for the first time — a trigger rate too high or too low is both reported honestly, no parameter tuning.
+- The MCP **activation switch for v6/lacrimal entries is still not part of this document** — after the two series' numbers return, the PI rules on the activation approval.
 
-## 追加五（09-25 深夜）：PI "你继续做" = D9 三项处置
-- **D9.1 face v2.1 拆弹重考=放行**：按 RUN7RG 所列三修补点做 v2.1（3A 旗加"禁用作降级依据"指令行、Q7 跨物种簇撤 v6 ranking 或补 ortholog 回证、RPE×BC 冲突给 resolution 判序细化），**新预注册先 sha 后跑**；球门一字不降（R1>=15/22、R2<=1/23）。判读矩阵预授权：双线全过 -> 产出"激活提案包"（含建议文案）**等 PI 拍激活，不自动切**；任一线不过 -> FAIL 落卡上报，**禁自行第三轮重测（防移动球门）**。
-- **D9.2 软提示行为学发现=入 M1 素材，不升硬**：mural note 被 23/24 票引用但 Q6::24 三席仍判 SMC——"看见并引用但不改判"是协议层负结果，作为 M1 讨论节素材（plans/m1_prep_20260925/M1_ADDENDUM_D9_20260926.md）；措辞升级/并入投票制等 v2.1 数字回来再议。
-- **D9.3 基因先验歧义（GLUL/VIM/CLU 共表达）=入 M1 素材+挂账**，不单开卡；若激活提案获批后再评估是否立"先验层"研究线。
-- GitHub 私人仓维持就绪态，**PI 给 fine-grained token 即 push**（不阻塞以上任何一项）。
+## Supplement 5 (09-25 late night): PI "keep going" = the three D9 dispositions
+- **D9.1 face v2.1 defuse-and-retest = released**: build v2.1 per the three repair points listed by RUN7RG (add a "must not be used as a downgrade basis" directive line to the 3A flag; either withdraw v6 ranking for the cross-species Q7 cluster or add ortholog back-verification; refine the resolution rule order for the RPE×BC conflict), **fresh pre-registration, sha before run**; gates not lowered by one character (R1>=15/22, R2<=1/23). Reading-matrix pre-authorization: both lines pass → produce the "activation proposal pack" (including recommended wording) and **await the PI's activation ruling; no automatic switch**; either line fails → FAIL lands on the card and is escalated; **no self-initiated third re-test round (anti goal-post-moving)**.
+- **D9.2 soft-prompt behavioral finding = into M1 materials, not hardened**: the mural note was cited in 23/24 ballots yet all three seats on Q6::24 still judged SMC — "saw and cited it but did not change the judgment" is a protocol-level negative result, kept as M1 discussion-section material (plans/m1_prep_20260925/M1_ADDENDUM_D9_20260926.md); wording upgrades / folding into the voting system are revisited once the v2.1 numbers return.
+- **D9.3 gene-prior ambiguity (GLUL/VIM/CLU co-expression) = into M1 materials + logged open**, no standalone card; if the activation proposal is approved, then evaluate opening a "prior layer" research line.
+- The GitHub private repo stays ready; **push the moment the PI supplies the fine-grained token** (blocks none of the above).

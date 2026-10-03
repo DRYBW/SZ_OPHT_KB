@@ -1,40 +1,40 @@
-# USER_DIRECTIVE_20260927_scoring_wave — 打分实验完成+测试改进波放行
+# USER_DIRECTIVE_20260927_scoring_wave — scoring experiments completed + testing/improvement wave released
 
-## PI 原话语义（2026-09-27）
-- "不是代替，是辅助""还是有点用的" = 打分实验档位终裁 **V2+/W2**（仅离线审计用途，生产零接线），已 append 落 E1_VERDICT §9 / E2_VERDICT §9。
-- "继续把E2收掉再测试、改进" = 放行本波四卡：E2 尾账（S5 口径）完成 + 辅助用途正式化测试 + 眼表词条建设 + 面板证据链补录。
+## Meaning of the PI's words (2026-09-27)
+- "Not a replacement — an aid" / "still somewhat useful" = the scoring-experiment tier final ruling **V2+/W2** (offline-audit use only, zero production wiring), already appended to E1_VERDICT §9 / E2_VERDICT §9.
+- "Finish E2 first, then keep testing and improving" = releases this wave's four cards: E2 tail accounting (S5 caliber) completed + formalization test of the auxiliary use + ocular-surface entry build + panel evidence-chain backfill.
 
-## 须继承的裁决清单（各卡强制继承，逐条核对）
-1. E1 裁决（plans/evidence_scoring_20260926/E1_VERDICT.md +§9）：表面 +16.8pp 系 Q5b 面板同源+lit 背答案垫高；替代路线关闭。
-2. E2 裁决（plans/e2_decontam_20260926/E2_VERDICT.md +§9）：W2 生效；干净 Δ+7.66pp vs 两席共识 / −6.63pp vs 最强单席（否决列恒定）；观测性底座=AB 弃权 85 行证据具名 48/对 41（85.4%）。
-3. 证据消费纪律 v2（USER_DIRECTIVE_20260926_redline_rewrite.md）：判分/裁定侧禁食同源证据；打分栈生产化须 PI 另批；冻结件不回改。
-4. 激活现状（USER_DIRECTIVE_20260926_activation.md）：face v2.1=eval_only，疗效数字禁外推线上；本波一切产物不触生产路径。
-5. CL 命名规范（USER_DIRECTIVE_20260924_cell_ontology_naming.md）：新词条必挂 CL id，OLS 回证，禁凭记忆写号。
-6. 发布三段式：本波=建设/测试侧，kb/ 注册、接线、激活一律另卡等 PI。
+## List of rulings each card must inherit (mandatory per card, checked item by item)
+1. E1 ruling (plans/evidence_scoring_20260926/E1_VERDICT.md +§9): the surface +16.8pp was inflated by Q5b panel same-sourcing + the lit channel reciting the answer key; the replacement route is closed.
+2. E2 ruling (plans/e2_decontam_20260926/E2_VERDICT.md +§9): W2 in force; clean Δ+7.66pp vs two-seat consensus / −6.63pp vs the strongest single seat (the veto column constant); observational base = AB abstention 85 rows, evidence named in 48, correct in 41 (85.4%).
+3. Evidence-consumption discipline v2 (USER_DIRECTIVE_20260926_redline_rewrite.md): the scoring/adjudication side banned from same-source evidence; productionizing any scoring stack needs separate PI approval; frozen artifacts not rewritten.
+4. Activation status (USER_DIRECTIVE_20260926_activation.md): face v2.1 = eval_only; efficacy numbers must not be extrapolated to live; nothing in this wave touches the production path.
+5. CL naming norms (USER_DIRECTIVE_20260924_cell_ontology_naming.md): new entries must carry a CL id, OLS back-verified; writing numbers from memory is prohibited.
+6. Three-stage release: this wave = build/test side; kb/ registration, wiring, and activation are all separate cards awaiting the PI.
 
-## 本波四卡（D1-D4）
-| # | 卡 | 干什么 | 边界 |
+## This wave's four cards (D1-D4)
+| # | Card | What it does | Boundary |
 |---|---|---|---|
-| D1 | E2R | S5 宽容口径完成：120 对 pmid_context 命中逐对身份核验，出三口径水分区间 | 不改 W 档，零生产写 |
-| D2 | E3 | 弃权带回捞"辅助"用途正式化预注册测试（含规则改良臂），产出审计 SOP 草案 | 禁接线，全阴性合法 |
-| D3 | KB9 | 眼表词条缺口建设（Melanocyte/Schwann 零词条等），build/ 隔离+火灾审计+Q6 同球门自检 | 禁写 kb/，注册另卡 |
-| D4 | PME | 338 对无记录文献先验逐对补可验证外链 sidecar（v4.1 八类优先） | 面板字节不动，禁下载全文 |
+| D1 | E2R | complete the S5 permissive caliber: identity-verify each of the 120 pmid_context hit pairs; produce the three-caliber inflation interval | no change to the W tier, zero production writes |
+| D2 | E3 | pre-registered formalization test of the abstention-recall "aid" use (incl. a rule-improvement arm); produce the audit SOP draft | wiring prohibited; an all-negative outcome is legitimate |
+| D3 | KB9 | build the ocular-surface entry gaps (Melanocyte/Schwann zero entries etc.), build/ isolation + fire audit + same-gate Q6 self-check | writing kb/ prohibited; registration is a separate card |
+| D4 | PME | for each of the 338 literature-prior pairs with no record, add a verifiable external-link sidecar (v4.1's eight classes first) | panel bytes untouched, full-text downloads prohibited |
 
-## 后置（不因放行自动开工）
-- 任何生产接线/激活卡：等本波完成 + PI 点名。
-- A2 T+7 周报（10-03 cron）与 A4 一月复盘：不受本波影响。
-- 泪腺维持不切激活（A3 沿旧）。
+## Deferred (no automatic start from this release)
+- Any production-wiring/activation card: await this wave's completion + the PI's call.
+- The A2 T+7 weekly report (10-03 cron) and the A4 one-month retrospective: unaffected by this wave.
+- Lacrimal stays not-activated (A3 per the old decision).
 
-## 追加一（2026-09-27 午后，PI 三项决定+新课题）
-PI 原话："可以，那还是有点用的吧"（=三项照建议）+"你看看 rag 现在能不能用于单细胞注释"+"REVIEWER_LLM 可以临时给 qwen3.8max"。
-- D5 SOP 定稿：E3 双层结构（现役臂主通道+改良臂高置信子层）按草案定稿，**零接线不变**；定稿件 AUDIT_SOP_v1.0.md（copy 不 move，DRAFT 留档）。
-- D6a KB9 复核补送：原 REVIEWER_LLM 送审件（kb9 out/REVIEWER_LLMrecheck_prompt.txt）重送；LLM_CHANNEL通道仍 503 时**PI 预授权降级 qwen3.8max（LLM_CHANNEL）代审**，回稿登记"临时裁定者=模型名"，不冒充 REVIEWER_LLM。
-- D6b TIE-PROTO 前置卡：弃权带 11 miss 中 8 个为 tie/弃权协议结构位——盘上票面反事实量化+协议候选（破平规则/grade 权重/法定人数）提案书，**不改现行三票协议**，勾选归 PI。
-- D7 PME 第二批：103 键（weak 优先），中等档口径（"expressed in"算支持）由 PI 锁定为现行口径；别名表若开须全类对称。
-- D8 RAG-ANNOT 评估卡（PI 新问题）：盘上证据+外部文献回答"RAG 现在能不能用于单细胞注释"，四形态分层（判读证据面已用/自由查询未测/打分侧已裁 W2/外部同类对照），一页可用性评估+缺口清单，不跑新评测不接线。
+## Supplement 1 (2026-09-27 afternoon; three PI decisions + a new question)
+PI as-is: "Fine — so it is still somewhat useful, right?" (= all three items per the recommendations) + "take a look at whether RAG can now be used for single-cell annotation" + "REVIEWER_LLM may temporarily use qwen3.8max".
+- D5 SOP finalization: the E3 two-layer structure (incumbent-arm main channel + improved-arm high-confidence sublayer) is finalized per the draft, **zero wiring unchanged**; finalized document AUDIT_SOP_v1.0.md (copy not move; the DRAFT stays archived).
+- D6a KB9 review resend: resubmit the original REVIEWER_LLM review submission (kb9 out/REVIEWER_LLMrecheck_prompt.txt); if the LLM_CHANNEL is still 503, **the PI pre-authorizes downgrading to qwen3.8max (LLM_CHANNEL) to review in its stead**; the returned ruling registers "temporary adjudicator = model name" and does not impersonate REVIEWER_LLM.
+- D6b TIE-PROTO prerequisite card: 8 of the 11 misses in the abstention band are tie/abstention protocol-structural positions — on-disk ballot counterfactual quantification + a protocol-candidate (tie-breaking rule / grade weights / quorum) proposal, **no change to the current three-ballot protocol**; the checkbox decision belongs to the PI.
+- D7 PME second batch: 103 keys (weak first); the medium-tier caliber ("expressed in" counts as support) is locked by the PI as the current caliber; if an alias table is opened it must be symmetric across all classes.
+- D8 RAG-ANNOT assessment card (the PI's new question): answer, from on-disk evidence + external literature, "can RAG be used for single-cell annotation now"; four-form stratification (evidence surface already in use / free query untested / scoring side already ruled W2 / external same-kind comparison); one-page usability assessment + gap list; no new evaluations run, no wiring.
 
-## 追加二（2026-09-27 午后，PI 四项批量放行："ok，提高效率"）
-- **D9 B 形态验证=GO**：按 RAGANNO §B 设计预注册执行（FACEV21 冻结面 45 簇、三席、稳定性门先行、球门不降）。分叉代拍（可否决）：主判读=现行 C4 票规（保 15/19 基线可比），C2b 机械另算并列同表，零额外席位票。
-- **D10 KB9 注册包=续推**：按 REVIEWER_LLM 14 条接受项重装后送二审。**A02 红线操作定义按建议措辞落定**：判读/取证侧允许标签派生的适用性/屏蔽规则（注册与报告须自带"开发集自检"限定声明）；判分/裁定侧禁食标签派生证据；离线审计 SOP 为唯一例外且限 W2 边界。
-- **D11 投票协议 v2=C2b 主档批准**：向前生效（本协议件落款日之后预注册的 run 起），历史冻结裁决不回改；D9 的 run 按"主读 C4+并列 C2b"处理。
-- **D12** A04 独立眼表验证线=缓立（注册包二审过后再议）；A10 旁挂表替代设计=不采。
+## Supplement 2 (2026-09-27 afternoon; four-item batch release by the PI: "ok, improve efficiency")
+- **D9 B-form validation = GO**: execute per the RAGANNO §B design pre-registration (the FACEV21 frozen surface, 45 clusters, three seats, stability gate first, gates not lowered). Fork decided on the PI's behalf (vetoable): primary read = the current C4 ballot rules (preserving the 15/19 baseline comparability); C2b computed mechanically and shown in parallel in the same table; zero extra seat ballots.
+- **D10 KB9 registration package = proceed**: reinstall per the 14 REVIEWER_LLM accepted items, then send for second review. **The A02 red-line operational definition is settled as recommended**: the reading/evidence-gathering side may use label-derived applicability/blocking rules (registration and reports must carry the "development-set self-check" qualifier); the scoring/adjudication side is banned from label-derived evidence; the offline-audit SOP is the sole exception, bounded by W2.
+- **D11 Voting protocol v2 = C2b approved as the master rule**: effective going forward (from runs pre-registered after this document's sign-off date); historical frozen rulings not rewritten; D9's run is handled as "primary read C4 + C2b in parallel".
+- **D12** the A04 independent ocular-surface validation line = deferred (revisit after the registration package passes second review); the A10 sidecar-table alternative design = not adopted.

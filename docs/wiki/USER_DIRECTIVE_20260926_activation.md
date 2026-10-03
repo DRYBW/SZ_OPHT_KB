@@ -1,27 +1,27 @@
-# USER_DIRECTIVE_20260926 — 激活决定（v6 视网膜 + face v2.1 + 眼表 v6 切 MCP）
+# USER_DIRECTIVE_20260926 — activation decision (v6 retina + face v2.1 + ocular-surface v6 switched into MCP)
 
-- 决定时间：2026-09-26（PI 回话原语："批准"，对象=项目维护方三项目建议清单，按建议票整链放行）
-- 依据件：/mnt/D/EyeKB/plans/face_v21_20260926/ACTIVATION_PROPOSAL_v21_DRAFT.md（FACEV21 卡 t_7ae5c3d4 裁决 PASS 产物）
-- 承接：USER_DIRECTIVE_20260925_eyekb_downstream_batch.md 追加四/追加五（D8 双系列重考 + D9.1 拆弹重考与判读矩阵预授权）——本件即判读矩阵 PASS 分支的预授权兑现
+- Decision time: 2026-09-26 (PI's as-is reply: "approved", applied to the project maintainer's three-item recommendation list; whole-chain release along the recommendation ballots)
+- Basis document: /mnt/D/EyeKB/plans/face_v21_20260926/ACTIVATION_PROPOSAL_v21_DRAFT.md (the PASS artifact of FACEV21 card t_7ae5c3d4)
+- Continues: USER_DIRECTIVE_20260925_eyekb_downstream_batch.md Supplements 4/5 (D8 dual-series re-exam + D9.1 defuse retest and reading-matrix pre-authorization) — this document is exactly the pre-authorization honored on the reading-matrix PASS branch
 
-## 决定表
+## Decision table
 
-| # | 决定 | 执行落点 |
+| # | Decision | Execution landing |
 |---|---|---|
-| A1 | **批准**：v6 视网膜词条（markers_v6_retina_repair.json）+ FACE_PROTOCOL_V2.1 渲染规则切 MCP 激活（默认 all 纳入） | 激活卡（本 directive 派发） |
-| A2 | **批准+观察条款**：v6 眼表词条（markers_v6_face_increment.json）切激活；激活后一周真实流量跟票采样，触发率异常即回退（沿用 RUN6-B 口径，不新增阈值） | 激活卡 + 后续跟票采样卡（激活收卡后项目维护方另派） |
-| A3 | **暂不切**：泪腺增量词条 markers_v6_lacrimal_increment.json 维持登记不激活（无疗效数字）；勿在本轮接线，勿再重复上报 | 挂账待评估 |
-| A4 | 一月疗效复盘卡：激活后另行派发（不随本波） | 后置 |
-| A5 | 回退预案：激活必须做成可开关（env/配置级），回退动作=默认恢复现役三库行为；sf13 off 态规范序列化与 pre_change 基线全等为机读验收件 | 激活卡验收项 |
+| A1 | **Approved**: switch v6 retina entries (markers_v6_retina_repair.json) + the FACE_PROTOCOL_V2.1 rendering rules to MCP activation (included in the default all) | activation card (dispatched by this directive) |
+| A2 | **Approved + observation clause**: switch v6 ocular-surface entries (markers_v6_face_increment.json) to activation; after activation, one week of ballot-tracking sampling on live traffic — an anomalous trigger rate triggers immediate rollback (following the RUN6-B caliber; no new thresholds) | activation card + a follow-on ballot-tracking sampling card (the project maintainer dispatches it separately after the activation card closes) |
+| A3 | **Not switched for now**: the lacrimal increment entries markers_v6_lacrimal_increment.json stay registered-but-inactive (no efficacy numbers); do not wire this round; do not re-report repeatedly | logged, awaiting assessment |
+| A4 | One-month efficacy retrospective card: dispatched separately after activation (not in this wave) | deferred |
+| A5 | Rollback plan: activation must be built as a switch (env/config level); rollback = restore the default behavior of the three incumbent libraries; the canonical serialization of the sf13-off state being fully equal to the pre_change baseline is the machine-readable acceptance artifact | activation-card acceptance item |
 
-## 对外口径生效（决定解锁部分）
+## External-wording release (part unlocked by the decision)
 
-- 自本 directive 起，**获准**采用提案 §三 内部疗效版表述："在 22 个视网膜热点靶 + 23 对照簇的三席盲注重测中，共识命中 15/22→19/22、对照翻错 1→0；眼表 33 簇 21/33→22/33。"
-- 仍禁项（不变）：不得写"修复提升 X%"作为泛化性能声明；固定题面/冻结三席/温度 0.2 单一配置数字不外推线上分布；激活后线上单席判读表现未验证，如实标注。
+- From this directive, the proposal §III internal-efficacy wording is **approved** for use: "In the three-seat blinded re-test over 22 retinal hotspot targets + 23 control clusters, consensus hits went from 15/22 to 19/22 and control flips from 1 to 0; on the ocular surface, 33 clusters went from 21/33 to 22/33."
+- Still prohibited (unchanged): no writing "repairs improved X%" as a generalized performance claim; single-configuration numbers (fixed question surface / frozen three seats / temperature 0.2) must not be extrapolated to the live distribution; post-activation single-seat live reading performance is unvalidated and must be labeled as such.
 
-## 纪律红线（继承）
+## Discipline red lines (inherited)
 
-1. 冻结面零触碰：kb/baselines 既有冻结件、v4.1/v5/membrane 面、evalset 冻结产物字节不动（PRE/POST sha 记录表自证）。
-2. 已发布 v6 词条文件本体禁改（sha POST==PRE）。
-3. 本轮不做泪腺激活、不做 qc_flags 案 B、不动软提示行为（三项维持原口径）。
-4. 中间产物全保留；完成或遇阻必须落卡。
+1. Zero touch on the frozen surfaces: existing frozen artifacts under kb/baselines, the v4.1/v5/membrane surfaces, and the evalset frozen products keep their bytes (self-attested with a PRE/POST sha record table).
+2. The published v6 entry files themselves must not be modified (sha POST==PRE).
+3. This round does not activate lacrimal, does not do the qc_flags case B, and does not change soft-prompt behavior (all three keep their existing calibers).
+4. All intermediate artifacts retained; a card must be landed on completion or when blocked.

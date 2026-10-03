@@ -1,35 +1,35 @@
-# USER_DIRECTIVE_20260926_redline_rewrite — "证据禁入打分"红线改写（PI 决定方案 A）
+# USER_DIRECTIVE_20260926_redline_rewrite — "evidence banned from scoring" red-line rewrite (PI chose option A)
 
-- 决定：2026-09-26 夜，PI 回"A"=改写不取消（PI 原话要义：该红线本是给 OcularKB 的 GBDT 打分栈立的；EyeKB 现无打分模型、判读纯用文献 marker，旧条文空转且有"注释也不许用文献"的误读副作用）。
-- 被替代旧文（2026-08-12 Claude5 冻结裁定）："RAG 只做辅助引用、禁入打分/禁止融入任何打分流程"。
+- Decision: 2026-09-26 night; the PI replied "A" = rewrite, not cancel (gist of the PI's words: the red line was originally set for OcularKB's GBDT scoring stack; EyeKB currently has no scoring model and its independent reading purely uses literature markers, so the old clause idled and had the misreading side effect of "not even literature for annotation").
+- Superseded old text (Claude5 frozen ruling 2026-08-12): "RAG is for auxiliary citation only; banned from scoring / banned from entering any scoring process."
 
-## 新条文：证据消费纪律 v2（现行有效，全项目统一措辞）
+## New clause: evidence-consumption discipline v2 (currently in force; project-wide unified wording)
 
-1. **注释/判读侧**：消费 RAG/MCP/文献证据=**合法且为本系统设计核心**（三席盲注吃证据面），不设限制。
-2. **判分/裁定侧**：真值匹配、命中率统计、共识裁定，及任何自动打分/置信加权/复合 QC 分流程，**禁食判读侧同源检索证据**——防循环自证与评测泄漏，这是 RUN 系列数字（19/22、22/33 等）可信性的锚。
-3. **激活前提条款**：若未来引入自动打分栈（GBDT/LLM-judge/置信分），第 2 条为前置红线，证据特征须经 PI 另行批准方可进入。
+1. **Annotation/reading side**: consuming RAG/MCP/literature evidence = **legitimate and the design core** (the three-seat blinded annotation runs on the evidence surface); no restrictions.
+2. **Scoring/adjudication side**: ground-truth matching, hit-rate statistics, consensus adjudication, and any automated scoring/confidence-weighting/composite-QC process are **banned from consuming evidence sourced from the reading side** — preventing circular self-validation and evaluation leakage; this is the anchor of the credibility of the RUN-series numbers (19/22, 22/33 etc.).
+3. **Precondition clause for activation**: if an automated-scoring stack (GBDT/LLM-judge/confidence score) is ever introduced, clause 2 is the precondition red line; evidence features may enter only with separate PI approval.
 
-## 生效范围
+## Effective scope
 
-- 后续一切任务书/协议/评估卡红线句统一用新条文（引用本件路径即可）。
-- **历史不回改**：已冻结任务书（plans/BRIEF_*、PROMPT_*）、RUN 预注册件、demo 草稿维持当时措辞，引用当时口径有效（评测可比性不受影响）。
-- 本次已改写落点：WIKI/检索索引.md、WIKI/结论速查.md、WIKI/决策记录.md（追加新行）、EyeKB/plans/ANNOTATION_PROTOCOL_v1.1.md（行内注记）、skill knowledge-guided-cell-annotation、skill research-project-knowledge-hub 引用件、EYEKB_REPO docs 镜像（随 commit 推送）、项目维护方记忆。
+- From now on, the red-line sentence in all task briefs/protocols/evaluation cards uses the new clause (citing this document's path suffices).
+- **History is not rewritten**: already-frozen task briefs (plans/BRIEF_*, PROMPT_*), RUN pre-registration documents, and demo drafts keep their wording of the time; citations of the then-current caliber remain valid (evaluation comparability unaffected).
+- Landing points already rewritten in this pass: WIKI/RETRIEVAL_INDEX.md, WIKI/KEY_FINDINGS.md, WIKI/DECISION_LOG.md (new row appended), EyeKB/plans/ANNOTATION_PROTOCOL_v1.1.md (inline annotation), skill knowledge-guided-cell-annotation, referenced artifacts of skill research-project-knowledge-hub, the EYEKB_REPO docs mirror (pushed with the commit), and the project maintainer's memory.
 
-## 追加一（同日夜，PI 原话："可以把全量重新跑一遍数据，然后把打分这个东西放上去，看一下对整个注释有没有提升"）
+## Supplement (same day night; PI as-is: "you can rerun the full dataset once, put the scoring on top, and see whether the annotation overall improves")
 
-= 第③条"自动打分栈须 PI 另批"的**首次批准**：批准立项 **E1 证据入打分对照实验**（全量评测面，非生产切换）。
-- 范围=实验与量化，实验结论出来前生产判分链路（真值匹配/共识裁定）仍按 v2 第②条执行。
-- 预注册判读矩阵与任务书：/mnt/D/EyeKB/plans/evidence_scoring_20260926/BRIEF_E1.md。
+= the **first approval** of clause ③ "an automated-scoring stack requires separate PI approval": project **E1, the evidence-into-scoring comparison experiment** is approved to start (full evaluation surface, not a production switch).
+- Scope = experiment and quantification; until the experimental conclusions exist, the production scoring chain (ground-truth matching / consensus adjudication) still follows v2 clause ②.
+- Pre-registered reading matrix and task brief: /mnt/D/EyeKB/plans/evidence_scoring_20260926/BRIEF_E1.md.
 
-## 追加二（09-26 夜，E1 结果回来后 PI 回"ok"=按项目维护方建议票放行三项）
+## Supplement 2 (09-26 night; after the E1 results returned, the PI replied "ok" = release all three items along the project maintainer's recommendation ballots)
 
-1. **E1 档位判定=V2+**（证据打分=预筛/分歧旗标定位成立，替代判读不成立；生产接线暂不做）——E1_VERDICT.md 保持机械执行件原样，本节为裁决记录。
-2. **E2 去同源重测 GO**：任务书 /mnt/D/EyeKB/plans/e2_decontam_20260926/BRIEF_E2.md（判读矩阵 W1/W2/W3 预注册；干净效果量+旗标工作点+评测面同源水分账）。
-3. **KB9 眼表词条缺口（Melanocyte/Schwann 零词条、上皮-免疫接管）入建设队列**，E2 完成后一并排（PI 决定执行前不分派任务）。
+1. **E1 tier verdict = V2+** (evidence scoring = prefilter + disagreement-flag localization is validated; replacing the reading is not; production wiring not for now) — E1_VERDICT.md stays exactly as the mechanical-execution artifact; this section is the ruling record.
+2. **E2 de-same-sourcing retest GO**: task brief /mnt/D/EyeKB/plans/e2_decontam_20260926/BRIEF_E2.md (reading matrix W1/W2/W3 pre-registered; clean effect size + flag operating point + same-source inflation accounting on the evaluation surface).
+3. **KB9 ocular-surface entry gaps (Melanocyte/Schwann zero entries, epithelium-immune takeover) enter the build queue**, scheduled together after E2 completes (per the PI's rule: no task dispatch before a decision).
 
-## 追加三（09-27 凌晨，E2 完成报知）
+## Supplement 3 (09-27 early hours; E2 completion notified)
 
-E2 机械裁决=**W2**（干净 Δ+7.66pp 过不了旗标工作点门+否决列 −6.63pp）：证据面定位=仅离线审计用，V2+ 维持、生产提案关闭——**W2 生效无需 PI 动作**。留两个衍生选择（不阻塞）：①S5 宽容口径（EuropePMC 语境命中算不算外部链）若要认账须新预注册，两口径都到不了 W1；②338 个无记录文献先验基因补 PMID=KB 建设工程项（可并 KB9 一起排）。
+E2 mechanical verdict = **W2** (clean Δ+7.66pp fails the flag-operating-point gate + the veto column −6.63pp): the evidence-surface positioning = offline-audit use only, V2+ maintained, the production proposal is closed — **W2 takes effect with no PI action needed**. Two derivative options remain open (non-blocking): ① the S5 permissive caliber (whether EuropePMC context hits count as external links) requires a fresh pre-registration to be recognized; neither caliber reaches W1; ② backfilling PMIDs for the 338 literature-prior genes with no record = a KB construction project item (may be scheduled together with KB9).
 
-## 追加：红线②操作定义（2026-09-27 PI 批准，USER_DIRECTIVE_20260927_scoring_wave.md 追加二 D10）
-"判分/裁定侧禁食同源证据"的可执行判据：**判读/取证侧**允许使用由标签派生的适用性/屏蔽类规则（因规则开发接触过评价标签，其效果验证仅可定位为"开发集工程验收"，注册与报告件必须自带该限定声明，禁作独立验证表述）；**判分/裁定侧**禁止任何标签派生证据进入打分、置信加权与 QC 综合判定；离线审计 SOP（AUDIT_SOP_v1.0）为唯一例外，且严格限 E2 W2 边界（仅视网膜面、仅弃权带回捞、零接线）。
+## Supplement: operational definition of red line ② (approved by the PI 2026-09-27, USER_DIRECTIVE_20260927_scoring_wave.md Supplement 2 D10)
+The executable criterion for "the scoring/adjudication side is banned from consuming same-source evidence": the **reading/evidence-gathering side** may use label-derived applicability/blocking rules (because rule development touched evaluation labels, their effectiveness may only be positioned as "development-set engineering acceptance"; registration and report documents must carry that qualifier, and using them as independent-validation claims is prohibited); the **scoring/adjudication side** bans any label-derived evidence from scoring, confidence weighting, and composite QC judgment; the offline audit SOP (AUDIT_SOP_v1.0) is the sole exception, strictly bounded by the E2 W2 limits (retina surface only, abstention recall only, zero wiring).

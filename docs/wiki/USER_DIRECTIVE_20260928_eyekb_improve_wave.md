@@ -1,78 +1,78 @@
-# USER_DIRECTIVE_20260928_eyekb_improve_wave — EyeKB 改进波（PI"继续推进eyekb"放行）
+# USER_DIRECTIVE_20260928_eyekb_improve_wave — EyeKB improvement wave (released by PI "keep pushing EyeKB forward")
 
-PI 指令：继续推进 eyekb（2026-09-28）。PI 已明示 KB9 注册批准、义务 run、B 全量 A/B 三件"不着急搞"——本波**全部为离线/候选/分析性质，零注册零接线零激活**，不动上述三件。
+PI instruction: keep pushing eyekb forward (2026-09-28). The PI has explicitly stated that the three items — KB9 registration approval, the obligation run, and the full B A/B — are "no hurry"; this wave is **entirely offline/candidate/analytical in nature: zero registration, zero wiring, zero activation**, and does not move the above three items.
 
-| # | 卡 | 性质 | 为什么值得做 |
+| # | Card | Nature | Why worth doing |
 |---|---|---|---|
-| D13 | KBX 泪腺疗效首考 | 建考卷+首测（票规 v2 C2b 的**首个正式 run**） | 泪腺词条建完一直没考卷（A3 挂账的根因）；考卷=盘上 GSE164403 作者标签，零下载 |
-| D14 | KB-GOV 跨物种 ranking 治理候选 | 库侧拆弹设计+证据层机械 A/B | BTEST 实锤病灶（Q7 鼠簇 AC/RGC 伪影回流、Calb1/Grin3a 假命中）；修在库侧才能让 B 形态有复活可能 |
-| D15 | PME3 残余 44 键三扫+存储修复方案 | 数据工程收尾 | 两批后 44 weak/none 残余；E2R 发现 pmid_context 从不存 PMID 的结构缺陷要出修复设计 |
-| D16 | GRADE 判序漂移锚分析 | 票面反事实+协议候选 | BTEST Q5b::35 型"正确名被 grade 漂移弃"案；席位 grade 纪律是投票链最薄弱一环 |
+| D13 | KBX lacrimal efficacy first exam | build the exam paper + first test (the **first formal run** of ballot rules v2 C2b) | the lacrimal entries were finished but never had an exam paper (the root cause of the A3 logged item); the exam paper = the on-disk GSE164403 author labels, zero downloads |
+| D14 | KB-GOV cross-species ranking governance candidate | library-side defuse design + mechanical A/B at the evidence layer | BTEST nailed the lesion (mouse-cluster AC/RGC artifact flowing back, Calb1/Grin3a false hits); only a library-side fix leaves form B any chance of revival |
+| D15 | PME3 residual 44 keys, triple sweep + storage-repair plan | data-engineering wrap-up | after two batches, 44 weak/none remain; E2R found the structural defect that pmid_context never stores the PMID — a repair design is owed |
+| D16 | GRADE grading-order drift-anchor analysis | ballot counterfactual + protocol candidate | the BTEST Q5b::35-type case of "the correct name discarded by grade drift"; seat grade discipline is the weakest link in the voting chain |
 
-纪律：各卡产物落各自 plans/ 目录；kb/、mcp_server/、evalset、生产判分链全程只读+sha 记录表；预注册 sha 先落纸；LLM 票只在 D13 用（LLM_CHANNEL三席同参，上限 120 票，超限 block）；D14/D15/D16 零 LLM。所有"注册/接线/激活/实装"动作=候选包+待 PI，本波一律不执行。
+Discipline: each card's artifacts land in its own plans/ directory; kb/, mcp_server/, evalset, and the production scoring chain stay read-only throughout with a sha record table; the pre-registration sha goes on paper first; LLM ballots are used only in D13 (LLM_CHANNEL, three seats with identical parameters, cap 120 ballots, exceed → block); D14/D15/D16 are zero-LLM. All "register/wire/activate/implement" actions = candidate package + awaiting the PI; nothing of the sort executes in this wave.
 
-## 追加一（2026-09-27 晚，PI"可以，缺文献的补文献、缺 rag 的补、缺 wiki 的补"）
-PI 批准：① KB9 注册执行（案 B，写 kb/ 版本化 overlay、路由登记但**默认 OFF 不激活**——激活仍需 §10-6 义务 run + PI 另批，PI 已明示义务 run/B 全量后置）；② 三层缺口按"缺则补"放行，但**补 RAG 先出零下载缺口盘点再按清单报批**（防盲目重建烧算力/触发大下载）。
-- D17 KB9REG-EXEC：案 B 四词条+规则装进 kb/ 旁挂 overlay（baseline 字节不动，copy 不 move），路由登记默认 OFF；新条的配套文献链/知识库页/检索索引同步补齐（"补文献+补 wiki"落到实处）。
-- D18 RAG-GAP：全组织 RAG 语料覆盖缺口盘点（零下载），产出"缺哪些一手文献、体量、补哪几档"报批清单；真正重建/下载等 PI 按清单批。
-- "补文献"：PME3 在跑（44 键三扫）；KB9 新条文献链并入 D17。
+## Supplement 1 (2026-09-27 evening; PI "fine — for missing literature add literature, for missing rag fill rag, for missing wiki fill wiki")
+PI approvals: ① execute the KB9 registration (case B: write the versioned overlay into kb/, register the routing but **default OFF, not activated** — activation still requires the §10-6 obligation run + separate PI approval; the PI has explicitly deferred the obligation run / full B); ② the three-layer gaps are released under "if missing, fill", but **for filling RAG, first produce a zero-download gap inventory, then seek approval per that list** (prevents blindly rebuilding to burn compute / triggering a big download).
+- D17 KB9REG-EXEC: put case B's four entries + rules into a kb/ sidecar overlay (baseline bytes untouched, copy not move); route registered, default OFF; also backfill the new entries' companion literature chains / knowledge-base pages / retrieval-index entries (making "add literature + add wiki" real).
+- D18 RAG-GAP: whole-corpus RAG coverage-gap inventory (zero downloads); produce the approval list of "which primary literatures are missing, at what volume, which tiers to refill"; actual rebuild/download awaits the PI approving per the list.
+- "Add literature": PME3 is running (44-key triple sweep); the KB9 new entries' literature chains are folded into D17.
 
-## 追加三（2026-09-28，PI："可以，在机器上能跑"+"做完核一遍看要不要重训，然后更新github"）
-- D20 KBCHAIN 全库引用链误引审计=GO（RAGFIX 抽20 确诊6条=30% 触发全量定界，block 问句 P2 就此落定）。
-- D21 RAGFIX2 门③追补轮=GO（16 个"清单从未配文"基因白名单重组装+v2.4.1+复算；8 个仅备选覆盖单元不碰，那属"104 备选批不批"另案）。
-- D22 RETRAIN 冲击评估=GO（四对象 v2_prod/鼠版/RAG嵌入/面板衍生件，只读零重训；PI"要不要重训"以对象对账回答而非感觉）。
-- D23 GitHub=队列项：待 D20/D21/D22 收齐 + 项目维护方全链复核后做**第二轮仓同步**（overlay/撤证件/v2.4.1 索引账/审计与评估产物/README 版本注记），沿用测试门（测过才 push）；Release 资产是否升 v2.4.x 视语料状态由同步卡评估后单独报。
-- KBX 状态同步：done（O3 降档=考卷无效非词条判负，泪腺定量首考挂"待新数据"账）。RAGFIX：done（v2.4 暂存未激活；门③ FAIL 照实记，REVIEWER_LLM 独立裁定同向）。
+## Supplement 3 (2026-09-28; PI: "fine, as long as it runs on this machine" + "after you're done, check whether a retrain is needed, then update github")
+- D20 KBCHAIN whole-library citation-chain misquotation audit = GO (RAGFIX's 20-paper sample confirmed 6 = 30%, triggering full scoping; the blocked question P2 is settled here).
+- D21 RAGFIX2 gate-③ supplementary round = GO (reassembly of the 16 "list-never-had-text" genes via whitelist + v2.4.1 + recompute; the 8 covered only by backup candidates are not touched — that belongs to the separate "approve the 104 backup batch" case).
+- D22 RETRAIN impact assessment = GO (four objects: v2_prod / mouse edition / RAG embeddings / panel-derived artifacts; read-only, zero retraining; answer the PI's "retrain or not" with an object-by-object reconciliation rather than a feeling).
+- D23 GitHub = queue item: after D20/D21/D22 are in and the project maintainer has re-reviewed the whole chain, do the **second round of repo sync** (overlay / credential-revocation notes / v2.4.1 index ledger / audit and assessment artifacts / README version notes); reuse the test gate (tested green before push); whether the Release assets move to v2.4.x depends on corpus state — the sync card evaluates and reports separately.
+- KBX status sync: done (the O3 downgrade = the exam paper is invalid, not the entries judged losers; the lacrimal quantitative first exam stays logged as "awaiting new data"). RAGFIX: done (v2.4 staged, not activated; gate ③ FAIL recorded as-is; the REVIEWER_LLM independent ruling points the same way).
 
-## 追加四（2026-09-28，PI"批准"）
-PI 对 11:25 进度板唯一"等你批"项回**批准** = **§10-6 义务 run 启动放行**（KB9 k9_ocs 激活前置）：
-- 执行 OB-1..OB-4（AV2-5(c) 历史 ON 态门对账 / A07 pre_vote_diagnostics 首跑 / 22 视网膜簇 Arm1/Arm2 ranking 一致性补查 / lit 同源排除筛查留档）+ KB9 面正式三席票 run（票规 v2 C2b 预注册声明，球门 P1>=24/33 不降，P2 回归保护同注册包口径）。
-- **本批准不含激活**：OB-5 永久门维持——义务 run+球门全过产 ACTIVATION_READINESS 报告后，激活切换仍归 PI 另批；本 run 零接线零激活零默认切换，kb/、mcp_server/、evalset 只读。
-- LLM 票=LLM_CHANNEL三席同参（enable_thinking:false），上限 150 票超限 block；历史 C4 P1=22/33 FAIL 记录不回改（C2b 向前生效制）。
-- 任务书=<EYEKB>/plans/obligrun_20260928/BRIEF_OBLIGRUN.md；执行卡另记。
+## Supplement 4 (2026-09-28; PI "approved")
+The PI's reply to the single "awaiting your approval" item on the 11:25 status board is **approved** = **release to start the §10-6 obligation run** (prerequisite for KB9 k9_ocs activation):
+- Execute OB-1..OB-4 (AV2-5(c) historical ON-state gate reconciliation / A07 pre_vote_diagnostics first run / Arm1-Arm2 ranking-consistency supplementary check over the 22 retina clusters / lit same-source exclusion screening archived) + the formal three-seat ballot run on the KB9 surface (ballot rules v2 C2b declared in the pre-registration; gate P1>=24/33 not lowered; P2 regression protection per the registration-package caliber).
+- **This approval does not include activation**: the OB-5 permanent gate stands — after the obligation run + all gates pass and the ACTIVATION_READINESS report is produced, the activation switch remains the PI's separate approval; this run is zero-wiring, zero-activation, zero default switching; kb/, mcp_server/, evalset read-only.
+- LLM ballots = LLM_CHANNEL three seats with identical parameters (enable_thinking:false), cap 150 ballots, exceed → block; the historical C4 P1=22/33 FAIL record is not rewritten (the C2b effective-going-forward regime).
+- Task brief = <EYEKB>/plans/obligrun_20260928/BRIEF_OBLIGRUN.md; the execution card is recorded separately.
 
-## 追加五（2026-09-28，PI 整链授权："除了下载1G以上的需要我批准以外，其他的你往下推进就可以"）
-自本追加起项目维护方自主推进、事后报账。**仍保留的 PI 点名门只有两类**：①>1GB 下载（体积清单逐行报批）；②PI 已明示的命名永久门（如 OB-5 KB9/v2.4.1 生产激活=另批）。
-- **立即推进**：RAGFIX3-104备选批（v2.4.2 增量，零下载或 MB 级）/ 鼠版重档外部集零下载预检+报批清单（供 PI 勾行）。
-- **OBLIGRUN 完成后自动接续（领地避让）**：KBGOV-B5 实装（跨物种 ranking 治理下沉库侧，过测试门+可回退+人类侧零位移复验）/ GRADE-H1M3 实装（席位 grade 纪律，翻正7新错0 口径）——两卡落地=接线级修复，带回归门与观察条款，激活类动作另报。
-- **降优先级不废**：B 形态全量 A/B（PI 曾"不着急"→排队至上述实装后，票预算上限照 block 制）。
-- 鼠版中档已 09-25 建成（t_917f8709，v2 修订版在案），板上"待点名鼠版"系旧账纠正。
+## Supplement 5 (2026-09-28; PI whole-chain authorization: "except downloads over 1G that need my approval, everything else just push forward")
+From this supplement on, the project maintainer proceeds autonomously and settles the books afterwards. **Only two classes of gates still need the PI's explicit call**: ① >1GB downloads (approval list, line by line with volumes); ② the named permanent gates the PI has already stated (e.g. OB-5: KB9/v2.4.1 production activation = separate approval).
+- **Proceed immediately**: RAGFIX3-104-backup-batch (v2.4.2 increment, zero-download or MB-scale) / mouse heavy-tier external-set zero-download precheck + approval list (for the PI to tick rows).
+- **Auto-continue after OBLIGRUN completes (territory avoidance)**: KBGOV-B5 implementation (sink cross-species ranking governance to the library side; pass the test gate + rollbackable + re-verify zero displacement on the human side) / GRADE-H1M3 implementation (seat grade discipline; the flipped-correct-7 / new-errors-0 caliber) — both cards landing = wiring-level fixes, with regression gates and observation clauses; activation-class actions reported separately.
+- **De-prioritized, not dropped**: the full B-form A/B (the PI once said "no hurry" → queued after the above implementations; ballot-budget caps follow the block regime).
+- The mouse mid tier was already built on 09-25 (t_917f8709, the v2 revision on record); the board's "mouse edition awaiting the call" was a stale entry and is corrected.
 
-## 追加六（2026-09-28，PI 敏感数据入仓红线，长期有效）
-PI 令：**所有自家数据一律不进 SZ_OPHT_KB 仓**，含衍生结果。点名排除：OWN_MOUSE_DR_DATASET 小鼠数据、玻璃体蛋白/代谢（玻璃体蛋白组项目系列）、〔共病项目代号〕 细胞归属线、〔阶段代号〕/T-ATLAS 患者衍生读数、患者样本号。**通用于一切后续仓同步卡（REPOSYNC3 及以后）与 RAGFIX/审计卡**：
-- 收录前必过"自家数据 token 扫描"（〔样本编号前缀〕/〔项目号前缀〕/〔药名〕/〔共病项目代号〕/〔阶段代号〕/〔内部字段名〕/患者样本号），命中即剔，不脱敏入仓（区别于公开文献通名 STZ/FLT1/DR2 级——那些是文献/KB 公开内容，非本项目患者数据，可留）。
-- 仓定性=公开数据集+公开文献+系统代码/知识库/评测的四层镜像，**源头与患者/动物自产数据物理隔离**；OcularKB 主库（v2.4/v2.4.x 1GB 级）不入仓，只入元数据+内核+书目（Release 通道另议）。
-- 现有 main=ea40bea 经项目维护方逐 token 亲验：上述敏感项 0 命中，合规。未来每张同步/审计卡的 push 前置门新增此项。
+## Supplement 6 (2026-09-28; PI red line on sensitive data entering the repo, long-term effective)
+PI order: **no in-house data of any kind enters the SZ_OPHT_KB repo**, derivative results included. Named exclusions: OWN_MOUSE_DR_DATASET mouse data, vitreous protein/metabolism (the vitreous proteomics project series), the [comorbidity-project codename] cell-attribution line, [stage codename]/T-ATLAS patient-derived readings, patient sample numbers. **Binding on all subsequent repo-sync cards (REPOSYNC3 onward) and RAGFIX/audit cards**:
+- Before inclusion, pass the "in-house data token scan" ([sample-number prefix]/[project-number prefix]/[drug name]/[comorbidity-project codename]/[stage codename]/[internal field name]/patient sample number); a hit means exclusion — do not desensitize-and-include (distinct from generic public-literature terms at the STZ/FLT1/DR2 level — those are public literature/KB content, not this project's patient data, and may stay).
+- Repo character = a four-layer mirror of public datasets + public literature + system code/knowledge base/evaluation; **the sources and patient/animal in-house data stay physically isolated**; the OcularKB master library (v2.4/v2.4.x, 1GB-class) does not enter the repo — only metadata + kernel + bibliography (Release channel discussed separately).
+- The current main=ea40bea was personally token-verified line by line by the project maintainer: 0 hits on the above sensitive items, compliant. This becomes a new push-precondition gate for every future sync/audit card.
 
-## 追加七（2026-09-28 深夜，PI 两项决定：Seurat 双轨探针 + drsc 五纪律成文）
+## Supplement 7 (late night 2026-09-28; PI decisions: Seurat dual-track probe + drsc five disciplines codified)
 
-### A. SEURATPROBE（PI 原话"可以，但是你为什么一直盯着 GSE165784/GSE160306？我们有很多已注释好的标准数据，用这两个没有注释好的数据的意义是啥"+"可以加上条件判断，如果机器不能支持 seurat 那就只走另一条，你看着来"）
-- **数据面口径纠正（生效即长规）**：凡"引擎对照/方法学探针"类任务，真值参照一律用 **<STORE>/registry 里逐细胞作者级注释的标准数据集**（执行脚本 Phase-0 实测 obs 列+取值分布后选 2 个以上，成年眼组织，单集 <=20 万细胞）；**禁拿自家共识注释（GSE165784 demo 等）当答案**——那是拿自己的判读验自己的判读，循环。
-- **玩法决定=双轨并跑+一致自动过+分歧送 PI**（三案中项目维护方建议档获 PI"可以"）；不做"系统自选引擎"（单票化被否）。
-- **降级条款（预注册判读）**：conda 新环境装 Seurat+SingleR（不碰系统 R；R 包下载预计 <=1GB，实测超 1GB 停卡报批）；20k 细胞试点 RSS<=20G 且单链 <=15min 才 GO 全量探针，任一不达标即 NO-GO 结案、现行走 scanpy 单轨不动，NO-GO 数字如实落盘。
-- 探针产出三数字：跨引擎逐细胞一致率（ARI/NMI+混淆矩阵）/ SingleR 相对现有面的改判清单+逐条文献支持 / 分歧簇清单+第二票转正 GO-NO-GO 建议（建议不代拍）。
+### A. SEURATPROBE (PI as-is: "fine, but why do you keep staring at GSE165784/GSE160306? We have plenty of already-annotated standard datasets — what's the point of these two un-annotated ones?" + "you can add conditional logic — if the machine can't support seurat, just take the other path; use your judgment")
+- **Data-plane caliber correction (a long-term rule effective immediately)**: for any "engine-comparison / methodology-probe" task, the ground-truth reference is **the per-cell author-level-annotated standard datasets in <STORE>/registry** (after the runner script's Phase-0 measures the obs columns + value distributions, pick ≥2, adult ocular tissue, ≤200k cells per set); **it is forbidden to use our own consensus annotation (the GSE165784 demo etc.) as the answer** — that is validating our own reading with our own reading; circular.
+- **Approach decided = dual-track parallel + agreement auto-passes + disagreements go to the PI** (the project maintainer's recommended option among the three proposals got the PI's "fine"); no "system self-selects the engine" (single-ticket-ization was rejected).
+- **Downgrade clause (pre-registered reading)**: install Seurat+SingleR in a new conda environment (don't touch system R; R package downloads expected ≤1GB — if measured >1GB, stop the card and seek approval); only if the 20k-cell pilot holds RSS≤20G and a single chain ≤15min does the full-scale probe GO; any criterion missed → NO-GO closure, the incumbent scanpy single track stands unchanged, and the NO-GO numbers land on disk as-is.
+- The probe produces three numbers: cross-engine per-cell agreement (ARI/NMI + confusion matrix) / the SingleR re-decision list versus the existing surface, with per-item literature support / the disagreement-cluster list + a second-vote-promotion GO-NO-GO recommendation (a recommendation only, no decision made on anyone's behalf).
 
-### B. drsc 五纪律成文（PI 原话"记得落实"，采纳项目维护方判读"效果好=纪律好"）
-- **D-1 组成先验进门** -> 建 EXPECTED_COMPOSITION_v0 新面（正常成人眼各细胞类型比例区间，逐行挂 PMID，仅从 registry 记录表/文献索引派生，禁从自家聚类派生；默认 OFF 不接线，自检只出旗标清单）：卡 DISC-COMP。
-- **D-2 供体级裁决 + D-3 深度/复杂度对照** -> 先做只读量化：对冻结票面 99 票与既有评测卷回跑 leave-one-donor-out 翻否杠杆 + 深度匹配抽样下 top_genes 位移实测，产出"两道门若上线会旗标多少"勾选表+建议阈值档：卡 DISC-QANT。球门不降、协议不改、阈值等 PI 勾。
-- **D-4 双轨纪律正式化（本 directive 即刻生效，向前适用）**：任何词条库/RAG 库面改动，疗效读数必须过"无先验 A vs 有先验 B"双轨，**提升只认设计靶、不认全面**；空率/覆盖位移等负向读数如实单列。既往迭代不追溯。
-- **D-5 收窄优先**：维持现状并固化——每卡预注册主检验唯一，迭代再多不合并主检验。
-- 领地：三卡互斥目录（seurat_probe/drsc_disc_quant/comp_prior 各一层），全部 CPU、systemd-run MemoryMax 托管、心跳带 available、kb/mcp_server/evalset 冻结面零触碰（DISC-COMP 只新建 kb/composition/ 目录，不动既有文件）。
+### B. drsc five disciplines codified (PI as-is "make sure it lands"; adopting the project maintainer's reading "good results = good discipline")
+- **D-1 composition prior enters the gate** -> build the EXPECTED_COMPOSITION_v0 new surface (per-cell-type proportion ranges for the normal adult eye, one PMID per row, derived only from the registry record tables / literature index; deriving from our own clustering is forbidden; default OFF, no wiring; the self-check only emits a flag list): card DISC-COMP.
+- **D-2 donor-level adjudication + D-3 depth/complexity controls** -> first the read-only quantification: over the 99 ballots on the frozen ballot surface and the existing exam sets, replay the leave-one-donor-out rejection leverage + measure top_genes displacement under depth-matched sampling; produce the "how many would be flagged if the two gates went live" checkbox sheet + recommended threshold tiers: card DISC-QANT. Gates not lowered, protocol unchanged, thresholds await the PI's tick.
+- **D-4 dual-track discipline formalized (effective immediately from this directive, applies going forward)**: for any vocabulary-library/RAG-library-surface change, the efficacy readout must pass the "no-prior A vs with-prior B" dual track; **improvement counts only on the designed targets, not across the board**; negative readings such as empty rates / coverage displacement are listed as-is. Prior iterations are not retroactively judged.
+- **D-5 narrowing first**: keep the status quo and codify it — every card's pre-registered primary test is unique, and no amount of iteration merges primary tests.
+- Territories: three mutually exclusive directories (seurat_probe/drsc_disc_quant/comp_prior, one layer each), all CPU, systemd-run MemoryMax-managed, heartbeats carrying available, zero touch on the kb/mcp_server/evalset frozen surfaces (DISC-COMP only creates the kb/composition/ directory; no existing file is touched).
 
-## 追加八（2026-09-29 凌晨）：PI 常设自主推进令
+## Supplement 8 (early hours 2026-09-29): the PI's standing autonomous-progression order
 
-PI 原话：**"你盯好了，一直转，不要让我一直点头，你自己往下推"**。定性=区别于迭代授权的**常设规则**，长期有效至 PI 撤回。
+PI as-is: **"watch it closely, keep it spinning; don't make me keep nodding — push it forward yourself"**. Character = a **standing rule**, distinct from per-iteration authorization; effective long-term until the PI withdraws it.
 
-**保留门（仍须 PI 亲手，其余一律自主+事后报账）**：
-1. >1GB 下载逐行报批（既有铁律不动）
-2. PI 亲手类：QANT 阈值档勾选、任何"激活/接线切换"（k9_ocs、v2.4.x 默认切换、composition 面上线）、demo/论文正文类
-3. GitHub push/Release 类外部不可逆动作：等授权窗顺路推，**为纯报账类小 commit 不单独请扫码**
+**Retained gates (still require the PI personally; everything else is autonomous + booked afterwards)**:
+1. >1GB downloads, line-by-line approval (the existing iron rule unchanged)
+2. PI-personal items: QANT threshold-tier ticks; any "activation/wiring switch" (k9_ocs, v2.4.x default switching, putting the composition surface live); demo/paper-body-text class
+3. GitHub push/Release class, i.e. externally irreversible actions: ride along when an authorization window opens; **do not request a device-code scan just for pure bookkeeping commits**
 
-**本追加节即预授权（照单发射，不再请示）**：
-- SEURATPROBE 完成 → 项目维护方验收（探针产物核数字+降级条款判读）→ 报账；其"第二票转正"建议部分归 PI，其余自动接续
-- SEURATPROBE 完成且 load 回落到 <40 → 自动派 **COMPV1**（组成先验分层 v1，治 DISC_COMP 反向质检 OB-1/OB-2/OB-3 三义务；零下载、v0 冻结件零触碰、新目录版本化、wiring 维持 OFF、激活仍归 PI）
-- 本地未推 commit（1febfee Release 回执）随下一授权窗自动推送
-- 已挂 cron（A2 跟票周报 10-03、B5 误拒复核 10-05）照常兑现，不打扰 PI 直至出异常
+**Pre-authorized by this very section (launch per list, no further asking)**:
+- SEURATPROBE completes → project-maintainer acceptance (verify the probe's numbers + read the downgrade clause) → book it; the "second-vote promotion" recommendation part goes to the PI; the rest auto-continues
+- SEURATPROBE completes and load drops below <40 → auto-dispatch **COMPV1** (composition-prior layering v1, treating the DISC_COMP reverse quality-check obligations OB-1/OB-2/OB-3; zero downloads, v0 frozen artifacts untouched, new directory versioned, wiring stays OFF, activation still the PI's)
+- The unpushed local commit (1febfee, Release receipt) pushes automatically at the next authorization window
+- The already-scheduled crons (A2 ballot-tracking weekly 10-03; B5 false-rejection review 10-05) fire as usual; do not disturb the PI unless an anomaly appears
 
 
-> 〔仓面注〕本文件涉自家标识 token 字面已按 T7 永久门 masked（类别=样本编号形态/项目号形态/药名中文/共病项目代号/项目英文名/阶段代号/内部字段名/患者样本号）。线上原件留机器侧；逐件登记=docs/plans/repo_sync5_20260929/ledgers/T7_EXCLUSIONS_RS5.tsv。本注为同步卡处置留痕，不改变 PI 条款的规范语义。
+> [Repo-surface note] In this file, literal own-identifier tokens have been masked per the T7 permanent gate (categories = sample-number form / project-number form / Chinese drug names / comorbidity-project codename / project English name / stage codename / internal field names / patient sample IDs). The online originals stay on the machine side; the per-file ledger = docs/plans/repo_sync5_20260929/ledgers/T7_EXCLUSIONS_RS5.tsv. This note is a sync-card disposition trail and does not alter the normative meaning of the PI's clauses.
