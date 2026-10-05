@@ -1,35 +1,47 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""EyeKB MCP query-rewrite layer, v2 (CN-REWRITE-FIX1, 2026-10-05)
+"""EyeKB MCP query-rewrite layer, v3 (CN-REWRITE-FIX2, 2026-10-05)
 
 In one sentence: before a Chinese search sentence is fed to the English embedding surface, the
 bridge terms it contains are located and their English anchors are inserted in place; the rest of
 the sentence is preserved verbatim.
 
-Why v2: the v1 layer replaced the whole sentence with a single bridge row's English anchor, which
-scored well (strict hits 21/24 on the frozen challenge volume) but dropped every constraint the
-sentence carried outside that row (31 rows of substantive constraint loss, G2 FAIL, report
-out/REPORT_CN_CHALLENGE.md). v2 keeps the sentence and adds the anchors, so a concept can no
-longer be dropped by construction, and several classes of damage disappear structurally:
+v3 = v2 (mixed in-place anchor insertion) plus the two repairs ordered by RULING_FIX1_20261005
+§放行前置 1:
 
-  * alias-capable triggers: a bridge alias left-hand side is now a match candidate, not only the
-    cn_term. The longer clinical entity an alias carries (e.g. 青光眼睫状体炎综合征 -> Posner-
-    Schlossman, 早产儿视网膜病变 -> ROP, 后弹力层剥除内皮移植 -> DSEK/DSAEK, 新生血管性青光眼 ->
-    NVG) therefore wins the span over the short generic word nested inside it. This is the generic-
-    word guard: the bridge's own vocabulary supplies the longer entity, nothing is hand-written.
-  * full-width Latin: matching is fold-insensitive (full-width -> half-width, U+3000 -> space,
-    case), and an all-Latin token the bridge already knows (e.g. ＩＰＬ -> IPL) is itself a trigger.
-  * no deletion: an anchor is inserted after its matched span; the original characters are never
-    removed, which is also what makes the OFF-state guarantee trivially safe.
+  CH-1 (R1 defect, mandatory) — same-span tie-break by MATCH-MODE PRIORITY.
+      v2's selection sorts candidate spans by (length desc, leftmost, row_id). When a generic short
+      word is present as a whitespace-delimited token, it can be matched twice on the very same
+      span: once as M1/M3 by its OWN row A (the generic word is A's cn_term or alias), and once as
+      M2 by a LONGER row B whose cn_term contains it and whose row_id is lower (M2 = "a query token
+      is contained in this row's cn_term"). With equal length and equal left edge the v2 ordering
+      fell through to row_id, so B won and the generic word inherited the longer entity's anchor
+      (observed on the vol2 challenge volume: 视网膜病 -> "Diabetic Retinopathy"). v3 inserts the
+      match-mode priority key AFTER the left edge, i.e. it can only decide comparisons that were
+      already a same-span tie: M1/M3 (0) > M4 (1) > M2 (2). The primary ordering (longest span
+      first, then leftmost) is untouched, so no span that used to win can be displaced by a shorter
+      or righter one.
 
-Rule chain (frozen; see plans/cn_rewrite_fix_20261005/ for the measurement):
+  CH-2 (R3 defect, option measured by the FIX2 card) — negation scope guard.
+      v2 had no negation scoping: in a contrast question ("A 不是 B") the EXCLUDED side B also
+      received an English anchor, i.e. the layer reinforced the very entity the question excludes.
+      With NEG_SCOPE_ENABLED, a kept candidate whose matched fragment's LEFT EDGE is immediately
+      preceded (in whitespace-stripped coordinates, so 「不是 B」 and 「不是B」 behave alike) by a
+      registered negation cue (NEG_CUES) contributes no anchor. The span is still reserved and the
+      original characters are still preserved verbatim — zero deletion is unaffected; only the
+      English anchor injection is skipped, and the candidate is disclosed under no_anchor_spans with
+      reason "neg_scope:<cue>".
+
+Rule chain (v3; see plans/cn_rewrite_fix2_20261005/ for the measurement):
   M1 cn_term    : normalized cn_term occurs in the folded/normalized query
   M2 token      : a query token (folded length >= 4) is contained in a cn_term
   M3 alias-LHS  : an alias left-hand side occurs in the folded/normalized query
   M4 latin      : a purely Latin query token (folded, >= 3) equals an alias right-hand side or a
                   cn_term
-  selection     : longest span first, then lowest row_id; spans overlapped by a kept span are
-                  dropped (a short generic word can no longer swallow a longer clinical entity)
+  selection     : longest span first, then leftmost, then match-mode priority (M1/M3 > M4 > M2),
+                  then lowest row_id; spans overlapped by a kept span are dropped
+  negation scope: a kept span whose left edge is immediately preceded by a registered negation cue
+                  contributes no anchor (span reserved; text preserved)
   phrase        : "<query with each kept span followed by ' <english anchor>'>"
 
 Switch: env EYEKB_CN_REWRITE read once per call; strip().casefold() in {1,true,on,yes} -> on;
@@ -49,6 +61,17 @@ import re
 BRIDGE_DEFAULT = ("/mnt/D/EyeKB/plans/devline_cnbridge_20261002/"
                   "out/CN_BRIDGE_MERGED_v1.tsv")
 ON_VALUES = {"1", "true", "on", "yes"}
+RULE_VERSION = "v3"
+
+# CH-1: match-mode priority, used ONLY to break a same-span tie (lower wins).
+MODE_PRI = {'M1': 0, 'M3': 0, 'M4': 1, 'M2': 2}
+
+# CH-2: registered negation-cue list (self-defined per RULING_FIX1 §逐残差裁定 R3-a, 词表自定+登记).
+# The cue must END exactly at the matched fragment's left edge ("左缘紧邻"); longest wins. The guard
+# is enabled or disabled by the single constant below (the FIX2 card measured both settings and the
+# measurement that selected the setting is registered in the card's report).
+NEG_CUES = ('区别于', '不同于', '而不是', '并不是', '不是', '并非', '除外')
+NEG_SCOPE_ENABLED = True
 
 # —— the norm / fold / clean_part helpers below are a verbatim superset of the frozen
 #    d1_rewrite_rules.py helpers (fold and the alias/anchor handling are the v2 additions) ——
@@ -169,20 +192,40 @@ def _candidates(q, rows):
 
 
 def _select(q, cands):
-    """Longest span first, then lowest row_id; overlapping spans are dropped."""
+    """Longest span first, then leftmost, then (CH-1) match-mode priority, then lowest row_id;
+    overlapping spans are dropped. The priority key sits AFTER the left edge so it can only break a
+    tie the v2 ordering left to row_id, i.e. two candidates on the SAME span."""
     uniq = {}
     for c in cands:
         k = (c['lo'], c['hi'], c['row']['row_id'])
         if k not in uniq or c['mode'] < uniq[k]['mode']:
             uniq[k] = c
     ordered = sorted(uniq.values(),
-                     key=lambda c: (-(c['hi'] - c['lo']), c['lo'], c['row']['row_id']))
+                     key=lambda c: (-(c['hi'] - c['lo']), c['lo'], MODE_PRI.get(c['mode'], 1),
+                                    c['row']['row_id']))
     kept = []
     for c in ordered:
         if any(not (c['hi'] <= k['lo'] or c['lo'] >= k['hi']) for k in kept):
             continue
         kept.append(c)
     return sorted(kept, key=lambda c: c['lo'])
+
+
+def _neg_cue_at(qn, idx, lo):
+    """CH-2: the registered negation cue that ENDS exactly at the fragment's left edge, else ''.
+
+    Comparison is done in folded, whitespace-stripped coordinates so a cue and the fragment stay
+    adjacent across a space. `idx` maps normalized positions back to raw offsets.
+    """
+    from bisect import bisect_left
+    i = bisect_left(idx, lo)
+    if i >= len(idx) or idx[i] != lo:
+        return ''
+    for cue in sorted(NEG_CUES, key=len, reverse=True):
+        s = i - len(cue)
+        if s >= 0 and qn[s:i] == cue:
+            return cue
+    return ''
 
 
 def _pair_ok(x, y):
@@ -239,10 +282,24 @@ def _anchor_of(c):
 
 
 def _rewrite(q, rows):
-    """Mixed rewrite: insert each kept span's English anchor right after the span."""
+    """Mixed rewrite: insert each kept span's English anchor right after the span.
+
+    CH-2: kept spans whose left edge is immediately preceded by a registered negation cue are
+    disclosed in no_anchor_spans (reason neg_scope:<cue>) and contribute no anchor.
+    """
     kept = _select(q, _candidates(q, rows))
-    picked, seen, anchors = [], set(), []
+    suppressed = {}
+    if NEG_SCOPE_ENABLED:
+        qn, idx = _qindex(q)
+        for c in kept:
+            cue = _neg_cue_at(qn, idx, c['lo'])
+            if cue:
+                suppressed[(c['lo'], c['hi'], c['row']['row_id'])] = cue
+    picked, anchors = [], []
+    seen = set()
     for c in kept:
+        if (c['lo'], c['hi'], c['row']['row_id']) in suppressed:
+            continue
         a = _anchor_of(c)
         if not a:
             continue
@@ -257,13 +314,20 @@ def _rewrite(q, rows):
         cur = c['hi']
     cuts.append(q[cur:])
     final = re.sub(r'\s+', ' ', ''.join(cuts)).strip() if picked else ''
-    dropped = [{'row_id': c['row']['row_id'], 'cn_term': c['row'].get('cn_term'),
-                'mode': c['mode'], 'matched_fragment': c['frag'],
-                'span': [c['lo'], c['hi']]}
-               for c in kept if not _anchor_of(c)]
+
+    def _na(c):
+        key = (c['lo'], c['hi'], c['row']['row_id'])
+        d = {'row_id': c['row']['row_id'], 'cn_term': c['row'].get('cn_term'),
+             'mode': c['mode'], 'matched_fragment': c['frag'], 'span': [c['lo'], c['hi']]}
+        d['reason'] = ('neg_scope:' + suppressed[key]) if key in suppressed else 'anchor_rejected'
+        return d
+
+    dropped = [_na(c) for c in kept
+               if (not _anchor_of(c)) or (c['lo'], c['hi'], c['row']['row_id']) in suppressed]
     primary = picked[0] if picked else (kept[0] if kept else None)
     meta = {"status": 'rewrite' if final else 'no_rewrite',
-            "rule_version": "v2",
+            "rule_version": RULE_VERSION,
+            "neg_scope": bool(NEG_SCOPE_ENABLED),
             "match_mode": ';'.join(sorted({c['mode'] for c in picked})),
             "row_id": primary['row']['row_id'] if primary else '',
             "cn_term": primary['row'].get('cn_term', '') if primary else '',
