@@ -1,0 +1,52 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-029",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [
+     "bulk"
+    ],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Bulk tissue composition read back to cell-type-specific mechanisms: bulk averaging masks cell-type attribution; deconvolution-vs-single-cell registered differences show bulk conclusions cannot directly read as cell-type evidence",
+   "observable_signature": "Bibliography-level anchor: PMID:42510813 (cell-type deconvolution of equine BALF RNA-seq: a critical comparison with matched single-cell data, Genes 2025 — deconvolution/single-cell truth difference registered in same-subject comparison); in-library U10/C9: bulk assay word legalized by C9 approval, S0 primary ledger includes bulk component",
+   "risk_level": "medium",
+   "mitigation": "Bulk composition conclusions default to pathway/tissue layer; cell-type-specific statements need deconvolution+sensitivity analysis and are labeled inference; when matched single-cell evidence exists, single-cell layer preferred (KC-B2-001 wording-drift same family)",
+   "evidence_source_type": "peer_reviewed_literature",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "bulk_composition_backprojection"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "PMID:42510813 (title verified 2026-10-06, trail /mnt/D/EyeKB/plans/pit_triage_deep2_20261005/work/eutils_bulk_mean_esummary.json)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 29,
+    "legacy_grade": "Tier B bibliographic record PMID",
+    "legacy_code_in_legend": "PIT-E2",
+    "report_confidence": "medium",
+    "home_rationale": "U10/C9 landing: bulk word legalized, P24 'bulk averaging = cell-resolution loss' failure enters claim this round (title-level verified per U10 discipline)"
+   }
+  }
+ ],
+ "pointers": []
+}

@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-017",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Eye-bank ex-vivo material and surgical fresh material mixed into one composition surface: death-to-fixation interval, preservation and surgical context differ systematically; pooling reads preservation effects as tissue biology",
+   "observable_signature": "Baseline measurement on file: ocular surface = eye-bank donor corneoscleral rim (ex-vivo), optic nerve = mixed surgical+eye-bank material (optic_nerve.md L26); material-source+interval reporting duty anchored in ocular_surface sampling-materials clause",
+   "risk_level": "medium",
+   "mitigation": "Composition claims carry material-source words (eye-bank/surgical flap/ex-vivo whole) and intervals; two sources listed separately, never pooled; cross-study comparisons first align material caliber (KC-B1-016 three-usage caliber same family)",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "eye_bank_donor_material_axis"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/kb/baselines/ocular_surface.md (L26-28)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 17,
+    "legacy_grade": "Empirical evidence in Library A",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "Material-source condition driven → PATTERN"
+   }
+  }
+ ],
+ "pointers": []
+}

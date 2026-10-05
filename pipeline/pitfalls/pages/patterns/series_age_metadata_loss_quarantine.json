@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-018",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "One GEO series mixes disease/normal/age layers and metadata cannot be completed: the QUARANTINE layer is discarded (8,178/23,178 scale), losing composition comparability — discard volume is a comparability loss not cleanup",
+   "observable_signature": "TG-G2 split measurement on file: GSE210543 23,178 cells into three layers (fetal 8,214 / adult 6,786 / QUARANTINE 8,178 age-unrecoverable); AMD/Unaffected donor codes 4046/4049 disjoint from D002 donor table, both pseudo-independence and age loss registered",
+   "risk_level": "medium",
+   "mitigation": "Series-level splitting (stage/disease layers) precedes composition comparison; QUARANTINE layers not silently discarded; cross-dataset donor ID overlap checked before claiming independence",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "series_age_metadata_loss_quarantine"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/OcularKB/plans/split_exec_TG-G2_release_20260818.md (L34-57)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 18,
+    "legacy_grade": "Empirical evidence in Library A",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "Metadata-condition driven → PATTERN (KC-B2-005 same family; this entry = metadata-loss face)"
+   }
+  }
+ ],
+ "pointers": []
+}

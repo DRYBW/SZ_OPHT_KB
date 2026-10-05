@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-021",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Public-dataset lineage is invisible: HRCA constituent/pooled donors reappear under different GSE/SUP accessions; nominally independent evaluation sets are actually resub of the training pool",
+   "observable_signature": "ESET declaration measurement on file: 17-species (GSE237204) human barcodes match HRCA at donor level (Hu035516OS↔Hu0355 etc.), GSE265801=HRCA Chen_17_D013=GSE226108 same pool, E-MTAB-7316 HCA constituent barred — all donor-level matches registered",
+   "risk_level": "high",
+   "mitigation": "External evaluation sets first pass donor/barcode lineage check (not accession-level); resub layers barred from evaluation surfaces; pairwise match ledgers retained",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "hidden_lineage_eval_double_dip"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/OcularKB/plans/M31_T118_ESET_DECLARATION_20260830.md (L13-16)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 21,
+    "legacy_grade": "Empirical evidence in Library A",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "Data-governance condition → PATTERN (evaluation-surface independence duty; does not touch scoring)"
+   }
+  }
+ ],
+ "pointers": []
+}

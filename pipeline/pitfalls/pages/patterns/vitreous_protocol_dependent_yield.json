@@ -1,0 +1,52 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-024",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [
+     "vitrectomy_cassette_wash"
+    ],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Vitreous immune-cell detectable surface is protocol-dependent: cassette washing vs membrane peeling vs flow+single-cell workflow differ in yield and subset retention; cross-protocol composition comparison compares extraction protocols, not biology",
+   "observable_signature": "Bibliography-level anchor: PMID:40382772 (protocol for isolating and characterizing human vitreous immune cell infiltrates by flow cytometry and single-cell transcriptomics, STAR Protoc 2025 — the protocol itself is the research subject)",
+   "risk_level": "medium",
+   "mitigation": "Vitreous composition claims reported per protocol layer (KC-B1-045 three questions extended by a protocol fourth question); cross-protocol comparisons only to pathway layer",
+   "evidence_source_type": "peer_reviewed_literature",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "vitreous_protocol_dependent_yield"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "PMID:40382772 (title verified 2026-10-06, trail /mnt/D/EyeKB/plans/pit_triage_deep2_20261005/work/eutils_candidate_anchors_esummary.json)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 24,
+    "legacy_grade": "Tier B bibliographic record PMID",
+    "legacy_code_in_legend": "PIT-E2",
+    "report_confidence": "medium",
+    "home_rationale": "Process-condition → PATTERN"
+   }
+  }
+ ],
+ "pointers": []
+}

@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-026",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Rabbit stromal wound-repopulation model conclusions transferred directly to the human fibrosis window: the registered rabbit non-fibrotic repair pathway differs from human pathological fibrosis; model→human direct read-out is reference-transfer failure",
+   "observable_signature": "Bibliography-level anchor: PMID:41421445 (single cell RNA-seq characterization of non-fibrotic stromal wound repopulation in the rabbit, Exp Eye Res 2026); in-library rabbit×cornea grid = to-be-built (B1 README second-batch item 3)",
+   "risk_level": "low",
+   "mitigation": "Rabbit-model references first list the non-fibrotic/fibrotic window difference; rabbit material data not admitted to human corneal composition comparison surfaces; grid-build duty transferred to construction line",
+   "evidence_source_type": "peer_reviewed_literature",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "model_species_wound_repop_boundary"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "PMID:41421445 (title verified 2026-10-06, trail /mnt/D/EyeKB/plans/pit_triage_deep2_20261005/work/eutils_candidate_anchors_esummary.json)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 26,
+    "legacy_grade": "Tier B bibliographic record PMID",
+    "legacy_code_in_legend": "PIT-E2",
+    "report_confidence": "medium",
+    "home_rationale": "Model-species condition → PATTERN (second-batch item 3 'anchored-to-be-built' landing)"
+   }
+  }
+ ],
+ "pointers": []
+}

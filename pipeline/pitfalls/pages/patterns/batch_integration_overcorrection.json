@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-027",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Overcorrection erases true biological variance: batch correction flattens between-group composition differences along with batch effects; post-correction 'uniformity' is falsely read as 'no difference'",
+   "observable_signature": "Bibliography-level anchor: PMID:40158033 (reference-informed evaluation of batch correction for single-cell omics data with overcorrection awareness, Commun Biol 2025); in-library same-case opposite face registered (batch_integration_overcorrection paired with cross_species_naive_integration_collapse)",
+   "risk_level": "medium",
+   "mitigation": "'No difference' conclusions across datasets report correction strength (overcorrection sensitivity); uncorrected-track controls kept (dual-track); disease-effect claims prefer within-dataset stratified analysis",
+   "evidence_source_type": "peer_reviewed_literature",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "batch_integration_overcorrection"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "PMID:40158033 (title verified 2026-10-06, trail /mnt/D/EyeKB/plans/pit_triage_deep2_20261005/work/eutils_batch_overcorrection_esummary.json)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 27,
+    "legacy_grade": "Tier B bibliographic record PMID",
+    "legacy_code_in_legend": "PIT-E2",
+    "report_confidence": "medium",
+    "home_rationale": "Method-condition → PATTERN (opposite failure surface of naive collapse; registered as separate entry)"
+   }
+  }
+ ],
+ "pointers": []
+}

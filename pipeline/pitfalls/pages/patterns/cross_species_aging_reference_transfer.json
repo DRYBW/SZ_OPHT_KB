@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-025",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Aging atlas conclusions transferred directly across species: human and macaque aging retina registered in one atlas while the two-species aging-signature correspondence is an open question; mouse/macaque aging module conclusions cannot be read as human cell-type-specific effects without verification",
+   "observable_signature": "Bibliography-level anchor: PMID:34691611 (a single-cell transcriptome atlas of the aging human and macaque retina, Natl Sci Rev 2021); in-library cross-species integration failure control on file (cross_species_naive_integration_collapse)",
+   "risk_level": "medium",
+   "mitigation": "Cross-species aging claims first build a human-model-species module correspondence table (including failure faces); aging conclusions default to pathway layer; cell-type-specific conclusions verified in the same atlas before transfer",
+   "evidence_source_type": "peer_reviewed_literature",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "cross_species_aging_reference_transfer"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "PMID:34691611 (title verified 2026-10-06, trail /mnt/D/EyeKB/plans/pit_triage_deep2_20261005/work/eutils_candidate_anchors_esummary.json)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 25,
+    "legacy_grade": "Tier B bibliographic record PMID",
+    "legacy_code_in_legend": "PIT-E2",
+    "report_confidence": "medium",
+    "home_rationale": "Species-axis condition → PATTERN (C10 macaque grid promotion separate; this entry registers the transfer rule)"
+   }
+  }
+ ],
+ "pointers": []
+}

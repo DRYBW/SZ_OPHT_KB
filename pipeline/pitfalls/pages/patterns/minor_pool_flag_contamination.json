@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-011",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Red/green verdicts of minority reference groups are fired by neighbor-class large pools (pool(C)≠pool(O)): verdicts reflect control-pool size, not target group discriminability",
+   "observable_signature": "KB6 audit measurement on file: RPE (n=863) MITF red verdict fired by the large neighbor RGC pool (n=399,605); the target group is too small to fire red — pool mismatch registered in §13-A(3)",
+   "risk_level": "medium",
+   "mitigation": "Minority group (<10k) verdicts must report both pool sizes pool(C)/pool(O); red/green marked unreliable if mismatch exceeds one order of magnitude; conclusions about minority types like RPE must go through independent panels (KC-B1-006 same family, generalization face)",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "minor_pool_flag_contamination"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/kb6_audit_20260924/AUDIT_KB6_D001_separation_v2.md 13-A(3)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 11,
+    "legacy_grade": "Empirical evidence in Library A",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "Verdict-mechanism level failure (coordinate-independent) → PATTERN"
+   }
+  }
+ ],
+ "pointers": []
+}

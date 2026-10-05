@@ -1,0 +1,53 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-023",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [
+     "vitrectomy_cassette_wash",
+     "surgical_stripped_membrane"
+    ],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Retinal pigment/photoreceptor-layer signals in vitreous material have a second disease channel: in PVR contexts pigment-cell migration/proliferation is pathology itself (macrophage-myofibroblast transition registered); reading 'sampling flag only' flags disease body as contamination",
+   "observable_signature": "Bibliography-level anchor: PMID:37686317 (macrophage-myofibroblast transition contributes to myofibroblast formation in PVR, Int J Mol Sci 2023); in-library KC-B1-046 sampling-flag row and PI residual adjudication in progress (card TRIAGE_TABLE)",
+   "risk_level": "medium",
+   "mitigation": "Disease-context words precede reading of pigment-layer signals (first verify PVR/tear context); dual-hypothesis registration (sampling flag and pathology channel reported in the same sentence); specimen records without sampling method still barred from the conclusion pool",
+   "evidence_source_type": "peer_reviewed_literature",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "pvr_pathologic_migration_flag_conflict"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "PMID:37686317 (title verified 2026-10-06, trail /mnt/D/EyeKB/plans/pit_triage_deep2_20261005/work/eutils_candidate_anchors_esummary.json)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 23,
+    "legacy_grade": "Tier B bibliographic record PMID",
+    "legacy_code_in_legend": "PIT-E2",
+    "report_confidence": "medium",
+    "home_rationale": "Disease-context condition → PATTERN; takes over the pathology face of KC-B1-046 (final adjudication stays with PI; flag-only)"
+   }
+  }
+ ],
+ "pointers": []
+}

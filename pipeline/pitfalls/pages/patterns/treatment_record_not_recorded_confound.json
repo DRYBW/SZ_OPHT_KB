@@ -1,0 +1,54 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-016",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [
+     "snRNA"
+    ],
+    "preparation": [],
+    "disease_or_treatment": [
+     "anti_VEGT_treated"
+    ]
+   },
+   "failure_mode": "Missing treatment record is read as untreated (not_recorded ≠ naive): donor/eye-bank metadata has no treatment column, drug exposure history may genuinely exist, and the treatment axis is blind-read",
+   "observable_signature": "Baseline measurement on file: ocular_surface sampling-materials clause 'treatment background: not recorded (eye-bank metadata has no treatment column)' (L28); C12 ruling {treated, naive, not_recorded} three-state discipline in the controlled vocabulary",
+   "risk_level": "high",
+   "mitigation": "Treatment axis registered three-state; not_recorded must not be used as naive control (C12 mandatory mitigation); treatment-effect comparisons first check metadata treatment-column availability, absent → downgrade to descriptive",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "treatment_record_not_recorded_confound"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/kb/baselines/ocular_surface.md (L28) + /mnt/D/EyeKB/plans/known_issues_b2_20261001/out/ARBITRATION_RULING_C1-C14_v1.md (C12)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 16,
+    "legacy_grade": "Empirical evidence in Library A",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "C12 landing item: UNMAPPED U12 disposition's 'P23 enters claim once on-disk source surfaced' — source found 2026-10-06 (ocular_surface L28)"
+   }
+  }
+ ],
+ "pointers": []
+}

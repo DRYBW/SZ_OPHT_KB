@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-015",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Governance gates silently reject legitimate inputs: species/ID convention differences make the gate reject true-type samples (title-case human-origin sends hitting the mouse-suspected branch); false rejections do not enter the result surface",
+   "observable_signature": "KB-GOV B5 implementation on file: 231 human-origin clusters in all-uppercase convention misdetect=0, but the document explicitly registers 'real human title-case sends will be falsely rejected', with T+7 observation window and dual-state probe ledger (off==pre 42/42)",
+   "risk_level": "medium",
+   "mitigation": "Every governance gate ships a false-rejection observation window + dual-state control ledger; false rejections counted and reported separately; if misdetect>0, revert per process, no unilateral caliber change",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "governance_gate_convention_false_reject"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/kbgov_b5impl_20260928/B5IMPL_COMPLETED.md (L37/L45)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 15,
+    "legacy_grade": "Empirical evidence in Library A",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "Governance-layer condition → PATTERN (rejection ≠ biological verdict, prevents silent bias)"
+   }
+  }
+ ],
+ "pointers": []
+}

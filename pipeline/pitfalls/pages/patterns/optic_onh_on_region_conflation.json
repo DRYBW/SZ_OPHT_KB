@@ -1,0 +1,52 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-019",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [
+     "snRNA"
+    ],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Optic nerve head (ONH/lamina cribrosa) and optic nerve shaft (ON) have different structure and cell composition: merging into one 'optic nerve' composition surface reads structural region differences as biological composition",
+   "observable_signature": "OA-D003 baseline measurement on file: region components ONH 355,363 nuclei vs ON 604,266 nuclei registered (optic_nerve.md L26, adult-only snRNA primary)",
+   "risk_level": "medium",
+   "mitigation": "Optic nerve claims first lock region words (ONH/ON/mixed); mixed-region composition described only, not benchmarked; sampling boundary recorded; glial composition comparisons stratified by region",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "optic_onh_on_region_conflation"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/kb/baselines/optic_nerve.md (L26)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 19,
+    "legacy_grade": "Empirical evidence in Library A",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "Sampling-boundary condition → PATTERN (C3 coordinates legal; the pitfall subject predicted by B1 second-batch list item 2)"
+   }
+  }
+ ],
+ "pointers": []
+}

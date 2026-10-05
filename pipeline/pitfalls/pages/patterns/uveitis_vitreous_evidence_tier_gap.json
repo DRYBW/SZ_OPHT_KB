@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-028",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Non-diabetic uveitis vitreous composition has thin single-cell evidence: mediator/proteomic review-layer conclusions are not the composition comparison surface — review conclusions and single-cell composition cannot substitute each other",
+   "observable_signature": "Bibliography-level anchor: PMID:42023421 (immune mediators in birdshot chorioretinopathy: a systematic review, Ocul Immunol Inflamm 2026 — mediator-layer evidence); in-library PVR/uveitis vitreous grid = placeholder (B1 README second-batch item 4)",
+   "risk_level": "low",
+   "mitigation": "Non-diabetic vitreous composition claims first verify evidence layer (mediator layer ≠ composition layer); composition-layer statements need single-cell support; grid absence registered as build duty",
+   "evidence_source_type": "peer_reviewed_literature",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "uveitis_vitreous_evidence_tier_gap"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "PMID:42023421 (title verified 2026-10-06, trail /mnt/D/EyeKB/plans/pit_triage_deep2_20261005/work/eutils_candidate_anchors_esummary.json)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 28,
+    "legacy_grade": "Tier B bibliographic record PMID",
+    "legacy_code_in_legend": "PIT-E2",
+    "report_confidence": "medium",
+    "home_rationale": "Evidence-tier condition → PATTERN (second-batch item 4 direct landing)"
+   }
+  }
+ ],
+ "pointers": []
+}

@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-020",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Doublets inflate false error clusters: high-doublet-fraction clusters (scrublet score median >0.4 level) are misread as 'class errors' — the failure is doublet composition, not classifier misbehavior for that class",
+   "observable_signature": "T125 crosstab measurement on file: cluster11 n=160 dbl_frac_pct=99.38 score_median 0.4686 — whole error_BC cluster doublet-driven; by contrast cluster10 dbl_frac=0.0% score_median 0.0314 constitutes a different category",
+   "risk_level": "medium",
+   "mitigation": "Error-cluster attribution first passes doublet-score crosstab (T125 style); high-dbl clusters do not drive rule changes; doublet rate reported jointly with rare-class support",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "doublet_inflated_error_cluster"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/OcularKB/plans/M31_T125_ROD_SCRUBLET_CROSSTAB_20260908.json"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 20,
+    "legacy_grade": "Empirical evidence in Library A",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "QC-condition driven → PATTERN"
+   }
+  }
+ ],
+ "pointers": []
+}

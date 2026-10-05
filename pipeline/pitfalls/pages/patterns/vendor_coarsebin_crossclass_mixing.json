@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-014",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Vendor coarse bins mix cross-class signal: coarse reference boxes (e.g., vendor Epithelial box) mix non-target epithelium/contamination signals; aligning against coarse boxes yields fake-diff or fake-match deviations",
+   "observable_signature": "BMR agreement measurement on file: vendor Epithelial 2.48% vs model RPE 0.17% with register note 'vendor Epithelial box mixed with non-RPE epithelial/contamination signal'; 13 of 17 vendor coarse bins have no corresponding class and must be treated NA",
+   "risk_level": "medium",
+   "mitigation": "Vendor coarse-bin alignment only to mapping caliber (KC-B1-024 same family); coarse bins without corresponding classes listed NA without extrapolation; coarse-bin deviations first attributed to bin definition before biological reading",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "vendor_coarsebin_crossclass_mixing"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/mouse_mid_20260925/MOUSE_MID_REPORT.md §3.3"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 14,
+    "legacy_grade": "Empirical evidence in Library A",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "Reference-granularity condition → PATTERN"
+   }
+  }
+ ],
+ "pointers": []
+}

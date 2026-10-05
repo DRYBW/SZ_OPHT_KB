@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-022",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Query-rewrite layer structural deletion: whole-sentence replacement rules lose substantive meaning in the rewritten surface (31/66 rows registered), while ON-arm hit improvements mask the meaning loss",
+   "observable_signature": "CN-CHALLENGE-24 measurement on file: G1 pass (strict hit miss=0, OFF 12/24→ON 21/24), G2 FAIL (substantive semantic loss 31 rows: 9 generic-verb bridge rows, 22 structural rows inseparable from whole-sentence-replacement rules), G3 pass (0 reversal)",
+   "risk_level": "medium",
+   "mitigation": "Rewrite layers pass per-row substantive-meaning audits (not just hit rates) before promotion; structural defects patched at the rule layer, not by parameters; ON/OFF control surfaces kept as verdict surfaces",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "query_rewrite_semantic_loss"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/cn_challenge_20261005/out/REPORT_CN_CHALLENGE.md"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 22,
+    "legacy_grade": "Empirical evidence in Library A",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "Service-surface condition → PATTERN (flag-raising only; service code untouched per territory rules)"
+   }
+  }
+ ],
+ "pointers": []
+}

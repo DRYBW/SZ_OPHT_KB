@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-012",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Naive cross-species integration collapses into one heterogeneous mega-cluster plus single-species tiny clusters: the mixed state is an integration failure mode, not cross-species conservation",
+   "observable_signature": "M2 v0.2a failure-control measurement on file: BC 30 clusters = 1 mega-cluster (14,401 cells) + 28 single-species clusters (near-all mouse); RGC 5 clusters trivially mixed, OT ARI -0.002 (M2 pre-registered failure tier)",
+   "risk_level": "high",
+   "mitigation": "Cross-species integration first passes three-state joint judgment (mixture degree/single-species share/ARI); failure baselines kept on file as controls; success declared only after audited ortholog-space pipeline (M2 three-threshold discipline)",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "cross_species_naive_integration_collapse"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/OcularKB/plans/M2_orthotype_20260827/M2_A3_FULL_PREREG.md (failure control L8)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 12,
+    "legacy_grade": "Empirical evidence in Library A",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "Species×integration interaction → PATTERN (C10 macaque promotion separate; this rule is coordinate-free)"
+   }
+  }
+ ],
+ "pointers": []
+}

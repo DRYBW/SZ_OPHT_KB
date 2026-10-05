@@ -1,0 +1,50 @@
+{
+ "schema": "eyekb-known-claims-page/1.0",
+ "generated_by": "pipeline/pitfalls/build_claims.py (WIRE-P1 REV-1 + B2)",
+ "page_type": "patterns",
+ "entries": [
+  {
+   "claim_id": "KC-B2-013",
+   "scope": {
+    "species": [
+     "*"
+    ],
+    "tissue": [
+     "*"
+    ],
+    "assay": [],
+    "preparation": [],
+    "disease_or_treatment": []
+   },
+   "failure_mode": "Post-integration per-sample composition residual bias is read away: cross-sample cluster merging dilutes disease-cohort differences into the main cluster; merged labels do not eliminate the residual",
+   "observable_signature": "GSE165784 v2 integration measurement on file: single-sample cluster cl0 (99.4%) becomes mixed post-integration (B0 91.6% + B6 70.2%); document registers 'residual RRD bias kept as-is'; state cluster merging evidenced by Jaccard 0.667",
+   "risk_level": "medium",
+   "mitigation": "Post-integration must report per-sample composition tables; cluster labels never substitute per-sample shares; disease-cohort conclusions recomputed on the single-sample track (dual-track retained)",
+   "evidence_source_type": "internal_observation",
+   "source_check": "locator_verified",
+   "home": {
+    "kind": "pattern",
+    "id": "integration_residual_disease_composition"
+   },
+   "visibility": "pre_annotation",
+   "blind_safe": true,
+   "answer_dependency": "none",
+   "status": "draft_pending_audit",
+   "owner": "pi-chief (KNOWNISSUES-B2 2026-09-30)",
+   "last_reviewed": null,
+   "links": [
+    "/mnt/D/EyeKB/plans/demo_gse165784/ANNOTATION_DRAFT_GSE165784_V2_20260923.md (integration table L12)"
+   ],
+   "conflicts": [],
+   "provenance": {
+    "origin_cell": "b2_stock_20260930",
+    "b1_order": 13,
+    "legacy_grade": "Empirical evidence in Library A",
+    "legacy_code_in_legend": "PIT-E1",
+    "report_confidence": "high",
+    "home_rationale": "Integration-condition driven → PATTERN (grid item KC-B1-017 generalization face)"
+   }
+  }
+ ],
+ "pointers": []
+}
