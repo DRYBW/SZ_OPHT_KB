@@ -28,6 +28,8 @@ python tests/verify_repro.py --db-dir literature_db/v2.4.2_2026-09_slim
 ## G4 Byte-exact anchor for the annotation pipeline (clone-executable, 2026-10-01 revision)
 Background: stage_a's neighbourhood/QC computation involves BLAS floating-point reductions; with the thread count unfixed, the same input can produce different cluster counts (upstream confirmed: scanpy #2956, numpy #29933). The `pipeline/run_pipeline.py` entry pins threads by default (`OMP/OPENBLAS/MKL/NUMEXPR/VECLIB_NUM_THREADS=1`, via `setdefault` so explicit overrides are preserved). **For reproduction = do not override these variables.**
 
+**Rewrite-layer precondition (2026-10-05, mandatory).** The G4 gate must be run with the Chinese query-rewrite layer explicitly closed — `EYEKB_CN_REWRITE=0` (equivalently `off`/`false`/`no`). The layer's default is ON since 2026-10-05; with it active, an evidence report produced through `pipeline/stage_b_evidence.py` can carry the `rewrite_meta` disclosure key, which changes the normalized report body and therefore the anchor comparison — a false FAIL caused by configuration, not by code. This is an operational precondition of the gate, not an optional flag.
+
 One-command acceptance (after installing dependencies per G1 and unpacking the corpus per G2):
 ```
 python tests/verify_pipeline.py

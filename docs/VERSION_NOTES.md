@@ -71,6 +71,15 @@
 - Composition prior surfaces: derived md regenerated from the translated JSONs where a generator exists; `kb/composition/SHA256SUMS.txt` recomputed against the repo copies (previous anchors in git history).
 - Gates re-run after this change: G3 reproduction 41/41, G4 pipeline anchors 3/3, S0 and query-rewrite regression suites, internal-vocabulary scan (outward scope) — results recorded in this change's commit.
 
+### Version notes — 2026-10-05 Chinese query-rewrite layer: default switched ON (v3.1)
+
+- The layer that routes Chinese search terms into the English vocabulary (`mcp_server/rewrite_cn.py`) is **ON by default** from this version: an unset `EYEKB_CN_REWRITE` now means enabled (`1`/`true`/`on`/`yes` unchanged). Explicit `0`/`off`/`false`/`no` still disables it and restores the previous behaviour byte for byte — the escape door is permanent. `rule_version` is now `v3.1`; the service version string is `KB1v2-0.11-cnrewrite-on`.
+- New mechanical rule: a query containing **no CJK character** is returned unchanged, with no disclosure key and no bridge-table load. English, numeric and symbolic queries are therefore never rewritten (measured: 40 English retrieval queries give byte-identical service responses with the layer on and off, and the previous release disturbed 14 of them).
+- Activation followed a pre-registered four-gate re-test on the exact bytes that were then installed (English identity / frozen exam-set-3 five-line criteria / exam-set-1-2 regression observation / rollback-state byte identity), plus a default-equals-explicit-ON check. All passed; live and repository copies are byte-identical. Evidence: `plans/cn_rewrite_flip_20261005/out/`.
+- Untranslated content remains: on the strict reading, 30 constraint rows in exam set 1 and 18 in exam set 2 are not covered. Coverage is therefore declared incomplete, and the layer is described as a deterministic term-level rewriter rather than a translation system. **Do not cite the "substantive-loss = 0" reading as safety evidence** (it holds constructively under zero-deletion insertion); the safety gate is strict hit-loss = 0 ∧ no semantic reversal ∧ zero character deletion ∧ off-state identity.
+- Operational consequence: the G4 gate in `docs/VERIFY_CONTRACT.md` must now be run with `EYEKB_CN_REWRITE=0`.
+- `tests/test_cn_rewrite.py` was rewritten for the new default and passes (0 failures, 0 skips). A read-only daily counter for rewrite/passthrough traffic (`plans/cn_rewrite_flip_20261005/scripts/flip_daily_stats.py`, aggregate counts only, no raw query text) is delivered for scheduling by the coordinator.
+
 ## Discipline redlines (invariants)
 
 1. **No evidence-service output in scoring** (redline-rewrite v2 clause): any classifier/model scoring pipeline is forbidden to consume this service's output to generate scores; `soft_flags.notes` is an optional re-review cue only.

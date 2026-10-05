@@ -1,10 +1,30 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""EyeKB MCP query-rewrite layer, v3 (CN-REWRITE-FIX2, 2026-10-05)
+"""EyeKB MCP query-rewrite layer, v3.1 (CN-REWRITE-FLIP, 2026-10-05)
 
 In one sentence: before a Chinese search sentence is fed to the English embedding surface, the
 bridge terms it contains are located and their English anchors are inserted in place; the rest of
-the sentence is preserved verbatim.
+the sentence is preserved verbatim. Search text that contains no Chinese character is never
+touched.
+
+v3.1 = v3 plus the two changes ordered by BRIEF_CN_REWRITE_FLIP.md (coordinator ruling chain
+astra_cnrewrite_20261005 -> DECISION_DEFAULT_SWITCH -> RULING_FIX1 -> FIX2 vol3 pass):
+
+  CH-3 (existence gate, new) — a query containing no CJK character at all is returned unchanged
+      with NO disclosure meta, before the bridge is consulted. Rationale: the layer exists to route
+      a Chinese query into the English retrieval surface; English search text is already inside the
+      corpus language, so anchor injection has no upside and only adds disturbance. Repaired defect
+      (coordinator behavioural probe, 2026-10-05): v3's M4 rule (a purely Latin token matched
+      against an alias right-hand side or a cn_term) rewrote purely English queries, e.g.
+      'retinal pigment epithelium markers' -> '... Epithelium markers'. The gate is mechanical:
+      the ORIGINAL query string is searched for any character in CJK_RE, which includes the
+      full-width forms (U+FF00-FFEF) — so a query that mixes full-width Latin, e.g. a full-width
+      'IPL', is still serviced. Detection runs on the raw query, not on the folded one, because
+      folding maps full-width Latin to half-width and would erase the only non-ASCII marker.
+
+  CH-4 (default flip) — the switch default is ON: an UNSET EYEKB_CN_REWRITE means enabled. The
+      escape door is kept forever: an explicit 0 / off / false / no turns the layer off, restoring
+      byte-identical pre-rewrite behaviour. 1 / true / on / yes stay ON.
 
 v3 = v2 (mixed in-place anchor insertion) plus the two repairs ordered by RULING_FIX1_20261005
 §放行前置 1:
@@ -32,7 +52,10 @@ v3 = v2 (mixed in-place anchor insertion) plus the two repairs ordered by RULING
       English anchor injection is skipped, and the candidate is disclosed under no_anchor_spans with
       reason "neg_scope:<cue>".
 
-Rule chain (v3; see plans/cn_rewrite_fix2_20261005/ for the measurement):
+Rule chain (v3.1; see plans/cn_rewrite_fix2_20261005/ and plans/cn_rewrite_flip_20261005/ for the
+measurements):
+  existence gate: a query with no CJK character is returned unchanged with no meta (CH-3); it is
+                  evaluated first, so the modes below are only reached by CJK-bearing queries
   M1 cn_term    : normalized cn_term occurs in the folded/normalized query
   M2 token      : a query token (folded length >= 4) is contained in a cn_term
   M3 alias-LHS  : an alias left-hand side occurs in the folded/normalized query
@@ -44,11 +67,17 @@ Rule chain (v3; see plans/cn_rewrite_fix2_20261005/ for the measurement):
                   contributes no anchor (span reserved; text preserved)
   phrase        : "<query with each kept span followed by ' <english anchor>'>"
 
-Switch: env EYEKB_CN_REWRITE read once per call; strip().casefold() in {1,true,on,yes} -> on;
-unset/any other value -> off; the default is unchanged (off). In the off state this module touches
-nothing (callers short-circuit straight through). Bridge path: env EYEKB_CN_BRIDGE_TSV overrides;
-when unset the default absolute path is used. If the bridge is missing/corrupted, the on state runs
-every query as-is and discloses status=bridge_missing (no raise, no service crash).
+Existence rule for the disclosure key (v3.1): rewrite_meta is None in exactly three cases —
+(a) the switch is off, (b) the query is blank, (c) the query contains no CJK character. Cases (b)
+and (c) are the documented zero-intervention promise: the layer is invisible to English / numeric /
+purely symbolic search text no matter how the switch is set.
+
+Switch: env EYEKB_CN_REWRITE, read once per call. v3.1 default: unset (or empty) -> ON. Explicit
+1/true/on/yes -> ON. Escape door, kept forever: 0/off/false/no -> OFF. Any other unrecognised value
+-> OFF (resolves to the safe side). In the off state this module touches nothing (callers
+short-circuit straight through, zero new response keys). Bridge path: env EYEKB_CN_BRIDGE_TSV
+overrides; when unset the default absolute path is used. If the bridge is missing/corrupted, the on
+state runs every query as-is and discloses status=bridge_missing (no raise, no service crash).
 
 Red line: this module is pure functions + read-only files; the returned rewrite_meta is for
 auditable disclosure only and is forbidden as input to any score/weighting/ranking.
@@ -61,7 +90,8 @@ import re
 BRIDGE_DEFAULT = ("/mnt/D/EyeKB/plans/devline_cnbridge_20261002/"
                   "out/CN_BRIDGE_MERGED_v1.tsv")
 ON_VALUES = {"1", "true", "on", "yes"}
-RULE_VERSION = "v3"
+OFF_VALUES = {"0", "false", "off", "no"}
+RULE_VERSION = "v3.1"
 
 # CH-1: match-mode priority, used ONLY to break a same-span tie (lower wins).
 MODE_PRI = {'M1': 0, 'M3': 0, 'M4': 1, 'M2': 2}
@@ -125,7 +155,22 @@ def clean_anchor(s):
 
 
 def enabled():
-    return (os.environ.get("EYEKB_CN_REWRITE") or "").strip().casefold() in ON_VALUES
+    """v3.1 default-ON semantics (CH-4).
+
+    unset or empty      -> True   (the v3.1 default; the layer is active without configuration)
+    1/true/on/yes       -> True
+    0/off/false/no      -> False  (the escape door; byte-identical pre-rewrite behaviour)
+    anything else       -> False  (an unrecognised value resolves to the safe/passive side)
+    """
+    v = os.environ.get("EYEKB_CN_REWRITE")
+    if v is None or v.strip() == "":
+        return True
+    s = v.strip().casefold()
+    if s in ON_VALUES:
+        return True
+    if s in OFF_VALUES:
+        return False
+    return False
 
 
 def _qindex(q):
@@ -378,10 +423,15 @@ def _load_bridge():
 
 def rewrite_query(q):
     """Rewrite a single query. q = the original search sentence (str).
-    Returns (query_used, meta | None); meta is None iff the switch is off."""
+    Returns (query_used, meta | None); meta is None iff the switch is off, the query is blank, or
+    the query contains no CJK character (the CH-3 zero-intervention promise)."""
     if not enabled():
         return q, None
     if not q or not str(q).strip():
+        return q, None
+    if not CJK_RE.search(q if isinstance(q, str) else str(q)):
+        # CH-3 existence gate: no CJK character anywhere -> the query is already in the retrieval
+        # surface's own language; skip every anchor mode (M3/M4 included) and disclose nothing.
         return q, None
     p, bridge, bsha = _load_bridge()
     if bridge is None:

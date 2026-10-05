@@ -42,7 +42,7 @@ from mcp.server import MCPServer  # noqa: E402
 app = MCPServer(
     name="eyekb",
     title="EyeKB ophthalmic knowledge-base evidence service",
-    version="KB1v2-0.8-cnrewrite",
+    version="KB1v2-0.11-cnrewrite-on",
     description=("Ophthalmic literature RAG retrieval (v2.0 whole-eye-bank 174,616 chunks / 2,713 papers; "
                  "from KB1v2 onward carries the inclusion_reasons/claim_relation/evidence_context three fields "
                  "+ verification status) + VK index pages + local authoritative marker library + "
@@ -104,12 +104,15 @@ def search_literature(cell_type: str, top_k: int = 5, species: str = "",
     tissue: v2.0 multi-label tissue filter (retina/cornea/RPE/choroid/...).
     query: explicit search sentence; if empty, a cell_type template sentence is used.
     db: empty = v2.0_2026-09, or give an absolute path.
-    Chinese search sentences can be translated into English search expressions by the
-    query-rewrite layer before retrieval (2026-10-03):
-    switch = env var EYEKB_CN_REWRITE ∈ {1,true,on,yes}, read per call, off by default;
-    in the off state the service behaves byte-identically to history; in the on state the
-    response attaches a rewrite_meta disclosure key (evidence disclosure only, forbidden as
-    input to any score/ranking). Tool signature and MCP schema unchanged.
+    Chinese search sentences are routed through the query-rewrite layer before retrieval, which
+    inserts English anchor terms in place (2026-10-03; default ON since 2026-10-05):
+    switch = env var EYEKB_CN_REWRITE, read per call — unset = ON; 1/true/on/yes = ON;
+    0/off/false/no (and any unrecognised value) = OFF, the escape door, which restores
+    byte-identical pre-rewrite behaviour; only queries containing a CJK character enter the layer,
+    so English / numeric / symbolic search text is never modified and carries no extra key; with
+    the layer ON, a Chinese query's response attaches a rewrite_meta disclosure key (evidence
+    disclosure only, forbidden as input to any score/ranking). Tool signature and MCP schema
+    unchanged.
     """
     resp = core.search_literature(
         cell_type, species=species or None, tissue=tissue or None,

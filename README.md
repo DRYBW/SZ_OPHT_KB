@@ -248,6 +248,14 @@ The server runs over local stdio only and opens no network port. The literature-
 | `get_disease_prior` | The disease × tissue background layer (cell-identity hierarchy, state axes, sampling-artifact cautions) | "Can a PDR epiretinal membrane sample be compared directly to a retina sample?" |
 | `get_kb_page` | Read knowledge-base pages as-is (index / topic / tissue page types) | "Open the microglia entry" |
 
+### Chinese queries and the rewrite layer
+
+The corpus itself is English. When you pass an explicit Chinese `query` to `search_literature`, a **deterministic term-level rewrite layer** (a 243-row Chinese→English bridge table; not a general translator) inserts English anchors in place, keeping every Chinese character of your question (zero character deletion). **Since 2026-10-05 the layer is ON by default** — no configuration needed. To turn it off, set `EYEKB_CN_REWRITE` to `0`, `off`, `false` or `no`; that restores the pre-2026-10-05 behaviour byte for byte, and the option stays available permanently.
+
+- **Zero intervention for English queries.** A query containing no CJK character (English / numeric / symbolic) is returned unchanged, with no disclosure key attached. Measured: 40 English retrieval queries give byte-identical service responses with the layer on and off.
+- **Disclosure key `rewrite_meta`.** Present only when the layer is on and the query contains Chinese; it is pure disclosure and **never feeds retrieval, scoring or ranking**. Key table and existence rules: `plans/cn_rewrite_flip_20261005/out/CONTRACT_REWRITE_META_v3.1.md`.
+- **Coverage is incomplete.** The bridge has 243 rows and rewriting is term-level, so the benefit is term-level ranking improvement — it is **not** a guarantee that answers become correct, and untranslated content remains (strict reading: 30 constraint rows in exam set 1, 18 in exam set 2). Details: `plans/cn_rewrite_flip_20261005/out/CHANGELOG_CN_REWRITE_ON.md`.
+
 ### How to use composition baselines
 
 `get_tissue_composition` returns **reference intervals, not acceptance thresholds**: if a cell-type proportion in your dataset falls clearly outside the literature interval, the system raises an advisory flag for you to revisit — it could be sampling difference, enrichment protocol, or an annotation error. Since 2026-09, baselines are refined by tissue region (retina / macula / ocular surface baselined separately) and library strategy (cell suspension vs single-nucleus suspension), reducing "wrong baseline compared against wrong data" false alarms.
@@ -256,7 +264,7 @@ The server runs over local stdio only and opens no network port. The literature-
 
 - **Literature layer**: default corpus = the v2.4.2 frozen build (~243,000 chunks / 3,869 papers, with a preprint-flag column). As of 2026-10-01 the default switched from v2.0 (~175,000 chunks / 2,713 papers, kept as read-only legacy) after coverage, regression, and golden-set gates all passed and the corpus was confirmed identical to the G2/G3 reproduction assets; internal and external default states now match. Everything comes from public ophthalmology and single-cell literature; every item traces to a PMID.
 - **Known-issues catalog** (`pipeline/pitfalls/`): 59 citation-backed atomic entries + the 90-cell evidence-state matrix; the comparison entry for external annotations is `audit_annotations.py` (see above).
-- **Dictionary layer** (`kb/`, 100+ files): cell-type marker dictionaries for the human eye and mouse retina, tissue composition baselines (v0 mixed-design build + v1 stratified build), disease-prior matrices. Entries are written in English; Chinese search terms can be routed into the English vocabulary by the optional query-rewrite layer (off by default).
+- **Dictionary layer** (`kb/`, 100+ files): cell-type marker dictionaries for the human eye and mouse retina, tissue composition baselines (v0 mixed-design build + v1 stratified build), disease-prior matrices. Entries are written in English; Chinese search terms can be routed into the English vocabulary by the query-rewrite layer (**on by default since 2026-10-05**; set `EYEKB_CN_REWRITE=0` to switch it off, which restores the earlier behaviour exactly).
 - **Protocols and validation records** (`docs/`): standard operating procedures for cell annotation and the complete evidence of successive blinded validations (task definitions, decision tables, ballots, scripts) — about 2,300 files, all recomputable.
 
 ## Verify that your install matches our results
@@ -295,6 +303,7 @@ figures/             the two example figures above
 3. **Disease priors are background reference only.** The intervals from `get_tissue_composition` / `get_disease_prior` are literature statistics; public disease datasets (e.g., PDR neovascular membranes) have heterogeneous annotation quality themselves and cannot serve as acceptance lines.
 4. **Large files go through Releases.** All RAG corpus versions (~940 MB–3 GB) live on the Releases page (sha256-checked); the git tree stays light.
 5. **h5ad version compatibility**: use anndata ≥ 0.13 to read evaluation sets (0.11.x errors on the newer matrix format). The pure MCP server does not need anndata.
+6. **The Chinese query-rewrite layer improves term-level retrieval ranking; it does not translate sentences and its coverage is incomplete.** It is a deterministic 243-row bridge-driven rewriter, not a general machine-translation system; gains measured on frozen exam sets are retrieval-rank gains, not evidence that answers became correct. It is on by default and can be switched off entirely with `EYEKB_CN_REWRITE=0` (or `off`/`false`/`no`).
 
 ## Citation
 
