@@ -216,24 +216,25 @@ def _pair_anchor(pair):
 
 
 def _anchor_of(c):
-    """English anchor contributed by one candidate."""
+    """English anchor contributed by one candidate.
+
+    An alias-derived candidate never falls back to its row's cn_term anchor: if the matched alias
+    pair exists but is rejected by the anchor-sanity filter, the candidate contributes nothing.
+    (Without that rule CH05's 鉴别诊断 would fall back to BRG0004's cn_term anchor and inject
+    "Age-Related Macular Degeneration" into a glaucoma query.)
+    """
     row = c['row']
     pairs = [p for p in (row.get('aliases') or '').split(';') if '=' in p]
     if c['mode'] == 'M3':
         for p in pairs:
             if _fnorm(p.split('=', 1)[0]) == _fnorm(c['frag']):
-                a = _pair_anchor(p)
-                if a:
-                    return a
-    elif c['mode'] == 'M4':
+                return _pair_anchor(p)
+        return ''
+    if c['mode'] == 'M4':
         for p in pairs:
             if _fnorm(p.split('=', 1)[1]) == _fnorm(c['frag']):
-                a = _pair_anchor(p)
-                if a:
-                    return a
-        a = clean_anchor(c['frag'])
-        if a:
-            return a
+                return _pair_anchor(p)
+        return clean_anchor(c['frag'])
     return clean_anchor(row.get('en_anchor') or '')
 
 
