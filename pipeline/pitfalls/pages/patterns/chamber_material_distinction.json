@@ -62,7 +62,7 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "Immune dominant group is a material attribute, not a disease attribute: same disease different materials (membrane myeloid vs vitreous T lineage).",
+   "failure_mode": "Immune dominant group carries a strong material/chamber component (not purely a disease attribute — material and disease effects may stack): same disease different materials (membrane myeloid vs vitreous T lineage).",
    "observable_signature": "Patient-level paired samples can separate chamber effects; averaging class proportions will mask them.",
    "risk_level": "high",
    "mitigation": "Citing PDR immune maps must include chamber term (three grids: membrane/vitreous/retina); cross-chamber integration only done at patient level (paired samples), no averaging of class proportions.",

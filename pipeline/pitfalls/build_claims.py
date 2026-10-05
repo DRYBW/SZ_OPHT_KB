@@ -153,8 +153,8 @@ v(PM, 1, ("cell",), "dataset_specific", "high",
   "Rare class proportion ≈0 in full-pool clustering; reappears after compartment-gated sub-clustering",
   "Proportions are measured from membrane grid (registered GSE165784 series).")
 v(PM, 2, ("pattern", "surgical_blood_inflow"), "none", "high",
-  "Surgical specimen blood influx: myeloid/platelet/neutrophil signatures mix in; counting without deducting blood source = conclusion contamination",
-  "Two layers separable via blood-source anchors (FCN1/LYZ) and resident anchors (SELENOP/MRC1/FOLR2); proportions change after PBMC paired deduction",
+  "Surgical specimen blood influx: myeloid/platelet/neutrophil signatures mix in; counting myeloid proportions without first reporting blood-lineage vs resident layers = conclusion contamination (platelet/neutrophil anchors near-blood-only; monocyte-layer anchors reach lineage only, blood-vs-recruitment direction needs flag check)",
+  "Myeloid splits into two clusters by lineage anchors — blood-lineage side (FCN1/LYZ/S100A8-9, B10/sub14 observed) vs tissue-resident side (SELENOP/MRC1/FOLR2/CD163, B13 observed); anchors cap at lineage layer (blood-contamination vs disease-recruitment aliasing disclosed by priors); PBMC-paired deduction is a conditional rule (no paired blood sample in library yet, forward-looking)",
   "Established across tissues: membrane grid measurement + vitreous strip text explicitly notes 'blood source deduction method same as membrane grid', two grids registered",
   sc_ex={"species": ["human"], "tissue": ["fibrovascular_membrane", "vitreous"]})
 v(PM, 3, ("pattern", "disease_material_vs_healthy_baseline"), "none", "high",
@@ -198,7 +198,7 @@ v(MR, 2, ("pattern", "symbol_case_ortholog_join"), "none", "high",
   "B5 governance ontology cross-species; full quantification of rule text",
   sc_ex={"species": ["*"], "tissue": ["*"]})
 v(MR, 3, ("species", "mouse"), "none", "medium",
-  "Mouse reference side: Müller cells often labeled as Astrocytes (including SingleR/vendor conventions): cross-system annotation drift",
+  "Vendor SingleR mouse-retina reference labels Müller cells as Astrocytes (observed in-library via BMR; vendor conventions not exhaustively audited): cross-system annotation drift",
   "Label category drift for the same cluster between vendor conventions and this lexicon (Müller↔Astro)",
   "General mouse-side annotation convention (text not limited to tissue) → SPECIES/mouse")
 v(MR, 4, ("cell",), "none", "medium",
@@ -240,8 +240,8 @@ v(TM, 2, ("cell",), "none", "medium",
   "Iris sphincter/ciliary muscle signatures appearing in TM samples = normal sampling contamination.",
   "Specific to TM anatomical adjacency.", sc_ex={"preparation": ["blunt_strip_TM"]})
 v(TM, 3, ("cell",), "none", "medium",
-  "Nuclear suspension platforms lose TM cytoplasmic transcripts (contractile apparatus/ECM-related genes).",
-  "snRNA readings systematically lack cytoplasmic signatures; scRNA culture controls differ.",
+  "Nuclear suspension platforms lose TM cytoplasmic transcripts (contractile apparatus/ECM-related genes); in-library anchor establishes the 100%-nucleus caliber only.",
+  "In-library scRNA comparison anchors are mostly cultured systems — culture state confounds the platform axis, so signature differences cannot be attributed to the nucleus/cell platform alone; cytoplasmic-signature under-read in nucleus data is disclosed with the confound.",
   "Specific to TM + nuclear suspension combination (general platform axis part in platform_nucleus_vs_cell).",
   sc_ex={"assay": ["snRNA"]})
 v(TM, 4, ("cell",), "none", "low",
@@ -249,8 +249,8 @@ v(TM, 4, ("cell",), "none", "low",
   "Baseline rows where donor_range degrades to [0,0] trigger out-of-bounds flags.",
   "Evidence anchor TM Pericyte row; criteria revision pending final decision, no upgrade")
 v(TM, 5, ("cell",), "none", "medium",
-  "Immortalized cell line phenotypic drift: TM literature extensively uses immortalized lines with publicly documented differences from primary phenotype",
-  "Passage number and donor lineage discrepancies recorded in literature",
+  "Immortalized cell line phenotypic drift (registration-grade prior, out-of-library): TM literature extensively uses immortalized lines; drift evidence is title-level candidate references, not in-library observation",
+  "Immortalized-line context references verified at title level only (full-text not reviewed; candidate anchors PMID:26396484/29847662/40650044 added by 2026-10-06 audit); no drift observation in library — passage/donor-lineage check is a material forensics cue, not a witnessed failure",
   "B-tier out-of-library prior registration limited to TM", sc_ex={"preparation": ["cultured_cell_line"]})
 v(TM, 6, ("cell",), "none", "low",
   "Human outflow specialized literature bibliographic pool: anchor for TM/SC subtype vocabulary reconciliation and cross-species homology verification",
@@ -274,7 +274,7 @@ v(CO, 3, ("cell",), "dataset_specific", "high",
   note="Audit rules for curator; failure observations for reading interface")
 v(CO, 4, ("cell",), "none", "high",
   "Sampling stratum mixing: pooling ocular surface superclasses (cornea/limbus/sclera...) makes stratum proportions entirely spurious",
-  "Whole mount defaults include limbal stem niche + conjunctival transition zone; applying baselines across regions distorts proportions",
+  "Whole-mount region composition is dissection-boundary-defined (limbus/conjunctiva inclusion cannot be assumed from the protocol name; no default on disk); applying baselines across regions distorts proportions",
   "D002 superclass structural fact; locking sampling domain is mandatory mitigation")
 v(CO, 5, ("pattern", "panbright_epithelial_secreted"), "none", "high",
   "Broad non-specific brightness of epithelial/secretory markers: single-gene classification is compromised by cross-lineage non-specific brightness",
@@ -291,8 +291,8 @@ v(CO, 7, ("cell",), "none", "low",
   "Subtypes undeterminable when vocabulary lacks atlas reconciliation",
   "Tier B bibliographic pool anchored to this cell")
 v(CO, 8, ("cell",), "none", "low",
-  "Community general QC/integration layer pitfalls extrapolatable to ocular surface, but must note non-corneal empirical basis",
-  "(Community observation, locally unrecalculated)",
+  "Default generic QC/integration rules (empty-droplet, doublet, no-rep statistics) misapplied to low-cell-number corneal materials directly hit empty-drop/contamination mixing; community basis, not corneal empirical",
+  "Filtered-matrix low-gene samples = empty-drop/contamination mix band; no-rep statistical-power debate applies to cornea's naturally small n (BioStars #482228/#315869 contexts; locally unrecalculated)",
   "Tier C content clause", note="community_lead")
 
 # ---- human__vitreous (8 items → 6 claim + 1 absence + 1 declaration)
@@ -306,15 +306,15 @@ v(VI, 2, ("cell",), "none", "high",
   "Photoreceptor/RPE signature in vitreous samples = collection flag, not new discovery",
   "Vitreous-specific; blood depletion pointer → surgical_blood_inflow")
 v(VI, 3, ("cell",), "none", "high",
-  "Near-zero cell baseline: normal vitreous single-cell reference does not exist, disease comparisons lack anchor",
-  "Public data lacks normal vitreous composition entries (verified during construction)",
+  "Near-zero cell baseline: no normal-vitreous single-cell composition reference registered (absence in library registration and title-level search — not an existence claim); disease comparisons lack a healthy anchor",
+  "Construction-time registration lacks normal vitreous composition entries; 2026-10-06 eutils recheck (vitreous+single-cell) still shows no healthy atlas (hits all disease/protocol contexts); registered-absence wording, existence not asserted",
   "Domain gap fact (basis for vocabulary §3 conflict ② composition aspect missing)")
 v(VI, 4, ("cell",), "none", "medium",
   "Low cell count and sequencing depth: proportion of low-quality empty droplets/ambient RNA amplified in sparse cell materials",
   "Left-shifted nFeature distribution per sample + high ambient estimation; rare classes survive after non-ambient gate (expression fraction × doublet joint test)",
   "Vitreous material characteristics (general ambient methodology part in retina ambient entries)")
 v(VI, 5, ("pattern", "chamber_material_distinction"), "none", "high",
-  "Immune dominant group is a material attribute, not a disease attribute: same disease different materials (membrane myeloid vs vitreous T lineage).",
+  "Immune dominant group carries a strong material/chamber component (not purely a disease attribute — material and disease effects may stack): same disease different materials (membrane myeloid vs vitreous T lineage).",
   "Patient-level paired samples can separate chamber effects; averaging class proportions will mask them.",
   "Shares pattern with 'same disease different materials' clause for membrane grid (one scope one claim, subject of this clause = attribution direction).",
   sc_ex={"species": ["human"], "tissue": ["fibrovascular_membrane", "vitreous", "retina"]})
@@ -380,7 +380,7 @@ B2_ITEMS = [
     dict(pid="fetal_adult_stage_mixing", est="internal_observation", risk="high",
          ad="none", conf="high", prep=[], assay=[], disease=[],
          fm="Fetal/developmental stage samples mixed into adult tissue reading surface: developmental signatures hijack annotation and age axis, causing developmental cell types to be mislabeled or rare classes flattened under adult vocabulary",
-         obs="Building surface equals evidence: independent developmental retina surface (status=development_annotated_aggregate) and transitional components registered precisely due to mixing risk; S0 suspected fetal hard gate prototype completed smoke test on public sample panel input (structure gate driven)",
+         obs="Evidence grade = risk registration (defensive build + gate smoke; no witnessed mislabel case in library). Independent developmental retina surface (status=development_annotated_aggregate) and transitional components registered precisely due to mixing risk; S0 suspected-fetal hard gate prototype completed smoke test on public sample panel input (structure gate driven)",
          mit="Stage orthogonal axis determination precedes naming (S0 hard gate): fetal/developing suspected samples → abstain/separate list, prohibited strong naming under adult vocabulary; report grouped by stage before reading surface",
          ref="/mnt/D/EyeKB/kb/baselines/retina__fetal_developing.json + /mnt/D/EyeKB/kb/baselines/fetal_development_transitions.json",
          why="Developmental mixing = stage-condition driven (C11 adjudication assigned to PATTERN branch 4, no CELL variant grid created)"),
@@ -401,7 +401,7 @@ B2_ITEMS = [
     dict(pid="organoid_developing_reference_mixing", est="peer_reviewed_literature", risk="medium",
          ad="none", conf="medium", prep=["cultured_cell_line"], assay=[], disease=[],
          fm="Organoid/iPSC-derived systems framed with adult tissue: system developmental signatures mistaken for adult cell type evidence, organ-level references further contaminate adult type definitions and training references",
-         obs="Bibliographic records: PMID:32946783 (Human retina and its organoid atlas), PMID:39117640 (Human developing retina multi-omics atlas), PMID:38942029 (Heterogeneity of hPSC-derived limbal stem cells)",
+         obs="Bibliography-level anchors only (locator_verified ≠ witnessed failure): PMID:32946783 (Human retina and its organoid atlas), PMID:39117640 (Human developing retina multi-omics atlas), PMID:38942029 (Heterogeneity of hPSC-derived limbal stem cells); no organoid-vs-adult mislabel case observed in library — the rule is preventive, derived from system-axis difference",
          mit="Before naming and training references, distinguish the system axis (organoid/iPSC vs in situ tissue); if no 'system' term is present, leave scope blank and register a gap (to be backfilled after C11/C9 vocabulary expansion); organ-level references must not solely define adult cell types",
          ref="/mnt/D/EyeKB/plans/known_issues_b1_20260930/pubmed_B_verified.json verified key",
          why="System-condition driven (vocabulary currently lacks system axis → note registers gap; do not invent terms)"),

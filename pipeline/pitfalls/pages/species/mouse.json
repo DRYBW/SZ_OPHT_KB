@@ -16,7 +16,7 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "Mouse reference side: Müller cells often labeled as Astrocytes (including SingleR/vendor conventions): cross-system annotation drift",
+   "failure_mode": "Vendor SingleR mouse-retina reference labels Müller cells as Astrocytes (observed in-library via BMR; vendor conventions not exhaustively audited): cross-system annotation drift",
    "observable_signature": "Label category drift for the same cluster between vendor conventions and this lexicon (Müller↔Astro)",
    "risk_level": "medium",
    "mitigation": "Mouse side always use full names (Müller glia / microglia) or CL IDs; build a lexicon crosswalk before cross-species comparison (dr-sc re-annotation crosswalk follows the same sha discipline); compare with vendor annotations only after mapping.",

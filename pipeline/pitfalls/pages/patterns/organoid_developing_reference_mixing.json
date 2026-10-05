@@ -19,7 +19,7 @@
     "disease_or_treatment": []
    },
    "failure_mode": "Organoid/iPSC-derived systems framed with adult tissue: system developmental signatures mistaken for adult cell type evidence, organ-level references further contaminate adult type definitions and training references",
-   "observable_signature": "Bibliographic records: PMID:32946783 (Human retina and its organoid atlas), PMID:39117640 (Human developing retina multi-omics atlas), PMID:38942029 (Heterogeneity of hPSC-derived limbal stem cells)",
+   "observable_signature": "Bibliography-level anchors only (locator_verified ≠ witnessed failure): PMID:32946783 (Human retina and its organoid atlas), PMID:39117640 (Human developing retina multi-omics atlas), PMID:38942029 (Heterogeneity of hPSC-derived limbal stem cells); no organoid-vs-adult mislabel case observed in library — the rule is preventive, derived from system-axis difference",
    "risk_level": "medium",
    "mitigation": "Before naming and training references, distinguish the system axis (organoid/iPSC vs in situ tissue); if no 'system' term is present, leave scope blank and register a gap (to be backfilled after C11/C9 vocabulary expansion); organ-level references must not solely define adult cell types",
    "evidence_source_type": "peer_reviewed_literature",

@@ -17,10 +17,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "Surgical specimen blood influx: myeloid/platelet/neutrophil signatures mix in; counting without deducting blood source = conclusion contamination",
-   "observable_signature": "Two layers separable via blood-source anchors (FCN1/LYZ) and resident anchors (SELENOP/MRC1/FOLR2); proportions change after PBMC paired deduction",
+   "failure_mode": "Surgical specimen blood influx: myeloid/platelet/neutrophil signatures mix in; counting myeloid proportions without first reporting blood-lineage vs resident layers = conclusion contamination (platelet/neutrophil anchors near-blood-only; monocyte-layer anchors reach lineage only, blood-vs-recruitment direction needs flag check)",
+   "observable_signature": "Myeloid splits into two clusters by lineage anchors — blood-lineage side (FCN1/LYZ/S100A8-9, B10/sub14 observed) vs tissue-resident side (SELENOP/MRC1/FOLR2/CD163, B13 observed); anchors cap at lineage layer (blood-contamination vs disease-recruitment aliasing disclosed by priors); PBMC-paired deduction is a conditional rule (no paired blood sample in library yet, forward-looking)",
    "risk_level": "high",
-   "mitigation": "Output 'blood source vs resident' two layers before myeloid counting (SELENOP/MRC1/FOLR2 resident anchors vs FCN1/LYZ blood-source anchors); mandatory deduction ratio when PBMC control samples exist; prohibit bare writing 'macrophages account for X%' without noting blood source caliber in external wording.",
+   "mitigation": "Before myeloid counting, report the 'blood-lineage vs tissue-resident' layers (resident anchors SELENOP/MRC1/FOLR2/CD163 vs classical-monocyte anchors FCN1/LYZ/S100A8-9); both anchor sets reach the lineage layer only, not the origin layer — FCN1/LYZ aliases with surgical blood influx and disease-recruited monocytes share the signature, SELENOP/FOLR2 also occur in perivascular macrophages, origin assertions are capped at transcription similarity (priors clause registered; must be paired with blood-contamination flag checks); apply PBMC-paired deduction when a paired PBMC control exists (no paired blood sample in the GSE165784 library yet; forward-looking rule); external wording must not write 'macrophages X%' bare without the blood-lineage caliber.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {

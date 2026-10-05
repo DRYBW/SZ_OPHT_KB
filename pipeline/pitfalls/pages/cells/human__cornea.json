@@ -144,9 +144,9 @@
     "disease_or_treatment": []
    },
    "failure_mode": "Sampling stratum mixing: pooling ocular surface superclasses (cornea/limbus/sclera...) makes stratum proportions entirely spurious",
-   "observable_signature": "Whole mount defaults include limbal stem niche + conjunctival transition zone; applying baselines across regions distorts proportions",
+   "observable_signature": "Whole-mount region composition is dissection-boundary-defined (limbus/conjunctiva inclusion cannot be assumed from the protocol name; no default on disk); applying baselines across regions distorts proportions",
    "risk_level": "high",
-   "mitigation": "Corneal analysis first locks sampling domain (central/limbal/whole mount); whole mount defaults include limbal stem niche + conjunctival transition zone, proportion conclusions limited to domain level; prohibit cross-region application of categories/baselines.",
+   "mitigation": "Corneal analysis must first lock the sampling domain (central/limbal/whole mount); whether a whole mount includes the limbal stem niche/conjunctival transition zone is decided by the dissection boundary and must be checked against specimen records — protocol names are not default assumptions; unrecorded samples are treated as mixed regions; proportion conclusions only at region level; forbid cross-region application of categories/baselines.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -271,8 +271,8 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "Community general QC/integration layer pitfalls extrapolatable to ocular surface, but must note non-corneal empirical basis",
-   "observable_signature": "(Community observation, locally unrecalculated)",
+   "failure_mode": "Default generic QC/integration rules (empty-droplet, doublet, no-rep statistics) misapplied to low-cell-number corneal materials directly hit empty-drop/contamination mixing; community basis, not corneal empirical",
+   "observable_signature": "Filtered-matrix low-gene samples = empty-drop/contamination mix band; no-rep statistical-power debate applies to cornea's naturally small n (BioStars #482228/#315869 contexts; locally unrecalculated)",
    "risk_level": "low",
    "mitigation": "When extrapolating general pitfalls, note 'community experience, not corneal empirical evidence'.",
    "evidence_source_type": "community_lead",

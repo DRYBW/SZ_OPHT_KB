@@ -104,10 +104,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "Nuclear suspension platforms lose TM cytoplasmic transcripts (contractile apparatus/ECM-related genes).",
-   "observable_signature": "snRNA readings systematically lack cytoplasmic signatures; scRNA culture controls differ.",
+   "failure_mode": "Nuclear suspension platforms lose TM cytoplasmic transcripts (contractile apparatus/ECM-related genes); in-library anchor establishes the 100%-nucleus caliber only.",
+   "observable_signature": "In-library scRNA comparison anchors are mostly cultured systems — culture state confounds the platform axis, so signature differences cannot be attributed to the nucleus/cell platform alone; cytoplasmic-signature under-read in nucleus data is disclosed with the confound.",
    "risk_level": "medium",
-   "mitigation": "Prohibit bare use of nuclear suspension readings for TM contractile/ECM-related claims, mark intronic risk; compare platforms separately (snRNA vs cultured scRNA), do not average.",
+   "mitigation": "Forbid bare nucleus-suspension readings for TM contractile/ECM claims, flag intronic risk; cross-platform comparisons (snRNA vs cultured scRNA) listed separately, never averaged — in-library scRNA comparison anchors are mostly cultured systems, culture state confounds the platform axis, signature differences cannot be attributed to the platform alone.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -190,8 +190,8 @@
     "assay": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "Immortalized cell line phenotypic drift: TM literature extensively uses immortalized lines with publicly documented differences from primary phenotype",
-   "observable_signature": "Passage number and donor lineage discrepancies recorded in literature",
+   "failure_mode": "Immortalized cell line phenotypic drift (registration-grade prior, out-of-library): TM literature extensively uses immortalized lines; drift evidence is title-level candidate references, not in-library observation",
+   "observable_signature": "Immortalized-line context references verified at title level only (full-text not reviewed; candidate anchors PMID:26396484/29847662/40650044 added by 2026-10-06 audit); no drift observation in library — passage/donor-lineage check is a material forensics cue, not a witnessed failure",
    "risk_level": "medium",
    "mitigation": "Check donor lineage and passage number before incorporating immortalized line data into TM analysis and annotate in figures/tables; upgrading this item to A requires additional immortalized vs. primary control (candidate on second-batch recommendation list).",
    "evidence_source_type": "peer_reviewed_literature",
@@ -207,7 +207,7 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "PMID:32439707 (Patel G et al., PNAS 2020—human in situ outflow 12-class molecular classification, usable as primary baseline)"
+    "PMID:32439707 (Patel G et al., PNAS 2020 — molecular classification of 12 human in-situ outflow cell types; primary-reference anchor; does not directly prove immortalization drift); 2026-10-06 audit added title-level candidate anchors PMID:26396484/29847662/40650044 (immortalized TM cell line contexts, full-text not reviewed; bibliographic verification trail = /mnt/D/EyeKB/plans/pit_triage_deep2_20261005/work/eutils_candidate_anchors_esummary.json)"
    ],
    "conflicts": [],
    "provenance": {

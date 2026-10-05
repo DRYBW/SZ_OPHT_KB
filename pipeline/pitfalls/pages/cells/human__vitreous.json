@@ -102,10 +102,10 @@
     "preparation": [],
     "disease_or_treatment": []
    },
-   "failure_mode": "Near-zero cell baseline: normal vitreous single-cell reference does not exist, disease comparisons lack anchor",
-   "observable_signature": "Public data lacks normal vitreous composition entries (verified during construction)",
+   "failure_mode": "Near-zero cell baseline: no normal-vitreous single-cell composition reference registered (absence in library registration and title-level search — not an existence claim); disease comparisons lack a healthy anchor",
+   "observable_signature": "Construction-time registration lacks normal vitreous composition entries; 2026-10-06 eutils recheck (vitreous+single-cell) still shows no healthy atlas (hits all disease/protocol contexts); registered-absence wording, existence not asserted",
    "risk_level": "high",
-   "mitigation": "Vitreous study controls must explicitly state the true background of control material; prohibit 'healthy vitreous composition' phrasing (does not exist); compare control definitions before cross-study comparison.",
+   "mitigation": "Vitreous study controls must state the true background of the control material; forbid bare 'healthy vitreous composition' wording (no such material composition registered in the library; the vitreous+single-cell title-level search hits are all disease/protocol contexts); compare control definitions before cross-study comparison.",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
@@ -119,7 +119,7 @@
    "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
    "last_reviewed": null,
    "links": [
-    "Registration = /mnt/D/EyeKB/kb/priors/disease/_DISEASE_TISSUE_MATRIX.md (no normal entries in vitreous column, verified during current build)"
+    "registration = /mnt/D/EyeKB/kb/priors/disease/_DISEASE_TISSUE_MATRIX.md (vitreous column has no normal entries, checked at build time; bibliographic check trail = /mnt/D/EyeKB/plans/pit_triage_deep2_20261005/work/eutils_047_vitreous_singlecell_all.json)"
    ],
    "conflicts": [],
    "provenance": {
