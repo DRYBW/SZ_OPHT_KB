@@ -54,6 +54,8 @@ ON_VALUES = {"1", "true", "on", "yes"}
 #    d1_rewrite_rules.py helpers (fold and the alias/anchor handling are the v2 additions) ——
 CJK_RE = re.compile(r'[\u3000-\u303f\u4e00-\u9fff\uff00-\uffef\u3400-\u4dbf]')
 NOISE_SUFFIX = re.compile(r'\s*[—–]\s*[A-Za-z]{2,}\s*$')
+LABEL_RX = re.compile(r'(?i)\b(table|fig|figure|chapter|page|ch|p)\.?\s*[0-9]'
+                      r'|\b\d+\s*[-–]\s*\d+\b|^\s*\d+\s*$')
 
 
 def norm(s):
@@ -183,6 +185,36 @@ def _select(q, cands):
     return sorted(kept, key=lambda c: c['lo'])
 
 
+def _pair_ok(x, y):
+    """Anchor-sanity filter for one alias pair (x = Chinese side, y = English side).
+
+    Two data-grounded rejections, both measured on the frozen bridge (720 alias pairs):
+      R1 label    : y is a bibliographic pointer, not a search term
+                    (BRG0004 鉴别诊断 = "Table 4-3, BCSC", BRG0042 眶壁 = "p.2-5"; 10 pairs / 8 rows)
+      R2 crossref : both sides are short pure-ASCII abbreviations and differ -- a cross-reference
+                    pair rather than a naming pair (BRG0201 "RPE =BRB"; 1 pair; naming pairs such as
+                    "RPE=RPE", "中心凹=Fovea", "IPL=IPL" are unaffected)
+    A rejected pair yields no anchor; it never falls back to the row's cn_term anchor, because that
+    would inject an unrelated concept (CH05's 鉴别诊断 would become "Age-Related Macular
+    Degeneration").
+    """
+    ys = (y or '').strip()
+    if not ys or LABEL_RX.search(ys):
+        return False
+    xs = (x or '').strip()
+    ascii_only = lambda s: bool(s) and len(s) <= 4 and not re.search(r'[\u4e00-\u9fff]', s)
+    if ascii_only(xs) and ascii_only(ys) and xs.casefold() != ys.casefold():
+        return False
+    return True
+
+
+def _pair_anchor(pair):
+    x, y = pair.split('=', 1)
+    if not _pair_ok(x, y):
+        return ''
+    return clean_anchor(y)
+
+
 def _anchor_of(c):
     """English anchor contributed by one candidate."""
     row = c['row']
@@ -190,13 +222,13 @@ def _anchor_of(c):
     if c['mode'] == 'M3':
         for p in pairs:
             if _fnorm(p.split('=', 1)[0]) == _fnorm(c['frag']):
-                a = clean_anchor(p.split('=', 1)[1])
+                a = _pair_anchor(p)
                 if a:
                     return a
     elif c['mode'] == 'M4':
         for p in pairs:
             if _fnorm(p.split('=', 1)[1]) == _fnorm(c['frag']):
-                a = clean_anchor(p.split('=', 1)[1])
+                a = _pair_anchor(p)
                 if a:
                     return a
         a = clean_anchor(c['frag'])
