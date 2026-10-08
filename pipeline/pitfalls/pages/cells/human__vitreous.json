@@ -63,7 +63,7 @@
    "failure_mode": "Three sources of collection contamination: retinal avulsion fragments (photoreceptors/RPE), membrane tissue inclusion, intraoperative bleeding",
    "observable_signature": "Photoreceptor/RPE signature in vitreous samples = collection flag, not new discovery",
    "risk_level": "high",
-   "mitigation": "Photoreceptor/RPE signature in vitreous samples = collection flag, not new discovery; blood depletion method same as membrane domain (PBMC pairing); specimens lacking collection method documentation excluded from omics conclusion pool.",
+   "mitigation": "Photoreceptor/RPE signature in vitreous samples = collection flag, not new discovery; blood depletion method same as membrane domain (PBMC pairing); specimens lacking collection method documentation excluded from omics conclusion pool; in avulsion/PVR and other pathological contexts the pathologic-migration hypothesis must be reported in the same sentence — not to be read as a new discovery before collection is ruled out (nor automatically a new discovery after collection exclusion; disease-context check still required); cross-referenced with KC-B2-023 (pvr_pathologic_migration_flag_conflict).",
    "evidence_source_type": "internal_observation",
    "source_check": "locator_verified",
    "home": {
