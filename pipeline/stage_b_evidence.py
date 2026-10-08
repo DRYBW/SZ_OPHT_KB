@@ -30,7 +30,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SERVER = REPO_ROOT / "mcp_server" / "server.py"
-from kb9_consume_guard import demote_kb9  # [KB9B t_3bbc769f] consumer-side narrow guard (env EYEKB_KB9_CONSUME_GUARD)
+from kb9_slot_guard import demote_kb9  # [KB9B t_3bbc769f] consumer-side narrow guard (env EYEKB_KB9_CONSUME_GUARD)
 
 CONTROLISH = {"control", "ctrl", "normal", "untrig", "unpaired", "vehicle",
               "rrd_control", "non_dm", "nondisease", "healthy"}

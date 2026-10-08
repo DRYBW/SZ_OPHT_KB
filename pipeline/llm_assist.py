@@ -29,7 +29,7 @@ DEFAULT_MODEL = "gpt-4o-mini"
 
 
 def _evidence_brief(c):
-    from kb9_consume_guard import demote_kb9  # [KB9B t_3bbc769f] consumer-side narrow guard (env EYEKB_KB9_CONSUME_GUARD)
+    from kb9_slot_guard import demote_kb9  # [KB9B t_3bbc769f] consumer-side narrow guard (env EYEKB_KB9_CONSUME_GUARD)
     qm = c["kb_marker"] or {}
     cr = demote_kb9(qm.get("celltype_ranking") or [])
     pmids = []
