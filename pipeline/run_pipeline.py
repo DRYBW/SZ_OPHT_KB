@@ -67,6 +67,7 @@ for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS",
 HERE = Path(__file__).resolve().parent
 REPO_ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
+from kb9_consume_guard import demote_kb9  # [KB9B t_3bbc769f] consumer-side narrow guard (env EYEKB_KB9_CONSUME_GUARD)
 
 
 def known_tissues():
@@ -161,8 +162,8 @@ def run_s0_gate(input_path, sample_col, species_arg, tissue_arg, out, thr_json=N
 
 def _candidates_of(rep_cluster):
     qm = rep_cluster.get("kb_marker") or {}
-    cands = [x.get("cell_type", "") for x in (qm.get("celltype_ranking") or [])][:3]
-    cands += [x.get("cell_type", "") for x in (qm.get("unranked_candidates") or [])][:3]
+    cands = [x.get("cell_type", "") for x in demote_kb9(qm.get("celltype_ranking") or [])][:3]  # [KB9B t_3bbc769f] narrow guard, slice depth unchanged
+    cands += [x.get("cell_type", "") for x in demote_kb9(qm.get("unranked_candidates") or [])][:3]  # [KB9B t_3bbc769f]
     return [c for c in cands if c]
 
 

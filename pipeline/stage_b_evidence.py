@@ -30,6 +30,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SERVER = REPO_ROOT / "mcp_server" / "server.py"
+from kb9_consume_guard import demote_kb9  # [KB9B t_3bbc769f] consumer-side narrow guard (env EYEKB_KB9_CONSUME_GUARD)
 
 CONTROLISH = {"control", "ctrl", "normal", "untrig", "unpaired", "vehicle",
               "rrd_control", "non_dm", "nondisease", "healthy"}
@@ -228,8 +229,8 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
                     frac_pct = 100.0 * int(sizes.loc[sizes["cluster"].astype(str) == cl, "n_cells"].iloc[0]) \
                         / max(total_cells, 1)
                     qm = await call("query_marker", {"genes": top}) if top else None
-                    cands = [x.get("cell_type") for x in ((qm or {}).get("celltype_ranking") or [])][:3]
-                    cands_unranked = [x.get("cell_type") for x in ((qm or {}).get("unranked_candidates") or [])][:3]
+                    cands = [x.get("cell_type") for x in demote_kb9((qm or {}).get("celltype_ranking") or [])][:3]  # [KB9B t_3bbc769f]
+                    cands_unranked = [x.get("cell_type") for x in demote_kb9((qm or {}).get("unranked_candidates") or [])][:3]  # [KB9B t_3bbc769f]
                     comp = composition_flag(rows, cands[0] if cands else None, frac_pct)
                     lit = {"per_celltype": {}}
                     query_cands = cands or cands_unranked
@@ -320,7 +321,7 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
         for c in per_cluster:
             qm = c["kb_marker"] or {}
             tops = ";".join(x.get("cell_type", "")
-                            for x in (qm.get("celltype_ranking") or [])[:3]) or "ABSTAIN(no candidate)"
+                            for x in demote_kb9(qm.get("celltype_ranking") or [])[:3]) or "ABSTAIN(no candidate)"  # [KB9B t_3bbc769f]
             f.write(f'{c["cluster"]},{c["n_cells"]},{c["fraction_pct"]},"{tops}",'
                     f'{c["tissue_composition"]["observed_vs_baseline"].get("flag","")},'
                     f'{c["confidence"]},,,\n')
@@ -377,8 +378,8 @@ def render_md(rep):
     L.append("")
     for c in rep["clusters"]:
         qm = c["kb_marker"] or {}
-        cr = qm.get("celltype_ranking") or []
-        ur = qm.get("unranked_candidates") or []
+        cr = demote_kb9(qm.get("celltype_ranking") or [])  # [KB9B t_3bbc769f] display slice only; raw resp in report json untouched
+        ur = demote_kb9(qm.get("unranked_candidates") or [])  # [KB9B t_3bbc769f]
         comp = c["tissue_composition"]["observed_vs_baseline"]
         L += [f"## Cluster {c['cluster']} ({c['n_cells']} cells, {c['fraction_pct']}%)",
               f"- Confidence grade (mechanical QC flag): **{c['confidence']}**",
