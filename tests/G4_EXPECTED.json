@@ -4,8 +4,8 @@
  "seed": "20260929",
  "anchors": {
   "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
-  "decisions_template.csv": "83c19a82ee9c593076f5a6685e7ae1ea59919760a8be9a54f28b7b11251218ad",
-  "annotation_evidence_report.md__normalized": "f178ab91ff5d2899336448f0da239e440ac13638c6db572adce8b930a5cf975d"
+  "decisions_template.csv": "e0991a0fa362b564c71c205b4148152424aa1d95c73bf066afbde9c237f450da",
+  "annotation_evidence_report.md__normalized": "bb8753168f132ca7f794cab63dbb806ecfbeab36f1eb7e20128a9c205ae4e77b"
  },
- "anchor_provenance": "2026-10-03 re-anchor after the English migration (report templates + kb content now English); three runs on the pinned interpreter: production fp32 default DB x2 + Release slim unpacked x1, all three artifacts byte-identical across runs (report normalized per contract). Previous anchors (2026-10-01) preserved in git history and in tests/G4_EXPECTED_PRE-ENGMIG.json."
+ "anchor_provenance": "2026-10-10 re-anchor after two unpushed waves (old anchors in tests/G4_EXPECTED_PRE-KB9B.json + git history): (1) PIT-TRIAGE-DEEP2 a569c60/22276b9 added KC-B2 deep-completion claims -> new REVIEW flag values in decisions/report; (2) KB9B guard 3186308/8cd0ce8 (PI ruling T7 option B, default ON) demotes k9 entries out of candidate slices -> CLV0 top_candidates reorder (Conj_epithelium_suprabasal -> out of front ranks) and the cross-tissue leak flags 041/B2-014 that were triggered by its presence now stay silent. Disclosed limitation (KB9B EXEC_NOTE, tracked in queue as closeout item): demotion is a uniform rule without tissue-context conditioning; conditionalized guard would restore legitimate ocular-surface ranking + leak flags. Three runs on the pinned interpreter (pipeline_env), fully offline, ON default: all three artifacts byte-identical (report normalized per contract); h5ad anchor unchanged; guard-OFF control run reproduces the pre-guard ordering (causal chain closed)."
 }

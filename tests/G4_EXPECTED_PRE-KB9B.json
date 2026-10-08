@@ -1,0 +1,11 @@
+{
+ "fixture": "pipeline/fixtures/pdr600.h5ad",
+ "fixture_sha256": "fa8fc609c3920dd2506a7b81fafe5a6e363b98eb670ee523a3f411d5c913ce44",
+ "seed": "20260929",
+ "anchors": {
+  "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
+  "decisions_template.csv": "83c19a82ee9c593076f5a6685e7ae1ea59919760a8be9a54f28b7b11251218ad",
+  "annotation_evidence_report.md__normalized": "f178ab91ff5d2899336448f0da239e440ac13638c6db572adce8b930a5cf975d"
+ },
+ "anchor_provenance": "2026-10-03 re-anchor after the English migration (report templates + kb content now English); three runs on the pinned interpreter: production fp32 default DB x2 + Release slim unpacked x1, all three artifacts byte-identical across runs (report normalized per contract). Previous anchors (2026-10-01) preserved in git history and in tests/G4_EXPECTED_PRE-ENGMIG.json."
+}
