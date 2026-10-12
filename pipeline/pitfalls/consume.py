@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """consume.py — shadow-mode consumption of known-issues claims (page pulls + risk flags); WIRE-P1 deliverable 3 (REV-1 finalized).
 
-Consumption semantics (astra T4/T5/T6 anchoring, take stricter; overrides qwen proxy-audit version PITFALL_OVERRIDE):
+Consumption semantics (6.1sol T4/T5/T6 anchoring, take stricter; overrides qwen proxy-audit version PITFALL_OVERRIDE):
   - **shadow: Record flags and re-review requirements only; automatic relabeling/downgrading/vote overriding is prohibited.**
     Reading revisions still follow the original three independent reading votes and S0 hard gate. This module does not generate suggested_grade_cap (this column is deprecated).
   - Page pull: (species, tissue) → full cells page + resolution of citation pointers on species/tissue/pattern pages
@@ -47,7 +47,7 @@ def _anchor_vocab():
 
 CLASS_MAP_VOCAB = _anchor_vocab()
 
-# The applies_to_classes field in claims does not conform to the atomic contract (astra schema lacks such anchor fields);
+# The applies_to_classes field in claims does not conform to the atomic contract (6.1sol schema lacks such anchor fields);
 # This batch is a consumer-side enhancement: infers class anchors based on failure_mode keywords from origin, used only for **risk flag hits**,
 # Never drives adjudication changes. Hit logic is conservative: flags are raised only when candidate class names directly correspond to classes mentioned in the failure mode text.
 _ANCHOR_HINTS = {
@@ -160,7 +160,7 @@ def attention_section(species, tissue, s0_meta=None):
                    if (s0_meta or {}).get("overridden_by_user") else "") + "）"
                 if s0_meta else ""),
              f"- Applicable claims: {len(claims)} entries (blind-evaluation safe {len(pub)} / open after reading {len(red)})."
-             "This segment contains only structured flags (astra conservative default: no free-text known-issues before blind review);"
+             "This segment contains only structured flags (6.1sol conservative default: no free-text known-issues before blind review);"
              "Short rules and sources see `shadow_attention.json` (human-facing after reading),"
              "Automatic naming/downgrade change always = 0.", "",
              "| claim_id | risk | source_type | blind_safe | re-review requirement |",

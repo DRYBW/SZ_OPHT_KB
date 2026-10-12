@@ -1,0 +1,18 @@
+# volume_id	species	registered_at	note
+# 卷物种登记表（L1 权威件, S2 源）。append-only：仅追加行, 禁改历史行字节。
+# 判据=SPEC_SPECIES_ROUTING.md §2；本表为新增文件, 不触碰任何既有冻结件字节。
+C1_ABL	human	2026-10-12	stage_b inputs.species 实读; n_clusters=29
+G4_RUN3	human	2026-10-12	stage_b inputs.species 实读; n_clusters=11
+R1FINAL	human	2026-10-12	stage_b inputs.species 实读; n_clusters=31
+WIRM_BASE1	mouse	2026-10-12	stage_b inputs.species 实读; n_clusters=17
+WIRM_BASE2	mouse	2026-10-12	stage_b inputs.species 实读; n_clusters=16
+WIRM_GATEOFF	mouse	2026-10-12	stage_b inputs.species 实读; n_clusters=16
+X1	human	2026-10-12	stage_b inputs.species 实读; n_clusters=21
+X2	human	2026-10-12	stage_b inputs.species 实读; n_clusters=18
+X3B	human	2026-10-12	stage_b inputs.species 实读; n_clusters=23
+X4A	human	2026-10-12	stage_b inputs.species 实读; n_clusters=18
+X4B	human	2026-10-12	stage_b inputs.species 实读; n_clusters=20
+X4BFIX_X5PRE	human	2026-10-12	stage_b inputs.species 实读; n_clusters=11
+X9A	mouse	2026-10-12	stage_b inputs.species 实读; n_clusters=64
+X9A_off	mouse	2026-10-12	stage_b inputs.species 实读; n_clusters=64
+X9B_R	human	2026-10-12	stage_b inputs.species 实读; n_clusters=35

@@ -40,7 +40,9 @@ def _evidence_brief(c):
     return {
         "cluster": c["cluster"], "n_cells": c["n_cells"],
         "fraction_pct": c["fraction_pct"], "top_genes": c["top_genes"][:10],
-        "marker_candidates": [x.get("cell_type") for x in cr[:3]],
+        # [X4B-FIX F2 t_95015c8a] honor the volume-gate adjusted slice when present
+        "marker_candidates": ([x for x in (c["volume_gate"].get("cands_post_gate") or []) if x]
+                              if c.get("volume_gate") else [x.get("cell_type") for x in cr[:3]]),
         "composition_flag": c["tissue_composition"]["observed_vs_baseline"].get("flag"),
         "qc_grade": c["confidence"], "pmids": sorted(set(pmids))[:6],
     }

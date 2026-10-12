@@ -1,0 +1,440 @@
+{
+ "schema": "eyekb-concept-kind/1.0",
+ "version": "concept-kind-x4bfix-v1",
+ "created": "2026-10-12",
+ "card": "t_95015c8a",
+ "prereg": "/mnt/D/EyeKB/plans/x4b_fix_20261012/PREREG_X4BFIX.md",
+ "authority": [
+  "/mnt/D/EyeKB/plans/toolbenchmark_20261011_narrative/BRIEF_X4BFIX_20261012.md",
+  "/mnt/D/EyeKB/plans/toolbenchmark_20261011_narrative/x4b_local_recheck/VERDICT_X4B_AUTOPSY_20261012.md"
+ ],
+ "default_rule": "默认全部 cell_type; 仅语义明确为状态/程序者列 state_program; state_program 封闭集见本件 audit 表与 PREREG §1.1 (5 词条)。",
+ "consumer_semantics": "仅 query_marker genes-mode 排序面消费本注记: state_program 词条不参与 cell_type 候选排序, 旁挂 state_annotations; 其余面零改动。",
+ "match_key": "库文件名 basename -> 词条名(原大小写); 冲突消歧名取 '::' 后缀",
+ "libs": {
+  "markers_v4.1_clean.json": {
+   "AC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Astro": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "BC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Cone": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "HC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "MG": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Micro": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "RGC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "RPE": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Rod": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   }
+  },
+  "markers_membrane_v1.json": {
+   "APC_MHCII_high": {
+    "concept_kind": "cell_type",
+    "reason": "分级表面标志限定词、口径两可——按默认规则保留 cell_type；如收紧由 sidecar 新版本承载（PREREG §1.1）"
+   },
+   "B": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Corneal Endothelium": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Endo": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Endo_Patho": {
+    "concept_kind": "state_program",
+    "reason": "病理状态程序——KB10 v7 自注'状态轴(不挂 identity CL)'原文点名"
+   },
+   "Fibroblast": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Granulocyte": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Keratocytes": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Mac_DAM_LAM": {
+    "concept_kind": "state_program",
+    "reason": "疾病状态程序（DAM/LAM 巨噬细胞状态），非独立细胞身份——KB10 v7 自注'状态轴(不挂 identity CL)'；任务书前提实证点名"
+   },
+   "Mac_Tissue": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Microglia": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Mono_Classical": {
+    "concept_kind": "cell_type",
+    "reason": "经典分型/分区身份亚类（canonical subtype）——默认规则保留 cell_type"
+   },
+   "Mono_Nonclassical": {
+    "concept_kind": "cell_type",
+    "reason": "经典分型/分区身份亚类（canonical subtype）——默认规则保留 cell_type"
+   },
+   "Myofibroblast": {
+    "concept_kind": "cell_type",
+    "reason": "激活来源身份但图谱/文献公认独立类别名——按默认规则保留 cell_type（PREREG §1.1）"
+   },
+   "NK": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Pericyte": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Plasma": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Proliferating": {
+    "concept_kind": "state_program",
+    "reason": "增殖态（细胞周期程序），非独立细胞身份——任务书前提实证点名"
+   },
+   "SMC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "T": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "cDC1": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "cDC2": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "pDC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   }
+  },
+  "markers_v5_retina_interneuron.json": {
+   "AC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Astro": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "BC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Cone": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "HC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "MG": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Micro": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "RGC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "RPE": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Rod": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   }
+  },
+  "markers_v6_retina_repair.json": {
+   "AC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Astro": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "BC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Cone": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "HC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "MG": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Micro": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "RGC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "RPE": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Rod": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   }
+  },
+  "markers_v6_face_increment.json": {
+   "Conj_epithelium_basal": {
+    "concept_kind": "cell_type",
+    "reason": "经典分型/分区身份亚类（canonical subtype）——默认规则保留 cell_type"
+   },
+   "Conj_epithelium_superficial": {
+    "concept_kind": "cell_type",
+    "reason": "经典分型/分区身份亚类（canonical subtype）——默认规则保留 cell_type"
+   },
+   "Fibroblast": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Keratocytes": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Myofibroblast": {
+    "concept_kind": "cell_type",
+    "reason": "激活来源身份但图谱/文献公认独立类别名——按默认规则保留 cell_type（PREREG §1.1）"
+   },
+   "Pericyte": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "SMC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   }
+  },
+  "markers_v6_lacrimal_increment.json": {
+   "Lacrimal_duct_epithelial": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Lacrimal_myoepithelial": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Lacrimal_secretory_tearcell": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   }
+  },
+  "markers_k9_ocs_increment.json": {
+   "Conj_epithelium_suprabasal": {
+    "concept_kind": "cell_type",
+    "reason": "经典分型/分区身份亚类（canonical subtype）——默认规则保留 cell_type"
+   },
+   "Limbus_Sclera_fibroblast_C1": {
+    "concept_kind": "cell_type",
+    "reason": "经典分型/分区身份亚类（canonical subtype）——默认规则保留 cell_type"
+   },
+   "Melanocyte": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Schwann": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   }
+  },
+  "markers_v7_panel_increment.json": {
+   "Endo": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Endo_Arterial": {
+    "concept_kind": "cell_type",
+    "reason": "经典分型/分区身份亚类（canonical subtype）——默认规则保留 cell_type"
+   },
+   "Endo_Capillary": {
+    "concept_kind": "cell_type",
+    "reason": "经典分型/分区身份亚类（canonical subtype）——默认规则保留 cell_type"
+   },
+   "Endo_Patho": {
+    "concept_kind": "state_program",
+    "reason": "病理状态程序——KB10 v7 自注'状态轴(不挂 identity CL)'原文点名"
+   },
+   "Endo_Venous": {
+    "concept_kind": "cell_type",
+    "reason": "经典分型/分区身份亚类（canonical subtype）——默认规则保留 cell_type"
+   },
+   "Mac_DAM_LAM": {
+    "concept_kind": "state_program",
+    "reason": "疾病状态程序（DAM/LAM 巨噬细胞状态），非独立细胞身份——KB10 v7 自注'状态轴(不挂 identity CL)'；任务书前提实证点名"
+   },
+   "Macrophage": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Microglia": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Pericyte": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "SMC": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   }
+  },
+  "markers_v9_dev_retina.json": {
+   "AC_precursor": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "BC_precursor": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Cone_precursor": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "HC_precursor": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "NRPC_early": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "NRPC_late": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "RGC_precursor": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "RPC_early": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "RPC_late": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "RPE_fetal": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Retinal_Proliferating": {
+    "concept_kind": "state_program",
+    "reason": "视网膜增殖态——任务书前提实证点名"
+   },
+   "Rod_precursor": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "TAC_proliferating": {
+    "concept_kind": "state_program",
+    "reason": "TAC 增殖态（v9 件内其增殖程序条）——任务书前提实证点名"
+   },
+   "glia_precursor": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   }
+  },
+  "markers_v8_dev_retina.json": {
+   "AC_precursor": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "BC_precursor": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Cone_precursor": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "HC_precursor": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "RGC_precursor": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "RPC_early": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "RPC_late": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "Retinal_Proliferating": {
+    "concept_kind": "state_program",
+    "reason": "视网膜增殖态——任务书前提实证点名"
+   },
+   "Rod_precursor": {
+    "concept_kind": "cell_type",
+    "reason": "身份类细胞类型词条——sidecar 默认规则 concept_kind=cell_type"
+   },
+   "TAC_transit_amplifying": {
+    "concept_kind": "cell_type",
+    "reason": "transit-amplifying 为前体中间身份类（v8 件内）——保留 cell_type；其程序侧表述由同卷 TAC_proliferating/Retinal_Proliferating 承载"
+   }
+  }
+ }
+}

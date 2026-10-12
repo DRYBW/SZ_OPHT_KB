@@ -1,0 +1,11 @@
+{
+ "fixture": "pipeline/fixtures/pdr600.h5ad",
+ "fixture_sha256": "fa8fc609c3920dd2506a7b81fafe5a6e363b98eb670ee523a3f411d5c913ce44",
+ "seed": "20260929",
+ "anchors": {
+  "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
+  "decisions_template.csv": "7876755327ce1d27658ced3f6c5d07ae6e9a6a108d4f7572d05a706de46fd20f",
+  "annotation_evidence_report.md__normalized": "2f6087ae33be7363339322675a1eafa410cb9a8e21e217de9cab993353023a14"
+ },
+ "anchor_provenance": "2026-10-12 re-anchor under X4B-FIX (card t_95015c8a, PREREG plans/x4b_fix_20261012/PREREG_X4BFIX.md §5/T2): three-run deterministic ON-state artifacts (plans/x4b_fix_20261012/out/ASSERT_G4_BATTERY.json runs_sha_table), guard-OFF causal control byte-identical to HEAD baseline (J1_pre_vs_off_identical=true; pre anchors archived tests/G4_EXPECTED_PRE-X4BFIX.json). Expected drift surface vs PRE-KB9B-era semantics: candidate slices of clusters whose queries hit state_program terms (Mac_DAM_LAM/Proliferating/Endo_Patho via F1 sidecar kb/markers/_concept_kind_sidecar_v1.json) drop those terms (moved to state_annotations); plus a pre-existing hash-seed tie-order nondeterminism in face_v6 derived loading was pinned (deterministic tuple order == seed0 baseline; out/ASSERT_DETERMINISM.json). DISCLOSED: the in-flight unpushed desensitization rename wave (62 files in the working tree at start of this card) will re-drift the report-md anchor when its claim-text renames merge — re-anchor ownership for that wave = its own closeout (precedent b92fbfe)."
+}

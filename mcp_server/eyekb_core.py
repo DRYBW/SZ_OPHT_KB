@@ -28,6 +28,11 @@ POINTER_YAML = KB / "literature_db" / "EYEKB_DB_POINTER.yaml"
 # Soft-review hint layer (t_d6f2a0a0 / D4): appends notes only after existing results; changes no
 # candidate/ordering/score
 import softflags as _sf  # noqa: E402
+# [SPECROUTE t_b9952795 · USER_DIRECTIVE_20261012 §三③] L1 species-route resolution layer
+# (three-source priority + evidence families + forced mouse path). opt-in escape door
+# EYEKB_SPECIES_ROUTE (unset = OFF = the byte-exact pre-wiring state); the sole authoritative
+# criterion source = plans/x10_improve_20261012/W2_SPROUTE/SPEC_SPECIES_ROUTING.md.
+import species_route as _species_route  # noqa: E402
 # Query-rewrite layer (2026-10-03): Chinese query → English search expression; env EYEKB_CN_REWRITE
 # default OFF; in the off state rewrite_query passes through with zero touching. Missing file/bridge =
 # inert zero-disturbance state, external machines run as usual.
@@ -221,7 +226,24 @@ MARKER_LIBS = {"retina": MARKER_JSON,
     #   markers key was derived and written at registration time, so loading reads it directly with no
     #   runtime derivation; copy-not-move with the build base file, whose sha is inside
     #   registration_provenance)
-    "k9_ocs": MARKER_DIR / "markers_k9_ocs_increment.json"}
+    "k9_ocs": MARKER_DIR / "markers_k9_ocs_increment.json",
+    # retina_v7 = KB10 retina vascular/myeloid increment (t_50003494 registered, 2026-10-01):
+    #   10 entries (Endo + arterial/venous/capillary partitions / Pericyte / SMC / Microglia /
+    #   Macrophage / DAM_LAM / Endo_Patho), applicability=retina_only, per-gene PMID chains +
+    #   OLS corroboration. REGISTERED_DEFAULT_OFF: not in the V6/K9 whitelist, the default all
+    #   is zero-disturbance in any state; reachable only via explicit library=retina_v7;
+    #   activation requires separate PI approval + the mandatory run + the Lukowski endothelium
+    #   re-test (KB9ACT precedent). Rollback = delete this line + revert the server version
+    #   pointer (see plans/kb10_retina_vascular_20261001/wire_diff).
+    "retina_v7": MARKER_DIR / "markers_v7_panel_increment.json",
+    # retina_dev = dev panel (v9.1-dev-panel-20261002; RW2 t_70f6340a double-pass; DEV-ACT
+    #   t_f7d4985e registration + wiring): 14 entries = RPC/NRPC lineages + per-lineage
+    #   precursors + TAC_proliferating/Retinal_Proliferating. SECTION B-6 scope on this surface =
+    #   the library-registration row itself, so explicit library=retina_dev is reachable here;
+    #   the dev-axis auto-merge (development_stage routing) is a D-side DEV-ACT wiring and is NOT
+    #   part of this backflow. F3's off-domain probe already reads this path via DEV_PANEL_FILE.
+    #   Rollback = delete this line (reverts to the pre-backflow dangling reference).
+    "retina_dev": MARKER_DIR / "markers_v9_dev_retina.json"}
 
 # [ACT t_5d5853c9] v6-merge whitelist for the default all — hard-coded; env values can only toggle the
 # whole feature, never inject any library
@@ -329,10 +351,18 @@ def _kbgov_g1_tier(raw_genes, hum, m_raw, m_up):
     return ("mouse_confirmed" if (msp or monly) else "mouse_suspected"), ev
 
 
-def _kbgov_govern_genes_resp(resp, raw_gl):
+def _kbgov_govern_genes_resp(resp, raw_gl, species=None, volume_id=None, volume_species=None):
     """B5 governance branch: mutates the genes-mode resp in place (G3 annotation → G2 refusal move).
     Zero changes when the vocabulary is unavailable (fail-soft=legacy). Returns the governance state
-    for tracing/tests."""
+    for tracing/tests.
+
+    [SPECROUTE t_b9952795] the species decision is handed over to the L1 resolution layer
+    (three-source priority + evidence families, SPEC §2/§3); effective only when the
+    EYEKB_SPECIES_ROUTE escape door is explicitly powered on, otherwise the legacy branch runs
+    verbatim (OFF state = the full pre-wiring state)."""
+    if _species_route.enabled():
+        return _species_route.attach(resp, raw_gl, explicit=species,
+                                     volume_id=volume_id, volume_species=volume_species)
     voc = _kbgov_vocab()
     if voc is None:
         return {"applied": False, "reason": "vocab_unavailable"}
@@ -367,7 +397,8 @@ def _load_marker_dbs(library="all"):
         names = [lib]
     else:
         raise ValueError("library must be one of retina|membrane|retina_interneuron|retina_v6|"
-                         "face_v6|lacrimal_v6|k9_ocs|all, got: " + repr(library))
+                         "face_v6|lacrimal_v6|k9_ocs|retina_v7|retina_dev|all, got: "
+                         + repr(library))
     dbs = []
     for n in names:
         p = MARKER_LIBS[n]
@@ -379,8 +410,16 @@ def _load_marker_dbs(library="all"):
                 # *_repair/*_increment's core[{gene,...}] → class-name → gene list; classes with empty
                 # core are kept (0 independent criteria genes are registered as-is)
                 derived = {}
-                srcs = ({"stromal_repair", "face_increment"} if n == "face_v6"
-                        else {"lacrimal_increment"})
+                # [X4B-FIX determinism t_95015c8a] the original srcs was a set literal whose iteration
+                # order follows PYTHONHASHSEED — face_v6's two sources have no class-name overlap, but
+                # the derived insertion order fixes the tie order of the ranking surface (measured: the
+                # PRE code flips twice in 6 consecutive runs, see out/ASSERT_DETERMINISM.json). Now an
+                # explicit tuple pinned to ("stromal_repair","face_increment") = the seed0 iteration
+                # order of the original set, i.e. the guard-OFF state stays byte-identical to the
+                # pre-wiring baseline (measured under PYTHONHASHSEED=0) while becoming deterministic
+                # across processes; same spirit as the ERRATA-E3 BLAS pins.
+                srcs = (("stromal_repair", "face_increment") if n == "face_v6"
+                        else ("lacrimal_increment",))
                 for src in srcs:
                     for cls, e in (db.get(src) or {}).items():
                         derived[cls] = [str(x.get("gene", "")).strip().upper()
@@ -392,7 +431,130 @@ def _load_marker_dbs(library="all"):
     return dbs
 
 
-def query_marker(genes=None, cell_type=None, library="all"):
+# ---------------------------------------- X4B-FIX concept-kind stratification + off-domain flag (t_95015c8a)
+# Pre-registration = plans/x4b_fix_20261012/PREREG_X4BFIX.md §1/§3 (mirror of the D-side production
+# implementation, same semantics; Chinese-commented sibling lives at /mnt/D/EyeKB/mcp_server/eyekb_core.py).
+# F1: on the genes-mode ranking surface, entries annotated concept_kind=state_program in the sidecar
+# (proliferation/disease-state programs) take no part in cell_type candidate ranking — they are moved
+# to the additive key state_annotations (present only when non-empty; kept entries/order/fields untouched).
+# F3: off_domain advisory for "adult vocabulary on a fetal volume" (inert data read of the dev-panel
+# file; the dev panel is never merged into the ranking surface — adult-path semantics frozen).
+# Global rollback: env EYEKB_STATE_GUARD ∈ {0,false,off,no} (strip+casefold) = OFF = pre-wiring
+# behavior (zero new keys on both surfaces; explicit-route error strings byte-untouched, proved by T3);
+# unset/any other value = ON (following the ACT-v6 discipline).
+# Sidecar fail-soft: missing/corrupt file = no filtering (identical to pre-wiring) + one-time stderr note.
+CONCEPT_KIND_SIDECAR = MARKER_DIR / "_concept_kind_sidecar_v1.json"
+DEV_PANEL_FILE = MARKER_DIR / "markers_v9_dev_retina.json"  # F3 probe data source (== MARKER_LIBS["retina_dev"] path on the D production face)
+_ck_cache = {"sig": None, "kindmap": None, "devsets": None, "warned": False}
+
+
+def _state_guard_enabled():
+    """env EYEKB_STATE_GUARD ∈ {0,false,off,no} (casefold) = OFF rollback; unset/other values = ON."""
+    v = (os.environ.get("EYEKB_STATE_GUARD") or "").strip().casefold()
+    return v not in {"0", "false", "off", "no"}
+
+
+def _concept_kind_map():
+    """Lazily load the sidecar -> {(library basename, entry): concept_kind} or None (degraded = no filtering)."""
+    st = _ck_cache
+    try:
+        p_st = CONCEPT_KIND_SIDECAR.stat()
+        sig = (p_st.st_mtime_ns, p_st.st_size)
+    except OSError:
+        return None
+    if st["sig"] == sig and st["kindmap"] is not None:
+        return st["kindmap"]
+    try:
+        with open(CONCEPT_KIND_SIDECAR, encoding="utf-8") as f:
+            d = json.load(f)
+        km = {}
+        for fname, ann in (d.get("libs") or {}).items():
+            for entry, a in (ann or {}).items():
+                if isinstance(a, dict) and a.get("concept_kind"):
+                    km[(fname, entry)] = a["concept_kind"]
+        st.update(sig=sig, kindmap=km)
+        return km
+    except Exception as e:  # noqa: BLE001
+        if not st["warned"]:
+            sys.stderr.write(f"[x4bfix-f1] sidecar load failed ({type(e).__name__}: {e}) "
+                             f"-> concept-kind filter disabled\n")
+            st["warned"] = True
+        return None
+
+
+def _dev_panel_gene_sets():
+    """F3 probe: dev-panel entry gene sets (inert data read; missing/corrupt file -> None = probe off)."""
+    st = _ck_cache
+    try:
+        p_st = DEV_PANEL_FILE.stat()
+        sig = (p_st.st_mtime_ns, p_st.st_size)
+    except OSError:
+        return None
+    if st.get("dev_sig") == sig and st.get("devsets") is not None:
+        return st["devsets"]
+    try:
+        with open(DEV_PANEL_FILE, encoding="utf-8") as f:
+            d = json.load(f)
+        ds = {e: set(g.upper() for g in gs) for e, gs in (d.get("markers") or {}).items()}
+        st.update(dev_sig=sig, devsets=ds)
+        return ds
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def _x4b_split_state_ranking(rank_full):
+    """F1 split: return (cell_type ranking surface, state_annotations sidecar list).
+
+    Match key = (owner library basename, entry name; disambiguated 'lib::name' takes the '::' suffix).
+    Both lists keep the original relative order (stable). OFF / no sidecar / zero hits -> (list, [])."""
+    if not _state_guard_enabled():
+        return rank_full, []
+    km = _concept_kind_map()
+    if km is None:
+        return rank_full, []
+    kept, states = [], []
+    for e in rank_full:
+        name = str(e.get("cell_type", ""))
+        base = Path(str(e.get("library", ""))).name
+        ent = name.split("::")[-1]
+        kind = km.get((base, ent)) or km.get((base, name))
+        if kind == "state_program":
+            s = dict(e)
+            s["concept_kind"] = "state_program"
+            states.append(s)
+        else:
+            kept.append(e)
+    return kept, states
+
+
+def _x4b_off_domain_flag(gl, kept_ranking):
+    """F3 criterion (frozen in PREREG §3.1, no post-hoc thresholds): dev_best >= 2 and
+    dev_best > top1.n_shared (empty ranking counts as 0) -> advisory dict; else None.
+    Adds a key only; never touches the ranking body."""
+    if not _state_guard_enabled():
+        return None
+    ds = _dev_panel_gene_sets()
+    if not ds:
+        return None
+    gset = set(gl)
+    best, best_terms = 0, []
+    for entry, gs in ds.items():
+        n = len(gset & gs)
+        if n > best:
+            best, best_terms = n, [entry]
+        elif n == best and n > 0:
+            best_terms.append(entry)
+    top1_ns = int(kept_ranking[0]["n_shared"]) if kept_ranking else 0
+    if best >= 2 and best > top1_ns:
+        return {"flag": "possible_dev_fetal_content", "dev_best": best,
+                "dev_best_terms": sorted(best_terms)[:3],
+                "hint": ("fetal/developing material should pass development_stage "
+                         "(fetal|developing|postnatal) to route the dev panel library (retina_dev)")}
+    return None
+
+
+def query_marker(genes=None, cell_type=None, library="all",
+                 species=None, volume_id=None, volume_species=None):
     """Local authoritative marker library query (multi-library; see MARKER_LIBS).
     - cell_type mode: return that class's markers (retina library attaches micro/rpe detail)
     - genes mode: which classes each gene reverse-hits
@@ -487,14 +649,31 @@ def query_marker(genes=None, cell_type=None, library="all"):
                 score[ct] = {"n_shared": n, "shared_genes":
                              [g for g in gl if g in markers[ct]], "library": owner[ct]}
         ranked = sorted(score.items(), key=lambda kv: -kv[1]["n_shared"])
+        # [X4B-FIX F1] concept-kind stratification on the ranking surface: state_program entries are
+        # moved out into the additive key state_annotations (present only when non-empty; kept
+        # entries/order/fields byte-untouched; entirely bypassed in the OFF state = pre-wiring bytes)
+        rank_full = [{"cell_type": c, **s} for c, s in ranked]
+        rank_kept, state_ann = _x4b_split_state_ranking(rank_full)
         # compatibility field: on a single library the top-level auc_threshold semantics are kept
         auc = next((d.get("auc_threshold") for _, _, d in dbs if d.get("auc_threshold")), None)
         resp = {"mode": "genes", "query": gl, "gene_to_celltypes": hits,
-                "celltype_ranking": [{"cell_type": c, **s} for c, s in ranked],
+                "celltype_ranking": rank_kept,
                 "auc_threshold": auc, "provenance": prov}
+        if state_ann:
+            resp["state_annotations"] = state_ann
+        # [X4B-FIX F3] off-domain low-confidence advisory (additive key only; criterion frozen in
+        # PREREG §3.1 — the dev-panel file being absent on this surface makes the probe inert, zero
+        # drift). Attached on the default all-route only — the "adult vocabulary on fetal material"
+        # coverage-routing scenario is precisely the default route; explicit single-library responses
+        # stay zero-change (T4 literal caliber, finalized 2026-10-12 after battery evidence).
+        if ((library or "all").strip().lower()) == "all":
+            od = _x4b_off_domain_flag(gl, rank_kept)
+            if od:
+                resp["off_domain"] = od
         # [KBGOV-B5] governance branch — skipped entirely in the OFF state; resp equals the pre baseline (A5 acceptance gate)
         if _kbgov_b5_enabled():
-            _kbgov_govern_genes_resp(resp, raw_gl)
+            _kbgov_govern_genes_resp(resp, raw_gl, species=species, volume_id=volume_id,
+                                     volume_species=volume_species)
         return _sf.wrap_resp(resp, markers, "genes", query_genes=gl,
                              ranking=resp["celltype_ranking"], provenance=prov)
 

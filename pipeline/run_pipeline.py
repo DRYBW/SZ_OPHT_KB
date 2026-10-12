@@ -7,7 +7,7 @@ Usage (from repo root):
       [--species human|mouse|auto] [--tissue <dictionary name|auto>] --out results/run1 \\
       [--group-col treatment]
 
-S0 sample pre-check (WIRE-P1, REV-1=astra ruling: Phase-1 runs in shadow mode):
+S0 sample pre-check (WIRE-P1, REV-1=6.1sol ruling: Phase-1 runs in shadow mode):
   - Default run: three evidence channels + six hard gates decide species x tissue automatically;
     all readings are written in full to `s0_gate_report.json`; gate passed -> Stage A/B parameters
     are backfilled (an explicit human --species/--tissue counts as an override, recorded in the
@@ -24,7 +24,7 @@ S0 sample pre-check (WIRE-P1, REV-1=astra ruling: Phase-1 runs in shadow mode):
     **no automatic relabeling/downgrading/vote-overriding** — adjudication changes still go
     through the original three independent reviewer votes and the hard gates.
   - Full rollback: `EYEKB_S0_GATE=0` = pre-wiring legacy behavior (no S0, no flags,
-    --species/--tissue mandatory), used for air-gapped baseline comparison (astra T4.3) and emergencies.
+    --species/--tissue mandatory), used for air-gapped baseline comparison (6.1sol T4.3) and emergencies.
 
 Outputs (all under --out):
   stage_a/processed.h5ad          processed matrix (QC/normalization/Harmony marks/leiden)
@@ -162,7 +162,11 @@ def run_s0_gate(input_path, sample_col, species_arg, tissue_arg, out, thr_json=N
 
 def _candidates_of(rep_cluster):
     qm = rep_cluster.get("kb_marker") or {}
-    cands = [x.get("cell_type", "") for x in demote_kb9(qm.get("celltype_ranking") or [])][:3]  # [KB9B t_3bbc769f] narrow guard, slice depth unchanged
+    vg = rep_cluster.get("volume_gate")
+    if vg:  # [X4B-FIX F2 t_95015c8a] gate-adjusted ranked slice (raw evidence stays untouched in kb_marker)
+        cands = [c for c in (vg.get("cands_post_gate") or []) if c]
+    else:
+        cands = [x.get("cell_type", "") for x in demote_kb9(qm.get("celltype_ranking") or [])][:3]  # [KB9B t_3bbc769f] narrow guard, slice depth unchanged
     cands += [x.get("cell_type", "") for x in demote_kb9(qm.get("unranked_candidates") or [])][:3]  # [KB9B t_3bbc769f]
     return [c for c in cands if c]
 
@@ -215,13 +219,18 @@ def inject_shadow(out, species, tissue, meta):
 def main():
     ap = argparse.ArgumentParser(
         description="EyeKB batch-annotation evidence entry point (Stage S0(shadow)+A+B; zero LLM by default)")
-    ap.add_argument("--input", required=True,
+    # [t_3a420805] --input/--out: required=True at the argparse layer made the
+    # self-description path (--list-tissues, documented in README / PIPELINE_COMPLETED)
+    # unreachable -- argparse rejected the call with rc=2 before the branch was evaluated.
+    # Fix = keep the flag optional here and re-assert it below (after the --list-tissues
+    # branch) via ap.error(), which reproduces the legacy usage-error + rc=2 exactly.
+    ap.add_argument("--input", required=False,
                     help="10X triplet directory / parent directory containing multiple triplet subdirs / .h5ad")
     ap.add_argument("--species", default="auto", choices=["human", "mouse", "auto"],
                     help="default auto (S0-decided backfill); an explicit value = S0 override, recorded (mandatory in rollback state)")
     ap.add_argument("--tissue", default="auto",
                     help="known tissue dictionary name (see --list-tissues) or auto (S0-decided backfill)")
-    ap.add_argument("--out", required=True, help="output directory (created if absent)")
+    ap.add_argument("--out", required=False, help="output directory (created if absent)")
     ap.add_argument("--sample-col", default="", help="h5ad sample column (defaults to obs.sample / input name)")
     ap.add_argument("--sample-group", default="", dest="group_col",
                     help="grouping: h5ad column name, or for triplet inputs a 'sample=group;...' mapping"
@@ -243,11 +252,30 @@ def main():
     ap.add_argument("--list-tissues", action="store_true", help="print the known tissue dictionary and exit")
     ap.add_argument("--llm-assist", action="store_true",
                     help="optional switch: call a user-supplied channel to generate evidence-summary drafts (off by default; does not affect grading)")
+    ap.add_argument("--volume-counts", default="", dest="volume_counts",
+                    help="[X4B-FIX F2] optional JSON dict {type-label: whole-volume cell count} for the Stage B "
+                         "volume plausibility gate (inert without it; EYEKB_STATE_GUARD=0|false|off|no disables).")
     a = ap.parse_args()
+
+    volume_counts = None
+    if a.volume_counts:
+        volume_counts = json.loads(Path(a.volume_counts).read_text(encoding="utf-8"))
+        from volume_gate import enabled as _vge, warn_guard_off
+        if not _vge():
+            warn_guard_off()
 
     if a.list_tissues:
         print("\n".join(known_tissues()))
         return 0
+
+    # [t_3a420805] legacy-faithful re-assertion of the two formerly required flags.
+    # Placed after the --list-tissues / --help exits (so self-description runs
+    # argument-free) and before any input/output use. ap.error() prints usage +
+    # exits 2 -- byte-for-byte the behavior argparse's required=True gave before.
+    if not a.input:
+        ap.error("the following arguments are required: --input")
+    if not a.out:
+        ap.error("the following arguments are required: --out")
 
     gate = _s0_enabled()
     out = Path(a.out)
@@ -302,7 +330,8 @@ def main():
                       out, species, tissue, disease=a.disease,
                       group_col="group" if sa["group_present"] else "",
                       gene_degraded=bool(sa["gene_id"].get("degraded")),
-                      top_genes_n=a.top_genes_n, llm_assist=a.llm_assist)
+                      top_genes_n=a.top_genes_n, llm_assist=a.llm_assist,
+                      volume_counts=volume_counts)
     att_stats = inject_shadow(out, species, tissue, meta) if gate else None
     grades = {}
     for c in rep["clusters"]:

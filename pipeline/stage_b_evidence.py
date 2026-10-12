@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 import sys
 import time
@@ -31,6 +32,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SERVER = REPO_ROOT / "mcp_server" / "server.py"
 from kb9_slot_guard import demote_kb9  # [KB9B t_3bbc769f] consumer-side narrow guard (env EYEKB_KB9_CONSUME_GUARD)
+from volume_gate import apply_volume_gate, enabled as _vg_enabled  # [X4B-FIX F2 t_95015c8a] volume plausibility gate (env EYEKB_STATE_GUARD)
 
 CONTROLISH = {"control", "ctrl", "normal", "untrig", "unpaired", "vehicle",
               "rrd_control", "non_dm", "nondisease", "healthy"}
@@ -159,7 +161,7 @@ def grade_cluster(kb_marker, comp, lit, group_present, gene_degraded):
 # ---------------------------------------------------------------- main flow
 def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue,
                 disease="", group_col="group", gene_degraded=False, top_genes_n=10,
-                llm_assist=False, logf=None):
+                llm_assist=False, logf=None, volume_counts=None):
     import anyio
     import pandas as pd
     from mcp import ClientSession, StdioServerParameters
@@ -196,7 +198,20 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
     dp_cache = {}  # run-level disease-prior cache (filled inside the closure, read by the report section)
 
     async def collect():
-        params = StdioServerParameters(command=sys.executable, args=[str(SERVER)], env=None)
+        # [X4B-FIX t_95015c8a] EYEKB_* switch transparency for the server child. The MCP SDK default
+        # environment is a whitelist that does NOT contain EYEKB_* switches, so without this the
+        # server-side toggles (EYEKB_STATE_GUARD / ACT_V6 / ACT_K9 / ACT_DEV / KBGOV_B5 / SOFTFLAGS /
+        # CN_REWRITE) could never be exercised through a pipeline run (same lesson as
+        # coordinator_probe_t5d5853c9, recorded in kb10_golden41_penv.py line 89). Conservative form:
+        # keep the SDK default env exactly as before and add ONLY EYEKB_*/PYTHONHASHSEED from the
+        # parent — the default state (no such vars set, or only unset) stays byte-identical, no BLAS
+        # thread pins or PATH changes leak into the server process.
+        from mcp.client.stdio import get_default_environment as _sdk_env
+        _senv = dict(_sdk_env())
+        for _k, _v in os.environ.items():
+            if _k.startswith("EYEKB_") or _k == "PYTHONHASHSEED":
+                _senv[_k] = _v
+        params = StdioServerParameters(command=sys.executable, args=[str(SERVER)], env=_senv)
         async with stdio_client(params) as (r, w):
             async with ClientSession(r, w) as s:
                 await s.initialize()
@@ -230,6 +245,21 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
                         / max(total_cells, 1)
                     qm = await call("query_marker", {"genes": top}) if top else None
                     cands = [x.get("cell_type") for x in demote_kb9((qm or {}).get("celltype_ranking") or [])][:3]  # [KB9B t_3bbc769f]
+                    # [X4B-FIX F2 t_95015c8a] volume plausibility gate — active only when the caller
+                    # supplied --volume-counts AND the guard is on; zero artifact change otherwise
+                    # (inert-by-absence per PREREG_X4BFIX §2; OFF state = pre-wiring).
+                    vg_rec = None
+                    if volume_counts is not None and _vg_enabled():
+                        _n_c = int(sizes.loc[sizes["cluster"].astype(str) == cl, "n_cells"].iloc[0])
+                        _kept, _rej, _miss = apply_volume_gate(
+                            [x.get("cell_type") for x in demote_kb9((qm or {}).get("celltype_ranking") or [])],
+                            _n_c, volume_counts)
+                        if _rej:
+                            vg_rec = {"applied": True,
+                                      "flag": "volume_gate_reject" if not _kept else "volume_gate_demoted",
+                                      "n_cells": _n_c, "rejected": _rej, "lookup_miss": _miss,
+                                      "cands_post_gate": [c for c in _kept[:3] if c]}
+                            cands = vg_rec["cands_post_gate"]
                     cands_unranked = [x.get("cell_type") for x in demote_kb9((qm or {}).get("unranked_candidates") or [])][:3]  # [KB9B t_3bbc769f]
                     comp = composition_flag(rows, cands[0] if cands else None, frac_pct)
                     lit = {"per_celltype": {}}
@@ -257,7 +287,7 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
                         gf = {str(k): round(100.0 * v / n, 2)
                               for k, v in cm[gcol].value_counts().items()}
                     grade, reasons = grade_cluster(qm, comp, lit, group_present, gene_degraded)
-                    per_cluster.append({
+                    rec = {
                         "cluster": cl,
                         "n_cells": int(sizes.loc[sizes["cluster"].astype(str) == cl, "n_cells"].iloc[0]),
                         "fraction_pct": round(frac_pct, 3),
@@ -274,7 +304,10 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
                         "literature": _trim_lit(lit),
                         "confidence": grade,
                         "confidence_rules_fired": reasons,
-                    })
+                    }
+                    if vg_rec is not None:
+                        rec["volume_gate"] = vg_rec  # [X4B-FIX F2] section appears only on fired clusters
+                    per_cluster.append(rec)
                     if i % 5 == 0:
                         print(f"[stageB] progress {i}/{len(clusters)} clusters", flush=True)
                 return tc, per_cluster
@@ -309,6 +342,13 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
                       "errors": sum(1 for c in calls if not c["ok"])},
         "clusters": per_cluster,
     }
+    if volume_counts is not None:
+        # [X4B-FIX F2] header disclosure appears only on runs that opted into --volume-counts
+        report["volume_gate"] = {
+            "counts_provided": True, "n_label_keys": len(volume_counts),
+            "guard": "on" if _vg_enabled() else "off(counts_ignored)",
+            "criterion": "n_cells > N_t arithmetic cascade "
+                         "(/mnt/D/EyeKB/plans/x4b_fix_20261012/PREREG_X4BFIX.md section 2)"}
     (out / "annotation_evidence_report.json").write_text(
         json.dumps(report, indent=1, ensure_ascii=False), encoding="utf-8")
     (out / "annotation_evidence_report.md").write_text(
@@ -320,11 +360,15 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
                 "confidence_grade,decision,proposed_label,notes\n")
         for c in per_cluster:
             qm = c["kb_marker"] or {}
-            tops = ";".join(x.get("cell_type", "")
-                            for x in demote_kb9(qm.get("celltype_ranking") or [])[:3]) or "ABSTAIN(no candidate)"  # [KB9B t_3bbc769f]
+            vg = c.get("volume_gate")
+            if vg:  # [X4B-FIX F2] gate-adjusted slice; ABSTAIN when every candidate vetoed
+                tops = ";".join(vg["cands_post_gate"]) or "ABSTAIN(volume_gate)"
+            else:
+                tops = ";".join(x.get("cell_type", "")
+                                for x in demote_kb9(qm.get("celltype_ranking") or [])[:3]) or "ABSTAIN(no candidate)"  # [KB9B t_3bbc769f]
             f.write(f'{c["cluster"]},{c["n_cells"]},{c["fraction_pct"]},"{tops}",'
                     f'{c["tissue_composition"]["observed_vs_baseline"].get("flag","")},'
-                    f'{c["confidence"]},,,\n')
+                    f'{c["confidence"]},,,{("volume_gate:" + vg["flag"]) if vg else ""}\n')
     (out / "mcp_calls.jsonl").write_text(
         "\n".join(json.dumps(c, ensure_ascii=False, default=str) for c in calls) + "\n",
         encoding="utf-8")
@@ -390,6 +434,12 @@ def render_md(rep):
                             f"{','.join(x.get('shared_genes', [])[:4])})" for x in cr[:3])
                   or ("no named candidates" + (f" (unranked: {', '.join(x['cell_type'] for x in ur[:3])}; "
                                                f"{qm.get('no_named_ranking_for', '')})" if ur else ""))),
+              *( (lambda vg: [f"- Volume gate (X4B-FIX F2): **{vg['flag']}** — cluster n_cells={vg['n_cells']} "
+                              "exceeds the same-volume interpreted total N_t for: "
+                              + "; ".join(f"{r['candidate']} (N_t={r['N_t']})" for r in vg["rejected"])
+                              + (f"; candidates without a volume-count key kept unverifiable: "
+                                 f"{', '.join(vg['lookup_miss'])}" if vg.get("lookup_miss") else "")])(c["volume_gate"])
+                 if c.get("volume_gate") else () ),
               f"- Composition check (baseline row {c['tissue_composition'].get('baseline_entry_id')}): "
               f"flag={comp.get('flag')}" + (
                   f"; observed {comp.get('observed_pct')}% vs donor median {comp.get('donor_median_pct')}%"
@@ -440,11 +490,21 @@ def main():
                     help="set when Stage A reports gene IDs unmapped to symbols (affects grading)")
     ap.add_argument("--llm-assist", action="store_true",
                     help="optional: call a user-supplied OpenAI-compatible channel to generate evidence summaries (off by default; does not affect grading)")
+    ap.add_argument("--volume-counts", default="", dest="volume_counts",
+                    help="[X4B-FIX F2] optional JSON dict {type-label: whole-volume cell count} driving the "
+                         "volume plausibility gate (n_cells > N_t cascade veto; inert without it). "
+                         "Env EYEKB_STATE_GUARD=0|false|off|no disables the gate even when provided.")
     a = ap.parse_args()
+    vc = None
+    if a.volume_counts:
+        vc = json.loads(Path(a.volume_counts).read_text(encoding="utf-8"))
+        from volume_gate import enabled as _vge, warn_guard_off
+        if not _vge():
+            warn_guard_off()
     run_stage_b(a.processed, a.markers, a.sizes, a.out, a.species, a.tissue,
                 disease=a.disease, group_col=a.group_col,
                 gene_degraded=a.gene_degraded, top_genes_n=a.top_genes_n,
-                llm_assist=a.llm_assist)
+                llm_assist=a.llm_assist, volume_counts=vc)
 
 
 if __name__ == "__main__":
