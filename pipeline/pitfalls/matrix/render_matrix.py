@@ -5,8 +5,11 @@
 Rows=6 species (human/mouse ACTIVE + macaque/rat/rabbit/zebrafish RESERVED),
 Columns = 15 canonical tissues (COORDINATE_TAXONOMY_v1.md §3, C1 approved area 6×15=90).
 Data source=matrix/MATRIX_GRID.json (output of build_matrix.py, zero manual entry).
-State colors: EVIDENCE_READY(provisional)=blue / UNEXPLORED=green / PLACEHOLDER(RESERVED species)=orange /
-No value = gray. This batch activation count = 0 — placeholder ≠ activation (Execution sequence 5 states this directly in figure captions).
+State colors (palette indexed by CODE below, idx must stay aligned with CODE):
+EVIDENCE_READY(provisional)=blue #2c7fb8 / UNEXPLORED=green #7fc97f /
+PLACEHOLDER(RESERVED species)=orange #fdae61 / CANDIDATE_EVIDENCE_READY=gray #d9d9d9 (0 cells in this batch) /
+out-of-vocabulary (no value) = near-white #f0f0f0.
+This batch activation count = 0 — placeholder ≠ activation (Execution sequence 5 states this directly in figure captions).
 
 Usage: python render_matrix.py [--out DIR]
 """
@@ -37,8 +40,8 @@ for c in GRID["cells"]:
 
 plt.style.use(str(STYLE))
 fig, ax = plt.subplots(figsize=(13.5, 5.2), dpi=300)
-cmap = colors.ListedColormap(["#d9d9d9", "#fdae61", "#7fc97f", "#2c7fb8"], N=4)
-cmap.set_under("#f0f0f0")
+cmap = colors.ListedColormap(["#7fc97f", "#fdae61", "#d9d9d9", "#2c7fb8"], N=4)  # idx==CODE: 0=UN green, 1=PH orange, 2=CER gray, 3=ER blue
+cmap.set_under("#f0f0f0")            # no value (below vocabulary) = near-white (aligns with docstring)
 norm = colors.BoundaryNorm([-0.5, 0.5, 1.5, 2.5, 3.5], cmap.N)
 ax.imshow(M, cmap=cmap, norm=norm, aspect="equal")
 ax.set_xticks(range(len(CANON))); ax.set_xticklabels(CANON, rotation=38, ha="right", fontsize=7.5)
@@ -49,10 +52,11 @@ for i in range(len(SPECIES)):
         lab = {3: "ER", 2: "CER", 1: "PH", 0: "UN"}.get(int(v) if v >= 0 else -1, "×")
         ax.text(j, i, lab, ha="center", va="center", fontsize=6.5,
                 color="white" if v == 3.0 else "#262626")
-handles = [plt.Rectangle((0, 0), 1, 1, color=cmap(n)) for n in [3.5, 0.5, 1.5, -0.5]]
+handles = [plt.Rectangle((0, 0), 1, 1, color=c)
+           for c in ("#2c7fb8", "#7fc97f", "#fdae61", "#f0f0f0")]  # explicit colors, order == label order below (no cmap(n) float lookup)
 ax.legend(handles, ["EVIDENCE_READY(provisional, 6 cells pending manual audit gate)", "UNEXPLORED(qualified candidates=0 as-is)",
                     "PLACEHOLDER(RESERVED species placeholder, C10)", "Out-of-vocabulary = UNMAPPED (excluded from matrix)"],
-          loc="upper right", bbox_to_anchor=(1.30, 1.0), fontsize=7.5, frameon=False)
+          loc="upper left", bbox_to_anchor=(1.02, 1.0), fontsize=7.5, frameon=False)  # grow rightwards: left edge stays outside the data area
 tally = GRID["grid_states_seen"]
 ax.set_title("Species × tissue 90-cell placeholder matrix (C1/C10 approved area = 6×15; build_matrix.py zero hand-writing)\\n"
              f"Placeholder ≠ activation: current batch activation=0 | ER={tally.get('EVIDENCE_READY',0)} provisional |"
