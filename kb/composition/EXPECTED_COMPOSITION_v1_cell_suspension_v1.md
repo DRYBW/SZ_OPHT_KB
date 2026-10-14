@@ -1,6 +1,6 @@
 # EXPECTED_COMPOSITION_v1_cell_suspension_v1 (Side-mounted · Unwired · OB-3 NOT_READY)
 
-> Card t_93eb78a8 | Generated 2026-09-30 02:40 | Rule=PHASE0_INVENTORY_COMPV1X v1.0 FINAL + astra xhigh adjudication | Inherited v1 sha=fb13d529101e2741…
+> Card t_93eb78a8 | Generated 2026-09-30 02:40 | Rule=PHASE0_INVENTORY_COMPV1X v1.0 FINAL + 6.1sol xhigh adjudication | Inherited v1 sha=fb13d529101e2741…
 
 > ⛔ wiring=OFF; sole adjudication caliber = R1A + LOSO fold surfaces; pooled/RC6/E7/Q3merge are sensitivity or disclosure only, never usable as acceptance claims.
 

@@ -1,4 +1,4 @@
-# pipeline/pitfalls — Structured consumption module for known issues (WIRE-P1 · REV-1=astra finalized version)
+# pipeline/pitfalls — Structured consumption module for known issues (WIRE-P1 · REV-1=6.1sol finalized version)
 
 Upstream manuscript (read-only, out of scope for in-repo changes): `/mnt/D/EyeKB/kb/known_issues/` (six cells, 59 entries,
 content layer with status=draft_for_PI maintained by KNOWNISSUES-B1 card). This module = **atomic claim contract's
@@ -21,7 +21,7 @@ This contract supersedes the qwen proxy-reviewed four-page-type contract from 20
 | `consume.py` | Runtime shadow consumption: fetch pages by coordinates→risk flags (**no cap/no override**)→human-readable rendering+audit trail |
 | `MANIFEST.sha256` | Written validation of artifacts |
 
-## Contract Key Points (Adjudication basis: astra formal review ROUTER_V0_ASTRa_R1.md + REV-1 correction order within card)
+## Contract Key Points (Adjudication basis: 6.1sol formal review ROUTER_V0_ASTRa_R1.md + REV-1 correction order within card)
 
 - **Atomic claim schema**: `claim_id / scope{species,tissue,assay,preparation,disease_or_treatment}
   / failure_mode / observable_signature / risk_level / mitigation / evidence_source_type
@@ -33,7 +33,7 @@ This contract supersedes the qwen proxy-reviewed four-page-type contract from 20
   Multiple but not all or determined by assay/preparation/disease condition→PATTERN; Mapping not in vocabulary→UNMAPPED (automatic injection prohibited).
 - **Evidence verification stratification**: Bibliographic record/file pointer verified=locator_verified (≠claim established);
   `claim_curated` granted only after manual re-review acceptance—all entries in this batch are `migrated_draft_pending_audit`,
-  awaiting six-cell manual audit (astra T4 passing condition "accepted claims must have 100% scope, source, and owner").
+  awaiting six-cell manual audit (6.1sol T4 passing condition "accepted claims must have 100% scope, source, and owner").
 - **Community experience limitation** (review stop order 3): `community_lead` entries can only generate leads/re-review requirements,
   never generate hard_gate/panel_activation/named_label.
 
@@ -43,7 +43,7 @@ This contract supersedes the qwen proxy-reviewed four-page-type contract from 20
   no automatic downgrading, no overturning of ballot face. Reading adjudication changes still follow three independent reading ballots and hard gates.
 - Only **structured flags** injected before blind evaluation (md header=flag table; decisions two columns=`pitfall_risk_flags`
   / `pitfall_review_required`); free text of entries (failure_mode/mitigation) not included—
-  astra conservative default "do not provide pitfall page free text before blind evaluation".
+  6.1sol conservative default "do not provide pitfall page free text before blind evaluation".
 - Entries with `answer_dependency≠none` (=blind_safe=false): pre-annotated aspects contain only claim_id+risk+
   re-review requirements; their text is uniformly `REDACTED:post_decision` in run artifacts (including machine-readable files).
 - Each run produces `shadow_attention.json` (structured list of applicable claims+link resolution status) and

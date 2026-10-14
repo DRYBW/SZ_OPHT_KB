@@ -68,6 +68,7 @@ HERE = Path(__file__).resolve().parent
 REPO_ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
 from kb9_slot_guard import demote_kb9  # [KB9B t_3bbc769f] consumer-side narrow guard (env EYEKB_KB9_CONSUME_GUARD)
+from l2_budget import resolve as _l2_budget_n  # [Q5 t_44fc8efe] L2 query-budget door (env EYEKB_L2_BUDGET; OFF => legacy 10)
 
 
 def known_tissues():
@@ -243,7 +244,8 @@ def main():
     ap.add_argument("--resolution", type=float, default=1.0)
     ap.add_argument("--min-genes", type=int, default=200)
     ap.add_argument("--max-pct-mt", type=float, default=20.0)
-    ap.add_argument("--top-genes-n", type=int, default=10)
+    ap.add_argument("--top-genes-n", type=int, default=None,
+                    help="query budget per cluster (explicit value wins; default via EYEKB_L2_BUDGET: OFF=10 legacy / ON=30)")
     ap.add_argument("--seed", type=int, default=20260929)
     ap.add_argument("--no-scrublet", action="store_true")
     ap.add_argument("--no-harmony", action="store_true")
@@ -330,7 +332,7 @@ def main():
                       out, species, tissue, disease=a.disease,
                       group_col="group" if sa["group_present"] else "",
                       gene_degraded=bool(sa["gene_id"].get("degraded")),
-                      top_genes_n=a.top_genes_n, llm_assist=a.llm_assist,
+                      top_genes_n=_l2_budget_n(a.top_genes_n), llm_assist=a.llm_assist,
                       volume_counts=volume_counts)
     att_stats = inject_shadow(out, species, tissue, meta) if gate else None
     grades = {}

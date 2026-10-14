@@ -5,14 +5,14 @@
 > This file is automatically rendered from the corresponding .json by `/mnt/D/EyeKB/scripts/baselines/build_baselines.py` — modify content in JSON+script; manual MD edits will be overwritten.
 > ⚠ Developmental axis disclosure: local GSE158629 cells_meta (exported by export_rpe_meta.R) contains only donor/cluster/tech columns, no development_stage/age column; GEO Summary states 'four adult human donor eyes' (Evidence Grade B).
 
-**Usage scope (Astra T2 adjudication finalized): This baseline = identity reference + background control for cell composition captured from this sampling material under this experimental workflow; **must not be used as a composition compliance threshold**. Sampling targets for disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition); if annotation data yields identities outside the list → trigger unexpected flag only, do not force into listed identities (label acceptance requires contextual consistency check, not whitelist positioning).**
+**Usage scope (6.1sol T2 adjudication finalized): This baseline = identity reference + background control for cell composition captured from this sampling material under this experimental workflow; **must not be used as a composition compliance threshold**. Sampling targets for disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition); if annotation data yields identities outside the list → trigger unexpected flag only, do not force into listed identities (label acceptance requires contextual consistency check, not whitelist positioning).**
 
 ## Evidence grade definitions
 - **A**: Local empirical recalculation (with file paths+scripts)
 - **B**: Direct reporting in original literature
 - **C**: Empirical intervals derived from A-grade source data at donor level/cross-study distribution
-- **qualitative**: Literature provides only qualitative description → store qualitative only, do not fabricate intervals (Astra T2)
-- **not_estimable**: Interval cannot be estimated — valid state, annotation may proceed (Astra T2)
+- **qualitative**: Literature provides only qualitative description → store qualitative only, do not fabricate intervals (6.1sol T2)
+- **not_estimable**: Interval cannot be estimated — valid state, annotation may proceed (6.1sol T2)
 
 ## Developmental axis definitions (KB2c adjudication 2026-09-23 — threshold changes require adjudication)
 - Top-level axis: `organism_stage` ∈ ['fetal', 'adult', 'developing', 'unknown']
@@ -23,7 +23,7 @@
 - aging orthogonal axis: >=60 elderly stratification is not on this axis — aging is an orthogonal independent axis, to be established as a separate entry in the future (adjudication Q2)
 - Two-tier identity: {'unknown_descriptive': 'baseline_human_RPE__stage_unknown__kb2c'}
 
-## Astra T2 metadata fields
+## 6.1sol T2 metadata fields
 - **Sampling material**: Human freshly dissociated RPE monolayer cells (4 adult donor eyes, stage=Fresh; GEO: 'RPE cells were isolated from four adult human donor eyes')
 - **Disease stage**: normal (healthy donors; processed metadata has no disease column)
 - **Treatment context**: Not recorded (processed metadata has no treatment column) — mark 'Not recorded', do not speculate
@@ -90,7 +90,7 @@
 - **donor4 cl4** [RPE: canonical (HSP-high)]: m, a, r, k, e, r,  , (, A, ) (Evidence A+B/C)
 
 ## Flag semantics
-**expected_low_but_present**: Myeloid (CD74/AIF1/HLA-DR) detected only in donor2; erythroid detected only in ICELL8 donors; stem cell candidate population (RPE65+/VIM/GNL3/MKI67, author description B): did not emerge in any cluster top25 — small population unquantified, interval cannot be estimated (legitimate state, Astra T2)
+**expected_low_but_present**: Myeloid (CD74/AIF1/HLA-DR) detected only in donor2; erythroid detected only in ICELL8 donors; stem cell candidate population (RPE65+/VIM/GNL3/MKI67, author description B): did not emerge in any cluster top25 — small population unquantified, interval cannot be estimated (legitimate state, 6.1sol T2)
 
 **unexpected**: PR-associated class 3.8–28.5%: Authors describe as RPE subpopulation (cone/rod transcript clusters, B), could also be phagocytosed PR outer segment mRNA or disk membrane attachment contamination — dual interpretation retained, no single conclusion drawn; neuron-like class (VSX1/ISL1/SNAP25) detected only in donor1 (10x) at 2.2% — retinal neural contamination or low-abundance precursors, uncertain
 

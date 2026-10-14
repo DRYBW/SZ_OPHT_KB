@@ -113,7 +113,7 @@ def resolve_gene_symbols(adata: ad.AnnData, species: str, logf,
     dup = adata.var_names.duplicated()
     if dup.any():
         keep = adata.var[~dup].copy()
-        adata = adata[:, ~dup.values].copy()
+        adata = adata[:, ~np.asarray(dup)].copy()  # E4: Index.duplicated() returns ndarray; .values was AttributeError
         note["dedup_dropped_genes"] = int(dup.sum())
     mt_prefix = {"human": "MT-", "mouse": "mt-"}[species]
     mt_ids = MT_ENSG.get(species, set())

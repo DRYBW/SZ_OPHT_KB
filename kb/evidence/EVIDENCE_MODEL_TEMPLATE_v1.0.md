@@ -91,6 +91,6 @@ Why negative (4 violations):
 
 ## 5. Doctrinal Boundaries (following task brief red lines)
 
-- This model covers only the **seven D0 targeted channel papers**; full library rollout belongs to subsequent cards and requires re-review by astra.
+- This model covers only the **seven D0 targeted channel papers**; full library rollout belongs to subsequent cards and requires re-review by 6.1sol.
 - Claims are extracted only from original literature text; **external knowledge supplementation is prohibited**; if extraction fails, extract less, do not pad counts.
 - Prohibited actions: modifying `evalset/` (frozen files), altering v2.1/v2.2 library file bodies, writing to `kb/baselines`, `kb/markers` (territory of other cards).

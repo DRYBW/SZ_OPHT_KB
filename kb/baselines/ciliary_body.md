@@ -4,14 +4,14 @@
 > **KB3 development record (Card t_5425a7ca)**: development_stage=**adult** —— KB3 prohibition (PI Red Line 2026-09-23): developmental data must not enter the adult baseline statistical pool, and vice versa —— fetal ≠ adult for the same tissue; adult/fetal do not serve as mutual references.
 > This file is automatically rendered from the corresponding .json by `/mnt/D/EyeKB/scripts/baselines/build_baselines.py` — modify content in JSON+script; manual MD edits will be overwritten.
 
-**Usage scope (Astra T2 adjudication finalized): This baseline = identity reference + background control for cell composition captured from this sampling material under this experimental workflow; **must not be used as a composition compliance threshold**. Sampling targets for disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition); if annotation data yields identities outside the list → trigger unexpected flag only, do not force into listed identities (label acceptance requires contextual consistency check, not whitelist positioning).**
+**Usage scope (6.1sol T2 adjudication finalized): This baseline = identity reference + background control for cell composition captured from this sampling material under this experimental workflow; **must not be used as a composition compliance threshold**. Sampling targets for disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition); if annotation data yields identities outside the list → trigger unexpected flag only, do not force into listed identities (label acceptance requires contextual consistency check, not whitelist positioning).**
 
 ## Evidence grade definitions
 - **A**: Local empirical recalculation (with file paths+scripts)
 - **B**: Direct reporting in original literature
 - **C**: Empirical intervals derived from A-grade source data at donor level/cross-study distribution
-- **qualitative**: Literature provides only qualitative description → store qualitative only, do not fabricate intervals (Astra T2)
-- **not_estimable**: Interval cannot be estimated — valid state, annotation may proceed (Astra T2)
+- **qualitative**: Literature provides only qualitative description → store qualitative only, do not fabricate intervals (6.1sol T2)
+- **not_estimable**: Interval cannot be estimated — valid state, annotation may proceed (6.1sol T2)
 
 ## Developmental axis definitions (KB2c adjudication 2026-09-23 — threshold changes require adjudication)
 - Top-level axis: `organism_stage` ∈ ['fetal', 'adult', 'developing', 'unknown']
@@ -22,7 +22,7 @@
 - aging orthogonal axis: >=60 elderly stratification is not on this axis — aging is an orthogonal independent axis, to be established as a separate entry in the future (adjudication Q2)
 - Two-tier identity: {'adult_only': 'baseline_human_ciliary_body__adult_only__kb2c', 'adult_pool': 'baseline_human_ciliary_body__adult_pool__v1.0'}
 
-## Astra T2 metadata fields
+## 6.1sol T2 metadata fields
 - **Sampling Material**: ciliary_body anatomical component from human anterior segment surgical specimens (tissue column='ciliary body' slice; additionally, 53,406 nuclei from the uvea fraction are not included in this entry)
 - **Disease Stage**: normal (disease column all normal; donor systemic death eye bank/surgical material)
 - **Treatment Context**: Not recorded (no treatment column in metadata) — marked 'Not recorded', no speculation
@@ -159,7 +159,7 @@
 **contamination_suspect**: No additional contamination flag required (section boundary corresponds to this tissue)
 
 ## Notes
-1. This entry = ciliary body anatomical component section: PCE/NPCE/ciliary muscle are the three main classes constituting the tissue proper; Melanocyte/Schwann Cell proportions reflect the capture composition of uveal pigmentation + neural innervation layers — note for disease controls (Astra T2).
+1. This entry = ciliary body anatomical component section: PCE/NPCE/ciliary muscle are the three main classes constituting the tissue proper; Melanocyte/Schwann Cell proportions reflect the capture composition of uveal pigmentation + neural innervation layers — note for disease controls (6.1sol T2).
 2. Fibroblast in this section = CB fibroblasts (CBFibro), distinct sublayers from TM/corneal fibroblasts (distinguishable via author_cell_type).
 3. Supported by 59 donors; however, there is a significant scale disparity between the two study layers (chen_tm_cb dominant vs sanes uvea fraction outside this section), stratified details must be reviewed.
 4. snRNA scope (single-nucleus suspension, intronic reads included), cannot be directly compared with scRNA entries.

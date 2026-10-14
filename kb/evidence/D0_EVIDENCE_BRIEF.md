@@ -1,7 +1,7 @@
 # EyeKB Evidence Model Starter Card Task Brief: D0 Seven-Paper Claim-Level Verification (Three-Field Template + Initial Entries)
 
 ## Background and Positioning
-One of the project mainlines defined by Astra review is "auditable evidence": RAG/MCP literature evidence cannot rely solely on PMID linkage; it requires **claim-level** relationships and context.
+One of the project mainlines defined by 6.1sol review is "auditable evidence": RAG/MCP literature evidence cannot rely solely on PMID linkage; it requires **claim-level** relationships and context.
 This card = **starter implementation** of the three-field evidence model: only for the D0 targeted channel seven papers (v2.2 library, d0_admission.json contains the list and exception registry),
 producing a reusable template + initial entries. **Full library rollout is prohibited** (doctrinal red line).
 

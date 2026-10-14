@@ -5,7 +5,7 @@
 
 > **Development axis**: KB2c development axis (adjudication Q3): disease grid keys include development axis —— this grid=adult (proliferative PDR samples are all adult surgical materials; GSE165784/JCI cohort donors are all adults). Developmental samples do not enter adult disease grids (PI directive clause 2); if pediatric membrane materials are collected in the future, create a separate grid rather than merging into this entry.
 
-**This entry = context consistency check material (non-whitelist): generates expected/unexpected/contamination flags only; prohibited from scoring; labels must not be forced to identities within the list (Astra T2).**
+**This entry = context consistency check material (non-whitelist): generates expected/unexpected/contamination flags only; prohibited from scoring; labels must not be forced to identities within the list (6.1sol T2).**
 
 ## Disease × tissue matrix positioning
 
@@ -20,13 +20,13 @@ This entry is the **first example cell** of the matrix (matrix example cell = 'o
 
 ## Sampling material mismatch warning (must read)
 
-**Sampling material mismatch warning (Core of Astra T2 adjudication)**: The disease site = retina, but the surgical material = fibrovascular membrane. Healthy retina composition baseline (kb/baselines/retina, D001) is [NOT] applicable as a composition threshold for this membrane specimen — membranes are dominated by macrophages/vessels/stroma; near-zero photoreceptors/neural retina classes reflect material nature, not abnormality.
+**Sampling material mismatch warning (Core of 6.1sol T2 adjudication)**: The disease site = retina, but the surgical material = fibrovascular membrane. Healthy retina composition baseline (kb/baselines/retina, D001) is [NOT] applicable as a composition threshold for this membrane specimen — membranes are dominated by macrophages/vessels/stroma; near-zero photoreceptors/neural retina classes reflect material nature, not abnormality.
 
 **Correct usage**: Identity reference (hierarchical judgment of transcriptional similarity between certain myeloid clusters and retinal-resident microglia); background control for adjacent retina specimens (retina_adjacent grid)
 
 **Incorrect usage**: Accepting 'compliant' cell proportions for membrane specimens; classifying Rod/Cone absence as a quality defect (check material first!)
 
-**Primary anchor for comparable materials**: Primary anchor for this card's comparable materials = GSE165784 (PDR membrane, PMID 35061025) + JCI Insight 2023 independent PDR membrane cohort (PMID 37917183) — same species/material/stage, Astra T2 priority tier 1.
+**Primary anchor for comparable materials**: Primary anchor for this card's comparable materials = GSE165784 (PDR membrane, PMID 35061025) + JCI Insight 2023 independent PDR membrane cohort (PMID 37917183) — same species/material/stage, 6.1sol T2 priority tier 1.
 
 ## Identity Hierarchy (T4: Hierarchical identity, indicating deepest supportable level per layer)
 
@@ -105,7 +105,7 @@ This entry is the **first example cell** of the matrix (matrix example cell = 'o
 
 ## Minimum Usability Criteria for Entries
 
-Minimum viable criteria for entries (Astra T4/P4): ① At least one identity or state evidence directly comparable to the material (species+material+disease condition specified) ② Each signature includes source+evidence conditions ③ No specific evidence, no standalone subtype grid ④ Name merging based only on expression program/lineage/context, not lexical similarity (concept ID mapping table) ⑤ Unestimable interval = valid state, does not block entry establishment.
+Minimum viable criteria for entries (6.1sol T4/P4): ① At least one identity or state evidence directly comparable to the material (species+material+disease condition specified) ② Each signature includes source+evidence conditions ③ No specific evidence, no standalone subtype grid ④ Name merging based only on expression program/lineage/context, not lexical similarity (concept ID mapping table) ⑤ Unestimable interval = valid state, does not block entry establishment.
 
 Threshold for new cells: New cell creation = Direct evidence set exists for that Disease × Material; Batch expansion paused (T6), wait for PRIOR_DIFF control proof that D0 is useful
 

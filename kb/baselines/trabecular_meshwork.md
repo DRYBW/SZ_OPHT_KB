@@ -4,14 +4,14 @@
 > **KB3 development record (Card t_5425a7ca)**: development_stage=**adult** —— KB3 prohibition (PI Red Line 2026-09-23): developmental data must not enter the adult baseline statistical pool, and vice versa —— fetal ≠ adult for the same tissue; adult/fetal do not serve as mutual references.
 > This file is automatically rendered from the corresponding .json by `/mnt/D/EyeKB/scripts/baselines/build_baselines.py` — modify content in JSON+script; manual MD edits will be overwritten.
 
-**Usage scope (Astra T2 adjudication finalized): This baseline = identity reference + background control for cell composition captured from this sampling material under this experimental workflow; **must not be used as a composition compliance threshold**. Sampling targets for disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition); if annotation data yields identities outside the list → trigger unexpected flag only, do not force into listed identities (label acceptance requires contextual consistency check, not whitelist positioning).**
+**Usage scope (6.1sol T2 adjudication finalized): This baseline = identity reference + background control for cell composition captured from this sampling material under this experimental workflow; **must not be used as a composition compliance threshold**. Sampling targets for disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition); if annotation data yields identities outside the list → trigger unexpected flag only, do not force into listed identities (label acceptance requires contextual consistency check, not whitelist positioning).**
 
 ## Evidence grade definitions
 - **A**: Local empirical recalculation (with file paths+scripts)
 - **B**: Direct reporting in original literature
 - **C**: Empirical intervals derived from A-grade source data at donor level/cross-study distribution
-- **qualitative**: Literature provides only qualitative description → store qualitative only, do not fabricate intervals (Astra T2)
-- **not_estimable**: Interval cannot be estimated — valid state, annotation may proceed (Astra T2)
+- **qualitative**: Literature provides only qualitative description → store qualitative only, do not fabricate intervals (6.1sol T2)
+- **not_estimable**: Interval cannot be estimated — valid state, annotation may proceed (6.1sol T2)
 
 ## Developmental axis definitions (KB2c adjudication 2026-09-23 — threshold changes require adjudication)
 - Top-level axis: `organism_stage` ∈ ['fetal', 'adult', 'developing', 'unknown']
@@ -22,7 +22,7 @@
 - aging orthogonal axis: >=60 elderly stratification is not on this axis — aging is an orthogonal independent axis, to be established as a separate entry in the future (adjudication Q2)
 - Two-tier identity: {'adult_only': 'baseline_human_trabecular_meshwork__adult_only__kb2c', 'adult_pool': 'baseline_human_trabecular_meshwork__adult_pool__v1.0'}
 
-## Astra T2 metadata fields
+## 6.1sol T2 metadata fields
 - **Sampling material**: Trabecular_meshwork anatomical component from human anterior segment surgical resection (tissue column='eye trabecular meshwork' slice; uvea component 53,406 nuclei not included in this entry)
 - **Disease Stage**: normal (disease column all normal; donor systemic death eye bank/surgical material)
 - **Treatment Context**: Not recorded (no treatment column in metadata) — marked 'Not recorded', no speculation
@@ -143,7 +143,7 @@
 2. The primary Fibroblast class in this slice = TM fibroblasts/beam cells (TMFibro) — do not directly compare with corneal/scleral fibroblasts.
 3. Minor CB_PCE/CB_NPCE (total ~0.5%) = ciliary body dissection boundary contamination.
 4. Donor count is 25 but donor scale within units is uneven; n=25 donor-level interval remains moderate support; direction must be re-reviewed after disease control usage.
-5. snRNA scope, cannot be directly compared with scRNA entries (Astra T2); uvea component (53,406 nuclei) and sclera/uvea entries are discussed separately.
+5. snRNA scope, cannot be directly compared with scRNA entries (6.1sol T2); uvea component (53,406 nuclei) and sclera/uvea entries are discussed separately.
 6. v1.1 (KB2c t_be336eee): Primary archive = adult-only (>=18y, adjudication Q2) — measured exclusion of 0 items in this slice (all donors >=18y → values for both tiers are legally identical, only identity signatures separated); v1.0 mixed scope retained in donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0), two-tier signature separation.
 
 ## Source List

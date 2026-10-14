@@ -69,7 +69,7 @@ entry = {
                "this entry is a label-distribution-level reference."),
     "usage_scope": ("Identity reference for fetal/developmental-stage retinal material + OOD behavior control anchor "
                     "(E5 same-source data); must not be treated as a composition pass line; must not serve as mutual "
-                    "reference with the adult master file (PI red line); excluded from all scoring (Astra T2, inherited globally)."),
+                    "reference with the adult master file (PI red line); excluded from all scoring (6.1sol T2, inherited globally)."),
     "evidence_grades": {"A": "direct counts of portal/author published labels (file paths + aggregation script traceable)"},
     "anchors": [
         {"acc": "GSE268630", "role": "primary_portal", "tier": "fetal",
@@ -117,7 +117,7 @@ entry = {
         "other": {"cells": lay["other"]["n_cells"], "disposition": "sample faces not named developmentally -> isolated"}},
     "cross_source_note": ("the two anchors use different vocabularies (portal majorclass 9 classes vs author 12+ classes) —— "
                           "this entry presents them side by side and never synthesizes a single distribution "
-                          "(developmental-axis inheritance of the Astra T6 no-synthesis scope)."),
+                          "(developmental-axis inheritance of the 6.1sol T6 no-synthesis scope)."),
     "flags": {"engine_applicability": "the live interpretation engine = adult domain; it must abstain on this entry's material; "
                                       "the numbers here must not serve as a scoring basis for right/wrong of engine output on fetal "
                                       "(E5 is behavioral description only).",

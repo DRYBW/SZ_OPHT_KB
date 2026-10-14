@@ -1,7 +1,7 @@
 # 协调者独立探针（PI 指令"测试过再上传"验收记录，2026-09-27）
 # 对象=从远端全新 clone 的仓副本 /tmp/repo_verify（非线上目录）
 [PASS] kb/ 100 文件 sha256 与线上逐字节全等
-[PASS] mcp_server 代码差异=仅脱敏标签替换(Astra→REVIEWER_LLM)；server.py 版本行 KB1v2-0.4-actv6 与线上一致
+[PASS] mcp_server 代码差异=仅脱敏标签替换(6.1sol→REVIEWER_LLM)；server.py 版本行 KB1v2-0.4-actv6 与线上一致
 [PASS] calllog.py 与线上全等
 [PASS] 仓副本 stdio 起服：initialize OK，5 工具在列，版本=KB1v2-0.4-actv6
 [PASS] 黄金式查询 MG 基因集(7基因) → top1=Microglia n_shared=5

@@ -249,7 +249,7 @@ def build():
         d = donor_r[SRC_NAME.get(c,c)]
         lit = LIT["retina"][c]
         r = face_row(c, CLASS_CN_R[c], d, pri, lit,
-                     "Denominator = human normal adult neural retina capture event composition (snRNA-seq nuclei; D001 adult-only donor-level master file); not histological ground truth, not a compliance threshold (Astra T2 usage_scope)")
+                     "Denominator = human normal adult neural retina capture event composition (snRNA-seq nuclei; D001 adult-only donor-level master file); not histological ground truth, not a compliance threshold (6.1sol T2 usage_scope)")
         r["a_measured"] = dict(donor_median_pct=d["donor_median_pct"], donor_iqr_pct=d["donor_iqr_pct"],
                                donor_range_pct=d["donor_range_pct"],
                                pooled_adult_only_ref=d.get("pooled_pct_for_reference_only"))
@@ -316,7 +316,7 @@ def build():
      "wiring": "OFF — not wired (zero MCP/runtime references; wiring and activation on separate cards/batches, any activation of this surface requires PI decision)",
      "status": "v0_candidate_selfcheck_only",
      "scope": {"species": "human", "organism_stage": "adult_only",
-               "disease_states": "Not built (PDR annotation unreliable caliber maintained; disease materials must not be validated against healthy surface, Astra T2 usage_scope)",
+               "disease_states": "Not built (PDR annotation unreliable caliber maintained; disease materials must not be validated against healthy surface, 6.1sol T2 usage_scope)",
                "fetal_organoid_developing": "Numerical folding excluded; exclusion reasons explicitly marked in citation records (32946783 organoid sentence/39117640 developing/36645183 fetal)",
                "tissues_out_of_v0": "Remaining tissues left for v1"},
      "evidence_grades": {"A": "Registry ledger external author annotations locally recalculated (kb/baselines adult-only donor-level main archive, with paths)",
@@ -345,7 +345,7 @@ def build():
         "rows": ocs_rows}},
      "caveats": [
        "RGC/neuron-like proportions influenced by nuclear sorting and library design (NeuN±, RGC enrichment) — check library strategy before flagging anomalies (inherits baselines caveat)",
-       "snRNA (nucleus) and scRNA (cell) proportions cannot be directly compared (Astra T2)",
+       "snRNA (nucleus) and scRNA (cell) proportions cannot be directly compared (6.1sol T2)",
        "Ocular surface Immune pool is only 1.7%: inherent immune scarcity in ocular surface, immune proportions cannot be benchmarked against inflammatory samples",
        "Corneal Endothelium main archive median 0%: pure CEC material (fragment layer) denominator=100%, this row does not apply",
        "Goblet/conjunctival detail rows = dual absence of data and literature, marked no_evidence",

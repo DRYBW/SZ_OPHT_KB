@@ -6,7 +6,7 @@
 
 **Nature**: Developmental stage **composition reference** entry: Numbers = **direct count aggregation** of published cell labels from dataset authors/CELLxGENE portal, not inference by active adult engine (engine must abstain for fetal, E4/E5 OOD_strict frozen artifact); donor-level median/IQR metrics not established (fetal reference pipeline task not started, KB2c adjudication Q5); this entry is a label-distribution-level reference.
 
-**Usage Metric**: Identity reference for fetal/developmental retinal material + OOD behavior control anchor (E5 homologous data); must not be used as composition benchmark; must not serve as mutual reference with adult primary archive (PI red line); prohibited from all scoring (Astra T2 global inheritance).
+**Usage Metric**: Identity reference for fetal/developmental retinal material + OOD behavior control anchor (E5 homologous data); must not be used as composition benchmark; must not serve as mutual reference with adult primary archive (PI red line); prohibited from all scoring (6.1sol T2 global inheritance).
 
 ## Anchor and Availability Verification (KB3 Discipline 3: No entry without evidence)
 
@@ -65,7 +65,7 @@
 
 ## Cross-source scope statement
 
-Two anchor vocabularies differ (portal majorclass 9 classes vs author 12+ classes) — this entry displays them side-by-side, does not synthesize a single distribution (Astra T6 non-synthesized metric developmental axis inheritance).
+Two anchor vocabularies differ (portal majorclass 9 classes vs author 12+ classes) — this entry displays them side-by-side, does not synthesize a single distribution (6.1sol T6 non-synthesized metric developmental axis inheritance).
 
 ⚑ **Current reading engine=adult domain, must abstain for this material; numbers in this entry cannot be used as scoring benchmarks for engine output correctness on fetal data (E5 is behavioral description only).**
 ⚑ Donor-level interval scope not established (fetal pipeline separate batch), this flag must accompany citations.

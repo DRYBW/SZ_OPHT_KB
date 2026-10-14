@@ -2,7 +2,7 @@
 
 **status = observed_single_study_pilot**: single study (GSE164403, the only human lacrimal gland in-vivo single-cell atlas to date, PMID:33730555),
 measured composition after tissue pool QC of 1,076 cells, 3 donor labels (patient 3 accounts for 76% dominance). **Not** a cross-study reference distribution,
-prohibited as composition benchmark (Astra T2 scope retained), prohibited from entering all scoring.
+prohibited as composition benchmark (6.1sol T2 scope retained), prohibited from entering all scoring.
 
 ## Cluster Partition (self-built clustering scope for this card — authors did not deposit cell type labels)
 

@@ -9,7 +9,7 @@
 - Evidence Levels: A=Registry ledger external author annotations locally recomputed (kb/baselines adult-only donor-level master file, with paths); B=On-disk ingested RAG literature original text directly reported (chunks verbatim sentences); C=Cross-study empirical intervals (kb/priors/composition/human_retina.json, card t_39182aa2); no_evidence=No A/B/C available → Do not fabricate numbers
 - Lineage Declaration (Anti-circularity Clause): Proportion interval sources = D001(HRCA)/D002(OcularSurface) portal author annotation recomputation (via kb/baselines v1.1 adult-only master file) + priors v1 empirical intervals + ingested literature original sentences; Entire process did not use in-house clustering/in-house demo annotations (anti-circularity clause)
 - Interval Mechanical Rule (Pre-registered): low=floor(min(donor_iqr_low, priors_expected_low, fold_lit_low)); high=ceil(max(donor_iqr_high, priors_expected_high, fold_lit_high)); mid=donor_median; No source row=null(no_evidence)
-- Scope: {"species": "human", "organism_stage": "adult_only", "disease_states": "Not built (PDR annotation unreliable scope maintained; diseased materials must not be validated against healthy surface, Astra T2 usage_scope)", "fetal_organoid_developing": "Numerical folding excluded; exclusion reasons explicitly marked in citation records (32946783 organoid sentence/39117640 developing/36645183 fetal)", "tissues_out_of_v0": "Other tissues left for v1"}
+- Scope: {"species": "human", "organism_stage": "adult_only", "disease_states": "Not built (PDR annotation unreliable scope maintained; diseased materials must not be validated against healthy surface, 6.1sol T2 usage_scope)", "fetal_organoid_developing": "Numerical folding excluded; exclusion reasons explicitly marked in citation records (32946783 organoid sentence/39117640 developing/36645183 fetal)", "tissues_out_of_v0": "Other tissues left for v1"}
 
 ## 1.1 Page: retina_normal_adult_human
 - Registry Anchor: OA-D001 (HCA-HRCA-v1.0), PMID 41578023, path <STORE>/data/HRCA_cellxgene/HRCA_allcells_annotated.h5ad
@@ -124,7 +124,7 @@
 
 ## 3. Known Limitations and Caveats
 - RGC/neuron proportions are influenced by nuclear sorting and library design (NeuN±, RGC enrichment) — check library strategy before flagging anomalies (inherits baselines caveat)
-- snRNA (nucleus) and scRNA (cell) class proportions cannot be directly compared (Astra T2)
+- snRNA (nucleus) and scRNA (cell) class proportions cannot be directly compared (6.1sol T2)
 - Ocular surface Immune pool is only 1.7%: inherent immune cells on the ocular surface are sparse; immune proportions cannot be benchmarked against inflammatory samples
 - Corneal Endothelium main file median 0%: For pure CEC material (fragment layer), denominator=100%, this row does not apply
 - Goblet/conjunctiva detail rows = dual absence of data and literature, marked as no_evidence

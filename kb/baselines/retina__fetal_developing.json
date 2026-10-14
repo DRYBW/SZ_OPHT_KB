@@ -22,7 +22,7 @@
   "note": "KB3 enumeration (task specification W1). This entry = developmental stage entry, permanently separated from the adult main archive (retina.json, organism_stage=adult); citing numbers from this entry prohibits backfilling any adult entries, and vice versa."
  },
  "nature": "Developmental stage **composition reference** entry: numbers = **direct count aggregation** of cell labels published by dataset authors/CELLxGENE portal, not inference by the current adult engine (engine must abstain for fetal, E4/E5 OOD_strict frozen component); donor-level median/IQR metric not established (fetal reference pipeline task not started, KB2c adjudication Q5), this entry serves as a label-distribution-level reference.",
- "usage_scope": "Identity reference for fetal/developmental retinal material + OOD behavior control anchor (E5 homologous data); must not be used as a composition benchmark; must not serve as mutual reference with the adult main archive (PI red line); prohibited from entering any scoring (Astra T2 global inheritance).",
+ "usage_scope": "Identity reference for fetal/developmental retinal material + OOD behavior control anchor (E5 homologous data); must not be used as a composition benchmark; must not serve as mutual reference with the adult main archive (PI red line); prohibited from entering any scoring (6.1sol T2 global inheritance).",
  "evidence_grades": {
   "A": "Direct counts of portal/author-published labels (file path + aggregation script traceable)"
  },
@@ -186,7 +186,7 @@
    "disposition": "Non-developmental naming sample surfaces → isolated"
   }
  },
- "cross_source_note": "Two anchor vocabularies differ (portal majorclass 9 classes vs author 12+ classes) — this entry displays them side-by-side, does not synthesize a single distribution (Astra T6 non-synthesized metric developmental axis inheritance).",
+ "cross_source_note": "Two anchor vocabularies differ (portal majorclass 9 classes vs author 12+ classes) — this entry displays them side-by-side, does not synthesize a single distribution (6.1sol T6 non-synthesized metric developmental axis inheritance).",
  "flags": {
   "engine_applicability": "Current reading engine = adult domain, must abstain for materials in this entry; numbers in this entry must not be used as scoring benchmarks for engine output correctness on fetal (E5 behavior description only).",
   "not_donor_level": "Donor-level interval metric not established (fetal pipeline separate batch), citation requires this flag."

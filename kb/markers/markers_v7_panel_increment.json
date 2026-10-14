@@ -1,0 +1,2650 @@
+{
+ "version": "v7.0-retina-vascular-increment-20261001",
+ "created": "2026-10-01",
+ "card": "t_50003494",
+ "build_card_note": "KB10 = 视网膜主面板血管/髓样缺口补录(外部体检+Lukowski 52.7% 双印证); 方法学照 KB4/KB7/KB9",
+ "prereg_sha": "0140eb7afdfbcb292e019f75a93e51e467d53f8ebd4e18fc973d0f8b40f27201",
+ "status": "REGISTERED_DEFAULT_OFF — 仅显式 library=retina_v7 路由可达, 任何态不入默认 all; 激活走独立审批(PI 亲手勾)+义务 run(KB9ACT 先例); 回退=MARKER_LIBS 行删+server 版本指针一行回切",
+ "scope": "retina facet 补录: Endo(+分区)/Pericyte/SMC 复核/Microglia 稳态 core/Macrophage+DAM_LAM/Endo_Patho 状态轴; 不覆盖 v4.1/v5/v6/membrane/baselines 冻结面本体; 概念页(EYEKBC-*)与判读词表联动=另卡",
+ "applicability": "retina_only",
+ "consumption_note": "面板基因本体唯一事实源=本件(自 decisions 台账装配); 与 membrane_v1(PDR 膜语境)正交并存, 同名类(Pericyte/SMC/Endo/Microglia)跨库消歧按\"库名::类名\"既有规则; 判读时视网膜材料优先 retina_v7, 膜材料优先 membrane",
+ "positioning_limitation_statement": "本件为文献溯源+D001 反向门构建的词条增量: Endo/Pericyte/SMC/Mac 类无独立数据池(D001 mc_cats=10 类), 其特异性证据=逐基因 PMID 通道(命名证据级, 非三通道互证); Microglia 类为数据+文献双通道; 分区类以文献门过数为建条判据(core>=3); Lukowski 185k 内皮子集复测未跑(判定文件已冻结, 输入待归档, 见 plans/lukowski_20261001/JUDGEMENT_frozen.md f442bd14)——本件注册态默认 OFF, 成绩主张为零",
+ "sources": {
+  "ledger_shas": {
+   "out/kb10_decisions.json": "48c5af9471116a5e2b3148a0586354432c2bca3af14eabc64829b6f53d9729eb",
+   "ledgers/PMID_LEDGER.tsv": "5012e5787d79eab9a83d578e2d9fd4f8c1dcca4eae2b600148eac82fabcf1c8e",
+   "out/kb10_cl_final.tsv": "a68e68b0e1c3069e706eb76e06559877caa70f3ea8675b14071a14d276bd59f8",
+   "out/kb10_d001_reverse.tsv": "99bd9226075a3150fe8a0ff378ec3dd294672fe4cd79e32bc9cb0b16f57858d1",
+   "out/kb10_d001_micro.tsv": "168c01eef18fb4c04ef309057afb64ffe6ae6d4e63990dd7253b6e3e3179c25e",
+   "out/kb10_fire.tsv": "ac163306e5b7eb983d3ccd7e9cdc5d4baa8119194d01703bdd145565fb320b63",
+   "KB10_PREREG.md": "0140eb7afdfbcb292e019f75a93e51e467d53f8ebd4e18fc973d0f8b40f27201",
+   "/mnt/D/EyeKB/plans/lukowski_20261001/JUDGEMENT_frozen.md": "f442bd14391b2b4f29cefcd83ec91cd77a6495b9759da62ef90b0d1e10d8c48a"
+  },
+  "decisions": "out/kb10_decisions.json(唯一裁定源)",
+  "ols_dir": "ledgers/ols_evidence_kb10/",
+  "ols_files_n": 31,
+  "errata_cl_rejected": [
+   "ERRATA_Endo_Arterial_CL_0002537.json",
+   "ERRATA_Endo_Capillary_CL_0000283.json",
+   "ERRATA_Endo_Venous_CL_0002538.json",
+   "ERRATA_Macrophage_CL_0000244.json",
+   "ERRATA_Pericyte_CL_0003677.json",
+   "ERRATA_SMC_CL_0005000.json"
+  ]
+ },
+ "cl_alignment": {
+  "directive": "USER_DIRECTIVE_20260924_cell_ontology_naming.md",
+  "mechanism": "markers_cl_alignment 机制随件内嵌(旁挂注记本体零改动, 新件另行注册=另卡纪律)",
+  "final": {
+   "Endo": {
+    "cl_id": "CL:0000115",
+    "ols_label": "endothelial cell",
+    "via": "L2_by-iri"
+   },
+   "Endo_Arterial": {
+    "cl_id": "CL:1000413",
+    "ols_label": "endothelial cell of artery",
+    "via": "labelsearch+by-iri"
+   },
+   "Endo_Capillary": {
+    "cl_id": "CL:0002144",
+    "ols_label": "capillary endothelial cell",
+    "via": "labelsearch+by-iri"
+   },
+   "Endo_Patho__parent": {
+    "cl_id": "CL:0000115",
+    "ols_label": "endothelial cell",
+    "via": "L2_by-iri"
+   },
+   "Endo_Venous": {
+    "cl_id": "CL:0002543",
+    "ols_label": "vein endothelial cell",
+    "via": "labelsearch+by-iri"
+   },
+   "Mac_DAM_LAM__parent": {
+    "cl_id": "CL:0000235",
+    "ols_label": "macrophage",
+    "via": "L2b"
+   },
+   "Macrophage": {
+    "cl_id": "CL:0000235",
+    "ols_label": "macrophage",
+    "via": "labelsearch+by-iri"
+   },
+   "Microglia": {
+    "cl_id": "CL:0000129",
+    "ols_label": "microglial cell",
+    "via": "L2_by-iri"
+   },
+   "Pericyte": {
+    "cl_id": "CL:0000669",
+    "ols_label": "pericyte cell",
+    "via": "labelsearch_near+by-iri"
+   },
+   "SMC": {
+    "cl_id": "CL:0000192",
+    "ols_label": "smooth muscle cell",
+    "via": "labelsearch+by-iri"
+   }
+  }
+ },
+ "terms_build_stats": {
+  "Endo": {
+   "n_core": 9,
+   "built": true,
+   "dropped": 1,
+   "not_built_reason": null
+  },
+  "Endo_Arterial": {
+   "n_core": 6,
+   "built": true,
+   "dropped": 2,
+   "not_built_reason": null
+  },
+  "Endo_Capillary": {
+   "n_core": 4,
+   "built": true,
+   "dropped": 1,
+   "not_built_reason": null
+  },
+  "Endo_Patho": {
+   "n_core": 8,
+   "built": true,
+   "dropped": 0,
+   "not_built_reason": null
+  },
+  "Endo_Venous": {
+   "n_core": 4,
+   "built": true,
+   "dropped": 1,
+   "not_built_reason": null
+  },
+  "Mac_DAM_LAM": {
+   "n_core": 20,
+   "built": true,
+   "dropped": 0,
+   "not_built_reason": null
+  },
+  "Macrophage": {
+   "n_core": 16,
+   "built": true,
+   "dropped": 3,
+   "not_built_reason": null
+  },
+  "Microglia": {
+   "n_core": 12,
+   "built": true,
+   "dropped": 2,
+   "not_built_reason": null
+  },
+  "Pericyte": {
+   "n_core": 10,
+   "built": true,
+   "dropped": 3,
+   "not_built_reason": null
+  },
+  "SMC": {
+   "n_core": 6,
+   "built": true,
+   "dropped": 1,
+   "not_built_reason": null
+  }
+ },
+ "bans": {
+  "PCP4": "KB7 bans 沿用: 跨组织语义, 永久禁作 SMC 增补",
+  "PVALB/PCP4": "(retina_v6 bans 同源, 本件不重复引用)",
+  "COL1A2_MGP": "膜纤维/平滑肌泛表达语境, 视网膜内皮/壁细胞语境门未过者不得回填(逐件见 removed_note)"
+ },
+ "markers": {
+  "Endo": [
+   "CDH5",
+   "CLDN5",
+   "ECSCR",
+   "ESAM",
+   "GNG11",
+   "PLVAP",
+   "RAMP2",
+   "TM4SF1",
+   "VWF"
+  ],
+  "Endo_Arterial": [
+   "DLL4",
+   "GJA5",
+   "GJA8",
+   "HEY1",
+   "HEY2",
+   "ICAM2"
+  ],
+  "Endo_Capillary": [
+   "AQP1",
+   "CA4",
+   "CLDN5",
+   "IGFBP3"
+  ],
+  "Endo_Patho": [
+   "DLL4",
+   "EDN1",
+   "HIF1A",
+   "ICAM1",
+   "NDUFA4L2",
+   "PLVAP",
+   "SERPINE1",
+   "VCAM1"
+  ],
+  "Endo_Venous": [
+   "ACKR1",
+   "CYP1B1",
+   "HEB",
+   "NR2F2"
+  ],
+  "Mac_DAM_LAM": [
+   "ADAMDEC1",
+   "APOE",
+   "APOL1",
+   "ASAH1",
+   "CCL3",
+   "CCL4",
+   "CD9",
+   "CLEC7A",
+   "CTSD",
+   "FTH1",
+   "FTL",
+   "GPNMB",
+   "HMOX1",
+   "LGMN",
+   "LIPA",
+   "MMP9",
+   "OLR1",
+   "PLD3",
+   "SPP1",
+   "TREM2"
+  ],
+  "Macrophage": [
+   "C1QA",
+   "C1QB",
+   "C1QC",
+   "CD163",
+   "CD5L",
+   "CD68",
+   "F13A1",
+   "FOLR2",
+   "LYVE1",
+   "MARCO",
+   "MNDA",
+   "MRC1",
+   "SELENOP",
+   "SLC40A1",
+   "STAB1",
+   "VSIG4"
+  ],
+  "Microglia": [
+   "AIF1",
+   "C1QA",
+   "C1QB",
+   "C1QC",
+   "CX3CR1",
+   "FCER1G",
+   "GPR34",
+   "IRF8",
+   "OLFML3",
+   "SIGLEC11",
+   "TMEM119",
+   "TYROBP"
+  ],
+  "Pericyte": [
+   "ABCC9",
+   "COL1A2",
+   "HIGD1B",
+   "ITGA1",
+   "MGP",
+   "NOTCH3",
+   "PRRX1",
+   "RGS4",
+   "RGS5",
+   "RLN2"
+  ],
+  "SMC": [
+   "ACTA2",
+   "CNN1",
+   "DES",
+   "MYH11",
+   "MYL9",
+   "TAGLN"
+  ]
+ },
+ "new_terms": {
+  "Endo": {
+   "display_name": "retinal vascular endothelial cell (retina facet)",
+   "level": "identity_major",
+   "applicability": "retina_only (镜像纪律: 膜/PDR 语境条不得混用; 反向同)",
+   "cl_id": "CL:0000115",
+   "label": "endothelial cell",
+   "definition_ols": "An endothelial cell comprises the outermost layer...",
+   "ols_recheck": {
+    "via": "L2_by-iri",
+    "dir": "ledgers/ols_evidence_kb10/",
+    "rule": "USER_DIRECTIVE_20260924: 全部 by-iri 直取回证; 凭记忆号已被拒(6 件 ERRATA 留痕, 见件内 sources.errata_cl_rejected)"
+   },
+   "core": [
+    {
+     "gene": "CDH5",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42433372",
+        "42792527",
+        "42084760"
+       ],
+       "query": "\"CDH5\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "CLDN5",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42593649",
+        "42265826",
+        "42792527"
+       ],
+       "query": "\"CLDN5\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "ECSCR",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41071880",
+        "42269083",
+        "38414848"
+       ],
+       "query": "\"ECSCR\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "ESAM",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42265826",
+        "42071810",
+        "42193229"
+       ],
+       "query": "\"ESAM\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "GNG11",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42792898",
+        "42766495",
+        "41462614"
+       ],
+       "query": "\"GNG11\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "PLVAP",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42593649",
+        "41857066",
+        "42436854"
+       ],
+       "query": "\"PLVAP\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "RAMP2",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "40465267",
+        "42404762",
+        "40689128"
+       ],
+       "query": "\"RAMP2\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "TM4SF1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42792898",
+        "39710218",
+        "39590375"
+       ],
+       "query": "\"TM4SF1\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "VWF",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42792527",
+        "42781273",
+        "42601615"
+       ],
+       "query": "\"VWF\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    }
+   ],
+   "reference_layer": [
+    {
+     "gene": "ADGRL4",
+     "note": "G-OFFTARGET(非相邻旧类 Astrocyte cpm=181.8>=100→reference_layer; A1)",
+     "pmids": [
+      "42792898",
+      "41727267",
+      "42404762"
+     ]
+    },
+    {
+     "gene": "KDR",
+     "note": "G-OFFTARGET(非相邻旧类 MG cpm=392.7>=100→reference_layer; A1)",
+     "pmids": [
+      "42794672",
+      "42785297",
+      "42781273"
+     ]
+    },
+    {
+     "gene": "PECAM1",
+     "note": "G-OFFTARGET(非相邻旧类 Microglia cpm=135.9>=100→reference_layer; A1)",
+     "pmids": [
+      "42792527",
+      "42429482",
+      "42084939"
+     ]
+    }
+   ],
+   "removed_note": [
+    {
+     "gene": "FLT1",
+     "note": "G-REV-HARD(cpm>=20 现于5/10 旧类, 真泛表达; A1)"
+    }
+   ],
+   "data_limitation": "D001 无血管内皮池, G-REV 仅排除泛表达非证特异性; 特异性证据=文献通道(PDR/DR 人视网膜血管谱, 逐基因 PMID 见 core)"
+  },
+  "Endo_Arterial": {
+   "display_name": "retinal arterial endothelium (arteriole)",
+   "level": "identity_major",
+   "applicability": "retina_only (镜像纪律: 膜/PDR 语境条不得混用; 反向同)",
+   "cl_id": "CL:1000413",
+   "label": "endothelial cell of artery",
+   "definition_ols": "A blood vessel endothelial cell that is part of an arterial endothelium.",
+   "ols_recheck": {
+    "via": "labelsearch+by-iri",
+    "dir": "ledgers/ols_evidence_kb10/",
+    "rule": "USER_DIRECTIVE_20260924: 全部 by-iri 直取回证; 凭记忆号已被拒(6 件 ERRATA 留痕, 见件内 sources.errata_cl_rejected)"
+   },
+   "core": [
+    {
+     "gene": "DLL4",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42645191",
+        "41711027",
+        "42092877"
+       ],
+       "query": "\"DLL4\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (arterial OR arteriole OR artery OR Notch)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "GJA5",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42092877",
+        "42389786",
+        "41711027"
+       ],
+       "query": "\"GJA5\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (arterial OR arteriole OR artery OR Notch)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ],
+     "flag": "context"
+    },
+    {
+     "gene": "GJA8",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41210874",
+        "41596534",
+        "42577652"
+       ],
+       "query": "\"GJA8\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (arterial OR arteriole OR artery OR Notch)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ],
+     "flag": "context"
+    },
+    {
+     "gene": "HEY1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41711027",
+        "42645191",
+        "42092877"
+       ],
+       "query": "\"HEY1\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (arterial OR arteriole OR artery OR Notch)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 3,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "HEY2",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41711027",
+        "42645191",
+        "42460472"
+       ],
+       "query": "\"HEY2\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (arterial OR arteriole OR artery OR Notch)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 5,
+       "n20": 2,
+       "offtarget": null
+      }
+     ],
+     "flag": "ambient_broad"
+    },
+    {
+     "gene": "ICAM2",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42092877",
+        "42389786",
+        "42278622"
+       ],
+       "query": "\"ICAM2\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (arterial OR arteriole OR artery OR Notch)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 0,
+       "offtarget": null
+      }
+     ],
+     "flag": "context"
+    }
+   ],
+   "removed_note": [
+    {
+     "gene": "EFNB4",
+     "note": "G-LIT weak_evidence(0 可核→弃用, HC-LITRE 先例)"
+    },
+    {
+     "gene": "NOTCH1",
+     "note": "G-REV-HARD(cpm>=20 现于4/10 旧类, 真泛表达; A1)"
+    }
+   ]
+  },
+  "Endo_Capillary": {
+   "display_name": "retinal capillary endothelium",
+   "level": "identity_major",
+   "applicability": "retina_only (镜像纪律: 膜/PDR 语境条不得混用; 反向同)",
+   "cl_id": "CL:0002144",
+   "label": "capillary endothelial cell",
+   "definition_ols": "An endothelial cell found in capillaries.",
+   "ols_recheck": {
+    "via": "labelsearch+by-iri",
+    "dir": "ledgers/ols_evidence_kb10/",
+    "rule": "USER_DIRECTIVE_20260924: 全部 by-iri 直取回证; 凭记忆号已被拒(6 件 ERRATA 留痕, 见件内 sources.errata_cl_rejected)"
+   },
+   "core": [
+    {
+     "gene": "AQP1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "40958430",
+        "40141285",
+        "42092877"
+       ],
+       "query": "\"AQP1\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (capillar* OR capillary)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ],
+     "flag": "context"
+    },
+    {
+     "gene": "CA4",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42570271",
+        "42783004",
+        "40271076"
+       ],
+       "query": "\"CA4\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (capillar* OR capillary)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "CLDN5",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42593649",
+        "41827851",
+        "40994007"
+       ],
+       "query": "\"CLDN5\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (capillar* OR capillary)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "IGFBP3",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41949379",
+        "42092877",
+        "42769495"
+       ],
+       "query": "\"IGFBP3\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (capillar* OR capillary)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 2,
+       "n20": 2,
+       "offtarget": null
+      }
+     ]
+    }
+   ],
+   "removed_note": [
+    {
+     "gene": "FLT1",
+     "note": "G-REV-HARD(cpm>=20 现于5/10 旧类, 真泛表达; A1)"
+    }
+   ]
+  },
+  "Endo_Patho": {
+   "display_name": "endothelial pathology state (hypoxia/inflammation axis)",
+   "level": "state_axis",
+   "applicability": "retina_only (镜像纪律: 膜/PDR 语境条不得混用; 反向同)",
+   "parent_term": "Endo",
+   "cl_id": "CL:0000115 (parent only — EYEKBC 纪律: 状态轴/污染旗不挂 identity CL)",
+   "core": [
+    {
+     "gene": "DLL4",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42232198",
+        "42698711",
+        "40684186"
+       ],
+       "query": "\"DLL4\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (diabetic OR hypox* OR inflammat* OR \"vascular permeability\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "EDN1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42601615",
+        "42554407",
+        "42662419"
+       ],
+       "query": "\"EDN1\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (diabetic OR hypox* OR inflammat* OR \"vascular permeability\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "HIF1A",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42713229",
+        "42650865",
+        "42511696"
+       ],
+       "query": "\"HIF1A\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (diabetic OR hypox* OR inflammat* OR \"vascular permeability\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 10,
+       "n20": 10,
+       "offtarget": [
+        "Microglia",
+        2879.3
+       ]
+      }
+     ],
+     "flag": "state_axis_broad_expected"
+    },
+    {
+     "gene": "ICAM1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42792898",
+        "42650865",
+        "42781273"
+       ],
+       "query": "\"ICAM1\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (diabetic OR hypox* OR inflammat* OR \"vascular permeability\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 3,
+       "n20": 3,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "NDUFA4L2",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "40591415",
+        "40635752",
+        "40976555"
+       ],
+       "query": "\"NDUFA4L2\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (diabetic OR hypox* OR inflammat* OR \"vascular permeability\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 9,
+       "n20": 2,
+       "offtarget": null
+      }
+     ],
+     "flag": "context"
+    },
+    {
+     "gene": "PLVAP",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42593649",
+        "41827851",
+        "41857066"
+       ],
+       "query": "\"PLVAP\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (diabetic OR hypox* OR inflammat* OR \"vascular permeability\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "SERPINE1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42792527",
+        "42404762",
+        "42505405"
+       ],
+       "query": "\"SERPINE1\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (diabetic OR hypox* OR inflammat* OR \"vascular permeability\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 3,
+       "n20": 2,
+       "offtarget": [
+        "Astrocyte",
+        492.6
+       ]
+      }
+     ]
+    },
+    {
+     "gene": "VCAM1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42781273",
+        "42650865",
+        "42092877"
+       ],
+       "query": "\"VCAM1\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (diabetic OR hypox* OR inflammat* OR \"vascular permeability\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ],
+     "flag": "context"
+    }
+   ]
+  },
+  "Endo_Venous": {
+   "display_name": "retinal venous endothelium (venule)",
+   "level": "identity_major",
+   "applicability": "retina_only (镜像纪律: 膜/PDR 语境条不得混用; 反向同)",
+   "cl_id": "CL:0002543",
+   "label": "vein endothelial cell",
+   "definition_ols": "An endothelial cell that is part of the vein.",
+   "ols_recheck": {
+    "via": "labelsearch+by-iri",
+    "dir": "ledgers/ols_evidence_kb10/",
+    "rule": "USER_DIRECTIVE_20260924: 全部 by-iri 直取回证; 凭记忆号已被拒(6 件 ERRATA 留痕, 见件内 sources.errata_cl_rejected)"
+   },
+   "core": [
+    {
+     "gene": "ACKR1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42092877",
+        "41776551",
+        "40867565"
+       ],
+       "query": "\"ACKR1\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (venous OR venule OR vein)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 5,
+       "n20": 1,
+       "offtarget": null
+      }
+     ],
+     "flag": "context,ambient_broad"
+    },
+    {
+     "gene": "CYP1B1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42621794",
+        "42186920",
+        "42761588"
+       ],
+       "query": "\"CYP1B1\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (venous OR venule OR vein)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 2,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "HEB",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "39120307",
+        "41596760",
+        "24163065"
+       ],
+       "query": "\"HEB\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (venous OR venule OR vein)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": -1,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "NR2F2",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41814412",
+        "41957666",
+        "42389786"
+       ],
+       "query": "\"NR2F2\" AND (retina OR retinal OR ocular) AND (endothelial OR endothelium) AND (venous OR venule OR vein)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 4,
+       "n20": 0,
+       "offtarget": null
+      }
+     ],
+     "flag": "ambient_broad"
+    }
+   ],
+   "removed_note": [
+    {
+     "gene": "SLIT2",
+     "note": "G-REV-HARD(cpm>=20 现于5/10 旧类, 真泛表达; A1)"
+    }
+   ]
+  },
+  "Mac_DAM_LAM": {
+   "display_name": "macrophage/microglia disease-associated state (DAM/LAM axis)",
+   "level": "state_axis",
+   "applicability": "retina_only (镜像纪律: 膜/PDR 语境条不得混用; 反向同)",
+   "parent_term": "Macrophage",
+   "cl_id": "CL:0000235 (parent only — EYEKBC 纪律: 状态轴/污染旗不挂 identity CL)",
+   "core": [
+    {
+     "gene": "ADAMDEC1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "39325754",
+        "42095275",
+        "42589702"
+       ],
+       "query": "\"ADAMDEC1\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ],
+     "flag": "context"
+    },
+    {
+     "gene": "APOE",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42079755",
+        "42365203",
+        "42630359"
+       ],
+       "query": "\"APOE\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 10,
+       "n20": 9,
+       "offtarget": [
+        "MG",
+        738.8
+       ]
+      }
+     ],
+     "flag": "state_axis_broad_expected"
+    },
+    {
+     "gene": "APOL1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41357227",
+        "42390174",
+        "39994107"
+       ],
+       "query": "\"APOL1\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "ASAH1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41992057",
+        "40047533",
+        "41559755"
+       ],
+       "query": "\"ASAH1\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 10,
+       "n20": 10,
+       "offtarget": [
+        "Microglia",
+        370.9
+       ]
+      }
+     ],
+     "flag": "state_axis_broad_expected"
+    },
+    {
+     "gene": "CCL3",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "42173563",
+        "42749963"
+       ],
+       "query": "\"CCL3\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "CCL4",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "42630359",
+        "41811959"
+       ],
+       "query": "\"CCL4\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "CD9",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41811959",
+        "42707686",
+        "42756394"
+       ],
+       "query": "\"CD9\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 5,
+       "n20": 4,
+       "offtarget": [
+        "Astrocyte",
+        305.2
+       ]
+      }
+     ],
+     "flag": "state_axis_broad_expected"
+    },
+    {
+     "gene": "CLEC7A",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42079755",
+        "42365203",
+        "42785297"
+       ],
+       "query": "\"CLEC7A\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": [
+        "Microglia",
+        502.9
+       ]
+      }
+     ]
+    },
+    {
+     "gene": "CTSD",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42630359",
+        "42785297",
+        "42584788"
+       ],
+       "query": "\"CTSD\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 10,
+       "n20": 9,
+       "offtarget": [
+        "RPE",
+        177.4
+       ]
+      }
+     ],
+     "flag": "state_axis_broad_expected"
+    },
+    {
+     "gene": "FTH1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42626021",
+        "42294393",
+        "42769031"
+       ],
+       "query": "\"FTH1\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 10,
+       "n20": 10,
+       "offtarget": [
+        "Microglia",
+        1418.9
+       ]
+      }
+     ],
+     "flag": "state_axis_broad_expected|context"
+    },
+    {
+     "gene": "FTL",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41811959",
+        "42173563",
+        "42626021"
+       ],
+       "query": "\"FTL\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 10,
+       "n20": 10,
+       "offtarget": [
+        "Microglia",
+        845.9
+       ]
+      }
+     ],
+     "flag": "state_axis_broad_expected"
+    },
+    {
+     "gene": "GPNMB",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42365203",
+        "41803887",
+        "42736278"
+       ],
+       "query": "\"GPNMB\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 2,
+       "n20": 2,
+       "offtarget": [
+        "Microglia",
+        145.9
+       ]
+      }
+     ]
+    },
+    {
+     "gene": "HMOX1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41811959",
+        "42654113",
+        "42534834"
+       ],
+       "query": "\"HMOX1\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "LGMN",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "41065482",
+        "38779685"
+       ],
+       "query": "\"LGMN\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 10,
+       "n20": 5,
+       "offtarget": [
+        "Microglia",
+        131.7
+       ]
+      }
+     ],
+     "flag": "state_axis_broad_expected"
+    },
+    {
+     "gene": "LIPA",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42063162",
+        "42584788",
+        "42780030"
+       ],
+       "query": "\"LIPA\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 10,
+       "n20": 8,
+       "offtarget": [
+        "HC",
+        157.8
+       ]
+      }
+     ],
+     "flag": "state_axis_broad_expected"
+    },
+    {
+     "gene": "MMP9",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "42788989",
+        "42626021"
+       ],
+       "query": "\"MMP9\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "OLR1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42780030",
+        "42123486",
+        "41758068"
+       ],
+       "query": "\"OLR1\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": [
+        "Microglia",
+        973.1
+       ]
+      }
+     ]
+    },
+    {
+     "gene": "PLD3",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42252409",
+        "41373648",
+        "41527682"
+       ],
+       "query": "\"PLD3\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 10,
+       "n20": 10,
+       "offtarget": [
+        "RGC",
+        190.8
+       ]
+      }
+     ],
+     "flag": "state_axis_broad_expected|context"
+    },
+    {
+     "gene": "SPP1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42365203",
+        "42785297",
+        "42630359"
+       ],
+       "query": "\"SPP1\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 10,
+       "n20": 9,
+       "offtarget": [
+        "Microglia",
+        4736.1
+       ]
+      }
+     ],
+     "flag": "state_axis_broad_expected"
+    },
+    {
+     "gene": "TREM2",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42079755",
+        "42630359",
+        "42365203"
+       ],
+       "query": "\"TREM2\" AND (retina OR retinal OR ocular) AND (macrophage OR microglia) AND (TREM2 OR GPNMB OR \"disease-associated\" OR \"lipid-associated\" OR senescent OR AMD OR diabetic)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    }
+   ]
+  },
+  "Macrophage": {
+   "display_name": "retinal tissue/perivascular macrophage",
+   "level": "identity_major",
+   "applicability": "retina_only (镜像纪律: 膜/PDR 语境条不得混用; 反向同)",
+   "cl_id": "CL:0000235",
+   "label": "macrophage",
+   "definition_ols": "A mononuclear phagocyte present in variety of tissues, typically differentiated from monocytes, capable of phagocytosing a variety of extrac",
+   "ols_recheck": {
+    "via": "labelsearch+by-iri",
+    "dir": "ledgers/ols_evidence_kb10/",
+    "rule": "USER_DIRECTIVE_20260924: 全部 by-iri 直取回证; 凭记忆号已被拒(6 件 ERRATA 留痕, 见件内 sources.errata_cl_rejected)"
+   },
+   "core": [
+    {
+     "gene": "C1QA",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "41388751",
+        "42288845"
+       ],
+       "query": "\"C1QA\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "C1QB",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "42288845",
+        "42768900"
+       ],
+       "query": "\"C1QB\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "C1QC",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "41803879",
+        "42662694"
+       ],
+       "query": "\"C1QC\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "CD163",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "42173563",
+        "42252770"
+       ],
+       "query": "\"CD163\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "CD5L",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42009635",
+        "41708780",
+        "40670232"
+       ],
+       "query": "\"CD5L\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "CD68",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41876369",
+        "42785297",
+        "42079755"
+       ],
+       "query": "\"CD68\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "F13A1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "41060148",
+        "39885670"
+       ],
+       "query": "\"F13A1\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 4,
+       "n20": 2,
+       "offtarget": null
+      }
+     ],
+     "flag": "context,ambient_broad"
+    },
+    {
+     "gene": "FOLR2",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42173563",
+        "42786206",
+        "42152120"
+       ],
+       "query": "\"FOLR2\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "LYVE1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42173563",
+        "42786206",
+        "41388751"
+       ],
+       "query": "\"LYVE1\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 3,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "MARCO",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "42773109",
+        "42234084"
+       ],
+       "query": "\"MARCO\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "MNDA",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41318504",
+        "41578492",
+        "39731017"
+       ],
+       "query": "\"MNDA\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 2,
+       "n20": 2,
+       "offtarget": null
+      }
+     ],
+     "flag": "context"
+    },
+    {
+     "gene": "MRC1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41876369",
+        "42173563",
+        "42785297"
+       ],
+       "query": "\"MRC1\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 2,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "SELENOP",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42713210",
+        "42295016",
+        "41129046"
+       ],
+       "query": "\"SELENOP\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 5,
+       "n20": 2,
+       "offtarget": null
+      }
+     ],
+     "flag": "context,ambient_broad"
+    },
+    {
+     "gene": "SLC40A1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41988183",
+        "42199341",
+        "42116186"
+       ],
+       "query": "\"SLC40A1\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 6,
+       "n20": 1,
+       "offtarget": null
+      }
+     ],
+     "flag": "context,ambient_broad"
+    },
+    {
+     "gene": "STAB1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "41060148",
+        "41759521"
+       ],
+       "query": "\"STAB1\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "VSIG4",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "42152120",
+        "42252409"
+       ],
+       "query": "\"VSIG4\" AND (retina OR retinal OR ocular) AND (macrophage OR macrophages OR perivascular OR \"myeloid\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    }
+   ],
+   "removed_note": [
+    {
+     "gene": "ITM2B",
+     "note": "G-LIT weak_evidence(0 可核→弃用, HC-LITRE 先例)"
+    },
+    {
+     "gene": "MAF",
+     "note": "G-REV-HARD(cpm>=20 现于4/10 旧类, 真泛表达; A1)"
+    },
+    {
+     "gene": "MERTK",
+     "note": "G-REV-HARD(cpm>=20 现于5/10 旧类, 真泛表达; A1)"
+    }
+   ],
+   "data_limitation": "D001 无独立巨噬池; 与 Microglia 数据面重叠(C1Q/补体链)为生物学事实; 本条=文献锚, 激活判读须组合 MRC1/CD163/VSIG4 与稳态 Microglia 基因联判"
+  },
+  "Microglia": {
+   "display_name": "retinal microglia (homeostatic core)",
+   "level": "identity_major",
+   "applicability": "retina_only (镜像纪律: 膜/PDR 语境条不得混用; 反向同)",
+   "cl_id": "CL:0000129",
+   "label": "microglial cell",
+   "definition_ols": "A central nervous system macrophage...",
+   "ols_recheck": {
+    "via": "L2_by-iri",
+    "dir": "ledgers/ols_evidence_kb10/",
+    "rule": "USER_DIRECTIVE_20260924: 全部 by-iri 直取回证; 凭记忆号已被拒(6 件 ERRATA 留痕, 见件内 sources.errata_cl_rejected)"
+   },
+   "core": [
+    {
+     "gene": "AIF1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42560008",
+        "42781866",
+        "42577179"
+       ],
+       "query": "\"AIF1\" AND (retina OR retinal OR ocular) AND (microglia OR microglial)"
+      },
+      {
+       "type": "data_driven",
+       "source": "kb5_agg_v1.npz D001 冻结聚合",
+       "verdict": "GREEN",
+       "min_lfc_F": "6.07",
+       "donor_cons": "1.0"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "C1QA",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42630359",
+        "42785297",
+        "42292332"
+       ],
+       "query": "\"C1QA\" AND (retina OR retinal OR ocular) AND (microglia OR microglial)"
+      },
+      {
+       "type": "data_driven",
+       "source": "kb5_agg_v1.npz D001 冻结聚合",
+       "verdict": "GREEN",
+       "min_lfc_F": "7.26",
+       "donor_cons": "1.0"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "C1QB",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "41995141",
+        "42781866"
+       ],
+       "query": "\"C1QB\" AND (retina OR retinal OR ocular) AND (microglia OR microglial)"
+      },
+      {
+       "type": "data_driven",
+       "source": "kb5_agg_v1.npz D001 冻结聚合",
+       "verdict": "GREEN",
+       "min_lfc_F": "7.79",
+       "donor_cons": "1.0"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "C1QC",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "42616788",
+        "42792898"
+       ],
+       "query": "\"C1QC\" AND (retina OR retinal OR ocular) AND (microglia OR microglial)"
+      },
+      {
+       "type": "data_driven",
+       "source": "kb5_agg_v1.npz D001 冻结聚合",
+       "verdict": "GREEN",
+       "min_lfc_F": "8.39",
+       "donor_cons": "1.0"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "CX3CR1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42664340",
+        "42785297",
+        "42202020"
+       ],
+       "query": "\"CX3CR1\" AND (retina OR retinal OR ocular) AND (microglia OR microglial)"
+      },
+      {
+       "type": "data_driven",
+       "source": "kb5_agg_v1.npz D001 冻结聚合",
+       "verdict": "GREEN",
+       "min_lfc_F": "4.65",
+       "donor_cons": "1.0"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "FCER1G",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42651749",
+        "40855885",
+        "42149028"
+       ],
+       "query": "\"FCER1G\" AND (retina OR retinal OR ocular) AND (microglia OR microglial)"
+      },
+      {
+       "type": "data_driven",
+       "source": "kb5_agg_v1.npz D001 冻结聚合",
+       "verdict": "GREEN",
+       "min_lfc_F": "4.45",
+       "donor_cons": "0.9868421052631579"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ],
+     "flag": "context"
+    },
+    {
+     "gene": "GPR34",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "41953651",
+        "39468551"
+       ],
+       "query": "\"GPR34\" AND (retina OR retinal OR ocular) AND (microglia OR microglial)"
+      },
+      {
+       "type": "data_driven",
+       "source": "kb5_agg_v1.npz D001 冻结聚合",
+       "verdict": "GREEN",
+       "min_lfc_F": "3.94",
+       "donor_cons": "1.0"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "IRF8",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42490621",
+        "42720090",
+        "42155770"
+       ],
+       "query": "\"IRF8\" AND (retina OR retinal OR ocular) AND (microglia OR microglial)"
+      },
+      {
+       "type": "data_driven",
+       "source": "kb5_agg_v1.npz D001 冻结聚合",
+       "verdict": "GREEN",
+       "min_lfc_F": "5.95",
+       "donor_cons": "0.987012987012987"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "OLFML3",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42785297",
+        "40999442",
+        "40716081"
+       ],
+       "query": "\"OLFML3\" AND (retina OR retinal OR ocular) AND (microglia OR microglial)"
+      },
+      {
+       "type": "data_driven",
+       "source": "kb5_agg_v1.npz D001 冻结聚合",
+       "verdict": "GREEN",
+       "min_lfc_F": "1.05",
+       "donor_cons": "0.9285714285714286"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "SIGLEC11",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "40012396",
+        "41205777",
+        "39228105"
+       ],
+       "query": "\"SIGLEC11\" AND (retina OR retinal OR ocular) AND (microglia OR microglial)"
+      },
+      {
+       "type": "data_driven",
+       "source": "kb5_agg_v1.npz D001 冻结聚合",
+       "verdict": "GREEN",
+       "min_lfc_F": "5.83",
+       "donor_cons": "1.0"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 0,
+       "offtarget": null
+      }
+     ],
+     "flag": "context"
+    },
+    {
+     "gene": "TMEM119",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42779509",
+        "42785297",
+        "42630359"
+       ],
+       "query": "\"TMEM119\" AND (retina OR retinal OR ocular) AND (microglia OR microglial)"
+      },
+      {
+       "type": "data_driven",
+       "source": "kb5_agg_v1.npz D001 冻结聚合",
+       "verdict": "GREEN",
+       "min_lfc_F": "5.39",
+       "donor_cons": "1.0"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "TYROBP",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42079755",
+        "42785297",
+        "42780030"
+       ],
+       "query": "\"TYROBP\" AND (retina OR retinal OR ocular) AND (microglia OR microglial)"
+      },
+      {
+       "type": "data_driven",
+       "source": "kb5_agg_v1.npz D001 冻结聚合",
+       "verdict": "GREEN",
+       "min_lfc_F": "8.09",
+       "donor_cons": "1.0"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    }
+   ],
+   "reference_layer": [
+    {
+     "gene": "CSF1R",
+     "note": "G-OFFTARGET(非相邻旧类 RPE cpm=120.6>=100→reference_layer; A1)",
+     "pmids": [
+      "41995141",
+      "42004959",
+      "42785297"
+     ]
+    },
+    {
+     "gene": "P2RY1",
+     "note": "G-MICRO RED→state_anchor(P2RY12/SALL1→状态锚处置先例, KB7 disposition 逐字对齐; A1)",
+     "pmids": [
+      "42785297",
+      "38983051",
+      "36769067"
+     ]
+    },
+    {
+     "gene": "P2RY12",
+     "note": "G-MICRO RED→state_anchor(P2RY12/SALL1→状态锚处置先例, KB7 disposition 逐字对齐; A1)",
+     "pmids": [
+      "42769369",
+      "42785297",
+      "41995141"
+     ]
+    },
+    {
+     "gene": "SALL1",
+     "note": "G-MICRO RED→state_anchor(P2RY12/SALL1→状态锚处置先例, KB7 disposition 逐字对齐; A1)",
+     "pmids": [
+      "42781866",
+      "42004959",
+      "42113313"
+     ]
+    }
+   ],
+   "removed_note": [
+    {
+     "gene": "FOXP1",
+     "note": "G-REV-HARD(cpm>=20 现于10/10 旧类, 真泛表达; A1)"
+    },
+    {
+     "gene": "HEXB",
+     "note": "G-REV-HARD(cpm>=20 现于7/10 旧类, 真泛表达; A1)"
+    }
+   ]
+  },
+  "Pericyte": {
+   "display_name": "retinal vascular pericyte",
+   "level": "identity_major",
+   "applicability": "retina_only (镜像纪律: 膜/PDR 语境条不得混用; 反向同)",
+   "cl_id": "CL:0000669",
+   "label": "pericyte cell",
+   "definition_ols": "An elongated, contractile cell found wrapped about precapillary arterioles outside the basement membrane. Pericytes are present in capillari",
+   "ols_recheck": {
+    "via": "labelsearch_near+by-iri",
+    "dir": "ledgers/ols_evidence_kb10/",
+    "rule": "USER_DIRECTIVE_20260924: 全部 by-iri 直取回证; 凭记忆号已被拒(6 件 ERRATA 留痕, 见件内 sources.errata_cl_rejected)"
+   },
+   "core": [
+    {
+     "gene": "ABCC9",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42548141",
+        "42223470",
+        "41795751"
+       ],
+       "query": "\"ABCC9\" AND (retina OR retinal OR ocular) AND (pericyte OR mural)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 4,
+       "n20": 3,
+       "offtarget": null
+      }
+     ],
+     "flag": "ambient_broad"
+    },
+    {
+     "gene": "COL1A2",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42694848",
+        "42792527",
+        "40970668"
+       ],
+       "query": "\"COL1A2\" AND (retina OR retinal OR ocular) AND (pericyte OR mural)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "HIGD1B",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41342143",
+        "39806101",
+        "40796212"
+       ],
+       "query": "\"HIGD1B\" AND (retina OR retinal OR ocular) AND (pericyte OR mural)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "ITGA1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42511696",
+        "42626021",
+        "41432545"
+       ],
+       "query": "\"ITGA1\" AND (retina OR retinal OR ocular) AND (pericyte OR mural)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 3,
+       "n20": 1,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "MGP",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42092877",
+        "42460475",
+        "41618474"
+       ],
+       "query": "\"MGP\" AND (retina OR retinal OR ocular) AND (pericyte OR mural)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 2,
+       "n20": 0,
+       "offtarget": null
+      }
+     ],
+     "flag": "context"
+    },
+    {
+     "gene": "NOTCH3",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42548141",
+        "42662419",
+        "41841652"
+       ],
+       "query": "\"NOTCH3\" AND (retina OR retinal OR ocular) AND (pericyte OR mural)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "PRRX1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41230906",
+        "40076814",
+        "38575991"
+       ],
+       "query": "\"PRRX1\" AND (retina OR retinal OR ocular) AND (pericyte OR mural)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "RGS4",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41094620",
+        "38928298",
+        "38390290"
+       ],
+       "query": "\"RGS4\" AND (retina OR retinal OR ocular) AND (pericyte OR mural)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 1,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "RGS5",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42548141",
+        "42529821",
+        "42511696"
+       ],
+       "query": "\"RGS5\" AND (retina OR retinal OR ocular) AND (pericyte OR mural)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 6,
+       "n20": 0,
+       "offtarget": null
+      }
+     ],
+     "flag": "ambient_broad"
+    },
+    {
+     "gene": "RLN2",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "25687367"
+       ],
+       "query": "\"RLN2\" AND (retina OR retinal OR ocular) AND (pericyte OR mural)"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ],
+     "flag": "context"
+    }
+   ],
+   "reference_layer": [
+    {
+     "gene": "PDGFRB",
+     "note": "G-OFFTARGET(非相邻旧类 RPE cpm=194.6>=100→reference_layer; A1)",
+     "pmids": [
+      "42548141",
+      "41814129",
+      "42532420"
+     ]
+    }
+   ],
+   "removed_note": [
+    {
+     "gene": "CALD1",
+     "note": "G-REV-HARD(cpm>=20 现于7/10 旧类, 真泛表达; A1)"
+    },
+    {
+     "gene": "IGFBP7",
+     "note": "G-REV-HARD(cpm>=20 现于4/10 旧类, 真泛表达; A1)"
+    },
+    {
+     "gene": "THY1",
+     "note": "G-REV-HARD(cpm>=20 现于5/10 旧类, 真泛表达; A1)"
+    }
+   ],
+   "cross_check_note": "与 SMC 互斥说明(照 KB4 keratocyte/corneal-endothelium 先例): RGS5/RGS4/ABCC9/RLN2 端粒侧偏 pericyte, MYH11/CNN1/LMOD1 大血管侧偏 SMC; DES/CALD1/ACTA2 共享链双向可现——单基因判读禁止, 需组合"
+  },
+  "SMC": {
+   "display_name": "retinal vascular smooth muscle cell",
+   "level": "identity_major",
+   "applicability": "retina_only (镜像纪律: 膜/PDR 语境条不得混用; 反向同)",
+   "cl_id": "CL:0000192",
+   "label": "smooth muscle cell",
+   "definition_ols": "A non-striated, elongated, spindle-shaped cell found lining the digestive tract, uterus, and blood vessels. They develop from specialized my",
+   "ols_recheck": {
+    "via": "labelsearch+by-iri",
+    "dir": "ledgers/ols_evidence_kb10/",
+    "rule": "USER_DIRECTIVE_20260924: 全部 by-iri 直取回证; 凭记忆号已被拒(6 件 ERRATA 留痕, 见件内 sources.errata_cl_rejected)"
+   },
+   "core": [
+    {
+     "gene": "ACTA2",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42548141",
+        "42615798",
+        "42724764"
+       ],
+       "query": "\"ACTA2\" AND (retina OR retinal OR ocular) AND (\"smooth muscle\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 3,
+       "n20": 1,
+       "offtarget": null
+      }
+     ],
+     "flag": "context"
+    },
+    {
+     "gene": "CNN1",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42548141",
+        "41853865",
+        "41716026"
+       ],
+       "query": "\"CNN1\" AND (retina OR retinal OR ocular) AND (\"smooth muscle\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ]
+    },
+    {
+     "gene": "DES",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42713229",
+        "41309590",
+        "42018650"
+       ],
+       "query": "\"DES\" AND (retina OR retinal OR ocular) AND (\"smooth muscle\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 0,
+       "n20": 0,
+       "offtarget": null
+      }
+     ],
+     "flag": "context"
+    },
+    {
+     "gene": "MYH11",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41309590",
+        "42684449",
+        "42481886"
+       ],
+       "query": "\"MYH11\" AND (retina OR retinal OR ocular) AND (\"smooth muscle\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 7,
+       "n20": 1,
+       "offtarget": null
+      }
+     ],
+     "flag": "context,ambient_broad"
+    },
+    {
+     "gene": "MYL9",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "41309590",
+        "41980976",
+        "41853865"
+       ],
+       "query": "\"MYL9\" AND (retina OR retinal OR ocular) AND (\"smooth muscle\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 3,
+       "n20": 1,
+       "offtarget": null
+      }
+     ],
+     "flag": "context"
+    },
+    {
+     "gene": "TAGLN",
+     "evidence": [
+      {
+       "type": "lit_pmid",
+       "pmids": [
+        "42640154",
+        "42548141",
+        "42724764"
+       ],
+       "query": "\"TAGLN\" AND (retina OR retinal OR ocular) AND (\"smooth muscle\")"
+      },
+      {
+       "type": "reverse_gate_v11",
+       "n5": 8,
+       "n20": 0,
+       "offtarget": null
+      }
+     ],
+     "flag": "ambient_broad"
+    }
+   ],
+   "reference_layer": [
+    {
+     "gene": "LMOD1",
+     "note": "G-OFFTARGET(非相邻旧类 Cone cpm=315.8>=100→reference_layer; A1)",
+     "pmids": [
+      "41546072",
+      "42297938",
+      "38390290"
+     ]
+    }
+   ],
+   "removed_note": [
+    {
+     "gene": "CALD1",
+     "note": "G-REV-HARD(cpm>=20 现于7/10 旧类, 真泛表达; A1)"
+    }
+   ],
+   "cross_check_note": "SMC 复核(KB10 卡 A 项): membrane SMC 8 条按视网膜语境逐条重判入出; mural 共享链(ACTA2/TAGLN/MYL9/CALD1)与 Pericyte 重叠=生物学共享非词条错误(KB9 R2/R3 屏蔽先例); KB7 bans 沿用: PCP4 跨组织语义永久禁作 SMC; COL1A2/THY1 等膜纤维语境基因未过视网膜语境门者入 removed_note"
+  }
+ },
+ "activation_preconditions": [
+  "1. Lukowski 内皮子集复测过冻结判据(§V-C1, 待输入)",
+  "2. RETINA 旧类零位移复查保持 PASS",
+  "3. PI 激活审批(阈值/激活类亲手勾)+义务 run(同 KB9ACT 案 A)",
+  "4. 激活=白名单追加一行, 回退=一行回切"
+ ],
+ "note": "版本化发布; 台账+报告见 plans/kb10_retina_vascular_20261001/"
+}

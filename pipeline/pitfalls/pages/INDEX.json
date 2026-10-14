@@ -185,7 +185,7 @@
    "low": "Operational hint"
   },
   "region_axis": "v1 §3.1 (C8 approval) orthogonal region annotation: values fovea/macula_peripheral_mix/peripheral/not_recorded; only claims with region_scope annotations where scope containsregion key (this batch=KC-B1-008); not_recorded must not be unilaterally applied as fovea/peripheral",
-  "conflict_schema": "claim.conflicts appended object fields (astra T5): conflict_id/claim_id/panel_version/decision_record_id/scope/initial_decision/final_decision/rule_applied/reviewer/coordinator_recalculation/timestamp——always empty during shadow phase,Conflicts are written via manual adjudication / Phase 3 voting protocol.",
+  "conflict_schema": "claim.conflicts appended object fields (6.1sol T5): conflict_id/claim_id/panel_version/decision_record_id/scope/initial_decision/final_decision/rule_applied/reviewer/coordinator_recalculation/timestamp——always empty during shadow phase,Conflicts are written via manual adjudication / Phase 3 voting protocol.",
   "note": "A/B/C bare letters globally deprecated (T3); historical mappings retained only in legend"
  }
 }

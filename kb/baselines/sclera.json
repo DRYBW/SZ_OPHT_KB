@@ -77,7 +77,7 @@
  "verdict": "⚠️Insufficient data - downgrade possible (D002/HASA have sclera-corneoscleral junction subsets that are separable; GSE236566 supplements posterior sclera; but no dedicated scleral atlas, fibroblast subtype resolution unclear. Recommendation: Joint modeling with cornea as ocular-surface+sclera super-class)",
  "local_file_pointer": null,
  "t2_fields": {
-  "sampling_material": "Pending (skeleton: Must fix actual sampling material standards before building baseline, Astra T2)",
+  "sampling_material": "Pending (skeleton: Must fix actual sampling material standards before building baseline, 6.1sol T2)",
   "disease_stage": "Pending",
   "treatment_background": "Pending",
   "scRNA_vs_snRNA": "Pending",
@@ -87,21 +87,21 @@
   "counting_denominator": "Pending",
   "evidence_source": "See mapping_from_t_6f5cc731 candidate datasets"
  },
- "usage_scope": "Usage scope (Astra T2 adjudication fixed): This baseline = identity reference for cell composition captured by this sampling material under this experimental workflow + background control; **must not be treated as a composition compliance threshold**. Sampling subjects of disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition acceptance); appearance of identities outside the annotation data list → trigger unexpected flag only, do not force change to in-list identities (label acceptance requires contextual consistency check, not whitelist positioning).",
+ "usage_scope": "Usage scope (6.1sol T2 adjudication fixed): This baseline = identity reference for cell composition captured by this sampling material under this experimental workflow + background control; **must not be treated as a composition compliance threshold**. Sampling subjects of disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition acceptance); appearance of identities outside the annotation data list → trigger unexpected flag only, do not force change to in-list identities (label acceptance requires contextual consistency check, not whitelist positioning).",
  "evidence_grades": {
   "A": "Local empirical recalculation (with file paths + scripts)",
   "B": "Direct report from original literature",
   "C": "Empirical intervals derived from donor-level/cross-study distribution of A-grade source data",
-  "qualitative": "Literature provides only qualitative description → store qualitative only, do not fabricate intervals (Astra T2)",
-  "not_estimable": "Interval cannot be estimated — legitimate state, annotation can proceed (Astra T2)"
+  "qualitative": "Literature provides only qualitative description → store qualitative only, do not fabricate intervals (6.1sol T2)",
+  "not_estimable": "Interval cannot be estimated — legitimate state, annotation can proceed (6.1sol T2)"
  },
  "distribution_method": null,
  "donor_level_main": null,
- "composition_status": "Interval cannot be estimated (legal status, Astra T2) — pending donor-level calculation based on mapped candidate datasets; data not local must first pass download approval iron rule",
+ "composition_status": "Interval cannot be estimated (legal status, 6.1sol T2) — pending donor-level calculation based on mapped candidate datasets; data not local must first pass download approval iron rule",
  "major_classes": [],
  "backfill_path": "①Verify localization status of candidate data → ②Official annotation slicing (celltype-annotation-sourcing discipline) → ③This script appends build_<tissue>() for donor-level recalculation → ④Change baseline status to filled_donor_level → ⑤KB2c developmental axis: Only adult (>=18y) donors enter primary tier, non-adult disclosed row-by-row; fetal/developmental materials establish separate entries, prohibited from merging into adult",
  "caveats": [
-  "Skeleton entries must not be used for external statements claiming 'composition baseline exists for this tissue' (Astra T6: Engineering consistency ≠ evidence of correctness)"
+  "Skeleton entries must not be used for external statements claiming 'composition baseline exists for this tissue' (6.1sol T6: Engineering consistency ≠ evidence of correctness)"
  ],
  "axis_version": "kb2c-1.1",
  "development_stage": "unknown",

@@ -1,0 +1,239 @@
+{
+ "gate": "G6",
+ "script": "/home/ubuntu/EYEKB_REPO/tests/gate_change_control.py",
+ "inputs": {
+  "instance": "/home/ubuntu/EYEKB_REPO/docs/CHANGE_CONTROL_G6_INSTANCE.tsv",
+  "template": "/home/ubuntu/EYEKB_REPO/docs/CHANGE_CONTROL_G6_TEMPLATE.tsv",
+  "checklist": "/home/ubuntu/EYEKB_REPO/docs/W3_CHANGE_CONTROL_CHECKLIST.md"
+ },
+ "changes": [
+  {
+   "tag": "instance",
+   "change_id": "CHG-20261012-G5G6-REPOGATES",
+   "entry_point": "/home/ubuntu/EYEKB_REPO/tests/run_gates.sh",
+   "verdict": "PASS"
+  },
+  {
+   "tag": "instance",
+   "change_id": "CHG-20261013-L2BUDGET-WIRE",
+   "entry_point": "/home/ubuntu/EYEKB_REPO/pipeline/run_pipeline.py",
+   "verdict": "PASS"
+  },
+  {
+   "tag": "template",
+   "change_id": "CHG-YYYYMMDD-<slug>",
+   "entry_point": "/home/ubuntu/EYEKB_REPO/tests/run_gates.sh",
+   "verdict": "PASS"
+  }
+ ],
+ "verdict": "PASS",
+ "n_checks": 19,
+ "n_fail": 0,
+ "rules": {
+  "R1": "15 required cells non-empty",
+  "R2": "evidence anchor + concrete readout",
+  "R3": "NA must be rule-numbered and path-backed",
+  "R4": "Q1 declares L0-L6",
+  "R5": "Q3 declares the rollback term",
+  "R6": "Q4 carries a sha anchor",
+  "R7": "Q5 carries switch name + OFF identity",
+  "R8": "default-ON change registered as gate precondition",
+  "R2-CONCRETE": "M3/E1/E2 must cite a command or an expected readout"
+ },
+ "checklist_map": {
+  "R1": [
+   1,
+   2,
+   3,
+   8,
+   9,
+   11,
+   12,
+   13,
+   14
+  ],
+  "R2": [
+   1,
+   10,
+   11,
+   13
+  ],
+  "R3": [
+   2
+  ],
+  "R4": [
+   1
+  ],
+  "R5": [
+   4
+  ],
+  "R6": [
+   5
+  ],
+  "R7": [
+   6
+  ],
+  "R8": [
+   7
+  ],
+  "R2-CONCRETE": [
+   9,
+   11,
+   12
+  ]
+ },
+ "checks": [
+  {
+   "code": "G6-R1",
+   "label": "REQUIRED",
+   "status": "PASS",
+   "detail": "[instance] empty required cells: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R2",
+   "label": "EVIDENCE",
+   "status": "PASS",
+   "detail": "[instance] evidence cells without a resolvable anchor: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R3",
+   "label": "NA",
+   "status": "PASS",
+   "detail": "[instance] rule-numbered NA defects: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R4",
+   "label": "OUTCOME1",
+   "status": "PASS",
+   "detail": "[instance] Q1 layer-id defects: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R5",
+   "label": "MONOTONE",
+   "status": "PASS",
+   "detail": "[instance] Q3 rollback-term defects: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R6",
+   "label": "PREREG",
+   "status": "PASS",
+   "detail": "[instance] Q4 sha-anchor defects: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R7",
+   "label": "ESCAPE",
+   "status": "PASS",
+   "detail": "[instance] Q5 escape-door defects: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R8",
+   "label": "PRECOND",
+   "status": "PASS",
+   "detail": "[instance] gate-precondition defects: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R2-CONCRETE",
+   "label": "",
+   "status": "PASS",
+   "detail": "[instance] concrete-action cells without a command/threshold: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R1",
+   "label": "REQUIRED",
+   "status": "PASS",
+   "detail": "[template] empty required cells: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R2",
+   "label": "EVIDENCE",
+   "status": "PASS",
+   "detail": "[template] evidence cells without a resolvable anchor: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R3",
+   "label": "NA",
+   "status": "PASS",
+   "detail": "[template] rule-numbered NA defects: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R4",
+   "label": "OUTCOME1",
+   "status": "PASS",
+   "detail": "[template] Q1 layer-id defects: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R5",
+   "label": "MONOTONE",
+   "status": "PASS",
+   "detail": "[template] Q3 rollback-term defects: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R6",
+   "label": "PREREG",
+   "status": "PASS",
+   "detail": "[template] Q4 sha-anchor defects: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R7",
+   "label": "ESCAPE",
+   "status": "PASS",
+   "detail": "[template] Q5 escape-door defects: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R8",
+   "label": "PRECOND",
+   "status": "PASS",
+   "detail": "[template] gate-precondition defects: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-R2-CONCRETE",
+   "label": "",
+   "status": "PASS",
+   "detail": "[template] concrete-action cells without a command/threshold: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6-MAP",
+   "label": "",
+   "status": "PASS",
+   "detail": "checklist rows=14; covered=14; problems=0",
+   "n_offenders": 0,
+   "offenders": []
+  }
+ ]
+}

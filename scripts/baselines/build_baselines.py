@@ -58,7 +58,7 @@ OLD_RETINA = EYEKB / "kb/priors/composition/human_retina.json"
 GEN = "build_baselines.py (KB1v2 t_16c3e020; KB2c separate developmental axis t_be336eee)"
 TODAY = "2026-09-23"
 
-USAGE_SCOPE = ("Usage scope (fixed by the Astra T2 adjudication): this baseline = identity reference + "
+USAGE_SCOPE = ("Usage scope (fixed by the 6.1sol T2 adjudication): this baseline = identity reference + "
                "background contrast for the cellular composition captured from that sampling material under "
                "that experimental workflow; **never a composition compliance line**. The sampling target of "
                "disease surgical material ≠ the healthy organ (e.g. a PDR fibrovascular membrane must not be "
@@ -70,8 +70,8 @@ EVIDENCE_GRADES = {
     "A": "local recomputation from measured data (file paths + script included)",
     "B": "directly reported in the primary literature",
     "C": "empirical intervals derived from donor-level / cross-study distributions of grade-A source data",
-    "qualitative": "literature is qualitative only → store qualitative only, never fabricate intervals (Astra T2)",
-    "not_estimable": "interval not estimable —— a legal state; annotation can still proceed (Astra T2)",
+    "qualitative": "literature is qualitative only → store qualitative only, never fabricate intervals (6.1sol T2)",
+    "not_estimable": "interval not estimable —— a legal state; annotation can still proceed (6.1sol T2)",
 }
 
 
@@ -431,12 +431,12 @@ def build_retina(old):
         "flags": old.get("flags"),
         "caveats": (old.get("caveats") or []) + [
             "v1.1 (this entry): fraction scope upgraded from 'all-cell pooled + cross-study spread' to "
-            "'donor-level stratified distribution' (Astra T2); old pooled values are kept in pooled_all_cells for "
+            "'donor-level stratified distribution' (6.1sol T2); old pooled values are kept in pooled_all_cells for "
             "contrast only —— Chen_ancestry is 42.6% of the 3.17M nuclei, so pooled values are dominated by large donors.",
             "The NeuN+ sorted stratum systematically elevates neuronal classes and depresses MG/Astro/RPE; until "
             "control samples' nuclear-sorting status is known, the two strata's intervals must not be mixed.",
             "suspension_type is all nuclei —— snRNA intronic reads are counted (intronic_reads_counted=yes), so class "
-            "fractions are not directly comparable with scRNA cell-suspension data (Astra T2: the scRNA vs snRNA "
+            "fractions are not directly comparable with scRNA cell-suspension data (6.1sol T2: the scRNA vs snRNA "
             "difference alone can change the observed composition).",
         ],
         "sources": old.get("sources", []) + [
@@ -574,7 +574,7 @@ def build_ocular_surface():
         },
         "usage_scope": USAGE_SCOPE,
         "evidence_grades": EVIDENCE_GRADES,
-        "distribution_method": "Donor-level (donor|tissue group unit); tissue groups stratified first, no cross-group merging (Astra T2); KB2c: primary archive contains only adult donor units; pooled used only for contrast",
+        "distribution_method": "Donor-level (donor|tissue group unit); tissue groups stratified first, no cross-group merging (6.1sol T2); KB2c: primary archive contains only adult donor units; pooled used only for contrast",
         "donor_level_main": main_stats,
         "pooled_adult_only_main": pooled_adult_main,
         "pooled_all_cells": pooled,
@@ -599,7 +599,7 @@ def build_ocular_surface():
             "'Majorclass=Immune Cells' only 1.7%: Ocular surface resident immunity scarce + no immune enrichment step —— Immune proportion cannot be compared against inflammatory disease samples.",
             "published_annotation coexists with majorclass: published_annotation='red blood cells' predominance indicates RBCs not removed from "
             "completely removed in majorclass? No — the 9 majorclass categories lack an RBC class; RBC signals are dispersed across all classes, and the count denominator includes RBC-contaminated nuclei,"
-            "Percentages per category represent 'captured event composition', not tissue ground truth (Astra T2 scope statement).",
+            "Percentages per category represent 'captured event composition', not tissue ground truth (6.1sol T2 scope statement).",
             "Sclera/conjunctiva independent entries see corresponding skeleton files; this entry's corneo-scleral junction layer ≠ independent conjunctival baseline.",
         ],
         "sources": [
@@ -638,7 +638,7 @@ def build_ocular_surface():
 ON = "/mnt/D/OcularKB/data/HRA006282_optic_nerve/HRA006282_optic_nerve.h5ad"
 ON_TISSUE_LABEL = {"cranial nerve II": "ON (Optic Nerve)",
                    "optic disc": "ONH (Optic Nerve Head/Papilla)"}
-# ON/ONH acquisition data includes peripapillary retinal tissue — these classes represent 'capture composition' rather than true optic nerve composition (Astra T2)
+# ON/ONH acquisition data includes peripapillary retinal tissue — these classes represent 'capture composition' rather than true optic nerve composition (6.1sol T2)
 ON_RETINA_ASSOC = {"Rod", "Cone", "BC", "HC", "AC", "RGC"}
 ON_RPE_ASSOC = {"RPE", "Pigmented_cell"}
 
@@ -735,7 +735,7 @@ def build_optic_nerve():
         "evidence_grades": EVIDENCE_GRADES,
         "distribution_method": "Donor-level (Source|Site|Donor unit); stratified display by Site(ON vs ONH) × Study Source, "
                                "main aggregates adult donor units (KB2c: non-adult not merged into main archive) — optic nerve ON and ONH"
-                               "Significant biological composition differences; prioritize corresponding layer intervals for controls (Astra T2); pooled data for control only",
+                               "Significant biological composition differences; prioritize corresponding layer intervals for controls (6.1sol T2); pooled data for control only",
         "donor_level_main": main_stats,
         "pooled_adult_only_main": pooled_adult_main,
         "pooled_all_cells": pooled,
@@ -763,7 +763,7 @@ def build_optic_nerve():
             "main donor-level unit equal weighting, large pools no longer dominate, but inter-stratum differences require examining strata rather than only main.",
             "The denominator for this count includes peripapillary retinal sources (~15%); for a 'pure optic nerve' reference interval, use strata containing "
             "ON (cranial nerve II) layer.",
-            "Comparison between snRNA scope (nuclear suspension, intronic reads counted) and scRNA data requires caution (Astra T2).",
+            "Comparison between snRNA scope (nuclear suspension, intronic reads counted) and scRNA data requires caution (6.1sol T2).",
         ],
         "sources": [
             {"sid": "ON_LOCAL", "kind": "dataset", "label": f"Local file {ON}", "path": ON,
@@ -954,7 +954,7 @@ def build_trabecular_meshwork():
             "Fibroblast main table class in this slice = TM fibroblasts/beam cells (TMFibro) — do not directly compare with corneal/scleral fibroblasts.",
             "Small amount of CB_PCE/CB_NPCE (total ~0.5%) = contamination from ciliary body dissection boundary.",
             "25 donors but uneven donor scale within unit; n=25 donor-level interval still moderate support; direction must be re-reviewed after disease control usage.",
-            "snRNA caliber, cannot be directly compared with scRNA entries (Astra T2); uvea component (53,406 nuclei) discussed separately with sclera/uvea entries.",
+            "snRNA caliber, cannot be directly compared with scRNA entries (6.1sol T2); uvea component (53,406 nuclei) discussed separately with sclera/uvea entries.",
         ],
         extra_flags_unexpected=(
             [["Schwann Cell ~12% (innervated tissue)", "Pericyte ~0.4%"],
@@ -968,7 +968,7 @@ def build_ciliary_body():
         "ciliary body", "ciliary_body",
         extra_caveats=[
             "This entry = ciliary body anatomical component section: PCE/NPCE/ciliary muscle are the three main tissue classes; "
-            "Melanocyte/Schwann Cell ratio reflects the captured composition of uveal pigmentation and neural innervation layers — note for disease controls (Astra T2).",
+            "Melanocyte/Schwann Cell ratio reflects the captured composition of uveal pigmentation and neural innervation layers — note for disease controls (6.1sol T2).",
             "Fibroblast in this slice = CB fibroblasts (CBFibro), distinct sub-layers from TM/corneal fibroblasts (distinguishable by author_cell_type).",
             "Donor 59, strong support; but significant scale disparity between study layers (chen_tm_cb dominant vs sanes uvea weight outside this slice), "
             "Stratified details must be reviewed.",
@@ -1122,7 +1122,7 @@ def build_RPE():
             "expected_low_but_present": [
                 "Myeloid (CD74/AIF1/HLA-DR) detected only in donor2; erythroid detected only in ICELL8 donors",
                 "Stem cell candidate cluster (RPE65+/VIM/GNL3/MKI67, author description B): did not emerge in any cluster's top25 — small population unquantified, "
-                "Interval unestimable (valid state, Astra T2)"],
+                "Interval unestimable (valid state, 6.1sol T2)"],
             "unexpected": [
                 "PR-associated class 3.8–28.5%: authors describe RPE subgroup (cone/rod transcript cluster, B), may also represent phagocytosed PR outer segments"
                 "mRNA or disk membrane attachment contamination — dual interpretation retained, no single conclusion drawn",
@@ -1217,7 +1217,7 @@ def build_skeletons(inv):
             "verdict": verdict,
             "local_file_pointer": LOCAL_POINTERS.get(t),
             "t2_fields": {
-                "Sampling material": "Pending (skeleton: Must fix actual sampling material standards before building baseline, Astra T2)",
+                "Sampling material": "Pending (skeleton: Must fix actual sampling material standards before building baseline, 6.1sol T2)",
                 "Disease stage": "Pending", "Treatment background": "Pending",
                 "scRNA_vs_snRNA": "Pending", "Enrichment steps": "Pending", "Dissociation method": "Pending",
                 "Donor count": "Pending", "Count denominator": "Pending",
@@ -1227,14 +1227,14 @@ def build_skeletons(inv):
             "evidence_grades": EVIDENCE_GRADES,
             "distribution_method": None,
             "donor_level_main": None,
-            "composition_status": "Interval unestimable (valid state, Astra T2) — pending donor-level computation based on mapped candidate datasets;"
+            "composition_status": "Interval unestimable (valid state, 6.1sol T2) — pending donor-level computation based on mapped candidate datasets;"
                                   "Data not stored locally must first pass the mandatory download approval rule",
             "major_classes": [],
             "backfill_path": ("① Verify local status of candidate data → ② Official annotation slice (celltype-annotation-sourcing discipline) → "
                               "③ This script appends build_<tissue>() for donor-level recalculation → ④ Change baseline status to filled_donor_level → "
                               "⑤KB2c developmental axis: only adult (>=18y) donors enter main archive, non-adult disclosed line by line; "
                               "Fetal/developmental stage materials listed as separate entries, prohibited from merging into adult."),
-            "caveats": ["Skeleton entries must not be used for external statements claiming 'composition baseline exists for this tissue' (Astra T6: Engineering consistency ≠ evidence of correctness)"],
+            "caveats": ["Skeleton entries must not be used for external statements claiming 'composition baseline exists for this tissue' (6.1sol T6: Engineering consistency ≠ evidence of correctness)"],
         }
         out.append(entry)
     return out
@@ -1283,7 +1283,7 @@ def render_md(e):
         L.append(f"- aging orthogonal axis: {sa['aging_note']}")
         L.append(f"- two-tier identity: {sa['tier_ids']}")
         L.append("")
-    L.append("## Astra T2 metadata fields")
+    L.append("## 6.1sol T2 metadata fields")
     for k, v in e["t2_fields"].items():
         L.append(f"- **{k}**: {v}")
     L.append("")

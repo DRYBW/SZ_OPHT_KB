@@ -3,7 +3,7 @@
 """KB1v2-W5: vk literature index pages <-> interpretation layer four-way links (idempotent append, pages carry version)
 
 Four-way = disease entries <-> composition baselines <-> RAG reason-tag (evidence_meta sidecar) <-> literature index pages.
-Astra T5: literature links alone are insufficient for audit -> each page links to stable concept IDs / entry files / sidecar field paths.
+6.1sol T5: literature links alone are insufficient for audit -> each page links to stable concept IDs / entry files / sidecar field paths.
 """
 import re
 from pathlib import Path
@@ -22,7 +22,7 @@ TOPIC_HINT = {
     "dr-diabetic-retinopathy": "Disease matrix: kb/priors/disease/_DISEASE_TISSUE_MATRIX.md; "
                                "example cell: PDR__fibrovascular_membrane.md",
     "vascular": "Disease matrix PDR cell, patho_endothelial signature (signature_evidence_T4)",
-    "glial-microglia": "Concept table EYEKBC-0001/0011/0012 (source-attribution cap = transcriptional similarity, Astra T4)",
+    "glial-microglia": "Concept table EYEKBC-0001/0011/0012 (source-attribution cap = transcriptional similarity, 6.1sol T4)",
     "amd": "Disease matrix nAMD/GA rows (placeholder)", "glaucoma": "Disease matrix glaucoma rows (placeholder)",
     "inherited-disease": "Disease matrix (no cell; minimum-viable bar enforced)",
     "metabolism": "signature-layer metabolic work goes through evidence_context.methods",

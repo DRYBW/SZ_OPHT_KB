@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""tests/test_s0_gate.py — S0 + claim contract golden regression (WIRE-P1, REV-1=astra ruling).
+"""tests/test_s0_gate.py — S0 + claim contract golden regression (WIRE-P1, REV-1=6.1sol ruling).
 
 Criteria (all local, zero network, zero LLM):
   T1 real human-retina slice (in-repo fixture) -> S0 does not abstain; species=human, top1=human_retina.

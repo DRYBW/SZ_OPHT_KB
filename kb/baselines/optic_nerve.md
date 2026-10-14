@@ -4,14 +4,14 @@
 > **KB3 development record (Card t_5425a7ca)**: development_stage=**adult** —— KB3 prohibition (PI Red Line 2026-09-23): developmental data must not enter the adult baseline statistical pool, and vice versa —— fetal ≠ adult for the same tissue; adult/fetal do not serve as mutual references.
 > This file is automatically rendered from the corresponding .json by `/mnt/D/EyeKB/scripts/baselines/build_baselines.py` — modify content in JSON+script; manual MD edits will be overwritten.
 
-**Usage scope (Astra T2 adjudication finalized): This baseline = identity reference + background control for cell composition captured from this sampling material under this experimental workflow; **must not be used as a composition compliance threshold**. Sampling targets for disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition); if annotation data yields identities outside the list → trigger unexpected flag only, do not force into listed identities (label acceptance requires contextual consistency check, not whitelist positioning).**
+**Usage scope (6.1sol T2 adjudication finalized): This baseline = identity reference + background control for cell composition captured from this sampling material under this experimental workflow; **must not be used as a composition compliance threshold**. Sampling targets for disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition); if annotation data yields identities outside the list → trigger unexpected flag only, do not force into listed identities (label acceptance requires contextual consistency check, not whitelist positioning).**
 
 ## Evidence grade definitions
 - **A**: Local empirical recalculation (with file paths+scripts)
 - **B**: Direct reporting in original literature
 - **C**: Empirical intervals derived from A-grade source data at donor level/cross-study distribution
-- **qualitative**: Literature provides only qualitative description → store qualitative only, do not fabricate intervals (Astra T2)
-- **not_estimable**: Interval cannot be estimated — valid state, annotation may proceed (Astra T2)
+- **qualitative**: Literature provides only qualitative description → store qualitative only, do not fabricate intervals (6.1sol T2)
+- **not_estimable**: Interval cannot be estimated — valid state, annotation may proceed (6.1sol T2)
 
 ## Developmental axis definitions (KB2c adjudication 2026-09-23 — threshold changes require adjudication)
 - Top-level axis: `organism_stage` ∈ ['fetal', 'adult', 'developing', 'unknown']
@@ -22,7 +22,7 @@
 - aging orthogonal axis: >=60 elderly stratification is not on this axis — aging is an orthogonal independent axis, to be established as a separate entry in the future (adjudication Q2)
 - Two-tier identities: {'adult_only': 'baseline_human_optic_nerve__adult_only__kb2c', 'adult_pool': 'baseline_human_optic_nerve__adult_pool__v1.0'}
 
-## Astra T2 metadata fields
+## 6.1sol T2 metadata fields
 - **Sampling Material**: Human optic nerve/optic disc ex vivo tissue (surgical sampling, eye bank donors; regional composition: ONH (optic disc/papilla) 355,363 nuclei, ON (optic nerve) 604,266 nuclei)
 - **Disease Stage**: normal (disease column all normal; donors are systemic death donors, donor_cause_of_death includes tumors/sepsis etc., no ocular disease records for the eyeballs themselves)
 - **Treatment Background**: Not recorded (eye bank donation metadata lacks treatment column) —— marked 'not recorded', no speculation
@@ -310,7 +310,7 @@
 1. MG=Müller glia (1.7%) and Microglia=microglia (5.0%) are two distinct identities, coexisting in the portal vocabulary — do not conflate in downstream references; the same rule applies to retinal abbreviations such as AC(amacrine cells)/BC(bipolar cells).
 2. The donor pools of Chen (Baylor, ~85%) and Sanes (Harvard) differ significantly in size; data are stratified into 4 layers by source × anatomical site. In the main view, each donor-level unit is weighted equally, preventing large pools from dominating, but inter-stratum differences must be assessed via strata rather than solely through the main view.
 3. The denominator for this count includes peripapillary retinal sources (~15%); for a 'pure optic nerve' reference interval, use the ON (cranial nerve II) layer within strata.
-4. Comparisons between snRNA metrics (nuclear suspension, including intronic reads) and scRNA data require caution (Astra T2).
+4. Comparisons between snRNA metrics (nuclear suspension, including intronic reads) and scRNA data require caution (6.1sol T2).
 5. v1.1 (KB2c t_be336eee): Main archive = adult-only (>=18y, adjudication Q2); v1.0 mixed scope (including newborn/3-17 years) is retained in donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0); identity signatures of the two archives are separated and not mixed.
 
 ## Source List

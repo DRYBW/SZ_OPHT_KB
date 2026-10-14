@@ -8,7 +8,7 @@ no new classes invented). Each entry includes `retrieval_status`:
   `search_literature` (e.g., PMID:34741068, 34381080, etc., 6 papers).
 - `PENDING_MAIN_DB`: 4 papers (41060151/42115719/11328728/15914606) are new literature outside the main library—
   physical chunk augmentation must be written on the OcularKB side (writing prohibited in this card's territory) → **handled as blocking items per task brief red lines on separate cards**,
-  this card's sidecar registration = traceable archive reason, ≠ RAG retrieval coverage (astra R6).
+  this card's sidecar registration = traceable archive reason, ≠ RAG retrieval coverage (6.1sol R6).
 - Historical literature for downgraded/deprecated genes (MIME1/PDK4/CRYAB/MME/ANGPTL7/ALCAM supporting bibliographic records) are not included in this
   sidecar formal entries—their evidence status notes are in markers library provenance._aux_evidence /
   concepts.tsv EYEKBC-0018/0019, avoiding packaging unverified associations as ingestion evidence.

@@ -1,7 +1,7 @@
 # docs/PITFALLS_RAG_ISOLATION.md — Structured known-issues entries and the RAG-corpus isolation statement
 
 **Status**: BINDING (filed on the authority of the "Prohibited Actions" text issued with the
-architecture-review ruling; 2026-09-30 REV-1 = the astra formally reviewed and approved
+architecture-review ruling; 2026-09-30 REV-1 = the 6.1sol formally reviewed and approved
 disk version, superseding the first edition of the same morning)
 **Applies to**: `pipeline/pitfalls/pages/*.json` (atomic-claim contract), the upstream
 known-issues manuscript (`/mnt/D/EyeKB/kb/known_issues/`, read-only file outside the repo)

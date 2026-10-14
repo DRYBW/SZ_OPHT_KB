@@ -30,7 +30,7 @@ CONCEPTS = [
     ("EYEKBC-0001", "macrophage_tissue_resident", "Tissue-resident macrophages",
      "resident macrophage; M2-like; homeostatic-like mac",
      "SELENOP+/FOLR2+/MRC1+/CD163+/STAB1+/VSIG4+/CD5L+ (markers_membrane_v1); Hu2022 'microglia-like' nomenclature",
-     "identity_major", "Distinction from microglia in EYEKBC-0018 is limited to transcriptional similarity level (Astra T4: transcriptional similarity ≠ proof of developmental origin)"),
+     "identity_major", "Distinction from microglia in EYEKBC-0018 is limited to transcriptional similarity level (6.1sol T4: transcriptional similarity ≠ proof of developmental origin)"),
     ("EYEKBC-0002", "macrophage_recruited_monocyte", "Recruitment-type classical monocyte/monocyte-derived macrophages",
      "classical monocyte; monocyte-derived macrophage; peripherally derived mac",
      "FCN1+/VCAN+/S100A8/9+/CD14+/SELL+ (membrane v1); GSE165784 B5/B9",
@@ -52,7 +52,7 @@ CONCEPTS = [
     ("EYEKBC-0007", "endothelial_pathological", "Pathological endothelium (state axis)",
      "tip-like EC; activated EC; hypoxic EC",
      "PLVAP+/NDUFA4L2+/HIF1A+/ICAM1+/VCAM1+/ESM1+; DLL4+ tip substate", "state_on_endothelial",
-     "tip/stalk substates = Grade C extrapolation (development/OIR model evidence), no proportion expectation set (Astra T4 state≠type)"),
+     "tip/stalk substates = Grade C extrapolation (development/OIR model evidence), no proportion expectation set (6.1sol T4 state≠type)"),
     ("EYEKBC-0008", "pericyte", "Pericytes", "pericyte; mural cell",
      "RGS5/NOTCH3/PDGFRB+", "identity_major", ""),
     ("EYEKBC-0009", "myofibroblast_transition", "Pericyte-to-myofibroblast transition (continuous axis)",
@@ -81,7 +81,7 @@ CONCEPTS = [
      "BEST1+/RPE65+/TYR+/MLANA+", "contamination_flag", "Penetrating sampling / merged rhegmatogenous detachment operation related"),
 ]
 
-# Signature → Astra T4 evidence conditions (claim type/relation/condition/comparator/localization anchor/negative example constraints)
+# Signature → 6.1sol T4 evidence conditions (claim type/relation/condition/comparator/localization anchor/negative example constraints)
 def sig_evidence():
     base = {
         "tissue_resident_mac": dict(claim_type="identity", relation="Support",
@@ -144,18 +144,18 @@ def build_pdr_entry():
             "Methodological standard": "scRNA-seq cell suspension (non-nuclear); differs from D001 retina nuclear suspension and D002 ocular surface cell suspension standards",
         },
         "usage_scope": ("This entry = context consistency check material (non-whitelist): generates only expected/unexpected/contamination flags, "
-                        "Prohibited from scoring; labels must not be forcibly changed to identities within the list (Astra T2)."),
+                        "Prohibited from scoring; labels must not be forcibly changed to identities within the list (6.1sol T2)."),
         "sampling_mismatch_warning": {
-            "statement": ("**Sampling material mismatch warning (core of Astra T2 adjudication)**: Disease site = retina, but surgical specimen = fibrovascular membrane."
+            "statement": ("**Sampling material mismatch warning (core of 6.1sol T2 adjudication)**: Disease site = retina, but surgical specimen = fibrovascular membrane."
                           "The healthy retinal composition baseline (kb/baselines/retina, D001) is [NOT] applicable as a composition compliance threshold for this membrane specimen — "
                           "Membrane dominated by macrophage/vascular/stromal components; near-zero photoreceptor and other neural retina classes are material properties rather than anomalies."),
             "correct_uses_of_retina_baseline": ["Identity reference (hierarchical judgment of transcriptional similarity between a myeloid cluster and retinal-resident microglia)",
                                                "Background control from adjacent retina specimens (retina_adjacent cell)"],
             "wrong_uses": ["'Threshold compliance' acceptance of cell proportions in membrane specimens", "Judging Rod/Cone absence as a quality defect (check material first!)"],
             "comparable_material_anchor": ("Primary anchor for comparable materials on this card = GSE165784 (PDR membrane, PMID 35061025) + JCI Insight 2023 "
-                                           "Independent PDR membrane cohort (PMID 37917183) — same species/material/stage, Astra T2 priority tier 1."),
+                                           "Independent PDR membrane cohort (PMID 37917183) — same species/material/stage, 6.1sol T2 priority tier 1."),
         },
-        # ---- Astra T4 skeleton: identity hierarchy + state axis (do not synthesize new types)
+        # ---- 6.1sol T4 skeleton: identity hierarchy + state axis (do not synthesize new types)
         "identity_hierarchies": [
             {"concept_id": "EYEKBC-0001", "canonical": "macrophage_tissue_resident",
              "supportable_level": "major→subcluster", "note": "Cap for resident/recruited origin determination = transcriptional similarity"},
@@ -205,7 +205,7 @@ def build_pdr_entry():
         },
         "contamination_flags": OLD["contamination_flags"],
         "minimum_usability_criteria": {
-            "statement": ("Minimum usability standard for entries (Astra T4/P4): ① At least one identity or state evidence directly comparable to this material (species + material + disease"
+            "statement": ("Minimum usability standard for entries (6.1sol T4/P4): ① At least one identity or state evidence directly comparable to this material (species + material + disease"
                           "Conditions specified) ② Each signature includes source + evidence conditions ③ No subtype grid created without specific evidence ④ Name merging based solely on expression program/lineage/"
                           "Context, not by lexical similarity (concept ID mapping table) ⑤ Interval unestimable = valid state, does not block entry validity."),
             "gate_for_new_cell": "New grid construction = direct evidence set for this disease×material exists; batch expansion paused (T6), awaiting PRIOR_DIFF control to prove D0 utility",
@@ -308,7 +308,7 @@ def render_matrix_md():
     L = ["# Disease × Tissue/Material × Developmental Stage Matrix (Thin-Layer Architecture Overview)", "",
          f"> schema: eyekb-disease-matrix/1.1 | Generated: {TODAY} | Card: t_be336eee | Generator: {GEN}",
          "> Ophthalmology general architecture (PI 2026-09-23): Disease entries = thin layers overlaid on tissue baselines (kb/baselines/); "
-         "**Batch expansion deferred** (Astra T6) — first validate reading benefit (PRIOR_DIFF) using one PDR membrane grid cell, then incrementally expand via sample entry points.",
+         "**Batch expansion deferred** (6.1sol T6) — first validate reading benefit (PRIOR_DIFF) using one PDR membrane grid cell, then incrementally expand via sample entry points.",
          "> **KB2c Developmental Axis (Adjudication Q3)**: grid keys=(disease, material, organism_stage) triple key; all current live grids=adult; "
          "Developmental/fetal samples do not enter adult disease grids (PI directive: 'even a single tissue is incorrect').", "",
          "| Disease | Tissue/Material Cell | Developmental Stage | development_axis (KB3) | Status | Description |", "|---|---|---|---|---|---|"]
@@ -324,7 +324,7 @@ def render_matrix_md():
           "development_axis_reservations (dual lock).", ""]
     L += ["", "## Architecture Rules", "",
           "1. Decouple tissue baselines from disease entries: Disease cells do not repeat tissue proportions, only write expected/flags/signatures for Disease×Material (identity+status two levels).",
-          "2. Same disease different materials = different cells (PDR membrane ≠ PDR vitreous ≠ adjacent retina; Astra T2 sampling material anchoring).",
+          "2. Same disease different materials = different cells (PDR membrane ≠ PDR vitreous ≠ adjacent retina; 6.1sol T2 sampling material anchoring).",
           "3. Same material different diseases not merged (PDR membrane and idiopathic ERM membrane reuse concept ID but separate cells; T6).",
           "4. Cell opening threshold = minimum usability standard for entries (see example cells), no specific evidence does not create subtype cells alone (T4/P4).",
           "5. Each cell links to: Tissue baseline file ↔ RAG reason-tag (evidence_meta sidecar) ↔ Literature index page ↔ Concept table (W5 four-way link).",

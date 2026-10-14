@@ -25,13 +25,13 @@
   "counting_denominator": "10,917 cells (26 clusters across 4 donor objects, all annotated)",
   "evidence_source": "Local empirical recalculation (A: proportions; RData→CSV export script export_rpe_meta.R) + GEO record author cluster descriptions (B: rod/cone/TF+SPP1/stem cell candidates) + project marker inference (C)"
  },
- "usage_scope": "Usage scope (Astra T2 adjudication fixed): This baseline = identity reference for cell composition captured by this sampling material under this experimental workflow + background control; **must not be treated as a composition compliance threshold**. Sampling subjects of disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition acceptance); appearance of identities outside the annotation data list → trigger unexpected flag only, do not force change to in-list identities (label acceptance requires contextual consistency check, not whitelist positioning).",
+ "usage_scope": "Usage scope (6.1sol T2 adjudication fixed): This baseline = identity reference for cell composition captured by this sampling material under this experimental workflow + background control; **must not be treated as a composition compliance threshold**. Sampling subjects of disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition acceptance); appearance of identities outside the annotation data list → trigger unexpected flag only, do not force change to in-list identities (label acceptance requires contextual consistency check, not whitelist positioning).",
  "evidence_grades": {
   "A": "Local empirical recalculation (with file paths + scripts)",
   "B": "Direct report from original literature",
   "C": "Empirical intervals derived from donor-level/cross-study distribution of A-grade source data",
-  "qualitative": "Literature provides only qualitative description → store qualitative only, do not fabricate intervals (Astra T2)",
-  "not_estimable": "Interval cannot be estimated — legitimate state, annotation can proceed (Astra T2)"
+  "qualitative": "Literature provides only qualitative description → store qualitative only, do not fabricate intervals (6.1sol T2)",
+  "not_estimable": "Interval cannot be estimated — legitimate state, annotation can proceed (6.1sol T2)"
  },
  "distribution_method": "Donor-level (4 donor units; within each donor, merge marker-similar clusters into canonical classes before calculating proportions; independent clustering per donor object, cross-donor cluster definition aligned via markers — see caveats)",
  "main_heading": "Primary reference: donor-level conditional reference distribution (n=4 donors; canonical classes inferred by markers)",
@@ -366,7 +366,7 @@
  "flags": {
   "expected_low_but_present": [
    "Myeloid (CD74/AIF1/HLA-DR) detected only in donor2; erythroid detected only in ICELL8 donors",
-   "Stem cell candidate population (RPE65+/VIM/GNL3/MKI67, author description B): Not emerging in top25 of any cluster — small subpopulation unquantified, interval cannot be estimated (valid state, Astra T2)"
+   "Stem cell candidate population (RPE65+/VIM/GNL3/MKI67, author description B): Not emerging in top25 of any cluster — small subpopulation unquantified, interval cannot be estimated (valid state, 6.1sol T2)"
   ],
   "unexpected": [
    "PR-associated class 3.8–28.5%: Authors describe an RPE subgroup (cone/rod transcript cluster, B), but it may also represent phagocytosed PR outer segment mRNA or disc membrane attachment contamination — dual interpretation retained, no single conclusion drawn",

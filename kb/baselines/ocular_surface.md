@@ -4,14 +4,14 @@
 > **KB3 development record (Card t_5425a7ca)**: development_stage=**adult** —— KB3 prohibition (PI Red Line 2026-09-23): developmental data must not enter the adult baseline statistical pool, and vice versa —— fetal ≠ adult for the same tissue; adult/fetal do not serve as mutual references.
 > This file is automatically rendered from the corresponding .json by `/mnt/D/EyeKB/scripts/baselines/build_baselines.py` — modify content in JSON+script; manual MD edits will be overwritten.
 
-**Usage scope (Astra T2 adjudication finalized): This baseline = identity reference + background control for cell composition captured from this sampling material under this experimental workflow; **must not be used as a composition compliance threshold**. Sampling targets for disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition); if annotation data yields identities outside the list → trigger unexpected flag only, do not force into listed identities (label acceptance requires contextual consistency check, not whitelist positioning).**
+**Usage scope (6.1sol T2 adjudication finalized): This baseline = identity reference + background control for cell composition captured from this sampling material under this experimental workflow; **must not be used as a composition compliance threshold**. Sampling targets for disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition); if annotation data yields identities outside the list → trigger unexpected flag only, do not force into listed identities (label acceptance requires contextual consistency check, not whitelist positioning).**
 
 ## Evidence grade definitions
 - **A**: Local empirical recalculation (with file paths+scripts)
 - **B**: Direct reporting in original literature
 - **C**: Empirical intervals derived from A-grade source data at donor level/cross-study distribution
-- **qualitative**: Literature provides only qualitative description → store qualitative only, do not fabricate intervals (Astra T2)
-- **not_estimable**: Interval cannot be estimated — valid state, annotation may proceed (Astra T2)
+- **qualitative**: Literature provides only qualitative description → store qualitative only, do not fabricate intervals (6.1sol T2)
+- **not_estimable**: Interval cannot be estimated — valid state, annotation may proceed (6.1sol T2)
 
 ## Developmental axis definitions (KB2c adjudication 2026-09-23 — threshold changes require adjudication)
 - Top-level axis: `organism_stage` ∈ ['fetal', 'adult', 'developing', 'unknown']
@@ -22,7 +22,7 @@
 - aging orthogonal axis: >=60 elderly stratification is not on this axis — aging is an orthogonal independent axis, to be established as a separate entry in the future (adjudication Q2)
 - Two-tier identity: {'adult_only': 'baseline_human_ocular_surface__adult_only__kb2c', 'adult_pool': 'baseline_human_ocular_surface__adult_pool__v1.0'}
 
-## Astra T2 metadata fields
+## 6.1sol T2 metadata fields
 - **Sampling Material**: Human ocular surface ex vivo tissue: cornea / corneo-scleral junction(limbus) / sclera / ocular surface region / corneal endothelium (transplant corneal endothelial edge fragments)
 - **Disease Stage**: normal (disease column all normal; donors are eye bank donated limbus/scleral ring)
 - **Treatment Background**: Not recorded (eye bank donation metadata lacks treatment column)
@@ -49,7 +49,7 @@
 | Smooth Muscle Cells | 0.0 | 0.0–0.0 | 0.0–63.33 | 67 |
 
 
-### Corneal Stroma Keratocyte Reference Cell (Card t_e1febb8e, added 2026-09-24; astra R5 revised version)
+### Corneal Stroma Keratocyte Reference Cell (Card t_e1febb8e, added 2026-09-24; 6.1sol R5 revised version)
 > Root cause: KB2 Q6::15 (ALDH3A1+KERA) systematically mislabeled as Corneal Endothelium. This cell=composition side of evidence coverage/hierarchical mapping fix; no new major_classes rows added (to avoid double counting with Fibroblasts superclass).
 - **D002 Empirical (Grade A, main archive same metric)**: adult 67 donor units; keratocyte label pooled within class 23.42%, unit median 20.68% [IQR 6.19–40.26, range 0–91.19]; denominator=D002 mixed ocular surface capture events (cornea group), not independently verified identity, not pure cornea tissue ground truth, not used as compliance threshold. Whole file (incl non-adult) metric 17.95% archived workspace only.
 - **Literature Range Cell**: Missing items fall into blocked (locatable full-text percentage intervals not pinned down; confocal density metrics must not masquerade as composition percentages) —— see JSON stromal_keratocyte_reference.literature_anchor.
@@ -219,7 +219,7 @@
 ## Notes
 1. Local D002 file = 577,857 cells / 50 donors, a subset extraction from collection level (>1M/102) (metric=local measurement); backfilling full collection requires download approval, listed as 'pending backfill'.
 2. 'Majorclass=Immune Cells' is only 1.7%: sparse ocular surface resident immunity + no immune enrichment step —— immune proportion cannot be compared against inflammatory disease samples.
-3. Coexistence of published_annotation and majorclass: published_annotation='red blood cells' dominating indicates RBCs were not cleanly removed from majorclass? No —— the 9 majorclasses contain no RBC class, RBC signals are dispersed across all classes, counting denominator includes RBC-contaminated nuclei, percentages per class represent 'captured event composition' rather than tissue ground truth (Astra T2 metric declaration).
+3. Coexistence of published_annotation and majorclass: published_annotation='red blood cells' dominating indicates RBCs were not cleanly removed from majorclass? No —— the 9 majorclasses contain no RBC class, RBC signals are dispersed across all classes, counting denominator includes RBC-contaminated nuclei, percentages per class represent 'captured event composition' rather than tissue ground truth (6.1sol T2 metric declaration).
 4. Independent entries for sclera/conjunctiva refer to corresponding skeleton files; this corneo-scleral junction layer ≠ independent conjunctival baseline.
 5. v1.1 (KB2c t_be336eee): Main archive = adult-only (>=18y); v1.0 mixed metrics (including newborn 0-28d 25,018 cells + postnatal/children/adolescents) retained in donor_level_adult_pool_contrast (tier=...__adult_pool__v1.0). FALLBACK_BLOCKED guard implemented (triggers fallback prohibition when 0 adult donors in tissue group) —— current measurement triggered 0 layers, each tissue group's adult-only has real support.
 

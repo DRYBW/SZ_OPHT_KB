@@ -1,0 +1,1583 @@
+{
+ "version": "v9.1-dev-panel-20261002",
+ "created": "2026-10-02",
+ "card": "t_70f6340a (RW2)",
+ "prereg_sha": "268dd459aed510917f0e899679c68f10cd72cce352f63942544b80554a8a631f",
+ "prereg_version": "RW2_v1",
+ "construction_revision": "RW2 纯增广=增设 NRPC_early/NRPC_late（C(E)=NRPC truth 簇×带窗口；D/L/★+F1-F3+cap25 逐字继承 v2_1 §5.3）；RPC_*/其余 10 条逐字节不变（构建时逐条目断言）；判据 §6 逐字继承 v1",
+ "status": "BUILT_UNREGISTERED",
+ "scope": "human fetal/developing retina precursor panel（三源合流：数据轨×文献轨×骨架轨）",
+ "applicability": "dev_exam v1 三带混池打分面（v9.1 14 条）；成人面不伤害门=KB12B 口径红案制；激活=BUILT_UNREGISTERED 后 PI 亲手勾",
+ "species": "human",
+ "organism_stage": "fetal/developing",
+ "development_stage": "9-24w post-fertilization (early 9-13w / mid 14-17w / late 20-24w)",
+ "dev_axis_reference": "KB2C 冻结裁定：fetal/developing 与 adult 永不并条目；双列 organism_stage+stage_scope 贯穿",
+ "consumption_note": "混池使用时成体面在前平分取先（保守偏成体，KB12B rank 机制）；本文件禁自动入任何 *_DEFAULT_LIBS",
+ "positioning_limitation_statement": "判别性门=固定卷首候选归属（一致型证据门），不证外部正确；D1 containment 门全线禁用（KB12 教训）；CL 仅光感受器链完整(18.2%)，断链条目=NO_MATCH 三态字段",
+ "sources": {
+  "data_track": "dev_exam v1 frozen（GSE268630 盘上件，零下载）",
+  "literature_track": "v2.5-dev∪v2.6-dev chunks.parquet 直读；data_side_only(39117640) 锚计数排除",
+  "skeleton_track": "PRECURSOR_EDGES.tsv 79 边（DEV-ONT）+ BOOK_KB_ITEMS 81 条（DEV-BOOK）"
+ },
+ "bans": [
+  "禁与成人条目并条",
+  "禁教材条目作表达量证据",
+  "禁 v8 数值参照（词面参照允许）",
+  "禁换卷/改簇"
+ ],
+ "mature_filter_stats": {
+  "M_genes": 301,
+  "M_clusters": 17,
+  "filtered_rows_total": 96,
+  "filtered_per_entry": {
+   "RPC_early": [
+    "MCC",
+    "NFIA",
+    "RELN",
+    "SFRP2",
+    "TFAP2B",
+    "THRB",
+    "TRPM3",
+    "ZEB2"
+   ],
+   "RPC_late": [
+    "CLU",
+    "DKK3",
+    "FLT1",
+    "KDR",
+    "NFIA",
+    "NFIB",
+    "RLBP1",
+    "SFRP2",
+    "SLC1A3",
+    "TF",
+    "TFAP2B",
+    "TRPM3",
+    "WIF1",
+    "ZEB2"
+   ],
+   "NRPC_early": [
+    "FSTL5",
+    "MCC",
+    "TFAP2B",
+    "THRB",
+    "ZEB2"
+   ],
+   "NRPC_late": [
+    "CLU",
+    "DKK3",
+    "FLT1",
+    "KDR",
+    "NFIB",
+    "RLBP1",
+    "SFRP2",
+    "SLC1A3",
+    "TF",
+    "TFAP2B",
+    "TRPM3",
+    "WIF1",
+    "ZEB2"
+   ],
+   "Cone_precursor": [
+    "AGAP1",
+    "CADPS",
+    "DPP10",
+    "FMN1",
+    "FSTL5",
+    "MCC",
+    "NCKAP5",
+    "PDE1C",
+    "SEMA6D",
+    "SLC35F3",
+    "THRB"
+   ],
+   "AC_precursor": [
+    "ARHGAP44",
+    "DAB1",
+    "DPP6",
+    "EBF1",
+    "GRIK2",
+    "MYT1L",
+    "NRXN3",
+    "PDE4D",
+    "PHACTR1",
+    "RUNX1T1",
+    "TMTC2",
+    "ZNF804A"
+   ],
+   "HC_precursor": [
+    "ADARB2",
+    "AFF3",
+    "CNTN4",
+    "CSMD1",
+    "MAGI2",
+    "MEGF10",
+    "NDST3",
+    "NKAIN2",
+    "NRXN3",
+    "PTPRD",
+    "RASGEF1B",
+    "RUNX1T1",
+    "TFAP2B",
+    "THSD7A",
+    "ZEB2"
+   ],
+   "RGC_precursor": [
+    "ANK2",
+    "CA10",
+    "CCSER1",
+    "DSCAM",
+    "EBF1",
+    "EBF3",
+    "EPHA6",
+    "FSTL4",
+    "LAMA4",
+    "NEFM",
+    "NRG1",
+    "POU6F2",
+    "RBFOX3",
+    "RBPMS",
+    "SLC17A6",
+    "SLIT2",
+    "SOX6",
+    "TFAP2B"
+   ]
+  }
+ },
+ "retinoblast_decision_point": "CL:4023129 未拍板——默认取严=自造 NO_MATCH 条（新条同样不以其为父挂）；决策点 A=挂靠/B=维持自造 呈 PI；未拍板前 B 生效",
+ "retinoblast_adoption_by_entry": {
+  "RPC_early": "N/A",
+  "RPC_late": "N/A",
+  "NRPC_early": "REJECTED_DEFAULT_STRICT(pending PI)——默认取严=自造 NO_MATCH 条，不以 CL:4023129 为父挂（09-24 directive §3 精神；决策点见 APPROVAL_KIT）",
+  "NRPC_late": "REJECTED_DEFAULT_STRICT(pending PI)——默认取严=自造 NO_MATCH 条，不以 CL:4023129 为父挂（09-24 directive §3 精神；决策点见 APPROVAL_KIT）",
+  "TAC_proliferating": "N/A",
+  "Rod_precursor": "REJECTED_DEFAULT_STRICT(pending PI)——默认取严=自造 NO_MATCH 条，不以 CL:4023129 为父挂（09-24 directive §3 精神；决策点见 APPROVAL_KIT）",
+  "Cone_precursor": "REJECTED_DEFAULT_STRICT(pending PI)——默认取严=自造 NO_MATCH 条，不以 CL:4023129 为父挂（09-24 directive §3 精神；决策点见 APPROVAL_KIT）",
+  "BC_precursor": "REJECTED_DEFAULT_STRICT(pending PI)——默认取严=自造 NO_MATCH 条，不以 CL:4023129 为父挂（09-24 directive §3 精神；决策点见 APPROVAL_KIT）",
+  "AC_precursor": "REJECTED_DEFAULT_STRICT(pending PI)——默认取严=自造 NO_MATCH 条，不以 CL:4023129 为父挂（09-24 directive §3 精神；决策点见 APPROVAL_KIT）",
+  "HC_precursor": "REJECTED_DEFAULT_STRICT(pending PI)——默认取严=自造 NO_MATCH 条，不以 CL:4023129 为父挂（09-24 directive §3 精神；决策点见 APPROVAL_KIT）",
+  "RGC_precursor": "REJECTED_DEFAULT_STRICT(pending PI)——默认取严=自造 NO_MATCH 条，不以 CL:4023129 为父挂（09-24 directive §3 精神；决策点见 APPROVAL_KIT）",
+  "glia_precursor": "REJECTED_DEFAULT_STRICT(pending PI)——默认取严=自造 NO_MATCH 条，不以 CL:4023129 为父挂（09-24 directive §3 精神；决策点见 APPROVAL_KIT）",
+  "RPE_fetal": "REJECTED_DEFAULT_STRICT(pending PI)——默认取严=自造 NO_MATCH 条，不以 CL:4023129 为父挂（09-24 directive §3 精神；决策点见 APPROVAL_KIT）",
+  "Retinal_Proliferating": "REJECTED_DEFAULT_STRICT(pending PI)——默认取严=自造 NO_MATCH 条，不以 CL:4023129 为父挂（09-24 directive §3 精神；决策点见 APPROVAL_KIT）"
+ },
+ "terms_build_stats": {
+  "entries": 14,
+  "core_rows": 405,
+  "named_genes": 160,
+  "new_entries": [
+   "NRPC_early",
+   "NRPC_late"
+  ]
+ },
+ "markers": {
+  "RPC_early": [
+   "FOXP2",
+   "CRB1",
+   "RORB",
+   "PTPRZ1",
+   "COL4A2",
+   "TCF4",
+   "HES6",
+   "EZH2",
+   "FOXP1",
+   "CHD7",
+   "FOXN4",
+   "LGR4",
+   "ERBB4",
+   "MYB",
+   "OTX2",
+   "ATOH7",
+   "EGFR",
+   "PROX1",
+   "DCT",
+   "HES1",
+   "NEUROD1",
+   "NOTCH1",
+   "NHS",
+   "ONECUT1",
+   "ZEB1"
+  ],
+  "RPC_late": [
+   "GLI3",
+   "FOXP2",
+   "LGR4",
+   "CRB1",
+   "EZH2",
+   "RORB",
+   "TCF4",
+   "FOXN4",
+   "MYB",
+   "VIM",
+   "SPP1",
+   "ZEB1",
+   "HES6",
+   "TCF7L2",
+   "CHD7",
+   "DACH1",
+   "AHI1",
+   "HMGB2",
+   "SOX2",
+   "OTX2",
+   "PROX1",
+   "SMAD2",
+   "DCT",
+   "CDH2",
+   "NEUROD1"
+  ],
+  "NRPC_early": [
+   "TCF4",
+   "HES6",
+   "RORB",
+   "CHD7",
+   "CKB",
+   "MIB1",
+   "WDR72",
+   "MAGI1",
+   "MYBL1",
+   "RHBDL3",
+   "ZC3H12C",
+   "OTX2",
+   "ATOH7",
+   "PROX1",
+   "DCT",
+   "NEUROD1",
+   "NOTCH1",
+   "NHS",
+   "ONECUT1",
+   "ZEB1",
+   "HMGB1",
+   "ONECUT2",
+   "PRDM1",
+   "EZH2",
+   "CENPF"
+  ],
+  "NRPC_late": [
+   "VIM",
+   "ZEB1",
+   "HES6",
+   "RORB",
+   "OTX2",
+   "PROX1",
+   "SMAD2",
+   "CRB1",
+   "DCT",
+   "NEUROD1",
+   "NHS",
+   "ONECUT1",
+   "PTN",
+   "TCF4",
+   "ANGPT1",
+   "ONECUT2",
+   "PAX2",
+   "PRDM1",
+   "EZH2",
+   "HIF1A",
+   "FABP7",
+   "GLI3",
+   "LOXL1",
+   "EYS",
+   "PAX5"
+  ],
+  "TAC_proliferating": [
+   "SOX2",
+   "PCNA"
+  ],
+  "Rod_precursor": [
+   "RCVRN",
+   "AIPL1",
+   "NRL",
+   "NR2E3",
+   "RP1",
+   "EYS",
+   "NTM",
+   "ADGRV1",
+   "MYO9A",
+   "PDC",
+   "ANO2",
+   "KIAA1217",
+   "EPB41L2",
+   "PTPN13",
+   "TMEM108",
+   "ANKRD33B",
+   "EPS8",
+   "KANK1",
+   "MARCHF1",
+   "TMEM244",
+   "OTX2",
+   "USH2A",
+   "BBS9",
+   "GPC6",
+   "BAZ2B"
+  ],
+  "Cone_precursor": [
+   "OTX2",
+   "DCT",
+   "PRDM1",
+   "EYS",
+   "ROBO2",
+   "ADGRV1",
+   "CERKL",
+   "GPC6",
+   "MAML2",
+   "EGFLAM",
+   "TMEM108",
+   "MARCHF1",
+   "NEUROD1",
+   "ATG5",
+   "DYNC2H1",
+   "CADM2",
+   "CNTN1",
+   "LARGE1",
+   "ATP2B1",
+   "WWC1",
+   "GALNT13",
+   "NLK",
+   "PRKN",
+   "RASGRF2",
+   "SRRM4"
+  ],
+  "BC_precursor": [],
+  "AC_precursor": [
+   "TCF4",
+   "HIF1A",
+   "NRP1",
+   "ST18",
+   "PLXNA2",
+   "KLF12",
+   "THSD7B",
+   "ZNF423",
+   "ANKS1B",
+   "HIF1A-AS3",
+   "LINC01619",
+   "NOL4",
+   "NWD2",
+   "SETBP1",
+   "SLCO5A1",
+   "SPATS2L",
+   "ST6GALNAC3",
+   "TANC1"
+  ],
+  "HC_precursor": [
+   "PROX1",
+   "ONECUT1",
+   "ONECUT2",
+   "NTRK2",
+   "ONECUT3",
+   "SYN3",
+   "TPM3",
+   "LINC03051",
+   "MAGI1",
+   "PCSK6",
+   "TANC1",
+   "SOX4",
+   "GRIA4",
+   "ROBO1",
+   "AUTS2",
+   "LSAMP",
+   "MEGF11",
+   "PLXNA2",
+   "TNR",
+   "DOCK4",
+   "GRIA3",
+   "HECW1",
+   "ANKS1B",
+   "CACNG3",
+   "MIR124-2HG"
+  ],
+  "RGC_precursor": [
+   "GAP43",
+   "ELAVL4",
+   "ISL1",
+   "TUBB3",
+   "DCC",
+   "STMN2",
+   "PRPH",
+   "CNTN2",
+   "PROX1",
+   "ONECUT1",
+   "ONECUT2",
+   "NRP1",
+   "CRABP1",
+   "ALCAM",
+   "PCDH15",
+   "NTRK2",
+   "EPHB1"
+  ],
+  "glia_precursor": [],
+  "RPE_fetal": [],
+  "Retinal_Proliferating": [
+   "PCNA",
+   "MKI67",
+   "TOP2A",
+   "UBE2C",
+   "CCNB1",
+   "CCNA2",
+   "BUB1",
+   "NUSAP1",
+   "TYMS",
+   "TTK"
+  ]
+ },
+ "core_evidence": {
+  "RPC_early": {
+   "FOXP2": {
+    "track": "D+L★",
+    "freq_in_C": 5,
+    "papers_devctx": 6
+   },
+   "CRB1": {
+    "track": "L",
+    "freq_in_C": 3,
+    "papers_devctx": 32
+   },
+   "RORB": {
+    "track": "L",
+    "freq_in_C": 3,
+    "papers_devctx": 11
+   },
+   "PTPRZ1": {
+    "track": "L",
+    "freq_in_C": 3,
+    "papers_devctx": 9
+   },
+   "COL4A2": {
+    "track": "L",
+    "freq_in_C": 3,
+    "papers_devctx": 7
+   },
+   "TCF4": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 21
+   },
+   "HES6": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 18
+   },
+   "EZH2": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 17
+   },
+   "FOXP1": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 14
+   },
+   "CHD7": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 6
+   },
+   "FOXN4": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 6
+   },
+   "LGR4": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 6
+   },
+   "ERBB4": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 5
+   },
+   "MYB": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 5
+   },
+   "OTX2": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 137
+   },
+   "ATOH7": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 60
+   },
+   "EGFR": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 57
+   },
+   "PROX1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 45
+   },
+   "DCT": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 31
+   },
+   "HES1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 31
+   },
+   "NEUROD1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 27
+   },
+   "NOTCH1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 26
+   },
+   "NHS": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 23
+   },
+   "ONECUT1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 23
+   },
+   "ZEB1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 23
+   }
+  },
+  "RPC_late": {
+   "GLI3": {
+    "track": "L",
+    "freq_in_C": 5,
+    "papers_devctx": 13
+   },
+   "FOXP2": {
+    "track": "L",
+    "freq_in_C": 5,
+    "papers_devctx": 6
+   },
+   "LGR4": {
+    "track": "L",
+    "freq_in_C": 5,
+    "papers_devctx": 6
+   },
+   "CRB1": {
+    "track": "L",
+    "freq_in_C": 4,
+    "papers_devctx": 32
+   },
+   "EZH2": {
+    "track": "L",
+    "freq_in_C": 4,
+    "papers_devctx": 17
+   },
+   "RORB": {
+    "track": "L",
+    "freq_in_C": 4,
+    "papers_devctx": 11
+   },
+   "TCF4": {
+    "track": "L",
+    "freq_in_C": 3,
+    "papers_devctx": 21
+   },
+   "FOXN4": {
+    "track": "L",
+    "freq_in_C": 3,
+    "papers_devctx": 6
+   },
+   "MYB": {
+    "track": "L",
+    "freq_in_C": 3,
+    "papers_devctx": 5
+   },
+   "VIM": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 54
+   },
+   "SPP1": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 35
+   },
+   "ZEB1": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 23
+   },
+   "HES6": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 18
+   },
+   "TCF7L2": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 7
+   },
+   "CHD7": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 6
+   },
+   "DACH1": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 6
+   },
+   "AHI1": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 5
+   },
+   "HMGB2": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 5
+   },
+   "SOX2": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 151
+   },
+   "OTX2": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 137
+   },
+   "PROX1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 45
+   },
+   "SMAD2": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 36
+   },
+   "DCT": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 31
+   },
+   "CDH2": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 27
+   },
+   "NEUROD1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 27
+   }
+  },
+  "NRPC_early": {
+   "TCF4": {
+    "track": "D+L★",
+    "freq_in_C": 2,
+    "papers_devctx": 21
+   },
+   "HES6": {
+    "track": "D+L★",
+    "freq_in_C": 2,
+    "papers_devctx": 18
+   },
+   "RORB": {
+    "track": "D+L★",
+    "freq_in_C": 2,
+    "papers_devctx": 11
+   },
+   "CHD7": {
+    "track": "D+L★",
+    "freq_in_C": 2,
+    "papers_devctx": 6
+   },
+   "CKB": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 2
+   },
+   "MIB1": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 2
+   },
+   "WDR72": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 2
+   },
+   "MAGI1": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 0
+   },
+   "MYBL1": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 0
+   },
+   "RHBDL3": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 0
+   },
+   "ZC3H12C": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 0
+   },
+   "OTX2": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 137
+   },
+   "ATOH7": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 60
+   },
+   "PROX1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 45
+   },
+   "DCT": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 31
+   },
+   "NEUROD1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 27
+   },
+   "NOTCH1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 26
+   },
+   "NHS": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 23
+   },
+   "ONECUT1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 23
+   },
+   "ZEB1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 23
+   },
+   "HMGB1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 21
+   },
+   "ONECUT2": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 20
+   },
+   "PRDM1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 18
+   },
+   "EZH2": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 17
+   },
+   "CENPF": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 10
+   }
+  },
+  "NRPC_late": {
+   "VIM": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 54
+   },
+   "ZEB1": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 23
+   },
+   "HES6": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 18
+   },
+   "RORB": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 11
+   },
+   "OTX2": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 137
+   },
+   "PROX1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 45
+   },
+   "SMAD2": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 36
+   },
+   "CRB1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 32
+   },
+   "DCT": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 31
+   },
+   "NEUROD1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 27
+   },
+   "NHS": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 23
+   },
+   "ONECUT1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 23
+   },
+   "PTN": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 21
+   },
+   "TCF4": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 21
+   },
+   "ANGPT1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 20
+   },
+   "ONECUT2": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 20
+   },
+   "PAX2": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 18
+   },
+   "PRDM1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 18
+   },
+   "EZH2": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 17
+   },
+   "HIF1A": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 15
+   },
+   "FABP7": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 13
+   },
+   "GLI3": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 13
+   },
+   "LOXL1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 10
+   },
+   "EYS": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 8
+   },
+   "PAX5": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 8
+   }
+  },
+  "TAC_proliferating": {
+   "SOX2": {
+    "track": "v8_inherited",
+    "freq_in_C": 0,
+    "papers_devctx": 151
+   },
+   "PCNA": {
+    "track": "v8_inherited",
+    "freq_in_C": 0,
+    "papers_devctx": 62
+   }
+  },
+  "Rod_precursor": {
+   "RCVRN": {
+    "track": "D+L★",
+    "freq_in_C": 4,
+    "papers_devctx": 56
+   },
+   "AIPL1": {
+    "track": "D+L★",
+    "freq_in_C": 4,
+    "papers_devctx": 21
+   },
+   "NRL": {
+    "track": "D+L★",
+    "freq_in_C": 3,
+    "papers_devctx": 100
+   },
+   "NR2E3": {
+    "track": "D+L★",
+    "freq_in_C": 3,
+    "papers_devctx": 54
+   },
+   "RP1": {
+    "track": "D+L★",
+    "freq_in_C": 3,
+    "papers_devctx": 10
+   },
+   "EYS": {
+    "track": "D+L★",
+    "freq_in_C": 3,
+    "papers_devctx": 8
+   },
+   "NTM": {
+    "track": "D+L★",
+    "freq_in_C": 3,
+    "papers_devctx": 8
+   },
+   "ADGRV1": {
+    "track": "D",
+    "freq_in_C": 3,
+    "papers_devctx": 3
+   },
+   "MYO9A": {
+    "track": "D",
+    "freq_in_C": 3,
+    "papers_devctx": 3
+   },
+   "PDC": {
+    "track": "D",
+    "freq_in_C": 3,
+    "papers_devctx": 3
+   },
+   "ANO2": {
+    "track": "D",
+    "freq_in_C": 3,
+    "papers_devctx": 2
+   },
+   "KIAA1217": {
+    "track": "D",
+    "freq_in_C": 3,
+    "papers_devctx": 2
+   },
+   "EPB41L2": {
+    "track": "D",
+    "freq_in_C": 3,
+    "papers_devctx": 1
+   },
+   "PTPN13": {
+    "track": "D",
+    "freq_in_C": 3,
+    "papers_devctx": 1
+   },
+   "TMEM108": {
+    "track": "D",
+    "freq_in_C": 3,
+    "papers_devctx": 1
+   },
+   "ANKRD33B": {
+    "track": "D",
+    "freq_in_C": 3,
+    "papers_devctx": 0
+   },
+   "EPS8": {
+    "track": "D",
+    "freq_in_C": 3,
+    "papers_devctx": 0
+   },
+   "KANK1": {
+    "track": "D",
+    "freq_in_C": 3,
+    "papers_devctx": 0
+   },
+   "MARCHF1": {
+    "track": "D",
+    "freq_in_C": 3,
+    "papers_devctx": 0
+   },
+   "TMEM244": {
+    "track": "D",
+    "freq_in_C": 3,
+    "papers_devctx": 0
+   },
+   "OTX2": {
+    "track": "D+L★",
+    "freq_in_C": 2,
+    "papers_devctx": 137
+   },
+   "USH2A": {
+    "track": "D+L★",
+    "freq_in_C": 2,
+    "papers_devctx": 27
+   },
+   "BBS9": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 4
+   },
+   "GPC6": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 2
+   },
+   "BAZ2B": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 1
+   }
+  },
+  "Cone_precursor": {
+   "OTX2": {
+    "track": "D+L★",
+    "freq_in_C": 2,
+    "papers_devctx": 137
+   },
+   "DCT": {
+    "track": "D+L★",
+    "freq_in_C": 2,
+    "papers_devctx": 31
+   },
+   "PRDM1": {
+    "track": "D+L★",
+    "freq_in_C": 2,
+    "papers_devctx": 18
+   },
+   "EYS": {
+    "track": "D+L★",
+    "freq_in_C": 2,
+    "papers_devctx": 8
+   },
+   "ROBO2": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 4
+   },
+   "ADGRV1": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 3
+   },
+   "CERKL": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 3
+   },
+   "GPC6": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 2
+   },
+   "MAML2": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 2
+   },
+   "EGFLAM": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 1
+   },
+   "TMEM108": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 1
+   },
+   "MARCHF1": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 0
+   },
+   "NEUROD1": {
+    "track": "D+L★",
+    "freq_in_C": 1,
+    "papers_devctx": 27
+   },
+   "ATG5": {
+    "track": "D+L★",
+    "freq_in_C": 1,
+    "papers_devctx": 14
+   },
+   "DYNC2H1": {
+    "track": "D+L★",
+    "freq_in_C": 1,
+    "papers_devctx": 6
+   },
+   "CADM2": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 3
+   },
+   "CNTN1": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 3
+   },
+   "LARGE1": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 3
+   },
+   "ATP2B1": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 2
+   },
+   "WWC1": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 2
+   },
+   "GALNT13": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 1
+   },
+   "NLK": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 1
+   },
+   "PRKN": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 1
+   },
+   "RASGRF2": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 1
+   },
+   "SRRM4": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 1
+   }
+  },
+  "BC_precursor": {},
+  "AC_precursor": {
+   "TCF4": {
+    "track": "D+L★",
+    "freq_in_C": 1,
+    "papers_devctx": 21
+   },
+   "HIF1A": {
+    "track": "D+L★",
+    "freq_in_C": 1,
+    "papers_devctx": 15
+   },
+   "NRP1": {
+    "track": "D+L★",
+    "freq_in_C": 1,
+    "papers_devctx": 15
+   },
+   "ST18": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 4
+   },
+   "PLXNA2": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 2
+   },
+   "KLF12": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 1
+   },
+   "THSD7B": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 1
+   },
+   "ZNF423": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 1
+   },
+   "ANKS1B": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 0
+   },
+   "HIF1A-AS3": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 0
+   },
+   "LINC01619": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 0
+   },
+   "NOL4": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 0
+   },
+   "NWD2": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 0
+   },
+   "SETBP1": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 0
+   },
+   "SLCO5A1": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 0
+   },
+   "SPATS2L": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 0
+   },
+   "ST6GALNAC3": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 0
+   },
+   "TANC1": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 0
+   }
+  },
+  "HC_precursor": {
+   "PROX1": {
+    "track": "D+L★",
+    "freq_in_C": 2,
+    "papers_devctx": 45
+   },
+   "ONECUT1": {
+    "track": "D+L★",
+    "freq_in_C": 2,
+    "papers_devctx": 23
+   },
+   "ONECUT2": {
+    "track": "D+L★",
+    "freq_in_C": 2,
+    "papers_devctx": 20
+   },
+   "NTRK2": {
+    "track": "D+L★",
+    "freq_in_C": 2,
+    "papers_devctx": 7
+   },
+   "ONECUT3": {
+    "track": "D+L★",
+    "freq_in_C": 2,
+    "papers_devctx": 6
+   },
+   "SYN3": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 2
+   },
+   "TPM3": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 2
+   },
+   "LINC03051": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 0
+   },
+   "MAGI1": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 0
+   },
+   "PCSK6": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 0
+   },
+   "TANC1": {
+    "track": "D",
+    "freq_in_C": 2,
+    "papers_devctx": 0
+   },
+   "SOX4": {
+    "track": "D+L★",
+    "freq_in_C": 1,
+    "papers_devctx": 19
+   },
+   "GRIA4": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 4
+   },
+   "ROBO1": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 4
+   },
+   "AUTS2": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 3
+   },
+   "LSAMP": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 2
+   },
+   "MEGF11": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 2
+   },
+   "PLXNA2": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 2
+   },
+   "TNR": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 2
+   },
+   "DOCK4": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 1
+   },
+   "GRIA3": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 1
+   },
+   "HECW1": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 1
+   },
+   "ANKS1B": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 0
+   },
+   "CACNG3": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 0
+   },
+   "MIR124-2HG": {
+    "track": "D",
+    "freq_in_C": 1,
+    "papers_devctx": 0
+   }
+  },
+  "RGC_precursor": {
+   "GAP43": {
+    "track": "D+L★",
+    "freq_in_C": 5,
+    "papers_devctx": 39
+   },
+   "ELAVL4": {
+    "track": "L",
+    "freq_in_C": 4,
+    "papers_devctx": 13
+   },
+   "ISL1": {
+    "track": "L",
+    "freq_in_C": 3,
+    "papers_devctx": 42
+   },
+   "TUBB3": {
+    "track": "L",
+    "freq_in_C": 3,
+    "papers_devctx": 33
+   },
+   "DCC": {
+    "track": "L",
+    "freq_in_C": 3,
+    "papers_devctx": 11
+   },
+   "STMN2": {
+    "track": "L",
+    "freq_in_C": 3,
+    "papers_devctx": 10
+   },
+   "PRPH": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 7
+   },
+   "CNTN2": {
+    "track": "L",
+    "freq_in_C": 2,
+    "papers_devctx": 5
+   },
+   "PROX1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 45
+   },
+   "ONECUT1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 23
+   },
+   "ONECUT2": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 20
+   },
+   "NRP1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 15
+   },
+   "CRABP1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 11
+   },
+   "ALCAM": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 9
+   },
+   "PCDH15": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 8
+   },
+   "NTRK2": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 7
+   },
+   "EPHB1": {
+    "track": "L",
+    "freq_in_C": 1,
+    "papers_devctx": 5
+   }
+  },
+  "glia_precursor": {},
+  "RPE_fetal": {},
+  "Retinal_Proliferating": {
+   "PCNA": {
+    "track": "cc_observation",
+    "freq_in_C": 0,
+    "papers_devctx": 62
+   },
+   "MKI67": {
+    "track": "cc_observation",
+    "freq_in_C": 0,
+    "papers_devctx": 44
+   },
+   "TOP2A": {
+    "track": "cc_observation",
+    "freq_in_C": 0,
+    "papers_devctx": 29
+   },
+   "UBE2C": {
+    "track": "cc_observation",
+    "freq_in_C": 0,
+    "papers_devctx": 10
+   },
+   "CCNB1": {
+    "track": "cc_observation",
+    "freq_in_C": 0,
+    "papers_devctx": 7
+   },
+   "CCNA2": {
+    "track": "cc_observation",
+    "freq_in_C": 0,
+    "papers_devctx": 6
+   },
+   "BUB1": {
+    "track": "cc_observation",
+    "freq_in_C": 0,
+    "papers_devctx": 3
+   },
+   "NUSAP1": {
+    "track": "cc_observation",
+    "freq_in_C": 0,
+    "papers_devctx": 2
+   },
+   "TYMS": {
+    "track": "cc_observation",
+    "freq_in_C": 0,
+    "papers_devctx": 2
+   },
+   "TTK": {
+    "track": "cc_observation",
+    "freq_in_C": 0,
+    "papers_devctx": 0
+   }
+  }
+ },
+ "gates": {
+  "S4_rerun": {
+   "verdict": "PASS",
+   "protocol": "PREREG_DEV3_v1 §6 (sha cb264ce47533c32db062db23a5677256d0be5216a63e1ce01b7a8df99b217008) 逐字继承 + RW2 §4 登记扩员 (sha 268dd459aed510917f0e899679c68f10cd72cce352f63942544b80554a8a631f)",
+   "gateA_hits": 15,
+   "gateB_reds": 0,
+   "no_regression": "15/15 ∧ red=0 met",
+   "file": "out/S4R_V91_selfcheck_verdict.json"
+  },
+  "RUN_DEV_F2": {
+   "J1": "12/15 (>=12)",
+   "J2": "red 0/5 (<=1)",
+   "protocol": "v2=C2b（I12 决策件不动，显式声明适用版本）",
+   "verdict": "PASS-行为零件资格",
+   "file": "out/RUN_DEVF2_score.json"
+  },
+  "activation": "BUILT_UNREGISTERED=文件在而不被加载；激活=另卡 PI 亲手勾（不入任何 *_DEFAULT_LIBS/pointer）"
+ },
+ "supersedes": {
+  "version": "v9.0-dev-panel-20261002",
+  "sha256": "963c57c90265cccddbfeb12320ccee61e3ad693187c7f27ad2081ff57c6f5bde",
+  "archive_copy": "out/archive/markers_v9_dev_retina.json.v1（只读留痕；kb/ 现件未动）"
+ },
+ "published": "2026-10-02 17:14:49"
+}

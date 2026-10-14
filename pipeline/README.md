@@ -54,6 +54,24 @@ After the gate passes, structured known-claims consumption is triggered (`pipeli
 
 The B5 cross-species governance of `query_marker` clears the named ranking for mouse-gene inputs (`no_named_ranking_for="mouse_input"`; candidates move to `unranked_candidates`). Those clusters are machine-flagged as `needs_review` / `mixed_or_insufficient` and the unranked candidates are presented as they are, for the researcher to read — this is by design, not a bug.
 
+## Fetal/developing material: stage routing, state vocabulary, and the volume guard
+
+- Read fetal or developing samples through the developmental-stage routing: in direct `query_marker`
+  use pass `development_stage` ∈ {fetal, developing, postnatal} so the development panel (`retina_dev`)
+  joins the candidates; the pipeline's automatic pre-check flags suspected fetal material (S0 hard
+  check) and records it. Availability of the stage route follows the production release carrying that
+  wiring (2026-10-05 onward). Naming a progenitor cluster from the adult vocabulary alone is a known
+  coverage gap — treat those clusters as evidence for manual review, not as labels.
+- State-program terms (proliferation programs, disease-state programs) no longer occupy cell-type
+  candidate slots: they are reported beside the ranking under `state_annotations`, and a weak
+  adult-vocabulary match with stronger development-panel co-occurrence may carry an `off_domain`
+  advisory. Both are rolled back by `EYEKB_STATE_GUARD` ∈ {0, false, off, no} (pre-2026-10-12 bytes).
+- Optional arithmetic guard (opt-in): `--volume-counts counts.json` supplies whole-sample per-type
+  interpreted/predicted cell counts. If a cluster is larger than the total counted for its
+  first-candidate type, that candidate is vetoed and the next one re-checked; if none survives the
+  cluster abstains with `volume_gate_reject` (recorded in the evidence report and in
+  `decisions_template.csv` notes). Without the file the guard is inert and artifacts are unchanged.
+
 ## Dependencies
 
 `requirements.txt` pins the versions actually tested with this directory (Python ≥ 3.11, CPU is enough). Obtaining the vector model for literature retrieval and the fallback rules are as in the root README's *5-minute quickstart*; without a model, `search_literature` runs in lexical mode and reports the degradation explicitly; the other four tools are unaffected.

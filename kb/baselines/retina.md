@@ -4,14 +4,14 @@
 > **KB3 development record (Card t_5425a7ca)**: development_stage=**adult** —— KB3 prohibition (PI Red Line 2026-09-23): developmental data must not enter the adult baseline statistical pool, and vice versa —— fetal ≠ adult for the same tissue; adult/fetal do not serve as mutual references.
 > This file is automatically rendered from the corresponding .json by `/mnt/D/EyeKB/scripts/baselines/build_baselines.py` — modify content in JSON+script; manual MD edits will be overwritten.
 
-**Usage scope (Astra T2 adjudication finalized): This baseline = identity reference + background control for cell composition captured from this sampling material under this experimental workflow; **must not be used as a composition compliance threshold**. Sampling targets for disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition); if annotation data yields identities outside the list → trigger unexpected flag only, do not force into listed identities (label acceptance requires contextual consistency check, not whitelist positioning).**
+**Usage scope (6.1sol T2 adjudication finalized): This baseline = identity reference + background control for cell composition captured from this sampling material under this experimental workflow; **must not be used as a composition compliance threshold**. Sampling targets for disease surgical materials ≠ healthy organs (e.g., PDR fibrovascular membrane must not be validated against healthy retina composition); if annotation data yields identities outside the list → trigger unexpected flag only, do not force into listed identities (label acceptance requires contextual consistency check, not whitelist positioning).**
 
 ## Evidence grade definitions
 - **A**: Local empirical recalculation (with file paths+scripts)
 - **B**: Direct reporting in original literature
 - **C**: Empirical intervals derived from A-grade source data at donor level/cross-study distribution
-- **qualitative**: Literature provides only qualitative description → store qualitative only, do not fabricate intervals (Astra T2)
-- **not_estimable**: Interval cannot be estimated — valid state, annotation may proceed (Astra T2)
+- **qualitative**: Literature provides only qualitative description → store qualitative only, do not fabricate intervals (6.1sol T2)
+- **not_estimable**: Interval cannot be estimated — valid state, annotation may proceed (6.1sol T2)
 
 ## Developmental axis definitions (KB2c adjudication 2026-09-23 — threshold changes require adjudication)
 - Top-level axis: `organism_stage` ∈ ['fetal', 'adult', 'developing', 'unknown']
@@ -22,7 +22,7 @@
 - aging orthogonal axis: >=60 elderly stratification is not on this axis — aging is an orthogonal independent axis, to be established as a separate entry in the future (adjudication Q2)
 - Two-tier identities: {'adult_only': 'baseline_human_retina__adult_only__kb2c', 'adult_pool': 'baseline_human_retina__adult_pool__v1.0'}
 
-## Astra T2 metadata fields
+## 6.1sol T2 metadata fields
 - **Sampling material**: Human neural retina ex vivo tissue (regional composition: peripheral region of retina 1,568,477, macula lutea 1,077,597, fovea centralis 434,131, macula lutea proper 97,105)
 - **Disease stage**: normal (disease column all normal; donors predominantly elderly, with the 90+ age segment being largest)
 - **Treatment background**: Not recorded (public atlas metadata lacks treatment column) — marked as 'not recorded', no speculation
@@ -301,9 +301,9 @@
 3. RGC-enriched samples (e.g., Chen_rgc 46.2% RGC, Shekhar legacy 43.6%) have high proportions due to design intent — dataset construction strategy must be checked before adjudicating 'anomaly'.
 4. Developmental/organoid specimens are not applicable to this baseline (progenitor and subtype proportions differ completely; anchor DEV_DUAL/RETINA_ORGANOIDS).
 5. PI reminder: Self-annotation of public data may itself be inaccurate — all proportions in this entry are 'priors with evidence grades'; when conflicting with data, raise flags rather than forcing alignment.
-6. v1.1 (this entry): Proportion metrics upgraded from 'all-cells pooled + cross-study spread' to 'donor-level stratified distribution' (Astra T2); old pooled values retained in pooled_all_cells for reference only — among 3.17M nuclei, Chen_ancestry accounts for 42.6%, with pooled large donors dominating weight.
+6. v1.1 (this entry): Proportion metrics upgraded from 'all-cells pooled + cross-study spread' to 'donor-level stratified distribution' (6.1sol T2); old pooled values retained in pooled_all_cells for reference only — among 3.17M nuclei, Chen_ancestry accounts for 42.6%, with pooled large donors dominating weight.
 7. NeuN+ sorting layers systematically elevate neuronal classes/decrease MG·Astro·RPE; intervals from two layers must not be mixed before confirming whether control samples underwent nuclear sorting.
-8. suspension_type is all-nuclei — snRNA intronic reads are counted (intronic_reads_counted=yes), making class proportions directly incomparable with scRNA cell suspension data (Astra T2: differences between scRNA and snRNA are sufficient to alter observed composition).
+8. suspension_type is all-nuclei — snRNA intronic reads are counted (intronic_reads_counted=yes), making class proportions directly incomparable with scRNA cell suspension data (6.1sol T2: differences between scRNA and snRNA are sufficient to alter observed composition).
 9. v1.1 (KB2c t_be336eee): Primary archive metric upgraded to adult-only (donor_age>=18y, adjudication Q2) — v1.0 mixed metrics (previously included developmental donors aged 3-17; measured fetal period had 0 nuclei) fully preserved in donor_level_adult_pool_contrast (tier_id=...__adult_pool__v1.0); citing v1.0 numbers must attach the contrast archive identity; signatures of the two archives must not be mixed (red line).
 
 ## Source List

@@ -4,7 +4,7 @@
 sha256=aea4b4c592a092f115c78b4ee1ec81ecaf4eea1b9e2453c8ead39615f3b7fb8a; request document
 `ARBITRATION_REQUEST_coordinates_C1-C14.md` sha256=88996f1039042fbdea8a1fd4bd9c6f109cbbc170adbd3e6ca4cffae159dd37a3）。
 C1-C14 all approved per strict v0 proposal. The attribution table for known issue entries is **governed by this document**; coordinates not covered by the vocabulary are uniformly UNMAPPED and must not be auto-injected.
-Basis: Architecture review adjudication (Astra formal review T1/T2): 'The organizational lexical surface of the formal matrix is not yet unified; resolution required first'; 'Fix conflicts in 17 faces/12 tissues/6 skeleton definitions first'.
+Basis: Architecture review adjudication (6.1sol formal review T1/T2): 'The organizational lexical surface of the formal matrix is not yet unified; resolution required first'; 'Fix conflicts in 17 faces/12 tissues/6 skeleton definitions first'.
 
 ## 1. Fact-checking of definition conflicts ("17 vs 12")
 

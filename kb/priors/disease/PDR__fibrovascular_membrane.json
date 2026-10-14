@@ -21,9 +21,9 @@
   "treatment_background": "Prior laser/anti-VEGF status is not systematically recorded in source data — marked as unrecorded",
   "method_scope": "scRNA-seq cell suspension (non-nuclear); differs from D001 retina nuclear suspension and D002 ocular surface cell suspension standards"
  },
- "usage_scope": "This entry = context consistency check material (non-whitelist): generates only expected/unexpected/contamination flags; prohibited from scoring; labels must not be forcibly changed to identities within the list (Astra T2).",
+ "usage_scope": "This entry = context consistency check material (non-whitelist): generates only expected/unexpected/contamination flags; prohibited from scoring; labels must not be forcibly changed to identities within the list (6.1sol T2).",
  "sampling_mismatch_warning": {
-  "statement": "**Sampling material mismatch warning (Core of Astra T2 adjudication)**: The disease site = retina, but the surgical material = fibrovascular membrane. Healthy retina composition baseline (kb/baselines/retina, D001) is [NOT] applicable as a composition threshold for this membrane specimen — membranes are dominated by macrophages/vessels/stroma; near-zero photoreceptors/neural retina classes reflect material nature, not abnormality.",
+  "statement": "**Sampling material mismatch warning (Core of 6.1sol T2 adjudication)**: The disease site = retina, but the surgical material = fibrovascular membrane. Healthy retina composition baseline (kb/baselines/retina, D001) is [NOT] applicable as a composition threshold for this membrane specimen — membranes are dominated by macrophages/vessels/stroma; near-zero photoreceptors/neural retina classes reflect material nature, not abnormality.",
   "correct_uses_of_retina_baseline": [
    "Identity reference (hierarchical judgment of transcriptional similarity between a myeloid cluster and retinal-resident microglia)",
    "Background control from adjacent retina specimens (retina_adjacent cell)"
@@ -32,7 +32,7 @@
    "'Threshold compliance' acceptance of cell proportions in membrane specimens",
    "Judging Rod/Cone absence as a quality defect (check material first!)"
   ],
-  "comparable_material_anchor": "Primary anchor for comparable materials on this card = GSE165784 (PDR membrane, PMID 35061025) + JCI Insight 2023 independent PDR membrane cohort (PMID 37917183) — same species/material/stage, Astra T2 priority tier 1."
+  "comparable_material_anchor": "Primary anchor for comparable materials on this card = GSE165784 (PDR membrane, PMID 35061025) + JCI Insight 2023 independent PDR membrane cohort (PMID 37917183) — same species/material/stage, 6.1sol T2 priority tier 1."
  },
  "identity_hierarchies": [
   {
@@ -372,7 +372,7 @@
   }
  ],
  "minimum_usability_criteria": {
-  "statement": "Minimum viable criteria for entries (Astra T4/P4): ① At least one identity or state evidence directly comparable to the material (species+material+disease condition specified) ② Each signature includes source+evidence conditions ③ No specific evidence, no standalone subtype grid ④ Name merging based only on expression program/lineage/context, not lexical similarity (concept ID mapping table) ⑤ Unestimable interval = valid state, does not block entry establishment.",
+  "statement": "Minimum viable criteria for entries (6.1sol T4/P4): ① At least one identity or state evidence directly comparable to the material (species+material+disease condition specified) ② Each signature includes source+evidence conditions ③ No specific evidence, no standalone subtype grid ④ Name merging based only on expression program/lineage/context, not lexical similarity (concept ID mapping table) ⑤ Unestimable interval = valid state, does not block entry establishment.",
   "gate_for_new_cell": "New grid construction = direct evidence set for this disease×material exists; batch expansion paused (T6), awaiting PRIOR_DIFF control to prove D0 utility"
  },
  "caveats": [

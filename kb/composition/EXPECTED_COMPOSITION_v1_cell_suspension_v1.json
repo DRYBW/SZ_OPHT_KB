@@ -4,7 +4,7 @@
  "title": "Composition prior face v1 side-mounted: cell suspension library reference layer (RC5/RC6) — OB-3 re-review NOT_READY, not wired",
  "generated": "2026-09-30 02:40",
  "card": "t_93eb78a8 (COMPV1X)",
- "authority": "This lab's pre-registered rules (PHASE0_INVENTORY_COMPV1X.md v1.0 FINAL) + gpt-6-astra xhigh independent adjudication (logs/ASTRA_REPLY_v1.md)",
+ "authority": "This lab's pre-registered rules (PHASE0_INVENTORY_COMPV1X.md v1.0 FINAL) + gpt-6.1-sol xhigh independent adjudication (logs/ASTRA_REPLY_v1.md)",
  "wiring": "OFF (not entering any runtime path; activation always belongs to PI)",
  "status": "not_activated — OB-3 per-set determination not fully PASS (see ob3_recompute), material delivery established, compliance claim reading prohibited",
  "inherits": {
@@ -51,16 +51,16 @@
   }
  },
  "semantics_declarations": {
-  "decision_primary": "OB-3 sole adjudication caliber = preregistered R1A + LOSO fold surfaces (folds: Q1 10 units / Q2 9 / Q3 7), ≤2/10 per dataset; PASS only if all five datasets satisfy it (astra D5 clause).",
-  "pooled_provisional": "pooled13 is the tentative full-face (delivery body); its flag rate is for sensitivity only, cannot be used to claim reverse QC compliance based on it (astra D2: full-face cannot be reused to claim its source studies passed independent reverse QC).",
-  "loso_meaning": "LOSO passing support gate only indicates calculation permission, not that cross-study validation has been obtained — each fold actually retains only two studies; number of studies/unique donors/units per fold see fold_walkthrough (astra D1/defect 2).",
-  "rc6": "RC6_suspension_sorted_targeted sole source = Q4 itself: descriptive self-contained face, not used for Q4 compliance determination; Q4 frozen scoring maintains RC4 old routing and marked as cross-suspension cross-sorting-strategy old reference diagnostic; fallback interpretation as RC6 validated is prohibited (astra D3).",
+  "decision_primary": "OB-3 sole adjudication caliber = preregistered R1A + LOSO fold surfaces (folds: Q1 10 units / Q2 9 / Q3 7), ≤2/10 per dataset; PASS only if all five datasets satisfy it (6.1sol D5 clause).",
+  "pooled_provisional": "pooled13 is the tentative full-face (delivery body); its flag rate is for sensitivity only, cannot be used to claim reverse QC compliance based on it (6.1sol D2: full-face cannot be reused to claim its source studies passed independent reverse QC).",
+  "loso_meaning": "LOSO passing support gate only indicates calculation permission, not that cross-study validation has been obtained — each fold actually retains only two studies; number of studies/unique donors/units per fold see fold_walkthrough (6.1sol D1/defect 2).",
+  "rc6": "RC6_suspension_sorted_targeted sole source = Q4 itself: descriptive self-contained face, not used for Q4 compliance determination; Q4 frozen scoring maintains RC4 old routing and marked as cross-suspension cross-sorting-strategy old reference diagnostic; fallback interpretation as RC6 validated is prohibited (6.1sol D3).",
   "q4_mixed_strategy": "Q4 is a mixed operational design (fovea unsorted + peripheral sorted only H1/H3) — its dataset-level flagging is an applicability boundary issue between mixed design vs single layer (inheriting COMPV1 v1.md declaration), sample-level splitting = subsequent path (rules not changed after this card's pre-registration).",
   "q5b": "Q5b (nucleus) routing is unrelated to this layer, maintains RC1 status quo (4/10).",
   "unit_key": "unit = study×donor×region×enrichment; distribution method = donor-level (per-unit 10-class fractions first, then median/IQR/range across units); the denominator includes OFF (unmappable labels), zero-vs-OFF rule: see PHASE0 §1; per-unit count audit = suspension_units_counts_audit.tsv (10 classes + OFF == retained cells — PASS).",
   "interval_formula": "A=low floor(IQR low)/high ceil(IQR high) (rounded after round2, identical formula to COMPV1 s1_retina); B=v0 triple envelope formula verbatim, only donor_iqr term replaced with intra-layer values (posterior sensitivity); support gate = participating units ≥5, failure triggers mechanical fallback (RC5→v0 design-independent row; RC6→RC4).",
-  "region_semantics": "allregion only indicates merged face without regional stratification, does not indicate representativeness of each region; Q1 region=unknown (obs lacks region column, prohibited from filling measured labels via B-level literature reading); inference of independent central/peripheral effects from this face is prohibited (astra defect 3).",
-  "platform_mix": "droplet(Q1/Q2)+plate(Q3) mixed layer: no sub-layers built (sub-layers will inevitably fail gate after LOSO); mixed layer impact only retained as leave-one-study-out diagnostic and reported, and due to only three candidate studies, cannot be packaged as stable platform bias estimate (astra).",
+  "region_semantics": "allregion only indicates merged face without regional stratification, does not indicate representativeness of each region; Q1 region=unknown (obs lacks region column, prohibited from filling measured labels via B-level literature reading); inference of independent central/peripheral effects from this face is prohibited (6.1sol defect 3).",
+  "platform_mix": "droplet(Q1/Q2)+plate(Q3) mixed layer: no sub-layers built (sub-layers will inevitably fail gate after LOSO); mixed layer impact only retained as leave-one-study-out diagnostic and reported, and due to only three candidate studies, cannot be packaged as stable platform bias estimate (6.1sol).",
   "lineage": "All sources = on-disk author cell-level annotation files + frozen mapping table; zero internal consensus labels included; zero downloads; developmental axis excluded (verified against all adult measured fields); species = human."
  },
  "pages": {

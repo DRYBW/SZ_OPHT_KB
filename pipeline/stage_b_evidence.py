@@ -33,6 +33,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 SERVER = REPO_ROOT / "mcp_server" / "server.py"
 from kb9_slot_guard import demote_kb9  # [KB9B t_3bbc769f] consumer-side narrow guard (env EYEKB_KB9_CONSUME_GUARD)
 from volume_gate import apply_volume_gate, enabled as _vg_enabled  # [X4B-FIX F2 t_95015c8a] volume plausibility gate (env EYEKB_STATE_GUARD)
+from l2_budget import resolve as _l2_budget_n  # [Q5 t_44fc8efe] L2 query-budget door (env EYEKB_L2_BUDGET; OFF => legacy 10)
 
 CONTROLISH = {"control", "ctrl", "normal", "untrig", "unpaired", "vehicle",
               "rrd_control", "non_dm", "nondisease", "healthy"}
@@ -485,7 +486,8 @@ def main():
     ap.add_argument("--tissue", required=True, help="known tissue dictionary name (e.g. retina / fibrovascular_membrane / ocular_surface …)")
     ap.add_argument("--disease", default="", help="disease name (if omitted, group labels are used to query disease entries)")
     ap.add_argument("--group-col", default="group")
-    ap.add_argument("--top-genes-n", type=int, default=10)
+    ap.add_argument("--top-genes-n", type=int, default=None,
+                    help="query budget per cluster (explicit value wins; default via EYEKB_L2_BUDGET: OFF=10 legacy / ON=30)")
     ap.add_argument("--gene-degraded", action="store_true",
                     help="set when Stage A reports gene IDs unmapped to symbols (affects grading)")
     ap.add_argument("--llm-assist", action="store_true",
@@ -503,7 +505,7 @@ def main():
             warn_guard_off()
     run_stage_b(a.processed, a.markers, a.sizes, a.out, a.species, a.tissue,
                 disease=a.disease, group_col=a.group_col,
-                gene_degraded=a.gene_degraded, top_genes_n=a.top_genes_n,
+                gene_degraded=a.gene_degraded, top_genes_n=_l2_budget_n(a.top_genes_n),
                 llm_assist=a.llm_assist, volume_counts=vc)
 
 

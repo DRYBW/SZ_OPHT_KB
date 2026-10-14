@@ -303,7 +303,7 @@ confidence: high
 <!-- KB1V2-WIKILINKS v1.1 -->
 ## Reading Layer Links (Reading layer link version: KB1v2 (2026-09-23, t_16c3e020))
 
-- **Reading layer anchor**: Concept table EYEKBC-0001/0011/0012 (Source determination cap = transcriptional similarity, Astra T4)
+- **Reading layer anchor**: Concept table EYEKBC-0001/0011/0012 (Source determination cap = transcriptional similarity, 6.1sol T4)
 - **RAG reason-tag**: Inclusion reasons/claim relations/evidence conditions for each PMID are in `/mnt/D/EyeKB/kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` (key=pmid; fields inclusion_reasons / claim_relation / evidence_context / verification_status); MCP `search_literature` hits automatically join this table
 - **Concept ID mapping**: `/mnt/D/EyeKB/kb/priors/concepts.tsv`
 - Red line: This page and all linked content are for evidence citation and QC flags only; scoring is prohibited (ANNOTATION_PROTOCOL_v1.1.md §0)

@@ -5950,7 +5950,7 @@
      {
       "type": "pmid",
       "id": "PMID:34741068",
-      "note": "Keratocyte association established (Fig.5b) but shared with fibroblasts of other tissues, not independent subtype criterion —— astra downgrade with annotation"
+      "note": "Keratocyte association established (Fig.5b) but shared with fibroblasts of other tissues, not independent subtype criterion —— 6.1sol downgrade with annotation"
      },
      {
       "type": "pmid_context",
@@ -5961,7 +5961,7 @@
     "DCN": [
      {
       "type": "canonical",
-      "note": "Corneal stroma SLRP background; 'Fibro=DCN+' does not constitute keratocyte-specific evidence —— astra downgrade canonical-only"
+      "note": "Corneal stroma SLRP background; 'Fibro=DCN+' does not constitute keratocyte-specific evidence —— 6.1sol downgrade canonical-only"
      }
     ],
     "PTGDS": [
@@ -5971,7 +5971,7 @@
       "note": "Cultured bovine corneal keratocytes produce PGD synthase —— species+culture criteria, not extrapolated to adult in vivo identification marker"
      }
     ],
-    "MIME1_identity_note": "Task book candidate 'MIME1'(mimecan) human official symbol identity mapping unverified (OGN is alternative symbol pending verification); must not default change into library without verification —— astra deprecates current gene key"
+    "MIME1_identity_note": "Task book candidate 'MIME1'(mimecan) human official symbol identity mapping unverified (OGN is alternative symbol pending verification); must not default change into library without verification —— 6.1sol deprecates current gene key"
    },
    "_disambiguation": {
     "hierarchy": "Keratocytes = corneal stroma resident cell subtype; corresponds to Fibroblasts superclass in Q6 existing classification system (D002 baseline fine_types already includes Corneal Stromal Keratocytes), not a mutually exclusive parallel class.",
@@ -6009,7 +6009,7 @@
      "species": "human",
      "tissue": "Human cornea compartment comparison (scRNA+snRNA)",
      "evidence": "Body text: 'stromal keratocytes... endothelial cells (Endo, CA3+, CDH2+, and SLC4A11)' —— endothelial population.",
-     "semantics": "Gene-by-gene localization; non-specific auxiliary marker (junctional element identity alone does not prove cell type) —— astra adopts with annotation."
+     "semantics": "Gene-by-gene localization; non-specific auxiliary marker (junctional element identity alone does not prove cell type) —— 6.1sol adopts with annotation."
     }
    ],
    "CA3": [
@@ -6027,7 +6027,7 @@
     "COL8A1": [
      {
       "type": "canonical",
-      "note": "Descemet membrane structural collagen background; no gene-level expression localization literature in human corneal endothelial clusters (41060151 endothelial cluster sentence does not contain COL8A1) — astra downgrade to canonical-only"
+      "note": "Descemet membrane structural collagen background; no gene-level expression localization literature in human corneal endothelial clusters (41060151 endothelial cluster sentence does not contain COL8A1) — 6.1sol downgrade to canonical-only"
      }
     ],
     "COL8A2": [
@@ -6045,7 +6045,7 @@
     "TJP1": [
      {
       "type": "canonical",
-      "note": "ZO-1 junctional structure background; no localized gene-level single-cell expression evidence in human corneal endothelium, do not fabricate PMIDs —— astra downgrades to canonical-only."
+      "note": "ZO-1 junctional structure background; no localized gene-level single-cell expression evidence in human corneal endothelium, do not fabricate PMIDs —— 6.1sol downgrades to canonical-only."
      }
     ],
     "ALCAM_abandon_note": "Task brief suggested starting point ALCAM: this card found no verifiable corneal endothelial gene-level support → discarded (executing task brief clause 'do not copy verbatim')."

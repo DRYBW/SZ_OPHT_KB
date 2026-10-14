@@ -1,7 +1,7 @@
 # Disease × Tissue/Material × Developmental Stage Matrix (Thin-Layer Architecture Overview)
 
 > schema: eyekb-disease-matrix/1.1 | Generated: 2026-09-23 | Card: t_be336eee | Generator: build_disease_v2.py (KB1v2 t_16c3e020)
-> General ophthalmology architecture (PI 2026-09-23): Disease entries = Thin layers overlaid on tissue baselines (kb/baselines/); **Batch expansion paused** (Astra T6) — First validate reading benefits with one PDR membrane cell (PRIOR_DIFF), then incrementally expand by sample entry.
+> General ophthalmology architecture (PI 2026-09-23): Disease entries = Thin layers overlaid on tissue baselines (kb/baselines/); **Batch expansion paused** (6.1sol T6) — First validate reading benefits with one PDR membrane cell (PRIOR_DIFF), then incrementally expand by sample entry.
 > **KB2c Developmental Axis (Adjudication Q3)**: Cell key = (disease, material, organism_stage) three keys; Current network all cells = adult; Developmental/fetal samples do not enter adult disease cells (PI directive: 'Even a single tissue is incorrect').
 
 | Disease | Tissue/Material Cell | Developmental Stage | development_axis (KB3) | Status | Description |
@@ -22,7 +22,7 @@
 ## Architecture Rules
 
 1. Decouple tissue baselines from disease entries: Disease cells do not repeat tissue proportions, only write expected/flags/signatures for Disease×Material (identity+status two levels).
-2. Same disease different materials = different cells (PDR membrane ≠ PDR vitreous ≠ adjacent retina; Astra T2 sampling material anchoring).
+2. Same disease different materials = different cells (PDR membrane ≠ PDR vitreous ≠ adjacent retina; 6.1sol T2 sampling material anchoring).
 3. Same material different diseases not merged (PDR membrane and idiopathic ERM membrane reuse concept ID but separate cells; T6).
 4. Cell opening threshold = minimum usability standard for entries (see example cells), no specific evidence does not create subtype cells alone (T4/P4).
 5. Each cell links to: Tissue baseline file ↔ RAG reason-tag (evidence_meta sidecar) ↔ Literature index page ↔ Concept table (W5 four-way link).

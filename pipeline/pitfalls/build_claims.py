@@ -10,7 +10,7 @@ Single source of truth: this script = the sole persistence point for per-claim a
 All are machine-generated artifacts, do not modify manually; to change adjudication, modify this table and rerun. Six-cell manuscript /mnt/D/EyeKB/kb/known_issues/
 Read-only, no modifications. Replaces attempt-1's build_pitfalls.py (old qwen contract voided, see REV-1 correction order within card).
 
-Contract (astra T1 atomic claim schema + T3 full enumeration + T6 visibility fields):
+Contract (6.1sol T1 atomic claim schema + T3 full enumeration + T6 visibility fields):
   claim_id / scope{species,tissue,assay,preparation,disease_or_treatment}
   failure_mode / observable_signature / risk_level
   mitigation / evidence_source_type / source_check
@@ -31,7 +31,7 @@ Derivation rules (mechanical, no manual tuning):
   answer_dependency=sample/dataset_specific → blind_safe=false, visibility=post_decision
   source_check: internal_observation → File pointer existence test (locator_verified/unchecked)
                 peer_reviewed_literature → locator_verified (eutils bibliographic record verification during B1 construction, audit trail registered)
-                community_lead → unchecked (URL existence ≠ claim validity, astra T2 original text)
+                community_lead → unchecked (URL existence ≠ claim validity, 6.1sol T2 original text)
 
 Usage:
   python build_claims.py            # Rebuild pages/ + MANIFEST
@@ -160,7 +160,7 @@ v(PM, 2, ("pattern", "surgical_blood_inflow"), "none", "high",
 v(PM, 3, ("pattern", "disease_material_vs_healthy_baseline"), "none", "high",
   "Disease material ≠ healthy organ: using disease samples against healthy tissue composition as a 'benchmark' misreads material category",
   "Disease material composition naturally deviates from healthy baseline; comparisons outside the three-use protocol (identity reference/background control/QC flag) constitute misuse",
-  "Rule solidified into membrane grid protocol by Astra T2, but failure mode itself is generalizable to disease materials",
+  "Rule solidified into membrane grid protocol by 6.1sol T2, but failure mode itself is generalizable to disease materials",
   sc_ex={"species": ["*"], "tissue": ["*"], "disease_or_treatment": ["PDR"]})
 v(PM, 4, ("cell",), "sample_specific", "medium",
   "Tissue-resident macrophages vs. microglia are indistinguishable within the membrane; claims that 'microglia drive neovascularization' require prior proof of residency.",
@@ -337,7 +337,7 @@ EXCLUDED = {
 }
 
 # ---------------------------------------------------------------- B2 Batch (KNOWNISSUES-B2 existing search items)
-# Source=local disk files + registered bibliographic records B-check items (assay/preparation/disease axis priority, astra T1 directed).
+# Source=local disk files + registered bibliographic records B-check items (assay/preparation/disease axis priority, 6.1sol T1 directed).
 # home is always pattern (branch 4 condition-driven), scope.species/tissue=["*"]—does not reference any
 # pending adjudication coordinates (C1-C14 approvals unrelated to this batch); slots in vocabulary that cannot be filled (sorting/system/bulk/
 # stage terms) left blank and registered in note; self-coined terms prohibited. Status=draft_pending_audit (new items, not migrated;
@@ -355,7 +355,7 @@ B2_ITEMS = [
          obs="Case registration: one disk annotation header labeled snRNA-seq, while primary abstract and GEO Series explicitly stated cell suspension (~93,000 cells scale); adjudicated as wording error with audit trail correction (originals not modified); platform reading correction for the same dataset triggered two existing misrecords.",
          mit="Platform entries confirmed face-by-face via primary abstract + GEO series explicit text; annotations/headers serve only as clues; conflict between measured and self-reported → register correction without modifying originals; consumer side must confirm face-by-face once before nucleus-cell axis application.",
          ref="/mnt/D/EyeKB/plans/compv1x_20260930/COMPV1X_REPORT.md Q2 Adjudication Section",
-         why="Platform wording errors are universal across tissues (assay axis directly hits own platform labeling error lesson = astra T1 orientation; v0 vocabulary bulk/snRNA mixing risk is homologous)"),
+         why="Platform wording errors are universal across tissues (assay axis directly hits own platform labeling error lesson = 6.1sol T1 orientation; v0 vocabulary bulk/snRNA mixing risk is homologous)"),
     dict(pid="mixed_prep_protocol_within_dataset", est="internal_observation", risk="high",
          ad="none", conf="high", prep=[], assay=[], disease=[],
          fm="Mixed sampling/sorting sub-designs within same dataset (unsorted arm pooled with positive/negative immune sorting arms) without metadata characterization → stratification comparability broken, systematic bias in sorted arm composition treated as whole-dataset fact",
@@ -632,7 +632,7 @@ def build():
                 continue
             d = V.get(key)
             if d is None:
-                raise SystemExit(f"Missing entry {key} in adjudication table—default classification prohibited (astra T4 failure mode warning)")
+                raise SystemExit(f"Missing entry {key} in adjudication table—default classification prohibited (6.1sol T4 failure mode warning)")
             seq += 1
             cid = f"KC-B1-{seq:03d}"
             est = EST_BY_GRADE[it["source_grade"]]
@@ -667,7 +667,7 @@ def build():
             elif est == "peer_reviewed_literature":
                 scv = "locator_verified"   # B1 build-time eutils bibliographic check; trail = the search-trail section of the draft README
             else:
-                scv = "unchecked"          # URL existence ≠ claim validity (astra T2)
+                scv = "unchecked"          # URL existence ≠ claim validity (6.1sol T2)
             ad = d["ad"]
             blind = (ad == "none")
             claim = {
@@ -687,7 +687,7 @@ def build():
                 "owner": "pi-chief (WIRE-P1 migration 2026-09-30)",
                 "last_reviewed": None,
                 "links": [str(it["source_ref"])],
-                "conflicts": [],   # astra T5 conflict-object mount slot (field template: INDEX.legend.conflict_schema)
+                "conflicts": [],   # 6.1sol T5 conflict-object mount slot (field template: INDEX.legend.conflict_schema)
                 "provenance": {
                     "origin_cell": cell, "b1_order": i,
                     "legacy_grade": it["source_grade"],
@@ -860,7 +860,7 @@ def write_pages(claims, pages, excl):
                       "region_axis": ("v1 §3.1 (C8 approval) orthogonal region annotation: values fovea/macula_peripheral_mix/"
                                       "peripheral/not_recorded; only claims with region_scope annotations where scope contains"
                                       "region key (this batch=KC-B1-008); not_recorded must not be unilaterally applied as fovea/peripheral"),
-                      "conflict_schema": ("claim.conflicts appended object fields (astra T5): conflict_id/"
+                      "conflict_schema": ("claim.conflicts appended object fields (6.1sol T5): conflict_id/"
                                           "claim_id/panel_version/decision_record_id/scope/"
                                           "initial_decision/final_decision/rule_applied/reviewer/"
                                           "coordinator_recalculation/timestamp——always empty during shadow phase,"

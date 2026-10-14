@@ -6,7 +6,7 @@
 > Disease × Tissue Matrix `kb/priors/disease/_DISEASE_TISSUE_MATRIX.md` (example cell PDR__fibrovascular_membrane) |
 > Concept ID Mapping `kb/priors/concepts.tsv` | RAG three-field sidecar `kb/literature_db/evidence_meta_v2.0_2026-09.jsonl` |
 > Annotation Protocol `plans/ANNOTATION_PROTOCOL_v1.1.md` | Evaluation Rubric `plans/EVAL_Rubric_v1.md`.
-> Positioning (Claude5 frozen + Astra T3): The reading layer only cites and flags; scoring is prohibited.
+> Positioning (Claude5 frozen + 6.1sol T3): The reading layer only cites and flags; scoring is prohibited.
 
 > Auto-generated from RAG literature_db (v1.0 684 + v1.1 500). Each entry = PMID + Title + Journal/Year/Species.
 > Purpose: Literature traceability entry point for VK knowledge pages. Use the RAG API (stage3_retrieve.py) for full-text retrieval.

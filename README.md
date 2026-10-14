@@ -260,6 +260,42 @@ The corpus itself is English. When you pass an explicit Chinese `query` to `sear
 
 `get_tissue_composition` returns **reference intervals, not acceptance thresholds**: if a cell-type proportion in your dataset falls clearly outside the literature interval, the system raises an advisory flag for you to revisit — it could be sampling difference, enrichment protocol, or an annotation error. Since 2026-09, baselines are refined by tissue region (retina / macula / ocular surface baselined separately) and library strategy (cell suspension vs single-nucleus suspension), reducing "wrong baseline compared against wrong data" false alarms.
 
+### Fetal and developing samples: the developmental-stage routing
+
+The marker layer ships a dedicated development panel (`retina_dev`, v9.1: retinal progenitors and
+per-lineage precursors). It stays out of the adult default and joins a ranking only when it is
+addressed explicitly — pass `library=retina_dev` to `query_marker` — while adult material is
+unaffected either way: those responses remain byte-identical to the adult default. Platform builds
+additionally accept the developmental axis up front (`development_stage` ∈ {fetal, developing,
+postnatal}, echoed back as `stage_applied`) and then merge the panel into the candidate ranking
+automatically; that convenience routing is platform-side wiring and is not part of this repository
+copy. Fetal or developing material read through the adult vocabulary alone hits a known coverage gap
+(roughly 40% of a fetal retina consists of progenitor-lineage cells): name the developmental stage
+first — or address the dev panel directly — then read candidates.
+
+Availability note: this repository copy (2026-10-14 onward) ships the dev panel files together with
+the explicit `library=retina_dev` route, the species-routing parameters (`species`, `volume_id`,
+`volume_species`), the state-term separation on the ranking surface (`state_annotations`), and the
+opt-in volume-plausibility guard (`--volume-counts`). The `development_stage` convenience parameter
+and the automatic dev-panel merge remain platform-side; where those are unavailable, treat fetal
+material as needing manual adjudication (`needs_review`) or address the dev panel explicitly.
+
+### State-program vocabulary and the volume plausibility flags
+
+Cell-state/program terms (proliferation programs, disease-state programs) are registered apart from
+cell-identity terms in `kb/markers/_concept_kind_sidecar_v1.json` (per-entry rationale included).
+Since 2026-10-12 the `query_marker` ranking surface (genes mode) never presents a state term as a
+cell-type candidate; such matches are returned alongside the ranking under `state_annotations`
+(appears only when hit) for interpretation context. When the adult vocabulary matches weakly while
+the development panel co-occurs strongly, the response may carry an `off_domain` advisory pointing
+at the `development_stage` routing — it never changes the ranking itself. Both behaviors roll back
+together: `EYEKB_STATE_GUARD` ∈ {0, false, off, no} restores pre-2026-10-12 bytes (proved
+artifact-by-artifact). Pipeline Stage B additionally offers an opt-in arithmetic guard:
+`--volume-counts counts.json` supplies whole-sample per-type interpreted/predicted cell counts, and a
+cluster larger than the total counted for its first-candidate type is demoted candidate by candidate,
+abstaining with `volume_gate_reject` if nothing survives; without the file the guard stays inert and
+artifacts are unchanged.
+
 ## Data and knowledge scale
 
 - **Literature layer**: default corpus = the v2.4.2 frozen build (~243,000 chunks / 3,869 papers, with a preprint-flag column). As of 2026-10-01 the default switched from v2.0 (~175,000 chunks / 2,713 papers, kept as read-only legacy) after coverage, regression, and golden-set gates all passed and the corpus was confirmed identical to the G2/G3 reproduction assets; internal and external default states now match. Everything comes from public ophthalmology and single-cell literature; every item traces to a PMID.

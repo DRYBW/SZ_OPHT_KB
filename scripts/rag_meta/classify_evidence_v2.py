@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""EyeKB KB1v2-W4: RAG admission reclassified into three fields (Astra T5, additive)
+"""EyeKB KB1v2-W4: RAG admission reclassified into three fields (6.1sol T5, additive)
 
 Touches only the EyeKB-side metadata/annotation layer (kb/literature_db/ sidecar); no corpus
 recrawl, no embedding recompute, no writes into v2.x library directories (that is t_08f0741e
@@ -132,7 +132,7 @@ def classify(title, species, tissues, old):
         claims.append({"axis": "technical_artifact", "relation": "qualify"})
     if "disease_mechanism_background" in reasons and not claims:
         claims.append({"axis": "mechanism_background", "relation": "support",
-                       "note": "mechanistic background; does not constitute a composition/identity/state-level interpretation claim (Astra T4: do not upgrade correlation to functional proof)"})
+                       "note": "mechanistic background; does not constitute a composition/identity/state-level interpretation claim (6.1sol T4: do not upgrade correlation to functional proof)"})
     materials = uniq([m.group(0).lower() for m in RE_MATERIAL.finditer(t)])
     methods = uniq([m.group(0).lower() for m in RE_METHODSEQ.finditer(t)])
     dset = uniq([d.group(0).lower() for d in RE_DISEASE.finditer(t)])
@@ -148,7 +148,7 @@ def classify(title, species, tissues, old):
 
 
 def d0_critical_pmids():
-    """PMIDs of key claims directly supporting D0 rules/baselines (item-by-item manual verification list, Astra T5)."""
+    """PMIDs of key claims directly supporting D0 rules/baselines (item-by-item manual verification list, 6.1sol T5)."""
     s = set()
     for p in (DISEASES_IN_USE, BASELINES, SURFACE):
         try:

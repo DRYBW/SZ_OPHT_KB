@@ -42,7 +42,7 @@ from mcp.server import MCPServer  # noqa: E402
 app = MCPServer(
     name="eyekb",
     title="EyeKB ophthalmic knowledge-base evidence service",
-    version="KB1v2-0.11-cnrewrite-on",
+    version="KB1v2-0.13-specroute",
     description=("Ophthalmic literature RAG retrieval (v2.0 whole-eye-bank 174,616 chunks / 2,713 papers; "
                  "from KB1v2 onward carries the inclusion_reasons/claim_relation/evidence_context three fields "
                  "+ verification status) + VK index pages + local authoritative marker library + "
@@ -136,7 +136,8 @@ def get_kb_page(scope: str, name: str = "") -> dict:
 
 @app.tool()
 def query_marker(genes: list[str] | None = None, cell_type: str = "",
-                 library: str = "all") -> dict:
+                 library: str = "all",
+                 species: str = "", volume_id: str = "", volume_species: str = "") -> dict:
     """Query the local authoritative marker library (multi-library:
     retina=markers_v4.1_clean.json v4.1-clean-P0.4;
     membrane=markers_membrane_v1.json four panels membrane/vascular/stroma/immune, per-gene provenance;
@@ -180,11 +181,32 @@ def query_marker(genes: list[str] | None = None, cell_type: str = "",
     shared_genes ⊆ {GLUL,VIM,CLU} attach no_naming_claim=true (ordering unchanged). Interpreters must
     not use no_naming_claim/cross-species entries as the basis for identity naming (carried by
     ANNOTATION_PROTOCOL). Env switch EYEKB_KBGOV_B5=0|false|off|no reverts to the byte-equal pre
-    baseline in the full state."""
+    baseline in the full state.
+    [SPECROUTE t_b9952795 · USER_DIRECTIVE_20261012 §三③] genes-mode species routing, three-source
+    priority: species (explicit param) > volume_species/volume_id (volume registry
+    kb/species_route/) > symbol morphology (evidence families E1 Gm/Rik + E2 non-identity
+    ortholog mouse-side symbols + E3 quorum gate; the case-convention channel is demoted to an
+    auxiliary band). Forced mouse path: celltype_ranking=[] + unranked_candidates +
+    no_named_ranking_for='mouse_input'; when no source can decide → species_unresolved=true +
+    species_review_required=true (never silently assume human). New keys: species_route /
+    species_source / species_evidence_detail (+ the two undetermined flags); existing key
+    values and ordering/entries are unchanged. Escape door EYEKB_SPECIES_ROUTE
+    ∈{1,true,on,yes}=ON (opt-in, inverted); unset/empty/other = OFF = the byte-exact pre-wiring
+    state. Criterion source = W2_SPROUTE/SPEC_SPECIES_ROUTING.md.
+    library=retina_v7 (KB10 t_50003494 registration): retina vascular/myeloid increment, 10
+    entries, REGISTERED_DEFAULT_OFF (explicit routing only); library=retina_dev (RW2
+    t_70f6340a / DEV-ACT t_f7d4985e): the v9.1 dev panel, 14 entries — on this surface it is
+    reachable via explicit library=retina_dev only (the dev-axis auto-merge is a D-side DEV-ACT
+    wiring, not part of this backflow)."""
     resp = core.query_marker(genes=genes, cell_type=cell_type or None,
-                             library=library or "all")
-    calllog.trace("query_marker",
-                  {"genes": genes, "cell_type": cell_type, "library": library}, resp)
+                             library=library or "all",
+                             species=species or None, volume_id=volume_id or None,
+                             volume_species=volume_species or None)
+    _trace_args = {"genes": genes, "cell_type": cell_type, "library": library}
+    if species or volume_id or volume_species:
+        _trace_args.update({k: v for k, v in (("species", species), ("volume_id", volume_id),
+                                              ("volume_species", volume_species)) if v})
+    calllog.trace("query_marker", _trace_args, resp)
     return resp
 
 
