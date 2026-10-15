@@ -20,6 +20,10 @@ __pycache__/
 .venv/
 venv/
 
+# python packaging byproducts (created by `pip install ./kbkit`; never committed)
+build/
+*.egg-info/
+
 # OS and editors
 .DS_Store
 *.swp
