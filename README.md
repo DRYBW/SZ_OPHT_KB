@@ -88,6 +88,32 @@ Five outputs per run: the processed `.h5ad` (batch-corrected, cluster-labeled), 
 
 The batch entry pins linear-algebra backends to single-threaded by default (`OMP_NUM_THREADS` and four related thread variables set via `setdefault` to 1; explicit user settings still override). Without the pin, repeated runs on the same input drift with BLAS multithreading numerics; with it, runs are byte-identical. **For byte-level reproduction keep the default pin and do not change the thread values.**
 
+## Build a knowledge base for your own tissue (`kbkit/`)
+
+The two parts above are specific to the eye. Behind them sits a **construction kit**: if you work on a different tissue, `kbkit` gives you the same schema, the same evidence discipline and the same machine gates, so the design does not have to be re-derived — and the recurring mistakes are caught for you.
+
+```bash
+pip install ./kbkit
+kbkit init <tissue> ./<tissue>-kb-plugin    # scaffold a plugin from the schema
+kbkit validate ./<tissue>-kb-plugin         # run every machine gate
+kbkit serve ./<tissue>-kb-plugin            # thin stdio query service over a plugin
+```
+
+The kit ships **structure, discipline and gates**. It does not ship knowledge: marker panels, composition baselines and disease context still have to be read out of the literature for your tissue. What it removes is the design work and the recurring mistakes, not the reading.
+
+Six rules are enforced mechanically, each with a one-line reason (`kbkit/README.md` lists them together with the failure each one prevents):
+
+1. every marker gene carries a **direction** — an up-marker and a down-marker are different evidence;
+2. every knowledge item carries **provenance** (a PMID or dataset accession);
+3. `organism_stage` is a **first-class axis** alongside species and tissue — fetal, developing and adult tissue of the same organ are different knowledge domains;
+4. compositions are **per-donor ranges** over at least two donors, never point estimates;
+5. disease context is organised as **cell type × state**, never as new cell types — "proliferating" describes a state, not a lineage;
+6. only **per-cell author-level annotated datasets** may serve as evaluation ground truth — using our own consensus labels as truth would be circular.
+
+A plugin is one directory per tissue (`plugin.yaml`, `markers/`, `baselines/`, `disease/`, `ontology/`, `registry.yaml`, `query_templates.yaml`, `extensions/`). Anything the core schema cannot express goes in `extensions/`, so the core stays tissue-independent. `NO_MATCH` is a legal ontology value: when the ontology genuinely lacks a term, say so rather than attaching a near term by hand.
+
+`kbkit` is an instrument, not a claim — it produces a knowledge base and the means to check it, and does not by itself establish annotation accuracy. `python kbkit/tests/test_e2e.py` drives the real CLI end to end: a fresh scaffold validates, every rule is asserted against a deliberate violation, and a query with no overlap returns `NO_MATCH` instead of an invented default.
+
 ## Known-issues layer for annotation review
 
 Beyond naming cells, this repository provides **review leads with citations for external annotations** (positioning note: this is a review-hint generator, not a label judge — flag sensitivity/false-positive rates are still under validation; see the validation status at the end of this section). Single-cell annotation lacks a public, per-item citation-backed catalog of "known failure modes" (none found in 2026-10 searches of comparable structured resources). We structured the lessons accumulated in our own multi-round blinded reviews and opened them for use with external data:
@@ -322,6 +348,7 @@ kb/                  dictionary layer: markers, composition baselines, disease p
 rag_snapshots/       corpus metadata snapshots
 pipeline/            batch annotation entry (run_pipeline.py et al.; Phases A/B + sample pre-gate S0)
 pipeline/pitfalls/   known-issues layer: 59 atomic claims + controlled vocabulary + 90-cell matrix
+kbkit/               construction kit: build a knowledge base for your own tissue (schema + gates + CLI)
 tests/               41-query reproduction benchmark and acceptance scripts (incl. internal-vocabulary scan gate)
 evals/               regression and incident records (MCP regression snapshots, etc.)
 scripts/             maintenance scripts (house-style mplstyle, reconciliation tools, …)

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kbkit"
+version = "0.1.0"
+description = "A construction kit for tissue knowledge bases used in knowledge-guided single-cell annotation"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["PyYAML>=6.0"]
+
+[project.scripts]
+kbkit = "kbkit.cli:main"
+
+[tool.setuptools]
+packages = ["kbkit"]
