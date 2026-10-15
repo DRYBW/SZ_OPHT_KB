@@ -5,7 +5,8 @@
 Ported from the project-side change-control validator
 (`W3_NORM/R1/scripts/validate_change_control.py`, card t_59266f94) into the mirror repo as a
 repo-side hard gate. Human-readable checklist = docs/W3_CHANGE_CONTROL_CHECKLIST.md; this
-script is its machine counterpart: "改前五问 / 改中三件 / 改后四证" become cells + regex, and
+script is its machine counterpart: "five pre-change questions / three mid-change artefacts / four
+post-change proofs" become cells + regex, and
 a missing or anchorless cell is rc=2.
 
 Eight machine rules (each FAIL names its own rule code, never a bare "G6 FAIL"):
@@ -17,7 +18,8 @@ Eight machine rules (each FAIL names its own rule code, never a bare "G6 FAIL"):
   R3 NA         "not applicable" must be rule-numbered (`NA-<n>`) with a reason >= 20 chars that
                 names a path that exists
   R4 OUTCOME1   Q1 states the responsibility-layer id (L0-L6) — first-cause layer is declared
-  R5 MONOTONE   Q3 states the rollback/negative term (loss|回退|负向|不单调|退步); gains only = FAIL
+  R5 MONOTONE   Q3 states the rollback/negative term (loss|rollback|negative|not monotone); gains
+                only = FAIL
   R6 PREREG     Q4 carries a sha anchor (64-hex or a *.sha256 path) for the pre-registered criteria
   R7 ESCAPE     Q5 carries the switch name (EYEKB_*) and an OFF byte-identity statement
   R8 PRECOND    a default-ON behaviour change referenced by M3/E2 must be registered as a gate
@@ -27,7 +29,8 @@ Structural precondition (not one of the eight rules): G6-MAP — every judgement
 human checklist's section 5 table is covered by the rule-to-checklist mapping; a dangling row
 number means the machine rules and the human checklist have drifted apart.
 
-"引用具体阈值与动作，不得只做格式检查" is enforced two ways: R2 requires a concrete number/rc/sha
+The rule "cite concrete thresholds and actions, never stop at format checking" is enforced two ways:
+R2 requires a concrete number/rc/sha
 anchor (prose without a readout fails), and the R2-CONCRETE arm demands that the regression-gate
 cell (M3), the sha-evidence cell (E1) and the rollback-identity cell (E2) each carry an
 executable command or an expected readout — a cell that merely says "we ran the gate" fails.
@@ -103,7 +106,7 @@ def main() -> int:
     verdicts = []
 
     def rec(code: str, ok: bool, detail: str, offenders=None) -> None:
-        short, _, label = code.partition(" ")          # 机器码与人类标签分列：code 供断言，label 供人读
+        short, _, label = code.partition(" ")          # machine code vs human label: code is asserted on, label is for people
         checks.append({"code": short, "label": label, "status": "PASS" if ok else "FAIL", "detail": detail,
                        "n_offenders": len(offenders or []), "offenders": (offenders or [])[:40]})
 
@@ -152,22 +155,22 @@ def main() -> int:
                     bad_evidence.append(f"{rid}.{c}: evidence has no resolvable anchor (R2): {ev[:60]}")
             if not re.search(r"\bL[0-6]\b", r.get("Q1", "")):
                 bad_q1.append(f"{rid}.Q1: no responsibility-layer id L0-L6 (R4)")
-            if not re.search(r"(loss|回退|负向|不单调|退步)", r.get("Q3", "")):
+            if not re.search(r"(loss|rollback|negative|not monotone)", r.get("Q3", "")):
                 bad_q3.append(f"{rid}.Q3: no rollback/negative term (R5) — gains-only is not accepted")
             if not SHA_RE.search((r.get("Q4", "") or "") + (r.get("Q4_evidence", "") or "")):
                 bad_q4.append(f"{rid}.Q4: no sha anchor for the pre-registered criteria (R6)")
             if not SWITCH_RE.search(r.get("Q5", "") or "") or not re.search(
-                    r"(逐字节|恒等|byte|sha)", (r.get("Q5", "") or "") + (r.get("Q5_evidence", "") or "")):
+                    r"(byte|sha|identical)", (r.get("Q5", "") or "") + (r.get("Q5_evidence", "") or "")):
                 bad_q5.append(f"{rid}.Q5: escape door lacks a switch name or an OFF byte-identity statement (R7)")
             # R2-CONCRETE: command/expected readout, not prose
             for c in ("M3", "E1", "E2"):
                 cell = (r.get(c, "") or "") + " " + (r.get(c + "_evidence", "") or "")
                 if NA_RE.match((r.get(c) or "").strip()):
                     continue
-                if not re.search(r"(rc=\d|\d+/\d+|expected|期望|≥|<=|==\s*\d|sha256sum|python3?\s+tests/|bash\s+tests/)", cell):
+                if not re.search(r"(rc=\d|\d+/\d+|expected|≥|<=|==\s*\d|sha256sum|python3?\s+tests/|bash\s+tests/)", cell):
                     bad_conc.append(f"{rid}.{c}: no executable command / expected readout (R2-CONCRETE)")
             joined = (r.get("M3", "") or "") + (r.get("E2", "") or "") + (r.get("E2_evidence", "") or "")
-            if re.search(r"(默认\s*ON|default\s*on|EYEKB_CN_REWRITE)", joined) and "VERIFY_CONTRACT" not in joined:
+            if re.search(r"(default\s*on|EYEKB_CN_REWRITE)", joined) and "VERIFY_CONTRACT" not in joined:
                 bad_pre.append(f"{rid}: default-ON behaviour change not registered as a gate precondition (R8)")
             per_change.append({"tag": tag, "change_id": r.get("change_id", "?"),
                                "entry_point": r.get("entry_point", ""),

@@ -156,3 +156,29 @@ path = 0 (readings in `plans/mirror_convergence_exec_t_0ec42aa8_20261015/`).
    case: commit `e6bdec1`, 2026-10-13, whose own `no push` line is now an ancestor of `origin/main`).
 Records for rules 1-5: `docs/GIT_SELF_DECLARED_BOUNDARY_LEDGER.tsv`. Violations are registered, not
 retroactively reverted (same scope wording as `t_cefc8e5a` §5).
+
+### §5.3 REPO_EN_MIG3 close-out batch (card t_55884641, 2026-10-15)
+The English-migration wave `REPO_EN_MIG3` (2026-10-14) had no board carrier; it was backfilled by card
+`t_55884641` per ruling `t_cefc8e5a` P-7b and is closed out as one batch:
+- **Data plane aligned** to the language of the migrated gate files: the ownership-ledger header
+  (`docs/W3_PIPELINE_REGISTRY.tsv`), the snapshot drift-ledger header
+  (`tests/fixtures/g5/snapshot_drift_ledger.tsv`) and the G6 instance/template `Q3` cells (an English
+  rollback term, rule R5). Two defects that the language mismatch had masked are fixed in the same
+  batch: the `L6-13` drift dispensation was re-probed (the pointed-at freeze file was rewritten
+  upstream at 2026-10-15 03:51:09) and the G5/G6 registered shas in `docs/GATE_INVENTORY_G5G6.tsv`
+  were re-taken from the live files.
+- **Gate readouts**: `bash tests/run_gates.sh` with `EYEKB_GATE_OUT` pointed outside the repository,
+  three runs; G5 (8/8) and G6 (19/19) PASS in each; readouts under
+  `plans/repo_en_mig3_close_t_55884641_20261015/logs/`.
+- **Commit scope**: the seven carried in-flight files (`.gitignore`, `tests/gate_registry.py`,
+  `tests/gate_change_control.py`, `tests/gate_g5g6_negative.py`, `tests/run_gates.sh` and the two
+  `.gate_out` de-trackings) plus the data-plane files above plus this note, as a single commit, with
+  `carried-from:` naming the source of each carried file in the commit body (§5.2 rule 2) and a
+  `no push` declaration carrying its release mechanism (§5.2 rule 5). Every item is a `+`-line
+  append or a content-equivalent deletion: `git checkout -- <path>` plus
+  `git restore --staged .gate_out/` restores the previous published state.
+- **Declared subset**: the wave's own run log ends `ALLDONE mapped=1257 failed=24` over 1,593
+  extracted units (five 40-unit batches completed with `ok=0`), so 312 units are in neither bucket;
+  this batch takes a declared subset of the wave, not the whole translation, and the remaining
+  Chinese *values* in the ledger/instance/inventory are registered as unresolved in
+  `plans/repo_en_mig3_close_t_55884641_20261015/LINE_STATUS_REPO_EN_MIG3_t_55884641.md`.
