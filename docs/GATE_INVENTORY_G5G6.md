@@ -6,7 +6,7 @@
 | 门 | 名称 | 入口命令 | 判据 | 期望输出 | 实取 sha256（前 16） |
 |---|---|---|---|---|---|
 | G1 | 环境锁（依赖钉版） | `pip install -r requirements.repro.txt` | 依赖按 requirements.repro.txt 钉版安装；模型固定 BAAI/bge-large-en-v1.5 | pip install 成功（无版本告警） | `8c0af43f9fa83281…` |
-| G2 | 数据锁（唯一官方语料通道） | `下载 Release 资产 v2.4.2-rag-assets → sha256sum -c` | 只认 Release 预建语料资产；sha256sum -c 通过才允许解包 | sha256sum -c 逐行 OK | `02eec500f215052c…` |
+| G2 | 数据锁（唯一官方语料通道） | `下载 Release 资产 v2.4.2-rag-assets → sha256sum -c` | 只认 Release 预建语料资产；sha256sum -c 通过才允许解包 | sha256sum -c 逐行 OK | `61a69dadb064b2de…` |
 | G3 | 检索验收（41 查询 top5 逐位） | `python3 tests/verify_repro.py --db-dir <corpus>` | 41 查询 top5 PMID 逐位一致（tests/REPRO_EXPECTED.json） | `REPRO PASS: 41/41`、rc=0 | `53ced2bf7815ae6b…` |
 | G4 | 字节锚（三件锚 + 解释器钉死） | `python3 tests/verify_pipeline.py` | 三件锚逐字节一致（解释器钉 pipeline_env；EYEKB_CN_REWRITE=0 为门前置） | `G4 PASS: 3/3 byte-identical`、rc=0 | `d7f81cca10c66d32…` |
 | G5 | 注册表强制校验门（新增） | `python3 tests/gate_registry.py` | 八项检查 C01-C08 全 PASS（列齐/ID 唯一/owner 非空/引用无悬空/摘要一致/记账诚实/未登记加载/过期认证） | `[g5] ... verdict=PASS`、rc=0 | `3e70c823aaba6d6b…` |

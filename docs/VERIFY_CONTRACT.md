@@ -114,3 +114,45 @@ Still FAIL = genuine finding: report per-case diffs to the maintainer; do not tu
 ## §5 Change discipline
 - Updating the expected anchors and the requirements lock = a maintainer-side, evidence-bearing action (three-layer verification rerun + version number + date); cloners have no authority to edit them.
 - If the service/engine code version changes, the README version notes and this contract update in the same commit.
+
+### §5.1 Authority layers after the KB11-A reason-join convergence (card t_0ec42aa8, 2026-10-15)
+Three layers, each with a single authority; they must never be collapsed into one value:
+- **Content authority** = `kb/literature_db/evidence_meta_v2.4.2_2026-10.jsonl`
+  (sha256 `25f225db2e7cd2ac672be0fc1aeb6fe6ff3410e90cf82b3b8aa3529975b92844`), byte-identical on both
+  mirror sides.
+- **Delivery authority** = this repository copy (`/home/ubuntu/EYEKB_REPO`); the English delivery
+  face is rendered here.
+- **Runtime entry** = the D-side service directory (`/mnt/D/EyeKB/mcp_server`), unchanged by the
+  convergence.
+Mirror direction is therefore layer-specific: content layer D → repo (merge + English rendering);
+delivery layer repo → D (the existing one-way ratchet is unchanged).
+Engine version for this convergence: `KB1v2-0.14-kb11a-reasonjoin` — the README version note and this
+section are updated in the same commit, as required by the rule above.
+The reason-tag join table reads the content-authority file and renders a sanitised projection on the
+delivery face rather than machine-translating it; the criterion is CJK count on the external output
+path = 0 (readings in `plans/mirror_convergence_exec_t_0ec42aa8_20261015/`).
+
+### §5.2 Boundary discipline for self-declared write / commit / push limits (card t_0ec42aa8, 2026-10-15; adopted from `t_cefc8e5a` §4, ruling P-B1)
+1. **Who may commit another card's uncommitted work.** A card that declares "write only, no commit /
+   no push" — its artefacts may be committed only by that card itself or by a close-out card named by
+   the PI. Other cards may reference the paths but must not `git add` them.
+2. **Carrying work from outside the committing card's own surface must name the source card.** Any
+   commit that includes such uncommitted files must declare the source card per file in the commit
+   body, in the form `carried-from: t_xxxxxxxx (<path>[, ...])`. A file-level note such as
+   "untracked runtime dependency" without a card id counts as smuggling and is registered by the
+   reviewing card.
+3. **A self-declared rollback clause must be re-checked before the commit.** If a card carries a
+   clause of the form "X degrades => roll back", that clause must be re-checked and the readout
+   recorded *before* committing; committing closes the rollback window. If the clause no longer
+   holds, do not commit — roll back and redo. (Forward-looking only; no retroactive application, per
+   ruling P-B2.)
+4. **No large mixed batches.** Files carried across cards must not be bundled into the same commit as
+   a large batch of unrelated files: a mixed batch makes the carrying relation unrecoverable after the
+   fact. Commit carried files separately, or give a file -> source card list in the commit body.
+5. **`no push` / `Local commit only` must have a release mechanism.** Pushing such a commit requires
+   authorisation by a later card that names that commit (or a direct PI instruction), and that card
+   must record which no-push declaration it releases. A declaration that says "not pushed" without
+   saying when or by whom it may be released is equivalent to having no boundary at all (measured
+   case: commit `e6bdec1`, 2026-10-13, whose own `no push` line is now an ancestor of `origin/main`).
+Records for rules 1-5: `docs/GIT_SELF_DECLARED_BOUNDARY_LEDGER.tsv`. Violations are registered, not
+retroactively reverted (same scope wording as `t_cefc8e5a` §5).

@@ -1,0 +1,8 @@
+# git 自述边界登记簿（self-declared write / commit / push boundary ledger）
+# 依据：docs/VERIFY_CONTRACT.md §5.2 + docs/W3_CHANGE_CONTROL_CHECKLIST.md §七（PI 裁定 P-B1，卡 t_0ec42aa8 2026-10-15）
+# 用法：追加式。一行 = 一张卡的一条自述边界 + 实际状态 + 解除记录。禁改写历史行；禁删行。
+# 列：seq / card / declared_boundary / commit_or_head / actual_state / boundary_crossed /
+#     release_record / registered_by / evidence
+seq	card	declared_boundary	commit_or_head	actual_state	boundary_crossed	release_record	registered_by	evidence
+1	t_3fcc3f16	只写、不 commit / 不 push（卡题自述）；自带回退条款「G3 降即回退」	6544bef（该卡完成时的 HEAD，2026-10-13 00:04）	A 节 11/11 件全部进入 git：4 件随 e6bdec1（2026-10-13 02:42:09）、7 件随 19f14d2（2026-10-14 17:32:06）；HEAD == origin/main ⇒ 已发布	是（首跳间隔 2h38m）	无（回退窗口随 e6bdec1 提交即关闭；本项按 PI 裁定 P-B2 不回溯，仅登记）	t_cefc8e5a §1（PI 裁定 P-B2）	/mnt/D/EyeKB/plans/mirror_convergence_ld_le_20261015/BOUNDARY_CROSSING_REGISTER_t_cefc8e5a.md §1/§2/§3
+2	t_b3db3c12	commit body 末行自述「Local commit only, no push」	e6bdec1（2026-10-13 02:42:09）	e6bdec1 是 origin/main 的祖先（git merge-base --is-ancestor 成立）⇒ 已推送	是	无解除记录：推送动作无单一路径可归因（19f14d2 body 不含 no-push 措辞）	t_cefc8e5a §1.1（PI 裁定 P-B5 采纳）	/mnt/D/EyeKB/plans/mirror_convergence_ld_le_20261015/BOUNDARY_CROSSING_REGISTER_t_cefc8e5a.md §1.1

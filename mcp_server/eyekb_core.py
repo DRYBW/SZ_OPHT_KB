@@ -1012,39 +1012,90 @@ def get_disease_prior(disease, tissue=""):
     return resp
 
 
-# ------------------------------------------------- reason-tag join table (K3→KB1v2-W4 three fields)
+# ------------------------------------------------- reason-tag join table (K3->KB1v2-W4 three fields)
+# KB11-A convergence (card t_0ec42aa8, 2026-10-15): the join table is switched to the v2.4.2 full
+# sidecar (kb/literature_db/evidence_meta_v2.4.2_2026-10.jsonl; 3885 rows / 3885 unique PMIDs,
+# a strict superset of the v2.0 file). Authority layers are separate and must not be collapsed:
+# content authority = that file, byte-identical on both mirror sides (sha256 25f225db...); delivery
+# authority = this repository copy; runtime entry = the D-side service directory, unchanged.
+# Retrieval semantics / ranking / scoring are untouched -- additive join fields only (the K3
+# additive contract is unchanged).
+# Fallback shape follows the runtime entry: a missing primary file falls back to v2.0, so a
+# rollback is "restore the previous file layout", not "edit this code back".
+# External face: the v2.4.2 rows carry Chinese reviewer prose in exactly two leaves
+# (evidence_context.locator_anchor, claim_relation[].note). This repository copy is the English
+# delivery face, so the sampling point below renders a sanitised projection instead of
+# machine-translating: a dict key or list element whose subtree carries CJK is dropped, and
+# residual CJK code points are stripped from surviving plain strings. Judge: CJK count on the
+# external output path = 0.
 REASON_SIDECAR = (EYEKB_ROOT / "kb" / "literature_db" /
-                  "evidence_meta_v2.0_2026-09.jsonl")
+                  "evidence_meta_v2.4.2_2026-10.jsonl")
+_REASON_SIDECAR_V20 = (EYEKB_ROOT / "kb" / "literature_db" /
+                       "evidence_meta_v2.0_2026-09.jsonl")  # pre-KB11 default, kept as fallback
 _REASON_SIDECAR_V1 = (EYEKB_ROOT / "kb" / "literature_db" /
                       "inclusion_reason_v2.0_2026-09.jsonl")  # v1 archive, read-only
-_reason_cache = {"mtime": None, "map": {}}
+_reason_cache = {"path": None, "mtime": None, "map": {}}
+
+_CJK_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\u3000-\u303f\uff00-\uffef]")
+_WS_RE = re.compile(r"[ \t]{2,}")
+_DROP = object()
+
+
+def _external_face(v):
+    """Project a reason-join value onto the English delivery face (CJK dropped, never translated)."""
+    if isinstance(v, str):
+        if not _CJK_RE.search(v):
+            return v
+        s = _WS_RE.sub(" ", _CJK_RE.sub("", v)).strip()
+        return s if s else _DROP
+    if isinstance(v, list):
+        return [y for y in (_external_face(x) for x in v) if y is not _DROP]
+    if isinstance(v, dict):
+        out = {}
+        for k, x in v.items():
+            y = _external_face(x)
+            if y is not _DROP:
+                out[k] = y
+        return out
+    return v
+
+
+def _ext(v):
+    y = _external_face(v)
+    return None if y is _DROP else y
+
+
+def _reason_sidecar_path():
+    return REASON_SIDECAR if REASON_SIDECAR.is_file() else _REASON_SIDECAR_V20
 
 
 def _reason_map():
+    path = _reason_sidecar_path()
     try:
-        mt = REASON_SIDECAR.stat().st_mtime
+        mt = path.stat().st_mtime
     except Exception:
         return {}
-    if _reason_cache["mtime"] != mt:
+    if _reason_cache["mtime"] != mt or _reason_cache["path"] != str(path):
         _reason_cache["map"] = {}
-        with open(REASON_SIDECAR, encoding="utf-8") as f:
+        with open(path, encoding="utf-8") as f:
             for line in f:
                 try:
                     d = json.loads(line)
                     _reason_cache["map"][str(d["pmid"])] = {
-                        "inclusion_reason": d["inclusion_reason"],
-                        "reason_confidence": d["confidence"],
-                        "reason_method": d.get("matched_rule", ""),
-                        # KB1v2-W4 (REVIEWER_LLM T5) three-field pass-through: multi-select + claim relation
+                        "inclusion_reason": _ext(d["inclusion_reason"]),
+                        "reason_confidence": _ext(d["confidence"]),
+                        "reason_method": _ext(d.get("matched_rule", "")),
+                        # KB1v2-W4 three-field pass-through: multi-select + claim relation
                         # + evidence context
-                        "inclusion_reasons": d.get("inclusion_reasons"),
-                        "claim_relation": d.get("claim_relation"),
-                        "evidence_context": d.get("evidence_context"),
-                        "evidence_verification_status": d.get("verification_status"),
+                        "inclusion_reasons": _ext(d.get("inclusion_reasons")),
+                        "claim_relation": _ext(d.get("claim_relation")),
+                        "evidence_context": _ext(d.get("evidence_context")),
+                        "evidence_verification_status": _ext(d.get("verification_status")),
                     }
                 except Exception:
                     continue
         _reason_cache["mtime"] = mt
+        _reason_cache["path"] = str(path)
     return _reason_cache["map"]
 
 

@@ -42,7 +42,7 @@ from mcp.server import MCPServer  # noqa: E402
 app = MCPServer(
     name="eyekb",
     title="EyeKB ophthalmic knowledge-base evidence service",
-    version="KB1v2-0.13-specroute",
+    version="KB1v2-0.14-kb11a-reasonjoin",
     description=("Ophthalmic literature RAG retrieval (v2.0 whole-eye-bank 174,616 chunks / 2,713 papers; "
                  "from KB1v2 onward carries the inclusion_reasons/claim_relation/evidence_context three fields "
                  "+ verification status) + VK index pages + local authoritative marker library + "

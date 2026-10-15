@@ -7,7 +7,7 @@
 
 When you are analyzing ocular single-cell data and face an unlabeled cell cluster, EyeKB helps answer three questions: what cell type is this cluster most likely to be, which marker genes support that call, and which publications back the evidence.
 
-Current service version: `KB1v2-0.7-k9act`. Maintained by an ophthalmology research group for annotation quality control in our own and collaborating projects.
+Current service version: `KB1v2-0.14-kb11a-reasonjoin` (2026-10-15: the literature reason-tag join table was switched to the KB11-A evidence-metadata sidecar; the English delivery face is rendered from it, never machine-translated). Maintained by an ophthalmology research group for annotation quality control in our own and collaborating projects.
 
 **Scope boundary**: this is a research assistance tool — not a clinical diagnostic device and not a black-box classifier. Every retrieval result carries a PubMed ID and can be checked one by one; all annotation conclusions are valid only after researcher confirmation (human-in-the-loop).
 
