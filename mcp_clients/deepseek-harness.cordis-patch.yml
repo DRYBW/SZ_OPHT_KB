@@ -1,0 +1,38 @@
+# EyeKB as an MCP server for DeepSeek Harness (dsh)
+#
+# How DeepSeek Harness takes MCP servers
+#   The built-in client plugin `@deepseek-ai/dsh-mcp-client` is added one entry per server,
+#   in the Cordis composition that the profile you run loads. The snippet below is that
+#   entry. Tools then appear to the model as `mcp__eyekb__<tool>`.
+#
+# Where this goes
+#   Into the plugin/composition file of the profile you start, e.g. the profile used by
+#   `npx @deepseek-ai/dsh web` (settings live under ~/.dsh). If you would rather not edit
+#   YAML, install the community Settings page plugin instead and register the server from
+#   the GUI (Settings -> MCP, "stdio" mode, same command and arguments as below):
+#       npx -p @deepseek-ai/dsh dsh plugin --profile web add github:hyqhyq3/dsh-mcp-manager
+#   That page writes the server into <workspace>/.dsh/dshmm/mcp.json in the Claude/Codex
+#   style, so claude-code.mcp.json in this directory can be pasted there unchanged.
+#
+# Before use, replace two placeholders:
+#   /path/to/SZ_OPHT_KB       the directory you cloned this repository into
+#   /path/to/venv/bin/python  an interpreter with `mcp` installed
+#                             (see "Install" in the top-level README); it must be an
+#                             absolute path, the harness does not expand ~ or $HOME
+#
+# Documentation:
+#   https://github.com/deepseek-ai/deepseek-harness/blob/main/docs/subsystems/mcp.md
+
+- id: mcp-eyekb
+  name: '@deepseek-ai/dsh-mcp-client'
+  config:
+    serverName: eyekb
+    transport: stdio
+    command: /path/to/venv/bin/python
+    args:
+      - /path/to/SZ_OPHT_KB/mcp_server/server.py
+    # Optional: give the server the corpus directory explicitly. Without it the server
+    # looks at $EYEKB_DB_DIR, then at its own pointer file, then at a single unpacked
+    # corpus inside the repository.
+    # env:
+    #   EYEKB_DB_DIR: /path/to/SZ_OPHT_KB/literature_db/v2.4.2_2026-09_slim

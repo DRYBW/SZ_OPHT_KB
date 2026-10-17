@@ -1,0 +1,32 @@
+# EyeKB as an MCP server for the OpenAI Codex CLI
+#
+# Where this goes
+#   ~/.codex/config.toml          all projects on this machine
+#   <project>/.codex/config.toml  that project only (Codex must trust the project)
+#   The CLI and the IDE extension share this file, so one setup covers both.
+#
+# After saving, restart Codex and type /mcp in the TUI: "eyekb" should be listed with
+# five tools (search_literature, query_marker, get_tissue_composition,
+# get_disease_prior, get_kb_page).
+#
+# Before use, replace two placeholders:
+#   /path/to/SZ_OPHT_KB       the directory you cloned this repository into
+#   /path/to/venv/bin/python  an interpreter with `mcp` installed
+#                             (see "Install" in the top-level README)
+#
+# Equivalent one-liner instead of editing this file:
+#   codex mcp add eyekb -- /path/to/venv/bin/python /path/to/SZ_OPHT_KB/mcp_server/server.py
+#
+# Documentation: https://developers.openai.com/codex/mcp
+
+[mcp_servers.eyekb]
+command = "/path/to/venv/bin/python"
+args = ["/path/to/SZ_OPHT_KB/mcp_server/server.py"]
+
+# Alternative without a pinned interpreter: use the bundled launcher, which finds a
+# suitable Python itself (looks at $EYEKB_PYTHON, then <repo>/.venv, then PATH).
+# Requires the executable bit, i.e. a POSIX shell:
+#
+# [mcp_servers.eyekb]
+# command = "/path/to/SZ_OPHT_KB/mcp_server/run_mcp_server.sh"
+# args = []

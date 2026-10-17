@@ -264,6 +264,25 @@ This repository ships a standard [MCP](https://modelcontextprotocol.io) server t
 
 The server runs over local stdio only and opens no network port. The literature-database location for `search_literature` resolves in order: environment variable `EYEKB_DB_DIR` → an entry with `role: default` in the pointer file `kb/literature_db/EYEKB_DB_POINTER.yaml` that actually exists → **the single unpacked corpus inside this repository** (after step 2 above, auto-discovered with zero configuration). The other four tools read only the repository's own `kb/` and work straight after clone.
 
+### Ready-made configurations for the agent frameworks you already use
+
+The server is a plain MCP stdio process, so it needs no framework-specific adapter code on our side; what each client does need is its own registration format. The `mcp_clients/` directory carries one configuration file per client, and a script that starts the server with the exact command written in each file and checks that it answers:
+
+| Agent framework | Configuration file | Where it goes |
+|---|---|---|
+| OpenAI Codex CLI | [`mcp_clients/codex.config.toml`](mcp_clients/codex.config.toml) | `~/.codex/config.toml`, or `.codex/config.toml` in a trusted project |
+| Claude Code | [`mcp_clients/claude-code.mcp.json`](mcp_clients/claude-code.mcp.json) | `.mcp.json` at the project root, or `claude mcp add` |
+| DeepSeek Harness (dsh) | [`mcp_clients/deepseek-harness.cordis-patch.yml`](mcp_clients/deepseek-harness.cordis-patch.yml) | a plugin entry in the composition of the profile you run |
+| WorkBuddy / CodeBuddy | [`mcp_clients/workbuddy.mcp.json`](mcp_clients/workbuddy.mcp.json) | `~/.workbuddy/mcp.json`, `<project>/.workbuddy/mcp.json`, or `.mcp.json` for the CLI |
+
+```bash
+python3 mcp_clients/verify_clients.py     # -> 4/4 client configurations connected and answered
+```
+
+Two placeholders appear in every file and must be replaced with your own paths: the clone directory and an interpreter that has the MCP SDK installed. `mcp_clients/README.md` documents each client, including the command-line registration one-liner and the first-connect approval step some of them require.
+
+One boundary travels with the service into every client: the evidence returned is meant for a human to read and judge, and must never be consumed as a training or scoring signal by an automatic classifier. It is part of the server's own handshake instructions, so an agent that reads them sees the constraint without extra setup on your side.
+
 ### The five things you can ask it
 
 | Tool | One-line description | Example query |
@@ -379,6 +398,10 @@ GitHub repository, version 0.7 (2026). RAG corpus snapshot v2.4.2 (2026-09).
 ```
 
 Please also cite the original literature attached to each specific entry you actually consumed (every return carries its PMID).
+
+## License
+
+The project's own software and its curated knowledge-base structures are released under the [MIT License](LICENSE) — use, modify and redistribute them, including commercially. Third-party scholarly content redistributed in this repository for build provenance (publisher full texts and bibliographic records) stays under its original terms and is **not** covered by that licence; [NOTICE](NOTICE) lists it directory by directory and says what to check before reusing it.
 
 ## Maintenance and audit
 

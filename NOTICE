@@ -1,0 +1,55 @@
+# NOTICE
+
+This repository is a research infrastructure release for ocular single-cell
+annotation. It mixes three kinds of material, which are **not** under the same
+terms. Read this before reusing anything.
+
+## 1. Project software — MIT (see LICENSE)
+
+Covers the code and the curated knowledge-base structures produced by this
+project, including:
+
+- `kbkit/`, `mcp_server/`, `mcp_clients/`, `pipeline/`, `scripts/`, `tests/`, `clients/`
+- the curated knowledge base under `kb/` (cell-type marker dictionaries,
+  tissue composition baselines, disease-context priors, developmental axis,
+  species routing; each entry carries its literature source)
+- project documentation under `docs/` and `README.md`
+
+You may use, modify, and redistribute these, including commercially, provided
+the copyright notice and this notice are retained.
+
+## 2. Third-party scholarly content — original terms, not covered by the above
+
+The repository contains third-party published material, included **only as
+build provenance** for the local literature-retrieval index:
+
+- **Published article full texts** (PMC/JATS XML) under
+  `docs/plans/rag_fix_20260928/work/xml/`,
+  `docs/plans/rag_fix2_v25_20260928/work/xml2/`, and
+  `docs/plans/rag_fix3_20260928/work/xml3/` — 162 files, deposited by the
+  original publishers/authors.
+- **Bibliographic and evidence metadata records** (JSONL/TSV) under
+  `kb/literature_db/`, derived from Europe PMC and PubMed records.
+
+These remain under the terms set by their original rights holders. Their
+presence here does not grant any licence to them, and the MIT licence above
+does not apply to them. Redistribution or reuse of this material is subject to
+the original terms; consult the source record (PubMed / Europe PMC / publisher)
+for each item before reuse.
+
+Note that the retrieval index itself is **not** shipped in this repository —
+only the metadata sidecars and the build-provenance working files are.
+
+## 3. Clinical and privacy boundary
+
+No patient data, sample identifiers, or clinical records are included. This is
+a research assistance tool: it is **not** a clinical diagnostic device, and no
+output constitutes a clinical conclusion. Every retrieval result carries a
+PubMed ID and is intended to be checked item by item; annotation conclusions
+are valid only after researcher confirmation.
+
+## 4. Citation
+
+Citation information for the accompanying publication is not yet available.
+Until it is, please cite this repository by its URL and the service version
+string reported in `README.md`.
