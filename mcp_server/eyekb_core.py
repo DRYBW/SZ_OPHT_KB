@@ -243,7 +243,18 @@ MARKER_LIBS = {"retina": MARKER_JSON,
     #   the dev-axis auto-merge (development_stage routing) is a D-side DEV-ACT wiring and is NOT
     #   part of this backflow. F3's off-domain probe already reads this path via DEV_PANEL_FILE.
     #   Rollback = delete this line (reverts to the pre-backflow dangling reference).
-    "retina_dev": MARKER_DIR / "markers_v9_dev_retina.json"}
+    "retina_dev": MARKER_DIR / "markers_v9_dev_retina.json",
+    # antseg_v10 = non-retinal ocular-tissue increment (2026-10-20): 28 entries covering lens
+    #   (epithelium/fibre), cornea (epithelium/endothelium/basal/transit-amplifying), conjunctiva
+    #   (epithelium/goblet), trabecular meshwork, ciliary body (pigmented/non-pigmented epithelium,
+    #   ciliary muscle), iris pigment epithelium, keratocytes, and the generic stromal / immune /
+    #   vascular / neural classes that the retinal dictionary never carried.
+    #   Candidate genes were harvested from the project literature corpus (3,869 papers) restricted
+    #   to symbols present in the assay; the identity segment is ranked by literature support and the
+    #   discrimination segment by target-vs-neighbour detection ratio. Every entry carries a CL id.
+    #   REGISTERED_DEFAULT_OFF: not part of the default `all` set unless EYEKB_ACT_ANTSEG is set;
+    #   activation of the default surface requires separate PI approval. Rollback = delete this line.
+    "antseg_v10": MARKER_DIR / "markers_v10_antseg_increment.json"}
 
 # [ACT t_5d5853c9] v6-merge whitelist for the default all — hard-coded; env values can only toggle the
 # whole feature, never inject any library
@@ -263,6 +274,19 @@ def _k9_act_enabled():
     """env EYEKB_ACT_K9 ∈ {0,false,off,no} (casefold) = OFF revert; unset/any other value = ON activation."""
     v = (os.environ.get("EYEKB_ACT_K9") or "").strip().casefold()
     return v not in {"0", "false", "off", "no"}
+
+
+# [ANTSEG t_antseg_v10] non-retinal increment whitelist.  Unlike the v6/k9 gates this one defaults to
+# OFF when unset: the library is registered and reachable via library="antseg_v10", but it does not
+# join the default `all` set until the activation is approved.  Semantics: unset/{0,false,off,no,""}
+# = OFF; any other value = ON.
+ANTSEG_DEFAULT_LIBS = ("antseg_v10",)
+
+
+def _antseg_act_enabled():
+    """env EYEKB_ACT_ANTSEG — empty/unset/{0,false,off,no} = OFF; any other value = ON."""
+    v = (os.environ.get("EYEKB_ACT_ANTSEG") or "").strip().casefold()
+    return v not in {"", "0", "false", "off", "no"}
 
 
 # ---------------------------------------------------------------- Anti-union (composite entry) guard
@@ -636,11 +660,13 @@ def _load_marker_dbs(library="all"):
             names = names + list(V6_DEFAULT_LIBS)  # whitelist append; lacrimal_v6 never here
         if _k9_act_enabled():
             names = names + list(K9_DEFAULT_LIBS)  # [ACT t_abfebe59] k9_ocs append; no injectable lib names
+        if _antseg_act_enabled():
+            names = names + list(ANTSEG_DEFAULT_LIBS)  # [ANTSEG] non-retinal increment, OFF by default
     elif lib in MARKER_LIBS:
         names = [lib]
     else:
         raise ValueError("library must be one of retina|membrane|retina_interneuron|retina_v6|"
-                         "face_v6|lacrimal_v6|k9_ocs|retina_v7|retina_dev|all, got: "
+                         "face_v6|lacrimal_v6|k9_ocs|retina_v7|retina_dev|antseg_v10|all, got: "
                          + repr(library))
     dbs = []
     for n in names:
