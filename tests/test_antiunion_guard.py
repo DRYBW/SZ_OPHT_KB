@@ -32,6 +32,17 @@ def test_gate_default_off():
     os.environ.pop("EYEKB_KB_ANTIUNION", None)
 
 
+def test_same_name_across_libraries_is_not_composite():
+    # multi-library default route: "retina_interneuron::AC" carries a thicker panel than
+    # "retina_v6::AC" / "AC". Same cell type across libraries = version duplicates, never composites.
+    markers = {"retina_interneuron::AC": ["SLC17A8", "GAD1", "GAD2", "SLC6A9", "TFAP2B"],
+               "retina_v6::AC": ["GAD1", "GAD2", "SLC6A9"],
+               "AC": ["GAD1", "GAD2"]}
+    rank = _rank(("retina_interneuron::AC", 5), ("retina_v6::AC", 3), ("AC", 2))
+    kept, demoted = core._antiunion_split(rank, markers)
+    assert kept == rank and demoted == [], (kept, demoted)
+
+
 def test_union_entry_demoted_subsets_kept():
     markers = {"pr": ["RHO", "PDE6A", "ARR3", "GNAT2"],
                "rod": ["RHO", "PDE6A"],

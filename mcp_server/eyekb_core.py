@@ -288,16 +288,24 @@ def _antiunion_enabled():
 
 def _antiunion_split(rank_full, markers):
     """Return (kept_ranking, demoted_list). A candidate is composite iff its complete marker set
-    strictly contains another candidate's complete marker set. Deterministic: input order kept."""
+    strictly contains another candidate's complete marker set belonging to a DIFFERENT cell type.
+
+    Same-name entries are never composites: the default route loads several libraries, and
+    `retina_interneuron::AC` (thick panel) legitimately contains `retina_v6::AC` / `AC` (thinner
+    panels) — those are version duplicates of one cell type, not unions. Demoting them would drop
+    the finest panel (golden regression: 155/721 production clusters changed). Deterministic:
+    input order kept."""
     present = [r["cell_type"] for r in rank_full]
     sets = {ct: {str(g).upper() for g in (markers.get(ct) or []) if str(g).strip()} for ct in present}
+    short = {ct: ct.split("::")[-1].strip().casefold() for ct in present}
     composite = {}
     for a in present:
         A = sets[a]
         if len(A) < 2:
             continue
         subs = [b for b in present
-                if b != a and 2 <= len(sets[b]) < len(A) and sets[b] <= A]
+                if b != a and short[b] != short[a] and 2 <= len(sets[b]) < len(A)
+                and sets[b] <= A]
         if subs:
             composite[a] = sorted(subs)
     if not composite:
