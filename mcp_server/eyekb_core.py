@@ -590,6 +590,17 @@ def _tissue_scope_enabled():
     return v not in {"0", "false", "off", "no"}
 
 
+def _abstain_reason_enabled():
+    """env EYEKB_ABSTAIN_REASON = 1/on/true/yes enables the diagnostic abstention record.
+
+    Default OFF (unset = OFF, the inverse polarity of _tissue_scope_enabled): this key exists only
+    so callers and reports can tell a coverage gap from a deliberate withhold. Writing it changes
+    response bytes, so it must stay opt-in to keep the frozen default-face anchor intact.
+    """
+    v = (os.environ.get("EYEKB_ABSTAIN_REASON") or "").strip().casefold()
+    return v in {"1", "on", "true", "yes"}
+
+
 def _tissue_inventory(tissue):
     """Crosswalk record for a tissue, or None when this tissue has no usable prior.
 
@@ -1124,6 +1135,37 @@ def query_marker(genes=None, cell_type=None, library="all",
             resp["antseg_guard"] = antseg_guard
         if antseg_demoted:
             resp["antseg_guard_demoted"] = antseg_demoted
+        # [ABSTAINREASON 2026-10-21] Why did this query get no answer? Additive key, opt-in only.
+        # Default OFF (EYEKB_ABSTAIN_REASON unset) -> key never written -> default bytes unchanged.
+        # Motivation: abstention is 17.79pp of the evaluation corpus and callers had no way to tell
+        # "we have no evidence" (a coverage gap) from "we deliberately withheld a candidate" (the
+        # guards doing their job). Those two need opposite responses from a user.
+        if _abstain_reason_enabled() and not rank_kept:
+            causes = []
+            if not score:
+                causes.append("no_marker_overlap")
+            if composite_demoted:
+                causes.append("composite_superset")
+            if tissue_excluded:
+                causes.append("tissue_out_of_scope")
+            if antseg_demoted:
+                causes.append("increment_guard")
+            if state_ann:
+                causes.append("state_program_only")
+            if cl_demoted:
+                causes.append("cl_duplicate_collapse")
+            resp["abstain_reason"] = {
+                "cause": causes[0] if len(causes) == 1 else ("multiple" if causes else "unknown"),
+                "causes": causes,
+                "n_query_genes": len(gl),
+                "n_genes_with_hit": sum(1 for g in gl if hits.get(g)),
+                "n_scored_classes": len(score),
+                "demoted": {"composite_superset": len(composite_demoted),
+                            "tissue_out_of_scope": len(tissue_excluded),
+                            "increment_guard": len(antseg_demoted),
+                            "state_program_only": len(state_ann or []),
+                            "cl_duplicate_collapse": len(cl_demoted)},
+            }
         # [X4B-FIX F3] off-domain low-confidence advisory (additive key only; criterion frozen in
         # PREREG §3.1 — the dev-panel file being absent on this surface makes the probe inert, zero
         # drift). Attached on the default all-route only — the "adult vocabulary on fetal material"
