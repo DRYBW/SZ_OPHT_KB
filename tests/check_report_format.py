@@ -60,12 +60,17 @@ def check(path):
             sections[-1][1] = True
 
     last = None
+    in_fence2 = False
     for i, raw in enumerate(lines, 1):
         stripped = raw.strip()
-        if not stripped or stripped.startswith("#") or TABLE.match(raw):
+        if stripped.startswith("```"):
+            in_fence2 = not in_fence2
             last = "skip"
             continue
-        if stripped.startswith("```"):
+        if in_fence2:
+            last = "skip"
+            continue
+        if not stripped or stripped.startswith("#") or TABLE.match(raw):
             last = "skip"
             continue
         if last == "text":
