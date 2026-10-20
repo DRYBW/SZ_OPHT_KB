@@ -601,6 +601,33 @@ def _abstain_reason_enabled():
     return v in {"1", "on", "true", "yes"}
 
 
+def _fallback_widen_enabled(tissue=None):
+    """env EYEKB_FALLBACK_WIDEN turns on the fallback widening for empty rankings.
+
+    Default OFF: unset means the whole mechanism is skipped, so the response is byte-identical to
+    the pre-wiring baseline. EYEKB_FALLBACK_WIDEN_DENY_TISSUES holds a comma-separated tissue list
+    the mechanism must not run on (an empty entry list means "all tissues allowed").
+
+    Criteria source: plans/retina_deep_20261020/PREREG_FALLBACK_WIDEN_V3_20261021.md. This is a
+    caller-visible behaviour switch, not a scoring change: the scorer, the panels, the admission
+    floor and the tie-break rules are untouched.
+    """
+    v = (os.environ.get("EYEKB_FALLBACK_WIDEN") or "").strip().casefold()
+    if v not in {"1", "on", "true", "yes"}:
+        return False
+    deny = [t.strip().casefold() for t in
+            (os.environ.get("EYEKB_FALLBACK_WIDEN_DENY_TISSUES") or "").split(",") if t.strip()]
+    return not (tissue and tissue.strip().casefold() in deny)
+
+
+def _fallback_widen_floor():
+    """Acceptance floor for a widened answer: shared genes between query and winning class."""
+    try:
+        return int((os.environ.get("EYEKB_FALLBACK_WIDEN_MIN_SHARED") or "5").strip())
+    except ValueError:
+        return 5
+
+
 def _tissue_inventory(tissue):
     """Crosswalk record for a tissue, or None when this tissue has no usable prior.
 
@@ -971,7 +998,8 @@ def _x4b_off_domain_flag(gl, kept_ranking):
 
 
 def query_marker(genes=None, cell_type=None, library="all",
-                 species=None, volume_id=None, volume_species=None, tissue=None):
+                 species=None, volume_id=None, volume_species=None, tissue=None,
+                 fallback_genes=None, _widen_depth=0):
     """Local authoritative marker library query (multi-library; see MARKER_LIBS).
     - cell_type mode: return that class's markers (retina library attaches micro/rpe detail)
     - genes mode: which classes each gene reverse-hits
@@ -1179,6 +1207,27 @@ def query_marker(genes=None, cell_type=None, library="all",
         if _kbgov_b5_enabled():
             _kbgov_govern_genes_resp(resp, raw_gl, species=species, volume_id=volume_id,
                                      volume_species=volume_species)
+        # [FALLBACKWIDEN 2026-10-21] Empty ranking + a wider gene list offered by the caller ->
+        # re-ask once on that wider list and accept the answer only if the winner shares at least
+        # _fallback_widen_floor() genes. Caller-visible behaviour switch, default OFF: in the OFF
+        # state this block never runs, so default bytes are unchanged. Nothing here re-scores,
+        # re-ranks or relaxes a guard - the second call is the same query on more genes, and the
+        # answer is only adopted when the evidence meets the floor.
+        if (fallback_genes and _widen_depth == 0 and not resp["celltype_ranking"]
+                and _fallback_widen_enabled(tissue)):
+            fb_resp = query_marker(genes=fallback_genes, library=library, species=species,
+                                  volume_id=volume_id, volume_species=volume_species,
+                                  tissue=tissue, _widen_depth=1)
+            fb_rank = fb_resp.get("celltype_ranking") or []
+            if fb_rank and fb_rank[0].get("n_shared", 0) >= _fallback_widen_floor():
+                fb_resp["fallback_widen"] = {
+                    "from_genes": len(gl),
+                    "to_genes": len(fb_resp.get("query") or []),
+                    "n_shared": fb_rank[0].get("n_shared"),
+                    "floor": _fallback_widen_floor(),
+                    "reason": "empty_ranking_at_narrow_query",
+                }
+                return fb_resp
         return _sf.wrap_resp(resp, markers, "genes", query_genes=gl,
                              ranking=resp["celltype_ranking"], provenance=prov)
 
