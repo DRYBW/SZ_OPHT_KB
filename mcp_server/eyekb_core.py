@@ -318,6 +318,89 @@ def _antiunion_split(rank_full, markers):
     return kept, demoted
 
 
+# ---------------------------------------------------------------- CL naming-key layer
+# [CLKEY 2026-10-20 · PI "都改" · prereg = plans/oss_check_20261019/scorer_guard_20261020/
+#  cl_unify/PREREG_CL_UNIFY_20261020.md]
+# Why: one CL cell type can appear in the loaded libraries under several spellings
+# (Fibroblast / Limbus_Sclera_fibroblast_C1, Mac_Tissue / Mac_DAM_LAM, Endo / retina_v7::Endo).
+# Ranking by raw n_shared lets each spelling take its own candidate slot, pushing the genuine
+# runner-up down — the same class of assembly defect as the composite-entry case. The fix is at
+# the assembly layer: group ranked candidates by CL idid and keep only the best-ranked member of
+# each group in celltype_ranking, moving the rest to the additive key cl_duplicate_demoted.
+# Gate: EYEKB_CL_KEY, REGISTERED_DEFAULT_OFF — unset = OFF = pre-wiring bytes. Consequence of a
+# missing/corrupt label map is an inert no-op (never an exception).
+CL_LABELMAP_FILE = MARKER_DIR / "markers_cl_alignment_v2_unified.json"
+_CL_LABELMAP_CACHE = {}  # {"path": str, "mtime": float, "map": dict} once loaded
+
+
+def _cl_key_enabled():
+    """env EYEKB_CL_KEY ∈ {1,true,on,yes} (casefold) = ON; unset/anything else = OFF."""
+    v = (os.environ.get("EYEKB_CL_KEY") or "").strip().casefold()
+    return v in {"1", "true", "on", "yes"}
+
+
+def _cl_labelmap():
+    """Lazily load the CL label map -> {label: {"cl_id","cl_label"}}. None = feature inert.
+
+    Degradation is deliberate: a missing file, a stale path or a corrupt body must leave the
+    scorer behaving exactly as before rather than raising inside a query.
+    """
+    p = CL_LABELMAP_FILE
+    try:
+        if not p.is_file():
+            return None
+        mt = p.stat().st_mtime
+        if _CL_LABELMAP_CACHE and _CL_LABELMAP_CACHE.get("map") is not None \
+                and _CL_LABELMAP_CACHE.get("path") == str(p) \
+                and _CL_LABELMAP_CACHE.get("mtime") == mt:
+            return _CL_LABELMAP_CACHE["map"]
+        with open(p, encoding="utf-8") as f:
+            db = json.load(f)
+        labels = db.get("labels")
+        if not isinstance(labels, dict) or not labels:
+            return None
+        m = {k: {"cl_id": (v or {}).get("cl_id"), "cl_label": (v or {}).get("cl_label")}
+             for k, v in labels.items()}
+        _CL_LABELMAP_CACHE["path"] = str(p)
+        _CL_LABELMAP_CACHE["mtime"] = mt
+        _CL_LABELMAP_CACHE["map"] = m
+        return m
+    except Exception:
+        return None
+
+
+def _cl_dedup_split(rank_full, labelmap):
+    """Return (kept_ranking, demoted_list, attached).
+
+    Candidates whose resolved CL id is identical are collapsed to the best-ranked one.
+    Candidates with no CL id (documented no_match, or a label outside the map) are never
+    merged — the map's gaps must not silently delete real candidates. Deterministic: input
+    order preserved, so the surviving order equals the ranking order minus the merged rows.
+    """
+    if not labelmap:
+        return rank_full, [], {}
+    first_by_cl = {}
+    keep, demoted = [], []
+    for r in rank_full:
+        ct = r["cell_type"]
+        short = ct.split("::")[-1].strip()
+        rec = labelmap.get(short) or labelmap.get(ct)
+        cid = (rec or {}).get("cl_id")
+        if not cid:
+            keep.append(r)
+            continue
+        if cid not in first_by_cl:
+            first_by_cl[cid] = ct
+            keep.append({**r, "cl_id": cid, "cl_label": (rec or {}).get("cl_label")})
+        else:
+            demoted.append({"cell_type": ct, "n_shared": r.get("n_shared"),
+                            "cl_id": cid, "cl_label": (rec or {}).get("cl_label"),
+                            "merged_into": first_by_cl[cid],
+                            "reason": "same_cell_ontology_term"})
+    attached = {r["cell_type"]: r["cl_id"] for r in keep if r.get("cl_id")}
+    return keep, demoted, attached
+
+
 # ---------------------------------------------------------------- TISSUE-SCOPE candidate exclusion layer
 # [TISSUESCOPE 2026-10-20 · PI directive "补" after the audit found tissue/inventory was never fixed in MCP]
 # Criteria source = plans/oss_check_20261019/scorer_guard_20261020/PREREG_TISSUE_SCOPE_20261020.md
@@ -831,6 +914,13 @@ def query_marker(genes=None, cell_type=None, library="all",
                 tissue_scope = {"tissue": tissue, "status": "disabled",
                                 "inventory_status": rec.get("inventory_status", "not_in_crosswalk"),
                                 "reason": "switch_off: EYEKB_TISSUE_SCOPE not enabled; candidates not narrowed"}
+        # [CLKEY 2026-10-20] same-cell-ontology-term merge (assembly layer, never a score change).
+        # OFF (default) = skipped entirely → bytes equal the pre-wiring response. Runs after the
+        # anti-union and tissue-scope filters so it merges what actually survives, and before the
+        # state split so the state bucket keeps its existing semantics.
+        cl_demoted = []
+        if _cl_key_enabled():
+            rank_full, cl_demoted, _cl_attached = _cl_dedup_split(rank_full, _cl_labelmap())
         rank_kept, state_ann = _x4b_split_state_ranking(rank_full)
         # compatibility field: on a single library the top-level auc_threshold semantics are kept
         auc = next((d.get("auc_threshold") for _, _, d in dbs if d.get("auc_threshold")), None)
@@ -846,6 +936,8 @@ def query_marker(genes=None, cell_type=None, library="all",
             resp["tissue_scope"] = tissue_scope
         if tissue_excluded:
             resp["tissue_excluded_candidates"] = tissue_excluded
+        if cl_demoted:
+            resp["cl_duplicate_demoted"] = cl_demoted
         # [X4B-FIX F3] off-domain low-confidence advisory (additive key only; criterion frozen in
         # PREREG §3.1 — the dev-panel file being absent on this surface makes the probe inert, zero
         # drift). Attached on the default all-route only — the "adult vocabulary on fetal material"

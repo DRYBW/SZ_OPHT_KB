@@ -1,0 +1,736 @@
+{
+ "schema": "eyekb-cl-labelmap/1.0",
+ "version": "cl-labelmap-unified-v1.0",
+ "generated_at": "2026-10-20",
+ "card": "CL unify wave (PI 都改, 2026-10-20)",
+ "prereg": "/mnt/D/EyeKB/plans/oss_check_20261019/scorer_guard_20261020/cl_unify/PREREG_CL_UNIFY_20261020.md",
+ "supersedes_note": "markers_cl_alignment_v1.json covers 22 labels / 3 libraries and is kept unchanged as a historical audit artifact; this file covers 60 labels / 9 libraries.",
+ "source_resolution": "every cl_id below was resolved by name against cl-base.obo at build time; none typed from memory",
+ "cl_release": "/mnt/D/OcularKB/ocularkb/rag/ontology/cl-base.obo",
+ "cl_terms_loaded": 3335,
+ "convention": "CL preferred name is the shared vocabulary; ids resolved from the release file, never typed from memory",
+ "libraries": {
+  "retina": {
+   "file": "markers_v4.1_clean.json",
+   "state": "default_on",
+   "labels": 10,
+   "embedded_cl_id_in_file": 0,
+   "mapped_by_sidecar": 10,
+   "no_match": []
+  },
+  "membrane": {
+   "file": "markers_membrane_v1.json",
+   "state": "default_on",
+   "labels": 23,
+   "embedded_cl_id_in_file": 0,
+   "mapped_by_sidecar": 21,
+   "no_match": [
+    "APC_MHCII_high",
+    "Proliferating"
+   ]
+  },
+  "retina_interneuron": {
+   "file": "markers_v5_retina_interneuron.json",
+   "state": "default_on",
+   "labels": 10,
+   "embedded_cl_id_in_file": 0,
+   "mapped_by_sidecar": 10,
+   "no_match": []
+  },
+  "retina_v6": {
+   "file": "markers_v6_retina_repair.json",
+   "state": "default_on",
+   "labels": 10,
+   "embedded_cl_id_in_file": 0,
+   "mapped_by_sidecar": 10,
+   "no_match": []
+  },
+  "face_v6": {
+   "file": "markers_v6_face_increment.json",
+   "state": "default_on",
+   "labels": 7,
+   "embedded_cl_id_in_file": 6,
+   "mapped_by_sidecar": 7,
+   "no_match": []
+  },
+  "k9_ocs": {
+   "file": "markers_k9_ocs_increment.json",
+   "state": "default_on",
+   "labels": 4,
+   "embedded_cl_id_in_file": 0,
+   "mapped_by_sidecar": 4,
+   "no_match": []
+  },
+  "lacrimal_v6": {
+   "file": "markers_v6_lacrimal_increment.json",
+   "state": "registered_off",
+   "labels": 3,
+   "embedded_cl_id_in_file": 3,
+   "mapped_by_sidecar": 2,
+   "no_match": [
+    "Lacrimal_duct_epithelial"
+   ]
+  },
+  "retina_v7": {
+   "file": "markers_v7_panel_increment.json",
+   "state": "registered_off",
+   "labels": 10,
+   "embedded_cl_id_in_file": 0,
+   "mapped_by_sidecar": 10,
+   "no_match": []
+  },
+  "retina_dev": {
+   "file": "markers_v9_dev_retina.json",
+   "state": "registered_off",
+   "labels": 14,
+   "embedded_cl_id_in_file": 0,
+   "mapped_by_sidecar": 3,
+   "no_match": [
+    "AC_precursor",
+    "BC_precursor",
+    "Cone_precursor",
+    "HC_precursor",
+    "NRPC_early",
+    "NRPC_late",
+    "RGC_precursor",
+    "Retinal_Proliferating",
+    "Rod_precursor",
+    "TAC_proliferating",
+    "glia_precursor"
+   ]
+  }
+ },
+ "labels": {
+  "Rod": {
+   "cl_id": "CL:0000604",
+   "cl_label": "retinal rod cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "retina",
+    "retina_interneuron",
+    "retina_v6"
+   ]
+  },
+  "Cone": {
+   "cl_id": "CL:0000573",
+   "cl_label": "retinal cone cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "retina",
+    "retina_interneuron",
+    "retina_v6"
+   ]
+  },
+  "BC": {
+   "cl_id": "CL:0000748",
+   "cl_label": "retinal bipolar neuron",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "retina",
+    "retina_interneuron",
+    "retina_v6"
+   ]
+  },
+  "AC": {
+   "cl_id": "CL:0000561",
+   "cl_label": "amacrine cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "retina",
+    "retina_interneuron",
+    "retina_v6"
+   ]
+  },
+  "HC": {
+   "cl_id": "CL:0000745",
+   "cl_label": "retina horizontal cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "retina",
+    "retina_interneuron",
+    "retina_v6"
+   ]
+  },
+  "RGC": {
+   "cl_id": "CL:0000740",
+   "cl_label": "retinal ganglion cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "retina",
+    "retina_interneuron",
+    "retina_v6"
+   ]
+  },
+  "MG": {
+   "cl_id": "CL:0000636",
+   "cl_label": "Mueller cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "retina",
+    "retina_interneuron",
+    "retina_v6"
+   ]
+  },
+  "Astro": {
+   "cl_id": "CL:0000127",
+   "cl_label": "astrocyte",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "retina",
+    "retina_interneuron",
+    "retina_v6"
+   ]
+  },
+  "Micro": {
+   "cl_id": "CL:0000129",
+   "cl_label": "microglial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "retina",
+    "retina_interneuron",
+    "retina_v6"
+   ]
+  },
+  "RPE": {
+   "cl_id": "CL:0002586",
+   "cl_label": "retinal pigment epithelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "retina",
+    "retina_interneuron",
+    "retina_v6"
+   ]
+  },
+  "Endo": {
+   "cl_id": "CL:0000115",
+   "cl_label": "endothelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "membrane",
+    "retina_v7"
+   ]
+  },
+  "Endo_Patho": {
+   "cl_id": "CL:0000115",
+   "cl_label": "endothelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": "pathological state of endothelial cell",
+   "libraries": [
+    "membrane",
+    "retina_v7"
+   ]
+  },
+  "Pericyte": {
+   "cl_id": "CL:0000669",
+   "cl_label": "pericyte",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "face_v6",
+    "membrane",
+    "retina_v7"
+   ]
+  },
+  "SMC": {
+   "cl_id": "CL:0000192",
+   "cl_label": "smooth muscle cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "face_v6",
+    "membrane",
+    "retina_v7"
+   ]
+  },
+  "Fibroblast": {
+   "cl_id": "CL:0000057",
+   "cl_label": "fibroblast",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "face_v6",
+    "membrane"
+   ]
+  },
+  "Myofibroblast": {
+   "cl_id": "CL:0000186",
+   "cl_label": "myofibroblast cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "face_v6",
+    "membrane"
+   ]
+  },
+  "Mono_Classical": {
+   "cl_id": "CL:0000860",
+   "cl_label": "classical monocyte",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "membrane"
+   ]
+  },
+  "Mono_Nonclassical": {
+   "cl_id": "CL:0000875",
+   "cl_label": "non-classical monocyte",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "membrane"
+   ]
+  },
+  "Mac_Tissue": {
+   "cl_id": "CL:0000235",
+   "cl_label": "macrophage",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "membrane"
+   ]
+  },
+  "Mac_DAM_LAM": {
+   "cl_id": "CL:0000235",
+   "cl_label": "macrophage",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "membrane",
+    "retina_v7"
+   ]
+  },
+  "Microglia": {
+   "cl_id": "CL:0000129",
+   "cl_label": "microglial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "membrane",
+    "retina_v7"
+   ]
+  },
+  "APC_MHCII_high": {
+   "cl_id": null,
+   "cl_label": null,
+   "status": "no_match",
+   "reason": "marker-defined antigen-presenting phenotype, not a CL cell type",
+   "qualifier": "phenotype qualifier",
+   "libraries": [
+    "membrane"
+   ]
+  },
+  "cDC1": {
+   "cl_id": "CL:0000990",
+   "cl_label": "conventional dendritic cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "membrane"
+   ]
+  },
+  "cDC2": {
+   "cl_id": "CL:0000990",
+   "cl_label": "conventional dendritic cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "membrane"
+   ]
+  },
+  "pDC": {
+   "cl_id": "CL:0000784",
+   "cl_label": "plasmacytoid dendritic cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "membrane"
+   ]
+  },
+  "T": {
+   "cl_id": "CL:0000084",
+   "cl_label": "T cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "membrane"
+   ]
+  },
+  "NK": {
+   "cl_id": "CL:0000623",
+   "cl_label": "natural killer cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "membrane"
+   ]
+  },
+  "B": {
+   "cl_id": "CL:0000236",
+   "cl_label": "B cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "membrane"
+   ]
+  },
+  "Plasma": {
+   "cl_id": "CL:0000786",
+   "cl_label": "plasma cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "membrane"
+   ]
+  },
+  "Granulocyte": {
+   "cl_id": "CL:0000094",
+   "cl_label": "granulocyte",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "membrane"
+   ]
+  },
+  "Proliferating": {
+   "cl_id": null,
+   "cl_label": null,
+   "status": "no_match",
+   "reason": "cell-cycle state, not a CL cell type",
+   "qualifier": null,
+   "libraries": [
+    "membrane"
+   ]
+  },
+  "Keratocytes": {
+   "cl_id": "CL:0002363",
+   "cl_label": "keratocyte",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "face_v6",
+    "membrane"
+   ]
+  },
+  "Corneal Endothelium": {
+   "cl_id": "CL:0000132",
+   "cl_label": "corneal endothelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "membrane"
+   ]
+  },
+  "Conj_epithelium_basal": {
+   "cl_id": "CL:1000432",
+   "cl_label": "conjunctival epithelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": "basal layer descriptor",
+   "libraries": [
+    "face_v6"
+   ]
+  },
+  "Conj_epithelium_superficial": {
+   "cl_id": "CL:1000432",
+   "cl_label": "conjunctival epithelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": "superficial layer descriptor",
+   "libraries": [
+    "face_v6"
+   ]
+  },
+  "Melanocyte": {
+   "cl_id": "CL:0000148",
+   "cl_label": "melanocyte",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "k9_ocs"
+   ]
+  },
+  "Schwann": {
+   "cl_id": "CL:0002573",
+   "cl_label": "Schwann cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "k9_ocs"
+   ]
+  },
+  "Conj_epithelium_suprabasal": {
+   "cl_id": "CL:1000432",
+   "cl_label": "conjunctival epithelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": "suprabasal layer descriptor",
+   "libraries": [
+    "k9_ocs"
+   ]
+  },
+  "Limbus_Sclera_fibroblast_C1": {
+   "cl_id": "CL:0000057",
+   "cl_label": "fibroblast",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": "site-specific cluster, mapped to fibroblast",
+   "libraries": [
+    "k9_ocs"
+   ]
+  },
+  "Lacrimal_secretory_tearcell": {
+   "cl_id": "CL:0000315",
+   "cl_label": "tear secreting cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "lacrimal_v6"
+   ]
+  },
+  "Lacrimal_duct_epithelial": {
+   "cl_id": null,
+   "cl_label": null,
+   "status": "no_match",
+   "reason": "CL has no lacrimal duct epithelial term in this release",
+   "qualifier": null,
+   "libraries": [
+    "lacrimal_v6"
+   ]
+  },
+  "Lacrimal_myoepithelial": {
+   "cl_id": "CL:0000185",
+   "cl_label": "myoepithelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "lacrimal_v6"
+   ]
+  },
+  "Endo_Arterial": {
+   "cl_id": "CL:0000115",
+   "cl_label": "endothelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": "CL release has no artery endothelial term; mapped to endothelial cell",
+   "libraries": [
+    "retina_v7"
+   ]
+  },
+  "Endo_Capillary": {
+   "cl_id": "CL:0002144",
+   "cl_label": "capillary endothelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "retina_v7"
+   ]
+  },
+  "Endo_Venous": {
+   "cl_id": "CL:0002543",
+   "cl_label": "vein endothelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "retina_v7"
+   ]
+  },
+  "Macrophage": {
+   "cl_id": "CL:0000235",
+   "cl_label": "macrophage",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "retina_v7"
+   ]
+  },
+  "RPC_early": {
+   "cl_id": "CL:0002672",
+   "cl_label": "retinal progenitor cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": "early temporal state",
+   "libraries": [
+    "retina_dev"
+   ]
+  },
+  "RPC_late": {
+   "cl_id": "CL:0002672",
+   "cl_label": "retinal progenitor cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": "late temporal state",
+   "libraries": [
+    "retina_dev"
+   ]
+  },
+  "NRPC_early": {
+   "cl_id": null,
+   "cl_label": null,
+   "status": "no_match",
+   "reason": "CL has no neurogenic retinal progenitor term in this release",
+   "qualifier": null,
+   "libraries": [
+    "retina_dev"
+   ]
+  },
+  "NRPC_late": {
+   "cl_id": null,
+   "cl_label": null,
+   "status": "no_match",
+   "reason": "CL has no neurogenic retinal progenitor term in this release",
+   "qualifier": null,
+   "libraries": [
+    "retina_dev"
+   ]
+  },
+  "TAC_proliferating": {
+   "cl_id": null,
+   "cl_label": null,
+   "status": "no_match",
+   "reason": "transit-amplifying state within the retinal progenitor lineage",
+   "qualifier": null,
+   "libraries": [
+    "retina_dev"
+   ]
+  },
+  "Rod_precursor": {
+   "cl_id": null,
+   "cl_label": null,
+   "status": "no_match",
+   "reason": "CL has no rod photoreceptor precursor term in this release",
+   "qualifier": null,
+   "libraries": [
+    "retina_dev"
+   ]
+  },
+  "Cone_precursor": {
+   "cl_id": null,
+   "cl_label": null,
+   "status": "no_match",
+   "reason": "CL has no cone photoreceptor precursor term in this release",
+   "qualifier": null,
+   "libraries": [
+    "retina_dev"
+   ]
+  },
+  "BC_precursor": {
+   "cl_id": null,
+   "cl_label": null,
+   "status": "no_match",
+   "reason": "CL has no bipolar precursor term in this release",
+   "qualifier": null,
+   "libraries": [
+    "retina_dev"
+   ]
+  },
+  "AC_precursor": {
+   "cl_id": null,
+   "cl_label": null,
+   "status": "no_match",
+   "reason": "CL has no amacrine precursor term in this release",
+   "qualifier": null,
+   "libraries": [
+    "retina_dev"
+   ]
+  },
+  "HC_precursor": {
+   "cl_id": null,
+   "cl_label": null,
+   "status": "no_match",
+   "reason": "CL has no horizontal precursor term in this release",
+   "qualifier": null,
+   "libraries": [
+    "retina_dev"
+   ]
+  },
+  "RGC_precursor": {
+   "cl_id": null,
+   "cl_label": null,
+   "status": "no_match",
+   "reason": "CL has no ganglion precursor term in this release",
+   "qualifier": null,
+   "libraries": [
+    "retina_dev"
+   ]
+  },
+  "glia_precursor": {
+   "cl_id": null,
+   "cl_label": null,
+   "status": "no_match",
+   "reason": "CL has no retinal glia precursor term in this release",
+   "qualifier": null,
+   "libraries": [
+    "retina_dev"
+   ]
+  },
+  "RPE_fetal": {
+   "cl_id": "CL:0002586",
+   "cl_label": "retinal pigment epithelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": "fetal stage qualifier",
+   "libraries": [
+    "retina_dev"
+   ]
+  },
+  "Retinal_Proliferating": {
+   "cl_id": null,
+   "cl_label": null,
+   "status": "no_match",
+   "reason": "cell-cycle state, not a CL cell type",
+   "qualifier": null,
+   "libraries": [
+    "retina_dev"
+   ]
+  }
+ }
+}
