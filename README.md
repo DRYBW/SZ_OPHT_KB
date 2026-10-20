@@ -168,6 +168,11 @@ for c in claims[:3]:
 | **Project record layer** | `docs/wiki/`, `docs/VERSION_NOTES.md` | Project status, historical decisions, per-version change records — for maintainers; not part of any single analysis run |
 | **Batch entry layer** | `pipeline/` | Executable entry for steps 1–7 (Phase A standard processing + Phase B per-cluster evidence collection), outputting evidence reports and a human-decision list; zero-LLM by default |
 
+**Which tissues the dictionary actually covers** is declared rather than left to the reader:
+`docs/TISSUE_COVERAGE_DECLARATION.md` states per-tissue measured coverage and names two declared
+gaps — **lens** and **iris** — where no annotated coverage is claimed. Output for those two tissues
+is unsupported and must not be published as an annotation result.
+
 ## What the workflow produces, end to end
 
 The four figures below are real outputs on public data, in processing order — three of them come straight from the shipped batch entry (`pipeline/run_pipeline.py`) run on a 600-cell demo subset of the PDR vitreous-membrane dataset GSE165784:
