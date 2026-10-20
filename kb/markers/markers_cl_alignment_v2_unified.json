@@ -1,10 +1,10 @@
 {
  "schema": "eyekb-cl-labelmap/1.0",
- "version": "cl-labelmap-unified-v1.0",
+ "version": "cl-labelmap-unified-v1.1",
  "generated_at": "2026-10-20",
  "card": "CL unification wave (2026-10-20): one shared Cell Ontology vocabulary across all marker libraries",
- "prereg": "PREREG_CL_UNIFY_20261020 (project plan record; kept outside this repository)",
- "supersedes_note": "markers_cl_alignment_v1.json covers 22 labels / 3 libraries and is kept unchanged as a historical audit artifact; this file covers 60 labels / 9 libraries.",
+ "prereg": "PREREG_CLMAP_ANTSEG_20261020 + PI overlap ruling 2026-10-20 (plan record kept outside this repository)",
+ "supersedes_note": "markers_cl_alignment_v1.json covers 22 labels / 3 libraries and is kept unchanged as a historical audit artifact; this file covers 60 labels / 9 libraries. v1.1 (2026-10-20): adds the antseg_v10 increment (16 labels, ids copied from the increment file itself). Two of the 16 share a CL term with existing labels and were adjudicated explicitly: CL:0000132 corneal endothelial cell is merged into the production entry (same term, same level); CL:1000432 conjunctival epithelial cell is kept as a separate candidate and not used as a CL key, because its three production siblings are layer descriptors under it. The 60 pre-existing labels are unchanged.",
  "source_resolution": "every cl_id below was resolved by name against the Cell Ontology OBO release at build time; none typed from memory",
  "cl_release": "Cell Ontology (CL) OBO release, name-indexed at build time; term count recorded in cl_terms_loaded",
  "cl_terms_loaded": 3335,
@@ -98,6 +98,17 @@
     "TAC_proliferating",
     "glia_precursor"
    ]
+  },
+  "antseg_v10": {
+   "file": "markers_v10_antseg_increment.json",
+   "state": "default_on",
+   "labels": 16,
+   "embedded_cl_id_in_file": 16,
+   "mapped_by_sidecar": 15,
+   "no_match": [
+    "conjunctival epithelial cell"
+   ],
+   "kept_separate": 1
   }
  },
  "labels": {
@@ -731,6 +742,184 @@
    "libraries": [
     "retina_dev"
    ]
+  },
+  "lens epithelial cell": {
+   "cl_id": "CL:0002224",
+   "cl_label": "lens epithelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "antseg_v10"
+   ]
+  },
+  "lens fiber cell": {
+   "cl_id": "CL:0011004",
+   "cl_label": "lens fiber cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "antseg_v10"
+   ]
+  },
+  "corneal epithelial cell": {
+   "cl_id": "CL:0000575",
+   "cl_label": "corneal epithelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "antseg_v10"
+   ]
+  },
+  "corneal endothelial cell": {
+   "cl_id": "CL:0000132",
+   "cl_label": "corneal endothelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": "merged with production label 'Corneal Endothelium' (same CL term, same level; one scoring key)",
+   "libraries": [
+    "antseg_v10"
+   ],
+   "merge_decision": "merge",
+   "merged_with": "Corneal Endothelium"
+  },
+  "conjunctival epithelial cell": {
+   "cl_id": null,
+   "cl_label": null,
+   "status": "kept_separate",
+   "reason": "CL:1000432 conjunctival epithelial cell is the parent of the production layer labels (Conj_epithelium_basal, Conj_epithelium_superficial, Conj_epithelium_suprabasal); mapping it to the same key would collapse the layer granularity, so it is kept as a separate candidate and never used as a CL key",
+   "qualifier": "parent term",
+   "libraries": [
+    "antseg_v10"
+   ],
+   "cl_id_observed": "CL:1000432",
+   "merge_decision": "keep_separate"
+  },
+  "goblet cell": {
+   "cl_id": "CL:0000160",
+   "cl_label": "goblet cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "antseg_v10"
+   ]
+  },
+  "trabecular meshwork cell": {
+   "cl_id": "CL:0002367",
+   "cl_label": "trabecular meshwork cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "antseg_v10"
+   ]
+  },
+  "pigmented ciliary epithelial cell": {
+   "cl_id": "CL:0002303",
+   "cl_label": "pigmented ciliary epithelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "antseg_v10"
+   ]
+  },
+  "non-pigmented ciliary epithelial cell": {
+   "cl_id": "CL:0002304",
+   "cl_label": "non-pigmented ciliary epithelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "antseg_v10"
+   ]
+  },
+  "ciliary muscle cell": {
+   "cl_id": "CL:1000443",
+   "cl_label": "ciliary muscle cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "antseg_v10"
+   ]
+  },
+  "iris pigment epithelial cell": {
+   "cl_id": "CL:0002565",
+   "cl_label": "iris pigment epithelial cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "antseg_v10"
+   ]
+  },
+  "basal cell": {
+   "cl_id": "CL:0000646",
+   "cl_label": "basal cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "antseg_v10"
+   ]
+  },
+  "transit amplifying cell": {
+   "cl_id": "CL:0009010",
+   "cl_label": "transit amplifying cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "antseg_v10"
+   ]
+  },
+  "progenitor cell": {
+   "cl_id": "CL:0011026",
+   "cl_label": "progenitor cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "antseg_v10"
+   ]
+  },
+  "mast cell": {
+   "cl_id": "CL:0000097",
+   "cl_label": "mast cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "antseg_v10"
+   ]
+  },
+  "oligodendrocyte": {
+   "cl_id": "CL:0000128",
+   "cl_label": "oligodendrocyte",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "antseg_v10"
+   ]
   }
- }
+ },
+ "overlap_decisions": [
+  {
+   "cl_id": "CL:0000132",
+   "decision": "merge",
+   "merged_with": "Corneal Endothelium",
+   "rationale": "same CL term at the same granularity; two keys split one cell type into two votes"
+  },
+  {
+   "cl_id": "CL:1000432",
+   "decision": "keep_separate",
+   "parent_of": "Conj_epithelium_basal, Conj_epithelium_superficial, Conj_epithelium_suprabasal",
+   "rationale": "new label is the parent of the production layer descriptors; merging would delete layer granularity"
+  }
+ ]
 }
