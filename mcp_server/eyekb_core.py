@@ -276,39 +276,41 @@ def _k9_act_enabled():
     return v not in {"0", "false", "off", "no"}
 
 
-# [ANTSEG t_antseg_v10] non-retinal increment whitelist.  Unlike the v6/k9 gates this one defaults to
-# OFF when unset: the library is registered and reachable via library="antseg_v10", but it does not
-# join the default `all` set until the activation is approved.  Semantics: unset/{0,false,off,no,""}
-# = OFF; any other value = ON.
+# [ANTSEG t_antseg_v10] non-retinal increment whitelist.  Registered on the default `all` route as
+# of 2026-10-20 (PI override, see `_antseg_act_enabled`).  Semantics: {0,false,off,no} = OFF;
+# unset/empty/any other value = ON.
 ANTSEG_DEFAULT_LIBS = ("antseg_v10",)
 
 
 def _antseg_act_enabled():
-    """env EYEKB_ACT_ANTSEG — empty/unset/{0,false,off,no} = OFF; any other value = ON.
+    """env EYEKB_ACT_ANTSEG — {0,false,off,no} = OFF; unset/empty/anything else = ON.
 
-    Activation stays PI-reserved and is NOT signed off. The 2026-10-20 external acceptance round
-    closed every engineering item (A-F: byte-exact rollback, production-equivalent resources,
-    candidate-ordering invariants, declaration/ownership, bypass removal, accounting) but withheld
-    the default-on signature on two governance points:
+    DEFAULT ON since 2026-10-20 by PI decision after a per-tissue re-measurement of the shipped
+    code (plans/retina_deep_20261020/RESULT_PER_TISSUE_ANTSEG_20261020.md). The 2026-10-20 external
+    acceptance round closed every engineering item (A-F) but withheld the default-on signature on
+    two governance points: (1) the declared `scope_tissues` range is not yet confirmed and frozen by
+    a source independent of this round's effect data, and (2) the pre-registered condition for
+    activation — an independent anterior-segment author-annotated volume — is still unmet.
 
-      1. the declared `scope_tissues` range must be confirmed and frozen by a source independent of
-         this round's effect data — `ocular_surface` in particular does real work in the measured
-         gain, so the library's own declaration cannot validate itself;
-      2. the pre-registered condition for default activation (an independent anterior-segment
-         author-annotated volume) is still unmet.
+    THIS IS A PI-SIGNED OVERRIDE, NOT AN AUDIT PASS. The acceptance verdict on default activation
+    remains withheld; what the PI weighed instead is the measured per-tissue effect of the shipped
+    path: same_cl 32.11% -> 39.46% (+7.36pp) over 28 volumes / 721 clusters / 1,495,330 cells, with
+    posterior tissues byte-unchanged (retina, RPE, optic nerve, iris all +0.00pp, zero harm cells)
+    and 2,008 already-correct cells (0.13pp) relabelled in the anterior segment.
 
-    So the shipped state is sol's transitional form: code merged, activation OFF, explicit
-    library="antseg_v10" routing available. Flipping this default is a PI decision, and if it is
-    taken as an override it must say so in the sign-off record rather than read as an audit pass.
+    The kill switch is explicit: EYEKB_ACT_ANTSEG=0 restores the 2026-10-20 pre-flip OFF state
+    byte-for-byte (740/740 requests, 4,672,539 bytes, measured at the same path). Reverting to a
+    default-OFF registration means restoring the `"" in the OFF set` form of this predicate.
     """
     v = (os.environ.get("EYEKB_ACT_ANTSEG") or "").strip().casefold()
-    return v not in {"", "0", "false", "off", "no"}
+    return v not in {"0", "false", "off", "no"}
 
 
 # ---------------------------------------------------------------- increment eligibility guard
-# [ANTSEGGUARD 2026-10-20 · activation OFF pending PI · SOL acceptance round closed A-F,
+# [ANTSEGGUARD 2026-10-20 · activation ON by PI override · SOL acceptance round closed A-F,
 #  withheld the default-on signature on two governance points · evidence =
-#  plans/retina_deep_20261020/RESULT_ANTSEG_GUARD_20261020.md §9]
+#  plans/retina_deep_20261020/RESULT_ANTSEG_GUARD_20261020.md §9 and
+#  RESULT_PER_TISSUE_ANTSEG_20261020.md §3]
 # Why: switching the v10 anterior-segment increment on raises same_cl +6.98pp, but unguarded it
 # answers 10.67pp more cells at coin-flip quality (47.0% correct) and silently relabels 1.64pp of
 # already-correct cells. Each condition removes one MEASURED failure mode:
@@ -778,7 +780,7 @@ def _load_marker_dbs(library="all"):
         if _k9_act_enabled():
             names = names + list(K9_DEFAULT_LIBS)  # [ACT t_abfebe59] k9_ocs append; no injectable lib names
         if _antseg_act_enabled():
-            names = names + list(ANTSEG_DEFAULT_LIBS)  # [ANTSEG] non-retinal increment, OFF by default
+            names = names + list(ANTSEG_DEFAULT_LIBS)  # [ANTSEG] non-retinal increment, ON since 2026-10-20
     elif lib in MARKER_LIBS:
         names = [lib]
     else:
