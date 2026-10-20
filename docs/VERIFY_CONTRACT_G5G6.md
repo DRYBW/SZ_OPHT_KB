@@ -29,7 +29,7 @@
 
 | 面 | 路径 | 性质 |
 |---|---|---|
-| 归属台账 | `docs/W3_PIPELINE_REGISTRY.tsv` | **既有件，只读**（97 行；本门不改其字节） |
+| 归属台账 | `docs/W3_PIPELINE_REGISTRY.tsv` | **既有件**；本门不改其内容语义。2026-10-20 路径可移植修复（预注册 `PREREG_G5_PORTABILITY_20261020.md`）把仓内 20 行的 `path` 列由绝对路径改为仓内相对路径，其余列一字节未动；仓外 80 行保持绝对 |
 | 仓内门清单 | `docs/GATE_INVENTORY_G5G6.tsv` | 本卡新增（G1–G6 六门，sha 逐门实取） |
 | 台账快照漂移记账 | `tests/fixtures/g5/snapshot_drift_ledger.tsv` | 本卡新增（见 §G5.3） |
 | 一键入口 | `tests/run_gates.sh` | 本卡新增（未登记加载的判定面） |
@@ -41,13 +41,26 @@
 | G5-C01 SCHEMA | 台账/门清单必填列齐备；必填格非空 | — |
 | G5-C02 ID-UNIQUE | 件 ID / 门 ID 唯一（台账 97 行 97 ID、门清单 6 行 6 ID） | — |
 | G5-C03 OWNER | 台账「变更口」非空非占位；门清单 owner 须有问责锚（维护方/卡号） | — |
-| G5-C04 REF-EXIST | 路径引用在盘上存在；跨面件 ID 引用可解析 | **缺件** |
+| G5-C04 REF-EXIST | 路径引用在盘上存在；跨面件 ID 引用可解析。相对路径按仓库根解析；绝对路径在声明的维护方本地根（`MAINTAINER_LOCAL_ROOTS`，现为 `/mnt/D/EyeKB`）之下且不在盘上时，计为 `local-unavailable`（信息项，不 FAIL，因任何 clone 都不可能含它）；其余绝对路径缺失仍判 **缺件** | **缺件** |
 | G5-C05 SHA-MATCH | 现取 sha == 登记 sha（漂移行须被记账豁免） | **摘要漂移** |
 | G5-C06 LEDGER | 记账诚实：条目须对应真实行、须确实处于漂移态（过期免检条 = FAIL，防白名单化） | （本卡新增） |
 | G5-C07 UNREG-LOAD | `tests/run_gates.sh` 调用的每个门脚本都须已登记且 sha 相符 | **未登记加载** |
 | G5-C08 CERT-EXPIRY | 台账/清单中声明的「到期日」不得早于 `--as-of` | **过期认证** |
 
 退出码：`0`=全 PASS；`2`=任一 FAIL（fail-closed）。默认 `--as-of 2026-10-12`。
+
+### G5.1b 路径面（2026-10-20，预注册 `PREREG_G5_PORTABILITY_20261020.md`）
+
+旧版 `gate_registry.py` 三处直接 `Path(row["path"])`，C07 两侧键一为台账原样字符串、一为 `(ROOT/rel).resolve()`；维护方机器上 `ROOT` 恰等于台账写死的 `/home/ubuntu/EYEKB_REPO`，两键巧合相等，故长期绿灯。换到任何其他目录（`/tmp` 另位 clone 实测）C07 恒报 4 项「registered on neither surface」，而这 4 个脚本其实都登记着。
+
+现规则：
+
+- `resolve_path(p)`：相对路径锚 `ROOT`；绝对路径原样。
+- `is_maintainer_local(p)`：绝对路径且位于 `MAINTAINER_LOCAL_ROOTS` 之下 → 维护方本地证据。
+- C04/C05/C06 全部走 `resolve_path`；C07 两侧键均经 `resolve_path(...).resolve()` 归一。
+- 仓内行改为相对路径后，clone 到任何位置读数一致；仓外 80 行仍为绝对路径，缺失时显式计入 `local-unavailable` 并在 detail 行显示数字，不静默通过，也不当作缺件。
+
+**严格性不变的证据**：负例电池 `tests/gate_g5g6_negative.py` N1（台账行指向 `/tmp/NO_SUCH_GATE_FILE_G5.py`）仍须触发 `G5-C04`，16/16 全符。故意把一条仓外行指向不存在的 `/mnt/D/EyeKB/...` → `local-unavailable=1` 且 PASS；把一条仓内相对行指向不存在的仓内文件 → `missing paths=1` 且 FAIL。
 
 ### G5.2 实测（本轮现取，完整日志 `logs/g5_standalone.log`）
 

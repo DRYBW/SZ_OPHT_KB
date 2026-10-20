@@ -45,6 +45,31 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
+# Maintainer-local evidence roots. The ownership ledger mixes two surfaces:
+#   (a) repo surface      -> paths inside the repository, registered repo-relative, portable;
+#   (b) maintainer-local  -> paths under these roots, i.e. working evidence that is never
+#                            distributed with the clone (datasets, plans, frozen golds).
+# A path under a declared local root that is absent is reported as "local-unavailable"
+# (informational, counted in the detail line) because no clone can ever contain it.
+# Any other absolute path that is absent is a genuine MISSING FILE -> C04 fails.
+# The allowlist is explicit and narrow on purpose: an arbitrary absolute path (e.g. /tmp/x.py)
+# is NOT excused, so the N1 negative case still trips C04.
+MAINTAINER_LOCAL_ROOTS = ("/mnt/D/EyeKB",)
+
+
+def resolve_path(p: str) -> Path:
+    """Repo-relative paths anchor at ROOT; absolute paths are taken as written."""
+    q = Path((p or "").strip())
+    return q if q.is_absolute() else (ROOT / q)
+
+
+def is_maintainer_local(p: str) -> bool:
+    q = Path((p or "").strip())
+    if not q.is_absolute():
+        return False
+    r = str(q.resolve()) if q.exists() else str(q)
+    return any(r == root or r.startswith(root.rstrip("/") + "/") for root in MAINTAINER_LOCAL_ROOTS)
+
 LEDGER_REQUIRED = ["layer", "item_id", "item_name", "category", "path", "version", "authority", "change_gate", "sha256", "state"]
 INV_REQUIRED = ["gate_id", "gate_name", "entry_point", "script_path", "sha256", "owner",
                 "freeze_gate", "regression_gate", "status", "note"]
@@ -145,10 +170,13 @@ def main() -> int:
         bad_owner)
 
     # G5-C04 REF-EXIST
-    missing_paths, dangling_ids = [], []
+    missing_paths, dangling_ids, local_unavailable = [], [], []
     for r in rows:
-        p = Path((r.get("path") or "").strip())
+        p = resolve_path(r.get("path") or "")
         if not p.exists():
+            if is_maintainer_local(r.get("path") or ""):
+                local_unavailable.append(f"{r.get('item_id')}:{p} (maintainer-local, not distributed)")
+                continue
             st = (r.get("state") or "").strip()
             if st.startswith(("MISSING", "SHELF", "ARCHIVED")):
                 continue
@@ -163,8 +191,9 @@ def main() -> int:
                     if m not in known:
                         dangling_ids.append(f"{src}:{r.get('item_id') or r.get('gate_id')} -> {m}")
     rec("G5-C04 REF-EXIST", not missing_paths and not dangling_ids,
-        f"missing paths={len(missing_paths)}; dangling id refs={len(dangling_ids)}",
-        missing_paths + dangling_ids)
+        f"missing paths={len(missing_paths)}; dangling id refs={len(dangling_ids)}; "
+        f"local-unavailable={len(local_unavailable)} (declared local roots: {', '.join(MAINTAINER_LOCAL_ROOTS)})",
+        missing_paths + dangling_ids + local_unavailable)
 
     # G5-C05 SHA-MATCH (+ ledger dispensation)
     dispensed, drifted, ledger_rows, ledger_hdr = [], [], [], []
@@ -179,7 +208,7 @@ def main() -> int:
         if iid not in by_id:
             led_err.append(f"ledger entry for unknown item: {iid}")
     for r in rows:
-        p = Path((r.get("path") or "").strip())
+        p = resolve_path(r.get("path") or "")
         if not p.is_file():
             continue
         cur = sha256_of(p)
@@ -195,7 +224,7 @@ def main() -> int:
         else:
             drifted.append(f"{r.get('item_id')}:{p.name} registered={reg_sha[:16]} live={cur[:16]}")
     for r in inv:
-        p = Path((r.get("script_path") or "").strip())
+        p = resolve_path(r.get("script_path") or "")
         if not p.is_file():
             continue
         cur = sha256_of(p)
@@ -214,7 +243,7 @@ def main() -> int:
             rr = by_id.get(iid)
             if rr is None:
                 continue
-            p = Path((rr.get("path") or "").strip())
+            p = resolve_path(rr.get("path") or "")
             same_as_reg = p.is_file() and sha256_of(p) == (rr.get("sha256") or "").strip()
             if same_as_reg:
                 stale_entries.append(f"{iid}: live sha already equals the registered sha -> dispensation is stale, drop it")
@@ -232,9 +261,9 @@ def main() -> int:
     else:
         registered = {}
         for r in rows:
-            registered[str(Path((r.get("path") or "").strip()))] = (r.get("sha256") or "").strip()
+            registered[str(resolve_path(r.get("path") or "").resolve())] = (r.get("sha256") or "").strip()
         for r in inv:
-            registered[str(Path((r.get("script_path") or "").strip()))] = (r.get("sha256") or "").strip()
+            registered[str(resolve_path(r.get("script_path") or "").resolve())] = (r.get("sha256") or "").strip()
         invoked = sorted({m for m in ENTRY_SCRIPT.findall(ent_p.read_text(encoding="utf-8"))})
         if not invoked:
             unreg.append(f"{ent_p.name}: no gate script invocation found (entry is vacuous)")
