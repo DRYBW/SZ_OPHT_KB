@@ -284,9 +284,116 @@ ANTSEG_DEFAULT_LIBS = ("antseg_v10",)
 
 
 def _antseg_act_enabled():
-    """env EYEKB_ACT_ANTSEG — empty/unset/{0,false,off,no} = OFF; any other value = ON."""
+    """env EYEKB_ACT_ANTSEG — {0,false,off,no} = OFF rollback; unset/any other value = ON.
+
+    Default switched to ON on 2026-10-20 (PI "上") together with the eligibility guard
+    `_antseg_guard_split` below. The guard is part of the activation contract, not an option:
+    unguarded, the increment answers 10.67pp more cells at 47.0% precision and relabels 1.64pp of
+    already-correct cells. Rollback = EYEKB_ACT_ANTSEG=0 — no increment class is loaded, the guard
+    is inert, and the response is byte-identical to the pre-change baseline (gate A1).
+    """
     v = (os.environ.get("EYEKB_ACT_ANTSEG") or "").strip().casefold()
-    return v not in {"", "0", "false", "off", "no"}
+    return v not in {"0", "false", "off", "no"}
+
+
+# ---------------------------------------------------------------- increment eligibility guard
+# [ANTSEGGUARD 2026-10-20 · PI "上" · SOL CONDITIONAL rev2 · evidence =
+#  plans/retina_deep_20261020/RESULT_ANTSEG_GUARD_20261020.md]
+# Why: switching the v10 anterior-segment increment on raises same_cl +6.98pp, but unguarded it
+# answers 10.67pp more cells at coin-flip quality (47.0% correct) and silently relabels 1.64pp of
+# already-correct cells. Each condition removes one MEASURED failure mode:
+#   * n_shared >= 2            single-gene coincidences      -> new-answer precision 47.0% -> 75.5%
+#   * declared tissue scope    posterior volume routed to an anterior library           -> 82.5%
+#   * margin >= incumbent + 2  a narrower class displacing a correct generic class on a 1-gene
+#                              difference -> harm 1.64pp -> 0.13pp, net same_cl +6.38 -> +7.36
+# Scope: classes OWNED by the increment library, on the default composite route (library="all")
+# only — a caller that names library="antseg_v10" has already chosen its scope, and production
+# classes keep their own admission rule untouched.
+#
+# These three conditions are an admission POLICY, not a significance or calibrated-reliability
+# rule: the score is raw n_shared, so two shared genes are not two independent pieces of evidence.
+# The margin is deliberately asymmetric in favour of the incumbents (a tie goes to the class that
+# was already answerable); abstention stays legitimate, so the policy trades recall for precision.
+#
+# Wiring invariants (SOL item C):
+#   1. state_program entries never raise the bar — they do not compete for the top-1 slot;
+#   2. a failed increment candidate is removed BEFORE any step that could let it delete a
+#      production candidate (the CL-key merge), so nothing unrecoverable happens;
+#   3. the CL-key merge, which does choose between increment and production candidates, runs
+#      only after this filter has passed.
+ANTSEG_LIB_BASENAME = "markers_v10_antseg_increment.json"
+ANTSEG_MIN_SHARED = 2
+ANTSEG_MARGIN = 2
+
+
+def _antseg_scope_tissues(dbs):
+    """Declared anterior-segment scope, read from the increment file itself (never hard-coded).
+
+    Missing/empty declaration -> () and the caller fails CLOSED for increment classes, reporting
+    the gap: a library that does not say where it applies may not enter the automatic route.
+    This validates the caller's `tissue` STRING against the declaration; it does not establish
+    that the tissue metadata is itself correct — that remains the caller's responsibility.
+    """
+    for _n, path, db in dbs:
+        if Path(path).name == ANTSEG_LIB_BASENAME:
+            v = db.get("scope_tissues")
+            if isinstance(v, list):
+                return tuple(str(x).strip().casefold() for x in v if str(x).strip())
+    return ()
+
+
+def _antseg_is_increment(r, owner_map):
+    """True iff this candidate's owning library is the increment file (ownership = file basename)."""
+    return Path(owner_map.get(r["cell_type"], "")).name == ANTSEG_LIB_BASENAME
+
+
+def _antseg_guard_split(rank_full, owner_map, tissue, scope_tissues, is_state_entry):
+    """Return (kept, demoted, status). A hard set filter — it never touches any score.
+
+    `is_state_entry(e)` lets the caller exclude non-competing state_program entries from the
+    incumbent margin, so that a state entry cannot raise the admission bar for a real cell type.
+
+    A return of (rank_full, [], None) means "the guard did not apply" (no increment candidate
+    present) and the caller must not add any key to the response.
+    """
+    inc = [r for r in rank_full if _antseg_is_increment(r, owner_map)]
+    if not inc:
+        return rank_full, [], None
+    status = {"library": ANTSEG_LIB_BASENAME, "min_shared": ANTSEG_MIN_SHARED,
+              "margin": ANTSEG_MARGIN, "applies_to": "increment_classes_only"}
+    if not scope_tissues:
+        kept = [r for r in rank_full if not _antseg_is_increment(r, owner_map)]
+        demoted = [{"cell_type": r["cell_type"], "n_shared": r["n_shared"],
+                    "reason": "no_declared_scope"} for r in rank_full
+                   if _antseg_is_increment(r, owner_map)]
+        status["status"] = "no_declared_scope"
+        return kept, demoted, status
+    key = str(tissue or "").strip().casefold().replace(" ", "_")
+    if not key or not any(t in key for t in scope_tissues):
+        kept = [r for r in rank_full if not _antseg_is_increment(r, owner_map)]
+        demoted = [{"cell_type": r["cell_type"], "n_shared": r["n_shared"],
+                    "reason": "out_of_declared_tissue_scope"} for r in rank_full
+                   if _antseg_is_increment(r, owner_map)]
+        status["status"] = "out_of_scope"
+        status["tissue"] = tissue
+        return kept, demoted, status
+    best_inc = max([r["n_shared"] for r in rank_full
+                    if not _antseg_is_increment(r, owner_map) and not is_state_entry(r)] or [0])
+    kept, demoted = [], []
+    for r in rank_full:
+        if _antseg_is_increment(r, owner_map) and (
+                r["n_shared"] < ANTSEG_MIN_SHARED
+                or r["n_shared"] < best_inc + ANTSEG_MARGIN):
+            demoted.append({"cell_type": r["cell_type"], "n_shared": r["n_shared"],
+                            "reason": "below_increment_eligibility",
+                            "best_incumbent_n_shared": best_inc,
+                            "needs_n_shared": max(ANTSEG_MIN_SHARED, best_inc + ANTSEG_MARGIN)})
+            continue
+        kept.append(r)
+    status["status"] = "in_scope"
+    status["tissue"] = tissue
+    status["best_incumbent_n_shared"] = best_inc
+    return kept, demoted, status
 
 
 # ---------------------------------------------------------------- Anti-union (composite entry) guard
@@ -771,23 +878,41 @@ def _dev_panel_gene_sets():
         return None
 
 
-def _x4b_split_state_ranking(rank_full):
+def _x4b_state_map():
+    """The (library basename, entry name) -> concept_kind map when the state split is active,
+    else None. Single source of truth for "is this entry a non-competing state program?" — shared
+    by the split itself and by callers that must not count state entries as incumbents."""
+    if not _state_guard_enabled():
+        return None
+    return _concept_kind_map()
+
+
+def _x4b_state_kind(e, km):
+    """concept_kind of one ranking entry, or None. Never mutates the entry."""
+    if km is None:
+        return None
+    name = str(e.get("cell_type", ""))
+    base = Path(str(e.get("library", ""))).name
+    ent = name.split("::")[-1]
+    return km.get((base, ent)) or km.get((base, name))
+
+
+def _x4b_split_state_ranking(rank_full, km=None):
     """F1 split: return (cell_type ranking surface, state_annotations sidecar list).
 
     Match key = (owner library basename, entry name; disambiguated 'lib::name' takes the '::' suffix).
-    Both lists keep the original relative order (stable). OFF / no sidecar / zero hits -> (list, [])."""
-    if not _state_guard_enabled():
-        return rank_full, []
-    km = _concept_kind_map()
+    Both lists keep the original relative order (stable). OFF / no sidecar / zero hits -> (list, []).
+
+    `km` may be supplied by a caller that already resolved `_x4b_state_map()`; passing it explicitly
+    guarantees the split and that caller used the same snapshot.
+    """
+    if km is None:
+        km = _x4b_state_map()
     if km is None:
         return rank_full, []
     kept, states = [], []
     for e in rank_full:
-        name = str(e.get("cell_type", ""))
-        base = Path(str(e.get("library", ""))).name
-        ent = name.split("::")[-1]
-        kind = km.get((base, ent)) or km.get((base, name))
-        if kind == "state_program":
+        if _x4b_state_kind(e, km) == "state_program":
             s = dict(e)
             s["concept_kind"] = "state_program"
             states.append(s)
@@ -940,14 +1065,31 @@ def query_marker(genes=None, cell_type=None, library="all",
                 tissue_scope = {"tissue": tissue, "status": "disabled",
                                 "inventory_status": rec.get("inventory_status", "not_in_crosswalk"),
                                 "reason": "switch_off: EYEKB_TISSUE_SCOPE not enabled; candidates not narrowed"}
+        # [ANTSEGGUARD 2026-10-20] increment eligibility: hard filter on the default composite
+        # route only. Position matters (SOL item C wiring invariants):
+        #   * AFTER the anti-union / tissue-scope filters, so "ownership" and the incumbent margin
+        #     are measured on the candidate set that those rules really leave;
+        #   * BEFORE the CL-key merge, because that merge keeps only the best-ranked member of each
+        #     CL group — if a failing increment candidate ran first it could delete a production
+        #     candidate of the same CL and the deletion would be unrecoverable;
+        #   * state_program entries are excluded from the margin (see `_antseg_guard_split`) — they
+        #     leave the ranking entirely, so they must not raise the bar for a real cell type.
+        antseg_demoted = []
+        antseg_guard = None
+        _state_km = _x4b_state_map()   # one snapshot shared by the guard and the split below
+        if (str(library or "all").strip().lower() == "all"
+                and any(Path(owner[c]).name == ANTSEG_LIB_BASENAME for c in owner)):
+            rank_full, antseg_demoted, antseg_guard = _antseg_guard_split(
+                rank_full, owner, tissue, _antseg_scope_tissues(dbs),
+                lambda e: _x4b_state_kind(e, _state_km) == "state_program")
         # [CLKEY 2026-10-20] same-cell-ontology-term merge (assembly layer, never a score change).
         # OFF (default) = skipped entirely → bytes equal the pre-wiring response. Runs after the
-        # anti-union and tissue-scope filters so it merges what actually survives, and before the
-        # state split so the state bucket keeps its existing semantics.
+        # anti-union, tissue-scope and increment-eligibility filters so it merges what actually
+        # survives, and before the state split so the state bucket keeps its existing semantics.
         cl_demoted = []
         if _cl_key_enabled():
             rank_full, cl_demoted, _cl_attached = _cl_dedup_split(rank_full, _cl_labelmap())
-        rank_kept, state_ann = _x4b_split_state_ranking(rank_full)
+        rank_kept, state_ann = _x4b_split_state_ranking(rank_full, _state_km)
         # compatibility field: on a single library the top-level auc_threshold semantics are kept
         auc = next((d.get("auc_threshold") for _, _, d in dbs if d.get("auc_threshold")), None)
         resp = {"mode": "genes", "query": gl, "gene_to_celltypes": hits,
@@ -964,6 +1106,12 @@ def query_marker(genes=None, cell_type=None, library="all",
             resp["tissue_excluded_candidates"] = tissue_excluded
         if cl_demoted:
             resp["cl_duplicate_demoted"] = cl_demoted
+        # [ANTSEGGUARD 2026-10-20] additive keys, written only when the guard actually ran (the
+        # increment is loaded on the default route). OFF state -> not present -> bytes unchanged.
+        if antseg_guard is not None:
+            resp["antseg_guard"] = antseg_guard
+        if antseg_demoted:
+            resp["antseg_guard_demoted"] = antseg_demoted
         # [X4B-FIX F3] off-domain low-confidence advisory (additive key only; criterion frozen in
         # PREREG §3.1 — the dev-panel file being absent on this surface makes the probe inert, zero
         # drift). Attached on the default all-route only — the "adult vocabulary on fetal material"

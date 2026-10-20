@@ -1,5 +1,5 @@
 {
- "version": "v10.0-antseg-20261020",
+ "version": "v10.1-antseg-scope-20261020",
  "created": "2026-10-20",
  "scope": "non-retinal ocular tissues: lens, cornea, conjunctiva, trabecular meshwork, ciliary body, iris, plus the generic stromal / immune / vascular / neural classes that were absent from the marker dictionary",
  "status": "staging only; library `antseg_v10` is NOT merged into the default `all` set",
@@ -1173,5 +1173,20 @@
   "Development-set filtering: panels were validated on the volumes they are reported on. Readings in this file are feasibility readings, not held-out performance.",
   "Classes flagged literature_thin have fewer than 10 genes because the local corpus does not carry enough independent iris pigment-epithelium literature; nothing was padded.",
   "Generic classes that the production dictionary already carries (fibroblast, pericyte, endothelial cell, SMC, melanocyte, macrophage, T, B, NK, plasma cell, Schwann, keratocyte) are deliberately excluded so the same biological type is not offered twice in one ranking."
- ]
+ ],
+ "scope_tissues": [
+  "cornea",
+  "conjunctiv",
+  "ocular_surface",
+  "lens",
+  "iris",
+  "ciliary",
+  "trabecular"
+ ],
+ "scope_tissues_provenance": {
+  "rule": "five keys are the file's own scope prose mapped to caller tissue strings; conjunctiv is a stem covering conjunctiva/conjunctival; ocular_surface is the declared alias because cornea and conjunctiva are ocular-surface tissues",
+  "matching": "case-insensitive substring match against the caller's tissue argument, spaces normalised to underscores; missing or empty list fails CLOSED for these classes",
+  "not_derived_from": "not derived from any evaluation corpus: cornea and conjunctiv match no volume in the 28-volume author-annotated corpus, so they carry no fitted signal",
+  "provenance": "added 2026-10-20 with the activation package; marker bodies unchanged"
+ }
 }
