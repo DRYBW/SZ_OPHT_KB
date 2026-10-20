@@ -284,21 +284,31 @@ ANTSEG_DEFAULT_LIBS = ("antseg_v10",)
 
 
 def _antseg_act_enabled():
-    """env EYEKB_ACT_ANTSEG — {0,false,off,no} = OFF rollback; unset/any other value = ON.
+    """env EYEKB_ACT_ANTSEG — empty/unset/{0,false,off,no} = OFF; any other value = ON.
 
-    Default switched to ON on 2026-10-20 (PI "上") together with the eligibility guard
-    `_antseg_guard_split` below. The guard is part of the activation contract, not an option:
-    unguarded, the increment answers 10.67pp more cells at 47.0% precision and relabels 1.64pp of
-    already-correct cells. Rollback = EYEKB_ACT_ANTSEG=0 — no increment class is loaded, the guard
-    is inert, and the response is byte-identical to the pre-change baseline (gate A1).
+    Activation stays PI-reserved and is NOT signed off. The 2026-10-20 external acceptance round
+    closed every engineering item (A-F: byte-exact rollback, production-equivalent resources,
+    candidate-ordering invariants, declaration/ownership, bypass removal, accounting) but withheld
+    the default-on signature on two governance points:
+
+      1. the declared `scope_tissues` range must be confirmed and frozen by a source independent of
+         this round's effect data — `ocular_surface` in particular does real work in the measured
+         gain, so the library's own declaration cannot validate itself;
+      2. the pre-registered condition for default activation (an independent anterior-segment
+         author-annotated volume) is still unmet.
+
+    So the shipped state is sol's transitional form: code merged, activation OFF, explicit
+    library="antseg_v10" routing available. Flipping this default is a PI decision, and if it is
+    taken as an override it must say so in the sign-off record rather than read as an audit pass.
     """
     v = (os.environ.get("EYEKB_ACT_ANTSEG") or "").strip().casefold()
-    return v not in {"0", "false", "off", "no"}
+    return v not in {"", "0", "false", "off", "no"}
 
 
 # ---------------------------------------------------------------- increment eligibility guard
-# [ANTSEGGUARD 2026-10-20 · PI "上" · SOL CONDITIONAL rev2 · evidence =
-#  plans/retina_deep_20261020/RESULT_ANTSEG_GUARD_20261020.md]
+# [ANTSEGGUARD 2026-10-20 · activation OFF pending PI · SOL acceptance round closed A-F,
+#  withheld the default-on signature on two governance points · evidence =
+#  plans/retina_deep_20261020/RESULT_ANTSEG_GUARD_20261020.md §9]
 # Why: switching the v10 anterior-segment increment on raises same_cl +6.98pp, but unguarded it
 # answers 10.67pp more cells at coin-flip quality (47.0% correct) and silently relabels 1.64pp of
 # already-correct cells. Each condition removes one MEASURED failure mode:
