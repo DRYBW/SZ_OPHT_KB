@@ -247,8 +247,9 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
                     # [TISSUESCOPE 2026-10-20] pass the S0-decided tissue into the marker query. This is
                     # the mechanical half of "decide tissue first": every cluster query now carries the
                     # tissue it belongs to, so the response always records tissue_scope status. Candidate
-                    # narrowing still depends on EYEKB_TISSUE_SCOPE (default OFF), and with no tissue
-                    # decided the call is byte-identical to the pre-wiring form.
+                    # narrowing is ON by default since 2026-10-20 (EYEKB_TISSUE_SCOPE ∈ {0,false,off,no}
+                    # is the explicit revert), and with no tissue decided the call is byte-identical to
+                    # the pre-wiring form.
                     _qm_args = {"genes": top}
                     if tissue:
                         _qm_args["tissue"] = tissue

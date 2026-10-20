@@ -63,10 +63,32 @@ def test_tissue_with_switch_off_does_not_narrow():
         full = core.query_marker(genes=CORNEAL_GENES)
         scoped = core.query_marker(genes=CORNEAL_GENES, tissue="retina")
         return full, scoped
-    full, scoped = with_env(None, go)
+    # 2026-10-20: the switch became default-ON, so the explicit revert state is now
+    # EYEKB_TISSUE_SCOPE=0 rather than "unset". This test's INTENT is unchanged (a revert-state
+    # call must not delete candidates); only the representation of "off" moved.
+    full, scoped = with_env("0", go)
     assert tops(full) == tops(scoped), "a tissue argument alone must never delete candidates"
     assert scoped["tissue_scope"]["status"] == "disabled"
     assert "tissue_excluded_candidates" not in scoped
+
+
+def test_default_on_narrows_without_any_env_var():
+    """New default semantics: unset env + a tissue argument DOES narrow (2026-10-20)."""
+    def go():
+        return core.query_marker(genes=CORNEAL_GENES, tissue="retina")
+    scoped = with_env(None, go)
+    assert scoped["tissue_scope"]["status"] == "applied"
+    assert "Conj_epithelium_basal" not in tops(scoped)
+
+
+def test_no_tissue_stays_identical_even_when_default_on():
+    """Safety boundary of default-on: no tissue argument => candidates never narrowed."""
+    def go():
+        return core.query_marker(genes=CORNEAL_GENES)
+    plain = with_env(None, go)
+    assert "tissue_scope" not in plain
+    assert "tissue_excluded_candidates" not in plain
+    assert "Conj_epithelium_basal" in tops(plain)
 
 
 def test_retina_removes_ocular_surface_identity():

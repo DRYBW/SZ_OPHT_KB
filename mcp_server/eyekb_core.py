@@ -352,9 +352,16 @@ def _load_crosswalk():
 
 
 def _tissue_scope_enabled():
-    """env EYEKB_TISSUE_SCOPE ∈ {1,true,on,yes} (casefold) = ON; unset/anything else = OFF."""
+    """env EYEKB_TISSUE_SCOPE ∈ {0,false,off,no} (casefold) = explicit OFF revert; unset/any other
+    value = ON (default-on, same semantics as EYEKB_KBGOV_B5 above).
+
+    Default changed to ON on 2026-10-20 (PI "ok"); criteria source =
+    plans/oss_check_20261019/scorer_guard_20261020/tissue_scope/PREREG_TISSUE_SCOPE_DEFAULT_ON_20261020.md.
+    Safety boundary: narrowing runs only inside the `if tissue:` branch, so a call WITHOUT a tissue
+    argument stays byte-identical to the pre-change response (gate D1) even though the switch is on.
+    """
     v = (os.environ.get("EYEKB_TISSUE_SCOPE") or "").strip().casefold()
-    return v in {"1", "true", "on", "yes"}
+    return v not in {"0", "false", "off", "no"}
 
 
 def _tissue_inventory(tissue):
