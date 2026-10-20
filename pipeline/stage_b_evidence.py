@@ -244,7 +244,15 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
                     top = [str(g) for g in sub["gene"].head(top_genes_n)]
                     frac_pct = 100.0 * int(sizes.loc[sizes["cluster"].astype(str) == cl, "n_cells"].iloc[0]) \
                         / max(total_cells, 1)
-                    qm = await call("query_marker", {"genes": top}) if top else None
+                    # [TISSUESCOPE 2026-10-20] pass the S0-decided tissue into the marker query. This is
+                    # the mechanical half of "decide tissue first": every cluster query now carries the
+                    # tissue it belongs to, so the response always records tissue_scope status. Candidate
+                    # narrowing still depends on EYEKB_TISSUE_SCOPE (default OFF), and with no tissue
+                    # decided the call is byte-identical to the pre-wiring form.
+                    _qm_args = {"genes": top}
+                    if tissue:
+                        _qm_args["tissue"] = tissue
+                    qm = await call("query_marker", _qm_args) if top else None
                     cands = [x.get("cell_type") for x in demote_kb9((qm or {}).get("celltype_ranking") or [])][:3]  # [KB9B t_3bbc769f]
                     # [X4B-FIX F2 t_95015c8a] volume plausibility gate — active only when the caller
                     # supplied --volume-counts AND the guard is on; zero artifact change otherwise

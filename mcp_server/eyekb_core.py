@@ -318,6 +318,106 @@ def _antiunion_split(rank_full, markers):
     return kept, demoted
 
 
+# ---------------------------------------------------------------- TISSUE-SCOPE candidate exclusion layer
+# [TISSUESCOPE 2026-10-20 · PI directive "补" after the audit found tissue/inventory was never fixed in MCP]
+# Criteria source = plans/oss_check_20261019/scorer_guard_20261020/PREREG_TISSUE_SCOPE_20261020.md
+# Data source    = kb/baselines/_tissue_class_crosswalk_v1.json (explicit, withdrawable, per-row provenance)
+#
+# Mechanism level: hard SET filter on the candidate list, applied BEFORE the ranking is returned —
+# same layer as the anti-union guard, never a score term. The crosswalk carries class NAMES only, no
+# composition percentages, so no composition quantity can reach scoring.
+# Default OFF: EYEKB_TISSUE_SCOPE unset → this whole block is skipped and the response is byte-equal to
+# the pre-wiring baseline (acceptance gate A1). A `tissue` argument alone only ATTACHES a status record;
+# it never narrows candidates unless the switch is on.
+CROSSWALK_PATH = None  # resolved lazily by _crosswalk_path() (KBB is not in scope on this surface)
+_CROSSWALK = {"loaded": False, "data": None}
+
+
+def _crosswalk_path():
+    here = Path(__file__).resolve().parent
+    return here.parent / "kb" / "baselines" / "_tissue_class_crosswalk_v1.json"
+
+
+def _load_crosswalk():
+    """Lazy, cached load. Missing/corrupt file → None (callers must treat as unavailable)."""
+    if _CROSSWALK["loaded"]:
+        return _CROSSWALK["data"]
+    _CROSSWALK["loaded"] = True
+    try:
+        with open(_crosswalk_path()) as f:
+            _CROSSWALK["data"] = json.load(f)
+    except (OSError, ValueError):
+        _CROSSWALK["data"] = None
+    return _CROSSWALK["data"]
+
+
+def _tissue_scope_enabled():
+    """env EYEKB_TISSUE_SCOPE ∈ {1,true,on,yes} (casefold) = ON; unset/anything else = OFF."""
+    v = (os.environ.get("EYEKB_TISSUE_SCOPE") or "").strip().casefold()
+    return v in {"1", "true", "on", "yes"}
+
+
+def _tissue_inventory(tissue):
+    """Crosswalk record for a tissue, or None when this tissue has no usable prior.
+
+    A record with inventory_status != 'available' or an empty class list is NOT usable: the
+    caller must fail OPEN (no narrowing) and surface the gap — an empty inventory must never be
+    read as 'this tissue has no cells'.
+    """
+    cw = _load_crosswalk()
+    if not cw:
+        return None
+    key = (tissue or "").strip().casefold().replace(" ", "_")
+    rec = (cw.get("tissues") or {}).get(key)
+    return rec
+
+
+def _tissue_scope_split(rank_full, tissue):
+    """Return (kept, excluded, status_dict).
+
+    Rule: a candidate is excluded iff its base class appears in THIS tissue's explicitly authored
+    excluded_classes list (clearly foreign signature identities). Classes merely absent from the
+    inventory are NOT excluded — a 10-row baseline is not evidence of absence in tissue, and
+    in-vivo vascular/immune/stromal populations the row set does not enumerate must stay nameable.
+
+    A tissue whose inventory_status is not 'available' fails OPEN (no narrowing): without a prior
+    there is nothing to justify deleting candidates (PREREG A4).
+    """
+    base = lambda ct: str(ct).split("::")[-1].strip()
+    cw = _load_crosswalk()
+    status = {"tissue": tissue, "status": "unavailable", "reason": ""}
+    if not cw:
+        status["reason"] = "crosswalk_missing"
+        return rank_full, [], status
+    key = (tissue or "").strip().casefold().replace(" ", "_")
+    rec = (cw.get("tissues") or {}).get(key)
+    if not rec:
+        status["reason"] = "tissue_not_in_crosswalk"
+        return rank_full, [], status
+    status["inventory_status"] = rec.get("inventory_status", "available")
+    if rec.get("inventory_status") != "available":
+        status["reason"] = rec.get("reason") or "inventory_absent"
+        return rank_full, [], status
+
+    strict = bool(cw.get("strict_whitelist", False))
+    banned = {str(c).strip() for c in (rec.get("excluded_classes") or [])}
+    whitelist = {str(c.get("kb_class")).strip() for c in (rec.get("classes") or []) if c.get("kb_class")}
+
+    kept, excluded = [], []
+    for r in rank_full:
+        b = base(r["cell_type"])
+        if b in banned or (strict and whitelist and b not in whitelist):
+            excluded.append({"cell_type": r["cell_type"], "n_shared": r.get("n_shared"),
+                             "reason": "tissue_excluded_class"})
+        else:
+            kept.append(r)
+    status.update({"status": "applied", "mode": "strict_whitelist" if strict else "explicit_exclusions",
+                   "n_before": len(rank_full), "n_after": len(kept),
+                   "n_excluded": len(excluded),
+                   "excluded_classes": sorted(banned)})
+    return kept, excluded, status
+
+
 # ---------------------------------------------------------------- KBGOV-B5 cross-species ranking governance layer
 # [B5IMPL t_8960c7e0 · USER_DIRECTIVE_20260928 five-queue item ① · PI pre-authorized wiring]
 # Input-species governance for query_marker genes-mode. Sole authoritative criteria source =
@@ -607,7 +707,7 @@ def _x4b_off_domain_flag(gl, kept_ranking):
 
 
 def query_marker(genes=None, cell_type=None, library="all",
-                 species=None, volume_id=None, volume_species=None):
+                 species=None, volume_id=None, volume_species=None, tissue=None):
     """Local authoritative marker library query (multi-library; see MARKER_LIBS).
     - cell_type mode: return that class's markers (retina library attaches micro/rpe detail)
     - genes mode: which classes each gene reverse-hits
@@ -711,6 +811,19 @@ def query_marker(genes=None, cell_type=None, library="all",
         composite_demoted = []
         if _antiunion_enabled():
             rank_full, composite_demoted = _antiunion_split(rank_full, markers)
+        # [TISSUESCOPE 2026-10-20] tissue-level candidate exclusion (hard set filter, never a score).
+        # OFF (default) = skipped entirely → bytes equal the pre-wiring response; a tissue argument
+        # alone only attaches the status record so callers can see whether a prior exists at all.
+        tissue_scope = None
+        tissue_excluded = []
+        if tissue:
+            if _tissue_scope_enabled():
+                rank_full, tissue_excluded, tissue_scope = _tissue_scope_split(rank_full, tissue)
+            else:
+                rec = _tissue_inventory(tissue) or {}
+                tissue_scope = {"tissue": tissue, "status": "disabled",
+                                "inventory_status": rec.get("inventory_status", "not_in_crosswalk"),
+                                "reason": "switch_off: EYEKB_TISSUE_SCOPE not enabled; candidates not narrowed"}
         rank_kept, state_ann = _x4b_split_state_ranking(rank_full)
         # compatibility field: on a single library the top-level auc_threshold semantics are kept
         auc = next((d.get("auc_threshold") for _, _, d in dbs if d.get("auc_threshold")), None)
@@ -721,6 +834,11 @@ def query_marker(genes=None, cell_type=None, library="all",
             resp["state_annotations"] = state_ann
         if composite_demoted:
             resp["composite_demoted"] = composite_demoted
+        # [TISSUESCOPE 2026-10-20] additive keys, present only when a tissue was supplied
+        if tissue_scope is not None:
+            resp["tissue_scope"] = tissue_scope
+        if tissue_excluded:
+            resp["tissue_excluded_candidates"] = tissue_excluded
         # [X4B-FIX F3] off-domain low-confidence advisory (additive key only; criterion frozen in
         # PREREG §3.1 — the dev-panel file being absent on this surface makes the probe inert, zero
         # drift). Attached on the default all-route only — the "adult vocabulary on fetal material"
@@ -957,6 +1075,26 @@ def get_tissue_composition(species, tissue, disease="", development_stage=""):
                               "module score / label weighting / confidence bonus / candidate ranking "
                               "score / composite QC score is forbidden (KB1v2 red line 1, fully "
                               "inheriting the REVIEWER_LLM T3 extended wording)")}
+    # [TISSUESCOPE 2026-10-20] inventory_status: an EMPTY major_classes list must never be read as
+    # "this tissue has no cells". It means the prior has not been built yet. Callers get an explicit
+    # gap signal plus whatever class list IS available from the crosswalk (names only, no fractions).
+    _cw = _load_crosswalk() or {}
+    _ti = (tissue or "").strip().casefold().replace(" ", "_")
+    _rec = (_cw.get("tissues") or {}).get(_ti)
+    if not rows:
+        resp["inventory_status"] = "absent"
+        resp["inventory_note"] = ("major_classes is empty for this tissue: the composition prior has "
+                                  "not been built. This is a GAP, not a statement that the tissue "
+                                  "contains no cells.")
+    else:
+        resp["inventory_status"] = "available"
+    if _rec is not None:
+        resp["tissue_class_crosswalk"] = {
+            "crosswalk": "_tissue_class_crosswalk_v1.json",
+            "inventory_status": _rec.get("inventory_status"),
+            "kb_classes": [c.get("kb_class") for c in (_rec.get("classes") or [])],
+            "unmapped_baseline_rows": _rec.get("unmapped_rows") or [],
+            "note": "class names only; candidate-exclusion prior, never a score or weight"}
     # KB1v2 (REVIEWER_LLM T2): baseline entries pass through their caliber fields; skeleton entries are
     # explicitly marked "interval not estimable"
     if entry.get("_kind") == "baseline":

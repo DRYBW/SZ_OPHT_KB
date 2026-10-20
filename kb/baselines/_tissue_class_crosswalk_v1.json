@@ -1,0 +1,681 @@
+{
+ "schema": "eyekb-tissue-class-crosswalk/1.0",
+ "generated": "2026-10-20",
+ "generator": "manual authoring from kb/baselines/*.json major_classes rows (no fuzzy matching)",
+ "purpose": "Candidate-set exclusion prior: which KB classes are legitimate for a tissue. Used ONLY as a hard set filter before candidate assembly when EYEKB_TISSUE_SCOPE=1. This table is NOT a score, weight, confidence bonus or ranking term, and must never be consumed as one.",
+ "red_line_note": "kb/baselines usage_redline forbids composition numbers feeding scores. This table carries class NAMES only (no percentages), so no composition quantity enters scoring. PI authorized 2026-10-20 ('补').",
+ "mapping_policy": "Explicit, withdrawable, with baseline_row provenance. No name-similarity inference. excluded_classes is authored per tissue and lists ONLY clearly foreign signature identities; classes that could be contamination are never banned from naming (contamination is a QC flag). A tissue with inventory_status=absent gets a coarse foreign-identity guard only — that guard is NOT an inventory and must not be reported as one.",
+ "tissues": {
+  "retina": {
+   "baseline_entry": "baseline_human_retina",
+   "inventory_status": "available",
+   "classes": [
+    {
+     "kb_class": "AC",
+     "baseline_row": "AC",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Astro",
+     "baseline_row": "Astrocyte",
+     "basis": "rename: KB uses Astro",
+     "note": "GFAP/AQP4/S100B shared marker set"
+    },
+    {
+     "kb_class": "BC",
+     "baseline_row": "BC",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Cone",
+     "baseline_row": "Cone",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "HC",
+     "baseline_row": "HC",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "MG",
+     "baseline_row": "MG",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Microglia",
+     "baseline_row": "Microglia",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Micro",
+     "baseline_row": "Microglia",
+     "basis": "KB has both Microglia and Micro panels for the same compartment"
+    },
+    {
+     "kb_class": "RGC",
+     "baseline_row": "RGC",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "RPE",
+     "baseline_row": "RPE",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Rod",
+     "baseline_row": "Rod",
+     "basis": "exact"
+    }
+   ],
+   "unmapped_rows": [],
+   "also_allowed_note": "Vascular/immune/mural classes (Endo, Pericyte, Fibroblast, SMC, T, B, NK, Plasma, Mono_*, Mac_*, cDC1, cDC2, pDC, Granulocyte, Proliferating) are present in retina sections in vivo but the retina baseline row set does not enumerate them; they stay OUT of the hard whitelist and are controlled by allow_non_baseline_classes (default true) so the filter only removes clearly foreign ocular-adnexa families.",
+   "excluded_classes": [
+    "Conj_epithelium_basal",
+    "Conj_epithelium_superficial",
+    "Conj_epithelium_suprabasal",
+    "Corneal Endothelium",
+    "Keratocytes",
+    "Limbus_Sclera_fibroblast_C1"
+   ],
+   "excluded_reason": "ocular surface / corneal identities are foreign to neural retina; contamination, if any, is a QC flag not an identity"
+  },
+  "RPE": {
+   "baseline_entry": "baseline_human_RPE",
+   "inventory_status": "available",
+   "classes": [
+    {
+     "kb_class": "RPE",
+     "baseline_row": "RPE",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Rod",
+     "baseline_row": "PR-associated",
+     "basis": "PR-associated = photoreceptor-associated fraction",
+     "note": "allow_ambiguous: maps a fuzzy row; flag in output"
+    },
+    {
+     "kb_class": "Cone",
+     "baseline_row": "PR-associated",
+     "basis": "same row as Rod"
+    },
+    {
+     "kb_class": "Mac_Tissue",
+     "baseline_row": "myeloid",
+     "basis": "myeloid compartment",
+     "note": "allow_ambiguous"
+    },
+    {
+     "kb_class": "Micro",
+     "baseline_row": "myeloid",
+     "basis": "same row"
+    }
+   ],
+   "unmapped_rows": [
+    {
+     "row": "neuron-like",
+     "reason": "no KB class corresponds; not inferred"
+    },
+    {
+     "row": "erythroid",
+     "reason": "no KB class corresponds; not inferred"
+    }
+   ],
+   "excluded_classes": [
+    "Conj_epithelium_basal",
+    "Conj_epithelium_superficial",
+    "Conj_epithelium_suprabasal",
+    "Corneal Endothelium",
+    "Keratocytes",
+    "Limbus_Sclera_fibroblast_C1"
+   ],
+   "excluded_reason": "RPE preps may carry photoreceptor contamination (see PR-associated row) but never ocular-surface epithelium"
+  },
+  "ciliary_body": {
+   "baseline_entry": "baseline_human_ciliary_body",
+   "inventory_status": "available",
+   "classes": [
+    {
+     "kb_class": "Endo",
+     "baseline_row": "Endothelium",
+     "basis": "rename: Endothelium → Endo"
+    },
+    {
+     "kb_class": "Fibroblast",
+     "baseline_row": "Fibroblast",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Melanocyte",
+     "baseline_row": "Melanocyte",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Pericyte",
+     "baseline_row": "Pericyte",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Schwann",
+     "baseline_row": "Schwann Cell",
+     "basis": "rename: 'Schwann Cell' → Schwann"
+    },
+    {
+     "kb_class": "SMC",
+     "baseline_row": "Ciliary_Muscle",
+     "basis": "ciliary muscle is smooth muscle",
+     "note": "allow_ambiguous"
+    },
+    {
+     "kb_class": "Mac_Tissue",
+     "baseline_row": "Immune Cell",
+     "basis": "generic immune compartment",
+     "note": "allow_ambiguous"
+    },
+    {
+     "kb_class": "T",
+     "baseline_row": "Immune Cell",
+     "basis": "same row"
+    }
+   ],
+   "unmapped_rows": [
+    {
+     "row": "CB_NPCE",
+     "reason": "ciliary body non-pigmented epithelium: KB has no class for it"
+    },
+    {
+     "row": "CB_PCE",
+     "reason": "ciliary body pigmented epithelium: KB has no class for it"
+    }
+   ],
+   "excluded_classes": [
+    "Rod",
+    "Cone",
+    "RGC",
+    "AC",
+    "BC",
+    "HC",
+    "RPE",
+    "Conj_epithelium_basal",
+    "Conj_epithelium_superficial",
+    "Conj_epithelium_suprabasal",
+    "Corneal Endothelium",
+    "Keratocytes",
+    "Limbus_Sclera_fibroblast_C1"
+   ],
+   "excluded_reason": "intraocular uveal tissue; neural-retina and ocular-surface identities are foreign"
+  },
+  "trabecular_meshwork": {
+   "baseline_entry": "baseline_human_trabecular_meshwork",
+   "inventory_status": "available",
+   "classes": [
+    {
+     "kb_class": "Endo",
+     "baseline_row": "Endothelium",
+     "basis": "rename"
+    },
+    {
+     "kb_class": "Fibroblast",
+     "baseline_row": "Fibroblast",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Melanocyte",
+     "baseline_row": "Melanocyte",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Pericyte",
+     "baseline_row": "Pericyte",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Schwann",
+     "baseline_row": "Schwann Cell",
+     "basis": "rename"
+    },
+    {
+     "kb_class": "Mac_Tissue",
+     "baseline_row": "Immune Cell",
+     "basis": "generic immune",
+     "note": "allow_ambiguous"
+    }
+   ],
+   "unmapped_rows": [
+    {
+     "row": "CB_NPCE",
+     "reason": "listed in TM baseline but belongs to ciliary epithelium; KB has no class"
+    },
+    {
+     "row": "CB_PCE",
+     "reason": "same"
+    },
+    {
+     "row": "Ciliary_Muscle",
+     "reason": "TM baseline lists it; mapped to SMC only for ciliary_body, not here"
+    }
+   ],
+   "excluded_classes": [
+    "Rod",
+    "Cone",
+    "RGC",
+    "AC",
+    "BC",
+    "HC",
+    "RPE",
+    "Conj_epithelium_basal",
+    "Conj_epithelium_superficial",
+    "Conj_epithelium_suprabasal",
+    "Corneal Endothelium",
+    "Keratocytes",
+    "Limbus_Sclera_fibroblast_C1"
+   ],
+   "excluded_reason": "angle tissue; neural-retina and ocular-surface identities are foreign"
+  },
+  "ocular_surface": {
+   "baseline_entry": "baseline_human_ocular_surface",
+   "inventory_status": "available",
+   "classes": [
+    {
+     "kb_class": "Corneal Endothelium",
+     "baseline_row": "Corneal Endothelium",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Endo",
+     "baseline_row": "Endothelium",
+     "basis": "rename"
+    },
+    {
+     "kb_class": "Fibroblast",
+     "baseline_row": "Fibroblasts",
+     "basis": "plural → singular"
+    },
+    {
+     "kb_class": "Melanocyte",
+     "baseline_row": "Melanocytes",
+     "basis": "plural → singular"
+    },
+    {
+     "kb_class": "Pericyte",
+     "baseline_row": "Pericytes",
+     "basis": "plural → singular"
+    },
+    {
+     "kb_class": "Schwann",
+     "baseline_row": "Schwann Cells",
+     "basis": "plural → singular"
+    },
+    {
+     "kb_class": "SMC",
+     "baseline_row": "Smooth Muscle Cells",
+     "basis": "plural → singular"
+    },
+    {
+     "kb_class": "Conj_epithelium_basal",
+     "baseline_row": "Epithelium",
+     "basis": "ocular surface epithelium: KB splits conjunctival epithelium into three strata",
+     "note": "allow_ambiguous"
+    },
+    {
+     "kb_class": "Conj_epithelium_superficial",
+     "baseline_row": "Epithelium",
+     "basis": "same row"
+    },
+    {
+     "kb_class": "Conj_epithelium_suprabasal",
+     "baseline_row": "Epithelium",
+     "basis": "same row"
+    },
+    {
+     "kb_class": "Mac_Tissue",
+     "baseline_row": "Immune Cells",
+     "basis": "generic immune",
+     "note": "allow_ambiguous"
+    },
+    {
+     "kb_class": "T",
+     "baseline_row": "Immune Cells",
+     "basis": "same row"
+    }
+   ],
+   "unmapped_rows": [],
+   "excluded_classes": [
+    "Rod",
+    "Cone",
+    "RGC",
+    "AC",
+    "BC",
+    "HC",
+    "MG",
+    "RPE",
+    "Astro"
+   ],
+   "excluded_reason": "cornea/conjunctiva carry no retinal neurons, RPE or retinal glia; surface epithelium rows already cover the legitimate identities"
+  },
+  "optic_nerve": {
+   "baseline_entry": "baseline_human_optic_nerve",
+   "inventory_status": "available",
+   "classes": [
+    {
+     "kb_class": "AC",
+     "baseline_row": "AC",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Astro",
+     "baseline_row": "Astrocyte",
+     "basis": "rename"
+    },
+    {
+     "kb_class": "BC",
+     "baseline_row": "BC",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Cone",
+     "baseline_row": "Cone",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "HC",
+     "baseline_row": "HC",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "MG",
+     "baseline_row": "MG",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Microglia",
+     "baseline_row": "Microglia",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "RGC",
+     "baseline_row": "RGC",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "RPE",
+     "baseline_row": "RPE",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Rod",
+     "baseline_row": "Rod",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Fibroblast",
+     "baseline_row": "Fibroblast",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Melanocyte",
+     "baseline_row": "Melanocyte",
+     "basis": "exact"
+    },
+    {
+     "kb_class": "Schwann",
+     "baseline_row": "Schwann_cell",
+     "basis": "rename"
+    },
+    {
+     "kb_class": "Endo",
+     "baseline_row": "Endothelial_cell",
+     "basis": "rename"
+    },
+    {
+     "kb_class": "Pericyte",
+     "baseline_row": "Mural_cell",
+     "basis": "mural compartment = pericyte/SMC",
+     "note": "allow_ambiguous"
+    },
+    {
+     "kb_class": "SMC",
+     "baseline_row": "Mural_cell",
+     "basis": "same row"
+    },
+    {
+     "kb_class": "T",
+     "baseline_row": "T_cell",
+     "basis": "rename"
+    },
+    {
+     "kb_class": "B",
+     "baseline_row": "B_cell",
+     "basis": "rename"
+    },
+    {
+     "kb_class": "NK",
+     "baseline_row": "NK_cell",
+     "basis": "rename"
+    },
+    {
+     "kb_class": "Mac_Tissue",
+     "baseline_row": "Macrophage",
+     "basis": "rename",
+     "note": "allow_ambiguous"
+    }
+   ],
+   "unmapped_rows": [
+    {
+     "row": "Adipocyte",
+     "reason": "KB has no adipocyte class"
+    },
+    {
+     "row": "Dendritic_cell",
+     "reason": "KB splits DC into cDC1/cDC2/pDC; the baseline row does not disambiguate, so no mapping is asserted"
+    },
+    {
+     "row": "Mast_cell",
+     "reason": "KB has no mast cell class"
+    },
+    {
+     "row": "Oligodendrocyte",
+     "reason": "KB has no oligodendrocyte class"
+    },
+    {
+     "row": "Oligodendrocyte_precursor_cell",
+     "reason": "KB has no OPC class"
+    },
+    {
+     "row": "Pigmented_cell",
+     "reason": "generic pigmented row; could be RPE or melanocyte — not asserted"
+    }
+   ],
+   "excluded_classes": [
+    "Conj_epithelium_basal",
+    "Conj_epithelium_superficial",
+    "Conj_epithelium_suprabasal",
+    "Corneal Endothelium",
+    "Keratocytes",
+    "Limbus_Sclera_fibroblast_C1",
+    "SMC",
+    "Pericyte"
+   ],
+   "excluded_reason": "optic nerve head: ocular-surface identities foreign; mural cells are covered by Mural_cell row, so the split SMC/Pericyte panels are not asserted"
+  },
+  "lacrimal_gland": {
+   "baseline_entry": "baseline_human_lacrimal_gland__observed__kb8",
+   "inventory_status": "available",
+   "classes": [
+    {
+     "kb_class": "T",
+     "baseline_row": "T cells (existing membrane v1 panel)",
+     "basis": "rename"
+    },
+    {
+     "kb_class": "Plasma",
+     "baseline_row": "IgA plasma cells (existing)",
+     "basis": "IgA plasma cells → Plasma"
+    },
+    {
+     "kb_class": "Endo",
+     "baseline_row": "Endothelial (existing)",
+     "basis": "rename"
+    },
+    {
+     "kb_class": "Fibroblast",
+     "baseline_row": "Fibroblast/stroma",
+     "basis": "stromal fibroblast"
+    }
+   ],
+   "unmapped_rows": [
+    {
+     "row": "Lacrimal_secretory_tearcell",
+     "reason": "KB has no lacrimal secretory class (lacrimal_v6 library not in default all)"
+    },
+    {
+     "row": "Lacrimal_duct_epithelial",
+     "reason": "same"
+    },
+    {
+     "row": "Lacrimal_myoepithelial(caution)",
+     "reason": "same"
+    },
+    {
+     "row": "Surface epithelium contaminant",
+     "reason": "contaminant row, not an identity"
+    }
+   ],
+   "excluded_classes": [
+    "Rod",
+    "Cone",
+    "RGC",
+    "AC",
+    "BC",
+    "HC",
+    "MG",
+    "RPE",
+    "Astro",
+    "Keratocytes",
+    "Limbus_Sclera_fibroblast_C1"
+   ],
+   "excluded_reason": "lacrimal gland; retinal identities foreign. Conjunctival/surface epithelium deliberately NOT excluded — the baseline itself lists a surface-epithelium contaminant row, so it stays nameable and is handled as QC"
+  },
+  "choroid": {
+   "baseline_entry": "baseline_human_choroid",
+   "inventory_status": "absent",
+   "classes": [],
+   "unmapped_rows": [],
+   "reason": "baseline entry exists but major_classes is empty; no prior available",
+   "excluded_classes": [
+    "Rod",
+    "Cone",
+    "RGC",
+    "AC",
+    "BC",
+    "HC",
+    "MG",
+    "RPE",
+    "Astro",
+    "Conj_epithelium_basal",
+    "Conj_epithelium_superficial",
+    "Conj_epithelium_suprabasal",
+    "Corneal Endothelium",
+    "Keratocytes",
+    "Limbus_Sclera_fibroblast_C1"
+   ],
+   "excluded_reason": "no inventory built yet; this list is a coarse foreign-identity guard only, NOT an inventory"
+  },
+  "conjunctiva": {
+   "baseline_entry": "baseline_human_conjunctiva",
+   "inventory_status": "absent",
+   "classes": [],
+   "unmapped_rows": [],
+   "reason": "baseline entry exists but major_classes is empty; no prior available",
+   "excluded_classes": [
+    "Rod",
+    "Cone",
+    "RGC",
+    "AC",
+    "BC",
+    "HC",
+    "MG",
+    "RPE",
+    "Astro"
+   ],
+   "excluded_reason": "no inventory built yet; coarse foreign-identity guard only, NOT an inventory"
+  },
+  "iris": {
+   "baseline_entry": "baseline_human_iris",
+   "inventory_status": "absent",
+   "classes": [],
+   "unmapped_rows": [],
+   "reason": "baseline entry exists but major_classes is empty; no prior available",
+   "excluded_classes": [
+    "Rod",
+    "Cone",
+    "RGC",
+    "AC",
+    "BC",
+    "HC",
+    "MG",
+    "RPE",
+    "Astro",
+    "Conj_epithelium_basal",
+    "Conj_epithelium_superficial",
+    "Conj_epithelium_suprabasal",
+    "Corneal Endothelium",
+    "Keratocytes",
+    "Limbus_Sclera_fibroblast_C1"
+   ],
+   "excluded_reason": "no inventory built yet; coarse foreign-identity guard only, NOT an inventory"
+  },
+  "lens": {
+   "baseline_entry": "baseline_human_lens",
+   "inventory_status": "absent",
+   "classes": [],
+   "unmapped_rows": [],
+   "reason": "baseline entry exists but major_classes is empty; no prior available",
+   "excluded_classes": [
+    "Rod",
+    "Cone",
+    "RGC",
+    "AC",
+    "BC",
+    "HC",
+    "MG",
+    "RPE",
+    "Astro",
+    "Conj_epithelium_basal",
+    "Conj_epithelium_superficial",
+    "Conj_epithelium_suprabasal",
+    "Corneal Endothelium",
+    "Keratocytes",
+    "Limbus_Sclera_fibroblast_C1"
+   ],
+   "excluded_reason": "no inventory built yet; coarse foreign-identity guard only, NOT an inventory"
+  },
+  "sclera": {
+   "baseline_entry": "baseline_human_sclera",
+   "inventory_status": "absent",
+   "classes": [],
+   "unmapped_rows": [],
+   "reason": "baseline entry exists but major_classes is empty; no prior available",
+   "excluded_classes": [
+    "Rod",
+    "Cone",
+    "RGC",
+    "AC",
+    "BC",
+    "HC",
+    "MG",
+    "RPE",
+    "Astro",
+    "Conj_epithelium_basal",
+    "Conj_epithelium_superficial",
+    "Conj_epithelium_suprabasal",
+    "Corneal Endothelium",
+    "Keratocytes",
+    "Limbus_Sclera_fibroblast_C1"
+   ],
+   "excluded_reason": "no inventory built yet; coarse foreign-identity guard only, NOT an inventory"
+  }
+ },
+ "filter_rule": "candidates are excluded iff their base class appears in this tissue's excluded_classes. The inventory classes list is informational (and the strict-mode whitelist when strict_whitelist=true); classes simply absent from the inventory are NOT excluded, because absence from a 10-row baseline is not evidence of absence in tissue.",
+ "strict_whitelist": false
+}

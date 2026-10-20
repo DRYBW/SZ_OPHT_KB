@@ -137,7 +137,8 @@ def get_kb_page(scope: str, name: str = "") -> dict:
 @app.tool()
 def query_marker(genes: list[str] | None = None, cell_type: str = "",
                  library: str = "all",
-                 species: str = "", volume_id: str = "", volume_species: str = "") -> dict:
+                 species: str = "", volume_id: str = "", volume_species: str = "",
+                 tissue: str = "") -> dict:
     """Query the local authoritative marker library (multi-library:
     retina=markers_v4.1_clean.json v4.1-clean-P0.4;
     membrane=markers_membrane_v1.json four panels membrane/vascular/stroma/immune, per-gene provenance;
@@ -201,11 +202,13 @@ def query_marker(genes: list[str] | None = None, cell_type: str = "",
     resp = core.query_marker(genes=genes, cell_type=cell_type or None,
                              library=library or "all",
                              species=species or None, volume_id=volume_id or None,
-                             volume_species=volume_species or None)
+                             volume_species=volume_species or None, tissue=tissue or None)
     _trace_args = {"genes": genes, "cell_type": cell_type, "library": library}
     if species or volume_id or volume_species:
         _trace_args.update({k: v for k, v in (("species", species), ("volume_id", volume_id),
                                               ("volume_species", volume_species)) if v})
+    if tissue:
+        _trace_args["tissue"] = tissue
     calllog.trace("query_marker", _trace_args, resp)
     return resp
 
