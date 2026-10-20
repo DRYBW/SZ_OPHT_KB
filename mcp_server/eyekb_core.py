@@ -265,6 +265,51 @@ def _k9_act_enabled():
     return v not in {"0", "false", "off", "no"}
 
 
+# ---------------------------------------------------------------- Anti-union (composite entry) guard
+# [ANTIUNION 2026-10-20 · PI "ok" batch release · prereg = plans/oss_check_20261019/
+#  scorer_guard_20261020/PREREG_ANTIUNION_GUARD_20261020.md]
+# Why: genes-mode ranks by raw n_shared, so any entry whose marker set is a strict superset of
+# another entry (a union such as pr = rod ∪ cone, or macro = three macrophage classes merged)
+# dominates its subsets for EVERY query. Empirical: adding such entries moves dr-sc
+# (32 clusters / 316,932 cells, PI-signed truth) from 43.8% to 5.2% while the 28 homogeneous
+# volumes move only 0.2pp — i.e. invisible on the data the KB was built on.
+# Fix = assembly layer, not scoring layer: composite entries are not real cell types, so ON
+# removes them from the named ranking (additive key composite_demoted) instead of inventing a
+# scale-invariant score (that alternative costs 4.7pp on 28 volumes even with no composites).
+# Gate: EYEKB_KB_ANTIUNION, REGISTERED_DEFAULT_OFF — unset = OFF = pre-wiring bytes; enabling by
+# default is a PI-reserved gate. Detection uses FULL marker sets (never the query intersection),
+# so genes shared with housekeeping panels cannot create false positives; single-gene entries are
+# never treated as composites.
+def _antiunion_enabled():
+    """env EYEKB_KB_ANTIUNION ∈ {1,true,on,yes} (casefold) = ON; unset/anything else = OFF."""
+    v = (os.environ.get("EYEKB_KB_ANTIUNION") or "").strip().casefold()
+    return v in {"1", "true", "on", "yes"}
+
+
+def _antiunion_split(rank_full, markers):
+    """Return (kept_ranking, demoted_list). A candidate is composite iff its complete marker set
+    strictly contains another candidate's complete marker set. Deterministic: input order kept."""
+    present = [r["cell_type"] for r in rank_full]
+    sets = {ct: {str(g).upper() for g in (markers.get(ct) or []) if str(g).strip()} for ct in present}
+    composite = {}
+    for a in present:
+        A = sets[a]
+        if len(A) < 2:
+            continue
+        subs = [b for b in present
+                if b != a and 2 <= len(sets[b]) < len(A) and sets[b] <= A]
+        if subs:
+            composite[a] = sorted(subs)
+    if not composite:
+        return rank_full, []
+    kept = [r for r in rank_full if r["cell_type"] not in composite]
+    demoted = [{"cell_type": r["cell_type"], "n_shared": r["n_shared"],
+                "superset_of": composite[r["cell_type"]],
+                "reason": "composite_superset_entry"}
+               for r in rank_full if r["cell_type"] in composite]
+    return kept, demoted
+
+
 # ---------------------------------------------------------------- KBGOV-B5 cross-species ranking governance layer
 # [B5IMPL t_8960c7e0 · USER_DIRECTIVE_20260928 five-queue item ① · PI pre-authorized wiring]
 # Input-species governance for query_marker genes-mode. Sole authoritative criteria source =
@@ -653,6 +698,11 @@ def query_marker(genes=None, cell_type=None, library="all",
         # moved out into the additive key state_annotations (present only when non-empty; kept
         # entries/order/fields byte-untouched; entirely bypassed in the OFF state = pre-wiring bytes)
         rank_full = [{"cell_type": c, **s} for c, s in ranked]
+        # [ANTIUNION 2026-10-20] composite (strict-superset) entries dropped from the named ranking.
+        # OFF (default) = this block is skipped entirely → bytes equal the pre-wiring response.
+        composite_demoted = []
+        if _antiunion_enabled():
+            rank_full, composite_demoted = _antiunion_split(rank_full, markers)
         rank_kept, state_ann = _x4b_split_state_ranking(rank_full)
         # compatibility field: on a single library the top-level auc_threshold semantics are kept
         auc = next((d.get("auc_threshold") for _, _, d in dbs if d.get("auc_threshold")), None)
@@ -661,6 +711,8 @@ def query_marker(genes=None, cell_type=None, library="all",
                 "auc_threshold": auc, "provenance": prov}
         if state_ann:
             resp["state_annotations"] = state_ann
+        if composite_demoted:
+            resp["composite_demoted"] = composite_demoted
         # [X4B-FIX F3] off-domain low-confidence advisory (additive key only; criterion frozen in
         # PREREG §3.1 — the dev-panel file being absent on this surface makes the probe inert, zero
         # drift). Attached on the default all-route only — the "adult vocabulary on fetal material"
