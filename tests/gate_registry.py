@@ -70,7 +70,18 @@ def is_maintainer_local(p: str) -> bool:
     r = str(q.resolve()) if q.exists() else str(q)
     return any(r == root or r.startswith(root.rstrip("/") + "/") for root in MAINTAINER_LOCAL_ROOTS)
 
-LEDGER_REQUIRED = ["layer", "item_id", "item_name", "category", "path", "version", "authority", "change_gate", "sha256", "state"]
+
+def is_vcs_metadata(p: Path) -> bool:
+    """.git/** is VCS metadata, not repository content: its bytes depend on how the clone was
+    checked out (branch vs detached HEAD), so no other clone can reproduce them."""
+    try:
+        p.resolve().relative_to((ROOT / ".git").resolve())
+        return True
+    except ValueError:
+        return False
+
+LEDGER_REQUIRED = ["layer", "item_id", "item_name", "category", "path", "surface", "version", "authority", "change_gate", "sha256", "state"]
+SURFACES = ("repo", "local")
 INV_REQUIRED = ["gate_id", "gate_name", "entry_point", "script_path", "sha256", "owner",
                 "freeze_gate", "regression_gate", "status", "note"]
 
@@ -135,8 +146,12 @@ def main() -> int:
              if c in rhdr and not (r.get(c) or "").strip()]
     empty += [f"{r.get('gate_id', '?')}.{c}" for r in inv for c in INV_REQUIRED
               if c in ihdr and not (r.get(c) or "").strip()]
-    rec("G5-C01 SCHEMA", not miss and not empty,
-        f"missing_columns={miss or 'none'}; empty_required_cells={len(empty)}", miss + empty)
+    bad_surface = [f"{r.get('item_id', '?')}.surface={r.get('surface')!r}"
+                   for r in rows if (r.get("surface") or "").strip() not in SURFACES]
+    rec("G5-C01 SCHEMA", not miss and not empty and not bad_surface,
+        f"missing_columns={miss or 'none'}; empty_required_cells={len(empty)}; "
+        f"bad_surface_values={len(bad_surface)} (allowed: {', '.join(SURFACES)})",
+        miss + empty + bad_surface)
 
     # G5-C02 ID-UNIQUE
     dup = [i for i in set(reg_ids) if reg_ids.count(i) > 1 or not i] + \
@@ -171,16 +186,30 @@ def main() -> int:
 
     # G5-C04 REF-EXIST
     missing_paths, dangling_ids, local_unavailable = [], [], []
+    repo_rows = local_rows = 0
     for r in rows:
-        p = resolve_path(r.get("path") or "")
-        if not p.exists():
-            if is_maintainer_local(r.get("path") or ""):
+        ip = r.get("path") or ""
+        surf = (r.get("surface") or "").strip()
+        p = resolve_path(ip)
+        if surf == "repo":
+            repo_rows += 1
+            if Path(ip.strip()).is_absolute():
+                missing_paths.append(f"{r.get('item_id')}: repo-surface row registered with an absolute path "
+                                     f"-> {ip} (repo rows must be repo-relative so any clone reads the same)")
+                continue
+            if not p.exists():
+                st = (r.get("state") or "").strip()
+                if st.startswith(("MISSING", "SHELF", "ARCHIVED")):
+                    continue
+                missing_paths.append(f"{r.get('item_id')}:{p} (state={st})")
+        elif surf == "local":
+            local_rows += 1
+            if not Path(ip.strip()).is_absolute() or not is_maintainer_local(ip):
+                missing_paths.append(f"{r.get('item_id')}: local-surface row path is outside the declared "
+                                     f"local roots {MAINTAINER_LOCAL_ROOTS} -> {ip}")
+                continue
+            if not p.exists():
                 local_unavailable.append(f"{r.get('item_id')}:{p} (maintainer-local, not distributed)")
-                continue
-            st = (r.get("state") or "").strip()
-            if st.startswith(("MISSING", "SHELF", "ARCHIVED")):
-                continue
-            missing_paths.append(f"{r.get('item_id')}:{p} (state={st})")
     known = set(reg_ids) | set(inv_ids)
     for src, rr in [("ledger", rows), ("inventory", inv)]:
         for r in rr:
@@ -192,7 +221,8 @@ def main() -> int:
                         dangling_ids.append(f"{src}:{r.get('item_id') or r.get('gate_id')} -> {m}")
     rec("G5-C04 REF-EXIST", not missing_paths and not dangling_ids,
         f"missing paths={len(missing_paths)}; dangling id refs={len(dangling_ids)}; "
-        f"local-unavailable={len(local_unavailable)} (declared local roots: {', '.join(MAINTAINER_LOCAL_ROOTS)})",
+        f"surface repo={repo_rows}/local={local_rows}; local-unavailable={len(local_unavailable)} "
+        f"(declared local roots: {', '.join(MAINTAINER_LOCAL_ROOTS)})",
         missing_paths + dangling_ids + local_unavailable)
 
     # G5-C05 SHA-MATCH (+ ledger dispensation)
@@ -207,9 +237,13 @@ def main() -> int:
         led_map[iid] = lr
         if iid not in by_id:
             led_err.append(f"ledger entry for unknown item: {iid}")
+    vcs_skipped = []
     for r in rows:
         p = resolve_path(r.get("path") or "")
         if not p.is_file():
+            continue
+        if is_vcs_metadata(p):
+            vcs_skipped.append(f"{r.get('item_id')}:{p}")
             continue
         cur = sha256_of(p)
         reg_sha = (r.get("sha256") or "").strip()
@@ -231,7 +265,9 @@ def main() -> int:
         if cur != (r.get("sha256") or "").strip():
             drifted.append(f"{r.get('gate_id')}:{p.name} registered={(r.get('sha256') or '')[:16]} live={cur[:16]}")
     rec("G5-C05 SHA-MATCH", not drifted,
-        f"live-vs-registered mismatches={len(drifted)}; dispensed-by-ledger={len(dispensed)}", drifted)
+        f"live-vs-registered mismatches={len(drifted)}; dispensed-by-ledger={len(dispensed)}; "
+        f"vcs-metadata-skipped={len(vcs_skipped)} (.git/** bytes depend on how the clone was checked out)",
+        drifted)
 
     # G5-C06 LEDGER
     stale_entries = []

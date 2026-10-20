@@ -198,6 +198,18 @@ def main() -> int:
     add("G5", "N5_LEDGER_STALE", "ledger entry re-pointed at a non-drifted row (stale dispensation, C06)",
         ["G5-C06"], rc, codes, tail)
 
+    # N7: a repo-surface row registered with an ABSOLUTE path that exists on this machine.
+    # The old gate would read it as fine (the file is there); the portability rule must reject it,
+    # because the absolute prefix only resolves on the maintainer's machine.
+    regN7 = cell_edit(sh(reg0), "item_id", "L6-04", "path",
+                      str(ROOT / "tests" / "verify_repro.py"),
+                      g5m / "N7_repo_row_absolute_path_registry.tsv")
+    rc, codes, tail = run_gate(g5, ["--registry", str(regN7), "--gate-inventory", str(inv0),
+                                    "--drift-ledger", str(led0), "--entry", str(ent0), jout("g5_n7")])
+    add("G5", "N7_REPO_ROW_ABSOLUTE_PATH",
+        "repo-surface row registered with an absolute path that does exist (portability rule, C04)",
+        ["G5-C04"], rc, codes, tail)
+
     # ================= G6 =================
     rc, codes, tail = run_gate(g6, ["--instance", str(inst0), "--template", str(tmpl0),
                                     "--checklist", str(chk0), jout("g6_p0")])

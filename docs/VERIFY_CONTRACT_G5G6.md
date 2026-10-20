@@ -38,11 +38,11 @@
 
 | 码 | 判据 | 对应负例类（R1 口径） |
 |---|---|---|
-| G5-C01 SCHEMA | 台账/门清单必填列齐备；必填格非空 | — |
+| G5-C01 SCHEMA | 台账/门清单必填列齐备；必填格非空；台账 `surface` 列只允许 `repo` / `local` | — |
 | G5-C02 ID-UNIQUE | 件 ID / 门 ID 唯一（台账 97 行 97 ID、门清单 6 行 6 ID） | — |
 | G5-C03 OWNER | 台账「变更口」非空非占位；门清单 owner 须有问责锚（维护方/卡号） | — |
-| G5-C04 REF-EXIST | 路径引用在盘上存在；跨面件 ID 引用可解析。相对路径按仓库根解析；绝对路径在声明的维护方本地根（`MAINTAINER_LOCAL_ROOTS`，现为 `/mnt/D/EyeKB`）之下且不在盘上时，计为 `local-unavailable`（信息项，不 FAIL，因任何 clone 都不可能含它）；其余绝对路径缺失仍判 **缺件** | **缺件** |
-| G5-C05 SHA-MATCH | 现取 sha == 登记 sha（漂移行须被记账豁免） | **摘要漂移** |
+| G5-C04 REF-EXIST | 路径引用在盘上存在；跨面件 ID 引用可解析。按 `surface` 分两面立硬规则（见 §G5.1b）：`repo` 行必须是仓内相对路径且缺失即 FAIL；`local` 行必须是绝对路径且位于声明的维护方本地根之下，缺失计入 `local-unavailable`（信息项，因任何 clone 都不可能含它）。detail 行显示 `surface repo=N/local=M` | **缺件** |
+| G5-C05 SHA-MATCH | 现取 sha == 登记 sha（漂移行须被记账豁免）。`.git/**` 属版本控制元数据，不参与内容比对（detail 报 `vcs-metadata-skipped=N`）：其字节取决于检出方式（分支/detached），任何 clone 者都无法复现 | **摘要漂移** |
 | G5-C06 LEDGER | 记账诚实：条目须对应真实行、须确实处于漂移态（过期免检条 = FAIL，防白名单化） | （本卡新增） |
 | G5-C07 UNREG-LOAD | `tests/run_gates.sh` 调用的每个门脚本都须已登记且 sha 相符 | **未登记加载** |
 | G5-C08 CERT-EXPIRY | 台账/清单中声明的「到期日」不得早于 `--as-of` | **过期认证** |
@@ -60,7 +60,20 @@
 - C04/C05/C06 全部走 `resolve_path`；C07 两侧键均经 `resolve_path(...).resolve()` 归一。
 - 仓内行改为相对路径后，clone 到任何位置读数一致；仓外 80 行仍为绝对路径，缺失时显式计入 `local-unavailable` 并在 detail 行显示数字，不静默通过，也不当作缺件。
 
-**严格性不变的证据**：负例电池 `tests/gate_g5g6_negative.py` N1（台账行指向 `/tmp/NO_SUCH_GATE_FILE_G5.py`）仍须触发 `G5-C04`，16/16 全符。故意把一条仓外行指向不存在的 `/mnt/D/EyeKB/...` → `local-unavailable=1` 且 PASS；把一条仓内相对行指向不存在的仓内文件 → `missing paths=1` 且 FAIL。
+**严格性不变的证据**：负例电池 `tests/gate_g5g6_negative.py` N1（台账行指向 `/tmp/NO_SUCH_GATE_FILE_G5.py`）仍须触发 `G5-C04`；N7（`repo` 面行登记成**存在的**绝对路径——旧规则必然放过）也必须触发 `G5-C04`；电池 17/17 全符。
+
+### G5.1c 台账双面（`surface` 列，2026-10-20，预注册 `PREREG_G5_Q1Q2_20261020.md`）
+
+台账 100 行分成两面，机器强制，不再靠路径形式隐式推断：
+
+| `surface` | path 形式 | 缺失时 | sha |
+|---|---|---|---|
+| `repo`（20 行） | 必须仓内相对路径，绝对路径即 FAIL | 缺件 FAIL | 逐字节比对 |
+| `local`（80 行） | 必须绝对路径且位于 `MAINTAINER_LOCAL_ROOTS` 之下 | `local-unavailable`（计数，不 FAIL） | 存在则比对 |
+
+这条把 2026-10-20 那个缺陷反向锁死：以后谁再把仓内文件登记成绝对路径，C04 立刻 FAIL，不会再出现「碰巧前缀相同所以绿灯」。
+
+**`.git/**` 不入内容面**：`L6-08` 登记 `.git/HEAD`，其字节取决于检出方式（`ref: refs/heads/main` vs detached 的裸提交号）。CI 常用的 detached 检出下旧门必挂一次 C05；现按 VCS 元数据处理，不参与内容比对，detail 报 `vcs-metadata-skipped=1`。C04 存在性检查不变。故意把一条仓外行指向不存在的 `/mnt/D/EyeKB/...` → `local-unavailable=1` 且 PASS；把一条仓内相对行指向不存在的仓内文件 → `missing paths=1` 且 FAIL。
 
 ### G5.2 实测（本轮现取，完整日志 `logs/g5_standalone.log`）
 
@@ -110,6 +123,7 @@ cd /home/ubuntu/EYEKB_REPO && python3 tests/gate_registry.py
 | N4 | 台账 L1-22 声明到期日 → 早于 as_of | `G5-C08` |
 | N5 | 记账行改指「未漂移」件 | `G5-C06` |
 | N6 | 台账 L0-06 变更口 → `TBD` | `G5-C03` |
+| N7 | `repo` 面行登记成**存在的**绝对路径（旧规则会放过，见 §G5.1b） | `G5-C04` |
 
 ---
 
