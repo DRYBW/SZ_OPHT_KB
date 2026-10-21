@@ -203,11 +203,40 @@ A closer look at the same dataset's myeloid compartment — knowledge-base entri
 
 (All figures illustrate the working mode only and constitute no therapeutic or clinical conclusion. The ①–③ run is reproducible with `pipeline/run_pipeline.py --input pipeline/fixtures/pdr600.h5ad --species human --tissue fibrovascular_membrane`; the full-run figure scripts are archived under `docs/plans/figure_uplift_20260928/scripts/`.)
 
+## Install as a Python package (no checkout needed)
+
+The server, the knowledge base (`kb/`) and the retrieval kernel ship together as one Python
+package, so the four data tools work immediately after installation:
+
+```bash
+uvx --from git+https://github.com/DRYBW/SZ_OPHT_KB.git eyekb-mcp
+```
+
+An MCP client configuration for the same installation:
+
+```json
+{
+  "mcpServers": {
+    "eyekb": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/DRYBW/SZ_OPHT_KB.git", "eyekb-mcp"],
+      "env": {"EYEKB_DB_DIR": "/path/to/literature_db/v2.4.2_2026-09_slim"}
+    }
+  }
+}
+```
+
+`search_literature` is the one tool that needs the literature corpus, which is distributed
+separately because of its size (see the download section below); point `EYEKB_DB_DIR` at the
+unpacked directory to enable it. Installing from a clone (`pip install .`) registers the same
+`eyekb-mcp` command and is the right choice when you also want `pipeline/`, `evals/` and the
+reproduction checks.
+
 ## 5-minute quickstart
 
 Python ≥ 3.11 on an ordinary CPU machine is enough (no GPU required); allow ≥ 4 GB of disk.
 
-**Transparent download sizes**: required = the literature corpus slim build, about **398 MB** (2 parts, ~0.45 GB unpacked); optional = embedding weights, about **671 MB** (single file or 4 parts, same content). **You can run without the weights** — retrieval automatically degrades to pure lexical mode and the 41 self-checks still pass (byte-verified); results carry `mode: lexical_fallback` explicitly, with lower precision than the vector mode on complex semantic queries.
+**Transparent download sizes**: required = the literature corpus slim build, about **398 MB** (2 parts, ~0.45 GB unpacked); optional = embedding weights, about **671 MB** (single file or 4 parts, same content). **You can run without the weights**: retrieval degrades automatically to pure lexical mode, every tool still answers, and results carry `mode: lexical_fallback` explicitly. Reproduction acceptance is defined on the dense mode only, so expect different rankings under the fallback — the reproduction section below states this in full.
 
 ```bash
 # 1) clone + dependencies

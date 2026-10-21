@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eyekb-mcp"
+version = "0.1.0"
+description = "Ophthalmic cell-type knowledge base and literature evidence service, served over the Model Context Protocol"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "SZ_OPHT_KB contributors" }]
+keywords = [
+  "ophthalmology",
+  "retina",
+  "single-cell",
+  "cell-type annotation",
+  "knowledge base",
+  "model context protocol",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+  "mcp>=1.26",
+  "sentence-transformers>=3",
+  "pyarrow",
+  "pandas",
+  "numpy",
+  "PyYAML>=6.0",
+]
+
+[project.urls]
+Repository = "https://github.com/DRYBW/SZ_OPHT_KB"
+Documentation = "https://github.com/DRYBW/SZ_OPHT_KB/blob/main/README.md"
+
+[project.scripts]
+eyekb-mcp = "mcp_server.__main__:main"
+
+# The knowledge base itself (kb/), the retrieval kernel (clients/ocularkb/rag/scripts/) and the
+# server package (mcp_server/) travel inside the distribution, so an installation needs no
+# checkout of the repository. Namespace packages are used so that the knowledge-base directory
+# keeps its plain data layout, with no import markers added to it.
+[tool.setuptools.packages.find]
+namespaces = true
+include = ["mcp_server*", "kb*", "clients*"]
+# kbkit is a separate, self-contained toolkit with its own pyproject.toml; it is installed from
+# its own directory and does not belong in the server distribution.
+exclude = ["kbkit*"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+mcp_server = ["*.json.gz"]

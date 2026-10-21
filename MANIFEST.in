@@ -1,0 +1,15 @@
+# Files that ship inside the wheel in addition to the discovered Python packages.
+# A trailing slash keeps each rule anchored to that directory: without it, the directory name is
+# treated as a path prefix and a rule for kb/ would also pull in kbkit/.
+include README.md
+include LICENSE
+include NOTICE
+include requirements.repro.txt
+
+recursive-include kb/ *
+recursive-include clients/ *
+recursive-include mcp_server/ *.py *.gz *.sh
+recursive-include rag_snapshots/ *
+
+global-exclude *.py[cod]
+global-exclude __pycache__/*
