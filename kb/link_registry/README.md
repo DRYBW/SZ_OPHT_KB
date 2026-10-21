@@ -20,27 +20,57 @@ cannot go further.
 `book_anchors` is a sixth, optional field: the textbook edition and page the definition comes
 from, when the definition is anatomical rather than transcriptional.
 
+## Checking a citation, not just reading it
+
+A citation is only worth something if a reader can open the paper and see the evidence. Each
+citation therefore carries `genes_in_text` — the marker genes of that entry which occur in the
+cited paper's **own full text** — plus `evidence_locator`, the chunk and section where the first of
+them was found, and `evidence_source`, which says whether the paper came from the corpus search or
+was found through the gene index.
+
+The index behind this is `out/GENE_PAPER_INDEX_v1.tsv`, built by `scripts/build_gene_paper_index.py`.
+It scans every chunk of the shipped corpus and records, per (gene, paper), how often and where the
+symbol occurs. The match rule is deliberately narrow: a standalone uppercase token bounded by
+non-alphanumerics, dashed and undashed spellings both accepted, no case folding and no substring
+matching. A false "this paper mentions our marker" would be worse than a miss, so `AC` is not
+allowed to match `RAC1`.
+
+The index is built against the same library the retrieval service resolves as its default
+(`EYEKB_DB_DIR`, then the pointer's `role: default` entry), so a citation marked verified is one
+`search_literature` can also resolve.
+
 ## The rule
 
 `validate_linkage.py` fails whenever any entry has an empty citation list, no page, no route or no
-skill entry point, and prints each dead end by name. The gate exists because an unwritten page is
-invisible in review: the entry still answers queries, so nothing looks broken until a reader tries
-to check it. Run it after any content change:
+skill entry point, and prints each dead end by name. It also fails when a citation is marked
+gene-verified but the shipped index has no row for it — otherwise the flag could be asserted by
+hand and nothing would notice. The gate exists because an unwritten page is invisible in review:
+the entry still answers queries, so nothing looks broken until a reader tries to check it.
 
 ```bash
 python3 validate_linkage.py      # exit 0 = every entry is reachable end to end
 ```
 
+Two further readings ship alongside the gate, because a single number hides the difference between
+a written page and a generated one:
+
+- `scripts/audit_link_circularity.py` — how many entries are reachable at all, versus how many are
+  reachable **excluding the registry's own rendered appendix**. The appendix lists every label, so
+  counting it as an entry's page is circular; the second number is the honest one.
+- `scripts/measure_citation_verification.py` — the verified share of citations, before and after the
+  gene index is wired in, scored by the same rule on both sides.
+
 ## Rebuilding
 
 ```bash
-python3 scripts/build_link_registry.py    # rebuild every row from the local knowledge base
-python3 scripts/build_citation_appendix.py  # render the reader-facing appendix
-python3 validate_linkage.py               # the gate above
+python3 scripts/build_gene_paper_index.py    # gene -> paper index over the shipped corpus
+python3 scripts/build_link_registry.py       # rebuild every row, using that index
+python3 scripts/build_citation_appendix.py   # render the reader-facing appendix
+python3 validate_linkage.py                  # the gate above
 ```
 
-Citations come only from the local corpus — no network access, so a rebuild reproduces the same
-PMIDs on any machine that ships the same library.
+Run the index first: the registry consumes it. Citations come only from the local corpus — no
+network access, so a rebuild reproduces the same PMIDs on any machine that ships the same library.
 
 ## Evidence discipline
 

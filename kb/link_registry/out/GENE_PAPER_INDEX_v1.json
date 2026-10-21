@@ -1,0 +1,16 @@
+{
+  "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/chunks.parquet",
+  "corpus_bytes": 1076389207,
+  "corpus_mtime": 1790576846,
+  "panel_genes_scanned": 312,
+  "panel_genes_with_hits": 311,
+  "genes_without_hits": [
+    "MOBP"
+  ],
+  "papers_with_any_hit": 2577,
+  "index_rows": 9709,
+  "rows_seen_in_abstract_only": 794,
+  "chunks_scanned": 242928,
+  "match_rule": "standalone uppercase token, non-alphanumeric delimited, dashed and undashed spellings both accepted, no case folding, no substring match",
+  "seconds": 5.5
+}

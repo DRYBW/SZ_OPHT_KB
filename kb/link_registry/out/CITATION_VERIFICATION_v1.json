@@ -1,0 +1,21 @@
+{
+  "rule": "cited paper's full text contains >=1 of the entry's top-8 panel genes, word-boundary symbol match",
+  "before": {
+    "entries": 80,
+    "citation_rows": 1489,
+    "distinct_papers": 361,
+    "verified_rows": 624,
+    "verified_pct": 41.9,
+    "entries_with_verified": 75,
+    "entries_with_verified_pct": 93.8
+  },
+  "after": {
+    "entries": 80,
+    "citation_rows": 2106,
+    "distinct_papers": 497,
+    "verified_rows": 1241,
+    "verified_pct": 58.9,
+    "entries_with_verified": 78,
+    "entries_with_verified_pct": 97.5
+  }
+}

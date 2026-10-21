@@ -28,7 +28,7 @@ def main():
     rows.sort(key=lambda r: (r["library"], r["cell_type"]))
 
     tsv = ["entry_id\tlibrary\troute\tcell_type\tn_genes\tkey_markers\ttextbook_anchor\twiki_pages\t"
-           "n_pmids\ttop_citations"]
+           "n_pmids\tn_verified_citations\ttop_citations"]
     lines = ["# Annotation evidence appendix",
              "",
              "Generated from the local knowledge base and the local literature corpus. Every cell-type "
@@ -38,7 +38,8 @@ def main():
              f"- entries: **{len(rows)}**",
              f"- distinct papers cited: **{len({c['pmid'] for r in rows for c in r['citations']})}** "
              f"({sum(1 for r in rows for c in r['citations'])} citation rows; "
-             f"{sum(1 for r in rows for c in r['citations'] if c.get('gene_match'))} of them mention a marker gene we use)",
+             f"{sum(1 for r in rows for c in r['citations'] if c.get('gene_match'))} of them state one "
+             f"of the marker genes we use in their own text)",
              f"- fully linked (source + page + MCP route + skill): "
              f"**{sum(1 for r in rows if r['n_pmids'] and r['n_wiki_pages'])}**",
              f"- reachable on the default answer surface: "
@@ -46,6 +47,12 @@ def main():
              "",
              "Citations are drawn from the corpus shipped with this knowledge base, so every PMID below "
              "can be resolved by `search_literature` without network access.",
+             "",
+             "A citation is marked `states` when the gene symbols of this entry occur in the cited "
+             "paper's own full text as standalone words (no substring matches, no case folding). The "
+             "location shown is the chunk and section where the first of those symbols was found, so a "
+             "reader can open the paper and check. An unmarked citation is a paper about the cell type "
+             "whose text does not name our panel genes.",
              ""]
 
     by_lib = {}
@@ -68,10 +75,12 @@ def main():
             anchor = "; ".join(f"{b}, {p}" for b, p in r["book_anchors"][:2]) or "—"
             wiki = ", ".join(r["wiki_pages"][:2]) or "**none**"
             def _c(c):
-                tag = ""
                 if c.get("gene_match"):
-                    tag = " [mentions " + ",".join(c.get("matched_panel_genes") or []) + "]"
-                return f"PMID {c['pmid']} ({c['journal']} {c['year']}){tag}"
+                    g = ", ".join(c.get("genes_in_text") or c.get("matched_panel_genes") or [])
+                    loc = c.get("evidence_locator") or ""
+                    return (f"PMID {c['pmid']} ({c['journal']} {c['year']}) states {g}"
+                            + (f" — {loc}" if loc else ""))
+                return f"PMID {c['pmid']} ({c['journal']} {c['year']}) — no panel gene in its text"
             if r.get("source_kind") == "textbook":
                 cites = "; ".join(f"{b} {p}" for b, p in r.get("book_anchors", [])) or "**none**"
             else:
@@ -79,17 +88,39 @@ def main():
             lines.append(f"| {r['cell_type']} | {mk} | {anchor} | {wiki} | {cites} |")
             tsv.append("\t".join([
                 r["entry_id"], r["library"], route, r["cell_type"], str(r["n_genes"]),
-                mk, anchor, wiki, str(r["n_pmids"]), cites]))
+                mk, anchor, wiki, str(r["n_pmids"]),
+                str(sum(1 for c in r["citations"] if c.get("gene_match"))), cites]))
         lines.append("")
 
     gaps = [r for r in rows if not r["n_wiki_pages"]]
-    if gaps:
-        lines += ["## Known gaps", "",
-                  "Entries with citations but no written knowledge-base page yet — a reader cannot "
-                  "follow the trail further, so these are registered as open items:", ""]
-        for r in gaps:
-            lines.append(f"- `{r['entry_id']}` — {r['n_pmids']} backing papers, no page")
-        lines.append("")
+    unverified = [r for r in rows if r.get("source_kind") == "marker_library" and r["n_pmids"]
+                  and not any(c.get("gene_match") for c in r["citations"])]
+    no_panel = [r for r in unverified if not (r.get("panel_genes") or [])]
+    label_only = [r for r in unverified if r.get("panel_genes")]
+    if gaps or label_only or no_panel:
+        lines += ["## Known gaps", ""]
+        if gaps:
+            lines += ["Entries with citations but no written knowledge-base page yet — a reader "
+                      "cannot follow the trail further, so these are registered as open items:", ""]
+            for r in gaps:
+                lines.append(f"- `{r['entry_id']}` — {r['n_pmids']} backing papers, no page")
+            lines.append("")
+        if label_only:
+            lines += ["Entries whose cited papers never name the panel genes in their own text — the "
+                      "citations are papers about the cell type, so the trail stops at the label "
+                      "rather than the marker:", ""]
+            for r in label_only:
+                lines.append(f"- `{r['entry_id']}` — {r['n_pmids']} papers, none stating "
+                             f"{', '.join(r.get('panel_genes') or [])}")
+            lines.append("")
+        if no_panel:
+            lines += ["Entries that carry no marker panel at all in their source library — nothing "
+                      "can be checked against a paper's text until a panel is recorded, so their "
+                      "citations stay at the label level:", ""]
+            for r in no_panel:
+                lines.append(f"- `{r['entry_id']}` — {r['n_pmids']} papers, 0 markers recorded in "
+                             f"`{r.get('kb_file')}`")
+            lines.append("")
 
     (OUT / "ANNOTATION_EVIDENCE_APPENDIX_v1.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     (OUT / "ANNOTATION_EVIDENCE_APPENDIX_v1.tsv").write_text("\n".join(tsv) + "\n", encoding="utf-8")

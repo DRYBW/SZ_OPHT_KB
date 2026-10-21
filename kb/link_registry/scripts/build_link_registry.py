@@ -48,8 +48,17 @@ def _norm(s):
 
 
 def wiki_index():
-    """Map normalised cell-type tokens -> wiki page file that mentions them."""
+    """Map normalised cell-type tokens -> wiki page file that mentions them.
+
+    Two structures are returned: the lower-cased page text (for the strict phrase test) and, per
+    page, the set of joins of two and three consecutive word tokens with separators removed. The
+    second one exists because the same class is written differently in different places —
+    `Mac_DAM_LAM` in the marker library, `Mac_DAMLAM` in a composition table, `Mac DAM/LAM` in
+    prose. Those are one class with three spellings, and a link matcher that only knows the first
+    reports a page that does discuss the class as absent.
+    """
     idx = {}
+    spans = {}
     for p in sorted(KB.glob("**/*.md")):
         try:
             txt = p.read_text(encoding="utf-8", errors="ignore")
@@ -58,7 +67,47 @@ def wiki_index():
         rel = p.relative_to(KB)
         txt_l = txt.lower()
         idx[rel] = txt_l
-    return idx
+        toks = re.split(r"[^a-z0-9]+", txt_l)
+        s = set()
+        for i in range(len(toks) - 1):
+            a = toks[i]
+            b = toks[i + 1]
+            if a and b:
+                s.add(a + b)
+                if i + 2 < len(toks) and toks[i + 2]:
+                    s.add(a + b + toks[i + 2])
+        spans[rel] = s
+    return idx, spans
+
+
+GENE_INDEX = HERE.parent / "out" / "GENE_PAPER_INDEX_v1.tsv"
+
+
+def gene_index():
+    """paper_id -> {gene: {n_chunks, n_body, sections, locator, journal, year, species, ...}}.
+
+    Built by build_gene_paper_index.py, which scans the full text of every chunk in the corpus at
+    word boundaries. The corpus' own per-chunk `marker_genes` column is sparse — it records a few
+    symbols per chunk, not everything the chunk says — so without this index a citation could not
+    be described as "this paper states RPE65" in a way a reader can go and check.
+    """
+    out = {}
+    if not GENE_INDEX.is_file():
+        return out
+    with GENE_INDEX.open(encoding="utf-8") as fh:
+        head = fh.readline().rstrip("\n").split("\t")
+        for line in fh:
+            p = line.rstrip("\n").split("\t")
+            if len(p) < len(head):
+                continue
+            r = dict(zip(head, p))
+            out.setdefault(r["paper_id"], {})[r["gene"]] = {
+                "n_chunks": int(r["n_chunks"]), "n_body": int(r["n_body_chunks"]),
+                "sections": r["sections"], "locator": r["locator"],
+                "journal": r["journal"], "year": r["year"],
+                "species": r["species"], "is_preprint": r["is_preprint"],
+            }
+    return out
 
 
 def book_index():
@@ -86,8 +135,12 @@ def book_index():
 
 def main():
     libs = core._load_marker_dbs("all")
-    wiki = wiki_index()
+    wiki, wiki_spans = wiki_index()
     books = book_index()
+    gidx = gene_index()
+    if not gidx:
+        print("WARNING: GENE_PAPER_INDEX_v1.tsv missing - citations cannot be verified against "
+              "paper full text; run scripts/build_gene_paper_index.py first")
     rows = []
     for name, lib_path, data in libs:
         mk = data.get("markers") if isinstance(data, dict) else None
@@ -104,6 +157,7 @@ def main():
             # ranked first, because "this paper mentions RPE65" is a stronger trail than "this paper
             # is about RPE".
             panel = {g.upper() for g in genes[:6]}
+            panel_all = {g.upper() for g in genes[:8]}
             pmids, cites, seen = [], [], set()
 
             def _collect(hits, gene_match):
@@ -138,7 +192,76 @@ def main():
             except Exception as exc:                                  # noqa: BLE001
                 cites = []
                 rows.append({"error": f"{cls}: {exc}"})
-            cites.sort(key=lambda c: (not c["gene_match"], -(c.get("relevance") or 0)))
+            # --- full-text verification, then discovery --------------------------
+            # GENE_PAPER_INDEX is a word-boundary scan of every chunk in the corpus. It does two
+            # things here:
+            #   * re-labels each search hit with the genes its paper actually states, the section
+            #     they sit in and the chunk locator, so the claim is one a reader can check;
+            #   * adds papers the label query never returned, but whose text states the panel
+            #     genes, ranked by how many panel genes they contain.
+            n_added = 0
+            for c in cites:
+                per_gene = gidx.get(c["pmid"]) or {}
+                present = {k: v for k, v in per_gene.items() if k in panel_all}
+                c["genes_in_text"] = sorted(present)
+                c["n_genes_in_text"] = len(present)
+                c["evidence_source"] = "corpus search"
+                if present:
+                    top_g, top_meta = max(present.items(), key=lambda kv: kv[1]["n_chunks"])
+                    first_sec = [s for s in top_meta["sections"].split("|") if s] or [""]
+                    c["gene_match"] = True
+                    c["matched_panel_genes"] = sorted(present)
+                    c["evidence_locator"] = f"{top_meta['locator']} @ {first_sec[0]}"
+                    c["n_chunks_with_gene"] = sum(v["n_chunks"] for v in present.values())
+                else:
+                    c["gene_match"] = False
+                    c["matched_panel_genes"] = []
+                    c["evidence_locator"] = ""
+                    c["n_chunks_with_gene"] = 0
+            cand = {}
+            for pid, genes_here in gidx.items():
+                if pid in seen:
+                    continue
+                present = {g: meta for g, meta in genes_here.items() if g in panel_all}
+                if not present:
+                    continue
+                if str(next(iter(present.values()))["species"]).lower() not in {"human", "both"}:
+                    continue
+                cand[pid] = present
+            ranked = sorted(cand.items(),
+                            key=lambda kv: (-len(kv[1]),
+                                            -sum(m["n_chunks"] for m in kv[1].values()),
+                                            kv[0]))
+            for pid, genes_here in ranked[:8]:
+                if pid in seen:
+                    continue
+                seen.add(pid)
+                ordered = sorted(genes_here, key=lambda g: -genes_here[g]["n_chunks"])
+                top_g = ordered[0]
+                top_meta = genes_here[top_g]
+                first_sec = [s for s in top_meta["sections"].split("|") if s] or [""]
+                pmids.append(pid)
+                cites.append({
+                    "pmid": pid,
+                    "title": "",
+                    "journal": top_meta["journal"],
+                    "year": top_meta["year"],
+                    "tissues": "",
+                    "marker_genes": "",
+                    "gene_match": True,
+                    "genes_in_text": ordered,
+                    "n_genes_in_text": len(ordered),
+                    "matched_panel_genes": ordered,
+                    "n_chunks_with_gene": sum(m["n_chunks"] for m in genes_here.values()),
+                    "evidence_locator": f"{top_meta['locator']} @ {first_sec[0]}",
+                    "evidence_source": "gene index (full text)",
+                    "species": top_meta["species"],
+                    "relevance": None,
+                    "chunk": "",
+                })
+                n_added += 1
+            cites.sort(key=lambda c: (not c["gene_match"], -c.get("n_genes_in_text", 0),
+                                      -(c.get("relevance") or 0)))
             n_gene = sum(1 for c in cites if c["gene_match"])
             # --- wiki link ----------------------------------------------
             # Two-tier matcher: strict (whole normalised label) and loose (each underscore-separated
@@ -147,22 +270,35 @@ def main():
             # Word-boundary matching, because a bare substring test on a short label is noise:
             # "AC" matched any page containing those two letters, which is most of them.
             phrase = cls.replace("_", " ").lower()
+            label_norm = _norm(cls)
             strict_re = re.compile(r"(?<![a-z0-9])" + re.escape(phrase) + r"(?![a-z0-9])")
             loose_res = [re.compile(r"(?<![a-z0-9])" + re.escape(w.lower()) + r"(?![a-z0-9])")
                          for w in re.split(r"[_\s]+", cls) if len(w) >= 5]
-            hits, loose_only = [], []
+            hits, loose_only, variant_only = [], [], []
             for rel, txt in wiki.items():
                 if strict_re.search(txt):
                     hits.append(str(rel))
+                elif len(label_norm) > 3 and label_norm in wiki_spans.get(rel, ()):
+                    variant_only.append(str(rel))
                 elif any(rx.search(txt) for rx in loose_res):
                     loose_only.append(str(rel))
-            if not hits and loose_only:
-                hits = loose_only[:4]
-                wiki_match_kind = "loose"
-            elif hits:
+            if hits:
                 wiki_match_kind = "strict"
+            elif variant_only:
+                wiki_match_kind = "variant"
+            elif loose_only:
+                wiki_match_kind = "loose"
             else:
                 wiki_match_kind = "absent"
+            # Tier order: an exact spelling, then a spelling variant, then a loose word hit. Pages
+            # are capped, so a stricter match keeps its slot; nothing that used to be listed is
+            # dropped unless a stronger link takes the slot.
+            ordered = []
+            for src in (hits, variant_only, loose_only):
+                for p in src:
+                    if p not in ordered:
+                        ordered.append(p)
+            hits = ordered[:4]
             # --- book anchors -------------------------------------------
             anchors = []
             for key in (cls, cls.replace("_", " ")):
@@ -183,6 +319,8 @@ def main():
                 "citations": cites,
                 "n_citations": len(cites),
                 "n_gene_matched": n_gene,
+                "n_gene_index_added": n_added,
+                "panel_genes": genes[:8],
                 "book_anchors": anchors[:4],
                 "mcp_route": f"query_marker(cell_type='{cls}', library='{name}')",
                 "skill_trigger": "knowledge-guided-cell-annotation",
