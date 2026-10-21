@@ -1,0 +1,53 @@
+gene universe: 773 symbols from the shipped panels
+papers excluded from anchor locators: ['39117640']
+  scanned 100000 chunks (maxrss 0.29 GiB)  [ok=628]
+  scanned 200000 chunks (maxrss 0.30 GiB)  [ok=700]
+scanned 244877 chunks; genes with at least one hit: 763; maxrss 0.32 GiB
+genes with no corpus hit at all: 10
+nodes=70 scaffold=60 in_house_dev=10 germ=8
+stage counts {'fetal': 0, 'adult': 22, 'developing': 22, 'unknown': 26}
+labels attached=116 orphaned=5
+   orphan label dev_v8 :: Retinal_Proliferating state_program 10
+   orphan label dev_v9 :: Retinal_Proliferating state_program 10
+   orphan label membrane :: APC_MHCII_high cell_type 10
+   orphan label membrane :: Proliferating state_program 8
+   orphan label lacrimal_v6 :: Lacrimal_duct_epithelial cell_type 1
+node assertions: 1043
+  roles    : {'identity_support': 982, 'state_warning': 30, 'subtype_discriminator': 31}
+  basis    : {'link_registry_gene_verified': 313, 'corpus_gene_row': 720, 'panel_provenance_stated': 6, 'panel_entry_basis_unstated': 4}
+  assay    : {'literature_RNA': 1015, 'literature_protein': 23, 'scRNA': 1, 'unspecified': 4}
+  refused  : {'different_species_not_stitchable': 2, 'evidence_only_from_evaluation_volume': 75}
+  nodes with zero assertions: 11
+edges: 34
+  relation types: {'ontology_development_relation': 9, 'ancestral_origin': 25}
+  grades         : {'direct_lineage_support': 5, 'identity_conversion_not_direct': 4, 'trajectory_only': 12, 'textbook_or_review_distant_origin': 13}
+  status         : {'parent_group_has_no_panel': 3, 'edge_not_stepwise_relation': 4, 'admitted_stepwise': 2, 'marker_change_not_available_for_relation_type': 25}
+edge marker-change assertions: 10
+  by edge: {'dl:CL:0002672|sp=human': 10}
+refusals: {'parent_group_has_no_panel': 3, 'edge_not_stepwise_relation': 4, 'detection_conditions_insufficient': 90, 'marker_change_not_available_for_relation_type': 25}
+gap rows: 226
+  by kind  : {'no_evidence': 140, 'refused_evidence': 78, 'thin_evidence': 8}
+  by scope : {'node': 11, 'label': 5, 'gene': 175, 'edge': 34, 'panel': 1}
+  by reason: {'node_has_no_panel_and_no_source': 11, 'state_program_without_identity_node': 3, 'no_source_in_corpus': 2, 'different_species_not_stitchable': 2, 'evidence_only_from_evaluation_volume': 75, 'panel_entry_basis_unstated': 4, 'review_citation_unverifiable_locally': 4, 'parent_group_has_no_panel': 3, 'edge_not_stepwise_relation': 4, 'detection_conditions_insufficient': 92, 'marker_change_not_available_for_relation_type': 25, 'panel_selected_from_evaluation_report': 1}
+  declared-but-unused reasons: ['source_exists_not_full_text', 'different_stage_not_stitchable', 'prohibited_by_library_ban', 'no_source_states_the_change']
+manifest entries: 14 | verified OK: 14 | not OK: 0
+verdict: **PASS**  (13 checks, 0 failed)
+
+| check | name | status | n_offenders | detail |
+|---|---|---|---|---|
+  G1   KEY_RESOLVES               PASS  offenders=0
+  G2   ANCHOR_RESOLVES            PASS  offenders=0
+  G3   VOCAB                      PASS  offenders=0
+  G4   NO_NUMERIC                 PASS  offenders=0
+  G5   RNA_PROTEIN_SPLIT          PASS  offenders=0
+  G6   SPECIES_STAGE              PASS  offenders=0
+  G7   NO_EVAL_INPUT              PASS  offenders=0
+  G8   GAP_COVERAGE               PASS  offenders=0
+  G9   NO_OFF_WITHOUT_DETECTION   PASS  offenders=0
+  G10  REBUILD_REPLAY             PASS  offenders=0
+  G11  NO_FABRICATED_GENE         PASS  offenders=0
+  G12  GOLDEN721                  PASS  offenders=0
+  G13  KB_UNTOUCHED               PASS  offenders=0
+verdict: PASS -> /mnt/D/EyeKB/plans/devlineage_20261021/markers/out/GATE.json
+replay: compared 14 artefacts, differing 0
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/markers/REPORT.md lines: 506

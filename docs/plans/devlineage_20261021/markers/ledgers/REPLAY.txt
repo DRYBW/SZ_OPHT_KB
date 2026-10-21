@@ -1,0 +1,5 @@
+# replay ledger: the whole chain was rebuilt into a scratch directory and every artefact
+# listed in out/MANIFEST.sha256 was compared byte for byte.
+artefacts_compared=14
+differing=0
+REPLAY_PASS byte-identical on the second build

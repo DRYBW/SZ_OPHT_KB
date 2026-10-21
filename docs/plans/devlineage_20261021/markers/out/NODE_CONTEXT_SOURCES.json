@@ -1,0 +1,62 @@
+{
+ "generated_by": "scripts/m1_nodes.py",
+ "node_list_source": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_NODES.tsv",
+ "node_list_provenance": "card L2's accepted developmental lineage layer; the contract's scaffold/ directory has not landed",
+ "ontology": {
+  "path": "/mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo",
+  "release": null,
+  "sha256": null
+ },
+ "n_nodes": 70,
+ "n_scaffold_nodes": 60,
+ "n_in_house_dev_precursor_nodes": 10,
+ "n_germ_layer_anchors": 8,
+ "stage_counts": {
+  "fetal": 0,
+  "adult": 22,
+  "developing": 22,
+  "unknown": 26
+ },
+ "n_nodes_missing_from_ontology_file": 0,
+ "n_nodes_stage_from_developing_scope": 22,
+ "n_labels_attached": 116,
+ "n_labels_orphaned": 5,
+ "orphan_labels": [
+  {
+   "library": "dev_v8",
+   "label": "Retinal_Proliferating",
+   "panel_file": "markers_v8_dev_retina.json",
+   "n_genes": 10,
+   "concept_kind": "state_program"
+  },
+  {
+   "library": "dev_v9",
+   "label": "Retinal_Proliferating",
+   "panel_file": "markers_v9_dev_retina.json",
+   "n_genes": 10,
+   "concept_kind": "state_program"
+  },
+  {
+   "library": "membrane",
+   "label": "APC_MHCII_high",
+   "panel_file": "markers_membrane_v1.json",
+   "n_genes": 10,
+   "concept_kind": "cell_type"
+  },
+  {
+   "library": "membrane",
+   "label": "Proliferating",
+   "panel_file": "markers_membrane_v1.json",
+   "n_genes": 8,
+   "concept_kind": "state_program"
+  },
+  {
+   "library": "lacrimal_v6",
+   "label": "Lacrimal_duct_epithelial",
+   "panel_file": "markers_v6_lacrimal_increment.json",
+   "n_genes": 1,
+   "concept_kind": "cell_type"
+  }
+ ],
+ "node_key_format": "dl:<canonical_cl_id>|sp=<species>|ts=<tissue_context>|st=<organism_stage>|es=<experimental_system>"
+}

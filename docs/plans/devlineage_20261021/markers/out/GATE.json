@@ -1,0 +1,435 @@
+{
+ "gate": "marker layer",
+ "verdict": "PASS",
+ "n_checks": 13,
+ "n_fail": 0,
+ "counts": {
+  "G1": {
+   "status": "PASS",
+   "n_offenders": 0
+  },
+  "G2": {
+   "status": "PASS",
+   "n_offenders": 0
+  },
+  "G3": {
+   "status": "PASS",
+   "n_offenders": 0
+  },
+  "G4": {
+   "status": "PASS",
+   "n_offenders": 0
+  },
+  "G5": {
+   "status": "PASS",
+   "n_offenders": 0
+  },
+  "G6": {
+   "status": "PASS",
+   "n_offenders": 0
+  },
+  "G7": {
+   "status": "PASS",
+   "n_offenders": 0
+  },
+  "G8": {
+   "status": "PASS",
+   "n_offenders": 0
+  },
+  "G9": {
+   "status": "PASS",
+   "n_offenders": 0
+  },
+  "G10": {
+   "status": "PASS",
+   "n_offenders": 0
+  },
+  "G11": {
+   "status": "PASS",
+   "n_offenders": 0
+  },
+  "G12": {
+   "status": "PASS",
+   "n_offenders": 0
+  },
+  "G13": {
+   "status": "PASS",
+   "n_offenders": 0
+  }
+ },
+ "checks": [
+  {
+   "code": "G1",
+   "name": "KEY_RESOLVES",
+   "status": "PASS",
+   "detail": "assertions=1053 node keys=70 edge keys=34 unresolved=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G2",
+   "name": "ANCHOR_RESOLVES",
+   "status": "PASS",
+   "detail": "anchors=1053 by kind={'link_registry_gene_verified': 313, 'corpus_gene_row': 730, 'panel_provenance_stated': 6, 'panel_entry_basis_unstated': 4} corpus rows re-read=378 ok=378 bad=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G3",
+   "name": "VOCAB",
+   "status": "PASS",
+   "detail": "fields checked over 1053 assertions + 34 edges; rows with an out-of-vocabulary value=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G4",
+   "name": "NO_NUMERIC",
+   "status": "PASS",
+   "detail": "assertions with effect_value=0 (all qualitative by design); offenders=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G5",
+   "name": "RNA_PROTEIN_SPLIT",
+   "status": "PASS",
+   "detail": "assays={'literature_RNA': 1025, 'literature_protein': 23, 'scRNA': 1, 'unspecified': 4}; (node, gene) pairs carrying both an RNA and a protein row (kept as separate rows, never merged)=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6",
+   "name": "SPECIES_STAGE",
+   "status": "PASS",
+   "detail": "node rows carry their node's species and stage; edge rows name source and target group and disclose stage_crossing; offenders=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G7",
+   "name": "NO_EVAL_INPUT",
+   "status": "PASS",
+   "detail": "60 forbidden tokens over 10 data artefacts; hits=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G8",
+   "name": "GAP_COVERAGE",
+   "status": "PASS",
+   "detail": "gap rows=226 reasons=12/16 declared; zero-evidence nodes=11; edges covered=61/34",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G9",
+   "name": "NO_OFF_WITHOUT_DETECTION",
+   "status": "PASS",
+   "detail": "off/down assertions=0; loss-side genes recorded as a gap instead=92",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G10",
+   "name": "REBUILD_REPLAY",
+   "status": "PASS",
+   "detail": "chain rebuilt into a scratch dir: m0_corpus_gene_index.py rc=0; m1_nodes.py rc=0; m2_node_markers.py rc=0; m3_edge_assertions.py rc=0; m4_gap_register.py rc=0; artefacts compared=12 differing=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G11",
+   "name": "NO_FABRICATED_GENE",
+   "status": "PASS",
+   "detail": "gene symbols in assertions=695; unresolvable to the corpus index or a shipped panel=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G12",
+   "name": "GOLDEN721",
+   "status": "PASS",
+   "detail": "recorded production queries replayed in 6.1s: n=721 identical=721 differ=0 (recorded baseline differ=0)",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G13",
+   "name": "KB_UNTOUCHED",
+   "status": "PASS",
+   "detail": "kb/ files walked; newest mtime=2026-10-21 23:22; files written during this card=0",
+   "n_offenders": 0,
+   "offenders": []
+  }
+ ],
+ "replay": {
+  "performed": true,
+  "build_ok": true,
+  "logs": [
+   "m0_corpus_gene_index.py rc=0",
+   "m1_nodes.py rc=0",
+   "m2_node_markers.py rc=0",
+   "m3_edge_assertions.py rc=0",
+   "m4_gap_register.py rc=0"
+  ],
+  "artefacts_compared": 12,
+  "differing": []
+ },
+ "golden": {
+  "performed": true,
+  "rc": 0,
+  "seconds": 6.1,
+  "stdout_tail": "OFF: n=721  identical_to_2026-10-18=721  differ=0  with_composite_demoted=-\n ON: n=721  identical_to_2026-10-18=721  differ=0  with_composite_demoted=19\nwrote /tmp/mk_golden__uq0obe5/golden_now.json\n",
+  "now": {
+   "off": {
+    "n": 721,
+    "identical": 721,
+    "differ": 0,
+    "examples": []
+   },
+   "on": {
+    "n": 721,
+    "identical": 721,
+    "differ": 0,
+    "n_with_demoted": 19,
+    "examples": []
+   }
+  },
+  "recorded": {
+   "off": {
+    "n": 721,
+    "identical": 721,
+    "differ": 0,
+    "examples": []
+   },
+   "on": {
+    "n": 721,
+    "identical": 721,
+    "differ": 0,
+    "n_with_demoted": 19,
+    "examples": []
+   }
+  }
+ },
+ "ontology": {
+  "generated_by": "scripts/a1_build_nav.py",
+  "primary": {
+   "source": "/mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo",
+   "sha256": "7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f",
+   "format_version": "1.2",
+   "release": "releases/2026-06-08",
+   "n_cl_terms_in_file": 3531,
+   "n_active": 3335,
+   "n_obsolete": 196,
+   "n_duplicate_id_blocks": 0,
+   "duplicate_id_blocks": {},
+   "n_cl_namespace_typedefs": 3,
+   "cl_namespace_typedefs": {
+    "CL:4030044": 300654,
+    "CL:4030045": 300658,
+    "CL:4030046": 300663
+   },
+   "n_import_terms": 15383,
+   "n_develops_from_edges": 400,
+   "typedef_develops_from_in_file": true
+  },
+  "primary_path": "/mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo",
+  "closure_audit": {
+   "n_terms": 3335,
+   "n_bad": 0,
+   "bad": []
+  },
+  "second_file": {
+   "path": "/mnt/D/OcularKB/ocularkb/rag/ontology/cl-base.obo",
+   "sha256": "c6274fb65cdf740b983a06b74cb678814249d7f8e580c2ec9de54bf204a2b1c7",
+   "release": "cl/releases/2026-06-08/cl-base.owl",
+   "n_cl_terms": 3531,
+   "n_active": 3335,
+   "n_shared": 3531,
+   "only_in_primary": [],
+   "n_only_in_primary": 0,
+   "only_in_second": [],
+   "n_only_in_second": 0,
+   "name_disagreements": [],
+   "n_name_disagreements": 0,
+   "parent_disagreements": [],
+   "n_parent_disagreements": 0
+  },
+  "germ_layer_anchors": [
+   {
+    "key": "mesoderm",
+    "queried_name": "mesodermal cell",
+    "cl_id": "CL:0000222",
+    "cl_label": "mesodermal cell",
+    "method": "name",
+    "obo_line": 3581,
+    "n_descendants": 7
+   },
+   {
+    "key": "ectoderm",
+    "queried_name": "ectodermal cell",
+    "cl_id": "CL:0000221",
+    "cl_label": "ectodermal cell",
+    "method": "name",
+    "obo_line": 3566,
+    "n_descendants": 3
+   },
+   {
+    "key": "neural_ectoderm",
+    "queried_name": "neurectodermal cell",
+    "cl_id": "CL:0000133",
+    "cl_label": "neurectodermal cell",
+    "method": "name",
+    "obo_line": 2321,
+    "n_descendants": 1
+   },
+   {
+    "key": "neural_crest",
+    "queried_name": "neural crest cell",
+    "cl_id": "CL:0011012",
+    "cl_label": "neural crest cell",
+    "method": "name",
+    "obo_line": 32156,
+    "n_descendants": 9
+   },
+   {
+    "key": "surface_ectoderm",
+    "queried_name": "surface ectodermal cell",
+    "cl_id": "CL:0000114",
+    "cl_label": "surface ectodermal cell",
+    "method": "name",
+    "obo_line": 2006,
+    "n_descendants": 0
+   },
+   {
+    "key": "mesenchyme",
+    "queried_name": "mesenchyme cell",
+    "cl_id": "CL:0008019",
+    "cl_label": "mesenchymal cell",
+    "method": "synonym",
+    "obo_line": 29475,
+    "n_descendants": 13
+   },
+   {
+    "key": "endoderm",
+    "queried_name": "endodermal cell",
+    "cl_id": "CL:0000223",
+    "cl_label": "endodermal cell",
+    "method": "name",
+    "obo_line": 3599,
+    "n_descendants": 1
+   },
+   {
+    "key": "hematopoietic_stem_cell",
+    "queried_name": "hematopoietic stem cell",
+    "cl_id": "CL:0000037",
+    "cl_label": "hematopoietic stem cell",
+    "method": "name",
+    "obo_line": 710,
+    "n_descendants": 11
+   }
+  ],
+  "label_map": {
+   "n_labels": 80,
+   "n_mapped": 65,
+   "n_unresolved": 15,
+   "unresolved": [
+    "AC_precursor",
+    "APC_MHCII_high",
+    "BC_precursor",
+    "Cone_precursor",
+    "HC_precursor",
+    "Lacrimal_duct_epithelial",
+    "NRPC_early",
+    "NRPC_late",
+    "Proliferating",
+    "RGC_precursor",
+    "Retinal_Proliferating",
+    "Rod_precursor",
+    "TAC_proliferating",
+    "TAC_transit_amplifying",
+    "glia_precursor"
+   ],
+   "n_id_not_in_file": 0,
+   "id_not_in_file": [],
+   "by_method": {
+    "sidecar": 61,
+    "unresolved": 15,
+    "name": 4
+   },
+   "labels_in_libraries_missing_from_sidecar": [
+    "TAC_transit_amplifying",
+    "anterior lens cell",
+    "pigmented epithelial cell",
+    "secondary lens fiber"
+   ]
+  },
+  "files": {
+   "closure_tsv": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_CLOSURE_is_a.tsv",
+   "labelmap_tsv": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_LABELMAP_V2.tsv",
+   "closure_tsv_sha256": "e6ea0a419139704f53dfb6aaf9198413c791f56c25c8d431c28190450c0ca553",
+   "labelmap_tsv_sha256": "629ab88c274b9dd644d68baf9a98670c55b72644532de1a1a3407795e185ad3e"
+  }
+ },
+ "generated_at": "2026-10-22 01:16:35",
+ "columns_node": [
+  "assertion_id",
+  "edge_id_or_node_key",
+  "gene_symbol",
+  "species",
+  "role",
+  "change",
+  "stage",
+  "assay",
+  "source_group",
+  "target_group",
+  "effect_value",
+  "uncertainty",
+  "claim_type",
+  "evidence_ids",
+  "evidence_grade",
+  "evidence_anchor",
+  "support_basis",
+  "anchor_kind",
+  "anchor_species",
+  "target_subtype",
+  "extraction_record",
+  "detection_conditions",
+  "node_family",
+  "node_dl_id",
+  "all_sources",
+  "panel_selection_basis"
+ ],
+ "columns_edge": [
+  "assertion_id",
+  "edge_id_or_node_key",
+  "gene_symbol",
+  "species",
+  "role",
+  "change",
+  "stage",
+  "assay",
+  "source_group",
+  "target_group",
+  "effect_value",
+  "uncertainty",
+  "claim_type",
+  "evidence_ids",
+  "evidence_grade",
+  "evidence_anchor",
+  "support_basis",
+  "anchor_kind",
+  "anchor_species",
+  "target_subtype",
+  "extraction_record",
+  "detection_conditions",
+  "node_family",
+  "node_dl_id",
+  "all_sources",
+  "panel_selection_basis",
+  "source_panel",
+  "direction",
+  "stage_crossing"
+ ]
+}
