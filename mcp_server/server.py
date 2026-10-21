@@ -239,7 +239,10 @@ def get_tissue_composition(species: str, tissue: str, disease: str = "",
       row and listed in stage_disclosure / excluded_nonadult_units). "fetal" or "developing"
       returns the developmental transition entry instead -- adult numbers must not answer a
       fetal question, even for the same tissue. "unknown" = only entries whose disclosure files
-      carry no age column.
+      carry no age column. The literal is resolved, never guessed: "" and "any" reach the adult
+      main file, "postnatal" folds to "developing", and any other literal -- "organoid" included --
+      resolves to the unknown tier and adds a stage_literal block naming the literal and the tier it
+      reached. No literal falls through to the adult baseline.
 
     How to read it: these are reference intervals, not acceptance thresholds. A proportion
     clearly outside its interval raises an advisory flag for you to revisit -- it can be a

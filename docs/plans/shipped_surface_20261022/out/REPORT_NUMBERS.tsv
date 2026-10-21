@@ -1,0 +1,48 @@
+name	value	source	how
+panel.calls	12	out/DUMP_PRE_HEAD_v2.json	count of panel:: keys
+panel.refused_at_HEAD	4	out/DUMP_PRE_HEAD_v2.json	is_error=True
+panel.answered_and_moved	1	out/DUMP_PRE_HEAD_v2.json + HEAD fixture	digest differs and is_error=False
+panel.recorded.legacy_panel	4813fca2f5c8c916a233f4825b200b19	HEAD fixture	field
+panel.recorded.full_panel	097328b42ffdb736b6934fa1967ada37	HEAD fixture	field
+panel.new.legacy_panel	e8e6c26351cd9a1d42fa2e7cb6a83f23	tests/fixtures/tool_panel_baseline.json	field
+panel.new.full_panel	3f1f52cb62915f5ad2801962aa523d36	tests/fixtures/tool_panel_baseline.json	field
+panel.new.refused_calls	0	tests/fixtures/tool_panel_baseline.json	len(refused_calls)
+panel.new.n_calls	12	tests/fixtures/tool_panel_baseline.json	field
+panel.refused_key	get_kb_page:{"kind": "index"}	out/DUMP_PRE_HEAD_v2.json	is_error=True at HEAD
+panel.refused_key	get_kb_page:{"kind": "topic", "name": "vascular"}	out/DUMP_PRE_HEAD_v2.json	is_error=True at HEAD
+panel.refused_key	get_tissue_composition:{"detail": true, "species": "human", "tissue": "retina"}	out/DUMP_PRE_HEAD_v2.json	is_error=True at HEAD
+panel.refused_key	search_literature:{"query": "Mueller cell gliosis", "top_k": 3}	out/DUMP_PRE_HEAD_v2.json	is_error=True at HEAD
+panel.refused_at_a400315	4/4	/tmp/ss_verify/dump_a400315.json	is_error on the same keys
+panel.refused_at_c4d04d9	4/4	/tmp/ss_verify/dump_c4d04d9.json	is_error on the same keys
+mueller.md5_at_a400315	80e96deae5e28482099daee394db7de2	dump at a400315	md5 field
+mueller.md5_at_c4d04d9	919fac6e91a67153a214870127407e13	dump at c4d04d9	md5 field
+mueller.md5_at_HEAD	919fac6e91a67153a214870127407e13	dump at HEAD	md5 field
+mueller.md5_recorded	80e96deae5e28482099daee394db7de2	HEAD fixture	calls[key]
+mueller.field_diffs_a400315_to_HEAD	11	dumps at a400315 and HEAD	recursive leaf diff of the parsed payload
+mueller.field_diff_paths	.entries[0].citations;.entries[1].citations;.entries[2].citations	same	distinct field paths of the diffs
+panel.refusal_text_version	['2.12']	out/DUMP_PRE_HEAD_v2.json	regex pydantic.dev/<ver>/ in the refusal texts
+stage.pre.rows	42	dump pre (/mnt/D/EyeKB/plans/shipped_surface_20261022/out)	count of literal:: keys
+stage.pre.rows_with_stage_literal_block	0	dump pre (/mnt/D/EyeKB/plans/shipped_surface_20261022/out)	payload.stage_literal present
+stage.post_v3.rows	42	dump post_v3 (/mnt/D/EyeKB/plans/shipped_surface_20261022/out)	count of literal:: keys
+stage.post_v3.rows_with_stage_literal_block	24	dump post_v3 (/mnt/D/EyeKB/plans/shipped_surface_20261022/out)	payload.stage_literal present
+stage.changed_pre_to_post	24/42	dumps pre and post_v3	md5 differs per (species,tissue,literal)
+stage.organoid.human.retina.pre	entry=baseline_human_retina organism_stage=adult flag=None bytes=91508	dump pre (/mnt/D/EyeKB/plans/shipped_surface_20261022/out)	payload fields for the organoid literal
+stage.organoid.human.retina.post	entry=no_unknown_stage_entry organism_stage=None flag=unrecognised_development_stage_literal bytes=817	dump post (/mnt/D/EyeKB/plans/shipped_surface_20261022/out)	payload fields for the organoid literal
+stage.organoid.human.RPE.pre	entry=baseline_human_RPE organism_stage=unknown flag=None bytes=22522	dump pre (/mnt/D/EyeKB/plans/shipped_surface_20261022/out)	payload fields for the organoid literal
+stage.organoid.human.RPE.post	entry=baseline_human_RPE organism_stage=unknown flag=unrecognised_development_stage_literal bytes=22962	dump post (/mnt/D/EyeKB/plans/shipped_surface_20261022/out)	payload fields for the organoid literal
+stage.organoid.mouse.retina.pre	entry=no matching composition entry (species=' organism_stage=None flag=None bytes=2425	dump pre (/mnt/D/EyeKB/plans/shipped_surface_20261022/out)	payload fields for the organoid literal
+stage.organoid.mouse.retina.post	entry=no matching composition entry (species=' organism_stage=None flag=unrecognised_development_stage_literal bytes=2923	dump post (/mnt/D/EyeKB/plans/shipped_surface_20261022/out)	payload fields for the organoid literal
+markers_v8.sha256	40d23beaa523704b1de20e6d52220736e7d89f08f967a049b742b4cd06907e56	/mnt/D/EyeKB/kb/markers/markers_v8_dev_retina.json	sha256sum
+markers_v8.in_repo	False	kb/markers/	is_file()
+file.sha256.mcp_server/eyekb_core.py	d46953bda7da5a43751ebf641b94de4b7034ba8731524923e004e97f18f4702d bytes=111637	mcp_server/eyekb_core.py	sha256sum
+file.sha256.mcp_server/server.py	98bc13f93d5acb1f6b991e0d758793f71cf7f9ca6257c3a9a2a11047cd0da557 bytes=21246	mcp_server/server.py	sha256sum
+file.sha256.README.md	c968713ed29c806577f43148c2b56079094e18096b822d09d9fcf79a1f07ab81 bytes=53391	README.md	sha256sum
+file.sha256.tests/probe_tool_panel_identity.py	bcf619b252a248bd64de00c3d61cd64d4c39dde9dff864d8b3694ed2de666370 bytes=10173	tests/probe_tool_panel_identity.py	sha256sum
+file.sha256.tests/fixtures/tool_panel_baseline.json	ce6416126252663ff8be794fe985500a284876c3d15b2420359656c1bb4afd87 bytes=1735	tests/fixtures/tool_panel_baseline.json	sha256sum
+file.sha256.docs/W3_PIPELINE_REGISTRY.tsv	011469dce14e1837ce70eaf5076531a1c9abc05dc6986378b6f08f786cbcaacc bytes=105389	docs/W3_PIPELINE_REGISTRY.tsv	sha256sum
+file.sha256.docs/W3_MANIFEST.sha256	a8114cd68efcafbfc44018c400371432bf5c95f090c42c7ccfa54ac8a7e4fba1 bytes=3113	docs/W3_MANIFEST.sha256	sha256sum
+file.sha256_HEAD.tests/probe_tool_panel_identity.py	40d5182930d15f14b85b4e971c0af775abf371c7586e1742863087a38e76b8f3 bytes=6491	git show 954aeae:tests/probe_tool_panel_identity.py	sha256 of the committed blob
+file.sha256_HEAD.tests/fixtures/tool_panel_baseline.json	c95ae8ade83a8bd90140d600117bc3a042687722ff275464d3c3432269fd9c2e bytes=1525	git show 954aeae:tests/fixtures/tool_panel_baseline.json	sha256 of the committed blob
+file.sha256_HEAD.mcp_server/eyekb_core.py	5068a4a27b645d4ca16bc6c90ba6fb8bed8b02761fd056f5e7ec7de64d9063be bytes=107920	git show 954aeae:mcp_server/eyekb_core.py	sha256 of the committed blob
+file.sha256_HEAD.mcp_server/server.py	d127854bfeb08a65fcc3f513b006576cc17a7cb34e871e86cd7d1b8915bdf855 bytes=20913	git show 954aeae:mcp_server/server.py	sha256 of the committed blob
+file.sha256_HEAD.README.md	76e6e59b4665970b8143a59a7d072a169c3d37d9b6e607f22e1efd5630dbc7b2 bytes=52437	git show 954aeae:README.md	sha256 of the committed blob

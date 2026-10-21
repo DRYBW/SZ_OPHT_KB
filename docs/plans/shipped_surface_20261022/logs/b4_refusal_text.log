@@ -1,0 +1,33 @@
+====================================================================================================
+/tmp/ss_bisect/dump_a400315.json
+  panel::get_kb_page:{"kind": "index"}
+    md5=e6c63c931ee7e1518631dc2b7392e969 is_error=True bytes=240
+    text= "Error executing tool get_kb_page: 1 validation error for get_kb_pageArguments\nscope\n  Field required [type=missing, input_value={'kind': 'index'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  panel::get_tissue_composition:{"detail": true, "species": "human", "tissue": "retina"}
+    md5=0a3f3a1f537e3882dcdfe792c326eff1 is_error=True bytes=274
+    text= 'Error executing tool get_tissue_composition: 1 validation error for get_tissue_compositionArguments\ndetail\n  Input should be a valid string [type=string_type, input_value=True, input_type=bool]\n    For further information visit https://errors.pydantic.dev/2.12/v/string_type'
+  panel::search_literature:{"query": "Mueller cell gliosis", "top_k": 3}
+    md5=c504df36cd5926b3e1dfacc31d4ec5ae is_error=True bytes=284
+    text= "Error executing tool search_literature: 1 validation error for search_literatureArguments\ncell_type\n  Field required [type=missing, input_value={'query': 'Mueller cell gliosis', 'top_k': 3}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+====================================================================================================
+/tmp/ss_bisect/dump_c4d04d9.json
+  panel::get_kb_page:{"kind": "index"}
+    md5=e6c63c931ee7e1518631dc2b7392e969 is_error=True bytes=240
+    text= "Error executing tool get_kb_page: 1 validation error for get_kb_pageArguments\nscope\n  Field required [type=missing, input_value={'kind': 'index'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  panel::get_tissue_composition:{"detail": true, "species": "human", "tissue": "retina"}
+    md5=0a3f3a1f537e3882dcdfe792c326eff1 is_error=True bytes=274
+    text= 'Error executing tool get_tissue_composition: 1 validation error for get_tissue_compositionArguments\ndetail\n  Input should be a valid string [type=string_type, input_value=True, input_type=bool]\n    For further information visit https://errors.pydantic.dev/2.12/v/string_type'
+  panel::search_literature:{"query": "Mueller cell gliosis", "top_k": 3}
+    md5=c504df36cd5926b3e1dfacc31d4ec5ae is_error=True bytes=284
+    text= "Error executing tool search_literature: 1 validation error for search_literatureArguments\ncell_type\n  Field required [type=missing, input_value={'query': 'Mueller cell gliosis', 'top_k': 3}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+====================================================================================================
+out/PANEL_AT_HEAD.json
+  panel::get_kb_page:{"kind": "index"}
+    md5=e6c63c931ee7e1518631dc2b7392e969 is_error=True bytes=240
+    text= "Error executing tool get_kb_page: 1 validation error for get_kb_pageArguments\nscope\n  Field required [type=missing, input_value={'kind': 'index'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  panel::get_tissue_composition:{"detail": true, "species": "human", "tissue": "retina"}
+    md5=0a3f3a1f537e3882dcdfe792c326eff1 is_error=True bytes=274
+    text= 'Error executing tool get_tissue_composition: 1 validation error for get_tissue_compositionArguments\ndetail\n  Input should be a valid string [type=string_type, input_value=True, input_type=bool]\n    For further information visit https://errors.pydantic.dev/2.12/v/string_type'
+  panel::search_literature:{"query": "Mueller cell gliosis", "top_k": 3}
+    md5=c504df36cd5926b3e1dfacc31d4ec5ae is_error=True bytes=284
+    text= "Error executing tool search_literature: 1 validation error for search_literatureArguments\ncell_type\n  Field required [type=missing, input_value={'query': 'Mueller cell gliosis', 'top_k': 3}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"

@@ -346,7 +346,7 @@ this list, because a missing required argument is rejected before the tool runs.
 |---|---|---|
 | `search_literature` | `cell_type` | `top_k` (int, default 5) · `species` (`human`/`mouse`/`""`) · `tissue` (e.g. `retina`, `cornea`, `RPE`, `choroid`) · `query` (your own sentence) · `db` |
 | `query_marker` | none | `genes` (list) or `cell_type`, at least one for an answer · `library` (`all` default, or `retina`, `retina_interneuron`, `retina_v6`, `face_v6`, `membrane`, `k9_ocs`, `retina_v7`, `retina_dev`, `lacrimal_v6`) · `species` (`human`/`mouse`) · `volume_id` · `volume_species` · `tissue` |
-| `get_tissue_composition` | `species`, `tissue` | `disease` · `development_stage` (`""` adult / `fetal` / `developing` / `unknown`) · `detail` (`full` default / `answer`) |
+| `get_tissue_composition` | `species`, `tissue` | `disease` · `development_stage` (`""`/`any` adult · `fetal` · `developing` · `postnatal` · `unknown`; any other value resolves to `unknown` and is flagged — see below) · `detail` (`full` default / `answer`) |
 | `get_disease_prior` | `disease` | `tissue` (e.g. `fibrovascular_membrane`, `vitreous`, `retina_adjacent`) |
 | `get_kb_page` | `scope` | `name` (required for `scope=topic` and `scope=tissue`) · `summary` (bool, default `false`) |
 | `explain_annotation` | `cell_type` | `tissue` (filter over the attached citations) · `top_k` (int, default 5) |
@@ -357,6 +357,16 @@ Calling `get_kb_page` with no `scope` is rejected.
 
 The catalogue page is large. Pass `summary=true` to get each page's title, path and size instead of
 the full text — useful when you want to see what exists before reading anything.
+
+`development_stage` resolves the literal instead of guessing it. `""` and `any` reach the adult main
+file; `fetal` and `developing` — and `postnatal`, which folds to `developing` — reach the
+developmental transition entry; `unknown` reaches the unknown tier. **Any other value reaches the
+unknown tier as well**, and the response carries a `stage_literal` block naming the requested
+literal, whether it was a recognised spelling, the tier it resolved to, and the spellings that are
+accepted. No value falls through to the adult baseline: answering a developmental or organoid sample
+with adult numbers (or the reverse) is the one thing the stage axis exists to prevent. `organoid` is
+the case that matters most — an organoid is neither fetal tissue nor adult, so it is answered as
+`unknown` with the disclosure rather than with the adult retina baseline.
 
 ### Checking a citation, and looking an entry up by its standard name
 

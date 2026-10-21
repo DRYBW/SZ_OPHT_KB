@@ -1433,6 +1433,40 @@ def _resolve_sources(entry):
             for s in entry.get("sources", [])}
 
 
+# KB2c developmental-stage contract at the query surface (ruling Q1, red line 2).
+# The four level names are fetal / adult / developing / unknown. "" means "not specified" and
+# resolves to the adult main file; the documented synonyms fold onto a level and say so; every
+# other literal -- organoid, organoid_Day30, a misspelling -- resolves to the unknown tier with a
+# flag naming it. The builder side has implemented this rule since KB2c
+# (scripts/baselines/build_baselines.py:classify_uberon -> "organoid -> unknown + flag", and the
+# stage_axis block shipped with every baseline carries the same unknown_rule); the query path used
+# to fall through to the adult baseline instead, which is the silent adult assignment the ruling
+# forbids.
+STAGE_TIERS = ("fetal", "adult", "developing", "unknown")
+STAGE_FOLD = {"any": "adult", "postnatal": "developing"}
+STAGE_FOLD_RULE = {
+    "adult": 'documented synonym: "any" = the main-file caliber (adult-only entries)',
+    "developing": "postnatal -> developing (KB2c ruling Q1 mapping)",
+}
+STAGE_UNRECOGNISED_RULE = ("unrecognised development_stage literal -> the unknown tier (KB2c ruling "
+                           "Q1: organoid is neither fetal tissue nor adult; red line 2: no stage is "
+                           "ever silently assigned to adult)")
+STAGE_ACCEPTED_LITERALS = ("", "fetal", "adult", "developing", "unknown", "postnatal", "any")
+
+
+def _stage_literal_note(requested, tier, recognised, rule):
+    """Disclosure block for a development_stage literal that was not itself a contract tier name.
+
+    It names the caller's literal, whether it is a recognised spelling, the tier it resolved to and
+    the accepted spellings, so a caller can see that its input was folded rather than matched. It is
+    disclosure only: it changes no row, no interval and no name.
+    """
+    return {"requested": requested, "recognised_literal": recognised, "tier": tier,
+            "flag": "stage_literal_folded" if recognised
+                    else "unrecognised_development_stage_literal",
+            "accepted_literals": list(STAGE_ACCEPTED_LITERALS), "rule": rule}
+
+
 def _composition_answer_view(resp):
     """Return only the parts of a composition response that answer the question.
 
@@ -1444,7 +1478,8 @@ def _composition_answer_view(resp):
     keep = ("entry_id", "title", "species", "tissue", "disease", "organism_stage",
             "development_stage", "rows", "states", "fine_types", "flags", "caveats",
             "source_file", "usage_redline", "usage_scope", "inventory_status", "inventory_note",
-            "baseline_status", "distribution_method", "composition_status", "stage_query_note")
+            "baseline_status", "distribution_method", "composition_status", "stage_query_note",
+            "stage_literal")
     out = {k: resp[k] for k in keep if k in resp}
     dropped = sorted(k for k in resp if k not in out)
     out["detail"] = "answer"
@@ -1465,16 +1500,31 @@ def get_tissue_composition(species, tissue, disease="", development_stage="", de
     adult = adult main file;
     fetal|developing = returns the transition-state concept entry (borrowing the adult bucket is
     forbidden, PI red line); unknown = only the unknown-tier entries
-    (e.g. GSE158629 RPE, a source with no age column). postnatal→developing, organoid→unknown+flag
-    (ruling Q1 mapping).
+    (e.g. GSE158629 RPE, a source with no age column).
+    The literal is resolved, never guessed: "any" and "" reach the adult main file, postnatal folds
+    to developing, and every other literal -- organoid, organoid_Day30, a misspelling -- resolves to
+    the unknown tier (ruling Q1: organoid→unknown+flag). A folded or unrecognised literal adds a
+    stage_literal block naming the literal and the tier it reached, so no stage is ever silently
+    assigned to adult (red line 2).
     Returned rows = main table (normal entries major_classes / disease membrane entries
     major_compartments) + state layer + flags + caveats + provenance. Evidence and QC flags only,
     never for scoring."""
-    want = (development_stage or "").strip().lower()
-    if want == "postnatal":
-        want = "developing"
+    requested = development_stage or ""
+    want = requested.strip().lower()
+    stage_literal = None        # disclosure block; set only when the literal was not a tier name
+    if want in STAGE_FOLD:
+        want = STAGE_FOLD[want]
+        stage_literal = _stage_literal_note(requested, want, True, STAGE_FOLD_RULE[want])
+    elif want and want not in STAGE_TIERS:
+        # KB2c red line 2: an unrecognised literal must not reach the adult baseline by falling
+        # through -- it resolves to the unknown tier, and says so.
+        want = "unknown"
+        stage_literal = _stage_literal_note(requested, "unknown", False, STAGE_UNRECOGNISED_RULE)
     if want in ("fetal", "developing"):
-        return _fetal_concept_response(want)
+        resp = _fetal_concept_response(want)
+        if stage_literal:
+            resp["stage_literal"] = stage_literal
+        return resp
     priors = _load_priors()
     sp = (species or "").strip().lower()
     ti = (tissue or "").strip().lower()
@@ -1495,20 +1545,29 @@ def get_tissue_composition(species, tissue, disease="", development_stage="", de
             continue
         cands.append((0 if not dis else 1, e))
     if not cands:
-        return {"error": f"no matching composition entry (species={species!r} tissue={tissue!r} disease={disease!r})",
+        resp = {"error": f"no matching composition entry (species={species!r} tissue={tissue!r} disease={disease!r})",
                 "available": [{"entry_id": e["entry_id"], "species": e.get("species"),
                                "tissue": e.get("tissue"), "disease": e.get("disease")}
                               for e in priors.values()]}
+        # The literal was resolved before this branch. Carry the disclosure here too, so the one
+        # case where nothing answered at all is still the case where the caller can see that its
+        # literal was folded rather than matched (the block claims exactly that, unconditionally).
+        if stage_literal:
+            resp["stage_literal"] = stage_literal
+        return resp
     cands.sort(key=lambda x: (x[0], 0 if x[1].get("_kind") == "baseline" else 1))
     # KB2c: development_stage=unknown → only the unknown-tier entries (e.g. RPE); adult/"" → the current main file
     if want == "unknown":
         unk = [c for c in cands if str(c[1].get("organism_stage", "")).startswith("unknown")]
         if not unk:
-            return {"mode": "no_unknown_stage_entry", "request_stage": "unknown",
+            resp = {"mode": "no_unknown_stage_entry", "request_stage": "unknown",
                     "note": (f"this query has no organism_stage=unknown tier entry (species={species!r} "
                              f"tissue={tissue!r}); the unknown-tier source list is in "
                              f"kb/baselines/_STAGE_DISCLOSURE.md"),
                     "disclosure_file": str(BASELINES_DIR / "_STAGE_DISCLOSURE.md")}
+            if stage_literal:
+                resp["stage_literal"] = stage_literal
+            return resp
         cands = unk
     entry = cands[0][1]
     rows = entry.get("major_classes") or entry.get("major_compartments") or []
@@ -1597,6 +1656,8 @@ def get_tissue_composition(species, tissue, disease="", development_stage="", de
     # and the citation
     if entry.get("marker_repair"):
         resp["marker_repair"] = entry["marker_repair"]
+    if stage_literal:
+        resp["stage_literal"] = stage_literal
     if (detail or "").strip().lower() in ("answer", "compact", "brief", "short"):
         return _composition_answer_view(resp)
     return resp

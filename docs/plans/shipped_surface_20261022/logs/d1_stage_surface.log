@@ -1,0 +1,22 @@
+table -> out/STAGE_SURFACE_BEFORE_AFTER.tsv  rows=42
+
+species tissue  literal              pre                                post                               eq_adult   dBytes
+human   RPE     ORGANOID             baseline_human_RPE                 baseline_human_RPE unrecognised_d  Y->N       +440
+human   RPE     adult_or_unspecified baseline_human_RPE                 baseline_human_RPE unrecognised_d  Y->N       +452
+human   RPE     any                  baseline_human_RPE                 baseline_human_RPE stage_literal_  Y->N       +310
+human   RPE     fetel                baseline_human_RPE                 baseline_human_RPE unrecognised_d  Y->N       +437
+human   RPE     neonatal             baseline_human_RPE                 baseline_human_RPE unrecognised_d  Y->N       +440
+human   RPE     organoid             baseline_human_RPE                 baseline_human_RPE unrecognised_d  Y->N       +440
+human   RPE     organoid_Day30       baseline_human_RPE                 baseline_human_RPE unrecognised_d  Y->N       +446
+human   RPE     postnatal            fetal_development_transitions      fetal_development_transitions sta  N->N       +297
+human   retina  ORGANOID             baseline_human_retina              no_unknown_stage_entry unrecognis  Y->N       -90691
+human   retina  adult_or_unspecified baseline_human_retina              no_unknown_stage_entry unrecognis  Y->N       -90679
+human   retina  any                  baseline_human_retina              baseline_human_retina stage_liter  Y->N       +252
+human   retina  fetel                baseline_human_retina              no_unknown_stage_entry unrecognis  Y->N       -90694
+human   retina  neonatal             baseline_human_retina              no_unknown_stage_entry unrecognis  Y->N       -90691
+human   retina  organoid             baseline_human_retina              no_unknown_stage_entry unrecognis  Y->N       -90691
+human   retina  organoid_Day30       baseline_human_retina              no_unknown_stage_entry unrecognis  Y->N       -90685
+human   retina  postnatal            fetal_development_transitions      fetal_development_transitions sta  N->N       +297
+mouse   retina  postnatal            fetal_development_transitions      fetal_development_transitions sta  N->N       +297
+
+changed rows: 17 of 42

@@ -1,0 +1,48 @@
+docs/plans/shipped_surface_20261022/out/REPORT_NUMBERS.tsv  rows=47
+  panel.calls                                    12
+  panel.refused_at_HEAD                          4
+  panel.answered_and_moved                       1
+  panel.recorded.legacy_panel                    4813fca2f5c8c916a233f4825b200b19
+  panel.recorded.full_panel                      097328b42ffdb736b6934fa1967ada37
+  panel.new.legacy_panel                         e8e6c26351cd9a1d42fa2e7cb6a83f23
+  panel.new.full_panel                           3f1f52cb62915f5ad2801962aa523d36
+  panel.new.refused_calls                        0
+  panel.new.n_calls                              12
+  panel.refused_key                              get_kb_page:{"kind": "index"}
+  panel.refused_key                              get_kb_page:{"kind": "topic", "name": "vascular"}
+  panel.refused_key                              get_tissue_composition:{"detail": true, "species": "human", "tissue": "retina"}
+  panel.refused_key                              search_literature:{"query": "Mueller cell gliosis", "top_k": 3}
+  panel.refused_at_a400315                       4/4
+  panel.refused_at_c4d04d9                       4/4
+  mueller.md5_at_a400315                         80e96deae5e28482099daee394db7de2
+  mueller.md5_at_c4d04d9                         919fac6e91a67153a214870127407e13
+  mueller.md5_at_HEAD                            919fac6e91a67153a214870127407e13
+  mueller.md5_recorded                           80e96deae5e28482099daee394db7de2
+  mueller.field_diffs_a400315_to_HEAD            11
+  mueller.field_diff_paths                       .entries[0].citations;.entries[1].citations;.entries[2].citations
+  panel.refusal_text_version                     ['2.12']
+  stage.pre.rows                                 42
+  stage.pre.rows_with_stage_literal_block        0
+  stage.post_v3.rows                             42
+  stage.post_v3.rows_with_stage_literal_block    24
+  stage.changed_pre_to_post                      24/42
+  stage.organoid.human.retina.pre                entry=baseline_human_retina organism_stage=adult flag=None bytes=91508
+  stage.organoid.human.retina.post               entry=no_unknown_stage_entry organism_stage=None flag=unrecognised_development_stage_lit
+  stage.organoid.human.RPE.pre                   entry=baseline_human_RPE organism_stage=unknown flag=None bytes=22522
+  stage.organoid.human.RPE.post                  entry=baseline_human_RPE organism_stage=unknown flag=unrecognised_development_stage_lite
+  stage.organoid.mouse.retina.pre                entry=no matching composition entry (species=' organism_stage=None flag=None bytes=2425
+  stage.organoid.mouse.retina.post               entry=no matching composition entry (species=' organism_stage=None flag=unrecognised_dev
+  markers_v8.sha256                              40d23beaa523704b1de20e6d52220736e7d89f08f967a049b742b4cd06907e56
+  markers_v8.in_repo                             False
+  file.sha256.mcp_server/eyekb_core.py           d46953bda7da5a43751ebf641b94de4b7034ba8731524923e004e97f18f4702d bytes=111637
+  file.sha256.mcp_server/server.py               98bc13f93d5acb1f6b991e0d758793f71cf7f9ca6257c3a9a2a11047cd0da557 bytes=21246
+  file.sha256.README.md                          c968713ed29c806577f43148c2b56079094e18096b822d09d9fcf79a1f07ab81 bytes=53391
+  file.sha256.tests/probe_tool_panel_identity.py bcf619b252a248bd64de00c3d61cd64d4c39dde9dff864d8b3694ed2de666370 bytes=10173
+  file.sha256.tests/fixtures/tool_panel_baseline.json ce6416126252663ff8be794fe985500a284876c3d15b2420359656c1bb4afd87 bytes=1735
+  file.sha256.docs/W3_PIPELINE_REGISTRY.tsv      011469dce14e1837ce70eaf5076531a1c9abc05dc6986378b6f08f786cbcaacc bytes=105389
+  file.sha256.docs/W3_MANIFEST.sha256            a8114cd68efcafbfc44018c400371432bf5c95f090c42c7ccfa54ac8a7e4fba1 bytes=3113
+  file.sha256_HEAD.tests/probe_tool_panel_identity.py 40d5182930d15f14b85b4e971c0af775abf371c7586e1742863087a38e76b8f3 bytes=6491
+  file.sha256_HEAD.tests/fixtures/tool_panel_baseline.json c95ae8ade83a8bd90140d600117bc3a042687722ff275464d3c3432269fd9c2e bytes=1525
+  file.sha256_HEAD.mcp_server/eyekb_core.py      5068a4a27b645d4ca16bc6c90ba6fb8bed8b02761fd056f5e7ec7de64d9063be bytes=107920
+  file.sha256_HEAD.mcp_server/server.py          d127854bfeb08a65fcc3f513b006576cc17a7cb34e871e86cd7d1b8915bdf855 bytes=20913
+  file.sha256_HEAD.README.md                     76e6e59b4665970b8143a59a7d072a169c3d37d9b6e607f22e1efd5630dbc7b2 bytes=52437

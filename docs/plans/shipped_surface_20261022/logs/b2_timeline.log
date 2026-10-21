@@ -1,0 +1,26 @@
+call                   a400315   c4d04d9   7f963b0   34c61fd   8492dd3   f51a0b7   1cd3cf1PANEL_AT_HEAD
+-------------------------------------------------------------------------------------------------------
+qmk RPE                      .         .         .         .         .         .         .         .
+qmk MG                       .         .         .         .         .         .         .         .
+qmk genes                    .         .         .         .         .         .         .         .
+comp detail=bool             R         R         R         R         R         R         R         R
+comp mouse                   .         .         .         .         .         .         .         .
+prior PDR                    .         .         .         .         .         .         .         .
+page kind=topic              R         R         R         R         R         R         R         R
+page kind=index              R         R         R         R         R         R         R         R
+lit query-only               R         R         R         R         R         R         R         R
+lit cell_type                .         .         .         .         .         .         .         .
+explain Rod                  .         .         .         .         .         .         .         .
+explain Mueller              .         M         M         M         M         M         M         M
+
+legend: . = matches the recorded baseline   R = moved, call refused   M = moved, answered differently
+commits, oldest first: a400315, c4d04d9, 7f963b0, 34c61fd, 8492dd3, f51a0b7, 1cd3cf1, PANEL_AT_HEAD
+
+=== moved-and-answered calls, in full ===
+  c4d04d9    explain Mueller      md5=919fac6e91a67153a214870127407e13 recorded=80e96deae5e28482099daee394db7de2
+  7f963b0    explain Mueller      md5=919fac6e91a67153a214870127407e13 recorded=80e96deae5e28482099daee394db7de2
+  34c61fd    explain Mueller      md5=919fac6e91a67153a214870127407e13 recorded=80e96deae5e28482099daee394db7de2
+  8492dd3    explain Mueller      md5=919fac6e91a67153a214870127407e13 recorded=80e96deae5e28482099daee394db7de2
+  f51a0b7    explain Mueller      md5=919fac6e91a67153a214870127407e13 recorded=80e96deae5e28482099daee394db7de2
+  1cd3cf1    explain Mueller      md5=919fac6e91a67153a214870127407e13 recorded=80e96deae5e28482099daee394db7de2
+  PANEL_AT_HEAD explain Mueller      md5=919fac6e91a67153a214870127407e13 recorded=80e96deae5e28482099daee394db7de2

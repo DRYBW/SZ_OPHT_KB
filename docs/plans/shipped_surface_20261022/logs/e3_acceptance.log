@@ -1,0 +1,46 @@
+species	tissue	literal	entry	organism_stage	flag	requested_echo	tier	same_as_adult	adult_is_composition	A1	A2	A3	A4	changed
+human	RPE	empty	baseline_human_RPE	unknown				Y	Y	n/a	n/a	PASS	n/a	.
+human	RPE	 fetal 	fetal_development_transitions					N	Y	n/a	n/a	PASS	n/a	.
+human	RPE	ORGANOID	baseline_human_RPE	unknown	unrecognised_development_stage_literal	ORGANOID	unknown	N	Y	PASS	PASS	n/a	PASS	C
+human	RPE	adult	baseline_human_RPE	unknown				Y	Y	n/a	n/a	PASS	n/a	.
+human	RPE	adult_or_unspecified	baseline_human_RPE	unknown	unrecognised_development_stage_literal	adult_or_unspecified	unknown	N	Y	PASS	PASS	n/a	PASS	C
+human	RPE	any	baseline_human_RPE	unknown	stage_literal_folded	any	adult	N	Y	PASS	PASS	n/a	PASS	C
+human	RPE	developing	fetal_development_transitions					N	Y	n/a	n/a	PASS	n/a	.
+human	RPE	fetal	fetal_development_transitions					N	Y	n/a	n/a	PASS	n/a	.
+human	RPE	fetel	baseline_human_RPE	unknown	unrecognised_development_stage_literal	fetel	unknown	N	Y	PASS	PASS	n/a	PASS	C
+human	RPE	neonatal	baseline_human_RPE	unknown	unrecognised_development_stage_literal	neonatal	unknown	N	Y	PASS	PASS	n/a	PASS	C
+human	RPE	organoid	baseline_human_RPE	unknown	unrecognised_development_stage_literal	organoid	unknown	N	Y	PASS	PASS	n/a	PASS	C
+human	RPE	organoid_Day30	baseline_human_RPE	unknown	unrecognised_development_stage_literal	organoid_Day30	unknown	N	Y	PASS	PASS	n/a	PASS	C
+human	RPE	postnatal	fetal_development_transitions		stage_literal_folded	postnatal	developing	N	Y	PASS	PASS	n/a	PASS	C
+human	RPE	unknown	baseline_human_RPE	unknown				Y	Y	n/a	n/a	PASS	n/a	.
+human	retina	empty	baseline_human_retina	adult				Y	Y	n/a	n/a	PASS	n/a	.
+human	retina	 fetal 	fetal_development_transitions					N	Y	n/a	n/a	PASS	n/a	.
+human	retina	ORGANOID	no_unknown_stage_entry		unrecognised_development_stage_literal	ORGANOID	unknown	N	Y	PASS	PASS	n/a	PASS	C
+human	retina	adult	baseline_human_retina	adult				Y	Y	n/a	n/a	PASS	n/a	.
+human	retina	adult_or_unspecified	no_unknown_stage_entry		unrecognised_development_stage_literal	adult_or_unspecified	unknown	N	Y	PASS	PASS	n/a	PASS	C
+human	retina	any	baseline_human_retina	adult	stage_literal_folded	any	adult	N	Y	PASS	PASS	n/a	PASS	C
+human	retina	developing	fetal_development_transitions					N	Y	n/a	n/a	PASS	n/a	.
+human	retina	fetal	fetal_development_transitions					N	Y	n/a	n/a	PASS	n/a	.
+human	retina	fetel	no_unknown_stage_entry		unrecognised_development_stage_literal	fetel	unknown	N	Y	PASS	PASS	n/a	PASS	C
+human	retina	neonatal	no_unknown_stage_entry		unrecognised_development_stage_literal	neonatal	unknown	N	Y	PASS	PASS	n/a	PASS	C
+human	retina	organoid	no_unknown_stage_entry		unrecognised_development_stage_literal	organoid	unknown	N	Y	PASS	PASS	n/a	PASS	C
+human	retina	organoid_Day30	no_unknown_stage_entry		unrecognised_development_stage_literal	organoid_Day30	unknown	N	Y	PASS	PASS	n/a	PASS	C
+human	retina	postnatal	fetal_development_transitions		stage_literal_folded	postnatal	developing	N	Y	PASS	PASS	n/a	PASS	C
+human	retina	unknown	no_unknown_stage_entry					N	Y	n/a	n/a	PASS	n/a	.
+mouse	retina	empty						Y	N	n/a	n/a	PASS	n/a	.
+mouse	retina	 fetal 	fetal_development_transitions					N	N	n/a	n/a	PASS	n/a	.
+mouse	retina	ORGANOID			unrecognised_development_stage_literal	ORGANOID	unknown	N	N	PASS	PASS	n/a	PASS	C
+mouse	retina	adult						Y	N	n/a	n/a	PASS	n/a	.
+mouse	retina	adult_or_unspecified			unrecognised_development_stage_literal	adult_or_unspecified	unknown	N	N	PASS	PASS	n/a	PASS	C
+mouse	retina	any			stage_literal_folded	any	adult	N	N	PASS	PASS	n/a	PASS	C
+mouse	retina	developing	fetal_development_transitions					N	N	n/a	n/a	PASS	n/a	.
+mouse	retina	fetal	fetal_development_transitions					N	N	n/a	n/a	PASS	n/a	.
+mouse	retina	fetel			unrecognised_development_stage_literal	fetel	unknown	N	N	PASS	PASS	n/a	PASS	C
+mouse	retina	neonatal			unrecognised_development_stage_literal	neonatal	unknown	N	N	PASS	PASS	n/a	PASS	C
+mouse	retina	organoid			unrecognised_development_stage_literal	organoid	unknown	N	N	PASS	PASS	n/a	PASS	C
+mouse	retina	organoid_Day30			unrecognised_development_stage_literal	organoid_Day30	unknown	N	N	PASS	PASS	n/a	PASS	C
+mouse	retina	postnatal	fetal_development_transitions		stage_literal_folded	postnatal	developing	N	N	PASS	PASS	n/a	PASS	C
+mouse	retina	unknown						Y	N	n/a	n/a	PASS	n/a	.
+
+rows=42  assertions FAIL=0
+responses that changed versus the pre-change dump: 24 of 42

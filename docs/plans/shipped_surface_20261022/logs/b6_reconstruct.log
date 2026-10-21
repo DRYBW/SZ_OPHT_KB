@@ -1,0 +1,8 @@
+--- a400315: patched 4 refusal texts 2.12->2.13 ---
+   legacy_panel recomputed = 4813fca2f5c8c916a233f4825b200b19  recorded = 4813fca2f5c8c916a233f4825b200b19  MATCH
+   full_panel   recomputed = 097328b42ffdb736b6934fa1967ada37  recorded = 097328b42ffdb736b6934fa1967ada37  MATCH
+   per-call still differing: []
+--- c4d04d9: patched 4 refusal texts 2.12->2.13 ---
+   legacy_panel recomputed = 4813fca2f5c8c916a233f4825b200b19  recorded = 4813fca2f5c8c916a233f4825b200b19  MATCH
+   full_panel   recomputed = c7266883b4a96180074d576896095301  recorded = 097328b42ffdb736b6934fa1967ada37  differ
+   per-call still differing: ['explain_annotation:{"cell_type": "Mueller cell"}']

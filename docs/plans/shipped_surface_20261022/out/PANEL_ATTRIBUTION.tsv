@@ -1,0 +1,13 @@
+call	refused_at_HEAD	recorded	at_a400315	at_c4d04d9	at_HEAD	verdict
+explain_annotation:{"cell_type": "Mueller cell"}	no	80e96deae5e28482099daee394db7de2	80e96deae5e28482099daee394db7de2	919fac6e91a67153a214870127407e13	919fac6e91a67153a214870127407e13	answered_and_moved
+explain_annotation:{"cell_type": "Rod"}	no	bc10d68da5a502f2ca005c77e076875e	bc10d68da5a502f2ca005c77e076875e	bc10d68da5a502f2ca005c77e076875e	bc10d68da5a502f2ca005c77e076875e	unchanged
+get_disease_prior:{"disease": "PDR"}	no	7c724d1c4bac6031e55842214b50ca89	7c724d1c4bac6031e55842214b50ca89	7c724d1c4bac6031e55842214b50ca89	7c724d1c4bac6031e55842214b50ca89	unchanged
+get_kb_page:{"kind": "index"}	yes	902720f5f1084f0cd77cd6331d9f27e6	e6c63c931ee7e1518631dc2b7392e969	e6c63c931ee7e1518631dc2b7392e969	e6c63c931ee7e1518631dc2b7392e969	refused_on_arguments
+get_kb_page:{"kind": "topic", "name": "vascular"}	yes	109b0d9ede2fae36e578933c270e7a10	a603b8e01261a19de26048392c9a2200	a603b8e01261a19de26048392c9a2200	a603b8e01261a19de26048392c9a2200	refused_on_arguments
+get_tissue_composition:{"detail": true, "species": "human", "tissue": "retina"}	yes	cf1b8eb03ea1d5db9656730964391195	0a3f3a1f537e3882dcdfe792c326eff1	0a3f3a1f537e3882dcdfe792c326eff1	0a3f3a1f537e3882dcdfe792c326eff1	refused_on_arguments
+get_tissue_composition:{"species": "mouse", "tissue": "retina"}	no	cf3c46ae8268a86f9180d7edfabc48a2	cf3c46ae8268a86f9180d7edfabc48a2	cf3c46ae8268a86f9180d7edfabc48a2	cf3c46ae8268a86f9180d7edfabc48a2	unchanged
+query_marker:{"cell_type": "MG"}	no	56c0e01b6df8aefa6b20a8d9d9f9bfe4	56c0e01b6df8aefa6b20a8d9d9f9bfe4	56c0e01b6df8aefa6b20a8d9d9f9bfe4	56c0e01b6df8aefa6b20a8d9d9f9bfe4	unchanged
+query_marker:{"cell_type": "RPE", "library": "retina"}	no	46ff880c2551ce49241f24f9f1123a3d	46ff880c2551ce49241f24f9f1123a3d	46ff880c2551ce49241f24f9f1123a3d	46ff880c2551ce49241f24f9f1123a3d	unchanged
+query_marker:{"genes": ["TMEM119", "CX3CR1", "P2RY12", "C1QA", "SALL1", "CSF1R", "AIF1"]}	no	e7e671d7b0df73e959071333989336a2	e7e671d7b0df73e959071333989336a2	e7e671d7b0df73e959071333989336a2	e7e671d7b0df73e959071333989336a2	unchanged
+search_literature:{"cell_type": "Rod", "top_k": 3}	no	69ca6bc891015bb622f57cf11402f2f1	69ca6bc891015bb622f57cf11402f2f1	69ca6bc891015bb622f57cf11402f2f1	69ca6bc891015bb622f57cf11402f2f1	unchanged
+search_literature:{"query": "Mueller cell gliosis", "top_k": 3}	yes	7df3ffa5b71f89f70795d0e1beb7296f	c504df36cd5926b3e1dfacc31d4ec5ae	c504df36cd5926b3e1dfacc31d4ec5ae	c504df36cd5926b3e1dfacc31d4ec5ae	refused_on_arguments

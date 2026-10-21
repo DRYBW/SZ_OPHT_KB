@@ -1,0 +1,18 @@
+[10/22/26 01:48:24] INFO     JAX version 0.10.2 available.         config.py:125
+                    INFO     Loading SentenceTransformer model     model.py:1080
+                             from                                               
+                             /mnt/D/OcularKB/models/bge-large-en-v              
+                             1.5.                                               
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 9088.14it/s]
+DB: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09 | 242928 chunks, 6 species
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.94it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.93it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  9.66it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  9.64it/s]
+{
+ "legacy_panel": "e8e6c26351cd9a1d42fa2e7cb6a83f23",
+ "full_panel": "3f1f52cb62915f5ad2801962aa523d36",
+ "n_legacy_calls": 10,
+ "n_calls": 12
+}
+tools advertised: explain_annotation, get_disease_prior, get_kb_page, get_release_identity, get_tissue_composition, query_marker, search_literature
+interpreter: /home/ubuntu/training-venv/bin/python3 (python 3.14.4, pydantic 2.12.5)
+IDENTITY PASS: both panel digests match the baseline.

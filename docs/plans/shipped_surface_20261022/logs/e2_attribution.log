@@ -1,0 +1,62 @@
+=== per-call attribution ===
+call	refused_at_HEAD	recorded	at_a400315	at_c4d04d9	at_HEAD	verdict
+explain_annotation:{"cell_type": "Mueller cell"}	no	80e96deae5e28482099daee394db7de2	80e96deae5e28482099daee394db7de2	919fac6e91a67153a214870127407e13	919fac6e91a67153a214870127407e13	answered_and_moved
+explain_annotation:{"cell_type": "Rod"}	no	bc10d68da5a502f2ca005c77e076875e	bc10d68da5a502f2ca005c77e076875e	bc10d68da5a502f2ca005c77e076875e	bc10d68da5a502f2ca005c77e076875e	unchanged
+get_disease_prior:{"disease": "PDR"}	no	7c724d1c4bac6031e55842214b50ca89	7c724d1c4bac6031e55842214b50ca89	7c724d1c4bac6031e55842214b50ca89	7c724d1c4bac6031e55842214b50ca89	unchanged
+get_kb_page:{"kind": "index"}	yes	902720f5f1084f0cd77cd6331d9f27e6	e6c63c931ee7e1518631dc2b7392e969	e6c63c931ee7e1518631dc2b7392e969	e6c63c931ee7e1518631dc2b7392e969	refused_on_arguments
+get_kb_page:{"kind": "topic", "name": "vascular"}	yes	109b0d9ede2fae36e578933c270e7a10	a603b8e01261a19de26048392c9a2200	a603b8e01261a19de26048392c9a2200	a603b8e01261a19de26048392c9a2200	refused_on_arguments
+get_tissue_composition:{"detail": true, "species": "human", "tissue": "retina"}	yes	cf1b8eb03ea1d5db9656730964391195	0a3f3a1f537e3882dcdfe792c326eff1	0a3f3a1f537e3882dcdfe792c326eff1	0a3f3a1f537e3882dcdfe792c326eff1	refused_on_arguments
+get_tissue_composition:{"species": "mouse", "tissue": "retina"}	no	cf3c46ae8268a86f9180d7edfabc48a2	cf3c46ae8268a86f9180d7edfabc48a2	cf3c46ae8268a86f9180d7edfabc48a2	cf3c46ae8268a86f9180d7edfabc48a2	unchanged
+query_marker:{"cell_type": "MG"}	no	56c0e01b6df8aefa6b20a8d9d9f9bfe4	56c0e01b6df8aefa6b20a8d9d9f9bfe4	56c0e01b6df8aefa6b20a8d9d9f9bfe4	56c0e01b6df8aefa6b20a8d9d9f9bfe4	unchanged
+query_marker:{"cell_type": "RPE", "library": "retina"}	no	46ff880c2551ce49241f24f9f1123a3d	46ff880c2551ce49241f24f9f1123a3d	46ff880c2551ce49241f24f9f1123a3d	46ff880c2551ce49241f24f9f1123a3d	unchanged
+query_marker:{"genes": ["TMEM119", "CX3CR1", "P2RY12", "C1QA", "SALL1", "CSF1R", "AIF1"]}	no	e7e671d7b0df73e959071333989336a2	e7e671d7b0df73e959071333989336a2	e7e671d7b0df73e959071333989336a2	e7e671d7b0df73e959071333989336a2	unchanged
+search_literature:{"cell_type": "Rod", "top_k": 3}	no	69ca6bc891015bb622f57cf11402f2f1	69ca6bc891015bb622f57cf11402f2f1	69ca6bc891015bb622f57cf11402f2f1	69ca6bc891015bb622f57cf11402f2f1	unchanged
+search_literature:{"query": "Mueller cell gliosis", "top_k": 3}	yes	7df3ffa5b71f89f70795d0e1beb7296f	c504df36cd5926b3e1dfacc31d4ec5ae	c504df36cd5926b3e1dfacc31d4ec5ae	c504df36cd5926b3e1dfacc31d4ec5ae	refused_on_arguments
+
+  refused_on_arguments=4  answered_and_moved=1  unchanged=7  of 12 panel calls
+
+=== the four refused calls: text, and the version it embeds ===
+  get_kb_page:{"kind": "index"}                                  version=['2.12'] bytes=240
+      text[1]: Error executing tool get_kb_page: 1 validation error for get_kb_pageArguments
+  get_kb_page:{"kind": "topic", "name": "vascular"}              version=['2.12'] bytes=260
+      text[1]: Error executing tool get_kb_page: 1 validation error for get_kb_pageArguments
+  get_tissue_composition:{"detail": true, "species": "human",    version=['2.12'] bytes=274
+      text[1]: Error executing tool get_tissue_composition: 1 validation error for get_tissue_compositionArguments
+  search_literature:{"query": "Mueller cell gliosis", "top_k":   version=['2.12'] bytes=284
+      text[1]: Error executing tool search_literature: 1 validation error for search_literatureArguments
+  versions embedded in the runtime text: ['2.12']
+
+=== reconstruction: sweep the validator version inside the four refusal texts ===
+  (nothing else in any text is touched; the target is found by sweeping, not assumed)
+  target 2.10: legacy_panel=3af70a61a0f2cb24eaa313a363772a8e   --    full_panel=db763ec97b368032080302792f72a822 (MISMATCH)  per-call still differing=5 ['explain_annotation:{"cell_type": "Mueller cell"}', 'get_kb_page:{"kind": "index"}', 'get_kb_page:{"kind": "topic", "name": "vascular"}', 'get_tissue_composition:{"detail": true, "species": "human", "tissue": "retina"}', 'search_literature:{"query": "Mueller cell gliosis", "top_k": 3}']
+  target 2.11: legacy_panel=e8549e4bd4c68d64be8b827f40c3013c   --    full_panel=1077f7db22b3f07099f946edff435823 (MISMATCH)  per-call still differing=5 ['explain_annotation:{"cell_type": "Mueller cell"}', 'get_kb_page:{"kind": "index"}', 'get_kb_page:{"kind": "topic", "name": "vascular"}', 'get_tissue_composition:{"detail": true, "species": "human", "tissue": "retina"}', 'search_literature:{"query": "Mueller cell gliosis", "top_k": 3}']
+  target 2.12: legacy_panel=9beb43df165f82e6a8de36391d7b29f1   --    full_panel=5aa0fa546cdcd9e83e48ab390f3d7dcd (MISMATCH)  per-call still differing=5 ['explain_annotation:{"cell_type": "Mueller cell"}', 'get_kb_page:{"kind": "index"}', 'get_kb_page:{"kind": "topic", "name": "vascular"}', 'get_tissue_composition:{"detail": true, "species": "human", "tissue": "retina"}', 'search_literature:{"query": "Mueller cell gliosis", "top_k": 3}']
+  target 2.13: legacy_panel=4813fca2f5c8c916a233f4825b200b19 MATCH  full_panel=c7266883b4a96180074d576896095301 (MISMATCH)  per-call still differing=1 ['explain_annotation:{"cell_type": "Mueller cell"}']
+  target 2.14: legacy_panel=f14d31275507f82e19de39421c0482e2   --    full_panel=938c6e4040de2da47496574fb3b2f25d (MISMATCH)  per-call still differing=5 ['explain_annotation:{"cell_type": "Mueller cell"}', 'get_kb_page:{"kind": "index"}', 'get_kb_page:{"kind": "topic", "name": "vascular"}', 'get_tissue_composition:{"detail": true, "species": "human", "tissue": "retina"}', 'search_literature:{"query": "Mueller cell gliosis", "top_k": 3}']
+  target 2.15: legacy_panel=c69d73427d489e736806dcce90fb52b2   --    full_panel=3f229409218978b0ae435986af229e5e (MISMATCH)  per-call still differing=5 ['explain_annotation:{"cell_type": "Mueller cell"}', 'get_kb_page:{"kind": "index"}', 'get_kb_page:{"kind": "topic", "name": "vascular"}', 'get_tissue_composition:{"detail": true, "species": "human", "tissue": "retina"}', 'search_literature:{"query": "Mueller cell gliosis", "top_k": 3}']
+  recorded legacy_panel=4813fca2f5c8c916a233f4825b200b19  full_panel=097328b42ffdb736b6934fa1967ada37
+  versions whose substitution reproduces the recorded legacy panel: ['2.13']
+  reading: the legacy panel contains no call that moved for a content reason, so the
+  substitution alone reproduces it exactly -- the four refused calls are refused by the
+  MCP layer's validator, and the text it produces is stamped with that library's version.
+  The full panel differs only by the one answered move, attributed separately below.
+
+=== the answered move: explain_annotation:{"cell_type": "Mueller cell"} ===
+  at a400315    md5=80e96deae5e28482099daee394db7de2 bytes=11221
+  at c4d04d9    md5=919fac6e91a67153a214870127407e13 bytes=11295
+  at HEAD       md5=919fac6e91a67153a214870127407e13 bytes=11295
+  recorded in the fixture as committed at HEAD: 80e96deae5e28482099daee394db7de2
+  field-level differences (a400315 -> HEAD): 11
+    .entries[0].citations[0].tissues: a400315=''  HEAD='retina'
+    .entries[0].citations[1].tissues: a400315=''  HEAD='retina'
+    .entries[0].citations[2].tissues: a400315=''  HEAD='RPE,retina'
+    .entries[0].citations[3].tissues: a400315=''  HEAD='retina'
+    .entries[0].citations[4].tissues: a400315=''  HEAD='retina'
+    .entries[1].citations[0].tissues: a400315=''  HEAD='retina'
+    .entries[1].citations[1].tissues: a400315=''  HEAD='retina'
+    .entries[1].citations[2].tissues: a400315=''  HEAD='RPE,retina'
+    .entries[1].citations[3].tissues: a400315=''  HEAD='retina'
+    .entries[1].citations[4].tissues: a400315=''  HEAD='retina'
+    .entries[2].citations[0].tissues: a400315=''  HEAD='retina'
+
+table -> docs/plans/shipped_surface_20261022/out/PANEL_ATTRIBUTION.tsv

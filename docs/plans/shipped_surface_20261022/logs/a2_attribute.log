@@ -1,0 +1,62 @@
+=== panel: recorded vs measured at HEAD ===
+call                                                       moved  refused  recorded                           measured
+panel::explain_annotation::{"cell_type": "Mueller cell"}   YES    -        None                               919fac6e91a67153a214870127407e13
+panel::explain_annotation::{"cell_type": "Rod"}            YES    -        None                               bc10d68da5a502f2ca005c77e076875e
+panel::get_disease_prior::{"disease": "PDR"}               YES    -        None                               7c724d1c4bac6031e55842214b50ca89
+panel::get_kb_page::{"kind": "index"}                      YES    YES      None                               e6c63c931ee7e1518631dc2b7392e969
+panel::get_kb_page::{"kind": "topic", "name": "vascular"}  YES    YES      None                               a603b8e01261a19de26048392c9a2200
+panel::get_tissue_composition::{"detail": true, "species"  YES    YES      None                               0a3f3a1f537e3882dcdfe792c326eff1
+panel::get_tissue_composition::{"species": "mouse", "tiss  YES    -        None                               cf3c46ae8268a86f9180d7edfabc48a2
+panel::query_marker::{"cell_type": "MG"}                   YES    -        None                               56c0e01b6df8aefa6b20a8d9d9f9bfe4
+panel::query_marker::{"cell_type": "RPE", "library": "ret  YES    -        None                               46ff880c2551ce49241f24f9f1123a3d
+panel::query_marker::{"genes": ["TMEM119", "CX3CR1", "P2R  YES    -        None                               e7e671d7b0df73e959071333989336a2
+panel::search_literature::{"cell_type": "Rod", "top_k": 3  YES    -        None                               69ca6bc891015bb622f57cf11402f2f1
+panel::search_literature::{"query": "Mueller cell gliosis  YES    YES      None                               c504df36cd5926b3e1dfacc31d4ec5ae
+  unchanged=0  moved-refused=4  moved-answered=8
+  recorded tools advertised: ['explain_annotation', 'get_disease_prior', 'get_kb_page', 'get_tissue_composition', 'query_marker', 'search_literature']
+  measured tools advertised: ['explain_annotation', 'get_disease_prior', 'get_kb_page', 'get_release_identity', 'get_tissue_composition', 'query_marker', 'search_literature']
+
+=== stage literal surface (measured) ===
+species  tissue   literal                is_error  entry_id                                     organism_stage     ==adult  bytes
+human    RPE       fetal                 -         fetal_development_transitions                                   N        7261
+human    RPE      empty                  -         baseline_human_RPE                           unknown            Y        22464
+human    RPE      ORGANOID               -         baseline_human_RPE                           unknown            Y        22464
+human    RPE      adult                  -         baseline_human_RPE                           unknown            Y        22464
+human    RPE      adult_or_unspecified   -         baseline_human_RPE                           unknown            Y        22464
+human    RPE      any                    -         baseline_human_RPE                           unknown            Y        22464
+human    RPE      developing             -         fetal_development_transitions                                   N        7266
+human    RPE      fetal                  -         fetal_development_transitions                                   N        7261
+human    RPE      fetel                  -         baseline_human_RPE                           unknown            Y        22464
+human    RPE      neonatal               -         baseline_human_RPE                           unknown            Y        22464
+human    RPE      organoid               -         baseline_human_RPE                           unknown            Y        22464
+human    RPE      organoid_Day30         -         baseline_human_RPE                           unknown            Y        22464
+human    RPE      postnatal              -         fetal_development_transitions                                   N        7266
+human    RPE      unknown                -         baseline_human_RPE                           unknown            Y        22464
+human    retina    fetal                 -         fetal_development_transitions                                   N        7261
+human    retina   empty                  -         baseline_human_retina                        adult              Y        91392
+human    retina   ORGANOID               -         baseline_human_retina                        adult              Y        91392
+human    retina   adult                  -         baseline_human_retina                        adult              Y        91392
+human    retina   adult_or_unspecified   -         baseline_human_retina                        adult              Y        91392
+human    retina   any                    -         baseline_human_retina                        adult              Y        91392
+human    retina   developing             -         fetal_development_transitions                                   N        7266
+human    retina   fetal                  -         fetal_development_transitions                                   N        7261
+human    retina   fetel                  -         baseline_human_retina                        adult              Y        91392
+human    retina   neonatal               -         baseline_human_retina                        adult              Y        91392
+human    retina   organoid               -         baseline_human_retina                        adult              Y        91392
+human    retina   organoid_Day30         -         baseline_human_retina                        adult              Y        91392
+human    retina   postnatal              -         fetal_development_transitions                                   N        7266
+human    retina   unknown                -         no_unknown_stage_entry                                          N        319
+mouse    retina    fetal                 -         fetal_development_transitions                                   N        7261
+mouse    retina   empty                  -                                                                         Y        2425
+mouse    retina   ORGANOID               -                                                                         Y        2425
+mouse    retina   adult                  -                                                                         Y        2425
+mouse    retina   adult_or_unspecified   -                                                                         Y        2425
+mouse    retina   any                    -                                                                         Y        2425
+mouse    retina   developing             -         fetal_development_transitions                                   N        7266
+mouse    retina   fetal                  -         fetal_development_transitions                                   N        7261
+mouse    retina   fetel                  -                                                                         Y        2425
+mouse    retina   neonatal               -                                                                         Y        2425
+mouse    retina   organoid               -                                                                         Y        2425
+mouse    retina   organoid_Day30         -                                                                         Y        2425
+mouse    retina   postnatal              -         fetal_development_transitions                                   N        7266
+mouse    retina   unknown                -                                                                         Y        2425

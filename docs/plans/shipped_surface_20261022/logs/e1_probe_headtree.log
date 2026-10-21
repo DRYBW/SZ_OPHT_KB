@@ -1,0 +1,22 @@
+[10/22/26 01:48:42] INFO     JAX version 0.10.2 available.         config.py:125
+                    INFO     Loading SentenceTransformer model     model.py:1080
+                             from                                               
+                             /mnt/D/OcularKB/models/bge-large-en-v              
+                             1.5.                                               
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 9736.24it/s]
+DB: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09 | 242928 chunks, 6 species
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 11.65it/s]
+{
+ "legacy_panel": "9beb43df165f82e6a8de36391d7b29f1",
+ "full_panel": "5aa0fa546cdcd9e83e48ab390f3d7dcd",
+ "n_legacy_calls": 10,
+ "n_calls": 12
+}
+tools advertised: explain_annotation, get_disease_prior, get_kb_page, get_release_identity, get_tissue_composition, query_marker, search_literature
+IDENTITY FAIL: legacy_panel, full_panel moved.
+  different: explain_annotation:{"cell_type": "Mueller cell"}
+  different: get_kb_page:{"kind": "index"}
+  different: get_kb_page:{"kind": "topic", "name": "vascular"}
+  different: get_tissue_composition:{"detail": true, "species": "human", "tissue": "retina"}
+  different: search_literature:{"query": "Mueller cell gliosis", "top_k": 3}
+If the change was intended, re-record the baseline in the same commit and say so in the change record.
