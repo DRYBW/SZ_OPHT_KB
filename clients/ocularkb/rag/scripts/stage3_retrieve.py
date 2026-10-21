@@ -125,6 +125,34 @@ def _ct_filter_keys(cell_type: str):
 
 _EMB_CACHE = {}
 _LEX_HAY = {}
+# Metadata filter masks, computed once per (db, column, value) over the full frame and reused by
+# index. The two metadata filters used to run a Python-level .apply() over ~170k rows on every
+# call, which cost more than the embedding and the matrix product together. The predicates below
+# are copied verbatim from the call sites they replace, so the selected rows are identical.
+_META_MASK = {}
+
+
+def _cached_mask(db_key, kind, arg, full_df):
+    key = (db_key, kind, arg)
+    mask = _META_MASK.get(key)
+    if mask is None:
+        if kind == "tissue":
+            mask = full_df["tissue_labels"].apply(
+                lambda labs: labs is not None and arg in labs)
+        elif kind == "cell_type":
+            mask = full_df["cell_type_mentioned"].apply(
+                lambda ctm: ctm is not None and any(k in ctm for k in arg))
+        else:
+            raise ValueError(f"unknown mask kind: {kind!r}")
+        _META_MASK[key] = mask
+    return mask
+
+
+def _apply_cached_mask(df, db_key, kind, arg, full_df):
+    """Select rows of df using a mask computed on full_df: same rows, same order."""
+    mask = _cached_mask(db_key, kind, arg, full_df)
+    return df.loc[mask.reindex(df.index, fill_value=False).to_numpy(dtype=bool)]
+
 
 def _lexical_scores(df, query, db_dir):
     """Zero-model pure-lexical relevance: token coverage (full text + title) + weighted hits on structured metadata.
@@ -151,7 +179,8 @@ def _lexical_scores(df, query, db_dir):
 
 def retrieve(cell_type: str, species: str = None, top_k: int = 5, query: str = None,
              tissue: str = None, db_dir: str = None):
-    model, df = load(db_dir or DEFAULT_DB_DIR)
+    model, df_full = load(db_dir or DEFAULT_DB_DIR)
+    df = df_full
     if query is None:
         query = f"{cell_type} marker genes {tissue or 'retina'} single cell RNA sequencing"
     db_key = db_dir or DEFAULT_DB_DIR
@@ -182,15 +211,13 @@ def retrieve(cell_type: str, species: str = None, top_k: int = 5, query: str = N
         if "tissue_labels" not in df.columns:
             print("WARN: current library has no tissue_labels column; --tissue ignored", file=sys.stderr)
         else:
-            df_t = df[df["tissue_labels"].apply(
-                lambda labs: labs is not None and tissue in labs)]
+            df_t = _apply_cached_mask(df, db_key, "tissue", tissue, df_full)
             if len(df_t) >= top_k * 3:
                 df = df_t
     # cell_type_mentioned metadata filter (Claude5 review requirement: retrieval filters species+tissue/cell_type)
     ct_keys = _ct_filter_keys(cell_type)
     if ct_keys is not None:
-        df_ct = df[df["cell_type_mentioned"].apply(
-            lambda ctm: ctm is not None and any(k in ctm for k in ct_keys))]
+        df_ct = _apply_cached_mask(df, db_key, "cell_type", tuple(ct_keys), df_full)
         # fall back to the full set when fewer than top_k*3 remain after filtering (avoid misses)
         if len(df_ct) >= top_k * 3:
             df = df_ct
