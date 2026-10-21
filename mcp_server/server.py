@@ -39,6 +39,7 @@ Running it (MCP client configuration):
   the repository's own kb/ directory only, so a fresh clone needs no configuration for them.
   Toggles and the CJK query bridge are documented in the repository README.
 """
+import json
 import sys
 from pathlib import Path
 
@@ -48,6 +49,37 @@ import calllog  # call-tracing layer: logging only, no change in behaviour (see 
 
 from mcp.server import MCPServer  # noqa: E402
 from mcp.types import ToolAnnotations  # noqa: E402
+
+# --- release identity ----------------------------------------------------------------
+# The handshake carries a protocol generation label; that label describes the wire contract and
+# has to stay stable. What changes from release to release is the identity of the shipped bytes,
+# so the label is followed by that identity here, and a caller can also ask for it explicitly
+# (get_release_identity). Both read docs/RELEASE_IDENTITY.json, which
+# scripts/release_identity.py re-takes in the same commit as any byte change.
+PROTOCOL_GENERATION = "KB1v2-0.14-kb11a-reasonjoin"
+IDENTITY_RECORD = Path(__file__).resolve().parent.parent / "docs" / "RELEASE_IDENTITY.json"
+
+
+def _release_info():
+    blank = {"release_id": "unrecorded", "protocol_generation": PROTOCOL_GENERATION,
+             "taken_at_commit": "", "n_files": 0, "algorithm": "",
+             "coverage": "", "source": "docs/RELEASE_IDENTITY.json (absent or unreadable)",
+             "recorded": False}
+    try:
+        rec = json.loads(IDENTITY_RECORD.read_text(encoding="utf-8"))
+    except Exception:
+        return blank
+    out = dict(blank)
+    for k in ("release_id", "taken_at_commit", "n_files", "algorithm", "coverage"):
+        if k in rec and rec[k] not in (None, ""):
+            out[k] = rec[k]
+    out["source"] = "docs/RELEASE_IDENTITY.json"
+    out["recorded"] = bool(rec.get("release_id"))
+    return out
+
+
+RELEASE_INFO = _release_info()
+SERVER_VERSION = f"{PROTOCOL_GENERATION}+{RELEASE_INFO['release_id']}"
 
 
 def _read_only(title: str) -> ToolAnnotations:
@@ -64,7 +96,7 @@ def _read_only(title: str) -> ToolAnnotations:
 app = MCPServer(
     name="eyekb",
     title="EyeKB ophthalmic knowledge-base evidence service",
-    version="KB1v2-0.14-kb11a-reasonjoin",
+    version=SERVER_VERSION,
     description=("Ophthalmic knowledge base for cell-type annotation. (1) Literature retrieval over a "
                  "bundled corpus of 2,713 papers / 174,616 passages covering the whole eye; each result "
                  "carries PMID, journal, year, co-occurring markers, a relevance score and the "
@@ -80,12 +112,16 @@ app = MCPServer(
                  "EYEKB_ACT_V6, EYEKB_ACT_ANTSEG, EYEKB_KBGOV_B5, EYEKB_CN_REWRITE; the additional marker "
                  "libraries are opt-in by name and never enter the default set. Optional libraries stay "
                  "reachable by explicit query only, in any state."),
-    instructions=("EyeKB five tools: query_marker checks the local marker library first; "
+    instructions=("EyeKB tools: query_marker checks the local marker library first; "
                   "search_literature retrieves literature evidence (everything traceable via PMID); "
                   "get_kb_page reads tissue/topic index pages; before annotating, follow the four stages of "
                   "the annotation protocol (docs/skills/protocols/ANNOTATION_PROTOCOL_v1.3.md) using "
                   "get_tissue_composition (against the actual sampling material!) / get_disease_prior "
                   "(call it only in the post-freeze disease-contrast stage). "
+                  "get_release_identity reports which release of this service is answering. "
+                  "Before any comparison, declare the tissue from the dataset's own metadata "
+                  "(docs/TISSUE_DECLARATION_RULE.md); a declaration chosen after the score is read "
+                  "is not admissible. "
                   "Red line: returned content is for human interpretation evidence and QC flags only, and "
                   "must not become input to any score/weighting/ranking/composite QC score. "
                   "soft_flags.notes: optional review clues — check them against the original "
@@ -266,6 +302,33 @@ def explain_annotation(cell_type: str, tissue: str = "", top_k: int = 5) -> dict
     resp = core.explain_annotation(cell_type, tissue=tissue or None, top_k=top_k)
     calllog.trace("explain_annotation",
                   {"cell_type": cell_type, "tissue": tissue, "top_k": top_k}, resp)
+    return resp
+
+
+@app.tool(title="Report the release identity",
+          annotations=_read_only("Report the release identity"))
+def get_release_identity() -> dict:
+    """Which release of this service is answering?
+
+    Returns the release identity derived from the shipped bytes (docs/RELEASE_IDENTITY.json),
+    the protocol generation label carried in the handshake, and how to recompute the identity
+    (`python3 scripts/release_identity.py --check`). The identity changes whenever the
+    tracked bytes ship differently, so two releases are distinguishable without comparing
+    commits by hand. Call this when a result has to be tied to a release.
+
+    It is an explicit call by design: the identity is not injected into the answers of the
+    other tools, because their bytes are the evidence surface and are captured by
+    tests/fixtures/tool_panel_baseline.json. Disclosure surface only: not an input to any
+    score, weighting, ranking or confidence measure.
+    """
+    resp = {k: RELEASE_INFO[k] for k in ("release_id", "protocol_generation", "taken_at_commit",
+                                         "n_files", "algorithm", "coverage", "source", "recorded")}
+    resp["recompute"] = "python3 scripts/release_identity.py --check"
+    resp["handshake_version"] = SERVER_VERSION
+    resp["note"] = ("Identity of the shipped bytes of this checkout. An identity that does not "
+                    "match the release you intend to cite means the checkout moved: re-run "
+                    "`python3 scripts/release_identity.py` to see the current value.")
+    calllog.trace("get_release_identity", {}, resp)
     return resp
 
 

@@ -326,7 +326,7 @@ Two placeholders appear in every file and must be replaced with your own paths: 
 
 One boundary travels with the service into every client: the evidence returned is meant for a human to read and judge, and must never be consumed as a training or scoring signal by an automatic classifier. It is part of the server's own handshake instructions, so an agent that reads them sees the constraint without extra setup on your side.
 
-### The six things you can ask it
+### The seven things you can ask it
 
 | Tool | One-line description | Example query |
 |---|---|---|
@@ -336,6 +336,7 @@ One boundary travels with the service into every client: the evidence returned i
 | `get_disease_prior` | The disease × tissue background layer (cell-identity hierarchy, state axes, sampling-artifact cautions) | "Can a PDR epiretinal membrane sample be compared directly to a retina sample?" |
 | `get_kb_page` | Read knowledge-base pages as-is (index / topic / tissue page types) | "Show me the retina tissue page" |
 | `explain_annotation` | The evidence trail behind one label: markers, source library, pages, textbook page, and the papers that back it — each checked against the paper's own text | "Where did 'MG' come from, and which papers actually name its marker genes?" |
+| `get_release_identity` | Which release is answering: the identity of the shipped bytes, the protocol generation label, and how to recompute it | "Is this the same service release I cited last week?" |
 
 Those are natural-language questions, not literal argument names. Below are the exact signatures,
 including which arguments are required and what values they accept — an agent calling a tool needs
@@ -450,6 +451,31 @@ python tests/verify_repro.py --db-dir literature_db/v2.4.2_2026-09_slim
 ```
 
 These 41 "regression queries" are the reproduction benchmark of the whole project: retrieval rankings must align bit for bit. **Reproduction acceptance is defined on the official dense mode** — place the embedding model as described above before running (results differ under the lexical fallback, which is expected and is not a reproduction failure). If the model is in place and even one query disagrees, follow the three-layer triage in `docs/VERIFY_CONTRACT.md` — **do not modify the acceptance criteria to fit the results**.
+
+### Which release you are reading
+
+The handshake carries a protocol generation label plus the identity of the shipped bytes, e.g.
+`KB1v2-0.14-kb11a-reasonjoin+<release id>`, and `get_release_identity` returns the same identity
+with how to recompute it. The identity is the sha256 of the canonical listing of every tracked
+file, so it changes when — and only when — the shipped bytes change, and two clones of the same
+commit report the same value wherever they sit:
+
+```bash
+python3 scripts/release_identity.py           # the identity of this working tree
+python3 scripts/release_identity.py --check   # the recorded identity vs the shipped bytes
+```
+
+The record lives in `docs/RELEASE_IDENTITY.json` and is re-taken in the same commit as any byte
+change (`--take`), which is the same rule the tool-response baseline follows.
+
+### Declare the tissue before you compare, not after
+
+`query_marker` narrows its candidate set to the tissue you declare, so the declaration moves the
+number: an evaluation that picks the declaration after seeing the score is fitting the metric.
+`docs/TISSUE_DECLARATION_RULE.md` fixes the declaration as a function of the dataset's own metadata
+(and, for content that spans several tissues, requires a partition instead of a single number).
+`tests/check_tissue_declaration.py --table <your declarations>.tsv` checks a declaration table
+against the rule; `--explain 'retina;lens'` derives a declaration before you run anything.
 
 ## Repository layout
 

@@ -1,0 +1,15 @@
+{
+ "schema": "eyekb-release-identity/1.0",
+ "release_id": "751882ba029d",
+ "digest_sha256": "751882ba029dadef482d07d29e7b4f163bdbc0859c7f8398697c82b7295d86b7",
+ "algorithm": "sha256 over sorted lines '<sha256 of file>  <path>' for every tracked file",
+ "n_files": 3363,
+ "total_bytes": 200293360,
+ "taken_at_commit": "7f963b0e9fe494dbc37b5c2049edc7f21bd126d7",
+ "taken_at_commit_note": "the commit HEAD pointed at when the identity was taken, i.e. the parent of the commit this record ships in: a record cannot name the commit that contains it",
+ "coverage": "every file tracked by git at the commit this record ships in",
+ "excluded": [
+  "docs/RELEASE_IDENTITY.json"
+ ],
+ "recompute": "python3 scripts/release_identity.py --check"
+}

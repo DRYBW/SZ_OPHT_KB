@@ -46,10 +46,21 @@ scope / another venv, landed on different library stacks; same code, same fixtur
 | Item | Value |
 |---|---|
 | Pinned interpreter (the one that generated the anchors) | `/home/ubuntu/.conda/envs/pipeline_env/bin/python` |
-| Override hook (the only fallback) | `EYEKB_G4_PY=<python path>`; a non-default interpreter prints a `[g4] note:` line |
-| Pinned interpreter missing / not executable | `rc=2` + `ENV ERROR` (with fix instructions); **no silent fallback to the current interpreter** |
+| Override hook (rung 0) | `EYEKB_G4_PY=<python path>`; the caller asserts equivalence, so a mismatch under it is a FAIL; a non-default interpreter prints a `[g4] note:` line |
+| Search roots for rung 2 | `EYEKB_G4_PY_SEARCH=<dir>[:<dir>…]` (each `<dir>/bin/python` and `<dir>/*/bin/python` is tried) |
+| Resolution order (2026-10-21) | rung 0 override → rung 1 the pinned path when it exists here → rung 2 the pinned path's environment family + `EYEKB_G4_PY_SEARCH` → rung 3 `python3` / `python` on `PATH`; rungs 2–3 are probed against a declared dependency floor and the first that clears it is used |
+| Contract-equivalence | the pinned interpreter, an explicit override, or any candidate whose versions equal the recorded contract set (`scanpy 1.11.5 / anndata 0.11.4 / numpy 2.2.6 / scipy 1.15.3 / scikit-learn 1.7.2`); only those can turn a byte difference into a verdict |
+| Interpreter unavailable, or a substitute cannot be compared | `rc=3` + `ENV ERROR` / `NOT JUDGEABLE` (with the search trace and the remedy): **no verdict about the repository is issued** |
+| Byte mismatch under a contract-equivalent interpreter | `rc=1` + `G4 FAIL` (`got`/`expected` printed per artifact) |
+| Gate setup problems (usage error, missing fixture) | `rc=2` |
 | The gate script itself | stdlib only, launchable by any `python3` (3.10+) |
 | Every run | prints `[g4] interpreter: <path> (python X.Y, source: …)` (the interpreter/source line — literal output of tests/verify_pipeline.py), as a required attachment of any discrepancy report |
+
+Exit status therefore separates three states that used to share one code: `0` = the anchors were
+reproduced, `1` = the repository produced different bytes under the contract stack, `3` = this
+machine cannot run the gate (no interpreter clears the declared floor, or the interpreter found is
+not comparable with the anchors) so there is nothing to conclude. A reader of a clone can tell "your
+machine cannot run this gate" from "this repository is broken".
 
 Why the interpreter matters: the bytes of `stage_a/processed.h5ad` depend on the float32 write
 paths of anndata/numpy/scipy/sklearn. Measured — three stacks, three values (`obs`/`leiden`/counts
@@ -73,8 +84,10 @@ numbers is forbidden):
 1. Check the `[g4] interpreter:` line — not `pipeline_env` → **environment problem, not a criteria
    problem**; fix the environment per G4.1 and rerun;
 2. fixture sha missed → repo content drift (check against `G4_EXPECTED.json:fixture_sha256`);
-3. `ENV ERROR: run_pipeline rc≠0` → annotation-stack dependencies missing, install per the top of
-   this file;
+3. `rc=3` / `NOT JUDGEABLE` → the machine could not run the gate: the interpreter selected does not
+   match the contract versions, or no candidate cleared the declared floor. The printed search trace
+   says which candidates were tried and why each was rejected. Prepare an equivalent environment per
+   G4.1 and rerun (this is an environment state; it is not a finding about the repository);
 4. If the three checks above are clean and it still FAILs = genuine finding: report `got/expected`
    for all three files **plus the interpreter line** to the maintainer; do not re-anchor expected,
    change `--seed`, or swap fixtures yourself.

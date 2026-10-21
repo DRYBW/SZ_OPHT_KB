@@ -1,0 +1,114 @@
+{
+ "schema": "eyekb-tissue-source-label-crosswalk/1.0",
+ "purpose": "Frozen input of the pre-registered tissue-declaration rule (docs/TISSUE_DECLARATION_RULE.md). It maps the tissue labels a dataset carries in its own source metadata onto this knowledge base's tissue dictionary, and declares which dictionary names are coarse enough to stand for more than one source label. The rule consumes these rows only to derive the declaration; nothing here is a score, weight, prior or ranking term, and no row is derived from any comparison result.",
+ "policy": "Explicit, reviewable, withdrawable, one row per label with its basis. No name-similarity inference, no fuzzy matching: a label that is not in this table is UNMAPPED, and an unmapped label makes a dataset's single-tissue declaration underdetermined (the checker reports it instead of guessing). Adding a row is a reviewed change; removing one reverts the dataset to underdetermined, which is the conservative direction. The coverage relation is expressed over DICTIONARY names (covers_dictionary_names), not over source labels, so a set of source labels that map onto several dictionary names is compared against names.",
+ "vocabulary_source": "The dictionary names on the right-hand side are this repository's own tissue dictionary, enumerated mechanically by pipeline/run_pipeline.py::known_tissues() (kb/baselines/*.json entries plus the tissue fields of kb/priors/{composition,disease}/*.json). The checker validates every target against that enumeration.",
+ "source_labels": {
+  "retina": {
+   "kb_tissue": "retina",
+   "basis": "exact"
+  },
+  "neural retina": {
+   "kb_tissue": "retina",
+   "basis": "exact synonym"
+  },
+  "retinal organoid": {
+   "kb_tissue": "retina",
+   "basis": "organoid of the retina; the dictionary has no organoid entry"
+  },
+  "retinal pigment epithelium": {
+   "kb_tissue": "RPE",
+   "basis": "exact"
+  },
+  "RPE": {
+   "kb_tissue": "RPE",
+   "basis": "exact"
+  },
+  "cornea": {
+   "kb_tissue": "ocular_surface",
+   "basis": "cornea is a surface tissue; the dictionary entry ocular_surface carries the corneal class inventory (corneal endothelium, epithelium, fibroblasts, immune, melanocytes, pericytes, Schwann, smooth muscle)"
+  },
+  "corneal epithelium": {
+   "kb_tissue": "ocular_surface",
+   "basis": "coarser: no epithelium-specific dictionary entry"
+  },
+  "corneal endothelium": {
+   "kb_tissue": "ocular_surface",
+   "basis": "coarser: no endothelium-specific dictionary entry"
+  },
+  "limbus": {
+   "kb_tissue": "ocular_surface",
+   "basis": "limbal epithelium is surface epithelium"
+  },
+  "ocular surface": {
+   "kb_tissue": "ocular_surface",
+   "basis": "exact"
+  },
+  "conjunctiva": {
+   "kb_tissue": "conjunctiva",
+   "basis": "exact"
+  },
+  "lens": {
+   "kb_tissue": "lens",
+   "basis": "exact"
+  },
+  "iris": {
+   "kb_tissue": "iris",
+   "basis": "exact"
+  },
+  "ciliary body": {
+   "kb_tissue": "ciliary_body",
+   "basis": "exact"
+  },
+  "trabecular meshwork": {
+   "kb_tissue": "trabecular_meshwork",
+   "basis": "exact"
+  },
+  "sclera": {
+   "kb_tissue": "sclera",
+   "basis": "exact"
+  },
+  "optic nerve": {
+   "kb_tissue": "optic_nerve",
+   "basis": "exact"
+  },
+  "choroid": {
+   "kb_tissue": "choroid",
+   "basis": "exact"
+  },
+  "lacrimal gland": {
+   "kb_tissue": "lacrimal_gland",
+   "basis": "exact"
+  },
+  "fibrovascular membrane": {
+   "kb_tissue": "fibrovascular_membrane",
+   "basis": "exact"
+  },
+  "epiretinal membrane": {
+   "kb_tissue": "fibrovascular_membrane",
+   "basis": "same entity under its clinical name"
+  }
+ },
+ "covers": {
+  "ocular_surface": {
+   "covers_dictionary_names": [
+    "ocular_surface",
+    "conjunctiva"
+   ],
+   "basis": "the dictionary entry ocular_surface is the anterior-surface node: its own class inventory and the anterior-segment class scope (kb/markers/markers_v10_antseg_increment.json, scope_tissues) cover the corneal and conjunctival surfaces. It does NOT cover retina, RPE, lens, iris, ciliary_body, trabecular_meshwork, sclera, choroid or optic_nerve.",
+   "why_dictionary_names": "the coverage relation is expressed over dictionary names, so the rule compares like with like: several source labels may map onto the same dictionary name (cornea and limbus both -> ocular_surface), and the coarser name may stand for more than one dictionary name."
+  },
+  "retina": {
+   "covers_dictionary_names": [
+    "retina"
+   ],
+   "basis": "the retina entry is the retinal node; RPE is a separate entry and is deliberately not covered here."
+  }
+ },
+ "not_a_cover": {
+  "note": "A source label set that no row above covers has NO admissible single-tissue declaration (the rule's MIXED_CONTENT outcome). 'eye' and 'eye (whole organ)' are deliberately absent from source_labels and from every covers list: a whole-eye dataset must be partitioned or excluded, not assigned the dictionary name that happens to score highest."
+ },
+ "withdrawable": "Every row can be withdrawn by removing it; the rule then treats the label as unmapped and reports the dataset as underdetermined, which never inflates a result.",
+ "generated": "2026-10-21",
+ "generator": "authored against this repository's tissue dictionary and the CELLxGENE tissue label vocabulary; no content derived from any comparison result"
+}
