@@ -39,6 +39,32 @@ The index is built against the same library the retrieval service resolves as it
 (`EYEKB_DB_DIR`, then the pointer's `role: default` entry), so a citation marked verified is one
 `search_literature` can also resolve.
 
+## How many papers back an entry
+
+An entry's citation list is built in three passes, and each citation records which pass admitted it
+in `evidence_tier`:
+
+| tier | how the paper got here |
+|---|---|
+| `corpus search` | the label query or a gene-anchored query returned it |
+| `top_ranked` | the gene index found it, and it is among the eight strongest candidates for the entry |
+| `panel_genes_2_plus` | the gene index found it below that cut, but the paper's **body** text states at least two of the entry's panel genes and its own tissue label matches the entry's tissue |
+
+Before the third pass existed, a paper could state three of an entry's marker genes in its own body
+text and still not be citable, purely because eight other papers ranked higher. The bar for the
+third pass is deliberate rather than a rank cut-off: two panel genes from the same entry, in body
+text rather than an abstract, in the same tissue. A single shared symbol is common enough to be a
+coincidence, and the index records abstract-only mentions, which are weaker evidence. If the corpus
+metadata that carries tissue labels is missing, the third pass is skipped entirely rather than run
+unchecked.
+
+Widening the list this way moved the shipped registry from 2,106 citation rows over 497 papers to
+3,735 rows over 803 papers. The two older passes are untouched: their rows and their counts are
+identical before and after.
+
+The reader-facing appendix prints only an entry's three strongest citations. The full list per entry
+is in `LINK_REGISTRY_v1.jsonl`, which is what `explain_annotation` serves.
+
 ## The rule
 
 `validate_linkage.py` fails whenever any entry has an empty citation list, no page, no route or no

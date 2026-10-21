@@ -3,7 +3,7 @@
 Generated from the local knowledge base and the local literature corpus. Every cell-type entry below carries the three things a reader needs in order to check an annotation: the markers that identify it, the source the entry came from, and the papers that back it.
 
 - entries: **161**
-- distinct papers cited: **497** (2106 citation rows; 1241 of them state one of the marker genes we use in their own text)
+- distinct papers cited: **803** (3735 citation rows; 2870 of them state one of the marker genes we use in their own text)
 - fully linked (source + page + MCP route + skill): **80**
 - reachable on the default answer surface: **80**
 

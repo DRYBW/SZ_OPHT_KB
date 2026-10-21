@@ -42,6 +42,41 @@ import eyekb_core as core  # noqa: E402
 WIKI_DIR = KB / "vk_literature_index"
 BOOK_ITEMS = ROOT / "plans" / "devline_book_20261002" / "out" / "BOOK_KB_ITEMS.tsv"
 
+# How many of the strongest gene-index candidates keep the ranked route, and the bar the remaining
+# candidates must clear to be admitted as extended evidence. Both are named here so the rule is
+# readable in one place and the readout can quote it.
+TOP_RANKED = 8          # the highest-evidence candidates, admitted by rank (unchanged behaviour)
+STRONG_MIN_GENES = 2    # panel genes that must occur in a paper's BODY text for the extended route
+
+
+def load_paper_tissues():
+    """paper_id -> "tissue,tissue" from the shipped corpus metadata.
+
+    Used to refuse an extended citation whose marker genes match but whose organ does not. Returns
+    an empty dict when the corpus metadata is unavailable, and the caller then skips the extended
+    route entirely rather than admitting uncheckable papers.
+    """
+    out = {}
+    db = os.environ.get("EYEKB_DB_DIR") or str(ROOT / "literature_db" / "v2.4.2_2026-09_slim")
+    p = Path(db) / "papers.jsonl"
+    if not p.is_file():
+        return out
+    try:
+        with p.open(encoding="utf-8") as fh:
+            for line in fh:
+                if not line.strip():
+                    continue
+                d = json.loads(line)
+                pid = str(d.get("paper_id") or d.get("pmid") or "")
+                ts = d.get("tissues") or d.get("tissue_labels") or []
+                if isinstance(ts, str):
+                    ts = [t for t in ts.split(",") if t]
+                if pid:
+                    out[pid] = ",".join(str(t).strip() for t in ts if str(t).strip())
+    except Exception:                                                  # noqa: BLE001
+        return {}
+    return out
+
 
 def _norm(s):
     return re.sub(r"[^a-z0-9]", "", (s or "").lower())
@@ -138,6 +173,7 @@ def main():
     wiki, wiki_spans = wiki_index()
     books = book_index()
     gidx = gene_index()
+    paper_tissues = load_paper_tissues()
     if not gidx:
         print("WARNING: GENE_PAPER_INDEX_v1.tsv missing - citations cannot be verified against "
               "paper full text; run scripts/build_gene_paper_index.py first")
@@ -232,21 +268,17 @@ def main():
                             key=lambda kv: (-len(kv[1]),
                                             -sum(m["n_chunks"] for m in kv[1].values()),
                                             kv[0]))
-            for pid, genes_here in ranked[:8]:
-                if pid in seen:
-                    continue
-                seen.add(pid)
+
+            def _citation(pid, genes_here, tier):
                 ordered = sorted(genes_here, key=lambda g: -genes_here[g]["n_chunks"])
-                top_g = ordered[0]
-                top_meta = genes_here[top_g]
+                top_meta = genes_here[ordered[0]]
                 first_sec = [s for s in top_meta["sections"].split("|") if s] or [""]
-                pmids.append(pid)
-                cites.append({
+                return {
                     "pmid": pid,
                     "title": "",
                     "journal": top_meta["journal"],
                     "year": top_meta["year"],
-                    "tissues": "",
+                    "tissues": paper_tissues.get(pid, ""),
                     "marker_genes": "",
                     "gene_match": True,
                     "genes_in_text": ordered,
@@ -255,11 +287,58 @@ def main():
                     "n_chunks_with_gene": sum(m["n_chunks"] for m in genes_here.values()),
                     "evidence_locator": f"{top_meta['locator']} @ {first_sec[0]}",
                     "evidence_source": "gene index (full text)",
+                    "evidence_tier": tier,
                     "species": top_meta["species"],
                     "relevance": None,
                     "chunk": "",
-                })
+                }
+
+            for pid, genes_here in ranked[:TOP_RANKED]:
+                if pid in seen:
+                    continue
+                seen.add(pid)
+                pmids.append(pid)
+                cites.append(_citation(pid, genes_here, "top_ranked"))
                 n_added += 1
+
+            # --- the rest of the corpus' evidence -------------------------------
+            # The papers above are the highest-evidence candidates. Everything below them used to be
+            # dropped, which left most of the corpus unreachable from any entry - a paper could state
+            # three of an entry's marker genes in its own body text and still not be citable, purely
+            # because eight other papers ranked higher. The remaining candidates are admitted here on
+            # an explicit bar instead of on rank, and only when the paper is genuinely about the same
+            # tissue:
+            #
+            #   * at least STRONG_MIN_GENES of this entry's panel genes occur in the paper's BODY
+            #     text (the index also records abstract-only mentions, which are weaker evidence);
+            #   * the paper's own tissue label set intersects the tissues carried by this entry's
+            #     search hits, so "same marker genes, different organ" does not attach.
+            #
+            # Papers admitted this way carry evidence_tier = "panel_genes_2_plus" so a reader can
+            # tell them from the ranked set. The rule reads only shipped files and is re-runnable.
+            entry_tissues = set()
+            for c in cites:
+                for t in str(c.get("tissues") or "").split(","):
+                    if t.strip():
+                        entry_tissues.add(t.strip().lower())
+            n_extended = 0
+            if not paper_tissues:
+                print(f"NOTE: {cls}: corpus paper metadata unavailable, so the extended-evidence "
+                      "pass is skipped for this entry (fail-closed rather than unchecked).")
+            elif entry_tissues:
+                for pid, genes_here in ranked[TOP_RANKED:]:
+                    if pid in seen:
+                        continue
+                    body_genes = {g: m for g, m in genes_here.items() if m["n_body"] > 0}
+                    if len(body_genes) < STRONG_MIN_GENES:
+                        continue
+                    pt = {t.strip().lower() for t in paper_tissues.get(pid, "").split(",") if t.strip()}
+                    if not (pt & entry_tissues):
+                        continue
+                    seen.add(pid)
+                    pmids.append(pid)
+                    cites.append(_citation(pid, genes_here, "panel_genes_2_plus"))
+                    n_extended += 1
             cites.sort(key=lambda c: (not c["gene_match"], -c.get("n_genes_in_text", 0),
                                       -(c.get("relevance") or 0)))
             n_gene = sum(1 for c in cites if c["gene_match"])
@@ -320,6 +399,7 @@ def main():
                 "n_citations": len(cites),
                 "n_gene_matched": n_gene,
                 "n_gene_index_added": n_added,
+                "n_extended_evidence": n_extended,
                 "panel_genes": genes[:8],
                 "book_anchors": anchors[:4],
                 "mcp_route": f"query_marker(cell_type='{cls}', library='{name}')",
