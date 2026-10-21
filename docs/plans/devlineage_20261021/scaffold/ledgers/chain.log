@@ -1,4 +1,4 @@
-Running as unit: devlin_scaffold_scan.service
+Running as unit: devlin_scaffold_scan.service; invocation ID: 1f52bd25f55b445188940ef639e0fd8a
 phrases matched: 168 (refused: 40)
   refused examples: [('AC', 'single token shorter than 6 characters'), ('Astro', 'single token shorter than 6 characters'), ('B', 'single token shorter than 6 characters'), ('BC', 'single token shorter than 6 characters'), ('Cone', 'single token shorter than 6 characters'), ('Endo', 'single token shorter than 6 characters')]
 wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_ASSERTIONS_RAW.tsv  (124 rows)
@@ -32,9 +32,9 @@ wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_SCAN_META.json
 }
           Finished with result: success
 Main processes terminated with: code=exited, status=0/SUCCESS
-               Service runtime: 19.983s
-             CPU time consumed: 26.063s
-                   Memory peak: 178.6M (swap: 0B)
+               Service runtime: 19.928s
+             CPU time consumed: 25.875s
+                   Memory peak: 175.4M (swap: 0B)
 [scripts/s5_corpus_scan.py] rc=0
 ontology: /mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo
   release=releases/2026-06-08 active=3335 dev_statements=400

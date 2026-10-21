@@ -2,6 +2,9 @@
 # s10_resource_readings.sh - the resource/perf readings this card's report quotes, captured by
 # running the commands rather than by remembering them. Output: ledgers/RESOURCE_READINGS.txt
 set -uo pipefail
+# LC_ALL=C so that a captured command's own output (free, in particular) is English like the rest of
+# the deliverable: this file is repository-facing text, not only a terminal transcript.
+export LC_ALL=C
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 WAVE="$(cd "$HERE/.." && pwd)"
 OUT="$WAVE/ledgers/RESOURCE_READINGS.txt"
