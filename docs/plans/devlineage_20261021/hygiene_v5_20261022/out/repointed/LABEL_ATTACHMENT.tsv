@@ -1,0 +1,122 @@
+node_key	dl_id	label	library	panel_file	n_genes	concept_kind	cl_id_in_file	attach_basis	label_in_link_registry
+dl:CL:0000057|sp=human|ts=eye_membrane|st=adult|es=unknown	CL:0000057	Fibroblast	membrane	markers_membrane_v1.json	10	cell_type		upstream_label_map	membrane::Fibroblast
+dl:CL:0000057|sp=human|ts=eye_membrane|st=adult|es=unknown	CL:0000057	Fibroblast	face_v6	markers_v6_face_increment.json	0	cell_type		upstream_label_map	face_v6::Fibroblast
+dl:CL:0000057|sp=human|ts=eye_membrane|st=adult|es=unknown	CL:0000057	Limbus_Sclera_fibroblast_C1	k9_ocs	markers_k9_ocs_increment.json	3	cell_type		upstream_label_map	k9_ocs::Limbus_Sclera_fibroblast_C1
+dl:CL:0000084|sp=human|ts=eye_membrane|st=unknown|es=unknown	CL:0000084	T	membrane	markers_membrane_v1.json	11	cell_type		upstream_label_map	membrane::T
+dl:CL:0000094|sp=human|ts=eye_membrane|st=unknown|es=unknown	CL:0000094	Granulocyte	membrane	markers_membrane_v1.json	13	cell_type		upstream_label_map	membrane::Granulocyte
+dl:CL:0000097|sp=human|ts=eye|st=adult|es=unknown	CL:0000097	mast cell	antseg_v10	markers_v10_antseg_increment.json	11	unclassified	CL:0000097	upstream_label_map	antseg_v10::mast cell
+dl:CL:0000115|sp=human|ts=retina|st=unknown|es=unknown	CL:0000115	Endo	retina_v7	markers_v7_panel_increment.json	9	cell_type		upstream_label_map	retina_v7::Endo
+dl:CL:0000115|sp=human|ts=retina|st=unknown|es=unknown	CL:0000115	Endo	membrane	markers_membrane_v1.json	13	cell_type		upstream_label_map	membrane::Endo
+dl:CL:0000115|sp=human|ts=retina|st=unknown|es=unknown	CL:0000115	Endo_Arterial	retina_v7	markers_v7_panel_increment.json	6	cell_type		upstream_label_map	retina_v7::Endo_Arterial
+dl:CL:0000115|sp=human|ts=retina|st=unknown|es=unknown	CL:0000115	Endo_Patho	retina_v7	markers_v7_panel_increment.json	8	state_program		upstream_label_map	retina_v7::Endo_Patho
+dl:CL:0000115|sp=human|ts=retina|st=unknown|es=unknown	CL:0000115	Endo_Patho	membrane	markers_membrane_v1.json	6	state_program		upstream_label_map	membrane::Endo_Patho
+dl:CL:0000127|sp=human|ts=retina|st=unknown|es=unknown	CL:0000127	Astro	retina	markers_v4.1_clean.json	5	cell_type		upstream_label_map	retina::Astro
+dl:CL:0000127|sp=human|ts=retina|st=unknown|es=unknown	CL:0000127	Astro	retina_interneuron	markers_v5_retina_interneuron.json	5	cell_type		upstream_label_map	retina_interneuron::Astro
+dl:CL:0000127|sp=human|ts=retina|st=unknown|es=unknown	CL:0000127	Astro	retina_v6	markers_v6_retina_repair.json	3	cell_type		upstream_label_map	retina_v6::Astro
+dl:CL:0000128|sp=human|ts=optic_nerve|st=adult|es=unknown	CL:0000128	oligodendrocyte	antseg_v10	markers_v10_antseg_increment.json	18	unclassified	CL:0000128	upstream_label_map	antseg_v10::oligodendrocyte
+dl:CL:0000129|sp=human|ts=retina|st=adult|es=unknown	CL:0000129	Micro	retina	markers_v4.1_clean.json	1	cell_type		upstream_label_map	retina::Micro
+dl:CL:0000129|sp=human|ts=retina|st=adult|es=unknown	CL:0000129	Micro	retina_interneuron	markers_v5_retina_interneuron.json	1	cell_type		upstream_label_map	retina_interneuron::Micro
+dl:CL:0000129|sp=human|ts=retina|st=adult|es=unknown	CL:0000129	Micro	retina_v6	markers_v6_retina_repair.json	1	cell_type		upstream_label_map	retina_v6::Micro
+dl:CL:0000129|sp=human|ts=retina|st=adult|es=unknown	CL:0000129	Microglia	retina_v6	markers_v6_retina_repair.json	16	unclassified		upstream_label_map	retina_v6::Microglia
+dl:CL:0000129|sp=human|ts=retina|st=adult|es=unknown	CL:0000129	Microglia	retina_v7	markers_v7_panel_increment.json	12	cell_type		upstream_label_map	retina_v7::Microglia
+dl:CL:0000129|sp=human|ts=retina|st=adult|es=unknown	CL:0000129	Microglia	membrane	markers_membrane_v1.json	12	cell_type		upstream_label_map	membrane::Microglia
+dl:CL:0000132|sp=human|ts=eye_membrane|st=adult|es=unknown	CL:0000132	Corneal Endothelium	membrane	markers_membrane_v1.json	3	cell_type		upstream_label_map	membrane::Corneal Endothelium
+dl:CL:0000132|sp=human|ts=eye_membrane|st=adult|es=unknown	CL:0000132	corneal endothelial cell	antseg_v10	markers_v10_antseg_increment.json	22	unclassified	CL:0000132	upstream_label_map	antseg_v10::corneal endothelial cell
+dl:CL:0000148|sp=human|ts=ocular_surface|st=adult|es=unknown	CL:0000148	Melanocyte	k9_ocs	markers_k9_ocs_increment.json	10	cell_type		upstream_label_map	k9_ocs::Melanocyte
+dl:CL:0000160|sp=human|ts=conjunctiva|st=unknown|es=unknown	CL:0000160	goblet cell	antseg_v10	markers_v10_antseg_increment.json	20	unclassified	CL:0000160	upstream_label_map	antseg_v10::goblet cell
+dl:CL:0000185|sp=human|ts=lacrimal_gland|st=unknown|es=unknown	CL:0000185	Lacrimal_myoepithelial	lacrimal_v6	markers_v6_lacrimal_increment.json	0	cell_type		upstream_label_map	lacrimal_v6::Lacrimal_myoepithelial
+dl:CL:0000186|sp=human|ts=eye_membrane|st=unknown|es=unknown	CL:0000186	Myofibroblast	membrane	markers_membrane_v1.json	12	cell_type		upstream_label_map	membrane::Myofibroblast
+dl:CL:0000186|sp=human|ts=eye_membrane|st=unknown|es=unknown	CL:0000186	Myofibroblast	face_v6	markers_v6_face_increment.json	0	cell_type		upstream_label_map	face_v6::Myofibroblast
+dl:CL:0000192|sp=human|ts=retina|st=unknown|es=unknown	CL:0000192	SMC	retina_v7	markers_v7_panel_increment.json	6	cell_type		upstream_label_map	retina_v7::SMC
+dl:CL:0000192|sp=human|ts=retina|st=unknown|es=unknown	CL:0000192	SMC	membrane	markers_membrane_v1.json	8	cell_type		upstream_label_map	membrane::SMC
+dl:CL:0000192|sp=human|ts=retina|st=unknown|es=unknown	CL:0000192	SMC	face_v6	markers_v6_face_increment.json	5	cell_type		upstream_label_map	face_v6::SMC
+dl:CL:0000235|sp=human|ts=retina|st=adult|es=unknown	CL:0000235	Mac_DAM_LAM	retina_v7	markers_v7_panel_increment.json	20	state_program		upstream_label_map	retina_v7::Mac_DAM_LAM
+dl:CL:0000235|sp=human|ts=retina|st=adult|es=unknown	CL:0000235	Mac_DAM_LAM	membrane	markers_membrane_v1.json	17	state_program		upstream_label_map	membrane::Mac_DAM_LAM
+dl:CL:0000235|sp=human|ts=retina|st=adult|es=unknown	CL:0000235	Mac_Tissue	membrane	markers_membrane_v1.json	15	cell_type		upstream_label_map	membrane::Mac_Tissue
+dl:CL:0000235|sp=human|ts=retina|st=adult|es=unknown	CL:0000235	Macrophage	retina_v7	markers_v7_panel_increment.json	16	cell_type		upstream_label_map	retina_v7::Macrophage
+dl:CL:0000236|sp=human|ts=eye_membrane|st=unknown|es=unknown	CL:0000236	B	membrane	markers_membrane_v1.json	7	cell_type		upstream_label_map	membrane::B
+dl:CL:0000315|sp=human|ts=lacrimal_gland|st=unknown|es=unknown	CL:0000315	Lacrimal_secretory_tearcell	lacrimal_v6	markers_v6_lacrimal_increment.json	6	cell_type		upstream_label_map	lacrimal_v6::Lacrimal_secretory_tearcell
+dl:CL:0000529|sp=human|ts=lens|st=unknown|es=unknown	CL:0000529	pigmented epithelial cell	lensiris_v11	markers_v11_lensiris_increment.json	30	unclassified	CL:0000529	upstream_label_map	lensiris_v11::pigmented epithelial cell
+dl:CL:0000561|sp=human|ts=retina|st=adult|es=unknown	CL:0000561	AC	retina	markers_v4.1_clean.json	5	cell_type		upstream_label_map	retina::AC
+dl:CL:0000561|sp=human|ts=retina|st=adult|es=unknown	CL:0000561	AC	retina_interneuron	markers_v5_retina_interneuron.json	49	cell_type		upstream_label_map	retina_interneuron::AC
+dl:CL:0000561|sp=human|ts=retina|st=adult|es=unknown	CL:0000561	AC	retina_v6	markers_v6_retina_repair.json	29	cell_type		upstream_label_map	retina_v6::AC
+dl:CL:0000573|sp=human|ts=retina|st=adult|es=unknown	CL:0000573	Cone	retina	markers_v4.1_clean.json	5	cell_type		upstream_label_map	retina::Cone
+dl:CL:0000573|sp=human|ts=retina|st=adult|es=unknown	CL:0000573	Cone	retina_interneuron	markers_v5_retina_interneuron.json	5	cell_type		upstream_label_map	retina_interneuron::Cone
+dl:CL:0000573|sp=human|ts=retina|st=adult|es=unknown	CL:0000573	Cone	retina_v6	markers_v6_retina_repair.json	5	cell_type		upstream_label_map	retina_v6::Cone
+dl:CL:0000575|sp=human|ts=cornea|st=unknown|es=unknown	CL:0000575	corneal epithelial cell	antseg_v10	markers_v10_antseg_increment.json	30	unclassified	CL:0000575	upstream_label_map	antseg_v10::corneal epithelial cell
+dl:CL:0000604|sp=human|ts=retina|st=adult|es=unknown	CL:0000604	Rod	retina	markers_v4.1_clean.json	5	cell_type		upstream_label_map	retina::Rod
+dl:CL:0000604|sp=human|ts=retina|st=adult|es=unknown	CL:0000604	Rod	retina_interneuron	markers_v5_retina_interneuron.json	5	cell_type		upstream_label_map	retina_interneuron::Rod
+dl:CL:0000604|sp=human|ts=retina|st=adult|es=unknown	CL:0000604	Rod	retina_v6	markers_v6_retina_repair.json	5	cell_type		upstream_label_map	retina_v6::Rod
+dl:CL:0000623|sp=human|ts=eye_membrane|st=unknown|es=unknown	CL:0000623	NK	membrane	markers_membrane_v1.json	7	cell_type		upstream_label_map	membrane::NK
+dl:CL:0000636|sp=human|ts=retina|st=adult|es=unknown	CL:0000636	MG	retina	markers_v4.1_clean.json	5	cell_type		upstream_label_map	retina::MG
+dl:CL:0000636|sp=human|ts=retina|st=adult|es=unknown	CL:0000636	MG	retina_interneuron	markers_v5_retina_interneuron.json	5	cell_type		upstream_label_map	retina_interneuron::MG
+dl:CL:0000636|sp=human|ts=retina|st=adult|es=unknown	CL:0000636	MG	retina_v6	markers_v6_retina_repair.json	2	cell_type		upstream_label_map	retina_v6::MG
+dl:CL:0000646|sp=human|ts=cornea|st=developing|es=unknown	CL:0000646	basal cell	antseg_v10	markers_v10_antseg_increment.json	30	unclassified	CL:0000646	upstream_label_map	antseg_v10::basal cell
+dl:CL:0000669|sp=human|ts=retina|st=adult|es=unknown	CL:0000669	Pericyte	retina_v7	markers_v7_panel_increment.json	10	cell_type		upstream_label_map	retina_v7::Pericyte
+dl:CL:0000669|sp=human|ts=retina|st=adult|es=unknown	CL:0000669	Pericyte	membrane	markers_membrane_v1.json	12	cell_type		upstream_label_map	membrane::Pericyte
+dl:CL:0000669|sp=human|ts=retina|st=adult|es=unknown	CL:0000669	Pericyte	face_v6	markers_v6_face_increment.json	4	cell_type		upstream_label_map	face_v6::Pericyte
+dl:CL:0000740|sp=human|ts=retina|st=adult|es=unknown	CL:0000740	RGC	retina	markers_v4.1_clean.json	5	cell_type		upstream_label_map	retina::RGC
+dl:CL:0000740|sp=human|ts=retina|st=adult|es=unknown	CL:0000740	RGC	retina_interneuron	markers_v5_retina_interneuron.json	5	cell_type		upstream_label_map	retina_interneuron::RGC
+dl:CL:0000740|sp=human|ts=retina|st=adult|es=unknown	CL:0000740	RGC	retina_v6	markers_v6_retina_repair.json	6	cell_type		upstream_label_map	retina_v6::RGC
+dl:CL:0000745|sp=human|ts=retina|st=adult|es=unknown	CL:0000745	HC	retina	markers_v4.1_clean.json	5	cell_type		upstream_label_map	retina::HC
+dl:CL:0000745|sp=human|ts=retina|st=adult|es=unknown	CL:0000745	HC	retina_interneuron	markers_v5_retina_interneuron.json	31	cell_type		upstream_label_map	retina_interneuron::HC
+dl:CL:0000745|sp=human|ts=retina|st=adult|es=unknown	CL:0000745	HC	retina_v6	markers_v6_retina_repair.json	26	cell_type		upstream_label_map	retina_v6::HC
+dl:CL:0000748|sp=human|ts=retina|st=adult|es=unknown	CL:0000748	BC	retina	markers_v4.1_clean.json	5	cell_type		upstream_label_map	retina::BC
+dl:CL:0000748|sp=human|ts=retina|st=adult|es=unknown	CL:0000748	BC	retina_interneuron	markers_v5_retina_interneuron.json	50	cell_type		upstream_label_map	retina_interneuron::BC
+dl:CL:0000748|sp=human|ts=retina|st=adult|es=unknown	CL:0000748	BC	retina_v6	markers_v6_retina_repair.json	39	cell_type		upstream_label_map	retina_v6::BC
+dl:CL:0000784|sp=human|ts=eye_membrane|st=unknown|es=unknown	CL:0000784	pDC	membrane	markers_membrane_v1.json	9	cell_type		upstream_label_map	membrane::pDC
+dl:CL:0000786|sp=human|ts=eye_membrane|st=unknown|es=unknown	CL:0000786	Plasma	membrane	markers_membrane_v1.json	9	cell_type		upstream_label_map	membrane::Plasma
+dl:CL:0000860|sp=human|ts=eye_membrane|st=unknown|es=unknown	CL:0000860	Mono_Classical	membrane	markers_membrane_v1.json	11	cell_type		upstream_label_map	membrane::Mono_Classical
+dl:CL:0000875|sp=human|ts=eye_membrane|st=unknown|es=unknown	CL:0000875	Mono_Nonclassical	membrane	markers_membrane_v1.json	5	cell_type		upstream_label_map	membrane::Mono_Nonclassical
+dl:CL:0000990|sp=human|ts=eye_membrane|st=unknown|es=unknown	CL:0000990	cDC1	membrane	markers_membrane_v1.json	8	cell_type		upstream_label_map	membrane::cDC1
+dl:CL:0000990|sp=human|ts=eye_membrane|st=unknown|es=unknown	CL:0000990	cDC2	membrane	markers_membrane_v1.json	6	cell_type		upstream_label_map	membrane::cDC2
+dl:CL:0002144|sp=human|ts=retina|st=unknown|es=unknown	CL:0002144	Endo_Capillary	retina_v7	markers_v7_panel_increment.json	4	cell_type		upstream_label_map	retina_v7::Endo_Capillary
+dl:CL:0002223|sp=human|ts=lens|st=unknown|es=unknown	CL:0002223	anterior lens cell	lensiris_v11	markers_v11_lensiris_increment.json	28	unclassified	CL:0002223	upstream_label_map	lensiris_v11::anterior lens cell
+dl:CL:0002224|sp=human|ts=lens|st=unknown|es=unknown	CL:0002224	lens epithelial cell	antseg_v10	markers_v10_antseg_increment.json	30	unclassified	CL:0002224	upstream_label_map	antseg_v10::lens epithelial cell
+dl:CL:0002225|sp=human|ts=lens|st=unknown|es=unknown	CL:0002225	secondary lens fiber	lensiris_v11	markers_v11_lensiris_increment.json	30	unclassified	CL:0002225	upstream_label_map	lensiris_v11::secondary lens fiber
+dl:CL:0002303|sp=human|ts=ciliary_body|st=unknown|es=unknown	CL:0002303	pigmented ciliary epithelial cell	antseg_v10	markers_v10_antseg_increment.json	24	unclassified	CL:0002303	upstream_label_map	antseg_v10::pigmented ciliary epithelial cell
+dl:CL:0002304|sp=human|ts=ciliary_body|st=unknown|es=unknown	CL:0002304	non-pigmented ciliary epithelial cell	antseg_v10	markers_v10_antseg_increment.json	26	unclassified	CL:0002304	upstream_label_map	antseg_v10::non-pigmented ciliary epithelial cell
+dl:CL:0002363|sp=human|ts=eye_membrane|st=unknown|es=unknown	CL:0002363	Keratocytes	membrane	markers_membrane_v1.json	3	cell_type		upstream_label_map	membrane::Keratocytes
+dl:CL:0002363|sp=human|ts=eye_membrane|st=unknown|es=unknown	CL:0002363	Keratocytes	face_v6	markers_v6_face_increment.json	1	cell_type		upstream_label_map	face_v6::Keratocytes
+dl:CL:0002367|sp=human|ts=trabecular_meshwork|st=unknown|es=unknown	CL:0002367	trabecular meshwork cell	antseg_v10	markers_v10_antseg_increment.json	30	unclassified	CL:0002367	upstream_label_map	antseg_v10::trabecular meshwork cell
+dl:CL:0002543|sp=human|ts=retina|st=unknown|es=unknown	CL:0002543	Endo_Venous	retina_v7	markers_v7_panel_increment.json	4	cell_type		upstream_label_map	retina_v7::Endo_Venous
+dl:CL:0002565|sp=human|ts=iris|st=unknown|es=unknown	CL:0002565	iris pigment epithelial cell	antseg_v10	markers_v10_antseg_increment.json	24	unclassified	CL:0002565	upstream_label_map	antseg_v10::iris pigment epithelial cell
+dl:CL:0002573|sp=human|ts=ocular_surface|st=unknown|es=unknown	CL:0002573	Schwann	k9_ocs	markers_k9_ocs_increment.json	4	cell_type		upstream_label_map	k9_ocs::Schwann
+dl:CL:0002586|sp=human|ts=retina|st=adult|es=unknown	CL:0002586	RPE	retina	markers_v4.1_clean.json	6	cell_type		upstream_label_map	retina::RPE
+dl:CL:0002586|sp=human|ts=retina|st=adult|es=unknown	CL:0002586	RPE	retina_interneuron	markers_v5_retina_interneuron.json	6	cell_type		upstream_label_map	retina_interneuron::RPE
+dl:CL:0002586|sp=human|ts=retina|st=adult|es=unknown	CL:0002586	RPE	retina_v6	markers_v6_retina_repair.json	9	cell_type		upstream_label_map	retina_v6::RPE
+dl:CL:0002586|sp=human|ts=retina|st=adult|es=unknown	CL:0002586	RPE_fetal	dev_v9	markers_v9_dev_retina.json	0	cell_type		upstream_label_map	dev_v9::RPE_fetal
+dl:CL:0002672|sp=human|ts=retina|st=developing|es=unknown	CL:0002672	RPC_early	dev_v8	markers_v8_dev_retina.json	9	cell_type		upstream_label_map	dev_v8::RPC_early
+dl:CL:0002672|sp=human|ts=retina|st=developing|es=unknown	CL:0002672	RPC_early	dev_v9	markers_v9_dev_retina.json	25	cell_type		upstream_label_map	dev_v9::RPC_early
+dl:CL:0002672|sp=human|ts=retina|st=developing|es=unknown	CL:0002672	RPC_late	dev_v8	markers_v8_dev_retina.json	7	cell_type		upstream_label_map	dev_v8::RPC_late
+dl:CL:0002672|sp=human|ts=retina|st=developing|es=unknown	CL:0002672	RPC_late	dev_v9	markers_v9_dev_retina.json	25	cell_type		upstream_label_map	dev_v9::RPC_late
+dl:CL:0009010|sp=human|ts=cornea|st=developing|es=unknown	CL:0009010	transit amplifying cell	antseg_v10	markers_v10_antseg_increment.json	30	unclassified	CL:0009010	upstream_label_map	antseg_v10::transit amplifying cell
+dl:CL:0011004|sp=human|ts=lens|st=unknown|es=unknown	CL:0011004	lens fiber cell	antseg_v10	markers_v10_antseg_increment.json	30	unclassified	CL:0011004	upstream_label_map	antseg_v10::lens fiber cell
+dl:CL:0011026|sp=human|ts=ocular_surface|st=developing|es=unknown	CL:0011026	progenitor cell	antseg_v10	markers_v10_antseg_increment.json	30	unclassified	CL:0011026	upstream_label_map	antseg_v10::progenitor cell
+dl:CL:1000432|sp=human|ts=ocular_surface|st=unknown|es=unknown	CL:1000432	Conj_epithelium_basal	face_v6	markers_v6_face_increment.json	6	cell_type		upstream_label_map	face_v6::Conj_epithelium_basal
+dl:CL:1000432|sp=human|ts=ocular_surface|st=unknown|es=unknown	CL:1000432	Conj_epithelium_superficial	face_v6	markers_v6_face_increment.json	2	cell_type		upstream_label_map	face_v6::Conj_epithelium_superficial
+dl:CL:1000432|sp=human|ts=ocular_surface|st=unknown|es=unknown	CL:1000432	Conj_epithelium_suprabasal	k9_ocs	markers_k9_ocs_increment.json	3	cell_type		upstream_label_map	k9_ocs::Conj_epithelium_suprabasal
+dl:CL:1000432|sp=human|ts=ocular_surface|st=unknown|es=unknown	CL:1000432	conjunctival epithelial cell	antseg_v10	markers_v10_antseg_increment.json	30	unclassified	CL:1000432	upstream_label_map	antseg_v10::conjunctival epithelial cell
+dl:CL:1000443|sp=human|ts=ciliary_body|st=unknown|es=unknown	CL:1000443	ciliary muscle cell	antseg_v10	markers_v10_antseg_increment.json	11	unclassified	CL:1000443	upstream_label_map	antseg_v10::ciliary muscle cell
+dl:NO_MATCH:AC_precursor|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:AC_precursor	AC_precursor	dev_v8	markers_v8_dev_retina.json	0	cell_type		upstream_label_map	dev_v8::AC_precursor
+dl:NO_MATCH:AC_precursor|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:AC_precursor	AC_precursor	dev_v9	markers_v9_dev_retina.json	18	cell_type		upstream_label_map	dev_v9::AC_precursor
+dl:NO_MATCH:APC_MHCII_high|sp=human|ts=eye_membrane|st=unknown|es=unknown	NO_MATCH:APC_MHCII_high	APC_MHCII_high	membrane	markers_membrane_v1.json	10	cell_type		upstream_label_map	membrane::APC_MHCII_high
+dl:NO_MATCH:BC_precursor|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:BC_precursor	BC_precursor	dev_v8	markers_v8_dev_retina.json	0	cell_type		upstream_label_map	dev_v8::BC_precursor
+dl:NO_MATCH:BC_precursor|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:BC_precursor	BC_precursor	dev_v9	markers_v9_dev_retina.json	0	cell_type		upstream_label_map	dev_v9::BC_precursor
+dl:NO_MATCH:Cone_precursor|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:Cone_precursor	Cone_precursor	dev_v8	markers_v8_dev_retina.json	0	cell_type		upstream_label_map	dev_v8::Cone_precursor
+dl:NO_MATCH:Cone_precursor|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:Cone_precursor	Cone_precursor	dev_v9	markers_v9_dev_retina.json	25	cell_type		upstream_label_map	dev_v9::Cone_precursor
+dl:NO_MATCH:HC_precursor|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:HC_precursor	HC_precursor	dev_v8	markers_v8_dev_retina.json	0	cell_type		upstream_label_map	dev_v8::HC_precursor
+dl:NO_MATCH:HC_precursor|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:HC_precursor	HC_precursor	dev_v9	markers_v9_dev_retina.json	25	cell_type		upstream_label_map	dev_v9::HC_precursor
+dl:NO_MATCH:Lacrimal_duct_epithelial|sp=human|ts=lacrimal_gland|st=unknown|es=unknown	NO_MATCH:Lacrimal_duct_epithelial	Lacrimal_duct_epithelial	lacrimal_v6	markers_v6_lacrimal_increment.json	1	cell_type		upstream_label_map	lacrimal_v6::Lacrimal_duct_epithelial
+dl:NO_MATCH:NRPC_early|sp=human|ts=retina|st=unknown|es=unknown	NO_MATCH:NRPC_early	NRPC_early	dev_v9	markers_v9_dev_retina.json	25	cell_type		upstream_label_map	dev_v9::NRPC_early
+dl:NO_MATCH:NRPC_late|sp=human|ts=retina|st=unknown|es=unknown	NO_MATCH:NRPC_late	NRPC_late	dev_v9	markers_v9_dev_retina.json	25	cell_type		upstream_label_map	dev_v9::NRPC_late
+dl:NO_MATCH:Proliferating|sp=human|ts=eye_membrane|st=developing|es=unknown	NO_MATCH:Proliferating	Proliferating	membrane	markers_membrane_v1.json	8	state_program		upstream_label_map	membrane::Proliferating
+dl:NO_MATCH:RGC_precursor|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:RGC_precursor	RGC_precursor	dev_v8	markers_v8_dev_retina.json	4	cell_type		upstream_label_map	dev_v8::RGC_precursor
+dl:NO_MATCH:RGC_precursor|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:RGC_precursor	RGC_precursor	dev_v9	markers_v9_dev_retina.json	17	cell_type		upstream_label_map	dev_v9::RGC_precursor
+dl:NO_MATCH:Retinal_Proliferating|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:Retinal_Proliferating	Retinal_Proliferating	dev_v8	markers_v8_dev_retina.json	10	state_program		upstream_label_map	dev_v8::Retinal_Proliferating
+dl:NO_MATCH:Retinal_Proliferating|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:Retinal_Proliferating	Retinal_Proliferating	dev_v9	markers_v9_dev_retina.json	10	state_program		upstream_label_map	dev_v9::Retinal_Proliferating
+dl:NO_MATCH:Rod_precursor|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:Rod_precursor	Rod_precursor	dev_v8	markers_v8_dev_retina.json	0	cell_type		upstream_label_map	dev_v8::Rod_precursor
+dl:NO_MATCH:Rod_precursor|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:Rod_precursor	Rod_precursor	dev_v9	markers_v9_dev_retina.json	25	cell_type		upstream_label_map	dev_v9::Rod_precursor
+dl:NO_MATCH:TAC_proliferating|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:TAC_proliferating	TAC_proliferating	dev_v9	markers_v9_dev_retina.json	2	state_program		upstream_label_map	dev_v9::TAC_proliferating
+dl:NO_MATCH:TAC_transit_amplifying|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:TAC_transit_amplifying	TAC_transit_amplifying	dev_v8	markers_v8_dev_retina.json	2	cell_type		upstream_label_map	dev_v8::TAC_transit_amplifying
+dl:NO_MATCH:glia_precursor|sp=human|ts=retina|st=developing|es=unknown	NO_MATCH:glia_precursor	glia_precursor	dev_v9	markers_v9_dev_retina.json	0	cell_type		upstream_label_map	dev_v9::glia_precursor

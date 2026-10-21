@@ -1,0 +1,636 @@
+== item 1a: fix the upstream builder at the root, regenerate the table, re-run the upstream gate
+--- scripts/w5_01_fix_upstream.py
+{
+ "b1_sha256_pre": "f01b896b0ca43ba2b60e9172879d085980545b9f3cb61abe5531c90d563c41e4",
+ "b1_sha256_live_at_start": "7a110b96c300f2490889fd8ded63b3c8c4eaf64fbd4c260f3bb53b917e1ac8e3",
+ "b1_already_fixed_at_start": true,
+ "table_sha256_pre": "6f849c0567ea369521959a692c384c59b4907f8194e9df460263624917472e3b",
+ "defect_line_number": 352,
+ "defect_line": "\"in_child_panel\": \"yes\", \"in_parent_panel\": \"yes\" if g in parent_genes else \"no\",",
+ "defect_occurrences_in_pre_image": 1,
+ "rows_pre": 100,
+ "in_child_panel_values_pre": [
+  "yes"
+ ],
+ "direction_counts_pre": {
+  "gain": 10,
+  "loss": 90
+ },
+ "rows_whose_value_contradicts_its_own_direction_pre": 90,
+ "rows_contradicting_sample": [
+  "E005|loss|AHI1",
+  "E005|loss|ATOH7",
+  "E005|loss|CDH2",
+  "E005|loss|CDKN1B",
+  "E005|loss|CHD7"
+ ],
+ "independent_loader_rows_checked": 100,
+ "independent_loader_rows_agreeing": 100,
+ "independent_loader_rows_disagreeing": 0,
+ "independent_loader_disagreements": [],
+ "b1_diff_lines": 2,
+ "b1_sha256_post": "7a110b96c300f2490889fd8ded63b3c8c4eaf64fbd4c260f3bb53b917e1ac8e3",
+ "rebuild_rc": 0,
+ "rebuild_outputs_identical_to_upstream": [
+  "LINEAGE_NODES.tsv",
+  "LINEAGE_EDGES.tsv",
+  "LINEAGE_GERM_LAYER.tsv",
+  "LINEAGE_MARKER_TRANSITIONS.tsv",
+  "LINEAGE_UNRESOLVED_DEVELOPMENT.tsv"
+ ],
+ "rebuild_outputs_differing_only_by_own_output_path": [
+  "LINEAGE_SUMMARY.json"
+ ],
+ "rebuild_outputs_value_changed": [],
+ "target_table_already_corrected_at_start": true,
+ "rows_whose_value_contradicts_its_own_direction_post": 0,
+ "rows_changed": 90,
+ "cells_changed": 90,
+ "changed_columns": [
+  "in_child_panel"
+ ],
+ "value_transition": {
+  "yes->no": 90,
+  "no->yes": 0
+ },
+ "table_sha256_post": "16abc48e8fb24c66019891f8be9b441d9dc99792628ce4a81dcbb139919c7b1a",
+ "manifest_line_before": "16abc48e8fb24c66019891f8be9b441d9dc99792628ce4a81dcbb139919c7b1a  out/LINEAGE_MARKER_TRANSITIONS.tsv",
+ "manifest_line_after": "16abc48e8fb24c66019891f8be9b441d9dc99792628ce4a81dcbb139919c7b1a  out/LINEAGE_MARKER_TRANSITIONS.tsv",
+ "gate_lineage.py_rc": 0,
+ "d1_check_report_numbers.py_rc": 0,
+ "upstream_gate_B_verdict": "PASS",
+ "upstream_gate_B_fail": 0,
+ "upstream_gate_B_marker_trace": "marker rows=100 corpus-supported=100"
+}
+== item 1b: grade the same rows with the marker layer's four-condition rule and reconcile
+--- scripts/w5_02_strict_regrade.py
+  scanned 100000 chunks (maxrss 0.29 GiB)
+  scanned 200000 chunks (maxrss 0.29 GiB)
+scanned 244877 chunks; genes with an all-four-condition row: 54/55; maxrss 0.30 GiB; 10.0s
+{
+ "rows": 100,
+ "gain_rows": 10,
+ "loss_rows": 90,
+ "upstream_grading": "n_chunks > 0 ('the corpus mentions this gene anywhere')",
+ "strict_grading": "gene token + admissible species + names the target group + developmentally scented",
+ "upstream_support_status_values": {
+  "corpus_supported": 100
+ },
+ "strict_values_all_chunks": {
+  "strict_supported": 98,
+  "no_chunk_meets_all_four": 2
+ },
+ "strict_values_top10": {
+  "strict_supported": 98,
+  "no_chunk_meets_all_four": 2
+ },
+ "gain_rows_upstream_supported": 10,
+ "gain_rows_strict_supported": 10,
+ "gain_rows_agreement_with_superseding_artefact": 10,
+ "gain_rows_disagreement_with_superseding_artefact": 0,
+ "loss_rows_upstream_supported": 90,
+ "loss_rows_strict_supported": 88,
+ "loss_rows_strict_refused": 2,
+ "loss_rows_strict_refused_genes": [
+  "AHI1",
+  "AHI1"
+ ],
+ "loss_rows_superseding_artefact_refusals": 90,
+ "loss_rows_superseding_artefact_refusal_reason": "detection_conditions_insufficient",
+ "marker_layer_admitted_rows": 10,
+ "marker_layer_gene_set": [
+  "ARR3",
+  "GNAT1",
+  "GNAT2",
+  "NR2E3",
+  "NRL",
+  "OPN1MW",
+  "OPN1SW",
+  "PDE6B",
+  "PDE6H",
+  "RHO"
+ ],
+ "strict_all_chunks_gene_set": [
+  "ARR3",
+  "GNAT1",
+  "GNAT2",
+  "NR2E3",
+  "NRL",
+  "OPN1MW",
+  "OPN1SW",
+  "PDE6B",
+  "PDE6H",
+  "RHO"
+ ],
+ "gain_gene_sets_identical": true,
+ "strict_all_chunks_agreement_all_rows": 12,
+ "strict_top10_agreement_all_rows": 12,
+ "rows_in_reconciliation": 100,
+ "corpus_pass": {
+  "chunks": 244877,
+  "maxrss_gib": 0.302,
+  "seconds": 10.0
+ },
+ "loss_side_note": "loss rows are reported by the upstream table and deliberately NOT written as marker changes by the superseding artefact: panel absence is not a detection result (the superseding artefact carries them in its refusal register with reason detection_conditions_insufficient)"
+}
+== item 3: re-point the node/edge builders at the scaffold and re-run the layer
+--- scripts/w5_03_repoint.py
+nodes=103 scaffold=103 in_house_dev=0 germ=8
+stage counts {'fetal': 0, 'adult': 16, 'developing': 42, 'unknown': 45}
+labels attached=121 orphaned=0
+node assertions: 1072
+  roles    : {'identity_support': 993, 'state_warning': 48, 'subtype_discriminator': 31}
+  basis    : {'link_registry_gene_verified': 328, 'corpus_gene_row': 733, 'panel_provenance_stated': 7, 'panel_entry_basis_unstated': 4}
+  assay    : {'literature_RNA': 1043, 'literature_protein': 23, 'scRNA': 2, 'unspecified': 4}
+  refused  : {'different_species_not_stitchable': 2, 'evidence_only_from_evaluation_volume': 75}
+  nodes with zero assertions: 39
+edges: 51
+  relation types: {'ontology_development_relation': 40, 'ancestral_origin': 11}
+  grades         : {'direct_lineage_support': 40, 'textbook_or_review_distant_origin': 11}
+  status         : {'parent_group_has_no_panel': 36, 'marker_change_not_available_for_relation_type': 11, 'admitted_stepwise': 2, 'marker_change_not_available': 2}
+edge marker-change assertions: 10
+  by edge: {'dl:CL:0002672|sp=human': 10}
+refusals: {'parent_group_has_no_panel': 36, 'marker_change_not_available_for_relation_type': 11, 'detection_conditions_insufficient': 90, 'marker_change_not_available': 2}
+gap rows: 266
+  by kind  : {'no_evidence': 180, 'refused_evidence': 78, 'thin_evidence': 8}
+  by scope : {'node': 39, 'gene': 175, 'edge': 51, 'panel': 1}
+  by reason: {'node_has_no_panel_and_no_source': 39, 'different_species_not_stitchable': 2, 'evidence_only_from_evaluation_volume': 75, 'panel_entry_basis_unstated': 4, 'review_citation_unverifiable_locally': 4, 'parent_group_has_no_panel': 36, 'marker_change_not_available_for_relation_type': 11, 'detection_conditions_insufficient': 92, 'marker_change_not_available': 2, 'panel_selected_from_evaluation_report': 1}
+  declared-but-unused reasons: ['no_source_in_corpus', 'source_exists_not_full_text', 'different_stage_not_stitchable', 'prohibited_by_library_ban', 'edge_not_stepwise_relation', 'no_source_states_the_change', 'state_program_without_identity_node']
+{
+ "scaffold_nodes_in": 103,
+ "scaffold_edges_in": 51,
+ "nodes_adult_with_recorded_baseline": 16,
+ "adapter_node_stage_map": {
+  "adult|baseline:ciliary_body.json#development_s": 3,
+  "adult|baseline:ocular_surface.json#development": 1,
+  "adult|baseline:optic_nerve.json#development_st": 12,
+  "developing|label_dev_word:precursor": 7,
+  "developing|label_dev_word:proliferat": 3,
+  "developing|label_dev_word:transit amplifying": 1,
+  "developing|ontology:1017#dev_word=progenitor": 1,
+  "developing|ontology:11297#dev_word=immature": 1,
+  "developing|ontology:11348#dev_word=immature": 1,
+  "developing|ontology:11522#dev_word=progenitor": 1,
+  "developing|ontology:11581#dev_word=progenitor": 1,
+  "developing|ontology:11644#dev_word=progenitor": 1,
+  "developing|ontology:16756#dev_word=progenitor": 1,
+  "developing|ontology:17139#dev_word=progenitor": 1,
+  "developing|ontology:2006#anchor_role=surface_ectode": 1,
+  "developing|ontology:2321#anchor_role=neural_ectoder": 1,
+  "developing|ontology:2333#dev_word=stem cell": 1,
+  "developing|ontology:23961#dev_word=progenitor": 1,
+  "developing|ontology:27093#dev_word=progenitor": 1,
+  "developing|ontology:29475#anchor_role=mesenchyme": 1,
+  "developing|ontology:30071#dev_word=transit amplifyi": 1,
+  "developing|ontology:32156#anchor_role=neural_crest": 1,
+  "developing|ontology:32330#dev_word=progenitor": 1,
+  "developing|ontology:3566#anchor_role=ectoderm": 1,
+  "developing|ontology:3581#anchor_role=mesoderm": 1,
+  "developing|ontology:3599#anchor_role=endoderm": 1,
+  "developing|ontology:4669#dev_word=embryonic": 1,
+  "developing|ontology:654#dev_word=progenitor": 1,
+  "developing|ontology:6573#dev_word=precursor": 1,
+  "developing|ontology:710#anchor_role=hematopoietic_s": 1,
+  "developing|ontology:7219#dev_word=progenitor": 1,
+  "developing|ontology:7301#dev_word=precursor": 1,
+  "developing|ontology:7440#dev_word=stem cell": 1,
+  "developing|ontology:7585#dev_word=precursor": 1,
+  "developing|ontology:804#dev_word=progenitor": 1,
+  "developing|ontology:8693#dev_word=stem cell": 1,
+  "developing|ontology:923#dev_word=stem cell": 1,
+  "unknown|no_local_stage_declaration": 45
+ },
+ "corpus_artefacts_carried_over": {
+  "CORPUS_GENE_INDEX_v1.tsv": {
+   "source": "/mnt/D/EyeKB/plans/devlineage_20261021/markers/out/CORPUS_GENE_INDEX_v1.tsv",
+   "sha256": "ff089376f14a2600ab7924e13a7958a87737b0d4ac82a5d84590f69a0e4b341b"
+  },
+  "CORPUS_GENE_EXAMPLES_v1.jsonl": {
+   "source": "/mnt/D/EyeKB/plans/devlineage_20261021/markers/out/CORPUS_GENE_EXAMPLES_v1.jsonl",
+   "sha256": "3a1d8f450ab15443e69b8896b05911e64c99c3013d545f4c3fb572fe8aaed03c"
+  },
+  "CORPUS_GENE_INDEX_v1_META.json": {
+   "source": "/mnt/D/EyeKB/plans/devlineage_20261021/markers/out/CORPUS_GENE_INDEX_v1_META.json",
+   "sha256": "7185de9e3e81a12fa04228f1a7e2693771c4740dee89e685fcb04d8bc9f1787d"
+  }
+ },
+ "repoint_override": {
+  "M.OUT": "/mnt/D/EyeKB/plans/devlineage_20261021/hygiene_v5_20261022/out/repointed",
+  "M.L2_NODES": "/mnt/D/EyeKB/plans/devlineage_20261021/hygiene_v5_20261022/out/adapter/NODES_from_scaffold.tsv",
+  "M.L2_EDGES": "/mnt/D/EyeKB/plans/devlineage_20261021/hygiene_v5_20261022/out/adapter/EDGES_from_scaffold.tsv",
+  "previous": {
+   "OUT": "/mnt/D/EyeKB/plans/devlineage_20261021/markers/out",
+   "L2_NODES": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_NODES.tsv",
+   "L2_EDGES": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_EDGES.tsv"
+  }
+ },
+ "adapter_edges_unresolved_endpoints": [],
+ "adapter_marker_transition_status": {
+  "child_panel_absent": 22,
+  "has_supported_transition": 2,
+  "not_applicable_membership": 11,
+  "parent_panel_absent": 16
+ },
+ "builder_rc": [
+  {
+   "module": "m1_nodes",
+   "rc": 0
+  },
+  {
+   "module": "m2_node_markers",
+   "rc": 0
+  },
+  {
+   "module": "m3_edge_assertions",
+   "rc": 0
+  },
+  {
+   "module": "m4_gap_register",
+   "rc": 0
+  }
+ ],
+ "nodes": {
+  "old": 70,
+  "new": 103,
+  "kept_by_key": 62,
+  "added": 41,
+  "dropped": 8
+ },
+ "node_keys_moved": 8,
+ "node_keys_moved_detail": [
+  {
+   "dl_id": "CL:0000084",
+   "old_key": "dl:CL:0000084|sp=human|ts=eye_membrane|st=adult|es=unknown",
+   "new_key": "dl:CL:0000084|sp=human|ts=eye_membrane|st=unknown|es=unknown",
+   "old_stage": "adult",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "adult_or_unspecified",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  },
+  {
+   "dl_id": "CL:0000115",
+   "old_key": "dl:CL:0000115|sp=human|ts=retina|st=adult|es=unknown",
+   "new_key": "dl:CL:0000115|sp=human|ts=retina|st=unknown|es=unknown",
+   "old_stage": "adult",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "adult_or_unspecified",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  },
+  {
+   "dl_id": "CL:0000127",
+   "old_key": "dl:CL:0000127|sp=human|ts=retina|st=adult|es=unknown",
+   "new_key": "dl:CL:0000127|sp=human|ts=retina|st=unknown|es=unknown",
+   "old_stage": "adult",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "adult_or_unspecified",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  },
+  {
+   "dl_id": "CL:0000236",
+   "old_key": "dl:CL:0000236|sp=human|ts=eye_membrane|st=adult|es=unknown",
+   "new_key": "dl:CL:0000236|sp=human|ts=eye_membrane|st=unknown|es=unknown",
+   "old_stage": "adult",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "adult_or_unspecified",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  },
+  {
+   "dl_id": "CL:0000315",
+   "old_key": "dl:CL:0000315|sp=human|ts=lacrimal_gland|st=adult|es=unknown",
+   "new_key": "dl:CL:0000315|sp=human|ts=lacrimal_gland|st=unknown|es=unknown",
+   "old_stage": "adult",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "adult_or_unspecified",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  },
+  {
+   "dl_id": "CL:0002573",
+   "old_key": "dl:CL:0002573|sp=human|ts=ocular_surface|st=adult|es=unknown",
+   "new_key": "dl:CL:0002573|sp=human|ts=ocular_surface|st=unknown|es=unknown",
+   "old_stage": "adult",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "adult_or_unspecified",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  },
+  {
+   "dl_id": "NO_MATCH:NRPC_early",
+   "old_key": "dl:NO_MATCH:NRPC_early|sp=human|ts=retina|st=developing|es=unknown",
+   "new_key": "dl:NO_MATCH:NRPC_early|sp=human|ts=retina|st=unknown|es=unknown",
+   "old_stage": "developing",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "developing",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  },
+  {
+   "dl_id": "NO_MATCH:NRPC_late",
+   "old_key": "dl:NO_MATCH:NRPC_late|sp=human|ts=retina|st=developing|es=unknown",
+   "new_key": "dl:NO_MATCH:NRPC_late|sp=human|ts=retina|st=unknown|es=unknown",
+   "old_stage": "developing",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "developing",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  }
+ ],
+ "key_spelling": {
+  "compared": 103,
+  "identical": 39,
+  "differing": 64,
+  "by_kind": {
+   "library_class": {
+    "compared": 67,
+    "identical": 3
+   },
+   "ontology_intermediate": {
+    "compared": 28,
+    "identical": 28
+   },
+   "origin_anchor": {
+    "compared": 8,
+    "identical": 8
+   }
+  },
+  "reason": "the scaffold's own key strings leave sp/ts as unknown for most library classes; the contract key builder derives the declared context from the panels, which is the spelling the existing assertion set joins on"
+ },
+ "node_assertions": {
+  "old": 1043,
+  "new": 1072,
+  "resolution": {
+   "same_key": 939,
+   "key_moved": 102,
+   "relocated_to_another_node": 2,
+   "unresolved": 0
+  }
+ },
+ "stage_axis": {
+  "adult_to_unknown": 6,
+  "developing_to_unknown": 2,
+  "unknown_to_adult": 0,
+  "started_as_moving_to_adult": 0,
+  "other": 0,
+  "moved": 8,
+  "nodes_moved_to_adult": 0,
+  "adult_nodes_old": 22,
+  "adult_nodes_new": 16
+ },
+ "node_coverage": {
+  "old_nodes_with_an_assertion": 59,
+  "new_nodes_with_an_assertion": 64,
+  "old_nodes_with_no_assertion": 11,
+  "new_nodes_with_no_assertion": 39
+ },
+ "edges": {
+  "old": 34,
+  "new": 51,
+  "old_relation_types": {
+   "ancestral_origin": 25,
+   "ontology_development_relation": 9
+  },
+  "new_relation_types": {
+   "ancestral_origin": 11,
+   "ontology_development_relation": 40
+  },
+  "old_status": {
+   "admitted_stepwise": 2,
+   "edge_not_stepwise_relation": 4,
+   "marker_change_not_available_for_relation_type": 25,
+   "parent_group_has_no_panel": 3
+  },
+  "new_status": {
+   "admitted_stepwise": 2,
+   "marker_change_not_available": 2,
+   "marker_change_not_available_for_relation_type": 11,
+   "parent_group_has_no_panel": 36
+  },
+  "old_admitted_stepwise": 2,
+  "new_admitted_stepwise": 2,
+  "old_marker_change_assertions": 10,
+  "new_marker_change_assertions": 10
+ },
+ "edge_pairs": {
+  "old_pairs": 34,
+  "new_pairs": 51,
+  "old_pairs_also_in_new": 16,
+  "new_pairs_not_in_old": 35
+ },
+ "new_marker_change_genes_per_edge": [
+  "dl:CL:0002672|sp=human|ts=retina|st=developing|es=unknown"
+ ],
+ "gap_register": {
+  "old_rows": 226,
+  "new_rows": 266
+ },
+ "grade_reconciliation": {
+  "edges_compared": 51,
+  "agreement": 0,
+  "conflicts": 51,
+  "builder_values": {
+   "direct_lineage_support": 40,
+   "textbook_or_review_distant_origin": 11
+  },
+  "source_values": {
+   "identity_conversion_not_direct": 51
+  },
+  "governing_grade": "the source (scaffold) grade; recorded in EDGES_RECONCILED.tsv",
+  "why": "the builder's rule maps a direct relation to direct_lineage_support, but the scaffold's own grading says an ontology develops_from statement states time direction and identity conversion and is not direct lineage proof; the contract forbids an upgrade, so the source governs and the builder value is kept as a named conflict for the card that owns the grading rule"
+ },
+ "marker_change_grade_reconciliation": {
+  "rows": 10,
+  "builder_grade": [
+   "direct_lineage_support"
+  ],
+  "governing_grade": [
+   "identity_conversion_not_direct"
+  ]
+ },
+ "seconds": 0.9
+}
+== item 2: the two kb/markers copies, byte ledger and authority
+--- scripts/w5_04_item2_kb.py
+{
+ "files_in_mntD": 18,
+ "files_in_repo": 18,
+ "by_class": {
+  "only_in_mntD": {
+   "n": 2,
+   "files": [
+    "markers_v8_dev_retina.json",
+    "markers_v9_dev_retina.json.v1"
+   ]
+  },
+  "only_in_repo": {
+   "n": 2,
+   "files": [
+    "markers_v11_lensiris_increment.json",
+    "markers_v12_holefill_increment.json"
+   ]
+  },
+  "shared_identical": {
+   "n": 16,
+   "files": [
+    "_concept_kind_sidecar_v1.json",
+    "_k9_ocs_rules_overlay_v1.json",
+    "_raggap_c_linkbackfill_v1.json",
+    "_raggap_errata_v1.json",
+    "markers_cl_alignment_v1.json",
+    "markers_cl_alignment_v2_unified.json",
+    "markers_k9_ocs_increment.json",
+    "markers_membrane_v1.json",
+    "markers_v10_antseg_increment.json",
+    "markers_v4.1_clean.json",
+    "markers_v5_retina_interneuron.json",
+    "markers_v6_face_increment.json",
+    "markers_v6_lacrimal_increment.json",
+    "markers_v6_retina_repair.json",
+    "markers_v7_panel_increment.json",
+    "markers_v9_dev_retina.json"
+   ]
+  }
+ },
+ "shared_files_checked": 16,
+ "shared_files_byte_identical": 16,
+ "the_claim_holds": true,
+ "sync_script": "/mnt/D/EyeKB/plans/devlineage_20261021/hygiene_v5_20261022/out/ITEM2_SYNC_KB_MARKERS.sh"
+}
+loader: each tree's loader resolves kb/markers relative to its own package root (EYEKB_ROOT = parents[1] of mcp_server/eyekb_core.py); neither loader has a cross-tree fallback, so the copy that is authoritative for a run is the copy inside the tree the service is started from
+divergence can change a served answer: in the git tree: no (the two panels are present where the loader looks for them). in the data tree: not today (that tree's loader is an older revision that does not name them) but yes the moment that wiring is synced there — the two libraries would resolve to nothing, silently
+== item 4: the evaluation-basis finding
+--- scripts/w5_05_evalbasis.py
+{
+ "panels_consumed": 12,
+ "totals": {
+  "A_refused_eval_only_no_independent_evidence": 67,
+  "B_admitted_but_panel_basis_eval_only": 0,
+  "C_panel_basis_independent_or_mixed": 1140
+ },
+ "panels_with_any_evaluation_basis_gene": [
+  "markers_v9_dev_retina.json"
+ ],
+ "panels_without": [
+  "markers_k9_ocs_increment.json",
+  "markers_membrane_v1.json",
+  "markers_v10_antseg_increment.json",
+  "markers_v11_lensiris_increment.json",
+  "markers_v4.1_clean.json",
+  "markers_v5_retina_interneuron.json",
+  "markers_v6_face_increment.json",
+  "markers_v6_lacrimal_increment.json",
+  "markers_v6_retina_repair.json",
+  "markers_v7_panel_increment.json",
+  "markers_v8_dev_retina.json"
+ ],
+ "refused_panel": {
+  "file": "markers_v12_holefill_increment.json",
+  "present": "yes",
+  "n_entries": 17,
+  "n_genes": 204,
+  "scope_says_it_fills_the_evaluation_runs_own_holes": "yes",
+  "scope_excerpt": "the measured coverage holes of the 28-volume / 721-cluster run: vascular endothelium in retina and choroid, macrophage and monocyte separated from microglia, retinal rod depth, and the RPE/melanocyte pair"
+ },
+ "lensiris_increment": {
+  "file": "markers_v11_lensiris_increment.json",
+  "present": "yes",
+  "n_entries": 3,
+  "n_genes": 80,
+  "scope_says_it_fills_the_evaluation_runs_own_holes": "no",
+  "scope_excerpt": "the two tissues that docs/TISSUE_COVERAGE_DECLARATION.md declares as gaps (lens, iris): the author-side class names that were absent from the vocabulary, carrying their own Cell Ontology terms"
+ },
+ "gap_register_rows_with_this_reason": 75,
+ "flag_spec": {
+  "generated_by": "scripts/w5_05_evalbasis.py",
+  "what_is_being_flagged": "a gene, or an entry, whose basis for being in a shipped panel is an evaluation volume — i.e. the benchmark's own substrate — rather than independent literature or an in-house non-benchmark atlas",
+  "why_a_file_level_bit_is_not_enough": [
+   "the same panel file mixes the three readings: measured per panel in ITEM4_EVAL_BASIS_BY_PANEL.tsv (columns A, B, C sum to the panel's gene count)",
+   "a panel whose declared selection basis is an evaluation volume still carries genes whose own entry names an independent source (reading C), so flagging the file would condemn them",
+   "a panel whose declared basis is independent can still carry an entry whose only provenance is an evaluation volume (reading B), so not flagging the file would exonerate them"
+  ],
+  "what_the_flag_must_assert": [
+   "granularity: per entry (label) inside a panel file, and per gene inside that entry — not per file",
+   "a basis class drawn from a closed vocabulary: independent_literature | independent_in_house_atlas_non_benchmark | evaluation_volume | evaluation_report_holes | unstated",
+   "when the basis class is evaluation_volume or evaluation_report_holes: the entry must carry an independent anchor (a PMID or a corpus row) for every gene it wants to be usable for a lineage/marker claim, named per gene — the flag says 'this candidate list leaned on the benchmark', not 'this gene is unusable'",
+   "the name of the evaluation artefact it leaned on (volume id / report id), so a reader can re-derive the exclusion list instead of trusting the bit",
+   "an explicit statement of what the flag does NOT claim: it does not assert that the gene is wrong, and it does not authorise changing a shipped panel body"
+  ],
+  "where_it_must_be_enforced": "at the consuming layer (the marker layer's admission test), not by editing the shipped panels: the contract's red line forbids deriving a marker from the evaluation volumes' own queries, and a rewrite of kb/ is an activation by another name",
+  "machine_check": "for every assertion in a lineage artefact: if the source entry's basis class is evaluation_volume or evaluation_report_holes, the assertion must carry an anchor that is not derived from that volume; the marker layer already implements exactly this for reading A (the four-condition corpus test), and reading B is what is not yet checkable",
+  "status": "registered here; not activated, and no panel body is changed by this card"
+ },
+ "activation": "none",
+ "panel_bodies_changed": 0
+}
+== manifest (taken before the gate, so a drifting artefact is the gate's job)
+--- scripts/w5_08_manifest.py
+manifest entries: 74
+== gate (author tree)
+--- scripts/w5_06_gate.py
+# Gate readout — wave-5 lineage hygiene
+
+verdict: **PASS** (12 checks, 0 failed)
+
+| check | name | status | n_offenders | detail |
+|---|---|---|---|---|
+| G1 | UPSTREAM_TABLE_HONEST | PASS | 0 | rows=100; rows contradicting their own direction=0; the builder computes the value (True); upstream gate B verdict=PASS (0 failed) |
+| G2 | STRICT_GRADING_MATCHES_SUPERSEDING_ARTEFACT | PASS | 0 | gain rows=10; agreement with MARKER_CHANGE_EDGES.tsv=10; disagreements=0; gene sets identical=True |
+| G3 | ONE_RECONCILED_TABLE | PASS | 0 | reconciled rows=100; both gradings carried=True; the loss side's refusal reason is recorded (detection_conditions_insufficient) |
+| G4 | REPOINT_ACCOUNTS_FOR_EVERY_SOURCE_ROW | PASS | 0 | scaffold rows in=103/103 nodes, 51/51 edges; adapter rows=103/51; builders rc=[0, 0, 0, 0]; endpoints unresolved=0; assertions unresolved=0 |
+| G5 | GRADE_CONFLICT_SURFACED_AND_SOURCE_GOVERNS | PASS | 0 | edges=51; builder/source agreement=0; conflicts=51 (all surfaced); reconciled rows where the source grade governs=51/51 |
+| G6 | KB_LEDGER_COMPLETE_AND_NO_KB_WRITE | PASS | 0 | files ledgered=20; data tree unchanged=True; git tree unchanged=True; every shared file either byte-identical or n/a=True; sync script dry-run by default=True |
+| G7 | EVAL_BASIS_FINDING_RECONCILES | PASS | 0 | per-panel A total=67; distinct eval-only genes=67; per-gene rows=75 (one row per label the gene sits in); summary A=67; activation=none; panel bodies changed=0 |
+| G8 | NO_NETWORK | PASS | 0 | audit-hook receipts=94 (proves the hook was installed); network events=0 |
+| G9 | DEFAULT_BEHAVIOUR_IDENTICAL | PASS | 0 | recorded production queries replayed in 6.0s: n=721 identical=721 differ=0 (recorded n=721) |
+| G10 | WHAT_THIS_CARD_TOUCHED_OUTSIDE_ITS_WAVE | PASS | 0 | the repository working tree is clean |
+| G11 | MANIFEST_VERIFIES | PASS | 0 | manifest entries=74, verified=74, failing=0 |
+| G12 | CLEAN_CLONE_GREEN | PASS | 0 | clean-clone check: {"commit": "c321667af0028959748503b791398218c3a03f5a", "clone_root": "(temporary clone of the repository, removed after the run)", "gate_rc": 0, "gate_verdict": "PASS", "gate_failed": "[]", "files_differing_from_author_tree": 0} |
+== clone check (clean clone, gate re-run there, mirror fidelity measured)
+== clone of c321667af0028959748503b791398218c3a03f5a -> /tmp/w5_clone_dSYzEK
+== mode copy_local: copying the working wave into the clone
+== gate inside the clone (G12 reported as INFO: this step produces that evidence)
+   clone gate: rc=0 verdict=PASS failed=[] info=['G12']
+== mirror fidelity: author tree vs clone, file by file
+   compared 76 files, differing 0
+== writing the clone-check record into both trees
+{
+ "generated_by": "scripts/w5_07_clone_check.sh",
+ "mode": "copy_local",
+ "commit": "c321667af0028959748503b791398218c3a03f5a",
+ "clone_of_commit": "c321667af0028959748503b791398218c3a03f5a",
+ "clone_root": "(temporary clone of the repository, removed after the run)",
+ "gate_rc": 0,
+ "gate_verdict": "PASS",
+ "gate_failed": "[]",
+ "gate_info": "['G12']",
+ "gate_info_note": "G12 is reported as INFO inside this invocation: the clone check is the step that produces the record G12 judges, so the author-tree invocation judges it instead",
+ "files_compared_author_vs_clone": 76,
+ "files_differing_from_author_tree": 0,
+ "verdict": "PASS",
+ "how_the_clone_was_run": "git clone --no-hardlinks file:///home/ubuntu/EYEKB_REPO, checked out at the commit under test; the wave's gate executed inside the clone with W5_DATA_ROOT pointing at the local material, which is outside the repository by design"
+}
+== gate again, now that the clone-check record exists
+--- scripts/w5_06_gate.py
+# Gate readout — wave-5 lineage hygiene
+
+verdict: **PASS** (12 checks, 0 failed)
+
+| check | name | status | n_offenders | detail |
+|---|---|---|---|---|
+| G1 | UPSTREAM_TABLE_HONEST | PASS | 0 | rows=100; rows contradicting their own direction=0; the builder computes the value (True); upstream gate B verdict=PASS (0 failed) |
+| G2 | STRICT_GRADING_MATCHES_SUPERSEDING_ARTEFACT | PASS | 0 | gain rows=10; agreement with MARKER_CHANGE_EDGES.tsv=10; disagreements=0; gene sets identical=True |
+| G3 | ONE_RECONCILED_TABLE | PASS | 0 | reconciled rows=100; both gradings carried=True; the loss side's refusal reason is recorded (detection_conditions_insufficient) |
+| G4 | REPOINT_ACCOUNTS_FOR_EVERY_SOURCE_ROW | PASS | 0 | scaffold rows in=103/103 nodes, 51/51 edges; adapter rows=103/51; builders rc=[0, 0, 0, 0]; endpoints unresolved=0; assertions unresolved=0 |
+| G5 | GRADE_CONFLICT_SURFACED_AND_SOURCE_GOVERNS | PASS | 0 | edges=51; builder/source agreement=0; conflicts=51 (all surfaced); reconciled rows where the source grade governs=51/51 |
+| G6 | KB_LEDGER_COMPLETE_AND_NO_KB_WRITE | PASS | 0 | files ledgered=20; data tree unchanged=True; git tree unchanged=True; every shared file either byte-identical or n/a=True; sync script dry-run by default=True |
+| G7 | EVAL_BASIS_FINDING_RECONCILES | PASS | 0 | per-panel A total=67; distinct eval-only genes=67; per-gene rows=75 (one row per label the gene sits in); summary A=67; activation=none; panel bodies changed=0 |
+| G8 | NO_NETWORK | PASS | 0 | audit-hook receipts=102 (proves the hook was installed); network events=0 |
+| G9 | DEFAULT_BEHAVIOUR_IDENTICAL | PASS | 0 | recorded production queries replayed in 5.8s: n=721 identical=721 differ=0 (recorded n=721) |
+| G10 | WHAT_THIS_CARD_TOUCHED_OUTSIDE_ITS_WAVE | PASS | 0 | the repository working tree is clean |
+| G11 | MANIFEST_VERIFIES | PASS | 0 | manifest entries=74, verified=74, failing=0 |
+| G12 | CLEAN_CLONE_GREEN | PASS | 0 | clean-clone check: {"commit": "c321667af0028959748503b791398218c3a03f5a", "clone_root": "(temporary clone of the repository, removed after the run)", "gate_rc": 0, "gate_verdict": "PASS", "gate_failed": "[]", "files_differing_from_author_tree": 0} |
+== manifest check after the gate (the gate only writes files the manifest excludes)
+MANIFEST_OK
+== network audit
+network audit receipts (hook installed): 103
+network events: 0
+NET_ZERO_PASS
+== resource readings
+# available and peak readings, taken by the chain
+available_after_chain_gib: 196.0
+this_wave_on_disk: 5.0M

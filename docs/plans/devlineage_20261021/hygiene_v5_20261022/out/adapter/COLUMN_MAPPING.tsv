@@ -1,0 +1,19 @@
+column	from	rule
+node_id	SCAFFOLD_NODES.node_id	verbatim; already in the contract's form (CL id, or the mandatory NO_MATCH:<in_house_class_id> for the 15 concepts the ontology cannot key)
+kind	SCAFFOLD_NODES.kind	origin_anchor -> germ_layer (the builder's one anchor branch, which forces unknown context and never lets an anchor pose as a cell type); library_class and ontology_intermediate pass through unchanged
+cl_label	SCAFFOLD_NODES.cl_label	verbatim
+obo_line	SCAFFOLD_NODES.obo_line	verbatim (empty for the NO_MATCH concepts, which have no ontology line)
+stage_scope	SCAFFOLD_NODES.stage + stage_basis	developing -> developing; adult -> adult_or_unspecified plus the recorded baseline key, so the builder still resolves adult through the repository's own baseline entries; unknown -> adult_or_unspecified with no baseline key, which the builder resolves to unknown. Unknown never becomes adult.
+in_adult_baseline_keys	SCAFFOLD_NODES.stage_basis	the baseline entry named by the scaffold's own stage_basis when it is an adult baseline (e.g. baseline:retina.json#development_stage=adult); empty otherwise
+our_labels	SCAFFOLD_NODES.our_labels	verbatim
+n_panel_genes	SCAFFOLD_NODES.n_panel_genes	verbatim
+panel_files	SCAFFOLD_NODES.panel_files	verbatim
+n_inbound_edges	SCAFFOLD_EDGES_CONFIRMED	counted from the confirmed edge list (the scaffold table does not carry it)
+edge_id	SCAFFOLD_EDGES_CONFIRMED.edge_id	verbatim (S####), so every re-pointed edge traces to the scaffold row it came from; the first-pass ids the scaffold reconciled against are kept in the provenance column first_pass_edge_ids
+child / parent	SCAFFOLD_EDGES_CONFIRMED.descendant_node / precursor_node	the contract id parsed out of the endpoint's node_key; child is the descendant (the direction develops_from itself uses). Asserted: every parsed id exists in the node list.
+relation_type	SCAFFOLD_EDGES_CONFIRMED.relation_type + directness	the builder's three-way mapping is preserved rather than bypassed: directness=direct -> develops_from_direct; directness=chain:* -> develops_from_transitive; relation_type=ancestral_origin -> germ_layer_membership. No relation is upgraded: a chain never becomes a step.
+evidence_kind	SCAFFOLD_EDGES_CONFIRMED.derivation	native_ontology_attribute and derived_rule(R-ANCHOR-*) both resolve to ontology: every one of the 51 rows carries ontology file lines as its evidence_ids, and none rests on a corpus co-occurrence
+steps / obo_lines / chain	SCAFFOLD_EDGES_CONFIRMED	verbatim
+stage_crossing	SCAFFOLD_EDGES_CONFIRMED endpoint stages	yes when the two endpoints declare different stages, else no
+corpus_n_chunks / corpus_n_papers / corpus_locators	-	empty: the scaffold admits or refuses an edge on ontology evidence, and the corpus numbers that the first-pass table carried were the weak co-occurrence counts, not admissions
+marker_transition_status	recomputed here from the panels	a display field of the first pass that the scaffold's edge table does not carry and that the edge builder reads when it writes a refusal line. Recomputed with the first pass's own definition (panel difference on the gain side, graded by whether the corpus has any row for the gene, i.e. the weak grading item 1 of this wave re-measures). It is never an admission by itself.

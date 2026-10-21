@@ -1,0 +1,11 @@
+--- a/plans/cl_depth_devlineage_20261021/scripts/b1_build_lineage.py
++++ b/plans/cl_depth_devlineage_20261021/scripts/b1_build_lineage.py
+@@ -349,7 +349,7 @@
+                 n_rows_edge += 1
+                 marker_rows.append({"edge_id": e["edge_id"], "direction": direction,
+                                     "gene": g,
+-                                    "in_child_panel": "yes", "in_parent_panel": "yes" if g in parent_genes else "no",
++                                    "in_child_panel": "yes" if g in child_genes else "no", "in_parent_panel": "yes" if g in parent_genes else "no",
+                                     "corpus_n_chunks": int(rec["n_chunks"]) if rec else 0,
+                                     "corpus_n_papers": int(rec["n_papers"]) if rec else 0,
+                                     "corpus_locators": rec["example_locators"] if rec else "",

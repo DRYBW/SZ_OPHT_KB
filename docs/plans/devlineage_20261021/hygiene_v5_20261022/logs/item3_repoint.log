@@ -1,0 +1,309 @@
+nodes=103 scaffold=103 in_house_dev=0 germ=8
+stage counts {'fetal': 0, 'adult': 16, 'developing': 42, 'unknown': 45}
+labels attached=121 orphaned=0
+node assertions: 1072
+  roles    : {'identity_support': 993, 'state_warning': 48, 'subtype_discriminator': 31}
+  basis    : {'link_registry_gene_verified': 328, 'corpus_gene_row': 733, 'panel_provenance_stated': 7, 'panel_entry_basis_unstated': 4}
+  assay    : {'literature_RNA': 1043, 'literature_protein': 23, 'scRNA': 2, 'unspecified': 4}
+  refused  : {'different_species_not_stitchable': 2, 'evidence_only_from_evaluation_volume': 75}
+  nodes with zero assertions: 39
+edges: 51
+  relation types: {'ontology_development_relation': 40, 'ancestral_origin': 11}
+  grades         : {'direct_lineage_support': 40, 'textbook_or_review_distant_origin': 11}
+  status         : {'parent_group_has_no_panel': 36, 'marker_change_not_available_for_relation_type': 11, 'admitted_stepwise': 2, 'marker_change_not_available': 2}
+edge marker-change assertions: 10
+  by edge: {'dl:CL:0002672|sp=human': 10}
+refusals: {'parent_group_has_no_panel': 36, 'marker_change_not_available_for_relation_type': 11, 'detection_conditions_insufficient': 90, 'marker_change_not_available': 2}
+gap rows: 266
+  by kind  : {'no_evidence': 180, 'refused_evidence': 78, 'thin_evidence': 8}
+  by scope : {'node': 39, 'gene': 175, 'edge': 51, 'panel': 1}
+  by reason: {'node_has_no_panel_and_no_source': 39, 'different_species_not_stitchable': 2, 'evidence_only_from_evaluation_volume': 75, 'panel_entry_basis_unstated': 4, 'review_citation_unverifiable_locally': 4, 'parent_group_has_no_panel': 36, 'marker_change_not_available_for_relation_type': 11, 'detection_conditions_insufficient': 92, 'marker_change_not_available': 2, 'panel_selected_from_evaluation_report': 1}
+  declared-but-unused reasons: ['no_source_in_corpus', 'source_exists_not_full_text', 'different_stage_not_stitchable', 'prohibited_by_library_ban', 'edge_not_stepwise_relation', 'no_source_states_the_change', 'state_program_without_identity_node']
+{
+ "scaffold_nodes_in": 103,
+ "scaffold_edges_in": 51,
+ "nodes_adult_with_recorded_baseline": 16,
+ "adapter_node_stage_map": {
+  "adult|baseline:ciliary_body.json#development_s": 3,
+  "adult|baseline:ocular_surface.json#development": 1,
+  "adult|baseline:optic_nerve.json#development_st": 12,
+  "developing|label_dev_word:precursor": 7,
+  "developing|label_dev_word:proliferat": 3,
+  "developing|label_dev_word:transit amplifying": 1,
+  "developing|ontology:1017#dev_word=progenitor": 1,
+  "developing|ontology:11297#dev_word=immature": 1,
+  "developing|ontology:11348#dev_word=immature": 1,
+  "developing|ontology:11522#dev_word=progenitor": 1,
+  "developing|ontology:11581#dev_word=progenitor": 1,
+  "developing|ontology:11644#dev_word=progenitor": 1,
+  "developing|ontology:16756#dev_word=progenitor": 1,
+  "developing|ontology:17139#dev_word=progenitor": 1,
+  "developing|ontology:2006#anchor_role=surface_ectode": 1,
+  "developing|ontology:2321#anchor_role=neural_ectoder": 1,
+  "developing|ontology:2333#dev_word=stem cell": 1,
+  "developing|ontology:23961#dev_word=progenitor": 1,
+  "developing|ontology:27093#dev_word=progenitor": 1,
+  "developing|ontology:29475#anchor_role=mesenchyme": 1,
+  "developing|ontology:30071#dev_word=transit amplifyi": 1,
+  "developing|ontology:32156#anchor_role=neural_crest": 1,
+  "developing|ontology:32330#dev_word=progenitor": 1,
+  "developing|ontology:3566#anchor_role=ectoderm": 1,
+  "developing|ontology:3581#anchor_role=mesoderm": 1,
+  "developing|ontology:3599#anchor_role=endoderm": 1,
+  "developing|ontology:4669#dev_word=embryonic": 1,
+  "developing|ontology:654#dev_word=progenitor": 1,
+  "developing|ontology:6573#dev_word=precursor": 1,
+  "developing|ontology:710#anchor_role=hematopoietic_s": 1,
+  "developing|ontology:7219#dev_word=progenitor": 1,
+  "developing|ontology:7301#dev_word=precursor": 1,
+  "developing|ontology:7440#dev_word=stem cell": 1,
+  "developing|ontology:7585#dev_word=precursor": 1,
+  "developing|ontology:804#dev_word=progenitor": 1,
+  "developing|ontology:8693#dev_word=stem cell": 1,
+  "developing|ontology:923#dev_word=stem cell": 1,
+  "unknown|no_local_stage_declaration": 45
+ },
+ "corpus_artefacts_carried_over": {
+  "CORPUS_GENE_INDEX_v1.tsv": {
+   "source": "/mnt/D/EyeKB/plans/devlineage_20261021/markers/out/CORPUS_GENE_INDEX_v1.tsv",
+   "sha256": "ff089376f14a2600ab7924e13a7958a87737b0d4ac82a5d84590f69a0e4b341b"
+  },
+  "CORPUS_GENE_EXAMPLES_v1.jsonl": {
+   "source": "/mnt/D/EyeKB/plans/devlineage_20261021/markers/out/CORPUS_GENE_EXAMPLES_v1.jsonl",
+   "sha256": "3a1d8f450ab15443e69b8896b05911e64c99c3013d545f4c3fb572fe8aaed03c"
+  },
+  "CORPUS_GENE_INDEX_v1_META.json": {
+   "source": "/mnt/D/EyeKB/plans/devlineage_20261021/markers/out/CORPUS_GENE_INDEX_v1_META.json",
+   "sha256": "7185de9e3e81a12fa04228f1a7e2693771c4740dee89e685fcb04d8bc9f1787d"
+  }
+ },
+ "repoint_override": {
+  "M.OUT": "/mnt/D/EyeKB/plans/devlineage_20261021/hygiene_v5_20261022/out/repointed",
+  "M.L2_NODES": "/mnt/D/EyeKB/plans/devlineage_20261021/hygiene_v5_20261022/out/adapter/NODES_from_scaffold.tsv",
+  "M.L2_EDGES": "/mnt/D/EyeKB/plans/devlineage_20261021/hygiene_v5_20261022/out/adapter/EDGES_from_scaffold.tsv",
+  "previous": {
+   "OUT": "/mnt/D/EyeKB/plans/devlineage_20261021/markers/out",
+   "L2_NODES": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_NODES.tsv",
+   "L2_EDGES": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_EDGES.tsv"
+  }
+ },
+ "adapter_edges_unresolved_endpoints": [],
+ "adapter_marker_transition_status": {
+  "child_panel_absent": 22,
+  "has_supported_transition": 2,
+  "not_applicable_membership": 11,
+  "parent_panel_absent": 16
+ },
+ "builder_rc": [
+  {
+   "module": "m1_nodes",
+   "rc": 0
+  },
+  {
+   "module": "m2_node_markers",
+   "rc": 0
+  },
+  {
+   "module": "m3_edge_assertions",
+   "rc": 0
+  },
+  {
+   "module": "m4_gap_register",
+   "rc": 0
+  }
+ ],
+ "nodes": {
+  "old": 70,
+  "new": 103,
+  "kept_by_key": 62,
+  "added": 41,
+  "dropped": 8
+ },
+ "node_keys_moved": 8,
+ "node_keys_moved_detail": [
+  {
+   "dl_id": "CL:0000084",
+   "old_key": "dl:CL:0000084|sp=human|ts=eye_membrane|st=adult|es=unknown",
+   "new_key": "dl:CL:0000084|sp=human|ts=eye_membrane|st=unknown|es=unknown",
+   "old_stage": "adult",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "adult_or_unspecified",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  },
+  {
+   "dl_id": "CL:0000115",
+   "old_key": "dl:CL:0000115|sp=human|ts=retina|st=adult|es=unknown",
+   "new_key": "dl:CL:0000115|sp=human|ts=retina|st=unknown|es=unknown",
+   "old_stage": "adult",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "adult_or_unspecified",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  },
+  {
+   "dl_id": "CL:0000127",
+   "old_key": "dl:CL:0000127|sp=human|ts=retina|st=adult|es=unknown",
+   "new_key": "dl:CL:0000127|sp=human|ts=retina|st=unknown|es=unknown",
+   "old_stage": "adult",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "adult_or_unspecified",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  },
+  {
+   "dl_id": "CL:0000236",
+   "old_key": "dl:CL:0000236|sp=human|ts=eye_membrane|st=adult|es=unknown",
+   "new_key": "dl:CL:0000236|sp=human|ts=eye_membrane|st=unknown|es=unknown",
+   "old_stage": "adult",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "adult_or_unspecified",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  },
+  {
+   "dl_id": "CL:0000315",
+   "old_key": "dl:CL:0000315|sp=human|ts=lacrimal_gland|st=adult|es=unknown",
+   "new_key": "dl:CL:0000315|sp=human|ts=lacrimal_gland|st=unknown|es=unknown",
+   "old_stage": "adult",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "adult_or_unspecified",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  },
+  {
+   "dl_id": "CL:0002573",
+   "old_key": "dl:CL:0002573|sp=human|ts=ocular_surface|st=adult|es=unknown",
+   "new_key": "dl:CL:0002573|sp=human|ts=ocular_surface|st=unknown|es=unknown",
+   "old_stage": "adult",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "adult_or_unspecified",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  },
+  {
+   "dl_id": "NO_MATCH:NRPC_early",
+   "old_key": "dl:NO_MATCH:NRPC_early|sp=human|ts=retina|st=developing|es=unknown",
+   "new_key": "dl:NO_MATCH:NRPC_early|sp=human|ts=retina|st=unknown|es=unknown",
+   "old_stage": "developing",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "developing",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  },
+  {
+   "dl_id": "NO_MATCH:NRPC_late",
+   "old_key": "dl:NO_MATCH:NRPC_late|sp=human|ts=retina|st=developing|es=unknown",
+   "new_key": "dl:NO_MATCH:NRPC_late|sp=human|ts=retina|st=unknown|es=unknown",
+   "old_stage": "developing",
+   "new_stage": "unknown",
+   "old_upstream_stage_scope": "developing",
+   "new_upstream_stage_scope": "adult_or_unspecified"
+  }
+ ],
+ "key_spelling": {
+  "compared": 103,
+  "identical": 39,
+  "differing": 64,
+  "by_kind": {
+   "library_class": {
+    "compared": 67,
+    "identical": 3
+   },
+   "ontology_intermediate": {
+    "compared": 28,
+    "identical": 28
+   },
+   "origin_anchor": {
+    "compared": 8,
+    "identical": 8
+   }
+  },
+  "reason": "the scaffold's own key strings leave sp/ts as unknown for most library classes; the contract key builder derives the declared context from the panels, which is the spelling the existing assertion set joins on"
+ },
+ "node_assertions": {
+  "old": 1043,
+  "new": 1072,
+  "resolution": {
+   "same_key": 939,
+   "key_moved": 102,
+   "relocated_to_another_node": 2,
+   "unresolved": 0
+  }
+ },
+ "stage_axis": {
+  "adult_to_unknown": 6,
+  "developing_to_unknown": 2,
+  "unknown_to_adult": 0,
+  "started_as_moving_to_adult": 0,
+  "other": 0,
+  "moved": 8,
+  "nodes_moved_to_adult": 0,
+  "adult_nodes_old": 22,
+  "adult_nodes_new": 16
+ },
+ "node_coverage": {
+  "old_nodes_with_an_assertion": 59,
+  "new_nodes_with_an_assertion": 64,
+  "old_nodes_with_no_assertion": 11,
+  "new_nodes_with_no_assertion": 39
+ },
+ "edges": {
+  "old": 34,
+  "new": 51,
+  "old_relation_types": {
+   "ancestral_origin": 25,
+   "ontology_development_relation": 9
+  },
+  "new_relation_types": {
+   "ancestral_origin": 11,
+   "ontology_development_relation": 40
+  },
+  "old_status": {
+   "admitted_stepwise": 2,
+   "edge_not_stepwise_relation": 4,
+   "marker_change_not_available_for_relation_type": 25,
+   "parent_group_has_no_panel": 3
+  },
+  "new_status": {
+   "admitted_stepwise": 2,
+   "marker_change_not_available": 2,
+   "marker_change_not_available_for_relation_type": 11,
+   "parent_group_has_no_panel": 36
+  },
+  "old_admitted_stepwise": 2,
+  "new_admitted_stepwise": 2,
+  "old_marker_change_assertions": 10,
+  "new_marker_change_assertions": 10
+ },
+ "edge_pairs": {
+  "old_pairs": 34,
+  "new_pairs": 51,
+  "old_pairs_also_in_new": 16,
+  "new_pairs_not_in_old": 35
+ },
+ "new_marker_change_genes_per_edge": [
+  "dl:CL:0002672|sp=human|ts=retina|st=developing|es=unknown"
+ ],
+ "gap_register": {
+  "old_rows": 226,
+  "new_rows": 266
+ },
+ "grade_reconciliation": {
+  "edges_compared": 51,
+  "agreement": 0,
+  "conflicts": 51,
+  "builder_values": {
+   "direct_lineage_support": 40,
+   "textbook_or_review_distant_origin": 11
+  },
+  "source_values": {
+   "identity_conversion_not_direct": 51
+  },
+  "governing_grade": "the source (scaffold) grade; recorded in EDGES_RECONCILED.tsv",
+  "why": "the builder's rule maps a direct relation to direct_lineage_support, but the scaffold's own grading says an ontology develops_from statement states time direction and identity conversion and is not direct lineage proof; the contract forbids an upgrade, so the source governs and the builder value is kept as a named conflict for the card that owns the grading rule"
+ },
+ "marker_change_grade_reconciliation": {
+  "rows": 10,
+  "builder_grade": [
+   "direct_lineage_support"
+  ],
+  "governing_grade": [
+   "identity_conversion_not_direct"
+  ]
+ },
+ "seconds": 1.1
+}

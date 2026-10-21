@@ -1,0 +1,26 @@
+{
+ "generated_by": "scripts/m1_nodes.py",
+ "node_list_source": "/mnt/D/EyeKB/plans/devlineage_20261021/hygiene_v5_20261022/out/adapter/NODES_from_scaffold.tsv",
+ "node_list_provenance": "card L2's accepted developmental lineage layer; the contract's scaffold/ directory has not landed",
+ "ontology": {
+  "path": "/mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo",
+  "release": null,
+  "sha256": null
+ },
+ "n_nodes": 103,
+ "n_scaffold_nodes": 103,
+ "n_in_house_dev_precursor_nodes": 0,
+ "n_germ_layer_anchors": 8,
+ "stage_counts": {
+  "fetal": 0,
+  "adult": 16,
+  "developing": 42,
+  "unknown": 45
+ },
+ "n_nodes_missing_from_ontology_file": 15,
+ "n_nodes_stage_from_developing_scope": 42,
+ "n_labels_attached": 121,
+ "n_labels_orphaned": 0,
+ "orphan_labels": [],
+ "node_key_format": "dl:<canonical_cl_id>|sp=<species>|ts=<tissue_context>|st=<organism_stage>|es=<experimental_system>"
+}

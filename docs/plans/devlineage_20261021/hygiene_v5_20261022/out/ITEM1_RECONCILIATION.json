@@ -1,0 +1,66 @@
+{
+ "rows": 100,
+ "gain_rows": 10,
+ "loss_rows": 90,
+ "upstream_grading": "n_chunks > 0 ('the corpus mentions this gene anywhere')",
+ "strict_grading": "gene token + admissible species + names the target group + developmentally scented",
+ "upstream_support_status_values": {
+  "corpus_supported": 100
+ },
+ "strict_values_all_chunks": {
+  "strict_supported": 98,
+  "no_chunk_meets_all_four": 2
+ },
+ "strict_values_top10": {
+  "strict_supported": 98,
+  "no_chunk_meets_all_four": 2
+ },
+ "gain_rows_upstream_supported": 10,
+ "gain_rows_strict_supported": 10,
+ "gain_rows_agreement_with_superseding_artefact": 10,
+ "gain_rows_disagreement_with_superseding_artefact": 0,
+ "loss_rows_upstream_supported": 90,
+ "loss_rows_strict_supported": 88,
+ "loss_rows_strict_refused": 2,
+ "loss_rows_strict_refused_genes": [
+  "AHI1",
+  "AHI1"
+ ],
+ "loss_rows_superseding_artefact_refusals": 90,
+ "loss_rows_superseding_artefact_refusal_reason": "detection_conditions_insufficient",
+ "marker_layer_admitted_rows": 10,
+ "marker_layer_gene_set": [
+  "ARR3",
+  "GNAT1",
+  "GNAT2",
+  "NR2E3",
+  "NRL",
+  "OPN1MW",
+  "OPN1SW",
+  "PDE6B",
+  "PDE6H",
+  "RHO"
+ ],
+ "strict_all_chunks_gene_set": [
+  "ARR3",
+  "GNAT1",
+  "GNAT2",
+  "NR2E3",
+  "NRL",
+  "OPN1MW",
+  "OPN1SW",
+  "PDE6B",
+  "PDE6H",
+  "RHO"
+ ],
+ "gain_gene_sets_identical": true,
+ "strict_all_chunks_agreement_all_rows": 12,
+ "strict_top10_agreement_all_rows": 12,
+ "rows_in_reconciliation": 100,
+ "corpus_pass": {
+  "chunks": 244877,
+  "maxrss_gib": 0.302,
+  "seconds": 10.0
+ },
+ "loss_side_note": "loss rows are reported by the upstream table and deliberately NOT written as marker changes by the superseding artefact: panel absence is not a detection result (the superseding artefact carries them in its refusal register with reason detection_conditions_insufficient)"
+}

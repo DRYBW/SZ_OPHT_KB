@@ -1,0 +1,62 @@
+{
+ "panels_consumed": 12,
+ "totals": {
+  "A_refused_eval_only_no_independent_evidence": 67,
+  "B_admitted_but_panel_basis_eval_only": 0,
+  "C_panel_basis_independent_or_mixed": 1140
+ },
+ "panels_with_any_evaluation_basis_gene": [
+  "markers_v9_dev_retina.json"
+ ],
+ "panels_without": [
+  "markers_k9_ocs_increment.json",
+  "markers_membrane_v1.json",
+  "markers_v10_antseg_increment.json",
+  "markers_v11_lensiris_increment.json",
+  "markers_v4.1_clean.json",
+  "markers_v5_retina_interneuron.json",
+  "markers_v6_face_increment.json",
+  "markers_v6_lacrimal_increment.json",
+  "markers_v6_retina_repair.json",
+  "markers_v7_panel_increment.json",
+  "markers_v8_dev_retina.json"
+ ],
+ "refused_panel": {
+  "file": "markers_v12_holefill_increment.json",
+  "present": "yes",
+  "n_entries": 17,
+  "n_genes": 204,
+  "scope_says_it_fills_the_evaluation_runs_own_holes": "yes",
+  "scope_excerpt": "the measured coverage holes of the 28-volume / 721-cluster run: vascular endothelium in retina and choroid, macrophage and monocyte separated from microglia, retinal rod depth, and the RPE/melanocyte pair"
+ },
+ "lensiris_increment": {
+  "file": "markers_v11_lensiris_increment.json",
+  "present": "yes",
+  "n_entries": 3,
+  "n_genes": 80,
+  "scope_says_it_fills_the_evaluation_runs_own_holes": "no",
+  "scope_excerpt": "the two tissues that docs/TISSUE_COVERAGE_DECLARATION.md declares as gaps (lens, iris): the author-side class names that were absent from the vocabulary, carrying their own Cell Ontology terms"
+ },
+ "gap_register_rows_with_this_reason": 75,
+ "flag_spec": {
+  "generated_by": "scripts/w5_05_evalbasis.py",
+  "what_is_being_flagged": "a gene, or an entry, whose basis for being in a shipped panel is an evaluation volume — i.e. the benchmark's own substrate — rather than independent literature or an in-house non-benchmark atlas",
+  "why_a_file_level_bit_is_not_enough": [
+   "the same panel file mixes the three readings: measured per panel in ITEM4_EVAL_BASIS_BY_PANEL.tsv (columns A, B, C sum to the panel's gene count)",
+   "a panel whose declared selection basis is an evaluation volume still carries genes whose own entry names an independent source (reading C), so flagging the file would condemn them",
+   "a panel whose declared basis is independent can still carry an entry whose only provenance is an evaluation volume (reading B), so not flagging the file would exonerate them"
+  ],
+  "what_the_flag_must_assert": [
+   "granularity: per entry (label) inside a panel file, and per gene inside that entry — not per file",
+   "a basis class drawn from a closed vocabulary: independent_literature | independent_in_house_atlas_non_benchmark | evaluation_volume | evaluation_report_holes | unstated",
+   "when the basis class is evaluation_volume or evaluation_report_holes: the entry must carry an independent anchor (a PMID or a corpus row) for every gene it wants to be usable for a lineage/marker claim, named per gene — the flag says 'this candidate list leaned on the benchmark', not 'this gene is unusable'",
+   "the name of the evaluation artefact it leaned on (volume id / report id), so a reader can re-derive the exclusion list instead of trusting the bit",
+   "an explicit statement of what the flag does NOT claim: it does not assert that the gene is wrong, and it does not authorise changing a shipped panel body"
+  ],
+  "where_it_must_be_enforced": "at the consuming layer (the marker layer's admission test), not by editing the shipped panels: the contract's red line forbids deriving a marker from the evaluation volumes' own queries, and a rewrite of kb/ is an activation by another name",
+  "machine_check": "for every assertion in a lineage artefact: if the source entry's basis class is evaluation_volume or evaluation_report_holes, the assertion must carry an anchor that is not derived from that volume; the marker layer already implements exactly this for reading A (the four-condition corpus test), and reading B is what is not yet checkable",
+  "status": "registered here; not activated, and no panel body is changed by this card"
+ },
+ "activation": "none",
+ "panel_bodies_changed": 0
+}

@@ -1,0 +1,141 @@
+{
+ "gate": "wave-5 lineage hygiene",
+ "verdict": "PASS",
+ "n_checks": 12,
+ "n_fail": 0,
+ "checks": [
+  {
+   "code": "G1",
+   "name": "UPSTREAM_TABLE_HONEST",
+   "status": "PASS",
+   "detail": "rows=100; rows contradicting their own direction=0; the builder computes the value (True); upstream gate B verdict=PASS (0 failed)",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G2",
+   "name": "STRICT_GRADING_MATCHES_SUPERSEDING_ARTEFACT",
+   "status": "PASS",
+   "detail": "gain rows=10; agreement with MARKER_CHANGE_EDGES.tsv=10; disagreements=0; gene sets identical=True",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G3",
+   "name": "ONE_RECONCILED_TABLE",
+   "status": "PASS",
+   "detail": "reconciled rows=100; both gradings carried=True; the loss side's refusal reason is recorded (detection_conditions_insufficient)",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G4",
+   "name": "REPOINT_ACCOUNTS_FOR_EVERY_SOURCE_ROW",
+   "status": "PASS",
+   "detail": "scaffold rows in=103/103 nodes, 51/51 edges; adapter rows=103/51; builders rc=[0, 0, 0, 0]; endpoints unresolved=0; assertions unresolved=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G5",
+   "name": "GRADE_CONFLICT_SURFACED_AND_SOURCE_GOVERNS",
+   "status": "PASS",
+   "detail": "edges=51; builder/source agreement=0; conflicts=51 (all surfaced); reconciled rows where the source grade governs=51/51",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6",
+   "name": "KB_LEDGER_COMPLETE_AND_NO_KB_WRITE",
+   "status": "PASS",
+   "detail": "files ledgered=20; data tree unchanged=True; git tree unchanged=True; every shared file either byte-identical or n/a=True; sync script dry-run by default=True",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G7",
+   "name": "EVAL_BASIS_FINDING_RECONCILES",
+   "status": "PASS",
+   "detail": "per-panel A total=67; distinct eval-only genes=67; per-gene rows=75 (one row per label the gene sits in); summary A=67; activation=none; panel bodies changed=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G8",
+   "name": "NO_NETWORK",
+   "status": "PASS",
+   "detail": "audit-hook receipts=102 (proves the hook was installed); network events=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G9",
+   "name": "DEFAULT_BEHAVIOUR_IDENTICAL",
+   "status": "PASS",
+   "detail": "recorded production queries replayed in 5.8s: n=721 identical=721 differ=0 (recorded n=721)",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G10",
+   "name": "WHAT_THIS_CARD_TOUCHED_OUTSIDE_ITS_WAVE",
+   "status": "PASS",
+   "detail": "the repository working tree is clean",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G11",
+   "name": "MANIFEST_VERIFIES",
+   "status": "PASS",
+   "detail": "manifest entries=74, verified=74, failing=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G12",
+   "name": "CLEAN_CLONE_GREEN",
+   "status": "PASS",
+   "detail": "clean-clone check: {\"commit\": \"c321667af0028959748503b791398218c3a03f5a\", \"clone_root\": \"(temporary clone of the repository, removed after the run)\", \"gate_rc\": 0, \"gate_verdict\": \"PASS\", \"gate_failed\": \"[]\", \"files_differing_from_author_tree\": 0}",
+   "n_offenders": 0,
+   "offenders": []
+  }
+ ],
+ "golden": {
+  "performed": true,
+  "rc": 0,
+  "seconds": 5.8,
+  "stdout_tail": "OFF: n=721  identical_to_2026-10-18=721  differ=0  with_composite_demoted=-\n ON: n=721  identical_to_2026-10-18=721  differ=0  with_composite_demoted=19\nwrote /tmp/w5_golden_fshfxd05/golden_now.json\n",
+  "now": {
+   "off": {
+    "n": 721,
+    "identical": 721,
+    "differ": 0,
+    "examples": []
+   },
+   "on": {
+    "n": 721,
+    "identical": 721,
+    "differ": 0,
+    "n_with_demoted": 19,
+    "examples": []
+   }
+  },
+  "recorded": {
+   "off": {
+    "n": 721,
+    "identical": 721,
+    "differ": 0,
+    "examples": []
+   },
+   "on": {
+    "n": 721,
+    "identical": 721,
+    "differ": 0,
+    "n_with_demoted": 19,
+    "examples": []
+   }
+  }
+ },
+ "generated_at": "2026-10-22 02:20:38"
+}

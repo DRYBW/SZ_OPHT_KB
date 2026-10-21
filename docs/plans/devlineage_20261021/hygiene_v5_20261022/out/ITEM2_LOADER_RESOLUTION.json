@@ -1,0 +1,362 @@
+{
+ "site_loader": {
+  "module": "/mnt/D/EyeKB/mcp_server/eyekb_core.py",
+  "root_line": 21,
+  "root_expression": "EYEKB_ROOT = Path(__file__).resolve().parents[1]          # /mnt/D/EyeKB",
+  "kb_line": 23,
+  "kb_expression": "KB = EYEKB_ROOT / \"kb\"",
+  "marker_dir_line": 213,
+  "marker_dir_expression": "MARKER_DIR = (KB / \"markers\")",
+  "missing_panel_line": 1258,
+  "missing_panel_behaviour": "a declared panel that does not exist is skipped silently: if p.is_file():",
+  "marker_libs": {
+   "retina": "markers_v4.1_clean.json",
+   "membrane": "markers_membrane_v1.json",
+   "retina_interneuron": "markers_v5_retina_interneuron.json",
+   "retina_v6": "markers_v6_retina_repair.json",
+   "face_v6": "markers_v6_face_increment.json",
+   "lacrimal_v6": "markers_v6_lacrimal_increment.json",
+   "k9_ocs": "markers_k9_ocs_increment.json",
+   "retina_v7": "markers_v7_panel_increment.json",
+   "retina_dev": "markers_v9_dev_retina.json",
+   "antseg_v10": "markers_v10_antseg_increment.json"
+  },
+  "libs_named_in_the_error_message": [
+   "antseg_v10",
+   "face_v6",
+   "k9_ocs",
+   "lacrimal_v6",
+   "membrane",
+   "retina",
+   "retina_dev",
+   "retina_interneuron",
+   "retina_v6",
+   "retina_v7"
+  ],
+  "has_cross_tree_fallback": false
+ },
+ "repo_loader_working_tree": {
+  "module": "/home/ubuntu/EYEKB_REPO/mcp_server/eyekb_core.py",
+  "root_line": 21,
+  "root_expression": "EYEKB_ROOT = Path(__file__).resolve().parents[1]          # /mnt/D/EyeKB",
+  "kb_line": 23,
+  "kb_expression": "KB = EYEKB_ROOT / \"kb\"",
+  "marker_dir_line": 248,
+  "marker_dir_expression": "MARKER_DIR = (KB / \"markers\")",
+  "missing_panel_line": 1410,
+  "missing_panel_behaviour": "a declared panel that does not exist is skipped silently: if p.is_file():",
+  "marker_libs": {
+   "retina": "markers_v4.1_clean.json",
+   "membrane": "markers_membrane_v1.json",
+   "retina_interneuron": "markers_v5_retina_interneuron.json",
+   "retina_v6": "markers_v6_retina_repair.json",
+   "face_v6": "markers_v6_face_increment.json",
+   "lacrimal_v6": "markers_v6_lacrimal_increment.json",
+   "k9_ocs": "markers_k9_ocs_increment.json",
+   "retina_v7": "markers_v7_panel_increment.json",
+   "retina_dev": "markers_v9_dev_retina.json",
+   "antseg_v10": "markers_v10_antseg_increment.json",
+   "lensiris_v11": "markers_v11_lensiris_increment.json",
+   "holefill_v12": "markers_v12_holefill_increment.json"
+  },
+  "libs_named_in_the_error_message": [
+   "antseg_v10",
+   "face_v6",
+   "holefill_v12",
+   "k9_ocs",
+   "lacrimal_v6",
+   "lensiris_v11",
+   "membrane",
+   "retina",
+   "retina_dev",
+   "retina_interneuron",
+   "retina_v6",
+   "retina_v7"
+  ],
+  "has_cross_tree_fallback": false
+ },
+ "repo_loader_committed_HEAD": {
+  "module": "git show HEAD:mcp_server/eyekb_core.py",
+  "root_line": 21,
+  "root_expression": "EYEKB_ROOT = Path(__file__).resolve().parents[1]          # /mnt/D/EyeKB",
+  "kb_line": 23,
+  "kb_expression": "KB = EYEKB_ROOT / \"kb\"",
+  "marker_dir_line": 248,
+  "marker_dir_expression": "MARKER_DIR = (KB / \"markers\")",
+  "missing_panel_line": 1410,
+  "missing_panel_behaviour": "a declared panel that does not exist is skipped silently: if p.is_file():",
+  "marker_libs": {
+   "retina": "markers_v4.1_clean.json",
+   "membrane": "markers_membrane_v1.json",
+   "retina_interneuron": "markers_v5_retina_interneuron.json",
+   "retina_v6": "markers_v6_retina_repair.json",
+   "face_v6": "markers_v6_face_increment.json",
+   "lacrimal_v6": "markers_v6_lacrimal_increment.json",
+   "k9_ocs": "markers_k9_ocs_increment.json",
+   "retina_v7": "markers_v7_panel_increment.json",
+   "retina_dev": "markers_v9_dev_retina.json",
+   "antseg_v10": "markers_v10_antseg_increment.json",
+   "lensiris_v11": "markers_v11_lensiris_increment.json",
+   "holefill_v12": "markers_v12_holefill_increment.json"
+  },
+  "libs_named_in_the_error_message": [
+   "antseg_v10",
+   "face_v6",
+   "holefill_v12",
+   "k9_ocs",
+   "lacrimal_v6",
+   "lensiris_v11",
+   "membrane",
+   "retina",
+   "retina_dev",
+   "retina_interneuron",
+   "retina_v6",
+   "retina_v7"
+  ],
+  "has_cross_tree_fallback": false
+ },
+ "answer": "each tree's loader resolves kb/markers relative to its own package root (EYEKB_ROOT = parents[1] of mcp_server/eyekb_core.py); neither loader has a cross-tree fallback, so the copy that is authoritative for a run is the copy inside the tree the service is started from",
+ "authoritative_for_the_running_service": "/mnt/D/EyeKB/kb/markers",
+ "authoritative_for_a_fresh_clone": "/home/ubuntu/EYEKB_REPO/kb/markers",
+ "release_surface": "the git tree is the release: a clone serves its own kb/markers and docs/RELEASE_IDENTITY.json identifies exactly those bytes. The data volume tree is the production working copy the service runs from.",
+ "panels_the_site_loader_maps": {
+  "antseg_v10": {
+   "panel": "markers_v10_antseg_increment.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "face_v6": {
+   "panel": "markers_v6_face_increment.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "k9_ocs": {
+   "panel": "markers_k9_ocs_increment.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "lacrimal_v6": {
+   "panel": "markers_v6_lacrimal_increment.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "membrane": {
+   "panel": "markers_membrane_v1.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "retina": {
+   "panel": "markers_v4.1_clean.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "retina_dev": {
+   "panel": "markers_v9_dev_retina.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "retina_interneuron": {
+   "panel": "markers_v5_retina_interneuron.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "retina_v6": {
+   "panel": "markers_v6_retina_repair.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "retina_v7": {
+   "panel": "markers_v7_panel_increment.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  }
+ },
+ "panels_the_repo_loader_maps": {
+  "antseg_v10": {
+   "panel": "markers_v10_antseg_increment.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "face_v6": {
+   "panel": "markers_v6_face_increment.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "holefill_v12": {
+   "panel": "markers_v12_holefill_increment.json",
+   "in_mntD": "no",
+   "in_repo": "yes",
+   "same_bytes": "n/a"
+  },
+  "k9_ocs": {
+   "panel": "markers_k9_ocs_increment.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "lacrimal_v6": {
+   "panel": "markers_v6_lacrimal_increment.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "lensiris_v11": {
+   "panel": "markers_v11_lensiris_increment.json",
+   "in_mntD": "no",
+   "in_repo": "yes",
+   "same_bytes": "n/a"
+  },
+  "membrane": {
+   "panel": "markers_membrane_v1.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "retina": {
+   "panel": "markers_v4.1_clean.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "retina_dev": {
+   "panel": "markers_v9_dev_retina.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "retina_interneuron": {
+   "panel": "markers_v5_retina_interneuron.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "retina_v6": {
+   "panel": "markers_v6_retina_repair.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "retina_v7": {
+   "panel": "markers_v7_panel_increment.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  }
+ },
+ "panels_the_committed_release_maps": {
+  "antseg_v10": {
+   "panel": "markers_v10_antseg_increment.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "face_v6": {
+   "panel": "markers_v6_face_increment.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "holefill_v12": {
+   "panel": "markers_v12_holefill_increment.json",
+   "in_mntD": "no",
+   "in_repo": "yes",
+   "same_bytes": "n/a"
+  },
+  "k9_ocs": {
+   "panel": "markers_k9_ocs_increment.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "lacrimal_v6": {
+   "panel": "markers_v6_lacrimal_increment.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "lensiris_v11": {
+   "panel": "markers_v11_lensiris_increment.json",
+   "in_mntD": "no",
+   "in_repo": "yes",
+   "same_bytes": "n/a"
+  },
+  "membrane": {
+   "panel": "markers_membrane_v1.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "retina": {
+   "panel": "markers_v4.1_clean.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "retina_dev": {
+   "panel": "markers_v9_dev_retina.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "retina_interneuron": {
+   "panel": "markers_v5_retina_interneuron.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "retina_v6": {
+   "panel": "markers_v6_retina_repair.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  },
+  "retina_v7": {
+   "panel": "markers_v7_panel_increment.json",
+   "in_mntD": "yes",
+   "in_repo": "yes",
+   "same_bytes": "yes"
+  }
+ },
+ "divergent_files": [
+  "markers_v11_lensiris_increment.json",
+  "markers_v12_holefill_increment.json",
+  "markers_v8_dev_retina.json",
+  "markers_v9_dev_retina.json.v1"
+ ],
+ "divergent_files_referenced_by_the_site_loader": [],
+ "divergent_files_referenced_by_the_repo_working_tree_loader": [
+  "markers_v11_lensiris_increment.json",
+  "markers_v12_holefill_increment.json"
+ ],
+ "divergent_files_referenced_by_the_committed_release_loader": [
+  "markers_v11_lensiris_increment.json",
+  "markers_v12_holefill_increment.json"
+ ],
+ "divergent_files_referenced_by_any_local_consumer": {
+  "markers_v11_lensiris_increment.json": "mapped by the committed release's loader AND the repo working tree (lensiris_v11); not mapped by the site loader, which is an older revision",
+  "markers_v12_holefill_increment.json": "mapped by the committed release's loader AND the repo working tree (holefill_v12); not mapped by the site loader",
+  "markers_v8_dev_retina.json": "consumed by the marker layer's panel list (dev_v8) and by card L2's lineage builder; the shipped loader's retina_dev entry points at markers_v9_dev_retina.json instead",
+  "markers_v9_dev_retina.json.v1": "a pre-revision copy of a tracked file; no consumer references the .v1 name"
+ },
+ "consequence_measured": {
+  "the_two_referenced_files_are_absent_from_the_data_tree": [
+   "markers_v11_lensiris_increment.json",
+   "markers_v12_holefill_increment.json"
+  ],
+  "what_happens_when_a_mapped_panel_is_absent": "nothing visible: the loader guards the open with `p.is_file()` (line 1258), so a declared panel that is not there is skipped and the library contributes no markers instead of raising",
+  "the_repository_convention_for_this_tree_pair": "copy, not move; the data-volume originals are never modified — i.e. the data volume is the origin and the git tree is the mirror, and both directions are copies",
+  "so_the_divergence_can_change_a_served_answer": "in the git tree: no (the two panels are present where the loader looks for them). in the data tree: not today (that tree's loader is an older revision that does not name them) but yes the moment that wiring is synced there — the two libraries would resolve to nothing, silently"
+ }
+}

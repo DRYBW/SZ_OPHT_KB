@@ -1,0 +1,59 @@
+{
+ "generated_by": "scripts/m4_gap_register.py",
+ "n_gap_rows": 266,
+ "by_kind": {
+  "no_evidence": 180,
+  "refused_evidence": 78,
+  "thin_evidence": 8
+ },
+ "by_reason": {
+  "node_has_no_panel_and_no_source": 39,
+  "different_species_not_stitchable": 2,
+  "evidence_only_from_evaluation_volume": 75,
+  "panel_entry_basis_unstated": 4,
+  "review_citation_unverifiable_locally": 4,
+  "parent_group_has_no_panel": 36,
+  "marker_change_not_available_for_relation_type": 11,
+  "detection_conditions_insufficient": 92,
+  "marker_change_not_available": 2,
+  "panel_selected_from_evaluation_report": 1
+ },
+ "by_scope": {
+  "node": 39,
+  "gene": 175,
+  "edge": 51,
+  "panel": 1
+ },
+ "nodes_total": 103,
+ "nodes_with_zero_evidence": 39,
+ "edges_total": 51,
+ "edges_with_marker_change": 2,
+ "edges_with_zero_marker_change": 51,
+ "reasons_declared": [
+  "no_source_in_corpus",
+  "source_exists_not_full_text",
+  "review_citation_unverifiable_locally",
+  "different_species_not_stitchable",
+  "different_stage_not_stitchable",
+  "evidence_only_from_evaluation_volume",
+  "prohibited_by_library_ban",
+  "node_has_no_panel_and_no_source",
+  "parent_group_has_no_panel",
+  "edge_not_stepwise_relation",
+  "marker_change_not_available_for_relation_type",
+  "no_source_states_the_change",
+  "detection_conditions_insufficient",
+  "state_program_without_identity_node",
+  "panel_entry_basis_unstated",
+  "panel_selected_from_evaluation_report"
+ ],
+ "reasons_unused": [
+  "no_source_in_corpus",
+  "source_exists_not_full_text",
+  "different_stage_not_stitchable",
+  "prohibited_by_library_ban",
+  "edge_not_stepwise_relation",
+  "no_source_states_the_change",
+  "state_program_without_identity_node"
+ ]
+}

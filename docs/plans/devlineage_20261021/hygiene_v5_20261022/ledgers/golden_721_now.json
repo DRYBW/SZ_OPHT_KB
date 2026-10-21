@@ -1,0 +1,20 @@
+{
+ "probe": "golden_721.py",
+ "source": "dl/results/*/annotation_evidence_report.json (recorded 2026-10-18)",
+ "note": "recorded ranking = production output at generation time, before this change",
+ "stats": {
+  "off": {
+   "n": 721,
+   "identical": 721,
+   "differ": 0,
+   "examples": []
+  },
+  "on": {
+   "n": 721,
+   "identical": 721,
+   "differ": 0,
+   "n_with_demoted": 19,
+   "examples": []
+  }
+ }
+}

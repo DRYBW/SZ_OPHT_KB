@@ -1,0 +1,47 @@
+{
+ "files_in_mntD": 18,
+ "files_in_repo": 18,
+ "by_class": {
+  "only_in_mntD": {
+   "n": 2,
+   "files": [
+    "markers_v8_dev_retina.json",
+    "markers_v9_dev_retina.json.v1"
+   ]
+  },
+  "only_in_repo": {
+   "n": 2,
+   "files": [
+    "markers_v11_lensiris_increment.json",
+    "markers_v12_holefill_increment.json"
+   ]
+  },
+  "shared_identical": {
+   "n": 16,
+   "files": [
+    "_concept_kind_sidecar_v1.json",
+    "_k9_ocs_rules_overlay_v1.json",
+    "_raggap_c_linkbackfill_v1.json",
+    "_raggap_errata_v1.json",
+    "markers_cl_alignment_v1.json",
+    "markers_cl_alignment_v2_unified.json",
+    "markers_k9_ocs_increment.json",
+    "markers_membrane_v1.json",
+    "markers_v10_antseg_increment.json",
+    "markers_v4.1_clean.json",
+    "markers_v5_retina_interneuron.json",
+    "markers_v6_face_increment.json",
+    "markers_v6_lacrimal_increment.json",
+    "markers_v6_retina_repair.json",
+    "markers_v7_panel_increment.json",
+    "markers_v9_dev_retina.json"
+   ]
+  }
+ },
+ "shared_files_checked": 16,
+ "shared_files_byte_identical": 16,
+ "the_claim_holds": true,
+ "sync_script": "/mnt/D/EyeKB/plans/devlineage_20261021/hygiene_v5_20261022/out/ITEM2_SYNC_KB_MARKERS.sh"
+}
+loader: each tree's loader resolves kb/markers relative to its own package root (EYEKB_ROOT = parents[1] of mcp_server/eyekb_core.py); neither loader has a cross-tree fallback, so the copy that is authoritative for a run is the copy inside the tree the service is started from
+divergence can change a served answer: in the git tree: no (the two panels are present where the loader looks for them). in the data tree: not today (that tree's loader is an older revision that does not name them) but yes the moment that wiring is synced there — the two libraries would resolve to nothing, silently

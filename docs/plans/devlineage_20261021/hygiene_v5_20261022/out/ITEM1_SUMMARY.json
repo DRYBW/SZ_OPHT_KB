@@ -1,0 +1,62 @@
+{
+ "b1_sha256_pre": "f01b896b0ca43ba2b60e9172879d085980545b9f3cb61abe5531c90d563c41e4",
+ "b1_sha256_live_at_start": "7a110b96c300f2490889fd8ded63b3c8c4eaf64fbd4c260f3bb53b917e1ac8e3",
+ "b1_already_fixed_at_start": true,
+ "table_sha256_pre": "6f849c0567ea369521959a692c384c59b4907f8194e9df460263624917472e3b",
+ "defect_line_number": 352,
+ "defect_line": "\"in_child_panel\": \"yes\", \"in_parent_panel\": \"yes\" if g in parent_genes else \"no\",",
+ "defect_occurrences_in_pre_image": 1,
+ "rows_pre": 100,
+ "in_child_panel_values_pre": [
+  "yes"
+ ],
+ "direction_counts_pre": {
+  "gain": 10,
+  "loss": 90
+ },
+ "rows_whose_value_contradicts_its_own_direction_pre": 90,
+ "rows_contradicting_sample": [
+  "E005|loss|AHI1",
+  "E005|loss|ATOH7",
+  "E005|loss|CDH2",
+  "E005|loss|CDKN1B",
+  "E005|loss|CHD7"
+ ],
+ "independent_loader_rows_checked": 100,
+ "independent_loader_rows_agreeing": 100,
+ "independent_loader_rows_disagreeing": 0,
+ "independent_loader_disagreements": [],
+ "b1_diff_lines": 2,
+ "b1_sha256_post": "7a110b96c300f2490889fd8ded63b3c8c4eaf64fbd4c260f3bb53b917e1ac8e3",
+ "rebuild_rc": 0,
+ "rebuild_outputs_identical_to_upstream": [
+  "LINEAGE_NODES.tsv",
+  "LINEAGE_EDGES.tsv",
+  "LINEAGE_GERM_LAYER.tsv",
+  "LINEAGE_MARKER_TRANSITIONS.tsv",
+  "LINEAGE_UNRESOLVED_DEVELOPMENT.tsv"
+ ],
+ "rebuild_outputs_differing_only_by_own_output_path": [
+  "LINEAGE_SUMMARY.json"
+ ],
+ "rebuild_outputs_value_changed": [],
+ "target_table_already_corrected_at_start": true,
+ "rows_whose_value_contradicts_its_own_direction_post": 0,
+ "rows_changed": 90,
+ "cells_changed": 90,
+ "changed_columns": [
+  "in_child_panel"
+ ],
+ "value_transition": {
+  "yes->no": 90,
+  "no->yes": 0
+ },
+ "table_sha256_post": "16abc48e8fb24c66019891f8be9b441d9dc99792628ce4a81dcbb139919c7b1a",
+ "manifest_line_before": "16abc48e8fb24c66019891f8be9b441d9dc99792628ce4a81dcbb139919c7b1a  out/LINEAGE_MARKER_TRANSITIONS.tsv",
+ "manifest_line_after": "16abc48e8fb24c66019891f8be9b441d9dc99792628ce4a81dcbb139919c7b1a  out/LINEAGE_MARKER_TRANSITIONS.tsv",
+ "gate_lineage.py_rc": 0,
+ "d1_check_report_numbers.py_rc": 0,
+ "upstream_gate_B_verdict": "PASS",
+ "upstream_gate_B_fail": 0,
+ "upstream_gate_B_marker_trace": "marker rows=100 corpus-supported=100"
+}

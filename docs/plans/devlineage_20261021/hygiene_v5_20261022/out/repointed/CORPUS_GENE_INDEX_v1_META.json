@@ -1,0 +1,3018 @@
+{
+ "generated_by": "scripts/m0_corpus_gene_index.py",
+ "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10",
+ "n_chunks_scanned": 244877,
+ "n_genes_queried": 773,
+ "n_genes_with_hits": 763,
+ "genes_without_any_corpus_hit": [
+  "C8ORF76",
+  "LINC01619",
+  "LINC03051",
+  "MFSD4A",
+  "NOL4",
+  "RHBDL3",
+  "SCGB1D1",
+  "SETBP1",
+  "SLCO5A1",
+  "TANC1"
+ ],
+ "genes_in_panels": {
+  "ABCB5": [
+   "k9_ocs::Melanocyte",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "ABCC9": [
+   "retina_v7::Pericyte"
+  ],
+  "ACE2": [
+   "antseg_v10::conjunctival epithelial cell"
+  ],
+  "ACKR1": [
+   "retina_v7::Endo_Venous"
+  ],
+  "ACSL4": [
+   "antseg_v10::basal cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "ACTA2": [
+   "antseg_v10::ciliary muscle cell",
+   "antseg_v10::iris pigment epithelial cell",
+   "lensiris_v11::pigmented epithelial cell",
+   "membrane::Myofibroblast",
+   "membrane::SMC",
+   "retina_v7::SMC"
+  ],
+  "ACTN2": [
+   "antseg_v10::oligodendrocyte"
+  ],
+  "ADAM12": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "ADAMDEC1": [
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "ADAMTS10": [
+   "antseg_v10::non-pigmented ciliary epithelial cell"
+  ],
+  "ADAMTS17": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "ADAMTSL4": [
+   "antseg_v10::lens epithelial cell"
+  ],
+  "ADARB2": [
+   "retina_interneuron::BC"
+  ],
+  "ADGRL2": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "ADGRL4": [
+   "membrane::Endo"
+  ],
+  "ADGRV1": [
+   "dev_v9::Cone_precursor",
+   "dev_v9::Rod_precursor"
+  ],
+  "ADRA1A": [
+   "antseg_v10::iris pigment epithelial cell",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "AGR2": [
+   "antseg_v10::conjunctival epithelial cell",
+   "antseg_v10::goblet cell"
+  ],
+  "AGR3": [
+   "antseg_v10::goblet cell"
+  ],
+  "AHI1": [
+   "dev_v9::RPC_late"
+  ],
+  "AIF1": [
+   "membrane::Microglia",
+   "retina_v6::Microglia",
+   "retina_v7::Microglia"
+  ],
+  "AIPL1": [
+   "dev_v9::Rod_precursor"
+  ],
+  "AK5": [
+   "retina_interneuron::AC"
+  ],
+  "ALCAM": [
+   "antseg_v10::corneal endothelial cell",
+   "dev_v9::RGC_precursor"
+  ],
+  "ALDH1A1": [
+   "antseg_v10::basal cell",
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "ALDH1A3": [
+   "antseg_v10::conjunctival epithelial cell",
+   "antseg_v10::goblet cell"
+  ],
+  "ALDH3A1": [
+   "antseg_v10::basal cell",
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::transit amplifying cell",
+   "membrane::Keratocytes"
+  ],
+  "ALPK1": [
+   "lensiris_v11::anterior lens cell"
+  ],
+  "ANGPT1": [
+   "dev_v9::NRPC_late"
+  ],
+  "ANGPTL7": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "ANKRD33B": [
+   "dev_v9::Rod_precursor"
+  ],
+  "ANKS1B": [
+   "dev_v9::AC_precursor",
+   "dev_v9::HC_precursor"
+  ],
+  "ANO2": [
+   "dev_v9::Rod_precursor"
+  ],
+  "ANXA1": [
+   "membrane::Granulocyte"
+  ],
+  "APOD": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "APOE": [
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "APOL1": [
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "APP": [
+   "lensiris_v11::anterior lens cell"
+  ],
+  "AQP1": [
+   "antseg_v10::non-pigmented ciliary epithelial cell",
+   "retina_v7::Endo_Capillary"
+  ],
+  "AQP3": [
+   "antseg_v10::goblet cell"
+  ],
+  "AQP4": [
+   "retina::Astro",
+   "retina_interneuron::Astro"
+  ],
+  "AQP5": [
+   "antseg_v10::conjunctival epithelial cell",
+   "antseg_v10::goblet cell",
+   "antseg_v10::lens fiber cell",
+   "face_v6::Conj_epithelium_basal",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "ARR3": [
+   "retina::Cone",
+   "retina_interneuron::Cone",
+   "retina_v6::Cone"
+  ],
+  "ARVCF": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "ASAH1": [
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "ATG5": [
+   "dev_v9::Cone_precursor"
+  ],
+  "ATOH7": [
+   "dev_v8::RGC_precursor",
+   "dev_v9::NRPC_early",
+   "dev_v9::RPC_early"
+  ],
+  "ATP1A1": [
+   "antseg_v10::corneal endothelial cell",
+   "lensiris_v11::anterior lens cell"
+  ],
+  "ATP1A2": [
+   "antseg_v10::non-pigmented ciliary epithelial cell"
+  ],
+  "ATP1B1": [
+   "antseg_v10::corneal endothelial cell",
+   "antseg_v10::iris pigment epithelial cell",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "ATP2A2": [
+   "antseg_v10::ciliary muscle cell"
+  ],
+  "ATP2B1": [
+   "dev_v9::Cone_precursor"
+  ],
+  "ATP2C2": [
+   "antseg_v10::goblet cell"
+  ],
+  "ATP6V1C2": [
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "ATP8B4": [
+   "retina_interneuron::AC"
+  ],
+  "AUTS2": [
+   "dev_v9::HC_precursor"
+  ],
+  "B3GAT2": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "BACH1": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "BANK1": [
+   "membrane::B"
+  ],
+  "BAZ2B": [
+   "dev_v9::Rod_precursor"
+  ],
+  "BBS9": [
+   "dev_v9::Rod_precursor"
+  ],
+  "BCAM": [
+   "antseg_v10::basal cell",
+   "antseg_v10::progenitor cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "BCAS1": [
+   "antseg_v10::conjunctival epithelial cell",
+   "antseg_v10::corneal epithelial cell"
+  ],
+  "BCAT1": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "BCL2": [
+   "antseg_v10::lens epithelial cell",
+   "lensiris_v11::anterior lens cell"
+  ],
+  "BEGAIN": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "BEST1": [
+   "retina::RPE",
+   "retina_interneuron::RPE",
+   "retina_v6::RPE"
+  ],
+  "BFSP2": [
+   "antseg_v10::lens epithelial cell",
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::anterior lens cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "BIRC5": [
+   "membrane::Proliferating"
+  ],
+  "BMP7": [
+   "antseg_v10::progenitor cell"
+  ],
+  "BUB1": [
+   "dev_v8::Retinal_Proliferating",
+   "dev_v9::Retinal_Proliferating"
+  ],
+  "C1QA": [
+   "membrane::Mac_Tissue",
+   "retina_v7::Macrophage",
+   "retina_v7::Microglia"
+  ],
+  "C1QB": [
+   "membrane::Mac_Tissue",
+   "retina::Micro",
+   "retina_interneuron::Micro",
+   "retina_v6::Micro",
+   "retina_v7::Macrophage",
+   "retina_v7::Microglia"
+  ],
+  "C1QC": [
+   "membrane::Mac_Tissue",
+   "retina_v7::Macrophage",
+   "retina_v7::Microglia"
+  ],
+  "C1QL2": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "C1R": [
+   "membrane::cDC1"
+  ],
+  "C1S": [
+   "membrane::cDC1"
+  ],
+  "C2": [
+   "antseg_v10::iris pigment epithelial cell"
+  ],
+  "C3": [
+   "antseg_v10::conjunctival epithelial cell"
+  ],
+  "C5AR1": [
+   "membrane::Granulocyte"
+  ],
+  "C8ORF76": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "CA10": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "CA3": [
+   "antseg_v10::corneal endothelial cell",
+   "membrane::Corneal Endothelium"
+  ],
+  "CA4": [
+   "retina_v7::Endo_Capillary"
+  ],
+  "CACNA1A": [
+   "antseg_v10::lens epithelial cell",
+   "lensiris_v11::anterior lens cell"
+  ],
+  "CACNA1C": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "CACNA1E": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::non-pigmented ciliary epithelial cell",
+   "lensiris_v11::pigmented epithelial cell",
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "CACNA1S": [
+   "retina::BC",
+   "retina_interneuron::BC"
+  ],
+  "CACNG3": [
+   "dev_v9::HC_precursor"
+  ],
+  "CACNG7": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "CADM1": [
+   "membrane::cDC1"
+  ],
+  "CADM2": [
+   "antseg_v10::lens fiber cell",
+   "dev_v9::Cone_precursor",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "CADM3": [
+   "antseg_v10::lens epithelial cell",
+   "lensiris_v11::anterior lens cell"
+  ],
+  "CALD1": [
+   "face_v6::Pericyte",
+   "membrane::Pericyte",
+   "membrane::SMC"
+  ],
+  "CAMK2A": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "CAMKV": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "CAMP": [
+   "membrane::Granulocyte"
+  ],
+  "CAP2": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "CAV1": [
+   "antseg_v10::lens fiber cell"
+  ],
+  "CAV2": [
+   "antseg_v10::basal cell"
+  ],
+  "CAVIN1": [
+   "antseg_v10::lens fiber cell"
+  ],
+  "CCBE1": [
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "CCL3": [
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "CCL4": [
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "CCL5": [
+   "membrane::T"
+  ],
+  "CCN1": [
+   "antseg_v10::basal cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "CCNA2": [
+   "dev_v8::Retinal_Proliferating",
+   "dev_v9::Retinal_Proliferating"
+  ],
+  "CCNB1": [
+   "dev_v8::Retinal_Proliferating",
+   "dev_v9::Retinal_Proliferating"
+  ],
+  "CCND1": [
+   "antseg_v10::corneal epithelial cell"
+  ],
+  "CCNE2": [
+   "antseg_v10::transit amplifying cell"
+  ],
+  "CD14": [
+   "membrane::Mono_Classical"
+  ],
+  "CD163": [
+   "membrane::Mac_Tissue",
+   "retina_v7::Macrophage"
+  ],
+  "CD1C": [
+   "membrane::cDC2"
+  ],
+  "CD2": [
+   "membrane::T"
+  ],
+  "CD36": [
+   "membrane::Granulocyte"
+  ],
+  "CD3D": [
+   "membrane::T"
+  ],
+  "CD3E": [
+   "membrane::T"
+  ],
+  "CD3G": [
+   "membrane::T"
+  ],
+  "CD4": [
+   "membrane::cDC2"
+  ],
+  "CD44": [
+   "antseg_v10::basal cell",
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::goblet cell",
+   "antseg_v10::progenitor cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "CD5L": [
+   "membrane::Mac_Tissue",
+   "retina_v7::Macrophage"
+  ],
+  "CD68": [
+   "retina_v7::Macrophage"
+  ],
+  "CD69": [
+   "antseg_v10::mast cell",
+   "membrane::T"
+  ],
+  "CD74": [
+   "membrane::APC_MHCII_high"
+  ],
+  "CD79A": [
+   "membrane::B"
+  ],
+  "CD79B": [
+   "membrane::B"
+  ],
+  "CD9": [
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "CDH1": [
+   "antseg_v10::basal cell",
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "CDH11": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "CDH2": [
+   "antseg_v10::corneal endothelial cell",
+   "antseg_v10::lens epithelial cell",
+   "dev_v9::RPC_late",
+   "lensiris_v11::anterior lens cell",
+   "membrane::Corneal Endothelium"
+  ],
+  "CDH23": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "CDH3": [
+   "antseg_v10::basal cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "CDH5": [
+   "membrane::Endo",
+   "retina_v7::Endo"
+  ],
+  "CDH6": [
+   "antseg_v10::lens epithelial cell"
+  ],
+  "CDH8": [
+   "retina_interneuron::BC"
+  ],
+  "CDKN1B": [
+   "dev_v8::RPC_late"
+  ],
+  "CEBPD": [
+   "antseg_v10::progenitor cell"
+  ],
+  "CEMIP": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "CENPF": [
+   "antseg_v10::transit amplifying cell",
+   "dev_v9::NRPC_early",
+   "membrane::Proliferating"
+  ],
+  "CEP170": [
+   "antseg_v10::iris pigment epithelial cell"
+  ],
+  "CERKL": [
+   "dev_v9::Cone_precursor"
+  ],
+  "CHD7": [
+   "antseg_v10::oligodendrocyte",
+   "dev_v9::NRPC_early",
+   "dev_v9::RPC_early",
+   "dev_v9::RPC_late"
+  ],
+  "CHRM2": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "CHRM3": [
+   "antseg_v10::ciliary muscle cell",
+   "retina_interneuron::AC"
+  ],
+  "CKB": [
+   "dev_v9::NRPC_early"
+  ],
+  "CLDN4": [
+   "antseg_v10::corneal epithelial cell"
+  ],
+  "CLDN5": [
+   "membrane::Endo",
+   "retina_v7::Endo",
+   "retina_v7::Endo_Capillary"
+  ],
+  "CLEC10A": [
+   "membrane::cDC2"
+  ],
+  "CLEC1A": [
+   "retina_v6::Microglia"
+  ],
+  "CLEC4C": [
+   "membrane::pDC"
+  ],
+  "CLEC7A": [
+   "retina_v6::Microglia",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "CLEC9A": [
+   "membrane::cDC1"
+  ],
+  "CLIC6": [
+   "retina_v6::RPE"
+  ],
+  "CLU": [
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::progenitor cell"
+  ],
+  "CMYA5": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "CNN1": [
+   "face_v6::SMC",
+   "membrane::SMC",
+   "retina_v7::SMC"
+  ],
+  "CNN3": [
+   "antseg_v10::lens epithelial cell",
+   "lensiris_v11::anterior lens cell"
+  ],
+  "CNP": [
+   "antseg_v10::oligodendrocyte"
+  ],
+  "CNTN1": [
+   "dev_v9::Cone_precursor"
+  ],
+  "CNTN2": [
+   "dev_v9::RGC_precursor"
+  ],
+  "CNTN5": [
+   "retina_interneuron::AC"
+  ],
+  "COL16A1": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "COL19A1": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "COL1A1": [
+   "antseg_v10::trabecular meshwork cell",
+   "membrane::Fibroblast",
+   "membrane::Myofibroblast"
+  ],
+  "COL1A2": [
+   "membrane::Fibroblast",
+   "membrane::Myofibroblast",
+   "membrane::Pericyte",
+   "retina_v7::Pericyte"
+  ],
+  "COL3A1": [
+   "membrane::Fibroblast"
+  ],
+  "COL4A2": [
+   "dev_v9::RPC_early"
+  ],
+  "COL4A3": [
+   "antseg_v10::corneal endothelial cell"
+  ],
+  "COL8A1": [
+   "antseg_v10::corneal endothelial cell"
+  ],
+  "COL8A2": [
+   "antseg_v10::corneal endothelial cell"
+  ],
+  "COL9A1": [
+   "antseg_v10::non-pigmented ciliary epithelial cell"
+  ],
+  "COL9A3": [
+   "antseg_v10::non-pigmented ciliary epithelial cell"
+  ],
+  "COX4I2": [
+   "face_v6::Pericyte"
+  ],
+  "CP": [
+   "antseg_v10::non-pigmented ciliary epithelial cell"
+  ],
+  "CPA3": [
+   "antseg_v10::mast cell"
+  ],
+  "CPAMD8": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "CPNE5": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "CPVL": [
+   "antseg_v10::basal cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "CRABP1": [
+   "dev_v9::RGC_precursor"
+  ],
+  "CRABP2": [
+   "dev_v8::RPC_early"
+  ],
+  "CRB1": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::non-pigmented ciliary epithelial cell",
+   "dev_v9::NRPC_late",
+   "dev_v9::RPC_early",
+   "dev_v9::RPC_late",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "CREB1": [
+   "antseg_v10::goblet cell"
+  ],
+  "CRYAB": [
+   "antseg_v10::lens epithelial cell",
+   "antseg_v10::lens fiber cell",
+   "antseg_v10::oligodendrocyte",
+   "lensiris_v11::anterior lens cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "CRYBB2": [
+   "antseg_v10::lens epithelial cell",
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::anterior lens cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "CRYBB3": [
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "CSF3R": [
+   "membrane::Granulocyte"
+  ],
+  "CST1": [
+   "lacrimal_v6::Lacrimal_secretory_tearcell"
+  ],
+  "CST4": [
+   "lacrimal_v6::Lacrimal_secretory_tearcell"
+  ],
+  "CTHRC1": [
+   "membrane::Myofibroblast"
+  ],
+  "CTNNA2": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "CTNNB1": [
+   "lensiris_v11::anterior lens cell"
+  ],
+  "CTSD": [
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "CTSG": [
+   "antseg_v10::mast cell"
+  ],
+  "CTSS": [
+   "membrane::Mono_Classical"
+  ],
+  "CTTNBP2": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "CUX2": [
+   "retina_interneuron::AC"
+  ],
+  "CX3CR1": [
+   "membrane::Microglia",
+   "membrane::Mono_Nonclassical",
+   "retina::HC",
+   "retina_interneuron::HC",
+   "retina_v6::Microglia",
+   "retina_v7::Microglia"
+  ],
+  "CXADR": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "CXCL14": [
+   "antseg_v10::basal cell",
+   "antseg_v10::progenitor cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "CXCL17": [
+   "antseg_v10::conjunctival epithelial cell",
+   "face_v6::Conj_epithelium_basal"
+  ],
+  "CXCR2": [
+   "membrane::Granulocyte"
+  ],
+  "CYP1B1": [
+   "retina_v7::Endo_Venous"
+  ],
+  "CYTH4": [
+   "retina_v6::Microglia"
+  ],
+  "DACH1": [
+   "dev_v9::RPC_late"
+  ],
+  "DACH2": [
+   "antseg_v10::lens epithelial cell",
+   "retina_interneuron::AC"
+  ],
+  "DCC": [
+   "antseg_v10::oligodendrocyte",
+   "dev_v9::RGC_precursor",
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "DCN": [
+   "antseg_v10::trabecular meshwork cell",
+   "membrane::Fibroblast"
+  ],
+  "DCT": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "antseg_v10::progenitor cell",
+   "dev_v9::Cone_precursor",
+   "dev_v9::NRPC_early",
+   "dev_v9::NRPC_late",
+   "dev_v9::RPC_early",
+   "dev_v9::RPC_late",
+   "k9_ocs::Melanocyte"
+  ],
+  "DDR2": [
+   "antseg_v10::lens epithelial cell",
+   "lensiris_v11::anterior lens cell"
+  ],
+  "DERL3": [
+   "membrane::Plasma"
+  ],
+  "DES": [
+   "antseg_v10::ciliary muscle cell",
+   "face_v6::SMC",
+   "membrane::SMC",
+   "retina_v7::SMC"
+  ],
+  "DGKB": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "DLL4": [
+   "membrane::Endo_Patho",
+   "retina_v7::Endo_Arterial",
+   "retina_v7::Endo_Patho"
+  ],
+  "DOCK10": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "DOCK2": [
+   "retina_interneuron::AC"
+  ],
+  "DOCK4": [
+   "dev_v9::HC_precursor"
+  ],
+  "DPT": [
+   "k9_ocs::Limbus_Sclera_fibroblast_C1"
+  ],
+  "DSC2": [
+   "antseg_v10::corneal epithelial cell"
+  ],
+  "DSG1": [
+   "antseg_v10::corneal epithelial cell"
+  ],
+  "DYNC2H1": [
+   "dev_v9::Cone_precursor"
+  ],
+  "ECSCR": [
+   "membrane::Endo",
+   "retina_v7::Endo"
+  ],
+  "EDA": [
+   "antseg_v10::transit amplifying cell"
+  ],
+  "EDN1": [
+   "retina_v7::Endo_Patho"
+  ],
+  "EGFLAM": [
+   "dev_v9::Cone_precursor"
+  ],
+  "EGFR": [
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::goblet cell",
+   "antseg_v10::lens epithelial cell",
+   "antseg_v10::progenitor cell",
+   "dev_v9::RPC_early",
+   "lensiris_v11::anterior lens cell",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "EHF": [
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::progenitor cell"
+  ],
+  "ELANE": [
+   "membrane::Granulocyte"
+  ],
+  "ELAVL4": [
+   "dev_v9::RGC_precursor"
+  ],
+  "ELF3": [
+   "antseg_v10::corneal epithelial cell"
+  ],
+  "ENPP2": [
+   "antseg_v10::non-pigmented ciliary epithelial cell"
+  ],
+  "EPB41L2": [
+   "dev_v9::Rod_precursor"
+  ],
+  "EPHA2": [
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "EPHB1": [
+   "dev_v9::RGC_precursor"
+  ],
+  "EPS8": [
+   "dev_v9::Rod_precursor"
+  ],
+  "ERBB4": [
+   "dev_v9::RPC_early"
+  ],
+  "ESAM": [
+   "membrane::Endo",
+   "retina_v7::Endo"
+  ],
+  "EYA4": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "EYS": [
+   "dev_v9::Cone_precursor",
+   "dev_v9::NRPC_late",
+   "dev_v9::Rod_precursor"
+  ],
+  "EZH2": [
+   "dev_v9::NRPC_early",
+   "dev_v9::NRPC_late",
+   "dev_v9::RPC_early",
+   "dev_v9::RPC_late"
+  ],
+  "F13A1": [
+   "membrane::Mac_Tissue",
+   "retina_v7::Macrophage"
+  ],
+  "F3": [
+   "antseg_v10::lens epithelial cell",
+   "lensiris_v11::anterior lens cell"
+  ],
+  "FABP7": [
+   "dev_v9::NRPC_late"
+  ],
+  "FAM107B": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "FAM135A": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "FAM171B": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "FBN1": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::non-pigmented ciliary epithelial cell",
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "lensiris_v11::pigmented epithelial cell",
+   "membrane::Fibroblast"
+  ],
+  "FBXL7": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "FCER1A": [
+   "membrane::cDC2"
+  ],
+  "FCER1G": [
+   "membrane::Microglia",
+   "retina_v6::Microglia",
+   "retina_v7::Microglia"
+  ],
+  "FCGR1A": [
+   "membrane::APC_MHCII_high"
+  ],
+  "FCGR3A": [
+   "membrane::Mono_Nonclassical"
+  ],
+  "FCGR3B": [
+   "membrane::Granulocyte"
+  ],
+  "FCN1": [
+   "membrane::Mono_Classical"
+  ],
+  "FDCSP": [
+   "face_v6::Conj_epithelium_superficial"
+  ],
+  "FGF13": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "FGF2": [
+   "antseg_v10::corneal endothelial cell"
+  ],
+  "FGF7": [
+   "antseg_v10::corneal endothelial cell"
+  ],
+  "FGFBP2": [
+   "membrane::NK"
+  ],
+  "FGFR1": [
+   "antseg_v10::corneal endothelial cell",
+   "antseg_v10::lens epithelial cell"
+  ],
+  "FKBP5": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "FLT1": [
+   "membrane::Endo"
+  ],
+  "FLT3": [
+   "membrane::cDC1"
+  ],
+  "FN1": [
+   "membrane::Fibroblast",
+   "membrane::Myofibroblast"
+  ],
+  "FNDC3B": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "FOLR2": [
+   "membrane::Mac_Tissue",
+   "retina_v7::Macrophage"
+  ],
+  "FOS": [
+   "antseg_v10::lens epithelial cell"
+  ],
+  "FOXN4": [
+   "dev_v9::RPC_early",
+   "dev_v9::RPC_late"
+  ],
+  "FOXP1": [
+   "dev_v9::RPC_early"
+  ],
+  "FOXP2": [
+   "dev_v9::RPC_early",
+   "dev_v9::RPC_late"
+  ],
+  "FRMPD4": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "FTH1": [
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "FTL": [
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "FTO": [
+   "antseg_v10::lens epithelial cell",
+   "lensiris_v11::anterior lens cell"
+  ],
+  "G3BP1": [
+   "antseg_v10::basal cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "GABRA2": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "GABRA3": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "GABRA5": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "GABRG1": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "GABRR1": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "GABRR2": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "GAD1": [
+   "retina::AC",
+   "retina::HC",
+   "retina_interneuron::AC",
+   "retina_interneuron::HC",
+   "retina_v6::AC"
+  ],
+  "GAD2": [
+   "retina::AC",
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "GALNT13": [
+   "dev_v9::Cone_precursor"
+  ],
+  "GAP43": [
+   "dev_v9::RGC_precursor"
+  ],
+  "GAPDH": [
+   "antseg_v10::corneal endothelial cell",
+   "antseg_v10::lens epithelial cell",
+   "antseg_v10::progenitor cell"
+  ],
+  "GAPDHS": [
+   "k9_ocs::Melanocyte"
+  ],
+  "GFAP": [
+   "dev_v8::RPC_late",
+   "retina::Astro",
+   "retina_interneuron::Astro",
+   "retina_v6::Astro"
+  ],
+  "GFRA2": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "GJA1": [
+   "antseg_v10::basal cell"
+  ],
+  "GJA10": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "GJA3": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "GJA5": [
+   "retina_v7::Endo_Arterial"
+  ],
+  "GJA8": [
+   "lensiris_v11::secondary lens fiber",
+   "retina_v7::Endo_Arterial"
+  ],
+  "GLCE": [
+   "retina_interneuron::AC"
+  ],
+  "GLI3": [
+   "dev_v9::NRPC_late",
+   "dev_v9::RPC_late"
+  ],
+  "GLIS1": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "GLIS3": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "GLUL": [
+   "retina::MG",
+   "retina_interneuron::MG"
+  ],
+  "GMDS": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "GNAT1": [
+   "retina::Rod",
+   "retina_interneuron::Rod",
+   "retina_v6::Rod"
+  ],
+  "GNAT2": [
+   "retina::Cone",
+   "retina_interneuron::Cone",
+   "retina_v6::Cone"
+  ],
+  "GNG11": [
+   "membrane::Endo",
+   "retina_v7::Endo"
+  ],
+  "GNLY": [
+   "membrane::NK"
+  ],
+  "GPC6": [
+   "dev_v9::Cone_precursor",
+   "dev_v9::Rod_precursor"
+  ],
+  "GPI": [
+   "antseg_v10::corneal endothelial cell"
+  ],
+  "GPNMB": [
+   "antseg_v10::iris pigment epithelial cell",
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "GPR143": [
+   "k9_ocs::Melanocyte",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "GPR160": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "GPR179": [
+   "retina_v6::BC"
+  ],
+  "GPR34": [
+   "membrane::Microglia",
+   "retina_v6::Microglia",
+   "retina_v7::Microglia"
+  ],
+  "GREB1L": [
+   "retina_interneuron::AC"
+  ],
+  "GRIA3": [
+   "dev_v9::HC_precursor"
+  ],
+  "GRIA4": [
+   "dev_v9::HC_precursor",
+   "lensiris_v11::anterior lens cell"
+  ],
+  "GRIFIN": [
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "GRIK1": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "GRIK2": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "GRIN2B": [
+   "antseg_v10::corneal endothelial cell"
+  ],
+  "GRIN3A": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "GRM5": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "GRM6": [
+   "retina::BC",
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "GRM7": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "GRM8": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "GZMB": [
+   "membrane::pDC"
+  ],
+  "H2AFZ": [
+   "membrane::Proliferating"
+  ],
+  "HEB": [
+   "retina_v7::Endo_Venous"
+  ],
+  "HECW1": [
+   "dev_v9::HC_precursor"
+  ],
+  "HES1": [
+   "dev_v8::RPC_late",
+   "dev_v9::RPC_early"
+  ],
+  "HES5": [
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::lens epithelial cell",
+   "dev_v8::RPC_early"
+  ],
+  "HES6": [
+   "dev_v9::NRPC_early",
+   "dev_v9::NRPC_late",
+   "dev_v9::RPC_early",
+   "dev_v9::RPC_late"
+  ],
+  "HEXB": [
+   "membrane::Microglia"
+  ],
+  "HEY1": [
+   "retina_v7::Endo_Arterial"
+  ],
+  "HEY2": [
+   "retina_v7::Endo_Arterial"
+  ],
+  "HIF1A": [
+   "dev_v9::AC_precursor",
+   "dev_v9::NRPC_late",
+   "membrane::Endo_Patho",
+   "retina_v7::Endo_Patho"
+  ],
+  "HIF1A-AS3": [
+   "dev_v9::AC_precursor"
+  ],
+  "HIGD1B": [
+   "face_v6::Pericyte",
+   "membrane::Pericyte",
+   "retina_v7::Pericyte"
+  ],
+  "HLA-DMB": [
+   "membrane::APC_MHCII_high"
+  ],
+  "HLA-DPA1": [
+   "membrane::APC_MHCII_high"
+  ],
+  "HLA-DPB1": [
+   "membrane::APC_MHCII_high"
+  ],
+  "HLA-DQA1": [
+   "membrane::APC_MHCII_high"
+  ],
+  "HLA-DQB1": [
+   "membrane::APC_MHCII_high"
+  ],
+  "HLA-DRA": [
+   "membrane::APC_MHCII_high",
+   "membrane::cDC2"
+  ],
+  "HLA-DRB1": [
+   "membrane::APC_MHCII_high"
+  ],
+  "HMGB1": [
+   "antseg_v10::oligodendrocyte",
+   "dev_v9::NRPC_early"
+  ],
+  "HMGB2": [
+   "dev_v9::RPC_late"
+  ],
+  "HMGCS1": [
+   "antseg_v10::oligodendrocyte"
+  ],
+  "HMGCS2": [
+   "retina_v6::RPE"
+  ],
+  "HMOX1": [
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "HS3ST4": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "HSF4": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "HSPB1": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "HTRA1": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "ICAM1": [
+   "membrane::Endo_Patho",
+   "retina_v7::Endo_Patho"
+  ],
+  "ICAM2": [
+   "retina_v7::Endo_Arterial"
+  ],
+  "IFITM3": [
+   "antseg_v10::progenitor cell"
+  ],
+  "IFT88": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::non-pigmented ciliary epithelial cell",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "IGF1": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "IGFBP3": [
+   "antseg_v10::conjunctival epithelial cell",
+   "retina_v7::Endo_Capillary"
+  ],
+  "IGFBP7": [
+   "membrane::Pericyte"
+  ],
+  "IGHG1": [
+   "membrane::Plasma"
+  ],
+  "IGKC": [
+   "membrane::B"
+  ],
+  "IGSF21": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "IL1B": [
+   "membrane::Mono_Nonclassical"
+  ],
+  "IL1RN": [
+   "membrane::Granulocyte"
+  ],
+  "IL3RA": [
+   "membrane::pDC"
+  ],
+  "IL7R": [
+   "membrane::T"
+  ],
+  "IRF7": [
+   "membrane::pDC"
+  ],
+  "IRF8": [
+   "membrane::Microglia",
+   "membrane::cDC1",
+   "retina_v6::Microglia",
+   "retina_v7::Microglia"
+  ],
+  "ISL1": [
+   "dev_v8::RGC_precursor",
+   "dev_v9::RGC_precursor",
+   "retina::BC",
+   "retina::HC",
+   "retina_interneuron::BC",
+   "retina_interneuron::HC",
+   "retina_v6::BC"
+  ],
+  "ITGA1": [
+   "membrane::Pericyte",
+   "retina_v7::Pericyte"
+  ],
+  "ITGA11": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "ITGA6": [
+   "antseg_v10::corneal endothelial cell",
+   "antseg_v10::progenitor cell"
+  ],
+  "ITGAX": [
+   "retina_v6::Microglia"
+  ],
+  "ITGB1": [
+   "antseg_v10::goblet cell"
+  ],
+  "ITGB4": [
+   "antseg_v10::basal cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "ITM2B": [
+   "membrane::Mac_Tissue"
+  ],
+  "JAG1": [
+   "antseg_v10::progenitor cell"
+  ],
+  "JCHAIN": [
+   "membrane::Plasma",
+   "membrane::pDC"
+  ],
+  "KANK1": [
+   "dev_v9::Rod_precursor"
+  ],
+  "KCNIP1": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "KCNMB2": [
+   "retina_interneuron::BC"
+  ],
+  "KCNQ1OT1": [
+   "lensiris_v11::anterior lens cell"
+  ],
+  "KDR": [
+   "membrane::Endo"
+  ],
+  "KERA": [
+   "face_v6::Keratocytes",
+   "membrane::Keratocytes"
+  ],
+  "KHDRBS3": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "KIAA1217": [
+   "dev_v9::Rod_precursor"
+  ],
+  "KIF3A": [
+   "antseg_v10::non-pigmented ciliary epithelial cell"
+  ],
+  "KIF5A": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "KIT": [
+   "antseg_v10::mast cell"
+  ],
+  "KLF12": [
+   "dev_v9::AC_precursor"
+  ],
+  "KLF4": [
+   "antseg_v10::goblet cell"
+  ],
+  "KLF5": [
+   "antseg_v10::corneal epithelial cell"
+  ],
+  "KLRD1": [
+   "membrane::NK"
+  ],
+  "KLRF1": [
+   "membrane::NK"
+  ],
+  "KRT10": [
+   "antseg_v10::conjunctival epithelial cell",
+   "antseg_v10::progenitor cell"
+  ],
+  "KRT12": [
+   "antseg_v10::basal cell",
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "KRT13": [
+   "antseg_v10::conjunctival epithelial cell",
+   "antseg_v10::progenitor cell",
+   "face_v6::Conj_epithelium_basal"
+  ],
+  "KRT14": [
+   "antseg_v10::progenitor cell"
+  ],
+  "KRT15": [
+   "antseg_v10::conjunctival epithelial cell",
+   "antseg_v10::goblet cell",
+   "antseg_v10::progenitor cell"
+  ],
+  "KRT19": [
+   "antseg_v10::conjunctival epithelial cell",
+   "antseg_v10::goblet cell",
+   "antseg_v10::progenitor cell",
+   "face_v6::Conj_epithelium_basal"
+  ],
+  "KRT24": [
+   "antseg_v10::corneal epithelial cell"
+  ],
+  "KRT3": [
+   "antseg_v10::basal cell",
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "KRT4": [
+   "antseg_v10::conjunctival epithelial cell",
+   "face_v6::Conj_epithelium_basal",
+   "k9_ocs::Conj_epithelium_suprabasal"
+  ],
+  "KRT5": [
+   "antseg_v10::basal cell",
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::progenitor cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "KRT7": [
+   "antseg_v10::conjunctival epithelial cell",
+   "antseg_v10::goblet cell"
+  ],
+  "LACRT": [
+   "lacrimal_v6::Lacrimal_secretory_tearcell"
+  ],
+  "LAMA2": [
+   "k9_ocs::Limbus_Sclera_fibroblast_C1"
+  ],
+  "LAMA3": [
+   "antseg_v10::basal cell",
+   "antseg_v10::transit amplifying cell",
+   "retina_interneuron::BC"
+  ],
+  "LAMB1": [
+   "antseg_v10::lens epithelial cell"
+  ],
+  "LAMB4": [
+   "antseg_v10::basal cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "LAMC2": [
+   "antseg_v10::basal cell"
+  ],
+  "LARGE1": [
+   "dev_v9::Cone_precursor"
+  ],
+  "LCK": [
+   "membrane::T"
+  ],
+  "LCN2": [
+   "antseg_v10::conjunctival epithelial cell",
+   "face_v6::Conj_epithelium_basal"
+  ],
+  "LCTL": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "LDLR": [
+   "antseg_v10::goblet cell"
+  ],
+  "LEPR": [
+   "k9_ocs::Limbus_Sclera_fibroblast_C1"
+  ],
+  "LGALS3": [
+   "antseg_v10::corneal epithelial cell"
+  ],
+  "LGMN": [
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "LGR4": [
+   "dev_v9::RPC_early",
+   "dev_v9::RPC_late",
+   "lensiris_v11::anterior lens cell"
+  ],
+  "LHX1": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "LHX2": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::non-pigmented ciliary epithelial cell",
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "LILRA4": [
+   "membrane::pDC"
+  ],
+  "LILRB2": [
+   "retina_v6::Microglia"
+  ],
+  "LIM2": [
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "LIN28A": [
+   "dev_v8::RPC_early"
+  ],
+  "LINC01619": [
+   "dev_v9::AC_precursor"
+  ],
+  "LINC03051": [
+   "dev_v9::HC_precursor"
+  ],
+  "LIPA": [
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "LMNB1": [
+   "antseg_v10::lens fiber cell"
+  ],
+  "LMOD1": [
+   "face_v6::SMC",
+   "membrane::SMC"
+  ],
+  "LMX1B": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "LNX1": [
+   "retina_interneuron::AC"
+  ],
+  "LOXL1": [
+   "dev_v9::NRPC_late"
+  ],
+  "LPGAT1": [
+   "antseg_v10::oligodendrocyte"
+  ],
+  "LRAT": [
+   "retina::RPE",
+   "retina_interneuron::RPE",
+   "retina_v6::RPE"
+  ],
+  "LRP2": [
+   "antseg_v10::non-pigmented ciliary epithelial cell"
+  ],
+  "LRRN3": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "LRRTM3": [
+   "retina_interneuron::AC"
+  ],
+  "LSAMP": [
+   "dev_v9::HC_precursor"
+  ],
+  "LST1": [
+   "membrane::Mono_Nonclassical"
+  ],
+  "LTBP2": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::non-pigmented ciliary epithelial cell"
+  ],
+  "LTF": [
+   "membrane::Granulocyte"
+  ],
+  "LUM": [
+   "membrane::Fibroblast"
+  ],
+  "LYPD2": [
+   "antseg_v10::conjunctival epithelial cell"
+  ],
+  "LYVE1": [
+   "membrane::Mac_Tissue",
+   "retina_v7::Macrophage"
+  ],
+  "LYZ": [
+   "membrane::Mono_Classical"
+  ],
+  "MAF": [
+   "antseg_v10::lens fiber cell",
+   "membrane::Mac_Tissue",
+   "retina_interneuron::AC"
+  ],
+  "MAG": [
+   "antseg_v10::oligodendrocyte"
+  ],
+  "MAGI1": [
+   "dev_v9::HC_precursor",
+   "dev_v9::NRPC_early"
+  ],
+  "MAL2": [
+   "antseg_v10::corneal epithelial cell"
+  ],
+  "MALAT1": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::lens epithelial cell",
+   "antseg_v10::non-pigmented ciliary epithelial cell",
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "lensiris_v11::anterior lens cell",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "MAML2": [
+   "dev_v9::Cone_precursor"
+  ],
+  "MARCHF1": [
+   "dev_v9::Cone_precursor",
+   "dev_v9::Rod_precursor"
+  ],
+  "MARCO": [
+   "retina_v7::Macrophage"
+  ],
+  "MBP": [
+   "antseg_v10::oligodendrocyte"
+  ],
+  "MCC": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "MCL1": [
+   "antseg_v10::lens epithelial cell"
+  ],
+  "MECOM": [
+   "antseg_v10::non-pigmented ciliary epithelial cell"
+  ],
+  "MEGF11": [
+   "dev_v9::HC_precursor",
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "MEIS2": [
+   "antseg_v10::progenitor cell"
+  ],
+  "MET": [
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "MFRP": [
+   "retina_v6::RPE"
+  ],
+  "MFSD4A": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "MGP": [
+   "antseg_v10::corneal endothelial cell",
+   "membrane::Pericyte",
+   "retina_v7::Pericyte"
+  ],
+  "MIB1": [
+   "dev_v9::NRPC_early"
+  ],
+  "MICAL2": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "MIR124-2HG": [
+   "dev_v9::HC_precursor"
+  ],
+  "MITF": [
+   "antseg_v10::ciliary muscle cell",
+   "antseg_v10::mast cell",
+   "lensiris_v11::pigmented epithelial cell",
+   "retina::RPE",
+   "retina_interneuron::RPE"
+  ],
+  "MKI67": [
+   "dev_v8::Retinal_Proliferating",
+   "dev_v9::Retinal_Proliferating",
+   "membrane::Proliferating"
+  ],
+  "MLANA": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "k9_ocs::Melanocyte",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "MMP2": [
+   "membrane::Fibroblast"
+  ],
+  "MMP9": [
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "MNDA": [
+   "membrane::Mono_Classical",
+   "retina_v7::Macrophage"
+  ],
+  "MOBP": [
+   "antseg_v10::oligodendrocyte"
+  ],
+  "MOG": [
+   "antseg_v10::oligodendrocyte"
+  ],
+  "MPO": [
+   "membrane::Granulocyte"
+  ],
+  "MPZ": [
+   "k9_ocs::Schwann"
+  ],
+  "MRC1": [
+   "membrane::Mac_Tissue",
+   "retina_v7::Macrophage"
+  ],
+  "MS4A1": [
+   "membrane::B"
+  ],
+  "MS4A2": [
+   "antseg_v10::mast cell"
+  ],
+  "MS4A7": [
+   "membrane::Mono_Nonclassical"
+  ],
+  "MUC1": [
+   "antseg_v10::conjunctival epithelial cell"
+  ],
+  "MUC15": [
+   "antseg_v10::conjunctival epithelial cell"
+  ],
+  "MUC16": [
+   "antseg_v10::conjunctival epithelial cell",
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::goblet cell"
+  ],
+  "MUC4": [
+   "antseg_v10::conjunctival epithelial cell",
+   "antseg_v10::goblet cell"
+  ],
+  "MUC5AC": [
+   "antseg_v10::goblet cell"
+  ],
+  "MUC7": [
+   "lacrimal_v6::Lacrimal_secretory_tearcell"
+  ],
+  "MYB": [
+   "dev_v9::RPC_early",
+   "dev_v9::RPC_late"
+  ],
+  "MYBL1": [
+   "dev_v9::NRPC_early"
+  ],
+  "MYH11": [
+   "antseg_v10::ciliary muscle cell",
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "face_v6::SMC",
+   "lensiris_v11::pigmented epithelial cell",
+   "membrane::SMC",
+   "retina_v7::SMC"
+  ],
+  "MYH9": [
+   "antseg_v10::lens epithelial cell",
+   "lensiris_v11::anterior lens cell"
+  ],
+  "MYL9": [
+   "antseg_v10::ciliary muscle cell",
+   "face_v6::SMC",
+   "membrane::Myofibroblast",
+   "membrane::SMC",
+   "retina_v7::SMC"
+  ],
+  "MYLK": [
+   "antseg_v10::ciliary muscle cell"
+  ],
+  "MYO9A": [
+   "dev_v9::Rod_precursor"
+  ],
+  "MYOC": [
+   "antseg_v10::ciliary muscle cell",
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "MZB1": [
+   "membrane::Plasma"
+  ],
+  "NAALAD2": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "NAT16": [
+   "retina_interneuron::HC"
+  ],
+  "NCR3": [
+   "membrane::NK"
+  ],
+  "NDST2": [
+   "antseg_v10::mast cell"
+  ],
+  "NDUFA4L2": [
+   "membrane::Endo_Patho",
+   "retina_v7::Endo_Patho"
+  ],
+  "NEAT1": [
+   "antseg_v10::lens epithelial cell",
+   "antseg_v10::trabecular meshwork cell",
+   "lensiris_v11::anterior lens cell"
+  ],
+  "NECTIN3": [
+   "antseg_v10::non-pigmented ciliary epithelial cell"
+  ],
+  "NEFL": [
+   "retina::RGC",
+   "retina_interneuron::RGC",
+   "retina_v6::RGC"
+  ],
+  "NES": [
+   "dev_v8::RPC_early"
+  ],
+  "NETO1": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "NEUROD1": [
+   "dev_v9::Cone_precursor",
+   "dev_v9::NRPC_early",
+   "dev_v9::NRPC_late",
+   "dev_v9::RPC_early",
+   "dev_v9::RPC_late"
+  ],
+  "NFASC": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "NFIA": [
+   "dev_v8::RPC_late"
+  ],
+  "NHS": [
+   "dev_v9::NRPC_early",
+   "dev_v9::NRPC_late",
+   "dev_v9::RPC_early"
+  ],
+  "NKG7": [
+   "membrane::NK"
+  ],
+  "NLK": [
+   "dev_v9::Cone_precursor"
+  ],
+  "NNMT": [
+   "membrane::Keratocytes"
+  ],
+  "NOL4": [
+   "dev_v9::AC_precursor"
+  ],
+  "NOTCH1": [
+   "dev_v8::RPC_early",
+   "dev_v9::NRPC_early",
+   "dev_v9::RPC_early"
+  ],
+  "NOTCH3": [
+   "face_v6::Pericyte",
+   "membrane::Pericyte",
+   "retina_v7::Pericyte"
+  ],
+  "NPHS1": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "NR2E3": [
+   "dev_v9::Rod_precursor",
+   "retina::Rod",
+   "retina_interneuron::Rod",
+   "retina_v6::Rod"
+  ],
+  "NR2F2": [
+   "retina_v7::Endo_Venous"
+  ],
+  "NRG1": [
+   "antseg_v10::lens fiber cell"
+  ],
+  "NRL": [
+   "dev_v9::Rod_precursor",
+   "retina::Rod",
+   "retina_interneuron::Rod",
+   "retina_v6::Rod"
+  ],
+  "NRP1": [
+   "antseg_v10::basal cell",
+   "antseg_v10::transit amplifying cell",
+   "dev_v9::AC_precursor",
+   "dev_v9::RGC_precursor"
+  ],
+  "NRXN1": [
+   "k9_ocs::Schwann"
+  ],
+  "NTM": [
+   "dev_v9::Rod_precursor"
+  ],
+  "NTNG1": [
+   "retina_interneuron::BC"
+  ],
+  "NTRK2": [
+   "antseg_v10::basal cell",
+   "antseg_v10::transit amplifying cell",
+   "dev_v9::HC_precursor",
+   "dev_v9::RGC_precursor"
+  ],
+  "NUSAP1": [
+   "dev_v8::Retinal_Proliferating",
+   "dev_v9::Retinal_Proliferating",
+   "membrane::Proliferating"
+  ],
+  "NWD2": [
+   "dev_v9::AC_precursor"
+  ],
+  "NXPH2": [
+   "retina_interneuron::AC",
+   "retina_interneuron::BC"
+  ],
+  "OCLN": [
+   "antseg_v10::corneal epithelial cell"
+  ],
+  "OLFM3": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "OLFML3": [
+   "membrane::Microglia",
+   "retina_v7::Microglia"
+  ],
+  "OLR1": [
+   "membrane::Mac_DAM_LAM",
+   "retina_v6::Microglia",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "ONECUT1": [
+   "dev_v9::HC_precursor",
+   "dev_v9::NRPC_early",
+   "dev_v9::NRPC_late",
+   "dev_v9::RGC_precursor",
+   "dev_v9::RPC_early",
+   "retina::HC",
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "ONECUT2": [
+   "dev_v9::HC_precursor",
+   "dev_v9::NRPC_early",
+   "dev_v9::NRPC_late",
+   "dev_v9::RGC_precursor",
+   "retina::AC",
+   "retina_interneuron::AC",
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "ONECUT3": [
+   "dev_v9::HC_precursor",
+   "retina::HC",
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "OPN1MW": [
+   "retina::Cone",
+   "retina_interneuron::Cone",
+   "retina_v6::Cone"
+  ],
+  "OPN1SW": [
+   "retina::Cone",
+   "retina_interneuron::Cone",
+   "retina_v6::Cone"
+  ],
+  "OPTC": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::non-pigmented ciliary epithelial cell",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "OR51E2": [
+   "retina_v6::RPE"
+  ],
+  "OTX1": [
+   "antseg_v10::progenitor cell"
+  ],
+  "OTX2": [
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "dev_v9::Cone_precursor",
+   "dev_v9::NRPC_early",
+   "dev_v9::NRPC_late",
+   "dev_v9::RPC_early",
+   "dev_v9::RPC_late",
+   "dev_v9::Rod_precursor",
+   "retina::BC",
+   "retina_interneuron::BC"
+  ],
+  "P2RY12": [
+   "membrane::Microglia"
+  ],
+  "PAX2": [
+   "dev_v9::NRPC_late"
+  ],
+  "PAX5": [
+   "dev_v9::NRPC_late",
+   "membrane::B"
+  ],
+  "PAX6": [
+   "antseg_v10::basal cell",
+   "antseg_v10::conjunctival epithelial cell",
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::lens epithelial cell",
+   "antseg_v10::lens fiber cell",
+   "antseg_v10::non-pigmented ciliary epithelial cell",
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "antseg_v10::progenitor cell",
+   "antseg_v10::transit amplifying cell",
+   "dev_v8::RPC_late",
+   "lensiris_v11::anterior lens cell",
+   "lensiris_v11::pigmented epithelial cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "PCDH11X": [
+   "retina_interneuron::HC"
+  ],
+  "PCDH15": [
+   "dev_v9::RGC_precursor"
+  ],
+  "PCNA": [
+   "dev_v8::Retinal_Proliferating",
+   "dev_v8::TAC_transit_amplifying",
+   "dev_v9::Retinal_Proliferating",
+   "dev_v9::TAC_proliferating"
+  ],
+  "PCSK6": [
+   "dev_v9::HC_precursor",
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "PDC": [
+   "dev_v9::Rod_precursor"
+  ],
+  "PDE1A": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "PDE6B": [
+   "retina::Rod",
+   "retina_interneuron::Rod",
+   "retina_v6::Rod"
+  ],
+  "PDE6H": [
+   "retina::Cone",
+   "retina_interneuron::Cone",
+   "retina_v6::Cone"
+  ],
+  "PDGFRA": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "PDGFRB": [
+   "membrane::Pericyte"
+  ],
+  "PECAM1": [
+   "membrane::Endo"
+  ],
+  "PHLDA1": [
+   "antseg_v10::progenitor cell"
+  ],
+  "PIK3R5": [
+   "retina_v6::Microglia"
+  ],
+  "PIP5KL1": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "PITX2": [
+   "antseg_v10::ciliary muscle cell",
+   "antseg_v10::corneal endothelial cell",
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "PLA2G4C": [
+   "antseg_v10::oligodendrocyte"
+  ],
+  "PLD3": [
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "PLD4": [
+   "membrane::pDC"
+  ],
+  "PLEKHA7": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::non-pigmented ciliary epithelial cell",
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "PLP1": [
+   "antseg_v10::oligodendrocyte"
+  ],
+  "PLVAP": [
+   "membrane::Endo",
+   "membrane::Endo_Patho",
+   "retina_v7::Endo",
+   "retina_v7::Endo_Patho"
+  ],
+  "PLXDC1": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "PLXNA2": [
+   "dev_v9::AC_precursor",
+   "dev_v9::HC_precursor"
+  ],
+  "PMEL": [
+   "k9_ocs::Melanocyte"
+  ],
+  "POSTN": [
+   "membrane::Myofibroblast"
+  ],
+  "POU4F1": [
+   "dev_v8::RGC_precursor",
+   "retina::RGC",
+   "retina_interneuron::RGC",
+   "retina_v6::RGC"
+  ],
+  "POU4F2": [
+   "retina::RGC",
+   "retina_interneuron::RGC",
+   "retina_v6::RGC"
+  ],
+  "PRDM1": [
+   "dev_v9::Cone_precursor",
+   "dev_v9::NRPC_early",
+   "dev_v9::NRPC_late"
+  ],
+  "PRF1": [
+   "membrane::NK"
+  ],
+  "PRKCA": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "PRKN": [
+   "dev_v9::Cone_precursor"
+  ],
+  "PROM1": [
+   "dev_v8::RPC_early"
+  ],
+  "PROX1": [
+   "antseg_v10::lens epithelial cell",
+   "antseg_v10::lens fiber cell",
+   "dev_v9::HC_precursor",
+   "dev_v9::NRPC_early",
+   "dev_v9::NRPC_late",
+   "dev_v9::RGC_precursor",
+   "dev_v9::RPC_early",
+   "dev_v9::RPC_late",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "PRPH": [
+   "dev_v9::RGC_precursor"
+  ],
+  "PRR27": [
+   "lacrimal_v6::Lacrimal_duct_epithelial"
+  ],
+  "PRRX1": [
+   "membrane::Myofibroblast",
+   "membrane::Pericyte",
+   "retina_v7::Pericyte"
+  ],
+  "PRSS56": [
+   "retina_v6::MG"
+  ],
+  "PTEN": [
+   "antseg_v10::lens fiber cell",
+   "antseg_v10::progenitor cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "PTGDS": [
+   "antseg_v10::oligodendrocyte",
+   "antseg_v10::trabecular meshwork cell",
+   "membrane::Fibroblast"
+  ],
+  "PTN": [
+   "dev_v9::NRPC_late"
+  ],
+  "PTPN13": [
+   "dev_v9::Rod_precursor"
+  ],
+  "PTPRC": [
+   "antseg_v10::mast cell"
+  ],
+  "PTPRK": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "PTPRZ1": [
+   "dev_v9::RPC_early"
+  ],
+  "PTTG1": [
+   "membrane::Proliferating"
+  ],
+  "RAMP2": [
+   "membrane::Endo",
+   "retina_v7::Endo"
+  ],
+  "RAPGEF5": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "RARRES1": [
+   "antseg_v10::mast cell"
+  ],
+  "RASGRF1": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "RASGRF2": [
+   "dev_v9::Cone_precursor"
+  ],
+  "RAX": [
+   "antseg_v10::non-pigmented ciliary epithelial cell"
+  ],
+  "RBPMS": [
+   "retina::RGC",
+   "retina_interneuron::RGC",
+   "retina_v6::RGC"
+  ],
+  "RCVRN": [
+   "dev_v9::Rod_precursor"
+  ],
+  "RDH5": [
+   "retina::RPE",
+   "retina_interneuron::RPE",
+   "retina_v6::RPE"
+  ],
+  "RELN": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "lensiris_v11::pigmented epithelial cell",
+   "retina_interneuron::BC"
+  ],
+  "RGS1": [
+   "membrane::APC_MHCII_high"
+  ],
+  "RGS4": [
+   "membrane::Pericyte",
+   "retina_v7::Pericyte"
+  ],
+  "RGS5": [
+   "membrane::Pericyte",
+   "retina_v7::Pericyte"
+  ],
+  "RHBDL3": [
+   "dev_v9::NRPC_early"
+  ],
+  "RHO": [
+   "retina::Rod",
+   "retina_interneuron::Rod",
+   "retina_v6::Rod"
+  ],
+  "RHOA": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "RLBP1": [
+   "retina::MG",
+   "retina_interneuron::MG",
+   "retina_v6::MG"
+  ],
+  "RLN2": [
+   "retina_v7::Pericyte"
+  ],
+  "ROBO1": [
+   "dev_v9::HC_precursor",
+   "retina_interneuron::AC"
+  ],
+  "ROBO2": [
+   "dev_v9::Cone_precursor"
+  ],
+  "ROR1": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "RORA": [
+   "antseg_v10::basal cell",
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "RORB": [
+   "dev_v9::NRPC_early",
+   "dev_v9::NRPC_late",
+   "dev_v9::RPC_early",
+   "dev_v9::RPC_late"
+  ],
+  "RP1": [
+   "dev_v9::Rod_precursor"
+  ],
+  "RPE65": [
+   "retina::RPE",
+   "retina_interneuron::RPE",
+   "retina_v6::RPE"
+  ],
+  "RSPO4": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "S100A10": [
+   "membrane::cDC2"
+  ],
+  "S100A12": [
+   "membrane::Mono_Classical"
+  ],
+  "S100A2": [
+   "antseg_v10::progenitor cell"
+  ],
+  "S100A8": [
+   "antseg_v10::conjunctival epithelial cell",
+   "k9_ocs::Conj_epithelium_suprabasal",
+   "membrane::Mono_Classical"
+  ],
+  "S100A9": [
+   "antseg_v10::conjunctival epithelial cell",
+   "k9_ocs::Conj_epithelium_suprabasal",
+   "membrane::Mono_Classical"
+  ],
+  "S100B": [
+   "antseg_v10::oligodendrocyte",
+   "retina::Astro",
+   "retina::MG",
+   "retina_interneuron::Astro",
+   "retina_interneuron::MG",
+   "retina_v6::Astro"
+  ],
+  "SALL1": [
+   "membrane::Microglia"
+  ],
+  "SAMSN1": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "SCGB1D1": [
+   "lacrimal_v6::Lacrimal_secretory_tearcell"
+  ],
+  "SCGB2A1": [
+   "lacrimal_v6::Lacrimal_secretory_tearcell"
+  ],
+  "SCGB3A1": [
+   "face_v6::Conj_epithelium_superficial"
+  ],
+  "SCN3B": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "SCN7A": [
+   "k9_ocs::Schwann"
+  ],
+  "SDC1": [
+   "antseg_v10::corneal epithelial cell"
+  ],
+  "SDK1": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "SEC11C": [
+   "membrane::Plasma"
+  ],
+  "SELENOP": [
+   "membrane::Mac_Tissue",
+   "retina_v7::Macrophage"
+  ],
+  "SELL": [
+   "membrane::Mono_Classical"
+  ],
+  "SERPINA1": [
+   "membrane::Mono_Classical"
+  ],
+  "SERPINE1": [
+   "retina_v7::Endo_Patho"
+  ],
+  "SERPINF1": [
+   "membrane::pDC"
+  ],
+  "SESTD1": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "SETBP1": [
+   "dev_v9::AC_precursor"
+  ],
+  "SHISA6": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "SIGLEC11": [
+   "membrane::Microglia",
+   "retina_v6::Microglia",
+   "retina_v7::Microglia"
+  ],
+  "SIX3": [
+   "antseg_v10::non-pigmented ciliary epithelial cell",
+   "antseg_v10::pigmented ciliary epithelial cell"
+  ],
+  "SKAP1": [
+   "membrane::T"
+  ],
+  "SLAMF7": [
+   "membrane::Plasma"
+  ],
+  "SLC17A6": [
+   "retina::RGC",
+   "retina_interneuron::RGC",
+   "retina_v6::RGC"
+  ],
+  "SLC1A2": [
+   "antseg_v10::lens epithelial cell"
+  ],
+  "SLC1A3": [
+   "retina::Astro",
+   "retina_interneuron::Astro"
+  ],
+  "SLC23A2": [
+   "antseg_v10::pigmented ciliary epithelial cell"
+  ],
+  "SLC24A3": [
+   "retina_interneuron::BC"
+  ],
+  "SLC24A5": [
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "k9_ocs::Melanocyte",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "SLC35F3": [
+   "retina_interneuron::AC"
+  ],
+  "SLC35G1": [
+   "antseg_v10::pigmented ciliary epithelial cell"
+  ],
+  "SLC38A11": [
+   "antseg_v10::pigmented ciliary epithelial cell"
+  ],
+  "SLC40A1": [
+   "membrane::Mac_Tissue",
+   "retina_v7::Macrophage"
+  ],
+  "SLC4A11": [
+   "antseg_v10::corneal endothelial cell",
+   "membrane::Corneal Endothelium"
+  ],
+  "SLC4A3": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "SLC4A4": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "SLC4A8": [
+   "antseg_v10::oligodendrocyte"
+  ],
+  "SLC6A1": [
+   "retina_interneuron::AC"
+  ],
+  "SLC6A6": [
+   "antseg_v10::progenitor cell"
+  ],
+  "SLC6A9": [
+   "retina::AC",
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "SLC7A11": [
+   "antseg_v10::basal cell"
+  ],
+  "SLC7A2": [
+   "antseg_v10::pigmented ciliary epithelial cell"
+  ],
+  "SLC7A6": [
+   "antseg_v10::pigmented ciliary epithelial cell"
+  ],
+  "SLC7A8": [
+   "antseg_v10::pigmented ciliary epithelial cell"
+  ],
+  "SLC9B2": [
+   "antseg_v10::pigmented ciliary epithelial cell"
+  ],
+  "SLCO5A1": [
+   "dev_v9::AC_precursor"
+  ],
+  "SMAD2": [
+   "antseg_v10::lens epithelial cell",
+   "dev_v9::NRPC_late",
+   "dev_v9::RPC_late",
+   "lensiris_v11::anterior lens cell"
+  ],
+  "SMAD3": [
+   "antseg_v10::basal cell",
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::transit amplifying cell",
+   "lensiris_v11::anterior lens cell"
+  ],
+  "SNTG1": [
+   "retina_interneuron::AC"
+  ],
+  "SOD1": [
+   "antseg_v10::progenitor cell"
+  ],
+  "SORBS1": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "SORBS2": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "SOX10": [
+   "antseg_v10::oligodendrocyte"
+  ],
+  "SOX2": [
+   "dev_v8::RPC_early",
+   "dev_v8::TAC_transit_amplifying",
+   "dev_v9::RPC_late",
+   "dev_v9::TAC_proliferating",
+   "k9_ocs::Schwann"
+  ],
+  "SOX4": [
+   "dev_v9::HC_precursor"
+  ],
+  "SOX9": [
+   "antseg_v10::conjunctival epithelial cell",
+   "dev_v8::RPC_early",
+   "dev_v8::RPC_late",
+   "retina::MG",
+   "retina_interneuron::MG"
+  ],
+  "SPARC": [
+   "antseg_v10::basal cell"
+  ],
+  "SPATS2L": [
+   "dev_v9::AC_precursor"
+  ],
+  "SPEF2": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::non-pigmented ciliary epithelial cell"
+  ],
+  "SPHKAP": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "SPP1": [
+   "dev_v9::RPC_late",
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "SRRM4": [
+   "dev_v9::Cone_precursor"
+  ],
+  "SSR4": [
+   "membrane::Plasma"
+  ],
+  "ST18": [
+   "dev_v9::AC_precursor",
+   "retina_interneuron::BC"
+  ],
+  "ST6GALNAC3": [
+   "dev_v9::AC_precursor"
+  ],
+  "STAB1": [
+   "membrane::Mac_Tissue",
+   "retina_v7::Macrophage"
+  ],
+  "STAT3": [
+   "antseg_v10::progenitor cell",
+   "antseg_v10::trabecular meshwork cell",
+   "lensiris_v11::anterior lens cell",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "STMN1": [
+   "antseg_v10::transit amplifying cell",
+   "membrane::Proliferating"
+  ],
+  "STMN2": [
+   "dev_v9::RGC_precursor"
+  ],
+  "SVEP1": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "SYN3": [
+   "dev_v9::HC_precursor"
+  ],
+  "TACR3": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "TACSTD2": [
+   "antseg_v10::corneal epithelial cell"
+  ],
+  "TAGLN": [
+   "antseg_v10::ciliary muscle cell",
+   "membrane::Myofibroblast",
+   "membrane::SMC",
+   "retina_v7::SMC"
+  ],
+  "TAL1": [
+   "retina_v6::Microglia"
+  ],
+  "TANC1": [
+   "dev_v9::AC_precursor",
+   "dev_v9::HC_precursor"
+  ],
+  "TCF4": [
+   "antseg_v10::corneal endothelial cell",
+   "dev_v9::AC_precursor",
+   "dev_v9::NRPC_early",
+   "dev_v9::NRPC_late",
+   "dev_v9::RPC_early",
+   "dev_v9::RPC_late",
+   "membrane::pDC"
+  ],
+  "TCF7L2": [
+   "dev_v9::RPC_late"
+  ],
+  "TCL1A": [
+   "membrane::B"
+  ],
+  "TDRD7": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber"
+  ],
+  "TENM3": [
+   "retina_interneuron::BC"
+  ],
+  "TFAP2A": [
+   "retina::AC",
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "TFAP2C": [
+   "antseg_v10::conjunctival epithelial cell",
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "TFF1": [
+   "antseg_v10::goblet cell"
+  ],
+  "TGFB1": [
+   "antseg_v10::corneal endothelial cell"
+  ],
+  "TGFBI": [
+   "membrane::Granulocyte"
+  ],
+  "THSD7B": [
+   "dev_v9::AC_precursor"
+  ],
+  "THY1": [
+   "membrane::Fibroblast",
+   "membrane::Pericyte"
+  ],
+  "TIMP1": [
+   "antseg_v10::progenitor cell",
+   "membrane::Granulocyte",
+   "membrane::Myofibroblast"
+  ],
+  "TIMP3": [
+   "antseg_v10::trabecular meshwork cell"
+  ],
+  "TJP1": [
+   "antseg_v10::basal cell",
+   "antseg_v10::corneal endothelial cell",
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::trabecular meshwork cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "TM4SF1": [
+   "membrane::Endo",
+   "retina_v7::Endo"
+  ],
+  "TMEM108": [
+   "dev_v9::Cone_precursor",
+   "dev_v9::Rod_precursor"
+  ],
+  "TMEM119": [
+   "membrane::Microglia",
+   "retina_v6::Microglia",
+   "retina_v7::Microglia"
+  ],
+  "TMEM132C": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "TMEM132D": [
+   "retina_interneuron::AC"
+  ],
+  "TMEM196": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "TMEM215": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "TMEM244": [
+   "dev_v9::Rod_precursor"
+  ],
+  "TMEM54": [
+   "antseg_v10::conjunctival epithelial cell"
+  ],
+  "TMPRSS2": [
+   "antseg_v10::conjunctival epithelial cell"
+  ],
+  "TMPRSS4": [
+   "antseg_v10::conjunctival epithelial cell"
+  ],
+  "TNC": [
+   "antseg_v10::lens epithelial cell",
+   "lensiris_v11::anterior lens cell",
+   "retina_v6::Astro"
+  ],
+  "TNFRSF17": [
+   "membrane::Plasma"
+  ],
+  "TNR": [
+   "dev_v9::HC_precursor",
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "TOP2A": [
+   "antseg_v10::transit amplifying cell",
+   "dev_v8::Retinal_Proliferating",
+   "dev_v9::Retinal_Proliferating",
+   "membrane::Proliferating"
+  ],
+  "TP63": [
+   "antseg_v10::basal cell",
+   "antseg_v10::corneal epithelial cell",
+   "antseg_v10::progenitor cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "TPM1": [
+   "antseg_v10::lens epithelial cell",
+   "lensiris_v11::anterior lens cell",
+   "membrane::Myofibroblast"
+  ],
+  "TPM2": [
+   "membrane::Myofibroblast"
+  ],
+  "TPM3": [
+   "dev_v9::HC_precursor",
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "TPSAB1": [
+   "antseg_v10::mast cell"
+  ],
+  "TPSB2": [
+   "antseg_v10::mast cell"
+  ],
+  "TRAC": [
+   "membrane::T"
+  ],
+  "TRBC2": [
+   "membrane::T"
+  ],
+  "TREM2": [
+   "membrane::Mac_DAM_LAM",
+   "retina_v7::Mac_DAM_LAM"
+  ],
+  "TRIM29": [
+   "antseg_v10::conjunctival epithelial cell",
+   "antseg_v10::goblet cell"
+  ],
+  "TRPM1": [
+   "k9_ocs::Melanocyte",
+   "lensiris_v11::pigmented epithelial cell",
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "TTK": [
+   "dev_v8::Retinal_Proliferating",
+   "dev_v9::Retinal_Proliferating"
+  ],
+  "TTR": [
+   "retina::RPE",
+   "retina_interneuron::RPE",
+   "retina_v6::RPE"
+  ],
+  "TUBB3": [
+   "dev_v8::RGC_precursor",
+   "dev_v9::RGC_precursor"
+  ],
+  "TYMS": [
+   "dev_v8::Retinal_Proliferating",
+   "dev_v9::Retinal_Proliferating"
+  ],
+  "TYR": [
+   "antseg_v10::pigmented ciliary epithelial cell",
+   "k9_ocs::Melanocyte",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "TYROBP": [
+   "membrane::Microglia",
+   "retina_v6::Microglia",
+   "retina_v7::Microglia"
+  ],
+  "TYRP1": [
+   "k9_ocs::Melanocyte",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "UBE2C": [
+   "dev_v8::Retinal_Proliferating",
+   "dev_v9::Retinal_Proliferating"
+  ],
+  "UCHL1": [
+   "antseg_v10::lens fiber cell",
+   "lensiris_v11::secondary lens fiber",
+   "retina_v6::RGC"
+  ],
+  "USH2A": [
+   "dev_v9::Rod_precursor"
+  ],
+  "VAT1L": [
+   "retina_interneuron::HC",
+   "retina_v6::HC"
+  ],
+  "VCAM1": [
+   "membrane::Endo_Patho",
+   "retina_v7::Endo_Patho"
+  ],
+  "VCAN": [
+   "membrane::Mono_Classical"
+  ],
+  "VIM": [
+   "dev_v8::RPC_early",
+   "dev_v8::RPC_late",
+   "dev_v9::NRPC_late",
+   "dev_v9::RPC_late",
+   "retina::Astro",
+   "retina::MG",
+   "retina_interneuron::Astro",
+   "retina_interneuron::MG"
+  ],
+  "VIT": [
+   "antseg_v10::basal cell",
+   "antseg_v10::transit amplifying cell"
+  ],
+  "VSIG4": [
+   "membrane::Mac_Tissue",
+   "retina_v7::Macrophage"
+  ],
+  "VSX1": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "VSX2": [
+   "retina::BC",
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "VWF": [
+   "membrane::Endo",
+   "retina_v7::Endo"
+  ],
+  "WDR72": [
+   "dev_v9::NRPC_early"
+  ],
+  "WFDC1": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ],
+  "WFDC2": [
+   "antseg_v10::conjunctival epithelial cell"
+  ],
+  "WWC1": [
+   "dev_v9::Cone_precursor"
+  ],
+  "XBP1": [
+   "membrane::Plasma"
+  ],
+  "XCR1": [
+   "membrane::cDC1"
+  ],
+  "ZBTB46": [
+   "membrane::cDC1"
+  ],
+  "ZC3H12C": [
+   "dev_v9::NRPC_early"
+  ],
+  "ZEB1": [
+   "antseg_v10::corneal endothelial cell",
+   "dev_v9::NRPC_early",
+   "dev_v9::NRPC_late",
+   "dev_v9::RPC_early",
+   "dev_v9::RPC_late"
+  ],
+  "ZFPM2": [
+   "retina_interneuron::AC",
+   "retina_v6::AC"
+  ],
+  "ZIC1": [
+   "antseg_v10::iris pigment epithelial cell",
+   "antseg_v10::non-pigmented ciliary epithelial cell",
+   "lensiris_v11::pigmented epithelial cell"
+  ],
+  "ZIC2": [
+   "antseg_v10::non-pigmented ciliary epithelial cell"
+  ],
+  "ZNF423": [
+   "dev_v9::AC_precursor"
+  ],
+  "ZNF804A": [
+   "retina_interneuron::AC"
+  ],
+  "ZNF804B": [
+   "retina_interneuron::BC",
+   "retina_v6::BC"
+  ]
+ },
+ "target_phrases": {
+  "rod": "rod",
+  "cone": "cone",
+  "retinal progenitor cell": "retinal progenitor",
+  "progenitor": "progenitor",
+  "photoreceptor": "photoreceptor"
+ },
+ "match_rule": "standalone uppercase token [A-Za-z][A-Za-z0-9-]{1,14}, case-sensitive; same rule as upstream card L2's b0_corpus_index.py"
+}

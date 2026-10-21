@@ -1,0 +1,9 @@
+[gate B] PASS  rules=7 fail=0
+  PASS B1 NODE_TERM     nodes=60
+  PASS B2 INBOUND       edges=34 roots=44 (accounted 44)
+  PASS B3 ACYCLIC       develops_from nodes=7 edges=9
+  PASS B4 STAGE_AXIS    developing nodes=12 stage-crossing edges=31 adult-baseline keys checked=78
+  PASS B5 MARKER_TRACE  marker rows=100 corpus-supported=100
+  PASS B6 NO_EVAL_LEAK  forbidden tokens checked=29 over 6 files
+  PASS B7 REPLAY        manifest entries=32
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GATE_B.json
