@@ -1,0 +1,51 @@
+Card t_19831068 -- local commit, not pushed
+===========================================
+
+Fix commit
+----------
+commit   435bb9226e4ba8648db39fdf390c3e0857b70d97
+subject  shipped surface: resolve the development_stage literal, and re-record the
+         tool panel against the documented signatures
+date     2026-10-22 02:14:35 +0800
+base     954aeae3656541a6af285452c17c613ab539d5de
+
+Revert path: `git revert 435bb92` restores the pre-change blobs exactly, because the
+pre-change state of every changed file is the committed blob at 954aeae -- including
+the previous tool-panel recording and the previous probe. The record-only commit that
+carries this file is the one after the fix commit in `git log`; it changes no delivery
+byte.
+
+Re-entry verification (attempt 4 of this card)
+----------------------------------------------
+This card's third attempt was interrupted during its final API call after the fix and
+the bookkeeping had been written into the work tree, but before anything was
+committed: HEAD was still 954aeae and no commit for this card existed. Attempt 4
+therefore re-measured the whole delivery from its own driver before committing it,
+rather than inheriting the readings this card had retained:
+
+  driver   /mnt/D/EyeKB/plans/shipped_surface_20261022/verify_t_19831068/verify_live.py
+  verdict  .../verify_verdict.py  ->  .../v7_verdict.log   (22 checks, ALL PASS, rc=0)
+  trees    52 calls each against a400315, 954aeae and this work tree (git archive)
+
+Independently reproduced there, from committed bytes: the pre-change `organoid`
+answer equals the adult answer and equals `53a3565cc92b8eca6462f24d6b77b10d`; the
+adult answer is still `53a3565c...` after the change while `organoid` moves to
+`5eb047fe0cef...`; no unrecognised literal is answered with the adult composition and
+each carries a `stage_literal` block; 24 of 42 (pair, literal) answers changed; no
+stage-free answer moved (10 calls compared); a400315 refuses 4/4 of the recorded
+spellings and accepts 4/4 of the documented ones, which by itself settles defect 1 as
+a stale panel rather than a wrong interface; the probe passes with zero refused calls
+and both digests equal the recorded ones; and these live digests reproduce this
+card's retained pre and post dumps call for call (47 compared each, 0 disagreements).
+
+Gate battery re-run in the committed state is recorded in the card's closeout
+comment: panel probe IDENTITY PASS rc=0, `sha256sum -c docs/W3_MANIFEST.sha256`
+4/4 OK, `tests/gate_registry.py` (G5) rc=0, `tests/gate_change_control.py` (G6) rc=0,
+`c3_acceptance.py` FAIL=0 over 42 rows and `g1_numbers.py` regenerating both frozen
+tables byte-identically.
+
+Note on placement. The re-entry driver, its two live dumps per tree and its logs are
+not committed: they are additional evidence produced after the frozen numbers were
+taken, and the declared local evidence root is where this card keeps evidence that the
+report itself does not need to carry. They live under
+`/mnt/D/EyeKB/plans/shipped_surface_20261022/verify_t_19831068/`.
