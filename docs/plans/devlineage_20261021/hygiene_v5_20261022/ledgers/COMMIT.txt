@@ -1,0 +1,21 @@
+local commit: d93045d78cb23653ab2cbced033601f01d72a57f
+  "lineage hygiene: fix the upstream transition table at the root, reconcile the two panel copies,
+   re-point the marker layer at the scaffold, and report the evaluation-basis finding"
+  not pushed. It carries the whole wave (92 files) under
+  docs/plans/devlineage_20261021/hygiene_v5_20261022/ and the re-taken release identity
+  (docs/RELEASE_IDENTITY.json, release_id f53dcf8bf733).
+
+what it changed outside its own wave:
+  plans/cl_depth_devlineage_20261021/scripts/b1_build_lineage.py   one line: the child-panel
+    membership column is computed rather than hardcoded (the data volume, not the repository)
+  plans/cl_depth_devlineage_20261021/out/LINEAGE_MARKER_TRANSITIONS.tsv  regenerated, 90 rows
+  plans/cl_depth_devlineage_20261021/out/MANIFEST.sha256  the row for that table
+  nothing under kb/ was written; no panel body was changed; nothing was activated.
+
+follow-up commit: this file is added by the next commit in the same wave, which re-takes the
+release identity again because it changes the tracked tree.
+
+re-entry verification:
+  bash scripts/run_all.sh                      # 12/12 PASS in the author tree, ~38 s
+  bash scripts/w5_07_clone_check.sh            # the gate re-run inside a git clone, from_commit
+  python3 scripts/w5_06_gate.py --no-replay    # re-reads the clone-check record (check G12)
