@@ -144,13 +144,17 @@ def main():
             # Two-tier matcher: strict (whole normalised label) and loose (each underscore-separated
             # word of >=5 chars). A loose hit counts as "mentioned" but is flagged, because a naming
             # variant (Mono_Classical vs "monocyte") is a real link while a substring accident is not.
-            strict_tok = _norm(cls)
-            loose_toks = [t for t in (_norm(w) for w in re.split(r"[_\s]+", cls)) if len(t) >= 5]
+            # Word-boundary matching, because a bare substring test on a short label is noise:
+            # "AC" matched any page containing those two letters, which is most of them.
+            phrase = cls.replace("_", " ").lower()
+            strict_re = re.compile(r"(?<![a-z0-9])" + re.escape(phrase) + r"(?![a-z0-9])")
+            loose_res = [re.compile(r"(?<![a-z0-9])" + re.escape(w.lower()) + r"(?![a-z0-9])")
+                         for w in re.split(r"[_\s]+", cls) if len(w) >= 5]
             hits, loose_only = [], []
             for rel, txt in wiki.items():
-                if strict_tok and strict_tok in txt:
+                if strict_re.search(txt):
                     hits.append(str(rel))
-                elif any(t in txt for t in loose_toks):
+                elif any(rx.search(txt) for rx in loose_res):
                     loose_only.append(str(rel))
             if not hits and loose_only:
                 hits = loose_only[:4]
