@@ -98,28 +98,48 @@ def main():
                 continue
             genes = [g for g in genes if isinstance(g, str)]
             # --- in-corpus citations -------------------------------------
-            pmids, cites = [], []
-            try:
-                res = core.search_literature(cell_type=cls, species="human", top_k=8)
-                for hit in (res or {}).get("results", []):
+            # Two passes: the generic label query finds the atlas or review papers that discuss this cell
+            # type; a gene-anchored query finds papers that actually mention the marker genes we use
+            # to identify it. Hits whose marker_genes intersect our panel are marked as such and
+            # ranked first, because "this paper mentions RPE65" is a stronger trail than "this paper
+            # is about RPE".
+            panel = {g.upper() for g in genes[:6]}
+            pmids, cites, seen = [], [], set()
+
+            def _collect(hits, gene_match):
+                for hit in hits:
                     pmid = str(hit.get("pmid") or hit.get("paper_id") or "")
-                    if not pmid:
+                    if not pmid or pmid in seen:
                         continue
-                    pmids.append(pmid)
+                    seen.add(pmid)
                     tl = hit.get("tissue_labels") or []
+                    mg = [g for g in (hit.get("marker_genes") or [])]
+                    overlap = sorted(panel & {str(g).upper() for g in mg})
+                    pmids.append(pmid)
                     cites.append({
                         "pmid": pmid,
                         "title": (hit.get("title") or "")[:120],
                         "journal": hit.get("journal", ""),
                         "year": hit.get("year", ""),
                         "tissues": ",".join(tl) if isinstance(tl, list) else str(tl),
-                        "marker_genes": ",".join(hit.get("marker_genes") or []),
+                        "marker_genes": ",".join(mg),
+                        "gene_match": bool(overlap) if gene_match else False,
+                        "matched_panel_genes": overlap,
                         "relevance": hit.get("relevance_score"),
                         "chunk": (hit.get("snippet") or "")[:200],
                     })
+
+            try:
+                res = core.search_literature(cell_type=cls, species="human", top_k=10)
+                _collect((res or {}).get("results", []), False)
+                q = f"{cls} marker genes {' '.join(genes[:6])}"
+                res2 = core.search_literature(cell_type=cls, species="human", top_k=10, query=q)
+                _collect((res2 or {}).get("results", []), True)
             except Exception as exc:                                  # noqa: BLE001
                 cites = []
                 rows.append({"error": f"{cls}: {exc}"})
+            cites.sort(key=lambda c: (not c["gene_match"], -(c.get("relevance") or 0)))
+            n_gene = sum(1 for c in cites if c["gene_match"])
             # --- wiki link ----------------------------------------------
             # Two-tier matcher: strict (whole normalised label) and loose (each underscore-separated
             # word of >=5 chars). A loose hit counts as "mentioned" but is flagged, because a naming
@@ -149,13 +169,15 @@ def main():
                 "cell_type": cls,
                 "n_genes": len(genes),
                 "genes_top": genes[:8],
-                "kb_file": str(lib_path),
+                "kb_file": str(lib_path.relative_to(ROOT)) if str(lib_path).startswith(str(ROOT)) else lib_path.name,
                 "wiki_pages": hits[:4],
                 "n_wiki_pages": len(hits),
                 "wiki_match_kind": wiki_match_kind,
                 "pmids": pmids,
                 "n_pmids": len(pmids),
                 "citations": cites,
+                "n_citations": len(cites),
+                "n_gene_matched": n_gene,
                 "book_anchors": anchors[:4],
                 "mcp_route": f"query_marker(cell_type='{cls}', library='{name}')",
                 "skill_trigger": "knowledge-guided-cell-annotation",
