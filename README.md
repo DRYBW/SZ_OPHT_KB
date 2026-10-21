@@ -228,9 +228,18 @@ An MCP client configuration for the same installation:
 
 `search_literature` is the one tool that needs the literature corpus, which is distributed
 separately because of its size (see the download section below); point `EYEKB_DB_DIR` at the
-unpacked directory to enable it. Installing from a clone (`pip install .`) registers the same
-`eyekb-mcp` command and is the right choice when you also want `pipeline/`, `evals/` and the
-reproduction checks.
+unpacked directory to enable it.
+
+The default installation is deliberately light and carries no model stack, so the four data tools
+work immediately. Add the retrieval extra when you want dense retrieval rather than the lexical
+fallback:
+
+```bash
+uvx --from "eyekb-mcp[retrieval] @ git+https://github.com/DRYBW/SZ_OPHT_KB.git" eyekb-mcp
+```
+
+Installing from a clone (`pip install .`) registers the same `eyekb-mcp` command and is the right
+choice when you also want `pipeline/`, `evals/` and the reproduction checks.
 
 ## 5-minute quickstart
 

@@ -27,12 +27,18 @@ classifiers = [
 ]
 dependencies = [
   "mcp>=1.26",
-  "sentence-transformers>=3",
-  "pyarrow",
-  "pandas",
   "numpy",
+  "pandas",
+  "pyarrow",
   "PyYAML>=6.0",
 ]
+
+[project.optional-dependencies]
+# The service starts without the embedding stack: retrieval then runs in lexical mode and says
+# so in its own output. Install this extra together with the literature corpus for the dense
+# retrieval mode. It is kept optional because the model stack is by far the largest part of the
+# installation.
+retrieval = ["sentence-transformers>=3"]
 
 [project.urls]
 Repository = "https://github.com/DRYBW/SZ_OPHT_KB"
