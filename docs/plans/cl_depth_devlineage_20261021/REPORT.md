@@ -332,4 +332,8 @@ python3 scripts/gate_lineage.py               # gate B alone (rc 0/2)
 | `out/MANIFEST.sha256` | sha256 of every delivered artefact (gate outputs excluded by construction) |
 | `ledgers/`, `logs/` | chain log, replay passes, net audit, resource readings, per-script stdout |
 
-Commit for this card: recorded in the completion handoff (local commit only, nothing pushed).
+Commit for this card: `8492dd3adf1e281f5590e8c144053116613713af` (local only, nothing pushed).
+The commit is the review-layer mirror of this wave under `docs/plans/cl_depth_devlineage_20261021/`;
+the construction site remains `plans/cl_depth_devlineage_20261021/`. No file outside that directory
+was touched - `kb/`, `mcp_server/` and the shipped fixtures are unchanged, which is what makes the
+"default behaviour untouched" claim checkable by inspection as well as by replay.
