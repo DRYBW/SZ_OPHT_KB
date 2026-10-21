@@ -95,24 +95,21 @@ app = MCPServer(
 @app.tool()
 def search_literature(cell_type: str, top_k: int = 5, species: str = "",
                       tissue: str = "", query: str = "", db: str = "") -> dict:
-    """Search the ophthalmic literature library (RAG v2.0 by default); returns literature
-    snippets + PMID + journal year + marker co-occurrence + relevance.
+    """Retrieve literature passages for a cell type / tissue from the bundled ophthalmic corpus.
+    Returns passage text, PMID, journal, year, the marker genes that co-occur, and a relevance
+    score. top_k controls how many passages come back (default 5).
 
-    cell_type: cell type (e.g. "Muller glia"/"corneal endothelium"), used for metadata
-    filtering; an empty string is accepted but providing one is recommended.
-    species: human|mouse|"" (no filter).
-    tissue: v2.0 multi-label tissue filter (retina/cornea/RPE/choroid/...).
-    query: explicit search sentence; if empty, a cell_type template sentence is used.
-    db: empty = v2.0_2026-09, or give an absolute path.
-    Chinese search sentences are routed through the query-rewrite layer before retrieval, which
-    inserts English anchor terms in place (2026-10-03; default ON since 2026-10-05):
-    switch = env var EYEKB_CN_REWRITE, read per call — unset = ON; 1/true/on/yes = ON;
-    0/off/false/no (and any unrecognised value) = OFF, the escape door, which restores
-    byte-identical pre-rewrite behaviour; only queries containing a CJK character enter the layer,
-    so English / numeric / symbolic search text is never modified and carries no extra key; with
-    the layer ON, a Chinese query's response attaches a rewrite_meta disclosure key (evidence
-    disclosure only, forbidden as input to any score/ranking). Tool signature and MCP schema
-    unchanged.
+    cell_type: metadata filter, e.g. "Muller glia" or "corneal endothelium". Recommended.
+    species:   human | mouse | "" (no filter).
+    tissue:    multi-label tissue filter, e.g. retina, cornea, RPE, choroid.
+    query:     your own search sentence; when empty, a template sentence is built from cell_type.
+    db:        empty = the bundled v2.0_2026-09 corpus, or an absolute path to another corpus.
+
+    Chinese questions are accepted. A deterministic term-level bridge inserts English anchor
+    terms in place without deleting any of your characters; it is not a translator. English,
+    numeric and symbolic queries pass through untouched. A Chinese query's response carries a
+    rewrite_meta key disclosing what was inserted -- disclosure only, it never affects ranking.
+    Set EYEKB_CN_REWRITE=0 to turn the bridge off.
     """
     resp = core.search_literature(
         cell_type, species=species or None, tissue=tissue or None,
@@ -124,13 +121,20 @@ def search_literature(cell_type: str, top_k: int = 5, species: str = "",
 
 
 @app.tool()
-def get_kb_page(scope: str, name: str = "") -> dict:
-    """Read raw VK literature index pages. scope=index → master catalog; scope=topic,
-    name=topic (e.g. vascular); scope=tissue, name=tissue (e.g. cornea/RPE/trabecular_meshwork).
-    Whitelist: only *.md under kb/vk_literature_index/; illegal paths are rejected and a list
-    of available pages is returned."""
-    resp = core.get_kb_page(scope, name)
-    calllog.trace("get_kb_page", {"scope": scope, "name": name}, resp)
+def get_kb_page(scope: str, name: str = "", summary: bool = False) -> dict:
+    """Read a knowledge-base page as shipped (markdown). Three page types:
+      scope="index"                 the master catalog of every page.
+      scope="topic",  name="..."    a topic page, e.g. vascular.
+      scope="tissue", name="..."    a tissue page, e.g. cornea, RPE, trabecular_meshwork.
+    scope is required; name is required for topic and tissue. An unknown or illegal path is
+    rejected, and the response lists the pages that do exist.
+
+    summary=true returns one row per page (title, scope, path, size in characters) instead of the
+    page text. The catalogue page runs to roughly 139,000 characters, so use summary when you only
+    need to see which pages exist before reading one. summary=false, the default, is unchanged.
+    """
+    resp = core.get_kb_page(scope, name, summary)
+    calllog.trace("get_kb_page", {"scope": scope, "name": name, "summary": summary}, resp)
     return resp
 
 
@@ -139,66 +143,32 @@ def query_marker(genes: list[str] | None = None, cell_type: str = "",
                  library: str = "all",
                  species: str = "", volume_id: str = "", volume_species: str = "",
                  tissue: str = "") -> dict:
-    """Query the local authoritative marker library (multi-library:
-    retina=markers_v4.1_clean.json v4.1-clean-P0.4;
-    membrane=markers_membrane_v1.json four panels membrane/vascular/stroma/immune, per-gene provenance;
-    retina_interneuron=markers_v5_retina_interneuron.json v5.0 (BC/AC/HC generic core+subtype anchors,
-    strict superset of v4.1; under library=all, same-named classes are listed alongside v4.1 under the
-    "retina_interneuron::<class>" alias);
-    retina_v6=markers_v6_retina_repair.json v6.0-retina-repair and face_v6=markers_v6_face_increment.json
-    v6.0-face (t_2e5e103a release / t_38b99a15 registration / t_5d5853c9 activation,
-    USER_DIRECTIVE_20260926 A1/A2): KB7 red-word repair panels — the default all includes them
-    (env EYEKB_ACT_V6=0|false|off|no reverts to the three active libraries, byte-equal to the
-    pre-activation baseline; same-named classes listed under the "retina_v6::/face_v6::<class>"
-    alias); the v6 release files themselves are read-only;
-    lacrimal_v6=markers_v6_lacrimal_increment.json v6.0-lacrimal (t_e7ec73ab KB8 release+registration
-    on the same card): the first ocular-adnexa entry library — lacrimal secretion/duct/myoepithelial
-    warning entries, 3 in total; PI A3 ruling: not switched for now, never in the default all in any
-    state, reachable only via explicit library=lacrimal_v6 queries;
-    k9_ocs=markers_k9_ocs_increment.json k9.0-ocs-registered-v1 (t_4bb75b26 KB9REG-EXEC registration,
-    PI D17 approval): KB9 plan-B ocular-surface 4 new entries (Melanocyte/Schwann/
-    Conj_epithelium_suprabasal/Limbus_Sclera_fibroblast_C1, all ocular_surface_only, each carrying
-    CL id + OLS corroboration + per-gene PMID links) — REGISTERED_DEFAULT_OFF: never in the default
-    all in any state, reachable only via explicit library=k9_ocs queries;
-    [KB9ACT t_abfebe59, PI 2026-09-30] current state ACTIVE_ON_DEFAULT: the default all includes
-    k9_ocs (the REGISTERED_DEFAULT_OFF above is the historical registration state); env
-    EYEKB_ACT_K9=0|false|off|no reverts to the five libraries.
-    Activation requires the §10-6 mandatory run + separate PI approval; the masking/assembly rule v2
-    sidecar _k9_ocs_rules_overlay_v1.json is inert data (not read by the MCP runtime)).
-    Give genes → which cell types the genes hit + class ranking (n_shared);
-    give cell_type → the marker list of that class (Micro/RPE attach detail; membrane classes attach
-    provenance);
-    give neither → return the class inventory. library=retina exactly reproduces the old P1 behavior.
-    First step of the annotation workflow: never go online before checking local.
-    Since t_d6f2a0a0: when a soft-review rule hits, the response body may attach soft_flags.notes
-    (rod_bc_review / mural_crosstalk) — optional review clues only, no new naming/abstention/exclusion
-    conditions, forbidden in scoring; env switch EYEKB_MCP_SOFTFLAGS=0|false|off|no disables the whole
-    feature (the key does not appear when off).
-    Since B5IMPL t_8960c7e0 (0.6-kbgov5, default ON): genes-mode attaches cross-species governance —
-    the response body adds input_species (mouse_confirmed|mouse_suspected|human_assumed, G1 frozen
-    threshold T=0.4); for mouse-derived input (confirmed∨suspected) the named ranking is cleared:
-    celltype_ranking=[], original entries fully moved to unranked_candidates + top-level
-    no_named_ranking_for='mouse_input' + species_evidence; entries with
-    shared_genes ⊆ {GLUL,VIM,CLU} attach no_naming_claim=true (ordering unchanged). Interpreters must
-    not use no_naming_claim/cross-species entries as the basis for identity naming (carried by
-    ANNOTATION_PROTOCOL). Env switch EYEKB_KBGOV_B5=0|false|off|no reverts to the byte-equal pre
-    baseline in the full state.
-    [SPECROUTE t_b9952795 · USER_DIRECTIVE_20261012 §三③] genes-mode species routing, three-source
-    priority: species (explicit param) > volume_species/volume_id (volume registry
-    kb/species_route/) > symbol morphology (evidence families E1 Gm/Rik + E2 non-identity
-    ortholog mouse-side symbols + E3 quorum gate; the case-convention channel is demoted to an
-    auxiliary band). Forced mouse path: celltype_ranking=[] + unranked_candidates +
-    no_named_ranking_for='mouse_input'; when no source can decide → species_unresolved=true +
-    species_review_required=true (never silently assume human). New keys: species_route /
-    species_source / species_evidence_detail (+ the two undetermined flags); existing key
-    values and ordering/entries are unchanged. Escape door EYEKB_SPECIES_ROUTE
-    ∈{1,true,on,yes}=ON (opt-in, inverted); unset/empty/other = OFF = the byte-exact pre-wiring
-    state. Criterion source = W2_SPROUTE/SPEC_SPECIES_ROUTING.md.
-    library=retina_v7 (KB10 t_50003494 registration): retina vascular/myeloid increment, 10
-    entries, REGISTERED_DEFAULT_OFF (explicit routing only); library=retina_dev (RW2
-    t_70f6340a / DEV-ACT t_f7d4985e): the v9.1 dev panel, 14 entries — on this surface it is
-    reachable via explicit library=retina_dev only (the dev-axis auto-merge is a D-side DEV-ACT
-    wiring, not part of this backflow)."""
+    """Look up the local marker library. Three ways to call it.
+    genes=[...]      -> which cell types those genes point to, with n_shared = how many of your
+                        genes each candidate shares; the ranking is the answer.
+    cell_type="..."  -> that class's authoritative marker list.
+    neither          -> the class inventory.
+
+    library: "all" (default) searches every active library; pass one name to restrict to it:
+    retina, retina_interneuron, retina_v6, face_v6, membrane, k9_ocs, retina_v7, retina_dev,
+    lacrimal_v6. library="retina" reproduces the original single-library behaviour exactly.
+
+    Species routing (genes mode). The species is decided from `species` first, then from
+    volume_species / volume_id, then from gene-symbol morphology. Mouse-derived input never gets
+    a named ranking: celltype_ranking is emptied, the entries move to unranked_candidates, and
+    no_named_ranking_for="mouse_input" records why. If no source can decide, the response sets
+    species_unresolved and species_review_required -- the service never silently assumes human.
+
+    Things the response tells you, and how to read them:
+      soft_flags.notes   optional review clues (rod_bc_review, mural_crosstalk). Clues only:
+                         they change no name, no abstention and no exclusion.
+      state_annotations  cell-state / program terms, kept apart from identity classes.
+      no_naming_claim    entries whose shared genes are all housekeeping-like (GLUL, VIM, CLU).
+                         Ordering is unchanged, but do not name a cell type from these alone.
+
+    Check locally first: this is the first step of the annotation workflow, before any online
+    literature search.
+    """
     resp = core.query_marker(genes=genes, cell_type=cell_type or None,
                              library=library or "all",
                              species=species or None, volume_id=volume_id or None,
@@ -216,21 +186,25 @@ def query_marker(genes: list[str] | None = None, cell_type: str = "",
 @app.tool()
 def get_tissue_composition(species: str, tissue: str, disease: str = "",
                            development_stage: str = "") -> dict:
-    """Composition baseline (interpretation layer): cell composition list + proportion
-    intervals + per-entry provenance (PMID/dataset + evidence level) for this species and
-    tissue.
-    species=human|mouse; tissue=retina|fibrovascular_membrane|...; disease optional (e.g.
-    'proliferative diabetic'). Call this tool before annotation to contrast "what the tissue
-    should contain, and roughly how much"; out-of-interval components → per flags judge
-    expected/unexpected/contamination-suspect and raise a flag.
-    development_stage (KB2c developmental axis, mind that it is required): empty/adult = the
-    adult master file (adult-only, donor>=18y; the donor-level distribution has non-adult
-    donors removed, row by row in the returned stage_disclosure/excluded_nonadult_units);
-    fetal|developing = returns the transition-state concept entry — the adult bucket must not
-    answer fetal questions by proxy (PI red line, even for the same tissue);
-    unknown = only entries in disclosure files without an age column (e.g. GSE158629 RPE).
-    Red line: contrast and QC flags only; feeding into any scoring is forbidden; the mixed-
-    caliber v1.0 old numbers may only carry the adult_pool contrast-file identity."""
+    """Expected cell composition for a species x tissue: per-cell-type proportion intervals, plus
+    per-row provenance (PMID / dataset and evidence grade).
+
+    species: human | mouse.
+    tissue:  retina | fibrovascular_membrane | ... (the response reports what is covered).
+    disease: optional, e.g. "proliferative diabetic"; empty = normal tissue.
+    development_stage: empty = the adult baseline (donors 18y+, non-adult donors removed row by
+      row and listed in stage_disclosure / excluded_nonadult_units). "fetal" or "developing"
+      returns the developmental transition entry instead -- adult numbers must not answer a
+      fetal question, even for the same tissue. "unknown" = only entries whose disclosure files
+      carry no age column.
+
+    How to read it: these are reference intervals, not acceptance thresholds. A proportion
+    clearly outside its interval raises an advisory flag for you to revisit -- it can be a
+    sampling difference, an enrichment protocol, or an annotation error. Contrast and QC only:
+    never feed these numbers into scoring.
+
+    Call this before annotating, to fix what the tissue should contain and roughly how much.
+    """
     resp = core.get_tissue_composition(species, tissue, disease, development_stage)
     calllog.trace("get_tissue_composition",
                   {"species": species, "tissue": tissue, "disease": disease,
@@ -240,12 +214,16 @@ def get_tissue_composition(species: str, tissue: str, disease: str = "",
 
 @app.tool()
 def get_disease_prior(disease: str, tissue: str = "") -> dict:
-    """Disease prior (interpretation layer): expected cell×status matrix + unexpected flags +
-    contamination flags + marker signature + provenance.
-    disease='PDR'/'proliferative diabetic retinopathy'/... (aliases built in); tissue
-    optionally filters the tissue side (fibrovascular_membrane/vitreous/retina_adjacent).
-    Prior ≠ truth: when it clashes with the data → output the clash list and escalate; do not
-    force a fit; feeding into any scoring is forbidden."""
+    """Disease x tissue background layer: the expected cell-type x status matrix, flags for
+    unexpected and contamination-suspect populations, marker signatures, and provenance.
+
+    disease: built-in aliases, e.g. "PDR" or "proliferative diabetic retinopathy".
+    tissue:  optional filter, e.g. fibrovascular_membrane, vitreous, retina_adjacent.
+
+    How to read it: a prior is not truth. When the data and the prior clash, the response returns
+    the clash list for you to adjudicate. Do not force a fit, and do not feed the prior into
+    scoring.
+    """
     resp = core.get_disease_prior(disease, tissue)
     calllog.trace("get_disease_prior", {"disease": disease, "tissue": tissue}, resp)
     return resp

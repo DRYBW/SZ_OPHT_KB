@@ -296,7 +296,26 @@ One boundary travels with the service into every client: the evidence returned i
 | `query_marker` | Give a gene set → the cell types it points to; or give a cell type → authoritative markers | "CD68, P2RY12, TMEM119 co-expression — what does that mean?" |
 | `get_tissue_composition` | Expected proportions of each cell type in normal eye tissue (donor-level statistics, every row citation-linked) | "Roughly what rod/cone ratio is expected in a normal human retina?" |
 | `get_disease_prior` | The disease × tissue background layer (cell-identity hierarchy, state axes, sampling-artifact cautions) | "Can a PDR epiretinal membrane sample be compared directly to a retina sample?" |
-| `get_kb_page` | Read knowledge-base pages as-is (index / topic / tissue page types) | "Open the microglia entry" |
+| `get_kb_page` | Read knowledge-base pages as-is (index / topic / tissue page types) | "Show me the retina tissue page" |
+
+Those are natural-language questions, not literal argument names. Below are the exact signatures,
+including which arguments are required and what values they accept — an agent calling a tool needs
+this list, because a missing required argument is rejected before the tool runs.
+
+| Tool | Required | Optional (accepted values) |
+|---|---|---|
+| `search_literature` | `cell_type` | `top_k` (int, default 5) · `species` (`human`/`mouse`/`""`) · `tissue` (e.g. `retina`, `cornea`, `RPE`, `choroid`) · `query` (your own sentence) · `db` |
+| `query_marker` | none | `genes` (list) or `cell_type`, at least one for an answer · `library` (`all` default, or `retina`, `retina_interneuron`, `retina_v6`, `face_v6`, `membrane`, `k9_ocs`, `retina_v7`, `retina_dev`, `lacrimal_v6`) · `species` (`human`/`mouse`) · `volume_id` · `volume_species` · `tissue` |
+| `get_tissue_composition` | `species`, `tissue` | `disease` · `development_stage` (`""` adult / `fetal` / `developing` / `unknown`) |
+| `get_disease_prior` | `disease` | `tissue` (e.g. `fibrovascular_membrane`, `vitreous`, `retina_adjacent`) |
+| `get_kb_page` | `scope` | `name` (required for `scope=topic` and `scope=tissue`) · `summary` (bool, default `false`) |
+
+`scope` accepts exactly three values: `index` (the master catalogue), `topic` (then `name`, e.g.
+`vascular`), `tissue` (then `name`, e.g. `retina`, `cornea`, `RPE`, `trabecular_meshwork`).
+Calling `get_kb_page` with no `scope` is rejected.
+
+The catalogue page is large. Pass `summary=true` to get each page's title, path and size instead of
+the full text — useful when you want to see what exists before reading anything.
 
 ### Chinese queries and the rewrite layer
 

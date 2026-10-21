@@ -130,14 +130,49 @@ def list_kb_pages():
     return out
 
 
-def get_kb_page(scope, name=""):
+def _first_heading(path):
+    """First markdown heading of a page, used only by the summary view."""
+    try:
+        with open(path, "r", encoding="utf-8") as fh:
+            for line in fh:
+                s = line.strip()
+                if s.startswith("#"):
+                    return s.lstrip("#").strip()
+                if s:
+                    return s[:80]
+    except OSError:
+        return None
+    return None
+
+
+def get_kb_page(scope, name="", summary=False):
     """Read raw VK index pages. Whitelist anti-traversal:
     - only *.md inside kb/vk_literature_index/ allowed
     - name allows only [A-Za-z0-9_-]; after resolution the realpath must still be inside the
       whitelisted directory
+
+    summary=True returns the page inventory (one row per page: title, path, size) instead of the
+    full text. The catalogue page runs to ~139k characters, which is more than a caller usually
+    wants when it only needs to see what exists. summary only reshapes the response; it never
+    changes which pages are visible or how they are addressed, and the default path
+    (summary=False) is byte-identical to before.
     """
     scope = (scope or "").strip().lower()
     name = (name or "").strip()
+    if summary:
+        rows = []
+        for p in list_kb_pages():
+            fname = p["file"] if isinstance(p, dict) else os.path.basename(str(p))
+            f = (VK_DIR / fname).resolve()
+            ok = f.is_file()
+            rows.append({
+                "page": p.get("page") if isinstance(p, dict) else fname,
+                "scope": p.get("scope") if isinstance(p, dict) else None,
+                "exists": ok,
+                "chars": f.stat().st_size if ok else None,
+                "title": _first_heading(f) if ok else None,
+            })
+        return {"scope": "summary", "n_pages": len(rows), "pages": rows}
     if scope == "index":
         fname = "INDEX.md"
     elif scope == "topic":
