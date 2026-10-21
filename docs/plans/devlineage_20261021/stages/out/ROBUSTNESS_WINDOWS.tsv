@@ -1,0 +1,23 @@
+wid	lineage_id	window_source	entry	n_genes	dev_best	dev_terms	advisory_fired	top1	top1_n_shared	top1_is_adult_counterpart	ranking_empty	genes
+rod.Rod_precursor.v9K5	rod	v9 panel (narrower)	Rod_precursor	5	5	Rod_precursor	Y	Rod	2	Y	N	RCVRN AIPL1 NRL NR2E3 RP1
+cone.Cone_precursor.v9K5	cone	v9 panel (narrower)	Cone_precursor	5	5	Cone_precursor	Y	BC	1	N	N	OTX2 DCT PRDM1 EYS ROBO2
+cone.Cone_precursor.mature_filtered	cone	genes this build removed as mature markers	Cone_precursor	11	0		N	retina_interneuron::BC	1	N	N	AGAP1 CADPS DPP10 FMN1 FSTL5 MCC NCKAP5 PDE1C SEMA6D SLC35F3 THRB
+ac.AC_precursor.v9K5	ac	v9 panel (narrower)	AC_precursor	5	5	AC_precursor	Y	pDC	1	N	N	TCF4 HIF1A NRP1 ST18 PLXNA2
+ac.AC_precursor.mature_filtered	ac	genes this build removed as mature markers	AC_precursor	12	0		N	retina_interneuron::AC	2	N	N	ARHGAP44 DAB1 DPP6 EBF1 GRIK2 MYT1L NRXN3 PDE4D PHACTR1 RUNX1T1 TMTC2 ZNF804A
+hc.HC_precursor.v9K5	hc	v9 panel (narrower)	HC_precursor	5	5	HC_precursor	Y	retina_interneuron::HC	3	N	N	PROX1 ONECUT1 ONECUT2 NTRK2 ONECUT3
+hc.HC_precursor.mature_filtered	hc	genes this build removed as mature markers	HC_precursor	15	0		N	retina_interneuron::BC	1	N	N	ADARB2 AFF3 CNTN4 CSMD1 MAGI2 MEGF10 NDST3 NKAIN2 NRXN3 PTPRD RASGEF1B RUNX1T1 TFAP2B THSD7A ZEB2
+rgc.RGC_precursor.v9K5	rgc	v9 panel (narrower)	RGC_precursor	5	5	RGC_precursor	Y	BC	1	N	N	GAP43 ELAVL4 ISL1 TUBB3 DCC
+rgc.RGC_precursor.v8	rgc	v8 panel build	RGC_precursor	4	2	RGC_precursor	Y	BC	1	N	N	ATOH7 POU4F1 ISL1 TUBB3
+rgc.RGC_precursor.mature_filtered	rgc	genes this build removed as mature markers	RGC_precursor	18	0		N	RGC	2	Y	N	ANK2 CA10 CCSER1 DSCAM EBF1 EBF3 EPHA6 FSTL4 LAMA4 NEFM NRG1 POU6F2 RBFOX3 RBPMS SLC17A6 SLIT2 SOX6 TFAP2B
+progenitor_rpc_early.RPC_early.v9K5	progenitor_rpc_early	v9 panel (narrower)	RPC_early	5	5	RPC_early	Y			N	Y	FOXP2 CRB1 RORB PTPRZ1 COL4A2
+progenitor_rpc_early.RPC_early.v8	progenitor_rpc_early	v8 panel build	RPC_early	9	2	RPC_late	N	MG	2	N	N	SOX2 HES5 PROM1 LIN28A VIM NES SOX9 CRABP2 NOTCH1
+progenitor_rpc_early.RPC_early.mature_filtered	progenitor_rpc_early	genes this build removed as mature markers	RPC_early	8	0		N	retina_interneuron::BC	2	N	N	MCC NFIA RELN SFRP2 TFAP2B THRB TRPM3 ZEB2
+progenitor_rpc_late.RPC_late.v9K5	progenitor_rpc_late	v9 panel (narrower)	RPC_late	5	5	RPC_late	Y			N	Y	GLI3 FOXP2 LGR4 CRB1 EZH2
+progenitor_rpc_late.RPC_late.v8	progenitor_rpc_late	v8 panel build	RPC_late	7	1	NRPC_late;RPC_early;RPC_late	N	MG	2	N	N	SOX9 VIM NFIA GFAP PAX6 CDKN1B HES1
+progenitor_rpc_late.RPC_late.mature_filtered	progenitor_rpc_late	genes this build removed as mature markers	RPC_late	14	0		N	Endo	2	N	N	CLU DKK3 FLT1 KDR NFIA NFIB RLBP1 SFRP2 SLC1A3 TF TFAP2B TRPM3 WIF1 ZEB2
+progenitor_nrpc_early.NRPC_early.v9K5	progenitor_nrpc_early	v9 panel (narrower)	NRPC_early	5	5	NRPC_early	Y	pDC	1	N	N	TCF4 HES6 RORB CHD7 CKB
+progenitor_nrpc_early.NRPC_early.mature_filtered	progenitor_nrpc_early	genes this build removed as mature markers	NRPC_early	5	0		N	retina_interneuron::BC	1	N	N	FSTL5 MCC TFAP2B THRB ZEB2
+progenitor_nrpc_late.NRPC_late.v9K5	progenitor_nrpc_late	v9 panel (narrower)	NRPC_late	5	5	NRPC_late;RPC_late	Y	BC	1	N	N	VIM ZEB1 HES6 RORB OTX2
+progenitor_nrpc_late.NRPC_late.mature_filtered	progenitor_nrpc_late	genes this build removed as mature markers	NRPC_late	13	0		N	Endo	2	N	N	CLU DKK3 FLT1 KDR NFIB RLBP1 SFRP2 SLC1A3 TF TFAP2B TRPM3 WIF1 ZEB2
+progenitor_cycling_state.Retinal_Proliferating.v9K5	progenitor_cycling_state	v9 panel (narrower)	Retinal_Proliferating	5	5	Retinal_Proliferating	Y			N	Y	PCNA MKI67 TOP2A UBE2C CCNB1
+progenitor_cycling_state.Retinal_Proliferating.v8	progenitor_cycling_state	v8 panel build	Retinal_Proliferating	10	10	Retinal_Proliferating	Y			N	Y	MKI67 TOP2A PCNA CCNB1 CCNA2 TYMS NUSAP1 BUB1 UBE2C TTK

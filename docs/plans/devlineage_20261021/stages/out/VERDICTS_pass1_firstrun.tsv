@@ -1,0 +1,16 @@
+lineage_id	verdict	reason_code	n_fetal_genes_supplied	fetal_top1	fetal_top1_n_shared	adult_top1	adult_top1_n_shared	dev_best_k10	dev_best_k25	dev_best_max	advisory_fired	rankings_identical	silent_adult_assignment	detail
+ac	observable_now	shipped_off_domain_advisory_fires_on_fetal_input	10	pDC	1	AC	5	10	18	18	Y	N	N	
+bc	needs_information_this_interface_cannot_observe	no_discriminating_gene_in_any_loaded_library_and_no_stage_channel	0			BC	5	0	0	0	N	N	N	
+cone	observable_now	shipped_off_domain_advisory_fires_on_fetal_input	10	BC	1	Cone	5	10	25	25	Y	N	Y	
+glia	needs_information_this_interface_cannot_observe	no_discriminating_gene_in_any_loaded_library_and_no_stage_channel	0			Astro	5	0	0	0	N	N	N	
+hc	observable_now	shipped_off_domain_advisory_fires_on_fetal_input	10	retina_interneuron::HC	5	HC	5	10	25	25	Y	N	N	
+progenitor_cycling_state	observable_now	shipped_off_domain_advisory_fires_on_fetal_input	10					10	10	10	Y	NA	N	
+progenitor_nrpc_early	observable_now	shipped_off_domain_advisory_fires_on_fetal_input	10	pDC	1			10	25	25	Y	NA	N	
+progenitor_nrpc_late	observable_now	shipped_off_domain_advisory_fires_on_fetal_input	10	BC	1			10	25	25	Y	NA	Y	
+progenitor_rpc_early	observable_now	shipped_off_domain_advisory_fires_on_fetal_input	10	pDC	1			10	25	25	Y	NA	N	
+progenitor_rpc_late	observable_now	shipped_off_domain_advisory_fires_on_fetal_input	10	MG	1			10	25	25	Y	NA	Y	
+progenitor_tac	observable_now	shipped_off_domain_advisory_fires_on_fetal_input	2	Schwann	1			2	2	2	Y	NA	N	
+rgc	observable_now	shipped_off_domain_advisory_fires_on_fetal_input	10	HC	2	RGC	5	10	17	17	Y	N	Y	
+rod	observable_now	shipped_off_domain_advisory_fires_on_fetal_input	10	Rod	2	Rod	5	10	25	25	Y	N	Y	
+rpe	needs_information_this_interface_cannot_observe	no_discriminating_gene_in_any_loaded_library_and_no_stage_channel	0			RPE	6	0	0	0	N	N	N	
+adult_only::Microglia	needs_information_this_interface_cannot_observe	no_precursor_entry_in_corpus	0			Micro	1	0	0	0	N	NA	NA	the adult class exists in the adult vocabulary but no fetal/precursor entry in the loaded corpus claims it, so no fetal window exists to supply

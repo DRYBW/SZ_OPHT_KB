@@ -1,0 +1,12 @@
+rule_id	name	meaning	n_real_candidates_rejected_by_this_rule	n_fixture_candidates_rejected_by_this_rule
+R1	anchor	the row carries no evidence anchor, or the anchor file is not on disk	0	1
+R2	stage provenance	the stage value comes from a derived keyword column, not from a source that observed the stage	40	0
+R3	single source	the two sides of the change come from two different studies/sources (snapshot differ)	247	2
+R4	species	the two sides are from different species	1	1
+R5	assay	the two sides are from different assays	0	1
+R6	condition	the two sides are from different conditions/experimental systems	247	2
+R7	step count	the direction would be propagated along a lineage of more than one step	2	0
+R8	identity / time direction	start or end identity, or the time direction, is not asserted by the source itself	287	6
+R9	grade	the evidence grade is missing or outside the contract's four values	0	1
+R10	off semantics	the change is `off` while the source only fails to mention the gene	218	0
+R11	numeric	a numeric effect value with no traceable extraction record	0	1

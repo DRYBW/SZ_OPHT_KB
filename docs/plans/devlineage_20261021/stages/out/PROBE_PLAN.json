@@ -1,0 +1,4389 @@
+{
+ "interpreter": "/home/ubuntu/training-venv/bin/python3",
+ "trace_tag": "devlineage-v3-stage-probe",
+ "k_windows": [
+  10,
+  25
+ ],
+ "plan": [
+  {
+   "lineage_id": "rod",
+   "side": "fetal",
+   "node_key": "dl:NO_MATCH:Rod_precursor|sp=human|ts=retina|st=fetal|es=in_vivo",
+   "entry_or_class": "Rod_precursor",
+   "stage": "fetal",
+   "full_set": [
+    "RCVRN",
+    "AIPL1",
+    "NRL",
+    "NR2E3",
+    "RP1",
+    "EYS",
+    "NTM",
+    "ADGRV1",
+    "MYO9A",
+    "PDC",
+    "ANO2",
+    "KIAA1217",
+    "EPB41L2",
+    "PTPN13",
+    "TMEM108",
+    "ANKRD33B",
+    "EPS8",
+    "KANK1",
+    "MARCHF1",
+    "TMEM244",
+    "OTX2",
+    "USH2A",
+    "BBS9",
+    "GPC6",
+    "BAZ2B"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00263",
+    "V3SA00244",
+    "V3SA00258",
+    "V3SA00257",
+    "V3SA00264",
+    "V3SA00251",
+    "V3SA00259",
+    "V3SA00243",
+    "V3SA00256",
+    "V3SA00261",
+    "V3SA00246",
+    "V3SA00254",
+    "V3SA00249",
+    "V3SA00262",
+    "V3SA00265",
+    "V3SA00245",
+    "V3SA00250",
+    "V3SA00253",
+    "V3SA00255",
+    "V3SA00266",
+    "V3SA00260",
+    "V3SA00267",
+    "V3SA00248",
+    "V3SA00252",
+    "V3SA00247"
+   ],
+   "adult_counterparts": [
+    "Rod"
+   ],
+   "windows": {
+    "10": [
+     "V3SA00263",
+     "V3SA00244",
+     "V3SA00258",
+     "V3SA00257",
+     "V3SA00264",
+     "V3SA00251",
+     "V3SA00259",
+     "V3SA00243",
+     "V3SA00256",
+     "V3SA00261"
+    ],
+    "25": [
+     "V3SA00263",
+     "V3SA00244",
+     "V3SA00258",
+     "V3SA00257",
+     "V3SA00264",
+     "V3SA00251",
+     "V3SA00259",
+     "V3SA00243",
+     "V3SA00256",
+     "V3SA00261",
+     "V3SA00246",
+     "V3SA00254",
+     "V3SA00249",
+     "V3SA00262",
+     "V3SA00265",
+     "V3SA00245",
+     "V3SA00250",
+     "V3SA00253",
+     "V3SA00255",
+     "V3SA00266",
+     "V3SA00260",
+     "V3SA00267",
+     "V3SA00248",
+     "V3SA00252",
+     "V3SA00247"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "RCVRN",
+     "AIPL1",
+     "NRL",
+     "NR2E3",
+     "RP1",
+     "EYS",
+     "NTM",
+     "ADGRV1",
+     "MYO9A",
+     "PDC"
+    ],
+    "25": [
+     "RCVRN",
+     "AIPL1",
+     "NRL",
+     "NR2E3",
+     "RP1",
+     "EYS",
+     "NTM",
+     "ADGRV1",
+     "MYO9A",
+     "PDC",
+     "ANO2",
+     "KIAA1217",
+     "EPB41L2",
+     "PTPN13",
+     "TMEM108",
+     "ANKRD33B",
+     "EPS8",
+     "KANK1",
+     "MARCHF1",
+     "TMEM244",
+     "OTX2",
+     "USH2A",
+     "BBS9",
+     "GPC6",
+     "BAZ2B"
+    ]
+   }
+  },
+  {
+   "lineage_id": "cone",
+   "side": "fetal",
+   "node_key": "dl:NO_MATCH:Cone_precursor|sp=human|ts=retina|st=fetal|es=in_vivo",
+   "entry_or_class": "Cone_precursor",
+   "stage": "fetal",
+   "full_set": [
+    "OTX2",
+    "DCT",
+    "PRDM1",
+    "EYS",
+    "ROBO2",
+    "ADGRV1",
+    "CERKL",
+    "GPC6",
+    "MAML2",
+    "EGFLAM",
+    "TMEM108",
+    "MARCHF1",
+    "NEUROD1",
+    "ATG5",
+    "DYNC2H1",
+    "CADM2",
+    "CNTN1",
+    "LARGE1",
+    "ATP2B1",
+    "WWC1",
+    "GALNT13",
+    "NLK",
+    "PRKN",
+    "RASGRF2",
+    "SRRM4"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00083",
+    "V3SA00072",
+    "V3SA00084",
+    "V3SA00075",
+    "V3SA00087",
+    "V3SA00066",
+    "V3SA00070",
+    "V3SA00077",
+    "V3SA00079",
+    "V3SA00074",
+    "V3SA00089",
+    "V3SA00080",
+    "V3SA00081",
+    "V3SA00067",
+    "V3SA00073",
+    "V3SA00069",
+    "V3SA00071",
+    "V3SA00078",
+    "V3SA00068",
+    "V3SA00090",
+    "V3SA00076",
+    "V3SA00082",
+    "V3SA00085",
+    "V3SA00086",
+    "V3SA00088"
+   ],
+   "adult_counterparts": [
+    "Cone"
+   ],
+   "windows": {
+    "10": [
+     "V3SA00083",
+     "V3SA00072",
+     "V3SA00084",
+     "V3SA00075",
+     "V3SA00087",
+     "V3SA00066",
+     "V3SA00070",
+     "V3SA00077",
+     "V3SA00079",
+     "V3SA00074"
+    ],
+    "25": [
+     "V3SA00083",
+     "V3SA00072",
+     "V3SA00084",
+     "V3SA00075",
+     "V3SA00087",
+     "V3SA00066",
+     "V3SA00070",
+     "V3SA00077",
+     "V3SA00079",
+     "V3SA00074",
+     "V3SA00089",
+     "V3SA00080",
+     "V3SA00081",
+     "V3SA00067",
+     "V3SA00073",
+     "V3SA00069",
+     "V3SA00071",
+     "V3SA00078",
+     "V3SA00068",
+     "V3SA00090",
+     "V3SA00076",
+     "V3SA00082",
+     "V3SA00085",
+     "V3SA00086",
+     "V3SA00088"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "OTX2",
+     "DCT",
+     "PRDM1",
+     "EYS",
+     "ROBO2",
+     "ADGRV1",
+     "CERKL",
+     "GPC6",
+     "MAML2",
+     "EGFLAM"
+    ],
+    "25": [
+     "OTX2",
+     "DCT",
+     "PRDM1",
+     "EYS",
+     "ROBO2",
+     "ADGRV1",
+     "CERKL",
+     "GPC6",
+     "MAML2",
+     "EGFLAM",
+     "TMEM108",
+     "MARCHF1",
+     "NEUROD1",
+     "ATG5",
+     "DYNC2H1",
+     "CADM2",
+     "CNTN1",
+     "LARGE1",
+     "ATP2B1",
+     "WWC1",
+     "GALNT13",
+     "NLK",
+     "PRKN",
+     "RASGRF2",
+     "SRRM4"
+    ]
+   }
+  },
+  {
+   "lineage_id": "bc",
+   "side": "fetal",
+   "node_key": "dl:NO_MATCH:BC_precursor|sp=human|ts=retina|st=fetal|es=in_vivo",
+   "entry_or_class": "BC_precursor",
+   "stage": "fetal",
+   "full_set": [],
+   "full_set_assertion_ids": [],
+   "adult_counterparts": [
+    "BC"
+   ],
+   "windows": {
+    "10": [],
+    "25": []
+   },
+   "window_genes": {
+    "10": [],
+    "25": []
+   }
+  },
+  {
+   "lineage_id": "ac",
+   "side": "fetal",
+   "node_key": "dl:NO_MATCH:AC_precursor|sp=human|ts=retina|st=fetal|es=in_vivo",
+   "entry_or_class": "AC_precursor",
+   "stage": "fetal",
+   "full_set": [
+    "TCF4",
+    "HIF1A",
+    "NRP1",
+    "ST18",
+    "PLXNA2",
+    "KLF12",
+    "THSD7B",
+    "ZNF423",
+    "ANKS1B",
+    "HIF1A-AS3",
+    "LINC01619",
+    "NOL4",
+    "NWD2",
+    "SETBP1",
+    "SLCO5A1",
+    "SPATS2L",
+    "ST6GALNAC3",
+    "TANC1"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00063",
+    "V3SA00049",
+    "V3SA00054",
+    "V3SA00060",
+    "V3SA00056",
+    "V3SA00051",
+    "V3SA00064",
+    "V3SA00065",
+    "V3SA00048",
+    "V3SA00050",
+    "V3SA00052",
+    "V3SA00053",
+    "V3SA00055",
+    "V3SA00057",
+    "V3SA00058",
+    "V3SA00059",
+    "V3SA00061",
+    "V3SA00062"
+   ],
+   "adult_counterparts": [
+    "AC"
+   ],
+   "windows": {
+    "10": [
+     "V3SA00063",
+     "V3SA00049",
+     "V3SA00054",
+     "V3SA00060",
+     "V3SA00056",
+     "V3SA00051",
+     "V3SA00064",
+     "V3SA00065",
+     "V3SA00048",
+     "V3SA00050"
+    ],
+    "25": [
+     "V3SA00063",
+     "V3SA00049",
+     "V3SA00054",
+     "V3SA00060",
+     "V3SA00056",
+     "V3SA00051",
+     "V3SA00064",
+     "V3SA00065",
+     "V3SA00048",
+     "V3SA00050",
+     "V3SA00052",
+     "V3SA00053",
+     "V3SA00055",
+     "V3SA00057",
+     "V3SA00058",
+     "V3SA00059",
+     "V3SA00061",
+     "V3SA00062"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "TCF4",
+     "HIF1A",
+     "NRP1",
+     "ST18",
+     "PLXNA2",
+     "KLF12",
+     "THSD7B",
+     "ZNF423",
+     "ANKS1B",
+     "HIF1A-AS3"
+    ],
+    "25": [
+     "TCF4",
+     "HIF1A",
+     "NRP1",
+     "ST18",
+     "PLXNA2",
+     "KLF12",
+     "THSD7B",
+     "ZNF423",
+     "ANKS1B",
+     "HIF1A-AS3",
+     "LINC01619",
+     "NOL4",
+     "NWD2",
+     "SETBP1",
+     "SLCO5A1",
+     "SPATS2L",
+     "ST6GALNAC3",
+     "TANC1"
+    ]
+   }
+  },
+  {
+   "lineage_id": "hc",
+   "side": "fetal",
+   "node_key": "dl:NO_MATCH:HC_precursor|sp=human|ts=retina|st=fetal|es=in_vivo",
+   "entry_or_class": "HC_precursor",
+   "stage": "fetal",
+   "full_set": [
+    "PROX1",
+    "ONECUT1",
+    "ONECUT2",
+    "NTRK2",
+    "ONECUT3",
+    "SYN3",
+    "TPM3",
+    "LINC03051",
+    "MAGI1",
+    "PCSK6",
+    "TANC1",
+    "SOX4",
+    "GRIA4",
+    "ROBO1",
+    "AUTS2",
+    "LSAMP",
+    "MEGF11",
+    "PLXNA2",
+    "TNR",
+    "DOCK4",
+    "GRIA3",
+    "HECW1",
+    "ANKS1B",
+    "CACNG3",
+    "MIR124-2HG"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00109",
+    "V3SA00104",
+    "V3SA00105",
+    "V3SA00103",
+    "V3SA00106",
+    "V3SA00112",
+    "V3SA00115",
+    "V3SA00098",
+    "V3SA00100",
+    "V3SA00107",
+    "V3SA00113",
+    "V3SA00111",
+    "V3SA00096",
+    "V3SA00110",
+    "V3SA00092",
+    "V3SA00099",
+    "V3SA00101",
+    "V3SA00108",
+    "V3SA00114",
+    "V3SA00094",
+    "V3SA00095",
+    "V3SA00097",
+    "V3SA00091",
+    "V3SA00093",
+    "V3SA00102"
+   ],
+   "adult_counterparts": [
+    "HC"
+   ],
+   "windows": {
+    "10": [
+     "V3SA00109",
+     "V3SA00104",
+     "V3SA00105",
+     "V3SA00103",
+     "V3SA00106",
+     "V3SA00112",
+     "V3SA00115",
+     "V3SA00098",
+     "V3SA00100",
+     "V3SA00107"
+    ],
+    "25": [
+     "V3SA00109",
+     "V3SA00104",
+     "V3SA00105",
+     "V3SA00103",
+     "V3SA00106",
+     "V3SA00112",
+     "V3SA00115",
+     "V3SA00098",
+     "V3SA00100",
+     "V3SA00107",
+     "V3SA00113",
+     "V3SA00111",
+     "V3SA00096",
+     "V3SA00110",
+     "V3SA00092",
+     "V3SA00099",
+     "V3SA00101",
+     "V3SA00108",
+     "V3SA00114",
+     "V3SA00094",
+     "V3SA00095",
+     "V3SA00097",
+     "V3SA00091",
+     "V3SA00093",
+     "V3SA00102"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "PROX1",
+     "ONECUT1",
+     "ONECUT2",
+     "NTRK2",
+     "ONECUT3",
+     "SYN3",
+     "TPM3",
+     "LINC03051",
+     "MAGI1",
+     "PCSK6"
+    ],
+    "25": [
+     "PROX1",
+     "ONECUT1",
+     "ONECUT2",
+     "NTRK2",
+     "ONECUT3",
+     "SYN3",
+     "TPM3",
+     "LINC03051",
+     "MAGI1",
+     "PCSK6",
+     "TANC1",
+     "SOX4",
+     "GRIA4",
+     "ROBO1",
+     "AUTS2",
+     "LSAMP",
+     "MEGF11",
+     "PLXNA2",
+     "TNR",
+     "DOCK4",
+     "GRIA3",
+     "HECW1",
+     "ANKS1B",
+     "CACNG3",
+     "MIR124-2HG"
+    ]
+   }
+  },
+  {
+   "lineage_id": "rgc",
+   "side": "fetal",
+   "node_key": "dl:NO_MATCH:RGC_precursor|sp=human|ts=retina|st=fetal|es=in_vivo",
+   "entry_or_class": "RGC_precursor",
+   "stage": "fetal",
+   "full_set": [
+    "GAP43",
+    "ELAVL4",
+    "ISL1",
+    "TUBB3",
+    "DCC",
+    "STMN2",
+    "PRPH",
+    "CNTN2",
+    "PROX1",
+    "ONECUT1",
+    "ONECUT2",
+    "NRP1",
+    "CRABP1",
+    "ALCAM",
+    "PCDH15",
+    "NTRK2",
+    "EPHB1"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00172",
+    "V3SA00170",
+    "V3SA00173",
+    "V3SA00182",
+    "V3SA00169",
+    "V3SA00181",
+    "V3SA00180",
+    "V3SA00167",
+    "V3SA00179",
+    "V3SA00176",
+    "V3SA00177",
+    "V3SA00174",
+    "V3SA00168",
+    "V3SA00166",
+    "V3SA00178",
+    "V3SA00175",
+    "V3SA00171"
+   ],
+   "adult_counterparts": [
+    "RGC"
+   ],
+   "windows": {
+    "10": [
+     "V3SA00172",
+     "V3SA00170",
+     "V3SA00173",
+     "V3SA00182",
+     "V3SA00169",
+     "V3SA00181",
+     "V3SA00180",
+     "V3SA00167",
+     "V3SA00179",
+     "V3SA00176"
+    ],
+    "25": [
+     "V3SA00172",
+     "V3SA00170",
+     "V3SA00173",
+     "V3SA00182",
+     "V3SA00169",
+     "V3SA00181",
+     "V3SA00180",
+     "V3SA00167",
+     "V3SA00179",
+     "V3SA00176",
+     "V3SA00177",
+     "V3SA00174",
+     "V3SA00168",
+     "V3SA00166",
+     "V3SA00178",
+     "V3SA00175",
+     "V3SA00171"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "GAP43",
+     "ELAVL4",
+     "ISL1",
+     "TUBB3",
+     "DCC",
+     "STMN2",
+     "PRPH",
+     "CNTN2",
+     "PROX1",
+     "ONECUT1"
+    ],
+    "25": [
+     "GAP43",
+     "ELAVL4",
+     "ISL1",
+     "TUBB3",
+     "DCC",
+     "STMN2",
+     "PRPH",
+     "CNTN2",
+     "PROX1",
+     "ONECUT1",
+     "ONECUT2",
+     "NRP1",
+     "CRABP1",
+     "ALCAM",
+     "PCDH15",
+     "NTRK2",
+     "EPHB1"
+    ]
+   }
+  },
+  {
+   "lineage_id": "glia",
+   "side": "fetal",
+   "node_key": "dl:NO_MATCH:glia_precursor|sp=human|ts=retina|st=fetal|es=in_vivo",
+   "entry_or_class": "glia_precursor",
+   "stage": "fetal",
+   "full_set": [],
+   "full_set_assertion_ids": [],
+   "adult_counterparts": [
+    "MG",
+    "Astrocyte"
+   ],
+   "windows": {
+    "10": [],
+    "25": []
+   },
+   "window_genes": {
+    "10": [],
+    "25": []
+   }
+  },
+  {
+   "lineage_id": "rpe",
+   "side": "fetal",
+   "node_key": "dl:CL:0002586|sp=human|ts=retina|st=fetal|es=in_vivo",
+   "entry_or_class": "RPE_fetal",
+   "stage": "fetal",
+   "full_set": [],
+   "full_set_assertion_ids": [],
+   "adult_counterparts": [
+    "RPE"
+   ],
+   "windows": {
+    "10": [],
+    "25": []
+   },
+   "window_genes": {
+    "10": [],
+    "25": []
+   }
+  },
+  {
+   "lineage_id": "progenitor_rpc_early",
+   "side": "fetal",
+   "node_key": "dl:CL:0002672|sp=human|ts=retina|st=fetal|es=in_vivo",
+   "entry_or_class": "RPC_early",
+   "stage": "fetal",
+   "full_set": [
+    "FOXP2",
+    "CRB1",
+    "RORB",
+    "PTPRZ1",
+    "COL4A2",
+    "TCF4",
+    "HES6",
+    "EZH2",
+    "FOXP1",
+    "CHD7",
+    "FOXN4",
+    "LGR4",
+    "ERBB4",
+    "MYB",
+    "OTX2",
+    "ATOH7",
+    "EGFR",
+    "PROX1",
+    "DCT",
+    "HES1",
+    "NEUROD1",
+    "NOTCH1",
+    "NHS",
+    "ONECUT1",
+    "ZEB1"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00193",
+    "V3SA00186",
+    "V3SA00205",
+    "V3SA00204",
+    "V3SA00185",
+    "V3SA00206",
+    "V3SA00195",
+    "V3SA00190",
+    "V3SA00192",
+    "V3SA00184",
+    "V3SA00191",
+    "V3SA00196",
+    "V3SA00189",
+    "V3SA00197",
+    "V3SA00202",
+    "V3SA00183",
+    "V3SA00188",
+    "V3SA00203",
+    "V3SA00187",
+    "V3SA00194",
+    "V3SA00198",
+    "V3SA00200",
+    "V3SA00199",
+    "V3SA00201",
+    "V3SA00207"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00193",
+     "V3SA00186",
+     "V3SA00205",
+     "V3SA00204",
+     "V3SA00185",
+     "V3SA00206",
+     "V3SA00195",
+     "V3SA00190",
+     "V3SA00192",
+     "V3SA00184"
+    ],
+    "25": [
+     "V3SA00193",
+     "V3SA00186",
+     "V3SA00205",
+     "V3SA00204",
+     "V3SA00185",
+     "V3SA00206",
+     "V3SA00195",
+     "V3SA00190",
+     "V3SA00192",
+     "V3SA00184",
+     "V3SA00191",
+     "V3SA00196",
+     "V3SA00189",
+     "V3SA00197",
+     "V3SA00202",
+     "V3SA00183",
+     "V3SA00188",
+     "V3SA00203",
+     "V3SA00187",
+     "V3SA00194",
+     "V3SA00198",
+     "V3SA00200",
+     "V3SA00199",
+     "V3SA00201",
+     "V3SA00207"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "FOXP2",
+     "CRB1",
+     "RORB",
+     "PTPRZ1",
+     "COL4A2",
+     "TCF4",
+     "HES6",
+     "EZH2",
+     "FOXP1",
+     "CHD7"
+    ],
+    "25": [
+     "FOXP2",
+     "CRB1",
+     "RORB",
+     "PTPRZ1",
+     "COL4A2",
+     "TCF4",
+     "HES6",
+     "EZH2",
+     "FOXP1",
+     "CHD7",
+     "FOXN4",
+     "LGR4",
+     "ERBB4",
+     "MYB",
+     "OTX2",
+     "ATOH7",
+     "EGFR",
+     "PROX1",
+     "DCT",
+     "HES1",
+     "NEUROD1",
+     "NOTCH1",
+     "NHS",
+     "ONECUT1",
+     "ZEB1"
+    ]
+   }
+  },
+  {
+   "lineage_id": "progenitor_rpc_late",
+   "side": "fetal",
+   "node_key": "dl:CL:0002672|sp=human|ts=retina|st=fetal|es=in_vivo",
+   "entry_or_class": "RPC_late",
+   "stage": "fetal",
+   "full_set": [
+    "GLI3",
+    "FOXP2",
+    "LGR4",
+    "CRB1",
+    "EZH2",
+    "RORB",
+    "TCF4",
+    "FOXN4",
+    "MYB",
+    "VIM",
+    "SPP1",
+    "ZEB1",
+    "HES6",
+    "TCF7L2",
+    "CHD7",
+    "DACH1",
+    "AHI1",
+    "HMGB2",
+    "SOX2",
+    "OTX2",
+    "PROX1",
+    "SMAD2",
+    "DCT",
+    "CDH2",
+    "NEUROD1"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00217",
+    "V3SA00216",
+    "V3SA00220",
+    "V3SA00211",
+    "V3SA00214",
+    "V3SA00225",
+    "V3SA00229",
+    "V3SA00215",
+    "V3SA00221",
+    "V3SA00231",
+    "V3SA00228",
+    "V3SA00232",
+    "V3SA00218",
+    "V3SA00230",
+    "V3SA00210",
+    "V3SA00212",
+    "V3SA00208",
+    "V3SA00219",
+    "V3SA00227",
+    "V3SA00223",
+    "V3SA00224",
+    "V3SA00226",
+    "V3SA00213",
+    "V3SA00209",
+    "V3SA00222"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00217",
+     "V3SA00216",
+     "V3SA00220",
+     "V3SA00211",
+     "V3SA00214",
+     "V3SA00225",
+     "V3SA00229",
+     "V3SA00215",
+     "V3SA00221",
+     "V3SA00231"
+    ],
+    "25": [
+     "V3SA00217",
+     "V3SA00216",
+     "V3SA00220",
+     "V3SA00211",
+     "V3SA00214",
+     "V3SA00225",
+     "V3SA00229",
+     "V3SA00215",
+     "V3SA00221",
+     "V3SA00231",
+     "V3SA00228",
+     "V3SA00232",
+     "V3SA00218",
+     "V3SA00230",
+     "V3SA00210",
+     "V3SA00212",
+     "V3SA00208",
+     "V3SA00219",
+     "V3SA00227",
+     "V3SA00223",
+     "V3SA00224",
+     "V3SA00226",
+     "V3SA00213",
+     "V3SA00209",
+     "V3SA00222"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "GLI3",
+     "FOXP2",
+     "LGR4",
+     "CRB1",
+     "EZH2",
+     "RORB",
+     "TCF4",
+     "FOXN4",
+     "MYB",
+     "VIM"
+    ],
+    "25": [
+     "GLI3",
+     "FOXP2",
+     "LGR4",
+     "CRB1",
+     "EZH2",
+     "RORB",
+     "TCF4",
+     "FOXN4",
+     "MYB",
+     "VIM",
+     "SPP1",
+     "ZEB1",
+     "HES6",
+     "TCF7L2",
+     "CHD7",
+     "DACH1",
+     "AHI1",
+     "HMGB2",
+     "SOX2",
+     "OTX2",
+     "PROX1",
+     "SMAD2",
+     "DCT",
+     "CDH2",
+     "NEUROD1"
+    ]
+   }
+  },
+  {
+   "lineage_id": "progenitor_nrpc_early",
+   "side": "fetal",
+   "node_key": "dl:NO_MATCH:NRPC_early|sp=human|ts=retina|st=fetal|es=in_vivo",
+   "entry_or_class": "NRPC_early",
+   "stage": "fetal",
+   "full_set": [
+    "TCF4",
+    "HES6",
+    "RORB",
+    "CHD7",
+    "CKB",
+    "MIB1",
+    "WDR72",
+    "MAGI1",
+    "MYBL1",
+    "RHBDL3",
+    "ZC3H12C",
+    "OTX2",
+    "ATOH7",
+    "PROX1",
+    "DCT",
+    "NEUROD1",
+    "NOTCH1",
+    "NHS",
+    "ONECUT1",
+    "ZEB1",
+    "HMGB1",
+    "ONECUT2",
+    "PRDM1",
+    "EZH2",
+    "CENPF"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00137",
+    "V3SA00122",
+    "V3SA00136",
+    "V3SA00118",
+    "V3SA00119",
+    "V3SA00125",
+    "V3SA00138",
+    "V3SA00124",
+    "V3SA00126",
+    "V3SA00135",
+    "V3SA00139",
+    "V3SA00132",
+    "V3SA00116",
+    "V3SA00134",
+    "V3SA00120",
+    "V3SA00127",
+    "V3SA00129",
+    "V3SA00128",
+    "V3SA00130",
+    "V3SA00140",
+    "V3SA00123",
+    "V3SA00131",
+    "V3SA00133",
+    "V3SA00121",
+    "V3SA00117"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00137",
+     "V3SA00122",
+     "V3SA00136",
+     "V3SA00118",
+     "V3SA00119",
+     "V3SA00125",
+     "V3SA00138",
+     "V3SA00124",
+     "V3SA00126",
+     "V3SA00135"
+    ],
+    "25": [
+     "V3SA00137",
+     "V3SA00122",
+     "V3SA00136",
+     "V3SA00118",
+     "V3SA00119",
+     "V3SA00125",
+     "V3SA00138",
+     "V3SA00124",
+     "V3SA00126",
+     "V3SA00135",
+     "V3SA00139",
+     "V3SA00132",
+     "V3SA00116",
+     "V3SA00134",
+     "V3SA00120",
+     "V3SA00127",
+     "V3SA00129",
+     "V3SA00128",
+     "V3SA00130",
+     "V3SA00140",
+     "V3SA00123",
+     "V3SA00131",
+     "V3SA00133",
+     "V3SA00121",
+     "V3SA00117"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "TCF4",
+     "HES6",
+     "RORB",
+     "CHD7",
+     "CKB",
+     "MIB1",
+     "WDR72",
+     "MAGI1",
+     "MYBL1",
+     "RHBDL3"
+    ],
+    "25": [
+     "TCF4",
+     "HES6",
+     "RORB",
+     "CHD7",
+     "CKB",
+     "MIB1",
+     "WDR72",
+     "MAGI1",
+     "MYBL1",
+     "RHBDL3",
+     "ZC3H12C",
+     "OTX2",
+     "ATOH7",
+     "PROX1",
+     "DCT",
+     "NEUROD1",
+     "NOTCH1",
+     "NHS",
+     "ONECUT1",
+     "ZEB1",
+     "HMGB1",
+     "ONECUT2",
+     "PRDM1",
+     "EZH2",
+     "CENPF"
+    ]
+   }
+  },
+  {
+   "lineage_id": "progenitor_nrpc_late",
+   "side": "fetal",
+   "node_key": "dl:NO_MATCH:NRPC_late|sp=human|ts=retina|st=fetal|es=in_vivo",
+   "entry_or_class": "NRPC_late",
+   "stage": "fetal",
+   "full_set": [
+    "VIM",
+    "ZEB1",
+    "HES6",
+    "RORB",
+    "OTX2",
+    "PROX1",
+    "SMAD2",
+    "CRB1",
+    "DCT",
+    "NEUROD1",
+    "NHS",
+    "ONECUT1",
+    "PTN",
+    "TCF4",
+    "ANGPT1",
+    "ONECUT2",
+    "PAX2",
+    "PRDM1",
+    "EZH2",
+    "HIF1A",
+    "FABP7",
+    "GLI3",
+    "LOXL1",
+    "EYS",
+    "PAX5"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00164",
+    "V3SA00165",
+    "V3SA00148",
+    "V3SA00161",
+    "V3SA00155",
+    "V3SA00159",
+    "V3SA00162",
+    "V3SA00142",
+    "V3SA00143",
+    "V3SA00151",
+    "V3SA00152",
+    "V3SA00153",
+    "V3SA00160",
+    "V3SA00163",
+    "V3SA00141",
+    "V3SA00154",
+    "V3SA00156",
+    "V3SA00158",
+    "V3SA00145",
+    "V3SA00149",
+    "V3SA00146",
+    "V3SA00147",
+    "V3SA00150",
+    "V3SA00144",
+    "V3SA00157"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00164",
+     "V3SA00165",
+     "V3SA00148",
+     "V3SA00161",
+     "V3SA00155",
+     "V3SA00159",
+     "V3SA00162",
+     "V3SA00142",
+     "V3SA00143",
+     "V3SA00151"
+    ],
+    "25": [
+     "V3SA00164",
+     "V3SA00165",
+     "V3SA00148",
+     "V3SA00161",
+     "V3SA00155",
+     "V3SA00159",
+     "V3SA00162",
+     "V3SA00142",
+     "V3SA00143",
+     "V3SA00151",
+     "V3SA00152",
+     "V3SA00153",
+     "V3SA00160",
+     "V3SA00163",
+     "V3SA00141",
+     "V3SA00154",
+     "V3SA00156",
+     "V3SA00158",
+     "V3SA00145",
+     "V3SA00149",
+     "V3SA00146",
+     "V3SA00147",
+     "V3SA00150",
+     "V3SA00144",
+     "V3SA00157"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "VIM",
+     "ZEB1",
+     "HES6",
+     "RORB",
+     "OTX2",
+     "PROX1",
+     "SMAD2",
+     "CRB1",
+     "DCT",
+     "NEUROD1"
+    ],
+    "25": [
+     "VIM",
+     "ZEB1",
+     "HES6",
+     "RORB",
+     "OTX2",
+     "PROX1",
+     "SMAD2",
+     "CRB1",
+     "DCT",
+     "NEUROD1",
+     "NHS",
+     "ONECUT1",
+     "PTN",
+     "TCF4",
+     "ANGPT1",
+     "ONECUT2",
+     "PAX2",
+     "PRDM1",
+     "EZH2",
+     "HIF1A",
+     "FABP7",
+     "GLI3",
+     "LOXL1",
+     "EYS",
+     "PAX5"
+    ]
+   }
+  },
+  {
+   "lineage_id": "progenitor_tac",
+   "side": "fetal",
+   "node_key": "dl:NO_MATCH:TAC_proliferating|sp=human|ts=retina|st=fetal|es=in_vivo",
+   "entry_or_class": "TAC_proliferating",
+   "stage": "fetal",
+   "full_set": [
+    "SOX2",
+    "PCNA"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00269",
+    "V3SA00268"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00269",
+     "V3SA00268"
+    ],
+    "25": [
+     "V3SA00269",
+     "V3SA00268"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "SOX2",
+     "PCNA"
+    ],
+    "25": [
+     "SOX2",
+     "PCNA"
+    ]
+   }
+  },
+  {
+   "lineage_id": "progenitor_cycling_state",
+   "side": "fetal",
+   "node_key": "dl:NO_MATCH:Retinal_Proliferating|sp=human|ts=retina|st=fetal|es=in_vivo",
+   "entry_or_class": "Retinal_Proliferating",
+   "stage": "fetal",
+   "full_set": [
+    "PCNA",
+    "MKI67",
+    "TOP2A",
+    "UBE2C",
+    "CCNB1",
+    "CCNA2",
+    "BUB1",
+    "NUSAP1",
+    "TYMS",
+    "TTK"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00238",
+    "V3SA00236",
+    "V3SA00239",
+    "V3SA00242",
+    "V3SA00235",
+    "V3SA00234",
+    "V3SA00233",
+    "V3SA00237",
+    "V3SA00241",
+    "V3SA00240"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00238",
+     "V3SA00236",
+     "V3SA00239",
+     "V3SA00242",
+     "V3SA00235",
+     "V3SA00234",
+     "V3SA00233",
+     "V3SA00237",
+     "V3SA00241",
+     "V3SA00240"
+    ],
+    "25": [
+     "V3SA00238",
+     "V3SA00236",
+     "V3SA00239",
+     "V3SA00242",
+     "V3SA00235",
+     "V3SA00234",
+     "V3SA00233",
+     "V3SA00237",
+     "V3SA00241",
+     "V3SA00240"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "PCNA",
+     "MKI67",
+     "TOP2A",
+     "UBE2C",
+     "CCNB1",
+     "CCNA2",
+     "BUB1",
+     "NUSAP1",
+     "TYMS",
+     "TTK"
+    ],
+    "25": [
+     "PCNA",
+     "MKI67",
+     "TOP2A",
+     "UBE2C",
+     "CCNB1",
+     "CCNA2",
+     "BUB1",
+     "NUSAP1",
+     "TYMS",
+     "TTK"
+    ]
+   }
+  },
+  {
+   "lineage_id": "rod",
+   "side": "adult",
+   "node_key": "dl:CL:0000604|sp=human|ts=retina|st=adult|es=in_vivo",
+   "entry_or_class": "Rod",
+   "stage": "adult",
+   "full_set": [
+    "RHO",
+    "NRL",
+    "NR2E3",
+    "PDE6B",
+    "GNAT1"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00047",
+    "V3SA00045",
+    "V3SA00044",
+    "V3SA00046",
+    "V3SA00043"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00047",
+     "V3SA00045",
+     "V3SA00044",
+     "V3SA00046",
+     "V3SA00043"
+    ],
+    "25": [
+     "V3SA00047",
+     "V3SA00045",
+     "V3SA00044",
+     "V3SA00046",
+     "V3SA00043"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "RHO",
+     "NRL",
+     "NR2E3",
+     "PDE6B",
+     "GNAT1"
+    ],
+    "25": [
+     "RHO",
+     "NRL",
+     "NR2E3",
+     "PDE6B",
+     "GNAT1"
+    ]
+   }
+  },
+  {
+   "lineage_id": "cone",
+   "side": "adult",
+   "node_key": "dl:CL:0000573|sp=human|ts=retina|st=adult|es=in_vivo",
+   "entry_or_class": "Cone",
+   "stage": "adult",
+   "full_set": [
+    "OPN1SW",
+    "OPN1MW",
+    "ARR3",
+    "PDE6H",
+    "GNAT2"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00019",
+    "V3SA00018",
+    "V3SA00016",
+    "V3SA00020",
+    "V3SA00017"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00019",
+     "V3SA00018",
+     "V3SA00016",
+     "V3SA00020",
+     "V3SA00017"
+    ],
+    "25": [
+     "V3SA00019",
+     "V3SA00018",
+     "V3SA00016",
+     "V3SA00020",
+     "V3SA00017"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "OPN1SW",
+     "OPN1MW",
+     "ARR3",
+     "PDE6H",
+     "GNAT2"
+    ],
+    "25": [
+     "OPN1SW",
+     "OPN1MW",
+     "ARR3",
+     "PDE6H",
+     "GNAT2"
+    ]
+   }
+  },
+  {
+   "lineage_id": "bc",
+   "side": "adult",
+   "node_key": "dl:CL:0000748|sp=human|ts=retina|st=adult|es=in_vivo",
+   "entry_or_class": "BC",
+   "stage": "adult",
+   "full_set": [
+    "VSX2",
+    "GRM6",
+    "CACNA1S",
+    "ISL1",
+    "OTX2"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00015",
+    "V3SA00012",
+    "V3SA00011",
+    "V3SA00013",
+    "V3SA00014"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00015",
+     "V3SA00012",
+     "V3SA00011",
+     "V3SA00013",
+     "V3SA00014"
+    ],
+    "25": [
+     "V3SA00015",
+     "V3SA00012",
+     "V3SA00011",
+     "V3SA00013",
+     "V3SA00014"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "VSX2",
+     "GRM6",
+     "CACNA1S",
+     "ISL1",
+     "OTX2"
+    ],
+    "25": [
+     "VSX2",
+     "GRM6",
+     "CACNA1S",
+     "ISL1",
+     "OTX2"
+    ]
+   }
+  },
+  {
+   "lineage_id": "ac",
+   "side": "adult",
+   "node_key": "dl:CL:0000561|sp=human|ts=retina|st=adult|es=in_vivo",
+   "entry_or_class": "AC",
+   "stage": "adult",
+   "full_set": [
+    "TFAP2A",
+    "GAD1",
+    "GAD2",
+    "SLC6A9",
+    "ONECUT2"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00005",
+    "V3SA00001",
+    "V3SA00002",
+    "V3SA00004",
+    "V3SA00003"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00005",
+     "V3SA00001",
+     "V3SA00002",
+     "V3SA00004",
+     "V3SA00003"
+    ],
+    "25": [
+     "V3SA00005",
+     "V3SA00001",
+     "V3SA00002",
+     "V3SA00004",
+     "V3SA00003"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "TFAP2A",
+     "GAD1",
+     "GAD2",
+     "SLC6A9",
+     "ONECUT2"
+    ],
+    "25": [
+     "TFAP2A",
+     "GAD1",
+     "GAD2",
+     "SLC6A9",
+     "ONECUT2"
+    ]
+   }
+  },
+  {
+   "lineage_id": "hc",
+   "side": "adult",
+   "node_key": "dl:CL:0000745|sp=human|ts=retina|st=adult|es=in_vivo",
+   "entry_or_class": "HC",
+   "stage": "adult",
+   "full_set": [
+    "ONECUT1",
+    "ONECUT3",
+    "GAD1",
+    "ISL1",
+    "CX3CR1"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00024",
+    "V3SA00025",
+    "V3SA00022",
+    "V3SA00023",
+    "V3SA00021"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00024",
+     "V3SA00025",
+     "V3SA00022",
+     "V3SA00023",
+     "V3SA00021"
+    ],
+    "25": [
+     "V3SA00024",
+     "V3SA00025",
+     "V3SA00022",
+     "V3SA00023",
+     "V3SA00021"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "ONECUT1",
+     "ONECUT3",
+     "GAD1",
+     "ISL1",
+     "CX3CR1"
+    ],
+    "25": [
+     "ONECUT1",
+     "ONECUT3",
+     "GAD1",
+     "ISL1",
+     "CX3CR1"
+    ]
+   }
+  },
+  {
+   "lineage_id": "rgc",
+   "side": "adult",
+   "node_key": "dl:CL:0000740|sp=human|ts=retina|st=adult|es=in_vivo",
+   "entry_or_class": "RGC",
+   "stage": "adult",
+   "full_set": [
+    "RBPMS",
+    "SLC17A6",
+    "POU4F1",
+    "POU4F2",
+    "NEFL"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00035",
+    "V3SA00036",
+    "V3SA00033",
+    "V3SA00034",
+    "V3SA00032"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00035",
+     "V3SA00036",
+     "V3SA00033",
+     "V3SA00034",
+     "V3SA00032"
+    ],
+    "25": [
+     "V3SA00035",
+     "V3SA00036",
+     "V3SA00033",
+     "V3SA00034",
+     "V3SA00032"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "RBPMS",
+     "SLC17A6",
+     "POU4F1",
+     "POU4F2",
+     "NEFL"
+    ],
+    "25": [
+     "RBPMS",
+     "SLC17A6",
+     "POU4F1",
+     "POU4F2",
+     "NEFL"
+    ]
+   }
+  },
+  {
+   "lineage_id": "glia",
+   "side": "adult",
+   "node_key": "dl:CL:0000636|sp=human|ts=retina|st=adult|es=in_vivo",
+   "entry_or_class": "MG",
+   "stage": "adult",
+   "full_set": [
+    "RLBP1",
+    "GLUL",
+    "SOX9",
+    "VIM",
+    "S100B"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00027",
+    "V3SA00026",
+    "V3SA00029",
+    "V3SA00030",
+    "V3SA00028"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00027",
+     "V3SA00026",
+     "V3SA00029",
+     "V3SA00030",
+     "V3SA00028"
+    ],
+    "25": [
+     "V3SA00027",
+     "V3SA00026",
+     "V3SA00029",
+     "V3SA00030",
+     "V3SA00028"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "RLBP1",
+     "GLUL",
+     "SOX9",
+     "VIM",
+     "S100B"
+    ],
+    "25": [
+     "RLBP1",
+     "GLUL",
+     "SOX9",
+     "VIM",
+     "S100B"
+    ]
+   }
+  },
+  {
+   "lineage_id": "glia",
+   "side": "adult",
+   "node_key": "dl:CL:0000127|sp=human|ts=retina|st=adult|es=in_vivo",
+   "entry_or_class": "Astrocyte",
+   "stage": "adult",
+   "full_set": [
+    "GFAP",
+    "AQP4",
+    "S100B",
+    "VIM",
+    "SLC1A3"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00007",
+    "V3SA00006",
+    "V3SA00008",
+    "V3SA00010",
+    "V3SA00009"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00007",
+     "V3SA00006",
+     "V3SA00008",
+     "V3SA00010",
+     "V3SA00009"
+    ],
+    "25": [
+     "V3SA00007",
+     "V3SA00006",
+     "V3SA00008",
+     "V3SA00010",
+     "V3SA00009"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "GFAP",
+     "AQP4",
+     "S100B",
+     "VIM",
+     "SLC1A3"
+    ],
+    "25": [
+     "GFAP",
+     "AQP4",
+     "S100B",
+     "VIM",
+     "SLC1A3"
+    ]
+   }
+  },
+  {
+   "lineage_id": "adult_only::Microglia",
+   "side": "adult",
+   "node_key": "dl:CL:0000129|sp=human|ts=retina|st=adult|es=in_vivo",
+   "entry_or_class": "Microglia",
+   "stage": "adult",
+   "full_set": [
+    "C1QB"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00031"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00031"
+    ],
+    "25": [
+     "V3SA00031"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "C1QB"
+    ],
+    "25": [
+     "C1QB"
+    ]
+   }
+  },
+  {
+   "lineage_id": "rpe",
+   "side": "adult",
+   "node_key": "dl:CL:0002586|sp=human|ts=retina|st=adult|es=in_vivo",
+   "entry_or_class": "RPE",
+   "stage": "adult",
+   "full_set": [
+    "BEST1",
+    "RPE65",
+    "TTR",
+    "LRAT",
+    "RDH5",
+    "MITF"
+   ],
+   "full_set_assertion_ids": [
+    "V3SA00037",
+    "V3SA00041",
+    "V3SA00042",
+    "V3SA00038",
+    "V3SA00040",
+    "V3SA00039"
+   ],
+   "adult_counterparts": [],
+   "windows": {
+    "10": [
+     "V3SA00037",
+     "V3SA00041",
+     "V3SA00042",
+     "V3SA00038",
+     "V3SA00040",
+     "V3SA00039"
+    ],
+    "25": [
+     "V3SA00037",
+     "V3SA00041",
+     "V3SA00042",
+     "V3SA00038",
+     "V3SA00040",
+     "V3SA00039"
+    ]
+   },
+   "window_genes": {
+    "10": [
+     "BEST1",
+     "RPE65",
+     "TTR",
+     "LRAT",
+     "RDH5",
+     "MITF"
+    ],
+    "25": [
+     "BEST1",
+     "RPE65",
+     "TTR",
+     "LRAT",
+     "RDH5",
+     "MITF"
+    ]
+   }
+  }
+ ],
+ "calls": [
+  {
+   "id": "rod.fetal.K10.default",
+   "lineage_id": "rod",
+   "side": "fetal",
+   "target": "Rod_precursor",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RCVRN",
+     "AIPL1",
+     "NRL",
+     "NR2E3",
+     "RP1",
+     "EYS",
+     "NTM",
+     "ADGRV1",
+     "MYO9A",
+     "PDC"
+    ]
+   },
+   "route": "default",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "rod.fetal.K10.devroute",
+   "lineage_id": "rod",
+   "side": "fetal",
+   "target": "Rod_precursor",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RCVRN",
+     "AIPL1",
+     "NRL",
+     "NR2E3",
+     "RP1",
+     "EYS",
+     "NTM",
+     "ADGRV1",
+     "MYO9A",
+     "PDC"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "rod.fetal.K25.default",
+   "lineage_id": "rod",
+   "side": "fetal",
+   "target": "Rod_precursor",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RCVRN",
+     "AIPL1",
+     "NRL",
+     "NR2E3",
+     "RP1",
+     "EYS",
+     "NTM",
+     "ADGRV1",
+     "MYO9A",
+     "PDC",
+     "ANO2",
+     "KIAA1217",
+     "EPB41L2",
+     "PTPN13",
+     "TMEM108",
+     "ANKRD33B",
+     "EPS8",
+     "KANK1",
+     "MARCHF1",
+     "TMEM244",
+     "OTX2",
+     "USH2A",
+     "BBS9",
+     "GPC6",
+     "BAZ2B"
+    ]
+   },
+   "route": "default",
+   "n_genes": 25,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "rod.fetal.K25.devroute",
+   "lineage_id": "rod",
+   "side": "fetal",
+   "target": "Rod_precursor",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RCVRN",
+     "AIPL1",
+     "NRL",
+     "NR2E3",
+     "RP1",
+     "EYS",
+     "NTM",
+     "ADGRV1",
+     "MYO9A",
+     "PDC",
+     "ANO2",
+     "KIAA1217",
+     "EPB41L2",
+     "PTPN13",
+     "TMEM108",
+     "ANKRD33B",
+     "EPS8",
+     "KANK1",
+     "MARCHF1",
+     "TMEM244",
+     "OTX2",
+     "USH2A",
+     "BBS9",
+     "GPC6",
+     "BAZ2B"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 25,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "cone.fetal.K10.default",
+   "lineage_id": "cone",
+   "side": "fetal",
+   "target": "Cone_precursor",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "OTX2",
+     "DCT",
+     "PRDM1",
+     "EYS",
+     "ROBO2",
+     "ADGRV1",
+     "CERKL",
+     "GPC6",
+     "MAML2",
+     "EGFLAM"
+    ]
+   },
+   "route": "default",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "cone.fetal.K10.devroute",
+   "lineage_id": "cone",
+   "side": "fetal",
+   "target": "Cone_precursor",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "OTX2",
+     "DCT",
+     "PRDM1",
+     "EYS",
+     "ROBO2",
+     "ADGRV1",
+     "CERKL",
+     "GPC6",
+     "MAML2",
+     "EGFLAM"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "cone.fetal.K25.default",
+   "lineage_id": "cone",
+   "side": "fetal",
+   "target": "Cone_precursor",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "OTX2",
+     "DCT",
+     "PRDM1",
+     "EYS",
+     "ROBO2",
+     "ADGRV1",
+     "CERKL",
+     "GPC6",
+     "MAML2",
+     "EGFLAM",
+     "TMEM108",
+     "MARCHF1",
+     "NEUROD1",
+     "ATG5",
+     "DYNC2H1",
+     "CADM2",
+     "CNTN1",
+     "LARGE1",
+     "ATP2B1",
+     "WWC1",
+     "GALNT13",
+     "NLK",
+     "PRKN",
+     "RASGRF2",
+     "SRRM4"
+    ]
+   },
+   "route": "default",
+   "n_genes": 25,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "cone.fetal.K25.devroute",
+   "lineage_id": "cone",
+   "side": "fetal",
+   "target": "Cone_precursor",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "OTX2",
+     "DCT",
+     "PRDM1",
+     "EYS",
+     "ROBO2",
+     "ADGRV1",
+     "CERKL",
+     "GPC6",
+     "MAML2",
+     "EGFLAM",
+     "TMEM108",
+     "MARCHF1",
+     "NEUROD1",
+     "ATG5",
+     "DYNC2H1",
+     "CADM2",
+     "CNTN1",
+     "LARGE1",
+     "ATP2B1",
+     "WWC1",
+     "GALNT13",
+     "NLK",
+     "PRKN",
+     "RASGRF2",
+     "SRRM4"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 25,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "bc.fetal.K10.default",
+   "lineage_id": "bc",
+   "side": "fetal",
+   "target": "BC_precursor",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": []
+   },
+   "route": "default",
+   "n_genes": 0,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "bc.fetal.K10.devroute",
+   "lineage_id": "bc",
+   "side": "fetal",
+   "target": "BC_precursor",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 0,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "bc.fetal.K25.default",
+   "lineage_id": "bc",
+   "side": "fetal",
+   "target": "BC_precursor",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": []
+   },
+   "route": "default",
+   "n_genes": 0,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "bc.fetal.K25.devroute",
+   "lineage_id": "bc",
+   "side": "fetal",
+   "target": "BC_precursor",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 0,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "ac.fetal.K10.default",
+   "lineage_id": "ac",
+   "side": "fetal",
+   "target": "AC_precursor",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "TCF4",
+     "HIF1A",
+     "NRP1",
+     "ST18",
+     "PLXNA2",
+     "KLF12",
+     "THSD7B",
+     "ZNF423",
+     "ANKS1B",
+     "HIF1A-AS3"
+    ]
+   },
+   "route": "default",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "ac.fetal.K10.devroute",
+   "lineage_id": "ac",
+   "side": "fetal",
+   "target": "AC_precursor",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "TCF4",
+     "HIF1A",
+     "NRP1",
+     "ST18",
+     "PLXNA2",
+     "KLF12",
+     "THSD7B",
+     "ZNF423",
+     "ANKS1B",
+     "HIF1A-AS3"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "ac.fetal.K25.default",
+   "lineage_id": "ac",
+   "side": "fetal",
+   "target": "AC_precursor",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "TCF4",
+     "HIF1A",
+     "NRP1",
+     "ST18",
+     "PLXNA2",
+     "KLF12",
+     "THSD7B",
+     "ZNF423",
+     "ANKS1B",
+     "HIF1A-AS3",
+     "LINC01619",
+     "NOL4",
+     "NWD2",
+     "SETBP1",
+     "SLCO5A1",
+     "SPATS2L",
+     "ST6GALNAC3",
+     "TANC1"
+    ]
+   },
+   "route": "default",
+   "n_genes": 18,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "ac.fetal.K25.devroute",
+   "lineage_id": "ac",
+   "side": "fetal",
+   "target": "AC_precursor",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "TCF4",
+     "HIF1A",
+     "NRP1",
+     "ST18",
+     "PLXNA2",
+     "KLF12",
+     "THSD7B",
+     "ZNF423",
+     "ANKS1B",
+     "HIF1A-AS3",
+     "LINC01619",
+     "NOL4",
+     "NWD2",
+     "SETBP1",
+     "SLCO5A1",
+     "SPATS2L",
+     "ST6GALNAC3",
+     "TANC1"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 18,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "hc.fetal.K10.default",
+   "lineage_id": "hc",
+   "side": "fetal",
+   "target": "HC_precursor",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "PROX1",
+     "ONECUT1",
+     "ONECUT2",
+     "NTRK2",
+     "ONECUT3",
+     "SYN3",
+     "TPM3",
+     "LINC03051",
+     "MAGI1",
+     "PCSK6"
+    ]
+   },
+   "route": "default",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "hc.fetal.K10.devroute",
+   "lineage_id": "hc",
+   "side": "fetal",
+   "target": "HC_precursor",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "PROX1",
+     "ONECUT1",
+     "ONECUT2",
+     "NTRK2",
+     "ONECUT3",
+     "SYN3",
+     "TPM3",
+     "LINC03051",
+     "MAGI1",
+     "PCSK6"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "hc.fetal.K25.default",
+   "lineage_id": "hc",
+   "side": "fetal",
+   "target": "HC_precursor",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "PROX1",
+     "ONECUT1",
+     "ONECUT2",
+     "NTRK2",
+     "ONECUT3",
+     "SYN3",
+     "TPM3",
+     "LINC03051",
+     "MAGI1",
+     "PCSK6",
+     "TANC1",
+     "SOX4",
+     "GRIA4",
+     "ROBO1",
+     "AUTS2",
+     "LSAMP",
+     "MEGF11",
+     "PLXNA2",
+     "TNR",
+     "DOCK4",
+     "GRIA3",
+     "HECW1",
+     "ANKS1B",
+     "CACNG3",
+     "MIR124-2HG"
+    ]
+   },
+   "route": "default",
+   "n_genes": 25,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "hc.fetal.K25.devroute",
+   "lineage_id": "hc",
+   "side": "fetal",
+   "target": "HC_precursor",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "PROX1",
+     "ONECUT1",
+     "ONECUT2",
+     "NTRK2",
+     "ONECUT3",
+     "SYN3",
+     "TPM3",
+     "LINC03051",
+     "MAGI1",
+     "PCSK6",
+     "TANC1",
+     "SOX4",
+     "GRIA4",
+     "ROBO1",
+     "AUTS2",
+     "LSAMP",
+     "MEGF11",
+     "PLXNA2",
+     "TNR",
+     "DOCK4",
+     "GRIA3",
+     "HECW1",
+     "ANKS1B",
+     "CACNG3",
+     "MIR124-2HG"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 25,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "rgc.fetal.K10.default",
+   "lineage_id": "rgc",
+   "side": "fetal",
+   "target": "RGC_precursor",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "GAP43",
+     "ELAVL4",
+     "ISL1",
+     "TUBB3",
+     "DCC",
+     "STMN2",
+     "PRPH",
+     "CNTN2",
+     "PROX1",
+     "ONECUT1"
+    ]
+   },
+   "route": "default",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "rgc.fetal.K10.devroute",
+   "lineage_id": "rgc",
+   "side": "fetal",
+   "target": "RGC_precursor",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "GAP43",
+     "ELAVL4",
+     "ISL1",
+     "TUBB3",
+     "DCC",
+     "STMN2",
+     "PRPH",
+     "CNTN2",
+     "PROX1",
+     "ONECUT1"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "rgc.fetal.K25.default",
+   "lineage_id": "rgc",
+   "side": "fetal",
+   "target": "RGC_precursor",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "GAP43",
+     "ELAVL4",
+     "ISL1",
+     "TUBB3",
+     "DCC",
+     "STMN2",
+     "PRPH",
+     "CNTN2",
+     "PROX1",
+     "ONECUT1",
+     "ONECUT2",
+     "NRP1",
+     "CRABP1",
+     "ALCAM",
+     "PCDH15",
+     "NTRK2",
+     "EPHB1"
+    ]
+   },
+   "route": "default",
+   "n_genes": 17,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rgc.fetal.K25.devroute",
+   "lineage_id": "rgc",
+   "side": "fetal",
+   "target": "RGC_precursor",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "GAP43",
+     "ELAVL4",
+     "ISL1",
+     "TUBB3",
+     "DCC",
+     "STMN2",
+     "PRPH",
+     "CNTN2",
+     "PROX1",
+     "ONECUT1",
+     "ONECUT2",
+     "NRP1",
+     "CRABP1",
+     "ALCAM",
+     "PCDH15",
+     "NTRK2",
+     "EPHB1"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 17,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "glia.fetal.K10.default",
+   "lineage_id": "glia",
+   "side": "fetal",
+   "target": "glia_precursor",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": []
+   },
+   "route": "default",
+   "n_genes": 0,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "glia.fetal.K10.devroute",
+   "lineage_id": "glia",
+   "side": "fetal",
+   "target": "glia_precursor",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 0,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "glia.fetal.K25.default",
+   "lineage_id": "glia",
+   "side": "fetal",
+   "target": "glia_precursor",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": []
+   },
+   "route": "default",
+   "n_genes": 0,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "glia.fetal.K25.devroute",
+   "lineage_id": "glia",
+   "side": "fetal",
+   "target": "glia_precursor",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 0,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rpe.fetal.K10.default",
+   "lineage_id": "rpe",
+   "side": "fetal",
+   "target": "RPE_fetal",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": []
+   },
+   "route": "default",
+   "n_genes": 0,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rpe.fetal.K10.devroute",
+   "lineage_id": "rpe",
+   "side": "fetal",
+   "target": "RPE_fetal",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 0,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rpe.fetal.K25.default",
+   "lineage_id": "rpe",
+   "side": "fetal",
+   "target": "RPE_fetal",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": []
+   },
+   "route": "default",
+   "n_genes": 0,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rpe.fetal.K25.devroute",
+   "lineage_id": "rpe",
+   "side": "fetal",
+   "target": "RPE_fetal",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 0,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "progenitor_rpc_early.fetal.K10.default",
+   "lineage_id": "progenitor_rpc_early",
+   "side": "fetal",
+   "target": "RPC_early",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "FOXP2",
+     "CRB1",
+     "RORB",
+     "PTPRZ1",
+     "COL4A2",
+     "TCF4",
+     "HES6",
+     "EZH2",
+     "FOXP1",
+     "CHD7"
+    ]
+   },
+   "route": "default",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_rpc_early.fetal.K10.devroute",
+   "lineage_id": "progenitor_rpc_early",
+   "side": "fetal",
+   "target": "RPC_early",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "FOXP2",
+     "CRB1",
+     "RORB",
+     "PTPRZ1",
+     "COL4A2",
+     "TCF4",
+     "HES6",
+     "EZH2",
+     "FOXP1",
+     "CHD7"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_rpc_early.fetal.K25.default",
+   "lineage_id": "progenitor_rpc_early",
+   "side": "fetal",
+   "target": "RPC_early",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "FOXP2",
+     "CRB1",
+     "RORB",
+     "PTPRZ1",
+     "COL4A2",
+     "TCF4",
+     "HES6",
+     "EZH2",
+     "FOXP1",
+     "CHD7",
+     "FOXN4",
+     "LGR4",
+     "ERBB4",
+     "MYB",
+     "OTX2",
+     "ATOH7",
+     "EGFR",
+     "PROX1",
+     "DCT",
+     "HES1",
+     "NEUROD1",
+     "NOTCH1",
+     "NHS",
+     "ONECUT1",
+     "ZEB1"
+    ]
+   },
+   "route": "default",
+   "n_genes": 25,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_rpc_early.fetal.K25.devroute",
+   "lineage_id": "progenitor_rpc_early",
+   "side": "fetal",
+   "target": "RPC_early",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "FOXP2",
+     "CRB1",
+     "RORB",
+     "PTPRZ1",
+     "COL4A2",
+     "TCF4",
+     "HES6",
+     "EZH2",
+     "FOXP1",
+     "CHD7",
+     "FOXN4",
+     "LGR4",
+     "ERBB4",
+     "MYB",
+     "OTX2",
+     "ATOH7",
+     "EGFR",
+     "PROX1",
+     "DCT",
+     "HES1",
+     "NEUROD1",
+     "NOTCH1",
+     "NHS",
+     "ONECUT1",
+     "ZEB1"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 25,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_rpc_late.fetal.K10.default",
+   "lineage_id": "progenitor_rpc_late",
+   "side": "fetal",
+   "target": "RPC_late",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "GLI3",
+     "FOXP2",
+     "LGR4",
+     "CRB1",
+     "EZH2",
+     "RORB",
+     "TCF4",
+     "FOXN4",
+     "MYB",
+     "VIM"
+    ]
+   },
+   "route": "default",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_rpc_late.fetal.K10.devroute",
+   "lineage_id": "progenitor_rpc_late",
+   "side": "fetal",
+   "target": "RPC_late",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "GLI3",
+     "FOXP2",
+     "LGR4",
+     "CRB1",
+     "EZH2",
+     "RORB",
+     "TCF4",
+     "FOXN4",
+     "MYB",
+     "VIM"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_rpc_late.fetal.K25.default",
+   "lineage_id": "progenitor_rpc_late",
+   "side": "fetal",
+   "target": "RPC_late",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "GLI3",
+     "FOXP2",
+     "LGR4",
+     "CRB1",
+     "EZH2",
+     "RORB",
+     "TCF4",
+     "FOXN4",
+     "MYB",
+     "VIM",
+     "SPP1",
+     "ZEB1",
+     "HES6",
+     "TCF7L2",
+     "CHD7",
+     "DACH1",
+     "AHI1",
+     "HMGB2",
+     "SOX2",
+     "OTX2",
+     "PROX1",
+     "SMAD2",
+     "DCT",
+     "CDH2",
+     "NEUROD1"
+    ]
+   },
+   "route": "default",
+   "n_genes": 25,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_rpc_late.fetal.K25.devroute",
+   "lineage_id": "progenitor_rpc_late",
+   "side": "fetal",
+   "target": "RPC_late",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "GLI3",
+     "FOXP2",
+     "LGR4",
+     "CRB1",
+     "EZH2",
+     "RORB",
+     "TCF4",
+     "FOXN4",
+     "MYB",
+     "VIM",
+     "SPP1",
+     "ZEB1",
+     "HES6",
+     "TCF7L2",
+     "CHD7",
+     "DACH1",
+     "AHI1",
+     "HMGB2",
+     "SOX2",
+     "OTX2",
+     "PROX1",
+     "SMAD2",
+     "DCT",
+     "CDH2",
+     "NEUROD1"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 25,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_nrpc_early.fetal.K10.default",
+   "lineage_id": "progenitor_nrpc_early",
+   "side": "fetal",
+   "target": "NRPC_early",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "TCF4",
+     "HES6",
+     "RORB",
+     "CHD7",
+     "CKB",
+     "MIB1",
+     "WDR72",
+     "MAGI1",
+     "MYBL1",
+     "RHBDL3"
+    ]
+   },
+   "route": "default",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_nrpc_early.fetal.K10.devroute",
+   "lineage_id": "progenitor_nrpc_early",
+   "side": "fetal",
+   "target": "NRPC_early",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "TCF4",
+     "HES6",
+     "RORB",
+     "CHD7",
+     "CKB",
+     "MIB1",
+     "WDR72",
+     "MAGI1",
+     "MYBL1",
+     "RHBDL3"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_nrpc_early.fetal.K25.default",
+   "lineage_id": "progenitor_nrpc_early",
+   "side": "fetal",
+   "target": "NRPC_early",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "TCF4",
+     "HES6",
+     "RORB",
+     "CHD7",
+     "CKB",
+     "MIB1",
+     "WDR72",
+     "MAGI1",
+     "MYBL1",
+     "RHBDL3",
+     "ZC3H12C",
+     "OTX2",
+     "ATOH7",
+     "PROX1",
+     "DCT",
+     "NEUROD1",
+     "NOTCH1",
+     "NHS",
+     "ONECUT1",
+     "ZEB1",
+     "HMGB1",
+     "ONECUT2",
+     "PRDM1",
+     "EZH2",
+     "CENPF"
+    ]
+   },
+   "route": "default",
+   "n_genes": 25,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_nrpc_early.fetal.K25.devroute",
+   "lineage_id": "progenitor_nrpc_early",
+   "side": "fetal",
+   "target": "NRPC_early",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "TCF4",
+     "HES6",
+     "RORB",
+     "CHD7",
+     "CKB",
+     "MIB1",
+     "WDR72",
+     "MAGI1",
+     "MYBL1",
+     "RHBDL3",
+     "ZC3H12C",
+     "OTX2",
+     "ATOH7",
+     "PROX1",
+     "DCT",
+     "NEUROD1",
+     "NOTCH1",
+     "NHS",
+     "ONECUT1",
+     "ZEB1",
+     "HMGB1",
+     "ONECUT2",
+     "PRDM1",
+     "EZH2",
+     "CENPF"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 25,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_nrpc_late.fetal.K10.default",
+   "lineage_id": "progenitor_nrpc_late",
+   "side": "fetal",
+   "target": "NRPC_late",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "VIM",
+     "ZEB1",
+     "HES6",
+     "RORB",
+     "OTX2",
+     "PROX1",
+     "SMAD2",
+     "CRB1",
+     "DCT",
+     "NEUROD1"
+    ]
+   },
+   "route": "default",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_nrpc_late.fetal.K10.devroute",
+   "lineage_id": "progenitor_nrpc_late",
+   "side": "fetal",
+   "target": "NRPC_late",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "VIM",
+     "ZEB1",
+     "HES6",
+     "RORB",
+     "OTX2",
+     "PROX1",
+     "SMAD2",
+     "CRB1",
+     "DCT",
+     "NEUROD1"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_nrpc_late.fetal.K25.default",
+   "lineage_id": "progenitor_nrpc_late",
+   "side": "fetal",
+   "target": "NRPC_late",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "VIM",
+     "ZEB1",
+     "HES6",
+     "RORB",
+     "OTX2",
+     "PROX1",
+     "SMAD2",
+     "CRB1",
+     "DCT",
+     "NEUROD1",
+     "NHS",
+     "ONECUT1",
+     "PTN",
+     "TCF4",
+     "ANGPT1",
+     "ONECUT2",
+     "PAX2",
+     "PRDM1",
+     "EZH2",
+     "HIF1A",
+     "FABP7",
+     "GLI3",
+     "LOXL1",
+     "EYS",
+     "PAX5"
+    ]
+   },
+   "route": "default",
+   "n_genes": 25,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_nrpc_late.fetal.K25.devroute",
+   "lineage_id": "progenitor_nrpc_late",
+   "side": "fetal",
+   "target": "NRPC_late",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "VIM",
+     "ZEB1",
+     "HES6",
+     "RORB",
+     "OTX2",
+     "PROX1",
+     "SMAD2",
+     "CRB1",
+     "DCT",
+     "NEUROD1",
+     "NHS",
+     "ONECUT1",
+     "PTN",
+     "TCF4",
+     "ANGPT1",
+     "ONECUT2",
+     "PAX2",
+     "PRDM1",
+     "EZH2",
+     "HIF1A",
+     "FABP7",
+     "GLI3",
+     "LOXL1",
+     "EYS",
+     "PAX5"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 25,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_tac.fetal.K10.default",
+   "lineage_id": "progenitor_tac",
+   "side": "fetal",
+   "target": "TAC_proliferating",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "SOX2",
+     "PCNA"
+    ]
+   },
+   "route": "default",
+   "n_genes": 2,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "progenitor_tac.fetal.K10.devroute",
+   "lineage_id": "progenitor_tac",
+   "side": "fetal",
+   "target": "TAC_proliferating",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "SOX2",
+     "PCNA"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 2,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "progenitor_tac.fetal.K25.default",
+   "lineage_id": "progenitor_tac",
+   "side": "fetal",
+   "target": "TAC_proliferating",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "SOX2",
+     "PCNA"
+    ]
+   },
+   "route": "default",
+   "n_genes": 2,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "progenitor_tac.fetal.K25.devroute",
+   "lineage_id": "progenitor_tac",
+   "side": "fetal",
+   "target": "TAC_proliferating",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "SOX2",
+     "PCNA"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 2,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "progenitor_cycling_state.fetal.K10.default",
+   "lineage_id": "progenitor_cycling_state",
+   "side": "fetal",
+   "target": "Retinal_Proliferating",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "PCNA",
+     "MKI67",
+     "TOP2A",
+     "UBE2C",
+     "CCNB1",
+     "CCNA2",
+     "BUB1",
+     "NUSAP1",
+     "TYMS",
+     "TTK"
+    ]
+   },
+   "route": "default",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_cycling_state.fetal.K10.devroute",
+   "lineage_id": "progenitor_cycling_state",
+   "side": "fetal",
+   "target": "Retinal_Proliferating",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "PCNA",
+     "MKI67",
+     "TOP2A",
+     "UBE2C",
+     "CCNB1",
+     "CCNA2",
+     "BUB1",
+     "NUSAP1",
+     "TYMS",
+     "TTK"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 10,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "progenitor_cycling_state.fetal.K25.default",
+   "lineage_id": "progenitor_cycling_state",
+   "side": "fetal",
+   "target": "Retinal_Proliferating",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "PCNA",
+     "MKI67",
+     "TOP2A",
+     "UBE2C",
+     "CCNB1",
+     "CCNA2",
+     "BUB1",
+     "NUSAP1",
+     "TYMS",
+     "TTK"
+    ]
+   },
+   "route": "default",
+   "n_genes": 10,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "progenitor_cycling_state.fetal.K25.devroute",
+   "lineage_id": "progenitor_cycling_state",
+   "side": "fetal",
+   "target": "Retinal_Proliferating",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "PCNA",
+     "MKI67",
+     "TOP2A",
+     "UBE2C",
+     "CCNB1",
+     "CCNA2",
+     "BUB1",
+     "NUSAP1",
+     "TYMS",
+     "TTK"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 10,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rod.adult.Rod.K10.default",
+   "lineage_id": "rod",
+   "side": "adult",
+   "target": "Rod",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RHO",
+     "NRL",
+     "NR2E3",
+     "PDE6B",
+     "GNAT1"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rod.adult.Rod.K10.devroute",
+   "lineage_id": "rod",
+   "side": "adult",
+   "target": "Rod",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RHO",
+     "NRL",
+     "NR2E3",
+     "PDE6B",
+     "GNAT1"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rod.adult.Rod.K25.default",
+   "lineage_id": "rod",
+   "side": "adult",
+   "target": "Rod",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RHO",
+     "NRL",
+     "NR2E3",
+     "PDE6B",
+     "GNAT1"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rod.adult.Rod.K25.devroute",
+   "lineage_id": "rod",
+   "side": "adult",
+   "target": "Rod",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RHO",
+     "NRL",
+     "NR2E3",
+     "PDE6B",
+     "GNAT1"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "cone.adult.Cone.K10.default",
+   "lineage_id": "cone",
+   "side": "adult",
+   "target": "Cone",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "OPN1SW",
+     "OPN1MW",
+     "ARR3",
+     "PDE6H",
+     "GNAT2"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "cone.adult.Cone.K10.devroute",
+   "lineage_id": "cone",
+   "side": "adult",
+   "target": "Cone",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "OPN1SW",
+     "OPN1MW",
+     "ARR3",
+     "PDE6H",
+     "GNAT2"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "cone.adult.Cone.K25.default",
+   "lineage_id": "cone",
+   "side": "adult",
+   "target": "Cone",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "OPN1SW",
+     "OPN1MW",
+     "ARR3",
+     "PDE6H",
+     "GNAT2"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "cone.adult.Cone.K25.devroute",
+   "lineage_id": "cone",
+   "side": "adult",
+   "target": "Cone",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "OPN1SW",
+     "OPN1MW",
+     "ARR3",
+     "PDE6H",
+     "GNAT2"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "bc.adult.BC.K10.default",
+   "lineage_id": "bc",
+   "side": "adult",
+   "target": "BC",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "VSX2",
+     "GRM6",
+     "CACNA1S",
+     "ISL1",
+     "OTX2"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "bc.adult.BC.K10.devroute",
+   "lineage_id": "bc",
+   "side": "adult",
+   "target": "BC",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "VSX2",
+     "GRM6",
+     "CACNA1S",
+     "ISL1",
+     "OTX2"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "bc.adult.BC.K25.default",
+   "lineage_id": "bc",
+   "side": "adult",
+   "target": "BC",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "VSX2",
+     "GRM6",
+     "CACNA1S",
+     "ISL1",
+     "OTX2"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "bc.adult.BC.K25.devroute",
+   "lineage_id": "bc",
+   "side": "adult",
+   "target": "BC",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "VSX2",
+     "GRM6",
+     "CACNA1S",
+     "ISL1",
+     "OTX2"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "ac.adult.AC.K10.default",
+   "lineage_id": "ac",
+   "side": "adult",
+   "target": "AC",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "TFAP2A",
+     "GAD1",
+     "GAD2",
+     "SLC6A9",
+     "ONECUT2"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "ac.adult.AC.K10.devroute",
+   "lineage_id": "ac",
+   "side": "adult",
+   "target": "AC",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "TFAP2A",
+     "GAD1",
+     "GAD2",
+     "SLC6A9",
+     "ONECUT2"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "ac.adult.AC.K25.default",
+   "lineage_id": "ac",
+   "side": "adult",
+   "target": "AC",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "TFAP2A",
+     "GAD1",
+     "GAD2",
+     "SLC6A9",
+     "ONECUT2"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "ac.adult.AC.K25.devroute",
+   "lineage_id": "ac",
+   "side": "adult",
+   "target": "AC",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "TFAP2A",
+     "GAD1",
+     "GAD2",
+     "SLC6A9",
+     "ONECUT2"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "hc.adult.HC.K10.default",
+   "lineage_id": "hc",
+   "side": "adult",
+   "target": "HC",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "ONECUT1",
+     "ONECUT3",
+     "GAD1",
+     "ISL1",
+     "CX3CR1"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "hc.adult.HC.K10.devroute",
+   "lineage_id": "hc",
+   "side": "adult",
+   "target": "HC",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "ONECUT1",
+     "ONECUT3",
+     "GAD1",
+     "ISL1",
+     "CX3CR1"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "hc.adult.HC.K25.default",
+   "lineage_id": "hc",
+   "side": "adult",
+   "target": "HC",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "ONECUT1",
+     "ONECUT3",
+     "GAD1",
+     "ISL1",
+     "CX3CR1"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "hc.adult.HC.K25.devroute",
+   "lineage_id": "hc",
+   "side": "adult",
+   "target": "HC",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "ONECUT1",
+     "ONECUT3",
+     "GAD1",
+     "ISL1",
+     "CX3CR1"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rgc.adult.RGC.K10.default",
+   "lineage_id": "rgc",
+   "side": "adult",
+   "target": "RGC",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RBPMS",
+     "SLC17A6",
+     "POU4F1",
+     "POU4F2",
+     "NEFL"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rgc.adult.RGC.K10.devroute",
+   "lineage_id": "rgc",
+   "side": "adult",
+   "target": "RGC",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RBPMS",
+     "SLC17A6",
+     "POU4F1",
+     "POU4F2",
+     "NEFL"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rgc.adult.RGC.K25.default",
+   "lineage_id": "rgc",
+   "side": "adult",
+   "target": "RGC",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RBPMS",
+     "SLC17A6",
+     "POU4F1",
+     "POU4F2",
+     "NEFL"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rgc.adult.RGC.K25.devroute",
+   "lineage_id": "rgc",
+   "side": "adult",
+   "target": "RGC",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RBPMS",
+     "SLC17A6",
+     "POU4F1",
+     "POU4F2",
+     "NEFL"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "glia.adult.MG.K10.default",
+   "lineage_id": "glia",
+   "side": "adult",
+   "target": "MG",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RLBP1",
+     "GLUL",
+     "SOX9",
+     "VIM",
+     "S100B"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "glia.adult.MG.K10.devroute",
+   "lineage_id": "glia",
+   "side": "adult",
+   "target": "MG",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RLBP1",
+     "GLUL",
+     "SOX9",
+     "VIM",
+     "S100B"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "glia.adult.MG.K25.default",
+   "lineage_id": "glia",
+   "side": "adult",
+   "target": "MG",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RLBP1",
+     "GLUL",
+     "SOX9",
+     "VIM",
+     "S100B"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "glia.adult.MG.K25.devroute",
+   "lineage_id": "glia",
+   "side": "adult",
+   "target": "MG",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "RLBP1",
+     "GLUL",
+     "SOX9",
+     "VIM",
+     "S100B"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "glia.adult.Astrocyte.K10.default",
+   "lineage_id": "glia",
+   "side": "adult",
+   "target": "Astrocyte",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "GFAP",
+     "AQP4",
+     "S100B",
+     "VIM",
+     "SLC1A3"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "glia.adult.Astrocyte.K10.devroute",
+   "lineage_id": "glia",
+   "side": "adult",
+   "target": "Astrocyte",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "GFAP",
+     "AQP4",
+     "S100B",
+     "VIM",
+     "SLC1A3"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "glia.adult.Astrocyte.K25.default",
+   "lineage_id": "glia",
+   "side": "adult",
+   "target": "Astrocyte",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "GFAP",
+     "AQP4",
+     "S100B",
+     "VIM",
+     "SLC1A3"
+    ]
+   },
+   "route": "default",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "glia.adult.Astrocyte.K25.devroute",
+   "lineage_id": "glia",
+   "side": "adult",
+   "target": "Astrocyte",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "GFAP",
+     "AQP4",
+     "S100B",
+     "VIM",
+     "SLC1A3"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 5,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "adult_only::Microglia.adult.Microglia.K10.default",
+   "lineage_id": "adult_only::Microglia",
+   "side": "adult",
+   "target": "Microglia",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "C1QB"
+    ]
+   },
+   "route": "default",
+   "n_genes": 1,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "adult_only::Microglia.adult.Microglia.K10.devroute",
+   "lineage_id": "adult_only::Microglia",
+   "side": "adult",
+   "target": "Microglia",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "C1QB"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 1,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "adult_only::Microglia.adult.Microglia.K25.default",
+   "lineage_id": "adult_only::Microglia",
+   "side": "adult",
+   "target": "Microglia",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "C1QB"
+    ]
+   },
+   "route": "default",
+   "n_genes": 1,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "adult_only::Microglia.adult.Microglia.K25.devroute",
+   "lineage_id": "adult_only::Microglia",
+   "side": "adult",
+   "target": "Microglia",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "C1QB"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 1,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rpe.adult.RPE.K10.default",
+   "lineage_id": "rpe",
+   "side": "adult",
+   "target": "RPE",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "BEST1",
+     "RPE65",
+     "TTR",
+     "LRAT",
+     "RDH5",
+     "MITF"
+    ]
+   },
+   "route": "default",
+   "n_genes": 6,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rpe.adult.RPE.K10.devroute",
+   "lineage_id": "rpe",
+   "side": "adult",
+   "target": "RPE",
+   "window": 10,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "BEST1",
+     "RPE65",
+     "TTR",
+     "LRAT",
+     "RDH5",
+     "MITF"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 6,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rpe.adult.RPE.K25.default",
+   "lineage_id": "rpe",
+   "side": "adult",
+   "target": "RPE",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "BEST1",
+     "RPE65",
+     "TTR",
+     "LRAT",
+     "RDH5",
+     "MITF"
+    ]
+   },
+   "route": "default",
+   "n_genes": 6,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "rpe.adult.RPE.K25.devroute",
+   "lineage_id": "rpe",
+   "side": "adult",
+   "target": "RPE",
+   "window": 25,
+   "tool": "query_marker",
+   "args": {
+    "genes": [
+     "BEST1",
+     "RPE65",
+     "TTR",
+     "LRAT",
+     "RDH5",
+     "MITF"
+    ],
+    "library": "retina_dev"
+   },
+   "route": "explicit_dev",
+   "n_genes": 6,
+   "declared_but_unrunnable": true
+  },
+  {
+   "id": "composition.empty",
+   "lineage_id": null,
+   "side": null,
+   "window": null,
+   "tool": "get_tissue_composition",
+   "args": {
+    "species": "human",
+    "tissue": "retina",
+    "development_stage": ""
+   },
+   "route": "composition",
+   "n_genes": null,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "composition.adult",
+   "lineage_id": null,
+   "side": null,
+   "window": null,
+   "tool": "get_tissue_composition",
+   "args": {
+    "species": "human",
+    "tissue": "retina",
+    "development_stage": "adult"
+   },
+   "route": "composition",
+   "n_genes": null,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "composition.fetal",
+   "lineage_id": null,
+   "side": null,
+   "window": null,
+   "tool": "get_tissue_composition",
+   "args": {
+    "species": "human",
+    "tissue": "retina",
+    "development_stage": "fetal"
+   },
+   "route": "composition",
+   "n_genes": null,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "composition.developing",
+   "lineage_id": null,
+   "side": null,
+   "window": null,
+   "tool": "get_tissue_composition",
+   "args": {
+    "species": "human",
+    "tissue": "retina",
+    "development_stage": "developing"
+   },
+   "route": "composition",
+   "n_genes": null,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "composition.unknown",
+   "lineage_id": null,
+   "side": null,
+   "window": null,
+   "tool": "get_tissue_composition",
+   "args": {
+    "species": "human",
+    "tissue": "retina",
+    "development_stage": "unknown"
+   },
+   "route": "composition",
+   "n_genes": null,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "composition.postnatal",
+   "lineage_id": null,
+   "side": null,
+   "window": null,
+   "tool": "get_tissue_composition",
+   "args": {
+    "species": "human",
+    "tissue": "retina",
+    "development_stage": "postnatal"
+   },
+   "route": "composition",
+   "n_genes": null,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "composition.organoid",
+   "lineage_id": null,
+   "side": null,
+   "window": null,
+   "tool": "get_tissue_composition",
+   "args": {
+    "species": "human",
+    "tissue": "retina",
+    "development_stage": "organoid"
+   },
+   "route": "composition",
+   "n_genes": null,
+   "declared_but_unrunnable": false
+  },
+  {
+   "id": "release_identity",
+   "lineage_id": null,
+   "side": null,
+   "window": null,
+   "tool": "get_release_identity",
+   "args": {},
+   "route": "identity",
+   "n_genes": null,
+   "declared_but_unrunnable": false
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+lineage_id	fetal_node	fetal_entry	adult_counterpart_classes	n_fetal_markers	n_adult_markers	n_developing_markers	n_unknown_markers	stages_with_markers	one_stage_only	finding
+rod	dl:NO_MATCH:Rod_precursor|sp=human|ts=retina|st=fetal|es=in_vivo	Rod_precursor	Rod	25	5	0	0	adult;fetal	N	both stages carry markers
+cone	dl:NO_MATCH:Cone_precursor|sp=human|ts=retina|st=fetal|es=in_vivo	Cone_precursor	Cone	25	5	0	0	adult;fetal	N	both stages carry markers
+bc	dl:NO_MATCH:BC_precursor|sp=human|ts=retina|st=fetal|es=in_vivo	BC_precursor	BC	0	5	0	0	adult	Y	adult-stage markers only (no fetal-stage marker asserted for this lineage in the corpus)
+ac	dl:NO_MATCH:AC_precursor|sp=human|ts=retina|st=fetal|es=in_vivo	AC_precursor	AC	18	5	0	0	adult;fetal	N	both stages carry markers
+hc	dl:NO_MATCH:HC_precursor|sp=human|ts=retina|st=fetal|es=in_vivo	HC_precursor	HC	25	5	0	0	adult;fetal	N	both stages carry markers
+rgc	dl:NO_MATCH:RGC_precursor|sp=human|ts=retina|st=fetal|es=in_vivo	RGC_precursor	RGC	17	5	0	0	adult;fetal	N	both stages carry markers
+glia	dl:NO_MATCH:glia_precursor|sp=human|ts=retina|st=fetal|es=in_vivo	glia_precursor	MG;Astrocyte	0	10	0	0	adult	Y	adult-stage markers only (no fetal-stage marker asserted for this lineage in the corpus)
+rpe	dl:CL:0002586|sp=human|ts=retina|st=fetal|es=in_vivo	RPE_fetal	RPE	0	6	0	0	adult	Y	adult-stage markers only (no fetal-stage marker asserted for this lineage in the corpus)
+progenitor_rpc_early	dl:CL:0002672|sp=human|ts=retina|st=fetal|es=in_vivo	RPC_early		25	0	0	0	fetal	Y	fetal-stage markers only, no adult counterpart class in the 10-class adult vocabulary
+progenitor_rpc_late	dl:CL:0002672|sp=human|ts=retina|st=fetal|es=in_vivo	RPC_late		25	0	0	0	fetal	Y	fetal-stage markers only, no adult counterpart class in the 10-class adult vocabulary
+progenitor_nrpc_early	dl:NO_MATCH:NRPC_early|sp=human|ts=retina|st=fetal|es=in_vivo	NRPC_early		25	0	0	0	fetal	Y	fetal-stage markers only, no adult counterpart class in the 10-class adult vocabulary
+progenitor_nrpc_late	dl:NO_MATCH:NRPC_late|sp=human|ts=retina|st=fetal|es=in_vivo	NRPC_late		25	0	0	0	fetal	Y	fetal-stage markers only, no adult counterpart class in the 10-class adult vocabulary
+progenitor_tac	dl:NO_MATCH:TAC_proliferating|sp=human|ts=retina|st=fetal|es=in_vivo	TAC_proliferating		2	0	0	0	fetal	Y	fetal-stage markers only, no adult counterpart class in the 10-class adult vocabulary
+progenitor_cycling_state	dl:NO_MATCH:Retinal_Proliferating|sp=human|ts=retina|st=fetal|es=in_vivo	Retinal_Proliferating		10	0	0	0	fetal	Y	fetal-stage markers only, no adult counterpart class in the 10-class adult vocabulary

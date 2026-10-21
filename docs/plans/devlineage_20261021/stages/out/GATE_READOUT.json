@@ -1,0 +1,382 @@
+{
+ "gate": {
+  "n_items": 12,
+  "n_pass": 12,
+  "n_fail": 0,
+  "items": [
+   {
+    "item": "G1",
+    "title": "every stage literal is in the declared four-level axis {fetal,adult,developing,unknown}",
+    "verdict": "PASS",
+    "measured": {
+     "offending_rows": 0,
+     "rows_checked": 354,
+     "examples": []
+    },
+    "note": ""
+   },
+   {
+    "item": "G2",
+    "title": "no row silently assigned to adult; every non-adult row carries a disclosure row",
+    "verdict": "PASS",
+    "measured": {
+     "non_adult_rows": 222,
+     "undisclosed": 0,
+     "adult_rows_with_non_adult_source_literal": 0
+    },
+    "note": ""
+   },
+   {
+    "item": "G3",
+    "title": "no assertion mixes two stages in one row",
+    "verdict": "PASS",
+    "measured": {
+     "rows_with_more_than_one_stage_token": 0
+    },
+    "note": ""
+   },
+   {
+    "item": "G4",
+    "title": "no cross-species stitching in any published table; every cross-species candidate rejected",
+    "verdict": "PASS",
+    "measured": {
+     "species_values_in_tables": [
+      "human"
+     ],
+     "non_human_rows": 0,
+     "cross_species_candidates_real": 1,
+     "cross_species_candidates_fixture": 1,
+     "real_rejected": 1
+    },
+    "note": ""
+   },
+   {
+    "item": "G5",
+    "title": "no numeric effect value without a traceable extraction record",
+    "verdict": "PASS",
+    "measured": {
+     "rows_with_effect_value": 0,
+     "claim_types": [
+      "qualitative"
+     ]
+    },
+    "note": ""
+   },
+   {
+    "item": "G6",
+    "title": "developmental entries appear in no adult query path",
+    "verdict": "PASS",
+    "measured": {
+     "retina_dev_in_a_DEFAULT_LIBS_whitelist": false,
+     "libraries_seen_in_adult_default_rankings": [
+      "markers_membrane_v1.json",
+      "markers_v4.1_clean.json",
+      "markers_v5_retina_interneuron.json",
+      "markers_v6_retina_repair.json"
+     ]
+    },
+    "note": ""
+   },
+   {
+    "item": "G7",
+    "title": "`off` is never produced from absence of mention",
+    "verdict": "PASS",
+    "measured": {
+     "off_rows_in_tables": 0,
+     "off_candidates_generated": 218,
+     "of_which_rejected": 218
+    },
+    "note": ""
+   },
+   {
+    "item": "G8",
+    "title": "every admitted change carries an anchor and a contract grade",
+    "verdict": "PASS",
+    "measured": {
+     "admitted_rows": 0,
+     "invalid_admitted_rows": 0,
+     "note": "an empty admitted set passes; the count is reported so an empty set can never be read as a filled one"
+    },
+    "note": ""
+   },
+   {
+    "item": "G9",
+    "title": "the recognition probe stores the real service output, the exact commands, and replays byte-identically",
+    "verdict": "PASS",
+    "measured": {
+     "n_calls_pass1": 104,
+     "n_differing_responses": 0,
+     "verdict_table_identical": true,
+     "server": "/home/ubuntu/EYEKB_REPO/mcp_server/server.py",
+     "interpreter": "/home/ubuntu/training-venv/bin/python3",
+     "transport": "MCP stdio (mcp SDK client -> shipped server.py subprocess)"
+    },
+    "note": ""
+   },
+   {
+    "item": "G10",
+    "title": "default behaviour unchanged by this card: no shipped byte differs from the committed release, and this card's own recorded query set replays with difference count 0",
+    "verdict": "PASS",
+    "measured": {
+     "git_diff_rc": 0,
+     "git_diff_lines": 0,
+     "untracked_paths_outside_this_card": [],
+     "replay_difference_count_own_query_set": 0,
+     "own_query_set_size": 104
+    },
+    "note": ""
+   },
+   {
+    "item": "G11",
+    "title": "zero download, zero network: no client code in this card's scripts, and no outbound socket event in the instrumented run",
+    "verdict": "PASS",
+    "measured": {
+     "network_client_code_hits": [],
+     "audit_control_lines": 4,
+     "audit_event_lines_total": 5,
+     "audit_outbound_event_lines": 0,
+     "note": "socket.__new__ / socket.gethostname are local-only object construction and the hostname field of the service's own call-trace record; they are counted separately and not treated as network use"
+    },
+    "note": ""
+   },
+   {
+    "item": "G12",
+    "title": "repository-facing text of this card's deliverables is English only",
+    "verdict": "PASS",
+    "measured": {
+     "files_with_cjk_characters": {}
+    },
+    "note": ""
+   }
+  ]
+ },
+ "observations": {
+  "verdict_counts": {
+   "needs_information_this_interface_cannot_observe": 4,
+   "observable_now": 11
+  },
+  "lineages_with_silent_adult_assignment_on_the_fetal_window": [
+   "cone",
+   "hc",
+   "progenitor_nrpc_late",
+   "progenitor_rpc_late",
+   "rgc",
+   "rod"
+  ],
+  "lineages_with_a_state_annotations_hit_on_the_default_route": [],
+  "entries_returned_under_the_state_annotations_key": [
+   "Endo_Patho",
+   "Mac_DAM_LAM",
+   "Proliferating",
+   "Retinal_Proliferating",
+   "TAC_proliferating"
+  ],
+  "boundary_cells": {
+   "rows": 61,
+   "by_stage": {
+    "fetal": 15,
+    "developing": 15,
+    "unknown": 15,
+    "adult": 16
+   },
+   "observable_by_stage": {
+    "fetal": 11,
+    "developing": 0,
+    "adult": 10,
+    "unknown": 0
+   },
+   "by_reason": {
+    "observable_via_shipped_path": 11,
+    "no_assertion_in_corpus": 31,
+    "observable_via_named_ranking": 9,
+    "no_adult_counterpart_in_vocabulary": 6,
+    "observable_via_named_ranking_fetal_side_absent": 1,
+    "no_precursor_entry_in_corpus": 3
+   },
+   "unobservable_cells": 40
+  },
+  "change_candidates": {
+   "n_candidates_real": 287,
+   "n_rejected_real": 287,
+   "n_admitted_real": 0,
+   "n_candidates_fixture": 6,
+   "n_rejected_fixture": 6,
+   "n_admitted_fixture": 0,
+   "primary_rule_counts_real": {
+    "R2": 40,
+    "R3": 247
+   },
+   "rules_never_fired_real": [
+    "R1",
+    "R5",
+    "R9",
+    "R11"
+   ],
+   "by_family": {
+    "cross_entry_composition_differ": 5,
+    "cross_source_snapshot_differ": 239,
+    "cross_species_stitch": 1,
+    "derived_keyword_stage": 40,
+    "multistep_propagation": 2
+   }
+  }
+ },
+ "external_findings": [
+  {
+   "finding": "repo_recorded_query_set_does_not_reproduce_at_HEAD",
+   "measured": "tests/probe_tool_panel_identity.py --baseline tests/fixtures/tool_panel_baseline.json -> legacy_panel and full_panel digests moved; 5 of 12 calls differ",
+   "cause_classification": [
+    "get_kb_page{kind:index} and get_kb_page{kind:topic,name:vascular}: the panel spells the argument `kind`, the tracked tool signature is `scope` at HEAD and also at the commit that last touched the fixture (a400315) -> argument validation error, i.e. the panel does not match any tracked build of the server on this machine",
+    "get_tissue_composition{detail:true}: the panel passes a boolean, the tracked signature is `detail: str` -> validation error",
+    "search_literature{query:...} without cell_type: the tracked signature requires cell_type -> validation error",
+    "explain_annotation{cell_type:'Mueller cell'}: no validation error; a content difference the fixture cannot attribute because it stores digests only"
+   ],
+   "attribution": "pre-existing; not caused by this card (git diff HEAD over mcp_server/kb/tests/scripts is empty and the only untracked path is this card's own directory)"
+  },
+  {
+   "finding": "unrecognised_stage_literal_returns_the_adult_baseline",
+   "measured": "get_tissue_composition(species=human, tissue=retina, development_stage='organoid') returns a response byte-identical to development_stage='adult' (same md5), with no flag; the shipped tool docstring names 'organoid -> unknown+flag'",
+   "cause_classification": "the query path maps only fetal/developing/postnatal/unknown; an unrecognised literal falls through to the adult main file",
+   "attribution": "external observation about the shipped surface; the card's own tables never pass an unrecognised literal"
+  },
+  {
+   "finding": "fetal_window_recognised_but_named_as_an_adult_class",
+   "measured": "6 of the probed lineages return an adult class as the top-1 named candidate for a fetal-state window: ['cone', 'hc', 'progenitor_nrpc_late', 'progenitor_rpc_late', 'rgc', 'rod']",
+   "cause_classification": "the developmental panel is not on the default route; the adult libraries still score the fetal window and name the nearest adult class",
+   "attribution": "external observation; the card records it per lineage and does not silence it"
+  },
+  {
+   "finding": "cell_cycle_entries_are_moved_out_of_the_named_ranking_by_design",
+   "measured": "Retinal_Proliferating and TAC_proliferating are annotated concept_kind=state_program in the shipped sidecar, so their identity comes back under the additive `state_annotations` key (measured: n_shared=10 for Retinal_Proliferating on both routes)",
+   "cause_classification": "deliberate shipped behaviour (concept-kind stratification), not a defect",
+   "attribution": "recorded so a reader does not read an empty ranking as a missing answer"
+  },
+  {
+   "finding": "superseded_v8_developmental_panel_exists_only_on_the_data_mount",
+   "measured": "kb/markers/markers_v8_dev_retina.json is present at /mnt/D/EyeKB/kb/markers/ (sha256 recorded in ROBUSTNESS_RESULTS.json) but not in the repository",
+   "cause_classification": "the repository keeps only the active v9 panel",
+   "attribution": "the robustness pass uses the v8 gene lists (its own ban list permits word-level reference) and records the path and sha, so the step is reproducible only where that file exists"
+  }
+ ],
+ "stage_literal_surface": [
+  {
+   "literal": "",
+   "mode": "baseline_human_retina",
+   "organism_stage": "adult",
+   "entry_id": "baseline_human_retina",
+   "response_md5": "53a3565cc92b8eca6462f24d6b77b10d",
+   "bytes": 91392,
+   "byte_identical_to_adult_response": "Y"
+  },
+  {
+   "literal": "adult",
+   "mode": "baseline_human_retina",
+   "organism_stage": "adult",
+   "entry_id": "baseline_human_retina",
+   "response_md5": "53a3565cc92b8eca6462f24d6b77b10d",
+   "bytes": 91392,
+   "byte_identical_to_adult_response": "Y"
+  },
+  {
+   "literal": "developing",
+   "mode": "fetal_development_concept",
+   "organism_stage": "",
+   "entry_id": "fetal_development_transitions",
+   "response_md5": "45cabb73a9ace9daa505ff33504b6d07",
+   "bytes": 7266,
+   "byte_identical_to_adult_response": "N"
+  },
+  {
+   "literal": "fetal",
+   "mode": "fetal_development_concept",
+   "organism_stage": "",
+   "entry_id": "fetal_development_transitions",
+   "response_md5": "1ab08d6bbfd00b7cc0a52d0d74fbd13e",
+   "bytes": 7261,
+   "byte_identical_to_adult_response": "N"
+  },
+  {
+   "literal": "organoid",
+   "mode": "baseline_human_retina",
+   "organism_stage": "adult",
+   "entry_id": "baseline_human_retina",
+   "response_md5": "53a3565cc92b8eca6462f24d6b77b10d",
+   "bytes": 91392,
+   "byte_identical_to_adult_response": "Y"
+  },
+  {
+   "literal": "postnatal",
+   "mode": "fetal_development_concept",
+   "organism_stage": "",
+   "entry_id": "fetal_development_transitions",
+   "response_md5": "45cabb73a9ace9daa505ff33504b6d07",
+   "bytes": 7266,
+   "byte_identical_to_adult_response": "N"
+  },
+  {
+   "literal": "unknown",
+   "mode": "no_unknown_stage_entry",
+   "organism_stage": "",
+   "entry_id": "",
+   "response_md5": "c2fbf81ede54de55c7ba64e23dbdbc72",
+   "bytes": 319,
+   "byte_identical_to_adult_response": "N"
+  }
+ ],
+ "artefacts": [
+  "PREREG_STAGE_CHANGE_v1.md",
+  "discipline/net_audit/sitecustomize.py",
+  "logs/01_build.log",
+  "logs/02_probe_pass1.log",
+  "logs/02_probe_pass2.log",
+  "logs/02_replay_diff.txt",
+  "logs/03_robustness.log",
+  "logs/04_change_check.log",
+  "logs/05_boundary.log",
+  "logs/06_gate.log",
+  "logs/07_net_audit.log",
+  "logs/net_audit.log",
+  "out/ANCHORS.tsv",
+  "out/BOUNDARY_SUMMARY.json",
+  "out/CANDIDATE_CHANGES.tsv",
+  "out/CHANGE_ADMITTED.tsv",
+  "out/CHANGE_CHECK_SUMMARY.json",
+  "out/CHANGE_CHECK_SUMMARY_firstrun.json",
+  "out/CHANGE_REJECTION_LEDGER.tsv",
+  "out/GATE_READOUT.json",
+  "out/GATE_READOUT.md",
+  "out/NODE_KEYS.tsv",
+  "out/OBSERVABILITY_BOUNDARY_REGISTER.tsv",
+  "out/PROBE_PLAN.json",
+  "out/PROBE_RESULTS.json",
+  "out/PROBE_RESULTS_pass1.json",
+  "out/PROBE_RESULTS_pass1_firstrun.json",
+  "out/PROBE_RESULTS_pass2.json",
+  "out/PROBE_RESULTS_pass3.json",
+  "out/ROBUSTNESS_RESULTS.json",
+  "out/ROBUSTNESS_WINDOWS.tsv",
+  "out/RULE_REGISTRY.tsv",
+  "out/STAGE_COVERAGE.tsv",
+  "out/STAGE_DISCLOSURE.tsv",
+  "out/STAGE_LITERAL_SURFACE.tsv",
+  "out/STAGE_RESOLVED_MARKERS.tsv",
+  "out/STEP1_SUMMARY.json",
+  "out/VERDICTS.tsv",
+  "out/VERDICTS_pass1.tsv",
+  "out/VERDICTS_pass1_firstrun.tsv",
+  "out/VERDICTS_pass2.tsv",
+  "out/VERDICTS_pass3.tsv",
+  "out/prefix_artifacts/PROBE_PLAN.json",
+  "out/prefix_artifacts/PROBE_RESULTS_pass1.json",
+  "out/prefix_artifacts/PROBE_RESULTS_pass2.json",
+  "out/prefix_artifacts/VERDICTS_pass1.tsv",
+  "out/prefix_artifacts/VERDICTS_pass2.tsv",
+  "scripts/01_stage_resolved_markers.py",
+  "scripts/02_probe_recognition.py",
+  "scripts/03_robustness_probe.py",
+  "scripts/04_change_legitimacy_check.py",
+  "scripts/05_boundary_register.py",
+  "scripts/06_gate.py",
+  "scripts/07_net_audit.sh"
+ ]
+}

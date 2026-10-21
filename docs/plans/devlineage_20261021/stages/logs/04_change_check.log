@@ -1,0 +1,48 @@
+{
+ "n_candidates_real": 287,
+ "n_candidates_fixture": 6,
+ "n_rejected_real": 287,
+ "n_rejected_fixture": 6,
+ "n_admitted_real": 0,
+ "n_admitted_fixture": 0,
+ "by_family": {
+  "cross_entry_composition_differ": 5,
+  "cross_source_snapshot_differ": 239,
+  "cross_species_stitch": 1,
+  "derived_keyword_stage": 40,
+  "multistep_propagation": 2
+ },
+ "primary_rule_counts_real": {
+  "R1": 1,
+  "R2": 40,
+  "R3": 246
+ },
+ "rules_never_fired_real": [
+  "R5",
+  "R9",
+  "R11"
+ ],
+ "all_rules_fired_by_fixtures": [
+  "R1",
+  "R11",
+  "R3",
+  "R4",
+  "R5",
+  "R6",
+  "R8",
+  "R9"
+ ],
+ "mouse_labeled_genes_found": 3,
+ "input_hashes": {
+  "kb/markers/markers_v9_dev_retina.json": "0b60cd127fc39482eca07d377bb80fcf15def02278a091ec7089ca29b983a775",
+  "kb/baselines/retina.json": "25ffa795328589f24f554cd606ecdeb7c65f242af8d56c68c67f63a3a4d15619",
+  "kb/baselines/retina__fetal_developing.json": "7fd8c3645247cbd88eecfad1ff13d3139db3df02eb4423ea4daf85bf0958377c",
+  "kb/baselines/fetal_development_transitions.json": "2334d11ba169c034b75613d24b6b3ce38ee4b39efa2d37fdd917ff7249ad3300"
+ },
+ "graded_contract_stages": [
+  "adult",
+  "developing",
+  "fetal",
+  "unknown"
+ ]
+}

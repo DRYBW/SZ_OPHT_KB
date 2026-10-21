@@ -1,0 +1,60 @@
+# # MANIFEST scope note — V3 stage axis (card t_aa1b7f12)
+# # covered files: 44
+# # Excluded from the hash list, with the reason:
+# #   MANIFEST.sha256                a record cannot contain its own hash
+# #   logs/*.log                     rewritten by any re-run; hashing them would fail the
+# #                                  check for reasons unrelated to the delivered artefacts
+# #   out/GATE_READOUT.md            rewritten by the gate/verification step (the one command
+# #   out/GATE_READOUT.json          a reviewer is expected to re-run)
+# #   out/STAGE_LITERAL_SURFACE.tsv  same reason
+# # sha256 of the excluded derived files at delivery time:
+# #   out/GATE_READOUT.json  f86321027be7e76287e95061f731a22e5fab30dfb0a5dfbce067a45046572db3
+# #   out/GATE_READOUT.md  48d7c4f5dfa83af05196f0d821c2299c913db11a6194e50507e90903edf2eead
+# #   out/STAGE_LITERAL_SURFACE.tsv  864537a62a0429d54120195e66c36eab966ea3376059608f690b437fe25ae4dd
+# # Verification:  cd <this directory> && sha256sum -c MANIFEST.sha256
+# # Expected: every line 'OK', exit code 0.
+
+0a145fdcc3ccb9c6a3362b7a9a64e7f1478780d92d7d4c727344e5ccdb14a4e3  PREREG_STAGE_CHANGE_v1.md
+87d0104f425b482db82db7617e81c86b8d18f3f3c806a39e8914f8449041d939  REPORT.md
+1f0d2a9cd06a96adb59f957ce7100eef449003074a83295f30632d44f0f2ba2c  discipline/net_audit/sitecustomize.py
+fa750f8ec6e4d1cba93514c7b4d059d8245c3f42fc39bd9bcf4c0a2d9a5346d3  out/ANCHORS.tsv
+c7afe831cd1fc4536b0a987f83a3f336fb01f18a828e67c68b0dd17299ec0579  out/BOUNDARY_SUMMARY.json
+68a05c46e53b89c5b1efbab162e48f4636ee95a5cde45ec26fd205f1594e34cd  out/CANDIDATE_CHANGES.tsv
+411cbd01089a7430e6436bafd8475613a93c264c5c6ca1ad9bfcfd1eead19e06  out/CHANGE_ADMITTED.tsv
+f2066225f753e6f8e1456d1bb99a0427552d9c83b54777fed200440227927d70  out/CHANGE_CHECK_SUMMARY.json
+041855c6df5fe4ad44736cc0b268ea9d403e1919d92ebeaf1747486291c400b7  out/CHANGE_CHECK_SUMMARY_firstrun.json
+8ddd5ec8bc68c3506791975a39009383db4df4dcb3a2be72c6844c32ef915edf  out/CHANGE_REJECTION_LEDGER.tsv
+077cbdcaa740828f64b3e34fe2bf1e4ceb7d9de29d1bc0574c316e60629d5679  out/NODE_KEYS.tsv
+8bc749209312a106dd2d44dfdfab0e081d21655855f7367c19ec5291238c2193  out/OBSERVABILITY_BOUNDARY_REGISTER.tsv
+d8cc162b38afec6ada0defb1acb0a5894f6803bb2799db02c34203288e54d904  out/PROBE_PLAN.json
+c447e1bda7c20e776b3c669ad36b642968a95fb54f3cd4fadb22b3b8d0449b78  out/PROBE_RESULTS.json
+86ac5852d085025faa14686d11ec762896d999d3c87af9ca58f710304347971e  out/PROBE_RESULTS_pass1.json
+01dce0f36457f1bdb05bb3e7700014a072dd19011289dfa54ea20efd966ca2b0  out/PROBE_RESULTS_pass1_firstrun.json
+c447e1bda7c20e776b3c669ad36b642968a95fb54f3cd4fadb22b3b8d0449b78  out/PROBE_RESULTS_pass2.json
+62916267e3af6b8684e16353d4bfc6fb637496026395ed9a490b062a4be5fbe5  out/PROBE_RESULTS_pass3.json
+bf883752eec3ef2a61066015eb3b61400634850d9d227d0ebe3e6962140a43eb  out/ROBUSTNESS_RESULTS.json
+d3c2b68d72843622229d4f7f99dff15b77fdf0d2d403488d0fb98b696b5bf21b  out/ROBUSTNESS_WINDOWS.tsv
+eb2f9c1e09e4c3ca363af10bafd8abb3c9e23a039b4dc923db4c0842357a08f4  out/RULE_REGISTRY.tsv
+d42e7e7e274283c64463ea9ebd5623a0889e92ff8e9a5e8ba406ffbbe41d9e68  out/STAGE_COVERAGE.tsv
+355637b87eb826f11c171a5bc20dce673726ce0d3909d4df645a609b52ad925a  out/STAGE_DISCLOSURE.tsv
+ece117e14d380f2248852d9afc20d9a90153e06de40c4ff38ea9e88c329ab556  out/STAGE_RESOLVED_MARKERS.tsv
+63a35d6db6fb044720c9849320d7de6cb14951920153765fdd32edbe8fe51351  out/STEP1_SUMMARY.json
+cda5d101a0f21f9abdb60f9397562ffd49f8903ea9c0ffcefc3b1899cac9a951  out/VERDICTS.tsv
+cda5d101a0f21f9abdb60f9397562ffd49f8903ea9c0ffcefc3b1899cac9a951  out/VERDICTS_pass1.tsv
+70c71f88dc4fbe3b56054814376f0b5ca59f933f62a5ebf3234a5b230d4dd722  out/VERDICTS_pass1_firstrun.tsv
+cda5d101a0f21f9abdb60f9397562ffd49f8903ea9c0ffcefc3b1899cac9a951  out/VERDICTS_pass2.tsv
+cda5d101a0f21f9abdb60f9397562ffd49f8903ea9c0ffcefc3b1899cac9a951  out/VERDICTS_pass3.tsv
+f5eba1129af3e9b7038e48d11eafeffb55534261230e8c25c49cd5ba319de54b  out/prefix_artifacts/PROBE_PLAN.json
+69c79dbb6c587d16df44fab5c2f63aa2346f5d528db7b7c00e2b1bd235a4d80a  out/prefix_artifacts/PROBE_RESULTS_pass1.json
+80ef626145c7955936b3f4e22b1db18ffdfe2bc6ab261f6c036e633d42d2061b  out/prefix_artifacts/PROBE_RESULTS_pass2.json
+a90dd12bc6979ac8b582fb13661a77c45ee957ac7ee33d9861d5898fdfae2e7f  out/prefix_artifacts/VERDICTS_pass1.tsv
+a90dd12bc6979ac8b582fb13661a77c45ee957ac7ee33d9861d5898fdfae2e7f  out/prefix_artifacts/VERDICTS_pass2.tsv
+faec88f121c6fa88c414ca27b3b93470665fcda4e7896fdc396ed59ff750a67f  scripts/01_stage_resolved_markers.py
+0aee83d4ef564f7ff93391a8236ecbd5e22ab10516e3041c9b15fc1a7f7b63d8  scripts/02_probe_recognition.py
+14cd9a319fb2b05ec97d27c55ecdec9ff4fa3593b562fe6ae07cf9c0d9d1f16a  scripts/03_robustness_probe.py
+9dc89c55c80640f048c1d2f87d46a4c737c3281c6b293f26984a6d2caaa0f6f7  scripts/04_change_legitimacy_check.py
+6b3b8ba3a6ece848e2d6cc1be32b0b808121e500d13c1fcad0c027b38bcbb11a  scripts/05_boundary_register.py
+92436885d1377ed46aa3f86b22714b2df3066dd2c2e8ebbfcf9d589f60170c47  scripts/06_gate.py
+b5bb5438aa44be60d7a9164e6d040dbeeae308d9d58de446e6ad1be5c5e1e0fb  scripts/07_net_audit.sh
+693a3516057af07772e0d15f7804391773a5f7f8bfb7e5e56ff2485fd409c46e  scripts/08_report.py
+082e184f17a18522acea9e48a1398b03db958898207d43d0c417d8f6defab665  scripts/09_manifest.py

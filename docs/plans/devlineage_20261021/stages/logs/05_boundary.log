@@ -1,0 +1,24 @@
+{
+ "rows": 61,
+ "by_stage": {
+  "fetal": 15,
+  "developing": 15,
+  "unknown": 15,
+  "adult": 16
+ },
+ "observable_by_stage": {
+  "fetal": 11,
+  "developing": 0,
+  "adult": 10,
+  "unknown": 0
+ },
+ "by_reason": {
+  "observable_via_shipped_path": 11,
+  "no_assertion_in_corpus": 31,
+  "observable_via_named_ranking": 9,
+  "no_adult_counterpart_in_vocabulary": 6,
+  "observable_via_named_ranking_fetal_side_absent": 1,
+  "no_precursor_entry_in_corpus": 3
+ },
+ "unobservable_cells": 40
+}

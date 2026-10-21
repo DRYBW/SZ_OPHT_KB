@@ -1,0 +1,9 @@
+# hook-installed pid=2640591 exe=/home/ubuntu/training-venv/bin/python3
+EVENT socket.__new__ pid=2640591 args=(<socket.socket fd=-1, family=0, type=0, proto=0>, 1, 1, 0)
+EVENT socket.__new__ pid=2640591 args=(<socket.socket fd=-1, family=0, type=0, proto=0>, 1, 1, 0)
+# hook-installed pid=2640664 exe=/home/ubuntu/training-venv/bin/python3
+EVENT socket.gethostname pid=2640664 args=()
+EVENT socket.__new__ pid=2640664 args=(<socket.socket fd=-1, family=0, type=0, proto=0>, 1, 1, 0)
+EVENT socket.__new__ pid=2640664 args=(<socket.socket fd=-1, family=0, type=0, proto=0>, 1, 1, 0)
+# hook-installed pid=2640884 exe=/usr/bin/python3
+# hook-installed pid=2640885 exe=/usr/bin/python3

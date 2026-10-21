@@ -1,0 +1,29 @@
+== audit log: /home/ubuntu/EYEKB_REPO/docs/plans/devlineage_20261021/stages/logs/net_audit.log
+== step: recognition probe (pass 3, audit-instrumented)
+{
+ "pass": 3,
+ "n_calls": 104,
+ "wall_seconds": 3.2,
+ "tools": [
+  "explain_annotation",
+  "get_disease_prior",
+  "get_kb_page",
+  "get_release_identity",
+  "get_tissue_composition",
+  "query_marker",
+  "search_literature"
+ ],
+ "n_errors": 0,
+ "verdict_counts": {
+  "needs_information_this_interface_cannot_observe": 4,
+  "observable_now": 11
+ }
+}
+== step: change-legitimacy check (audit-instrumented)
+== audit summary
+hook_install_lines=4 event_lines=5
+EVENT socket.__new__ pid=2640591 args=(<socket.socket fd=-1, family=0, type=0, proto=0>, 1, 1, 0)
+EVENT socket.__new__ pid=2640591 args=(<socket.socket fd=-1, family=0, type=0, proto=0>, 1, 1, 0)
+EVENT socket.gethostname pid=2640664 args=()
+EVENT socket.__new__ pid=2640664 args=(<socket.socket fd=-1, family=0, type=0, proto=0>, 1, 1, 0)
+EVENT socket.__new__ pid=2640664 args=(<socket.socket fd=-1, family=0, type=0, proto=0>, 1, 1, 0)
