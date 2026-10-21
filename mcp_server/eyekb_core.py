@@ -289,7 +289,17 @@ MARKER_LIBS = {"retina": MARKER_JSON,
     #   discrimination segment by target-vs-neighbour detection ratio. Every entry carries a CL id.
     #   REGISTERED_DEFAULT_OFF: not part of the default `all` set unless EYEKB_ACT_ANTSEG is set;
     #   activation of the default surface requires separate PI approval. Rollback = delete this line.
-    "antseg_v10": MARKER_DIR / "markers_v10_antseg_increment.json"}
+    "antseg_v10": MARKER_DIR / "markers_v10_antseg_increment.json",
+    # lensiris_v11 = the lens/iris declared-gap increment (2026-10-21): 3 entries carrying the
+    #   author-side class names that `docs/TISSUE_COVERAGE_DECLARATION.md` records as absent from
+    #   the vocabulary (anterior lens cell CL:0002223, secondary lens fiber CL:0002225, pigmented
+    #   epithelial cell CL:0000529). Candidate genes were harvested from the project literature
+    #   corpus; identity segment ranked by paper support, discrimination segment by
+    #   target-vs-neighbour detection ratio. REGISTERED_DEFAULT_OFF and NOT in any whitelist, so
+    #   the default `all` route is byte-identical in every state; reachable only by naming
+    #   library="lensiris_v11". Merging it into `all` needs its own admission guard and separate
+    #   PI approval. Rollback = delete this line.
+    "lensiris_v11": MARKER_DIR / "markers_v11_lensiris_increment.json"}
 
 # [ACT t_5d5853c9] v6-merge whitelist for the default all — hard-coded; env values can only toggle the
 # whole feature, never inject any library
@@ -858,7 +868,8 @@ def _load_marker_dbs(library="all"):
         names = [lib]
     else:
         raise ValueError("library must be one of retina|membrane|retina_interneuron|retina_v6|"
-                         "face_v6|lacrimal_v6|k9_ocs|retina_v7|retina_dev|antseg_v10|all, got: "
+                         "face_v6|lacrimal_v6|k9_ocs|retina_v7|retina_dev|antseg_v10|"
+                         "lensiris_v11|all, got: "
                          + repr(library))
     dbs = []
     for n in names:
