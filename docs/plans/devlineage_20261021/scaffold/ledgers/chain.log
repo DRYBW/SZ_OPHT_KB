@@ -656,3 +656,332 @@ wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/GATE_SCAFFOLD.json
   numbers that do not re-derive: 0
   numbers that re-derive but are absent from the report prose: 0
 [net-audit] hook installs=38  network events=0
+Running as unit: devlin_scaffold_scan.service; invocation ID: 57f7a585e79c4796b31367919cafe9cb
+phrases matched: 168 (refused: 40)
+  refused examples: [('AC', 'single token shorter than 6 characters'), ('Astro', 'single token shorter than 6 characters'), ('B', 'single token shorter than 6 characters'), ('BC', 'single token shorter than 6 characters'), ('Cone', 'single token shorter than 6 characters'), ('Endo', 'single token shorter than 6 characters')]
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_ASSERTIONS_RAW.tsv  (124 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_ASSERTION_EXAMPLES.tsv  (194 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_ASSERTION_ANCHORS.tsv  (194 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/PEER_WEAK_ROW_CHUNKS.tsv  (77 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_SCAN_META.json
+{
+ "generated_by": "scripts/s5_corpus_scan.py",
+ "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10",
+ "chunks_in_corpus": 244877,
+ "chunks_carrying_a_lineage_verb": 6670,
+ "sentences_examined": 8309,
+ "sentences_with_one_phrase_only": 7681,
+ "sentences_with_two_or_more_phrases": 628,
+ "phrases_matched": 168,
+ "phrases_refused_single_token": 40,
+ "ordered_pairs_found": 124,
+ "pairs_with_a_direction_conflict": 18,
+ "examples_recorded": 194,
+ "examples_verified": 194,
+ "examples_failed_verification": [],
+ "peer_weak_rows": 12,
+ "peer_weak_chunks_dumped": 77,
+ "outputs": {
+  "raw": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_ASSERTIONS_RAW.tsv",
+  "examples": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_ASSERTION_EXAMPLES.tsv",
+  "anchors": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_ASSERTION_ANCHORS.tsv",
+  "peer_weak_chunks": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/PEER_WEAK_ROW_CHUNKS.tsv"
+ }
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 19.066s
+             CPU time consumed: 25.283s
+                   Memory peak: 176.6M (swap: 0B)
+[scripts/s5_corpus_scan.py] rc=0
+ontology: /mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo
+  release=releases/2026-06-08 active=3335 dev_statements=400
+  develops_from by namespace: {'CL': 400, 'UBERON': 656}
+  relation names declared by the release: 241
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/ledgers/UPSTREAM_SHA256.tsv  (17 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/REVERIFY_UPSTREAM.tsv  (58 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/REVERIFY_UPSTREAM.json
+
+re-verification: 58 checks, 0 fail
+library concepts: 80  mapped to a CL id: 65 -> 52 distinct CL ids; NO_MATCH concepts: 15
+ring B ontology intermediates: 28 (develops_from closure of ring A and of the anchors = 33 terms, 3 already ring-A nodes, 2 reached from an anchor)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/SCAFFOLD_NODES.tsv  (103 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/NODES_SUMMARY.json
+{
+ "generated_by": "scripts/s1_enum_nodes.py",
+ "nodes": 103,
+ "by_kind": {
+  "library_class": 67,
+  "ontology_intermediate": 28,
+  "origin_anchor": 8
+ },
+ "by_ring": {
+  "A1": 52,
+  "A2": 15,
+  "B1": 26,
+  "B2": 2,
+  "C": 8
+ },
+ "by_stage": {
+  "adult": 16,
+  "unknown": 45,
+  "developing": 42
+ },
+ "by_stage_basis_prefix": {
+  "baseline": 16,
+  "no_local_stage_declaration": 45,
+  "ontology": 31,
+  "label_dev_word": 11
+ },
+ "by_species": {
+  "human": 18,
+  "unknown": 85
+ },
+ "by_tissue_context": {
+  "unknown": 97,
+  "optic_nerve": 3,
+  "ocular_surface": 1,
+  "lacrimal_gland": 2
+ },
+ "library_concepts": 80,
+ "library_concepts_mapped": 65,
+ "library_concepts_no_match": 15,
+ "distinct_cl_ids_in_library": 52,
+ "ontology_intermediates": 28,
+ "ontology_intermediates_from_anchors": 2,
+ "origin_anchors": 8,
+ "nodes_with_cell_mass": 14,
+ "develops_from_closure_size": 33,
+ "closure_terms_already_library_classes": 3,
+ "unknown_stage_nodes": 45,
+ "outputs": {
+  "nodes": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/SCAFFOLD_NODES.tsv"
+ }
+}
+native develops_from steps among the enumerated nodes: 40 (dangling endpoints outside the node set: 0 [])
+derived origin edges: 11 {'R-ANCHOR-1': 4, 'R-ANCHOR-2': 6, 'R-ANCHOR-3': 1};  ring-A classes with a develops_from closure: 18 of 52
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/SCAFFOLD_EDGES_CONFIRMED.tsv  (51 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/FIRSTPASS_RECONCILIATION.tsv  (27 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/EDGES_SUMMARY.json
+{
+ "generated_by": "scripts/s2_enum_edges.py",
+ "confirmed_edges": 51,
+ "by_relation_type": {
+  "ontology_development_relation": 40,
+  "ancestral_origin": 11
+ },
+ "by_evidence_grade": {
+  "identity_conversion_not_direct": 51
+ },
+ "by_directness": {
+  "direct": 40,
+  "chain:3_steps": 1,
+  "chain:3_steps_with_is_a_bridge": 1,
+  "chain:1_steps_with_is_a_path:2_hops": 1,
+  "chain:4_steps": 1,
+  "chain:4_steps_with_is_a_bridge": 1,
+  "chain:2_steps_with_is_a_bridge": 3,
+  "chain:2_steps": 2,
+  "chain:1_steps_with_is_a_bridge": 1
+ },
+ "by_derivation": {
+  "native_ontology_attribute": 40,
+  "derived_rule": 11
+ },
+ "by_derivation_rule": {
+  "R-NATIVE": 40,
+  "R-ANCHOR-1": 4,
+  "R-ANCHOR-2": 6,
+  "R-ANCHOR-3": 1
+ },
+ "by_admission": {
+  "confirmed": 51
+ },
+ "edges_by_anchor": {
+  "direct": 5,
+  "neural_ectoderm": 4,
+  "ectoderm": 5,
+  "neural_crest": 2
+ },
+ "native_dangling_endpoints": 0,
+ "dangling_detail": [],
+ "ring_a_classes": 52,
+ "ring_a_classes_with_a_develops_from_closure": 18,
+ "ring_a_classes_with_no_develops_from_step_at_all": 34,
+ "ring_a_classes_with_any_inbound_edge": 18,
+ "ring_a_classes_with_an_anchored_origin_edge": 8,
+ "note_on_grade": "confirmed edges are graded identity_conversion_not_direct only; no local artefact supports direct_lineage_support, so none is claimed",
+ "reconciliation": {
+  "not admitted; re-examined against the corpus in s6": 11,
+  "re-typed into the contract vocabulary; the ordered pair is emitted exactly once": 9,
+  "merged: the peer wrote this ordered pair twice under two relation names": 7
+ },
+ "outputs": {
+  "confirmed": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/SCAFFOLD_EDGES_CONFIRMED.tsv",
+  "reconciliation": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/FIRSTPASS_RECONCILIATION.tsv"
+ }
+}
+ring-A classes with an anchored origin edge: 8 of 52; without: 44
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/COVERAGE_DENOMINATOR.tsv  (33 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/ANCHOR_COVERAGE.tsv  (8 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/RPC_AXIS.tsv  (52 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/COVERAGE_DENOMINATOR.json
+  library_concepts_total                                   80
+  library_concepts_mapped_to_cl                            65
+  library_concepts_no_match                                15
+  distinct_cl_ids_in_library                               52
+  nodes_total                                              103
+  nodes_ring_a1_library_classes                            52
+  nodes_ring_a2_no_match_concepts                          15
+  nodes_ring_b_ontology_intermediates                      28
+  nodes_ring_c_origin_anchors                              8
+  edges_total                                              51
+  edges_ontology_development_relation                      40
+  edges_ancestral_origin                                   11
+  edges_direct_lineage                                     0
+  edges_trajectory_association                             0
+  grade_direct_lineage_support                             0
+  grade_identity_conversion_not_direct                     51
+  grade_textbook_or_review_distant_origin                  0
+  grade_trajectory_only                                    0
+  library_classes_with_an_anchored_origin                  8
+  library_classes_with_only_corpus_cooccurrence            8
+  library_classes_with_no_local_developmental_evidence     36
+  library_classes_that_are_never_a_descendant_in_the_graph 34
+  library_classes_with_a_native_develops_from_statement    18
+  decapitated_branches                                     44
+  stage_adult                                              16
+  stage_developing                                         42
+  stage_fetal                                              0
+  stage_unknown                                            45
+  nodes_with_a_declared_tissue_context                     6
+  nodes_with_a_declared_species                            18
+  nodes_with_a_recorded_cell_mass                          14
+  native_develops_from_statements_in_release               400
+  native_develops_from_statements_enumerated               40
+  anchors with no covered class: ['hematopoietic stem cell', 'surface ectodermal cell', 'endodermal cell', 'mesenchymal cell']
+  rpc axis: {'does_not_reach_the_rpc': 49, 'reaches_the_rpc': 2, 'is_the_rpc': 1}
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/DECAPITATED_BRANCHES.tsv  (64 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/DECAPITATED_SUMMARY.json
+{
+ "generated_by": "scripts/s4_decapitated_branches.py",
+ "rows": 64,
+ "by_branch_kind": {
+  "covered_class_without_origin": 44,
+  "anchor_without_any_covered_class": 4,
+  "in_house_concept_without_ontology_term": 15,
+  "axis_rollup": 1
+ },
+ "by_break_kind": {
+  "no_develops_from_statement_at_all": 34,
+  "closure_does_not_reach_any_origin_anchor": 10,
+  "no_covered_class_reaches_this_anchor": 4,
+  "concept_has_no_ontology_counterpart_at_all": 15,
+  "axis_carries_photoreceptors_only": 1
+ },
+ "by_evidence_tier": {
+  "corpus_cooccurrence_only": 8,
+  "no_local_evidence": 36,
+  "n/a_anchor": 4,
+  "n/a_no_ontology_term": 15,
+  "rollup": 1
+ },
+ "covered_classes_without_origin": 44,
+ "with_cell_mass_known": 9,
+ "outputs": {
+  "register": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/DECAPITATED_BRANCHES.tsv"
+ }
+}
+decapitated population: 59 classes; register rows: 64
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/PEER_WEAK_ROW_RECHECK.tsv  (12 rows)
+peer weak rows re-examined: 12; asserting a relation: 0
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/TEXTBOOK_REPAIR_CANDIDATES.tsv  (0 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/PENDING_ASSERTIONS.tsv  (68 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_PAIRS_UNUSED.tsv  (39 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_EDGE_CONFIRMATIONS.tsv  (5 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/SCAFFOLD_EDGES_NOT_ADMITTED.tsv  (24 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/SCAFFOLD_EDGES.tsv  (75 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/PENDING_SUMMARY.json
+{
+ "generated_by": "scripts/s6_pending_assertions.py",
+ "pending_assertions": 68,
+ "pending_by_target_kind": {
+  "covered_class_without_origin": 67,
+  "in_house_concept_without_ontology_term": 1
+ },
+ "pending_by_grade": {
+  "identity_conversion_not_direct": 68
+ },
+ "pending_with_a_resolvable_paper_anchor": 68,
+ "pending_from_the_textbook_layer": 0,
+ "not_admitted_rows": 24,
+ "not_admitted_by_reason": {
+  "corpus_sources_point_both_ways": 12,
+  "RE-EXAMINE-1": 12
+ },
+ "confirmed_edges": 51,
+ "full_edge_set_rows": 75,
+ "peer_weak_rows_asserting_a_relation": 0,
+ "peer_weak_rows_co_mention_only": 12,
+ "corpus_pairs_corroborating_an_existing_edge": 5,
+ "corpus_pairs_unused": 39,
+ "textbook_items_with_a_developmental_assertion_for_a_decapitated_branch": 0,
+ "outputs": {
+  "pending": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/PENDING_ASSERTIONS.tsv",
+  "not_admitted": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/SCAFFOLD_EDGES_NOT_ADMITTED.tsv",
+  "full_edge_set": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/SCAFFOLD_EDGES.tsv",
+  "peer_recheck": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/PEER_WEAK_ROW_RECHECK.tsv"
+ }
+}
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/AFTERFACT_RECORDING_COVERAGE.tsv  (31 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/AFTERFACT_SUMMARY.json
+{
+ "generated_by": "scripts/s7_afterfact_coverage.py",
+ "read_after_the_graph_was_frozen": true,
+ "recording": {
+  "clusters": 721,
+  "cells": 1495330
+ },
+ "cells_on_a_class_that_is_anchored": {
+  "clusters": 100,
+  "cells": 297270,
+  "pct_cells": 19.88
+ },
+ "cells_on_a_class_that_is_decapitated": {
+  "clusters": 428,
+  "cells": 829883,
+  "pct_cells": 55.5
+ },
+ "cells_on_a_class_we_never_enumerate": {
+  "clusters": 180,
+  "cells": 347690,
+  "pct_cells": 23.25
+ },
+ "cells_on_a_class_with_no_cl_term_on_our_side": {
+  "clusters": 193,
+  "cells": 368177,
+  "pct_cells": 24.62
+ },
+ "classes_in_the_recording": 31,
+ "decapitated_classes_with_a_pending_repair": 13,
+ "full_edge_set_rows": 75,
+ "note": "this file is the only reader of the evaluation recording in this card; the scaffold artefacts are frozen before it runs and the gate checks that none of them references the recording"
+}
+manifest entries: 44
+reader-facing documents hashed: 2
+[gate scaffold] PASS  rules=10 fail=0
+  PASS G1 KEY_PARSE           node keys=103 parsed, edge keys=75 parsed, rejected rows with a declared key reason=0, confirmed=51
+  PASS G2 REL_VOCAB           rows=75 relation_types=['ancestral_origin', 'ontology_development_relation', 'trajectory_association']
+  PASS G3 STAGE_AXIS          stages={'adult': 16, 'unknown': 45, 'developing': 42} adult_with_a_verified_basis=16 unknown_never_defaulted_to_adult=yes
+  PASS G4 ANCHOR_RESOLVABLE   confirmed edges re-walked=51 rejected_rows_with_a_resolving_locator=24 pending_proposals_with_a_resolving_anchor=68
+  PASS G5 NO_TYPE_UPGRADE     rows checked=75 direct_lineage_typed=0
+  PASS G6 ACYCLIC_CONTEXT     contexts checked=1
+  PASS G7 CONFIRMED_EQ_ADMITTED confirmed=51 admitted_grade_rows=51 full_edge_set_rows=75
+  PASS G8 NO_EVAL_LEAK        forbidden tokens checked=29 over 24 artefacts (exempt, by design: ['AFTERFACT_RECORDING_COVERAGE.tsv', 'AFTERFACT_SUMMARY.json'])
+  PASS G9 UPSTREAM_PIN        ontology sha pinned, navigation module sha pinned, re-verified 17/17 consumed files
+  PASS G10 REPLAY_MANIFEST    manifest entries verified=44 replay_ledger=green pending_vs_graph_overlap=0
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/GATE_SCAFFOLD.json
+[report numbers] checked=65 numeric literals + 6 ledger readings
+  numbers that do not re-derive: 0
+  numbers that re-derive but are absent from the report prose: 0
+[net-audit] hook installs=57  network events=0

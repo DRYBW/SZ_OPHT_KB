@@ -525,10 +525,16 @@ reaches, and **24.62%** on a class carrying no CL term on our side. 13 of the de
 the recording have at least one pending repair proposal attached. Those numbers are reported here as
 coverage, and no edge in this card was derived from them.
 
-Commit for this card: **`5c41367e27a1d13da8396a078bd07c0d4e10748a`** (local only, nothing pushed; the
-commit before it, `2fbe88fe7be944f574a23a75b818c134ffcb2a01`, is the first mirror of the same bytes,
-and a follow-up commit records this hash in the mirror). It is the review-layer mirror of this
-directory under `docs/plans/devlineage_20261021/scaffold/`; the construction site remains
-`plans/devlineage_20261021/scaffold/`. Nothing outside that directory was written: `kb/`,
+Commits for this card (local only, nothing pushed), in order:
+
+| commit | what it holds |
+|---|---|
+| `2fbe88fe7be944f574a23a75b818c134ffcb2a01` | this wave, first landing of the mirror (62 files) |
+| `5c41367e27a1d13da8396a078bd07c0d4e10748a` | the mirror after the last chain run — the revision whose bytes `ledgers/DOC_SHA256.tsv` and `out/MANIFEST.sha256` describe |
+| `ac76619107cbc00850bb48a03753335d468c79fb` | the commit that first records this line; a later commit records the table itself |
+
+The mirror is `docs/plans/devlineage_20261021/scaffold/`; the construction site remains
+`plans/devlineage_20261021/scaffold/`. Verify either one with `sha256sum -c out/MANIFEST.sha256`
+(44 files, all OK) from inside it. Nothing outside that directory was written: `kb/`,
 `mcp_server/`, the frozen ontology wave and the first pass's wave are byte-identical to how this card
 found them (`G9`, 17/17 consumed files re-hashed).
