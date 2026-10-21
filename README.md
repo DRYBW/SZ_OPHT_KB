@@ -371,6 +371,7 @@ artifacts are unchanged.
 - **Known-issues catalog** (`pipeline/pitfalls/`): 59 citation-backed atomic entries + the 90-cell evidence-state matrix; the comparison entry for external annotations is `audit_annotations.py` (see above).
 - **Dictionary layer** (`kb/`, 100+ files): cell-type marker dictionaries for the human eye and mouse retina, tissue composition baselines (v0 mixed-design build + v1 stratified build), disease-prior matrices. Entries are written in English; Chinese search terms can be routed into the English vocabulary by the query-rewrite layer (**on by default since 2026-10-05**; set `EYEKB_CN_REWRITE=0` to switch it off, which restores the earlier behaviour exactly).
 - **Protocols and validation records** (`docs/`): standard operating procedures for cell annotation and the complete evidence of successive blinded validations (task definitions, decision tables, ballots, scripts) — about 2,300 files, all recomputable.
+- **What did not work** (`docs/WHAT_WE_TRIED_AND_REJECTED.md`): the mechanisms we tested and rejected, with the readings that failed them — widening the gene panel at abstention (zero gain on a held-out corpus), and eight tie-break / admission arms (all missed their pre-registered gates). Read this one before proposing a change to ranking: it records which knobs have already been shown to make things worse, and why the abstention rate should be read alongside the correct rate.
 
 ## Verify that your install matches our results
 
