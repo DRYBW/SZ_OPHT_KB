@@ -106,10 +106,12 @@ def search_literature(cell_type: str, top_k: int = 5, species: str = "",
     db:        empty = the bundled v2.0_2026-09 corpus, or an absolute path to another corpus.
 
     Chinese questions are accepted. A deterministic term-level bridge inserts English anchor
-    terms in place without deleting any of your characters; it is not a translator. English,
-    numeric and symbolic queries pass through untouched. A Chinese query's response carries a
-    rewrite_meta key disclosing what was inserted -- disclosure only, it never affects ranking.
-    Set EYEKB_CN_REWRITE=0 to turn the bridge off.
+    terms in place without deleting any of your characters; it is not a translator. The bridge
+    table ships separately: point EYEKB_CN_BRIDGE_TSV at one to enable it, otherwise your query
+    runs unchanged and rewrite_meta reports bridge_missing. English, numeric and symbolic queries
+    never enter the layer. A Chinese query's response carries a rewrite_meta key disclosing what
+    was inserted -- disclosure only, it never affects ranking. Set EYEKB_CN_REWRITE=0 to turn the
+    bridge off.
     """
     resp = core.search_literature(
         cell_type, species=species or None, tissue=tissue or None,
@@ -185,7 +187,7 @@ def query_marker(genes: list[str] | None = None, cell_type: str = "",
 
 @app.tool()
 def get_tissue_composition(species: str, tissue: str, disease: str = "",
-                           development_stage: str = "") -> dict:
+                           development_stage: str = "", detail: str = "full") -> dict:
     """Expected cell composition for a species x tissue: per-cell-type proportion intervals, plus
     per-row provenance (PMID / dataset and evidence grade).
 
@@ -204,11 +206,17 @@ def get_tissue_composition(species: str, tissue: str, disease: str = "",
     never feed these numbers into scoring.
 
     Call this before annotating, to fix what the tissue should contain and roughly how much.
+
+    detail: "full" (default) returns the complete record, including the stratum breakdown, the
+    stage disclosure and the caliber metadata. "answer" returns the proportions, the state layer,
+    the flags and the caveats only, and names what it left out in omitted_fields. Use "answer" when
+    you are reading the numbers rather than auditing them; every row keeps its own citations either
+    way.
     """
-    resp = core.get_tissue_composition(species, tissue, disease, development_stage)
+    resp = core.get_tissue_composition(species, tissue, disease, development_stage, detail)
     calllog.trace("get_tissue_composition",
                   {"species": species, "tissue": tissue, "disease": disease,
-                   "development_stage": development_stage}, resp)
+                   "development_stage": development_stage, "detail": detail}, resp)
     return resp
 
 

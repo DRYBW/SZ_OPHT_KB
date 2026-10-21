@@ -319,11 +319,15 @@ the full text — useful when you want to see what exists before reading anythin
 
 ### Chinese queries and the rewrite layer
 
-The corpus itself is English. When you pass an explicit Chinese `query` to `search_literature`, a **deterministic term-level rewrite layer** (a 243-row Chinese→English bridge table; not a general translator) inserts English anchors in place, keeping every Chinese character of your question (zero character deletion). **Since 2026-10-05 the layer is ON by default** — no configuration needed. To turn it off, set `EYEKB_CN_REWRITE` to `0`, `off`, `false` or `no`; that restores the pre-2026-10-05 behaviour byte for byte, and the option stays available permanently.
+The corpus itself is English. When you pass an explicit Chinese `query` to `search_literature`, a **deterministic term-level rewrite layer** (a 243-row Chinese→English bridge table; not a general translator) inserts English anchors in place, keeping every Chinese character of your question (zero character deletion). The layer is **on by default** since 2026-10-05.
+
+**One thing you have to supply.** The bridge table itself is not in this git tree. If it is not present, the layer does not fail and does not alter your query: the call runs on your original text and the response carries `status: "bridge_missing"` under `rewrite_meta`, so you can see why nothing was rewritten. To enable the rewrite, point `EYEKB_CN_BRIDGE_TSV` at a bridge table (a TSV with `cn_term` and `en_anchor` columns). English, numeric and symbolic queries are completely unaffected either way — they never enter the layer.
+
+To switch the layer off entirely, set `EYEKB_CN_REWRITE` to `0`, `off`, `false` or `no`; that restores the pre-2026-10-05 behaviour byte for byte, and the option stays available permanently.
 
 - **Zero intervention for English queries.** A query containing no CJK character (English / numeric / symbolic) is returned unchanged, with no disclosure key attached. Measured: 40 English retrieval queries give byte-identical service responses with the layer on and off.
-- **Disclosure key `rewrite_meta`.** Present only when the layer is on and the query contains Chinese; it is pure disclosure and **never feeds retrieval, scoring or ranking**. Key table and existence rules: `plans/cn_rewrite_flip_20261005/out/CONTRACT_REWRITE_META_v3.1.md`.
-- **Coverage is incomplete.** The bridge has 243 rows and rewriting is term-level, so the benefit is term-level ranking improvement — it is **not** a guarantee that answers become correct, and untranslated content remains (strict reading: 30 constraint rows in exam set 1, 18 in exam set 2). Details: `plans/cn_rewrite_flip_20261005/out/CHANGELOG_CN_REWRITE_ON.md`.
+- **Disclosure key `rewrite_meta`.** Present only when the layer is on and the query contains Chinese; it is pure disclosure and **never feeds retrieval, scoring or ranking**.
+- **Coverage is incomplete.** The bridge has 243 rows and rewriting is term-level, so the benefit is term-level ranking improvement — it is **not** a guarantee that answers become correct, and untranslated content remains.
 
 ### How to use composition baselines
 

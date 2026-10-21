@@ -1407,7 +1407,31 @@ def _resolve_sources(entry):
             for s in entry.get("sources", [])}
 
 
-def get_tissue_composition(species, tissue, disease="", development_stage=""):
+def _composition_answer_view(resp):
+    """Return only the parts of a composition response that answer the question.
+
+    Rows carry their own citations (sources_resolved per row), so the provenance lookup, the
+    stratum breakdown, the stage disclosure and the caliber metadata can be left out without
+    losing evidence. What is dropped is named in omitted_fields, and repeated calls with
+    detail="full" (the default) return everything exactly as before.
+    """
+    keep = ("entry_id", "title", "species", "tissue", "disease", "organism_stage",
+            "development_stage", "rows", "states", "fine_types", "flags", "caveats",
+            "source_file", "usage_redline", "usage_scope", "inventory_status", "inventory_note",
+            "baseline_status", "distribution_method", "composition_status", "stage_query_note")
+    out = {k: resp[k] for k in keep if k in resp}
+    dropped = sorted(k for k in resp if k not in out)
+    out["detail"] = "answer"
+    out["omitted_fields"] = dropped
+    out["omitted_note"] = (
+        "These fields were left out to keep the response readable. Their absence is a size choice, "
+        "not a statement that the evidence is missing: every row still carries its own citations "
+        "in sources_resolved. Call again with detail=\"full\" (the default) for strata, "
+        "stage_disclosure, provenance and the rest of the caliber metadata.")
+    return out
+
+
+def get_tissue_composition(species, tissue, disease="", development_stage="", detail="full"):
     """Composition-baseline query: cell-composition list + fraction intervals + citations for this
     species and tissue (optionally with a disease).
     species: human|mouse|...; tissue: retina|fibrovascular_membrane|...; disease optional.
@@ -1547,6 +1571,8 @@ def get_tissue_composition(species, tissue, disease="", development_stage=""):
     # and the citation
     if entry.get("marker_repair"):
         resp["marker_repair"] = entry["marker_repair"]
+    if (detail or "").strip().lower() in ("answer", "compact", "brief", "short"):
+        return _composition_answer_view(resp)
     return resp
 
 
