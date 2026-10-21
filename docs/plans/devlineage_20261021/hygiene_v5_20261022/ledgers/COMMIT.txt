@@ -1,21 +1,32 @@
-local commit: d93045d78cb23653ab2cbced033601f01d72a57f
-  "lineage hygiene: fix the upstream transition table at the root, reconcile the two panel copies,
-   re-point the marker layer at the scaffold, and report the evaluation-basis finding"
-  not pushed. It carries the whole wave (92 files) under
-  docs/plans/devlineage_20261021/hygiene_v5_20261022/ and the re-taken release identity
-  (docs/RELEASE_IDENTITY.json, release_id f53dcf8bf733).
+wave commits (local only, not pushed), in order:
+  d93045d78cb23653ab2cbced033601f01d72a57f
+     "lineage hygiene: fix the upstream transition table at the root, reconcile the two panel
+      copies, re-point the marker layer at the scaffold, and report the evaluation-basis finding"
+     the wave itself (92 files) under docs/plans/devlineage_20261021/hygiene_v5_20261022/,
+     plus the re-taken release identity (docs/RELEASE_IDENTITY.json)
+  7812b5775eb187dbb3e3e00123ee0263d5397da3
+     "record the wave's local commit and its re-entry verification" — this file
+  a22c802f8dac036f3e2b8da2f58a92c443b90386
+     "state the final gate and clone verdicts in the wave report"
+  and the commit that ships this note (it only edits this ledger)
 
-what it changed outside its own wave:
-  plans/cl_depth_devlineage_20261021/scripts/b1_build_lineage.py   one line: the child-panel
+what the wave changed outside its own directory:
+  plans/cl_depth_devlineage_20261021/scripts/b1_build_lineage.py    one line: the child-panel
     membership column is computed rather than hardcoded (the data volume, not the repository)
-  plans/cl_depth_devlineage_20261021/out/LINEAGE_MARKER_TRANSITIONS.tsv  regenerated, 90 rows
-  plans/cl_depth_devlineage_20261021/out/MANIFEST.sha256  the row for that table
+  plans/cl_depth_devlineage_20261021/out/LINEAGE_MARKER_TRANSITIONS.tsv   regenerated, 90 rows
+  plans/cl_depth_devlineage_20261021/out/MANIFEST.sha256    the row for that table
   nothing under kb/ was written; no panel body was changed; nothing was activated.
 
-follow-up commit: this file is added by the next commit in the same wave, which re-takes the
-release identity again because it changes the tracked tree.
+re-entry verification (all three were run against the commits above):
+  bash scripts/run_all.sh
+      the whole chain, ~38 s: 12/12 gate checks PASS in the author tree, MANIFEST_OK,
+      NET_ZERO_PASS; the recorded 721-query set replays 721 identical / 0 differing
+  bash scripts/w5_07_clone_check.sh
+      clones the repository at HEAD, runs the gate inside the clone (PASS; the clone-check record
+      itself is reported as INFO there because that invocation produces it), then compares every
+      mirrored file: 76 compared, 0 differing
+  python3 scripts/w5_06_gate.py
+      re-reads the clone-check record in the author tree and judges check G12 as a real PASS/FAIL
 
-re-entry verification:
-  bash scripts/run_all.sh                      # 12/12 PASS in the author tree, ~38 s
-  bash scripts/w5_07_clone_check.sh            # the gate re-run inside a git clone, from_commit
-  python3 scripts/w5_06_gate.py --no-replay    # re-reads the clone-check record (check G12)
+release identity: re-taken in every commit above that changes the tracked tree;
+  python3 scripts/release_identity.py --check  ->  IDENTITY MATCH.
