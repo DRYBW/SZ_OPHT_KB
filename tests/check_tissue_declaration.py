@@ -114,6 +114,9 @@ def read_table(p: Path) -> list:
     return [dict(zip(hdr, ln.split("\t"))) for ln in lines[1:]]
 
 
+REQUIRED_COLUMNS = ["dataset_id", "source_labels", "declared_tissue", "declared_from", "frozen_at"]
+
+
 def judge_row(row, xwalk, vocab):
     errs = []
     did = row.get("dataset_id", "?")
@@ -199,6 +202,12 @@ def main() -> int:
     rows = read_table(t)
     if not rows:
         print(f"FAIL: no data rows in {t}")
+        return 2
+    missing_cols = [c for c in REQUIRED_COLUMNS if c not in rows[0]]
+    if missing_cols:
+        print(f"FAIL: the table's first non-comment line must be its header; missing column(s): "
+              f"{', '.join(missing_cols)}")
+        print("  expected columns: " + "\t".join(REQUIRED_COLUMNS))
         return 2
     errs = []
     for r in rows:

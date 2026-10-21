@@ -299,7 +299,22 @@ MARKER_LIBS = {"retina": MARKER_JSON,
     #   the default `all` route is byte-identical in every state; reachable only by naming
     #   library="lensiris_v11". Merging it into `all` needs its own admission guard and separate
     #   PI approval. Rollback = delete this line.
-    "lensiris_v11": MARKER_DIR / "markers_v11_lensiris_increment.json"}
+    "lensiris_v11": MARKER_DIR / "markers_v11_lensiris_increment.json",
+    # holefill_v12 = the measured-coverage-hole increment (2026-10-21): 17 entries carrying the
+    #   Cell Ontology labels of the classes an external 28-volume / 721-cluster run measured as
+    #   unanswered -- vascular endothelium in retina/choroid (CL:0000115 and the arterial, venous,
+    #   arteriolar, capillary, fenestrated, vein and lymphatic partitions), macrophage and monocyte
+    #   separated from microglia (CL:0000235 / CL:0000576 / the two monocyte children), a deepened
+    #   retinal rod cell panel (CL:0000604, was 5 genes) and a deepened retinal pigment epithelial
+    #   cell panel (CL:0002586). Candidate genes were harvested from the project literature corpus;
+    #   identity segment ranked by paper support, discrimination segment by target-vs-neighbour
+    #   detection ratio; genes of the shipped entry for the same ontology term are retained so the
+    #   deepening does not lose identity genes. Two entries (classical / non-classical monocyte) do
+    #   not clear the pre-registered coverage bar and are recorded as FAIL, not claimed.
+    #   REGISTERED_DEFAULT_OFF and NOT in any whitelist, so the default `all` route is byte-identical
+    #   in every state; reachable only by naming library="holefill_v12". Merging it into `all` needs
+    #   its own admission guard and separate PI approval. Rollback = delete this line.
+    "holefill_v12": MARKER_DIR / "markers_v12_holefill_increment.json"}
 
 # [ACT t_5d5853c9] v6-merge whitelist for the default all — hard-coded; env values can only toggle the
 # whole feature, never inject any library
@@ -869,7 +884,7 @@ def _load_marker_dbs(library="all"):
     else:
         raise ValueError("library must be one of retina|membrane|retina_interneuron|retina_v6|"
                          "face_v6|lacrimal_v6|k9_ocs|retina_v7|retina_dev|antseg_v10|"
-                         "lensiris_v11|all, got: "
+                         "lensiris_v11|holefill_v12|all, got: "
                          + repr(library))
     dbs = []
     for n in names:
