@@ -1768,6 +1768,89 @@ def _link_norm(s):
     return re.sub(r"[^a-z0-9]", "", (s or "").lower())
 
 
+# Cell Ontology alignment: short library names ("MG", "Rod") mapped to their official CL label
+# ("Mueller cell", "retinal rod cell"). Used only to widen the lookup, so a reader who searches by
+# the standard ontology name lands on the same entry as one who searches by the library's own name.
+# A reader who knows the cell type should not be told it is unknown because they used CL's spelling.
+CL_ALIGNMENT = KB / "markers" / "markers_cl_alignment_v2_unified.json"
+_cl_label_cache = {"mtime": None, "by_label": {}}
+
+
+def _cl_label_lookup():
+    """{normalised CL label: short library name}."""
+    try:
+        mt = CL_ALIGNMENT.stat().st_mtime
+    except OSError:
+        return {}
+    if _cl_label_cache["mtime"] != mt:
+        by_label = {}
+        try:
+            labels = json.loads(CL_ALIGNMENT.read_text(encoding="utf-8")).get("labels", {})
+            for short, meta in labels.items():
+                cl_label = (meta or {}).get("cl_label")
+                if cl_label:
+                    by_label.setdefault(_link_norm(cl_label), short)
+        except Exception:
+            by_label = {}
+        _cl_label_cache["by_label"] = by_label
+        _cl_label_cache["mtime"] = mt
+    return _cl_label_cache["by_label"]
+
+
+# The gene x paper index records, per (gene, paper), where the symbol occurs in the shipped corpus.
+# It is the row-level proof behind a citation's gene-match flag: a citation may claim `gene_match`
+# only if this index has a row for that (paper, gene). Loaded lazily and cached by mtime.
+GENE_PAPER_INDEX = KB / "link_registry" / "out" / "GENE_PAPER_INDEX_v1.tsv"
+_gene_index_cache = {"mtime": None, "by_pmid": {}}
+
+
+def _gene_index():
+    """{pmid: {gene, ...}} for the (paper, gene) pairs actually present in the shipped index."""
+    try:
+        mt = GENE_PAPER_INDEX.stat().st_mtime
+    except OSError:
+        return {}
+    if _gene_index_cache["mtime"] != mt:
+        by_pmid = {}
+        try:
+            with GENE_PAPER_INDEX.open(encoding="utf-8") as fh:
+                header = fh.readline().rstrip("\n").split("\t")
+                ix = {name: i for i, name in enumerate(header)}
+                gi = ix.get("gene")
+                pi = ix.get("pmid", ix.get("paper_id"))
+                if gi is not None and pi is not None:
+                    for line in fh:
+                        parts = line.rstrip("\n").split("\t")
+                        if len(parts) > max(gi, pi):
+                            by_pmid.setdefault(parts[pi], set()).add(parts[gi])
+        except Exception:
+            by_pmid = {}
+        _gene_index_cache["by_pmid"] = by_pmid
+        _gene_index_cache["mtime"] = mt
+    return _gene_index_cache["by_pmid"]
+
+
+def _citation_view(c):
+    """One citation, with the evidence that lets a reader check it against the paper's own text."""
+    indexed = _gene_index().get(str(c.get("pmid")), set())
+    genes_in_text = [g for g in (c.get("genes_in_text") or []) if g in indexed]
+    verified = bool(genes_in_text)
+    out = {"pmid": c.get("pmid"), "title": c.get("title"),
+           "journal": c.get("journal"), "year": c.get("year"),
+           "tissues": c.get("tissues"), "marker_genes": c.get("marker_genes"),
+           "relevance": c.get("relevance"), "snippet": c.get("chunk")}
+    if verified:
+        out["gene_match"] = True
+        out["genes_in_text"] = genes_in_text
+        out["evidence_locator"] = c.get("evidence_locator")
+        out["evidence_source"] = c.get("evidence_source")
+    else:
+        out["gene_match"] = False
+        out["note"] = ("topical match only — this paper is about the cell type but its text does "
+                       "not name the marker genes used here, so they should not be expected in it")
+    return out
+
+
 def explain_annotation(cell_type, tissue=None, top_k=5):
     """Evidence bundle behind a cell-type entry.
 
@@ -1779,6 +1862,15 @@ def explain_annotation(cell_type, tissue=None, top_k=5):
     default answer surface or only by explicit routing, the knowledge-base pages that describe it,
     any textbook edition+page anchor behind its definition, and the papers in the shipped corpus
     that back it — each with journal and year, so the trail can be checked without network access.
+
+    Each citation also says whether it was verified against the paper's own full text: `gene_match`
+    is true when at least one of the entry's marker genes actually occurs in that paper's text,
+    `genes_in_text` lists which ones, and `evidence_locator` gives the chunk and section where the
+    first of them was found. A citation with `gene_match: false` is a topical match only — the paper
+    is about this cell type but its text does not name the genes used here, so a reader should not
+    expect to find them there. A citation is counted as verified only when the shipped gene index
+    has a row for it, so the flag cannot be set by hand.
+
     Unknown labels return the nearest available entries instead of an empty object.
     """
     rows = _link_rows()
@@ -1788,8 +1880,19 @@ def explain_annotation(cell_type, tissue=None, top_k=5):
                 "hint": "rebuild it with kb/link_registry/scripts/build_link_registry.py"}
     want = _link_norm(cell_type)
     exact = [r for r in rows if _link_norm(r.get("cell_type")) == want]
+    matched_by = "library name"
+    if not exact and want:
+        # The reader may have used the Cell Ontology's own label ("Mueller cell") instead of the
+        # library's short name ("MG"). Resolve through the alignment before giving up.
+        short = _cl_label_lookup().get(want)
+        if short:
+            exact = [r for r in rows if _link_norm(r.get("cell_type")) == _link_norm(short)]
+            if exact:
+                matched_by = "cell ontology label"
     if not exact and want:
         exact = [r for r in rows if want in _link_norm(r.get("cell_type"))]
+        if exact:
+            matched_by = "partial name"
     if not exact:
         return {"found": False, "cell_type": cell_type,
                 "available": sorted({r.get("cell_type", "") for r in rows if r.get("cell_type")})}
@@ -1801,6 +1904,7 @@ def explain_annotation(cell_type, tissue=None, top_k=5):
             filt = [c for c in cites if t in str(c.get("tissues", "")).lower()]
             if filt:
                 cites = filt
+        views = [_citation_view(c) for c in cites[:int(top_k)]]
         hits.append({
             "entry_id": r.get("entry_id"),
             "cell_type": r.get("cell_type"),
@@ -1809,15 +1913,13 @@ def explain_annotation(cell_type, tissue=None, top_k=5):
             "n_genes": r.get("n_genes"),
             "wiki_pages": r.get("wiki_pages", []),
             "textbook_anchors": [{"book": b, "page": p} for b, p in r.get("book_anchors", [])],
-            "citations": [{"pmid": c.get("pmid"), "title": c.get("title"),
-                           "journal": c.get("journal"), "year": c.get("year"),
-                           "tissues": c.get("tissues"), "marker_genes": c.get("marker_genes"),
-                           "relevance": c.get("relevance"), "snippet": c.get("chunk")}
-                          for c in cites[:int(top_k)]],
+            "citations": views,
+            "citations_verified": sum(1 for v in views if v.get("gene_match")),
             "mcp_route": r.get("mcp_route"),
             "skill": r.get("skill_trigger"),
         })
     return {"found": True, "cell_type": cell_type, "n_matches": len(hits),
+            "matched_by": matched_by,
             "entries": hits,
             "discipline": "evidence disclosure only — not an input to any score, weighting or ranking"}
 

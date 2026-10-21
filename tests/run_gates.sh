@@ -70,8 +70,12 @@ run_gate "G6 gate_change_control (eight machine rules)" \
 printf '\n=================== summary ===================\n'
 bad=0
 for i in "${!NAMES[@]}"; do
-  printf '  %-52s rc=%s\n' "${NAMES[$i]}" "${RCS[$i]}"
-  [ "${RCS[$i]}" = "0" ] || bad=$((bad + 1))
+  case "${RCS[$i]}" in
+    0) label='pass' ;;
+    3) label='INCONCLUSIVE (precondition missing - not a result)'; bad=$((bad + 1)) ;;
+    *) label='fail'; bad=$((bad + 1)) ;;
+  esac
+  printf '  %-52s rc=%s %s\n' "${NAMES[$i]}" "${RCS[$i]}" "$label"
 done
 printf '  ------------------------------------------------------------\n'
 printf '  gates=%s failed=%s  (%s)\n' "${#NAMES[@]}" "$bad" \

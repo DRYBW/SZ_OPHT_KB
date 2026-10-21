@@ -1,0 +1,590 @@
+{
+ "schema": "eyekb-disease-prior/1.0",
+ "entry_id": "PDR__fibrovascular_membrane__dendritic_cells",
+ "title": "Dendritic cell subsets in the PDR fibrovascular membrane (human)",
+ "disease": "proliferative diabetic retinopathy (PDR), proliferative stage",
+ "tissue": "fibrovascular membrane",
+ "species": "human",
+ "organism_stage": "adult",
+ "frozen_date": "2026-10-21",
+ "marker_library": {
+  "name": "membrane",
+  "file": "kb/markers/markers_membrane_v1.json",
+  "version": "v1-membrane-20260924"
+ },
+ "subsets": [
+  {
+   "entry_id": "membrane::cDC1",
+   "cell_type": "cDC1",
+   "display_name": "conventional type 1 dendritic cell (cDC1)",
+   "panel_genes": [
+    "CLEC9A",
+    "XCR1",
+    "C1S",
+    "C1R",
+    "CADM1",
+    "ZBTB46",
+    "FLT3",
+    "IRF8"
+   ],
+   "n_genes": 8,
+   "mcp_route": "query_marker(cell_type='cDC1', library='membrane')",
+   "n_citations": 28,
+   "n_gene_anchored": 10,
+   "citations": [
+    {
+     "pmid": "38716077",
+     "title": "Exploring dendritic cell subtypes in cancer immunotherapy: unraveling the role of mature regulatory dendritic cells",
+     "journal": "Upsala journal of medical sciences",
+     "year": "2024",
+     "genes_in_text": [
+      "CADM1",
+      "CLEC9A",
+      "FLT3",
+      "IRF8",
+      "XCR1"
+     ],
+     "evidence_locator": "paragraph:5 @ Introduction > The DC3 and mregDC states"
+    },
+    {
+     "pmid": "35784369",
+     "title": "",
+     "journal": "Frontiers in immunology",
+     "year": "2022",
+     "genes_in_text": [
+      "C1R",
+      "C1S"
+     ],
+     "evidence_locator": "paragraph:7 @ Discussion > A Refined Map of Complement Expression in Retina, RPE and Choroid"
+    },
+    {
+     "pmid": "31840941",
+     "title": "",
+     "journal": "Stem cells translational medicine",
+     "year": "2020",
+     "genes_in_text": [
+      "C1R",
+      "C1S"
+     ],
+     "evidence_locator": "paragraph:24 @ DISCUSSION"
+    },
+    {
+     "pmid": "35882847",
+     "title": "",
+     "journal": "Nature communications",
+     "year": "2022",
+     "genes_in_text": [
+      "C1R",
+      "C1S"
+     ],
+     "evidence_locator": "paragraph:10 @ Results > Profiling of geographic atrophy-related expression patterns in RPE and RPE subpopulations"
+    },
+    {
+     "pmid": "36899910",
+     "title": "",
+     "journal": "Cells",
+     "year": "2023",
+     "genes_in_text": [
+      "C1R",
+      "C1S"
+     ],
+     "evidence_locator": "paragraph:20 @ 3. Results > 3.5. Sub-RPE Deposition-Related Gene Expression Pattern Depends on Maturation State and Zinc Supplementation > 3.5.2. Genelist 02"
+    },
+    {
+     "pmid": "36936905",
+     "title": "",
+     "journal": "Frontiers in immunology",
+     "year": "2023",
+     "genes_in_text": [
+      "C1R",
+      "C1S"
+     ],
+     "evidence_locator": "paragraph:21 @ The cellular microenvironment as a site of origin of immune dysfunction and inflammation in ocular disease > Sorsby fundus dystrophy"
+    },
+    {
+     "pmid": "38722314",
+     "title": "",
+     "journal": "eLife",
+     "year": "2024",
+     "genes_in_text": [
+      "C1R",
+      "C1S"
+     ],
+     "evidence_locator": "paragraph:6 @ Results > Biological aspects that correlated with the pigmentation of iPSC-RPE"
+    },
+    {
+     "pmid": "40060903",
+     "title": "",
+     "journal": "iScience",
+     "year": "2025",
+     "genes_in_text": [
+      "CLEC9A",
+      "XCR1"
+     ],
+     "evidence_locator": "paragraph:7 @ Results > The landscape of ocular immune cells in uveitis"
+    },
+    {
+     "pmid": "42149027",
+     "title": "The Human Lens Fiber Cytoskeletome Reveals Neuronal Signatures and the Presence of Chaperonins, Proteasome, Signaling, a",
+     "journal": "Investigative ophthalmology & visual science",
+     "year": "2026",
+     "genes_in_text": [
+      "CADM1"
+     ],
+     "evidence_locator": "paragraph:26 @ Results > Other Notable Proteins"
+    },
+    {
+     "pmid": "35565057",
+     "title": "",
+     "journal": "International journal of environmental research and public health",
+     "year": "2022",
+     "genes_in_text": [
+      "IRF8"
+     ],
+     "evidence_locator": "paragraph:13 @ 3. Results > 3.2. Function Enrichment Analysis"
+    },
+    {
+     "pmid": "37880369",
+     "title": "An ON-type direction-selective ganglion cell in primate retina.",
+     "journal": "Nature",
+     "year": "2023",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "35212809",
+     "title": "CD73 controls ocular adenosine levels and protects retina from light-induced phototoxicity.",
+     "journal": "Cellular and molecular life sciences : CMLS",
+     "year": "2022",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "37156914",
+     "title": "Multimodal spatiotemporal phenotyping of human retinal organoid development.",
+     "journal": "Nature biotechnology",
+     "year": "2023",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "37272764",
+     "title": "Sortilin Inhibition Protects Neurons From Degeneration in the Diabetic Retina.",
+     "journal": "Investigative ophthalmology & visual science",
+     "year": "2023",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "34006945",
+     "title": "In-depth transcriptomic analysis of human retina reveals molecular mechanisms underlying diabetic retinopathy.",
+     "journal": "Scientific reports",
+     "year": "2021",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "39196935",
+     "title": "Top-down modulation of the retinal code via histaminergic neurons of the hypothalamus.",
+     "journal": "Science advances",
+     "year": "2024",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "35167652",
+     "title": "Müller Glial Expression of REDD1 Is Required for Retinal Neurodegeneration and Visual Dysfunction in Diabetic Mice.",
+     "journal": "Diabetes",
+     "year": "2022",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "42018650",
+     "title": "Spatial proteomic mapping of the human and mouse retina using IBEX.",
+     "journal": "JCI insight",
+     "year": "2026",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "36261438",
+     "title": "HBEGF-TNF induce a complex outer retinal pathology with photoreceptor cell extrusion in human organoids.",
+     "journal": "Nature communications",
+     "year": "2022",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "40050124",
+     "title": "Integrating short-read and long-read single-cell RNA sequencing for comprehensive transcriptome profiling in mouse retin",
+     "journal": "Genome research",
+     "year": "2025",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "38334673",
+     "title": "Recent Achievements in the Heterogeneity of Mammalian and Human Retinal Pigment Epithelium: In Search of a Stem Cell.",
+     "journal": "Cells",
+     "year": "2024",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "40131296",
+     "title": "The Spatial Transcriptomic Atlas of Human Limbus and Vital Niche Microenvironment Regulating the Fate of Limbal Epitheli",
+     "journal": "Investigative ophthalmology & visual science",
+     "year": "2025",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "37022761",
+     "title": "Homophilic interaction of cell adhesion molecule 3 coordinates retina neuroepithelial cell proliferation.",
+     "journal": "The Journal of cell biology",
+     "year": "2023",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "42136961",
+     "title": "Integrated Bulk and Single‐Cell Transcriptomic Analysis Reveals Xenobiotic Metabolism Genes Drive Progression From Liver",
+     "journal": "Human mutation",
+     "year": "2026",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "39952952",
+     "title": "Divergence in cellular markers observed in single-cell transcriptomics datasets between cultured primary trabecular mesh",
+     "journal": "Scientific data",
+     "year": "2025",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "33307245",
+     "title": "Transcriptomic Profiling of Human Pluripotent Stem Cell-derived Retinal Pigment Epithelium over Time.",
+     "journal": "Genomics, proteomics & bioinformatics",
+     "year": "2021",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "32347797",
+     "title": "OTX2 represses sister cell fate choices in the developing retina to promote photoreceptor specification.",
+     "journal": "eLife",
+     "year": "2020",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "34946963",
+     "title": "Single Cell Sequencing of Induced Pluripotent Stem Cell Derived Retinal Ganglion Cells (iPSC-RGC) Reveals Distinct Molec",
+     "journal": "Genes",
+     "year": "2021",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    }
+   ]
+  },
+  {
+   "entry_id": "membrane::cDC2",
+   "cell_type": "cDC2",
+   "display_name": "conventional type 2 dendritic cell (cDC2)",
+   "panel_genes": [
+    "CD1C",
+    "FCER1A",
+    "CLEC10A",
+    "CD4",
+    "HLA-DRA",
+    "S100A10"
+   ],
+   "n_genes": 6,
+   "mcp_route": "query_marker(cell_type='cDC2', library='membrane')",
+   "n_citations": 27,
+   "n_gene_anchored": 15,
+   "citations": [
+    {
+     "pmid": "38716077",
+     "title": "Exploring dendritic cell subtypes in cancer immunotherapy: unraveling the role of mature regulatory dendritic cells",
+     "journal": "Upsala journal of medical sciences",
+     "year": "2024",
+     "genes_in_text": [
+      "CD1C",
+      "CD4",
+      "CLEC10A",
+      "FCER1A"
+     ],
+     "evidence_locator": "paragraph:3 @ Introduction > Dendritic cell subtypes"
+    },
+    {
+     "pmid": "37917183",
+     "title": "",
+     "journal": "JCI insight",
+     "year": "2023",
+     "genes_in_text": [
+      "CD1C",
+      "CD4",
+      "CLEC10A",
+      "FCER1A"
+     ],
+     "evidence_locator": "paragraph:10 @ Results > Immune cells in the fibrovascular membranes express proangiogenic genes."
+    },
+    {
+     "pmid": "42021381",
+     "title": "Single-cell analysis highlights the role of CD4 +  IFN-I-related T cells in Behcet’s uveitis during Interferonα-2a thera",
+     "journal": "Biology direct",
+     "year": "2026",
+     "genes_in_text": [
+      "CD1C",
+      "CD4",
+      "CLEC10A"
+     ],
+     "evidence_locator": "abstract:1 @ Abstract"
+    },
+    {
+     "pmid": "42059276",
+     "title": "Exploring Vitamin D Signaling‐Associated Biomarkers and Their Diagnostic Value in Diabetic Retinopathy: A Combined Trans",
+     "journal": "Journal of diabetes research",
+     "year": "2026",
+     "genes_in_text": [
+      "CD1C",
+      "CD4",
+      "FCER1A"
+     ],
+     "evidence_locator": "abstract:1 @ 3. Results > 3.5. The Association Between Three Differential Immune Cells and Two Biomarkers"
+    },
+    {
+     "pmid": "40060903",
+     "title": "",
+     "journal": "iScience",
+     "year": "2025",
+     "genes_in_text": [
+      "CD4",
+      "CD1C",
+      "CLEC10A"
+     ],
+     "evidence_locator": "paragraph:7 @ Discussion > The role of ocular antigen in uveitis"
+    },
+    {
+     "pmid": "39774261",
+     "title": "Immune pathogenic response landscape of acute posterior multifocal placoid pigment epitheliopathy revealed by scRNA sequ",
+     "journal": "Genes and immunity",
+     "year": "2025",
+     "genes_in_text": [
+      "CD4",
+      "HLA-DRA"
+     ],
+     "evidence_locator": "paragraph:10 @ Results > Construction of the developmental trajectory of monocytes under pathologic states on the basis of scRNA-seq"
+    },
+    {
+     "pmid": "39220810",
+     "title": "",
+     "journal": "Ophthalmology science",
+     "year": "2024",
+     "genes_in_text": [
+      "CD4",
+      "HLA-DRA"
+     ],
+     "evidence_locator": "abstract:1 @ Abstract"
+    },
+    {
+     "pmid": "41684508",
+     "title": "",
+     "journal": "Ophthalmology science",
+     "year": "2026",
+     "genes_in_text": [
+      "HLA-DRA",
+      "S100A10"
+     ],
+     "evidence_locator": "paragraph:25 @ Results > Comprehensive Profiling of Aging Retina Uncovers Cell-Type-Specific Differentially Expressed Genes and Shared Hallmarks"
+    },
+    {
+     "pmid": "35280984",
+     "title": "",
+     "journal": "Frontiers in immunology",
+     "year": "2022",
+     "genes_in_text": [
+      "CD4",
+      "HLA-DRA"
+     ],
+     "evidence_locator": "paragraph:12 @ Discussion"
+    },
+    {
+     "pmid": "39466230",
+     "title": "",
+     "journal": "Investigative ophthalmology & visual science",
+     "year": "2024",
+     "genes_in_text": [
+      "CD4",
+      "HLA-DRA"
+     ],
+     "evidence_locator": "paragraph:15 @ Results > Characterization of Immune Cell Clusters in Mouse Leptomeninges and Their Unique Transcriptomic Signatures"
+    },
+    {
+     "pmid": "41651377",
+     "title": "",
+     "journal": "The ocular surface",
+     "year": "2026",
+     "genes_in_text": [
+      "CD4",
+      "HLA-DRA"
+     ],
+     "evidence_locator": "paragraph:14 @ Discussion"
+    },
+    {
+     "pmid": "40069725",
+     "title": "",
+     "journal": "Journal of translational medicine",
+     "year": "2025",
+     "genes_in_text": [
+      "CD1C",
+      "FCER1A"
+     ],
+     "evidence_locator": "paragraph:20 @ Results > scRNA-seq data integration and clustering of fibrovascular membrane"
+    },
+    {
+     "pmid": "40131296",
+     "title": "The Spatial Transcriptomic Atlas of Human Limbus and Vital Niche Microenvironment Regulating the Fate of Limbal Epitheli",
+     "journal": "Investigative ophthalmology & visual science",
+     "year": "2025",
+     "genes_in_text": [
+      "CD4"
+     ],
+     "evidence_locator": "paragraph:29 @ Discussion"
+    },
+    {
+     "pmid": "42136961",
+     "title": "Integrated Bulk and Single‐Cell Transcriptomic Analysis Reveals Xenobiotic Metabolism Genes Drive Progression From Liver",
+     "journal": "Human mutation",
+     "year": "2026",
+     "genes_in_text": [
+      "CD4"
+     ],
+     "evidence_locator": "paragraph:24 @ 3. Results > 3.5. Correlation of Hub Genes With Immune Cells"
+    },
+    {
+     "pmid": "36277849",
+     "title": "Single-cell multiome of the human retina and deep learning nominate causal variants in complex eye diseases.",
+     "journal": "Cell genomics",
+     "year": "2022",
+     "genes_in_text": [
+      "HLA-DRA"
+     ],
+     "evidence_locator": "paragraph:4 @ Results > Single-cell multiomics reveal the gene expression and chromatin accessibility landscapes of cell types in the human retina"
+    },
+    {
+     "pmid": "37880369",
+     "title": "An ON-type direction-selective ganglion cell in primate retina.",
+     "journal": "Nature",
+     "year": "2023",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "37156914",
+     "title": "Multimodal spatiotemporal phenotyping of human retinal organoid development.",
+     "journal": "Nature biotechnology",
+     "year": "2023",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "40050124",
+     "title": "Integrating short-read and long-read single-cell RNA sequencing for comprehensive transcriptome profiling in mouse retin",
+     "journal": "Genome research",
+     "year": "2025",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "35212809",
+     "title": "CD73 controls ocular adenosine levels and protects retina from light-induced phototoxicity.",
+     "journal": "Cellular and molecular life sciences : CMLS",
+     "year": "2022",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "34006945",
+     "title": "In-depth transcriptomic analysis of human retina reveals molecular mechanisms underlying diabetic retinopathy.",
+     "journal": "Scientific reports",
+     "year": "2021",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "37272764",
+     "title": "Sortilin Inhibition Protects Neurons From Degeneration in the Diabetic Retina.",
+     "journal": "Investigative ophthalmology & visual science",
+     "year": "2023",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "39196935",
+     "title": "Top-down modulation of the retinal code via histaminergic neurons of the hypothalamus.",
+     "journal": "Science advances",
+     "year": "2024",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "37388908",
+     "title": "A multi-omics atlas of the human retina at single-cell resolution.",
+     "journal": "Cell genomics",
+     "year": "2023",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "41632798",
+     "title": "Rare heterozygous missense variants in  VSX2  are associated with retinal detachment",
+     "journal": "PLoS genetics",
+     "year": "2026",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "36261438",
+     "title": "HBEGF-TNF induce a complex outer retinal pathology with photoreceptor cell extrusion in human organoids.",
+     "journal": "Nature communications",
+     "year": "2022",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "38334673",
+     "title": "Recent Achievements in the Heterogeneity of Mammalian and Human Retinal Pigment Epithelium: In Search of a Stem Cell.",
+     "journal": "Cells",
+     "year": "2024",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    },
+    {
+     "pmid": "41636427",
+     "title": "Time-Dependent Glucocorticoid-Induced Transcriptomic Changes in Human Trabecular Meshwork and Schlemm's Canal Cells",
+     "journal": "Investigative ophthalmology & visual science",
+     "year": "2026",
+     "genes_in_text": [],
+     "evidence_locator": ""
+    }
+   ]
+  }
+ ],
+ "registry_source": "kb/link_registry/LINK_REGISTRY_v1.jsonl",
+ "citation_fields": [
+  "pmid",
+  "title",
+  "journal",
+  "year",
+  "genes_in_text",
+  "evidence_locator"
+ ],
+ "notes": [
+  "Each citation's pmid, title, journal, year, genes_in_text and evidence_locator are copied verbatim from the registered row for the entry; no citation has been added that is not in that row, and no marker gene has been added beyond the membrane library panel.",
+  "genes_in_text is the intersection of the paper's full text with the entry panel; an empty list means the paper is registered at the label level only."
+ ]
+}

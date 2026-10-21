@@ -326,7 +326,7 @@ Two placeholders appear in every file and must be replaced with your own paths: 
 
 One boundary travels with the service into every client: the evidence returned is meant for a human to read and judge, and must never be consumed as a training or scoring signal by an automatic classifier. It is part of the server's own handshake instructions, so an agent that reads them sees the constraint without extra setup on your side.
 
-### The five things you can ask it
+### The six things you can ask it
 
 | Tool | One-line description | Example query |
 |---|---|---|
@@ -335,6 +335,7 @@ One boundary travels with the service into every client: the evidence returned i
 | `get_tissue_composition` | Expected proportions of each cell type in normal eye tissue (donor-level statistics, every row citation-linked) | "Roughly what rod/cone ratio is expected in a normal human retina?" |
 | `get_disease_prior` | The disease × tissue background layer (cell-identity hierarchy, state axes, sampling-artifact cautions) | "Can a PDR epiretinal membrane sample be compared directly to a retina sample?" |
 | `get_kb_page` | Read knowledge-base pages as-is (index / topic / tissue page types) | "Show me the retina tissue page" |
+| `explain_annotation` | The evidence trail behind one label: markers, source library, pages, textbook page, and the papers that back it — each checked against the paper's own text | "Where did 'MG' come from, and which papers actually name its marker genes?" |
 
 Those are natural-language questions, not literal argument names. Below are the exact signatures,
 including which arguments are required and what values they accept — an agent calling a tool needs
@@ -344,9 +345,10 @@ this list, because a missing required argument is rejected before the tool runs.
 |---|---|---|
 | `search_literature` | `cell_type` | `top_k` (int, default 5) · `species` (`human`/`mouse`/`""`) · `tissue` (e.g. `retina`, `cornea`, `RPE`, `choroid`) · `query` (your own sentence) · `db` |
 | `query_marker` | none | `genes` (list) or `cell_type`, at least one for an answer · `library` (`all` default, or `retina`, `retina_interneuron`, `retina_v6`, `face_v6`, `membrane`, `k9_ocs`, `retina_v7`, `retina_dev`, `lacrimal_v6`) · `species` (`human`/`mouse`) · `volume_id` · `volume_species` · `tissue` |
-| `get_tissue_composition` | `species`, `tissue` | `disease` · `development_stage` (`""` adult / `fetal` / `developing` / `unknown`) |
+| `get_tissue_composition` | `species`, `tissue` | `disease` · `development_stage` (`""` adult / `fetal` / `developing` / `unknown`) · `detail` (`full` default / `answer`) |
 | `get_disease_prior` | `disease` | `tissue` (e.g. `fibrovascular_membrane`, `vitreous`, `retina_adjacent`) |
 | `get_kb_page` | `scope` | `name` (required for `scope=topic` and `scope=tissue`) · `summary` (bool, default `false`) |
+| `explain_annotation` | `cell_type` | `tissue` (filter over the attached citations) · `top_k` (int, default 5) |
 
 `scope` accepts exactly three values: `index` (the master catalogue), `topic` (then `name`, e.g.
 `vascular`), `tissue` (then `name`, e.g. `retina`, `cornea`, `RPE`, `trabecular_meshwork`).
@@ -354,6 +356,30 @@ Calling `get_kb_page` with no `scope` is rejected.
 
 The catalogue page is large. Pass `summary=true` to get each page's title, path and size instead of
 the full text — useful when you want to see what exists before reading anything.
+
+### Checking a citation, and looking an entry up by its standard name
+
+When you cite a paper next to an annotation, the reader should be able to open that paper and see
+the evidence — not just that it is *about* the cell type, but that its text names the genes the
+annotation used. `explain_annotation` therefore reports, per citation, whether it was checked
+against that paper's own full text: `gene_match` is `true` when at least one of the entry's marker
+genes actually occurs in the paper, `genes_in_text` lists which ones, and `evidence_locator` gives
+the chunk and the section where the first of them was found. A citation with `gene_match: false` is
+a **topical match only** — the paper is about this cell type but does not name the genes used here,
+so a reader should not expect to find them in it. `citations_verified` on each entry counts the
+verified ones out of the returned set.
+
+This flag cannot be asserted by hand: a citation counts as verified only when the paper-and-gene
+index shipped with the knowledge base (`kb/link_registry/out/GENE_PAPER_INDEX_v1.tsv`) has a row for
+that pair, and the linkage gate fails if a citation claims verification without one. The index scans
+every chunk of the shipped corpus and matches whole gene symbols, never substrings — `AC` is not
+allowed to match `RAC1`, because a false "this paper mentions our marker" is worse than a miss.
+
+`explain_annotation` accepts either the library's own short name or the **Cell Ontology label** for
+the same entry: `MG` and `Mueller cell` resolve to the same record, as do `Rod` and `retinal rod
+cell`. The response states which name was used in `matched_by` (`library name`, `cell ontology
+label`, or `partial name`), so a caller who used the standard ontology term is not told the cell
+type is unknown. The ontology used is the release pinned in `kb/markers/markers_cl_alignment_v2_unified.json`.
 
 ### Chinese queries and the rewrite layer
 

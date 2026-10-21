@@ -248,13 +248,19 @@ def explain_annotation(cell_type: str, tissue: str = "", top_k: int = 5) -> dict
     library it comes from, the pages that describe it, any textbook edition+page behind its
     definition, and the papers that back it.
 
-    cell_type: the label to explain (e.g. "RPE", "Muller glia", "lens fiber cell").
+    cell_type: the label to explain (e.g. "RPE", "Muller glia", "lens fiber cell"). Both the
+    library's own short name ("MG") and the Cell Ontology label for the same entry ("Mueller cell")
+    resolve to the same record; the response says which one was used in matched_by.
     tissue: optional filter over the attached citations.
     top_k: how many citations to return.
 
     Each citation carries PMID + journal + year and resolves inside the corpus shipped with this
-    server, so a reader can check the trail without network access. Call this when writing up an
-    annotation and the citation has to be shown next to the label.
+    server, so a reader can check the trail without network access. Each one also says whether it was
+    checked against the paper's own full text: gene_match is true when at least one of the entry's
+    marker genes actually occurs in that paper, genes_in_text lists which, and evidence_locator gives
+    the chunk and section. gene_match false means the paper is about the cell type but does not name
+    the genes used here. Call this when writing up an annotation and the citation has to be shown
+    next to the label.
     Disclosure surface: not an input to any score, weighting, ranking or confidence measure.
     """
     resp = core.explain_annotation(cell_type, tissue=tissue or None, top_k=top_k)

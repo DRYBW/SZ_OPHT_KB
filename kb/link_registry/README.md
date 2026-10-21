@@ -60,6 +60,15 @@ a written page and a generated one:
 - `scripts/measure_citation_verification.py` — the verified share of citations, before and after the
   gene index is wired in, scored by the same rule on both sides.
 
+## Looking an entry up by its standard name
+
+The registry is keyed by each library's own short name (`MG`, `Rod`, `BC`). A reader who instead
+uses the **Cell Ontology** label for the same cell (`Mueller cell`, `retinal rod cell`, `amacrine
+cell`) should land on the same record rather than being told the cell type is unknown. The service
+resolves that through the alignment pinned in `kb/markers/markers_cl_alignment_v2_unified.json`, and
+reports which route matched in `matched_by` (`library name` / `cell ontology label` / `partial
+name`). This is a lookup widening only — it does not add, rename or merge any entry.
+
 ## Rebuilding
 
 ```bash
