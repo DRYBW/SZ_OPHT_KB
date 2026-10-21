@@ -1,0 +1,72 @@
+{
+ "gate": "B",
+ "name": "developmental lineage",
+ "verdict": "PASS",
+ "ontology": {
+  "path": "/mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo",
+  "release": "releases/2026-06-08",
+  "sha256": "7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f"
+ },
+ "rules": {
+  "B1": "node term resolves + file line",
+  "B2": "inbound relation + evidence",
+  "B3": "acyclic",
+  "B4": "organism-stage axis not collapsed",
+  "B5": "marker transition traceability",
+  "B6": "no evaluation-volume input",
+  "B7": "manifest + replay"
+ },
+ "n_checks": 7,
+ "n_fail": 0,
+ "checks": [
+  {
+   "code": "B1 NODE_TERM",
+   "status": "PASS",
+   "detail": "nodes=60",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "B2 INBOUND",
+   "status": "PASS",
+   "detail": "edges=34 roots=44 (accounted 44)",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "B3 ACYCLIC",
+   "status": "PASS",
+   "detail": "develops_from nodes=7 edges=9",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "B4 STAGE_AXIS",
+   "status": "PASS",
+   "detail": "developing nodes=12 stage-crossing edges=31 adult-baseline keys checked=78",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "B5 MARKER_TRACE",
+   "status": "PASS",
+   "detail": "marker rows=100 corpus-supported=100",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "B6 NO_EVAL_LEAK",
+   "status": "PASS",
+   "detail": "forbidden tokens checked=29 over 6 files",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "B7 REPLAY",
+   "status": "PASS",
+   "detail": "manifest entries=32",
+   "n_offenders": 0,
+   "offenders": []
+  }
+ ]
+}

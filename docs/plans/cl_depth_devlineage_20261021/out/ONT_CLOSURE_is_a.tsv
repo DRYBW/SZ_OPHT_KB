@@ -1,0 +1,3336 @@
+cl_id	cl_label	obo_line	n_parents	n_ancestors_cl	n_descendants
+CL:0000000	cell	166	1	0	3324
+CL:0000001	primary cultured cell	193	1	4	0
+CL:0000005	neural crest derived fibroblast	240	1	5	2
+CL:0000006	neuronal receptor cell	252	2	10	104
+CL:0000007	early embryonic cell (metazoa)	268	1	2	5
+CL:0000008	migratory cranial neural crest cell	278	1	10	0
+CL:0000010	cultured cell	298	1	3	1
+CL:0000011	migratory trunk neural crest cell	308	1	10	0
+CL:0000014	germ line stem cell	332	2	4	2
+CL:0000015	male germ cell	346	1	3	16
+CL:0000016	male germ line stem cell	363	2	7	0
+CL:0000017	spermatocyte	373	2	4	2
+CL:0000018	spermatid	394	4	6	2
+CL:0000019	sperm	423	3	8	6
+CL:0000020	spermatogonium	446	1	4	0
+CL:0000021	female germ cell	468	2	4	10
+CL:0000022	female germ line stem cell	484	2	8	0
+CL:0000023	oocyte	496	2	5	2
+CL:0000024	oogonial cell	515	2	5	0
+CL:0000025	egg cell	531	2	8	0
+CL:0000026	invertebrate nurse cell	552	4	6	0
+CL:0000027	smooth muscle cell neural crest derived	565	1	9	0
+CL:0000028	CNS neuron (sensu Nematoda and Protostomia)	576	2	8	2
+CL:0000029	neural crest derived neuron	584	2	7	51
+CL:0000030	glioblast	600	2	4	2
+CL:0000031	neuroblast (sensu Vertebrata)	614	2	4	4
+CL:0000032	neuroplacodal cell	631	3	3	0
+CL:0000033	apocrine cell	645	1	4	0
+CL:0000034	stem cell	654	1	2	108
+CL:0000035	single fate stem cell	675	1	4	3
+CL:0000036	epithelial fate stem cell	693	2	5	22
+CL:0000037	hematopoietic stem cell	710	4	8	11
+CL:0000038	erythroid progenitor cell	767	2	10	3
+CL:0000039	germ line cell	790	1	1	38
+CL:0000040	monoblast	804	2	10	0
+CL:0000041	mature eosinophil	832	2	12	0
+CL:0000042	neutrophilic myeloblast	860	2	12	0
+CL:0000043	mature basophil	885	2	14	0
+CL:0000047	neural stem cell	923	2	3	3
+CL:0000048	multi fate stem cell	940	1	3	54
+CL:0000049	common myeloid progenitor	959	1	5	3
+CL:0000050	megakaryocyte-erythroid progenitor cell	986	3	8	2
+CL:0000051	common lymphoid progenitor	1017	2	7	4
+CL:0000052	totipotent stem cell	1045	1	4	1
+CL:0000056	myoblast	1078	1	5	11
+CL:0000057	fibroblast	1094	1	4	104
+CL:0000058	chondroblast	1112	2	5	0
+CL:0000059	ameloblast	1129	3	8	0
+CL:0000060	odontoblast	1151	2	9	2
+CL:0000061	cementoblast	1170	2	5	0
+CL:0000062	osteoblast	1188	2	3	5
+CL:0000064	ciliated cell	1218	1	2	44
+CL:0000065	ependymal cell	1234	3	11	27
+CL:0000066	epithelial cell	1257	1	2	712
+CL:0000067	ciliated epithelial cell	1280	2	4	40
+CL:0000068	duct epithelial cell	1296	1	3	51
+CL:0000069	branched duct epithelial cell	1311	1	4	13
+CL:0000071	blood vessel endothelial cell	1323	1	4	78
+CL:0000072	non-branched duct epithelial cell	1340	2	5	22
+CL:0000075	columnar/cuboidal epithelial cell	1362	1	3	233
+CL:0000076	squamous epithelial cell	1374	1	3	36
+CL:0000077	mesothelial cell	1390	2	5	17
+CL:0000078	peridermal cell	1408	2	7	0
+CL:0000079	stratified epithelial cell	1422	2	3	44
+CL:0000080	circulating cell	1439	1	2	6
+CL:0000081	blood cell	1451	1	2	41
+CL:0000082	epithelial cell of lung	1467	1	6	14
+CL:0000083	epithelial cell of pancreas	1481	1	4	13
+CL:0000084	T cell	1497	1	9	171
+CL:0000091	Kupffer cell	1574	1	17	1
+CL:0000092	osteoclast	1609	3	12	5
+CL:0000094	granulocyte	1655	2	9	20
+CL:0000095	neuron associated cell	1692	2	3	174
+CL:0000096	mature neutrophil	1703	2	13	2
+CL:0000097	mast cell	1743	2	11	2
+CL:0000098	sensory epithelial cell	1791	2	4	37
+CL:0000099	interneuron	1807	1	8	168
+CL:0000100	motor neuron	1825	1	8	35
+CL:0000101	sensory neuron	1844	1	8	153
+CL:0000102	polymodal neuron	1864	1	8	0
+CL:0000103	bipolar neuron	1874	1	9	1
+CL:0000104	multipolar neuron	1891	1	8	3
+CL:0000105	pseudounipolar neuron	1905	1	8	0
+CL:0000106	unipolar neuron	1915	1	8	0
+CL:0000107	autonomic neuron	1926	2	8	83
+CL:0000108	cholinergic neuron	1940	2	8	23
+CL:0000109	adrenergic neuron	1960	1	9	0
+CL:0000110	peptidergic neuron	1969	1	7	0
+CL:0000112	columnar neuron	1980	2	10	0
+CL:0000113	mononuclear phagocyte	1989	2	11	183
+CL:0000114	surface ectodermal cell	2006	1	4	0
+CL:0000115	endothelial cell	2022	2	2	108
+CL:0000116	pioneer neuron	2042	1	7	0
+CL:0000117	CNS neuron (sensu Vertebrata)	2052	1	8	0
+CL:0000118	basket cell	2061	1	13	8
+CL:0000119	cerebellar Golgi cell	2077	1	15	1
+CL:0000120	granule cell	2100	1	8	10
+CL:0000121	Purkinje cell	2114	2	11	3
+CL:0000122	stellate neuron	2139	1	8	4
+CL:0000123	neuron associated cell (sensu Vertebrata)	2157	1	4	29
+CL:0000125	glial cell	2173	1	4	153
+CL:0000126	macroglial cell	2194	1	5	88
+CL:0000127	astrocyte	2210	1	6	58
+CL:0000128	oligodendrocyte	2226	2	7	27
+CL:0000129	microglial cell	2246	2	21	3
+CL:0000130	neuron associated cell (sensu Nematoda and Protostomia)	2281	1	4	2
+CL:0000131	gut endothelial cell	2287	1	3	3
+CL:0000132	corneal endothelial cell	2303	1	3	0
+CL:0000133	neurectodermal cell	2321	1	4	1
+CL:0000134	mesenchymal stem cell	2333	2	6	24
+CL:0000135	circulating fibrocyte	2366	2	6	0
+CL:0000136	adipocyte	2383	3	4	11
+CL:0000137	osteocyte	2406	3	4	1
+CL:0000138	chondrocyte	2425	3	10	17
+CL:0000140	odontocyte	2447	2	3	0
+CL:0000141	cementocyte	2460	1	5	0
+CL:0000142	hyalocyte	2473	1	4	0
+CL:0000143	guidepost cell	2484	1	5	0
+CL:0000145	professional antigen presenting cell	2499	1	6	227
+CL:0000146	simple columnar epithelial cell	2517	1	4	3
+CL:0000147	pigment cell	2526	1	2	27
+CL:0000148	melanocyte	2539	3	4	13
+CL:0000149	visual pigment cell	2567	1	3	3
+CL:0000150	glandular secretory epithelial cell	2576	1	5	88
+CL:0000151	secretory cell	2593	1	1	636
+CL:0000152	exocrine cell	2608	2	3	34
+CL:0000153	glycosaminoglycan secreting cell	2623	2	7	18
+CL:0000154	protein secreting cell	2636	1	2	27
+CL:0000155	peptic cell	2648	3	12	0
+CL:0000157	surfactant secreting cell	2672	1	2	1
+CL:0000158	club cell	2683	4	13	0
+CL:0000159	seromucus secreting cell	2702	1	2	46
+CL:0000160	goblet cell	2710	2	7	24
+CL:0000162	parietal cell	2737	2	11	0
+CL:0000163	endocrine cell	2755	2	3	93
+CL:0000164	enteroendocrine cell	2771	2	6	41
+CL:0000165	neuroendocrine cell	2787	4	15	52
+CL:0000166	chromaffin cell	2810	2	18	27
+CL:0000167	peptide hormone secreting cell	2827	1	2	67
+CL:0000168	insulin secreting cell	2840	3	5	1
+CL:0000169	type B pancreatic cell	2855	2	13	0
+CL:0000170	glucagon secreting cell	2891	1	3	3
+CL:0000171	pancreatic A cell	2905	2	13	0
+CL:0000172	somatostatin secreting cell	2929	1	3	5
+CL:0000173	pancreatic D cell	2941	2	23	0
+CL:0000174	steroid hormone secreting cell	2968	1	2	23
+CL:0000175	luteal cell	2980	1	5	4
+CL:0000176	ecdysteroid secreting cell	2995	1	3	0
+CL:0000177	testosterone secreting cell	3006	1	2	2
+CL:0000178	Leydig cell	3018	3	5	0
+CL:0000179	progesterone secreting cell	3042	2	4	5
+CL:0000180	estradiol secreting cell	3055	1	3	0
+CL:0000182	hepatocyte	3075	3	5	3
+CL:0000183	contractile cell	3099	1	1	186
+CL:0000185	myoepithelial cell	3109	2	5	17
+CL:0000186	myofibroblast cell	3125	2	4	9
+CL:0000187	muscle cell	3140	4	5	144
+CL:0000188	cell of skeletal muscle	3166	1	2	29
+CL:0000189	slow muscle cell	3187	1	14	1
+CL:0000190	fast muscle cell	3201	1	14	5
+CL:0000192	smooth muscle cell	3215	2	8	64
+CL:0000193	cardiac muscle cell (sensu Arthopoda)	3239	1	9	0
+CL:0000196	insect flight muscle cell	3260	1	13	0
+CL:0000197	sensory receptor cell	3269	1	2	144
+CL:0000198	pain receptor cell	3285	1	11	2
+CL:0000199	mechanoreceptor cell	3297	1	9	28
+CL:0000200	touch receptor cell	3311	1	10	0
+CL:0000202	auditory hair cell	3322	1	11	4
+CL:0000203	gravity sensitive cell	3335	2	12	20
+CL:0000204	acceleration receptive cell	3346	1	11	0
+CL:0000205	thermoreceptor cell	3353	1	11	2
+CL:0000206	chemoreceptor cell	3365	1	3	21
+CL:0000207	olfactory receptor cell	3378	2	12	3
+CL:0000208	pH receptor cell	3402	1	4	0
+CL:0000209	taste receptor cell	3409	3	7	6
+CL:0000210	photoreceptor cell	3429	2	10	27
+CL:0000211	electrically active cell	3451	1	1	976
+CL:0000214	synovial cell	3479	1	4	2
+CL:0000216	Sertoli cell	3499	4	13	0
+CL:0000218	myelinating Schwann cell	3527	2	7	0
+CL:0000219	motile cell	3544	1	1	611
+CL:0000221	ectodermal cell	3566	2	3	3
+CL:0000222	mesodermal cell	3581	2	3	7
+CL:0000223	endodermal cell	3599	2	3	1
+CL:0000225	anucleate cell	3624	1	1	10
+CL:0000226	single nucleate cell	3638	2	3	539
+CL:0000227	binucleate cell	3650	1	4	2
+CL:0000228	multinucleate cell	3661	2	3	35
+CL:0000232	erythrocyte	3697	3	7	6
+CL:0000233	platelet	3729	4	9	0
+CL:0000234	phagocyte	3755	2	3	201
+CL:0000235	macrophage	3774	3	15	75
+CL:0000236	B cell	3803	1	10	97
+CL:0000237	keratinizing barrier epithelial cell	3826	3	7	19
+CL:0000238	non keratinizing barrier epithelial cell	3837	1	6	1
+CL:0000239	brush border epithelial cell	3844	1	4	32
+CL:0000240	stratified squamous epithelial cell	3859	2	5	8
+CL:0000241	stratified cuboidal epithelial cell	3876	2	5	0
+CL:0000242	Merkel cell	3891	3	11	1
+CL:0000244	transitional epithelial cell	3918	1	3	9
+CL:0000246	Mauthner neuron	3936	1	9	0
+CL:0000247	Rohon-Beard neuron	3944	1	12	0
+CL:0000249	hatching gland cell	3966	1	2	0
+CL:0000251	extramedullary cell	3981	1	9	0
+CL:0000253	eurydendroid cell	3996	1	8	0
+CL:0000255	eukaryotic cell	4013	1	1	3155
+CL:0000256	uric acid accumulating cell	4027	1	2	0
+CL:0000257	Eumycetozoan cell	4034	1	2	0
+CL:0000286	hyphal cell	4222	1	3	0
+CL:0000287	eye photoreceptor cell	4228	2	13	18
+CL:0000295	somatotropin secreting cell	4296	1	3	2
+CL:0000300	gamete	4340	2	4	10
+CL:0000301	pole cell	4361	1	4	0
+CL:0000306	crystallin accumulating cell	4398	1	2	12
+CL:0000307	tracheal epithelial cell	4407	1	7	5
+CL:0000308	metal ion accumulating cell	4423	1	2	2
+CL:0000309	copper accumulating cell	4430	1	3	0
+CL:0000310	iron accumulating cell	4438	1	3	0
+CL:0000311	keratin accumulating cell	4445	1	2	21
+CL:0000312	keratinocyte	4455	1	8	15
+CL:0000313	serous secreting cell	4473	1	3	9
+CL:0000314	milk secreting cell	4485	1	2	3
+CL:0000315	tear secreting cell	4492	1	4	0
+CL:0000317	sebocyte	4509	5	12	1
+CL:0000318	sweat secreting cell	4527	1	6	2
+CL:0000319	mucus secreting cell	4535	1	3	34
+CL:0000322	pulmonary alveolar epithelial cell	4567	1	7	4
+CL:0000323	lysozyme secreting cell	4590	1	3	7
+CL:0000324	metanephric mesenchyme stem cell	4597	2	7	0
+CL:0000325	stuff accumulating cell	4607	1	1	285
+CL:0000326	glycogen accumulating cell	4617	1	2	0
+CL:0000327	extracellular matrix secreting cell	4624	1	4	28
+CL:0000329	oxygen accumulating cell	4634	1	1	7
+CL:0000333	migratory neural crest cell	4669	4	9	6
+CL:0000334	vegetative cell (sensu Fungi)	4684	1	3	0
+CL:0000335	mesenchyme condensation cell	4692	1	3	0
+CL:0000336	adrenal medulla chromaffin cell	4703	2	22	2
+CL:0000338	neuroblast (sensu Nematoda and Protostomia)	4720	1	4	0
+CL:0000339	glioblast (sensu Vertebrata)	4730	2	8	0
+CL:0000340	glioblast (sensu Nematoda and Protostomia)	4743	2	8	0
+CL:0000341	pigment cell (sensu Nematoda and Protostomia)	4751	1	3	1
+CL:0000342	pigment cell (sensu Vertebrata)	4757	2	4	2
+CL:0000343	visual pigment cell (sensu Vertebrata)	4768	2	6	0
+CL:0000345	dental papilla cell	4787	3	4	0
+CL:0000346	hair follicle dermal papilla cell	4801	1	8	1
+CL:0000347	scleral cell	4817	2	2	0
+CL:0000348	choroidal cell of the eye	4833	2	2	1
+CL:0000349	extraembryonic cell	4848	1	2	30
+CL:0000350	amnioserosal cell	4862	1	3	0
+CL:0000351	trophoblast cell	4871	2	3	15
+CL:0000352	epiblast cell	4885	1	5	0
+CL:0000353	blastoderm cell	4894	1	3	0
+CL:0000354	blastemal cell	4906	1	4	0
+CL:0000355	multi-potent skeletal muscle stem cell	4916	2	6	0
+CL:0000356	hair matrix stem cell	4931	1	5	0
+CL:0000357	stratified epithelial stem cell	4938	1	6	2
+CL:0000358	sphincter associated smooth muscle cell	4946	1	9	1
+CL:0000359	vascular associated smooth muscle cell	4959	2	10	23
+CL:0000360	morula cell	4978	2	4	0
+CL:0000361	gastrula cell	4988	2	4	0
+CL:0000362	epidermal cell	4999	1	5	28
+CL:0000365	animal zygote	5034	3	5	0
+CL:0000367	sheath cell (sensu Nematoda)	5062	1	4	0
+CL:0000371	protoplast	5085	1	3	1
+CL:0000372	tormogen cell	5093	1	9	0
+CL:0000373	histoblast	5101	2	4	0
+CL:0000374	trichogen cell	5110	1	9	0
+CL:0000376	humidity receptor cell	5126	1	11	0
+CL:0000377	tracheoblast	5133	1	5	0
+CL:0000378	supporting cell (sensu Nematoda and Protostomia)	5140	1	2	7
+CL:0000379	sensory processing neuron	5148	1	8	0
+CL:0000380	thecogen cell	5157	1	3	0
+CL:0000382	scolopale cell	5175	2	4	0
+CL:0000383	nephrogenic mesenchyme stem cell	5185	2	8	0
+CL:0000384	ligament cell	5195	1	2	0
+CL:0000385	prohemocyte (sensu Nematoda and Protostomia)	5203	1	3	1
+CL:0000387	hemocyte (sensu Arthropoda)	5218	3	5	9
+CL:0000388	tendon cell	5229	1	6	0
+CL:0000389	socket cell (sensu Nematoda)	5246	2	10	0
+CL:0000390	blood cell (sensu Nematoda and Protostomia)	5254	1	3	10
+CL:0000392	crystal cell	5268	1	6	2
+CL:0000393	electrically responsive cell	5275	1	2	974
+CL:0000394	plasmatocyte	5285	1	6	2
+CL:0000395	procrystal cell	5295	1	4	0
+CL:0000396	lamellocyte	5302	1	6	0
+CL:0000397	ganglion interneuron	5309	1	9	0
+CL:0000404	electrically signaling cell	5362	1	2	829
+CL:0000406	CNS short range interneuron	5379	1	9	0
+CL:0000407	scolopidial ligament cell	5387	2	4	0
+CL:0000408	male gamete	5396	2	6	7
+CL:0000410	CNS long range interneuron	5419	1	9	0
+CL:0000411	Caenorhabditis hypodermal cell	5427	2	5	0
+CL:0000412	polyploid cell	5439	1	1	7
+CL:0000413	haploid cell	5452	1	1	15
+CL:0000415	diploid cell	5476	1	1	0
+CL:0000416	polytene cell	5485	1	2	0
+CL:0000417	endopolyploid cell	5492	1	2	4
+CL:0000418	arcade cell	5501	1	3	0
+CL:0000419	seam cell	5509	1	6	0
+CL:0000420	syncytial epithelial cell	5518	2	6	0
+CL:0000421	coelomocyte	5528	2	7	0
+CL:0000422	mitogenic signaling cell	5537	1	1	3
+CL:0000423	tip cell	5545	1	2	1
+CL:0000424	excretory cell	5553	1	1	9
+CL:0000425	pore cell	5562	1	7	0
+CL:0000427	GLR cell	5577	1	3	0
+CL:0000428	yolk cell	5585	2	4	0
+CL:0000429	imaginal disc cell	5594	1	5	0
+CL:0000430	xanthophore cell	5603	3	4	0
+CL:0000431	iridophore	5616	3	4	0
+CL:0000432	reticular cell	5629	1	5	8
+CL:0000434	eccrine cell	5650	1	5	2
+CL:0000435	alkali secreting cell	5659	1	2	0
+CL:0000436	vaginal lubricant secreting cell	5667	2	3	0
+CL:0000437	gonadtroph	5676	2	27	0
+CL:0000438	luteinizing hormone secreting cell	5695	1	2	1
+CL:0000439	prolactin secreting cell	5708	2	4	2
+CL:0000440	melanocyte stimulating hormone secreting cell	5722	1	3	0
+CL:0000441	follicle stem cell (sensu Arthropoda)	5738	1	6	0
+CL:0000442	follicular dendritic cell	5747	1	14	1
+CL:0000443	calcitonin secreting cell	5765	1	3	1
+CL:0000444	obliquely striated muscle cell	5777	1	7	1
+CL:0000445	apoptosis fated cell	5790	1	1	0
+CL:0000446	chief cell of parathyroid gland	5797	2	10	5
+CL:0000447	carbohydrate secreting cell	5815	1	2	19
+CL:0000448	white adipocyte	5823	1	5	0
+CL:0000449	brown adipocyte	5839	1	5	0
+CL:0000451	dendritic cell	5856	2	13	81
+CL:0000453	Langerhans cell	5905	2	17	7
+CL:0000454	epinephrine secreting cell	5928	1	3	2
+CL:0000456	mineralocorticoid secreting cell	5949	1	3	1
+CL:0000457	biogenic amine secreting cell	5960	1	2	29
+CL:0000458	serotonin secreting cell	5969	1	3	12
+CL:0000459	noradrenergic cell	5983	1	3	4
+CL:0000460	glucocorticoid secreting cell	6000	1	3	1
+CL:0000462	adepithelial cell	6012	1	5	0
+CL:0000463	epidermal cell (sensu Arthropoda)	6020	2	8	2
+CL:0000464	epidermoblast	6031	2	8	0
+CL:0000465	cardioblast (sensu Arthropoda)	6042	1	7	0
+CL:0000467	adrenocorticotropic hormone secreting cell	6050	1	3	2
+CL:0000468	neuroglioblast (sensu Nematoda and Protostomia)	6069	1	4	1
+CL:0000469	ganglion mother cell	6079	1	5	0
+CL:0000470	digestive enzyme secreting cell	6087	1	3	0
+CL:0000474	pericardial nephrocyte	6110	2	9	0
+CL:0000476	thyrotroph	6126	1	26	0
+CL:0000477	follicle cell of egg chamber	6141	2	4	3
+CL:0000478	oxytocin stimulating hormone secreting cell	6154	1	3	0
+CL:0000479	vasopressin stimulating hormone secreting cell	6162	1	3	0
+CL:0000480	secretin stimulating hormone secreting cell	6170	1	3	0
+CL:0000481	cholecystokin stimulating hormone secreting cell	6178	1	3	0
+CL:0000482	juvenile hormone secreting cell	6186	1	2	0
+CL:0000483	bombesin stimulating hormone secreting cell	6198	1	3	0
+CL:0000484	connective tissue type mast cell	6206	2	13	0
+CL:0000485	mucosal type mast cell	6222	1	12	0
+CL:0000486	garland cell	6240	3	12	0
+CL:0000487	oenocyte	6251	2	3	0
+CL:0000488	visible light photoreceptor cell	6261	1	11	11
+CL:0000489	scotopic photoreceptor cell	6273	1	11	0
+CL:0000490	photopic photoreceptor cell	6280	1	12	3
+CL:0000492	CD4-positive helper T cell	6295	1	14	8
+CL:0000494	UV sensitive photoreceptor cell	6325	1	11	1
+CL:0000495	blue sensitive photoreceptor cell	6337	1	13	0
+CL:0000496	green sensitive photoreceptor cell	6346	1	13	0
+CL:0000497	red sensitive photoreceptor cell	6355	1	13	0
+CL:0000498	inhibitory interneuron	6364	1	9	108
+CL:0000499	stromal cell	6378	2	3	163
+CL:0000500	follicular epithelial cell	6396	1	3	5
+CL:0000501	granulosa cell	6404	4	7	5
+CL:0000502	type D enteroendocrine cell	6424	3	19	4
+CL:0000503	theca cell	6440	2	7	2
+CL:0000504	enterochromaffin-like cell	6456	2	9	0
+CL:0000505	substance P secreting cell	6469	1	3	1
+CL:0000506	enkephalin secreting cell	6478	1	4	7
+CL:0000507	endorphin secreting cell	6487	1	3	8
+CL:0000508	type G enteroendocrine cell	6496	4	21	1
+CL:0000509	gastrin secreting cell	6511	1	3	3
+CL:0000510	paneth cell	6520	3	11	6
+CL:0000511	androgen binding protein secreting cell	6539	1	3	1
+CL:0000513	cardiac muscle myoblast	6554	2	8	0
+CL:0000514	smooth muscle myoblast	6573	1	6	0
+CL:0000515	skeletal muscle myoblast	6592	1	6	3
+CL:0000516	perineuronal satellite cell	6609	1	5	0
+CL:0000517	macrophage derived foam cell	6625	3	3	0
+CL:0000518	phagocyte (sensu Vertebrata)	6637	2	5	189
+CL:0000519	phagocyte (sensu Nematoda and Protostomia)	6647	1	4	3
+CL:0000520	prokaryotic cell	6654	1	1	3
+CL:0000521	fungal cell	6661	1	2	28
+CL:0000523	mononuclear cytotrophoblast cell	6676	1	4	0
+CL:0000524	spheroplast	6686	1	4	0
+CL:0000525	syncytiotrophoblast cell	6693	2	7	0
+CL:0000526	afferent neuron	6713	1	7	155
+CL:0000527	efferent neuron	6727	1	7	90
+CL:0000528	nitrergic neuron	6739	1	7	0
+CL:0000529	pigmented epithelial cell	6749	1	6	1
+CL:0000530	primary neuron (sensu Teleostei)	6758	2	8	7
+CL:0000531	primary sensory neuron (sensu Teleostei)	6768	2	11	1
+CL:0000532	CAP motoneuron	6778	1	13	0
+CL:0000533	primary motor neuron (sensu Teleostei)	6788	2	12	3
+CL:0000534	primary interneuron (sensu Teleostei)	6796	2	11	0
+CL:0000535	secondary neuron (sensu Teleostei)	6804	2	8	1
+CL:0000536	secondary motor neuron (sensu Teleostei)	6814	2	12	0
+CL:0000540	neuron	6844	3	6	828
+CL:0000541	melanoblast	6868	2	4	0
+CL:0000542	lymphocyte	6882	1	8	347
+CL:0000544	slowly adapting mechanoreceptor cell	6917	1	10	0
+CL:0000545	T-helper 1 cell	6924	1	15	0
+CL:0000546	T-helper 2 cell	6957	2	16	0
+CL:0000547	proerythroblast	6989	2	6	2
+CL:0000549	basophilic erythroblast	7048	1	8	2
+CL:0000550	polychromatophilic erythroblast	7071	1	8	2
+CL:0000551	unimodal nocireceptor	7097	1	12	0
+CL:0000552	orthochromatic erythroblast	7104	1	8	2
+CL:0000553	megakaryocyte progenitor cell	7126	2	9	3
+CL:0000554	gastrin stimulating hormone secreting cell	7182	1	3	0
+CL:0000556	megakaryocyte	7196	1	4	3
+CL:0000557	granulocyte monocyte progenitor cell	7219	3	13	2
+CL:0000558	reticulocyte	7258	1	5	4
+CL:0000559	promonocyte	7301	2	10	0
+CL:0000560	band form neutrophil	7325	1	14	0
+CL:0000561	amacrine cell	7359	3	10	35
+CL:0000562	nucleate erythrocyte	7380	2	9	0
+CL:0000563	endospore	7395	1	2	0
+CL:0000564	neutrophilic promyelocyte	7403	2	12	0
+CL:0000565	fat body cell	7432	1	2	0
+CL:0000566	angioblastic mesenchymal cell	7440	2	8	4
+CL:0000567	polymodal nocireceptor	7462	1	12	0
+CL:0000568	amine precursor uptake and decarboxylation cell	7469	1	16	28
+CL:0000569	cardiac mesenchymal cell	7482	2	12	1
+CL:0000570	parafollicular cell	7496	5	16	0
+CL:0000571	leucophore	7519	3	4	0
+CL:0000573	retinal cone cell	7531	1	16	6
+CL:0000574	erythrophore	7550	3	4	0
+CL:0000575	corneal epithelial cell	7562	2	6	0
+CL:0000576	monocyte	7585	3	16	21
+CL:0000577	type EC enteroendocrine cell	7614	4	25	4
+CL:0000578	experimentally modified cell in vitro	7637	1	2	4
+CL:0000579	border follicle cell	7646	1	5	0
+CL:0000580	neutrophilic myelocyte	7653	3	20	0
+CL:0000581	peritoneal macrophage	7697	1	17	0
+CL:0000582	neutrophilic metamyelocyte	7728	2	19	0
+CL:0000583	alveolar macrophage	7778	2	18	3
+CL:0000584	enterocyte	7819	3	9	22
+CL:0000586	germ cell	7844	1	2	30
+CL:0000587	cold sensing thermoreceptor cell	7859	1	12	0
+CL:0000588	odontoclast	7867	1	13	2
+CL:0000589	cochlear inner hair cell	7881	1	17	0
+CL:0000590	small luteal cell	7892	2	6	0
+CL:0000591	warmth sensing thermoreceptor cell	7906	1	12	0
+CL:0000592	large luteal cell	7914	3	7	0
+CL:0000593	androgen secreting cell	7928	1	3	3
+CL:0000594	skeletal muscle satellite cell	7940	2	6	4
+CL:0000595	enucleate erythrocyte	7954	2	9	4
+CL:0000596	sexual spore	7969	1	4	3
+CL:0000597	microconidium	7977	1	7	0
+CL:0000598	pyramidal neuron	7984	1	8	24
+CL:0000599	conidium	8007	1	5	13
+CL:0000600	heterokaryon	8015	2	5	1
+CL:0000601	cochlear outer hair cell	8022	1	17	0
+CL:0000602	pressoreceptor cell	8032	1	12	0
+CL:0000603	dikaryon	8041	2	7	0
+CL:0000604	retinal rod cell	8048	1	16	0
+CL:0000605	fungal asexual spore	8067	1	4	16
+CL:0000606	macroconidium	8074	1	6	8
+CL:0000607	ascospore	8081	1	5	0
+CL:0000608	zygospore	8089	1	5	0
+CL:0000609	vestibular hair cell	8096	1	15	10
+CL:0000611	eosinophil progenitor cell	8113	2	10	2
+CL:0000612	eosinophilic myelocyte	8171	3	20	0
+CL:0000613	basophil progenitor cell	8199	2	10	1
+CL:0000614	basophilic myelocyte	8253	2	13	0
+CL:0000615	basidiospore	8282	1	5	0
+CL:0000617	GABAergic neuron	8296	2	8	168
+CL:0000618	sheath cell	8317	1	4	0
+CL:0000619	supporting cell (sensu Nematoda)	8324	1	3	2
+CL:0000621	fusion competent myoblast	8339	1	7	0
+CL:0000622	acinar cell	8347	2	7	6
+CL:0000623	natural killer cell	8368	1	11	33
+CL:0000624	CD4-positive, alpha-beta T cell	8401	1	13	36
+CL:0000625	CD8-positive, alpha-beta T cell	8420	1	13	28
+CL:0000626	olfactory granule cell	8440	2	13	0
+CL:0000628	photosynthetic cell	8469	1	1	0
+CL:0000629	storage cell	8477	1	2	0
+CL:0000630	supporting cell	8485	1	1	61
+CL:0000631	labyrinth supporting cell	8498	1	2	0
+CL:0000632	hepatic stellate cell	8506	2	6	0
+CL:0000633	Hensen cell	8536	1	14	0
+CL:0000634	Claudius cell	8548	2	14	0
+CL:0000635	Deiter's cell	8560	1	15	0
+CL:0000636	Mueller cell	8571	2	7	0
+CL:0000637	chromophil cell of anterior pituitary gland	8591	5	24	8
+CL:0000638	acidophil cell of pars distalis of adenohypophysis	8608	1	25	3
+CL:0000639	basophil cell of pars distalis of adenohypophysis	8623	1	25	3
+CL:0000641	chromophobe cell	8635	1	4	0
+CL:0000642	folliculostellate cell	8645	2	5	1
+CL:0000644	Bergmann glial cell	8663	1	9	1
+CL:0000645	pituicyte	8681	2	10	0
+CL:0000646	basal cell	8693	1	6	14
+CL:0000647	multinucleated giant cell	8705	2	10	0
+CL:0000648	kidney granular cell	8732	3	14	0
+CL:0000649	spinous cell of epidermis	8753	2	13	0
+CL:0000650	mesangial cell	8772	3	13	2
+CL:0000652	pinealocyte	8803	4	11	3
+CL:0000653	podocyte	8821	2	14	3
+CL:0000654	primary oocyte	8847	1	6	0
+CL:0000655	secondary oocyte	8863	1	6	0
+CL:0000656	primary spermatocyte	8878	2	6	0
+CL:0000657	secondary spermatocyte	8895	3	7	0
+CL:0000658	cuticle secreting cell	8914	2	6	2
+CL:0000659	eggshell secreting cell	8923	2	7	0
+CL:0000660	glycocalyx secreting cell	8932	1	5	0
+CL:0000661	distal tip cell (sensu Nematoda)	8940	1	2	0
+CL:0000662	neuroglioblast (sensu Nematoda)	8947	1	5	0
+CL:0000666	fenestrated endothelial cell	8973	1	3	13
+CL:0000667	collagen secreting cell	8989	1	5	18
+CL:0000669	pericyte	9009	4	7	12
+CL:0000670	primordial germ cell	9035	2	3	3
+CL:0000671	centripetally migrating follicle cell	9053	1	5	0
+CL:0000673	Kenyon cell	9068	1	9	0
+CL:0000674	interfollicle cell	9078	1	5	0
+CL:0000675	female gamete	9087	2	7	1
+CL:0000676	cap cell	9096	1	3	0
+CL:0000677	gut absorptive cell	9104	1	2	23
+CL:0000678	commissural neuron	9115	1	8	0
+CL:0000679	glutamatergic neuron	9124	2	8	102
+CL:0000680	muscle precursor cell	9142	2	4	20
+CL:0000681	radial glial cell	9160	1	5	3
+CL:0000682	M cell of gut	9174	1	6	9
+CL:0000683	ependymoglial cell	9194	1	12	0
+CL:0000684	littoral cell of liver	9205	1	6	0
+CL:0000686	cerebrospinal fluid secreting cell	9220	2	8	1
+CL:0000687	R1 photoreceptor cell	9234	2	16	0
+CL:0000688	perijunctional fibroblast	9243	2	6	0
+CL:0000689	myoendocrine cell	9253	1	4	0
+CL:0000690	R2 photoreceptor cell	9261	2	16	0
+CL:0000691	stellate interneuron	9270	2	10	1
+CL:0000692	terminal Schwann cell	9283	2	8	0
+CL:0000693	neurogliaform cell	9297	1	9	2
+CL:0000694	R3 photoreceptor cell	9313	2	16	0
+CL:0000695	Cajal-Retzius cell	9322	2	11	0
+CL:0000696	PP cell	9340	2	8	2
+CL:0000697	R4 photoreceptor cell	9355	2	16	0
+CL:0000699	paraganglial type 1 cell	9369	1	16	0
+CL:0000700	dopaminergic neuron	9377	1	9	21
+CL:0000701	paraganglia type 2 cell	9398	1	2	0
+CL:0000702	R5 photoreceptor cell	9406	2	16	0
+CL:0000703	sustentacular cell	9415	1	2	2
+CL:0000704	endothelial tip cell	9425	1	5	0
+CL:0000705	R6 photoreceptor cell	9437	2	16	0
+CL:0000706	choroid plexus epithelial cell	9446	2	13	3
+CL:0000707	R7 photoreceptor cell	9470	2	16	0
+CL:0000708	leptomeningeal cell	9479	2	6	0
+CL:0000709	R8 photoreceptor cell	9494	2	16	0
+CL:0000710	neurecto-epithelial cell	9503	2	5	132
+CL:0000711	cumulus granulosa cell	9520	3	9	1
+CL:0000712	stratum granulosum cell	9535	1	6	1
+CL:0000713	corona radiata cell	9546	1	10	0
+CL:0000715	embryonic crystal cell	9553	2	8	0
+CL:0000716	lymph gland crystal cell	9561	2	8	0
+CL:0000718	compound eye cone cell	9577	2	5	3
+CL:0000719	posterior cone cell (sensu Endopterygota)	9589	1	6	0
+CL:0000720	anterior cone cell (sensu Endopterygota)	9594	1	6	0
+CL:0000721	equatorial cone cell (sensu Endopterygota)	9599	1	6	0
+CL:0000722	cystoblast	9604	2	4	0
+CL:0000723	somatic stem cell	9611	1	3	44
+CL:0000724	heterocyst	9629	2	3	0
+CL:0000725	nitrogen fixing cell	9637	1	1	1
+CL:0000726	chlamydospore	9648	1	5	0
+CL:0000730	leading edge cell	9676	1	3	0
+CL:0000731	urothelial cell	9684	2	5	8
+CL:0000732	amoeboid cell	9702	1	2	0
+CL:0000733	lymph gland plasmatocyte	9709	2	8	0
+CL:0000735	lymph gland hemocyte	9723	1	6	2
+CL:0000737	striated muscle cell	9737	1	6	75
+CL:0000738	leukocyte	9756	5	5	572
+CL:0000740	retinal ganglion cell	9787	2	7	77
+CL:0000741	spinal accessory motor neuron	9811	1	13	0
+CL:0000742	periarticular chondrocyte	9821	1	12	0
+CL:0000743	hypertrophic chondrocyte	9830	2	12	0
+CL:0000744	columnar chondrocyte	9848	1	11	0
+CL:0000745	retina horizontal cell	9857	2	9	2
+CL:0000746	cardiac muscle cell	9877	2	8	46
+CL:0000747	cyanophore	9909	3	4	0
+CL:0000748	retinal bipolar neuron	9922	4	11	35
+CL:0000749	ON-bipolar cell	9946	1	12	10
+CL:0000750	OFF-bipolar cell	9957	1	12	6
+CL:0000751	rod bipolar cell	9968	1	13	1
+CL:0000752	cone retinal bipolar cell	9990	1	12	13
+CL:0000753	type 1 cone bipolar cell (sensu Mus)	10007	1	13	0
+CL:0000754	type 2 cone bipolar cell (sensu Mus)	10018	1	13	0
+CL:0000755	type 3 cone bipolar cell (sensu Mus)	10036	1	13	2
+CL:0000756	type 4 cone bipolar cell (sensu Mus)	10047	1	13	0
+CL:0000757	type 5 cone bipolar cell (sensu Mus)	10060	1	13	2
+CL:0000758	type 6 cone bipolar cell (sensu Mus)	10071	1	13	0
+CL:0000759	type 7 cone bipolar cell (sensu Mus)	10082	1	13	0
+CL:0000760	type 8 cone bipolar cell (sensu Mus)	10093	1	13	0
+CL:0000761	type 9 cone bipolar cell (sensu Mus)	10105	1	13	0
+CL:0000762	nucleated thrombocyte	10116	2	6	0
+CL:0000763	myeloid cell	10133	3	3	259
+CL:0000764	erythroid lineage cell	10152	1	4	34
+CL:0000765	erythroblast	10170	2	7	9
+CL:0000766	myeloid leukocyte	10218	2	7	176
+CL:0000767	basophil	10233	1	10	5
+CL:0000768	immature basophil	10263	1	11	3
+CL:0000769	basophilic metamyelocyte	10277	2	19	0
+CL:0000770	band form basophil	10308	1	12	0
+CL:0000771	eosinophil	10320	1	10	6
+CL:0000772	immature eosinophil	10355	1	11	4
+CL:0000773	eosinophilic metamyelocyte	10370	2	19	0
+CL:0000774	band form eosinophil	10402	1	12	1
+CL:0000775	neutrophil	10414	1	10	6
+CL:0000776	immature neutrophil	10449	1	11	2
+CL:0000777	mesangial phagocyte	10470	1	17	0
+CL:0000778	mononuclear osteoclast	10485	2	16	1
+CL:0000779	multinuclear osteoclast	10498	3	16	1
+CL:0000780	multinuclear odontoclast	10513	2	18	0
+CL:0000781	mononuclear odontoclast	10527	2	18	0
+CL:0000782	myeloid dendritic cell	10540	2	17	7
+CL:0000783	multinucleated phagocyte	10563	2	8	2
+CL:0000784	plasmacytoid dendritic cell	10574	1	14	11
+CL:0000785	mature B cell	10600	2	14	67
+CL:0000786	plasma cell	10627	1	11	13
+CL:0000787	memory B cell	10663	1	15	30
+CL:0000788	naive B cell	10689	1	15	4
+CL:0000789	alpha-beta T cell	10717	1	10	107
+CL:0000790	immature alpha-beta T cell	10735	2	12	17
+CL:0000791	mature alpha-beta T cell	10752	2	12	88
+CL:0000792	CD4-positive, CD25-positive, alpha-beta regulatory T cell	10770	2	15	8
+CL:0000793	CD4-positive, alpha-beta intraepithelial T cell	10797	2	17	1
+CL:0000794	CD8-positive, alpha-beta cytotoxic T cell	10816	1	14	0
+CL:0000795	CD8-positive, alpha-beta regulatory T cell	10853	2	15	3
+CL:0000796	CD8-alpha-beta-positive, alpha-beta intraepithelial T cell	10878	1	16	0
+CL:0000797	alpha-beta intraepithelial T cell	10898	2	15	5
+CL:0000798	gamma-delta T cell	10915	1	10	24
+CL:0000799	immature gamma-delta T cell	10938	2	12	1
+CL:0000800	mature gamma-delta T cell	10957	2	12	9
+CL:0000801	gamma-delta intraepithelial T cell	10976	2	15	4
+CL:0000802	CD8-alpha alpha positive, gamma-delta intraepithelial T cell	10996	1	16	2
+CL:0000803	CD4-negative CD8-negative gamma-delta intraepithelial T cell	11016	1	16	0
+CL:0000805	immature single positive thymocyte	11034	1	12	0
+CL:0000806	DN2 thymocyte	11062	1	13	2
+CL:0000807	DN3 thymocyte	11088	1	13	0
+CL:0000808	DN4 thymocyte	11118	1	13	0
+CL:0000809	double-positive, alpha-beta thymocyte	11146	2	14	5
+CL:0000810	CD4-positive, alpha-beta thymocyte	11172	2	14	2
+CL:0000811	CD8-positive, alpha-beta thymocyte	11195	2	14	2
+CL:0000813	memory T cell	11219	1	11	20
+CL:0000814	mature NK T cell	11240	1	13	15
+CL:0000815	regulatory T cell	11270	1	11	15
+CL:0000816	immature B cell	11297	1	13	2
+CL:0000817	precursor B cell	11326	1	13	14
+CL:0000818	transitional stage B cell	11348	1	13	3
+CL:0000819	B-1 B cell	11381	1	15	2
+CL:0000820	B-1a B cell	11413	1	16	0
+CL:0000821	B-1b B cell	11438	1	16	0
+CL:0000822	B-2 B cell	11460	1	15	5
+CL:0000823	immature natural killer cell	11486	2	13	4
+CL:0000824	mature natural killer cell	11505	1	12	18
+CL:0000825	pro-NK cell	11522	1	8	0
+CL:0000826	pro-B cell	11551	1	8	2
+CL:0000827	pro-T cell	11581	1	8	2
+CL:0000828	thromboblast	11602	3	11	0
+CL:0000829	basophilic myeloblast	11619	1	11	0
+CL:0000830	basophilic promyelocyte	11631	1	11	0
+CL:0000831	mast cell progenitor	11644	2	9	1
+CL:0000832	eosinophilic myeloblast	11708	1	11	0
+CL:0000833	eosinophilic promyelocyte	11720	1	11	0
+CL:0000834	neutrophil progenitor cell	11733	2	10	2
+CL:0000835	myeloblast	11749	2	10	3
+CL:0000836	promyelocyte	11771	2	10	5
+CL:0000837	hematopoietic multipotent progenitor cell	11804	3	4	4
+CL:0000838	lymphoid lineage restricted progenitor cell	11857	2	7	7
+CL:0000839	myeloid lineage restricted progenitor cell	11877	2	7	51
+CL:0000840	immature conventional dendritic cell	11898	2	17	10
+CL:0000841	mature conventional dendritic cell	11917	2	17	10
+CL:0000842	mononuclear leukocyte	11940	2	7	535
+CL:0000843	follicular B cell	11959	1	16	2
+CL:0000844	germinal center B cell	11989	1	15	7
+CL:0000845	marginal zone B cell of spleen	12013	2	16	0
+CL:0000846	vestibular dark cell	12049	1	3	0
+CL:0000847	ciliated olfactory receptor neuron	12058	2	14	0
+CL:0000848	microvillous olfactory receptor neuron	12072	1	13	0
+CL:0000849	crypt olfactory receptor neuron	12083	1	13	0
+CL:0000850	serotonergic neuron	12095	2	10	1
+CL:0000851	neuromast mantle cell	12116	2	3	2
+CL:0000852	neuromast supporting cell	12126	2	3	2
+CL:0000853	olfactory epithelial supporting cell	12137	2	15	0
+CL:0000854	interneuromast cell	12155	2	5	0
+CL:0000855	sensory hair cell	12166	1	10	21
+CL:0000856	neuromast hair cell	12177	2	14	2
+CL:0000857	slow muscle myoblast	12188	1	7	0
+CL:0000858	fast muscle myoblast	12200	1	7	0
+CL:0000860	classical monocyte	12212	1	17	5
+CL:0000861	elicited macrophage	12241	1	16	6
+CL:0000862	suppressor macrophage	12267	1	17	1
+CL:0000863	M1 macrophage	12279	1	17	1
+CL:0000864	tissue-resident macrophage	12307	1	16	56
+CL:0000865	gastrointestinal tract (lamina propria) macrophage	12325	1	20	2
+CL:0000866	thymic macrophage	12340	1	17	2
+CL:0000867	secondary lymphoid organ macrophage	12356	1	17	17
+CL:0000868	lymph node macrophage	12365	1	18	2
+CL:0000869	tonsillar macrophage	12384	1	20	0
+CL:0000870	Peyer's patch macrophage	12397	1	20	0
+CL:0000871	splenic macrophage	12408	2	19	5
+CL:0000872	splenic marginal zone macrophage	12423	1	20	0
+CL:0000873	splenic metallophillic macrophage	12447	1	20	0
+CL:0000874	splenic red pulp macrophage	12467	1	20	0
+CL:0000875	non-classical monocyte	12498	1	17	6
+CL:0000876	splenic white pulp macrophage	12529	1	20	1
+CL:0000877	splenic tingible body macrophage	12547	1	21	0
+CL:0000878	central nervous system macrophage	12564	2	18	14
+CL:0000879	meningeal macrophage	12580	1	20	0
+CL:0000880	choroid plexus macrophage	12599	1	20	2
+CL:0000881	perivascular macrophage	12614	2	21	0
+CL:0000882	thymic medullary macrophage	12634	1	18	0
+CL:0000883	thymic cortical macrophage	12647	1	18	0
+CL:0000884	mucosa-associated lymphoid tissue macrophage	12660	1	18	7
+CL:0000885	gut-associated lymphoid tissue macrophage	12672	1	19	5
+CL:0000886	nasal and broncial associated lymphoid tissue macrophage	12685	1	19	0
+CL:0000887	lymph node subcapsular sinus macrophage	12698	1	19	0
+CL:0000888	lymph node tingible body macrophage	12713	1	19	0
+CL:0000889	myeloid suppressor cell	12729	1	8	2
+CL:0000890	M2 macrophage	12749	1	17	1
+CL:0000891	foam cell	12769	1	1	2
+CL:0000892	smooth muscle cell derived foam cell	12780	3	3	0
+CL:0000893	thymocyte	12791	1	11	42
+CL:0000894	DN1 thymic pro-T cell	12814	1	9	0
+CL:0000895	naive thymus-derived CD4-positive, alpha-beta T cell	12841	2	15	0
+CL:0000896	activated CD4-positive, alpha-beta T cell	12868	1	14	1
+CL:0000897	CD4-positive, alpha-beta memory T cell	12890	2	15	8
+CL:0000898	naive T cell	12910	1	11	4
+CL:0000899	T-helper 17 cell	12934	1	15	0
+CL:0000900	naive thymus-derived CD8-positive, alpha-beta T cell	12965	2	15	0
+CL:0000901	Tr1 cell	12991	2	16	0
+CL:0000902	induced T-regulatory cell	13010	1	16	0
+CL:0000903	natural T-regulatory cell	13033	1	16	0
+CL:0000904	central memory CD4-positive, alpha-beta T cell	13057	1	17	0
+CL:0000905	effector memory CD4-positive, alpha-beta T cell	13080	1	17	0
+CL:0000906	activated CD8-positive, alpha-beta T cell	13104	1	14	1
+CL:0000907	central memory CD8-positive, alpha-beta T cell	13128	1	17	0
+CL:0000908	CD8-positive, alpha-beta cytokine secreting effector T cell	13151	1	14	3
+CL:0000909	CD8-positive, alpha-beta memory T cell	13176	2	15	10
+CL:0000910	cytotoxic T cell	13196	1	12	0
+CL:0000911	effector T cell	13215	1	11	10
+CL:0000912	helper T cell	13233	1	12	2
+CL:0000913	effector memory CD8-positive, alpha-beta T cell	13252	1	17	0
+CL:0000914	immature NK T cell	13276	1	13	4
+CL:0000915	CD8-alpha-alpha-positive, alpha-beta intraepithelial T cell	13293	1	16	0
+CL:0000916	dendritic epidermal T cell	13316	1	13	0
+CL:0000917	Tc1 cell	13335	1	15	0
+CL:0000918	Tc2 cell	13368	2	16	0
+CL:0000919	CD8-positive, CD25-positive, alpha-beta regulatory T cell	13395	1	16	0
+CL:0000920	CD8-positive, CD28-negative, alpha-beta regulatory T cell	13419	1	16	0
+CL:0000921	type I NK T cell	13445	1	14	8
+CL:0000922	type II NK T cell	13465	1	14	3
+CL:0000923	CD4-positive type I NK T cell	13481	1	15	3
+CL:0000924	CD4-negative, CD8-negative type I NK T cell	13497	1	15	3
+CL:0000925	activated CD4-positive type I NK T cell	13515	1	16	0
+CL:0000926	CD4-positive type I NK T cell secreting interferon-gamma	13536	1	16	0
+CL:0000927	CD4-positive type I NK T cell secreting interleukin-4	13556	1	16	0
+CL:0000928	activated CD4-negative, CD8-negative type I NK T cell	13578	1	16	0
+CL:0000929	CD4-negative, CD8-negative type I NK T cell secreting interferon-gamma	13599	1	16	0
+CL:0000930	CD4-negative, CD8-negative type I NK T cell secreting interleukin-4	13620	1	16	0
+CL:0000931	activated type II NK T cell	13641	1	15	0
+CL:0000932	type II NK T cell secreting interferon-gamma	13659	1	15	0
+CL:0000933	type II NK T cell secreting interleukin-4	13678	1	15	0
+CL:0000934	CD4-positive, alpha-beta cytotoxic T cell	13697	1	14	0
+CL:0000935	CD4-negative, CD8-negative, alpha-beta intraepithelial T cell	13716	1	16	0
+CL:0000936	early lymphoid progenitor	13734	2	7	0
+CL:0000937	pre-natural killer cell	13763	1	12	0
+CL:0000938	CD16-negative, CD56-bright natural killer cell, human	13781	1	13	0
+CL:0000939	CD16-positive, CD56-dim natural killer cell, human	13809	1	13	0
+CL:0000940	mucosal-associated invariant T cell	13838	1	13	1
+CL:0000941	thymic conventional dendritic cell	13864	1	15	2
+CL:0000942	thymic plasmacytoid dendritic cell	13882	1	15	0
+CL:0000943	Be1 Cell	13902	1	16	0
+CL:0000944	Be2 cell	13922	1	16	0
+CL:0000945	lymphocyte of B lineage	13944	1	9	115
+CL:0000946	antibody secreting cell	13956	1	10	21
+CL:0000947	IgE plasma cell	13970	1	13	0
+CL:0000948	IgE memory B cell	13981	1	19	0
+CL:0000949	IgD plasmablast	13999	1	17	0
+CL:0000950	IgE plasmablast	14010	1	17	0
+CL:0000951	IgE short lived plasma cell	14021	1	13	0
+CL:0000952	preBCR-positive large pre-B-II cell	14032	1	16	1
+CL:0000953	preBCR-negative large pre-B-II cell	14049	1	16	0
+CL:0000954	small pre-B-II cell	14066	1	15	1
+CL:0000955	pre-B-II cell	14088	1	14	6
+CL:0000956	pre-B-I cell	14109	1	14	0
+CL:0000957	large pre-B-II cell	14138	1	15	3
+CL:0000958	T1 B cell	14157	1	14	0
+CL:0000959	T2 B cell	14181	1	14	0
+CL:0000960	T3 B cell	14207	1	14	0
+CL:0000961	Bm1 B cell	14233	1	17	0
+CL:0000962	Bm2 B cell	14252	1	17	0
+CL:0000963	Bm3-delta B cell	14271	1	16	0
+CL:0000964	Bm2' B cell	14289	1	16	0
+CL:0000965	Bm3 B cell	14313	1	16	0
+CL:0000966	Bm4 B cell	14336	1	16	0
+CL:0000967	Bm5 B cell	14359	1	17	0
+CL:0000968	Be cell	14378	1	15	2
+CL:0000969	regulatory B cell	14399	1	15	0
+CL:0000970	unswitched memory B cell	14423	1	16	6
+CL:0000971	IgM memory B cell	14454	1	17	0
+CL:0000972	class switched memory B cell	14474	1	16	15
+CL:0000973	IgA memory B cell	14496	1	19	0
+CL:0000974	long lived plasma cell	14515	1	12	4
+CL:0000975	short lived plasma cell	14536	1	12	4
+CL:0000976	IgA short lived plasma cell	14547	1	13	0
+CL:0000977	IgG short lived plasma cell	14558	1	13	0
+CL:0000978	IgM short lived plasma cell	14569	1	13	0
+CL:0000979	IgG memory B cell	14580	1	17	4
+CL:0000980	plasmablast	14599	2	16	6
+CL:0000981	double negative memory B cell	14625	1	17	2
+CL:0000982	IgG plasmablast	14644	1	17	0
+CL:0000983	IgM plasmablast	14656	1	17	0
+CL:0000984	IgA plasmablast	14668	1	17	0
+CL:0000985	IgG plasma cell	14680	1	13	0
+CL:0000986	IgM plasma cell	14692	1	13	0
+CL:0000987	IgA plasma cell	14704	1	13	0
+CL:0000988	hematopoietic cell	14717	1	1	716
+CL:0000989	CD11c-low plasmacytoid dendritic cell	14736	1	15	4
+CL:0000990	conventional dendritic cell	14754	1	14	60
+CL:0000991	CD11c-negative plasmacytoid dendritic cell	14778	1	15	2
+CL:0000992	immature CD11c-low plasmacytoid dendritic cell	14801	2	18	0
+CL:0000993	mature CD11c-low plasmacytoid dendritic cell	14816	2	18	0
+CL:0000994	immature CD11c-negative plasmacytoid dendritic cell	14835	1	16	0
+CL:0000995	CD34-positive, CD38-positive common myeloid progenitor OR CD34-positive, CD38-positive common lymphoid progenitor	14852	2	8	2
+CL:0000996	mature CD11c-negative plasmacytoid dendritic cell	14864	1	16	0
+CL:0000997	immature CD8-alpha-negative CD11b-positive dendritic cell	14882	2	20	0
+CL:0000998	CD8-alpha-negative CD11b-negative dendritic cell	14896	2	17	2
+CL:0000999	CD4-positive CD11b-positive dendritic cell	14920	2	18	2
+CL:0001000	CD8-alpha-positive CD11b-negative dendritic cell	14942	2	17	2
+CL:0001001	immature CD8-alpha-negative CD11b-negative dendritic cell	14969	2	19	0
+CL:0001002	mature CD8-alpha-negative CD11b-negative dendritic cell	14983	2	19	0
+CL:0001003	mature CD8-alpha-negative CD11b-positive dendritic cell	15000	2	20	0
+CL:0001004	immature CD8-alpha-positive CD11b-negative dendritic cell	15016	2	19	0
+CL:0001005	mature CD8-alpha-positive CD11b-negative dendritic cell	15030	2	19	0
+CL:0001006	dermal dendritic cell	15046	1	16	10
+CL:0001007	interstitial dendritic cell	15065	1	16	3
+CL:0001008	Kit and Sca1-positive hematopoietic stem cell	15084	1	9	2
+CL:0001009	immature dermal dendritic cell	15116	2	20	2
+CL:0001010	mature dermal dendritic cell	15130	2	20	2
+CL:0001011	immature interstitial dendritic cell	15146	2	20	0
+CL:0001012	CD7-negative lymphoid progenitor OR granulocyte monocyte progenitor	15160	2	8	4
+CL:0001013	mature interstitial dendritic cell	15171	2	20	0
+CL:0001014	CD1a-positive Langerhans cell	15187	1	18	2
+CL:0001015	CD8-alpha-low Langerhans cell	15202	1	18	2
+CL:0001016	immature CD1a-positive Langerhans cell	15216	2	20	0
+CL:0001017	mature CD1a-positive Langerhans cell	15230	2	20	0
+CL:0001018	immature CD8-alpha-low Langerhans cell	15246	2	20	0
+CL:0001019	CD115-positive monocyte OR common dendritic progenitor	15260	2	6	12
+CL:0001020	mature CD8-alpha-low Langerhans cell	15271	2	20	0
+CL:0001021	CD34-positive, CD38-positive common lymphoid progenitor	15287	2	10	0
+CL:0001022	CD115-positive monocyte	15311	3	21	10
+CL:0001023	Kit-positive, CD34-positive common myeloid progenitor	15328	2	11	0
+CL:0001024	CD34-positive, CD38-negative hematopoietic stem cell	15352	1	9	0
+CL:0001025	Kit-positive, Sca1-positive common lymphoid progenitor	15382	2	10	0
+CL:0001026	CD34-positive, CD38-positive common myeloid progenitor	15411	2	11	0
+CL:0001027	CD7-negative lymphoid progenitor cell	15436	2	10	0
+CL:0001028	CD7-positive lymphoid progenitor cell	15455	1	8	0
+CL:0001029	common dendritic progenitor	15473	1	7	0
+CL:0001030	CD117-positive common myeloid progenitor OR CD217-positive common lymphoid progenitor	15518	2	8	2
+CL:0001031	cerebellar granule cell	15529	3	13	3
+CL:0001032	cortical granule cell	15552	2	11	2
+CL:0001033	hippocampal granule cell	15564	2	13	1
+CL:0001034	cell in vitro	15577	1	1	5
+CL:0001035	bone cell	15589	1	2	40
+CL:0001039	terminally differentiated osteoblast	15606	1	4	0
+CL:0001040	non-terminally differentiated osteoblast	15615	3	7	0
+CL:0001041	CD8-positive, CXCR3-positive, alpha-beta regulatory T cell	15628	1	16	0
+CL:0001042	T-helper 22 cell	15656	1	15	0
+CL:0001043	activated CD4-positive, alpha-beta T cell, human	15676	1	15	0
+CL:0001044	effector CD4-positive, alpha-beta T cell	15696	2	15	0
+CL:0001045	naive CCR4-positive regulatory T cell	15719	2	19	0
+CL:0001046	memory CCR4-positive regulatory T cell	15737	2	20	0
+CL:0001047	CD4-positive, CD25-positive, CCR4-positive, alpha-beta regulatory T cell	15757	1	16	3
+CL:0001048	activated CD4-positive, CD25-positive, CCR4-positive, alpha-beta regulatory T cell, human	15774	1	17	0
+CL:0001049	activated CD8-positive, alpha-beta T cell, human	15791	1	15	0
+CL:0001050	effector CD8-positive, alpha-beta T cell	15811	2	15	0
+CL:0001051	CD4-positive, CXCR3-negative, CCR6-negative, alpha-beta T cell	15835	1	14	1
+CL:0001052	CD8-positive, CXCR3-negative, CCR6-negative, alpha-beta T cell	15853	1	14	1
+CL:0001053	IgD-negative memory B cell	15871	1	16	17
+CL:0001054	CD14-positive monocyte	15884	1	17	4
+CL:0001055	CD14-positive, CD16-low monocyte	15905	2	20	0
+CL:0001056	dendritic cell, human	15922	1	14	3
+CL:0001057	myeloid dendritic cell, human	15938	2	19	0
+CL:0001058	plasmacytoid dendritic cell, human	15954	2	16	0
+CL:0001059	common myeloid progenitor, CD34-positive	15975	2	8	2
+CL:0001060	hematopoietic oligopotent progenitor cell, lineage-negative	16007	1	5	11
+CL:0001061	abnormal cell	16043	1	1	3
+CL:0001062	effector memory CD8-positive, alpha-beta T cell, terminally differentiated	16059	2	17	0
+CL:0001063	neoplastic cell	16083	1	2	2
+CL:0001064	malignant cell	16101	1	3	0
+CL:0001065	innate lymphoid cell	16118	1	9	51
+CL:0001066	erythroid progenitor cell, mammalian	16140	1	11	2
+CL:0001067	group 1 innate lymphoid cell	16185	1	10	36
+CL:0001068	ILC1	16202	1	11	1
+CL:0001069	group 2 innate lymphoid cell	16212	1	10	2
+CL:0001070	beige adipocyte	16232	1	5	0
+CL:0001071	group 3 innate lymphoid cell	16250	1	10	4
+CL:0001072	CD34-negative, CD117-positive innate lymphoid cell, human	16268	1	11	2
+CL:0001073	CD34-negative, CD56-positive, CD117-positive innate lymphoid cell, human	16287	1	12	0
+CL:0001074	CD34-positive, CD56-positive, CD117-positive common innate lymphoid precursor, human	16302	1	11	1
+CL:0001075	KLRG1-positive innate lymphoid cell, human	16320	1	12	0
+CL:0001076	NKp46-positive innate lymphoid cell, human	16332	1	12	0
+CL:0001077	ILC1, human	16345	1	12	0
+CL:0001078	group 3 innate lymphoid cell, human	16360	1	11	2
+CL:0001079	NKp44-positive group 3 innate lymphoid cell, human	16374	1	12	0
+CL:0001080	NKp44-negative group 3 innate lymphoid cell, human	16387	1	12	0
+CL:0001081	group 2 innate lymphoid cell, human	16400	1	11	0
+CL:0001082	immature innate lymphoid cell	16421	1	10	10
+CL:0001087	effector memory CD4-positive, alpha-beta T cell, terminally differentiated	16436	2	17	0
+CL:0001200	lymphocyte of B lineage, CD19-positive	16462	1	10	91
+CL:0001201	B cell, CD19-positive	16479	2	12	90
+CL:0001202	CD86-positive plasmablast	16497	1	17	0
+CL:0001203	CD8-positive, alpha-beta memory T cell, CD45RO-positive	16511	1	16	2
+CL:0001204	CD4-positive, alpha-beta memory T cell, CD45RO-positive	16534	1	16	2
+CL:0001658	visual pigment cell (sensu Nematoda and Protostomia)	16555	2	5	0
+CL:0002000	Kit-positive erythroid progenitor cell	16562	1	12	0
+CL:0002001	CD34-positive, CD38-positive granulocyte monocyte progenitor	16592	1	14	0
+CL:0002002	Kit-positive granulocyte monocyte progenitor	16610	1	14	0
+CL:0002003	CD34-positive, GlyA-negative erythroid progenitor cell	16639	1	12	0
+CL:0002004	CD34-negative, GlyA-negative proerythroblast	16657	1	7	0
+CL:0002005	CD34-positive, CD38-positive megakaryocyte erythroid progenitor cell	16674	1	9	0
+CL:0002006	Kit-positive, CD34-negative megakaryocyte erythroid progenitor cell	16694	1	9	0
+CL:0002007	Kit-low, CD34-positive eosinophil progenitor cell	16720	1	11	0
+CL:0002008	CD34-positive, CD38-positive eosinophil progenitor cell	16739	1	11	0
+CL:0002009	macrophage dendritic cell progenitor	16756	3	8	1
+CL:0002010	pre-conventional dendritic cell	16776	2	6	0
+CL:0002011	Kit-positive macrophage dendritic cell progenitor	16823	1	9	0
+CL:0002012	Kit-low proerythroblast	16845	1	7	0
+CL:0002013	GlyA-positive basophilic erythroblast	16867	1	9	0
+CL:0002014	Kit-negative, Ly-76 high basophilic erythroblast	16884	1	9	0
+CL:0002015	Kit-negative, Ly-76 high polychromatophilic erythroblast	16904	1	9	0
+CL:0002016	CD71-low, GlyA-positive polychromatic erythroblast	16924	1	9	0
+CL:0002017	Kit-negative, Ly-76 high orthochromatophilic erythroblasts	16941	1	9	0
+CL:0002018	CD71-negative, GlyA-positive orthochromatic erythroblast	16963	1	9	0
+CL:0002019	Ly-76 high reticulocyte	16980	1	8	0
+CL:0002020	GlyA-positive reticulocytes	16994	1	8	0
+CL:0002021	GlyA-positive erythrocyte	17009	1	10	0
+CL:0002022	Ly-76 high positive erythrocyte	17024	1	10	0
+CL:0002023	CD34-positive, CD41-positive, CD42-positive megakaryocyte progenitor cell	17038	1	10	0
+CL:0002024	Kit-positive megakaryocyte progenitor cell	17057	1	10	0
+CL:0002025	CD34-positive, CD41-positive, CD42-negative megakaryocyte progenitor cell	17084	1	10	0
+CL:0002026	CD34-negative, CD41-positive, CD42-positive megakaryocyte cell	17103	1	5	0
+CL:0002027	CD9-positive, CD41-positive megakaryocyte cell	17122	1	5	0
+CL:0002028	basophil mast progenitor cell	17139	2	10	1
+CL:0002029	Fc-epsilon RIalpha-low mast cell progenitor	17171	1	10	0
+CL:0002030	Fc-epsilon RIalpha-high basophil progenitor cell	17189	1	11	0
+CL:0002031	hematopoietic lineage restricted progenitor cell	17208	3	4	63
+CL:0002032	hematopoietic oligopotent progenitor cell	17227	3	4	21
+CL:0002033	short term hematopoietic stem cell	17247	1	10	0
+CL:0002034	long term hematopoietic stem cell	17267	1	10	0
+CL:0002035	Slamf1-negative multipotent progenitor cell	17288	1	5	0
+CL:0002036	Slamf1-positive multipotent progenitor cell	17309	1	5	0
+CL:0002037	CD2-positive, CD5-positive, CD44-positive alpha-beta intraepithelial T cell	17330	1	18	0
+CL:0002038	T follicular helper cell	17348	3	19	1
+CL:0002039	immature NK T cell stage I, mouse	17383	1	14	0
+CL:0002040	immature NK T cell stage II, mouse	17406	1	14	0
+CL:0002041	immature NK T cell stage III, mouse	17426	1	14	0
+CL:0002042	immature NK T cell stage IV, mouse	17448	1	14	0
+CL:0002043	CD34-positive, CD38-negative multipotent progenitor cell	17470	1	5	0
+CL:0002044	Kit-positive, integrin beta7-high basophil mast progenitor cell	17490	1	11	0
+CL:0002045	fraction A pre-pro B cell	17512	1	9	0
+CL:0002046	early pro-B cell	17542	1	9	0
+CL:0002047	fraction B precursor B cell	17573	1	15	0
+CL:0002048	late pro-B cell	17592	1	14	0
+CL:0002049	fraction C precursor B cell	17616	1	15	0
+CL:0002050	fraction C' precursor B cell	17643	1	14	0
+CL:0002051	CD38-high pre-BCR positive cell	17669	1	17	0
+CL:0002052	fraction D precursor B cell	17687	1	15	0
+CL:0002053	CD22-positive, CD38-low small pre-B cell	17717	1	16	0
+CL:0002054	fraction E immature B cell	17736	1	14	0
+CL:0002055	CD38-negative immature B cell	17760	1	14	0
+CL:0002056	fraction F mature B cell	17781	1	16	0
+CL:0002057	CD14-positive, CD16-negative classical monocyte	17807	2	19	0
+CL:0002058	Gr1-low non-classical monocyte	17832	2	25	4
+CL:0002059	CD8-alpha-positive thymic conventional dendritic cell	17855	1	16	0
+CL:0002060	melanophage	17871	1	17	0
+CL:0002061	T-helper 9 cell	17882	1	15	0
+CL:0002062	pulmonary alveolar type 1 cell	17902	2	9	0
+CL:0002063	pulmonary alveolar type 2 cell	17939	2	10	1
+CL:0002064	pancreatic acinar cell	17980	2	13	0
+CL:0002066	Feyrter cell	18005	1	16	1
+CL:0002067	type A enteroendocrine cell	18020	2	9	2
+CL:0002068	Purkinje myocyte	18037	1	10	4
+CL:0002069	type II vestibular sensory cell	18053	1	16	4
+CL:0002070	type I vestibular sensory cell	18067	1	16	4
+CL:0002071	enterocyte of epithelium of large intestine	18081	2	11	6
+CL:0002072	nodal myocyte	18103	1	10	5
+CL:0002073	transitional myocyte	18120	1	10	17
+CL:0002074	myocardial endocrine cell	18131	2	12	3
+CL:0002075	brush cell of tracheobronchial tree	18143	3	9	5
+CL:0002076	endo-epithelial cell	18164	2	3	275
+CL:0002077	ecto-epithelial cell	18182	2	3	182
+CL:0002078	meso-epithelial cell	18199	2	3	88
+CL:0002079	pancreatic ductal cell	18216	2	8	0
+CL:0002080	pancreatic centro-acinar cell	18240	1	6	0
+CL:0002081	type II cell of carotid body	18262	2	9	0
+CL:0002082	type II cell of adrenal medulla	18275	2	24	0
+CL:0002083	type I cell of adrenal medulla	18293	2	24	0
+CL:0002084	Boettcher cell	18309	1	13	0
+CL:0002085	tanycyte	18322	1	12	19
+CL:0002086	specialized cardiac myocyte	18339	1	9	37
+CL:0002087	nongranular leukocyte	18350	1	6	3
+CL:0002088	interstitial cell of Cajal	18366	1	6	0
+CL:0002089	group 2 innate lymphoid cell, mouse	18388	1	11	0
+CL:0002090	polar body	18433	1	5	2
+CL:0002091	primary polar body	18448	1	6	0
+CL:0002092	bone marrow cell	18464	1	3	11
+CL:0002093	secondary polar body	18482	1	6	0
+CL:0002094	interstitial cell of ovary	18498	1	5	0
+CL:0002095	hilus cell of ovary	18512	2	8	0
+CL:0002096	internodal tract myocyte	18526	2	13	12
+CL:0002097	cortical cell of adrenal gland	18541	3	9	3
+CL:0002098	regular cardiac myocyte	18561	1	9	4
+CL:0002099	type I cell of adrenal cortex	18576	2	11	0
+CL:0002100	regular interventricular cardiac myocyte	18594	1	10	0
+CL:0002101	CD38-positive naive B cell	18605	1	16	2
+CL:0002102	CD38-negative naive B cell	18623	1	16	0
+CL:0002103	IgG-positive double negative memory B cell	18642	1	18	0
+CL:0002104	IgG-negative double negative memory B cell	18668	1	18	0
+CL:0002105	CD38-positive IgG memory B cell	18694	1	18	2
+CL:0002106	IgD-positive CD38-positive IgG memory B cell	18712	1	19	0
+CL:0002107	IgD-negative CD38-positive IgG memory B cell	18723	2	21	0
+CL:0002108	CD38-negative IgG memory B cell	18734	2	20	0
+CL:0002109	B220-positive CD38-positive naive B cell	18747	1	17	1
+CL:0002110	B220-low CD38-positive naive B cell	18769	1	18	0
+CL:0002111	CD38-negative unswitched memory B cell	18780	1	17	2
+CL:0002112	B220-positive CD38-negative unswitched memory B cell	18798	1	18	1
+CL:0002113	B220-low CD38-negative unswitched memory B cell	18809	1	19	0
+CL:0002114	CD38-positive unswitched memory B cell	18820	1	17	2
+CL:0002115	B220-positive CD38-positive unswitched memory B cell	18838	1	18	1
+CL:0002116	B220-low CD38-positive unswitched memory B cell	18849	1	19	0
+CL:0002117	IgG-negative class switched memory B cell	18860	1	19	6
+CL:0002118	CD38-negative IgG-negative class switched memory B cell	18879	1	20	2
+CL:0002119	CD38-positive IgG-negative class switched memory B cell	18890	1	20	2
+CL:0002120	CD24-positive CD38-negative IgG-negative class switched memory B cell	18901	1	21	0
+CL:0002121	CD24-negative CD38-negative IgG-negative class switched memory B cell	18912	1	21	0
+CL:0002122	B220-positive CD38-positive IgG-negative class switched memory B cell	18923	1	21	1
+CL:0002123	B220-low CD38-positive IgG-negative class switched memory B cell	18934	1	22	0
+CL:0002124	CD27-positive gamma-delta T cell	18945	1	13	0
+CL:0002125	CD27-negative gamma-delta T cell	18965	1	13	0
+CL:0002126	CD25-positive, CD27-positive immature gamma-delta T cell	18986	2	14	0
+CL:0002127	innate effector T cell	19015	1	12	0
+CL:0002128	Tc17 cell	19028	1	15	0
+CL:0002129	regular atrial cardiac myocyte	19054	1	10	0
+CL:0002130	regular interatrial cardiac myocyte	19072	1	10	0
+CL:0002131	regular ventricular cardiac myocyte	19083	1	10	0
+CL:0002132	stromal cell of ovary	19099	1	4	10
+CL:0002133	stromal cell of ovarian cortex	19117	1	5	0
+CL:0002134	stromal cell of ovarian medulla	19128	1	5	0
+CL:0002135	nonkeratinized cell of epidermis	19142	1	6	0
+CL:0002136	type II cell of adrenal cortex	19154	2	11	0
+CL:0002137	type III cell of adrenal cortex	19167	2	11	0
+CL:0002138	endothelial cell of lymphatic vessel	19179	1	4	10
+CL:0002139	endothelial cell of vascular tree	19202	1	3	90
+CL:0002140	skin sebocyte	19222	2	15	0
+CL:0002141	active chief cell of parathyroid gland	19241	1	11	0
+CL:0002142	dark cell of eccrine sweat gland	19252	4	14	0
+CL:0002143	dark chief cell of parathyroid gland	19267	1	11	0
+CL:0002144	capillary endothelial cell	19278	2	7	17
+CL:0002145	multiciliated columnar cell of tracheobronchial tree	19299	2	12	1
+CL:0002146	clear cell of eccrine sweat gland	19324	4	14	0
+CL:0002147	clear chief cell of parathyroid gland	19339	1	11	0
+CL:0002148	dental pulp cell	19351	2	6	4
+CL:0002149	epithelial cell of uterus	19367	1	4	12
+CL:0002150	epithelioid macrophage	19383	1	16	0
+CL:0002151	late promyelocyte	19398	1	11	0
+CL:0002152	columnar cell of endocervix	19410	2	8	0
+CL:0002153	corneocyte	19425	4	5	0
+CL:0002154	early promyelocyte	19443	1	11	0
+CL:0002155	echinocyte	19455	1	10	0
+CL:0002157	endosteal cell	19467	2	5	0
+CL:0002158	external epithelial cell of tympanic membrane	19483	1	5	2
+CL:0002159	general ecto-epithelial cell	19494	1	4	45
+CL:0002160	basal external epithelial cell of tympanic membrane	19505	1	6	0
+CL:0002161	superficial external epithelial cell of tympanic membrane	19515	1	6	0
+CL:0002162	internal epithelial cell of tympanic membrane	19525	1	4	0
+CL:0002163	internal pillar cell of cochlea	19537	1	15	0
+CL:0002164	external pillar cell of cochlea	19548	1	15	0
+CL:0002165	phalangeal cell	19559	1	14	2
+CL:0002166	epithelial cell of Malassez	19570	1	5	0
+CL:0002167	olfactory epithelial cell	19584	5	13	5
+CL:0002168	border cell of cochlea	19605	1	13	0
+CL:0002169	basal cell of olfactory epithelium	19616	1	14	2
+CL:0002170	keratinized cell of the oral mucosa	19633	2	11	0
+CL:0002171	globose cell of olfactory epithelium	19647	1	15	0
+CL:0002172	interdental cell of cochlea	19659	1	13	0
+CL:0002173	extraglomerular mesangial cell	19672	2	15	0
+CL:0002174	follicular cell of ovary	19691	1	3	16
+CL:0002175	primary follicular cell of ovary	19707	1	4	0
+CL:0002176	secondary follicular cell of ovary	19718	1	4	0
+CL:0002177	folliculostellate cell of pars distalis of adenohypophysis	19729	2	10	0
+CL:0002178	epithelial cell of stomach	19745	1	5	17
+CL:0002179	foveolar cell of stomach	19761	2	12	0
+CL:0002180	mucous cell of stomach	19776	3	10	6
+CL:0002181	mucous neck cell of gastric gland	19794	4	15	0
+CL:0002183	stem cell of gastric gland	19827	2	9	0
+CL:0002184	basal proper cell of olfactory epithelium	19843	1	15	0
+CL:0002187	basal cell of epidermis	19855	4	19	1
+CL:0002188	glomerular endothelial cell	19879	2	6	1
+CL:0002189	granular cell of epidermis	19899	2	13	0
+CL:0002190	squamous cell of epidermis	19915	2	14	0
+CL:0002191	granulocytopoietic cell	19927	1	8	25
+CL:0002192	metamyelocyte	19944	2	10	3
+CL:0002193	myelocyte	19958	2	10	2
+CL:0002194	monopoietic cell	19976	1	8	2
+CL:0002195	hepatic stem cell	19990	2	5	1
+CL:0002196	hepatic oval stem cell	20007	2	4	0
+CL:0002197	inactive chief cell of parathyoid gland	20028	1	11	0
+CL:0002198	oncocyte	20038	1	4	2
+CL:0002199	oxyphil cell of parathyroid gland	20051	2	6	0
+CL:0002200	oxyphil cell of thyroid	20063	2	9	0
+CL:0002201	renal beta-intercalated cell	20079	1	9	2
+CL:0002202	epithelial cell of tracheobronchial tree	20093	1	6	27
+CL:0002203	tuft cell of large intestine	20108	2	9	3
+CL:0002204	tuft cell	20128	1	3	24
+CL:0002205	brush cell of lobular bronchiole	20150	2	11	0
+CL:0002206	brush cell of terminal bronchiole	20166	2	11	0
+CL:0002207	brush cell of trachea	20182	2	11	0
+CL:0002208	brush cell of bronchus	20202	2	11	1
+CL:0002209	intermediate epitheliocyte	20220	1	7	0
+CL:0002210	red muscle cell	20232	1	14	2
+CL:0002211	type I muscle cell	20245	2	16	0
+CL:0002212	type II muscle cell	20268	1	15	3
+CL:0002213	white muscle cell	20284	1	15	1
+CL:0002214	type IIa muscle cell	20295	2	17	0
+CL:0002215	type IIb muscle cell	20314	2	17	0
+CL:0002216	intermediate muscle cell	20330	1	14	0
+CL:0002217	intermediate trophoblast cell	20342	1	4	0
+CL:0002218	immature dendritic epithelial T cell precursor	20354	1	13	0
+CL:0002219	anchoring trophoblast	20367	1	4	0
+CL:0002220	interstitial cell of pineal gland	20377	1	6	0
+CL:0002221	keratinized squamous cell of esophagus	20389	3	13	0
+CL:0002222	vertebrate lens cell	20402	2	5	7
+CL:0002223	anterior lens cell	20416	2	9	0
+CL:0002224	lens epithelial cell	20431	2	7	1
+CL:0002225	secondary lens fiber	20450	2	7	2
+CL:0002226	non-nucleated secondary lens fiber	20467	1	8	0
+CL:0002227	nucleated secondary lens fiber	20480	1	8	0
+CL:0002228	primary lens fiber	20492	2	7	0
+CL:0002229	light chief cell of parathyroid gland	20507	1	11	0
+CL:0002231	epithelial cell of prostate	20518	1	4	9
+CL:0002232	epithelial cell of prostatic duct	20539	2	8	0
+CL:0002233	epithelial cell of prostatic acinus	20556	1	5	2
+CL:0002234	basal cell of prostatic acinus	20572	2	7	0
+CL:0002235	luminal cell of prostatic acinus	20588	2	7	0
+CL:0002236	basal epithelial cell of prostatic duct	20602	2	7	0
+CL:0002237	luminal epithelial cell of prostatic duct	20621	2	7	0
+CL:0002238	male gonocyte	20636	1	4	0
+CL:0002239	ooblast	20653	2	5	0
+CL:0002240	marrow fibroblast	20672	2	8	0
+CL:0002241	pulmonary interstitial fibroblast	20686	2	6	2
+CL:0002242	nucleate cell	20710	1	1	615
+CL:0002243	smooth muscle cell of sphincter of pupil	20725	1	10	0
+CL:0002244	squamous cell of ectocervix	20745	1	8	0
+CL:0002246	peripheral blood stem cell	20769	2	10	1
+CL:0002247	pleural macrophage	20787	1	17	0
+CL:0002248	pluripotent stem cell	20798	1	4	0
+CL:0002249	primitive cardiac myocyte	20811	2	8	0
+CL:0002250	intestinal crypt stem cell	20823	2	9	5
+CL:0002251	epithelial cell of alimentary canal	20842	1	4	146
+CL:0002252	epithelial cell of esophagus	20855	1	5	9
+CL:0002253	epithelial cell of large intestine	20872	1	6	45
+CL:0002254	epithelial cell of small intestine	20890	1	6	37
+CL:0002255	stromal cell of endometrium	20906	1	4	0
+CL:0002256	supporting cell of carotid body	20928	2	7	1
+CL:0002257	epithelial cell of thyroid gland	20941	2	7	3
+CL:0002258	thyroid follicular cell	20959	3	10	0
+CL:0002259	neuroepithelial stem cell	20982	1	4	0
+CL:0002260	epithelial cell of parathyroid gland	20995	1	4	9
+CL:0002261	endothelial cell of viscerocranial mucosa	21011	1	4	4
+CL:0002262	endothelial cell of sinusoid	21023	1	5	5
+CL:0002263	transitional cell of parathyroid gland	21042	1	5	0
+CL:0002264	type A cell of stomach	21053	2	14	0
+CL:0002265	type D cell of colon	21067	3	30	0
+CL:0002266	type D cell of small intestine	21085	2	27	0
+CL:0002267	type D cell of stomach	21102	3	27	0
+CL:0002268	P/D1 enteroendocrine cell	21120	2	9	2
+CL:0002269	vasoactive intestinal peptide secreting cell	21133	1	3	3
+CL:0002270	type EC2 enteroendocrine cell	21143	3	31	0
+CL:0002271	type EC1 enteroendocrine cell	21157	3	31	0
+CL:0002272	motilin secreting cell	21170	1	3	2
+CL:0002273	type ECL enteroendocrine cell	21180	2	27	0
+CL:0002274	histamine secreting cell	21192	1	3	7
+CL:0002275	pancreatic PP cell	21205	2	12	0
+CL:0002277	type I enteroendocrine cell	21243	2	15	0
+CL:0002278	GIP cell	21257	2	15	0
+CL:0002279	type L enteroendocrine cell	21271	2	12	0
+CL:0002280	type N enteroendocrine cell	21286	2	15	0
+CL:0002281	type S enteroendocrine cell	21300	3	17	0
+CL:0002282	type TG enteroendocrine cell	21313	2	9	0
+CL:0002283	ecto-epithelial cell of viscerocranial mucosa	21325	1	5	0
+CL:0002284	type X enteroendocrine cell	21337	2	9	0
+CL:0002285	type III taste bud cell	21352	2	11	0
+CL:0002286	type II taste cell	21366	1	8	0
+CL:0002287	type IV taste receptor cell	21378	2	10	0
+CL:0002288	type V taste receptor cell	21393	1	8	0
+CL:0002289	type I taste bud cell	21404	2	10	0
+CL:0002290	Y chromosome-bearing sperm cell	21419	1	9	0
+CL:0002291	X chromosome-bearing sperm cell	21432	1	9	0
+CL:0002292	type I cell of carotid body	21445	1	6	0
+CL:0002293	epithelial cell of thymus	21458	1	4	19
+CL:0002294	type-1 epithelial cell of thymus	21479	1	6	0
+CL:0002295	type-6 epithelial cell of thymus	21491	1	6	0
+CL:0002296	type-4 epithelial cell of thymus	21505	2	7	0
+CL:0002297	type-3 epithelial cell of thymus	21518	1	6	0
+CL:0002298	type-5 epithelial cell of thymus	21530	1	6	0
+CL:0002299	type-2 epithelial cell of thymus	21544	1	6	0
+CL:0002300	type-7 epithelial cell of thymus	21556	1	6	0
+CL:0002301	type B synovial cell	21568	2	7	0
+CL:0002302	type A synovial cell	21590	2	8	0
+CL:0002303	pigmented ciliary epithelial cell	21606	1	7	0
+CL:0002304	non-pigmented ciliary epithelial cell	21625	1	6	0
+CL:0002305	epithelial cell of distal tubule	21645	3	12	9
+CL:0002306	epithelial cell of proximal tubule	21665	3	12	7
+CL:0002307	brush border cell of the proximal tubule	21688	2	15	4
+CL:0002308	epithelial cell of skin gland	21702	1	5	6
+CL:0002309	corticotroph	21717	2	27	0
+CL:0002310	mammosomatotroph	21731	3	29	0
+CL:0002311	mammotroph	21744	2	28	0
+CL:0002312	somatotroph	21763	2	27	0
+CL:0002313	endocrine-paracrine cell of prostate gland	21780	2	8	0
+CL:0002314	external supporting cell of vestibular epithelium	21801	1	12	0
+CL:0002315	supporting cell of cochlea	21812	2	12	12
+CL:0002316	supporting cell of vestibular epithelium	21827	1	11	2
+CL:0002317	external limiting cell of vestibular epithelium	21842	1	12	0
+CL:0002318	peripheral blood mesothelial cell	21853	3	4	0
+CL:0002319	neural cell	21867	1	2	1074
+CL:0002320	connective tissue cell	21886	1	2	251
+CL:0002321	embryonic cell (metazoa)	21907	1	1	33
+CL:0002322	embryonic stem cell	21924	2	4	0
+CL:0002323	amniocyte	21942	1	3	1
+CL:0002324	basal-myoepithelial cell of mammary gland	21956	2	7	3
+CL:0002325	lactocyte	21986	3	12	2
+CL:0002326	luminal epithelial cell of mammary gland	22018	3	6	5
+CL:0002327	mammary gland epithelial cell	22036	1	3	14
+CL:0002328	bronchial epithelial cell	22055	1	7	10
+CL:0002329	basal epithelial cell of tracheobronchial tree	22070	1	7	1
+CL:0002330	undifferentiated cell of bronchus epithelium	22084	1	8	0
+CL:0002332	multiciliated epithelial cell of the bronchus	22094	2	14	0
+CL:0002333	neural crest derived adipocyte	22114	1	5	0
+CL:0002334	preadipocyte	22127	1	5	7
+CL:0002335	brown preadipocyte	22141	1	6	0
+CL:0002336	buccal mucosa cell	22154	1	5	1
+CL:0002337	keratinocyte stem cell	22164	3	13	0
+CL:0002338	CD56-positive, CD161-positive immature natural killer cell, human	22183	1	14	0
+CL:0002339	prostate stem cell	22208	2	9	0
+CL:0002340	luminal cell of prostate epithelium	22222	1	5	2
+CL:0002341	basal cell of prostate epithelium	22237	1	5	3
+CL:0002342	circulating endothelial cell	22252	1	3	0
+CL:0002343	decidual natural killer cell, human	22262	3	15	0
+CL:0002344	CD56-negative, CD161-positive immature natural killer cell, human	22287	1	14	0
+CL:0002345	CD27-low, CD11b-low immature natural killer cell, mouse	22311	1	14	0
+CL:0002346	Dx5-negative, NK1.1-positive immature natural killer cell, mouse	22335	1	14	0
+CL:0002347	CD27-high, CD11b-high natural killer cell, mouse	22351	1	13	0
+CL:0002348	CD27-low, CD11b-high natural killer cell, mouse	22368	1	13	0
+CL:0002349	CD27-high, CD11b-low natural killer cell, mouse	22384	1	13	0
+CL:0002350	endocardial cell	22400	1	5	0
+CL:0002351	progenitor cell of endocrine pancreas	22421	1	3	0
+CL:0002352	gestational hematopoietic stem cell	22434	1	9	5
+CL:0002353	fetal liver hematopoietic progenitor cell	22447	1	10	0
+CL:0002354	yolk sac hematopoietic stem cell	22475	1	10	0
+CL:0002355	primitive red blood cell	22500	1	6	0
+CL:0002356	primitive reticulocyte	22524	1	6	0
+CL:0002357	fetal derived definitive erythrocyte	22540	1	10	0
+CL:0002358	pyrenocyte	22557	1	6	0
+CL:0002359	placental hematopoietic stem cell	22572	1	10	0
+CL:0002360	AGM hematopoietic stem cell	22585	1	10	0
+CL:0002361	primitive erythroid progenitor	22595	1	6	0
+CL:0002362	cerebellar granule cell precursor	22612	2	6	0
+CL:0002363	keratocyte	22629	1	6	0
+CL:0002364	cortical thymic epithelial cell	22649	1	5	5
+CL:0002365	medullary thymic epithelial cell	22668	1	5	11
+CL:0002366	myometrial cell	22687	1	10	0
+CL:0002367	trabecular meshwork cell	22705	1	3	4
+CL:0002368	respiratory tract epithelial cell	22720	1	4	56
+CL:0002369	fungal spore	22738	1	3	21
+CL:0002370	respiratory tract goblet cell	22747	2	11	6
+CL:0002372	myotube	22781	2	10	22
+CL:0002373	growth hormone releasing hormone secreting cell	22805	1	3	0
+CL:0002374	ear hair cell	22817	2	14	16
+CL:0002375	Schwann cell precursor	22832	2	4	0
+CL:0002376	non-myelinating Schwann cell	22852	1	6	1
+CL:0002377	immature Schwann cell	22866	1	6	0
+CL:0002378	immature Vgamma2-positive fetal thymocyte	22882	1	13	0
+CL:0002379	meningothelial cell	22894	1	6	0
+CL:0002380	oospore	22906	1	5	0
+CL:0002381	uninucleate conidium	22915	1	6	5
+CL:0002382	multinucleate conidium	22924	1	6	3
+CL:0002383	conidium of conidiophore head	22933	1	7	0
+CL:0002384	uninucleate macroconidium	22940	2	8	2
+CL:0002385	blastoconidium	22948	1	7	2
+CL:0002386	multinucleate macroconidium	22957	2	8	2
+CL:0002387	arthroconidium	22965	1	7	2
+CL:0002388	multinucleate arthroconidium	22973	2	10	0
+CL:0002389	uninucleate arthroconidium	22981	2	10	0
+CL:0002390	uninucleate blastconidium	22989	2	10	0
+CL:0002391	multinucleate blastoconidium	22997	2	10	0
+CL:0002393	intermediate monocyte	23012	1	17	7
+CL:0002394	CD141-positive myeloid dendritic cell	23037	2	19	0
+CL:0002395	Gr1-high classical monocyte	23061	2	23	3
+CL:0002396	CD14-low, CD16-positive monocyte	23085	2	19	0
+CL:0002397	CD14-positive, CD16-positive monocyte	23106	1	18	1
+CL:0002398	Gr1-positive, CD43-positive monocyte	23124	2	23	5
+CL:0002399	CD1c-positive myeloid dendritic cell	23143	1	18	0
+CL:0002400	fraction B/C precursor B cell	23163	1	14	3
+CL:0002401	mature dendritic epithelial T cell precursor	23183	1	13	0
+CL:0002402	Peyer's patch B cell	23197	2	17	0
+CL:0002403	mature Vgamma2-positive fetal thymocyte	23223	1	13	0
+CL:0002404	fetal thymocyte	23236	1	12	4
+CL:0002405	gamma-delta thymocyte	23246	2	14	10
+CL:0002406	immature Vgamma2-positive thymocyte	23263	1	15	0
+CL:0002407	mature Vgamma2-positive thymocyte	23275	1	15	0
+CL:0002408	immature Vgamma2-negative thymocyte	23288	1	15	0
+CL:0002409	mature Vgamma2-negative thymocyte	23300	1	15	0
+CL:0002410	pancreatic stellate cell	23313	2	6	0
+CL:0002411	Vgamma1.1-positive, Vdelta6.3-negative thymocyte	23331	1	15	2
+CL:0002412	Vgamma1.1-positive, Vdelta6.3-positive thymocyte	23342	1	15	2
+CL:0002413	mature Vgamma1.1-positive, Vdelta6.3-negative thymocyte	23353	1	16	0
+CL:0002414	immature Vgamma1.1-positive, Vdelta6.3-negative thymocyte	23363	1	16	0
+CL:0002415	immature Vgamma1.1-positive, Vdelta6.3-positive thymocyte	23373	1	16	0
+CL:0002416	mature Vgamma1.1-positive, Vdelta6.3-positive thymocyte	23383	1	16	0
+CL:0002417	primitive erythroid lineage cell	23393	1	5	4
+CL:0002418	hemangioblast	23403	2	4	0
+CL:0002419	mature T cell	23416	1	10	111
+CL:0002420	immature T cell	23436	1	10	50
+CL:0002421	nucleated reticulocyte	23455	2	7	0
+CL:0002422	enucleated reticulocyte	23468	2	7	2
+CL:0002423	DN2a thymocyte	23486	1	14	0
+CL:0002424	DN2b thymocyte	23500	1	14	0
+CL:0002425	early T lineage precursor	23514	1	9	0
+CL:0002426	CD11b-positive, CD27-positive natural killer cell, mouse	23538	1	14	0
+CL:0002427	resting double-positive thymocyte	23554	1	15	0
+CL:0002428	double-positive blast	23568	1	15	0
+CL:0002429	CD69-positive double-positive thymocyte	23587	1	15	0
+CL:0002430	CD4-intermediate, CD8-positive double-positive thymocyte	23606	1	15	0
+CL:0002431	CD4-positive, CD8-intermediate double-positive thymocyte	23628	1	15	0
+CL:0002432	CD24-positive, CD4 single-positive thymocyte	23650	1	15	0
+CL:0002433	CD69-positive, CD4-positive single-positive thymocyte	23669	1	15	0
+CL:0002434	CD24-positive, CD8 single-positive thymocyte	23687	1	15	0
+CL:0002435	CD69-positive, CD8-positive single-positive thymocyte	23706	1	15	0
+CL:0002436	mature CD4 single-positive thymocyte	23724	1	14	0
+CL:0002437	mature CD8 single-positive thymocyte	23743	1	14	0
+CL:0002438	NK1.1-positive natural killer cell, mouse	23762	1	13	11
+CL:0002439	NKGA2-positive natural killer cell, mouse	23779	1	14	0
+CL:0002440	Ly49D-positive natural killer cell, mouse	23793	1	14	0
+CL:0002441	CD94-positive natural killer cell, mouse	23807	1	14	1
+CL:0002442	CD94-negative, Ly49CI-negative natural killer cell, mouse	23821	1	12	0
+CL:0002443	Ly49CI-positive natural killer cell, mouse	23839	1	14	1
+CL:0002444	Ly49H-positive natural killer cell, mouse	23854	1	14	0
+CL:0002445	Ly49D-negative natural killer cell, mouse	23868	1	14	0
+CL:0002446	Ly49CI-negative natural killer cell, mouse	23882	1	14	0
+CL:0002447	CD94-negative natural killer cell, mouse	23897	1	14	0
+CL:0002448	Ly49H-negative natural killer cell, mouse	23911	1	14	0
+CL:0002449	CD94-positive Ly49CI-positive natural killer cell, mouse	23925	2	16	0
+CL:0002450	tether cell	23940	1	15	0
+CL:0002451	mammary stem cell	23951	1	4	0
+CL:0002453	oligodendrocyte precursor cell	23961	2	7	7
+CL:0002454	CD4-negative, CD8-alpha-negative, CD11b-positive dendritic cell	23987	1	16	6
+CL:0002455	CD8-alpha-negative plasmacytoid dendritic cell	24004	1	16	0
+CL:0002456	CD8-alpha-positive plasmacytoid dendritic cell	24019	1	16	0
+CL:0002457	epidermal Langerhans cell	24034	2	19	0
+CL:0002458	langerin-positive dermal dendritic cell	24056	2	20	0
+CL:0002459	langerin-negative dermal dendritic cell	24069	1	17	0
+CL:0002460	CD8-alpha-negative thymic conventional dendritic cell	24083	1	16	0
+CL:0002461	CD103-positive dendritic cell	24098	2	17	3
+CL:0002462	adipose dendritic cell	24114	3	18	2
+CL:0002463	SIRPa-positive adipose dendritic cell	24132	1	19	0
+CL:0002464	SIRPa-negative adipose dendritic cell	24146	1	19	0
+CL:0002465	CD11b-positive dendritic cell	24160	1	15	27
+CL:0002466	small intestine serosal dendritic cell	24175	1	16	0
+CL:0002467	Gr1-high myeloid suppressor cell	24198	1	9	0
+CL:0002468	Gr1-low myeloid suppressor cell	24214	1	9	0
+CL:0002469	MHC-II-negative classical monocyte	24230	1	24	1
+CL:0002470	MHC-II-positive classical monocyte	24243	1	24	0
+CL:0002471	MHC-II-negative non-classical monocyte	24257	1	26	1
+CL:0002472	MHC-II-low non-classical monocyte	24270	1	26	0
+CL:0002473	MHC-II-high non-classical monocyte	24283	1	26	0
+CL:0002474	lymphoid MHC-II-negative classical monocyte	24296	1	25	0
+CL:0002475	lymphoid MHC-II-negative non-classical monocyte	24312	1	27	0
+CL:0002476	bone marrow macrophage	24328	2	21	0
+CL:0002477	adipose macrophage	24352	1	17	2
+CL:0002478	F4/80-negative adipose macrophage	24370	1	18	0
+CL:0002479	F4/80-positive adipose macrophage	24386	1	18	0
+CL:0002480	nasal mucosa goblet cell	24402	2	13	0
+CL:0002481	peritubular myoid cell	24421	2	11	0
+CL:0002482	dermal melanocyte	24435	1	6	0
+CL:0002483	hair follicle melanocyte	24448	2	9	0
+CL:0002484	epithelial melanocyte	24464	1	5	3
+CL:0002485	retinal melanocyte	24478	2	7	0
+CL:0002486	strial intermediate cell	24493	3	13	0
+CL:0002487	cutaneous/subcutaneous mechanoreceptor cell	24508	1	10	2
+CL:0002488	trophoblast giant cell	24518	1	4	2
+CL:0002489	double negative thymocyte	24537	1	12	20
+CL:0002490	organ of Corti supporting cell	24556	1	13	7
+CL:0002491	auditory epithelial cell	24569	1	5	21
+CL:0002492	strial marginal cell	24583	1	6	0
+CL:0002493	strial basal cell	24593	1	6	0
+CL:0002494	cardiocyte	24605	1	2	68
+CL:0002495	fetal cardiomyocyte	24625	1	9	0
+CL:0002496	intraepithelial lymphocyte	24638	1	11	12
+CL:0002497	primary trophoblast giant cell	24661	1	5	0
+CL:0002498	secondary trophoblast giant cell	24672	1	5	0
+CL:0002499	spongiotrophoblast cell	24682	1	4	0
+CL:0002500	P enteroendocrine cell	24694	1	10	0
+CL:0002501	type D1 enteroendocrine cell	24704	1	10	0
+CL:0002502	type M enteroendocrine cell	24715	2	16	0
+CL:0002503	adventitial cell	24728	2	4	5
+CL:0002504	enteric smooth muscle cell	24745	1	9	16
+CL:0002505	liver CD103-negative dendritic cell	24762	1	17	0
+CL:0002506	liver CD103-positive dendritic cell	24784	2	20	0
+CL:0002507	langerin-positive lymph node dendritic cell	24806	1	15	2
+CL:0002508	langerin-negative, CD103-negative lymph node dendritic cell	24825	1	15	2
+CL:0002509	CD103-positive, langerin-positive lymph node dendritic cell	24846	3	21	0
+CL:0002510	CD103-negative, langerin-positive lymph node dendritic cell	24862	2	18	0
+CL:0002511	CD11b-low, CD103-negative, langerin-negative lymph node dendritic cell	24878	2	18	0
+CL:0002512	CD11b-high, CD103-negative, langerin-negative lymph node dendritic cell	24892	2	18	0
+CL:0002513	Vgamma5-positive CD8-alpha alpha positive gamma-delta intraepithelial T cell	24906	1	17	0
+CL:0002514	Vgamma5-negative CD8-alpha alpha positive gamma-delta intraepithelial T cell	24917	1	17	0
+CL:0002515	interrenal norepinephrine type cell	24928	2	22	0
+CL:0002516	interrenal chromaffin cell	24941	1	19	2
+CL:0002517	interrenal epinephrin secreting cell	24951	2	22	0
+CL:0002518	kidney epithelial cell	24964	2	4	74
+CL:0002519	interrenal epithelial cell	24980	1	5	0
+CL:0002520	nephrocyte	24990	1	4	3
+CL:0002521	subcutaneous adipocyte	25000	1	5	0
+CL:0002522	renal filtration cell	25018	2	3	8
+CL:0002523	mesonephric podocyte	25030	1	15	0
+CL:0002524	disseminated nephrocyte	25045	1	5	0
+CL:0002525	metanephric podocyte	25053	1	15	0
+CL:0002526	CD14-positive dermal dendritic cell	25067	1	17	2
+CL:0002527	immature CD14-positive dermal dendritic cell	25084	2	22	0
+CL:0002528	mature CD14-positive dermal dendritic cell	25097	2	22	0
+CL:0002529	CD1a-positive dermal dendritic cell	25112	1	17	2
+CL:0002530	immature CD1a-positive dermal dendritic cell	25125	2	22	0
+CL:0002531	mature CD1a-positive dermal dendritic cell	25138	2	22	0
+CL:0002532	CD16-positive myeloid dendritic cell	25153	1	18	2
+CL:0002533	immature CD16-positive myeloid dendritic cell	25169	2	20	0
+CL:0002534	mature CD16-positive myeloid dendritic cell	25182	2	20	0
+CL:0002535	epithelial cell of cervix	25197	1	5	4
+CL:0002536	epithelial cell of amnion	25221	1	3	0
+CL:0002537	amnion mesenchymal stem cell	25237	1	7	0
+CL:0002538	intrahepatic cholangiocyte	25251	1	6	0
+CL:0002539	aortic smooth muscle cell	25269	1	12	0
+CL:0002540	mesenchymal stem cell of the bone marrow	25286	2	9	1
+CL:0002541	chorionic membrane mesenchymal stem cell	25299	1	7	0
+CL:0002543	vein endothelial cell	25312	1	5	11
+CL:0002544	aortic endothelial cell	25334	1	6	1
+CL:0002545	thoracic aorta endothelial cell	25347	1	7	0
+CL:0002546	embryonic blood vessel endothelial progenitor cell	25360	1	4	0
+CL:0002547	fibroblast of the aortic adventitia	25373	1	10	0
+CL:0002548	fibroblast of cardiac tissue	25387	2	6	2
+CL:0002549	fibroblast of choroid plexus	25405	2	6	0
+CL:0002550	fibroblast of the conjunctiva	25420	1	5	0
+CL:0002551	fibroblast of dermis	25433	1	6	4
+CL:0002552	fibroblast of gingiva	25447	1	5	0
+CL:0002553	fibroblast of lung	25461	1	5	5
+CL:0002554	fibroblast of lymphatic vessel	25477	1	5	0
+CL:0002555	fibroblast of mammary gland	25491	1	5	0
+CL:0002556	fibroblast of periodontium	25507	1	5	1
+CL:0002557	fibroblast of pulmonary artery	25520	1	5	0
+CL:0002558	fibroblast of villous mesenchyme	25534	1	5	0
+CL:0002559	hair follicle cell	25546	1	2	10
+CL:0002560	inner root sheath cell	25559	2	7	0
+CL:0002561	outer root sheath cell	25573	2	7	0
+CL:0002562	hair germinal matrix cell	25587	2	7	0
+CL:0002563	intestinal epithelial cell	25604	1	5	102
+CL:0002564	nucleus pulposus cell of intervertebral disc	25619	1	3	0
+CL:0002565	iris pigment epithelial cell	25632	2	6	0
+CL:0002566	dark melanocyte	25649	1	5	0
+CL:0002567	light melanocyte	25661	1	5	0
+CL:0002568	mesenchymal stem cell of Wharton's jelly	25673	1	9	0
+CL:0002569	mesenchymal stem cell of umbilical cord	25684	2	8	1
+CL:0002570	mesenchymal stem cell of adipose tissue	25698	1	7	2
+CL:0002571	hepatic mesenchymal stem cell	25715	2	8	0
+CL:0002572	vertebral mesenchymal stem cell	25728	2	8	0
+CL:0002573	Schwann cell	25742	1	5	4
+CL:0002574	stromal cell of pancreas	25762	1	4	1
+CL:0002575	central nervous system pericyte	25777	2	9	1
+CL:0002576	perineurial cell	25791	2	6	0
+CL:0002577	placental epithelial cell	25808	2	4	0
+CL:0002578	mesenteric preadipocyte	25822	1	6	0
+CL:0002579	omentum preadipocyte	25835	1	6	0
+CL:0002580	preadipocyte of the breast	25848	2	7	0
+CL:0002581	perirenal preadipocyte	25861	1	6	0
+CL:0002582	visceral preadipocyte	25874	1	6	0
+CL:0002583	subcutaneous preadipocyte	25884	1	6	0
+CL:0002584	renal cortical epithelial cell	25897	2	6	40
+CL:0002585	retinal blood vessel endothelial cell	25909	2	7	0
+CL:0002586	retinal pigment epithelial cell	25928	3	8	0
+CL:0002588	smooth muscle cell of the umbilical vein	25952	1	12	0
+CL:0002589	smooth muscle cell of the brachiocephalic vasculature	25965	1	12	0
+CL:0002590	smooth muscle cell of the brain vasculature	25978	2	12	0
+CL:0002591	smooth muscle cell of the pulmonary artery	25994	1	12	0
+CL:0002592	smooth muscle cell of the coronary artery	26012	2	13	0
+CL:0002593	smooth muscle cell of the internal thoracic artery	26027	1	13	0
+CL:0002594	smooth muscle cell of the umbilical artery	26040	1	12	0
+CL:0002595	smooth muscle cell of the subclavian artery	26053	1	12	1
+CL:0002596	smooth muscle cell of the carotid artery	26066	1	12	0
+CL:0002597	smooth muscle cell of bladder	26079	2	11	0
+CL:0002598	bronchial smooth muscle cell	26094	1	10	0
+CL:0002599	smooth muscle cell of the esophagus	26112	1	9	0
+CL:0002600	smooth muscle cell of trachea	26125	1	10	0
+CL:0002601	uterine smooth muscle cell	26141	1	9	1
+CL:0002602	annulus pulposus cell	26157	1	3	0
+CL:0002603	astrocyte of the cerebellum	26171	2	8	3
+CL:0002604	hippocampal astrocyte	26188	2	12	0
+CL:0002605	astrocyte of the cerebral cortex	26205	2	10	5
+CL:0002606	astrocyte of the spinal cord	26220	1	7	0
+CL:0002607	migratory enteric neural crest cell	26233	1	10	0
+CL:0002608	hippocampal neuron	26244	2	10	16
+CL:0002610	raphe nuclei neuron	26260	2	8	0
+CL:0002611	neuron of the dorsal spinal cord	26274	1	8	1
+CL:0002612	neuron of the ventral spinal cord	26287	1	8	1
+CL:0002613	striatum neuron	26300	1	9	32
+CL:0002614	neuron of the substantia nigra	26313	1	8	7
+CL:0002615	adipocyte of omentum tissue	26326	1	5	0
+CL:0002616	perirenal adipocyte	26342	1	5	0
+CL:0002617	adipocyte of breast	26357	1	5	0
+CL:0002618	endothelial cell of umbilical vein	26377	1	6	0
+CL:0002619	adult endothelial progenitor cell	26393	1	9	3
+CL:0002620	skin fibroblast	26408	1	5	17
+CL:0002621	gingival epithelial cell	26428	2	9	0
+CL:0002622	prostate stromal cell	26444	1	4	5
+CL:0002623	acinar cell of salivary gland	26459	2	13	3
+CL:0002624	paneth cell of the appendix	26482	2	16	0
+CL:0002625	seminiferous tubule epithelial cell	26495	2	7	2
+CL:0002626	immature astrocyte	26509	1	7	0
+CL:0002627	mature astrocyte	26519	1	7	0
+CL:0002628	immature microglial cell	26533	1	22	0
+CL:0002629	mature microglial cell	26546	1	22	0
+CL:0002630	actinomycete-type spore	26570	1	2	0
+CL:0002631	epithelial cell of upper respiratory tract	26578	1	5	11
+CL:0002632	epithelial cell of lower respiratory tract	26592	1	5	37
+CL:0002633	respiratory basal cell	26606	1	7	6
+CL:0002634	epithelial cell of anal column	26624	1	7	4
+CL:0002635	nonkeratinized epithelial cell of anal column	26637	1	8	1
+CL:0002636	nonkeratinized epithelial cell of inferior part of anal canal	26648	2	10	0
+CL:0002637	keratinized epithelial cell of the anal canal	26660	2	13	0
+CL:0002638	bronchioalveolar stem cell	26673	1	8	0
+CL:0002639	amniotic stem cell	26688	2	9	0
+CL:0002640	amniotic epithelial stem cell	26700	1	6	0
+CL:0002641	epithelial cell of esophageal gland proper	26710	1	10	0
+CL:0002642	epithelial cell of esophageal cardiac gland	26721	1	10	0
+CL:0002643	nonkeratinized cell of stratum corneum of esophageal epithelium	26732	1	7	0
+CL:0002644	endo-epithelial cell of tympanic part of viscerocranial mucosa	26743	1	5	0
+CL:0002645	endo-epithelial cell of pharyngotympanic part of viscerocranial mucosa	26754	1	5	0
+CL:0002651	endothelial cell of venous sinus of spleen	26810	1	6	1
+CL:0002652	endothelial cell of high endothelial venule	26822	1	6	0
+CL:0002653	squamous endothelial cell	26841	1	3	19
+CL:0002654	epithelial cell of stratum corneum of esophageal epithelium	26852	1	6	1
+CL:0002655	epithelial cell of stratum spinosum of esophageal epithelium	26863	1	6	0
+CL:0002656	glandular endometrial unciliated epithelial cell	26874	4	11	0
+CL:0002657	glandular cell of esophagus	26893	2	9	2
+CL:0002658	glandular cell of the large intestine	26908	2	10	8
+CL:0002659	glandular epithelial cell of stomach	26922	2	9	7
+CL:0002660	luminal cell of acinus of lactiferous gland	26938	1	7	0
+CL:0002661	luminal cell of lactiferous terminal ductal lobular unit	26950	1	10	0
+CL:0002662	luminal cell of lactiferous duct	26961	2	9	1
+CL:0002663	myocardial endocrine cell of atrium	26973	1	13	0
+CL:0002664	cardioblast	26987	1	4	0
+CL:0002665	otic fibrocyte	27000	2	4	6
+CL:0002666	type II spiral ligament fibrocyte	27013	1	6	0
+CL:0002667	type V spiral ligament fibrocyte	27026	1	6	0
+CL:0002668	type IV spiral ligament fibrocyte	27039	1	6	0
+CL:0002669	type III spiral ligament fibrocyte	27052	1	6	0
+CL:0002670	type I spiral ligament fibrocyte	27066	1	6	0
+CL:0002671	endothelial stalk cell	27080	1	5	0
+CL:0002672	retinal progenitor cell	27093	3	5	0
+CL:0002673	tongue muscle cell	27108	1	13	0
+CL:0002674	H minus	27124	1	3	0
+CL:0002675	H plus	27134	1	3	0
+CL:0002676	neural crest derived neuroblast	27143	1	5	0
+CL:0002677	naive regulatory T cell	27155	2	17	1
+CL:0002678	memory regulatory T cell	27172	2	18	1
+CL:0002679	natural helper lymphocyte	27187	1	9	0
+CL:0002680	PP cell of intestine	27219	2	13	0
+CL:0002681	kidney cortical cell	27232	1	3	70
+CL:0003001	bistratified retinal ganglion cell	27245	2	10	9
+CL:0003002	G1 retinal ganglion cell	27261	1	8	0
+CL:0003003	G2 retinal ganglion cell	27272	1	8	0
+CL:0003004	G3 retinal ganglion cell	27284	1	11	0
+CL:0003005	G4 retinal ganglion cell	27298	1	8	2
+CL:0003006	G4-ON retinal ganglion cell	27310	2	10	0
+CL:0003007	G4-OFF retinal ganglion cell	27322	2	10	0
+CL:0003008	G5 retinal ganglion cell	27335	1	8	0
+CL:0003009	G6 retinal ganglion cell	27347	1	8	0
+CL:0003010	G7 retinal ganglion cell	27360	1	11	0
+CL:0003011	G8 retinal ganglion cell	27373	1	8	0
+CL:0003012	G9 retinal ganglion cell	27385	1	8	0
+CL:0003013	G10 retinal ganglion cell	27398	1	8	0
+CL:0003014	G11 retinal ganglion cell	27411	1	8	2
+CL:0003015	G11-ON retinal ganglion cell	27423	2	10	0
+CL:0003016	G11-OFF retinal ganglion cell	27434	2	10	0
+CL:0003017	retinal ganglion cell B3 outer	27445	1	10	0
+CL:0003018	retinal ganglion cell B3 inner	27456	1	10	0
+CL:0003020	retinal ganglion cell C outer	27468	1	9	4
+CL:0003021	retinal ganglion cell C4	27479	1	10	0
+CL:0003022	retinal ganglion cell C5	27489	1	10	0
+CL:0003023	retinal ganglion cell C6	27499	1	10	0
+CL:0003024	retinal ganglion cell C inner	27509	1	9	3
+CL:0003025	retinal ganglion cell C3	27520	1	10	0
+CL:0003026	retinal ganglion cell D1	27531	1	11	0
+CL:0003027	retinal ganglion cell D2	27544	1	11	0
+CL:0003028	M1 retinal ganglion cell	27559	1	8	0
+CL:0003029	M2 retinal ganglion cell	27572	1	8	0
+CL:0003030	M3 retinal ganglion cell	27586	1	8	2
+CL:0003031	M3-ON retinal ganglion cell	27598	2	10	0
+CL:0003032	M3-OFF retinal ganglion cell	27610	2	10	0
+CL:0003033	M4 retinal ganglion cell	27622	1	8	0
+CL:0003034	M5 retinal ganglion cell	27635	1	8	0
+CL:0003035	M6 retinal ganglion cell	27648	1	8	0
+CL:0003036	M7 retinal ganglion cell	27661	1	8	2
+CL:0003037	M7-ON retinal ganglion cell	27673	2	10	0
+CL:0003038	M7-OFF retinal ganglion cell	27685	2	10	0
+CL:0003039	M8 retinal ganglion cell	27697	1	8	0
+CL:0003040	M9 retinal ganglion cell	27709	1	8	2
+CL:0003041	M9-ON retinal ganglion cell	27721	2	10	0
+CL:0003042	M9-OFF retinal ganglion cell	27733	2	10	0
+CL:0003043	M10 retinal ganglion cell	27745	1	8	0
+CL:0003044	M11 retinal ganglion cell	27757	1	11	0
+CL:0003045	M12 retinal ganglion cell	27770	1	11	0
+CL:0003046	M13 retinal ganglion cell	27783	1	11	0
+CL:0003047	M14 retinal ganglion cell	27796	1	11	0
+CL:0003048	L cone cell	27809	1	17	0
+CL:0003049	M cone cell	27825	1	17	1
+CL:0003050	S cone cell	27841	1	17	0
+CL:0003051	UV cone cell	27860	1	17	1
+CL:0004001	local interneuron	27870	1	9	0
+CL:0004115	retinal ganglion cell B	27882	1	8	5
+CL:0004116	retinal ganglion cell C	27894	1	8	9
+CL:0004117	alpha retinal ganglion cell (Mmus)	27906	1	8	8
+CL:0004119	retinal ganglion cell B1	27922	1	9	0
+CL:0004120	retinal ganglion cell A1	27936	1	9	0
+CL:0004121	retinal ganglion cell B2	27951	1	9	0
+CL:0004124	retinal ganglion cell C1	27963	1	10	0
+CL:0004125	retinal ganglion cell C2 inner	27977	1	10	0
+CL:0004126	retinal ganglion cell C2 outer	27988	1	10	0
+CL:0004137	retinal ganglion cell A2 inner	27999	1	10	0
+CL:0004138	retinal ganglion cell A2	28011	1	9	2
+CL:0004139	retinal ganglion cell A2 outer	28024	1	10	0
+CL:0004161	510 nm-cone	28036	1	18	0
+CL:0004162	360 nm-cone	28048	1	18	0
+CL:0004183	retinal ganglion cell B3	28061	1	9	2
+CL:0004213	type 3a cone bipolar cell	28073	1	14	0
+CL:0004214	type 3b cone bipolar cell	28085	1	14	0
+CL:0004215	type 5a cone bipolar cell	28097	1	14	0
+CL:0004216	type 5b cone bipolar cell	28109	1	14	0
+CL:0004217	H1 horizontal cell	28121	1	10	0
+CL:0004218	H2 horizontal cell	28136	1	10	0
+CL:0004219	A2 amacrine cell	28151	3	17	0
+CL:0004220	flag amacrine cell	28167	1	12	2
+CL:0004221	flag A amacrine cell	28178	2	16	0
+CL:0004222	flag B amacrine cell	28192	2	16	0
+CL:0004223	AB diffuse-1 amacrine cell	28207	1	12	0
+CL:0004224	AB diffuse-2 amacrine cell	28222	2	15	0
+CL:0004225	spider amacrine cell	28236	1	12	0
+CL:0004226	monostratified amacrine cell	28250	2	13	0
+CL:0004227	flat bistratified amacrine cell	28266	3	17	0
+CL:0004228	broad diffuse amacrine cell	28281	1	12	0
+CL:0004229	A2-like amacrine cell	28296	2	14	0
+CL:0004230	diffuse bistratified amacrine cell	28310	2	14	0
+CL:0004231	recurving diffuse amacrine cell	28326	1	12	0
+CL:0004232	starburst amacrine cell	28340	2	18	0
+CL:0004233	DAPI-3 amacrine cell	28355	3	17	0
+CL:0004234	diffuse multistratified amacrine cell	28370	1	12	0
+CL:0004235	AB broad diffuse-1 amacrine cell	28383	2	17	0
+CL:0004236	AB broad diffuse-2 amacrine cell	28397	2	17	0
+CL:0004237	fountain amacrine cell	28412	2	17	0
+CL:0004238	asymmetric bistratified amacrine cell	28428	2	14	0
+CL:0004239	wavy bistratified amacrine cell	28442	2	14	0
+CL:0004240	WF1 amacrine cell	28457	1	12	0
+CL:0004241	WF2 amacrine cell	28469	1	12	0
+CL:0004242	WF3-1 amacrine cell	28481	1	12	0
+CL:0004243	WF3-2 amacrine cell	28493	1	12	0
+CL:0004244	WF4 amacrine cell	28505	1	12	0
+CL:0004245	indoleamine-accumulating amacrine cell	28517	3	20	0
+CL:0004246	monostratified cell	28531	1	8	1
+CL:0004247	bistratified cell	28546	1	8	18
+CL:0004250	bistratified retinal amacrine cell	28559	2	12	7
+CL:0004251	narrow field retinal amacrine cell	28573	1	11	13
+CL:0004252	medium field retinal amacrine cell	28584	1	11	7
+CL:0004253	wide field retinal amacrine cell	28596	1	11	6
+CL:0005000	spinal cord interneuron	28607	1	9	4
+CL:0005001	iridoblast	28621	2	4	0
+CL:0005002	xanthoblast	28633	2	4	0
+CL:0005003	leucoblast	28644	2	4	0
+CL:0005004	pigment erythroblast	28655	2	4	0
+CL:0005005	cyanoblast	28666	2	4	0
+CL:0005006	ionocyte	28677	1	3	2
+CL:0005007	Kolmer-Agduhr neuron	28690	2	14	0
+CL:0005008	macular hair cell	28704	2	16	0
+CL:0005009	renal principal cell	28716	2	6	6
+CL:0005010	renal intercalated cell	28729	3	8	12
+CL:0005011	renal alpha-intercalated cell	28746	1	9	2
+CL:0005012	multiciliated epithelial cell	28762	2	6	10
+CL:0005013	single ciliated epithelial cell	28786	1	5	0
+CL:0005014	auditory epithelial supporting cell	28795	3	10	16
+CL:0005015	inner phalangeal cell	28807	1	15	0
+CL:0005018	ghrelin secreting cell	28830	1	3	2
+CL:0005019	pancreatic epsilon cell	28842	2	12	0
+CL:0005020	lymphangioblast	28860	2	5	2
+CL:0005021	mesenchymal lymphangioblast	28876	2	9	0
+CL:0005022	vascular lymphangioblast	28889	1	6	0
+CL:0005023	branchiomotor neuron	28905	1	10	0
+CL:0005024	somatomotor neuron	28920	2	11	11
+CL:0005025	visceromotor neuron	28934	2	9	1
+CL:0005026	hepatoblast	28950	1	4	0
+CL:0007000	preameloblast	28962	2	4	0
+CL:0007001	skeletogenic cell	28977	1	1	19
+CL:0007002	precementoblast	28990	2	4	0
+CL:0007003	preodontoblast	29002	2	4	0
+CL:0007004	premigratory neural crest cell	29015	3	7	0
+CL:0007005	notochordal cell	29032	2	2	2
+CL:0007006	chordamesodermal cell	29047	1	4	0
+CL:0007007	notochordal sheath cell	29059	1	3	0
+CL:0007008	notochordal vacuole cell	29070	1	3	0
+CL:0007009	prechondroblast	29082	1	3	0
+CL:0007010	preosteoblast	29093	3	6	0
+CL:0007011	enteric neuron	29112	2	10	22
+CL:0007012	non-terminally differentiated odontoblast	29132	2	12	0
+CL:0007013	terminally differentiated odontoblast	29141	1	10	0
+CL:0007016	adaxial cell	29172	1	5	0
+CL:0007017	Stiftchenzellen	29185	1	4	0
+CL:0007018	epidermal ciliary cell	29197	2	4	0
+CL:0007019	epidermal mucus secreting cell	29209	1	4	0
+CL:0007020	bottle cell	29218	1	3	0
+CL:0007021	alarm substance cell	29227	2	3	0
+CL:0007022	micropylar cell	29241	1	4	0
+CL:0007023	flask cell	29252	1	2	0
+CL:0008000	non-striated muscle cell	29262	1	6	65
+CL:0008001	hematopoietic precursor cell	29271	1	2	105
+CL:0008002	skeletal muscle fiber	29281	2	12	19
+CL:0008003	somatic muscle myotube	29299	2	12	1
+CL:0008004	somatic muscle cell	29312	1	6	3
+CL:0008005	obliquely striated somatic muscle cell	29321	3	11	0
+CL:0008006	muscle founder cell	29335	1	7	0
+CL:0008007	visceral muscle cell	29343	1	6	95
+CL:0008008	striated visceral muscle cell	29356	2	8	29
+CL:0008009	transversely striated visceral muscle cell	29367	1	9	28
+CL:0008010	cranial somatomotor neuron	29378	2	13	0
+CL:0008011	skeletal muscle satellite stem cell	29389	2	10	0
+CL:0008012	quiescent skeletal muscle satellite cell	29403	1	7	0
+CL:0008013	cranial visceromotor neuron	29411	3	12	0
+CL:0008015	inhibitory motor neuron	29431	1	9	0
+CL:0008016	activated skeletal muscle satellite cell	29440	1	7	0
+CL:0008017	adult skeletal muscle myoblast	29449	2	8	0
+CL:0008018	somatic muscle myoblast	29464	1	6	2
+CL:0008019	mesenchymal cell	29475	1	2	13
+CL:0008020	skeletal muscle satellite myogenic cell	29491	1	7	0
+CL:0008021	anterior lateral line ganglion neuron	29500	1	9	0
+CL:0008022	endocardial cushion cell	29509	2	14	0
+CL:0008024	pancreatic endocrine cell	29528	2	9	5
+CL:0008025	noradrenergic neuron	29541	2	11	1
+CL:0008026	open tracheal system tracheocyte	29554	1	3	0
+CL:0008027	rod bipolar cell (sensu Mus)	29564	1	14	0
+CL:0008028	visual system neuron	29574	1	7	65
+CL:0008031	cortical interneuron	29606	2	11	54
+CL:0008032	rosehip neuron	29621	2	17	0
+CL:0008033	decidual pericyte	29635	2	10	0
+CL:0008034	mural cell	29651	1	2	17
+CL:0008035	microcirculation associated smooth muscle cell	29665	2	12	3
+CL:0008036	extravillous trophoblast	29680	1	4	1
+CL:0008037	gamma motor neuron	29697	1	13	2
+CL:0008038	alpha motor neuron	29710	1	13	0
+CL:0008039	lower motor neuron	29722	2	12	9
+CL:0008040	squamous endothelial cell of venule	29735	2	7	0
+CL:0008041	mesothelial cell of intestine	29746	1	6	3
+CL:0008042	tanycyte of subfornical organ	29759	1	13	1
+CL:0008044	tanycyte of area postrema	29773	1	13	0
+CL:0008045	tanycyte of subcommissural organ	29787	1	13	0
+CL:0008046	extrafusal muscle fiber	29801	1	13	10
+CL:0008047	intrafusal muscle fiber	29816	2	14	4
+CL:0008048	upper motor neuron	29832	3	11	0
+CL:0008049	Betz cell	29845	2	17	2
+CL:0008053	circumventricular organ capillary endothelial cell	29862	3	11	0
+CL:0008055	respiratory tract secretory epithelial cell	29877	2	7	14
+CL:0008059	GABA-Gly neuron	29890	2	10	8
+CL:0008060	GABA-Glut neuron	29904	2	10	2
+CL:0008061	GABA-Chol neuron	29918	2	10	7
+CL:0009000	sensory neuron of spinal nerve	29932	1	11	0
+CL:0009001	compound eye retinal cell	29944	1	4	0
+CL:0009002	inflammatory cell	29952	1	1	0
+CL:0009003	larval midgut cell	29964	1	2	0
+CL:0009004	retinal cell	29976	1	3	88
+CL:0009005	salivary gland cell	29990	1	2	8
+CL:0009006	enteroendocrine cell of small intestine	30002	2	13	6
+CL:0009007	gastrointestinal tract (lamina propria) macrophage of small intestine	30020	1	21	0
+CL:0009008	gastrointestinal tract (lamina propria) macrophage of large intestine	30035	1	21	0
+CL:0009009	paneth cell of colon	30051	2	16	0
+CL:0009010	transit amplifying cell	30071	2	1	5
+CL:0009011	transit amplifying cell of colon	30088	2	9	0
+CL:0009012	transit amplifying cell of small intestine	30112	2	9	0
+CL:0009013	fetal hepatobiliary progenitor cell	30135	2	4	0
+CL:0009014	Peyer's patch lymphocyte	30150	1	9	2
+CL:0009015	Peyer's patch follicular dendritic cell	30165	1	15	0
+CL:0009016	intestinal crypt stem cell of large intestine	30178	2	11	3
+CL:0009017	intestinal crypt stem cell of small intestine	30197	2	11	0
+CL:0009018	lymphocyte of large intestine lamina propria	30217	1	9	0
+CL:0009019	nephrogenic zone cell	30233	1	4	0
+CL:0009020	tuft cell of appendix	30248	1	10	0
+CL:0009021	stromal cell of lamina propria of large intestine	30264	1	4	3
+CL:0009022	stromal cell of lamina propria of small intestine	30277	1	4	0
+CL:0009023	small intestine Peyer's patch T cell	30291	2	12	0
+CL:0009024	mesothelial cell of small intestine	30307	1	7	0
+CL:0009025	mesothelial cell of colon	30320	1	7	0
+CL:0009026	enterocyte of appendix	30334	2	13	0
+CL:0009027	transit amplifying cell of appendix	30350	2	9	0
+CL:0009028	intestinal crypt stem cell of appendix	30368	1	12	0
+CL:0009029	mesothelial cell of appendix	30386	1	7	0
+CL:0009030	enteroendocrine cell of appendix	30402	2	13	0
+CL:0009031	T cell of appendix	30418	1	10	0
+CL:0009032	B cell of appendix	30435	1	11	0
+CL:0009033	plasma cell of appendix	30452	1	12	0
+CL:0009034	dendritic cell of appendix	30469	1	14	0
+CL:0009035	stromal cell of lamina propria of vermiform appendix	30486	1	5	0
+CL:0009036	appendix macrophage	30502	1	16	0
+CL:0009037	lymph node mantle zone B cell	30519	1	11	0
+CL:0009038	colon macrophage	30535	1	16	0
+CL:0009039	colon goblet cell	30553	2	15	0
+CL:0009040	stromal cell of lamina propria of colon	30570	1	5	0
+CL:0009041	tuft cell of colon	30584	2	11	0
+CL:0009042	enteroendocrine cell of colon	30601	2	13	1
+CL:0009043	intestinal crypt stem cell of colon	30616	1	12	0
+CL:0009044	lymphocyte of small intestine lamina propria	30632	1	9	0
+CL:0009045	B cell of medullary sinus of lymph node	30653	1	11	0
+CL:0009046	T cell of medullary sinus of lymph node	30667	1	10	0
+CL:0009047	macrophage of medullary sinus of lymph node	30681	1	16	0
+CL:0009048	anorectum macrophage	30697	1	16	0
+CL:0009049	smooth muscle cell of high endothelial venule of lymph node	30712	2	14	0
+CL:0009050	B cell of anorectum	30728	1	11	0
+CL:0009051	T cell of anorectum	30742	1	10	0
+CL:0009052	smooth muscle cell of anorectum	30756	1	11	0
+CL:0009053	stromal cell of anorectum lamina propria	30770	1	5	0
+CL:0009054	microfold cell of epithelium proper of anorectum	30784	1	9	0
+CL:0009055	paneth cell of anorectum	30798	2	14	0
+CL:0009056	transit amplifying cell of anorectum	30813	2	9	0
+CL:0009057	anorectum goblet cell	30828	1	14	0
+CL:0009058	enterocyte of anorectum	30842	1	12	0
+CL:0009059	plasma cell of medullary sinus of lymph node	30856	1	12	0
+CL:0009060	marginal zone B cell of lymph node	30873	1	15	0
+CL:0009061	intestinal crypt stem cell of anorectum	30888	1	12	0
+CL:0009062	germinal center T cell	30902	1	20	0
+CL:0009063	enteroendocrine cell of anorectum	30919	2	12	0
+CL:0009064	lymph node paracortex T cell	30934	1	10	0
+CL:0009065	tuft cell of anorectum	30950	1	10	0
+CL:0009066	stratified squamous epithelial cell of anal canal	30964	2	10	0
+CL:0009067	vacuolated fetal-type enterocyte	30980	2	11	0
+CL:0009068	CD8aa(I) thymocyte	30994	1	12	0
+CL:0009069	CD8aa(II) thymocyte	31008	1	12	0
+CL:0009070	corticomedullary thymic epithelial cell	31021	1	5	0
+CL:0009071	medullary thymic epithelial cell type 1	31036	1	6	0
+CL:0009072	medullary thymic epithelial cell type 2	31050	1	6	0
+CL:0009073	medullary thymic epithelial cell type 3	31064	1	6	0
+CL:0009074	medullary thymic epithelial cell type 4	31082	1	6	0
+CL:0009075	myo-medullary thymic epithelial cell	31096	1	6	0
+CL:0009076	neuro-medullary thymic epithelial cell	31110	1	6	0
+CL:0009077	subcapsular thymic epithelial cell	31124	1	6	0
+CL:0009078	thymic fibroblast type 1	31138	2	6	0
+CL:0009079	thymic fibroblast type 2	31154	2	6	0
+CL:0009080	tuft cell of small intestine	31170	2	9	0
+CL:0009081	specified double negative thymocyte (Homo sapiens)	31191	1	13	0
+CL:0009082	committed double negative thymocyte (Homo sapiens)	31204	1	13	0
+CL:0009083	rearranging double negative thymocyte (Homo sapiens)	31217	1	13	0
+CL:0009084	glandular epithelial cell of endometrium	31230	1	5	2
+CL:0009085	colony forming unit – Hill cell	31248	1	10	0
+CL:0009086	endothelial cell of respiratory system lymphatic vessel	31259	1	5	0
+CL:0009087	fused extravillous trophoblast	31276	1	5	0
+CL:0009088	circulating angiogenic cell	31288	1	10	0
+CL:0009089	lung pericyte	31298	1	8	0
+CL:0009090	endothelial colony forming cell	31321	1	10	0
+CL:0009091	Leydig stem cell	31333	2	5	0
+CL:0009092	endothelial cell of placenta	31346	1	3	1
+CL:0009093	smooth muscle cell of placenta	31363	1	9	0
+CL:0009094	endothelial cell of hepatic portal vein	31379	1	6	0
+CL:0009095	endothelial cell of uterus	31395	1	3	1
+CL:0009096	esophagus non-keratinized squamous epithelial cell	31414	2	10	0
+CL:0009097	embryonic skeletal muscle fiber	31437	1	13	0
+CL:0009098	fetal and neonatal skeletal muscle fiber	31450	1	13	0
+CL:0009099	fibro/adipogenic progenitor cell	31465	2	5	0
+CL:0009100	hepatic portal fibroblast	31478	1	5	0
+CL:0009101	fibroblastic reticular cell	31494	2	8	6
+CL:0009102	lymph node fibroblastic reticular cell	31508	1	9	4
+CL:0009103	lymph node marginal reticular cell	31525	1	10	0
+CL:0009104	B cell zone reticular cell	31541	1	10	0
+CL:0009105	T cell zone reticular cell	31560	1	10	0
+CL:0009106	medullary reticular cell	31577	1	10	0
+CL:0009107	lymphatic endothelial cell of subcapsular sinus ceiling	31596	1	6	0
+CL:0009108	lymphatic endothelial cell of subcapsular sinus floor	31612	1	6	0
+CL:0009109	lymphatic endothelial cell of trabecula	31628	1	6	0
+CL:0009110	lymphatic endothelial cell of medulla ceiling	31644	1	6	0
+CL:0009111	centrocyte	31660	1	16	0
+CL:0009112	centroblast	31676	1	16	0
+CL:0009113	T follicular regulatory cell	31692	1	12	0
+CL:0009114	monocytoid B cell	31708	1	11	0
+CL:0009115	lymph node lymphatic vessel endothelial cell	31722	1	5	4
+CL:0009116	progenitor cell of mammary luminal epithelium	31739	2	4	0
+CL:0010000	keratinized cell of hair follicle	31753	1	14	0
+CL:0010001	stromal cell of bone marrow	31763	2	6	1
+CL:0010002	epithelial cell of umbilical artery	31777	1	3	0
+CL:0010004	mononuclear cell of bone marrow	31802	2	11	1
+CL:0010005	atrioventricular bundle cell	31815	1	4	9
+CL:0010006	cardiac blood vessel endothelial cell	31827	2	7	1
+CL:0010007	His-Purkinje system cell	31841	1	3	10
+CL:0010008	cardiac endothelial cell	31852	2	4	4
+CL:0010009	camera-type eye photoreceptor cell	31868	3	15	8
+CL:0010010	cerebellar stellate cell	31883	2	18	0
+CL:0010011	cerebral cortex GABAergic interneuron	31897	2	16	52
+CL:0010012	cerebral cortex neuron	31911	1	9	116
+CL:0010013	type I pinealocyte	31934	1	12	0
+CL:0010014	type II pinealocyte	31942	1	12	0
+CL:0010015	coronet cell	31950	1	3	0
+CL:0010016	collar cell	31959	1	3	0
+CL:0010017	zygote	31967	1	1	1
+CL:0010020	cardiac glial cell	31978	2	6	0
+CL:0010021	cardiac myoblast	31990	1	6	2
+CL:0010022	cardiac neuron	32002	2	8	1
+CL:0011000	dorsal horn interneuron	32019	2	11	0
+CL:0011001	spinal cord motor neuron	32031	2	10	7
+CL:0011002	lateral motor column neuron	32044	1	11	0
+CL:0011003	magnocellular neurosecretory cell	32053	2	18	2
+CL:0011004	lens fiber cell	32066	1	6	4
+CL:0011005	GABAergic interneuron	32080	2	12	107
+CL:0011006	Lugaro cell	32098	2	18	1
+CL:0011007	paraxial cell	32110	1	4	0
+CL:0011008	embryonic hemocyte	32125	1	6	2
+CL:0011009	embryonic plasmatocyte	32131	2	8	0
+CL:0011010	lateral mesodermal cell	32138	1	4	1
+CL:0011011	intermediate mesodermal cell	32147	1	4	0
+CL:0011012	neural crest cell	32156	2	5	9
+CL:0011013	motile sperm cell	32169	2	10	2
+CL:0011014	non-motile sperm cell	32182	1	9	0
+CL:0011015	amoeboid sperm cell	32191	1	11	0
+CL:0011016	flagellated sperm cell	32200	1	11	0
+CL:0011017	vagal neural crest cell	32212	1	6	0
+CL:0011018	lymphoid tissue–inducer cell	32221	1	11	0
+CL:0011019	mesothelial cell of epicardium	32233	2	7	0
+CL:0011020	neural progenitor cell	32247	2	4	1
+CL:0011021	fibroblast of upper back skin	32259	1	7	0
+CL:0011022	fibroblast of skin of back	32271	1	6	1
+CL:0011023	CD25+ mast cell	32283	1	3	0
+CL:0011024	double negative T regulatory cell	32299	1	13	0
+CL:0011025	exhausted T cell	32317	1	12	4
+CL:0011026	progenitor cell	32330	2	2	201
+CL:0011027	skeletal muscle fibroblast	32347	2	7	0
+CL:0011028	olfactory ensheathing cell	32363	1	5	5
+CL:0011029	cnidocyte	32375	2	3	0
+CL:0011030	dermal microvascular endothelial cell	32387	2	7	1
+CL:0011031	monocyte-derived dendritic cell	32401	1	18	0
+CL:0011032	lysosome-rich enterocyte	32414	1	10	0
+CL:0011100	galanergic neuron	32427	1	7	0
+CL:0011101	chorionic trophoblast cell	32435	1	4	1
+CL:0011102	parasympathetic neuron	32449	1	9	16
+CL:0011103	sympathetic neuron	32459	1	9	41
+CL:0011104	interplexiform cell	32472	2	14	2
+CL:0011105	dopamanergic interplexiform cell	32484	2	17	0
+CL:0011106	GABAnergic interplexiform cell	32496	3	19	0
+CL:0011108	colon epithelial cell	32519	1	7	9
+CL:0011109	hypocretin-secreting neuron	32532	2	8	0
+CL:0011110	histaminergic neuron	32546	2	10	0
+CL:0011111	hypothalamic gonadotropin-releasing hormone neuron	32559	2	18	1
+CL:0011113	spiral ganglion neuron	32579	2	8	2
+CL:0011114	segmented neutrophil of bone marrow	32592	2	17	0
+CL:0011115	precursor cell	32601	1	1	281
+CL:0012000	astrocyte of the forebrain	32617	2	8	7
+CL:0012001	neuron of the forebrain	32632	1	8	193
+CL:0013000	forebrain radial glial cell	32648	1	6	0
+CL:0015000	cranial motor neuron	32662	1	9	3
+CL:0017000	pulmonary ionocyte	32674	2	8	0
+CL:0017001	splanchnic mesodermal cell	32693	1	5	0
+CL:0017002	prostate neuroendocrine cell	32704	2	17	0
+CL:0017003	epithelial cell of prostatic urethra	32721	1	6	1
+CL:0017004	telocyte	32733	1	3	0
+CL:0017005	lymphoblast	32749	1	9	1
+CL:0017006	B-lymphoblast	32764	2	11	0
+CL:0017009	Axl+ dendritic cell, human	32778	1	15	0
+CL:0017010	hillock cell of urethral epithelium	32791	2	7	1
+CL:0017011	hillock cell of prostatic urethral epithelium	32805	2	9	0
+CL:0017500	neutrophillic cytoplasm	32819	1	0	0
+CL:0017502	acidophilic cytoplasm	32841	1	0	0
+CL:0017503	basophilic cytoplasm	32854	1	0	0
+CL:0017504	polychromatophilic cytoplasm	32866	1	0	0
+CL:0017506	banded nucleus	32889	1	0	0
+CL:0017507	reniform nucleus	32897	1	0	0
+CL:0017508	cartwheel heterochromatin	32908	1	0	0
+CL:0017509	alobate nucleus	32916	1	0	0
+CL:0019001	tracheobronchial serous cell	32925	2	5	5
+CL:0019002	tracheobronchial chondrocyte	32944	1	11	0
+CL:0019003	tracheobronchial goblet cell	32960	2	14	3
+CL:0019015	lung parenchyma resident eosinophil	32979	1	13	0
+CL:0019017	lymphatic vessel smooth muscle cell	32995	1	11	0
+CL:0019018	blood vessel smooth muscle cell	33010	1	11	19
+CL:0019019	tracheobronchial smooth muscle cell	33026	1	9	3
+CL:0019020	extrahepatic cholangiocyte	33047	1	6	0
+CL:0019021	endothelial cell of periportal hepatic sinusoid	33061	1	8	0
+CL:0019022	endothelial cell of pericentral hepatic sinusoid	33078	1	8	0
+CL:0019026	periportal region hepatocyte	33095	1	6	0
+CL:0019028	midzonal region hepatocyte	33113	1	6	0
+CL:0019029	centrilobular region hepatocyte	33129	1	6	0
+CL:0019031	intestine goblet cell	33147	2	11	10
+CL:0019032	intestinal tuft cell	33163	2	7	5
+CL:0020000	gut mesenchymal lymphoid tissue organizer cell	33183	3	9	0
+CL:0020001	V1delta gamma-delta T cell	33196	1	13	0
+CL:0020002	mucosal-associated invariant T cell, human	33208	2	15	0
+CL:0020003	internal globus pallidus core projecting neuron	33229	3	11	1
+CL:0020004	internal globus pallidus shell projection neuron	33246	3	11	1
+CL:0020005	spiral ligament fibrocyte	33262	1	5	5
+CL:0020006	OB-Dopa-GABA	33276	3	14	1
+CL:0020007	dorso-striatal cholinergic-GABAergic neuron	33288	3	17	1
+CL:0020008	striatal cholinergic-GABAergic neuron	33302	3	17	1
+CL:0020009	prototypic neuron	33317	3	11	1
+CL:0020010	arkypallidal neuron	33335	3	12	1
+CL:0020011	hair follicle associated fibroblast	33350	2	7	2
+CL:0020012	hair follicle isthmus-associated fibroblast	33363	1	8	0
+CL:0020013	dermal sheath fibroblast	33375	1	8	0
+CL:0020014	intrinsically photosensitive retinal ganglion cell	33389	2	12	0
+CL:0020015	transitional principal-intercalated cell of kidney collecting duct	33404	1	11	0
+CL:0020016	osteochondral skeletal stem cell	33417	2	4	0
+CL:0020017	M0 macrophage	33433	1	16	0
+CL:0020018	proliferative fibrochondrocyte	33445	1	12	0
+CL:0020019	regulatory chondrocyte	33460	1	11	0
+CL:0020020	homeostatic chondrocyte	33471	1	11	0
+CL:0020021	fibrochondrocyte progenitor cell	33484	3	7	0
+CL:0020022	prehypertrophic chondrocyte	33499	1	11	0
+CL:0020023	effector chondrocyte	33511	1	11	0
+CL:0020024	alpha retinal ganglion cell OFF-sustained (Mmus)	33524	2	10	0
+CL:0020025	alpha retinal ganglion cell ON-sustained (Mmus)	33539	2	10	0
+CL:0020026	alpha retinal ganglion cell OFF-transient (Mmus)	33554	2	10	0
+CL:0020027	alpha retinal ganglion cell ON-transient (Mmus)	33568	2	10	0
+CL:0020028	hybrid osteochondral skeletal cell	33584	2	4	0
+CL:0020029	cuboidal epithelial cell	33598	1	4	7
+CL:0020030	CD4-positive exhausted alpha-beta T cell	33612	2	16	2
+CL:0020031	CD8-positive exhausted alpha-beta T cell	33632	2	16	0
+CL:0020032	oRGC2	33652	1	8	0
+CL:0020033	stem cell memory CD4-positive, alpha-beta T cell	33662	1	16	0
+CL:0020034	stem cell memory CD8-positive, alpha-beta T cell	33683	1	16	0
+CL:0020035	intestinal intraepithelial lymphocyte	33704	1	12	11
+CL:0020036	oRGC1	33720	1	8	0
+CL:0020037	superficial zone articular chondrocyte	33731	1	12	0
+CL:0020038	middle zone articular chondrocyte	33742	1	12	0
+CL:0020039	deep zone articular chondrocyte	33753	1	12	0
+CL:0020040	calcified zone articular chondrocyte	33765	1	12	0
+CL:0020041	oRGC4	33776	1	8	0
+CL:0020042	oRGC5	33786	1	8	0
+CL:0020043	fasciacyte	33797	1	4	0
+CL:0020044	migratory muscle precursor	33812	1	5	0
+CL:0020045	Dogiel type II neuron	33824	1	11	1
+CL:0020046	intrinsic primary afferent neuron of myenteric plexus	33839	2	14	3
+CL:0020047	interneuron of myenteric plexus	33855	1	11	2
+CL:0020048	secretomotor/vasodilator neuron of myenteric plexus	33868	1	11	0
+CL:0020049	intestinofugal neuron	33882	1	11	0
+CL:0020050	ascending interneuron of myenteric plexus	33897	1	12	0
+CL:0020051	descending interneuron of myenteric plexus	33910	1	12	0
+CL:0020052	stubby Dogiel type I neuron of myenteric plexus	33922	2	16	0
+CL:0020053	spiny Dogiel type I neuron of myenteric plexus	33936	1	14	0
+CL:0020054	Dogiel type II neuron of myenteric plexus	33948	2	16	0
+CL:0020055	calretinin-positive intrinsic primary afferent neuron of myenteric plexus	33963	1	15	0
+CL:0020056	calretinin-negative intrinsic primary afferent neuron of myenteric plexus	33976	1	15	0
+CL:0020057	cholinergic neuron of myenteric plexus	33989	2	13	1
+CL:0020058	nitrergic neuron of myenteric plexus	34006	1	11	0
+CL:0020059	serous demilune cell of salivary gland	34024	2	6	1
+CL:0020060	basal duct cell of salivary gland	34045	1	7	0
+CL:0020061	periductal fibroblast of salivary gland	34058	1	5	0
+CL:0020062	junctional epithelial cell	34072	3	7	0
+CL:0020063	tuft cell of parotid gland	34091	1	4	0
+CL:0020064	tuft cell of sublingual gland	34107	2	6	0
+CL:0020065	ionocyte of salivary gland	34124	1	4	0
+CL:0020066	myoepithelial cell of salivary gland	34139	1	6	0
+CL:0020067	entorhinal cortex layer II stellate cell	34157	4	13	0
+CL:0020068	CA3 pyramidal cell	34177	2	16	0
+CL:0020069	hilar mossy cell	34191	2	14	0
+CL:0020070	CA2 pyramidal cell	34206	2	16	0
+CL:0020071	parvalbumin-positive basket cell	34222	3	20	0
+CL:0020072	CA1 pyramidal cell	34238	2	16	0
+CL:0020073	AVPV/PeN kisspeptin neuron, mouse	34254	3	15	0
+CL:0020074	Oriens-Lacunosum Moleculare neuron	34278	2	19	0
+CL:1000001	retrotrapezoid nucleus neuron	34304	2	8	0
+CL:1000022	mesonephric nephron tubule epithelial cell	34316	2	7	0
+CL:1000042	forebrain neuroblast	34329	2	6	0
+CL:1000050	lateral line nerve glial cell	34342	1	5	2
+CL:1000073	spinal cord radial glial cell	34351	1	6	0
+CL:1000082	stretch receptor cell	34363	1	11	1
+CL:1000083	stratified keratinized epithelial stem cell	34371	1	7	0
+CL:1000085	stratified non keratinized epithelial stem cell	34379	1	7	0
+CL:1000090	pronephric nephron tubule epithelial cell	34386	2	7	0
+CL:1000123	metanephric nephron tubule epithelial cell	34398	2	7	0
+CL:1000143	lung goblet cell	34411	3	15	1
+CL:1000147	cardiac valve cell	34426	1	3	2
+CL:1000155	Malpighian tubule stellate cell	34440	2	3	0
+CL:1000182	malpighian tubule tip cell	34450	2	4	0
+CL:1000191	pillar cell	34460	1	14	2
+CL:1000217	growth plate cartilage chondrocyte	34473	1	11	0
+CL:1000222	stomach neuroendocrine cell	34484	2	21	2
+CL:1000223	pulmonary neuroendocrine cell	34498	6	25	1
+CL:1000236	posterior lateral line nerve glial cell	34524	1	6	0
+CL:1000239	anterior lateral line nerve glial cell	34533	1	6	0
+CL:1000245	posterior lateral line ganglion neuron	34542	1	9	0
+CL:1000271	lung multiciliated epithelial cell	34551	2	12	0
+CL:1000272	lung secretory cell	34567	2	3	7
+CL:1000274	trophectodermal cell	34580	1	3	0
+CL:1000275	smooth muscle cell of small intestine	34593	1	10	3
+CL:1000276	smooth muscle fiber of duodenum	34610	1	11	0
+CL:1000277	smooth muscle fiber of jejunum	34624	1	11	0
+CL:1000278	smooth muscle fiber of ileum	34637	1	11	0
+CL:1000279	smooth muscle cell of large intestine	34654	1	10	11
+CL:1000280	smooth muscle cell of colon	34669	1	11	5
+CL:1000281	smooth muscle cell of cecum	34683	1	12	0
+CL:1000282	smooth muscle fiber of ascending colon	34697	1	12	0
+CL:1000283	smooth muscle fiber of transverse colon	34710	1	12	0
+CL:1000284	smooth muscle fiber of descending colon	34723	1	12	0
+CL:1000285	smooth muscle cell of sigmoid colon	34736	1	12	0
+CL:1000286	smooth muscle cell of rectum	34749	1	11	0
+CL:1000287	myocyte of anterior internodal tract	34764	1	14	0
+CL:1000288	myocyte of atrial branch of anterior internodal tract	34774	1	14	0
+CL:1000289	myocyte of atrial septal branch of anterior internodal tract	34783	1	14	0
+CL:1000290	myocyte of middle internodal tract	34792	1	14	0
+CL:1000291	myocyte of posterior internodal tract	34802	1	14	0
+CL:1000296	epithelial cell of urethra	34812	2	5	6
+CL:1000298	mesothelial cell of dura mater	34827	2	7	0
+CL:1000299	fibroblast of connective tissue of prostate	34842	2	6	0
+CL:1000300	fibroblast of outer membrane of prostatic capsule	34857	2	6	0
+CL:1000301	fibroblast of subepithelial connective tissue of prostatic gland	34867	2	6	0
+CL:1000302	fibroblast of papillary layer of dermis	34879	1	7	2
+CL:1000303	fibroblast of areolar connective tissue	34891	1	5	0
+CL:1000304	fibroblast of connective tissue of nonglandular part of prostate	34903	2	6	0
+CL:1000305	fibroblast of connective tissue of glandular part of prostate	34916	2	6	0
+CL:1000306	fibroblast of tunica adventitia of artery	34929	1	9	1
+CL:1000307	fibroblast of dense regular elastic tissue	34941	1	5	1
+CL:1000308	fibrocyte of adventitia of ureter	34954	2	9	0
+CL:1000309	epicardial adipocyte	34966	2	6	2
+CL:1000310	adipocyte of epicardial fat of right ventricle	34983	1	7	0
+CL:1000311	adipocyte of epicardial fat of left ventricle	34997	1	7	0
+CL:1000312	bronchial goblet cell	35014	2	16	1
+CL:1000313	gastric goblet cell	35033	2	12	3
+CL:1000314	gastric cardiac gland goblet cell	35046	3	16	0
+CL:1000315	principal gastric gland goblet cell	35060	3	16	0
+CL:1000317	intestinal villus goblet cell	35083	1	15	3
+CL:1000320	large intestine goblet cell	35111	2	13	4
+CL:1000321	large intestine crypt goblet cell	35127	2	16	0
+CL:1000322	pancreatic goblet cell	35142	3	16	0
+CL:1000323	pyloric gastric gland goblet cell	35159	3	16	0
+CL:1000324	duodenal goblet cell	35173	2	17	0
+CL:1000325	jejunal goblet cell	35188	1	16	0
+CL:1000326	ileal goblet cell	35202	1	16	0
+CL:1000327	appendix goblet cell	35219	2	15	0
+CL:1000329	tracheal goblet cell	35239	2	16	0
+CL:1000330	serous cell of epithelium of trachea	35257	1	6	0
+CL:1000331	serous cell of epithelium of bronchus	35273	1	6	0
+CL:1000332	serous cell of epithelium of terminal bronchiole	35289	2	7	0
+CL:1000333	serous cell of epithelium of lobular bronchiole	35302	2	7	0
+CL:1000334	enterocyte of epithelium of small intestine	35316	2	11	9
+CL:1000335	enterocyte of epithelium of intestinal villus	35333	1	12	1
+CL:1000337	enterocyte of epithelium of duodenal gland	35345	1	12	0
+CL:1000338	enterocyte of epithelium of crypt of Lieberkuhn of small intestine	35357	1	12	0
+CL:1000339	enterocyte of epithelium proper of small intestine	35367	1	12	3
+CL:1000340	enterocyte of epithelium proper of duodenum	35377	1	13	0
+CL:1000341	enterocyte of epithelium proper of jejunum	35388	1	13	0
+CL:1000342	enterocyte of epithelium proper of ileum	35398	1	13	0
+CL:1000343	paneth cell of epithelium of small intestine	35410	2	14	2
+CL:1000344	paneth cell of epithelium proper of small intestine	35426	1	15	0
+CL:1000345	paneth cell of epithelium of crypt of Lieberkuhn of small intestine	35436	1	15	0
+CL:1000346	enterocyte of epithelium proper of large intestine	35445	1	12	0
+CL:1000347	colonocyte	35457	2	13	2
+CL:1000348	basal cell of epithelium of trachea	35476	1	8	0
+CL:1000349	basal cell of epithelium of bronchus	35492	3	15	0
+CL:1000350	basal cell of epithelium of terminal bronchiole	35511	1	8	0
+CL:1000351	basal cell of epithelium of respiratory bronchiole	35524	1	8	0
+CL:1000352	basal cell of epithelium of lobular bronchiole	35537	1	8	0
+CL:1000353	microfold cell of epithelium of small intestine	35551	2	8	5
+CL:1000354	microfold cell of epithelium of intestinal villus	35567	1	9	1
+CL:1000355	microfold cell of epithelium proper of small intestine	35579	1	9	0
+CL:1000356	microfold cell of epithelium proper of duodenum	35588	1	10	0
+CL:1000357	microfold cell of epithelium proper of jejunum	35600	1	9	0
+CL:1000358	microfold cell of epithelium proper of ileum	35612	1	9	0
+CL:1000359	microfold cell of epithelium proper of appendix	35624	2	10	0
+CL:1000360	microfold cell of epithelium proper of large intestine	35636	2	8	2
+CL:1000361	transitional myocyte of interatrial septum	35648	2	12	0
+CL:1000362	transitional myocyte of interventricular septum	35661	2	12	0
+CL:1000363	transitional myocyte of atrial branch of anterior internodal tract	35674	1	16	0
+CL:1000364	transitional myocyte of anterior internodal tract	35683	1	16	0
+CL:1000365	transitional myocyte of atrial septal branch of anterior internodal tract	35692	1	16	0
+CL:1000366	transitional myocyte of middle internodal tract	35701	1	16	0
+CL:1000367	transitional myocyte of posterior internodal tract	35710	1	16	0
+CL:1000368	transitional myocyte of anterior division of left branch of atrioventricular bundle	35719	1	19	0
+CL:1000369	transitional myocyte of septal division of left branch of atrioventricular bundle	35728	1	19	0
+CL:1000370	transitional myocyte of left branch of atrioventricular bundle	35737	1	18	3
+CL:1000371	transitional myocyte of right branch of atrioventricular bundle	35749	1	18	0
+CL:1000372	transitional myocyte of atrial part of atrioventricular bundle	35761	1	18	0
+CL:1000373	transitional myocyte of ventricular part of atrioventricular bundle	35770	1	18	0
+CL:1000374	transitional myocyte of posterior division of left branch of atrioventricular bundle	35779	1	19	0
+CL:1000375	myocardial endocrine cell of septal division of left branch of atrioventricular bundle	35788	3	17	0
+CL:1000376	Purkinje myocyte of interventricular septum	35800	2	12	0
+CL:1000377	dense-core granulated cell of epithelium of trachea	35813	3	23	0
+CL:1000378	type 1 vestibular sensory cell of stato-acoustic epithelium	35827	2	19	0
+CL:1000379	type 1 vestibular sensory cell of epithelium of macula of utricle of membranous labyrinth	35840	2	19	0
+CL:1000380	type 1 vestibular sensory cell of epithelium of macula of saccule of membranous labyrinth	35853	2	19	0
+CL:1000381	type 1 vestibular sensory cell of epithelium of crista of ampulla of semicircular duct of membranous labyrinth	35867	2	19	0
+CL:1000382	type 2 vestibular sensory cell of stato-acoustic epithelium	35880	2	19	0
+CL:1000383	type 2 vestibular sensory cell of epithelium of macula of utricle of membranous labyrinth	35893	2	19	0
+CL:1000384	type 2 vestibular sensory cell of epithelium of macula of saccule of membranous labyrinth	35906	2	19	0
+CL:1000385	type 2 vestibular sensory cell of epithelium of crista of ampulla of semicircular duct of membranous labyrinth	35920	2	19	0
+CL:1000391	melanocyte of eyelid	35933	1	5	0
+CL:1000394	myoepithelial cell of intralobular lactiferous duct	35947	1	6	0
+CL:1000397	endothelial cell of venous sinus of red pulp of spleen	35956	2	8	0
+CL:1000398	endothelial cell of hepatic sinusoid	35970	2	7	2
+CL:1000405	epithelial cell of appendix	35992	1	7	6
+CL:1000409	myocyte of sinoatrial node	36006	2	14	2
+CL:1000410	myocyte of atrioventricular node	36025	3	15	1
+CL:1000411	endothelial cell of Peyer's patch	36044	1	4	0
+CL:1000412	endothelial cell of arteriole	36056	1	5	3
+CL:1000413	endothelial cell of artery	36071	1	5	8
+CL:1000414	endothelial cell of venule	36091	1	5	3
+CL:1000415	epithelial cell of gallbladder	36105	1	3	1
+CL:1000417	myoepithelial cell of sweat gland	36125	2	11	0
+CL:1000418	myoepithelial cell of lactiferous alveolus	36139	1	8	0
+CL:1000419	myoepithelial cell of lactiferous duct	36153	2	9	0
+CL:1000420	myoepithelial cell of terminal lactiferous duct	36166	1	6	0
+CL:1000424	chromaffin cell of paraaortic body	36175	1	20	0
+CL:1000425	chromaffin cell of paraganglion	36188	1	19	1
+CL:1000426	chromaffin cell of adrenal gland	36200	2	20	4
+CL:1000427	adrenal cortex chromaffin cell	36214	2	22	0
+CL:1000428	stem cell of epidermis	36228	2	5	2
+CL:1000432	conjunctival epithelial cell	36246	1	3	1
+CL:1000433	epithelial cell of lacrimal canaliculus	36263	1	3	0
+CL:1000434	epithelial cell of external acoustic meatus	36275	1	3	0
+CL:1000435	epithelial cell of lacrimal drainage system	36287	1	6	2
+CL:1000436	epithelial cell of lacrimal sac	36300	1	8	0
+CL:1000437	epithelial cell of nasolacrimal duct	36314	1	7	1
+CL:1000438	epithelial cell of wall of inferior part of anal canal	36326	1	8	1
+CL:1000441	epithelial cell of viscerocranial mucosa	36335	1	3	1
+CL:1000442	urothelial cell of trigone of urinary bladder	36344	1	9	0
+CL:1000443	ciliary muscle cell	36354	1	9	0
+CL:1000444	mesothelial cell of anterior chamber of eye	36371	1	6	0
+CL:1000445	myoepithelial cell of dilator pupillae	36383	1	6	0
+CL:1000447	epithelial cell of stratum germinativum of esophagus	36395	1	7	0
+CL:1000448	epithelial cell of sweat gland	36411	2	7	3
+CL:1000449	epithelial cell of nephron	36427	1	5	66
+CL:1000450	epithelial cell of glomerular capsule	36442	1	11	5
+CL:1000452	parietal epithelial cell	36465	1	12	0
+CL:1000453	epithelial cell of intermediate tubule	36483	1	9	4
+CL:1000454	kidney collecting duct epithelial cell	36495	3	10	17
+CL:1000456	mesothelial cell of parietal peritoneum	36515	1	7	0
+CL:1000457	mesothelial cell of visceral peritoneum	36527	1	7	0
+CL:1000458	melanocyte of skin	36540	1	5	5
+CL:1000465	chromaffin cell of ovary	36559	1	19	2
+CL:1000466	chromaffin cell of right ovary	36571	1	20	0
+CL:1000467	chromaffin cell of left ovary	36583	1	20	0
+CL:1000468	myoepithelial cell of acinus of lactiferous gland	36595	1	8	0
+CL:1000469	myoepithelial cell of main lactiferous duct	36606	1	6	0
+CL:1000470	myoepithelial cell of primary lactiferous duct	36615	1	6	0
+CL:1000471	myoepithelial cell of secondary lactiferous duct	36624	1	6	0
+CL:1000472	myoepithelial cell of tertiary lactiferous duct	36633	1	6	0
+CL:1000473	myoepithelial cell of quarternary lactiferous duct	36642	1	6	0
+CL:1000477	cardiac pacemaker cell of sinoatrial node	36651	1	15	0
+CL:1000478	transitional myocyte of sinoatrial node	36664	2	16	0
+CL:1000479	Purkinje myocyte of atrioventricular node	36677	2	17	0
+CL:1000480	transitional myocyte of internodal tract	36689	2	15	5
+CL:1000481	transitional myocyte of atrioventricular bundle	36701	4	17	7
+CL:1000482	myocardial endocrine cell of interventricular septum	36715	2	14	0
+CL:1000483	Purkinje myocyte of internodal tract	36728	2	15	0
+CL:1000484	Purkinje myocyte of atrioventricular bundle	36740	4	17	0
+CL:1000486	basal cell of urothelium	36754	3	12	0
+CL:1000487	smooth muscle cell of prostate	36771	1	9	0
+CL:1000488	cholangiocyte	36789	2	5	3
+CL:1000489	reticular cell of splenic cord	36809	2	7	0
+CL:1000490	mesothelial cell of peritoneum	36824	1	6	2
+CL:1000491	mesothelial cell of pleura	36837	1	6	2
+CL:1000492	mesothelial cell of parietal pleura	36853	1	7	0
+CL:1000493	mesothelial cell of visceral pleura	36865	1	7	0
+CL:1000494	nephron tubule epithelial cell	36881	2	7	30
+CL:1000495	small intestine goblet cell	36898	2	14	4
+CL:1000497	kidney cell	36916	1	2	147
+CL:1000500	kidney interstitial cell	36930	2	4	19
+CL:1000504	kidney medulla cell	36948	1	3	64
+CL:1000505	kidney pelvis cell	36961	1	3	3
+CL:1000507	kidney tubule cell	36974	1	3	35
+CL:1000510	kidney glomerular epithelial cell	36988	1	10	6
+CL:1000546	kidney medulla collecting duct epithelial cell	37001	2	12	6
+CL:1000547	kidney inner medulla collecting duct epithelial cell	37015	2	14	2
+CL:1000548	kidney outer medulla collecting duct epithelial cell	37029	2	14	2
+CL:1000549	kidney cortex collecting duct epithelial cell	37042	2	13	3
+CL:1000550	kidney papillary duct principal epithelial cell	37056	1	4	2
+CL:1000596	inner renal cortex cell	37069	1	4	0
+CL:1000597	papillary tips cell	37081	2	6	0
+CL:1000600	lower urinary tract cell	37096	1	2	14
+CL:1000601	ureteral cell	37108	1	2	4
+CL:1000606	kidney nerve cell	37120	3	11	0
+CL:1000612	kidney corpuscule cell	37134	2	8	9
+CL:1000615	kidney cortex tubule cell	37150	3	9	23
+CL:1000616	kidney outer medulla cell	37165	1	4	15
+CL:1000617	kidney inner medulla cell	37177	1	4	9
+CL:1000618	juxtaglomerular complex cell	37189	1	4	3
+CL:1000681	kidney cortex interstitial cell	37205	2	9	1
+CL:1000682	kidney medulla interstitial cell	37218	2	6	3
+CL:1000691	kidney interstitial myofibroblast	37231	2	8	0
+CL:1000692	kidney interstitial fibroblast	37241	2	8	2
+CL:1000693	kidney interstitial fibrocyte	37257	2	7	0
+CL:1000695	kidney interstitial alternatively activated macrophage	37269	2	21	0
+CL:1000696	kidney interstitial inflammatory macrophage	37280	2	21	0
+CL:1000697	kidney interstitial suppressor macrophage	37289	2	21	0
+CL:1000698	kidney resident macrophage	37298	2	20	0
+CL:1000699	kidney resident dendritic cell	37311	2	20	0
+CL:1000702	kidney pelvis smooth muscle cell	37321	2	11	0
+CL:1000703	kidney pelvis urothelial cell	37334	3	9	0
+CL:1000706	ureter urothelial cell	37349	2	7	0
+CL:1000708	ureter adventitial cell	37362	3	7	1
+CL:1000714	kidney cortex collecting duct principal cell	37377	2	17	0
+CL:1000715	kidney cortex collecting duct intercalated cell	37392	2	17	1
+CL:1000716	kidney outer medulla collecting duct principal cell	37405	2	18	0
+CL:1000717	kidney outer medulla collecting duct intercalated cell	37420	2	18	0
+CL:1000718	kidney inner medulla collecting duct principal cell	37435	2	18	0
+CL:1000719	kidney inner medulla collecting duct intercalated cell	37450	2	18	0
+CL:1000720	kidney papillary duct intercalated cell	37462	2	15	0
+CL:1000721	kidney papillary duct principal cell	37474	2	15	0
+CL:1000742	glomerular mesangial cell	37486	3	23	0
+CL:1000746	glomerular cell	37504	1	9	8
+CL:1000768	kidney connecting tubule epithelial cell	37518	2	11	4
+CL:1000803	kidney inner medulla interstitial cell	37537	2	8	0
+CL:1000804	kidney outer medulla interstitial cell	37550	2	8	0
+CL:1000838	kidney proximal convoluted tubule epithelial cell	37563	1	16	2
+CL:1000839	kidney proximal straight tubule epithelial cell	37579	3	17	1
+CL:1000849	kidney distal convoluted tubule epithelial cell	37596	1	13	2
+CL:1000850	macula densa epithelial cell	37614	3	16	0
+CL:1000854	kidney blood vessel cell	37638	2	4	30
+CL:1000891	kidney arterial blood vessel cell	37652	1	5	15
+CL:1000892	kidney capillary endothelial cell	37666	2	11	4
+CL:1000893	kidney venous blood vessel cell	37683	1	5	8
+CL:1000909	kidney loop of Henle epithelial cell	37698	1	8	13
+CL:1000979	ureter smooth muscle cell	37711	2	10	0
+CL:1001005	glomerular capillary endothelial cell	37725	2	15	0
+CL:1001006	kidney afferent arteriole cell	37743	2	7	2
+CL:1001009	kidney efferent arteriole cell	37758	2	7	2
+CL:1001016	kidney loop of Henle ascending limb epithelial cell	37773	2	14	4
+CL:1001021	kidney loop of Henle descending limb epithelial cell	37788	1	9	6
+CL:1001033	peritubular capillary endothelial cell	37804	2	13	2
+CL:1001036	vasa recta cell	37820	2	8	8
+CL:1001045	kidney cortex artery cell	37836	2	7	6
+CL:1001052	kidney cortex vein cell	37852	2	7	6
+CL:1001064	kidney artery smooth muscle cell	37865	2	16	2
+CL:1001066	kidney arteriole smooth muscle cell	37875	2	16	2
+CL:1001068	kidney venous system smooth muscle cell	37885	2	16	2
+CL:1001096	kidney afferent arteriole endothelial cell	37895	2	12	0
+CL:1001097	kidney afferent arteriole smooth muscle cell	37912	3	21	0
+CL:1001099	kidney efferent arteriole endothelial cell	37925	2	12	0
+CL:1001100	kidney efferent arteriole smooth muscle cell	37942	3	21	0
+CL:1001106	kidney loop of Henle thick ascending limb epithelial cell	37955	2	16	2
+CL:1001107	kidney loop of Henle thin ascending limb epithelial cell	37972	2	17	0
+CL:1001108	kidney loop of Henle medullary thick ascending limb epithelial cell	37989	2	18	0
+CL:1001109	kidney loop of Henle cortical thick ascending limb epithelial cell	38006	1	17	0
+CL:1001111	kidney loop of Henle thin descending limb epithelial cell	38022	3	13	3
+CL:1001123	kidney outer medulla peritubular capillary cell	38042	2	15	0
+CL:1001124	kidney cortex peritubular capillary cell	38055	2	15	0
+CL:1001126	inner renal medulla vasa recta cell	38068	2	10	2
+CL:1001127	outer renal medulla vasa recta cell	38081	2	10	2
+CL:1001131	vasa recta ascending limb cell	38094	1	9	2
+CL:1001135	arcuate artery cell	38112	1	8	2
+CL:1001138	interlobular artery cell	38124	1	8	2
+CL:1001142	arcuate vein cell	38138	1	8	2
+CL:1001145	interlobular vein cell	38150	1	8	2
+CL:1001209	inner medulla vasa recta ascending limb cell	38162	2	12	0
+CL:1001210	outer medulla vasa recta ascending limb cell	38175	2	12	0
+CL:1001213	arcuate artery endothelial cell	38188	2	13	0
+CL:1001214	arcuate artery smooth muscle cell	38200	2	20	0
+CL:1001216	interlobulary artery endothelial cell	38212	2	13	0
+CL:1001217	interlobulary artery smooth muscle cell	38224	2	20	0
+CL:1001220	arcuate vein endothelial cell	38236	2	13	0
+CL:1001221	arcuate vein smooth muscle cell	38248	2	20	0
+CL:1001223	interlobulary vein endothelial cell	38260	2	13	0
+CL:1001224	interlobulary vein smooth muscle cell	38272	2	20	0
+CL:1001225	kidney collecting duct cell	38284	1	3	19
+CL:1001285	vasa recta descending limb cell	38298	1	9	2
+CL:1001286	inner medulla vasa recta descending limb cell	38316	2	12	0
+CL:1001287	outer medulla vasa recta descending limb cell	38329	2	12	0
+CL:1001318	renal interstitial pericyte	38342	2	11	3
+CL:1001319	bladder cell	38356	1	3	4
+CL:1001320	urethra cell	38370	1	3	8
+CL:1001428	bladder urothelial cell	38382	2	8	1
+CL:1001430	urethra urothelial cell	38402	2	9	0
+CL:1001431	kidney collecting duct principal cell	38418	2	13	4
+CL:1001432	kidney collecting duct intercalated cell	38434	2	13	6
+CL:1001433	epithelial cell of exocrine pancreas	38451	1	5	6
+CL:1001434	olfactory bulb interneuron	38468	2	11	4
+CL:1001435	periglomerular cell	38482	1	12	0
+CL:1001436	hair-tylotrich neuron	38498	1	11	0
+CL:1001437	hair-down neuron	38506	1	11	0
+CL:1001451	sensory neuron of dorsal root ganglion	38514	3	14	46
+CL:1001474	medium spiny neuron	38530	2	11	25
+CL:1001502	mitral cell	38550	1	12	0
+CL:1001503	olfactory bulb tufted cell	38560	1	8	0
+CL:1001505	parvocellular neurosecretory cell	38570	4	20	0
+CL:1001509	glycinergic neuron	38585	2	8	16
+CL:1001516	intestinal enteroendocrine cell	38602	2	10	16
+CL:1001517	stomach enteroendocrine cell	38617	2	10	4
+CL:1001561	vomeronasal sensory neuron	38628	2	9	0
+CL:1001567	lung endothelial cell	38651	1	4	4
+CL:1001568	pulmonary artery endothelial cell	38665	1	6	0
+CL:1001569	hippocampal interneuron	38680	2	13	4
+CL:1001571	hippocampal pyramidal neuron	38693	2	13	3
+CL:1001572	colon endothelial cell	38710	1	4	0
+CL:1001573	nasopharyngeal epithelial cell	38725	2	7	0
+CL:1001575	uterine cervix squamous cell	38739	2	7	1
+CL:1001576	oral mucosa squamous cell	38756	2	6	1
+CL:1001577	tonsil squamous cell	38774	2	6	0
+CL:1001578	vagina squamous cell	38792	1	6	0
+CL:1001579	cerebral cortex glial cell	38808	1	5	7
+CL:1001580	hippocampal glial cell	38823	1	6	1
+CL:1001581	lateral ventricle glial cell	38837	1	5	0
+CL:1001582	lateral ventricle neuron	38850	1	9	0
+CL:1001585	appendix glandular cell	38873	2	12	1
+CL:1001586	mammary gland glandular cell	38889	3	8	3
+CL:1001587	uterine cervix secretory cell	38906	2	9	0
+CL:1001588	colon glandular cell	38922	2	12	2
+CL:1001589	duodenum secretory cell	38937	1	10	1
+CL:1001590	epididymis secretory cell	38950	2	6	0
+CL:1001591	oviduct secretory cell	38965	1	5	4
+CL:1001592	gallbladder glandular cell	38981	2	7	0
+CL:1001593	parathyroid glandular cell	38997	2	8	6
+CL:1001595	rectum glandular cell	39011	1	11	0
+CL:1001596	salivary gland glandular cell	39025	4	10	7
+CL:1001597	seminal vesicle glandular cell	39044	2	7	0
+CL:1001598	small intestine secretory cell	39061	2	9	16
+CL:1001599	pancreas exocrine glandular cell	39080	3	10	2
+CL:1001601	adrenal gland glandular cell	39100	1	6	5
+CL:1001602	cerebral cortex endothelial cell	39117	2	4	0
+CL:1001603	lung macrophage	39136	1	16	5
+CL:1001606	foreskin keratinocyte	39152	1	9	0
+CL:1001607	articular chondrocyte	39164	1	11	6
+CL:1001608	foreskin fibroblast	39178	1	6	0
+CL:1001609	muscle fibroblast	39191	1	5	1
+CL:1001610	bone marrow hematopoietic cell	39206	2	5	6
+CL:1001611	cerebellar neuron	39223	2	8	34
+CL:1100001	secretory epithelial cell	39240	2	4	202
+CL:2000000	epidermal melanocyte	39254	2	7	1
+CL:2000001	peripheral blood mononuclear cell	39269	2	9	2
+CL:2000002	decidual cell	39285	2	5	0
+CL:2000004	pituitary gland cell	39306	1	3	13
+CL:2000005	brain macroglial cell	39321	1	6	12
+CL:2000006	tonsil germinal center B cell	39334	1	16	0
+CL:2000007	articular chondrocyte of knee joint	39348	1	12	0
+CL:2000008	microvascular endothelial cell	39361	1	5	37
+CL:2000010	dermis blood vessel endothelial cell	39386	1	5	2
+CL:2000011	dermis lymphatic vessel endothelial cell	39399	1	5	1
+CL:2000012	fibroblast of pedal digit skin	39414	1	6	0
+CL:2000013	fibroblast of skin of abdomen	39427	1	6	0
+CL:2000014	fibroblast of upper leg skin	39440	1	6	0
+CL:2000015	fibroblast of arm	39453	1	6	0
+CL:2000016	lung microvascular endothelial cell	39466	2	7	3
+CL:2000017	fibroblast of peridontal ligament	39480	1	6	0
+CL:2000018	endothelial cell of coronary artery	39493	2	9	0
+CL:2000019	compound eye photoreceptor cell	39510	1	14	8
+CL:2000020	inner cell mass cell	39522	1	2	0
+CL:2000021	sebaceous gland cell	39535	1	2	2
+CL:2000022	cardiac septum cell	39551	1	3	6
+CL:2000023	spinal cord ventral column interneuron	39564	1	10	0
+CL:2000024	spinal cord medial motor column neuron	39577	1	8	0
+CL:2000025	spinal cord oligodendrocyte	39590	1	8	0
+CL:2000027	cerebellar basket cell	39611	2	17	0
+CL:2000028	cerebellum glutamatergic neuron	39627	2	11	6
+CL:2000029	central nervous system neuron	39642	1	7	404
+CL:2000030	hypothalamus cell	39658	1	3	2
+CL:2000031	lateral line ganglion neuron	39672	2	8	2
+CL:2000032	peripheral nervous system neuron	39685	1	7	153
+CL:2000033	limb basal cell of epidermis	39704	1	20	0
+CL:2000034	anterior lateral line neuromast hair cell	39717	1	15	0
+CL:2000035	anterior lateral line neuromast mantle cell	39728	1	4	0
+CL:2000036	anterior lateral line neuromast supporting cell	39739	1	4	0
+CL:2000037	posterior lateral line neuromast hair cell	39751	1	15	0
+CL:2000038	posterior lateral line neuromast mantle cell	39762	1	4	0
+CL:2000039	posterior lateral line neuromast supporting cell	39773	1	4	0
+CL:2000040	bladder microvascular endothelial cell	39785	2	8	0
+CL:2000041	dermis microvascular lymphatic vessel endothelial cell	39799	2	10	0
+CL:2000042	embryonic fibroblast	39815	1	5	0
+CL:2000043	brain pericyte	39829	1	10	0
+CL:2000044	brain microvascular endothelial cell	39843	2	7	3
+CL:2000045	foreskin melanocyte	39857	1	6	0
+CL:2000046	ventricular cardiac muscle cell	39872	1	9	10
+CL:2000047	brainstem motor neuron	39888	3	10	0
+CL:2000048	anterior horn motor neuron	39904	3	16	0
+CL:2000049	primary motor cortex pyramidal cell	39920	1	12	10
+CL:2000051	splenic fibroblast	39945	1	5	1
+CL:2000052	umbilical artery endothelial cell	39958	2	7	0
+CL:2000053	splenic endothelial cell	39973	1	3	1
+CL:2000054	hepatic pit cell	39989	1	13	0
+CL:2000055	liver dendritic cell	40000	1	14	0
+CL:2000056	Meynert cell	40018	1	13	0
+CL:2000057	femoral osteoblast	40028	2	5	0
+CL:2000058	calvarial osteoblast	40042	1	4	0
+CL:2000059	prostate gland microvascular endothelial cell	40056	1	6	0
+CL:2000060	placental villous trophoblast	40073	1	4	0
+CL:2000061	placental amniotic mesenchymal stromal cell	40094	1	7	0
+CL:2000062	placental villus capillary endothelial cell	40109	2	9	0
+CL:2000063	ovarian fibroblast	40124	2	6	0
+CL:2000064	ovarian surface epithelial cell	40138	1	4	0
+CL:2000065	ovarian microvascular endothelial cell	40154	2	8	0
+CL:2000066	cardiac ventricle fibroblast	40169	1	7	0
+CL:2000067	cardiac atrium fibroblast	40185	1	7	0
+CL:2000068	pericardium fibroblast	40200	1	5	0
+CL:2000069	gallbladder fibroblast	40214	1	5	0
+CL:2000070	optic choroid fibroblast	40228	2	7	0
+CL:2000071	mammary microvascular endothelial cell	40242	1	6	0
+CL:2000072	adipose microvascular endothelial cell	40256	2	7	0
+CL:2000073	migratory cardiac neural crest cell	40271	1	10	2
+CL:2000074	splenocyte	40285	1	6	7
+CL:2000075	anterior visceral endoderm cell	40299	1	4	0
+CL:2000076	hindlimb stylopod vein endothelial cell	40312	1	6	0
+CL:2000077	skeletal muscle tissue of pectoralis major striated muscle cell	40325	2	8	0
+CL:2000078	placental pericyte	40339	1	8	1
+CL:2000079	mesenchymal stem cell of femoral bone marrow	40352	1	10	0
+CL:2000080	mesenchymal stem cell of abdominal adipose tissue	40365	1	8	0
+CL:2000081	melanocyte of skin of face	40379	1	6	0
+CL:2000083	hair follicle dermal papilla cell of scalp	40403	1	9	0
+CL:2000084	conjunctiva goblet cell	40416	3	10	0
+CL:2000085	mononuclear cell of umbilical cord	40433	2	9	0
+CL:2000086	neocortex basket cell	40447	2	18	3
+CL:2000087	dentate gyrus of hippocampal formation basket cell	40461	4	21	0
+CL:2000088	Ammon's horn basket cell	40476	3	20	0
+CL:2000089	dentate gyrus granule cell	40491	2	15	0
+CL:2000090	dentate gyrus of hippocampal formation stellate cell	40508	2	13	0
+CL:2000091	endometrial microvascular endothelial cell	40521	2	7	0
+CL:2000092	hair follicular keratinocyte	40536	2	13	1
+CL:2000093	bronchus fibroblast of lung	40550	1	6	0
+CL:2000094	nasal cavity respiratory epithelium epithelial cell of viscerocranial mucosa	40566	2	7	0
+CL:2000095	cord blood hematopoietic stem cell	40580	2	12	0
+CL:2000096	fibroblast of the reticular layer of dermis	40595	2	8	0
+CL:2000097	midbrain dopaminergic neuron	40614	2	11	7
+CL:3000000	ciliated epithelial cell of esophagus	40630	1	6	0
+CL:3000001	Hofbauer cell	40640	1	18	0
+CL:3000002	sympathetic noradrenergic neuron	40656	2	15	0
+CL:3000003	sympathetic cholinergic neuron	40670	2	12	0
+CL:3000004	peripheral sensory neuron	40683	2	10	60
+CL:4006000	fibroblast of breast	40697	1	5	1
+CL:4006001	fibroblast of skin of scalp	40711	1	6	0
+CL:4023000	beta motor neuron	40724	1	13	2
+CL:4023001	static beta motor neuron	40735	1	14	0
+CL:4023002	dynamic beta motor neuron	40744	1	14	0
+CL:4023003	nuclear chain fiber	40753	1	15	0
+CL:4023004	nuclear bag fiber	40762	1	15	2
+CL:4023005	dynamic nuclear bag fiber	40771	1	16	0
+CL:4023006	static nuclear bag fiber	40782	1	16	0
+CL:4023007	L2/3 bipolar VIP GABAergic interneuron (Mmus)	40793	2	21	0
+CL:4023008	intratelencephalic-projecting glutamatergic cortical neuron	40808	2	12	21
+CL:4023009	extratelencephalic-projecting glutamatergic cortical neuron	40828	2	12	8
+CL:4023010	alpha7 GABAergic cortical interneuron (Mmus)	40850	2	17	0
+CL:4023011	lamp5 GABAergic interneuron	40865	1	19	8
+CL:4023012	near-projecting glutamatergic cortical neuron	40889	2	12	3
+CL:4023013	corticothalamic-projecting glutamatergic cortical neuron	40911	2	12	3
+CL:4023014	L5 VIP GABAergic interneuron (Mmus)	40932	1	20	0
+CL:4023015	sncg GABAergic interneuron	40946	1	19	1
+CL:4023016	VIP GABAergic interneuron	40970	1	19	7
+CL:4023017	sst GABAergic interneuron	41002	1	19	7
+CL:4023018	pvalb GABAergic interneuron	41029	3	15	1
+CL:4023019	L5/6 cck, VIP GABAergic interneuron (Mmus)	41052	2	21	0
+CL:4023020	dynamic gamma motor neuron	41066	1	14	0
+CL:4023021	static gamma motor neuron	41076	1	14	0
+CL:4023022	canopy lamp5 GABAergic cortical interneuron (Mmus)	41086	1	20	0
+CL:4023023	L5,6 neurogliaform lamp5 GABAergic interneuron (Mmus)	41098	2	21	0
+CL:4023024	neurogliaform lamp5 GABAergic cortical interneuron (Mmus)	41112	2	21	0
+CL:4023025	long-range projecting sst GABAergic cortical interneuron (Mmus)	41126	1	21	0
+CL:4023026	direct pathway medium spiny neuron	41138	1	12	7
+CL:4023027	L5 sst T-Martinotti interneuron (Mmus)	41153	3	19	0
+CL:4023028	L5 non-Martinotti sst GABAergic interneuron (Mmus)	41169	2	17	0
+CL:4023029	indirect pathway medium spiny neuron	41184	1	12	8
+CL:4023030	L2/3/5 fan Martinotti sst GABAergic interneuron (Mmus)	41199	3	19	0
+CL:4023031	L4 sst Martinotti interneuron (Mmus)	41215	3	18	0
+CL:4023032	ON retinal ganglion cell	41231	1	8	9
+CL:4023033	OFF retinal ganglion cell	41241	1	8	9
+CL:4023035	lateral ganglionic eminence derived neuron	41262	2	8	28
+CL:4023036	pvalb chandelier GABAergic interneuron	41277	1	19	1
+CL:4023038	L6b glutamatergic cortical neuron	41301	2	12	2
+CL:4023039	amygdala excitatory neuron	41321	2	11	0
+CL:4023040	L2/3-6 intratelencephalic projecting glutamatergic neuron	41337	1	13	20
+CL:4023041	L5 extratelencephalic projecting glutamatergic cortical neuron	41352	2	15	6
+CL:4023042	L6 corticothalamic-projecting glutamatergic cortical neuron	41380	1	13	2
+CL:4023043	L5/6 near-projecting glutamatergic neuron of the primary motor cortex	41401	1	14	0
+CL:4023044	non-medulla, extratelencephalic-projecting glutamatergic neuron of the primary motor cortex	41421	2	17	0
+CL:4023045	medulla-projecting glutamatergic neuron of the primary motor cortex	41435	3	17	0
+CL:4023046	L6b glutamatergic neuron of the primary motor cortex	41453	1	13	0
+CL:4023047	L2/3 intratelencephalic projecting glutamatergic neuron of the primary motor cortex	41470	1	15	0
+CL:4023048	L4/5 intratelencephalic projecting glutamatergic neuron of the primary motor cortex	41489	1	15	0
+CL:4023049	L5 intratelencephalic projecting glutamatergic neuron of the primary motor cortex	41507	1	15	0
+CL:4023050	L6 intratelencephalic projecting glutamatergic neuron of the primary motor cortex	41524	3	19	2
+CL:4023051	vascular leptomeningeal cell	41545	1	8	2
+CL:4023052	Betz upper motor neuron	41560	2	18	0
+CL:4023053	spinal interneuron synapsing Betz cell	41572	1	18	0
+CL:4023054	mesothelial fibroblast	41584	1	5	9
+CL:4023055	corticothalamic VAL/VM projecting glutamatergic neuron of the primary motor cortex	41597	3	18	0
+CL:4023056	vascular leptomeningeal cell (Mmus)	41613	1	9	0
+CL:4023057	cerebellar inhibitory GABAergic interneuron	41628	2	14	17
+CL:4023058	mesothelial fibroblast of the leptomeninx	41643	2	7	8
+CL:4023059	committed oligodendrocyte precursor	41658	1	5	7
+CL:4023060	hippocampal CA1-3 neuron	41673	1	11	0
+CL:4023061	hippocampal CA4 neuron	41685	1	8	0
+CL:4023062	dentate gyrus neuron	41695	1	11	5
+CL:4023063	medial ganglionic eminence derived interneuron	41709	2	9	16
+CL:4023064	caudal ganglionic eminence derived interneuron	41728	2	18	21
+CL:4023065	meis2 expressing cortical GABAergic cell	41749	3	12	0
+CL:4023066	horizontal pyramidal neuron	41766	1	9	0
+CL:4023068	thalamic excitatory neuron	41790	2	11	0
+CL:4023069	medial ganglionic eminence derived GABAergic interneuron	41807	2	18	13
+CL:4023071	L5/6 cck GABAergic interneuron (Mmus)	41835	2	17	1
+CL:4023072	brain vascular cell	41850	1	3	0
+CL:4023074	mammillary body neuron	41875	1	9	0
+CL:4023075	L6 th sst GABAergic interneuron (Mmus)	41888	2	17	0
+CL:4023076	Martinotti neuron	41905	1	13	5
+CL:4023077	bitufted neuron	41921	1	9	0
+CL:4023079	midbrain-derived inhibitory neuron	41946	2	8	0
+CL:4023080	stellate L6 intratelencephalic projecting glutamatergic neuron of the primary motor cortex (Mmus)	41960	2	21	0
+CL:4023081	inverted L6 intratelencephalic projecting glutamatergic neuron of the primary motor cortex (Mmus)	41973	2	21	0
+CL:4023086	T Martinotti neuron	41994	1	14	1
+CL:4023087	fan Martinotti neuron	42009	1	14	1
+CL:4023088	large basket cell	42024	1	19	0
+CL:4023089	nest basket cell	42039	1	19	0
+CL:4023090	small basket cell	42054	1	19	0
+CL:4023092	inverted pyramidal neuron	42069	1	9	1
+CL:4023093	stellate pyramidal neuron	42082	1	9	1
+CL:4023094	tufted pyramidal neuron	42095	1	9	0
+CL:4023095	untufted pyramidal neuron	42108	1	9	4
+CL:4023097	arachnoid barrier cell	42121	1	8	4
+CL:4023107	reticulospinal neuron	42231	2	8	0
+CL:4023108	oxytocin-secreting magnocellular cell	42247	1	19	0
+CL:4023109	vasopressin-secreting magnocellular cell	42259	2	20	0
+CL:4023110	amygdala pyramidal neuron	42272	2	10	0
+CL:4023111	cerebral cortex pyramidal neuron	42285	2	11	17
+CL:4023112	vestibular afferent neuron	42298	1	9	2
+CL:4023113	bouton vestibular afferent neuron	42308	1	10	0
+CL:4023114	calyx vestibular afferent neuron	42319	1	10	0
+CL:4023115	type 1 spiral ganglion neuron	42330	2	9	0
+CL:4023116	type 2 spiral ganglion neuron	42346	2	9	0
+CL:4023118	L5/6 non-Martinotti sst GABAergic interneuron (Mmus)	42362	2	17	0
+CL:4023119	displaced amacrine cell	42379	1	11	0
+CL:4023120	cochlea auditory hair cell	42392	3	16	2
+CL:4023121	sst chodl GABAergic interneuron	42409	1	20	3
+CL:4023122	oxytocin receptor sst GABAergic cortical interneuron	42428	2	17	0
+CL:4023123	hypothalamus kisspeptin neuron	42443	2	10	4
+CL:4023124	dentate gyrus kisspeptin neuron	42457	2	13	0
+CL:4023125	KNDy neuron	42470	1	11	2
+CL:4023127	arcuate nucleus of hypothalamus KNDy neuron	42487	1	12	0
+CL:4023128	rostral periventricular region of the third ventricle KNDy neuron	42500	1	12	0
+CL:4023129	retinoblast	42515	1	4	0
+CL:4023130	kisspeptin neuron	42528	2	8	6
+CL:4023154	myelinating glial cell	42543	1	5	29
+CL:4023158	octopus cell of the mammalian cochlear nucleus	42559	2	8	0
+CL:4023159	double bouquet cell	42573	1	9	0
+CL:4023160	cartwheel cell	42585	3	12	0
+CL:4023161	unipolar brush cell	42600	3	11	1
+CL:4023162	bushy cell	42619	2	8	2
+CL:4023163	spherical bushy cell	42631	1	9	0
+CL:4023164	globular bushy cell	42641	1	9	0
+CL:4023168	somatosensory neuron	42651	1	8	47
+CL:4023169	trigeminal neuron	42664	1	8	2
+CL:4023170	trigeminal sensory neuron	42674	2	13	0
+CL:4023171	trigeminal motor neuron	42687	2	11	0
+CL:4023181	hypendymal cell	42699	2	7	1
+CL:4023187	koniocellular cell	42714	1	9	0
+CL:4023188	midget ganglion cell of retina	42729	1	8	2
+CL:4023189	parasol ganglion cell of retina	42744	1	8	2
+CL:4028001	pulmonary capillary endothelial cell	42761	2	10	2
+CL:4028002	alveolar capillary type 1 endothelial cell	42777	1	11	0
+CL:4028003	alveolar capillary type 2 endothelial cell	42795	1	11	0
+CL:4028004	alveolar type 1 fibroblast cell	42814	2	8	0
+CL:4028006	alveolar adventitial fibroblast	42842	2	8	0
+CL:4029001	gamete-nursing cell	42868	1	1	3
+CL:4029002	germline-derived nurse cell	42880	2	3	1
+CL:4029003	somatic nurse-like cell	42893	1	2	0
+CL:4030000	choroidal melanocyte	42905	1	5	0
+CL:4030001	stromal cell of thymus	42919	1	4	3
+CL:4030002	effector memory CD45RA-positive, alpha-beta T cell, terminally differentiated	42932	1	13	2
+CL:4030003	interstitial cell of thymus	42948	1	5	0
+CL:4030004	thymic nurse cell	42958	1	5	0
+CL:4030005	kidney collecting duct beta-intercalated cell	42968	2	19	0
+CL:4030006	fallopian tube secretory epithelial cell	42983	2	8	0
+CL:4030007	fallopian tube multiciliated epithelial cell	43001	2	8	0
+CL:4030008	pronephric podocyte	43019	1	15	0
+CL:4030009	epithelial cell of proximal tubule segment 1	43033	1	17	0
+CL:4030010	epithelial cell of proximal tubule segment 2	43051	1	17	0
+CL:4030011	epithelial cell of proximal tubule segment 3	43068	2	21	0
+CL:4030012	kidney loop of Henle short descending thin limb epithelial cell	43086	2	15	0
+CL:4030013	kidney loop of Henle long descending thin limb outer medulla epithelial cell	43103	1	14	0
+CL:4030014	kidney loop of Henle long descending thin limb inner medulla epithelial cell	43116	1	14	0
+CL:4030015	kidney collecting duct alpha-intercalated cell	43129	2	15	0
+CL:4030016	epithelial cell of early distal convoluted tubule	43147	1	14	0
+CL:4030017	epithelial cell of late distal convoluted tubule	43163	1	14	0
+CL:4030018	kidney connecting tubule principal cell	43179	2	14	0
+CL:4030019	kidney connecting tubule intercalated cell	43194	2	15	2
+CL:4030020	kidney connecting tubule alpha-intercalated cell	43208	2	17	0
+CL:4030021	kidney connecting tubule beta-intercalated cell	43224	2	17	0
+CL:4030022	renal medullary fibroblast	43240	2	11	0
+CL:4030023	respiratory tract hillock cell	43257	2	6	0
+CL:4030024	hillock cell	43272	1	3	3
+CL:4030025	renal cortical fibroblast	43281	2	14	0
+CL:4030026	BEST4+ enterocyte	43295	1	10	2
+CL:4030027	GABAergic amacrine cell	43308	2	15	6
+CL:4030028	glycinergic amacrine cell	43323	2	13	7
+CL:4030029	blood lymphocyte	43338	2	11	1
+CL:4030030	peripheral blood lymphocyte	43351	1	12	0
+CL:4030031	interstitial cell	43363	1	2	26
+CL:4030032	valve interstitial cell	43376	3	6	0
+CL:4030033	valve endothelial cell	43396	2	6	0
+CL:4030034	respiratory tract multiciliated cell	43412	2	9	3
+CL:4030035	dental pulp stem cell	43433	2	9	0
+CL:4030036	early spermatid	43446	1	7	0
+CL:4030037	late spermatid	43458	1	7	0
+CL:4030038	CD24-positive, CD-133-positive, vimentin-positive proximal tubular cell	43471	1	13	0
+CL:4030039	von Economo neuron	43488	1	13	0
+CL:4030040	endometrial multiciliated epithelial cell	43500	2	9	2
+CL:4030041	luminal endometrial multiciliated epithelial cell	43522	2	11	0
+CL:4030042	glandular endometrial multiciliated epithelial cell	43534	2	11	0
+CL:4030043	matrix D1 medium spiny neuron	43545	2	15	1
+CL:4030047	matrix D2 medium spiny neuron	43560	2	15	1
+CL:4030048	striosomal D1 medium spiny neuron	43575	2	15	1
+CL:4030049	striosomal D2 medium spiny neuron	43591	2	15	1
+CL:4030050	D1/D2-hybrid medium spiny neuron	43607	2	14	2
+CL:4030051	nucleus accumbens shell and olfactory tubercle D1 medium spiny neuron	43626	2	14	2
+CL:4030052	nucleus accumbens shell and olfactory tubercle D2 medium spiny neuron	43643	2	14	1
+CL:4030053	Islands of Calleja granule cell	43661	4	13	1
+CL:4030054	D1-NUDAP medium spiny neuron	43678	2	14	1
+CL:4030055	intermediate cell of urothelium	43696	1	6	0
+CL:4030056	umbrella cell of urothelium	43711	1	6	0
+CL:4030057	eccentric medium spiny neuron	43727	1	12	0
+CL:4030058	TCR-positive macrophage	43741	1	16	0
+CL:4030059	L2/3 intratelencephalic projecting glutamatergic neuron	43757	1	14	2
+CL:4030060	L2 intratelencephalic projecting glutamatergic neuron	43778	1	14	1
+CL:4030061	L3 intratelencephalic projecting glutamatergic neuron	43793	1	14	0
+CL:4030062	L4/5 intratelencephalic projecting glutamatergic neuron	43809	1	14	1
+CL:4030063	L4 intratelencephalic projecting glutamatergic neuron	43825	1	14	1
+CL:4030064	L5 intratelencephalic projecting glutamatergic neuron	43845	1	14	2
+CL:4030065	L6 intratelencephalic projecting glutamatergic neuron	43866	1	14	6
+CL:4030066	ureteric bud cell	43887	3	6	0
+CL:4030067	L5/6 near-projecting glutamatergic neuron	43905	1	13	2
+CL:4030068	L6 intratelencephalic projecting Car3 glutamatergic neuron	43924	2	15	1
+CL:4032000	club-like cell of the urethral epithelium	43948	2	6	0
+CL:4032001	reelin GABAergic cortical interneuron	43965	2	17	0
+CL:4033000	endothelial cell of venule of lymph node	43983	1	6	0
+CL:4033001	endothelial cell of arteriole of lymph node	43996	1	6	0
+CL:4033002	neuroendocrine cell of epithelium of crypt of Lieberkuhn	44009	3	22	0
+CL:4033003	myoepithelial cell of bronchus submucosal gland	44024	2	11	0
+CL:4033004	smooth muscle cell of taenia coli	44041	1	11	0
+CL:4033005	serous secreting cell of bronchus submucosal gland	44055	2	7	0
+CL:4033006	endothelial cell of efferent lymphatic vessel	44075	1	5	0
+CL:4033007	brush cell of epithelium of lobar bronchus	44088	2	13	0
+CL:4033008	vein endothelial cell of respiratory system	44103	1	6	0
+CL:4033009	goblet cell of epithelium of lobar bronchus	44118	2	20	0
+CL:4033010	neuroendocrine cell of epithelium of lobar bronchus	44133	4	33	0
+CL:4033011	smooth muscle cell of large intestine smooth muscle circular layer	44151	1	11	0
+CL:4033012	smooth muscle cell of large intestine smooth muscle longitudinal layer	44165	1	11	0
+CL:4033013	suprabasal keratinocyte	44179	2	13	0
+CL:4033014	peg cell	44194	1	5	0
+CL:4033015	retinal astrocyte	44213	2	8	0
+CL:4033016	secondary crest myofibroblast	44232	2	5	0
+CL:4033017	bronchiolar smooth muscle cell	44254	1	10	0
+CL:4033018	lung megakaryocyte	44271	2	6	0
+CL:4033019	ON-blue cone bipolar cell	44293	1	13	0
+CL:4033020	mucus secreting cell of trachea gland	44311	2	16	0
+CL:4033021	myoepithelial cell of trachea gland	44329	2	11	0
+CL:4033022	mucus secreting cell of bronchus submucosal gland	44346	2	16	0
+CL:4033023	airway submucosal gland collecting duct epithelial cell	44369	1	3	0
+CL:4033024	airway submucosal gland duct basal cell	44388	1	7	0
+CL:4033025	perichondrial fibroblast	44404	1	5	1
+CL:4033026	lung perichondrial fibroblast	44420	2	7	0
+CL:4033027	diffuse bipolar 1 cell	44438	1	13	0
+CL:4033028	diffuse bipolar 2 cell	44459	1	13	0
+CL:4033029	diffuse bipolar 3a cell	44477	1	13	0
+CL:4033030	diffuse bipolar 3b cell	44496	1	13	0
+CL:4033031	diffuse bipolar 4 cell	44514	1	13	0
+CL:4033032	diffuse bipolar 6 cell	44528	1	13	0
+CL:4033033	flat midget bipolar cell	44546	1	13	0
+CL:4033034	invaginating midget bipolar cell	44564	1	13	0
+CL:4033035	giant bipolar cell	44582	1	13	0
+CL:4033036	OFFx cell	44600	1	13	0
+CL:4033037	mucus secreting cell of tracheobronchial tree submucosal gland	44619	5	14	2
+CL:4033038	lung resident memory CD4-positive, alpha-beta T cell	44639	1	16	0
+CL:4033039	lung resident memory CD8-positive, alpha-beta T cell	44656	1	16	2
+CL:4033040	lung resident memory CD8-positive, CD103-positive, alpha-beta T cell	44673	1	17	1
+CL:4033041	CCL3-positive alveolar macrophage	44691	1	19	0
+CL:4033042	metallothionein-positive alveolar macrophage	44709	1	19	0
+CL:4033043	lung interstitial macrophage	44728	3	19	0
+CL:4033044	deuterosomal cell	44749	1	5	0
+CL:4033045	lung migratory dendritic cell	44765	1	14	0
+CL:4033046	ON midget ganglion cell	44780	2	10	0
+CL:4033047	OFF midget ganglion cell	44798	2	10	0
+CL:4033048	respiratory tract suprabasal cell	44816	3	8	0
+CL:4033049	taste receptor cell of tongue	44839	2	9	0
+CL:4033050	catecholaminergic neuron	44855	2	8	25
+CL:4033051	OFF parasol ganglion cell	44873	2	10	0
+CL:4033052	ON parasol ganglion cell	44891	2	10	0
+CL:4033053	small bistratified retinal ganglion cell	44909	1	11	0
+CL:4033054	perivascular cell	44927	1	1	42
+CL:4033055	airway submucosal gland duct multiciliated cell	44942	2	8	0
+CL:4033056	onychocyte	44965	2	14	0
+CL:4033057	luminal adaptive secretory precursor cell of mammary gland	44980	2	9	0
+CL:4033058	luminal hormone-sensing cell of mammary gland	45005	1	7	0
+CL:4033059	lactocyte type 1	45029	1	13	0
+CL:4033060	lactocyte type 2	45045	1	13	0
+CL:4033061	endothelial cell of central vein of liver	45060	1	6	0
+CL:4033062	interstitial extravillous trophoblast cell	45074	1	4	0
+CL:4033063	endovascular extravillous trophoblast cell	45091	1	4	0
+CL:4033064	uterine resident macrophage	45108	1	17	0
+CL:4033065	preplasmablast	45125	1	15	0
+CL:4033066	pre-granulosa cell	45142	2	3	0
+CL:4033067	mural granulosa cell	45160	2	8	0
+CL:4033068	cycling B cell	45178	1	11	0
+CL:4033069	cycling T cell	45194	1	10	3
+CL:4033070	cycling dendritic cell	45210	2	15	0
+CL:4033071	cycling natural killer cell	45224	1	12	0
+CL:4033072	cycling gamma-delta T cell	45239	2	12	0
+CL:4033073	cycling monocyte	45253	3	19	0
+CL:4033074	cycling CD8-positive, alpha-beta T cell	45268	2	15	0
+CL:4033075	cycling CD4-positive, alpha-beta T cell	45282	2	15	0
+CL:4033076	cycling macrophage	45296	3	18	1
+CL:4033077	cycling alveolar macrophage	45312	2	22	0
+CL:4033078	cycling mononuclear phagocyte	45330	1	12	4
+CL:4033079	cycling endothelial cell of lymphatic vessel	45345	1	5	0
+CL:4033080	cycling pulmonary alveolar type 2 cell	45360	1	11	0
+CL:4033081	cycling myeloid cell	45379	1	4	3
+CL:4033082	cycling basal cell	45395	2	7	0
+CL:4033083	squamous granulosa cell	45412	2	9	0
+CL:4033084	cuboidal granulosa cell	45431	3	10	0
+CL:4033085	diffuse bipolar 5 cell	45449	1	13	0
+CL:4033086	lipid-associated macrophage	45464	1	17	0
+CL:4033087	placental resident macrophage	45478	1	17	2
+CL:4033088	decidual resident macrophage	45494	2	19	0
+CL:4033089	atretic follicular cell of ovary	45510	2	4	2
+CL:4033090	atretic granulosa cell	45525	1	5	0
+CL:4033091	glycinergic-GABAergic amacrine cell	45538	3	19	0
+CL:4033092	CD57-positive enterocyte	45555	1	13	0
+CL:4033093	limbal epithelial stem cell of cornea	45575	1	6	0
+CL:4033094	age-associated B cell	45597	1	16	0
+CL:4033095	diffuse bipolar 4a cell	45610	1	13	0
+CL:4033096	diffuse bipolar 4b cell	45628	1	13	0
+CL:4033097	Schlemm's canal endothelial cell	45644	1	6	2
+CL:4033098	inner wall Schlemm's canal endothelial cell	45661	1	7	0
+CL:4033099	outer wall Schlemm's canal endothelial cell	45676	1	7	0
+CL:4033100	atrial intrinsic cardiac ganglion TH neuron	45690	2	11	0
+CL:4033101	superior cervical ganglion TH/DBH neuron	45703	1	10	0
+CL:4033102	superior cervical ganglion TH neuron	45718	1	10	0
+CL:4033103	superior cervical ganglion NPY neuron	45732	1	10	0
+CL:4033104	superior cervical ganglion TH/NPY neuron	45746	1	10	0
+CL:4033105	superior cervical ganglion SST neuron	45761	1	10	0
+CL:4033106	superior cervical ganglion VIP neuron	45775	1	10	0
+CL:4033107	superior cervical ganglion CGRP neuron	45789	1	10	0
+CL:4033108	middle cervical ganglion DBH neuron	45803	1	10	0
+CL:4033109	middle cervical ganglion TH neuron	45817	1	10	0
+CL:4033110	middle cervical ganglion TH/NPY neuron	45831	1	10	0
+CL:4033111	middle cervical ganglion NPY neuron	45846	1	10	0
+CL:4033112	middle cervical ganglion VIP neuron	45860	1	10	0
+CL:4033113	cervicothoracic ganglion enkephalin neuron	45874	1	10	0
+CL:4033114	cervicothoracic ganglion TH neuron	45888	1	10	0
+CL:4033115	cervicothoracic ganglion TH/NPY neuron	45902	1	10	0
+CL:4033116	cervicothoracic ganglion VIP neuron	45917	1	10	0
+CL:4033117	cervicothoracic ganglion VAChT neuron	45931	1	10	0
+CL:4033118	thoracic ganglion enkephalin neuron	45945	1	10	0
+CL:4033119	thoracic ganglion TH neuron	45958	1	10	0
+CL:4033120	thoracic ganglion TH/NPY neuron	45971	1	10	0
+CL:4033121	lumbar ganglion VIP neuron	45985	1	10	0
+CL:4033122	lumbar ganglion SST/TH neuron	45999	1	10	0
+CL:4033123	lumbar ganglion TH/NPY neuron	46013	1	10	0
+CL:4033124	lumbar ganglion TH neuron	46027	1	10	0
+CL:4033125	lumbar ganglion NPY neuron	46040	1	10	0
+CL:4033126	sacral ganglion TH neuron	46053	1	10	0
+CL:4033127	lower airway ganglion ChAT/VIP neuron	46066	1	10	0
+CL:4033128	celiac ganglion VIP neuron	46080	1	10	0
+CL:4033129	celiac ganglion PHI neuron	46094	1	10	0
+CL:4033130	celiac ganglion CGRP neuron	46108	1	10	0
+CL:4033131	celiac ganglion SP neuron	46122	1	10	0
+CL:4033132	celiac ganglion SOM neuron	46136	1	10	0
+CL:4033133	celiac ganglion SOM/CGRP neuron	46150	1	10	0
+CL:4033134	superior mesenteric ganglion SP neuron	46165	1	10	0
+CL:4033135	inferior mesenteric ganglion TH neuron	46179	1	10	0
+CL:4033136	inferior mesenteric ganglion SP neuron	46193	1	10	0
+CL:4033137	otic ganglion nNOS neuron	46207	1	10	0
+CL:4033138	otic ganglion VIP neuron	46220	1	10	0
+CL:4033139	ciliary ganglion VIP/PHI neuron	46233	1	10	0
+CL:4033140	ciliary ganglion TH neuron	46246	1	10	0
+CL:4033141	submandibular ganglion TH cholinergic neuron	46259	1	10	0
+CL:4033142	submandibular ganglion VIP/PHI neuron	46272	1	10	0
+CL:4033143	submandibular ganglion nNOS neuron	46285	1	10	0
+CL:4033144	pterygopalatine ganglion VIP/PHI neuron	46298	1	10	0
+CL:4033145	pterygopalatine ganglion VIP neuron	46312	1	10	0
+CL:4033146	pterygopalatine ganglion nNOS neuron	46326	1	10	0
+CL:4033147	vestibular ganglion SP neuron	46340	2	9	0
+CL:4033148	nodose ganglion TRPV1 neuron	46355	2	9	0
+CL:4033149	nodose ganglion P2X3 neuron	46370	2	9	0
+CL:4033150	nodose ganglion TRPV2 neuron	46385	2	9	0
+CL:4033151	nodose ganglion PVALB neuron	46400	2	9	0
+CL:4033152	jugular ganglion TRPV1 neuron	46415	2	9	0
+CL:4033153	jugular ganglion TRPV2 neuron	46430	2	9	0
+CL:4033154	jugular ganglion SP neuron	46445	2	9	0
+CL:4033155	jugular ganglion CGRP neuron	46460	2	9	0
+CL:4033156	jugular ganglion SPARCL1 neuron	46475	2	9	0
+CL:4033157	geniculate ganglion TRPV1 neuron	46490	2	9	0
+CL:4033158	geniculate ganglion SPARCL1 neuron	46504	2	9	0
+CL:4033159	geniculate ganglion VGLUT2 neuron	46518	2	9	0
+CL:4033160	myenteric ganglion of small intestine ChAT neuron	46532	1	14	0
+CL:4033161	myenteric ganglion of small intestine nNOS neuron	46545	1	11	0
+CL:4033162	myenteric ganglion of small intestine VIP neuron	46558	1	11	0
+CL:4033163	myenteric ganglion of small intestine nNOS/VIP neuron	46570	1	11	0
+CL:4033164	myenteric ganglion of small intestine nNOS/ChAT neuron	46584	1	11	0
+CL:4033165	myenteric ganglion of small intestine ChAT/CALR/SOM/SP neuron	46597	1	11	0
+CL:4033166	myenteric ganglion of small intestine VIP/GAL neuron	46614	1	11	0
+CL:4033167	pelvic ganglion TH neuron	46627	1	10	0
+CL:4033168	pelvic ganglion TH/DBH neuron	46640	1	10	0
+CL:4033169	pelvic ganglion VAChT neuron	46654	1	10	0
+CL:4033170	pelvic ganglion nNOS neuron	46667	1	10	0
+CL:4033171	pelvic ganglion nNOS/VIP neuron	46680	1	10	0
+CL:4033172	pelvic ganglion NPY/VAChT neuron	46694	1	10	0
+CL:4033173	pelvic ganglion nNOS/VAChT neuron	46708	1	10	0
+CL:4033174	ovarian nerve plexus ganglion TH neuron	46722	1	10	0
+CL:4033175	dorsal root ganglion BRN3A neuron	46734	2	15	0
+CL:4033176	dorsal root ganglion CGRP neuron	46747	2	15	0
+CL:4033177	dorsal root ganglion EDN1 neuron	46760	2	15	0
+CL:4033178	dorsal root ganglion Nav1.7 neuron	46773	2	15	0
+CL:4033179	dorsal root ganglion Nav1.9 neuron	46786	2	15	0
+CL:4033180	dorsal root ganglion peripherin neuron	46799	2	15	0
+CL:4033181	dorsal root ganglion Piezo2 neuron	46812	2	15	0
+CL:4033182	dorsal root ganglion RET neuron	46825	2	15	0
+CL:4033183	dorsal root ganglion SP neuron	46838	2	15	0
+CL:4033184	dorsal root ganglion TRPV1 neuron	46851	2	15	0
+CL:4040000	glial restricted tripotential precursor cell	46864	2	6	0
+CL:4040001	chorionic girdle cell	46878	1	5	0
+CL:4040002	enteroglial cell	46891	1	5	6
+CL:4040003	fetal pre-type II pulmonary alveolar epithelial cell	46908	1	8	0
+CL:4040004	mesenchymal stem cell of orbital adipose tissue	46924	1	8	0
+CL:4040005	mesenchymal stem cell of apical papilla	46940	1	7	0
+CL:4040006	dermal chromatophore	46955	2	4	0
+CL:4042001	TAC3-positive striatal interneuron	46967	2	15	2
+CL:4042002	TAC3-positive medium spiny neuron	46982	1	15	0
+CL:4042003	border associated macrophage	46997	1	19	9
+CL:4042004	choroid epiplexus macrophage	47011	1	21	0
+CL:4042005	stromal choroid plexus macrophage	47025	1	21	0
+CL:4042006	dural macrophage	47038	1	20	0
+CL:4042007	protoplasmic astrocyte	47050	1	11	0
+CL:4042008	fibrous astrocyte	47062	1	7	0
+CL:4042009	interlaminar astrocyte	47074	1	11	2
+CL:4042010	pial interlaminar astrocyte	47086	1	12	0
+CL:4042011	subpial interlaminar astrocyte	47096	1	12	0
+CL:4042012	L2 marginal neuron	47107	1	15	0
+CL:4042013	Lamp5 Lhx6 neuron	47120	2	22	2
+CL:4042014	spiny VIP neuron	47138	1	20	0
+CL:4042015	VIP-ChAT interneuron	47151	2	22	0
+CL:4042016	nasal serous secreting cell	47167	2	6	0
+CL:4042017	alpha1-tanycyte	47182	1	13	2
+CL:4042018	alpha2-tanycyte	47199	1	13	1
+CL:4042019	beta1-tanycyte	47215	2	15	1
+CL:4042020	beta2-tanycyte	47234	1	13	1
+CL:4042021	neuronal-restricted precursor	47251	2	7	0
+CL:4042022	astrocyte-restricted precursor	47266	2	7	0
+CL:4042023	striatal pthlh-expressing interneuron	47283	3	15	2
+CL:4042024	striatal PTHLH MOXD1 expressing interneuron	47301	1	16	0
+CL:4042025	substantia nigra dopaminergic neuron	47312	2	13	4
+CL:4042026	GABAergic interneuron of the anterior substantia nigra pars reticulata	47325	2	9	0
+CL:4042027	GABAergic interneuron of the posterior substantia nigra pars reticulata	47340	2	9	0
+CL:4042028	immature neuron	47353	1	8	1
+CL:4042029	cortical immature neuron	47365	2	11	0
+CL:4042030	candelabrum cell	47378	1	16	0
+CL:4042031	immune oligodendroglia	47392	1	8	0
+CL:4042032	PAX6 GABAergic interneuron	47409	1	19	1
+CL:4042033	pro-opiomelanocortin neuron	47425	1	16	0
+CL:4042034	CGRP-expressing neuron	47439	2	9	0
+CL:4042035	molecular layer interneuron	47453	1	15	6
+CL:4042036	melanin-concentrating hormone neuron	47468	1	8	0
+CL:4042037	sst GABAergic neuron of the striatum	47480	3	12	0
+CL:4042038	rostral primary motorneuron	47496	1	13	0
+CL:4042039	caudal ganglionic eminence derived neuron	47505	2	8	22
+CL:4042040	glutamatergic neuron of the basal ganglia	47518	2	10	3
+CL:4042041	middle primary motoneuron	47532	1	13	0
+CL:4047001	cycling stromal cell	47542	1	4	0
+CL:4047002	cycling glial cell	47558	1	5	0
+CL:4047003	cycling plasma cell	47573	1	12	0
+CL:4047004	cycling type EC enteroendocrine cell	47589	1	26	0
+CL:4047005	cycling neuroblast (sensu Vertebrata)	47604	1	5	0
+CL:4047006	fetal artery endothelial cell	47619	1	6	0
+CL:4047007	immature pericyte	47632	1	8	0
+CL:4047011	fetal vein endothelial cell	47645	1	6	0
+CL:4047012	angiogenic pericyte	47658	1	8	0
+CL:4047017	transit amplifying cell of gut	47669	2	7	4
+CL:4047018	early colonocyte	47686	2	15	0
+CL:4047019	early enterocyte	47701	1	10	1
+CL:4047023	intestinal lamina propria fibroblast	47714	2	6	0
+CL:4047025	type G cell of stomach	47731	2	27	0
+CL:4047029	post-arteriole capillary cell	47744	1	8	0
+CL:4047030	pre-venule capillary cell	47754	1	8	0
+CL:4047032	secretory pericyte	47765	2	9	0
+CL:4047034	smooth muscle cell of stomach	47778	1	9	3
+CL:4047035	stomach smooth muscle outer longitudinal layer cell	47791	1	10	0
+CL:4047036	stomach smooth muscle circular layer cell	47801	1	10	0
+CL:4047037	stomach smooth muscle inner oblique layer cell	47814	1	10	0
+CL:4047038	dogiel type I neuron	47828	2	13	2
+CL:4047040	smooth muscle circular layer cell	47840	1	9	0
+CL:4047042	type 1 myenteric plexus glia	47851	1	6	0
+CL:4047043	type 1 submucosal plexus glia	47863	1	6	0
+CL:4047044	type 2 interganglionic glia	47875	1	6	0
+CL:4047045	type 3 mucosal glia	47887	1	6	0
+CL:4047047	type I enteric glial cell	47898	1	6	0
+CL:4047048	type 4 muscularis propria glia	47912	1	6	0
+CL:4047051	small intestine BEST4+ enterocyte	47924	2	13	0
+CL:4047052	BEST4+ colonocyte	47937	2	15	0
+CL:4047053	TREM2-positive macrophage	47950	1	16	1
+CL:4047054	migratory dendritic cell	47966	1	14	0
+CL:4047056	large mucus secreting cholangiocyte	47979	3	10	0
+CL:4047060	BAG3-positive monocyte	47992	1	17	0
+CL:4047101	liver-resident natural killer cell	48006	1	12	1
+CL:4052001	multiciliated ependymal cell	48029	2	13	0
+CL:4052002	syncytial cell	48047	2	4	28
+CL:4052003	intestinal villus capillary endothelial cell	48065	3	10	0
+CL:4052004	intestinal fibroblastic reticular cell	48082	1	9	0
+CL:4052005	intestinal subserosal fibroblast	48097	1	5	0
+CL:4052006	intestinal enteroendocrine progenitor	48109	2	8	0
+CL:4052007	subepithelial intestinal fibroblast	48124	1	5	2
+CL:4052008	crypt-bottom fibroblast	48138	1	6	0
+CL:4052009	crypt-top fibroblast	48152	1	6	0
+CL:4052010	pre-theca cell	48167	2	7	0
+CL:4052011	follicle associated enterocyte	48183	1	10	0
+CL:4052012	interna theca cell	48197	3	12	0
+CL:4052013	externa theca cell	48218	1	8	0
+CL:4052014	pancreatic islet capillary endothelial cell	48235	2	9	0
+CL:4052015	endocrine gland capillary endothelial cell	48251	1	8	1
+CL:4052016	pituitary gland capillary endothelial cell	48264	4	13	0
+CL:4052017	choroid plexus capillary endothelial cell	48280	3	11	0
+CL:4052018	fallopian tube epithelial cell	48295	1	3	4
+CL:4052019	fallopian tube non-ciliated epithelial cell	48310	1	4	2
+CL:4052020	lung resident granzyme K-associated CD8 T cell	48322	2	19	0
+CL:4052021	granzyme K-associated CD8 T cell	48338	1	16	1
+CL:4052022	fallopian tube smooth muscle cell	48357	1	9	0
+CL:4052023	luminal endometrial unciliated epithelial cell	48373	2	9	0
+CL:4052024	myotendinous junction nucleus	48388	1	0	0
+CL:4052025	neuromuscular junction nucleus	48406	1	0	0
+CL:4052026	type IIx muscle cell	48424	1	16	0
+CL:4052027	atretic theca cell	48440	1	5	0
+CL:4052028	uterine natural killer cell	48452	1	12	4
+CL:4052029	subpleural fibroblast	48468	1	6	0
+CL:4052030	adventitial fibroblast	48478	3	8	2
+CL:4052031	respiratory airway secretory cell	48497	4	12	0
+CL:4052032	granzyme H-associated CD8 T cell	48514	1	16	0
+CL:4052033	biliary tuft cell	48531	1	4	0
+CL:4052034	tuft cell of thymus	48543	2	7	0
+CL:4052035	tuft cell of pancreatic duct	48560	3	8	0
+CL:4052036	tuft cell of nasal cavity	48577	2	7	2
+CL:4052037	tuft cell of olfactory epithelium	48593	2	16	0
+CL:4052038	tuft cell of nasal cavity respiratory epithelium	48612	1	8	0
+CL:4052039	tuft cell of submandibular gland	48628	2	6	0
+CL:4052040	tuft cell of stomach	48642	2	7	0
+CL:4052041	tuft cell of auditory tube	48656	2	7	0
+CL:4052042	tuft cell of urethra	48670	2	7	0
+CL:4052045	steroidogenic stromal cell of ovary	48689	1	5	0
+CL:4052046	early luteal cell	48707	1	6	0
+CL:4052047	late luteal cell	48720	1	6	0
+CL:4052048	intercalated cell of salivary gland	48733	2	12	0
+CL:4052049	striated cell of salivary gland	48755	3	13	0
+CL:4052050	luminal epithelial cell of endometrium	48780	1	5	2
+CL:4052051	uterine natural killer cell 1, human	48794	1	13	0
+CL:4052052	uterine natural killer cell 2, human	48815	1	13	0
+CL:4052053	uterine natural killer cell 3, human	48836	1	13	0
+CL:4052055	mature NK T cell, human	48857	1	14	0
+CL:4052058	Merkel cell of epidermis	48878	2	14	0
+CL:4052060	spinous cell	48893	1	9	1
+CL:4052061	epidermal keratinocyte	48906	2	11	11
+CL:4052062	onychofibroblast	48924	1	6	0
+CL:4052063	nail bed keratinocyte	48935	1	12	0
+CL:4052064	nail matrix keratinocyte	48946	1	12	0
+CL:4052065	serous acinar cell of salivary gland	48960	2	17	0
+CL:4052066	mucous acinar cell of salivary gland	48978	2	16	0
+CL:4052067	seromucous acinar cell of salivary gland	48993	2	15	0
+CL:4052069	excretory duct cell of salivary gland	49005	2	12	0
+CL:4052070	dual-feature fallopian tube progenitor cell	49018	2	4	0
+CL:4052071	quiescent fibroblast	49033	1	5	0
+CL:4052108	IgD-negative class switched memory B cell	49045	2	18	11
+CL:4070010	gastric mill neuron	49058	1	9	0
+CL:4070011	lateral gastric neuron	49069	1	9	0
+CL:4070012	inferior cardiac neuron	49080	1	9	0
+CL:4070013	ventricular dilator motor neuron	49091	1	9	0
+CL:4070014	pyloric motor neuron	49102	1	9	0
+CL:4070015	pyloric dilator neuron	49113	1	9	0
+CL:4070016	anterior burster neuron	49124	1	9	0
+CL:4070017	lateral pyloric motor neuron	49135	1	9	0
+CL:4072001	newly formed oligodendrocyte	49146	2	9	5
+CL:4072002	myelin-forming oligodendrocyte	49158	2	8	3
+CL:4072003	mature myelinating oligodendrocyte	49171	2	8	6
+CL:4072005	A8 dopaminergic neuron	49184	2	12	0
+CL:4072006	A9 dopaminergic neuron	49196	2	17	0
+CL:4072007	A10 dopaminergic neuron	49208	2	12	0
+CL:4072008	A11 dopaminergic neuron	49220	2	12	0
+CL:4072009	A12 dopaminergic neuron	49231	2	12	0
+CL:4072010	A13 dopaminergic neuron	49243	2	12	0
+CL:4072011	A14 dopaminergic neuron	49254	2	11	0
+CL:4072012	A15 dopaminergic neuron	49265	2	12	0
+CL:4072013	A16 dopaminergic neuron	49276	3	18	0
+CL:4072014	tanycyte of vascular organ of lamina terminalis	49288	2	14	0
+CL:4072015	monocyte-derived Kupffer cell	49302	1	18	0
+CL:4072016	NPY interneuron	49313	2	13	0
+CL:4072017	agouti-related protein expressing neuron	49326	3	11	0
+CL:4072018	pacemaker neuron	49341	1	7	0
+CL:4072019	SCN pacemaker neuron	49350	1	9	0
+CL:4072021	corticotropin-releasing neuron	49361	3	20	0
+CL:4072022	Lamp5 Lhx6 GABAergic interneuron (Homo sapiens)	49374	1	23	0
+CL:4072027	sst GABAergic interneuron (Homo sapiens)	49386	1	20	0
+CL:4072029	pvalb GABAergic interneuron (Homo sapiens)	49404	1	16	0
+CL:4072031	sst chodl GABAergic interneuron (Homo sapiens)	49420	1	21	0
+CL:4072032	VIP GABAergic interneuron (Homo sapiens)	49435	1	20	0
+CL:4072034	lamp5 GABAergic interneuron (Homo sapiens)	49456	1	20	0
+CL:4072035	sncg GABAergic interneuron (Homo sapiens)	49471	1	20	0
+CL:4072036	PAX6 GABAergic interneuron (Homo sapiens)	49488	1	20	0
+CL:4072037	L2/3 intratelencephalic projecting glutamatergic neuron (Homo sapiens)	49501	2	15	0
+CL:4072038	L5 intratelencephalic projecting glutamatergic neuron (Homo sapiens)	49518	2	15	0
+CL:4072039	L4 intratelencephalic projecting glutamatergic neuron (Homo sapiens)	49535	2	15	0
+CL:4072040	L6 intratelencephalic projecting Car3 glutamatergic neuron (Homo sapiens)	49550	1	16	0
+CL:4072041	L6 intratelencephalic projecting glutamatergic neuron (Homo sapiens)	49568	2	15	0
+CL:4072042	L5/6 near-projecting glutamatergic neuron (Homo sapiens)	49585	2	14	0
+CL:4072043	L5 extratelencephalic projecting glutamatergic cortical neuron (Homo sapiens)	49601	2	16	0
+CL:4072044	L6 corticothalamic-projecting glutamatergic cortical neuron (Homo sapiens)	49623	2	14	0
+CL:4072045	L6b glutamatergic cortical neuron (Homo sapiens)	49640	2	13	0
+CL:4072046	pvalb chandelier GABAergic interneuron (Homo sapiens)	49656	1	20	0
+CL:4072102	Purkinje layer interneuron	49674	1	15	7
+CL:4072103	hair follicle dermal stem cell	49687	2	8	0
+CL:4072104	fibrochondrocyte	49703	1	11	1
+CL:4079000	cervical dorsal root ganglion CGRP neuron	49722	2	15	0
+CL:4079001	cervical dorsal root ganglion endothelin-1 neuron	49737	2	15	0
+CL:4079002	cervical dorsal root ganglion Nav1.7 neuron	49753	2	15	0
+CL:4079003	cervical dorsal root ganglion Nav1.9 neuron	49767	2	15	0
+CL:4079004	cervical dorsal root ganglion peripherin neuron	49781	2	15	0
+CL:4079005	cervical dorsal root ganglion Piezo2 neuron	49797	2	15	0
+CL:4079006	cervical dorsal root ganglion RET neuron	49812	2	15	0
+CL:4079007	cervical dorsal root ganglion substance P neuron	49827	2	15	0
+CL:4079008	cervical dorsal root ganglion TRPV1 neuron	49843	2	15	0
+CL:4079010	intrinsic cardiac ganglion TH neuron	49858	1	9	0
+CL:4079011	lumbar dorsal root ganglion CGRP neuron	49871	2	15	0
+CL:4079012	lumbar dorsal root ganglion endothelin-1 neuron	49886	2	15	0
+CL:4079013	lumbar dorsal root ganglion Nav1.7 neuron	49902	2	15	0
+CL:4079014	lumbar dorsal root ganglion Nav1.9 neuron	49916	2	15	0
+CL:4079015	lumbar dorsal root ganglion peripherin neuron	49930	2	15	0
+CL:4079016	lumbar dorsal root ganglion Piezo2 neuron	49946	2	15	0
+CL:4079017	lumbar dorsal root ganglion RET neuron	49961	2	15	0
+CL:4079018	lumbar dorsal root ganglion substance P neuron	49976	2	15	0
+CL:4079019	lumbar dorsal root ganglion TRPV1 neuron	49992	2	15	0
+CL:4079020	sacral dorsal root ganglion CGRP neuron	50007	2	15	0
+CL:4079021	sacral dorsal root ganglion endothelin-1 neuron	50022	2	15	0
+CL:4079022	sacral dorsal root ganglion Nav1.7 neuron	50038	2	15	0
+CL:4079023	sacral dorsal root ganglion Nav1.9 neuron	50052	2	15	0
+CL:4079024	sacral dorsal root ganglion peripherin neuron	50066	2	15	0
+CL:4079025	sacral dorsal root ganglion Piezo2 neuron	50082	2	15	0
+CL:4079026	sacral dorsal root ganglion RET neuron	50097	2	15	0
+CL:4079027	sacral dorsal root ganglion substance P neuron	50112	2	15	0
+CL:4079028	sacral dorsal root ganglion TRPV1 neuron	50128	2	15	0
+CL:4079029	thoracic dorsal root ganglion CGRP neuron	50143	2	15	0
+CL:4079030	thoracic dorsal root ganglion endothelin-1 neuron	50158	2	15	0
+CL:4079031	thoracic dorsal root ganglion Nav1.7 neuron	50174	2	15	0
+CL:4079032	thoracic dorsal root ganglion Nav1.9 neuron	50188	2	15	0
+CL:4079033	thoracic dorsal root ganglion peripherin neuron	50202	2	15	0
+CL:4079034	thoracic dorsal root ganglion Piezo2 neuron	50218	2	15	0
+CL:4079035	thoracic dorsal root ganglion RET neuron	50233	2	15	0
+CL:4079036	thoracic dorsal root ganglion substance P neuron	50248	2	15	0
+CL:4079037	thoracic dorsal root ganglion TRPV1 neuron	50264	2	15	0
+CL:4300028	cerebellar GABAergic neuron (Mmus)	50279	2	11	17
+CL:4300029	cerebellar glutamatergic neuron (Mmus)	50295	1	12	4
+CL:4300031	OPC-Oligo cell (Mmus)	50310	1	2	29
+CL:4300101	STR D1 Gaba direct pathway medium spiny neuron (Mmus)	50324	1	13	0
+CL:4300102	STR D2 Gaba indirect pathway medium spiny neuron (Mmus)	50339	1	13	0
+CL:4300348	DCO Il22 Gly-Gaba cerebellar neuron (Mmus)	50354	2	14	3
+CL:4300349	Purkinje layer interneuron (Mmus)	50369	2	17	4
+CL:4300351	CBX MLI Megf11 Gaba molecular layer interneuron (Mmus)	50384	2	17	2
+CL:4300353	Purkinje cell (Mmus)	50399	2	13	2
+CL:4300354	cerebellar granule cell (Mmus)	50414	2	15	2
+CL:4300358	subcortical astrocyte (Mmus)	50429	1	7	12
+CL:4300359	astrocyte of cerebrum (Mmus)	50445	1	7	17
+CL:4300360	olfactory areas astrocyte (Mmus)	50461	1	7	9
+CL:4300362	tanycyte (Mmus)	50476	1	13	10
+CL:4300363	ependymal cell (Mmus)	50491	1	12	0
+CL:4300366	oligodendrocyte precursor cell (Mmus)	50506	2	9	6
+CL:4300367	oligodendrocyte (Mmus)	50521	2	9	21
+CL:4300370	VLMC NN vascular leptomeningeal cell (Mmus)	50536	1	9	0
+CL:4301571	DCO Il22 Gly-Gaba_1 cerebellar neuron (Mmus)	50551	1	15	0
+CL:4301573	DCO Il22 Gly-Gaba_3 cerebellar neuron (Mmus)	50565	1	15	0
+CL:4301574	CB PLI Gly-Gaba_1 Purkinje layer interneuron (Mmus)	50579	1	18	0
+CL:4301575	Lugaro cell (Mmus)	50593	2	21	0
+CL:4301576	CB PLI Gly-Gaba_3 Purkinje layer interneuron (Mmus)	50608	1	18	0
+CL:4301578	cerebellar Golgi cell (Mmus)	50622	2	17	0
+CL:4301579	CBX MLI Megf11 Gaba_1 molecular layer interneuron (Mmus)	50639	1	18	0
+CL:4301580	CBX MLI Megf11 Gaba_2 molecular layer interneuron (Mmus)	50653	1	18	0
+CL:4301582	CBX Purkinje Gaba_1 Purkinje cell (Mmus)	50667	1	14	0
+CL:4301583	CBX Purkinje Gaba_2 Purkinje cell (Mmus)	50681	1	14	0
+CL:4301584	CB Granule Glut_1 cerebellar granule cell (Mmus)	50694	1	16	0
+CL:4301585	CB Granule Glut_2 cerebellar granule cell (Mmus)	50708	1	16	0
+CL:4301586	unipolar brush cell (Mmus)	50722	2	15	0
+CL:4301589	Astro-NT NN_1 astrocyte (Mmus)	50739	1	8	6
+CL:4301590	Astro-NT NN_2 astrocyte (Mmus)	50754	1	8	4
+CL:4301591	Astro-TE NN_1 astrocyte (Mmus)	50769	1	8	4
+CL:4301592	Astro-TE NN_2 astrocyte (Mmus)	50784	1	8	2
+CL:4301593	Astro-TE NN_3 astrocyte (Mmus)	50799	1	8	4
+CL:4301595	Astro-TE NN_5 astrocyte (Mmus)	50814	1	8	2
+CL:4301596	Astro-OLF NN_1 astrocyte (Mmus)	50829	1	8	2
+CL:4301597	Astro-OLF NN_2 astrocyte (Mmus)	50844	1	8	2
+CL:4301598	Astro-OLF NN_3 astrocyte (Mmus)	50859	1	8	2
+CL:4301602	Tanycyte NN_1 tanycyte (Mmus)	50874	1	14	2
+CL:4301603	Tanycyte NN_2 tanycyte (Mmus)	50889	1	14	5
+CL:4301608	choroid plexus epithelial cell (Mmus)	50904	1	14	2
+CL:4301611	commited oligodendrocyte precursor (Mmus)	50921	2	12	6
+CL:4301612	newly formed oligodendrocyte (Mmus)	50937	2	12	4
+CL:4301613	myelin-forming oligodendrocyte (Mmus)	50953	2	11	2
+CL:4301614	mature myelinating oligodendrocyte (Mmus)	50969	2	11	5
+CL:4301615	olfactory ensheathing cell (Mmus)	50985	1	6	4
+CL:4301616	arachnoid barrier cell (Mmus)	51004	1	9	3
+CL:4301625	border associated macrophage (Mmus)	51021	1	20	2
+CL:4304384	hypothalamic gonadotropin-releasing hormone neuron (Mmus)	51038	2	20	0
+CL:4306426	pinealocyte (Mmus)	51066	1	12	0
+CL:4306992	DCO Il22 Gly-Gaba_2 cerebellar neuron (Mmus)	51090	1	15	0
+CL:4307005	CB PLI GABA Ly6d Purkinje layer interneuron	51111	1	18	0
+CL:4307012	CBX MLI Cdh22 Gaba molecular layer interneuron (Mmus)	51131	2	17	0
+CL:4307026	Bergmann glial cell (Mmus)	51151	1	10	0
+CL:4307027	cerebellar astrocyte (Mmus)	51171	1	9	0
+CL:4307028	Astro-NT NN_1 Galnt15 astrocyte (Mmus)	51192	1	9	0
+CL:4307029	Astro-NT NN_1 Slc36a2 astrocyte (Mmus)	51210	1	9	0
+CL:4307030	Astro-NT NN_1 Nuf2 astrocyte (Mmus)	51228	1	9	0
+CL:4307031	Astro-NT NN_1 Six3os1 astrocyte (Mmus)	51246	1	9	0
+CL:4307032	Astro-NT NN_1 Kcnk10 astrocyte (Mmus)	51265	1	9	0
+CL:4307033	Astro-NT NN_1 Mecom astrocyte (Mmus)	51284	1	9	0
+CL:4307034	Astro-NT NN_2 Fzd2 astrocyte (Mmus)	51306	1	9	0
+CL:4307035	Astro-NT NN_2 Sez6l astrocyte (Mmus)	51325	1	9	0
+CL:4307036	Astro-NT NN_2 Fam227b astrocyte (Mmus)	51343	1	9	0
+CL:4307037	Astro-NT NN_2 Gm30524 astrocyte (Mmus)	51361	1	9	0
+CL:4307038	Astro-TE NN_1 Myoc astrocyte (Mmus)	51381	1	9	0
+CL:4307039	Astro-TE NN_1 Rasl10b astrocyte (Mmus)	51399	1	9	0
+CL:4307040	Astro-TE NN_1 Lncpint astrocyte (Mmus)	51417	1	9	0
+CL:4307041	Astro-TE NN_1 Jph4 astrocyte (Mmus)	51433	2	10	0
+CL:4307042	Astro-TE NN_2 Clstn2 astrocyte (Mmus)	51452	1	9	0
+CL:4307043	Astro-TE NN_2 Mcm6 astrocyte (Mmus)	51472	1	9	0
+CL:4307044	Astro-TE NN_3 Cxcl5 astrocyte (Mmus)	51491	1	9	0
+CL:4307045	Astro-TE NN_3 Fam163a astrocyte (Mmus)	51510	1	9	0
+CL:4307046	Astro-TE NN_3 Zic4 astrocyte (Mmus)	51527	1	9	0
+CL:4307047	Astro-TE NN_3 Crym astrocyte (Mmus)	51546	1	9	0
+CL:4307048	Astro-TE NN_4 astrocyte (Mmus)	51565	1	8	0
+CL:4307049	Astro-TE NN_5 Hs3st3a1 astrocyte (Mmus)	51585	1	9	0
+CL:4307050	Astro-TE NN_5 Adamts18 astrocyte (Mmus)	51606	1	9	0
+CL:4307051	Astro-OLF NN_1 Greb1 astrocyte (Mmus)	51627	1	9	0
+CL:4307052	Astro-OLF NN_1 Stk32a astrocyte (Mmus)	51645	1	9	0
+CL:4307053	Astro-OLF NN_2 Slc25a34 astrocyte (Mmus)	51664	1	9	0
+CL:4307054	Astro-OLF NN_2 Alk astrocyte (Mmus)	51683	1	9	0
+CL:4307055	Astro-OLF NN_3 Ecrg4 astrocyte (Mmus)	51702	1	9	0
+CL:4307056	Astro-OLF NN_3 Sfrp1 astrocyte (Mmus)	51719	1	9	0
+CL:4307063	Tanycyte NN_1 Cnmd tanycyte of subfornical organ (Mmus)	51737	2	16	0
+CL:4307064	Tanycyte NN_1 Glp1r tanycyte (Mmus)	51756	1	15	0
+CL:4307065	Tanycyte NN_2 Mylk3 alpha1-tanycyte (Mmus)	51774	3	18	0
+CL:4307066	Tanycyte NN_2 Mroh5 alpha1-tanycyte (Mmus)	51794	2	16	0
+CL:4307067	alpha2-tanycyte (Mmus)	51815	2	16	0
+CL:4307068	Tanycyte NN_2 Otx2 tanycyte (Mmus)	51834	1	15	0
+CL:4307069	beta1-tancyte (Mmus)	51853	2	18	0
+CL:4307070	beta-2 tanycyte (Mmus)	51873	2	15	0
+CL:4307083	hypendemal cell (Mmus)	51895	1	8	0
+CL:4307084	CHOR NN_1 Tbc1d1 choroid plexus epithelial cell (Mmus)	51919	1	15	0
+CL:4307085	CHOR NN_1 Slc17a8 choroid plexus epithelial cell (Mmus)	51938	2	18	0
+CL:4307086	OPC NN_1 Neil3 oligodendrocyte precursor cell (Mmus)	51958	1	10	0
+CL:4307087	OPC NN_1 Irx2 oligodendrocyte precursor cell (Mmus)	51974	1	10	0
+CL:4307088	OPC NN_1 Mms22l oligodendrocyte precursor cell (Mmus)	51993	1	10	0
+CL:4307089	OPC NN_1 Col27a1 oligodendrocyte precursor cell (Mmus)	52010	1	10	0
+CL:4307090	OPC NN_1 Rmi2 oligodendrocyte precursor cell (Mmus)	52027	1	10	0
+CL:4307091	OPC NN_2 oligodendrocyte precursor cell (Mmus)	52045	1	10	0
+CL:4307092	COP NN_1 Rgcc committed oligodendrocyte precursor (Mmus)	52062	1	13	0
+CL:4307093	COP NN_1 9130019P16Rik committed oligodendrocyte precursor (Mmus)	52078	1	13	0
+CL:4307094	COP NN_1 C1ql1 committed oligodendrocyte precursor (Mmus)	52094	1	13	0
+CL:4307095	COP NN_1 Bmp4 committed oligodendrocyte precursor (Mmus)	52109	1	13	0
+CL:4307096	COP NN_1 Vwc2 committed oligodendrocyte precursor (Mmus)	52124	1	13	0
+CL:4307097	COP NN_1 Cck committed oligodendrocyte precursor (Mmus)	52139	1	13	0
+CL:4307098	NFOL NN_2 9630013A20Rik newly formed oligodendrocyte (Mmus)	52156	1	13	0
+CL:4307099	NFOL NN_2 Dbx2 newly formed oligodendrocyte (Mmus)	52173	1	13	0
+CL:4307100	NFOL NN_2 Rgs16 newly formed oligodendrocyte (Mmus)	52189	1	13	0
+CL:4307101	NFOL NN_2 Il23a newly formed oligodendrocyte (Mmus)	52205	1	13	0
+CL:4307102	MFOL NN_3 Cxcl12 myelin-forming oligodendrocyte (Mmus)	52221	1	12	0
+CL:4307103	MFOL NN_3 Il23a myelin-forming oligodendrocyte (Mmus)	52237	1	12	0
+CL:4307104	MOL NN_4 Plin3 mature myelinating oligodendrocyte (Mmus)	52254	1	12	0
+CL:4307105	MOL NN_4 Spock3 mature myelinating oligodendrocyte (Mmus)	52270	1	12	0
+CL:4307106	MOL NN_4 Art3 mature myelinating oligodendrocyte (Mmus)	52287	1	12	0
+CL:4307107	MOL NN_4 Il33 mature myelinating oligodendrocyte (Mmus)	52304	1	12	0
+CL:4307108	MOL NN_4 Sspo mature myelinating oligodendrocyte (Mmus)	52320	1	12	0
+CL:4307109	OEC NN_1 Adamts12 olfactory ensheathing cell (Mmus)	52336	1	7	0
+CL:4307110	OEC NN_1 Gdpd4 olfactory ensheathing cell (Mmus)	52352	1	7	0
+CL:4307111	OEC NN_1 A330076C08Rik olfactory ensheathing cell (Mmus)	52368	1	7	0
+CL:4307112	OEC NN_1 Rasgef1c olfactory ensheathing cell (Mmus)	52386	2	8	0
+CL:4307113	ABC NN_1 Pde11a arachnoid barrier cell (Mmus)	52403	1	10	0
+CL:4307114	ABC NN_1 Dapl1 arachnoid barrier cell (Mmus)	52418	1	10	0
+CL:4307115	ABC NN_1 Cubn arachnoid barrier cell (Mmus)	52433	1	10	0
+CL:4307132	microglial cell (Mmus)	52448	1	22	0
+CL:4307133	BAM NN_1 Mrc1 border associated macrophage (Mmus)	52468	1	21	0
+CL:4307134	BAM NN_1 Fos border associated macrophage (Mmus)	52485	1	21	0
+CL:4310056	SN PAX7 GABA GABAergic neuron (Primate)	52502	1	9	2
+CL:4310058	STR D1 MSN direct pathway medium spiny neuron (Primate)	52515	1	13	3
+CL:4310059	STR D2 MSN indirect pathway medium spiny neuron (Primate)	52528	1	13	4
+CL:4310083	GPin-BF Cholinergic GABA GABA-Chol neuron (Primate)	52541	1	11	0
+CL:4310084	LAMP5-CXCL14 GABA lamp5 GABAergic interneuron (Primate)	52556	1	20	0
+CL:4310085	LAMP5-LHX6 GABA Lamp5 Lhx6 neuron (Primate)	52573	1	23	0
+CL:4310088	BF SKOR1 Glut glutamatergic neuron of the basal ganglia (Primate)	52589	2	13	0
+CL:4310093	GPe MEIS2-SOX6 GABA arkypallidal neuron (Primate)	52605	1	13	0
+CL:4310094	GPe SOX6-CTXND1 GABA prototypic neuron (Primate)	52622	1	12	0
+CL:4310095	GPi Core internal globus pallidus core projecting neuron (Primate)	52638	1	12	0
+CL:4310096	GPi Shell internal globus pallidus shell projection neuron (Primate)	52654	1	12	0
+CL:4310100	GPe-NDB-SI LHX6-LHX8-GBX1 GABA GABAergic interneuron (Primate)	52673	1	13	0
+CL:4310104	OT D1 ICj Islands of Calleja granule cell (Primate)	52688	1	14	0
+CL:4310109	SN-VTR CALB1 Dopa substantia nigra dopaminergic neuron (Primate)	52705	1	14	0
+CL:4310110	SN EBF2 GABA GABAergic interneuron (Primate)	52720	2	14	0
+CL:4310111	SN-VTR GAD2 Dopa dopaminergic neuron (Primate)	52736	1	14	0
+CL:4310112	SN GATA3-PAX8 GABA GABAergic interneuron (Primate)	52752	1	13	0
+CL:4310113	SN GATA3-PVALB GABA GABAergic neuron (Primate)	52768	1	9	0
+CL:4310114	SN SEMA5A GABA GABAergic interneuron (Primate)	52784	2	14	0
+CL:4310115	SN SOX6 Dopa substantia nigra dopaminergic neuron (Primate)	52801	1	14	0
+CL:4310117	SN-VTR-HTH GATA3-TCF7L2 GABA GABAergic interneuron (Primate)	52816	1	13	0
+CL:4310118	STH PVALB-PITX2 Glut glutamatergic neuron of the basal ganglia (Primate)	52830	2	13	0
+CL:4310120	STR FS PTHLH-PVALB GABA striatal pthlh-expressing interneuron (Primate)	52845	1	16	0
+CL:4310121	STR LYPD6-RSPO2 GABA GABAergic interneuron (Primate)	52862	1	13	0
+CL:4310122	STR SST-ADARB2 GABA sst GABAergic interneuron (Primate)	52876	1	20	0
+CL:4310123	STR SST-CHODL GABA sst chodl GABAergic interneuron (Primate)	52891	1	21	0
+CL:4310124	STR SST-RSPO2 GABA sst GABAergic interneuron (Primate)	52908	1	20	0
+CL:4310125	STR TAC3-PLPP4 GABA TAC3-positive striatal interneuron (Primate)	52922	1	16	0
+CL:4310126	STR-BF TAC3-PLPP4-LHX8 GABA TAC3-positive striatal interneuron (Primate)	52938	1	16	0
+CL:4310127	VIP GABA VIP GABAergic interneuron (Primate)	52952	1	20	0
+CL:4310128	STRd Cholinergic GABA dorso-striatal cholinergic-GABAergic neuron (Primate)	52969	1	18	0
+CL:4310129	STRd D1 Matrix MSN matrix D1 medium spiny neuron (Primate)	52983	2	17	0
+CL:4310130	STRd D1 Striosome MSN striosomal D1 medium spiny neuron (Primate)	53000	2	17	0
+CL:4310131	STR D1D2 Hybrid MSN D1/D2-hybrid medium spiny neuron (Primate)	53017	1	15	0
+CL:4310132	STRd D2 Matrix MSN matrix D2 medium spiny neuron (Primate)	53033	2	17	0
+CL:4310133	STRd D2 StrioMat Hybrid MSN indirect pathway medium spiny neuron (Primate)	53050	1	14	0
+CL:4310134	STRd D2 Striosome MSN striosomal D2 medium spiny neuron (Primate)	53064	2	17	0
+CL:4310135	STR Cholinergic GABA striatal cholinergic-GABAergic neuron (Primate)	53081	1	18	0
+CL:4310136	STRv D1 MSN nucleus accumbens shell and olfactory tubercle D1 medium spiny neuron (Primate)	53095	2	17	0
+CL:4310137	STRv D1 NUDAP MSN D1-NUDAP medium spiny neuron (Primate)	53112	2	16	0
+CL:4310138	STRv D2 MSN nucleus accumbens shell and olfactory tubercle D2 medium spiny neuron (Primate)	53129	2	17	0
+CL:4310143	ZI-HTH GABA GABAergic interneuron (Primate)	53146	1	13	0
+CL:4310144	VTR-HTH Glut glutamatergic neuron of the basal ganglia (Primate)	53160	2	13	0
+CL:4310145	AMY-SLEA-BNST D1 GABA GABAergic interneuron (Primate)	53179	1	13	0
+CL:4310146	AMY-SLEA-BNST GABA GABAergic interneuron (Primate)	53193	1	13	0
+CL:4310147	OB Dopa-GABA OB-Dopa-GABA (Primate)	53207	1	15	0
+CL:4310148	OB FRMD7 GABA GABAergic neuron (Primate)	53221	1	9	0
+CL:7770002	juxtacanalicular tissue cell	53235	3	7	0
+CL:7770003	beam A cell	53250	1	8	0
+CL:7770004	suprabasal cell	53261	1	3	2
+CL:7770005	beam cell	53271	2	7	1
+CL:7770006	beam B cell, human	53283	2	4	0

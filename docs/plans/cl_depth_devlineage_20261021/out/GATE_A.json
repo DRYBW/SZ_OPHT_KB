@@ -1,0 +1,88 @@
+{
+ "gate": "A",
+ "name": "ontology navigation",
+ "verdict": "PASS",
+ "ontology": {
+  "path": "/mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo",
+  "release": "releases/2026-06-08",
+  "sha256": "7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f"
+ },
+ "rules": {
+  "A1": "ontology source identity",
+  "A2": "id -> file line + label",
+  "A3": "ancestor closure",
+  "A4": "four-way table reproduces from the ontology",
+  "A5": "child-term candidates",
+  "A6": "label map provenance",
+  "A7": "cross-file agreement",
+  "A8": "no CL id absent from the file",
+  "A9": "artefact manifest + replay ledger"
+ },
+ "n_checks": 9,
+ "n_fail": 0,
+ "checks": [
+  {
+   "code": "A1 ONT_SOURCE",
+   "status": "PASS",
+   "detail": "ontology=/mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo release=releases/2026-06-08 sha256=7e19b4aef8e7...",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "A8 NO_MEMORY_ID",
+   "status": "PASS",
+   "detail": "distinct CL ids named in artefacts: 3338; absent from the ontology file: 0; CL-namespace relation ids (not cell types, disclosed): 3",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "A2 ID_TRACE",
+   "status": "PASS",
+   "detail": "ids in label/line-pairing artefacts traced to the file",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "A3 CLOSURE",
+   "status": "PASS",
+   "detail": "terms=3335 mismatched=0 self-ancestors=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "A4 CLASSIFY",
+   "status": "PASS",
+   "detail": "rows=721 cells=1495330 verdicts={'no_mapping': 368177, 'same_term': 480120, 'true_mismatch': 268391, 'we_are_coarser': 342552, 'we_are_finer': 36090}",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "A5 CANDIDATES",
+   "status": "PASS",
+   "detail": "candidates=56 with_support=25",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "A6 LABELMAP",
+   "status": "PASS",
+   "detail": "labels=80 mapped=65",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "A7 CROSSFILE",
+   "status": "PASS",
+   "detail": "shared=3531 name_diff=0 is_a_diff=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "A9 REPLAY",
+   "status": "PASS",
+   "detail": "manifest=out/MANIFEST.sha256 ledger=ledgers/REPLAY.txt",
+   "n_offenders": 0,
+   "offenders": []
+  }
+ ]
+}

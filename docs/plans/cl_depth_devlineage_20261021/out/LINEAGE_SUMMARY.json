@@ -1,0 +1,74 @@
+{
+ "generated_by": "scripts/b1_build_lineage.py",
+ "ontology": {
+  "path": "/mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo",
+  "release": "releases/2026-06-08",
+  "sha256": "7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f"
+ },
+ "inputs": {
+  "label_map": "out/ONT_LABELMAP_V2.tsv",
+  "panels": [
+   "markers_v4.1_clean.json",
+   "markers_v5_retina_interneuron.json",
+   "markers_v6_retina_repair.json",
+   "markers_v6_face_increment.json",
+   "markers_v6_lacrimal_increment.json",
+   "markers_v7_panel_increment.json",
+   "markers_k9_ocs_increment.json",
+   "markers_membrane_v1.json",
+   "markers_v8_dev_retina.json",
+   "markers_v9_dev_retina.json",
+   "markers_v10_antseg_increment.json",
+   "markers_v11_lensiris_increment.json"
+  ],
+  "corpus_gene_index": "out/CORPUS_GENE_INDEX.tsv",
+  "corpus_cooccurrence": "out/CORPUS_GERMLAYER_COOCCURRENCE.tsv",
+  "baselines_for_stage_check": [
+   "RPE.json",
+   "ciliary_body.json",
+   "lacrimal_gland.json",
+   "ocular_surface.json",
+   "optic_nerve.json",
+   "retina.json",
+   "trabecular_meshwork.json"
+  ],
+  "evaluation_volumes_used": []
+ },
+ "nodes": 60,
+ "roots": 44,
+ "roots_expected_from_disclosure": 44,
+ "library_class_nodes": 52,
+ "germ_layer_nodes": 8,
+ "edges": 34,
+ "edge_types": {
+  "develops_from_direct": 5,
+  "develops_from_transitive": 4,
+  "germ_layer_membership": 25
+ },
+ "germ_layer_tiers": {
+  "corpus_cooccurrence_weak": 12,
+  "unresolved": 36,
+  "ontology_chain": 13
+ },
+ "unresolved_classes": 36,
+ "marker_rows": 100,
+ "marker_support": {
+  "corpus_supported": 100
+ },
+ "edges_with_supported_transition": 2,
+ "edges_by_transition_status": {
+  "parent_panel_absent": 3,
+  "not_stepwise_relation": 4,
+  "has_supported_transition": 2,
+  "not_applicable_membership": 25
+ },
+ "stage_crossing_edges": 31,
+ "developing_nodes_in_adult_baseline": [],
+ "files": {
+  "nodes": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_NODES.tsv",
+  "edges": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_EDGES.tsv",
+  "germ_layer": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_GERM_LAYER.tsv",
+  "marker_transitions": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_MARKER_TRANSITIONS.tsv",
+  "unresolved": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_UNRESOLVED_DEVELOPMENT.tsv"
+ }
+}

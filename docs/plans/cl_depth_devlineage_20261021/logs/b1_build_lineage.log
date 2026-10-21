@@ -1,0 +1,15 @@
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_NODES.tsv  (60 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_EDGES.tsv  (34 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_GERM_LAYER.tsv  (61 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_MARKER_TRANSITIONS.tsv  (100 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_UNRESOLVED_DEVELOPMENT.tsv  (36 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_SUMMARY.json
+
+=== lineage at a glance ===
+  nodes 60 (library classes 52, germ layers 8), roots 44
+  edges 34 {'develops_from_direct': 5, 'develops_from_transitive': 4, 'germ_layer_membership': 25}
+  germ-layer rows: {'corpus_cooccurrence_weak': 12, 'unresolved': 36, 'ontology_chain': 13}
+  marker rows 100 {'corpus_supported': 100}
+  edges with at least one corpus-supported transition: 2
+  classes with no developmental evidence locally: 36
+  developing nodes found in an adult baseline: []

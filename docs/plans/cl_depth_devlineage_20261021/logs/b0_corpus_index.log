@@ -1,0 +1,28 @@
+Running as unit: cl_depth_b0.service; invocation ID: f4169c07a0d94cb7a717a5aea9b09b58
+term queries: 249 phrases over 125 keys
+gene queries: 731 symbols
+prefilter: 102 trigger tokens over 249 phrases
+  scanned 20000 chunks
+  scanned 40000 chunks
+  scanned 60000 chunks
+  scanned 80000 chunks
+  scanned 100000 chunks
+  scanned 120000 chunks
+  scanned 140000 chunks
+  scanned 160000 chunks
+  scanned 180000 chunks
+  scanned 200000 chunks
+  scanned 220000 chunks
+  scanned 240000 chunks
+  scanned 244877 chunks
+scanned 244877 chunks; papers with metadata: 3917
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_TERM_INDEX.tsv  (116 term rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_GENE_INDEX.tsv  (722 genes with at least one corpus hit)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_INDEX_META.json
+  term keys with no corpus hit: 43
+  genes with no corpus hit    : 9
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 9.224s
+             CPU time consumed: 1min 15.251s
+                   Memory peak: 298.2M (swap: 0B)

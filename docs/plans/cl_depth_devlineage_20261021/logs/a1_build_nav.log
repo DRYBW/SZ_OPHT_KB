@@ -1,0 +1,21 @@
+ontology: /mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo
+  sha256   : 7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f
+  release  : releases/2026-06-08   (format-version 1.2)
+  CL terms : 3531 blocks / 3335 active / 196 obsolete
+  CL-namespace typedefs (not cell types): 3
+second file: /mnt/D/OcularKB/ocularkb/rag/ontology/cl-base.obo
+  release cl/releases/2026-06-08/cl-base.owl  terms 3531/3335 active
+  shared ids 3531; name disagreements 0; is_a disagreements 0
+germ-layer anchors resolved from the file:
+  mesoderm                 mesodermal cell          -> CL:0000222 mesodermal cell  (name, descendants=7)
+  ectoderm                 ectodermal cell          -> CL:0000221 ectodermal cell  (name, descendants=3)
+  neural_ectoderm          neurectodermal cell      -> CL:0000133 neurectodermal cell  (name, descendants=1)
+  neural_crest             neural crest cell        -> CL:0011012 neural crest cell  (name, descendants=9)
+  surface_ectoderm         surface ectodermal cell  -> CL:0000114 surface ectodermal cell  (name, descendants=0)
+  mesenchyme               mesenchyme cell          -> CL:0008019 mesenchymal cell  (synonym, descendants=13)
+  endoderm                 endodermal cell          -> CL:0000223 endodermal cell  (name, descendants=1)
+  hematopoietic_stem_cell  hematopoietic stem cell  -> CL:0000037 hematopoietic stem cell  (name, descendants=11)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_CLOSURE_is_a.tsv  (3335 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_LABELMAP_V2.tsv  (80 labels; mapped 65; unresolved 15)
+  no CL term: ['AC_precursor', 'APC_MHCII_high', 'BC_precursor', 'Cone_precursor', 'HC_precursor', 'Lacrimal_duct_epithelial', 'NRPC_early', 'NRPC_late', 'Proliferating', 'RGC_precursor', 'Retinal_Proliferating', 'Rod_precursor', 'TAC_proliferating', 'TAC_transit_amplifying', 'glia_precursor']
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_NAV_v1.json

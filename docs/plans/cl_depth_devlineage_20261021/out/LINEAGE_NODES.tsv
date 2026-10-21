@@ -1,0 +1,61 @@
+node_id	kind	cl_id	cl_label	obo_line	stage_scope	stage_token	our_label_stage_hints	our_labels	n_panel_genes	panel_files	n_inbound_edges	germ_layer_tiers	in_adult_baseline_keys	root
+CL:0000037	germ_layer	CL:0000037	hematopoietic stem cell	710	developing	germ layer anchor			0		0			yes
+CL:0000057	library_class	CL:0000057	fibroblast	1094	adult_or_unspecified			Fibroblast,Limbus_Sclera_fibroblast_C1	13	markers_k9_ocs_increment.json,markers_membrane_v1.json,markers_v6_face_increment.json	2	mesenchyme=corpus_cooccurrence_weak;neural_crest=corpus_cooccurrence_weak	Fibroblast,fibroblast	no
+CL:0000084	library_class	CL:0000084	T cell	1497	adult_or_unspecified			T	11	markers_membrane_v1.json	1	hematopoietic_stem_cell=corpus_cooccurrence_weak	T cell	no
+CL:0000094	library_class	CL:0000094	granulocyte	1655	adult_or_unspecified			Granulocyte	13	markers_membrane_v1.json	0			yes
+CL:0000097	library_class	CL:0000097	mast cell	1743	adult_or_unspecified			mast cell	11	markers_v10_antseg_increment.json	0		mast cell	yes
+CL:0000114	germ_layer	CL:0000114	surface ectodermal cell	2006	developing	germ layer anchor			0		0			yes
+CL:0000115	library_class	CL:0000115	endothelial cell	2022	adult_or_unspecified			Endo,Endo_Arterial,Endo_Patho	25	markers_membrane_v1.json,markers_v7_panel_increment.json	2	mesoderm=ontology_chain	endothelial cell	no
+CL:0000127	library_class	CL:0000127	astrocyte	2210	adult_or_unspecified			Astro	6	markers_v4.1_clean.json,markers_v5_retina_interneuron.json,markers_v6_retina_repair.json	0		astrocyte	yes
+CL:0000128	library_class	CL:0000128	oligodendrocyte	2226	adult_or_unspecified			oligodendrocyte	18	markers_v10_antseg_increment.json	3	ectoderm=ontology_chain;neural_ectoderm=ontology_chain	oligodendrocyte	no
+CL:0000129	library_class	CL:0000129	microglial cell	2246	adult_or_unspecified			Micro,Microglia	15	markers_membrane_v1.json,markers_v4.1_clean.json,markers_v5_retina_interneuron.json,markers_v6_retina_repair.json,markers_v7_panel_increment.json	2	mesoderm=ontology_chain	Microglia	no
+CL:0000132	library_class	CL:0000132	corneal endothelial cell	2303	adult_or_unspecified			Corneal Endothelium,corneal endothelial cell	22	markers_membrane_v1.json,markers_v10_antseg_increment.json	1	neural_crest=corpus_cooccurrence_weak	Corneal Endothelium	no
+CL:0000133	germ_layer	CL:0000133	neurectodermal cell	2321	developing	germ layer anchor			0		0			yes
+CL:0000148	library_class	CL:0000148	melanocyte	2539	adult_or_unspecified			Melanocyte	10	markers_k9_ocs_increment.json	4	ectoderm=ontology_chain;neural_crest=ontology_chain;neural_ectoderm=ontology_chain	Melanocyte,melanocyte	no
+CL:0000160	library_class	CL:0000160	goblet cell	2710	adult_or_unspecified			goblet cell	20	markers_v10_antseg_increment.json	0			yes
+CL:0000185	library_class	CL:0000185	myoepithelial cell	3109	adult_or_unspecified			Lacrimal_myoepithelial	0	markers_v6_lacrimal_increment.json	0			yes
+CL:0000186	library_class	CL:0000186	myofibroblast cell	3125	adult_or_unspecified			Myofibroblast	12	markers_membrane_v1.json,markers_v6_face_increment.json	1	mesenchyme=corpus_cooccurrence_weak		no
+CL:0000192	library_class	CL:0000192	smooth muscle cell	3215	adult_or_unspecified			SMC	8	markers_membrane_v1.json,markers_v6_face_increment.json,markers_v7_panel_increment.json	0			yes
+CL:0000221	germ_layer	CL:0000221	ectodermal cell	3566	developing	germ layer anchor			0		0			yes
+CL:0000222	germ_layer	CL:0000222	mesodermal cell	3581	developing	germ layer anchor			0		0			yes
+CL:0000223	germ_layer	CL:0000223	endodermal cell	3599	developing	germ layer anchor			0		0			yes
+CL:0000235	library_class	CL:0000235	macrophage	3774	adult_or_unspecified			Mac_DAM_LAM,Mac_Tissue,Macrophage	38	markers_membrane_v1.json,markers_v7_panel_increment.json	0		Macrophage,macrophage	yes
+CL:0000236	library_class	CL:0000236	B cell	3803	adult_or_unspecified			B	7	markers_membrane_v1.json	1	hematopoietic_stem_cell=corpus_cooccurrence_weak	B cell	no
+CL:0000315	library_class	CL:0000315	tear secreting cell	4492	adult_or_unspecified			Lacrimal_secretory_tearcell	0	markers_v6_lacrimal_increment.json	0		Lacrimal_secretory_tearcell	yes
+CL:0000529	library_class	CL:0000529	pigmented epithelial cell	6749	adult_or_unspecified			pigmented epithelial cell	30	markers_v11_lensiris_increment.json	0			yes
+CL:0000561	library_class	CL:0000561	amacrine cell	7359	adult_or_unspecified			AC	49	markers_v4.1_clean.json,markers_v5_retina_interneuron.json,markers_v6_retina_repair.json	0		AC	yes
+CL:0000573	library_class	CL:0000573	retinal cone cell	7531	adult_or_unspecified			Cone	5	markers_v4.1_clean.json,markers_v5_retina_interneuron.json,markers_v6_retina_repair.json	4	ectoderm=ontology_chain;neural_ectoderm=ontology_chain	Cone	no
+CL:0000575	library_class	CL:0000575	corneal epithelial cell	7562	adult_or_unspecified			corneal epithelial cell	30	markers_v10_antseg_increment.json	0			yes
+CL:0000604	library_class	CL:0000604	retinal rod cell	8048	adult_or_unspecified			Rod	5	markers_v4.1_clean.json,markers_v5_retina_interneuron.json,markers_v6_retina_repair.json	4	ectoderm=ontology_chain;neural_ectoderm=ontology_chain	Rod	no
+CL:0000623	library_class	CL:0000623	natural killer cell	8368	adult_or_unspecified			NK	7	markers_membrane_v1.json	0			yes
+CL:0000636	library_class	CL:0000636	Mueller cell	8571	adult_or_unspecified			MG	6	markers_v4.1_clean.json,markers_v5_retina_interneuron.json,markers_v6_retina_repair.json	0		MG	yes
+CL:0000646	library_class	CL:0000646	basal cell	8693	developing	stem cell		basal cell	30	markers_v10_antseg_increment.json	0			yes
+CL:0000669	library_class	CL:0000669	pericyte	9009	adult_or_unspecified			Pericyte	14	markers_membrane_v1.json,markers_v6_face_increment.json,markers_v7_panel_increment.json	0		Pericyte,pericyte	yes
+CL:0000740	library_class	CL:0000740	retinal ganglion cell	9787	adult_or_unspecified			RGC	6	markers_v4.1_clean.json,markers_v5_retina_interneuron.json,markers_v6_retina_repair.json	1	neural_crest=corpus_cooccurrence_weak	RGC	no
+CL:0000745	library_class	CL:0000745	retina horizontal cell	9857	adult_or_unspecified			HC	31	markers_v4.1_clean.json,markers_v5_retina_interneuron.json,markers_v6_retina_repair.json	0		HC	yes
+CL:0000748	library_class	CL:0000748	retinal bipolar neuron	9922	adult_or_unspecified			BC	51	markers_v4.1_clean.json,markers_v5_retina_interneuron.json,markers_v6_retina_repair.json	0		BC	yes
+CL:0000784	library_class	CL:0000784	plasmacytoid dendritic cell	10574	adult_or_unspecified			pDC	9	markers_membrane_v1.json	0			yes
+CL:0000786	library_class	CL:0000786	plasma cell	10627	adult_or_unspecified			Plasma	9	markers_membrane_v1.json	1	mesenchyme=corpus_cooccurrence_weak		no
+CL:0000860	library_class	CL:0000860	classical monocyte	12212	adult_or_unspecified			Mono_Classical	11	markers_membrane_v1.json	0			yes
+CL:0000875	library_class	CL:0000875	non-classical monocyte	12498	adult_or_unspecified			Mono_Nonclassical	5	markers_membrane_v1.json	0			yes
+CL:0000990	library_class	CL:0000990	conventional dendritic cell	14754	adult_or_unspecified			cDC1,cDC2	14	markers_membrane_v1.json	0			yes
+CL:0002144	library_class	CL:0002144	capillary endothelial cell	19278	adult_or_unspecified			Endo_Capillary	4	markers_v7_panel_increment.json	0			yes
+CL:0002223	library_class	CL:0002223	anterior lens cell	20416	adult_or_unspecified			anterior lens cell	28	markers_v11_lensiris_increment.json	0			yes
+CL:0002224	library_class	CL:0002224	lens epithelial cell	20431	adult_or_unspecified			lens epithelial cell	30	markers_v10_antseg_increment.json	0			yes
+CL:0002225	library_class	CL:0002225	secondary lens fiber	20450	adult_or_unspecified			secondary lens fiber	30	markers_v11_lensiris_increment.json	0			yes
+CL:0002303	library_class	CL:0002303	pigmented ciliary epithelial cell	21606	adult_or_unspecified			pigmented ciliary epithelial cell	24	markers_v10_antseg_increment.json	0			yes
+CL:0002304	library_class	CL:0002304	non-pigmented ciliary epithelial cell	21625	adult_or_unspecified			non-pigmented ciliary epithelial cell	26	markers_v10_antseg_increment.json	0			yes
+CL:0002363	library_class	CL:0002363	keratocyte	22629	adult_or_unspecified			Keratocytes	3	markers_membrane_v1.json,markers_v6_face_increment.json	2	mesenchyme=corpus_cooccurrence_weak;neural_crest=corpus_cooccurrence_weak		no
+CL:0002367	library_class	CL:0002367	trabecular meshwork cell	22705	adult_or_unspecified			trabecular meshwork cell	30	markers_v10_antseg_increment.json	0			yes
+CL:0002543	library_class	CL:0002543	vein endothelial cell	25312	adult_or_unspecified			Endo_Venous	4	markers_v7_panel_increment.json	0			yes
+CL:0002565	library_class	CL:0002565	iris pigment epithelial cell	25632	adult_or_unspecified			iris pigment epithelial cell	24	markers_v10_antseg_increment.json	0			yes
+CL:0002573	library_class	CL:0002573	Schwann cell	25742	adult_or_unspecified			Schwann	4	markers_k9_ocs_increment.json	0		Schwann cell	yes
+CL:0002586	library_class	CL:0002586	retinal pigment epithelial cell	25928	adult_or_unspecified		RPE_fetal:fetal	RPE,RPE_fetal	10	markers_v4.1_clean.json,markers_v5_retina_interneuron.json,markers_v6_retina_repair.json,markers_v9_dev_retina.json	2	mesenchyme=corpus_cooccurrence_weak;neural_crest=corpus_cooccurrence_weak	RPE	no
+CL:0002672	library_class	CL:0002672	retinal progenitor cell	27093	developing	progenitor		RPC_early,RPC_late	45	markers_v8_dev_retina.json,markers_v9_dev_retina.json	3	ectoderm=ontology_chain;neural_ectoderm=ontology_chain		no
+CL:0008019	germ_layer	CL:0008019	mesenchymal cell	29475	developing	germ layer anchor			0		0			yes
+CL:0009010	library_class	CL:0009010	transit amplifying cell	30071	developing	transit amplifying	transit amplifying cell:transit amplifying	transit amplifying cell	30	markers_v10_antseg_increment.json	0			yes
+CL:0011004	library_class	CL:0011004	lens fiber cell	32066	adult_or_unspecified			lens fiber cell	30	markers_v10_antseg_increment.json	0			yes
+CL:0011012	germ_layer	CL:0011012	neural crest cell	32156	developing	germ layer anchor			0		0			yes
+CL:0011026	library_class	CL:0011026	progenitor cell	32330	developing	progenitor	progenitor cell:progenitor	progenitor cell	30	markers_v10_antseg_increment.json	0			yes
+CL:1000432	library_class	CL:1000432	conjunctival epithelial cell	36246	adult_or_unspecified			Conj_epithelium_basal,Conj_epithelium_superficial,Conj_epithelium_suprabasal,conjunctival epithelial cell	30	markers_k9_ocs_increment.json,markers_v10_antseg_increment.json,markers_v6_face_increment.json	0			yes
+CL:1000443	library_class	CL:1000443	ciliary muscle cell	36354	adult_or_unspecified			ciliary muscle cell	11	markers_v10_antseg_increment.json	0			yes

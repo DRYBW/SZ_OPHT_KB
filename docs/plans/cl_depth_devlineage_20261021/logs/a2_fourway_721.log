@@ -1,0 +1,53 @@
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GRANULARITY_FOURWAY_721.tsv  (721 rows)
+
+=== reconciliation with the external tester's 13 pairs (section 5-2 of his report) ===
+our class   their label                        his cells our cells clusters  our verdict / path
+Endo        blood vessel endothelial cell          23948     23948        7  we_are_coarser | CL:0000071 -> CL:0002139 -> CL:0000115
+Mac_Tissue  macrophage                             23468     23468        6  same_term 
+BC          rod bipolar cell                       19682     23484        8  we_are_coarser | CL:0000751 -> CL:0000749 -> CL:0000748
+Endo        endothelial cell                       18780     20155       11  same_term 
+Endo        fenestrated endothelial cell            9456      9456        3  we_are_coarser | CL:0000666 -> CL:0000115
+Endo        endothelial cell of artery              6987      6987        1  we_are_coarser | CL:1000413 -> CL:0000071 -> CL:0002139 -> CL:0000115
+Endo        endothelial cell of venule              5261      5261        1  we_are_coarser | CL:1000414 -> CL:0000071 -> CL:0002139 -> CL:0000115
+NK          natural killer cell                     4378      4378        1  same_term 
+BC          OFFx cell                               4062      4062        3  we_are_coarser | CL:4033036 -> CL:0000750 -> CL:0000748
+BC          ON-blue cone bipolar cell               2837      2837        1  we_are_coarser | CL:4033019 -> CL:0000749 -> CL:0000748
+Astro       glial cell                               492       492        1  we_are_finer | CL:0000127 -> CL:0000126 -> CL:0000125
+Endo        endothelial cell of vascular tree        205       205        1  we_are_coarser | CL:0002139 -> CL:0000115
+SMC         smooth muscle cell                       116      1967        2  same_term 
+TOTAL                                             119672    126700       46
+
+=== (our class, their class) over the recorded 721 clusters ===
+cells total: 1495330
+verdict          clusters    cells  %cells
+same_term             212   480120   32.1%
+we_are_coarser        150   342552   22.9%
+we_are_finer           15    36090    2.4%
+true_mismatch         151   268391   17.9%
+no_mapping            193   368177   24.6%
+  no_mapping by side: {'ours': 368177}
+    ours_abstain                         180 clusters    347690 cells
+    ours_candidate_without_cl_term        13 clusters     20487 cells
+
+=== family regex (the reading that produced the 8.0%) ===
+  family_consistent        297 clusters    624029 cells (41.7%)
+  family_inconsistent      222 clusters    451272 cells (30.2%)
+  family_other             202 clusters    420029 cells (28.1%)
+
+=== of the family-inconsistent mass, what it actually is ===
+  same CL term (pure naming)      :     49109 cells (3.3% of all cells, 10.9% of the inconsistent mass)
+  granularity (we coarser/finer)  :    131487 cells (8.8% of all cells, 29.1% of the inconsistent mass)
+  survives as a real disagreement :    217976 cells (14.6% of all cells, 48.3% of the inconsistent mass)
+  no mapping on one side          :     52700 cells
+  family-inconsistent total       :    451272 cells (30.2% of all cells)
+  his headline: 43 clusters / 119672 cells (8.0% of 1495330) are the same cell under ontology authority
+  our reading : 60 clusters / 180596 cells (12.1%) = same-term 49109 + granularity 131487
+
+=== agreement readings on the same 721 clusters ===
+  family regex   : 41.73% of cells
+  ontology, same term only        : 32.11% of cells
+  ontology, same term of judged   : 42.60% (1127153 judged cells)
+  ontology, same+granularity      : 57.43% of cells
+
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/FAMILY_VS_ONTOLOGY_CROSSTAB.tsv
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GRANULARITY_SUMMARY.json

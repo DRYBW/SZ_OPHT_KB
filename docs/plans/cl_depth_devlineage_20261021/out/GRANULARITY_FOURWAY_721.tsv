@@ -1,0 +1,722 @@
+vol	cluster	n_cells	tissue	ours_label	ours_cl	ours_cl_label	ours_mapping_method	their_label	their_cl	their_cl_label	their_resolution	verdict	missing_side	no_mapping_kind	relation_path	recorded_ours_cl	recorded_their_cl	family_verdict	recorded_cl_verdict
+CX01_retina_snRNA	0	3186	retina	AC	CL:0000561	amacrine cell	sidecar	starburst amacrine cell	CL:0004232	starburst amacrine cell	name	we_are_coarser			CL:0004232 -> CL:4030027 -> CL:0000561	CL:0000561	CL:0004232	✅一致	subsumed
+CX01_retina_snRNA	1	2583	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX01_retina_snRNA	2	569	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX01_retina_snRNA	3	1922	retina	AC	CL:0000561	amacrine cell	sidecar	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	we_are_coarser			CL:4030027 -> CL:0000561	CL:0000561	CL:4030027	✅一致	subsumed
+CX01_retina_snRNA	4	1284	retina	AC	CL:0000561	amacrine cell	sidecar	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	we_are_coarser			CL:4030028 -> CL:0000561	CL:0000561	CL:4030028	✅一致	subsumed
+CX01_retina_snRNA	5	733	retina	AC	CL:0000561	amacrine cell	sidecar	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	we_are_coarser			CL:4030027 -> CL:0000561	CL:0000561	CL:4030027	✅一致	subsumed
+CX01_retina_snRNA	6	1306	retina	AC	CL:0000561	amacrine cell	sidecar	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	we_are_coarser			CL:4030028 -> CL:0000561	CL:0000561	CL:4030028	✅一致	subsumed
+CX01_retina_snRNA	7	607	retina	AC	CL:0000561	amacrine cell	sidecar	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	we_are_coarser			CL:4030028 -> CL:0000561	CL:0000561	CL:4030028	✅一致	subsumed
+CX01_retina_snRNA	8	632	retina	AC	CL:0000561	amacrine cell	sidecar	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	we_are_coarser			CL:4030027 -> CL:0000561	CL:0000561	CL:4030027	✅一致	subsumed
+CX01_retina_snRNA	9	3234	retina	MG	CL:0000636	Mueller cell	sidecar	Mueller cell	CL:0000636	Mueller cell	name	same_term				CL:0000636	CL:0000636	✅一致	same_cl
+CX01_retina_snRNA	10	3220	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 1 cell	CL:4033027	diffuse bipolar 1 cell	name	we_are_coarser			CL:4033027 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033027	✅一致	subsumed
+CX01_retina_snRNA	11	9022	retina	RGC	CL:0000740	retinal ganglion cell	sidecar	OFF midget ganglion cell	CL:4033047	OFF midget ganglion cell	name	we_are_coarser			CL:4033047 -> CL:4023033 -> CL:0000740	CL:0000740	CL:4033047	✅一致	subsumed
+CX01_retina_snRNA	12	3229	retina	AC	CL:0000561	amacrine cell	sidecar	ON parasol ganglion cell	CL:4033052	ON parasol ganglion cell	name	true_mismatch				CL:0000561	CL:4033052	❌不一致	mismatch
+CX01_retina_snRNA	13	3228	retina	MG	CL:0000636	Mueller cell	sidecar	astrocyte	CL:0000127	astrocyte	name	true_mismatch				CL:0000636	CL:0000127	🔄相关	mismatch
+CX01_retina_snRNA	14	2837	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	ON-blue cone bipolar cell	CL:4033019	ON-blue cone bipolar cell	name	we_are_coarser			CL:4033019 -> CL:0000749 -> CL:0000748	CL:0000748	CL:4033019	❌不一致	subsumed
+CX01_retina_snRNA	15	3276	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	giant bipolar cell	CL:4033035	giant bipolar cell	name	we_are_coarser			CL:4033035 -> CL:0000749 -> CL:0000748	CL:0000748	CL:4033035	✅一致	subsumed
+CX01_retina_snRNA	16	3223	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 6 cell	CL:4033032	diffuse bipolar 6 cell	name	we_are_coarser			CL:4033032 -> CL:0000749 -> CL:0000748	CL:0000748	CL:4033032	✅一致	subsumed
+CX01_retina_snRNA	17	3266	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	flat midget bipolar cell	CL:4033033	flat midget bipolar cell	name	we_are_coarser			CL:4033033 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033033	✅一致	subsumed
+CX01_retina_snRNA	18	3233	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 3b cell	CL:4033030	diffuse bipolar 3b cell	name	we_are_coarser			CL:4033030 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033030	✅一致	subsumed
+CX01_retina_snRNA	19	3189	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	invaginating midget bipolar cell	CL:4033034	invaginating midget bipolar cell	name	we_are_coarser			CL:4033034 -> CL:0000749 -> CL:0000748	CL:0000748	CL:4033034	✅一致	subsumed
+CX01_retina_snRNA	20	3226	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 2 cell	CL:4033028	diffuse bipolar 2 cell	name	we_are_coarser			CL:4033028 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033028	✅一致	subsumed
+CX01_retina_snRNA	21	3190	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	OFFx cell	CL:4033036	OFFx cell	name	we_are_coarser			CL:4033036 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033036	❌不一致	subsumed
+CX01_retina_snRNA	22	3225	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 4 cell	CL:4033031	diffuse bipolar 4 cell	name	we_are_coarser			CL:4033031 -> CL:0000749 -> CL:0000748	CL:0000748	CL:4033031	✅一致	subsumed
+CX01_retina_snRNA	23	3250	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	rod bipolar cell	CL:0000751	rod bipolar cell	name	we_are_coarser			CL:0000751 -> CL:0000749 -> CL:0000748	CL:0000748	CL:0000751	❌不一致	subsumed
+CX01_retina_snRNA	24	3228	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+CX01_retina_snRNA	25	3195	retina				label_not_in_libraries	diffuse bipolar 3a cell	CL:4033029	diffuse bipolar 3a cell	name	no_mapping	ours	ours_abstain			CL:4033029	❓混合/低信息	abstain
+CX01_retina_snRNA	26	17	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 3a cell	CL:4033029	diffuse bipolar 3a cell	name	we_are_coarser			CL:4033029 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033029	✅一致	subsumed
+CX01_retina_snRNA	27	3223	retina				label_not_in_libraries	retinal rod cell	CL:0000604	retinal rod cell	name	no_mapping	ours	ours_abstain			CL:0000604	❓混合/低信息	abstain
+CX01_retina_snRNA	28	3658	retina				label_not_in_libraries	OFF parasol ganglion cell	CL:4033051	OFF parasol ganglion cell	name	no_mapping	ours	ours_abstain			CL:4033051	❓混合/低信息	abstain
+CX01_retina_snRNA	29	3296	retina	HC	CL:0000745	retina horizontal cell	sidecar	H1 horizontal cell	CL:0004217	H1 horizontal cell	name	we_are_coarser			CL:0004217 -> CL:0000745	CL:0000745	CL:0004217	✅一致	subsumed
+CX01_retina_snRNA	30	109	retina	RGC	CL:0000740	retinal ganglion cell	sidecar	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	same_term				CL:0000740	CL:0000740	✅一致	same_cl
+CX01_retina_snRNA	31	3210	retina	Cone	CL:0000573	retinal cone cell	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	same_term				CL:0000573	CL:0000573	✅一致	same_cl
+CX01_retina_snRNA	32	3233	retina	Cone	CL:0000573	retinal cone cell	sidecar	S cone cell	CL:0003050	S cone cell	name	we_are_coarser			CL:0003050 -> CL:0000573	CL:0000573	CL:0003050	✅一致	subsumed
+CX01_retina_snRNA	33	3142	retina	HC	CL:0000745	retina horizontal cell	sidecar	H2 horizontal cell	CL:0004218	H2 horizontal cell	name	we_are_coarser			CL:0004218 -> CL:0000745	CL:0000745	CL:0004218	✅一致	subsumed
+CX01_retina_snRNA	34	3188	retina	Astro	CL:0000127	astrocyte	sidecar	microglial cell	CL:0000129	microglial cell	name	true_mismatch				CL:0000127	CL:0000129	❌不一致	mismatch
+CX01_retina_snRNA	35	811	retina	RPE	CL:0002586	retinal pigment epithelial cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	same_term				CL:0002586	CL:0002586	✅一致	same_cl
+CX01_retina_snRNA	36	35	retina	RPE	CL:0002586	retinal pigment epithelial cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	same_term				CL:0002586	CL:0002586	✅一致	same_cl
+CX02_adult_retina	0	5932	retina	Cone	CL:0000573	retinal cone cell	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	same_term				CL:0000573	CL:0000573	✅一致	same_cl
+CX02_adult_retina	1	945	retina				label_not_in_libraries	glial cell	CL:0000125	glial cell	name	no_mapping	ours	ours_abstain			CL:0000125	❓混合/低信息	abstain
+CX02_adult_retina	2	11504	retina	MG	CL:0000636	Mueller cell	sidecar	glial cell	CL:0000125	glial cell	name	we_are_finer			CL:0000636 -> CL:0000681 -> CL:0000125	CL:0000636	CL:0000125	🔄相关	subsumed
+CX02_adult_retina	3	3763	retina				label_not_in_libraries	retinal rod cell	CL:0000604	retinal rod cell	name	no_mapping	ours	ours_abstain			CL:0000604	❓混合/低信息	abstain
+CX02_adult_retina	4	12902	retina	Rod	CL:0000604	retinal rod cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	same_term				CL:0000604	CL:0000604	✅一致	same_cl
+CX02_adult_retina	5	423	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+CX02_adult_retina	6	869	retina	Cone	CL:0000573	retinal cone cell	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	same_term				CL:0000573	CL:0000573	✅一致	same_cl
+CX02_adult_retina	7	2398	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+CX02_adult_retina	8	329	retina				label_not_in_libraries	glial cell	CL:0000125	glial cell	name	no_mapping	ours	ours_abstain			CL:0000125	❓混合/低信息	abstain
+CX02_adult_retina	9	3413	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+CX02_adult_retina	10	1006	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+CX02_adult_retina	11	798	retina	HC	CL:0000745	retina horizontal cell	sidecar	retina horizontal cell	CL:0000745	retina horizontal cell	name	same_term				CL:0000745	CL:0000745	✅一致	same_cl
+CX02_adult_retina	12	1589	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+CX02_adult_retina	13	1524	retina				label_not_in_libraries	glial cell	CL:0000125	glial cell	name	no_mapping	ours	ours_abstain			CL:0000125	❓混合/低信息	abstain
+CX02_adult_retina	14	1526	retina	Endo	CL:0000115	endothelial cell	sidecar	glial cell	CL:0000125	glial cell	name	true_mismatch				CL:0000115	CL:0000125	❌不一致	mismatch
+CX02_adult_retina	15	964	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+CX02_adult_retina	16	4822	retina	Cone	CL:0000573	retinal cone cell	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	same_term				CL:0000573	CL:0000573	✅一致	same_cl
+CX02_adult_retina	17	1183	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+CX02_adult_retina	18	3645	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+CX02_adult_retina	19	848	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+CX02_adult_retina	20	754	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	21	831	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+CX02_adult_retina	22	229	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+CX02_adult_retina	23	139	retina	APC_MHCII_high			unresolved	glial cell	CL:0000125	glial cell	name	no_mapping	ours	ours_candidate_without_cl_term			CL:0000125	❌不一致	unmappable_pred
+CX02_adult_retina	24	6530	retina	HC	CL:0000745	retina horizontal cell	sidecar	retina horizontal cell	CL:0000745	retina horizontal cell	name	same_term				CL:0000745	CL:0000745	✅一致	same_cl
+CX02_adult_retina	25	91	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+CX02_adult_retina	26	785	retina				label_not_in_libraries	amacrine cell	CL:0000561	amacrine cell	name	no_mapping	ours	ours_abstain			CL:0000561	❓混合/低信息	abstain
+CX02_adult_retina	27	289	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	amacrine cell	CL:0000561	amacrine cell	name	true_mismatch				CL:0000748	CL:0000561	❌不一致	mismatch
+CX02_adult_retina	28	411	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	29	492	retina	Astro	CL:0000127	astrocyte	sidecar	glial cell	CL:0000125	glial cell	name	we_are_finer			CL:0000127 -> CL:0000126 -> CL:0000125	CL:0000127	CL:0000125	❌不一致	subsumed
+CX02_adult_retina	30	1320	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	31	2041	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	32	476	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	33	634	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	amacrine cell	CL:0000561	amacrine cell	name	true_mismatch				CL:0000748	CL:0000561	❌不一致	mismatch
+CX02_adult_retina	34	1001	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	35	430	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	36	1177	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	37	757	retina				label_not_in_libraries	amacrine cell	CL:0000561	amacrine cell	name	no_mapping	ours	ours_abstain			CL:0000561	❓混合/低信息	abstain
+CX02_adult_retina	38	451	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	39	1113	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	40	841	retina				label_not_in_libraries	amacrine cell	CL:0000561	amacrine cell	name	no_mapping	ours	ours_abstain			CL:0000561	❓混合/低信息	abstain
+CX02_adult_retina	41	159	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	42	1013	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	43	592	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	44	1456	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	45	495	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	46	485	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX02_adult_retina	47	77	retina	RPE	CL:0002586	retinal pigment epithelial cell	sidecar	glial cell	CL:0000125	glial cell	name	true_mismatch				CL:0002586	CL:0000125	❌不一致	mismatch
+CX03_retina_multiome	0	484	retina	RGC	CL:0000740	retinal ganglion cell	sidecar	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	same_term				CL:0000740	CL:0000740	✅一致	same_cl
+CX03_retina_multiome	1	1979	retina				label_not_in_libraries	retinal cone cell	CL:0000573	retinal cone cell	name	no_mapping	ours	ours_abstain			CL:0000573	❓混合/低信息	abstain
+CX03_retina_multiome	2	451	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX03_retina_multiome	3	923	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX03_retina_multiome	4	459	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	OFF-bipolar cell	CL:0000750	OFF-bipolar cell	name	we_are_coarser			CL:0000750 -> CL:0000748	CL:0000748	CL:0000750	✅一致	subsumed
+CX03_retina_multiome	5	3781	retina	MG	CL:0000636	Mueller cell	sidecar	Mueller cell	CL:0000636	Mueller cell	name	same_term				CL:0000636	CL:0000636	✅一致	same_cl
+CX03_retina_multiome	6	2401	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	rod bipolar cell	CL:0000751	rod bipolar cell	name	we_are_coarser			CL:0000751 -> CL:0000749 -> CL:0000748	CL:0000748	CL:0000751	❌不一致	subsumed
+CX03_retina_multiome	7	8308	retina				label_not_in_libraries	retinal rod cell	CL:0000604	retinal rod cell	name	no_mapping	ours	ours_abstain			CL:0000604	❓混合/低信息	abstain
+CX03_retina_multiome	8	3799	retina				label_not_in_libraries	retinal rod cell	CL:0000604	retinal rod cell	name	no_mapping	ours	ours_abstain			CL:0000604	❓混合/低信息	abstain
+CX03_retina_multiome	9	4746	retina				label_not_in_libraries	retinal rod cell	CL:0000604	retinal rod cell	name	no_mapping	ours	ours_abstain			CL:0000604	❓混合/低信息	abstain
+CX03_retina_multiome	10	2625	retina	cDC1	CL:0000990	conventional dendritic cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	true_mismatch				CL:0000990	CL:0000604	❌不一致	mismatch
+CX03_retina_multiome	11	4719	retina	Rod	CL:0000604	retinal rod cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	same_term				CL:0000604	CL:0000604	✅一致	same_cl
+CX03_retina_multiome	12	7918	retina				label_not_in_libraries	retinal rod cell	CL:0000604	retinal rod cell	name	no_mapping	ours	ours_abstain			CL:0000604	❓混合/低信息	abstain
+CX03_retina_multiome	13	916	retina	HC	CL:0000745	retina horizontal cell	sidecar	retina horizontal cell	CL:0000745	retina horizontal cell	name	same_term				CL:0000745	CL:0000745	✅一致	same_cl
+CX03_retina_multiome	14	217	retina	HC	CL:0000745	retina horizontal cell	sidecar	retina horizontal cell	CL:0000745	retina horizontal cell	name	same_term				CL:0000745	CL:0000745	✅一致	same_cl
+CX03_retina_multiome	15	118	retina	APC_MHCII_high			unresolved	microglial cell	CL:0000129	microglial cell	name	no_mapping	ours	ours_candidate_without_cl_term			CL:0000129	❌不一致	unmappable_pred
+CX03_retina_multiome	16	948	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	OFF-bipolar cell	CL:0000750	OFF-bipolar cell	name	we_are_coarser			CL:0000750 -> CL:0000748	CL:0000748	CL:0000750	✅一致	subsumed
+CX03_retina_multiome	17	11	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	OFF-bipolar cell	CL:0000750	OFF-bipolar cell	name	we_are_coarser			CL:0000750 -> CL:0000748	CL:0000748	CL:0000750	✅一致	subsumed
+CX03_retina_multiome	18	561	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	OFF-bipolar cell	CL:0000750	OFF-bipolar cell	name	we_are_coarser			CL:0000750 -> CL:0000748	CL:0000748	CL:0000750	✅一致	subsumed
+CX03_retina_multiome	19	1341	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	OFF-bipolar cell	CL:0000750	OFF-bipolar cell	name	we_are_coarser			CL:0000750 -> CL:0000748	CL:0000748	CL:0000750	✅一致	subsumed
+CX03_retina_multiome	20	159	retina	MG	CL:0000636	Mueller cell	sidecar	astrocyte	CL:0000127	astrocyte	name	true_mismatch				CL:0000636	CL:0000127	🔄相关	mismatch
+CX03_retina_multiome	21	808	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	ON-bipolar cell	CL:0000749	ON-bipolar cell	name	we_are_coarser			CL:0000749 -> CL:0000748	CL:0000748	CL:0000749	✅一致	subsumed
+CX03_retina_multiome	22	255	retina	Cone	CL:0000573	retinal cone cell	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	same_term				CL:0000573	CL:0000573	✅一致	same_cl
+CX03_retina_multiome	23	531	retina	Schwann	CL:0002573	Schwann cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	true_mismatch				CL:0002573	CL:0000561	❌不一致	mismatch
+CX03_retina_multiome	24	93	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX03_retina_multiome	25	210	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	ON-bipolar cell	CL:0000749	ON-bipolar cell	name	we_are_coarser			CL:0000749 -> CL:0000748	CL:0000748	CL:0000749	✅一致	subsumed
+CX03_retina_multiome	26	595	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	OFF-bipolar cell	CL:0000750	OFF-bipolar cell	name	we_are_coarser			CL:0000750 -> CL:0000748	CL:0000748	CL:0000750	✅一致	subsumed
+CX03_retina_multiome	27	693	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX03_retina_multiome	28	273	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	ON-bipolar cell	CL:0000749	ON-bipolar cell	name	we_are_coarser			CL:0000749 -> CL:0000748	CL:0000748	CL:0000749	✅一致	subsumed
+CX03_retina_multiome	29	657	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	ON-bipolar cell	CL:0000749	ON-bipolar cell	name	we_are_coarser			CL:0000749 -> CL:0000748	CL:0000748	CL:0000749	✅一致	subsumed
+CX03_retina_multiome	30	612	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	ON-bipolar cell	CL:0000749	ON-bipolar cell	name	we_are_coarser			CL:0000749 -> CL:0000748	CL:0000748	CL:0000749	✅一致	subsumed
+CX04_cowan_fovea	0	1894	retina	Rod	CL:0000604	retinal rod cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	same_term				CL:0000604	CL:0000604	✅一致	same_cl
+CX04_cowan_fovea	1	1375	retina	Cone	CL:0000573	retinal cone cell	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	same_term				CL:0000573	CL:0000573	✅一致	same_cl
+CX04_cowan_fovea	2	151	retina	HC	CL:0000745	retina horizontal cell	sidecar	retina horizontal cell	CL:0000745	retina horizontal cell	name	same_term				CL:0000745	CL:0000745	✅一致	same_cl
+CX04_cowan_fovea	3	887	retina	HC	CL:0000745	retina horizontal cell	sidecar	retina horizontal cell	CL:0000745	retina horizontal cell	name	same_term				CL:0000745	CL:0000745	✅一致	same_cl
+CX04_cowan_fovea	4	349	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	OFF-bipolar cell	CL:0000750	OFF-bipolar cell	name	we_are_coarser			CL:0000750 -> CL:0000748	CL:0000748	CL:0000750	✅一致	subsumed
+CX04_cowan_fovea	5	1282	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	OFF-bipolar cell	CL:0000750	OFF-bipolar cell	name	we_are_coarser			CL:0000750 -> CL:0000748	CL:0000748	CL:0000750	✅一致	subsumed
+CX04_cowan_fovea	6	439	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	OFF-bipolar cell	CL:0000750	OFF-bipolar cell	name	we_are_coarser			CL:0000750 -> CL:0000748	CL:0000748	CL:0000750	✅一致	subsumed
+CX04_cowan_fovea	7	1040	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	rod bipolar cell	CL:0000751	rod bipolar cell	name	we_are_coarser			CL:0000751 -> CL:0000749 -> CL:0000748	CL:0000748	CL:0000751	❌不一致	subsumed
+CX04_cowan_fovea	8	357	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	OFF-bipolar cell	CL:0000750	OFF-bipolar cell	name	we_are_coarser			CL:0000750 -> CL:0000748	CL:0000748	CL:0000750	✅一致	subsumed
+CX04_cowan_fovea	9	126	retina				label_not_in_libraries	amacrine cell	CL:0000561	amacrine cell	name	no_mapping	ours	ours_abstain			CL:0000561	❓混合/低信息	abstain
+CX04_cowan_fovea	10	196	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX04_cowan_fovea	11	1897	retina				label_not_in_libraries	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	no_mapping	ours	ours_abstain			CL:0000740	❓混合/低信息	abstain
+CX04_cowan_fovea	12	1922	retina	RGC	CL:0000740	retinal ganglion cell	sidecar	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	same_term				CL:0000740	CL:0000740	✅一致	same_cl
+CX04_cowan_fovea	13	26	retina				label_not_in_libraries	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	no_mapping	ours	ours_abstain			CL:0000740	❓混合/低信息	abstain
+CX04_cowan_fovea	14	1819	retina				label_not_in_libraries	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	no_mapping	ours	ours_abstain			CL:0000740	❓混合/低信息	abstain
+CX04_cowan_fovea	15	416	retina	RGC	CL:0000740	retinal ganglion cell	sidecar	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	same_term				CL:0000740	CL:0000740	✅一致	same_cl
+CX04_cowan_fovea	16	3897	retina	MG	CL:0000636	Mueller cell	sidecar	Mueller cell	CL:0000636	Mueller cell	name	same_term				CL:0000636	CL:0000636	✅一致	same_cl
+CX04_cowan_fovea	17	138	retina	Astro	CL:0000127	astrocyte	sidecar	astrocyte	CL:0000127	astrocyte	name	same_term				CL:0000127	CL:0000127	✅一致	same_cl
+CX04_cowan_fovea	18	84	retina	RPE	CL:0002586	retinal pigment epithelial cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	same_term				CL:0002586	CL:0002586	✅一致	same_cl
+CX04_cowan_fovea	19	173	retina	APC_MHCII_high			unresolved	microglial cell	CL:0000129	microglial cell	name	no_mapping	ours	ours_candidate_without_cl_term			CL:0000129	❌不一致	unmappable_pred
+CX04_cowan_fovea	20	280	retina	Pericyte	CL:0000669	pericyte	sidecar	endothelial cell of vascular tree	CL:0002139	endothelial cell of vascular tree	name	true_mismatch				CL:0000669	CL:0002139	🔄相关	mismatch
+CX04_cowan_fovea	21	425	retina				label_not_in_libraries	T cell	CL:0000084	T cell	name	no_mapping	ours	ours_abstain			CL:0000084	❓混合/低信息	abstain
+CX04_cowan_fovea	22	168	retina	APC_MHCII_high			unresolved	monocyte	CL:0000576	monocyte	name	no_mapping	ours	ours_candidate_without_cl_term			CL:0000576	❌不一致	unmappable_pred
+CX04_cowan_fovea	23	253	retina	Pericyte	CL:0000669	pericyte	sidecar	fibroblast	CL:0000057	fibroblast	name	true_mismatch				CL:0000669	CL:0000057	🔄相关	mismatch
+CX04_cowan_fovea	24	159	retina	APC_MHCII_high			unresolved	endothelial cell of vascular tree	CL:0002139	endothelial cell of vascular tree	name	no_mapping	ours	ours_candidate_without_cl_term			CL:0002139	❌不一致	unmappable_pred
+CX04_cowan_organoid	0	132	retina	Melanocyte	CL:0000148	melanocyte	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000148	CL:0002586	❌不一致	mismatch
+CX04_cowan_organoid	1	1435	retina				label_not_in_libraries	amacrine cell	CL:0000561	amacrine cell	name	no_mapping	ours	ours_abstain			CL:0000561	❓混合/低信息	abstain
+CX04_cowan_organoid	2	1952	retina	AC	CL:0000561	amacrine cell	sidecar	retina horizontal cell	CL:0000745	retina horizontal cell	name	true_mismatch				CL:0000561	CL:0000745	❌不一致	mismatch
+CX04_cowan_organoid	3	8557	retina	Rod	CL:0000604	retinal rod cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	same_term				CL:0000604	CL:0000604	✅一致	same_cl
+CX04_cowan_organoid	4	4558	retina	Rod	CL:0000604	retinal rod cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	same_term				CL:0000604	CL:0000604	✅一致	same_cl
+CX04_cowan_organoid	5	784	retina	Rod	CL:0000604	retinal rod cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	same_term				CL:0000604	CL:0000604	✅一致	same_cl
+CX04_cowan_organoid	6	2065	retina	Cone	CL:0000573	retinal cone cell	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	same_term				CL:0000573	CL:0000573	✅一致	same_cl
+CX04_cowan_organoid	7	5606	retina	Cone	CL:0000573	retinal cone cell	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	same_term				CL:0000573	CL:0000573	✅一致	same_cl
+CX04_cowan_organoid	8	5320	retina	Cone	CL:0000573	retinal cone cell	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	same_term				CL:0000573	CL:0000573	✅一致	same_cl
+CX04_cowan_organoid	9	3458	retina	MG	CL:0000636	Mueller cell	sidecar	Mueller cell	CL:0000636	Mueller cell	name	same_term				CL:0000636	CL:0000636	✅一致	same_cl
+CX04_cowan_organoid	10	637	retina				label_not_in_libraries	Mueller cell	CL:0000636	Mueller cell	name	no_mapping	ours	ours_abstain			CL:0000636	❓混合/低信息	abstain
+CX04_cowan_organoid	11	1142	retina	MG	CL:0000636	Mueller cell	sidecar	Mueller cell	CL:0000636	Mueller cell	name	same_term				CL:0000636	CL:0000636	✅一致	same_cl
+CX04_cowan_organoid	12	5187	retina	MG	CL:0000636	Mueller cell	sidecar	Mueller cell	CL:0000636	Mueller cell	name	same_term				CL:0000636	CL:0000636	✅一致	same_cl
+CX04_cowan_organoid	13	2844	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	ON-bipolar cell	CL:0000749	ON-bipolar cell	name	we_are_coarser			CL:0000749 -> CL:0000748	CL:0000748	CL:0000749	✅一致	subsumed
+CX04_cowan_organoid	14	170	retina				label_not_in_libraries	Mueller cell	CL:0000636	Mueller cell	name	no_mapping	ours	ours_abstain			CL:0000636	❓混合/低信息	abstain
+CX04_cowan_periphery	0	157	retina	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+CX04_cowan_periphery	1	186	retina	RPE	CL:0002586	retinal pigment epithelial cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	same_term				CL:0002586	CL:0002586	✅一致	same_cl
+CX04_cowan_periphery	2	146	retina	MG	CL:0000636	Mueller cell	sidecar	Mueller cell	CL:0000636	Mueller cell	name	same_term				CL:0000636	CL:0000636	✅一致	same_cl
+CX04_cowan_periphery	3	4416	retina				label_not_in_libraries	Mueller cell	CL:0000636	Mueller cell	name	no_mapping	ours	ours_abstain			CL:0000636	❓混合/低信息	abstain
+CX04_cowan_periphery	4	2107	retina	MG	CL:0000636	Mueller cell	sidecar	Mueller cell	CL:0000636	Mueller cell	name	same_term				CL:0000636	CL:0000636	✅一致	same_cl
+CX04_cowan_periphery	5	480	retina	APC_MHCII_high			unresolved	monocyte	CL:0000576	monocyte	name	no_mapping	ours	ours_candidate_without_cl_term			CL:0000576	❌不一致	unmappable_pred
+CX04_cowan_periphery	6	193	retina				label_not_in_libraries	T cell	CL:0000084	T cell	name	no_mapping	ours	ours_abstain			CL:0000084	❓混合/低信息	abstain
+CX04_cowan_periphery	7	6085	retina	Rod	CL:0000604	retinal rod cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	same_term				CL:0000604	CL:0000604	✅一致	same_cl
+CX04_cowan_periphery	8	3902	retina	Rod	CL:0000604	retinal rod cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	same_term				CL:0000604	CL:0000604	✅一致	same_cl
+CX04_cowan_periphery	9	1784	retina	Rod	CL:0000604	retinal rod cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	same_term				CL:0000604	CL:0000604	✅一致	same_cl
+CX04_cowan_periphery	10	384	retina	Rod	CL:0000604	retinal rod cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	same_term				CL:0000604	CL:0000604	✅一致	same_cl
+CX04_cowan_periphery	11	873	retina				label_not_in_libraries	retinal rod cell	CL:0000604	retinal rod cell	name	no_mapping	ours	ours_abstain			CL:0000604	❓混合/低信息	abstain
+CX04_cowan_periphery	12	1200	retina	Cone	CL:0000573	retinal cone cell	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	same_term				CL:0000573	CL:0000573	✅一致	same_cl
+CX04_cowan_periphery	13	581	retina				label_not_in_libraries	retina horizontal cell	CL:0000745	retina horizontal cell	name	no_mapping	ours	ours_abstain			CL:0000745	❓混合/低信息	abstain
+CX04_cowan_periphery	14	261	retina				label_not_in_libraries	retina horizontal cell	CL:0000745	retina horizontal cell	name	no_mapping	ours	ours_abstain			CL:0000745	❓混合/低信息	abstain
+CX04_cowan_periphery	15	282	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	OFF-bipolar cell	CL:0000750	OFF-bipolar cell	name	we_are_coarser			CL:0000750 -> CL:0000748	CL:0000748	CL:0000750	✅一致	subsumed
+CX04_cowan_periphery	16	430	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	OFF-bipolar cell	CL:0000750	OFF-bipolar cell	name	we_are_coarser			CL:0000750 -> CL:0000748	CL:0000748	CL:0000750	✅一致	subsumed
+CX04_cowan_periphery	17	4194	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	rod bipolar cell	CL:0000751	rod bipolar cell	name	we_are_coarser			CL:0000751 -> CL:0000749 -> CL:0000748	CL:0000748	CL:0000751	❌不一致	subsumed
+CX04_cowan_periphery	18	422	retina				label_not_in_libraries	ON-bipolar cell	CL:0000749	ON-bipolar cell	name	no_mapping	ours	ours_abstain			CL:0000749	❓混合/低信息	abstain
+CX04_cowan_periphery	19	72	retina				label_not_in_libraries	OFF-bipolar cell	CL:0000750	OFF-bipolar cell	name	no_mapping	ours	ours_abstain			CL:0000750	❓混合/低信息	abstain
+CX04_cowan_periphery	20	517	retina				label_not_in_libraries	ON-bipolar cell	CL:0000749	ON-bipolar cell	name	no_mapping	ours	ours_abstain			CL:0000749	❓混合/低信息	abstain
+CX04_cowan_periphery	21	1101	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	ON-bipolar cell	CL:0000749	ON-bipolar cell	name	we_are_coarser			CL:0000749 -> CL:0000748	CL:0000748	CL:0000749	✅一致	subsumed
+CX04_cowan_periphery	22	647	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	OFF-bipolar cell	CL:0000750	OFF-bipolar cell	name	we_are_coarser			CL:0000750 -> CL:0000748	CL:0000748	CL:0000750	✅一致	subsumed
+CX04_cowan_periphery	23	120	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	ON-bipolar cell	CL:0000749	ON-bipolar cell	name	we_are_coarser			CL:0000749 -> CL:0000748	CL:0000748	CL:0000749	✅一致	subsumed
+CX04_cowan_periphery	24	592	retina				label_not_in_libraries	amacrine cell	CL:0000561	amacrine cell	name	no_mapping	ours	ours_abstain			CL:0000561	❓混合/低信息	abstain
+CX04_cowan_periphery	25	35	retina	RGC	CL:0000740	retinal ganglion cell	sidecar	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	same_term				CL:0000740	CL:0000740	✅一致	same_cl
+CX04_cowan_periphery	26	153	retina				label_not_in_libraries	amacrine cell	CL:0000561	amacrine cell	name	no_mapping	ours	ours_abstain			CL:0000561	❓混合/低信息	abstain
+CX04_cowan_periphery	27	168	retina	Astro	CL:0000127	astrocyte	sidecar	astrocyte	CL:0000127	astrocyte	name	same_term				CL:0000127	CL:0000127	✅一致	same_cl
+CX04_cowan_periphery	28	1535	retina				label_not_in_libraries	Mueller cell	CL:0000636	Mueller cell	name	no_mapping	ours	ours_abstain			CL:0000636	❓混合/低信息	abstain
+CX04_cowan_periphery	29	88	retina	Pericyte	CL:0000669	pericyte	sidecar	pericyte	CL:0000669	pericyte	name	same_term				CL:0000669	CL:0000669	✅一致	same_cl
+CX04_cowan_periphery	30	205	retina	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell of vascular tree	CL:0002139	endothelial cell of vascular tree	name	we_are_coarser			CL:0002139 -> CL:0000115	CL:0000115	CL:0002139	❌不一致	subsumed
+CX04_cowan_periphery	31	30	retina	Granulocyte	CL:0000094	granulocyte	sidecar	mast cell	CL:0000097	mast cell	name	true_mismatch				CL:0000094	CL:0000097	❌不一致	mismatch
+CX04_cowan_periphery	32	1356	retina	Pericyte	CL:0000669	pericyte	sidecar	fibroblast	CL:0000057	fibroblast	name	true_mismatch				CL:0000669	CL:0000057	🔄相关	mismatch
+CX07_iPSC_organoid_POAG	0	3331	retina				label_not_in_libraries	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	no_mapping	ours	ours_abstain			CL:0002672	❓混合/低信息	abstain
+CX07_iPSC_organoid_POAG	1	65	retina				label_not_in_libraries	lens fiber cell	CL:0011004	lens fiber cell	name	no_mapping	ours	ours_abstain			CL:0011004	❓混合/低信息	abstain
+CX07_iPSC_organoid_POAG	2	1609	retina				label_not_in_libraries	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	no_mapping	ours	ours_abstain			CL:0002672	❓混合/低信息	abstain
+CX07_iPSC_organoid_POAG	3	3141	retina	RPE	CL:0002586	retinal pigment epithelial cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	same_term				CL:0002586	CL:0002586	✅一致	same_cl
+CX07_iPSC_organoid_POAG	4	5133	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	true_mismatch				CL:0000748	CL:0000740	❌不一致	mismatch
+CX07_iPSC_organoid_POAG	5	1115	retina				label_not_in_libraries	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	no_mapping	ours	ours_abstain			CL:0000740	❓混合/低信息	abstain
+CX07_iPSC_organoid_POAG	6	4231	retina				label_not_in_libraries	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	no_mapping	ours	ours_abstain			CL:0000740	❓混合/低信息	abstain
+CX07_iPSC_organoid_POAG	7	616	retina				label_not_in_libraries	retinal cone cell	CL:0000573	retinal cone cell	name	no_mapping	ours	ours_abstain			CL:0000573	❓混合/低信息	abstain
+CX07_iPSC_organoid_POAG	8	5369	retina	Melanocyte	CL:0000148	melanocyte	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	true_mismatch				CL:0000148	CL:0000573	❌不一致	mismatch
+CX07_iPSC_organoid_POAG	9	1659	retina	AC	CL:0000561	amacrine cell	sidecar	retina horizontal cell	CL:0000745	retina horizontal cell	name	true_mismatch				CL:0000561	CL:0000745	❌不一致	mismatch
+CX07_iPSC_organoid_POAG	10	1767	retina				label_not_in_libraries	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	no_mapping	ours	ours_abstain			CL:0000740	❓混合/低信息	abstain
+CX07_iPSC_organoid_POAG	11	795	retina	MG	CL:0000636	Mueller cell	sidecar	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	true_mismatch				CL:0000636	CL:0002672	❌不一致	mismatch
+CX07_iPSC_organoid_POAG	12	2330	retina	MG	CL:0000636	Mueller cell	sidecar	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	true_mismatch				CL:0000636	CL:0002672	❌不一致	mismatch
+CX07_iPSC_organoid_POAG	13	2523	retina				label_not_in_libraries	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	no_mapping	ours	ours_abstain			CL:0002672	❓混合/低信息	abstain
+CX07_iPSC_organoid_POAG	14	1189	retina	MG	CL:0000636	Mueller cell	sidecar	retina horizontal cell	CL:0000745	retina horizontal cell	name	true_mismatch				CL:0000636	CL:0000745	❌不一致	mismatch
+CX07_iPSC_organoid_POAG	15	2421	retina				label_not_in_libraries	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	no_mapping	ours	ours_abstain			CL:0000740	❓混合/低信息	abstain
+CX07_iPSC_organoid_POAG	16	1958	retina				label_not_in_libraries	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	no_mapping	ours	ours_abstain			CL:0002672	❓混合/低信息	abstain
+CX07_iPSC_organoid_POAG	17	369	retina	RPE	CL:0002586	retinal pigment epithelial cell	sidecar	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	true_mismatch				CL:0002586	CL:0002672	❌不一致	mismatch
+CX07_iPSC_organoid_POAG	18	3951	retina				label_not_in_libraries	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	no_mapping	ours	ours_abstain			CL:0002672	❓混合/低信息	abstain
+CX07_iPSC_organoid_POAG	19	1857	retina	MG	CL:0000636	Mueller cell	sidecar	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	true_mismatch				CL:0000636	CL:0002672	❌不一致	mismatch
+CX07_iPSC_organoid_POAG	20	846	retina				label_not_in_libraries	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	no_mapping	ours	ours_abstain			CL:0000740	❓混合/低信息	abstain
+CX08_RPE_choroid_scRNA	0	5670	rpe	Pericyte	CL:0000669	pericyte	sidecar	fibroblast	CL:0000057	fibroblast	name	true_mismatch				CL:0000669	CL:0000057	🔄相关	mismatch
+CX08_RPE_choroid_scRNA	1	4872	rpe	SMC	CL:0000192	smooth muscle cell	sidecar	blood vessel smooth muscle cell	CL:0019018	blood vessel smooth muscle cell	name	we_are_coarser			CL:0019018 -> CL:0000359 -> CL:0000192	CL:0000192	CL:0019018	❌不一致	subsumed
+CX08_RPE_choroid_scRNA	2	5950	rpe	Pericyte	CL:0000669	pericyte	sidecar	pericyte	CL:0000669	pericyte	name	same_term				CL:0000669	CL:0000669	✅一致	same_cl
+CX08_RPE_choroid_scRNA	3	5505	rpe	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+CX08_RPE_choroid_scRNA	4	5559	rpe	Schwann	CL:0002573	Schwann cell	sidecar	non-myelinating Schwann cell	CL:0002376	non-myelinating Schwann cell	name	we_are_coarser			CL:0002376 -> CL:0002573	CL:0002573	CL:0002376	✅一致	subsumed
+CX08_RPE_choroid_scRNA	5	274	rpe	MG	CL:0000636	Mueller cell	sidecar	myelinating Schwann cell	CL:0000218	myelinating Schwann cell	name	true_mismatch				CL:0000636	CL:0000218	❌不一致	mismatch
+CX08_RPE_choroid_scRNA	6	476	rpe				label_not_in_libraries	pericyte	CL:0000669	pericyte	name	no_mapping	ours	ours_abstain			CL:0000669	❓混合/低信息	abstain
+CX08_RPE_choroid_scRNA	7	5261	rpe	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell of venule	CL:1000414	endothelial cell of venule	name	we_are_coarser			CL:1000414 -> CL:0000071 -> CL:0002139 -> CL:0000115	CL:0000115	CL:1000414	❌不一致	subsumed
+CX08_RPE_choroid_scRNA	8	5747	rpe	Mac_Tissue	CL:0000235	macrophage	sidecar	macrophage	CL:0000235	macrophage	name	same_term				CL:0000235	CL:0000235	❌不一致	same_cl
+CX08_RPE_choroid_scRNA	9	4974	rpe	Mono_Classical	CL:0000860	classical monocyte	sidecar	monocyte	CL:0000576	monocyte	name	we_are_finer			CL:0000860 -> CL:0000576	CL:0000860	CL:0000576	✅一致	subsumed
+CX08_RPE_choroid_scRNA	10	2476	rpe	Endo	CL:0000115	endothelial cell	sidecar	fenestrated endothelial cell	CL:0000666	fenestrated endothelial cell	name	we_are_coarser			CL:0000666 -> CL:0000115	CL:0000115	CL:0000666	❌不一致	subsumed
+CX08_RPE_choroid_scRNA	11	3030	rpe	B	CL:0000236	B cell	sidecar	B cell	CL:0000236	B cell	name	same_term				CL:0000236	CL:0000236	✅一致	same_cl
+CX08_RPE_choroid_scRNA	12	1910	rpe	Plasma	CL:0000786	plasma cell	sidecar	plasma cell	CL:0000786	plasma cell	name	same_term				CL:0000786	CL:0000786	✅一致	same_cl
+CX08_RPE_choroid_scRNA	13	5443	rpe				label_not_in_libraries	T cell	CL:0000084	T cell	name	no_mapping	ours	ours_abstain			CL:0000084	❓混合/低信息	abstain
+CX08_RPE_choroid_scRNA	14	4378	rpe	NK	CL:0000623	natural killer cell	sidecar	natural killer cell	CL:0000623	natural killer cell	name	same_term				CL:0000623	CL:0000623	❌不一致	same_cl
+CX08_RPE_choroid_scRNA	15	5291	rpe	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000748	CL:0002586	❌不一致	mismatch
+CX08_RPE_choroid_scRNA	16	17	rpe	Melanocyte	CL:0000148	melanocyte	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000148	CL:0002586	❌不一致	mismatch
+CX08_RPE_choroid_scRNA	17	5334	rpe	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell of arteriole	CL:1000412	endothelial cell of arteriole	name	we_are_coarser			CL:1000412 -> CL:0000071 -> CL:0002139 -> CL:0000115	CL:0000115	CL:1000412	❌不一致	subsumed
+CX08_RPE_choroid_scRNA	18	1333	rpe	T	CL:0000084	T cell	sidecar	mast cell	CL:0000097	mast cell	name	true_mismatch				CL:0000084	CL:0000097	❌不一致	mismatch
+CX08_RPE_choroid_scRNA	19	13	rpe	pDC	CL:0000784	plasmacytoid dendritic cell	sidecar	plasma cell	CL:0000786	plasma cell	name	true_mismatch				CL:0000784	CL:0000786	❌不一致	mismatch
+CX08_RPE_choroid_snRNA	0	1497	rpe	BC	CL:0000748	retinal bipolar neuron	sidecar	mast cell	CL:0000097	mast cell	name	true_mismatch				CL:0000748	CL:0000097	❌不一致	mismatch
+CX08_RPE_choroid_snRNA	1	3862	rpe				label_not_in_libraries	fibroblast	CL:0000057	fibroblast	name	no_mapping	ours	ours_abstain			CL:0000057	❓混合/低信息	abstain
+CX08_RPE_choroid_snRNA	2	2378	rpe				label_not_in_libraries	plasma cell	CL:0000786	plasma cell	name	no_mapping	ours	ours_abstain			CL:0000786	❓混合/低信息	abstain
+CX08_RPE_choroid_snRNA	3	3889	rpe	RGC	CL:0000740	retinal ganglion cell	sidecar	pericyte	CL:0000669	pericyte	name	true_mismatch				CL:0000740	CL:0000669	❌不一致	mismatch
+CX08_RPE_choroid_snRNA	4	4743	rpe	SMC	CL:0000192	smooth muscle cell	sidecar	vascular associated smooth muscle cell	CL:0000359	vascular associated smooth muscle cell	name	we_are_coarser			CL:0000359 -> CL:0000192	CL:0000192	CL:0000359	❌不一致	subsumed
+CX08_RPE_choroid_snRNA	5	3385	rpe	B	CL:0000236	B cell	sidecar	B cell	CL:0000236	B cell	name	same_term				CL:0000236	CL:0000236	✅一致	same_cl
+CX08_RPE_choroid_snRNA	6	3715	rpe	RPE	CL:0002586	retinal pigment epithelial cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	same_term				CL:0002586	CL:0002586	✅一致	same_cl
+CX08_RPE_choroid_snRNA	7	4528	rpe				label_not_in_libraries	non-classical monocyte	CL:0000875	non-classical monocyte	name	no_mapping	ours	ours_abstain			CL:0000875	❓混合/低信息	abstain
+CX08_RPE_choroid_snRNA	8	3900	rpe	T	CL:0000084	T cell	sidecar	natural killer cell	CL:0000623	natural killer cell	name	true_mismatch				CL:0000084	CL:0000623	❌不一致	mismatch
+CX08_RPE_choroid_snRNA	9	7969	rpe	T	CL:0000084	T cell	sidecar	helper T cell	CL:0000912	helper T cell	name	we_are_coarser			CL:0000912 -> CL:0000911 -> CL:0002419 -> CL:0000084	CL:0000084	CL:0000912	✅一致	subsumed
+CX08_RPE_choroid_snRNA	10	3596	rpe	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+CX08_RPE_choroid_snRNA	11	3693	rpe	Mac_Tissue	CL:0000235	macrophage	sidecar	macrophage	CL:0000235	macrophage	name	same_term				CL:0000235	CL:0000235	❌不一致	same_cl
+CX08_RPE_choroid_snRNA	12	432	rpe	APC_MHCII_high			unresolved	dendritic cell	CL:0000451	dendritic cell	name	no_mapping	ours	ours_candidate_without_cl_term			CL:0000451	❌不一致	unmappable_pred
+CX08_RPE_choroid_snRNA	13	3770	rpe	Schwann	CL:0002573	Schwann cell	sidecar	non-myelinating Schwann cell	CL:0002376	non-myelinating Schwann cell	name	we_are_coarser			CL:0002376 -> CL:0002573	CL:0002573	CL:0002376	✅一致	subsumed
+CX08_RPE_choroid_snRNA	14	3258	rpe	Endo	CL:0000115	endothelial cell	sidecar	fenestrated endothelial cell	CL:0000666	fenestrated endothelial cell	name	we_are_coarser			CL:0000666 -> CL:0000115	CL:0000115	CL:0000666	❌不一致	subsumed
+CX08_RPE_choroid_snRNA	15	6987	rpe	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell of artery	CL:1000413	endothelial cell of artery	name	we_are_coarser			CL:1000413 -> CL:0000071 -> CL:0002139 -> CL:0000115	CL:0000115	CL:1000413	❌不一致	subsumed
+CX08_RPE_choroid_snRNA	16	7584	rpe	Endo	CL:0000115	endothelial cell	sidecar	vein endothelial cell	CL:0002543	vein endothelial cell	name	we_are_coarser			CL:0002543 -> CL:0000071 -> CL:0002139 -> CL:0000115	CL:0000115	CL:0002543	❌不一致	subsumed
+CX08_RPE_choroid_snRNA	17	1288	rpe	BC	CL:0000748	retinal bipolar neuron	sidecar	myelinating Schwann cell	CL:0000218	myelinating Schwann cell	name	true_mismatch				CL:0000748	CL:0000218	❌不一致	mismatch
+CX09_voigt_RPE_choroid	0	156	rpe	Microglia	CL:0000129	microglial cell	sidecar	macrophage	CL:0000235	macrophage	name	we_are_finer			CL:0000129 -> CL:0000878 -> CL:0000864 -> CL:0000235	CL:0000129	CL:0000235	🔄相关	subsumed
+CX09_voigt_RPE_choroid	1	339	rpe				label_not_in_libraries	mature NK T cell	CL:0000814	mature NK T cell	name	no_mapping	ours	ours_abstain			CL:0000814	❓混合/低信息	abstain
+CX09_voigt_RPE_choroid	2	513	rpe	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+CX09_voigt_RPE_choroid	3	470	rpe	Schwann	CL:0002573	Schwann cell	sidecar	Schwann cell	CL:0002573	Schwann cell	name	same_term				CL:0002573	CL:0002573	✅一致	same_cl
+CX09_voigt_RPE_choroid	4	177	rpe	SMC	CL:0000192	smooth muscle cell	sidecar	pericyte	CL:0000669	pericyte	name	true_mismatch				CL:0000192	CL:0000669	✅一致	mismatch
+CX09_voigt_RPE_choroid	5	365	rpe	Limbus_Sclera_fibroblast_C1	CL:0000057	fibroblast	sidecar	fibroblast	CL:0000057	fibroblast	name	same_term				CL:0000057	CL:0000057	✅一致	same_cl
+CX09_voigt_RPE_choroid	6	434	rpe	Fibroblast	CL:0000057	fibroblast	sidecar	fibroblast	CL:0000057	fibroblast	name	same_term				CL:0000057	CL:0000057	✅一致	same_cl
+CX09_voigt_RPE_choroid	7	168	rpe	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell	CL:0000115	endothelial cell	name	same_term				CL:0000115	CL:0000115	❌不一致	same_cl
+CX09_voigt_RPE_choroid	8	225	rpe	NK	CL:0000623	natural killer cell	sidecar	mature NK T cell	CL:0000814	mature NK T cell	name	true_mismatch				CL:0000623	CL:0000814	✅一致	mismatch
+CX09_voigt_RPE_choroid	9	96	rpe	APC_MHCII_high			unresolved	B cell	CL:0000236	B cell	name	no_mapping	ours	ours_candidate_without_cl_term			CL:0000236	❌不一致	unmappable_pred
+CX09_voigt_RPE_choroid	10	86	rpe	Pericyte	CL:0000669	pericyte	sidecar	fibroblast	CL:0000057	fibroblast	name	true_mismatch				CL:0000669	CL:0000057	🔄相关	mismatch
+CX09_voigt_RPE_choroid	11	9	rpe				label_not_in_libraries	melanocyte	CL:0000148	melanocyte	name	no_mapping	ours	ours_abstain			CL:0000148	❓混合/低信息	abstain
+CX09_voigt_RPE_choroid	12	156	rpe	RPE	CL:0002586	retinal pigment epithelial cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	same_term				CL:0002586	CL:0002586	✅一致	same_cl
+CX09_voigt_RPE_choroid	13	353	rpe	Fibroblast	CL:0000057	fibroblast	sidecar	fibroblast	CL:0000057	fibroblast	name	same_term				CL:0000057	CL:0000057	✅一致	same_cl
+CX09_voigt_RPE_choroid	14	30	rpe	MG	CL:0000636	Mueller cell	sidecar	Schwann cell	CL:0002573	Schwann cell	name	true_mismatch				CL:0000636	CL:0002573	❌不一致	mismatch
+CX09_voigt_RPE_choroid	15	47	rpe	Granulocyte	CL:0000094	granulocyte	sidecar	mast cell	CL:0000097	mast cell	name	true_mismatch				CL:0000094	CL:0000097	❌不一致	mismatch
+CX10_hiPSC_RPE	0	6299	rpe	RPE	CL:0002586	retinal pigment epithelial cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	same_term				CL:0002586	CL:0002586	✅一致	same_cl
+CX10_hiPSC_RPE	1	3359	rpe	Melanocyte	CL:0000148	melanocyte	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000148	CL:0002586	❌不一致	mismatch
+CX10_hiPSC_RPE	2	2289	rpe	Melanocyte	CL:0000148	melanocyte	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000148	CL:0002586	❌不一致	mismatch
+CX10_hiPSC_RPE	3	5993	rpe	Melanocyte	CL:0000148	melanocyte	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000148	CL:0002586	❌不一致	mismatch
+CX10_hiPSC_RPE	4	2690	rpe				label_not_in_libraries	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002586	❓混合/低信息	abstain
+CX10_hiPSC_RPE	5	2154	rpe				label_not_in_libraries	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002586	❓混合/低信息	abstain
+CX10_hiPSC_RPE	6	1202	rpe	Fibroblast	CL:0000057	fibroblast	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000057	CL:0002586	❌不一致	mismatch
+CX10_hiPSC_RPE	7	3323	rpe	Fibroblast	CL:0000057	fibroblast	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000057	CL:0002586	❌不一致	mismatch
+CX10_hiPSC_RPE	8	3091	rpe				label_not_in_libraries	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002586	❓混合/低信息	abstain
+CX10_hiPSC_RPE	9	841	rpe				label_not_in_libraries	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002586	❓混合/低信息	abstain
+CX10_hiPSC_RPE	10	2955	rpe				label_not_in_libraries	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	no_mapping	ours	ours_abstain			CL:0002672	❓混合/低信息	abstain
+CX10_hiPSC_RPE	11	1944	rpe	Schwann	CL:0002573	Schwann cell	sidecar	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	true_mismatch				CL:0002573	CL:0002672	❌不一致	mismatch
+CX10_hiPSC_RPE	12	1500	rpe				label_not_in_libraries	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	no_mapping	ours	ours_abstain			CL:0002672	❓混合/低信息	abstain
+CX10_hiPSC_RPE	13	759	rpe	SMC	CL:0000192	smooth muscle cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000192	CL:0002586	❌不一致	mismatch
+CX10_hiPSC_RPE	14	1279	rpe				label_not_in_libraries	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002586	❓混合/低信息	abstain
+CX10_hiPSC_RPE	15	1068	rpe				label_not_in_libraries	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002586	❓混合/低信息	abstain
+CX10_hiPSC_RPE	16	2632	rpe	Myofibroblast	CL:0000186	myofibroblast cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000186	CL:0002586	❌不一致	mismatch
+CX10_hiPSC_RPE	17	4008	rpe	Fibroblast	CL:0000057	fibroblast	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000057	CL:0002586	❌不一致	mismatch
+CX10_hiPSC_RPE	18	965	rpe	Myofibroblast	CL:0000186	myofibroblast cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000186	CL:0002586	❌不一致	mismatch
+CX10_hiPSC_RPE	19	2098	rpe				label_not_in_libraries	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002586	❓混合/低信息	abstain
+CX10_hiPSC_RPE	20	734	rpe	cDC2	CL:0000990	conventional dendritic cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000990	CL:0002586	❌不一致	mismatch
+CX10_hiPSC_RPE	21	884	rpe	Schwann	CL:0002573	Schwann cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0002573	CL:0002586	❌不一致	mismatch
+CX10_hiPSC_RPE	22	2261	rpe				label_not_in_libraries	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002586	❓混合/低信息	abstain
+CX10_hiPSC_RPE	23	411	rpe	Melanocyte	CL:0000148	melanocyte	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000148	CL:0002586	❌不一致	mismatch
+CX10_hiPSC_RPE	24	155	rpe	Fibroblast	CL:0000057	fibroblast	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000057	CL:0002586	❌不一致	mismatch
+CX11_posterior_eye_atlas	0	3609	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	oligodendrocyte	CL:0000128	oligodendrocyte	name	true_mismatch				CL:0000748	CL:0000128	❌不一致	mismatch
+CX11_posterior_eye_atlas	1	2663	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	oligodendrocyte	CL:0000128	oligodendrocyte	name	true_mismatch				CL:0000748	CL:0000128	❌不一致	mismatch
+CX11_posterior_eye_atlas	2	2387	optic_nerve	AC	CL:0000561	amacrine cell	sidecar	oligodendrocyte precursor cell	CL:0002453	oligodendrocyte precursor cell	name	true_mismatch				CL:0000561	CL:0002453	❌不一致	mismatch
+CX11_posterior_eye_atlas	3	4333	optic_nerve				label_not_in_libraries	astrocyte	CL:0000127	astrocyte	name	no_mapping	ours	ours_abstain			CL:0000127	❓混合/低信息	abstain
+CX11_posterior_eye_atlas	4	1104	optic_nerve				label_not_in_libraries	fibroblast	CL:0000057	fibroblast	name	no_mapping	ours	ours_abstain			CL:0000057	✅一致	abstain
+CX11_posterior_eye_atlas	5	3843	optic_nerve				label_not_in_libraries	microglial cell	CL:0000129	microglial cell	name	no_mapping	ours	ours_abstain			CL:0000129	❓混合/低信息	abstain
+CX11_posterior_eye_atlas	6	4943	optic_nerve	Mac_Tissue	CL:0000235	macrophage	sidecar	macrophage	CL:0000235	macrophage	name	same_term				CL:0000235	CL:0000235	❌不一致	same_cl
+CX11_posterior_eye_atlas	7	676	optic_nerve				label_not_in_libraries	macrophage	CL:0000235	macrophage	name	no_mapping	ours	ours_abstain			CL:0000235	❓混合/低信息	abstain
+CX11_posterior_eye_atlas	8	142	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	oligodendrocyte precursor cell	CL:0002453	oligodendrocyte precursor cell	name	true_mismatch				CL:0000748	CL:0002453	❌不一致	mismatch
+CX11_posterior_eye_atlas	9	4789	optic_nerve	T	CL:0000084	T cell	sidecar	T cell	CL:0000084	T cell	name	same_term				CL:0000084	CL:0000084	✅一致	same_cl
+CX11_posterior_eye_atlas	10	2043	optic_nerve	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell	CL:0000115	endothelial cell	name	same_term				CL:0000115	CL:0000115	❌不一致	same_cl
+CX11_posterior_eye_atlas	11	1997	optic_nerve	AC	CL:0000561	amacrine cell	sidecar	Schwann cell	CL:0002573	Schwann cell	name	true_mismatch				CL:0000561	CL:0002573	❌不一致	mismatch
+CX11_posterior_eye_atlas	12	5089	optic_nerve				label_not_in_libraries	fibroblast	CL:0000057	fibroblast	name	no_mapping	ours	ours_abstain			CL:0000057	❓混合/低信息	abstain
+CX11_posterior_eye_atlas	13	2260	optic_nerve	RGC	CL:0000740	retinal ganglion cell	sidecar	vascular associated smooth muscle cell	CL:0000359	vascular associated smooth muscle cell	name	true_mismatch				CL:0000740	CL:0000359	❌不一致	mismatch
+CX11_posterior_eye_atlas	14	1894	optic_nerve				label_not_in_libraries	astrocyte	CL:0000127	astrocyte	name	no_mapping	ours	ours_abstain			CL:0000127	❓混合/低信息	abstain
+CX11_posterior_eye_atlas	15	2868	optic_nerve	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell	CL:0000115	endothelial cell	name	same_term				CL:0000115	CL:0000115	❌不一致	same_cl
+CX11_posterior_eye_atlas	16	6257	optic_nerve	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+CX11_posterior_eye_atlas	17	1196	optic_nerve	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell	CL:0000115	endothelial cell	name	same_term				CL:0000115	CL:0000115	❌不一致	same_cl
+CX11_posterior_eye_atlas	18	528	optic_nerve	B	CL:0000236	B cell	sidecar	B cell	CL:0000236	B cell	name	same_term				CL:0000236	CL:0000236	✅一致	same_cl
+CX11_posterior_eye_atlas	19	2076	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	pigmented epithelial cell	CL:0000529	pigmented epithelial cell	name	true_mismatch				CL:0000748	CL:0000529	❌不一致	mismatch
+CX12_ocular_surface_snRNA	0	4114	ocular_surface	Corneal Endothelium	CL:0000132	corneal endothelial cell	sidecar	corneal endothelial cell	CL:0000132	corneal endothelial cell	name	same_term				CL:0000132	CL:0000132	✅一致	same_cl
+CX12_ocular_surface_snRNA	1	3121	ocular_surface				label_not_in_libraries	epithelial cell	CL:0000066	epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000066	❓混合/低信息	abstain
+CX12_ocular_surface_snRNA	2	1333	ocular_surface	Mac_Tissue	CL:0000235	macrophage	sidecar	myeloid leukocyte	CL:0000766	myeloid leukocyte	name	we_are_finer			CL:0000235 -> CL:0000766	CL:0000235	CL:0000766	❌不一致	subsumed
+CX12_ocular_surface_snRNA	3	2420	ocular_surface				label_not_in_libraries	corneal endothelial cell	CL:0000132	corneal endothelial cell	name	no_mapping	ours	ours_abstain			CL:0000132	❓混合/低信息	abstain
+CX12_ocular_surface_snRNA	4	5657	ocular_surface	Fibroblast	CL:0000057	fibroblast	sidecar	keratocyte	CL:0002363	keratocyte	name	we_are_coarser			CL:0002363 -> CL:0000005 -> CL:0000057	CL:0000057	CL:0002363	✅一致	subsumed
+CX12_ocular_surface_snRNA	5	1695	ocular_surface	Granulocyte	CL:0000094	granulocyte	sidecar	epithelial cell	CL:0000066	epithelial cell	name	true_mismatch				CL:0000094	CL:0000066	❌不一致	mismatch
+CX12_ocular_surface_snRNA	6	862	ocular_surface	T	CL:0000084	T cell	sidecar	lymphocyte	CL:0000542	lymphocyte	name	we_are_finer			CL:0000084 -> CL:0000542	CL:0000084	CL:0000542	✅一致	subsumed
+CX12_ocular_surface_snRNA	7	3194	ocular_surface				label_not_in_libraries	progenitor cell	CL:0011026	progenitor cell	name	no_mapping	ours	ours_abstain			CL:0011026	❓混合/低信息	abstain
+CX12_ocular_surface_snRNA	8	1263	ocular_surface	Limbus_Sclera_fibroblast_C1	CL:0000057	fibroblast	sidecar	fibroblast	CL:0000057	fibroblast	name	same_term				CL:0000057	CL:0000057	✅一致	same_cl
+CX12_ocular_surface_snRNA	9	2407	ocular_surface	Conj_epithelium_basal	CL:1000432	conjunctival epithelial cell	sidecar	conjunctival epithelial cell	CL:1000432	conjunctival epithelial cell	name	same_term				CL:1000432	CL:1000432	✅一致	same_cl
+CX12_ocular_surface_snRNA	10	712	ocular_surface	Schwann	CL:0002573	Schwann cell	sidecar	Schwann cell	CL:0002573	Schwann cell	name	same_term				CL:0002573	CL:0002573	✅一致	same_cl
+CX12_ocular_surface_snRNA	11	1318	ocular_surface				label_not_in_libraries	endothelial cell of lymphatic vessel	CL:0002138	endothelial cell of lymphatic vessel	name	no_mapping	ours	ours_abstain			CL:0002138	❌不一致	abstain
+CX12_ocular_surface_snRNA	12	819	ocular_surface	Endo	CL:0000115	endothelial cell	sidecar	blood vessel endothelial cell	CL:0000071	blood vessel endothelial cell	name	we_are_coarser			CL:0000071 -> CL:0002139 -> CL:0000115	CL:0000115	CL:0000071	❌不一致	subsumed
+CX12_ocular_surface_snRNA	13	1685	ocular_surface	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+CX12_ocular_surface_snRNA	14	2502	ocular_surface	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell	CL:0000115	endothelial cell	name	same_term				CL:0000115	CL:0000115	❌不一致	same_cl
+CX12_ocular_surface_snRNA	15	305	ocular_surface				label_not_in_libraries	conjunctiva goblet cell	CL:2000084	conjunctiva goblet cell	name	no_mapping	ours	ours_abstain			CL:2000084	❓混合/低信息	abstain
+CX12_ocular_surface_snRNA	16	516	ocular_surface	Pericyte	CL:0000669	pericyte	sidecar	pericyte	CL:0000669	pericyte	name	same_term				CL:0000669	CL:0000669	❌不一致	same_cl
+CX12_ocular_surface_snRNA	17	913	ocular_surface				label_not_in_libraries	fibroblast	CL:0000057	fibroblast	name	no_mapping	ours	ours_abstain			CL:0000057	❓混合/低信息	abstain
+CX12_ocular_surface_snRNA	18	1851	ocular_surface	SMC	CL:0000192	smooth muscle cell	sidecar	smooth muscle cell	CL:0000192	smooth muscle cell	name	same_term				CL:0000192	CL:0000192	❌不一致	same_cl
+CX12_ocular_surface_snRNA	19	265	ocular_surface				label_not_in_libraries	endothelial cell	CL:0000115	endothelial cell	name	no_mapping	ours	ours_abstain			CL:0000115	❌不一致	abstain
+CX12_ocular_surface_snRNA	20	312	ocular_surface	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+CX13_TM_corneal_scleral	0	3581	trabecular_meshwork	Granulocyte	CL:0000094	granulocyte	sidecar	corneal epithelial cell	CL:0000575	corneal epithelial cell	name	true_mismatch				CL:0000094	CL:0000575	❌不一致	mismatch
+CX13_TM_corneal_scleral	1	2268	trabecular_meshwork				label_not_in_libraries	basal cell	CL:0000646	basal cell	name	no_mapping	ours	ours_abstain			CL:0000646	❓混合/低信息	abstain
+CX13_TM_corneal_scleral	2	1411	trabecular_meshwork				label_not_in_libraries	basal cell	CL:0000646	basal cell	name	no_mapping	ours	ours_abstain			CL:0000646	❌不一致	abstain
+CX13_TM_corneal_scleral	3	1430	trabecular_meshwork	Mono_Classical	CL:0000860	classical monocyte	sidecar	conjunctival epithelial cell	CL:1000432	conjunctival epithelial cell	name	true_mismatch				CL:0000860	CL:1000432	✅一致	mismatch
+CX13_TM_corneal_scleral	4	1024	trabecular_meshwork				label_not_in_libraries	corneal epithelial cell	CL:0000575	corneal epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000575	❓混合/低信息	abstain
+CX13_TM_corneal_scleral	5	1452	trabecular_meshwork	Granulocyte	CL:0000094	granulocyte	sidecar	basal cell	CL:0000646	basal cell	name	true_mismatch				CL:0000094	CL:0000646	✅一致	mismatch
+CX13_TM_corneal_scleral	6	955	trabecular_meshwork				label_not_in_libraries	corneal endothelial cell	CL:0000132	corneal endothelial cell	name	no_mapping	ours	ours_abstain			CL:0000132	✅一致	abstain
+CX13_TM_corneal_scleral	7	2812	trabecular_meshwork				label_not_in_libraries	fibroblast	CL:0000057	fibroblast	name	no_mapping	ours	ours_abstain			CL:0000057	❓混合/低信息	abstain
+CX13_TM_corneal_scleral	8	1186	trabecular_meshwork	Pericyte	CL:0000669	pericyte	sidecar	fibroblast	CL:0000057	fibroblast	name	true_mismatch				CL:0000669	CL:0000057	🔄相关	mismatch
+CX13_TM_corneal_scleral	9	1712	trabecular_meshwork	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+CX13_TM_corneal_scleral	10	1018	trabecular_meshwork				label_not_in_libraries	endothelial cell of lymphatic vessel	CL:0002138	endothelial cell of lymphatic vessel	name	no_mapping	ours	ours_abstain			CL:0002138	❌不一致	abstain
+CX13_TM_corneal_scleral	11	440	trabecular_meshwork	Fibroblast	CL:0000057	fibroblast	sidecar	fibroblast	CL:0000057	fibroblast	name	same_term				CL:0000057	CL:0000057	✅一致	same_cl
+CX13_TM_corneal_scleral	12	5988	trabecular_meshwork	Fibroblast	CL:0000057	fibroblast	sidecar	fibroblast	CL:0000057	fibroblast	name	same_term				CL:0000057	CL:0000057	✅一致	same_cl
+CX13_TM_corneal_scleral	13	4258	trabecular_meshwork	Schwann	CL:0002573	Schwann cell	sidecar	Schwann cell	CL:0002573	Schwann cell	name	same_term				CL:0002573	CL:0002573	✅一致	same_cl
+CX13_TM_corneal_scleral	14	1261	trabecular_meshwork	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+CX13_TM_corneal_scleral	15	7529	trabecular_meshwork	SMC	CL:0000192	smooth muscle cell	sidecar	ciliary muscle cell	CL:1000443	ciliary muscle cell	name	we_are_coarser			CL:1000443 -> CL:0000192	CL:0000192	CL:1000443	❌不一致	subsumed
+CX13_TM_corneal_scleral	16	6461	trabecular_meshwork	SMC	CL:0000192	smooth muscle cell	sidecar	ciliary muscle cell	CL:1000443	ciliary muscle cell	name	we_are_coarser			CL:1000443 -> CL:0000192	CL:0000192	CL:1000443	❌不一致	subsumed
+CX13_TM_corneal_scleral	17	16	trabecular_meshwork				label_not_in_libraries	corneal endothelial cell	CL:0000132	corneal endothelial cell	name	no_mapping	ours	ours_abstain			CL:0000132	❌不一致	abstain
+CX13_TM_corneal_scleral	18	2276	trabecular_meshwork	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell	CL:0000115	endothelial cell	name	same_term				CL:0000115	CL:0000115	❌不一致	same_cl
+CX13_TM_corneal_scleral	19	557	trabecular_meshwork	T	CL:0000084	T cell	sidecar	lymphocyte	CL:0000542	lymphocyte	name	we_are_finer			CL:0000084 -> CL:0000542	CL:0000084	CL:0000542	✅一致	subsumed
+CX13_TM_corneal_scleral	20	503	trabecular_meshwork	Pericyte	CL:0000669	pericyte	sidecar	pericyte	CL:0000669	pericyte	name	same_term				CL:0000669	CL:0000669	✅一致	same_cl
+CX13_TM_corneal_scleral	21	372	trabecular_meshwork	Endo	CL:0000115	endothelial cell	sidecar	blood vessel endothelial cell	CL:0000071	blood vessel endothelial cell	name	we_are_coarser			CL:0000071 -> CL:0002139 -> CL:0000115	CL:0000115	CL:0000071	❌不一致	subsumed
+CX13_TM_corneal_scleral	22	289	trabecular_meshwork				label_not_in_libraries	goblet cell	CL:0000160	goblet cell	name	no_mapping	ours	ours_abstain			CL:0000160	❌不一致	abstain
+CX13_TM_corneal_scleral	23	740	trabecular_meshwork	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell	CL:0000115	endothelial cell	name	same_term				CL:0000115	CL:0000115	❌不一致	same_cl
+CX13_TM_corneal_scleral	24	1553	trabecular_meshwork	Mac_Tissue	CL:0000235	macrophage	sidecar	macrophage	CL:0000235	macrophage	name	same_term				CL:0000235	CL:0000235	❌不一致	same_cl
+CX13_TM_corneal_scleral	25	178	trabecular_meshwork	Fibroblast	CL:0000057	fibroblast	sidecar	fibroblast	CL:0000057	fibroblast	name	same_term				CL:0000057	CL:0000057	✅一致	same_cl
+CX13_TM_corneal_scleral	26	23	trabecular_meshwork	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+CX13_TM_corneal_scleral	27	68	trabecular_meshwork	Schwann	CL:0002573	Schwann cell	sidecar	fibroblast	CL:0000057	fibroblast	name	true_mismatch				CL:0002573	CL:0000057	❌不一致	mismatch
+CX13_TM_corneal_scleral	28	53	trabecular_meshwork				label_not_in_libraries	mast cell	CL:0000097	mast cell	name	no_mapping	ours	ours_abstain			CL:0000097	❌不一致	abstain
+CX13_central_cornea	0	6306	ocular_surface				label_not_in_libraries	basal cell	CL:0000646	basal cell	name	no_mapping	ours	ours_abstain			CL:0000646	❓混合/低信息	abstain
+CX13_central_cornea	1	6326	ocular_surface				label_not_in_libraries	corneal epithelial cell	CL:0000575	corneal epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000575	❓混合/低信息	abstain
+CX13_central_cornea	2	886	ocular_surface				label_not_in_libraries	corneal epithelial cell	CL:0000575	corneal epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000575	❓混合/低信息	abstain
+CX13_central_cornea	3	1006	ocular_surface	Keratocytes	CL:0002363	keratocyte	sidecar	basal cell	CL:0000646	basal cell	name	true_mismatch				CL:0002363	CL:0000646	❌不一致	mismatch
+CX13_central_cornea	4	1461	ocular_surface				label_not_in_libraries	corneal epithelial cell	CL:0000575	corneal epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000575	❓混合/低信息	abstain
+CX13_central_cornea	5	1093	ocular_surface	Fibroblast	CL:0000057	fibroblast	sidecar	fibroblast	CL:0000057	fibroblast	name	same_term				CL:0000057	CL:0000057	✅一致	same_cl
+CX13_central_cornea	6	3700	ocular_surface				label_not_in_libraries	corneal epithelial cell	CL:0000575	corneal epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000575	❓混合/低信息	abstain
+CX13_central_cornea	7	5524	ocular_surface				label_not_in_libraries	corneal epithelial cell	CL:0000575	corneal epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000575	❓混合/低信息	abstain
+CX13_central_cornea	8	2275	ocular_surface				label_not_in_libraries	corneal epithelial cell	CL:0000575	corneal epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000575	❓混合/低信息	abstain
+CX13_central_cornea	9	838	ocular_surface				label_not_in_libraries	corneal epithelial cell	CL:0000575	corneal epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000575	❓混合/低信息	abstain
+CX13_central_cornea	10	4802	ocular_surface	Fibroblast	CL:0000057	fibroblast	sidecar	corneal endothelial cell	CL:0000132	corneal endothelial cell	name	true_mismatch				CL:0000057	CL:0000132	❌不一致	mismatch
+CX13_central_cornea	11	227	ocular_surface				label_not_in_libraries	fibroblast	CL:0000057	fibroblast	name	no_mapping	ours	ours_abstain			CL:0000057	❌不一致	abstain
+CX13_central_cornea	12	543	ocular_surface				label_not_in_libraries	basal cell	CL:0000646	basal cell	name	no_mapping	ours	ours_abstain			CL:0000646	❌不一致	abstain
+CX13_central_cornea	13	743	ocular_surface				label_not_in_libraries	basal cell	CL:0000646	basal cell	name	no_mapping	ours	ours_abstain			CL:0000646	❓混合/低信息	abstain
+CX13_central_cornea	14	148	ocular_surface				label_not_in_libraries	leukocyte	CL:0000738	leukocyte	name	no_mapping	ours	ours_abstain			CL:0000738	❓混合/低信息	abstain
+CX13_central_cornea	15	12	ocular_surface				label_not_in_libraries	leukocyte	CL:0000738	leukocyte	name	no_mapping	ours	ours_abstain			CL:0000738	❌不一致	abstain
+CX13_ciliary_body	0	3800	ciliary_body				label_not_in_libraries	pigmented ciliary epithelial cell	CL:0002303	pigmented ciliary epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002303	❌不一致	abstain
+CX13_ciliary_body	1	3844	ciliary_body				label_not_in_libraries	pigmented ciliary epithelial cell	CL:0002303	pigmented ciliary epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002303	❓混合/低信息	abstain
+CX13_ciliary_body	2	3021	ciliary_body	Melanocyte	CL:0000148	melanocyte	sidecar	pigmented ciliary epithelial cell	CL:0002303	pigmented ciliary epithelial cell	name	true_mismatch				CL:0000148	CL:0002303	❌不一致	mismatch
+CX13_ciliary_body	3	2361	ciliary_body				label_not_in_libraries	pigmented ciliary epithelial cell	CL:0002303	pigmented ciliary epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002303	❌不一致	abstain
+CX13_ciliary_body	4	1766	ciliary_body				label_not_in_libraries	pigmented ciliary epithelial cell	CL:0002303	pigmented ciliary epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002303	❌不一致	abstain
+CX13_ciliary_body	5	3464	ciliary_body	Fibroblast	CL:0000057	fibroblast	sidecar	fibroblast	CL:0000057	fibroblast	name	same_term				CL:0000057	CL:0000057	✅一致	same_cl
+CX13_ciliary_body	6	1865	ciliary_body	Schwann	CL:0002573	Schwann cell	sidecar	Schwann cell	CL:0002573	Schwann cell	name	same_term				CL:0002573	CL:0002573	✅一致	same_cl
+CX13_ciliary_body	7	3479	ciliary_body				label_not_in_libraries	non-pigmented ciliary epithelial cell	CL:0002304	non-pigmented ciliary epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002304	❓混合/低信息	abstain
+CX13_ciliary_body	8	939	ciliary_body				label_not_in_libraries	non-pigmented ciliary epithelial cell	CL:0002304	non-pigmented ciliary epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002304	❓混合/低信息	abstain
+CX13_ciliary_body	9	26	ciliary_body	cDC1	CL:0000990	conventional dendritic cell	sidecar	non-pigmented ciliary epithelial cell	CL:0002304	non-pigmented ciliary epithelial cell	name	true_mismatch				CL:0000990	CL:0002304	❌不一致	mismatch
+CX13_ciliary_body	10	1208	ciliary_body	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+CX13_ciliary_body	11	404	ciliary_body				label_not_in_libraries	non-pigmented ciliary epithelial cell	CL:0002304	non-pigmented ciliary epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002304	❌不一致	abstain
+CX13_ciliary_body	12	4062	ciliary_body	SMC	CL:0000192	smooth muscle cell	sidecar	ciliary muscle cell	CL:1000443	ciliary muscle cell	name	we_are_coarser			CL:1000443 -> CL:0000192	CL:0000192	CL:1000443	❌不一致	subsumed
+CX13_ciliary_body	13	1457	ciliary_body	Astro	CL:0000127	astrocyte	sidecar	macrophage	CL:0000235	macrophage	name	true_mismatch				CL:0000127	CL:0000235	❌不一致	mismatch
+CX13_ciliary_body	14	300	ciliary_body	T	CL:0000084	T cell	sidecar	lymphocyte	CL:0000542	lymphocyte	name	we_are_finer			CL:0000084 -> CL:0000542	CL:0000084	CL:0000542	✅一致	subsumed
+CX13_ciliary_body	15	184	ciliary_body	Endo	CL:0000115	endothelial cell	sidecar	blood vessel endothelial cell	CL:0000071	blood vessel endothelial cell	name	we_are_coarser			CL:0000071 -> CL:0002139 -> CL:0000115	CL:0000115	CL:0000071	❌不一致	subsumed
+CX13_ciliary_body	16	102	ciliary_body	Pericyte	CL:0000669	pericyte	sidecar	pericyte	CL:0000669	pericyte	name	same_term				CL:0000669	CL:0000669	✅一致	same_cl
+CX13_iris	0	8205	iris				label_not_in_libraries	pigmented epithelial cell	CL:0000529	pigmented epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000529	❓混合/低信息	abstain
+CX13_iris	1	2693	iris				label_not_in_libraries	pigmented epithelial cell	CL:0000529	pigmented epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000529	❓混合/低信息	abstain
+CX13_iris	2	1790	iris				label_not_in_libraries	pigmented epithelial cell	CL:0000529	pigmented epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000529	❓混合/低信息	abstain
+CX13_iris	3	6003	iris	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+CX13_iris	4	7697	iris				label_not_in_libraries	melanocyte	CL:0000148	melanocyte	name	no_mapping	ours	ours_abstain			CL:0000148	❓混合/低信息	abstain
+CX13_iris	5	3851	iris	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+CX13_iris	6	3703	iris	pDC	CL:0000784	plasmacytoid dendritic cell	sidecar	fibroblast	CL:0000057	fibroblast	name	true_mismatch				CL:0000784	CL:0000057	❌不一致	mismatch
+CX13_iris	7	1166	iris	SMC	CL:0000192	smooth muscle cell	sidecar	smooth muscle cell of sphincter of pupil	CL:0002243	smooth muscle cell of sphincter of pupil	name	we_are_coarser			CL:0002243 -> CL:0000358 -> CL:0000192	CL:0000192	CL:0002243	❌不一致	subsumed
+CX13_iris	8	376	iris	SMC	CL:0000192	smooth muscle cell	sidecar	pigmented epithelial cell	CL:0000529	pigmented epithelial cell	name	true_mismatch				CL:0000192	CL:0000529	❌不一致	mismatch
+CX13_iris	9	7148	iris	SMC	CL:0000192	smooth muscle cell	sidecar	pigmented epithelial cell	CL:0000529	pigmented epithelial cell	name	true_mismatch				CL:0000192	CL:0000529	❌不一致	mismatch
+CX13_iris	10	1995	iris				label_not_in_libraries	pigmented epithelial cell	CL:0000529	pigmented epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000529	❓混合/低信息	abstain
+CX13_iris	11	7817	iris	pDC	CL:0000784	plasmacytoid dendritic cell	sidecar	fibroblast	CL:0000057	fibroblast	name	true_mismatch				CL:0000784	CL:0000057	❌不一致	mismatch
+CX13_iris	12	589	iris	Astro	CL:0000127	astrocyte	sidecar	macrophage	CL:0000235	macrophage	name	true_mismatch				CL:0000127	CL:0000235	❌不一致	mismatch
+CX13_iris	13	2135	iris				label_not_in_libraries	pigmented epithelial cell	CL:0000529	pigmented epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000529	❓混合/低信息	abstain
+CX13_iris	14	586	iris	Schwann	CL:0002573	Schwann cell	sidecar	Schwann cell	CL:0002573	Schwann cell	name	same_term				CL:0002573	CL:0002573	✅一致	same_cl
+CX13_iris	15	83	iris				label_not_in_libraries	lymphocyte	CL:0000542	lymphocyte	name	no_mapping	ours	ours_abstain			CL:0000542	❓混合/低信息	abstain
+CX13_iris	16	153	iris				label_not_in_libraries	pigmented epithelial cell	CL:0000529	pigmented epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000529	❓混合/低信息	abstain
+CX13_lens	0	2288	lens	AC	CL:0000561	amacrine cell	sidecar	lens epithelial cell	CL:0002224	lens epithelial cell	name	true_mismatch				CL:0000561	CL:0002224	❌不一致	mismatch
+CX13_lens	1	573	lens				label_not_in_libraries	lens epithelial cell	CL:0002224	lens epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002224	❓混合/低信息	abstain
+CX13_lens	2	897	lens				label_not_in_libraries	anterior lens cell	CL:0002223	anterior lens cell	name	no_mapping	ours	ours_abstain			CL:0002223	❓混合/低信息	abstain
+CX13_lens	3	954	lens				label_not_in_libraries	lens epithelial cell	CL:0002224	lens epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002224	❓混合/低信息	abstain
+CX13_lens	4	1368	lens				label_not_in_libraries	secondary lens fiber	CL:0002225	secondary lens fiber	name	no_mapping	ours	ours_abstain			CL:0002225	❓混合/低信息	abstain
+CX13_lens	5	1110	lens				label_not_in_libraries	anterior lens cell	CL:0002223	anterior lens cell	name	no_mapping	ours	ours_abstain			CL:0002223	❓混合/低信息	abstain
+CX13_lens	6	2964	lens	AC	CL:0000561	amacrine cell	sidecar	anterior lens cell	CL:0002223	anterior lens cell	name	true_mismatch				CL:0000561	CL:0002223	❌不一致	mismatch
+CX13_lens	7	2385	lens				label_not_in_libraries	anterior lens cell	CL:0002223	anterior lens cell	name	no_mapping	ours	ours_abstain			CL:0002223	❓混合/低信息	abstain
+CX13_lens	8	186	lens				label_not_in_libraries	lens epithelial cell	CL:0002224	lens epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002224	❓混合/低信息	abstain
+CX13_lens	9	725	lens				label_not_in_libraries	lens fiber cell	CL:0011004	lens fiber cell	name	no_mapping	ours	ours_abstain			CL:0011004	❓混合/低信息	abstain
+CX13_lens	10	88	lens				label_not_in_libraries	lens fiber cell	CL:0011004	lens fiber cell	name	no_mapping	ours	ours_abstain			CL:0011004	❓混合/低信息	abstain
+CX14_TM_ciliary_snRNA	0	6414	trabecular_meshwork	Pericyte	CL:0000669	pericyte	sidecar	pericyte	CL:0000669	pericyte	name	same_term				CL:0000669	CL:0000669	✅一致	same_cl
+CX14_TM_ciliary_snRNA	1	9469	trabecular_meshwork				label_not_in_libraries	fibroblast	CL:0000057	fibroblast	name	no_mapping	ours	ours_abstain			CL:0000057	❓混合/低信息	abstain
+CX14_TM_ciliary_snRNA	2	7111	trabecular_meshwork	SMC	CL:0000192	smooth muscle cell	sidecar	ciliary muscle cell	CL:1000443	ciliary muscle cell	name	we_are_coarser			CL:1000443 -> CL:0000192	CL:0000192	CL:1000443	❌不一致	subsumed
+CX14_TM_ciliary_snRNA	3	3792	trabecular_meshwork				label_not_in_libraries	trabecular meshwork cell	CL:0002367	trabecular meshwork cell	name	no_mapping	ours	ours_abstain			CL:0002367	❓混合/低信息	abstain
+CX14_TM_ciliary_snRNA	4	6136	trabecular_meshwork				label_not_in_libraries	non-pigmented ciliary epithelial cell	CL:0002304	non-pigmented ciliary epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002304	❓混合/低信息	abstain
+CX14_TM_ciliary_snRNA	5	6501	trabecular_meshwork	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+CX14_TM_ciliary_snRNA	6	7215	trabecular_meshwork	Endo	CL:0000115	endothelial cell	sidecar	blood vessel endothelial cell	CL:0000071	blood vessel endothelial cell	name	we_are_coarser			CL:0000071 -> CL:0002139 -> CL:0000115	CL:0000115	CL:0000071	❌不一致	subsumed
+CX14_TM_ciliary_snRNA	7	6705	trabecular_meshwork				label_not_in_libraries	pigmented ciliary epithelial cell	CL:0002303	pigmented ciliary epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002303	❓混合/低信息	abstain
+CX14_TM_ciliary_snRNA	8	910	trabecular_meshwork				label_not_in_libraries	mast cell	CL:0000097	mast cell	name	no_mapping	ours	ours_abstain			CL:0000097	❌不一致	abstain
+CX14_TM_ciliary_snRNA	9	6433	trabecular_meshwork	Mac_Tissue	CL:0000235	macrophage	sidecar	macrophage	CL:0000235	macrophage	name	same_term				CL:0000235	CL:0000235	❌不一致	same_cl
+CX14_TM_ciliary_snRNA	10	6383	trabecular_meshwork	T	CL:0000084	T cell	sidecar	lymphocyte	CL:0000542	lymphocyte	name	we_are_finer			CL:0000084 -> CL:0000542	CL:0000084	CL:0000542	✅一致	subsumed
+CX14_TM_ciliary_snRNA	11	2497	trabecular_meshwork				label_not_in_libraries	myelinating Schwann cell	CL:0000218	myelinating Schwann cell	name	no_mapping	ours	ours_abstain			CL:0000218	❌不一致	abstain
+CX14_TM_ciliary_snRNA	12	531	trabecular_meshwork				label_not_in_libraries	non-pigmented ciliary epithelial cell	CL:0002304	non-pigmented ciliary epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002304	❌不一致	abstain
+CX14_TM_ciliary_snRNA	13	100	trabecular_meshwork	Schwann	CL:0002573	Schwann cell	sidecar	lymphocyte	CL:0000542	lymphocyte	name	true_mismatch				CL:0002573	CL:0000542	❌不一致	mismatch
+CX14_TM_ciliary_snRNA	14	94	trabecular_meshwork	Schwann	CL:0002573	Schwann cell	sidecar	macrophage	CL:0000235	macrophage	name	true_mismatch				CL:0002573	CL:0000235	❌不一致	mismatch
+CX14_TM_ciliary_snRNA	15	6588	trabecular_meshwork	Schwann	CL:0002573	Schwann cell	sidecar	Schwann cell	CL:0002573	Schwann cell	name	same_term				CL:0002573	CL:0002573	✅一致	same_cl
+CX14_TM_ciliary_snRNA	16	1231	trabecular_meshwork	B	CL:0000236	B cell	sidecar	B cell	CL:0000236	B cell	name	same_term				CL:0000236	CL:0000236	✅一致	same_cl
+CX15_optic_nerve_all	0	1915	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 2 cell	CL:4033028	diffuse bipolar 2 cell	name	we_are_coarser			CL:4033028 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033028	✅一致	subsumed
+CX15_optic_nerve_all	1	1934	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	invaginating midget bipolar cell	CL:4033034	invaginating midget bipolar cell	name	we_are_coarser			CL:4033034 -> CL:0000749 -> CL:0000748	CL:0000748	CL:4033034	✅一致	subsumed
+CX15_optic_nerve_all	2	1966	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	flat midget bipolar cell	CL:4033033	flat midget bipolar cell	name	we_are_coarser			CL:4033033 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033033	✅一致	subsumed
+CX15_optic_nerve_all	3	1943	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	rod bipolar cell	CL:0000751	rod bipolar cell	name	we_are_coarser			CL:0000751 -> CL:0000749 -> CL:0000748	CL:0000748	CL:0000751	❌不一致	subsumed
+CX15_optic_nerve_all	4	1806	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 3b cell	CL:4033030	diffuse bipolar 3b cell	name	we_are_coarser			CL:4033030 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033030	✅一致	subsumed
+CX15_optic_nerve_all	5	718	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 6 cell	CL:4033032	diffuse bipolar 6 cell	name	we_are_coarser			CL:4033032 -> CL:0000749 -> CL:0000748	CL:0000748	CL:4033032	✅一致	subsumed
+CX15_optic_nerve_all	6	1913	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 5 cell	CL:4033085	diffuse bipolar 5 cell	name	we_are_coarser			CL:4033085 -> CL:0000749 -> CL:0000748	CL:0000748	CL:4033085	✅一致	subsumed
+CX15_optic_nerve_all	7	1024	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	giant bipolar cell	CL:4033035	giant bipolar cell	name	we_are_coarser			CL:4033035 -> CL:0000749 -> CL:0000748	CL:0000748	CL:4033035	✅一致	subsumed
+CX15_optic_nerve_all	8	1601	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 3a cell	CL:4033029	diffuse bipolar 3a cell	name	we_are_coarser			CL:4033029 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033029	✅一致	subsumed
+CX15_optic_nerve_all	9	2274	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 4a cell	CL:4033095	diffuse bipolar 4a cell	name	we_are_coarser			CL:4033095 -> CL:0000749 -> CL:0000748	CL:0000748	CL:4033095	✅一致	subsumed
+CX15_optic_nerve_all	10	1640	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 1 cell	CL:4033027	diffuse bipolar 1 cell	name	we_are_coarser			CL:4033027 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033027	✅一致	subsumed
+CX15_optic_nerve_all	11	428	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	OFFx cell	CL:4033036	OFFx cell	name	we_are_coarser			CL:4033036 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033036	❌不一致	subsumed
+CX15_optic_nerve_all	12	3810	optic_nerve	RGC	CL:0000740	retinal ganglion cell	sidecar	pericyte	CL:0000669	pericyte	name	true_mismatch				CL:0000740	CL:0000669	❌不一致	mismatch
+CX15_optic_nerve_all	13	22	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	giant bipolar cell	CL:4033035	giant bipolar cell	name	we_are_coarser			CL:4033035 -> CL:0000749 -> CL:0000748	CL:0000748	CL:4033035	✅一致	subsumed
+CX15_optic_nerve_all	14	22	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 3a cell	CL:4033029	diffuse bipolar 3a cell	name	we_are_coarser			CL:4033029 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033029	✅一致	subsumed
+CX15_optic_nerve_all	15	1922	optic_nerve				label_not_in_libraries	retinal rod cell	CL:0000604	retinal rod cell	name	no_mapping	ours	ours_abstain			CL:0000604	❓混合/低信息	abstain
+CX15_optic_nerve_all	16	2544	optic_nerve	HC	CL:0000745	retina horizontal cell	sidecar	H1 horizontal cell	CL:0004217	H1 horizontal cell	name	we_are_coarser			CL:0004217 -> CL:0000745	CL:0000745	CL:0004217	✅一致	subsumed
+CX15_optic_nerve_all	17	1003	optic_nerve	AC	CL:0000561	amacrine cell	sidecar	B cell	CL:0000236	B cell	name	true_mismatch				CL:0000561	CL:0000236	❌不一致	mismatch
+CX15_optic_nerve_all	18	2260	optic_nerve	T	CL:0000084	T cell	sidecar	T cell	CL:0000084	T cell	name	same_term				CL:0000084	CL:0000084	✅一致	same_cl
+CX15_optic_nerve_all	19	942	optic_nerve	AC	CL:0000561	amacrine cell	sidecar	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	we_are_coarser			CL:4030028 -> CL:0000561	CL:0000561	CL:4030028	✅一致	subsumed
+CX15_optic_nerve_all	20	3722	optic_nerve	Endo	CL:0000115	endothelial cell	sidecar	fenestrated endothelial cell	CL:0000666	fenestrated endothelial cell	name	we_are_coarser			CL:0000666 -> CL:0000115	CL:0000115	CL:0000666	❌不一致	subsumed
+CX15_optic_nerve_all	21	3933	optic_nerve	Endo	CL:0000115	endothelial cell	sidecar	blood vessel endothelial cell	CL:0000071	blood vessel endothelial cell	name	we_are_coarser			CL:0000071 -> CL:0002139 -> CL:0000115	CL:0000115	CL:0000071	❌不一致	subsumed
+CX15_optic_nerve_all	22	1902	optic_nerve				label_not_in_libraries	melanocyte	CL:0000148	melanocyte	name	no_mapping	ours	ours_abstain			CL:0000148	❓混合/低信息	abstain
+CX15_optic_nerve_all	23	1884	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	oligodendrocyte	CL:0000128	oligodendrocyte	name	true_mismatch				CL:0000748	CL:0000128	❌不一致	mismatch
+CX15_optic_nerve_all	24	1913	optic_nerve	HC	CL:0000745	retina horizontal cell	sidecar	oligodendrocyte precursor cell	CL:0002453	oligodendrocyte precursor cell	name	true_mismatch				CL:0000745	CL:0002453	❌不一致	mismatch
+CX15_optic_nerve_all	25	22	optic_nerve				label_not_in_libraries	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	no_mapping	ours	ours_abstain			CL:4030027	❓混合/低信息	abstain
+CX15_optic_nerve_all	26	1585	optic_nerve	Schwann	CL:0002573	Schwann cell	sidecar	non-myelinating Schwann cell	CL:0002376	non-myelinating Schwann cell	name	we_are_coarser			CL:0002376 -> CL:0002573	CL:0002573	CL:0002376	✅一致	subsumed
+CX15_optic_nerve_all	27	3717	optic_nerve				label_not_in_libraries	microglial cell	CL:0000129	microglial cell	name	no_mapping	ours	ours_abstain			CL:0000129	❓混合/低信息	abstain
+CX15_optic_nerve_all	28	1604	optic_nerve				label_not_in_libraries	astrocyte	CL:0000127	astrocyte	name	no_mapping	ours	ours_abstain			CL:0000127	❓混合/低信息	abstain
+CX15_optic_nerve_all	29	2158	optic_nerve				label_not_in_libraries	Mueller cell	CL:0000636	Mueller cell	name	no_mapping	ours	ours_abstain			CL:0000636	❓混合/低信息	abstain
+CX15_optic_nerve_all	30	496	optic_nerve	BC	CL:0000748	retinal bipolar neuron	sidecar	myelinating Schwann cell	CL:0000218	myelinating Schwann cell	name	true_mismatch				CL:0000748	CL:0000218	❌不一致	mismatch
+CX15_optic_nerve_all	31	1822	optic_nerve				label_not_in_libraries	fibroblast	CL:0000057	fibroblast	name	no_mapping	ours	ours_abstain			CL:0000057	✅一致	abstain
+CX15_optic_nerve_all	32	2013	optic_nerve				label_not_in_libraries	retinal astrocyte	CL:4033015	retinal astrocyte	name	no_mapping	ours	ours_abstain			CL:4033015	❓混合/低信息	abstain
+CX15_optic_nerve_all	33	1515	optic_nerve	AC	CL:0000561	amacrine cell	sidecar	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	we_are_coarser			CL:4030027 -> CL:0000561	CL:0000561	CL:4030027	✅一致	subsumed
+CX15_optic_nerve_all	34	389	optic_nerve	AC	CL:0000561	amacrine cell	sidecar	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	we_are_coarser			CL:4030028 -> CL:0000561	CL:0000561	CL:4030028	✅一致	subsumed
+CX15_optic_nerve_all	35	145	optic_nerve	AC	CL:0000561	amacrine cell	sidecar	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	we_are_coarser			CL:4030027 -> CL:0000561	CL:0000561	CL:4030027	✅一致	subsumed
+CX15_optic_nerve_all	36	193	optic_nerve	AC	CL:0000561	amacrine cell	sidecar	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	we_are_coarser			CL:4030027 -> CL:0000561	CL:0000561	CL:4030027	✅一致	subsumed
+CX15_optic_nerve_all	37	695	optic_nerve	AC	CL:0000561	amacrine cell	sidecar	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	we_are_coarser			CL:4030028 -> CL:0000561	CL:0000561	CL:4030028	✅一致	subsumed
+CX15_optic_nerve_all	38	495	optic_nerve	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+CX15_optic_nerve_all	39	1994	optic_nerve	MG	CL:0000636	Mueller cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000636	CL:0002586	❌不一致	mismatch
+CX15_optic_nerve_all	40	1859	optic_nerve	HC	CL:0000745	retina horizontal cell	sidecar	pigmented epithelial cell	CL:0000529	pigmented epithelial cell	name	true_mismatch				CL:0000745	CL:0000529	❌不一致	mismatch
+CX15_optic_nerve_all	41	2224	optic_nerve	Cone	CL:0000573	retinal cone cell	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	same_term				CL:0000573	CL:0000573	✅一致	same_cl
+CX15_optic_nerve_all	42	550	optic_nerve				label_not_in_libraries	adipocyte	CL:0000136	adipocyte	name	no_mapping	ours	ours_abstain			CL:0000136	❓混合/低信息	abstain
+CX15_optic_nerve_all	43	3100	optic_nerve				label_not_in_libraries	OFF midget ganglion cell	CL:4033047	OFF midget ganglion cell	name	no_mapping	ours	ours_abstain			CL:4033047	❓混合/低信息	abstain
+CX15_optic_nerve_all	44	325	optic_nerve	RGC	CL:0000740	retinal ganglion cell	sidecar	OFF parasol ganglion cell	CL:4033051	OFF parasol ganglion cell	name	we_are_coarser			CL:4033051 -> CL:4023033 -> CL:0000740	CL:0000740	CL:4033051	✅一致	subsumed
+CX15_optic_nerve_all	45	55	optic_nerve				label_not_in_libraries	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	no_mapping	ours	ours_abstain			CL:0000740	❓混合/低信息	abstain
+CX16_tabula_sapiens_eye	0	2426	retina	Pericyte	CL:0000669	pericyte	sidecar	fibroblast	CL:0000057	fibroblast	name	true_mismatch				CL:0000669	CL:0000057	🔄相关	mismatch
+CX16_tabula_sapiens_eye	1	313	retina	Mono_Classical	CL:0000860	classical monocyte	sidecar	conjunctival epithelial cell	CL:1000432	conjunctival epithelial cell	name	true_mismatch				CL:0000860	CL:1000432	❌不一致	mismatch
+CX16_tabula_sapiens_eye	2	331	retina	Melanocyte	CL:0000148	melanocyte	sidecar	Schwann cell	CL:0002573	Schwann cell	name	true_mismatch				CL:0000148	CL:0002573	🔄相关	mismatch
+CX16_tabula_sapiens_eye	3	1341	retina	Microglia	CL:0000129	microglial cell	sidecar	myeloid leukocyte	CL:0000766	myeloid leukocyte	name	we_are_finer			CL:0000129 -> CL:0000878 -> CL:0000864 -> CL:0000235 -> CL:0000766	CL:0000129	CL:0000766	🔄相关	subsumed
+CX16_tabula_sapiens_eye	4	1803	retina	T	CL:0000084	T cell	sidecar	CD8-positive, alpha-beta T cell	CL:0000625	CD8-positive, alpha-beta T cell	name	we_are_coarser			CL:0000625 -> CL:0000791 -> CL:0000789 -> CL:0000084	CL:0000084	CL:0000625	✅一致	subsumed
+CX16_tabula_sapiens_eye	5	797	retina	T	CL:0000084	T cell	sidecar	CD4-positive, alpha-beta T cell	CL:0000624	CD4-positive, alpha-beta T cell	name	we_are_coarser			CL:0000624 -> CL:0000791 -> CL:0000789 -> CL:0000084	CL:0000084	CL:0000624	✅一致	subsumed
+CX16_tabula_sapiens_eye	6	1236	retina	APC_MHCII_high			unresolved	B cell	CL:0000236	B cell	name	no_mapping	ours	ours_candidate_without_cl_term			CL:0000236	❌不一致	unmappable_pred
+CX16_tabula_sapiens_eye	7	582	retina	Rod	CL:0000604	retinal rod cell	sidecar	eye photoreceptor cell	CL:0000287	eye photoreceptor cell	name	we_are_finer			CL:0000604 -> CL:0010009 -> CL:0000287	CL:0000604	CL:0000287	🔄相关	subsumed
+CX16_tabula_sapiens_eye	8	542	retina	Fibroblast	CL:0000057	fibroblast	sidecar	conjunctival epithelial cell	CL:1000432	conjunctival epithelial cell	name	true_mismatch				CL:0000057	CL:1000432	❌不一致	mismatch
+CX16_tabula_sapiens_eye	9	96	retina	MG	CL:0000636	Mueller cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	true_mismatch				CL:0000636	CL:0002586	❌不一致	mismatch
+CX16_tabula_sapiens_eye	10	365	retina	Plasma	CL:0000786	plasma cell	sidecar	plasma cell	CL:0000786	plasma cell	name	same_term				CL:0000786	CL:0000786	✅一致	same_cl
+CX16_tabula_sapiens_eye	11	2823	retina				label_not_in_libraries	conjunctival epithelial cell	CL:1000432	conjunctival epithelial cell	name	no_mapping	ours	ours_abstain			CL:1000432	✅一致	abstain
+CX16_tabula_sapiens_eye	12	3692	retina	Mono_Classical	CL:0000860	classical monocyte	sidecar	conjunctival epithelial cell	CL:1000432	conjunctival epithelial cell	name	true_mismatch				CL:0000860	CL:1000432	✅一致	mismatch
+CX16_tabula_sapiens_eye	13	19	retina	Mono_Classical	CL:0000860	classical monocyte	sidecar	conjunctival epithelial cell	CL:1000432	conjunctival epithelial cell	name	true_mismatch				CL:0000860	CL:1000432	✅一致	mismatch
+CX16_tabula_sapiens_eye	14	1164	retina	Granulocyte	CL:0000094	granulocyte	sidecar	corneal epithelial cell	CL:0000575	corneal epithelial cell	name	true_mismatch				CL:0000094	CL:0000575	❌不一致	mismatch
+CX16_tabula_sapiens_eye	15	1227	retina	Mono_Classical	CL:0000860	classical monocyte	sidecar	conjunctival epithelial cell	CL:1000432	conjunctival epithelial cell	name	true_mismatch				CL:0000860	CL:1000432	✅一致	mismatch
+CX16_tabula_sapiens_eye	16	1175	retina	Mono_Classical	CL:0000860	classical monocyte	sidecar	acinar cell	CL:0000622	acinar cell	name	true_mismatch				CL:0000860	CL:0000622	❌不一致	mismatch
+CX16_tabula_sapiens_eye	17	511	retina	Myofibroblast	CL:0000186	myofibroblast cell	sidecar	smooth muscle cell	CL:0000192	smooth muscle cell	name	true_mismatch				CL:0000186	CL:0000192	🔄相关	mismatch
+CX16_tabula_sapiens_eye	18	171	retina				label_not_in_libraries	erythrocyte	CL:0000232	erythrocyte	name	no_mapping	ours	ours_abstain			CL:0000232	❓混合/低信息	abstain
+CX16_tabula_sapiens_eye	19	1671	retina	Endo	CL:0000115	endothelial cell	sidecar	retinal blood vessel endothelial cell	CL:0002585	retinal blood vessel endothelial cell	name	we_are_coarser			CL:0002585 -> CL:0000071 -> CL:0002139 -> CL:0000115	CL:0000115	CL:0002585	❌不一致	subsumed
+CX16_tabula_sapiens_eye	20	13	retina	HC	CL:0000745	retina horizontal cell	sidecar	retinal blood vessel endothelial cell	CL:0002585	retinal blood vessel endothelial cell	name	true_mismatch				CL:0000745	CL:0002585	❌不一致	mismatch
+CX16_tabula_sapiens_eye	21	272	retina	AC	CL:0000561	amacrine cell	sidecar	retinal blood vessel endothelial cell	CL:0002585	retinal blood vessel endothelial cell	name	true_mismatch				CL:0000561	CL:0002585	❌不一致	mismatch
+CX16_tabula_sapiens_eye	22	546	retina	Granulocyte	CL:0000094	granulocyte	sidecar	corneal epithelial cell	CL:0000575	corneal epithelial cell	name	true_mismatch				CL:0000094	CL:0000575	❌不一致	mismatch
+CX16_tabula_sapiens_eye	23	413	retina	Melanocyte	CL:0000148	melanocyte	sidecar	conjunctival epithelial cell	CL:1000432	conjunctival epithelial cell	name	true_mismatch				CL:0000148	CL:1000432	❌不一致	mismatch
+CX16_tabula_sapiens_eye	24	11	retina	Mono_Classical	CL:0000860	classical monocyte	sidecar	conjunctival epithelial cell	CL:1000432	conjunctival epithelial cell	name	true_mismatch				CL:0000860	CL:1000432	❌不一致	mismatch
+CX16_tabula_sapiens_eye	25	64	retina				label_not_in_libraries	acinar cell	CL:0000622	acinar cell	name	no_mapping	ours	ours_abstain			CL:0000622	❓混合/低信息	abstain
+CX16_tabula_sapiens_eye	26	326	retina	Plasma	CL:0000786	plasma cell	sidecar	plasma cell	CL:0000786	plasma cell	name	same_term				CL:0000786	CL:0000786	✅一致	same_cl
+CX16_tabula_sapiens_eye	27	1829	retina	B	CL:0000236	B cell	sidecar	B cell	CL:0000236	B cell	name	same_term				CL:0000236	CL:0000236	✅一致	same_cl
+CX16_tabula_sapiens_eye	28	1208	retina	cDC1	CL:0000990	conventional dendritic cell	sidecar	eye photoreceptor cell	CL:0000287	eye photoreceptor cell	name	true_mismatch				CL:0000990	CL:0000287	❌不一致	mismatch
+CX16_tabula_sapiens_eye	29	622	retina	Plasma	CL:0000786	plasma cell	sidecar	plasma cell	CL:0000786	plasma cell	name	same_term				CL:0000786	CL:0000786	✅一致	same_cl
+CX16_tabula_sapiens_eye	30	194	retina	Myofibroblast	CL:0000186	myofibroblast cell	sidecar	muscle cell	CL:0000187	muscle cell	name	true_mismatch				CL:0000186	CL:0000187	🔄相关	mismatch
+CX16_tabula_sapiens_eye	31	772	retina				label_not_in_libraries	B cell	CL:0000236	B cell	name	no_mapping	ours	ours_abstain			CL:0000236	❓混合/低信息	abstain
+CX16_tabula_sapiens_eye	32	2930	retina	Granulocyte	CL:0000094	granulocyte	sidecar	corneal epithelial cell	CL:0000575	corneal epithelial cell	name	true_mismatch				CL:0000094	CL:0000575	❌不一致	mismatch
+CX16_tabula_sapiens_eye	33	284	retina	Mono_Classical	CL:0000860	classical monocyte	sidecar	conjunctival epithelial cell	CL:1000432	conjunctival epithelial cell	name	true_mismatch				CL:0000860	CL:1000432	❌不一致	mismatch
+CX16_tabula_sapiens_eye	34	26	retina	Mac_Tissue	CL:0000235	macrophage	sidecar	Mueller cell	CL:0000636	Mueller cell	name	true_mismatch				CL:0000235	CL:0000636	❌不一致	mismatch
+CX16_tabula_sapiens_eye	35	13	retina				label_not_in_libraries	conjunctival epithelial cell	CL:1000432	conjunctival epithelial cell	name	no_mapping	ours	ours_abstain			CL:1000432	❓混合/低信息	abstain
+CX17_mouse_retina_all	0	3802	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	rod bipolar cell	CL:0000751	rod bipolar cell	name	we_are_coarser			CL:0000751 -> CL:0000749 -> CL:0000748	CL:0000748	CL:0000751	❓混合/低信息	subsumed
+CX17_mouse_retina_all	1	3832	retina	Rod	CL:0000604	retinal rod cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	same_term				CL:0000604	CL:0000604	❓混合/低信息	same_cl
+CX17_mouse_retina_all	2	2759	retina	Cone	CL:0000573	retinal cone cell	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	same_term				CL:0000573	CL:0000573	❓混合/低信息	same_cl
+CX17_mouse_retina_all	3	5061	retina	MG	CL:0000636	Mueller cell	sidecar	Mueller cell	CL:0000636	Mueller cell	name	same_term				CL:0000636	CL:0000636	❓混合/低信息	same_cl
+CX17_mouse_retina_all	4	292	retina	MG	CL:0000636	Mueller cell	sidecar	Mueller cell	CL:0000636	Mueller cell	name	same_term				CL:0000636	CL:0000636	❓混合/低信息	same_cl
+CX17_mouse_retina_all	5	4703	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	❓混合/低信息	same_cl
+CX17_mouse_retina_all	6	581	retina	AC	CL:0000561	amacrine cell	sidecar	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	we_are_coarser			CL:4030028 -> CL:0000561	CL:0000561	CL:4030028	❓混合/低信息	subsumed
+CX17_mouse_retina_all	7	49	retina	HC	CL:0000745	retina horizontal cell	sidecar	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	true_mismatch				CL:0000745	CL:4030027	❓混合/低信息	mismatch
+CX17_mouse_retina_all	8	4521	retina				label_not_in_libraries	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	no_mapping	ours	ours_abstain			CL:4030027	❓混合/低信息	abstain
+CX17_mouse_retina_all	9	3717	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	type 6 cone bipolar cell (sensu Mus)	CL:0000758	type 6 cone bipolar cell (sensu Mus)	name	we_are_coarser			CL:0000758 -> CL:0000752 -> CL:0000748	CL:0000748	CL:0000758	❓混合/低信息	subsumed
+CX17_mouse_retina_all	10	59	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	type 3a cone bipolar cell	CL:0004213	type 3a cone bipolar cell	name	we_are_coarser			CL:0004213 -> CL:0000755 -> CL:0000752 -> CL:0000748	CL:0000748	CL:0004213	❓混合/低信息	subsumed
+CX17_mouse_retina_all	11	3705	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	type 5a cone bipolar cell	CL:0004215	type 5a cone bipolar cell	name	we_are_coarser			CL:0004215 -> CL:0000757 -> CL:0000752 -> CL:0000748	CL:0000748	CL:0004215	❓混合/低信息	subsumed
+CX17_mouse_retina_all	12	3629	retina	Mac_Tissue	CL:0000235	macrophage	sidecar	microglial cell	CL:0000129	microglial cell	name	we_are_coarser			CL:0000129 -> CL:0000878 -> CL:0000864 -> CL:0000235	CL:0000235	CL:0000129	❓混合/低信息	subsumed
+CX17_mouse_retina_all	13	227	retina	HC	CL:0000745	retina horizontal cell	sidecar	retina horizontal cell	CL:0000745	retina horizontal cell	name	same_term				CL:0000745	CL:0000745	❓混合/低信息	same_cl
+CX17_mouse_retina_all	14	4048	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	type 3b cone bipolar cell	CL:0004214	type 3b cone bipolar cell	name	we_are_coarser			CL:0004214 -> CL:0000755 -> CL:0000752 -> CL:0000748	CL:0000748	CL:0004214	❓混合/低信息	subsumed
+CX17_mouse_retina_all	15	1441	retina				label_not_in_libraries	type 5 cone bipolar cell (sensu Mus)	CL:0000757	type 5 cone bipolar cell (sensu Mus)	name	no_mapping	ours	ours_abstain			CL:0000757	❓混合/低信息	abstain
+CX17_mouse_retina_all	16	3892	retina	AC	CL:0000561	amacrine cell	sidecar	type 5b cone bipolar cell	CL:0004216	type 5b cone bipolar cell	name	true_mismatch				CL:0000561	CL:0004216	❓混合/低信息	mismatch
+CX17_mouse_retina_all	17	2830	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	type 9 cone bipolar cell (sensu Mus)	CL:0000761	type 9 cone bipolar cell (sensu Mus)	name	we_are_coarser			CL:0000761 -> CL:0000752 -> CL:0000748	CL:0000748	CL:0000761	❓混合/低信息	subsumed
+CX17_mouse_retina_all	18	2056	retina	AC	CL:0000561	amacrine cell	sidecar	type 5 cone bipolar cell (sensu Mus)	CL:0000757	type 5 cone bipolar cell (sensu Mus)	name	true_mismatch				CL:0000561	CL:0000757	❓混合/低信息	mismatch
+CX17_mouse_retina_all	19	1375	retina	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell	CL:0000115	endothelial cell	name	same_term				CL:0000115	CL:0000115	❓混合/低信息	same_cl
+CX17_mouse_retina_all	20	840	retina	Cone	CL:0000573	retinal cone cell	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	same_term				CL:0000573	CL:0000573	❓混合/低信息	same_cl
+CX17_mouse_retina_all	21	3719	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	type 3a cone bipolar cell	CL:0004213	type 3a cone bipolar cell	name	we_are_coarser			CL:0004213 -> CL:0000755 -> CL:0000752 -> CL:0000748	CL:0000748	CL:0004213	❓混合/低信息	subsumed
+CX17_mouse_retina_all	22	3717	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	type 7 cone bipolar cell (sensu Mus)	CL:0000759	type 7 cone bipolar cell (sensu Mus)	name	we_are_coarser			CL:0000759 -> CL:0000752 -> CL:0000748	CL:0000748	CL:0000759	❓混合/低信息	subsumed
+CX17_mouse_retina_all	23	2818	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	type 8 cone bipolar cell (sensu Mus)	CL:0000760	type 8 cone bipolar cell (sensu Mus)	name	we_are_coarser			CL:0000760 -> CL:0000752 -> CL:0000748	CL:0000748	CL:0000760	❓混合/低信息	subsumed
+CX17_mouse_retina_all	24	784	retina	AC	CL:0000561	amacrine cell	sidecar	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	we_are_coarser			CL:4030028 -> CL:0000561	CL:0000561	CL:4030028	❓混合/低信息	subsumed
+CX17_mouse_retina_all	25	399	retina	RPE	CL:0002586	retinal pigment epithelial cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	same_term				CL:0002586	CL:0002586	❓混合/低信息	same_cl
+CX17_mouse_retina_all	26	286	retina	AC	CL:0000561	amacrine cell	sidecar	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	we_are_coarser			CL:4030027 -> CL:0000561	CL:0000561	CL:4030027	❓混合/低信息	subsumed
+CX17_mouse_retina_all	27	737	retina				label_not_in_libraries	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	no_mapping	ours	ours_abstain			CL:4030028	❓混合/低信息	abstain
+CX17_mouse_retina_all	28	695	retina	Schwann	CL:0002573	Schwann cell	sidecar	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	true_mismatch				CL:0002573	CL:4030028	❓混合/低信息	mismatch
+CX17_mouse_retina_all	29	152	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	type 4 cone bipolar cell (sensu Mus)	CL:0000756	type 4 cone bipolar cell (sensu Mus)	name	we_are_coarser			CL:0000756 -> CL:0000752 -> CL:0000748	CL:0000748	CL:0000756	❓混合/低信息	subsumed
+CX17_mouse_retina_all	30	1232	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	type 2 cone bipolar cell (sensu Mus)	CL:0000754	type 2 cone bipolar cell (sensu Mus)	name	we_are_coarser			CL:0000754 -> CL:0000752 -> CL:0000748	CL:0000748	CL:0000754	❓混合/低信息	subsumed
+CX17_mouse_retina_all	31	1416	retina	AC	CL:0000561	amacrine cell	sidecar	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	we_are_coarser			CL:4030028 -> CL:0000561	CL:0000561	CL:4030028	❓混合/低信息	subsumed
+CX17_mouse_retina_all	32	411	retina	Pericyte	CL:0000669	pericyte	sidecar	pericyte	CL:0000669	pericyte	name	same_term				CL:0000669	CL:0000669	❓混合/低信息	same_cl
+CX17_mouse_retina_all	33	480	retina				label_not_in_libraries	amacrine cell	CL:0000561	amacrine cell	name	no_mapping	ours	ours_abstain			CL:0000561	❓混合/低信息	abstain
+CX17_mouse_retina_all	34	1163	retina	AC	CL:0000561	amacrine cell	sidecar	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	we_are_coarser			CL:4030027 -> CL:0000561	CL:0000561	CL:4030027	❓混合/低信息	subsumed
+CX17_mouse_retina_all	35	323	retina	RGC	CL:0000740	retinal ganglion cell	sidecar	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	same_term				CL:0000740	CL:0000740	❓混合/低信息	same_cl
+PRE_GSE199013	0	975	ocular_surface				label_not_in_libraries	pigmented ciliary epithelial cell	CL:0002303	pigmented ciliary epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002303	❌不一致	abstain
+PRE_GSE199013	1	54	ocular_surface				label_not_in_libraries	macrophage	CL:0000235	macrophage	name	no_mapping	ours	ours_abstain			CL:0000235	❓混合/低信息	abstain
+PRE_GSE199013	2	60	ocular_surface				label_not_in_libraries	melanocyte	CL:0000148	melanocyte	name	no_mapping	ours	ours_abstain			CL:0000148	❓混合/低信息	abstain
+PRE_GSE199013	3	1074	ocular_surface	SMC	CL:0000192	smooth muscle cell	sidecar	pigmented epithelial cell	CL:0000529	pigmented epithelial cell	name	true_mismatch				CL:0000192	CL:0000529	❌不一致	mismatch
+PRE_GSE199013	4	2768	ocular_surface	Pericyte	CL:0000669	pericyte	sidecar	fibroblast	CL:0000057	fibroblast	name	true_mismatch				CL:0000669	CL:0000057	🔄相关	mismatch
+PRE_GSE199013	5	1706	ocular_surface				label_not_in_libraries	fibroblast	CL:0000057	fibroblast	name	no_mapping	ours	ours_abstain			CL:0000057	❓混合/低信息	abstain
+PRE_GSE199013	6	745	ocular_surface	Limbus_Sclera_fibroblast_C1	CL:0000057	fibroblast	sidecar	fibroblast	CL:0000057	fibroblast	name	same_term				CL:0000057	CL:0000057	✅一致	same_cl
+PRE_GSE199013	7	840	ocular_surface				label_not_in_libraries	fibroblast	CL:0000057	fibroblast	name	no_mapping	ours	ours_abstain			CL:0000057	❓混合/低信息	abstain
+PRE_GSE199013	8	3115	ocular_surface				label_not_in_libraries	ciliary muscle cell	CL:1000443	ciliary muscle cell	name	no_mapping	ours	ours_abstain			CL:1000443	❌不一致	abstain
+PRE_GSE199013	9	11	ocular_surface	T	CL:0000084	T cell	sidecar	lymphocyte	CL:0000542	lymphocyte	name	we_are_finer			CL:0000084 -> CL:0000542	CL:0000084	CL:0000542	✅一致	subsumed
+PRE_GSE199013	10	167	ocular_surface	Pericyte	CL:0000669	pericyte	sidecar	melanocyte	CL:0000148	melanocyte	name	true_mismatch				CL:0000669	CL:0000148	❌不一致	mismatch
+PRE_GSE199013	11	3052	ocular_surface	Schwann	CL:0002573	Schwann cell	sidecar	Schwann cell	CL:0002573	Schwann cell	name	same_term				CL:0002573	CL:0002573	✅一致	same_cl
+PRE_GSE199013	12	984	ocular_surface	T	CL:0000084	T cell	sidecar	lymphocyte	CL:0000542	lymphocyte	name	we_are_finer			CL:0000084 -> CL:0000542	CL:0000084	CL:0000542	✅一致	subsumed
+PRE_GSE199013	13	70	ocular_surface				label_not_in_libraries	macrophage	CL:0000235	macrophage	name	no_mapping	ours	ours_abstain			CL:0000235	❌不一致	abstain
+PRE_GSE199013	14	852	ocular_surface	Fibroblast	CL:0000057	fibroblast	sidecar	non-pigmented ciliary epithelial cell	CL:0002304	non-pigmented ciliary epithelial cell	name	true_mismatch				CL:0000057	CL:0002304	❌不一致	mismatch
+PRE_GSE199013	15	34	ocular_surface				label_not_in_libraries	non-pigmented ciliary epithelial cell	CL:0002304	non-pigmented ciliary epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002304	❓混合/低信息	abstain
+PRE_GSE199013	16	1148	ocular_surface	Melanocyte	CL:0000148	melanocyte	sidecar	pigmented epithelial cell	CL:0000529	pigmented epithelial cell	name	true_mismatch				CL:0000148	CL:0000529	❌不一致	mismatch
+PRE_GSE199013	17	588	ocular_surface	Pericyte	CL:0000669	pericyte	sidecar	pericyte	CL:0000669	pericyte	name	same_term				CL:0000669	CL:0000669	✅一致	same_cl
+PRE_GSE199013	18	15	ocular_surface				label_not_in_libraries	lymphocyte	CL:0000542	lymphocyte	name	no_mapping	ours	ours_abstain			CL:0000542	❌不一致	abstain
+PRE_GSE199013	19	52	ocular_surface				label_not_in_libraries	lymphocyte	CL:0000542	lymphocyte	name	no_mapping	ours	ours_abstain			CL:0000542	❌不一致	abstain
+PRE_GSE199013	20	3033	ocular_surface	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+PRE_GSE199013	21	2843	ocular_surface				label_not_in_libraries	macrophage	CL:0000235	macrophage	name	no_mapping	ours	ours_abstain			CL:0000235	❌不一致	abstain
+PRE_GSE199013	22	70	ocular_surface				label_not_in_libraries	mast cell	CL:0000097	mast cell	name	no_mapping	ours	ours_abstain			CL:0000097	❌不一致	abstain
+PRE_GSE199013	23	1357	ocular_surface	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell	CL:0000115	endothelial cell	name	same_term				CL:0000115	CL:0000115	❌不一致	same_cl
+PRE_GSE199013	24	2400	ocular_surface	Granulocyte	CL:0000094	granulocyte	sidecar	basal cell	CL:0000646	basal cell	name	true_mismatch				CL:0000094	CL:0000646	✅一致	mismatch
+PRE_GSE199013	25	3155	ocular_surface				label_not_in_libraries	corneal epithelial cell	CL:0000575	corneal epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000575	❓混合/低信息	abstain
+PRE_GSE199013	26	77	ocular_surface	Granulocyte	CL:0000094	granulocyte	sidecar	fibroblast	CL:0000057	fibroblast	name	true_mismatch				CL:0000094	CL:0000057	❌不一致	mismatch
+PRE_GSE199013	27	1813	ocular_surface				label_not_in_libraries	corneal epithelial cell	CL:0000575	corneal epithelial cell	name	no_mapping	ours	ours_abstain			CL:0000575	❓混合/低信息	abstain
+PRE_GSE199013	28	1715	ocular_surface	Conj_epithelium_basal	CL:1000432	conjunctival epithelial cell	sidecar	conjunctival epithelial cell	CL:1000432	conjunctival epithelial cell	name	same_term				CL:1000432	CL:1000432	✅一致	same_cl
+PRE_GSE199013	29	1864	ocular_surface	Corneal Endothelium	CL:0000132	corneal endothelial cell	sidecar	corneal endothelial cell	CL:0000132	corneal endothelial cell	name	same_term				CL:0000132	CL:0000132	✅一致	same_cl
+PRE_GSE199013	30	1085	ocular_surface	Fibroblast	CL:0000057	fibroblast	sidecar	fibroblast	CL:0000057	fibroblast	name	same_term				CL:0000057	CL:0000057	✅一致	same_cl
+PRE_GSE199013	31	985	ocular_surface	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+PRE_GSE199013	32	716	ocular_surface	SMC	CL:0000192	smooth muscle cell	sidecar	smooth muscle cell of sphincter of pupil	CL:0002243	smooth muscle cell of sphincter of pupil	name	we_are_coarser			CL:0002243 -> CL:0000358 -> CL:0000192	CL:0000192	CL:0002243	❌不一致	subsumed
+PRE_GSE199013	33	1001	ocular_surface				label_not_in_libraries	endothelial cell of lymphatic vessel	CL:0002138	endothelial cell of lymphatic vessel	name	no_mapping	ours	ours_abstain			CL:0002138	❌不一致	abstain
+PRE_GSE199013	34	1057	ocular_surface				label_not_in_libraries	basal cell	CL:0000646	basal cell	name	no_mapping	ours	ours_abstain			CL:0000646	❌不一致	abstain
+PRE_GSE199013	35	289	ocular_surface				label_not_in_libraries	goblet cell	CL:0000160	goblet cell	name	no_mapping	ours	ours_abstain			CL:0000160	❌不一致	abstain
+PRE_GSE199013	36	690	ocular_surface	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell	CL:0000115	endothelial cell	name	same_term				CL:0000115	CL:0000115	❌不一致	same_cl
+PRE_GSE199013	37	13	ocular_surface	Corneal Endothelium	CL:0000132	corneal endothelial cell	sidecar	corneal endothelial cell	CL:0000132	corneal endothelial cell	name	same_term				CL:0000132	CL:0000132	✅一致	same_cl
+PRE_GSE268630	0	1316	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 3a cell	CL:4033029	diffuse bipolar 3a cell	name	we_are_coarser			CL:4033029 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033029	✅一致	subsumed
+PRE_GSE268630	1	2331	retina	AC	CL:0000561	amacrine cell	sidecar	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	we_are_coarser			CL:4030028 -> CL:0000561	CL:0000561	CL:4030028	✅一致	subsumed
+PRE_GSE268630	2	1019	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	ON-bipolar cell	CL:0000749	ON-bipolar cell	name	we_are_coarser			CL:0000749 -> CL:0000748	CL:0000748	CL:0000749	✅一致	subsumed
+PRE_GSE268630	3	3998	retina	Rod	CL:0000604	retinal rod cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	same_term				CL:0000604	CL:0000604	✅一致	same_cl
+PRE_GSE268630	4	1404	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+PRE_GSE268630	5	3997	retina				label_not_in_libraries	Mueller cell	CL:0000636	Mueller cell	name	no_mapping	ours	ours_abstain			CL:0000636	❓混合/低信息	abstain
+PRE_GSE268630	6	1839	retina	AC	CL:0000561	amacrine cell	sidecar	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	true_mismatch				CL:0000561	CL:0002672	❌不一致	mismatch
+PRE_GSE268630	7	12	retina	MG	CL:0000636	Mueller cell	sidecar	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	true_mismatch				CL:0000636	CL:0002672	❌不一致	mismatch
+PRE_GSE268630	8	1045	retina	Astro	CL:0000127	astrocyte	sidecar	Mueller cell	CL:0000636	Mueller cell	name	true_mismatch				CL:0000127	CL:0000636	🔄相关	mismatch
+PRE_GSE268630	9	1292	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	rod bipolar cell	CL:0000751	rod bipolar cell	name	we_are_coarser			CL:0000751 -> CL:0000749 -> CL:0000748	CL:0000748	CL:0000751	❌不一致	subsumed
+PRE_GSE268630	10	1716	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 1 cell	CL:4033027	diffuse bipolar 1 cell	name	we_are_coarser			CL:4033027 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033027	✅一致	subsumed
+PRE_GSE268630	11	444	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	OFFx cell	CL:4033036	OFFx cell	name	we_are_coarser			CL:4033036 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033036	❌不一致	subsumed
+PRE_GSE268630	12	2899	retina	RGC	CL:0000740	retinal ganglion cell	sidecar	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	same_term				CL:0000740	CL:0000740	✅一致	same_cl
+PRE_GSE268630	13	1738	retina	RGC	CL:0000740	retinal ganglion cell	sidecar	ON parasol ganglion cell	CL:4033052	ON parasol ganglion cell	name	we_are_coarser			CL:4033052 -> CL:4023032 -> CL:0000740	CL:0000740	CL:4033052	✅一致	subsumed
+PRE_GSE268630	14	3074	retina	RGC	CL:0000740	retinal ganglion cell	sidecar	midget ganglion cell of retina	CL:4023188	midget ganglion cell of retina	name	we_are_coarser			CL:4023188 -> CL:0000740	CL:0000740	CL:4023188	✅一致	subsumed
+PRE_GSE268630	15	777	retina	AC	CL:0000561	amacrine cell	sidecar	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	true_mismatch				CL:0000561	CL:0000740	❌不一致	mismatch
+PRE_GSE268630	16	2355	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 2 cell	CL:4033028	diffuse bipolar 2 cell	name	we_are_coarser			CL:4033028 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033028	✅一致	subsumed
+PRE_GSE268630	17	866	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	true_mismatch				CL:0000748	CL:4030027	❌不一致	mismatch
+PRE_GSE268630	18	1789	retina	AC	CL:0000561	amacrine cell	sidecar	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	we_are_coarser			CL:4030027 -> CL:0000561	CL:0000561	CL:4030027	✅一致	subsumed
+PRE_GSE268630	19	1038	retina	HC	CL:0000745	retina horizontal cell	sidecar	retina horizontal cell	CL:0000745	retina horizontal cell	name	same_term				CL:0000745	CL:0000745	✅一致	same_cl
+PRE_GSE268630	20	2192	retina				label_not_in_libraries	amacrine cell	CL:0000561	amacrine cell	name	no_mapping	ours	ours_abstain			CL:0000561	❓混合/低信息	abstain
+PRE_GSE268630	21	2886	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	true_mismatch				CL:0000748	CL:0000573	❌不一致	mismatch
+PRE_GSE268630	22	419	retina	Cone	CL:0000573	retinal cone cell	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	same_term				CL:0000573	CL:0000573	✅一致	same_cl
+PRE_GSE268630	23	1668	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+PRE_GSE268630	24	3102	retina	HC	CL:0000745	retina horizontal cell	sidecar	retina horizontal cell	CL:0000745	retina horizontal cell	name	same_term				CL:0000745	CL:0000745	✅一致	same_cl
+PRE_GSE268630	25	755	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+PRE_GSE268630	26	3727	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	flat midget bipolar cell	CL:4033033	flat midget bipolar cell	name	we_are_coarser			CL:4033033 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033033	✅一致	subsumed
+PRE_GSE268630	27	1440	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	invaginating midget bipolar cell	CL:4033034	invaginating midget bipolar cell	name	we_are_coarser			CL:4033034 -> CL:0000749 -> CL:0000748	CL:0000748	CL:4033034	✅一致	subsumed
+PRE_GSE268630	28	3300	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 3b cell	CL:4033030	diffuse bipolar 3b cell	name	we_are_coarser			CL:4033030 -> CL:0000750 -> CL:0000748	CL:0000748	CL:4033030	✅一致	subsumed
+PRE_GSE268630	29	273	retina				label_not_in_libraries	S cone cell	CL:0003050	S cone cell	name	no_mapping	ours	ours_abstain			CL:0003050	❓混合/低信息	abstain
+PRE_GSE268630	30	426	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	diffuse bipolar 6 cell	CL:4033032	diffuse bipolar 6 cell	name	we_are_coarser			CL:4033032 -> CL:0000749 -> CL:0000748	CL:0000748	CL:4033032	✅一致	subsumed
+PRE_GSE268630	31	1547	retina	AC	CL:0000561	amacrine cell	sidecar	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	we_are_coarser			CL:4030028 -> CL:0000561	CL:0000561	CL:4030028	✅一致	subsumed
+PRE_GSE268630	32	928	retina	AC	CL:0000561	amacrine cell	sidecar	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	we_are_coarser			CL:4030027 -> CL:0000561	CL:0000561	CL:4030027	✅一致	subsumed
+PRE_GSE268630	33	860	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	starburst amacrine cell	CL:0004232	starburst amacrine cell	name	true_mismatch				CL:0000748	CL:0004232	❌不一致	mismatch
+PRE_GSE268630	34	289	retina	AC	CL:0000561	amacrine cell	sidecar	OFF parasol ganglion cell	CL:4033051	OFF parasol ganglion cell	name	true_mismatch				CL:0000561	CL:4033051	❌不一致	mismatch
+PRE_GSE268630	35	515	retina	HC	CL:0000745	retina horizontal cell	sidecar	H2 horizontal cell	CL:0004218	H2 horizontal cell	name	we_are_coarser			CL:0004218 -> CL:0000745	CL:0000745	CL:0004218	✅一致	subsumed
+PRE_OA-D001	0	1064	retina				label_not_in_libraries	Mueller cell	CL:0000636	Mueller cell	name	no_mapping	ours	ours_abstain			CL:0000636	❓混合/低信息	abstain
+PRE_OA-D001	1	308	retina	MG	CL:0000636	Mueller cell	sidecar	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	true_mismatch				CL:0000636	CL:0000740	❌不一致	mismatch
+PRE_OA-D001	2	4488	retina	MG	CL:0000636	Mueller cell	sidecar	Mueller cell	CL:0000636	Mueller cell	name	same_term				CL:0000636	CL:0000636	✅一致	same_cl
+PRE_OA-D001	3	5564	retina	Rod	CL:0000604	retinal rod cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	same_term				CL:0000604	CL:0000604	✅一致	same_cl
+PRE_OA-D001	4	5562	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	rod bipolar cell	CL:0000751	rod bipolar cell	name	we_are_coarser			CL:0000751 -> CL:0000749 -> CL:0000748	CL:0000748	CL:0000751	❌不一致	subsumed
+PRE_OA-D001	5	1809	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+PRE_OA-D001	6	541	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+PRE_OA-D001	7	3577	retina	AC	CL:0000561	amacrine cell	sidecar	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	we_are_coarser			CL:4030027 -> CL:0000561	CL:0000561	CL:4030027	✅一致	subsumed
+PRE_OA-D001	8	493	retina	Rod	CL:0000604	retinal rod cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	true_mismatch				CL:0000604	CL:0000561	❌不一致	mismatch
+PRE_OA-D001	9	1087	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+PRE_OA-D001	10	2316	retina	AC	CL:0000561	amacrine cell	sidecar	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	we_are_coarser			CL:4030028 -> CL:0000561	CL:0000561	CL:4030028	✅一致	subsumed
+PRE_OA-D001	11	1356	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+PRE_OA-D001	12	5737	retina	Cone	CL:0000573	retinal cone cell	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	same_term				CL:0000573	CL:0000573	✅一致	same_cl
+PRE_OA-D001	13	1053	retina	pDC	CL:0000784	plasmacytoid dendritic cell	sidecar	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	true_mismatch				CL:0000784	CL:4030028	❌不一致	mismatch
+PRE_OA-D001	14	554	retina	AC	CL:0000561	amacrine cell	sidecar	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	we_are_coarser			CL:4030027 -> CL:0000561	CL:0000561	CL:4030027	✅一致	subsumed
+PRE_OA-D001	15	1016	retina				label_not_in_libraries	starburst amacrine cell	CL:0004232	starburst amacrine cell	name	no_mapping	ours	ours_abstain			CL:0004232	❓混合/低信息	abstain
+PRE_OA-D001	16	801	retina				label_not_in_libraries	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	no_mapping	ours	ours_abstain			CL:4030028	❓混合/低信息	abstain
+PRE_OA-D001	17	316	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+PRE_OA-D001	18	5435	retina	HC	CL:0000745	retina horizontal cell	sidecar	H1 horizontal cell	CL:0004217	H1 horizontal cell	name	we_are_coarser			CL:0004217 -> CL:0000745	CL:0000745	CL:0004217	✅一致	subsumed
+PRE_OA-D001	19	1811	retina	HC	CL:0000745	retina horizontal cell	sidecar	H2 horizontal cell	CL:0004218	H2 horizontal cell	name	we_are_coarser			CL:0004218 -> CL:0000745	CL:0000745	CL:0004218	✅一致	subsumed
+PRE_OA-D001	20	1520	retina	AC	CL:0000561	amacrine cell	sidecar	glycinergic amacrine cell	CL:4030028	glycinergic amacrine cell	name	we_are_coarser			CL:4030028 -> CL:0000561	CL:0000561	CL:4030028	✅一致	subsumed
+PRE_OA-D001	21	727	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+PRE_OA-D001	22	5633	retina	RGC	CL:0000740	retinal ganglion cell	sidecar	midget ganglion cell of retina	CL:4023188	midget ganglion cell of retina	name	we_are_coarser			CL:4023188 -> CL:0000740	CL:0000740	CL:4023188	✅一致	subsumed
+PRE_OA-D001	23	2349	retina	MG	CL:0000636	Mueller cell	sidecar	astrocyte	CL:0000127	astrocyte	name	true_mismatch				CL:0000636	CL:0000127	🔄相关	mismatch
+PRE_OA-D001	24	852	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retinal bipolar neuron	CL:0000748	retinal bipolar neuron	name	same_term				CL:0000748	CL:0000748	✅一致	same_cl
+PRE_OA-D001	25	3035	retina	APC_MHCII_high			unresolved	microglial cell	CL:0000129	microglial cell	name	no_mapping	ours	ours_candidate_without_cl_term			CL:0000129	❌不一致	unmappable_pred
+PRE_OA-D001	26	179	retina	Cone	CL:0000573	retinal cone cell	sidecar	S cone cell	CL:0003050	S cone cell	name	we_are_coarser			CL:0003050 -> CL:0000573	CL:0000573	CL:0003050	✅一致	subsumed
+PRE_OA-D001	27	515	retina	RGC	CL:0000740	retinal ganglion cell	sidecar	parasol ganglion cell of retina	CL:4023189	parasol ganglion cell of retina	name	we_are_coarser			CL:4023189 -> CL:0000740	CL:0000740	CL:4023189	✅一致	subsumed
+PRE_OA-D001	28	250	retina	RGC	CL:0000740	retinal ganglion cell	sidecar	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	same_term				CL:0000740	CL:0000740	✅一致	same_cl
+PRE_OA-D001	29	1005	retina	AC	CL:0000561	amacrine cell	sidecar	GABAergic amacrine cell	CL:4030027	GABAergic amacrine cell	name	we_are_coarser			CL:4030027 -> CL:0000561	CL:0000561	CL:4030027	✅一致	subsumed
+PRE_OA-D001	30	929	retina	RPE	CL:0002586	retinal pigment epithelial cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	same_term				CL:0002586	CL:0002586	✅一致	same_cl
+PRE_OA-D001	31	767	retina	RPE	CL:0002586	retinal pigment epithelial cell	sidecar	retinal pigment epithelial cell	CL:0002586	retinal pigment epithelial cell	name	same_term				CL:0002586	CL:0002586	✅一致	same_cl
+PRE_OA-D002	0	3931	ocular_surface	Granulocyte	CL:0000094	granulocyte	sidecar	epithelial cell	CL:0000066	epithelial cell	name	true_mismatch				CL:0000094	CL:0000066	❌不一致	mismatch
+PRE_OA-D002	1	5230	ocular_surface	Conj_epithelium_basal	CL:1000432	conjunctival epithelial cell	sidecar	conjunctival epithelial cell	CL:1000432	conjunctival epithelial cell	name	same_term				CL:1000432	CL:1000432	✅一致	same_cl
+PRE_OA-D002	2	4970	ocular_surface				label_not_in_libraries	progenitor cell	CL:0011026	progenitor cell	name	no_mapping	ours	ours_abstain			CL:0011026	❓混合/低信息	abstain
+PRE_OA-D002	3	3921	ocular_surface	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell of lymphatic vessel	CL:0002138	endothelial cell of lymphatic vessel	name	we_are_coarser			CL:0002138 -> CL:0002139 -> CL:0000115	CL:0000115	CL:0002138	❌不一致	subsumed
+PRE_OA-D002	4	4979	ocular_surface	Schwann	CL:0002573	Schwann cell	sidecar	Schwann cell	CL:0002573	Schwann cell	name	same_term				CL:0002573	CL:0002573	✅一致	same_cl
+PRE_OA-D002	5	6176	ocular_surface	APC_MHCII_high			unresolved	macrophage	CL:0000235	macrophage	name	no_mapping	ours	ours_candidate_without_cl_term			CL:0000235	❌不一致	unmappable_pred
+PRE_OA-D002	6	4129	ocular_surface	Endo	CL:0000115	endothelial cell	sidecar	blood vessel endothelial cell	CL:0000071	blood vessel endothelial cell	name	we_are_coarser			CL:0000071 -> CL:0002139 -> CL:0000115	CL:0000115	CL:0000071	❌不一致	subsumed
+PRE_OA-D002	7	4940	ocular_surface	Endo	CL:0000115	endothelial cell	sidecar	endothelial cell	CL:0000115	endothelial cell	name	same_term				CL:0000115	CL:0000115	❌不一致	same_cl
+PRE_OA-D002	8	4981	ocular_surface	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+PRE_OA-D002	9	4363	ocular_surface	Pericyte	CL:0000669	pericyte	sidecar	fibroblast	CL:0000057	fibroblast	name	true_mismatch				CL:0000669	CL:0000057	🔄相关	mismatch
+PRE_OA-D002	10	2732	ocular_surface	Fibroblast	CL:0000057	fibroblast	sidecar	keratocyte	CL:0002363	keratocyte	name	we_are_coarser			CL:0002363 -> CL:0000005 -> CL:0000057	CL:0000057	CL:0002363	✅一致	subsumed
+PRE_OA-D002	11	3447	ocular_surface	Fibroblast	CL:0000057	fibroblast	sidecar	keratocyte	CL:0002363	keratocyte	name	we_are_coarser			CL:0002363 -> CL:0000005 -> CL:0000057	CL:0000057	CL:0002363	✅一致	subsumed
+PRE_OA-D002	12	4512	ocular_surface				label_not_in_libraries	lymphocyte	CL:0000542	lymphocyte	name	no_mapping	ours	ours_abstain			CL:0000542	❌不一致	abstain
+PRE_OA-D002	13	468	ocular_surface	Corneal Endothelium	CL:0000132	corneal endothelial cell	sidecar	corneal endothelial cell	CL:0000132	corneal endothelial cell	name	same_term				CL:0000132	CL:0000132	✅一致	same_cl
+PRE_OA-D002	14	3535	ocular_surface	Pericyte	CL:0000669	pericyte	sidecar	pericyte	CL:0000669	pericyte	name	same_term				CL:0000669	CL:0000669	✅一致	same_cl
+PRE_OA-D002	15	5503	ocular_surface	Myofibroblast	CL:0000186	myofibroblast cell	sidecar	smooth muscle cell	CL:0000192	smooth muscle cell	name	true_mismatch				CL:0000186	CL:0000192	🔄相关	mismatch
+PRE_OA-D002	16	793	ocular_surface				label_not_in_libraries	mast cell	CL:0000097	mast cell	name	no_mapping	ours	ours_abstain			CL:0000097	❌不一致	abstain
+PRE_OA-D002	17	685	ocular_surface	Schwann	CL:0002573	Schwann cell	sidecar	myelinating Schwann cell	CL:0000218	myelinating Schwann cell	name	we_are_coarser			CL:0000218 -> CL:0002573	CL:0002573	CL:0000218	❌不一致	subsumed
+PRE_OA-D002	18	116	ocular_surface	SMC	CL:0000192	smooth muscle cell	sidecar	smooth muscle cell	CL:0000192	smooth muscle cell	name	same_term				CL:0000192	CL:0000192	❌不一致	same_cl
+PRE_OA-D004	0	6579	trabecular_meshwork	Pericyte	CL:0000669	pericyte	sidecar	pericyte	CL:0000669	pericyte	name	same_term				CL:0000669	CL:0000669	✅一致	same_cl
+PRE_OA-D004	1	2815	trabecular_meshwork	APC_MHCII_high			unresolved	B cell	CL:0000236	B cell	name	no_mapping	ours	ours_candidate_without_cl_term			CL:0000236	❌不一致	unmappable_pred
+PRE_OA-D004	2	1158	trabecular_meshwork	Pericyte	CL:0000669	pericyte	sidecar	pigmented ciliary epithelial cell	CL:0002303	pigmented ciliary epithelial cell	name	true_mismatch				CL:0000669	CL:0002303	❌不一致	mismatch
+PRE_OA-D004	3	10201	trabecular_meshwork	Fibroblast	CL:0000057	fibroblast	sidecar	fibroblast	CL:0000057	fibroblast	name	same_term				CL:0000057	CL:0000057	✅一致	same_cl
+PRE_OA-D004	4	3158	trabecular_meshwork	Fibroblast	CL:0000057	fibroblast	sidecar	trabecular meshwork cell	CL:0002367	trabecular meshwork cell	name	true_mismatch				CL:0000057	CL:0002367	❌不一致	mismatch
+PRE_OA-D004	5	6450	trabecular_meshwork	T	CL:0000084	T cell	sidecar	lymphocyte	CL:0000542	lymphocyte	name	we_are_finer			CL:0000084 -> CL:0000542	CL:0000084	CL:0000542	✅一致	subsumed
+PRE_OA-D004	6	5001	trabecular_meshwork	Myofibroblast	CL:0000186	myofibroblast cell	sidecar	ciliary muscle cell	CL:1000443	ciliary muscle cell	name	true_mismatch				CL:0000186	CL:1000443	❌不一致	mismatch
+PRE_OA-D004	7	1369	trabecular_meshwork	SMC	CL:0000192	smooth muscle cell	sidecar	ciliary muscle cell	CL:1000443	ciliary muscle cell	name	we_are_coarser			CL:1000443 -> CL:0000192	CL:0000192	CL:1000443	❌不一致	subsumed
+PRE_OA-D004	8	5310	trabecular_meshwork	Endo	CL:0000115	endothelial cell	sidecar	pigmented ciliary epithelial cell	CL:0002303	pigmented ciliary epithelial cell	name	true_mismatch				CL:0000115	CL:0002303	❌不一致	mismatch
+PRE_OA-D004	9	5460	trabecular_meshwork	APC_MHCII_high			unresolved	macrophage	CL:0000235	macrophage	name	no_mapping	ours	ours_candidate_without_cl_term			CL:0000235	❌不一致	unmappable_pred
+PRE_OA-D004	10	7296	trabecular_meshwork	Endo	CL:0000115	endothelial cell	sidecar	blood vessel endothelial cell	CL:0000071	blood vessel endothelial cell	name	we_are_coarser			CL:0000071 -> CL:0002139 -> CL:0000115	CL:0000115	CL:0000071	❌不一致	subsumed
+PRE_OA-D004	11	6521	trabecular_meshwork	Schwann	CL:0002573	Schwann cell	sidecar	Schwann cell	CL:0002573	Schwann cell	name	same_term				CL:0002573	CL:0002573	✅一致	same_cl
+PRE_OA-D004	12	374	trabecular_meshwork				label_not_in_libraries	pigmented ciliary epithelial cell	CL:0002303	pigmented ciliary epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002303	❓混合/低信息	abstain
+PRE_OA-D004	13	3615	trabecular_meshwork	MG	CL:0000636	Mueller cell	sidecar	myelinating Schwann cell	CL:0000218	myelinating Schwann cell	name	true_mismatch				CL:0000636	CL:0000218	❌不一致	mismatch
+PRE_OA-D004	14	5144	trabecular_meshwork	Fibroblast	CL:0000057	fibroblast	sidecar	non-pigmented ciliary epithelial cell	CL:0002304	non-pigmented ciliary epithelial cell	name	true_mismatch				CL:0000057	CL:0002304	❌不一致	mismatch
+PRE_OA-D004	15	6736	trabecular_meshwork	Melanocyte	CL:0000148	melanocyte	sidecar	melanocyte	CL:0000148	melanocyte	name	same_term				CL:0000148	CL:0000148	✅一致	same_cl
+PRE_OA-D004	16	1083	trabecular_meshwork				label_not_in_libraries	non-pigmented ciliary epithelial cell	CL:0002304	non-pigmented ciliary epithelial cell	name	no_mapping	ours	ours_abstain			CL:0002304	❓混合/低信息	abstain
+PRE_OA-D004	17	1099	trabecular_meshwork	Mac_Tissue	CL:0000235	macrophage	sidecar	macrophage	CL:0000235	macrophage	name	same_term				CL:0000235	CL:0000235	❌不一致	same_cl
+PRE_OA-D004	18	2180	trabecular_meshwork	Granulocyte	CL:0000094	granulocyte	sidecar	mast cell	CL:0000097	mast cell	name	true_mismatch				CL:0000094	CL:0000097	❌不一致	mismatch
+PRE_OA-D004	19	157	trabecular_meshwork	Fibroblast	CL:0000057	fibroblast	sidecar	fibroblast	CL:0000057	fibroblast	name	same_term				CL:0000057	CL:0000057	✅一致	same_cl
+PRE_OA-D004	20	161	trabecular_meshwork	T	CL:0000084	T cell	sidecar	lymphocyte	CL:0000542	lymphocyte	name	we_are_finer			CL:0000084 -> CL:0000542	CL:0000084	CL:0000542	✅一致	subsumed
+PRE_OA-D068	0	6661	retina	RGC	CL:0000740	retinal ganglion cell	sidecar	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	same_term				CL:0000740	CL:0000740	✅一致	same_cl
+PRE_OA-D068	1	983	retina				label_not_in_libraries	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	no_mapping	ours	ours_abstain			CL:0000740	❓混合/低信息	abstain
+PRE_OA-D068	2	300	retina	RGC	CL:0000740	retinal ganglion cell	sidecar	retinal ganglion cell	CL:0000740	retinal ganglion cell	name	same_term				CL:0000740	CL:0000740	✅一致	same_cl
+PRE_OA-D068	3	3270	retina				label_not_in_libraries	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	no_mapping	ours	ours_abstain			CL:0002672	❓混合/低信息	abstain
+PRE_OA-D068	4	6577	retina	Rod	CL:0000604	retinal rod cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	same_term				CL:0000604	CL:0000604	✅一致	same_cl
+PRE_OA-D068	5	4397	retina	Melanocyte	CL:0000148	melanocyte	sidecar	retinal cone cell	CL:0000573	retinal cone cell	name	true_mismatch				CL:0000148	CL:0000573	❌不一致	mismatch
+PRE_OA-D068	6	5191	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+PRE_OA-D068	7	5021	retina				label_not_in_libraries	retina horizontal cell	CL:0000745	retina horizontal cell	name	no_mapping	ours	ours_abstain			CL:0000745	❓混合/低信息	abstain
+PRE_OA-D068	8	11348	retina	MG	CL:0000636	Mueller cell	sidecar	Mueller cell	CL:0000636	Mueller cell	name	same_term				CL:0000636	CL:0000636	✅一致	same_cl
+PRE_OA-D068	9	2742	retina	MG	CL:0000636	Mueller cell	sidecar	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	true_mismatch				CL:0000636	CL:0002672	❌不一致	mismatch
+PRE_OA-D068	10	4194	retina	HC	CL:0000745	retina horizontal cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	true_mismatch				CL:0000745	CL:0000561	❌不一致	mismatch
+PRE_OA-D068	11	695	retina	MG	CL:0000636	Mueller cell	sidecar	retinal astrocyte	CL:4033015	retinal astrocyte	name	true_mismatch				CL:0000636	CL:4033015	🔄相关	mismatch
+PRE_OA-D068	12	698	retina	Astro	CL:0000127	astrocyte	sidecar	Mueller cell	CL:0000636	Mueller cell	name	true_mismatch				CL:0000127	CL:0000636	🔄相关	mismatch
+PRE_OA-D068	13	126	retina	AC	CL:0000561	amacrine cell	sidecar	amacrine cell	CL:0000561	amacrine cell	name	same_term				CL:0000561	CL:0000561	✅一致	same_cl
+PRE_OA-D068	14	3515	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retina horizontal cell	CL:0000745	retina horizontal cell	name	true_mismatch				CL:0000748	CL:0000745	❌不一致	mismatch
+PRE_OA-D068	15	146	retina	Plasma	CL:0000786	plasma cell	sidecar	retinal progenitor cell	CL:0002672	retinal progenitor cell	name	true_mismatch				CL:0000786	CL:0002672	❌不一致	mismatch
+PRE_OA-D068	16	428	retina	MG	CL:0000636	Mueller cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	true_mismatch				CL:0000636	CL:0000604	❌不一致	mismatch
+PRE_OA-D068	17	3077	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	retina horizontal cell	CL:0000745	retina horizontal cell	name	true_mismatch				CL:0000748	CL:0000745	❌不一致	mismatch
+PRE_OA-D068	18	307	retina	BC	CL:0000748	retinal bipolar neuron	sidecar	amacrine cell	CL:0000561	amacrine cell	name	true_mismatch				CL:0000748	CL:0000561	❌不一致	mismatch
+PRE_OA-D068	19	4097	retina	Rod	CL:0000604	retinal rod cell	sidecar	retinal rod cell	CL:0000604	retinal rod cell	name	same_term				CL:0000604	CL:0000604	✅一致	same_cl

@@ -1,0 +1,988 @@
+Running as unit: cl_depth_b0_corpus_index.service
+term queries: 249 phrases over 125 keys
+gene queries: 731 symbols
+prefilter: 102 trigger tokens over 249 phrases
+  scanned 20000 chunks
+  scanned 40000 chunks
+  scanned 60000 chunks
+  scanned 80000 chunks
+  scanned 100000 chunks
+  scanned 120000 chunks
+  scanned 140000 chunks
+  scanned 160000 chunks
+  scanned 180000 chunks
+  scanned 200000 chunks
+  scanned 220000 chunks
+  scanned 240000 chunks
+  scanned 244877 chunks
+scanned 244877 chunks; papers with metadata: 3917
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_TERM_INDEX.tsv  (116 term rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_GENE_INDEX.tsv  (722 genes with at least one corpus hit)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_INDEX_META.json
+  term keys with no corpus hit: 43
+  genes with no corpus hit    : 9
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 9.601s
+             CPU time consumed: 1min 15.520s
+                   Memory peak: 300.8M (swap: 0B)
+[scripts/b0_corpus_index.py] rc=0
+Running as unit: cl_depth_b0b_germlayer_cooccurrence.service
+phrases: 98 class / 18 layer
+prefilter triggers: 80
+scanned 244877 chunks; class-layer pairs with at least one chunk: 44
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_GERMLAYER_COOCCURRENCE.tsv
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 21.599s
+             CPU time consumed: 27.624s
+                   Memory peak: 286.8M (swap: 0B)
+[scripts/b0b_germlayer_cooccurrence.py] rc=0
+ontology: /mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo
+  sha256   : 7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f
+  release  : releases/2026-06-08   (format-version 1.2)
+  CL terms : 3531 blocks / 3335 active / 196 obsolete
+  CL-namespace typedefs (not cell types): 3
+second file: /mnt/D/OcularKB/ocularkb/rag/ontology/cl-base.obo
+  release cl/releases/2026-06-08/cl-base.owl  terms 3531/3335 active
+  shared ids 3531; name disagreements 0; is_a disagreements 0
+germ-layer anchors resolved from the file:
+  mesoderm                 mesodermal cell          -> CL:0000222 mesodermal cell  (name, descendants=7)
+  ectoderm                 ectodermal cell          -> CL:0000221 ectodermal cell  (name, descendants=3)
+  neural_ectoderm          neurectodermal cell      -> CL:0000133 neurectodermal cell  (name, descendants=1)
+  neural_crest             neural crest cell        -> CL:0011012 neural crest cell  (name, descendants=9)
+  surface_ectoderm         surface ectodermal cell  -> CL:0000114 surface ectodermal cell  (name, descendants=0)
+  mesenchyme               mesenchyme cell          -> CL:0008019 mesenchymal cell  (synonym, descendants=13)
+  endoderm                 endodermal cell          -> CL:0000223 endodermal cell  (name, descendants=1)
+  hematopoietic_stem_cell  hematopoietic stem cell  -> CL:0000037 hematopoietic stem cell  (name, descendants=11)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_CLOSURE_is_a.tsv  (3335 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_LABELMAP_V2.tsv  (80 labels; mapped 65; unresolved 15)
+  no CL term: ['AC_precursor', 'APC_MHCII_high', 'BC_precursor', 'Cone_precursor', 'HC_precursor', 'Lacrimal_duct_epithelial', 'NRPC_early', 'NRPC_late', 'Proliferating', 'RGC_precursor', 'Retinal_Proliferating', 'Rod_precursor', 'TAC_proliferating', 'TAC_transit_amplifying', 'glia_precursor']
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_NAV_v1.json
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GRANULARITY_FOURWAY_721.tsv  (721 rows)
+
+=== reconciliation with the external tester's 13 pairs (section 5-2 of his report) ===
+our class   their label                        his cells our cells clusters  our verdict / path
+Endo        blood vessel endothelial cell          23948     23948        7  we_are_coarser | CL:0000071 -> CL:0002139 -> CL:0000115
+Mac_Tissue  macrophage                             23468     23468        6  same_term 
+BC          rod bipolar cell                       19682     23484        8  we_are_coarser | CL:0000751 -> CL:0000749 -> CL:0000748
+Endo        endothelial cell                       18780     20155       11  same_term 
+Endo        fenestrated endothelial cell            9456      9456        3  we_are_coarser | CL:0000666 -> CL:0000115
+Endo        endothelial cell of artery              6987      6987        1  we_are_coarser | CL:1000413 -> CL:0000071 -> CL:0002139 -> CL:0000115
+Endo        endothelial cell of venule              5261      5261        1  we_are_coarser | CL:1000414 -> CL:0000071 -> CL:0002139 -> CL:0000115
+NK          natural killer cell                     4378      4378        1  same_term 
+BC          OFFx cell                               4062      4062        3  we_are_coarser | CL:4033036 -> CL:0000750 -> CL:0000748
+BC          ON-blue cone bipolar cell               2837      2837        1  we_are_coarser | CL:4033019 -> CL:0000749 -> CL:0000748
+Astro       glial cell                               492       492        1  we_are_finer | CL:0000127 -> CL:0000126 -> CL:0000125
+Endo        endothelial cell of vascular tree        205       205        1  we_are_coarser | CL:0002139 -> CL:0000115
+SMC         smooth muscle cell                       116      1967        2  same_term 
+TOTAL                                             119672    126700       46
+
+=== (our class, their class) over the recorded 721 clusters ===
+cells total: 1495330
+verdict          clusters    cells  %cells
+same_term             212   480120   32.1%
+we_are_coarser        150   342552   22.9%
+we_are_finer           15    36090    2.4%
+true_mismatch         151   268391   17.9%
+no_mapping            193   368177   24.6%
+  no_mapping by side: {'ours': 368177}
+    ours_abstain                         180 clusters    347690 cells
+    ours_candidate_without_cl_term        13 clusters     20487 cells
+
+=== family regex (the reading that produced the 8.0%) ===
+  family_consistent        297 clusters    624029 cells (41.7%)
+  family_inconsistent      222 clusters    451272 cells (30.2%)
+  family_other             202 clusters    420029 cells (28.1%)
+
+=== of the family-inconsistent mass, what it actually is ===
+  same CL term (pure naming)      :     49109 cells (3.3% of all cells, 10.9% of the inconsistent mass)
+  granularity (we coarser/finer)  :    131487 cells (8.8% of all cells, 29.1% of the inconsistent mass)
+  survives as a real disagreement :    217976 cells (14.6% of all cells, 48.3% of the inconsistent mass)
+  no mapping on one side          :     52700 cells
+  family-inconsistent total       :    451272 cells (30.2% of all cells)
+  his headline: 43 clusters / 119672 cells (8.0% of 1495330) are the same cell under ontology authority
+  our reading : 60 clusters / 180596 cells (12.1%) = same-term 49109 + granularity 131487
+
+=== agreement readings on the same 721 clusters ===
+  family regex   : 41.73% of cells
+  ontology, same term only        : 32.11% of cells
+  ontology, same term of judged   : 42.60% (1127153 judged cells)
+  ontology, same+granularity      : 57.43% of cells
+
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/FAMILY_VS_ONTOLOGY_CROSSTAB.tsv
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GRANULARITY_SUMMARY.json
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CHILD_TERM_CANDIDATES.tsv  (56 candidates)
+
+=== child terms the ontology offers us (we are coarser than the literature) ===
+our class       our CL        child CL      child term                        depth clusters    cells  corpus
+SMC             CL:0000192    CL:1000443    ciliary muscle cell                   1        5    26532  corpus_states_the_term (1 chunks/1 papers)
+Endo            CL:0000115    CL:0000071    blood vessel endothelial cell         1        7    23948  corpus_states_the_term (5 chunks/4 papers)
+BC              CL:0000748    CL:0000751    rod bipolar cell                      1        8    23484  corpus_states_the_term (76 chunks/5 papers)
+AC              CL:0000561    CL:4030028    glycinergic amacrine cell             1       13    15718  corpus_states_the_term (3 chunks/3 papers)
+AC              CL:0000561    CL:4030027    GABAergic amacrine cell               1       13    14442  corpus_states_the_term (8 chunks/5 papers)
+Fibroblast      CL:0000057    CL:0002363    keratocyte                            1        3    11836  corpus_states_a_synonym_only (42 chunks/8 papers)
+HC              CL:0000745    CL:0004217    H1 horizontal cell                    1        3    11275  corpus_states_the_term (11 chunks/6 papers)
+Schwann         CL:0002573    CL:0002376    non-myelinating Schwann cell          1        3    10914  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:0000666    fenestrated endothelial cell          1        3     9456  no_corpus_hit (0 chunks/0 papers)
+RGC             CL:0000740    CL:4033047    OFF midget ganglion cell              1        1     9022  corpus_states_the_term (4 chunks/3 papers)
+BC              CL:0000748    CL:4033033    flat midget bipolar cell              1        3     8959  corpus_states_a_synonym_only (1 chunks/1 papers)
+RGC             CL:0000740    CL:4023188    midget ganglion cell of retina        1        2     8707  no_corpus_hit (0 chunks/0 papers)
+BC              CL:0000748    CL:4033030    diffuse bipolar 3b cell               1        3     8339  no_corpus_hit (0 chunks/0 papers)
+T               CL:0000084    CL:0000912    helper T cell                         2        1     7969  corpus_states_the_term (27 chunks/10 papers)
+BC              CL:0000748    CL:0000750    OFF-bipolar cell                      1       13     7701  corpus_states_the_term (27 chunks/5 papers)
+BC              CL:0000748    CL:0000749    ON-bipolar cell                       1        9     7644  corpus_states_the_term (52 chunks/5 papers)
+Endo            CL:0000115    CL:0002543    vein endothelial cell                 2        1     7584  corpus_states_the_term (18 chunks/5 papers)
+BC              CL:0000748    CL:4033028    diffuse bipolar 2 cell                1        3     7496  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:1000413    endothelial cell of artery            2        1     6987  corpus_states_a_synonym_only (3 chunks/2 papers)
+BC              CL:0000748    CL:4033027    diffuse bipolar 1 cell                1        3     6576  no_corpus_hit (0 chunks/0 papers)
+BC              CL:0000748    CL:4033034    invaginating midget bipolar cell      1        3     6563  no_corpus_hit (0 chunks/0 papers)
+HC              CL:0000745    CL:0004218    H2 horizontal cell                    1        3     5468  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:1000412    endothelial cell of arteriole         2        1     5334  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:1000414    endothelial cell of venule            2        1     5261  no_corpus_hit (0 chunks/0 papers)
+SMC             CL:0000192    CL:0019018    blood vessel smooth muscle cell       1        1     4872  no_corpus_hit (0 chunks/0 papers)
+  candidates: 56  cells involved: 342552  with corpus support: 25/56
+
+=== the opposite direction (we are finer than the literature) ===
+  T cell (CL:0000084) vs lymphocyte (CL:0000542): 8 clusters / 15708 cells
+  Mueller cell (CL:0000636) vs glial cell (CL:0000125): 1 clusters / 11504 cells
+  astrocyte (CL:0000127) vs glial cell (CL:0000125): 1 clusters / 492 cells
+  classical monocyte (CL:0000860) vs monocyte (CL:0000576): 1 clusters / 4974 cells
+  microglial cell (CL:0000129) vs macrophage (CL:0000235): 1 clusters / 156 cells
+  macrophage (CL:0000235) vs myeloid leukocyte (CL:0000766): 1 clusters / 1333 cells
+  microglial cell (CL:0000129) vs myeloid leukocyte (CL:0000766): 1 clusters / 1341 cells
+  retinal rod cell (CL:0000604) vs eye photoreceptor cell (CL:0000287): 1 clusters / 582 cells
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CHILD_TERM_CANDIDATES.json
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_NODES.tsv  (60 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_EDGES.tsv  (34 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_GERM_LAYER.tsv  (61 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_MARKER_TRANSITIONS.tsv  (100 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_UNRESOLVED_DEVELOPMENT.tsv  (36 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_SUMMARY.json
+
+=== lineage at a glance ===
+  nodes 60 (library classes 52, germ layers 8), roots 44
+  edges 34 {'develops_from_direct': 5, 'develops_from_transitive': 4, 'germ_layer_membership': 25}
+  germ-layer rows: {'corpus_cooccurrence_weak': 12, 'unresolved': 36, 'ontology_chain': 13}
+  marker rows 100 {'corpus_supported': 100}
+  edges with at least one corpus-supported transition: 2
+  classes with no developmental evidence locally: 36
+  developing nodes found in an adult baseline: []
+manifest entries: 29
+[gate A] FAIL  rules=9 fail=2
+  PASS A1 ONT_SOURCE    ontology=/mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo release=releases/2026-06-08 sha256=7e19b4aef8e7...
+  FAIL A8 NO_MEMORY_ID  distinct CL ids named in artefacts: 3338; absent from the ontology file: 3
+      - CL:4030044 (in out/ONT_NAV_v1.json)
+      - CL:4030045 (in out/ONT_NAV_v1.json)
+      - CL:4030046 (in out/ONT_NAV_v1.json)
+  PASS A2 ID_TRACE      ids in label/line-pairing artefacts traced to the file
+  PASS A3 CLOSURE       terms=3335 mismatched=0 self-ancestors=0
+  PASS A4 CLASSIFY      rows=721 cells=1495330 verdicts={'no_mapping': 368177, 'same_term': 480120, 'true_mismatch': 268391, 'we_are_coarser': 342552, 'we_are_finer': 36090}
+  FAIL A5 CANDIDATES    candidates=56 with_support=25
+      - CL:1000443 is not a descendant of CL:0000192
+      - CL:0000071 is not a descendant of CL:0000115
+      - CL:0000751 is not a descendant of CL:0000748
+      - CL:4030028 is not a descendant of CL:0000561
+      - CL:4030027 is not a descendant of CL:0000561
+      - CL:0002363 is not a descendant of CL:0000057
+  PASS A6 LABELMAP      labels=80 mapped=65
+  PASS A7 CROSSFILE     shared=3531 name_diff=0 is_a_diff=0
+  PASS A9 REPLAY        manifest=out/MANIFEST.sha256 ledger=ledgers/REPLAY.txt
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GATE_A.json
+[gate B] PASS  rules=7 fail=0
+  PASS B1 NODE_TERM     nodes=60
+  PASS B2 INBOUND       edges=34 roots=44 (accounted 44)
+  PASS B3 ACYCLIC       develops_from nodes=7 edges=9
+  PASS B4 STAGE_AXIS    developing nodes=12 stage-crossing edges=31 adult-baseline keys checked=78
+  PASS B5 MARKER_TRACE  marker rows=100 corpus-supported=100
+  PASS B6 NO_EVAL_LEAK  forbidden tokens checked=29 over 6 files
+  PASS B7 REPLAY        manifest entries=29
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GATE_B.json
+[net-audit] hook installs=11  network events=0
+Running as unit: cl_depth_b0_corpus_index.service
+term queries: 249 phrases over 125 keys
+gene queries: 731 symbols
+prefilter: 102 trigger tokens over 249 phrases
+  scanned 20000 chunks
+  scanned 40000 chunks
+  scanned 60000 chunks
+  scanned 80000 chunks
+  scanned 100000 chunks
+  scanned 120000 chunks
+  scanned 140000 chunks
+  scanned 160000 chunks
+  scanned 180000 chunks
+  scanned 200000 chunks
+  scanned 220000 chunks
+  scanned 240000 chunks
+  scanned 244877 chunks
+scanned 244877 chunks; papers with metadata: 3917
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_TERM_INDEX.tsv  (116 term rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_GENE_INDEX.tsv  (722 genes with at least one corpus hit)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_INDEX_META.json
+  term keys with no corpus hit: 43
+  genes with no corpus hit    : 9
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 8.954s
+             CPU time consumed: 1min 14.911s
+                   Memory peak: 302.6M (swap: 0B)
+[scripts/b0_corpus_index.py] rc=0
+Running as unit: cl_depth_b0b_germlayer_cooccurrence.service
+phrases: 98 class / 18 layer
+prefilter triggers: 80
+scanned 244877 chunks; class-layer pairs with at least one chunk: 44
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_GERMLAYER_COOCCURRENCE.tsv
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 21.671s
+             CPU time consumed: 27.603s
+                   Memory peak: 303.5M (swap: 0B)
+[scripts/b0b_germlayer_cooccurrence.py] rc=0
+ontology: /mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo
+  sha256   : 7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f
+  release  : releases/2026-06-08   (format-version 1.2)
+  CL terms : 3531 blocks / 3335 active / 196 obsolete
+  CL-namespace typedefs (not cell types): 3
+second file: /mnt/D/OcularKB/ocularkb/rag/ontology/cl-base.obo
+  release cl/releases/2026-06-08/cl-base.owl  terms 3531/3335 active
+  shared ids 3531; name disagreements 0; is_a disagreements 0
+germ-layer anchors resolved from the file:
+  mesoderm                 mesodermal cell          -> CL:0000222 mesodermal cell  (name, descendants=7)
+  ectoderm                 ectodermal cell          -> CL:0000221 ectodermal cell  (name, descendants=3)
+  neural_ectoderm          neurectodermal cell      -> CL:0000133 neurectodermal cell  (name, descendants=1)
+  neural_crest             neural crest cell        -> CL:0011012 neural crest cell  (name, descendants=9)
+  surface_ectoderm         surface ectodermal cell  -> CL:0000114 surface ectodermal cell  (name, descendants=0)
+  mesenchyme               mesenchyme cell          -> CL:0008019 mesenchymal cell  (synonym, descendants=13)
+  endoderm                 endodermal cell          -> CL:0000223 endodermal cell  (name, descendants=1)
+  hematopoietic_stem_cell  hematopoietic stem cell  -> CL:0000037 hematopoietic stem cell  (name, descendants=11)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_CLOSURE_is_a.tsv  (3335 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_LABELMAP_V2.tsv  (80 labels; mapped 65; unresolved 15)
+  no CL term: ['AC_precursor', 'APC_MHCII_high', 'BC_precursor', 'Cone_precursor', 'HC_precursor', 'Lacrimal_duct_epithelial', 'NRPC_early', 'NRPC_late', 'Proliferating', 'RGC_precursor', 'Retinal_Proliferating', 'Rod_precursor', 'TAC_proliferating', 'TAC_transit_amplifying', 'glia_precursor']
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_NAV_v1.json
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GRANULARITY_FOURWAY_721.tsv  (721 rows)
+
+=== reconciliation with the external tester's 13 pairs (section 5-2 of his report) ===
+our class   their label                        his cells our cells clusters  our verdict / path
+Endo        blood vessel endothelial cell          23948     23948        7  we_are_coarser | CL:0000071 -> CL:0002139 -> CL:0000115
+Mac_Tissue  macrophage                             23468     23468        6  same_term 
+BC          rod bipolar cell                       19682     23484        8  we_are_coarser | CL:0000751 -> CL:0000749 -> CL:0000748
+Endo        endothelial cell                       18780     20155       11  same_term 
+Endo        fenestrated endothelial cell            9456      9456        3  we_are_coarser | CL:0000666 -> CL:0000115
+Endo        endothelial cell of artery              6987      6987        1  we_are_coarser | CL:1000413 -> CL:0000071 -> CL:0002139 -> CL:0000115
+Endo        endothelial cell of venule              5261      5261        1  we_are_coarser | CL:1000414 -> CL:0000071 -> CL:0002139 -> CL:0000115
+NK          natural killer cell                     4378      4378        1  same_term 
+BC          OFFx cell                               4062      4062        3  we_are_coarser | CL:4033036 -> CL:0000750 -> CL:0000748
+BC          ON-blue cone bipolar cell               2837      2837        1  we_are_coarser | CL:4033019 -> CL:0000749 -> CL:0000748
+Astro       glial cell                               492       492        1  we_are_finer | CL:0000127 -> CL:0000126 -> CL:0000125
+Endo        endothelial cell of vascular tree        205       205        1  we_are_coarser | CL:0002139 -> CL:0000115
+SMC         smooth muscle cell                       116      1967        2  same_term 
+TOTAL                                             119672    126700       46
+
+=== (our class, their class) over the recorded 721 clusters ===
+cells total: 1495330
+verdict          clusters    cells  %cells
+same_term             212   480120   32.1%
+we_are_coarser        150   342552   22.9%
+we_are_finer           15    36090    2.4%
+true_mismatch         151   268391   17.9%
+no_mapping            193   368177   24.6%
+  no_mapping by side: {'ours': 368177}
+    ours_abstain                         180 clusters    347690 cells
+    ours_candidate_without_cl_term        13 clusters     20487 cells
+
+=== family regex (the reading that produced the 8.0%) ===
+  family_consistent        297 clusters    624029 cells (41.7%)
+  family_inconsistent      222 clusters    451272 cells (30.2%)
+  family_other             202 clusters    420029 cells (28.1%)
+
+=== of the family-inconsistent mass, what it actually is ===
+  same CL term (pure naming)      :     49109 cells (3.3% of all cells, 10.9% of the inconsistent mass)
+  granularity (we coarser/finer)  :    131487 cells (8.8% of all cells, 29.1% of the inconsistent mass)
+  survives as a real disagreement :    217976 cells (14.6% of all cells, 48.3% of the inconsistent mass)
+  no mapping on one side          :     52700 cells
+  family-inconsistent total       :    451272 cells (30.2% of all cells)
+  his headline: 43 clusters / 119672 cells (8.0% of 1495330) are the same cell under ontology authority
+  our reading : 60 clusters / 180596 cells (12.1%) = same-term 49109 + granularity 131487
+
+=== agreement readings on the same 721 clusters ===
+  family regex   : 41.73% of cells
+  ontology, same term only        : 32.11% of cells
+  ontology, same term of judged   : 42.60% (1127153 judged cells)
+  ontology, same+granularity      : 57.43% of cells
+
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/FAMILY_VS_ONTOLOGY_CROSSTAB.tsv
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GRANULARITY_SUMMARY.json
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CHILD_TERM_CANDIDATES.tsv  (56 candidates)
+
+=== child terms the ontology offers us (we are coarser than the literature) ===
+our class       our CL        child CL      child term                        depth clusters    cells  corpus
+SMC             CL:0000192    CL:1000443    ciliary muscle cell                   1        5    26532  corpus_states_the_term (1 chunks/1 papers)
+Endo            CL:0000115    CL:0000071    blood vessel endothelial cell         1        7    23948  corpus_states_the_term (5 chunks/4 papers)
+BC              CL:0000748    CL:0000751    rod bipolar cell                      1        8    23484  corpus_states_the_term (76 chunks/5 papers)
+AC              CL:0000561    CL:4030028    glycinergic amacrine cell             1       13    15718  corpus_states_the_term (3 chunks/3 papers)
+AC              CL:0000561    CL:4030027    GABAergic amacrine cell               1       13    14442  corpus_states_the_term (8 chunks/5 papers)
+Fibroblast      CL:0000057    CL:0002363    keratocyte                            1        3    11836  corpus_states_a_synonym_only (42 chunks/8 papers)
+HC              CL:0000745    CL:0004217    H1 horizontal cell                    1        3    11275  corpus_states_the_term (11 chunks/6 papers)
+Schwann         CL:0002573    CL:0002376    non-myelinating Schwann cell          1        3    10914  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:0000666    fenestrated endothelial cell          1        3     9456  no_corpus_hit (0 chunks/0 papers)
+RGC             CL:0000740    CL:4033047    OFF midget ganglion cell              1        1     9022  corpus_states_the_term (4 chunks/3 papers)
+BC              CL:0000748    CL:4033033    flat midget bipolar cell              1        3     8959  corpus_states_a_synonym_only (1 chunks/1 papers)
+RGC             CL:0000740    CL:4023188    midget ganglion cell of retina        1        2     8707  no_corpus_hit (0 chunks/0 papers)
+BC              CL:0000748    CL:4033030    diffuse bipolar 3b cell               1        3     8339  no_corpus_hit (0 chunks/0 papers)
+T               CL:0000084    CL:0000912    helper T cell                         2        1     7969  corpus_states_the_term (27 chunks/10 papers)
+BC              CL:0000748    CL:0000750    OFF-bipolar cell                      1       13     7701  corpus_states_the_term (27 chunks/5 papers)
+BC              CL:0000748    CL:0000749    ON-bipolar cell                       1        9     7644  corpus_states_the_term (52 chunks/5 papers)
+Endo            CL:0000115    CL:0002543    vein endothelial cell                 2        1     7584  corpus_states_the_term (18 chunks/5 papers)
+BC              CL:0000748    CL:4033028    diffuse bipolar 2 cell                1        3     7496  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:1000413    endothelial cell of artery            2        1     6987  corpus_states_a_synonym_only (3 chunks/2 papers)
+BC              CL:0000748    CL:4033027    diffuse bipolar 1 cell                1        3     6576  no_corpus_hit (0 chunks/0 papers)
+BC              CL:0000748    CL:4033034    invaginating midget bipolar cell      1        3     6563  no_corpus_hit (0 chunks/0 papers)
+HC              CL:0000745    CL:0004218    H2 horizontal cell                    1        3     5468  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:1000412    endothelial cell of arteriole         2        1     5334  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:1000414    endothelial cell of venule            2        1     5261  no_corpus_hit (0 chunks/0 papers)
+SMC             CL:0000192    CL:0019018    blood vessel smooth muscle cell       1        1     4872  no_corpus_hit (0 chunks/0 papers)
+  candidates: 56  cells involved: 342552  with corpus support: 25/56
+
+=== the opposite direction (we are finer than the literature) ===
+  T cell (CL:0000084) vs lymphocyte (CL:0000542): 8 clusters / 15708 cells
+  Mueller cell (CL:0000636) vs glial cell (CL:0000125): 1 clusters / 11504 cells
+  astrocyte (CL:0000127) vs glial cell (CL:0000125): 1 clusters / 492 cells
+  classical monocyte (CL:0000860) vs monocyte (CL:0000576): 1 clusters / 4974 cells
+  microglial cell (CL:0000129) vs macrophage (CL:0000235): 1 clusters / 156 cells
+  macrophage (CL:0000235) vs myeloid leukocyte (CL:0000766): 1 clusters / 1333 cells
+  microglial cell (CL:0000129) vs myeloid leukocyte (CL:0000766): 1 clusters / 1341 cells
+  retinal rod cell (CL:0000604) vs eye photoreceptor cell (CL:0000287): 1 clusters / 582 cells
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CHILD_TERM_CANDIDATES.json
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_NODES.tsv  (60 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_EDGES.tsv  (34 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_GERM_LAYER.tsv  (61 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_MARKER_TRANSITIONS.tsv  (100 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_UNRESOLVED_DEVELOPMENT.tsv  (36 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_SUMMARY.json
+
+=== lineage at a glance ===
+  nodes 60 (library classes 52, germ layers 8), roots 44
+  edges 34 {'develops_from_direct': 5, 'develops_from_transitive': 4, 'germ_layer_membership': 25}
+  germ-layer rows: {'corpus_cooccurrence_weak': 12, 'unresolved': 36, 'ontology_chain': 13}
+  marker rows 100 {'corpus_supported': 100}
+  edges with at least one corpus-supported transition: 2
+  classes with no developmental evidence locally: 36
+  developing nodes found in an adult baseline: []
+manifest entries: 29
+[gate A] PASS  rules=9 fail=0
+  PASS A1 ONT_SOURCE    ontology=/mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo release=releases/2026-06-08 sha256=7e19b4aef8e7...
+  PASS A8 NO_MEMORY_ID  distinct CL ids named in artefacts: 3338; absent from the ontology file: 0; CL-namespace relation ids (not cell types, disclosed): 3
+  PASS A2 ID_TRACE      ids in label/line-pairing artefacts traced to the file
+  PASS A3 CLOSURE       terms=3335 mismatched=0 self-ancestors=0
+  PASS A4 CLASSIFY      rows=721 cells=1495330 verdicts={'no_mapping': 368177, 'same_term': 480120, 'true_mismatch': 268391, 'we_are_coarser': 342552, 'we_are_finer': 36090}
+  PASS A5 CANDIDATES    candidates=56 with_support=25
+  PASS A6 LABELMAP      labels=80 mapped=65
+  PASS A7 CROSSFILE     shared=3531 name_diff=0 is_a_diff=0
+  PASS A9 REPLAY        manifest=out/MANIFEST.sha256 ledger=ledgers/REPLAY.txt
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GATE_A.json
+[gate B] PASS  rules=7 fail=0
+  PASS B1 NODE_TERM     nodes=60
+  PASS B2 INBOUND       edges=34 roots=44 (accounted 44)
+  PASS B3 ACYCLIC       develops_from nodes=7 edges=9
+  PASS B4 STAGE_AXIS    developing nodes=12 stage-crossing edges=31 adult-baseline keys checked=78
+  PASS B5 MARKER_TRACE  marker rows=100 corpus-supported=100
+  PASS B6 NO_EVAL_LEAK  forbidden tokens checked=29 over 6 files
+  PASS B7 REPLAY        manifest entries=29
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GATE_B.json
+[net-audit] hook installs=22  network events=0
+Running as unit: cl_depth_b0_corpus_index.service; invocation ID: 48e811f5c2134dd58d797e26f0e79bc2
+term queries: 249 phrases over 125 keys
+gene queries: 731 symbols
+prefilter: 102 trigger tokens over 249 phrases
+  scanned 20000 chunks
+  scanned 40000 chunks
+  scanned 60000 chunks
+  scanned 80000 chunks
+  scanned 100000 chunks
+  scanned 120000 chunks
+  scanned 140000 chunks
+  scanned 160000 chunks
+  scanned 180000 chunks
+  scanned 200000 chunks
+  scanned 220000 chunks
+  scanned 240000 chunks
+  scanned 244877 chunks
+scanned 244877 chunks; papers with metadata: 3917
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_TERM_INDEX.tsv  (116 term rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_GENE_INDEX.tsv  (722 genes with at least one corpus hit)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_INDEX_META.json
+  term keys with no corpus hit: 43
+  genes with no corpus hit    : 9
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 9.331s
+             CPU time consumed: 1min 15.351s
+                   Memory peak: 301.4M (swap: 0B)
+[scripts/b0_corpus_index.py] rc=0
+Running as unit: cl_depth_b0b_germlayer_cooccurrence.service; invocation ID: ea1f215706f0495da4daceab05469d50
+phrases: 98 class / 18 layer
+prefilter triggers: 80
+scanned 244877 chunks; class-layer pairs with at least one chunk: 44
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_GERMLAYER_COOCCURRENCE.tsv
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 22.002s
+             CPU time consumed: 28.108s
+                   Memory peak: 288.1M (swap: 0B)
+[scripts/b0b_germlayer_cooccurrence.py] rc=0
+ontology: /mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo
+  sha256   : 7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f
+  release  : releases/2026-06-08   (format-version 1.2)
+  CL terms : 3531 blocks / 3335 active / 196 obsolete
+  CL-namespace typedefs (not cell types): 3
+second file: /mnt/D/OcularKB/ocularkb/rag/ontology/cl-base.obo
+  release cl/releases/2026-06-08/cl-base.owl  terms 3531/3335 active
+  shared ids 3531; name disagreements 0; is_a disagreements 0
+germ-layer anchors resolved from the file:
+  mesoderm                 mesodermal cell          -> CL:0000222 mesodermal cell  (name, descendants=7)
+  ectoderm                 ectodermal cell          -> CL:0000221 ectodermal cell  (name, descendants=3)
+  neural_ectoderm          neurectodermal cell      -> CL:0000133 neurectodermal cell  (name, descendants=1)
+  neural_crest             neural crest cell        -> CL:0011012 neural crest cell  (name, descendants=9)
+  surface_ectoderm         surface ectodermal cell  -> CL:0000114 surface ectodermal cell  (name, descendants=0)
+  mesenchyme               mesenchyme cell          -> CL:0008019 mesenchymal cell  (synonym, descendants=13)
+  endoderm                 endodermal cell          -> CL:0000223 endodermal cell  (name, descendants=1)
+  hematopoietic_stem_cell  hematopoietic stem cell  -> CL:0000037 hematopoietic stem cell  (name, descendants=11)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_CLOSURE_is_a.tsv  (3335 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_LABELMAP_V2.tsv  (80 labels; mapped 65; unresolved 15)
+  no CL term: ['AC_precursor', 'APC_MHCII_high', 'BC_precursor', 'Cone_precursor', 'HC_precursor', 'Lacrimal_duct_epithelial', 'NRPC_early', 'NRPC_late', 'Proliferating', 'RGC_precursor', 'Retinal_Proliferating', 'Rod_precursor', 'TAC_proliferating', 'TAC_transit_amplifying', 'glia_precursor']
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_NAV_v1.json
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GRANULARITY_FOURWAY_721.tsv  (721 rows)
+
+=== reconciliation with the external tester's 13 pairs (section 5-2 of his report) ===
+our class   their label                        his cells our cells clusters  our verdict / path
+Endo        blood vessel endothelial cell          23948     23948        7  we_are_coarser | CL:0000071 -> CL:0002139 -> CL:0000115
+Mac_Tissue  macrophage                             23468     23468        6  same_term 
+BC          rod bipolar cell                       19682     23484        8  we_are_coarser | CL:0000751 -> CL:0000749 -> CL:0000748
+Endo        endothelial cell                       18780     20155       11  same_term 
+Endo        fenestrated endothelial cell            9456      9456        3  we_are_coarser | CL:0000666 -> CL:0000115
+Endo        endothelial cell of artery              6987      6987        1  we_are_coarser | CL:1000413 -> CL:0000071 -> CL:0002139 -> CL:0000115
+Endo        endothelial cell of venule              5261      5261        1  we_are_coarser | CL:1000414 -> CL:0000071 -> CL:0002139 -> CL:0000115
+NK          natural killer cell                     4378      4378        1  same_term 
+BC          OFFx cell                               4062      4062        3  we_are_coarser | CL:4033036 -> CL:0000750 -> CL:0000748
+BC          ON-blue cone bipolar cell               2837      2837        1  we_are_coarser | CL:4033019 -> CL:0000749 -> CL:0000748
+Astro       glial cell                               492       492        1  we_are_finer | CL:0000127 -> CL:0000126 -> CL:0000125
+Endo        endothelial cell of vascular tree        205       205        1  we_are_coarser | CL:0002139 -> CL:0000115
+SMC         smooth muscle cell                       116      1967        2  same_term 
+TOTAL                                             119672    126700       46
+
+=== (our class, their class) over the recorded 721 clusters ===
+cells total: 1495330
+verdict          clusters    cells  %cells
+same_term             212   480120   32.1%
+we_are_coarser        150   342552   22.9%
+we_are_finer           15    36090    2.4%
+true_mismatch         151   268391   17.9%
+no_mapping            193   368177   24.6%
+  no_mapping by side: {'ours': 368177}
+    ours_abstain                         180 clusters    347690 cells
+    ours_candidate_without_cl_term        13 clusters     20487 cells
+
+=== family regex (the reading that produced the 8.0%) ===
+  family_consistent        297 clusters    624029 cells (41.7%)
+  family_inconsistent      222 clusters    451272 cells (30.2%)
+  family_other             202 clusters    420029 cells (28.1%)
+
+=== of the family-inconsistent mass, what it actually is ===
+  same CL term (pure naming)      :     49109 cells (3.3% of all cells, 10.9% of the inconsistent mass)
+  granularity (we coarser/finer)  :    131487 cells (8.8% of all cells, 29.1% of the inconsistent mass)
+  survives as a real disagreement :    217976 cells (14.6% of all cells, 48.3% of the inconsistent mass)
+  no mapping on one side          :     52700 cells
+  family-inconsistent total       :    451272 cells (30.2% of all cells)
+  his headline: 43 clusters / 119672 cells (8.0% of 1495330) are the same cell under ontology authority
+  our reading : 60 clusters / 180596 cells (12.1%) = same-term 49109 + granularity 131487
+
+=== agreement readings on the same 721 clusters ===
+  family regex   : 41.73% of cells
+  ontology, same term only        : 32.11% of cells
+  ontology, same term of judged   : 42.60% (1127153 judged cells)
+  ontology, same+granularity      : 57.43% of cells
+
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/FAMILY_VS_ONTOLOGY_CROSSTAB.tsv
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GRANULARITY_SUMMARY.json
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CHILD_TERM_CANDIDATES.tsv  (56 candidates)
+
+=== child terms the ontology offers us (we are coarser than the literature) ===
+our class       our CL        child CL      child term                        depth clusters    cells  corpus
+SMC             CL:0000192    CL:1000443    ciliary muscle cell                   1        5    26532  corpus_states_the_term (1 chunks/1 papers)
+Endo            CL:0000115    CL:0000071    blood vessel endothelial cell         1        7    23948  corpus_states_the_term (5 chunks/4 papers)
+BC              CL:0000748    CL:0000751    rod bipolar cell                      1        8    23484  corpus_states_the_term (76 chunks/5 papers)
+AC              CL:0000561    CL:4030028    glycinergic amacrine cell             1       13    15718  corpus_states_the_term (3 chunks/3 papers)
+AC              CL:0000561    CL:4030027    GABAergic amacrine cell               1       13    14442  corpus_states_the_term (8 chunks/5 papers)
+Fibroblast      CL:0000057    CL:0002363    keratocyte                            1        3    11836  corpus_states_a_synonym_only (42 chunks/8 papers)
+HC              CL:0000745    CL:0004217    H1 horizontal cell                    1        3    11275  corpus_states_the_term (11 chunks/6 papers)
+Schwann         CL:0002573    CL:0002376    non-myelinating Schwann cell          1        3    10914  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:0000666    fenestrated endothelial cell          1        3     9456  no_corpus_hit (0 chunks/0 papers)
+RGC             CL:0000740    CL:4033047    OFF midget ganglion cell              1        1     9022  corpus_states_the_term (4 chunks/3 papers)
+BC              CL:0000748    CL:4033033    flat midget bipolar cell              1        3     8959  corpus_states_a_synonym_only (1 chunks/1 papers)
+RGC             CL:0000740    CL:4023188    midget ganglion cell of retina        1        2     8707  no_corpus_hit (0 chunks/0 papers)
+BC              CL:0000748    CL:4033030    diffuse bipolar 3b cell               1        3     8339  no_corpus_hit (0 chunks/0 papers)
+T               CL:0000084    CL:0000912    helper T cell                         2        1     7969  corpus_states_the_term (27 chunks/10 papers)
+BC              CL:0000748    CL:0000750    OFF-bipolar cell                      1       13     7701  corpus_states_the_term (27 chunks/5 papers)
+BC              CL:0000748    CL:0000749    ON-bipolar cell                       1        9     7644  corpus_states_the_term (52 chunks/5 papers)
+Endo            CL:0000115    CL:0002543    vein endothelial cell                 2        1     7584  corpus_states_the_term (18 chunks/5 papers)
+BC              CL:0000748    CL:4033028    diffuse bipolar 2 cell                1        3     7496  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:1000413    endothelial cell of artery            2        1     6987  corpus_states_a_synonym_only (3 chunks/2 papers)
+BC              CL:0000748    CL:4033027    diffuse bipolar 1 cell                1        3     6576  no_corpus_hit (0 chunks/0 papers)
+BC              CL:0000748    CL:4033034    invaginating midget bipolar cell      1        3     6563  no_corpus_hit (0 chunks/0 papers)
+HC              CL:0000745    CL:0004218    H2 horizontal cell                    1        3     5468  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:1000412    endothelial cell of arteriole         2        1     5334  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:1000414    endothelial cell of venule            2        1     5261  no_corpus_hit (0 chunks/0 papers)
+SMC             CL:0000192    CL:0019018    blood vessel smooth muscle cell       1        1     4872  no_corpus_hit (0 chunks/0 papers)
+  candidates: 56  cells involved: 342552  with corpus support: 25/56
+
+=== the opposite direction (we are finer than the literature) ===
+  T cell (CL:0000084) vs lymphocyte (CL:0000542): 8 clusters / 15708 cells
+  Mueller cell (CL:0000636) vs glial cell (CL:0000125): 1 clusters / 11504 cells
+  astrocyte (CL:0000127) vs glial cell (CL:0000125): 1 clusters / 492 cells
+  classical monocyte (CL:0000860) vs monocyte (CL:0000576): 1 clusters / 4974 cells
+  microglial cell (CL:0000129) vs macrophage (CL:0000235): 1 clusters / 156 cells
+  macrophage (CL:0000235) vs myeloid leukocyte (CL:0000766): 1 clusters / 1333 cells
+  microglial cell (CL:0000129) vs myeloid leukocyte (CL:0000766): 1 clusters / 1341 cells
+  retinal rod cell (CL:0000604) vs eye photoreceptor cell (CL:0000287): 1 clusters / 582 cells
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CHILD_TERM_CANDIDATES.json
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_NODES.tsv  (60 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_EDGES.tsv  (34 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_GERM_LAYER.tsv  (61 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_MARKER_TRANSITIONS.tsv  (100 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_UNRESOLVED_DEVELOPMENT.tsv  (36 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_SUMMARY.json
+
+=== lineage at a glance ===
+  nodes 60 (library classes 52, germ layers 8), roots 44
+  edges 34 {'develops_from_direct': 5, 'develops_from_transitive': 4, 'germ_layer_membership': 25}
+  germ-layer rows: {'corpus_cooccurrence_weak': 12, 'unresolved': 36, 'ontology_chain': 13}
+  marker rows 100 {'corpus_supported': 100}
+  edges with at least one corpus-supported transition: 2
+  classes with no developmental evidence locally: 36
+  developing nodes found in an adult baseline: []
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GAPCHECK_LINEAGE_vs_BENCHMARK.tsv  (54 rows)
+  lineage library-class nodes: 52; of them never a top candidate: 23
+  classes used in the recorded table but not lineage nodes: 2
+                                     180 clusters   347690 cells
+    APC_MHCII_high                    13 clusters    20487 cells
+manifest entries: 31
+[gate A] PASS  rules=9 fail=0
+  PASS A1 ONT_SOURCE    ontology=/mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo release=releases/2026-06-08 sha256=7e19b4aef8e7...
+  PASS A8 NO_MEMORY_ID  distinct CL ids named in artefacts: 3338; absent from the ontology file: 0; CL-namespace relation ids (not cell types, disclosed): 3
+  PASS A2 ID_TRACE      ids in label/line-pairing artefacts traced to the file
+  PASS A3 CLOSURE       terms=3335 mismatched=0 self-ancestors=0
+  PASS A4 CLASSIFY      rows=721 cells=1495330 verdicts={'no_mapping': 368177, 'same_term': 480120, 'true_mismatch': 268391, 'we_are_coarser': 342552, 'we_are_finer': 36090}
+  PASS A5 CANDIDATES    candidates=56 with_support=25
+  PASS A6 LABELMAP      labels=80 mapped=65
+  PASS A7 CROSSFILE     shared=3531 name_diff=0 is_a_diff=0
+  PASS A9 REPLAY        manifest=out/MANIFEST.sha256 ledger=ledgers/REPLAY.txt
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GATE_A.json
+[gate B] PASS  rules=7 fail=0
+  PASS B1 NODE_TERM     nodes=60
+  PASS B2 INBOUND       edges=34 roots=44 (accounted 44)
+  PASS B3 ACYCLIC       develops_from nodes=7 edges=9
+  PASS B4 STAGE_AXIS    developing nodes=12 stage-crossing edges=31 adult-baseline keys checked=78
+  PASS B5 MARKER_TRACE  marker rows=100 corpus-supported=100
+  PASS B6 NO_EVAL_LEAK  forbidden tokens checked=29 over 6 files
+  PASS B7 REPLAY        manifest entries=31
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GATE_B.json
+[net-audit] hook installs=35  network events=0
+Running as unit: cl_depth_b0_corpus_index.service; invocation ID: 2710ffc0c57c420ab612d9f857c02323
+term queries: 249 phrases over 125 keys
+gene queries: 731 symbols
+prefilter: 102 trigger tokens over 249 phrases
+  scanned 20000 chunks
+  scanned 40000 chunks
+  scanned 60000 chunks
+  scanned 80000 chunks
+  scanned 100000 chunks
+  scanned 120000 chunks
+  scanned 140000 chunks
+  scanned 160000 chunks
+  scanned 180000 chunks
+  scanned 200000 chunks
+  scanned 220000 chunks
+  scanned 240000 chunks
+  scanned 244877 chunks
+scanned 244877 chunks; papers with metadata: 3917
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_TERM_INDEX.tsv  (116 term rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_GENE_INDEX.tsv  (722 genes with at least one corpus hit)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_INDEX_META.json
+  term keys with no corpus hit: 43
+  genes with no corpus hit    : 9
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 9.856s
+             CPU time consumed: 1min 15.853s
+                   Memory peak: 290.2M (swap: 0B)
+[scripts/b0_corpus_index.py] rc=0
+Running as unit: cl_depth_b0b_germlayer_cooccurrence.service; invocation ID: ef0c56ba0add40c0b33eea419d02f89c
+phrases: 98 class / 18 layer
+prefilter triggers: 80
+scanned 244877 chunks; class-layer pairs with at least one chunk: 44
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_GERMLAYER_COOCCURRENCE.tsv
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 22.214s
+             CPU time consumed: 28.317s
+                   Memory peak: 293.9M (swap: 0B)
+[scripts/b0b_germlayer_cooccurrence.py] rc=0
+ontology: /mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo
+  sha256   : 7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f
+  release  : releases/2026-06-08   (format-version 1.2)
+  CL terms : 3531 blocks / 3335 active / 196 obsolete
+  CL-namespace typedefs (not cell types): 3
+second file: /mnt/D/OcularKB/ocularkb/rag/ontology/cl-base.obo
+  release cl/releases/2026-06-08/cl-base.owl  terms 3531/3335 active
+  shared ids 3531; name disagreements 0; is_a disagreements 0
+germ-layer anchors resolved from the file:
+  mesoderm                 mesodermal cell          -> CL:0000222 mesodermal cell  (name, descendants=7)
+  ectoderm                 ectodermal cell          -> CL:0000221 ectodermal cell  (name, descendants=3)
+  neural_ectoderm          neurectodermal cell      -> CL:0000133 neurectodermal cell  (name, descendants=1)
+  neural_crest             neural crest cell        -> CL:0011012 neural crest cell  (name, descendants=9)
+  surface_ectoderm         surface ectodermal cell  -> CL:0000114 surface ectodermal cell  (name, descendants=0)
+  mesenchyme               mesenchyme cell          -> CL:0008019 mesenchymal cell  (synonym, descendants=13)
+  endoderm                 endodermal cell          -> CL:0000223 endodermal cell  (name, descendants=1)
+  hematopoietic_stem_cell  hematopoietic stem cell  -> CL:0000037 hematopoietic stem cell  (name, descendants=11)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_CLOSURE_is_a.tsv  (3335 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_LABELMAP_V2.tsv  (80 labels; mapped 65; unresolved 15)
+  no CL term: ['AC_precursor', 'APC_MHCII_high', 'BC_precursor', 'Cone_precursor', 'HC_precursor', 'Lacrimal_duct_epithelial', 'NRPC_early', 'NRPC_late', 'Proliferating', 'RGC_precursor', 'Retinal_Proliferating', 'Rod_precursor', 'TAC_proliferating', 'TAC_transit_amplifying', 'glia_precursor']
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_NAV_v1.json
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GRANULARITY_FOURWAY_721.tsv  (721 rows)
+
+=== reconciliation with the external tester's 13 pairs (section 5-2 of his report) ===
+our class   their label                        his cells our cells clusters  our verdict / path
+Endo        blood vessel endothelial cell          23948     23948        7  we_are_coarser | CL:0000071 -> CL:0002139 -> CL:0000115
+Mac_Tissue  macrophage                             23468     23468        6  same_term 
+BC          rod bipolar cell                       19682     23484        8  we_are_coarser | CL:0000751 -> CL:0000749 -> CL:0000748
+Endo        endothelial cell                       18780     20155       11  same_term 
+Endo        fenestrated endothelial cell            9456      9456        3  we_are_coarser | CL:0000666 -> CL:0000115
+Endo        endothelial cell of artery              6987      6987        1  we_are_coarser | CL:1000413 -> CL:0000071 -> CL:0002139 -> CL:0000115
+Endo        endothelial cell of venule              5261      5261        1  we_are_coarser | CL:1000414 -> CL:0000071 -> CL:0002139 -> CL:0000115
+NK          natural killer cell                     4378      4378        1  same_term 
+BC          OFFx cell                               4062      4062        3  we_are_coarser | CL:4033036 -> CL:0000750 -> CL:0000748
+BC          ON-blue cone bipolar cell               2837      2837        1  we_are_coarser | CL:4033019 -> CL:0000749 -> CL:0000748
+Astro       glial cell                               492       492        1  we_are_finer | CL:0000127 -> CL:0000126 -> CL:0000125
+Endo        endothelial cell of vascular tree        205       205        1  we_are_coarser | CL:0002139 -> CL:0000115
+SMC         smooth muscle cell                       116      1967        2  same_term 
+TOTAL                                             119672    126700       46
+
+=== (our class, their class) over the recorded 721 clusters ===
+cells total: 1495330
+verdict          clusters    cells  %cells
+same_term             212   480120   32.1%
+we_are_coarser        150   342552   22.9%
+we_are_finer           15    36090    2.4%
+true_mismatch         151   268391   17.9%
+no_mapping            193   368177   24.6%
+  no_mapping by side: {'ours': 368177}
+    ours_abstain                         180 clusters    347690 cells
+    ours_candidate_without_cl_term        13 clusters     20487 cells
+
+=== family regex (the reading that produced the 8.0%) ===
+  family_consistent        297 clusters    624029 cells (41.7%)
+  family_inconsistent      222 clusters    451272 cells (30.2%)
+  family_other             202 clusters    420029 cells (28.1%)
+
+=== of the family-inconsistent mass, what it actually is ===
+  same CL term (pure naming)      :     49109 cells (3.3% of all cells, 10.9% of the inconsistent mass)
+  granularity (we coarser/finer)  :    131487 cells (8.8% of all cells, 29.1% of the inconsistent mass)
+  survives as a real disagreement :    217976 cells (14.6% of all cells, 48.3% of the inconsistent mass)
+  no mapping on one side          :     52700 cells
+  family-inconsistent total       :    451272 cells (30.2% of all cells)
+  his headline: 43 clusters / 119672 cells (8.0% of 1495330) are the same cell under ontology authority
+  our reading : 60 clusters / 180596 cells (12.1%) = same-term 49109 + granularity 131487
+
+=== agreement readings on the same 721 clusters ===
+  family regex   : 41.73% of cells
+  ontology, same term only        : 32.11% of cells
+  ontology, same term of judged   : 42.60% (1127153 judged cells)
+  ontology, same+granularity      : 57.43% of cells
+
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/FAMILY_VS_ONTOLOGY_CROSSTAB.tsv
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GRANULARITY_SUMMARY.json
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CHILD_TERM_CANDIDATES.tsv  (56 candidates)
+
+=== child terms the ontology offers us (we are coarser than the literature) ===
+our class       our CL        child CL      child term                        depth clusters    cells  corpus
+SMC             CL:0000192    CL:1000443    ciliary muscle cell                   1        5    26532  corpus_states_the_term (1 chunks/1 papers)
+Endo            CL:0000115    CL:0000071    blood vessel endothelial cell         1        7    23948  corpus_states_the_term (5 chunks/4 papers)
+BC              CL:0000748    CL:0000751    rod bipolar cell                      1        8    23484  corpus_states_the_term (76 chunks/5 papers)
+AC              CL:0000561    CL:4030028    glycinergic amacrine cell             1       13    15718  corpus_states_the_term (3 chunks/3 papers)
+AC              CL:0000561    CL:4030027    GABAergic amacrine cell               1       13    14442  corpus_states_the_term (8 chunks/5 papers)
+Fibroblast      CL:0000057    CL:0002363    keratocyte                            1        3    11836  corpus_states_a_synonym_only (42 chunks/8 papers)
+HC              CL:0000745    CL:0004217    H1 horizontal cell                    1        3    11275  corpus_states_the_term (11 chunks/6 papers)
+Schwann         CL:0002573    CL:0002376    non-myelinating Schwann cell          1        3    10914  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:0000666    fenestrated endothelial cell          1        3     9456  no_corpus_hit (0 chunks/0 papers)
+RGC             CL:0000740    CL:4033047    OFF midget ganglion cell              1        1     9022  corpus_states_the_term (4 chunks/3 papers)
+BC              CL:0000748    CL:4033033    flat midget bipolar cell              1        3     8959  corpus_states_a_synonym_only (1 chunks/1 papers)
+RGC             CL:0000740    CL:4023188    midget ganglion cell of retina        1        2     8707  no_corpus_hit (0 chunks/0 papers)
+BC              CL:0000748    CL:4033030    diffuse bipolar 3b cell               1        3     8339  no_corpus_hit (0 chunks/0 papers)
+T               CL:0000084    CL:0000912    helper T cell                         2        1     7969  corpus_states_the_term (27 chunks/10 papers)
+BC              CL:0000748    CL:0000750    OFF-bipolar cell                      1       13     7701  corpus_states_the_term (27 chunks/5 papers)
+BC              CL:0000748    CL:0000749    ON-bipolar cell                       1        9     7644  corpus_states_the_term (52 chunks/5 papers)
+Endo            CL:0000115    CL:0002543    vein endothelial cell                 2        1     7584  corpus_states_the_term (18 chunks/5 papers)
+BC              CL:0000748    CL:4033028    diffuse bipolar 2 cell                1        3     7496  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:1000413    endothelial cell of artery            2        1     6987  corpus_states_a_synonym_only (3 chunks/2 papers)
+BC              CL:0000748    CL:4033027    diffuse bipolar 1 cell                1        3     6576  no_corpus_hit (0 chunks/0 papers)
+BC              CL:0000748    CL:4033034    invaginating midget bipolar cell      1        3     6563  no_corpus_hit (0 chunks/0 papers)
+HC              CL:0000745    CL:0004218    H2 horizontal cell                    1        3     5468  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:1000412    endothelial cell of arteriole         2        1     5334  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:1000414    endothelial cell of venule            2        1     5261  no_corpus_hit (0 chunks/0 papers)
+SMC             CL:0000192    CL:0019018    blood vessel smooth muscle cell       1        1     4872  no_corpus_hit (0 chunks/0 papers)
+  candidates: 56  cells involved: 342552  with corpus support: 25/56
+
+=== the opposite direction (we are finer than the literature) ===
+  T cell (CL:0000084) vs lymphocyte (CL:0000542): 8 clusters / 15708 cells
+  Mueller cell (CL:0000636) vs glial cell (CL:0000125): 1 clusters / 11504 cells
+  astrocyte (CL:0000127) vs glial cell (CL:0000125): 1 clusters / 492 cells
+  classical monocyte (CL:0000860) vs monocyte (CL:0000576): 1 clusters / 4974 cells
+  microglial cell (CL:0000129) vs macrophage (CL:0000235): 1 clusters / 156 cells
+  macrophage (CL:0000235) vs myeloid leukocyte (CL:0000766): 1 clusters / 1333 cells
+  microglial cell (CL:0000129) vs myeloid leukocyte (CL:0000766): 1 clusters / 1341 cells
+  retinal rod cell (CL:0000604) vs eye photoreceptor cell (CL:0000287): 1 clusters / 582 cells
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CHILD_TERM_CANDIDATES.json
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_NODES.tsv  (60 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_EDGES.tsv  (34 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_GERM_LAYER.tsv  (61 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_MARKER_TRANSITIONS.tsv  (100 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_UNRESOLVED_DEVELOPMENT.tsv  (36 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_SUMMARY.json
+
+=== lineage at a glance ===
+  nodes 60 (library classes 52, germ layers 8), roots 44
+  edges 34 {'develops_from_direct': 5, 'develops_from_transitive': 4, 'germ_layer_membership': 25}
+  germ-layer rows: {'corpus_cooccurrence_weak': 12, 'unresolved': 36, 'ontology_chain': 13}
+  marker rows 100 {'corpus_supported': 100}
+  edges with at least one corpus-supported transition: 2
+  classes with no developmental evidence locally: 36
+  developing nodes found in an adult baseline: []
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GAPCHECK_LINEAGE_vs_BENCHMARK.tsv  (54 rows)
+  lineage library-class nodes: 52; of them never a top candidate: 23
+  classes used in the recorded table but not lineage nodes: 2
+                                     180 clusters   347690 cells
+    APC_MHCII_high                    13 clusters    20487 cells
+manifest entries: 32
+[report numbers] checked=56 missing=0 verdict=PASS
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/REPORT_NUMBER_CHECK.json
+[gate A] PASS  rules=9 fail=0
+  PASS A1 ONT_SOURCE    ontology=/mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo release=releases/2026-06-08 sha256=7e19b4aef8e7...
+  PASS A8 NO_MEMORY_ID  distinct CL ids named in artefacts: 3338; absent from the ontology file: 0; CL-namespace relation ids (not cell types, disclosed): 3
+  PASS A2 ID_TRACE      ids in label/line-pairing artefacts traced to the file
+  PASS A3 CLOSURE       terms=3335 mismatched=0 self-ancestors=0
+  PASS A4 CLASSIFY      rows=721 cells=1495330 verdicts={'no_mapping': 368177, 'same_term': 480120, 'true_mismatch': 268391, 'we_are_coarser': 342552, 'we_are_finer': 36090}
+  PASS A5 CANDIDATES    candidates=56 with_support=25
+  PASS A6 LABELMAP      labels=80 mapped=65
+  PASS A7 CROSSFILE     shared=3531 name_diff=0 is_a_diff=0
+  PASS A9 REPLAY        manifest=out/MANIFEST.sha256 ledger=ledgers/REPLAY.txt
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GATE_A.json
+[gate B] PASS  rules=7 fail=0
+  PASS B1 NODE_TERM     nodes=60
+  PASS B2 INBOUND       edges=34 roots=44 (accounted 44)
+  PASS B3 ACYCLIC       develops_from nodes=7 edges=9
+  PASS B4 STAGE_AXIS    developing nodes=12 stage-crossing edges=31 adult-baseline keys checked=78
+  PASS B5 MARKER_TRACE  marker rows=100 corpus-supported=100
+  PASS B6 NO_EVAL_LEAK  forbidden tokens checked=29 over 6 files
+  PASS B7 REPLAY        manifest entries=32
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GATE_B.json
+[net-audit] hook installs=49  network events=0
+Running as unit: cl_depth_b0_corpus_index.service; invocation ID: af10193a385e40f0a0c5c69c88d72596
+term queries: 249 phrases over 125 keys
+gene queries: 731 symbols
+prefilter: 102 trigger tokens over 249 phrases
+  scanned 20000 chunks
+  scanned 40000 chunks
+  scanned 60000 chunks
+  scanned 80000 chunks
+  scanned 100000 chunks
+  scanned 120000 chunks
+  scanned 140000 chunks
+  scanned 160000 chunks
+  scanned 180000 chunks
+  scanned 200000 chunks
+  scanned 220000 chunks
+  scanned 240000 chunks
+  scanned 244877 chunks
+scanned 244877 chunks; papers with metadata: 3917
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_TERM_INDEX.tsv  (116 term rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_GENE_INDEX.tsv  (722 genes with at least one corpus hit)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_INDEX_META.json
+  term keys with no corpus hit: 43
+  genes with no corpus hit    : 9
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 8.998s
+             CPU time consumed: 1min 15.072s
+                   Memory peak: 288.7M (swap: 0B)
+[scripts/b0_corpus_index.py] rc=0
+Running as unit: cl_depth_b0b_germlayer_cooccurrence.service; invocation ID: 7e138d38964c4651a835694eec66890f
+phrases: 98 class / 18 layer
+prefilter triggers: 80
+scanned 244877 chunks; class-layer pairs with at least one chunk: 44
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CORPUS_GERMLAYER_COOCCURRENCE.tsv
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 23.166s
+             CPU time consumed: 29.251s
+                   Memory peak: 298.8M (swap: 0B)
+[scripts/b0b_germlayer_cooccurrence.py] rc=0
+ontology: /mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo
+  sha256   : 7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f
+  release  : releases/2026-06-08   (format-version 1.2)
+  CL terms : 3531 blocks / 3335 active / 196 obsolete
+  CL-namespace typedefs (not cell types): 3
+second file: /mnt/D/OcularKB/ocularkb/rag/ontology/cl-base.obo
+  release cl/releases/2026-06-08/cl-base.owl  terms 3531/3335 active
+  shared ids 3531; name disagreements 0; is_a disagreements 0
+germ-layer anchors resolved from the file:
+  mesoderm                 mesodermal cell          -> CL:0000222 mesodermal cell  (name, descendants=7)
+  ectoderm                 ectodermal cell          -> CL:0000221 ectodermal cell  (name, descendants=3)
+  neural_ectoderm          neurectodermal cell      -> CL:0000133 neurectodermal cell  (name, descendants=1)
+  neural_crest             neural crest cell        -> CL:0011012 neural crest cell  (name, descendants=9)
+  surface_ectoderm         surface ectodermal cell  -> CL:0000114 surface ectodermal cell  (name, descendants=0)
+  mesenchyme               mesenchyme cell          -> CL:0008019 mesenchymal cell  (synonym, descendants=13)
+  endoderm                 endodermal cell          -> CL:0000223 endodermal cell  (name, descendants=1)
+  hematopoietic_stem_cell  hematopoietic stem cell  -> CL:0000037 hematopoietic stem cell  (name, descendants=11)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_CLOSURE_is_a.tsv  (3335 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_LABELMAP_V2.tsv  (80 labels; mapped 65; unresolved 15)
+  no CL term: ['AC_precursor', 'APC_MHCII_high', 'BC_precursor', 'Cone_precursor', 'HC_precursor', 'Lacrimal_duct_epithelial', 'NRPC_early', 'NRPC_late', 'Proliferating', 'RGC_precursor', 'Retinal_Proliferating', 'Rod_precursor', 'TAC_proliferating', 'TAC_transit_amplifying', 'glia_precursor']
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_NAV_v1.json
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GRANULARITY_FOURWAY_721.tsv  (721 rows)
+
+=== reconciliation with the external tester's 13 pairs (section 5-2 of his report) ===
+our class   their label                        his cells our cells clusters  our verdict / path
+Endo        blood vessel endothelial cell          23948     23948        7  we_are_coarser | CL:0000071 -> CL:0002139 -> CL:0000115
+Mac_Tissue  macrophage                             23468     23468        6  same_term 
+BC          rod bipolar cell                       19682     23484        8  we_are_coarser | CL:0000751 -> CL:0000749 -> CL:0000748
+Endo        endothelial cell                       18780     20155       11  same_term 
+Endo        fenestrated endothelial cell            9456      9456        3  we_are_coarser | CL:0000666 -> CL:0000115
+Endo        endothelial cell of artery              6987      6987        1  we_are_coarser | CL:1000413 -> CL:0000071 -> CL:0002139 -> CL:0000115
+Endo        endothelial cell of venule              5261      5261        1  we_are_coarser | CL:1000414 -> CL:0000071 -> CL:0002139 -> CL:0000115
+NK          natural killer cell                     4378      4378        1  same_term 
+BC          OFFx cell                               4062      4062        3  we_are_coarser | CL:4033036 -> CL:0000750 -> CL:0000748
+BC          ON-blue cone bipolar cell               2837      2837        1  we_are_coarser | CL:4033019 -> CL:0000749 -> CL:0000748
+Astro       glial cell                               492       492        1  we_are_finer | CL:0000127 -> CL:0000126 -> CL:0000125
+Endo        endothelial cell of vascular tree        205       205        1  we_are_coarser | CL:0002139 -> CL:0000115
+SMC         smooth muscle cell                       116      1967        2  same_term 
+TOTAL                                             119672    126700       46
+
+=== (our class, their class) over the recorded 721 clusters ===
+cells total: 1495330
+verdict          clusters    cells  %cells
+same_term             212   480120   32.1%
+we_are_coarser        150   342552   22.9%
+we_are_finer           15    36090    2.4%
+true_mismatch         151   268391   17.9%
+no_mapping            193   368177   24.6%
+  no_mapping by side: {'ours': 368177}
+    ours_abstain                         180 clusters    347690 cells
+    ours_candidate_without_cl_term        13 clusters     20487 cells
+
+=== family regex (the reading that produced the 8.0%) ===
+  family_consistent        297 clusters    624029 cells (41.7%)
+  family_inconsistent      222 clusters    451272 cells (30.2%)
+  family_other             202 clusters    420029 cells (28.1%)
+
+=== of the family-inconsistent mass, what it actually is ===
+  same CL term (pure naming)      :     49109 cells (3.3% of all cells, 10.9% of the inconsistent mass)
+  granularity (we coarser/finer)  :    131487 cells (8.8% of all cells, 29.1% of the inconsistent mass)
+  survives as a real disagreement :    217976 cells (14.6% of all cells, 48.3% of the inconsistent mass)
+  no mapping on one side          :     52700 cells
+  family-inconsistent total       :    451272 cells (30.2% of all cells)
+  his headline: 43 clusters / 119672 cells (8.0% of 1495330) are the same cell under ontology authority
+  our reading : 60 clusters / 180596 cells (12.1%) = same-term 49109 + granularity 131487
+
+=== agreement readings on the same 721 clusters ===
+  family regex   : 41.73% of cells
+  ontology, same term only        : 32.11% of cells
+  ontology, same term of judged   : 42.60% (1127153 judged cells)
+  ontology, same+granularity      : 57.43% of cells
+
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/FAMILY_VS_ONTOLOGY_CROSSTAB.tsv
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GRANULARITY_SUMMARY.json
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CHILD_TERM_CANDIDATES.tsv  (56 candidates)
+
+=== child terms the ontology offers us (we are coarser than the literature) ===
+our class       our CL        child CL      child term                        depth clusters    cells  corpus
+SMC             CL:0000192    CL:1000443    ciliary muscle cell                   1        5    26532  corpus_states_the_term (1 chunks/1 papers)
+Endo            CL:0000115    CL:0000071    blood vessel endothelial cell         1        7    23948  corpus_states_the_term (5 chunks/4 papers)
+BC              CL:0000748    CL:0000751    rod bipolar cell                      1        8    23484  corpus_states_the_term (76 chunks/5 papers)
+AC              CL:0000561    CL:4030028    glycinergic amacrine cell             1       13    15718  corpus_states_the_term (3 chunks/3 papers)
+AC              CL:0000561    CL:4030027    GABAergic amacrine cell               1       13    14442  corpus_states_the_term (8 chunks/5 papers)
+Fibroblast      CL:0000057    CL:0002363    keratocyte                            1        3    11836  corpus_states_a_synonym_only (42 chunks/8 papers)
+HC              CL:0000745    CL:0004217    H1 horizontal cell                    1        3    11275  corpus_states_the_term (11 chunks/6 papers)
+Schwann         CL:0002573    CL:0002376    non-myelinating Schwann cell          1        3    10914  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:0000666    fenestrated endothelial cell          1        3     9456  no_corpus_hit (0 chunks/0 papers)
+RGC             CL:0000740    CL:4033047    OFF midget ganglion cell              1        1     9022  corpus_states_the_term (4 chunks/3 papers)
+BC              CL:0000748    CL:4033033    flat midget bipolar cell              1        3     8959  corpus_states_a_synonym_only (1 chunks/1 papers)
+RGC             CL:0000740    CL:4023188    midget ganglion cell of retina        1        2     8707  no_corpus_hit (0 chunks/0 papers)
+BC              CL:0000748    CL:4033030    diffuse bipolar 3b cell               1        3     8339  no_corpus_hit (0 chunks/0 papers)
+T               CL:0000084    CL:0000912    helper T cell                         2        1     7969  corpus_states_the_term (27 chunks/10 papers)
+BC              CL:0000748    CL:0000750    OFF-bipolar cell                      1       13     7701  corpus_states_the_term (27 chunks/5 papers)
+BC              CL:0000748    CL:0000749    ON-bipolar cell                       1        9     7644  corpus_states_the_term (52 chunks/5 papers)
+Endo            CL:0000115    CL:0002543    vein endothelial cell                 2        1     7584  corpus_states_the_term (18 chunks/5 papers)
+BC              CL:0000748    CL:4033028    diffuse bipolar 2 cell                1        3     7496  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:1000413    endothelial cell of artery            2        1     6987  corpus_states_a_synonym_only (3 chunks/2 papers)
+BC              CL:0000748    CL:4033027    diffuse bipolar 1 cell                1        3     6576  no_corpus_hit (0 chunks/0 papers)
+BC              CL:0000748    CL:4033034    invaginating midget bipolar cell      1        3     6563  no_corpus_hit (0 chunks/0 papers)
+HC              CL:0000745    CL:0004218    H2 horizontal cell                    1        3     5468  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:1000412    endothelial cell of arteriole         2        1     5334  no_corpus_hit (0 chunks/0 papers)
+Endo            CL:0000115    CL:1000414    endothelial cell of venule            2        1     5261  no_corpus_hit (0 chunks/0 papers)
+SMC             CL:0000192    CL:0019018    blood vessel smooth muscle cell       1        1     4872  no_corpus_hit (0 chunks/0 papers)
+  candidates: 56  cells involved: 342552  with corpus support: 25/56
+
+=== the opposite direction (we are finer than the literature) ===
+  T cell (CL:0000084) vs lymphocyte (CL:0000542): 8 clusters / 15708 cells
+  Mueller cell (CL:0000636) vs glial cell (CL:0000125): 1 clusters / 11504 cells
+  astrocyte (CL:0000127) vs glial cell (CL:0000125): 1 clusters / 492 cells
+  classical monocyte (CL:0000860) vs monocyte (CL:0000576): 1 clusters / 4974 cells
+  microglial cell (CL:0000129) vs macrophage (CL:0000235): 1 clusters / 156 cells
+  macrophage (CL:0000235) vs myeloid leukocyte (CL:0000766): 1 clusters / 1333 cells
+  microglial cell (CL:0000129) vs myeloid leukocyte (CL:0000766): 1 clusters / 1341 cells
+  retinal rod cell (CL:0000604) vs eye photoreceptor cell (CL:0000287): 1 clusters / 582 cells
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CHILD_TERM_CANDIDATES.json
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_NODES.tsv  (60 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_EDGES.tsv  (34 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_GERM_LAYER.tsv  (61 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_MARKER_TRANSITIONS.tsv  (100 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_UNRESOLVED_DEVELOPMENT.tsv  (36 rows)
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/LINEAGE_SUMMARY.json
+
+=== lineage at a glance ===
+  nodes 60 (library classes 52, germ layers 8), roots 44
+  edges 34 {'develops_from_direct': 5, 'develops_from_transitive': 4, 'germ_layer_membership': 25}
+  germ-layer rows: {'corpus_cooccurrence_weak': 12, 'unresolved': 36, 'ontology_chain': 13}
+  marker rows 100 {'corpus_supported': 100}
+  edges with at least one corpus-supported transition: 2
+  classes with no developmental evidence locally: 36
+  developing nodes found in an adult baseline: []
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GAPCHECK_LINEAGE_vs_BENCHMARK.tsv  (54 rows)
+  lineage library-class nodes: 52; of them never a top candidate: 23
+  classes used in the recorded table but not lineage nodes: 2
+                                     180 clusters   347690 cells
+    APC_MHCII_high                    13 clusters    20487 cells
+manifest entries: 32
+[report numbers] checked=56 missing=0 verdict=PASS
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/REPORT_NUMBER_CHECK.json
+[gate A] PASS  rules=9 fail=0
+  PASS A1 ONT_SOURCE    ontology=/mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo release=releases/2026-06-08 sha256=7e19b4aef8e7...
+  PASS A8 NO_MEMORY_ID  distinct CL ids named in artefacts: 3338; absent from the ontology file: 0; CL-namespace relation ids (not cell types, disclosed): 3
+  PASS A2 ID_TRACE      ids in label/line-pairing artefacts traced to the file
+  PASS A3 CLOSURE       terms=3335 mismatched=0 self-ancestors=0
+  PASS A4 CLASSIFY      rows=721 cells=1495330 verdicts={'no_mapping': 368177, 'same_term': 480120, 'true_mismatch': 268391, 'we_are_coarser': 342552, 'we_are_finer': 36090}
+  PASS A5 CANDIDATES    candidates=56 with_support=25
+  PASS A6 LABELMAP      labels=80 mapped=65
+  PASS A7 CROSSFILE     shared=3531 name_diff=0 is_a_diff=0
+  PASS A9 REPLAY        manifest=out/MANIFEST.sha256 ledger=ledgers/REPLAY.txt
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GATE_A.json
+[gate B] PASS  rules=7 fail=0
+  PASS B1 NODE_TERM     nodes=60
+  PASS B2 INBOUND       edges=34 roots=44 (accounted 44)
+  PASS B3 ACYCLIC       develops_from nodes=7 edges=9
+  PASS B4 STAGE_AXIS    developing nodes=12 stage-crossing edges=31 adult-baseline keys checked=78
+  PASS B5 MARKER_TRACE  marker rows=100 corpus-supported=100
+  PASS B6 NO_EVAL_LEAK  forbidden tokens checked=29 over 6 files
+  PASS B7 REPLAY        manifest entries=32
+wrote /mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GATE_B.json
+[net-audit] hook installs=63  network events=0
