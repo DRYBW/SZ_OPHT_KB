@@ -1,0 +1,32 @@
+{
+ "generated_by": "scripts/s7_afterfact_coverage.py",
+ "read_after_the_graph_was_frozen": true,
+ "recording": {
+  "clusters": 721,
+  "cells": 1495330
+ },
+ "cells_on_a_class_that_is_anchored": {
+  "clusters": 100,
+  "cells": 297270,
+  "pct_cells": 19.88
+ },
+ "cells_on_a_class_that_is_decapitated": {
+  "clusters": 428,
+  "cells": 829883,
+  "pct_cells": 55.5
+ },
+ "cells_on_a_class_we_never_enumerate": {
+  "clusters": 180,
+  "cells": 347690,
+  "pct_cells": 23.25
+ },
+ "cells_on_a_class_with_no_cl_term_on_our_side": {
+  "clusters": 193,
+  "cells": 368177,
+  "pct_cells": 24.62
+ },
+ "classes_in_the_recording": 31,
+ "decapitated_classes_with_a_pending_repair": 13,
+ "full_edge_set_rows": 75,
+ "note": "this file is the only reader of the evaluation recording in this card; the scaffold artefacts are frozen before it runs and the gate checks that none of them references the recording"
+}

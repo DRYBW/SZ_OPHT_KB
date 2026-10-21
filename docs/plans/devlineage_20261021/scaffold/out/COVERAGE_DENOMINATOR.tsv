@@ -1,0 +1,34 @@
+count	value	note
+library_concepts_total	80	concepts the marker libraries actually ship
+library_concepts_mapped_to_cl	65	of those, resolvable to a Cell Ontology identifier read from the file
+library_concepts_no_match	15	concepts with no ontology counterpart (dl:NO_MATCH: keys; they can never carry an ontology edge)
+distinct_cl_ids_in_library	52	distinct CL identifiers behind the mapped labels
+nodes_total	103	enumerated nodes (rings A1 + A2 + B + C)
+nodes_ring_a1_library_classes	52	
+nodes_ring_a2_no_match_concepts	15	
+nodes_ring_b_ontology_intermediates	28	CL terms on a develops_from path out of a ring-A class or an anchor
+nodes_ring_c_origin_anchors	8	
+edges_total	51	confirmed edges (the admitted graph)
+edges_ontology_development_relation	40	native develops_from statements between two enumerated nodes
+edges_ancestral_origin	11	origin claims spanning more than one step or an is_a bridge (derived rule, named per row)
+edges_direct_lineage	0	confirmed direct-lineage edges: none, because nothing local supports it
+edges_trajectory_association	0	confirmed trajectory-only edges: none (they are rejected rows, written by s6)
+grade_direct_lineage_support	0	
+grade_identity_conversion_not_direct	51	
+grade_textbook_or_review_distant_origin	0	unused in the confirmed graph; the textbook layer feeds the pending repair table
+grade_trajectory_only	0	
+library_classes_with_an_anchored_origin	8	covered classes any local source can attach to a germ-layer / origin anchor
+library_classes_with_only_corpus_cooccurrence	8	covered classes whose only local developmental trace is a corpus co-occurrence
+library_classes_with_no_local_developmental_evidence	36	covered classes with no ontology chain and no admitted corpus edge
+library_classes_that_are_never_a_descendant_in_the_graph	34	covered classes with no inbound edge at all: they are where every chain stops
+library_classes_with_a_native_develops_from_statement	18	same set, stated against the ontology statement
+decapitated_branches	44	covered classes with no anchored origin: the register's population
+stage_adult	16	nodes whose stage is adult, each with a baseline declaration as its basis
+stage_developing	42	
+stage_fetal	0	no local artefact declares a fetal stage for a library class
+stage_unknown	45	written as unknown rather than defaulted to adult
+nodes_with_a_declared_tissue_context	6	a node key's ts field is filled only where one baseline declares the class
+nodes_with_a_declared_species	18	
+nodes_with_a_recorded_cell_mass	14	share of cells recorded by our own baseline entries
+native_develops_from_statements_in_release	400	develops_from statements inside CL term blocks of this release (re-measured in s0)
+native_develops_from_statements_enumerated	40	how many of them lie between two enumerated nodes

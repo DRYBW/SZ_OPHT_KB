@@ -1,0 +1,5 @@
+# zero-network audit (audit hook, covers child processes)
+hook_install_lines=19
+network_event_lines=0
+query_set_replay: see ledgers/QUERY_REPLAY.txt (scripts/s9_query_set_replay.sh)
+NET_ZERO_PASS

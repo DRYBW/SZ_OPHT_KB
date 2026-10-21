@@ -1,0 +1,59 @@
+artefact	check	expected	observed	status	note
+cl.obo	sha256 equals the one recorded in the frozen contract	7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f	7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f	PASS	
+cl.obo	release string read from the file	releases/2026-06-08	releases/2026-06-08	PASS	
+cl.obo	CL term blocks	3531	3531	PASS	
+cl.obo	active CL terms	3335	3335	PASS	
+cl.obo	develops_from statements inside CL term blocks	400	400	PASS	namespace-aware recount: CL=400 UBERON=656 (the whole integrated release carries 1,056)
+cl.obo	the parser's count agrees with the namespace-aware recount	400	400	PASS	
+cl.obo	develops_from is resolved from the file's own typedef	True	True	PASS	
+cl.obo	relation names containing 'transdifferentiation'	0	0	PASS	the release declares no such relation (enumeration of its own [Typedef] names)
+cl.obo	occurrences of the string 'transdifferentiation' anywhere in the file	0	0	PASS	
+cl.obo	is_a closure fixed-point disagreements	0	0	PASS	
+ONT_NAV_v1.json	closure audit recorded n_bad	0	0	PASS	
+ONT_NAV_v1.json	germ-layer anchors with an id resolved from the file	8	8	PASS	
+ONT_NAV_v1.json	anchor ids resolve in the file with the recorded label	0	0	PASS	[]
+ONT_NAV_v1.json	anchor obo_line is the file line of that id	0	0	PASS	[]
+ONT_LABELMAP_V2.tsv	labels	80	80	PASS	
+ONT_LABELMAP_V2.tsv	labels resolved to a CL id	65	65	PASS	
+ONT_LABELMAP_V2.tsv	distinct CL ids behind those labels	52	52	PASS	
+ONT_LABELMAP_V2.tsv	ids absent from the ontology file	0	0	PASS	
+ONT_LABELMAP_V2.tsv	recorded label != the file's own name	0	0	PASS	
+ONT_LABELMAP_V2.tsv	recorded obo_line != the file line of the id	0	0	PASS	
+ONT_LABELMAP_V2.tsv	name-resolved rows that re-resolve to a different id	0	0	PASS	[]
+ONT_LABELMAP_V2.tsv	labels carrying no CL id (NO_MATCH concepts)	15	15	PASS	sidecar rows are not re-resolved by name (they were never name-resolved); their ids are checked above for file presence, label agreement and line
+PRECURSOR_EDGES.tsv	rows	79	79	PASS	
+PRECURSOR_EDGES.tsv	direct rows	45	45	PASS	
+PRECURSOR_EDGES.tsv	transitive rows	34	34	PASS	
+PRECURSOR_EDGES.tsv	rows re-derived from the ontology file	79	79	PASS	[]
+PRECURSOR_EDGES.tsv	rows whose both ends are recorded as being in the file	79	79	PASS	
+cl_eye_subgraph.json	n_nodes	408	408	PASS	
+cl_eye_subgraph.json	recorded ontology sha256	7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f	7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f	PASS	
+cl_eye_subgraph.json	node blocks parsed	408	408	PASS	
+cl_eye_subgraph.json	nodes that do not resolve in the file with that label	0	0	PASS	
+cl_eye_subgraph.json	nodes with an entry_reason recorded	408	408	PASS	
+cl_eye_subgraph.json	nodes carrying a transdifferentiation_from statement	0	0	PASS	
+DEV3_CANDIDATE_DEVELOPMENTAL_TERMS.tsv	rows	58	58	PASS	
+DEV3_CANDIDATE_DEVELOPMENTAL_TERMS.tsv	rows whose cl_id resolves in the file	58	58	PASS	
+DEV3_CANDIDATE_DEVELOPMENTAL_TERMS.tsv	rows flagged eye_named	15	15	PASS	
+D1_ADULT_PANEL_vs_CL.tsv	rows	32	32	PASS	
+D1_ADULT_PANEL_vs_CL.tsv	distinct CL ids	22	22	PASS	
+D1_ADULT_PANEL_vs_CL.tsv	ids resolving in the file	32	32	PASS	
+D1_ADULT_PANEL_vs_CL.tsv	n_direct_precursors and chain_reaches_RPC re-derived	0	0	PASS	[]
+D2_V8_PRECURSOR_vs_CL.tsv	rows	10	10	PASS	
+D2_V8_PRECURSOR_vs_CL.tsv	rows carrying a CL id	3	3	PASS	
+D2_V8_PRECURSOR_vs_CL.tsv	rows carrying an id that resolves in the file	3	3	PASS	
+D3_DEV_EXAM_LABELS_vs_CL.tsv	rows	61	61	PASS	
+D3_DEV_EXAM_LABELS_vs_CL.tsv	rows carrying a CL id	14	14	PASS	
+D3_DEV_EXAM_LABELS_vs_CL.tsv	rows carrying an id that resolves in the file	14	14	PASS	
+first pass LINEAGE_NODES.tsv	rows	60	60	PASS	
+first pass LINEAGE_NODES.tsv	nodes whose id/label/line resolve in the file	60	60	PASS	
+first pass LINEAGE_NODES.tsv	library_class nodes	52	52	PASS	
+first pass LINEAGE_NODES.tsv	germ-layer anchor nodes	8	8	PASS	
+first pass LINEAGE_EDGES.tsv	rows	34	34	PASS	
+first pass LINEAGE_EDGES.tsv	edges re-derived from the ontology file / corpus	34	34	PASS	[] | 6 ontology rows reach their anchor through an is_a bridge and cite only the develops_from lines (chain names the bridge; my rows cite every hop)
+first pass LINEAGE_GERM_LAYER.tsv	rows (13 chain + 12 weak + 36 unresolved)	61	61	PASS	
+first pass LINEAGE_GERM_LAYER.tsv	rows on an ontology chain	13	13	PASS	
+first pass LINEAGE_GERM_LAYER.tsv	rows carrying only the weak co-occurrence tier	12	12	PASS	
+first pass LINEAGE_GERM_LAYER.tsv	unresolved rows	36	36	PASS	
+first pass LINEAGE_UNRESOLVED_DEVELOPMENT.tsv	rows	36	36	PASS	
+first pass LINEAGE_UNRESOLVED_DEVELOPMENT.tsv	the 36 unresolved classes re-derived independently (symmetric difference)	0	0	PASS	[]

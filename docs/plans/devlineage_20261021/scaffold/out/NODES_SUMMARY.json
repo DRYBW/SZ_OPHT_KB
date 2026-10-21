@@ -1,0 +1,69 @@
+{
+ "generated_by": "scripts/s1_enum_nodes.py",
+ "nodes": 103,
+ "by_kind": {
+  "library_class": 67,
+  "ontology_intermediate": 28,
+  "origin_anchor": 8
+ },
+ "by_ring": {
+  "A1": 52,
+  "A2": 15,
+  "B1": 26,
+  "B2": 2,
+  "C": 8
+ },
+ "by_stage": {
+  "adult": 16,
+  "unknown": 45,
+  "developing": 42
+ },
+ "by_stage_basis_prefix": {
+  "baseline": 16,
+  "no_local_stage_declaration": 45,
+  "ontology": 31,
+  "label_dev_word": 11
+ },
+ "by_species": {
+  "human": 18,
+  "unknown": 85
+ },
+ "by_tissue_context": {
+  "unknown": 97,
+  "optic_nerve": 3,
+  "ocular_surface": 1,
+  "lacrimal_gland": 2
+ },
+ "library_concepts": 80,
+ "library_concepts_mapped": 65,
+ "library_concepts_no_match": 15,
+ "distinct_cl_ids_in_library": 52,
+ "ontology_intermediates": 28,
+ "ontology_intermediates_from_anchors": 2,
+ "origin_anchors": 8,
+ "nodes_with_cell_mass": 14,
+ "develops_from_closure_size": 33,
+ "closure_terms_already_library_classes": 3,
+ "adult_nodes_and_their_basis": {
+  "CL:0000057": "baseline:ciliary_body.json#development_stage=adult",
+  "CL:0000097": "baseline:optic_nerve.json#development_stage=adult",
+  "CL:0000128": "baseline:optic_nerve.json#development_stage=adult",
+  "CL:0000129": "baseline:optic_nerve.json#development_stage=adult",
+  "CL:0000132": "baseline:ocular_surface.json#development_stage=adult",
+  "CL:0000148": "baseline:ciliary_body.json#development_stage=adult",
+  "CL:0000235": "baseline:optic_nerve.json#development_stage=adult",
+  "CL:0000561": "baseline:optic_nerve.json#development_stage=adult",
+  "CL:0000573": "baseline:optic_nerve.json#development_stage=adult",
+  "CL:0000604": "baseline:optic_nerve.json#development_stage=adult",
+  "CL:0000636": "baseline:optic_nerve.json#development_stage=adult",
+  "CL:0000669": "baseline:ciliary_body.json#development_stage=adult",
+  "CL:0000740": "baseline:optic_nerve.json#development_stage=adult",
+  "CL:0000745": "baseline:optic_nerve.json#development_stage=adult",
+  "CL:0000748": "baseline:optic_nerve.json#development_stage=adult",
+  "CL:0002586": "baseline:optic_nerve.json#development_stage=adult"
+ },
+ "unknown_stage_nodes": 45,
+ "outputs": {
+  "nodes": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/SCAFFOLD_NODES.tsv"
+ }
+}

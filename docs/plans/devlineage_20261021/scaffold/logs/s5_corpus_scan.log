@@ -1,0 +1,31 @@
+phrases matched: 168 (refused: 40)
+  refused examples: [('AC', 'single token shorter than 6 characters'), ('Astro', 'single token shorter than 6 characters'), ('B', 'single token shorter than 6 characters'), ('BC', 'single token shorter than 6 characters'), ('Cone', 'single token shorter than 6 characters'), ('Endo', 'single token shorter than 6 characters')]
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_ASSERTIONS_RAW.tsv  (124 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_ASSERTION_EXAMPLES.tsv  (194 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_ASSERTION_ANCHORS.tsv  (194 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/PEER_WEAK_ROW_CHUNKS.tsv  (77 rows)
+wrote /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_SCAN_META.json
+{
+ "generated_by": "scripts/s5_corpus_scan.py",
+ "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10",
+ "chunks_in_corpus": 244877,
+ "chunks_carrying_a_lineage_verb": 6670,
+ "sentences_examined": 8309,
+ "sentences_with_one_phrase_only": 7681,
+ "sentences_with_two_or_more_phrases": 628,
+ "phrases_matched": 168,
+ "phrases_refused_single_token": 40,
+ "ordered_pairs_found": 124,
+ "pairs_with_a_direction_conflict": 18,
+ "examples_recorded": 194,
+ "examples_verified": 194,
+ "examples_failed_verification": [],
+ "peer_weak_rows": 12,
+ "peer_weak_chunks_dumped": 77,
+ "outputs": {
+  "raw": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_ASSERTIONS_RAW.tsv",
+  "examples": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_ASSERTION_EXAMPLES.tsv",
+  "anchors": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/CORPUS_ASSERTION_ANCHORS.tsv",
+  "peer_weak_chunks": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/PEER_WEAK_ROW_CHUNKS.tsv"
+ }
+}

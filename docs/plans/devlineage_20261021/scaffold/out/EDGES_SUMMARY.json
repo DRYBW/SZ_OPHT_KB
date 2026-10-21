@@ -1,0 +1,104 @@
+{
+ "generated_by": "scripts/s2_enum_edges.py",
+ "confirmed_edges": 51,
+ "by_relation_type": {
+  "ontology_development_relation": 40,
+  "ancestral_origin": 11
+ },
+ "by_evidence_grade": {
+  "identity_conversion_not_direct": 51
+ },
+ "by_directness": {
+  "direct": 40,
+  "chain:3_steps": 1,
+  "chain:3_steps_with_is_a_bridge": 1,
+  "chain:1_steps_with_is_a_path:2_hops": 1,
+  "chain:4_steps": 1,
+  "chain:4_steps_with_is_a_bridge": 1,
+  "chain:2_steps_with_is_a_bridge": 3,
+  "chain:2_steps": 2,
+  "chain:1_steps_with_is_a_bridge": 1
+ },
+ "by_derivation": {
+  "native_ontology_attribute": 40,
+  "derived_rule": 11
+ },
+ "by_derivation_rule": {
+  "R-NATIVE": 40,
+  "R-ANCHOR-1": 4,
+  "R-ANCHOR-2": 6,
+  "R-ANCHOR-3": 1
+ },
+ "by_admission": {
+  "confirmed": 51
+ },
+ "edges_by_anchor": {
+  "direct": 5,
+  "neural_ectoderm": 4,
+  "ectoderm": 5,
+  "neural_crest": 2
+ },
+ "native_dangling_endpoints": 0,
+ "dangling_detail": [],
+ "ring_a_classes": 52,
+ "ring_a_classes_with_a_develops_from_closure": 18,
+ "ring_a_classes_with_no_develops_from_step_at_all": 34,
+ "ring_a_classes_with_any_inbound_edge": 18,
+ "ring_a_classes_with_an_anchored_origin_edge": 8,
+ "ring_a_classes_without_any_anchored_origin": [
+  "B cell",
+  "Mueller cell",
+  "Schwann cell",
+  "T cell",
+  "amacrine cell",
+  "anterior lens cell",
+  "astrocyte",
+  "basal cell",
+  "capillary endothelial cell",
+  "ciliary muscle cell",
+  "classical monocyte",
+  "conjunctival epithelial cell",
+  "conventional dendritic cell",
+  "corneal epithelial cell",
+  "fibroblast",
+  "goblet cell",
+  "granulocyte",
+  "iris pigment epithelial cell",
+  "keratocyte",
+  "lens epithelial cell",
+  "lens fiber cell",
+  "macrophage",
+  "mast cell",
+  "myoepithelial cell",
+  "myofibroblast cell",
+  "natural killer cell",
+  "non-classical monocyte",
+  "non-pigmented ciliary epithelial cell",
+  "pericyte",
+  "pigmented ciliary epithelial cell",
+  "pigmented epithelial cell",
+  "plasma cell",
+  "plasmacytoid dendritic cell",
+  "progenitor cell",
+  "retina horizontal cell",
+  "retinal bipolar neuron",
+  "retinal ganglion cell",
+  "retinal pigment epithelial cell",
+  "secondary lens fiber",
+  "smooth muscle cell",
+  "tear secreting cell",
+  "trabecular meshwork cell",
+  "transit amplifying cell",
+  "vein endothelial cell"
+ ],
+ "note_on_grade": "confirmed edges are graded identity_conversion_not_direct only; no local artefact supports direct_lineage_support, so none is claimed",
+ "reconciliation": {
+  "not admitted; re-examined against the corpus in s6": 11,
+  "re-typed into the contract vocabulary; the ordered pair is emitted exactly once": 9,
+  "merged: the peer wrote this ordered pair twice under two relation names": 7
+ },
+ "outputs": {
+  "confirmed": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/SCAFFOLD_EDGES_CONFIRMED.tsv",
+  "reconciliation": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/FIRSTPASS_RECONCILIATION.tsv"
+ }
+}

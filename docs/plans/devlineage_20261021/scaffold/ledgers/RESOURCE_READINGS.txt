@@ -1,0 +1,44 @@
+# resource and performance readings, captured 2026-10-22T01:27:11+08:00
+
+## $ free -g          # before the corpus scan
+               total        used        free      shared  buff/cache   available
+内存：           247          48           6          18         214         199
+交换：            31          16          15
+
+## $ du -sh of the corpus and of the ontology file
+1.1G	/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10
+17M	/mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo
+
+## $ /usr/bin/time -v on the corpus scan (single process, no concurrency)
+	Percent of CPU this job got: 132%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:19.78
+	Maximum resident set size (kbytes): 206540
+	Exit status: 0
+
+## corpus rows read by the scan (from out/CORPUS_SCAN_META.json)
+{'chunks_in_corpus': 244877, 'chunks_carrying_a_lineage_verb': 6670, 'sentences_examined': 8309, 'sentences_with_two_or_more_phrases': 628, 'ordered_pairs_found': 124, 'examples_recorded': 194, 'examples_verified': 194, 'examples_failed_verification': []}
+
+## $ nvidia-smi --query-gpu=... (this card uses no GPU)
+NVIDIA GeForce RTX 5090, 1 %, 25447 MiB, 32607 MiB, 39
+
+## $ free -g          # after the whole chain
+               total        used        free      shared  buff/cache   available
+内存：           247          48           6          18         214         199
+交换：            31          16          15
+
+## $ wc -l on the delivered node/edge tables
+   104 /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/SCAFFOLD_NODES.tsv
+    76 /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/SCAFFOLD_EDGES.tsv
+    52 /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/SCAFFOLD_EDGES_CONFIRMED.tsv
+    65 /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/DECAPITATED_BRANCHES.tsv
+    69 /mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/PENDING_ASSERTIONS.tsv
+   366 total
+
+## $ sha256sum of the delivered tables (the values the report quotes)
+1ae77fc9694fe09e0dcc1c5fbe53dc5a60eb5f29c0f4d776073970a44cb25c86  out/SCAFFOLD_NODES.tsv
+d78bcd7bd29521b115ba6fbbdfd380038a95373161e6bd074e8b3a6616307105  out/SCAFFOLD_EDGES_CONFIRMED.tsv
+c821952dae553557a88ca7a74a3f0599676953810b244f3ae433387be3b77478  out/SCAFFOLD_EDGES.tsv
+8f29dbcb85fe1591c11673c5c8f75e7279206fefaaef7263ae869e845b59bbb1  out/DECAPITATED_BRANCHES.tsv
+b225a5e918e91998168c95895cd32346682d077c9a8c0a60cd5396423eb82839  out/PENDING_ASSERTIONS.tsv
+b492b066ca03b586aec06f92366081bf5d7fd6d4964352e2c300065e92303ae1  out/COVERAGE_DENOMINATOR.tsv
+da0df33a4c2160537ed94506154449d5638f0a0bcdebbeac7c0f15a9605930ce  out/GATE_SCAFFOLD.json

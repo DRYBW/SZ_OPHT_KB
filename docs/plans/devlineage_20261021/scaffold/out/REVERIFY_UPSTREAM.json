@@ -1,0 +1,43 @@
+{
+ "checks": 58,
+ "fail": 0,
+ "artefacts": [
+  "D1_ADULT_PANEL_vs_CL.tsv",
+  "D2_V8_PRECURSOR_vs_CL.tsv",
+  "D3_DEV_EXAM_LABELS_vs_CL.tsv",
+  "DEV3_CANDIDATE_DEVELOPMENTAL_TERMS.tsv",
+  "ONT_LABELMAP_V2.tsv",
+  "ONT_NAV_v1.json",
+  "PRECURSOR_EDGES.tsv",
+  "cl.obo",
+  "cl_eye_subgraph.json",
+  "first pass LINEAGE_EDGES.tsv",
+  "first pass LINEAGE_GERM_LAYER.tsv",
+  "first pass LINEAGE_NODES.tsv",
+  "first pass LINEAGE_UNRESOLVED_DEVELOPMENT.tsv"
+ ],
+ "develops_from_by_namespace": {
+  "CL": 400,
+  "UBERON": 656
+ },
+ "relation_names_in_release": 241,
+ "upstream_sha256": {
+  "cl.obo": "7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f",
+  "ONT_NAV_v1.json": "f389b3de09b57687b8679611c03eab64fdad0efd275d62c961f9515beba8e351",
+  "ONT_LABELMAP_V2.tsv": "629ab88c274b9dd644d68baf9a98670c55b72644532de1a1a3407795e185ad3e",
+  "PRECURSOR_EDGES.tsv": "b30c2fbe48eda398bdd15b2472df7d27316f7e7f02e241eada2a539468c16d03",
+  "cl_eye_subgraph.json": "cdd06eebbed1fb9c57ef1b2f2c2c0a7a85add7bbc6b05d71aba28f3f11aacf91",
+  "DEV3_CANDIDATE_DEVELOPMENTAL_TERMS.tsv": "1202022044f0223cdce313e1d5e3f675bed739126b2c473466bb075b01e48177",
+  "D1_ADULT_PANEL_vs_CL.tsv": "ff75eda2e4f8ce0c8ac80b62fdc912b69bb054add0d3bd69d7762ee6758841a5",
+  "D2_V8_PRECURSOR_vs_CL.tsv": "007362136a7ebf3d4a3eedefff6a807c43acfd93b9443fe8bfd31744aad03958",
+  "D3_DEV_EXAM_LABELS_vs_CL.tsv": "3ee2a749b6baf2409f68c5b942fd6709b993cfb1e5788a858076cec78702af9c",
+  "LINEAGE_NODES.tsv": "a20182047160780e44a1b5b8916300d351a4cb0960bd06c88f54344f0ad346ef",
+  "LINEAGE_EDGES.tsv": "eb8267efbe787606c18d668c0f67f537b61a0cdf33f3fc886b4a30a3fa917f51",
+  "LINEAGE_GERM_LAYER.tsv": "a3ba3e5c51715a6d3b534f6611757c5dc4f59a092be75ec0b42b613ab3d7f21c",
+  "LINEAGE_UNRESOLVED_DEVELOPMENT.tsv": "80f6c03cf3005623a2bbc8ea66cec1fe5ac011b10c0aac9ce413074c80c6091e",
+  "GRANULARITY_FOURWAY_721.tsv": "f66ba000cac34f5024360b09df85bda50e7e41e3a40396b6256d6b67503ca324",
+  "TEXTBOOK_ITEMS_v1.jsonl": "f8d02ccceccda77ff8a0fc6b1da4bd6a3b40534e50b945335af7a0cbd89f6160",
+  "chunks.parquet": "f8ff038ec7bbf76ab71705f12fb5de2fa63be883b89bb19fc92ed320078e661e",
+  "papers.jsonl": "acf2a567cbcb0351371e5ab903e5bf9bb8b4e9364a7d9a2d1c738ed522980b9b"
+ }
+}

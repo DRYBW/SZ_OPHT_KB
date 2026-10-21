@@ -1,0 +1,31 @@
+{
+ "generated_by": "scripts/s6_pending_assertions.py",
+ "pending_assertions": 68,
+ "pending_by_target_kind": {
+  "covered_class_without_origin": 67,
+  "in_house_concept_without_ontology_term": 1
+ },
+ "pending_by_grade": {
+  "identity_conversion_not_direct": 68
+ },
+ "pending_with_a_resolvable_paper_anchor": 68,
+ "pending_from_the_textbook_layer": 0,
+ "not_admitted_rows": 24,
+ "not_admitted_by_reason": {
+  "corpus_sources_point_both_ways": 12,
+  "RE-EXAMINE-1": 12
+ },
+ "confirmed_edges": 51,
+ "full_edge_set_rows": 75,
+ "peer_weak_rows_asserting_a_relation": 0,
+ "peer_weak_rows_co_mention_only": 12,
+ "corpus_pairs_corroborating_an_existing_edge": 5,
+ "corpus_pairs_unused": 39,
+ "textbook_items_with_a_developmental_assertion_for_a_decapitated_branch": 0,
+ "outputs": {
+  "pending": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/PENDING_ASSERTIONS.tsv",
+  "not_admitted": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/SCAFFOLD_EDGES_NOT_ADMITTED.tsv",
+  "full_edge_set": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/SCAFFOLD_EDGES.tsv",
+  "peer_recheck": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/PEER_WEAK_ROW_RECHECK.tsv"
+ }
+}

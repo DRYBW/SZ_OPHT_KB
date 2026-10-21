@@ -1,0 +1,29 @@
+{
+ "generated_by": "scripts/s4_decapitated_branches.py",
+ "rows": 64,
+ "by_branch_kind": {
+  "covered_class_without_origin": 44,
+  "anchor_without_any_covered_class": 4,
+  "in_house_concept_without_ontology_term": 15,
+  "axis_rollup": 1
+ },
+ "by_break_kind": {
+  "no_develops_from_statement_at_all": 34,
+  "closure_does_not_reach_any_origin_anchor": 10,
+  "no_covered_class_reaches_this_anchor": 4,
+  "concept_has_no_ontology_counterpart_at_all": 15,
+  "axis_carries_photoreceptors_only": 1
+ },
+ "by_evidence_tier": {
+  "corpus_cooccurrence_only": 8,
+  "no_local_evidence": 36,
+  "n/a_anchor": 4,
+  "n/a_no_ontology_term": 15,
+  "rollup": 1
+ },
+ "covered_classes_without_origin": 44,
+ "with_cell_mass_known": 9,
+ "outputs": {
+  "register": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/DECAPITATED_BRANCHES.tsv"
+ }
+}

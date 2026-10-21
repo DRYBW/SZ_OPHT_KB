@@ -1,0 +1,89 @@
+{
+ "gate": "SCAFFOLD",
+ "verdict": "PASS",
+ "ontology": {
+  "path": "/mnt/D/EyeKB/plans/devline_ont_20261002/downloads/cl.obo",
+  "sha256": "7e19b4aef8e7fe7720b0c4474c6a5b8713c904ea9ab7b7d5d96f2cb28b8fc51f"
+ },
+ "counts": {
+  "nodes": 103,
+  "confirmed_edges": 51,
+  "full_edge_set_rows": 75,
+  "pending_assertions": 68,
+  "register_rows": 64
+ },
+ "n_checks": 10,
+ "n_fail": 0,
+ "checks": [
+  {
+   "code": "G1 KEY_PARSE",
+   "status": "PASS",
+   "detail": "node keys=103 parsed, edge keys=75 parsed, rejected rows with a declared key reason=0, confirmed=51",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G2 REL_VOCAB",
+   "status": "PASS",
+   "detail": "rows=75 relation_types=['ancestral_origin', 'ontology_development_relation', 'trajectory_association']",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G3 STAGE_AXIS",
+   "status": "PASS",
+   "detail": "stages={'adult': 16, 'unknown': 45, 'developing': 42} adult_with_a_verified_basis=16 unknown_never_defaulted_to_adult=yes",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G4 ANCHOR_RESOLVABLE",
+   "status": "PASS",
+   "detail": "confirmed edges re-walked=51 rejected_rows_with_a_resolving_locator=24 pending_proposals_with_a_resolving_anchor=68",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G5 NO_TYPE_UPGRADE",
+   "status": "PASS",
+   "detail": "rows checked=75 direct_lineage_typed=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G6 ACYCLIC_CONTEXT",
+   "status": "PASS",
+   "detail": "contexts checked=1",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G7 CONFIRMED_EQ_ADMITTED",
+   "status": "PASS",
+   "detail": "confirmed=51 admitted_grade_rows=51 full_edge_set_rows=75",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G8 NO_EVAL_LEAK",
+   "status": "PASS",
+   "detail": "forbidden tokens checked=29 over 24 artefacts (exempt, by design: ['AFTERFACT_RECORDING_COVERAGE.tsv', 'AFTERFACT_SUMMARY.json'])",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G9 UPSTREAM_PIN",
+   "status": "PASS",
+   "detail": "ontology sha pinned, navigation module sha pinned, re-verified 17/17 consumed files",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G10 REPLAY_MANIFEST",
+   "status": "PASS",
+   "detail": "manifest entries verified=44 replay_ledger=green pending_vs_graph_overlap=0",
+   "n_offenders": 0,
+   "offenders": []
+  }
+ ]
+}

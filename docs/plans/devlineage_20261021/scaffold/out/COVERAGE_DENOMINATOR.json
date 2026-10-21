@@ -1,0 +1,63 @@
+{
+ "generated_by": "scripts/s3_coverage_denominator.py",
+ "develops_from_statements_with_a_non_cl_parent": 6,
+ "non_cl_parent_examples": [
+  "CL:0020009<-UBERON:0004024@33327",
+  "CL:0020044<-UBERON:0004290@33819",
+  "CL:4023035<-UBERON:0004025@41272",
+  "CL:4023063<-UBERON:0004024@41721",
+  "CL:4023079<-UBERON:0001891@41956"
+ ],
+ "non_cl_parents_among_enumerated_nodes": [],
+ "counts": {
+  "library_concepts_total": 80,
+  "library_concepts_mapped_to_cl": 65,
+  "library_concepts_no_match": 15,
+  "distinct_cl_ids_in_library": 52,
+  "nodes_total": 103,
+  "nodes_ring_a1_library_classes": 52,
+  "nodes_ring_a2_no_match_concepts": 15,
+  "nodes_ring_b_ontology_intermediates": 28,
+  "nodes_ring_c_origin_anchors": 8,
+  "edges_total": 51,
+  "edges_ontology_development_relation": 40,
+  "edges_ancestral_origin": 11,
+  "edges_direct_lineage": 0,
+  "edges_trajectory_association": 0,
+  "grade_direct_lineage_support": 0,
+  "grade_identity_conversion_not_direct": 51,
+  "grade_textbook_or_review_distant_origin": 0,
+  "grade_trajectory_only": 0,
+  "library_classes_with_an_anchored_origin": 8,
+  "library_classes_with_only_corpus_cooccurrence": 8,
+  "library_classes_with_no_local_developmental_evidence": 36,
+  "library_classes_that_are_never_a_descendant_in_the_graph": 34,
+  "library_classes_with_a_native_develops_from_statement": 18,
+  "decapitated_branches": 44,
+  "stage_adult": 16,
+  "stage_developing": 42,
+  "stage_fetal": 0,
+  "stage_unknown": 45,
+  "nodes_with_a_declared_tissue_context": 6,
+  "nodes_with_a_declared_species": 18,
+  "nodes_with_a_recorded_cell_mass": 14,
+  "native_develops_from_statements_in_release": 400,
+  "native_develops_from_statements_enumerated": 40
+ },
+ "anchors_without_any_covered_class": [
+  "hematopoietic stem cell",
+  "surface ectodermal cell",
+  "endodermal cell",
+  "mesenchymal cell"
+ ],
+ "rpc_axis": {
+  "does_not_reach_the_rpc": 49,
+  "reaches_the_rpc": 2,
+  "is_the_rpc": 1
+ },
+ "outputs": {
+  "denominator": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/COVERAGE_DENOMINATOR.tsv",
+  "anchor_coverage": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/ANCHOR_COVERAGE.tsv",
+  "rpc_axis": "/mnt/D/EyeKB/plans/devlineage_20261021/scaffold/out/RPC_AXIS.tsv"
+ }
+}

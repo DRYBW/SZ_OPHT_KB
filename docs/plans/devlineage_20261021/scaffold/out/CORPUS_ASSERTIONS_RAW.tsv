@@ -1,0 +1,125 @@
+precursor_phrase	descendant_phrase	precursor_ids	descendant_ids	phrase_sources	direction_rules	verbs	n_chunks	n_papers	direction_conflict	example_pmids
+classical monocyte	macrophage	CL:0000860	CL:0000235	library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	derived from,differentiating into,originate from	22	1	no	33187533
+classical monocyte	monocyte	CL:0000860	CL:0000576	dev3_candidate_term,node_cl_label	origin_subject_is_descendant	develop from	1	1	no	39885670
+classical monocyte	non-classical monocyte	CL:0000860	CL:0000875	node_cl_label	origin_subject_is_descendant	derived from	1	1	no	40055675
+endothelial cell	B cell	CL:0000115	CL:0000236	node_cl_label	origin_subject_is_descendant	derive from	1	1	no	39466230
+endothelial cell	fibroblast	CL:0000115	CL:0000057	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	1	1	no	41865000
+endothelial cell	Müller cell	CL:0000115	CL:0000636	node_cl_label,spelling_variant	origin_subject_is_descendant	originate from	1	1	no	41257731
+endothelial cell	mesenchymal cell	CL:0000115	CL:0008019	node_cl_label	origin_subject_is_descendant	originating from	1	1	no	34469037
+fibroblast	corneal epithelial cell	CL:0000057	CL:0000575	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	1	1	no	39480612
+fibroblast	Keratocytes	CL:0000057	CL:0002363	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiated into	1	1	yes	35269714
+fibroblast	Myofibroblast	CL:0000057	CL:0000186	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	derived from,develop from,differentiate into,differentiated into,generated from,originate from	14	8	yes	33028893,34658907,36204234,36671472,39940950
+fibroblast	retinal progenitor cell	CL:0000057	CL:0002672	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	1	1	no	36821627
+fibroblast	stem cell	CL:0000057	CL:0000034	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant	derived from,developed from,generated from	9	8	yes	25377070,31840941,33662384,33800535,34638582
+hematopoietic stem cell	endothelial cell	CL:0000037	CL:0000115	dev3_candidate_term,node_cl_label	origin_subject_is_descendant	originate from	1	1	no	36674579
+hematopoietic stem cell	macrophage	CL:0000037	CL:0000235	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant	originate from	1	1	no	33897716
+hematopoietic stem cell	Microglia	CL:0000037	CL:0000129	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	differentiated into,generated from	2	2	no	34872632,38564108
+hematopoietic stem cell	monocyte	CL:0000037	CL:0000576	dev3_candidate_term,node_cl_label	production_subject_is_precursor	differentiate into	1	1	no	42004959
+keratocyte	Corneal Endothelium	CL:0002363	CL:0000132	library_label,node_cl_label,our_label	production_subject_is_precursor	differentiated into	1	1	no	29434243
+keratocyte	fibroblast	CL:0002363	CL:0000057	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	1	1	no	35053425
+keratocyte	Myofibroblast	CL:0002363	CL:0000186	library_label,node_cl_label,our_label	origin_subject_is_descendant	developed from,generated from	3	2	no	33028893,35053425
+Keratocytes	fibroblast	CL:0002363	CL:0000057	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	derived from,develop from,differentiate into,differentiating into,generated from	10	8	yes	35053425,35269714,36671472,39940950,40149974
+Keratocytes	Myofibroblast	CL:0002363	CL:0000186	library_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	derived from,develop from,differentiate into	3	3	no	33028893,37139464,41224754
+Keratocytes	progenitor cell	CL:0002363	CL:0011026	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	1	1	no	29434243
+lens epithelial cell	lens fiber cell	CL:0002224	CL:0011004	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	differentiate into,differentiated into,differentiating into,originate from	16	12	no	28209733,30322969,33472493,35058548,35550648
+lens epithelial cell	mesenchymal cell	CL:0002224	CL:0008019	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	1	1	no	42587300
+lens epithelial cell	Myofibroblast	CL:0002224	CL:0000186	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	4	2	no	38598298,40806551
+lens epithelial cell	secondary lens fiber	CL:0002224	CL:0002225	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	2	2	no	38643244,41299222
+lens fiber cell	secondary lens fiber	CL:0011004	CL:0002225	library_label,node_cl_label,our_label	production_subject_is_precursor	give rise to	1	1	no	32170011
+Müller cell	RGC_precursor	CL:0000636	NO_MATCH:RGC_precursor	in_house_label,library_label,spelling_variant	origin_subject_is_descendant	derived from	2	1	no	34356611
+Müller glia	amacrine cell	CL:0000636	CL:0000561	node_cl_label,spelling_variant	production_subject_is_precursor	give rise to	1	1	no	35269428
+Müller glia	progenitor cell	CL:0000636	CL:0011026	dev3_candidate_term,library_label,node_cl_label,our_label,spelling_variant	production_subject_is_precursor	differentiate into,giving rise to	2	2	yes	38278154,41849358
+Müller glia	stem cell	CL:0000636	CL:0000034	dev3_candidate_term,node_cl_label,spelling_variant	origin_subject_is_descendant	generated from	1	1	yes	34831487
+macrophage	B cell	CL:0000235	CL:0000236	library_label,node_cl_label,our_label	origin_subject_is_descendant	arises from	1	1	no	42614741
+macrophage	Microglia	CL:0000235	CL:0000129	library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	derived from,differentiate into,give rise to,originates from	8	6	yes	34628463,34872632,36163311,36756614,39885670
+macrophage	T cell	CL:0000235	CL:0000084	library_label,node_cl_label,our_label	production_subject_is_precursor	give rise to	1	1	yes	38716077
+mast cell progenitor	mast cell	CL:0000831	CL:0000097	library_label,node_cl_label,our_label	origin_subject_is_descendant	originate from	1	1	no	35561216
+melanoblast	melanocyte	CL:0000541	CL:0000148	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	arise from,differentiate into	2	1	no	36645183
+mesenchymal cell	Keratocytes	CL:0008019	CL:0002363	library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	derived from,differentiate into	2	2	no	33096935,36768414
+mesenchymal cell	Myofibroblast	CL:0008019	CL:0000186	library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	1	1	no	28779082
+mesenchymal stem cell	Microglia	CL:0000134	CL:0000129	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant	develops from	1	1	no	40386178
+mesenchymal stem cell	pericyte	CL:0000134	CL:0000669	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant	generated from	1	1	no	40723297
+mesenchymal stem cell	progenitor cell	CL:0000134	CL:0011026	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant	derived from	1	1	no	35922863
+mesodermal cell	melanocyte	CL:0000222	CL:0000148	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant	derived from,develop from	2	1	no	41309590
+Microglia	astrocyte	CL:0000129	CL:0000127	library_label,node_cl_label,our_label	origin_subject_is_descendant	arises from,coming from	2	2	no	33529207,36577373
+Microglia	macrophage	CL:0000129	CL:0000235	library_label,node_cl_label,our_label	origin_subject_is_descendant	derived from,generated from,originate from	4	3	yes	30037353,36524119,39885670
+Microglia	oligodendrocyte	CL:0000129	CL:0000128	library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	1	1	no	35309305
+monocyte	macrophage	CL:0000576	CL:0000235	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	arise from,come from,derive from,derived from,differentiate into,differentiated into,differentiating into,give rise to,originate from	40	26	no	30670050,33187533,33710665,34446062,34688035
+monocyte	Microglia	CL:0000576	CL:0000129	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	arise from,derive from,differentiate into,originate from,originating from	6	6	no	28814744,32450896,34603044,36408381,38612470
+monocyte	Myofibroblast	CL:0000576	CL:0000186	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	1	1	no	36671472
+monocyte	stem cell	CL:0000576	CL:0000034	dev3_candidate_term,node_cl_label	origin_subject_is_descendant	generated from	1	1	yes	41516321
+myoblast	fibroblast	CL:0000056	CL:0000057	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant	derived from	1	1	no	41301852
+Myofibroblast	fibroblast	CL:0000186	CL:0000057	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant	originating from	1	1	yes	40806545
+Myofibroblast	lens fiber cell	CL:0000186	CL:0011004	library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	1	1	no	28209733
+natural killer cell	B cell	CL:0000623	CL:0000236	node_cl_label	origin_subject_is_descendant	derived from	1	1	no	35882984
+neural crest cell	corneal endothelial cell	CL:0011012	CL:0000132	library_label,node_cl_label,our_label	origin_subject_is_descendant	originating from	1	1	no	36614165
+neural crest cell	Corneal Endothelium	CL:0011012	CL:0000132	library_label,node_cl_label,our_label	origin_subject_is_descendant	derived from	1	1	no	42495118
+neural crest cell	endothelial cell	CL:0011012	CL:0000115	node_cl_label	origin_subject_is_descendant	developed from	1	1	no	40423739
+neural crest cell	Keratocytes	CL:0011012	CL:0002363	library_label,node_cl_label,our_label	origin_subject_is_descendant	originating from	1	1	no	39859409
+neural crest cell	melanocyte	CL:0011012	CL:0000148	library_label,node_cl_label,our_label	production_subject_is_precursor	give rise to	1	1	no	37522516
+neural crest cell	stem cell	CL:0011012	CL:0000034	dev3_candidate_term,node_cl_label	production_subject_is_precursor	differentiate into	1	1	no	35571395
+neural stem cell	progenitor cell	CL:0000047	CL:0011026	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	derived from,give rise to	2	2	no	34207050,40537004
+neural stem cell	retinal ganglion cell	CL:0000047	CL:0000740	node_cl_label	production_subject_is_precursor	differentiate into	1	1	no	34638582
+non-classical monocyte	macrophage	CL:0000875	CL:0000235	library_label,node_cl_label,our_label	origin_subject_is_descendant	originate from	1	1	no	34446062
+oligodendrocyte	astrocyte	CL:0000128	CL:0000127	library_label,node_cl_label,our_label	origin_subject_is_descendant	arise from	1	1	no	30848441
+oligodendrocyte precursor cell	oligodendrocyte	CL:0002453	CL:0000128	library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	2	2	no	35309305,41721205
+pericyte	Myofibroblast	CL:0000669	CL:0000186	library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	2	1	no	40449651
+pericyte	stem cell	CL:0000669	CL:0000034	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	1	1	no	41014753
+precursor cell	macrophage	CL:0011115	CL:0000235	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	2	2	no	36671472,39885670
+precursor cell	myoblast	CL:0011115	CL:0000056	dev3_candidate_term	production_subject_is_precursor	differentiate into	1	1	no	36671472
+precursor cell	Myofibroblast	CL:0011115	CL:0000186	dev3_candidate_term,library_label,our_label	origin_subject_is_descendant	derived from,generated from	2	1	no	36671472
+progenitor cell	amacrine cell	CL:0011026	CL:0000561	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	give rise to,giving rise to	2	2	no	35298655,40742403
+progenitor cell	astrocyte	CL:0011026	CL:0000127	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	1	1	no	37084724
+progenitor cell	corneal endothelial cell	CL:0011026	CL:0000132	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into,differentiated into	2	2	no	29434243,33333869
+progenitor cell	corneal epithelial cell	CL:0011026	CL:0000575	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	give rise to	2	1	no	33865984
+progenitor cell	goblet cell	CL:0011026	CL:0000160	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant	derived from	1	1	no	37389178
+progenitor cell	lens fiber cell	CL:0011026	CL:0011004	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	1	1	no	34599192
+progenitor cell	Müller glia	CL:0011026	CL:0000636	dev3_candidate_term,library_label,node_cl_label,our_label,spelling_variant	origin_subject_is_descendant	derive from,derived from	2	2	yes	35359806,41088409
+progenitor cell	macrophage	CL:0011026	CL:0000235	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant	originate from	1	1	no	37550343
+progenitor cell	Microglia	CL:0011026	CL:0000129	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	differentiate into,differentiated into,evolve into,originate from	7	4	no	28814744,36059936,36756614,37569464
+progenitor cell	microglial cell	CL:0011026	CL:0000129	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	1	1	no	39514271
+progenitor cell	Myofibroblast	CL:0011026	CL:0000186	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant	arise from	1	1	no	33028893
+progenitor cell	oligodendrocyte	CL:0011026	CL:0000128	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	derived from,differentiate into,originate from	3	3	no	30848441,40855517,41909700
+progenitor cell	pericyte	CL:0011026	CL:0000669	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant	developed from	1	1	no	40423739
+progenitor cell	precursor cell	CL:0011026	CL:0011115	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiated into	1	1	no	35054919
+progenitor cell	retinal ganglion cell	CL:0011026	CL:0000740	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into,differentiated into	2	2	no	33800535,34209272
+progenitor cell	stem cell	CL:0011026	CL:0000034	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant	derived from	1	1	yes	30444724
+radial glial cell	astrocyte	CL:0000681	CL:0000127	dev3_candidate_term,node_cl_label	production_subject_is_precursor	give rise to	1	1	no	35269428
+retinal ganglion cell	amacrine cell	CL:0000740	CL:0000561	node_cl_label	origin_subject_is_descendant	coming from	1	1	no	39920165
+retinal ganglion cell	astrocyte	CL:0000740	CL:0000127	node_cl_label	production_subject_is_precursor	differentiates into	1	1	no	42592906
+retinal ganglion cell	mesenchymal stem cell	CL:0000740	CL:0000134	dev3_candidate_term,node_cl_label	origin_subject_is_descendant	derived from	1	1	no	40537004
+retinal progenitor cell	amacrine cell	CL:0002672	CL:0000561	dev3_candidate_term,node_cl_label	origin_subject_is_descendant,production_subject_is_precursor	arise from,differentiated into,generated from,give rise to	5	5	no	32423062,36715342,38816767,40055379,41244583
+retinal progenitor cell	astrocyte	CL:0002672	CL:0000127	dev3_candidate_term,node_cl_label	origin_subject_is_descendant	arise from	1	1	no	37163980
+retinal progenitor cell	Müller cell	CL:0002672	CL:0000636	dev3_candidate_term,node_cl_label,spelling_variant	origin_subject_is_descendant	derived from	1	1	no	36459087
+retinal progenitor cell	Müller glia	CL:0002672	CL:0000636	dev3_candidate_term,node_cl_label,spelling_variant	origin_subject_is_descendant,production_subject_is_precursor	arise from,arising from,differentiate into,give rise to,originate from	6	5	no	32863184,37671011,38994994,39685661,41849358
+retinal progenitor cell	Microglia	CL:0002672	CL:0000129	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant	arise from	1	1	no	38383453
+retinal progenitor cell	muller glia	CL:0002672	CL:0000636	dev3_candidate_term,node_cl_label,spelling_variant	origin_subject_is_descendant	generated from	1	1	no	26235913
+retinal progenitor cell	retinal ganglion cell	CL:0002672	CL:0000740	dev3_candidate_term,node_cl_label	production_subject_is_precursor	differentiate into,give rise to	3	3	no	31269016,35269428,40538981
+Schwann cell	fibroblast	CL:0002573	CL:0000057	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant	develop from	1	1	no	36671472
+Schwann cell	keratocyte	CL:0002573	CL:0002363	node_cl_label	origin_subject_is_descendant	developed from	1	1	no	33028893
+Schwann cell	melanocyte	CL:0002573	CL:0000148	library_label,node_cl_label,our_label	origin_subject_is_descendant	derive from	1	1	no	32439707
+Schwann cell	Myofibroblast	CL:0002573	CL:0000186	library_label,node_cl_label,our_label	origin_subject_is_descendant	develop from	1	1	no	37108619
+stem cell	conjunctival epithelial cell	CL:0000034	CL:1000432	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	derived from,differentiate into	2	2	no	35974097,37389178
+stem cell	corneal endothelial cell	CL:0000034	CL:0000132	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	derived from,differentiate into	3	2	no	35571395,40558721
+stem cell	corneal epithelial cell	CL:0000034	CL:0000575	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	derived from,differentiate into,differentiated into	5	5	no	37139464,37366796,38514716,39684784,40806627
+stem cell	endothelial cell	CL:0000034	CL:0000115	dev3_candidate_term,node_cl_label	origin_subject_is_descendant,production_subject_is_precursor	derived from,differentiated into,differentiating into,originating from	4	4	no	36638800,38115754,39480612,41577708
+stem cell	fibroblast	CL:0000034	CL:0000057	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	1	1	yes	39198892
+stem cell	goblet cell	CL:0000034	CL:0000160	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	differentiate into,give rise to,originate from	3	3	no	34638869,34677208,35101743
+stem cell	Keratocytes	CL:0000034	CL:0002363	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	differentiate into	2	2	no	37061739,38804543
+stem cell	Müller cell	CL:0000034	CL:0000636	dev3_candidate_term,node_cl_label,spelling_variant	origin_subject_is_descendant	derived from	1	1	no	34356611
+stem cell	Müller glia	CL:0000034	CL:0000636	dev3_candidate_term,node_cl_label,spelling_variant	production_subject_is_precursor	giving rise to	1	1	yes	37802075
+stem cell	mesenchymal cell	CL:0000034	CL:0008019	dev3_candidate_term,node_cl_label	production_subject_is_precursor	differentiate into	1	1	no	30695061
+stem cell	mesenchymal stem cell	CL:0000034	CL:0000134	dev3_candidate_term,node_cl_label	origin_subject_is_descendant,production_subject_is_precursor	derived from,differentiated into	3	3	no	36672144,40140459,40806627
+stem cell	Microglia	CL:0000034	CL:0000129	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	derived from,differentiated into	3	3	no	35054919,38378796,40684170
+stem cell	microglial cell	CL:0000034	CL:0000129	dev3_candidate_term,node_cl_label	production_subject_is_precursor	differentiate into	1	1	no	34321516
+stem cell	monocyte	CL:0000034	CL:0000576	dev3_candidate_term,node_cl_label	production_subject_is_precursor	give rise to	1	1	yes	36408381
+stem cell	oligodendrocyte	CL:0000034	CL:0000128	dev3_candidate_term,library_label,node_cl_label,our_label	production_subject_is_precursor	give rise to	1	1	no	27445662
+stem cell	precursor cell	CL:0000034	CL:0011115	dev3_candidate_term,node_cl_label	origin_subject_is_descendant	derived from	2	2	no	34214489,40708039
+stem cell	progenitor cell	CL:0000034	CL:0011026	dev3_candidate_term,library_label,node_cl_label,our_label	origin_subject_is_descendant,production_subject_is_precursor	derived from,differentiate into,differentiated into	11	11	yes	32699896,33022222,36497012,36638800,36710928
+stem cell	retinal ganglion cell	CL:0000034	CL:0000740	dev3_candidate_term,node_cl_label	origin_subject_is_descendant	derived from	2	2	no	27867005,40537004
+stem cell	retinal pigment epithelial cell	CL:0000034	CL:0002586	dev3_candidate_term,node_cl_label	production_subject_is_precursor	differentiated into	1	1	no	35330501
+stem cell	retinal progenitor cell	CL:0000034	CL:0002672	dev3_candidate_term,node_cl_label	origin_subject_is_descendant	derived from	1	1	no	35740479
+stem cell	T cell	CL:0000034	CL:0000084	dev3_candidate_term,node_cl_label	origin_subject_is_descendant	originating from	1	1	no	41403938
+T cell	B cell	CL:0000084	CL:0000236	node_cl_label	origin_subject_is_descendant	derived from	1	1	no	42717487
+T cell	corneal epithelial cell	CL:0000084	CL:0000575	library_label,node_cl_label,our_label	origin_subject_is_descendant	derived from	1	1	no	36497012
+T cell	macrophage	CL:0000084	CL:0000235	library_label,node_cl_label,our_label	origin_subject_is_descendant	originating from	1	1	yes	42614741
