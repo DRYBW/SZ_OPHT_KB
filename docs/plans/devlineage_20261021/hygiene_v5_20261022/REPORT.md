@@ -339,8 +339,8 @@ Nothing was activated and no panel body was changed. Status: registered.
 | no `kb/` body change and no activation | `out/ITEM2_BYTE_LEDGER.tsv` re-verified at gate time: both trees' file sets and hashes unchanged by this card (check G6); the executor is a dry run by default; item 4's summary records `activation: none`, `panel_bodies_changed: 0` |
 | real measurements only, with commands pasted | `ledgers/chain.log` (every step, with counts), `logs/*.log`, and the resource readings below |
 | keep every intermediate artefact | 92 files retained, including pre-images (`out/pre/`), the shadow rebuild (`out/rebuild/`), the adapter tables and their column mapping, and the reconciled views |
-| do not push; commit locally and report the hash | mirror committed locally; the hash is recorded in `ledgers/COMMIT.txt` (and in the wave's own report once committed) |
-| gate chain green in a clean clone, not only in the author's tree | `out/CLEAN_CLONE_CHECK.json`: the wave's gate re-run *inside* a `git clone` of the commit under test — clone gate PASS, 75 mirrored files compared, 0 differing |
+| do not push; commit locally and report the hash | committed locally (not pushed): `d93045d78cb23653ab2cbced033601f01d72a57f` carries the wave and the re-taken release identity, `7812b5775eb187dbb3e3e00123ee0263d5397da3` records the commit in `ledgers/COMMIT.txt`; both named in `ledgers/COMMIT.txt` |
+| gate chain green in a clean clone, not only in the author's tree | `out/CLEAN_CLONE_CHECK.json`: the wave's gate re-run *inside* a `git clone` of `7812b57…` — clone gate PASS (12 checks, 0 failed, G12 reported as INFO there because that invocation produces its own evidence), 76 mirrored files compared, 0 differing. The author-tree invocation then judges G12: PASS. |
 
 ## Resource readings
 

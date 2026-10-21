@@ -64,7 +64,7 @@
    "code": "G8",
    "name": "NO_NETWORK",
    "status": "PASS",
-   "detail": "audit-hook receipts=102 (proves the hook was installed); network events=0",
+   "detail": "audit-hook receipts=103 (proves the hook was installed); network events=0",
    "n_offenders": 0,
    "offenders": []
   },
@@ -72,7 +72,7 @@
    "code": "G9",
    "name": "DEFAULT_BEHAVIOUR_IDENTICAL",
    "status": "PASS",
-   "detail": "recorded production queries replayed in 5.8s: n=721 identical=721 differ=0 (recorded n=721)",
+   "detail": "recorded production queries replayed in 5.9s: n=721 identical=721 differ=0 (recorded n=721)",
    "n_offenders": 0,
    "offenders": []
   },
@@ -96,7 +96,7 @@
    "code": "G12",
    "name": "CLEAN_CLONE_GREEN",
    "status": "PASS",
-   "detail": "clean-clone check: {\"commit\": \"c321667af0028959748503b791398218c3a03f5a\", \"clone_root\": \"(temporary clone of the repository, removed after the run)\", \"gate_rc\": 0, \"gate_verdict\": \"PASS\", \"gate_failed\": \"[]\", \"files_differing_from_author_tree\": 0}",
+   "detail": "clean-clone check: {\"commit\": \"7812b5775eb187dbb3e3e00123ee0263d5397da3\", \"clone_root\": \"(temporary clone of the repository, removed after the run)\", \"gate_rc\": 0, \"gate_verdict\": \"PASS\", \"gate_failed\": \"[]\", \"files_differing_from_author_tree\": 0}",
    "n_offenders": 0,
    "offenders": []
   }
@@ -104,8 +104,8 @@
  "golden": {
   "performed": true,
   "rc": 0,
-  "seconds": 5.8,
-  "stdout_tail": "OFF: n=721  identical_to_2026-10-18=721  differ=0  with_composite_demoted=-\n ON: n=721  identical_to_2026-10-18=721  differ=0  with_composite_demoted=19\nwrote /tmp/w5_golden_fshfxd05/golden_now.json\n",
+  "seconds": 5.9,
+  "stdout_tail": "OFF: n=721  identical_to_2026-10-18=721  differ=0  with_composite_demoted=-\n ON: n=721  identical_to_2026-10-18=721  differ=0  with_composite_demoted=19\nwrote /tmp/w5_golden_ux35h_h5/golden_now.json\n",
   "now": {
    "off": {
     "n": 721,
@@ -137,5 +137,5 @@
    }
   }
  },
- "generated_at": "2026-10-22 02:20:38"
+ "generated_at": "2026-10-22 02:22:59"
 }
