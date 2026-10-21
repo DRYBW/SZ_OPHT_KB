@@ -242,5 +242,26 @@ def get_disease_prior(disease: str, tissue: str = "") -> dict:
     return resp
 
 
+@app.tool(title="Explain an annotation", annotations=_read_only("Explain an annotation"))
+def explain_annotation(cell_type: str, tissue: str = "", top_k: int = 5) -> dict:
+    """Evidence trail behind a cell-type label: the markers that identify it, the knowledge-base
+    library it comes from, the pages that describe it, any textbook edition+page behind its
+    definition, and the papers that back it.
+
+    cell_type: the label to explain (e.g. "RPE", "Muller glia", "lens fiber cell").
+    tissue: optional filter over the attached citations.
+    top_k: how many citations to return.
+
+    Each citation carries PMID + journal + year and resolves inside the corpus shipped with this
+    server, so a reader can check the trail without network access. Call this when writing up an
+    annotation and the citation has to be shown next to the label.
+    Disclosure surface: not an input to any score, weighting, ranking or confidence measure.
+    """
+    resp = core.explain_annotation(cell_type, tissue=tissue or None, top_k=top_k)
+    calllog.trace("explain_annotation",
+                  {"cell_type": cell_type, "tissue": tissue, "top_k": top_k}, resp)
+    return resp
+
+
 if __name__ == "__main__":
     app.run(transport="stdio")

@@ -1734,6 +1734,94 @@ def _reason_map():
     return _reason_cache["map"]
 
 
+# ---------------------------------------------------------------- Tool 6: annotation evidence
+# Reader-facing evidence trail for a cell-type entry. This is a disclosure
+# surface: it reports what identifies an entry, where the knowledge came from, which pages describe
+# it and which papers in the shipped corpus back it. Like the retrieval service, it must not be
+# consumed as input to any score, weighting, ranking or confidence measure.
+LINK_REGISTRY = KB / "link_registry" / "LINK_REGISTRY_v1.jsonl"
+_link_cache = {"mtime": None, "rows": []}
+
+
+def _link_rows():
+    """Lazy-load the link registry, re-reading it when the file changes on disk."""
+    try:
+        mt = LINK_REGISTRY.stat().st_mtime
+    except OSError:
+        return []
+    if _link_cache["mtime"] != mt:
+        rows = []
+        try:
+            for line in LINK_REGISTRY.read_text(encoding="utf-8").splitlines():
+                if line.strip():
+                    d = json.loads(line)
+                    if "error" not in d:
+                        rows.append(d)
+        except Exception:
+            rows = []
+        _link_cache["rows"] = rows
+        _link_cache["mtime"] = mt
+    return _link_cache["rows"]
+
+
+def _link_norm(s):
+    return re.sub(r"[^a-z0-9]", "", (s or "").lower())
+
+
+def explain_annotation(cell_type, tissue=None, top_k=5):
+    """Evidence bundle behind a cell-type entry.
+
+    cell_type: the label to explain (e.g. "RPE", "Muller glia", "lens fiber cell").
+    tissue: optional filter over the attached citations (retina/cornea/RPE/...).
+    top_k: how many citations to return.
+
+    Returns the entry's marker panel, the library it lives in, whether it is reachable on the
+    default answer surface or only by explicit routing, the knowledge-base pages that describe it,
+    any textbook edition+page anchor behind its definition, and the papers in the shipped corpus
+    that back it — each with journal and year, so the trail can be checked without network access.
+    Unknown labels return the nearest available entries instead of an empty object.
+    """
+    rows = _link_rows()
+    if not rows:
+        return {"error": "link registry not found",
+                "expected_at": str(LINK_REGISTRY),
+                "hint": "rebuild it with kb/link_registry/scripts/build_link_registry.py"}
+    want = _link_norm(cell_type)
+    exact = [r for r in rows if _link_norm(r.get("cell_type")) == want]
+    if not exact and want:
+        exact = [r for r in rows if want in _link_norm(r.get("cell_type"))]
+    if not exact:
+        return {"found": False, "cell_type": cell_type,
+                "available": sorted({r.get("cell_type", "") for r in rows if r.get("cell_type")})}
+    hits = []
+    for r in exact:
+        cites = r.get("citations", [])
+        if tissue:
+            t = str(tissue).lower()
+            filt = [c for c in cites if t in str(c.get("tissues", "")).lower()]
+            if filt:
+                cites = filt
+        hits.append({
+            "entry_id": r.get("entry_id"),
+            "cell_type": r.get("cell_type"),
+            "library": r.get("library"),
+            "key_markers": r.get("genes_top", []),
+            "n_genes": r.get("n_genes"),
+            "wiki_pages": r.get("wiki_pages", []),
+            "textbook_anchors": [{"book": b, "page": p} for b, p in r.get("book_anchors", [])],
+            "citations": [{"pmid": c.get("pmid"), "title": c.get("title"),
+                           "journal": c.get("journal"), "year": c.get("year"),
+                           "tissues": c.get("tissues"), "marker_genes": c.get("marker_genes"),
+                           "relevance": c.get("relevance"), "snippet": c.get("chunk")}
+                          for c in cites[:int(top_k)]],
+            "mcp_route": r.get("mcp_route"),
+            "skill": r.get("skill_trigger"),
+        })
+    return {"found": True, "cell_type": cell_type, "n_matches": len(hits),
+            "entries": hits,
+            "discipline": "evidence disclosure only — not an input to any score, weighting or ranking"}
+
+
 if __name__ == "__main__":
     # minimal self-test without MCP (tool kernel layer)
     print(json.dumps(query_marker(cell_type="RPE", library="retina"), ensure_ascii=False)[:400])
