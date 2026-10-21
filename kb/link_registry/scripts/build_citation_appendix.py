@@ -39,7 +39,7 @@ def main():
              f"- distinct papers cited: **{len({c['pmid'] for r in rows for c in r['citations']})}** "
              f"({sum(1 for r in rows for c in r['citations'])} citation rows; "
              f"{sum(1 for r in rows for c in r['citations'] if c.get('gene_match'))} of them mention a marker gene we use)",
-             f"- fully linked (citations + wiki page + MCP route + skill): "
+             f"- fully linked (source + page + MCP route + skill): "
              f"**{sum(1 for r in rows if r['n_pmids'] and r['n_wiki_pages'])}**",
              f"- reachable on the default answer surface: "
              f"**{sum(1 for r in rows if r['library'] in DEFAULT_ON)}**",
@@ -53,12 +53,18 @@ def main():
         by_lib.setdefault(r["library"], []).append(r)
 
     for lib, items in by_lib.items():
-        route = "default" if lib in DEFAULT_ON else "explicit routing only"
+        route = "default" if lib in DEFAULT_ON else ("textbook layer" if lib == "textbook_t4"
+                                                     else "explicit routing only")
+        first_col = "term" if lib == "textbook_t4" else "cell type"
+        src_col = "source quote" if lib == "textbook_t4" else "key markers"
         lines += [f"## Library `{lib}` ({route}) — {len(items)} entries", "",
-                  "| cell type | key markers | textbook anchor | wiki page | backing papers |",
+                  f"| {first_col} | {src_col} | textbook anchor | wiki page | backing papers |",
                   "|---|---|---|---|---|"]
         for r in items:
-            mk = ", ".join(r["genes_top"][:6])
+            if r.get("source_kind") == "textbook":
+                mk = r.get("quote", "")[:110]
+            else:
+                mk = ", ".join(r["genes_top"][:6])
             anchor = "; ".join(f"{b}, {p}" for b, p in r["book_anchors"][:2]) or "—"
             wiki = ", ".join(r["wiki_pages"][:2]) or "**none**"
             def _c(c):
@@ -66,7 +72,10 @@ def main():
                 if c.get("gene_match"):
                     tag = " [mentions " + ",".join(c.get("matched_panel_genes") or []) + "]"
                 return f"PMID {c['pmid']} ({c['journal']} {c['year']}){tag}"
-            cites = "; ".join(_c(c) for c in r["citations"][:3]) or "**none**"
+            if r.get("source_kind") == "textbook":
+                cites = "; ".join(f"{b} {p}" for b, p in r.get("book_anchors", [])) or "**none**"
+            else:
+                cites = "; ".join(_c(c) for c in r["citations"][:3]) or "**none**"
             lines.append(f"| {r['cell_type']} | {mk} | {anchor} | {wiki} | {cites} |")
             tsv.append("\t".join([
                 r["entry_id"], r["library"], route, r["cell_type"], str(r["n_genes"]),

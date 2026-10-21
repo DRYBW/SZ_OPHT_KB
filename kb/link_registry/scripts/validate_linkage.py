@@ -14,6 +14,8 @@ HERE = Path(__file__).resolve().parent
 REG = HERE.parent / "LINK_REGISTRY_v1.jsonl"
 
 MIN_PMIDS = 1        # at least one in-corpus paper backing the entry
+# A textbook row backs a structural claim with a book page rather than a paper, so it satisfies the
+# evidence link through book_anchors instead of pmids. Every other link is still required.
 REQUIRE_WIKI = True  # the entry must be reachable from a written page
 REQUIRE_MCP = True   # the entry must be reachable by an explicit tool call
 REQUIRE_SKILL = True # a skill must document how to consume it
@@ -25,8 +27,8 @@ def main():
     dead = []
     for r in rows:
         why = []
-        if r.get("n_pmids", 0) < MIN_PMIDS:
-            why.append("no citation")
+        if r.get("n_pmids", 0) < MIN_PMIDS and not r.get("book_anchors"):
+            why.append("no citation and no source page")
         if REQUIRE_WIKI and not r.get("n_wiki_pages"):
             why.append("no wiki page")
         if REQUIRE_MCP and not r.get("mcp_route"):

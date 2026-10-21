@@ -164,6 +164,7 @@ def main():
             for key in (cls, cls.replace("_", " ")):
                 anchors += books.get(key, [])
             rows.append({
+                "source_kind": "marker_library",
                 "entry_id": f"{name}::{cls}",
                 "library": name,
                 "cell_type": cls,
@@ -182,16 +183,56 @@ def main():
                 "mcp_route": f"query_marker(cell_type='{cls}', library='{name}')",
                 "skill_trigger": "knowledge-guided-cell-annotation",
             })
+    # --- textbook layer: structural vocabulary (layers / membranes / regions / pathways) -------
+    # These rows carry a book and a page instead of a PMID: the claim they support is anatomical
+    # ("where the structure sits"), which no paper in the corpus is being asked to establish.
+    tb_path = KB / "textbook_layer" / "TEXTBOOK_ITEMS_v1.jsonl"
+    n_book = 0
+    if tb_path.is_file():
+        for line in tb_path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            it = json.loads(line)
+            rows.append({
+                "source_kind": "textbook",
+                "entry_id": f"textbook_t4::{it['term']}",
+                "library": "textbook_t4",
+                "cell_type": it["term"],
+                "kind": it["kind"],
+                "n_genes": 0,
+                "genes_top": [],
+                "kb_file": "kb/textbook_layer/TEXTBOOK_ITEMS_v1.jsonl",
+                "wiki_pages": ["textbook_layer/INDEX.md"],
+                "n_wiki_pages": 1,
+                "wiki_match_kind": "strict",
+                "pmids": [],
+                "n_pmids": 0,
+                "citations": [],
+                "book_anchors": [[it["book"], f"p{it['page']}"]],
+                "quote": it["quote"],
+                "kb_status": it["kb_status"],
+                "mcp_route": f"explain_annotation(cell_type='{it['term']}')",
+                "skill_trigger": "knowledge-guided-cell-annotation",
+            })
+            n_book += 1
+
     with (HERE.parent / "LINK_REGISTRY_v1.jsonl").open("w", encoding="utf-8") as fh:
         for r in rows:
             fh.write(json.dumps(r, ensure_ascii=False) + "\n")
 
-    ok = [r for r in rows if r.get("n_pmids") and r.get("n_wiki_pages")]
-    dead = [r for r in rows if not r.get("n_pmids") or not r.get("n_wiki_pages")]
-    print(f"entries={len(rows)} fully_linked={len(ok)} broken_or_partial={len(dead)}")
+    # Same rule as the gate: evidence is a paper OR a textbook page; a page, a route and a skill
+    # entry point are always required.
+    def _wired(r):
+        return (r.get("n_pmids") or r.get("book_anchors")) and r.get("n_wiki_pages") \
+            and r.get("mcp_route") and r.get("skill_trigger")
+
+    ok = [r for r in rows if _wired(r)]
+    dead = [r for r in rows if not _wired(r)]
+    print(f"entries={len(rows)} (marker={len(rows)-n_book}, textbook={n_book}) "
+          f"fully_linked={len(ok)} broken_or_partial={len(dead)}")
     for r in dead[:25]:
         print("  gap:", r.get("entry_id"), "pmids=", r.get("n_pmids"),
-              "wiki=", r.get("n_wiki_pages"))
+              "book=", len(r.get("book_anchors") or []), "wiki=", r.get("n_wiki_pages"))
 
 
 if __name__ == "__main__":
