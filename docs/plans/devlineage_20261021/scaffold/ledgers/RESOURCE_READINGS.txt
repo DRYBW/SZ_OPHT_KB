@@ -1,8 +1,8 @@
-# resource and performance readings, captured 2026-10-22T01:30:50+08:00
+# resource and performance readings, captured 2026-10-22T01:32:39+08:00
 
 ## $ free -g          # before the corpus scan
                total        used        free      shared  buff/cache   available
-Mem:             247          49           4          18         214         197
+Mem:             247          45           8          18         215         201
 Swap:             31          16          15
 
 ## $ du -sh of the corpus and of the ontology file
@@ -19,11 +19,11 @@ Swap:             31          16          15
 {'chunks_in_corpus': 244877, 'chunks_carrying_a_lineage_verb': 6670, 'sentences_examined': 8309, 'sentences_with_two_or_more_phrases': 628, 'ordered_pairs_found': 124, 'examples_recorded': 194, 'examples_verified': 194, 'examples_failed_verification': []}
 
 ## $ nvidia-smi --query-gpu=... (this card uses no GPU)
-NVIDIA GeForce RTX 5090, 2 %, 25447 MiB, 32607 MiB, 39
+NVIDIA GeForce RTX 5090, 0 %, 25447 MiB, 32607 MiB, 41
 
 ## $ free -g          # after the whole chain
                total        used        free      shared  buff/cache   available
-Mem:             247          49           4          18         214         197
+Mem:             247          45           8          18         215         201
 Swap:             31          16          15
 
 ## $ wc -l on the delivered node/edge tables

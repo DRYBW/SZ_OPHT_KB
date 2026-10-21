@@ -525,8 +525,10 @@ reaches, and **24.62%** on a class carrying no CL term on our side. 13 of the de
 the recording have at least one pending repair proposal attached. Those numbers are reported here as
 coverage, and no edge in this card was derived from them.
 
-Commit for this card: **COMMIT_HASH_PLACEHOLDER** (local only, nothing pushed). It is the review-layer
-mirror of this directory under `docs/plans/devlineage_20261021/scaffold/`; the construction site
-remains `plans/devlineage_20261021/scaffold/`. Nothing outside that directory was written: `kb/`,
+Commit for this card: **`5c41367e27a1d13da8396a078bd07c0d4e10748a`** (local only, nothing pushed; the
+commit before it, `2fbe88fe7be944f574a23a75b818c134ffcb2a01`, is the first mirror of the same bytes,
+and a follow-up commit records this hash in the mirror). It is the review-layer mirror of this
+directory under `docs/plans/devlineage_20261021/scaffold/`; the construction site remains
+`plans/devlineage_20261021/scaffold/`. Nothing outside that directory was written: `kb/`,
 `mcp_server/`, the frozen ontology wave and the first pass's wave are byte-identical to how this card
 found them (`G9`, 17/17 consumed files re-hashed).
