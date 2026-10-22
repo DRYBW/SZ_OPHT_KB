@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "6cdd4ff254cf",
- "digest_sha256": "6cdd4ff254cf9358a2892b9c9291de809c004e2e01d5c1e84ae1dd5cfd005081",
+ "release_id": "467f7f371789",
+ "digest_sha256": "467f7f371789b39a4c5caa93c64be4acdd9535aa615b660bbdac330126fad4e3",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 3810,
- "total_bytes": 234635076,
+ "n_files": 3869,
+ "total_bytes": 235938411,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
-  "service_build_id": "4d6b8a6fde9d",
-  "knowledge_bundle_id": "27bf74fcc517",
-  "effective_profile_id": "6250842fe541"
+  "service_build_id": "0c8ac98c1e27",
+  "knowledge_bundle_id": "e132726e503d",
+  "effective_profile_id": "a8e9094868ae"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -177,8 +177,8 @@
   },
   {
    "path": "docs/W3_PIPELINE_REGISTRY.tsv",
-   "git_blob": "9f14a4c22b8118fc682cc2cf942599a611ddb1d9",
-   "bytes": 113082
+   "git_blob": "9e9ce228001bba63bf4f3a6b5ae2eab8e1fdc5ca",
+   "bytes": 115988
   },
   {
    "path": "docs/W3_UPSTREAM_FIRST_RULE.md",
@@ -10981,6 +10981,11 @@
    "bytes": 8243
   },
   {
+   "path": "docs/plans/l5_ontlayer_20261022/ledgers/clean_clone_chain_at_1c0a935.log",
+   "git_blob": "7b066094db4565f6f6add6a02e92e876c9260c43",
+   "bytes": 7986
+  },
+  {
    "path": "docs/plans/l5_ontlayer_20261022/out/BASELINE_FREEZE.json",
    "git_blob": "b59c2b116b1ecab70617cf159a47adbc6432d4bf",
    "bytes": 520
@@ -11229,6 +11234,291 @@
    "path": "docs/plans/mouse_ext_precheck_20260928/scripts/mx_supp5.py",
    "git_blob": "f4e2fb83b52a361eae0250b12814e546e4a8718a",
    "bytes": 1665
+  },
+  {
+   "path": "docs/plans/noregr_20261022/PREREG_NOREGRESSION_20261022.md",
+   "git_blob": "8698741b540495686187a303072234b73882c693",
+   "bytes": 12292
+  },
+  {
+   "path": "docs/plans/noregr_20261022/REPORT.md",
+   "git_blob": "670d553a05ca86e3e4c3e7016479bfcc94d6ec1a",
+   "bytes": 25173
+  },
+  {
+   "path": "docs/plans/noregr_20261022/ledgers/net_audit.log",
+   "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+   "bytes": 0
+  },
+  {
+   "path": "docs/plans/noregr_20261022/ledgers/net_audit_full_chain.log",
+   "git_blob": "59a9658a684660e12f647b90696278d67c754b28",
+   "bytes": 3350
+  },
+  {
+   "path": "docs/plans/noregr_20261022/ledgers/net_audit_repogates.log",
+   "git_blob": "875d1b400463774ad6e3c2f741e80c96607b6303",
+   "bytes": 1060
+  },
+  {
+   "path": "docs/plans/noregr_20261022/logs/chain.log",
+   "git_blob": "e97b9fa584dca4fa8a9b043cadd7536efe847bcf",
+   "bytes": 13790
+  },
+  {
+   "path": "docs/plans/noregr_20261022/logs/repo_gates.log",
+   "git_blob": "5afeac12fab1fde42409513eb97a46f2ee7434b1",
+   "bytes": 7736
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/CROSSWALK_ROWS.json",
+   "git_blob": "50cc5df650c28d817c4305a010b99d983bb74673",
+   "bytes": 180790
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/CROSSWALK_ROW_DIFF_R1_vs_HEAD.json",
+   "git_blob": "c953bf3c196e0879b572c55fac7a494fb1ca9a60",
+   "bytes": 3124
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/DEFAULT_FACE.json",
+   "git_blob": "0012885654ba4fb368bb51c7e1459b5bff0e2e27",
+   "bytes": 1995
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/FIX_MEASUREMENT.json",
+   "git_blob": "d5380ff0446b3db153dae6f603853bfa56fcb38b",
+   "bytes": 13859
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/FIX_MEASUREMENT.md",
+   "git_blob": "be3077d4c670c140efc89b8dae780e1f2a16c880",
+   "bytes": 1876
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/GATE.json",
+   "git_blob": "50827bd1416ab377dd13fe5741c1f8927b3fca59",
+   "bytes": 2779
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/INPUT_MANIFEST.json",
+   "git_blob": "dee58150d63273684804a2b79b9b679afd7ecbe8",
+   "bytes": 12000
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/LEDGER_HEAL.json",
+   "git_blob": "1099cd8cbdb7f214a52a43603e7556ce79274847",
+   "bytes": 229
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/MANIFEST.json",
+   "git_blob": "2dc847fe4d62ad92a4cf29543a628d12c9336e94",
+   "bytes": 7988
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/MANIFEST.sha256",
+   "git_blob": "bc1bdb31ebcc01f4c35d5b4096babf9f01f396c6",
+   "bytes": 4783
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/REGISTER_LIBRARY.json",
+   "git_blob": "0d0ff78a50b79e0e8cd7ff5c2a32b3d3cea0c77c",
+   "bytes": 292
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/REGISTRY_UPDATE.json",
+   "git_blob": "f8abcd4acc2c1a1f174418269c971d63e7db7d97",
+   "bytes": 650
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/REPRODUCE.json",
+   "git_blob": "2d3d0697a1896a7b1de2473f644f5493153182f7",
+   "bytes": 4359
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/SWEEP_EXCLUSIONS.json",
+   "git_blob": "aab21ab9124bda35eed335fe8653fe61d0a56d26",
+   "bytes": 269212
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/carrier_lit.json",
+   "git_blob": "81fb03e12f6ff8d5c9dbefe5f08b61808cedf8d2",
+   "bytes": 23860
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/carrier_lit.tsv",
+   "git_blob": "c23f527bd9ab3dec3f1a6f1d635304eb61591e93",
+   "bytes": 817
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/carrier_panel.json",
+   "git_blob": "777c7b0b1ddc99ba8bc208950b81b2f1c7eef791",
+   "bytes": 6249
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/harness/R1_narrowing_recorded_decls/REPORT.json",
+   "git_blob": "2890c258b4ea3d53649ca7543a446cf5a5708b7b",
+   "bytes": 71133
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/harness/R1_narrowing_recorded_decls/REPORT.md",
+   "git_blob": "ccc1668e7783a15f3280e30086dee06acf02cef8",
+   "bytes": 16748
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/harness/R2_fix_recorded_decls/REPORT.json",
+   "git_blob": "feeddecaca6cbd2fb0e3084414b9534d4e13ed8f",
+   "bytes": 49935
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/harness/R2_fix_recorded_decls/REPORT.md",
+   "git_blob": "9ce7396df7c5033649453724756e2c69bec0d167",
+   "bytes": 10917
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/harness/R3_fix_tester_decls/REPORT.json",
+   "git_blob": "f1eb0cbe067e57115def49d5ab4a6981a572fee1",
+   "bytes": 50121
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/harness/R3_fix_tester_decls/REPORT.md",
+   "git_blob": "e0068be5ef4daa81009c5f899ab7738eab5f6a50",
+   "bytes": 11009
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/harness/R4_narrowing_plus_fix_tester_decls/REPORT.json",
+   "git_blob": "ce0dee1c7d74dc5167be3d7db676cb1f7d34546b",
+   "bytes": 89001
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/harness/R4_narrowing_plus_fix_tester_decls/REPORT.md",
+   "git_blob": "7e3e379da7d9e3d1eba515a75642dfce1afc1b45",
+   "bytes": 20969
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/harness/SELFTEST_ACCEPTANCE_RULE.json",
+   "git_blob": "e5686a8f30e0e12cc7053ae05e2ec58917285d28",
+   "bytes": 469
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/harness/selftest_attributed/REPORT.json",
+   "git_blob": "0b992c37c7a4d69228077edf96c1e2d953c73c45",
+   "bytes": 72015
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/harness/selftest_attributed/REPORT.md",
+   "git_blob": "e633ea28ee7079ff79ed9db9154f814d7c09e600",
+   "bytes": 16425
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/harness/selftest_noop/REPORT.json",
+   "git_blob": "13dc974b9e7c86f63ee8657f507a1420a88cc85f",
+   "bytes": 28649
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/harness/selftest_noop/REPORT.md",
+   "git_blob": "fa37103128ecb2656b0b4e63c85c3cf4fd6af699",
+   "bytes": 5589
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/harness/selftest_unattributed/REPORT.json",
+   "git_blob": "9fa4b4aad91aaee4f1116ab1a31eb50fbc04b90c",
+   "bytes": 71137
+  },
+  {
+   "path": "docs/plans/noregr_20261022/out/harness/selftest_unattributed/REPORT.md",
+   "git_blob": "0e10141876d880c7b98511867d6a343dee0182a4",
+   "bytes": 16752
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/n0_freeze_inputs.py",
+   "git_blob": "cd3bd87f069b0fcc4e21732f1baa4d5986a69835",
+   "bytes": 3830
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/n1_reproduce.py",
+   "git_blob": "ceb04676416128ce142e69cefb6f67a24da99644",
+   "bytes": 8963
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/n2_sweep_exclusions.py",
+   "git_blob": "b68eb58a8008c6e5b1c64ea4b2f6e752aff5a8df",
+   "bytes": 18258
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/n3_harness.py",
+   "git_blob": "daca36e9e5919ea4bc564cd12f10cf0e8adb6f01",
+   "bytes": 15673
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/n4a_mine_carrier.py",
+   "git_blob": "5c2097b22e3b97788cd729f3cd00935953b4a1ae",
+   "bytes": 7351
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/n4b_build_carrier_panel.py",
+   "git_blob": "91d78ef5d92bb6fcdcdc7cea45a62a83ebe70c73",
+   "bytes": 12216
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/n4c_register_library.py",
+   "git_blob": "94be1fae8d35e7fd39c9b802c3f87c81fda3bf15",
+   "bytes": 5834
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/n4d_registry_update.py",
+   "git_blob": "0af1f0dde72a069bd5577a2e4b07035afb622bcf",
+   "bytes": 8091
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/n4e_ledger_heal.py",
+   "git_blob": "52ef14f31b68f034f077a3fceea546c122c0691b",
+   "bytes": 4004
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/n5_measure_fix.py",
+   "git_blob": "ccdc24f50d430205862684e61479b02b33346ba4",
+   "bytes": 9306
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/n6_default_face.py",
+   "git_blob": "425892d7828049caf3acae95f5a8e019ed1eb100",
+   "bytes": 7363
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/n6b_replay_route.py",
+   "git_blob": "99c19ae21f0d79d6022746cfc4750d6fae79036e",
+   "bytes": 2948
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/n7_manifest.py",
+   "git_blob": "98e05f52e875c8cd97674b4e4f291df82f4e1bc5",
+   "bytes": 2366
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/n8_gate.py",
+   "git_blob": "798c74b4273982422be35ccd7259a3444c025bd5",
+   "bytes": 13581
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/n9_clone_check.sh",
+   "git_blob": "069b5aefb9337be37c114f57aa5a5c3cccc1e597",
+   "bytes": 6568
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/netaudit/sitecustomize.py",
+   "git_blob": "6c068c3506828f4ed76c5dc85db3fb46b02db733",
+   "bytes": 1236
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/run_all.sh",
+   "git_blob": "a2d7bcb5a997f9e9c7d983ec7015dd3c86aa3145",
+   "bytes": 3567
+  },
+  {
+   "path": "docs/plans/noregr_20261022/scripts/wave_common.py",
+   "git_blob": "aa4a14d1644046aa026b37b5584fa95772dfb744",
+   "bytes": 18547
   },
   {
    "path": "docs/plans/obligrun_20260928/BRIEF_OBLIGRUN.md",
@@ -17736,6 +18026,11 @@
    "bytes": 35364
   },
   {
+   "path": "kb/markers/markers_v13_onfibro_increment.json",
+   "git_blob": "54a34dd4e41abc35e7e05cf4ab8f8e15b512595d",
+   "bytes": 11148
+  },
+  {
    "path": "kb/markers/markers_v4.1_clean.json",
    "git_blob": "ef6cf0ed2103faa06dfb825fae84809f1db22db0",
    "bytes": 4331
@@ -18122,8 +18417,8 @@
   },
   {
    "path": "mcp_server/eyekb_core.py",
-   "git_blob": "b4fb009b50aa7cd8250a6dcd68f762c75da586ff",
-   "bytes": 111637
+   "git_blob": "a7637405956f05cc69bfad87083e643eb1ecdd58",
+   "bytes": 114098
   },
   {
    "path": "mcp_server/kbgov_vocab.json.gz",

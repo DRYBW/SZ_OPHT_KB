@@ -49,3 +49,33 @@ Environments used
                      (python 3.14.4, pydantic 2.12.5, mcp 2.0.0);
                      the gate chain with the G1-locked pipeline_env interpreter for G3/G7
   network                zero downloads, zero network in every step
+Clean-clone gate chain (the reading the contract asks for)
+----------------------------------------------------------
+  clone            /home/ubuntu/l5 clean clone     (fresh git clone, path contains spaces)
+  clone head       1c0a93593229ef8052be0035912afcc87fb3a718
+  worktree clean   yes
+  corpus           copied in at literature_db/v2.4.2_2026-09_slim (380M); a Release asset per §G2,
+                   copied locally, not downloaded
+  chain            G3 rc=0 pass | G4 rc=0 pass | G5 rc=0 pass | G6 rc=0 pass
+                   G7 rc=0 pass (should_run=9 did_run=9 pass=9 fail=0 not_run=0 env_error=0)
+                   G8 rc=0 pass (should_run=6 did_run=6 pass=6 fail=0 not_run=0 env_error=0)
+                   gates=6 failed=0  (CHAIN PASS)
+  G5 in the clone  rows=134 gates=8 checks=8 fail=0 verdict=PASS
+                   (in the author tree the same gate reports one mismatch on L1-11M, which is the
+                    other card's uncommitted edit to mcp_server/eyekb_core.py in the shared working
+                    tree; it is not this card's change and is absent from a clone of this commit)
+  log              ledgers/clean_clone_chain_at_1c0a935.log
+  first attempt    ledgers/clean_clone_chain_at_02ed589.log (that commit still carried the other
+                   card's ledger rows; see the report's concurrent-writer section)
+
+Record-only commits of this card (after the content commit)
+-----------------------------------------------------------
+  1c0a93593229ef8052be0035912afcc87fb3a718
+      ledger rows re-taken from live bytes after the report's last edit, and this file introduced.
+      Carries the release identity record for the shipped bytes of this commit:
+      release_id 6cdd4ff254cf, service_build_id 4d6b8a6fde9d, knowledge_bundle_id 27bf74fcc517,
+      effective_profile_id 6250842fe541; scripts/release_identity.py --check -> IDENTITY MATCH +
+      MANIFEST MATCH (rc=0).
+  <the commit that adds this section and the clean-clone reading is record-only as well: this file is
+   excluded from the release identity, so it can be updated after the identity is taken without
+   moving it>

@@ -1,14 +1,14 @@
 {
  "schema": "eyekb-release-identity/1.0",
- "release_id": "6cdd4ff254cf",
- "digest_sha256": "6cdd4ff254cf9358a2892b9c9291de809c004e2e01d5c1e84ae1dd5cfd005081",
+ "release_id": "467f7f371789",
+ "digest_sha256": "467f7f371789b39a4c5caa93c64be4acdd9535aa615b660bbdac330126fad4e3",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 3810,
- "total_bytes": 234635076,
+ "n_files": 3869,
+ "total_bytes": 235938411,
  "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
- "service_build_id": "4d6b8a6fde9d",
- "service_build_id_digest": "4d6b8a6fde9d6fa3383dddb066375a1ea50fe2006e4f9baee0a678890db1819f",
+ "service_build_id": "0c8ac98c1e27",
+ "service_build_id_digest": "0c8ac98c1e27db286f12458627dbc9d362b62769964d63d1bd00934463547276",
  "service_build_id_coverage": {
   "prefixes": [
    "mcp_server/"
@@ -17,23 +17,23 @@
    "scripts/release_identity.py"
   ],
   "n_files": 12,
-  "bytes": 1272599
+  "bytes": 1275060
  },
- "knowledge_bundle_id": "27bf74fcc517",
- "knowledge_bundle_id_digest": "27bf74fcc517daee9da65c7cba23ac1d2a4c84f1d0eb2751cb0736117bc6426d",
+ "knowledge_bundle_id": "e132726e503d",
+ "knowledge_bundle_id_digest": "e132726e503dd9ae7b65f77ca65ed8088b6a6ccc13608eb2920ac04b413c6a5c",
  "knowledge_bundle_id_coverage": {
   "prefixes": [
    "kb/",
    "literature_db/"
   ],
-  "n_files": 164,
-  "bytes": 29895852
+  "n_files": 165,
+  "bytes": 29907000
  },
- "effective_profile_id": "6250842fe541",
+ "effective_profile_id": "a8e9094868ae",
  "effective_profile": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
-  "service_build_id": "4d6b8a6fde9d",
-  "knowledge_bundle_id": "27bf74fcc517",
+  "service_build_id": "0c8ac98c1e27",
+  "knowledge_bundle_id": "e132726e503d",
   "toggles": {
    "EYEKB_ACT_V6": null,
    "EYEKB_ACT_ANTSEG": null,
@@ -55,15 +55,15 @@
    }
   ],
   "layers": {
-   "release_id": "6cdd4ff254cf",
-   "service_build_id": "4d6b8a6fde9d",
-   "knowledge_bundle_id": "27bf74fcc517",
-   "effective_profile_id": "6250842fe541"
+   "release_id": "467f7f371789",
+   "service_build_id": "0c8ac98c1e27",
+   "knowledge_bundle_id": "e132726e503d",
+   "effective_profile_id": "a8e9094868ae"
   }
  },
  "effective_profile_rule": "the observed toggle values, the registered capabilities and their state, and the layer identities; volatile fields (timestamps, commit ids, working directory) are deliberately absent, so the same configuration gives the same value whatever day it is taken",
  "layers_note": "The four layers are separate on purpose: protocol_generation describes the wire contract, service_build_id the server code, knowledge_bundle_id the shipped knowledge assets, and effective_profile_id what actually took effect this run. A caller needs the last two together - the resolvable release manifest identifier and the configuration that was in force.",
- "taken_at_commit": "b3d6e2021dc71e9de02b1c704550cf3c8d29997f",
+ "taken_at_commit": "0312016c574d77605c7e81b087531ec50dc91382",
  "taken_at_commit_note": "HEAD when the identity was taken. With --source index the record is taken against the staged tree and ships in the commit that tree becomes; the records are excluded from their own coverage, so the value is unaffected.",
  "coverage": "every file of the tree (HEAD, or the staged tree with --source index) except the identity record and the release manifest",
  "excluded": [
