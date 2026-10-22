@@ -1,0 +1,14 @@
+arm-hygiene C1_carrier_only_today: differs_on=['onfibro'] measurable=True
+arm-hygiene C0_cumulative_vs_baseline: differs_on=['onfibro', 'scope'] measurable=True
+arm-hygiene C2_narrowing_only_carrier_off: differs_on=['scope'] measurable=True
+[C1_carrier_only_today] running...
+   verdict=PASS
+   datasets=28  delta_pp min=0.000 max=12.123  sum_positive=38.261  sum_negative=0.000
+[C0_cumulative_vs_baseline] running...
+   verdict=PASS
+   datasets=28  delta_pp min=0.000 max=12.955  sum_positive=42.243  sum_negative=0.000
+[C2_narrowing_only_carrier_off] running...
+   verdict=PASS_ATTRIBUTED
+   datasets=28  delta_pp min=-2.530 max=3.651  sum_positive=6.549  sum_negative=-2.567
+wrote /home/ubuntu/EYEKB_REPO/docs/plans/uplift_20261022/out/UPLIFT_MEASUREMENT.json
+EXIT=0

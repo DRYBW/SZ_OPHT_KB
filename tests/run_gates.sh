@@ -85,6 +85,16 @@ run_gate "G8 gate_ontlayer_portability (portability and fail-closed behaviour)" 
 run_gate "G9 gate_preimage_ref_immutable (pre/post-image refs must be immutable)" \
   python3 tests/gate_preimage_ref_immutable.py --json "$OUT/G9_RESULTS.json"
 
+# G10 was added after a before/after measurement of the recorded set silently returned `changed = 0`
+# for a change that was in fact active: the frozen harness clears a hard-coded tuple of switch
+# names, and a switch added to the router after that tuple was written was never cleared, so the
+# before arm's setting survived into the after arm and the comparison ran the tree against itself.
+# The gate enforces the switch registry staying in sync with the source, and -- as a property of the
+# arm pair rather than of any single spec -- that no arm may set a switch the harness does not clear
+# unless every arm of that comparison sets it.
+run_gate "G10 gate_switch_coverage (switch registry in sync; before/after arms separated)" \
+  python3 tests/gate_switch_coverage.py --json "$OUT/G10_RESULTS.json"
+
 printf '\n=================== summary ===================\n'
 bad=0
 for i in "${!NAMES[@]}"; do

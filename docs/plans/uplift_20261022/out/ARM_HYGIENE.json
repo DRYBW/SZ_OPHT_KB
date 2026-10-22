@@ -1,0 +1,96 @@
+{
+ "role": "arm hygiene: the switch state each arm really lands in, read out of the live module rather than inferred from the spec text",
+ "switches": {
+  "onfibro": {
+   "env": "EYEKB_ACT_ONFIBRO",
+   "probe": "_onfibro_act_enabled",
+   "states": {
+    "unset": true,
+    "EYEKB_ACT_ONFIBRO=0": false,
+    "EYEKB_ACT_ONFIBRO=1": true
+   }
+  },
+  "scope": {
+   "env": "EYEKB_TISSUE_SCOPE",
+   "probe": "_tissue_scope_enabled",
+   "states": {
+    "unset": true,
+    "EYEKB_TISSUE_SCOPE=0": false,
+    "EYEKB_TISSUE_SCOPE=1": true
+   }
+  }
+ },
+ "specs": {
+  "C1_carrier_only_today": {
+   "specified_env_before": {
+    "EYEKB_ACT_ONFIBRO": "0"
+   },
+   "specified_env_after": {
+    "EYEKB_ACT_ONFIBRO": "1"
+   },
+   "realised": {
+    "before": {
+     "onfibro": false,
+     "scope": true
+    },
+    "after": {
+     "onfibro": true,
+     "scope": true
+    }
+   },
+   "differs_on": [
+    "onfibro"
+   ],
+   "declared_change_is_measurable": true
+  },
+  "C0_cumulative_vs_baseline": {
+   "specified_env_before": {
+    "EYEKB_TISSUE_SCOPE": "0",
+    "EYEKB_ACT_ONFIBRO": "0"
+   },
+   "specified_env_after": {
+    "EYEKB_TISSUE_SCOPE": "1",
+    "EYEKB_ACT_ONFIBRO": "1"
+   },
+   "realised": {
+    "before": {
+     "onfibro": false,
+     "scope": false
+    },
+    "after": {
+     "onfibro": true,
+     "scope": true
+    }
+   },
+   "differs_on": [
+    "onfibro",
+    "scope"
+   ],
+   "declared_change_is_measurable": true
+  },
+  "C2_narrowing_only_carrier_off": {
+   "specified_env_before": {
+    "EYEKB_TISSUE_SCOPE": "0",
+    "EYEKB_ACT_ONFIBRO": "0"
+   },
+   "specified_env_after": {
+    "EYEKB_TISSUE_SCOPE": "1",
+    "EYEKB_ACT_ONFIBRO": "0"
+   },
+   "realised": {
+    "before": {
+     "onfibro": false,
+     "scope": false
+    },
+    "after": {
+     "onfibro": false,
+     "scope": true
+    }
+   },
+   "differs_on": [
+    "scope"
+   ],
+   "declared_change_is_measurable": true
+  }
+ }
+}
