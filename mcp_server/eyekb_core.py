@@ -314,7 +314,20 @@ MARKER_LIBS = {"retina": MARKER_JSON,
     #   REGISTERED_DEFAULT_OFF and NOT in any whitelist, so the default `all` route is byte-identical
     #   in every state; reachable only by naming library="holefill_v12". Merging it into `all` needs
     #   its own admission guard and separate PI approval. Rollback = delete this line.
-    "holefill_v12": MARKER_DIR / "markers_v12_holefill_increment.json"}
+    # onfibro_v13 = the optic-nerve fibroblast carrier (2026-10-22, card t_0c40c7b1): ONE entry,
+    #   named by the Cell Ontology label of the generic family term it carries (CL:0000057
+    #   `fibroblast`, resolved against the in-repo ontology release), holding the 10 genes of the
+    #   shipped generic `Fibroblast` panel plus 2 genes of the motivating cluster's recorded window
+    #   (BICC1, EYA2) so the family's coarse carrier can clear the >=2 shared-gene bar.
+    #   Why it exists: kb/baselines/_tissue_class_crosswalk_v1.json excludes
+    #   `Limbus_Sclera_fibroblast_C1` for optic_nerve, and with EYEKB_TISSUE_SCOPE on (default) that
+    #   removal left the family with no reachable carrier at all, so a coarse-but-family-correct
+    #   answer degraded to an abstention (measured: CX15_optic_nerve_all cluster 31, 1,822 cells,
+    #   -2.53pp cell-weighted on that volume).
+    #   REGISTERED_DEFAULT_OFF with an EMPTY whitelist: nothing is merged into `all` in any state,
+    #   so the shipped default route is byte-identical; merging it needs its own measured harm line
+    #   and separate PI approval. Rollback = delete this line and the file.
+    "onfibro_v13": MARKER_DIR / "markers_v13_onfibro_increment.json"}
 
 # [ACT t_5d5853c9] v6-merge whitelist for the default all — hard-coded; env values can only toggle the
 # whole feature, never inject any library
@@ -340,6 +353,26 @@ def _k9_act_enabled():
 # of 2026-10-20 (PI override, see `_antseg_act_enabled`).  Semantics: {0,false,off,no} = OFF;
 # unset/empty/any other value = ON.
 ANTSEG_DEFAULT_LIBS = ("antseg_v10",)
+
+
+# [ONFIBRO t_0c40c7b1] whitelist for the optic-nerve fibroblast carrier.  EMPTY BY DESIGN: the
+# registration is deliberately unreachable from the default `all` set, so this predicate exists to
+# make the OFF state explicit and machine-readable rather than to open a route.  Semantics follow
+# the ACT-v6 discipline so a future activation wave inherits an obvious shape:
+# {0,false,off,no} = OFF; unset/empty/anything else = the value of this switch, which -- with an
+# empty whitelist -- still merges nothing.
+ONFIBRO_DEFAULT_LIBS = ()
+
+
+def _onfibro_act_enabled():
+    """env EYEKB_ACT_ONFIBRO in {0,false,off,no} = OFF; unset/anything else = ON.
+
+    ON still injects nothing: ONFIBRO_DEFAULT_LIBS is empty by design (card t_0c40c7b1 red line --
+    this registration may not change the default response bytes). The library is reachable by name
+    only, and the merged effect is a measurement artefact, not a shipped route.
+    """
+    v = (os.environ.get("EYEKB_ACT_ONFIBRO") or "").strip().casefold()
+    return v not in {"0", "false", "off", "no"}
 
 
 def _antseg_act_enabled():
@@ -879,12 +912,15 @@ def _load_marker_dbs(library="all"):
             names = names + list(K9_DEFAULT_LIBS)  # [ACT t_abfebe59] k9_ocs append; no injectable lib names
         if _antseg_act_enabled():
             names = names + list(ANTSEG_DEFAULT_LIBS)  # [ANTSEG] non-retinal increment, ON since 2026-10-20
+        if _onfibro_act_enabled():
+            names = names + list(ONFIBRO_DEFAULT_LIBS)  # [ONFIBRO] empty whitelist: appends nothing,
+            # and the branch is kept so the OFF state is auditable rather than implicit
     elif lib in MARKER_LIBS:
         names = [lib]
     else:
         raise ValueError("library must be one of retina|membrane|retina_interneuron|retina_v6|"
                          "face_v6|lacrimal_v6|k9_ocs|retina_v7|retina_dev|antseg_v10|"
-                         "lensiris_v11|holefill_v12|all, got: "
+                         "lensiris_v11|holefill_v12|onfibro_v13|all, got: "
                          + repr(library))
     dbs = []
     for n in names:

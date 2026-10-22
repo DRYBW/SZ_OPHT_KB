@@ -1,0 +1,97 @@
+{
+ "probe": "n8_gate.py",
+ "wave": "docs/plans/noregr_20261022",
+ "checks": [
+  {
+   "code": "N01 PREREG",
+   "status": "PASS",
+   "ok": true,
+   "detail": "prereg present; outcome files older than it: none"
+  },
+  {
+   "code": "N02 INPUTS",
+   "status": "PASS",
+   "ok": true,
+   "detail": "volumes=28 clusters=721 cells=1495330 missing_inputs=0 recordings_hashed=28"
+  },
+  {
+   "code": "N03 REPRODUCE",
+   "status": "PASS",
+   "ok": true,
+   "detail": "carrier losses=1 (row Limbus_Sclera_fibroblast_C1); share=2.531% delta=-2.531pp; probe rc=0"
+  },
+  {
+   "code": "N04 SWEEP",
+   "status": "PASS",
+   "ok": true,
+   "detail": "tissues=12 rows=207 live_defects=2 (rows with count 0 are enumerated too)"
+  },
+  {
+   "code": "N05 HARNESS-SELFTEST",
+   "status": "PASS",
+   "ok": true,
+   "detail": "cases=[('unattributed drop', 'FAIL'), ('attributed drop', 'PASS_ATTRIBUTED'), ('no-op change', 'PASS')] verdict=PASS"
+  },
+  {
+   "code": "N06 FIX",
+   "status": "PASS",
+   "ok": true,
+   "detail": "G4=PASS; motivating cluster None(None) -> onfibro_v13::Fibroblast(2) [mixed -> consistent]; overall consistent delta +1.692pp (recorded decls) / +1.618pp (tester decls)"
+  },
+  {
+   "code": "N07 DEFAULT-FACE",
+   "status": "PASS",
+   "ok": true,
+   "detail": "clusters n=721 identical=True; battery n=229 identical=True; probe digests identical=True; core restored=True"
+  },
+  {
+   "code": "N08 NET-AUDIT",
+   "status": "PASS",
+   "ok": true,
+   "detail": "hook load receipts=39; connecting/HTTP events=0; census={'net_audit_full_chain.log': {'receipt_lines': 30, 'event_lines': 18, 'event_classes': {'socket.__new__': 13, 'socket.gethostname': 2, 'socket.bind': 3}}, 'net_audit_repogates.log': {'receipt_lines': 9, 'event_lines': 4, 'event_classes': {'socket.__new__': 3, 'socket.bind': 1}}}"
+  },
+  {
+   "code": "N09 MANIFEST",
+   "status": "PASS",
+   "ok": true,
+   "detail": "files=53 drifting=0 []"
+  },
+  {
+   "code": "N10 CHANGE-SURFACE",
+   "status": "PASS",
+   "ok": true,
+   "detail": "changed=4 unexpected=[] (foreign in-flight, declared and not owned by this card: [])"
+  },
+  {
+   "code": "N11 REGISTRY",
+   "status": "PASS",
+   "ok": true,
+   "detail": "G5 rc=0 verdict_in_stdout=True; new row L1-30 appears as an item_id 1 time(s)"
+  },
+  {
+   "code": "N12 CLEAN-CLONE",
+   "status": "FAIL",
+   "ok": false,
+   "detail": "CLEAN_CLONE_CHECK.json missing"
+  },
+  {
+   "code": "N13 HARNESS-PREIMAGE",
+   "status": "PASS",
+   "ok": true,
+   "detail": "runs without a pre-image: none"
+  },
+  {
+   "code": "N14 RED-LINES",
+   "status": "PASS",
+   "ok": true,
+   "detail": "ONFIBRO whitelist is empty (''); new library is explicit-route-only"
+  }
+ ],
+ "n_checks": 14,
+ "n_failed": 1,
+ "failed": [
+  "N12 CLEAN-CLONE"
+ ],
+ "verdict": "FAIL",
+ "inner_clone_check": false
+}

@@ -1,0 +1,25 @@
+{
+ "probe": "n3_harness.py --self-test",
+ "purpose": "G7: the acceptance rule must be able to FAIL, not only to pass",
+ "cases": [
+  {
+   "case": "unattributed drop",
+   "verdict": "FAIL",
+   "expected": "FAIL",
+   "ok": true
+  },
+  {
+   "case": "attributed drop",
+   "verdict": "PASS_ATTRIBUTED",
+   "expected": "PASS_ATTRIBUTED",
+   "ok": true
+  },
+  {
+   "case": "no-op change",
+   "verdict": "PASS",
+   "expected": "PASS",
+   "ok": true
+  }
+ ],
+ "verdict": "PASS"
+}

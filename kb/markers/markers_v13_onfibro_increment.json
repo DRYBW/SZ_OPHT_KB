@@ -1,0 +1,365 @@
+{
+ "version": "v13.0-onfibro-20261022",
+ "created": "2026-10-22",
+ "scope": "the fibroblast family carrier on the optic-nerve side: the exclusion table removes the only reachable carrier of the family for optic-nerve-declared clusters while the legitimate generic fibroblast panel shares none of their window, so a coarse-but-family-correct answer degrades to an abstention",
+ "status": "staging only; library `onfibro_v13` is NOT merged into the default `all` set and has an EMPTY whitelist, so the default route is byte-identical in every state. Activating a default face is a separate PI decision and is not made here.",
+ "registered_by": "docs/plans/noregr_20261022/PREREG_NOREGRESSION_20261022.md",
+ "card": "t_0c40c7b1",
+ "cl_release": "cl/releases/2026-06-08/cl-base.owl",
+ "cl_ontology_file": "kb/ontology/cl/releases/2026-06-08/cl-base.obo",
+ "source_corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10",
+ "scope_tissues": [
+  "optic_nerve",
+  "retina",
+  "choroid",
+  "sclera",
+  "iris",
+  "ciliary_body",
+  "trabecular_meshwork",
+  "ocular_surface",
+  "conjunctiva",
+  "lens",
+  "RPE",
+  "lacrimal_gland"
+ ],
+ "scope_tissues_provenance": "the family is legitimate in every ocular tissue the exclusion table speaks about; the entry does not name a tissue-specific identity, it carries the generic family and is named by the generic ontology term",
+ "admission_rule": {
+  "closed_candidate_set": "motivating window (10) + shipped generic Fibroblast panel (10) = 20 symbols; n4a also profiled the 3 genes of the shipped limbal/scleral entry",
+  "rule2": "measurable in the assay (project gene vocabulary)",
+  "rule3": ">=2 corpus chunks in a fibroblast context, >=1 of them ocular",
+  "rule4": "not already attached by a shipped library to a non-fibroblast KB class",
+  "retention": "genes of the shipped generic panel are retained unconditionally (deepening must not lose identity genes)"
+ },
+ "markers": {
+  "Fibroblast": [
+   "BICC1",
+   "COL1A1",
+   "COL1A2",
+   "COL3A1",
+   "DCN",
+   "EYA2",
+   "FBN1",
+   "FN1",
+   "LUM",
+   "MMP2",
+   "PTGDS",
+   "THY1"
+  ]
+ },
+ "entries": [
+  {
+   "class_name": "Fibroblast",
+   "cl_id": "CL:0000057",
+   "cl_label": "fibroblast",
+   "cl_resolves": true,
+   "cl_status": "kept_separate",
+   "cl_overlap_note": "CL:0000057 is the term of the shipped generic `Fibroblast` entry in kb/markers/markers_membrane_v1.json (10 genes). This entry is the same cell type with a deepened panel; the membrane body is untouched. The two entries differ in library, so the merged route presents them as separate alias rows and no ranking carries one class twice.",
+   "tissue": [
+    "fibroblast"
+   ],
+   "markers": [
+    "BICC1",
+    "COL1A1",
+    "COL1A2",
+    "COL3A1",
+    "DCN",
+    "EYA2",
+    "FBN1",
+    "FN1",
+    "LUM",
+    "MMP2",
+    "PTGDS",
+    "THY1"
+   ],
+   "n_markers": 12,
+   "why": "the family's coarse carrier, deepened with the evidence-passing genes of the motivating window so the >=2 shared-gene bar can be cleared",
+   "evidence": {
+    "BICC1": [
+     {
+      "paper_id": "40576432",
+      "pmcid": "PMC12212446",
+      "title": "Single-Cell RNA Sequencing of Rabbit Sclera at Different Developmental Stages: Unveiling Scleral Cells Atlas and the Heterogeneity of Fibrob",
+      "tissue": "sclera",
+      "snippet": "We identified myopia-related genes specifically expressed in fibroblasts, finding that BICC1 (an RNA-binding protein) and ECM-related genes COL11A1, FBN1, and ADAMTSL4 are highly expressed in both human and rabbit fibroblasts ( Fig."
+     },
+     {
+      "paper_id": "40576432",
+      "pmcid": "PMC12212446",
+      "title": "Single-Cell RNA Sequencing of Rabbit Sclera at Different Developmental Stages: Unveiling Scleral Cells Atlas and the Heterogeneity of Fibrob",
+      "tissue": "sclera",
+      "snippet": "We constructed a myopia gene atlas of scleral cells and found BICC1 was highly expressed in scleral fibroblasts of both humans and rabbits."
+     },
+     {
+      "paper_id": "42291280",
+      "pmcid": "PMC13264258",
+      "title": "Targeting Rap1-YAP1 mechanosignaling for ameliorating acute IOP elevation-induced trabecular meshwork dysfunction",
+      "tissue": "trabecular_meshwork",
+      "snippet": "6  Correspondingly in the present study, clusters 3, 9, 8, 7, 1, and 0 exhibited high expression levels of  DCN ,  IGFBP5 ,  MGP ,  BMP5 ,  ABCA8 ,  APOD ,  BICC1 , and  DYNC1I1 , which have been reportedly associated with Beam A cells ( Figure 2 B)."
+     }
+    ],
+    "EYA2": [
+     {
+      "paper_id": "36750914",
+      "pmcid": "PMC9906957",
+      "title": "Retinal determination gene networks: from biological functions to therapeutic strategies.",
+      "tissue": "retina",
+      "snippet": "Consequently, EYA1/EYA2 mutant mice show delayed myogenesis [ 14 ,  171 ]."
+     }
+    ]
+   },
+   "shared_with_motivating_window": [
+    "BICC1",
+    "EYA2"
+   ]
+  }
+ ],
+ "admitted": [
+  {
+   "gene": "BICC1",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 3,
+   "papers_fibro_any": 3,
+   "claimed_by": [],
+   "decision": "admit"
+  },
+  {
+   "gene": "COL1A1",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 45,
+   "papers_fibro_any": 47,
+   "claimed_by": [
+    "antseg_v10::trabecular meshwork cell",
+    "membrane::Fibroblast",
+    "membrane::Myofibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "COL1A2",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 13,
+   "papers_fibro_any": 14,
+   "claimed_by": [
+    "membrane::Fibroblast",
+    "membrane::Myofibroblast",
+    "membrane::Pericyte"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "COL3A1",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 10,
+   "papers_fibro_any": 10,
+   "claimed_by": [
+    "membrane::Fibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "DCN",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 19,
+   "papers_fibro_any": 20,
+   "claimed_by": [
+    "antseg_v10::trabecular meshwork cell",
+    "membrane::Fibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "EYA2",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 2,
+   "papers_fibro_any": 2,
+   "claimed_by": [],
+   "decision": "admit"
+  },
+  {
+   "gene": "FBN1",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 2,
+   "papers_fibro_any": 2,
+   "claimed_by": [
+    "antseg_v10::iris pigment epithelial cell",
+    "antseg_v10::non-pigmented ciliary epithelial cell",
+    "antseg_v10::pigmented ciliary epithelial cell",
+    "membrane::Fibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "FN1",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 26,
+   "papers_fibro_any": 28,
+   "claimed_by": [
+    "membrane::Fibroblast",
+    "membrane::Myofibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "LUM",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 10,
+   "papers_fibro_any": 10,
+   "claimed_by": [
+    "membrane::Fibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "MMP2",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 25,
+   "papers_fibro_any": 26,
+   "claimed_by": [
+    "membrane::Fibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "PTGDS",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 2,
+   "papers_fibro_any": 2,
+   "claimed_by": [
+    "antseg_v10::oligodendrocyte",
+    "antseg_v10::trabecular meshwork cell",
+    "membrane::Fibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "THY1",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 7,
+   "papers_fibro_any": 8,
+   "claimed_by": [
+    "membrane::Fibroblast",
+    "membrane::Pericyte"
+   ],
+   "decision": "admit_retained_identity_gene"
+  }
+ ],
+ "rejected": [
+  {
+   "gene": "ADAMTSL3",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 1,
+   "papers_fibro_any": 1,
+   "claimed_by": [],
+   "decision": "reject_rule3_insufficient_literature_support"
+  },
+  {
+   "gene": "BNC2",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 0,
+   "papers_fibro_any": 0,
+   "claimed_by": [],
+   "decision": "reject_rule3_insufficient_literature_support"
+  },
+  {
+   "gene": "CEMIP",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 6,
+   "papers_fibro_any": 6,
+   "claimed_by": [
+    "antseg_v10::trabecular meshwork cell"
+   ],
+   "decision": "reject_rule4_gene_already_spent_on_another_family"
+  },
+  {
+   "gene": "FOXP2",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 0,
+   "papers_fibro_any": 0,
+   "claimed_by": [],
+   "decision": "reject_rule3_insufficient_literature_support"
+  },
+  {
+   "gene": "LEPR",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 0,
+   "papers_fibro_any": 0,
+   "claimed_by": [
+    "k9_ocs::Limbus_Sclera_fibroblast_C1"
+   ],
+   "decision": "reject_rule3_insufficient_literature_support"
+  },
+  {
+   "gene": "MIR100HG",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 0,
+   "papers_fibro_any": 0,
+   "claimed_by": [],
+   "decision": "reject_rule3_insufficient_literature_support"
+  },
+  {
+   "gene": "MIR99AHG",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 0,
+   "papers_fibro_any": 0,
+   "claimed_by": [],
+   "decision": "reject_rule3_insufficient_literature_support"
+  },
+  {
+   "gene": "RBMS3",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 0,
+   "papers_fibro_any": 0,
+   "claimed_by": [],
+   "decision": "reject_rule3_insufficient_literature_support"
+  }
+ ],
+ "not_repeated_from_production": {
+  "shipped generic Fibroblast (membrane_v1, 10 genes)": "retained as identity genes and extended, not replaced",
+  "k9_ocs::Limbus_Sclera_fibroblast_C1 (DPT/LEPR/LAMA2)": "left in place; the exclusion row that removes it stays in place too, because a limbal/scleral identity is still foreign to the optic nerve"
+ },
+ "known_limits": [
+  "the two admitted window genes carry 3 and 2 corpus chunks respectively: this is a thin evidence base, chosen from a closed candidate set rather than from an open harvest",
+  "the reading on CX15 is IN-SAMPLE: the panel was selected on the same volumes it is measured on. No accuracy claim is made; the measurement is a harm-line reading",
+  "the carrier is a family-level (coarse) answer. It does not claim the cluster is any particular fibroblast subtype"
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "probe": "n1_reproduce.py",
+ "volume": "CX15_optic_nerve_all",
+ "source_of_truth_probe": {
+  "cmd": "/home/ubuntu/training-venv/bin/python3 /mnt/D/EyeKB/plans/pi_asks_20261021/probe_opticnerve_scope_ab.py",
+  "rc": 0,
+  "stdout": "clusters replayed: 46\nclusters whose answer changed ON vs OFF: 2 ['12', '31']\n\n cl  cells  ref                          fam        | OFF top1(n) -> ON top1(n)\n 12   3810  pericyte                     pericyte   | RGC(1) -> RGC(1)\n 31   1822  fibroblast                   fibro      | Limbus_Sclera_fibroblast_C(1) -> None(None)\n\ncells in changed clusters: 5632 / 71997\n",
+  "stderr_tail": ""
+ },
+ "scope_ab": {
+  "clusters": 46,
+  "cells": 71997,
+  "changed_clusters": 2,
+  "changed": [
+   {
+    "cluster": "12",
+    "n_cells": 3810,
+    "ref_cell_type": "pericyte",
+    "ref_family": "pericyte",
+    "off_top": "RGC",
+    "off_n_shared": 1,
+    "on_top": "RGC",
+    "excluded_on": [
+     "Pericyte",
+     "SMC",
+     "face_v6::Pericyte"
+    ],
+    "scope_status_on": "applied",
+    "scope_n_before": 6,
+    "scope_n_after": 3
+   },
+   {
+    "cluster": "31",
+    "n_cells": 1822,
+    "ref_cell_type": "fibroblast",
+    "ref_family": "fibro",
+    "off_top": "Limbus_Sclera_fibroblast_C1",
+    "off_n_shared": 1,
+    "on_top": null,
+    "excluded_on": [
+     "Limbus_Sclera_fibroblast_C1",
+     "trabecular meshwork cell"
+    ],
+    "scope_status_on": "applied",
+    "scope_n_before": 2,
+    "scope_n_after": 0
+   }
+  ]
+ },
+ "carrier_loss": [
+  {
+   "cluster": "12",
+   "carrier_lost": null,
+   "loss_share_pct": 5.292
+  },
+  {
+   "cluster": "31",
+   "carrier_lost": "Limbus_Sclera_fibroblast_C1",
+   "loss_share_pct": 2.531
+  }
+ ],
+ "G1_single_carrier_loss": {
+  "n_carrier_losses": 1,
+  "n_limbus_sclera_fibroblast_losses": 1,
+  "clusters": [
+   "31"
+  ]
+ },
+ "drop_arithmetic": {
+  "cells_total": 71997,
+  "recorded_consistent_cells": 32519,
+  "recorded_consistent_pct": 45.167,
+  "carrier_loss_cells": 1822,
+  "after_cells": 30697,
+  "after_pct": 42.636,
+  "delta_pp": -2.531,
+  "carrier_loss_share_of_volume_pct": 2.531
+ },
+ "cluster31": {
+  "n_cells": 1822,
+  "genes_recorded": [
+   "BICC1",
+   "MIR99AHG",
+   "RBMS3",
+   "LEPR",
+   "FOXP2",
+   "ADAMTSL3",
+   "MIR100HG",
+   "BNC2",
+   "EYA2",
+   "CEMIP"
+  ],
+  "window_10": [
+   "BICC1",
+   "MIR99AHG",
+   "RBMS3",
+   "LEPR",
+   "FOXP2",
+   "ADAMTSL3",
+   "MIR100HG",
+   "BNC2",
+   "EYA2",
+   "CEMIP"
+  ],
+  "ref_cell_type": "fibroblast",
+  "ref_family": "fibro",
+  "fibroblast_panels": {
+   "markers_membrane_v1.json::Fibroblast": 10,
+   "markers_membrane_v1.json::Myofibroblast": 12,
+   "markers_k9_ocs_increment.json::Limbus_Sclera_fibroblast_C1": 3
+  },
+  "shared_with_panels": {
+   "markers_membrane_v1.json::Fibroblast": [],
+   "markers_membrane_v1.json::Myofibroblast": [],
+   "markers_k9_ocs_increment.json::Limbus_Sclera_fibroblast_C1": [
+    "LEPR"
+   ]
+  },
+  "off_top": "Limbus_Sclera_fibroblast_C1",
+  "off_shared_genes": [
+   "LEPR"
+  ],
+  "on_top": null,
+  "on_excluded": [
+   "Limbus_Sclera_fibroblast_C1",
+   "trabecular meshwork cell"
+  ]
+ },
+ "cluster31_correction": {
+  "narrative_claim": "the legitimate generic Fibroblast panel shares only 1 gene with its top-10 window (below the >=2 admission bar)",
+  "measured_max_shared_with_any_fibroblast_named_panel": 1,
+  "measured": {
+   "markers_membrane_v1.json::Fibroblast": [],
+   "markers_membrane_v1.json::Myofibroblast": [],
+   "markers_k9_ocs_increment.json::Limbus_Sclera_fibroblast_C1": [
+    "LEPR"
+   ]
+  },
+  "reading": "correction: the generic panel shares 1 gene(s), not 1"
+ },
+ "external_tester": {
+  "id": "CX15_optic_nerve_all",
+  "clusters": "46",
+  "cells": "71997",
+  "consistent_pct": "41.9",
+  "related_pct": "0.0",
+  "inconsistent_pct": "31.9",
+  "mixed_pct": "26.2",
+  "consistent_cells": "30147",
+  "n_candidates": "35",
+  "strong_candidate_clusters": "20",
+  "strong_consistent_pct": "67.9",
+  "source_cells": ""
+ },
+ "external_tester_check": {
+  "consistent_pct_reported": "41.9",
+  "consistent_cells_reported": "30147",
+  "cells_reported": "71997",
+  "implied_pre_pct": 44.403,
+  "lost_cells_used": 1822
+ },
+ "ruler_selfcheck": {
+  "agree": 542,
+  "differ": 0,
+  "examples": []
+ },
+ "ruler_provenance": {
+  "labels_from_recording": 33,
+  "labels_from_crosswalk": 27,
+  "cl_terms_loaded": 3335,
+  "class_labels_with_cl": 61,
+  "truth_labels_resolvable_to_cl": 3335
+ }
+}

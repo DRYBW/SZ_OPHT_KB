@@ -1,0 +1,53 @@
+{
+ "probe": "n6_default_face.py",
+ "core_path": "mcp_server/eyekb_core.py",
+ "attached_commit": "02ed58949712d1fac1d96d14fc0bd5764f04f1a8",
+ "current_core_sha256": "3dadbbbaf2631da0f48760beb95278f5fabd675e6108282c9080fae67a61d736",
+ "parent_core_sha256": "d46953bda7da5a43751ebf641b94de4b7034ba8731524923e004e97f18f4702d",
+ "parent_core_sha_verified_in_place": true,
+ "restored_core_sha256": "3dadbbbaf2631da0f48760beb95278f5fabd675e6108282c9080fae67a61d736",
+ "restored_matches_snapshot": true,
+ "arms": {
+  "clusters": {
+   "n_queries": 721,
+   "identical": true,
+   "parent_combined_md5": "156fb378081df45cd037d0af5d0855d1",
+   "current_combined_md5": "156fb378081df45cd037d0af5d0855d1",
+   "n_differing": 0,
+   "n_only_parent": 0,
+   "n_only_current": 0,
+   "differing": []
+  },
+  "battery": {
+   "n_queries": 229,
+   "identical": true,
+   "parent_combined_md5": "91db2db1d071080b67bfd3d230024e51",
+   "current_combined_md5": "91db2db1d071080b67bfd3d230024e51",
+   "n_differing": 0,
+   "n_only_parent": 0,
+   "n_only_current": 0,
+   "differing": []
+  }
+ },
+ "legacy_tool_panel_probe": {
+  "path": "tests/probe_tool_panel_identity.py",
+  "byte_unchanged_vs_parent_commit": true,
+  "parent_core_run": {
+   "rc": 0,
+   "digests": {
+    "legacy_panel": "e8e6c26351cd9a1d42fa2e7cb6a83f23",
+    "full_panel": "3f1f52cb62915f5ad2801962aa523d36"
+   }
+  },
+  "current_core_run": {
+   "rc": 0,
+   "digests": {
+    "legacy_panel": "e8e6c26351cd9a1d42fa2e7cb6a83f23",
+    "full_panel": "3f1f52cb62915f5ad2801962aa523d36"
+   }
+  },
+  "digests_identical": true,
+  "stdout_tail": "{\n \"legacy_panel\": \"e8e6c26351cd9a1d42fa2e7cb6a83f23\",\n \"full_panel\": \"3f1f52cb62915f5ad2801962aa523d36\",\n \"n_legacy_calls\": 10,\n \"n_calls\": 12\n}\ntools advertised: explain_annotation, get_disease_prior, get_kb_page, get_release_identity, get_tissue_composition, query_marker, search_literature\ninterpreter: /home/ubuntu/training-venv/bin/python3 (python 3.14.4, pydantic 2.12.5)\n"
+ },
+ "verdict": "PASS"
+}

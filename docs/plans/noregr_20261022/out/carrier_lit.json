@@ -1,0 +1,529 @@
+{
+ "probe": "n4a_mine_carrier.py",
+ "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/chunks.parquet",
+ "corpus_stats": {
+  "chunks_scanned": 244877,
+  "papers": 3902,
+  "chunks_with_fibroblast": 3899,
+  "chunks_with_fibroblast_and_eye": 211
+ },
+ "candidate_rule": "closed set = motivating window (10) + shipped generic Fibroblast panel (10) + shipped limbal/scleral fibroblast entry (3)",
+ "candidates_not_measurable_in_assay": [],
+ "rows": [
+  {
+   "gene": "COL1A1",
+   "in_assay_vocabulary": true,
+   "from_window": false,
+   "from_panel_fibroblast": true,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 47,
+   "papers_fibroblast_context_eye": 45,
+   "examples": [
+    {
+     "paper_id": "40598610",
+     "pmcid": "PMC12211474",
+     "title": "Low-level red light inhibits human retinal pigment epithelial cell fibrosis via UBE2C in a myopia-simulating hypoxic microenvironment.",
+     "tissue": "retina",
+     "snippet": "Under hypoxic conditions, the expression of α-smooth muscle actin (SMA; a scleral remodeling marker protein) and matrix metalloproteinase (MMP) 2 increases, but that of collagen type I alpha 1 chain (COL1A1) decreases; this leads to an imbalance between scleral ECM synthesis and metabolism, leading to scleral remodelin"
+    },
+    {
+     "paper_id": "40598610",
+     "pmcid": "PMC12211474",
+     "title": "Low-level red light inhibits human retinal pigment epithelial cell fibrosis via UBE2C in a myopia-simulating hypoxic microenvironment.",
+     "tissue": "retina",
+     "snippet": "Hypoxic hRPE cells demonstrated significantly higher  ASMA  and  MMP2  expression but considerably lower  COL1A1  and  BCL2  expression than normoxic hRPE cells ( P  < 0."
+    },
+    {
+     "paper_id": "40598610",
+     "pmcid": "PMC12211474",
+     "title": "Low-level red light inhibits human retinal pigment epithelial cell fibrosis via UBE2C in a myopia-simulating hypoxic microenvironment.",
+     "tissue": "retina",
+     "snippet": "The key signaling molecules considered in this study, namely α-SMA, MMP2, COL1A1, and BCL2, are all related to ECM secretion."
+    }
+   ]
+  },
+  {
+   "gene": "FN1",
+   "in_assay_vocabulary": true,
+   "from_window": false,
+   "from_panel_fibroblast": true,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 28,
+   "papers_fibroblast_context_eye": 26,
+   "examples": [
+    {
+     "paper_id": "41230906",
+     "pmcid": "PMC12617673",
+     "title": "PRRX1  Orchestrates Pericyte–Myofibroblast Transition in Pathological Retinal Fibrosis",
+     "tissue": "retina",
+     "snippet": "1 G), including  PRRX1 , fibrotic markers ( ACTA2 ,  TAGLN ,  FN1 ,  COL4A1 ,  COL5A2 , and  COL6A3 ), angiogenesis markers ( ESM1  and  CD93 ), and the proliferative marker  TOP2A ."
+    },
+    {
+     "paper_id": "41366246",
+     "pmcid": "PMC12796243",
+     "title": "Chemical reprogramming of fibroblasts into retinal pigment epithelium cells for vision restoration.",
+     "tissue": "retina",
+     "snippet": ",  FN1  and  RUNX2 ) were downregulated, while RPE-specific genes (e."
+    },
+    {
+     "paper_id": "35831910",
+     "pmcid": "PMC9447479",
+     "title": "Complement activation contributes to subretinal fibrosis through the induction of epithelial-to-mesenchymal transition (EMT) in retinal pigm",
+     "tissue": "retina",
+     "snippet": "To understand if our study is relevant to macular fibrosis in nAMD patients, we investigated the gene expression of epithelial marker E-cadherin ( CDH1 ), mesenchymal markers FN ( FN1 ) and α-SMA ( ACTA2 ), C5aR1 ( C5AR1 ) and C3aR1 ( C3AR1 ) in RPE/choroidal cells using the Spectacle [ 28 ] with the dataset of Voigt e"
+    }
+   ]
+  },
+  {
+   "gene": "MMP2",
+   "in_assay_vocabulary": true,
+   "from_window": false,
+   "from_panel_fibroblast": true,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 26,
+   "papers_fibroblast_context_eye": 25,
+   "examples": [
+    {
+     "paper_id": "40598610",
+     "pmcid": "PMC12211474",
+     "title": "Low-level red light inhibits human retinal pigment epithelial cell fibrosis via UBE2C in a myopia-simulating hypoxic microenvironment.",
+     "tissue": "retina",
+     "snippet": "we determined whether LLRL irradiation of hRPE cells in a myopia-simulating hypoxic microenvironment triggers the activation of myopia-inhibiting signaling pathways, involving proteins such as α-SMA, MMP2, and BCL2."
+    },
+    {
+     "paper_id": "40598610",
+     "pmcid": "PMC12211474",
+     "title": "Low-level red light inhibits human retinal pigment epithelial cell fibrosis via UBE2C in a myopia-simulating hypoxic microenvironment.",
+     "tissue": "retina",
+     "snippet": "Hypoxic hRPE cells demonstrated significantly higher  ASMA  and  MMP2  expression but considerably lower  COL1A1  and  BCL2  expression than normoxic hRPE cells ( P  < 0."
+    },
+    {
+     "paper_id": "40598610",
+     "pmcid": "PMC12211474",
+     "title": "Low-level red light inhibits human retinal pigment epithelial cell fibrosis via UBE2C in a myopia-simulating hypoxic microenvironment.",
+     "tissue": "retina",
+     "snippet": "The key signaling molecules considered in this study, namely α-SMA, MMP2, COL1A1, and BCL2, are all related to ECM secretion."
+    }
+   ]
+  },
+  {
+   "gene": "DCN",
+   "in_assay_vocabulary": true,
+   "from_window": false,
+   "from_panel_fibroblast": true,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 20,
+   "papers_fibroblast_context_eye": 19,
+   "examples": [
+    {
+     "paper_id": "36645183",
+     "pmcid": "PMC10162434",
+     "title": "Single-cell RNA sequencing reveals transcriptional changes of human choroidal and retinal pigment epithelium cells during fetal development,",
+     "tissue": "retina",
+     "snippet": "6 and 10 expressing pericyte markers ( THY1, ITGA1, POSTN ), cluster 9 expressing typical smooth muscle cell markers ( ACTA2, TAGLN, DES ), cluster 11 expressing periocular mesenchyme markers ( MGP, DCN ) and cluster 4 expressing at high level nerve associated fibroblast markers [ SFRP4 ,  PI16  ( 21 )]."
+    },
+    {
+     "paper_id": "37017569",
+     "pmcid": "PMC10238188",
+     "title": "Integrative Single-Cell Transcriptomics and Epigenomics Mapping of the Fetal Retina Developmental Dynamics.",
+     "tissue": "retina",
+     "snippet": "Furthermore, we observed gene expression in clusters of retinal pigment epithelia (RPE) (RPE65 and TTR), fibroblasts (DCN and MGP), melanocytes (PMEL and TYRP1), endothelial cells (PECAM1 and ENG), lens cells (CRYGC and LIM2), and corneal epithelium (KRT5)."
+    },
+    {
+     "paper_id": "40390022",
+     "pmcid": "PMC12087038",
+     "title": "Spatiotemporal single-cell analysis elucidates the cellular and molecular dynamics of human cornea aging",
+     "tissue": "cornea",
+     "snippet": "All identified stromal subsets were characterized by high expression of the stromal cell marker decorin (DCN) (Fig."
+    }
+   ]
+  },
+  {
+   "gene": "COL1A2",
+   "in_assay_vocabulary": true,
+   "from_window": false,
+   "from_panel_fibroblast": true,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 14,
+   "papers_fibroblast_context_eye": 13,
+   "examples": [
+    {
+     "paper_id": "32946783",
+     "pmcid": "PMC7505495",
+     "title": "Cell Types of the Human Retina and Its Organoids at Single-Cell Resolution.",
+     "tissue": "retina",
+     "snippet": "NEFM ,  RBPMS ,  SLC17A6 ,  SNCG ,  THY1 ; pigmented cells:  BEST1 ,  MITF ,  MLANA ,  TJP1 ,  RPE65 ; glial cells:  CRABP1 ,  GFAP ,  GLUL ; endothelial cells, mural cells and fibroblasts:  ACTA2 ,  COL1A2 ,  EGFL7 ,  PDGFRB ,  PROCR ,  VWF ; immune cells:  AIF1 ,  CD2 ,  CD48 ,  CX3CR1 ,  HBB ,  IL32 ,  JCHAIN ,  LST"
+    },
+    {
+     "paper_id": "40390022",
+     "pmcid": "PMC12087038",
+     "title": "Spatiotemporal single-cell analysis elucidates the cellular and molecular dynamics of human cornea aging",
+     "tissue": "cornea",
+     "snippet": "Stromal-1, characterized by the upregulation of the fibroblast marker CFD and the collagen-encoded genes COL14A1 and COL1A2, was involved in “collagen fibril organization” and “extracellular matrix organization” (Fig."
+    },
+    {
+     "paper_id": "40576432",
+     "pmcid": "PMC12212446",
+     "title": "Single-Cell RNA Sequencing of Rabbit Sclera at Different Developmental Stages: Unveiling Scleral Cells Atlas and the Heterogeneity of Fibrob",
+     "tissue": "sclera",
+     "snippet": "2 H,  Supplementary Data S2 ) and expressed significantly higher levels of type I collagen (COL1A1 and COL1A2)—the predominant ECM component of the sclera ( Supplementary Fig."
+    }
+   ]
+  },
+  {
+   "gene": "COL3A1",
+   "in_assay_vocabulary": true,
+   "from_window": false,
+   "from_panel_fibroblast": true,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 10,
+   "papers_fibroblast_context_eye": 10,
+   "examples": [
+    {
+     "paper_id": "41224754",
+     "pmcid": "PMC12612184",
+     "title": "Regulation of corneal stromal cell behavior by modulating curvature using a hydraulically-controlled organ chip array",
+     "tissue": "cornea",
+     "snippet": "Quantitative real-time reverse transcription polymerase chain reaction (RT–qPCR) analysis of ECM-related genes ( lumican, keratocan, COL1A1, COL3A1, COL5A1 ) normalized to  GAPDH  using the 2–ΔΔCt method relative to flat conditions."
+    },
+    {
+     "paper_id": "41056017",
+     "pmcid": "PMC12646653",
+     "title": "CDKL1  variants affecting ciliary formation predispose to thoracic aortic aneurysm and dissection",
+     "tissue": "ciliary_body",
+     "snippet": "VSMC subtype II may also include fibroblast-like VSMCs (specific markers:  BGN ,  COL1A2 ,  COL3A1 ) that have been shown to be present in both diseased and normal aorta ( Figure 3B , dot plot) ( 33 ,  34 )."
+    },
+    {
+     "paper_id": "38366188",
+     "pmcid": "PMC11259549",
+     "title": "Single-cell transcriptomic Atlas of aging macaque ocular outflow tissues",
+     "tissue": "trabecular_meshwork",
+     "snippet": "The gene expression spectrum of the fibroblast subset includes a series of molecules related to extracellular matrix synthesis and regulation, such as  COL1A1 ,  COL3A1 , and  SPARC  ( Patel et al."
+    }
+   ]
+  },
+  {
+   "gene": "LUM",
+   "in_assay_vocabulary": true,
+   "from_window": false,
+   "from_panel_fibroblast": true,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 10,
+   "papers_fibroblast_context_eye": 10,
+   "examples": [
+    {
+     "paper_id": "40149974",
+     "pmcid": "PMC11940411",
+     "title": "Efficient Fabrication of Human Corneal Stromal Cell Spheroids and Promoting Cell Stemness Based on 3D-Printed Derived PDMS Microwell Platfor",
+     "tissue": "cornea",
+     "snippet": "Results of IF and qPCR analysis showed that hCSCs cultured in the RIFA + hCSE medium expressed high levels of quiescent keratocyte stromal cell markers, such as ALDH3A1, CD34, KERA, and LUM, while exhibiting weak expression of fibroblast markers, such as Fibronectin and α-SMA."
+    },
+    {
+     "paper_id": "40437144",
+     "pmcid": "PMC12120075",
+     "title": "Co-differentiation and enrichment of corneal endothelial cells and keratocytes from human pluripotent stem cells",
+     "tissue": "cornea",
+     "snippet": "CK-like cells expressed keratocan ( KERA ), lumican ( LUM ), paired box 6 ( PAX6 ) and actin α2 ( ACTA2 ) genes, with proteoglycan expression (lumican (LUM) and decorin (DCN)) increasing over time."
+    },
+    {
+     "paper_id": "40437144",
+     "pmcid": "PMC12120075",
+     "title": "Co-differentiation and enrichment of corneal endothelial cells and keratocytes from human pluripotent stem cells",
+     "tissue": "cornea",
+     "snippet": "The cells also demonstrated expression of proteoglycans (LUM and decorin (DCN)) along with CEnC markers CD166, Na + /K + -ATPase and ZO-1 (Fig."
+    }
+   ]
+  },
+  {
+   "gene": "THY1",
+   "in_assay_vocabulary": true,
+   "from_window": false,
+   "from_panel_fibroblast": true,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 8,
+   "papers_fibroblast_context_eye": 7,
+   "examples": [
+    {
+     "paper_id": "37686457",
+     "pmcid": "PMC10487913",
+     "title": "Establishing Functional Retina in a Dish: Progress and Promises of Induced Pluripotent Stem Cell-Based Retinal Neuron Differentiation.",
+     "tissue": "retina",
+     "snippet": "THY1 antigen is present in RGCs and the inner limiting membrane of the retina but not in other retinal neurons [ 87 ]."
+    },
+    {
+     "paper_id": "37740641",
+     "pmcid": "PMC10849786",
+     "title": "Rapid and efficient generation of a transplantable population of functional retinal ganglion cells from fibroblasts.",
+     "tissue": "retina",
+     "snippet": "Our results showed that more than 60% of iNs co‐expressed TUJ1 and the RGC marker BRN3A, as well as other RGC‐specific markers such as THY1."
+    },
+    {
+     "paper_id": "41361249",
+     "pmcid": "PMC12911366",
+     "title": "Human pluripotent stem cell-derived retinal ganglion cells: advances in differentiation and translational applications.",
+     "tissue": "retina",
+     "snippet": "Moreover, non-RGCs such as fibroblast-like cells, also express THY1 [ 96 ]."
+    }
+   ]
+  },
+  {
+   "gene": "CEMIP",
+   "in_assay_vocabulary": true,
+   "from_window": true,
+   "from_panel_fibroblast": false,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 6,
+   "papers_fibroblast_context_eye": 6,
+   "examples": [
+    {
+     "paper_id": "41622742",
+     "pmcid": "PMC13239774",
+     "title": "Optic nerve sheath meningioma exhibits neural niche‐associated transcriptomic features and rare copy number variation‐linked evolution",
+     "tissue": "optic_nerve",
+     "snippet": "EYA2 ,  DCN ,  CHODL ,  ADAMTSL3 ,  CRABP1 ,  SCARA5 ,  SFRP1 ,  RBP4 ,  CFB ,  THSD4 ,  CLMP ,  RFLNA ,  LRP1B ,  SEMA3C ,  KCNMA1 ,  LOX ,  MXRA5 ,  PDGFRL ,  PLEKHA6 ,  FMOD ,  PTHLH ,  ITGBL1 ,  CEMIP ,  CRABP2 ,  CYP3A5 ,  GXYLT2 ,  CHRDL1 , and  CDON ."
+    },
+    {
+     "paper_id": "39952952",
+     "pmcid": "PMC11829053",
+     "title": "Divergence in cellular markers observed in single-cell transcriptomics datasets between cultured primary trabecular meshwork cells and tissu",
+     "tissue": "trabecular_meshwork",
+     "snippet": "When overlaid with cell-specific markers previously reported, PDPN, CEMIP and CHI3L1 were abundant in the BeamCell cluster, while MYOC remained enriched in the TM_Culture_Cell cluster."
+    },
+    {
+     "paper_id": "42291280",
+     "pmcid": "PMC13264258",
+     "title": "Targeting Rap1-YAP1 mechanosignaling for ameliorating acute IOP elevation-induced trabecular meshwork dysfunction",
+     "tissue": "trabecular_meshwork",
+     "snippet": "The JCT cells (clusters 2 and 6) were defined by the expression of  CHI3L1 ,  CYTL1 ,  NELL2 ,  RSPO4 ,  NEB , and  CEMIP ."
+    }
+   ]
+  },
+  {
+   "gene": "BICC1",
+   "in_assay_vocabulary": true,
+   "from_window": true,
+   "from_panel_fibroblast": false,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 3,
+   "papers_fibroblast_context_eye": 3,
+   "examples": [
+    {
+     "paper_id": "40576432",
+     "pmcid": "PMC12212446",
+     "title": "Single-Cell RNA Sequencing of Rabbit Sclera at Different Developmental Stages: Unveiling Scleral Cells Atlas and the Heterogeneity of Fibrob",
+     "tissue": "sclera",
+     "snippet": "We identified myopia-related genes specifically expressed in fibroblasts, finding that BICC1 (an RNA-binding protein) and ECM-related genes COL11A1, FBN1, and ADAMTSL4 are highly expressed in both human and rabbit fibroblasts ( Fig."
+    },
+    {
+     "paper_id": "40576432",
+     "pmcid": "PMC12212446",
+     "title": "Single-Cell RNA Sequencing of Rabbit Sclera at Different Developmental Stages: Unveiling Scleral Cells Atlas and the Heterogeneity of Fibrob",
+     "tissue": "sclera",
+     "snippet": "We constructed a myopia gene atlas of scleral cells and found BICC1 was highly expressed in scleral fibroblasts of both humans and rabbits."
+    },
+    {
+     "paper_id": "42291280",
+     "pmcid": "PMC13264258",
+     "title": "Targeting Rap1-YAP1 mechanosignaling for ameliorating acute IOP elevation-induced trabecular meshwork dysfunction",
+     "tissue": "trabecular_meshwork",
+     "snippet": "6  Correspondingly in the present study, clusters 3, 9, 8, 7, 1, and 0 exhibited high expression levels of  DCN ,  IGFBP5 ,  MGP ,  BMP5 ,  ABCA8 ,  APOD ,  BICC1 , and  DYNC1I1 , which have been reportedly associated with Beam A cells ( Figure 2 B)."
+    }
+   ]
+  },
+  {
+   "gene": "EYA2",
+   "in_assay_vocabulary": true,
+   "from_window": true,
+   "from_panel_fibroblast": false,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 2,
+   "papers_fibroblast_context_eye": 2,
+   "examples": [
+    {
+     "paper_id": "36750914",
+     "pmcid": "PMC9906957",
+     "title": "Retinal determination gene networks: from biological functions to therapeutic strategies.",
+     "tissue": "retina",
+     "snippet": "Consequently, EYA1/EYA2 mutant mice show delayed myogenesis [ 14 ,  171 ]."
+    }
+   ]
+  },
+  {
+   "gene": "FBN1",
+   "in_assay_vocabulary": true,
+   "from_window": false,
+   "from_panel_fibroblast": true,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 2,
+   "papers_fibroblast_context_eye": 2,
+   "examples": [
+    {
+     "paper_id": "40576432",
+     "pmcid": "PMC12212446",
+     "title": "Single-Cell RNA Sequencing of Rabbit Sclera at Different Developmental Stages: Unveiling Scleral Cells Atlas and the Heterogeneity of Fibrob",
+     "tissue": "sclera",
+     "snippet": "We identified myopia-related genes specifically expressed in fibroblasts, finding that BICC1 (an RNA-binding protein) and ECM-related genes COL11A1, FBN1, and ADAMTSL4 are highly expressed in both human and rabbit fibroblasts ( Fig."
+    },
+    {
+     "paper_id": "34299278",
+     "pmcid": "PMC8306213",
+     "title": "Decorin—An Antagonist of TGF-β in Astrocytes of the Optic Nerve",
+     "tissue": "optic_nerve",
+     "snippet": "present in the ONH [ 26 , 28 , 47 ] DCN can influence the activity and expression of TGF-β via different pathways, firstly via direct binding [ 64 ] and secondly via the upregulation of fibrillin-1 (FBN1) synthesis."
+    },
+    {
+     "paper_id": "34299278",
+     "pmcid": "PMC8306213",
+     "title": "Decorin—An Antagonist of TGF-β in Astrocytes of the Optic Nerve",
+     "tissue": "optic_nerve",
+     "snippet": "Activation of the pAKT/AKT pathway by DCN leads to an increased synthesis of FBN1 in rat kidney fibroblasts [ 66 ] and FBN1 can actively interfere with TGF-β by preventing the release of active TGF-β from the latent TGF-β complex [ 46 , 67 ]."
+    }
+   ]
+  },
+  {
+   "gene": "LAMA2",
+   "in_assay_vocabulary": true,
+   "from_window": false,
+   "from_panel_fibroblast": false,
+   "from_panel_limbus": true,
+   "papers_fibroblast_context_any_tissue": 2,
+   "papers_fibroblast_context_eye": 2,
+   "examples": [
+    {
+     "paper_id": "33994920",
+     "pmcid": "PMC8116631",
+     "title": "Mutant PRPF8 Causes Widespread Splicing Changes in Spliceosome Components in Retinitis Pigmentosa Patient iPSC-Derived RPE Cells",
+     "tissue": "RPE",
+     "snippet": "Among 92 genes annotated under an extracellular-matrix-related term, some show a splicing change in the within-cell-type contrasts, namely,  COL5A1 ,  FN1 ,  LAMA2 ,  VEGFA , and  HAPLN3 ."
+    },
+    {
+     "paper_id": "36536086",
+     "pmcid": "PMC9763400",
+     "title": "TIPARP is involved in the regulation of intraocular pressure",
+     "tissue": "choroid",
+     "snippet": "The expression of many ECM component genes, including collagen ( COL1A1 ,  COL3A1 , and  COL5A1 ), elastin and fibrillin ( ELN  and  FBN1-2 ), laminins ( LAMA2 ), and fibulins ( FBLN1-2  and  5 ), was decreased."
+    }
+   ]
+  },
+  {
+   "gene": "PTGDS",
+   "in_assay_vocabulary": true,
+   "from_window": false,
+   "from_panel_fibroblast": true,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 2,
+   "papers_fibroblast_context_eye": 2,
+   "examples": [
+    {
+     "paper_id": "40423739",
+     "pmcid": "PMC12356736",
+     "title": "Transcriptome Profiling of Trabecular Meshwork Progenitor Cells",
+     "tissue": "trabecular_meshwork",
+     "snippet": "Prostaglandin D2 Synthase (PTGDS), identified by van Zyl et al."
+    },
+    {
+     "paper_id": "42065486",
+     "pmcid": "PMC13159592",
+     "title": "Targeting Circadian Rhythm Disruption in Glaucoma: PTGDS Mediates Trabecular Meshwork Fibrosis and Is Therapeutically Targeted by Aprepitant",
+     "tissue": "trabecular_meshwork",
+     "snippet": "For instance, prostaglandins are known regulators of AH dynamics, and the expression of prostaglandin D2 synthase (PTGDS), a key enzyme in prostaglandin metabolism, is regulated by the circadian signaling molecule melatonin."
+    },
+    {
+     "paper_id": "42065486",
+     "pmcid": "PMC13159592",
+     "title": "Targeting Circadian Rhythm Disruption in Glaucoma: PTGDS Mediates Trabecular Meshwork Fibrosis and Is Therapeutically Targeted by Aprepitant",
+     "tissue": "trabecular_meshwork",
+     "snippet": "Western blot analysis confirmed that aprepitant not only suppressed PTGDS transcription but also attenuated TGFβ-induced PTGDS protein overexpression."
+    }
+   ]
+  },
+  {
+   "gene": "ADAMTSL3",
+   "in_assay_vocabulary": true,
+   "from_window": true,
+   "from_panel_fibroblast": false,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 1,
+   "papers_fibroblast_context_eye": 1,
+   "examples": []
+  },
+  {
+   "gene": "DPT",
+   "in_assay_vocabulary": true,
+   "from_window": false,
+   "from_panel_fibroblast": false,
+   "from_panel_limbus": true,
+   "papers_fibroblast_context_any_tissue": 2,
+   "papers_fibroblast_context_eye": 1,
+   "examples": [
+    {
+     "paper_id": "41326763",
+     "pmcid": "PMC12775197",
+     "title": "A comparative review of single-cell atlases: mapping cellular diversity across species and tissues",
+     "tissue": "unknown",
+     "snippet": "om patients undergoing liver resection due to colorectal cancer metastases or cholangiocarcinoma without a history of chronic liver disease Transcriptomic Integration using RaceID3 for clustering and DPT/SOMs for hepatocyte zonation."
+    }
+   ]
+  },
+  {
+   "gene": "BNC2",
+   "in_assay_vocabulary": true,
+   "from_window": true,
+   "from_panel_fibroblast": false,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 0,
+   "papers_fibroblast_context_eye": 0,
+   "examples": []
+  },
+  {
+   "gene": "FOXP2",
+   "in_assay_vocabulary": true,
+   "from_window": true,
+   "from_panel_fibroblast": false,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 0,
+   "papers_fibroblast_context_eye": 0,
+   "examples": []
+  },
+  {
+   "gene": "LEPR",
+   "in_assay_vocabulary": true,
+   "from_window": true,
+   "from_panel_fibroblast": false,
+   "from_panel_limbus": true,
+   "papers_fibroblast_context_any_tissue": 0,
+   "papers_fibroblast_context_eye": 0,
+   "examples": []
+  },
+  {
+   "gene": "MIR100HG",
+   "in_assay_vocabulary": true,
+   "from_window": true,
+   "from_panel_fibroblast": false,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 0,
+   "papers_fibroblast_context_eye": 0,
+   "examples": []
+  },
+  {
+   "gene": "MIR99AHG",
+   "in_assay_vocabulary": true,
+   "from_window": true,
+   "from_panel_fibroblast": false,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 0,
+   "papers_fibroblast_context_eye": 0,
+   "examples": []
+  },
+  {
+   "gene": "RBMS3",
+   "in_assay_vocabulary": true,
+   "from_window": true,
+   "from_panel_fibroblast": false,
+   "from_panel_limbus": false,
+   "papers_fibroblast_context_any_tissue": 0,
+   "papers_fibroblast_context_eye": 0,
+   "examples": []
+  }
+ ]
+}

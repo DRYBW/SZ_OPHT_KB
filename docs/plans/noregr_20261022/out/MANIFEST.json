@@ -1,0 +1,266 @@
+{
+ "probe": "n7_manifest.py",
+ "wave": "docs/plans/noregr_20261022",
+ "n_files": 49,
+ "files": [
+  {
+   "rel": "PREREG_NOREGRESSION_20261022.md",
+   "sha256": "131f5a422842e39260df72cc3a8bf872cd8db0c61d559836102296cbb2241156",
+   "bytes": 12292
+  },
+  {
+   "rel": "REPORT.md",
+   "sha256": "7164a25eff6633b22ed1a3526dbc9a28160dbee0c941074d2083b73dd86ca710",
+   "bytes": 25173
+  },
+  {
+   "rel": "out/CROSSWALK_ROWS.json",
+   "sha256": "295a2dade1f40a4bf44784777e36909cd180862774564b33f6a8aa61083c5c95",
+   "bytes": 180790
+  },
+  {
+   "rel": "out/CROSSWALK_ROW_DIFF_R1_vs_HEAD.json",
+   "sha256": "ace002595deda64e9202050447d08f5957f32f51ef7f06e3f83c2f409dcd0325",
+   "bytes": 3124
+  },
+  {
+   "rel": "out/DEFAULT_FACE.json",
+   "sha256": "8c74ce39549f3178687bf218b30ebb456bb534161813f60c4e3e0705f9768852",
+   "bytes": 1995
+  },
+  {
+   "rel": "out/FIX_MEASUREMENT.json",
+   "sha256": "dbbbe7001651f5248a38541237506a50a286fa05c005809589291b87be7e4390",
+   "bytes": 13859
+  },
+  {
+   "rel": "out/FIX_MEASUREMENT.md",
+   "sha256": "e33f6b15c49713fe6d677826672f22609873e07f0c55687f8154bba2b112af03",
+   "bytes": 1876
+  },
+  {
+   "rel": "out/INPUT_MANIFEST.json",
+   "sha256": "d2f1211613f0bbd6da6b5a21c179b8cadd0a9bca5678bfa524b56c619348dc61",
+   "bytes": 12000
+  },
+  {
+   "rel": "out/LEDGER_HEAL.json",
+   "sha256": "146c80ba223866474ceadb23ca48757265611d9e864a15096e519abcc4410c89",
+   "bytes": 229
+  },
+  {
+   "rel": "out/REGISTER_LIBRARY.json",
+   "sha256": "0e055b07ef19fb09c3e51dd456c1d36870b6f99b61f3b22f19a46aeb6246f26b",
+   "bytes": 292
+  },
+  {
+   "rel": "out/REGISTRY_UPDATE.json",
+   "sha256": "6a67a1fdddc00e565281dd374384ab224d2cac538c24097066a5bca818dfc6b4",
+   "bytes": 650
+  },
+  {
+   "rel": "out/REPRODUCE.json",
+   "sha256": "a41d250dfb3216ca1638b5842031bdc8586c442473809635823e30e1ad26bc13",
+   "bytes": 4359
+  },
+  {
+   "rel": "out/SWEEP_EXCLUSIONS.json",
+   "sha256": "9c17e6fea501d7e5647a3603694a1dd089d8e6745b7a65f4bd9b7b4a0b2d9761",
+   "bytes": 269212
+  },
+  {
+   "rel": "out/carrier_lit.json",
+   "sha256": "327ab175aaa11613188a617077455dfffa328180b480f5564f5276ac70dc6908",
+   "bytes": 23860
+  },
+  {
+   "rel": "out/carrier_lit.tsv",
+   "sha256": "8501c38ab2147494a214491f018a26a8362fb7a99336d2b157c655e49f907c4d",
+   "bytes": 817
+  },
+  {
+   "rel": "out/carrier_panel.json",
+   "sha256": "34f29a26b8f395eeae5f97ac25a48379ab725534b722871fd8061336bc4459f4",
+   "bytes": 6249
+  },
+  {
+   "rel": "out/harness/R1_narrowing_recorded_decls/REPORT.json",
+   "sha256": "4a73aaaa5de751f393967347248466b78bae5e167f5559f5b3f07855626eb3db",
+   "bytes": 71133
+  },
+  {
+   "rel": "out/harness/R1_narrowing_recorded_decls/REPORT.md",
+   "sha256": "7b5e8265ffcbf0c27b0ec3ed5df32c9cd56c9e054243ea1ec25dbe512aaa7ea8",
+   "bytes": 16748
+  },
+  {
+   "rel": "out/harness/R2_fix_recorded_decls/REPORT.json",
+   "sha256": "566abe85e176afe95d6cd5fcda4adb78ae1a20920eb3f5c27b3bb4e3c703be0a",
+   "bytes": 49935
+  },
+  {
+   "rel": "out/harness/R2_fix_recorded_decls/REPORT.md",
+   "sha256": "6b36cf2475a1d6499fc39bccfd78b96cc42e05bdd22ab6e8c82f795b63b54407",
+   "bytes": 10917
+  },
+  {
+   "rel": "out/harness/R3_fix_tester_decls/REPORT.json",
+   "sha256": "095076a4dd1d338db686297f824cd2a7f51a3798eafb9bf7ef11cdd40b43e532",
+   "bytes": 50121
+  },
+  {
+   "rel": "out/harness/R3_fix_tester_decls/REPORT.md",
+   "sha256": "f313c7da57e31aac2d4280cf4fa0911963027ec88b3b559f9e85be0a750617b4",
+   "bytes": 11009
+  },
+  {
+   "rel": "out/harness/R4_narrowing_plus_fix_tester_decls/REPORT.json",
+   "sha256": "fcd9b92f35ddb80690d01ed675552c45b72ef3d7cfe3ee31a67e0fa4f6d2fbb3",
+   "bytes": 89001
+  },
+  {
+   "rel": "out/harness/R4_narrowing_plus_fix_tester_decls/REPORT.md",
+   "sha256": "0803e0f84c19e559b7ff4448b52303c6754aeb8acf5e738298d44e77aadb6e43",
+   "bytes": 20969
+  },
+  {
+   "rel": "out/harness/SELFTEST_ACCEPTANCE_RULE.json",
+   "sha256": "b6e6e12395260e8c5f115b4172b8aed44b063b40aa440ca7005a821d049da243",
+   "bytes": 469
+  },
+  {
+   "rel": "out/harness/selftest_attributed/REPORT.json",
+   "sha256": "044154c43c6503f8540f0f6857cc10339aff5bc034a5698f0ca288b1f814c407",
+   "bytes": 72015
+  },
+  {
+   "rel": "out/harness/selftest_attributed/REPORT.md",
+   "sha256": "0953603b7ffba303dea6882cdcf5c8a2b686a29e97e22348b77e0842c6a38f5d",
+   "bytes": 16425
+  },
+  {
+   "rel": "out/harness/selftest_noop/REPORT.json",
+   "sha256": "265b3226594efc2b0f8cd2d51916f8d09d8b833ff7e96253d5b365f9a08022a0",
+   "bytes": 28649
+  },
+  {
+   "rel": "out/harness/selftest_noop/REPORT.md",
+   "sha256": "ef74e03f818cbc92c73607e5c27586ce65e6e9f8e29f05c427727dec92b6d446",
+   "bytes": 5589
+  },
+  {
+   "rel": "out/harness/selftest_unattributed/REPORT.json",
+   "sha256": "f363e2d529b059e86efcb325b8de56864eb4396ec4a0a077275c57297b930015",
+   "bytes": 71137
+  },
+  {
+   "rel": "out/harness/selftest_unattributed/REPORT.md",
+   "sha256": "c14a1e93caf0580af8b5dbd3211e6b1fb5e1f576764c7da62c6f50a7da9a8626",
+   "bytes": 16752
+  },
+  {
+   "rel": "scripts/n0_freeze_inputs.py",
+   "sha256": "3f40623aae3a1b7dcaccd97da21cc7212bd795138eb6ef6a5cda373f3c95f674",
+   "bytes": 3830
+  },
+  {
+   "rel": "scripts/n1_reproduce.py",
+   "sha256": "fc6ec2bd5ae06a25cda7149d1c3adf82a14c2a89309abd9b69e1c8d501c1a506",
+   "bytes": 8963
+  },
+  {
+   "rel": "scripts/n2_sweep_exclusions.py",
+   "sha256": "26de5860c6260c6df8e1e583c5397014126e8225ec58cfe9cdf21d85d5e9db4b",
+   "bytes": 18258
+  },
+  {
+   "rel": "scripts/n3_harness.py",
+   "sha256": "9f55a8ccbd20219615b660218ac2ac7ba8602242ea62c51bb98adcec0bedb807",
+   "bytes": 15673
+  },
+  {
+   "rel": "scripts/n4a_mine_carrier.py",
+   "sha256": "c7b771362dadeb99ecb1a7b97322ae9158682e2ddffd785caf37fd15169094e5",
+   "bytes": 7351
+  },
+  {
+   "rel": "scripts/n4b_build_carrier_panel.py",
+   "sha256": "b04310bbaad4b1620ac6a227c79d53458dc941ec63db19d8724c93827204ed10",
+   "bytes": 12216
+  },
+  {
+   "rel": "scripts/n4c_register_library.py",
+   "sha256": "ddfb72aa85ae05774783284902d488100c81436bb4863c666cf292e6ee3a438c",
+   "bytes": 5834
+  },
+  {
+   "rel": "scripts/n4d_registry_update.py",
+   "sha256": "d7947bbdd48e1b082b2bb4e49b6f56340c54d710c259a40164e49457ef11425c",
+   "bytes": 8091
+  },
+  {
+   "rel": "scripts/n4e_ledger_heal.py",
+   "sha256": "00dae39b31dc89ed79e1b86698eebee1bbe2a14580fc5dd7c8333a2ab306ab3d",
+   "bytes": 4004
+  },
+  {
+   "rel": "scripts/n5_measure_fix.py",
+   "sha256": "470c0f4bfd07a1588de8c823168dcdcbd8454c01c8d8a5b1999c13dd7b630613",
+   "bytes": 9306
+  },
+  {
+   "rel": "scripts/n6_default_face.py",
+   "sha256": "4a93f3acc2b3eb962cdf01a58b0409a4bc64d59bbcb3e69ace54c604863ab952",
+   "bytes": 7363
+  },
+  {
+   "rel": "scripts/n6b_replay_route.py",
+   "sha256": "1233981b900a0e3831f52298f5649d65cd58fdd7e0b2b66ccb0ca8afe8a06a39",
+   "bytes": 2948
+  },
+  {
+   "rel": "scripts/n7_manifest.py",
+   "sha256": "4ea85c1efc34aed1ac49e031b5b430c46cdeb2b1bdeac32e2b46a2a975c76d06",
+   "bytes": 2366
+  },
+  {
+   "rel": "scripts/n8_gate.py",
+   "sha256": "65ebb93df2ccf47aa9586bde79b760d756eb971e011e185bb9644e4d6355d865",
+   "bytes": 13581
+  },
+  {
+   "rel": "scripts/n9_clone_check.sh",
+   "sha256": "428248bfed9b887ab1498a48ea9e066ac2b7acaa99b44ecffc2831493a590ce5",
+   "bytes": 6568
+  },
+  {
+   "rel": "scripts/netaudit/sitecustomize.py",
+   "sha256": "e99397ea371ddbac4d16c0f3699e5640c83823a935c17c386c29f06d21e20600",
+   "bytes": 1236
+  },
+  {
+   "rel": "scripts/run_all.sh",
+   "sha256": "684e4e546b0abcaedba1185c896369e469cf0bdb3373516a22940c66fc5a83e1",
+   "bytes": 3567
+  },
+  {
+   "rel": "scripts/wave_common.py",
+   "sha256": "f8226dc4aefc799ace536b66748ece67494826031c21242b6e25b44389f37863",
+   "bytes": 18547
+  }
+ ],
+ "excluded_dirs": [
+  "ledgers",
+  "logs",
+  "__pycache__"
+ ],
+ "excluded_files": [
+  "out/MANIFEST.sha256",
+  "out/MANIFEST.json",
+  "out/GATE.json",
+  "out/GATE_READOUT.md",
+  "out/CLEAN_CLONE_CHECK.json"
+ ],
+ "exclusion_reason": "runtime output of this chain (ledgers/logs/gate readouts) and the manifest itself; a file cannot carry its own hash",
+ "note": "the sha256 list also exists as out/MANIFEST.sha256 in sha256sum -c format"
+}

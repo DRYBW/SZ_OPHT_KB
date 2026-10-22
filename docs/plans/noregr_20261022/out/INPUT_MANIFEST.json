@@ -1,0 +1,324 @@
+{
+ "probe": "n0_freeze_inputs.py",
+ "purpose": "freeze the sha256 of every input this wave reads",
+ "recordings": [
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX01_retina_snRNA/annotation_evidence_report.json",
+   "sha256": "5503c9fe5cd2bc401b307f76dbd1fceb6ccb74b2c38bc3bbd577571cfa20e7ee",
+   "bytes": 1245544
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX02_adult_retina/annotation_evidence_report.json",
+   "sha256": "8ffc624832b23deeb5feee98b919eccdc3c61b882a1529d02644eec46e380c93",
+   "bytes": 1502532
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX03_retina_multiome/annotation_evidence_report.json",
+   "sha256": "96fe77a57eed29a37844eacbd9e40e9001e414952cac6fefe6f99a7052f92ed5",
+   "bytes": 945400
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX04_cowan_fovea/annotation_evidence_report.json",
+   "sha256": "fda142e874ebecb144bd399514da874944acc34fb0926bc23399f970b0c2096e",
+   "bytes": 877480
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX04_cowan_organoid/annotation_evidence_report.json",
+   "sha256": "fdd070958ae4192fb1a433e1e5e6cffbb2c9864ad5fa54f3db4167cc472d1bcf",
+   "bytes": 572545
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX04_cowan_periphery/annotation_evidence_report.json",
+   "sha256": "4e643bf19b326fc8f39827107bed2389de5ecbc4823c3051b5fc55d55202a8d1",
+   "bytes": 1042331
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX07_iPSC_organoid_POAG/annotation_evidence_report.json",
+   "sha256": "a0c6293a537a1aac3e601d75dec5ac7f3b7c171e7b9677e85e07ff71585d32e3",
+   "bytes": 618560
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX08_RPE_choroid_scRNA/annotation_evidence_report.json",
+   "sha256": "5821d4d5bebf29304707471980ced9e26efdd42561d9ca902913bcf772067bab",
+   "bytes": 718804
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX08_RPE_choroid_snRNA/annotation_evidence_report.json",
+   "sha256": "1565a5967b32ab5efd69dac046b08fea5ed80e579f862b037aab6c407e503032",
+   "bytes": 543107
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX09_voigt_RPE_choroid/annotation_evidence_report.json",
+   "sha256": "42a8b394ba2b1bbe38c24553f33ada07c46414df42774caa21d85562ec0b017f",
+   "bytes": 573422
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX10_hiPSC_RPE/annotation_evidence_report.json",
+   "sha256": "fd390e3d9c37b61299452a3e0e0a442641d12515ebf437aac0d50fe865ebe169",
+   "bytes": 818132
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX11_posterior_eye_atlas/annotation_evidence_report.json",
+   "sha256": "579972fa5fd1e9b87c56e5e74c72f4e2044e93c16b35136f2a27f33edcfacddb",
+   "bytes": 493159
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX12_ocular_surface_snRNA/annotation_evidence_report.json",
+   "sha256": "16e98143eaeebc861d49dd9f97e261fa066be87820bfe3b732af710661d8f82a",
+   "bytes": 536893
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX13_TM_corneal_scleral/annotation_evidence_report.json",
+   "sha256": "eb0f2f942ac30f47b1c3997d4c32b15de4cda007724aaa4778238b99cf6d10ed",
+   "bytes": 913057
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX13_central_cornea/annotation_evidence_report.json",
+   "sha256": "a80a985fd4c39f800641c33490464b132e02806a016bb7065e3475dad932e66c",
+   "bytes": 350110
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX13_ciliary_body/annotation_evidence_report.json",
+   "sha256": "aad71530cfe1097425d740ca1516211a0db08cdbc9700db9d1db0db0ef7a8fed",
+   "bytes": 486704
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX13_iris/annotation_evidence_report.json",
+   "sha256": "de95f1031c98fa0936c2fdbd71ae8eec051e19b2eeb07c203ae5a0608548ef02",
+   "bytes": 511014
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX13_lens/annotation_evidence_report.json",
+   "sha256": "cadc0425a0a6ec5f220eec7c9d2378b4af1240b18eef886ee77115754d3c864b",
+   "bytes": 214539
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX14_TM_ciliary_snRNA/annotation_evidence_report.json",
+   "sha256": "10f2b6ac085d6db224136ca8b352be3a9bebae9fd8b6360479ebb00bd8e1199f",
+   "bytes": 524543
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX15_optic_nerve_all/annotation_evidence_report.json",
+   "sha256": "ea453ea90754289226be2cfb7a22cf6c017bf2a29fa3d00e6ba920a6e12304c2",
+   "bytes": 1216478
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX16_tabula_sapiens_eye/annotation_evidence_report.json",
+   "sha256": "4162ee6748b75fbc10b4f7948ac4928356633929017404f6bedcf28d506e6f02",
+   "bytes": 1175521
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX17_mouse_retina_all/annotation_evidence_report.json",
+   "sha256": "1a36e7b646b048365bc1871bdbd56e754c5a65f204e3a1ed345c5ca3c26aef54",
+   "bytes": 1236951
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/PRE_GSE199013/annotation_evidence_report.json",
+   "sha256": "6f066734b545ec8d253c49fc0f8b989dccb31b11337f67c42680c7ff1ced9e54",
+   "bytes": 1037721
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/PRE_GSE268630/annotation_evidence_report.json",
+   "sha256": "2c0ce32718439bd04cf3a75cfedf65ee2ec3fe73473f6f35a4b56efe34919b91",
+   "bytes": 1248310
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/PRE_OA-D001/annotation_evidence_report.json",
+   "sha256": "5d56b379d8c4c355defc526a4148f287e225a907e2b9871d0d4710590070f0bd",
+   "bytes": 1209518
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/PRE_OA-D002/annotation_evidence_report.json",
+   "sha256": "66fdc297e72428b8106fce463f9733e1d75fab15da6aabf792e5fa2761f2ae22",
+   "bytes": 640070
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/PRE_OA-D004/annotation_evidence_report.json",
+   "sha256": "3769a3c1e6e8bed79a21b4a9c704d4e77d9731d0c1076a9dc06e106db88f7ac1",
+   "bytes": 756900
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/PRE_OA-D068/annotation_evidence_report.json",
+   "sha256": "325b0592893cb90a739f464ed560b05bd2cd395ccee1a46fe72df036447aa18c",
+   "bytes": 724956
+  }
+ ],
+ "fixed": [
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/ledger_v1/ledger_cluster_level.tsv",
+   "sha256": "9e2a0844ad639e0ba0ed6cccfa3ca7f109cde98d4f91568621cd0e4df85b1427",
+   "bytes": 90704
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/kb_family_crosswalk_v2.json",
+   "sha256": "c704b3a5dc5d5dbf024b6cb101356a4c23eacd9978bba0393c07e81d550e64f8",
+   "bytes": 6997
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/baselines/_tissue_class_crosswalk_v1.json",
+   "sha256": "a06a753af39700541962bf5dc03472635e024130b3f297d57bc1ac2802a5682d",
+   "bytes": 42103
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_cl_alignment_v2_unified.json",
+   "sha256": "48051cdae915b82e6e7812da9b98f93b41f51c5fac14bdb370bd5ccdb969a0a1",
+   "bytes": 20608
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/ontology/cl/releases/2026-06-08/cl-base.obo",
+   "sha256": "c6274fb65cdf740b983a06b74cb678814249d7f8e580c2ec9de54bf204a2b1c7",
+   "bytes": 3757082
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+   "sha256": "c488fc26b615e57addd1d0828b20293d07fb3a7a92baedca5d32a528bc597f47",
+   "bytes": 25497
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/mcp_server/eyekb_core.py",
+   "sha256": "3dadbbbaf2631da0f48760beb95278f5fabd675e6108282c9080fae67a61d736",
+   "bytes": 114098
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+   "sha256": "c4268a6e0655f6d89f913289766f3edc062f116a82a983abbfccd7cee54198d1",
+   "bytes": 200701
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+   "sha256": "139b622082f80a6c3962b7a2532dc8c3fed8a87a92154ccd98491ef4f2540a71",
+   "bytes": 27660
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v12_holefill_increment.json",
+   "sha256": "a9bb4feb86e61360215a403baef74f8eb661fad5d7158de32940c54f52a8475f",
+   "bytes": 35364
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/tests/probe_tool_panel_identity.py",
+   "sha256": "bcf619b252a248bd64de00c3d61cd64d4c39dde9dff864d8b3694ed2de666370",
+   "bytes": 10173
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/pi_asks_20261021/probe_opticnerve_scope_ab.py",
+   "sha256": "f84301d6c41c366a1402a00c90e319a06d99982f8b5684573ed703bdeaa0f500",
+   "bytes": 2509
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/pi_asks_20261021/FINDING_OPTIC_NERVE_REGRESSION_20261022.md",
+   "sha256": "92ea5d44c7a97925bdad54c586da5dd23ec0e7cd31c1f27e5502290d5cbe0311",
+   "bytes": 4809
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/scorer_guard_20261020/tissue_scope/GATE_A3.json",
+   "sha256": "5b77be8f1cc2a657e08ce022d6ca1e2e76062f11b22930603deffd9adab027dc",
+   "bytes": 9021
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/scorer_guard_20261020/tissue_scope/gate_a3_no_collateral.py",
+   "sha256": "e3e1c6c279a65c63acb72c4558fb5b9dc30871d99f7e55575aaca4fe9bdb94d4",
+   "bytes": 6260
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/scorer_guard_20261020/tissue_scope/REPORT_TISSUE_SCOPE_v2.0_DEFAULT_ON.md",
+   "sha256": "a7d5f157f3e8355c12cd2e01e3c310e84ded7d1e9b855d6538d4791813812f88",
+   "bytes": 7044
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/scorer_guard_20261020/PREREG_TISSUE_SCOPE_20261020.md",
+   "sha256": "1b8983ac117da4a275e91ee8bfc86b56e7889af97aa3eefd9a49984a3f3f339c",
+   "bytes": 4996
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/zjy_feedback_20261021/from_oss/cross_dataset_summary.csv",
+   "sha256": "2f90ca79ec1abd14698ebc9dd06659f45013bdca1e5e475b637da1d9f0160e81",
+   "bytes": 1926
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/zjy_feedback_20261021/from_oss/EyeKB更新后重评_20261021.md",
+   "sha256": "069bd08f5dedb076ed649449d031ab8f5ee939611bb18d604c1a29a4dedf00cf",
+   "bytes": 16318
+  }
+ ],
+ "missing": [],
+ "recorded_set": {
+  "volumes": 28,
+  "volume_ids": [
+   "CX01_retina_snRNA",
+   "CX02_adult_retina",
+   "CX03_retina_multiome",
+   "CX04_cowan_fovea",
+   "CX04_cowan_organoid",
+   "CX04_cowan_periphery",
+   "CX07_iPSC_organoid_POAG",
+   "CX08_RPE_choroid_scRNA",
+   "CX08_RPE_choroid_snRNA",
+   "CX09_voigt_RPE_choroid",
+   "CX10_hiPSC_RPE",
+   "CX11_posterior_eye_atlas",
+   "CX12_ocular_surface_snRNA",
+   "CX13_TM_corneal_scleral",
+   "CX13_central_cornea",
+   "CX13_ciliary_body",
+   "CX13_iris",
+   "CX13_lens",
+   "CX14_TM_ciliary_snRNA",
+   "CX15_optic_nerve_all",
+   "CX16_tabula_sapiens_eye",
+   "CX17_mouse_retina_all",
+   "PRE_GSE199013",
+   "PRE_GSE268630",
+   "PRE_OA-D001",
+   "PRE_OA-D002",
+   "PRE_OA-D004",
+   "PRE_OA-D068"
+  ],
+  "clusters": 721,
+  "cells": 1495330,
+  "per_volume": {
+   "CX01_retina_snRNA": 37,
+   "CX02_adult_retina": 48,
+   "CX03_retina_multiome": 31,
+   "CX04_cowan_fovea": 25,
+   "CX04_cowan_organoid": 15,
+   "CX04_cowan_periphery": 33,
+   "CX07_iPSC_organoid_POAG": 21,
+   "CX08_RPE_choroid_scRNA": 20,
+   "CX08_RPE_choroid_snRNA": 18,
+   "CX09_voigt_RPE_choroid": 16,
+   "CX10_hiPSC_RPE": 25,
+   "CX11_posterior_eye_atlas": 20,
+   "CX12_ocular_surface_snRNA": 21,
+   "CX13_TM_corneal_scleral": 29,
+   "CX13_central_cornea": 16,
+   "CX13_ciliary_body": 17,
+   "CX13_iris": 17,
+   "CX13_lens": 11,
+   "CX14_TM_ciliary_snRNA": 17,
+   "CX15_optic_nerve_all": 46,
+   "CX16_tabula_sapiens_eye": 36,
+   "CX17_mouse_retina_all": 36,
+   "PRE_GSE199013": 38,
+   "PRE_GSE268630": 36,
+   "PRE_OA-D001": 32,
+   "PRE_OA-D002": 19,
+   "PRE_OA-D004": 21,
+   "PRE_OA-D068": 20
+  },
+  "per_tissue": {
+   "retina": 370,
+   "rpe": 79,
+   "optic_nerve": 66,
+   "ocular_surface": 94,
+   "trabecular_meshwork": 67,
+   "ciliary_body": 17,
+   "iris": 17,
+   "lens": 11
+  },
+  "per_species": {
+   "human": 685,
+   "mouse": 36
+  },
+  "n_recordings_read": 28
+ }
+}

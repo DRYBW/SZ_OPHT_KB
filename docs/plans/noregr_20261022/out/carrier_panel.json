@@ -1,0 +1,286 @@
+{
+ "probe": "n4b_build_carrier_panel.py",
+ "library": "onfibro_v13",
+ "entry": "Fibroblast",
+ "panel_path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+ "panel_sha256": "d47aa89056d56527642d9064e75757faa6a66dfcea67b1de84b8a2a07e2ff659",
+ "cl_id": "CL:0000057",
+ "cl_label": "fibroblast",
+ "cl_resolves": true,
+ "n_markers": 12,
+ "markers": [
+  "BICC1",
+  "COL1A1",
+  "COL1A2",
+  "COL3A1",
+  "DCN",
+  "EYA2",
+  "FBN1",
+  "FN1",
+  "LUM",
+  "MMP2",
+  "PTGDS",
+  "THY1"
+ ],
+ "admitted": [
+  {
+   "gene": "BICC1",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 3,
+   "papers_fibro_any": 3,
+   "claimed_by": [],
+   "decision": "admit"
+  },
+  {
+   "gene": "COL1A1",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 45,
+   "papers_fibro_any": 47,
+   "claimed_by": [
+    "antseg_v10::trabecular meshwork cell",
+    "membrane::Fibroblast",
+    "membrane::Myofibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "COL1A2",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 13,
+   "papers_fibro_any": 14,
+   "claimed_by": [
+    "membrane::Fibroblast",
+    "membrane::Myofibroblast",
+    "membrane::Pericyte"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "COL3A1",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 10,
+   "papers_fibro_any": 10,
+   "claimed_by": [
+    "membrane::Fibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "DCN",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 19,
+   "papers_fibro_any": 20,
+   "claimed_by": [
+    "antseg_v10::trabecular meshwork cell",
+    "membrane::Fibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "EYA2",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 2,
+   "papers_fibro_any": 2,
+   "claimed_by": [],
+   "decision": "admit"
+  },
+  {
+   "gene": "FBN1",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 2,
+   "papers_fibro_any": 2,
+   "claimed_by": [
+    "antseg_v10::iris pigment epithelial cell",
+    "antseg_v10::non-pigmented ciliary epithelial cell",
+    "antseg_v10::pigmented ciliary epithelial cell",
+    "membrane::Fibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "FN1",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 26,
+   "papers_fibro_any": 28,
+   "claimed_by": [
+    "membrane::Fibroblast",
+    "membrane::Myofibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "LUM",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 10,
+   "papers_fibro_any": 10,
+   "claimed_by": [
+    "membrane::Fibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "MMP2",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 25,
+   "papers_fibro_any": 26,
+   "claimed_by": [
+    "membrane::Fibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "PTGDS",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 2,
+   "papers_fibro_any": 2,
+   "claimed_by": [
+    "antseg_v10::oligodendrocyte",
+    "antseg_v10::trabecular meshwork cell",
+    "membrane::Fibroblast"
+   ],
+   "decision": "admit_retained_identity_gene"
+  },
+  {
+   "gene": "THY1",
+   "in_window": false,
+   "in_shipped_panel": true,
+   "in_assay": true,
+   "papers_fibro_eye": 7,
+   "papers_fibro_any": 8,
+   "claimed_by": [
+    "membrane::Fibroblast",
+    "membrane::Pericyte"
+   ],
+   "decision": "admit_retained_identity_gene"
+  }
+ ],
+ "rejected": [
+  {
+   "gene": "ADAMTSL3",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 1,
+   "papers_fibro_any": 1,
+   "claimed_by": [],
+   "decision": "reject_rule3_insufficient_literature_support"
+  },
+  {
+   "gene": "BNC2",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 0,
+   "papers_fibro_any": 0,
+   "claimed_by": [],
+   "decision": "reject_rule3_insufficient_literature_support"
+  },
+  {
+   "gene": "CEMIP",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 6,
+   "papers_fibro_any": 6,
+   "claimed_by": [
+    "antseg_v10::trabecular meshwork cell"
+   ],
+   "decision": "reject_rule4_gene_already_spent_on_another_family"
+  },
+  {
+   "gene": "FOXP2",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 0,
+   "papers_fibro_any": 0,
+   "claimed_by": [],
+   "decision": "reject_rule3_insufficient_literature_support"
+  },
+  {
+   "gene": "LEPR",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 0,
+   "papers_fibro_any": 0,
+   "claimed_by": [
+    "k9_ocs::Limbus_Sclera_fibroblast_C1"
+   ],
+   "decision": "reject_rule3_insufficient_literature_support"
+  },
+  {
+   "gene": "MIR100HG",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 0,
+   "papers_fibro_any": 0,
+   "claimed_by": [],
+   "decision": "reject_rule3_insufficient_literature_support"
+  },
+  {
+   "gene": "MIR99AHG",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 0,
+   "papers_fibro_any": 0,
+   "claimed_by": [],
+   "decision": "reject_rule3_insufficient_literature_support"
+  },
+  {
+   "gene": "RBMS3",
+   "in_window": true,
+   "in_shipped_panel": false,
+   "in_assay": true,
+   "papers_fibro_eye": 0,
+   "papers_fibro_any": 0,
+   "claimed_by": [],
+   "decision": "reject_rule3_insufficient_literature_support"
+  }
+ ],
+ "motivating_cluster": {
+  "vol": "CX15_optic_nerve_all",
+  "cluster": "31",
+  "window": [
+   "BICC1",
+   "MIR99AHG",
+   "RBMS3",
+   "LEPR",
+   "FOXP2",
+   "ADAMTSL3",
+   "MIR100HG",
+   "BNC2",
+   "EYA2",
+   "CEMIP"
+  ],
+  "shared_with_shipped_panel": [],
+  "shared_with_deepened_panel": [
+   "BICC1",
+   "EYA2"
+  ]
+ }
+}

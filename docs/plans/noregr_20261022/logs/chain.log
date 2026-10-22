@@ -1,0 +1,154 @@
+volumes=28 clusters=721 cells=1495330 missing_inputs=0
+per_tissue: {"retina": 370, "rpe": 79, "optic_nerve": 66, "ocular_surface": 94, "trabecular_meshwork": 67, "ciliary_body": 17, "iris": 17, "lens": 11}
+per_species: {"human": 685, "mouse": 36}
+wrote /home/ubuntu/EYEKB_REPO/docs/plans/noregr_20261022/out/INPUT_MANIFEST.json
+== source-of-truth probe (rc=0)
+clusters replayed: 46
+clusters whose answer changed ON vs OFF: 2 ['12', '31']
+
+ cl  cells  ref                          fam        | OFF top1(n) -> ON top1(n)
+ 12   3810  pericyte                     pericyte   | RGC(1) -> RGC(1)
+ 31   1822  fibroblast                   fibro      | Limbus_Sclera_fibroblast_C(1) -> None(None)
+
+cells in changed clusters: 5632 / 71997
+
+== scope A/B recomputed on 46 clusters / 71997 cells: 2 changed
+   cl 12  n=3810   ref=pericyte                 off=RGC                            -> on=RGC
+   cl 31  n=1822   ref=fibroblast               off=Limbus_Sclera_fibroblast_C1    -> on=None
+
+== carrier losses: [{"cluster": "12", "carrier_lost": null, "loss_share_pct": 5.292}, {"cluster": "31", "carrier_lost": "Limbus_Sclera_fibroblast_C1", "loss_share_pct": 2.531}]
+== drop arithmetic: {"cells_total": 71997, "recorded_consistent_cells": 32519, "recorded_consistent_pct": 45.167, "carrier_loss_cells": 1822, "after_cells": 30697, "after_pct": 42.636, "delta_pp": -2.531, "carrier_loss_share_of_volume_pct": 2.531}
+== cluster 31: {"n_cells": 1822, "genes_recorded": ["BICC1", "MIR99AHG", "RBMS3", "LEPR", "FOXP2", "ADAMTSL3", "MIR100HG", "BNC2", "EYA2", "CEMIP"], "window_10": ["BICC1", "MIR99AHG", "RBMS3", "LEPR", "FOXP2", "ADAMTSL3", "MIR100HG", "BNC2", "EYA2", "CEMIP"], "ref_cell_type": "fibroblast", "ref_family": "fibro", "fibroblast_panels": {"markers_membrane_v1.json::Fibroblast": 10, "markers_membrane_v1.json::Myofibroblast": 12, "markers_k9_ocs_increment.json::Limbus_Sclera_fibroblast_C1": 3}, "shared_with_panels": {"markers_membrane_v1.json::Fibroblast": [], "markers_membrane_v1.json::Myofibroblast": [], "markers_k9_ocs_increment.json::Limbus_Sclera_fibroblast_C1": ["LEPR"]}, "off_top": "Limbus_Sclera_fibroblast_C1", "off_shared_genes": ["LEPR"], "on_top": null, "on_excluded": ["Limbus_Sclera_fibroblast_C1", "trabecular meshwork cell"]}
+== CORRECTION: {"narrative_claim": "the legitimate generic Fibroblast panel shares only 1 gene with its top-10 window (below the >=2 admission bar)", "measured_max_shared_with_any_fibroblast_named_panel": 1, "measured": {"markers_membrane_v1.json::Fibroblast": [], "markers_membrane_v1.json::Myofibroblast": [], "markers_k9_ocs_increment.json::Limbus_Sclera_fibroblast_C1": ["LEPR"]}, "reading": "correction: the generic panel shares 1 gene(s), not 1"}
+== tester row: {"id": "CX15_optic_nerve_all", "clusters": "46", "cells": "71997", "consistent_pct": "41.9", "related_pct": "0.0", "inconsistent_pct": "31.9", "mixed_pct": "26.2", "consistent_cells": "30147", "n_candidates": "35", "strong_candidate_clusters": "20", "strong_consistent_pct": "67.9", "source_cells": ""}
+== tester check: {"consistent_pct_reported": "41.9", "consistent_cells_reported": "30147", "cells_reported": "71997", "implied_pre_pct": 44.403, "lost_cells_used": 1822}
+== ruler selfcheck: {"agree": 542, "differ": 0, "examples": []}
+== ruler provenance: {"labels_from_recording": 33, "labels_from_crosswalk": 27, "cl_terms_loaded": 3335, "class_labels_with_cl": 61, "truth_labels_resolvable_to_cl": 3335}
+wrote /home/ubuntu/EYEKB_REPO/docs/plans/noregr_20261022/out/REPRODUCE.json
+== A. row audit: 207 rows over 12 tissues, 2 live defects
+   LIVE optic_nerve          Limbus_Sclera_fibroblast_C1        implicated=2 carrier_loss=2 cells=2926 (antseg_row=False)
+   LIVE retina               Conj_epithelium_basal              implicated=5 carrier_loss=1 cells=2823 (antseg_row=False)
+
+== B. exclusion-table harm line (scope ON vs OFF)
+   changed top-1: 85 clusters / 146904 cells
+   legacy ruler  collateral (was ok -> not ok): 0
+   R_fam ruler   collateral (was ok -> not ok): 7
+      FALL CX16_tabula_sapiens_eye    c12   n=3692   retina           Conj_epithelium_basal          -> Mono_Classical (consistent -> inconsistent)
+      FALL CX16_tabula_sapiens_eye    c11   n=2823   retina           Conj_epithelium_basal          -> None       (consistent -> mixed)
+      FALL CX15_optic_nerve_all       c31   n=1822   optic_nerve      Limbus_Sclera_fibroblast_C1    -> None       (consistent -> mixed)
+      FALL CX13_TM_corneal_scleral    c3    n=1430   trabecular_meshwork Conj_epithelium_basal          -> conjunctival epithelial cell (consistent -> inconsistent)
+      FALL CX16_tabula_sapiens_eye    c15   n=1227   retina           Conj_epithelium_basal          -> Mono_Classical (consistent -> inconsistent)
+      FALL CX11_posterior_eye_atlas   c4    n=1104   optic_nerve      Limbus_Sclera_fibroblast_C1    -> None       (consistent -> mixed)
+      FALL CX16_tabula_sapiens_eye    c13   n=19     retina           Conj_epithelium_suprabasal     -> Mono_Classical (consistent -> inconsistent)
+   per tissue (legacy vs corrected delta):
+      ciliary_body         cl=17   legacy +0.000pp  R_fam +0.000pp  changed=7
+      iris                 cl=17   legacy +0.000pp  R_fam +0.000pp  changed=0
+      lens                 cl=11   legacy +0.000pp  R_fam +0.000pp  changed=0
+      optic_nerve          cl=66   legacy +0.000pp  R_fam -2.309pp  changed=4
+      retina               cl=370  legacy +0.000pp  R_fam -1.162pp  changed=8
+      rpe                  cl=79   legacy +0.000pp  R_fam +0.000pp  changed=0
+      trabecular_meshwork  cl=67   legacy +0.000pp  R_fam -0.009pp  changed=33
+      ocular_surface       cl=94   legacy +0.279pp  R_fam +0.572pp  changed=33
+
+== B2. same change, the declarations the external tester finally used
+   changed top-1: 91 clusters; corrected collateral: 3
+      FALL CX15_optic_nerve_all       c31   n=1822   optic_nerve      Limbus_Sclera_fibroblast_C1    -> None       (consistent -> mixed)
+      FALL CX13_TM_corneal_scleral    c3    n=1430   trabecular_meshwork Conj_epithelium_basal          -> conjunctival epithelial cell (consistent -> inconsistent)
+      FALL CX16_tabula_sapiens_eye    c7    n=582    ocular_surface   Rod                            -> None       (related -> mixed)
+      optic_nerve          cl=46   R_fam -2.530pp  changed=2
+      trabecular_meshwork  cl=67   R_fam -0.009pp  changed=33
+      ciliary_body         cl=17   R_fam +0.000pp  changed=7
+      iris                 cl=17   R_fam +0.000pp  changed=0
+      lens                 cl=11   R_fam +0.000pp  changed=0
+      retina               cl=334  R_fam +0.000pp  changed=0
+      rpe                  cl=79   R_fam +0.000pp  changed=0
+      ocular_surface       cl=150  R_fam +1.125pp  changed=49
+
+== C. increment harm line (panels reachable, exclusions withdrawn)
+      retina               cl=370  changed=0    consistent +0.000pp  falls=0  abstain->ans=0 ans->abstain=0
+      ocular_surface       cl=94   changed=27   consistent -2.518pp  falls=1  abstain->ans=15 ans->abstain=0
+      rpe                  cl=79   changed=0    consistent +0.000pp  falls=0  abstain->ans=0 ans->abstain=0
+      trabecular_meshwork  cl=67   changed=14   consistent +0.547pp  falls=1  abstain->ans=7 ans->abstain=0
+      optic_nerve          cl=66   changed=0    consistent +0.000pp  falls=0  abstain->ans=0 ans->abstain=0
+      ciliary_body         cl=17   changed=7    consistent +0.000pp  falls=0  abstain->ans=3 ans->abstain=0
+      iris                 cl=17   changed=1    consistent +0.000pp  falls=0  abstain->ans=0 ans->abstain=0
+      lens                 cl=11   changed=1    consistent +0.000pp  falls=0  abstain->ans=1 ans->abstain=0
+
+== prior claim: {"claim": "antseg_fill_20261020 recorded the harm line as '10/197 retinal clusters changed their top-1'", "why_not_reproducible_verbatim": "the recorded set's retina-declared subset has 370 clusters, not 197; no subset of size 197 is defined by the recorded declarations, so the denominator cannot be reconstructed from the frozen inputs", "reproducible_analogue": {"retina_declared_clusters": 370, "retina_changed_top1": 0}}
+wrote /home/ubuntu/EYEKB_REPO/docs/plans/noregr_20261022/out/SWEEP_EXCLUSIONS.json
+   unattributed drop      verdict=FAIL             expected=FAIL             OK
+   attributed drop        verdict=PASS_ATTRIBUTED  expected=PASS_ATTRIBUTED  OK
+   no-op change           verdict=PASS             expected=PASS             OK
+   acceptance-rule self-test verdict: PASS
+[vocab] 22/22 candidates are measurable symbols in the assay
+[corpus] chunks=244877 papers=3902 fibro_chunks=3899 eye_fibro_chunks=211
+   COL1A1     assay=True  window=False fibro_eye=45   fibro_any=47  
+   FN1        assay=True  window=False fibro_eye=26   fibro_any=28  
+   MMP2       assay=True  window=False fibro_eye=25   fibro_any=26  
+   DCN        assay=True  window=False fibro_eye=19   fibro_any=20  
+   COL1A2     assay=True  window=False fibro_eye=13   fibro_any=14  
+   COL3A1     assay=True  window=False fibro_eye=10   fibro_any=10  
+   LUM        assay=True  window=False fibro_eye=10   fibro_any=10  
+   THY1       assay=True  window=False fibro_eye=7    fibro_any=8   
+   CEMIP      assay=True  window=True  fibro_eye=6    fibro_any=6   
+   BICC1      assay=True  window=True  fibro_eye=3    fibro_any=3   
+   EYA2       assay=True  window=True  fibro_eye=2    fibro_any=2   
+   FBN1       assay=True  window=False fibro_eye=2    fibro_any=2   
+   LAMA2      assay=True  window=False fibro_eye=2    fibro_any=2   
+   PTGDS      assay=True  window=False fibro_eye=2    fibro_any=2   
+   ADAMTSL3   assay=True  window=True  fibro_eye=1    fibro_any=1   
+   DPT        assay=True  window=False fibro_eye=1    fibro_any=2   
+   BNC2       assay=True  window=True  fibro_eye=0    fibro_any=0   
+   FOXP2      assay=True  window=True  fibro_eye=0    fibro_any=0   
+   LEPR       assay=True  window=True  fibro_eye=0    fibro_any=0   
+   MIR100HG   assay=True  window=True  fibro_eye=0    fibro_any=0   
+   MIR99AHG   assay=True  window=True  fibro_eye=0    fibro_any=0   
+   RBMS3      assay=True  window=True  fibro_eye=0    fibro_any=0   
+wrote /home/ubuntu/EYEKB_REPO/docs/plans/noregr_20261022/out/carrier_lit.json
+panel: /home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json sha256: d47aa89056d56527642d9064e75757faa6a66dfcea67b1de84b8a2a07e2ff659
+CL: CL:0000057 -> fibroblast resolves: True
+markers (12): ['BICC1', 'COL1A1', 'COL1A2', 'COL3A1', 'DCN', 'EYA2', 'FBN1', 'FN1', 'LUM', 'MMP2', 'PTGDS', 'THY1']
+admitted: ['BICC1', 'COL1A1', 'COL1A2', 'COL3A1', 'DCN', 'EYA2', 'FBN1', 'FN1', 'LUM', 'MMP2', 'PTGDS', 'THY1']
+rejected:
+   ADAMTSL3   reject_rule3_insufficient_literature_support   p_eye=1   p_any=1   claims=[]
+   BNC2       reject_rule3_insufficient_literature_support   p_eye=0   p_any=0   claims=[]
+   CEMIP      reject_rule4_gene_already_spent_on_another_family p_eye=6   p_any=6   claims=['antseg_v10::trabecular meshwork cell']
+   FOXP2      reject_rule3_insufficient_literature_support   p_eye=0   p_any=0   claims=[]
+   LEPR       reject_rule3_insufficient_literature_support   p_eye=0   p_any=0   claims=['k9_ocs::Limbus_Sclera_fibroblast_C1']
+   MIR100HG   reject_rule3_insufficient_literature_support   p_eye=0   p_any=0   claims=[]
+   MIR99AHG   reject_rule3_insufficient_literature_support   p_eye=0   p_any=0   claims=[]
+   RBMS3      reject_rule3_insufficient_literature_support   p_eye=0   p_any=0   claims=[]
+motivating window shared: shipped=[]  deepened=['BICC1', 'EYA2']
+wrote /home/ubuntu/EYEKB_REPO/docs/plans/noregr_20261022/out/carrier_panel.json
+{
+ "probe": "n4c_register_library.py",
+ "file": "mcp_server/eyekb_core.py",
+ "status": "ALREADY_APPLIED (idempotent skip; the registration is on disk)",
+ "library": "onfibro_v13",
+ "whitelist": "empty by design",
+ "sha256": "3dadbbbaf2631da0f48760beb95278f5fabd675e6108282c9080fae67a61d736"
+}
+{
+ "probe": "n4d_registry_update.py",
+ "registry": "docs/W3_PIPELINE_REGISTRY.tsv",
+ "status": "ALREADY_APPLIED (idempotent skip; both rows already match the live bytes)",
+ "core_row_sha256": "3dadbbbaf2631da0f48760beb95278f5fabd675e6108282c9080fae67a61d736",
+ "new_row_sha256": "d47aa89056d56527642d9064e75757faa6a66dfcea67b1de84b8a2a07e2ff659",
+ "registry_sha256": "0812f5b3c3a1dc5aa2a2463c56dfa3b0761e607853e828e406345597364612fe"
+}
+[R1_narrowing_recorded_decls] running...
+   verdict=FAIL changed=85/146904 cells  CX15/c31: Limbus_Sclera_fibroblast_C1(1) -> None(None) [consistent -> mixed]
+[R2_fix_recorded_decls] running...
+   verdict=PASS changed=45/111247 cells  CX15/c31: None(None) -> onfibro_v13::Fibroblast(2) [mixed -> consistent]
+[R3_fix_tester_decls] running...
+   verdict=PASS changed=45/111247 cells  CX15/c31: None(None) -> onfibro_v13::Fibroblast(2) [mixed -> consistent]
+[R4_narrowing_plus_fix_tester_decls] running...
+   verdict=PASS changed=126/258425 cells  CX15/c31: Limbus_Sclera_fibroblast_C1(1) -> onfibro_v13::Fibroblast(2) [consistent -> consistent]
+G4 verdict: PASS
+wrote /home/ubuntu/EYEKB_REPO/docs/plans/noregr_20261022/out/FIX_MEASUREMENT.json
+   core restored == snapshot: True  parent core verified in place: True
+   clusters  n=721 identical=True parent_md5=156fb378081df45cd037d0af5d0855d1 current_md5=156fb378081df45cd037d0af5d0855d1 differing=0
+   battery   n=229 identical=True parent_md5=91db2db1d071080b67bfd3d230024e51 current_md5=91db2db1d071080b67bfd3d230024e51 differing=0
+   tool-panel probe unchanged=True digests_identical=True parent={'legacy_panel': 'e8e6c26351cd9a1d42fa2e7cb6a83f23', 'full_panel': '3f1f52cb62915f5ad2801962aa523d36'} current={'legacy_panel': 'e8e6c26351cd9a1d42fa2e7cb6a83f23', 'full_panel': '3f1f52cb62915f5ad2801962aa523d36'}
+   G5 verdict: PASS
+wrote /home/ubuntu/EYEKB_REPO/docs/plans/noregr_20261022/out/DEFAULT_FACE.json

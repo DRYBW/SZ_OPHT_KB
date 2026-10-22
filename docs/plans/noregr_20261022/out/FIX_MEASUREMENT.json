@@ -1,0 +1,525 @@
+{
+ "probe": "n5_measure_fix.py",
+ "library": "onfibro_v13",
+ "runs": {
+  "R1_narrowing_recorded_decls": {
+   "name": "R1 exclusion-table narrowing (scope ON vs OFF), recorded declarations",
+   "outdir": "out/harness/R1_narrowing_recorded_decls",
+   "ruling": {
+    "verdict": "FAIL",
+    "datasets_checked": 24,
+    "drops": {
+     "CX11_posterior_eye_atlas": {
+      "delta_pp": -2.019,
+      "before_pct": 23.179,
+      "after_pct": 21.16,
+      "attribution": {},
+      "unattributed": [
+       "cluster",
+       "cause",
+       "row_or_panel"
+      ],
+      "cells_lost": {
+       "consistent->inconsistent": 6368,
+       "consistent->mixed": 5749,
+       "inconsistent->mixed": 18814
+      }
+     },
+     "CX13_TM_corneal_scleral": {
+      "delta_pp": -0.037,
+      "before_pct": 39.036,
+      "after_pct": 38.999,
+      "attribution": {},
+      "unattributed": [
+       "cluster",
+       "cause",
+       "row_or_panel"
+      ],
+      "cells_lost": {
+       "consistent->inconsistent": 6368,
+       "consistent->mixed": 5749,
+       "inconsistent->mixed": 18814
+      }
+     },
+     "CX15_optic_nerve_all": {
+      "delta_pp": -2.53,
+      "before_pct": 44.403,
+      "after_pct": 41.873,
+      "attribution": {},
+      "unattributed": [
+       "cluster",
+       "cause",
+       "row_or_panel"
+      ],
+      "cells_lost": {
+       "consistent->inconsistent": 6368,
+       "consistent->mixed": 5749,
+       "inconsistent->mixed": 18814
+      }
+     },
+     "CX16_tabula_sapiens_eye": {
+      "delta_pp": -24.4,
+      "before_pct": 42.452,
+      "after_pct": 18.052,
+      "attribution": {},
+      "unattributed": [
+       "cluster",
+       "cause",
+       "row_or_panel"
+      ],
+      "cells_lost": {
+       "consistent->inconsistent": 6368,
+       "consistent->mixed": 5749,
+       "inconsistent->mixed": 18814
+      }
+     }
+    },
+    "unattributed_drops": [
+     "CX11_posterior_eye_atlas",
+     "CX13_TM_corneal_scleral",
+     "CX15_optic_nerve_all",
+     "CX16_tabula_sapiens_eye"
+    ],
+    "rule": "a change may not be reported as complete while any dataset's cell-weighted consistent share has fallen, unless the drop is attributed to a named cluster + named cause + named row/panel"
+   },
+   "overall_before": {
+    "n_clusters": 721,
+    "n_cells": 1495330,
+    "share_pct": {
+     "consistent": 41.498,
+     "related": 16.45,
+     "inconsistent": 21.591,
+     "mixed": 20.461
+    },
+    "clusters": {
+     "consistent": 294,
+     "related": 82,
+     "inconsistent": 192,
+     "mixed": 153
+    },
+    "cells": {
+     "consistent": 620526,
+     "related": 245987,
+     "inconsistent": 322854,
+     "mixed": 305963
+    }
+   },
+   "overall_after": {
+    "n_clusters": 721,
+    "n_cells": 1495330,
+    "share_pct": {
+     "consistent": 40.852,
+     "related": 16.936,
+     "inconsistent": 20.108,
+     "mixed": 22.104
+    },
+    "clusters": {
+     "consistent": 290,
+     "related": 88,
+     "inconsistent": 173,
+     "mixed": 170
+    },
+    "cells": {
+     "consistent": 610879,
+     "related": 253247,
+     "inconsistent": 300678,
+     "mixed": 330526
+    }
+   },
+   "overall_delta_pp": {
+    "consistent": -0.646,
+    "related": 0.486,
+    "inconsistent": -1.483,
+    "mixed": 1.643
+   },
+   "changed_clusters": 85,
+   "changed_cells": 146904,
+   "per_dataset_delta_consistent_pp": {
+    "CX01_retina_snRNA": 0.0,
+    "CX02_adult_retina": 0.0,
+    "CX03_retina_multiome": 0.0,
+    "CX04_cowan_fovea": 0.0,
+    "CX04_cowan_organoid": 0.0,
+    "CX04_cowan_periphery": 0.0,
+    "CX07_iPSC_organoid_POAG": 0.0,
+    "CX08_RPE_choroid_scRNA": 0.0,
+    "CX08_RPE_choroid_snRNA": 0.0,
+    "CX09_voigt_RPE_choroid": 0.0,
+    "CX10_hiPSC_RPE": 0.0,
+    "CX11_posterior_eye_atlas": -2.019,
+    "CX12_ocular_surface_snRNA": 1.385,
+    "CX13_TM_corneal_scleral": -0.037,
+    "CX13_central_cornea": 1.513,
+    "CX13_ciliary_body": 0.0,
+    "CX13_iris": 0.0,
+    "CX13_lens": 0.0,
+    "CX14_TM_ciliary_snRNA": 0.0,
+    "CX15_optic_nerve_all": -2.53,
+    "CX16_tabula_sapiens_eye": -24.4,
+    "CX17_mouse_retina_all": 0.0,
+    "PRE_GSE199013": 0.0,
+    "PRE_GSE268630": 0.0,
+    "PRE_OA-D001": 0.0,
+    "PRE_OA-D002": 0.0,
+    "PRE_OA-D004": 0.0,
+    "PRE_OA-D068": 0.0
+   },
+   "motivating_cluster": {
+    "vol": "CX15_optic_nerve_all",
+    "cluster": "31",
+    "n_cells": 1822,
+    "ref_cell_type": "fibroblast",
+    "ref_family": "fibro",
+    "before_top": "Limbus_Sclera_fibroblast_C1",
+    "before_n_shared": 1,
+    "before_excluded": [],
+    "after_top": null,
+    "after_n_shared": null,
+    "after_library": null,
+    "after_grade": "mixed",
+    "before_grade": "consistent"
+   }
+  },
+  "R2_fix_recorded_decls": {
+   "name": "R2 carrier fix ON (`onfibro_v13` merged), recorded declarations",
+   "outdir": "out/harness/R2_fix_recorded_decls",
+   "ruling": {
+    "verdict": "PASS",
+    "datasets_checked": 28,
+    "drops": {},
+    "worst_delta_pp": 0.0,
+    "rule": "a change may not be reported as complete while any dataset's cell-weighted consistent share has fallen, unless the drop is attributed to a named cluster + named cause + named row/panel"
+   },
+   "overall_before": {
+    "n_clusters": 721,
+    "n_cells": 1495330,
+    "share_pct": {
+     "consistent": 40.852,
+     "related": 16.936,
+     "inconsistent": 20.108,
+     "mixed": 22.104
+    },
+    "clusters": {
+     "consistent": 290,
+     "related": 88,
+     "inconsistent": 173,
+     "mixed": 170
+    },
+    "cells": {
+     "consistent": 610879,
+     "related": 253247,
+     "inconsistent": 300678,
+     "mixed": 330526
+    }
+   },
+   "overall_after": {
+    "n_clusters": 721,
+    "n_cells": 1495330,
+    "share_pct": {
+     "consistent": 42.544,
+     "related": 16.936,
+     "inconsistent": 19.843,
+     "mixed": 20.676
+    },
+    "clusters": {
+     "consistent": 297,
+     "related": 88,
+     "inconsistent": 171,
+     "mixed": 165
+    },
+    "cells": {
+     "consistent": 636179,
+     "related": 253247,
+     "inconsistent": 296724,
+     "mixed": 309180
+    }
+   },
+   "overall_delta_pp": {
+    "consistent": 1.692,
+    "related": 0.0,
+    "inconsistent": -0.265,
+    "mixed": -1.428
+   },
+   "changed_clusters": 45,
+   "changed_cells": 111247,
+   "per_dataset_delta_consistent_pp": {
+    "CX01_retina_snRNA": 0.0,
+    "CX02_adult_retina": 0.0,
+    "CX03_retina_multiome": 0.0,
+    "CX04_cowan_fovea": 0.0,
+    "CX04_cowan_organoid": 0.0,
+    "CX04_cowan_periphery": 0.0,
+    "CX07_iPSC_organoid_POAG": 0.0,
+    "CX08_RPE_choroid_scRNA": 0.0,
+    "CX08_RPE_choroid_snRNA": 5.48,
+    "CX09_voigt_RPE_choroid": 0.0,
+    "CX10_hiPSC_RPE": 0.0,
+    "CX11_posterior_eye_atlas": 11.323,
+    "CX12_ocular_surface_snRNA": 0.0,
+    "CX13_TM_corneal_scleral": 2.307,
+    "CX13_central_cornea": 0.0,
+    "CX13_ciliary_body": 0.0,
+    "CX13_iris": 0.0,
+    "CX13_lens": 0.0,
+    "CX14_TM_ciliary_snRNA": 12.123,
+    "CX15_optic_nerve_all": 2.53,
+    "CX16_tabula_sapiens_eye": 0.0,
+    "CX17_mouse_retina_all": 0.0,
+    "PRE_GSE199013": 6.517,
+    "PRE_GSE268630": 0.0,
+    "PRE_OA-D001": 0.0,
+    "PRE_OA-D002": 0.0,
+    "PRE_OA-D004": 0.0,
+    "PRE_OA-D068": 0.0
+   },
+   "motivating_cluster": {
+    "vol": "CX15_optic_nerve_all",
+    "cluster": "31",
+    "n_cells": 1822,
+    "ref_cell_type": "fibroblast",
+    "ref_family": "fibro",
+    "before_top": null,
+    "before_n_shared": null,
+    "before_excluded": [
+     "Limbus_Sclera_fibroblast_C1",
+     "trabecular meshwork cell"
+    ],
+    "after_top": "onfibro_v13::Fibroblast",
+    "after_n_shared": 2,
+    "after_library": "markers_v13_onfibro_increment.json",
+    "after_grade": "consistent",
+    "before_grade": "mixed"
+   }
+  },
+  "R3_fix_tester_decls": {
+   "name": "R3 carrier fix ON, the declarations the external tester finally used",
+   "outdir": "out/harness/R3_fix_tester_decls",
+   "ruling": {
+    "verdict": "PASS",
+    "datasets_checked": 28,
+    "drops": {},
+    "worst_delta_pp": 0.0,
+    "rule": "a change may not be reported as complete while any dataset's cell-weighted consistent share has fallen, unless the drop is attributed to a named cluster + named cause + named row/panel"
+   },
+   "overall_before": {
+    "n_clusters": 721,
+    "n_cells": 1495330,
+    "share_pct": {
+     "consistent": 41.061,
+     "related": 17.232,
+     "inconsistent": 19.219,
+     "mixed": 22.488
+    },
+    "clusters": {
+     "consistent": 293,
+     "related": 89,
+     "inconsistent": 164,
+     "mixed": 175
+    },
+    "cells": {
+     "consistent": 613999,
+     "related": 257671,
+     "inconsistent": 287393,
+     "mixed": 336267
+    }
+   },
+   "overall_after": {
+    "n_clusters": 721,
+    "n_cells": 1495330,
+    "share_pct": {
+     "consistent": 42.679,
+     "related": 17.232,
+     "inconsistent": 18.955,
+     "mixed": 21.134
+    },
+    "clusters": {
+     "consistent": 299,
+     "related": 89,
+     "inconsistent": 162,
+     "mixed": 171
+    },
+    "cells": {
+     "consistent": 638195,
+     "related": 257671,
+     "inconsistent": 283439,
+     "mixed": 316025
+    }
+   },
+   "overall_delta_pp": {
+    "consistent": 1.618,
+    "related": 0.0,
+    "inconsistent": -0.264,
+    "mixed": -1.354
+   },
+   "changed_clusters": 45,
+   "changed_cells": 111247,
+   "per_dataset_delta_consistent_pp": {
+    "CX01_retina_snRNA": 0.0,
+    "CX02_adult_retina": 0.0,
+    "CX03_retina_multiome": 0.0,
+    "CX04_cowan_fovea": 0.0,
+    "CX04_cowan_organoid": 0.0,
+    "CX04_cowan_periphery": 0.0,
+    "CX07_iPSC_organoid_POAG": 0.0,
+    "CX08_RPE_choroid_scRNA": 0.0,
+    "CX08_RPE_choroid_snRNA": 5.48,
+    "CX09_voigt_RPE_choroid": 0.0,
+    "CX10_hiPSC_RPE": 0.0,
+    "CX11_posterior_eye_atlas": 9.304,
+    "CX12_ocular_surface_snRNA": 0.0,
+    "CX13_TM_corneal_scleral": 2.307,
+    "CX13_central_cornea": 0.0,
+    "CX13_ciliary_body": 0.0,
+    "CX13_iris": 0.0,
+    "CX13_lens": 0.0,
+    "CX14_TM_ciliary_snRNA": 12.123,
+    "CX15_optic_nerve_all": 2.53,
+    "CX16_tabula_sapiens_eye": 0.0,
+    "CX17_mouse_retina_all": 0.0,
+    "PRE_GSE199013": 6.517,
+    "PRE_GSE268630": 0.0,
+    "PRE_OA-D001": 0.0,
+    "PRE_OA-D002": 0.0,
+    "PRE_OA-D004": 0.0,
+    "PRE_OA-D068": 0.0
+   },
+   "motivating_cluster": {
+    "vol": "CX15_optic_nerve_all",
+    "cluster": "31",
+    "n_cells": 1822,
+    "ref_cell_type": "fibroblast",
+    "ref_family": "fibro",
+    "before_top": null,
+    "before_n_shared": null,
+    "before_excluded": [
+     "Limbus_Sclera_fibroblast_C1",
+     "trabecular meshwork cell"
+    ],
+    "after_top": "onfibro_v13::Fibroblast",
+    "after_n_shared": 2,
+    "after_library": "markers_v13_onfibro_increment.json",
+    "after_grade": "consistent",
+    "before_grade": "mixed"
+   }
+  },
+  "R4_narrowing_plus_fix_tester_decls": {
+   "name": "R4 narrowing + carrier fix, the tester's final declarations",
+   "outdir": "out/harness/R4_narrowing_plus_fix_tester_decls",
+   "ruling": {
+    "verdict": "PASS",
+    "datasets_checked": 28,
+    "drops": {},
+    "worst_delta_pp": 0.0,
+    "rule": "a change may not be reported as complete while any dataset's cell-weighted consistent share has fallen, unless the drop is attributed to a named cluster + named cause + named row/panel"
+   },
+   "overall_before": {
+    "n_clusters": 721,
+    "n_cells": 1495330,
+    "share_pct": {
+     "consistent": 40.98,
+     "related": 16.785,
+     "inconsistent": 21.774,
+     "mixed": 20.461
+    },
+    "clusters": {
+     "consistent": 291,
+     "related": 84,
+     "inconsistent": 193,
+     "mixed": 153
+    },
+    "cells": {
+     "consistent": 612784,
+     "related": 250993,
+     "inconsistent": 325590,
+     "mixed": 305963
+    }
+   },
+   "overall_after": {
+    "n_clusters": 721,
+    "n_cells": 1495330,
+    "share_pct": {
+     "consistent": 42.679,
+     "related": 17.232,
+     "inconsistent": 18.955,
+     "mixed": 21.134
+    },
+    "clusters": {
+     "consistent": 299,
+     "related": 89,
+     "inconsistent": 162,
+     "mixed": 171
+    },
+    "cells": {
+     "consistent": 638195,
+     "related": 257671,
+     "inconsistent": 283439,
+     "mixed": 316025
+    }
+   },
+   "overall_delta_pp": {
+    "consistent": 1.699,
+    "related": 0.447,
+    "inconsistent": -2.819,
+    "mixed": 0.673
+   },
+   "changed_clusters": 126,
+   "changed_cells": 258425,
+   "per_dataset_delta_consistent_pp": {
+    "CX01_retina_snRNA": 0.0,
+    "CX02_adult_retina": 0.0,
+    "CX03_retina_multiome": 0.0,
+    "CX04_cowan_fovea": 0.0,
+    "CX04_cowan_organoid": 0.0,
+    "CX04_cowan_periphery": 0.0,
+    "CX07_iPSC_organoid_POAG": 0.0,
+    "CX08_RPE_choroid_scRNA": 0.0,
+    "CX08_RPE_choroid_snRNA": 5.48,
+    "CX09_voigt_RPE_choroid": 0.0,
+    "CX10_hiPSC_RPE": 0.0,
+    "CX11_posterior_eye_atlas": 12.955,
+    "CX12_ocular_surface_snRNA": 1.385,
+    "CX13_TM_corneal_scleral": 2.27,
+    "CX13_central_cornea": 1.513,
+    "CX13_ciliary_body": 0.0,
+    "CX13_iris": 0.0,
+    "CX13_lens": 0.0,
+    "CX14_TM_ciliary_snRNA": 12.123,
+    "CX15_optic_nerve_all": 0.0,
+    "CX16_tabula_sapiens_eye": 0.0,
+    "CX17_mouse_retina_all": 0.0,
+    "PRE_GSE199013": 6.517,
+    "PRE_GSE268630": 0.0,
+    "PRE_OA-D001": 0.0,
+    "PRE_OA-D002": 0.0,
+    "PRE_OA-D004": 0.0,
+    "PRE_OA-D068": 0.0
+   },
+   "motivating_cluster": {
+    "vol": "CX15_optic_nerve_all",
+    "cluster": "31",
+    "n_cells": 1822,
+    "ref_cell_type": "fibroblast",
+    "ref_family": "fibro",
+    "before_top": "Limbus_Sclera_fibroblast_C1",
+    "before_n_shared": 1,
+    "before_excluded": [],
+    "after_top": "onfibro_v13::Fibroblast",
+    "after_n_shared": 2,
+    "after_library": "markers_v13_onfibro_increment.json",
+    "after_grade": "consistent",
+    "before_grade": "consistent"
+   }
+  }
+ },
+ "G4": {
+  "a_motivating_cluster_answered_family_consistently": true,
+  "b_no_dataset_consistent_share_falls_recorded_decls": true,
+  "b_no_dataset_consistent_share_falls_tester_decls": true,
+  "falls_recorded_decls": {},
+  "falls_tester_decls": {},
+  "c_every_changed_cluster_listed": true,
+  "net_overall_delta_pp_recorded_decls": 1.692,
+  "net_overall_delta_pp_tester_decls": 1.618,
+  "verdict": "PASS"
+ }
+}
