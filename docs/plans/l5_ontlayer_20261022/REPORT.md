@@ -267,7 +267,64 @@ the committed values are in `docs/RELEASE_IDENTITY.json` and are re-taken in the
 
 ---
 
-## What this does not claim
+### The gate chain in a clean clone
+
+The chain was run a second time in a **clean clone**, at a path whose name contains spaces, with the
+author tree not reachable from the working directory:
+
+```
+bash docs/plans/l5_ontlayer_20261022/scripts/09_clean_clone_chain.sh \
+     /home/ubuntu/EYEKB_REPO "/home/ubuntu/l5 clean clone" \
+     /home/ubuntu/EYEKB_REPO/literature_db/v2.4.2_2026-09_slim \
+     /home/ubuntu/.conda/envs/pipeline_env/bin/python
+```
+
+The clone is a fresh `git clone` of this card's commit (worktree clean), and the literature corpus is
+copied into it at the documented path because the corpus is a Release asset, not a repository file
+(§G2); copying a local directory is not a download. Results are recorded in `ledgers/` and quoted in
+`ledgers/COMMIT.txt`. G7 and G8 pass in the clone with the same readings as in the author tree, which
+is the point of the portability gate: 3 anchors resolved, the same battery, the same fail-closed
+statuses, in three environments.
+
+### A concurrent writer in the same working tree (external, recorded)
+
+While this card was running, another card (`t_0c40c7b1`, the optic-nerve fibroblast registration)
+edited `mcp_server/eyekb_core.py` **in the same working tree** at 11:04:31 and had not committed it.
+Two consequences, both handled and both visible:
+
+1. **The ledger must describe committed bytes.** The ownership ledger had been re-taken by that card
+   with the sha of its uncommitted file, and its new row pointed at a file it had not committed. This
+   card staged the ledger (its own rows had to be re-taken) and therefore committed those rows as
+   well — which made a clone internally inconsistent (registry says one sha, the committed file is
+   another; one row's file does not exist yet). Repaired here: `L1-11M` is restored to the sha of the
+   **committed** blob (`d46953bda7da5a43`, 111,637 bytes), that card's not-yet-committed row was
+   dropped, and the dangling reference it left in the `L1-11M` note was neutralised. The pre-image of
+   the ledger as this card found it is kept at
+   `out/REGISTRY_PREIMAGE_l5_edit.tsv`, and a comment was left on that card. **That card re-adds its
+   row in its own commit**; nothing of its work was deleted from disk (its source file and directory
+   are untouched and left unstaged).
+2. **The author-tree chain shows one failure for that reason only.** `G5-C05` reports
+   `L1-11M: registered=d46953bda7da5a43 live=3dadbbbaf2631da0` — the registered value is the
+   committed blob, the live value is the other card's uncommitted edit. It is not this card's change,
+   it is not present in a clone of this commit, and it disappears when that card commits. The
+   authoritative reading for this card is therefore the clean-clone chain.
+
+This is exactly the hazard the operator notes describe for two cards in one checkout, and the reason
+this card's own files were committed with an explicit path list rather than `git add -A`: the other
+card's `mcp_server/eyekb_core.py` and its two untracked paths were left exactly as they were.
+
+### What could not be closed
+
+- The recorded request set is replayed only where the corpus named by §G2 is available; on a machine
+  without it, the two `search_literature` calls answer from whatever corpus resolves, so the byte
+  identity of those two calls is a statement about this machine. The other 53 calls do not depend on
+  the corpus.
+- The freeze's per-call digests are stated in their path-normalised form for that reason; the raw
+  digests are the same-path evidence and are kept as such.
+- G7's synthetic unit battery exercises code paths the real snapshot does not exhibit. It is labelled
+  synthetic everywhere it appears, and no reading in this report is taken from it.
+
+### What this does not claim
 
 - **Ontology agreement rising is not recognition rising.** This layer corrects how a comparison is
   worded and how far an answer may be used; it is an evaluation and explanation asset, not an

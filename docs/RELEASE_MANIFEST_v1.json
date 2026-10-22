@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "2c7a1a5a3244",
- "digest_sha256": "2c7a1a5a3244c633e7a705f9ca326cfcddd0c7a6910175bcf2665e375f6b7ede",
+ "release_id": "fe5805d808f0",
+ "digest_sha256": "fe5805d808f0f911eef56d1ad195d045b179ea2743f18cb66d1f39add77fd024",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 3751,
- "total_bytes": 228787604,
+ "n_files": 3810,
+ "total_bytes": 234634168,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "4d6b8a6fde9d",
   "knowledge_bundle_id": "27bf74fcc517",
-  "effective_profile_id": "b87604d95d2f"
+  "effective_profile_id": "5e32ecee3ee1"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -92,8 +92,8 @@
   },
   {
    "path": "docs/GATE_INVENTORY_G5G6.tsv",
-   "git_blob": "5c66aa8b99c892a786a856380d921a236ea0c850",
-   "bytes": 5795
+   "git_blob": "a4890c482aa1703d217cd6b51e0beefa256944f7",
+   "bytes": 6031
   },
   {
    "path": "docs/GIT_SELF_DECLARED_BOUNDARY_LEDGER.tsv",
@@ -177,8 +177,8 @@
   },
   {
    "path": "docs/W3_PIPELINE_REGISTRY.tsv",
-   "git_blob": "43f28fcd2b18300a4da35a076ab476dd34d8074e",
-   "bytes": 113430
+   "git_blob": "c9ab151032b3036e81cbde68d1b5730635dc0b81",
+   "bytes": 112494
   },
   {
    "path": "docs/W3_UPSTREAM_FIRST_RULE.md",
@@ -10972,8 +10972,13 @@
   },
   {
    "path": "docs/plans/l5_ontlayer_20261022/REPORT.md",
-   "git_blob": "a37795f29b6b944f21f31fe552bf647d52d2493a",
-   "bytes": 20064
+   "git_blob": "5377dc141709afc8d427ab3b503fc930a86d6bac",
+   "bytes": 23800
+  },
+  {
+   "path": "docs/plans/l5_ontlayer_20261022/ledgers/clean_clone_chain_at_02ed589.log",
+   "git_blob": "98e1eaca745285c7af8ddaa49460e70e9fa858fc",
+   "bytes": 8243
   },
   {
    "path": "docs/plans/l5_ontlayer_20261022/out/BASELINE_FREEZE.json",
@@ -11092,8 +11097,8 @@
   },
   {
    "path": "docs/plans/l5_ontlayer_20261022/scripts/09_clean_clone_chain.sh",
-   "git_blob": "9031b10527068e3355aaf3bfee567cee0e6768da",
-   "bytes": 1397
+   "git_blob": "c110638f55391394612e9ae03dfcb788f6a0c26a",
+   "bytes": 1555
   },
   {
    "path": "docs/plans/model_free_20260929/MODELFREE_NOTE.md",
@@ -16409,6 +16414,296 @@
    "path": "docs/plans/shipped_surface_20261022/scripts/reg_retake.py",
    "git_blob": "43376f4e66a5bf79ac03f2cd03e9960ce951a2dd",
    "bytes": 5878
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/APPEND_RECORD.md",
+   "git_blob": "e9d494459078f12d95ba41ce102b75d631599497",
+   "bytes": 2876
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/COMMIT.txt",
+   "git_blob": "51284c27b56dfb688d3f845396152ae67d24ece5",
+   "bytes": 634
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/PREREG_ANNEX_A_AMENDMENTS2_20261022.md",
+   "git_blob": "719ddec8418a9c04b45f2128365327ac205028b4",
+   "bytes": 3906
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/PREREG_ANNEX_A_AMENDMENTS3_20261022.md",
+   "git_blob": "06623a339978b0aaebd8a0b97eb6696dbb0009b8",
+   "bytes": 1643
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/PREREG_ANNEX_A_AMENDMENTS_20261022.md",
+   "git_blob": "2c8bdb13ba27a4c274206e8689ab1aa58751e941",
+   "bytes": 4011
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/PREREG_ANNEX_A_OPERATIONS_20261022.md",
+   "git_blob": "18903cad138d422f3b9c47379d6d5c521e176e15",
+   "bytes": 6787
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/PREREG_SUBDIVISION_READINESS_20261022.md",
+   "git_blob": "59dad608d71b92c54dce7f347699ff9375b158db",
+   "bytes": 10806
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/REPORT.md",
+   "git_blob": "5a7f2c520d988780a7df1ccf642acd3b54af862f",
+   "bytes": 17723
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/discipline/net_audit/sitecustomize.py",
+   "git_blob": "0d7c619a8793fcaaa1c49e58900197ee4e98dbac",
+   "bytes": 1061
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/logs/COMMAND_LOG.md",
+   "git_blob": "41e842e8815520f4b5e976b503c3aa6bbdff83f6",
+   "bytes": 2326
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/logs/gates_cleanclone.log",
+   "git_blob": "e4499af47f0e23dbcce09729b690ee720f606fc0",
+   "bytes": 5207
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/logs/gates_cleanclone_v2.log",
+   "git_blob": "7b84c02da90ea8f7b9ac5f0e11840f59fad421db",
+   "bytes": 4834
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/logs/golden_721_v2.log",
+   "git_blob": "21029ef7eed1540b4f5f7bded9cb100e7da461e9",
+   "bytes": 1206
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/logs/netaudit_chain.log",
+   "git_blob": "5a8027500a8cddb273ad56bd83683e672ec4ab7f",
+   "bytes": 1274
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/logs/netaudit_gates.log",
+   "git_blob": "cdac651378be2dc1d8e697231cece5f5f5fc3b7b",
+   "bytes": 718
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/M_non_evaluation_material.json",
+   "git_blob": "0b5a8198963dddd6c65a8c16261b31f752b716b0",
+   "bytes": 339446
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/O_observable_window.json",
+   "git_blob": "3ed623ddda3589341c80905507899a832e5a90af",
+   "bytes": 131485
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/O_state_ratio.json",
+   "git_blob": "6be1faf0510590c440f3e66d913a83547f689006",
+   "bytes": 231882
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/O_state_reference.json",
+   "git_blob": "60c55dd6ef643bc55da503e39c0ac98fc596dc0b",
+   "bytes": 202269
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/R0_ontology_snapshot.json",
+   "git_blob": "a8c09fd61e2829ce429c5611b8dc20f71bd178fe",
+   "bytes": 238
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/R1R2_parent_depth.json",
+   "git_blob": "3bdcdcb507f9ea907e3b3f18fc1350e02fa19a6d",
+   "bytes": 73349
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/R3_accessions.json",
+   "git_blob": "b57367c5037ec9682752ba4ac4285291d5c8e1b6",
+   "bytes": 36
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/R3_volume_provenance.json",
+   "git_blob": "8f70c19d7149844a635e11e2d799252c97575af6",
+   "bytes": 7140
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/R4_machine_expression_inventory.json",
+   "git_blob": "58a4b58b37d0e376a947c01deae05c2ce5d4f374",
+   "bytes": 1110839
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/S0_library_context.json",
+   "git_blob": "608ea0379b5ef28a480d0139199bcca7433797e9",
+   "bytes": 5924
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/S1_parents_context.json",
+   "git_blob": "fa5e06089b6a9762cd2149624e033b4057f98e91",
+   "bytes": 58971
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/S2_automata.json",
+   "git_blob": "4fc6c88632ced7466339cc18e4e66500106172a8",
+   "bytes": 691
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/S5_contrast_cooccurrence.json",
+   "git_blob": "51b2c83c1b602f71b6cd0043a15d172347693233",
+   "bytes": 34309
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/S5_genes.json",
+   "git_blob": "d32a6fca0a3ee786c3ba1d4906dc5039a95e0c87",
+   "bytes": 54652
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/S5_occurrence.json",
+   "git_blob": "d9d5fed251877df0badd504e102097bca360f853",
+   "bytes": 151266
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/append_proof.json",
+   "git_blob": "026b43833aaf01e5c45d76061650eef578d86f39",
+   "bytes": 792
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/append_proof_onepager.json",
+   "git_blob": "69478ef53f5c0820aa0dafc572c0731d506fda6b",
+   "bytes": 380
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/confusion_rpe_melanocyte.json",
+   "git_blob": "a28195829763476a002cc5e831f3a38a4b65a6da",
+   "bytes": 53906
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/cost_table.json",
+   "git_blob": "8751ac293e594146dd19c1d952fc5f0b124b3f97",
+   "bytes": 426238
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/cost_table.tsv",
+   "git_blob": "ebf39a23a634e31407e75cc1bc3512aa95342a18",
+   "bytes": 107106
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/firstpass/output_shape_emission.json",
+   "git_blob": "cf108e0c3a352b1efc031e8ca8169099cd75c34d",
+   "bytes": 25765
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/firstpass/pair_table.json",
+   "git_blob": "c425de42b2a01868841ed2954f14c1b9c7236470",
+   "bytes": 910286
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/firstpass/pair_table.tsv",
+   "git_blob": "b7d698f1e202c8c7989abd296f6659d67998efff",
+   "bytes": 257506
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/firstpass/subdivision_readiness.json",
+   "git_blob": "6461cd59db30080d23bf2f8d74728af159fc5f1e",
+   "bytes": 92448
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/firstpass/subdivision_readiness.tsv",
+   "git_blob": "c809a0523f167ed2338d3de502e0f0b11756c40a",
+   "bytes": 20781
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/golden_721_replay.json",
+   "git_blob": "35ad2b3559d1ac86fa7db0bb705778b283145b0c",
+   "bytes": 405
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/output_shape_emission.json",
+   "git_blob": "0f620bc56a971f18678bb385c62a59f9f8500ad3",
+   "bytes": 27890
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/pair_table.json",
+   "git_blob": "c37538e3ef298c28b17be00fc9329a6a691f12bf",
+   "bytes": 945808
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/pair_table.tsv",
+   "git_blob": "be56592c12be9023cf5226b9149a3e2b5b1fe372",
+   "bytes": 251532
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/subdivision_readiness.json",
+   "git_blob": "4fd60141675088478257166dbdc8850870f25dbb",
+   "bytes": 92537
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/out/subdivision_readiness.tsv",
+   "git_blob": "4b84263dda8bbd929966ff70fc64182fc6028b4f",
+   "bytes": 20916
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/scripts/golden_721.py",
+   "git_blob": "0f7750305e00aab8cd7003bcc114260fc3e5f9dd",
+   "bytes": 4629
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/scripts/m_append.py",
+   "git_blob": "0eb3765de8aeadfd5112710a1a384beae9a84303",
+   "bytes": 27732
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/scripts/m_confusion.py",
+   "git_blob": "475606ecdff9c2bc7a3d673166002fe1e76c2837",
+   "bytes": 15075
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/scripts/m_cost.py",
+   "git_blob": "277ba45fb196a9b940dc7d8ab49204b1acead084",
+   "bytes": 6790
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/scripts/m_material.py",
+   "git_blob": "7a33821943459ae323dd92a414da48db2f814364",
+   "bytes": 4195
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/scripts/m_observe.py",
+   "git_blob": "fcc7cbd2f7e8c72ede45643282e7822726cf9b8c",
+   "bytes": 1863
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/scripts/m_readiness.py",
+   "git_blob": "b4b6d8abbfbad65dc5a6afd0badc6e116bf1d5b9",
+   "bytes": 17127
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/scripts/m_report.py",
+   "git_blob": "368eaf3e54423a34d125a068f90552acae0b370b",
+   "bytes": 27525
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/scripts/m_scan.py",
+   "git_blob": "1c7e1702fd7eb3db69214a0b1b612855c16c72fa",
+   "bytes": 14246
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/scripts/m_state.py",
+   "git_blob": "dd7c9fe2e8c2e422ea51b28030ba7e3ae6afd5c2",
+   "bytes": 4674
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/scripts/m_state2.py",
+   "git_blob": "7e55bbcf901f09d83694884612dc2ead368173e6",
+   "bytes": 3948
+  },
+  {
+   "path": "docs/plans/subdivision_readiness_20261022/scripts/r_recon.py",
+   "git_blob": "a7dcac2c1abf2ed01b1b3af8a137a34d60af1f14",
+   "bytes": 5518
   },
   {
    "path": "docs/plans/sync_scSOP_20260927/SYNC_NOTE.md",
