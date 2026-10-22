@@ -1,0 +1,20 @@
+Running as unit: run-p3496844-i74000478.scope; invocation ID: 6e9699208cc04242a55c646a81f566ab
+[corpus] chunks=244877 papers=3902 in_context=674 attached=153
+  H1 horizontal cell                                         clauses=3     papers=3    admitted=[('CA10', 1), ('FOXP2', 1), ('MEGF11', 1), ('RUNX1', 1), ('SLIT2', 1)] kept=['CA10', 'FOXP2']
+  H2 horizontal cell                                         clauses=0     papers=0    admitted=[]                                       kept=[]
+  OFF cone bipolar cell (OFF BC)                             clauses=54    papers=24   admitted=[('ELF5', 1), ('ST18', 1), ('TCF4', 1)]  kept=['ELF5', 'ST18']
+  ON cone bipolar cell (ON BC)                               clauses=97    papers=39   admitted=[('CA1', 1), ('CRX', 1), ('ELF5', 1), ('ERG', 1), ('FEZF2', 1), ('GNAT1', 1), ('GNB3', 1), ('GRIA4', 1), ('LHX3', 1), ('PCP2', 1), ('TOMM20', 1), ('TUBB3', 1), ('VSX2', 1)] kept=['CA1', 'CRX']
+  blue-cone bipolar cell (BB, S-cone ON bipolar)             clauses=3     papers=1    admitted=[]                                       kept=[]
+  diffuse bipolar 2 (DB2)                                    clauses=10    papers=3    admitted=[('CACNA1G', 1), ('GSG1', 1), ('KCNJ2', 1)] kept=['CACNA1G', 'GSG1']
+  diffuse bipolar 3a (DB3a)                                  clauses=7     papers=3    admitted=[('CALB1', 1), ('GABRA1', 1), ('GSG1', 1)] kept=['CALB1', 'GABRA1']
+  diffuse bipolar 3b (DB3b)                                  clauses=9     papers=4    admitted=[('MEIS2', 1), ('QPCT', 1), ('TTR', 1)]  kept=['MEIS2', 'QPCT']
+  diffuse bipolar 4 (DB4)                                    clauses=2     papers=2    admitted=[('CALB1', 1), ('TTR', 1)]               kept=['CALB1', 'TTR']
+  diffuse bipolar 6 (DB6)                                    clauses=1     papers=1    admitted=[('LMO4', 1)]                            kept=['LMO4']
+  flat midget bipolar cell (FMB, OFF midget bipolar)         clauses=25    papers=4    admitted=[('GABRA1', 1)]                          kept=['GABRA1']
+  giant bipolar cell (GB)                                    clauses=1     papers=1    admitted=[]                                       kept=[]
+  invaginating midget bipolar cell (IMB, ON midget bipolar)  clauses=9     papers=3    admitted=[]                                       kept=[]
+  parasol retinal ganglion cell                              clauses=60    papers=14   admitted=[('AFAP1', 2), ('CAV2', 1), ('CP', 1), ('GC', 1), ('GRIA2', 1), ('MAP3K1', 1), ('POU6F2', 2), ('RBPMS', 1), ('SIX6', 1)] kept=['AFAP1', 'POU6F2']
+  rod bipolar cell (RBC, ON rod bipolar)                     clauses=151   papers=80   admitted=[('ARR3', 1), ('CD68', 1), ('CP', 1), ('CTBP2', 1), ('ERG', 1), ('GAD1', 1), ('GRM6', 2), ('NR2E3', 1), ('NRL', 2), ('PROX1', 1), ('RHO', 1), ('RLBP1', 1), ('RPE', 2), ('SOX9', 1), ('VSX2', 1)] kept=['GRM6', 'NRL']
+  starburst (cholinergic) amacrine cell                      clauses=88    papers=54   admitted=[('CA1', 1), ('CRH', 1), ('CTBP2', 1), ('FEZF1', 1), ('FRMD7', 1), ('GBX2', 1), ('GJD2', 1), ('RBPMS', 1), ('TENM3', 1), ('VIP', 1), ('ZFHX3', 1)] kept=['CA1', 'CRH']
+rows=108 admitted=69 kept=22
+wrote /mnt/D/EyeKB/plans/subtype_second_marker_20261022/out/SUBTYPE_SECOND_MARKER_LIT.json

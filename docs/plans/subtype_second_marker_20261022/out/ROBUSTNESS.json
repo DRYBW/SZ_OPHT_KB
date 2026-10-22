@@ -1,0 +1,132 @@
+{
+ "probe": "m5_robustness.py",
+ "rule": "robust iff the same (volume, subtype) row flips under both the AD1 rule (pass 2) and the pass-5 structural rule",
+ "n_pass2_flips": 7,
+ "n_pass5_flips": 8,
+ "n_robust": 6,
+ "n_rule_dependent": 3,
+ "rows": [
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "diffuse bipolar 2 (DB2)",
+   "flips_pass2_AD1": true,
+   "flips_pass5_final": true,
+   "verdict": "robust",
+   "rule_dependent_on": "",
+   "clearing_added_pass2": [
+    "CACNA1G",
+    "GSG1"
+   ],
+   "clearing_added_pass5": [
+    "CACNA1G",
+    "GSG1"
+   ]
+  },
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "diffuse bipolar 3a (DB3a)",
+   "flips_pass2_AD1": true,
+   "flips_pass5_final": true,
+   "verdict": "robust",
+   "rule_dependent_on": "",
+   "clearing_added_pass2": [
+    "CALB1"
+   ],
+   "clearing_added_pass5": [
+    "CALB1"
+   ]
+  },
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "diffuse bipolar 3b (DB3b)",
+   "flips_pass2_AD1": true,
+   "flips_pass5_final": true,
+   "verdict": "robust",
+   "rule_dependent_on": "",
+   "clearing_added_pass2": [
+    "MEIS2"
+   ],
+   "clearing_added_pass5": [
+    "MEIS2"
+   ]
+  },
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "diffuse bipolar 4 (DB4)",
+   "flips_pass2_AD1": true,
+   "flips_pass5_final": true,
+   "verdict": "robust",
+   "rule_dependent_on": "",
+   "clearing_added_pass2": [
+    "TTR"
+   ],
+   "clearing_added_pass5": [
+    "LMO4"
+   ]
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "diffuse bipolar 2 (DB2)",
+   "flips_pass2_AD1": true,
+   "flips_pass5_final": true,
+   "verdict": "robust",
+   "rule_dependent_on": "",
+   "clearing_added_pass2": [
+    "GSG1"
+   ],
+   "clearing_added_pass5": [
+    "GSG1"
+   ]
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "diffuse bipolar 3b (DB3b)",
+   "flips_pass2_AD1": true,
+   "flips_pass5_final": true,
+   "verdict": "robust",
+   "rule_dependent_on": "",
+   "clearing_added_pass2": [
+    "MEIS2"
+   ],
+   "clearing_added_pass5": [
+    "MEIS2"
+   ]
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "diffuse bipolar 4 (DB4)",
+   "flips_pass2_AD1": false,
+   "flips_pass5_final": true,
+   "verdict": "rule_dependent",
+   "rule_dependent_on": "final_pass5",
+   "clearing_added_pass2": [],
+   "clearing_added_pass5": [
+    "LMO4"
+   ]
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "diffuse bipolar 6 (DB6)",
+   "flips_pass2_AD1": true,
+   "flips_pass5_final": false,
+   "verdict": "rule_dependent",
+   "rule_dependent_on": "AD1_pass2",
+   "clearing_added_pass2": [
+    "LMO4"
+   ],
+   "clearing_added_pass5": []
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "flat midget bipolar cell (FMB, OFF midget bipolar)",
+   "flips_pass2_AD1": false,
+   "flips_pass5_final": true,
+   "verdict": "rule_dependent",
+   "rule_dependent_on": "final_pass5",
+   "clearing_added_pass2": [],
+   "clearing_added_pass5": [
+    "GLRA1"
+   ]
+  }
+ ]
+}

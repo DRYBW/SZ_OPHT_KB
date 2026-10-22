@@ -1,0 +1,21 @@
+{
+ "probe": "m4_flips.py",
+ "frozen_rows": 56,
+ "control_rows": 56,
+ "augmented_rows": 56,
+ "control_reproduces_frozen_verdicts": true,
+ "n_verdict_changes": 8,
+ "n_in_scope_changes": 8,
+ "out_of_scope_moved": [],
+ "out_of_scope_moved_n": 0,
+ "before_counts": {
+  "separated": 12,
+  "not_separated": 36,
+  "insufficient_evidence": 8
+ },
+ "after_counts": {
+  "separated": 20,
+  "not_separated": 28,
+  "insufficient_evidence": 8
+ }
+}

@@ -327,7 +327,21 @@ MARKER_LIBS = {"retina": MARKER_JSON,
     #   REGISTERED_DEFAULT_OFF with an EMPTY whitelist: nothing is merged into `all` in any state,
     #   so the shipped default route is byte-identical; merging it needs its own measured harm line
     #   and separate PI approval. Rollback = delete this line and the file.
-    "onfibro_v13": MARKER_DIR / "markers_v13_onfibro_increment.json"}
+    "onfibro_v13": MARKER_DIR / "markers_v13_onfibro_increment.json",
+    # subtype_v14 = the second-marker increment for the 26 one-gene-thick subtype panels
+    #   (2026-10-22, card t_7509a1a2): 16 entries, one per literature-consensus retinal subtype the
+    #   frozen consensus wave measured as having exactly one marker clearing its pre-registered gate,
+    #   each named by the Cell Ontology label of the term it carries and holding the frozen panel plus
+    #   at most 2 literature-sourced candidates (segment-level attribution against the in-repo
+    #   literature corpus; every candidate carries its paper ids and its per-volume measurability in
+    #   the file itself).
+    #   Why the anchor line above is REPEATED in this replacement: the previous wave's append dropped
+    #   that very line from the dictionary (measured: the default route raised KeyError onfibro_v13),
+    #   so an append that does not echo its anchor is a known way to break the shipped surface.
+    #   REGISTERED_DEFAULT_OFF with an EMPTY whitelist: nothing is merged into `all` in any state, so
+    #   the shipped default route is byte-identical; merging it needs its own measured harm line and
+    #   separate PI approval. Rollback = delete the subtype_v14 lines and the file.
+    "subtype_v14": MARKER_DIR / "markers_v14_subtype_second_increment.json"}
 
 # [ACT t_5d5853c9] v6-merge whitelist for the default all — hard-coded; env values can only toggle the
 # whole feature, never inject any library
@@ -383,6 +397,26 @@ def _onfibro_act_enabled():
     remains the documented kill switch, exactly as the ACT-v6 discipline prescribes.
     """
     v = (os.environ.get("EYEKB_ACT_ONFIBRO") or "").strip().casefold()
+    return v not in {"0", "false", "off", "no"}
+
+
+# [SUBTYPE2 t_7509a1a2] whitelist for the second-marker subtype increment.  EMPTY BY DESIGN: the
+# registration is deliberately unreachable from the default `all` set, so this predicate exists to
+# make the OFF state explicit and machine-readable rather than to open a route.  Semantics follow the
+# ACT-v6 discipline so a future activation wave inherits an obvious shape:
+# {0,false,off,no} = OFF; unset/empty/anything else = the value of this switch, which -- with an
+# empty whitelist -- still merges nothing.
+SUBTYPE_DEFAULT_LIBS = ()
+
+
+def _subtype_act_enabled():
+    """env EYEKB_ACT_SUBTYPE in {0,false,off,no} = OFF; unset/anything else = ON.
+
+    ON still injects nothing: SUBTYPE_DEFAULT_LIBS is empty by design (card t_7509a1a2 red line --
+    this registration may not change the default response bytes). The library is reachable by name
+    only, and the panel it carries is a measurement artefact, not a shipped route.
+    """
+    v = (os.environ.get("EYEKB_ACT_SUBTYPE") or "").strip().casefold()
     return v not in {"0", "false", "off", "no"}
 
 
@@ -926,12 +960,15 @@ def _load_marker_dbs(library="all"):
         if _onfibro_act_enabled():
             names = names + list(ONFIBRO_DEFAULT_LIBS)  # [ONFIBRO] empty whitelist: appends nothing,
             # and the branch is kept so the OFF state is auditable rather than implicit
+        if _subtype_act_enabled():
+            names = names + list(SUBTYPE_DEFAULT_LIBS)  # [SUBTYPE2] empty whitelist: appends nothing,
+            # and the branch is kept so the OFF state is auditable rather than implicit
     elif lib in MARKER_LIBS:
         names = [lib]
     else:
         raise ValueError("library must be one of retina|membrane|retina_interneuron|retina_v6|"
                          "face_v6|lacrimal_v6|k9_ocs|retina_v7|retina_dev|antseg_v10|"
-                         "lensiris_v11|holefill_v12|onfibro_v13|all, got: "
+                         "lensiris_v11|holefill_v12|onfibro_v13|subtype_v14|all, got: "
                          + repr(library))
     dbs = []
     for n in names:

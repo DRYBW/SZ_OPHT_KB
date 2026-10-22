@@ -1,0 +1,126 @@
+{
+ "probe": "m10_manifest_gate.py",
+ "verdict": "PASS",
+ "n_gates": 12,
+ "checks": [
+  {
+   "id": "G1",
+   "description": "in-scope set = 26 rows / 16 subtypes",
+   "ok": true,
+   "command": "python3 scripts/m0_freeze_inputs.py",
+   "reading": "rows=26 subtypes=16"
+  },
+  {
+   "id": "G2",
+   "description": "the ruler reproduces the frozen 56-row result (frozen ruler and local copy)",
+   "ok": true,
+   "command": "python3 scripts/m3_remeasure.py && python3 scripts/m3b_remeasure_local.py",
+   "reading": "frozen-ruler control identical=True; local-ruler control identical=True; {'separated': 12, 'not_separated': 36, 'insufficient_evidence': 8}"
+  },
+  {
+   "id": "G3",
+   "description": "augmented arm: 56 rows, 0 out-of-scope rows moved",
+   "ok": true,
+   "command": "python3 scripts/m4_flips.py",
+   "reading": "rows=56 out_of_scope_moved=0 before={'separated': 12, 'not_separated': 36, 'insufficient_evidence': 8} after={'separated': 20, 'not_separated': 28, 'insufficient_evidence': 8}"
+  },
+  {
+   "id": "G4",
+   "description": "thresholds frozen: local ruler differs only in the disclosed repair",
+   "ok": true,
+   "command": "python3 scripts/m3b_remeasure_local.py  (out/RULER_PATCH.json holds the unified diff)",
+   "reading": "changed diff lines=19; constants present in both=True; diff touches qmap/qs[i]"
+  },
+  {
+   "id": "G5",
+   "description": "default face: this card's delta changes no default-route byte",
+   "ok": true,
+   "command": "python3 scripts/m9_default_face.py",
+   "reading": "verdict=PASS calls/arm=950 differing=0 route_identical=True in_all_any_state=False"
+  },
+  {
+   "id": "G6",
+   "description": "no other wave's *_DEFAULT_LIBS tuple is touched; the new one is empty",
+   "ok": true,
+   "command": "python3 scripts/m7_register_library.py ; compare *_DEFAULT_LIBS in git show HEAD:mcp_server/eyekb_core.py vs out/COMMITTED_eyekb_core.py",
+   "reading": "parent whitelists=['ANTSEG_DEFAULT_LIBS', 'K9_DEFAULT_LIBS', 'ONFIBRO_DEFAULT_LIBS', 'V6_DEFAULT_LIBS'] ; committed adds only [('SUBTYPE_DEFAULT_LIBS', '')]"
+  },
+  {
+   "id": "G7",
+   "description": "library: 16 entries, every CL id resolves, cap K=2 respected",
+   "ok": true,
+   "command": "python3 scripts/m6_build_panel.py",
+   "reading": "entries=16 cl_resolve=16/16 max_added_per_subtype=2"
+  },
+  {
+   "id": "G8",
+   "description": "provenance: every added gene has >= 1 resolvable claim and a verbatim segment",
+   "ok": true,
+   "command": "python3 scripts/m6_build_panel.py (reads out/SUBTYPE_SECOND_MARKER_LIT.json)",
+   "reading": "gaps=[]"
+  },
+  {
+   "id": "G9",
+   "description": "every flip is in-scope, has >= 2 clearing markers, and carries H1-H5 + robustness",
+   "ok": true,
+   "command": "python3 scripts/m4_flips.py && python3 scripts/m5_robustness.py",
+   "reading": "flips=8 bad=[] robust=6 rule_dependent=3"
+  },
+  {
+   "id": "G10",
+   "description": "zero network: audit-hook receipts > 0 and EVENT lines == 0",
+   "ok": true,
+   "command": "bash scripts/run_all.sh (PYTHONPATH=scripts/netaudit)",
+   "reading": "receipts=15 events=0"
+  },
+  {
+   "id": "G11",
+   "description": "all five mining passes on disk (superseded ones preserved)",
+   "ok": true,
+   "command": "ls out/SUPERSEDED* out/SUBTYPE_SECOND_MARKER_LIT.json",
+   "reading": "present=['SUPERSEDED_m1_mine_lit_p1.json', 'SUPERSEDED_pass2/SUBTYPE_SECOND_MARKER_LIT_p2.json', 'SUPERSEDED_pass3/SUBTYPE_SECOND_MARKER_LIT_p3.json', 'SUPERSEDED_pass4/SUBTYPE_SECOND_MARKER_LIT_p4.json', 'SUBTYPE_SECOND_MARKER_LIT.json']"
+  },
+  {
+   "id": "G12",
+   "description": "NOT_RUN is never a pass: every gate above carries a command and a real reading",
+   "ok": true,
+   "command": "this script",
+   "reading": "gates=12"
+  }
+ ],
+ "manifest": {
+  "path": "/mnt/D/EyeKB/plans/subtype_second_marker_20261022/out/MANIFEST.sha256",
+  "n_files": 49,
+  "excluded": [
+   "GATE.json",
+   "MANIFEST.sha256",
+   "MANIFEST_CHECK.txt",
+   "logs/**",
+   "ledgers/**",
+   "artefacts this script writes"
+  ],
+  "rule": "run-time artefacts (this wave's logs, the audit ledger, this script's own outputs) are excluded so a re-check cannot invalidate the manifest"
+ },
+ "registry": {
+  "core_row": {
+   "item_id": "L1-11M",
+   "old_sha256": "e74c73c6c2ef04d19b94edd69cfb414bc38104b29c2d054a5e711ad03e781079",
+   "new_sha256": "528c474ec17965174392a9b2f521f084f91c9e5e63310abcf4f8d39e76969d59"
+  },
+  "library_row": {
+   "item_id": "L1-31",
+   "sha256": "75884fb7bd88e1ab7fd1652a26051046bff07dd0c6ee2972abfd7c8100f9f452",
+   "bytes": 37576,
+   "mtime": "2026-10-22 21:28:06"
+  }
+ },
+ "headline": {
+  "rows_in_scope": 26,
+  "separated_before": 12,
+  "separated_after": 20,
+  "flips": 8,
+  "robust": 6,
+  "rule_dependent": 3,
+  "out_of_scope_moved": 0
+ }
+}

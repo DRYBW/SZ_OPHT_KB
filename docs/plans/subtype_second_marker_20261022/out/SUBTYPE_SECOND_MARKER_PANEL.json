@@ -1,0 +1,413 @@
+{
+ "probe": "m6_build_panel.py",
+ "library": "subtype_v14",
+ "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v14_subtype_second_increment.json",
+ "sha256": "75884fb7bd88e1ab7fd1652a26051046bff07dd0c6ee2972abfd7c8100f9f452",
+ "bytes": 37576,
+ "n_entries": 16,
+ "n_entries_with_added": 11,
+ "panel_rows": [
+  {
+   "subtype": "H1 horizontal cell",
+   "cl_id": "CL:0004217",
+   "cl_resolves": true,
+   "n_frozen": 2,
+   "frozen": [
+    "LHX1",
+    "SPP1"
+   ],
+   "added": [],
+   "n_admitted_before_cap": 0,
+   "admitted_all": [],
+   "rows_in_scope": 0,
+   "flips": []
+  },
+  {
+   "subtype": "H2 horizontal cell",
+   "cl_id": "CL:0004218",
+   "cl_resolves": true,
+   "n_frozen": 2,
+   "frozen": [
+    "ISL1",
+    "SPP1"
+   ],
+   "added": [],
+   "n_admitted_before_cap": 0,
+   "admitted_all": [],
+   "rows_in_scope": 0,
+   "flips": []
+  },
+  {
+   "subtype": "OFF cone bipolar cell (OFF BC)",
+   "cl_id": "CL:0000750",
+   "cl_resolves": true,
+   "n_frozen": 3,
+   "frozen": [
+    "GRIK1",
+    "FEZF2",
+    "LHX3"
+   ],
+   "added": [
+    "SI"
+   ],
+   "n_admitted_before_cap": 1,
+   "admitted_all": [
+    "SI"
+   ],
+   "rows_in_scope": 0,
+   "flips": []
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "cl_id": "CL:0000749",
+   "cl_resolves": true,
+   "n_frozen": 4,
+   "frozen": [
+    "GRM6",
+    "TRPM1",
+    "ISL1",
+    "ST18"
+   ],
+   "added": [
+    "CA1",
+    "CRX"
+   ],
+   "n_admitted_before_cap": 11,
+   "admitted_all": [
+    "CA1",
+    "CRX",
+    "ERG",
+    "GRIA4",
+    "NRG1",
+    "NRL",
+    "PCP2",
+    "SMOX",
+    "TOMM20",
+    "TUBB3",
+    "VSX2"
+   ],
+   "rows_in_scope": 0,
+   "flips": []
+  },
+  {
+   "subtype": "blue-cone bipolar cell (BB, S-cone ON bipolar)",
+   "cl_id": "CL:4033019",
+   "cl_resolves": true,
+   "n_frozen": 2,
+   "frozen": [
+    "GRM6",
+    "VSX2"
+   ],
+   "added": [],
+   "n_admitted_before_cap": 0,
+   "admitted_all": [],
+   "rows_in_scope": 0,
+   "flips": []
+  },
+  {
+   "subtype": "diffuse bipolar 2 (DB2)",
+   "cl_id": "CL:4033028",
+   "cl_resolves": true,
+   "n_frozen": 2,
+   "frozen": [
+    "GRIK1",
+    "VSX2"
+   ],
+   "added": [
+    "CACNA1G",
+    "GSG1"
+   ],
+   "n_admitted_before_cap": 3,
+   "admitted_all": [
+    "CACNA1G",
+    "GSG1",
+    "KCNJ2"
+   ],
+   "rows_in_scope": 2,
+   "flips": [
+    {
+     "volume": "CX01_retina_snRNA",
+     "verdict": "corroborated",
+     "clearing_added": [
+      "CACNA1G",
+      "GSG1"
+     ],
+     "robust": "robust"
+    },
+    {
+     "volume": "PRE_GSE268630",
+     "verdict": "corroborated",
+     "clearing_added": [
+      "GSG1"
+     ],
+     "robust": "robust"
+    }
+   ]
+  },
+  {
+   "subtype": "diffuse bipolar 3a (DB3a)",
+   "cl_id": "CL:4033029",
+   "cl_resolves": true,
+   "n_frozen": 2,
+   "frozen": [
+    "GRIK1",
+    "VSX2"
+   ],
+   "added": [
+    "CALB1"
+   ],
+   "n_admitted_before_cap": 1,
+   "admitted_all": [
+    "CALB1"
+   ],
+   "rows_in_scope": 1,
+   "flips": [
+    {
+     "volume": "CX01_retina_snRNA",
+     "verdict": "corroborated",
+     "clearing_added": [
+      "CALB1"
+     ],
+     "robust": "robust"
+    }
+   ]
+  },
+  {
+   "subtype": "diffuse bipolar 3b (DB3b)",
+   "cl_id": "CL:4033030",
+   "cl_resolves": true,
+   "n_frozen": 2,
+   "frozen": [
+    "GRIK1",
+    "VSX2"
+   ],
+   "added": [
+    "MEIS2",
+    "QPCT"
+   ],
+   "n_admitted_before_cap": 2,
+   "admitted_all": [
+    "MEIS2",
+    "QPCT"
+   ],
+   "rows_in_scope": 2,
+   "flips": [
+    {
+     "volume": "CX01_retina_snRNA",
+     "verdict": "corroborated",
+     "clearing_added": [
+      "MEIS2"
+     ],
+     "robust": "robust"
+    },
+    {
+     "volume": "PRE_GSE268630",
+     "verdict": "corroborated",
+     "clearing_added": [
+      "MEIS2"
+     ],
+     "robust": "robust"
+    }
+   ]
+  },
+  {
+   "subtype": "diffuse bipolar 4 (DB4)",
+   "cl_id": "CL:4033031",
+   "cl_resolves": true,
+   "n_frozen": 2,
+   "frozen": [
+    "GRM6",
+    "VSX2"
+   ],
+   "added": [
+    "LMO4"
+   ],
+   "n_admitted_before_cap": 1,
+   "admitted_all": [
+    "LMO4"
+   ],
+   "rows_in_scope": 2,
+   "flips": [
+    {
+     "volume": "CX01_retina_snRNA",
+     "verdict": "corroborated",
+     "clearing_added": [
+      "LMO4"
+     ],
+     "robust": "robust"
+    },
+    {
+     "volume": "PRE_GSE268630",
+     "verdict": "corroborated",
+     "clearing_added": [
+      "LMO4"
+     ],
+     "robust": "rule_dependent"
+    }
+   ]
+  },
+  {
+   "subtype": "diffuse bipolar 6 (DB6)",
+   "cl_id": "CL:4033032",
+   "cl_resolves": true,
+   "n_frozen": 2,
+   "frozen": [
+    "SCGN",
+    "GRM6"
+   ],
+   "added": [
+    "DNER"
+   ],
+   "n_admitted_before_cap": 1,
+   "admitted_all": [
+    "DNER"
+   ],
+   "rows_in_scope": 0,
+   "flips": []
+  },
+  {
+   "subtype": "flat midget bipolar cell (FMB, OFF midget bipolar)",
+   "cl_id": "CL:4033033",
+   "cl_resolves": true,
+   "n_frozen": 2,
+   "frozen": [
+    "GRIK1",
+    "VSX2"
+   ],
+   "added": [
+    "GLRA1"
+   ],
+   "n_admitted_before_cap": 1,
+   "admitted_all": [
+    "GLRA1"
+   ],
+   "rows_in_scope": 1,
+   "flips": [
+    {
+     "volume": "PRE_GSE268630",
+     "verdict": "corroborated",
+     "clearing_added": [
+      "GLRA1"
+     ],
+     "robust": "rule_dependent"
+    }
+   ]
+  },
+  {
+   "subtype": "giant bipolar cell (GB)",
+   "cl_id": "CL:4033035",
+   "cl_resolves": true,
+   "n_frozen": 1,
+   "frozen": [
+    "UTRN"
+   ],
+   "added": [],
+   "n_admitted_before_cap": 0,
+   "admitted_all": [],
+   "rows_in_scope": 0,
+   "flips": []
+  },
+  {
+   "subtype": "invaginating midget bipolar cell (IMB, ON midget bipolar)",
+   "cl_id": "CL:4033034",
+   "cl_resolves": true,
+   "n_frozen": 2,
+   "frozen": [
+    "GRM6",
+    "VSX2"
+   ],
+   "added": [],
+   "n_admitted_before_cap": 0,
+   "admitted_all": [],
+   "rows_in_scope": 0,
+   "flips": []
+  },
+  {
+   "subtype": "parasol retinal ganglion cell",
+   "cl_id": "CL:4023189",
+   "cl_resolves": true,
+   "n_frozen": 4,
+   "frozen": [
+    "SPP1",
+    "RBPMS2",
+    "CHRNA2",
+    "CA8"
+   ],
+   "added": [
+    "AFAP1",
+    "POU6F2"
+   ],
+   "n_admitted_before_cap": 10,
+   "admitted_all": [
+    "AFAP1",
+    "CAV2",
+    "CP",
+    "GRIA2",
+    "GRIA4",
+    "MAP3K1",
+    "OPN4",
+    "POU6F2",
+    "RBPMS",
+    "SIX6"
+   ],
+   "rows_in_scope": 0,
+   "flips": []
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "cl_id": "CL:0000751",
+   "cl_resolves": true,
+   "n_frozen": 3,
+   "frozen": [
+    "PRKCA",
+    "TRPM1",
+    "VSTM2B"
+   ],
+   "added": [
+    "C3",
+    "NRL"
+   ],
+   "n_admitted_before_cap": 11,
+   "admitted_all": [
+    "C3",
+    "CA8",
+    "CP",
+    "CRB1",
+    "CRB2",
+    "ERG",
+    "NR2E3",
+    "NRL",
+    "RHO",
+    "SOX9",
+    "VSX2"
+   ],
+   "rows_in_scope": 0,
+   "flips": []
+  },
+  {
+   "subtype": "starburst (cholinergic) amacrine cell",
+   "cl_id": "CL:0004232",
+   "cl_resolves": true,
+   "n_frozen": 3,
+   "frozen": [
+    "CHAT",
+    "SLC18A3",
+    "SLC5A7"
+   ],
+   "added": [
+    "CTBP2",
+    "EMD"
+   ],
+   "n_admitted_before_cap": 5,
+   "admitted_all": [
+    "CTBP2",
+    "EMD",
+    "GBX2",
+    "RBPMS",
+    "TH"
+   ],
+   "rows_in_scope": 0,
+   "flips": []
+  }
+ ]
+}

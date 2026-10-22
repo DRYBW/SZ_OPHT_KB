@@ -1,0 +1,46 @@
+{
+ "probe": "m9_default_face.py",
+ "core_path": "mcp_server/eyekb_core.py",
+ "parent_commit": "3263ca60b341c1c2d7a26ee0c9292da56379bbed",
+ "parent_blob_sha256": "e74c73c6c2ef04d19b94edd69cfb414bc38104b29c2d054a5e711ad03e781079",
+ "committed_blob_sha256": "528c474ec17965174392a9b2f521f084f91c9e5e63310abcf4f8d39e76969d59",
+ "parent_bytes": 115058,
+ "committed_bytes": 117638,
+ "n_diff_lines": 1759,
+ "working_tree_carried_a_concurrent_edit": true,
+ "working_tree_sha256_at_measurement": "678fa54529f56479869e6b6366825becb2f62aad4adc496deb69e7b096365172",
+ "concurrent_card": "t_be11fd4a (docs/plans/activate_holefill_20261022/, in-flight in the same working tree; its core edits are NOT part of this commit)",
+ "preimage_of_the_working_tree_before_this_card": "out/PREIMAGE_eyekb_core.py.bak_pre_subtype2m",
+ "recorded_set": {
+  "n_clusters": 721
+ },
+ "arms": {
+  "n_calls_per_arm": 950,
+  "combined_md5_parent": "6da8874d940c982ea764ae24f03ae700",
+  "combined_md5_committed": "6da8874d940c982ea764ae24f03ae700",
+  "n_differing_calls": 0,
+  "differing_calls": []
+ },
+ "route_composition_identical": true,
+ "route_all_names": [
+  "retina",
+  "membrane",
+  "retina_interneuron",
+  "retina_v6",
+  "face_v6",
+  "k9_ocs",
+  "antseg_v10",
+  "onfibro_v13"
+ ],
+ "subtype_v14": {
+  "in_parent_MARKER_LIBS": false,
+  "in_committed_MARKER_LIBS": true,
+  "reachable_by_name_in_parent": "ValueError: library must be one of retina|membrane|retina_interneuron|retina_v6|face_v6|lacrimal_v6|k9",
+  "reachable_by_name_in_committed": "reachable",
+  "in_all_route_any_state": false,
+  "in_all_route_with_switch_on": false
+ },
+ "whitelist_is_empty": true,
+ "verdict": "PASS",
+ "probe_modules_removed": true
+}

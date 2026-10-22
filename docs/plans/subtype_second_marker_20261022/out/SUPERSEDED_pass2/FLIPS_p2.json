@@ -1,0 +1,352 @@
+{
+ "probe": "m4_flips.py",
+ "auc_min": 0.7,
+ "fdr_max": 0.05,
+ "rho_flag": 0.6,
+ "n_flips": 7,
+ "flips": [
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "diffuse bipolar 2 (DB2)",
+   "n_cells": 3225,
+   "before_result": "not_separated",
+   "after_result": "separated",
+   "before_reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.90; VSX2 AUC=0.52",
+   "after_reason": "markers clearing the gate: GRIK1, CACNA1G, GSG1",
+   "clearing_markers": [
+    {
+     "gene": "GRIK1",
+     "auc": 0.9,
+     "q": 0.0,
+     "added": false,
+     "claims": []
+    },
+    {
+     "gene": "CACNA1G",
+     "auc": 0.751,
+     "q": 0.0,
+     "added": true,
+     "claims": [
+      "33188005"
+     ]
+    },
+    {
+     "gene": "GSG1",
+     "auc": 0.752,
+     "q": 0.0,
+     "added": true,
+     "claims": [
+      "37794584"
+     ]
+    }
+   ],
+   "added_genes_in_panel": [
+    "CACNA1G",
+    "GSG1"
+   ],
+   "clearing_added": [
+    "CACNA1G",
+    "GSG1"
+   ],
+   "independence": "two_independent_claims",
+   "shared_claims": [],
+   "spearman_clearing_pair": 0.0527,
+   "symbol_family_collisions": [],
+   "flags": [],
+   "verdict": "corroborated",
+   "added_gene_measurability_in_this_volume": {
+    "CACNA1G": {
+     "in_var_index": true,
+     "detected_frac": 0.18755,
+     "above_floor": true
+    },
+    "GSG1": {
+     "in_var_index": true,
+     "detected_frac": 0.08808,
+     "above_floor": true
+    }
+   }
+  },
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "diffuse bipolar 3a (DB3a)",
+   "n_cells": 3225,
+   "before_result": "not_separated",
+   "after_result": "separated",
+   "before_reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.76; VSX2 AUC=0.42",
+   "after_reason": "markers clearing the gate: GRIK1, CALB1",
+   "clearing_markers": [
+    {
+     "gene": "GRIK1",
+     "auc": 0.761,
+     "q": 0.0,
+     "added": false,
+     "claims": []
+    },
+    {
+     "gene": "CALB1",
+     "auc": 0.799,
+     "q": 0.0,
+     "added": true,
+     "claims": [
+      "37794584"
+     ]
+    }
+   ],
+   "added_genes_in_panel": [
+    "CALB1",
+    "GABRA1"
+   ],
+   "clearing_added": [
+    "CALB1"
+   ],
+   "independence": "two_independent_claims",
+   "shared_claims": [],
+   "spearman_clearing_pair": 0.1695,
+   "symbol_family_collisions": [],
+   "flags": [],
+   "verdict": "corroborated",
+   "added_gene_measurability_in_this_volume": {
+    "CALB1": {
+     "in_var_index": true,
+     "detected_frac": 0.11726,
+     "above_floor": true
+    }
+   }
+  },
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "diffuse bipolar 3b (DB3b)",
+   "n_cells": 3225,
+   "before_result": "not_separated",
+   "after_result": "separated",
+   "before_reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.89; VSX2 AUC=0.52",
+   "after_reason": "markers clearing the gate: GRIK1, MEIS2",
+   "clearing_markers": [
+    {
+     "gene": "GRIK1",
+     "auc": 0.894,
+     "q": 0.0,
+     "added": false,
+     "claims": []
+    },
+    {
+     "gene": "MEIS2",
+     "auc": 0.966,
+     "q": 0.0,
+     "added": true,
+     "claims": [
+      "37388908"
+     ]
+    }
+   ],
+   "added_genes_in_panel": [
+    "MEIS2",
+    "QPCT"
+   ],
+   "clearing_added": [
+    "MEIS2"
+   ],
+   "independence": "two_independent_claims",
+   "shared_claims": [],
+   "spearman_clearing_pair": 0.2902,
+   "symbol_family_collisions": [],
+   "flags": [],
+   "verdict": "corroborated",
+   "added_gene_measurability_in_this_volume": {
+    "MEIS2": {
+     "in_var_index": true,
+     "detected_frac": 0.29515,
+     "above_floor": true
+    }
+   }
+  },
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "diffuse bipolar 4 (DB4)",
+   "n_cells": 3225,
+   "before_result": "not_separated",
+   "after_result": "separated",
+   "before_reason": "1 marker(s) cleared the gate; GRM6 AUC=0.81; VSX2 AUC=0.40",
+   "after_reason": "markers clearing the gate: GRM6, TTR",
+   "clearing_markers": [
+    {
+     "gene": "GRM6",
+     "auc": 0.81,
+     "q": 0.0,
+     "added": false,
+     "claims": []
+    },
+    {
+     "gene": "TTR",
+     "auc": 0.792,
+     "q": 0.0,
+     "added": true,
+     "claims": [
+      "32555229"
+     ]
+    }
+   ],
+   "added_genes_in_panel": [
+    "CALB1",
+    "TTR"
+   ],
+   "clearing_added": [
+    "TTR"
+   ],
+   "independence": "two_independent_claims",
+   "shared_claims": [],
+   "spearman_clearing_pair": 0.1389,
+   "symbol_family_collisions": [],
+   "flags": [],
+   "verdict": "corroborated",
+   "added_gene_measurability_in_this_volume": {
+    "TTR": {
+     "in_var_index": true,
+     "detected_frac": 0.13828,
+     "above_floor": true
+    }
+   }
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "diffuse bipolar 2 (DB2)",
+   "n_cells": 2371,
+   "before_result": "not_separated",
+   "after_result": "separated",
+   "before_reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.82; VSX2 AUC=0.51",
+   "after_reason": "markers clearing the gate: GRIK1, GSG1",
+   "clearing_markers": [
+    {
+     "gene": "GRIK1",
+     "auc": 0.822,
+     "q": 0.0,
+     "added": false,
+     "claims": []
+    },
+    {
+     "gene": "GSG1",
+     "auc": 0.768,
+     "q": 0.0,
+     "added": true,
+     "claims": [
+      "37794584"
+     ]
+    }
+   ],
+   "added_genes_in_panel": [
+    "CACNA1G",
+    "GSG1"
+   ],
+   "clearing_added": [
+    "GSG1"
+   ],
+   "independence": "two_independent_claims",
+   "shared_claims": [],
+   "spearman_clearing_pair": 0.4844,
+   "symbol_family_collisions": [],
+   "flags": [],
+   "verdict": "corroborated",
+   "added_gene_measurability_in_this_volume": {
+    "GSG1": {
+     "in_var_index": true,
+     "detected_frac": 0.12715,
+     "above_floor": true
+    }
+   }
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "diffuse bipolar 3b (DB3b)",
+   "n_cells": 2704,
+   "before_result": "not_separated",
+   "after_result": "separated",
+   "before_reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.76; VSX2 AUC=0.60",
+   "after_reason": "markers clearing the gate: GRIK1, MEIS2",
+   "clearing_markers": [
+    {
+     "gene": "GRIK1",
+     "auc": 0.761,
+     "q": 0.0,
+     "added": false,
+     "claims": []
+    },
+    {
+     "gene": "MEIS2",
+     "auc": 0.796,
+     "q": 0.0,
+     "added": true,
+     "claims": [
+      "37388908"
+     ]
+    }
+   ],
+   "added_genes_in_panel": [
+    "MEIS2",
+    "QPCT"
+   ],
+   "clearing_added": [
+    "MEIS2"
+   ],
+   "independence": "two_independent_claims",
+   "shared_claims": [],
+   "spearman_clearing_pair": 0.2552,
+   "symbol_family_collisions": [],
+   "flags": [],
+   "verdict": "corroborated",
+   "added_gene_measurability_in_this_volume": {
+    "MEIS2": {
+     "in_var_index": true,
+     "detected_frac": 0.38057,
+     "above_floor": true
+    }
+   }
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "diffuse bipolar 6 (DB6)",
+   "n_cells": 429,
+   "before_result": "not_separated",
+   "after_result": "separated",
+   "before_reason": "1 marker(s) cleared the gate; SCGN AUC=0.50; GRM6 AUC=0.89",
+   "after_reason": "markers clearing the gate: GRM6, LMO4",
+   "clearing_markers": [
+    {
+     "gene": "GRM6",
+     "auc": 0.891,
+     "q": 4.1899253630039446e-197,
+     "added": false,
+     "claims": []
+    },
+    {
+     "gene": "LMO4",
+     "auc": 0.719,
+     "q": 4.592446690501092e-75,
+     "added": true,
+     "claims": [
+      "37794584"
+     ]
+    }
+   ],
+   "added_genes_in_panel": [
+    "LMO4"
+   ],
+   "clearing_added": [
+    "LMO4"
+   ],
+   "independence": "two_independent_claims",
+   "shared_claims": [],
+   "spearman_clearing_pair": 0.1432,
+   "symbol_family_collisions": [],
+   "flags": [],
+   "verdict": "corroborated",
+   "added_gene_measurability_in_this_volume": {
+    "LMO4": {
+     "in_var_index": true,
+     "detected_frac": 0.31453,
+     "above_floor": true
+    }
+   }
+  }
+ ]
+}

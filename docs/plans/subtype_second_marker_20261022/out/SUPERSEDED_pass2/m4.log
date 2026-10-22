@@ -1,0 +1,18 @@
+Running as unit: run-p3534841-i74804630.scope; invocation ID: b9f7313bb5ec44b995ae030750a673e7
+verdict changes: 7 (in-scope 7, out-of-scope 0)
+before: {'separated': 12, 'not_separated': 36, 'insufficient_evidence': 8} -> after: {'separated': 19, 'not_separated': 29, 'insufficient_evidence': 8}
+  CX01_retina_snRNA      diffuse bipolar 2 (DB2)                                    not_separated -> separated | added=['CACNA1G', 'GSG1'] | two_independent_claims | rho=0.0527 | corroborated
+      clearing: [('GRIK1', 0.9, 0.0, 'frozen'), ('CACNA1G', 0.751, 0.0, 'ADDED'), ('GSG1', 0.752, 0.0, 'ADDED')] flags: []
+  CX01_retina_snRNA      diffuse bipolar 3a (DB3a)                                  not_separated -> separated | added=['CALB1'] | two_independent_claims | rho=0.1695 | corroborated
+      clearing: [('GRIK1', 0.761, 0.0, 'frozen'), ('CALB1', 0.799, 0.0, 'ADDED')] flags: []
+  CX01_retina_snRNA      diffuse bipolar 3b (DB3b)                                  not_separated -> separated | added=['MEIS2'] | two_independent_claims | rho=0.2902 | corroborated
+      clearing: [('GRIK1', 0.894, 0.0, 'frozen'), ('MEIS2', 0.966, 0.0, 'ADDED')] flags: []
+  CX01_retina_snRNA      diffuse bipolar 4 (DB4)                                    not_separated -> separated | added=['TTR'] | two_independent_claims | rho=0.1389 | corroborated
+      clearing: [('GRM6', 0.81, 0.0, 'frozen'), ('TTR', 0.792, 0.0, 'ADDED')] flags: []
+  PRE_GSE268630          diffuse bipolar 2 (DB2)                                    not_separated -> separated | added=['GSG1'] | two_independent_claims | rho=0.4844 | corroborated
+      clearing: [('GRIK1', 0.822, 0.0, 'frozen'), ('GSG1', 0.768, 0.0, 'ADDED')] flags: []
+  PRE_GSE268630          diffuse bipolar 3b (DB3b)                                  not_separated -> separated | added=['MEIS2'] | two_independent_claims | rho=0.2552 | corroborated
+      clearing: [('GRIK1', 0.761, 0.0, 'frozen'), ('MEIS2', 0.796, 0.0, 'ADDED')] flags: []
+  PRE_GSE268630          diffuse bipolar 6 (DB6)                                    not_separated -> separated | added=['LMO4'] | two_independent_claims | rho=0.1432 | corroborated
+      clearing: [('GRM6', 0.891, 0.0, 'frozen'), ('LMO4', 0.719, 0.0, 'ADDED')] flags: []
+wrote FLIPS.json/.tsv + RULER_REPRO_CHECK.json

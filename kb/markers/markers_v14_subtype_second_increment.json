@@ -1,0 +1,1620 @@
+{
+ "version": "v14.0-subtype-second-marker-20261022",
+ "created": "2026-10-22",
+ "scope": "the 26 subtype-by-volume rows of the frozen consensus wave whose panel is one gene thick (exactly one marker clears the pre-registered gate and no second one does), across 16 literature-consensus retinal subtypes and 7 volumes",
+ "status": "staging only; library `subtype_v14` is NOT merged into the default `all` set and has an EMPTY whitelist, so the default route is byte-identical in every state.  Activating a default face is a separate PI decision and is not made here.",
+ "registered_by": "plans/subtype_second_marker_20261022/PREREG_SUBTYPE_SECOND_MARKER_20261022.md (+ AMENDMENT 1-4)",
+ "card": "t_7509a1a2",
+ "cl_release": "cl/releases/2026-06-08/cl-base.owl",
+ "cl_ontology_file": "kb/ontology/cl/releases/2026-06-08/cl-base.obo",
+ "source_corpus": "the served in-repo literature corpus (v2.6-dev lineage) indexed at build time; corpus path is not distributed",
+ "scope_tissues": [
+  "retina"
+ ],
+ "species_scope": "human (the volumes are human adult retina)",
+ "admission_rule": {
+  "channels": "A = literature corpus segment co-mention; B = the sources the frozen wave already fetched (what_it_supports clauses); C = the textbook layer",
+  "attachment": "segment-level structural: the segment must carry a marker predicate and name exactly one in-scope subtype (see AMENDMENT 4); no proximity constant",
+  "L1": ">= 1 attached statement (paper count recorded; a stricter papers >= 2 reading is recorded per gene)",
+  "L2": "the symbol is in the assay gene vocabulary (42,267 symbols)",
+  "L3": "not already one of the subtype's frozen defining markers",
+  "L4": "a symbol attached to >= 3 in-scope subtypes is rejected for all of them",
+  "L5": "cap K = 2 per subtype, ranked by paper count then channel-B then symbol",
+  "measurability": "in a given volume: present in var/_index and detected (>0) in >= 5 % of that volume's cells; unmeasurable genes are recorded, not claimed"
+ },
+ "reading_is_in_sample": "the panel was selected and measured on the same seven volumes; a flip shows that a literature-sourced second marker exists and is measurable, and is NOT an accuracy claim about the annotator",
+ "evidence": {
+  "prereg": "PREREG_SUBTYPE_SECOND_MARKER_20261022.md",
+  "amendments": [
+   "AMENDMENT_1_ATTACHMENT_RULE_20261022.md",
+   "AMENDMENT_2_ATTACHMENT_UNIT_20261022.md",
+   "AMENDMENT_3_PREDICATE_LIST_20261022.md",
+   "AMENDMENT_4_NO_PROXIMITY_CONSTANT_20261022.md"
+  ],
+  "report": "REPORT.md",
+  "flips": "out/FLIPS.json",
+  "robustness": "out/ROBUSTNESS.json",
+  "ruler_patch": "out/RULER_PATCH.json"
+ },
+ "entries": [
+  {
+   "class_name": "H1 horizontal cell",
+   "cl_id": "CL:0004217",
+   "cl_label": "H1 horizontal cell",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "H1 horizontal cell",
+   "parent_type": "horizontal cell",
+   "consensus_level": "canonical",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "LHX1",
+    "SPP1"
+   ],
+   "markers_frozen_panel": [
+    "LHX1",
+    "SPP1"
+   ],
+   "markers_added_by_this_wave": [],
+   "added_evidence": [],
+   "measurability": {
+    "CX01_retina_snRNA": {},
+    "CX03_retina_multiome": {},
+    "CX04_cowan_fovea": {},
+    "CX04_cowan_organoid": {},
+    "CX04_cowan_periphery": {},
+    "PRE_GSE268630": {},
+    "PRE_OA-D001": {},
+    "PRE_OA-D068": {}
+   },
+   "l4_pan_family_rejections": []
+  },
+  {
+   "class_name": "H2 horizontal cell",
+   "cl_id": "CL:0004218",
+   "cl_label": "H2 horizontal cell",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "H2 horizontal cell",
+   "parent_type": "horizontal cell",
+   "consensus_level": "canonical",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "ISL1",
+    "SPP1"
+   ],
+   "markers_frozen_panel": [
+    "ISL1",
+    "SPP1"
+   ],
+   "markers_added_by_this_wave": [],
+   "added_evidence": [],
+   "measurability": {
+    "CX01_retina_snRNA": {},
+    "CX03_retina_multiome": {},
+    "CX04_cowan_fovea": {},
+    "CX04_cowan_organoid": {},
+    "CX04_cowan_periphery": {},
+    "PRE_GSE268630": {},
+    "PRE_OA-D001": {},
+    "PRE_OA-D068": {}
+   },
+   "l4_pan_family_rejections": []
+  },
+  {
+   "class_name": "OFF-bipolar cell",
+   "cl_id": "CL:0000750",
+   "cl_label": "OFF-bipolar cell",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "OFF cone bipolar cell (OFF BC)",
+   "parent_type": "cone bipolar cell",
+   "consensus_level": "canonical",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "GRIK1",
+    "FEZF2",
+    "LHX3",
+    "SI"
+   ],
+   "markers_frozen_panel": [
+    "GRIK1",
+    "FEZF2",
+    "LHX3"
+   ],
+   "markers_added_by_this_wave": [
+    "SI"
+   ],
+   "added_evidence": [
+    {
+     "gene": "SI",
+     "papers": [
+      "37741839"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 1,
+     "l1_strict_papers_ge2": false,
+     "segments": [
+      "a bistratified wide-filed AC (AC1) receives excitation from a sustained OFF bipolar cell in the OFF sublamina and then makes gap junctional connections with SI-AC in the ON sublamina and activates it in the dark."
+     ]
+    }
+   ],
+   "measurability": {
+    "CX01_retina_snRNA": {
+     "SI": {
+      "in_var_index": true,
+      "detected_frac": 0.0005,
+      "above_floor": false
+     }
+    },
+    "CX03_retina_multiome": {
+     "SI": {
+      "in_var_index": true,
+      "detected_frac": 0.00027,
+      "above_floor": false
+     }
+    },
+    "CX04_cowan_fovea": {
+     "SI": {
+      "in_var_index": true,
+      "detected_frac": 0.0,
+      "above_floor": false
+     }
+    },
+    "CX04_cowan_organoid": {
+     "SI": {
+      "in_var_index": true,
+      "detected_frac": 0.0,
+      "above_floor": false
+     }
+    },
+    "CX04_cowan_periphery": {
+     "SI": {
+      "in_var_index": true,
+      "detected_frac": 3e-05,
+      "above_floor": false
+     }
+    },
+    "PRE_GSE268630": {
+     "SI": {
+      "in_var_index": true,
+      "detected_frac": 0.01259,
+      "above_floor": false
+     }
+    },
+    "PRE_OA-D001": {
+     "SI": {
+      "in_var_index": true,
+      "detected_frac": 0.00073,
+      "above_floor": false
+     }
+    },
+    "PRE_OA-D068": {
+     "SI": {
+      "in_var_index": true,
+      "detected_frac": 0.0,
+      "above_floor": false
+     }
+    }
+   },
+   "l4_pan_family_rejections": []
+  },
+  {
+   "class_name": "ON-bipolar cell",
+   "cl_id": "CL:0000749",
+   "cl_label": "ON-bipolar cell",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "ON cone bipolar cell (ON BC)",
+   "parent_type": "cone bipolar cell",
+   "consensus_level": "canonical",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "GRM6",
+    "TRPM1",
+    "ISL1",
+    "ST18",
+    "CA1",
+    "CRX"
+   ],
+   "markers_frozen_panel": [
+    "GRM6",
+    "TRPM1",
+    "ISL1",
+    "ST18"
+   ],
+   "markers_added_by_this_wave": [
+    "CA1",
+    "CRX"
+   ],
+   "added_evidence": [
+    {
+     "gene": "CA1",
+     "papers": [
+      "39540305"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 1,
+     "l1_strict_papers_ge2": false,
+     "segments": [
+      "5B⁗ ) before conducting a subsequent round of IF with MG antibody markers (CA1 and GS) and the ON bipolar cell marker (PKC-β) ( Vitorino et al., 2009 ) ( Fig."
+     ]
+    },
+    {
+     "gene": "CRX",
+     "papers": [
+      "26235913"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 1,
+     "l1_strict_papers_ge2": false,
+     "segments": [
+      "Protein kinase C‐alpha, which identifies ON bipolar cells, was detected in few cells at day 90 basally to CRX+ photoreceptors (Fig."
+     ]
+    }
+   ],
+   "measurability": {
+    "CX01_retina_snRNA": {
+     "CA1": {
+      "in_var_index": true,
+      "detected_frac": 0.07696,
+      "above_floor": true
+     },
+     "CRX": {
+      "in_var_index": true,
+      "detected_frac": 0.24641,
+      "above_floor": true
+     }
+    },
+    "CX03_retina_multiome": {
+     "CA1": {
+      "in_var_index": true,
+      "detected_frac": 0.02972,
+      "above_floor": false
+     },
+     "CRX": {
+      "in_var_index": true,
+      "detected_frac": 0.46893,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_fovea": {
+     "CA1": {
+      "in_var_index": true,
+      "detected_frac": 0.0004,
+      "above_floor": false
+     },
+     "CRX": {
+      "in_var_index": true,
+      "detected_frac": 0.2373,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_organoid": {
+     "CA1": {
+      "in_var_index": true,
+      "detected_frac": 0.00046,
+      "above_floor": false
+     },
+     "CRX": {
+      "in_var_index": true,
+      "detected_frac": 0.55302,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_periphery": {
+     "CA1": {
+      "in_var_index": true,
+      "detected_frac": 9e-05,
+      "above_floor": false
+     },
+     "CRX": {
+      "in_var_index": true,
+      "detected_frac": 0.44501,
+      "above_floor": true
+     }
+    },
+    "PRE_GSE268630": {
+     "CA1": {
+      "in_var_index": true,
+      "detected_frac": 0.02117,
+      "above_floor": false
+     },
+     "CRX": {
+      "in_var_index": true,
+      "detected_frac": 0.17494,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D001": {
+     "CA1": {
+      "in_var_index": true,
+      "detected_frac": 0.05189,
+      "above_floor": true
+     },
+     "CRX": {
+      "in_var_index": true,
+      "detected_frac": 0.17834,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D068": {
+     "CA1": {
+      "in_var_index": true,
+      "detected_frac": 8e-05,
+      "above_floor": false
+     },
+     "CRX": {
+      "in_var_index": true,
+      "detected_frac": 0.19088,
+      "above_floor": true
+     }
+    }
+   },
+   "l4_pan_family_rejections": []
+  },
+  {
+   "class_name": "ON-blue cone bipolar cell",
+   "cl_id": "CL:4033019",
+   "cl_label": "ON-blue cone bipolar cell",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "blue-cone bipolar cell (BB, S-cone ON bipolar)",
+   "parent_type": "cone bipolar cell",
+   "consensus_level": "widely_used",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "GRM6",
+    "VSX2"
+   ],
+   "markers_frozen_panel": [
+    "GRM6",
+    "VSX2"
+   ],
+   "markers_added_by_this_wave": [],
+   "added_evidence": [],
+   "measurability": {
+    "CX01_retina_snRNA": {},
+    "CX03_retina_multiome": {},
+    "CX04_cowan_fovea": {},
+    "CX04_cowan_organoid": {},
+    "CX04_cowan_periphery": {},
+    "PRE_GSE268630": {},
+    "PRE_OA-D001": {},
+    "PRE_OA-D068": {}
+   },
+   "l4_pan_family_rejections": []
+  },
+  {
+   "class_name": "diffuse bipolar 2 cell",
+   "cl_id": "CL:4033028",
+   "cl_label": "diffuse bipolar 2 cell",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "diffuse bipolar 2 (DB2)",
+   "parent_type": "cone bipolar cell",
+   "consensus_level": "widely_used",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "GRIK1",
+    "VSX2",
+    "CACNA1G",
+    "GSG1"
+   ],
+   "markers_frozen_panel": [
+    "GRIK1",
+    "VSX2"
+   ],
+   "markers_added_by_this_wave": [
+    "CACNA1G",
+    "GSG1"
+   ],
+   "added_evidence": [
+    {
+     "gene": "CACNA1G",
+     "papers": [
+      "33188005"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 1,
+     "l1_strict_papers_ge2": false,
+     "segments": [
+      "These molecular differences are further supported by transcriptomic data showing higher levels of expression of CACNA1G (Cav3.1) and KCNJ2 (Kir2.1) in DB2 compared with DB1 cells ( Fig."
+     ]
+    },
+    {
+     "gene": "GSG1",
+     "papers": [
+      "37794584"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 1,
+     "l1_strict_papers_ge2": false,
+     "segments": [
+      "DB2 bipolar cells were distinguished using germ cell-specific gene 1 protein ( GSG1"
+     ]
+    }
+   ],
+   "measurability": {
+    "CX01_retina_snRNA": {
+     "CACNA1G": {
+      "in_var_index": true,
+      "detected_frac": 0.18755,
+      "above_floor": true
+     },
+     "GSG1": {
+      "in_var_index": true,
+      "detected_frac": 0.08808,
+      "above_floor": true
+     }
+    },
+    "CX03_retina_multiome": {
+     "CACNA1G": {
+      "in_var_index": true,
+      "detected_frac": 0.05424,
+      "above_floor": true
+     },
+     "GSG1": {
+      "in_var_index": true,
+      "detected_frac": 0.03787,
+      "above_floor": false
+     }
+    },
+    "CX04_cowan_fovea": {
+     "CACNA1G": {
+      "in_var_index": true,
+      "detected_frac": 0.07153,
+      "above_floor": true
+     },
+     "GSG1": {
+      "in_var_index": true,
+      "detected_frac": 0.05003,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_organoid": {
+     "CACNA1G": {
+      "in_var_index": true,
+      "detected_frac": 0.01334,
+      "above_floor": false
+     },
+     "GSG1": {
+      "in_var_index": true,
+      "detected_frac": 0.00784,
+      "above_floor": false
+     }
+    },
+    "CX04_cowan_periphery": {
+     "CACNA1G": {
+      "in_var_index": true,
+      "detected_frac": 0.04386,
+      "above_floor": false
+     },
+     "GSG1": {
+      "in_var_index": true,
+      "detected_frac": 0.04288,
+      "above_floor": false
+     }
+    },
+    "PRE_GSE268630": {
+     "CACNA1G": {
+      "in_var_index": true,
+      "detected_frac": 0.09181,
+      "above_floor": true
+     },
+     "GSG1": {
+      "in_var_index": true,
+      "detected_frac": 0.12715,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D001": {
+     "CACNA1G": {
+      "in_var_index": true,
+      "detected_frac": 0.09001,
+      "above_floor": true
+     },
+     "GSG1": {
+      "in_var_index": true,
+      "detected_frac": 0.05359,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D068": {
+     "CACNA1G": {
+      "in_var_index": true,
+      "detected_frac": 0.02087,
+      "above_floor": false
+     },
+     "GSG1": {
+      "in_var_index": true,
+      "detected_frac": 0.05463,
+      "above_floor": true
+     }
+    }
+   },
+   "l4_pan_family_rejections": []
+  },
+  {
+   "class_name": "diffuse bipolar 3a cell",
+   "cl_id": "CL:4033029",
+   "cl_label": "diffuse bipolar 3a cell",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "diffuse bipolar 3a (DB3a)",
+   "parent_type": "cone bipolar cell",
+   "consensus_level": "widely_used",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "GRIK1",
+    "VSX2",
+    "CALB1"
+   ],
+   "markers_frozen_panel": [
+    "GRIK1",
+    "VSX2"
+   ],
+   "markers_added_by_this_wave": [
+    "CALB1"
+   ],
+   "added_evidence": [
+    {
+     "gene": "CALB1",
+     "papers": [
+      "37794584"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 1,
+     "l1_strict_papers_ge2": false,
+     "segments": [
+      "DB3a bipolar cells were characterized based on calbindin 1 ( CALB1"
+     ]
+    }
+   ],
+   "measurability": {
+    "CX01_retina_snRNA": {
+     "CALB1": {
+      "in_var_index": true,
+      "detected_frac": 0.11726,
+      "above_floor": true
+     }
+    },
+    "CX03_retina_multiome": {
+     "CALB1": {
+      "in_var_index": true,
+      "detected_frac": 0.04357,
+      "above_floor": false
+     }
+    },
+    "CX04_cowan_fovea": {
+     "CALB1": {
+      "in_var_index": true,
+      "detected_frac": 0.08716,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_organoid": {
+     "CALB1": {
+      "in_var_index": true,
+      "detected_frac": 0.14538,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_periphery": {
+     "CALB1": {
+      "in_var_index": true,
+      "detected_frac": 0.06082,
+      "above_floor": true
+     }
+    },
+    "PRE_GSE268630": {
+     "CALB1": {
+      "in_var_index": true,
+      "detected_frac": 0.01845,
+      "above_floor": false
+     }
+    },
+    "PRE_OA-D001": {
+     "CALB1": {
+      "in_var_index": true,
+      "detected_frac": 0.13135,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D068": {
+     "CALB1": {
+      "in_var_index": true,
+      "detected_frac": 0.02548,
+      "above_floor": false
+     }
+    }
+   },
+   "l4_pan_family_rejections": []
+  },
+  {
+   "class_name": "diffuse bipolar 3b cell",
+   "cl_id": "CL:4033030",
+   "cl_label": "diffuse bipolar 3b cell",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "diffuse bipolar 3b (DB3b)",
+   "parent_type": "cone bipolar cell",
+   "consensus_level": "widely_used",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "GRIK1",
+    "VSX2",
+    "MEIS2",
+    "QPCT"
+   ],
+   "markers_frozen_panel": [
+    "GRIK1",
+    "VSX2"
+   ],
+   "markers_added_by_this_wave": [
+    "MEIS2",
+    "QPCT"
+   ],
+   "added_evidence": [
+    {
+     "gene": "MEIS2",
+     "papers": [
+      "37388908"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 1,
+     "l1_strict_papers_ge2": false,
+     "segments": [
+      "We were also able to identify marker genes of DB3b ( MEIS2 ) and DB5 ( QPCT ) for human and monkey BCs."
+     ]
+    },
+    {
+     "gene": "QPCT",
+     "papers": [
+      "37388908"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 1,
+     "l1_strict_papers_ge2": false,
+     "segments": [
+      "We were also able to identify marker genes of DB3b ( MEIS2 ) and DB5 ( QPCT ) for human and monkey BCs."
+     ]
+    }
+   ],
+   "measurability": {
+    "CX01_retina_snRNA": {
+     "MEIS2": {
+      "in_var_index": true,
+      "detected_frac": 0.29515,
+      "above_floor": true
+     },
+     "QPCT": {
+      "in_var_index": true,
+      "detected_frac": 0.05292,
+      "above_floor": true
+     }
+    },
+    "CX03_retina_multiome": {
+     "MEIS2": {
+      "in_var_index": true,
+      "detected_frac": 0.55322,
+      "above_floor": true
+     },
+     "QPCT": {
+      "in_var_index": true,
+      "detected_frac": 0.02655,
+      "above_floor": false
+     }
+    },
+    "CX04_cowan_fovea": {
+     "MEIS2": {
+      "in_var_index": true,
+      "detected_frac": 0.18363,
+      "above_floor": true
+     },
+     "QPCT": {
+      "in_var_index": true,
+      "detected_frac": 0.069,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_organoid": {
+     "MEIS2": {
+      "in_var_index": true,
+      "detected_frac": 0.35048,
+      "above_floor": true
+     },
+     "QPCT": {
+      "in_var_index": true,
+      "detected_frac": 0.02891,
+      "above_floor": false
+     }
+    },
+    "CX04_cowan_periphery": {
+     "MEIS2": {
+      "in_var_index": true,
+      "detected_frac": 0.17602,
+      "above_floor": true
+     },
+     "QPCT": {
+      "in_var_index": true,
+      "detected_frac": 0.09898,
+      "above_floor": true
+     }
+    },
+    "PRE_GSE268630": {
+     "MEIS2": {
+      "in_var_index": true,
+      "detected_frac": 0.38057,
+      "above_floor": true
+     },
+     "QPCT": {
+      "in_var_index": true,
+      "detected_frac": 0.03426,
+      "above_floor": false
+     }
+    },
+    "PRE_OA-D001": {
+     "MEIS2": {
+      "in_var_index": true,
+      "detected_frac": 0.26751,
+      "above_floor": true
+     },
+     "QPCT": {
+      "in_var_index": true,
+      "detected_frac": 0.09912,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D068": {
+     "MEIS2": {
+      "in_var_index": true,
+      "detected_frac": 0.25276,
+      "above_floor": true
+     },
+     "QPCT": {
+      "in_var_index": true,
+      "detected_frac": 0.03869,
+      "above_floor": false
+     }
+    }
+   },
+   "l4_pan_family_rejections": []
+  },
+  {
+   "class_name": "diffuse bipolar 4 cell",
+   "cl_id": "CL:4033031",
+   "cl_label": "diffuse bipolar 4 cell",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "diffuse bipolar 4 (DB4)",
+   "parent_type": "cone bipolar cell",
+   "consensus_level": "widely_used",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "GRM6",
+    "VSX2",
+    "LMO4"
+   ],
+   "markers_frozen_panel": [
+    "GRM6",
+    "VSX2"
+   ],
+   "markers_added_by_this_wave": [
+    "LMO4"
+   ],
+   "added_evidence": [
+    {
+     "gene": "LMO4",
+     "papers": [
+      "37794584"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 1,
+     "l1_strict_papers_ge2": false,
+     "segments": [
+      "DB4 bipolar cells were identified based on expression of LIM domain only protein 4 ( LMO4"
+     ]
+    }
+   ],
+   "measurability": {
+    "CX01_retina_snRNA": {
+     "LMO4": {
+      "in_var_index": true,
+      "detected_frac": 0.25927,
+      "above_floor": true
+     }
+    },
+    "CX03_retina_multiome": {
+     "LMO4": {
+      "in_var_index": true,
+      "detected_frac": 0.10526,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_fovea": {
+     "LMO4": {
+      "in_var_index": true,
+      "detected_frac": 0.44956,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_organoid": {
+     "LMO4": {
+      "in_var_index": true,
+      "detected_frac": 0.22498,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_periphery": {
+     "LMO4": {
+      "in_var_index": true,
+      "detected_frac": 0.32267,
+      "above_floor": true
+     }
+    },
+    "PRE_GSE268630": {
+     "LMO4": {
+      "in_var_index": true,
+      "detected_frac": 0.31453,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D001": {
+     "LMO4": {
+      "in_var_index": true,
+      "detected_frac": 0.33315,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D068": {
+     "LMO4": {
+      "in_var_index": true,
+      "detected_frac": 0.251,
+      "above_floor": true
+     }
+    }
+   },
+   "l4_pan_family_rejections": []
+  },
+  {
+   "class_name": "diffuse bipolar 6 cell",
+   "cl_id": "CL:4033032",
+   "cl_label": "diffuse bipolar 6 cell",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "diffuse bipolar 6 (DB6)",
+   "parent_type": "cone bipolar cell",
+   "consensus_level": "widely_used",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "SCGN",
+    "GRM6",
+    "DNER"
+   ],
+   "markers_frozen_panel": [
+    "SCGN",
+    "GRM6"
+   ],
+   "markers_added_by_this_wave": [
+    "DNER"
+   ],
+   "added_evidence": [
+    {
+     "gene": "DNER",
+     "papers": [
+      "37794584"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 1,
+     "l1_strict_papers_ge2": false,
+     "segments": [
+      "and DB6 bipolar cells were characterized using Delta and Notch-like epidermal growth factor-related receptor ( DNER"
+     ]
+    }
+   ],
+   "measurability": {
+    "CX01_retina_snRNA": {
+     "DNER": {
+      "in_var_index": true,
+      "detected_frac": 0.39767,
+      "above_floor": true
+     }
+    },
+    "CX03_retina_multiome": {
+     "DNER": {
+      "in_var_index": true,
+      "detected_frac": 0.23023,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_fovea": {
+     "DNER": {
+      "in_var_index": true,
+      "detected_frac": 0.42544,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_organoid": {
+     "DNER": {
+      "in_var_index": true,
+      "detected_frac": 0.24555,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_periphery": {
+     "DNER": {
+      "in_var_index": true,
+      "detected_frac": 0.21093,
+      "above_floor": true
+     }
+    },
+    "PRE_GSE268630": {
+     "DNER": {
+      "in_var_index": true,
+      "detected_frac": 0.44718,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D001": {
+     "DNER": {
+      "in_var_index": true,
+      "detected_frac": 0.33742,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D068": {
+     "DNER": {
+      "in_var_index": true,
+      "detected_frac": 0.20432,
+      "above_floor": true
+     }
+    }
+   },
+   "l4_pan_family_rejections": []
+  },
+  {
+   "class_name": "flat midget bipolar cell",
+   "cl_id": "CL:4033033",
+   "cl_label": "flat midget bipolar cell",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "flat midget bipolar cell (FMB, OFF midget bipolar)",
+   "parent_type": "cone bipolar cell",
+   "consensus_level": "widely_used",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "GRIK1",
+    "VSX2",
+    "GLRA1"
+   ],
+   "markers_frozen_panel": [
+    "GRIK1",
+    "VSX2"
+   ],
+   "markers_added_by_this_wave": [
+    "GLRA1"
+   ],
+   "added_evidence": [
+    {
+     "gene": "GLRA1",
+     "papers": [
+      "33188005"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 1,
+     "l1_strict_papers_ge2": false,
+     "segments": [
+      "Additional evidence for selective expression of GLRA1 in DB1 and FMB cells is shown in  Figure 8 A  below.",
+      "Single-cell RNA sequencing data provide additional support for higher expression of α1 GlyR transcript (GLRA1) in DB1 and FMB cells compared with other Off-CBC types ( Fig.",
+      "a result supported by high levels of GLRA1 transcript in DB1 and FMB cells."
+     ]
+    }
+   ],
+   "measurability": {
+    "CX01_retina_snRNA": {
+     "GLRA1": {
+      "in_var_index": true,
+      "detected_frac": 0.20485,
+      "above_floor": true
+     }
+    },
+    "CX03_retina_multiome": {
+     "GLRA1": {
+      "in_var_index": true,
+      "detected_frac": 0.067,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_fovea": {
+     "GLRA1": {
+      "in_var_index": true,
+      "detected_frac": 0.01771,
+      "above_floor": false
+     }
+    },
+    "CX04_cowan_organoid": {
+     "GLRA1": {
+      "in_var_index": true,
+      "detected_frac": 0.00059,
+      "above_floor": false
+     }
+    },
+    "CX04_cowan_periphery": {
+     "GLRA1": {
+      "in_var_index": true,
+      "detected_frac": 0.00487,
+      "above_floor": false
+     }
+    },
+    "PRE_GSE268630": {
+     "GLRA1": {
+      "in_var_index": true,
+      "detected_frac": 0.10651,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D001": {
+     "GLRA1": {
+      "in_var_index": true,
+      "detected_frac": 0.11481,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D068": {
+     "GLRA1": {
+      "in_var_index": true,
+      "detected_frac": 0.00111,
+      "above_floor": false
+     }
+    }
+   },
+   "l4_pan_family_rejections": []
+  },
+  {
+   "class_name": "giant bipolar cell",
+   "cl_id": "CL:4033035",
+   "cl_label": "giant bipolar cell",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "giant bipolar cell (GB)",
+   "parent_type": "cone bipolar cell",
+   "consensus_level": "study_specific",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "UTRN"
+   ],
+   "markers_frozen_panel": [
+    "UTRN"
+   ],
+   "markers_added_by_this_wave": [],
+   "added_evidence": [],
+   "measurability": {
+    "CX01_retina_snRNA": {},
+    "CX03_retina_multiome": {},
+    "CX04_cowan_fovea": {},
+    "CX04_cowan_organoid": {},
+    "CX04_cowan_periphery": {},
+    "PRE_GSE268630": {},
+    "PRE_OA-D001": {},
+    "PRE_OA-D068": {}
+   },
+   "l4_pan_family_rejections": []
+  },
+  {
+   "class_name": "invaginating midget bipolar cell",
+   "cl_id": "CL:4033034",
+   "cl_label": "invaginating midget bipolar cell",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "invaginating midget bipolar cell (IMB, ON midget bipolar)",
+   "parent_type": "cone bipolar cell",
+   "consensus_level": "widely_used",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "GRM6",
+    "VSX2"
+   ],
+   "markers_frozen_panel": [
+    "GRM6",
+    "VSX2"
+   ],
+   "markers_added_by_this_wave": [],
+   "added_evidence": [],
+   "measurability": {
+    "CX01_retina_snRNA": {},
+    "CX03_retina_multiome": {},
+    "CX04_cowan_fovea": {},
+    "CX04_cowan_organoid": {},
+    "CX04_cowan_periphery": {},
+    "PRE_GSE268630": {},
+    "PRE_OA-D001": {},
+    "PRE_OA-D068": {}
+   },
+   "l4_pan_family_rejections": []
+  },
+  {
+   "class_name": "parasol ganglion cell of retina",
+   "cl_id": "CL:4023189",
+   "cl_label": "parasol ganglion cell of retina",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "parasol retinal ganglion cell",
+   "parent_type": "retinal ganglion cell",
+   "consensus_level": "canonical",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "SPP1",
+    "RBPMS2",
+    "CHRNA2",
+    "CA8",
+    "AFAP1",
+    "POU6F2"
+   ],
+   "markers_frozen_panel": [
+    "SPP1",
+    "RBPMS2",
+    "CHRNA2",
+    "CA8"
+   ],
+   "markers_added_by_this_wave": [
+    "AFAP1",
+    "POU6F2"
+   ],
+   "added_evidence": [
+    {
+     "gene": "AFAP1",
+     "papers": [
+      "32555229",
+      "38994994"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 2,
+     "l1_strict_papers_ge2": true,
+     "segments": [
+      "which was enriched in midget ganglion cells;  CAV2  and  POU6F2  enriched in ON parasol RGCs and  AFAP1",
+      "Afap1  is enriched in peripheral ON-parasol RGCs, and a variant within  AFAP1  has been associated with primary open-angle glaucoma in human patients [ 100 ]."
+     ]
+    },
+    {
+     "gene": "POU6F2",
+     "papers": [
+      "32555229",
+      "38698014"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 2,
+     "l1_strict_papers_ge2": true,
+     "segments": [
+      "In the rhesus macaque retina, POU6F2 labels the large parasol ganglion cells that form the magnocellular (M) pathway.",
+      "We assume that the remaining large POU6F2-positive cells are ON-parasol RGCs.",
+      "we stained macaque retina for POU6F2 and neurofilament heavy chain (a known marker of parasol cells in the macaque retina)."
+     ]
+    }
+   ],
+   "measurability": {
+    "CX01_retina_snRNA": {
+     "AFAP1": {
+      "in_var_index": true,
+      "detected_frac": 0.07652,
+      "above_floor": true
+     },
+     "POU6F2": {
+      "in_var_index": true,
+      "detected_frac": 0.31339,
+      "above_floor": true
+     }
+    },
+    "CX03_retina_multiome": {
+     "AFAP1": {
+      "in_var_index": true,
+      "detected_frac": 0.03255,
+      "above_floor": false
+     },
+     "POU6F2": {
+      "in_var_index": true,
+      "detected_frac": 0.05236,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_fovea": {
+     "AFAP1": {
+      "in_var_index": true,
+      "detected_frac": 0.02818,
+      "above_floor": false
+     },
+     "POU6F2": {
+      "in_var_index": true,
+      "detected_frac": 0.11706,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_organoid": {
+     "AFAP1": {
+      "in_var_index": true,
+      "detected_frac": 0.0415,
+      "above_floor": false
+     },
+     "POU6F2": {
+      "in_var_index": true,
+      "detected_frac": 0.00935,
+      "above_floor": false
+     }
+    },
+    "CX04_cowan_periphery": {
+     "AFAP1": {
+      "in_var_index": true,
+      "detected_frac": 0.03545,
+      "above_floor": false
+     },
+     "POU6F2": {
+      "in_var_index": true,
+      "detected_frac": 0.0125,
+      "above_floor": false
+     }
+    },
+    "PRE_GSE268630": {
+     "AFAP1": {
+      "in_var_index": true,
+      "detected_frac": 0.33665,
+      "above_floor": true
+     },
+     "POU6F2": {
+      "in_var_index": true,
+      "detected_frac": 0.31037,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D001": {
+     "AFAP1": {
+      "in_var_index": true,
+      "detected_frac": 0.07424,
+      "above_floor": true
+     },
+     "POU6F2": {
+      "in_var_index": true,
+      "detected_frac": 0.17097,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D068": {
+     "AFAP1": {
+      "in_var_index": true,
+      "detected_frac": 0.06728,
+      "above_floor": true
+     },
+     "POU6F2": {
+      "in_var_index": true,
+      "detected_frac": 0.06831,
+      "above_floor": true
+     }
+    }
+   },
+   "l4_pan_family_rejections": []
+  },
+  {
+   "class_name": "rod bipolar cell",
+   "cl_id": "CL:0000751",
+   "cl_label": "rod bipolar cell",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "parent_type": "rod bipolar cell",
+   "consensus_level": "canonical",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "PRKCA",
+    "TRPM1",
+    "VSTM2B",
+    "C3",
+    "NRL"
+   ],
+   "markers_frozen_panel": [
+    "PRKCA",
+    "TRPM1",
+    "VSTM2B"
+   ],
+   "markers_added_by_this_wave": [
+    "C3",
+    "NRL"
+   ],
+   "added_evidence": [
+    {
+     "gene": "C3",
+     "papers": [
+      "39228105"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 1,
+     "l1_strict_papers_ge2": false,
+     "segments": [
+      "loss of rod bipolar cells was associated with increased transcription of the complement factor 3 ( C3 )"
+     ]
+    },
+    {
+     "gene": "NRL",
+     "papers": [
+      "29402929",
+      "39121095",
+      "40758714"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 3,
+     "l1_strict_papers_ge2": true,
+     "segments": [
+      "these expression patterns were similar to those of other rod (neural retina leucine zipper [NRL] and Recoverin) and cone photoreceptor markers (retinoid X receptor gamma [RXRγ] and recoverin) accompanied by expression of the rod bipolar cell marker protein kinase C alpha (PKCα) ( Fig 4A )",
+      "Previous studies of NRL and NR2E3 knockouts have shown that rod bipolar cell specification proceeds normally when rod fate is inhibited [ 107 , 108 ].",
+      "PKCα (a rod bipolar cell marker) was detected beneath the layer of  NRL -eGFP+ rods"
+     ]
+    }
+   ],
+   "measurability": {
+    "CX01_retina_snRNA": {
+     "C3": {
+      "in_var_index": true,
+      "detected_frac": 0.02614,
+      "above_floor": false
+     },
+     "NRL": {
+      "in_var_index": true,
+      "detected_frac": 0.2837,
+      "above_floor": true
+     }
+    },
+    "CX03_retina_multiome": {
+     "C3": {
+      "in_var_index": true,
+      "detected_frac": 0.00902,
+      "above_floor": false
+     },
+     "NRL": {
+      "in_var_index": true,
+      "detected_frac": 0.58982,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_fovea": {
+     "C3": {
+      "in_var_index": true,
+      "detected_frac": 0.02727,
+      "above_floor": false
+     },
+     "NRL": {
+      "in_var_index": true,
+      "detected_frac": 0.33438,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_organoid": {
+     "C3": {
+      "in_var_index": true,
+      "detected_frac": 0.00023,
+      "above_floor": false
+     },
+     "NRL": {
+      "in_var_index": true,
+      "detected_frac": 0.5364,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_periphery": {
+     "C3": {
+      "in_var_index": true,
+      "detected_frac": 0.04496,
+      "above_floor": false
+     },
+     "NRL": {
+      "in_var_index": true,
+      "detected_frac": 0.70622,
+      "above_floor": true
+     }
+    },
+    "PRE_GSE268630": {
+     "C3": {
+      "in_var_index": true,
+      "detected_frac": 0.0034,
+      "above_floor": false
+     },
+     "NRL": {
+      "in_var_index": true,
+      "detected_frac": 0.22215,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D001": {
+     "C3": {
+      "in_var_index": true,
+      "detected_frac": 0.01823,
+      "above_floor": false
+     },
+     "NRL": {
+      "in_var_index": true,
+      "detected_frac": 0.30636,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D068": {
+     "C3": {
+      "in_var_index": true,
+      "detected_frac": 0.00225,
+      "above_floor": false
+     },
+     "NRL": {
+      "in_var_index": true,
+      "detected_frac": 0.32159,
+      "above_floor": true
+     }
+    }
+   },
+   "l4_pan_family_rejections": []
+  },
+  {
+   "class_name": "starburst amacrine cell",
+   "cl_id": "CL:0004232",
+   "cl_label": "starburst amacrine cell",
+   "cl_resolves": true,
+   "our_alias_for_the_literature_subtype": "starburst (cholinergic) amacrine cell",
+   "parent_type": "amacrine cell",
+   "consensus_level": "canonical",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "CHAT",
+    "SLC18A3",
+    "SLC5A7",
+    "CTBP2",
+    "EMD"
+   ],
+   "markers_frozen_panel": [
+    "CHAT",
+    "SLC18A3",
+    "SLC5A7"
+   ],
+   "markers_added_by_this_wave": [
+    "CTBP2",
+    "EMD"
+   ],
+   "added_evidence": [
+    {
+     "gene": "CTBP2",
+     "papers": [
+      "35095414"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 1,
+     "l1_strict_papers_ge2": false,
+     "segments": [
+      "For example,  CTBP2  was not detected in GABAergic starburst ACs co-expressing  CHAT  and  GBX2  ( Supplementary Figures S4F–I )."
+     ]
+    },
+    {
+     "gene": "EMD",
+     "papers": [
+      "35216328"
+     ],
+     "channel_b_sources": [],
+     "papers_total": 1,
+     "l1_strict_papers_ge2": false,
+     "segments": [
+      "Cholinergic amacrine cells were labelled with goat anti-choline acetyltransferase (ChAT; 1:100; #AB144; EMD Millipore"
+     ]
+    }
+   ],
+   "measurability": {
+    "CX01_retina_snRNA": {
+     "CTBP2": {
+      "in_var_index": true,
+      "detected_frac": 0.53996,
+      "above_floor": true
+     },
+     "EMD": {
+      "in_var_index": true,
+      "detected_frac": 0.10598,
+      "above_floor": true
+     }
+    },
+    "CX03_retina_multiome": {
+     "CTBP2": {
+      "in_var_index": true,
+      "detected_frac": 0.41352,
+      "above_floor": true
+     },
+     "EMD": {
+      "in_var_index": true,
+      "detected_frac": 0.05801,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_fovea": {
+     "CTBP2": {
+      "in_var_index": true,
+      "detected_frac": 0.31293,
+      "above_floor": true
+     },
+     "EMD": {
+      "in_var_index": true,
+      "detected_frac": 0.27524,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_organoid": {
+     "CTBP2": {
+      "in_var_index": true,
+      "detected_frac": 0.37962,
+      "above_floor": true
+     },
+     "EMD": {
+      "in_var_index": true,
+      "detected_frac": 0.22612,
+      "above_floor": true
+     }
+    },
+    "CX04_cowan_periphery": {
+     "CTBP2": {
+      "in_var_index": true,
+      "detected_frac": 0.38623,
+      "above_floor": true
+     },
+     "EMD": {
+      "in_var_index": true,
+      "detected_frac": 0.19972,
+      "above_floor": true
+     }
+    },
+    "PRE_GSE268630": {
+     "CTBP2": {
+      "in_var_index": true,
+      "detected_frac": 0.65109,
+      "above_floor": true
+     },
+     "EMD": {
+      "in_var_index": true,
+      "detected_frac": 0.05812,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D001": {
+     "CTBP2": {
+      "in_var_index": true,
+      "detected_frac": 0.37747,
+      "above_floor": true
+     },
+     "EMD": {
+      "in_var_index": true,
+      "detected_frac": 0.17909,
+      "above_floor": true
+     }
+    },
+    "PRE_OA-D068": {
+     "CTBP2": {
+      "in_var_index": true,
+      "detected_frac": 0.27333,
+      "above_floor": true
+     },
+     "EMD": {
+      "in_var_index": true,
+      "detected_frac": 0.1234,
+      "above_floor": true
+     }
+    }
+   },
+   "l4_pan_family_rejections": []
+  }
+ ]
+}

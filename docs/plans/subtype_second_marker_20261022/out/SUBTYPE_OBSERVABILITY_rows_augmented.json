@@ -1,0 +1,2772 @@
+[
+ {
+  "subtype": "rod photoreceptor",
+  "parent": "rod photoreceptor",
+  "consensus_level": "canonical",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": "CL:0000604",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 5,
+  "markers_inside_recorded_window": [
+   "RHO",
+   "PDE6A",
+   "CNGA1",
+   "NRL",
+   "NR2E3"
+  ],
+  "_markers_all": [
+   "RHO",
+   "PDE6A",
+   "CNGA1",
+   "NRL",
+   "NR2E3"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "RHO",
+   "PDE6A",
+   "CNGA1",
+   "NRL",
+   "NR2E3"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "S-cone photoreceptor (S cone)",
+  "parent": "cone photoreceptor",
+  "consensus_level": "canonical",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0003050",
+  "material_reference_label": "S cone cell",
+  "cells_in_material": 3685,
+  "clusters_in_material": 3,
+  "example_clusters": [
+   "CX01_retina_snRNA:32",
+   "PRE_GSE268630:29",
+   "PRE_OA-D001:26"
+  ],
+  "our_recorded_prediction": {
+   "Cone": 2,
+   "(no candidate)": 1
+  },
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "OPN1SW",
+   "CCDC136"
+  ],
+  "_markers_all": [
+   "OPN1SW",
+   "CCDC136"
+  ],
+  "expected_share_pct_of_parent": 3.19,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "OPN1SW",
+   "CCDC136"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "M/L-cone (red/green cone)",
+  "parent": "cone photoreceptor",
+  "consensus_level": "canonical",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [
+   "THRB"
+  ],
+  "_markers_all": [
+   "OPN1MW",
+   "OPN1LW",
+   "THRB"
+  ],
+  "expected_share_pct_of_parent": 73.22,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "OPN1MW",
+   "OPN1LW",
+   "THRB"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "M-cone photoreceptor (M cone, green cone)",
+  "parent": "cone photoreceptor",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0003049",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 1,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [
+   "OPN1MW"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "OPN1MW"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "L-cone photoreceptor (L cone, red cone)",
+  "parent": "cone photoreceptor",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0003048",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 1,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [
+   "OPN1LW"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "OPN1LW"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+  "parent": "rod bipolar cell",
+  "consensus_level": "canonical",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": "CL:0000751",
+  "material_reference_label": "rod bipolar cell",
+  "cells_in_material": 17739,
+  "clusters_in_material": 6,
+  "example_clusters": [
+   "CX01_retina_snRNA:23",
+   "CX03_retina_multiome:6",
+   "CX04_cowan_fovea:7",
+   "CX04_cowan_periphery:17"
+  ],
+  "our_recorded_prediction": {
+   "BC": 6
+  },
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [
+   "PRKCA",
+   "TRPM1"
+  ],
+  "_markers_all": [
+   "PRKCA",
+   "TRPM1",
+   "VSTM2B",
+   "C3",
+   "NRL"
+  ],
+  "expected_share_pct_of_parent": 35.0,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "PRKCA",
+   "TRPM1",
+   "VSTM2B"
+  ],
+  "_added_by_subtype2m": [
+   "C3",
+   "NRL"
+  ]
+ },
+ {
+  "subtype": "ON cone bipolar cell (ON BC)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "canonical",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": "CL:0000749",
+  "material_reference_label": "ON-bipolar cell",
+  "cells_in_material": 8583,
+  "clusters_in_material": 11,
+  "example_clusters": [
+   "CX03_retina_multiome:21",
+   "CX03_retina_multiome:25",
+   "CX03_retina_multiome:28",
+   "CX03_retina_multiome:29"
+  ],
+  "our_recorded_prediction": {
+   "BC": 9,
+   "(no candidate)": 2
+  },
+  "n_defining_markers": 4,
+  "markers_inside_recorded_window": [
+   "GRM6",
+   "TRPM1",
+   "ISL1",
+   "ST18"
+  ],
+  "_markers_all": [
+   "GRM6",
+   "TRPM1",
+   "ISL1",
+   "ST18",
+   "CA1",
+   "CRX"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "GRM6",
+   "TRPM1",
+   "ISL1",
+   "ST18"
+  ],
+  "_added_by_subtype2m": [
+   "CA1",
+   "CRX"
+  ]
+ },
+ {
+  "subtype": "OFF cone bipolar cell (OFF BC)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "canonical",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": "CL:0000750",
+  "material_reference_label": "OFF-bipolar cell",
+  "cells_in_material": 7773,
+  "clusters_in_material": 14,
+  "example_clusters": [
+   "CX03_retina_multiome:4",
+   "CX03_retina_multiome:16",
+   "CX03_retina_multiome:17",
+   "CX03_retina_multiome:18"
+  ],
+  "our_recorded_prediction": {
+   "BC": 13,
+   "(no candidate)": 1
+  },
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [
+   "GRIK1"
+  ],
+  "_markers_all": [
+   "GRIK1",
+   "FEZF2",
+   "LHX3",
+   "SI"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "GRIK1",
+   "FEZF2",
+   "LHX3"
+  ],
+  "_added_by_subtype2m": [
+   "SI"
+  ]
+ },
+ {
+  "subtype": "invaginating midget bipolar cell (IMB, ON midget bipolar)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4033034",
+  "material_reference_label": "invaginating midget bipolar cell",
+  "cells_in_material": 4629,
+  "clusters_in_material": 2,
+  "example_clusters": [
+   "CX01_retina_snRNA:19",
+   "PRE_GSE268630:27"
+  ],
+  "our_recorded_prediction": {
+   "BC": 2
+  },
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRM6"
+  ],
+  "_markers_all": [
+   "GRM6",
+   "VSX2"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "GRM6",
+   "VSX2"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "flat midget bipolar cell (FMB, OFF midget bipolar)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4033033",
+  "material_reference_label": "flat midget bipolar cell",
+  "cells_in_material": 6993,
+  "clusters_in_material": 2,
+  "example_clusters": [
+   "CX01_retina_snRNA:17",
+   "PRE_GSE268630:26"
+  ],
+  "our_recorded_prediction": {
+   "BC": 2
+  },
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRIK1"
+  ],
+  "_markers_all": [
+   "GRIK1",
+   "VSX2",
+   "GLRA1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "GRIK1",
+   "VSX2"
+  ],
+  "_added_by_subtype2m": [
+   "GLRA1"
+  ]
+ },
+ {
+  "subtype": "diffuse bipolar cell (DB)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [
+   "VSX2",
+   "SCGN"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "VSX2",
+   "SCGN"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "diffuse bipolar 1 (DB1)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4033027",
+  "material_reference_label": "diffuse bipolar 1 cell",
+  "cells_in_material": 4936,
+  "clusters_in_material": 2,
+  "example_clusters": [
+   "CX01_retina_snRNA:10",
+   "PRE_GSE268630:10"
+  ],
+  "our_recorded_prediction": {
+   "BC": 2
+  },
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRIK1"
+  ],
+  "_markers_all": [
+   "SCGN",
+   "GRIK1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "SCGN",
+   "GRIK1"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "diffuse bipolar 2 (DB2)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4033028",
+  "material_reference_label": "diffuse bipolar 2 cell",
+  "cells_in_material": 5581,
+  "clusters_in_material": 2,
+  "example_clusters": [
+   "CX01_retina_snRNA:20",
+   "PRE_GSE268630:16"
+  ],
+  "our_recorded_prediction": {
+   "BC": 2
+  },
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRIK1"
+  ],
+  "_markers_all": [
+   "GRIK1",
+   "VSX2",
+   "CACNA1G",
+   "GSG1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "GRIK1",
+   "VSX2"
+  ],
+  "_added_by_subtype2m": [
+   "CACNA1G",
+   "GSG1"
+  ]
+ },
+ {
+  "subtype": "diffuse bipolar 3a (DB3a)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4033029",
+  "material_reference_label": "diffuse bipolar 3a cell",
+  "cells_in_material": 4528,
+  "clusters_in_material": 3,
+  "example_clusters": [
+   "CX01_retina_snRNA:25",
+   "CX01_retina_snRNA:26",
+   "PRE_GSE268630:0"
+  ],
+  "our_recorded_prediction": {
+   "(no candidate)": 1,
+   "BC": 2
+  },
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRIK1"
+  ],
+  "_markers_all": [
+   "GRIK1",
+   "VSX2",
+   "CALB1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "GRIK1",
+   "VSX2"
+  ],
+  "_added_by_subtype2m": [
+   "CALB1"
+  ]
+ },
+ {
+  "subtype": "diffuse bipolar 3b (DB3b)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4033030",
+  "material_reference_label": "diffuse bipolar 3b cell",
+  "cells_in_material": 6533,
+  "clusters_in_material": 2,
+  "example_clusters": [
+   "CX01_retina_snRNA:18",
+   "PRE_GSE268630:28"
+  ],
+  "our_recorded_prediction": {
+   "BC": 2
+  },
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRIK1"
+  ],
+  "_markers_all": [
+   "GRIK1",
+   "VSX2",
+   "MEIS2",
+   "QPCT"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "GRIK1",
+   "VSX2"
+  ],
+  "_added_by_subtype2m": [
+   "MEIS2",
+   "QPCT"
+  ]
+ },
+ {
+  "subtype": "diffuse bipolar 4 (DB4)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4033031",
+  "material_reference_label": "diffuse bipolar 4 cell",
+  "cells_in_material": 3225,
+  "clusters_in_material": 1,
+  "example_clusters": [
+   "CX01_retina_snRNA:22"
+  ],
+  "our_recorded_prediction": {
+   "BC": 1
+  },
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRM6"
+  ],
+  "_markers_all": [
+   "GRM6",
+   "VSX2",
+   "LMO4"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "GRM6",
+   "VSX2"
+  ],
+  "_added_by_subtype2m": [
+   "LMO4"
+  ]
+ },
+ {
+  "subtype": "diffuse bipolar 5 (DB5)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4033085",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRM6"
+  ],
+  "_markers_all": [
+   "GRM6",
+   "VSX2"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "GRM6",
+   "VSX2"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "diffuse bipolar 6 (DB6)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4033032",
+  "material_reference_label": "diffuse bipolar 6 cell",
+  "cells_in_material": 3649,
+  "clusters_in_material": 2,
+  "example_clusters": [
+   "CX01_retina_snRNA:16",
+   "PRE_GSE268630:30"
+  ],
+  "our_recorded_prediction": {
+   "BC": 2
+  },
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRM6"
+  ],
+  "_markers_all": [
+   "SCGN",
+   "GRM6",
+   "DNER"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "SCGN",
+   "GRM6"
+  ],
+  "_added_by_subtype2m": [
+   "DNER"
+  ]
+ },
+ {
+  "subtype": "blue-cone bipolar cell (BB, S-cone ON bipolar)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4033019",
+  "material_reference_label": "ON-blue cone bipolar cell",
+  "cells_in_material": 2837,
+  "clusters_in_material": 1,
+  "example_clusters": [
+   "CX01_retina_snRNA:14"
+  ],
+  "our_recorded_prediction": {
+   "BC": 1
+  },
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRM6"
+  ],
+  "_markers_all": [
+   "GRM6",
+   "VSX2"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "GRM6",
+   "VSX2"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "OFFx bipolar cell (primate outer-stratifying OFF bipolar)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "study_specific",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": "OFFx cell",
+  "cells_in_material": 3634,
+  "clusters_in_material": 2,
+  "example_clusters": [
+   "CX01_retina_snRNA:21",
+   "PRE_GSE268630:11"
+  ],
+  "our_recorded_prediction": {
+   "BC": 2
+  },
+  "n_defining_markers": 0,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "marginal",
+  "_frozen_markers_all": [],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "giant bipolar cell (GB)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "study_specific",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4033035",
+  "material_reference_label": "giant bipolar cell",
+  "cells_in_material": 3276,
+  "clusters_in_material": 1,
+  "example_clusters": [
+   "CX01_retina_snRNA:15"
+  ],
+  "our_recorded_prediction": {
+   "BC": 1
+  },
+  "n_defining_markers": 1,
+  "markers_inside_recorded_window": [
+   "UTRN"
+  ],
+  "_markers_all": [
+   "UTRN"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "UTRN"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "S-cone OFF midget bipolar cell",
+  "parent": "cone bipolar cell",
+  "consensus_level": "study_specific",
+  "species_scope": "macaque",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 1,
+  "markers_inside_recorded_window": [
+   "GRIK1"
+  ],
+  "_markers_all": [
+   "GRIK1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "GRIK1"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "type 1 cone bipolar cell (sensu Mus)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "study_specific",
+  "species_scope": "mouse",
+  "subtype_cl_id": "CL:0000753",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRIK1"
+  ],
+  "_markers_all": [
+   "GRIK1",
+   "SCGN"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "GRIK1",
+   "SCGN"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "type 2 cone bipolar cell (sensu Mus)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "study_specific",
+  "species_scope": "mouse",
+  "subtype_cl_id": "CL:0000754",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRIK1"
+  ],
+  "_markers_all": [
+   "GRIK1",
+   "SCGN"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "GRIK1",
+   "SCGN"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "type 3 cone bipolar cell (sensu Mus)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "study_specific",
+  "species_scope": "mouse",
+  "subtype_cl_id": "CL:0000755",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRIK1"
+  ],
+  "_markers_all": [
+   "GRIK1",
+   "SCGN"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "GRIK1",
+   "SCGN"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "type 4 cone bipolar cell (sensu Mus)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "study_specific",
+  "species_scope": "mouse",
+  "subtype_cl_id": "CL:0000756",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRIK1"
+  ],
+  "_markers_all": [
+   "GRIK1",
+   "SCGN"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "GRIK1",
+   "SCGN"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "type 5 cone bipolar cell (sensu Mus)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "study_specific",
+  "species_scope": "mouse",
+  "subtype_cl_id": "CL:0000757",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRM6",
+   "ISL1"
+  ],
+  "_markers_all": [
+   "GRM6",
+   "ISL1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "GRM6",
+   "ISL1"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "type 6 cone bipolar cell (sensu Mus)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "study_specific",
+  "species_scope": "mouse",
+  "subtype_cl_id": "CL:0000758",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRM6",
+   "ISL1"
+  ],
+  "_markers_all": [
+   "GRM6",
+   "ISL1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "GRM6",
+   "ISL1"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "type 7 cone bipolar cell (sensu Mus)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "study_specific",
+  "species_scope": "mouse",
+  "subtype_cl_id": "CL:0000759",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRM6",
+   "ISL1"
+  ],
+  "_markers_all": [
+   "GRM6",
+   "ISL1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "GRM6",
+   "ISL1"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "type 8 cone bipolar cell (sensu Mus)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "study_specific",
+  "species_scope": "mouse",
+  "subtype_cl_id": "CL:0000760",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRM6",
+   "ISL1"
+  ],
+  "_markers_all": [
+   "GRM6",
+   "ISL1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "GRM6",
+   "ISL1"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "type 9 cone bipolar cell (sensu Mus)",
+  "parent": "cone bipolar cell",
+  "consensus_level": "study_specific",
+  "species_scope": "mouse",
+  "subtype_cl_id": "CL:0000761",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GRM6",
+   "ISL1"
+  ],
+  "_markers_all": [
+   "GRM6",
+   "ISL1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "GRM6",
+   "ISL1"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "starburst (cholinergic) amacrine cell",
+  "parent": "amacrine cell",
+  "consensus_level": "canonical",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": "CL:0004232",
+  "material_reference_label": "starburst amacrine cell",
+  "cells_in_material": 5062,
+  "clusters_in_material": 3,
+  "example_clusters": [
+   "CX01_retina_snRNA:0",
+   "PRE_GSE268630:33",
+   "PRE_OA-D001:15"
+  ],
+  "our_recorded_prediction": {
+   "AC": 1,
+   "BC": 1,
+   "(no candidate)": 1
+  },
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [
+   "SLC5A7"
+  ],
+  "_markers_all": [
+   "CHAT",
+   "SLC18A3",
+   "SLC5A7",
+   "CTBP2",
+   "EMD"
+  ],
+  "expected_share_pct_of_parent": 5.0,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "CHAT",
+   "SLC18A3",
+   "SLC5A7"
+  ],
+  "_added_by_subtype2m": [
+   "CTBP2",
+   "EMD"
+  ]
+ },
+ {
+  "subtype": "AII amacrine cell",
+  "parent": "amacrine cell",
+  "consensus_level": "canonical",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [
+   "PVALB"
+  ],
+  "_markers_all": [
+   "GJD2",
+   "SLC6A9",
+   "PVALB"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "GJD2",
+   "SLC6A9",
+   "PVALB"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "A17 amacrine cell",
+  "parent": "amacrine cell",
+  "consensus_level": "widely_used",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GAD1",
+   "GAD2"
+  ],
+  "_markers_all": [
+   "GAD1",
+   "GAD2"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "GAD1",
+   "GAD2"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "dopaminergic amacrine cell (type 1 DA / A18)",
+  "parent": "amacrine cell",
+  "consensus_level": "widely_used",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [
+   "TH",
+   "SLC6A3"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "TH",
+   "SLC6A3"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "polyaxonal amacrine cell",
+  "parent": "amacrine cell",
+  "consensus_level": "widely_used",
+  "species_scope": "mouse",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 0,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "A2 narrow-field amacrine cell",
+  "parent": "amacrine cell",
+  "consensus_level": "study_specific",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": "CL:0004219",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 1,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [
+   "SLC6A5"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "SLC6A5"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "human amacrine transcriptomic clusters (n=25)",
+  "parent": "amacrine cell",
+  "consensus_level": "study_specific",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "GAD1"
+  ],
+  "_markers_all": [
+   "GAD1",
+   "SLC6A9"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "GAD1",
+   "SLC6A9"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "H1 horizontal cell",
+  "parent": "horizontal cell",
+  "consensus_level": "canonical",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0004217",
+  "material_reference_label": "H1 horizontal cell",
+  "cells_in_material": 8731,
+  "clusters_in_material": 2,
+  "example_clusters": [
+   "CX01_retina_snRNA:29",
+   "PRE_OA-D001:18"
+  ],
+  "our_recorded_prediction": {
+   "HC": 2
+  },
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "SPP1"
+  ],
+  "_markers_all": [
+   "LHX1",
+   "SPP1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "LHX1",
+   "SPP1"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "H2 horizontal cell",
+  "parent": "horizontal cell",
+  "consensus_level": "canonical",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0004218",
+  "material_reference_label": "H2 horizontal cell",
+  "cells_in_material": 5468,
+  "clusters_in_material": 3,
+  "example_clusters": [
+   "CX01_retina_snRNA:33",
+   "PRE_GSE268630:35",
+   "PRE_OA-D001:19"
+  ],
+  "our_recorded_prediction": {
+   "HC": 3
+  },
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "ISL1",
+   "SPP1"
+  ],
+  "_markers_all": [
+   "ISL1",
+   "SPP1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "ISL1",
+   "SPP1"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "H3 horizontal cell",
+  "parent": "horizontal cell",
+  "consensus_level": "study_specific",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 0,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "A-type horizontal cell (axonless)",
+  "parent": "horizontal cell",
+  "consensus_level": "widely_used",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "ISL1",
+   "CALB1"
+  ],
+  "_markers_all": [
+   "ISL1",
+   "CALB1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "ISL1",
+   "CALB1"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "B-type horizontal cell (axon-bearing)",
+  "parent": "horizontal cell",
+  "consensus_level": "widely_used",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 1,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [
+   "LHX1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "LHX1"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "midget retinal ganglion cell",
+  "parent": "retinal ganglion cell",
+  "consensus_level": "canonical",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4023188",
+  "material_reference_label": "midget ganglion cell of retina",
+  "cells_in_material": 8707,
+  "clusters_in_material": 2,
+  "example_clusters": [
+   "PRE_GSE268630:14",
+   "PRE_OA-D001:22"
+  ],
+  "our_recorded_prediction": {
+   "RGC": 2
+  },
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [
+   "TPBG"
+  ],
+  "_markers_all": [
+   "GUCY1A3",
+   "TBR1",
+   "TPBG"
+  ],
+  "expected_share_pct_of_parent": 86.0,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "GUCY1A3",
+   "TBR1",
+   "TPBG"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "parasol retinal ganglion cell",
+  "parent": "retinal ganglion cell",
+  "consensus_level": "canonical",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4023189",
+  "material_reference_label": "parasol ganglion cell of retina",
+  "cells_in_material": 515,
+  "clusters_in_material": 1,
+  "example_clusters": [
+   "PRE_OA-D001:27"
+  ],
+  "our_recorded_prediction": {
+   "RGC": 1
+  },
+  "n_defining_markers": 4,
+  "markers_inside_recorded_window": [
+   "SPP1"
+  ],
+  "_markers_all": [
+   "SPP1",
+   "RBPMS2",
+   "CHRNA2",
+   "CA8",
+   "AFAP1",
+   "POU6F2"
+  ],
+  "expected_share_pct_of_parent": 10.0,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "SPP1",
+   "RBPMS2",
+   "CHRNA2",
+   "CA8"
+  ],
+  "_added_by_subtype2m": [
+   "AFAP1",
+   "POU6F2"
+  ]
+ },
+ {
+  "subtype": "small bistratified retinal ganglion cell (S-cone ON)",
+  "parent": "retinal ganglion cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4033053",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 0,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "OFF-center retinal ganglion cell (sublamina a)",
+  "parent": "retinal ganglion cell",
+  "consensus_level": "canonical",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": null,
+  "material_reference_label": "OFF midget ganglion cell",
+  "cells_in_material": 9022,
+  "clusters_in_material": 1,
+  "example_clusters": [
+   "CX01_retina_snRNA:11"
+  ],
+  "our_recorded_prediction": {
+   "RGC": 1
+  },
+  "n_defining_markers": 0,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "marginal",
+  "_frozen_markers_all": [],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "ON-center retinal ganglion cell (sublamina b)",
+  "parent": "retinal ganglion cell",
+  "consensus_level": "canonical",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": null,
+  "material_reference_label": "ON parasol ganglion cell",
+  "cells_in_material": 4967,
+  "clusters_in_material": 2,
+  "example_clusters": [
+   "CX01_retina_snRNA:12",
+   "PRE_GSE268630:13"
+  ],
+  "our_recorded_prediction": {
+   "AC": 1,
+   "RGC": 1
+  },
+  "n_defining_markers": 0,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "marginal",
+  "_frozen_markers_all": [],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "alpha retinal ganglion cell",
+  "parent": "retinal ganglion cell",
+  "consensus_level": "widely_used",
+  "species_scope": "mouse",
+  "subtype_cl_id": "CL:0004117",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [
+   "SPP1",
+   "NEFH"
+  ],
+  "_markers_all": [
+   "SPP1",
+   "KCNG4",
+   "NEFH"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "SPP1",
+   "KCNG4",
+   "NEFH"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "ON-OFF direction-selective retinal ganglion cell (ooDSGC)",
+  "parent": "retinal ganglion cell",
+  "consensus_level": "widely_used",
+  "species_scope": "mouse",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 1,
+  "markers_inside_recorded_window": [
+   "CARTPT"
+  ],
+  "_markers_all": [
+   "CARTPT"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "CARTPT"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "ON direction-selective retinal ganglion cell (oDSGC)",
+  "parent": "retinal ganglion cell",
+  "consensus_level": "widely_used",
+  "species_scope": "mouse",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 0,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "intrinsically photosensitive retinal ganglion cell (ipRGC, melanopsin)",
+  "parent": "retinal ganglion cell",
+  "consensus_level": "canonical",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": "CL:0020014",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "RBPMS"
+  ],
+  "_markers_all": [
+   "OPN4",
+   "RBPMS"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "OPN4",
+   "RBPMS"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "local edge detector retinal ganglion cell (W3)",
+  "parent": "retinal ganglion cell",
+  "consensus_level": "widely_used",
+  "species_scope": "mouse",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 0,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "J-RGC (JAM-B expressing OFF RGC)",
+  "parent": "retinal ganglion cell",
+  "consensus_level": "widely_used",
+  "species_scope": "mouse",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 1,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [
+   "JAM2"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "JAM2"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "human RGC transcriptomic clusters (n=12)",
+  "parent": "retinal ganglion cell",
+  "consensus_level": "study_specific",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "FOXP2"
+  ],
+  "_markers_all": [
+   "OPN4",
+   "FOXP2"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "OPN4",
+   "FOXP2"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "macaque RGC transcriptomic clusters (n=16 foveal / n=18 peripheral)",
+  "parent": "retinal ganglion cell",
+  "consensus_level": "study_specific",
+  "species_scope": "macaque",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 0,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "mouse functional output channels (>30 RGC types)",
+  "parent": "retinal ganglion cell",
+  "consensus_level": "study_specific",
+  "species_scope": "mouse",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 0,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Müller glia (pan-retinal; no settled subdivision in most adult atlases)",
+  "parent": "Müller glia",
+  "consensus_level": "canonical",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": "CL:0000636",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 5,
+  "markers_inside_recorded_window": [
+   "RLBP1",
+   "GLUL",
+   "CLU",
+   "APOE",
+   "SLC1A3"
+  ],
+  "_markers_all": [
+   "RLBP1",
+   "GLUL",
+   "CLU",
+   "APOE",
+   "SLC1A3"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "RLBP1",
+   "GLUL",
+   "CLU",
+   "APOE",
+   "SLC1A3"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Foveal / central Müller glia",
+  "parent": "Müller glia",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [
+   "CYP26A1",
+   "PHGDH"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "CYP26A1",
+   "PHGDH"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Peripheral Müller glia",
+  "parent": "Müller glia",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [
+   "CD44",
+   "SPP1",
+   "TF"
+  ],
+  "_markers_all": [
+   "CD44",
+   "SPP1",
+   "TF"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "CD44",
+   "SPP1",
+   "TF"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Ctxn3+ Müller glia",
+  "parent": "Müller glia",
+  "consensus_level": "study_specific",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 4,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [
+   "CTXN3",
+   "VCAM1",
+   "AQP4",
+   "MMP14"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "CTXN3",
+   "VCAM1",
+   "AQP4",
+   "MMP14"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Ctxn3- Müller glia",
+  "parent": "Müller glia",
+  "consensus_level": "study_specific",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "CNGB1"
+  ],
+  "_markers_all": [
+   "PDE6B",
+   "CNGB1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "PDE6B",
+   "CNGB1"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Reactive / gliotic Müller glia (state)",
+  "parent": "Müller glia",
+  "consensus_level": "study_specific",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [
+   "GFAP",
+   "VIM",
+   "CD44"
+  ],
+  "_markers_all": [
+   "GFAP",
+   "VIM",
+   "CD44"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "GFAP",
+   "VIM",
+   "CD44"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Retinal astrocyte (pan-retinal resident population)",
+  "parent": "astrocyte",
+  "consensus_level": "canonical",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4033015",
+  "material_reference_label": "retinal astrocyte",
+  "cells_in_material": 695,
+  "clusters_in_material": 1,
+  "example_clusters": [
+   "PRE_OA-D068:11"
+  ],
+  "our_recorded_prediction": {
+   "MG": 1
+  },
+  "n_defining_markers": 4,
+  "markers_inside_recorded_window": [
+   "GFAP",
+   "S100B",
+   "PAX8"
+  ],
+  "_markers_all": [
+   "GFAP",
+   "S100B",
+   "PAX8",
+   "ALDH1L1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "visible",
+  "_frozen_markers_all": [
+   "GFAP",
+   "S100B",
+   "PAX8",
+   "ALDH1L1"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Peripheral FOS+ astrocyte-like macroglia",
+  "parent": "astrocyte",
+  "consensus_level": "study_specific",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 6,
+  "markers_inside_recorded_window": [
+   "FOS",
+   "FOSB",
+   "EGR1",
+   "GFAP",
+   "SPARCL1",
+   "CD44"
+  ],
+  "_markers_all": [
+   "FOS",
+   "FOSB",
+   "EGR1",
+   "GFAP",
+   "SPARCL1",
+   "CD44"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "FOS",
+   "FOSB",
+   "EGR1",
+   "GFAP",
+   "SPARCL1",
+   "CD44"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "COL4A3+ macroglia",
+  "parent": "astrocyte",
+  "consensus_level": "study_specific",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 1,
+  "markers_inside_recorded_window": [
+   "COL4A3"
+  ],
+  "_markers_all": [
+   "COL4A3"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "COL4A3"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "FTL+ macroglia",
+  "parent": "astrocyte",
+  "consensus_level": "study_specific",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "FTL",
+   "FTH1"
+  ],
+  "_markers_all": [
+   "FTL",
+   "FTH1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "FTL",
+   "FTH1"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Optic nerve / optic nerve head astrocyte subtypes",
+  "parent": "astrocyte",
+  "consensus_level": "study_specific",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 4,
+  "markers_inside_recorded_window": [
+   "WIF1",
+   "PAX5"
+  ],
+  "_markers_all": [
+   "SLC14A1",
+   "AQP4",
+   "WIF1",
+   "PAX5"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "SLC14A1",
+   "AQP4",
+   "WIF1",
+   "PAX5"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Retinal microglia (resident, homeostatic)",
+  "parent": "microglia",
+  "consensus_level": "canonical",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0000129",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 6,
+  "markers_inside_recorded_window": [
+   "C1QA",
+   "AIF1",
+   "CD74"
+  ],
+  "_markers_all": [
+   "C1QA",
+   "TMEM119",
+   "P2RY12",
+   "AIF1",
+   "CX3CR1",
+   "CD74"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "C1QA",
+   "TMEM119",
+   "P2RY12",
+   "AIF1",
+   "CX3CR1",
+   "CD74"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Reactive / activated microglia (state)",
+  "parent": "microglia",
+  "consensus_level": "study_specific",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 5,
+  "markers_inside_recorded_window": [
+   "APOE",
+   "SPP1",
+   "FTL"
+  ],
+  "_markers_all": [
+   "APOE",
+   "C3",
+   "SPP1",
+   "FTL",
+   "CD68"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "APOE",
+   "C3",
+   "SPP1",
+   "FTL",
+   "CD68"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "M1/M2 polarisation states (debated)",
+  "parent": "microglia",
+  "consensus_level": "study_specific",
+  "species_scope": "mammal_general",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [
+   "TNF",
+   "IL1B",
+   "NOS2"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "TNF",
+   "IL1B",
+   "NOS2"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Monocyte-derived (blood-derived) macrophage",
+  "parent": "macrophage",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0000235",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 4,
+  "markers_inside_recorded_window": [
+   "S100A8",
+   "S100A9"
+  ],
+  "_markers_all": [
+   "CD14",
+   "CCR2",
+   "S100A8",
+   "S100A9"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "CD14",
+   "CCR2",
+   "S100A8",
+   "S100A9"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Arterial endothelial cell",
+  "parent": "retinal endothelial cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:1000413",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 4,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [
+   "SEMA3G",
+   "HEY1",
+   "FBLN2",
+   "GJA4"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "SEMA3G",
+   "HEY1",
+   "FBLN2",
+   "GJA4"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Venous endothelial cell",
+  "parent": "retinal endothelial cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0002543",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 4,
+  "markers_inside_recorded_window": [
+   "MMRN1",
+   "VWF"
+  ],
+  "_markers_all": [
+   "DARC",
+   "MMRN1",
+   "SELP",
+   "VWF"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "DARC",
+   "MMRN1",
+   "SELP",
+   "VWF"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Capillary endothelial cell",
+  "parent": "retinal endothelial cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0002144",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "VWF"
+  ],
+  "_markers_all": [
+   "CD36",
+   "VWF"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "CD36",
+   "VWF"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Choriocapillaris endothelial cell (choroidal capillary bed)",
+  "parent": "retinal endothelial cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [
+   "CA4",
+   "PLVAP"
+  ],
+  "_markers_all": [
+   "CA4",
+   "PLVAP",
+   "RGCC"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "CA4",
+   "PLVAP",
+   "RGCC"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Retinal / choriocapillaris pericyte",
+  "parent": "pericyte",
+  "consensus_level": "canonical",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0000669",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 5,
+  "markers_inside_recorded_window": [
+   "RGS5",
+   "PDGFRB"
+  ],
+  "_markers_all": [
+   "RGS5",
+   "PDGFRB",
+   "KCNJ8",
+   "ABCC9",
+   "NOTCH3"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "RGS5",
+   "PDGFRB",
+   "KCNJ8",
+   "ABCC9",
+   "NOTCH3"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Pericyte subtype 2 (choroidal pericyte)",
+  "parent": "pericyte",
+  "consensus_level": "study_specific",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 0,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Vascular smooth muscle cell (arteriolar mural cell)",
+  "parent": "vascular smooth muscle cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0000359",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [
+   "ACTA2",
+   "TAGLN",
+   "MYH11"
+  ],
+  "_markers_all": [
+   "ACTA2",
+   "TAGLN",
+   "MYH11"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "ACTA2",
+   "TAGLN",
+   "MYH11"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Choroidal / scleral fibroblast",
+  "parent": "fibroblast",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0000057",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [
+   "COL1A1",
+   "DCN",
+   "IGF2"
+  ],
+  "_markers_all": [
+   "COL1A1",
+   "DCN",
+   "IGF2"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "COL1A1",
+   "DCN",
+   "IGF2"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "PI16+ fibroblast",
+  "parent": "fibroblast",
+  "consensus_level": "study_specific",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 1,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [
+   "PI16"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "PI16"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Macular (central) RPE",
+  "parent": "retinal pigment epithelium",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0002586",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [
+   "ID3"
+  ],
+  "_markers_all": [
+   "ID3",
+   "CTGF",
+   "FST"
+  ],
+  "expected_share_pct_of_parent": 4.7,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "ID3",
+   "CTGF",
+   "FST"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Peripheral RPE",
+  "parent": "retinal pigment epithelium",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0002586",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 4,
+  "markers_inside_recorded_window": [
+   "CRYAB",
+   "RARRES2",
+   "FBXO32",
+   "IGFBP5"
+  ],
+  "_markers_all": [
+   "CRYAB",
+   "RARRES2",
+   "FBXO32",
+   "IGFBP5"
+  ],
+  "expected_share_pct_of_parent": 95.3,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "CRYAB",
+   "RARRES2",
+   "FBXO32",
+   "IGFBP5"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "RPE concentric regional subpopulations P1–P5",
+  "parent": "retinal pigment epithelium",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [
+   "ELN",
+   "MYOC"
+  ],
+  "_markers_all": [
+   "ELN",
+   "MYOC"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "ELN",
+   "MYOC"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "RPE stress / senescence states",
+  "parent": "retinal pigment epithelium",
+  "consensus_level": "study_specific",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 0,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Oligodendrocyte (optic nerve / posterior segment)",
+  "parent": "oligodendrocyte",
+  "consensus_level": "study_specific",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0000128",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 2,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [
+   "MOBP",
+   "MOG"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "MOBP",
+   "MOG"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Oligodendrocyte precursor cell (OPC)",
+  "parent": "oligodendrocyte",
+  "consensus_level": "study_specific",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0002453",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [
+   "PDGFRA"
+  ],
+  "_markers_all": [
+   "OLIG1",
+   "OLIG2",
+   "PDGFRA"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "OLIG1",
+   "OLIG2",
+   "PDGFRA"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Myelinating Schwann cell",
+  "parent": "Schwann cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0002573",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 4,
+  "markers_inside_recorded_window": [
+   "MPZ",
+   "MBP",
+   "PRX",
+   "PLP1"
+  ],
+  "_markers_all": [
+   "MPZ",
+   "MBP",
+   "PRX",
+   "PLP1"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "MPZ",
+   "MBP",
+   "PRX",
+   "PLP1"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Non-myelinating Schwann cell",
+  "parent": "Schwann cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0002573",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 4,
+  "markers_inside_recorded_window": [
+   "SCN7A",
+   "NCAM1"
+  ],
+  "_markers_all": [
+   "SCN7A",
+   "NCAM1",
+   "NGFR",
+   "L1CAM"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "SCN7A",
+   "NCAM1",
+   "NGFR",
+   "L1CAM"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "T cell",
+  "parent": "lymphocyte",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0000084",
+  "material_reference_label": "T cell",
+  "cells_in_material": 618,
+  "clusters_in_material": 2,
+  "example_clusters": [
+   "CX04_cowan_fovea:21",
+   "CX04_cowan_periphery:6"
+  ],
+  "our_recorded_prediction": {
+   "(no candidate)": 2
+  },
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [],
+  "_markers_all": [
+   "CD3D",
+   "CD3E",
+   "CD2"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "marginal",
+  "_frozen_markers_all": [
+   "CD3D",
+   "CD3E",
+   "CD2"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "B cell / plasma cell",
+  "parent": "lymphocyte",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": null,
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 4,
+  "markers_inside_recorded_window": [
+   "CD79A",
+   "MS4A1",
+   "MZB1",
+   "JCHAIN"
+  ],
+  "_markers_all": [
+   "CD79A",
+   "MS4A1",
+   "MZB1",
+   "JCHAIN"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "CD79A",
+   "MS4A1",
+   "MZB1",
+   "JCHAIN"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "NK cell",
+  "parent": "lymphocyte",
+  "consensus_level": "study_specific",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0000623",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 3,
+  "markers_inside_recorded_window": [
+   "NKG7",
+   "KLRD1"
+  ],
+  "_markers_all": [
+   "NKG7",
+   "KLRD1",
+   "GNLY"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "NKG7",
+   "KLRD1",
+   "GNLY"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Choroidal mast cell (MCTC-type)",
+  "parent": "mast cell",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:0000097",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 5,
+  "markers_inside_recorded_window": [
+   "KIT",
+   "TPSAB1",
+   "CPA3",
+   "MS4A2"
+  ],
+  "_markers_all": [
+   "KIT",
+   "TPSAB1",
+   "CMA1",
+   "CPA3",
+   "MS4A2"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "KIT",
+   "TPSAB1",
+   "CMA1",
+   "CPA3",
+   "MS4A2"
+  ],
+  "_added_by_subtype2m": []
+ },
+ {
+  "subtype": "Choroidal melanocyte",
+  "parent": "melanocyte",
+  "consensus_level": "widely_used",
+  "species_scope": "primate_human",
+  "subtype_cl_id": "CL:4030000",
+  "material_reference_label": null,
+  "cells_in_material": 0,
+  "clusters_in_material": 0,
+  "example_clusters": [],
+  "our_recorded_prediction": {},
+  "n_defining_markers": 5,
+  "markers_inside_recorded_window": [
+   "MLANA",
+   "PMEL",
+   "TYR",
+   "TYRP1",
+   "DCT"
+  ],
+  "_markers_all": [
+   "MLANA",
+   "PMEL",
+   "TYR",
+   "TYRP1",
+   "DCT"
+  ],
+  "expected_share_pct_of_parent": null,
+  "identifiability_verdict": "not_in_material",
+  "_frozen_markers_all": [
+   "MLANA",
+   "PMEL",
+   "TYR",
+   "TYRP1",
+   "DCT"
+  ],
+  "_added_by_subtype2m": []
+ }
+]

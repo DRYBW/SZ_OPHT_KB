@@ -1,0 +1,1727 @@
+{
+ "probe": "m2_measurability.py",
+ "floor": 0.05,
+ "volumes": {
+  "CX01_retina_snRNA": {
+   "volume": "CX01_retina_snRNA",
+   "genes": {
+    "AFAP1": {
+     "in_var_index": true,
+     "detected_frac": 0.07652,
+     "above_floor": true
+    },
+    "C3": {
+     "in_var_index": true,
+     "detected_frac": 0.02614,
+     "above_floor": false
+    },
+    "CA1": {
+     "in_var_index": true,
+     "detected_frac": 0.07696,
+     "above_floor": true
+    },
+    "CA8": {
+     "in_var_index": true,
+     "detected_frac": 0.0313,
+     "above_floor": false
+    },
+    "CACNA1G": {
+     "in_var_index": true,
+     "detected_frac": 0.18755,
+     "above_floor": true
+    },
+    "CALB1": {
+     "in_var_index": true,
+     "detected_frac": 0.11726,
+     "above_floor": true
+    },
+    "CAV2": {
+     "in_var_index": true,
+     "detected_frac": 0.05919,
+     "above_floor": true
+    },
+    "CP": {
+     "in_var_index": true,
+     "detected_frac": 0.09761,
+     "above_floor": true
+    },
+    "CRB1": {
+     "in_var_index": true,
+     "detected_frac": 0.32846,
+     "above_floor": true
+    },
+    "CRB2": {
+     "in_var_index": true,
+     "detected_frac": 0.05475,
+     "above_floor": true
+    },
+    "CRX": {
+     "in_var_index": true,
+     "detected_frac": 0.24641,
+     "above_floor": true
+    },
+    "CTBP2": {
+     "in_var_index": true,
+     "detected_frac": 0.53996,
+     "above_floor": true
+    },
+    "DNER": {
+     "in_var_index": true,
+     "detected_frac": 0.39767,
+     "above_floor": true
+    },
+    "EMD": {
+     "in_var_index": true,
+     "detected_frac": 0.10598,
+     "above_floor": true
+    },
+    "ERG": {
+     "in_var_index": true,
+     "detected_frac": 0.00331,
+     "above_floor": false
+    },
+    "GBX2": {
+     "in_var_index": true,
+     "detected_frac": 0.00059,
+     "above_floor": false
+    },
+    "GLRA1": {
+     "in_var_index": true,
+     "detected_frac": 0.20485,
+     "above_floor": true
+    },
+    "GRIA2": {
+     "in_var_index": true,
+     "detected_frac": 0.66114,
+     "above_floor": true
+    },
+    "GRIA4": {
+     "in_var_index": true,
+     "detected_frac": 0.60756,
+     "above_floor": true
+    },
+    "GSG1": {
+     "in_var_index": true,
+     "detected_frac": 0.08808,
+     "above_floor": true
+    },
+    "KCNJ2": {
+     "in_var_index": true,
+     "detected_frac": 0.15955,
+     "above_floor": true
+    },
+    "LMO4": {
+     "in_var_index": true,
+     "detected_frac": 0.25927,
+     "above_floor": true
+    },
+    "MAP3K1": {
+     "in_var_index": true,
+     "detected_frac": 0.3164,
+     "above_floor": true
+    },
+    "MEIS2": {
+     "in_var_index": true,
+     "detected_frac": 0.29515,
+     "above_floor": true
+    },
+    "NR2E3": {
+     "in_var_index": true,
+     "detected_frac": 0.07448,
+     "above_floor": true
+    },
+    "NRG1": {
+     "in_var_index": true,
+     "detected_frac": 0.59395,
+     "above_floor": true
+    },
+    "NRL": {
+     "in_var_index": true,
+     "detected_frac": 0.2837,
+     "above_floor": true
+    },
+    "OPN4": {
+     "in_var_index": true,
+     "detected_frac": 0.00998,
+     "above_floor": false
+    },
+    "PCP2": {
+     "in_var_index": true,
+     "detected_frac": 0.15669,
+     "above_floor": true
+    },
+    "POU6F2": {
+     "in_var_index": true,
+     "detected_frac": 0.31339,
+     "above_floor": true
+    },
+    "QPCT": {
+     "in_var_index": true,
+     "detected_frac": 0.05292,
+     "above_floor": true
+    },
+    "RBPMS": {
+     "in_var_index": true,
+     "detected_frac": 0.24372,
+     "above_floor": true
+    },
+    "RHO": {
+     "in_var_index": true,
+     "detected_frac": 0.34954,
+     "above_floor": true
+    },
+    "SI": {
+     "in_var_index": true,
+     "detected_frac": 0.0005,
+     "above_floor": false
+    },
+    "SIX6": {
+     "in_var_index": true,
+     "detected_frac": 0.07065,
+     "above_floor": true
+    },
+    "SMOX": {
+     "in_var_index": true,
+     "detected_frac": 0.01767,
+     "above_floor": false
+    },
+    "SOX9": {
+     "in_var_index": true,
+     "detected_frac": 0.03397,
+     "above_floor": false
+    },
+    "TH": {
+     "in_var_index": true,
+     "detected_frac": 0.00107,
+     "above_floor": false
+    },
+    "TOMM20": {
+     "in_var_index": true,
+     "detected_frac": 0.21535,
+     "above_floor": true
+    },
+    "TUBB3": {
+     "in_var_index": true,
+     "detected_frac": 0.26842,
+     "above_floor": true
+    },
+    "VSX2": {
+     "in_var_index": true,
+     "detected_frac": 0.26777,
+     "above_floor": true
+    }
+   },
+   "n_genes_in_file": 35475,
+   "n_candidates_in_var_index": 41,
+   "n_cells": 97319,
+   "wall_s": 12.9,
+   "peak_rss_kb": 5300960
+  },
+  "CX03_retina_multiome": {
+   "volume": "CX03_retina_multiome",
+   "genes": {
+    "AFAP1": {
+     "in_var_index": true,
+     "detected_frac": 0.03255,
+     "above_floor": false
+    },
+    "C3": {
+     "in_var_index": true,
+     "detected_frac": 0.00902,
+     "above_floor": false
+    },
+    "CA1": {
+     "in_var_index": true,
+     "detected_frac": 0.02972,
+     "above_floor": false
+    },
+    "CA8": {
+     "in_var_index": true,
+     "detected_frac": 0.03055,
+     "above_floor": false
+    },
+    "CACNA1G": {
+     "in_var_index": true,
+     "detected_frac": 0.05424,
+     "above_floor": true
+    },
+    "CALB1": {
+     "in_var_index": true,
+     "detected_frac": 0.04357,
+     "above_floor": false
+    },
+    "CAV2": {
+     "in_var_index": true,
+     "detected_frac": 0.04163,
+     "above_floor": false
+    },
+    "CP": {
+     "in_var_index": true,
+     "detected_frac": 0.10183,
+     "above_floor": true
+    },
+    "CRB1": {
+     "in_var_index": true,
+     "detected_frac": 0.50783,
+     "above_floor": true
+    },
+    "CRB2": {
+     "in_var_index": true,
+     "detected_frac": 0.09757,
+     "above_floor": true
+    },
+    "CRX": {
+     "in_var_index": true,
+     "detected_frac": 0.46893,
+     "above_floor": true
+    },
+    "CTBP2": {
+     "in_var_index": true,
+     "detected_frac": 0.41352,
+     "above_floor": true
+    },
+    "DNER": {
+     "in_var_index": true,
+     "detected_frac": 0.23023,
+     "above_floor": true
+    },
+    "EMD": {
+     "in_var_index": true,
+     "detected_frac": 0.05801,
+     "above_floor": true
+    },
+    "ERG": {
+     "in_var_index": true,
+     "detected_frac": 0.00124,
+     "above_floor": false
+    },
+    "GBX2": {
+     "in_var_index": true,
+     "detected_frac": 0.00043,
+     "above_floor": false
+    },
+    "GLRA1": {
+     "in_var_index": true,
+     "detected_frac": 0.067,
+     "above_floor": true
+    },
+    "GRIA2": {
+     "in_var_index": true,
+     "detected_frac": 0.2188,
+     "above_floor": true
+    },
+    "GRIA4": {
+     "in_var_index": true,
+     "detected_frac": 0.20482,
+     "above_floor": true
+    },
+    "GSG1": {
+     "in_var_index": true,
+     "detected_frac": 0.03787,
+     "above_floor": false
+    },
+    "KCNJ2": {
+     "in_var_index": true,
+     "detected_frac": 0.0505,
+     "above_floor": true
+    },
+    "LMO4": {
+     "in_var_index": true,
+     "detected_frac": 0.10526,
+     "above_floor": true
+    },
+    "MAP3K1": {
+     "in_var_index": true,
+     "detected_frac": 0.45869,
+     "above_floor": true
+    },
+    "MEIS2": {
+     "in_var_index": true,
+     "detected_frac": 0.55322,
+     "above_floor": true
+    },
+    "NR2E3": {
+     "in_var_index": true,
+     "detected_frac": 0.46111,
+     "above_floor": true
+    },
+    "NRG1": {
+     "in_var_index": true,
+     "detected_frac": 0.42378,
+     "above_floor": true
+    },
+    "NRL": {
+     "in_var_index": true,
+     "detected_frac": 0.58982,
+     "above_floor": true
+    },
+    "OPN4": {
+     "in_var_index": true,
+     "detected_frac": 0.00186,
+     "above_floor": false
+    },
+    "PCP2": {
+     "in_var_index": true,
+     "detected_frac": 0.14375,
+     "above_floor": true
+    },
+    "POU6F2": {
+     "in_var_index": true,
+     "detected_frac": 0.05236,
+     "above_floor": true
+    },
+    "QPCT": {
+     "in_var_index": true,
+     "detected_frac": 0.02655,
+     "above_floor": false
+    },
+    "RBPMS": {
+     "in_var_index": true,
+     "detected_frac": 0.04033,
+     "above_floor": false
+    },
+    "RHO": {
+     "in_var_index": true,
+     "detected_frac": 0.68078,
+     "above_floor": true
+    },
+    "SI": {
+     "in_var_index": true,
+     "detected_frac": 0.00027,
+     "above_floor": false
+    },
+    "SIX6": {
+     "in_var_index": true,
+     "detected_frac": 0.04227,
+     "above_floor": false
+    },
+    "SMOX": {
+     "in_var_index": true,
+     "detected_frac": 0.00409,
+     "above_floor": false
+    },
+    "SOX9": {
+     "in_var_index": true,
+     "detected_frac": 0.02691,
+     "above_floor": false
+    },
+    "TH": {
+     "in_var_index": true,
+     "detected_frac": 0.00066,
+     "above_floor": false
+    },
+    "TOMM20": {
+     "in_var_index": true,
+     "detected_frac": 0.13552,
+     "above_floor": true
+    },
+    "TUBB3": {
+     "in_var_index": true,
+     "detected_frac": 0.05797,
+     "above_floor": true
+    },
+    "VSX2": {
+     "in_var_index": true,
+     "detected_frac": 0.1069,
+     "above_floor": true
+    }
+   },
+   "n_genes_in_file": 35451,
+   "n_candidates_in_var_index": 41,
+   "n_cells": 51645,
+   "wall_s": 3.7,
+   "peak_rss_kb": 5300960
+  },
+  "CX04_cowan_fovea": {
+   "volume": "CX04_cowan_fovea",
+   "genes": {
+    "AFAP1": {
+     "in_var_index": true,
+     "detected_frac": 0.02818,
+     "above_floor": false
+    },
+    "C3": {
+     "in_var_index": true,
+     "detected_frac": 0.02727,
+     "above_floor": false
+    },
+    "CA1": {
+     "in_var_index": true,
+     "detected_frac": 0.0004,
+     "above_floor": false
+    },
+    "CA8": {
+     "in_var_index": true,
+     "detected_frac": 0.01745,
+     "above_floor": false
+    },
+    "CACNA1G": {
+     "in_var_index": true,
+     "detected_frac": 0.07153,
+     "above_floor": true
+    },
+    "CALB1": {
+     "in_var_index": true,
+     "detected_frac": 0.08716,
+     "above_floor": true
+    },
+    "CAV2": {
+     "in_var_index": true,
+     "detected_frac": 0.22005,
+     "above_floor": true
+    },
+    "CP": {
+     "in_var_index": true,
+     "detected_frac": 0.18075,
+     "above_floor": true
+    },
+    "CRB1": {
+     "in_var_index": true,
+     "detected_frac": 0.21373,
+     "above_floor": true
+    },
+    "CRB2": {
+     "in_var_index": true,
+     "detected_frac": 0.078,
+     "above_floor": true
+    },
+    "CRX": {
+     "in_var_index": true,
+     "detected_frac": 0.2373,
+     "above_floor": true
+    },
+    "CTBP2": {
+     "in_var_index": true,
+     "detected_frac": 0.31293,
+     "above_floor": true
+    },
+    "DNER": {
+     "in_var_index": true,
+     "detected_frac": 0.42544,
+     "above_floor": true
+    },
+    "EMD": {
+     "in_var_index": true,
+     "detected_frac": 0.27524,
+     "above_floor": true
+    },
+    "ERG": {
+     "in_var_index": true,
+     "detected_frac": 0.01153,
+     "above_floor": false
+    },
+    "GBX2": {
+     "in_var_index": true,
+     "detected_frac": 0.00015,
+     "above_floor": false
+    },
+    "GLRA1": {
+     "in_var_index": true,
+     "detected_frac": 0.01771,
+     "above_floor": false
+    },
+    "GRIA2": {
+     "in_var_index": true,
+     "detected_frac": 0.36964,
+     "above_floor": true
+    },
+    "GRIA4": {
+     "in_var_index": true,
+     "detected_frac": 0.32072,
+     "above_floor": true
+    },
+    "GSG1": {
+     "in_var_index": true,
+     "detected_frac": 0.05003,
+     "above_floor": true
+    },
+    "KCNJ2": {
+     "in_var_index": true,
+     "detected_frac": 0.06839,
+     "above_floor": true
+    },
+    "LMO4": {
+     "in_var_index": true,
+     "detected_frac": 0.44956,
+     "above_floor": true
+    },
+    "MAP3K1": {
+     "in_var_index": true,
+     "detected_frac": 0.1424,
+     "above_floor": true
+    },
+    "MEIS2": {
+     "in_var_index": true,
+     "detected_frac": 0.18363,
+     "above_floor": true
+    },
+    "NR2E3": {
+     "in_var_index": true,
+     "detected_frac": 0.12293,
+     "above_floor": true
+    },
+    "NRG1": {
+     "in_var_index": true,
+     "detected_frac": 0.16871,
+     "above_floor": true
+    },
+    "NRL": {
+     "in_var_index": true,
+     "detected_frac": 0.33438,
+     "above_floor": true
+    },
+    "OPN4": {
+     "in_var_index": true,
+     "detected_frac": 0.00329,
+     "above_floor": false
+    },
+    "PCP2": {
+     "in_var_index": true,
+     "detected_frac": 0.16608,
+     "above_floor": true
+    },
+    "POU6F2": {
+     "in_var_index": true,
+     "detected_frac": 0.11706,
+     "above_floor": true
+    },
+    "QPCT": {
+     "in_var_index": true,
+     "detected_frac": 0.069,
+     "above_floor": true
+    },
+    "RBPMS": {
+     "in_var_index": true,
+     "detected_frac": 0.28961,
+     "above_floor": true
+    },
+    "RHO": {
+     "in_var_index": true,
+     "detected_frac": 0.44435,
+     "above_floor": true
+    },
+    "SI": {
+     "in_var_index": true,
+     "detected_frac": 0.0,
+     "above_floor": false
+    },
+    "SIX6": {
+     "in_var_index": true,
+     "detected_frac": 0.38729,
+     "above_floor": true
+    },
+    "SMOX": {
+     "in_var_index": true,
+     "detected_frac": 0.06167,
+     "above_floor": true
+    },
+    "SOX9": {
+     "in_var_index": true,
+     "detected_frac": 0.17741,
+     "above_floor": true
+    },
+    "TH": {
+     "in_var_index": true,
+     "detected_frac": 0.0004,
+     "above_floor": false
+    },
+    "TOMM20": {
+     "in_var_index": true,
+     "detected_frac": 0.50653,
+     "above_floor": true
+    },
+    "TUBB3": {
+     "in_var_index": true,
+     "detected_frac": 0.10471,
+     "above_floor": true
+    },
+    "VSX2": {
+     "in_var_index": true,
+     "detected_frac": 0.20558,
+     "above_floor": true
+    }
+   },
+   "n_genes_in_file": 55446,
+   "n_candidates_in_var_index": 41,
+   "n_cells": 19768,
+   "wall_s": 2.3,
+   "peak_rss_kb": 5300960
+  },
+  "CX04_cowan_organoid": {
+   "volume": "CX04_cowan_organoid",
+   "genes": {
+    "AFAP1": {
+     "in_var_index": true,
+     "detected_frac": 0.0415,
+     "above_floor": false
+    },
+    "C3": {
+     "in_var_index": true,
+     "detected_frac": 0.00023,
+     "above_floor": false
+    },
+    "CA1": {
+     "in_var_index": true,
+     "detected_frac": 0.00046,
+     "above_floor": false
+    },
+    "CA8": {
+     "in_var_index": true,
+     "detected_frac": 0.00752,
+     "above_floor": false
+    },
+    "CACNA1G": {
+     "in_var_index": true,
+     "detected_frac": 0.01334,
+     "above_floor": false
+    },
+    "CALB1": {
+     "in_var_index": true,
+     "detected_frac": 0.14538,
+     "above_floor": true
+    },
+    "CAV2": {
+     "in_var_index": true,
+     "detected_frac": 0.06394,
+     "above_floor": true
+    },
+    "CP": {
+     "in_var_index": true,
+     "detected_frac": 0.13355,
+     "above_floor": true
+    },
+    "CRB1": {
+     "in_var_index": true,
+     "detected_frac": 0.23739,
+     "above_floor": true
+    },
+    "CRB2": {
+     "in_var_index": true,
+     "detected_frac": 0.21971,
+     "above_floor": true
+    },
+    "CRX": {
+     "in_var_index": true,
+     "detected_frac": 0.55302,
+     "above_floor": true
+    },
+    "CTBP2": {
+     "in_var_index": true,
+     "detected_frac": 0.37962,
+     "above_floor": true
+    },
+    "DNER": {
+     "in_var_index": true,
+     "detected_frac": 0.24555,
+     "above_floor": true
+    },
+    "EMD": {
+     "in_var_index": true,
+     "detected_frac": 0.22612,
+     "above_floor": true
+    },
+    "ERG": {
+     "in_var_index": true,
+     "detected_frac": 0.0,
+     "above_floor": false
+    },
+    "GBX2": {
+     "in_var_index": true,
+     "detected_frac": 0.00249,
+     "above_floor": false
+    },
+    "GLRA1": {
+     "in_var_index": true,
+     "detected_frac": 0.00059,
+     "above_floor": false
+    },
+    "GRIA2": {
+     "in_var_index": true,
+     "detected_frac": 0.06713,
+     "above_floor": true
+    },
+    "GRIA4": {
+     "in_var_index": true,
+     "detected_frac": 0.09383,
+     "above_floor": true
+    },
+    "GSG1": {
+     "in_var_index": true,
+     "detected_frac": 0.00784,
+     "above_floor": false
+    },
+    "KCNJ2": {
+     "in_var_index": true,
+     "detected_frac": 0.01557,
+     "above_floor": false
+    },
+    "LMO4": {
+     "in_var_index": true,
+     "detected_frac": 0.22498,
+     "above_floor": true
+    },
+    "MAP3K1": {
+     "in_var_index": true,
+     "detected_frac": 0.14,
+     "above_floor": true
+    },
+    "MEIS2": {
+     "in_var_index": true,
+     "detected_frac": 0.35048,
+     "above_floor": true
+    },
+    "NR2E3": {
+     "in_var_index": true,
+     "detected_frac": 0.31548,
+     "above_floor": true
+    },
+    "NRG1": {
+     "in_var_index": true,
+     "detected_frac": 0.0848,
+     "above_floor": true
+    },
+    "NRL": {
+     "in_var_index": true,
+     "detected_frac": 0.5364,
+     "above_floor": true
+    },
+    "OPN4": {
+     "in_var_index": true,
+     "detected_frac": 7e-05,
+     "above_floor": false
+    },
+    "PCP2": {
+     "in_var_index": true,
+     "detected_frac": 0.03536,
+     "above_floor": false
+    },
+    "POU6F2": {
+     "in_var_index": true,
+     "detected_frac": 0.00935,
+     "above_floor": false
+    },
+    "QPCT": {
+     "in_var_index": true,
+     "detected_frac": 0.02891,
+     "above_floor": false
+    },
+    "RBPMS": {
+     "in_var_index": true,
+     "detected_frac": 0.00969,
+     "above_floor": false
+    },
+    "RHO": {
+     "in_var_index": true,
+     "detected_frac": 0.07057,
+     "above_floor": true
+    },
+    "SI": {
+     "in_var_index": true,
+     "detected_frac": 0.0,
+     "above_floor": false
+    },
+    "SIX6": {
+     "in_var_index": true,
+     "detected_frac": 0.46672,
+     "above_floor": true
+    },
+    "SMOX": {
+     "in_var_index": true,
+     "detected_frac": 0.07458,
+     "above_floor": true
+    },
+    "SOX9": {
+     "in_var_index": true,
+     "detected_frac": 0.12468,
+     "above_floor": true
+    },
+    "TH": {
+     "in_var_index": true,
+     "detected_frac": 0.00201,
+     "above_floor": false
+    },
+    "TOMM20": {
+     "in_var_index": true,
+     "detected_frac": 0.38493,
+     "above_floor": true
+    },
+    "TUBB3": {
+     "in_var_index": true,
+     "detected_frac": 0.01302,
+     "above_floor": false
+    },
+    "VSX2": {
+     "in_var_index": true,
+     "detected_frac": 0.10096,
+     "above_floor": true
+    }
+   },
+   "n_genes_in_file": 55446,
+   "n_candidates_in_var_index": 41,
+   "n_cells": 43857,
+   "wall_s": 3.5,
+   "peak_rss_kb": 5300960
+  },
+  "CX04_cowan_periphery": {
+   "volume": "CX04_cowan_periphery",
+   "genes": {
+    "AFAP1": {
+     "in_var_index": true,
+     "detected_frac": 0.03545,
+     "above_floor": false
+    },
+    "C3": {
+     "in_var_index": true,
+     "detected_frac": 0.04496,
+     "above_floor": false
+    },
+    "CA1": {
+     "in_var_index": true,
+     "detected_frac": 9e-05,
+     "above_floor": false
+    },
+    "CA8": {
+     "in_var_index": true,
+     "detected_frac": 0.04432,
+     "above_floor": false
+    },
+    "CACNA1G": {
+     "in_var_index": true,
+     "detected_frac": 0.04386,
+     "above_floor": false
+    },
+    "CALB1": {
+     "in_var_index": true,
+     "detected_frac": 0.06082,
+     "above_floor": true
+    },
+    "CAV2": {
+     "in_var_index": true,
+     "detected_frac": 0.14653,
+     "above_floor": true
+    },
+    "CP": {
+     "in_var_index": true,
+     "detected_frac": 0.26904,
+     "above_floor": true
+    },
+    "CRB1": {
+     "in_var_index": true,
+     "detected_frac": 0.28857,
+     "above_floor": true
+    },
+    "CRB2": {
+     "in_var_index": true,
+     "detected_frac": 0.13913,
+     "above_floor": true
+    },
+    "CRX": {
+     "in_var_index": true,
+     "detected_frac": 0.44501,
+     "above_floor": true
+    },
+    "CTBP2": {
+     "in_var_index": true,
+     "detected_frac": 0.38623,
+     "above_floor": true
+    },
+    "DNER": {
+     "in_var_index": true,
+     "detected_frac": 0.21093,
+     "above_floor": true
+    },
+    "EMD": {
+     "in_var_index": true,
+     "detected_frac": 0.19972,
+     "above_floor": true
+    },
+    "ERG": {
+     "in_var_index": true,
+     "detected_frac": 0.00657,
+     "above_floor": false
+    },
+    "GBX2": {
+     "in_var_index": true,
+     "detected_frac": 0.00055,
+     "above_floor": false
+    },
+    "GLRA1": {
+     "in_var_index": true,
+     "detected_frac": 0.00487,
+     "above_floor": false
+    },
+    "GRIA2": {
+     "in_var_index": true,
+     "detected_frac": 0.12182,
+     "above_floor": true
+    },
+    "GRIA4": {
+     "in_var_index": true,
+     "detected_frac": 0.08718,
+     "above_floor": true
+    },
+    "GSG1": {
+     "in_var_index": true,
+     "detected_frac": 0.04288,
+     "above_floor": false
+    },
+    "KCNJ2": {
+     "in_var_index": true,
+     "detected_frac": 0.05826,
+     "above_floor": true
+    },
+    "LMO4": {
+     "in_var_index": true,
+     "detected_frac": 0.32267,
+     "above_floor": true
+    },
+    "MAP3K1": {
+     "in_var_index": true,
+     "detected_frac": 0.12804,
+     "above_floor": true
+    },
+    "MEIS2": {
+     "in_var_index": true,
+     "detected_frac": 0.17602,
+     "above_floor": true
+    },
+    "NR2E3": {
+     "in_var_index": true,
+     "detected_frac": 0.40823,
+     "above_floor": true
+    },
+    "NRG1": {
+     "in_var_index": true,
+     "detected_frac": 0.0358,
+     "above_floor": false
+    },
+    "NRL": {
+     "in_var_index": true,
+     "detected_frac": 0.70622,
+     "above_floor": true
+    },
+    "OPN4": {
+     "in_var_index": true,
+     "detected_frac": 0.00046,
+     "above_floor": false
+    },
+    "PCP2": {
+     "in_var_index": true,
+     "detected_frac": 0.22524,
+     "above_floor": true
+    },
+    "POU6F2": {
+     "in_var_index": true,
+     "detected_frac": 0.0125,
+     "above_floor": false
+    },
+    "QPCT": {
+     "in_var_index": true,
+     "detected_frac": 0.09898,
+     "above_floor": true
+    },
+    "RBPMS": {
+     "in_var_index": true,
+     "detected_frac": 0.03583,
+     "above_floor": false
+    },
+    "RHO": {
+     "in_var_index": true,
+     "detected_frac": 0.83063,
+     "above_floor": true
+    },
+    "SI": {
+     "in_var_index": true,
+     "detected_frac": 3e-05,
+     "above_floor": false
+    },
+    "SIX6": {
+     "in_var_index": true,
+     "detected_frac": 0.16459,
+     "above_floor": true
+    },
+    "SMOX": {
+     "in_var_index": true,
+     "detected_frac": 0.03465,
+     "above_floor": false
+    },
+    "SOX9": {
+     "in_var_index": true,
+     "detected_frac": 0.18374,
+     "above_floor": true
+    },
+    "TH": {
+     "in_var_index": true,
+     "detected_frac": 0.00055,
+     "above_floor": false
+    },
+    "TOMM20": {
+     "in_var_index": true,
+     "detected_frac": 0.33067,
+     "above_floor": true
+    },
+    "TUBB3": {
+     "in_var_index": true,
+     "detected_frac": 0.00291,
+     "above_floor": false
+    },
+    "VSX2": {
+     "in_var_index": true,
+     "detected_frac": 0.25303,
+     "above_floor": true
+    }
+   },
+   "n_genes_in_file": 55446,
+   "n_candidates_in_var_index": 41,
+   "n_cells": 34723,
+   "wall_s": 2.5,
+   "peak_rss_kb": 5300960
+  },
+  "PRE_GSE268630": {
+   "volume": "PRE_GSE268630",
+   "genes": {
+    "AFAP1": {
+     "in_var_index": true,
+     "detected_frac": 0.33665,
+     "above_floor": true
+    },
+    "C3": {
+     "in_var_index": true,
+     "detected_frac": 0.0034,
+     "above_floor": false
+    },
+    "CA1": {
+     "in_var_index": true,
+     "detected_frac": 0.02117,
+     "above_floor": false
+    },
+    "CA8": {
+     "in_var_index": true,
+     "detected_frac": 0.03126,
+     "above_floor": false
+    },
+    "CACNA1G": {
+     "in_var_index": true,
+     "detected_frac": 0.09181,
+     "above_floor": true
+    },
+    "CALB1": {
+     "in_var_index": true,
+     "detected_frac": 0.01845,
+     "above_floor": false
+    },
+    "CAV2": {
+     "in_var_index": true,
+     "detected_frac": 0.0215,
+     "above_floor": false
+    },
+    "CP": {
+     "in_var_index": true,
+     "detected_frac": 0.04192,
+     "above_floor": false
+    },
+    "CRB1": {
+     "in_var_index": true,
+     "detected_frac": 0.48533,
+     "above_floor": true
+    },
+    "CRB2": {
+     "in_var_index": true,
+     "detected_frac": 0.06801,
+     "above_floor": true
+    },
+    "CRX": {
+     "in_var_index": true,
+     "detected_frac": 0.17494,
+     "above_floor": true
+    },
+    "CTBP2": {
+     "in_var_index": true,
+     "detected_frac": 0.65109,
+     "above_floor": true
+    },
+    "DNER": {
+     "in_var_index": true,
+     "detected_frac": 0.44718,
+     "above_floor": true
+    },
+    "EMD": {
+     "in_var_index": true,
+     "detected_frac": 0.05812,
+     "above_floor": true
+    },
+    "ERG": {
+     "in_var_index": true,
+     "detected_frac": 0.00177,
+     "above_floor": false
+    },
+    "GBX2": {
+     "in_var_index": true,
+     "detected_frac": 0.00135,
+     "above_floor": false
+    },
+    "GLRA1": {
+     "in_var_index": true,
+     "detected_frac": 0.10651,
+     "above_floor": true
+    },
+    "GRIA2": {
+     "in_var_index": true,
+     "detected_frac": 0.53704,
+     "above_floor": true
+    },
+    "GRIA4": {
+     "in_var_index": true,
+     "detected_frac": 0.60865,
+     "above_floor": true
+    },
+    "GSG1": {
+     "in_var_index": true,
+     "detected_frac": 0.12715,
+     "above_floor": true
+    },
+    "KCNJ2": {
+     "in_var_index": true,
+     "detected_frac": 0.01289,
+     "above_floor": false
+    },
+    "LMO4": {
+     "in_var_index": true,
+     "detected_frac": 0.31453,
+     "above_floor": true
+    },
+    "MAP3K1": {
+     "in_var_index": true,
+     "detected_frac": 0.27373,
+     "above_floor": true
+    },
+    "MEIS2": {
+     "in_var_index": true,
+     "detected_frac": 0.38057,
+     "above_floor": true
+    },
+    "NR2E3": {
+     "in_var_index": true,
+     "detected_frac": 0.09225,
+     "above_floor": true
+    },
+    "NRG1": {
+     "in_var_index": true,
+     "detected_frac": 0.7393,
+     "above_floor": true
+    },
+    "NRL": {
+     "in_var_index": true,
+     "detected_frac": 0.22215,
+     "above_floor": true
+    },
+    "OPN4": {
+     "in_var_index": true,
+     "detected_frac": 0.01128,
+     "above_floor": false
+    },
+    "PCP2": {
+     "in_var_index": true,
+     "detected_frac": 0.08881,
+     "above_floor": true
+    },
+    "POU6F2": {
+     "in_var_index": true,
+     "detected_frac": 0.31037,
+     "above_floor": true
+    },
+    "QPCT": {
+     "in_var_index": true,
+     "detected_frac": 0.03426,
+     "above_floor": false
+    },
+    "RBPMS": {
+     "in_var_index": true,
+     "detected_frac": 0.19664,
+     "above_floor": true
+    },
+    "RHO": {
+     "in_var_index": true,
+     "detected_frac": 0.0039,
+     "above_floor": false
+    },
+    "SI": {
+     "in_var_index": true,
+     "detected_frac": 0.01259,
+     "above_floor": false
+    },
+    "SIX6": {
+     "in_var_index": true,
+     "detected_frac": 0.15966,
+     "above_floor": true
+    },
+    "SMOX": {
+     "in_var_index": true,
+     "detected_frac": 0.02289,
+     "above_floor": false
+    },
+    "SOX9": {
+     "in_var_index": true,
+     "detected_frac": 0.10468,
+     "above_floor": true
+    },
+    "TH": {
+     "in_var_index": true,
+     "detected_frac": 0.00335,
+     "above_floor": false
+    },
+    "TOMM20": {
+     "in_var_index": true,
+     "detected_frac": 0.34053,
+     "above_floor": true
+    },
+    "TUBB3": {
+     "in_var_index": true,
+     "detected_frac": 0.47725,
+     "above_floor": true
+    },
+    "VSX2": {
+     "in_var_index": true,
+     "detected_frac": 0.35154,
+     "above_floor": true
+    }
+   },
+   "n_genes_in_file": 35469,
+   "n_candidates_in_var_index": 41,
+   "n_cells": 59947,
+   "wall_s": 7.1,
+   "peak_rss_kb": 5300960
+  },
+  "PRE_OA-D001": {
+   "volume": "PRE_OA-D001",
+   "genes": {
+    "AFAP1": {
+     "in_var_index": true,
+     "detected_frac": 0.07424,
+     "above_floor": true
+    },
+    "C3": {
+     "in_var_index": true,
+     "detected_frac": 0.01823,
+     "above_floor": false
+    },
+    "CA1": {
+     "in_var_index": true,
+     "detected_frac": 0.05189,
+     "above_floor": true
+    },
+    "CA8": {
+     "in_var_index": true,
+     "detected_frac": 0.06165,
+     "above_floor": true
+    },
+    "CACNA1G": {
+     "in_var_index": true,
+     "detected_frac": 0.09001,
+     "above_floor": true
+    },
+    "CALB1": {
+     "in_var_index": true,
+     "detected_frac": 0.13135,
+     "above_floor": true
+    },
+    "CAV2": {
+     "in_var_index": true,
+     "detected_frac": 0.13371,
+     "above_floor": true
+    },
+    "CP": {
+     "in_var_index": true,
+     "detected_frac": 0.11016,
+     "above_floor": true
+    },
+    "CRB1": {
+     "in_var_index": true,
+     "detected_frac": 0.26016,
+     "above_floor": true
+    },
+    "CRB2": {
+     "in_var_index": true,
+     "detected_frac": 0.05754,
+     "above_floor": true
+    },
+    "CRX": {
+     "in_var_index": true,
+     "detected_frac": 0.17834,
+     "above_floor": true
+    },
+    "CTBP2": {
+     "in_var_index": true,
+     "detected_frac": 0.37747,
+     "above_floor": true
+    },
+    "DNER": {
+     "in_var_index": true,
+     "detected_frac": 0.33742,
+     "above_floor": true
+    },
+    "EMD": {
+     "in_var_index": true,
+     "detected_frac": 0.17909,
+     "above_floor": true
+    },
+    "ERG": {
+     "in_var_index": true,
+     "detected_frac": 0.00594,
+     "above_floor": false
+    },
+    "GBX2": {
+     "in_var_index": true,
+     "detected_frac": 0.00202,
+     "above_floor": false
+    },
+    "GLRA1": {
+     "in_var_index": true,
+     "detected_frac": 0.11481,
+     "above_floor": true
+    },
+    "GRIA2": {
+     "in_var_index": true,
+     "detected_frac": 0.37263,
+     "above_floor": true
+    },
+    "GRIA4": {
+     "in_var_index": true,
+     "detected_frac": 0.49491,
+     "above_floor": true
+    },
+    "GSG1": {
+     "in_var_index": true,
+     "detected_frac": 0.05359,
+     "above_floor": true
+    },
+    "KCNJ2": {
+     "in_var_index": true,
+     "detected_frac": 0.07535,
+     "above_floor": true
+    },
+    "LMO4": {
+     "in_var_index": true,
+     "detected_frac": 0.33315,
+     "above_floor": true
+    },
+    "MAP3K1": {
+     "in_var_index": true,
+     "detected_frac": 0.18307,
+     "above_floor": true
+    },
+    "MEIS2": {
+     "in_var_index": true,
+     "detected_frac": 0.26751,
+     "above_floor": true
+    },
+    "NR2E3": {
+     "in_var_index": true,
+     "detected_frac": 0.10023,
+     "above_floor": true
+    },
+    "NRG1": {
+     "in_var_index": true,
+     "detected_frac": 0.43557,
+     "above_floor": true
+    },
+    "NRL": {
+     "in_var_index": true,
+     "detected_frac": 0.30636,
+     "above_floor": true
+    },
+    "OPN4": {
+     "in_var_index": true,
+     "detected_frac": 0.01606,
+     "above_floor": false
+    },
+    "PCP2": {
+     "in_var_index": true,
+     "detected_frac": 0.1547,
+     "above_floor": true
+    },
+    "POU6F2": {
+     "in_var_index": true,
+     "detected_frac": 0.17097,
+     "above_floor": true
+    },
+    "QPCT": {
+     "in_var_index": true,
+     "detected_frac": 0.09912,
+     "above_floor": true
+    },
+    "RBPMS": {
+     "in_var_index": true,
+     "detected_frac": 0.16344,
+     "above_floor": true
+    },
+    "RHO": {
+     "in_var_index": true,
+     "detected_frac": 0.34609,
+     "above_floor": true
+    },
+    "SI": {
+     "in_var_index": true,
+     "detected_frac": 0.00073,
+     "above_floor": false
+    },
+    "SIX6": {
+     "in_var_index": true,
+     "detected_frac": 0.19688,
+     "above_floor": true
+    },
+    "SMOX": {
+     "in_var_index": true,
+     "detected_frac": 0.03755,
+     "above_floor": false
+    },
+    "SOX9": {
+     "in_var_index": true,
+     "detected_frac": 0.08376,
+     "above_floor": true
+    },
+    "TH": {
+     "in_var_index": true,
+     "detected_frac": 0.00199,
+     "above_floor": false
+    },
+    "TOMM20": {
+     "in_var_index": true,
+     "detected_frac": 0.30558,
+     "above_floor": true
+    },
+    "TUBB3": {
+     "in_var_index": true,
+     "detected_frac": 0.31133,
+     "above_floor": true
+    },
+    "VSX2": {
+     "in_var_index": true,
+     "detected_frac": 0.15131,
+     "above_floor": true
+    }
+   },
+   "n_genes_in_file": 35475,
+   "n_candidates_in_var_index": 41,
+   "n_cells": 62824,
+   "wall_s": 6.9,
+   "peak_rss_kb": 5300960
+  },
+  "PRE_OA-D068": {
+   "volume": "PRE_OA-D068",
+   "genes": {
+    "AFAP1": {
+     "in_var_index": true,
+     "detected_frac": 0.06728,
+     "above_floor": true
+    },
+    "C3": {
+     "in_var_index": true,
+     "detected_frac": 0.00225,
+     "above_floor": false
+    },
+    "CA1": {
+     "in_var_index": true,
+     "detected_frac": 8e-05,
+     "above_floor": false
+    },
+    "CA8": {
+     "in_var_index": true,
+     "detected_frac": 0.00852,
+     "above_floor": false
+    },
+    "CACNA1G": {
+     "in_var_index": true,
+     "detected_frac": 0.02087,
+     "above_floor": false
+    },
+    "CALB1": {
+     "in_var_index": true,
+     "detected_frac": 0.02548,
+     "above_floor": false
+    },
+    "CAV2": {
+     "in_var_index": true,
+     "detected_frac": 0.00911,
+     "above_floor": false
+    },
+    "CP": {
+     "in_var_index": true,
+     "detected_frac": 0.01204,
+     "above_floor": false
+    },
+    "CRB1": {
+     "in_var_index": true,
+     "detected_frac": 0.14956,
+     "above_floor": true
+    },
+    "CRB2": {
+     "in_var_index": true,
+     "detected_frac": 0.1067,
+     "above_floor": true
+    },
+    "CRX": {
+     "in_var_index": true,
+     "detected_frac": 0.19088,
+     "above_floor": true
+    },
+    "CTBP2": {
+     "in_var_index": true,
+     "detected_frac": 0.27333,
+     "above_floor": true
+    },
+    "DNER": {
+     "in_var_index": true,
+     "detected_frac": 0.20432,
+     "above_floor": true
+    },
+    "EMD": {
+     "in_var_index": true,
+     "detected_frac": 0.1234,
+     "above_floor": true
+    },
+    "ERG": {
+     "in_var_index": true,
+     "detected_frac": 0.00014,
+     "above_floor": false
+    },
+    "GBX2": {
+     "in_var_index": true,
+     "detected_frac": 0.00581,
+     "above_floor": false
+    },
+    "GLRA1": {
+     "in_var_index": true,
+     "detected_frac": 0.00111,
+     "above_floor": false
+    },
+    "GRIA2": {
+     "in_var_index": true,
+     "detected_frac": 0.11939,
+     "above_floor": true
+    },
+    "GRIA4": {
+     "in_var_index": true,
+     "detected_frac": 0.14952,
+     "above_floor": true
+    },
+    "GSG1": {
+     "in_var_index": true,
+     "detected_frac": 0.05463,
+     "above_floor": true
+    },
+    "KCNJ2": {
+     "in_var_index": true,
+     "detected_frac": 0.00485,
+     "above_floor": false
+    },
+    "LMO4": {
+     "in_var_index": true,
+     "detected_frac": 0.251,
+     "above_floor": true
+    },
+    "MAP3K1": {
+     "in_var_index": true,
+     "detected_frac": 0.04219,
+     "above_floor": false
+    },
+    "MEIS2": {
+     "in_var_index": true,
+     "detected_frac": 0.25276,
+     "above_floor": true
+    },
+    "NR2E3": {
+     "in_var_index": true,
+     "detected_frac": 0.15078,
+     "above_floor": true
+    },
+    "NRG1": {
+     "in_var_index": true,
+     "detected_frac": 0.05112,
+     "above_floor": true
+    },
+    "NRL": {
+     "in_var_index": true,
+     "detected_frac": 0.32159,
+     "above_floor": true
+    },
+    "OPN4": {
+     "in_var_index": true,
+     "detected_frac": 0.00119,
+     "above_floor": false
+    },
+    "PCP2": {
+     "in_var_index": true,
+     "detected_frac": 0.07699,
+     "above_floor": true
+    },
+    "POU6F2": {
+     "in_var_index": true,
+     "detected_frac": 0.06831,
+     "above_floor": true
+    },
+    "QPCT": {
+     "in_var_index": true,
+     "detected_frac": 0.03869,
+     "above_floor": false
+    },
+    "RBPMS": {
+     "in_var_index": true,
+     "detected_frac": 0.06886,
+     "above_floor": true
+    },
+    "RHO": {
+     "in_var_index": true,
+     "detected_frac": 0.00719,
+     "above_floor": false
+    },
+    "SI": {
+     "in_var_index": true,
+     "detected_frac": 0.0,
+     "above_floor": false
+    },
+    "SIX6": {
+     "in_var_index": true,
+     "detected_frac": 0.42147,
+     "above_floor": true
+    },
+    "SMOX": {
+     "in_var_index": true,
+     "detected_frac": 0.03742,
+     "above_floor": false
+    },
+    "SOX9": {
+     "in_var_index": true,
+     "detected_frac": 0.16404,
+     "above_floor": true
+    },
+    "TH": {
+     "in_var_index": true,
+     "detected_frac": 0.01049,
+     "above_floor": false
+    },
+    "TOMM20": {
+     "in_var_index": true,
+     "detected_frac": 0.40717,
+     "above_floor": true
+    },
+    "TUBB3": {
+     "in_var_index": true,
+     "detected_frac": 0.13717,
+     "above_floor": true
+    },
+    "VSX2": {
+     "in_var_index": true,
+     "detected_frac": 0.17462,
+     "above_floor": true
+    }
+   },
+   "n_genes_in_file": 32055,
+   "n_candidates_in_var_index": 41,
+   "n_cells": 63973,
+   "wall_s": 4.0,
+   "peak_rss_kb": 5300960
+  }
+ },
+ "n_candidates": 41
+}

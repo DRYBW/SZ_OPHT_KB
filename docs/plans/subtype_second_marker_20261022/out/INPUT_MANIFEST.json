@@ -1,0 +1,335 @@
+{
+ "probe": "m0_freeze_inputs.py",
+ "wave": "/mnt/D/EyeKB/plans/subtype_second_marker_20261022",
+ "n_inputs": 23,
+ "inputs": [
+  {
+   "path": "/mnt/D/EyeKB/plans/consensus_subtype_20261022/REPORT.md",
+   "role": "the frozen wave's report (read-only, never rewritten)",
+   "bytes": 8008,
+   "sha256": "eb4a518b302df2bac6c014145580a200cc0e5cc0b5201fe31e56c5c944235b15"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/consensus_subtype_20261022/PREREG_CONSENSUS_SUBTYPE_20261022.md",
+   "role": "the frozen pre-registration (thresholds)",
+   "bytes": 7417,
+   "sha256": "2c092a321ccf9e8ee2350a46d2e5de8036c0a74f18756e2f75271ddf4fd9f3c3"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/consensus_subtype_20261022/SUPERSEDED_LOGS_20261022.md",
+   "role": "which logs back the report",
+   "bytes": 1123,
+   "sha256": "8a67278e3ce5c67e261deafda46b5c6055916275115963e8fd89f169efd9c710"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/consensus_subtype_20261022/scripts/c3_separation.py",
+   "role": "THE RULER -- run unmodified",
+   "bytes": 14127,
+   "sha256": "44320a82489ee72a792df5919b4cb61deeb9af2e3c0e6e393cd6fac7b6583d43"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/consensus_subtype_20261022/scripts/c2_observability.py",
+   "role": "the observability pass (re-run for reference)",
+   "bytes": 8011,
+   "sha256": "4f5e016c8870dc7d8c22b5f49443c6f622c43000607e1ddc4a1eb9fb41018261"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/consensus_subtype_20261022/out/SUBTYPE_SEPARATION.json",
+   "role": "the frozen 56-row result",
+   "bytes": 43550,
+   "sha256": "c6703da24490bf3065f8be269facfc77de44563340ea2ffadc6879566131ba6d"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/consensus_subtype_20261022/out/SUBTYPE_SEPARATION.tsv",
+   "role": "the frozen 56-row result (tabular)",
+   "bytes": 22992,
+   "sha256": "b6704ae62a3901fd33874ef8fa5062b7f73f5f487e961db7a73dcd7642b08e47"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/consensus_subtype_20261022/out/SUBTYPE_OBSERVABILITY_rows.json",
+   "role": "the frozen rows fed to the ruler",
+   "bytes": 55161,
+   "sha256": "421d10415ab234227f95ce737bfea2aecf962e7d2f57a7ef27036f69767f1fb3"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/consensus_subtype_20261022/out/SUBTYPE_OBSERVABILITY.tsv",
+   "role": "the frozen budget table",
+   "bytes": 12644,
+   "sha256": "31256d885478fc1b3bd44a79dea4b525f76d98751bb0813701033a0a384824d7"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/consensus_subtype_20261022/out/_marker_genes.json",
+   "role": "the frozen gene list the ruler tests",
+   "bytes": 1533,
+   "sha256": "b253cd86382b66c37bc50a94a3ea0d322d27596cd55bdf307f6b85cbd867135d"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/consensus_subtype_20261022/out/G1_photoreceptor_bipolar.json",
+   "role": "the 94-entry literature list (ch 1)",
+   "bytes": 51555,
+   "sha256": "00be6ce48e8e227e42500809b827b2c3e90ebfde5e0f66bbb91e62e12f97e221"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/consensus_subtype_20261022/out/G2_amacrine_horizontal_rgc.json",
+   "role": "the 94-entry literature list (ch 2)",
+   "bytes": 32716,
+   "sha256": "4a1ecae3d69d869d5577074c83676c84fa40ede442e8adb2040006d803d342e6"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/consensus_subtype_20261022/out/G3_glia_vascular_support.json",
+   "role": "the 94-entry literature list (ch 3)",
+   "bytes": 43418,
+   "sha256": "c1efdaecb3f45f606e4fefe8e0fe12d1eb2c6655a4cd5efc61a56d7e3526f30c"
+  },
+  {
+   "path": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/chunks.parquet",
+   "role": "channel A: the literature corpus (v2.6-dev)",
+   "bytes": 1085097033,
+   "sha256": "f8ff038ec7bbf76ab71705f12fb5de2fa63be883b89bb19fc92ed320078e661e"
+  },
+  {
+   "path": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl",
+   "role": "channel A: paper records (PMID/DOI resolution)",
+   "bytes": 1488909,
+   "sha256": "acf2a567cbcb0351371e5ab903e5bf9bb8b4e9364a7d9a2d1c738ed522980b9b"
+  },
+  {
+   "path": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/manifest.yaml",
+   "role": "channel A: corpus provenance",
+   "bytes": 3456,
+   "sha256": "9333f6233b9231b831090092097bdc6b9f3e880d56a9ff9a92e03d89dd78909a"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/antseg_fill_20261020/out/gene_vocab.json",
+   "role": "the assay gene vocabulary (L2)",
+   "bytes": 457937,
+   "sha256": "b423511f2df1bdc20bd4943c4a1882b0fb1a2328edf854475bfc2bb3316a280b"
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/ontology/cl/releases/2026-06-08/cl-base.obo",
+   "role": "the frozen Cell Ontology snapshot",
+   "bytes": 3757082,
+   "sha256": "c6274fb65cdf740b983a06b74cb678814249d7f8e580c2ec9de54bf204a2b1c7"
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_cl_alignment_v2_unified.json",
+   "role": "KB class -> CL map",
+   "bytes": 20608,
+   "sha256": "48051cdae915b82e6e7812da9b98f93b41f51c5fac14bdb370bd5ccdb969a0a1"
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/mcp_server/eyekb_core.py",
+   "role": "the shipped service core (pre-change sha)",
+   "bytes": 118247,
+   "sha256": "bd45c6b93ec73cd67f810e865c0721f08882c5b71a1fc9e76e71dec5a1ca7a4a"
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/tests/probe_tool_panel_identity.py",
+   "role": "the legacy tool-panel identity probe",
+   "bytes": 10173,
+   "sha256": "bcf619b252a248bd64de00c3d61cd64d4c39dde9dff864d8b3694ed2de666370"
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/tests/fixtures/tool_panel_baseline.json",
+   "role": "the probe's recorded baseline",
+   "bytes": 1735,
+   "sha256": "ce6416126252663ff8be794fe985500a284876c3d15b2420359656c1bb4afd87"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/subtype_second_marker_20261022/PREREG_SUBTYPE_SECOND_MARKER_20261022.md",
+   "role": "THIS WAVE's pre-registration",
+   "bytes": 18766,
+   "sha256": "313449209a210faac57d410c30a424abbf9034804dc65e6a4e3e32b4d1323908"
+  }
+ ],
+ "missing_inputs": [],
+ "in_scope_rule": "result == not_separated AND reason.startswith('1 marker(s) cleared the gate')",
+ "in_scope_rows": [
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "flat midget bipolar cell (FMB, OFF midget bipolar)",
+   "n_cells": 3225,
+   "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.81; VSX2 AUC=0.47"
+  },
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "diffuse bipolar 2 (DB2)",
+   "n_cells": 3225,
+   "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.90; VSX2 AUC=0.52"
+  },
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "diffuse bipolar 3a (DB3a)",
+   "n_cells": 3225,
+   "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.76; VSX2 AUC=0.42"
+  },
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "diffuse bipolar 3b (DB3b)",
+   "n_cells": 3225,
+   "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.89; VSX2 AUC=0.52"
+  },
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "diffuse bipolar 4 (DB4)",
+   "n_cells": 3225,
+   "reason": "1 marker(s) cleared the gate; GRM6 AUC=0.81; VSX2 AUC=0.40"
+  },
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "diffuse bipolar 6 (DB6)",
+   "n_cells": 3225,
+   "reason": "1 marker(s) cleared the gate; SCGN AUC=0.50; GRM6 AUC=0.74"
+  },
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "blue-cone bipolar cell (BB, S-cone ON bipolar)",
+   "n_cells": 2931,
+   "reason": "1 marker(s) cleared the gate; GRM6 AUC=0.72; VSX2 AUC=0.58"
+  },
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "giant bipolar cell (GB)",
+   "n_cells": 3225,
+   "reason": "1 marker(s) cleared the gate; UTRN AUC=0.91"
+  },
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "H1 horizontal cell",
+   "n_cells": 3225,
+   "reason": "1 marker(s) cleared the gate; LHX1 AUC=0.76; SPP1 AUC=0.44"
+  },
+  {
+   "volume": "CX01_retina_snRNA",
+   "subtype": "H2 horizontal cell",
+   "n_cells": 3225,
+   "reason": "1 marker(s) cleared the gate; ISL1 AUC=0.71; SPP1 AUC=0.56"
+  },
+  {
+   "volume": "CX03_retina_multiome",
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "n_cells": 2617,
+   "reason": "1 marker(s) cleared the gate; GRM6 AUC=0.69; TRPM1 AUC=0.73; ISL1 AUC=0.53; ST18 AUC=0.57"
+  },
+  {
+   "volume": "CX03_retina_multiome",
+   "subtype": "OFF cone bipolar cell (OFF BC)",
+   "n_cells": 3936,
+   "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.99; FEZF2 AUC=0.60; LHX3 AUC=0.52"
+  },
+  {
+   "volume": "CX04_cowan_fovea",
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "n_cells": 1016,
+   "reason": "1 marker(s) cleared the gate; PRKCA AUC=0.90; TRPM1 AUC=0.56; VSTM2B AUC=0.69"
+  },
+  {
+   "volume": "CX04_cowan_organoid",
+   "subtype": "OFF cone bipolar cell (OFF BC)",
+   "n_cells": 686,
+   "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.75; FEZF2 AUC=0.62; LHX3 AUC=0.58"
+  },
+  {
+   "volume": "CX04_cowan_periphery",
+   "subtype": "OFF cone bipolar cell (OFF BC)",
+   "n_cells": 1470,
+   "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.85; FEZF2 AUC=0.68; LHX3 AUC=0.57"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "invaginating midget bipolar cell (IMB, ON midget bipolar)",
+   "n_cells": 1466,
+   "reason": "1 marker(s) cleared the gate; GRM6 AUC=0.79; VSX2 AUC=0.38"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "flat midget bipolar cell (FMB, OFF midget bipolar)",
+   "n_cells": 3571,
+   "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.78; VSX2 AUC=0.46"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "diffuse bipolar 2 (DB2)",
+   "n_cells": 2371,
+   "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.82; VSX2 AUC=0.51"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "diffuse bipolar 3b (DB3b)",
+   "n_cells": 2704,
+   "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.76; VSX2 AUC=0.60"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "diffuse bipolar 4 (DB4)",
+   "n_cells": 291,
+   "reason": "1 marker(s) cleared the gate; GRM6 AUC=0.89; VSX2 AUC=0.52"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "diffuse bipolar 6 (DB6)",
+   "n_cells": 429,
+   "reason": "1 marker(s) cleared the gate; SCGN AUC=0.50; GRM6 AUC=0.89"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "H1 horizontal cell",
+   "n_cells": 477,
+   "reason": "1 marker(s) cleared the gate; LHX1 AUC=0.79; SPP1 AUC=0.58"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "subtype": "H2 horizontal cell",
+   "n_cells": 928,
+   "reason": "1 marker(s) cleared the gate; ISL1 AUC=0.72; SPP1 AUC=0.52"
+  },
+  {
+   "volume": "PRE_OA-D001",
+   "subtype": "starburst (cholinergic) amacrine cell",
+   "n_cells": 986,
+   "reason": "1 marker(s) cleared the gate; CHAT AUC=0.67; SLC18A3 AUC=0.69; SLC5A7 AUC=0.91"
+  },
+  {
+   "volume": "PRE_OA-D001",
+   "subtype": "H2 horizontal cell",
+   "n_cells": 1858,
+   "reason": "1 marker(s) cleared the gate; ISL1 AUC=0.73; SPP1 AUC=0.70"
+  },
+  {
+   "volume": "PRE_OA-D001",
+   "subtype": "parasol retinal ganglion cell",
+   "n_cells": 446,
+   "reason": "1 marker(s) cleared the gate; SPP1 AUC=0.85; RBPMS2 AUC=0.62; CHRNA2 AUC=0.66; CA8 AUC=0.51"
+  }
+ ],
+ "in_scope_n_rows": 26,
+ "in_scope_n_subtypes": 16,
+ "in_scope_subtypes": [
+  "H1 horizontal cell",
+  "H2 horizontal cell",
+  "OFF cone bipolar cell (OFF BC)",
+  "ON cone bipolar cell (ON BC)",
+  "blue-cone bipolar cell (BB, S-cone ON bipolar)",
+  "diffuse bipolar 2 (DB2)",
+  "diffuse bipolar 3a (DB3a)",
+  "diffuse bipolar 3b (DB3b)",
+  "diffuse bipolar 4 (DB4)",
+  "diffuse bipolar 6 (DB6)",
+  "flat midget bipolar cell (FMB, OFF midget bipolar)",
+  "giant bipolar cell (GB)",
+  "invaginating midget bipolar cell (IMB, ON midget bipolar)",
+  "parasol retinal ganglion cell",
+  "rod bipolar cell (RBC, ON rod bipolar)",
+  "starburst (cholinergic) amacrine cell"
+ ],
+ "in_scope_volumes": [
+  "CX01_retina_snRNA",
+  "CX03_retina_multiome",
+  "CX04_cowan_fovea",
+  "CX04_cowan_organoid",
+  "CX04_cowan_periphery",
+  "PRE_GSE268630",
+  "PRE_OA-D001"
+ ],
+ "out_of_scope_rows": 30
+}

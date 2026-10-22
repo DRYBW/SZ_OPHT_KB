@@ -1,0 +1,156 @@
+{
+ "probe": "m3b_remeasure_local.py",
+ "ruler": "/mnt/D/EyeKB/plans/consensus_subtype_20261022/scripts/c3_separation.py",
+ "ruler_sha256": "44320a82489ee72a792df5919b4cb61deeb9af2e3c0e6e393cd6fac7b6583d43",
+ "frozen_rows_sha256": "421d10415ab234227f95ce737bfea2aecf962e7d2f57a7ef27036f69767f1fb3",
+ "frozen_sep_sha256": "c6703da24490bf3065f8be269facfc77de44563340ea2ffadc6879566131ba6d",
+ "augmented_rows": "/mnt/D/EyeKB/plans/subtype_second_marker_20261022/out/SUBTYPE_OBSERVABILITY_rows_augmented.json",
+ "augmented_rows_sha256": "5a3a2f096f06545379d6245d7c5443bbabad1490697437e1fa4e3e8fddc512f1",
+ "genes_added_total": 22,
+ "added_per_subtype": {
+  "H1 horizontal cell": [
+   "CA10",
+   "FOXP2"
+  ],
+  "OFF cone bipolar cell (OFF BC)": [
+   "ELF5",
+   "ST18"
+  ],
+  "ON cone bipolar cell (ON BC)": [
+   "CA1",
+   "CRX"
+  ],
+  "diffuse bipolar 2 (DB2)": [
+   "CACNA1G",
+   "GSG1"
+  ],
+  "diffuse bipolar 3a (DB3a)": [
+   "CALB1",
+   "GABRA1"
+  ],
+  "diffuse bipolar 3b (DB3b)": [
+   "MEIS2",
+   "QPCT"
+  ],
+  "diffuse bipolar 4 (DB4)": [
+   "CALB1",
+   "TTR"
+  ],
+  "diffuse bipolar 6 (DB6)": [
+   "LMO4"
+  ],
+  "flat midget bipolar cell (FMB, OFF midget bipolar)": [
+   "GABRA1"
+  ],
+  "parasol retinal ganglion cell": [
+   "AFAP1",
+   "POU6F2"
+  ],
+  "rod bipolar cell (RBC, ON rod bipolar)": [
+   "GRM6",
+   "NRL"
+  ],
+  "starburst (cholinergic) amacrine cell": [
+   "CA1",
+   "CRH"
+  ]
+ },
+ "control": {
+  "cmd": "/usr/bin/python3 /mnt/D/EyeKB/plans/consensus_subtype_20261022/scripts/c3_separation.py --observability /mnt/D/EyeKB/plans/consensus_subtype_20261022/out/SUBTYPE_OBSERVABILITY_rows.json --out /mnt/D/EyeKB/plans/subtype_second_marker_20261022/out/ruler_control",
+  "rc": 0,
+  "log": "/mnt/D/EyeKB/plans/subtype_second_marker_20261022/logs/m3_ruler_control.log",
+  "tail": [
+   "rows=56  {'separated': 12, 'not_separated': 36, 'insufficient_evidence': 8}"
+  ],
+  "result_json": "/mnt/D/EyeKB/plans/subtype_second_marker_20261022/out/ruler_control/SUBTYPE_SEPARATION.json"
+ },
+ "augmented": {
+  "cmd": "/usr/bin/python3 /mnt/D/EyeKB/plans/consensus_subtype_20261022/scripts/c3_separation.py --observability /mnt/D/EyeKB/plans/subtype_second_marker_20261022/out/SUBTYPE_OBSERVABILITY_rows_augmented.json --out /mnt/D/EyeKB/plans/subtype_second_marker_20261022/out/ruler_augmented",
+  "rc": 1,
+  "log": "/mnt/D/EyeKB/plans/subtype_second_marker_20261022/logs/m3_ruler_augmented.log",
+  "tail": [
+   "IndexError: index 5 is out of bounds for axis 0 with size 5"
+  ],
+  "result_json": "/mnt/D/EyeKB/plans/subtype_second_marker_20261022/out/ruler_augmented/SUBTYPE_SEPARATION.json"
+ },
+ "control_reproduces_frozen": true,
+ "control_row_mismatches": [],
+ "local_ruler_sha256": "22b0a73c4a302795494d2e14ba003e1d5d2fdb9a19c68216a2dd40e072ae7001",
+ "control_frozen_ruler": {
+  "n_a": 56,
+  "n_b": 56,
+  "identical_verdicts": true,
+  "n_mismatch": 0,
+  "mismatches": []
+ },
+ "control_local_ruler": {
+  "n_a": 56,
+  "n_b": 56,
+  "identical_verdicts": true,
+  "n_mismatch": 0,
+  "mismatches": []
+ },
+ "augmented_vs_control": {
+  "n_a": 56,
+  "n_b": 56,
+  "identical_verdicts": false,
+  "n_mismatch": 7,
+  "mismatches": [
+   {
+    "i": 5,
+    "a": "CX01_retina_snRNA|diffuse bipolar 2 (DB2)",
+    "a_result": "separated",
+    "b_result": "not_separated"
+   },
+   {
+    "i": 6,
+    "a": "CX01_retina_snRNA|diffuse bipolar 3a (DB3a)",
+    "a_result": "separated",
+    "b_result": "not_separated"
+   },
+   {
+    "i": 7,
+    "a": "CX01_retina_snRNA|diffuse bipolar 3b (DB3b)",
+    "a_result": "separated",
+    "b_result": "not_separated"
+   },
+   {
+    "i": 8,
+    "a": "CX01_retina_snRNA|diffuse bipolar 4 (DB4)",
+    "a_result": "separated",
+    "b_result": "not_separated"
+   },
+   {
+    "i": 37,
+    "a": "PRE_GSE268630|diffuse bipolar 2 (DB2)",
+    "a_result": "separated",
+    "b_result": "not_separated"
+   },
+   {
+    "i": 39,
+    "a": "PRE_GSE268630|diffuse bipolar 3b (DB3b)",
+    "a_result": "separated",
+    "b_result": "not_separated"
+   },
+   {
+    "i": 41,
+    "a": "PRE_GSE268630|diffuse bipolar 6 (DB6)",
+    "a_result": "separated",
+    "b_result": "not_separated"
+   }
+  ]
+ },
+ "arm_c2": {
+  "cmd": "/usr/bin/python3 /mnt/D/EyeKB/plans/subtype_second_marker_20261022/scripts/c3_separation_local.py --observability /mnt/D/EyeKB/plans/consensus_subtype_20261022/out/SUBTYPE_OBSERVABILITY_rows.json --out /mnt/D/EyeKB/plans/subtype_second_marker_20261022/out/ruler_control_local",
+  "rc": 0,
+  "outdir": "/mnt/D/EyeKB/plans/subtype_second_marker_20261022/out/ruler_control_local",
+  "log": "/mnt/D/EyeKB/plans/subtype_second_marker_20261022/logs/m3b_control_local.log"
+ },
+ "arm_a1": {
+  "cmd": "/usr/bin/python3 /mnt/D/EyeKB/plans/subtype_second_marker_20261022/scripts/c3_separation_local.py --observability /mnt/D/EyeKB/plans/subtype_second_marker_20261022/out/SUBTYPE_OBSERVABILITY_rows_augmented.json --out /mnt/D/EyeKB/plans/subtype_second_marker_20261022/out/ruler_augmented",
+  "rc": 0,
+  "outdir": "/mnt/D/EyeKB/plans/subtype_second_marker_20261022/out/ruler_augmented",
+  "log": "/mnt/D/EyeKB/plans/subtype_second_marker_20261022/logs/m3b_augmented.log"
+ },
+ "n_rows_changed_by_augmentation": 7
+}

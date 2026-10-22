@@ -1,0 +1,20 @@
+Running as unit: run-p3555034-i73001952.scope; invocation ID: 31fa85acbff24caba76c443fdcaa55d9
+[corpus] chunks=244877 papers=3902 in_context=674 attached=78 ties_skipped=0
+  H1 horizontal cell                                         segs=1     papers=1    admitted=[]                                       kept=[]
+  H2 horizontal cell                                         segs=0     papers=0    admitted=[]                                       kept=[]
+  OFF cone bipolar cell (OFF BC)                             segs=42    papers=17   admitted=[('ELF5', 1)]                            kept=['ELF5']
+  ON cone bipolar cell (ON BC)                               segs=74    papers=32   admitted=[('CA1', 1), ('CRX', 1), ('ERG', 1), ('GRIA4', 1), ('NRG1', 1), ('PCP2', 1), ('TOMM20', 1), ('TUBB3', 1), ('VSX2', 1), ('YY1', 1)] kept=['CA1', 'CRX']
+  blue-cone bipolar cell (BB, S-cone ON bipolar)             segs=3     papers=1    admitted=[]                                       kept=[]
+  diffuse bipolar 2 (DB2)                                    segs=7     papers=3    admitted=[('CACNA1G', 1), ('GSG1', 1), ('KCNJ2', 1), ('RND3', 1)] kept=['CACNA1G', 'GSG1']
+  diffuse bipolar 3a (DB3a)                                  segs=3     papers=2    admitted=[('GABRA1', 1)]                          kept=['GABRA1']
+  diffuse bipolar 3b (DB3b)                                  segs=7     papers=4    admitted=[('GLRA1', 1), ('MEIS2', 1), ('QPCT', 1), ('TTR', 1)] kept=['GLRA1', 'MEIS2']
+  diffuse bipolar 4 (DB4)                                    segs=2     papers=2    admitted=[('TULP1', 1)]                           kept=['TULP1']
+  diffuse bipolar 6 (DB6)                                    segs=0     papers=0    admitted=[]                                       kept=[]
+  flat midget bipolar cell (FMB, OFF midget bipolar)         segs=19    papers=4    admitted=[('GLRA1', 1)]                           kept=['GLRA1']
+  giant bipolar cell (GB)                                    segs=1     papers=1    admitted=[]                                       kept=[]
+  invaginating midget bipolar cell (IMB, ON midget bipolar)  segs=7     papers=2    admitted=[]                                       kept=[]
+  parasol retinal ganglion cell                              segs=47    papers=10   admitted=[('AFAP1', 2), ('CAV2', 1), ('CP', 1), ('GRIA2', 1), ('MAP3K1', 1), ('POU6F2', 2), ('RBPMS', 1), ('SIX6', 1)] kept=['AFAP1', 'POU6F2']
+  rod bipolar cell (RBC, ON rod bipolar)                     segs=97    papers=54   admitted=[('CP', 1), ('ERG', 1), ('NR2E3', 1), ('NRL', 2), ('RHO', 1), ('SOX9', 1), ('VSX2', 1)] kept=['CP', 'NRL']
+  starburst (cholinergic) amacrine cell                      segs=57    papers=33   admitted=[('CTBP2', 1), ('GBX2', 1), ('RBPMS', 1)] kept=['CTBP2', 'GBX2']
+rows=50 admitted=40 kept=16
+wrote /mnt/D/EyeKB/plans/subtype_second_marker_20261022/out/SUBTYPE_SECOND_MARKER_LIT.json

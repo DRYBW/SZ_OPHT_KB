@@ -1,0 +1,3999 @@
+{
+ "probe": "m1b_mine_lit_v2.py",
+ "implements": "AMENDMENT_1_ATTACHMENT_RULE_20261022.md",
+ "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/chunks.parquet",
+ "vocab_size": 42267,
+ "proximity_chars": 80,
+ "clause_max": 400,
+ "k_cap": 2,
+ "pan_family_min": 3,
+ "predicate": "marker|express|enrich|specific|label|detect|identif|distinguish|immunoreactiv|transcript|antibod|stain|positive",
+ "corpus_stats": {
+  "chunks_scanned": 244877,
+  "papers": 3902,
+  "chunks_in_context": 674,
+  "attached_co_mentions": 153
+ },
+ "context_per_subtype": {
+  "H1 horizontal cell": {
+   "clauses": 3,
+   "papers": 3
+  },
+  "H2 horizontal cell": {
+   "clauses": 0,
+   "papers": 0
+  },
+  "OFF cone bipolar cell (OFF BC)": {
+   "clauses": 54,
+   "papers": 24
+  },
+  "ON cone bipolar cell (ON BC)": {
+   "clauses": 97,
+   "papers": 39
+  },
+  "blue-cone bipolar cell (BB, S-cone ON bipolar)": {
+   "clauses": 3,
+   "papers": 1
+  },
+  "diffuse bipolar 2 (DB2)": {
+   "clauses": 10,
+   "papers": 3
+  },
+  "diffuse bipolar 3a (DB3a)": {
+   "clauses": 7,
+   "papers": 3
+  },
+  "diffuse bipolar 3b (DB3b)": {
+   "clauses": 9,
+   "papers": 4
+  },
+  "diffuse bipolar 4 (DB4)": {
+   "clauses": 2,
+   "papers": 2
+  },
+  "diffuse bipolar 6 (DB6)": {
+   "clauses": 1,
+   "papers": 1
+  },
+  "flat midget bipolar cell (FMB, OFF midget bipolar)": {
+   "clauses": 25,
+   "papers": 4
+  },
+  "giant bipolar cell (GB)": {
+   "clauses": 1,
+   "papers": 1
+  },
+  "invaginating midget bipolar cell (IMB, ON midget bipolar)": {
+   "clauses": 9,
+   "papers": 3
+  },
+  "parasol retinal ganglion cell": {
+   "clauses": 60,
+   "papers": 14
+  },
+  "rod bipolar cell (RBC, ON rod bipolar)": {
+   "clauses": 151,
+   "papers": 80
+  },
+  "starburst (cholinergic) amacrine cell": {
+   "clauses": 88,
+   "papers": 54
+  }
+ },
+ "n_rows": 108,
+ "n_admitted_before_cap": 69,
+ "n_kept": 22,
+ "rows": [
+  {
+   "subtype": "H1 horizontal cell",
+   "gene": "CA10",
+   "channel_a_papers": [
+    "39574940"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "39574940",
+     "pmcid": "PMC11579486",
+     "doi": "10.34133/research.0536",
+     "title": "Cellular Characterization and Interspecies Evolution of the Tree Shrew Retina across Postnatal Lifespan.",
+     "clause": "We then verify the cell subtypes and identify specific markers in the TS retina including  CA10  for bipolar cells,  MEGF11  for H1 horizontal cells, and  SLIT2 ,  RUNX1 ,  FOXP2 , and  SPP1  for retinal ganglion cell subpopulations.",
+     "distance": 38
+    }
+   ],
+   "rank_l5": 1,
+   "kept_l5": true
+  },
+  {
+   "subtype": "H1 horizontal cell",
+   "gene": "FOXP2",
+   "channel_a_papers": [
+    "39574940"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "39574940",
+     "pmcid": "PMC11579486",
+     "doi": "10.34133/research.0536",
+     "title": "Cellular Characterization and Interspecies Evolution of the Tree Shrew Retina across Postnatal Lifespan.",
+     "clause": "We then verify the cell subtypes and identify specific markers in the TS retina including  CA10  for bipolar cells,  MEGF11  for H1 horizontal cells, and  SLIT2 ,  RUNX1 ,  FOXP2 , and  SPP1  for retinal ganglion cell subpopulations.",
+     "distance": 44
+    }
+   ],
+   "rank_l5": 2,
+   "kept_l5": true
+  },
+  {
+   "subtype": "H1 horizontal cell",
+   "gene": "MEGF11",
+   "channel_a_papers": [
+    "39574940"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "39574940",
+     "pmcid": "PMC11579486",
+     "doi": "10.34133/research.0536",
+     "title": "Cellular Characterization and Interspecies Evolution of the Tree Shrew Retina across Postnatal Lifespan.",
+     "clause": "We then verify the cell subtypes and identify specific markers in the TS retina including  CA10  for bipolar cells,  MEGF11  for H1 horizontal cells, and  SLIT2 ,  RUNX1 ,  FOXP2 , and  SPP1  for retinal ganglion cell subpopulations.",
+     "distance": 12
+    }
+   ],
+   "rank_l5": 3,
+   "kept_l5": false
+  },
+  {
+   "subtype": "H1 horizontal cell",
+   "gene": "RUNX1",
+   "channel_a_papers": [
+    "39574940"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "39574940",
+     "pmcid": "PMC11579486",
+     "doi": "10.34133/research.0536",
+     "title": "Cellular Characterization and Interspecies Evolution of the Tree Shrew Retina across Postnatal Lifespan.",
+     "clause": "We then verify the cell subtypes and identify specific markers in the TS retina including  CA10  for bipolar cells,  MEGF11  for H1 horizontal cells, and  SLIT2 ,  RUNX1 ,  FOXP2 , and  SPP1  for retinal ganglion cell subpopulations.",
+     "distance": 35
+    }
+   ],
+   "rank_l5": 4,
+   "kept_l5": false
+  },
+  {
+   "subtype": "H1 horizontal cell",
+   "gene": "SLIT2",
+   "channel_a_papers": [
+    "39574940"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "39574940",
+     "pmcid": "PMC11579486",
+     "doi": "10.34133/research.0536",
+     "title": "Cellular Characterization and Interspecies Evolution of the Tree Shrew Retina across Postnatal Lifespan.",
+     "clause": "We then verify the cell subtypes and identify specific markers in the TS retina including  CA10  for bipolar cells,  MEGF11  for H1 horizontal cells, and  SLIT2 ,  RUNX1 ,  FOXP2 , and  SPP1  for retinal ganglion cell subpopulations.",
+     "distance": 26
+    }
+   ],
+   "rank_l5": 5,
+   "kept_l5": false
+  },
+  {
+   "subtype": "H1 horizontal cell",
+   "gene": "SPP1",
+   "channel_a_papers": [
+    "39574940"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": true,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": false,
+   "L4_not_pan_family": true,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "39574940",
+     "pmcid": "PMC11579486",
+     "doi": "10.34133/research.0536",
+     "title": "Cellular Characterization and Interspecies Evolution of the Tree Shrew Retina across Postnatal Lifespan.",
+     "clause": "We then verify the cell subtypes and identify specific markers in the TS retina including  CA10  for bipolar cells,  MEGF11  for H1 horizontal cells, and  SLIT2 ,  RUNX1 ,  FOXP2 , and  SPP1  for retinal ganglion cell subpopulations.",
+     "distance": 57
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "OFF cone bipolar cell (OFF BC)",
+   "gene": "ELF5",
+   "channel_a_papers": [
+    "42490430"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "42490430",
+     "pmcid": "PMC13394472",
+     "doi": "10.1126/sciadv.adv9162",
+     "title": "Single-cell analysis of the epigenome and 3D chromatin architecture in the human retina",
+     "clause": "Notable cell-type–specific motifs included  ZNF143 | STAF  in All amacrine cells;  Sp1  in astrocytes;  CTCF  in cones;  Tgif2  in GABA amacrine cells;  Usf2  in Gly amacrine cells;  ELF5  in Müller glia; Ronin in OFF cone bipolar cells;  YY1  in ON cone bipolar cells;  RORgt  in RGC;  Elk4  in Rod ",
+     "distance": 31
+    }
+   ],
+   "rank_l5": 1,
+   "kept_l5": true
+  },
+  {
+   "subtype": "OFF cone bipolar cell (OFF BC)",
+   "gene": "FEZF2",
+   "channel_a_papers": [
+    "38092908"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": true,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": false,
+   "L4_not_pan_family": true,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "Several transcription factor-encoding genes are expressed selectively in mouse retinal subclasses, including  NRL  and  NR2E3  in rods,  THRB  and  LHX4  in cones,  MEIS2  in GABAergic amacrine cells,  TCF4  in glycinergic amacrine cells,  FEZF2  and  LHX3  in OFF bipolar cells, and  ISL1  and  ST18",
+     "distance": 21
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "OFF cone bipolar cell (OFF BC)",
+   "gene": "GRIK1",
+   "channel_a_papers": [
+    "38092908"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": true,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": false,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "b , Feature plots showing expression within the integrated space of the rod bipolar cell marker  PRKCA , the ON bipolar cell marker  ISL1 , and the OFF bipolar cell marker  GRIK1 .",
+     "distance": 25
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "OFF cone bipolar cell (OFF BC)",
+   "gene": "ISL1",
+   "channel_a_papers": [
+    "38092908"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "Several transcription factor-encoding genes are expressed selectively in mouse retinal subclasses, including  NRL  and  NR2E3  in rods,  THRB  and  LHX4  in cones,  MEIS2  in GABAergic amacrine cells,  TCF4  in glycinergic amacrine cells,  FEZF2  and  LHX3  in OFF bipolar cells, and  ISL1  and  ST18",
+     "distance": 24
+    },
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "b , Feature plots showing expression within the integrated space of the rod bipolar cell marker  PRKCA , the ON bipolar cell marker  ISL1 , and the OFF bipolar cell marker  GRIK1 .",
+     "distance": 15
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "OFF cone bipolar cell (OFF BC)",
+   "gene": "LHX3",
+   "channel_a_papers": [
+    "38092908"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": true,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": false,
+   "L4_not_pan_family": true,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "Several transcription factor-encoding genes are expressed selectively in mouse retinal subclasses, including  NRL  and  NR2E3  in rods,  THRB  and  LHX4  in cones,  MEIS2  in GABAergic amacrine cells,  TCF4  in glycinergic amacrine cells,  FEZF2  and  LHX3  in OFF bipolar cells, and  ISL1  and  ST18",
+     "distance": 9
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "OFF cone bipolar cell (OFF BC)",
+   "gene": "NRG1",
+   "channel_a_papers": [
+    "41593663"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "41593663",
+     "pmcid": "PMC12918004",
+     "doi": "10.1186/s12964-026-02692-8",
+     "title": "Microglial phagocytosis of bipolar cells triggers inner retinal degeneration in  Rs1 -KO mice",
+     "clause": "Retinal cryosections showing co-localization of PKARIIβ (green), a marker for OFF bipolar cells, with NRG1 (red) in WT mice, and reduced NRG1 expression in  Rs1 −/y  mice (upper panels).",
+     "distance": 24
+    },
+    {
+     "paper_id": "41593663",
+     "pmcid": "PMC12918004",
+     "doi": "10.1186/s12964-026-02692-8",
+     "title": "Microglial phagocytosis of bipolar cells triggers inner retinal degeneration in  Rs1 -KO mice",
+     "clause": "Retinal cryosections showing co-localization of PKARIIβ (green), a marker for OFF bipolar cells, with NRG1 (red) in WT mice, and reduced NRG1 expression in  Rs1 −/y  mice (upper panels).",
+     "distance": 59
+    },
+    {
+     "paper_id": "41593663",
+     "pmcid": "PMC12918004",
+     "doi": "10.1186/s12964-026-02692-8",
+     "title": "Microglial phagocytosis of bipolar cells triggers inner retinal degeneration in  Rs1 -KO mice",
+     "clause": "Scale bar = 10 μm To validate these molecular findings, we performed immunofluorescence staining on retinal sections from wild-type and  Rs1 −/y  mice, using markers for rod bipolar cells (PKCα) and OFF bipolar cells (PKARIIβ), alongside NRG1.",
+     "distance": 39
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "OFF cone bipolar cell (OFF BC)",
+   "gene": "PRKCA",
+   "channel_a_papers": [
+    "38092908"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "b , Feature plots showing expression within the integrated space of the rod bipolar cell marker  PRKCA , the ON bipolar cell marker  ISL1 , and the OFF bipolar cell marker  GRIK1 .",
+     "distance": 51
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "OFF cone bipolar cell (OFF BC)",
+   "gene": "ST18",
+   "channel_a_papers": [
+    "38092908"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "Several transcription factor-encoding genes are expressed selectively in mouse retinal subclasses, including  NRL  and  NR2E3  in rods,  THRB  and  LHX4  in cones,  MEIS2  in GABAergic amacrine cells,  TCF4  in glycinergic amacrine cells,  FEZF2  and  LHX3  in OFF bipolar cells, and  ISL1  and  ST18",
+     "distance": 35
+    }
+   ],
+   "rank_l5": 2,
+   "kept_l5": true
+  },
+  {
+   "subtype": "OFF cone bipolar cell (OFF BC)",
+   "gene": "TCF4",
+   "channel_a_papers": [
+    "38092908"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "Several transcription factor-encoding genes are expressed selectively in mouse retinal subclasses, including  NRL  and  NR2E3  in rods,  THRB  and  LHX4  in cones,  MEIS2  in GABAergic amacrine cells,  TCF4  in glycinergic amacrine cells,  FEZF2  and  LHX3  in OFF bipolar cells, and  ISL1  and  ST18",
+     "distance": 59
+    }
+   ],
+   "rank_l5": 3,
+   "kept_l5": false
+  },
+  {
+   "subtype": "OFF cone bipolar cell (OFF BC)",
+   "gene": "YY1",
+   "channel_a_papers": [
+    "42490430"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "42490430",
+     "pmcid": "PMC13394472",
+     "doi": "10.1126/sciadv.adv9162",
+     "title": "Single-cell analysis of the epigenome and 3D chromatin architecture in the human retina",
+     "clause": "Notable cell-type–specific motifs included  ZNF143 | STAF  in All amacrine cells;  Sp1  in astrocytes;  CTCF  in cones;  Tgif2  in GABA amacrine cells;  Usf2  in Gly amacrine cells;  ELF5  in Müller glia; Ronin in OFF cone bipolar cells;  YY1  in ON cone bipolar cells;  RORgt  in RGC;  Elk4  in Rod ",
+     "distance": 25
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "CA1",
+   "channel_a_papers": [
+    "39540305"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "39540305",
+     "pmcid": "PMC11827602",
+     "doi": "10.1242/jcs.263407",
+     "title": "'Iterative Bleaching Extends Multiplexity' facilitates simultaneous identification of all major retinal cell types.",
+     "clause": "5B⁗ ) before conducting a subsequent round of IF with MG antibody markers (CA1 and GS) and the ON bipolar cell marker (PKC-β) ( Vitorino et al., 2009 ) ( Fig.",
+     "distance": 20
+    }
+   ],
+   "rank_l5": 1,
+   "kept_l5": true
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "CRX",
+   "channel_a_papers": [
+    "26235913"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "26235913",
+     "pmcid": "PMC4713319",
+     "doi": "10.1002/stem.2122",
+     "title": "Transcriptome Dynamics of Developing Photoreceptors in Three‐Dimensional Retina Cultures Recapitulates Temporal Sequence of Human Cone and R",
+     "clause": "Protein kinase C‐alpha, which identifies ON bipolar cells, was detected in few cells at day 90 basally to CRX+ photoreceptors (Fig.",
+     "distance": 65
+    }
+   ],
+   "rank_l5": 2,
+   "kept_l5": true
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "ELF5",
+   "channel_a_papers": [
+    "42490430"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "42490430",
+     "pmcid": "PMC13394472",
+     "doi": "10.1126/sciadv.adv9162",
+     "title": "Single-cell analysis of the epigenome and 3D chromatin architecture in the human retina",
+     "clause": "Notable cell-type–specific motifs included  ZNF143 | STAF  in All amacrine cells;  Sp1  in astrocytes;  CTCF  in cones;  Tgif2  in GABA amacrine cells;  Usf2  in Gly amacrine cells;  ELF5  in Müller glia; Ronin in OFF cone bipolar cells;  YY1  in ON cone bipolar cells;  RORgt  in RGC;  Elk4  in Rod ",
+     "distance": 64
+    }
+   ],
+   "rank_l5": 3,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "ERG",
+   "channel_a_papers": [
+    "39916387"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "39916387",
+     "pmcid": "PMC11920683",
+     "doi": "10.1002/glia.24657",
+     "title": "Ibudilast Protects Retinal Bipolar Cells From Excitotoxic Retinal Damage and Activates the  mTOR  Pathway",
+     "clause": "Since our ERG results showed that during NMDA damage ibudilast specifically preserved the ON bipolar cell pathway function, we sought to validate our findings with IHC using bipolar cell specific markers.",
+     "distance": 80
+    }
+   ],
+   "rank_l5": 4,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "FEZF2",
+   "channel_a_papers": [
+    "38092908"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "Several transcription factor-encoding genes are expressed selectively in mouse retinal subclasses, including  NRL  and  NR2E3  in rods,  THRB  and  LHX4  in cones,  MEIS2  in GABAergic amacrine cells,  TCF4  in glycinergic amacrine cells,  FEZF2  and  LHX3  in OFF bipolar cells, and  ISL1  and  ST18",
+     "distance": 65
+    }
+   ],
+   "rank_l5": 5,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "GNAT1",
+   "channel_a_papers": [
+    "34420069"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "34420069",
+     "pmcid": "PMC8558279",
+     "doi": "10.1007/s00018-021-03917-4",
+     "title": "A look into retinal organoids: methods, analytical techniques, and applications.",
+     "clause": "Table 2 A wide range of antibodies is available for IHC of retinal organoids Antibody (antigen) Usage Host Supplier Catalog number Dilution References ABCA4 IRD-causative gene OS protein Mouse Rockland Immunochemicals 200301D05 1/100 [ 11 ] Acetylated tubulin Cilia, inner segment, stages 2,3 Mouse S",
+     "distance": 61
+    }
+   ],
+   "rank_l5": 6,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "GNB3",
+   "channel_a_papers": [
+    "33665228"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "33665228",
+     "pmcid": "PMC7895692",
+     "doi": "10.1016/j.omtm.2021.01.011",
+     "title": "A universal protocol for isolating retinal ON bipolar cells across species via fluorescence-activated cell sorting.",
+     "clause": "Among those genes, several of the Goα + /Pcp2 +high  subpopulation were known markers of ON bipolar cells (cyan highlight;  Figure 4 A), while only  GNB3  was found in the Goα + /Pcp2 +high  and Goα + /Pcp2 +low  subpopulations (cyan highlight;  Figure 4 B).",
+     "distance": 60
+    }
+   ],
+   "rank_l5": 7,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "GRIA4",
+   "channel_a_papers": [
+    "39759766"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "39759766",
+     "pmcid": "PMC11696152",
+     "doi": "10.3389/fcell.2024.1512988",
+     "title": "Retinal glia in myopia: current understanding and future directions.",
+     "clause": "GRIA4  is expressed in the cone ON bipolar cells and is responsible for the common refractive error.",
+     "distance": 32
+    }
+   ],
+   "rank_l5": 8,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "GRIK1",
+   "channel_a_papers": [
+    "38092908"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "b , Feature plots showing expression within the integrated space of the rod bipolar cell marker  PRKCA , the ON bipolar cell marker  ISL1 , and the OFF bipolar cell marker  GRIK1 .",
+     "distance": 64
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "GRM6",
+   "channel_a_papers": [
+    "38994775"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": true,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": false,
+   "L4_not_pan_family": true,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "38994775",
+     "pmcid": "PMC11266796",
+     "doi": "10.1242/dev.202435",
+     "title": "Evolutionary conservation of VSX2 super-enhancer modules in retinal development.",
+     "clause": "For example,  GRM6  and  ISL1  are expressed in RB and in several subtypes of ON cone bipolar neurons in the murine retina ( Shekhar et al., 2016 ).",
+     "distance": 64
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "ISL1",
+   "channel_a_papers": [
+    "38092908",
+    "38994775"
+   ],
+   "channel_a_n": 2,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 2,
+   "l1_strict_papers_ge2": true,
+   "already_in_frozen_panel": true,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": false,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "GAD1 , a marker for GABAergic amacrine cells, is also expressed by some horizontal cells, and  ISL1 , a marker for ON bipolar cells, is also expressed by some RGCs, horizontal cells, and amacrine cells.",
+     "distance": 20
+    },
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "Several transcription factor-encoding genes are expressed selectively in mouse retinal subclasses, including  NRL  and  NR2E3  in rods,  THRB  and  LHX4  in cones,  MEIS2  in GABAergic amacrine cells,  TCF4  in glycinergic amacrine cells,  FEZF2  and  LHX3  in OFF bipolar cells, and  ISL1  and  ST18",
+     "distance": 20
+    },
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "b , Feature plots showing expression within the integrated space of the rod bipolar cell marker  PRKCA , the ON bipolar cell marker  ISL1 , and the OFF bipolar cell marker  GRIK1 .",
+     "distance": 24
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "LHX3",
+   "channel_a_papers": [
+    "38092908"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "Several transcription factor-encoding genes are expressed selectively in mouse retinal subclasses, including  NRL  and  NR2E3  in rods,  THRB  and  LHX4  in cones,  MEIS2  in GABAergic amacrine cells,  TCF4  in glycinergic amacrine cells,  FEZF2  and  LHX3  in OFF bipolar cells, and  ISL1  and  ST18",
+     "distance": 53
+    }
+   ],
+   "rank_l5": 9,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "NRG1",
+   "channel_a_papers": [
+    "41593663"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "41593663",
+     "pmcid": "PMC12918004",
+     "doi": "10.1186/s12964-026-02692-8",
+     "title": "Microglial phagocytosis of bipolar cells triggers inner retinal degeneration in  Rs1 -KO mice",
+     "clause": "In contrast, PKCα (green), a marker for ON bipolar cells, does not co-localize with NRG1 (red) in either WT or  Rs1 −/y  retinas (lower panels).",
+     "distance": 44
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "PCP2",
+   "channel_a_papers": [
+    "39823300"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "39823300",
+     "pmcid": "PMC11759899",
+     "doi": "10.1073/pnas.2417228122",
+     "title": "Stimulating the regenerative capacity of the human retina with proneural transcription factors in 3D cultures.",
+     "clause": "PCP2 is a well-known marker of ON bipolar cell in the mouse retina ( 25 ,  26 ).",
+     "distance": 31
+    }
+   ],
+   "rank_l5": 10,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "PRKCA",
+   "channel_a_papers": [
+    "38092908"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "b , Feature plots showing expression within the integrated space of the rod bipolar cell marker  PRKCA , the ON bipolar cell marker  ISL1 , and the OFF bipolar cell marker  GRIK1 .",
+     "distance": 12
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "ST18",
+   "channel_a_papers": [
+    "38092908"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": true,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": false,
+   "L4_not_pan_family": true,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "Several transcription factor-encoding genes are expressed selectively in mouse retinal subclasses, including  NRL  and  NR2E3  in rods,  THRB  and  LHX4  in cones,  MEIS2  in GABAergic amacrine cells,  TCF4  in glycinergic amacrine cells,  FEZF2  and  LHX3  in OFF bipolar cells, and  ISL1  and  ST18",
+     "distance": 9
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "TOMM20",
+   "channel_a_papers": [
+    "34420069"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "34420069",
+     "pmcid": "PMC8558279",
+     "doi": "10.1007/s00018-021-03917-4",
+     "title": "A look into retinal organoids: methods, analytical techniques, and applications.",
+     "clause": "Table 2 A wide range of antibodies is available for IHC of retinal organoids Antibody (antigen) Usage Host Supplier Catalog number Dilution References ABCA4 IRD-causative gene OS protein Mouse Rockland Immunochemicals 200301D05 1/100 [ 11 ] Acetylated tubulin Cilia, inner segment, stages 2,3 Mouse S",
+     "distance": 59
+    }
+   ],
+   "rank_l5": 11,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "TRPM1",
+   "channel_a_papers": [
+    "32960171",
+    "34420069"
+   ],
+   "channel_a_n": 2,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 2,
+   "l1_strict_papers_ge2": true,
+   "already_in_frozen_panel": true,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": false,
+   "L4_not_pan_family": true,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "32960171",
+     "pmcid": "PMC7529457",
+     "doi": "10.7554/elife.59422",
+     "title": "Homeostatic plasticity in the retina is associated with maintenance of night vision during retinal degenerative disease.",
+     "clause": "Furthermore, analyses at both age points show an expected downregulation of photoreceptor-enriched genes due to progressive loss of rods but increases in several postsynaptic transcripts that encode crucial proteins for ON bipolar cell depolarization, such as mGluR6 and TRPM1 ( Figure 3—figure suppl",
+     "distance": 51
+    },
+    {
+     "paper_id": "34420069",
+     "pmcid": "PMC8558279",
+     "doi": "10.1007/s00018-021-03917-4",
+     "title": "A look into retinal organoids: methods, analytical techniques, and applications.",
+     "clause": "Table 2 A wide range of antibodies is available for IHC of retinal organoids Antibody (antigen) Usage Host Supplier Catalog number Dilution References ABCA4 IRD-causative gene OS protein Mouse Rockland Immunochemicals 200301D05 1/100 [ 11 ] Acetylated tubulin Cilia, inner segment, stages 2,3 Mouse S",
+     "distance": 6
+    },
+    {
+     "paper_id": "34420069",
+     "pmcid": "PMC8558279",
+     "doi": "10.1007/s00018-021-03917-4",
+     "title": "A look into retinal organoids: methods, analytical techniques, and applications.",
+     "clause": "TRPM1 | ON bipolar cells | Rabbit | Atlas Antibodies | HPA014779 | 1/200 | [ 11 ]",
+     "distance": 8
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "TUBB3",
+   "channel_a_papers": [
+    "34420069"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "34420069",
+     "pmcid": "PMC8558279",
+     "doi": "10.1007/s00018-021-03917-4",
+     "title": "A look into retinal organoids: methods, analytical techniques, and applications.",
+     "clause": "Table 2 A wide range of antibodies is available for IHC of retinal organoids Antibody (antigen) Usage Host Supplier Catalog number Dilution References ABCA4 IRD-causative gene OS protein Mouse Rockland Immunochemicals 200301D05 1/100 [ 11 ] Acetylated tubulin Cilia, inner segment, stages 2,3 Mouse S",
+     "distance": 64
+    }
+   ],
+   "rank_l5": 12,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "VSX2",
+   "channel_a_papers": [
+    "33400844"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "33400844",
+     "pmcid": "PMC8438615",
+     "doi": "10.1002/stem.3325",
+     "title": "NRL −/−  gene edited human embryonic stem cells generate rod‐deficient retinal organoids enriched in S‐cone‐like photoreceptors",
+     "clause": "Costaining with ON bipolar cell marker PKCα, confirmed the presence of VSX2+ PKCα+ double positive cells in both WT and  NRL \n −/−  OVs (Figure  3B,B ′).",
+     "distance": 55
+    }
+   ],
+   "rank_l5": 13,
+   "kept_l5": false
+  },
+  {
+   "subtype": "ON cone bipolar cell (ON BC)",
+   "gene": "YY1",
+   "channel_a_papers": [
+    "42490430"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "42490430",
+     "pmcid": "PMC13394472",
+     "doi": "10.1126/sciadv.adv9162",
+     "title": "Single-cell analysis of the epigenome and 3D chromatin architecture in the human retina",
+     "clause": "Notable cell-type–specific motifs included  ZNF143 | STAF  in All amacrine cells;  Sp1  in astrocytes;  CTCF  in cones;  Tgif2  in GABA amacrine cells;  Usf2  in Gly amacrine cells;  ELF5  in Müller glia; Ronin in OFF cone bipolar cells;  YY1  in ON cone bipolar cells;  RORgt  in RGC;  Elk4  in Rod ",
+     "distance": 8
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "diffuse bipolar 2 (DB2)",
+   "gene": "CA8",
+   "channel_a_papers": [
+    "37794584"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "37794584",
+     "pmcid": "PMC10591057",
+     "doi": "10.1016/j.xcrm.2023.101223",
+     "title": "End binding-3 inhibitor activates regenerative program in age-related macular degeneration",
+     "clause": "Clusters associated with bipolar cells were further characterized into rod bipolar cells using carbonic anhydrase 8 ( CA8,  cluster 9) as a specific marker, DB2 bipolar cells were distinguished using germ cell-specific gene 1 protein ( GSG1,  cluster 15), DB3a bipolar cells were characterized based ",
+     "distance": 39
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "diffuse bipolar 2 (DB2)",
+   "gene": "CACNA1G",
+   "channel_a_papers": [
+    "33188005"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "33188005",
+     "pmcid": "PMC7920536",
+     "doi": "10.1523/eneuro.0432-20.2020",
+     "title": "Glycinergic Inhibition Targets Specific Off Cone Bipolar Cells in Primate Retina.",
+     "clause": "These molecular differences are further supported by transcriptomic data showing higher levels of expression of CACNA1G (Cav3.1) and KCNJ2 (Kir2.1) in DB2 compared with DB1 cells ( Fig.",
+     "distance": 39
+    }
+   ],
+   "rank_l5": 1,
+   "kept_l5": true
+  },
+  {
+   "subtype": "diffuse bipolar 2 (DB2)",
+   "gene": "GSG1",
+   "channel_a_papers": [
+    "37794584"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "37794584",
+     "pmcid": "PMC10591057",
+     "doi": "10.1016/j.xcrm.2023.101223",
+     "title": "End binding-3 inhibitor activates regenerative program in age-related macular degeneration",
+     "clause": "Clusters associated with bipolar cells were further characterized into rod bipolar cells using carbonic anhydrase 8 ( CA8,  cluster 9) as a specific marker, DB2 bipolar cells were distinguished using germ cell-specific gene 1 protein ( GSG1,  cluster 15), DB3a bipolar cells were characterized based ",
+     "distance": 79
+    }
+   ],
+   "rank_l5": 2,
+   "kept_l5": true
+  },
+  {
+   "subtype": "diffuse bipolar 2 (DB2)",
+   "gene": "KCNJ2",
+   "channel_a_papers": [
+    "33188005"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "33188005",
+     "pmcid": "PMC7920536",
+     "doi": "10.1523/eneuro.0432-20.2020",
+     "title": "Glycinergic Inhibition Targets Specific Off Cone Bipolar Cells in Primate Retina.",
+     "clause": "These molecular differences are further supported by transcriptomic data showing higher levels of expression of CACNA1G (Cav3.1) and KCNJ2 (Kir2.1) in DB2 compared with DB1 cells ( Fig.",
+     "distance": 18
+    }
+   ],
+   "rank_l5": 3,
+   "kept_l5": false
+  },
+  {
+   "subtype": "diffuse bipolar 2 (DB2)",
+   "gene": "RND3",
+   "channel_a_papers": [
+    "32555229"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "32555229",
+     "pmcid": "PMC7299956",
+     "doi": "10.1038/s41598-020-66092-9",
+     "title": "Cell Atlas of The Human Fovea and Peripheral Retina.",
+     "clause": "Examples include  EPB41L2  and  VTN  expressed by foveal, but not peripheral cones;  TTR  expressed at higher levels by foveal than peripheral bipolar type DB3b and DB4;  TULP1  expressed by peripheral but not foveal bipolar type FMB and DB2; and  RND3  expressed by peripheral but not foveal ON para",
+     "distance": 10
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "diffuse bipolar 2 (DB2)",
+   "gene": "TULP1",
+   "channel_a_papers": [
+    "32555229"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 4,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "32555229",
+     "pmcid": "PMC7299956",
+     "doi": "10.1038/s41598-020-66092-9",
+     "title": "Cell Atlas of The Human Fovea and Peripheral Retina.",
+     "clause": "Examples include  EPB41L2  and  VTN  expressed by foveal, but not peripheral cones;  TTR  expressed at higher levels by foveal than peripheral bipolar type DB3b and DB4;  TULP1  expressed by peripheral but not foveal bipolar type FMB and DB2; and  RND3  expressed by peripheral but not foveal ON para",
+     "distance": 67
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "diffuse bipolar 3a (DB3a)",
+   "gene": "CALB1",
+   "channel_a_papers": [
+    "37794584"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "37794584",
+     "pmcid": "PMC10591057",
+     "doi": "10.1016/j.xcrm.2023.101223",
+     "title": "End binding-3 inhibitor activates regenerative program in age-related macular degeneration",
+     "clause": "Clusters associated with bipolar cells were further characterized into rod bipolar cells using carbonic anhydrase 8 ( CA8,  cluster 9) as a specific marker, DB2 bipolar cells were distinguished using germ cell-specific gene 1 protein ( GSG1,  cluster 15), DB3a bipolar cells were characterized based ",
+     "distance": 61
+    }
+   ],
+   "rank_l5": 1,
+   "kept_l5": true
+  },
+  {
+   "subtype": "diffuse bipolar 3a (DB3a)",
+   "gene": "GABRA1",
+   "channel_a_papers": [
+    "33188005"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "33188005",
+     "pmcid": "PMC7920536",
+     "doi": "10.1523/eneuro.0432-20.2020",
+     "title": "Glycinergic Inhibition Targets Specific Off Cone Bipolar Cells in Primate Retina.",
+     "clause": "Indeed, DB3a cells express high levels of GABRA1 (GABA A1 ), but lower levels of GLRA1 (GlyRα1) than DB1 and FMB cells ( Fig.",
+     "distance": 34
+    }
+   ],
+   "rank_l5": 2,
+   "kept_l5": true
+  },
+  {
+   "subtype": "diffuse bipolar 3a (DB3a)",
+   "gene": "GLRA1",
+   "channel_a_papers": [
+    "33188005"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "33188005",
+     "pmcid": "PMC7920536",
+     "doi": "10.1523/eneuro.0432-20.2020",
+     "title": "Glycinergic Inhibition Targets Specific Off Cone Bipolar Cells in Primate Retina.",
+     "clause": "Indeed, DB3a cells express high levels of GABRA1 (GABA A1 ), but lower levels of GLRA1 (GlyRα1) than DB1 and FMB cells ( Fig.",
+     "distance": 73
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "diffuse bipolar 3a (DB3a)",
+   "gene": "GSG1",
+   "channel_a_papers": [
+    "37794584"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "37794584",
+     "pmcid": "PMC10591057",
+     "doi": "10.1016/j.xcrm.2023.101223",
+     "title": "End binding-3 inhibitor activates regenerative program in age-related macular degeneration",
+     "clause": "Clusters associated with bipolar cells were further characterized into rod bipolar cells using carbonic anhydrase 8 ( CA8,  cluster 9) as a specific marker, DB2 bipolar cells were distinguished using germ cell-specific gene 1 protein ( GSG1,  cluster 15), DB3a bipolar cells were characterized based ",
+     "distance": 20
+    }
+   ],
+   "rank_l5": 3,
+   "kept_l5": false
+  },
+  {
+   "subtype": "diffuse bipolar 3b (DB3b)",
+   "gene": "GLRA1",
+   "channel_a_papers": [
+    "33188005"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "33188005",
+     "pmcid": "PMC7920536",
+     "doi": "10.1523/eneuro.0432-20.2020",
+     "title": "Glycinergic Inhibition Targets Specific Off Cone Bipolar Cells in Primate Retina.",
+     "clause": "We found that DB2 and DB3b cells do not receive glycinergic input or express significant levels of GLRA1 raising the possibility that the Off-GCs downstream of these cells receive less scotopic input.",
+     "distance": 77
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "diffuse bipolar 3b (DB3b)",
+   "gene": "MEIS2",
+   "channel_a_papers": [
+    "37388908"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "37388908",
+     "pmcid": "PMC10300490",
+     "doi": "10.1016/j.xgen.2023.100298",
+     "title": "A multi-omics atlas of the human retina at single-cell resolution.",
+     "clause": "We were also able to identify marker genes of DB3b ( MEIS2 ) and DB5 ( QPCT ) for human and monkey BCs.",
+     "distance": 7
+    }
+   ],
+   "rank_l5": 1,
+   "kept_l5": true
+  },
+  {
+   "subtype": "diffuse bipolar 3b (DB3b)",
+   "gene": "QPCT",
+   "channel_a_papers": [
+    "37388908"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "37388908",
+     "pmcid": "PMC10300490",
+     "doi": "10.1016/j.xgen.2023.100298",
+     "title": "A multi-omics atlas of the human retina at single-cell resolution.",
+     "clause": "We were also able to identify marker genes of DB3b ( MEIS2 ) and DB5 ( QPCT ) for human and monkey BCs.",
+     "distance": 25
+    }
+   ],
+   "rank_l5": 2,
+   "kept_l5": true
+  },
+  {
+   "subtype": "diffuse bipolar 3b (DB3b)",
+   "gene": "TTR",
+   "channel_a_papers": [
+    "32555229"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "32555229",
+     "pmcid": "PMC7299956",
+     "doi": "10.1038/s41598-020-66092-9",
+     "title": "Cell Atlas of The Human Fovea and Peripheral Retina.",
+     "clause": "Examples include  EPB41L2  and  VTN  expressed by foveal, but not peripheral cones;  TTR  expressed at higher levels by foveal than peripheral bipolar type DB3b and DB4;  TULP1  expressed by peripheral but not foveal bipolar type FMB and DB2; and  RND3  expressed by peripheral but not foveal ON para",
+     "distance": 71
+    }
+   ],
+   "rank_l5": 3,
+   "kept_l5": false
+  },
+  {
+   "subtype": "diffuse bipolar 3b (DB3b)",
+   "gene": "TULP1",
+   "channel_a_papers": [
+    "32555229"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 4,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "32555229",
+     "pmcid": "PMC7299956",
+     "doi": "10.1038/s41598-020-66092-9",
+     "title": "Cell Atlas of The Human Fovea and Peripheral Retina.",
+     "clause": "Examples include  EPB41L2  and  VTN  expressed by foveal, but not peripheral cones;  TTR  expressed at higher levels by foveal than peripheral bipolar type DB3b and DB4;  TULP1  expressed by peripheral but not foveal bipolar type FMB and DB2; and  RND3  expressed by peripheral but not foveal ON para",
+     "distance": 15
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "diffuse bipolar 4 (DB4)",
+   "gene": "CALB1",
+   "channel_a_papers": [
+    "37794584"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "37794584",
+     "pmcid": "PMC10591057",
+     "doi": "10.1016/j.xcrm.2023.101223",
+     "title": "End binding-3 inhibitor activates regenerative program in age-related macular degeneration",
+     "clause": "Clusters associated with bipolar cells were further characterized into rod bipolar cells using carbonic anhydrase 8 ( CA8,  cluster 9) as a specific marker, DB2 bipolar cells were distinguished using germ cell-specific gene 1 protein ( GSG1,  cluster 15), DB3a bipolar cells were characterized based ",
+     "distance": 21
+    }
+   ],
+   "rank_l5": 1,
+   "kept_l5": true
+  },
+  {
+   "subtype": "diffuse bipolar 4 (DB4)",
+   "gene": "TTR",
+   "channel_a_papers": [
+    "32555229"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "32555229",
+     "pmcid": "PMC7299956",
+     "doi": "10.1038/s41598-020-66092-9",
+     "title": "Cell Atlas of The Human Fovea and Peripheral Retina.",
+     "clause": "Examples include  EPB41L2  and  VTN  expressed by foveal, but not peripheral cones;  TTR  expressed at higher levels by foveal than peripheral bipolar type DB3b and DB4;  TULP1  expressed by peripheral but not foveal bipolar type FMB and DB2; and  RND3  expressed by peripheral but not foveal ON para",
+     "distance": 80
+    }
+   ],
+   "rank_l5": 2,
+   "kept_l5": true
+  },
+  {
+   "subtype": "diffuse bipolar 4 (DB4)",
+   "gene": "TULP1",
+   "channel_a_papers": [
+    "32555229"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 4,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "32555229",
+     "pmcid": "PMC7299956",
+     "doi": "10.1038/s41598-020-66092-9",
+     "title": "Cell Atlas of The Human Fovea and Peripheral Retina.",
+     "clause": "Examples include  EPB41L2  and  VTN  expressed by foveal, but not peripheral cones;  TTR  expressed at higher levels by foveal than peripheral bipolar type DB3b and DB4;  TULP1  expressed by peripheral but not foveal bipolar type FMB and DB2; and  RND3  expressed by peripheral but not foveal ON para",
+     "distance": 6
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "diffuse bipolar 6 (DB6)",
+   "gene": "LMO4",
+   "channel_a_papers": [
+    "37794584"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "37794584",
+     "pmcid": "PMC10591057",
+     "doi": "10.1016/j.xcrm.2023.101223",
+     "title": "End binding-3 inhibitor activates regenerative program in age-related macular degeneration",
+     "clause": "Clusters associated with bipolar cells were further characterized into rod bipolar cells using carbonic anhydrase 8 ( CA8,  cluster 9) as a specific marker, DB2 bipolar cells were distinguished using germ cell-specific gene 1 protein ( GSG1,  cluster 15), DB3a bipolar cells were characterized based ",
+     "distance": 24
+    }
+   ],
+   "rank_l5": 1,
+   "kept_l5": true
+  },
+  {
+   "subtype": "flat midget bipolar cell (FMB, OFF midget bipolar)",
+   "gene": "GABRA1",
+   "channel_a_papers": [
+    "33188005"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "33188005",
+     "pmcid": "PMC7920536",
+     "doi": "10.1523/eneuro.0432-20.2020",
+     "title": "Glycinergic Inhibition Targets Specific Off Cone Bipolar Cells in Primate Retina.",
+     "clause": "Indeed, DB3a cells express high levels of GABRA1 (GABA A1 ), but lower levels of GLRA1 (GlyRα1) than DB1 and FMB cells ( Fig.",
+     "distance": 67
+    }
+   ],
+   "rank_l5": 1,
+   "kept_l5": true
+  },
+  {
+   "subtype": "flat midget bipolar cell (FMB, OFF midget bipolar)",
+   "gene": "GLRA1",
+   "channel_a_papers": [
+    "33188005"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "33188005",
+     "pmcid": "PMC7920536",
+     "doi": "10.1523/eneuro.0432-20.2020",
+     "title": "Glycinergic Inhibition Targets Specific Off Cone Bipolar Cells in Primate Retina.",
+     "clause": "Additional evidence for selective expression of GLRA1 in DB1 and FMB cells is shown in  Figure 8 A  below.",
+     "distance": 17
+    },
+    {
+     "paper_id": "33188005",
+     "pmcid": "PMC7920536",
+     "doi": "10.1523/eneuro.0432-20.2020",
+     "title": "Glycinergic Inhibition Targets Specific Off Cone Bipolar Cells in Primate Retina.",
+     "clause": "Single-cell RNA sequencing data provide additional support for higher expression of α1 GlyR transcript (GLRA1) in DB1 and FMB cells compared with other Off-CBC types ( Fig.",
+     "distance": 18
+    },
+    {
+     "paper_id": "33188005",
+     "pmcid": "PMC7920536",
+     "doi": "10.1523/eneuro.0432-20.2020",
+     "title": "Glycinergic Inhibition Targets Specific Off Cone Bipolar Cells in Primate Retina.",
+     "clause": "The kinetics of the glycinergic events are consistent with involvement of the α1 GlyR subunit, a result supported by high levels of GLRA1 transcript in DB1 and FMB cells.",
+     "distance": 28
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "flat midget bipolar cell (FMB, OFF midget bipolar)",
+   "gene": "RND3",
+   "channel_a_papers": [
+    "32555229"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "32555229",
+     "pmcid": "PMC7299956",
+     "doi": "10.1038/s41598-020-66092-9",
+     "title": "Cell Atlas of The Human Fovea and Peripheral Retina.",
+     "clause": "Examples include  EPB41L2  and  VTN  expressed by foveal, but not peripheral cones;  TTR  expressed at higher levels by foveal than peripheral bipolar type DB3b and DB4;  TULP1  expressed by peripheral but not foveal bipolar type FMB and DB2; and  RND3  expressed by peripheral but not foveal ON para",
+     "distance": 18
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "flat midget bipolar cell (FMB, OFF midget bipolar)",
+   "gene": "TULP1",
+   "channel_a_papers": [
+    "32555229"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 4,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "32555229",
+     "pmcid": "PMC7299956",
+     "doi": "10.1038/s41598-020-66092-9",
+     "title": "Cell Atlas of The Human Fovea and Peripheral Retina.",
+     "clause": "Examples include  EPB41L2  and  VTN  expressed by foveal, but not peripheral cones;  TTR  expressed at higher levels by foveal than peripheral bipolar type DB3b and DB4;  TULP1  expressed by peripheral but not foveal bipolar type FMB and DB2; and  RND3  expressed by peripheral but not foveal ON para",
+     "distance": 59
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "parasol retinal ganglion cell",
+   "gene": "AFAP1",
+   "channel_a_papers": [
+    "32555229",
+    "38994994"
+   ],
+   "channel_a_n": 2,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 2,
+   "l1_strict_papers_ge2": true,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "32555229",
+     "pmcid": "PMC7299956",
+     "doi": "10.1038/s41598-020-66092-9",
+     "title": "Cell Atlas of The Human Fovea and Peripheral Retina.",
+     "clause": "Genes with type-specific RGC expression patterns included the glaucoma-associated genes  SIX6 , which was enriched in midget ganglion cells;  CAV2  and  POU6F2  enriched in ON parasol RGCs and  AFAP1 , enriched in peripheral ON parasol RGCs.",
+     "distance": 18
+    },
+    {
+     "paper_id": "38994994",
+     "pmcid": "PMC11240604",
+     "doi": "10.3390/cells13131142",
+     "title": "Identification and Characterization of ATOH7-Regulated Target Genes and Pathways in Human Neuroretinal Development",
+     "clause": "Afap1  is enriched in peripheral ON-parasol RGCs, and a variant within  AFAP1  has been associated with primary open-angle glaucoma in human patients [ 100 ].",
+     "distance": 36
+    }
+   ],
+   "rank_l5": 1,
+   "kept_l5": true
+  },
+  {
+   "subtype": "parasol retinal ganglion cell",
+   "gene": "CA8",
+   "channel_a_papers": [
+    "41777802"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": true,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": false,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "41777802",
+     "pmcid": "PMC12950791",
+     "doi": "10.3389/fcell.2025.1750142",
+     "title": "In Vitro  retinal ganglion cell differentiation and enrichment under the scope: do subtypes matter?",
+     "clause": "CHRNA2  was found to be expressed in ON Parasol cells ( Peng et al., 2019 ;  Yan et al., 2020 ) and CA8 in OFF Parasol cells ( Peng et al., 2019 ).",
+     "distance": 11
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "parasol retinal ganglion cell",
+   "gene": "CAV2",
+   "channel_a_papers": [
+    "32555229"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "32555229",
+     "pmcid": "PMC7299956",
+     "doi": "10.1038/s41598-020-66092-9",
+     "title": "Cell Atlas of The Human Fovea and Peripheral Retina.",
+     "clause": "Genes with type-specific RGC expression patterns included the glaucoma-associated genes  SIX6 , which was enriched in midget ganglion cells;  CAV2  and  POU6F2  enriched in ON parasol RGCs and  AFAP1 , enriched in peripheral ON parasol RGCs.",
+     "distance": 34
+    }
+   ],
+   "rank_l5": 3,
+   "kept_l5": false
+  },
+  {
+   "subtype": "parasol retinal ganglion cell",
+   "gene": "CHRNA2",
+   "channel_a_papers": [
+    "41777802"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": true,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": false,
+   "L4_not_pan_family": true,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "41777802",
+     "pmcid": "PMC12950791",
+     "doi": "10.3389/fcell.2025.1750142",
+     "title": "In Vitro  retinal ganglion cell differentiation and enrichment under the scope: do subtypes matter?",
+     "clause": "CHRNA2  was found to be expressed in ON Parasol cells ( Peng et al., 2019 ;  Yan et al., 2020 ) and CA8 in OFF Parasol cells ( Peng et al., 2019 ).",
+     "distance": 40
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "parasol retinal ganglion cell",
+   "gene": "CP",
+   "channel_a_papers": [
+    "36223749"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "36223749",
+     "pmcid": "PMC10518213",
+     "doi": "10.1016/j.celrep.2022.111484",
+     "title": "Calcium-permeable AMPA receptors on AII amacrine cells mediate sustained signaling in the On-pathway of the primate retina.",
+     "clause": "These results indicate that CP-AMPARs contribute to sustained spiking in On-type midget and parasol GCs, but not to the corresponding Off-type GCs.",
+     "distance": 64
+    },
+    {
+     "paper_id": "36223749",
+     "pmcid": "PMC10518213",
+     "doi": "10.1016/j.celrep.2022.111484",
+     "title": "Calcium-permeable AMPA receptors on AII amacrine cells mediate sustained signaling in the On-pathway of the primate retina.",
+     "clause": "In the presence of the NMDAR antagonist, the CP-AMPAR blocker completely suppressed sustained spiking in On-midget and On-parasol GCs, but only partially suppressed the transient response component.",
+     "distance": 77
+    },
+    {
+     "paper_id": "36223749",
+     "pmcid": "PMC10518213",
+     "doi": "10.1016/j.celrep.2022.111484",
+     "title": "Calcium-permeable AMPA receptors on AII amacrine cells mediate sustained signaling in the On-pathway of the primate retina.",
+     "clause": "Similarly, the CP-AMPAR antagonist reduced sustained spiking in On-parasol GCs, hyperpolarized the cells by −7.4 ± 3.9 mV (p = 5.7 × 10 −3 , n = 6), and decreased the standard deviation of the baseline voltage signal from 2.0 ± 0.68 mV to 0.42 ± 0.19 mV (p = 1.9 × 10 −3 , n = 6,  Figure 4A ).",
+     "distance": 52
+    }
+   ],
+   "rank_l5": 4,
+   "kept_l5": false
+  },
+  {
+   "subtype": "parasol retinal ganglion cell",
+   "gene": "GC",
+   "channel_a_papers": [
+    "32206680"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "32206680",
+     "pmcid": "PMC7070771",
+     "doi": "10.1117/1.nph.7.1.015013",
+     "title": "Suite of methods for assessing inner retinal temporal dynamics across spatial and temporal scales in the living human eye",
+     "clause": "Soma size is of particular interest as it is a distinguishing feature of GC subtype (e.g., midget GC somas are smaller than parasol GC somas) 10 , 20 , 21  at retinal eccentricities outside the fovea—such as the 12-deg eccentricity in this study.",
+     "distance": 51
+    },
+    {
+     "paper_id": "32206680",
+     "pmcid": "PMC7070771",
+     "doi": "10.1117/1.nph.7.1.015013",
+     "title": "Suite of methods for assessing inner retinal temporal dynamics across spatial and temporal scales in the living human eye",
+     "clause": "Soma size is of particular interest as it is a distinguishing feature of GC subtype (e.g., midget GC somas are smaller than parasol GC somas) 10 , 20 , 21  at retinal eccentricities outside the fovea—such as the 12-deg eccentricity in this study.",
+     "distance": 26
+    },
+    {
+     "paper_id": "32206680",
+     "pmcid": "PMC7070771",
+     "doi": "10.1117/1.nph.7.1.015013",
+     "title": "Suite of methods for assessing inner retinal temporal dynamics across spatial and temporal scales in the living human eye",
+     "clause": "Soma size is of particular interest as it is a distinguishing feature of GC subtype (e.g., midget GC somas are smaller than parasol GC somas) 10 , 20 , 21  at retinal eccentricities outside the fovea—such as the 12-deg eccentricity in this study.",
+     "distance": 8
+    }
+   ],
+   "rank_l5": 5,
+   "kept_l5": false
+  },
+  {
+   "subtype": "parasol retinal ganglion cell",
+   "gene": "GRIA2",
+   "channel_a_papers": [
+    "36223749"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "36223749",
+     "pmcid": "PMC10518213",
+     "doi": "10.1016/j.celrep.2022.111484",
+     "title": "Calcium-permeable AMPA receptors on AII amacrine cells mediate sustained signaling in the On-pathway of the primate retina.",
+     "clause": "There was no significant difference in  GRIA2  expression between Off-parasol and On-parasol RGCs (mean log (TPM+1), 0.90 ± 0.49 versus 0.85 ± 0.53, p = 0.24, log fold difference 1.06).",
+     "distance": 30
+    },
+    {
+     "paper_id": "36223749",
+     "pmcid": "PMC10518213",
+     "doi": "10.1016/j.celrep.2022.111484",
+     "title": "Calcium-permeable AMPA receptors on AII amacrine cells mediate sustained signaling in the On-pathway of the primate retina.",
+     "clause": "Moreover, transcript levels of  GRIA2  were markedly lower in AII-ACs compared with midget and parasol RGCs, and there was little difference in expression between On-GCs and their Off-type counterparts.",
+     "distance": 63
+    }
+   ],
+   "rank_l5": 6,
+   "kept_l5": false
+  },
+  {
+   "subtype": "parasol retinal ganglion cell",
+   "gene": "MAP3K1",
+   "channel_a_papers": [
+    "41777802"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "41777802",
+     "pmcid": "PMC12950791",
+     "doi": "10.3389/fcell.2025.1750142",
+     "title": "In Vitro  retinal ganglion cell differentiation and enrichment under the scope: do subtypes matter?",
+     "clause": "The same group found that  MAP3K1  is expressed by both midget and parasol cells and  SIX6  by midget cells ( Peng et al., 2019 ).",
+     "distance": 40
+    }
+   ],
+   "rank_l5": 7,
+   "kept_l5": false
+  },
+  {
+   "subtype": "parasol retinal ganglion cell",
+   "gene": "POU6F2",
+   "channel_a_papers": [
+    "32555229",
+    "38698014"
+   ],
+   "channel_a_n": 2,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 2,
+   "l1_strict_papers_ge2": true,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "38698014",
+     "pmcid": "PMC11066091",
+     "doi": "10.1038/s41598-024-60444-5",
+     "title": "POU6F2, a risk factor for glaucoma, myopia and dyslexia, labels specific populations of retinal ganglion cells.",
+     "clause": "In the rhesus macaque retina, POU6F2 labels the large parasol ganglion cells that form the magnocellular (M) pathway.",
+     "distance": 24
+    },
+    {
+     "paper_id": "38698014",
+     "pmcid": "PMC11066091",
+     "doi": "10.1038/s41598-024-60444-5",
+     "title": "POU6F2, a risk factor for glaucoma, myopia and dyslexia, labels specific populations of retinal ganglion cells.",
+     "clause": "To confirm that these cells are indeed parasol RGCs, sections and flat mounts were stained for POU6F2 and counterstained for carbonic anhydrase 8 (CAVIII), a marker of OFF parasol RGCs 24 .",
+     "distance": 56
+    },
+    {
+     "paper_id": "38698014",
+     "pmcid": "PMC11066091",
+     "doi": "10.1038/s41598-024-60444-5",
+     "title": "POU6F2, a risk factor for glaucoma, myopia and dyslexia, labels specific populations of retinal ganglion cells.",
+     "clause": "We assume that the remaining large POU6F2-positive cells are ON-parasol RGCs.",
+     "distance": 29
+    }
+   ],
+   "rank_l5": 2,
+   "kept_l5": true
+  },
+  {
+   "subtype": "parasol retinal ganglion cell",
+   "gene": "RBPMS",
+   "channel_a_papers": [
+    "38698014"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "38698014",
+     "pmcid": "PMC11066091",
+     "doi": "10.1038/s41598-024-60444-5",
+     "title": "POU6F2, a risk factor for glaucoma, myopia and dyslexia, labels specific populations of retinal ganglion cells.",
+     "clause": "The macaque retinas were stained with a mouse monoclonal antibody directed against carbonic anhydrase VIII (NeoBiotechnologies Union City CA) to identify OFF parasol RGCs, SMI32 to label all parasol RGCs and RBPMS to define total RGCs.",
+     "distance": 17
+    }
+   ],
+   "rank_l5": 8,
+   "kept_l5": false
+  },
+  {
+   "subtype": "parasol retinal ganglion cell",
+   "gene": "RBPMS2",
+   "channel_a_papers": [
+    "41777802"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": true,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": false,
+   "L4_not_pan_family": true,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "41777802",
+     "pmcid": "PMC12950791",
+     "doi": "10.3389/fcell.2025.1750142",
+     "title": "In Vitro  retinal ganglion cell differentiation and enrichment under the scope: do subtypes matter?",
+     "clause": "SPP1  and  RBPMS2  are expressed by both Parasol cell types and  GUCY1A3  by both Midget cell types ( Peng et al., 2019 ).",
+     "distance": 30
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "parasol retinal ganglion cell",
+   "gene": "RND3",
+   "channel_a_papers": [
+    "32555229"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "32555229",
+     "pmcid": "PMC7299956",
+     "doi": "10.1038/s41598-020-66092-9",
+     "title": "Cell Atlas of The Human Fovea and Peripheral Retina.",
+     "clause": "Examples include  EPB41L2  and  VTN  expressed by foveal, but not peripheral cones;  TTR  expressed at higher levels by foveal than peripheral bipolar type DB3b and DB4;  TULP1  expressed by peripheral but not foveal bipolar type FMB and DB2; and  RND3  expressed by peripheral but not foveal ON para",
+     "distance": 48
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "parasol retinal ganglion cell",
+   "gene": "SIX6",
+   "channel_a_papers": [
+    "41777802"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "41777802",
+     "pmcid": "PMC12950791",
+     "doi": "10.3389/fcell.2025.1750142",
+     "title": "In Vitro  retinal ganglion cell differentiation and enrichment under the scope: do subtypes matter?",
+     "clause": "The same group found that  MAP3K1  is expressed by both midget and parasol cells and  SIX6  by midget cells ( Peng et al., 2019 ).",
+     "distance": 19
+    }
+   ],
+   "rank_l5": 9,
+   "kept_l5": false
+  },
+  {
+   "subtype": "parasol retinal ganglion cell",
+   "gene": "SPP1",
+   "channel_a_papers": [
+    "41777802"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": true,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": false,
+   "L4_not_pan_family": true,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "41777802",
+     "pmcid": "PMC12950791",
+     "doi": "10.3389/fcell.2025.1750142",
+     "title": "In Vitro  retinal ganglion cell differentiation and enrichment under the scope: do subtypes matter?",
+     "clause": "SPP1  and  RBPMS2  are expressed by both Parasol cell types and  GUCY1A3  by both Midget cell types ( Peng et al., 2019 ).",
+     "distance": 41
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "ARR3",
+   "channel_a_papers": [
+    "36277849"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "36277849",
+     "pmcid": "PMC9584034",
+     "doi": "10.1016/j.xgen.2022.100164",
+     "title": "Single-cell multiome of the human retina and deep learning nominate causal variants in complex eye diseases.",
+     "clause": "Consistent with published scRNA-seq studies of the human retina, 16 ,  17 ,  18 ,  19  we observed cell-type-specific expression of many genes, including  PDE6A  in rod photoreceptors,  GRIK1  in OFF-cone bipolar cells,  RLBP1  in Müller glia,  GRM6  in ON-cone and rod bipolar cells,  PRKCA  in rod ",
+     "distance": 20
+    }
+   ],
+   "rank_l5": 4,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "CA8",
+   "channel_a_papers": [
+    "37794584"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "37794584",
+     "pmcid": "PMC10591057",
+     "doi": "10.1016/j.xcrm.2023.101223",
+     "title": "End binding-3 inhibitor activates regenerative program in age-related macular degeneration",
+     "clause": "Clusters associated with bipolar cells were further characterized into rod bipolar cells using carbonic anhydrase 8 ( CA8,  cluster 9) as a specific marker, DB2 bipolar cells were distinguished using germ cell-specific gene 1 protein ( GSG1,  cluster 15), DB3a bipolar cells were characterized based ",
+     "distance": 47
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "CD68",
+   "channel_a_papers": [
+    "39228105"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "39228105",
+     "pmcid": "PMC13058866",
+     "doi": "10.1002/glia.24613",
+     "title": "Decreased sialylation elicits complement‐related microglia response and bipolar cell loss in the mouse retina",
+     "clause": "The increased expression of CD68, loss of rod bipolar cells, and increased gene transcription of complement factor  C4 , were all prevented after crossing Gne+/− mice with complement factor  C3 ‐deficient animals.",
+     "distance": 14
+    }
+   ],
+   "rank_l5": 5,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "CP",
+   "channel_a_papers": [
+    "36223749"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "36223749",
+     "pmcid": "PMC10518213",
+     "doi": "10.1016/j.celrep.2022.111484",
+     "title": "Calcium-permeable AMPA receptors on AII amacrine cells mediate sustained signaling in the On-pathway of the primate retina.",
+     "clause": "Overall, our data demonstrate that under some background light levels, CP-AMPARs at the rod bipolar to AII-AC synapse drive sustained signaling in On-type GCs and thus contribute to the more linear contrast signaling of the primate On- versus Off-pathway.",
+     "distance": 17
+    },
+    {
+     "paper_id": "36223749",
+     "pmcid": "PMC10518213",
+     "doi": "10.1016/j.celrep.2022.111484",
+     "title": "Calcium-permeable AMPA receptors on AII amacrine cells mediate sustained signaling in the On-pathway of the primate retina.",
+     "clause": "Thus, the observed effects of CP-AMPAR blockade on the On-RGCs can be largely attributed to the selective expression of CP-AMPARs at the rod bipolar to AII-AC synapse.",
+     "distance": 17
+    }
+   ],
+   "rank_l5": 6,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "CTBP2",
+   "channel_a_papers": [
+    "32655363"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "32655363",
+     "pmcid": "PMC7325604",
+     "doi": "10.3389/fnins.2020.00656",
+     "title": "Non-photoreceptor Expression of  Tulp1  May Contribute to Extensive Retinal Degeneration in  Tulp1-/-  Mice",
+     "clause": "Common alterations in all IRD retinas were observed including alterations in rod and cone photoreceptors, ectopic sprouting of horizontal cell neurites, distorted Muller glia labeling in the ONL, decreased immunoreactivity of CTBP2 in the OPL, compromised rod bipolar cell dendritic and axon terminal",
+     "distance": 30
+    }
+   ],
+   "rank_l5": 7,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "ERG",
+   "channel_a_papers": [
+    "32960171"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "32960171",
+     "pmcid": "PMC7529457",
+     "doi": "10.7554/elife.59422",
+     "title": "Homeostatic plasticity in the retina is associated with maintenance of night vision during retinal degenerative disease.",
+     "clause": "However, the waveform of the ERG response appeared qualitatively normal, and the first positive deflection of the in vivo ERG signal (b-wave) ( Figure 1I ) as well as the rod bipolar cell responses derived using ex vivo ERG ( Figures 4F  and  5B ,  Table 1 ) were comparable between 1-month-old P23H ",
+     "distance": 49
+    },
+    {
+     "paper_id": "32960171",
+     "pmcid": "PMC7529457",
+     "doi": "10.7554/elife.59422",
+     "title": "Homeostatic plasticity in the retina is associated with maintenance of night vision during retinal degenerative disease.",
+     "clause": "However, the waveform of the ERG response appeared qualitatively normal, and the first positive deflection of the in vivo ERG signal (b-wave) ( Figure 1I ) as well as the rod bipolar cell responses derived using ex vivo ERG ( Figures 4F  and  5B ,  Table 1 ) were comparable between 1-month-old P23H ",
+     "distance": 49
+    }
+   ],
+   "rank_l5": 8,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "GAD1",
+   "channel_a_papers": [
+    "36277849"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "36277849",
+     "pmcid": "PMC9584034",
+     "doi": "10.1016/j.xgen.2022.100164",
+     "title": "Single-cell multiome of the human retina and deep learning nominate causal variants in complex eye diseases.",
+     "clause": "Consistent with published scRNA-seq studies of the human retina, 16 ,  17 ,  18 ,  19  we observed cell-type-specific expression of many genes, including  PDE6A  in rod photoreceptors,  GRIK1  in OFF-cone bipolar cells,  RLBP1  in Müller glia,  GRM6  in ON-cone and rod bipolar cells,  PRKCA  in rod ",
+     "distance": 51
+    }
+   ],
+   "rank_l5": 9,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "GRIK1",
+   "channel_a_papers": [
+    "32555229",
+    "36277849"
+   ],
+   "channel_a_n": 2,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 2,
+   "l1_strict_papers_ge2": true,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "32555229",
+     "pmcid": "PMC7299956",
+     "doi": "10.1038/s41598-020-66092-9",
+     "title": "Cell Atlas of The Human Fovea and Peripheral Retina.",
+     "clause": "In macaques, ON and OFF bipolars are characterized by expression of genes that encode the metabotropic glutamate receptor 6,  GRM6 , and the kainate-type glutamate receptor,  GRIK1 , respectively; rod bipolars are distinguished from cone bipolars by expression of  PKCα , encoding protein kinase C α ",
+     "distance": 22
+    },
+    {
+     "paper_id": "36277849",
+     "pmcid": "PMC9584034",
+     "doi": "10.1016/j.xgen.2022.100164",
+     "title": "Single-cell multiome of the human retina and deep learning nominate causal variants in complex eye diseases.",
+     "clause": "Consistent with published scRNA-seq studies of the human retina, 16 ,  17 ,  18 ,  19  we observed cell-type-specific expression of many genes, including  PDE6A  in rod photoreceptors,  GRIK1  in OFF-cone bipolar cells,  RLBP1  in Müller glia,  GRM6  in ON-cone and rod bipolar cells,  PRKCA  in rod ",
+     "distance": 80
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "GRM6",
+   "channel_a_papers": [
+    "32555229",
+    "36277849"
+   ],
+   "channel_a_n": 2,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 2,
+   "l1_strict_papers_ge2": true,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "32555229",
+     "pmcid": "PMC7299956",
+     "doi": "10.1038/s41598-020-66092-9",
+     "title": "Cell Atlas of The Human Fovea and Peripheral Retina.",
+     "clause": "In macaques, ON and OFF bipolars are characterized by expression of genes that encode the metabotropic glutamate receptor 6,  GRM6 , and the kainate-type glutamate receptor,  GRIK1 , respectively; rod bipolars are distinguished from cone bipolars by expression of  PKCα , encoding protein kinase C α ",
+     "distance": 71
+    },
+    {
+     "paper_id": "36277849",
+     "pmcid": "PMC9584034",
+     "doi": "10.1016/j.xgen.2022.100164",
+     "title": "Single-cell multiome of the human retina and deep learning nominate causal variants in complex eye diseases.",
+     "clause": "Consistent with published scRNA-seq studies of the human retina, 16 ,  17 ,  18 ,  19  we observed cell-type-specific expression of many genes, including  PDE6A  in rod photoreceptors,  GRIK1  in OFF-cone bipolar cells,  RLBP1  in Müller glia,  GRM6  in ON-cone and rod bipolar cells,  PRKCA  in rod ",
+     "distance": 21
+    }
+   ],
+   "rank_l5": 1,
+   "kept_l5": true
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "ISL1",
+   "channel_a_papers": [
+    "38092908"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "b , Feature plots showing expression within the integrated space of the rod bipolar cell marker  PRKCA , the ON bipolar cell marker  ISL1 , and the OFF bipolar cell marker  GRIK1 .",
+     "distance": 61
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "NR2E3",
+   "channel_a_papers": [
+    "40758714"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "40758714",
+     "pmcid": "PMC12407554",
+     "doi": "10.1371/journal.pbio.3003332",
+     "title": "Active DNA demethylation upstream of rod-photoreceptor fate determination is required for retinal development.",
+     "clause": "Previous studies of NRL and NR2E3 knockouts have shown that rod bipolar cell specification proceeds normally when rod fate is inhibited [ 107 , 108 ].",
+     "distance": 32
+    }
+   ],
+   "rank_l5": 10,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "NRG1",
+   "channel_a_papers": [
+    "41593663"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "41593663",
+     "pmcid": "PMC12918004",
+     "doi": "10.1186/s12964-026-02692-8",
+     "title": "Microglial phagocytosis of bipolar cells triggers inner retinal degeneration in  Rs1 -KO mice",
+     "clause": "Scale bar = 10 μm To validate these molecular findings, we performed immunofluorescence staining on retinal sections from wild-type and  Rs1 −/y  mice, using markers for rod bipolar cells (PKCα) and OFF bipolar cells (PKARIIβ), alongside NRG1.",
+     "distance": 68
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "NRL",
+   "channel_a_papers": [
+    "29402929",
+    "40758714"
+   ],
+   "channel_a_n": 2,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 2,
+   "l1_strict_papers_ge2": true,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "40758714",
+     "pmcid": "PMC12407554",
+     "doi": "10.1371/journal.pbio.3003332",
+     "title": "Active DNA demethylation upstream of rod-photoreceptor fate determination is required for retinal development.",
+     "clause": "Previous studies of NRL and NR2E3 knockouts have shown that rod bipolar cell specification proceeds normally when rod fate is inhibited [ 107 , 108 ].",
+     "distance": 40
+    },
+    {
+     "paper_id": "29402929",
+     "pmcid": "PMC5799252",
+     "doi": "10.1038/s41598-018-20813-3",
+     "title": "Generation of a rod-specific NRL reporter line in human pluripotent stem cells",
+     "clause": "( A – C ) At d185, PKCα (a rod bipolar cell marker) was detected beneath the layer of  NRL -eGFP+ rods, consistent with the development of an inner nuclear layer.",
+     "distance": 60
+    }
+   ],
+   "rank_l5": 2,
+   "kept_l5": true
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "PRKCA",
+   "channel_a_papers": [
+    "32946783",
+    "36277849",
+    "38092908",
+    "41791386",
+    "41922167"
+   ],
+   "channel_a_n": 5,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 5,
+   "l1_strict_papers_ge2": true,
+   "already_in_frozen_panel": true,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": false,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "38092908",
+     "pmcid": "PMC10719112",
+     "doi": "10.1038/s41586-023-06638-9",
+     "title": "Evolution of neuronal cell classes and types in the vertebrate retina.",
+     "clause": "b , Feature plots showing expression within the integrated space of the rod bipolar cell marker  PRKCA , the ON bipolar cell marker  ISL1 , and the OFF bipolar cell marker  GRIK1 .",
+     "distance": 25
+    },
+    {
+     "paper_id": "41791386",
+     "pmcid": "PMC13083797",
+     "doi": "10.1016/j.stemcr.2026.102831",
+     "title": "Genomic characterization of sub-populations in human pluripotent stem cell-derived retinal progenitor cells driving retinal lamination.",
+     "clause": "CALB1- and CALB2-positive inner retinal cells, including HC-, AC-, and RGC-like populations, as well as PRKCA-positive rod bipolar cells were observed in the graft as previously reported ( Figures 5 H and 5I) ( Tu et al., 2019 ;  Assawachananont et al., 2014 ).",
+     "distance": 15
+    },
+    {
+     "paper_id": "41922167",
+     "pmcid": "PMC13095380",
+     "doi": "10.1523/eneuro.0483-25.2026",
+     "title": "Inducible CreER T2  Mouse Lines for Characterization of Retinal Bipolar Cell Subtypes",
+     "clause": "However, subsets of  Lhx4 -expressing bipolar cells in P7-intected retinas also coimmunolabeled with the rod bipolar cell marker PRKCA ( Haverkamp and Wässle, 2000 ;  Fig.",
+     "distance": 24
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "PROX1",
+   "channel_a_papers": [
+    "39121095"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "39121095",
+     "pmcid": "PMC11315325",
+     "doi": "10.1371/journal.pone.0308743",
+     "title": "Rapid and efficient generation of mature retinal organoids derived from human pluripotent stem cells via optimized pharmacological modulatio",
+     "clause": "These patterns were accompanied by the increased expression of other retinal cell markers, namely, CRALBP in Müller glial cells, PKCα in rod bipolar cells, PROX1 in horizontal cells, calretinin in amacrine cells, and recoverin, RXRγ, and NRL in photoreceptors.",
+     "distance": 19
+    }
+   ],
+   "rank_l5": 11,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "RHO",
+   "channel_a_papers": [
+    "32211407"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "32211407",
+     "pmcid": "PMC7068133",
+     "doi": "10.3389/fcell.2020.00128",
+     "title": "Patient-Specific Retinal Organoids Recapitulate Disease Features of Late-Onset Retinitis Pigmentosa.",
+     "clause": "As RO development progressed, however, the expression of a rod photoreceptor marker (RHO) and rod bipolar cell marker (PKCα) showed obvious differences in patient ROs compared with control ROs at D180 ( Figure 3C ).",
+     "distance": 9
+    }
+   ],
+   "rank_l5": 12,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "RLBP1",
+   "channel_a_papers": [
+    "36277849"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "36277849",
+     "pmcid": "PMC9584034",
+     "doi": "10.1016/j.xgen.2022.100164",
+     "title": "Single-cell multiome of the human retina and deep learning nominate causal variants in complex eye diseases.",
+     "clause": "Consistent with published scRNA-seq studies of the human retina, 16 ,  17 ,  18 ,  19  we observed cell-type-specific expression of many genes, including  PDE6A  in rod photoreceptors,  GRIK1  in OFF-cone bipolar cells,  RLBP1  in Müller glia,  GRM6  in ON-cone and rod bipolar cells,  PRKCA  in rod ",
+     "distance": 45
+    }
+   ],
+   "rank_l5": 13,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "RPE",
+   "channel_a_papers": [
+    "40343286",
+    "41399432"
+   ],
+   "channel_a_n": 2,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 2,
+   "l1_strict_papers_ge2": true,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "40343286",
+     "pmcid": "PMC12059717",
+     "doi": "10.1016/j.isci.2025.112464",
+     "title": "Single-cell RNA sequencing highlights a significant retinal Müller glial population in dry age-related macular degeneration.",
+     "clause": "We utilized the canonical markers and revealed 12 distinct clusters from the mouse retina, including RPE, rod cells, cone cells, cone bipolar cells (CBCs), rod bipolar cells (RBCs), amacrine/horizontal cells (AC/HCs), Schwann/retinal ganglion cells (SC/RGCs), pericytes, fibroblasts, endothelial cell",
+     "distance": 55
+    },
+    {
+     "paper_id": "41399432",
+     "pmcid": "PMC12702363",
+     "doi": "10.1016/j.omtm.2025.101625",
+     "title": "Safety and efficacy of AAV8-aflibercept in treating choroidal neovascularization via single-cell RNA sequencing",
+     "clause": "Based on established retinal cell markers ( Table S1 ), 12 retinal cell types were identified: RPE cells, rod cells, cone cells, rod bipolar cells, cone bipolar cells, retinal ganglion cells, amacrine cells, microglial cells, pericytes, endothelial cells, and erythroid cells ( Figures 3 A and 3B).",
+     "distance": 34
+    }
+   ],
+   "rank_l5": 3,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "SOX9",
+   "channel_a_papers": [
+    "37886604"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "37886604",
+     "pmcid": "PMC10597801",
+     "doi": "10.1016/j.omtm.2023.101128",
+     "title": "Characterization and AAV-mediated  CRB  gene augmentation in human-derived  CRB1 KO  and  CRB1 KO CRB2 +/−  retinal organoids",
+     "clause": "25 , 26 , 27  Staining for ISLET1/2-positive ON-cone and rod bipolar cells and SOX9-positive Müller glial cells showed abnormal localization of these cell types in the INL of  CRB1 KO  and  CRB1 KO CRB2 +/−  retinal organoids.",
+     "distance": 22
+    }
+   ],
+   "rank_l5": 14,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "VSX2",
+   "channel_a_papers": [
+    "41632798"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "41632798",
+     "pmcid": "PMC12890223",
+     "doi": "10.1371/journal.pgen.1012027",
+     "title": "Rare heterozygous missense variants in  VSX2  are associated with retinal detachment",
+     "clause": "In contrast,  VSX2  expression was highest in rod bipolar cells, which process and amplify signals from highly light-sensitive rod photoreceptors thus permitting low-light vision [ 60 ].",
+     "distance": 32
+    }
+   ],
+   "rank_l5": 15,
+   "kept_l5": false
+  },
+  {
+   "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+   "gene": "YY1",
+   "channel_a_papers": [
+    "42490430"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 3,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": false,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "42490430",
+     "pmcid": "PMC13394472",
+     "doi": "10.1126/sciadv.adv9162",
+     "title": "Single-cell analysis of the epigenome and 3D chromatin architecture in the human retina",
+     "clause": "Notable cell-type–specific motifs included  ZNF143 | STAF  in All amacrine cells;  Sp1  in astrocytes;  CTCF  in cones;  Tgif2  in GABA amacrine cells;  Usf2  in Gly amacrine cells;  ELF5  in Müller glia; Ronin in OFF cone bipolar cells;  YY1  in ON cone bipolar cells;  RORgt  in RGC;  Elk4  in Rod ",
+     "distance": 57
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "starburst (cholinergic) amacrine cell",
+   "gene": "CA1",
+   "channel_a_papers": [
+    "42600003"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "42600003",
+     "pmcid": "PMC13475493",
+     "doi": "10.1126/sciadv.aeg3223",
+     "title": "The extreme diversity of retinal amacrine cells has deep evolutionary roots",
+     "clause": "Inspection of marker gene patterns (table S3) enabled us to relate several of these clusters to well-studied AC types from rodents and primates, such as starburst (SACs), A17, catecholaminergic (CA1/2), A2,  S atb2 + E bf3 + G lyT1 +  (SEG), and VGLUT3 +  (VG3) ACs ( 6 ,  14 ,  17 ).",
+     "distance": 42
+    }
+   ],
+   "rank_l5": 1,
+   "kept_l5": true
+  },
+  {
+   "subtype": "starburst (cholinergic) amacrine cell",
+   "gene": "CHAT",
+   "channel_a_papers": [
+    "34420069",
+    "35095414",
+    "36816119",
+    "39574940"
+   ],
+   "channel_a_n": 4,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 4,
+   "l1_strict_papers_ge2": true,
+   "already_in_frozen_panel": true,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 1,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": false,
+   "L4_not_pan_family": true,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "39574940",
+     "pmcid": "PMC11579486",
+     "doi": "10.34133/research.0536",
+     "title": "Cellular Characterization and Interspecies Evolution of the Tree Shrew Retina across Postnatal Lifespan.",
+     "clause": "Among the  GABA -ergic clusters, we identified subtypes such as starburst AC ( SAC s,  CHAT + ), as well as subsets defined by markers such as  GABA + ,  FAT4 + ,  TAC1 + ,  RELN + , and  PDGFRA + .",
+     "distance": 23
+    },
+    {
+     "paper_id": "34420069",
+     "pmcid": "PMC8558279",
+     "doi": "10.1007/s00018-021-03917-4",
+     "title": "A look into retinal organoids: methods, analytical techniques, and applications.",
+     "clause": "Table 2 A wide range of antibodies is available for IHC of retinal organoids Antibody (antigen) Usage Host Supplier Catalog number Dilution References ABCA4 IRD-causative gene OS protein Mouse Rockland Immunochemicals 200301D05 1/100 [ 11 ] Acetylated tubulin Cilia, inner segment, stages 2,3 Mouse S",
+     "distance": 5
+    },
+    {
+     "paper_id": "35095414",
+     "pmcid": "PMC8793361",
+     "doi": "10.3389/fnmol.2021.773356",
+     "title": "Temporal and Isoform-Specific Expression of  CTBP2  Is Evolutionarily Conserved Between the Developing Chick and Human Retina",
+     "clause": "For example,  CTBP2  was not detected in GABAergic starburst ACs co-expressing  CHAT  and  GBX2  ( Supplementary Figures S4F–I ).",
+     "distance": 29
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "starburst (cholinergic) amacrine cell",
+   "gene": "CRH",
+   "channel_a_papers": [
+    "37582959"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "37582959",
+     "pmcid": "PMC10427710",
+     "doi": "10.1038/s41467-023-40674-3",
+     "title": "Spatial organization of the mouse retina at single cell resolution by MERFISH.",
+     "clause": "Several displaced ACs such as starburst, CRH+, VIP+, nGnG, and nNOS+ types have been identified based on their morphologies and marker labeling 39 – 44 ; however, the complete list of AC subtypes that are preferentially displaced in GCL remain unknown due to their complexity.",
+     "distance": 11
+    }
+   ],
+   "rank_l5": 2,
+   "kept_l5": true
+  },
+  {
+   "subtype": "starburst (cholinergic) amacrine cell",
+   "gene": "CTBP2",
+   "channel_a_papers": [
+    "35095414"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "35095414",
+     "pmcid": "PMC8793361",
+     "doi": "10.3389/fnmol.2021.773356",
+     "title": "Temporal and Isoform-Specific Expression of  CTBP2  Is Evolutionarily Conserved Between the Developing Chick and Human Retina",
+     "clause": "For example,  CTBP2  was not detected in GABAergic starburst ACs co-expressing  CHAT  and  GBX2  ( Supplementary Figures S4F–I ).",
+     "distance": 37
+    }
+   ],
+   "rank_l5": 3,
+   "kept_l5": false
+  },
+  {
+   "subtype": "starburst (cholinergic) amacrine cell",
+   "gene": "FEZF1",
+   "channel_a_papers": [
+    "33393903"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "33393903",
+     "pmcid": "PMC7837701",
+     "doi": "10.7554/elife.63907",
+     "title": "A cell atlas of the chick retina based on single-cell transcriptomics.",
+     "clause": "We assign AC7 and AC25 to ON and OFF SACs, respectively, because AC7 expressed  FEZF1 , a transient marker of developing ON starburst marker in mouse, whereas AC25 expressed  TENM3  and  ZFHX3 , transient OFF markers SAC markers in mouse ( Peng et al., 2020 ;  Figure 6—figure supplement 2A ).",
+     "distance": 44
+    }
+   ],
+   "rank_l5": 4,
+   "kept_l5": false
+  },
+  {
+   "subtype": "starburst (cholinergic) amacrine cell",
+   "gene": "FRMD7",
+   "channel_a_papers": [
+    "35021080"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "35021080",
+     "pmcid": "PMC8805704",
+     "doi": "10.1016/j.celrep.2021.110225",
+     "title": "The influence of spontaneous and visual activity on the development of direction selectivity maps in mouse retina.",
+     "clause": "We tested several possible mechanisms that could explain the loss of horizontal direction selectivity in β2-nAChR-KO mice (wave propagation bias, FRMD7 expression, starburst amacrine cell morphology), but all were found to be intact when compared with WT mice.",
+     "distance": 18
+    },
+    {
+     "paper_id": "35021080",
+     "pmcid": "PMC8805704",
+     "doi": "10.1016/j.celrep.2021.110225",
+     "title": "The influence of spontaneous and visual activity on the development of direction selectivity maps in mouse retina.",
+     "clause": "We tested several possible mechanisms that could explain the loss of horizontal direction selectivity in β2-nAChR-KO mice (wave propagation bias, FRMD7 expression, starburst amacrine cell morphology), but all were found to be intact when compared with WT mice.",
+     "distance": 18
+    }
+   ],
+   "rank_l5": 5,
+   "kept_l5": false
+  },
+  {
+   "subtype": "starburst (cholinergic) amacrine cell",
+   "gene": "GBX2",
+   "channel_a_papers": [
+    "35095414"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "35095414",
+     "pmcid": "PMC8793361",
+     "doi": "10.3389/fnmol.2021.773356",
+     "title": "Temporal and Isoform-Specific Expression of  CTBP2  Is Evolutionarily Conserved Between the Developing Chick and Human Retina",
+     "clause": "For example,  CTBP2  was not detected in GABAergic starburst ACs co-expressing  CHAT  and  GBX2  ( Supplementary Figures S4F–I ).",
+     "distance": 40
+    }
+   ],
+   "rank_l5": 6,
+   "kept_l5": false
+  },
+  {
+   "subtype": "starburst (cholinergic) amacrine cell",
+   "gene": "GJD2",
+   "channel_a_papers": [
+    "32946783"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "32946783",
+     "pmcid": "PMC7505495",
+     "doi": "10.1016/j.cell.2020.08.013",
+     "title": "Cell Types of the Human Retina and Its Organoids at Single-Cell Resolution.",
+     "clause": "In the adult retina, we detected all known neuronal cell classes as well as many subclasses and distinct cell types, such as rods, L/M (red/green) cones and S (blue) cones, two types of horizontal cells, ten types of bipolar cells in three major groups (rod bipolar, ON cone bipolar, and OFF cone bip",
+     "distance": 34
+    }
+   ],
+   "rank_l5": 7,
+   "kept_l5": false
+  },
+  {
+   "subtype": "starburst (cholinergic) amacrine cell",
+   "gene": "RBPMS",
+   "channel_a_papers": [
+    "40903948"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 2,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "40903948",
+     "pmcid": "PMC13452666",
+     "doi": "10.4103/nrr.nrr-d-24-01144",
+     "title": "Overexpressing neurogenic differentiation factor 1 in Müller cells improves retinal function after optic nerve crush injury in adult mice",
+     "clause": "Double staining of retinal sections revealed that these cells were positive for NeuN but negative for choline acetyltransferase (a marker of cholinergic amacrine cells) and RBPMS (a marker of RGCs).",
+     "distance": 32
+    }
+   ],
+   "rank_l5": 8,
+   "kept_l5": false
+  },
+  {
+   "subtype": "starburst (cholinergic) amacrine cell",
+   "gene": "SLC18A3",
+   "channel_a_papers": [
+    "32946783"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": true,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": false,
+   "L4_not_pan_family": true,
+   "admitted": false,
+   "snippets": [
+    {
+     "paper_id": "32946783",
+     "pmcid": "PMC7505495",
+     "doi": "10.1016/j.cell.2020.08.013",
+     "title": "Cell Types of the Human Retina and Its Organoids at Single-Cell Resolution.",
+     "clause": "In the adult retina, we detected all known neuronal cell classes as well as many subclasses and distinct cell types, such as rods, L/M (red/green) cones and S (blue) cones, two types of horizontal cells, ten types of bipolar cells in three major groups (rod bipolar, ON cone bipolar, and OFF cone bip",
+     "distance": 27
+    }
+   ],
+   "rank_l5": null,
+   "kept_l5": false
+  },
+  {
+   "subtype": "starburst (cholinergic) amacrine cell",
+   "gene": "TENM3",
+   "channel_a_papers": [
+    "33393903"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "33393903",
+     "pmcid": "PMC7837701",
+     "doi": "10.7554/elife.63907",
+     "title": "A cell atlas of the chick retina based on single-cell transcriptomics.",
+     "clause": "We assign AC7 and AC25 to ON and OFF SACs, respectively, because AC7 expressed  FEZF1 , a transient marker of developing ON starburst marker in mouse, whereas AC25 expressed  TENM3  and  ZFHX3 , transient OFF markers SAC markers in mouse ( Peng et al., 2020 ;  Figure 6—figure supplement 2A ).",
+     "distance": 51
+    }
+   ],
+   "rank_l5": 9,
+   "kept_l5": false
+  },
+  {
+   "subtype": "starburst (cholinergic) amacrine cell",
+   "gene": "VIP",
+   "channel_a_papers": [
+    "37582959"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "37582959",
+     "pmcid": "PMC10427710",
+     "doi": "10.1038/s41467-023-40674-3",
+     "title": "Spatial organization of the mouse retina at single cell resolution by MERFISH.",
+     "clause": "Several displaced ACs such as starburst, CRH+, VIP+, nGnG, and nNOS+ types have been identified based on their morphologies and marker labeling 39 – 44 ; however, the complete list of AC subtypes that are preferentially displaced in GCL remain unknown due to their complexity.",
+     "distance": 17
+    }
+   ],
+   "rank_l5": 10,
+   "kept_l5": false
+  },
+  {
+   "subtype": "starburst (cholinergic) amacrine cell",
+   "gene": "ZFHX3",
+   "channel_a_papers": [
+    "33393903"
+   ],
+   "channel_a_n": 1,
+   "channel_b_sources": [],
+   "channel_b_n": 0,
+   "channel_c_sources": [],
+   "channel_c_n": 0,
+   "papers_total": 1,
+   "l1_strict_papers_ge2": false,
+   "already_in_frozen_panel": false,
+   "subtypes_l1_passing": 1,
+   "subtypes_l1_strict_passing": 0,
+   "L1_lit": true,
+   "L2_assay_vocab": true,
+   "L3_not_duplicate": true,
+   "L4_not_pan_family": true,
+   "admitted": true,
+   "snippets": [
+    {
+     "paper_id": "33393903",
+     "pmcid": "PMC7837701",
+     "doi": "10.7554/elife.63907",
+     "title": "A cell atlas of the chick retina based on single-cell transcriptomics.",
+     "clause": "We assign AC7 and AC25 to ON and OFF SACs, respectively, because AC7 expressed  FEZF1 , a transient marker of developing ON starburst marker in mouse, whereas AC25 expressed  TENM3  and  ZFHX3 , transient OFF markers SAC markers in mouse ( Peng et al., 2020 ;  Figure 6—figure supplement 2A ).",
+     "distance": 63
+    }
+   ],
+   "rank_l5": 11,
+   "kept_l5": false
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+subtype	gene	volume	in_var_index	detected_frac	above_floor	verdict
+flat midget bipolar cell (FMB, OFF midget bipolar)	GABRA1	CX01_retina_snRNA	True	0.27272	True	measurable
+diffuse bipolar 2 (DB2)	CACNA1G	CX01_retina_snRNA	True	0.18755	True	measurable
+diffuse bipolar 2 (DB2)	GSG1	CX01_retina_snRNA	True	0.08808	True	measurable
+diffuse bipolar 3a (DB3a)	CALB1	CX01_retina_snRNA	True	0.11726	True	measurable
+diffuse bipolar 3a (DB3a)	GABRA1	CX01_retina_snRNA	True	0.27272	True	measurable
+diffuse bipolar 3b (DB3b)	MEIS2	CX01_retina_snRNA	True	0.29515	True	measurable
+diffuse bipolar 3b (DB3b)	QPCT	CX01_retina_snRNA	True	0.05292	True	measurable
+diffuse bipolar 4 (DB4)	CALB1	CX01_retina_snRNA	True	0.11726	True	measurable
+diffuse bipolar 4 (DB4)	TTR	CX01_retina_snRNA	True	0.13828	True	measurable
+diffuse bipolar 6 (DB6)	LMO4	CX01_retina_snRNA	True	0.25927	True	measurable
+H1 horizontal cell	CA10	CX01_retina_snRNA	True	0.54071	True	measurable
+H1 horizontal cell	FOXP2	CX01_retina_snRNA	True	0.09179	True	measurable
+ON cone bipolar cell (ON BC)	CA1	CX03_retina_multiome	True	0.02972	False	not_measurable_below_floor
+ON cone bipolar cell (ON BC)	CRX	CX03_retina_multiome	True	0.46893	True	measurable
+OFF cone bipolar cell (OFF BC)	ELF5	CX03_retina_multiome	True	6e-05	False	not_measurable_below_floor
+OFF cone bipolar cell (OFF BC)	ST18	CX03_retina_multiome	True	0.15246	True	measurable
+rod bipolar cell (RBC, ON rod bipolar)	GRM6	CX04_cowan_fovea	True	0.12181	True	measurable
+rod bipolar cell (RBC, ON rod bipolar)	NRL	CX04_cowan_fovea	True	0.33438	True	measurable
+OFF cone bipolar cell (OFF BC)	ELF5	CX04_cowan_organoid	True	0.00011	False	not_measurable_below_floor
+OFF cone bipolar cell (OFF BC)	ST18	CX04_cowan_organoid	True	0.03176	False	not_measurable_below_floor
+OFF cone bipolar cell (OFF BC)	ELF5	CX04_cowan_periphery	True	6e-05	False	not_measurable_below_floor
+OFF cone bipolar cell (OFF BC)	ST18	CX04_cowan_periphery	True	0.07836	True	measurable
+flat midget bipolar cell (FMB, OFF midget bipolar)	GABRA1	PRE_GSE268630	True	0.21893	True	measurable
+diffuse bipolar 2 (DB2)	CACNA1G	PRE_GSE268630	True	0.09181	True	measurable
+diffuse bipolar 2 (DB2)	GSG1	PRE_GSE268630	True	0.12715	True	measurable
+diffuse bipolar 3b (DB3b)	MEIS2	PRE_GSE268630	True	0.38057	True	measurable
+diffuse bipolar 3b (DB3b)	QPCT	PRE_GSE268630	True	0.03426	False	not_measurable_below_floor
+diffuse bipolar 4 (DB4)	CALB1	PRE_GSE268630	True	0.01845	False	not_measurable_below_floor
+diffuse bipolar 4 (DB4)	TTR	PRE_GSE268630	True	0.0209	False	not_measurable_below_floor
+diffuse bipolar 6 (DB6)	LMO4	PRE_GSE268630	True	0.31453	True	measurable
+H1 horizontal cell	CA10	PRE_GSE268630	True	0.47253	True	measurable
+H1 horizontal cell	FOXP2	PRE_GSE268630	True	0.28855	True	measurable
+starburst (cholinergic) amacrine cell	CA1	PRE_OA-D001	True	0.05189	True	measurable
+starburst (cholinergic) amacrine cell	CRH	PRE_OA-D001	True	0.00124	False	not_measurable_below_floor
+parasol retinal ganglion cell	AFAP1	PRE_OA-D001	True	0.07424	True	measurable
+parasol retinal ganglion cell	POU6F2	PRE_OA-D001	True	0.17097	True	measurable

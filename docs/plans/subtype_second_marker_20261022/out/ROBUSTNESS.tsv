@@ -1,0 +1,10 @@
+volume	subtype	flips_pass2_AD1	flips_pass5_final	verdict	rule_dependent_on	clearing_added_pass2	clearing_added_pass5
+CX01_retina_snRNA	diffuse bipolar 2 (DB2)	True	True	robust		CACNA1G,GSG1	CACNA1G,GSG1
+CX01_retina_snRNA	diffuse bipolar 3a (DB3a)	True	True	robust		CALB1	CALB1
+CX01_retina_snRNA	diffuse bipolar 3b (DB3b)	True	True	robust		MEIS2	MEIS2
+CX01_retina_snRNA	diffuse bipolar 4 (DB4)	True	True	robust		TTR	LMO4
+PRE_GSE268630	diffuse bipolar 2 (DB2)	True	True	robust		GSG1	GSG1
+PRE_GSE268630	diffuse bipolar 3b (DB3b)	True	True	robust		MEIS2	MEIS2
+PRE_GSE268630	diffuse bipolar 4 (DB4)	False	True	rule_dependent	final_pass5		LMO4
+PRE_GSE268630	diffuse bipolar 6 (DB6)	True	False	rule_dependent	AD1_pass2	LMO4	
+PRE_GSE268630	flat midget bipolar cell (FMB, OFF midget bipolar)	False	True	rule_dependent	final_pass5		GLRA1

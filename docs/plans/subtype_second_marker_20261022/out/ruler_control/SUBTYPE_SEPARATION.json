@@ -1,0 +1,1839 @@
+[
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "S-cone photoreceptor (S cone)",
+  "parent": "cone photoreceptor",
+  "n_cells": 3225,
+  "n_sibling_cells": 3225,
+  "siblings": [
+   "retinal cone cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "separated",
+  "reason": "markers clearing the gate: OPN1SW, CCDC136",
+  "marker_detail": [
+   {
+    "gene": "OPN1SW",
+    "auc": 0.977,
+    "q": 0.0
+   },
+   {
+    "gene": "CCDC136",
+    "auc": 0.998,
+    "q": 0.0
+   }
+  ]
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+  "parent": "rod bipolar cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 38406,
+  "siblings": [
+   "OFFx cell",
+   "ON-blue cone bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "giant bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "separated",
+  "reason": "markers clearing the gate: PRKCA, TRPM1, VSTM2B",
+  "marker_detail": [
+   {
+    "gene": "PRKCA",
+    "auc": 0.99,
+    "q": 0.0
+   },
+   {
+    "gene": "TRPM1",
+    "auc": 0.804,
+    "q": 0.0
+   },
+   {
+    "gene": "VSTM2B",
+    "auc": 0.733,
+    "q": 0.0
+   }
+  ]
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "invaginating midget bipolar cell (IMB, ON midget bipolar)",
+  "parent": "cone bipolar cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 38406,
+  "siblings": [
+   "OFFx cell",
+   "ON-blue cone bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "giant bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "0 marker(s) cleared the gate; GRM6 AUC=0.62; VSX2 AUC=0.46",
+  "marker_detail": [
+   {
+    "gene": "GRM6",
+    "auc": 0.622,
+    "q": 2.1204057713235778e-131
+   },
+   {
+    "gene": "VSX2",
+    "auc": 0.458,
+    "q": 2.4345932962616443e-17
+   }
+  ]
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "flat midget bipolar cell (FMB, OFF midget bipolar)",
+  "parent": "cone bipolar cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 38406,
+  "siblings": [
+   "OFFx cell",
+   "ON-blue cone bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "giant bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.81; VSX2 AUC=0.47",
+  "marker_detail": [
+   {
+    "gene": "GRIK1",
+    "auc": 0.805,
+    "q": 0.0
+   },
+   {
+    "gene": "VSX2",
+    "auc": 0.468,
+    "q": 2.7611676636355506e-10
+   }
+  ]
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "diffuse bipolar 1 (DB1)",
+  "parent": "cone bipolar cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 38406,
+  "siblings": [
+   "OFFx cell",
+   "ON-blue cone bipolar cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "giant bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "0 marker(s) cleared the gate; SCGN AUC=0.50; GRIK1 AUC=0.69",
+  "marker_detail": [
+   {
+    "gene": "SCGN",
+    "auc": 0.5,
+    "q": 0.6324874296699434
+   },
+   {
+    "gene": "GRIK1",
+    "auc": 0.692,
+    "q": 0.0
+   }
+  ]
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "diffuse bipolar 2 (DB2)",
+  "parent": "cone bipolar cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 38406,
+  "siblings": [
+   "OFFx cell",
+   "ON-blue cone bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "giant bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.90; VSX2 AUC=0.52",
+  "marker_detail": [
+   {
+    "gene": "GRIK1",
+    "auc": 0.9,
+    "q": 0.0
+   },
+   {
+    "gene": "VSX2",
+    "auc": 0.518,
+    "q": 0.00021646985122807414
+   }
+  ]
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "diffuse bipolar 3a (DB3a)",
+  "parent": "cone bipolar cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 38406,
+  "siblings": [
+   "OFFx cell",
+   "ON-blue cone bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "giant bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.76; VSX2 AUC=0.42",
+  "marker_detail": [
+   {
+    "gene": "GRIK1",
+    "auc": 0.761,
+    "q": 0.0
+   },
+   {
+    "gene": "VSX2",
+    "auc": 0.418,
+    "q": 1.2163145136440366e-60
+   }
+  ]
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "diffuse bipolar 3b (DB3b)",
+  "parent": "cone bipolar cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 38406,
+  "siblings": [
+   "OFFx cell",
+   "ON-blue cone bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "giant bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.89; VSX2 AUC=0.52",
+  "marker_detail": [
+   {
+    "gene": "GRIK1",
+    "auc": 0.894,
+    "q": 0.0
+   },
+   {
+    "gene": "VSX2",
+    "auc": 0.518,
+    "q": 0.000317158530884934
+   }
+  ]
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "diffuse bipolar 4 (DB4)",
+  "parent": "cone bipolar cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 38406,
+  "siblings": [
+   "OFFx cell",
+   "ON-blue cone bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "giant bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; GRM6 AUC=0.81; VSX2 AUC=0.40",
+  "marker_detail": [
+   {
+    "gene": "GRM6",
+    "auc": 0.81,
+    "q": 0.0
+   },
+   {
+    "gene": "VSX2",
+    "auc": 0.401,
+    "q": 1.4614782457691735e-87
+   }
+  ]
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "diffuse bipolar 6 (DB6)",
+  "parent": "cone bipolar cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 38406,
+  "siblings": [
+   "OFFx cell",
+   "ON-blue cone bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "flat midget bipolar cell",
+   "giant bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; SCGN AUC=0.50; GRM6 AUC=0.74",
+  "marker_detail": [
+   {
+    "gene": "SCGN",
+    "auc": 0.5,
+    "q": 0.3644769310921626
+   },
+   {
+    "gene": "GRM6",
+    "auc": 0.738,
+    "q": 0.0
+   }
+  ]
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "blue-cone bipolar cell (BB, S-cone ON bipolar)",
+  "parent": "cone bipolar cell",
+  "n_cells": 2931,
+  "n_sibling_cells": 38700,
+  "siblings": [
+   "OFFx cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "giant bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; GRM6 AUC=0.72; VSX2 AUC=0.58",
+  "marker_detail": [
+   {
+    "gene": "GRM6",
+    "auc": 0.725,
+    "q": 0.0
+   },
+   {
+    "gene": "VSX2",
+    "auc": 0.579,
+    "q": 2.3076356581273474e-51
+   }
+  ]
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "OFFx bipolar cell (primate outer-stratifying OFF bipolar)",
+  "parent": "cone bipolar cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 38406,
+  "siblings": [
+   "ON-blue cone bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "giant bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "insufficient_evidence",
+  "reason": "none of this subtype's defining markers is present in the file",
+  "marker_detail": []
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "giant bipolar cell (GB)",
+  "parent": "cone bipolar cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 38406,
+  "siblings": [
+   "OFFx cell",
+   "ON-blue cone bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; UTRN AUC=0.91",
+  "marker_detail": [
+   {
+    "gene": "UTRN",
+    "auc": 0.912,
+    "q": 0.0
+   }
+  ]
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "starburst (cholinergic) amacrine cell",
+  "parent": "amacrine cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 9675,
+  "siblings": [
+   "GABAergic amacrine cell",
+   "amacrine cell",
+   "glycinergic amacrine cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "separated",
+  "reason": "markers clearing the gate: CHAT, SLC5A7",
+  "marker_detail": [
+   {
+    "gene": "CHAT",
+    "auc": 0.837,
+    "q": 0.0
+   },
+   {
+    "gene": "SLC18A3",
+    "auc": 0.625,
+    "q": 0.0
+   },
+   {
+    "gene": "SLC5A7",
+    "auc": 0.978,
+    "q": 0.0
+   }
+  ]
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "H1 horizontal cell",
+  "parent": "horizontal cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 3225,
+  "siblings": [
+   "H2 horizontal cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; LHX1 AUC=0.76; SPP1 AUC=0.44",
+  "marker_detail": [
+   {
+    "gene": "LHX1",
+    "auc": 0.759,
+    "q": 0.0
+   },
+   {
+    "gene": "SPP1",
+    "auc": 0.439,
+    "q": 9.125898188539249e-21
+   }
+  ]
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "H2 horizontal cell",
+  "parent": "horizontal cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 3225,
+  "siblings": [
+   "H1 horizontal cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; ISL1 AUC=0.71; SPP1 AUC=0.56",
+  "marker_detail": [
+   {
+    "gene": "ISL1",
+    "auc": 0.715,
+    "q": 0.0
+   },
+   {
+    "gene": "SPP1",
+    "auc": 0.561,
+    "q": 9.125898188539249e-21
+   }
+  ]
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "OFF-center retinal ganglion cell (sublamina a)",
+  "parent": "retinal ganglion cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 9675,
+  "siblings": [
+   "OFF parasol ganglion cell",
+   "ON parasol ganglion cell",
+   "retinal ganglion cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "insufficient_evidence",
+  "reason": "none of this subtype's defining markers is present in the file",
+  "marker_detail": []
+ },
+ {
+  "volume": "CX01_retina_snRNA",
+  "subtype": "ON-center retinal ganglion cell (sublamina b)",
+  "parent": "retinal ganglion cell",
+  "n_cells": 3225,
+  "n_sibling_cells": 9675,
+  "siblings": [
+   "OFF midget ganglion cell",
+   "OFF parasol ganglion cell",
+   "retinal ganglion cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "insufficient_evidence",
+  "reason": "none of this subtype's defining markers is present in the file",
+  "marker_detail": []
+ },
+ {
+  "volume": "CX03_retina_multiome",
+  "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+  "parent": "rod bipolar cell",
+  "n_cells": 2324,
+  "n_sibling_cells": 6553,
+  "siblings": [
+   "OFF-bipolar cell",
+   "ON-bipolar cell"
+  ],
+  "observed_share_pct": 26.18,
+  "share_interpretable": true,
+  "share_note": "",
+  "expected_share_pct": null,
+  "result": "separated",
+  "reason": "markers clearing the gate: PRKCA, TRPM1",
+  "marker_detail": [
+   {
+    "gene": "PRKCA",
+    "auc": 0.981,
+    "q": 0.0
+   },
+   {
+    "gene": "TRPM1",
+    "auc": 0.843,
+    "q": 0.0
+   },
+   {
+    "gene": "VSTM2B",
+    "auc": 0.62,
+    "q": 1.0144109535415491e-234
+   }
+  ]
+ },
+ {
+  "volume": "CX03_retina_multiome",
+  "subtype": "ON cone bipolar cell (ON BC)",
+  "parent": "cone bipolar cell",
+  "n_cells": 2617,
+  "n_sibling_cells": 6260,
+  "siblings": [
+   "OFF-bipolar cell",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": 29.48,
+  "share_interpretable": true,
+  "share_note": "",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; GRM6 AUC=0.69; TRPM1 AUC=0.73; ISL1 AUC=0.53; ST18 AUC=0.57",
+  "marker_detail": [
+   {
+    "gene": "GRM6",
+    "auc": 0.692,
+    "q": 4.1174618663772995e-211
+   },
+   {
+    "gene": "TRPM1",
+    "auc": 0.727,
+    "q": 8.386868432183386e-268
+   },
+   {
+    "gene": "ISL1",
+    "auc": 0.528,
+    "q": 7.360413853704378e-07
+   },
+   {
+    "gene": "ST18",
+    "auc": 0.565,
+    "q": 3.8075757846795247e-23
+   }
+  ]
+ },
+ {
+  "volume": "CX03_retina_multiome",
+  "subtype": "OFF cone bipolar cell (OFF BC)",
+  "parent": "cone bipolar cell",
+  "n_cells": 3936,
+  "n_sibling_cells": 4941,
+  "siblings": [
+   "ON-bipolar cell",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": 44.34,
+  "share_interpretable": true,
+  "share_note": "",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.99; FEZF2 AUC=0.60; LHX3 AUC=0.52",
+  "marker_detail": [
+   {
+    "gene": "GRIK1",
+    "auc": 0.991,
+    "q": 0.0
+   },
+   {
+    "gene": "FEZF2",
+    "auc": 0.603,
+    "q": 2.5453286591362397e-236
+   },
+   {
+    "gene": "LHX3",
+    "auc": 0.524,
+    "q": 9.310240061522513e-45
+   }
+  ]
+ },
+ {
+  "volume": "CX04_cowan_fovea",
+  "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+  "parent": "rod bipolar cell",
+  "n_cells": 1016,
+  "n_sibling_cells": 2456,
+  "siblings": [
+   "OFF-bipolar cell"
+  ],
+  "observed_share_pct": 29.26,
+  "share_interpretable": true,
+  "share_note": "",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; PRKCA AUC=0.90; TRPM1 AUC=0.56; VSTM2B AUC=0.69",
+  "marker_detail": [
+   {
+    "gene": "PRKCA",
+    "auc": 0.903,
+    "q": 0.0
+   },
+   {
+    "gene": "TRPM1",
+    "auc": 0.557,
+    "q": 1.1617618355695472e-07
+   },
+   {
+    "gene": "VSTM2B",
+    "auc": 0.694,
+    "q": 1.9411623530280245e-195
+   }
+  ]
+ },
+ {
+  "volume": "CX04_cowan_fovea",
+  "subtype": "OFF cone bipolar cell (OFF BC)",
+  "parent": "cone bipolar cell",
+  "n_cells": 2456,
+  "n_sibling_cells": 1016,
+  "siblings": [
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": 70.74,
+  "share_interpretable": true,
+  "share_note": "",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "0 marker(s) cleared the gate; GRIK1 AUC=0.57; FEZF2 AUC=0.54; LHX3 AUC=0.51",
+  "marker_detail": [
+   {
+    "gene": "GRIK1",
+    "auc": 0.574,
+    "q": 4.489487875843911e-36
+   },
+   {
+    "gene": "FEZF2",
+    "auc": 0.538,
+    "q": 1.1222285789757183e-18
+   },
+   {
+    "gene": "LHX3",
+    "auc": 0.512,
+    "q": 2.809547826840567e-06
+   }
+  ]
+ },
+ {
+  "volume": "CX04_cowan_fovea",
+  "subtype": "T cell",
+  "parent": "lymphocyte",
+  "n_cells": 299,
+  "result": "insufficient_evidence",
+  "reason": "no sibling author label in the same parent family here"
+ },
+ {
+  "volume": "CX04_cowan_organoid",
+  "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+  "parent": "rod bipolar cell",
+  "n_cells": 461,
+  "n_sibling_cells": 2358,
+  "siblings": [
+   "OFF-bipolar cell",
+   "ON-bipolar cell"
+  ],
+  "observed_share_pct": 16.35,
+  "share_interpretable": true,
+  "share_note": "",
+  "expected_share_pct": null,
+  "result": "separated",
+  "reason": "markers clearing the gate: PRKCA, TRPM1",
+  "marker_detail": [
+   {
+    "gene": "PRKCA",
+    "auc": 0.712,
+    "q": 3.378531525612392e-86
+   },
+   {
+    "gene": "TRPM1",
+    "auc": 0.733,
+    "q": 4.271357547602723e-107
+   },
+   {
+    "gene": "VSTM2B",
+    "auc": 0.523,
+    "q": 4.744793322534539e-05
+   }
+  ]
+ },
+ {
+  "volume": "CX04_cowan_organoid",
+  "subtype": "ON cone bipolar cell (ON BC)",
+  "parent": "cone bipolar cell",
+  "n_cells": 1672,
+  "n_sibling_cells": 1147,
+  "siblings": [
+   "OFF-bipolar cell",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": 59.31,
+  "share_interpretable": true,
+  "share_note": "",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "0 marker(s) cleared the gate; GRM6 AUC=0.51; TRPM1 AUC=0.43; ISL1 AUC=0.60; ST18 AUC=0.58",
+  "marker_detail": [
+   {
+    "gene": "GRM6",
+    "auc": 0.507,
+    "q": 0.34398753392893633
+   },
+   {
+    "gene": "TRPM1",
+    "auc": 0.427,
+    "q": 1.5898105109017284e-19
+   },
+   {
+    "gene": "ISL1",
+    "auc": 0.595,
+    "q": 1.654700006192879e-19
+   },
+   {
+    "gene": "ST18",
+    "auc": 0.576,
+    "q": 1.0099659227934078e-21
+   }
+  ]
+ },
+ {
+  "volume": "CX04_cowan_organoid",
+  "subtype": "OFF cone bipolar cell (OFF BC)",
+  "parent": "cone bipolar cell",
+  "n_cells": 686,
+  "n_sibling_cells": 2133,
+  "siblings": [
+   "ON-bipolar cell",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": 24.33,
+  "share_interpretable": true,
+  "share_note": "",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.75; FEZF2 AUC=0.62; LHX3 AUC=0.58",
+  "marker_detail": [
+   {
+    "gene": "GRIK1",
+    "auc": 0.747,
+    "q": 7.47244109518594e-256
+   },
+   {
+    "gene": "FEZF2",
+    "auc": 0.621,
+    "q": 8.3161957291078e-115
+   },
+   {
+    "gene": "LHX3",
+    "auc": 0.58,
+    "q": 2.610136210075548e-70
+   }
+  ]
+ },
+ {
+  "volume": "CX04_cowan_periphery",
+  "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+  "parent": "rod bipolar cell",
+  "n_cells": 4191,
+  "n_sibling_cells": 3600,
+  "siblings": [
+   "OFF-bipolar cell",
+   "ON-bipolar cell"
+  ],
+  "observed_share_pct": 53.79,
+  "share_interpretable": true,
+  "share_note": "",
+  "expected_share_pct": null,
+  "result": "separated",
+  "reason": "markers clearing the gate: PRKCA, TRPM1",
+  "marker_detail": [
+   {
+    "gene": "PRKCA",
+    "auc": 0.952,
+    "q": 0.0
+   },
+   {
+    "gene": "TRPM1",
+    "auc": 0.715,
+    "q": 1.0158994063161657e-238
+   },
+   {
+    "gene": "VSTM2B",
+    "auc": 0.698,
+    "q": 0.0
+   }
+  ]
+ },
+ {
+  "volume": "CX04_cowan_periphery",
+  "subtype": "ON cone bipolar cell (ON BC)",
+  "parent": "cone bipolar cell",
+  "n_cells": 2130,
+  "n_sibling_cells": 5661,
+  "siblings": [
+   "OFF-bipolar cell",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": 27.34,
+  "share_interpretable": true,
+  "share_note": "",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "0 marker(s) cleared the gate; GRM6 AUC=0.51; TRPM1 AUC=0.50; ISL1 AUC=0.28; ST18 AUC=0.54",
+  "marker_detail": [
+   {
+    "gene": "GRM6",
+    "auc": 0.515,
+    "q": 0.04408057241418217
+   },
+   {
+    "gene": "TRPM1",
+    "auc": 0.505,
+    "q": 0.5147406486568933
+   },
+   {
+    "gene": "ISL1",
+    "auc": 0.282,
+    "q": 1.3698343134279256e-197
+   },
+   {
+    "gene": "ST18",
+    "auc": 0.54,
+    "q": 6.224397555854735e-11
+   }
+  ]
+ },
+ {
+  "volume": "CX04_cowan_periphery",
+  "subtype": "OFF cone bipolar cell (OFF BC)",
+  "parent": "cone bipolar cell",
+  "n_cells": 1470,
+  "n_sibling_cells": 6321,
+  "siblings": [
+   "ON-bipolar cell",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": 18.87,
+  "share_interpretable": true,
+  "share_note": "",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.85; FEZF2 AUC=0.68; LHX3 AUC=0.57",
+  "marker_detail": [
+   {
+    "gene": "GRIK1",
+    "auc": 0.846,
+    "q": 0.0
+   },
+   {
+    "gene": "FEZF2",
+    "auc": 0.676,
+    "q": 0.0
+   },
+   {
+    "gene": "LHX3",
+    "auc": 0.571,
+    "q": 4.315080146849183e-148
+   }
+  ]
+ },
+ {
+  "volume": "CX04_cowan_periphery",
+  "subtype": "T cell",
+  "parent": "lymphocyte",
+  "n_cells": 160,
+  "result": "insufficient_evidence",
+  "reason": "no sibling author label in the same parent family here"
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "S-cone photoreceptor (S cone)",
+  "parent": "cone photoreceptor",
+  "n_cells": 307,
+  "n_sibling_cells": 3571,
+  "siblings": [
+   "retinal cone cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "separated",
+  "reason": "markers clearing the gate: OPN1SW, CCDC136",
+  "marker_detail": [
+   {
+    "gene": "OPN1SW",
+    "auc": 0.865,
+    "q": 0.0
+   },
+   {
+    "gene": "CCDC136",
+    "auc": 0.919,
+    "q": 2.9194550512708106e-233
+   }
+  ]
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+  "parent": "rod bipolar cell",
+  "n_cells": 1217,
+  "n_sibling_cells": 18828,
+  "siblings": [
+   "OFFx cell",
+   "ON-bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "separated",
+  "reason": "markers clearing the gate: PRKCA, TRPM1",
+  "marker_detail": [
+   {
+    "gene": "PRKCA",
+    "auc": 0.923,
+    "q": 0.0
+   },
+   {
+    "gene": "TRPM1",
+    "auc": 0.908,
+    "q": 0.0
+   },
+   {
+    "gene": "VSTM2B",
+    "auc": 0.543,
+    "q": 4.817369276261521e-48
+   }
+  ]
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "ON cone bipolar cell (ON BC)",
+  "parent": "cone bipolar cell",
+  "n_cells": 1033,
+  "n_sibling_cells": 19012,
+  "siblings": [
+   "OFFx cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "separated",
+  "reason": "markers clearing the gate: GRM6, TRPM1, ISL1",
+  "marker_detail": [
+   {
+    "gene": "GRM6",
+    "auc": 0.784,
+    "q": 2.4042305083689235e-241
+   },
+   {
+    "gene": "TRPM1",
+    "auc": 0.876,
+    "q": 0.0
+   },
+   {
+    "gene": "ISL1",
+    "auc": 0.765,
+    "q": 0.0
+   },
+   {
+    "gene": "ST18",
+    "auc": 0.214,
+    "q": 1.7254993622499467e-228
+   }
+  ]
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "invaginating midget bipolar cell (IMB, ON midget bipolar)",
+  "parent": "cone bipolar cell",
+  "n_cells": 1466,
+  "n_sibling_cells": 18579,
+  "siblings": [
+   "OFFx cell",
+   "ON-bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; GRM6 AUC=0.79; VSX2 AUC=0.38",
+  "marker_detail": [
+   {
+    "gene": "GRM6",
+    "auc": 0.79,
+    "q": 0.0
+   },
+   {
+    "gene": "VSX2",
+    "auc": 0.383,
+    "q": 2.904396370932533e-52
+   }
+  ]
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "flat midget bipolar cell (FMB, OFF midget bipolar)",
+  "parent": "cone bipolar cell",
+  "n_cells": 3571,
+  "n_sibling_cells": 16474,
+  "siblings": [
+   "OFFx cell",
+   "ON-bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.78; VSX2 AUC=0.46",
+  "marker_detail": [
+   {
+    "gene": "GRIK1",
+    "auc": 0.779,
+    "q": 0.0
+   },
+   {
+    "gene": "VSX2",
+    "auc": 0.455,
+    "q": 1.0760907351654069e-17
+   }
+  ]
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "diffuse bipolar 1 (DB1)",
+  "parent": "cone bipolar cell",
+  "n_cells": 1604,
+  "n_sibling_cells": 18441,
+  "siblings": [
+   "OFFx cell",
+   "ON-bipolar cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "0 marker(s) cleared the gate; SCGN AUC=0.50; GRIK1 AUC=0.40",
+  "marker_detail": [
+   {
+    "gene": "SCGN",
+    "auc": 0.501,
+    "q": 0.0640078779601084
+   },
+   {
+    "gene": "GRIK1",
+    "auc": 0.404,
+    "q": 1.0695950841410181e-38
+   }
+  ]
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "diffuse bipolar 2 (DB2)",
+  "parent": "cone bipolar cell",
+  "n_cells": 2371,
+  "n_sibling_cells": 17674,
+  "siblings": [
+   "OFFx cell",
+   "ON-bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.82; VSX2 AUC=0.51",
+  "marker_detail": [
+   {
+    "gene": "GRIK1",
+    "auc": 0.822,
+    "q": 0.0
+   },
+   {
+    "gene": "VSX2",
+    "auc": 0.506,
+    "q": 0.3442136657174649
+   }
+  ]
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "diffuse bipolar 3a (DB3a)",
+  "parent": "cone bipolar cell",
+  "n_cells": 1302,
+  "n_sibling_cells": 18743,
+  "siblings": [
+   "OFFx cell",
+   "ON-bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "0 marker(s) cleared the gate; GRIK1 AUC=0.52; VSX2 AUC=0.28",
+  "marker_detail": [
+   {
+    "gene": "GRIK1",
+    "auc": 0.519,
+    "q": 0.01672606185155081
+   },
+   {
+    "gene": "VSX2",
+    "auc": 0.277,
+    "q": 1.762961367867748e-165
+   }
+  ]
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "diffuse bipolar 3b (DB3b)",
+  "parent": "cone bipolar cell",
+  "n_cells": 2704,
+  "n_sibling_cells": 17341,
+  "siblings": [
+   "OFFx cell",
+   "ON-bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; GRIK1 AUC=0.76; VSX2 AUC=0.60",
+  "marker_detail": [
+   {
+    "gene": "GRIK1",
+    "auc": 0.761,
+    "q": 0.0
+   },
+   {
+    "gene": "VSX2",
+    "auc": 0.597,
+    "q": 4.867369026950441e-62
+   }
+  ]
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "diffuse bipolar 4 (DB4)",
+  "parent": "cone bipolar cell",
+  "n_cells": 291,
+  "n_sibling_cells": 19754,
+  "siblings": [
+   "OFFx cell",
+   "ON-bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; GRM6 AUC=0.89; VSX2 AUC=0.52",
+  "marker_detail": [
+   {
+    "gene": "GRM6",
+    "auc": 0.885,
+    "q": 4.75639181515557e-131
+   },
+   {
+    "gene": "VSX2",
+    "auc": 0.519,
+    "q": 0.26165837684844895
+   }
+  ]
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "diffuse bipolar 6 (DB6)",
+  "parent": "cone bipolar cell",
+  "n_cells": 429,
+  "n_sibling_cells": 19616,
+  "siblings": [
+   "OFFx cell",
+   "ON-bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "flat midget bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; SCGN AUC=0.50; GRM6 AUC=0.89",
+  "marker_detail": [
+   {
+    "gene": "SCGN",
+    "auc": 0.5,
+    "q": 0.5799748411701571
+   },
+   {
+    "gene": "GRM6",
+    "auc": 0.891,
+    "q": 2.793283575335963e-197
+   }
+  ]
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "OFFx bipolar cell (primate outer-stratifying OFF bipolar)",
+  "parent": "cone bipolar cell",
+  "n_cells": 486,
+  "n_sibling_cells": 19559,
+  "siblings": [
+   "ON-bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 6 cell",
+   "flat midget bipolar cell",
+   "invaginating midget bipolar cell",
+   "retinal bipolar neuron",
+   "rod bipolar cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "insufficient_evidence",
+  "reason": "none of this subtype's defining markers is present in the file",
+  "marker_detail": []
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "starburst (cholinergic) amacrine cell",
+  "parent": "amacrine cell",
+  "n_cells": 807,
+  "n_sibling_cells": 10000,
+  "siblings": [
+   "GABAergic amacrine cell",
+   "amacrine cell",
+   "glycinergic amacrine cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "separated",
+  "reason": "markers clearing the gate: CHAT, SLC18A3",
+  "marker_detail": [
+   {
+    "gene": "CHAT",
+    "auc": 0.936,
+    "q": 0.0
+   },
+   {
+    "gene": "SLC18A3",
+    "auc": 0.709,
+    "q": 0.0
+   },
+   {
+    "gene": "SLC5A7",
+    "auc": 0.655,
+    "q": 0.0
+   }
+  ]
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "H1 horizontal cell",
+  "parent": "horizontal cell",
+  "n_cells": 477,
+  "n_sibling_cells": 4499,
+  "siblings": [
+   "H2 horizontal cell",
+   "retina horizontal cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; LHX1 AUC=0.79; SPP1 AUC=0.58",
+  "marker_detail": [
+   {
+    "gene": "LHX1",
+    "auc": 0.79,
+    "q": 3.509714164815454e-119
+   },
+   {
+    "gene": "SPP1",
+    "auc": 0.579,
+    "q": 1.4523788225498533e-25
+   }
+  ]
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "H2 horizontal cell",
+  "parent": "horizontal cell",
+  "n_cells": 928,
+  "n_sibling_cells": 4048,
+  "siblings": [
+   "H1 horizontal cell",
+   "retina horizontal cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; ISL1 AUC=0.72; SPP1 AUC=0.52",
+  "marker_detail": [
+   {
+    "gene": "ISL1",
+    "auc": 0.716,
+    "q": 4.0674750423850495e-286
+   },
+   {
+    "gene": "SPP1",
+    "auc": 0.523,
+    "q": 7.140926612048884e-05
+   }
+  ]
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "midget retinal ganglion cell",
+  "parent": "retinal ganglion cell",
+  "n_cells": 3571,
+  "n_sibling_cells": 5957,
+  "siblings": [
+   "OFF parasol ganglion cell",
+   "ON parasol ganglion cell",
+   "retinal ganglion cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "0 marker(s) cleared the gate; TBR1 AUC=0.50; TPBG AUC=0.53",
+  "marker_detail": [
+   {
+    "gene": "TBR1",
+    "auc": 0.501,
+    "q": 0.5996770242189583
+   },
+   {
+    "gene": "TPBG",
+    "auc": 0.531,
+    "q": 2.4777248535871314e-18
+   }
+  ]
+ },
+ {
+  "volume": "PRE_GSE268630",
+  "subtype": "ON-center retinal ganglion cell (sublamina b)",
+  "parent": "retinal ganglion cell",
+  "n_cells": 2081,
+  "n_sibling_cells": 7447,
+  "siblings": [
+   "OFF parasol ganglion cell",
+   "midget ganglion cell of retina",
+   "retinal ganglion cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "insufficient_evidence",
+  "reason": "none of this subtype's defining markers is present in the file",
+  "marker_detail": []
+ },
+ {
+  "volume": "PRE_OA-D001",
+  "subtype": "S-cone photoreceptor (S cone)",
+  "parent": "cone photoreceptor",
+  "n_cells": 361,
+  "n_sibling_cells": 5555,
+  "siblings": [
+   "retinal cone cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "separated",
+  "reason": "markers clearing the gate: OPN1SW, CCDC136",
+  "marker_detail": [
+   {
+    "gene": "OPN1SW",
+    "auc": 0.922,
+    "q": 0.0
+   },
+   {
+    "gene": "CCDC136",
+    "auc": 0.928,
+    "q": 0.0
+   }
+  ]
+ },
+ {
+  "volume": "PRE_OA-D001",
+  "subtype": "rod bipolar cell (RBC, ON rod bipolar)",
+  "parent": "rod bipolar cell",
+  "n_cells": 5555,
+  "n_sibling_cells": 5555,
+  "siblings": [
+   "retinal bipolar neuron"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "separated",
+  "reason": "markers clearing the gate: PRKCA, TRPM1, VSTM2B",
+  "marker_detail": [
+   {
+    "gene": "PRKCA",
+    "auc": 0.978,
+    "q": 0.0
+   },
+   {
+    "gene": "TRPM1",
+    "auc": 0.805,
+    "q": 0.0
+   },
+   {
+    "gene": "VSTM2B",
+    "auc": 0.724,
+    "q": 0.0
+   }
+  ]
+ },
+ {
+  "volume": "PRE_OA-D001",
+  "subtype": "starburst (cholinergic) amacrine cell",
+  "parent": "amacrine cell",
+  "n_cells": 986,
+  "n_sibling_cells": 12610,
+  "siblings": [
+   "GABAergic amacrine cell",
+   "amacrine cell",
+   "glycinergic amacrine cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; CHAT AUC=0.67; SLC18A3 AUC=0.69; SLC5A7 AUC=0.91",
+  "marker_detail": [
+   {
+    "gene": "CHAT",
+    "auc": 0.672,
+    "q": 0.0
+   },
+   {
+    "gene": "SLC18A3",
+    "auc": 0.688,
+    "q": 0.0
+   },
+   {
+    "gene": "SLC5A7",
+    "auc": 0.906,
+    "q": 0.0
+   }
+  ]
+ },
+ {
+  "volume": "PRE_OA-D001",
+  "subtype": "H1 horizontal cell",
+  "parent": "horizontal cell",
+  "n_cells": 5455,
+  "n_sibling_cells": 1858,
+  "siblings": [
+   "H2 horizontal cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "0 marker(s) cleared the gate; LHX1 AUC=0.69; SPP1 AUC=0.30",
+  "marker_detail": [
+   {
+    "gene": "LHX1",
+    "auc": 0.692,
+    "q": 2.8802120215560748e-182
+   },
+   {
+    "gene": "SPP1",
+    "auc": 0.301,
+    "q": 1.5562565762951095e-178
+   }
+  ]
+ },
+ {
+  "volume": "PRE_OA-D001",
+  "subtype": "H2 horizontal cell",
+  "parent": "horizontal cell",
+  "n_cells": 1858,
+  "n_sibling_cells": 5455,
+  "siblings": [
+   "H1 horizontal cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; ISL1 AUC=0.73; SPP1 AUC=0.70",
+  "marker_detail": [
+   {
+    "gene": "ISL1",
+    "auc": 0.734,
+    "q": 0.0
+   },
+   {
+    "gene": "SPP1",
+    "auc": 0.699,
+    "q": 1.5562565762951095e-178
+   }
+  ]
+ },
+ {
+  "volume": "PRE_OA-D001",
+  "subtype": "midget retinal ganglion cell",
+  "parent": "retinal ganglion cell",
+  "n_cells": 5555,
+  "n_sibling_cells": 1087,
+  "siblings": [
+   "parasol ganglion cell of retina",
+   "retinal ganglion cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "0 marker(s) cleared the gate; TBR1 AUC=0.57; TPBG AUC=0.53",
+  "marker_detail": [
+   {
+    "gene": "TBR1",
+    "auc": 0.573,
+    "q": 1.0657976878086635e-20
+   },
+   {
+    "gene": "TPBG",
+    "auc": 0.532,
+    "q": 7.285826187674434e-05
+   }
+  ]
+ },
+ {
+  "volume": "PRE_OA-D001",
+  "subtype": "parasol retinal ganglion cell",
+  "parent": "retinal ganglion cell",
+  "n_cells": 446,
+  "n_sibling_cells": 6196,
+  "siblings": [
+   "midget ganglion cell of retina",
+   "retinal ganglion cell"
+  ],
+  "observed_share_pct": null,
+  "share_interpretable": false,
+  "share_note": "share not interpretable: this volume is subsampled per class",
+  "expected_share_pct": null,
+  "result": "not_separated",
+  "reason": "1 marker(s) cleared the gate; SPP1 AUC=0.85; RBPMS2 AUC=0.62; CHRNA2 AUC=0.66; CA8 AUC=0.51",
+  "marker_detail": [
+   {
+    "gene": "SPP1",
+    "auc": 0.854,
+    "q": 1.8055279303257846e-163
+   },
+   {
+    "gene": "RBPMS2",
+    "auc": 0.625,
+    "q": 1.027168361460239e-18
+   },
+   {
+    "gene": "CHRNA2",
+    "auc": 0.659,
+    "q": 7.47448631231884e-56
+   },
+   {
+    "gene": "CA8",
+    "auc": 0.514,
+    "q": 1.6462686388016812e-08
+   }
+  ]
+ },
+ {
+  "volume": "PRE_OA-D068",
+  "subtype": "Retinal astrocyte (pan-retinal resident population)",
+  "parent": "astrocyte",
+  "n_cells": 414,
+  "result": "insufficient_evidence",
+  "reason": "no sibling author label in the same parent family here"
+ }
+]
