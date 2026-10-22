@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "d27054622f73",
- "digest_sha256": "d27054622f73eac21a6977b4c9ad6174d1da7b5c74f5f39b51f92b6a4cbfd7e4",
+ "release_id": "af0d5f2a4677",
+ "digest_sha256": "af0d5f2a4677a034135671bfed96c36af2e308995ed5bed9bef3a944af440a52",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
  "n_files": 3993,
- "total_bytes": 240466409,
+ "total_bytes": 240466634,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "3bffa3f7afde",
   "knowledge_bundle_id": "31751e7f9128",
-  "effective_profile_id": "a34d7a02c037"
+  "effective_profile_id": "f8660e6d45d9"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -172,12 +172,12 @@
   },
   {
    "path": "docs/W3_MANIFEST.sha256",
-   "git_blob": "bd220b7f80f6fdf73e406dc5e7bdb8a9a9425adc",
-   "bytes": 3338
+   "git_blob": "05850ab5e6224020e488c1275e2a7de4a3800ee4",
+   "bytes": 3563
   },
   {
    "path": "docs/W3_PIPELINE_REGISTRY.tsv",
-   "git_blob": "be95dc678c28fddae6610d4f74afa3279ad11ae2",
+   "git_blob": "eaa06a21803e244f01ad9b706f9459c641b1bd24",
    "bytes": 120461
   },
   {
