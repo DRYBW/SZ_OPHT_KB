@@ -243,29 +243,49 @@ What was measured (`out/COLLISION_AND_CLOSEOUT.json`, `out/collision/`):
 * the sibling card was told, on its own card, not to write the core from its pre-registration buffer (it
   carries this card's NO-GO'd activation), and that its registration is already present in the tree.
 
-## 8. Registrations, and what is deliberately **not** committed
+## 8. Registrations, and the commits
 
-* **Registry row L1-26** (this library's own row) gains the decision, the numbers, the instrument finding, the
-  restoration and the collision (`out/REGISTRY_NOTE.json`; exactly one line changed, the row's file/sha/status
-  columns untouched).
-* **No other registry surface is re-taken**, because **this card commits no core change**: the activation was
-  refused, so there is no default-ON behaviour to register, no service-core sha to re-take and no release
-  identity to refresh (`L1-11M`, `docs/RELEASE_IDENTITY.json`, `docs/W3_MANIFEST.sha256` are unchanged and stay
-  consistent with the committed HEAD). The working tree's core change (this card's restoration plus the
-  sibling's registration) must be committed by a card that owns it, and that card re-takes `L1-11M` and the
-  identity in its own commit; **this card's report says so explicitly rather than half-registering it.**
-* `docs/W3_MANIFEST.sha256` is untouched for the same reason; this wave's own artefacts are frozen by
-  `MANIFEST.sha256` inside the wave directory.
-* Commit locally; **do not push** (the coordinator pushes after verification).
+Three local commits (no push; the coordinator pushes after verification):
 
-## 9. Gates
+| commit | content |
+|---|---|
+| `b2f2e47` | the measurement record: pre-registration, scripts, every reading, the collision record, and registry row **L1-26** carrying the decision, the numbers, the instrument finding and the restoration (exactly one registry line changed) |
+| `b30c124` | the landed restoration: the six lines restoring `holefill_v12`'s `MARKER_LIBS` entry + registry row **L1-11M** re-taken from live bytes + `docs/SWITCH_COVERAGE_REGISTRY.tsv` regenerated from source + `docs/W3_MANIFEST.sha256` re-frozen last + `docs/RELEASE_IDENTITY.json` / `RELEASE_MANIFEST_v1.json` re-taken against the index |
+| `54fc328` | follow-up: the switch registry's **own** registry row (`L6-47`) re-taken (regenerating it invalidated the row that registers it), W3 manifest re-frozen after it, identity re-taken (`release_id c874b80592be`, 4,166 files, `--check` IDENTITY MATCH) |
 
-The repository's gate chain (`tests/run_gates.sh`: G3 / G4 / G5 / G6 / G7 / G8 / G9 / G10) is run in a **clean
-clone at this card's commit**; the readout is stored at `out/CLONE_REPO_GATES.log` and summarised in
-`out/CLONE_CHECK.json`. G10's switch-coverage registry is regenerated from source (no switch is added to the
-shipped tree by this card: the activation switch exists only while the flip is applied, and the flip is
-removed). The author tree's working copy is explicitly **not** the venue for this: it carries an uncommitted
-in-flight edit by another card (§7).
+What was committed, and why it changed shape during the card: the activation was **refused**, so there is
+no default-ON behaviour to register and no change-control instance row to add — but the **defect fix had to
+land** (a dropped registration line that made a registry row untrue, in a file whose only live writer by
+then was this card, and which would otherwise have been lost the way the sibling card's uncommitted bytes
+were). That made the core a changed file, so the rows and identity records the change invalidates were
+re-taken in the same commits, in the repository's own order (registry rows → switch registry → W3 manifest
+→ identity).
+
+The library is **not activated**: `holefill_v12` stays `REGISTERED_DEFAULT_OFF`, reachable by name only, and
+the shipped default route is byte-identical to the parent commit's (§7).
+
+## 9. Gates — the repository's own chain, in a clean clone
+
+`tests/run_gates.sh` in a **clean clone at commit `54fc328`** (the corpus is not distributed inside the
+clone, so `EYEKB_CORPUS` is pointed at the laboratory's copy; the clone's tree is not modified):
+
+```
+G3 verify_repro (41-query retrieval anchor)             rc=0 pass
+G4 verify_pipeline (three byte anchors)                 rc=0 pass
+G5 gate_registry (registry surface enforced)            rc=0 pass
+G6 gate_change_control (eight machine rules)            rc=0 pass
+G7 gate_ontology_layer (read-only ontology layer)       rc=0 pass
+G8 gate_ontlayer_portability (portability/fail-closed)  rc=0 pass
+G9 gate_preimage_ref_immutable (immutable refs)         rc=0 pass
+G10 gate_switch_coverage (registry in sync; arms)       rc=0 pass
+gates=8 failed=0  (CHAIN PASS)
+```
+
+Readout stored at `out/CLONE_REPO_GATES.log`, parsed into `out/CLONE_CHECK.json`. The reachability finding
+of §6 stays open as a *proposal*, not as a weakened criterion: no gate was relaxed, and the two red
+readouts of the intermediate commit (`b2f2e47`: G3 rc=1 for a corpus precondition missing from the clone,
+G10 R1 rc=1 for the registry drift inherited from the sibling card's commit) are kept in
+`out/CLONE_REPO_GATES_commit_b2f2e47.log` with their attribution, rather than deleted.
 
 ## 10. Artefacts
 

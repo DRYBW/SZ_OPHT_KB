@@ -1,0 +1,96 @@
+{
+ "probe": "clone check",
+ "commit_under_test": "54fc3288f1e6d532c3567dc635ef294917c1067e",
+ "repo_chain_at_the_commit_under_test": {
+  "gates": [
+   {
+    "gate": "G3",
+    "rc": 0,
+    "label": "pass"
+   },
+   {
+    "gate": "G4",
+    "rc": 0,
+    "label": "pass"
+   },
+   {
+    "gate": "G5",
+    "rc": 0,
+    "label": "pass"
+   },
+   {
+    "gate": "G6",
+    "rc": 0,
+    "label": "pass"
+   },
+   {
+    "gate": "G7",
+    "rc": 0,
+    "label": "pass"
+   },
+   {
+    "gate": "G8",
+    "rc": 0,
+    "label": "pass"
+   },
+   {
+    "gate": "G9",
+    "rc": 0,
+    "label": "pass"
+   },
+   {
+    "gate": "G10",
+    "rc": 0,
+    "label": "pass"
+   }
+  ],
+  "summary": "gates=8 failed=0  (CHAIN PASS)"
+ },
+ "note": "the chain is run in a clean clone of the commit under test, with EYEKB_CORPUS pointed at the laboratory's corpus copy (the corpus is not distributed inside the clone); the clone's tree is untouched by this run",
+ "first_attempt_commit_b2f2e47": {
+  "gates": [
+   {
+    "gate": "G3",
+    "rc": 1,
+    "label": "fail"
+   },
+   {
+    "gate": "G4",
+    "rc": 0,
+    "label": "pass"
+   },
+   {
+    "gate": "G5",
+    "rc": 0,
+    "label": "pass"
+   },
+   {
+    "gate": "G6",
+    "rc": 0,
+    "label": "pass"
+   },
+   {
+    "gate": "G7",
+    "rc": 0,
+    "label": "pass"
+   },
+   {
+    "gate": "G8",
+    "rc": 0,
+    "label": "pass"
+   },
+   {
+    "gate": "G9",
+    "rc": 0,
+    "label": "pass"
+   },
+   {
+    "gate": "G10",
+    "rc": 1,
+    "label": "fail"
+   }
+  ],
+  "summary": "gates=8 failed=2  (CHAIN FAIL)"
+ },
+ "first_attempt_note": "at b2f2e47 the chain reported G3 rc=1 (corpus not present in the clone -- a missing precondition, not a result) and G10 R1 rc=1 (the switch registry had drifted from the source, which is inherited: the same R1 failure is measured at the sibling card's commit e18d63c, where EYEKB_ACT_SUBTYPE entered the source without the registry being regenerated). Both were closed at 54fc328: the corpus was pointed at explicitly and the registry was regenerated from source with its own row re-taken."
+}

@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "c874b80592be",
- "digest_sha256": "c874b80592beb1f120e24454643fcdaecc512bef464dac7527f1d7af00bdd22a",
+ "release_id": "a667363dd1aa",
+ "digest_sha256": "a667363dd1aa9a28d2ed43184be9187ca2f43dd5ad02d92db310d760b62bade6",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 4166,
- "total_bytes": 246918835,
+ "n_files": 4170,
+ "total_bytes": 246952343,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "3b91e3d4e50a",
   "knowledge_bundle_id": "791212db1465",
-  "effective_profile_id": "2df3f120cbdf"
+  "effective_profile_id": "ddc60b390f91"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -212,8 +212,8 @@
   },
   {
    "path": "docs/plans/activate_holefill_20261022/MANIFEST.sha256",
-   "git_blob": "cc21841ef5af641d36b914a72823a30cb439f42c",
-   "bytes": 7111
+   "git_blob": "2baf584c2a4a3d43d4deca19048fdd5821cec270",
+   "bytes": 7775
   },
   {
    "path": "docs/plans/activate_holefill_20261022/PREREG_ACTIVATION_HOLEFILL_20261022.md",
@@ -222,8 +222,8 @@
   },
   {
    "path": "docs/plans/activate_holefill_20261022/REPORT.md",
-   "git_blob": "4479f009b5a89920c24619ec758d088e68bdd8e8",
-   "bytes": 23208
+   "git_blob": "a9cf41fe95c08e6025824a7b826cba1bcab3c4dc",
+   "bytes": 24601
   },
   {
    "path": "docs/plans/activate_holefill_20261022/ledgers/net_audit.log",
@@ -239,6 +239,26 @@
    "path": "docs/plans/activate_holefill_20261022/logs/l3c.log",
    "git_blob": "8dd1ab9c4eda86409e6064a8e80c28d85cf587cc",
    "bytes": 3893
+  },
+  {
+   "path": "docs/plans/activate_holefill_20261022/out/CLONE_CHECK.json",
+   "git_blob": "b9d56d97b96f854c85300cedcb2f7ab5cbc9c4ce",
+   "bytes": 2036
+  },
+  {
+   "path": "docs/plans/activate_holefill_20261022/out/CLONE_REPO_GATES.log",
+   "git_blob": "fb5eb70bb4edd1fe834d1acff83cd31c9a651b72",
+   "bytes": 9781
+  },
+  {
+   "path": "docs/plans/activate_holefill_20261022/out/CLONE_REPO_GATES_commit_b2f2e47.log",
+   "git_blob": "1b89358e460f3b250d2bed3007956d2cb90833a2",
+   "bytes": 9759
+  },
+  {
+   "path": "docs/plans/activate_holefill_20261022/out/CLONE_REPO_GATES_first_attempt.log",
+   "git_blob": "48bfb8d375a7f5302fe6a5a864b1098d71926856",
+   "bytes": 9875
   },
   {
    "path": "docs/plans/activate_holefill_20261022/out/CL_CONFORMANCE.json",
@@ -287,7 +307,7 @@
   },
   {
    "path": "docs/plans/activate_holefill_20261022/out/MIRROR_CHECK.json",
-   "git_blob": "363a15bc70d9c06b753802a5b7b26c87b8d55f39",
+   "git_blob": "c950c820ea652e67141e9bda70f9bb81f37f629c",
    "bytes": 619
   },
   {
