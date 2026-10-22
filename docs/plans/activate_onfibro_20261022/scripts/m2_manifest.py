@@ -39,7 +39,11 @@ def main():
             p = os.path.join(root, n)
             rel = os.path.relpath(p, WAVE)
             if rel.startswith(("ledgers/", "logs/")) or rel.endswith(EXCLUDE_SUFFIX) \
-                    or rel.startswith("out/MANIFEST"):
+                    or rel.startswith("out/MANIFEST") \
+                    or rel in ("out/GATE.json", "out/GATE_READOUT.md"):
+                # the gate readout is written by the very step that judges this manifest: including
+                # it would make the check depend on the order of two steps rather than on the state
+                # of the wave
                 continue
             entry = {"rel": rel, "bytes": os.path.getsize(p), "sha256": sha256(p)}
             # a file the repository does not distribute cannot be part of "what a reader gets", so
@@ -53,7 +57,8 @@ def main():
     doc = {"probe": "m2_manifest.py", "wave": "docs/plans/activate_onfibro_20261022",
            "n_files": len(files), "files": files,
            "n_not_distributed": len(not_distributed), "not_distributed": not_distributed,
-           "excluded": ["ledgers/**", "logs/**", "out/MANIFEST.json", "out/MANIFEST.sha256"],
+           "excluded": ["ledgers/**", "logs/**", "out/MANIFEST.json", "out/MANIFEST.sha256",
+                        "out/GATE.json", "out/GATE_READOUT.md"],
            "not_distributed_note": ("files the repository does not distribute (git-ignored), with "
                                     "their size and hash recorded so nothing is hidden; they cannot "
                                     "be part of a clone's verification"),

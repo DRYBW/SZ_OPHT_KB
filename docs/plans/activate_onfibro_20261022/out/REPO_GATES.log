@@ -4,7 +4,7 @@
 [gates] out=/home/ubuntu/EYEKB_REPO/.gate_out
 
 =================== G3 verify_repro (41-query retrieval anchor) ===================
-Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 7697.38it/s]
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 9662.81it/s]
 DB: /home/ubuntu/EYEKB_REPO/literature_db/v2.4.2_2026-09_slim | 242928 chunks, 6 species
 REPRO PASS: 41/41 cases with position-by-position identical top5
 ------------------- G3 verify_repro (41-query retrieval anchor) rc=0 -------------------
@@ -44,7 +44,7 @@ G4 PASS: 3/3 byte-identical
   PASS G6-R7 ESCAPE :: [instance] Q5 escape-door defects: 0
   PASS G6-R8 PRECOND :: [instance] gate-precondition defects: 0
   PASS G6-R2-CONCRETE  :: [instance] concrete-action cells without a command/threshold: 0
-  PASS G6-R2-PORTABLE  :: [instance] path anchors by rule: declared-local=5, declared-not-distributed=1, exact=82, relative-absent=1, repo-relative=96
+  PASS G6-R2-PORTABLE  :: [instance] path anchors by rule: declared-local=5, declared-not-distributed=1, exact=82, repo-relative=97
   PASS G6-R1 REQUIRED :: [template] empty required cells: 0
   PASS G6-R2 EVIDENCE :: [template] evidence cells without a resolvable anchor: 0
   PASS G6-R3 NA :: [template] rule-numbered NA defects: 0

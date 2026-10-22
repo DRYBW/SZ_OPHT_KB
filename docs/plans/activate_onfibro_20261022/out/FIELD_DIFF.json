@@ -1,7 +1,9 @@
 {
  "probe": "l3c_field_diff.py",
  "flipped_core_sha256": "e74c73c6c2ef04d19b94edd69cfb414bc38104b29c2d054a5e711ad03e781079",
+ "pre_flip_reference_commit": "16349f6f373ced7f77aedf40ac97c4b7b93304ce",
  "parent_core_sha256": "3dadbbbaf2631da0f48760beb95278f5fabd675e6108282c9080fae67a61d736",
+ "parent_core_equals_kept_preimage": true,
  "parent_dump_log": "core 3dadbbbaf2631da0 keys 7",
  "flip_dump_log": "core e74c73c6c2ef04d1 keys 7",
  "restored_matches_snapshot": true,

@@ -137,8 +137,9 @@ def main():
     after_src = open(CORE, encoding="utf-8").read()
     doc["after_sha256"] = sha256_file(CORE)
     doc["after_bytes"] = os.path.getsize(CORE)
-    doc["after_mtime"] = subprocess.run(["stat", "-c", "%y", CORE], capture_output=True,
-                                        text=True).stdout.strip()
+    # the file's mtime is deliberately NOT recorded: it is the one field that cannot survive an
+    # identical re-run, and the sha256 is the identity that matters (measured 2026-10-22)
+    doc["after_sha256_is_identity"] = True
     doc["after_whitelists"] = whitelists(after_src)
     doc["whitelist_delta"] = {k: [before_wl.get(k), doc["after_whitelists"].get(k)]
                               for k in set(before_wl) | set(doc["after_whitelists"])

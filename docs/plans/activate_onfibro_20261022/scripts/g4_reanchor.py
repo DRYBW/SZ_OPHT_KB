@@ -45,6 +45,16 @@ def sha(p):
     return hashlib.sha256(open(p, "rb").read()).hexdigest()
 
 
+def clean_chatter(text, head=0, tail=4000):
+    """Drop environment chatter (progress bars, loader notes, model-download lines) so the recorded
+    readout is reproducible: measured 2026-10-22, the raw tail carried per-run throughput figures and
+    made every artefact byte-differ after an identical re-run."""
+    noise = ("it/s", "%|", "Batches:", "Loading weights", "Loading SentenceTransformer",
+             "JAX version", "INFO ", "DB: ", "Batches")
+    keep = [l for l in (text or "").splitlines() if not any(n in l for n in noise)]
+    return "\n".join(keep)[-tail:]
+
+
 def run_pipeline(tag, env_extra):
     work = os.path.join(WORKROOT, tag)
     os.makedirs(work, exist_ok=True)
@@ -68,7 +78,7 @@ def run_pipeline(tag, env_extra):
         p = os.path.join(work, "annotation_evidence_report.md" if "report" in name else name)
         anchors[name] = fn(__import__("pathlib").Path(p)) if os.path.exists(p) else None
     return {"tag": tag, "rc": r.returncode, "interpreter": py, "python": pyver, "work": work,
-            "anchors": anchors, "stderr_tail": r.stderr[-600:]}
+            "anchors": anchors, "stderr_tail": clean_chatter(r.stderr, tail=600)}
 
 
 def main():

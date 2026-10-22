@@ -48,7 +48,7 @@
    "code": "M08 FIELD-SCOPE",
    "status": "PASS",
    "ok": true,
-   "detail": "changed response fields ['celltype_ranking', 'gene_to_celltypes', 'provenance', 'soft_flags']; outside the allowed set: []"
+   "detail": "changed response fields ['celltype_ranking', 'gene_to_celltypes', 'provenance', 'soft_flags'] (non-empty=True, 21 differing paths); outside the allowed set: []"
   },
   {
    "code": "M09 REGISTRY",
@@ -66,25 +66,25 @@
    "code": "M11 NET-AUDIT",
    "status": "PASS",
    "ok": true,
-   "detail": "hook load receipts=475; connecting/HTTP events=0; census={'socket.__new__': 260, 'socket.gethostname': 46, 'socket.bind': 46}"
+   "detail": "hook load receipts=693; connecting/HTTP events=0; census={'socket.__new__': 413, 'socket.gethostname': 70, 'socket.bind': 71}"
   },
   {
    "code": "M12 MANIFEST",
    "status": "PASS",
    "ok": true,
-   "detail": "files=111 drifting=0 []"
+   "detail": "files=116 drifting=0 []"
   },
   {
    "code": "M13 CHANGE-SURFACE",
    "status": "PASS",
    "ok": true,
-   "detail": "changed=2 outside the declared surface=[]"
+   "detail": "changed=55 outside the declared surface=[]"
   },
   {
    "code": "M14 RELEASE-IDENTITY",
    "status": "PASS",
    "ok": true,
-   "detail": "scripts/release_identity.py --check rc=0 release_id      87a2fe0ed919\ndigest_sha256   87a2fe0ed9199918e99a030c63cd8e001a93c976cd65e8e957d20981d81abbd3\nservice_build_id      3bffa3f7afde   (12 files, 1276020 bytes: mcp_server/ + the release t"
+   "detail": "scripts/release_identity.py --check rc=0 release_id      f9cbf3eec7e4\ndigest_sha256   f9cbf3eec7e419f1cc3c4db1ad0b94e9d933cff3d2738f23e9415be3d336644d\nservice_build_id      3bffa3f7afde   (12 files, 1276020 bytes: mcp_server/ + the release t"
   },
   {
    "code": "M15 RED-LINES",

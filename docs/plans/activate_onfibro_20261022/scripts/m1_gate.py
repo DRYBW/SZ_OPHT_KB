@@ -174,8 +174,13 @@ def main():
     else:
         fields = set(fd["changed_response_fields"])
         outside = sorted(fields - ALLOWED_FIELDS)
-        rec("M08 FIELD-SCOPE", not outside and fd["verdict"] == "PASS",
-            "changed response fields %s; outside the allowed set: %s" % (sorted(fields), outside))
+        # non-vacuity: the activation is known to move bytes, so an empty field census means the
+        # diff did not run against a real pre-flip reference (measured: comparing against HEAD after
+        # the change was committed produced exactly this empty reading)
+        n_diff = sum(v["n_differing_paths"] for v in fd["queries"].values())
+        rec("M08 FIELD-SCOPE", bool(fields) and not outside and fd["verdict"] == "PASS" and n_diff > 0,
+            "changed response fields %s (non-empty=%s, %d differing paths); outside the allowed set: %s"
+            % (sorted(fields), bool(fields), n_diff, outside))
 
     # M09 -- the registry is honest about every file this card moved
     ru = load("REGISTRY_UPDATE.json")

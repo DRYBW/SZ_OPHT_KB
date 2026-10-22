@@ -1,6 +1,6 @@
 # Annotation Evidence Report (EyeKB pipeline Stage B output)
 
-- Generated at: 2026-10-22 13:39:21
+- Generated at: 2026-10-22 14:24:36
 - Input: `/home/ubuntu/EYEKB_REPO/docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/stage_a/processed.h5ad` (species human, tissue fibrovascular_membrane, disease prior not enabled (no grouping))
 - MCP calls: 38 total, 0 errors
 - **How to read**: this report presents evidence and mechanical QC flags only, with no annotation conclusions; the final naming of each cluster is filled in by the researcher in decisions_template.csv as accept / modify / abstain. Abstention is a legal output.

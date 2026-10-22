@@ -3,7 +3,7 @@
 Card: `t_42df17c2` (L7 ACTIVATE onfibro_v13 on the default route) · board `pi-briefing` · 2026-10-22
 Pre-registration: `PREREG_ACTIVATION_ONFIBRO_20261022.md` (sha256 `44698e523715262684ed20d88ce69fc4e1e701e2dada10b358dafae12f190c50`, written and on disk before any measurement of the flipped state -- see `out/PREIMAGE.json` for the ordering record).
 Interpreter: `/usr/bin/python3` for this wave's scripts (stdlib only); `/home/ubuntu/training-venv/bin/python3` for the repository's G3/G7 precondition and the tool-panel probe; the pipeline gate pins its own contract interpreter.
-Zero network, zero downloads: `ledgers/net_audit.log` carries 477 hook load receipts and zero connecting/HTTP event lines (`out/GATE.json` M11).
+Zero network, zero downloads: `ledgers/net_audit.log` carries 689 hook load receipts and zero connecting/HTTP event lines (`out/GATE.json` M11).
 
 Everything below is reproducible with one command:
 
@@ -203,7 +203,7 @@ The criterion is unchanged -- the same three anchors, byte-for-byte, under the s
 | `GATE_INVENTORY_G2_VERIFY_CONTRACT` | {"before": "354403dae664c6584cd9e4123547cf812528905dd87e9d747f481fe75f40fc40", "after": "354403dae664c6584cd9e4123547cf812528905dd87e9d747f481fe75f40fc40", "re_taken": false} |
 | `L1-11M` | {"before": {"sha256": "e74c73c6c2ef04d19b94edd69cfb414bc38104b29c2d054a5e711ad03e781079", "bytes": "115058"}, "after": {"sha256": "e74c73c6c2ef04d19b94edd69cfb414bc38104b29c2d054a5e711ad03e781079", "bytes": "115058", "mt |
 | `L1-30` | {"file_sha256_live": "852f1ff7ee36d173d49303e6d6e6090212bbbdb6ece3e08a9f227f3bce6cf9cd", "registered_sha256": "852f1ff7ee36d173d49303e6d6e6090212bbbdb6ece3e08a9f227f3bce6cf9cd", "file_bytes_unchanged": true, "authority_b |
-| `L5-11` | {"before": {"sha256": "3c03d25de0b1f108ff9469394036051fd1b72d4f9634e68cc22fddb39b3bedc5", "bytes": "4740"}, "after": {"sha256": "9f7b4be6d8eeb2888fb9b3df6dd18ac7d1db7bfdaf9bfcc1d90f60efcff6c820", "bytes": "5696", "mtime" |
+| `L5-11` | {"before": {"sha256": "9f7b4be6d8eeb2888fb9b3df6dd18ac7d1db7bfdaf9bfcc1d90f60efcff6c820", "bytes": "5696"}, "after": {"sha256": "9f7b4be6d8eeb2888fb9b3df6dd18ac7d1db7bfdaf9bfcc1d90f60efcff6c820", "bytes": "5696", "mtime" |
 | `L6-01` | {"before": {"sha256": "354403dae664c6584cd9e4123547cf812528905dd87e9d747f481fe75f40fc40", "bytes": "23643"}, "after": {"sha256": "354403dae664c6584cd9e4123547cf812528905dd87e9d747f481fe75f40fc40", "bytes": "23643", "mtim |
 | `L6-37` | {"sha256": "ce6416126252663ff8be794fe985500a284876c3d15b2420359656c1bb4afd87", "live_sha256": "ce6416126252663ff8be794fe985500a284876c3d15b2420359656c1bb4afd87", "re_recorded": false} |
 | `docs/CHANGE_CONTROL_G6_INSTANCE.tsv` | new 27-column instance row `CHG-20261022-ONFIBRO-ACTIVATION` (instance sha256 `1eeac36d252f03bd9c02f1b63d6c82e784c2f6262627a72fe152ab5700c534cb`) |

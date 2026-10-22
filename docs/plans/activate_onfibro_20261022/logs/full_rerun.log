@@ -1,0 +1,167 @@
+== l1  the flip (verify mode: the change is already applied)
+--- scripts/l1_flip_apply.py
+mode       : verify
+core sha   : 3dadbbbaf2631da0 -> e74c73c6c2ef04d1 bytes 114098 -> 115058
+whitelist  : {'ONFIBRO_DEFAULT_LIBS': ['()', '("onfibro_v13",)']}
+hunks      : [358, 380] region [358, 386] inside = True
+added/removed lines: 21 10
+import     : ('onfibro_v13',) | unset-> True | zero-> False | off-> False rc 0
+l1 verdict : PASS
+== l2  measure the activation with the reused harness
+--- scripts/l2_flip_measure.py
+   F1_flip_recorded_decls             verdict=PASS             changed_clusters=45 changed_cells=111247 overall +1.692pp
+   F2_flip_tester_decls               verdict=PASS             changed_clusters=45 changed_cells=111247 overall +1.618pp
+   F3_control_inject_recorded_decls   verdict=PASS             changed_clusters=45 changed_cells=111247 overall +1.692pp
+   ruler self-check: agree=542 differ=0
+   flipped default == injection arm on 721/721 clusters
+   kill arm == predecessor R2 before-arm: True
+   moved clusters: 45  kinds={'rank-shift': 32, 'carrier-gain': 13}  takeovers-on-other-family=0  harm_cells=0
+   motivating cluster: {"vol": "CX15_optic_nerve_all", "cluster": "31", "tissue": "optic_nerve", "n_cells": 1822, "ref_cell_type": "fibroblast", "ref_family": "fibro", "truth": "Limbus_Sclera_fibroblast_C1", "before_top": null, "before_n_shared": null, "after_top": "onfibro_v13::Fibroblast", "after_n_shared": 2, "after_library": "markers_v13_onfibro_increment.json", "carrier_in_after_candidates": true, "before_grade": "mixed", "after_grade": "consistent", "before_cl": "abstain", "after_cl": "same_cl", "kind": "carrier-gain", "intended_repair": true, "takeover_on_other_family": false}
+   acceptance: PASS datasets_falling=[]
+   default route (no tissue): verdict=PASS overall +1.496pp  top1-changed clusters=12  harm_cells=0
+   l2 verdict: PASS
+== l3  the default face: kill switch + delta census
+--- scripts/l3_default_face.py
+   parent core == kept pre-image: True | restored == snapshot: True
+   KILL vs PARENT clusters n=721 raw-identical=True canon-identical=True (differing raw=0)
+   KILL vs PARENT battery  n=229 raw-identical=True canon-identical=True (differing raw=0)
+   PARENT -> FLIP clusters moved_raw=721/721  ranking_moved=45  disclosure-only=676  unexplained=0
+        attribution census: {'carrier-drives-top1-change': 12, 'carrier-in-candidate-list-top1-same': 33, 'disclosure-field-only': 676}
+   PARENT -> FLIP battery  moved_raw=228/229  ranking_moved=0  disclosure-only=228  unexplained=0
+        attribution census: {'disclosure-field-only-and-carrier-named': 228}
+   compatibility item: the legacy five-tool panel MOVED (parent e8e6c26351cd9a1d42fa2e7cb6a83f23 -> flip 47e42230a8f7256b4ae9a78d4ff628d3)
+   probe report (FLIP): ['IDENTITY FAIL: legacy_panel, full_panel moved.', 'different: query_marker:{"cell_type": "MG"}', 'different: query_marker:{"genes": ["TMEM119", "CX3CR1", "P2RY12", "C1QA", "SALL1", "CSF1R", "AIF1"]}'] rc 1
+   legacy panel: parent=e8e6c26351cd9a1d42fa2e7cb6a83f23 flip=47e42230a8f7256b4ae9a78d4ff628d3 unchanged=False (baseline e8e6c26351cd9a1d42fa2e7cb6a83f23)
+   full panel : parent=3f1f52cb62915f5ad2801962aa523d36 flip=f97ff8ad2507f4d69a0e6e57406c2de1 unchanged=False
+   golden_721 PARENT: {"n": 721, "identical": 721, "differ": 0, "examples": []}
+   golden_721 FLIP  : {"n": 721, "identical": 676, "differ": 45, "examples": [{"vol": "CX04_cowan_fovea", "cluster": "23", "recorded_n": 5, "now_n": 6, "recorded_head": [["Pericyte", 2], ["cDC1", 2], ["Fibroblast", 1]], "now_head": [["Pericyte", 2], ["cDC1", 2], ["Fibroblast", 1]]}, {"vol": "CX08_RPE_choroid_scRNA", "cluster": "0", "recorded_n": 3, "now_n": 4, "recorded_head": [["Pericyte", 2], ["Fibroblast", 1], ["Myofibroblast", 1]], "now_head": [["Pericyte", 2], ["onfibro_v13::Fibroblast", 2], ["Fibroblast", 1]]}, {"vol": "CX08_RPE_choroid_snRNA", "cluster": "1", "recorded_n": 0, "now_n": 1, "recorded_head": [], "now_head": [["onfibro_v13::Fibroblast", 1]]}, {"vol": "CX09_voigt_RPE_choroid", "cluster": "6", "recorded_n": 2, "now_n": 3, "recorded_head": [["Fibroblast", 1], ["cDC1", 1]], "now_head": [["Fibroblast", 1], ["cDC1", 1], ["onfibro_v13::Fibroblast", 1]]}, {"vol": "CX09_voigt_RPE_choroid", "cluster": "12", "recorded_n": 8, "now_n": 9, "recorded_head": [["RPE", 2], ["retina_interneuron::RPE", 2], ["retina_v6::RPE", 2]], "now_head": [["RPE", 2], ["retina_interneuron::RPE", 2], ["retina_v6::RPE", 2]]}]}
+   l3 verdict: PASS
+== l3c the field-level diff of the delta
+--- scripts/l3c_field_diff.py
+celltype:Fibroblast                differing paths=0
+celltype:MG                        differing paths=0
+cluster:CX01_retina_snRNA|0        differing paths=0
+cluster:CX08_RPE_choroid_scRNA|0   differing paths=0
+cluster:CX15_optic_nerve_all|31    differing paths=0
+genes:legacy_panel_microglia       differing paths=0
+pages:list_kb_pages                differing paths=0
+changed response fields: {}
+l3c verdict: PASS
+== g4  re-anchor the G4 three byte anchors (reason recorded, pre-image kept)
+--- scripts/g4_reanchor.py
+mode: verify | anchors that moved: ['annotation_evidence_report.md__normalized', 'decisions_template.csv']
+three-run determinism: True | OFF reproduces pre-flip anchors: True | activated differs: True
+verify_pipeline rc: 0
+unning pipeline (~1-2 minutes, fully offline)...
+PASS stage_a/processed.h5ad
+PASS decisions_template.csv
+PASS annotation_evidence_report.md__normalized
+
+G4 PASS: 3/3 byte-identical
+(timestamps and output paths are excluded from the criteria; everything else is byte-for-byte; see VERIFY_CONTRACT G4)
+
+g4_reanchor verdict: PASS
+== l5  register the default-ON precondition (R8)
+--- scripts/l5_verify_contract.py
+{
+ "probe": "l5_verify_contract.py",
+ "path": "docs/VERIFY_CONTRACT.md",
+ "mode": "verify",
+ "sha256_before": "354403dae664c6584cd9e4123547cf812528905dd87e9d747f481fe75f40fc40",
+ "appended_section": "§5.5 The optic-nerve fibroblast carrier on the default route",
+ "registered_in": "docs/VERIFY_CONTRACT.md",
+ "r8_note": "R8 is a property of the change-control row, not of this file: the row's M3/E2 cells must name docs/VERIFY_CONTRACT.md when they mention a default-ON change, and this section is what they point at (verified by tests/gate_change_control.py G6-R8 PRECOND)",
+ "sha256_after": "354403dae664c6584cd9e4123547cf812528905dd87e9d747f481fe75f40fc40",
+ "bytes_after": 23643,
+ "prefix_unchanged": true,
+ "switch_named": true,
+ "verdict": "PASS"
+}
+== l4  re-take the registry rows this activation invalidates
+--- scripts/l4_registry_rows.py
+{
+ "probe": "l4_registry_rows.py",
+ "registry": "docs/W3_PIPELINE_REGISTRY.tsv",
+ "registry_sha256_before": "e9e08c9b554e9a891cd6cde766e723f8df24f3ecb4b071a8713f27bfcad7f30a",
+ "rows": {
+  "L1-11M": {
+   "before": {
+    "sha256": "e74c73c6c2ef04d19b94edd69cfb414bc38104b29c2d054a5e711ad03e781079",
+    "bytes": "115058"
+   },
+   "after": {
+    "sha256": "e74c73c6c2ef04d19b94edd69cfb414bc38104b29c2d054a5e711ad03e781079",
+    "bytes": "115058",
+    "mtime": "2026-10-22 14:04:40"
+   },
+   "note_appended": false
+  },
+  "L1-30": {
+   "file_sha256_live": "852f1ff7ee36d173d49303e6d6e6090212bbbdb6ece3e08a9f227f3bce6cf9cd",
+   "registered_sha256": "852f1ff7ee36d173d49303e6d6e6090212bbbdb6ece3e08a9f227f3bce6cf9cd",
+   "file_bytes_unchanged": true,
+   "authority_before": "ACTIVATED 2026-10-22 on the default `all` route by PI decision (activation card t_42df17c2, verbatim authority \"载体并进默认路由\"); registered as an ACTIVATION, not an audit pass. Kill switch EYEKB_ACT_ONFIBRO=0 restores the pre-flip default byte-for-byte (measured). Rollback = restore the empty whitelist.",
+   "authority_after": "ACTIVATED 2026-10-22 on the default `all` route by PI decision (activation card t_42df17c2, verbatim authority \"载体并进默认路由\"); registered as an ACTIVATION, not an audit pass. Kill switch EYEKB_ACT_ONFIBRO=0 restores the pre-flip default byte-for-byte (measured). Rollback = restore the empty whitelist."
+  },
+  "L6-01": {
+   "before": {
+    "sha256": "354403dae664c6584cd9e4123547cf812528905dd87e9d747f481fe75f40fc40",
+    "bytes": "23643"
+   },
+   "after": {
+    "sha256": "354403dae664c6584cd9e4123547cf812528905dd87e9d747f481fe75f40fc40",
+    "bytes": "23643",
+    "mtime": "2026-10-22 12:55:23"
+   }
+  },
+  "L6-37": {
+   "sha256": "ce6416126252663ff8be794fe985500a284876c3d15b2420359656c1bb4afd87",
+   "live_sha256": "ce6416126252663ff8be794fe985500a284876c3d15b2420359656c1bb4afd87",
+   "re_recorded": false
+  },
+  "L5-11": {
+   "before": {
+    "sha256": "9f7b4be6d8eeb2888fb9b3df6dd18ac7d1db7bfdaf9
+== l6  the change-control instance row (27 columns)
+--- scripts/l6_g6_row.py
+row already present; nothing to do
+== the repository's own gate chain (author tree)
+[g8] should_run=6 did_run=6 pass=6 fail=0 not_run=0 env_error=0 verdict=PASS
+------------------- G8 gate_ontlayer_portability (portability and fail-closed behaviour) rc=0 -------------------
+
+=================== summary ===================
+  G3 verify_repro (41-query retrieval anchor)          rc=0 pass
+  G4 verify_pipeline (three byte anchors)              rc=0 pass
+  G5 gate_registry (registry surface enforced)         rc=0 pass
+  G6 gate_change_control (eight machine rules)         rc=0 pass
+  G7 gate_ontology_layer (read-only ontology explanation layer) rc=0 pass
+  G8 gate_ontlayer_portability (portability and fail-closed behaviour) rc=0 pass
+  ------------------------------------------------------------
+  gates=6 failed=0  (CHAIN PASS)
+== m1 gate (author tree)
+  PASS   M01 PREREG             prereg present; outcome files older than it: none
+  PASS   M02 PREIMAGE           pre-image 3dadbbbaf2631da0 (matches live=True); region counts {'comment': 1, 'doc': 1}; base commit 16349f6f
+  PASS   M03 FLIP               whitelist delta {'ONFIBRO_DEFAULT_LIBS': ['()', '("onfibro_v13",)']}; hunks [358, 380] inside region [358, 386]; py_compile rc=0; import ('onfibro_v13
+  PASS   M04 HARNESS            acceptance=PASS (F1/F2/F3=PASS/PASS/PASS, default route=PASS); moved=45 kinds={'rank-shift': 32, 'carrier-gain': 13}; flip==inject 721/721; motivating
+  PASS   M05 KILL-SWITCH        721/721 clusters and 229/229 battery calls identical (raw+canonical), differing raw=[0, 0]; parent core == kept pre-image=True
+  PASS   M06 DELTA-ATTRIBUTED   clusters moved_raw=721/721 ranking_moved=45 disclosure-only=676; battery moved=228/229; census {'carrier-drives-top1-change': 12, 'carrier-in-candidat
+  PASS   M07 COMPAT-ITEM        legacy panel unchanged=False; item recorded=True; baseline re-recorded=False; probe report ['IDENTITY FAIL: legacy_panel, full_panel moved.', 'differe
+  PASS   M08 FIELD-SCOPE        changed response fields []; outside the allowed set: []
+  PASS   M09 REGISTRY           G5 rc=0 verdict_in_stdout=True; rows re-taken ['GATE_INVENTORY_G2_VERIFY_CONTRACT', 'L1-11M', 'L1-30', 'L5-11', 'L6-01', 'L6-37']
+  PASS   M10 CHANGE-CONTROL     G6 rc=0; activation row present=True
+  PASS   M11 NET-AUDIT          hook load receipts=584; connecting/HTTP events=0; census={'socket.__new__': 333, 'socket.gethostname': 58, 'socket.bind': 59}
+  FAIL   M12 MANIFEST           files=112 drifting=41 ['out/DEFAULT_FACE.json', 'out/FIELD_DIFF.json', 'out/FLIP.json', 'out/G4_REANCHOR.json', 'out/REGISTRY_UPDATE.json', 'out/REPO_
+  PASS   M13 CHANGE-SURFACE     changed=47 outside the declared surface=[]
+  PASS   M14 RELEASE-IDENTITY   scripts/release_identity.py --check rc=0 release_id      f9cbf3eec7e4
+digest_sha256   f9cbf3eec7e419f1cc3c4db1ad0b94e9d933cff3d2738f23e9415be3d336644d
+  PASS   M15 RED-LINES          ONFIBRO whitelist='"onfibro_v13",'; other whitelists={'V6': '"retina_v6", "face_v6"', 'K9': '"k9_ocs",', 'ANTSEG': '"antseg_v10",'}; carrier CL CL:000
+  PASS   M16 CLEAN-CLONE        verdict=PASS commit=6cdf7ae compared=112 differing=0 repo_chain_rc=0
+[activate] checks=16 failed=1 verdict=FAIL
+== m6  assemble REPORT.md from the artefacts
+--- scripts/m6_report.py
+wrote /home/ubuntu/EYEKB_REPO/docs/plans/activate_onfibro_20261022/REPORT.md (249 lines, 24680 bytes)
+== m2  manifest (last: nothing is written after it)
+--- scripts/m2_manifest.py
+manifest: 114 files (4 not distributed, listed separately)
+WAVE GATE FAILED (rc=1). If the only failure is M16 CLEAN-CLONE, commit the mirror
+and run: bash scripts/m4_clone_check.sh

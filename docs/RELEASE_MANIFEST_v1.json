@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "f9cbf3eec7e4",
- "digest_sha256": "f9cbf3eec7e419f1cc3c4db1ad0b94e9d933cff3d2738f23e9415be3d336644d",
+ "release_id": "d27054622f73",
+ "digest_sha256": "d27054622f73eac21a6977b4c9ad6174d1da7b5c74f5f39b51f92b6a4cbfd7e4",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 3987,
- "total_bytes": 240393052,
+ "n_files": 3993,
+ "total_bytes": 240466409,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "3bffa3f7afde",
   "knowledge_bundle_id": "31751e7f9128",
-  "effective_profile_id": "c1bf6ec3a7c8"
+  "effective_profile_id": "a34d7a02c037"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -212,18 +212,23 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/REPORT.md",
-   "git_blob": "71734b304588e326715e5571b424d3fb161f27e1",
+   "git_blob": "439aab2cf0e5650f982cfc5b832b11c62da9acb2",
    "bytes": 24733
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/ledgers/net_audit.log",
-   "git_blob": "691efefd11546583b1ee8be432d2fddf9eb9ae43",
-   "bytes": 57778
+   "git_blob": "e3520f7cb22131704103b09ba4bc59895784b478",
+   "bytes": 87898
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/logs/chain.log",
-   "git_blob": "23a79326d45a965a94a031faea1d6ff905fc104a",
-   "bytes": 75098
+   "git_blob": "961682daaeb8417e7c998f92d7a458bfcbba6b74",
+   "bytes": 92817
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/logs/full_rerun.log",
+   "git_blob": "b8da662f232f03739bdb2a34e2b5c09f82a2808d",
+   "bytes": 12324
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/CLEAN_CLONE_CHECK.json",
@@ -232,18 +237,18 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/DEFAULT_FACE.json",
-   "git_blob": "9beb71188664a30010105f4401bb0964af083c7d",
-   "bytes": 348622
+   "git_blob": "c45bc8573c7d2816de03d7d342e263bb9774db6c",
+   "bytes": 346838
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/FIELD_DIFF.json",
-   "git_blob": "cf91cfacb3b4983340875dab839a569375ac860d",
-   "bytes": 110994
+   "git_blob": "07fcb46b13f9582b791a0fa01058fe10f111fdea",
+   "bytes": 111111
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/FLIP.json",
-   "git_blob": "ca67d8f12a52726bc61195ca339da5ea896dc2f0",
-   "bytes": 4277
+   "git_blob": "8a97c2fefd60c232c485c4072c5b3b68863704a7",
+   "bytes": 4257
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/FLIP_MEASUREMENT.json",
@@ -252,8 +257,8 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/G4_REANCHOR.json",
-   "git_blob": "1f2ad21c7a0fee1cc8b94a7d0a55eb7749e8ecd6",
-   "bytes": 7640
+   "git_blob": "486327feac07274a0db6aa28e4a85b5100d48f1a",
+   "bytes": 5863
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/G6_ROW.json",
@@ -262,18 +267,18 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/GATE.json",
-   "git_blob": "7d722325eb89b803d0772c9c1dad860d3d6bc522",
-   "bytes": 3864
+   "git_blob": "d171c494576042a0a79eee90fd8f2f9daff4a0ec",
+   "bytes": 3902
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/MANIFEST.json",
-   "git_blob": "75454375531b0a4baf2bebdbfe2f1fcf25914bc2",
-   "bytes": 19520
+   "git_blob": "7f10067c13802986afa3825860b031cbbe6f19e4",
+   "bytes": 20164
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/MANIFEST.sha256",
-   "git_blob": "a54e32d66ed02ac6a3d7457f31a5873000f603e3",
-   "bytes": 12196
+   "git_blob": "e1fb0a5ea3f51aa1498af5b3f67aef0a4e46fec2",
+   "bytes": 12574
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/PREIMAGE.json",
@@ -282,13 +287,13 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/REGISTRY_UPDATE.json",
-   "git_blob": "ab46ee28734d0a72830ce39a50b5264e8cb83e6f",
+   "git_blob": "a8f48340086c80dcc3d704607ef7dae09df793ef",
    "bytes": 2618
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/REPO_GATES.log",
-   "git_blob": "4eed2e374b9cfd19d38e78af0ed6d671607ccf68",
-   "bytes": 7681
+   "git_blob": "83facbb6f9482860ce47552b8871ce32e94c81d0",
+   "bytes": 7662
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/VERIFY_CONTRACT_UPDATE.json",
@@ -347,12 +352,12 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/annotation_evidence_report.json",
-   "git_blob": "b79c53bd4fa933d5cd6c65277fb938ee5cfa4fc0",
+   "git_blob": "c31d18d7632f0db71b590ff4134896b999587f59",
    "bytes": 366205
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/annotation_evidence_report.md",
-   "git_blob": "d87c1f8ec66a22effccc9e176da7e5c597db5a72",
+   "git_blob": "5a961e6ae077be382f7496901ee19df6064d995f",
    "bytes": 25184
   },
   {
@@ -362,12 +367,12 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/mcp_calls.jsonl",
-   "git_blob": "e638fc61f0f6ce6bbc96ac9800c096bc1ed885e5",
+   "git_blob": "e66799fba491daa1cd9ccae780161ebecbf38675",
    "bytes": 6472
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/run_summary.json",
-   "git_blob": "783afb83a23e92a9e3508c08aa6a83273832f80a",
+   "git_blob": "807b4ae8ac0cd77c4bf003a6225ddadf84d7f92b",
    "bytes": 658
   },
   {
@@ -377,12 +382,12 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/shadow_attention.json",
-   "git_blob": "d498f6254aff9f421f42bcb615e140d70fc39ad1",
+   "git_blob": "ac7d8051f2bbca1550af78f92059f6505e711bd9",
    "bytes": 33806
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/shadow_flags.jsonl",
-   "git_blob": "19f20a9a96b82583ad679a3fee9ecc7eefa3b578",
+   "git_blob": "70d021e4744b2f4c3f020fa81e9b2d28ce6affe4",
    "bytes": 10381
   },
   {
@@ -412,8 +417,8 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/stage_a/stage_a_log.jsonl",
-   "git_blob": "3a0bc3b9bf1ca87ca585ee7639e230b58ead1357",
-   "bytes": 879
+   "git_blob": "eb09b35a29619ab2d211fa18372d5a581ab46618",
+   "bytes": 1758
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/stage_a/stage_a_metrics.json",
@@ -422,17 +427,17 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/stage_b_log.jsonl",
-   "git_blob": "57974ff831654cbb911473d510751e76912ead46",
-   "bytes": 582
+   "git_blob": "02e579e4c7a240059b084568c85df080d8eacaad",
+   "bytes": 1164
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/annotation_evidence_report.json",
-   "git_blob": "1ed5dc74a37ac6221e391077e9fd227ded576f4b",
+   "git_blob": "4cbc009d5896f633294fd19f772c516db1d8c381",
    "bytes": 380518
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/annotation_evidence_report.md",
-   "git_blob": "b8b0c428544b19522e40333793cda0e1587e74aa",
+   "git_blob": "c87f5d38b5c0348e00c549f91a8ac4eee5638b0e",
    "bytes": 25612
   },
   {
@@ -442,12 +447,12 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/mcp_calls.jsonl",
-   "git_blob": "93f5d0457d93f70f24bfe31407372219d150958f",
-   "bytes": 6647
+   "git_blob": "2a8285251cd78b9afce2f77f8b11938e24616d4e",
+   "bytes": 6645
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/run_summary.json",
-   "git_blob": "cfd3b7202ee03064231641f57385c2f2235e309a",
+   "git_blob": "1296136e66a1d5a0e1eeabb30513372bd6c2a7cc",
    "bytes": 657
   },
   {
@@ -457,12 +462,12 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/shadow_attention.json",
-   "git_blob": "295af8c9cc9f49c6f7bb59bca003accf4f4527e3",
+   "git_blob": "3d4bac3aafbeab520da184b0eccb61703746107e",
    "bytes": 33806
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/shadow_flags.jsonl",
-   "git_blob": "36894212667708dd1ef02f6ed3162ca2eb14053a",
+   "git_blob": "f91cc9df7284f26fe47c89092dc7c71a91217780",
    "bytes": 10381
   },
   {
@@ -492,8 +497,8 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/stage_a/stage_a_log.jsonl",
-   "git_blob": "df1ae8320862a11fd7c977622a88b375d46f47c3",
-   "bytes": 876
+   "git_blob": "c8c3d3e568b4391822fa7e99b9b9fcde4f5a5f0e",
+   "bytes": 1752
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/stage_a/stage_a_metrics.json",
@@ -502,17 +507,17 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/stage_b_log.jsonl",
-   "git_blob": "d4e2ee64d772e693464764fdc0799925d628d2d6",
-   "bytes": 582
+   "git_blob": "0242c9f8eb2cc7300525978d4b184bc524acbed0",
+   "bytes": 1164
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/annotation_evidence_report.json",
-   "git_blob": "570861c7b85e1ad71cbc7d2be5428a688ba7f6d6",
+   "git_blob": "f9eeac5241657b19413e0e15c2b49344dd10941d",
    "bytes": 380518
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/annotation_evidence_report.md",
-   "git_blob": "7b6f29576754c8a54d6acab064496e44d5f6fe64",
+   "git_blob": "3e660938de64391a78d3998d41a1d02586898b07",
    "bytes": 25612
   },
   {
@@ -522,12 +527,12 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/mcp_calls.jsonl",
-   "git_blob": "38ba3aa57f4901b0fb8510b93292fac487847de2",
-   "bytes": 6647
+   "git_blob": "565f287dc9520b006ca70916ffa1f1ed7f674c14",
+   "bytes": 6648
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/run_summary.json",
-   "git_blob": "29d73847cd6e8e8cf91a64000274505b84d924af",
+   "git_blob": "a1834f117e1eb8f5b0ebb0a6f9ddd94439b2ec24",
    "bytes": 657
   },
   {
@@ -537,12 +542,12 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/shadow_attention.json",
-   "git_blob": "fd592f38213dd635a7d2a9e6c7f98f8e6c774e92",
+   "git_blob": "84b59e6300fc3ab6157e6b9f29c8eb00f870a7ee",
    "bytes": 33806
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/shadow_flags.jsonl",
-   "git_blob": "0e33c50b0004828d5e82f7fef611d7bca6078622",
+   "git_blob": "c7a207be6673367cf8bda463701aae6826065584",
    "bytes": 10381
   },
   {
@@ -572,8 +577,8 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/stage_a/stage_a_log.jsonl",
-   "git_blob": "a3ac2bb0bd465de118a0a6345334cc4e8c50ffdc",
-   "bytes": 876
+   "git_blob": "015e6080d839bbe7231bb7b431101e45b3424113",
+   "bytes": 1752
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/stage_a/stage_a_metrics.json",
@@ -582,17 +587,17 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/stage_b_log.jsonl",
-   "git_blob": "be11d602e3c02c61936e73fb83c2f000155206ee",
-   "bytes": 582
+   "git_blob": "ebd5b5a21dd833f1bc8f54fa66390f7ffa60e14e",
+   "bytes": 1164
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/annotation_evidence_report.json",
-   "git_blob": "5f25bcfd38bdfe4e00a813f6b79573e1a3cbb4fe",
+   "git_blob": "6cdcf0b98b59ef522fde73f0ee1a6c98b7439a3b",
    "bytes": 380518
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/annotation_evidence_report.md",
-   "git_blob": "d711d685f7223acf92b2f6354f52c13e29a7e1a2",
+   "git_blob": "1be8ff55a7c45be34512334dcdec6b46237f3b7a",
    "bytes": 25612
   },
   {
@@ -602,12 +607,12 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/mcp_calls.jsonl",
-   "git_blob": "5f58d556d36428600dcd8607da0f6bd55c1a2d76",
+   "git_blob": "3680885c7623dd5b5b102c51d2ab068b4701f11d",
    "bytes": 6648
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/run_summary.json",
-   "git_blob": "3e4a910386406cfc114d6f180b7475a7d715caf0",
+   "git_blob": "b17e257c7c0803dedb5a797da0386f32e65bfde5",
    "bytes": 657
   },
   {
@@ -617,12 +622,12 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/shadow_attention.json",
-   "git_blob": "d9ce5888e9d131a5aff696fe576ad0e8625ce01d",
+   "git_blob": "ed95d9adda002fe4ca6694a29893c67deb811696",
    "bytes": 33806
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/shadow_flags.jsonl",
-   "git_blob": "d15fb7ca3435335b659e97a3f0fa9af8af5bc02f",
+   "git_blob": "851bc9c57cf975c9c431d08ae90494a9745ef76a",
    "bytes": 10381
   },
   {
@@ -652,8 +657,8 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/stage_a/stage_a_log.jsonl",
-   "git_blob": "583ec08cd50bc5d1f9d9125c537e1ea14c3c5bf5",
-   "bytes": 876
+   "git_blob": "10f9d0c9c76cc45d8003f34e54215edcf21d6348",
+   "bytes": 1752
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/stage_a/stage_a_metrics.json",
@@ -662,8 +667,8 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/stage_b_log.jsonl",
-   "git_blob": "aec12179d9f0560f5af384183afe59da2aa0dbca",
-   "bytes": 582
+   "git_blob": "391d5b10cf26494e009474a6dd0c213d7d031e56",
+   "bytes": 1164
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/harness/F1_flip_recorded_decls/REPORT.json",
@@ -696,14 +701,34 @@
    "bytes": 10983
   },
   {
+   "path": "docs/plans/activate_onfibro_20261022/out/repro_test/A.sha256",
+   "git_blob": "55bc35364827ccc88bf0875e0fa61defcaf325fb",
+   "bytes": 413
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/repro_test/B.sha256",
+   "git_blob": "55bc35364827ccc88bf0875e0fa61defcaf325fb",
+   "bytes": 413
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/repro_test/POSTRUN.sha256",
+   "git_blob": "c36f446d425216b7bfab3c9e8652ed2c360c46b5",
+   "bytes": 1414
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/repro_test/PRERUN.sha256",
+   "git_blob": "ed32cefb183391ce832fe6bae099c5ab97296b7f",
+   "bytes": 1414
+  },
+  {
    "path": "docs/plans/activate_onfibro_20261022/pre_images/eyekb_core.py.pre_activation",
    "git_blob": "a7637405956f05cc69bfad87083e643eb1ecdd58",
    "bytes": 114098
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/scripts/g4_reanchor.py",
-   "git_blob": "35396a74155f24de3d7f043bb690ea784f50873c",
-   "bytes": 9198
+   "git_blob": "4723ecf336cedf762a5e3b1634f11ea9f3c0d6e9",
+   "bytes": 9794
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/scripts/l0_preimage.py",
@@ -712,8 +737,8 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/scripts/l1_flip_apply.py",
-   "git_blob": "581f97eba17ce75f739cdadac99054fb5607d3f6",
-   "bytes": 10443
+   "git_blob": "7503470dabef298627d425b301cac34055410e2e",
+   "bytes": 10517
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/scripts/l2_flip_measure.py",
@@ -722,8 +747,8 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/scripts/l3_default_face.py",
-   "git_blob": "9dd1c405ede7d451767008b28d6cf9983453a59a",
-   "bytes": 19782
+   "git_blob": "0d66532361b6d81af5b60e12cc703358a9d758c6",
+   "bytes": 21380
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/scripts/l3b_replay_route.py",
@@ -732,8 +757,8 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/scripts/l3c_field_diff.py",
-   "git_blob": "0c5198c5f818748866e17ca3e5178e993821b301",
-   "bytes": 6469
+   "git_blob": "8e914dc6c19b718bfb503d146280265e73a47491",
+   "bytes": 7054
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/scripts/l4_registry_rows.py",
@@ -752,13 +777,13 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/scripts/m1_gate.py",
-   "git_blob": "2bf4fc12b764435e1355d51807cf75b44ec1f1b9",
-   "bytes": 15298
+   "git_blob": "8ddb8dc6a37ec65615a3cc8b30adcab7113b73a0",
+   "bytes": 15746
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/scripts/m2_manifest.py",
-   "git_blob": "665ee45189e0b6c638c980c6eeef139275aa6f5b",
-   "bytes": 4138
+   "git_blob": "77c0af9953a4f00c17ef9f69df557c4028309f98",
+   "bytes": 4505
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/scripts/m3_w3_manifest.py",
@@ -776,13 +801,18 @@
    "bytes": 24076
   },
   {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/m7_mirror.sh",
+   "git_blob": "7fab0e3578e3a2307eeace16f9eaa0a5b50a435b",
+   "bytes": 2461
+  },
+  {
    "path": "docs/plans/activate_onfibro_20261022/scripts/netaudit/sitecustomize.py",
    "git_blob": "1f1bf11132ed7272422b3b4802704155750d49ca",
    "bytes": 1203
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/scripts/run_all.sh",
-   "git_blob": "a705a9a15cb3443e51eed4e6ca613b482ffb8fec",
+   "git_blob": "a776ebb87e4c34a5a1cc21f0d132805aedeaa271",
    "bytes": 7119
   },
   {

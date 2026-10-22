@@ -87,6 +87,16 @@ def replay(fmode, arm, tmp):
     return json.load(open(os.path.join(tmp, "%s_%s.json" % (arm, fmode))))
 
 
+def clean_chatter(text, head=0, tail=4000):
+    """Drop environment chatter (progress bars, loader notes, model-download lines) so the recorded
+    readout is reproducible: measured 2026-10-22, the raw tail carried per-run throughput figures and
+    made every artefact byte-differ after an identical re-run."""
+    noise = ("it/s", "%|", "Batches:", "Loading weights", "Loading SentenceTransformer",
+             "JAX version", "INFO ", "DB: ", "Batches")
+    keep = [l for l in (text or "").splitlines() if not any(n in l for n in noise)]
+    return "\n".join(keep)[-tail:]
+
+
 def probe(arm, baseline=False):
     cmd = [PROBE_PY, PROBE]
     if baseline:
@@ -98,8 +108,10 @@ def probe(arm, baseline=False):
         if line.startswith('"legacy_panel"') or line.startswith('"full_panel"'):
             k, v = line.split(":", 1)
             digests[k.strip().strip('"')] = v.strip().strip(',').strip('"')
-    return {"rc": p.returncode, "digests": digests, "stdout_tail": p.stdout[-1500:],
-            "stdout_full": p.stdout[-4000:], "stderr_tail": p.stderr[-500:]}
+    return {"rc": p.returncode, "digests": digests,
+            "stdout_tail": clean_chatter(p.stdout, tail=1500),
+            "stdout_full": clean_chatter(p.stdout, tail=4000),
+            "stderr_tail": clean_chatter(p.stderr, tail=500)}
 
 
 def golden(arm, tmp):
@@ -118,12 +130,23 @@ def main():
     os.makedirs(tmp, exist_ok=True)
     cur = open(CORE, "rb").read()
     cur_sha = sha(cur)
-    parent = sh(["git", "-C", REPO, "show", "HEAD:mcp_server/eyekb_core.py"])
+    # The reference MUST be pinned to the pre-flip commit, never `HEAD`: once this card's own change
+    # is committed, HEAD's core IS the activated core and the comparison degenerates into a
+    # self-comparison (measured 2026-10-22 on the first post-commit re-run: PARENT == FLIP on all
+    # 721 queries, i.e. a device that had silently stopped measuring anything). The pin is read from
+    # this card's own pre-image record rather than typed here, and the bytes are checked against the
+    # kept pre-image below.
+    ref = json.load(open(os.path.join(OUT, "PREIMAGE.json")))["base_commit"]
+    parent = sh(["git", "-C", REPO, "show", "%s:mcp_server/eyekb_core.py" % ref])
     if parent.returncode != 0:
-        raise SystemExit("cannot read the parent commit's core: %s" % parent.stderr)
+        raise SystemExit("cannot read the pre-flip commit's core: %s" % parent.stderr)
     parent_bytes = parent.stdout.encode()
     pre = open(os.path.join(WAVE, "pre_images", "eyekb_core.py.pre_activation"), "rb").read()
     doc = {"probe": "l3_default_face.py", "core_path": "mcp_server/eyekb_core.py",
+           "pre_flip_reference_commit": ref,
+           "pre_flip_reference_note": ("pinned to the pre-flip commit recorded by this card's "
+                                       "pre-image, not to HEAD, so a post-commit re-run still "
+                                       "compares the shipped default against the pre-flip default"),
            "child_env_policy": ("PYTHONPATH pinned to the audit-hook directory only (the worker "
                                 "sandbox exports another venv's site-packages, which shadows `mcp` "
                                 "and turns the tool-panel probe into an inconclusive rc=3); "

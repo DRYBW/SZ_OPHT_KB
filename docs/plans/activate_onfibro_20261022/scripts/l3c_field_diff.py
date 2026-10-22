@@ -108,10 +108,17 @@ def main():
     os.makedirs(tmp, exist_ok=True)
     cur = open(CORE, "rb").read()
     cur_sha = sha(cur)
-    parent = subprocess.run(["git", "-C", REPO, "show", "HEAD:mcp_server/eyekb_core.py"],
+    # pinned to the pre-flip commit recorded by this card's pre-image: HEAD is the ACTIVATED core
+    # once the change is committed, and a comparison against HEAD would be a self-comparison with an
+    # empty diff (measured 2026-10-22 on the first post-commit re-run: changed fields = {})
+    ref = json.load(open(os.path.join(OUT, "PREIMAGE.json")))["base_commit"]
+    parent = subprocess.run(["git", "-C", REPO, "show", "%s:mcp_server/eyekb_core.py" % ref],
                             capture_output=True, text=True).stdout.encode()
     doc = {"probe": "l3c_field_diff.py", "flipped_core_sha256": cur_sha,
-           "parent_core_sha256": sha(parent)}
+           "pre_flip_reference_commit": ref,
+           "parent_core_sha256": sha(parent),
+           "parent_core_equals_kept_preimage": sha(parent) == sha(
+               open(os.path.join(WAVE, "pre_images", "eyekb_core.py.pre_activation"), "rb").read())}
     try:
         with open(CORE, "wb") as f:
             f.write(parent)
