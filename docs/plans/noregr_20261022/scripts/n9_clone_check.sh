@@ -24,7 +24,11 @@ MODE=from_commit
 for a in "$@"; do case "$a" in --mode=*) MODE="${a#--mode=}" ;; esac; done
 
 PY=/usr/bin/python3
+# The commit under test. HEAD is NOT used blindly: other cards commit to this repository while this
+# wave runs, so a clone of HEAD would judge someone else's commit. Pass --commit=<sha> (the wave's
+# own commit) to pin it; the default is HEAD with a warning printed.
 COMMIT="$(git -C "$REPO" rev-parse HEAD)"
+for a in "$@"; do case "$a" in --commit=*) COMMIT="${a#--commit=}" ;; esac; done
 CLONE="$(mktemp -d /tmp/noregr_clone_XXXXXX)"
 trap 'if [ "${NR_KEEP_CLONE:-0}" != "1" ]; then rm -rf "$CLONE"; fi' EXIT
 
@@ -41,10 +45,21 @@ if [ "$MODE" = "copy_local" ]; then
 fi
 if [ ! -d "$MIRROR" ]; then echo "the wave is not present in the clone at $RELPATH"; exit 3; fi
 
+# The retrieval corpus is a RELEASE ASSET, not a repository file (README 5-minute quickstart step 2:
+# "download the prebuilt release ... and run sha256sum -c"). A clean clone therefore cannot run G3 at
+# all: measured, `tests/verify_repro.py` reports "corpus directory not found" in the clone. Passing
+# EYEKB_CORPUS at the unpacked asset is what makes the clone run comparable to the author run, and it
+# is recorded below rather than left implicit.
+CORPUS="${EYEKB_CORPUS:-$REPO/literature_db/v2.4.2_2026-09_slim}"
+CORPUS_IN_CLONE="absent"
+[ -d "$CLONE/literature_db/v2.4.2_2026-09_slim" ] && CORPUS_IN_CLONE="present"
+echo "== corpus in the clone: $CORPUS_IN_CLONE; using EYEKB_CORPUS=$CORPUS"
+
 echo "== the repository's own gate chain inside the clone (G3..G8)"
 ( cd "$CLONE" && PYTHONHASHSEED=0 \
     EYEKB_G3_PY=/home/ubuntu/training-venv/bin/python3 \
     EYEKB_MODEL_DIR=/mnt/D/OcularKB/models/bge-large-en-v1.5 \
+    EYEKB_CORPUS="$CORPUS" \
     /usr/bin/bash tests/run_gates.sh > "$CLONE/.clone_repo_gates.log" 2>&1 )
 REPO_GATE_RC=$?
 REPO_GATE_TAIL="$(tail -9 "$CLONE/.clone_repo_gates.log" 2>/dev/null)"
@@ -77,43 +92,72 @@ done < <(cd "$WAVE" && find . -type f | sort)
 echo "   compared $N files, differing $DIFF"
 
 echo "== writing the clone-check record into both trees"
-"$PY" - "$WAVE" "$CLONE" "$COMMIT" "$RC" "$V" "$FAILED" "$INFO" "$N" "$DIFF" "$MODE" \
-      "$REPO_GATE_RC" <<PYEOF
+# A plain key=value payload file, parsed by the reader: positional heredoc arguments proved fragile
+# here (the interpreter saw an empty argv), and the record must be written reliably.
+PAY="$CLONE/.clonecheck_payload"
+{
+  echo "wave=$WAVE"
+  echo "clone=$CLONE"
+  echo "commit=$COMMIT"
+  echo "rc=$RC"
+  echo "verdict=$V"
+  echo "failed=$FAILED"
+  echo "info=$INFO"
+  echo "n=$N"
+  echo "diff=$DIFF"
+  echo "mode=$MODE"
+  echo "reporc=$REPO_GATE_RC"
+  echo "corpus=$CORPUS"
+  echo "corpus_in_clone=$CORPUS_IN_CLONE"
+} > "$PAY"
+
+"$PY" - "$PAY" "$WAVE" <<'PYEOF'
 import json, os, sys
-(wave, clone, commit, rc, verdict, failed, info, n, diff, mode, reporc) = sys.argv[1:12]
+pay = {}
+for line in open(sys.argv[1], encoding="utf-8"):
+    if "=" in line:
+        k, v = line.rstrip("\n").split("=", 1)
+        pay[k] = v
+wave = sys.argv[2]
 doc = {
     "generated_by": "scripts/n9_clone_check.sh",
-    "mode": mode,
-    "commit": commit,
-    "clone_of_commit": commit,
+    "mode": pay["mode"],
+    "commit": pay["commit"],
+    "clone_of_commit": pay["commit"],
     "clone_root": "(temporary clone of the repository, removed after the run)",
-    "repo_gate_chain_rc_in_clone": int(reporc),
+    "repo_gate_chain_rc_in_clone": int(pay["reporc"]),
     "repo_gate_chain_note": "tests/run_gates.sh (G3 verify_repro, G4 verify_pipeline, G5 "
                             "gate_registry, G6 gate_change_control, G7 gate_ontology_layer, G8 "
                             "gate_ontlayer_portability), run inside the clone with the documented "
-                            "precondition environment (EYEKB_G3_PY / EYEKB_MODEL_DIR)",
-    "gate_rc": int(rc),
-    "gate_verdict": verdict,
-    "gate_failed": failed,
-    "gate_info": info,
+                            "precondition environment (EYEKB_G3_PY / EYEKB_MODEL_DIR / EYEKB_CORPUS)",
+    "corpus_path_used": pay["corpus"],
+    "corpus_present_in_clone": pay["corpus_in_clone"],
+    "corpus_note": ("the retrieval corpus is a release asset, not a repository file (README "
+                    "quickstart step 2), so a clean clone cannot run G3 without it; the unpacked "
+                    "asset on this machine is named here so the clone run is comparable to the "
+                    "author run and the reader can see exactly which data was used"),
+    "gate_rc": int(pay["rc"]),
+    "gate_verdict": pay["verdict"],
+    "gate_failed": pay["failed"],
+    "gate_info": pay["info"],
     "gate_info_note": ("N12 CLEAN-CLONE is reported as INFO inside this invocation: the clone check "
                        "is the step that produces the record N12 judges, so the author-tree "
                        "invocation judges it"),
-    "files_compared_author_vs_clone": int(n),
-    "files_differing_from_author_tree": int(diff),
+    "files_compared_author_vs_clone": int(pay["n"]),
+    "files_differing_from_author_tree": int(pay["diff"]),
     "ledgers_and_logs_excluded_from_fidelity": True,
     "ledgers_and_logs_exclusion_reason": ("ledgers/ and logs/ are runtime output that this chain "
                                           "rewrites while it runs; they are excluded from both the "
                                           "manifest and this comparison on purpose, and the reader "
                                           "is told so rather than left to guess"),
-    "verdict": ("PASS" if (int(rc) == 0 and verdict == "PASS" and int(diff) == 0
-                           and int(reporc) == 0) else "FAIL"),
+    "verdict": ("PASS" if (int(pay["rc"]) == 0 and pay["verdict"] == "PASS"
+                           and int(pay["diff"]) == 0 and int(pay["reporc"]) == 0) else "FAIL"),
     "how_the_clone_was_run": ("git clone --no-hardlinks file:///home/ubuntu/EYEKB_REPO, checked out "
                               "at the commit under test; both the repository's gate chain and this "
                               "wave's gate executed inside the clone"),
 }
 for target in (os.path.join(wave, "out/CLEAN_CLONE_CHECK.json"),
-               os.path.join(clone, "docs/plans/noregr_20261022/out/CLEAN_CLONE_CHECK.json")):
+               os.path.join(pay["clone"], "docs/plans/noregr_20261022/out/CLEAN_CLONE_CHECK.json")):
     try:
         json.dump(doc, open(target, "w"), ensure_ascii=False, indent=1)
     except OSError:
