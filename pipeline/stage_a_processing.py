@@ -66,6 +66,21 @@ def _looks_ensg(names) -> bool:
     return float(s.str.match(r"^(ENS[GPT]\d{9,}|ENS\w{2,5}G\d{9,}\b)").mean()) > 0.5
 
 
+def _looks_composite(names) -> bool:
+    """var_names shaped '<SYMBOL>#<ENSG…>' — a common external export convention.
+
+    Such a name is NOT a plain symbol and NOT a bare ENSG id, so _looks_ensg() is
+    False for it; without this check the caller would classify it as 'var_names are
+    already symbols' and carry the composite string all the way into the evidence
+    retrieval layer, where every marker query then matches nothing. Same uniform
+    sampling rule as _looks_ensg (leading block is often clone/locus symbols).
+    """
+    arr = list(names)
+    step = max(1, len(arr) // 2000)
+    s = pd.Series([str(x) for x in arr[::step]])
+    return float(s.str.match(r"^[^#\s]+#(ENS[GPT]\d{9,}|ENS\w{2,5}G\d{9,}\b)").mean()) > 0.5
+
+
 def _symbol_column(adata: ad.AnnData) -> str | None:
     for c in ("gene_symbols", "symbol", "gene_name", "symbols", "symbols_of_gene_id"):
         if c in adata.var.columns and adata.var[c].notna().any():
@@ -76,7 +91,10 @@ def _symbol_column(adata: ad.AnnData) -> str | None:
 def resolve_gene_symbols(adata: ad.AnnData, species: str, logf,
                          symbol_col: str = "", ensg_map: str = "") -> tuple[ad.AnnData, dict]:
     """Turn var_names into gene symbols (for evidence retrieval). Priority:
-    --gene-symbol-col > a symbol column already in var > var_names already symbols > --ensg-map mapping > degraded (keep original IDs and note it in the report).
+    --gene-symbol-col > composite '<SYMBOL>#<ENSG>' var_names > a symbol column already in var
+    > var_names already symbols > --ensg-map mapping > degraded (keep original IDs and note it in the report).
+    Composite names are resolved from the in-var symbol column when one is present, otherwise by
+    stripping the id suffix; either way the composite string never reaches evidence retrieval.
     Also fills .var['mt'] boolean column (mitochondrial QC; symbol prefix MT-/mt-* or built-in ENSG constants)."""
     note = {"gene_id_mode": "", "symbol_source": "", "degraded": False}
     vn = adata.var_names.astype(str)
@@ -85,6 +103,19 @@ def resolve_gene_symbols(adata: ad.AnnData, species: str, logf,
             raise SystemExit(f"--gene-symbol-col={symbol_col!r} is not among the var columns: {list(adata.var.columns)}")
         adata.var_names = pd.Index(adata.var[symbol_col].astype(str).str.upper().to_numpy())
         note.update(gene_id_mode="symbols", symbol_source=f"--gene-symbol-col:{symbol_col}")
+    elif _looks_composite(vn):
+        sc = _symbol_column(adata)
+        if sc:
+            adata.var_names = pd.Index(adata.var[sc].astype(str).str.upper().to_numpy())
+            note.update(gene_id_mode="symbols",
+                        symbol_source=f"var:{sc} (composite id-suffixed var_names resolved from symbol column)")
+        else:
+            adata.var_names = pd.Index(vn.str.split("#", n=1).str[0].str.upper().to_numpy())
+            note.update(gene_id_mode="symbols",
+                        symbol_source="var_names (composite id suffix stripped)")
+        note["composite_var_names"] = True
+        _log(logf, "gene_symbols", mode="symbols_composite_resolved",
+             symbol_source=note["symbol_source"])
     elif _symbol_column(adata) and not _looks_ensg(vn):
         pass  # var_names are already symbols
         note.update(gene_id_mode="symbols", symbol_source="var_names")

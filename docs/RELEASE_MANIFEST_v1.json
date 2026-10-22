@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "e2c6c3df29f7",
- "digest_sha256": "e2c6c3df29f79e42cc2687c4df2774064b0d1b96b0f1bcbeec369fdd1c6d014a",
+ "release_id": "8a898daa723e",
+ "digest_sha256": "8a898daa723e303881ac1ca1ff88b728ee0d5150b3f6fcbcaf27e4f85fb1c44e",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
  "n_files": 3993,
- "total_bytes": 240472287,
+ "total_bytes": 240475638,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "3bffa3f7afde",
   "knowledge_bundle_id": "31751e7f9128",
-  "effective_profile_id": "4c9584a9e17a"
+  "effective_profile_id": "dde4b3267601"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -177,8 +177,8 @@
   },
   {
    "path": "docs/W3_PIPELINE_REGISTRY.tsv",
-   "git_blob": "eaa06a21803e244f01ad9b706f9459c641b1bd24",
-   "bytes": 120461
+   "git_blob": "97d870f46d6501d29636747184a5210e3f5a0acc",
+   "bytes": 121206
   },
   {
    "path": "docs/W3_UPSTREAM_FIRST_RULE.md",
@@ -217,8 +217,8 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/ledgers/net_audit.log",
-   "git_blob": "98414c0f100fcf8c36e9599c45dad21a7454891d",
-   "bytes": 88648
+   "git_blob": "065830c0ff5813379332cbd04e6cf8e7cb6de933",
+   "bytes": 88898
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/logs/chain.log",
@@ -19537,8 +19537,8 @@
   },
   {
    "path": "pipeline/stage_a_processing.py",
-   "git_blob": "352cfc8e5120caf928cb04d308cb6f6c17234778",
-   "bytes": 22232
+   "git_blob": "add0761fca8b841d2e50ddd7e464c58c70ba9186",
+   "bytes": 23941
   },
   {
    "path": "pipeline/stage_b_evidence.py",
@@ -19717,8 +19717,8 @@
   },
   {
    "path": "tests/G4_EXPECTED.json",
-   "git_blob": "3164600f32e3678186b024d34c989756d7c589c6",
-   "bytes": 5696
+   "git_blob": "d95f1577bd81f61b757a7b49ef24721483f09a69",
+   "bytes": 6343
   },
   {
    "path": "tests/G4_EXPECTED_PRE-ENGMIG.json",
