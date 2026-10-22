@@ -1,0 +1,162 @@
+{
+ "probe": "l6_closeout_collision.py",
+ "mode": "closeout",
+ "collision": {
+  "what": "a concurrent card (`t_7509a1a2`, 'second discriminating marker for the 26 thin subtype panels') edits the same file in the same working tree; the dispatch queue had already named that file as the conflict point",
+  "sibling_card": "t_7509a1a2",
+  "sibling_wave": "/mnt/D/EyeKB/plans/subtype_second_marker_20261022",
+  "sibling_registration_record": {
+   "probe": "m7_register_library.py",
+   "file": "mcp_server/eyekb_core.py",
+   "edits": 4,
+   "library": "subtype_v14",
+   "whitelist": "empty by design",
+   "compiles": true,
+   "sha256_before": "bd45c6b93ec73cd67f810e865c0721f08882c5b71a1fc9e76e71dec5a1ca7a4a",
+   "sha256": "678fa54529f56479869e6b6366825becb2f62aad4adc496deb69e7b096365172",
+   "bytes": 120827
+  },
+  "sibling_pre_image_path": "/mnt/D/EyeKB/plans/subtype_second_marker_20261022/out/PREIMAGE_eyekb_core.py.bak_pre_subtype2m",
+  "sibling_pre_image_sha256": "bd45c6b93ec73cd67f810e865c0721f08882c5b71a1fc9e76e71dec5a1ca7a4a",
+  "this_cards_flipped_sha256": "bd45c6b93ec73cd67f810e865c0721f08882c5b71a1fc9e76e71dec5a1ca7a4a",
+  "sibling_pre_image_is_this_cards_flipped_core": true,
+  "bytes_found_by_this_window_sha256": "be4e91c311bb77f16cd7e3e3baf1ff2afcaee858dba7330be985ee137231a0df",
+  "this_cards_pre_image_sha256": "95aa15be1f9e25a9d8d3dabb2dce5a88abef7e0f9e6bf15f1aaec695f28a8db4",
+  "parent_commit_blob_sha256": "e74c73c6c2ef04d19b94edd69cfb414bc38104b29c2d054a5e711ad03e781079",
+  "core_mtime_observed": "2026-10-22 21:31:47.231635863 +0800"
+ },
+ "steps": {
+  "sibling_delta": {
+   "file": "out/collision/sibling_delta_vs_this_cards_flipped_core.diff",
+   "note": "the diff was taken while the sibling's registered state (sha 9f0a34c1...) was on disk; it is what this card measured, and it is kept rather than retyped",
+   "text": "--- this card's flipped core (bd45c6b9, the sibling's pre-image)\n+++ sibling registered state (9f0a34c1, reconstructed from its own script v1)\n@@ -334,5 +334,18 @@\n     #   so the shipped default route is byte-identical; merging it needs its own measured harm line\n     #   and separate PI approval. Rollback = delete this line and the file.\n-    \"onfibro_v13\": MARKER_DIR / \"markers_v13_onfibro_increment.json\"}\n+    # subtype_v14 = the second-marker increment for the 26 one-gene-thick subtype panels\n+    #   (2026-10-22, card t_7509a1a2): 16 entries, one per literature-consensus retinal subtype the\n+    #   frozen consensus wave measured as having exactly one marker clearing its pre-registered gate,\n+    #   each named by the Cell Ontology label of the term it carries and holding the frozen panel plus\n+    #   at most 2 literature-sourced candidates (segment-level attribution against the in-repo\n+    #   literature corpus; every candidate carries its paper ids and its per-volume measurability in\n+    #   the file itself).\n+    #   Why the anchor line above is REPEATED in this replacement: the previous wave's append dropped\n+    #   that very line from the dictionary (measured: the default route raised KeyError onfibro_v13),\n+    #   so an append that does not echo its anchor is a known way to break the shipped surface.\n+    #   REGISTERED_DEFAULT_OFF with an EMPTY whitelist: nothing is merged into `all` in any state, so\n+    #   the shipped default route is byte-identical; merging it needs its own measured harm line and\n+    #   separate PI approval. Rollback = delete the subtype_v14 lines and the file.\n+    \"subtype_v14\": MARKER_DIR / \"markers_v14_subtype_second_increment.json\"}\n \n # [ACT t_5d5853c9] v6-merge whitelist for the default all — hard-coded; env values can only toggle the\n@@ -424,4 +437,24 @@\n     \"\"\"\n     v = (os.environ.get(\"EYEKB_ACT_HOLEFILL\") or \"\").strip().casefold()\n+    return v not in {\"0\", \"false\", \"off\", \"no\"}\n+\n+\n+# [SUBTYPE2 t_7509a1a2] whitelist for the second-marker subtype increment.  EMPTY BY DESIGN: the\n+# registration is deliberately unreachable from the default `all` set, so this predicate exists to\n+# make the OFF state explicit and machine-readable rather than to open a route.  Semantics follow the\n+# ACT-v6 discipline so a future activation wave inherits an obvious shape:\n+# {0,false,off,no} = OFF; unset/empty/anything else = the value of this switch, which -- with an\n+# empty whitelist -- still merges nothing.\n+SUBTYPE_DEFAULT_LIBS = ()\n+\n+\n+def _subtype_act_enabled():\n+    \"\"\"env EYEKB_ACT_SUBTYPE in {0,false,off,no} = OFF; unset/anything else = ON.\n+\n+    ON still injects nothing: SUBTYPE_DEFAULT_LIBS is empty by design (card t_7509a1a2 red line --\n+    this registration may not change the default response bytes). The library is reachable by name\n+    only, and the panel it carries is a measurement artefact, not a shipped route.\n+    \"\"\"\n+    v = (os.environ.get(\"EYEKB_ACT_SUBTYPE\") or \"\").strip().casefold()\n     return v not in {\"0\", \"false\", \"off\", \"no\"}\n \n@@ -967,4 +1000,7 @@\n             names = names + list(ONFIBRO_DEFAULT_LIBS)  # [ONFIBRO] empty whitelist: appends nothing,\n             # and the branch is kept so the OFF state is auditable rather than implicit\n+        if _subtype_act_enabled():\n+            names = names + list(SUBTYPE_DEFAULT_LIBS)  # [SUBTYPE2] empty whitelist: appends nothing,\n+            # and the branch is kept so the OFF state is auditable rather than implicit\n         if _holefill_act_enabled():\n             names = names + list(HOLEFILL_DEFAULT_LIBS)  # [HOLEFILL] literature hole-fill library on\n@@ -975,5 +1011,5 @@\n         raise ValueError(\"library must be one of retina|membrane|retina_interneuron|retina_v6|\"\n                          \"face_v6|lacrimal_v6|k9_ocs|retina_v7|retina_dev|antseg_v10|\"\n-                         \"lensiris_v11|holefill_v12|onfibro_v13|all, got: \"\n+                         \"lensiris_v11|holefill_v12|onfibro_v13|subtype_v14|all, got: \"\n                          + repr(library))\n     dbs = []\n"
+  },
+  "sibling_append_dropped_a_registration_line": {
+   "dropped": "onfibro_v13's MARKER_LIBS entry line",
+   "mechanism": "the append replaced the dictionary's closing line -- which carried the previous trailing entry -- instead of following it; the same mechanism this card documented in PREREG section 1b for commit 0312016",
+   "measured_consequence": "`library=\"all\"` raised KeyError: 'onfibro_v13' because ONFIBRO_DEFAULT_LIBS is non-empty (that carrier is activated) while MARKER_LIBS no longer carried the key",
+   "sibling_self_corrected": "the sibling card's own registration script now echoes the anchor line in its replacement and records why (its comment cites the measured KeyError) -- found in m7_register_library.py while closing this card out"
+  },
+  "bytes_overwritten_by_this_card": {
+   "sha256": "fb6c0408f01c3e130258fcd28cbb7e01d1f4b1633876e88c4fa6806f49ba6ea7",
+   "what_it_was": "the sibling card's most recent uncommitted write (mtime between 21:15:53 and this window's start), overwritten when this card put its measurement core in place",
+   "recoverable": false,
+   "why_not_restored": "a reconstruction from the sibling's own registration script plus its pre-image yields a state whose sha is neither the overwritten bytes nor the sha that card recorded (see reconstruction_candidates below); writing a guess into a live card's file would be worse than leaving the state this card owns and telling that card to re-run its own step",
+   "reconstruction_candidates": {
+    "sibling_state_v1_reconstructed": "f09863c8c9cebaf28e76daa7bfcae77b14f45f915d7c94e859768f5bef3c8746",
+    "sibling_state_v2_echoing_anchor (its current script)": "678fa54529f56479869e6b6366825becb2f62aad4adc496deb69e7b096365172",
+    "bytes_overwritten_by_this_card": "fb6c0408f01c3e130258fcd28cbb7e01d1f4b1633876e88c4fa6806f49ba6ea7",
+    "sibling_recorded_registration_sha": "9f0a34c14eda649189cad82d2dd469f11f5ace61c076d38d8e099ca472db5177"
+   }
+  },
+  "sibling_registration_rebuilt_from_its_own_script": {
+   "script": "plans/subtype_second_marker_20261022/scripts/m7_register_library.py",
+   "rebuilt_sha256": "678fa54529f56479869e6b6366825becb2f62aad4adc496deb69e7b096365172",
+   "recorded_registration_sha256": "678fa54529f56479869e6b6366825becb2f62aad4adc496deb69e7b096365172",
+   "note": "the sibling's script now echoes the anchor line it is replacing, so the rebuilt state keeps `onfibro_v13`; its recorded pre-rebuild registration dropped it, and this card's independent reconstruction of THAT state from the same anchors reproduces the sha the sibling recorded (out/collision/reconstruction_candidates.json) -- so the shared-file edit is fully understood, not guessed"
+  },
+  "this_cards_wiring_removed": {
+   "predicate_block_chars": 2457,
+   "loader_branch_chars": 234,
+   "still_has_holefill_wiring": false,
+   "registration_entry_present": true,
+   "sibling_registration_present": true,
+   "sibling_wiring_present": true,
+   "onfibro_entry_present": true
+  },
+  "final_core_sha256": "be4e91c311bb77f16cd7e3e3baf1ff2afcaee858dba7330be985ee137231a0df",
+  "final_state_provenance": {
+   "parent_commit_bytes": "yes (unmodified apart from the two additions below)",
+   "this_cards_registration_restoration": "\"holefill_v12\": MARKER_DIR / \"markers_v12_holefill_increment.json\"",
+   "sibling_card_registration": "\"subtype_v14\": MARKER_DIR / \"markers_v14_subtype_second_increment.json\" + SUBTYPE_DEFAULT_LIBS=() + _subtype_act_enabled()",
+   "this_cards_activation_wiring": "removed (NO-GO: the library stays default-off)",
+   "carries_the_sibling_registration": true,
+   "equals_this_cards_pre_image": false
+  },
+  "py_compile_rc": 0,
+  "py_compile_stderr": "",
+  "final_probe": {
+   "marker_libs": [
+    "antseg_v10",
+    "face_v6",
+    "holefill_v12",
+    "k9_ocs",
+    "lacrimal_v6",
+    "lensiris_v11",
+    "membrane",
+    "onfibro_v13",
+    "retina",
+    "retina_dev",
+    "retina_interneuron",
+    "retina_v6",
+    "retina_v7",
+    "subtype_v14"
+   ],
+   "n_libs": 14,
+   "holefill_client": "markers_v12_holefill_increment.json",
+   "onfibro_client": "markers_v13_onfibro_increment.json",
+   "subtype_client": "markers_v14_subtype_second_increment.json",
+   "whitelists": {
+    "ANTSEG_DEFAULT_LIBS": [
+     "antseg_v10"
+    ],
+    "K9_DEFAULT_LIBS": [
+     "k9_ocs"
+    ],
+    "ONFIBRO_DEFAULT_LIBS": [
+     "onfibro_v13"
+    ],
+    "SUBTYPE_DEFAULT_LIBS": [],
+    "V6_DEFAULT_LIBS": [
+     "retina_v6",
+     "face_v6"
+    ]
+   },
+   "has_holefill_wiring": false,
+   "has_subtype_wiring": true,
+   "all_route_names": [
+    "retina",
+    "membrane",
+    "retina_interneuron",
+    "retina_v6",
+    "face_v6",
+    "k9_ocs",
+    "antseg_v10",
+    "onfibro_v13"
+   ],
+   "all_route_top": null,
+   "all_route_ok": true,
+   "holefill_by_name": [
+    "retinal rod cell"
+   ],
+   "tag": "final_state",
+   "ran": true
+  },
+  "default_route_final_vs_parent_commit": {
+   "clusters": {
+    "n": 721,
+    "n_differing_raw": 0,
+    "differing": [],
+    "parent_raw_combined_md5": "61ac177e309458a7832058a6cf95a286",
+    "final_raw_combined_md5": "61ac177e309458a7832058a6cf95a286",
+    "identical": true
+   },
+   "battery": {
+    "n": 229,
+    "n_differing_raw": 0,
+    "differing": [],
+    "parent_raw_combined_md5": "8984989c6587f24fc05f0287e90c0b56",
+    "final_raw_combined_md5": "8984989c6587f24fc05f0287e90c0b56",
+    "identical": true
+   }
+  },
+  "restored_core_sha256_after_replays": "be4e91c311bb77f16cd7e3e3baf1ff2afcaee858dba7330be985ee137231a0df",
+  "workspace_left_at_final_state": true,
+  "handoff_required_by_the_sibling_card": [
+   "re-base its registration on this card's pre-flip state (sha 95aa15be...) or on the parent commit: its recorded pre-image (bd45c6b9...) contains THIS card's activation wiring, which was measured and ruled NO-GO and must not be committed by that card",
+   "re-run its own registration step (m7_register_library.py is idempotent and already echoes the anchor line, so the onfibro_v13 entry is preserved)",
+   "re-take its default-face identity after that re-registration"
+  ]
+ },
+ "verdict": "PASS"
+}

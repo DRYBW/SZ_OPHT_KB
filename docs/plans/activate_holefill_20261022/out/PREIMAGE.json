@@ -1,0 +1,29 @@
+{
+ "probe": "l0_preimage.py",
+ "core_path": "mcp_server/eyekb_core.py",
+ "core_sha256": "95aa15be1f9e25a9d8d3dabb2dce5a88abef7e0f9e6bf15f1aaec695f28a8db4",
+ "core_bytes": 115553,
+ "core_mtime": "2026-10-22 20:52:36.051010415 +0800",
+ "pre_image_path": "docs/plans/activate_holefill_20261022/pre_images/eyekb_core.py.pre_activation",
+ "pre_restore_image_path": "docs/plans/activate_holefill_20261022/pre_images/eyekb_core.py.pre_restore",
+ "pre_restore_image_sha256": "e74c73c6c2ef04d19b94edd69cfb414bc38104b29c2d054a5e711ad03e781079",
+ "before_comment_region": "    v = (os.environ.get(\"EYEKB_ACT_ONFIBRO\") or \"\").strip().casefold()\n    return v not in {\"0\", \"false\", \"off\", \"no\"}\n\n\ndef _antseg_act_enabled():",
+ "before_doc_region": "        if _onfibro_act_enabled():\n            names = names + list(ONFIBRO_DEFAULT_LIBS)  # [ONFIBRO] empty whitelist: appends nothing,\n            # and the branch is kept so the OFF state is auditable rather than implicit",
+ "before_region_counts": {
+  "whitelist_block_anchor": 1,
+  "loader_branch_anchor": 1
+ },
+ "registration_entry_present": true,
+ "prereg": "docs/plans/activate_holefill_20261022/PREREG_ACTIVATION_HOLEFILL_20261022.md",
+ "prereg_sha256": "79ef237cbac7dcf94435d4d05c837fafaed372ba5dd6e7eebe4be62a7e49451c",
+ "prereg_mtime_epoch": 1792673096.8051543,
+ "base_commit": "3263ca60b341c1c2d7a26ee0c9292da56379bbed",
+ "git_status_porcelain": [
+  "M mcp_server/eyekb_core.py",
+  "?? docs/plans/activate_holefill_20261022/"
+ ],
+ "pre_image_sha256": "95aa15be1f9e25a9d8d3dabb2dce5a88abef7e0f9e6bf15f1aaec695f28a8db4",
+ "pre_image_bytes": 115553,
+ "pre_image_matches_live": true,
+ "verdict": "PASS"
+}

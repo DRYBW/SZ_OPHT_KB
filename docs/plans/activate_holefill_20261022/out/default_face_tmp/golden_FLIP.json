@@ -1,0 +1,344 @@
+{
+ "probe": "golden_721.py",
+ "source": "dl/results/*/annotation_evidence_report.json (recorded 2026-10-18)",
+ "note": "recorded ranking = production output at generation time, before this change",
+ "stats": {
+  "off": {
+   "n": 721,
+   "identical": 441,
+   "differ": 280,
+   "examples": [
+    {
+     "vol": "CX01_retina_snRNA",
+     "cluster": "2",
+     "recorded_n": 3,
+     "now_n": 5,
+     "recorded_head": [
+      [
+       "retina_interneuron::AC",
+       2
+      ],
+      [
+       "pDC",
+       1
+      ],
+      [
+       "retina_v6::AC",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "retina_interneuron::AC",
+       2
+      ],
+      [
+       "pDC",
+       1
+      ],
+      [
+       "retina_v6::AC",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX01_retina_snRNA",
+     "cluster": "6",
+     "recorded_n": 4,
+     "now_n": 6,
+     "recorded_head": [
+      [
+       "retina_interneuron::AC",
+       2
+      ],
+      [
+       "pDC",
+       1
+      ],
+      [
+       "retina_v6::AC",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "retina_interneuron::AC",
+       2
+      ],
+      [
+       "pDC",
+       1
+      ],
+      [
+       "retina_v6::AC",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX01_retina_snRNA",
+     "cluster": "9",
+     "recorded_n": 2,
+     "now_n": 5,
+     "recorded_head": [
+      [
+       "MG",
+       1
+      ],
+      [
+       "retina_interneuron::MG",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "MG",
+       1
+      ],
+      [
+       "retina_interneuron::MG",
+       1
+      ],
+      [
+       "endothelial cell of vascular tree",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX01_retina_snRNA",
+     "cluster": "11",
+     "recorded_n": 3,
+     "now_n": 11,
+     "recorded_head": [
+      [
+       "RGC",
+       1
+      ],
+      [
+       "retina_interneuron::RGC",
+       1
+      ],
+      [
+       "retina_v6::RGC",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "RGC",
+       1
+      ],
+      [
+       "retina_interneuron::RGC",
+       1
+      ],
+      [
+       "retina_v6::RGC",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX01_retina_snRNA",
+     "cluster": "13",
+     "recorded_n": 4,
+     "now_n": 9,
+     "recorded_head": [
+      [
+       "MG",
+       1
+      ],
+      [
+       "Astro",
+       1
+      ],
+      [
+       "retina_interneuron::MG",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "MG",
+       1
+      ],
+      [
+       "Astro",
+       1
+      ],
+      [
+       "retina_interneuron::MG",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "on": {
+   "n": 721,
+   "identical": 466,
+   "differ": 255,
+   "n_with_demoted": 138,
+   "examples": [
+    {
+     "vol": "CX01_retina_snRNA",
+     "cluster": "2",
+     "recorded_head": [
+      [
+       "retina_interneuron::AC",
+       2
+      ],
+      [
+       "pDC",
+       1
+      ],
+      [
+       "retina_v6::AC",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "retina_interneuron::AC",
+       2
+      ],
+      [
+       "pDC",
+       1
+      ],
+      [
+       "retina_v6::AC",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX01_retina_snRNA",
+     "cluster": "6",
+     "recorded_head": [
+      [
+       "retina_interneuron::AC",
+       2
+      ],
+      [
+       "pDC",
+       1
+      ],
+      [
+       "retina_v6::AC",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "retina_interneuron::AC",
+       2
+      ],
+      [
+       "pDC",
+       1
+      ],
+      [
+       "retina_v6::AC",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX01_retina_snRNA",
+     "cluster": "9",
+     "recorded_head": [
+      [
+       "MG",
+       1
+      ],
+      [
+       "retina_interneuron::MG",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "MG",
+       1
+      ],
+      [
+       "retina_interneuron::MG",
+       1
+      ],
+      [
+       "endothelial cell of vascular tree",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX01_retina_snRNA",
+     "cluster": "11",
+     "recorded_head": [
+      [
+       "RGC",
+       1
+      ],
+      [
+       "retina_interneuron::RGC",
+       1
+      ],
+      [
+       "retina_v6::RGC",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "RGC",
+       1
+      ],
+      [
+       "retina_interneuron::RGC",
+       1
+      ],
+      [
+       "retina_v6::RGC",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX01_retina_snRNA",
+     "cluster": "13",
+     "recorded_head": [
+      [
+       "MG",
+       1
+      ],
+      [
+       "Astro",
+       1
+      ],
+      [
+       "retina_interneuron::MG",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "MG",
+       1
+      ],
+      [
+       "Astro",
+       1
+      ],
+      [
+       "retina_interneuron::MG",
+       1
+      ]
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "fmode": "explicit",
+ "n": 13,
+ "rows": {
+  "lib:retina": {
+   "raw_md5": "b3207edd765f3d6f4324480b65a712f6",
+   "canon_md5": "820b4a0d5480122378357bebab3ebeea",
+   "refused": false,
+   "n_ranked": 1,
+   "top": "Rod"
+  },
+  "lib:membrane": {
+   "raw_md5": "36720f805bf930fe31a629c39b8701e1",
+   "canon_md5": "cff7ce02e234daacb7c2a414fa9ce1a7",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  },
+  "lib:retina_interneuron": {
+   "raw_md5": "761771770be5474dc3a03119eaf94e4a",
+   "canon_md5": "aba73fa14a8f63c84fd759589ae3e4e0",
+   "refused": false,
+   "n_ranked": 1,
+   "top": "Rod"
+  },
+  "lib:retina_v6": {
+   "raw_md5": "9aec429d9406fab16396d4aa9748e2df",
+   "canon_md5": "9d34aff28f8f284cd2badbcddcca3678",
+   "refused": false,
+   "n_ranked": 1,
+   "top": "Rod"
+  },
+  "lib:face_v6": {
+   "raw_md5": "d6245e632fc763e38cec253c9937f753",
+   "canon_md5": "e788e146b8849ad16c04129f24793d19",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  },
+  "lib:lacrimal_v6": {
+   "raw_md5": "fb6b795cb72450476d29a456ed22e814",
+   "canon_md5": "2f9b3725c563bf0b4c9ac2be34842aff",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  },
+  "lib:k9_ocs": {
+   "raw_md5": "3fef935341c934c7f63a4f0232de3579",
+   "canon_md5": "917b5e2204a25e67fc41c6d9aa4a1a6b",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  },
+  "lib:retina_v7": {
+   "raw_md5": "fee78a0534b23f478c41440912162dbe",
+   "canon_md5": "61edbc1cd7db1c0a851ad22755d275b5",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  },
+  "lib:retina_dev": {
+   "raw_md5": "3ddaf2c1df4ef15dab5407e242bb7db8",
+   "canon_md5": "535c6c97275ab9aa369ba1c226c62956",
+   "refused": false,
+   "n_ranked": 1,
+   "top": "Rod_precursor"
+  },
+  "lib:antseg_v10": {
+   "raw_md5": "af2035c8cce543d768e5b83d50cfd868",
+   "canon_md5": "f6f60af005257df50fbf6d5c229bde7f",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  },
+  "lib:lensiris_v11": {
+   "raw_md5": "d7b12c2c8791e21c9baa2eb37797b22c",
+   "canon_md5": "4d45ea64e2640dbf59898284a4791799",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  },
+  "lib:holefill_v12": {
+   "raw_md5": "9cee4ab71400eca2e86b221c5d99bada",
+   "canon_md5": "d6678d051d61922791cdab327be9ff84",
+   "refused": false,
+   "n_ranked": 1,
+   "top": "retinal rod cell"
+  },
+  "lib:onfibro_v13": {
+   "raw_md5": "d51695b2aea6ce2b22b690b1818c360c",
+   "canon_md5": "b8ca613484e82e8852e09660d2d17a40",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  }
+ },
+ "core_file": "/home/ubuntu/EYEKB_REPO/mcp_server/eyekb_core.py",
+ "core_sha256": "95aa15be1f9e25a9d8d3dabb2dce5a88abef7e0f9e6bf15f1aaec695f28a8db4",
+ "raw_combined_md5": "dd6ab83b43ead63897c95f650bdbfee8",
+ "canon_combined_md5": "9ac9e0a104458ba157b23dd3a6006eb8",
+ "act_holefill": "(unset)",
+ "marker_libs_at_import": [
+  "antseg_v10",
+  "face_v6",
+  "holefill_v12",
+  "k9_ocs",
+  "lacrimal_v6",
+  "lensiris_v11",
+  "membrane",
+  "onfibro_v13",
+  "retina",
+  "retina_dev",
+  "retina_interneuron",
+  "retina_v6",
+  "retina_v7"
+ ],
+ "default_whitelist_branch_libs": []
+}

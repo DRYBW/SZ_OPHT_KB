@@ -1,0 +1,107 @@
+{
+ "probe": "l1_flip_apply.py",
+ "mode": "verify",
+ "core_path": "mcp_server/eyekb_core.py",
+ "pre_image_sha256": "95aa15be1f9e25a9d8d3dabb2dce5a88abef7e0f9e6bf15f1aaec695f28a8db4",
+ "pre_image_bytes": 115553,
+ "live_before_sha256": "bd45c6b93ec73cd67f810e865c0721f08882c5b71a1fc9e76e71dec5a1ca7a4a",
+ "live_before_bytes": 118247,
+ "before_whitelists": {
+  "V6_DEFAULT_LIBS": "(\"retina_v6\", \"face_v6\")",
+  "K9_DEFAULT_LIBS": "(\"k9_ocs\",)",
+  "ANTSEG_DEFAULT_LIBS": "(\"antseg_v10\",)",
+  "ONFIBRO_DEFAULT_LIBS": "(\"onfibro_v13\",)"
+ },
+ "registration_entry_present_before": true,
+ "registration_entry_present_live": true,
+ "after_sha256": "bd45c6b93ec73cd67f810e865c0721f08882c5b71a1fc9e76e71dec5a1ca7a4a",
+ "after_bytes": 118247,
+ "after_sha256_is_identity": true,
+ "after_whitelists": {
+  "V6_DEFAULT_LIBS": "(\"retina_v6\", \"face_v6\")",
+  "K9_DEFAULT_LIBS": "(\"k9_ocs\",)",
+  "ANTSEG_DEFAULT_LIBS": "(\"antseg_v10\",)",
+  "ONFIBRO_DEFAULT_LIBS": "(\"onfibro_v13\",)",
+  "HOLEFILL_DEFAULT_LIBS": "(\"holefill_v12\",)"
+ },
+ "whitelist_delta": {
+  "HOLEFILL_DEFAULT_LIBS": [
+   null,
+   "(\"holefill_v12\",)"
+  ]
+ },
+ "revert_restores_pre_image": null,
+ "diff_hunks_after_line": [
+  395,
+  969
+ ],
+ "diff_unified": "--- pre_images/eyekb_core.py.pre_activation\n+++ mcp_server/eyekb_core.py\n@@ -394,0 +395,34 @@\n+# [HOLEFILL t_be11fd4a · ACTIVATED 2026-10-22 by owner decision] whitelist for the literature\n+# hole-fill library.  NON-EMPTY AS OF THIS CARD: whenever the feature is on, `holefill_v12` is merged\n+# into the default `all` route, which is the surface it was built for -- the 17 entries close coverage\n+# holes an external 28-volume / 721-cluster run measured (vascular endothelium, macrophage and\n+# monocyte separated from microglia, a deepened rod panel and a deepened RPE panel).  Semantics follow\n+# the ACT-v6 discipline: {0,false,off,no} = OFF, and OFF restores the pre-flip default byte-for-byte\n+# (measured, not asserted: the recorded query set is replayed at the same absolute path -- see\n+# docs/plans/activate_holefill_20261022/REPORT.md); unset/empty/anything else = ON.\n+# WHY IT IS ON: the project owner was shown a two-item checklist (enable the hole-fill library / adopt\n+# the Cell-Ontology child-term candidates) and answered \"ok\" on 2026-10-22.  This is an OWNER-SIGNED\n+# ACTIVATION decision, recorded as such -- not an audit pass and not a validation.  The reading is\n+# IN-SAMPLE on the same 28 public volumes the library was selected against.\n+# ACCEPTANCE (pre-registered before the measurement, PREREG_ACTIVATION_HOLEFILL_20261022.md section 4):\n+# no dataset's cell-weighted `consistent` share falls, the aggregate `inconsistent` share does not\n+# rise, every moved cluster is attributed cluster by cluster, and OFF restores the pre-flip default\n+# byte-for-byte.  The raw merge into an unfiltered route is the change under test; no admission guard\n+# is added by this card (a knowledge-layer activation, not a scoring change).\n+# KILL SWITCH: EYEKB_ACT_HOLEFILL=0.  Rollback = restore `()` here; the pre-flip file is kept as a\n+# pre-image by this card (pre_images/eyekb_core.py.pre_activation).\n+HOLEFILL_DEFAULT_LIBS = (\"holefill_v12\",)\n+\n+\n+def _holefill_act_enabled():\n+    \"\"\"env EYEKB_ACT_HOLEFILL in {0,false,off,no} = OFF; unset/anything else = ON.\n+\n+    Since card t_be11fd4a (owner-signed activation, 2026-10-22) ON means the literature hole-fill\n+    library is part of the default `all` route, and OFF restores the pre-flip default byte-for-byte\n+    (measured by replaying the recorded query set at the same absolute path).  OFF remains the\n+    documented kill switch, exactly as the ACT-v6 discipline prescribes.\n+    \"\"\"\n+    v = (os.environ.get(\"EYEKB_ACT_HOLEFILL\") or \"\").strip().casefold()\n+    return v not in {\"0\", \"false\", \"off\", \"no\"}\n+\n+\n@@ -934,0 +969,3 @@\n+        if _holefill_act_enabled():\n+            names = names + list(HOLEFILL_DEFAULT_LIBS)  # [HOLEFILL] literature hole-fill library on\n+            # the default route (activation card t_be11fd4a); OFF restores the pre-flip default",
+ "diff_lines_added": 37,
+ "diff_lines_removed": 0,
+ "holefill_region_lines_after": [
+  [
+   395,
+   426
+  ],
+  [
+   970,
+   971
+  ]
+ ],
+ "changed_lines_after": [
+  392,
+  393,
+  394,
+  395,
+  396,
+  397,
+  398,
+  399,
+  400,
+  401,
+  402,
+  403,
+  404,
+  405,
+  406,
+  407,
+  408,
+  409,
+  410,
+  411,
+  412,
+  413,
+  414,
+  415,
+  416,
+  417,
+  418,
+  419,
+  420,
+  421,
+  422,
+  423,
+  424,
+  425,
+  969,
+  970,
+  971
+ ],
+ "changed_lines_outside_holefill_region": [
+  392,
+  393,
+  394,
+  969
+ ],
+ "changed_lines_note": "the touched-line list is informational: difflib's opcode alignment can absorb up to the anchor's own equal leading lines at a boundary (measured: 3 lines of the ONFIBRO predicate that the replacement reproduces verbatim are reported as touched). The BINDING check is the inverse mapping below: undoing the two declared replacements must reproduce the pre-image byte-for-byte, which proves that exactly those two regions changed and nothing else did.",
+ "inverse_replace_restores_pre_image": true,
+ "n_hunks": 2,
+ "py_compile_rc": 0,
+ "py_compile_stderr": "",
+ "import_probe_stdout": "('holefill_v12',)\nunset-> True\nzero-> False\noff-> False\nall-route: ['retina', 'membrane', 'retina_interneuron', 'retina_v6', 'face_v6', 'k9_ocs', 'antseg_v10', 'onfibro_v13', 'holefill_v12']\nall-route-OFF: ['retina', 'membrane', 'retina_interneuron', 'retina_v6', 'face_v6', 'k9_ocs', 'antseg_v10', 'onfibro_v13']",
+ "import_rc": 0,
+ "import_stderr": "",
+ "library_in_all_route_when_on": true,
+ "library_absent_from_all_route_when_off": true,
+ "verdict": "PASS"
+}

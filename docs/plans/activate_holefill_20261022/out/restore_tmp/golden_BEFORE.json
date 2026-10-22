@@ -1,0 +1,302 @@
+{
+ "probe": "golden_721.py",
+ "source": "dl/results/*/annotation_evidence_report.json (recorded 2026-10-18)",
+ "note": "recorded ranking = production output at generation time, before this change",
+ "stats": {
+  "off": {
+   "n": 721,
+   "identical": 676,
+   "differ": 45,
+   "examples": [
+    {
+     "vol": "CX04_cowan_fovea",
+     "cluster": "23",
+     "recorded_n": 5,
+     "now_n": 6,
+     "recorded_head": [
+      [
+       "Pericyte",
+       2
+      ],
+      [
+       "cDC1",
+       2
+      ],
+      [
+       "Fibroblast",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "Pericyte",
+       2
+      ],
+      [
+       "cDC1",
+       2
+      ],
+      [
+       "Fibroblast",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX08_RPE_choroid_scRNA",
+     "cluster": "0",
+     "recorded_n": 3,
+     "now_n": 4,
+     "recorded_head": [
+      [
+       "Pericyte",
+       2
+      ],
+      [
+       "Fibroblast",
+       1
+      ],
+      [
+       "Myofibroblast",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "Pericyte",
+       2
+      ],
+      [
+       "onfibro_v13::Fibroblast",
+       2
+      ],
+      [
+       "Fibroblast",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX08_RPE_choroid_snRNA",
+     "cluster": "1",
+     "recorded_n": 0,
+     "now_n": 1,
+     "recorded_head": [],
+     "now_head": [
+      [
+       "onfibro_v13::Fibroblast",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX09_voigt_RPE_choroid",
+     "cluster": "6",
+     "recorded_n": 2,
+     "now_n": 3,
+     "recorded_head": [
+      [
+       "Fibroblast",
+       1
+      ],
+      [
+       "cDC1",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "Fibroblast",
+       1
+      ],
+      [
+       "cDC1",
+       1
+      ],
+      [
+       "onfibro_v13::Fibroblast",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX09_voigt_RPE_choroid",
+     "cluster": "12",
+     "recorded_n": 8,
+     "now_n": 9,
+     "recorded_head": [
+      [
+       "RPE",
+       2
+      ],
+      [
+       "retina_interneuron::RPE",
+       2
+      ],
+      [
+       "retina_v6::RPE",
+       2
+      ]
+     ],
+     "now_head": [
+      [
+       "RPE",
+       2
+      ],
+      [
+       "retina_interneuron::RPE",
+       2
+      ],
+      [
+       "retina_v6::RPE",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "on": {
+   "n": 721,
+   "identical": 676,
+   "differ": 45,
+   "n_with_demoted": 19,
+   "examples": [
+    {
+     "vol": "CX04_cowan_fovea",
+     "cluster": "23",
+     "recorded_head": [
+      [
+       "Pericyte",
+       2
+      ],
+      [
+       "cDC1",
+       2
+      ],
+      [
+       "Fibroblast",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "Pericyte",
+       2
+      ],
+      [
+       "cDC1",
+       2
+      ],
+      [
+       "Fibroblast",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX08_RPE_choroid_scRNA",
+     "cluster": "0",
+     "recorded_head": [
+      [
+       "Pericyte",
+       2
+      ],
+      [
+       "Fibroblast",
+       1
+      ],
+      [
+       "Myofibroblast",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "Pericyte",
+       2
+      ],
+      [
+       "onfibro_v13::Fibroblast",
+       2
+      ],
+      [
+       "Fibroblast",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX08_RPE_choroid_snRNA",
+     "cluster": "1",
+     "recorded_head": [],
+     "now_head": [
+      [
+       "onfibro_v13::Fibroblast",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX09_voigt_RPE_choroid",
+     "cluster": "6",
+     "recorded_head": [
+      [
+       "Fibroblast",
+       1
+      ],
+      [
+       "cDC1",
+       1
+      ]
+     ],
+     "now_head": [
+      [
+       "Fibroblast",
+       1
+      ],
+      [
+       "cDC1",
+       1
+      ],
+      [
+       "onfibro_v13::Fibroblast",
+       1
+      ]
+     ]
+    },
+    {
+     "vol": "CX09_voigt_RPE_choroid",
+     "cluster": "12",
+     "recorded_head": [
+      [
+       "RPE",
+       2
+      ],
+      [
+       "retina_interneuron::RPE",
+       2
+      ],
+      [
+       "retina_v6::RPE",
+       2
+      ]
+     ],
+     "now_head": [
+      [
+       "RPE",
+       2
+      ],
+      [
+       "retina_interneuron::RPE",
+       2
+      ],
+      [
+       "retina_v6::RPE",
+       2
+      ]
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,355 @@
+{
+ "probe": "diag_labelmap_gap.py",
+ "question": "can the frozen judge resolve the class names this library emits?",
+ "frozen_map_labels": 61,
+ "library_entry_cl_ids": 17,
+ "class_names_not_in_the_frozen_map": [
+  "blood vessel endothelial cell",
+  "capillary endothelial cell",
+  "classical monocyte",
+  "endothelial cell",
+  "endothelial cell of arteriole",
+  "endothelial cell of artery",
+  "endothelial cell of lymphatic vessel",
+  "endothelial cell of vascular tree",
+  "endothelial cell of venule",
+  "fenestrated endothelial cell",
+  "monocyte",
+  "non-classical monocyte",
+  "retinal blood vessel endothelial cell",
+  "retinal pigment epithelial cell",
+  "retinal rod cell",
+  "vein endothelial cell"
+ ],
+ "source_of_each_resolution": {
+  "frozen_map": 1007,
+  "library_entry": 144
+ },
+ "readings": {
+  "recorded_declarations": {
+   "OFF": {
+    "label": "OFF",
+    "profile": {
+     "all": {
+      "cells": 1495330,
+      "share_pct": {
+       "same_cl": 39.707,
+       "kb_coarser": 15.856,
+       "kb_finer": 1.176,
+       "truly_inconsistent": 21.024,
+       "abstain": 20.676,
+       "unmappable_pred": 1.56
+      },
+      "clusters": {
+       "same_cl": 244,
+       "kb_coarser": 116,
+       "kb_finer": 5,
+       "truly_inconsistent": 176,
+       "abstain": 165,
+       "unmappable_pred": 15
+      }
+     }
+    },
+    "targets": {
+     "endothelial cell": {
+      "clusters": 12,
+      "exact": 10,
+      "cells": 20420
+     },
+     "macrophage": {
+      "clusters": 16,
+      "exact": 6,
+      "cells": 41043
+     },
+     "retinal rod cell": {
+      "clusters": 25,
+      "exact": 14,
+      "cells": 107242
+     },
+     "retinal pigment epithelial cell": {
+      "clusters": 37,
+      "exact": 10,
+      "cells": 66248
+     }
+    }
+   },
+   "ON": {
+    "label": "ON",
+    "profile": {
+     "all": {
+      "cells": 1495330,
+      "share_pct": {
+       "same_cl": 42.261,
+       "kb_coarser": 15.485,
+       "kb_finer": 1.176,
+       "truly_inconsistent": 24.973,
+       "abstain": 15.172,
+       "unmappable_pred": 0.933
+      },
+      "clusters": {
+       "same_cl": 252,
+       "kb_coarser": 114,
+       "kb_finer": 5,
+       "truly_inconsistent": 206,
+       "abstain": 132,
+       "unmappable_pred": 12
+      }
+     }
+    },
+    "targets": {
+     "endothelial cell": {
+      "clusters": 12,
+      "exact": 10,
+      "cells": 20420
+     },
+     "macrophage": {
+      "clusters": 16,
+      "exact": 8,
+      "cells": 41043
+     },
+     "retinal rod cell": {
+      "clusters": 25,
+      "exact": 22,
+      "cells": 107242
+     },
+     "retinal pigment epithelial cell": {
+      "clusters": 37,
+      "exact": 12,
+      "cells": 66248
+     }
+    }
+   }
+  },
+  "default_route": {
+   "OFF": {
+    "label": "OFF",
+    "profile": {
+     "all": {
+      "cells": 1495330,
+      "share_pct": {
+       "same_cl": 32.988,
+       "kb_coarser": 15.856,
+       "kb_finer": 0.841,
+       "truly_inconsistent": 25.209,
+       "abstain": 23.736,
+       "unmappable_pred": 1.37
+      },
+      "clusters": {
+       "same_cl": 212,
+       "kb_coarser": 116,
+       "kb_finer": 3,
+       "truly_inconsistent": 201,
+       "abstain": 176,
+       "unmappable_pred": 13
+      }
+     }
+    },
+    "targets": {
+     "endothelial cell": {
+      "clusters": 12,
+      "exact": 10,
+      "cells": 20420
+     },
+     "macrophage": {
+      "clusters": 16,
+      "exact": 5,
+      "cells": 41043
+     },
+     "retinal rod cell": {
+      "clusters": 25,
+      "exact": 14,
+      "cells": 107242
+     },
+     "retinal pigment epithelial cell": {
+      "clusters": 37,
+      "exact": 10,
+      "cells": 66248
+     }
+    }
+   },
+   "ON": {
+    "label": "ON",
+    "profile": {
+     "all": {
+      "cells": 1495330,
+      "share_pct": {
+       "same_cl": 35.826,
+       "kb_coarser": 15.485,
+       "kb_finer": 0.841,
+       "truly_inconsistent": 29.697,
+       "abstain": 17.408,
+       "unmappable_pred": 0.743
+      },
+      "clusters": {
+       "same_cl": 221,
+       "kb_coarser": 114,
+       "kb_finer": 3,
+       "truly_inconsistent": 236,
+       "abstain": 137,
+       "unmappable_pred": 10
+      }
+     }
+    },
+    "targets": {
+     "endothelial cell": {
+      "clusters": 12,
+      "exact": 10,
+      "cells": 20420
+     },
+     "macrophage": {
+      "clusters": 16,
+      "exact": 6,
+      "cells": 41043
+     },
+     "retinal rod cell": {
+      "clusters": 25,
+      "exact": 22,
+      "cells": 107242
+     },
+     "retinal pigment epithelial cell": {
+      "clusters": 37,
+      "exact": 12,
+      "cells": 66248
+     }
+    }
+   }
+  }
+ },
+ "takeovers": {
+  "n": 90,
+  "cells": 250348,
+  "frozen_verdicts": {
+   "unmappable_pred": 70,
+   "truly_inconsistent": 13,
+   "same_cl": 7
+  },
+  "library_aware_verdicts": {
+   "same_cl": 38,
+   "truly_inconsistent": 46,
+   "kb_coarser": 5,
+   "kb_finer": 1
+  },
+  "examples": [
+   {
+    "vol": "CX01_retina_snRNA",
+    "cluster": "27",
+    "n_cells": 3223,
+    "truth": "retinal rod cell",
+    "before": null,
+    "after": "retinal rod cell",
+    "verdict_library_aware": "same_cl",
+    "verdict_frozen": "unmappable_pred"
+   },
+   {
+    "vol": "CX01_retina_snRNA",
+    "cluster": "35",
+    "n_cells": 811,
+    "truth": "retinal pigment epithelial cell",
+    "before": "RPE",
+    "after": "retinal pigment epithelial cell",
+    "verdict_library_aware": "same_cl",
+    "verdict_frozen": "unmappable_pred"
+   },
+   {
+    "vol": "CX01_retina_snRNA",
+    "cluster": "36",
+    "n_cells": 35,
+    "truth": "retinal pigment epithelial cell",
+    "before": "RPE",
+    "after": "retinal pigment epithelial cell",
+    "verdict_library_aware": "same_cl",
+    "verdict_frozen": "unmappable_pred"
+   },
+   {
+    "vol": "CX02_adult_retina",
+    "cluster": "3",
+    "n_cells": 3763,
+    "truth": "retinal rod cell",
+    "before": null,
+    "after": "retinal rod cell",
+    "verdict_library_aware": "same_cl",
+    "verdict_frozen": "unmappable_pred"
+   },
+   {
+    "vol": "CX02_adult_retina",
+    "cluster": "4",
+    "n_cells": 12902,
+    "truth": "retinal rod cell",
+    "before": "Rod",
+    "after": "retinal rod cell",
+    "verdict_library_aware": "same_cl",
+    "verdict_frozen": "unmappable_pred"
+   },
+   {
+    "vol": "CX03_retina_multiome",
+    "cluster": "1",
+    "n_cells": 1979,
+    "truth": "retinal cone cell",
+    "before": null,
+    "after": "macrophage",
+    "verdict_library_aware": "truly_inconsistent",
+    "verdict_frozen": "truly_inconsistent"
+   },
+   {
+    "vol": "CX03_retina_multiome",
+    "cluster": "7",
+    "n_cells": 8308,
+    "truth": "retinal rod cell",
+    "before": null,
+    "after": "retinal rod cell",
+    "verdict_library_aware": "same_cl",
+    "verdict_frozen": "unmappable_pred"
+   },
+   {
+    "vol": "CX03_retina_multiome",
+    "cluster": "8",
+    "n_cells": 3799,
+    "truth": "retinal rod cell",
+    "before": null,
+    "after": "retinal rod cell",
+    "verdict_library_aware": "same_cl",
+    "verdict_frozen": "unmappable_pred"
+   },
+   {
+    "vol": "CX03_retina_multiome",
+    "cluster": "9",
+    "n_cells": 4746,
+    "truth": "retinal rod cell",
+    "before": null,
+    "after": "retinal rod cell",
+    "verdict_library_aware": "same_cl",
+    "verdict_frozen": "unmappable_pred"
+   },
+   {
+    "vol": "CX03_retina_multiome",
+    "cluster": "10",
+    "n_cells": 2625,
+    "truth": "retinal rod cell",
+    "before": "cDC1",
+    "after": "retinal rod cell",
+    "verdict_library_aware": "same_cl",
+    "verdict_frozen": "unmappable_pred"
+   },
+   {
+    "vol": "CX03_retina_multiome",
+    "cluster": "11",
+    "n_cells": 4719,
+    "truth": "retinal rod cell",
+    "before": "Rod",
+    "after": "retinal rod cell",
+    "verdict_library_aware": "same_cl",
+    "verdict_frozen": "unmappable_pred"
+   },
+   {
+    "vol": "CX03_retina_multiome",
+    "cluster": "12",
+    "n_cells": 7918,
+    "truth": "retinal rod cell",
+    "before": null,
+    "after": "retinal rod cell",
+    "verdict_library_aware": "same_cl",
+    "verdict_frozen": "unmappable_pred"
+   }
+  ]
+ }
+}

@@ -1,0 +1,800 @@
+{
+ "probe": "l0b_restore_registration.py",
+ "mode": "apply",
+ "core_path": "mcp_server/eyekb_core.py",
+ "core_sha256_before": "e74c73c6c2ef04d19b94edd69cfb414bc38104b29c2d054a5e711ad03e781079",
+ "core_bytes_before": 115058,
+ "defect": {
+  "introduced_by": "0312016 (2026-10-22 11:24, card t_0c40c7b1)",
+  "added_by": "290cb984 (2026-10-21 23:53, the holefill_v12 registration wave)",
+  "mechanism": "the append replaced the dictionary's closing line -- which carried holefill_v12's entry -- instead of following it",
+  "measured_effect": "library=\"holefill_v12\" raises ValueError although the error string names the library; registry row L1-26 claims it is reachable by name"
+ },
+ "anchor_occurrences_before": 1,
+ "pre_restore_image": "pre_images/eyekb_core.py.pre_restore",
+ "pre_restore_image_sha256": "e74c73c6c2ef04d19b94edd69cfb414bc38104b29c2d054a5e711ad03e781079",
+ "pre_restore_matches_before_commit": true,
+ "core_sha256_after": "95aa15be1f9e25a9d8d3dabb2dce5a88abef7e0f9e6bf15f1aaec695f28a8db4",
+ "core_bytes_after": 115553,
+ "entry_present_after": true,
+ "whitelists_after": {
+  "V6_DEFAULT_LIBS": "(\"retina_v6\", \"face_v6\")",
+  "K9_DEFAULT_LIBS": "(\"k9_ocs\",)  # [ACT t_abfebe59 · KB9ACT plan A (PI released 2026-09-30, obligation gates OB-1..5 all cleared; following the ACT-v6 discipline)] hard-coded whitelist — env values can only toggle the whole feature, never inject any library; lacrimal_v6 ban in any state is preserved",
+  "ANTSEG_DEFAULT_LIBS": "(\"antseg_v10\",)",
+  "ONFIBRO_DEFAULT_LIBS": "(\"onfibro_v13\",)",
+  "names": "names + list(ONFIBRO_DEFAULT_LIBS)  # [ONFIBRO] empty whitelist: appends nothing,"
+ },
+ "before_golden": {
+  "rc": 0,
+  "stats": {
+   "off": {
+    "n": 721,
+    "identical": 676,
+    "differ": 45,
+    "examples": [
+     {
+      "vol": "CX04_cowan_fovea",
+      "cluster": "23",
+      "recorded_n": 5,
+      "now_n": 6,
+      "recorded_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "cDC1",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ]
+      ],
+      "now_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "cDC1",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX08_RPE_choroid_scRNA",
+      "cluster": "0",
+      "recorded_n": 3,
+      "now_n": 4,
+      "recorded_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ],
+       [
+        "Myofibroblast",
+        1
+       ]
+      ],
+      "now_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "onfibro_v13::Fibroblast",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX08_RPE_choroid_snRNA",
+      "cluster": "1",
+      "recorded_n": 0,
+      "now_n": 1,
+      "recorded_head": [],
+      "now_head": [
+       [
+        "onfibro_v13::Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX09_voigt_RPE_choroid",
+      "cluster": "6",
+      "recorded_n": 2,
+      "now_n": 3,
+      "recorded_head": [
+       [
+        "Fibroblast",
+        1
+       ],
+       [
+        "cDC1",
+        1
+       ]
+      ],
+      "now_head": [
+       [
+        "Fibroblast",
+        1
+       ],
+       [
+        "cDC1",
+        1
+       ],
+       [
+        "onfibro_v13::Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX09_voigt_RPE_choroid",
+      "cluster": "12",
+      "recorded_n": 8,
+      "now_n": 9,
+      "recorded_head": [
+       [
+        "RPE",
+        2
+       ],
+       [
+        "retina_interneuron::RPE",
+        2
+       ],
+       [
+        "retina_v6::RPE",
+        2
+       ]
+      ],
+      "now_head": [
+       [
+        "RPE",
+        2
+       ],
+       [
+        "retina_interneuron::RPE",
+        2
+       ],
+       [
+        "retina_v6::RPE",
+        2
+       ]
+      ]
+     }
+    ]
+   },
+   "on": {
+    "n": 721,
+    "identical": 676,
+    "differ": 45,
+    "n_with_demoted": 19,
+    "examples": [
+     {
+      "vol": "CX04_cowan_fovea",
+      "cluster": "23",
+      "recorded_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "cDC1",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ]
+      ],
+      "now_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "cDC1",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX08_RPE_choroid_scRNA",
+      "cluster": "0",
+      "recorded_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ],
+       [
+        "Myofibroblast",
+        1
+       ]
+      ],
+      "now_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "onfibro_v13::Fibroblast",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX08_RPE_choroid_snRNA",
+      "cluster": "1",
+      "recorded_head": [],
+      "now_head": [
+       [
+        "onfibro_v13::Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX09_voigt_RPE_choroid",
+      "cluster": "6",
+      "recorded_head": [
+       [
+        "Fibroblast",
+        1
+       ],
+       [
+        "cDC1",
+        1
+       ]
+      ],
+      "now_head": [
+       [
+        "Fibroblast",
+        1
+       ],
+       [
+        "cDC1",
+        1
+       ],
+       [
+        "onfibro_v13::Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX09_voigt_RPE_choroid",
+      "cluster": "12",
+      "recorded_head": [
+       [
+        "RPE",
+        2
+       ],
+       [
+        "retina_interneuron::RPE",
+        2
+       ],
+       [
+        "retina_v6::RPE",
+        2
+       ]
+      ],
+      "now_head": [
+       [
+        "RPE",
+        2
+       ],
+       [
+        "retina_interneuron::RPE",
+        2
+       ],
+       [
+        "retina_v6::RPE",
+        2
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  "stderr_tail": ""
+ },
+ "after_golden": {
+  "rc": 0,
+  "stats": {
+   "off": {
+    "n": 721,
+    "identical": 676,
+    "differ": 45,
+    "examples": [
+     {
+      "vol": "CX04_cowan_fovea",
+      "cluster": "23",
+      "recorded_n": 5,
+      "now_n": 6,
+      "recorded_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "cDC1",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ]
+      ],
+      "now_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "cDC1",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX08_RPE_choroid_scRNA",
+      "cluster": "0",
+      "recorded_n": 3,
+      "now_n": 4,
+      "recorded_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ],
+       [
+        "Myofibroblast",
+        1
+       ]
+      ],
+      "now_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "onfibro_v13::Fibroblast",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX08_RPE_choroid_snRNA",
+      "cluster": "1",
+      "recorded_n": 0,
+      "now_n": 1,
+      "recorded_head": [],
+      "now_head": [
+       [
+        "onfibro_v13::Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX09_voigt_RPE_choroid",
+      "cluster": "6",
+      "recorded_n": 2,
+      "now_n": 3,
+      "recorded_head": [
+       [
+        "Fibroblast",
+        1
+       ],
+       [
+        "cDC1",
+        1
+       ]
+      ],
+      "now_head": [
+       [
+        "Fibroblast",
+        1
+       ],
+       [
+        "cDC1",
+        1
+       ],
+       [
+        "onfibro_v13::Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX09_voigt_RPE_choroid",
+      "cluster": "12",
+      "recorded_n": 8,
+      "now_n": 9,
+      "recorded_head": [
+       [
+        "RPE",
+        2
+       ],
+       [
+        "retina_interneuron::RPE",
+        2
+       ],
+       [
+        "retina_v6::RPE",
+        2
+       ]
+      ],
+      "now_head": [
+       [
+        "RPE",
+        2
+       ],
+       [
+        "retina_interneuron::RPE",
+        2
+       ],
+       [
+        "retina_v6::RPE",
+        2
+       ]
+      ]
+     }
+    ]
+   },
+   "on": {
+    "n": 721,
+    "identical": 676,
+    "differ": 45,
+    "n_with_demoted": 19,
+    "examples": [
+     {
+      "vol": "CX04_cowan_fovea",
+      "cluster": "23",
+      "recorded_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "cDC1",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ]
+      ],
+      "now_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "cDC1",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX08_RPE_choroid_scRNA",
+      "cluster": "0",
+      "recorded_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ],
+       [
+        "Myofibroblast",
+        1
+       ]
+      ],
+      "now_head": [
+       [
+        "Pericyte",
+        2
+       ],
+       [
+        "onfibro_v13::Fibroblast",
+        2
+       ],
+       [
+        "Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX08_RPE_choroid_snRNA",
+      "cluster": "1",
+      "recorded_head": [],
+      "now_head": [
+       [
+        "onfibro_v13::Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX09_voigt_RPE_choroid",
+      "cluster": "6",
+      "recorded_head": [
+       [
+        "Fibroblast",
+        1
+       ],
+       [
+        "cDC1",
+        1
+       ]
+      ],
+      "now_head": [
+       [
+        "Fibroblast",
+        1
+       ],
+       [
+        "cDC1",
+        1
+       ],
+       [
+        "onfibro_v13::Fibroblast",
+        1
+       ]
+      ]
+     },
+     {
+      "vol": "CX09_voigt_RPE_choroid",
+      "cluster": "12",
+      "recorded_head": [
+       [
+        "RPE",
+        2
+       ],
+       [
+        "retina_interneuron::RPE",
+        2
+       ],
+       [
+        "retina_v6::RPE",
+        2
+       ]
+      ],
+      "now_head": [
+       [
+        "RPE",
+        2
+       ],
+       [
+        "retina_interneuron::RPE",
+        2
+       ],
+       [
+        "retina_v6::RPE",
+        2
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  "stderr_tail": ""
+ },
+ "restored_core_sha256": "95aa15be1f9e25a9d8d3dabb2dce5a88abef7e0f9e6bf15f1aaec695f28a8db4",
+ "restored_matches_after_snapshot": true,
+ "before_vs_after": {
+  "clusters": {
+   "n_queries": 721,
+   "n_differing_raw": 0,
+   "n_differing_canonical": 0,
+   "identical_raw": true,
+   "identical_canonical": true,
+   "differing": [],
+   "raw_combined_md5_before": "61ac177e309458a7832058a6cf95a286",
+   "raw_combined_md5_after": "61ac177e309458a7832058a6cf95a286",
+   "canon_combined_md5_before": "058004589e2b7f311c8517a05144ea60",
+   "canon_combined_md5_after": "058004589e2b7f311c8517a05144ea60"
+  },
+  "battery": {
+   "n_queries": 229,
+   "n_differing_raw": 0,
+   "n_differing_canonical": 0,
+   "identical_raw": true,
+   "identical_canonical": true,
+   "differing": [],
+   "raw_combined_md5_before": "8984989c6587f24fc05f0287e90c0b56",
+   "raw_combined_md5_after": "8984989c6587f24fc05f0287e90c0b56",
+   "canon_combined_md5_before": "bc22825fa8f5230b655795cee1b3bda7",
+   "canon_combined_md5_after": "bc22825fa8f5230b655795cee1b3bda7"
+  },
+  "explicit": {
+   "n_queries": 13,
+   "n_differing_raw": 1,
+   "n_differing_canonical": 1,
+   "identical_raw": false,
+   "identical_canonical": false,
+   "differing": [
+    {
+     "query": "lib:holefill_v12",
+     "before": {
+      "raw_md5": "b62f61f973b95a21815ca1c27fe2ecdb",
+      "canon_md5": "b62f61f973b95a21815ca1c27fe2ecdb",
+      "refused": true,
+      "error": "ValueError: library must be one of retina|membrane|retina_interneuron|retina_v6|face_v6|lacrimal_v6|k9_ocs|retina_v7|retina_dev|antseg_v10|lensiris_v11|holefill_v12|onfibro_v13|all, got: 'holefill_v12'"
+     },
+     "after": {
+      "raw_md5": "9cee4ab71400eca2e86b221c5d99bada",
+      "canon_md5": "d6678d051d61922791cdab327be9ff84",
+      "refused": false,
+      "n_ranked": 1,
+      "top": "retinal rod cell"
+     }
+    }
+   ],
+   "raw_combined_md5_before": "736eca898d9cba3c2d355b70340c6604",
+   "raw_combined_md5_after": "dd6ab83b43ead63897c95f650bdbfee8",
+   "canon_combined_md5_before": "56279161da0ee8db94b3d6006739a458",
+   "canon_combined_md5_after": "9ac9e0a104458ba157b23dd3a6006eb8"
+  }
+ },
+ "explicit_route_battery_after": {
+  "lib:antseg_v10": {
+   "raw_md5": "af2035c8cce543d768e5b83d50cfd868",
+   "canon_md5": "f6f60af005257df50fbf6d5c229bde7f",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  },
+  "lib:face_v6": {
+   "raw_md5": "d6245e632fc763e38cec253c9937f753",
+   "canon_md5": "e788e146b8849ad16c04129f24793d19",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  },
+  "lib:holefill_v12": {
+   "raw_md5": "9cee4ab71400eca2e86b221c5d99bada",
+   "canon_md5": "d6678d051d61922791cdab327be9ff84",
+   "refused": false,
+   "n_ranked": 1,
+   "top": "retinal rod cell"
+  },
+  "lib:k9_ocs": {
+   "raw_md5": "3fef935341c934c7f63a4f0232de3579",
+   "canon_md5": "917b5e2204a25e67fc41c6d9aa4a1a6b",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  },
+  "lib:lacrimal_v6": {
+   "raw_md5": "fb6b795cb72450476d29a456ed22e814",
+   "canon_md5": "2f9b3725c563bf0b4c9ac2be34842aff",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  },
+  "lib:lensiris_v11": {
+   "raw_md5": "d7b12c2c8791e21c9baa2eb37797b22c",
+   "canon_md5": "4d45ea64e2640dbf59898284a4791799",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  },
+  "lib:membrane": {
+   "raw_md5": "36720f805bf930fe31a629c39b8701e1",
+   "canon_md5": "cff7ce02e234daacb7c2a414fa9ce1a7",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  },
+  "lib:onfibro_v13": {
+   "raw_md5": "d51695b2aea6ce2b22b690b1818c360c",
+   "canon_md5": "b8ca613484e82e8852e09660d2d17a40",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  },
+  "lib:retina": {
+   "raw_md5": "b3207edd765f3d6f4324480b65a712f6",
+   "canon_md5": "820b4a0d5480122378357bebab3ebeea",
+   "refused": false,
+   "n_ranked": 1,
+   "top": "Rod"
+  },
+  "lib:retina_dev": {
+   "raw_md5": "3ddaf2c1df4ef15dab5407e242bb7db8",
+   "canon_md5": "535c6c97275ab9aa369ba1c226c62956",
+   "refused": false,
+   "n_ranked": 1,
+   "top": "Rod_precursor"
+  },
+  "lib:retina_interneuron": {
+   "raw_md5": "761771770be5474dc3a03119eaf94e4a",
+   "canon_md5": "aba73fa14a8f63c84fd759589ae3e4e0",
+   "refused": false,
+   "n_ranked": 1,
+   "top": "Rod"
+  },
+  "lib:retina_v6": {
+   "raw_md5": "9aec429d9406fab16396d4aa9748e2df",
+   "canon_md5": "9d34aff28f8f284cd2badbcddcca3678",
+   "refused": false,
+   "n_ranked": 1,
+   "top": "Rod"
+  },
+  "lib:retina_v7": {
+   "raw_md5": "fee78a0534b23f478c41440912162dbe",
+   "canon_md5": "61edbc1cd7db1c0a851ad22755d275b5",
+   "refused": false,
+   "n_ranked": 0,
+   "top": null
+  }
+ },
+ "holefill_resolves_by_name": true,
+ "golden_reference_file": "/mnt/D/EyeKB/plans/holefill_v12_20261021/out/golden_721_BEFORE.json",
+ "golden_reference_stats": {
+  "off": {
+   "n": 721,
+   "identical": 721,
+   "differ": 0,
+   "examples": []
+  },
+  "on": {
+   "n": 721,
+   "identical": 721,
+   "differ": 0,
+   "n_with_demoted": 19,
+   "examples": []
+  }
+ },
+ "golden_before_equals_after": true,
+ "golden_vs_historical_reference": false,
+ "golden_reference_note": "the historical file was recorded on 2026-10-21, before `onfibro_v13` was activated on the default route; with the default switches unset today the affected clusters (45) have moved for that reason, so the restoration is judged against the BEFORE arm of this run (the pre-restore core, same process, same switches) and the historical comparison is reported as information, not as a criterion",
+ "verdict": "PASS"
+}

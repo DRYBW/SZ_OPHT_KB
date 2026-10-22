@@ -1,0 +1,55 @@
+celltype:MG                            differing paths=1
+      celltype:MG/provenance/files: [{'library': 'retina', 'path': '/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_ -> [{'library': 'retina', 'path': '/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_
+cluster:CX01_retina_snRNA|27           differing paths=5
+      cluster:CX01_retina_snRNA|27/celltype_ranking: [] -> [{'cell_type': 'retinal rod cell', 'n_shared': 2, 'shared_genes': ['PDE6A', 'SAG
+      cluster:CX01_retina_snRNA|27/gene_to_celltypes/PDE6A: [] -> ['retinal rod cell']
+      cluster:CX01_retina_snRNA|27/gene_to_celltypes/SAG: [] -> ['retinal rod cell']
+      cluster:CX01_retina_snRNA|27/off_domain: {'flag': 'possible_dev_fetal_content', 'dev_best': 2, 'dev_best_terms': ['Rod_pr -> <absent>
+cluster:CX02_adult_retina|4            differing paths=5
+      cluster:CX02_adult_retina|4/celltype_ranking: [{'cell_type': 'Rod', 'n_shared': 1, 'shared_genes': ['RHO'], 'library': '/home/ -> [{'cell_type': 'retinal rod cell', 'n_shared': 3, 'shared_genes': ['PDE6A', 'SAG
+      cluster:CX02_adult_retina|4/gene_to_celltypes/PDE6A: [] -> ['retinal rod cell']
+      cluster:CX02_adult_retina|4/gene_to_celltypes/RHO: ['Rod', 'retina_interneuron::Rod', 'retina_v6::Rod'] -> ['Rod', 'retina_interneuron::Rod', 'retina_v6::Rod', 'retinal rod cell']
+      cluster:CX02_adult_retina|4/gene_to_celltypes/SAG: [] -> ['retinal rod cell']
+cluster:CX04_cowan_periphery|7         differing paths=6
+      cluster:CX04_cowan_periphery|7/celltype_ranking: [{'cell_type': 'Rod', 'n_shared': 2, 'shared_genes': ['RHO', 'NRL'], 'library':  -> [{'cell_type': 'retinal rod cell', 'n_shared': 3, 'shared_genes': ['PDE6A', 'RHO
+      cluster:CX04_cowan_periphery|7/gene_to_celltypes/GNGT1: [] -> ['retinal pigment epithelial cell']
+      cluster:CX04_cowan_periphery|7/gene_to_celltypes/NRL: ['Rod', 'retina_interneuron::Rod', 'retina_v6::Rod'] -> ['Rod', 'retina_interneuron::Rod', 'retina_v6::Rod', 'retinal rod cell', 'retina
+      cluster:CX04_cowan_periphery|7/gene_to_celltypes/PDE6A: [] -> ['retinal rod cell']
+cluster:CX15_optic_nerve_all|31        differing paths=2
+      cluster:CX15_optic_nerve_all|31/provenance/files: [{'library': 'retina', 'path': '/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_ -> [{'library': 'retina', 'path': '/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_
+      cluster:CX15_optic_nerve_all|31/soft_flags/notes: [{'flag_id': 'mural_crosstalk', 'hard_flag': False, 'affects_score': False, 'tri -> [{'flag_id': 'mural_crosstalk', 'hard_flag': False, 'affects_score': False, 'tri
+genes:legacy_panel_microglia           differing paths=6
+      genes:legacy_panel_microglia/celltype_ranking: [{'cell_type': 'Microglia', 'n_shared': 5, 'shared_genes': ['TMEM119', 'CX3CR1', -> [{'cell_type': 'Microglia', 'n_shared': 5, 'shared_genes': ['TMEM119', 'CX3CR1',
+      genes:legacy_panel_microglia/gene_to_celltypes/AIF1: ['Microglia'] -> ['Microglia', 'macrophage', 'monocyte']
+      genes:legacy_panel_microglia/gene_to_celltypes/C1QA: ['Mac_Tissue'] -> ['Mac_Tissue', 'macrophage']
+      genes:legacy_panel_microglia/gene_to_celltypes/CSF1R: [] -> ['macrophage']
+pages:list_kb_pages                    differing paths=0
+changed response fields: {
+ "provenance": [
+  "celltype:MG",
+  "cluster:CX01_retina_snRNA|27",
+  "cluster:CX02_adult_retina|4",
+  "cluster:CX04_cowan_periphery|7",
+  "cluster:CX15_optic_nerve_all|31",
+  "genes:legacy_panel_microglia"
+ ],
+ "celltype_ranking": [
+  "cluster:CX01_retina_snRNA|27",
+  "cluster:CX02_adult_retina|4",
+  "cluster:CX04_cowan_periphery|7",
+  "genes:legacy_panel_microglia"
+ ],
+ "gene_to_celltypes": [
+  "cluster:CX01_retina_snRNA|27",
+  "cluster:CX02_adult_retina|4",
+  "cluster:CX04_cowan_periphery|7",
+  "genes:legacy_panel_microglia"
+ ],
+ "off_domain": [
+  "cluster:CX01_retina_snRNA|27"
+ ],
+ "soft_flags": [
+  "cluster:CX15_optic_nerve_all|31"
+ ]
+}
+l3c verdict: PASS

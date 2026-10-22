@@ -1,0 +1,363 @@
+{
+ "probe": "diag_top1_moves.py",
+ "question": "of the clusters whose top-1 answer changed, how many changed TO a library entry, and what are the rest?",
+ "n_top1_moved": 90,
+ "n_top1_changed_to_a_library_entry": 0,
+ "n_with_a_library_entry_in_the_after_top3_window": 90,
+ "transition_pairs": {
+  "Rod -> retinal rod cell": 15,
+  " -> retinal rod cell": 12,
+  "Endo -> endothelial cell": 10,
+  " -> macrophage": 6,
+  "RPE -> retinal pigment epithelial cell": 5,
+  "Mac_Tissue -> macrophage": 5,
+  " -> retinal pigment epithelial cell": 4,
+  "APC_MHCII_high -> macrophage": 3,
+  "RGC -> endothelial cell of artery": 3,
+  " -> endothelial cell": 3,
+  " -> capillary endothelial cell": 3,
+  " -> vein endothelial cell": 2,
+  "MG -> macrophage": 2,
+  "MG -> retinal pigment epithelial cell": 2,
+  "Mono_Classical -> macrophage": 2,
+  " -> endothelial cell of vascular tree": 1,
+  "non-pigmented ciliary epithelial cell -> capillary endothelial cell": 1,
+  "RGC -> blood vessel endothelial cell": 1,
+  "cDC1 -> retinal rod cell": 1,
+  "Endo -> blood vessel endothelial cell": 1,
+  "AC -> retinal pigment epithelial cell": 1,
+  "corneal epithelial cell -> capillary endothelial cell": 1,
+  " -> retinal blood vessel endothelial cell": 1,
+  "progenitor cell -> macrophage": 1,
+  "Pericyte -> endothelial cell of artery": 1,
+  " -> endothelial cell of artery": 1,
+  "Granulocyte -> macrophage": 1,
+  "pigmented ciliary epithelial cell -> retinal rod cell": 1
+ },
+ "after_top1_class_census": {
+  "retinal rod cell": 29,
+  "macrophage": 20,
+  "endothelial cell": 13,
+  "retinal pigment epithelial cell": 12,
+  "capillary endothelial cell": 5,
+  "endothelial cell of artery": 5,
+  "vein endothelial cell": 2,
+  "blood vessel endothelial cell": 2,
+  "endothelial cell of vascular tree": 1,
+  "retinal blood vessel endothelial cell": 1
+ },
+ "examples": [
+  {
+   "vol": "CX02_adult_retina",
+   "cluster": "4",
+   "n_cells": 12902,
+   "truth": "retinal rod cell",
+   "family": "rod",
+   "tissue": "retina",
+   "before_top": "Rod",
+   "before_n_shared": 1,
+   "after_top": "retinal rod cell",
+   "after_n_shared": 3,
+   "n_ranked_before": 3,
+   "n_ranked_after": 4,
+   "before_top3": [
+    [
+     "Rod",
+     1,
+     "markers_v4.1_clean.json"
+    ],
+    [
+     "retina_interneuron::Rod",
+     1,
+     "markers_v5_retina_interneuron.json"
+    ],
+    [
+     "retina_v6::Rod",
+     1,
+     "markers_v6_retina_repair.json"
+    ]
+   ],
+   "after_top3": [
+    [
+     "retinal rod cell",
+     3,
+     "markers_v12_holefill_increment.json"
+    ],
+    [
+     "Rod",
+     1,
+     "markers_v4.1_clean.json"
+    ],
+    [
+     "retina_interneuron::Rod",
+     1,
+     "markers_v5_retina_interneuron.json"
+    ]
+   ]
+  },
+  {
+   "vol": "CX04_cowan_organoid",
+   "cluster": "3",
+   "n_cells": 8557,
+   "truth": "retinal rod cell",
+   "family": "rod",
+   "tissue": "retina",
+   "before_top": "Rod",
+   "before_n_shared": 2,
+   "after_top": "retinal rod cell",
+   "after_n_shared": 4,
+   "n_ranked_before": 3,
+   "n_ranked_after": 5,
+   "before_top3": [
+    [
+     "Rod",
+     2,
+     "markers_v4.1_clean.json"
+    ],
+    [
+     "retina_interneuron::Rod",
+     2,
+     "markers_v5_retina_interneuron.json"
+    ],
+    [
+     "retina_v6::Rod",
+     2,
+     "markers_v6_retina_repair.json"
+    ]
+   ],
+   "after_top3": [
+    [
+     "retinal rod cell",
+     4,
+     "markers_v12_holefill_increment.json"
+    ],
+    [
+     "Rod",
+     2,
+     "markers_v4.1_clean.json"
+    ],
+    [
+     "retina_interneuron::Rod",
+     2,
+     "markers_v5_retina_interneuron.json"
+    ]
+   ]
+  },
+  {
+   "vol": "CX03_retina_multiome",
+   "cluster": "7",
+   "n_cells": 8308,
+   "truth": "retinal rod cell",
+   "family": "rod",
+   "tissue": "retina",
+   "before_top": null,
+   "before_n_shared": null,
+   "after_top": "retinal rod cell",
+   "after_n_shared": 2,
+   "n_ranked_before": 0,
+   "n_ranked_after": 2,
+   "before_top3": [],
+   "after_top3": [
+    [
+     "retinal rod cell",
+     2,
+     "markers_v12_holefill_increment.json"
+    ],
+    [
+     "retinal pigment epithelial cell",
+     1,
+     "markers_v12_holefill_increment.json"
+    ]
+   ]
+  },
+  {
+   "vol": "CX03_retina_multiome",
+   "cluster": "12",
+   "n_cells": 7918,
+   "truth": "retinal rod cell",
+   "family": "rod",
+   "tissue": "retina",
+   "before_top": null,
+   "before_n_shared": null,
+   "after_top": "retinal rod cell",
+   "after_n_shared": 1,
+   "n_ranked_before": 0,
+   "n_ranked_after": 1,
+   "before_top3": [],
+   "after_top3": [
+    [
+     "retinal rod cell",
+     1,
+     "markers_v12_holefill_increment.json"
+    ]
+   ]
+  },
+  {
+   "vol": "CX13_iris",
+   "cluster": "4",
+   "n_cells": 7697,
+   "truth": "melanocyte",
+   "family": "melanocyte",
+   "tissue": "iris",
+   "before_top": null,
+   "before_n_shared": null,
+   "after_top": "endothelial cell of vascular tree",
+   "after_n_shared": 1,
+   "n_ranked_before": 0,
+   "n_ranked_after": 7,
+   "before_top3": [],
+   "after_top3": [
+    [
+     "endothelial cell of vascular tree",
+     1,
+     "markers_v12_holefill_increment.json"
+    ],
+    [
+     "blood vessel endothelial cell",
+     1,
+     "markers_v12_holefill_increment.json"
+    ],
+    [
+     "capillary endothelial cell",
+     1,
+     "markers_v12_holefill_increment.json"
+    ]
+   ]
+  },
+  {
+   "vol": "PRE_OA-D004",
+   "cluster": "10",
+   "n_cells": 7296,
+   "truth": "blood vessel endothelial cell",
+   "family": "endo",
+   "tissue": "trabecular_meshwork",
+   "before_top": "Endo",
+   "before_n_shared": 4,
+   "after_top": "endothelial cell",
+   "after_n_shared": 5,
+   "n_ranked_before": 2,
+   "n_ranked_after": 9,
+   "before_top3": [
+    [
+     "Endo",
+     4,
+     "markers_membrane_v1.json"
+    ],
+    [
+     "pDC",
+     1,
+     "markers_membrane_v1.json"
+    ]
+   ],
+   "after_top3": [
+    [
+     "endothelial cell",
+     5,
+     "markers_v12_holefill_increment.json"
+    ],
+    [
+     "Endo",
+     4,
+     "markers_membrane_v1.json"
+    ],
+    [
+     "endothelial cell of vascular tree",
+     2,
+     "markers_v12_holefill_increment.json"
+    ]
+   ]
+  },
+  {
+   "vol": "CX14_TM_ciliary_snRNA",
+   "cluster": "6",
+   "n_cells": 7215,
+   "truth": "blood vessel endothelial cell",
+   "family": "endo",
+   "tissue": "trabecular_meshwork",
+   "before_top": "Endo",
+   "before_n_shared": 3,
+   "after_top": "endothelial cell",
+   "after_n_shared": 4,
+   "n_ranked_before": 2,
+   "n_ranked_after": 13,
+   "before_top3": [
+    [
+     "Endo",
+     3,
+     "markers_membrane_v1.json"
+    ],
+    [
+     "pDC",
+     1,
+     "markers_membrane_v1.json"
+    ]
+   ],
+   "after_top3": [
+    [
+     "endothelial cell",
+     4,
+     "markers_v12_holefill_increment.json"
+    ],
+    [
+     "Endo",
+     3,
+     "markers_membrane_v1.json"
+    ],
+    [
+     "endothelial cell of vascular tree",
+     3,
+     "markers_v12_holefill_increment.json"
+    ]
+   ]
+  },
+  {
+   "vol": "PRE_OA-D068",
+   "cluster": "4",
+   "n_cells": 6577,
+   "truth": "retinal rod cell",
+   "family": "rod",
+   "tissue": "retina",
+   "before_top": "Rod",
+   "before_n_shared": 2,
+   "after_top": "retinal rod cell",
+   "after_n_shared": 3,
+   "n_ranked_before": 5,
+   "n_ranked_after": 7,
+   "before_top3": [
+    [
+     "Rod",
+     2,
+     "markers_v4.1_clean.json"
+    ],
+    [
+     "retina_interneuron::Rod",
+     2,
+     "markers_v5_retina_interneuron.json"
+    ],
+    [
+     "retina_v6::Rod",
+     2,
+     "markers_v6_retina_repair.json"
+    ]
+   ],
+   "after_top3": [
+    [
+     "retinal rod cell",
+     3,
+     "markers_v12_holefill_increment.json"
+    ],
+    [
+     "Rod",
+     2,
+     "markers_v4.1_clean.json"
+    ],
+    [
+     "retina_interneuron::Rod",
+     2,
+     "markers_v5_retina_interneuron.json"
+    ]
+   ]
+  }
+ ],
+ "note": "the diagnostic reads the two arms through the frozen engine; it changes nothing and is reported as a finding of this card, whichever way the acceptance rule rules"
+}

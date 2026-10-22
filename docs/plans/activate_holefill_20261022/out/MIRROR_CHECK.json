@@ -1,0 +1,20 @@
+{
+ "probe": "m2_freeze_and_mirror.py",
+ "manifest": "docs/plans/activate_holefill_20261022/MANIFEST.sha256",
+ "manifest_lines": 70,
+ "manifest_sha256": "fefb631e88eb2f6faa726150c0f1838e52cfa4ba2ffa0b9cc273e3634ca4a492",
+ "mirror": {
+  "source": "/home/ubuntu/EYEKB_REPO/docs/plans/activate_holefill_20261022",
+  "destination": "/mnt/D/EyeKB/plans/activate_holefill_20261022",
+  "files_copied": 70,
+  "files_compared": 70,
+  "files_differing": 0,
+  "differing": [],
+  "excluded": [
+   "__pycache__/**",
+   "MANIFEST.sha256 (copied last, not compared)",
+   "out/MIRROR_CHECK.json (this file)"
+  ]
+ },
+ "verdict": "PASS"
+}

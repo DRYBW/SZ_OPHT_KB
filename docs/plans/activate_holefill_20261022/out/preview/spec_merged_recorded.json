@@ -1,0 +1,6 @@
+{
+ "name": "PREVIEW: measurement-only injection of holefill_v12 into the default all route (recorded declarations)",
+ "declared_change": "the merge this activation would perform, measured through the harness's in-process injection path (identical mechanism to the predecessor wave's MERGED arm)",
+ "before": {"env": {}},
+ "after": {"env": {}, "inject": ["holefill_v12"]}
+}

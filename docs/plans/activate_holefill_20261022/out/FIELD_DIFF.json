@@ -1,0 +1,1384 @@
+{
+ "probe": "l3c_field_diff.py",
+ "activated_core_sha256": "bd45c6b93ec73cd67f810e865c0721f08882c5b71a1fc9e76e71dec5a1ca7a4a",
+ "pre_flip_reference_commit": "3263ca60b341c1c2d7a26ee0c9292da56379bbed",
+ "parent_core_sha256": "e74c73c6c2ef04d19b94edd69cfb414bc38104b29c2d054a5e711ad03e781079",
+ "parent_core_equals_kept_preimage": false,
+ "preimage_note": "the kept pre-image is the pre-activation state, which already carries this card's registration restoration (out/RESTORE.json)",
+ "activation_present_in_the_tree": true,
+ "picks": [
+  [
+   "CX01_retina_snRNA",
+   "27"
+  ],
+  [
+   "CX02_adult_retina",
+   "4"
+  ],
+  [
+   "CX04_cowan_periphery",
+   "7"
+  ],
+  [
+   "CX15_optic_nerve_all",
+   "31"
+  ]
+ ],
+ "parent_dump_log": "core e74c73c6c2ef04d1 keys 7",
+ "activated_dump_log": "core bd45c6b93ec73cd6 keys 7",
+ "restored_matches_snapshot": true,
+ "queries": {
+  "celltype:MG": {
+   "n_differing_paths": 1,
+   "differing": [
+    {
+     "path": "celltype:MG/provenance/files",
+     "before": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      }
+     ],
+     "after": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      },
+      {
+       "library": "holefill_v12",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v12_holefill_increment.json",
+       "version": "v12.0-holefill-20261021",
+       "note": null
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 8,
+     "n_after": 9
+    }
+   ]
+  },
+  "cluster:CX01_retina_snRNA|27": {
+   "n_differing_paths": 5,
+   "differing": [
+    {
+     "path": "cluster:CX01_retina_snRNA|27/celltype_ranking",
+     "before": [],
+     "after": [
+      {
+       "cell_type": "retinal rod cell",
+       "n_shared": 2,
+       "shared_genes": [
+        "PDE6A",
+        "SAG"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v12_holefill_increment.json"
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 0,
+     "n_after": 1
+    },
+    {
+     "path": "cluster:CX01_retina_snRNA|27/gene_to_celltypes/PDE6A",
+     "before": [],
+     "after": [
+      "retinal rod cell"
+     ],
+     "kind": "list_changed",
+     "n_before": 0,
+     "n_after": 1
+    },
+    {
+     "path": "cluster:CX01_retina_snRNA|27/gene_to_celltypes/SAG",
+     "before": [],
+     "after": [
+      "retinal rod cell"
+     ],
+     "kind": "list_changed",
+     "n_before": 0,
+     "n_after": 1
+    },
+    {
+     "path": "cluster:CX01_retina_snRNA|27/off_domain",
+     "before": {
+      "flag": "possible_dev_fetal_content",
+      "dev_best": 2,
+      "dev_best_terms": [
+       "Rod_precursor"
+      ],
+      "hint": "fetal/developing material should pass development_stage (fetal|developing|postnatal) to route the dev panel library (retina_dev)"
+     },
+     "after": "<absent>",
+     "kind": "key_removed"
+    },
+    {
+     "path": "cluster:CX01_retina_snRNA|27/provenance/files",
+     "before": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      }
+     ],
+     "after": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      },
+      {
+       "library": "holefill_v12",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v12_holefill_increment.json",
+       "version": "v12.0-holefill-20261021",
+       "note": null
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 8,
+     "n_after": 9
+    }
+   ]
+  },
+  "cluster:CX02_adult_retina|4": {
+   "n_differing_paths": 5,
+   "differing": [
+    {
+     "path": "cluster:CX02_adult_retina|4/celltype_ranking",
+     "before": [
+      {
+       "cell_type": "Rod",
+       "n_shared": 1,
+       "shared_genes": [
+        "RHO"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json"
+      },
+      {
+       "cell_type": "retina_interneuron::Rod",
+       "n_shared": 1,
+       "shared_genes": [
+        "RHO"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json"
+      },
+      {
+       "cell_type": "retina_v6::Rod",
+       "n_shared": 1,
+       "shared_genes": [
+        "RHO"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json"
+      }
+     ],
+     "after": [
+      {
+       "cell_type": "retinal rod cell",
+       "n_shared": 3,
+       "shared_genes": [
+        "PDE6A",
+        "SAG",
+        "RHO"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v12_holefill_increment.json"
+      },
+      {
+       "cell_type": "Rod",
+       "n_shared": 1,
+       "shared_genes": [
+        "RHO"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json"
+      },
+      {
+       "cell_type": "retina_interneuron::Rod",
+       "n_shared": 1,
+       "shared_genes": [
+        "RHO"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json"
+      },
+      {
+       "cell_type": "retina_v6::Rod",
+       "n_shared": 1,
+       "shared_genes": [
+        "RHO"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json"
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 3,
+     "n_after": 4
+    },
+    {
+     "path": "cluster:CX02_adult_retina|4/gene_to_celltypes/PDE6A",
+     "before": [],
+     "after": [
+      "retinal rod cell"
+     ],
+     "kind": "list_changed",
+     "n_before": 0,
+     "n_after": 1
+    },
+    {
+     "path": "cluster:CX02_adult_retina|4/gene_to_celltypes/RHO",
+     "before": [
+      "Rod",
+      "retina_interneuron::Rod",
+      "retina_v6::Rod"
+     ],
+     "after": [
+      "Rod",
+      "retina_interneuron::Rod",
+      "retina_v6::Rod",
+      "retinal rod cell"
+     ],
+     "kind": "list_changed",
+     "n_before": 3,
+     "n_after": 4
+    },
+    {
+     "path": "cluster:CX02_adult_retina|4/gene_to_celltypes/SAG",
+     "before": [],
+     "after": [
+      "retinal rod cell"
+     ],
+     "kind": "list_changed",
+     "n_before": 0,
+     "n_after": 1
+    },
+    {
+     "path": "cluster:CX02_adult_retina|4/provenance/files",
+     "before": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      }
+     ],
+     "after": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      },
+      {
+       "library": "holefill_v12",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v12_holefill_increment.json",
+       "version": "v12.0-holefill-20261021",
+       "note": null
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 8,
+     "n_after": 9
+    }
+   ]
+  },
+  "cluster:CX04_cowan_periphery|7": {
+   "n_differing_paths": 6,
+   "differing": [
+    {
+     "path": "cluster:CX04_cowan_periphery|7/celltype_ranking",
+     "before": [
+      {
+       "cell_type": "Rod",
+       "n_shared": 2,
+       "shared_genes": [
+        "RHO",
+        "NRL"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json"
+      },
+      {
+       "cell_type": "retina_interneuron::Rod",
+       "n_shared": 2,
+       "shared_genes": [
+        "RHO",
+        "NRL"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json"
+      },
+      {
+       "cell_type": "retina_v6::Rod",
+       "n_shared": 2,
+       "shared_genes": [
+        "RHO",
+        "NRL"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json"
+      }
+     ],
+     "after": [
+      {
+       "cell_type": "retinal rod cell",
+       "n_shared": 3,
+       "shared_genes": [
+        "PDE6A",
+        "RHO",
+        "NRL"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v12_holefill_increment.json"
+      },
+      {
+       "cell_type": "Rod",
+       "n_shared": 2,
+       "shared_genes": [
+        "RHO",
+        "NRL"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json"
+      },
+      {
+       "cell_type": "retina_interneuron::Rod",
+       "n_shared": 2,
+       "shared_genes": [
+        "RHO",
+        "NRL"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json"
+      },
+      {
+       "cell_type": "retina_v6::Rod",
+       "n_shared": 2,
+       "shared_genes": [
+        "RHO",
+        "NRL"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json"
+      },
+      {
+       "cell_type": "retinal pigment epithelial cell",
+       "n_shared": 2,
+       "shared_genes": [
+        "GNGT1",
+        "NRL"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v12_holefill_increment.json"
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 3,
+     "n_after": 5
+    },
+    {
+     "path": "cluster:CX04_cowan_periphery|7/gene_to_celltypes/GNGT1",
+     "before": [],
+     "after": [
+      "retinal pigment epithelial cell"
+     ],
+     "kind": "list_changed",
+     "n_before": 0,
+     "n_after": 1
+    },
+    {
+     "path": "cluster:CX04_cowan_periphery|7/gene_to_celltypes/NRL",
+     "before": [
+      "Rod",
+      "retina_interneuron::Rod",
+      "retina_v6::Rod"
+     ],
+     "after": [
+      "Rod",
+      "retina_interneuron::Rod",
+      "retina_v6::Rod",
+      "retinal rod cell",
+      "retinal pigment epithelial cell"
+     ],
+     "kind": "list_changed",
+     "n_before": 3,
+     "n_after": 5
+    },
+    {
+     "path": "cluster:CX04_cowan_periphery|7/gene_to_celltypes/PDE6A",
+     "before": [],
+     "after": [
+      "retinal rod cell"
+     ],
+     "kind": "list_changed",
+     "n_before": 0,
+     "n_after": 1
+    },
+    {
+     "path": "cluster:CX04_cowan_periphery|7/gene_to_celltypes/RHO",
+     "before": [
+      "Rod",
+      "retina_interneuron::Rod",
+      "retina_v6::Rod"
+     ],
+     "after": [
+      "Rod",
+      "retina_interneuron::Rod",
+      "retina_v6::Rod",
+      "retinal rod cell"
+     ],
+     "kind": "list_changed",
+     "n_before": 3,
+     "n_after": 4
+    },
+    {
+     "path": "cluster:CX04_cowan_periphery|7/provenance/files",
+     "before": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      }
+     ],
+     "after": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      },
+      {
+       "library": "holefill_v12",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v12_holefill_increment.json",
+       "version": "v12.0-holefill-20261021",
+       "note": null
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 8,
+     "n_after": 9
+    }
+   ]
+  },
+  "cluster:CX15_optic_nerve_all|31": {
+   "n_differing_paths": 2,
+   "differing": [
+    {
+     "path": "cluster:CX15_optic_nerve_all|31/provenance/files",
+     "before": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      }
+     ],
+     "after": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      },
+      {
+       "library": "holefill_v12",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v12_holefill_increment.json",
+       "version": "v12.0-holefill-20261021",
+       "note": null
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 8,
+     "n_after": 9
+    },
+    {
+     "path": "cluster:CX15_optic_nerve_all|31/soft_flags/notes",
+     "before": [
+      {
+       "flag_id": "mural_crosstalk",
+       "hard_flag": false,
+       "affects_score": false,
+       "trigger": {
+        "mode": "genes",
+        "conditions": [
+         "family-panel association reminder: 2 of the input genes hit the mural family panel: BICC1,EYA2 (a single hit already gets an annotation; this is not evidence of discovered crosstalk)",
+         "family classes appear inside the ranking's highest-hit tie group / the 3rd-class boundary: Fibroblast"
+        ],
+        "rule": "cell_type: found entry canonical∈family; genes: U∩family panel≠∅ or TOP3∩family≠∅ (TOP3 = the hit-count boundary of the 3rd distinct class, ties included)",
+        "data_snapshot": [
+         {
+          "library": "retina",
+          "version": "v4.1-clean-P0.4",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json"
+         },
+         {
+          "library": "membrane",
+          "version": "v1-membrane-20260924",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+         },
+         {
+          "library": "retina_interneuron",
+          "version": "v5.0-retina-interneuron-20260924",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json"
+         },
+         {
+          "library": "retina_v6",
+          "version": "v6.0-retina-repair-20260925",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json"
+         },
+         {
+          "library": "face_v6",
+          "version": "v6.0-face-20260925",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json"
+         },
+         {
+          "library": "k9_ocs",
+          "version": "k9.0-ocs-registered-v1",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json"
+         },
+         {
+          "library": "antseg_v10",
+          "version": "v10.1-antseg-scope-20261020",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json"
+         },
+         {
+          "library": "onfibro_v13",
+          "version": "v13.0-onfibro-20261022",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json"
+         }
+        ]
+       },
+       "message": "crosstalk warning (D002 ocular surface): the Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratocytes family carries a shared-marker reading risk — under the KB6b three-color re-review 4 entries are all-red and the fibrous-stroma entry has 0 green; audited definition (OLS original text in KB6b §2 point 4, this runtime message does not transcribe CL identifiers, per red line 3): a keratocyte is a fibroblast specialised for residence in the corneal stroma (keratocyte⊂fibroblast in the ontological sense). When a reading involves this family— ① NNMT is an audited reverse false anchor (donor agreement rate 0.167, direction reversed); that audit does not support using it as interstitium-discrimination evidence; ② ALDH3A1 is an audited epithelial-program gene (reverse against suprabasal PMC); when you see it, check the epithelial context first; ③ direction relations follow the KB6b per-cell table: DCN/LUM/PTGDS are audited reverse against Keratocytes (lfc≤-1.96); COL1A2 is audited reverse against Keratocytes (-1.99) and -2.81 against fibrous stroma; for the remaining red-gene members such as FN1: red-gene identity does not imply a direction toward a particular neighbour class — the corresponding table cell is authoritative; for Keratocytes↔Fibroblast mutual calls, re-check against the KB6b red/green criteria; the only all-green anchor on the Keratocytes side is KERA — if you intend to name Keratocytes, re-check KERA and the corneal-stroma context; the Pericyte-side survival anchors NOTCH3/HIGD1B/CALD1 and the SMC-side CNN1/MYH11/MYL9/DES/LMOD1 are each used for neighbour-class comparison within their own target class — no cross-class counting and no substituting for each other's support evidence; ④ when comparing Pericyte vs SMC vs Myofibroblast, interpret them together with the co-expression background; ⑤ the Myofibroblast entry: the KB6b §3 cross-scan records that it has no exclusive high-expression home group on the D002 ocular surface (see that section's per-cell table); keep this audit background in mind when a reading cites it. Falsified-wording reminder: the attribution of RUN5-face Q6::24 (truth=Pericytes 98.7% pure) is expression-layer-compatible evidence of the Myofibroblast/SMC mural entry takeover chain (kb_top1=Myofibroblast, three votes=SMC, the Pericyte entry never ranked), not Keratocytes; the query-engine-side ranking mechanism is unaudited (KB6b REVIEWER_LLM A10 boundary). per-gene role [T3-panel-membership fact only] BICC1: panel-membership fact (in the mural family panel of the markers snapshot loaded by this call; this executor carries no independent audit role for it); per-gene role [T3-panel-membership fact only] EYA2: panel-membership fact (in the mural family panel of the markers snapshot loaded by this call; this executor carries no independent audit role for it);this hint is not a hard flag and constitutes neither a naming condition nor an abstention condition; its presence does not indicate mis-annotation; it must not be used for module score, label weighting, confidence bonus, or candidate ranking input (service-level red line).",
+       "evidence": {
+        "interpretation_source": [
+         "/mnt/D/EyeKB/plans/kb6b_face_20260925/AUDIT_KB6b_D002_separation.md",
+         "/mnt/D/EyeKB/plans/kb6b_face_20260925/STROMAL_WARNING_DRAFT.md",
+         "/mnt/D/EyeKB/plans/evalset/EVAL_RUN5FACE_20260925.md (v1.1 errata)"
+        ],
+        "role_layers": "T2=on file in the KB6b per-cell audit; T2a=survival anchors by target-class context; T3=panel-membership fact of this call only (no independent audit role)"
+       }
+      }
+     ],
+     "after": [
+      {
+       "flag_id": "mural_crosstalk",
+       "hard_flag": false,
+       "affects_score": false,
+       "trigger": {
+        "mode": "genes",
+        "conditions": [
+         "family-panel association reminder: 2 of the input genes hit the mural family panel: BICC1,EYA2 (a single hit already gets an annotation; this is not evidence of discovered crosstalk)",
+         "family classes appear inside the ranking's highest-hit tie group / the 3rd-class boundary: Fibroblast"
+        ],
+        "rule": "cell_type: found entry canonical∈family; genes: U∩family panel≠∅ or TOP3∩family≠∅ (TOP3 = the hit-count boundary of the 3rd distinct class, ties included)",
+        "data_snapshot": [
+         {
+          "library": "retina",
+          "version": "v4.1-clean-P0.4",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json"
+         },
+         {
+          "library": "membrane",
+          "version": "v1-membrane-20260924",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+         },
+         {
+          "library": "retina_interneuron",
+          "version": "v5.0-retina-interneuron-20260924",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json"
+         },
+         {
+          "library": "retina_v6",
+          "version": "v6.0-retina-repair-20260925",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json"
+         },
+         {
+          "library": "face_v6",
+          "version": "v6.0-face-20260925",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json"
+         },
+         {
+          "library": "k9_ocs",
+          "version": "k9.0-ocs-registered-v1",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json"
+         },
+         {
+          "library": "antseg_v10",
+          "version": "v10.1-antseg-scope-20261020",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json"
+         },
+         {
+          "library": "onfibro_v13",
+          "version": "v13.0-onfibro-20261022",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json"
+         },
+         {
+          "library": "holefill_v12",
+          "version": "v12.0-holefill-20261021",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v12_holefill_increment.json"
+         }
+        ]
+       },
+       "message": "crosstalk warning (D002 ocular surface): the Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratocytes family carries a shared-marker reading risk — under the KB6b three-color re-review 4 entries are all-red and the fibrous-stroma entry has 0 green; audited definition (OLS original text in KB6b §2 point 4, this runtime message does not transcribe CL identifiers, per red line 3): a keratocyte is a fibroblast specialised for residence in the corneal stroma (keratocyte⊂fibroblast in the ontological sense). When a reading involves this family— ① NNMT is an audited reverse false anchor (donor agreement rate 0.167, direction reversed); that audit does not support using it as interstitium-discrimination evidence; ② ALDH3A1 is an audited epithelial-program gene (reverse against suprabasal PMC); when you see it, check the epithelial context first; ③ direction relations follow the KB6b per-cell table: DCN/LUM/PTGDS are audited reverse against Keratocytes (lfc≤-1.96); COL1A2 is audited reverse against Keratocytes (-1.99) and -2.81 against fibrous stroma; for the remaining red-gene members such as FN1: red-gene identity does not imply a direction toward a particular neighbour class — the corresponding table cell is authoritative; for Keratocytes↔Fibroblast mutual calls, re-check against the KB6b red/green criteria; the only all-green anchor on the Keratocytes side is KERA — if you intend to name Keratocytes, re-check KERA and the corneal-stroma context; the Pericyte-side survival anchors NOTCH3/HIGD1B/CALD1 and the SMC-side CNN1/MYH11/MYL9/DES/LMOD1 are each used for neighbour-class comparison within their own target class — no cross-class counting and no substituting for each other's support evidence; ④ when comparing Pericyte vs SMC vs Myofibroblast, interpret them together with the co-expression background; ⑤ the Myofibroblast entry: the KB6b §3 cross-scan records that it has no exclusive high-expression home group on the D002 ocular surface (see that section's per-cell table); keep this audit background in mind when a reading cites it. Falsified-wording reminder: the attribution of RUN5-face Q6::24 (truth=Pericytes 98.7% pure) is expression-layer-compatible evidence of the Myofibroblast/SMC mural entry takeover chain (kb_top1=Myofibroblast, three votes=SMC, the Pericyte entry never ranked), not Keratocytes; the query-engine-side ranking mechanism is unaudited (KB6b REVIEWER_LLM A10 boundary). per-gene role [T3-panel-membership fact only] BICC1: panel-membership fact (in the mural family panel of the markers snapshot loaded by this call; this executor carries no independent audit role for it); per-gene role [T3-panel-membership fact only] EYA2: panel-membership fact (in the mural family panel of the markers snapshot loaded by this call; this executor carries no independent audit role for it);this hint is not a hard flag and constitutes neither a naming condition nor an abstention condition; its presence does not indicate mis-annotation; it must not be used for module score, label weighting, confidence bonus, or candidate ranking input (service-level red line).",
+       "evidence": {
+        "interpretation_source": [
+         "/mnt/D/EyeKB/plans/kb6b_face_20260925/AUDIT_KB6b_D002_separation.md",
+         "/mnt/D/EyeKB/plans/kb6b_face_20260925/STROMAL_WARNING_DRAFT.md",
+         "/mnt/D/EyeKB/plans/evalset/EVAL_RUN5FACE_20260925.md (v1.1 errata)"
+        ],
+        "role_layers": "T2=on file in the KB6b per-cell audit; T2a=survival anchors by target-class context; T3=panel-membership fact of this call only (no independent audit role)"
+       }
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 1,
+     "n_after": 1
+    }
+   ]
+  },
+  "genes:legacy_panel_microglia": {
+   "n_differing_paths": 6,
+   "differing": [
+    {
+     "path": "genes:legacy_panel_microglia/celltype_ranking",
+     "before": [
+      {
+       "cell_type": "Microglia",
+       "n_shared": 5,
+       "shared_genes": [
+        "TMEM119",
+        "CX3CR1",
+        "P2RY12",
+        "SALL1",
+        "AIF1"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+      },
+      {
+       "cell_type": "HC",
+       "n_shared": 1,
+       "shared_genes": [
+        "CX3CR1"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json"
+      },
+      {
+       "cell_type": "Mono_Nonclassical",
+       "n_shared": 1,
+       "shared_genes": [
+        "CX3CR1"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+      },
+      {
+       "cell_type": "Mac_Tissue",
+       "n_shared": 1,
+       "shared_genes": [
+        "C1QA"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+      },
+      {
+       "cell_type": "retina_interneuron::HC",
+       "n_shared": 1,
+       "shared_genes": [
+        "CX3CR1"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json"
+      }
+     ],
+     "after": [
+      {
+       "cell_type": "Microglia",
+       "n_shared": 5,
+       "shared_genes": [
+        "TMEM119",
+        "CX3CR1",
+        "P2RY12",
+        "SALL1",
+        "AIF1"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+      },
+      {
+       "cell_type": "macrophage",
+       "n_shared": 3,
+       "shared_genes": [
+        "C1QA",
+        "CSF1R",
+        "AIF1"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v12_holefill_increment.json"
+      },
+      {
+       "cell_type": "HC",
+       "n_shared": 1,
+       "shared_genes": [
+        "CX3CR1"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json"
+      },
+      {
+       "cell_type": "Mono_Nonclassical",
+       "n_shared": 1,
+       "shared_genes": [
+        "CX3CR1"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+      },
+      {
+       "cell_type": "Mac_Tissue",
+       "n_shared": 1,
+       "shared_genes": [
+        "C1QA"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+      },
+      {
+       "cell_type": "retina_interneuron::HC",
+       "n_shared": 1,
+       "shared_genes": [
+        "CX3CR1"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json"
+      },
+      {
+       "cell_type": "monocyte",
+       "n_shared": 1,
+       "shared_genes": [
+        "AIF1"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v12_holefill_increment.json"
+      },
+      {
+       "cell_type": "non-classical monocyte",
+       "n_shared": 1,
+       "shared_genes": [
+        "CX3CR1"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v12_holefill_increment.json"
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 5,
+     "n_after": 8
+    },
+    {
+     "path": "genes:legacy_panel_microglia/gene_to_celltypes/AIF1",
+     "before": [
+      "Microglia"
+     ],
+     "after": [
+      "Microglia",
+      "macrophage",
+      "monocyte"
+     ],
+     "kind": "list_changed",
+     "n_before": 1,
+     "n_after": 3
+    },
+    {
+     "path": "genes:legacy_panel_microglia/gene_to_celltypes/C1QA",
+     "before": [
+      "Mac_Tissue"
+     ],
+     "after": [
+      "Mac_Tissue",
+      "macrophage"
+     ],
+     "kind": "list_changed",
+     "n_before": 1,
+     "n_after": 2
+    },
+    {
+     "path": "genes:legacy_panel_microglia/gene_to_celltypes/CSF1R",
+     "before": [],
+     "after": [
+      "macrophage"
+     ],
+     "kind": "list_changed",
+     "n_before": 0,
+     "n_after": 1
+    },
+    {
+     "path": "genes:legacy_panel_microglia/gene_to_celltypes/CX3CR1",
+     "before": [
+      "HC",
+      "Mono_Nonclassical",
+      "Microglia",
+      "retina_interneuron::HC"
+     ],
+     "after": [
+      "HC",
+      "Mono_Nonclassical",
+      "Microglia",
+      "retina_interneuron::HC",
+      "non-classical monocyte"
+     ],
+     "kind": "list_changed",
+     "n_before": 4,
+     "n_after": 5
+    },
+    {
+     "path": "genes:legacy_panel_microglia/provenance/files",
+     "before": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      }
+     ],
+     "after": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      },
+      {
+       "library": "holefill_v12",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v12_holefill_increment.json",
+       "version": "v12.0-holefill-20261021",
+       "note": null
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 8,
+     "n_after": 9
+    }
+   ]
+  },
+  "pages:list_kb_pages": {
+   "n_differing_paths": 0,
+   "differing": []
+  }
+ },
+ "changed_response_fields": {
+  "provenance": [
+   "celltype:MG",
+   "cluster:CX01_retina_snRNA|27",
+   "cluster:CX02_adult_retina|4",
+   "cluster:CX04_cowan_periphery|7",
+   "cluster:CX15_optic_nerve_all|31",
+   "genes:legacy_panel_microglia"
+  ],
+  "celltype_ranking": [
+   "cluster:CX01_retina_snRNA|27",
+   "cluster:CX02_adult_retina|4",
+   "cluster:CX04_cowan_periphery|7",
+   "genes:legacy_panel_microglia"
+  ],
+  "gene_to_celltypes": [
+   "cluster:CX01_retina_snRNA|27",
+   "cluster:CX02_adult_retina|4",
+   "cluster:CX04_cowan_periphery|7",
+   "genes:legacy_panel_microglia"
+  ],
+  "off_domain": [
+   "cluster:CX01_retina_snRNA|27"
+  ],
+  "soft_flags": [
+   "cluster:CX15_optic_nerve_all|31"
+  ]
+ },
+ "verdict": "PASS"
+}
