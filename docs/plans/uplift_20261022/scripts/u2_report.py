@@ -175,7 +175,7 @@ def main() -> int:
     A("## 6. Re-deriving these numbers")
     A("")
     A("```")
-    A("cd %s" % WAVE)
+    A("cd <repo-root>/docs/plans/uplift_20261022   # this wave, relative to the repository root")
     A("export PYTHONHASHSEED=0 NR_NET_AUDIT_LOG=$PWD/logs/net_audit.log")
     A("/usr/bin/python3 scripts/u1_uplift.py        # writes out/UPLIFT_MEASUREMENT.json")
     A("/usr/bin/python3 scripts/u2_report.py        # writes this file")

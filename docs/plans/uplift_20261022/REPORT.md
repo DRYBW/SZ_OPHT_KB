@@ -177,7 +177,7 @@ it is attributed, in the artefact, to a named cluster, a named cause and a named
 ## 6. Re-deriving these numbers
 
 ```
-cd /home/ubuntu/EYEKB_REPO/docs/plans/uplift_20261022
+cd <repo-root>/docs/plans/uplift_20261022   # this wave, relative to the repository root
 export PYTHONHASHSEED=0 NR_NET_AUDIT_LOG=$PWD/logs/net_audit.log
 /usr/bin/python3 scripts/u1_uplift.py        # writes out/UPLIFT_MEASUREMENT.json
 /usr/bin/python3 scripts/u2_report.py        # writes this file
