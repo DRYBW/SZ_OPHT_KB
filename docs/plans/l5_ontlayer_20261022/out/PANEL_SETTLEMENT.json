@@ -1,0 +1,55 @@
+{
+ "attribution": {
+  "re_recorded_with": "the documented signatures, no refused calls, plus an interpreter provenance block",
+  "settled_by": "the card that re-recorded the fixture in commit 435bb92",
+  "what_moved_and_why": [
+   "four calls were refused on arguments the tool never accepted (the fixture spelled get_kb_page's argument `kind` where the documented signature is `scope`, passed a boolean for `detail` where the signature is a string, and omitted the required `cell_type`); a refusal is produced by the argument-validation layer, embeds the validator's own version string, and therefore cannot be an anchor at all",
+   "one call had genuinely moved before this card started: explain_annotation for the Cell Ontology label resolved to a different answer than the one recorded"
+  ]
+ },
+ "card": "L5 baseline freeze + read-only Cell Ontology explanation layer",
+ "current": {
+  "recorded": {
+   "full_panel": "3f1f52cb62915f5ad2801962aa523d36",
+   "legacy_panel": "e8e6c26351cd9a1d42fa2e7cb6a83f23",
+   "n_calls": 12,
+   "provenance": {
+    "executable": "/home/ubuntu/training-venv/bin/python3",
+    "pydantic": "2.12.5",
+    "python": "3.14.4"
+   },
+   "refused_calls": []
+  },
+  "sha256": "ce6416126252663ff8be794fe985500a284876c3d15b2420359656c1bb4afd87",
+  "source": "tests/fixtures/tool_panel_baseline.json"
+ },
+ "live_reading_here": {
+  "digests": {
+   "full_panel": "3f1f52cb62915f5ad2801962aa523d36",
+   "legacy_panel": "e8e6c26351cd9a1d42fa2e7cb6a83f23"
+  },
+  "interpreter": "/home/ubuntu/training-venv/bin/python3",
+  "probe": "tests/probe_tool_panel_identity.py --baseline tests/fixtures/tool_panel_baseline.json",
+  "rc": 0,
+  "verdict": "IDENTITY PASS: the fixture reproduces at this HEAD"
+ },
+ "ownership": {
+  "fixture_owner": "the shipped-surface card that re-recorded it; the file is registered as its own delivery record",
+  "what_this_card_did": "read the pre-image out of git, re-ran the probe, and recorded both readings. The fixture was NOT overwritten, and neither version was edited."
+ },
+ "pre_image": {
+  "recorded": {
+   "full_panel": "097328b42ffdb736b6934fa1967ada37",
+   "legacy_panel": "4813fca2f5c8c916a233f4825b200b19",
+   "n_calls": 12,
+   "provenance": null,
+   "refused_calls": null
+  },
+  "sha256": "c95ae8ade83a8bd90140d600117bc3a042687722ff275464d3c3432269fd9c2e",
+  "source": "git show 435bb92^:tests/fixtures/tool_panel_baseline.json"
+ },
+ "question": "the recorded tool panel does not reproduce at HEAD (5 of 12 calls differed)",
+ "rule": "a baseline is not declared frozen on a panel that does not reproduce: the mismatch is settled first, and the settlement names the owner of the fixture.",
+ "schema": "eyekb-panel-settlement/1.0",
+ "verdict": "STALE FIXTURE - already settled, by another card, before this baseline was frozen"
+}

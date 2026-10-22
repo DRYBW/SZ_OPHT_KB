@@ -1,0 +1,53 @@
+{
+ "schema": "eyekb-ontology-manifest/1.0",
+ "manifest_id": "ont-manifest-v1",
+ "snapshot_release": "cl/releases/2026-06-08",
+ "parser_version": "ont-layer/1.0",
+ "generated_by": "kb/ontology/scripts/build_ont_manifest.py",
+ "resolution_rule": "A logical address is resolved relative to the repository root (discovered from the reader's own location) and the bytes are verified against the recorded sha256 before any answer is produced. An address whose file is absent or whose hash does not match is a delivery defect, reported as ANCHOR_MISSING / ANCHOR_HASH_MISMATCH - never as an environment error, and never answered from a placeholder.",
+ "path_rule": "No author-machine absolute path is stored here. Every asset is addressed by repository-relative path under a logical address.",
+ "anchors": [
+  {
+   "anchor_id": "ont://cl/releases/2026-06-08",
+   "logical_address": "repo://kb/ontology/cl/releases/2026-06-08/cl-base.obo",
+   "path": "kb/ontology/cl/releases/2026-06-08/cl-base.obo",
+   "kind": "ontology_snapshot",
+   "release": "cl/releases/2026-06-08",
+   "data_version_field": "cl/releases/2026-06-08/cl-base.owl",
+   "format_version": "1.2",
+   "sha256": "c6274fb65cdf740b983a06b74cb678814249d7f8e580c2ec9de54bf204a2b1c7",
+   "bytes": 3757082,
+   "required": true,
+   "notes": "The single fixed local snapshot this layer parses. Shipped in the repository so a clean clone can answer; the file is byte-identical to the copy recorded by the earlier ontology-navigation card. Recognised but not read as evidence here: alt_id 76, obsolete terms 207, replaced_by 133, consider 30, intersection_of (OWL restriction / equivalence expressions) 5023, is_a edges 4880 of which 4664 are CL-to-CL, and 216 parents pointing outside the file (missing imports)."
+  },
+  {
+   "anchor_id": "repo://kb/ontology/ONT_LAYER_REGISTRY_v1.json",
+   "logical_address": "repo://kb/ontology/ONT_LAYER_REGISTRY_v1.json",
+   "path": "kb/ontology/ONT_LAYER_REGISTRY_v1.json",
+   "kind": "capability_registration",
+   "release": "ont-layer-v1",
+   "sha256": "f0ee9e4c72a5dac9ec9d20d0a7d2305032dfcf07460412bf24da3e56a0405e01",
+   "required": true,
+   "notes": "The registration record of this capability: registered, read-only, OFF by default, whitelist empty. It is the record that proves the capability is not in the effective profile.",
+   "bytes": 6437
+  },
+  {
+   "anchor_id": "repo://kb/markers/markers_cl_alignment_v2_unified.json",
+   "logical_address": "repo://kb/markers/markers_cl_alignment_v2_unified.json",
+   "path": "kb/markers/markers_cl_alignment_v2_unified.json",
+   "kind": "class_mapping_source",
+   "release": "cl-labelmap-v2-unified",
+   "sha256": "48051cdae915b82e6e7812da9b98f93b41f51c5fac14bdb370bd5ccdb969a0a1",
+   "required": true,
+   "notes": "The shipped class-to-CL mapping read by explain_class_mapping. Read-only: the layer reports what this file says and never rewrites it.",
+   "bytes": 20608
+  }
+ ],
+ "snapshot_provenance": {
+  "source_labels": [
+   "upstream CL base release 2026-06-08 (the shipped file; data-version field cl/releases/2026-06-08/cl-base.owl)",
+   "integrated CL release 2026-06-08 with imported ontologies inlined (recorded by the earlier ontology-navigation card; not shipped - 17.3 MB, and it carries no CL-to-CL edge the shipped file does not)"
+  ],
+  "equivalence_evidence": "docs/plans/l5_ontlayer_20261022/out/CL_SNAPSHOT_EQUIVALENCE.json - the CL-to-CL is_a edge set, the preferred-name map and the obsolete set were compared between the two snapshots with this layer's own parser; the comparison is re-derived here and is not quoted from the earlier card."
+ }
+}

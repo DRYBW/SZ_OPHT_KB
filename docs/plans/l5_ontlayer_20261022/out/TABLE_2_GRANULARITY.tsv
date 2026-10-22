@@ -1,0 +1,7 @@
+relation	n_clusters	n_cells	levels_crossed_min	levels_crossed_max	n_below_min_reporting_granularity	counts_as_correct	counts_as_confirmed_error	note
+ours_broader	150	342552	1	3	0	false	false	our term is an ancestor of the reference term: a coarser answer, which is a resolution limitation
+ours_narrower	15	36090	1	4	0	false	false	our term is finer than the reference term: the extra resolution is unverified and earns nothing
+confirmed_incompatible	0	0			0	false	true	requires explicit incompatibility evidence; the graph alone never establishes exclusion
+not_supported_by_is_a	344	636568			0	false	false	no ancestor relation, or one side unmapped: counted neither as correct nor as a confirmed error
+same_term	212	480120	0	0	0	true	false	reported in table 1 as agreement, listed here for the denominator
+TOTAL	721	1495330						fixed denominator = the whole recorded population

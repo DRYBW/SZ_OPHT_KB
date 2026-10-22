@@ -40,6 +40,7 @@ Running it (MCP client configuration):
   Toggles and the CJK query bridge are documented in the repository README.
 """
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -70,7 +71,9 @@ def _release_info():
     except Exception:
         return blank
     out = dict(blank)
-    for k in ("release_id", "taken_at_commit", "n_files", "algorithm", "coverage"):
+    for k in ("release_id", "taken_at_commit", "n_files", "algorithm", "coverage",
+              "protocol_generation", "service_build_id", "knowledge_bundle_id",
+              "effective_profile_id"):
         if k in rec and rec[k] not in (None, ""):
             out[k] = rec[k]
     out["source"] = "docs/RELEASE_IDENTITY.json"
@@ -131,6 +134,53 @@ app = MCPServer(
                   "produced and never feed back to change candidates, scores, ordering, or original QC "
                   "fields."),
 )
+
+
+# --- ontology explanation layer: registered, read-only, OFF by default -------------------------
+# The capability (resolve_term / get_ancestors / compare_terms / explain_class_mapping) is
+# registered in kb/ontology/ONT_LAYER_REGISTRY_v1.json with an EMPTY whitelist: nothing is
+# advertised and nothing is imported unless the route variable names the tool explicitly. With the
+# route unset, the advertised tool list and every answer are byte-identical to the release before
+# this capability existed (tests/probe_tool_panel_identity.py, and the recorded request replay in
+# docs/plans/l5_ontlayer_20261022/).
+ONT_LAYER_TOOLS = ("resolve_term", "get_ancestors", "compare_terms", "explain_class_mapping")
+ONT_LAYER_ROUTE_ENV = "EYEKB_ONT_LAYER"
+ONT_LAYER_REGISTRY = Path(__file__).resolve().parent.parent / "kb" / "ontology" / \
+    "ONT_LAYER_REGISTRY_v1.json"
+
+
+def _ont_layer_route():
+    """The explicitly routed tools, in registry order. Empty unless the caller names them."""
+    raw = os.environ.get(ONT_LAYER_ROUTE_ENV) or ""
+    named = [t.strip() for t in raw.split(",") if t.strip()]
+    return [t for t in ONT_LAYER_TOOLS if t in named]
+
+
+ONT_LAYER_ROUTED = _ont_layer_route()
+_ont = None
+if ONT_LAYER_ROUTED:                       # imported only when explicitly routed
+    import ontology_layer as _ont        # noqa: E402
+
+
+def _ont_call(fn, **kw):
+    """One call into the layer. A snapshot that cannot be read is reported as it is - the layer
+    never answers from a placeholder, and a missing shipped asset is a defect, not an environment
+    error."""
+    try:
+        snap = _ont.layer()
+    except Exception as e:                                   # repository root not found
+        return {"error": "ontology_layer_unavailable", "reason": f"{type(e).__name__}: {e}",
+                "note": "the layer could not resolve its assets; no answer is produced from "
+                        "anything else"}
+    if snap.anchor.get("status") != "RESOLVED":
+        return {"error": "ontology_anchor_not_resolved",
+                "anchor": snap.anchor.get("anchor"),
+                "anchor_status": snap.anchor.get("status"),
+                "manifest": snap.anchor.get("manifest"),
+                "note": "the fixed ontology snapshot is missing or its hash does not match the "
+                        "recorded one. That is a delivery defect; no answer is produced from an "
+                        "unverified snapshot."}
+    return fn(snap, **kw)
 
 
 @app.tool(title="Search ophthalmic literature", annotations=_read_only("Search ophthalmic literature"))
@@ -308,6 +358,91 @@ def explain_annotation(cell_type: str, tissue: str = "", top_k: int = 5) -> dict
     return resp
 
 
+# --- the four ontology tools: registered only when explicitly routed ---------------------------
+# Titles say what they do; the docstrings say what the answer is and is not. They do not write to
+# the call log: the capability's claim is that it reads and nothing else.
+if "resolve_term" in ONT_LAYER_ROUTED:
+
+    @app.tool(title="Resolve a Cell Ontology term", annotations=_read_only("Resolve a Cell Ontology term"))
+    def resolve_term(term: str) -> dict:
+        """Which Cell Ontology term is this, and how sure is that?
+
+        term: a CL identifier, a preferred label, an alternate identifier, or an exact synonym.
+
+        The answer separates what the graph says from what may be concluded. resolution_status is
+        explicit, and a non-unique match is never resolved by preference: same-label-different-concept
+        and synonym ambiguity both come back as `ambiguous` with the candidates listed, for review.
+        An obsolete term is reported as obsolete, and a replacement is named only when the ontology
+        declares exactly one. `assessment` states whether the answer is usable here, and is
+        `not_assessed` when no task context was supplied.
+
+        Read-only, deterministic, single fixed snapshot (release and file hash in the answer). Not
+        an input to any score, weighting, ranking or confidence measure.
+        """
+        return _ont_call(lambda s, **k: s.resolve_term(term))
+
+
+if "get_ancestors" in ONT_LAYER_ROUTED:
+
+    @app.tool(title="Cell Ontology ancestors", annotations=_read_only("Cell Ontology ancestors"))
+    def get_ancestors(term: str, max_depth: int = 0) -> dict:
+        """What the `is_a` graph says is above a term, and along which path.
+
+        term: as resolve_term. max_depth: 0 = every ancestor, otherwise that many levels up.
+
+        Every ancestor carries the levels above, the shortest path from the term, the line of the
+        ontology file it was read from, and whether it is an extremely broad ("blanket") ancestor -
+        a relation that only reaches such a term does not meet the minimum reporting granularity.
+        Ancestors declared or implied outside the snapshot are counted, not invented.
+        """
+        return _ont_call(lambda s, **k: s.get_ancestors(term, max_depth))
+
+
+if "compare_terms" in ONT_LAYER_ROUTED:
+
+    @app.tool(title="Compare two Cell Ontology terms", annotations=_read_only("Compare two Cell Ontology terms"))
+    def compare_terms(ours: str, theirs: str, evidence_source: str = "",
+                      evidence_assertion: str = "", context: str = "") -> dict:
+        """How do two terms relate, and how far may that relation be used?
+
+        ours / theirs: CL identifiers or labels (resolved as in resolve_term).
+        evidence_source / evidence_assertion: explicit incompatibility evidence, if you have it.
+
+        The verdict is one of five buckets: same_term, ours_broader, ours_narrower,
+        confirmed_incompatible, not_supported_by_is_a. A coarser answer is a resolution limitation,
+        not a biological error. No ancestor relation is NOT proof of mutual exclusion: it is
+        reported as not_supported_by_is_a, which is neither counted as correct nor announced as a
+        confirmed error, and `confirmed_incompatible` is reached only when incompatibility evidence
+        is supplied, in which case it is recorded with the verdict.
+
+        Two records come back side by side and neither is derived from the other: `is_a_relation`
+        (what the graph says) and `assessment` (whether the answer holds under this sample, task
+        granularity and evidence), each with ancestor_path and unresolved_reason.
+        """
+        return _ont_call(lambda s, **k: s.compare_terms(
+            ours, theirs, evidence_source=evidence_source,
+            evidence_assertion=evidence_assertion, context=context))
+
+
+if "explain_class_mapping" in ONT_LAYER_ROUTED:
+
+    @app.tool(title="Explain a class mapping", annotations=_read_only("Explain a class mapping"))
+    def explain_class_mapping(internal_class_id: str, reference_term: str = "") -> dict:
+        """What backs the mapping this library ships for one of our classes?
+
+        internal_class_id: a library class or short name, e.g. "RPE" or "Rod".
+        reference_term: optional - a term to compare the mapped CL term against.
+
+        Returns the shipped mapping (source file and its hash), whether the term it names is
+        present in the fixed snapshot, the graph facts behind it (parents, multiple inheritance,
+        ancestor and descendant counts, any declared developmental relation) and an assessment.
+        A class with no shipped mapping is reported as not_mapped; nothing is invented for it, and
+        the shipped class dictionary is never rewritten.
+        """
+        return _ont_call(lambda s, **k: s.explain_class_mapping(internal_class_id,
+                                                                reference_term))
+
+
 @app.tool(title="Report the release identity",
           annotations=_read_only("Report the release identity"))
 def get_release_identity() -> dict:
@@ -328,6 +463,32 @@ def get_release_identity() -> dict:
                                          "n_files", "algorithm", "coverage", "source", "recorded")}
     resp["recompute"] = "python3 scripts/release_identity.py --check"
     resp["handshake_version"] = SERVER_VERSION
+    # Release identity in four layers (a caller needs the resolvable manifest identifier together
+    # with the configuration that was actually in force), plus the release manifest it is bound to.
+    resp["identity_layers"] = {
+        "protocol_generation": RELEASE_INFO.get("protocol_generation") or PROTOCOL_GENERATION,
+        "service_build_id": RELEASE_INFO.get("service_build_id"),
+        "knowledge_bundle_id": RELEASE_INFO.get("knowledge_bundle_id"),
+        "effective_profile_id": RELEASE_INFO.get("effective_profile_id"),
+        "release_manifest": "docs/RELEASE_MANIFEST_v1.json",
+        "note": ("The four layers are separate on purpose: the wire contract, the server code, the "
+                 "shipped knowledge assets, and what actually took effect in this run. "
+                 "effective_profile_id is taken over the observed toggle values and the registered "
+                 "capabilities, with volatile fields excluded, so the same configuration gives the "
+                 "same value on any day."),
+    }
+    resp["registered_capabilities"] = [{
+        "capability_id": "ont_explain_layer",
+        "registered": True,
+        "default_state": "OFF",
+        "whitelist": [],
+        "route_env": ONT_LAYER_ROUTE_ENV,
+        "advertised_now": list(ONT_LAYER_ROUTED),
+        "registry": "kb/ontology/ONT_LAYER_REGISTRY_v1.json",
+        "note": ("Registered read-only and OFF by default with an empty whitelist: the four "
+                 "ontology tools are advertised only when the route variable names them "
+                 "explicitly, and are never part of the default tool set."),
+    }] if ONT_LAYER_REGISTRY.is_file() else []
     resp["note"] = ("Identity of the shipped bytes of this checkout. An identity that does not "
                     "match the release you intend to cite means the checkout moved: re-run "
                     "`python3 scripts/release_identity.py` to see the current value.")

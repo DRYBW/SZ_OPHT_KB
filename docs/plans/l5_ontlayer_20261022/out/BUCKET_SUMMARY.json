@@ -1,0 +1,84 @@
+{
+ "generated_by": "docs/plans/l5_ontlayer_20261022/scripts/02_build_tables.py",
+ "input": {
+  "path": "docs/plans/l5_ontlayer_20261022/out/GRANULARITY_PAIRS_721.tsv",
+  "n_rows": 721
+ },
+ "ontology": {
+  "anchor": "ont://cl/releases/2026-06-08",
+  "anchor_status": "RESOLVED",
+  "path": "kb/ontology/cl/releases/2026-06-08/cl-base.obo",
+  "file_sha256": "c6274fb65cdf740b983a06b74cb678814249d7f8e580c2ec9de54bf204a2b1c7",
+  "release": "cl/releases/2026-06-08/cl-base.owl",
+  "release_field": "data-version",
+  "parser_version": "ont-layer/1.0",
+  "n_cl_terms": 3531,
+  "n_active": 3335,
+  "n_obsolete": 196
+ },
+ "buckets": {
+  "same_term": {
+   "clusters": 212,
+   "cells": 480120,
+   "pct_clusters": 29.404,
+   "pct_cells": 32.108
+  },
+  "ours_broader": {
+   "clusters": 150,
+   "cells": 342552,
+   "pct_clusters": 20.804,
+   "pct_cells": 22.908
+  },
+  "ours_narrower": {
+   "clusters": 15,
+   "cells": 36090,
+   "pct_clusters": 2.08,
+   "pct_cells": 2.414
+  },
+  "confirmed_incompatible": {
+   "clusters": 0,
+   "cells": 0,
+   "pct_clusters": 0.0,
+   "pct_cells": 0.0
+  },
+  "not_supported_by_is_a": {
+   "clusters": 344,
+   "cells": 636568,
+   "pct_clusters": 47.712,
+   "pct_cells": 42.57
+  }
+ },
+ "denominator": {
+  "clusters": 721,
+  "cells": 1495330,
+  "rule": "fixed: every recorded cluster stays in the denominator, including the ones with no answer on our side"
+ },
+ "unmapped": {
+  "clusters": 193,
+  "note": "reported inside not_supported_by_is_a and separately here; counted as neither correct nor a confirmed error"
+ },
+ "cross_check_against_the_earlier_reading": {
+  "source": "the delivered four-way table of the earlier ontology-navigation card, carried in the frozen pair list as recorded_verdict",
+  "recorded_bucket_counts": {
+   "same_term": 212,
+   "ours_broader": 150,
+   "ours_narrower": 15,
+   "confirmed_incompatible": 0,
+   "not_supported_by_is_a": 344
+  },
+  "recomputed_bucket_counts": {
+   "same_term": 212,
+   "ours_broader": 150,
+   "ours_narrower": 15,
+   "confirmed_incompatible": 0,
+   "not_supported_by_is_a": 344
+  },
+  "identical": true,
+  "note": "bucket names changed with the ruling (we_are_coarser -> ours_broader, true_mismatch and no_mapping both -> not_supported_by_is_a, which is why the latter two are additionally split by is_a_relation)"
+ },
+ "declarations": {
+  "population_is_regression_material": "this population is a comparison the project had already run and already exposed; it is regression and leak-detection material, not a blind validation volume",
+  "no_lenient_accuracy": "no table blends the buckets into one accuracy figure",
+  "granularity_rule": "blanket ancestor threshold = 200 active CL descendants, declared before this run"
+ }
+}

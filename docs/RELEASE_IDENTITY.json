@@ -1,16 +1,75 @@
 {
  "schema": "eyekb-release-identity/1.0",
- "release_id": "3c17853873ca",
- "digest_sha256": "3c17853873caccc536468a5e8df25dbbbd0a873b444ede37903ea77fc1c73ef3",
+ "release_id": "2c7a1a5a3244",
+ "digest_sha256": "2c7a1a5a3244c633e7a705f9ca326cfcddd0c7a6910175bcf2665e375f6b7ede",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 3718,
- "total_bytes": 224519351,
- "taken_at_commit": "a22c802f8dac036f3e2b8da2f58a92c443b90386",
- "taken_at_commit_note": "HEAD when the identity was taken. With --source index the record is taken against the staged tree and ships in the commit that tree becomes; the record is excluded from its own coverage, so the value is unaffected.",
- "coverage": "every file of the tree (HEAD, or the staged tree with --source index)",
+ "n_files": 3751,
+ "total_bytes": 228787604,
+ "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
+ "service_build_id": "4d6b8a6fde9d",
+ "service_build_id_digest": "4d6b8a6fde9d6fa3383dddb066375a1ea50fe2006e4f9baee0a678890db1819f",
+ "service_build_id_coverage": {
+  "prefixes": [
+   "mcp_server/"
+  ],
+  "exact": [
+   "scripts/release_identity.py"
+  ],
+  "n_files": 12,
+  "bytes": 1272599
+ },
+ "knowledge_bundle_id": "27bf74fcc517",
+ "knowledge_bundle_id_digest": "27bf74fcc517daee9da65c7cba23ac1d2a4c84f1d0eb2751cb0736117bc6426d",
+ "knowledge_bundle_id_coverage": {
+  "prefixes": [
+   "kb/",
+   "literature_db/"
+  ],
+  "n_files": 164,
+  "bytes": 29895852
+ },
+ "effective_profile_id": "b87604d95d2f",
+ "effective_profile": {
+  "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
+  "service_build_id": "4d6b8a6fde9d",
+  "knowledge_bundle_id": "27bf74fcc517",
+  "toggles": {
+   "EYEKB_ACT_V6": null,
+   "EYEKB_ACT_ANTSEG": null,
+   "EYEKB_KBGOV_B5": null,
+   "EYEKB_CN_REWRITE": null,
+   "EYEKB_SPECIES_ROUTE": null,
+   "EYEKB_ONT_LAYER": null,
+   "EYEKB_ABSTAIN_REASON": null,
+   "EYEKB_FALLBACK_WIDEN": null,
+   "EYEKB_STATE_GUARD": null,
+   "EYEKB_DB_DIR": null
+  },
+  "registered_capabilities": [
+   {
+    "capability_id": "ont_explain_layer",
+    "state": "OFF",
+    "whitelist": [],
+    "route_env": "EYEKB_ONT_LAYER"
+   }
+  ],
+  "layers": {
+   "release_id": "2c7a1a5a3244",
+   "service_build_id": "4d6b8a6fde9d",
+   "knowledge_bundle_id": "27bf74fcc517",
+   "effective_profile_id": "b87604d95d2f"
+  }
+ },
+ "effective_profile_rule": "the observed toggle values, the registered capabilities and their state, and the layer identities; volatile fields (timestamps, commit ids, working directory) are deliberately absent, so the same configuration gives the same value whatever day it is taken",
+ "layers_note": "The four layers are separate on purpose: protocol_generation describes the wire contract, service_build_id the server code, knowledge_bundle_id the shipped knowledge assets, and effective_profile_id what actually took effect this run. A caller needs the last two together - the resolvable release manifest identifier and the configuration that was in force.",
+ "taken_at_commit": "16c6b28aab8ffda11a4a89d21075ae217e740771",
+ "taken_at_commit_note": "HEAD when the identity was taken. With --source index the record is taken against the staged tree and ships in the commit that tree becomes; the records are excluded from their own coverage, so the value is unaffected.",
+ "coverage": "every file of the tree (HEAD, or the staged tree with --source index) except the identity record and the release manifest",
  "excluded": [
-  "docs/RELEASE_IDENTITY.json"
+  "docs/RELEASE_IDENTITY.json",
+  "docs/RELEASE_MANIFEST_v1.json",
+  "docs/plans/l5_ontlayer_20261022/ledgers/COMMIT.txt"
  ],
  "recompute": "python3 scripts/release_identity.py --check"
 }

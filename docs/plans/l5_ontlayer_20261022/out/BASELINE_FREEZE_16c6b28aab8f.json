@@ -1,0 +1,794 @@
+{
+ "active_libraries": {
+  "interpreter": "/home/ubuntu/training-venv/bin/python3",
+  "marker_libraries": {
+   "items": [
+    [
+     "antseg_v10",
+     "<REPO>/kb/markers/markers_v10_antseg_increment.json"
+    ],
+    [
+     "face_v6",
+     "<REPO>/kb/markers/markers_v6_face_increment.json"
+    ],
+    [
+     "holefill_v12",
+     "<REPO>/kb/markers/markers_v12_holefill_increment.json"
+    ],
+    [
+     "k9_ocs",
+     "<REPO>/kb/markers/markers_k9_ocs_increment.json"
+    ],
+    [
+     "lacrimal_v6",
+     "<REPO>/kb/markers/markers_v6_lacrimal_increment.json"
+    ],
+    [
+     "lensiris_v11",
+     "<REPO>/kb/markers/markers_v11_lensiris_increment.json"
+    ],
+    [
+     "membrane",
+     "<REPO>/kb/markers/markers_membrane_v1.json"
+    ],
+    [
+     "retina",
+     "<REPO>/kb/markers/markers_v4.1_clean.json"
+    ],
+    [
+     "retina_dev",
+     "<REPO>/kb/markers/markers_v9_dev_retina.json"
+    ],
+    [
+     "retina_interneuron",
+     "<REPO>/kb/markers/markers_v5_retina_interneuron.json"
+    ],
+    [
+     "retina_v6",
+     "<REPO>/kb/markers/markers_v6_retina_repair.json"
+    ],
+    [
+     "retina_v7",
+     "<REPO>/kb/markers/markers_v7_panel_increment.json"
+    ]
+   ],
+   "type": "dict"
+  },
+  "note": "packages are the versions this interpreter actually resolves; marker_libraries is the set the shipped loader builds by default, as a sorted record",
+  "packages": {
+   "PyYAML": "6.0.3",
+   "mcp": "2.0.0",
+   "numpy": "2.4.6",
+   "pandas": "2.3.3",
+   "pyarrow": "25.0.0",
+   "pydantic": "2.12.5",
+   "sentence-transformers": "6.0.0"
+  },
+  "python": "3.14.4"
+ },
+ "baseline_revision": "16c6b28aab8ffda11a4a89d21075ae217e740771",
+ "baseline_revision_short": "16c6b28aab8f",
+ "card": "L5 baseline freeze + read-only Cell Ontology explanation layer",
+ "checkout": {
+  "note": "recorded so a reader knows whether the fingerprint is a commit or a working tree; the working-directory path itself is deliberately absent",
+  "worktree_clean": false
+ },
+ "code_fingerprint": {
+  "coverage": {
+   "prefixes": [
+    "mcp_server/",
+    "kb/markers/",
+    "kb/baselines/",
+    "kb/priors/",
+    "kb/ontology/",
+    "kb/literature_db/",
+    "kb/vk_literature_index/",
+    "tests/",
+    "scripts/",
+    "clients/",
+    "literature_db/",
+    "docs/RELEASE_IDENTITY.json",
+    "docs/RELEASE_MANIFEST_v1.json"
+   ],
+   "rule": "every file under these prefixes, sha256, repository-relative"
+  },
+  "declared_but_absent": [
+   "kb/ontology/",
+   "literature_db/",
+   "docs/RELEASE_MANIFEST_v1.json"
+  ],
+  "files": {
+   "clients/ocularkb/rag/scripts/qa_v2.py": "32727375a215d85ef5b1877eb98ed2363b9730784631ca7b211c3ea2e0effb43",
+   "clients/ocularkb/rag/scripts/stage3_retrieve.py": "ab9d644e49a25c9d0495b5fd23efb00527789f9173f3367ef1b2da154b58077a",
+   "docs/RELEASE_IDENTITY.json": "1e02240176e4d2690e0d679600e8101f471c2e52db996a453f7833e81069eca8",
+   "kb/baselines/RPE.json": "9a90ca7e0d50bcded7c8a1a83c7d6a7bd0ae4d2ccf5110426cf4435a410c1b92",
+   "kb/baselines/RPE.md": "e65043100a7be8352a602899112ad59966d21887c729517cca452004475e77c0",
+   "kb/baselines/_STAGE_DISCLOSURE.json": "6a38f3395b935159ac42d4d2b6529f6cc4d9f6dd8a1e0149b2192df8c41c4834",
+   "kb/baselines/_STAGE_DISCLOSURE.md": "843efa0653d235a8cedc3a20672471363e9034699b91d5280e3d545cac6fe3db",
+   "kb/baselines/_marker_repair_retina_v6.json": "601c4cb308ead7cd847ade067d23d3aedc6886569438c3af39b840bbaff0f5ee",
+   "kb/baselines/_tissue_class_crosswalk_v1.json": "a06a753af39700541962bf5dc03472635e024130b3f297d57bc1ac2802a5682d",
+   "kb/baselines/_tissue_source_label_crosswalk_v1.json": "7bfff6253c950614e10a203722e9e20ffdf2ff934a7aab2ce3d3999a40c9eeab",
+   "kb/baselines/baselines.json": "acefdfa021c0e828fa0c6ecc2ce37778811116c16016182ecbf6bc428e85a952",
+   "kb/baselines/choroid.json": "5f14e42ff026ddc35442493d2ded328ca5f7b2445985bbc830f253aa36cb9cdf",
+   "kb/baselines/choroid.md": "f2abd3663831d35e4b4649e2d23c425b7115cdcd0a934cb05469b3c84c8612c1",
+   "kb/baselines/ciliary_body.json": "e872906362a3a0156190b0ff125ca4f666f93e908df41fe21cfdb6c56f3d576c",
+   "kb/baselines/ciliary_body.md": "d6b47261054ce3c25332a8d902779425107782a8dba75840aaf29d18fe86e2aa",
+   "kb/baselines/conjunctiva.json": "08c7e9422177bacac2446ef8c36ff7c60eb131c2d5de4a2fb456e039620d9741",
+   "kb/baselines/conjunctiva.md": "e2ebe244d677042b59d024bf43d7d637a02b91dfa06c60740019dc48e9636f3c",
+   "kb/baselines/fetal_development_transitions.json": "2334d11ba169c034b75613d24b6b3ce38ee4b39efa2d37fdd917ff7249ad3300",
+   "kb/baselines/fetal_development_transitions.md": "d61447c095a14381e1f8c15065cd05e52fe5e9cec7c682b9360e3a9977db2f29",
+   "kb/baselines/iris.json": "8cd6e59fbfed0eb7413519fbf26dbe9048bce71995e347d1d69b1ad60235b22a",
+   "kb/baselines/iris.md": "3829a4a152c34f211b9cbb627afa85d33898968cf071ae015db4682ea173785f",
+   "kb/baselines/lacrimal_gland.json": "ab4368d296caa212cff23e8c8885ae9fab75b5f4f9389014b03eb97a8628b278",
+   "kb/baselines/lacrimal_gland.md": "044c35217b93961c2efa3533d458c8b59f26aa5865b6e4613923acf2533694e2",
+   "kb/baselines/lens.json": "99bb714eefdfab17053b5e1c9eccde3876bfa4e13eb08eda7d1ecaba377ec2fa",
+   "kb/baselines/lens.md": "1bf742cb652c6831f36e39a39d4c00a92ab6af05c5b073a07b6138f7cacbc1e9",
+   "kb/baselines/ocular_surface.json": "66cad00bfc30693f800f24193b0f44c5644689067b1723dd4290cae2ae535021",
+   "kb/baselines/ocular_surface.md": "23d6926c9b024eeba4f511192a03da702bef224aa35b6c570e20a03dbd82e20c",
+   "kb/baselines/optic_nerve.json": "1bbc57b841a59e62261ddc0bb34c7b372f77953e37efae4efcfa40f792ddac58",
+   "kb/baselines/optic_nerve.md": "4e32cae83f16fab7e84f156a5afb992f9a5d80450fcf89c75ef3b939c64f14ae",
+   "kb/baselines/retina.json": "25ffa795328589f24f554cd606ecdeb7c65f242af8d56c68c67f63a3a4d15619",
+   "kb/baselines/retina.md": "66be3849b1bfbc9716bae29114006df6ebbdc64ba195d8b9739d6c7f22b13438",
+   "kb/baselines/retina__fetal_developing.json": "7fd8c3645247cbd88eecfad1ff13d3139db3df02eb4423ea4daf85bf0958377c",
+   "kb/baselines/retina__fetal_developing.md": "2d93bcb11b8c8aeafc8ff48285e66dea8085abfeb590e48969b203fed91aad96",
+   "kb/baselines/sclera.json": "371e0a763a9fb7adc0c36509ef426ee5e95ae938c72248cd4620d2401c1d8a60",
+   "kb/baselines/sclera.md": "a49c21059ba3d6482147686de8818391e2fef3d9def3d32dbbb4e786ac045335",
+   "kb/baselines/trabecular_meshwork.json": "a5fedec4304b23fe67989ecabab88248332549e4a94a390b207521050112b0f3",
+   "kb/baselines/trabecular_meshwork.md": "8d26a2e56ff5c36d8778432fb76a5cf68b53ecf2406a096b249dede1c954f649",
+   "kb/literature_db/EYEKB_DB_POINTER.yaml": "4efd958c7bfe36b7efb6802853cbed79da2d33ad88cec3cd2821cb3de436cb16",
+   "kb/literature_db/KBADD_KERATOCYTE_NOTES_20260924.md": "568d0702f857f0ce4ed1d1733baeaf4da02d6d4f44d493da07fe9340afae3892",
+   "kb/literature_db/REDECISIONS_d0.json": "34b9938dc46c2cd32af2c69d55eb47649b1bffbb624a84a3afb02d757a31d276",
+   "kb/literature_db/REDECISIONS_v2.json": "4e28119efbb761bbdec143e2275cae1d89033aa6693352d9b7169922ef2ee435",
+   "kb/literature_db/REVIEW_SHEET_v2.2.tsv": "a575509dca0a96cd827df906f921977de7cc79248d699c929673b96f88ad0b49",
+   "kb/literature_db/REVIEW_SHEET_v2.tsv": "b81c639ac67db973aa2263e54eace02b1337d9ef2b38b62cc50e75e726dab022",
+   "kb/literature_db/dev_stage_devline_2026-10.jsonl": "0396c8e96a17a695d0ecabe5423fab7325970b4b05ac9eff9a0d10e1a8db2286",
+   "kb/literature_db/dev_stage_devline_2026-10_add1.jsonl": "d3099677789a91f4fe6389b81bcf2cae115ff3d5804f59721b91bd755877b3d9",
+   "kb/literature_db/dev_stage_meta_v2.2_2026-09.jsonl": "af3d77560dab35ba8d4090665a8310e865a0ea0e918e67195144dac2a01fb921",
+   "kb/literature_db/dev_stage_scope_devline_2026-10.jsonl": "4e7ac7673b88750ac719a7039fae86e609094480141e46106d8d89fe29ca8ee7",
+   "kb/literature_db/evidence_meta_v2.0_2026-09.jsonl": "24311cc20d1c002ed22e6ada528368e8fe10aeac2bf4271e3cba0457e3e35461",
+   "kb/literature_db/evidence_meta_v2.2_2026-09.jsonl": "ab24646934357bcc7666ac7bcfbad15a1dc4539f37a4a072c6454e296b68bfd3",
+   "kb/literature_db/evidence_meta_v2.3_2026-09.jsonl": "5ffd718ba5c84e0975294f2f0cd2116a45c8a9b35a3c308e4b64ec0f01d73248",
+   "kb/literature_db/evidence_meta_v2.4.2_2026-10.jsonl": "25f225db2e7cd2ac672be0fc1aeb6fe6ff3410e90cf82b3b8aa3529975b92844",
+   "kb/literature_db/inclusion_reason_v2.0_2026-09.jsonl": "e44595c3258ed4bdef84330ce641279cb44320fb5602ffa5357caa0c200e1a1d",
+   "kb/literature_db/inclusion_reason_v2.0_2026-09.tsv": "6eded1352ba04c841b41691103855283221dd19ba9c594c5d58668ee10c3c91e",
+   "kb/literature_db/kbadd_KERATOCYTE_20260924.jsonl": "679bdc7673d6c812c133e5f92c881fd6fc4d6abc02d8eedb50c2de333a64f5f2",
+   "kb/markers/_concept_kind_sidecar_v1.json": "7564b3ca918159d03f28909f8c4127ea8cd75038d7662fdf973634d80f0e883c",
+   "kb/markers/_k9_ocs_rules_overlay_v1.json": "87c06f71b430343d4ad9a5c3de504d868922cc7f8be79b07f1103c0305ee4d3b",
+   "kb/markers/_raggap_c_linkbackfill_v1.json": "c3d02f8c95f1c4b74424c2c29a40d45c93dc817432656d44e5e76506cd190e02",
+   "kb/markers/_raggap_errata_v1.json": "8778a8081335ed17358912e16a251f712c2654efbf158171b3e374abb413f2f4",
+   "kb/markers/markers_cl_alignment_v1.json": "64f077e8ce91ad07892d66b2ec4ec6d54d27e31ccf36fbab123d8741a4b8ddc3",
+   "kb/markers/markers_cl_alignment_v2_unified.json": "48051cdae915b82e6e7812da9b98f93b41f51c5fac14bdb370bd5ccdb969a0a1",
+   "kb/markers/markers_k9_ocs_increment.json": "139b622082f80a6c3962b7a2532dc8c3fed8a87a92154ccd98491ef4f2540a71",
+   "kb/markers/markers_membrane_v1.json": "c4268a6e0655f6d89f913289766f3edc062f116a82a983abbfccd7cee54198d1",
+   "kb/markers/markers_v10_antseg_increment.json": "c488fc26b615e57addd1d0828b20293d07fb3a7a92baedca5d32a528bc597f47",
+   "kb/markers/markers_v11_lensiris_increment.json": "cf4120f4147ff2ad45ef3a8a4c47df8acdad46b6065102e9c88767d651d3d411",
+   "kb/markers/markers_v12_holefill_increment.json": "a9bb4feb86e61360215a403baef74f8eb661fad5d7158de32940c54f52a8475f",
+   "kb/markers/markers_v4.1_clean.json": "3047082ff6ed681f1f4268913874a386bad17a2fc1482602fb4c5f489f81600f",
+   "kb/markers/markers_v5_retina_interneuron.json": "2caaa0248af576e08f8a29ac0e4e702f470a1c142eb443273665052349f26585",
+   "kb/markers/markers_v6_face_increment.json": "f23126c5ad36667090d5762cc7ad1fe517e1c4e19572c74a77898b6c7140add2",
+   "kb/markers/markers_v6_lacrimal_increment.json": "f1a6eb83e77d20bc8c8dd9481cd272491b408e0cfceca03ab8502ecb33133e0e",
+   "kb/markers/markers_v6_retina_repair.json": "43cbdbd832783ddfdada84d1c14ac18fc8b249fe6b2495fdc5f5de44c9537719",
+   "kb/markers/markers_v7_panel_increment.json": "12686b05d1a6047b5df3dc6a62d0d206ac444d42994302c3c9d6dbb99fa5053c",
+   "kb/markers/markers_v9_dev_retina.json": "0b60cd127fc39482eca07d377bb80fcf15def02278a091ec7089ca29b983a775",
+   "kb/priors/TEMPLATE.md": "7e3819ca2a09c9bb5439ed4850e85e5705ac7c6d2d5ae4f279c75c2ea46bd8ba",
+   "kb/priors/composition/human_pdr_membrane.json": "b7c1534415baa32cd5a51c56126a7af3ee2e36cb486780e2dab2d9c082fdaac3",
+   "kb/priors/composition/human_pdr_membrane.md": "c1888ff9e34b39644982e15a0ac79a7090a2651e668b4ad1941ec22d0f89ff8c",
+   "kb/priors/composition/human_retina.json": "47ee0b59c7a51c0bff666a3ab40f8dd42c481d5384cd477c5a1cb1d93721bd33",
+   "kb/priors/composition/human_retina.md": "5371e905c8da8ac27de8e0a4e9cf0251072b570ea8b04897a76ebe99e91c6078",
+   "kb/priors/concepts.tsv": "8458a259dca7afea611629df19b5e66d7471e9a9fa02e4ffb8e4e6871482e79a",
+   "kb/priors/disease/PDR__fibrovascular_membrane.json": "6dcebfeed2d3dbb05d398858262b7116b8294b5bc7a00a46141e59e45a8ff384",
+   "kb/priors/disease/PDR__fibrovascular_membrane.md": "112ac12a81cfcc5ed032f207491655709f04640cdb0c6d1926c6ca32f0fbb68b",
+   "kb/priors/disease/PDR__fibrovascular_membrane__dendritic_cells.json": "664a62bc2041e5c2621f8d24ed3b6fc4f348adac0fe0eede0bc123fed79f1cf9",
+   "kb/priors/disease/PDR__fibrovascular_membrane__dendritic_cells.md": "5a15a5b921e91a7843244823d77912e89a362e7bb77d59ddb4ee230ef824904a",
+   "kb/priors/disease/_DISEASE_TISSUE_MATRIX.json": "bdd28824a29e80f1dab804dd2107dc2218116f8651f8bef25e6821ab207508c5",
+   "kb/priors/disease/_DISEASE_TISSUE_MATRIX.md": "d2fdbbc483ed086f922f874555727015eae000331357b5123e11f83c69e9c4e8",
+   "kb/priors/disease/proliferative_DR.json": "1c20464948a411b604b18efe356dc9ecc69c1dafd681b114992f7b647610f5a4",
+   "kb/priors/disease/proliferative_DR.md": "554e6f416770a7620e9b75945ff44e78a3ed922e96640666b5b9128fb7930413",
+   "kb/vk_literature_index/INCLUSIONS_RECENT.md": "9b2f6d6ff63370a528e8b9c278190485fbf2b6a09a9b9966218253a9e15f8cb6",
+   "kb/vk_literature_index/INDEX.md": "0fcb4950d9ba7115b4b609a6830baf42f7230e731f587a216bd5ab75018bd6c9",
+   "kb/vk_literature_index/aging.md": "dfc8c76bba3ada59aa24d0a418035a8fe8d557332b4e4dbe752aa5d3de685ad7",
+   "kb/vk_literature_index/amd.md": "22a4731e133ba9f5f5ecde800f1de4924438c94cd3001585a8b79041e9137c45",
+   "kb/vk_literature_index/dr-diabetic-retinopathy.md": "beeba2417d4843ab91847ebe13d87308073bbf35411a41a82f17f8a5266db411",
+   "kb/vk_literature_index/glaucoma.md": "6f66d6b790574231a2f8f4cae007d4e49c5ddfbd8d278db64cb644ba60fb1c6b",
+   "kb/vk_literature_index/glial-microglia.md": "c9954a13bcf9172f6bb93571d8902f3431a64019ee69c9a84a7fd99d429a1fa0",
+   "kb/vk_literature_index/inherited-disease.md": "984aeb151264b2b2fddeea61bb2dc42691a291867ffa3d72e097f89580b67619",
+   "kb/vk_literature_index/metabolism.md": "33fca26a4e170b45a858a27871fbd9d16a6c0ed3fafe2258ade39ea7056b2a7a",
+   "kb/vk_literature_index/methods-scrna.md": "d2a3456e37e9817b5795217141a0f6306d08229c9e0cac5c7d427e3609aafd15",
+   "kb/vk_literature_index/models.md": "cd9bf8bf727513c4edbf2c75d8dc34e7e17d791c36c3805d3312892a59a7d9aa",
+   "kb/vk_literature_index/other.md": "5b0b24887924fd8a0552136871c3b13141ffc997a46ca20d3151fa876d79d002",
+   "kb/vk_literature_index/photoreceptor.md": "40361ad196891f563565b04759f0d0c42782b2c7da8d4097e6256ce946e0ae23",
+   "kb/vk_literature_index/regeneration.md": "17708aa96cdf4eb253f8e5b258fc27ad0de3865a0bafa7b8f054421f3ab45223",
+   "kb/vk_literature_index/retina-development.md": "2930eadb005460cc2bded9cdb769031476a08389d0b448db8779d8ff7f636308",
+   "kb/vk_literature_index/rpe.md": "641548dda5861d7e8db8242783d06d1a84bf79ffec7479c54995350d9330ab94",
+   "kb/vk_literature_index/tissue-RPE.md": "8e3409163fc89f93128ce8bda4cccec5b74138c94721671d47434226ec906351",
+   "kb/vk_literature_index/tissue-choroid.md": "01dd138ce918e12c00f24eff61fb088598180dc0283e92dac6413af8c3b7290f",
+   "kb/vk_literature_index/tissue-ciliary_body.md": "00090458db1e99c3141b1161f72582ff70368d1e0652fdf774bb21e111ee52d1",
+   "kb/vk_literature_index/tissue-conjunctiva.md": "a0deb4af8279ece305d6e92e7cc93b0efe6362a8ccd6da3d62d33cec04270355",
+   "kb/vk_literature_index/tissue-cornea.md": "e8cefc228edc32ef577ecf3999857d8988bddc8d4e0bc21f5aea01a71d017dd4",
+   "kb/vk_literature_index/tissue-iris.md": "15521de502d0f4c2607360963a92e10a783a8bd284865f0fc8bd9597e63424b9",
+   "kb/vk_literature_index/tissue-lens.md": "d912fdc7e81f03a276b44259b51bf6b44234de36795fee61f093003ceffc19fc",
+   "kb/vk_literature_index/tissue-optic_nerve.md": "3acf2dd9ac52649f009b0502d0dc4fbb22e20d7c2b3604307535e845ecbe55c3",
+   "kb/vk_literature_index/tissue-sclera.md": "40ddd6c48edb84c521d6e642e23ca3fa2398afc76633a0d37f574c3872c0e023",
+   "kb/vk_literature_index/tissue-trabecular_meshwork.md": "1463f3170abe002f20744b1fdddca980be3e1afb6b0d1433e8566bc1760850d9",
+   "kb/vk_literature_index/vascular.md": "3daaa93162b8eb226068c3912eee96874c40a2d8df915808aea55bbcd75c60e6",
+   "kb/vk_literature_index/visual-function.md": "e5a2b1d28492928f0c7940b9b5e8d6042580a62002c00cc815a5cdbfed6f8ee5",
+   "mcp_server/__init__.py": "26bcce0f2b2da8eaf2adc1db6710cf66ef958f32e8ab4e6f7d02c387f2cfb6ec",
+   "mcp_server/__main__.py": "33b86d851ad85ba2d9eb1164363e4a6aa1c011e91caf61118e3f3ea3ac5de952",
+   "mcp_server/calllog.py": "182de99d626af0867eb5cf9ae5aa9503d5d0472b2637cdee7d19ab6f8796a25d",
+   "mcp_server/eyekb_core.py": "d46953bda7da5a43751ebf641b94de4b7034ba8731524923e004e97f18f4702d",
+   "mcp_server/kbgov_vocab.json.gz": "9b504a2e7cdc975b3963579e445e680e40921dc6749b1b105d172d80a0222a61",
+   "mcp_server/rewrite_cn.py": "a582e705edab87f0cd8d6b22506d7bdcd1883744a033dc4372647ce56fae1711",
+   "mcp_server/run_mcp_server.sh": "ba9005554cc902d84e6eb17b6610a8f9fb0469467e2da352f39e234b7e4b37dc",
+   "mcp_server/server.py": "98bc13f93d5acb1f6b991e0d758793f71cf7f9ca6257c3a9a2a11047cd0da557",
+   "mcp_server/softflags.py": "a2c6aebdfa454c1d226f53cad9f6e766cbb113b7173f600efb575e38a57e5a75",
+   "mcp_server/species_route.py": "c3610c19701430cc56c69e914ba875638ce8d5d794a6258a4cdef3a5e364134b",
+   "scripts/baselines/build_baselines.py": "0a8e77bd68b19dd0d41ffebfbe0bc401278f5b141c6679aecb88dc835ed5ba81",
+   "scripts/baselines/data/export_rpe_meta.R": "feb6e7ad6d409deea7ba374ec18eba0d4ed787dee932c45c0e5dd63f4e774e44",
+   "scripts/baselines/kb3_build_dev_entries.py": "365b61b072f269f0655f76aa79c9e182dd5d8533a4ef748f5ea968e53c8754b5",
+   "scripts/baselines/kb3_dev_axis_patch.py": "e5b75ee5e4c2aa444c2599361ccdf56771451c08ed916b564ba0404c5b953332",
+   "scripts/baselines/kb3_fetal_agg.py": "9ef02193a297cf01905a71faf46b9c86cbdf86c5f631c7223e120907128ffb91",
+   "scripts/disease/build_disease_v2.py": "dab6ee0b82c5ced94cd059c969ab0ef824b3c150de7d75e5d796f9b31c7407d9",
+   "scripts/disease/kb3_matrix_patch.py": "c0567b7d40973709c21e9018ff63be9d34368d7a9fdb2850e9c62bfbd7abe6ea",
+   "scripts/errata_run5face_t133f7dea.py": "872797ab9a6f439dea83d845af4149b0e0f1babebbd8d2dc5699e134d26cbcd8",
+   "scripts/eyekb_house.mplstyle": "2d23ba3b93a1ecb8f78d8dddd0a9cca7f8d47691484ca8e1fd5de009cec54060",
+   "scripts/kb1v2b_registry_defect/comp.py": "91db579794988d3443a28defe56c5dccf2a53ff17e59f64f42d44225f41f71d5",
+   "scripts/kb1v2b_registry_defect/e2.py": "cde8e04a15b8e10af3797e7739f0bf109cb0deadcc651548facfbe4355f5640f",
+   "scripts/kb1v2b_registry_defect/gds.py": "62b7acded857bbea63d663b622a126cb4f59176ccbb6338195a4cdff9f969d48",
+   "scripts/kb1v2b_registry_defect/obs_meta.py": "d92fc535700414f02ab7a8198a807541ff6f411c03e2a76d78c0fadcdd2f5a38",
+   "scripts/kb1v2b_registry_defect/obs_probe.py": "a1c686fa07bea19ee6096f9e67742cdae0953898d61385d22deabc5efba509fc",
+   "scripts/kb1v2b_registry_defect/ols.py": "9fde5a3a7f7ea46ffcdb17b6cd5894c82c08e39ed4eb62e6bb096f606845341c",
+   "scripts/kb1v2b_registry_defect/selfcheck_report_numbers.py": "b07afbefa74461471e02f6d3880c3fe36e799d07bc6d2c6bc88ab671d3db651c",
+   "scripts/kb1v2b_registry_defect/xtab.py": "8ca4c698e426e6801c9abcc4ffcf8a865cc101910f5bfd5e4daeed91f8bc16e0",
+   "scripts/ops/kb9act_daily_check.py": "a5eacb7d733bd393ec3d40744fa3fdd32d38cec6fdba07f0a706717e24201b54",
+   "scripts/ops/kb9act_t7_check.py": "ed4e5e38aade0765144aa1925766a24b79bd576be92e7740604de749af334586",
+   "scripts/priors/build_priors.py": "e33b48294d96705d05511cc5caa81481f770ab23eee19168d8aa425c9fa22bb2",
+   "scripts/rag_meta/classify_evidence_v2.py": "0ee60dfd013d12786242b759d32b25e7d866c3eaf240cb28ee2066aa9351b326",
+   "scripts/rag_meta/kb3_abstract_dev_hits.py": "fc450c62223247ae963de0210e314efe3fea35df4587d5267428ebd2c78b2a85",
+   "scripts/rag_meta/kb3_dev_stage_tag.py": "2bcf9bd36c25e5617d32d5388c2453bbd39e091675e9f64c6822dbeef0de1ab3",
+   "scripts/rag_meta/kc_sidecar_sync.py": "2eb05fb3b5695346a47059133f7fcd3a0dad485982908eccd9ccfdbd31d6e120",
+   "scripts/release_identity.py": "ed2fa85f1af86f99dc92b801e0ca807e989443ce6317e8c3dbc06ae12c2fffee",
+   "scripts/verify_errata_run5face_t133f7dea.py": "7437c439f045a58565bb40ca1344c9c5da31f1ddccf9d424c2e3b1e6d8940196",
+   "scripts/wiki/link_kb_pages_v2.py": "1e56a7fab95bda2a5f4a1487f93e75a51da6a5812aa5bb4c741905ff2dae739f",
+   "tests/COOPROBE_20260927.log": "da1cbc2a39672bf7d8e9adc273170cfb68a69f57bb8a79095123dc6d2c2ac5f6",
+   "tests/G4_EXPECTED.json": "987190b1eb351bb6fab134afbf0684699a03a64e7c68837c04e924a979d648cd",
+   "tests/G4_EXPECTED_PRE-ENGMIG.json": "3f41bc4622c7d12f2c1b64afd3c3f277720d21b01d81cbe0b4b1643e294dfdca",
+   "tests/G4_EXPECTED_PRE-KB9B.json": "3501b18222c750f394b0f59f75a1acffafda6075d5ac8a8edebb6ddf3b5753d4",
+   "tests/G4_EXPECTED_PRE-RENAMEWAVE.json": "4250d5757083cf4f1a4ec67fc98fdfcd1bfffb5ff2a396a8dee102cd9c94f668",
+   "tests/G4_EXPECTED_PRE-X4BFIX.json": "3dc004fb224d2be634c462532171dcfc9ba8afda34b67886119a6b5635eb77f8",
+   "tests/REPRO_EXPECTED.json": "a3e84e7a22ac3c03086993f742e43005b2d2d87c0145161f1d0d450d7164486b",
+   "tests/antseg_guard_wiring_check.py": "42631e067a6318d11779af2e22bdc824abc9674feffe740ce8fa5400b39e4dd0",
+   "tests/check_report_format.py": "3c65ba6533c556085d7cd0226911a768d3fe650c98a18f4001934c2e7d86bab0",
+   "tests/check_tissue_declaration.py": "6f79f3625c76ba853305e3ac7567bf72b84658bc284b18d2ab75c564145b1db9",
+   "tests/check_verdict_taxonomy.py": "993a7535034dc208fd273ba65835f8738051feec633929a594b86f447db63136",
+   "tests/fixtures/g5/mutants/N1_missing_file_registry.tsv": "77d49ac6cfc09dcaa6e76449da2d3ae744c8ce9aca1a2fc042b65fd1c2d6176d",
+   "tests/fixtures/g5/mutants/N2_sha_drift_registry.tsv": "f4d2fc6ce4973beda487d5bdd7af4d5154adc9c685a5dfa5b5fc3bbe498ed212",
+   "tests/fixtures/g5/mutants/N3_unregistered_entry.sh": "7481badc71ff8df0295158fe494d0a4c0d94945546d5e3d960e1654df97849de",
+   "tests/fixtures/g5/mutants/N4_expired_cert_registry.tsv": "0b21718aeac23006c5d734d64944913f8b88666d5e94794e489fad490398b41b",
+   "tests/fixtures/g5/mutants/N5_stale_ledger.tsv": "b9c08b56256e975580b3ad93484735ff563cecf35fdd4f9c856f213030d90f0b",
+   "tests/fixtures/g5/mutants/N6_owner_placeholder_registry.tsv": "034f1571443e0021993067588ad291298e24bc2a1a95f6b5c3bc9b0f548ff0a0",
+   "tests/fixtures/g5/mutants/N7_repo_row_absolute_path_registry.tsv": "7fea5b98e942c4d26e1b5f2045720ca0e28b35f0e7d4e2ed9dab410ce9437791",
+   "tests/fixtures/g5/mutants/gate_inventory_copy.tsv": "6efefa9c58a778d2e15c16327925883638319140d464542408128a57ec8acc3b",
+   "tests/fixtures/g5/mutants/registry_copy.tsv": "6a27c547bdcdd982caa4f06b8bd220737d80f27d25771e0e9bd1c4fb0e9d1d5a",
+   "tests/fixtures/g5/mutants/run_gates_copy.sh": "0dbebf35c17e35d0d545ac71e62e4efeb38e3ca5b8781c067755c93396ae6547",
+   "tests/fixtures/g5/mutants/snapshot_drift_ledger_copy.tsv": "9a6268628ad78e434eef6070ebb46c3a880e503b98df205c4ab23c8dfa035feb",
+   "tests/fixtures/g5/snapshot_drift_ledger.tsv": "5d649de91222fa3ac4847fc71c76a6085d149d5546fe46487a9e7c89ed6f1a1c",
+   "tests/fixtures/g6/mutants/N1_required_instance.tsv": "935351baec1f907e483dcc1c5a4417f05b901776c240b2118004c35cd5f9aa7a",
+   "tests/fixtures/g6/mutants/N2_no_anchor_instance.tsv": "0778cbb5223603bec7f5ed10470977d251999584655d7372e0ddfea0a7d9a9bd",
+   "tests/fixtures/g6/mutants/N3_gains_only_instance.tsv": "f37f9bce69d25a97fd385b4cc6fecdf9ed1130626e91b9e8ea5592084a5fc439",
+   "tests/fixtures/g6/mutants/N4_no_sha_instance.tsv": "929d307eda47287568ccceaf487308f3a57272f05eaa9e4cf8823e3a22bfd72a",
+   "tests/fixtures/g6/mutants/N5_no_switch_instance.tsv": "7d30026a1bd45e813d210543ba248235e0777f939f2a124ccc1d2c67eabebb86",
+   "tests/fixtures/g6/mutants/N6_default_on_instance.tsv": "df3f5c4b2b974b4ace5ced17a8952bd550de3210111ca79e4a106b20f35287c2",
+   "tests/fixtures/g6/mutants/N7_no_threshold_instance.tsv": "b6aeef53c98bed92c90ac10822354e8759f273c79f67dd0f164721a6f1574397",
+   "tests/fixtures/g6/mutants/N8_map_checklist.md": "8909632ac2272d104e5a7c608241487f40ea75d6ee1dfe7bf844de4886881af0",
+   "tests/fixtures/g6/mutants/checklist_copy.md": "19f5b85cda1feedd07620673c3aa1e46de6b6c19b943ce025a4adb1c951ba2c3",
+   "tests/fixtures/g6/mutants/instance_copy.tsv": "2fbadb3b4bc1af6020f65a2eedab636744e1d425bec71c4a79d5c337b5e0edfd",
+   "tests/fixtures/g6/mutants/template_copy.tsv": "78ca25e5511539edaa47dcc6d9d738d6c1f07bc3e13fa4974d068cb8237d673d",
+   "tests/fixtures/s0_empty_pb.csv": "c64742d98141277f10ccf8bab07e9b8243eecfc729f878f6072f0e85b2d0585f",
+   "tests/fixtures/s0_human_retina_pb_top8000.csv.gz": "15b41966ed9af2237c372500481b03de5d87b43611b40e97570598adbeec5af3",
+   "tests/fixtures/tool_panel_baseline.json": "ce6416126252663ff8be794fe985500a284876c3d15b2420359656c1bb4afd87",
+   "tests/gate_change_control.py": "dd119ac2eef01e062c3768d78e1920b5bd5e6b998b89f902c8e1b7a29184ac98",
+   "tests/gate_g5g6_negative.py": "09e0f378a0c141e3eecf8d6f6816ab1a63700e158c3917ff443bf701dafa8bf5",
+   "tests/gate_registry.py": "8aeca927a1b96ecfbf602f7845249755abd507fff38c4ba69e149249d96dbcb0",
+   "tests/jargon_glossary.json": "9e4f60a57936034ec2bdb68abe8b2ff217a75d68a9e52448a289769c044a2b27",
+   "tests/probe_repo_mcp.py": "d32b7d6ddd262059182ef1b252d7bf86e142e753039689ba785ff9624022f375",
+   "tests/probe_repo_mcp2.py": "93de816037f01b684e2c39d27f72999f450c71c9730f7a1caa8e3f2654754559",
+   "tests/probe_tool_panel_identity.py": "bcf619b252a248bd64de00c3d61cd64d4c39dde9dff864d8b3694ed2de666370",
+   "tests/run_gates.sh": "2f826a54d86e140d552e9e90532576499661f78b0fcdd63e2eb21d063921120e",
+   "tests/scan_jargon.py": "e7e95ac7773d9e4c217ce6c140ddb97e0deb32d141511167ee064ebe48f62702",
+   "tests/test_antiunion_guard.py": "71cfa926480e1d6fe81fd8ffb515b7ea0bf6fdee4d057865852581e1fc42e21c",
+   "tests/test_cn_rewrite.py": "573000fbf1b139bcca40d9425334d1a64c9f36980d4c24c8e3f24afbeccd02b8",
+   "tests/test_s0_gate.py": "723e88380e4e049865c28ee53c9b323621e0749866c71ac3f5c49b315d487418",
+   "tests/test_tissue_scope.py": "cf9ff85642db5d850d07f789ace937bce82c7efdb8d88aad024b864c9966fec6",
+   "tests/verify_pipeline.py": "008eecb176b44830dae9cc6e8d5d5d2e272c59389b1839b35349b3f83f21b6ca",
+   "tests/verify_repro.py": "19326e78125bed6d3410229b41fd88e53ef908e2d81196b506b3bef2286d095f"
+  },
+  "n_files": 203,
+  "surface_digest": "2e3555c3ff52bdf3e0807f315d9f40318d0963cf82aeafdfff79dd569c3144d1"
+ },
+ "default_configuration": {
+  "note": "observed = the raw value in this process's environment; null = unset = release default",
+  "toggles": {
+   "EYEKB_ABSTAIN_REASON": {
+    "observed": null,
+    "off_state_meaning": "unset = no abstention-reason key in the response"
+   },
+   "EYEKB_ACT_ANTSEG": {
+    "observed": null,
+    "off_state_meaning": "0/false/off/no = the pre-flip default (anterior-segment activation off)"
+   },
+   "EYEKB_ACT_V6": {
+    "observed": null,
+    "off_state_meaning": "unset = the v6 activation behaviour of the release"
+   },
+   "EYEKB_CN_REWRITE": {
+    "observed": null,
+    "off_state_meaning": "0/off/false/no = Chinese query rewrite off (pre-2026-10-05 behaviour)"
+   },
+   "EYEKB_DB_DIR": {
+    "observed": null,
+    "off_state_meaning": "unset = resolve the corpus through the pointer file, then the repository copy"
+   },
+   "EYEKB_FALLBACK_WIDEN": {
+    "observed": null,
+    "off_state_meaning": "unset = no fallback widening"
+   },
+   "EYEKB_KBGOV_B5": {
+    "observed": null,
+    "off_state_meaning": "unset = the release default for the vocabulary-governance rule B5"
+   },
+   "EYEKB_ONT_LAYER": {
+    "observed": null,
+    "off_state_meaning": "unset/empty = no ontology tool advertised (the capability is registered OFF)"
+   },
+   "EYEKB_SPECIES_ROUTE": {
+    "observed": null,
+    "off_state_meaning": "unset = OFF (the byte-exact pre-wiring species route)"
+   },
+   "EYEKB_STATE_GUARD": {
+    "observed": null,
+    "off_state_meaning": "unset = the release default for the soft-flag state guard"
+   }
+  }
+ },
+ "panel_identity": {
+  "live": {
+   "full_panel": "3f1f52cb62915f5ad2801962aa523d36",
+   "legacy_panel": "e8e6c26351cd9a1d42fa2e7cb6a83f23"
+  },
+  "probe": "tests/probe_tool_panel_identity.py --baseline tests/fixtures/tool_panel_baseline.json",
+  "probe_rc": 0,
+  "recorded": {
+   "full_panel": "3f1f52cb62915f5ad2801962aa523d36",
+   "legacy_panel": "e8e6c26351cd9a1d42fa2e7cb6a83f23"
+  },
+  "verdict": "IDENTITY PASS"
+ },
+ "rebuild_command": "python3 docs/plans/l5_ontlayer_20261022/scripts/01_baseline_freeze.py --service-python <interpreter> --revision 16c6b28aab8f",
+ "recorded_request_set": {
+  "coverage": "the 12-call tool panel + a 42-call development-stage sweep + 1 identity call",
+  "digest_rule": "md5 = the raw response bytes of this checkout; md5_normalised = the same text with this checkout's path replaced by <REPO>. 27 of the 55 answers echo the install path, so raw digests are comparable only between runs at the SAME absolute path (which is where the byte-identity comparison of this card was taken), while the normalised digests are comparable between checkouts and are what this baseline is stated in",
+  "n_calls": 55,
+  "note": "the raw texts themselves stay in the evidence root of the card",
+  "refused": [],
+  "responses": {
+   "explain_annotation:{\"cell_type\": \"Mueller cell\"}": {
+    "bytes": 11295,
+    "md5": "919fac6e91a67153a214870127407e13",
+    "md5_normalised": "919fac6e91a67153a214870127407e13"
+   },
+   "explain_annotation:{\"cell_type\": \"Rod\"}": {
+    "bytes": 16262,
+    "md5": "bc10d68da5a502f2ca005c77e076875e",
+    "md5_normalised": "bc10d68da5a502f2ca005c77e076875e"
+   },
+   "get_disease_prior:{\"disease\": \"PDR\"}": {
+    "bytes": 23707,
+    "md5": "30638b3c8d7f64fcd1fa860db099cbac",
+    "md5_normalised": "7c724d1c4bac6031e55842214b50ca89"
+   },
+   "get_kb_page:{\"name\": \"vascular\", \"scope\": \"topic\"}": {
+    "bytes": 39830,
+    "md5": "20f8d4e88f68555070d8449e77d802ca",
+    "md5_normalised": "80a7a27dfcfadb50d562126d61786243"
+   },
+   "get_kb_page:{\"scope\": \"index\"}": {
+    "bytes": 141103,
+    "md5": "fde9fdf54738d6d03dd7ada896854fa1",
+    "md5_normalised": "bf0edc06025bfc90ec4fe835acdae62c"
+   },
+   "get_release_identity:{}": {
+    "bytes": 767,
+    "md5": "b5b08ad0640c50b5352de2ae1248e52e",
+    "md5_normalised": "b5b08ad0640c50b5352de2ae1248e52e"
+   },
+   "get_tissue_composition:{\"detail\": \"full\", \"species\": \"human\", \"tissue\": \"retina\"}": {
+    "bytes": 91396,
+    "md5": "4517968447cbc9c7a16b96de7c34bcab",
+    "md5_normalised": "53a3565cc92b8eca6462f24d6b77b10d"
+   },
+   "get_tissue_composition:{\"development_stage\": \"\", \"species\": \"human\", \"tissue\": \"cornea\"}": {
+    "bytes": 2425,
+    "md5": "86bf72fb79366f7c0c8fc0283134f62d",
+    "md5_normalised": "86bf72fb79366f7c0c8fc0283134f62d"
+   },
+   "get_tissue_composition:{\"development_stage\": \"\", \"species\": \"human\", \"tissue\": \"retina\"}": {
+    "bytes": 91396,
+    "md5": "4517968447cbc9c7a16b96de7c34bcab",
+    "md5_normalised": "53a3565cc92b8eca6462f24d6b77b10d"
+   },
+   "get_tissue_composition:{\"development_stage\": \"\", \"species\": \"mouse\", \"tissue\": \"retina\"}": {
+    "bytes": 2425,
+    "md5": "cf3c46ae8268a86f9180d7edfabc48a2",
+    "md5_normalised": "cf3c46ae8268a86f9180d7edfabc48a2"
+   },
+   "get_tissue_composition:{\"development_stage\": \"adult\", \"species\": \"human\", \"tissue\": \"cornea\"}": {
+    "bytes": 2425,
+    "md5": "86bf72fb79366f7c0c8fc0283134f62d",
+    "md5_normalised": "86bf72fb79366f7c0c8fc0283134f62d"
+   },
+   "get_tissue_composition:{\"development_stage\": \"adult\", \"species\": \"human\", \"tissue\": \"retina\"}": {
+    "bytes": 91396,
+    "md5": "4517968447cbc9c7a16b96de7c34bcab",
+    "md5_normalised": "53a3565cc92b8eca6462f24d6b77b10d"
+   },
+   "get_tissue_composition:{\"development_stage\": \"adult\", \"species\": \"mouse\", \"tissue\": \"retina\"}": {
+    "bytes": 2425,
+    "md5": "cf3c46ae8268a86f9180d7edfabc48a2",
+    "md5_normalised": "cf3c46ae8268a86f9180d7edfabc48a2"
+   },
+   "get_tissue_composition:{\"development_stage\": \"aged\", \"species\": \"human\", \"tissue\": \"cornea\"}": {
+    "bytes": 2919,
+    "md5": "1b5a579233806dfc9cfd5e8ea87e47b1",
+    "md5_normalised": "1b5a579233806dfc9cfd5e8ea87e47b1"
+   },
+   "get_tissue_composition:{\"development_stage\": \"aged\", \"species\": \"human\", \"tissue\": \"retina\"}": {
+    "bytes": 815,
+    "md5": "401ebbd16e5341d0caacd6715b28ef12",
+    "md5_normalised": "431f1277c6fbd9527b4bad963c893c49"
+   },
+   "get_tissue_composition:{\"development_stage\": \"aged\", \"species\": \"mouse\", \"tissue\": \"retina\"}": {
+    "bytes": 2919,
+    "md5": "c5dae9d5d7bbf56471d2285338a493fd",
+    "md5_normalised": "c5dae9d5d7bbf56471d2285338a493fd"
+   },
+   "get_tissue_composition:{\"development_stage\": \"any\", \"species\": \"human\", \"tissue\": \"cornea\"}": {
+    "bytes": 2793,
+    "md5": "34f2617777fbc9fc1b0206799aebe406",
+    "md5_normalised": "34f2617777fbc9fc1b0206799aebe406"
+   },
+   "get_tissue_composition:{\"development_stage\": \"any\", \"species\": \"human\", \"tissue\": \"retina\"}": {
+    "bytes": 91764,
+    "md5": "4eead539c73f459287d5cb525b6c4c4f",
+    "md5_normalised": "3e2727e18765cba803e24eb24311af2f"
+   },
+   "get_tissue_composition:{\"development_stage\": \"any\", \"species\": \"mouse\", \"tissue\": \"retina\"}": {
+    "bytes": 2793,
+    "md5": "0dd609077449ac1beb1b29900c989cc5",
+    "md5_normalised": "0dd609077449ac1beb1b29900c989cc5"
+   },
+   "get_tissue_composition:{\"development_stage\": \"developing\", \"species\": \"human\", \"tissue\": \"cornea\"}": {
+    "bytes": 7268,
+    "md5": "a2cadfedf523798193232cbea189312a",
+    "md5_normalised": "45cabb73a9ace9daa505ff33504b6d07"
+   },
+   "get_tissue_composition:{\"development_stage\": \"developing\", \"species\": \"human\", \"tissue\": \"retina\"}": {
+    "bytes": 7268,
+    "md5": "a2cadfedf523798193232cbea189312a",
+    "md5_normalised": "45cabb73a9ace9daa505ff33504b6d07"
+   },
+   "get_tissue_composition:{\"development_stage\": \"developing\", \"species\": \"mouse\", \"tissue\": \"retina\"}": {
+    "bytes": 7268,
+    "md5": "a2cadfedf523798193232cbea189312a",
+    "md5_normalised": "45cabb73a9ace9daa505ff33504b6d07"
+   },
+   "get_tissue_composition:{\"development_stage\": \"embryonic\", \"species\": \"human\", \"tissue\": \"cornea\"}": {
+    "bytes": 2924,
+    "md5": "4757c496e65b15c8518464d3653238f4",
+    "md5_normalised": "4757c496e65b15c8518464d3653238f4"
+   },
+   "get_tissue_composition:{\"development_stage\": \"embryonic\", \"species\": \"human\", \"tissue\": \"retina\"}": {
+    "bytes": 820,
+    "md5": "7c67ef34731b187a0485f15cc8582a67",
+    "md5_normalised": "42d8427a8e297eb9e585a0dc6c21f61b"
+   },
+   "get_tissue_composition:{\"development_stage\": \"embryonic\", \"species\": \"mouse\", \"tissue\": \"retina\"}": {
+    "bytes": 2924,
+    "md5": "0d749e608a78642d5a868390d40ccc40",
+    "md5_normalised": "0d749e608a78642d5a868390d40ccc40"
+   },
+   "get_tissue_composition:{\"development_stage\": \"fetal\", \"species\": \"human\", \"tissue\": \"cornea\"}": {
+    "bytes": 7263,
+    "md5": "9728badbc592b69e5a7d796af33510e0",
+    "md5_normalised": "1ab08d6bbfd00b7cc0a52d0d74fbd13e"
+   },
+   "get_tissue_composition:{\"development_stage\": \"fetal\", \"species\": \"human\", \"tissue\": \"retina\"}": {
+    "bytes": 7263,
+    "md5": "9728badbc592b69e5a7d796af33510e0",
+    "md5_normalised": "1ab08d6bbfd00b7cc0a52d0d74fbd13e"
+   },
+   "get_tissue_composition:{\"development_stage\": \"fetal\", \"species\": \"mouse\", \"tissue\": \"retina\"}": {
+    "bytes": 7263,
+    "md5": "9728badbc592b69e5a7d796af33510e0",
+    "md5_normalised": "1ab08d6bbfd00b7cc0a52d0d74fbd13e"
+   },
+   "get_tissue_composition:{\"development_stage\": \"juvenile\", \"species\": \"human\", \"tissue\": \"cornea\"}": {
+    "bytes": 2923,
+    "md5": "aa80c2318e91ce9fcd52cc704f86c5b4",
+    "md5_normalised": "aa80c2318e91ce9fcd52cc704f86c5b4"
+   },
+   "get_tissue_composition:{\"development_stage\": \"juvenile\", \"species\": \"human\", \"tissue\": \"retina\"}": {
+    "bytes": 819,
+    "md5": "4cc41c01522c4962450895c49748f2a3",
+    "md5_normalised": "7376b5c41437c306eda37ac2b732bee1"
+   },
+   "get_tissue_composition:{\"development_stage\": \"juvenile\", \"species\": \"mouse\", \"tissue\": \"retina\"}": {
+    "bytes": 2923,
+    "md5": "f25770e15e97b31dc4228712bd0cffc4",
+    "md5_normalised": "f25770e15e97b31dc4228712bd0cffc4"
+   },
+   "get_tissue_composition:{\"development_stage\": \"neonatal\", \"species\": \"human\", \"tissue\": \"cornea\"}": {
+    "bytes": 2923,
+    "md5": "9727aaadbc0272349e5bf72275751ed0",
+    "md5_normalised": "9727aaadbc0272349e5bf72275751ed0"
+   },
+   "get_tissue_composition:{\"development_stage\": \"neonatal\", \"species\": \"human\", \"tissue\": \"retina\"}": {
+    "bytes": 819,
+    "md5": "067aecde57c6600918c838a595d61f6f",
+    "md5_normalised": "91f434601e4c7870f575cfdd6dc508a1"
+   },
+   "get_tissue_composition:{\"development_stage\": \"neonatal\", \"species\": \"mouse\", \"tissue\": \"retina\"}": {
+    "bytes": 2923,
+    "md5": "8af9ee7beee05e03c16e054c86074b9a",
+    "md5_normalised": "8af9ee7beee05e03c16e054c86074b9a"
+   },
+   "get_tissue_composition:{\"development_stage\": \"old\", \"species\": \"human\", \"tissue\": \"cornea\"}": {
+    "bytes": 2918,
+    "md5": "61543f876798b0af826d15fcb5914124",
+    "md5_normalised": "61543f876798b0af826d15fcb5914124"
+   },
+   "get_tissue_composition:{\"development_stage\": \"old\", \"species\": \"human\", \"tissue\": \"retina\"}": {
+    "bytes": 814,
+    "md5": "a3aef288635c2078f2106cead777a975",
+    "md5_normalised": "5c4ea302d8bbeca0f6d618785a3b7f56"
+   },
+   "get_tissue_composition:{\"development_stage\": \"old\", \"species\": \"mouse\", \"tissue\": \"retina\"}": {
+    "bytes": 2918,
+    "md5": "fd371acab82b9c73a600c39067ea1bce",
+    "md5_normalised": "fd371acab82b9c73a600c39067ea1bce"
+   },
+   "get_tissue_composition:{\"development_stage\": \"organoid\", \"species\": \"human\", \"tissue\": \"cornea\"}": {
+    "bytes": 2923,
+    "md5": "8c964ec63bd54ff545c2c4d8b4ab2ea1",
+    "md5_normalised": "8c964ec63bd54ff545c2c4d8b4ab2ea1"
+   },
+   "get_tissue_composition:{\"development_stage\": \"organoid\", \"species\": \"human\", \"tissue\": \"retina\"}": {
+    "bytes": 819,
+    "md5": "cedb789dc9dc37071eac03c23661d63b",
+    "md5_normalised": "5eb047fe0cef57166ea54900b800b6d5"
+   },
+   "get_tissue_composition:{\"development_stage\": \"organoid\", \"species\": \"mouse\", \"tissue\": \"retina\"}": {
+    "bytes": 2923,
+    "md5": "fb387efd4fe3b0bf18af5b948493811c",
+    "md5_normalised": "fb387efd4fe3b0bf18af5b948493811c"
+   },
+   "get_tissue_composition:{\"development_stage\": \"postnatal\", \"species\": \"human\", \"tissue\": \"cornea\"}": {
+    "bytes": 7623,
+    "md5": "b5c9a454d7e78366bd2199afefb251c1",
+    "md5_normalised": "42534d0560c34ea2b8305b7d7d18913f"
+   },
+   "get_tissue_composition:{\"development_stage\": \"postnatal\", \"species\": \"human\", \"tissue\": \"retina\"}": {
+    "bytes": 7623,
+    "md5": "b5c9a454d7e78366bd2199afefb251c1",
+    "md5_normalised": "42534d0560c34ea2b8305b7d7d18913f"
+   },
+   "get_tissue_composition:{\"development_stage\": \"postnatal\", \"species\": \"mouse\", \"tissue\": \"retina\"}": {
+    "bytes": 7623,
+    "md5": "b5c9a454d7e78366bd2199afefb251c1",
+    "md5_normalised": "42534d0560c34ea2b8305b7d7d18913f"
+   },
+   "get_tissue_composition:{\"development_stage\": \"unknown\", \"species\": \"human\", \"tissue\": \"cornea\"}": {
+    "bytes": 2425,
+    "md5": "86bf72fb79366f7c0c8fc0283134f62d",
+    "md5_normalised": "86bf72fb79366f7c0c8fc0283134f62d"
+   },
+   "get_tissue_composition:{\"development_stage\": \"unknown\", \"species\": \"human\", \"tissue\": \"retina\"}": {
+    "bytes": 321,
+    "md5": "cd1eb30161e0cad3718b0d1590626e1b",
+    "md5_normalised": "c2fbf81ede54de55c7ba64e23dbdbc72"
+   },
+   "get_tissue_composition:{\"development_stage\": \"unknown\", \"species\": \"mouse\", \"tissue\": \"retina\"}": {
+    "bytes": 2425,
+    "md5": "cf3c46ae8268a86f9180d7edfabc48a2",
+    "md5_normalised": "cf3c46ae8268a86f9180d7edfabc48a2"
+   },
+   "get_tissue_composition:{\"development_stage\": \"unspecified\", \"species\": \"human\", \"tissue\": \"cornea\"}": {
+    "bytes": 2926,
+    "md5": "0b4f0696df8ada0c1047b9ec12fb18f8",
+    "md5_normalised": "0b4f0696df8ada0c1047b9ec12fb18f8"
+   },
+   "get_tissue_composition:{\"development_stage\": \"unspecified\", \"species\": \"human\", \"tissue\": \"retina\"}": {
+    "bytes": 822,
+    "md5": "bf21699df30744e2d34fbdb4411332a9",
+    "md5_normalised": "47e6dd889d1387ea7addf8a7697fe759"
+   },
+   "get_tissue_composition:{\"development_stage\": \"unspecified\", \"species\": \"mouse\", \"tissue\": \"retina\"}": {
+    "bytes": 2926,
+    "md5": "695332496c766019ccc03a1985761d32",
+    "md5_normalised": "695332496c766019ccc03a1985761d32"
+   },
+   "get_tissue_composition:{\"species\": \"mouse\", \"tissue\": \"retina\"}": {
+    "bytes": 2425,
+    "md5": "cf3c46ae8268a86f9180d7edfabc48a2",
+    "md5_normalised": "cf3c46ae8268a86f9180d7edfabc48a2"
+   },
+   "query_marker:{\"cell_type\": \"MG\"}": {
+    "bytes": 6481,
+    "md5": "734bee5c6ff0ebadfb08a74748d4b5b2",
+    "md5_normalised": "56c0e01b6df8aefa6b20a8d9d9f9bfe4"
+   },
+   "query_marker:{\"cell_type\": \"RPE\", \"library\": \"retina\"}": {
+    "bytes": 2681,
+    "md5": "8f04418411ffd2eac62c562684fcdde2",
+    "md5_normalised": "46ff880c2551ce49241f24f9f1123a3d"
+   },
+   "query_marker:{\"genes\": [\"TMEM119\", \"CX3CR1\", \"P2RY12\", \"C1QA\", \"SALL1\", \"CSF1R\", \"AIF1\"]}": {
+    "bytes": 7955,
+    "md5": "f89a8fd8a8a32e26d11ac6c5346dd0d3",
+    "md5_normalised": "e7e671d7b0df73e959071333989336a2"
+   },
+   "search_literature:{\"cell_type\": \"Muller glia\", \"query\": \"Mueller cell gliosis\", \"top_k\": 3}": {
+    "bytes": 4183,
+    "md5": "3d1486d08e40e980b0191af244c9af59",
+    "md5_normalised": "3d1486d08e40e980b0191af244c9af59"
+   },
+   "search_literature:{\"cell_type\": \"Rod\", \"top_k\": 3}": {
+    "bytes": 13228,
+    "md5": "69ca6bc891015bb622f57cf11402f2f1",
+    "md5_normalised": "69ca6bc891015bb622f57cf11402f2f1"
+   }
+  },
+  "tools": [
+   "explain_annotation",
+   "get_disease_prior",
+   "get_kb_page",
+   "get_release_identity",
+   "get_tissue_composition",
+   "query_marker",
+   "search_literature"
+  ]
+ },
+ "release_identity": {
+  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
+  "coverage": "every file of the tree (HEAD, or the staged tree with --source index)",
+  "digest_sha256": "3c17853873caccc536468a5e8df25dbbbd0a873b444ede37903ea77fc1c73ef3",
+  "excluded": [
+   "docs/RELEASE_IDENTITY.json"
+  ],
+  "n_files": 3718,
+  "recompute": "python3 scripts/release_identity.py --check",
+  "release_id": "3c17853873ca",
+  "schema": "eyekb-release-identity/1.0",
+  "source": "index",
+  "taken_at_commit": "a22c802f8dac036f3e2b8da2f58a92c443b90386",
+  "taken_at_commit_note": "HEAD when the identity was taken. With --source index the record is taken against the staged tree and ships in the commit that tree becomes; the record is excluded from its own coverage, so the value is unaffected.",
+  "total_bytes": 224519351
+ },
+ "schema": "eyekb-baseline-freeze/1.0",
+ "scoring_and_guard_configuration": {
+  "constants": {
+   "ANTSEG_DEFAULT_LIBS": {
+    "items": [
+     "antseg_v10"
+    ],
+    "type": "tuple"
+   },
+   "ANTSEG_MARGIN": "2",
+   "ANTSEG_MIN_SHARED": "2",
+   "DEFAULT_DB_DIR": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09",
+   "KBGOV_AMBIG": {
+    "items": [
+     "CLU",
+     "GLUL",
+     "VIM"
+    ],
+    "type": "frozenset"
+   },
+   "KBGOV_T_FROZEN": "0.4",
+   "MARKER_LIBS": {
+    "items": [
+     [
+      "antseg_v10",
+      "<REPO>/kb/markers/markers_v10_antseg_increment.json"
+     ],
+     [
+      "face_v6",
+      "<REPO>/kb/markers/markers_v6_face_increment.json"
+     ],
+     [
+      "holefill_v12",
+      "<REPO>/kb/markers/markers_v12_holefill_increment.json"
+     ],
+     [
+      "k9_ocs",
+      "<REPO>/kb/markers/markers_k9_ocs_increment.json"
+     ],
+     [
+      "lacrimal_v6",
+      "<REPO>/kb/markers/markers_v6_lacrimal_increment.json"
+     ],
+     [
+      "lensiris_v11",
+      "<REPO>/kb/markers/markers_v11_lensiris_increment.json"
+     ],
+     [
+      "membrane",
+      "<REPO>/kb/markers/markers_membrane_v1.json"
+     ],
+     [
+      "retina",
+      "<REPO>/kb/markers/markers_v4.1_clean.json"
+     ],
+     [
+      "retina_dev",
+      "<REPO>/kb/markers/markers_v9_dev_retina.json"
+     ],
+     [
+      "retina_interneuron",
+      "<REPO>/kb/markers/markers_v5_retina_interneuron.json"
+     ],
+     [
+      "retina_v6",
+      "<REPO>/kb/markers/markers_v6_retina_repair.json"
+     ],
+     [
+      "retina_v7",
+      "<REPO>/kb/markers/markers_v7_panel_increment.json"
+     ]
+    ],
+    "type": "dict"
+   },
+   "STAGE_ACCEPTED_LITERALS": {
+    "items": [
+     "",
+     "fetal",
+     "adult",
+     "developing",
+     "unknown",
+     "postnatal",
+     "any"
+    ],
+    "type": "tuple"
+   },
+   "STAGE_FOLD": {
+    "items": [
+     [
+      "any",
+      "adult"
+     ],
+     [
+      "postnatal",
+      "developing"
+     ]
+    ],
+    "type": "dict"
+   },
+   "STAGE_TIERS": {
+    "items": [
+     "fetal",
+     "adult",
+     "developing",
+     "unknown"
+    ],
+    "type": "tuple"
+   },
+   "STAGE_UNRECOGNISED_RULE": "unrecognised development_stage literal -> the unknown tier (KB2c ruling Q1: organoid is neither fetal tissue nor adult; red line 2: no stage is ever silently assigned to adult)"
+  },
+  "source": "mcp_server/eyekb_core.py, read out of the shipped module in the same interpreter that would serve a request (absent -> null, never omitted)"
+ },
+ "volatile_fields_excluded": [
+  "timestamps",
+  "mtimes",
+  "working directory",
+  "environment dump"
+ ]
+}

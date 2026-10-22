@@ -1,0 +1,722 @@
+vol	cluster	n_cells	tissue	ours_cl	theirs_cl	recorded_verdict	bucket	is_a_relation	ancestor_path	levels_crossed	min_report_granularity_met	assessment_status	unresolved_reason	counts_as_correct	counts_as_confirmed_error
+CX01_retina_snRNA	0	3186	retina	CL:0000561	CL:0004232	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0004232 -> CL:4030027 -> CL:0000561	2	True	supported		false	false
+CX01_retina_snRNA	1	2583	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX01_retina_snRNA	2	569	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX01_retina_snRNA	3	1922	retina	CL:0000561	CL:4030027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030027 -> CL:0000561	1	True	supported		false	false
+CX01_retina_snRNA	4	1284	retina	CL:0000561	CL:4030028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030028 -> CL:0000561	1	True	supported		false	false
+CX01_retina_snRNA	5	733	retina	CL:0000561	CL:4030027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030027 -> CL:0000561	1	True	supported		false	false
+CX01_retina_snRNA	6	1306	retina	CL:0000561	CL:4030028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030028 -> CL:0000561	1	True	supported		false	false
+CX01_retina_snRNA	7	607	retina	CL:0000561	CL:4030028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030028 -> CL:0000561	1	True	supported		false	false
+CX01_retina_snRNA	8	632	retina	CL:0000561	CL:4030027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030027 -> CL:0000561	1	True	supported		false	false
+CX01_retina_snRNA	9	3234	retina	CL:0000636	CL:0000636	same_term	same_term	same_canonical_term	CL:0000636	0	True	supported		true	false
+CX01_retina_snRNA	10	3220	retina	CL:0000748	CL:4033027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033027 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+CX01_retina_snRNA	11	9022	retina	CL:0000740	CL:4033047	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033047 -> CL:4023033 -> CL:0000740	2	True	supported		false	false
+CX01_retina_snRNA	12	3229	retina	CL:0000561	CL:4033052	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX01_retina_snRNA	13	3228	retina	CL:0000636	CL:0000127	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX01_retina_snRNA	14	2837	retina	CL:0000748	CL:4033019	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033019 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX01_retina_snRNA	15	3276	retina	CL:0000748	CL:4033035	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033035 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX01_retina_snRNA	16	3223	retina	CL:0000748	CL:4033032	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033032 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX01_retina_snRNA	17	3266	retina	CL:0000748	CL:4033033	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033033 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+CX01_retina_snRNA	18	3233	retina	CL:0000748	CL:4033030	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033030 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+CX01_retina_snRNA	19	3189	retina	CL:0000748	CL:4033034	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033034 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX01_retina_snRNA	20	3226	retina	CL:0000748	CL:4033028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033028 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+CX01_retina_snRNA	21	3190	retina	CL:0000748	CL:4033036	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033036 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+CX01_retina_snRNA	22	3225	retina	CL:0000748	CL:4033031	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033031 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX01_retina_snRNA	23	3250	retina	CL:0000748	CL:0000751	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000751 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX01_retina_snRNA	24	3228	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+CX01_retina_snRNA	25	3195	retina		CL:4033029	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX01_retina_snRNA	26	17	retina	CL:0000748	CL:4033029	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033029 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+CX01_retina_snRNA	27	3223	retina		CL:0000604	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX01_retina_snRNA	28	3658	retina		CL:4033051	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX01_retina_snRNA	29	3296	retina	CL:0000745	CL:0004217	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0004217 -> CL:0000745	1	True	supported		false	false
+CX01_retina_snRNA	30	109	retina	CL:0000740	CL:0000740	same_term	same_term	same_canonical_term	CL:0000740	0	True	supported		true	false
+CX01_retina_snRNA	31	3210	retina	CL:0000573	CL:0000573	same_term	same_term	same_canonical_term	CL:0000573	0	True	supported		true	false
+CX01_retina_snRNA	32	3233	retina	CL:0000573	CL:0003050	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0003050 -> CL:0000573	1	True	supported		false	false
+CX01_retina_snRNA	33	3142	retina	CL:0000745	CL:0004218	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0004218 -> CL:0000745	1	True	supported		false	false
+CX01_retina_snRNA	34	3188	retina	CL:0000127	CL:0000129	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX01_retina_snRNA	35	811	retina	CL:0002586	CL:0002586	same_term	same_term	same_canonical_term	CL:0002586	0	True	supported		true	false
+CX01_retina_snRNA	36	35	retina	CL:0002586	CL:0002586	same_term	same_term	same_canonical_term	CL:0002586	0	True	supported		true	false
+CX02_adult_retina	0	5932	retina	CL:0000573	CL:0000573	same_term	same_term	same_canonical_term	CL:0000573	0	True	supported		true	false
+CX02_adult_retina	1	945	retina		CL:0000125	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX02_adult_retina	2	11504	retina	CL:0000636	CL:0000125	we_are_finer	ours_narrower	theirs_is_ancestor_of_ours	CL:0000636 -> CL:0000681 -> CL:0000125	2	True	evidence_insufficient		false	false
+CX02_adult_retina	3	3763	retina		CL:0000604	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX02_adult_retina	4	12902	retina	CL:0000604	CL:0000604	same_term	same_term	same_canonical_term	CL:0000604	0	True	supported		true	false
+CX02_adult_retina	5	423	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+CX02_adult_retina	6	869	retina	CL:0000573	CL:0000573	same_term	same_term	same_canonical_term	CL:0000573	0	True	supported		true	false
+CX02_adult_retina	7	2398	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+CX02_adult_retina	8	329	retina		CL:0000125	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX02_adult_retina	9	3413	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+CX02_adult_retina	10	1006	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+CX02_adult_retina	11	798	retina	CL:0000745	CL:0000745	same_term	same_term	same_canonical_term	CL:0000745	0	True	supported		true	false
+CX02_adult_retina	12	1589	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+CX02_adult_retina	13	1524	retina		CL:0000125	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX02_adult_retina	14	1526	retina	CL:0000115	CL:0000125	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX02_adult_retina	15	964	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+CX02_adult_retina	16	4822	retina	CL:0000573	CL:0000573	same_term	same_term	same_canonical_term	CL:0000573	0	True	supported		true	false
+CX02_adult_retina	17	1183	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+CX02_adult_retina	18	3645	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+CX02_adult_retina	19	848	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+CX02_adult_retina	20	754	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	21	831	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+CX02_adult_retina	22	229	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+CX02_adult_retina	23	139	retina		CL:0000125	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX02_adult_retina	24	6530	retina	CL:0000745	CL:0000745	same_term	same_term	same_canonical_term	CL:0000745	0	True	supported		true	false
+CX02_adult_retina	25	91	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+CX02_adult_retina	26	785	retina		CL:0000561	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX02_adult_retina	27	289	retina	CL:0000748	CL:0000561	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX02_adult_retina	28	411	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	29	492	retina	CL:0000127	CL:0000125	we_are_finer	ours_narrower	theirs_is_ancestor_of_ours	CL:0000127 -> CL:0000126 -> CL:0000125	2	True	evidence_insufficient		false	false
+CX02_adult_retina	30	1320	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	31	2041	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	32	476	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	33	634	retina	CL:0000748	CL:0000561	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX02_adult_retina	34	1001	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	35	430	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	36	1177	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	37	757	retina		CL:0000561	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX02_adult_retina	38	451	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	39	1113	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	40	841	retina		CL:0000561	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX02_adult_retina	41	159	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	42	1013	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	43	592	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	44	1456	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	45	495	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	46	485	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX02_adult_retina	47	77	retina	CL:0002586	CL:0000125	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX03_retina_multiome	0	484	retina	CL:0000740	CL:0000740	same_term	same_term	same_canonical_term	CL:0000740	0	True	supported		true	false
+CX03_retina_multiome	1	1979	retina		CL:0000573	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX03_retina_multiome	2	451	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX03_retina_multiome	3	923	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX03_retina_multiome	4	459	retina	CL:0000748	CL:0000750	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000750 -> CL:0000748	1	True	supported		false	false
+CX03_retina_multiome	5	3781	retina	CL:0000636	CL:0000636	same_term	same_term	same_canonical_term	CL:0000636	0	True	supported		true	false
+CX03_retina_multiome	6	2401	retina	CL:0000748	CL:0000751	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000751 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX03_retina_multiome	7	8308	retina		CL:0000604	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX03_retina_multiome	8	3799	retina		CL:0000604	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX03_retina_multiome	9	4746	retina		CL:0000604	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX03_retina_multiome	10	2625	retina	CL:0000990	CL:0000604	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX03_retina_multiome	11	4719	retina	CL:0000604	CL:0000604	same_term	same_term	same_canonical_term	CL:0000604	0	True	supported		true	false
+CX03_retina_multiome	12	7918	retina		CL:0000604	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX03_retina_multiome	13	916	retina	CL:0000745	CL:0000745	same_term	same_term	same_canonical_term	CL:0000745	0	True	supported		true	false
+CX03_retina_multiome	14	217	retina	CL:0000745	CL:0000745	same_term	same_term	same_canonical_term	CL:0000745	0	True	supported		true	false
+CX03_retina_multiome	15	118	retina		CL:0000129	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX03_retina_multiome	16	948	retina	CL:0000748	CL:0000750	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000750 -> CL:0000748	1	True	supported		false	false
+CX03_retina_multiome	17	11	retina	CL:0000748	CL:0000750	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000750 -> CL:0000748	1	True	supported		false	false
+CX03_retina_multiome	18	561	retina	CL:0000748	CL:0000750	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000750 -> CL:0000748	1	True	supported		false	false
+CX03_retina_multiome	19	1341	retina	CL:0000748	CL:0000750	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000750 -> CL:0000748	1	True	supported		false	false
+CX03_retina_multiome	20	159	retina	CL:0000636	CL:0000127	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX03_retina_multiome	21	808	retina	CL:0000748	CL:0000749	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000749 -> CL:0000748	1	True	supported		false	false
+CX03_retina_multiome	22	255	retina	CL:0000573	CL:0000573	same_term	same_term	same_canonical_term	CL:0000573	0	True	supported		true	false
+CX03_retina_multiome	23	531	retina	CL:0002573	CL:0000561	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX03_retina_multiome	24	93	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX03_retina_multiome	25	210	retina	CL:0000748	CL:0000749	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000749 -> CL:0000748	1	True	supported		false	false
+CX03_retina_multiome	26	595	retina	CL:0000748	CL:0000750	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000750 -> CL:0000748	1	True	supported		false	false
+CX03_retina_multiome	27	693	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX03_retina_multiome	28	273	retina	CL:0000748	CL:0000749	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000749 -> CL:0000748	1	True	supported		false	false
+CX03_retina_multiome	29	657	retina	CL:0000748	CL:0000749	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000749 -> CL:0000748	1	True	supported		false	false
+CX03_retina_multiome	30	612	retina	CL:0000748	CL:0000749	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000749 -> CL:0000748	1	True	supported		false	false
+CX04_cowan_fovea	0	1894	retina	CL:0000604	CL:0000604	same_term	same_term	same_canonical_term	CL:0000604	0	True	supported		true	false
+CX04_cowan_fovea	1	1375	retina	CL:0000573	CL:0000573	same_term	same_term	same_canonical_term	CL:0000573	0	True	supported		true	false
+CX04_cowan_fovea	2	151	retina	CL:0000745	CL:0000745	same_term	same_term	same_canonical_term	CL:0000745	0	True	supported		true	false
+CX04_cowan_fovea	3	887	retina	CL:0000745	CL:0000745	same_term	same_term	same_canonical_term	CL:0000745	0	True	supported		true	false
+CX04_cowan_fovea	4	349	retina	CL:0000748	CL:0000750	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000750 -> CL:0000748	1	True	supported		false	false
+CX04_cowan_fovea	5	1282	retina	CL:0000748	CL:0000750	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000750 -> CL:0000748	1	True	supported		false	false
+CX04_cowan_fovea	6	439	retina	CL:0000748	CL:0000750	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000750 -> CL:0000748	1	True	supported		false	false
+CX04_cowan_fovea	7	1040	retina	CL:0000748	CL:0000751	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000751 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX04_cowan_fovea	8	357	retina	CL:0000748	CL:0000750	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000750 -> CL:0000748	1	True	supported		false	false
+CX04_cowan_fovea	9	126	retina		CL:0000561	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_fovea	10	196	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX04_cowan_fovea	11	1897	retina		CL:0000740	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_fovea	12	1922	retina	CL:0000740	CL:0000740	same_term	same_term	same_canonical_term	CL:0000740	0	True	supported		true	false
+CX04_cowan_fovea	13	26	retina		CL:0000740	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_fovea	14	1819	retina		CL:0000740	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_fovea	15	416	retina	CL:0000740	CL:0000740	same_term	same_term	same_canonical_term	CL:0000740	0	True	supported		true	false
+CX04_cowan_fovea	16	3897	retina	CL:0000636	CL:0000636	same_term	same_term	same_canonical_term	CL:0000636	0	True	supported		true	false
+CX04_cowan_fovea	17	138	retina	CL:0000127	CL:0000127	same_term	same_term	same_canonical_term	CL:0000127	0	True	supported		true	false
+CX04_cowan_fovea	18	84	retina	CL:0002586	CL:0002586	same_term	same_term	same_canonical_term	CL:0002586	0	True	supported		true	false
+CX04_cowan_fovea	19	173	retina		CL:0000129	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_fovea	20	280	retina	CL:0000669	CL:0002139	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX04_cowan_fovea	21	425	retina		CL:0000084	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_fovea	22	168	retina		CL:0000576	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_fovea	23	253	retina	CL:0000669	CL:0000057	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX04_cowan_fovea	24	159	retina		CL:0002139	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_organoid	0	132	retina	CL:0000148	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX04_cowan_organoid	1	1435	retina		CL:0000561	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_organoid	2	1952	retina	CL:0000561	CL:0000745	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX04_cowan_organoid	3	8557	retina	CL:0000604	CL:0000604	same_term	same_term	same_canonical_term	CL:0000604	0	True	supported		true	false
+CX04_cowan_organoid	4	4558	retina	CL:0000604	CL:0000604	same_term	same_term	same_canonical_term	CL:0000604	0	True	supported		true	false
+CX04_cowan_organoid	5	784	retina	CL:0000604	CL:0000604	same_term	same_term	same_canonical_term	CL:0000604	0	True	supported		true	false
+CX04_cowan_organoid	6	2065	retina	CL:0000573	CL:0000573	same_term	same_term	same_canonical_term	CL:0000573	0	True	supported		true	false
+CX04_cowan_organoid	7	5606	retina	CL:0000573	CL:0000573	same_term	same_term	same_canonical_term	CL:0000573	0	True	supported		true	false
+CX04_cowan_organoid	8	5320	retina	CL:0000573	CL:0000573	same_term	same_term	same_canonical_term	CL:0000573	0	True	supported		true	false
+CX04_cowan_organoid	9	3458	retina	CL:0000636	CL:0000636	same_term	same_term	same_canonical_term	CL:0000636	0	True	supported		true	false
+CX04_cowan_organoid	10	637	retina		CL:0000636	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_organoid	11	1142	retina	CL:0000636	CL:0000636	same_term	same_term	same_canonical_term	CL:0000636	0	True	supported		true	false
+CX04_cowan_organoid	12	5187	retina	CL:0000636	CL:0000636	same_term	same_term	same_canonical_term	CL:0000636	0	True	supported		true	false
+CX04_cowan_organoid	13	2844	retina	CL:0000748	CL:0000749	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000749 -> CL:0000748	1	True	supported		false	false
+CX04_cowan_organoid	14	170	retina		CL:0000636	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_periphery	0	157	retina	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+CX04_cowan_periphery	1	186	retina	CL:0002586	CL:0002586	same_term	same_term	same_canonical_term	CL:0002586	0	True	supported		true	false
+CX04_cowan_periphery	2	146	retina	CL:0000636	CL:0000636	same_term	same_term	same_canonical_term	CL:0000636	0	True	supported		true	false
+CX04_cowan_periphery	3	4416	retina		CL:0000636	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_periphery	4	2107	retina	CL:0000636	CL:0000636	same_term	same_term	same_canonical_term	CL:0000636	0	True	supported		true	false
+CX04_cowan_periphery	5	480	retina		CL:0000576	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_periphery	6	193	retina		CL:0000084	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_periphery	7	6085	retina	CL:0000604	CL:0000604	same_term	same_term	same_canonical_term	CL:0000604	0	True	supported		true	false
+CX04_cowan_periphery	8	3902	retina	CL:0000604	CL:0000604	same_term	same_term	same_canonical_term	CL:0000604	0	True	supported		true	false
+CX04_cowan_periphery	9	1784	retina	CL:0000604	CL:0000604	same_term	same_term	same_canonical_term	CL:0000604	0	True	supported		true	false
+CX04_cowan_periphery	10	384	retina	CL:0000604	CL:0000604	same_term	same_term	same_canonical_term	CL:0000604	0	True	supported		true	false
+CX04_cowan_periphery	11	873	retina		CL:0000604	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_periphery	12	1200	retina	CL:0000573	CL:0000573	same_term	same_term	same_canonical_term	CL:0000573	0	True	supported		true	false
+CX04_cowan_periphery	13	581	retina		CL:0000745	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_periphery	14	261	retina		CL:0000745	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_periphery	15	282	retina	CL:0000748	CL:0000750	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000750 -> CL:0000748	1	True	supported		false	false
+CX04_cowan_periphery	16	430	retina	CL:0000748	CL:0000750	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000750 -> CL:0000748	1	True	supported		false	false
+CX04_cowan_periphery	17	4194	retina	CL:0000748	CL:0000751	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000751 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX04_cowan_periphery	18	422	retina		CL:0000749	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_periphery	19	72	retina		CL:0000750	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_periphery	20	517	retina		CL:0000749	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_periphery	21	1101	retina	CL:0000748	CL:0000749	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000749 -> CL:0000748	1	True	supported		false	false
+CX04_cowan_periphery	22	647	retina	CL:0000748	CL:0000750	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000750 -> CL:0000748	1	True	supported		false	false
+CX04_cowan_periphery	23	120	retina	CL:0000748	CL:0000749	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000749 -> CL:0000748	1	True	supported		false	false
+CX04_cowan_periphery	24	592	retina		CL:0000561	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_periphery	25	35	retina	CL:0000740	CL:0000740	same_term	same_term	same_canonical_term	CL:0000740	0	True	supported		true	false
+CX04_cowan_periphery	26	153	retina		CL:0000561	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_periphery	27	168	retina	CL:0000127	CL:0000127	same_term	same_term	same_canonical_term	CL:0000127	0	True	supported		true	false
+CX04_cowan_periphery	28	1535	retina		CL:0000636	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX04_cowan_periphery	29	88	retina	CL:0000669	CL:0000669	same_term	same_term	same_canonical_term	CL:0000669	0	True	supported		true	false
+CX04_cowan_periphery	30	205	retina	CL:0000115	CL:0002139	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0002139 -> CL:0000115	1	True	supported		false	false
+CX04_cowan_periphery	31	30	retina	CL:0000094	CL:0000097	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX04_cowan_periphery	32	1356	retina	CL:0000669	CL:0000057	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX07_iPSC_organoid_POAG	0	3331	retina		CL:0002672	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX07_iPSC_organoid_POAG	1	65	retina		CL:0011004	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX07_iPSC_organoid_POAG	2	1609	retina		CL:0002672	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX07_iPSC_organoid_POAG	3	3141	retina	CL:0002586	CL:0002586	same_term	same_term	same_canonical_term	CL:0002586	0	True	supported		true	false
+CX07_iPSC_organoid_POAG	4	5133	retina	CL:0000748	CL:0000740	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX07_iPSC_organoid_POAG	5	1115	retina		CL:0000740	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX07_iPSC_organoid_POAG	6	4231	retina		CL:0000740	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX07_iPSC_organoid_POAG	7	616	retina		CL:0000573	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX07_iPSC_organoid_POAG	8	5369	retina	CL:0000148	CL:0000573	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX07_iPSC_organoid_POAG	9	1659	retina	CL:0000561	CL:0000745	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX07_iPSC_organoid_POAG	10	1767	retina		CL:0000740	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX07_iPSC_organoid_POAG	11	795	retina	CL:0000636	CL:0002672	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX07_iPSC_organoid_POAG	12	2330	retina	CL:0000636	CL:0002672	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX07_iPSC_organoid_POAG	13	2523	retina		CL:0002672	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX07_iPSC_organoid_POAG	14	1189	retina	CL:0000636	CL:0000745	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX07_iPSC_organoid_POAG	15	2421	retina		CL:0000740	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX07_iPSC_organoid_POAG	16	1958	retina		CL:0002672	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX07_iPSC_organoid_POAG	17	369	retina	CL:0002586	CL:0002672	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX07_iPSC_organoid_POAG	18	3951	retina		CL:0002672	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX07_iPSC_organoid_POAG	19	1857	retina	CL:0000636	CL:0002672	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX07_iPSC_organoid_POAG	20	846	retina		CL:0000740	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX08_RPE_choroid_scRNA	0	5670	rpe	CL:0000669	CL:0000057	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX08_RPE_choroid_scRNA	1	4872	rpe	CL:0000192	CL:0019018	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0019018 -> CL:0000359 -> CL:0000192	2	True	supported		false	false
+CX08_RPE_choroid_scRNA	2	5950	rpe	CL:0000669	CL:0000669	same_term	same_term	same_canonical_term	CL:0000669	0	True	supported		true	false
+CX08_RPE_choroid_scRNA	3	5505	rpe	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+CX08_RPE_choroid_scRNA	4	5559	rpe	CL:0002573	CL:0002376	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0002376 -> CL:0002573	1	True	supported		false	false
+CX08_RPE_choroid_scRNA	5	274	rpe	CL:0000636	CL:0000218	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX08_RPE_choroid_scRNA	6	476	rpe		CL:0000669	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX08_RPE_choroid_scRNA	7	5261	rpe	CL:0000115	CL:1000414	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:1000414 -> CL:0000071 -> CL:0002139 -> CL:0000115	3	True	supported		false	false
+CX08_RPE_choroid_scRNA	8	5747	rpe	CL:0000235	CL:0000235	same_term	same_term	same_canonical_term	CL:0000235	0	True	supported		true	false
+CX08_RPE_choroid_scRNA	9	4974	rpe	CL:0000860	CL:0000576	we_are_finer	ours_narrower	theirs_is_ancestor_of_ours	CL:0000860 -> CL:0000576	1	True	evidence_insufficient		false	false
+CX08_RPE_choroid_scRNA	10	2476	rpe	CL:0000115	CL:0000666	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000666 -> CL:0000115	1	True	supported		false	false
+CX08_RPE_choroid_scRNA	11	3030	rpe	CL:0000236	CL:0000236	same_term	same_term	same_canonical_term	CL:0000236	0	True	supported		true	false
+CX08_RPE_choroid_scRNA	12	1910	rpe	CL:0000786	CL:0000786	same_term	same_term	same_canonical_term	CL:0000786	0	True	supported		true	false
+CX08_RPE_choroid_scRNA	13	5443	rpe		CL:0000084	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX08_RPE_choroid_scRNA	14	4378	rpe	CL:0000623	CL:0000623	same_term	same_term	same_canonical_term	CL:0000623	0	True	supported		true	false
+CX08_RPE_choroid_scRNA	15	5291	rpe	CL:0000748	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX08_RPE_choroid_scRNA	16	17	rpe	CL:0000148	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX08_RPE_choroid_scRNA	17	5334	rpe	CL:0000115	CL:1000412	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:1000412 -> CL:0000071 -> CL:0002139 -> CL:0000115	3	True	supported		false	false
+CX08_RPE_choroid_scRNA	18	1333	rpe	CL:0000084	CL:0000097	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX08_RPE_choroid_scRNA	19	13	rpe	CL:0000784	CL:0000786	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX08_RPE_choroid_snRNA	0	1497	rpe	CL:0000748	CL:0000097	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX08_RPE_choroid_snRNA	1	3862	rpe		CL:0000057	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX08_RPE_choroid_snRNA	2	2378	rpe		CL:0000786	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX08_RPE_choroid_snRNA	3	3889	rpe	CL:0000740	CL:0000669	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX08_RPE_choroid_snRNA	4	4743	rpe	CL:0000192	CL:0000359	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000359 -> CL:0000192	1	True	supported		false	false
+CX08_RPE_choroid_snRNA	5	3385	rpe	CL:0000236	CL:0000236	same_term	same_term	same_canonical_term	CL:0000236	0	True	supported		true	false
+CX08_RPE_choroid_snRNA	6	3715	rpe	CL:0002586	CL:0002586	same_term	same_term	same_canonical_term	CL:0002586	0	True	supported		true	false
+CX08_RPE_choroid_snRNA	7	4528	rpe		CL:0000875	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX08_RPE_choroid_snRNA	8	3900	rpe	CL:0000084	CL:0000623	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX08_RPE_choroid_snRNA	9	7969	rpe	CL:0000084	CL:0000912	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000912 -> CL:0000911 -> CL:0002419 -> CL:0000084	3	True	supported		false	false
+CX08_RPE_choroid_snRNA	10	3596	rpe	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+CX08_RPE_choroid_snRNA	11	3693	rpe	CL:0000235	CL:0000235	same_term	same_term	same_canonical_term	CL:0000235	0	True	supported		true	false
+CX08_RPE_choroid_snRNA	12	432	rpe		CL:0000451	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX08_RPE_choroid_snRNA	13	3770	rpe	CL:0002573	CL:0002376	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0002376 -> CL:0002573	1	True	supported		false	false
+CX08_RPE_choroid_snRNA	14	3258	rpe	CL:0000115	CL:0000666	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000666 -> CL:0000115	1	True	supported		false	false
+CX08_RPE_choroid_snRNA	15	6987	rpe	CL:0000115	CL:1000413	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:1000413 -> CL:0000071 -> CL:0002139 -> CL:0000115	3	True	supported		false	false
+CX08_RPE_choroid_snRNA	16	7584	rpe	CL:0000115	CL:0002543	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0002543 -> CL:0000071 -> CL:0002139 -> CL:0000115	3	True	supported		false	false
+CX08_RPE_choroid_snRNA	17	1288	rpe	CL:0000748	CL:0000218	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX09_voigt_RPE_choroid	0	156	rpe	CL:0000129	CL:0000235	we_are_finer	ours_narrower	theirs_is_ancestor_of_ours	CL:0000129 -> CL:0000878 -> CL:0000864 -> CL:0000235	3	True	evidence_insufficient		false	false
+CX09_voigt_RPE_choroid	1	339	rpe		CL:0000814	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX09_voigt_RPE_choroid	2	513	rpe	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+CX09_voigt_RPE_choroid	3	470	rpe	CL:0002573	CL:0002573	same_term	same_term	same_canonical_term	CL:0002573	0	True	supported		true	false
+CX09_voigt_RPE_choroid	4	177	rpe	CL:0000192	CL:0000669	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX09_voigt_RPE_choroid	5	365	rpe	CL:0000057	CL:0000057	same_term	same_term	same_canonical_term	CL:0000057	0	True	supported		true	false
+CX09_voigt_RPE_choroid	6	434	rpe	CL:0000057	CL:0000057	same_term	same_term	same_canonical_term	CL:0000057	0	True	supported		true	false
+CX09_voigt_RPE_choroid	7	168	rpe	CL:0000115	CL:0000115	same_term	same_term	same_canonical_term	CL:0000115	0	True	supported		true	false
+CX09_voigt_RPE_choroid	8	225	rpe	CL:0000623	CL:0000814	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX09_voigt_RPE_choroid	9	96	rpe		CL:0000236	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX09_voigt_RPE_choroid	10	86	rpe	CL:0000669	CL:0000057	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX09_voigt_RPE_choroid	11	9	rpe		CL:0000148	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX09_voigt_RPE_choroid	12	156	rpe	CL:0002586	CL:0002586	same_term	same_term	same_canonical_term	CL:0002586	0	True	supported		true	false
+CX09_voigt_RPE_choroid	13	353	rpe	CL:0000057	CL:0000057	same_term	same_term	same_canonical_term	CL:0000057	0	True	supported		true	false
+CX09_voigt_RPE_choroid	14	30	rpe	CL:0000636	CL:0002573	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX09_voigt_RPE_choroid	15	47	rpe	CL:0000094	CL:0000097	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX10_hiPSC_RPE	0	6299	rpe	CL:0002586	CL:0002586	same_term	same_term	same_canonical_term	CL:0002586	0	True	supported		true	false
+CX10_hiPSC_RPE	1	3359	rpe	CL:0000148	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX10_hiPSC_RPE	2	2289	rpe	CL:0000148	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX10_hiPSC_RPE	3	5993	rpe	CL:0000148	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX10_hiPSC_RPE	4	2690	rpe		CL:0002586	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX10_hiPSC_RPE	5	2154	rpe		CL:0002586	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX10_hiPSC_RPE	6	1202	rpe	CL:0000057	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX10_hiPSC_RPE	7	3323	rpe	CL:0000057	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX10_hiPSC_RPE	8	3091	rpe		CL:0002586	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX10_hiPSC_RPE	9	841	rpe		CL:0002586	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX10_hiPSC_RPE	10	2955	rpe		CL:0002672	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX10_hiPSC_RPE	11	1944	rpe	CL:0002573	CL:0002672	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX10_hiPSC_RPE	12	1500	rpe		CL:0002672	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX10_hiPSC_RPE	13	759	rpe	CL:0000192	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX10_hiPSC_RPE	14	1279	rpe		CL:0002586	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX10_hiPSC_RPE	15	1068	rpe		CL:0002586	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX10_hiPSC_RPE	16	2632	rpe	CL:0000186	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX10_hiPSC_RPE	17	4008	rpe	CL:0000057	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX10_hiPSC_RPE	18	965	rpe	CL:0000186	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX10_hiPSC_RPE	19	2098	rpe		CL:0002586	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX10_hiPSC_RPE	20	734	rpe	CL:0000990	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX10_hiPSC_RPE	21	884	rpe	CL:0002573	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX10_hiPSC_RPE	22	2261	rpe		CL:0002586	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX10_hiPSC_RPE	23	411	rpe	CL:0000148	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX10_hiPSC_RPE	24	155	rpe	CL:0000057	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX11_posterior_eye_atlas	0	3609	optic_nerve	CL:0000748	CL:0000128	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX11_posterior_eye_atlas	1	2663	optic_nerve	CL:0000748	CL:0000128	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX11_posterior_eye_atlas	2	2387	optic_nerve	CL:0000561	CL:0002453	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX11_posterior_eye_atlas	3	4333	optic_nerve		CL:0000127	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX11_posterior_eye_atlas	4	1104	optic_nerve		CL:0000057	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX11_posterior_eye_atlas	5	3843	optic_nerve		CL:0000129	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX11_posterior_eye_atlas	6	4943	optic_nerve	CL:0000235	CL:0000235	same_term	same_term	same_canonical_term	CL:0000235	0	True	supported		true	false
+CX11_posterior_eye_atlas	7	676	optic_nerve		CL:0000235	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX11_posterior_eye_atlas	8	142	optic_nerve	CL:0000748	CL:0002453	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX11_posterior_eye_atlas	9	4789	optic_nerve	CL:0000084	CL:0000084	same_term	same_term	same_canonical_term	CL:0000084	0	True	supported		true	false
+CX11_posterior_eye_atlas	10	2043	optic_nerve	CL:0000115	CL:0000115	same_term	same_term	same_canonical_term	CL:0000115	0	True	supported		true	false
+CX11_posterior_eye_atlas	11	1997	optic_nerve	CL:0000561	CL:0002573	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX11_posterior_eye_atlas	12	5089	optic_nerve		CL:0000057	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX11_posterior_eye_atlas	13	2260	optic_nerve	CL:0000740	CL:0000359	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX11_posterior_eye_atlas	14	1894	optic_nerve		CL:0000127	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX11_posterior_eye_atlas	15	2868	optic_nerve	CL:0000115	CL:0000115	same_term	same_term	same_canonical_term	CL:0000115	0	True	supported		true	false
+CX11_posterior_eye_atlas	16	6257	optic_nerve	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+CX11_posterior_eye_atlas	17	1196	optic_nerve	CL:0000115	CL:0000115	same_term	same_term	same_canonical_term	CL:0000115	0	True	supported		true	false
+CX11_posterior_eye_atlas	18	528	optic_nerve	CL:0000236	CL:0000236	same_term	same_term	same_canonical_term	CL:0000236	0	True	supported		true	false
+CX11_posterior_eye_atlas	19	2076	optic_nerve	CL:0000748	CL:0000529	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX12_ocular_surface_snRNA	0	4114	ocular_surface	CL:0000132	CL:0000132	same_term	same_term	same_canonical_term	CL:0000132	0	True	supported		true	false
+CX12_ocular_surface_snRNA	1	3121	ocular_surface		CL:0000066	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX12_ocular_surface_snRNA	2	1333	ocular_surface	CL:0000235	CL:0000766	we_are_finer	ours_narrower	theirs_is_ancestor_of_ours	CL:0000235 -> CL:0000766	1	True	evidence_insufficient		false	false
+CX12_ocular_surface_snRNA	3	2420	ocular_surface		CL:0000132	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX12_ocular_surface_snRNA	4	5657	ocular_surface	CL:0000057	CL:0002363	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0002363 -> CL:0000005 -> CL:0000057	2	True	supported		false	false
+CX12_ocular_surface_snRNA	5	1695	ocular_surface	CL:0000094	CL:0000066	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX12_ocular_surface_snRNA	6	862	ocular_surface	CL:0000084	CL:0000542	we_are_finer	ours_narrower	theirs_is_ancestor_of_ours	CL:0000084 -> CL:0000542	1	True	evidence_insufficient		false	false
+CX12_ocular_surface_snRNA	7	3194	ocular_surface		CL:0011026	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX12_ocular_surface_snRNA	8	1263	ocular_surface	CL:0000057	CL:0000057	same_term	same_term	same_canonical_term	CL:0000057	0	True	supported		true	false
+CX12_ocular_surface_snRNA	9	2407	ocular_surface	CL:1000432	CL:1000432	same_term	same_term	same_canonical_term	CL:1000432	0	True	supported		true	false
+CX12_ocular_surface_snRNA	10	712	ocular_surface	CL:0002573	CL:0002573	same_term	same_term	same_canonical_term	CL:0002573	0	True	supported		true	false
+CX12_ocular_surface_snRNA	11	1318	ocular_surface		CL:0002138	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX12_ocular_surface_snRNA	12	819	ocular_surface	CL:0000115	CL:0000071	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000071 -> CL:0002139 -> CL:0000115	2	True	supported		false	false
+CX12_ocular_surface_snRNA	13	1685	ocular_surface	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+CX12_ocular_surface_snRNA	14	2502	ocular_surface	CL:0000115	CL:0000115	same_term	same_term	same_canonical_term	CL:0000115	0	True	supported		true	false
+CX12_ocular_surface_snRNA	15	305	ocular_surface		CL:2000084	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX12_ocular_surface_snRNA	16	516	ocular_surface	CL:0000669	CL:0000669	same_term	same_term	same_canonical_term	CL:0000669	0	True	supported		true	false
+CX12_ocular_surface_snRNA	17	913	ocular_surface		CL:0000057	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX12_ocular_surface_snRNA	18	1851	ocular_surface	CL:0000192	CL:0000192	same_term	same_term	same_canonical_term	CL:0000192	0	True	supported		true	false
+CX12_ocular_surface_snRNA	19	265	ocular_surface		CL:0000115	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX12_ocular_surface_snRNA	20	312	ocular_surface	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+CX13_TM_corneal_scleral	0	3581	trabecular_meshwork	CL:0000094	CL:0000575	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_TM_corneal_scleral	1	2268	trabecular_meshwork		CL:0000646	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_TM_corneal_scleral	2	1411	trabecular_meshwork		CL:0000646	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_TM_corneal_scleral	3	1430	trabecular_meshwork	CL:0000860	CL:1000432	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_TM_corneal_scleral	4	1024	trabecular_meshwork		CL:0000575	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_TM_corneal_scleral	5	1452	trabecular_meshwork	CL:0000094	CL:0000646	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_TM_corneal_scleral	6	955	trabecular_meshwork		CL:0000132	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_TM_corneal_scleral	7	2812	trabecular_meshwork		CL:0000057	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_TM_corneal_scleral	8	1186	trabecular_meshwork	CL:0000669	CL:0000057	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_TM_corneal_scleral	9	1712	trabecular_meshwork	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+CX13_TM_corneal_scleral	10	1018	trabecular_meshwork		CL:0002138	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_TM_corneal_scleral	11	440	trabecular_meshwork	CL:0000057	CL:0000057	same_term	same_term	same_canonical_term	CL:0000057	0	True	supported		true	false
+CX13_TM_corneal_scleral	12	5988	trabecular_meshwork	CL:0000057	CL:0000057	same_term	same_term	same_canonical_term	CL:0000057	0	True	supported		true	false
+CX13_TM_corneal_scleral	13	4258	trabecular_meshwork	CL:0002573	CL:0002573	same_term	same_term	same_canonical_term	CL:0002573	0	True	supported		true	false
+CX13_TM_corneal_scleral	14	1261	trabecular_meshwork	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+CX13_TM_corneal_scleral	15	7529	trabecular_meshwork	CL:0000192	CL:1000443	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:1000443 -> CL:0000192	1	True	supported		false	false
+CX13_TM_corneal_scleral	16	6461	trabecular_meshwork	CL:0000192	CL:1000443	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:1000443 -> CL:0000192	1	True	supported		false	false
+CX13_TM_corneal_scleral	17	16	trabecular_meshwork		CL:0000132	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_TM_corneal_scleral	18	2276	trabecular_meshwork	CL:0000115	CL:0000115	same_term	same_term	same_canonical_term	CL:0000115	0	True	supported		true	false
+CX13_TM_corneal_scleral	19	557	trabecular_meshwork	CL:0000084	CL:0000542	we_are_finer	ours_narrower	theirs_is_ancestor_of_ours	CL:0000084 -> CL:0000542	1	True	evidence_insufficient		false	false
+CX13_TM_corneal_scleral	20	503	trabecular_meshwork	CL:0000669	CL:0000669	same_term	same_term	same_canonical_term	CL:0000669	0	True	supported		true	false
+CX13_TM_corneal_scleral	21	372	trabecular_meshwork	CL:0000115	CL:0000071	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000071 -> CL:0002139 -> CL:0000115	2	True	supported		false	false
+CX13_TM_corneal_scleral	22	289	trabecular_meshwork		CL:0000160	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_TM_corneal_scleral	23	740	trabecular_meshwork	CL:0000115	CL:0000115	same_term	same_term	same_canonical_term	CL:0000115	0	True	supported		true	false
+CX13_TM_corneal_scleral	24	1553	trabecular_meshwork	CL:0000235	CL:0000235	same_term	same_term	same_canonical_term	CL:0000235	0	True	supported		true	false
+CX13_TM_corneal_scleral	25	178	trabecular_meshwork	CL:0000057	CL:0000057	same_term	same_term	same_canonical_term	CL:0000057	0	True	supported		true	false
+CX13_TM_corneal_scleral	26	23	trabecular_meshwork	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+CX13_TM_corneal_scleral	27	68	trabecular_meshwork	CL:0002573	CL:0000057	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_TM_corneal_scleral	28	53	trabecular_meshwork		CL:0000097	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_central_cornea	0	6306	ocular_surface		CL:0000646	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_central_cornea	1	6326	ocular_surface		CL:0000575	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_central_cornea	2	886	ocular_surface		CL:0000575	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_central_cornea	3	1006	ocular_surface	CL:0002363	CL:0000646	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_central_cornea	4	1461	ocular_surface		CL:0000575	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_central_cornea	5	1093	ocular_surface	CL:0000057	CL:0000057	same_term	same_term	same_canonical_term	CL:0000057	0	True	supported		true	false
+CX13_central_cornea	6	3700	ocular_surface		CL:0000575	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_central_cornea	7	5524	ocular_surface		CL:0000575	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_central_cornea	8	2275	ocular_surface		CL:0000575	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_central_cornea	9	838	ocular_surface		CL:0000575	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_central_cornea	10	4802	ocular_surface	CL:0000057	CL:0000132	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_central_cornea	11	227	ocular_surface		CL:0000057	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_central_cornea	12	543	ocular_surface		CL:0000646	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_central_cornea	13	743	ocular_surface		CL:0000646	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_central_cornea	14	148	ocular_surface		CL:0000738	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_central_cornea	15	12	ocular_surface		CL:0000738	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_ciliary_body	0	3800	ciliary_body		CL:0002303	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_ciliary_body	1	3844	ciliary_body		CL:0002303	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_ciliary_body	2	3021	ciliary_body	CL:0000148	CL:0002303	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_ciliary_body	3	2361	ciliary_body		CL:0002303	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_ciliary_body	4	1766	ciliary_body		CL:0002303	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_ciliary_body	5	3464	ciliary_body	CL:0000057	CL:0000057	same_term	same_term	same_canonical_term	CL:0000057	0	True	supported		true	false
+CX13_ciliary_body	6	1865	ciliary_body	CL:0002573	CL:0002573	same_term	same_term	same_canonical_term	CL:0002573	0	True	supported		true	false
+CX13_ciliary_body	7	3479	ciliary_body		CL:0002304	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_ciliary_body	8	939	ciliary_body		CL:0002304	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_ciliary_body	9	26	ciliary_body	CL:0000990	CL:0002304	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_ciliary_body	10	1208	ciliary_body	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+CX13_ciliary_body	11	404	ciliary_body		CL:0002304	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_ciliary_body	12	4062	ciliary_body	CL:0000192	CL:1000443	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:1000443 -> CL:0000192	1	True	supported		false	false
+CX13_ciliary_body	13	1457	ciliary_body	CL:0000127	CL:0000235	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_ciliary_body	14	300	ciliary_body	CL:0000084	CL:0000542	we_are_finer	ours_narrower	theirs_is_ancestor_of_ours	CL:0000084 -> CL:0000542	1	True	evidence_insufficient		false	false
+CX13_ciliary_body	15	184	ciliary_body	CL:0000115	CL:0000071	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000071 -> CL:0002139 -> CL:0000115	2	True	supported		false	false
+CX13_ciliary_body	16	102	ciliary_body	CL:0000669	CL:0000669	same_term	same_term	same_canonical_term	CL:0000669	0	True	supported		true	false
+CX13_iris	0	8205	iris		CL:0000529	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_iris	1	2693	iris		CL:0000529	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_iris	2	1790	iris		CL:0000529	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_iris	3	6003	iris	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+CX13_iris	4	7697	iris		CL:0000148	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_iris	5	3851	iris	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+CX13_iris	6	3703	iris	CL:0000784	CL:0000057	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_iris	7	1166	iris	CL:0000192	CL:0002243	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0002243 -> CL:0000358 -> CL:0000192	2	True	supported		false	false
+CX13_iris	8	376	iris	CL:0000192	CL:0000529	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_iris	9	7148	iris	CL:0000192	CL:0000529	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_iris	10	1995	iris		CL:0000529	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_iris	11	7817	iris	CL:0000784	CL:0000057	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_iris	12	589	iris	CL:0000127	CL:0000235	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_iris	13	2135	iris		CL:0000529	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_iris	14	586	iris	CL:0002573	CL:0002573	same_term	same_term	same_canonical_term	CL:0002573	0	True	supported		true	false
+CX13_iris	15	83	iris		CL:0000542	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_iris	16	153	iris		CL:0000529	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_lens	0	2288	lens	CL:0000561	CL:0002224	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_lens	1	573	lens		CL:0002224	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_lens	2	897	lens		CL:0002223	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_lens	3	954	lens		CL:0002224	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_lens	4	1368	lens		CL:0002225	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_lens	5	1110	lens		CL:0002223	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_lens	6	2964	lens	CL:0000561	CL:0002223	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX13_lens	7	2385	lens		CL:0002223	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_lens	8	186	lens		CL:0002224	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_lens	9	725	lens		CL:0011004	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX13_lens	10	88	lens		CL:0011004	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX14_TM_ciliary_snRNA	0	6414	trabecular_meshwork	CL:0000669	CL:0000669	same_term	same_term	same_canonical_term	CL:0000669	0	True	supported		true	false
+CX14_TM_ciliary_snRNA	1	9469	trabecular_meshwork		CL:0000057	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX14_TM_ciliary_snRNA	2	7111	trabecular_meshwork	CL:0000192	CL:1000443	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:1000443 -> CL:0000192	1	True	supported		false	false
+CX14_TM_ciliary_snRNA	3	3792	trabecular_meshwork		CL:0002367	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX14_TM_ciliary_snRNA	4	6136	trabecular_meshwork		CL:0002304	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX14_TM_ciliary_snRNA	5	6501	trabecular_meshwork	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+CX14_TM_ciliary_snRNA	6	7215	trabecular_meshwork	CL:0000115	CL:0000071	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000071 -> CL:0002139 -> CL:0000115	2	True	supported		false	false
+CX14_TM_ciliary_snRNA	7	6705	trabecular_meshwork		CL:0002303	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX14_TM_ciliary_snRNA	8	910	trabecular_meshwork		CL:0000097	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX14_TM_ciliary_snRNA	9	6433	trabecular_meshwork	CL:0000235	CL:0000235	same_term	same_term	same_canonical_term	CL:0000235	0	True	supported		true	false
+CX14_TM_ciliary_snRNA	10	6383	trabecular_meshwork	CL:0000084	CL:0000542	we_are_finer	ours_narrower	theirs_is_ancestor_of_ours	CL:0000084 -> CL:0000542	1	True	evidence_insufficient		false	false
+CX14_TM_ciliary_snRNA	11	2497	trabecular_meshwork		CL:0000218	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX14_TM_ciliary_snRNA	12	531	trabecular_meshwork		CL:0002304	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX14_TM_ciliary_snRNA	13	100	trabecular_meshwork	CL:0002573	CL:0000542	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX14_TM_ciliary_snRNA	14	94	trabecular_meshwork	CL:0002573	CL:0000235	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX14_TM_ciliary_snRNA	15	6588	trabecular_meshwork	CL:0002573	CL:0002573	same_term	same_term	same_canonical_term	CL:0002573	0	True	supported		true	false
+CX14_TM_ciliary_snRNA	16	1231	trabecular_meshwork	CL:0000236	CL:0000236	same_term	same_term	same_canonical_term	CL:0000236	0	True	supported		true	false
+CX15_optic_nerve_all	0	1915	optic_nerve	CL:0000748	CL:4033028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033028 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+CX15_optic_nerve_all	1	1934	optic_nerve	CL:0000748	CL:4033034	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033034 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX15_optic_nerve_all	2	1966	optic_nerve	CL:0000748	CL:4033033	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033033 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+CX15_optic_nerve_all	3	1943	optic_nerve	CL:0000748	CL:0000751	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000751 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX15_optic_nerve_all	4	1806	optic_nerve	CL:0000748	CL:4033030	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033030 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+CX15_optic_nerve_all	5	718	optic_nerve	CL:0000748	CL:4033032	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033032 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX15_optic_nerve_all	6	1913	optic_nerve	CL:0000748	CL:4033085	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033085 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX15_optic_nerve_all	7	1024	optic_nerve	CL:0000748	CL:4033035	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033035 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX15_optic_nerve_all	8	1601	optic_nerve	CL:0000748	CL:4033029	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033029 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+CX15_optic_nerve_all	9	2274	optic_nerve	CL:0000748	CL:4033095	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033095 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX15_optic_nerve_all	10	1640	optic_nerve	CL:0000748	CL:4033027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033027 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+CX15_optic_nerve_all	11	428	optic_nerve	CL:0000748	CL:4033036	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033036 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+CX15_optic_nerve_all	12	3810	optic_nerve	CL:0000740	CL:0000669	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX15_optic_nerve_all	13	22	optic_nerve	CL:0000748	CL:4033035	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033035 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX15_optic_nerve_all	14	22	optic_nerve	CL:0000748	CL:4033029	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033029 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+CX15_optic_nerve_all	15	1922	optic_nerve		CL:0000604	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX15_optic_nerve_all	16	2544	optic_nerve	CL:0000745	CL:0004217	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0004217 -> CL:0000745	1	True	supported		false	false
+CX15_optic_nerve_all	17	1003	optic_nerve	CL:0000561	CL:0000236	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX15_optic_nerve_all	18	2260	optic_nerve	CL:0000084	CL:0000084	same_term	same_term	same_canonical_term	CL:0000084	0	True	supported		true	false
+CX15_optic_nerve_all	19	942	optic_nerve	CL:0000561	CL:4030028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030028 -> CL:0000561	1	True	supported		false	false
+CX15_optic_nerve_all	20	3722	optic_nerve	CL:0000115	CL:0000666	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000666 -> CL:0000115	1	True	supported		false	false
+CX15_optic_nerve_all	21	3933	optic_nerve	CL:0000115	CL:0000071	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000071 -> CL:0002139 -> CL:0000115	2	True	supported		false	false
+CX15_optic_nerve_all	22	1902	optic_nerve		CL:0000148	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX15_optic_nerve_all	23	1884	optic_nerve	CL:0000748	CL:0000128	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX15_optic_nerve_all	24	1913	optic_nerve	CL:0000745	CL:0002453	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX15_optic_nerve_all	25	22	optic_nerve		CL:4030027	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX15_optic_nerve_all	26	1585	optic_nerve	CL:0002573	CL:0002376	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0002376 -> CL:0002573	1	True	supported		false	false
+CX15_optic_nerve_all	27	3717	optic_nerve		CL:0000129	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX15_optic_nerve_all	28	1604	optic_nerve		CL:0000127	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX15_optic_nerve_all	29	2158	optic_nerve		CL:0000636	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX15_optic_nerve_all	30	496	optic_nerve	CL:0000748	CL:0000218	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX15_optic_nerve_all	31	1822	optic_nerve		CL:0000057	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX15_optic_nerve_all	32	2013	optic_nerve		CL:4033015	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX15_optic_nerve_all	33	1515	optic_nerve	CL:0000561	CL:4030027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030027 -> CL:0000561	1	True	supported		false	false
+CX15_optic_nerve_all	34	389	optic_nerve	CL:0000561	CL:4030028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030028 -> CL:0000561	1	True	supported		false	false
+CX15_optic_nerve_all	35	145	optic_nerve	CL:0000561	CL:4030027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030027 -> CL:0000561	1	True	supported		false	false
+CX15_optic_nerve_all	36	193	optic_nerve	CL:0000561	CL:4030027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030027 -> CL:0000561	1	True	supported		false	false
+CX15_optic_nerve_all	37	695	optic_nerve	CL:0000561	CL:4030028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030028 -> CL:0000561	1	True	supported		false	false
+CX15_optic_nerve_all	38	495	optic_nerve	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX15_optic_nerve_all	39	1994	optic_nerve	CL:0000636	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX15_optic_nerve_all	40	1859	optic_nerve	CL:0000745	CL:0000529	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX15_optic_nerve_all	41	2224	optic_nerve	CL:0000573	CL:0000573	same_term	same_term	same_canonical_term	CL:0000573	0	True	supported		true	false
+CX15_optic_nerve_all	42	550	optic_nerve		CL:0000136	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX15_optic_nerve_all	43	3100	optic_nerve		CL:4033047	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX15_optic_nerve_all	44	325	optic_nerve	CL:0000740	CL:4033051	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033051 -> CL:4023033 -> CL:0000740	2	True	supported		false	false
+CX15_optic_nerve_all	45	55	optic_nerve		CL:0000740	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX16_tabula_sapiens_eye	0	2426	retina	CL:0000669	CL:0000057	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	1	313	retina	CL:0000860	CL:1000432	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	2	331	retina	CL:0000148	CL:0002573	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	3	1341	retina	CL:0000129	CL:0000766	we_are_finer	ours_narrower	theirs_is_ancestor_of_ours	CL:0000129 -> CL:0000878 -> CL:0000864 -> CL:0000235 -> CL:0000766	4	True	evidence_insufficient		false	false
+CX16_tabula_sapiens_eye	4	1803	retina	CL:0000084	CL:0000625	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000625 -> CL:0000791 -> CL:0000789 -> CL:0000084	3	True	supported		false	false
+CX16_tabula_sapiens_eye	5	797	retina	CL:0000084	CL:0000624	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000624 -> CL:0000791 -> CL:0000789 -> CL:0000084	3	True	supported		false	false
+CX16_tabula_sapiens_eye	6	1236	retina		CL:0000236	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX16_tabula_sapiens_eye	7	582	retina	CL:0000604	CL:0000287	we_are_finer	ours_narrower	theirs_is_ancestor_of_ours	CL:0000604 -> CL:0010009 -> CL:0000287	2	True	evidence_insufficient		false	false
+CX16_tabula_sapiens_eye	8	542	retina	CL:0000057	CL:1000432	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	9	96	retina	CL:0000636	CL:0002586	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	10	365	retina	CL:0000786	CL:0000786	same_term	same_term	same_canonical_term	CL:0000786	0	True	supported		true	false
+CX16_tabula_sapiens_eye	11	2823	retina		CL:1000432	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX16_tabula_sapiens_eye	12	3692	retina	CL:0000860	CL:1000432	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	13	19	retina	CL:0000860	CL:1000432	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	14	1164	retina	CL:0000094	CL:0000575	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	15	1227	retina	CL:0000860	CL:1000432	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	16	1175	retina	CL:0000860	CL:0000622	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	17	511	retina	CL:0000186	CL:0000192	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	18	171	retina		CL:0000232	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX16_tabula_sapiens_eye	19	1671	retina	CL:0000115	CL:0002585	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0002585 -> CL:0000071 -> CL:0002139 -> CL:0000115	3	True	supported		false	false
+CX16_tabula_sapiens_eye	20	13	retina	CL:0000745	CL:0002585	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	21	272	retina	CL:0000561	CL:0002585	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	22	546	retina	CL:0000094	CL:0000575	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	23	413	retina	CL:0000148	CL:1000432	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	24	11	retina	CL:0000860	CL:1000432	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	25	64	retina		CL:0000622	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX16_tabula_sapiens_eye	26	326	retina	CL:0000786	CL:0000786	same_term	same_term	same_canonical_term	CL:0000786	0	True	supported		true	false
+CX16_tabula_sapiens_eye	27	1829	retina	CL:0000236	CL:0000236	same_term	same_term	same_canonical_term	CL:0000236	0	True	supported		true	false
+CX16_tabula_sapiens_eye	28	1208	retina	CL:0000990	CL:0000287	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	29	622	retina	CL:0000786	CL:0000786	same_term	same_term	same_canonical_term	CL:0000786	0	True	supported		true	false
+CX16_tabula_sapiens_eye	30	194	retina	CL:0000186	CL:0000187	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	31	772	retina		CL:0000236	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX16_tabula_sapiens_eye	32	2930	retina	CL:0000094	CL:0000575	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	33	284	retina	CL:0000860	CL:1000432	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	34	26	retina	CL:0000235	CL:0000636	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX16_tabula_sapiens_eye	35	13	retina		CL:1000432	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX17_mouse_retina_all	0	3802	retina	CL:0000748	CL:0000751	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000751 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+CX17_mouse_retina_all	1	3832	retina	CL:0000604	CL:0000604	same_term	same_term	same_canonical_term	CL:0000604	0	True	supported		true	false
+CX17_mouse_retina_all	2	2759	retina	CL:0000573	CL:0000573	same_term	same_term	same_canonical_term	CL:0000573	0	True	supported		true	false
+CX17_mouse_retina_all	3	5061	retina	CL:0000636	CL:0000636	same_term	same_term	same_canonical_term	CL:0000636	0	True	supported		true	false
+CX17_mouse_retina_all	4	292	retina	CL:0000636	CL:0000636	same_term	same_term	same_canonical_term	CL:0000636	0	True	supported		true	false
+CX17_mouse_retina_all	5	4703	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+CX17_mouse_retina_all	6	581	retina	CL:0000561	CL:4030028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030028 -> CL:0000561	1	True	supported		false	false
+CX17_mouse_retina_all	7	49	retina	CL:0000745	CL:4030027	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX17_mouse_retina_all	8	4521	retina		CL:4030027	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX17_mouse_retina_all	9	3717	retina	CL:0000748	CL:0000758	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000758 -> CL:0000752 -> CL:0000748	2	True	supported		false	false
+CX17_mouse_retina_all	10	59	retina	CL:0000748	CL:0004213	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0004213 -> CL:0000755 -> CL:0000752 -> CL:0000748	3	True	supported		false	false
+CX17_mouse_retina_all	11	3705	retina	CL:0000748	CL:0004215	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0004215 -> CL:0000757 -> CL:0000752 -> CL:0000748	3	True	supported		false	false
+CX17_mouse_retina_all	12	3629	retina	CL:0000235	CL:0000129	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000129 -> CL:0000878 -> CL:0000864 -> CL:0000235	3	True	supported		false	false
+CX17_mouse_retina_all	13	227	retina	CL:0000745	CL:0000745	same_term	same_term	same_canonical_term	CL:0000745	0	True	supported		true	false
+CX17_mouse_retina_all	14	4048	retina	CL:0000748	CL:0004214	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0004214 -> CL:0000755 -> CL:0000752 -> CL:0000748	3	True	supported		false	false
+CX17_mouse_retina_all	15	1441	retina		CL:0000757	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX17_mouse_retina_all	16	3892	retina	CL:0000561	CL:0004216	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX17_mouse_retina_all	17	2830	retina	CL:0000748	CL:0000761	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000761 -> CL:0000752 -> CL:0000748	2	True	supported		false	false
+CX17_mouse_retina_all	18	2056	retina	CL:0000561	CL:0000757	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX17_mouse_retina_all	19	1375	retina	CL:0000115	CL:0000115	same_term	same_term	same_canonical_term	CL:0000115	0	True	supported		true	false
+CX17_mouse_retina_all	20	840	retina	CL:0000573	CL:0000573	same_term	same_term	same_canonical_term	CL:0000573	0	True	supported		true	false
+CX17_mouse_retina_all	21	3719	retina	CL:0000748	CL:0004213	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0004213 -> CL:0000755 -> CL:0000752 -> CL:0000748	3	True	supported		false	false
+CX17_mouse_retina_all	22	3717	retina	CL:0000748	CL:0000759	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000759 -> CL:0000752 -> CL:0000748	2	True	supported		false	false
+CX17_mouse_retina_all	23	2818	retina	CL:0000748	CL:0000760	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000760 -> CL:0000752 -> CL:0000748	2	True	supported		false	false
+CX17_mouse_retina_all	24	784	retina	CL:0000561	CL:4030028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030028 -> CL:0000561	1	True	supported		false	false
+CX17_mouse_retina_all	25	399	retina	CL:0002586	CL:0002586	same_term	same_term	same_canonical_term	CL:0002586	0	True	supported		true	false
+CX17_mouse_retina_all	26	286	retina	CL:0000561	CL:4030027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030027 -> CL:0000561	1	True	supported		false	false
+CX17_mouse_retina_all	27	737	retina		CL:4030028	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX17_mouse_retina_all	28	695	retina	CL:0002573	CL:4030028	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+CX17_mouse_retina_all	29	152	retina	CL:0000748	CL:0000756	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000756 -> CL:0000752 -> CL:0000748	2	True	supported		false	false
+CX17_mouse_retina_all	30	1232	retina	CL:0000748	CL:0000754	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000754 -> CL:0000752 -> CL:0000748	2	True	supported		false	false
+CX17_mouse_retina_all	31	1416	retina	CL:0000561	CL:4030028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030028 -> CL:0000561	1	True	supported		false	false
+CX17_mouse_retina_all	32	411	retina	CL:0000669	CL:0000669	same_term	same_term	same_canonical_term	CL:0000669	0	True	supported		true	false
+CX17_mouse_retina_all	33	480	retina		CL:0000561	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+CX17_mouse_retina_all	34	1163	retina	CL:0000561	CL:4030027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030027 -> CL:0000561	1	True	supported		false	false
+CX17_mouse_retina_all	35	323	retina	CL:0000740	CL:0000740	same_term	same_term	same_canonical_term	CL:0000740	0	True	supported		true	false
+PRE_GSE199013	0	975	ocular_surface		CL:0002303	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	1	54	ocular_surface		CL:0000235	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	2	60	ocular_surface		CL:0000148	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	3	1074	ocular_surface	CL:0000192	CL:0000529	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_GSE199013	4	2768	ocular_surface	CL:0000669	CL:0000057	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_GSE199013	5	1706	ocular_surface		CL:0000057	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	6	745	ocular_surface	CL:0000057	CL:0000057	same_term	same_term	same_canonical_term	CL:0000057	0	True	supported		true	false
+PRE_GSE199013	7	840	ocular_surface		CL:0000057	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	8	3115	ocular_surface		CL:1000443	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	9	11	ocular_surface	CL:0000084	CL:0000542	we_are_finer	ours_narrower	theirs_is_ancestor_of_ours	CL:0000084 -> CL:0000542	1	True	evidence_insufficient		false	false
+PRE_GSE199013	10	167	ocular_surface	CL:0000669	CL:0000148	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_GSE199013	11	3052	ocular_surface	CL:0002573	CL:0002573	same_term	same_term	same_canonical_term	CL:0002573	0	True	supported		true	false
+PRE_GSE199013	12	984	ocular_surface	CL:0000084	CL:0000542	we_are_finer	ours_narrower	theirs_is_ancestor_of_ours	CL:0000084 -> CL:0000542	1	True	evidence_insufficient		false	false
+PRE_GSE199013	13	70	ocular_surface		CL:0000235	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	14	852	ocular_surface	CL:0000057	CL:0002304	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_GSE199013	15	34	ocular_surface		CL:0002304	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	16	1148	ocular_surface	CL:0000148	CL:0000529	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_GSE199013	17	588	ocular_surface	CL:0000669	CL:0000669	same_term	same_term	same_canonical_term	CL:0000669	0	True	supported		true	false
+PRE_GSE199013	18	15	ocular_surface		CL:0000542	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	19	52	ocular_surface		CL:0000542	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	20	3033	ocular_surface	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+PRE_GSE199013	21	2843	ocular_surface		CL:0000235	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	22	70	ocular_surface		CL:0000097	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	23	1357	ocular_surface	CL:0000115	CL:0000115	same_term	same_term	same_canonical_term	CL:0000115	0	True	supported		true	false
+PRE_GSE199013	24	2400	ocular_surface	CL:0000094	CL:0000646	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_GSE199013	25	3155	ocular_surface		CL:0000575	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	26	77	ocular_surface	CL:0000094	CL:0000057	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_GSE199013	27	1813	ocular_surface		CL:0000575	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	28	1715	ocular_surface	CL:1000432	CL:1000432	same_term	same_term	same_canonical_term	CL:1000432	0	True	supported		true	false
+PRE_GSE199013	29	1864	ocular_surface	CL:0000132	CL:0000132	same_term	same_term	same_canonical_term	CL:0000132	0	True	supported		true	false
+PRE_GSE199013	30	1085	ocular_surface	CL:0000057	CL:0000057	same_term	same_term	same_canonical_term	CL:0000057	0	True	supported		true	false
+PRE_GSE199013	31	985	ocular_surface	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+PRE_GSE199013	32	716	ocular_surface	CL:0000192	CL:0002243	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0002243 -> CL:0000358 -> CL:0000192	2	True	supported		false	false
+PRE_GSE199013	33	1001	ocular_surface		CL:0002138	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	34	1057	ocular_surface		CL:0000646	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	35	289	ocular_surface		CL:0000160	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE199013	36	690	ocular_surface	CL:0000115	CL:0000115	same_term	same_term	same_canonical_term	CL:0000115	0	True	supported		true	false
+PRE_GSE199013	37	13	ocular_surface	CL:0000132	CL:0000132	same_term	same_term	same_canonical_term	CL:0000132	0	True	supported		true	false
+PRE_GSE268630	0	1316	retina	CL:0000748	CL:4033029	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033029 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+PRE_GSE268630	1	2331	retina	CL:0000561	CL:4030028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030028 -> CL:0000561	1	True	supported		false	false
+PRE_GSE268630	2	1019	retina	CL:0000748	CL:0000749	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000749 -> CL:0000748	1	True	supported		false	false
+PRE_GSE268630	3	3998	retina	CL:0000604	CL:0000604	same_term	same_term	same_canonical_term	CL:0000604	0	True	supported		true	false
+PRE_GSE268630	4	1404	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+PRE_GSE268630	5	3997	retina		CL:0000636	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE268630	6	1839	retina	CL:0000561	CL:0002672	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_GSE268630	7	12	retina	CL:0000636	CL:0002672	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_GSE268630	8	1045	retina	CL:0000127	CL:0000636	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_GSE268630	9	1292	retina	CL:0000748	CL:0000751	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000751 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+PRE_GSE268630	10	1716	retina	CL:0000748	CL:4033027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033027 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+PRE_GSE268630	11	444	retina	CL:0000748	CL:4033036	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033036 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+PRE_GSE268630	12	2899	retina	CL:0000740	CL:0000740	same_term	same_term	same_canonical_term	CL:0000740	0	True	supported		true	false
+PRE_GSE268630	13	1738	retina	CL:0000740	CL:4033052	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033052 -> CL:4023032 -> CL:0000740	2	True	supported		false	false
+PRE_GSE268630	14	3074	retina	CL:0000740	CL:4023188	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4023188 -> CL:0000740	1	True	supported		false	false
+PRE_GSE268630	15	777	retina	CL:0000561	CL:0000740	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_GSE268630	16	2355	retina	CL:0000748	CL:4033028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033028 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+PRE_GSE268630	17	866	retina	CL:0000748	CL:4030027	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_GSE268630	18	1789	retina	CL:0000561	CL:4030027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030027 -> CL:0000561	1	True	supported		false	false
+PRE_GSE268630	19	1038	retina	CL:0000745	CL:0000745	same_term	same_term	same_canonical_term	CL:0000745	0	True	supported		true	false
+PRE_GSE268630	20	2192	retina		CL:0000561	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE268630	21	2886	retina	CL:0000748	CL:0000573	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_GSE268630	22	419	retina	CL:0000573	CL:0000573	same_term	same_term	same_canonical_term	CL:0000573	0	True	supported		true	false
+PRE_GSE268630	23	1668	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+PRE_GSE268630	24	3102	retina	CL:0000745	CL:0000745	same_term	same_term	same_canonical_term	CL:0000745	0	True	supported		true	false
+PRE_GSE268630	25	755	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+PRE_GSE268630	26	3727	retina	CL:0000748	CL:4033033	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033033 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+PRE_GSE268630	27	1440	retina	CL:0000748	CL:4033034	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033034 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+PRE_GSE268630	28	3300	retina	CL:0000748	CL:4033030	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033030 -> CL:0000750 -> CL:0000748	2	True	supported		false	false
+PRE_GSE268630	29	273	retina		CL:0003050	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_GSE268630	30	426	retina	CL:0000748	CL:4033032	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4033032 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+PRE_GSE268630	31	1547	retina	CL:0000561	CL:4030028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030028 -> CL:0000561	1	True	supported		false	false
+PRE_GSE268630	32	928	retina	CL:0000561	CL:4030027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030027 -> CL:0000561	1	True	supported		false	false
+PRE_GSE268630	33	860	retina	CL:0000748	CL:0004232	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_GSE268630	34	289	retina	CL:0000561	CL:4033051	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_GSE268630	35	515	retina	CL:0000745	CL:0004218	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0004218 -> CL:0000745	1	True	supported		false	false
+PRE_OA-D001	0	1064	retina		CL:0000636	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_OA-D001	1	308	retina	CL:0000636	CL:0000740	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D001	2	4488	retina	CL:0000636	CL:0000636	same_term	same_term	same_canonical_term	CL:0000636	0	True	supported		true	false
+PRE_OA-D001	3	5564	retina	CL:0000604	CL:0000604	same_term	same_term	same_canonical_term	CL:0000604	0	True	supported		true	false
+PRE_OA-D001	4	5562	retina	CL:0000748	CL:0000751	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000751 -> CL:0000749 -> CL:0000748	2	True	supported		false	false
+PRE_OA-D001	5	1809	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+PRE_OA-D001	6	541	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+PRE_OA-D001	7	3577	retina	CL:0000561	CL:4030027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030027 -> CL:0000561	1	True	supported		false	false
+PRE_OA-D001	8	493	retina	CL:0000604	CL:0000561	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D001	9	1087	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+PRE_OA-D001	10	2316	retina	CL:0000561	CL:4030028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030028 -> CL:0000561	1	True	supported		false	false
+PRE_OA-D001	11	1356	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+PRE_OA-D001	12	5737	retina	CL:0000573	CL:0000573	same_term	same_term	same_canonical_term	CL:0000573	0	True	supported		true	false
+PRE_OA-D001	13	1053	retina	CL:0000784	CL:4030028	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D001	14	554	retina	CL:0000561	CL:4030027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030027 -> CL:0000561	1	True	supported		false	false
+PRE_OA-D001	15	1016	retina		CL:0004232	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_OA-D001	16	801	retina		CL:4030028	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_OA-D001	17	316	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+PRE_OA-D001	18	5435	retina	CL:0000745	CL:0004217	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0004217 -> CL:0000745	1	True	supported		false	false
+PRE_OA-D001	19	1811	retina	CL:0000745	CL:0004218	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0004218 -> CL:0000745	1	True	supported		false	false
+PRE_OA-D001	20	1520	retina	CL:0000561	CL:4030028	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030028 -> CL:0000561	1	True	supported		false	false
+PRE_OA-D001	21	727	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+PRE_OA-D001	22	5633	retina	CL:0000740	CL:4023188	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4023188 -> CL:0000740	1	True	supported		false	false
+PRE_OA-D001	23	2349	retina	CL:0000636	CL:0000127	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D001	24	852	retina	CL:0000748	CL:0000748	same_term	same_term	same_canonical_term	CL:0000748	0	True	supported		true	false
+PRE_OA-D001	25	3035	retina		CL:0000129	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_OA-D001	26	179	retina	CL:0000573	CL:0003050	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0003050 -> CL:0000573	1	True	supported		false	false
+PRE_OA-D001	27	515	retina	CL:0000740	CL:4023189	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4023189 -> CL:0000740	1	True	supported		false	false
+PRE_OA-D001	28	250	retina	CL:0000740	CL:0000740	same_term	same_term	same_canonical_term	CL:0000740	0	True	supported		true	false
+PRE_OA-D001	29	1005	retina	CL:0000561	CL:4030027	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:4030027 -> CL:0000561	1	True	supported		false	false
+PRE_OA-D001	30	929	retina	CL:0002586	CL:0002586	same_term	same_term	same_canonical_term	CL:0002586	0	True	supported		true	false
+PRE_OA-D001	31	767	retina	CL:0002586	CL:0002586	same_term	same_term	same_canonical_term	CL:0002586	0	True	supported		true	false
+PRE_OA-D002	0	3931	ocular_surface	CL:0000094	CL:0000066	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D002	1	5230	ocular_surface	CL:1000432	CL:1000432	same_term	same_term	same_canonical_term	CL:1000432	0	True	supported		true	false
+PRE_OA-D002	2	4970	ocular_surface		CL:0011026	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_OA-D002	3	3921	ocular_surface	CL:0000115	CL:0002138	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0002138 -> CL:0002139 -> CL:0000115	2	True	supported		false	false
+PRE_OA-D002	4	4979	ocular_surface	CL:0002573	CL:0002573	same_term	same_term	same_canonical_term	CL:0002573	0	True	supported		true	false
+PRE_OA-D002	5	6176	ocular_surface		CL:0000235	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_OA-D002	6	4129	ocular_surface	CL:0000115	CL:0000071	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000071 -> CL:0002139 -> CL:0000115	2	True	supported		false	false
+PRE_OA-D002	7	4940	ocular_surface	CL:0000115	CL:0000115	same_term	same_term	same_canonical_term	CL:0000115	0	True	supported		true	false
+PRE_OA-D002	8	4981	ocular_surface	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+PRE_OA-D002	9	4363	ocular_surface	CL:0000669	CL:0000057	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D002	10	2732	ocular_surface	CL:0000057	CL:0002363	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0002363 -> CL:0000005 -> CL:0000057	2	True	supported		false	false
+PRE_OA-D002	11	3447	ocular_surface	CL:0000057	CL:0002363	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0002363 -> CL:0000005 -> CL:0000057	2	True	supported		false	false
+PRE_OA-D002	12	4512	ocular_surface		CL:0000542	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_OA-D002	13	468	ocular_surface	CL:0000132	CL:0000132	same_term	same_term	same_canonical_term	CL:0000132	0	True	supported		true	false
+PRE_OA-D002	14	3535	ocular_surface	CL:0000669	CL:0000669	same_term	same_term	same_canonical_term	CL:0000669	0	True	supported		true	false
+PRE_OA-D002	15	5503	ocular_surface	CL:0000186	CL:0000192	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D002	16	793	ocular_surface		CL:0000097	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_OA-D002	17	685	ocular_surface	CL:0002573	CL:0000218	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000218 -> CL:0002573	1	True	supported		false	false
+PRE_OA-D002	18	116	ocular_surface	CL:0000192	CL:0000192	same_term	same_term	same_canonical_term	CL:0000192	0	True	supported		true	false
+PRE_OA-D004	0	6579	trabecular_meshwork	CL:0000669	CL:0000669	same_term	same_term	same_canonical_term	CL:0000669	0	True	supported		true	false
+PRE_OA-D004	1	2815	trabecular_meshwork		CL:0000236	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_OA-D004	2	1158	trabecular_meshwork	CL:0000669	CL:0002303	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D004	3	10201	trabecular_meshwork	CL:0000057	CL:0000057	same_term	same_term	same_canonical_term	CL:0000057	0	True	supported		true	false
+PRE_OA-D004	4	3158	trabecular_meshwork	CL:0000057	CL:0002367	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D004	5	6450	trabecular_meshwork	CL:0000084	CL:0000542	we_are_finer	ours_narrower	theirs_is_ancestor_of_ours	CL:0000084 -> CL:0000542	1	True	evidence_insufficient		false	false
+PRE_OA-D004	6	5001	trabecular_meshwork	CL:0000186	CL:1000443	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D004	7	1369	trabecular_meshwork	CL:0000192	CL:1000443	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:1000443 -> CL:0000192	1	True	supported		false	false
+PRE_OA-D004	8	5310	trabecular_meshwork	CL:0000115	CL:0002303	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D004	9	5460	trabecular_meshwork		CL:0000235	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_OA-D004	10	7296	trabecular_meshwork	CL:0000115	CL:0000071	we_are_coarser	ours_broader	ours_is_ancestor_of_theirs	CL:0000071 -> CL:0002139 -> CL:0000115	2	True	supported		false	false
+PRE_OA-D004	11	6521	trabecular_meshwork	CL:0002573	CL:0002573	same_term	same_term	same_canonical_term	CL:0002573	0	True	supported		true	false
+PRE_OA-D004	12	374	trabecular_meshwork		CL:0002303	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_OA-D004	13	3615	trabecular_meshwork	CL:0000636	CL:0000218	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D004	14	5144	trabecular_meshwork	CL:0000057	CL:0002304	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D004	15	6736	trabecular_meshwork	CL:0000148	CL:0000148	same_term	same_term	same_canonical_term	CL:0000148	0	True	supported		true	false
+PRE_OA-D004	16	1083	trabecular_meshwork		CL:0002304	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_OA-D004	17	1099	trabecular_meshwork	CL:0000235	CL:0000235	same_term	same_term	same_canonical_term	CL:0000235	0	True	supported		true	false
+PRE_OA-D004	18	2180	trabecular_meshwork	CL:0000094	CL:0000097	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D004	19	157	trabecular_meshwork	CL:0000057	CL:0000057	same_term	same_term	same_canonical_term	CL:0000057	0	True	supported		true	false
+PRE_OA-D004	20	161	trabecular_meshwork	CL:0000084	CL:0000542	we_are_finer	ours_narrower	theirs_is_ancestor_of_ours	CL:0000084 -> CL:0000542	1	True	evidence_insufficient		false	false
+PRE_OA-D068	0	6661	retina	CL:0000740	CL:0000740	same_term	same_term	same_canonical_term	CL:0000740	0	True	supported		true	false
+PRE_OA-D068	1	983	retina		CL:0000740	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_OA-D068	2	300	retina	CL:0000740	CL:0000740	same_term	same_term	same_canonical_term	CL:0000740	0	True	supported		true	false
+PRE_OA-D068	3	3270	retina		CL:0002672	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_OA-D068	4	6577	retina	CL:0000604	CL:0000604	same_term	same_term	same_canonical_term	CL:0000604	0	True	supported		true	false
+PRE_OA-D068	5	4397	retina	CL:0000148	CL:0000573	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D068	6	5191	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+PRE_OA-D068	7	5021	retina		CL:0000745	no_mapping	not_supported_by_is_a	unresolved				unmapped	ours could not be uniquely resolved: empty input	false	false
+PRE_OA-D068	8	11348	retina	CL:0000636	CL:0000636	same_term	same_term	same_canonical_term	CL:0000636	0	True	supported		true	false
+PRE_OA-D068	9	2742	retina	CL:0000636	CL:0002672	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D068	10	4194	retina	CL:0000745	CL:0000561	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D068	11	695	retina	CL:0000636	CL:4033015	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D068	12	698	retina	CL:0000127	CL:0000636	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D068	13	126	retina	CL:0000561	CL:0000561	same_term	same_term	same_canonical_term	CL:0000561	0	True	supported		true	false
+PRE_OA-D068	14	3515	retina	CL:0000748	CL:0000745	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D068	15	146	retina	CL:0000786	CL:0002672	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D068	16	428	retina	CL:0000636	CL:0000604	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D068	17	3077	retina	CL:0000748	CL:0000745	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D068	18	307	retina	CL:0000748	CL:0000561	true_mismatch	not_supported_by_is_a	no_ancestor_relation				evidence_insufficient	no ancestor relation in either direction; this is NOT proof of biological mutual exclusion and is not reported as a confirmed error	false	false
+PRE_OA-D068	19	4097	retina	CL:0000604	CL:0000604	same_term	same_term	same_canonical_term	CL:0000604	0	True	supported		true	false

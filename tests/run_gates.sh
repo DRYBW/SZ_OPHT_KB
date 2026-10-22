@@ -67,6 +67,16 @@ run_gate "G5 gate_registry (registry surface enforced)" \
 run_gate "G6 gate_change_control (eight machine rules)" \
   python3 tests/gate_change_control.py --json "$OUT/G6_RESULTS.json"
 
+# G7/G8 were added by the card that wired the read-only Cell Ontology explanation layer. G7 needs an
+# interpreter that can import the service (the MCP SDK and its dependencies), so it follows the G3
+# convention; G8 needs nothing but the standard library.
+G7_PY="${EYEKB_G7_PY:-${EYEKB_G3_PY:-python3}}"
+run_gate "G7 gate_ontology_layer (read-only ontology explanation layer)" \
+  python3 tests/gate_ontology_layer.py --service-python "$G7_PY" --json "$OUT/G7_RESULTS.json"
+
+run_gate "G8 gate_ontlayer_portability (portability and fail-closed behaviour)" \
+  python3 tests/gate_ontlayer_portability.py --json "$OUT/G8_RESULTS.json"
+
 printf '\n=================== summary ===================\n'
 bad=0
 for i in "${!NAMES[@]}"; do

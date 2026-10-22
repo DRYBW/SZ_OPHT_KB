@@ -1,0 +1,112 @@
+{
+ "schema": "eyekb-ont-layer-registry/1.0",
+ "capability_id": "ont_explain_layer",
+ "version": "v1",
+ "card": "L5 baseline freeze + read-only Cell Ontology explanation layer",
+ "what_it_is": "A read-only explanation layer over one fixed Cell Ontology snapshot: it reports what the graph says about a term or a pair of terms, and separately whether that answer holds under the sample, task granularity and evidence at hand. It corrects an evaluation wording, it does not raise identification ability.",
+ "tools": [
+  {
+   "name": "resolve_term",
+   "args": "term",
+   "returns": "canonical_id, preferred_label, obsolete_status, resolution_status, candidates, unresolved_reason"
+  },
+  {
+   "name": "get_ancestors",
+   "args": "term, max_depth",
+   "returns": "ancestors with levels_above, path, line, blanket flag"
+  },
+  {
+   "name": "compare_terms",
+   "args": "ours, theirs, evidence_source, evidence_assertion, context",
+   "returns": "five-bucket verdict + is_a_relation + ancestor_path + unresolved_reason + assessment"
+  },
+  {
+   "name": "explain_class_mapping",
+   "args": "internal_class_id, reference_term",
+   "returns": "the shipped mapping record, the graph facts behind it, and an assessment"
+  }
+ ],
+ "read_only": true,
+ "writes_anything": false,
+ "registered": true,
+ "default_state": "OFF",
+ "whitelist": [],
+ "route_env": "EYEKB_ONT_LAYER",
+ "route_semantics": "The tools are registered only when the route variable names them explicitly (a comma-separated list of tool names). Unset, empty, or naming no known tool = no ontology tool is advertised and no ontology code is imported by the server; the advertised tool list and every existing answer are then byte-identical to the pre-change release. There is no whitelist entry by default: the list is empty, so the capability cannot be reached by default in any state.",
+ "opt_out": "Unsetting EYEKB_ONT_LAYER restores the pre-change surface byte-for-byte; that is the state every measurement in this card's report was taken in.",
+ "anchors": [
+  {
+   "anchor_id": "ont://cl/releases/2026-06-08",
+   "required": true,
+   "kind": "ontology_snapshot"
+  },
+  {
+   "anchor_id": "repo://kb/ontology/ONT_LAYER_REGISTRY_v1.json",
+   "required": true,
+   "kind": "capability_registration"
+  },
+  {
+   "anchor_id": "repo://kb/markers/markers_cl_alignment_v2_unified.json",
+   "required": true,
+   "kind": "class_mapping_source"
+  }
+ ],
+ "anchor_failure_policy": {
+  "ANCHOR_MISSING": "FAIL - a mandatory delivered asset is absent from the delivery",
+  "ANCHOR_HASH_MISMATCH": "FAIL - the bytes are not the recorded bytes",
+  "ANCHOR_UNKNOWN": "FAIL - an address the manifest does not list",
+  "MANIFEST_MISSING": "FAIL - the manifest itself is absent",
+  "ENV_ERROR": "reserved for a declared external precondition that is genuinely outside the delivery; a missing shipped asset is never reported this way"
+ },
+ "buckets": [
+  "same_term",
+  "ours_broader",
+  "ours_narrower",
+  "confirmed_incompatible",
+  "not_supported_by_is_a"
+ ],
+ "bucket_rules": {
+  "same_term": "canonically identical CL term; a naming difference only",
+  "ours_broader": "our term is an ancestor of the reference term",
+  "ours_narrower": "the reference term is an ancestor of ours; the extra resolution is unverified and earns nothing",
+  "confirmed_incompatible": "reached only when the caller supplies explicit incompatibility evidence, which is recorded verbatim with the verdict",
+  "not_supported_by_is_a": "no ancestor relation in either direction, or one side unmapped. NOT counted as correct, NOT reported as a confirmed error: multiple inheritance, incomplete ontologies and cross-classification all produce this state"
+ },
+ "two_layer_record": {
+  "is_a_relation": "what the graph says (same_canonical_term / ours_is_ancestor_of_theirs / theirs_is_ancestor_of_ours / no_ancestor_relation / unresolved)",
+  "assessment": "whether the answer holds under this sample, task granularity and evidence (not_assessed / supported / resolution_limited / evidence_insufficient / unmapped / under_review / incompatible)",
+  "rule": "The two fields are returned side by side and neither is derived from the other. A parent-child relation is not by itself a correct answer."
+ },
+ "reporting_tables": {
+  "rule": "Three separate tables, each with a fixed denominator over the recorded population, and never a single lenient accuracy that mixes them: a correct-but-coarse answer is a resolution limitation, not a biological error.",
+  "tables": [
+   "same-term agreement (canonical equality only)",
+   "granularity relation (coarser / finer / levels crossed, plus below-minimum-reporting-granularity)",
+   "task validity (context qualified / meets reporting granularity / evidence sufficient / still under review)"
+  ]
+ },
+ "granularity_rules": {
+  "blanket_ancestor_descendants": 200,
+  "rule": "A relation that only reaches an ancestor with this many or more active CL descendants does not meet the minimum reporting granularity and may not be counted as a usable coarse answer. The threshold is declared here, before any comparison was run, and is not moved afterwards.",
+  "shared_ancestor": "A shared ancestor is not equivalence and is never reported as one."
+ },
+ "stop_line": [
+  "no change to ontology semantics",
+  "no favourable synonym is ever preferred to raise agreement",
+  "an extremely broad ancestor may not blanket an answer",
+  "no unmapped count is reduced, and no agreement is raised, by any of the above"
+ ],
+ "parser_handles": [
+  "alt_id",
+  "obsolete terms with a unique replacement (ambiguity goes to review)",
+  "synonym ambiguity (only a unique resolution is auto-accepted)",
+  "multiple inheritance",
+  "missing imports (declared imports and parents that point outside the file)",
+  "same label, different concept",
+  "duplicate id blocks",
+  "OWL restriction and equivalence expressions, recorded separately and never read as named-class is_a edges"
+ ],
+ "not_in_effective_profile": "With EYEKB_ONT_LAYER unset, the capability contributes nothing to the effective profile: the tools are not advertised, the snapshot is not parsed, no anchor is resolved, and the identity record lists the layer under registered_capabilities with state OFF. docs/RELEASE_IDENTITY.json carries the effective-profile identity this claim belongs to.",
+ "evidence": "docs/plans/l5_ontlayer_20261022/REPORT.md",
+ "payload_sha256": "411f3f3cede72843a9862c4e72dcca4545b2d34acdf087984952bbadc2b1b182"
+}

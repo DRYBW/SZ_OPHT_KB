@@ -392,6 +392,47 @@ cell`. The response states which name was used in `matched_by` (`library name`, 
 label`, or `partial name`), so a caller who used the standard ontology term is not told the cell
 type is unknown. The ontology used is the release pinned in `kb/markers/markers_cl_alignment_v2_unified.json`.
 
+### The Cell Ontology as an explanation layer (registered, off by default)
+
+Six of the tools above are always available. A seventh capability exists that is **registered and
+switched off**: a read-only explanation layer over one fixed Cell Ontology release, which answers
+what the ontology actually says about a term or a pair of terms instead of matching labels to a
+curated list.
+
+Nothing about it is on by default. With the switch unset it advertises no tool and is not even
+imported, so the tool list and every existing answer are byte-identical to the release before it
+existed. To reach it, name the functions you want:
+
+```bash
+EYEKB_ONT_LAYER=resolve_term,get_ancestors,compare_terms,explain_class_mapping \
+  python <interpreter with mcp> mcp_server/server.py
+```
+
+| function | question | notable answer fields |
+|---|---|---|
+| `resolve_term` | which CL term is this label, identifier or synonym — and how sure is that? | `resolution_status` (`unique_name` / `unique_synonym` / `alt_id` / `ambiguous` / `unresolved`), `candidates`, `unresolved_reason` |
+| `get_ancestors` | what does the `is_a` graph say is above it? | levels above, shortest path, the ontology file line, and whether the ancestor is so broad it cannot carry an answer |
+| `compare_terms` | how do two terms relate, and how far may that relation be used? | `verdict` (five buckets), `is_a_relation`, `ancestor_path`, `unresolved_reason`, and a separate `assessment` |
+| `explain_class_mapping` | what backs the CL term this library ships for one class? | the mapping and its source hash, the graph facts behind it, an assessment |
+
+Two things it deliberately keeps apart: **what the graph says** (`is_a_relation`) and **whether the
+answer holds** under the sample, task granularity and evidence (`assessment`). A coarse-but-correct
+answer is a resolution limitation, not a biological error, and "no ancestor relation" — which
+multiple inheritance, an incomplete ontology or cross-classification all produce — is **not** proof
+of mutual exclusion. It is reported as `not_supported_by_is_a` and counted as neither correct nor a
+confirmed error; `confirmed_incompatible` is reached only when you supply explicit incompatibility
+evidence, which is returned with the verdict.
+
+Comparisons are reported as three separate tables (same-term agreement; the granularity relation;
+task validity), never as one lenient accuracy figure. Everything is read from one fixed snapshot
+(Cell Ontology release 2026-06-08, shipped in the repository, hash-verified before any answer), and
+an ambiguity — a synonym belonging to two terms, the same label on two terms, an obsolete term with
+more than one replacement — always goes to review rather than being resolved to whatever looks best.
+
+Full contract, including the failure policy for a missing or altered snapshot and the stop line:
+`docs/ONTOLOGY_LAYER_CONTRACT_v1.md`. Machine checks: `tests/gate_ontology_layer.py` and
+`tests/gate_ontlayer_portability.py`, both part of `tests/run_gates.sh`.
+
 ### Chinese queries and the rewrite layer
 
 The corpus itself is English. When you pass an explicit Chinese `query` to `search_literature`, a **deterministic term-level rewrite layer** (a 243-row Chinese→English bridge table; not a general translator) inserts English anchors in place, keeping every Chinese character of your question (zero character deletion). The layer is **on by default** since 2026-10-05.
@@ -476,7 +517,21 @@ python3 scripts/release_identity.py --check   # the recorded identity vs the shi
 ```
 
 The record lives in `docs/RELEASE_IDENTITY.json` and is re-taken in the same commit as any byte
-change (`--take`), which is the same rule the tool-response baseline follows.
+change (`--take`), which is the same rule the tool-response baseline follows. The identity is
+reported in four layers, because a caller needs the resolvable manifest identifier together with the
+configuration that was actually in force:
+
+| layer | what it describes |
+|---|---|
+| `protocol_generation` | the wire contract |
+| `service_build_id` | the shipped server code (`mcp_server/` plus the release tooling) |
+| `knowledge_bundle_id` | the shipped knowledge assets (`kb/`, `literature_db/`) |
+| `effective_profile_id` | the observed behaviour switches, the registered capabilities and their state, and the layer identities — volatile fields excluded |
+
+`release_id` is bound to an immutable manifest: `docs/RELEASE_MANIFEST_v1.json` lists every tracked
+file with its blob id and size, and `release_id` is the sha256 of that listing, so the value and the
+manifest cannot drift apart. `python3 scripts/release_identity.py --check` verifies both and says
+which layer moved if one did.
 
 ### Declare the tissue before you compare, not after
 

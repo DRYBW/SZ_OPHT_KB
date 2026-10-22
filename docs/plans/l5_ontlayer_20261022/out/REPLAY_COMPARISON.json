@@ -1,0 +1,35 @@
+{
+ "checkout_path": "/home/ubuntu/EYEKB_REPO",
+ "n_calls": 55,
+ "moved": [
+  "get_release_identity:{}"
+ ],
+ "tool_list_changed": false,
+ "pre": {
+  "n_calls": 55,
+  "path": "/home/ubuntu/EYEKB_REPO",
+  "tools": 7,
+  "interpreter": "/home/ubuntu/training-venv/bin/python3",
+  "provenance": {
+   "executable": "/home/ubuntu/training-venv/bin/python3",
+   "mcp": "unknown",
+   "pydantic": "2.12.5",
+   "python": "3.14.4"
+  },
+  "route_env": ""
+ },
+ "post": {
+  "n_calls": 55,
+  "path": "/home/ubuntu/EYEKB_REPO",
+  "tools": 7,
+  "interpreter": "/home/ubuntu/training-venv/bin/python3",
+  "provenance": {
+   "executable": "/home/ubuntu/training-venv/bin/python3",
+   "mcp": "unknown",
+   "pydantic": "2.12.5",
+   "python": "3.14.4"
+  },
+  "route_env": ""
+ },
+ "rule": "the recorded request set is replayed at the same absolute path; raw response bytes are compared, not parsed JSON; every call outside the identity tool must be identical, and the identity call is the only one permitted to move (it is the explicit identity interface, and the four-layer block is the deliverable)"
+}

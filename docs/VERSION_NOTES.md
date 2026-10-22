@@ -118,3 +118,30 @@ Cache surfaces already mirrored (small volume, audit value outweighs size): `e2r
 
 - The re-sync checklist for the next structural change = the final section of `docs/REPOSYNC_NOTE_20260927.md` (for inheritance by future closeout documents).
 - This README and the mirror were produced by the 2026-09-27 REPOSYNC (task brief `docs/plans/repo_sync_20260927/BRIEF_REPOSYNC.md`).
+
+### Version notes — 10-22 Cell Ontology explanation layer wave (card t_ad7463d9)
+
+- **Two new gates in the one-click entry**: G7 (`tests/gate_ontology_layer.py`, nine checks) and G8
+  (`tests/gate_ontlayer_portability.py`, six checks), registered in `docs/GATE_INVENTORY_G5G6.tsv`.
+  The chain now runs G3 → G4 → G5 → G6 → G7 → G8. Both new gates report should-run / did-run /
+  pass / fail / not-run and end in PASS, FAIL or ENV_ERROR; a missing shipped asset is a FAIL and is
+  never reported as an environment error. G7 needs an interpreter that can import the service
+  (`EYEKB_G7_PY`, falling back to `EYEKB_G3_PY`); without one it reports ENV_ERROR naming the module.
+- **New knowledge asset**: the Cell Ontology release 2026-06-08 snapshot ships in the repository
+  (`kb/ontology/cl/releases/2026-06-08/cl-base.obo`, 3,757,082 bytes) with a versioned manifest, so a
+  clean clone can answer without the data mount. The snapshot is read through logical addresses with
+  content-hash verification; nothing was downloaded.
+- **New capability, registered OFF**: `ont_explain_layer` (resolve_term / get_ancestors /
+  compare_terms / explain_class_mapping), read-only, empty whitelist, explicit routing only
+  (`EYEKB_ONT_LAYER`). Unset = the pre-change surface byte-for-byte, measured over a recorded request
+  set of 55 calls: 54 identical, the tool list unchanged, and the single moved call is
+  `get_release_identity` (the explicit identity interface, which now carries the four identity
+  layers).
+- **Identity record extended**: four layers plus a `release_id` bound to the immutable manifest
+  `docs/RELEASE_MANIFEST_v1.json` (every tracked file with its blob id and size). The record and the
+  manifest are excluded from their own coverage, and both are re-taken in the same commit.
+- **Baseline frozen before the change**: `docs/plans/l5_ontlayer_20261022/out/BASELINE_FREEZE_16c6b28aab8f.json`
+  (revision `16c6b28`, release_id `3c17853873ca`), rebuilt by one command, byte-reproducible across
+  repeated runs. The recorded query panel was settled as a stale fixture before the baseline was
+  declared frozen (`out/PANEL_SETTLEMENT.json`); the fixture belongs to the card that re-recorded it
+  and was not touched here.

@@ -195,3 +195,43 @@ The English-migration wave `REPO_EN_MIG3` (2026-10-14) had no board carrier; it 
   this batch takes a declared subset of the wave, not the whole translation, and the remaining
   Chinese *values* in the ledger/instance/inventory are registered as unresolved in
   `plans/repo_en_mig3_close_t_55884641_20261015/LINE_STATUS_REPO_EN_MIG3_t_55884641.md`.
+
+### §5.4 The Cell Ontology explanation layer (card t_ad7463d9, 2026-10-22)
+
+A read-only ontology explanation layer was added to the service and is **registered OFF by default**.
+It is a new capability, not a change to an existing one, and §5.4 records what that means for this
+contract:
+
+- **Registered, not activated.** `kb/ontology/ONT_LAYER_REGISTRY_v1.json` declares the capability
+  (`ont_explain_layer`), its four functions, its logical anchors, an **empty whitelist** and the
+  route variable `EYEKB_ONT_LAYER`. With the route unset the ontology module is not imported and no
+  ontology tool is advertised, so the advertised tool list and every answer of every other tool are
+  byte-identical to the previous release. There is no default-ON behaviour change, so no new
+  precondition is added to any gate.
+- **Two gates were added to the one-click entry** (`tests/run_gates.sh`): **G7**
+  (`tests/gate_ontology_layer.py`) and **G8** (`tests/gate_ontlayer_portability.py`), both registered
+  in `docs/GATE_INVENTORY_G5G6.tsv`. G7 needs an interpreter that can import the service and follows
+  the G3 convention (`EYEKB_G7_PY`, falling back to `EYEKB_G3_PY`); when that interpreter is absent
+  G7 reports **ENV_ERROR** naming the missing module, rather than a pass or a catch-all. G8 needs the
+  standard library only. Both report `should_run` / `did_run` / `pass` / `fail` / `not_run` and end in
+  exactly one of PASS / FAIL / ENV_ERROR; neither passes while a mandatory check did not execute.
+- **The corpus precondition of G3 is unchanged** and still applies to the whole chain: G3's anchors
+  are dense-retrieval results, so the chain is run where the corpus named by §G2 is available
+  (`EYEKB_CORPUS`, default `literature_db/v2.4.2_2026-09_slim`); a missing corpus is INCONCLUSIVE
+  (rc=3), not a failure. The corpus is not part of the git tree.
+- **Release identity is now reported in four layers** (`protocol_generation`, `service_build_id`,
+  `knowledge_bundle_id`, `effective_profile_id`) plus the `release_id` bound to the immutable
+  manifest `docs/RELEASE_MANIFEST_v1.json`. `scripts/release_identity.py --check` verifies the record,
+  the manifest and their binding; `get_release_identity` reports the same layers. `get_release_identity`
+  is the explicit identity interface, so its payload is where the new layers appear — that call's
+  response moves by design, and it is the **only** call of the recorded request set that moves.
+- **Assets addressed logically.** The ontology snapshot ships inside the repository
+  (`kb/ontology/cl/releases/2026-06-08/cl-base.obo`, 3,757,082 bytes, sha256 `c6274fb65cdf740b…`)
+  and is reached only through a logical address resolved by
+  `kb/ontology/ONTOLOGY_SNAPSHOT_MANIFEST_v1.json` with content-hash verification. No new service
+  code carries an author-machine absolute path; G8 checks that mechanically, in a copy of the assets
+  at a different path whose directory name contains spaces.
+- **Failure policy.** A missing shipped asset, an altered snapshot or an address the manifest does
+  not list are delivery defects and **FAIL**; `ENV_ERROR` is reserved for a declared external
+  precondition. The policy is declared in the registry and exercised by G8, which builds a shadow
+  copy with the snapshot absent, then altered, and resolves an unlisted address.
