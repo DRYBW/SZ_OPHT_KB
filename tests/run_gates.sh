@@ -77,6 +77,14 @@ run_gate "G7 gate_ontology_layer (read-only ontology explanation layer)" \
 run_gate "G8 gate_ontlayer_portability (portability and fail-closed behaviour)" \
   python3 tests/gate_ontlayer_portability.py --json "$OUT/G8_RESULTS.json"
 
+# G9 was added after the same defect was observed twice in one day: a before/after judgement
+# script that reads its pre-image with a *relative* git reference (`git show HEAD:path`) silently
+# compares the new revision against itself once the change is committed. The gate forbids
+# relative references as pre/post-image sources, and self-tests on a synthetic tree so that a
+# scanner which flags nothing cannot pass.
+run_gate "G9 gate_preimage_ref_immutable (pre/post-image refs must be immutable)" \
+  python3 tests/gate_preimage_ref_immutable.py --json "$OUT/G9_RESULTS.json"
+
 printf '\n=================== summary ===================\n'
 bad=0
 for i in "${!NAMES[@]}"; do
