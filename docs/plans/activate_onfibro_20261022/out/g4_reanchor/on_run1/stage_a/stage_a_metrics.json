@@ -1,0 +1,53 @@
+{
+ "input": "/home/ubuntu/EYEKB_REPO/pipeline/fixtures/pdr600.h5ad",
+ "species": "human",
+ "gene_id": {
+  "gene_id_mode": "symbols",
+  "symbol_source": "var_names",
+  "degraded": false,
+  "n_mt_genes": 32
+ },
+ "group_present": false,
+ "qc_pre": {
+  "n_cells": 600,
+  "n_genes": 23441,
+  "median_genes": 1309.5,
+  "median_pct_mt": 15.138134002685547
+ },
+ "qc_post": {
+  "n_cells": 448,
+  "n_genes": 12131,
+  "median_genes": 1335.5,
+  "median_pct_mt": 14.466325759887695,
+  "removed_lowquality": 111,
+  "removed_doublets": 42,
+  "doublet_rate_kept": 0.0
+ },
+ "thresholds": {
+  "min_genes": 200,
+  "max_pct_mt": 20.0,
+  "min_cells": 3,
+  "expected_doublet_rate": 0.06
+ },
+ "n_samples": 1,
+ "samples": [
+  "RRD_E1"
+ ],
+ "batch_correction": "disabled_by_flag",
+ "resolution": 1.0,
+ "n_clusters": 11,
+ "cluster_sizes": {
+  "0": 43,
+  "1": 62,
+  "2": 31,
+  "3": 41,
+  "4": 12,
+  "5": 34,
+  "6": 37,
+  "7": 19,
+  "8": 36,
+  "9": 62,
+  "10": 71
+ },
+ "seed": 20260929
+}

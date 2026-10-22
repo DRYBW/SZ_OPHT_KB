@@ -1,0 +1,163 @@
+{
+ "s0_name": "pdr600.h5ad",
+ "input_kind": "raw_counts",
+ "evidence_A_id": {
+  "frac_h": 0.0,
+  "frac_m": 0.0,
+  "frac_r": 0.0,
+  "frac_ens_other": 0.0,
+  "frac_symbol": 1.0,
+  "call": "none",
+  "path": "id"
+ },
+ "evidence_B_symbol": {
+  "path": "symbol",
+  "score_h": 1.1975,
+  "score_m": 0.0002,
+  "cs_h_univ": 0.7522,
+  "cs_m_univ": 0.0003,
+  "ci_h_univ": 0.7522,
+  "ci_m_univ": 0.5566,
+  "cs_h_panel": 0.6429,
+  "cs_m_panel": 0.0,
+  "ci_h_panel": 0.6429,
+  "ci_m_panel": 0.6667,
+  "mt_h": 32,
+  "mt_m": 0,
+  "call": "human"
+ },
+ "evidence_C_tissue": {
+  "ranking": [
+   {
+    "tissue": "human_pdr_membrane",
+    "raw": 6.4406,
+    "contrast": 3.5479,
+    "sim": 0.2902
+   },
+   {
+    "tissue": "human_optic_nerve",
+    "raw": 4.448,
+    "contrast": 1.5553,
+    "sim": 0.2656
+   },
+   {
+    "tissue": "human_trabecular_meshwork",
+    "raw": 3.593,
+    "contrast": 0.7003,
+    "sim": 0.1107
+   },
+   {
+    "tissue": "human_ocular_surface",
+    "raw": 3.3279,
+    "contrast": 0.4352,
+    "sim": 0.0711
+   },
+   {
+    "tissue": "human_ciliary_body",
+    "raw": 1.8468,
+    "contrast": -1.0459,
+    "sim": -0.1218
+   },
+   {
+    "tissue": "human_RPE",
+    "raw": 1.3964,
+    "contrast": -1.4963,
+    "sim": -0.1054
+   },
+   {
+    "tissue": "human_retina",
+    "raw": 1.3304,
+    "contrast": -1.5623,
+    "sim": -0.1646
+   },
+   {
+    "tissue": "human_retina_fetal",
+    "raw": 0.7584,
+    "contrast": -2.1343
+   }
+  ],
+  "top1": "human_pdr_membrane",
+  "gap": 0.5616,
+  "sim_top1": "human_pdr_membrane",
+  "sim_top1_val": 0.2902,
+  "metrics_agree": true,
+  "n_detected_genes": 17112,
+  "best_raw": 6.440623916648576
+ },
+ "final": {
+  "species_call": "human",
+  "tissue_ranking": [
+   {
+    "tissue": "human_pdr_membrane",
+    "raw": 6.4406,
+    "contrast": 3.5479,
+    "sim": 0.2902
+   },
+   {
+    "tissue": "human_optic_nerve",
+    "raw": 4.448,
+    "contrast": 1.5553,
+    "sim": 0.2656
+   },
+   {
+    "tissue": "human_trabecular_meshwork",
+    "raw": 3.593,
+    "contrast": 0.7003,
+    "sim": 0.1107
+   },
+   {
+    "tissue": "human_ocular_surface",
+    "raw": 3.3279,
+    "contrast": 0.4352,
+    "sim": 0.0711
+   },
+   {
+    "tissue": "human_ciliary_body",
+    "raw": 1.8468,
+    "contrast": -1.0459,
+    "sim": -0.1218
+   },
+   {
+    "tissue": "human_RPE",
+    "raw": 1.3964,
+    "contrast": -1.4963,
+    "sim": -0.1054
+   },
+   {
+    "tissue": "human_retina",
+    "raw": 1.3304,
+    "contrast": -1.5623,
+    "sim": -0.1646
+   },
+   {
+    "tissue": "human_retina_fetal",
+    "raw": 0.7584,
+    "contrast": -2.1343
+   }
+  ],
+  "tissue_top1": "human_pdr_membrane",
+  "confidence": 1.0,
+  "abstain": false,
+  "gate_reasons": []
+ },
+ "thresholds": {
+  "id_decisive_frac": 0.8,
+  "id_mixed_frac": 0.05,
+  "sp_margin": 0.15,
+  "sp_floor": 0.2,
+  "tissue_gap": 0.1,
+  "tissue_domain_floor": 0.0,
+  "tissue_sim_floor": 0.25,
+  "min_genes_detected": 1000,
+  "min_total_counts": 5000,
+  "fetal_ratio": 1.0
+ },
+ "mode": "shadow",
+ "s0_overridden_by_user": true,
+ "manual_species": "human",
+ "manual_tissue": "fibrovascular_membrane",
+ "backfill": {
+  "species": "human",
+  "tissue": "fibrovascular_membrane"
+ }
+}

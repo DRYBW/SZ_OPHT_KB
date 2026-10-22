@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "467f7f371789",
- "digest_sha256": "467f7f371789b39a4c5caa93c64be4acdd9535aa615b660bbdac330126fad4e3",
+ "release_id": "eb323b13eba6",
+ "digest_sha256": "eb323b13eba61b0581dc11ba58535095aaccabeef7e500bf11430a764d5238f7",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 3869,
- "total_bytes": 235938411,
+ "n_files": 3986,
+ "total_bytes": 240382162,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
-  "service_build_id": "0c8ac98c1e27",
-  "knowledge_bundle_id": "e132726e503d",
-  "effective_profile_id": "a8e9094868ae"
+  "service_build_id": "3bffa3f7afde",
+  "knowledge_bundle_id": "31751e7f9128",
+  "effective_profile_id": "ed25abaca5f9"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -62,8 +62,8 @@
   },
   {
    "path": "docs/CHANGE_CONTROL_G6_INSTANCE.tsv",
-   "git_blob": "5e885734780800c043d127ada9c1d6b136f78994",
-   "bytes": 53661
+   "git_blob": "7d95293bf1226e40d7a26157d990f6f7e7bf36e6",
+   "bytes": 65122
   },
   {
    "path": "docs/CHANGE_CONTROL_G6_TEMPLATE.tsv",
@@ -92,8 +92,8 @@
   },
   {
    "path": "docs/GATE_INVENTORY_G5G6.tsv",
-   "git_blob": "372b5dd77498cedcec74cf0b270a1c4aa54b5be3",
-   "bytes": 6149
+   "git_blob": "2bf3aa9e1fd73cd86faf296a855dfc271284099f",
+   "bytes": 6157
   },
   {
    "path": "docs/GIT_SELF_DECLARED_BOUNDARY_LEDGER.tsv",
@@ -152,8 +152,8 @@
   },
   {
    "path": "docs/VERIFY_CONTRACT.md",
-   "git_blob": "fc23dc53f4aad029890c82c43c413563c2378bfb",
-   "bytes": 20468
+   "git_blob": "3b20e75b486ebece9965c1c26d026a15a7aff1a9",
+   "bytes": 23643
   },
   {
    "path": "docs/VERIFY_CONTRACT_G5G6.md",
@@ -172,13 +172,13 @@
   },
   {
    "path": "docs/W3_MANIFEST.sha256",
-   "git_blob": "69a5927449c58d9f5b2148d4bced33d696759700",
-   "bytes": 3113
+   "git_blob": "bd220b7f80f6fdf73e406dc5e7bdb8a9a9425adc",
+   "bytes": 3338
   },
   {
    "path": "docs/W3_PIPELINE_REGISTRY.tsv",
-   "git_blob": "9e9ce228001bba63bf4f3a6b5ae2eab8e1fdc5ca",
-   "bytes": 115988
+   "git_blob": "be95dc678c28fddae6610d4f74afa3279ad11ae2",
+   "bytes": 120461
   },
   {
    "path": "docs/W3_UPSTREAM_FIRST_RULE.md",
@@ -204,6 +204,581 @@
    "path": "docs/plans/SYNC_NOTE_20260928_drsc_labels.md",
    "git_blob": "0d77f0402cc10816411d1b81a6fae73d1d1056be",
    "bytes": 2133
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/PREREG_ACTIVATION_ONFIBRO_20261022.md",
+   "git_blob": "370bc99522030817af4a8e7f83628627c0d2fd76",
+   "bytes": 12253
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/REPORT.md",
+   "git_blob": "6b420bbc0928801632e41d707cf597bededdc272",
+   "bytes": 24540
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/ledgers/net_audit.log",
+   "git_blob": "631e466c50908e3a618d3bdd9f45c3761bdd5ee4",
+   "bytes": 51198
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/logs/chain.log",
+   "git_blob": "23a79326d45a965a94a031faea1d6ff905fc104a",
+   "bytes": 75098
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/DEFAULT_FACE.json",
+   "git_blob": "9beb71188664a30010105f4401bb0964af083c7d",
+   "bytes": 348622
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/FIELD_DIFF.json",
+   "git_blob": "cf91cfacb3b4983340875dab839a569375ac860d",
+   "bytes": 110994
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/FLIP.json",
+   "git_blob": "ca67d8f12a52726bc61195ca339da5ea896dc2f0",
+   "bytes": 4277
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/FLIP_MEASUREMENT.json",
+   "git_blob": "7994c20741a82d813c152281d163e12d8fc39355",
+   "bytes": 124276
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/G4_REANCHOR.json",
+   "git_blob": "1f2ad21c7a0fee1cc8b94a7d0a55eb7749e8ecd6",
+   "bytes": 7640
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/G6_ROW.json",
+   "git_blob": "3c101bfa236609cbf7877f365ce97abe091c1e8b",
+   "bytes": 558
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/GATE.json",
+   "git_blob": "8ac68c1de2acf08d882d934c9ee5aaedbd50382f",
+   "bytes": 3876
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/MANIFEST.json",
+   "git_blob": "da44939e9932d8aa003af690dec204d90a462384",
+   "bytes": 19137
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/MANIFEST.sha256",
+   "git_blob": "41bf6aca160c4830e352a262afecabb1f091fe2f",
+   "bytes": 12556
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/PREIMAGE.json",
+   "git_blob": "3c8116f3d292099cdaaeefdcae21dc78b752cebf",
+   "bytes": 1895
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/REGISTRY_UPDATE.json",
+   "git_blob": "ab46ee28734d0a72830ce39a50b5264e8cb83e6f",
+   "bytes": 2618
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/REPO_GATES.log",
+   "git_blob": "4eed2e374b9cfd19d38e78af0ed6d671607ccf68",
+   "bytes": 7681
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/VERIFY_CONTRACT_UPDATE.json",
+   "git_blob": "115b8eb6486c5a3ec583add763da647256946492",
+   "bytes": 755
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/default_face_tmp/FLIP_battery.json",
+   "git_blob": "7a47fbe47b91f83422e199852823ce5df7544b5b",
+   "bytes": 37973
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/default_face_tmp/FLIP_clusters.json",
+   "git_blob": "50f0da3832631395dd1ea6016c2256216a0b2115",
+   "bytes": 161902
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/default_face_tmp/KILL_battery.json",
+   "git_blob": "c297666b58b74c40a7bd381ded5bf3e160de320a",
+   "bytes": 38195
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/default_face_tmp/KILL_clusters.json",
+   "git_blob": "bd556497a2af98df8611d8b8d5b12f73a2164587",
+   "bytes": 161782
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/default_face_tmp/PARENT_battery.json",
+   "git_blob": "6339caac2b868416f0e856a3139246a74f36b45e",
+   "bytes": 38201
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/default_face_tmp/PARENT_clusters.json",
+   "git_blob": "7d8a45201f2dff79d71e20f86b4041efc07ff801",
+   "bytes": 161788
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/default_face_tmp/dump_flip.json",
+   "git_blob": "02c9723804f6b9a54343908a2d694c8494650398",
+   "bytes": 70685
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/default_face_tmp/dump_parent.json",
+   "git_blob": "b9b9e15218c32e4481d8ccdb41976198cd623a73",
+   "bytes": 61862
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/default_face_tmp/golden_FLIP.json",
+   "git_blob": "c43bc38d74017f4cd009d68d901d7956d8ea3fa0",
+   "bytes": 4186
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/default_face_tmp/golden_PARENT.json",
+   "git_blob": "35ad2b3559d1ac86fa7db0bb705778b283145b0c",
+   "bytes": 405
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/annotation_evidence_report.json",
+   "git_blob": "b79c53bd4fa933d5cd6c65277fb938ee5cfa4fc0",
+   "bytes": 366205
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/annotation_evidence_report.md",
+   "git_blob": "d87c1f8ec66a22effccc9e176da7e5c597db5a72",
+   "bytes": 25184
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/decisions_template.csv",
+   "git_blob": "e0a7fef4a7cc1610c2b3c0d3d4c02e2f96ca581d",
+   "bytes": 1752
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/mcp_calls.jsonl",
+   "git_blob": "e638fc61f0f6ce6bbc96ac9800c096bc1ed885e5",
+   "bytes": 6472
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/run_summary.json",
+   "git_blob": "783afb83a23e92a9e3508c08aa6a83273832f80a",
+   "bytes": 658
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/s0_gate_report.json",
+   "git_blob": "742849203e1c70c6a9ef6267e4b66cbc8e4606a2",
+   "bytes": 3106
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/shadow_attention.json",
+   "git_blob": "d498f6254aff9f421f42bcb615e140d70fc39ad1",
+   "bytes": 33806
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/shadow_flags.jsonl",
+   "git_blob": "19f20a9a96b82583ad679a3fee9ecc7eefa3b578",
+   "bytes": 10381
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/stage_a/cluster_markers.csv",
+   "git_blob": "d97ffce8883ba5b3c712193bba433c723fd00c31",
+   "bytes": 22565
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/stage_a/cluster_sizes.csv",
+   "git_blob": "f7853d8215b6af35c78c091b84a994664f8d3dfd",
+   "bytes": 72
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/stage_a/figures/cluster_sizes.png",
+   "git_blob": "b7e1acbdea4b5ed77d30f75c058404e081c0bf85",
+   "bytes": 13019
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/stage_a/figures/qc_filter_doublet.png",
+   "git_blob": "5811b02c5205974d5dfb26de4da2d89333857945",
+   "bytes": 45638
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/stage_a/figures/umap_before_after.png",
+   "git_blob": "f327257a408f6aba77de4d4772c3917e44612212",
+   "bytes": 57924
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/stage_a/stage_a_log.jsonl",
+   "git_blob": "3a0bc3b9bf1ca87ca585ee7639e230b58ead1357",
+   "bytes": 879
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/stage_a/stage_a_metrics.json",
+   "git_blob": "29e65b721eaa143554d9f77691cefe429ae23bea",
+   "bytes": 959
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1/stage_b_log.jsonl",
+   "git_blob": "57974ff831654cbb911473d510751e76912ead46",
+   "bytes": 582
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/annotation_evidence_report.json",
+   "git_blob": "1ed5dc74a37ac6221e391077e9fd227ded576f4b",
+   "bytes": 380518
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/annotation_evidence_report.md",
+   "git_blob": "b8b0c428544b19522e40333793cda0e1587e74aa",
+   "bytes": 25612
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/decisions_template.csv",
+   "git_blob": "68559db4aa143b98bccf375a2ab74556327eedb0",
+   "bytes": 1776
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/mcp_calls.jsonl",
+   "git_blob": "93f5d0457d93f70f24bfe31407372219d150958f",
+   "bytes": 6647
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/run_summary.json",
+   "git_blob": "cfd3b7202ee03064231641f57385c2f2235e309a",
+   "bytes": 657
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/s0_gate_report.json",
+   "git_blob": "742849203e1c70c6a9ef6267e4b66cbc8e4606a2",
+   "bytes": 3106
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/shadow_attention.json",
+   "git_blob": "295af8c9cc9f49c6f7bb59bca003accf4f4527e3",
+   "bytes": 33806
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/shadow_flags.jsonl",
+   "git_blob": "36894212667708dd1ef02f6ed3162ca2eb14053a",
+   "bytes": 10381
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/stage_a/cluster_markers.csv",
+   "git_blob": "d97ffce8883ba5b3c712193bba433c723fd00c31",
+   "bytes": 22565
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/stage_a/cluster_sizes.csv",
+   "git_blob": "f7853d8215b6af35c78c091b84a994664f8d3dfd",
+   "bytes": 72
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/stage_a/figures/cluster_sizes.png",
+   "git_blob": "b7e1acbdea4b5ed77d30f75c058404e081c0bf85",
+   "bytes": 13019
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/stage_a/figures/qc_filter_doublet.png",
+   "git_blob": "5811b02c5205974d5dfb26de4da2d89333857945",
+   "bytes": 45638
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/stage_a/figures/umap_before_after.png",
+   "git_blob": "f327257a408f6aba77de4d4772c3917e44612212",
+   "bytes": 57924
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/stage_a/stage_a_log.jsonl",
+   "git_blob": "df1ae8320862a11fd7c977622a88b375d46f47c3",
+   "bytes": 876
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/stage_a/stage_a_metrics.json",
+   "git_blob": "29e65b721eaa143554d9f77691cefe429ae23bea",
+   "bytes": 959
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1/stage_b_log.jsonl",
+   "git_blob": "d4e2ee64d772e693464764fdc0799925d628d2d6",
+   "bytes": 582
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/annotation_evidence_report.json",
+   "git_blob": "570861c7b85e1ad71cbc7d2be5428a688ba7f6d6",
+   "bytes": 380518
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/annotation_evidence_report.md",
+   "git_blob": "7b6f29576754c8a54d6acab064496e44d5f6fe64",
+   "bytes": 25612
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/decisions_template.csv",
+   "git_blob": "68559db4aa143b98bccf375a2ab74556327eedb0",
+   "bytes": 1776
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/mcp_calls.jsonl",
+   "git_blob": "38ba3aa57f4901b0fb8510b93292fac487847de2",
+   "bytes": 6647
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/run_summary.json",
+   "git_blob": "29d73847cd6e8e8cf91a64000274505b84d924af",
+   "bytes": 657
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/s0_gate_report.json",
+   "git_blob": "742849203e1c70c6a9ef6267e4b66cbc8e4606a2",
+   "bytes": 3106
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/shadow_attention.json",
+   "git_blob": "fd592f38213dd635a7d2a9e6c7f98f8e6c774e92",
+   "bytes": 33806
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/shadow_flags.jsonl",
+   "git_blob": "0e33c50b0004828d5e82f7fef611d7bca6078622",
+   "bytes": 10381
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/stage_a/cluster_markers.csv",
+   "git_blob": "d97ffce8883ba5b3c712193bba433c723fd00c31",
+   "bytes": 22565
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/stage_a/cluster_sizes.csv",
+   "git_blob": "f7853d8215b6af35c78c091b84a994664f8d3dfd",
+   "bytes": 72
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/stage_a/figures/cluster_sizes.png",
+   "git_blob": "b7e1acbdea4b5ed77d30f75c058404e081c0bf85",
+   "bytes": 13019
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/stage_a/figures/qc_filter_doublet.png",
+   "git_blob": "5811b02c5205974d5dfb26de4da2d89333857945",
+   "bytes": 45638
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/stage_a/figures/umap_before_after.png",
+   "git_blob": "f327257a408f6aba77de4d4772c3917e44612212",
+   "bytes": 57924
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/stage_a/stage_a_log.jsonl",
+   "git_blob": "a3ac2bb0bd465de118a0a6345334cc4e8c50ffdc",
+   "bytes": 876
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/stage_a/stage_a_metrics.json",
+   "git_blob": "29e65b721eaa143554d9f77691cefe429ae23bea",
+   "bytes": 959
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2/stage_b_log.jsonl",
+   "git_blob": "be11d602e3c02c61936e73fb83c2f000155206ee",
+   "bytes": 582
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/annotation_evidence_report.json",
+   "git_blob": "5f25bcfd38bdfe4e00a813f6b79573e1a3cbb4fe",
+   "bytes": 380518
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/annotation_evidence_report.md",
+   "git_blob": "d711d685f7223acf92b2f6354f52c13e29a7e1a2",
+   "bytes": 25612
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/decisions_template.csv",
+   "git_blob": "68559db4aa143b98bccf375a2ab74556327eedb0",
+   "bytes": 1776
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/mcp_calls.jsonl",
+   "git_blob": "5f58d556d36428600dcd8607da0f6bd55c1a2d76",
+   "bytes": 6648
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/run_summary.json",
+   "git_blob": "3e4a910386406cfc114d6f180b7475a7d715caf0",
+   "bytes": 657
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/s0_gate_report.json",
+   "git_blob": "742849203e1c70c6a9ef6267e4b66cbc8e4606a2",
+   "bytes": 3106
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/shadow_attention.json",
+   "git_blob": "d9ce5888e9d131a5aff696fe576ad0e8625ce01d",
+   "bytes": 33806
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/shadow_flags.jsonl",
+   "git_blob": "d15fb7ca3435335b659e97a3f0fa9af8af5bc02f",
+   "bytes": 10381
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/stage_a/cluster_markers.csv",
+   "git_blob": "d97ffce8883ba5b3c712193bba433c723fd00c31",
+   "bytes": 22565
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/stage_a/cluster_sizes.csv",
+   "git_blob": "f7853d8215b6af35c78c091b84a994664f8d3dfd",
+   "bytes": 72
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/stage_a/figures/cluster_sizes.png",
+   "git_blob": "b7e1acbdea4b5ed77d30f75c058404e081c0bf85",
+   "bytes": 13019
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/stage_a/figures/qc_filter_doublet.png",
+   "git_blob": "5811b02c5205974d5dfb26de4da2d89333857945",
+   "bytes": 45638
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/stage_a/figures/umap_before_after.png",
+   "git_blob": "f327257a408f6aba77de4d4772c3917e44612212",
+   "bytes": 57924
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/stage_a/stage_a_log.jsonl",
+   "git_blob": "583ec08cd50bc5d1f9d9125c537e1ea14c3c5bf5",
+   "bytes": 876
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/stage_a/stage_a_metrics.json",
+   "git_blob": "29e65b721eaa143554d9f77691cefe429ae23bea",
+   "bytes": 959
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3/stage_b_log.jsonl",
+   "git_blob": "aec12179d9f0560f5af384183afe59da2aa0dbca",
+   "bytes": 582
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/harness/F1_flip_recorded_decls/REPORT.json",
+   "git_blob": "53d669fbf04f6aa976cbb1be2661b194e3e4bb48",
+   "bytes": 49974
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/harness/F1_flip_recorded_decls/REPORT.md",
+   "git_blob": "655ececa77adbcd02ebb55813ce4016fd90df111",
+   "bytes": 10965
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/harness/F2_flip_tester_decls/REPORT.json",
+   "git_blob": "0a67cb077b7482ae23496c35ff70cdeb41d984bc",
+   "bytes": 50061
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/harness/F2_flip_tester_decls/REPORT.md",
+   "git_blob": "9d7af8c628c8442aef69f9c7c2f2943c971e606e",
+   "bytes": 10958
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/harness/F3_control_inject_recorded_decls/REPORT.json",
+   "git_blob": "5b8f70cc437f586184b30ca275bd08ef3de8efe6",
+   "bytes": 50001
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/harness/F3_control_inject_recorded_decls/REPORT.md",
+   "git_blob": "06a1dc340c78029637ad0bc765d97d3ce4f62ff4",
+   "bytes": 10983
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/pre_images/eyekb_core.py.pre_activation",
+   "git_blob": "a7637405956f05cc69bfad87083e643eb1ecdd58",
+   "bytes": 114098
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/g4_reanchor.py",
+   "git_blob": "35396a74155f24de3d7f043bb690ea784f50873c",
+   "bytes": 9198
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/l0_preimage.py",
+   "git_blob": "eca09eba16d59e57eea65bef6dc584706f2ba217",
+   "bytes": 4826
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/l1_flip_apply.py",
+   "git_blob": "581f97eba17ce75f739cdadac99054fb5607d3f6",
+   "bytes": 10443
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/l2_flip_measure.py",
+   "git_blob": "bd084b20681e568dfff6cd6f64e210340c1b0ec6",
+   "bytes": 18099
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/l3_default_face.py",
+   "git_blob": "9dd1c405ede7d451767008b28d6cf9983453a59a",
+   "bytes": 19782
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/l3b_replay_route.py",
+   "git_blob": "2e0d9740744ac177e25b1c1f3c23069a1f00f0b8",
+   "bytes": 4929
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/l3c_field_diff.py",
+   "git_blob": "0c5198c5f818748866e17ca3e5178e993821b301",
+   "bytes": 6469
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/l4_registry_rows.py",
+   "git_blob": "1b483969ee97349194392ee4063cc5748d717a9b",
+   "bytes": 11427
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/l5_verify_contract.py",
+   "git_blob": "b9f02c003d92695349af8ee1af86cbebdf583138",
+   "bytes": 6716
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/l6_g6_row.py",
+   "git_blob": "0a734084ddb032b8b53f16177a4db939fe37582a",
+   "bytes": 16623
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/m1_gate.py",
+   "git_blob": "2bf4fc12b764435e1355d51807cf75b44ec1f1b9",
+   "bytes": 15298
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/m2_manifest.py",
+   "git_blob": "cd76664c293e413b7f25f50f2bca41056c917dad",
+   "bytes": 3050
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/m3_w3_manifest.py",
+   "git_blob": "d9fe848dc27694991237ed233643e5bf4e4d6773",
+   "bytes": 3179
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/m4_clone_check.sh",
+   "git_blob": "cebae78ed8c705c789967d8198e966793d2436ee",
+   "bytes": 7996
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/m6_report.py",
+   "git_blob": "ac06d6438f9785c2057df1e842dc77e58374b2e8",
+   "bytes": 24076
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/netaudit/sitecustomize.py",
+   "git_blob": "1f1bf11132ed7272422b3b4802704155750d49ca",
+   "bytes": 1203
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/scripts/run_all.sh",
+   "git_blob": "c53f3b0391bc2749c1f2efebbc379e553871b475",
+   "bytes": 6653
   },
   {
    "path": "docs/plans/btest_20260927/BRIEF_BTEST.md",
@@ -11271,6 +11846,11 @@
    "bytes": 7736
   },
   {
+   "path": "docs/plans/noregr_20261022/out/CLEAN_CLONE_CHECK.json",
+   "git_blob": "c55d03762657e7d3ed7156e7e2f416f91c7b5c3c",
+   "bytes": 1903
+  },
+  {
    "path": "docs/plans/noregr_20261022/out/CROSSWALK_ROWS.json",
    "git_blob": "50cc5df650c28d817c4305a010b99d983bb74673",
    "bytes": 180790
@@ -11297,8 +11877,8 @@
   },
   {
    "path": "docs/plans/noregr_20261022/out/GATE.json",
-   "git_blob": "50827bd1416ab377dd13fe5741c1f8927b3fca59",
-   "bytes": 2779
+   "git_blob": "eb6f7127945f9b349071d2ee67443eeb9abff24a",
+   "bytes": 2816
   },
   {
    "path": "docs/plans/noregr_20261022/out/INPUT_MANIFEST.json",
@@ -11312,12 +11892,12 @@
   },
   {
    "path": "docs/plans/noregr_20261022/out/MANIFEST.json",
-   "git_blob": "2dc847fe4d62ad92a4cf29543a628d12c9336e94",
+   "git_blob": "e893bcf2a5bc383275e07af49c7803a2dabd23af",
    "bytes": 7988
   },
   {
    "path": "docs/plans/noregr_20261022/out/MANIFEST.sha256",
-   "git_blob": "bc1bdb31ebcc01f4c35d5b4096babf9f01f396c6",
+   "git_blob": "6c396ee6b4bb85e9910ca10a1dc538640c3ccc25",
    "bytes": 4783
   },
   {
@@ -11502,8 +12082,8 @@
   },
   {
    "path": "docs/plans/noregr_20261022/scripts/n9_clone_check.sh",
-   "git_blob": "069b5aefb9337be37c114f57aa5a5c3cccc1e597",
-   "bytes": 6568
+   "git_blob": "9c08f8502bcc3e88ab92b4dca19a24c69bedcb65",
+   "bytes": 8754
   },
   {
    "path": "docs/plans/noregr_20261022/scripts/netaudit/sitecustomize.py",
@@ -18027,8 +18607,8 @@
   },
   {
    "path": "kb/markers/markers_v13_onfibro_increment.json",
-   "git_blob": "54a34dd4e41abc35e7e05cf4ab8f8e15b512595d",
-   "bytes": 11148
+   "git_blob": "c4d5f9a52cf28b64d43b6e5f6c82c5d473ed667b",
+   "bytes": 11198
   },
   {
    "path": "kb/markers/markers_v4.1_clean.json",
@@ -18417,8 +18997,8 @@
   },
   {
    "path": "mcp_server/eyekb_core.py",
-   "git_blob": "a7637405956f05cc69bfad87083e643eb1ecdd58",
-   "bytes": 114098
+   "git_blob": "df20cd6e1d62e9f721d19cb504d006df777d6d21",
+   "bytes": 115058
   },
   {
    "path": "mcp_server/kbgov_vocab.json.gz",
@@ -19102,8 +19682,8 @@
   },
   {
    "path": "tests/G4_EXPECTED.json",
-   "git_blob": "fa9f9c66c84b12d2531493a74fb5cf8eef870081",
-   "bytes": 3659
+   "git_blob": "3164600f32e3678186b024d34c989756d7c589c6",
+   "bytes": 5696
   },
   {
    "path": "tests/G4_EXPECTED_PRE-ENGMIG.json",
@@ -19114,6 +19694,11 @@
    "path": "tests/G4_EXPECTED_PRE-KB9B.json",
    "git_blob": "f4c4bbbc428551aaa47b9d4905e6fc475d1b0398",
    "bytes": 873
+  },
+  {
+   "path": "tests/G4_EXPECTED_PRE-ONFIBRO.json",
+   "git_blob": "fa9f9c66c84b12d2531493a74fb5cf8eef870081",
+   "bytes": 3659
   },
   {
    "path": "tests/G4_EXPECTED_PRE-RENAMEWAVE.json",

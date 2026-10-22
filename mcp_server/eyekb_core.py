@@ -355,21 +355,32 @@ def _k9_act_enabled():
 ANTSEG_DEFAULT_LIBS = ("antseg_v10",)
 
 
-# [ONFIBRO t_0c40c7b1] whitelist for the optic-nerve fibroblast carrier.  EMPTY BY DESIGN: the
-# registration is deliberately unreachable from the default `all` set, so this predicate exists to
-# make the OFF state explicit and machine-readable rather than to open a route.  Semantics follow
-# the ACT-v6 discipline so a future activation wave inherits an obvious shape:
-# {0,false,off,no} = OFF; unset/empty/anything else = the value of this switch, which -- with an
-# empty whitelist -- still merges nothing.
-ONFIBRO_DEFAULT_LIBS = ()
+# [ONFIBRO t_42df17c2 · ACTIVATED 2026-10-22 by PI decision] whitelist for the optic-nerve
+# fibroblast carrier.  NON-EMPTY AS OF THIS CARD: whenever the feature is on, the library is merged
+# into the default `all` route.  Semantics follow the ACT-v6 discipline:
+# {0,false,off,no} = OFF, and OFF restores the pre-flip default byte-for-byte (measured, not
+# asserted: the recorded query set is replayed at the same absolute path -- see
+# docs/plans/activate_onfibro_20261022/REPORT.md); unset/empty/anything else = ON = the carrier is
+# part of the default route.
+# WHY IT IS ON: card t_0c40c7b1 built and gated this carrier default-OFF after the optic-nerve
+# regression it repairs was localised to one cluster (CX15_optic_nerve_all c31, 1,822 cells) and one
+# exclusion row; the project owner then authorised the activation in writing.  This is a PI-signed
+# ACTIVATION decision, recorded as such -- not an audit pass and not a validation.  The reading is
+# IN-SAMPLE on the volumes the carrier was selected on.
+# MEASURED: no dataset's cell-weighted `consistent` share falls under either declaration set
+# (28 volumes / 721 clusters / 1,495,330 cells; harness of docs/plans/noregr_20261022, reused).
+# KILL SWITCH: EYEKB_ACT_ONFIBRO=0.  Rollback = restore `()` here; the pre-flip file is kept as a
+# pre-image by this card (pre_images/eyekb_core.py.pre_activation).
+ONFIBRO_DEFAULT_LIBS = ("onfibro_v13",)
 
 
 def _onfibro_act_enabled():
     """env EYEKB_ACT_ONFIBRO in {0,false,off,no} = OFF; unset/anything else = ON.
 
-    ON still injects nothing: ONFIBRO_DEFAULT_LIBS is empty by design (card t_0c40c7b1 red line --
-    this registration may not change the default response bytes). The library is reachable by name
-    only, and the merged effect is a measurement artefact, not a shipped route.
+    Since card t_42df17c2 (PI-signed activation, 2026-10-22) ON means the optic-nerve fibroblast
+    carrier is part of the default `all` route, and OFF restores the pre-flip default
+    byte-for-byte (measured by replaying the recorded query set at the same absolute path). OFF
+    remains the documented kill switch, exactly as the ACT-v6 discipline prescribes.
     """
     v = (os.environ.get("EYEKB_ACT_ONFIBRO") or "").strip().casefold()
     return v not in {"0", "false", "off", "no"}

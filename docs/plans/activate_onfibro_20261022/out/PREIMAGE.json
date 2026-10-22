@@ -1,0 +1,25 @@
+{
+ "probe": "l0_preimage.py",
+ "core_path": "mcp_server/eyekb_core.py",
+ "core_sha256": "3dadbbbaf2631da0f48760beb95278f5fabd675e6108282c9080fae67a61d736",
+ "core_bytes": 114098,
+ "core_mtime": "2026-10-22 11:12:24.959688547 +0800",
+ "pre_image_path": "docs/plans/activate_onfibro_20261022/pre_images/eyekb_core.py.pre_activation",
+ "before_comment_region": "# [ONFIBRO t_0c40c7b1] whitelist for the optic-nerve fibroblast carrier.  EMPTY BY DESIGN: the\n# registration is deliberately unreachable from the default `all` set, so this predicate exists to\n# make the OFF state explicit and machine-readable rather than to open a route.  Semantics follow\n# the ACT-v6 discipline so a future activation wave inherits an obvious shape:\n# {0,false,off,no} = OFF; unset/empty/anything else = the value of this switch, which -- with an\n# empty whitelist -- still merges nothing.\nONFIBRO_DEFAULT_LIBS = ()\n",
+ "before_doc_region": "    \"\"\"env EYEKB_ACT_ONFIBRO in {0,false,off,no} = OFF; unset/anything else = ON.\n\n    ON still injects nothing: ONFIBRO_DEFAULT_LIBS is empty by design (card t_0c40c7b1 red line --\n    this registration may not change the default response bytes). The library is reachable by name\n    only, and the merged effect is a measurement artefact, not a shipped route.\n    \"\"\"\n",
+ "before_region_counts": {
+  "comment": 1,
+  "doc": 1
+ },
+ "prereg": "docs/plans/activate_onfibro_20261022/PREREG_ACTIVATION_ONFIBRO_20261022.md",
+ "prereg_sha256": "44698e523715262684ed20d88ce69fc4e1e701e2dada10b358dafae12f190c50",
+ "prereg_mtime_epoch": 1792643715.4716344,
+ "base_commit": "16349f6f373ced7f77aedf40ac97c4b7b93304ce",
+ "git_status_porcelain": [
+  "?? docs/plans/activate_onfibro_20261022/"
+ ],
+ "pre_image_sha256": "3dadbbbaf2631da0f48760beb95278f5fabd675e6108282c9080fae67a61d736",
+ "pre_image_bytes": 114098,
+ "pre_image_matches_live": true,
+ "verdict": "PASS"
+}

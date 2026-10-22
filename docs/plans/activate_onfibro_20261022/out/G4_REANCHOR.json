@@ -1,0 +1,92 @@
+{
+ "probe": "g4_reanchor.py",
+ "mode": "verify",
+ "expectation": "tests/G4_EXPECTED.json",
+ "pre_image": "tests/G4_EXPECTED_PRE-ONFIBRO.json",
+ "pre_image_present": true,
+ "old_anchors": {
+  "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
+  "decisions_template.csv": "7876755327ce1d27658ced3f6c5d07ae6e9a6a108d4f7572d05a706de46fd20f",
+  "annotation_evidence_report.md__normalized": "74a2a3b33126ba79e03f153a10578b8d86c8b012b40e02eecbfdffa4e6336dab"
+ },
+ "current_anchors": {
+  "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
+  "decisions_template.csv": "fe269908069932f3452365fd235beb34ca247da91bc60b608c72fe75745c4fc0",
+  "annotation_evidence_report.md__normalized": "6f795b329fbb87eb2d0cd687abcde6d2d9ca0f56866cb1e9a744ac6ddf55a144"
+ },
+ "fixture_sha256": "fa8fc609c3920dd2506a7b81fafe5a6e363b98eb670ee523a3f411d5c913ce44",
+ "pre_image_sha256": "987190b1eb351bb6fab134afbf0684699a03a64e7c68837c04e924a979d648cd",
+ "pre_image_holds_the_pre_flip_anchors": true,
+ "runs_on": [
+  {
+   "tag": "on_run1",
+   "rc": 0,
+   "interpreter": "/home/ubuntu/.conda/envs/pipeline_env/bin/python",
+   "python": "3.10",
+   "work": "/home/ubuntu/EYEKB_REPO/docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run1",
+   "anchors": {
+    "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
+    "decisions_template.csv": "fe269908069932f3452365fd235beb34ca247da91bc60b608c72fe75745c4fc0",
+    "annotation_evidence_report.md__normalized": "6f795b329fbb87eb2d0cd687abcde6d2d9ca0f56866cb1e9a744ac6ddf55a144"
+   },
+   "stderr_tail": " 1/1 [00:00<00:00,  6.12it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00,  6.11it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 11.10it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 20.27it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 16.85it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 24.38it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 24.62it/s]\n"
+  },
+  {
+   "tag": "on_run2",
+   "rc": 0,
+   "interpreter": "/home/ubuntu/.conda/envs/pipeline_env/bin/python",
+   "python": "3.10",
+   "work": "/home/ubuntu/EYEKB_REPO/docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run2",
+   "anchors": {
+    "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
+    "decisions_template.csv": "fe269908069932f3452365fd235beb34ca247da91bc60b608c72fe75745c4fc0",
+    "annotation_evidence_report.md__normalized": "6f795b329fbb87eb2d0cd687abcde6d2d9ca0f56866cb1e9a744ac6ddf55a144"
+   },
+   "stderr_tail": "0:00<00:00, 20.54it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00,  8.27it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00,  8.26it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00,  6.21it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00,  6.21it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00,  6.21it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00,  6.20it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 20.29it/s]\n"
+  },
+  {
+   "tag": "on_run3",
+   "rc": 0,
+   "interpreter": "/home/ubuntu/.conda/envs/pipeline_env/bin/python",
+   "python": "3.10",
+   "work": "/home/ubuntu/EYEKB_REPO/docs/plans/activate_onfibro_20261022/out/g4_reanchor/on_run3",
+   "anchors": {
+    "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
+    "decisions_template.csv": "fe269908069932f3452365fd235beb34ca247da91bc60b608c72fe75745c4fc0",
+    "annotation_evidence_report.md__normalized": "6f795b329fbb87eb2d0cd687abcde6d2d9ca0f56866cb1e9a744ac6ddf55a144"
+   },
+   "stderr_tail": "       | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 14.76it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 20.44it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 19.11it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 20.24it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 16.37it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 21.09it/s]\n"
+  }
+ ],
+ "three_run_determinism": true,
+ "activated_anchors": {
+  "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
+  "decisions_template.csv": "fe269908069932f3452365fd235beb34ca247da91bc60b608c72fe75745c4fc0",
+  "annotation_evidence_report.md__normalized": "6f795b329fbb87eb2d0cd687abcde6d2d9ca0f56866cb1e9a744ac6ddf55a144"
+ },
+ "run_off": {
+  "tag": "off_run1",
+  "rc": 0,
+  "interpreter": "/home/ubuntu/.conda/envs/pipeline_env/bin/python",
+  "python": "3.10",
+  "work": "/home/ubuntu/EYEKB_REPO/docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1",
+  "anchors": {
+   "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
+   "decisions_template.csv": "7876755327ce1d27658ced3f6c5d07ae6e9a6a108d4f7572d05a706de46fd20f",
+   "annotation_evidence_report.md__normalized": "74a2a3b33126ba79e03f153a10578b8d86c8b012b40e02eecbfdffa4e6336dab"
+  },
+  "stderr_tail": "       | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 21.33it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 21.85it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 19.75it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 15.02it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 23.38it/s]\n\nBatches:   0%|          | 0/1 [00:00<?, ?it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00, 20.43it/s]\n"
+ },
+ "off_state_reproduces_pre_flip_anchors": true,
+ "activated_differs_from_pre_flip": true,
+ "anchors_that_moved": [
+  "annotation_evidence_report.md__normalized",
+  "decisions_template.csv"
+ ],
+ "provenance_records_the_re_anchor": true,
+ "expectation_carries_the_activated_anchors": true,
+ "new_expectation_sha256": "9f7b4be6d8eeb2888fb9b3df6dd18ac7d1db7bfdaf9bfcc1d90f60efcff6c820",
+ "verify_pipeline_rc": 0,
+ "verify_pipeline_tail": "[g4] interpreter: /home/ubuntu/.conda/envs/pipeline_env/bin/python (python 3.10, source: contract default (rung 1))\n[g4] running pipeline (~1-2 minutes, fully offline)...\nPASS stage_a/processed.h5ad\nPASS decisions_template.csv\nPASS annotation_evidence_report.md__normalized\n\nG4 PASS: 3/3 byte-identical\n(timestamps and output paths are excluded from the criteria; everything else is byte-for-byte; see VERIFY_CONTRACT G4)\n",
+ "verdict": "PASS"
+}

@@ -1,0 +1,2748 @@
+{
+ "probe": "l3c_field_diff.py",
+ "flipped_core_sha256": "e74c73c6c2ef04d19b94edd69cfb414bc38104b29c2d054a5e711ad03e781079",
+ "parent_core_sha256": "3dadbbbaf2631da0f48760beb95278f5fabd675e6108282c9080fae67a61d736",
+ "parent_dump_log": "core 3dadbbbaf2631da0 keys 7",
+ "flip_dump_log": "core e74c73c6c2ef04d1 keys 7",
+ "restored_matches_snapshot": true,
+ "queries": {
+  "celltype:Fibroblast": {
+   "n_differing_paths": 3,
+   "differing": [
+    {
+     "path": "celltype:Fibroblast/provenance/conflicts",
+     "before": [
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_interneuron::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_interneuron::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_interneuron::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_interneuron::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_interneuron::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_interneuron::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_interneuron::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_interneuron::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_interneuron::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_interneuron::RPE"
+      },
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_v6::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_v6::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_v6::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_v6::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_v6::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_v6::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_v6::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_v6::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_v6::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_v6::RPE"
+      },
+      {
+       "class": "Keratocytes",
+       "kept": "Keratocytes",
+       "alias": "face_v6::Keratocytes"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "face_v6::Fibroblast"
+      },
+      {
+       "class": "Pericyte",
+       "kept": "Pericyte",
+       "alias": "face_v6::Pericyte"
+      },
+      {
+       "class": "SMC",
+       "kept": "SMC",
+       "alias": "face_v6::SMC"
+      },
+      {
+       "class": "Myofibroblast",
+       "kept": "Myofibroblast",
+       "alias": "face_v6::Myofibroblast"
+      }
+     ],
+     "after": [
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_interneuron::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_interneuron::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_interneuron::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_interneuron::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_interneuron::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_interneuron::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_interneuron::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_interneuron::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_interneuron::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_interneuron::RPE"
+      },
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_v6::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_v6::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_v6::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_v6::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_v6::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_v6::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_v6::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_v6::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_v6::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_v6::RPE"
+      },
+      {
+       "class": "Keratocytes",
+       "kept": "Keratocytes",
+       "alias": "face_v6::Keratocytes"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "face_v6::Fibroblast"
+      },
+      {
+       "class": "Pericyte",
+       "kept": "Pericyte",
+       "alias": "face_v6::Pericyte"
+      },
+      {
+       "class": "SMC",
+       "kept": "SMC",
+       "alias": "face_v6::SMC"
+      },
+      {
+       "class": "Myofibroblast",
+       "kept": "Myofibroblast",
+       "alias": "face_v6::Myofibroblast"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "onfibro_v13::Fibroblast"
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 25,
+     "n_after": 26
+    },
+    {
+     "path": "celltype:Fibroblast/provenance/files",
+     "before": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      }
+     ],
+     "after": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 7,
+     "n_after": 8
+    },
+    {
+     "path": "celltype:Fibroblast/soft_flags/notes",
+     "before": [
+      {
+       "flag_id": "mural_crosstalk",
+       "hard_flag": false,
+       "affects_score": false,
+       "trigger": {
+        "mode": "cell_type",
+        "conditions": [
+         "entry query hit family classes: Fibroblast"
+        ],
+        "rule": "cell_type: found entry canonical∈family; genes: U∩family panel≠∅ or TOP3∩family≠∅ (TOP3 = the hit-count boundary of the 3rd distinct class, ties included)",
+        "data_snapshot": [
+         {
+          "library": "retina",
+          "version": "v4.1-clean-P0.4",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json"
+         },
+         {
+          "library": "membrane",
+          "version": "v1-membrane-20260924",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+         },
+         {
+          "library": "retina_interneuron",
+          "version": "v5.0-retina-interneuron-20260924",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json"
+         },
+         {
+          "library": "retina_v6",
+          "version": "v6.0-retina-repair-20260925",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json"
+         },
+         {
+          "library": "face_v6",
+          "version": "v6.0-face-20260925",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json"
+         },
+         {
+          "library": "k9_ocs",
+          "version": "k9.0-ocs-registered-v1",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json"
+         },
+         {
+          "library": "antseg_v10",
+          "version": "v10.1-antseg-scope-20261020",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json"
+         }
+        ]
+       },
+       "message": "crosstalk warning (D002 ocular surface): the Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratocytes family carries a shared-marker reading risk — under the KB6b three-color re-review 4 entries are all-red and the fibrous-stroma entry has 0 green; audited definition (OLS original text in KB6b §2 point 4, this runtime message does not transcribe CL identifiers, per red line 3): a keratocyte is a fibroblast specialised for residence in the corneal stroma (keratocyte⊂fibroblast in the ontological sense). When a reading involves this family— ① NNMT is an audited reverse false anchor (donor agreement rate 0.167, direction reversed); that audit does not support using it as interstitium-discrimination evidence; ② ALDH3A1 is an audited epithelial-program gene (reverse against suprabasal PMC); when you see it, check the epithelial context first; ③ direction relations follow the KB6b per-cell table: DCN/LUM/PTGDS are audited reverse against Keratocytes (lfc≤-1.96); COL1A2 is audited reverse against Keratocytes (-1.99) and -2.81 against fibrous stroma; for the remaining red-gene members such as FN1: red-gene identity does not imply a direction toward a particular neighbour class — the corresponding table cell is authoritative; for Keratocytes↔Fibroblast mutual calls, re-check against the KB6b red/green criteria; the only all-green anchor on the Keratocytes side is KERA — if you intend to name Keratocytes, re-check KERA and the corneal-stroma context; the Pericyte-side survival anchors NOTCH3/HIGD1B/CALD1 and the SMC-side CNN1/MYH11/MYL9/DES/LMOD1 are each used for neighbour-class comparison within their own target class — no cross-class counting and no substituting for each other's support evidence; ④ when comparing Pericyte vs SMC vs Myofibroblast, interpret them together with the co-expression background; ⑤ the Myofibroblast entry: the KB6b §3 cross-scan records that it has no exclusive high-expression home group on the D002 ocular surface (see that section's per-cell table); keep this audit background in mind when a reading cites it. Falsified-wording reminder: the attribution of RUN5-face Q6::24 (truth=Pericytes 98.7% pure) is expression-layer-compatible evidence of the Myofibroblast/SMC mural entry takeover chain (kb_top1=Myofibroblast, three votes=SMC, the Pericyte entry never ranked), not Keratocytes; the query-engine-side ranking mechanism is unaudited (KB6b REVIEWER_LLM A10 boundary).this hint is not a hard flag and constitutes neither a naming condition nor an abstention condition; its presence does not indicate mis-annotation; it must not be used for module score, label weighting, confidence bonus, or candidate ranking input (service-level red line).",
+       "evidence": {
+        "interpretation_source": [
+         "/mnt/D/EyeKB/plans/kb6b_face_20260925/AUDIT_KB6b_D002_separation.md",
+         "/mnt/D/EyeKB/plans/kb6b_face_20260925/STROMAL_WARNING_DRAFT.md",
+         "/mnt/D/EyeKB/plans/evalset/EVAL_RUN5FACE_20260925.md (v1.1 errata)"
+        ],
+        "role_layers": "T2=on file in the KB6b per-cell audit; T2a=survival anchors by target-class context; T3=panel-membership fact of this call only (no independent audit role)"
+       }
+      }
+     ],
+     "after": [
+      {
+       "flag_id": "mural_crosstalk",
+       "hard_flag": false,
+       "affects_score": false,
+       "trigger": {
+        "mode": "cell_type",
+        "conditions": [
+         "entry query hit family classes: Fibroblast"
+        ],
+        "rule": "cell_type: found entry canonical∈family; genes: U∩family panel≠∅ or TOP3∩family≠∅ (TOP3 = the hit-count boundary of the 3rd distinct class, ties included)",
+        "data_snapshot": [
+         {
+          "library": "retina",
+          "version": "v4.1-clean-P0.4",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json"
+         },
+         {
+          "library": "membrane",
+          "version": "v1-membrane-20260924",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+         },
+         {
+          "library": "retina_interneuron",
+          "version": "v5.0-retina-interneuron-20260924",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json"
+         },
+         {
+          "library": "retina_v6",
+          "version": "v6.0-retina-repair-20260925",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json"
+         },
+         {
+          "library": "face_v6",
+          "version": "v6.0-face-20260925",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json"
+         },
+         {
+          "library": "k9_ocs",
+          "version": "k9.0-ocs-registered-v1",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json"
+         },
+         {
+          "library": "antseg_v10",
+          "version": "v10.1-antseg-scope-20261020",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json"
+         },
+         {
+          "library": "onfibro_v13",
+          "version": "v13.0-onfibro-20261022",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json"
+         }
+        ]
+       },
+       "message": "crosstalk warning (D002 ocular surface): the Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratocytes family carries a shared-marker reading risk — under the KB6b three-color re-review 4 entries are all-red and the fibrous-stroma entry has 0 green; audited definition (OLS original text in KB6b §2 point 4, this runtime message does not transcribe CL identifiers, per red line 3): a keratocyte is a fibroblast specialised for residence in the corneal stroma (keratocyte⊂fibroblast in the ontological sense). When a reading involves this family— ① NNMT is an audited reverse false anchor (donor agreement rate 0.167, direction reversed); that audit does not support using it as interstitium-discrimination evidence; ② ALDH3A1 is an audited epithelial-program gene (reverse against suprabasal PMC); when you see it, check the epithelial context first; ③ direction relations follow the KB6b per-cell table: DCN/LUM/PTGDS are audited reverse against Keratocytes (lfc≤-1.96); COL1A2 is audited reverse against Keratocytes (-1.99) and -2.81 against fibrous stroma; for the remaining red-gene members such as FN1: red-gene identity does not imply a direction toward a particular neighbour class — the corresponding table cell is authoritative; for Keratocytes↔Fibroblast mutual calls, re-check against the KB6b red/green criteria; the only all-green anchor on the Keratocytes side is KERA — if you intend to name Keratocytes, re-check KERA and the corneal-stroma context; the Pericyte-side survival anchors NOTCH3/HIGD1B/CALD1 and the SMC-side CNN1/MYH11/MYL9/DES/LMOD1 are each used for neighbour-class comparison within their own target class — no cross-class counting and no substituting for each other's support evidence; ④ when comparing Pericyte vs SMC vs Myofibroblast, interpret them together with the co-expression background; ⑤ the Myofibroblast entry: the KB6b §3 cross-scan records that it has no exclusive high-expression home group on the D002 ocular surface (see that section's per-cell table); keep this audit background in mind when a reading cites it. Falsified-wording reminder: the attribution of RUN5-face Q6::24 (truth=Pericytes 98.7% pure) is expression-layer-compatible evidence of the Myofibroblast/SMC mural entry takeover chain (kb_top1=Myofibroblast, three votes=SMC, the Pericyte entry never ranked), not Keratocytes; the query-engine-side ranking mechanism is unaudited (KB6b REVIEWER_LLM A10 boundary).this hint is not a hard flag and constitutes neither a naming condition nor an abstention condition; its presence does not indicate mis-annotation; it must not be used for module score, label weighting, confidence bonus, or candidate ranking input (service-level red line).",
+       "evidence": {
+        "interpretation_source": [
+         "/mnt/D/EyeKB/plans/kb6b_face_20260925/AUDIT_KB6b_D002_separation.md",
+         "/mnt/D/EyeKB/plans/kb6b_face_20260925/STROMAL_WARNING_DRAFT.md",
+         "/mnt/D/EyeKB/plans/evalset/EVAL_RUN5FACE_20260925.md (v1.1 errata)"
+        ],
+        "role_layers": "T2=on file in the KB6b per-cell audit; T2a=survival anchors by target-class context; T3=panel-membership fact of this call only (no independent audit role)"
+       }
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 1,
+     "n_after": 1
+    }
+   ]
+  },
+  "celltype:MG": {
+   "n_differing_paths": 2,
+   "differing": [
+    {
+     "path": "celltype:MG/provenance/conflicts",
+     "before": [
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_interneuron::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_interneuron::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_interneuron::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_interneuron::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_interneuron::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_interneuron::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_interneuron::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_interneuron::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_interneuron::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_interneuron::RPE"
+      },
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_v6::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_v6::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_v6::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_v6::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_v6::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_v6::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_v6::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_v6::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_v6::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_v6::RPE"
+      },
+      {
+       "class": "Keratocytes",
+       "kept": "Keratocytes",
+       "alias": "face_v6::Keratocytes"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "face_v6::Fibroblast"
+      },
+      {
+       "class": "Pericyte",
+       "kept": "Pericyte",
+       "alias": "face_v6::Pericyte"
+      },
+      {
+       "class": "SMC",
+       "kept": "SMC",
+       "alias": "face_v6::SMC"
+      },
+      {
+       "class": "Myofibroblast",
+       "kept": "Myofibroblast",
+       "alias": "face_v6::Myofibroblast"
+      }
+     ],
+     "after": [
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_interneuron::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_interneuron::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_interneuron::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_interneuron::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_interneuron::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_interneuron::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_interneuron::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_interneuron::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_interneuron::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_interneuron::RPE"
+      },
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_v6::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_v6::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_v6::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_v6::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_v6::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_v6::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_v6::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_v6::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_v6::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_v6::RPE"
+      },
+      {
+       "class": "Keratocytes",
+       "kept": "Keratocytes",
+       "alias": "face_v6::Keratocytes"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "face_v6::Fibroblast"
+      },
+      {
+       "class": "Pericyte",
+       "kept": "Pericyte",
+       "alias": "face_v6::Pericyte"
+      },
+      {
+       "class": "SMC",
+       "kept": "SMC",
+       "alias": "face_v6::SMC"
+      },
+      {
+       "class": "Myofibroblast",
+       "kept": "Myofibroblast",
+       "alias": "face_v6::Myofibroblast"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "onfibro_v13::Fibroblast"
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 25,
+     "n_after": 26
+    },
+    {
+     "path": "celltype:MG/provenance/files",
+     "before": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      }
+     ],
+     "after": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 7,
+     "n_after": 8
+    }
+   ]
+  },
+  "cluster:CX01_retina_snRNA|0": {
+   "n_differing_paths": 2,
+   "differing": [
+    {
+     "path": "cluster:CX01_retina_snRNA|0/provenance/conflicts",
+     "before": [
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_interneuron::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_interneuron::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_interneuron::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_interneuron::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_interneuron::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_interneuron::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_interneuron::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_interneuron::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_interneuron::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_interneuron::RPE"
+      },
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_v6::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_v6::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_v6::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_v6::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_v6::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_v6::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_v6::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_v6::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_v6::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_v6::RPE"
+      },
+      {
+       "class": "Keratocytes",
+       "kept": "Keratocytes",
+       "alias": "face_v6::Keratocytes"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "face_v6::Fibroblast"
+      },
+      {
+       "class": "Pericyte",
+       "kept": "Pericyte",
+       "alias": "face_v6::Pericyte"
+      },
+      {
+       "class": "SMC",
+       "kept": "SMC",
+       "alias": "face_v6::SMC"
+      },
+      {
+       "class": "Myofibroblast",
+       "kept": "Myofibroblast",
+       "alias": "face_v6::Myofibroblast"
+      }
+     ],
+     "after": [
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_interneuron::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_interneuron::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_interneuron::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_interneuron::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_interneuron::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_interneuron::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_interneuron::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_interneuron::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_interneuron::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_interneuron::RPE"
+      },
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_v6::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_v6::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_v6::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_v6::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_v6::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_v6::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_v6::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_v6::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_v6::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_v6::RPE"
+      },
+      {
+       "class": "Keratocytes",
+       "kept": "Keratocytes",
+       "alias": "face_v6::Keratocytes"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "face_v6::Fibroblast"
+      },
+      {
+       "class": "Pericyte",
+       "kept": "Pericyte",
+       "alias": "face_v6::Pericyte"
+      },
+      {
+       "class": "SMC",
+       "kept": "SMC",
+       "alias": "face_v6::SMC"
+      },
+      {
+       "class": "Myofibroblast",
+       "kept": "Myofibroblast",
+       "alias": "face_v6::Myofibroblast"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "onfibro_v13::Fibroblast"
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 25,
+     "n_after": 26
+    },
+    {
+     "path": "cluster:CX01_retina_snRNA|0/provenance/files",
+     "before": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      }
+     ],
+     "after": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 7,
+     "n_after": 8
+    }
+   ]
+  },
+  "cluster:CX08_RPE_choroid_scRNA|0": {
+   "n_differing_paths": 6,
+   "differing": [
+    {
+     "path": "cluster:CX08_RPE_choroid_scRNA|0/celltype_ranking",
+     "before": [
+      {
+       "cell_type": "Pericyte",
+       "n_shared": 2,
+       "shared_genes": [
+        "COL1A2",
+        "MGP"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+      },
+      {
+       "cell_type": "Fibroblast",
+       "n_shared": 1,
+       "shared_genes": [
+        "COL1A2"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+      },
+      {
+       "cell_type": "Myofibroblast",
+       "n_shared": 1,
+       "shared_genes": [
+        "COL1A2"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+      }
+     ],
+     "after": [
+      {
+       "cell_type": "Pericyte",
+       "n_shared": 2,
+       "shared_genes": [
+        "COL1A2",
+        "MGP"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+      },
+      {
+       "cell_type": "onfibro_v13::Fibroblast",
+       "n_shared": 2,
+       "shared_genes": [
+        "COL1A2",
+        "BICC1"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json"
+      },
+      {
+       "cell_type": "Fibroblast",
+       "n_shared": 1,
+       "shared_genes": [
+        "COL1A2"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+      },
+      {
+       "cell_type": "Myofibroblast",
+       "n_shared": 1,
+       "shared_genes": [
+        "COL1A2"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 3,
+     "n_after": 4
+    },
+    {
+     "path": "cluster:CX08_RPE_choroid_scRNA|0/gene_to_celltypes/BICC1",
+     "before": [],
+     "after": [
+      "onfibro_v13::Fibroblast"
+     ],
+     "kind": "list_changed",
+     "n_before": 0,
+     "n_after": 1
+    },
+    {
+     "path": "cluster:CX08_RPE_choroid_scRNA|0/gene_to_celltypes/COL1A2",
+     "before": [
+      "Pericyte",
+      "Fibroblast",
+      "Myofibroblast"
+     ],
+     "after": [
+      "Pericyte",
+      "Fibroblast",
+      "Myofibroblast",
+      "onfibro_v13::Fibroblast"
+     ],
+     "kind": "list_changed",
+     "n_before": 3,
+     "n_after": 4
+    },
+    {
+     "path": "cluster:CX08_RPE_choroid_scRNA|0/provenance/conflicts",
+     "before": [
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_interneuron::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_interneuron::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_interneuron::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_interneuron::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_interneuron::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_interneuron::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_interneuron::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_interneuron::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_interneuron::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_interneuron::RPE"
+      },
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_v6::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_v6::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_v6::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_v6::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_v6::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_v6::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_v6::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_v6::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_v6::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_v6::RPE"
+      },
+      {
+       "class": "Keratocytes",
+       "kept": "Keratocytes",
+       "alias": "face_v6::Keratocytes"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "face_v6::Fibroblast"
+      },
+      {
+       "class": "Pericyte",
+       "kept": "Pericyte",
+       "alias": "face_v6::Pericyte"
+      },
+      {
+       "class": "SMC",
+       "kept": "SMC",
+       "alias": "face_v6::SMC"
+      },
+      {
+       "class": "Myofibroblast",
+       "kept": "Myofibroblast",
+       "alias": "face_v6::Myofibroblast"
+      }
+     ],
+     "after": [
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_interneuron::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_interneuron::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_interneuron::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_interneuron::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_interneuron::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_interneuron::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_interneuron::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_interneuron::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_interneuron::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_interneuron::RPE"
+      },
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_v6::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_v6::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_v6::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_v6::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_v6::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_v6::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_v6::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_v6::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_v6::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_v6::RPE"
+      },
+      {
+       "class": "Keratocytes",
+       "kept": "Keratocytes",
+       "alias": "face_v6::Keratocytes"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "face_v6::Fibroblast"
+      },
+      {
+       "class": "Pericyte",
+       "kept": "Pericyte",
+       "alias": "face_v6::Pericyte"
+      },
+      {
+       "class": "SMC",
+       "kept": "SMC",
+       "alias": "face_v6::SMC"
+      },
+      {
+       "class": "Myofibroblast",
+       "kept": "Myofibroblast",
+       "alias": "face_v6::Myofibroblast"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "onfibro_v13::Fibroblast"
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 25,
+     "n_after": 26
+    },
+    {
+     "path": "cluster:CX08_RPE_choroid_scRNA|0/provenance/files",
+     "before": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      }
+     ],
+     "after": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 7,
+     "n_after": 8
+    },
+    {
+     "path": "cluster:CX08_RPE_choroid_scRNA|0/soft_flags/notes",
+     "before": [
+      {
+       "flag_id": "mural_crosstalk",
+       "hard_flag": false,
+       "affects_score": false,
+       "trigger": {
+        "mode": "genes",
+        "conditions": [
+         "family-panel association reminder: 2 of the input genes hit the mural family panel: COL1A2,MGP (a single hit already gets an annotation; this is not evidence of discovered crosstalk)",
+         "family classes appear inside the ranking's highest-hit tie group / the 3rd-class boundary: Fibroblast|Myofibroblast|Pericyte"
+        ],
+        "rule": "cell_type: found entry canonical∈family; genes: U∩family panel≠∅ or TOP3∩family≠∅ (TOP3 = the hit-count boundary of the 3rd distinct class, ties included)",
+        "data_snapshot": [
+         {
+          "library": "retina",
+          "version": "v4.1-clean-P0.4",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json"
+         },
+         {
+          "library": "membrane",
+          "version": "v1-membrane-20260924",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+         },
+         {
+          "library": "retina_interneuron",
+          "version": "v5.0-retina-interneuron-20260924",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json"
+         },
+         {
+          "library": "retina_v6",
+          "version": "v6.0-retina-repair-20260925",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json"
+         },
+         {
+          "library": "face_v6",
+          "version": "v6.0-face-20260925",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json"
+         },
+         {
+          "library": "k9_ocs",
+          "version": "k9.0-ocs-registered-v1",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json"
+         },
+         {
+          "library": "antseg_v10",
+          "version": "v10.1-antseg-scope-20261020",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json"
+         }
+        ]
+       },
+       "message": "crosstalk warning (D002 ocular surface): the Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratocytes family carries a shared-marker reading risk — under the KB6b three-color re-review 4 entries are all-red and the fibrous-stroma entry has 0 green; audited definition (OLS original text in KB6b §2 point 4, this runtime message does not transcribe CL identifiers, per red line 3): a keratocyte is a fibroblast specialised for residence in the corneal stroma (keratocyte⊂fibroblast in the ontological sense). When a reading involves this family— ① NNMT is an audited reverse false anchor (donor agreement rate 0.167, direction reversed); that audit does not support using it as interstitium-discrimination evidence; ② ALDH3A1 is an audited epithelial-program gene (reverse against suprabasal PMC); when you see it, check the epithelial context first; ③ direction relations follow the KB6b per-cell table: DCN/LUM/PTGDS are audited reverse against Keratocytes (lfc≤-1.96); COL1A2 is audited reverse against Keratocytes (-1.99) and -2.81 against fibrous stroma; for the remaining red-gene members such as FN1: red-gene identity does not imply a direction toward a particular neighbour class — the corresponding table cell is authoritative; for Keratocytes↔Fibroblast mutual calls, re-check against the KB6b red/green criteria; the only all-green anchor on the Keratocytes side is KERA — if you intend to name Keratocytes, re-check KERA and the corneal-stroma context; the Pericyte-side survival anchors NOTCH3/HIGD1B/CALD1 and the SMC-side CNN1/MYH11/MYL9/DES/LMOD1 are each used for neighbour-class comparison within their own target class — no cross-class counting and no substituting for each other's support evidence; ④ when comparing Pericyte vs SMC vs Myofibroblast, interpret them together with the co-expression background; ⑤ the Myofibroblast entry: the KB6b §3 cross-scan records that it has no exclusive high-expression home group on the D002 ocular surface (see that section's per-cell table); keep this audit background in mind when a reading cites it. Falsified-wording reminder: the attribution of RUN5-face Q6::24 (truth=Pericytes 98.7% pure) is expression-layer-compatible evidence of the Myofibroblast/SMC mural entry takeover chain (kb_top1=Myofibroblast, three votes=SMC, the Pericyte entry never ranked), not Keratocytes; the query-engine-side ranking mechanism is unaudited (KB6b REVIEWER_LLM A10 boundary). per-gene role [T2-audited shared/reverse evidence] COL1A2: audited: common red gene of both the Fibroblast and Pericyte entries; reverse -1.99 against Keratocytes, -2.81 against fibrous stroma (KB6b §2 table); per-gene role [T2-audited shared/reverse evidence] MGP: audited: red gene of the Pericyte entry (KB6b §2 table);this hint is not a hard flag and constitutes neither a naming condition nor an abstention condition; its presence does not indicate mis-annotation; it must not be used for module score, label weighting, confidence bonus, or candidate ranking input (service-level red line).",
+       "evidence": {
+        "interpretation_source": [
+         "/mnt/D/EyeKB/plans/kb6b_face_20260925/AUDIT_KB6b_D002_separation.md",
+         "/mnt/D/EyeKB/plans/kb6b_face_20260925/STROMAL_WARNING_DRAFT.md",
+         "/mnt/D/EyeKB/plans/evalset/EVAL_RUN5FACE_20260925.md (v1.1 errata)"
+        ],
+        "role_layers": "T2=on file in the KB6b per-cell audit; T2a=survival anchors by target-class context; T3=panel-membership fact of this call only (no independent audit role)"
+       }
+      }
+     ],
+     "after": [
+      {
+       "flag_id": "mural_crosstalk",
+       "hard_flag": false,
+       "affects_score": false,
+       "trigger": {
+        "mode": "genes",
+        "conditions": [
+         "family-panel association reminder: 3 of the input genes hit the mural family panel: BICC1,COL1A2,MGP (a single hit already gets an annotation; this is not evidence of discovered crosstalk)",
+         "family classes appear inside the ranking's highest-hit tie group / the 3rd-class boundary: Fibroblast|Myofibroblast|Pericyte"
+        ],
+        "rule": "cell_type: found entry canonical∈family; genes: U∩family panel≠∅ or TOP3∩family≠∅ (TOP3 = the hit-count boundary of the 3rd distinct class, ties included)",
+        "data_snapshot": [
+         {
+          "library": "retina",
+          "version": "v4.1-clean-P0.4",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json"
+         },
+         {
+          "library": "membrane",
+          "version": "v1-membrane-20260924",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+         },
+         {
+          "library": "retina_interneuron",
+          "version": "v5.0-retina-interneuron-20260924",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json"
+         },
+         {
+          "library": "retina_v6",
+          "version": "v6.0-retina-repair-20260925",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json"
+         },
+         {
+          "library": "face_v6",
+          "version": "v6.0-face-20260925",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json"
+         },
+         {
+          "library": "k9_ocs",
+          "version": "k9.0-ocs-registered-v1",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json"
+         },
+         {
+          "library": "antseg_v10",
+          "version": "v10.1-antseg-scope-20261020",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json"
+         },
+         {
+          "library": "onfibro_v13",
+          "version": "v13.0-onfibro-20261022",
+          "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json"
+         }
+        ]
+       },
+       "message": "crosstalk warning (D002 ocular surface): the Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratocytes family carries a shared-marker reading risk — under the KB6b three-color re-review 4 entries are all-red and the fibrous-stroma entry has 0 green; audited definition (OLS original text in KB6b §2 point 4, this runtime message does not transcribe CL identifiers, per red line 3): a keratocyte is a fibroblast specialised for residence in the corneal stroma (keratocyte⊂fibroblast in the ontological sense). When a reading involves this family— ① NNMT is an audited reverse false anchor (donor agreement rate 0.167, direction reversed); that audit does not support using it as interstitium-discrimination evidence; ② ALDH3A1 is an audited epithelial-program gene (reverse against suprabasal PMC); when you see it, check the epithelial context first; ③ direction relations follow the KB6b per-cell table: DCN/LUM/PTGDS are audited reverse against Keratocytes (lfc≤-1.96); COL1A2 is audited reverse against Keratocytes (-1.99) and -2.81 against fibrous stroma; for the remaining red-gene members such as FN1: red-gene identity does not imply a direction toward a particular neighbour class — the corresponding table cell is authoritative; for Keratocytes↔Fibroblast mutual calls, re-check against the KB6b red/green criteria; the only all-green anchor on the Keratocytes side is KERA — if you intend to name Keratocytes, re-check KERA and the corneal-stroma context; the Pericyte-side survival anchors NOTCH3/HIGD1B/CALD1 and the SMC-side CNN1/MYH11/MYL9/DES/LMOD1 are each used for neighbour-class comparison within their own target class — no cross-class counting and no substituting for each other's support evidence; ④ when comparing Pericyte vs SMC vs Myofibroblast, interpret them together with the co-expression background; ⑤ the Myofibroblast entry: the KB6b §3 cross-scan records that it has no exclusive high-expression home group on the D002 ocular surface (see that section's per-cell table); keep this audit background in mind when a reading cites it. Falsified-wording reminder: the attribution of RUN5-face Q6::24 (truth=Pericytes 98.7% pure) is expression-layer-compatible evidence of the Myofibroblast/SMC mural entry takeover chain (kb_top1=Myofibroblast, three votes=SMC, the Pericyte entry never ranked), not Keratocytes; the query-engine-side ranking mechanism is unaudited (KB6b REVIEWER_LLM A10 boundary). per-gene role [T3-panel-membership fact only] BICC1: panel-membership fact (in the mural family panel of the markers snapshot loaded by this call; this executor carries no independent audit role for it); per-gene role [T2-audited shared/reverse evidence] COL1A2: audited: common red gene of both the Fibroblast and Pericyte entries; reverse -1.99 against Keratocytes, -2.81 against fibrous stroma (KB6b §2 table); per-gene role [T2-audited shared/reverse evidence] MGP: audited: red gene of the Pericyte entry (KB6b §2 table);this hint is not a hard flag and constitutes neither a naming condition nor an abstention condition; its presence does not indicate mis-annotation; it must not be used for module score, label weighting, confidence bonus, or candidate ranking input (service-level red line).",
+       "evidence": {
+        "interpretation_source": [
+         "/mnt/D/EyeKB/plans/kb6b_face_20260925/AUDIT_KB6b_D002_separation.md",
+         "/mnt/D/EyeKB/plans/kb6b_face_20260925/STROMAL_WARNING_DRAFT.md",
+         "/mnt/D/EyeKB/plans/evalset/EVAL_RUN5FACE_20260925.md (v1.1 errata)"
+        ],
+        "role_layers": "T2=on file in the KB6b per-cell audit; T2a=survival anchors by target-class context; T3=panel-membership fact of this call only (no independent audit role)"
+       }
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 1,
+     "n_after": 1
+    }
+   ]
+  },
+  "cluster:CX15_optic_nerve_all|31": {
+   "n_differing_paths": 6,
+   "differing": [
+    {
+     "path": "cluster:CX15_optic_nerve_all|31/celltype_ranking",
+     "before": [
+      {
+       "cell_type": "Limbus_Sclera_fibroblast_C1",
+       "n_shared": 1,
+       "shared_genes": [
+        "LEPR"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json"
+      }
+     ],
+     "after": [
+      {
+       "cell_type": "onfibro_v13::Fibroblast",
+       "n_shared": 2,
+       "shared_genes": [
+        "BICC1",
+        "EYA2"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json"
+      },
+      {
+       "cell_type": "Limbus_Sclera_fibroblast_C1",
+       "n_shared": 1,
+       "shared_genes": [
+        "LEPR"
+       ],
+       "library": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json"
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 1,
+     "n_after": 2
+    },
+    {
+     "path": "cluster:CX15_optic_nerve_all|31/gene_to_celltypes/BICC1",
+     "before": [],
+     "after": [
+      "onfibro_v13::Fibroblast"
+     ],
+     "kind": "list_changed",
+     "n_before": 0,
+     "n_after": 1
+    },
+    {
+     "path": "cluster:CX15_optic_nerve_all|31/gene_to_celltypes/EYA2",
+     "before": [],
+     "after": [
+      "onfibro_v13::Fibroblast"
+     ],
+     "kind": "list_changed",
+     "n_before": 0,
+     "n_after": 1
+    },
+    {
+     "path": "cluster:CX15_optic_nerve_all|31/provenance/conflicts",
+     "before": [
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_interneuron::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_interneuron::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_interneuron::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_interneuron::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_interneuron::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_interneuron::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_interneuron::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_interneuron::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_interneuron::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_interneuron::RPE"
+      },
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_v6::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_v6::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_v6::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_v6::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_v6::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_v6::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_v6::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_v6::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_v6::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_v6::RPE"
+      },
+      {
+       "class": "Keratocytes",
+       "kept": "Keratocytes",
+       "alias": "face_v6::Keratocytes"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "face_v6::Fibroblast"
+      },
+      {
+       "class": "Pericyte",
+       "kept": "Pericyte",
+       "alias": "face_v6::Pericyte"
+      },
+      {
+       "class": "SMC",
+       "kept": "SMC",
+       "alias": "face_v6::SMC"
+      },
+      {
+       "class": "Myofibroblast",
+       "kept": "Myofibroblast",
+       "alias": "face_v6::Myofibroblast"
+      }
+     ],
+     "after": [
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_interneuron::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_interneuron::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_interneuron::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_interneuron::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_interneuron::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_interneuron::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_interneuron::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_interneuron::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_interneuron::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_interneuron::RPE"
+      },
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_v6::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_v6::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_v6::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_v6::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_v6::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_v6::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_v6::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_v6::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_v6::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_v6::RPE"
+      },
+      {
+       "class": "Keratocytes",
+       "kept": "Keratocytes",
+       "alias": "face_v6::Keratocytes"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "face_v6::Fibroblast"
+      },
+      {
+       "class": "Pericyte",
+       "kept": "Pericyte",
+       "alias": "face_v6::Pericyte"
+      },
+      {
+       "class": "SMC",
+       "kept": "SMC",
+       "alias": "face_v6::SMC"
+      },
+      {
+       "class": "Myofibroblast",
+       "kept": "Myofibroblast",
+       "alias": "face_v6::Myofibroblast"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "onfibro_v13::Fibroblast"
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 25,
+     "n_after": 26
+    },
+    {
+     "path": "cluster:CX15_optic_nerve_all|31/provenance/files",
+     "before": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      }
+     ],
+     "after": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 7,
+     "n_after": 8
+    },
+    {
+     "path": "cluster:CX15_optic_nerve_all|31/soft_flags",
+     "before": "<absent>",
+     "after": {
+      "schema": "eyekb-softflag/1.0",
+      "enabled": true,
+      "notes": [
+       {
+        "flag_id": "mural_crosstalk",
+        "hard_flag": false,
+        "affects_score": false,
+        "trigger": {
+         "mode": "genes",
+         "conditions": [
+          "family-panel association reminder: 2 of the input genes hit the mural family panel: BICC1,EYA2 (a single hit already gets an annotation; this is not evidence of discovered crosstalk)",
+          "family classes appear inside the ranking's highest-hit tie group / the 3rd-class boundary: Fibroblast"
+         ],
+         "rule": "cell_type: found entry canonical∈family; genes: U∩family panel≠∅ or TOP3∩family≠∅ (TOP3 = the hit-count boundary of the 3rd distinct class, ties included)",
+         "data_snapshot": [
+          {
+           "library": "retina",
+           "version": "v4.1-clean-P0.4",
+           "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json"
+          },
+          {
+           "library": "membrane",
+           "version": "v1-membrane-20260924",
+           "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json"
+          },
+          {
+           "library": "retina_interneuron",
+           "version": "v5.0-retina-interneuron-20260924",
+           "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json"
+          },
+          {
+           "library": "retina_v6",
+           "version": "v6.0-retina-repair-20260925",
+           "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json"
+          },
+          {
+           "library": "face_v6",
+           "version": "v6.0-face-20260925",
+           "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json"
+          },
+          {
+           "library": "k9_ocs",
+           "version": "k9.0-ocs-registered-v1",
+           "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json"
+          },
+          {
+           "library": "antseg_v10",
+           "version": "v10.1-antseg-scope-20261020",
+           "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json"
+          },
+          {
+           "library": "onfibro_v13",
+           "version": "v13.0-onfibro-20261022",
+           "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json"
+          }
+         ]
+        },
+        "message": "crosstalk warning (D002 ocular surface): the Pericytes/Smooth Muscle Cells/Fibroblasts/Myofibroblasts/Keratocytes family carries a shared-marker reading risk — under the KB6b three-color re-review 4 entries are all-red and the fibrous-stroma entry has 0 green; audited definition (OLS original text in KB6b §2 point 4, this runtime message does not transcribe CL identifiers, per red line 3): a keratocyte is a fibroblast specialised for residence in the corneal stroma (keratocyte⊂fibroblast in the ontological sense). When a reading involves this family— ① NNMT is an audited reverse false anchor (donor agreement rate 0.167, direction reversed); that audit does not support using it as interstitium-discrimination evidence; ② ALDH3A1 is an audited epithelial-program gene (reverse against suprabasal PMC); when you see it, check the epithelial context first; ③ direction relations follow the KB6b per-cell table: DCN/LUM/PTGDS are audited reverse against Keratocytes (lfc≤-1.96); COL1A2 is audited reverse against Keratocytes (-1.99) and -2.81 against fibrous stroma; for the remaining red-gene members such as FN1: red-gene identity does not imply a direction toward a particular neighbour class — the corresponding table cell is authoritative; for Keratocytes↔Fibroblast mutual calls, re-check against the KB6b red/green criteria; the only all-green anchor on the Keratocytes side is KERA — if you intend to name Keratocytes, re-check KERA and the corneal-stroma context; the Pericyte-side survival anchors NOTCH3/HIGD1B/CALD1 and the SMC-side CNN1/MYH11/MYL9/DES/LMOD1 are each used for neighbour-class comparison within their own target class — no cross-class counting and no substituting for each other's support evidence; ④ when comparing Pericyte vs SMC vs Myofibroblast, interpret them together with the co-expression background; ⑤ the Myofibroblast entry: the KB6b §3 cross-scan records that it has no exclusive high-expression home group on the D002 ocular surface (see that section's per-cell table); keep this audit background in mind when a reading cites it. Falsified-wording reminder: the attribution of RUN5-face Q6::24 (truth=Pericytes 98.7% pure) is expression-layer-compatible evidence of the Myofibroblast/SMC mural entry takeover chain (kb_top1=Myofibroblast, three votes=SMC, the Pericyte entry never ranked), not Keratocytes; the query-engine-side ranking mechanism is unaudited (KB6b REVIEWER_LLM A10 boundary). per-gene role [T3-panel-membership fact only] BICC1: panel-membership fact (in the mural family panel of the markers snapshot loaded by this call; this executor carries no independent audit role for it); per-gene role [T3-panel-membership fact only] EYA2: panel-membership fact (in the mural family panel of the markers snapshot loaded by this call; this executor carries no independent audit role for it);this hint is not a hard flag and constitutes neither a naming condition nor an abstention condition; its presence does not indicate mis-annotation; it must not be used for module score, label weighting, confidence bonus, or candidate ranking input (service-level red line).",
+        "evidence": {
+         "interpretation_source": [
+          "/mnt/D/EyeKB/plans/kb6b_face_20260925/AUDIT_KB6b_D002_separation.md",
+          "/mnt/D/EyeKB/plans/kb6b_face_20260925/STROMAL_WARNING_DRAFT.md",
+          "/mnt/D/EyeKB/plans/evalset/EVAL_RUN5FACE_20260925.md (v1.1 errata)"
+         ],
+         "role_layers": "T2=on file in the KB6b per-cell audit; T2a=survival anchors by target-class context; T3=panel-membership fact of this call only (no independent audit role)"
+        }
+       }
+      ]
+     },
+     "kind": "key_added"
+    }
+   ]
+  },
+  "genes:legacy_panel_microglia": {
+   "n_differing_paths": 2,
+   "differing": [
+    {
+     "path": "genes:legacy_panel_microglia/provenance/conflicts",
+     "before": [
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_interneuron::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_interneuron::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_interneuron::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_interneuron::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_interneuron::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_interneuron::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_interneuron::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_interneuron::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_interneuron::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_interneuron::RPE"
+      },
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_v6::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_v6::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_v6::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_v6::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_v6::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_v6::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_v6::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_v6::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_v6::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_v6::RPE"
+      },
+      {
+       "class": "Keratocytes",
+       "kept": "Keratocytes",
+       "alias": "face_v6::Keratocytes"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "face_v6::Fibroblast"
+      },
+      {
+       "class": "Pericyte",
+       "kept": "Pericyte",
+       "alias": "face_v6::Pericyte"
+      },
+      {
+       "class": "SMC",
+       "kept": "SMC",
+       "alias": "face_v6::SMC"
+      },
+      {
+       "class": "Myofibroblast",
+       "kept": "Myofibroblast",
+       "alias": "face_v6::Myofibroblast"
+      }
+     ],
+     "after": [
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_interneuron::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_interneuron::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_interneuron::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_interneuron::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_interneuron::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_interneuron::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_interneuron::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_interneuron::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_interneuron::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_interneuron::RPE"
+      },
+      {
+       "class": "Rod",
+       "kept": "Rod",
+       "alias": "retina_v6::Rod"
+      },
+      {
+       "class": "Cone",
+       "kept": "Cone",
+       "alias": "retina_v6::Cone"
+      },
+      {
+       "class": "BC",
+       "kept": "BC",
+       "alias": "retina_v6::BC"
+      },
+      {
+       "class": "AC",
+       "kept": "AC",
+       "alias": "retina_v6::AC"
+      },
+      {
+       "class": "HC",
+       "kept": "HC",
+       "alias": "retina_v6::HC"
+      },
+      {
+       "class": "RGC",
+       "kept": "RGC",
+       "alias": "retina_v6::RGC"
+      },
+      {
+       "class": "MG",
+       "kept": "MG",
+       "alias": "retina_v6::MG"
+      },
+      {
+       "class": "Astro",
+       "kept": "Astro",
+       "alias": "retina_v6::Astro"
+      },
+      {
+       "class": "Micro",
+       "kept": "Micro",
+       "alias": "retina_v6::Micro"
+      },
+      {
+       "class": "RPE",
+       "kept": "RPE",
+       "alias": "retina_v6::RPE"
+      },
+      {
+       "class": "Keratocytes",
+       "kept": "Keratocytes",
+       "alias": "face_v6::Keratocytes"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "face_v6::Fibroblast"
+      },
+      {
+       "class": "Pericyte",
+       "kept": "Pericyte",
+       "alias": "face_v6::Pericyte"
+      },
+      {
+       "class": "SMC",
+       "kept": "SMC",
+       "alias": "face_v6::SMC"
+      },
+      {
+       "class": "Myofibroblast",
+       "kept": "Myofibroblast",
+       "alias": "face_v6::Myofibroblast"
+      },
+      {
+       "class": "Fibroblast",
+       "kept": "Fibroblast",
+       "alias": "onfibro_v13::Fibroblast"
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 25,
+     "n_after": 26
+    },
+    {
+     "path": "genes:legacy_panel_microglia/provenance/files",
+     "before": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      }
+     ],
+     "after": [
+      {
+       "library": "retina",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v4.1_clean.json",
+       "version": "v4.1-clean-P0.4",
+       "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+      },
+      {
+       "library": "membrane",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_membrane_v1.json",
+       "version": "v1-membrane-20260924",
+       "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+      },
+      {
+       "library": "retina_interneuron",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v5_retina_interneuron.json",
+       "version": "v5.0-retina-interneuron-20260924",
+       "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+      },
+      {
+       "library": "retina_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_retina_repair.json",
+       "version": "v6.0-retina-repair-20260925",
+       "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+      },
+      {
+       "library": "face_v6",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v6_face_increment.json",
+       "version": "v6.0-face-20260925",
+       "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+      },
+      {
+       "library": "k9_ocs",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_k9_ocs_increment.json",
+       "version": "k9.0-ocs-registered-v1",
+       "note": null
+      },
+      {
+       "library": "antseg_v10",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+       "version": "v10.1-antseg-scope-20261020",
+       "note": null
+      },
+      {
+       "library": "onfibro_v13",
+       "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v13_onfibro_increment.json",
+       "version": "v13.0-onfibro-20261022",
+       "note": null
+      }
+     ],
+     "kind": "list_changed",
+     "n_before": 7,
+     "n_after": 8
+    }
+   ]
+  },
+  "pages:list_kb_pages": {
+   "n_differing_paths": 0,
+   "differing": []
+  }
+ },
+ "changed_response_fields": {
+  "provenance": [
+   "celltype:Fibroblast",
+   "celltype:MG",
+   "cluster:CX01_retina_snRNA|0",
+   "cluster:CX08_RPE_choroid_scRNA|0",
+   "cluster:CX15_optic_nerve_all|31",
+   "genes:legacy_panel_microglia"
+  ],
+  "soft_flags": [
+   "celltype:Fibroblast",
+   "cluster:CX08_RPE_choroid_scRNA|0",
+   "cluster:CX15_optic_nerve_all|31"
+  ],
+  "celltype_ranking": [
+   "cluster:CX08_RPE_choroid_scRNA|0",
+   "cluster:CX15_optic_nerve_all|31"
+  ],
+  "gene_to_celltypes": [
+   "cluster:CX08_RPE_choroid_scRNA|0",
+   "cluster:CX15_optic_nerve_all|31"
+  ]
+ },
+ "verdict": "PASS"
+}

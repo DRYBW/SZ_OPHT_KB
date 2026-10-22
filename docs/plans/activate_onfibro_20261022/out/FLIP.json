@@ -1,0 +1,51 @@
+{
+ "probe": "l1_flip_apply.py",
+ "mode": "verify",
+ "core_path": "mcp_server/eyekb_core.py",
+ "pre_image_sha256": "3dadbbbaf2631da0f48760beb95278f5fabd675e6108282c9080fae67a61d736",
+ "pre_image_bytes": 114098,
+ "live_before_sha256": "e74c73c6c2ef04d19b94edd69cfb414bc38104b29c2d054a5e711ad03e781079",
+ "live_before_bytes": 115058,
+ "before_whitelists": {
+  "V6_DEFAULT_LIBS": "(\"retina_v6\", \"face_v6\")",
+  "K9_DEFAULT_LIBS": "(\"k9_ocs\",)",
+  "ANTSEG_DEFAULT_LIBS": "(\"antseg_v10\",)",
+  "ONFIBRO_DEFAULT_LIBS": "()",
+  "names": "names + list(ONFIBRO_DEFAULT_LIBS)"
+ },
+ "after_sha256": "e74c73c6c2ef04d19b94edd69cfb414bc38104b29c2d054a5e711ad03e781079",
+ "after_bytes": 115058,
+ "after_mtime": "2026-10-22 13:33:18.601242212 +0800",
+ "after_whitelists": {
+  "V6_DEFAULT_LIBS": "(\"retina_v6\", \"face_v6\")",
+  "K9_DEFAULT_LIBS": "(\"k9_ocs\",)",
+  "ANTSEG_DEFAULT_LIBS": "(\"antseg_v10\",)",
+  "ONFIBRO_DEFAULT_LIBS": "(\"onfibro_v13\",)",
+  "names": "names + list(ONFIBRO_DEFAULT_LIBS)"
+ },
+ "whitelist_delta": {
+  "ONFIBRO_DEFAULT_LIBS": [
+   "()",
+   "(\"onfibro_v13\",)"
+  ]
+ },
+ "diff_hunks_after_line": [
+  358,
+  380
+ ],
+ "diff_unified": "--- pre_images/eyekb_core.py.pre_activation\n+++ mcp_server/eyekb_core.py\n@@ -358,7 +358,17 @@\n-# [ONFIBRO t_0c40c7b1] whitelist for the optic-nerve fibroblast carrier.  EMPTY BY DESIGN: the\n-# registration is deliberately unreachable from the default `all` set, so this predicate exists to\n-# make the OFF state explicit and machine-readable rather than to open a route.  Semantics follow\n-# the ACT-v6 discipline so a future activation wave inherits an obvious shape:\n-# {0,false,off,no} = OFF; unset/empty/anything else = the value of this switch, which -- with an\n-# empty whitelist -- still merges nothing.\n-ONFIBRO_DEFAULT_LIBS = ()\n+# [ONFIBRO t_42df17c2 · ACTIVATED 2026-10-22 by PI decision] whitelist for the optic-nerve\n+# fibroblast carrier.  NON-EMPTY AS OF THIS CARD: whenever the feature is on, the library is merged\n+# into the default `all` route.  Semantics follow the ACT-v6 discipline:\n+# {0,false,off,no} = OFF, and OFF restores the pre-flip default byte-for-byte (measured, not\n+# asserted: the recorded query set is replayed at the same absolute path -- see\n+# docs/plans/activate_onfibro_20261022/REPORT.md); unset/empty/anything else = ON = the carrier is\n+# part of the default route.\n+# WHY IT IS ON: card t_0c40c7b1 built and gated this carrier default-OFF after the optic-nerve\n+# regression it repairs was localised to one cluster (CX15_optic_nerve_all c31, 1,822 cells) and one\n+# exclusion row; the project owner then authorised the activation in writing.  This is a PI-signed\n+# ACTIVATION decision, recorded as such -- not an audit pass and not a validation.  The reading is\n+# IN-SAMPLE on the volumes the carrier was selected on.\n+# MEASURED: no dataset's cell-weighted `consistent` share falls under either declaration set\n+# (28 volumes / 721 clusters / 1,495,330 cells; harness of docs/plans/noregr_20261022, reused).\n+# KILL SWITCH: EYEKB_ACT_ONFIBRO=0.  Rollback = restore `()` here; the pre-flip file is kept as a\n+# pre-image by this card (pre_images/eyekb_core.py.pre_activation).\n+ONFIBRO_DEFAULT_LIBS = (\"onfibro_v13\",)\n@@ -370,3 +380,4 @@\n-    ON still injects nothing: ONFIBRO_DEFAULT_LIBS is empty by design (card t_0c40c7b1 red line --\n-    this registration may not change the default response bytes). The library is reachable by name\n-    only, and the merged effect is a measurement artefact, not a shipped route.\n+    Since card t_42df17c2 (PI-signed activation, 2026-10-22) ON means the optic-nerve fibroblast\n+    carrier is part of the default `all` route, and OFF restores the pre-flip default\n+    byte-for-byte (measured by replaying the recorded query set at the same absolute path). OFF\n+    remains the documented kill switch, exactly as the ACT-v6 discipline prescribes.",
+ "diff_lines_added": 21,
+ "diff_lines_removed": 10,
+ "onfibro_region_lines_after": [
+  358,
+  386
+ ],
+ "n_hunks": 2,
+ "all_hunks_inside_onfibro_region": true,
+ "py_compile_rc": 0,
+ "py_compile_stderr": "",
+ "import_probe_stdout": "('onfibro_v13',)\nunset-> True\nzero-> False\noff-> False",
+ "import_rc": 0,
+ "import_stderr": "",
+ "verdict": "PASS"
+}

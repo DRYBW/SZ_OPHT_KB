@@ -1,0 +1,25 @@
+{
+ "out": "/home/ubuntu/EYEKB_REPO/docs/plans/activate_onfibro_20261022/out/g4_reanchor/off_run1",
+ "secs": 44.4,
+ "n_clusters": 11,
+ "grades": {
+  "mixed_or_insufficient": 7,
+  "needs_review": 2,
+  "evidence_consistent": 2
+ },
+ "empty_decision_cells": true,
+ "next_step": "fill decisions_template.csv per cluster with decision (accept|modify|abstain) and proposed_label; abstention is legal",
+ "s0": {
+  "species": "human",
+  "tissue": "fibrovascular_membrane",
+  "confidence": 1.0,
+  "abstain": false,
+  "mode": "shadow",
+  "overridden_by_user": true
+ },
+ "pitfalls_shadow": {
+  "n_claims_applicable": 48,
+  "n_flag_rows": 30,
+  "dangling_pointers": 0
+ }
+}

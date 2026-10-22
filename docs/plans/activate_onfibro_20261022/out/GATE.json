@@ -1,0 +1,110 @@
+{
+ "probe": "m1_gate.py",
+ "wave": "docs/plans/activate_onfibro_20261022",
+ "checks": [
+  {
+   "code": "M01 PREREG",
+   "status": "PASS",
+   "ok": true,
+   "detail": "prereg present; outcome files older than it: none"
+  },
+  {
+   "code": "M02 PREIMAGE",
+   "status": "PASS",
+   "ok": true,
+   "detail": "pre-image 3dadbbbaf2631da0 (matches live=True); region counts {'comment': 1, 'doc': 1}; base commit 16349f6f"
+  },
+  {
+   "code": "M03 FLIP",
+   "status": "PASS",
+   "ok": true,
+   "detail": "whitelist delta {'ONFIBRO_DEFAULT_LIBS': ['()', '(\"onfibro_v13\",)']}; hunks [358, 380] inside region [358, 386]; py_compile rc=0; import ('onfibro_v13',) | unset-> True | zero-> False | off-> False"
+  },
+  {
+   "code": "M04 HARNESS",
+   "status": "PASS",
+   "ok": true,
+   "detail": "acceptance=PASS (F1/F2/F3=PASS/PASS/PASS, default route=PASS); moved=45 kinds={'rank-shift': 32, 'carrier-gain': 13}; flip==inject 721/721; motivating cluster None -> onfibro_v13::Fibroblast(2)"
+  },
+  {
+   "code": "M05 KILL-SWITCH",
+   "status": "PASS",
+   "ok": true,
+   "detail": "721/721 clusters and 229/229 battery calls identical (raw+canonical), differing raw=[0, 0]; parent core == kept pre-image=True"
+  },
+  {
+   "code": "M06 DELTA-ATTRIBUTED",
+   "status": "PASS",
+   "ok": true,
+   "detail": "clusters moved_raw=721/721 ranking_moved=45 disclosure-only=676; battery moved=228/229; census {'carrier-drives-top1-change': 12, 'carrier-in-candidate-list-top1-same': 33, 'disclosure-field-only': 676} / {'disclosure-field-only-and-carrier-named': 228}"
+  },
+  {
+   "code": "M07 COMPAT-ITEM",
+   "status": "PASS",
+   "ok": true,
+   "detail": "legacy panel unchanged=False; item recorded=True; baseline re-recorded=False; probe report ['IDENTITY FAIL: legacy_panel, full_panel moved.', 'different: query_marker:{\"cell_type\": \"MG\"}', 'different: query_marker:{\"genes\": [\"TMEM119\", \"CX3CR1\", \"P2RY12\", \"C1QA\", \"SALL1\", \"CSF1R\", \"AIF1\"]}']"
+  },
+  {
+   "code": "M08 FIELD-SCOPE",
+   "status": "PASS",
+   "ok": true,
+   "detail": "changed response fields ['celltype_ranking', 'gene_to_celltypes', 'provenance', 'soft_flags']; outside the allowed set: []"
+  },
+  {
+   "code": "M09 REGISTRY",
+   "status": "PASS",
+   "ok": true,
+   "detail": "G5 rc=0 verdict_in_stdout=True; rows re-taken ['GATE_INVENTORY_G2_VERIFY_CONTRACT', 'L1-11M', 'L1-30', 'L5-11', 'L6-01', 'L6-37']"
+  },
+  {
+   "code": "M10 CHANGE-CONTROL",
+   "status": "PASS",
+   "ok": true,
+   "detail": "G6 rc=0; activation row present=True"
+  },
+  {
+   "code": "M11 NET-AUDIT",
+   "status": "PASS",
+   "ok": true,
+   "detail": "hook load receipts=380; connecting/HTTP events=0; census={'socket.__new__': 251, 'socket.gethostname': 46, 'socket.bind': 43}"
+  },
+  {
+   "code": "M12 MANIFEST",
+   "status": "PASS",
+   "ok": true,
+   "detail": "files=115 drifting=0 []"
+  },
+  {
+   "code": "M13 CHANGE-SURFACE",
+   "status": "PASS",
+   "ok": true,
+   "detail": "changed=6 outside the declared surface=[]"
+  },
+  {
+   "code": "M14 RELEASE-IDENTITY",
+   "status": "FAIL",
+   "ok": false,
+   "detail": "scripts/release_identity.py --check rc=1 release_id      480992fc85f7\ndigest_sha256   480992fc85f792c308fb0eb3c664694e9a28e6a8a529c46005f2fbcc6b5f6b93\nservice_build_id      3bffa3f7afde   (12 files, 1276020 bytes: mcp_server/ + the release t"
+  },
+  {
+   "code": "M15 RED-LINES",
+   "status": "PASS",
+   "ok": true,
+   "detail": "ONFIBRO whitelist='\"onfibro_v13\",'; other whitelists={'V6': '\"retina_v6\", \"face_v6\"', 'K9': '\"k9_ocs\",', 'ANTSEG': '\"antseg_v10\",'}; carrier CL CL:0000057 resolves=True; exclusion table touched=''"
+  },
+  {
+   "code": "M16 CLEAN-CLONE",
+   "status": "FAIL",
+   "ok": false,
+   "detail": "CLEAN_CLONE_CHECK.json missing"
+  }
+ ],
+ "n_checks": 16,
+ "n_failed": 2,
+ "failed": [
+  "M14 RELEASE-IDENTITY",
+  "M16 CLEAN-CLONE"
+ ],
+ "verdict": "FAIL",
+ "inner_clone_check": false
+}
