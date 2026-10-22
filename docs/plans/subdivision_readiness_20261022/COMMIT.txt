@@ -1,0 +1,11 @@
+card t_74ef13aa — local commit, NOT pushed (push is a separate reserved step)
+
+commit    304b483
+subject   subdivision readiness: per-parent resolution audit appended to the frozen final report
+scope     57 files, all under docs/plans/subdivision_readiness_20261022/
+pushed    no
+
+Verification performed after the commit:
+  git show --name-only HEAD | grep -v '^docs/plans/subdivision_readiness_20261022/'   -> empty
+  the author tree carried other cards' work at the time (l5_ontlayer, noregr, markers_v13); none of it is in
+  this commit, and the gate chain reading was taken from a clean clone of HEAD so it does not measure it.
