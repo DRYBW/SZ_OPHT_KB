@@ -1,7 +1,7 @@
 {
  "probe": "m2_manifest.py",
  "wave": "docs/plans/activate_onfibro_20261022",
- "n_files": 115,
+ "n_files": 111,
  "files": [
   {
    "rel": "PREREG_ACTIVATION_ONFIBRO_20261022.md",
@@ -10,8 +10,8 @@
   },
   {
    "rel": "REPORT.md",
-   "bytes": 24540,
-   "sha256": "1920e1fd47002ebe5c74136d08f2126858c9a3fac89c470b39688338cf539e03"
+   "bytes": 24516,
+   "sha256": "9565f28f5a02df7a27f00ae57947ab4eb17e2e6a369c22ea554a9214209076bd"
   },
   {
    "rel": "out/DEFAULT_FACE.json",
@@ -45,8 +45,8 @@
   },
   {
    "rel": "out/GATE.json",
-   "bytes": 3876,
-   "sha256": "0ba9512a7658214e925a59d47ddb9cfee8a3ec0d3c9a254b818b4c47c8be438d"
+   "bytes": 3849,
+   "sha256": "4564966151e479fcef29dee1cb808b4d4e7dd50d57ba635533ff1768c24c04f1"
   },
   {
    "rel": "out/PREIMAGE.json",
@@ -184,11 +184,6 @@
    "sha256": "46d7220cd2c8f78b045823e63c68115ac4cef180de21107527427933397977e4"
   },
   {
-   "rel": "out/g4_reanchor/off_run1/stage_a/processed.h5ad",
-   "bytes": 16088234,
-   "sha256": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5"
-  },
-  {
    "rel": "out/g4_reanchor/off_run1/stage_a/stage_a_log.jsonl",
    "bytes": 879,
    "sha256": "12c8dea1d3f9e03847aaa3226b4a23874318d14399903d98e8f7953902bf00b0"
@@ -267,11 +262,6 @@
    "rel": "out/g4_reanchor/on_run1/stage_a/figures/umap_before_after.png",
    "bytes": 57924,
    "sha256": "46d7220cd2c8f78b045823e63c68115ac4cef180de21107527427933397977e4"
-  },
-  {
-   "rel": "out/g4_reanchor/on_run1/stage_a/processed.h5ad",
-   "bytes": 16088234,
-   "sha256": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5"
   },
   {
    "rel": "out/g4_reanchor/on_run1/stage_a/stage_a_log.jsonl",
@@ -354,11 +344,6 @@
    "sha256": "46d7220cd2c8f78b045823e63c68115ac4cef180de21107527427933397977e4"
   },
   {
-   "rel": "out/g4_reanchor/on_run2/stage_a/processed.h5ad",
-   "bytes": 16088234,
-   "sha256": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5"
-  },
-  {
    "rel": "out/g4_reanchor/on_run2/stage_a/stage_a_log.jsonl",
    "bytes": 876,
    "sha256": "c991eba234a0ee1c58182935576944e805e948ce3f1c7557bbc7207ecd69f6ab"
@@ -437,11 +422,6 @@
    "rel": "out/g4_reanchor/on_run3/stage_a/figures/umap_before_after.png",
    "bytes": 57924,
    "sha256": "46d7220cd2c8f78b045823e63c68115ac4cef180de21107527427933397977e4"
-  },
-  {
-   "rel": "out/g4_reanchor/on_run3/stage_a/processed.h5ad",
-   "bytes": 16088234,
-   "sha256": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5"
   },
   {
    "rel": "out/g4_reanchor/on_run3/stage_a/stage_a_log.jsonl",
@@ -550,8 +530,8 @@
   },
   {
    "rel": "scripts/m2_manifest.py",
-   "bytes": 3050,
-   "sha256": "e0d87a2031272bd1c46b0bb460638a90d910ad2ffddc514115a763103125259f"
+   "bytes": 4138,
+   "sha256": "93e2db715996aa6d1e534a78e213000abd1d4a04c2bf0b7fd69bbf88f31ec4db"
   },
   {
    "rel": "scripts/m3_w3_manifest.py",
@@ -560,8 +540,8 @@
   },
   {
    "rel": "scripts/m4_clone_check.sh",
-   "bytes": 7996,
-   "sha256": "0afd070d71a4bac3718c6fe36fa7bfb4f2241aa865f086de2d52dd39e529cf19"
+   "bytes": 8584,
+   "sha256": "14db9325b2cbde2186e2cec46b23520017c70022207e8f9e91ee46a3395a8ad7"
   },
   {
    "rel": "scripts/m6_report.py",
@@ -575,8 +555,31 @@
   },
   {
    "rel": "scripts/run_all.sh",
-   "bytes": 6321,
-   "sha256": "52194164da0a93abbb706a2d8fd96fd89de5e64d54afe2626a3f2ad5d89e61ee"
+   "bytes": 7119,
+   "sha256": "a1d1b23a069c8a02b8554fd1d37e453a2735372bb26c9803ba392fc86ce60fdf"
+  }
+ ],
+ "n_not_distributed": 4,
+ "not_distributed": [
+  {
+   "rel": "out/g4_reanchor/off_run1/stage_a/processed.h5ad",
+   "bytes": 16088234,
+   "sha256": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5"
+  },
+  {
+   "rel": "out/g4_reanchor/on_run1/stage_a/processed.h5ad",
+   "bytes": 16088234,
+   "sha256": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5"
+  },
+  {
+   "rel": "out/g4_reanchor/on_run2/stage_a/processed.h5ad",
+   "bytes": 16088234,
+   "sha256": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5"
+  },
+  {
+   "rel": "out/g4_reanchor/on_run3/stage_a/processed.h5ad",
+   "bytes": 16088234,
+   "sha256": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5"
   }
  ],
  "excluded": [
@@ -585,6 +588,7 @@
   "out/MANIFEST.json",
   "out/MANIFEST.sha256"
  ],
+ "not_distributed_note": "files the repository does not distribute (git-ignored), with their size and hash recorded so nothing is hidden; they cannot be part of a clone's verification",
  "exclusion_reason": "ledgers/ and logs/ are runtime output that this chain rewrites while it runs; the manifest files cannot contain their own hash",
  "verify": "python3 docs/plans/activate_onfibro_20261022/scripts/m2_manifest.py --check"
 }

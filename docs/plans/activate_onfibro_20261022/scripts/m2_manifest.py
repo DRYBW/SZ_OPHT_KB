@@ -11,7 +11,10 @@ cannot contain its own hash.
 import hashlib
 import json
 import os
+import subprocess
 import sys
+
+REPO = "/home/ubuntu/EYEKB_REPO"
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WAVE = os.path.abspath(os.path.join(HERE, ".."))
@@ -29,7 +32,7 @@ def sha256(p):
 
 
 def main():
-    files = []
+    files, not_distributed = [], []
     for root, dirs, names in os.walk(WAVE):
         dirs[:] = [d for d in dirs if d not in ("__pycache__",)]
         for n in sorted(names):
@@ -38,11 +41,22 @@ def main():
             if rel.startswith(("ledgers/", "logs/")) or rel.endswith(EXCLUDE_SUFFIX) \
                     or rel.startswith("out/MANIFEST"):
                 continue
-            files.append({"rel": rel, "bytes": os.path.getsize(p), "sha256": sha256(p)})
+            entry = {"rel": rel, "bytes": os.path.getsize(p), "sha256": sha256(p)}
+            # a file the repository does not distribute cannot be part of "what a reader gets", so
+            # it is listed separately with its size and hash rather than silently dropped: the
+            # pipeline's binary work products under out/g4_reanchor/ are .gitignored (measured: the
+            # clone could not verify them, M12 failed on exactly those four files)
+            ig = subprocess.run(["git", "-C", REPO, "check-ignore", "-q", p]).returncode == 0
+            (not_distributed if ig else files).append(entry)
     files.sort(key=lambda e: e["rel"])
+    not_distributed.sort(key=lambda e: e["rel"])
     doc = {"probe": "m2_manifest.py", "wave": "docs/plans/activate_onfibro_20261022",
            "n_files": len(files), "files": files,
+           "n_not_distributed": len(not_distributed), "not_distributed": not_distributed,
            "excluded": ["ledgers/**", "logs/**", "out/MANIFEST.json", "out/MANIFEST.sha256"],
+           "not_distributed_note": ("files the repository does not distribute (git-ignored), with "
+                                    "their size and hash recorded so nothing is hidden; they cannot "
+                                    "be part of a clone's verification"),
            "exclusion_reason": ("ledgers/ and logs/ are runtime output that this chain rewrites "
                                 "while it runs; the manifest files cannot contain their own hash"),
            "verify": "python3 docs/plans/activate_onfibro_20261022/scripts/m2_manifest.py --check"}
@@ -52,7 +66,8 @@ def main():
         f.write("# verify (from this directory): sha256sum -c out/MANIFEST.sha256\n")
         for e in files:
             f.write("%s  %s\n" % (e["sha256"], e["rel"]))
-    print("manifest: %d files" % len(files))
+    print("manifest: %d files (%d not distributed, listed separately)"
+          % (len(files), len(not_distributed)))
     return 0
 
 

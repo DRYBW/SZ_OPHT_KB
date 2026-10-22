@@ -71,20 +71,25 @@ INFO="$("$PY" -c "import json;print([c['code'] for c in json.load(open('$MIRROR/
 echo "   wave gate in clone: rc=$RC verdict=$V failed=$FAILED info=$INFO"
 
 echo "== mirror fidelity: author tree vs clone, file by file"
-DIFF=0; N=0
+DIFF=0; N=0; SKIP=0
 while IFS= read -r rel; do
   case "$rel" in
     ./out/GATE.json|./out/GATE_READOUT.md|./out/CLEAN_CLONE_CHECK.json) continue ;;
     ./ledgers/*|./logs/*) continue ;;
     *__pycache__*|*.pyc) continue ;;
   esac
+  a="$WAVE/${rel#./}"
+  # a file the repository does not distribute cannot be in the clone: it is counted separately
+  if git -C "$REPO" check-ignore -q "$a"; then
+    SKIP=$((SKIP+1)); continue
+  fi
   N=$((N+1))
-  a="$WAVE/${rel#./}"; b="$MIRROR/${rel#./}"
+  b="$MIRROR/${rel#./}"
   if [ ! -f "$b" ] || ! cmp -s "$a" "$b"; then
     DIFF=$((DIFF+1)); echo "   DIFFERS or MISSING: ${rel#./}"
   fi
 done < <(cd "$WAVE" && find . -type f | sort)
-echo "   compared $N files, differing $DIFF"
+echo "   compared $N files, differing $DIFF ($SKIP not distributed by the repository, skipped)"
 
 echo "== writing the clone-check record into both trees"
 PAY="$CLONE/.clonecheck_payload"
@@ -97,6 +102,7 @@ PAY="$CLONE/.clonecheck_payload"
   echo "failed=$FAILED"
   echo "info=$INFO"
   echo "n=$N"
+  echo "skip=$SKIP"
   echo "diff=$DIFF"
   echo "mode=$MODE"
   echo "reporc=$REPO_GATE_RC"
@@ -137,6 +143,10 @@ doc = {
                        "judges it"),
     "files_compared_author_vs_clone": int(pay["n"]),
     "files_differing_from_author_tree": int(pay["diff"]),
+    "files_not_distributed_skipped": int(pay["skip"]),
+    "files_not_distributed_note": ("files the repository git-ignores (the pipeline's binary work "
+                                   "products) are skipped rather than reported as missing: a clone "
+                                   "cannot contain them by construction"),
     "ledgers_and_logs_excluded_from_fidelity": True,
     "ledgers_and_logs_exclusion_reason": ("ledgers/ and logs/ are runtime output that this chain "
                                           "rewrites while it runs; they are excluded from both the "

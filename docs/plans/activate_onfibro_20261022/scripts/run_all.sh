@@ -91,12 +91,15 @@ No push: the coordinator pushes after verification." || exit 2
 fi
 
 cd "$WAVE" || exit 2
-step "m6  assemble REPORT.md from the artefacts"                  scripts/m6_report.py
-step "m2  manifest (taken before the gate)"                        scripts/m2_manifest.py
 
+# Order inside the record trio matters as much as the order of the measurement steps: the gate writes
+# out/GATE.json, the report reads that verdict, and the manifest hashes both -- so the report can
+# never disagree with the readout it quotes, and nothing is written after the manifest.
 echo "== m1 gate (author tree)"
 "$PY" scripts/m1_gate.py --json out/GATE.json 2>&1 | tee -a "$WAVE/logs/chain.log"
 GATE_RC="${PIPESTATUS[0]}"
+step "m6  assemble REPORT.md from the artefacts"                  scripts/m6_report.py
+step "m2  manifest (last: nothing is written after it)"            scripts/m2_manifest.py
 
 if [ "$DO_CLONE" = 1 ]; then
   echo "== the clean-clone check"
@@ -104,6 +107,8 @@ if [ "$DO_CLONE" = 1 ]; then
   echo "== re-run the wave gate in the author tree so M16 judges the clone record"
   "$PY" scripts/m1_gate.py --json out/GATE.json 2>&1 | tee -a "$WAVE/logs/chain.log"
   GATE_RC="${PIPESTATUS[0]}"
+  step "m6  refresh REPORT.md with the clean-clone reading"        scripts/m6_report.py
+  step "m2  refresh the manifest"                                  scripts/m2_manifest.py
 fi
 
 if [ "$GATE_RC" != 0 ]; then
