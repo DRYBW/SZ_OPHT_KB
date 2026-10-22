@@ -1,0 +1,117 @@
+[gates] G3 interpreter dir prepended: /home/ubuntu/training-venv/bin
+[gates] repo=/tmp/hf_clone4
+[gates] corpus=/home/ubuntu/EYEKB_REPO/literature_db/v2.4.2_2026-09_slim
+[gates] out=/tmp/hf_clone4/.gate_out
+
+=================== G3 verify_repro (41-query retrieval anchor) ===================
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 5209.34it/s]
+DB: /home/ubuntu/EYEKB_REPO/literature_db/v2.4.2_2026-09_slim | 242928 chunks, 6 species
+REPRO PASS: 41/41 cases with position-by-position identical top5
+------------------- G3 verify_repro (41-query retrieval anchor) rc=0 -------------------
+
+=================== G4 verify_pipeline (three byte anchors) ===================
+[g4] interpreter: /home/ubuntu/.conda/envs/pipeline_env/bin/python (python 3.10, source: contract default (rung 1))
+[g4] running pipeline (~1-2 minutes, fully offline)...
+PASS stage_a/processed.h5ad
+PASS decisions_template.csv
+PASS annotation_evidence_report.md__normalized
+
+G4 PASS: 3/3 byte-identical
+(timestamps and output paths are excluded from the criteria; everything else is byte-for-byte; see VERIFY_CONTRACT G4)
+------------------- G4 verify_pipeline (three byte anchors) rc=0 -------------------
+
+=================== G5 gate_registry (registry surface enforced) ===================
+[g5] entry-invoked gate scripts: 8 -> tests/gate_change_control.py, tests/gate_ontlayer_portability.py, tests/gate_ontology_layer.py, tests/gate_preimage_ref_immutable.py, tests/gate_registry.py, tests/gate_switch_coverage.py, tests/verify_pipeline.py, tests/verify_repro.py
+[g5] rows=140 gates=10 dispensed=4 checks=8 fail=0 verdict=PASS
+  PASS G5-C01 SCHEMA :: missing_columns=none; empty_required_cells=0; bad_surface_values=0 (allowed: repo, local)
+  PASS G5-C02 ID-UNIQUE :: ledger 140 rows/140 ids; inventory 10 rows/10 ids
+  PASS G5-C03 OWNER :: empty/placeholder owners: 0 (16 short-shorthand rows pass as non-empty; ledger-side criterion)
+  PASS G5-C04 REF-EXIST :: missing paths=0; dangling id refs=0; surface repo=60/local=80; local-unavailable=0 (declared local roots: /mnt/D/EyeKB)
+  PASS G5-C05 SHA-MATCH :: live-vs-registered mismatches=0; dispensed-by-ledger=4; vcs-metadata-skipped=1 (.git/** bytes depend on how the clone was checked out)
+  PASS G5-C06 LEDGER :: ledger entries=4; problems=0; stale dispensations=0
+  PASS G5-C07 UNREG-LOAD :: unregistered/mismatched gate scripts invoked by the entry: 0
+  PASS G5-C08 CERT-EXPIRY :: as_of=2026-10-12; expired declared certifications=0
+------------------- G5 gate_registry (registry surface enforced) rc=0 -------------------
+
+=================== G6 gate_change_control (eight machine rules) ===================
+[g6] changes=8 checks=21 fail=0 verdict=PASS (instance:PASS; template:PASS)
+  PASS G6-R1 REQUIRED :: [instance] empty required cells: 0
+  PASS G6-R2 EVIDENCE :: [instance] evidence cells without a resolvable anchor: 0
+  PASS G6-R3 NA :: [instance] rule-numbered NA defects: 0
+  PASS G6-R4 OUTCOME1 :: [instance] Q1 layer-id defects: 0
+  PASS G6-R5 MONOTONE :: [instance] Q3 rollback-term defects: 0
+  PASS G6-R6 PREREG :: [instance] Q4 sha-anchor defects: 0
+  PASS G6-R7 ESCAPE :: [instance] Q5 escape-door defects: 0
+  PASS G6-R8 PRECOND :: [instance] gate-precondition defects: 0
+  PASS G6-R2-CONCRETE  :: [instance] concrete-action cells without a command/threshold: 0
+  PASS G6-R2-PORTABLE  :: [instance] path anchors by rule: declared-local=5, declared-not-distributed=2, exact=82, repo-relative=96
+  PASS G6-R1 REQUIRED :: [template] empty required cells: 0
+  PASS G6-R2 EVIDENCE :: [template] evidence cells without a resolvable anchor: 0
+  PASS G6-R3 NA :: [template] rule-numbered NA defects: 0
+  PASS G6-R4 OUTCOME1 :: [template] Q1 layer-id defects: 0
+  PASS G6-R5 MONOTONE :: [template] Q3 rollback-term defects: 0
+  PASS G6-R6 PREREG :: [template] Q4 sha-anchor defects: 0
+  PASS G6-R7 ESCAPE :: [template] Q5 escape-door defects: 0
+  PASS G6-R8 PRECOND :: [template] gate-precondition defects: 0
+  PASS G6-R2-CONCRETE  :: [template] concrete-action cells without a command/threshold: 0
+  PASS G6-R2-PORTABLE  :: [template] path anchors by rule: exact=22
+  PASS G6-MAP  :: checklist rows=14; covered=14; problems=0
+------------------- G6 gate_change_control (eight machine rules) rc=0 -------------------
+
+=================== G7 gate_ontology_layer (read-only ontology explanation layer) ===================
+  PASS      G7-C01 ANCHORS :: 3 logical address(es), 0 unresolved
+  PASS      G7-C02 SNAPSHOT :: terms=3531 active=3335 obsolete=196 cycles=0 release='cl/releases/2026-06-08/cl-base.owl' summary_sha256=310d2235dab6c87a
+  PASS      G7-C03 SEMANTICS :: same_term=same_term; coarser=ours_broader; finer=ours_narrower; unrelated=not_supported_by_is_a shared_ancestors=7; alt_id=CL:0000031/alt_id; obsolete=obsolete_unique_id/True; ambiguous_synonym=ambiguous; multi_inheritance_parents=2 ancestors=16; blanket=ours_broader/resolution_limited/False; restriction_target_is_ancestor=False (restrictions on the term=1)
+  PASS      G7-C04 UNIT-CASES (synthetic, not evidence about the snapshot) :: ambiguous replacement / duplicate label / restriction target / planted cycle exercised
+  PASS      G7-C05 TWO-LAYER :: verdict=not_supported_by_is_a is_a_relation=no_ancestor_relation assessment=evidence_insufficient (evidence path -> confirmed_incompatible)
+  PASS      G7-C06 REGISTRATION :: default: 7 tools, ontology imported=False; routed: +2 tools
+  PASS      G7-C07 DEFAULT-ROUTE :: calls=55 moved=1 identity_only=1 others=0
+  PASS      G7-C08 TABLES :: fixed denominator=['721'] rows=721; buckets={'same_term': 212, 'ours_broader': 150, 'ours_narrower': 15, 'confirmed_incompatible': 0, 'not_supported_by_is_a': 344}
+  PASS      G7-C09 STOP-LINE :: blanket_threshold=200 blanket_ancestors=27; ambiguity kept as review, candidates=2; stop_line items=4
+[g7] should_run=9 did_run=9 pass=9 fail=0 not_run=0 env_error=0 verdict=PASS
+------------------- G7 gate_ontology_layer (read-only ontology explanation layer) rc=0 -------------------
+
+=================== G8 gate_ontlayer_portability (portability and fail-closed behaviour) ===================
+  PASS      G8-P01 FOREIGN-CWD :: 3 anchors resolved, 6 battery calls answered from a temporary working directory
+  PASS      G8-P02 FOREIGN-ROOT :: root='L5 shadow checkout (copy 2)' anchors=['RESOLVED', 'RESOLVED', 'RESOLVED']; battery identical to the author tree
+  PASS      G8-P03 NO-AUTHOR-PATHS :: 8 service files + both ontology records scanned: no absolute path
+  PASS      G8-P04 READ-ONLY :: kb/ontology 7c71f8649d1e -> 7c71f8649d1e; no write/exec/network primitive in the module
+  PASS      G8-P05 FAIL-CLOSED :: missing=['ANCHOR_MISSING', 'RESOLVED', 'RESOLVED'] corrupt=['ANCHOR_HASH_MISMATCH', 'RESOLVED', 'RESOLVED'] unlisted=ANCHOR_UNKNOWN
+  PASS      G8-P06 GATE-REPORT :: checks reported with should_run/did_run/status; states seen so far=['PASS']
+[g8] should_run=6 did_run=6 pass=6 fail=0 not_run=0 env_error=0 verdict=PASS
+------------------- G8 gate_ontlayer_portability (portability and fail-closed behaviour) rc=0 -------------------
+
+=================== G9 gate_preimage_ref_immutable (pre/post-image refs must be immutable) ===================
+[G9] repo   = /tmp/hf_clone4
+[G9] rule   = pre/post-image references must be immutable (no HEAD / HEAD~N / @{n})
+[G9] self-test: scanner over synthetic tree -> flagged=['bad.py', 'bad2.py', 'bad_argv.py'] (expected ['bad.py', 'bad2.py', 'bad_argv.py']), files=7  OK
+[G9] scanned 156 file(s) under pipeline, mcp_server, kb, scripts, tests
+[G9] self-exempt (declared, contains the gate's own fixtures/prose): ['gate_preimage_ref_immutable.py']
+[G9] violations = 0
+[G9] verdict = PASS
+------------------- G9 gate_preimage_ref_immutable (pre/post-image refs must be immutable) rc=0 -------------------
+
+=================== G10 gate_switch_coverage (switch registry in sync; before/after arms separated) ===================
+G10 switch coverage and arm hygiene
+  harness clears: EYEKB_TISSUE_SCOPE, EYEKB_ACT_V6, EYEKB_ACT_K9, EYEKB_ACT_ANTSEG, EYEKB_KB_ANTIUNION, EYEKB_STATE_GUARD, EYEKB_S0_ENFORCE, EYEKB_FALLBACK_WIDEN, EYEKB_FALLBACK_WIDEN_DENY_TISSUES
+  an arm setting any of these must set it in every arm: EYEKB_ACT_ONFIBRO, EYEKB_ACT_SUBTYPE, EYEKB_CL_KEY, EYEKB_CN_BRIDGE_TSV, EYEKB_CN_REWRITE, EYEKB_FALLBACK_WIDEN_MIN_SHARED, EYEKB_KB9_CONSUME_GUARD, EYEKB_KBGOV_B5, EYEKB_S0_GATE, EYEKB_SPECIES_ROUTE
+  self-test planted one-arm switch (must be caught)                    pass
+  self-test both arms name the switch (must be accepted)               pass
+  self-test harness-cleared switch set in one arm (must be accepted)   pass
+  self-test registry drifted by one name (must be caught)              pass
+  R1 pass -- registry matches the source
+  R2 pass -- scanned 16 report(s); 0 violation(s)
+  wrote /tmp/hf_clone4/.gate_out/G10_RESULTS.json
+------------------- G10 gate_switch_coverage (switch registry in sync; before/after arms separated) rc=0 -------------------
+
+=================== summary ===================
+  G3 verify_repro (41-query retrieval anchor)          rc=0 pass
+  G4 verify_pipeline (three byte anchors)              rc=0 pass
+  G5 gate_registry (registry surface enforced)         rc=0 pass
+  G6 gate_change_control (eight machine rules)         rc=0 pass
+  G7 gate_ontology_layer (read-only ontology explanation layer) rc=0 pass
+  G8 gate_ontlayer_portability (portability and fail-closed behaviour) rc=0 pass
+  G9 gate_preimage_ref_immutable (pre/post-image refs must be immutable) rc=0 pass
+  G10 gate_switch_coverage (switch registry in sync; before/after arms separated) rc=0 pass
+  ------------------------------------------------------------
+  gates=8 failed=0  (CHAIN PASS)
