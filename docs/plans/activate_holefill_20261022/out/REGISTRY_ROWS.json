@@ -1,21 +1,33 @@
 {
  "probe": "l8_registrations.py",
  "registry": "docs/W3_PIPELINE_REGISTRY.tsv",
- "registry_sha256_before": "38c3b7e1868a414c4fd858595cea008adcf8a333dc05011e58bb9d24f79704d4",
+ "registry_sha256_before": "95218bc6193588237895195c54e084bd86e0a63f8d8285ca581643f7e32c8347",
  "rows": {
   "L1-11M": {
+   "path": "mcp_server/eyekb_core.py",
    "before": {
-    "sha256": "528c474ec17965174392a9b2f521f084f91c9e5e63310abcf4f8d39e76969d59",
-    "bytes": "117638"
+    "sha256": "be4e91c311bb77f16cd7e3e3baf1ff2afcaee858dba7330be985ee137231a0df",
+    "bytes": "118133"
    },
    "after": {
     "sha256": "be4e91c311bb77f16cd7e3e3baf1ff2afcaee858dba7330be985ee137231a0df",
     "bytes": "118133",
     "mtime": "2026-10-22 21:32:19"
+   }
+  },
+  "L6-47": {
+   "path": "docs/SWITCH_COVERAGE_REGISTRY.tsv",
+   "before": {
+    "sha256": "f23e5a2f1407a12cbf5e916a24affe96d97c5c6a40bce4741ee5dbc6b14d3221",
+    "bytes": "3920"
    },
-   "note_appended": true
+   "after": {
+    "sha256": "f23e5a2f1407a12cbf5e916a24affe96d97c5c6a40bce4741ee5dbc6b14d3221",
+    "bytes": "3920",
+    "mtime": "2026-10-22 21:49:22"
+   }
   }
  },
- "registry_sha256_after": "91c82281581f4255ff6a1962e1d413975dd0d9afa158ee11bfa0fcdd2e41f5e7",
+ "registry_sha256_after": "3eaba4754434e62c2a26bc22d3dbd156c5162e351081aa7f8a9931b22e85869b",
  "verdict": "PASS"
 }

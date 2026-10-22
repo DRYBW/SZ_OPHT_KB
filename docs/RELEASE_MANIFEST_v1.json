@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "fb2765ebb8cc",
- "digest_sha256": "fb2765ebb8ccd45029d7dd4f7aa3f5aaa43da500fc29e789be15e069f1af35a4",
+ "release_id": "c874b80592be",
+ "digest_sha256": "c874b80592beb1f120e24454643fcdaecc512bef464dac7527f1d7af00bdd22a",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
  "n_files": 4166,
- "total_bytes": 246916038,
+ "total_bytes": 246918835,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "3b91e3d4e50a",
   "knowledge_bundle_id": "791212db1465",
-  "effective_profile_id": "8cd97c1ecffa"
+  "effective_profile_id": "2df3f120cbdf"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -177,13 +177,13 @@
   },
   {
    "path": "docs/W3_MANIFEST.sha256",
-   "git_blob": "f6f98bead091ec5edeff8b6a8fdf636adcfad534",
-   "bytes": 3788
+   "git_blob": "8317dda2061d0bb2e14086091388729953d832e9",
+   "bytes": 4238
   },
   {
    "path": "docs/W3_PIPELINE_REGISTRY.tsv",
-   "git_blob": "eeb40259c41d69e54bf95d86bd8455bc0cb16dcb",
-   "bytes": 130926
+   "git_blob": "4ee3b615abc508e12a57586a105aa86f9dd9e1e5",
+   "bytes": 131257
   },
   {
    "path": "docs/W3_UPSTREAM_FIRST_RULE.md",
@@ -307,8 +307,8 @@
   },
   {
    "path": "docs/plans/activate_holefill_20261022/out/REGISTRY_ROWS.json",
-   "git_blob": "6116194bd8bf50765ca0bd1c95edef70f94bb4fc",
-   "bytes": 633
+   "git_blob": "69e9c6d82a02986c97219153701e36995843d3fc",
+   "bytes": 992
   },
   {
    "path": "docs/plans/activate_holefill_20261022/out/RESTORE.json",
@@ -567,8 +567,8 @@
   },
   {
    "path": "docs/plans/activate_holefill_20261022/scripts/l8_registrations.py",
-   "git_blob": "2ea3342f7e02eeaa8ac54eebc5c0b54d97c8244a",
-   "bytes": 4603
+   "git_blob": "84395d4554b06ecc2ead52f3a759c8dfc4184659",
+   "bytes": 6260
   },
   {
    "path": "docs/plans/activate_holefill_20261022/scripts/m2_freeze_and_mirror.py",

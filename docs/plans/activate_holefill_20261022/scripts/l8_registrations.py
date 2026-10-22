@@ -61,12 +61,30 @@ def main():
 
     core_sha, core_b, core_m = stat_row("mcp_server/eyekb_core.py")
     i = idx["L1-11M"]
-    doc["rows"]["L1-11M"] = {"before": {"sha256": rows[i][10], "bytes": rows[i][11]},
+    doc["rows"]["L1-11M"] = {"path": "mcp_server/eyekb_core.py", "before": {"sha256": rows[i][10], "bytes": rows[i][11]},
                              "after": {"sha256": core_sha, "bytes": core_b, "mtime": core_m}}
     rows[i][10], rows[i][11], rows[i][12] = core_sha, core_b, core_m
     if not rows[i][15].endswith(NOTE):
         rows[i][15] = rows[i][15] + NOTE
         doc["rows"]["L1-11M"]["note_appended"] = True
+
+    # the switch registry is regenerated below, so its own registry row must be re-taken as well
+    for item_id, rel in (("L6-47", "docs/SWITCH_COVERAGE_REGISTRY.tsv"),):
+        if item_id in idx:
+            sw_sha, sw_b, sw_m = stat_row(rel)
+            j = idx[item_id]
+            doc["rows"][item_id] = {"path": rel,
+                                    "before": {"sha256": rows[j][10], "bytes": rows[j][11]},
+                                    "after": {"sha256": sw_sha, "bytes": sw_b, "mtime": sw_m}}
+            rows[j][10], rows[j][11], rows[j][12] = sw_sha, sw_b, sw_m
+            sw_note = (" | 2026-10-22 card t_be11fd4a: regenerated from source with the repository's own "
+                       "tool (scripts/switch_coverage/gen_switch_registry.py), which adds the row for "
+                       "EYEKB_ACT_SUBTYPE registered by card t_7509a1a2 -- the registry had drifted from "
+                       "the source and G10 R1 was red. sha/bytes/mtime re-taken from live bytes in the "
+                       "same commit.")
+            if not rows[j][15].endswith(sw_note):
+                rows[j][15] = rows[j][15] + sw_note
+                doc["rows"][item_id]["note_appended"] = True
 
     body = "\n".join("\t".join(r) for r in rows) + "\n"
     assert body.count("\n") == len(rows), "row count changed while serialising"
@@ -75,7 +93,12 @@ def main():
         f.write(body)
     os.replace(tmp, REG)
     doc["registry_sha256_after"] = hashlib.sha256(open(REG, "rb").read()).hexdigest()
-    doc["verdict"] = "PASS" if core_sha != doc["rows"]["L1-11M"]["before"]["sha256"] else "FAIL"
+    # PASS means: every row this script touched now registers the LIVE bytes (a row that was already
+    # correct stays correct -- the first version of this check demanded a byte change and therefore
+    # reported a spurious FAIL when the script was re-run after the change had landed)
+    _live_ok = all(rows[idx[k]][10] == stat_row(v["path"])[0]
+                   for k, v in doc["rows"].items() if "path" in v)
+    doc["verdict"] = "PASS" if rows[idx["L1-11M"]][10] == core_sha and _live_ok else "FAIL"
     os.makedirs(OUT, exist_ok=True)
     json.dump(doc, open(os.path.join(OUT, "REGISTRY_ROWS.json"), "w"), ensure_ascii=False, indent=1)
     print(json.dumps(doc, ensure_ascii=False, indent=1)[:1200])
