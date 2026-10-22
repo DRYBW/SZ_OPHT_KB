@@ -114,7 +114,8 @@ def main():
     parent_blob = open(os.path.join(OUT, "COMMITTED_eyekb_core.py").replace("COMMITTED", "PREIMAGE")
                        + ".bak_pre_subtype2m", encoding="utf-8").read()
     committed = open(os.path.join(OUT, "COMMITTED_eyekb_core.py"), encoding="utf-8").read()
-    prehead = subprocess.run(["git", "-C", REPO, "show", "HEAD:mcp_server/eyekb_core.py"],
+    prehead = subprocess.run(["git", "-C", REPO, "show",
+                              "%s:mcp_server/eyekb_core.py" % dface["parent_commit"]],
                              capture_output=True, text=True).stdout
     def whitelists(text):
         return sorted(re.findall(r"^([A-Z0-9_]+_DEFAULT_LIBS) = \(([^)]*)\)", text, re.M))

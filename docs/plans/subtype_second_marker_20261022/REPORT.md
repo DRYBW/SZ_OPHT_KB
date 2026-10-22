@@ -275,3 +275,24 @@ activation (`docs/plans/activate_holefill_20261022/`, card `t_be11fd4a`); its by
 **not** part of this commit — absorbing them would corrupt both cards' before/after evidence — and
 that card re-takes the row in its own commit.
 
+
+## 10. Collision note — a second card was live in the same working tree
+
+`mcp_server/eyekb_core.py` is shared. While this card was measuring, another card
+(`t_be11fd4a`, `docs/plans/activate_holefill_20261022/`) was mid-flight on the same file in the same
+tree, and the sequencing was measured, not assumed:
+
+| time | event | sha256 of the live file |
+|---|---|---|
+| before this card's edit | working tree already carried that card's in-flight activation (the parent commit's blob is `e74c73c6…`) | `bd45c6b9…` |
+| this card's registration applied on top | both cards' edits coexisted; **one defect of my own was found here and fixed**: my first replacement dropped the `"onfibro_v13"` dictionary entry (the same append pattern that broke this file in an earlier wave), which made the default route raise `KeyError`. Restored, verified, and the failure mode is now written into the registration script itself. | `fb6c0408…` |
+| commit built | this card's delta was applied to the **parent commit's blob** (`out/COMMITTED_eyekb_core.py`), never to the coexistence file | `528c474e…` |
+| commit `86d37a3` | `git commit` with an explicit path list; the other card's bytes are **not** in it | — |
+
+Absorbing the other card's half-finished activation into this commit would have corrupted both cards'
+before/after evidence (its acceptance test compares HEAD against the flipped tree), so the shared file
+was rebuilt from the parent blob for the commit and left untouched in the worktree. The default-face
+measurement was therefore taken on two blobs imported side by side at the same directory — same
+paths, only the bytes differ — which is what makes the identity claim free of that card's state.
+Registry row `L1-11M` records the committed blob's sha plus the live sha observed at registration
+time, and says that the other card re-takes the row in its own commit.
