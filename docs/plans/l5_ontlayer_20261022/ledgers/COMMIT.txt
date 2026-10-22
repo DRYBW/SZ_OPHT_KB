@@ -79,3 +79,19 @@ Record-only commits of this card (after the content commit)
   <the commit that adds this section and the clean-clone reading is record-only as well: this file is
    excluded from the release identity, so it can be updated after the identity is taken without
    moving it>
+
+Final commit of this card
+-------------------------
+  95f24c8bf88a343652368a6b03c9938ab9d86aa0
+      the commit that carries this COMMIT.txt and the clean-clone chain log, with the release
+      identity re-taken in it: release_id 467f7f371789, service_build_id 0c8ac98c1e27,
+      knowledge_bundle_id e132726e503d, effective_profile_id a8e9094868ae.
+      scripts/release_identity.py --check -> IDENTITY MATCH + MANIFEST MATCH (rc=0).
+
+  The card's commits, in order:
+      02ed58949712d1fac1d96d14fc0bd5764f04f1a8   the change (layer + gates + baseline freeze + records)
+      b3d6e2021dc71e9de02b1c704550cf3c8d29997f   clean-clone reading + ledger restored to committed bytes
+      1c0a93593229ef8052be0035912afcc87fb3a718   ledger rows re-taken from live bytes
+      95f24c8bf88a343652368a6b03c9938ab9d86aa0   this file + the clone log, identity re-taken
+  Nothing was pushed. Later commits by other cards move the release identity; each card re-takes it
+  in its own commit, and this file (excluded from the identity) is not touched by them.
