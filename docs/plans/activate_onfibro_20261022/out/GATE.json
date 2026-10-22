@@ -66,7 +66,7 @@
    "code": "M11 NET-AUDIT",
    "status": "PASS",
    "ok": true,
-   "detail": "hook load receipts=447; connecting/HTTP events=0; census={'socket.__new__': 257, 'socket.gethostname': 46, 'socket.bind': 45}"
+   "detail": "hook load receipts=475; connecting/HTTP events=0; census={'socket.__new__': 260, 'socket.gethostname': 46, 'socket.bind': 46}"
   },
   {
    "code": "M12 MANIFEST",
@@ -78,13 +78,13 @@
    "code": "M13 CHANGE-SURFACE",
    "status": "PASS",
    "ok": true,
-   "detail": "changed=8 outside the declared surface=[]"
+   "detail": "changed=2 outside the declared surface=[]"
   },
   {
    "code": "M14 RELEASE-IDENTITY",
    "status": "PASS",
    "ok": true,
-   "detail": "scripts/release_identity.py --check rc=0 release_id      eb323b13eba6\ndigest_sha256   eb323b13eba61b0581dc11ba58535095aaccabeef7e500bf11430a764d5238f7\nservice_build_id      3bffa3f7afde   (12 files, 1276020 bytes: mcp_server/ + the release t"
+   "detail": "scripts/release_identity.py --check rc=0 release_id      87a2fe0ed919\ndigest_sha256   87a2fe0ed9199918e99a030c63cd8e001a93c976cd65e8e957d20981d81abbd3\nservice_build_id      3bffa3f7afde   (12 files, 1276020 bytes: mcp_server/ + the release t"
   },
   {
    "code": "M15 RED-LINES",
@@ -94,16 +94,14 @@
   },
   {
    "code": "M16 CLEAN-CLONE",
-   "status": "FAIL",
-   "ok": false,
-   "detail": "CLEAN_CLONE_CHECK.json missing"
+   "status": "PASS",
+   "ok": true,
+   "detail": "verdict=PASS commit=6cdf7ae compared=112 differing=0 repo_chain_rc=0"
   }
  ],
  "n_checks": 16,
- "n_failed": 1,
- "failed": [
-  "M16 CLEAN-CLONE"
- ],
- "verdict": "FAIL",
+ "n_failed": 0,
+ "failed": [],
+ "verdict": "PASS",
  "inner_clone_check": false
 }

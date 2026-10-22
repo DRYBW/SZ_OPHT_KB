@@ -803,3 +803,35 @@ EVENT socket.__new__ (<socket.socket fd=-1, family=AddressFamily.AF_UNSPEC, type
 # hook-installed pid=1735259 exe=/usr/bin/python3
 # hook-installed pid=1735290 exe=/usr/bin/python3
 # hook-installed pid=1735291 exe=/usr/bin/python3
+# hook-installed pid=1736809 exe=/usr/bin/python3
+# hook-installed pid=1736824 exe=/usr/bin/python3
+# hook-installed pid=1736864 exe=/usr/bin/python3
+# hook-installed pid=1736891 exe=/usr/bin/python3
+# hook-installed pid=1737803 exe=/usr/bin/python3
+# hook-installed pid=1739419 exe=/home/ubuntu/training-venv/bin/python3
+EVENT socket.__new__ (<socket.socket fd=-1, family=0, type=0, proto=0>, 10, 1, 0)
+EVENT socket.bind (<socket.socket fd=4, family=10, type=1, proto=0, laddr=('::', 0, 0, 0)>, ('::1', 0))
+# hook-installed pid=1739889 exe=/home/ubuntu/training-venv/bin/python3
+# hook-installed pid=1742561 exe=/home/ubuntu/training-venv/bin/python3
+# hook-installed pid=1742562 exe=/home/ubuntu/.conda/envs/pipeline_env/bin/python
+# hook-installed pid=1742563 exe=/home/ubuntu/.conda/envs/pipeline_env/bin/python
+EVENT socket.__new__ (<socket.socket fd=-1, family=AddressFamily.AF_UNSPEC, type=0, proto=0>, 1, 1, 0)
+EVENT socket.__new__ (<socket.socket fd=-1, family=AddressFamily.AF_UNSPEC, type=0, proto=0>, 1, 1, 0)
+# hook-installed pid=1747810 exe=/home/ubuntu/training-venv/bin/python3
+# hook-installed pid=1747924 exe=/home/ubuntu/training-venv/bin/python3
+# hook-installed pid=1747948 exe=/home/ubuntu/training-venv/bin/python3
+# hook-installed pid=1748312 exe=/home/ubuntu/training-venv/bin/python3
+# hook-installed pid=1748709 exe=/usr/bin/python3
+# hook-installed pid=1748710 exe=/usr/bin/python3
+# hook-installed pid=1748822 exe=/usr/bin/python3
+# hook-installed pid=1748831 exe=/usr/bin/python3
+# hook-installed pid=1748883 exe=/usr/bin/python3
+# hook-installed pid=1748885 exe=/usr/bin/python3
+# hook-installed pid=1748887 exe=/usr/bin/python3
+# hook-installed pid=1749156 exe=/usr/bin/python3
+# hook-installed pid=1749811 exe=/usr/bin/python3
+# hook-installed pid=1749813 exe=/usr/bin/python3
+# hook-installed pid=1749926 exe=/usr/bin/python3
+# hook-installed pid=1749946 exe=/usr/bin/python3
+# hook-installed pid=1749986 exe=/usr/bin/python3
+# hook-installed pid=1749987 exe=/usr/bin/python3

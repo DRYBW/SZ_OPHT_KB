@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "87a2fe0ed919",
- "digest_sha256": "87a2fe0ed9199918e99a030c63cd8e001a93c976cd65e8e957d20981d81abbd3",
+ "release_id": "f9cbf3eec7e4",
+ "digest_sha256": "f9cbf3eec7e419f1cc3c4db1ad0b94e9d933cff3d2738f23e9415be3d336644d",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 3986,
- "total_bytes": 240388606,
+ "n_files": 3987,
+ "total_bytes": 240393052,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "3bffa3f7afde",
   "knowledge_bundle_id": "31751e7f9128",
-  "effective_profile_id": "44765b15d4eb"
+  "effective_profile_id": "c1bf6ec3a7c8"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -212,18 +212,23 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/REPORT.md",
-   "git_blob": "b6f3378e2bbab43e06edb002d1b038e8885e6956",
-   "bytes": 24516
+   "git_blob": "71734b304588e326715e5571b424d3fb161f27e1",
+   "bytes": 24733
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/ledgers/net_audit.log",
-   "git_blob": "7095b59e57e93922612ec709ff33fdaa75234c41",
-   "bytes": 55768
+   "git_blob": "691efefd11546583b1ee8be432d2fddf9eb9ae43",
+   "bytes": 57778
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/logs/chain.log",
    "git_blob": "23a79326d45a965a94a031faea1d6ff905fc104a",
    "bytes": 75098
+  },
+  {
+   "path": "docs/plans/activate_onfibro_20261022/out/CLEAN_CLONE_CHECK.json",
+   "git_blob": "b2f5946bf6b3561833bddfd265c9e55ea4e9796d",
+   "bytes": 1964
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/DEFAULT_FACE.json",
@@ -257,18 +262,18 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/GATE.json",
-   "git_blob": "11db25afed8648e68786c5523e487530548819f4",
-   "bytes": 3849
+   "git_blob": "7d722325eb89b803d0772c9c1dad860d3d6bc522",
+   "bytes": 3864
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/MANIFEST.json",
-   "git_blob": "6f438c626d394e1e585d008b103aeeb7d0a42f41",
-   "bytes": 19373
+   "git_blob": "75454375531b0a4baf2bebdbfe2f1fcf25914bc2",
+   "bytes": 19520
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/MANIFEST.sha256",
-   "git_blob": "ca1f20f38b8cc11f40abdc2772fb006ff13ef459",
-   "bytes": 12103
+   "git_blob": "a54e32d66ed02ac6a3d7457f31a5873000f603e3",
+   "bytes": 12196
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/PREIMAGE.json",

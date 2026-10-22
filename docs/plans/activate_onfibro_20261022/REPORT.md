@@ -3,7 +3,7 @@
 Card: `t_42df17c2` (L7 ACTIVATE onfibro_v13 on the default route) · board `pi-briefing` · 2026-10-22
 Pre-registration: `PREREG_ACTIVATION_ONFIBRO_20261022.md` (sha256 `44698e523715262684ed20d88ce69fc4e1e701e2dada10b358dafae12f190c50`, written and on disk before any measurement of the flipped state -- see `out/PREIMAGE.json` for the ordering record).
 Interpreter: `/usr/bin/python3` for this wave's scripts (stdlib only); `/home/ubuntu/training-venv/bin/python3` for the repository's G3/G7 precondition and the tool-panel probe; the pipeline gate pins its own contract interpreter.
-Zero network, zero downloads: `ledgers/net_audit.log` carries 449 hook load receipts and zero connecting/HTTP event lines (`out/GATE.json` M11).
+Zero network, zero downloads: `ledgers/net_audit.log` carries 477 hook load receipts and zero connecting/HTTP event lines (`out/GATE.json` M11).
 
 Everything below is reproducible with one command:
 
@@ -217,8 +217,9 @@ The carrier's own file is byte-unchanged, so its row keeps its sha; the row's au
 
 **Author tree, repository chain** (`out/REPO_GATES.log`): G3 verify_repro 41/41, G4 three byte anchors (re-anchored, 3/3), G5 registry, G6 change control, G7 ontology layer, G8 ontology portability -- `gates=6 failed=0 (CHAIN PASS)`.
 
-**This wave's gate** (16 checks, `out/GATE.json`): verdict **FAIL**, failed = ['M16 CLEAN-CLONE'].
+**This wave's gate** (16 checks, `out/GATE.json`): verdict **PASS**, failed = [].
 
+**Clean clone** (`out/CLEAN_CLONE_CHECK.json`): commit under test `6cdf7ae`; repository chain inside the clone rc=0; wave gate inside the clone verdict PASS; author-vs-clone fidelity 112 files compared, 0 differing; overall **PASS**.
 
 ## 8. Incidents, corrections and what is NOT claimed
 
