@@ -154,7 +154,10 @@ def main() -> int:
     if a.add:
         for (layer, iid, name, cat, path, ver, auth, cg, fg, rg, note) in NEW:
             if path in by_path:
-                print(f"row already present, not duplicated: {path}")
+                # already registered: re-take its live bytes (the file may have moved since), never
+                # duplicate the row
+                refill(path, "re-taken from live bytes in this commit")
+                print(f"row already present, re-taken: {path}")
                 continue
             if iid in ids:
                 print(f"FAIL: item_id already used: {iid}")

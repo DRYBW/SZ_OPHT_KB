@@ -1,1 +1,51 @@
-placeholder — the commit hash is written after the commit
+Card t_ad7463d9 — L5 baseline freeze + read-only Cell Ontology explanation layer
+================================================================================
+
+Commit chain (local only; NOTHING WAS PUSHED)
+---------------------------------------------
+  02ed58949712d1fac1d96d14fc0bd5764f04f1a8
+      the change: the read-only ontology explanation layer, the two new gates G7/G8, the frozen
+      pre-change baseline, the three reporting tables, the recorded-request comparison, the panel
+      settlement, the four-layer release identity, and the ledger rows for this card's artefacts
+  (this file, and any later record-only commit of this card, are excluded from the release identity
+   because a commit hash cannot be known before the commit: see scripts/release_identity.py)
+  <further record-only commits of this card are listed at the end of this file>
+
+Base revision the baseline was frozen at
+----------------------------------------
+  16c6b28aab8ffda11a4a89d21075ae217e740771   (release_id 3c17853873ca)
+  frozen set: docs/plans/l5_ontlayer_20261022/out/BASELINE_FREEZE_16c6b28aab8f.json
+              sha256 0c915fc9e1ff3c4eb4ed2f7af9d3a7186508eea9be4dede34ce07508a5f22297
+              rebuilt by one command, byte-reproducible across repeated runs
+
+What was verified, and how (all readings taken in this card, none quoted)
+------------------------------------------------------------------------
+  default surface byte-identical      scripts/03_replay_request_set.py --compare PRE POST
+                                      55 calls, 1 differing: get_release_identity (the explicit
+                                      identity interface); tool list unchanged; 0 refused
+  legacy tool panel                   tests/probe_tool_panel_identity.py --baseline
+                                      legacy e8e6c26351cd9a1d42fa2e7cb6a83f23
+                                      full   3f1f52cb62915f5ad2801962aa523d36   IDENTITY PASS
+  panel mismatch                      settled as a stale fixture owned by another card (435bb92);
+                                      pre-image kept; the fixture was NOT overwritten
+  five buckets over 721 clusters      same_term 212 / ours_broader 150 / ours_narrower 15 /
+                                      confirmed_incompatible 0 / not_supported_by_is_a 344
+                                      identical to the earlier reading, bucket for bucket
+  identity, four layers + manifest    scripts/release_identity.py --check
+                                      IDENTITY MATCH + MANIFEST MATCH (rc=0)
+  gate chain, author tree             G3 PASS, G4 PASS, G5 FAIL (another card's uncommitted edit in
+                                      the same working tree: L1-11M live != committed; see the
+                                      report), G6 PASS, G7 PASS (9/9), G8 PASS (6/6)
+  gate chain, clean clone             see the reading section below
+
+Environments used
+-----------------
+  author tree        /home/ubuntu/EYEKB_REPO
+  clean clone        a fresh git clone at a path whose name contains spaces
+                     (bash docs/plans/l5_ontlayer_20261022/scripts/09_clean_clone_chain.sh)
+  temporary cwd      exercised inside G8
+  copy of the assets a different path, directory name with spaces, exercised inside G8
+  interpreter        service-side readings with /home/ubuntu/training-venv/bin/python3
+                     (python 3.14.4, pydantic 2.12.5, mcp 2.0.0);
+                     the gate chain with the G1-locked pipeline_env interpreter for G3/G7
+  network                zero downloads, zero network in every step
