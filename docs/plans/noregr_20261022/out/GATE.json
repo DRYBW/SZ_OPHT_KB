@@ -54,13 +54,13 @@
    "code": "N09 MANIFEST",
    "status": "PASS",
    "ok": true,
-   "detail": "files=53 drifting=0 []"
+   "detail": "files=49 drifting=0 []"
   },
   {
    "code": "N10 CHANGE-SURFACE",
    "status": "PASS",
    "ok": true,
-   "detail": "changed=4 unexpected=[] (foreign in-flight, declared and not owned by this card: [])"
+   "detail": "changed=1 unexpected=[] (foreign in-flight, declared and not owned by this card: [])"
   },
   {
    "code": "N11 REGISTRY",
@@ -70,9 +70,9 @@
   },
   {
    "code": "N12 CLEAN-CLONE",
-   "status": "FAIL",
-   "ok": false,
-   "detail": "CLEAN_CLONE_CHECK.json missing"
+   "status": "PASS",
+   "ok": true,
+   "detail": "verdict=PASS commit=9f4af634a6d73d200d3dae98aa46f508fa81e781 files_compared=51 differing=0"
   },
   {
    "code": "N13 HARNESS-PREIMAGE",
@@ -88,10 +88,8 @@
   }
  ],
  "n_checks": 14,
- "n_failed": 1,
- "failed": [
-  "N12 CLEAN-CLONE"
- ],
- "verdict": "FAIL",
+ "n_failed": 0,
+ "failed": [],
+ "verdict": "PASS",
  "inner_clone_check": false
 }
