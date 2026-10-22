@@ -1,0 +1,2379 @@
+{
+ "pair": "retinal pigment epithelial cell (CL:0002586) vs melanocyte (CL:0000148)",
+ "why_this_pair": "the measured instance named in the brief; both are shipped dictionary classes, and the audit shows RPE is a leaf term with zero is_a descendants, so this is a SIBLING confusion pair, not a subdivision question",
+ "1_shared_support": {
+  "shipped_panel_overlap_genes": [],
+  "n_shipped_overlap": 0,
+  "literature_genes_positive_for_both": [
+   "ABCB5",
+   "ACE2",
+   "ACTA2",
+   "ACTB",
+   "AIF1",
+   "AKAP12",
+   "ANGPT1",
+   "APOE",
+   "AQP1",
+   "ATF4",
+   "ATOH7",
+   "BEST1",
+   "BRCA1",
+   "C1QB",
+   "C1R",
+   "C1S",
+   "C2",
+   "C3",
+   "C5",
+   "C5AR1",
+   "C6",
+   "C7",
+   "CAV1",
+   "CCL19",
+   "CCL2",
+   "CCL3",
+   "CD14",
+   "CD163",
+   "CD19",
+   "CD200",
+   "CD28",
+   "CD34",
+   "CD4",
+   "CD44",
+   "CD46",
+   "CD55",
+   "CD59",
+   "CD68",
+   "CD69",
+   "CD79A",
+   "CDH1",
+   "CDH19",
+   "CDH23",
+   "CDH5",
+   "CDKN2A",
+   "CFD",
+   "CFH",
+   "CFI",
+   "CLDN5",
+   "CLU",
+   "COL1A1",
+   "COL1A2",
+   "COL3A1",
+   "COL4A1",
+   "COL5A1",
+   "CP",
+   "CRB1",
+   "CRYAB",
+   "CTNNB1",
+   "CXCL10",
+   "CXCL12",
+   "CXCL14",
+   "CXCL8",
+   "CXCR4",
+   "DCN",
+   "DCT",
+   "DES",
+   "DNASE1L3",
+   "DRD2",
+   "EDNRB",
+   "EFEMP1",
+   "EGFR",
+   "EGR1",
+   "ENPP2",
+   "EPCAM",
+   "ERG",
+   "F12",
+   "FABP4",
+   "FBN1",
+   "FCN3"
+  ],
+  "n_literature_shared": 209,
+  "reading": "both sides are driven by the MITF/TYR-family pigment programme; the shared block is the reason a marker panel cannot separate them"
+ },
+ "2_discriminating_positive_evidence": {
+  "rpe_only_genes_ge2_studies_specific": {
+   "PVR": 225,
+   "ABCA4": 73,
+   "PRPF31": 72,
+   "SQSTM1": 64,
+   "PGC": 61,
+   "FH": 60,
+   "PRPF8": 54,
+   "HTRA1": 53,
+   "SIRT1": 51,
+   "GPX4": 47,
+   "SOD2": 38,
+   "LAMP1": 37,
+   "LAMP2": 36,
+   "RPGR": 35,
+   "ABCA1": 35,
+   "MYC": 33,
+   "SLC7A11": 32,
+   "CFB": 31,
+   "SOD1": 30,
+   "NFE2L2": 30,
+   "CD36": 29,
+   "HMGB1": 29,
+   "TIMP3": 28,
+   "DRAM2": 28,
+   "ARMS2": 28,
+   "KCNJ13": 28,
+   "MLKL": 27,
+   "IGF1": 26,
+   "LGALS1": 26,
+   "TTR": 25,
+   "CCR2": 24,
+   "AFM": 24,
+   "GAS6": 24,
+   "RCVRN": 23,
+   "TXNIP": 23,
+   "RIPK3": 23,
+   "ATG5": 23,
+   "PINK1": 23,
+   "ATF6": 22,
+   "CD86": 22
+  },
+  "n_rpe_only_specific": 658,
+  "n_rpe_only_unfiltered": 1051,
+  "melanocyte_only_genes_ge2_studies_specific": {
+   "BAP1": 11,
+   "EDN3": 8,
+   "EIF1AX": 7,
+   "GNA11": 7,
+   "COL4A2": 6,
+   "FBLN1": 5,
+   "RARRES1": 5,
+   "PRAME": 5,
+   "GPHA2": 5,
+   "WWP2": 5,
+   "S100A2": 4,
+   "PDPN": 4,
+   "COL6A2": 4,
+   "PSMD7": 4,
+   "HLA-DQA1": 3,
+   "DLK1": 3,
+   "MGARP": 3,
+   "BMI1": 3,
+   "POU3F3": 3,
+   "CD3D": 3,
+   "SLC6A6": 3,
+   "NKG7": 3,
+   "CD2": 3,
+   "CUBN": 3,
+   "DAB2IP": 3,
+   "PCOLCE": 3,
+   "CHRM3": 3,
+   "PLAT": 3,
+   "TCF25": 3,
+   "ANKRD29": 3,
+   "ZFHX3": 3,
+   "GREB1L": 3,
+   "CABLES1": 3,
+   "TMEM241": 3,
+   "PI16": 2,
+   "ICAM2": 2,
+   "HLA-DMA": 2,
+   "ENG": 2,
+   "PAX4": 2,
+   "VSIG4": 2
+  },
+  "n_melanocyte_only_specific": 73,
+  "n_melanocyte_only_unfiltered": 118,
+  "specificity_floor": 0.1,
+  "specificity_definition": "papers in the side's slice / papers corpus-wide mentioning the gene",
+  "literature_slice_asymmetry_disclosed": {
+   "rpe": {
+    "chunks": 8477,
+    "papers": 1405
+   },
+   "melanocyte": {
+    "chunks": 553,
+    "papers": 210
+   },
+   "note": "the RPE slice is far larger than the melanocyte slice, which is why an unfiltered difference is dominated by whatever the RPE literature happens to discuss; the specificity floor is what makes the two comparable, and the unfiltered counts are kept beside the filtered ones rather than dropped"
+  },
+  "n_papers_with_adjacent_type_contrast": 49,
+  "contrast_paper_examples": [
+   "29249973",
+   "30122442",
+   "30850686",
+   "31337830",
+   "31712411",
+   "32196081",
+   "32483256",
+   "32946783",
+   "32987810",
+   "33187533",
+   "33307245",
+   "33649576",
+   "33883023",
+   "33915898",
+   "34717927"
+  ]
+ },
+ "3_state_programmes": {
+  "state_share_rpe_only": 0.234,
+  "state_share_melanocyte_only": 0.0822,
+  "state_share_shared": 0.0957,
+  "state_share_shipped_overlap": null,
+  "cutoff": ">= 0.75 of mentioning chunks in state context (Annex A7-b)"
+ },
+ "4_information_the_interface_does_not_have": {
+  "n_rpe_only_genes_visible_in_recorded_window": 141,
+  "n_melanocyte_only_genes_visible_in_recorded_window": 27,
+  "rpe_only_visible": [
+   "AANAT",
+   "ABCA4",
+   "ADIRF",
+   "AFF3",
+   "ALDOA",
+   "ALDOC",
+   "AMD1",
+   "ANXA1",
+   "ARHGAP18",
+   "BACH1",
+   "BMP7",
+   "BNIP3",
+   "BSG",
+   "CABP5",
+   "CALD1",
+   "CAMK4",
+   "CD63",
+   "CELF2",
+   "CIITA",
+   "CNGA1",
+   "CNP",
+   "COL8A1",
+   "CPE",
+   "CRABP1",
+   "CRISPLD1",
+   "CRYM",
+   "CST3",
+   "CTSB",
+   "CTSD",
+   "DAAM1"
+  ],
+  "melanocyte_only_visible": [
+   "CALM2",
+   "CHRM3",
+   "CLDN4",
+   "COL4A2",
+   "COL6A2",
+   "CPA3",
+   "DLK1",
+   "ENG",
+   "FBLN1",
+   "GPHA2",
+   "GREB1L",
+   "HLA-DQA1",
+   "KRT7",
+   "LGI4",
+   "MGARP",
+   "MLPH",
+   "MS4A1",
+   "MZB1",
+   "NKG7",
+   "OPTC",
+   "PCOLCE",
+   "PLCB4",
+   "RARRES1",
+   "RSPO4",
+   "S100A2",
+   "SLC6A6",
+   "ZFHX3"
+  ],
+  "window_definition": "union of the recorded top-10 gene lists of the 721 clusters",
+  "reading": "a distinction whose discriminating genes do not reach the window cannot be made here; absence from the window is NOT evidence the gene or class does not exist"
+ },
+ "5_when_several_candidates_must_be_kept": {
+  "clusters_with_both_candidates_in_ranking": 5,
+  "note": "when the top-ranking candidates carry the shared pigment block, keep them side by side; the emission has no automatic winner"
+ },
+ "6_when_abstention_is_required": {
+  "clusters_with_no_candidate": 179,
+  "rule": "if the window excludes the discriminating block and no independent material exists, the correct output is the parent plus a named confusion reason, not a thinner guess"
+ },
+ "recorded_reading": {
+  "truth_cells": {
+   "retinal pigment epithelial cell": 66248,
+   "melanocyte": 64154,
+   "pigmented epithelial cell": 30652,
+   "pigmented ciliary epithelial cell": 29314,
+   "non-pigmented ciliary epithelial cell": 18628
+  },
+  "confusion_counts": {
+   "retinal pigment epithelial cell || BASE=RPE || MERGED=retinal pigment epithelial cell": 6,
+   "retinal pigment epithelial cell || BASE=Melanocyte || MERGED=Melanocyte": 6,
+   "melanocyte || BASE=Melanocyte || MERGED=Melanocyte": 18,
+   "retinal pigment epithelial cell || BASE=RPE || MERGED=RPE": 5,
+   "retinal pigment epithelial cell || BASE=retina_interneuron::BC || MERGED=retina_interneuron::BC": 1,
+   "melanocyte || BASE=None || MERGED=None": 2,
+   "retinal pigment epithelial cell || BASE=None || MERGED=endothelial cell": 1,
+   "retinal pigment epithelial cell || BASE=None || MERGED=None": 5,
+   "retinal pigment epithelial cell || BASE=Fibroblast || MERGED=Fibroblast": 4,
+   "retinal pigment epithelial cell || BASE=None || MERGED=vein endothelial cell": 2,
+   "retinal pigment epithelial cell || BASE=SMC || MERGED=SMC": 1,
+   "retinal pigment epithelial cell || BASE=Myofibroblast || MERGED=Myofibroblast": 2,
+   "retinal pigment epithelial cell || BASE=cDC2 || MERGED=cDC2": 1,
+   "retinal pigment epithelial cell || BASE=Schwann || MERGED=Schwann": 1,
+   "pigmented epithelial cell || BASE=retina_interneuron::BC || MERGED=retina_interneuron::BC": 1,
+   "pigmented ciliary epithelial cell || BASE=None || MERGED=None": 2,
+   "pigmented ciliary epithelial cell || BASE=pigmented ciliary epithelial cell || MERGED=pigmented ciliary epithelial cell": 7,
+   "non-pigmented ciliary epithelial cell || BASE=non-pigmented ciliary epithelial cell || MERGED=non-pigmented ciliary epithelial cell": 6,
+   "non-pigmented ciliary epithelial cell || BASE=cDC1 || MERGED=cDC1": 1,
+   "non-pigmented ciliary epithelial cell || BASE=pigmented ciliary epithelial cell || MERGED=pigmented ciliary epithelial cell": 2,
+   "pigmented epithelial cell || BASE=None || MERGED=None": 5,
+   "pigmented epithelial cell || BASE=None || MERGED=retinal rod cell": 1,
+   "melanocyte || BASE=None || MERGED=endothelial cell of vascular tree": 1,
+   "pigmented epithelial cell || BASE=SMC || MERGED=SMC": 2,
+   "retinal pigment epithelial cell || BASE=MG || MERGED=retinal pigment epithelial cell": 2,
+   "pigmented epithelial cell || BASE=retina_interneuron::HC || MERGED=retina_interneuron::HC": 1,
+   "melanocyte || BASE=pigmented ciliary epithelial cell || MERGED=pigmented ciliary epithelial cell": 1,
+   "pigmented epithelial cell || BASE=pigmented ciliary epithelial cell || MERGED=pigmented ciliary epithelial cell": 1,
+   "melanocyte || BASE=Pericyte || MERGED=Pericyte": 1,
+   "pigmented epithelial cell || BASE=Melanocyte || MERGED=Melanocyte": 1,
+   "pigmented ciliary epithelial cell || BASE=Pericyte || MERGED=Pericyte": 1,
+   "non-pigmented ciliary epithelial cell || BASE=non-pigmented ciliary epithelial cell || MERGED=capillary endothelial cell": 1
+  },
+  "rpe_truth_clusters": [
+   {
+    "key": "CX01_retina_snRNA|35",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 811,
+    "BASE_top": "RPE",
+    "MERGED_top": "retinal pigment epithelial cell",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "RPE",
+      2
+     ],
+     [
+      "retina_interneuron::RPE",
+      2
+     ],
+     [
+      "retina_v6::RPE",
+      2
+     ]
+    ]
+   },
+   {
+    "key": "CX01_retina_snRNA|36",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 35,
+    "BASE_top": "RPE",
+    "MERGED_top": "retinal pigment epithelial cell",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "RPE",
+      2
+     ],
+     [
+      "retina_interneuron::RPE",
+      2
+     ],
+     [
+      "retina_v6::RPE",
+      2
+     ]
+    ]
+   },
+   {
+    "key": "CX04_cowan_fovea|18",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 84,
+    "BASE_top": "RPE",
+    "MERGED_top": "retinal pigment epithelial cell",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "RPE",
+      3
+     ],
+     [
+      "retina_interneuron::RPE",
+      3
+     ],
+     [
+      "retina_v6::RPE",
+      3
+     ],
+     [
+      "pDC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX04_cowan_organoid|0",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 132,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "Melanocyte",
+      3
+     ],
+     [
+      "Pericyte",
+      1
+     ],
+     [
+      "pDC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX04_cowan_periphery|1",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 186,
+    "BASE_top": "RPE",
+    "MERGED_top": "RPE",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "RPE",
+      3
+     ],
+     [
+      "retina_interneuron::RPE",
+      3
+     ],
+     [
+      "retina_v6::RPE",
+      3
+     ],
+     [
+      "pDC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX07_iPSC_organoid_POAG|3",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 3141,
+    "BASE_top": "RPE",
+    "MERGED_top": "RPE",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "RPE",
+      1
+     ],
+     [
+      "pDC",
+      1
+     ],
+     [
+      "retina_interneuron::RPE",
+      1
+     ],
+     [
+      "retina_v6::RPE",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX08_RPE_choroid_scRNA|15",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 5291,
+    "BASE_top": "retina_interneuron::BC",
+    "MERGED_top": "retina_interneuron::BC",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "retina_interneuron::BC",
+      2
+     ],
+     [
+      "BC",
+      1
+     ],
+     [
+      "pDC",
+      1
+     ],
+     [
+      "retina_v6::BC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX08_RPE_choroid_scRNA|16",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 17,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "Melanocyte",
+      2
+     ],
+     [
+      "retina_interneuron::AC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX08_RPE_choroid_snRNA|6",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 3715,
+    "BASE_top": "RPE",
+    "MERGED_top": "RPE",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "RPE",
+      1
+     ],
+     [
+      "retina_interneuron::RPE",
+      1
+     ],
+     [
+      "retina_v6::RPE",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX09_voigt_RPE_choroid|12",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 156,
+    "BASE_top": "RPE",
+    "MERGED_top": "retinal pigment epithelial cell",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "RPE",
+      2
+     ],
+     [
+      "retina_interneuron::RPE",
+      2
+     ],
+     [
+      "retina_v6::RPE",
+      2
+     ],
+     [
+      "MG",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX10_hiPSC_RPE|0",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 6299,
+    "BASE_top": "RPE",
+    "MERGED_top": "retinal pigment epithelial cell",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "RPE",
+      2
+     ],
+     [
+      "retina_interneuron::RPE",
+      2
+     ],
+     [
+      "retina_v6::RPE",
+      2
+     ],
+     [
+      "Fibroblast",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX10_hiPSC_RPE|1",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 3359,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "Melanocyte",
+      2
+     ]
+    ]
+   },
+   {
+    "key": "CX10_hiPSC_RPE|2",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 2289,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "Melanocyte",
+      3
+     ],
+     [
+      "Endo",
+      1
+     ],
+     [
+      "Mac_Tissue",
+      1
+     ],
+     [
+      "pDC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX10_hiPSC_RPE|3",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 5993,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "Melanocyte",
+      3
+     ]
+    ]
+   },
+   {
+    "key": "CX10_hiPSC_RPE|4",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 2690,
+    "BASE_top": null,
+    "MERGED_top": "endothelial cell",
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX10_hiPSC_RPE|5",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 2154,
+    "BASE_top": null,
+    "MERGED_top": null,
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX10_hiPSC_RPE|6",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 1202,
+    "BASE_top": "Fibroblast",
+    "MERGED_top": "Fibroblast",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "Fibroblast",
+      2
+     ],
+     [
+      "Pericyte",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX10_hiPSC_RPE|7",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 3323,
+    "BASE_top": "Fibroblast",
+    "MERGED_top": "Fibroblast",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "Fibroblast",
+      2
+     ],
+     [
+      "Pericyte",
+      1
+     ],
+     [
+      "Myofibroblast",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX10_hiPSC_RPE|8",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 3091,
+    "BASE_top": null,
+    "MERGED_top": "vein endothelial cell",
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX10_hiPSC_RPE|9",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 841,
+    "BASE_top": null,
+    "MERGED_top": "vein endothelial cell",
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX10_hiPSC_RPE|13",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 759,
+    "BASE_top": "SMC",
+    "MERGED_top": "SMC",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "SMC",
+      1
+     ],
+     [
+      "Myofibroblast",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX10_hiPSC_RPE|14",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 1279,
+    "BASE_top": null,
+    "MERGED_top": null,
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX10_hiPSC_RPE|15",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 1068,
+    "BASE_top": null,
+    "MERGED_top": null,
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX10_hiPSC_RPE|16",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 2632,
+    "BASE_top": "Myofibroblast",
+    "MERGED_top": "Myofibroblast",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "Myofibroblast",
+      3
+     ],
+     [
+      "Fibroblast",
+      2
+     ],
+     [
+      "Granulocyte",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX10_hiPSC_RPE|17",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 4008,
+    "BASE_top": "Fibroblast",
+    "MERGED_top": "Fibroblast",
+    "BASE_n_shared": 5,
+    "ranking": [
+     [
+      "Fibroblast",
+      5
+     ],
+     [
+      "Myofibroblast",
+      4
+     ],
+     [
+      "Pericyte",
+      2
+     ]
+    ]
+   },
+   {
+    "key": "CX10_hiPSC_RPE|18",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 965,
+    "BASE_top": "Myofibroblast",
+    "MERGED_top": "Myofibroblast",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "Myofibroblast",
+      2
+     ],
+     [
+      "Fibroblast",
+      1
+     ],
+     [
+      "Keratocytes",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX10_hiPSC_RPE|19",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 2098,
+    "BASE_top": null,
+    "MERGED_top": null,
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX10_hiPSC_RPE|20",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 734,
+    "BASE_top": "cDC2",
+    "MERGED_top": "cDC2",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "cDC2",
+      1
+     ],
+     [
+      "Granulocyte",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX10_hiPSC_RPE|21",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 884,
+    "BASE_top": "Schwann",
+    "MERGED_top": "Schwann",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "Schwann",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX10_hiPSC_RPE|22",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 2261,
+    "BASE_top": null,
+    "MERGED_top": null,
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX10_hiPSC_RPE|23",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 411,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "Melanocyte",
+      2
+     ],
+     [
+      "retina_interneuron::BC",
+      1
+     ],
+     [
+      "retina_v6::BC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX10_hiPSC_RPE|24",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 155,
+    "BASE_top": "Fibroblast",
+    "MERGED_top": "Fibroblast",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "Fibroblast",
+      3
+     ],
+     [
+      "Myofibroblast",
+      3
+     ],
+     [
+      "Pericyte",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX15_optic_nerve_all|39",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 1994,
+    "BASE_top": "MG",
+    "MERGED_top": "retinal pigment epithelial cell",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "MG",
+      1
+     ],
+     [
+      "RPE",
+      1
+     ],
+     [
+      "retina_interneuron::MG",
+      1
+     ],
+     [
+      "retina_interneuron::RPE",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX16_tabula_sapiens_eye|9",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 96,
+    "BASE_top": "MG",
+    "MERGED_top": "retinal pigment epithelial cell",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "MG",
+      1
+     ],
+     [
+      "Fibroblast",
+      1
+     ],
+     [
+      "retina_interneuron::MG",
+      1
+     ],
+     [
+      "retina_v6::MG",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX17_mouse_retina_all|25",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 399,
+    "BASE_top": "RPE",
+    "MERGED_top": "retinal pigment epithelial cell",
+    "BASE_n_shared": 2,
+    "ranking": []
+   },
+   {
+    "key": "PRE_OA-D001|30",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 929,
+    "BASE_top": "RPE",
+    "MERGED_top": "RPE",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "RPE",
+      2
+     ],
+     [
+      "retina_interneuron::RPE",
+      2
+     ],
+     [
+      "retina_v6::RPE",
+      2
+     ],
+     [
+      "Pericyte",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "PRE_OA-D001|31",
+    "truth": "retinal pigment epithelial cell",
+    "n_cells": 767,
+    "BASE_top": "RPE",
+    "MERGED_top": "RPE",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "RPE",
+      1
+     ],
+     [
+      "retina_interneuron::RPE",
+      1
+     ],
+     [
+      "retina_v6::RPE",
+      1
+     ]
+    ]
+   }
+  ],
+  "melanocyte_truth_clusters": [
+   {
+    "key": "CX04_cowan_periphery|0",
+    "truth": "melanocyte",
+    "n_cells": 157,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 4,
+    "ranking": [
+     [
+      "Melanocyte",
+      4
+     ]
+    ]
+   },
+   {
+    "key": "CX08_RPE_choroid_scRNA|3",
+    "truth": "melanocyte",
+    "n_cells": 5505,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "Melanocyte",
+      3
+     ]
+    ]
+   },
+   {
+    "key": "CX08_RPE_choroid_snRNA|10",
+    "truth": "melanocyte",
+    "n_cells": 3596,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "Melanocyte",
+      2
+     ],
+     [
+      "retina_interneuron::BC",
+      1
+     ],
+     [
+      "retina_v6::BC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX09_voigt_RPE_choroid|2",
+    "truth": "melanocyte",
+    "n_cells": 513,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "Melanocyte",
+      3
+     ],
+     [
+      "RPE",
+      1
+     ],
+     [
+      "retina_interneuron::RPE",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX09_voigt_RPE_choroid|11",
+    "truth": "melanocyte",
+    "n_cells": 9,
+    "BASE_top": null,
+    "MERGED_top": null,
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX11_posterior_eye_atlas|16",
+    "truth": "melanocyte",
+    "n_cells": 6257,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "Melanocyte",
+      3
+     ],
+     [
+      "retina_interneuron::BC",
+      1
+     ],
+     [
+      "retina_v6::BC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX11_posterior_eye_atlas|19",
+    "truth": "pigmented epithelial cell",
+    "n_cells": 2076,
+    "BASE_top": "retina_interneuron::BC",
+    "MERGED_top": "retina_interneuron::BC",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "retina_interneuron::BC",
+      1
+     ],
+     [
+      "retina_interneuron::HC",
+      1
+     ],
+     [
+      "retina_v6::HC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX12_ocular_surface_snRNA|13",
+    "truth": "melanocyte",
+    "n_cells": 1685,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "Melanocyte",
+      3
+     ],
+     [
+      "retina_interneuron::BC",
+      1
+     ],
+     [
+      "retina_v6::BC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX12_ocular_surface_snRNA|20",
+    "truth": "melanocyte",
+    "n_cells": 312,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 4,
+    "ranking": [
+     [
+      "Melanocyte",
+      4
+     ],
+     [
+      "retina_interneuron::BC",
+      1
+     ],
+     [
+      "retina_v6::BC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX13_TM_corneal_scleral|9",
+    "truth": "melanocyte",
+    "n_cells": 1712,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "Melanocyte",
+      2
+     ],
+     [
+      "retina_interneuron::BC",
+      1
+     ],
+     [
+      "retina_v6::BC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX13_TM_corneal_scleral|14",
+    "truth": "melanocyte",
+    "n_cells": 1261,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 4,
+    "ranking": [
+     [
+      "Melanocyte",
+      4
+     ],
+     [
+      "retina_interneuron::BC",
+      1
+     ],
+     [
+      "retina_v6::BC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX13_TM_corneal_scleral|26",
+    "truth": "melanocyte",
+    "n_cells": 23,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "Melanocyte",
+      3
+     ],
+     [
+      "retina_interneuron::BC",
+      1
+     ],
+     [
+      "retina_interneuron::AC",
+      1
+     ],
+     [
+      "retina_v6::BC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX13_ciliary_body|0",
+    "truth": "pigmented ciliary epithelial cell",
+    "n_cells": 3800,
+    "BASE_top": null,
+    "MERGED_top": null,
+    "BASE_n_shared": null,
+    "ranking": [
+     [
+      "retina_interneuron::HC",
+      1
+     ],
+     [
+      "retina_v6::HC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX13_ciliary_body|1",
+    "truth": "pigmented ciliary epithelial cell",
+    "n_cells": 3844,
+    "BASE_top": "pigmented ciliary epithelial cell",
+    "MERGED_top": "pigmented ciliary epithelial cell",
+    "BASE_n_shared": 3,
+    "ranking": []
+   },
+   {
+    "key": "CX13_ciliary_body|2",
+    "truth": "pigmented ciliary epithelial cell",
+    "n_cells": 3021,
+    "BASE_top": "pigmented ciliary epithelial cell",
+    "MERGED_top": "pigmented ciliary epithelial cell",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "Melanocyte",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX13_ciliary_body|3",
+    "truth": "pigmented ciliary epithelial cell",
+    "n_cells": 2361,
+    "BASE_top": "pigmented ciliary epithelial cell",
+    "MERGED_top": "pigmented ciliary epithelial cell",
+    "BASE_n_shared": 5,
+    "ranking": [
+     [
+      "retina_interneuron::HC",
+      1
+     ],
+     [
+      "retina_v6::HC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX13_ciliary_body|4",
+    "truth": "pigmented ciliary epithelial cell",
+    "n_cells": 1766,
+    "BASE_top": "pigmented ciliary epithelial cell",
+    "MERGED_top": "pigmented ciliary epithelial cell",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "retina_interneuron::BC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX13_ciliary_body|7",
+    "truth": "non-pigmented ciliary epithelial cell",
+    "n_cells": 3479,
+    "BASE_top": "non-pigmented ciliary epithelial cell",
+    "MERGED_top": "non-pigmented ciliary epithelial cell",
+    "BASE_n_shared": 4,
+    "ranking": []
+   },
+   {
+    "key": "CX13_ciliary_body|8",
+    "truth": "non-pigmented ciliary epithelial cell",
+    "n_cells": 939,
+    "BASE_top": "non-pigmented ciliary epithelial cell",
+    "MERGED_top": "non-pigmented ciliary epithelial cell",
+    "BASE_n_shared": 3,
+    "ranking": []
+   },
+   {
+    "key": "CX13_ciliary_body|9",
+    "truth": "non-pigmented ciliary epithelial cell",
+    "n_cells": 26,
+    "BASE_top": "cDC1",
+    "MERGED_top": "cDC1",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "cDC1",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX13_ciliary_body|10",
+    "truth": "melanocyte",
+    "n_cells": 1208,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "Melanocyte",
+      2
+     ]
+    ]
+   },
+   {
+    "key": "CX13_ciliary_body|11",
+    "truth": "non-pigmented ciliary epithelial cell",
+    "n_cells": 404,
+    "BASE_top": "pigmented ciliary epithelial cell",
+    "MERGED_top": "pigmented ciliary epithelial cell",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "retina_interneuron::BC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX13_iris|0",
+    "truth": "pigmented epithelial cell",
+    "n_cells": 8205,
+    "BASE_top": null,
+    "MERGED_top": null,
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX13_iris|1",
+    "truth": "pigmented epithelial cell",
+    "n_cells": 2693,
+    "BASE_top": null,
+    "MERGED_top": null,
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX13_iris|2",
+    "truth": "pigmented epithelial cell",
+    "n_cells": 1790,
+    "BASE_top": null,
+    "MERGED_top": "retinal rod cell",
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX13_iris|3",
+    "truth": "melanocyte",
+    "n_cells": 6003,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "Melanocyte",
+      2
+     ]
+    ]
+   },
+   {
+    "key": "CX13_iris|4",
+    "truth": "melanocyte",
+    "n_cells": 7697,
+    "BASE_top": null,
+    "MERGED_top": "endothelial cell of vascular tree",
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX13_iris|5",
+    "truth": "melanocyte",
+    "n_cells": 3851,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "Melanocyte",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX13_iris|8",
+    "truth": "pigmented epithelial cell",
+    "n_cells": 376,
+    "BASE_top": "SMC",
+    "MERGED_top": "SMC",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "SMC",
+      1
+     ],
+     [
+      "Fibroblast",
+      1
+     ],
+     [
+      "Myofibroblast",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX13_iris|9",
+    "truth": "pigmented epithelial cell",
+    "n_cells": 7148,
+    "BASE_top": "SMC",
+    "MERGED_top": "SMC",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "SMC",
+      2
+     ],
+     [
+      "RGC",
+      1
+     ],
+     [
+      "Myofibroblast",
+      1
+     ],
+     [
+      "retina_interneuron::RGC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX13_iris|10",
+    "truth": "pigmented epithelial cell",
+    "n_cells": 1995,
+    "BASE_top": null,
+    "MERGED_top": null,
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX13_iris|13",
+    "truth": "pigmented epithelial cell",
+    "n_cells": 2135,
+    "BASE_top": null,
+    "MERGED_top": null,
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX13_iris|16",
+    "truth": "pigmented epithelial cell",
+    "n_cells": 153,
+    "BASE_top": null,
+    "MERGED_top": null,
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX14_TM_ciliary_snRNA|4",
+    "truth": "non-pigmented ciliary epithelial cell",
+    "n_cells": 6136,
+    "BASE_top": "non-pigmented ciliary epithelial cell",
+    "MERGED_top": "non-pigmented ciliary epithelial cell",
+    "BASE_n_shared": 2,
+    "ranking": []
+   },
+   {
+    "key": "CX14_TM_ciliary_snRNA|5",
+    "truth": "melanocyte",
+    "n_cells": 6501,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 4,
+    "ranking": [
+     [
+      "Melanocyte",
+      4
+     ],
+     [
+      "retina_interneuron::BC",
+      1
+     ],
+     [
+      "retina_v6::BC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX14_TM_ciliary_snRNA|7",
+    "truth": "pigmented ciliary epithelial cell",
+    "n_cells": 6705,
+    "BASE_top": "pigmented ciliary epithelial cell",
+    "MERGED_top": "pigmented ciliary epithelial cell",
+    "BASE_n_shared": 4,
+    "ranking": []
+   },
+   {
+    "key": "CX14_TM_ciliary_snRNA|12",
+    "truth": "non-pigmented ciliary epithelial cell",
+    "n_cells": 531,
+    "BASE_top": "pigmented ciliary epithelial cell",
+    "MERGED_top": "pigmented ciliary epithelial cell",
+    "BASE_n_shared": 2,
+    "ranking": [
+     [
+      "retina_interneuron::BC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "CX15_optic_nerve_all|22",
+    "truth": "melanocyte",
+    "n_cells": 1902,
+    "BASE_top": null,
+    "MERGED_top": null,
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "CX15_optic_nerve_all|40",
+    "truth": "pigmented epithelial cell",
+    "n_cells": 1859,
+    "BASE_top": "retina_interneuron::HC",
+    "MERGED_top": "retina_interneuron::HC",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "retina_interneuron::HC",
+      1
+     ],
+     [
+      "retina_v6::HC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "PRE_GSE199013|0",
+    "truth": "pigmented ciliary epithelial cell",
+    "n_cells": 975,
+    "BASE_top": "pigmented ciliary epithelial cell",
+    "MERGED_top": "pigmented ciliary epithelial cell",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "retina_interneuron::HC",
+      1
+     ],
+     [
+      "retina_v6::HC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "PRE_GSE199013|2",
+    "truth": "melanocyte",
+    "n_cells": 60,
+    "BASE_top": "pigmented ciliary epithelial cell",
+    "MERGED_top": "pigmented ciliary epithelial cell",
+    "BASE_n_shared": 4,
+    "ranking": []
+   },
+   {
+    "key": "PRE_GSE199013|3",
+    "truth": "pigmented epithelial cell",
+    "n_cells": 1074,
+    "BASE_top": "pigmented ciliary epithelial cell",
+    "MERGED_top": "pigmented ciliary epithelial cell",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "SMC",
+      1
+     ],
+     [
+      "face_v6::SMC",
+      1
+     ],
+     [
+      "Melanocyte",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "PRE_GSE199013|10",
+    "truth": "melanocyte",
+    "n_cells": 167,
+    "BASE_top": "Pericyte",
+    "MERGED_top": "Pericyte",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "Pericyte",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "PRE_GSE199013|14",
+    "truth": "non-pigmented ciliary epithelial cell",
+    "n_cells": 852,
+    "BASE_top": "non-pigmented ciliary epithelial cell",
+    "MERGED_top": "non-pigmented ciliary epithelial cell",
+    "BASE_n_shared": 5,
+    "ranking": [
+     [
+      "Fibroblast",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "PRE_GSE199013|15",
+    "truth": "non-pigmented ciliary epithelial cell",
+    "n_cells": 34,
+    "BASE_top": "non-pigmented ciliary epithelial cell",
+    "MERGED_top": "non-pigmented ciliary epithelial cell",
+    "BASE_n_shared": 3,
+    "ranking": []
+   },
+   {
+    "key": "PRE_GSE199013|16",
+    "truth": "pigmented epithelial cell",
+    "n_cells": 1148,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "retina_interneuron::BC",
+      1
+     ],
+     [
+      "Melanocyte",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "PRE_GSE199013|20",
+    "truth": "melanocyte",
+    "n_cells": 3033,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 4,
+    "ranking": [
+     [
+      "Melanocyte",
+      4
+     ],
+     [
+      "retina_interneuron::BC",
+      1
+     ],
+     [
+      "retina_v6::BC",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "PRE_GSE199013|31",
+    "truth": "melanocyte",
+    "n_cells": 985,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "Melanocyte",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "PRE_OA-D002|8",
+    "truth": "melanocyte",
+    "n_cells": 4981,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 5,
+    "ranking": [
+     [
+      "Melanocyte",
+      5
+     ],
+     [
+      "RPE",
+      1
+     ],
+     [
+      "retina_interneuron::BC",
+      1
+     ],
+     [
+      "retina_interneuron::RPE",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "PRE_OA-D004|2",
+    "truth": "pigmented ciliary epithelial cell",
+    "n_cells": 1158,
+    "BASE_top": "Pericyte",
+    "MERGED_top": "Pericyte",
+    "BASE_n_shared": 1,
+    "ranking": [
+     [
+      "Pericyte",
+      1
+     ],
+     [
+      "Fibroblast",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "PRE_OA-D004|8",
+    "truth": "pigmented ciliary epithelial cell",
+    "n_cells": 5310,
+    "BASE_top": "pigmented ciliary epithelial cell",
+    "MERGED_top": "pigmented ciliary epithelial cell",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "Endo",
+      1
+     ],
+     [
+      "pDC",
+      1
+     ],
+     [
+      "Melanocyte",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "PRE_OA-D004|12",
+    "truth": "pigmented ciliary epithelial cell",
+    "n_cells": 374,
+    "BASE_top": null,
+    "MERGED_top": null,
+    "BASE_n_shared": null,
+    "ranking": []
+   },
+   {
+    "key": "PRE_OA-D004|14",
+    "truth": "non-pigmented ciliary epithelial cell",
+    "n_cells": 5144,
+    "BASE_top": "non-pigmented ciliary epithelial cell",
+    "MERGED_top": "capillary endothelial cell",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "Fibroblast",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "PRE_OA-D004|15",
+    "truth": "melanocyte",
+    "n_cells": 6736,
+    "BASE_top": "Melanocyte",
+    "MERGED_top": "Melanocyte",
+    "BASE_n_shared": 3,
+    "ranking": [
+     [
+      "Melanocyte",
+      3
+     ]
+    ]
+   },
+   {
+    "key": "PRE_OA-D004|16",
+    "truth": "non-pigmented ciliary epithelial cell",
+    "n_cells": 1083,
+    "BASE_top": "non-pigmented ciliary epithelial cell",
+    "MERGED_top": "non-pigmented ciliary epithelial cell",
+    "BASE_n_shared": 2,
+    "ranking": []
+   }
+  ],
+  "reading_class": "probing/regression reading on the fixed 28-volume set against a fixed reference (author labels); not validation, and the reference is not an automatic gold standard"
+ },
+ "literature_support": {
+  "rpe": {
+   "chunks": 8477,
+   "papers": 1405,
+   "positive_genes": 1260
+  },
+  "melanocyte": {
+   "chunks": 553,
+   "papers": 210,
+   "positive_genes": 327
+  }
+ },
+ "evidence_examples": {
+  "rpe": {
+   "ID3": [
+    {
+     "paper": "36899910",
+     "snippet": "These genes were associated with several biological pathways with modulation of ID1/ID3 transcriptional regulation."
+    },
+    {
+     "paper": "38334673",
+     "snippet": ""
+    }
+   ],
+   "ID1": [
+    {
+     "paper": "36899910",
+     "snippet": "These genes were associated with several biological pathways with modulation of ID1/ID3 transcriptional regulation."
+    },
+    {
+     "paper": "38510120",
+     "snippet": "gures 2 A, 2B, 2D,  S1 D, and  S2 C) that were characterized by high expression of ciliary margin ( WNT2B ), eye field ( PAX6 ), pigmented cell ( PMEL ,  TYRP1 ) and RPCs ( ID3 ,  ID1 ,  SFRP2 , and  ZIC1 ) markers 17 , 23  ( Tables S1  and  S2 )."
+    }
+   ],
+   "STX2": [
+    {
+     "paper": "36899910",
+     "snippet": "The increase in transepithelial resistance (TEER) was measured using the EVOM2 Epithelial Voltohmmeter and STX2 electrodes (World Precision Instruments, Sarasota, FL, USA)."
+    },
+    {
+     "paper": "35715869",
+     "snippet": "Transepithelial electrical resistance (TEER) was measured using an EVOM2 epithelial volt-ohmmeter (World Precision Instruments, Sarasota, FL, USA) with a chopstick STX2 electrode applied on the apical and basal sides of the RPE monolayers, as described earlier [ 30 ]."
+    }
+   ],
+   "RPE65": [
+    {
+     "paper": "36899910",
+     "snippet": "In contrast, Retinoid Isomerohydrolase ( RPE65 ), a visual cycle component marker for differentiated RPE, was mainly expressed in the more differentiated group ( Figure 2 A)."
+    },
+    {
+     "paper": "36899910",
+     "snippet": "in the less differentiated cells, and immunoreactivity of COL1A1 protein was able to distinguish the less differentiated cells from the more differentiated cells that express the  RPE65  gene highly and are immunopositive for the RPE65 protein ( Figure 2 C)."
+    }
+   ],
+   "C2": [
+    {
+     "paper": "36899910",
+     "snippet": "By 19W, the proportion of the more differentiated cells increased to 73% ( Figure 1 (C2)), with 27% remaining less differentiated."
+    },
+    {
+     "paper": "37569464",
+     "snippet": "Several studies indicate that genetic variations in complement factor H (CFH) and complement components 2 (C2), C3, and C5 are associated with increased vulnerability to AMD [ 158 , 159 , 160 , 161 , 162 , 163 , 164 , 165 , 166 ]."
+    }
+   ],
+   "COL1A1": [
+    {
+     "paper": "36899910",
+     "snippet": "One of the highly expressed mRNAs in the less differentiated cells was Collagen Type I alpha 1 chain ( COL1A1 ), fibril-forming collagen."
+    },
+    {
+     "paper": "36899910",
+     "snippet": "This increase in sub-RPE COL1A1 may correspond to the role this protein plays in forming the extracellular matrix of Bruch’s membrane [ 67 ]."
+    }
+   ],
+   "OCA2": [
+    {
+     "paper": "36899910",
+     "snippet": ""
+    },
+    {
+     "paper": "41477839",
+     "snippet": "05), including  RDH5 ,  EFEMP1 ,  LAMA2 ,  SLC2A12 ,  MTHFD1L ,  RAB38 ,  TYR ,  OCA2 ,  ABHD2 ,  RLBP1 , and  ARHGAP18  ( Fig."
+    }
+   ],
+   "COL8A1": [
+    {
+     "paper": "36899910",
+     "snippet": "The only highly expressed transcript for collagen in the more differentiated cells was  COL8A1  ( Supplementary Table S4 )."
+    },
+    {
+     "paper": "36899910",
+     "snippet": ""
+    }
+   ],
+   "SLC24A2": [
+    {
+     "paper": "36899910",
+     "snippet": "In fact, from the 19 pigmentation-related genes expressed in our cells, the only transcripts that showed elevated expression in the more differentiated RPE cells were  OCA2  and  SLC24A2  ( Supplementary Figure S2(B1) and Supplementary Table S11 ,  Figure 5 E), suggesting that al"
+    }
+   ],
+   "TTR": [
+    {
+     "paper": "36899910",
+     "snippet": "The top genes with the highest score in the main trajectory were associated with regulating the visual cycle ( RPE65 ,  LRAT ,  TTR ,  RDH5 ) ( Supplementary Table S6 )."
+    },
+    {
+     "paper": "37728563",
+     "snippet": "Transthyretin ( TTR ), which is highly expressed in the RPE of rats and primates ( Cavallaro et al."
+    }
+   ],
+   "RDH5": [
+    {
+     "paper": "36899910",
+     "snippet": "The top genes with the highest score in the main trajectory were associated with regulating the visual cycle ( RPE65 ,  LRAT ,  TTR ,  RDH5 ) ( Supplementary Table S6 )."
+    },
+    {
+     "paper": "38786093",
+     "snippet": "RPE65 then converts the retinol ester into 11cis-ROL [ 14 ], which is further converted into 11cis-RAL by retinol dehydrogenase 5 (RDH5) [ 35 ]."
+    }
+   ],
+   "LRAT": [
+    {
+     "paper": "36899910",
+     "snippet": "The top genes with the highest score in the main trajectory were associated with regulating the visual cycle ( RPE65 ,  LRAT ,  TTR ,  RDH5 ) ( Supplementary Table S6 )."
+    },
+    {
+     "paper": "37809982",
+     "snippet": "These genes contribute to retinal metabolism ( RPE65, LRAT, etc."
+    }
+   ],
+   "MFGE8": [
+    {
+     "paper": "36899910",
+     "snippet": ""
+    },
+    {
+     "paper": "39734536",
+     "snippet": "RPE cells recognize and bind to POS-exposed phosphatidylserine (PS) via MerTK/Gas6 and αVβ5-integrin/MFGE8 pathways to initiate phagocytosis."
+    }
+   ],
+   "SULF1": [
+    {
+     "paper": "36899910",
+     "snippet": "h’s membrane (COL8A1) [ 70 ], epithelial–mesenchymal transition (KRT17) [ 92 ], phagocytic activity and the rescue of the RPE (MFGE8) [ 93 , 94 ], and activity of heparan sulfate (SULF1) [ 22 ], suggesting that zinc might influence interaction with the local extracellular environ"
+    },
+    {
+     "paper": "41528844",
+     "snippet": "Comparing these two clusters revealed 18 differentially expressed genes  (Data S3 ), including higher expression of  SULF1  and  WFDC1  in macular RPE and  KCNIP4  and  VEPH1  in peripheral RPE as previously reported."
+    }
+   ],
+   "KRT17": [
+    {
+     "paper": "36899910",
+     "snippet": ""
+    },
+    {
+     "paper": "40542390",
+     "snippet": ""
+    }
+   ],
+   "NPC2": [
+    {
+     "paper": "36899910",
+     "snippet": "Of the 42 genes expressed in our RPE culture associated with cholesterol metabolism ( Figure 5 C,  Supplementary Table S11 ),  ANGPTL4 ,  LRPAP1 ,  VDAC2 ,  APOE ,  PLTP ,  NPC2 ,  TSPO , and  CYP27A1  were altered in response to acute zinc supplementation ( Figure 5 C,  Suppleme"
+    },
+    {
+     "paper": "36899910",
+     "snippet": "NPC2 is a cholesterol transporter, effluxing cholesterol out of late endosomes in RPE."
+    }
+   ],
+   "ANGPTL4": [
+    {
+     "paper": "36899910",
+     "snippet": "ANGPTL4 is a lipid-inducible feedback regulator of LPL-mediated lipid uptake."
+    },
+    {
+     "paper": "39506758",
+     "snippet": ""
+    }
+   ],
+   "CLU": [
+    {
+     "paper": "36899910",
+     "snippet": "However, some complement genes that were expressed in the RPE were affected by acute zinc supplementation, including CFH,  C1R ,  CFHR1 , and  CLU  ( Figure 5 B,  Supplementary Table S7 )."
+    },
+    {
+     "paper": "37802075",
+     "snippet": "xpressed canonical RGC-specific genes including  ATOH7 ,  POU4F2 ,  ISL1 , and  SNCG  ( Figure S1 B), but none expressed detectable levels of the MG-specific genes  AQP4 ,  CAV ,  CLU ,  GFAP ,  KIR4."
+    }
+   ],
+   "LPL": [
+    {
+     "paper": "36899910",
+     "snippet": "ANGPTL4 is a lipid-inducible feedback regulator of LPL-mediated lipid uptake."
+    },
+    {
+     "paper": "35005108",
+     "snippet": ""
+    }
+   ],
+   "CYP27A1": [
+    {
+     "paper": "36899910",
+     "snippet": "es expressed in our RPE culture associated with cholesterol metabolism ( Figure 5 C,  Supplementary Table S11 ),  ANGPTL4 ,  LRPAP1 ,  VDAC2 ,  APOE ,  PLTP ,  NPC2 ,  TSPO , and  CYP27A1  were altered in response to acute zinc supplementation ( Figure 5 C,  Supplementary Table S"
+    },
+    {
+     "paper": "36899910",
+     "snippet": ""
+    }
+   ],
+   "C1R": [
+    {
+     "paper": "36899910",
+     "snippet": "However, some complement genes that were expressed in the RPE were affected by acute zinc supplementation, including CFH,  C1R ,  CFHR1 , and  CLU  ( Figure 5 B,  Supplementary Table S7 )."
+    },
+    {
+     "paper": "35784369",
+     "snippet": "The largest FC are for all components of the C1 complex ( C1QA, C1QB, C1QC, C1R, C1S ) that recognizes antibody-antigen interactions and initiates the CP of complement activation."
+    }
+   ],
+   "LRPAP1": [
+    {
+     "paper": "36899910",
+     "snippet": "LRPAP1 is a chaperon protein, generally controlling the folding and ligand–receptor interaction expression of the LRP receptors [ 118 ]."
+    }
+   ],
+   "VDAC2": [
+    {
+     "paper": "36899910",
+     "snippet": ""
+    },
+    {
+     "paper": "38927058",
+     "snippet": "Functionally, while VDAC1 and VDAC3 negatively regulated ciliogenesis, VDAC2 appeared to promote the maturation of primary cilia."
+    }
+   ],
+   "APOE": [
+    {
+     "paper": "36899910",
+     "snippet": ""
+    },
+    {
+     "paper": "36899910",
+     "snippet": ""
+    }
+   ],
+   "PLTP": [
+    {
+     "paper": "36899910",
+     "snippet": ""
+    },
+    {
+     "paper": "36899910",
+     "snippet": "PLTP plasma levels are associated with AMD [ 124 ], but their potential role in drusen formation remains elusive."
+    }
+   ]
+  },
+  "melanocyte": {
+   "TOP2A": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    },
+    {
+     "paper": "40576432",
+     "snippet": "Cluster 13, although expressing fibroblast-associated markers, also exhibited high levels of cell cycle-related genes, such as CENPU, PCNA, and TOP2A, leading to its identification as cycling fibroblasts ( Figs."
+    }
+   ],
+   "SFRP4": [
+    {
+     "paper": "36645183",
+     "snippet": "e cell markers ( ACTA2, TAGLN, DES ), cluster 11 expressing periocular mesenchyme markers ( MGP, DCN ) and cluster 4 expressing at high level nerve associated fibroblast markers [ SFRP4 ,  PI16  ( 21 )]."
+    }
+   ],
+   "COL1A1": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    },
+    {
+     "paper": "36645183",
+     "snippet": ""
+    }
+   ],
+   "POSTN": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    },
+    {
+     "paper": "39952952",
+     "snippet": ""
+    }
+   ],
+   "CDK1": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    }
+   ],
+   "MYL9": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    },
+    {
+     "paper": "36645183",
+     "snippet": "T2B  ( 22 ) and pigmentation markers  PMEL  and  TYR  (cluster 5) as well as a ciliary muscle cluster 24, with high expression of  PAX6, WNT2B  and muscle related markers such as  MYL9, MYH11  and  DES ."
+    }
+   ],
+   "PITX2": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    },
+    {
+     "paper": "41309590",
+     "snippet": "A non-melanocytic stromal lineage was identified (NM-Str), based on the expression of  FOXC1  and  PITX2 22 – 24  (Fig."
+    }
+   ],
+   "ACTA2": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    },
+    {
+     "paper": "36645183",
+     "snippet": "The CECs (cluster 12) were easily identified by the high expression of  VWF,  whereas smooth muscle cells (clusters 10 and 14) were defined on the basis of high expression of  ACTA2 and TAGLN."
+    }
+   ],
+   "VSX1": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    },
+    {
+     "paper": "37017569",
+     "snippet": ""
+    }
+   ],
+   "HBB": [
+    {
+     "paper": "36645183",
+     "snippet": "ession of  WNT2B, TFPI2, DCT, PMEL, TYR ), ciliary muscle (characterized by expression of  ACTA2, MYH11, MYL9, WNTB2 ), red blood cells (characterized by expression of  HBG, HBA1, HBB ) and corneal epithelium (characterized by expression of  KRT12 ) was observed in some of the sa"
+    },
+    {
+     "paper": "34769520",
+     "snippet": "For example, hemoglobin genes  HBA1 ,  HBA2 , and  HBB  were among the top 25 upregulated genes in pinguecula and top 25 downregulated genes in pterygium."
+    }
+   ],
+   "TYR": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    },
+    {
+     "paper": "36645183",
+     "snippet": ""
+    }
+   ],
+   "MGP": [
+    {
+     "paper": "36645183",
+     "snippet": "ssing pericyte markers ( THY1, ITGA1, POSTN ), cluster 9 expressing typical smooth muscle cell markers ( ACTA2, TAGLN, DES ), cluster 11 expressing periocular mesenchyme markers ( MGP, DCN ) and cluster 4 expressing at high level nerve associated fibroblast markers [ SFRP4 ,  PI1"
+    },
+    {
+     "paper": "36645183",
+     "snippet": "Matrix Gla protein encoding gene ( MGP ) was also the highest differentially expressed and upregulated gene in melanocytes of AMD patients in both studies."
+    }
+   ],
+   "MLANA": [
+    {
+     "paper": "36645183",
+     "snippet": "The pigmented cell clusters were easily identified as melanocytes (cluster 8) and RPE (cluster 3) by the high expression of  MLANA  and  RPE65 , respectively ( Supplementary Material, Table S1 )."
+    },
+    {
+     "paper": "36645183",
+     "snippet": "The pigmented cells were identified as melanocytes (cluster 0 and 3) and RPE cells (cluster 11) characterized by high expression of  MLANA  and  RPE65 , respectively."
+    }
+   ],
+   "DCT": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    },
+    {
+     "paper": "40576432",
+     "snippet": "Cluster 10, exhibiting high expression of pigmentation-related genes MLANA, PMEL, and DCT, was identified as melanocytes."
+    }
+   ],
+   "HBA1": [
+    {
+     "paper": "36645183",
+     "snippet": "y expression of  WNT2B, TFPI2, DCT, PMEL, TYR ), ciliary muscle (characterized by expression of  ACTA2, MYH11, MYL9, WNTB2 ), red blood cells (characterized by expression of  HBG, HBA1, HBB ) and corneal epithelium (characterized by expression of  KRT12 ) was observed in some of "
+    },
+    {
+     "paper": "33865984",
+     "snippet": "Cluster 14 showed high expression Hemoglobin Subunit Alpha 1 ( HBA1 ) and other genes present in red blood cells ( Fig."
+    }
+   ],
+   "KRT12": [
+    {
+     "paper": "36645183",
+     "snippet": "racterized by expression of  ACTA2, MYH11, MYL9, WNTB2 ), red blood cells (characterized by expression of  HBG, HBA1, HBB ) and corneal epithelium (characterized by expression of  KRT12 ) was observed in some of the samples, but not all."
+    },
+    {
+     "paper": "36712326",
+     "snippet": "8) with the corneal epithelial CL4, CL5, and CL7 that generally had lower expression of the differentiated cell markers KRT3/KRT12."
+    }
+   ],
+   "FOXC1": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    },
+    {
+     "paper": "41309590",
+     "snippet": "A non-melanocytic stromal lineage was identified (NM-Str), based on the expression of  FOXC1  and  PITX2 22 – 24  (Fig."
+    }
+   ],
+   "ITGA1": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    }
+   ],
+   "TFPI2": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    },
+    {
+     "paper": "36645183",
+     "snippet": ""
+    }
+   ],
+   "TFAP2A": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    },
+    {
+     "paper": "37017569",
+     "snippet": "Moreover, a group of cells expressing AC‐related genes (GAD2 and TFAP2A) was observed."
+    }
+   ],
+   "PENK": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    }
+   ],
+   "DES": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    },
+    {
+     "paper": "36645183",
+     "snippet": "gmentation markers  PMEL  and  TYR  (cluster 5) as well as a ciliary muscle cluster 24, with high expression of  PAX6, WNT2B  and muscle related markers such as  MYL9, MYH11  and  DES ."
+    }
+   ],
+   "THY1": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    },
+    {
+     "paper": "42765034",
+     "snippet": "Several signaling molecules, including  THY1 ,  PDGFRA ,  EDN3 , and  ANGPT1 , were almost exclusively expressed among cluster 2 melanocytes."
+    }
+   ],
+   "MYH11": [
+    {
+     "paper": "36645183",
+     "snippet": ""
+    },
+    {
+     "paper": "36645183",
+     "snippet": "22 ) and pigmentation markers  PMEL  and  TYR  (cluster 5) as well as a ciliary muscle cluster 24, with high expression of  PAX6, WNT2B  and muscle related markers such as  MYL9, MYH11  and  DES ."
+    }
+   ],
+   "PI16": [
+    {
+     "paper": "36645183",
+     "snippet": "rkers ( ACTA2, TAGLN, DES ), cluster 11 expressing periocular mesenchyme markers ( MGP, DCN ) and cluster 4 expressing at high level nerve associated fibroblast markers [ SFRP4 ,  PI16  ( 21 )]."
+    },
+    {
+     "paper": "40778698",
+     "snippet": "Fibroblasts were further classified into distinct subpopulations, namely Fib-PI16, Fib-CXCL12, Fib-FAP, and Fib-Smooth muscle-ACTA2 ( Supplementary Fig."
+    }
+   ]
+  }
+ },
+ "red_line_check": "no candidate class name and no panel gene in this package was taken from a reference label of an evaluation volume; the reference labels appear only in the recorded reading block, which measures cost and confusion, not discovery"
+}

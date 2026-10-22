@@ -1,0 +1,68 @@
+Running as unit: run-p905066-i70250157.scope; invocation ID: 9f1e95bb3d0843afa387c2c51f007c97
+[gates] G3 interpreter dir prepended: /home/ubuntu/.conda/envs/pipeline_env/bin
+[gates] repo=/tmp/sr clean clone/EYEKB_REPO
+[gates] corpus=/home/ubuntu/RAG_SLIM_V242/literature_db/v2.4.2_2026-09_slim
+[gates] out=/tmp/sr clean clone/gate_out
+
+=================== G3 verify_repro (41-query retrieval anchor) ===================
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights:  62%|██████▏   | 243/391 [00:00<00:00, 2428.80it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 2186.22it/s]
+DB: /home/ubuntu/RAG_SLIM_V242/literature_db/v2.4.2_2026-09_slim | 242928 chunks, 6 species
+REPRO PASS: 41/41 cases with position-by-position identical top5
+------------------- G3 verify_repro (41-query retrieval anchor) rc=0 -------------------
+
+=================== G4 verify_pipeline (three byte anchors) ===================
+[g4] interpreter: /home/ubuntu/.conda/envs/pipeline_env/bin/python (python 3.10, source: contract default (rung 1))
+[g4] running pipeline (~1-2 minutes, fully offline)...
+PASS stage_a/processed.h5ad
+PASS decisions_template.csv
+PASS annotation_evidence_report.md__normalized
+
+G4 PASS: 3/3 byte-identical
+(timestamps and output paths are excluded from the criteria; everything else is byte-for-byte; see VERIFY_CONTRACT G4)
+------------------- G4 verify_pipeline (three byte anchors) rc=0 -------------------
+
+=================== G5 gate_registry (registry surface enforced) ===================
+[g5] entry-invoked gate scripts: 4 -> tests/gate_change_control.py, tests/gate_registry.py, tests/verify_pipeline.py, tests/verify_repro.py
+[g5] rows=127 gates=6 dispensed=4 checks=8 fail=0 verdict=PASS
+  PASS G5-C01 SCHEMA :: missing_columns=none; empty_required_cells=0; bad_surface_values=0 (allowed: repo, local)
+  PASS G5-C02 ID-UNIQUE :: ledger 127 rows/127 ids; inventory 6 rows/6 ids
+  PASS G5-C03 OWNER :: empty/placeholder owners: 0 (16 short-shorthand rows pass as non-empty; ledger-side criterion)
+  PASS G5-C04 REF-EXIST :: missing paths=0; dangling id refs=0; surface repo=47/local=80; local-unavailable=0 (declared local roots: /mnt/D/EyeKB)
+  PASS G5-C05 SHA-MATCH :: live-vs-registered mismatches=0; dispensed-by-ledger=4; vcs-metadata-skipped=1 (.git/** bytes depend on how the clone was checked out)
+  PASS G5-C06 LEDGER :: ledger entries=4; problems=0; stale dispensations=0
+  PASS G5-C07 UNREG-LOAD :: unregistered/mismatched gate scripts invoked by the entry: 0
+  PASS G5-C08 CERT-EXPIRY :: as_of=2026-10-12; expired declared certifications=0
+------------------- G5 gate_registry (registry surface enforced) rc=0 -------------------
+
+=================== G6 gate_change_control (eight machine rules) ===================
+[g6] changes=6 checks=21 fail=0 verdict=PASS (instance:PASS; template:PASS)
+  PASS G6-R1 REQUIRED :: [instance] empty required cells: 0
+  PASS G6-R2 EVIDENCE :: [instance] evidence cells without a resolvable anchor: 0
+  PASS G6-R3 NA :: [instance] rule-numbered NA defects: 0
+  PASS G6-R4 OUTCOME1 :: [instance] Q1 layer-id defects: 0
+  PASS G6-R5 MONOTONE :: [instance] Q3 rollback-term defects: 0
+  PASS G6-R6 PREREG :: [instance] Q4 sha-anchor defects: 0
+  PASS G6-R7 ESCAPE :: [instance] Q5 escape-door defects: 0
+  PASS G6-R8 PRECOND :: [instance] gate-precondition defects: 0
+  PASS G6-R2-CONCRETE  :: [instance] concrete-action cells without a command/threshold: 0
+  PASS G6-R2-PORTABLE  :: [instance] path anchors by rule: declared-local=5, declared-not-distributed=3, exact=78, repo-relative=44
+  PASS G6-R1 REQUIRED :: [template] empty required cells: 0
+  PASS G6-R2 EVIDENCE :: [template] evidence cells without a resolvable anchor: 0
+  PASS G6-R3 NA :: [template] rule-numbered NA defects: 0
+  PASS G6-R4 OUTCOME1 :: [template] Q1 layer-id defects: 0
+  PASS G6-R5 MONOTONE :: [template] Q3 rollback-term defects: 0
+  PASS G6-R6 PREREG :: [template] Q4 sha-anchor defects: 0
+  PASS G6-R7 ESCAPE :: [template] Q5 escape-door defects: 0
+  PASS G6-R8 PRECOND :: [template] gate-precondition defects: 0
+  PASS G6-R2-CONCRETE  :: [template] concrete-action cells without a command/threshold: 0
+  PASS G6-R2-PORTABLE  :: [template] path anchors by rule: exact=22
+  PASS G6-MAP  :: checklist rows=14; covered=14; problems=0
+------------------- G6 gate_change_control (eight machine rules) rc=0 -------------------
+
+=================== summary ===================
+  G3 verify_repro (41-query retrieval anchor)          rc=0 pass
+  G4 verify_pipeline (three byte anchors)              rc=0 pass
+  G5 gate_registry (registry surface enforced)         rc=0 pass
+  G6 gate_change_control (eight machine rules)         rc=0 pass
+  ------------------------------------------------------------
+  gates=4 failed=0  (CHAIN PASS)

@@ -1,0 +1,924 @@
+parent	parent_cl	child	child_cl	tier	reason	n_parent_panel_genes	n_child_panel_genes	n_child_positive_genes_all	demand_clusters	demand_cells	gain_clusters	gain_cells	parent_candidate_clusters	keep_clusters	loss_clusters	costly
+Cone	CL:0000573	360 nm-cone	CL:0004162	T3	never_mentioned	5	0	0	0	0	0	0	17	0	17	True
+Cone	CL:0000573	510 nm-cone	CL:0004161	T3	never_mentioned	5	0	0	0	0	0	0	17	0	17	True
+Cone	CL:0000573	L cone cell	CL:0003048	T3	spectrum_only	5	18	18	0	0	0	0	17	4	13	True
+Cone	CL:0000573	M cone cell	CL:0003049	T1k	knowledge_subdividable_only	5	24	24	0	0	0	0	17	4	13	True
+Cone	CL:0000573	S cone cell	CL:0003050	T1	available_now	5	40	49	3	3685	1	273	17	13	4	True
+Cone	CL:0000573	UV cone cell	CL:0003051	T3	never_mentioned	5	0	0	0	0	0	0	17	0	17	True
+BC	CL:0000748	GABAnergic interplexiform cell	CL:0011106	T3	never_mentioned	51	0	0	0	0	0	0	111	0	111	True
+BC	CL:0000748	OFF-bipolar cell	CL:0000750	T3	never_mentioned	51	0	0	14	7773	0	0	111	0	111	True
+BC	CL:0000748	OFFx cell	CL:4033036	T3	never_mentioned	51	0	0	3	4062	0	0	111	0	111	True
+BC	CL:0000748	ON-bipolar cell	CL:0000749	T3	never_mentioned	51	0	0	11	8583	0	0	111	0	111	True
+BC	CL:0000748	ON-blue cone bipolar cell	CL:4033019	T3	never_mentioned	51	0	0	1	2837	0	0	111	0	111	True
+BC	CL:0000748	cone retinal bipolar cell	CL:0000752	T3	never_mentioned	51	0	0	0	0	0	0	111	0	111	True
+BC	CL:0000748	diffuse bipolar 1 cell	CL:4033027	T3	outside_declared_context	51	0	0	3	6576	0	0	111	0	111	True
+BC	CL:0000748	diffuse bipolar 2 cell	CL:4033028	T2	needs_deeper_panel_genes	51	0	0	3	7496	0	0	111	0	111	True
+BC	CL:0000748	diffuse bipolar 3a cell	CL:4033029	T2	needs_deeper_panel_genes	51	0	0	5	6151	0	0	111	0	111	True
+BC	CL:0000748	diffuse bipolar 3b cell	CL:4033030	T2	needs_deeper_panel_genes	51	0	0	3	8339	0	0	111	0	111	True
+BC	CL:0000748	diffuse bipolar 4 cell	CL:4033031	T2	needs_deeper_panel_genes	51	0	0	1	3225	0	0	111	0	111	True
+BC	CL:0000748	diffuse bipolar 4a cell	CL:4033095	T2	needs_deeper_panel_genes	51	0	0	1	2274	0	0	111	0	111	True
+BC	CL:0000748	diffuse bipolar 4b cell	CL:4033096	T2	needs_deeper_panel_genes	51	0	0	0	0	0	0	111	0	111	True
+BC	CL:0000748	diffuse bipolar 5 cell	CL:4033085	T2	needs_deeper_panel_genes	51	0	0	1	1913	0	0	111	0	111	True
+BC	CL:0000748	diffuse bipolar 6 cell	CL:4033032	T2	needs_deeper_panel_genes	51	0	0	3	4367	0	0	111	0	111	True
+BC	CL:0000748	dopamanergic interplexiform cell	CL:0011105	T3	never_mentioned	51	0	0	0	0	0	0	111	0	111	True
+BC	CL:0000748	flat midget bipolar cell	CL:4033033	T2	needs_deeper_panel_genes	51	0	0	3	8959	0	0	111	0	111	True
+BC	CL:0000748	giant bipolar cell	CL:4033035	T3	never_mentioned	51	0	0	3	4322	0	0	111	0	111	True
+BC	CL:0000748	interplexiform cell	CL:0011104	T2	needs_deeper_panel_genes	51	0	0	0	0	0	0	111	0	111	True
+BC	CL:0000748	invaginating midget bipolar cell	CL:4033034	T3	never_mentioned	51	0	0	3	6563	0	0	111	0	111	True
+BC	CL:0000748	rod bipolar cell	CL:0000751	T2	needs_deeper_panel_genes	51	40	44	8	23484	0	0	111	14	97	True
+BC	CL:0000748	rod bipolar cell (sensu Mus)	CL:0008027	T3	never_mentioned	51	0	0	0	0	0	0	111	0	111	True
+BC	CL:0000748	type 1 cone bipolar cell (sensu Mus)	CL:0000753	T3	never_mentioned	51	0	0	0	0	0	0	111	0	111	True
+BC	CL:0000748	type 2 cone bipolar cell (sensu Mus)	CL:0000754	T3	never_mentioned	51	0	0	1	1232	0	0	111	0	111	True
+BC	CL:0000748	type 3 cone bipolar cell (sensu Mus)	CL:0000755	T3	never_mentioned	51	0	0	0	0	0	0	111	0	111	True
+BC	CL:0000748	type 3a cone bipolar cell	CL:0004213	T3	never_mentioned	51	0	0	2	3778	0	0	111	0	111	True
+BC	CL:0000748	type 3b cone bipolar cell	CL:0004214	T3	never_mentioned	51	0	0	1	4048	0	0	111	0	111	True
+BC	CL:0000748	type 4 cone bipolar cell (sensu Mus)	CL:0000756	T3	never_mentioned	51	0	0	1	152	0	0	111	0	111	True
+BC	CL:0000748	type 5 cone bipolar cell (sensu Mus)	CL:0000757	T2	needs_deeper_panel_genes	51	0	0	2	3497	0	0	111	0	111	True
+BC	CL:0000748	type 5a cone bipolar cell	CL:0004215	T3	never_mentioned	51	0	0	1	3705	0	0	111	0	111	True
+BC	CL:0000748	type 5b cone bipolar cell	CL:0004216	T3	never_mentioned	51	0	0	1	3892	0	0	111	0	111	True
+BC	CL:0000748	type 6 cone bipolar cell (sensu Mus)	CL:0000758	T3	never_mentioned	51	0	0	1	3717	0	0	111	0	111	True
+BC	CL:0000748	type 7 cone bipolar cell (sensu Mus)	CL:0000759	T3	never_mentioned	51	0	0	1	3717	0	0	111	0	111	True
+BC	CL:0000748	type 8 cone bipolar cell (sensu Mus)	CL:0000760	T3	never_mentioned	51	0	0	1	2818	0	0	111	0	111	True
+BC	CL:0000748	type 9 cone bipolar cell (sensu Mus)	CL:0000761	T3	never_mentioned	51	0	0	1	2830	0	0	111	0	111	True
+AC	CL:0000561	A2 amacrine cell	CL:0004219	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	A2-like amacrine cell	CL:0004229	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	AB broad diffuse-1 amacrine cell	CL:0004235	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	AB broad diffuse-2 amacrine cell	CL:0004236	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	AB diffuse-1 amacrine cell	CL:0004223	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	AB diffuse-2 amacrine cell	CL:0004224	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	DAPI-3 amacrine cell	CL:0004233	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	GABAergic amacrine cell	CL:4030027	T3	never_mentioned	49	0	0	17	19900	0	0	70	0	70	True
+AC	CL:0000561	WF1 amacrine cell	CL:0004240	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	WF2 amacrine cell	CL:0004241	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	WF3-1 amacrine cell	CL:0004242	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	WF3-2 amacrine cell	CL:0004243	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	WF4 amacrine cell	CL:0004244	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	asymmetric bistratified amacrine cell	CL:0004238	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	bistratified retinal amacrine cell	CL:0004250	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	broad diffuse amacrine cell	CL:0004228	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	diffuse bistratified amacrine cell	CL:0004230	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	diffuse multistratified amacrine cell	CL:0004234	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	displaced amacrine cell	CL:4023119	T2	needs_deeper_panel_genes	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	flag A amacrine cell	CL:0004221	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	flag B amacrine cell	CL:0004222	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	flag amacrine cell	CL:0004220	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	flat bistratified amacrine cell	CL:0004227	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	fountain amacrine cell	CL:0004237	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	glycinergic amacrine cell	CL:4030028	T1	available_now	49	6	6	17	19004	0	0	70	0	70	True
+AC	CL:0000561	glycinergic-GABAergic amacrine cell	CL:4033091	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	indoleamine-accumulating amacrine cell	CL:0004245	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	medium field retinal amacrine cell	CL:0004252	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	monostratified amacrine cell	CL:0004226	T2	needs_deeper_panel_genes	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	narrow field retinal amacrine cell	CL:0004251	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	recurving diffuse amacrine cell	CL:0004231	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	spider amacrine cell	CL:0004225	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	starburst amacrine cell	CL:0004232	T1	available_now	49	22	22	3	5062	0	0	70	1	69	True
+AC	CL:0000561	wavy bistratified amacrine cell	CL:0004239	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+AC	CL:0000561	wide field retinal amacrine cell	CL:0004253	T3	never_mentioned	49	0	0	0	0	0	0	70	0	70	True
+HC	CL:0000745	H1 horizontal cell	CL:0004217	T2	needs_deeper_panel_genes	31	1	1	3	11275	0	0	20	0	20	True
+HC	CL:0000745	H2 horizontal cell	CL:0004218	T3	never_mentioned	31	0	0	3	5468	0	0	20	0	20	True
+RGC	CL:0000740	G1 retinal ganglion cell	CL:0003002	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	G10 retinal ganglion cell	CL:0003013	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	G11 retinal ganglion cell	CL:0003014	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	G11-OFF retinal ganglion cell	CL:0003016	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	G11-ON retinal ganglion cell	CL:0003015	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	G2 retinal ganglion cell	CL:0003003	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	G3 retinal ganglion cell	CL:0003004	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	G4 retinal ganglion cell	CL:0003005	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	G4-OFF retinal ganglion cell	CL:0003007	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	G4-ON retinal ganglion cell	CL:0003006	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	G5 retinal ganglion cell	CL:0003008	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	G6 retinal ganglion cell	CL:0003009	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	G7 retinal ganglion cell	CL:0003010	T2	needs_deeper_panel_genes	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	G8 retinal ganglion cell	CL:0003011	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	G9 retinal ganglion cell	CL:0003012	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M1 retinal ganglion cell	CL:0003028	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M10 retinal ganglion cell	CL:0003043	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M11 retinal ganglion cell	CL:0003044	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M12 retinal ganglion cell	CL:0003045	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M13 retinal ganglion cell	CL:0003046	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M14 retinal ganglion cell	CL:0003047	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M2 retinal ganglion cell	CL:0003029	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M3 retinal ganglion cell	CL:0003030	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M3-OFF retinal ganglion cell	CL:0003032	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M3-ON retinal ganglion cell	CL:0003031	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M4 retinal ganglion cell	CL:0003033	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M5 retinal ganglion cell	CL:0003034	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M6 retinal ganglion cell	CL:0003035	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M7 retinal ganglion cell	CL:0003036	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M7-OFF retinal ganglion cell	CL:0003038	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M7-ON retinal ganglion cell	CL:0003037	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M8 retinal ganglion cell	CL:0003039	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M9 retinal ganglion cell	CL:0003040	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M9-OFF retinal ganglion cell	CL:0003042	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	M9-ON retinal ganglion cell	CL:0003041	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	OFF midget ganglion cell	CL:4033047	T2	needs_deeper_panel_genes	6	0	0	2	12122	0	0	19	0	19	True
+RGC	CL:0000740	OFF parasol ganglion cell	CL:4033051	T2	needs_deeper_panel_genes	6	0	0	3	4272	0	0	19	0	19	True
+RGC	CL:0000740	OFF retinal ganglion cell	CL:4023033	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	ON midget ganglion cell	CL:4033046	T2	needs_deeper_panel_genes	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	ON parasol ganglion cell	CL:4033052	T2	needs_deeper_panel_genes	6	0	0	2	4967	0	0	19	0	19	True
+RGC	CL:0000740	ON retinal ganglion cell	CL:4023032	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	alpha retinal ganglion cell (Mmus)	CL:0004117	T2	needs_deeper_panel_genes	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	alpha retinal ganglion cell OFF-sustained (Mmus)	CL:0020024	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	alpha retinal ganglion cell OFF-transient (Mmus)	CL:0020026	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	alpha retinal ganglion cell ON-sustained (Mmus)	CL:0020025	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	alpha retinal ganglion cell ON-transient (Mmus)	CL:0020027	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	bistratified retinal ganglion cell	CL:0003001	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	intrinsically photosensitive retinal ganglion cell	CL:0020014	T1	available_now	6	40	43	0	0	0	0	19	7	12	True
+RGC	CL:0000740	midget ganglion cell of retina	CL:4023188	T3	never_mentioned	6	0	0	2	8707	0	0	19	0	19	True
+RGC	CL:0000740	oRGC1	CL:0020036	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	oRGC2	CL:0020032	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	oRGC4	CL:0020041	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	oRGC5	CL:0020042	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	parasol ganglion cell of retina	CL:4023189	T2	needs_deeper_panel_genes	6	5	5	1	515	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell A1	CL:0004120	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell A2	CL:0004138	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell A2 inner	CL:0004137	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell A2 outer	CL:0004139	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell B	CL:0004115	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell B1	CL:0004119	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell B2	CL:0004121	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell B3	CL:0004183	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell B3 inner	CL:0003018	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell B3 outer	CL:0003017	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell C	CL:0004116	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell C inner	CL:0003024	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell C outer	CL:0003020	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell C1	CL:0004124	T1k	knowledge_subdividable_only	6	28	28	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell C2 inner	CL:0004125	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell C2 outer	CL:0004126	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell C3	CL:0003025	T2	needs_deeper_panel_genes	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell C4	CL:0003021	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell C5	CL:0003022	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell C6	CL:0003023	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell D1	CL:0003026	T3	never_mentioned	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	retinal ganglion cell D2	CL:0003027	T2	needs_deeper_panel_genes	6	0	0	0	0	0	0	19	0	19	True
+RGC	CL:0000740	small bistratified retinal ganglion cell	CL:4033053	T2	needs_deeper_panel_genes	6	0	0	0	0	0	0	19	0	19	True
+Astro	CL:0000127	Astro-NT NN_1 Galnt15 astrocyte (Mmus)	CL:4307028	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-NT NN_1 Kcnk10 astrocyte (Mmus)	CL:4307032	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-NT NN_1 Mecom astrocyte (Mmus)	CL:4307033	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-NT NN_1 Nuf2 astrocyte (Mmus)	CL:4307030	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-NT NN_1 Six3os1 astrocyte (Mmus)	CL:4307031	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-NT NN_1 Slc36a2 astrocyte (Mmus)	CL:4307029	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-NT NN_1 astrocyte (Mmus)	CL:4301589	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-NT NN_2 Fam227b astrocyte (Mmus)	CL:4307036	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-NT NN_2 Fzd2 astrocyte (Mmus)	CL:4307034	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-NT NN_2 Gm30524 astrocyte (Mmus)	CL:4307037	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-NT NN_2 Sez6l astrocyte (Mmus)	CL:4307035	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-NT NN_2 astrocyte (Mmus)	CL:4301590	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-OLF NN_1 Greb1 astrocyte (Mmus)	CL:4307051	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-OLF NN_1 Stk32a astrocyte (Mmus)	CL:4307052	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-OLF NN_1 astrocyte (Mmus)	CL:4301596	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-OLF NN_2 Alk astrocyte (Mmus)	CL:4307054	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-OLF NN_2 Slc25a34 astrocyte (Mmus)	CL:4307053	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-OLF NN_2 astrocyte (Mmus)	CL:4301597	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-OLF NN_3 Ecrg4 astrocyte (Mmus)	CL:4307055	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-OLF NN_3 Sfrp1 astrocyte (Mmus)	CL:4307056	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-OLF NN_3 astrocyte (Mmus)	CL:4301598	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_1 Jph4 astrocyte (Mmus)	CL:4307041	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_1 Lncpint astrocyte (Mmus)	CL:4307040	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_1 Myoc astrocyte (Mmus)	CL:4307038	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_1 Rasl10b astrocyte (Mmus)	CL:4307039	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_1 astrocyte (Mmus)	CL:4301591	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_2 Clstn2 astrocyte (Mmus)	CL:4307042	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_2 Mcm6 astrocyte (Mmus)	CL:4307043	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_2 astrocyte (Mmus)	CL:4301592	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_3 Crym astrocyte (Mmus)	CL:4307047	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_3 Cxcl5 astrocyte (Mmus)	CL:4307044	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_3 Fam163a astrocyte (Mmus)	CL:4307045	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_3 Zic4 astrocyte (Mmus)	CL:4307046	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_3 astrocyte (Mmus)	CL:4301593	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_4 astrocyte (Mmus)	CL:4307048	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_5 Adamts18 astrocyte (Mmus)	CL:4307050	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_5 Hs3st3a1 astrocyte (Mmus)	CL:4307049	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	Astro-TE NN_5 astrocyte (Mmus)	CL:4301595	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	astrocyte of cerebrum (Mmus)	CL:4300359	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	fibrous astrocyte	CL:4042008	T2	needs_deeper_panel_genes	6	1	1	0	0	0	0	8	0	8	True
+Astro	CL:0000127	immature astrocyte	CL:0002626	T2	needs_deeper_panel_genes	6	1	1	0	0	0	0	8	0	8	True
+Astro	CL:0000127	mature astrocyte	CL:0002627	T3	spectrum_only	6	2	2	0	0	0	0	8	0	8	True
+Astro	CL:0000127	olfactory areas astrocyte (Mmus)	CL:4300360	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Astro	CL:0000127	retinal astrocyte	CL:4033015	T1	available_now	6	12	12	2	2708	0	0	8	0	8	True
+Astro	CL:0000127	subcortical astrocyte (Mmus)	CL:4300358	T3	never_mentioned	6	0	0	0	0	0	0	8	0	8	True
+Micro	CL:0000129	immature microglial cell	CL:0002628	T2	needs_deeper_panel_genes	15	9	9	0	0	0	0	2	1	1	True
+Micro	CL:0000129	microglial cell (Mmus)	CL:4307132	T3	never_mentioned	15	0	0	0	0	0	0	2	0	2	True
+Endo	CL:0000115	adipose microvascular endothelial cell	CL:2000072	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	alveolar capillary type 1 endothelial cell	CL:4028002	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	alveolar capillary type 2 endothelial cell	CL:4028003	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	aortic endothelial cell	CL:0002544	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	arcuate artery endothelial cell	CL:1001213	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	bladder microvascular endothelial cell	CL:2000040	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	blood vessel endothelial cell	CL:0000071	T2	needs_deeper_panel_genes	25	0	0	7	23948	0	0	29	0	29	True
+Endo	CL:0000115	brain microvascular endothelial cell	CL:2000044	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	capillary endothelial cell	CL:0002144	excluded	already_shipped_as_own_class	25	1	1	0	0	0	0	29	0	29	True
+Endo	CL:0000115	cardiac blood vessel endothelial cell	CL:0010006	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	cardiac endothelial cell	CL:0010008	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	cerebral cortex endothelial cell	CL:1001602	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	choroid plexus capillary endothelial cell	CL:4052017	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	circulating endothelial cell	CL:0002342	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	circumventricular organ capillary endothelial cell	CL:0008053	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	colon endothelial cell	CL:1001572	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	corneal endothelial cell	CL:0000132	excluded	already_shipped_as_own_class	25	40	92	8	14652	6	12216	29	0	29	True
+Endo	CL:0000115	dermal microvascular endothelial cell	CL:0011030	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	dermis blood vessel endothelial cell	CL:2000010	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	dermis microvascular lymphatic vessel endothelial cell	CL:2000041	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endocardial cell	CL:0002350	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endocrine gland capillary endothelial cell	CL:4052015	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endometrial microvascular endothelial cell	CL:2000091	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endothelial cell of Peyer's patch	CL:1000411	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endothelial cell of artery	CL:1000413	T2	needs_deeper_panel_genes	25	0	0	1	6987	0	0	29	0	29	True
+Endo	CL:0000115	endothelial cell of coronary artery	CL:2000018	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endothelial cell of hepatic sinusoid	CL:1000398	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endothelial cell of high endothelial venule	CL:0002652	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endothelial cell of pericentral hepatic sinusoid	CL:0019022	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endothelial cell of periportal hepatic sinusoid	CL:0019021	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endothelial cell of placenta	CL:0009092	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endothelial cell of sinusoid	CL:0002262	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endothelial cell of uterus	CL:0009095	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endothelial cell of vascular tree	CL:0002139	T1	available_now	25	40	83	3	644	0	0	29	4	25	True
+Endo	CL:0000115	endothelial cell of venous sinus of red pulp of spleen	CL:1000397	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endothelial cell of venous sinus of spleen	CL:0002651	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endothelial cell of venule	CL:1000414	T3	never_mentioned	25	0	0	1	5261	0	0	29	0	29	True
+Endo	CL:0000115	endothelial cell of venule of lymph node	CL:4033000	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endothelial stalk cell	CL:0002671	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	endothelial tip cell	CL:0000704	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	fenestrated endothelial cell	CL:0000666	T2	needs_deeper_panel_genes	25	0	0	3	9456	0	0	29	0	29	True
+Endo	CL:0000115	fetal artery endothelial cell	CL:4047006	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	fibrocyte of adventitia of ureter	CL:1000308	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	glomerular capillary endothelial cell	CL:1001005	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	glomerular endothelial cell	CL:0002188	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	gut endothelial cell	CL:0000131	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	interlobulary artery endothelial cell	CL:1001216	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	intestinal villus capillary endothelial cell	CL:4052003	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	kidney capillary endothelial cell	CL:1000892	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	kidney cortex peritubular capillary cell	CL:1001124	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	kidney outer medulla peritubular capillary cell	CL:1001123	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	lung endothelial cell	CL:1001567	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	lung microvascular endothelial cell	CL:2000016	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	mammary microvascular endothelial cell	CL:2000071	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	microvascular endothelial cell	CL:2000008	T3	state_programme_only	25	15	15	0	0	0	0	29	0	29	True
+Endo	CL:0000115	ovarian microvascular endothelial cell	CL:2000065	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	pancreatic islet capillary endothelial cell	CL:4052014	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	peritubular capillary endothelial cell	CL:1001033	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	pituitary gland capillary endothelial cell	CL:4052016	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	placental villus capillary endothelial cell	CL:2000062	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	post-arteriole capillary cell	CL:4047029	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	pre-venule capillary cell	CL:4047030	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	prostate gland microvascular endothelial cell	CL:2000059	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	pulmonary artery endothelial cell	CL:1001568	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	pulmonary capillary endothelial cell	CL:4028001	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	splenic endothelial cell	CL:2000053	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	squamous endothelial cell	CL:0002653	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	squamous endothelial cell of venule	CL:0008040	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	umbilical artery endothelial cell	CL:2000052	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	ureter adventitial cell	CL:1000708	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	valve endothelial cell	CL:4030033	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo	CL:0000115	vasa recta cell	CL:1001036	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	adipose microvascular endothelial cell	CL:2000072	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	alveolar capillary type 1 endothelial cell	CL:4028002	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	alveolar capillary type 2 endothelial cell	CL:4028003	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	aortic endothelial cell	CL:0002544	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	arcuate artery endothelial cell	CL:1001213	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	bladder microvascular endothelial cell	CL:2000040	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	blood vessel endothelial cell	CL:0000071	T2	needs_deeper_panel_genes	25	0	0	7	23948	0	0	29	0	29	True
+Endo_Patho	CL:0000115	brain microvascular endothelial cell	CL:2000044	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	capillary endothelial cell	CL:0002144	excluded	already_shipped_as_own_class	25	1	1	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	cardiac blood vessel endothelial cell	CL:0010006	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	cardiac endothelial cell	CL:0010008	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	cerebral cortex endothelial cell	CL:1001602	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	choroid plexus capillary endothelial cell	CL:4052017	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	circulating endothelial cell	CL:0002342	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	circumventricular organ capillary endothelial cell	CL:0008053	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	colon endothelial cell	CL:1001572	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	corneal endothelial cell	CL:0000132	excluded	already_shipped_as_own_class	25	40	92	8	14652	6	12216	29	0	29	True
+Endo_Patho	CL:0000115	dermal microvascular endothelial cell	CL:0011030	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	dermis blood vessel endothelial cell	CL:2000010	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	dermis microvascular lymphatic vessel endothelial cell	CL:2000041	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endocardial cell	CL:0002350	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endocrine gland capillary endothelial cell	CL:4052015	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endometrial microvascular endothelial cell	CL:2000091	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial cell of Peyer's patch	CL:1000411	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial cell of artery	CL:1000413	T2	needs_deeper_panel_genes	25	0	0	1	6987	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial cell of coronary artery	CL:2000018	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial cell of hepatic sinusoid	CL:1000398	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial cell of high endothelial venule	CL:0002652	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial cell of pericentral hepatic sinusoid	CL:0019022	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial cell of periportal hepatic sinusoid	CL:0019021	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial cell of placenta	CL:0009092	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial cell of sinusoid	CL:0002262	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial cell of uterus	CL:0009095	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial cell of vascular tree	CL:0002139	T1	available_now	25	40	62	3	644	0	0	29	1	28	True
+Endo_Patho	CL:0000115	endothelial cell of venous sinus of red pulp of spleen	CL:1000397	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial cell of venous sinus of spleen	CL:0002651	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial cell of venule	CL:1000414	T3	never_mentioned	25	0	0	1	5261	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial cell of venule of lymph node	CL:4033000	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial stalk cell	CL:0002671	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	endothelial tip cell	CL:0000704	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	fenestrated endothelial cell	CL:0000666	T2	needs_deeper_panel_genes	25	0	0	3	9456	0	0	29	0	29	True
+Endo_Patho	CL:0000115	fetal artery endothelial cell	CL:4047006	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	fibrocyte of adventitia of ureter	CL:1000308	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	glomerular capillary endothelial cell	CL:1001005	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	glomerular endothelial cell	CL:0002188	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	gut endothelial cell	CL:0000131	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	interlobulary artery endothelial cell	CL:1001216	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	intestinal villus capillary endothelial cell	CL:4052003	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	kidney capillary endothelial cell	CL:1000892	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	kidney cortex peritubular capillary cell	CL:1001124	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	kidney outer medulla peritubular capillary cell	CL:1001123	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	lung endothelial cell	CL:1001567	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	lung microvascular endothelial cell	CL:2000016	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	mammary microvascular endothelial cell	CL:2000071	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	microvascular endothelial cell	CL:2000008	T2	needs_wider_window	25	15	15	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	ovarian microvascular endothelial cell	CL:2000065	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	pancreatic islet capillary endothelial cell	CL:4052014	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	peritubular capillary endothelial cell	CL:1001033	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	pituitary gland capillary endothelial cell	CL:4052016	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	placental villus capillary endothelial cell	CL:2000062	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	post-arteriole capillary cell	CL:4047029	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	pre-venule capillary cell	CL:4047030	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	prostate gland microvascular endothelial cell	CL:2000059	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	pulmonary artery endothelial cell	CL:1001568	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	pulmonary capillary endothelial cell	CL:4028001	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	splenic endothelial cell	CL:2000053	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	squamous endothelial cell	CL:0002653	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	squamous endothelial cell of venule	CL:0008040	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	umbilical artery endothelial cell	CL:2000052	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	ureter adventitial cell	CL:1000708	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	valve endothelial cell	CL:4030033	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Patho	CL:0000115	vasa recta cell	CL:1001036	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Pericyte	CL:0000669	angiogenic pericyte	CL:4047012	T2	needs_deeper_panel_genes	14	0	0	0	0	0	0	21	0	21	True
+Pericyte	CL:0000669	decidual pericyte	CL:0008033	T3	never_mentioned	14	0	0	0	0	0	0	21	0	21	True
+Pericyte	CL:0000669	immature pericyte	CL:4047007	T3	never_mentioned	14	0	0	0	0	0	0	21	0	21	True
+Pericyte	CL:0000669	lung pericyte	CL:0009089	T3	outside_declared_context	14	0	0	0	0	0	0	21	0	21	True
+Pericyte	CL:0000669	placental pericyte	CL:2000078	T2	needs_deeper_panel_genes	14	0	0	0	0	0	0	21	0	21	True
+Pericyte	CL:0000669	secretory pericyte	CL:4047032	T3	never_mentioned	14	0	0	0	0	0	0	21	0	21	True
+SMC	CL:0000192	bronchial smooth muscle cell	CL:0002598	T3	never_mentioned	8	0	0	0	0	0	0	11	0	11	True
+SMC	CL:0000192	bronchiolar smooth muscle cell	CL:4033017	T3	never_mentioned	8	0	0	0	0	0	0	11	0	11	True
+SMC	CL:0000192	fallopian tube smooth muscle cell	CL:4052022	T3	never_mentioned	8	0	0	0	0	0	0	11	0	11	True
+SMC	CL:0000192	kidney granular cell	CL:0000648	T3	never_mentioned	8	0	0	0	0	0	0	11	0	11	True
+SMC	CL:0000192	smooth muscle cell of placenta	CL:0009093	T3	never_mentioned	8	0	0	0	0	0	0	11	0	11	True
+SMC	CL:0000192	smooth muscle cell of stomach	CL:4047034	T3	never_mentioned	8	0	0	0	0	0	0	11	0	11	True
+SMC	CL:0000192	smooth muscle cell of trachea	CL:0002600	T3	never_mentioned	8	0	0	0	0	0	0	11	0	11	True
+SMC	CL:0000192	smooth muscle circular layer cell	CL:4047040	T3	never_mentioned	8	0	0	0	0	0	0	11	0	11	True
+SMC	CL:0000192	stomach smooth muscle circular layer cell	CL:4047036	T3	never_mentioned	8	0	0	0	0	0	0	11	0	11	True
+SMC	CL:0000192	stomach smooth muscle inner oblique layer cell	CL:4047037	T3	never_mentioned	8	0	0	0	0	0	0	11	0	11	True
+SMC	CL:0000192	stomach smooth muscle outer longitudinal layer cell	CL:4047035	T3	never_mentioned	8	0	0	0	0	0	0	11	0	11	True
+SMC	CL:0000192	tracheobronchial smooth muscle cell	CL:0019019	T3	never_mentioned	8	0	0	0	0	0	0	11	0	11	True
+Fibroblast	CL:0000057	ABC NN_1 Cubn arachnoid barrier cell (Mmus)	CL:4307115	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	ABC NN_1 Dapl1 arachnoid barrier cell (Mmus)	CL:4307114	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	ABC NN_1 Pde11a arachnoid barrier cell (Mmus)	CL:4307113	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	B cell zone reticular cell	CL:0009104	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	T cell zone reticular cell	CL:0009105	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	VLMC NN vascular leptomeningeal cell (Mmus)	CL:4300370	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	adventitial fibroblast	CL:4052030	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	arachnoid barrier cell	CL:4023097	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	arachnoid barrier cell (Mmus)	CL:4301616	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	brown preadipocyte	CL:0002335	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	crypt-bottom fibroblast	CL:4052008	T2	needs_deeper_panel_genes	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	crypt-top fibroblast	CL:4052009	T2	needs_deeper_panel_genes	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	embryonic fibroblast	CL:2000042	T1k	knowledge_subdividable_only	15	20	20	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	fibroblast of breast	CL:4006000	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	fibroblast of connective tissue of glandular part of prostate	CL:1000305	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	fibroblast of connective tissue of nonglandular part of prostate	CL:1000304	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	fibroblast of connective tissue of prostate	CL:1000299	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	fibroblast of dense regular elastic tissue	CL:1000307	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	fibroblast of outer membrane of prostatic capsule	CL:1000300	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	fibroblast of subepithelial connective tissue of prostatic gland	CL:1000301	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	fibroblast of the conjunctiva	CL:0002550	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	fibroblast of tunica adventitia of artery	CL:1000306	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	fibroblast of villous mesenchyme	CL:0002558	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	fibroblastic reticular cell	CL:0009101	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	gallbladder fibroblast	CL:2000069	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	hepatic portal fibroblast	CL:0009100	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	hepatic stellate cell	CL:0000632	T2	needs_deeper_panel_genes	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	intestinal fibroblastic reticular cell	CL:4052004	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	intestinal lamina propria fibroblast	CL:4047023	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	intestinal subserosal fibroblast	CL:4052005	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	keratocyte	CL:0002363	excluded	already_shipped_as_own_class	15	40	119	3	11836	0	0	20	9	11	True
+Fibroblast	CL:0000057	kidney interstitial fibroblast	CL:1000692	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	lung perichondrial fibroblast	CL:4033026	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	lymph node fibroblastic reticular cell	CL:0009102	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	lymph node marginal reticular cell	CL:0009103	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	marrow fibroblast	CL:0002240	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	medullary reticular cell	CL:0009106	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	mesothelial fibroblast	CL:4023054	T2	needs_deeper_panel_genes	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	mesothelial fibroblast of the leptomeninx	CL:4023058	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	muscle fibroblast	CL:1001609	T2	needs_deeper_panel_genes	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	neural crest derived fibroblast	CL:0000005	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	optic choroid fibroblast	CL:2000070	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	ovarian fibroblast	CL:2000063	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	pancreatic stellate cell	CL:0002410	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	pericardium fibroblast	CL:2000068	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	perichondrial fibroblast	CL:4033025	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	periductal fibroblast of salivary gland	CL:0020061	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	perijunctional fibroblast	CL:0000688	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	preadipocyte	CL:0002334	T2	needs_deeper_panel_genes	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	preadipocyte of the breast	CL:0002580	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	quiescent fibroblast	CL:4052071	T2	needs_deeper_panel_genes	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	renal cortical fibroblast	CL:4030025	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	renal medullary fibroblast	CL:4030022	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	reticular cell	CL:0000432	T2	needs_deeper_panel_genes	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	reticular cell of splenic cord	CL:1000489	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	skeletal muscle fibroblast	CL:0011027	T2	needs_deeper_panel_genes	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	splenic fibroblast	CL:2000051	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	subepithelial intestinal fibroblast	CL:4052007	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	tendon cell	CL:0000388	T2	needs_deeper_panel_genes	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	thymic fibroblast type 1	CL:0009078	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	thymic fibroblast type 2	CL:0009079	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	vascular leptomeningeal cell	CL:4023051	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	vascular leptomeningeal cell (Mmus)	CL:4023056	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Fibroblast	CL:0000057	visceral preadipocyte	CL:0002582	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Myofibroblast	CL:0000186	B cell zone reticular cell	CL:0009104	T3	never_mentioned	12	0	0	0	0	0	0	6	0	6	True
+Myofibroblast	CL:0000186	T cell zone reticular cell	CL:0009105	T3	never_mentioned	12	0	0	0	0	0	0	6	0	6	True
+Myofibroblast	CL:0000186	fibroblastic reticular cell	CL:0009101	T3	never_mentioned	12	0	0	0	0	0	0	6	0	6	True
+Myofibroblast	CL:0000186	intestinal fibroblastic reticular cell	CL:4052004	T3	never_mentioned	12	0	0	0	0	0	0	6	0	6	True
+Myofibroblast	CL:0000186	kidney interstitial myofibroblast	CL:1000691	T3	never_mentioned	12	0	0	0	0	0	0	6	0	6	True
+Myofibroblast	CL:0000186	lymph node fibroblastic reticular cell	CL:0009102	T3	never_mentioned	12	0	0	0	0	0	0	6	0	6	True
+Myofibroblast	CL:0000186	lymph node marginal reticular cell	CL:0009103	T3	never_mentioned	12	0	0	0	0	0	0	6	0	6	True
+Myofibroblast	CL:0000186	medullary reticular cell	CL:0009106	T3	never_mentioned	12	0	0	0	0	0	0	6	0	6	True
+Myofibroblast	CL:0000186	secondary crest myofibroblast	CL:4033016	T3	never_mentioned	12	0	0	0	0	0	0	6	0	6	True
+Mac_Tissue	CL:0000235	CCL3-positive alveolar macrophage	CL:4033041	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_Tissue	CL:0000235	M0 macrophage	CL:0020017	T2	needs_deeper_panel_genes	38	0	0	0	0	0	0	9	0	9	True
+Mac_Tissue	CL:0000235	TCR-positive macrophage	CL:4030058	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_Tissue	CL:0000235	TREM2-positive macrophage	CL:4047053	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_Tissue	CL:0000235	alveolar macrophage	CL:0000583	T2	needs_deeper_panel_genes	38	0	0	0	0	0	0	9	0	9	True
+Mac_Tissue	CL:0000235	anorectum macrophage	CL:0009048	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_Tissue	CL:0000235	appendix macrophage	CL:0009036	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_Tissue	CL:0000235	colon macrophage	CL:0009038	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_Tissue	CL:0000235	cycling alveolar macrophage	CL:4033077	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_Tissue	CL:0000235	cycling macrophage	CL:4033076	T2	needs_deeper_panel_genes	38	0	0	0	0	0	0	9	0	9	True
+Mac_Tissue	CL:0000235	epithelioid macrophage	CL:0002150	T2	needs_deeper_panel_genes	38	0	0	0	0	0	0	9	0	9	True
+Mac_Tissue	CL:0000235	lipid-associated macrophage	CL:4033086	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_Tissue	CL:0000235	lung interstitial macrophage	CL:4033043	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_Tissue	CL:0000235	lung macrophage	CL:1001603	T2	needs_deeper_panel_genes	38	0	0	0	0	0	0	9	0	9	True
+Mac_Tissue	CL:0000235	macrophage of medullary sinus of lymph node	CL:0009047	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_Tissue	CL:0000235	metallothionein-positive alveolar macrophage	CL:4033042	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	CCL3-positive alveolar macrophage	CL:4033041	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	M0 macrophage	CL:0020017	T2	needs_deeper_panel_genes	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	TCR-positive macrophage	CL:4030058	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	TREM2-positive macrophage	CL:4047053	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	alveolar macrophage	CL:0000583	T2	needs_deeper_panel_genes	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	anorectum macrophage	CL:0009048	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	appendix macrophage	CL:0009036	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	colon macrophage	CL:0009038	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	cycling alveolar macrophage	CL:4033077	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	cycling macrophage	CL:4033076	T2	needs_deeper_panel_genes	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	epithelioid macrophage	CL:0002150	T2	needs_deeper_panel_genes	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	lipid-associated macrophage	CL:4033086	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	lung interstitial macrophage	CL:4033043	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	lung macrophage	CL:1001603	T2	needs_deeper_panel_genes	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	macrophage of medullary sinus of lymph node	CL:0009047	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Mac_DAM_LAM	CL:0000235	metallothionein-positive alveolar macrophage	CL:4033042	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Microglia	CL:0000129	immature microglial cell	CL:0002628	T2	needs_deeper_panel_genes	15	10	10	0	0	0	0	2	1	1	True
+Microglia	CL:0000129	microglial cell (Mmus)	CL:4307132	T3	never_mentioned	15	0	0	0	0	0	0	2	0	2	True
+pDC	CL:0000784	CD141-positive myeloid dendritic cell	CL:0002394	T3	never_mentioned	9	0	0	0	0	0	0	3	0	3	True
+pDC	CL:0000784	plasmacytoid dendritic cell, human	CL:0001058	T2	needs_deeper_panel_genes	9	1	1	0	0	0	0	3	0	3	True
+T	CL:0000084	T cell of anorectum	CL:0009051	T3	never_mentioned	11	0	0	0	0	0	0	15	0	15	True
+T	CL:0000084	T cell of appendix	CL:0009031	T3	never_mentioned	11	0	0	0	0	0	0	15	0	15	True
+T	CL:0000084	T cell of medullary sinus of lymph node	CL:0009046	T3	never_mentioned	11	0	0	0	0	0	0	15	0	15	True
+T	CL:0000084	cycling CD4-positive, alpha-beta T cell	CL:4033075	T3	never_mentioned	11	0	0	0	0	0	0	15	0	15	True
+T	CL:0000084	cycling CD8-positive, alpha-beta T cell	CL:4033074	T3	never_mentioned	11	0	0	0	0	0	0	15	0	15	True
+T	CL:0000084	cycling T cell	CL:4033069	T3	outside_declared_context	11	0	0	0	0	0	0	15	0	15	True
+T	CL:0000084	cycling gamma-delta T cell	CL:4033072	T3	never_mentioned	11	0	0	0	0	0	0	15	0	15	True
+T	CL:0000084	lymph node paracortex T cell	CL:0009064	T3	never_mentioned	11	0	0	0	0	0	0	15	0	15	True
+NK	CL:0000623	CD11b-positive, CD27-positive natural killer cell, mouse	CL:0002426	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	CD16-negative, CD56-bright natural killer cell, human	CL:0000938	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	CD16-positive, CD56-dim natural killer cell, human	CL:0000939	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	CD27-high, CD11b-high natural killer cell, mouse	CL:0002347	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	CD27-high, CD11b-low natural killer cell, mouse	CL:0002349	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	CD27-low, CD11b-high natural killer cell, mouse	CL:0002348	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	CD27-low, CD11b-low immature natural killer cell, mouse	CL:0002345	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	CD56-negative, CD161-positive immature natural killer cell, human	CL:0002344	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	CD56-positive, CD161-positive immature natural killer cell, human	CL:0002338	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	CD94-negative natural killer cell, mouse	CL:0002447	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	CD94-negative, Ly49CI-negative natural killer cell, mouse	CL:0002442	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	CD94-positive Ly49CI-positive natural killer cell, mouse	CL:0002449	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	CD94-positive natural killer cell, mouse	CL:0002441	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	Dx5-negative, NK1.1-positive immature natural killer cell, mouse	CL:0002346	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	Ly49CI-negative natural killer cell, mouse	CL:0002446	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	Ly49CI-positive natural killer cell, mouse	CL:0002443	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	Ly49D-negative natural killer cell, mouse	CL:0002445	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	Ly49D-positive natural killer cell, mouse	CL:0002440	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	Ly49H-negative natural killer cell, mouse	CL:0002448	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	Ly49H-positive natural killer cell, mouse	CL:0002444	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	NK1.1-positive natural killer cell, mouse	CL:0002438	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	NKGA2-positive natural killer cell, mouse	CL:0002439	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	cycling natural killer cell	CL:4033071	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	decidual natural killer cell, human	CL:0002343	T3	outside_declared_context	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	hepatic pit cell	CL:2000054	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	immature natural killer cell	CL:0000823	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	liver-resident natural killer cell	CL:4047101	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	mature natural killer cell	CL:0000824	T3	outside_declared_context	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	pre-natural killer cell	CL:0000937	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	uterine natural killer cell	CL:4052028	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	uterine natural killer cell 1, human	CL:4052051	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	uterine natural killer cell 2, human	CL:4052052	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+NK	CL:0000623	uterine natural killer cell 3, human	CL:4052053	T3	never_mentioned	7	0	0	0	0	0	0	2	0	2	True
+B	CL:0000236	B cell of anorectum	CL:0009050	T3	never_mentioned	7	0	0	0	0	0	0	5	0	5	True
+B	CL:0000236	B cell of appendix	CL:0009032	T3	never_mentioned	7	0	0	0	0	0	0	5	0	5	True
+B	CL:0000236	B cell of medullary sinus of lymph node	CL:0009045	T3	never_mentioned	7	0	0	0	0	0	0	5	0	5	True
+B	CL:0000236	B cell, CD19-positive	CL:0001201	T2	needs_deeper_panel_genes	7	0	0	0	0	0	0	5	0	5	True
+B	CL:0000236	cycling B cell	CL:4033068	T3	never_mentioned	7	0	0	0	0	0	0	5	0	5	True
+B	CL:0000236	immature B cell	CL:0000816	T3	never_mentioned	7	0	0	0	0	0	0	5	0	5	True
+B	CL:0000236	lymph node mantle zone B cell	CL:0009037	T3	never_mentioned	7	0	0	0	0	0	0	5	0	5	True
+B	CL:0000236	monocytoid B cell	CL:0009114	T3	never_mentioned	7	0	0	0	0	0	0	5	0	5	True
+Plasma	CL:0000786	cycling plasma cell	CL:4047003	T3	never_mentioned	9	0	0	0	0	0	0	5	0	5	True
+Plasma	CL:0000786	plasma cell of appendix	CL:0009033	T3	never_mentioned	9	0	0	0	0	0	0	5	0	5	True
+Plasma	CL:0000786	plasma cell of medullary sinus of lymph node	CL:0009059	T3	never_mentioned	9	0	0	0	0	0	0	5	0	5	True
+Conj_epithelium_basal	CL:1000432	conjunctiva goblet cell	CL:2000084	T3	never_mentioned	3	0	0	1	305	0	0	5	0	5	True
+Conj_epithelium_superficial	CL:1000432	conjunctiva goblet cell	CL:2000084	T3	never_mentioned	3	0	0	1	305	0	0	5	0	5	True
+Melanocyte	CL:0000148	choroidal melanocyte	CL:4030000	T2	needs_deeper_panel_genes	10	0	0	0	0	0	0	29	0	29	True
+Melanocyte	CL:0000148	dark melanocyte	CL:0002566	T3	never_mentioned	10	0	0	0	0	0	0	29	0	29	True
+Melanocyte	CL:0000148	light melanocyte	CL:0002567	T3	never_mentioned	10	0	0	0	0	0	0	29	0	29	True
+Melanocyte	CL:0000148	retinal melanocyte	CL:0002485	T3	never_mentioned	10	0	0	0	0	0	0	29	0	29	True
+Schwann	CL:0002573	immature Schwann cell	CL:0002377	T3	never_mentioned	4	0	0	0	0	0	0	19	0	19	True
+Schwann	CL:0002573	myelinating Schwann cell	CL:0000218	T3	never_mentioned	4	0	0	6	8855	0	0	19	0	19	True
+Schwann	CL:0002573	non-myelinating Schwann cell	CL:0002376	T3	never_mentioned	4	0	0	3	10914	0	0	19	0	19	True
+Schwann	CL:0002573	terminal Schwann cell	CL:0000692	T3	never_mentioned	4	0	0	0	0	0	0	19	0	19	True
+Conj_epithelium_suprabasal	CL:1000432	conjunctiva goblet cell	CL:2000084	T3	never_mentioned	3	0	0	1	305	0	0	5	0	5	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	ABC NN_1 Cubn arachnoid barrier cell (Mmus)	CL:4307115	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	ABC NN_1 Dapl1 arachnoid barrier cell (Mmus)	CL:4307114	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	ABC NN_1 Pde11a arachnoid barrier cell (Mmus)	CL:4307113	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	B cell zone reticular cell	CL:0009104	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	T cell zone reticular cell	CL:0009105	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	VLMC NN vascular leptomeningeal cell (Mmus)	CL:4300370	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	adventitial fibroblast	CL:4052030	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	arachnoid barrier cell	CL:4023097	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	arachnoid barrier cell (Mmus)	CL:4301616	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	brown preadipocyte	CL:0002335	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	crypt-bottom fibroblast	CL:4052008	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	crypt-top fibroblast	CL:4052009	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	embryonic fibroblast	CL:2000042	T2	needs_deeper_panel_genes	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	fibroblast of breast	CL:4006000	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	fibroblast of connective tissue of glandular part of prostate	CL:1000305	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	fibroblast of connective tissue of nonglandular part of prostate	CL:1000304	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	fibroblast of connective tissue of prostate	CL:1000299	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	fibroblast of dense regular elastic tissue	CL:1000307	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	fibroblast of outer membrane of prostatic capsule	CL:1000300	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	fibroblast of subepithelial connective tissue of prostatic gland	CL:1000301	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	fibroblast of the conjunctiva	CL:0002550	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	fibroblast of tunica adventitia of artery	CL:1000306	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	fibroblast of villous mesenchyme	CL:0002558	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	fibroblastic reticular cell	CL:0009101	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	gallbladder fibroblast	CL:2000069	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	hepatic portal fibroblast	CL:0009100	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	hepatic stellate cell	CL:0000632	T2	needs_deeper_panel_genes	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	intestinal fibroblastic reticular cell	CL:4052004	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	intestinal lamina propria fibroblast	CL:4047023	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	intestinal subserosal fibroblast	CL:4052005	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	keratocyte	CL:0002363	excluded	already_shipped_as_own_class	15	40	119	3	11836	0	0	20	9	11	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	kidney interstitial fibroblast	CL:1000692	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	lung perichondrial fibroblast	CL:4033026	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	lymph node fibroblastic reticular cell	CL:0009102	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	lymph node marginal reticular cell	CL:0009103	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	marrow fibroblast	CL:0002240	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	medullary reticular cell	CL:0009106	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	mesothelial fibroblast	CL:4023054	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	mesothelial fibroblast of the leptomeninx	CL:4023058	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	muscle fibroblast	CL:1001609	T2	needs_deeper_panel_genes	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	neural crest derived fibroblast	CL:0000005	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	optic choroid fibroblast	CL:2000070	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	ovarian fibroblast	CL:2000063	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	pancreatic stellate cell	CL:0002410	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	pericardium fibroblast	CL:2000068	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	perichondrial fibroblast	CL:4033025	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	periductal fibroblast of salivary gland	CL:0020061	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	perijunctional fibroblast	CL:0000688	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	preadipocyte	CL:0002334	T2	needs_deeper_panel_genes	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	preadipocyte of the breast	CL:0002580	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	quiescent fibroblast	CL:4052071	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	renal cortical fibroblast	CL:4030025	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	renal medullary fibroblast	CL:4030022	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	reticular cell	CL:0000432	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	reticular cell of splenic cord	CL:1000489	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	skeletal muscle fibroblast	CL:0011027	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	splenic fibroblast	CL:2000051	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	subepithelial intestinal fibroblast	CL:4052007	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	tendon cell	CL:0000388	T2	needs_deeper_panel_genes	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	thymic fibroblast type 1	CL:0009078	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	thymic fibroblast type 2	CL:0009079	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	vascular leptomeningeal cell	CL:4023051	T3	outside_declared_context	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	vascular leptomeningeal cell (Mmus)	CL:4023056	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Limbus_Sclera_fibroblast_C1	CL:0000057	visceral preadipocyte	CL:0002582	T3	never_mentioned	15	0	0	0	0	0	0	20	0	20	True
+Lacrimal_myoepithelial	CL:0000185	basal-myoepithelial cell of mammary gland	CL:0002324	excluded	system_axis_organoid_or_ipsc	0	40	592	0	0	0	0	0	0	0	False
+Lacrimal_myoepithelial	CL:0000185	myoepithelial cell of acinus of lactiferous gland	CL:1000468	excluded	system_axis_organoid_or_ipsc	0	0	0	0	0	0	0	0	0	0	False
+Lacrimal_myoepithelial	CL:0000185	myoepithelial cell of bronchus submucosal gland	CL:4033003	excluded	system_axis_organoid_or_ipsc	0	0	0	0	0	0	0	0	0	0	False
+Lacrimal_myoepithelial	CL:0000185	myoepithelial cell of intralobular lactiferous duct	CL:1000394	excluded	system_axis_organoid_or_ipsc	0	0	0	0	0	0	0	0	0	0	False
+Lacrimal_myoepithelial	CL:0000185	myoepithelial cell of lactiferous alveolus	CL:1000418	excluded	system_axis_organoid_or_ipsc	0	0	0	0	0	0	0	0	0	0	False
+Lacrimal_myoepithelial	CL:0000185	myoepithelial cell of lactiferous duct	CL:1000419	excluded	system_axis_organoid_or_ipsc	0	0	0	0	0	0	0	0	0	0	False
+Lacrimal_myoepithelial	CL:0000185	myoepithelial cell of main lactiferous duct	CL:1000469	excluded	system_axis_organoid_or_ipsc	0	0	0	0	0	0	0	0	0	0	False
+Lacrimal_myoepithelial	CL:0000185	myoepithelial cell of primary lactiferous duct	CL:1000470	excluded	system_axis_organoid_or_ipsc	0	0	0	0	0	0	0	0	0	0	False
+Lacrimal_myoepithelial	CL:0000185	myoepithelial cell of quarternary lactiferous duct	CL:1000473	excluded	system_axis_organoid_or_ipsc	0	0	0	0	0	0	0	0	0	0	False
+Lacrimal_myoepithelial	CL:0000185	myoepithelial cell of salivary gland	CL:0020066	excluded	system_axis_organoid_or_ipsc	0	0	0	0	0	0	0	0	0	0	False
+Lacrimal_myoepithelial	CL:0000185	myoepithelial cell of secondary lactiferous duct	CL:1000471	excluded	system_axis_organoid_or_ipsc	0	0	0	0	0	0	0	0	0	0	False
+Lacrimal_myoepithelial	CL:0000185	myoepithelial cell of terminal lactiferous duct	CL:1000420	excluded	system_axis_organoid_or_ipsc	0	0	0	0	0	0	0	0	0	0	False
+Lacrimal_myoepithelial	CL:0000185	myoepithelial cell of tertiary lactiferous duct	CL:1000472	excluded	system_axis_organoid_or_ipsc	0	0	0	0	0	0	0	0	0	0	False
+Lacrimal_myoepithelial	CL:0000185	myoepithelial cell of trachea gland	CL:4033021	excluded	system_axis_organoid_or_ipsc	0	0	0	0	0	0	0	0	0	0	False
+Endo_Arterial	CL:0000115	adipose microvascular endothelial cell	CL:2000072	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	alveolar capillary type 1 endothelial cell	CL:4028002	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	alveolar capillary type 2 endothelial cell	CL:4028003	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	aortic endothelial cell	CL:0002544	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	arcuate artery endothelial cell	CL:1001213	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	bladder microvascular endothelial cell	CL:2000040	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	blood vessel endothelial cell	CL:0000071	T2	needs_deeper_panel_genes	25	0	0	7	23948	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	brain microvascular endothelial cell	CL:2000044	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	capillary endothelial cell	CL:0002144	excluded	already_shipped_as_own_class	25	1	1	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	cardiac blood vessel endothelial cell	CL:0010006	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	cardiac endothelial cell	CL:0010008	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	cerebral cortex endothelial cell	CL:1001602	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	choroid plexus capillary endothelial cell	CL:4052017	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	circulating endothelial cell	CL:0002342	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	circumventricular organ capillary endothelial cell	CL:0008053	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	colon endothelial cell	CL:1001572	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	corneal endothelial cell	CL:0000132	excluded	already_shipped_as_own_class	25	10	10	8	14652	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	dermal microvascular endothelial cell	CL:0011030	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	dermis blood vessel endothelial cell	CL:2000010	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	dermis microvascular lymphatic vessel endothelial cell	CL:2000041	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endocardial cell	CL:0002350	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endocrine gland capillary endothelial cell	CL:4052015	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endometrial microvascular endothelial cell	CL:2000091	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial cell of Peyer's patch	CL:1000411	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial cell of artery	CL:1000413	T2	needs_deeper_panel_genes	25	0	0	1	6987	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial cell of coronary artery	CL:2000018	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial cell of hepatic sinusoid	CL:1000398	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial cell of high endothelial venule	CL:0002652	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial cell of pericentral hepatic sinusoid	CL:0019022	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial cell of periportal hepatic sinusoid	CL:0019021	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial cell of placenta	CL:0009092	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial cell of sinusoid	CL:0002262	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial cell of uterus	CL:0009095	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial cell of vascular tree	CL:0002139	T1	available_now	25	35	35	3	644	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial cell of venous sinus of red pulp of spleen	CL:1000397	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial cell of venous sinus of spleen	CL:0002651	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial cell of venule	CL:1000414	T3	never_mentioned	25	0	0	1	5261	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial cell of venule of lymph node	CL:4033000	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial stalk cell	CL:0002671	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	endothelial tip cell	CL:0000704	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	fenestrated endothelial cell	CL:0000666	T2	needs_deeper_panel_genes	25	0	0	3	9456	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	fetal artery endothelial cell	CL:4047006	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	fibrocyte of adventitia of ureter	CL:1000308	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	glomerular capillary endothelial cell	CL:1001005	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	glomerular endothelial cell	CL:0002188	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	gut endothelial cell	CL:0000131	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	interlobulary artery endothelial cell	CL:1001216	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	intestinal villus capillary endothelial cell	CL:4052003	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	kidney capillary endothelial cell	CL:1000892	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	kidney cortex peritubular capillary cell	CL:1001124	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	kidney outer medulla peritubular capillary cell	CL:1001123	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	lung endothelial cell	CL:1001567	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	lung microvascular endothelial cell	CL:2000016	T2	needs_deeper_panel_genes	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	mammary microvascular endothelial cell	CL:2000071	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	microvascular endothelial cell	CL:2000008	T2	needs_wider_window	25	15	15	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	ovarian microvascular endothelial cell	CL:2000065	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	pancreatic islet capillary endothelial cell	CL:4052014	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	peritubular capillary endothelial cell	CL:1001033	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	pituitary gland capillary endothelial cell	CL:4052016	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	placental villus capillary endothelial cell	CL:2000062	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	post-arteriole capillary cell	CL:4047029	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	pre-venule capillary cell	CL:4047030	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	prostate gland microvascular endothelial cell	CL:2000059	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	pulmonary artery endothelial cell	CL:1001568	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	pulmonary capillary endothelial cell	CL:4028001	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	splenic endothelial cell	CL:2000053	T3	outside_declared_context	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	squamous endothelial cell	CL:0002653	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	squamous endothelial cell of venule	CL:0008040	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	umbilical artery endothelial cell	CL:2000052	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	ureter adventitial cell	CL:1000708	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	valve endothelial cell	CL:4030033	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Arterial	CL:0000115	vasa recta cell	CL:1001036	T3	never_mentioned	25	0	0	0	0	0	0	29	0	29	True
+Endo_Capillary	CL:0002144	alveolar capillary type 1 endothelial cell	CL:4028002	T2	needs_deeper_panel_genes	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	alveolar capillary type 2 endothelial cell	CL:4028003	T2	needs_deeper_panel_genes	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	choroid plexus capillary endothelial cell	CL:4052017	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	circumventricular organ capillary endothelial cell	CL:0008053	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	endocrine gland capillary endothelial cell	CL:4052015	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	glomerular capillary endothelial cell	CL:1001005	T3	outside_declared_context	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	intestinal villus capillary endothelial cell	CL:4052003	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	kidney capillary endothelial cell	CL:1000892	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	kidney cortex peritubular capillary cell	CL:1001124	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	kidney outer medulla peritubular capillary cell	CL:1001123	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	pancreatic islet capillary endothelial cell	CL:4052014	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	peritubular capillary endothelial cell	CL:1001033	T3	outside_declared_context	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	pituitary gland capillary endothelial cell	CL:4052016	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	placental villus capillary endothelial cell	CL:2000062	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	post-arteriole capillary cell	CL:4047029	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	pre-venule capillary cell	CL:4047030	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Capillary	CL:0002144	pulmonary capillary endothelial cell	CL:4028001	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Venous	CL:0002543	Schlemm's canal endothelial cell	CL:4033097	T2	needs_deeper_panel_genes	4	0	0	0	0	0	0	0	0	0	False
+Endo_Venous	CL:0002543	arcuate vein endothelial cell	CL:1001220	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Venous	CL:0002543	endothelial cell of central vein of liver	CL:4033061	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Venous	CL:0002543	endothelial cell of hepatic portal vein	CL:0009094	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Venous	CL:0002543	endothelial cell of umbilical vein	CL:0002618	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Venous	CL:0002543	fetal vein endothelial cell	CL:4047011	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Venous	CL:0002543	hindlimb stylopod vein endothelial cell	CL:2000076	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Venous	CL:0002543	inner wall Schlemm's canal endothelial cell	CL:4033098	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Venous	CL:0002543	interlobulary vein endothelial cell	CL:1001223	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Venous	CL:0002543	outer wall Schlemm's canal endothelial cell	CL:4033099	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Endo_Venous	CL:0002543	vein endothelial cell of respiratory system	CL:4033008	T3	never_mentioned	4	0	0	0	0	0	0	0	0	0	False
+Macrophage	CL:0000235	CCL3-positive alveolar macrophage	CL:4033041	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Macrophage	CL:0000235	M0 macrophage	CL:0020017	T3	outside_declared_context	38	0	0	0	0	0	0	9	0	9	True
+Macrophage	CL:0000235	TCR-positive macrophage	CL:4030058	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Macrophage	CL:0000235	TREM2-positive macrophage	CL:4047053	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Macrophage	CL:0000235	alveolar macrophage	CL:0000583	T2	needs_deeper_panel_genes	38	0	0	0	0	0	0	9	0	9	True
+Macrophage	CL:0000235	anorectum macrophage	CL:0009048	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Macrophage	CL:0000235	appendix macrophage	CL:0009036	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Macrophage	CL:0000235	colon macrophage	CL:0009038	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Macrophage	CL:0000235	cycling alveolar macrophage	CL:4033077	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Macrophage	CL:0000235	cycling macrophage	CL:4033076	T2	needs_deeper_panel_genes	38	0	0	0	0	0	0	9	0	9	True
+Macrophage	CL:0000235	epithelioid macrophage	CL:0002150	T2	needs_deeper_panel_genes	38	0	0	0	0	0	0	9	0	9	True
+Macrophage	CL:0000235	lipid-associated macrophage	CL:4033086	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Macrophage	CL:0000235	lung interstitial macrophage	CL:4033043	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Macrophage	CL:0000235	lung macrophage	CL:1001603	T2	needs_deeper_panel_genes	38	0	0	0	0	0	0	9	0	9	True
+Macrophage	CL:0000235	macrophage of medullary sinus of lymph node	CL:0009047	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+Macrophage	CL:0000235	metallothionein-positive alveolar macrophage	CL:4033042	T3	never_mentioned	38	0	0	0	0	0	0	9	0	9	True
+lens epithelial cell	CL:0002224	anterior lens cell	CL:0002223	T3	outside_declared_context	30	0	0	4	7356	0	0	0	0	0	False
+lens fiber cell	CL:0011004	non-nucleated secondary lens fiber	CL:0002226	T3	never_mentioned	30	0	0	0	0	0	0	1	0	1	True
+lens fiber cell	CL:0011004	nucleated secondary lens fiber	CL:0002227	T3	never_mentioned	30	0	0	0	0	0	0	1	0	1	True
+lens fiber cell	CL:0011004	primary lens fiber	CL:0002228	T2	needs_deeper_panel_genes	30	1	1	0	0	0	0	1	0	1	True
+lens fiber cell	CL:0011004	secondary lens fiber	CL:0002225	T2	needs_deeper_panel_genes	30	0	0	1	1368	0	0	1	0	1	True
+goblet cell	CL:0000160	anorectum goblet cell	CL:0009057	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	appendix goblet cell	CL:1000327	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	bronchial goblet cell	CL:1000312	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	colon goblet cell	CL:0009039	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	conjunctiva goblet cell	CL:2000084	T3	never_mentioned	20	0	0	1	305	0	0	1	0	1	True
+goblet cell	CL:0000160	duodenal goblet cell	CL:1000324	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	gastric cardiac gland goblet cell	CL:1000314	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	gastric goblet cell	CL:1000313	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	goblet cell of epithelium of lobar bronchus	CL:4033009	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	ileal goblet cell	CL:1000326	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	intestinal villus goblet cell	CL:1000317	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	intestine goblet cell	CL:0019031	T2	needs_deeper_panel_genes	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	jejunal goblet cell	CL:1000325	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	large intestine crypt goblet cell	CL:1000321	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	large intestine goblet cell	CL:1000320	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	lung goblet cell	CL:1000143	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	nasal mucosa goblet cell	CL:0002480	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	pancreatic goblet cell	CL:1000322	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	principal gastric gland goblet cell	CL:1000315	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	pyloric gastric gland goblet cell	CL:1000323	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	respiratory tract goblet cell	CL:0002370	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	small intestine goblet cell	CL:1000495	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	tracheal goblet cell	CL:1000329	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+goblet cell	CL:0000160	tracheobronchial goblet cell	CL:0019003	T3	never_mentioned	20	0	0	0	0	0	0	1	0	1	True
+trabecular meshwork cell	CL:0002367	beam B cell, human	CL:7770006	T3	never_mentioned	30	0	0	0	0	0	0	7	0	7	True
+trabecular meshwork cell	CL:0002367	juxtacanalicular tissue cell	CL:7770002	T2	needs_deeper_panel_genes	30	0	0	0	0	0	0	7	0	7	True
+basal cell	CL:0000646	airway submucosal gland duct basal cell	CL:4033024	T3	never_mentioned	30	0	0	0	0	0	0	1	0	1	True
+basal cell	CL:0000646	basal cell of epidermis	CL:0002187	T3	never_mentioned	30	0	0	0	0	0	0	1	0	1	True
+basal cell	CL:0000646	basal cell of epithelium of bronchus	CL:1000349	T3	never_mentioned	30	0	0	0	0	0	0	1	0	1	True
+basal cell	CL:0000646	basal duct cell of salivary gland	CL:0020060	T3	never_mentioned	30	0	0	0	0	0	0	1	0	1	True
+basal cell	CL:0000646	cycling basal cell	CL:4033082	T2	needs_deeper_panel_genes	30	0	0	0	0	0	0	1	0	1	True
+basal cell	CL:0000646	limb basal cell of epidermis	CL:2000033	T3	never_mentioned	30	0	0	0	0	0	0	1	0	1	True
+basal cell	CL:0000646	respiratory basal cell	CL:0002633	T3	never_mentioned	30	0	0	0	0	0	0	1	0	1	True
+transit amplifying cell	CL:0009010	transit amplifying cell of anorectum	CL:0009056	excluded	developmental_axis	30	0	0	0	0	0	0	0	0	0	False
+transit amplifying cell	CL:0009010	transit amplifying cell of appendix	CL:0009027	excluded	developmental_axis	30	0	0	0	0	0	0	0	0	0	False
+transit amplifying cell	CL:0009010	transit amplifying cell of colon	CL:0009011	excluded	developmental_axis	30	0	0	0	0	0	0	0	0	0	False
+transit amplifying cell	CL:0009010	transit amplifying cell of gut	CL:4047017	excluded	developmental_axis	30	16	16	0	0	0	0	0	0	0	False
+transit amplifying cell	CL:0009010	transit amplifying cell of small intestine	CL:0009012	excluded	developmental_axis	30	0	0	0	0	0	0	0	0	0	False
+progenitor cell	CL:0011026	AGM hematopoietic stem cell	CL:0002360	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	BAG3-positive monocyte	CL:4047060	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	CD115-positive monocyte	CL:0001022	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	CD117-positive common myeloid progenitor OR CD217-positive common lymphoid progenitor	CL:0001030	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	CD14-low, CD16-positive monocyte	CL:0002396	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	CD14-positive monocyte	CL:0001054	excluded	developmental_axis	30	40	197	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	CD14-positive, CD16-low monocyte	CL:0001055	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	CD14-positive, CD16-negative classical monocyte	CL:0002057	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	CD14-positive, CD16-positive monocyte	CL:0002397	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	CD34-positive, CD38-positive common lymphoid progenitor	CL:0001021	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	CD34-positive, CD38-positive common myeloid progenitor	CL:0001026	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	CD34-positive, CD38-positive common myeloid progenitor OR CD34-positive, CD38-positive common lymphoid progenitor	CL:0000995	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	CD7-negative lymphoid progenitor OR granulocyte monocyte progenitor	CL:0001012	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	CD7-negative lymphoid progenitor cell	CL:0001027	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	Gr1-high classical monocyte	CL:0002395	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	Gr1-low non-classical monocyte	CL:0002058	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	Gr1-positive, CD43-positive monocyte	CL:0002398	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	Kit-positive, CD34-positive common myeloid progenitor	CL:0001023	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	Kit-positive, Sca1-positive common lymphoid progenitor	CL:0001025	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	OPC NN_1 Col27a1 oligodendrocyte precursor cell (Mmus)	CL:4307089	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	OPC NN_1 Irx2 oligodendrocyte precursor cell (Mmus)	CL:4307087	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	OPC NN_1 Mms22l oligodendrocyte precursor cell (Mmus)	CL:4307088	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	OPC NN_1 Neil3 oligodendrocyte precursor cell (Mmus)	CL:4307086	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	OPC NN_1 Rmi2 oligodendrocyte precursor cell (Mmus)	CL:4307090	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	OPC NN_2 oligodendrocyte precursor cell (Mmus)	CL:4307091	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	Schwann cell precursor	CL:0002375	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	activated skeletal muscle satellite cell	CL:0008016	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	adaxial cell	CL:0007016	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	adepithelial cell	CL:0000462	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	adult endothelial progenitor cell	CL:0002619	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	adult skeletal muscle myoblast	CL:0008017	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	angioblastic mesenchymal cell	CL:0000566	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	astrocyte-restricted precursor	CL:4042022	excluded	developmental_axis	30	1	1	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	basal cell of epidermis	CL:0002187	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	basal cell of urothelium	CL:1000486	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	cardiac mesenchymal cell	CL:0000569	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	cardiac muscle myoblast	CL:0000513	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	cardiac myoblast	CL:0010021	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	cardioblast (sensu Arthropoda)	CL:0000465	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	cerebellar granule cell precursor	CL:0002362	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	chondroblast	CL:0000058	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	circulating angiogenic cell	CL:0009088	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	circulating fibrocyte	CL:0000135	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	club cell	CL:0000158	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	colony forming unit – Hill cell	CL:0009085	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	common lymphoid progenitor	CL:0000051	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	common myeloid progenitor, CD34-positive	CL:0001059	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	cord blood hematopoietic stem cell	CL:2000095	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	cyanoblast	CL:0005005	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	cycling monocyte	CL:4033073	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	cycling neuroblast (sensu Vertebrata)	CL:4047005	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	dual-feature fallopian tube progenitor cell	CL:4052070	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	early lymphoid progenitor	CL:0000936	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	endocardial cushion cell	CL:0008022	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	endothelial colony forming cell	CL:0009090	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	epidermoblast	CL:0000464	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	erythroblast	CL:0000765	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	fast muscle myoblast	CL:0000858	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	fetal hepatobiliary progenitor cell	CL:0009013	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	fibro/adipogenic progenitor cell	CL:0009099	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	fibrochondrocyte progenitor cell	CL:0020021	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	forebrain neuroblast	CL:1000042	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	fusion competent myoblast	CL:0000621	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	ganglion mother cell	CL:0000469	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	gestational hematopoietic stem cell	CL:0002352	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	glioblast	CL:0000030	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	glioblast (sensu Nematoda and Protostomia)	CL:0000340	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	glioblast (sensu Vertebrata)	CL:0000339	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	granulocyte monocyte progenitor cell	CL:0000557	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	gut mesenchymal lymphoid tissue organizer cell	CL:0020000	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	hematopoietic stem cell	CL:0000037	excluded	developmental_axis	30	8	8	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	hepatic oval stem cell	CL:0002196	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	histoblast	CL:0000373	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	intermediate monocyte	CL:0002393	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	intestinal enteroendocrine progenitor	CL:4052006	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	iridoblast	CL:0005001	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	keratinocyte stem cell	CL:0002337	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	leucoblast	CL:0005003	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	limb basal cell of epidermis	CL:2000033	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	luminal adaptive secretory precursor cell of mammary gland	CL:4033057	excluded	developmental_axis	30	1	1	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	lymphoid lineage restricted progenitor cell	CL:0000838	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	macrophage dendritic cell progenitor	CL:0002009	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	megakaryocyte-erythroid progenitor cell	CL:0000050	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	melanoblast	CL:0000541	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	migratory cardiac neural crest cell	CL:2000073	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	migratory cranial neural crest cell	CL:0000008	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	migratory enteric neural crest cell	CL:0002607	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	migratory muscle precursor	CL:0020044	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	migratory neural crest cell	CL:0000333	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	migratory trunk neural crest cell	CL:0000011	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	monocyte	CL:0000576	excluded	developmental_axis	30	40	197	3	5622	2	648	5	0	5	True
+progenitor cell	CL:0011026	muscle founder cell	CL:0008006	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	muscle precursor cell	CL:0000680	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	myeloid lineage restricted progenitor cell	CL:0000839	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	myoblast	CL:0000056	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	nephrogenic mesenchyme stem cell	CL:0000383	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	neural crest derived neuroblast	CL:0002676	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	neural progenitor cell	CL:0011020	excluded	developmental_axis	30	18	18	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	neuroblast (sensu Vertebrata)	CL:0000031	excluded	developmental_axis	30	21	21	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	neuronal-restricted precursor	CL:4042021	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	non-terminally differentiated odontoblast	CL:0007012	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	non-terminally differentiated osteoblast	CL:0001040	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	oligodendrocyte precursor cell	CL:0002453	excluded	developmental_axis	30	4	4	3	4442	0	0	5	0	5	True
+progenitor cell	CL:0011026	oligodendrocyte precursor cell (Mmus)	CL:4300366	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	pigment erythroblast	CL:0005004	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	placental hematopoietic stem cell	CL:0002359	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	preameloblast	CL:0007000	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	precementoblast	CL:0007002	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	prechondroblast	CL:0007009	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	preodontoblast	CL:0007003	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	preosteoblast	CL:0007010	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	progenitor cell of endocrine pancreas	CL:0002351	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	progenitor cell of mammary luminal epithelium	CL:0009116	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	quiescent skeletal muscle satellite cell	CL:0008012	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	respiratory tract suprabasal cell	CL:4033048	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	skeletal muscle myoblast	CL:0000515	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	skeletal muscle satellite cell	CL:0000594	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	skeletal muscle satellite myogenic cell	CL:0008020	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	skeletal muscle satellite stem cell	CL:0008011	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	slow muscle myoblast	CL:0000857	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	smooth muscle myoblast	CL:0000514	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	somatic muscle myoblast	CL:0008018	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+progenitor cell	CL:0011026	xanthoblast	CL:0005002	excluded	developmental_axis	30	0	0	0	0	0	0	5	0	5	True
+oligodendrocyte	CL:0000128	COP NN_1 9130019P16Rik committed oligodendrocyte precursor (Mmus)	CL:4307093	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	COP NN_1 Bmp4 committed oligodendrocyte precursor (Mmus)	CL:4307095	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	COP NN_1 C1ql1 committed oligodendrocyte precursor (Mmus)	CL:4307094	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	COP NN_1 Cck committed oligodendrocyte precursor (Mmus)	CL:4307097	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	COP NN_1 Rgcc committed oligodendrocyte precursor (Mmus)	CL:4307092	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	COP NN_1 Vwc2 committed oligodendrocyte precursor (Mmus)	CL:4307096	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	MFOL NN_3 Cxcl12 myelin-forming oligodendrocyte (Mmus)	CL:4307102	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	MFOL NN_3 Il23a myelin-forming oligodendrocyte (Mmus)	CL:4307103	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	MOL NN_4 Art3 mature myelinating oligodendrocyte (Mmus)	CL:4307106	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	MOL NN_4 Il33 mature myelinating oligodendrocyte (Mmus)	CL:4307107	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	MOL NN_4 Plin3 mature myelinating oligodendrocyte (Mmus)	CL:4307104	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	MOL NN_4 Spock3 mature myelinating oligodendrocyte (Mmus)	CL:4307105	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	MOL NN_4 Sspo mature myelinating oligodendrocyte (Mmus)	CL:4307108	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	NFOL NN_2 9630013A20Rik newly formed oligodendrocyte (Mmus)	CL:4307098	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	NFOL NN_2 Dbx2 newly formed oligodendrocyte (Mmus)	CL:4307099	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	NFOL NN_2 Il23a newly formed oligodendrocyte (Mmus)	CL:4307101	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	NFOL NN_2 Rgs16 newly formed oligodendrocyte (Mmus)	CL:4307100	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	commited oligodendrocyte precursor (Mmus)	CL:4301611	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	immune oligodendroglia	CL:4042031	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	mature myelinating oligodendrocyte	CL:4072003	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	mature myelinating oligodendrocyte (Mmus)	CL:4301614	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	myelin-forming oligodendrocyte	CL:4072002	T2	needs_deeper_panel_genes	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	myelin-forming oligodendrocyte (Mmus)	CL:4301613	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	newly formed oligodendrocyte	CL:4072001	T3	outside_declared_context	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	newly formed oligodendrocyte (Mmus)	CL:4301612	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	oligodendrocyte (Mmus)	CL:4300367	T3	never_mentioned	18	0	0	0	0	0	0	1	0	1	True
+oligodendrocyte	CL:0000128	spinal cord oligodendrocyte	CL:2000025	T3	outside_declared_context	18	0	0	0	0	0	0	1	0	1	True

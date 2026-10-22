@@ -1,0 +1,141 @@
+{
+ "retina": {
+  "file": "markers_v4.1_clean.json",
+  "state": "default_on",
+  "keys": {
+   "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+  },
+  "tissues": [
+   "RPE"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "label_count": 10
+ },
+ "membrane": {
+  "file": "markers_membrane_v1.json",
+  "state": "default_on",
+  "keys": {
+   "scope": "Human eye membrane/vessel/stroma/immune four panels (PDR/RRD fibrovascular membrane and general eyeball non-retinal classes); closed v1 pending confirmation of 5th item (gap of 0 hits outside retinal 10 classes); +cornea panel (t_e1febb8e 2026-09-24)",
+   "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empi"
+  },
+  "tissues": [
+   "retina",
+   "cornea"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "label_count": 23
+ },
+ "retina_interneuron": {
+  "file": "markers_v5_retina_interneuron.json",
+  "state": "default_on",
+  "keys": {
+   "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting"
+  },
+  "tissues": [],
+  "stage": "adult",
+  "system": "in_vivo",
+  "label_count": 10
+ },
+ "retina_v6": {
+  "file": "markers_v6_retina_repair.json",
+  "state": "default_on",
+  "keys": {
+   "scope": "KB7 D1/D3: KB6 17 red entry disposition + REVCAND top-8 literature gate rewrite + RGC observation list; does not overwrite v4.1/v5/baselines/membrane frozen surfaces (consumer wiring separate card)",
+   "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+  },
+  "tissues": [],
+  "stage": "adult",
+  "system": "in_vivo",
+  "label_count": 10
+ },
+ "face_v6": {
+  "file": "markers_v6_face_increment.json",
+  "state": "default_on",
+  "keys": {
+   "scope": "KB7 B1 ocular surface entry increment (within D002 support range, zero download) + KB6b stromal 4 red-bar repair + STROMAL_WARNING data-side implementation (granularity_note); does not overwrite membrane v1 frozen surface",
+   "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+  },
+  "tissues": [],
+  "stage": "adult",
+  "system": "in_vivo",
+  "label_count": 7
+ },
+ "k9_ocs": {
+  "file": "markers_k9_ocs_increment.json",
+  "state": "default_on",
+  "keys": {
+   "scope": "KB9 ocular surface entry gap construction: Melanocyte/Schwann zero-entry supplementation + conjunctival stratification suprabasal subdivision + corneal/scleral fibroblast subdivision (partial honest negatives) + pan-immune/pan-stromal applicability repair candidates (R1/R2/R3 evidence assembly rules, entry file bodies unchanged)."
+  },
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "sclera"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "label_count": 4
+ },
+ "lacrimal_v6": {
+  "file": "markers_v6_lacrimal_increment.json",
+  "state": "registered_off",
+  "keys": {
+   "scope": "KB8 first batch lacrimal gland entries (first ocular adnexa entry). Data=GSE164403 (PMID:33730555, Cell Stem Cell 2021;28:1221; world's only human lacrimal gland proper single-cell atlas) tissue pool QC layer (n_genes>=200 ∧ pct_mt<25 ∧ total_counts>=500 → 1,076 cells; this card's caliber, paper's 916 threshold cannot be reverse-uniquified). Organoid pool only as duct-side reference, prohibited fr"
+  },
+  "tissues": [],
+  "stage": "adult",
+  "system": "organoid_or_ipsc",
+  "label_count": 3
+ },
+ "retina_v7": {
+  "file": "markers_v7_panel_increment.json",
+  "state": "registered_off",
+  "keys": {
+   "applicability": "retina_only",
+   "scope": "retina facet 补录: Endo(+分区)/Pericyte/SMC 复核/Microglia 稳态 core/Macrophage+DAM_LAM/Endo_Patho 状态轴; 不覆盖 v4.1/v5/v6/membrane/baselines 冻结面本体; 概念页(EYEKBC-*)与判读词表联动=另卡",
+   "note": "版本化发布; 台账+报告见 plans/kb10_retina_vascular_20261001/"
+  },
+  "tissues": [
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "label_count": 10
+ },
+ "retina_dev": {
+  "file": "markers_v9_dev_retina.json",
+  "state": "registered_off",
+  "keys": {
+   "applicability": "dev_exam v1 三带混池打分面（v9.1 14 条）；成人面不伤害门=KB12B 口径红案制；激活=BUILT_UNREGISTERED 后 PI 亲手勾",
+   "scope": "human fetal/developing retina precursor panel（三源合流：数据轨×文献轨×骨架轨）",
+   "species": "human",
+   "organism_stage": "fetal/developing",
+   "development_stage": "9-24w post-fertilization (early 9-13w / mid 14-17w / late 20-24w)"
+  },
+  "tissues": [
+   "retina"
+  ],
+  "stage": "fetal_developing",
+  "system": "in_vivo",
+  "label_count": 14
+ },
+ "antseg_v10": {
+  "file": "markers_v10_antseg_increment.json",
+  "state": "default_on",
+  "keys": {
+   "scope_tissues": "cornea conjunctiv ocular_surface lens iris ciliary trabecular",
+   "scope": "non-retinal ocular tissues: lens, cornea, conjunctiva, trabecular meshwork, ciliary body, iris, plus the generic stromal / immune / vascular / neural classes that were absent from the marker dictionary"
+  },
+  "tissues": [
+   "retina",
+   "conjunctiva",
+   "cornea",
+   "lens",
+   "iris"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "label_count": 16
+ }
+}

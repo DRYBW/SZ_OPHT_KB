@@ -1,0 +1,2360 @@
+[
+ {
+  "parent": "Rod",
+  "cl_id": "CL:0000604",
+  "cl_label": "retinal rod cell",
+  "libraries": [
+   "retina",
+   "retina_interneuron",
+   "retina_v6"
+  ],
+  "tissues": [
+   "RPE",
+   "optic_nerve",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "Cone",
+  "cl_id": "CL:0000573",
+  "cl_label": "retinal cone cell",
+  "libraries": [
+   "retina",
+   "retina_interneuron",
+   "retina_v6"
+  ],
+  "tissues": [
+   "RPE",
+   "optic_nerve",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 6,
+  "children": [
+   "360 nm-cone",
+   "510 nm-cone",
+   "L cone cell",
+   "M cone cell",
+   "S cone cell",
+   "UV cone cell"
+  ]
+ },
+ {
+  "parent": "BC",
+  "cl_id": "CL:0000748",
+  "cl_label": "retinal bipolar neuron",
+  "libraries": [
+   "retina",
+   "retina_interneuron",
+   "retina_v6"
+  ],
+  "tissues": [
+   "RPE",
+   "optic_nerve",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 35,
+  "children": [
+   "GABAnergic interplexiform cell",
+   "OFF-bipolar cell",
+   "OFFx cell",
+   "ON-bipolar cell",
+   "ON-blue cone bipolar cell",
+   "cone retinal bipolar cell",
+   "diffuse bipolar 1 cell",
+   "diffuse bipolar 2 cell",
+   "diffuse bipolar 3a cell",
+   "diffuse bipolar 3b cell",
+   "diffuse bipolar 4 cell",
+   "diffuse bipolar 4a cell",
+   "diffuse bipolar 4b cell",
+   "diffuse bipolar 5 cell",
+   "diffuse bipolar 6 cell",
+   "dopamanergic interplexiform cell",
+   "flat midget bipolar cell",
+   "giant bipolar cell",
+   "interplexiform cell",
+   "invaginating midget bipolar cell",
+   "rod bipolar cell",
+   "rod bipolar cell (sensu Mus)",
+   "type 1 cone bipolar cell (sensu Mus)",
+   "type 2 cone bipolar cell (sensu Mus)",
+   "type 3 cone bipolar cell (sensu Mus)",
+   "type 3a cone bipolar cell",
+   "type 3b cone bipolar cell",
+   "type 4 cone bipolar cell (sensu Mus)",
+   "type 5 cone bipolar cell (sensu Mus)",
+   "type 5a cone bipolar cell",
+   "type 5b cone bipolar cell",
+   "type 6 cone bipolar cell (sensu Mus)",
+   "type 7 cone bipolar cell (sensu Mus)",
+   "type 8 cone bipolar cell (sensu Mus)",
+   "type 9 cone bipolar cell (sensu Mus)"
+  ]
+ },
+ {
+  "parent": "AC",
+  "cl_id": "CL:0000561",
+  "cl_label": "amacrine cell",
+  "libraries": [
+   "retina",
+   "retina_interneuron",
+   "retina_v6"
+  ],
+  "tissues": [
+   "RPE",
+   "optic_nerve",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 35,
+  "children": [
+   "A2 amacrine cell",
+   "A2-like amacrine cell",
+   "AB broad diffuse-1 amacrine cell",
+   "AB broad diffuse-2 amacrine cell",
+   "AB diffuse-1 amacrine cell",
+   "AB diffuse-2 amacrine cell",
+   "DAPI-3 amacrine cell",
+   "GABAergic amacrine cell",
+   "WF1 amacrine cell",
+   "WF2 amacrine cell",
+   "WF3-1 amacrine cell",
+   "WF3-2 amacrine cell",
+   "WF4 amacrine cell",
+   "asymmetric bistratified amacrine cell",
+   "bistratified retinal amacrine cell",
+   "broad diffuse amacrine cell",
+   "diffuse bistratified amacrine cell",
+   "diffuse multistratified amacrine cell",
+   "displaced amacrine cell",
+   "flag A amacrine cell",
+   "flag B amacrine cell",
+   "flag amacrine cell",
+   "flat bistratified amacrine cell",
+   "fountain amacrine cell",
+   "glycinergic amacrine cell",
+   "glycinergic-GABAergic amacrine cell",
+   "indoleamine-accumulating amacrine cell",
+   "medium field retinal amacrine cell",
+   "monostratified amacrine cell",
+   "narrow field retinal amacrine cell",
+   "recurving diffuse amacrine cell",
+   "spider amacrine cell",
+   "starburst amacrine cell",
+   "wavy bistratified amacrine cell",
+   "wide field retinal amacrine cell"
+  ]
+ },
+ {
+  "parent": "HC",
+  "cl_id": "CL:0000745",
+  "cl_label": "retina horizontal cell",
+  "libraries": [
+   "retina",
+   "retina_interneuron",
+   "retina_v6"
+  ],
+  "tissues": [
+   "RPE",
+   "optic_nerve",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 2,
+  "children": [
+   "H1 horizontal cell",
+   "H2 horizontal cell"
+  ]
+ },
+ {
+  "parent": "RGC",
+  "cl_id": "CL:0000740",
+  "cl_label": "retinal ganglion cell",
+  "libraries": [
+   "retina",
+   "retina_interneuron",
+   "retina_v6"
+  ],
+  "tissues": [
+   "RPE",
+   "optic_nerve",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 77,
+  "children": [
+   "G1 retinal ganglion cell",
+   "G10 retinal ganglion cell",
+   "G11 retinal ganglion cell",
+   "G11-OFF retinal ganglion cell",
+   "G11-ON retinal ganglion cell",
+   "G2 retinal ganglion cell",
+   "G3 retinal ganglion cell",
+   "G4 retinal ganglion cell",
+   "G4-OFF retinal ganglion cell",
+   "G4-ON retinal ganglion cell",
+   "G5 retinal ganglion cell",
+   "G6 retinal ganglion cell",
+   "G7 retinal ganglion cell",
+   "G8 retinal ganglion cell",
+   "G9 retinal ganglion cell",
+   "M1 retinal ganglion cell",
+   "M10 retinal ganglion cell",
+   "M11 retinal ganglion cell",
+   "M12 retinal ganglion cell",
+   "M13 retinal ganglion cell",
+   "M14 retinal ganglion cell",
+   "M2 retinal ganglion cell",
+   "M3 retinal ganglion cell",
+   "M3-OFF retinal ganglion cell",
+   "M3-ON retinal ganglion cell",
+   "M4 retinal ganglion cell",
+   "M5 retinal ganglion cell",
+   "M6 retinal ganglion cell",
+   "M7 retinal ganglion cell",
+   "M7-OFF retinal ganglion cell",
+   "M7-ON retinal ganglion cell",
+   "M8 retinal ganglion cell",
+   "M9 retinal ganglion cell",
+   "M9-OFF retinal ganglion cell",
+   "M9-ON retinal ganglion cell",
+   "OFF midget ganglion cell",
+   "OFF parasol ganglion cell",
+   "OFF retinal ganglion cell",
+   "ON midget ganglion cell",
+   "ON parasol ganglion cell",
+   "ON retinal ganglion cell",
+   "alpha retinal ganglion cell (Mmus)",
+   "alpha retinal ganglion cell OFF-sustained (Mmus)",
+   "alpha retinal ganglion cell OFF-transient (Mmus)",
+   "alpha retinal ganglion cell ON-sustained (Mmus)",
+   "alpha retinal ganglion cell ON-transient (Mmus)",
+   "bistratified retinal ganglion cell",
+   "intrinsically photosensitive retinal ganglion cell",
+   "midget ganglion cell of retina",
+   "oRGC1",
+   "oRGC2",
+   "oRGC4",
+   "oRGC5",
+   "parasol ganglion cell of retina",
+   "retinal ganglion cell A1",
+   "retinal ganglion cell A2",
+   "retinal ganglion cell A2 inner",
+   "retinal ganglion cell A2 outer",
+   "retinal ganglion cell B",
+   "retinal ganglion cell B1",
+   "retinal ganglion cell B2",
+   "retinal ganglion cell B3",
+   "retinal ganglion cell B3 inner",
+   "retinal ganglion cell B3 outer",
+   "retinal ganglion cell C",
+   "retinal ganglion cell C inner",
+   "retinal ganglion cell C outer",
+   "retinal ganglion cell C1",
+   "retinal ganglion cell C2 inner",
+   "retinal ganglion cell C2 outer",
+   "retinal ganglion cell C3",
+   "retinal ganglion cell C4",
+   "retinal ganglion cell C5",
+   "retinal ganglion cell C6",
+   "retinal ganglion cell D1",
+   "retinal ganglion cell D2",
+   "small bistratified retinal ganglion cell"
+  ]
+ },
+ {
+  "parent": "MG",
+  "cl_id": "CL:0000636",
+  "cl_label": "Mueller cell",
+  "libraries": [
+   "retina",
+   "retina_interneuron",
+   "retina_v6"
+  ],
+  "tissues": [
+   "RPE",
+   "optic_nerve",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "Astro",
+  "cl_id": "CL:0000127",
+  "cl_label": "astrocyte",
+  "libraries": [
+   "retina",
+   "retina_interneuron",
+   "retina_v6"
+  ],
+  "tissues": [
+   "RPE",
+   "optic_nerve",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 45,
+  "children": [
+   "Astro-NT NN_1 Galnt15 astrocyte (Mmus)",
+   "Astro-NT NN_1 Kcnk10 astrocyte (Mmus)",
+   "Astro-NT NN_1 Mecom astrocyte (Mmus)",
+   "Astro-NT NN_1 Nuf2 astrocyte (Mmus)",
+   "Astro-NT NN_1 Six3os1 astrocyte (Mmus)",
+   "Astro-NT NN_1 Slc36a2 astrocyte (Mmus)",
+   "Astro-NT NN_1 astrocyte (Mmus)",
+   "Astro-NT NN_2 Fam227b astrocyte (Mmus)",
+   "Astro-NT NN_2 Fzd2 astrocyte (Mmus)",
+   "Astro-NT NN_2 Gm30524 astrocyte (Mmus)",
+   "Astro-NT NN_2 Sez6l astrocyte (Mmus)",
+   "Astro-NT NN_2 astrocyte (Mmus)",
+   "Astro-OLF NN_1 Greb1 astrocyte (Mmus)",
+   "Astro-OLF NN_1 Stk32a astrocyte (Mmus)",
+   "Astro-OLF NN_1 astrocyte (Mmus)",
+   "Astro-OLF NN_2 Alk astrocyte (Mmus)",
+   "Astro-OLF NN_2 Slc25a34 astrocyte (Mmus)",
+   "Astro-OLF NN_2 astrocyte (Mmus)",
+   "Astro-OLF NN_3 Ecrg4 astrocyte (Mmus)",
+   "Astro-OLF NN_3 Sfrp1 astrocyte (Mmus)",
+   "Astro-OLF NN_3 astrocyte (Mmus)",
+   "Astro-TE NN_1 Jph4 astrocyte (Mmus)",
+   "Astro-TE NN_1 Lncpint astrocyte (Mmus)",
+   "Astro-TE NN_1 Myoc astrocyte (Mmus)",
+   "Astro-TE NN_1 Rasl10b astrocyte (Mmus)",
+   "Astro-TE NN_1 astrocyte (Mmus)",
+   "Astro-TE NN_2 Clstn2 astrocyte (Mmus)",
+   "Astro-TE NN_2 Mcm6 astrocyte (Mmus)",
+   "Astro-TE NN_2 astrocyte (Mmus)",
+   "Astro-TE NN_3 Crym astrocyte (Mmus)",
+   "Astro-TE NN_3 Cxcl5 astrocyte (Mmus)",
+   "Astro-TE NN_3 Fam163a astrocyte (Mmus)",
+   "Astro-TE NN_3 Zic4 astrocyte (Mmus)",
+   "Astro-TE NN_3 astrocyte (Mmus)",
+   "Astro-TE NN_4 astrocyte (Mmus)",
+   "Astro-TE NN_5 Adamts18 astrocyte (Mmus)",
+   "Astro-TE NN_5 Hs3st3a1 astrocyte (Mmus)",
+   "Astro-TE NN_5 astrocyte (Mmus)",
+   "astrocyte of cerebrum (Mmus)",
+   "fibrous astrocyte",
+   "immature astrocyte",
+   "mature astrocyte",
+   "olfactory areas astrocyte (Mmus)",
+   "retinal astrocyte",
+   "subcortical astrocyte (Mmus)"
+  ]
+ },
+ {
+  "parent": "Micro",
+  "cl_id": "CL:0000129",
+  "cl_label": "microglial cell",
+  "libraries": [
+   "retina",
+   "retina_interneuron",
+   "retina_v6"
+  ],
+  "tissues": [
+   "RPE",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 2,
+  "children": [
+   "immature microglial cell",
+   "microglial cell (Mmus)"
+  ]
+ },
+ {
+  "parent": "RPE",
+  "cl_id": "CL:0002586",
+  "cl_label": "retinal pigment epithelial cell",
+  "libraries": [
+   "retina",
+   "retina_interneuron",
+   "retina_v6"
+  ],
+  "tissues": [
+   "RPE",
+   "optic_nerve",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "Endo",
+  "cl_id": "CL:0000115",
+  "cl_label": "endothelial cell",
+  "libraries": [
+   "membrane",
+   "retina_v7"
+  ],
+  "tissues": [
+   "ciliary_body",
+   "cornea",
+   "lacrimal_gland",
+   "ocular_surface",
+   "optic_nerve",
+   "retina",
+   "trabecular_meshwork"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 72,
+  "children": [
+   "adipose microvascular endothelial cell",
+   "alveolar capillary type 1 endothelial cell",
+   "alveolar capillary type 2 endothelial cell",
+   "aortic endothelial cell",
+   "arcuate artery endothelial cell",
+   "bladder microvascular endothelial cell",
+   "blood vessel endothelial cell",
+   "brain microvascular endothelial cell",
+   "capillary endothelial cell",
+   "cardiac blood vessel endothelial cell",
+   "cardiac endothelial cell",
+   "cerebral cortex endothelial cell",
+   "choroid plexus capillary endothelial cell",
+   "circulating endothelial cell",
+   "circumventricular organ capillary endothelial cell",
+   "colon endothelial cell",
+   "corneal endothelial cell",
+   "dermal microvascular endothelial cell",
+   "dermis blood vessel endothelial cell",
+   "dermis microvascular lymphatic vessel endothelial cell",
+   "endocardial cell",
+   "endocrine gland capillary endothelial cell",
+   "endometrial microvascular endothelial cell",
+   "endothelial cell of Peyer's patch",
+   "endothelial cell of artery",
+   "endothelial cell of coronary artery",
+   "endothelial cell of hepatic sinusoid",
+   "endothelial cell of high endothelial venule",
+   "endothelial cell of pericentral hepatic sinusoid",
+   "endothelial cell of periportal hepatic sinusoid",
+   "endothelial cell of placenta",
+   "endothelial cell of sinusoid",
+   "endothelial cell of uterus",
+   "endothelial cell of vascular tree",
+   "endothelial cell of venous sinus of red pulp of spleen",
+   "endothelial cell of venous sinus of spleen",
+   "endothelial cell of venule",
+   "endothelial cell of venule of lymph node",
+   "endothelial stalk cell",
+   "endothelial tip cell",
+   "fenestrated endothelial cell",
+   "fetal artery endothelial cell",
+   "fibrocyte of adventitia of ureter",
+   "glomerular capillary endothelial cell",
+   "glomerular endothelial cell",
+   "gut endothelial cell",
+   "interlobulary artery endothelial cell",
+   "intestinal villus capillary endothelial cell",
+   "kidney capillary endothelial cell",
+   "kidney cortex peritubular capillary cell",
+   "kidney outer medulla peritubular capillary cell",
+   "lung endothelial cell",
+   "lung microvascular endothelial cell",
+   "mammary microvascular endothelial cell",
+   "microvascular endothelial cell",
+   "ovarian microvascular endothelial cell",
+   "pancreatic islet capillary endothelial cell",
+   "peritubular capillary endothelial cell",
+   "pituitary gland capillary endothelial cell",
+   "placental villus capillary endothelial cell",
+   "post-arteriole capillary cell",
+   "pre-venule capillary cell",
+   "prostate gland microvascular endothelial cell",
+   "pulmonary artery endothelial cell",
+   "pulmonary capillary endothelial cell",
+   "splenic endothelial cell",
+   "squamous endothelial cell",
+   "squamous endothelial cell of venule",
+   "umbilical artery endothelial cell",
+   "ureter adventitial cell",
+   "valve endothelial cell",
+   "vasa recta cell"
+  ]
+ },
+ {
+  "parent": "Endo_Patho",
+  "cl_id": "CL:0000115",
+  "cl_label": "endothelial cell",
+  "libraries": [
+   "membrane",
+   "retina_v7"
+  ],
+  "tissues": [
+   "cornea",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 72,
+  "children": [
+   "adipose microvascular endothelial cell",
+   "alveolar capillary type 1 endothelial cell",
+   "alveolar capillary type 2 endothelial cell",
+   "aortic endothelial cell",
+   "arcuate artery endothelial cell",
+   "bladder microvascular endothelial cell",
+   "blood vessel endothelial cell",
+   "brain microvascular endothelial cell",
+   "capillary endothelial cell",
+   "cardiac blood vessel endothelial cell",
+   "cardiac endothelial cell",
+   "cerebral cortex endothelial cell",
+   "choroid plexus capillary endothelial cell",
+   "circulating endothelial cell",
+   "circumventricular organ capillary endothelial cell",
+   "colon endothelial cell",
+   "corneal endothelial cell",
+   "dermal microvascular endothelial cell",
+   "dermis blood vessel endothelial cell",
+   "dermis microvascular lymphatic vessel endothelial cell",
+   "endocardial cell",
+   "endocrine gland capillary endothelial cell",
+   "endometrial microvascular endothelial cell",
+   "endothelial cell of Peyer's patch",
+   "endothelial cell of artery",
+   "endothelial cell of coronary artery",
+   "endothelial cell of hepatic sinusoid",
+   "endothelial cell of high endothelial venule",
+   "endothelial cell of pericentral hepatic sinusoid",
+   "endothelial cell of periportal hepatic sinusoid",
+   "endothelial cell of placenta",
+   "endothelial cell of sinusoid",
+   "endothelial cell of uterus",
+   "endothelial cell of vascular tree",
+   "endothelial cell of venous sinus of red pulp of spleen",
+   "endothelial cell of venous sinus of spleen",
+   "endothelial cell of venule",
+   "endothelial cell of venule of lymph node",
+   "endothelial stalk cell",
+   "endothelial tip cell",
+   "fenestrated endothelial cell",
+   "fetal artery endothelial cell",
+   "fibrocyte of adventitia of ureter",
+   "glomerular capillary endothelial cell",
+   "glomerular endothelial cell",
+   "gut endothelial cell",
+   "interlobulary artery endothelial cell",
+   "intestinal villus capillary endothelial cell",
+   "kidney capillary endothelial cell",
+   "kidney cortex peritubular capillary cell",
+   "kidney outer medulla peritubular capillary cell",
+   "lung endothelial cell",
+   "lung microvascular endothelial cell",
+   "mammary microvascular endothelial cell",
+   "microvascular endothelial cell",
+   "ovarian microvascular endothelial cell",
+   "pancreatic islet capillary endothelial cell",
+   "peritubular capillary endothelial cell",
+   "pituitary gland capillary endothelial cell",
+   "placental villus capillary endothelial cell",
+   "post-arteriole capillary cell",
+   "pre-venule capillary cell",
+   "prostate gland microvascular endothelial cell",
+   "pulmonary artery endothelial cell",
+   "pulmonary capillary endothelial cell",
+   "splenic endothelial cell",
+   "squamous endothelial cell",
+   "squamous endothelial cell of venule",
+   "umbilical artery endothelial cell",
+   "ureter adventitial cell",
+   "valve endothelial cell",
+   "vasa recta cell"
+  ]
+ },
+ {
+  "parent": "Pericyte",
+  "cl_id": "CL:0000669",
+  "cl_label": "pericyte",
+  "libraries": [
+   "face_v6",
+   "membrane",
+   "retina_v7"
+  ],
+  "tissues": [
+   "ciliary_body",
+   "cornea",
+   "ocular_surface",
+   "optic_nerve",
+   "retina",
+   "trabecular_meshwork"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 6,
+  "children": [
+   "angiogenic pericyte",
+   "decidual pericyte",
+   "immature pericyte",
+   "lung pericyte",
+   "placental pericyte",
+   "secretory pericyte"
+  ]
+ },
+ {
+  "parent": "SMC",
+  "cl_id": "CL:0000192",
+  "cl_label": "smooth muscle cell",
+  "libraries": [
+   "face_v6",
+   "membrane",
+   "retina_v7"
+  ],
+  "tissues": [
+   "ciliary_body",
+   "cornea",
+   "ocular_surface",
+   "optic_nerve",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 12,
+  "children": [
+   "bronchial smooth muscle cell",
+   "bronchiolar smooth muscle cell",
+   "fallopian tube smooth muscle cell",
+   "kidney granular cell",
+   "smooth muscle cell of placenta",
+   "smooth muscle cell of stomach",
+   "smooth muscle cell of trachea",
+   "smooth muscle circular layer cell",
+   "stomach smooth muscle circular layer cell",
+   "stomach smooth muscle inner oblique layer cell",
+   "stomach smooth muscle outer longitudinal layer cell",
+   "tracheobronchial smooth muscle cell"
+  ]
+ },
+ {
+  "parent": "Fibroblast",
+  "cl_id": "CL:0000057",
+  "cl_label": "fibroblast",
+  "libraries": [
+   "face_v6",
+   "membrane"
+  ],
+  "tissues": [
+   "ciliary_body",
+   "cornea",
+   "lacrimal_gland",
+   "ocular_surface",
+   "optic_nerve",
+   "retina",
+   "trabecular_meshwork"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 64,
+  "children": [
+   "ABC NN_1 Cubn arachnoid barrier cell (Mmus)",
+   "ABC NN_1 Dapl1 arachnoid barrier cell (Mmus)",
+   "ABC NN_1 Pde11a arachnoid barrier cell (Mmus)",
+   "B cell zone reticular cell",
+   "T cell zone reticular cell",
+   "VLMC NN vascular leptomeningeal cell (Mmus)",
+   "adventitial fibroblast",
+   "arachnoid barrier cell",
+   "arachnoid barrier cell (Mmus)",
+   "brown preadipocyte",
+   "crypt-bottom fibroblast",
+   "crypt-top fibroblast",
+   "embryonic fibroblast",
+   "fibroblast of breast",
+   "fibroblast of connective tissue of glandular part of prostate",
+   "fibroblast of connective tissue of nonglandular part of prostate",
+   "fibroblast of connective tissue of prostate",
+   "fibroblast of dense regular elastic tissue",
+   "fibroblast of outer membrane of prostatic capsule",
+   "fibroblast of subepithelial connective tissue of prostatic gland",
+   "fibroblast of the conjunctiva",
+   "fibroblast of tunica adventitia of artery",
+   "fibroblast of villous mesenchyme",
+   "fibroblastic reticular cell",
+   "gallbladder fibroblast",
+   "hepatic portal fibroblast",
+   "hepatic stellate cell",
+   "intestinal fibroblastic reticular cell",
+   "intestinal lamina propria fibroblast",
+   "intestinal subserosal fibroblast",
+   "keratocyte",
+   "kidney interstitial fibroblast",
+   "lung perichondrial fibroblast",
+   "lymph node fibroblastic reticular cell",
+   "lymph node marginal reticular cell",
+   "marrow fibroblast",
+   "medullary reticular cell",
+   "mesothelial fibroblast",
+   "mesothelial fibroblast of the leptomeninx",
+   "muscle fibroblast",
+   "neural crest derived fibroblast",
+   "optic choroid fibroblast",
+   "ovarian fibroblast",
+   "pancreatic stellate cell",
+   "pericardium fibroblast",
+   "perichondrial fibroblast",
+   "periductal fibroblast of salivary gland",
+   "perijunctional fibroblast",
+   "preadipocyte",
+   "preadipocyte of the breast",
+   "quiescent fibroblast",
+   "renal cortical fibroblast",
+   "renal medullary fibroblast",
+   "reticular cell",
+   "reticular cell of splenic cord",
+   "skeletal muscle fibroblast",
+   "splenic fibroblast",
+   "subepithelial intestinal fibroblast",
+   "tendon cell",
+   "thymic fibroblast type 1",
+   "thymic fibroblast type 2",
+   "vascular leptomeningeal cell",
+   "vascular leptomeningeal cell (Mmus)",
+   "visceral preadipocyte"
+  ]
+ },
+ {
+  "parent": "Myofibroblast",
+  "cl_id": "CL:0000186",
+  "cl_label": "myofibroblast cell",
+  "libraries": [
+   "face_v6",
+   "membrane"
+  ],
+  "tissues": [
+   "cornea",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 9,
+  "children": [
+   "B cell zone reticular cell",
+   "T cell zone reticular cell",
+   "fibroblastic reticular cell",
+   "intestinal fibroblastic reticular cell",
+   "kidney interstitial myofibroblast",
+   "lymph node fibroblastic reticular cell",
+   "lymph node marginal reticular cell",
+   "medullary reticular cell",
+   "secondary crest myofibroblast"
+  ]
+ },
+ {
+  "parent": "Mono_Classical",
+  "cl_id": "CL:0000860",
+  "cl_label": "classical monocyte",
+  "libraries": [
+   "membrane"
+  ],
+  "tissues": [
+   "cornea",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "Mono_Nonclassical",
+  "cl_id": "CL:0000875",
+  "cl_label": "non-classical monocyte",
+  "libraries": [
+   "membrane"
+  ],
+  "tissues": [
+   "cornea",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "Mac_Tissue",
+  "cl_id": "CL:0000235",
+  "cl_label": "macrophage",
+  "libraries": [
+   "membrane"
+  ],
+  "tissues": [
+   "RPE",
+   "ciliary_body",
+   "cornea",
+   "ocular_surface",
+   "optic_nerve",
+   "retina",
+   "trabecular_meshwork"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 16,
+  "children": [
+   "CCL3-positive alveolar macrophage",
+   "M0 macrophage",
+   "TCR-positive macrophage",
+   "TREM2-positive macrophage",
+   "alveolar macrophage",
+   "anorectum macrophage",
+   "appendix macrophage",
+   "colon macrophage",
+   "cycling alveolar macrophage",
+   "cycling macrophage",
+   "epithelioid macrophage",
+   "lipid-associated macrophage",
+   "lung interstitial macrophage",
+   "lung macrophage",
+   "macrophage of medullary sinus of lymph node",
+   "metallothionein-positive alveolar macrophage"
+  ]
+ },
+ {
+  "parent": "Mac_DAM_LAM",
+  "cl_id": "CL:0000235",
+  "cl_label": "macrophage",
+  "libraries": [
+   "membrane",
+   "retina_v7"
+  ],
+  "tissues": [
+   "cornea",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 16,
+  "children": [
+   "CCL3-positive alveolar macrophage",
+   "M0 macrophage",
+   "TCR-positive macrophage",
+   "TREM2-positive macrophage",
+   "alveolar macrophage",
+   "anorectum macrophage",
+   "appendix macrophage",
+   "colon macrophage",
+   "cycling alveolar macrophage",
+   "cycling macrophage",
+   "epithelioid macrophage",
+   "lipid-associated macrophage",
+   "lung interstitial macrophage",
+   "lung macrophage",
+   "macrophage of medullary sinus of lymph node",
+   "metallothionein-positive alveolar macrophage"
+  ]
+ },
+ {
+  "parent": "Microglia",
+  "cl_id": "CL:0000129",
+  "cl_label": "microglial cell",
+  "libraries": [
+   "membrane",
+   "retina_v7"
+  ],
+  "tissues": [
+   "cornea",
+   "optic_nerve",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 2,
+  "children": [
+   "immature microglial cell",
+   "microglial cell (Mmus)"
+  ]
+ },
+ {
+  "parent": "APC_MHCII_high",
+  "cl_id": null,
+  "cl_label": null,
+  "libraries": [
+   "membrane"
+  ],
+  "tissues": [
+   "cornea",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "cDC1",
+  "cl_id": "CL:0000990",
+  "cl_label": "conventional dendritic cell",
+  "libraries": [
+   "membrane"
+  ],
+  "tissues": [
+   "cornea",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "cDC2",
+  "cl_id": "CL:0000990",
+  "cl_label": "conventional dendritic cell",
+  "libraries": [
+   "membrane"
+  ],
+  "tissues": [
+   "cornea",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "pDC",
+  "cl_id": "CL:0000784",
+  "cl_label": "plasmacytoid dendritic cell",
+  "libraries": [
+   "membrane"
+  ],
+  "tissues": [
+   "cornea",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 2,
+  "children": [
+   "CD141-positive myeloid dendritic cell",
+   "plasmacytoid dendritic cell, human"
+  ]
+ },
+ {
+  "parent": "T",
+  "cl_id": "CL:0000084",
+  "cl_label": "T cell",
+  "libraries": [
+   "membrane"
+  ],
+  "tissues": [
+   "ciliary_body",
+   "cornea",
+   "lacrimal_gland",
+   "ocular_surface",
+   "optic_nerve",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 8,
+  "children": [
+   "T cell of anorectum",
+   "T cell of appendix",
+   "T cell of medullary sinus of lymph node",
+   "cycling CD4-positive, alpha-beta T cell",
+   "cycling CD8-positive, alpha-beta T cell",
+   "cycling T cell",
+   "cycling gamma-delta T cell",
+   "lymph node paracortex T cell"
+  ]
+ },
+ {
+  "parent": "NK",
+  "cl_id": "CL:0000623",
+  "cl_label": "natural killer cell",
+  "libraries": [
+   "membrane"
+  ],
+  "tissues": [
+   "cornea",
+   "optic_nerve",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 33,
+  "children": [
+   "CD11b-positive, CD27-positive natural killer cell, mouse",
+   "CD16-negative, CD56-bright natural killer cell, human",
+   "CD16-positive, CD56-dim natural killer cell, human",
+   "CD27-high, CD11b-high natural killer cell, mouse",
+   "CD27-high, CD11b-low natural killer cell, mouse",
+   "CD27-low, CD11b-high natural killer cell, mouse",
+   "CD27-low, CD11b-low immature natural killer cell, mouse",
+   "CD56-negative, CD161-positive immature natural killer cell, human",
+   "CD56-positive, CD161-positive immature natural killer cell, human",
+   "CD94-negative natural killer cell, mouse",
+   "CD94-negative, Ly49CI-negative natural killer cell, mouse",
+   "CD94-positive Ly49CI-positive natural killer cell, mouse",
+   "CD94-positive natural killer cell, mouse",
+   "Dx5-negative, NK1.1-positive immature natural killer cell, mouse",
+   "Ly49CI-negative natural killer cell, mouse",
+   "Ly49CI-positive natural killer cell, mouse",
+   "Ly49D-negative natural killer cell, mouse",
+   "Ly49D-positive natural killer cell, mouse",
+   "Ly49H-negative natural killer cell, mouse",
+   "Ly49H-positive natural killer cell, mouse",
+   "NK1.1-positive natural killer cell, mouse",
+   "NKGA2-positive natural killer cell, mouse",
+   "cycling natural killer cell",
+   "decidual natural killer cell, human",
+   "hepatic pit cell",
+   "immature natural killer cell",
+   "liver-resident natural killer cell",
+   "mature natural killer cell",
+   "pre-natural killer cell",
+   "uterine natural killer cell",
+   "uterine natural killer cell 1, human",
+   "uterine natural killer cell 2, human",
+   "uterine natural killer cell 3, human"
+  ]
+ },
+ {
+  "parent": "B",
+  "cl_id": "CL:0000236",
+  "cl_label": "B cell",
+  "libraries": [
+   "membrane"
+  ],
+  "tissues": [
+   "cornea",
+   "optic_nerve",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 8,
+  "children": [
+   "B cell of anorectum",
+   "B cell of appendix",
+   "B cell of medullary sinus of lymph node",
+   "B cell, CD19-positive",
+   "cycling B cell",
+   "immature B cell",
+   "lymph node mantle zone B cell",
+   "monocytoid B cell"
+  ]
+ },
+ {
+  "parent": "Plasma",
+  "cl_id": "CL:0000786",
+  "cl_label": "plasma cell",
+  "libraries": [
+   "membrane"
+  ],
+  "tissues": [
+   "cornea",
+   "lacrimal_gland",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 3,
+  "children": [
+   "cycling plasma cell",
+   "plasma cell of appendix",
+   "plasma cell of medullary sinus of lymph node"
+  ]
+ },
+ {
+  "parent": "Granulocyte",
+  "cl_id": "CL:0000094",
+  "cl_label": "granulocyte",
+  "libraries": [
+   "membrane"
+  ],
+  "tissues": [
+   "cornea",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "Proliferating",
+  "cl_id": null,
+  "cl_label": null,
+  "libraries": [
+   "membrane"
+  ],
+  "tissues": [
+   "cornea",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "Keratocytes",
+  "cl_id": "CL:0002363",
+  "cl_label": "keratocyte",
+  "libraries": [
+   "face_v6",
+   "membrane"
+  ],
+  "tissues": [
+   "cornea",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "Corneal Endothelium",
+  "cl_id": "CL:0000132",
+  "cl_label": "corneal endothelial cell",
+  "libraries": [
+   "membrane"
+  ],
+  "tissues": [
+   "cornea",
+   "ocular_surface",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "Conj_epithelium_basal",
+  "cl_id": "CL:1000432",
+  "cl_label": "conjunctival epithelial cell",
+  "libraries": [
+   "face_v6"
+  ],
+  "tissues": [
+   "ocular_surface"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk",
+  "n_children": 1,
+  "children": [
+   "conjunctiva goblet cell"
+  ]
+ },
+ {
+  "parent": "Conj_epithelium_superficial",
+  "cl_id": "CL:1000432",
+  "cl_label": "conjunctival epithelial cell",
+  "libraries": [
+   "face_v6"
+  ],
+  "tissues": [
+   "ocular_surface"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk",
+  "n_children": 1,
+  "children": [
+   "conjunctiva goblet cell"
+  ]
+ },
+ {
+  "parent": "Melanocyte",
+  "cl_id": "CL:0000148",
+  "cl_label": "melanocyte",
+  "libraries": [
+   "k9_ocs"
+  ],
+  "tissues": [
+   "ciliary_body",
+   "conjunctiva",
+   "cornea",
+   "ocular_surface",
+   "optic_nerve",
+   "sclera",
+   "trabecular_meshwork"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 4,
+  "children": [
+   "choroidal melanocyte",
+   "dark melanocyte",
+   "light melanocyte",
+   "retinal melanocyte"
+  ]
+ },
+ {
+  "parent": "Schwann",
+  "cl_id": "CL:0002573",
+  "cl_label": "Schwann cell",
+  "libraries": [
+   "k9_ocs"
+  ],
+  "tissues": [
+   "ciliary_body",
+   "conjunctiva",
+   "cornea",
+   "ocular_surface",
+   "optic_nerve",
+   "sclera",
+   "trabecular_meshwork"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 4,
+  "children": [
+   "immature Schwann cell",
+   "myelinating Schwann cell",
+   "non-myelinating Schwann cell",
+   "terminal Schwann cell"
+  ]
+ },
+ {
+  "parent": "Conj_epithelium_suprabasal",
+  "cl_id": "CL:1000432",
+  "cl_label": "conjunctival epithelial cell",
+  "libraries": [
+   "k9_ocs"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "ocular_surface",
+   "sclera"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "crosswalk+library",
+  "n_children": 1,
+  "children": [
+   "conjunctiva goblet cell"
+  ]
+ },
+ {
+  "parent": "Limbus_Sclera_fibroblast_C1",
+  "cl_id": "CL:0000057",
+  "cl_label": "fibroblast",
+  "libraries": [
+   "k9_ocs"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "sclera"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 64,
+  "children": [
+   "ABC NN_1 Cubn arachnoid barrier cell (Mmus)",
+   "ABC NN_1 Dapl1 arachnoid barrier cell (Mmus)",
+   "ABC NN_1 Pde11a arachnoid barrier cell (Mmus)",
+   "B cell zone reticular cell",
+   "T cell zone reticular cell",
+   "VLMC NN vascular leptomeningeal cell (Mmus)",
+   "adventitial fibroblast",
+   "arachnoid barrier cell",
+   "arachnoid barrier cell (Mmus)",
+   "brown preadipocyte",
+   "crypt-bottom fibroblast",
+   "crypt-top fibroblast",
+   "embryonic fibroblast",
+   "fibroblast of breast",
+   "fibroblast of connective tissue of glandular part of prostate",
+   "fibroblast of connective tissue of nonglandular part of prostate",
+   "fibroblast of connective tissue of prostate",
+   "fibroblast of dense regular elastic tissue",
+   "fibroblast of outer membrane of prostatic capsule",
+   "fibroblast of subepithelial connective tissue of prostatic gland",
+   "fibroblast of the conjunctiva",
+   "fibroblast of tunica adventitia of artery",
+   "fibroblast of villous mesenchyme",
+   "fibroblastic reticular cell",
+   "gallbladder fibroblast",
+   "hepatic portal fibroblast",
+   "hepatic stellate cell",
+   "intestinal fibroblastic reticular cell",
+   "intestinal lamina propria fibroblast",
+   "intestinal subserosal fibroblast",
+   "keratocyte",
+   "kidney interstitial fibroblast",
+   "lung perichondrial fibroblast",
+   "lymph node fibroblastic reticular cell",
+   "lymph node marginal reticular cell",
+   "marrow fibroblast",
+   "medullary reticular cell",
+   "mesothelial fibroblast",
+   "mesothelial fibroblast of the leptomeninx",
+   "muscle fibroblast",
+   "neural crest derived fibroblast",
+   "optic choroid fibroblast",
+   "ovarian fibroblast",
+   "pancreatic stellate cell",
+   "pericardium fibroblast",
+   "perichondrial fibroblast",
+   "periductal fibroblast of salivary gland",
+   "perijunctional fibroblast",
+   "preadipocyte",
+   "preadipocyte of the breast",
+   "quiescent fibroblast",
+   "renal cortical fibroblast",
+   "renal medullary fibroblast",
+   "reticular cell",
+   "reticular cell of splenic cord",
+   "skeletal muscle fibroblast",
+   "splenic fibroblast",
+   "subepithelial intestinal fibroblast",
+   "tendon cell",
+   "thymic fibroblast type 1",
+   "thymic fibroblast type 2",
+   "vascular leptomeningeal cell",
+   "vascular leptomeningeal cell (Mmus)",
+   "visceral preadipocyte"
+  ]
+ },
+ {
+  "parent": "Lacrimal_secretory_tearcell",
+  "cl_id": "CL:0000315",
+  "cl_label": "tear secreting cell",
+  "libraries": [
+   "lacrimal_v6"
+  ],
+  "tissues": [],
+  "stage": "adult",
+  "system": "organoid_or_ipsc",
+  "tissue_source": "undeclared",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "Lacrimal_duct_epithelial",
+  "cl_id": null,
+  "cl_label": null,
+  "libraries": [
+   "lacrimal_v6"
+  ],
+  "tissues": [],
+  "stage": "adult",
+  "system": "organoid_or_ipsc",
+  "tissue_source": "undeclared",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "Lacrimal_myoepithelial",
+  "cl_id": "CL:0000185",
+  "cl_label": "myoepithelial cell",
+  "libraries": [
+   "lacrimal_v6"
+  ],
+  "tissues": [],
+  "stage": "adult",
+  "system": "organoid_or_ipsc",
+  "tissue_source": "undeclared",
+  "n_children": 14,
+  "children": [
+   "basal-myoepithelial cell of mammary gland",
+   "myoepithelial cell of acinus of lactiferous gland",
+   "myoepithelial cell of bronchus submucosal gland",
+   "myoepithelial cell of intralobular lactiferous duct",
+   "myoepithelial cell of lactiferous alveolus",
+   "myoepithelial cell of lactiferous duct",
+   "myoepithelial cell of main lactiferous duct",
+   "myoepithelial cell of primary lactiferous duct",
+   "myoepithelial cell of quarternary lactiferous duct",
+   "myoepithelial cell of salivary gland",
+   "myoepithelial cell of secondary lactiferous duct",
+   "myoepithelial cell of terminal lactiferous duct",
+   "myoepithelial cell of tertiary lactiferous duct",
+   "myoepithelial cell of trachea gland"
+  ]
+ },
+ {
+  "parent": "Endo_Arterial",
+  "cl_id": "CL:0000115",
+  "cl_label": "endothelial cell",
+  "libraries": [
+   "retina_v7"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 72,
+  "children": [
+   "adipose microvascular endothelial cell",
+   "alveolar capillary type 1 endothelial cell",
+   "alveolar capillary type 2 endothelial cell",
+   "aortic endothelial cell",
+   "arcuate artery endothelial cell",
+   "bladder microvascular endothelial cell",
+   "blood vessel endothelial cell",
+   "brain microvascular endothelial cell",
+   "capillary endothelial cell",
+   "cardiac blood vessel endothelial cell",
+   "cardiac endothelial cell",
+   "cerebral cortex endothelial cell",
+   "choroid plexus capillary endothelial cell",
+   "circulating endothelial cell",
+   "circumventricular organ capillary endothelial cell",
+   "colon endothelial cell",
+   "corneal endothelial cell",
+   "dermal microvascular endothelial cell",
+   "dermis blood vessel endothelial cell",
+   "dermis microvascular lymphatic vessel endothelial cell",
+   "endocardial cell",
+   "endocrine gland capillary endothelial cell",
+   "endometrial microvascular endothelial cell",
+   "endothelial cell of Peyer's patch",
+   "endothelial cell of artery",
+   "endothelial cell of coronary artery",
+   "endothelial cell of hepatic sinusoid",
+   "endothelial cell of high endothelial venule",
+   "endothelial cell of pericentral hepatic sinusoid",
+   "endothelial cell of periportal hepatic sinusoid",
+   "endothelial cell of placenta",
+   "endothelial cell of sinusoid",
+   "endothelial cell of uterus",
+   "endothelial cell of vascular tree",
+   "endothelial cell of venous sinus of red pulp of spleen",
+   "endothelial cell of venous sinus of spleen",
+   "endothelial cell of venule",
+   "endothelial cell of venule of lymph node",
+   "endothelial stalk cell",
+   "endothelial tip cell",
+   "fenestrated endothelial cell",
+   "fetal artery endothelial cell",
+   "fibrocyte of adventitia of ureter",
+   "glomerular capillary endothelial cell",
+   "glomerular endothelial cell",
+   "gut endothelial cell",
+   "interlobulary artery endothelial cell",
+   "intestinal villus capillary endothelial cell",
+   "kidney capillary endothelial cell",
+   "kidney cortex peritubular capillary cell",
+   "kidney outer medulla peritubular capillary cell",
+   "lung endothelial cell",
+   "lung microvascular endothelial cell",
+   "mammary microvascular endothelial cell",
+   "microvascular endothelial cell",
+   "ovarian microvascular endothelial cell",
+   "pancreatic islet capillary endothelial cell",
+   "peritubular capillary endothelial cell",
+   "pituitary gland capillary endothelial cell",
+   "placental villus capillary endothelial cell",
+   "post-arteriole capillary cell",
+   "pre-venule capillary cell",
+   "prostate gland microvascular endothelial cell",
+   "pulmonary artery endothelial cell",
+   "pulmonary capillary endothelial cell",
+   "splenic endothelial cell",
+   "squamous endothelial cell",
+   "squamous endothelial cell of venule",
+   "umbilical artery endothelial cell",
+   "ureter adventitial cell",
+   "valve endothelial cell",
+   "vasa recta cell"
+  ]
+ },
+ {
+  "parent": "Endo_Capillary",
+  "cl_id": "CL:0002144",
+  "cl_label": "capillary endothelial cell",
+  "libraries": [
+   "retina_v7"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 17,
+  "children": [
+   "alveolar capillary type 1 endothelial cell",
+   "alveolar capillary type 2 endothelial cell",
+   "choroid plexus capillary endothelial cell",
+   "circumventricular organ capillary endothelial cell",
+   "endocrine gland capillary endothelial cell",
+   "glomerular capillary endothelial cell",
+   "intestinal villus capillary endothelial cell",
+   "kidney capillary endothelial cell",
+   "kidney cortex peritubular capillary cell",
+   "kidney outer medulla peritubular capillary cell",
+   "pancreatic islet capillary endothelial cell",
+   "peritubular capillary endothelial cell",
+   "pituitary gland capillary endothelial cell",
+   "placental villus capillary endothelial cell",
+   "post-arteriole capillary cell",
+   "pre-venule capillary cell",
+   "pulmonary capillary endothelial cell"
+  ]
+ },
+ {
+  "parent": "Endo_Venous",
+  "cl_id": "CL:0002543",
+  "cl_label": "vein endothelial cell",
+  "libraries": [
+   "retina_v7"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 11,
+  "children": [
+   "Schlemm's canal endothelial cell",
+   "arcuate vein endothelial cell",
+   "endothelial cell of central vein of liver",
+   "endothelial cell of hepatic portal vein",
+   "endothelial cell of umbilical vein",
+   "fetal vein endothelial cell",
+   "hindlimb stylopod vein endothelial cell",
+   "inner wall Schlemm's canal endothelial cell",
+   "interlobulary vein endothelial cell",
+   "outer wall Schlemm's canal endothelial cell",
+   "vein endothelial cell of respiratory system"
+  ]
+ },
+ {
+  "parent": "Macrophage",
+  "cl_id": "CL:0000235",
+  "cl_label": "macrophage",
+  "libraries": [
+   "retina_v7"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 16,
+  "children": [
+   "CCL3-positive alveolar macrophage",
+   "M0 macrophage",
+   "TCR-positive macrophage",
+   "TREM2-positive macrophage",
+   "alveolar macrophage",
+   "anorectum macrophage",
+   "appendix macrophage",
+   "colon macrophage",
+   "cycling alveolar macrophage",
+   "cycling macrophage",
+   "epithelioid macrophage",
+   "lipid-associated macrophage",
+   "lung interstitial macrophage",
+   "lung macrophage",
+   "macrophage of medullary sinus of lymph node",
+   "metallothionein-positive alveolar macrophage"
+  ]
+ },
+ {
+  "parent": "RPC_early",
+  "cl_id": "CL:0002672",
+  "cl_label": "retinal progenitor cell",
+  "libraries": [
+   "retina_dev"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "fetal_developing",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "RPC_late",
+  "cl_id": "CL:0002672",
+  "cl_label": "retinal progenitor cell",
+  "libraries": [
+   "retina_dev"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "fetal_developing",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "NRPC_early",
+  "cl_id": null,
+  "cl_label": null,
+  "libraries": [
+   "retina_dev"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "fetal_developing",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "NRPC_late",
+  "cl_id": null,
+  "cl_label": null,
+  "libraries": [
+   "retina_dev"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "fetal_developing",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "TAC_proliferating",
+  "cl_id": null,
+  "cl_label": null,
+  "libraries": [
+   "retina_dev"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "fetal_developing",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "Rod_precursor",
+  "cl_id": null,
+  "cl_label": null,
+  "libraries": [
+   "retina_dev"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "fetal_developing",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "Cone_precursor",
+  "cl_id": null,
+  "cl_label": null,
+  "libraries": [
+   "retina_dev"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "fetal_developing",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "BC_precursor",
+  "cl_id": null,
+  "cl_label": null,
+  "libraries": [
+   "retina_dev"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "fetal_developing",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "AC_precursor",
+  "cl_id": null,
+  "cl_label": null,
+  "libraries": [
+   "retina_dev"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "fetal_developing",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "HC_precursor",
+  "cl_id": null,
+  "cl_label": null,
+  "libraries": [
+   "retina_dev"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "fetal_developing",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "RGC_precursor",
+  "cl_id": null,
+  "cl_label": null,
+  "libraries": [
+   "retina_dev"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "fetal_developing",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "glia_precursor",
+  "cl_id": null,
+  "cl_label": null,
+  "libraries": [
+   "retina_dev"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "fetal_developing",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "RPE_fetal",
+  "cl_id": "CL:0002586",
+  "cl_label": "retinal pigment epithelial cell",
+  "libraries": [
+   "retina_dev"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "fetal_developing",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "Retinal_Proliferating",
+  "cl_id": null,
+  "cl_label": null,
+  "libraries": [
+   "retina_dev"
+  ],
+  "tissues": [
+   "retina"
+  ],
+  "stage": "fetal_developing",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "lens epithelial cell",
+  "cl_id": "CL:0002224",
+  "cl_label": "lens epithelial cell",
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 1,
+  "children": [
+   "anterior lens cell"
+  ]
+ },
+ {
+  "parent": "lens fiber cell",
+  "cl_id": "CL:0011004",
+  "cl_label": "lens fiber cell",
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 4,
+  "children": [
+   "non-nucleated secondary lens fiber",
+   "nucleated secondary lens fiber",
+   "primary lens fiber",
+   "secondary lens fiber"
+  ]
+ },
+ {
+  "parent": "corneal epithelial cell",
+  "cl_id": "CL:0000575",
+  "cl_label": "corneal epithelial cell",
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "corneal endothelial cell",
+  "cl_id": "CL:0000132",
+  "cl_label": "corneal endothelial cell",
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "conjunctival epithelial cell",
+  "cl_id": null,
+  "cl_label": null,
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "goblet cell",
+  "cl_id": "CL:0000160",
+  "cl_label": "goblet cell",
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 24,
+  "children": [
+   "anorectum goblet cell",
+   "appendix goblet cell",
+   "bronchial goblet cell",
+   "colon goblet cell",
+   "conjunctiva goblet cell",
+   "duodenal goblet cell",
+   "gastric cardiac gland goblet cell",
+   "gastric goblet cell",
+   "goblet cell of epithelium of lobar bronchus",
+   "ileal goblet cell",
+   "intestinal villus goblet cell",
+   "intestine goblet cell",
+   "jejunal goblet cell",
+   "large intestine crypt goblet cell",
+   "large intestine goblet cell",
+   "lung goblet cell",
+   "nasal mucosa goblet cell",
+   "pancreatic goblet cell",
+   "principal gastric gland goblet cell",
+   "pyloric gastric gland goblet cell",
+   "respiratory tract goblet cell",
+   "small intestine goblet cell",
+   "tracheal goblet cell",
+   "tracheobronchial goblet cell"
+  ]
+ },
+ {
+  "parent": "trabecular meshwork cell",
+  "cl_id": "CL:0002367",
+  "cl_label": "trabecular meshwork cell",
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 2,
+  "children": [
+   "beam B cell, human",
+   "juxtacanalicular tissue cell"
+  ]
+ },
+ {
+  "parent": "pigmented ciliary epithelial cell",
+  "cl_id": "CL:0002303",
+  "cl_label": "pigmented ciliary epithelial cell",
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "non-pigmented ciliary epithelial cell",
+  "cl_id": "CL:0002304",
+  "cl_label": "non-pigmented ciliary epithelial cell",
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "ciliary muscle cell",
+  "cl_id": "CL:1000443",
+  "cl_label": "ciliary muscle cell",
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "iris pigment epithelial cell",
+  "cl_id": "CL:0002565",
+  "cl_label": "iris pigment epithelial cell",
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "basal cell",
+  "cl_id": "CL:0000646",
+  "cl_label": "basal cell",
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 7,
+  "children": [
+   "airway submucosal gland duct basal cell",
+   "basal cell of epidermis",
+   "basal cell of epithelium of bronchus",
+   "basal duct cell of salivary gland",
+   "cycling basal cell",
+   "limb basal cell of epidermis",
+   "respiratory basal cell"
+  ]
+ },
+ {
+  "parent": "transit amplifying cell",
+  "cl_id": "CL:0009010",
+  "cl_label": "transit amplifying cell",
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 5,
+  "children": [
+   "transit amplifying cell of anorectum",
+   "transit amplifying cell of appendix",
+   "transit amplifying cell of colon",
+   "transit amplifying cell of gut",
+   "transit amplifying cell of small intestine"
+  ]
+ },
+ {
+  "parent": "progenitor cell",
+  "cl_id": "CL:0011026",
+  "cl_label": "progenitor cell",
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 123,
+  "children": [
+   "AGM hematopoietic stem cell",
+   "BAG3-positive monocyte",
+   "CD115-positive monocyte",
+   "CD117-positive common myeloid progenitor OR CD217-positive common lymphoid progenitor",
+   "CD14-low, CD16-positive monocyte",
+   "CD14-positive monocyte",
+   "CD14-positive, CD16-low monocyte",
+   "CD14-positive, CD16-negative classical monocyte",
+   "CD14-positive, CD16-positive monocyte",
+   "CD34-positive, CD38-positive common lymphoid progenitor",
+   "CD34-positive, CD38-positive common myeloid progenitor",
+   "CD34-positive, CD38-positive common myeloid progenitor OR CD34-positive, CD38-positive common lymphoid progenitor",
+   "CD7-negative lymphoid progenitor OR granulocyte monocyte progenitor",
+   "CD7-negative lymphoid progenitor cell",
+   "Gr1-high classical monocyte",
+   "Gr1-low non-classical monocyte",
+   "Gr1-positive, CD43-positive monocyte",
+   "Kit-positive, CD34-positive common myeloid progenitor",
+   "Kit-positive, Sca1-positive common lymphoid progenitor",
+   "OPC NN_1 Col27a1 oligodendrocyte precursor cell (Mmus)",
+   "OPC NN_1 Irx2 oligodendrocyte precursor cell (Mmus)",
+   "OPC NN_1 Mms22l oligodendrocyte precursor cell (Mmus)",
+   "OPC NN_1 Neil3 oligodendrocyte precursor cell (Mmus)",
+   "OPC NN_1 Rmi2 oligodendrocyte precursor cell (Mmus)",
+   "OPC NN_2 oligodendrocyte precursor cell (Mmus)",
+   "Schwann cell precursor",
+   "activated skeletal muscle satellite cell",
+   "adaxial cell",
+   "adepithelial cell",
+   "adult endothelial progenitor cell",
+   "adult skeletal muscle myoblast",
+   "angioblastic mesenchymal cell",
+   "astrocyte-restricted precursor",
+   "basal cell of epidermis",
+   "basal cell of urothelium",
+   "cardiac mesenchymal cell",
+   "cardiac muscle myoblast",
+   "cardiac myoblast",
+   "cardioblast (sensu Arthropoda)",
+   "cerebellar granule cell precursor",
+   "chondroblast",
+   "circulating angiogenic cell",
+   "circulating fibrocyte",
+   "club cell",
+   "colony forming unit – Hill cell",
+   "common lymphoid progenitor",
+   "common myeloid progenitor, CD34-positive",
+   "cord blood hematopoietic stem cell",
+   "cyanoblast",
+   "cycling monocyte",
+   "cycling neuroblast (sensu Vertebrata)",
+   "dual-feature fallopian tube progenitor cell",
+   "early lymphoid progenitor",
+   "endocardial cushion cell",
+   "endothelial colony forming cell",
+   "epidermoblast",
+   "erythroblast",
+   "fast muscle myoblast",
+   "fetal hepatobiliary progenitor cell",
+   "fibro/adipogenic progenitor cell",
+   "fibrochondrocyte progenitor cell",
+   "forebrain neuroblast",
+   "fusion competent myoblast",
+   "ganglion mother cell",
+   "gestational hematopoietic stem cell",
+   "glioblast",
+   "glioblast (sensu Nematoda and Protostomia)",
+   "glioblast (sensu Vertebrata)",
+   "granulocyte monocyte progenitor cell",
+   "gut mesenchymal lymphoid tissue organizer cell",
+   "hematopoietic stem cell",
+   "hepatic oval stem cell",
+   "histoblast",
+   "intermediate monocyte",
+   "intestinal enteroendocrine progenitor",
+   "iridoblast",
+   "keratinocyte stem cell",
+   "leucoblast",
+   "limb basal cell of epidermis",
+   "luminal adaptive secretory precursor cell of mammary gland",
+   "lymphoid lineage restricted progenitor cell",
+   "macrophage dendritic cell progenitor",
+   "megakaryocyte-erythroid progenitor cell",
+   "melanoblast",
+   "migratory cardiac neural crest cell",
+   "migratory cranial neural crest cell",
+   "migratory enteric neural crest cell",
+   "migratory muscle precursor",
+   "migratory neural crest cell",
+   "migratory trunk neural crest cell",
+   "monocyte",
+   "muscle founder cell",
+   "muscle precursor cell",
+   "myeloid lineage restricted progenitor cell",
+   "myoblast",
+   "nephrogenic mesenchyme stem cell",
+   "neural crest derived neuroblast",
+   "neural progenitor cell",
+   "neuroblast (sensu Vertebrata)",
+   "neuronal-restricted precursor",
+   "non-terminally differentiated odontoblast",
+   "non-terminally differentiated osteoblast",
+   "oligodendrocyte precursor cell",
+   "oligodendrocyte precursor cell (Mmus)",
+   "pigment erythroblast",
+   "placental hematopoietic stem cell",
+   "preameloblast",
+   "precementoblast",
+   "prechondroblast",
+   "preodontoblast",
+   "preosteoblast",
+   "progenitor cell of endocrine pancreas",
+   "progenitor cell of mammary luminal epithelium",
+   "quiescent skeletal muscle satellite cell",
+   "respiratory tract suprabasal cell",
+   "skeletal muscle myoblast",
+   "skeletal muscle satellite cell",
+   "skeletal muscle satellite myogenic cell",
+   "skeletal muscle satellite stem cell",
+   "slow muscle myoblast",
+   "smooth muscle myoblast",
+   "somatic muscle myoblast",
+   "xanthoblast"
+  ]
+ },
+ {
+  "parent": "mast cell",
+  "cl_id": "CL:0000097",
+  "cl_label": "mast cell",
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 0,
+  "children": []
+ },
+ {
+  "parent": "oligodendrocyte",
+  "cl_id": "CL:0000128",
+  "cl_label": "oligodendrocyte",
+  "libraries": [
+   "antseg_v10"
+  ],
+  "tissues": [
+   "conjunctiva",
+   "cornea",
+   "iris",
+   "lens",
+   "retina"
+  ],
+  "stage": "adult",
+  "system": "in_vivo",
+  "tissue_source": "library",
+  "n_children": 27,
+  "children": [
+   "COP NN_1 9130019P16Rik committed oligodendrocyte precursor (Mmus)",
+   "COP NN_1 Bmp4 committed oligodendrocyte precursor (Mmus)",
+   "COP NN_1 C1ql1 committed oligodendrocyte precursor (Mmus)",
+   "COP NN_1 Cck committed oligodendrocyte precursor (Mmus)",
+   "COP NN_1 Rgcc committed oligodendrocyte precursor (Mmus)",
+   "COP NN_1 Vwc2 committed oligodendrocyte precursor (Mmus)",
+   "MFOL NN_3 Cxcl12 myelin-forming oligodendrocyte (Mmus)",
+   "MFOL NN_3 Il23a myelin-forming oligodendrocyte (Mmus)",
+   "MOL NN_4 Art3 mature myelinating oligodendrocyte (Mmus)",
+   "MOL NN_4 Il33 mature myelinating oligodendrocyte (Mmus)",
+   "MOL NN_4 Plin3 mature myelinating oligodendrocyte (Mmus)",
+   "MOL NN_4 Spock3 mature myelinating oligodendrocyte (Mmus)",
+   "MOL NN_4 Sspo mature myelinating oligodendrocyte (Mmus)",
+   "NFOL NN_2 9630013A20Rik newly formed oligodendrocyte (Mmus)",
+   "NFOL NN_2 Dbx2 newly formed oligodendrocyte (Mmus)",
+   "NFOL NN_2 Il23a newly formed oligodendrocyte (Mmus)",
+   "NFOL NN_2 Rgs16 newly formed oligodendrocyte (Mmus)",
+   "commited oligodendrocyte precursor (Mmus)",
+   "immune oligodendroglia",
+   "mature myelinating oligodendrocyte",
+   "mature myelinating oligodendrocyte (Mmus)",
+   "myelin-forming oligodendrocyte",
+   "myelin-forming oligodendrocyte (Mmus)",
+   "newly formed oligodendrocyte",
+   "newly formed oligodendrocyte (Mmus)",
+   "oligodendrocyte (Mmus)",
+   "spinal cord oligodendrocyte"
+  ]
+ }
+]

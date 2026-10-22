@@ -1,0 +1,1263 @@
+{
+ "Rod": {
+  "parent_candidates": [
+   {
+    "class": "Rod",
+    "cl_id": "CL:0000604",
+    "cl_label": "retinal rod cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Rod": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "Cone": {
+  "parent_candidates": [
+   {
+    "class": "Cone",
+    "cl_id": "CL:0000573",
+    "cl_label": "retinal cone cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Cone": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:3",
+   "state_programme_only:2",
+   "spectrum_only:1"
+  ]
+ },
+ "BC": {
+  "parent_candidates": [
+   {
+    "class": "BC",
+    "cl_id": "CL:0000748",
+    "cl_label": "retinal bipolar neuron"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "BC": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:23",
+   "spectrum_only:11",
+   "state_programme_only:1"
+  ]
+ },
+ "AC": {
+  "parent_candidates": [
+   {
+    "class": "AC",
+    "cl_id": "CL:0000561",
+    "cl_label": "amacrine cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "AC": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:31",
+   "spectrum_only:2",
+   "state_programme_only:2"
+  ]
+ },
+ "HC": {
+  "parent_candidates": [
+   {
+    "class": "HC",
+    "cl_id": "CL:0000745",
+    "cl_label": "retina horizontal cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "HC": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "state_programme_only:1",
+   "no_target_context_occurrence:1"
+  ]
+ },
+ "RGC": {
+  "parent_candidates": [
+   {
+    "class": "RGC",
+    "cl_id": "CL:0000740",
+    "cl_label": "retinal ganglion cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "RGC": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:65",
+   "spectrum_only:9",
+   "state_programme_only:3"
+  ]
+ },
+ "MG": {
+  "parent_candidates": [
+   {
+    "class": "MG",
+    "cl_id": "CL:0000636",
+    "cl_label": "Mueller cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "MG": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "Astro": {
+  "parent_candidates": [
+   {
+    "class": "Astro",
+    "cl_id": "CL:0000127",
+    "cl_label": "astrocyte"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Astro": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:41",
+   "spectrum_only:3",
+   "state_programme_only:1"
+  ]
+ },
+ "Micro": {
+  "parent_candidates": [
+   {
+    "class": "Micro",
+    "cl_id": "CL:0000129",
+    "cl_label": "microglial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Micro": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "state_programme_only:1",
+   "no_target_context_occurrence:1"
+  ]
+ },
+ "RPE": {
+  "parent_candidates": [
+   {
+    "class": "RPE",
+    "cl_id": "CL:0002586",
+    "cl_label": "retinal pigment epithelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "RPE": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "Endo": {
+  "parent_candidates": [
+   {
+    "class": "Endo",
+    "cl_id": "CL:0000115",
+    "cl_label": "endothelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Endo": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:52",
+   "spectrum_only:16",
+   "already_shipped_as_own_class:2",
+   "state_programme_only:2"
+  ]
+ },
+ "Endo_Patho": {
+  "parent_candidates": [
+   {
+    "class": "Endo_Patho",
+    "cl_id": "CL:0000115",
+    "cl_label": "endothelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Endo_Patho": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:52",
+   "spectrum_only:16",
+   "already_shipped_as_own_class:2",
+   "state_programme_only:2"
+  ]
+ },
+ "Pericyte": {
+  "parent_candidates": [
+   {
+    "class": "Pericyte",
+    "cl_id": "CL:0000669",
+    "cl_label": "pericyte"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Pericyte": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:4",
+   "spectrum_only:2"
+  ]
+ },
+ "SMC": {
+  "parent_candidates": [
+   {
+    "class": "SMC",
+    "cl_id": "CL:0000192",
+    "cl_label": "smooth muscle cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "SMC": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:12"
+  ]
+ },
+ "Fibroblast": {
+  "parent_candidates": [
+   {
+    "class": "Fibroblast",
+    "cl_id": "CL:0000057",
+    "cl_label": "fibroblast"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Fibroblast": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:52",
+   "spectrum_only:10",
+   "state_programme_only:1",
+   "already_shipped_as_own_class:1"
+  ]
+ },
+ "Myofibroblast": {
+  "parent_candidates": [
+   {
+    "class": "Myofibroblast",
+    "cl_id": "CL:0000186",
+    "cl_label": "myofibroblast cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Myofibroblast": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:9"
+  ]
+ },
+ "Mono_Classical": {
+  "parent_candidates": [
+   {
+    "class": "Mono_Classical",
+    "cl_id": "CL:0000860",
+    "cl_label": "classical monocyte"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Mono_Classical": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "Mono_Nonclassical": {
+  "parent_candidates": [
+   {
+    "class": "Mono_Nonclassical",
+    "cl_id": "CL:0000875",
+    "cl_label": "non-classical monocyte"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Mono_Nonclassical": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "Mac_Tissue": {
+  "parent_candidates": [
+   {
+    "class": "Mac_Tissue",
+    "cl_id": "CL:0000235",
+    "cl_label": "macrophage"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Mac_Tissue": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:11",
+   "spectrum_only:5"
+  ]
+ },
+ "Mac_DAM_LAM": {
+  "parent_candidates": [
+   {
+    "class": "Mac_DAM_LAM",
+    "cl_id": "CL:0000235",
+    "cl_label": "macrophage"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Mac_DAM_LAM": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:11",
+   "spectrum_only:5"
+  ]
+ },
+ "Microglia": {
+  "parent_candidates": [
+   {
+    "class": "Microglia",
+    "cl_id": "CL:0000129",
+    "cl_label": "microglial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Microglia": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "state_programme_only:1",
+   "no_target_context_occurrence:1"
+  ]
+ },
+ "APC_MHCII_high": {
+  "parent_candidates": [
+   {
+    "class": "APC_MHCII_high",
+    "cl_id": null,
+    "cl_label": null
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "APC_MHCII_high": []
+  },
+  "resolution_status": "parent_abstain",
+  "review_reasons": [
+   "no resolvable ontology term for this class"
+  ]
+ },
+ "cDC1": {
+  "parent_candidates": [
+   {
+    "class": "cDC1",
+    "cl_id": "CL:0000990",
+    "cl_label": "conventional dendritic cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "cDC1": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "cDC2": {
+  "parent_candidates": [
+   {
+    "class": "cDC2",
+    "cl_id": "CL:0000990",
+    "cl_label": "conventional dendritic cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "cDC2": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "pDC": {
+  "parent_candidates": [
+   {
+    "class": "pDC",
+    "cl_id": "CL:0000784",
+    "cl_label": "plasmacytoid dendritic cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "pDC": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:1",
+   "state_programme_only:1"
+  ]
+ },
+ "T": {
+  "parent_candidates": [
+   {
+    "class": "T",
+    "cl_id": "CL:0000084",
+    "cl_label": "T cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "T": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:8"
+  ]
+ },
+ "NK": {
+  "parent_candidates": [
+   {
+    "class": "NK",
+    "cl_id": "CL:0000623",
+    "cl_label": "natural killer cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "NK": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:33"
+  ]
+ },
+ "B": {
+  "parent_candidates": [
+   {
+    "class": "B",
+    "cl_id": "CL:0000236",
+    "cl_label": "B cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "B": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:7",
+   "spectrum_only:1"
+  ]
+ },
+ "Plasma": {
+  "parent_candidates": [
+   {
+    "class": "Plasma",
+    "cl_id": "CL:0000786",
+    "cl_label": "plasma cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Plasma": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:3"
+  ]
+ },
+ "Granulocyte": {
+  "parent_candidates": [
+   {
+    "class": "Granulocyte",
+    "cl_id": "CL:0000094",
+    "cl_label": "granulocyte"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Granulocyte": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "Proliferating": {
+  "parent_candidates": [
+   {
+    "class": "Proliferating",
+    "cl_id": null,
+    "cl_label": null
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Proliferating": []
+  },
+  "resolution_status": "parent_abstain",
+  "review_reasons": [
+   "no resolvable ontology term for this class"
+  ]
+ },
+ "Keratocytes": {
+  "parent_candidates": [
+   {
+    "class": "Keratocytes",
+    "cl_id": "CL:0002363",
+    "cl_label": "keratocyte"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Keratocytes": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "Corneal Endothelium": {
+  "parent_candidates": [
+   {
+    "class": "Corneal Endothelium",
+    "cl_id": "CL:0000132",
+    "cl_label": "corneal endothelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Corneal Endothelium": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "Conj_epithelium_basal": {
+  "parent_candidates": [
+   {
+    "class": "Conj_epithelium_basal",
+    "cl_id": "CL:1000432",
+    "cl_label": "conjunctival epithelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Conj_epithelium_basal": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:1"
+  ]
+ },
+ "Conj_epithelium_superficial": {
+  "parent_candidates": [
+   {
+    "class": "Conj_epithelium_superficial",
+    "cl_id": "CL:1000432",
+    "cl_label": "conjunctival epithelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Conj_epithelium_superficial": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:1"
+  ]
+ },
+ "Melanocyte": {
+  "parent_candidates": [
+   {
+    "class": "Melanocyte",
+    "cl_id": "CL:0000148",
+    "cl_label": "melanocyte"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Melanocyte": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:3",
+   "spectrum_only:1"
+  ]
+ },
+ "Schwann": {
+  "parent_candidates": [
+   {
+    "class": "Schwann",
+    "cl_id": "CL:0002573",
+    "cl_label": "Schwann cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Schwann": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:4"
+  ]
+ },
+ "Conj_epithelium_suprabasal": {
+  "parent_candidates": [
+   {
+    "class": "Conj_epithelium_suprabasal",
+    "cl_id": "CL:1000432",
+    "cl_label": "conjunctival epithelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Conj_epithelium_suprabasal": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:1"
+  ]
+ },
+ "Limbus_Sclera_fibroblast_C1": {
+  "parent_candidates": [
+   {
+    "class": "Limbus_Sclera_fibroblast_C1",
+    "cl_id": "CL:0000057",
+    "cl_label": "fibroblast"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Limbus_Sclera_fibroblast_C1": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:58",
+   "spectrum_only:5",
+   "already_shipped_as_own_class:1"
+  ]
+ },
+ "Lacrimal_secretory_tearcell": {
+  "parent_candidates": [
+   {
+    "class": "Lacrimal_secretory_tearcell",
+    "cl_id": "CL:0000315",
+    "cl_label": "tear secreting cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Lacrimal_secretory_tearcell": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "Lacrimal_duct_epithelial": {
+  "parent_candidates": [
+   {
+    "class": "Lacrimal_duct_epithelial",
+    "cl_id": null,
+    "cl_label": null
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Lacrimal_duct_epithelial": []
+  },
+  "resolution_status": "parent_abstain",
+  "review_reasons": [
+   "no resolvable ontology term for this class"
+  ]
+ },
+ "Lacrimal_myoepithelial": {
+  "parent_candidates": [
+   {
+    "class": "Lacrimal_myoepithelial",
+    "cl_id": "CL:0000185",
+    "cl_label": "myoepithelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Lacrimal_myoepithelial": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "system_axis_organoid_or_ipsc:14"
+  ]
+ },
+ "Endo_Arterial": {
+  "parent_candidates": [
+   {
+    "class": "Endo_Arterial",
+    "cl_id": "CL:0000115",
+    "cl_label": "endothelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Endo_Arterial": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:53",
+   "spectrum_only:15",
+   "already_shipped_as_own_class:2",
+   "state_programme_only:2"
+  ]
+ },
+ "Endo_Capillary": {
+  "parent_candidates": [
+   {
+    "class": "Endo_Capillary",
+    "cl_id": "CL:0002144",
+    "cl_label": "capillary endothelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Endo_Capillary": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:15",
+   "spectrum_only:2"
+  ]
+ },
+ "Endo_Venous": {
+  "parent_candidates": [
+   {
+    "class": "Endo_Venous",
+    "cl_id": "CL:0002543",
+    "cl_label": "vein endothelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Endo_Venous": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:10",
+   "spectrum_only:1"
+  ]
+ },
+ "Macrophage": {
+  "parent_candidates": [
+   {
+    "class": "Macrophage",
+    "cl_id": "CL:0000235",
+    "cl_label": "macrophage"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Macrophage": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:12",
+   "spectrum_only:4"
+  ]
+ },
+ "RPC_early": {
+  "parent_candidates": [
+   {
+    "class": "RPC_early",
+    "cl_id": "CL:0002672",
+    "cl_label": "retinal progenitor cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "RPC_early": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "RPC_late": {
+  "parent_candidates": [
+   {
+    "class": "RPC_late",
+    "cl_id": "CL:0002672",
+    "cl_label": "retinal progenitor cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "RPC_late": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "NRPC_early": {
+  "parent_candidates": [
+   {
+    "class": "NRPC_early",
+    "cl_id": null,
+    "cl_label": null
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "NRPC_early": []
+  },
+  "resolution_status": "parent_abstain",
+  "review_reasons": [
+   "no resolvable ontology term for this class"
+  ]
+ },
+ "NRPC_late": {
+  "parent_candidates": [
+   {
+    "class": "NRPC_late",
+    "cl_id": null,
+    "cl_label": null
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "NRPC_late": []
+  },
+  "resolution_status": "parent_abstain",
+  "review_reasons": [
+   "no resolvable ontology term for this class"
+  ]
+ },
+ "TAC_proliferating": {
+  "parent_candidates": [
+   {
+    "class": "TAC_proliferating",
+    "cl_id": null,
+    "cl_label": null
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "TAC_proliferating": []
+  },
+  "resolution_status": "parent_abstain",
+  "review_reasons": [
+   "no resolvable ontology term for this class"
+  ]
+ },
+ "Rod_precursor": {
+  "parent_candidates": [
+   {
+    "class": "Rod_precursor",
+    "cl_id": null,
+    "cl_label": null
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Rod_precursor": []
+  },
+  "resolution_status": "parent_abstain",
+  "review_reasons": [
+   "no resolvable ontology term for this class"
+  ]
+ },
+ "Cone_precursor": {
+  "parent_candidates": [
+   {
+    "class": "Cone_precursor",
+    "cl_id": null,
+    "cl_label": null
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Cone_precursor": []
+  },
+  "resolution_status": "parent_abstain",
+  "review_reasons": [
+   "no resolvable ontology term for this class"
+  ]
+ },
+ "BC_precursor": {
+  "parent_candidates": [
+   {
+    "class": "BC_precursor",
+    "cl_id": null,
+    "cl_label": null
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "BC_precursor": []
+  },
+  "resolution_status": "parent_abstain",
+  "review_reasons": [
+   "no resolvable ontology term for this class"
+  ]
+ },
+ "AC_precursor": {
+  "parent_candidates": [
+   {
+    "class": "AC_precursor",
+    "cl_id": null,
+    "cl_label": null
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "AC_precursor": []
+  },
+  "resolution_status": "parent_abstain",
+  "review_reasons": [
+   "no resolvable ontology term for this class"
+  ]
+ },
+ "HC_precursor": {
+  "parent_candidates": [
+   {
+    "class": "HC_precursor",
+    "cl_id": null,
+    "cl_label": null
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "HC_precursor": []
+  },
+  "resolution_status": "parent_abstain",
+  "review_reasons": [
+   "no resolvable ontology term for this class"
+  ]
+ },
+ "RGC_precursor": {
+  "parent_candidates": [
+   {
+    "class": "RGC_precursor",
+    "cl_id": null,
+    "cl_label": null
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "RGC_precursor": []
+  },
+  "resolution_status": "parent_abstain",
+  "review_reasons": [
+   "no resolvable ontology term for this class"
+  ]
+ },
+ "glia_precursor": {
+  "parent_candidates": [
+   {
+    "class": "glia_precursor",
+    "cl_id": null,
+    "cl_label": null
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "glia_precursor": []
+  },
+  "resolution_status": "parent_abstain",
+  "review_reasons": [
+   "no resolvable ontology term for this class"
+  ]
+ },
+ "RPE_fetal": {
+  "parent_candidates": [
+   {
+    "class": "RPE_fetal",
+    "cl_id": "CL:0002586",
+    "cl_label": "retinal pigment epithelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "RPE_fetal": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "Retinal_Proliferating": {
+  "parent_candidates": [
+   {
+    "class": "Retinal_Proliferating",
+    "cl_id": null,
+    "cl_label": null
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "Retinal_Proliferating": []
+  },
+  "resolution_status": "parent_abstain",
+  "review_reasons": [
+   "no resolvable ontology term for this class"
+  ]
+ },
+ "lens epithelial cell": {
+  "parent_candidates": [
+   {
+    "class": "lens epithelial cell",
+    "cl_id": "CL:0002224",
+    "cl_label": "lens epithelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "lens epithelial cell": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:1"
+  ]
+ },
+ "lens fiber cell": {
+  "parent_candidates": [
+   {
+    "class": "lens fiber cell",
+    "cl_id": "CL:0011004",
+    "cl_label": "lens fiber cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "lens fiber cell": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:2",
+   "state_programme_only:1",
+   "spectrum_only:1"
+  ]
+ },
+ "corneal epithelial cell": {
+  "parent_candidates": [
+   {
+    "class": "corneal epithelial cell",
+    "cl_id": "CL:0000575",
+    "cl_label": "corneal epithelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "corneal epithelial cell": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "corneal endothelial cell": {
+  "parent_candidates": [
+   {
+    "class": "corneal endothelial cell",
+    "cl_id": "CL:0000132",
+    "cl_label": "corneal endothelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "corneal endothelial cell": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "conjunctival epithelial cell": {
+  "parent_candidates": [
+   {
+    "class": "conjunctival epithelial cell",
+    "cl_id": null,
+    "cl_label": null
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "conjunctival epithelial cell": []
+  },
+  "resolution_status": "parent_abstain",
+  "review_reasons": [
+   "no resolvable ontology term for this class"
+  ]
+ },
+ "goblet cell": {
+  "parent_candidates": [
+   {
+    "class": "goblet cell",
+    "cl_id": "CL:0000160",
+    "cl_label": "goblet cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "goblet cell": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:23",
+   "spectrum_only:1"
+  ]
+ },
+ "trabecular meshwork cell": {
+  "parent_candidates": [
+   {
+    "class": "trabecular meshwork cell",
+    "cl_id": "CL:0002367",
+    "cl_label": "trabecular meshwork cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "trabecular meshwork cell": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:1",
+   "spectrum_only:1"
+  ]
+ },
+ "pigmented ciliary epithelial cell": {
+  "parent_candidates": [
+   {
+    "class": "pigmented ciliary epithelial cell",
+    "cl_id": "CL:0002303",
+    "cl_label": "pigmented ciliary epithelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "pigmented ciliary epithelial cell": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "non-pigmented ciliary epithelial cell": {
+  "parent_candidates": [
+   {
+    "class": "non-pigmented ciliary epithelial cell",
+    "cl_id": "CL:0002304",
+    "cl_label": "non-pigmented ciliary epithelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "non-pigmented ciliary epithelial cell": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "ciliary muscle cell": {
+  "parent_candidates": [
+   {
+    "class": "ciliary muscle cell",
+    "cl_id": "CL:1000443",
+    "cl_label": "ciliary muscle cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "ciliary muscle cell": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "iris pigment epithelial cell": {
+  "parent_candidates": [
+   {
+    "class": "iris pigment epithelial cell",
+    "cl_id": "CL:0002565",
+    "cl_label": "iris pigment epithelial cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "iris pigment epithelial cell": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "basal cell": {
+  "parent_candidates": [
+   {
+    "class": "basal cell",
+    "cl_id": "CL:0000646",
+    "cl_label": "basal cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "basal cell": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:6",
+   "spectrum_only:1"
+  ]
+ },
+ "transit amplifying cell": {
+  "parent_candidates": [
+   {
+    "class": "transit amplifying cell",
+    "cl_id": "CL:0009010",
+    "cl_label": "transit amplifying cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "transit amplifying cell": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:4",
+   "state_programme_only:1"
+  ]
+ },
+ "progenitor cell": {
+  "parent_candidates": [
+   {
+    "class": "progenitor cell",
+    "cl_id": "CL:0011026",
+    "cl_label": "progenitor cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "progenitor cell": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:97",
+   "spectrum_only:22",
+   "state_programme_only:4"
+  ]
+ },
+ "mast cell": {
+  "parent_candidates": [
+   {
+    "class": "mast cell",
+    "cl_id": "CL:0000097",
+    "cl_label": "mast cell"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "mast cell": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no subclass candidate carries evidence"
+  ]
+ },
+ "oligodendrocyte": {
+  "parent_candidates": [
+   {
+    "class": "oligodendrocyte",
+    "cl_id": "CL:0000128",
+    "cl_label": "oligodendrocyte"
+   }
+  ],
+  "subtype_suggestions_by_parent": {
+   "oligodendrocyte": []
+  },
+  "resolution_status": "parent_only",
+  "review_reasons": [
+   "no_target_context_occurrence:26",
+   "spectrum_only:1"
+  ]
+ }
+}
