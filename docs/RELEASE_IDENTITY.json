@@ -1,11 +1,11 @@
 {
  "schema": "eyekb-release-identity/1.0",
- "release_id": "af0d5f2a4677",
- "digest_sha256": "af0d5f2a4677a034135671bfed96c36af2e308995ed5bed9bef3a944af440a52",
+ "release_id": "e2c6c3df29f7",
+ "digest_sha256": "e2c6c3df29f79e42cc2687c4df2774064b0d1b96b0f1bcbeec369fdd1c6d014a",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
  "n_files": 3993,
- "total_bytes": 240466634,
+ "total_bytes": 240472287,
  "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
  "service_build_id": "3bffa3f7afde",
  "service_build_id_digest": "3bffa3f7afde923ff624797002a56125a348a84fbfd82169b267e767d30c9a6d",
@@ -29,7 +29,7 @@
   "n_files": 165,
   "bytes": 29907050
  },
- "effective_profile_id": "f8660e6d45d9",
+ "effective_profile_id": "4c9584a9e17a",
  "effective_profile": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "3bffa3f7afde",
@@ -55,15 +55,15 @@
    }
   ],
   "layers": {
-   "release_id": "af0d5f2a4677",
+   "release_id": "e2c6c3df29f7",
    "service_build_id": "3bffa3f7afde",
    "knowledge_bundle_id": "31751e7f9128",
-   "effective_profile_id": "f8660e6d45d9"
+   "effective_profile_id": "4c9584a9e17a"
   }
  },
  "effective_profile_rule": "the observed toggle values, the registered capabilities and their state, and the layer identities; volatile fields (timestamps, commit ids, working directory) are deliberately absent, so the same configuration gives the same value whatever day it is taken",
  "layers_note": "The four layers are separate on purpose: protocol_generation describes the wire contract, service_build_id the server code, knowledge_bundle_id the shipped knowledge assets, and effective_profile_id what actually took effect this run. A caller needs the last two together - the resolvable release manifest identifier and the configuration that was in force.",
- "taken_at_commit": "9ebea6309836bd67f91d3cd56cec55084e7587a5",
+ "taken_at_commit": "a628d4861b8147de4cc9e1be8e2d3aaeeb6b7a52",
  "taken_at_commit_note": "HEAD when the identity was taken. With --source index the record is taken against the staged tree and ships in the commit that tree becomes; the records are excluded from their own coverage, so the value is unaffected.",
  "coverage": "every file of the tree (HEAD, or the staged tree with --source index) except the identity record and the release manifest",
  "excluded": [

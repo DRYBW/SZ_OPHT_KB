@@ -66,7 +66,7 @@
    "code": "M11 NET-AUDIT",
    "status": "PASS",
    "ok": true,
-   "detail": "hook load receipts=693; connecting/HTTP events=0; census={'socket.__new__': 413, 'socket.gethostname': 70, 'socket.bind': 71}"
+   "detail": "hook load receipts=708; connecting/HTTP events=0; census={'socket.__new__': 413, 'socket.gethostname': 70, 'socket.bind': 71}"
   },
   {
    "code": "M12 MANIFEST",
@@ -78,13 +78,13 @@
    "code": "M13 CHANGE-SURFACE",
    "status": "PASS",
    "ok": true,
-   "detail": "changed=55 outside the declared surface=[]"
+   "detail": "changed=5 outside the declared surface=[]"
   },
   {
    "code": "M14 RELEASE-IDENTITY",
    "status": "PASS",
    "ok": true,
-   "detail": "scripts/release_identity.py --check rc=0 release_id      f9cbf3eec7e4\ndigest_sha256   f9cbf3eec7e419f1cc3c4db1ad0b94e9d933cff3d2738f23e9415be3d336644d\nservice_build_id      3bffa3f7afde   (12 files, 1276020 bytes: mcp_server/ + the release t"
+   "detail": "scripts/release_identity.py --check rc=0 release_id      af0d5f2a4677\ndigest_sha256   af0d5f2a4677a034135671bfed96c36af2e308995ed5bed9bef3a944af440a52\nservice_build_id      3bffa3f7afde   (12 files, 1276020 bytes: mcp_server/ + the release t"
   },
   {
    "code": "M15 RED-LINES",

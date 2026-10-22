@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "af0d5f2a4677",
- "digest_sha256": "af0d5f2a4677a034135671bfed96c36af2e308995ed5bed9bef3a944af440a52",
+ "release_id": "e2c6c3df29f7",
+ "digest_sha256": "e2c6c3df29f79e42cc2687c4df2774064b0d1b96b0f1bcbeec369fdd1c6d014a",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
  "n_files": 3993,
- "total_bytes": 240466634,
+ "total_bytes": 240472287,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "3bffa3f7afde",
   "knowledge_bundle_id": "31751e7f9128",
-  "effective_profile_id": "f8660e6d45d9"
+  "effective_profile_id": "4c9584a9e17a"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -212,13 +212,13 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/REPORT.md",
-   "git_blob": "439aab2cf0e5650f982cfc5b832b11c62da9acb2",
-   "bytes": 24733
+   "git_blob": "7c23b8a64f8398ffd6f2781b18b261291a502fe3",
+   "bytes": 27041
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/ledgers/net_audit.log",
-   "git_blob": "e3520f7cb22131704103b09ba4bc59895784b478",
-   "bytes": 87898
+   "git_blob": "98414c0f100fcf8c36e9599c45dad21a7454891d",
+   "bytes": 88648
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/logs/chain.log",
@@ -267,17 +267,17 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/GATE.json",
-   "git_blob": "d171c494576042a0a79eee90fd8f2f9daff4a0ec",
-   "bytes": 3902
+   "git_blob": "680fd288d4010581d7c13a7e136f79ed8a037c13",
+   "bytes": 3901
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/MANIFEST.json",
-   "git_blob": "7f10067c13802986afa3825860b031cbbe6f19e4",
+   "git_blob": "a0bab0c78b5882f9f1a57b87f5d5ba52f31d486a",
    "bytes": 20164
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/out/MANIFEST.sha256",
-   "git_blob": "e1fb0a5ea3f51aa1498af5b3f67aef0a4e46fec2",
+   "git_blob": "3d2d6c7bad5bdaf8c2c7be80ad6e2c3f09c49d4d",
    "bytes": 12574
   },
   {
@@ -797,8 +797,8 @@
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/scripts/m6_report.py",
-   "git_blob": "ac06d6438f9785c2057df1e842dc77e58374b2e8",
-   "bytes": 24076
+   "git_blob": "bfc2389f8b20c5c4d657a276989cd32dad1a5549",
+   "bytes": 26672
   },
   {
    "path": "docs/plans/activate_onfibro_20261022/scripts/m7_mirror.sh",

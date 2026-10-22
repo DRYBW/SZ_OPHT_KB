@@ -377,6 +377,38 @@ def main():
       "produced it; `NOT_RUN` and missing preconditions are never reported as pass.")
     A("")
 
+    A("## 10. Addendum: what had to be fixed to make the chain reproducible")
+    A("")
+    A("Four defects were found *by running the chain again after the change was committed*, and each "
+      "is recorded here because each one is transferable:")
+    A("")
+    A("1. **`HEAD` stops being a valid reference the moment the change is committed.** The default-"
+      "face device compares the shipped core against the pre-flip core by swapping the *parent "
+      "commit's* file in place. After this card's own commit, `git show HEAD:mcp_server/eyekb_core.py` "
+      "IS the activated core, so the comparison silently became a self-comparison: PARENT == FLIP on "
+      "all 721 queries, `changed fields = {}`, and the wave gate still reported most checks as PASS. "
+      "Fixed by pinning the reference to the pre-flip commit *read out of this card's own pre-image "
+      "record* (`16349f6f373ced7f77aedf40ac97c4b7b93304ce`), with the bytes checked against the kept "
+      "pre-image, and by making the field-scope check refuse an empty census (a device that measures "
+      "nothing must not pass).")
+    A("2. **The worker sandbox exports another venv's `site-packages` on `PYTHONPATH`.** Inherited by "
+      "children it shadows the repository's `mcp`, so the tool-panel probe reported `rc=3 cannot be "
+      "driven` instead of a verdict, and numpy failed to load its C extension inside the G4 verifier. "
+      "Every child now runs with `PYTHONPATH` pinned to the audit-hook directory only.")
+    A("3. **A background shell may have no `/bin:/usr/bin` on `PATH`.** The first end-to-end re-run "
+      "died at `dirname: command not found` before reaching any measurement. The chain is launched "
+      "with an explicit `PATH`.")
+    A("4. **The recorded readouts carried environment chatter.** Raw probe stdout (model-loading "
+      "progress bars with per-run throughput) and the flipped file's `mtime` made every artefact "
+      "byte-differ after an identical re-run. Both are now filtered out of the readouts, and the "
+      "claim was then *tested*, not assumed: `out/repro_test/A.sha256` vs `B.sha256` show FLIP / "
+      "DEFAULT_FACE / FIELD_DIFF / G4_REANCHOR / FLIP_MEASUREMENT reproducing **byte-for-byte** "
+      "across an identical re-run.")
+    A("")
+    A("The manifest's scope was narrowed for the same reason: files the repository git-ignores (the "
+      "pipeline's binary work products) and the gate readout the judge itself writes are listed "
+      "separately rather than counted as drift, and both exclusions are stated in the manifest.")
+    A("")
     path = os.path.join(WAVE, "REPORT.md")
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(L))
