@@ -9,6 +9,7 @@ EYEKB_ABSTAIN_REASON	no	no	no	declared benign: supplies the human-readable abste
 EYEKB_ACT_ANTSEG	yes	yes	no	cleared by the frozen harness before each arm; a before-arm setting cannot leak
 EYEKB_ACT_K9	yes	yes	no	cleared by the frozen harness before each arm; a before-arm setting cannot leak
 EYEKB_ACT_ONFIBRO	yes	no	yes	NOT cleared by the frozen harness -- any arm that sets it must set it in every arm of the comparison, or the two arms collapse into a self-comparison
+EYEKB_ACT_SUBTYPE	yes	no	yes	NOT cleared by the frozen harness -- any arm that sets it must set it in every arm of the comparison, or the two arms collapse into a self-comparison
 EYEKB_ACT_V6	yes	yes	no	cleared by the frozen harness before each arm; a before-arm setting cannot leak
 EYEKB_CL_KEY	yes	no	yes	NOT cleared by the frozen harness -- any arm that sets it must set it in every arm of the comparison, or the two arms collapse into a self-comparison
 EYEKB_CN_BRIDGE_TSV	yes	no	yes	NOT cleared by the frozen harness -- any arm that sets it must set it in every arm of the comparison, or the two arms collapse into a self-comparison

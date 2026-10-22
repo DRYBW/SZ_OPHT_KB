@@ -314,6 +314,12 @@ MARKER_LIBS = {"retina": MARKER_JSON,
     #   REGISTERED_DEFAULT_OFF and NOT in any whitelist, so the default `all` route is byte-identical
     #   in every state; reachable only by naming library="holefill_v12". Merging it into `all` needs
     #   its own admission guard and separate PI approval. Rollback = delete this line.
+    # [RESTORED t_be11fd4a 2026-10-22] The registration line below was DROPPED by commit
+    #   0312016 (card t_0c40c7b1) as a side effect of appending the next entry: the new block
+    #   replaced the dictionary closing line, which was this entry. Restored here, with the
+    #   default route proven byte-identical -- see
+    #   docs/plans/activate_holefill_20261022/PREREG_ACTIVATION_HOLEFILL_20261022.md section 1b.
+    "holefill_v12": MARKER_DIR / "markers_v12_holefill_increment.json",
     # onfibro_v13 = the optic-nerve fibroblast carrier (2026-10-22, card t_0c40c7b1): ONE entry,
     #   named by the Cell Ontology label of the generic family term it carries (CL:0000057
     #   `fibroblast`, resolved against the in-repo ontology release), holding the 10 genes of the
