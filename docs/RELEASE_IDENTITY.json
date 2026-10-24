@@ -1,11 +1,11 @@
 {
  "schema": "eyekb-release-identity/1.0",
- "release_id": "57f1523d871c",
- "digest_sha256": "57f1523d871c97a9143384fc6989d1541dcccdad98e794a7b942b5848f2213ce",
+ "release_id": "c90715fea364",
+ "digest_sha256": "c90715fea3641c095e063d1ecc5c41161e12fc856719031ae2a01f146b459120",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
  "n_files": 4228,
- "total_bytes": 248116559,
+ "total_bytes": 248120816,
  "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
  "service_build_id": "d82ed8bb7ba8",
  "service_build_id_digest": "d82ed8bb7ba8a063c95a830c98a27da3cb7d713831e72fc5df7208760db7c276",
@@ -19,8 +19,8 @@
   "n_files": 12,
   "bytes": 1281513
  },
- "knowledge_bundle_id": "06a96aa15353",
- "knowledge_bundle_id_digest": "06a96aa153535df63e2069be3b3216fba17a0a17744c4ec4e264627c27f6a158",
+ "knowledge_bundle_id": "a415ff26a733",
+ "knowledge_bundle_id_digest": "a415ff26a733424959375060f7e06590af022c645813a49829fd191e5fb6c980",
  "knowledge_bundle_id_coverage": {
   "prefixes": [
    "kb/",
@@ -29,11 +29,11 @@
   "n_files": 167,
   "bytes": 29964448
  },
- "effective_profile_id": "26ab3210d7d1",
+ "effective_profile_id": "8d230d09b231",
  "effective_profile": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "d82ed8bb7ba8",
-  "knowledge_bundle_id": "06a96aa15353",
+  "knowledge_bundle_id": "a415ff26a733",
   "toggles": {
    "EYEKB_ACT_V6": null,
    "EYEKB_ACT_ANTSEG": null,
@@ -55,15 +55,15 @@
    }
   ],
   "layers": {
-   "release_id": "57f1523d871c",
+   "release_id": "c90715fea364",
    "service_build_id": "d82ed8bb7ba8",
-   "knowledge_bundle_id": "06a96aa15353",
-   "effective_profile_id": "26ab3210d7d1"
+   "knowledge_bundle_id": "a415ff26a733",
+   "effective_profile_id": "8d230d09b231"
   }
  },
  "effective_profile_rule": "the observed toggle values, the registered capabilities and their state, and the layer identities; volatile fields (timestamps, commit ids, working directory) are deliberately absent, so the same configuration gives the same value whatever day it is taken",
  "layers_note": "The four layers are separate on purpose: protocol_generation describes the wire contract, service_build_id the server code, knowledge_bundle_id the shipped knowledge assets, and effective_profile_id what actually took effect this run. A caller needs the last two together - the resolvable release manifest identifier and the configuration that was in force.",
- "taken_at_commit": "c06aac2a59220e73346e1e25854aac4b5fbb97a0",
+ "taken_at_commit": "da4c41203048c187cc1d52dd2684e6af2598099d",
  "taken_at_commit_note": "HEAD when the identity was taken. With --source index the record is taken against the staged tree and ships in the commit that tree becomes; the records are excluded from their own coverage, so the value is unaffected.",
  "coverage": "every file of the tree (HEAD, or the staged tree with --source index) except the identity record and the release manifest",
  "excluded": [

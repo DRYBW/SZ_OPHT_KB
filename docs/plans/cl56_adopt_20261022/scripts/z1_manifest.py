@@ -25,7 +25,7 @@ REPO = "/home/ubuntu/EYEKB_REPO"
 INCLUDE_DIRS = ("scripts", "out", "pre_images", "discipline", "ledgers")
 INCLUDE_FILES = ("PREREG_ADOPT_CL56_20261022.md", "REPORT.md")
 EXCLUDE_PREFIX = ("logs/", "out/default_face_tmp/", "out/CLONE_", "ledgers/net_audit.log")
-EXCLUDE_EXACT = ("out/MANIFEST.sha256", "out/SCORE_TABLE.json")
+EXCLUDE_EXACT = ("out/MANIFEST.sha256", "out/REPO_SHA_AFTER.json", "out/SCORE_TABLE.json")
 
 
 def sha(p):
@@ -55,7 +55,7 @@ def main():
               "# verify with: cd /mnt/D/EyeKB/plans/cl56_adopt_20261022 && sha256sum -c out/MANIFEST.sha256",
               "# excluded on purpose: out/MANIFEST.sha256 (self), logs/ (rewritten per run),",
               "#   ledgers/net_audit.log (appended during the run), out/default_face_tmp/ (device scratch),",
-              "#   out/CLONE_* (clean-clone gate readouts, written after this file)"]
+              "#   out/CLONE_* (clean-clone gate readouts, written after this file),\n#   out/REPO_SHA_AFTER.json (written by this script after the file list is computed)"]
     lines = header + ["%s  %s" % (sha(os.path.join(WAVE, f)), f) for f in files]
     with open(os.path.join(OUT, "MANIFEST.sha256"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(lines) + "\n")

@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "57f1523d871c",
- "digest_sha256": "57f1523d871c97a9143384fc6989d1541dcccdad98e794a7b942b5848f2213ce",
+ "release_id": "c90715fea364",
+ "digest_sha256": "c90715fea3641c095e063d1ecc5c41161e12fc856719031ae2a01f146b459120",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
  "n_files": 4228,
- "total_bytes": 248116559,
+ "total_bytes": 248120816,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "d82ed8bb7ba8",
-  "knowledge_bundle_id": "06a96aa15353",
-  "effective_profile_id": "26ab3210d7d1"
+  "knowledge_bundle_id": "a415ff26a733",
+  "effective_profile_id": "8d230d09b231"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -62,8 +62,8 @@
   },
   {
    "path": "docs/CHANGE_CONTROL_G6_INSTANCE.tsv",
-   "git_blob": "411e78cad85442dd85459027646323257ec90594",
-   "bytes": 73764
+   "git_blob": "694980887a54123ef0e6be9e07e6a9101c4dd00b",
+   "bytes": 74398
   },
   {
    "path": "docs/CHANGE_CONTROL_G6_TEMPLATE.tsv",
@@ -4212,8 +4212,8 @@
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/REPORT.md",
-   "git_blob": "96f07101ee81268e7735596cce8cbf3d671376bc",
-   "bytes": 24942
+   "git_blob": "0b98ac47c2759f4eb790f65677ea56d508ba7ddb",
+   "bytes": 26524
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/discipline/net_audit/sitecustomize.py",
@@ -4227,8 +4227,8 @@
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/ledgers/net_audit.log",
-   "git_blob": "45198a01c982b5c126bef52a7802ca3b80039e1b",
-   "bytes": 4266
+   "git_blob": "e500d100c2d1035436a942b4cbe6ce308b1a23a6",
+   "bytes": 6020
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/logs/a1_acceptance.log",
@@ -4317,8 +4317,8 @@
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/out/MANIFEST.sha256",
-   "git_blob": "be672dd33235cc65fabde5f8be67e02667dc75ba",
-   "bytes": 4091
+   "git_blob": "92a3462ee5051d58fe76f41ae564979e70474c62",
+   "bytes": 4264
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/out/MEASURE.json",
@@ -4342,7 +4342,7 @@
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/out/REPO_SHA_AFTER.json",
-   "git_blob": "f698aee2c4bf1b06d9f8428cca7c5aa8a95f7f09",
+   "git_blob": "055dc0e388d32d1944a0ca0f4c8e66bb08344434",
    "bytes": 746
   },
   {
@@ -4477,8 +4477,8 @@
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/scripts/z1_manifest.py",
-   "git_blob": "8b8e847832f4164f296193bec1f603e132e6ed07",
-   "bytes": 3296
+   "git_blob": "6be8fa172f9ddf57633e2b1a4ccfab2c04a3c225",
+   "bytes": 3410
   },
   {
    "path": "docs/plans/cl_depth_devlineage_20261021/GRANULARITY_READER_PAGE.md",
@@ -19837,7 +19837,7 @@
   },
   {
    "path": "kb/ontology/ONTOLOGY_SNAPSHOT_MANIFEST_v1.json",
-   "git_blob": "733198f6349c5d208504a29fa42f9ab149580043",
+   "git_blob": "2b824de23b53cf016c61272e4501974b02e4b336",
    "bytes": 3606
   },
   {

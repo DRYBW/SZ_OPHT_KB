@@ -271,6 +271,29 @@ reads rely on exactly those edges), so the harness under-counts relatedness rela
 ontology authority. This card does not edit the frozen harness; it re-reads both arms under each ruler and
 shows the ruling does not depend on the difference (§4).
 
+### 6.4 The additive label-map rows moved a frozen ontology anchor — re-anchored, not waived
+
+`kb/ontology/ONTOLOGY_SNAPSHOT_MANIFEST_v1.json` pins the sha256 of
+`kb/markers/markers_cl_alignment_v2_unified.json` (the ontology layer resolves its assets through that
+manifest and refuses to answer on a hash mismatch). Adding three rows to the map therefore turned
+G7-C01 red: `repo://kb/markers/markers_cl_alignment_v2_unified.json: ANCHOR_HASH_MISMATCH`, and G8
+(portability) inherits it. The anchor was **re-taken in the same commit** with the repository's own tool —
+`python3 kb/ontology/scripts/build_ont_manifest.py --take` — which reported the three declared assets and
+refreshed exactly one recorded value:
+
+```
+kb/ontology/cl/releases/2026-06-08/cl-base.obo             3757082 bytes  c6274fb65cdf740b…  (unchanged)
+kb/ontology/ONT_LAYER_REGISTRY_v1.json                        6437 bytes  f0ee9e4c72a5dac9…  (unchanged)
+kb/markers/markers_cl_alignment_v2_unified.json              21506 bytes  b68fe013f1bfc693…  (re-taken)
+re-taken: 1 recorded value(s) refreshed
+```
+
+Nothing else moved: the ontology snapshot and the capability registry are byte-identical, so the
+"read-only, registered OFF" property of the ontology layer is untouched, and the pre-card bytes of the map
+are kept as a pre-image (`pre_images/markers_cl_alignment_v2_unified.json.pre_cl56`,
+sha256 `48051cdae915b82e…`). Re-anchoring is recorded here rather than waived: no gate criterion was
+weakened, and the gate chain is re-run from a clean clone of the commit that carries the re-anchor.
+
 ## 7. What is left on disk, and what it costs
 
 | item | state | cost on the shipped default route |
