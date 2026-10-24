@@ -1,0 +1,40 @@
+{
+ "commit_under_test": "141862305ef24a0a632c89c3b26d1c40a482f1e1",
+ "clone": "/tmp/cl56_clone2",
+ "chain": {
+  "gates": 8,
+  "failed": 0,
+  "verdict": "CHAIN PASS"
+ },
+ "clone_status_clean": true,
+ "mirror_files_compared": 56,
+ "mirror_differences": [
+  {
+   "file": "ledgers/net_audit.log",
+   "why": "bytes differ"
+  }
+ ],
+ "repo_identity_check": [
+  "IDENTITY MATCH: the record matches the shipped bytes (c90715fea364); service d82ed8bb7ba8, knowledge a415ff26a733, profile 8d230d09b231.",
+  "MANIFEST MATCH: docs/RELEASE_MANIFEST_v1.json lists 4228 files and its listing recomputes to the recorded release_id."
+ ],
+ "wave_deliverables_present": {
+  "PREREG_ADOPT_CL56_20261022.md": true,
+  "REPORT.md": true,
+  "out/ACCEPTANCE.json": true,
+  "out/MEASURE.json": true,
+  "out/SCOPE.json": true,
+  "out/DEFAULT_FACE.json": true,
+  "out/REGISTRY_ROWS.json": true,
+  "pre_images/eyekb_core.py.pre_cl56": true,
+  "pre_images/markers_cl_alignment_v2_unified.json.pre_cl56": true,
+  "ledgers/NET_AUDIT_SUMMARY.txt": true
+ },
+ "mirror_differences_declared": [
+  {
+   "file": "ledgers/net_audit.log",
+   "why": "append-only audit log: every chain run appends load receipts, so the copy in the mirror is the state at mirror time and the working wave's copy has since grown. It is excluded from the wave manifest for the same reason; every other mirrored file is byte-identical."
+  }
+ ],
+ "mirror_verdict": "PASS (56 files compared; 1 declared append-only log differs, 55 identical)"
+}

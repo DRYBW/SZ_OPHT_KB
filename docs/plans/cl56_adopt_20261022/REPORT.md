@@ -372,7 +372,39 @@ cd /mnt/D/EyeKB/plans/cl56_adopt_20261022
 | `discipline/net_audit/sitecustomize.py`, `ledgers/NET_AUDIT_SUMMARY.txt` | the zero-network audit hook and its census |
 | `out/MANIFEST.sha256` | sha256 of every delivered artefact of this wave |
 
-## 11. Resource readings
+## 11. Verification at the commit under test
+
+```bash
+rm -rf /tmp/cl56_clone2 && git clone -q /home/ubuntu/EYEKB_REPO /tmp/cl56_clone2
+cd /tmp/cl56_clone2 && git rev-parse HEAD        # 141862305ef24a0a632c89c3b26d1c40a482f1e1
+EYEKB_CORPUS=/home/ubuntu/EYEKB_REPO/literature_db/v2.4.2_2026-09_slim \
+EYEKB_G3_PY=/home/ubuntu/training-venv/bin/python3 \
+EYEKB_GATE_OUT=/tmp/cl56_clone2/.gate_out bash tests/run_gates.sh
+# gates=8 failed=0  (CHAIN PASS)
+```
+
+| gate | reading | rc |
+|---|---|---|
+| G3 verify_repro (41-query retrieval anchor) | `REPRO PASS: 41/41` | 0 |
+| G4 verify_pipeline (three byte anchors) | `G4 PASS: 3/3 byte-identical` | 0 |
+| G5 gate_registry (registry surface enforced) | rows=141 gates=10, checks 8/8 | 0 |
+| G6 gate_change_control (eight machine rules) | 8 rules, 0 problems (the new instance row parses; R1–R8 all satisfied) | 0 |
+| G7 gate_ontology_layer | 9/9 checks (C01 anchors resolved after the re-anchor of §6.4) | 0 |
+| G8 gate_ontlayer_portability | 6/6 checks, foreign cwd / foreign root / no author paths | 0 |
+| G9 gate_preimage_ref_immutable | violations = 0 (the pre/post-image reference is the fixed sha `c06aac2…`) | 0 |
+| G10 gate_switch_coverage | R1 registry matches source, R2 18 reports / 0 violations | 0 |
+
+Two commits carry the work: `da4c412` (the adoption, the measurement, the NO-GO and the registrations)
+and `1418623` (the ontology-manifest re-anchor of §6.4). Everything after those is a record-only commit
+under `docs/plans/cl56_adopt_20261022/`.
+
+Mirror fidelity, measured (`out/CLONE_CHECK.json`): 56 files compared between the construction site and
+`docs/plans/cl56_adopt_20261022/`, 55 byte-identical, 1 declared difference — `ledgers/net_audit.log`, the
+append-only audit log, which is excluded from the wave manifest for the same reason. The repository's
+release identity checks: `IDENTITY MATCH: the record matches the shipped bytes`; the W3 manifest verifies
+(`sha256sum -c docs/W3_MANIFEST.sha256` → 4/4 OK).
+
+## 12. Resource readings
 
 Measured with `resource.getrusage` inside the measuring process and from the scripts' own stdout
 (`out/MEASURE.json` → `peak_rss_mb`, `elapsed_s`): the measurement arm pair is the heaviest step at

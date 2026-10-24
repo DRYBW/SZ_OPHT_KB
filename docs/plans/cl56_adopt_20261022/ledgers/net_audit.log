@@ -89,3 +89,25 @@ EVENT socket.__new__ (<socket.socket fd=-1, family=AddressFamily.AF_UNSPEC, type
 # hook-installed pid=2273753 exe=/usr/bin/python3
 # hook-installed pid=2273766 exe=/usr/bin/python3
 # hook-installed pid=2273784 exe=/usr/bin/python3
+# hook-installed pid=2274811 exe=/usr/bin/python3
+# hook-installed pid=2275674 exe=/home/ubuntu/training-venv/bin/python3
+EVENT socket.__new__ (<socket.socket fd=-1, family=0, type=0, proto=0>, 10, 1, 0)
+EVENT socket.bind (<socket.socket fd=4, family=10, type=1, proto=0, laddr=('::', 0, 0, 0)>, ('::1', 0))
+# hook-installed pid=2276102 exe=/home/ubuntu/training-venv/bin/python3
+# hook-installed pid=2279247 exe=/home/ubuntu/training-venv/bin/python3
+# hook-installed pid=2279261 exe=/home/ubuntu/.conda/envs/pipeline_env/bin/python
+# hook-installed pid=2279262 exe=/home/ubuntu/.conda/envs/pipeline_env/bin/python
+EVENT socket.__new__ (<socket.socket fd=-1, family=AddressFamily.AF_UNSPEC, type=0, proto=0>, 1, 1, 0)
+EVENT socket.__new__ (<socket.socket fd=-1, family=AddressFamily.AF_UNSPEC, type=0, proto=0>, 1, 1, 0)
+# hook-installed pid=2284802 exe=/home/ubuntu/training-venv/bin/python3
+# hook-installed pid=2284964 exe=/home/ubuntu/training-venv/bin/python3
+# hook-installed pid=2284976 exe=/home/ubuntu/training-venv/bin/python3
+# hook-installed pid=2285368 exe=/home/ubuntu/training-venv/bin/python3
+# hook-installed pid=2285851 exe=/home/ubuntu/training-venv/bin/python3
+# hook-installed pid=2285866 exe=/home/ubuntu/training-venv/bin/python3
+# hook-installed pid=2286798 exe=/usr/bin/python3
+# hook-installed pid=2286812 exe=/usr/bin/python3
+# hook-installed pid=2288717 exe=/usr/bin/python3
+# hook-installed pid=2291387 exe=/usr/bin/python3
+# hook-installed pid=2293476 exe=/usr/bin/python3
+# hook-installed pid=2293492 exe=/usr/bin/python3

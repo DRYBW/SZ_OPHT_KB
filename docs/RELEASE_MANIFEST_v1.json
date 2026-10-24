@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "c90715fea364",
- "digest_sha256": "c90715fea3641c095e063d1ecc5c41161e12fc856719031ae2a01f146b459120",
+ "release_id": "0543c7c12483",
+ "digest_sha256": "0543c7c124834845eb6e3ac134a2afb3c3c12a232cab463300f28ee79c0132ec",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 4228,
- "total_bytes": 248120816,
+ "n_files": 4230,
+ "total_bytes": 248135663,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "d82ed8bb7ba8",
   "knowledge_bundle_id": "a415ff26a733",
-  "effective_profile_id": "8d230d09b231"
+  "effective_profile_id": "b1dcdcd6c864"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -4212,8 +4212,8 @@
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/REPORT.md",
-   "git_blob": "0b98ac47c2759f4eb790f65677ea56d508ba7ddb",
-   "bytes": 26524
+   "git_blob": "2f236dc2c0765e1feabd104955cf3956aea2533f",
+   "bytes": 28513
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/discipline/net_audit/sitecustomize.py",
@@ -4227,8 +4227,8 @@
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/ledgers/net_audit.log",
-   "git_blob": "e500d100c2d1035436a942b4cbe6ce308b1a23a6",
-   "bytes": 6020
+   "git_blob": "1748da69123af9fa19ce5ae9cdfabd9cc96ef290",
+   "bytes": 7574
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/logs/a1_acceptance.log",
@@ -4301,6 +4301,16 @@
    "bytes": 18924
   },
   {
+   "path": "docs/plans/cl56_adopt_20261022/out/CLONE_CHECK.json",
+   "git_blob": "d7ba58f18d6039269a5fbfb0c8fde79ca286506c",
+   "bytes": 1479
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/CLONE_REPO_GATES.log",
+   "git_blob": "c226a878def1c9fd1253a7a8163b3c8cc9ce581c",
+   "bytes": 9825
+  },
+  {
    "path": "docs/plans/cl56_adopt_20261022/out/CLOSURE_INSTRUMENT_DIFFERENCE.json",
    "git_blob": "8a7534970e84e9cc73f804c1e0931e9c4f7466d5",
    "bytes": 2586
@@ -4317,7 +4327,7 @@
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/out/MANIFEST.sha256",
-   "git_blob": "92a3462ee5051d58fe76f41ae564979e70474c62",
+   "git_blob": "b7350a8eedf89eb99645516c3d96179a9bc9e6e8",
    "bytes": 4264
   },
   {
