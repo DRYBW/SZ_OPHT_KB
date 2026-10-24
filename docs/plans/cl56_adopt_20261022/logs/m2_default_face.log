@@ -1,0 +1,14 @@
+default face verdict: PASS
+  PARENT_vs_OFF0/clusters                raw identical=True (0 differ) | canonical identical=True
+  PARENT_vs_OFF0/battery                 raw identical=True (0 differ) | canonical identical=True
+  PARENT_vs_UNSET/clusters               raw identical=True (0 differ) | canonical identical=True
+  PARENT_vs_UNSET/battery                raw identical=True (0 differ) | canonical identical=True
+  OFF0_vs_UNSET/clusters                 raw identical=True (0 differ) | canonical identical=True
+  OFF0_vs_UNSET/battery                  raw identical=True (0 differ) | canonical identical=True
+  explicit route reachability:
+    cl56_v15       parent={"raw_md5": "be7e63719bde85702e9f48326b2f1a57", "canon_md5": "be7e63719bde85702e9f48326b2f current={"raw_md5": "47bbcb8f3555dc4f89da5e887a70fcf9", "canon_md5": "884309176f8ab71561115277afca
+    subtype_v14    parent={"raw_md5": "43b04b45ee82d5953f86430667f2bda6", "canon_md5": "2f6fbfafa1338bd008b257c4b128 current={"raw_md5": "43b04b45ee82d5953f86430667f2bda6", "canon_md5": "2f6fbfafa1338bd008b257c4b128
+    holefill_v12   parent={"raw_md5": "9cee4ab71400eca2e86b221c5d99bada", "canon_md5": "d6678d051d61922791cdab327be9 current={"raw_md5": "9cee4ab71400eca2e86b221c5d99bada", "canon_md5": "d6678d051d61922791cdab327be9
+    onfibro_v13    parent={"raw_md5": "d51695b2aea6ce2b22b690b1818c360c", "canon_md5": "b8ca613484e82e8852e09660d2d1 current={"raw_md5": "d51695b2aea6ce2b22b690b1818c360c", "canon_md5": "b8ca613484e82e8852e09660d2d1
+    lensiris_v11   parent={"raw_md5": "d7b12c2c8791e21c9baa2eb37797b22c", "canon_md5": "4d45ea64e2640dbf59898284a479 current={"raw_md5": "d7b12c2c8791e21c9baa2eb37797b22c", "canon_md5": "4d45ea64e2640dbf59898284a479
+wrote out/DEFAULT_FACE.json

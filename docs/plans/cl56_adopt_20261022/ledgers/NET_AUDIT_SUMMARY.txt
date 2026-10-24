@@ -1,0 +1,17 @@
+# NET AUDIT SUMMARY -- CL-56 adoption wave (card t_fabddb85)
+# hook: discipline/net_audit/sitecustomize.py, loaded because PYTHONPATH points at it; it covers
+#       child processes (the byte-identity device and the explicit-route battery are separate processes).
+hook_load_receipts = 31
+event_lines_total  = 28
+connection_class_events = 0   # socket.connect / getaddrinfo / urllib.* / http.client.* / ftplib / smtplib
+event_kind_census:
+  socket.__new__               20
+  socket.bind                  4
+  socket.gethostname           4
+
+Classification of the non-connection events (same reading the predecessor waves used):
+  socket.__new__ with fd=-1 = an unbound socket object being CONSTRUCTED, not a connection;
+  socket.gethostname = the local hostname;
+  socket.bind to ('::', 0) / ::1 = a loopback bind with no peer, made while the service module loads.
+Zero downloads, zero network transfers: no connect, no name resolution, no HTTP.
+chain: scripts/run_all.sh (9 steps, rc=0); log = ledgers/net_audit.log

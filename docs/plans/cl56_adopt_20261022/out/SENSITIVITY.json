@@ -1,0 +1,415 @@
+{
+ "probe": "s2_sensitivity.py",
+ "library": "cl56_v15",
+ "note": "both arms are read under each ruler; the harness ruler is primary and unchanged, this is a sensitivity reading of the verdict",
+ "rulers": {
+  "harness": {
+   "overall_before": {
+    "n_clusters": 721,
+    "n_cells": 1495330,
+    "share_pct": {
+     "consistent": 42.544,
+     "related": 16.936,
+     "inconsistent": 19.843,
+     "mixed": 20.676
+    },
+    "clusters": {
+     "consistent": 297,
+     "related": 88,
+     "inconsistent": 171,
+     "mixed": 165
+    }
+   },
+   "overall_after": {
+    "n_clusters": 721,
+    "n_cells": 1495330,
+    "share_pct": {
+     "consistent": 37.371,
+     "related": 17.915,
+     "inconsistent": 29.609,
+     "mixed": 15.105
+    },
+    "clusters": {
+     "consistent": 276,
+     "related": 90,
+     "inconsistent": 235,
+     "mixed": 120
+    }
+   },
+   "delta_pp": {
+    "consistent": -5.173,
+    "related": 0.979,
+    "inconsistent": 9.766,
+    "mixed": -5.571
+   },
+   "clause_a_falls": {
+    "CX02_adult_retina": {
+     "before_pct": 72.376,
+     "after_pct": 57.278,
+     "delta_pp": -15.098
+    },
+    "CX03_retina_multiome": {
+     "before_pct": 36.842,
+     "after_pct": 27.695,
+     "delta_pp": -9.147
+    },
+    "CX04_cowan_fovea": {
+     "before_pct": 67.772,
+     "after_pct": 56.72,
+     "delta_pp": -11.052
+    },
+    "CX04_cowan_organoid": {
+     "before_pct": 90.134,
+     "after_pct": 60.127,
+     "delta_pp": -30.007
+    },
+    "CX04_cowan_periphery": {
+     "before_pct": 54.239,
+     "after_pct": 37.269,
+     "delta_pp": -16.97
+    },
+    "CX12_ocular_surface_snRNA": {
+     "before_pct": 35.997,
+     "after_pct": 20.816,
+     "delta_pp": -15.181
+    },
+    "CX13_TM_corneal_scleral": {
+     "before_pct": 41.306,
+     "after_pct": 40.45,
+     "delta_pp": -0.856
+    },
+    "CX13_central_cornea": {
+     "before_pct": 6.629,
+     "after_pct": 6.386,
+     "delta_pp": -0.243
+    },
+    "PRE_GSE199013": {
+     "before_pct": 43.376,
+     "after_pct": 40.821,
+     "delta_pp": -2.555
+    },
+    "PRE_OA-D001": {
+     "before_pct": 74.97,
+     "after_pct": 66.089,
+     "delta_pp": -8.881
+    },
+    "PRE_OA-D002": {
+     "before_pct": 35.879,
+     "after_pct": 30.913,
+     "delta_pp": -4.966
+    },
+    "PRE_OA-D068": {
+     "before_pct": 53.785,
+     "after_pct": 18.923,
+     "delta_pp": -34.862
+    }
+   },
+   "n_falls": 12,
+   "clause_b_rising": {
+    "CX01_retina_snRNA": {
+     "before_pct": 9.942,
+     "after_pct": 13.264,
+     "delta_pp": 3.322
+    },
+    "CX02_adult_retina": {
+     "before_pct": 3.119,
+     "after_pct": 26.814,
+     "delta_pp": 23.695
+    },
+    "CX03_retina_multiome": {
+     "before_pct": 6.654,
+     "after_pct": 63.815,
+     "delta_pp": 57.161
+    },
+    "CX04_cowan_fovea": {
+     "before_pct": 5.23,
+     "after_pct": 26.654,
+     "delta_pp": 21.424
+    },
+    "CX04_cowan_organoid": {
+     "before_pct": 4.753,
+     "after_pct": 39.485,
+     "delta_pp": 34.732
+    },
+    "CX04_cowan_periphery": {
+     "before_pct": 5.377,
+     "after_pct": 45.118,
+     "delta_pp": 39.741
+    },
+    "CX07_iPSC_organoid_POAG": {
+     "before_pct": 40.413,
+     "after_pct": 51.015,
+     "delta_pp": 10.602
+    },
+    "CX10_hiPSC_RPE": {
+     "before_pct": 52.206,
+     "after_pct": 65.923,
+     "delta_pp": 13.717
+    },
+    "CX12_ocular_surface_snRNA": {
+     "before_pct": 19.587,
+     "after_pct": 31.446,
+     "delta_pp": 11.859
+    },
+    "CX13_TM_corneal_scleral": {
+     "before_pct": 27.946,
+     "after_pct": 30.365,
+     "delta_pp": 2.419
+    },
+    "CX13_central_cornea": {
+     "before_pct": 2.803,
+     "after_pct": 6.539,
+     "delta_pp": 3.736
+    },
+    "CX13_iris": {
+     "before_pct": 37.148,
+     "after_pct": 40.345,
+     "delta_pp": 3.197
+    },
+    "CX14_TM_ciliary_snRNA": {
+     "before_pct": 0.928,
+     "after_pct": 4.125,
+     "delta_pp": 3.197
+    },
+    "CX15_optic_nerve_all": {
+     "before_pct": 17.999,
+     "after_pct": 23.743,
+     "delta_pp": 5.744
+    },
+    "PRE_GSE199013": {
+     "before_pct": 11.261,
+     "after_pct": 16.526,
+     "delta_pp": 5.265
+    },
+    "PRE_GSE268630": {
+     "before_pct": 14.465,
+     "after_pct": 24.906,
+     "delta_pp": 10.441
+    },
+    "PRE_OA-D001": {
+     "before_pct": 11.553,
+     "after_pct": 22.133,
+     "delta_pp": 10.58
+    },
+    "PRE_OA-D068": {
+     "before_pct": 31.673,
+     "after_pct": 69.054,
+     "delta_pp": 37.381
+    }
+   },
+   "n_rising": 18,
+   "clause_a_verdict": "FAIL",
+   "clause_b_verdict": "FAIL"
+  },
+  "corrected_closure": {
+   "overall_before": {
+    "n_clusters": 721,
+    "n_cells": 1495330,
+    "share_pct": {
+     "consistent": 42.544,
+     "related": 19.779,
+     "inconsistent": 17.0,
+     "mixed": 20.676
+    },
+    "clusters": {
+     "consistent": 297,
+     "related": 102,
+     "inconsistent": 157,
+     "mixed": 165
+    }
+   },
+   "overall_after": {
+    "n_clusters": 721,
+    "n_cells": 1495330,
+    "share_pct": {
+     "consistent": 37.371,
+     "related": 20.758,
+     "inconsistent": 26.766,
+     "mixed": 15.105
+    },
+    "clusters": {
+     "consistent": 276,
+     "related": 104,
+     "inconsistent": 221,
+     "mixed": 120
+    }
+   },
+   "delta_pp": {
+    "consistent": -5.173,
+    "related": 0.979,
+    "inconsistent": 9.766,
+    "mixed": -5.571
+   },
+   "clause_a_falls": {
+    "CX02_adult_retina": {
+     "before_pct": 72.376,
+     "after_pct": 57.278,
+     "delta_pp": -15.098
+    },
+    "CX03_retina_multiome": {
+     "before_pct": 36.842,
+     "after_pct": 27.695,
+     "delta_pp": -9.147
+    },
+    "CX04_cowan_fovea": {
+     "before_pct": 67.772,
+     "after_pct": 56.72,
+     "delta_pp": -11.052
+    },
+    "CX04_cowan_organoid": {
+     "before_pct": 90.134,
+     "after_pct": 60.127,
+     "delta_pp": -30.007
+    },
+    "CX04_cowan_periphery": {
+     "before_pct": 54.239,
+     "after_pct": 37.269,
+     "delta_pp": -16.97
+    },
+    "CX12_ocular_surface_snRNA": {
+     "before_pct": 35.997,
+     "after_pct": 20.816,
+     "delta_pp": -15.181
+    },
+    "CX13_TM_corneal_scleral": {
+     "before_pct": 41.306,
+     "after_pct": 40.45,
+     "delta_pp": -0.856
+    },
+    "CX13_central_cornea": {
+     "before_pct": 6.629,
+     "after_pct": 6.386,
+     "delta_pp": -0.243
+    },
+    "PRE_GSE199013": {
+     "before_pct": 43.376,
+     "after_pct": 40.821,
+     "delta_pp": -2.555
+    },
+    "PRE_OA-D001": {
+     "before_pct": 74.97,
+     "after_pct": 66.089,
+     "delta_pp": -8.881
+    },
+    "PRE_OA-D002": {
+     "before_pct": 35.879,
+     "after_pct": 30.913,
+     "delta_pp": -4.966
+    },
+    "PRE_OA-D068": {
+     "before_pct": 53.785,
+     "after_pct": 18.923,
+     "delta_pp": -34.862
+    }
+   },
+   "n_falls": 12,
+   "clause_b_rising": {
+    "CX01_retina_snRNA": {
+     "before_pct": 9.942,
+     "after_pct": 13.264,
+     "delta_pp": 3.322
+    },
+    "CX02_adult_retina": {
+     "before_pct": 3.119,
+     "after_pct": 26.814,
+     "delta_pp": 23.695
+    },
+    "CX03_retina_multiome": {
+     "before_pct": 6.654,
+     "after_pct": 63.815,
+     "delta_pp": 57.161
+    },
+    "CX04_cowan_fovea": {
+     "before_pct": 5.23,
+     "after_pct": 26.654,
+     "delta_pp": 21.424
+    },
+    "CX04_cowan_organoid": {
+     "before_pct": 4.753,
+     "after_pct": 39.485,
+     "delta_pp": 34.732
+    },
+    "CX04_cowan_periphery": {
+     "before_pct": 5.377,
+     "after_pct": 45.118,
+     "delta_pp": 39.741
+    },
+    "CX07_iPSC_organoid_POAG": {
+     "before_pct": 40.413,
+     "after_pct": 51.015,
+     "delta_pp": 10.602
+    },
+    "CX10_hiPSC_RPE": {
+     "before_pct": 52.206,
+     "after_pct": 65.923,
+     "delta_pp": 13.717
+    },
+    "CX12_ocular_surface_snRNA": {
+     "before_pct": 11.043,
+     "after_pct": 22.901,
+     "delta_pp": 11.858
+    },
+    "CX13_TM_corneal_scleral": {
+     "before_pct": 15.379,
+     "after_pct": 17.799,
+     "delta_pp": 2.42
+    },
+    "CX13_central_cornea": {
+     "before_pct": 2.803,
+     "after_pct": 6.539,
+     "delta_pp": 3.736
+    },
+    "CX13_iris": {
+     "before_pct": 35.065,
+     "after_pct": 38.262,
+     "delta_pp": 3.197
+    },
+    "CX14_TM_ciliary_snRNA": {
+     "before_pct": 0.928,
+     "after_pct": 4.125,
+     "delta_pp": 3.197
+    },
+    "CX15_optic_nerve_all": {
+     "before_pct": 17.999,
+     "after_pct": 23.743,
+     "delta_pp": 5.744
+    },
+    "PRE_GSE199013": {
+     "before_pct": 9.575,
+     "after_pct": 14.84,
+     "delta_pp": 5.265
+    },
+    "PRE_GSE268630": {
+     "before_pct": 14.465,
+     "after_pct": 24.906,
+     "delta_pp": 10.441
+    },
+    "PRE_OA-D001": {
+     "before_pct": 11.553,
+     "after_pct": 22.133,
+     "delta_pp": 10.58
+    },
+    "PRE_OA-D068": {
+     "before_pct": 31.673,
+     "after_pct": 69.054,
+     "delta_pp": 37.381
+    }
+   },
+   "n_rising": 18,
+   "clause_a_verdict": "FAIL",
+   "clause_b_verdict": "FAIL"
+  }
+ },
+ "verdict_under_each_ruler": {
+  "harness": {
+   "a": "FAIL",
+   "b": "FAIL",
+   "overall": "NO-GO"
+  },
+  "corrected_closure": {
+   "a": "FAIL",
+   "b": "FAIL",
+   "overall": "NO-GO"
+  }
+ }
+}

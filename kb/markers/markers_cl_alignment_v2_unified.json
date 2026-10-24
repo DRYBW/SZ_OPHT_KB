@@ -1,10 +1,10 @@
 {
  "schema": "eyekb-cl-labelmap/1.0",
- "version": "cl-labelmap-unified-v1.1",
+ "version": "cl-labelmap-unified-v1.2",
  "generated_at": "2026-10-20",
  "card": "CL unification wave (2026-10-20): one shared Cell Ontology vocabulary across all marker libraries",
  "prereg": "PREREG_CLMAP_ANTSEG_20261020 + PI overlap ruling 2026-10-20 (plan record kept outside this repository)",
- "supersedes_note": "markers_cl_alignment_v1.json covers 22 labels / 3 libraries and is kept unchanged as a historical audit artifact; this file covers 60 labels / 9 libraries. v1.1 (2026-10-20): adds the antseg_v10 increment (16 labels, ids copied from the increment file itself). Two of the 16 share a CL term with existing labels and were adjudicated explicitly: CL:0000132 corneal endothelial cell is merged into the production entry (same term, same level); CL:1000432 conjunctival epithelial cell is kept as a separate candidate and not used as a CL key, because its three production siblings are layer descriptors under it. The 60 pre-existing labels are unchanged.",
+ "supersedes_note": "markers_cl_alignment_v1.json covers 22 labels / 3 libraries and is kept unchanged as a historical audit artifact; this file covers 60 labels / 9 libraries. v1.1 (2026-10-20): adds the antseg_v10 increment (16 labels, ids copied from the increment file itself). Two of the 16 share a CL term with existing labels and were adjudicated explicitly: CL:0000132 corneal endothelial cell is merged into the production entry (same term, same level); CL:1000432 conjunctival epithelial cell is kept as a separate candidate and not used as a CL key, because its three production siblings are layer descriptors under it. The 60 pre-existing labels are unchanged. | v1.2 (2026-10-24, card t_fabddb85): added the 3 adopted CL-56 child-term names so an entry of `cl56_v15` is mappable by the ontology ruler; additive rows only, no existing row edited or removed. Reason: the activation card t_be11fd4a measured that an entry name the map cannot resolve is graded `unmappable_pred` and read as an inconsistency.",
  "source_resolution": "every cl_id below was resolved by name against the Cell Ontology OBO release at build time; none typed from memory",
  "cl_release": "Cell Ontology (CL) OBO release, name-indexed at build time; term count recorded in cl_terms_loaded",
  "cl_terms_loaded": 3335,
@@ -905,6 +905,36 @@
    "qualifier": null,
    "libraries": [
     "antseg_v10"
+   ]
+  },
+  "rod bipolar cell": {
+   "cl_id": "CL:0000751",
+   "cl_label": "rod bipolar cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "cl56_v15"
+   ]
+  },
+  "keratocyte": {
+   "cl_id": "CL:0002363",
+   "cl_label": "keratocyte",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "cl56_v15"
+   ]
+  },
+  "S cone cell": {
+   "cl_id": "CL:0003050",
+   "cl_label": "S cone cell",
+   "status": "mapped",
+   "reason": null,
+   "qualifier": null,
+   "libraries": [
+    "cl56_v15"
    ]
   }
  },

@@ -1,0 +1,439 @@
+{
+ "generated_by": "plans/cl56_adopt_20261022/scripts/f0_freeze_inputs.py",
+ "generated_at": "2026-10-24 16:30:29",
+ "n_volume_reports": 28,
+ "inputs": [
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/ledger_v1/ledger_cluster_level.tsv",
+   "role": "I2 recorded reference labels + n_cells, one row per cluster",
+   "exists": true,
+   "bytes": 90704,
+   "mtime": "2026-10-19 15:04:39",
+   "sha256": "9e2a0844ad639e0ba0ed6cccfa3ca7f109cde98d4f91568621cd0e4df85b1427"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX01_retina_snRNA/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX01_retina_snRNA)",
+   "exists": true,
+   "bytes": 1245544,
+   "mtime": "2026-10-19 13:03:15",
+   "sha256": "5503c9fe5cd2bc401b307f76dbd1fceb6ccb74b2c38bc3bbd577571cfa20e7ee"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX02_adult_retina/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX02_adult_retina)",
+   "exists": true,
+   "bytes": 1502532,
+   "mtime": "2026-10-19 13:03:16",
+   "sha256": "8ffc624832b23deeb5feee98b919eccdc3c61b882a1529d02644eec46e380c93"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX03_retina_multiome/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX03_retina_multiome)",
+   "exists": true,
+   "bytes": 945400,
+   "mtime": "2026-10-19 13:03:17",
+   "sha256": "96fe77a57eed29a37844eacbd9e40e9001e414952cac6fefe6f99a7052f92ed5"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX04_cowan_fovea/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX04_cowan_fovea)",
+   "exists": true,
+   "bytes": 877480,
+   "mtime": "2026-10-19 13:03:18",
+   "sha256": "fda142e874ebecb144bd399514da874944acc34fb0926bc23399f970b0c2096e"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX04_cowan_organoid/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX04_cowan_organoid)",
+   "exists": true,
+   "bytes": 572545,
+   "mtime": "2026-10-19 13:03:19",
+   "sha256": "fdd070958ae4192fb1a433e1e5e6cffbb2c9864ad5fa54f3db4167cc472d1bcf"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX04_cowan_periphery/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX04_cowan_periphery)",
+   "exists": true,
+   "bytes": 1042331,
+   "mtime": "2026-10-19 13:03:20",
+   "sha256": "4e643bf19b326fc8f39827107bed2389de5ecbc4823c3051b5fc55d55202a8d1"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX07_iPSC_organoid_POAG/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX07_iPSC_organoid_POAG)",
+   "exists": true,
+   "bytes": 618560,
+   "mtime": "2026-10-19 13:03:21",
+   "sha256": "a0c6293a537a1aac3e601d75dec5ac7f3b7c171e7b9677e85e07ff71585d32e3"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX08_RPE_choroid_scRNA/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX08_RPE_choroid_scRNA)",
+   "exists": true,
+   "bytes": 718804,
+   "mtime": "2026-10-19 13:03:21",
+   "sha256": "5821d4d5bebf29304707471980ced9e26efdd42561d9ca902913bcf772067bab"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX08_RPE_choroid_snRNA/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX08_RPE_choroid_snRNA)",
+   "exists": true,
+   "bytes": 543107,
+   "mtime": "2026-10-19 13:03:22",
+   "sha256": "1565a5967b32ab5efd69dac046b08fea5ed80e579f862b037aab6c407e503032"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX09_voigt_RPE_choroid/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX09_voigt_RPE_choroid)",
+   "exists": true,
+   "bytes": 573422,
+   "mtime": "2026-10-19 13:03:23",
+   "sha256": "42a8b394ba2b1bbe38c24553f33ada07c46414df42774caa21d85562ec0b017f"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX10_hiPSC_RPE/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX10_hiPSC_RPE)",
+   "exists": true,
+   "bytes": 818132,
+   "mtime": "2026-10-19 13:03:24",
+   "sha256": "fd390e3d9c37b61299452a3e0e0a442641d12515ebf437aac0d50fe865ebe169"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX11_posterior_eye_atlas/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX11_posterior_eye_atlas)",
+   "exists": true,
+   "bytes": 493159,
+   "mtime": "2026-10-19 13:03:25",
+   "sha256": "579972fa5fd1e9b87c56e5e74c72f4e2044e93c16b35136f2a27f33edcfacddb"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX12_ocular_surface_snRNA/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX12_ocular_surface_snRNA)",
+   "exists": true,
+   "bytes": 536893,
+   "mtime": "2026-10-19 13:03:25",
+   "sha256": "16e98143eaeebc861d49dd9f97e261fa066be87820bfe3b732af710661d8f82a"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX13_TM_corneal_scleral/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX13_TM_corneal_scleral)",
+   "exists": true,
+   "bytes": 913057,
+   "mtime": "2026-10-19 13:03:26",
+   "sha256": "eb0f2f942ac30f47b1c3997d4c32b15de4cda007724aaa4778238b99cf6d10ed"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX13_central_cornea/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX13_central_cornea)",
+   "exists": true,
+   "bytes": 350110,
+   "mtime": "2026-10-19 13:03:27",
+   "sha256": "a80a985fd4c39f800641c33490464b132e02806a016bb7065e3475dad932e66c"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX13_ciliary_body/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX13_ciliary_body)",
+   "exists": true,
+   "bytes": 486704,
+   "mtime": "2026-10-19 13:03:27",
+   "sha256": "aad71530cfe1097425d740ca1516211a0db08cdbc9700db9d1db0db0ef7a8fed"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX13_iris/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX13_iris)",
+   "exists": true,
+   "bytes": 511014,
+   "mtime": "2026-10-19 13:03:28",
+   "sha256": "de95f1031c98fa0936c2fdbd71ae8eec051e19b2eeb07c203ae5a0608548ef02"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX13_lens/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX13_lens)",
+   "exists": true,
+   "bytes": 214539,
+   "mtime": "2026-10-19 13:03:28",
+   "sha256": "cadc0425a0a6ec5f220eec7c9d2378b4af1240b18eef886ee77115754d3c864b"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX14_TM_ciliary_snRNA/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX14_TM_ciliary_snRNA)",
+   "exists": true,
+   "bytes": 524543,
+   "mtime": "2026-10-19 13:03:28",
+   "sha256": "10f2b6ac085d6db224136ca8b352be3a9bebae9fd8b6360479ebb00bd8e1199f"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX15_optic_nerve_all/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX15_optic_nerve_all)",
+   "exists": true,
+   "bytes": 1216478,
+   "mtime": "2026-10-19 13:03:29",
+   "sha256": "ea453ea90754289226be2cfb7a22cf6c017bf2a29fa3d00e6ba920a6e12304c2"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX16_tabula_sapiens_eye/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX16_tabula_sapiens_eye)",
+   "exists": true,
+   "bytes": 1175521,
+   "mtime": "2026-10-19 13:03:30",
+   "sha256": "4162ee6748b75fbc10b4f7948ac4928356633929017404f6bedcf28d506e6f02"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/CX17_mouse_retina_all/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume CX17_mouse_retina_all)",
+   "exists": true,
+   "bytes": 1236951,
+   "mtime": "2026-10-19 13:03:30",
+   "sha256": "1a36e7b646b048365bc1871bdbd56e754c5a65f204e3a1ed345c5ca3c26aef54"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/PRE_GSE199013/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume PRE_GSE199013)",
+   "exists": true,
+   "bytes": 1037721,
+   "mtime": "2026-10-19 13:03:31",
+   "sha256": "6f066734b545ec8d253c49fc0f8b989dccb31b11337f67c42680c7ff1ced9e54"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/PRE_GSE268630/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume PRE_GSE268630)",
+   "exists": true,
+   "bytes": 1248310,
+   "mtime": "2026-10-19 13:03:31",
+   "sha256": "2c0ce32718439bd04cf3a75cfedf65ee2ec3fe73473f6f35a4b56efe34919b91"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/PRE_OA-D001/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume PRE_OA-D001)",
+   "exists": true,
+   "bytes": 1209518,
+   "mtime": "2026-10-19 13:03:32",
+   "sha256": "5d56b379d8c4c355defc526a4148f287e225a907e2b9871d0d4710590070f0bd"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/PRE_OA-D002/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume PRE_OA-D002)",
+   "exists": true,
+   "bytes": 640070,
+   "mtime": "2026-10-19 13:03:32",
+   "sha256": "66fdc297e72428b8106fce463f9733e1d75fab15da6aabf792e5fa2761f2ae22"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/PRE_OA-D004/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume PRE_OA-D004)",
+   "exists": true,
+   "bytes": 756900,
+   "mtime": "2026-10-19 13:03:33",
+   "sha256": "3769a3c1e6e8bed79a21b4a9c704d4e77d9731d0c1076a9dc06e106db88f7ac1"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/oss_check_20261019/dl/results/PRE_OA-D068/annotation_evidence_report.json",
+   "role": "I1 recorded per-cluster query window (volume PRE_OA-D068)",
+   "exists": true,
+   "bytes": 724956,
+   "mtime": "2026-10-19 13:03:33",
+   "sha256": "325b0592893cb90a739f464ed560b05bd2cd395ccee1a46fe72df036447aa18c"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/noregr_20261022/scripts/wave_common.py",
+   "role": "I7 harness: rulers + replay engine + acceptance gate",
+   "exists": true,
+   "bytes": 18547,
+   "mtime": "2026-10-22 10:41:20",
+   "sha256": "f8226dc4aefc799ace536b66748ece67494826031c21242b6e25b44389f37863"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/noregr_20261022/scripts/n3_harness.py",
+   "role": "I7 harness driver",
+   "exists": true,
+   "bytes": 15673,
+   "mtime": "2026-10-22 10:45:21",
+   "sha256": "9f55a8ccbd20219615b660218ac2ac7ba8602242ea62c51bb98adcec0bedb807"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/noregr_20261022/PREREG_NOREGRESSION_20261022.md",
+   "role": "I7 the harness's own pre-registration (rulers, floor)",
+   "exists": true,
+   "bytes": 12292,
+   "mtime": "2026-10-22 10:36:57",
+   "sha256": "131f5a422842e39260df72cc3a8bf872cd8db0c61d559836102296cbb2241156"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CHILD_TERM_CANDIDATES.json",
+   "role": "I8 the 56 (parent, child) candidates with corpus support",
+   "exists": true,
+   "bytes": 45751,
+   "mtime": "2026-10-21 23:48:11",
+   "sha256": "52802c68200a719dbd1c16a1acbdea7bbb08f9d740ffdbe494d06a7f37ceb582"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/CHILD_TERM_CANDIDATES.tsv",
+   "role": "I8 same, tabular",
+   "exists": true,
+   "bytes": 17808,
+   "mtime": "2026-10-21 23:48:11",
+   "sha256": "bd57acb4c97f0e3640922e14c266632724c1fdd65c5ecf9c2677155a01c78502"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/GRANULARITY_FOURWAY_721.tsv",
+   "role": "I8 per-cluster four-way relation reading (721 rows)",
+   "exists": true,
+   "bytes": 142857,
+   "mtime": "2026-10-21 23:48:10",
+   "sha256": "f66ba000cac34f5024360b09df85bda50e7e41e3a40396b6256d6b67503ca324"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_CLOSURE_is_a.tsv",
+   "role": "I8 the audited is_a closure",
+   "exists": true,
+   "bytes": 183579,
+   "mtime": "2026-10-21 23:48:10",
+   "sha256": "e6ea0a419139704f53dfb6aaf9198413c791f56c25c8d431c28190450c0ca553"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/out/ONT_LABELMAP_V2.tsv",
+   "role": "I8 our label -> CL map with provenance",
+   "exists": true,
+   "bytes": 7558,
+   "mtime": "2026-10-21 23:48:10",
+   "sha256": "629ab88c274b9dd644d68baf9a98670c55b72644532de1a1a3407795e185ad3e"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/REPORT.md",
+   "role": "I8 the wave report (gate A 9 rules / 0 failures)",
+   "exists": true,
+   "bytes": 19708,
+   "mtime": "2026-10-21 23:49:34",
+   "sha256": "3e8605d11ebd684d10a63bf4e6b5e249fd7ec8738b8012a699e2fe070f30fd1b"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/cl_depth_devlineage_20261021/scripts/ont_nav.py",
+   "role": "I8 the ontology navigation module (closure, relation)",
+   "exists": true,
+   "bytes": 20486,
+   "mtime": "2026-10-21 23:25:45",
+   "sha256": "4eac5092a16a48a08f72b24e56665c9740b5203ef18259260da9ea005574c456"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/subdivision_readiness_20261022/out/pair_table.json",
+   "role": "I9 the 923 (parent, child) readiness rows: tiers + discriminating genes",
+   "exists": true,
+   "bytes": 945808,
+   "mtime": "2026-10-22 11:10:47",
+   "sha256": "48077ed8fc0f4ab8b29a3c1aa4418deb6f3f30c57ca9e5f6bef35ed13dd7e99e"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/subdivision_readiness_20261022/out/pair_table.tsv",
+   "role": "I9 same, tabular",
+   "exists": true,
+   "bytes": 251532,
+   "mtime": "2026-10-22 11:10:47",
+   "sha256": "9e5ab6b0a3064de6c01299baf719379a0683da9f1adc12f83b90607314de4a32"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/subdivision_readiness_20261022/out/cost_table.json",
+   "role": "I9 demand / gain / keep / loss per pair",
+   "exists": true,
+   "bytes": 426238,
+   "mtime": "2026-10-22 11:10:48",
+   "sha256": "c3a0421ea039f0cff982f391a5395aeaeec01df723a7f4cdbb1fb5b3c9a42c77"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/subdivision_readiness_20261022/PREREG_SUBDIVISION_READINESS_20261022.md",
+   "role": "I9 the pre-registered floors (T-GENES/T-OBS/T-STATE)",
+   "exists": true,
+   "bytes": 10806,
+   "mtime": "2026-10-22 10:12:32",
+   "sha256": "eef74a506c10250192493ed6e9a8e20a8193a6b83418daaef99d34c758212f94"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/subdivision_readiness_20261022/PREREG_ANNEX_A_OPERATIONS_20261022.md",
+   "role": "I9 the operational annex",
+   "exists": true,
+   "bytes": 6787,
+   "mtime": "2026-10-22 10:14:50",
+   "sha256": "9845f8b759e3a4b878146c7d304eeda6ad88f67a0917354f655eae89b6fe5e73"
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/mcp_server/eyekb_core.py",
+   "role": "I3 the shipped service core (the file the wiring edits)",
+   "exists": true,
+   "bytes": 120551,
+   "mtime": "2026-10-24 16:19:53",
+   "sha256": "69da7a354a4d9b9afa5c16ac637c2aeffb81abba47f5894dc23cc56ab0bde205"
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_cl_alignment_v2_unified.json",
+   "role": "I6 the KB label -> CL map (the naming layer)",
+   "exists": true,
+   "bytes": 21506,
+   "mtime": "2026-10-24 16:22:44",
+   "sha256": "b68fe013f1bfc6934cb171076e35769cc66dc51d953f87370811c54462a31146"
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/ontology/cl/releases/2026-06-08/cl-base.obo",
+   "role": "I6 the frozen Cell Ontology snapshot",
+   "exists": true,
+   "bytes": 3757082,
+   "mtime": "2026-10-22 10:28:57",
+   "sha256": "c6274fb65cdf740b983a06b74cb678814249d7f8e580c2ec9de54bf204a2b1c7"
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/baselines/_tissue_class_crosswalk_v1.json",
+   "role": "I5 the tissue exclusion table (untouched)",
+   "exists": true,
+   "bytes": 42103,
+   "mtime": "2026-10-20 17:54:26",
+   "sha256": "a06a753af39700541962bf5dc03472635e024130b3f297d57bc1ac2802a5682d"
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v10_antseg_increment.json",
+   "role": "I4 a shipped increment carrying child-term entries (reference)",
+   "exists": true,
+   "bytes": 25497,
+   "mtime": "2026-10-20 20:27:49",
+   "sha256": "c488fc26b615e57addd1d0828b20293d07fb3a7a92baedca5d32a528bc597f47"
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v14_subtype_second_increment.json",
+   "role": "I4 a shipped increment carrying child-term entries (reference)",
+   "exists": true,
+   "bytes": 37576,
+   "mtime": "2026-10-22 21:28:06",
+   "sha256": "75884fb7bd88e1ab7fd1652a26051046bff07dd0c6ee2972abfd7c8100f9f452"
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/docs/W3_MANIFEST.sha256",
+   "role": "the repository manifest (re-taken last)",
+   "exists": true,
+   "bytes": 4238,
+   "mtime": "2026-10-22 21:49:51",
+   "sha256": "1291cc9779ff42200ab8071ee66d2bf89339fc92ecfcdf5d126ba0a0dc805213"
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/docs/RELEASE_IDENTITY.json",
+   "role": "the release identity record",
+   "exists": true,
+   "bytes": 3101,
+   "mtime": "2026-10-22 21:56:50",
+   "sha256": "63a8785d568261c94f27468a5783032d74889e6f59bda0b2643ef2cffccad8f4"
+  },
+  {
+   "path": "/mnt/D/EyeKB/plans/antseg_fill_20261020/out/gene_vocab.json",
+   "role": "I10 the assay gene vocabulary (the panel's measurability floor)",
+   "exists": true,
+   "bytes": 457937,
+   "mtime": "2026-10-20 17:19:25",
+   "sha256": "b423511f2df1bdc20bd4943c4a1882b0fb1a2328edf854475bfc2bb3316a280b"
+  },
+  {
+   "path": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/chunks.parquet",
+   "role": "I11 the served in-repo literature corpus (not re-mined by this wave; identity only)",
+   "exists": true,
+   "bytes": 1085097033,
+   "mtime": "2026-10-02 14:13:53",
+   "sha256": "NOT_HASHED(large)"
+  }
+ ]
+}

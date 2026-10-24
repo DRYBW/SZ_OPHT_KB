@@ -1,0 +1,755 @@
+{
+ "version": "v15.0-cl56-child-term-adoption-20261024",
+ "created": "2026-10-24",
+ "scope": "the author-side finer Cell-Ontology terms our coarser shipped classes were scored against: the corpus-supported child-term candidates of the CL-depth wave, restricted by the pre-registered scope rule to the pairs that can be named at all",
+ "status": "staging only; library `cl56_v15` is NOT merged into the default `all` set and has an EMPTY whitelist, so the default route is byte-identical in every state. Merging it into the default route is a separate decision taken only if the pre-registered acceptance rule passes (see out/ACCEPTANCE.json).",
+ "registered_by": "plans/cl56_adopt_20261022/PREREG_ADOPT_CL56_20261022.md",
+ "card": "t_fabddb85",
+ "cl_release": "cl/releases/2026-06-08/cl-base.owl",
+ "cl_ontology_file": "kb/ontology/cl/releases/2026-06-08/cl-base.obo",
+ "source_corpus": "the served in-repo literature corpus (v2.6-dev lineage); this card mines nothing new from it - the panels are read from the pre-registered readiness wave's discriminating-gene column",
+ "scope_tissues": [
+  "ocular_surface",
+  "optic_nerve",
+  "retina"
+ ],
+ "admission_rule": {
+  "a_ontology": "the child term resolves in the frozen snapshot and is a strict is_a descendant of our current class's term",
+  "b_naming_support": "the held corpus states the term (the 25 supported pairs); the 31 pairs with no corpus hit stay out and are listed as pending",
+  "c_floor": ">=1 recorded cluster whose reference is the child term; >=2 discriminating positive genes in the assay vocabulary; and >=2 of them observable in a demand cluster's recorded window (the readiness wave's T-GENES and T-OBS floors)"
+ },
+ "reading_is_in_sample": "the panels were selected and measured on the same 28 recorded volumes; a reading here is a harm-line/naming-agreement reading, NOT an accuracy claim, and an ontology-consistent name is not evidence of a better call",
+ "n_entries": 3,
+ "markers": {
+  "rod bipolar cell": [
+   "ARR3",
+   "BEST1",
+   "CACNA1F",
+   "CALB1",
+   "CLU",
+   "CRB1",
+   "CRX",
+   "DAB1",
+   "ERG",
+   "GAD1",
+   "GFAP",
+   "GNAT1",
+   "GRIK1",
+   "GRM6",
+   "ISL1",
+   "LHX4",
+   "MITF",
+   "NEFL",
+   "NRL",
+   "NYX",
+   "ONECUT1",
+   "OPN1LW",
+   "OPN1MW",
+   "OPN1SW",
+   "PAX6",
+   "PDE6B",
+   "PDE6H",
+   "POU4F2",
+   "PRKCA",
+   "PROX1",
+   "RCVRN",
+   "RHO",
+   "RLBP1",
+   "RPE65",
+   "RS1",
+   "SI",
+   "SLC6A9",
+   "SNCG",
+   "SOX2",
+   "SOX9",
+   "TF",
+   "TRPM1",
+   "VSX1",
+   "VSX2"
+  ],
+  "keratocyte": [
+   "ABCB5",
+   "ABCG2",
+   "ACKR1",
+   "ACTA2",
+   "ALCAM",
+   "ALDH1A1",
+   "ALDH3A1",
+   "AQP1",
+   "AR",
+   "B3GNT7",
+   "BDNF",
+   "BGN",
+   "BIRC5",
+   "BMP4",
+   "C3",
+   "CA3",
+   "CCL3",
+   "CCL4",
+   "CCR2",
+   "CD109",
+   "CD14",
+   "CD4",
+   "CD44",
+   "CD63",
+   "CD68",
+   "CD81",
+   "CD9",
+   "CDH1",
+   "CDH2",
+   "CHI3L1",
+   "CHST6",
+   "COL12A1",
+   "COL1A1",
+   "COL1A2",
+   "COL3A1",
+   "COL4A3",
+   "COL5A1",
+   "COL5A2",
+   "COL6A1",
+   "COL6A3",
+   "COL8A1",
+   "COL8A2",
+   "CS",
+   "CSK",
+   "CXCL14",
+   "DCN",
+   "EGFR",
+   "FBLN1",
+   "FMOD",
+   "FN1",
+   "FOXC1",
+   "FOXD3",
+   "GAPDH",
+   "GFAP",
+   "GPHA2",
+   "HCK",
+   "HGF",
+   "ITGB1",
+   "ITGB4",
+   "KERA"
+  ],
+  "S cone cell": [
+   "AIPL1",
+   "ATF6",
+   "C2",
+   "CEP290",
+   "CNGB1",
+   "CRB1",
+   "DAB1",
+   "EYS",
+   "GNB3",
+   "LCA5",
+   "MALAT1",
+   "MEF2C",
+   "PDE6A",
+   "PDE6B",
+   "PDE6G",
+   "PDE6H",
+   "ROM1",
+   "RPGR",
+   "RS1",
+   "SAG",
+   "SLC6A9",
+   "USH2A"
+  ]
+ },
+ "entries": [
+  {
+   "class_name": "rod bipolar cell",
+   "cl_id": "CL:0000751",
+   "cl_label": "rod bipolar cell",
+   "cl_resolves": true,
+   "adoption": "child_term_adoption",
+   "parent_class": "BC",
+   "parent_cl": "CL:0000748",
+   "tissue": [
+    "optic_nerve",
+    "retina"
+   ],
+   "markers": [
+    "ARR3",
+    "BEST1",
+    "CACNA1F",
+    "CALB1",
+    "CLU",
+    "CRB1",
+    "CRX",
+    "DAB1",
+    "ERG",
+    "GAD1",
+    "GFAP",
+    "GNAT1",
+    "GRIK1",
+    "GRM6",
+    "ISL1",
+    "LHX4",
+    "MITF",
+    "NEFL",
+    "NRL",
+    "NYX",
+    "ONECUT1",
+    "OPN1LW",
+    "OPN1MW",
+    "OPN1SW",
+    "PAX6",
+    "PDE6B",
+    "PDE6H",
+    "POU4F2",
+    "PRKCA",
+    "PROX1",
+    "RCVRN",
+    "RHO",
+    "RLBP1",
+    "RPE65",
+    "RS1",
+    "SI",
+    "SLC6A9",
+    "SNCG",
+    "SOX2",
+    "SOX9",
+    "TF",
+    "TRPM1",
+    "VSX1",
+    "VSX2"
+   ],
+   "n_markers": 44,
+   "cl_overlap_note": "shipped label-map rows already carrying CL:CL:0000751 before this card: none",
+   "why": "the author's own label for 8 recorded clusters (23484 cells) is literally this term, which is a strict is_a descendant of our `BC` (CL:0000748); the panel is the pair's discriminating positive genes with parent-shared genes removed, so the entry names the finer cell type without re-stating the parent's identity genes",
+   "evidence": {
+    "scope_rule": "PREREG_ADOPT_CL56_20261022.md section 4 (a)+(b)+(c1,c2,c3)",
+    "corpus_support_status": "corpus_states_the_term",
+    "corpus_n_chunks": 76,
+    "corpus_n_papers": 5,
+    "corpus_best_phrase": "rod bipolar cell",
+    "corpus_best_phrase_kind": "preferred_name",
+    "corpus_locator_examples": "37217935 @ Results > dBET6 ameliorates retinal response impairment after LD | 37388908 @ Results > Transcriptomic and open chromatin profiles of retinal cell types | 37559903 @ Results > Biological basis of the activity of F4L5.13 in the retinal vasculature",
+    "is_a_depth": 1,
+    "is_a_path": "CL:0000751 -> CL:0000749 -> CL:0000748",
+    "child_obo_line": 9968,
+    "panel_source": "plans/subdivision_readiness_20261022/out/pair_table.json field discriminating_genes (T-GENES: >=2 studies, parent-shared removed)",
+    "removed_not_in_assay_vocab": [],
+    "readiness_tier": "T2",
+    "readiness_reason": "needs_deeper_panel_genes",
+    "demand_clusters": 8,
+    "demand_cells": 23484,
+    "author_label_is_the_term": true,
+    "observable_in_window": [
+     {
+      "vol": "CX17_mouse_retina_all",
+      "cluster": "0",
+      "n_cells": 3802,
+      "n_shared": 2,
+      "shared_genes": [
+       "PRKCA",
+       "TRPM1"
+      ]
+     },
+     {
+      "vol": "PRE_GSE268630",
+      "cluster": "9",
+      "n_cells": 1292,
+      "n_shared": 2,
+      "shared_genes": [
+       "GRM6",
+       "TRPM1"
+      ]
+     },
+     {
+      "vol": "PRE_OA-D001",
+      "cluster": "4",
+      "n_cells": 5562,
+      "n_shared": 2,
+      "shared_genes": [
+       "PRKCA",
+       "TRPM1"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "class_name": "keratocyte",
+   "cl_id": "CL:0002363",
+   "cl_label": "keratocyte",
+   "cl_resolves": true,
+   "adoption": "child_term_adoption",
+   "parent_class": "Fibroblast",
+   "parent_cl": "CL:0000057",
+   "tissue": [
+    "ocular_surface"
+   ],
+   "markers": [
+    "ABCB5",
+    "ABCG2",
+    "ACKR1",
+    "ACTA2",
+    "ALCAM",
+    "ALDH1A1",
+    "ALDH3A1",
+    "AQP1",
+    "AR",
+    "B3GNT7",
+    "BDNF",
+    "BGN",
+    "BIRC5",
+    "BMP4",
+    "C3",
+    "CA3",
+    "CCL3",
+    "CCL4",
+    "CCR2",
+    "CD109",
+    "CD14",
+    "CD4",
+    "CD44",
+    "CD63",
+    "CD68",
+    "CD81",
+    "CD9",
+    "CDH1",
+    "CDH2",
+    "CHI3L1",
+    "CHST6",
+    "COL12A1",
+    "COL1A1",
+    "COL1A2",
+    "COL3A1",
+    "COL4A3",
+    "COL5A1",
+    "COL5A2",
+    "COL6A1",
+    "COL6A3",
+    "COL8A1",
+    "COL8A2",
+    "CS",
+    "CSK",
+    "CXCL14",
+    "DCN",
+    "EGFR",
+    "FBLN1",
+    "FMOD",
+    "FN1",
+    "FOXC1",
+    "FOXD3",
+    "GAPDH",
+    "GFAP",
+    "GPHA2",
+    "HCK",
+    "HGF",
+    "ITGB1",
+    "ITGB4",
+    "KERA"
+   ],
+   "n_markers": 60,
+   "cl_overlap_note": "shipped label-map rows already carrying CL:CL:0002363 before this card: ['Keratocytes']",
+   "why": "the author's own label for 3 recorded clusters (11836 cells) is literally this term, which is a strict is_a descendant of our `Fibroblast` (CL:0000057); the panel is the pair's discriminating positive genes with parent-shared genes removed, so the entry names the finer cell type without re-stating the parent's identity genes",
+   "evidence": {
+    "scope_rule": "PREREG_ADOPT_CL56_20261022.md section 4 (a)+(b)+(c1,c2,c3)",
+    "corpus_support_status": "corpus_states_a_synonym_only",
+    "corpus_n_chunks": 42,
+    "corpus_n_papers": 8,
+    "corpus_best_phrase": "corneal fibroblast",
+    "corpus_best_phrase_kind": "synonym_exact",
+    "corpus_locator_examples": "39940950 @ Abstract | 39940950 @ 4. Methods > 4.6. Cell Culture | 39940950 @ 5. Conclusions",
+    "is_a_depth": 1,
+    "is_a_path": "CL:0002363 -> CL:0000005 -> CL:0000057",
+    "child_obo_line": 22629,
+    "panel_source": "plans/subdivision_readiness_20261022/out/pair_table.json field discriminating_genes (T-GENES: >=2 studies, parent-shared removed)",
+    "removed_not_in_assay_vocab": [],
+    "readiness_tier": "excluded",
+    "readiness_reason": "already_shipped_as_own_class",
+    "demand_clusters": 3,
+    "demand_cells": 11836,
+    "author_label_is_the_term": true,
+    "observable_in_window": [
+     {
+      "vol": "CX12_ocular_surface_snRNA",
+      "cluster": "4",
+      "n_cells": 5657,
+      "n_shared": 5,
+      "shared_genes": [
+       "ALDH3A1",
+       "COL12A1",
+       "COL5A2",
+       "COL6A3",
+       "DCN"
+      ]
+     },
+     {
+      "vol": "PRE_OA-D002",
+      "cluster": "10",
+      "n_cells": 2732,
+      "n_shared": 3,
+      "shared_genes": [
+       "ALDH3A1",
+       "COL12A1",
+       "DCN"
+      ]
+     },
+     {
+      "vol": "PRE_OA-D002",
+      "cluster": "11",
+      "n_cells": 3447,
+      "n_shared": 6,
+      "shared_genes": [
+       "COL1A1",
+       "COL1A2",
+       "COL3A1",
+       "COL5A1",
+       "COL5A2",
+       "COL6A1"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "class_name": "S cone cell",
+   "cl_id": "CL:0003050",
+   "cl_label": "S cone cell",
+   "cl_resolves": true,
+   "adoption": "child_term_adoption",
+   "parent_class": "Cone",
+   "parent_cl": "CL:0000573",
+   "tissue": [
+    "retina"
+   ],
+   "markers": [
+    "AIPL1",
+    "ATF6",
+    "C2",
+    "CEP290",
+    "CNGB1",
+    "CRB1",
+    "DAB1",
+    "EYS",
+    "GNB3",
+    "LCA5",
+    "MALAT1",
+    "MEF2C",
+    "PDE6A",
+    "PDE6B",
+    "PDE6G",
+    "PDE6H",
+    "ROM1",
+    "RPGR",
+    "RS1",
+    "SAG",
+    "SLC6A9",
+    "USH2A"
+   ],
+   "n_markers": 22,
+   "cl_overlap_note": "shipped label-map rows already carrying CL:CL:0003050 before this card: none",
+   "why": "the author's own label for 3 recorded clusters (3685 cells) is literally this term, which is a strict is_a descendant of our `Cone` (CL:0000573); the panel is the pair's discriminating positive genes with parent-shared genes removed, so the entry names the finer cell type without re-stating the parent's identity genes",
+   "evidence": {
+    "scope_rule": "PREREG_ADOPT_CL56_20261022.md section 4 (a)+(b)+(c1,c2,c3)",
+    "corpus_support_status": "corpus_states_the_term",
+    "corpus_n_chunks": 5,
+    "corpus_n_papers": 5,
+    "corpus_best_phrase": "S cone cell",
+    "corpus_best_phrase_kind": "preferred_name",
+    "corpus_locator_examples": "35383196 @ Results > Base editing restores the expression of cone-specific phototransduction genes and downregulates cell degenerat",
+    "is_a_depth": 1,
+    "is_a_path": "CL:0003050 -> CL:0000573",
+    "child_obo_line": 27841,
+    "panel_source": "plans/subdivision_readiness_20261022/out/pair_table.json field discriminating_genes (T-GENES: >=2 studies, parent-shared removed)",
+    "removed_not_in_assay_vocab": [],
+    "readiness_tier": "T1",
+    "readiness_reason": "available_now",
+    "demand_clusters": 3,
+    "demand_cells": 3685,
+    "author_label_is_the_term": true,
+    "observable_in_window": [
+     {
+      "vol": "PRE_GSE268630",
+      "cluster": "29",
+      "n_cells": 273,
+      "n_shared": 2,
+      "shared_genes": [
+       "EYS",
+       "USH2A"
+      ]
+     },
+     {
+      "vol": "PRE_OA-D001",
+      "cluster": "26",
+      "n_cells": 179,
+      "n_shared": 2,
+      "shared_genes": [
+       "GNB3",
+       "PDE6H"
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "pending_pairs": [
+  {
+   "our_label": "SMC",
+   "child_cl": "CL:1000443",
+   "child_label": "ciliary muscle cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_the_term",
+   "demand_clusters": 7,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "Endo",
+   "child_cl": "CL:0000071",
+   "child_label": "blood vessel endothelial cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_the_term",
+   "demand_clusters": 7,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "AC",
+   "child_cl": "CL:4030028",
+   "child_label": "glycinergic amacrine cell",
+   "fails": [
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_the_term",
+   "demand_clusters": 17,
+   "n_panel_genes": 4
+  },
+  {
+   "our_label": "AC",
+   "child_cl": "CL:4030027",
+   "child_label": "GABAergic amacrine cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_the_term",
+   "demand_clusters": 17,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "HC",
+   "child_cl": "CL:0004217",
+   "child_label": "H1 horizontal cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_the_term",
+   "demand_clusters": 3,
+   "n_panel_genes": 1
+  },
+  {
+   "our_label": "RGC",
+   "child_cl": "CL:4033047",
+   "child_label": "OFF midget ganglion cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_the_term",
+   "demand_clusters": 2,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "BC",
+   "child_cl": "CL:4033033",
+   "child_label": "flat midget bipolar cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_a_synonym_only",
+   "demand_clusters": 3,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "T",
+   "child_cl": "CL:0000912",
+   "child_label": "helper T cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_the_term",
+   "demand_clusters": 1,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "BC",
+   "child_cl": "CL:0000750",
+   "child_label": "OFF-bipolar cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_the_term",
+   "demand_clusters": 14,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "BC",
+   "child_cl": "CL:0000749",
+   "child_label": "ON-bipolar cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_the_term",
+   "demand_clusters": 11,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "Endo",
+   "child_cl": "CL:0002543",
+   "child_label": "vein endothelial cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_the_term",
+   "demand_clusters": 1,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "Endo",
+   "child_cl": "CL:1000413",
+   "child_label": "endothelial cell of artery",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_a_synonym_only",
+   "demand_clusters": 1,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "SMC",
+   "child_cl": "CL:0000359",
+   "child_label": "vascular associated smooth muscle cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_a_synonym_only",
+   "demand_clusters": 2,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "Endo",
+   "child_cl": "CL:0002138",
+   "child_label": "endothelial cell of lymphatic vessel",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_a_synonym_only",
+   "demand_clusters": 4,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "Mac_Tissue",
+   "child_cl": "CL:0000129",
+   "child_label": "microglial cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_the_term",
+   "demand_clusters": 7,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "AC",
+   "child_cl": "CL:0004232",
+   "child_label": "starburst amacrine cell",
+   "fails": [
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_the_term",
+   "demand_clusters": 3,
+   "n_panel_genes": 20
+  },
+  {
+   "our_label": "RGC",
+   "child_cl": "CL:4033052",
+   "child_label": "ON parasol ganglion cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_a_synonym_only",
+   "demand_clusters": 2,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "T",
+   "child_cl": "CL:0000624",
+   "child_label": "CD4-positive, alpha-beta T cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_the_term",
+   "demand_clusters": 1,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "Schwann",
+   "child_cl": "CL:0000218",
+   "child_label": "myelinating Schwann cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_the_term",
+   "demand_clusters": 6,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "RGC",
+   "child_cl": "CL:4023189",
+   "child_label": "parasol ganglion cell of retina",
+   "fails": [
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_a_synonym_only",
+   "demand_clusters": 1,
+   "n_panel_genes": 4
+  },
+  {
+   "our_label": "RGC",
+   "child_cl": "CL:4033051",
+   "child_label": "OFF parasol ganglion cell",
+   "fails": [
+    "c2_below_two_discriminating_genes",
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_a_synonym_only",
+   "demand_clusters": 3,
+   "n_panel_genes": 0
+  },
+  {
+   "our_label": "Endo",
+   "child_cl": "CL:0002139",
+   "child_label": "endothelial cell of vascular tree",
+   "fails": [
+    "c3_panel_not_observable_in_window"
+   ],
+   "corpus_support_status": "corpus_states_a_synonym_only",
+   "demand_clusters": 3,
+   "n_panel_genes": 46
+  }
+ ],
+ "out_of_scope_no_corpus_hit": {
+  "count": 31,
+  "reason": "the held corpus does not state these terms; adopting them would be a vocabulary import with no local evidence"
+ },
+ "we_are_finer_note": "the 8 `we_are_finer_pairs` of the predecessor wave (our term finer than the author's) are a different question and are NOT folded into this adoption"
+}

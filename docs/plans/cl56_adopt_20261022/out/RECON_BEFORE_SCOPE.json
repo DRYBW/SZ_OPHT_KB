@@ -1,0 +1,400 @@
+{
+ "scope_pairs": 25,
+ "scope_clusters": 93,
+ "scope_cells": 206257,
+ "whole_recording_shares": {
+  "n_clusters": 721,
+  "n_cells": 1495330,
+  "share_pct": {
+   "consistent": 42.544,
+   "related": 16.936,
+   "inconsistent": 19.843,
+   "mixed": 20.676
+  },
+  "clusters": {
+   "consistent": 297,
+   "related": 88,
+   "inconsistent": 171,
+   "mixed": 165
+  },
+  "cells": {
+   "consistent": 636179,
+   "related": 253247,
+   "inconsistent": 296724,
+   "mixed": 309180
+  }
+ },
+ "per_pair": {
+  "SMC->CL:1000443": {
+   "clusters": 5,
+   "cells": 26532,
+   "grade": {
+    "related": 3,
+    "inconsistent": 2
+   },
+   "cl": {
+    "same_cl": 3,
+    "truly_inconsistent": 2
+   },
+   "top1": {
+    "ciliary muscle cell": 3,
+    "SMC": 2
+   },
+   "child_label": "ciliary muscle cell"
+  },
+  "Endo->CL:0000071": {
+   "clusters": 7,
+   "cells": 23948,
+   "grade": {
+    "related": 7
+   },
+   "cl": {
+    "kb_coarser": 7
+   },
+   "top1": {
+    "Endo": 7
+   },
+   "child_label": "blood vessel endothelial cell"
+  },
+  "BC->CL:0000751": {
+   "clusters": 8,
+   "cells": 23484,
+   "grade": {
+    "related": 7,
+    "mixed": 1
+   },
+   "cl": {
+    "kb_coarser": 7,
+    "abstain": 1
+   },
+   "top1": {
+    "retina_interneuron::BC": 5,
+    "BC": 2,
+    "null": 1
+   },
+   "child_label": "rod bipolar cell"
+  },
+  "AC->CL:4030028": {
+   "clusters": 13,
+   "cells": 15718,
+   "grade": {
+    "consistent": 10,
+    "mixed": 3
+   },
+   "cl": {
+    "kb_coarser": 10,
+    "abstain": 3
+   },
+   "top1": {
+    "retina_interneuron::AC": 10,
+    "null": 3
+   },
+   "child_label": "glycinergic amacrine cell"
+  },
+  "AC->CL:4030027": {
+   "clusters": 13,
+   "cells": 14442,
+   "grade": {
+    "consistent": 11,
+    "mixed": 2
+   },
+   "cl": {
+    "kb_coarser": 11,
+    "abstain": 2
+   },
+   "top1": {
+    "retina_interneuron::AC": 9,
+    "null": 2,
+    "AC": 2
+   },
+   "child_label": "GABAergic amacrine cell"
+  },
+  "Fibroblast->CL:0002363": {
+   "clusters": 3,
+   "cells": 11836,
+   "grade": {
+    "consistent": 3
+   },
+   "cl": {
+    "kb_coarser": 3
+   },
+   "top1": {
+    "onfibro_v13::Fibroblast": 1,
+    "Fibroblast": 2
+   },
+   "child_label": "keratocyte"
+  },
+  "HC->CL:0004217": {
+   "clusters": 3,
+   "cells": 11275,
+   "grade": {
+    "consistent": 3
+   },
+   "cl": {
+    "kb_coarser": 3
+   },
+   "top1": {
+    "retina_interneuron::HC": 3
+   },
+   "child_label": "H1 horizontal cell"
+  },
+  "RGC->CL:4033047": {
+   "clusters": 1,
+   "cells": 9022,
+   "grade": {
+    "consistent": 1
+   },
+   "cl": {
+    "kb_coarser": 1
+   },
+   "top1": {
+    "RGC": 1
+   },
+   "child_label": "OFF midget ganglion cell"
+  },
+  "BC->CL:4033033": {
+   "clusters": 3,
+   "cells": 8959,
+   "grade": {
+    "consistent": 3
+   },
+   "cl": {
+    "kb_coarser": 3
+   },
+   "top1": {
+    "retina_interneuron::BC": 3
+   },
+   "child_label": "flat midget bipolar cell"
+  },
+  "T->CL:0000912": {
+   "clusters": 1,
+   "cells": 7969,
+   "grade": {
+    "consistent": 1
+   },
+   "cl": {
+    "truly_inconsistent": 1
+   },
+   "top1": {
+    "T": 1
+   },
+   "child_label": "helper T cell"
+  },
+  "BC->CL:0000750": {
+   "clusters": 13,
+   "cells": 7701,
+   "grade": {
+    "consistent": 13
+   },
+   "cl": {
+    "kb_coarser": 13
+   },
+   "top1": {
+    "retina_interneuron::BC": 12,
+    "BC": 1
+   },
+   "child_label": "OFF-bipolar cell"
+  },
+  "BC->CL:0000749": {
+   "clusters": 9,
+   "cells": 7644,
+   "grade": {
+    "consistent": 9
+   },
+   "cl": {
+    "kb_coarser": 9
+   },
+   "top1": {
+    "retina_interneuron::BC": 9
+   },
+   "child_label": "ON-bipolar cell"
+  },
+  "Endo->CL:0002543": {
+   "clusters": 1,
+   "cells": 7584,
+   "grade": {
+    "inconsistent": 1
+   },
+   "cl": {
+    "truly_inconsistent": 1
+   },
+   "top1": {
+    "Endo": 1
+   },
+   "child_label": "vein endothelial cell"
+  },
+  "Endo->CL:1000413": {
+   "clusters": 1,
+   "cells": 6987,
+   "grade": {
+    "related": 1
+   },
+   "cl": {
+    "kb_coarser": 1
+   },
+   "top1": {
+    "Endo": 1
+   },
+   "child_label": "endothelial cell of artery"
+  },
+  "SMC->CL:0000359": {
+   "clusters": 1,
+   "cells": 4743,
+   "grade": {
+    "inconsistent": 1
+   },
+   "cl": {
+    "truly_inconsistent": 1
+   },
+   "top1": {
+    "SMC": 1
+   },
+   "child_label": "vascular associated smooth muscle cell"
+  },
+  "Endo->CL:0002138": {
+   "clusters": 1,
+   "cells": 3921,
+   "grade": {
+    "inconsistent": 1
+   },
+   "cl": {
+    "truly_inconsistent": 1
+   },
+   "top1": {
+    "Endo": 1
+   },
+   "child_label": "endothelial cell of lymphatic vessel"
+  },
+  "Mac_Tissue->CL:0000129": {
+   "clusters": 1,
+   "cells": 3629,
+   "grade": {
+    "mixed": 1
+   },
+   "cl": {
+    "abstain": 1
+   },
+   "top1": {
+    "null": 1
+   },
+   "child_label": "microglial cell"
+  },
+  "Cone->CL:0003050": {
+   "clusters": 2,
+   "cells": 3412,
+   "grade": {
+    "consistent": 2
+   },
+   "cl": {
+    "kb_coarser": 2
+   },
+   "top1": {
+    "Cone": 2
+   },
+   "child_label": "S cone cell"
+  },
+  "AC->CL:0004232": {
+   "clusters": 1,
+   "cells": 3186,
+   "grade": {
+    "consistent": 1
+   },
+   "cl": {
+    "kb_coarser": 1
+   },
+   "top1": {
+    "retina_interneuron::AC": 1
+   },
+   "child_label": "starburst amacrine cell"
+  },
+  "RGC->CL:4033052": {
+   "clusters": 1,
+   "cells": 1738,
+   "grade": {
+    "consistent": 1
+   },
+   "cl": {
+    "kb_coarser": 1
+   },
+   "top1": {
+    "RGC": 1
+   },
+   "child_label": "ON parasol ganglion cell"
+  },
+  "T->CL:0000624": {
+   "clusters": 1,
+   "cells": 797,
+   "grade": {
+    "consistent": 1
+   },
+   "cl": {
+    "truly_inconsistent": 1
+   },
+   "top1": {
+    "T": 1
+   },
+   "child_label": "CD4-positive, alpha-beta T cell"
+  },
+  "Schwann->CL:0000218": {
+   "clusters": 1,
+   "cells": 685,
+   "grade": {
+    "inconsistent": 1
+   },
+   "cl": {
+    "truly_inconsistent": 1
+   },
+   "top1": {
+    "oligodendrocyte": 1
+   },
+   "child_label": "myelinating Schwann cell"
+  },
+  "RGC->CL:4023189": {
+   "clusters": 1,
+   "cells": 515,
+   "grade": {
+    "consistent": 1
+   },
+   "cl": {
+    "kb_coarser": 1
+   },
+   "top1": {
+    "RGC": 1
+   },
+   "child_label": "parasol ganglion cell of retina"
+  },
+  "RGC->CL:4033051": {
+   "clusters": 1,
+   "cells": 325,
+   "grade": {
+    "consistent": 1
+   },
+   "cl": {
+    "kb_coarser": 1
+   },
+   "top1": {
+    "retina_v6::RGC": 1
+   },
+   "child_label": "OFF parasol ganglion cell"
+  },
+  "Endo->CL:0002139": {
+   "clusters": 1,
+   "cells": 205,
+   "grade": {
+    "related": 1
+   },
+   "cl": {
+    "kb_coarser": 1
+   },
+   "top1": {
+    "Endo": 1
+   },
+   "child_label": "endothelial cell of vascular tree"
+  }
+ },
+ "ruler_selfcheck": {
+  "agree": 542,
+  "differ": 0,
+  "examples": []
+ }
+}

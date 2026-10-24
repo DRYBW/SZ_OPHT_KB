@@ -1,0 +1,36 @@
+== recorded set: 721 clusters / 1495330 cells
+== in-scope pairs: 25 (corpus-supported) ; recorded coarser rows matched: 93
+== in-scope rows with no recorded query window: 0 []
+== whole recording (shipped tree, no overlay):
+   share_pct {'consistent': 42.544, 'related': 16.936, 'inconsistent': 19.843, 'mixed': 20.676}  clusters {'consistent': 297, 'related': 88, 'inconsistent': 171, 'mixed': 165}
+== the in-scope subset: 93 clusters / 206257 cells
+   grade: {'consistent': 61, 'related': 19, 'inconsistent': 6, 'mixed': 7}
+   cl   : {'kb_coarser': 75, 'truly_inconsistent': 8, 'same_cl': 3, 'abstain': 7}
+   top-1: {'retina_interneuron::AC': 20, 'RGC': 3, 'retina_interneuron::BC': 29, 'retina_interneuron::HC': 3, 'Cone': 2, 'BC': 3, 'Endo': 11, 'SMC': 3, 'T': 2, 'onfibro_v13::Fibroblast': 1, 'ciliary muscle cell': 3, 'retina_v6::RGC': 1, None: 7, 'AC': 2, 'Fibroblast': 2, 'oligodendrocyte': 1}
+== per pair: cells, before grade counts, before top-1 counts
+  SMC        CL:1000443   ciliary muscle cell                    cells=  26532 {'related': 3, 'inconsistent': 2} | {'same_cl': 3, 'truly_inconsistent': 2}
+  Endo       CL:0000071   blood vessel endothelial cell          cells=  23948 {'related': 7} | {'kb_coarser': 7}
+  BC         CL:0000751   rod bipolar cell                       cells=  23484 {'related': 7, 'mixed': 1} | {'kb_coarser': 7, 'abstain': 1}
+  AC         CL:4030028   glycinergic amacrine cell              cells=  15718 {'consistent': 10, 'mixed': 3} | {'kb_coarser': 10, 'abstain': 3}
+  AC         CL:4030027   GABAergic amacrine cell                cells=  14442 {'consistent': 11, 'mixed': 2} | {'kb_coarser': 11, 'abstain': 2}
+  Fibroblast CL:0002363   keratocyte                             cells=  11836 {'consistent': 3} | {'kb_coarser': 3}
+  HC         CL:0004217   H1 horizontal cell                     cells=  11275 {'consistent': 3} | {'kb_coarser': 3}
+  RGC        CL:4033047   OFF midget ganglion cell               cells=   9022 {'consistent': 1} | {'kb_coarser': 1}
+  BC         CL:4033033   flat midget bipolar cell               cells=   8959 {'consistent': 3} | {'kb_coarser': 3}
+  T          CL:0000912   helper T cell                          cells=   7969 {'consistent': 1} | {'truly_inconsistent': 1}
+  BC         CL:0000750   OFF-bipolar cell                       cells=   7701 {'consistent': 13} | {'kb_coarser': 13}
+  BC         CL:0000749   ON-bipolar cell                        cells=   7644 {'consistent': 9} | {'kb_coarser': 9}
+  Endo       CL:0002543   vein endothelial cell                  cells=   7584 {'inconsistent': 1} | {'truly_inconsistent': 1}
+  Endo       CL:1000413   endothelial cell of artery             cells=   6987 {'related': 1} | {'kb_coarser': 1}
+  SMC        CL:0000359   vascular associated smooth muscle cell cells=   4743 {'inconsistent': 1} | {'truly_inconsistent': 1}
+  Endo       CL:0002138   endothelial cell of lymphatic vessel   cells=   3921 {'inconsistent': 1} | {'truly_inconsistent': 1}
+  Mac_Tissue CL:0000129   microglial cell                        cells=   3629 {'mixed': 1} | {'abstain': 1}
+  Cone       CL:0003050   S cone cell                            cells=   3412 {'consistent': 2} | {'kb_coarser': 2}
+  AC         CL:0004232   starburst amacrine cell                cells=   3186 {'consistent': 1} | {'kb_coarser': 1}
+  RGC        CL:4033052   ON parasol ganglion cell               cells=   1738 {'consistent': 1} | {'kb_coarser': 1}
+  T          CL:0000624   CD4-positive, alpha-beta T cell        cells=    797 {'consistent': 1} | {'truly_inconsistent': 1}
+  Schwann    CL:0000218   myelinating Schwann cell               cells=    685 {'inconsistent': 1} | {'truly_inconsistent': 1}
+  RGC        CL:4023189   parasol ganglion cell of retina        cells=    515 {'consistent': 1} | {'kb_coarser': 1}
+  RGC        CL:4033051   OFF parasol ganglion cell              cells=    325 {'consistent': 1} | {'kb_coarser': 1}
+  Endo       CL:0002139   endothelial cell of vascular tree      cells=    205 {'related': 1} | {'kb_coarser': 1}
+== wrote out/RECON_BEFORE_SCOPE.json

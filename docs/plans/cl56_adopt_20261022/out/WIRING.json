@@ -1,0 +1,41 @@
+{
+ "probe": "w1_wire.py",
+ "file": "/home/ubuntu/EYEKB_REPO/mcp_server/eyekb_core.py",
+ "at": "2026-10-24 16:14:47",
+ "sha256_before": "be4e91c311bb77f16cd7e3e3baf1ff2afcaee858dba7330be985ee137231a0df",
+ "edits": [
+  {
+   "tag": "E1 MARKER_LIBS entry (echoing the anchor line)",
+   "anchor_matches": 1,
+   "added_lines": 12
+  },
+  {
+   "tag": "E2 CL56_DEFAULT_LIBS + _cl56_act_enabled",
+   "anchor_matches": 1,
+   "added_lines": 21
+  },
+  {
+   "tag": "E3 _load_marker_dbs branch",
+   "anchor_matches": 1,
+   "added_lines": 3
+  },
+  {
+   "tag": "E4 ValueError message (explicit-route reachability)",
+   "anchor_matches": 1,
+   "added_lines": 0
+  }
+ ],
+ "pre_image": "/mnt/D/EyeKB/plans/cl56_adopt_20261022/pre_images/eyekb_core.py.pre_cl56",
+ "sha256_after": "69da7a354a4d9b9afa5c16ac637c2aeffb81abba47f5894dc23cc56ab0bde205",
+ "bytes_after": 120551,
+ "py_compile_rc": 0,
+ "py_compile_err": "",
+ "probe_rc": 0,
+ "probe_out": [
+  "True () True",
+  "False",
+  "['retina', 'membrane', 'retina_interneuron', 'retina_v6', 'face_v6', 'k9_ocs', 'antseg_v10', 'onfibro_v13']",
+  "3"
+ ],
+ "probe_err": ""
+}

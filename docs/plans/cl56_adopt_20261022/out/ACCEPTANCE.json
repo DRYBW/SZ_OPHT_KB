@@ -1,0 +1,202 @@
+{
+ "probe": "a1_acceptance.py",
+ "card": "t_fabddb85",
+ "rule": "plans/cl56_adopt_20261022/PREREG_ADOPT_CL56_20261022.md section 5",
+ "clauses": {
+  "a": {
+   "clause": "(a) no dataset's cell-weighted consistent share may fall",
+   "verdict": "FAIL",
+   "readings": {
+    "A1_recorded_decls": {
+     "n_falls": 12,
+     "datasets_checked": 28,
+     "worst": -34.862,
+     "failing_datasets": [
+      "CX02_adult_retina",
+      "CX03_retina_multiome",
+      "CX04_cowan_fovea",
+      "CX04_cowan_organoid",
+      "CX04_cowan_periphery",
+      "CX12_ocular_surface_snRNA",
+      "CX13_TM_corneal_scleral",
+      "CX13_central_cornea",
+      "PRE_GSE199013",
+      "PRE_OA-D001",
+      "PRE_OA-D002",
+      "PRE_OA-D068"
+     ]
+    },
+    "A2_tester_decls": {
+     "n_falls": 12,
+     "datasets_checked": 28,
+     "worst": -34.862,
+     "failing_datasets": [
+      "CX02_adult_retina",
+      "CX03_retina_multiome",
+      "CX04_cowan_fovea",
+      "CX04_cowan_organoid",
+      "CX04_cowan_periphery",
+      "CX12_ocular_surface_snRNA",
+      "CX13_TM_corneal_scleral",
+      "CX13_central_cornea",
+      "PRE_GSE199013",
+      "PRE_OA-D001",
+      "PRE_OA-D002",
+      "PRE_OA-D068"
+     ]
+    },
+    "A3_default_route": {
+     "n_falls": 10,
+     "datasets_checked": 28,
+     "worst": -34.862,
+     "failing_datasets": [
+      "CX02_adult_retina",
+      "CX03_retina_multiome",
+      "CX04_cowan_fovea",
+      "CX04_cowan_organoid",
+      "CX04_cowan_periphery",
+      "CX12_ocular_surface_snRNA",
+      "PRE_GSE199013",
+      "PRE_OA-D001",
+      "PRE_OA-D002",
+      "PRE_OA-D068"
+     ]
+    }
+   }
+  },
+  "b": {
+   "clause": "(b) the aggregate cell-weighted inconsistent share must not rise",
+   "verdict": "FAIL",
+   "readings": {
+    "A1_recorded_decls": {
+     "overall_before_pct": 19.843,
+     "overall_after_pct": 29.609,
+     "overall_delta_pp": 9.766,
+     "n_datasets_rising": 18
+    },
+    "A3_default_route": {
+     "overall_before_pct": 24.205,
+     "overall_after_pct": 34.307,
+     "overall_delta_pp": 10.102,
+     "n_datasets_rising": 18
+    },
+    "A2_tester_decls": {
+     "overall_before_pct": 18.955,
+     "overall_after_pct": 28.739,
+     "overall_delta_pp": 9.784,
+     "n_datasets_rising": 18
+    }
+   }
+  },
+  "c": {
+   "clause": "(c) every move attributable cluster by cluster, zero unexplained",
+   "verdict": "PASS",
+   "moved_clusters": 311,
+   "moved_cells": 681726,
+   "kinds": {
+    "adopted-name-gain": 92,
+    "rank-shift": 219
+   },
+   "unexpected": []
+  },
+  "d": {
+   "clause": "(d) the finer name must be the author's own label for those clusters",
+   "verdict": "PASS",
+   "adopted_demand_clusters": 14,
+   "adopted_demand_clusters_where_truth_is_exactly_the_name": 14,
+   "violations_on_demand_clusters": [],
+   "adopted_name_takeovers": 92,
+   "adopted_name_takeovers_where_the_truth_is_that_name": 3,
+   "adopted_name_takeovers_where_the_truth_is_a_different_term": 89,
+   "disclosure": "the pre-registered clause reads the ADOPTED (demand) clusters and they all carry the name as their author label. Reported beside it, because the brief also says the adoption 'must not invent a term the author never used for those cells': of the 92 clusters the increment renames, only 3 have that term as their author label; the other 89 are clusters the author labelled something else."
+  },
+  "e": {
+   "clause": "(e) the kill switch restores the pre-flip default byte-for-byte",
+   "verdict": "PASS",
+   "detail": {
+    "PARENT_vs_OFF0": {
+     "clusters": {
+      "identical_raw": true,
+      "identical_canonical": true,
+      "n_queries": 721,
+      "raw_combined_md5": "61ac177e309458a7832058a6cf95a286"
+     },
+     "battery": {
+      "identical_raw": true,
+      "identical_canonical": true,
+      "n_queries": 238,
+      "raw_combined_md5": "d7400a22b408ca3d8da62d03d9fdcadf"
+     }
+    },
+    "PARENT_vs_UNSET": {
+     "clusters": {
+      "identical_raw": true,
+      "identical_canonical": true,
+      "n_queries": 721,
+      "raw_combined_md5": "61ac177e309458a7832058a6cf95a286"
+     },
+     "battery": {
+      "identical_raw": true,
+      "identical_canonical": true,
+      "n_queries": 238,
+      "raw_combined_md5": "d7400a22b408ca3d8da62d03d9fdcadf"
+     }
+    },
+    "OFF0_vs_UNSET": {
+     "clusters": {
+      "identical_raw": true,
+      "identical_canonical": true,
+      "n_queries": 721,
+      "raw_combined_md5": "61ac177e309458a7832058a6cf95a286"
+     },
+     "battery": {
+      "identical_raw": true,
+      "identical_canonical": true,
+      "n_queries": 238,
+      "raw_combined_md5": "d7400a22b408ca3d8da62d03d9fdcadf"
+     }
+    }
+   },
+   "note": "the whitelist is empty in every state, so the registered default-OFF increment and the pre-card commit answer the recorded set with the same bytes (raw and canonical); this is also the state the card leaves on disk."
+  }
+ },
+ "failed_clauses": [
+  "a",
+  "b"
+ ],
+ "verdict": "NO-GO",
+ "consequence_per_the_brief": "clause 5 of the brief: do not merge into the default route; leave the increment registered default-off and complete the card with the numbers",
+ "expectations": [
+  {
+   "id": "E1",
+   "expected": "the scope list is a small subset of the 25",
+   "measured": "3 of 25 adopted (14 clusters / 39005 cells); 22 pending with reasons",
+   "held": true
+  },
+  {
+   "id": "E2",
+   "expected": "the named mechanism is narrow: gain at the ontology reading and at abstention, not a broad takeover",
+   "measured": "whole recording: same_cl 244 -> 220, truly_inconsistent 176 -> 241, abstain 165 -> 120; scope subset: {'kb_coarser': 12, 'abstain': 2} -> {'kb_coarser': 10, 'same_cl': 3, 'abstain': 1}",
+   "held": false,
+   "note": "the mechanism was NOT narrow: 3 entries with broad panels renamed 311 clusters"
+  },
+  {
+   "id": "E3",
+   "expected": "a renamed cluster can move consistent -> related under the frozen family ruler",
+   "measured": "consistent->related 11722 cells; consistent->inconsistent 66646 cells (the family ruler maps an adopted finer name to no family)",
+   "held": true
+  },
+  {
+   "id": "E4",
+   "expected": "the named risk is clause (b) via unmappable names",
+   "measured": "unmappable_pred 15 -> 15 clusters: the label-map rows added in this card resolve, so the predecessor's `unmappable_pred` failure mode did not recur; the harm came from over-application instead",
+   "held": false
+  },
+  {
+   "id": "E5",
+   "expected": "a NO-GO with numbers is a valid outcome",
+   "measured": "NO-GO",
+   "held": true
+  }
+ ]
+}

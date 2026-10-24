@@ -1,0 +1,27 @@
+{
+ "generated_by": "scripts/b1_build_increment.py",
+ "generated_at": "2026-10-24 16:14:47",
+ "files": [
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_v15_cl56_increment.json",
+   "kind": "increment",
+   "existed_before": false,
+   "sha256_after": "aef220598e7e0ffa1e5a0be56f5622beacbe381fa62c83115aeb34d9dda6563c"
+  },
+  {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/markers/markers_cl_alignment_v2_unified.json",
+   "kind": "labelmap",
+   "existed_before": true,
+   "pre_image": "/mnt/D/EyeKB/plans/cl56_adopt_20261022/pre_images/markers_cl_alignment_v2_unified.json.pre_cl56",
+   "sha256_before": "48051cdae915b82e6e7812da9b98f93b41f51c5fac14bdb370bd5ccdb969a0a1",
+   "sha256_after": "b68fe013f1bfc6934cb171076e35769cc66dc51d953f87370811c54462a31146"
+  }
+ ],
+ "labelmap_rows_before": 76,
+ "labelmap_rows_added": [
+  "rod bipolar cell",
+  "keratocyte",
+  "S cone cell"
+ ],
+ "labelmap_rows_after": 79
+}

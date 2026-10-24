@@ -1,0 +1,123 @@
+{
+ "harness": {
+  "kb_coarser": 116,
+  "same_cl": 244,
+  "truly_inconsistent": 176,
+  "abstain": 165,
+  "kb_finer": 5,
+  "unmappable_pred": 15
+ },
+ "corrected": {
+  "kb_coarser": 129,
+  "same_cl": 244,
+  "truly_inconsistent": 150,
+  "abstain": 165,
+  "kb_finer": 18,
+  "unmappable_pred": 15
+ },
+ "n_changed": 26,
+ "examples": [
+  {
+   "top": "T",
+   "truth": "lymphocyte",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_finer"
+  },
+  {
+   "top": "SMC",
+   "truth": "ciliary muscle cell",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_coarser"
+  },
+  {
+   "top": "SMC",
+   "truth": "smooth muscle cell of sphincter of pupil",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_coarser"
+  },
+  {
+   "top": "SMC",
+   "truth": "blood vessel smooth muscle cell",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_coarser"
+  },
+  {
+   "top": "Mono_Classical",
+   "truth": "monocyte",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_finer"
+  },
+  {
+   "top": "Endo",
+   "truth": "endothelial cell of arteriole",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_coarser"
+  },
+  {
+   "top": "SMC",
+   "truth": "vascular associated smooth muscle cell",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_coarser"
+  },
+  {
+   "top": "T",
+   "truth": "helper T cell",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_coarser"
+  },
+  {
+   "top": "Endo",
+   "truth": "vein endothelial cell",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_coarser"
+  },
+  {
+   "top": "Microglia",
+   "truth": "macrophage",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_finer"
+  },
+  {
+   "top": "Mac_Tissue",
+   "truth": "myeloid leukocyte",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_finer"
+  },
+  {
+   "top": "ciliary muscle cell",
+   "truth": "smooth muscle cell",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_finer"
+  },
+  {
+   "top": "Microglia",
+   "truth": "myeloid leukocyte",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_finer"
+  },
+  {
+   "top": "T",
+   "truth": "CD8-positive, alpha-beta T cell",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_coarser"
+  },
+  {
+   "top": "T",
+   "truth": "CD4-positive, alpha-beta T cell",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_coarser"
+  },
+  {
+   "top": "Endo",
+   "truth": "retinal blood vessel endothelial cell",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_coarser"
+  },
+  {
+   "top": "Endo",
+   "truth": "endothelial cell of lymphatic vessel",
+   "harness": "truly_inconsistent",
+   "corrected": "kb_coarser"
+  }
+ ]
+}

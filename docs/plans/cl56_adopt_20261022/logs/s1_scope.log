@@ -1,0 +1,27 @@
+corpus-supported pairs: 25 | adopted: 3 (14 clusters / 39005 cells) | pending: 22 | no-corpus-hit: 31 out of scope
+ A BC         CL:0000751   rod bipolar cell                       tier=T2        demand= 8 cells= 23484 genes=44 obs= 3  
+ A Fibroblast CL:0002363   keratocyte                             tier=excluded  demand= 3 cells= 11836 genes=60 obs= 3  
+ A Cone       CL:0003050   S cone cell                            tier=T1        demand= 3 cells=  3685 genes=22 obs= 2  
+ - SMC        CL:1000443   ciliary muscle cell                    tier=None      demand= 7 cells= 34648 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - Endo       CL:0000071   blood vessel endothelial cell          tier=T2        demand= 7 cells= 23948 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - AC         CL:4030028   glycinergic amacrine cell              tier=T1        demand=17 cells= 19004 genes= 4 obs= 0  c3_panel_not_observable_in_window
+ - AC         CL:4030027   GABAergic amacrine cell                tier=T3        demand=17 cells= 19900 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - HC         CL:0004217   H1 horizontal cell                     tier=T2        demand= 3 cells= 11275 genes= 1 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - RGC        CL:4033047   OFF midget ganglion cell               tier=T2        demand= 2 cells= 12122 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - BC         CL:4033033   flat midget bipolar cell               tier=T2        demand= 3 cells=  8959 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - T          CL:0000912   helper T cell                          tier=None      demand= 1 cells=  7969 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - BC         CL:0000750   OFF-bipolar cell                       tier=T3        demand=14 cells=  7773 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - BC         CL:0000749   ON-bipolar cell                        tier=T3        demand=11 cells=  8583 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - Endo       CL:0002543   vein endothelial cell                  tier=None      demand= 1 cells=  7584 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - Endo       CL:1000413   endothelial cell of artery             tier=T2        demand= 1 cells=  6987 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - SMC        CL:0000359   vascular associated smooth muscle cell tier=None      demand= 2 cells=  7003 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - Endo       CL:0002138   endothelial cell of lymphatic vessel   tier=None      demand= 4 cells=  7258 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - Mac_Tissue CL:0000129   microglial cell                        tier=None      demand= 7 cells= 17703 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - AC         CL:0004232   starburst amacrine cell                tier=T1        demand= 3 cells=  5062 genes=20 obs= 0  c3_panel_not_observable_in_window
+ - RGC        CL:4033052   ON parasol ganglion cell               tier=T2        demand= 2 cells=  4967 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - T          CL:0000624   CD4-positive, alpha-beta T cell        tier=None      demand= 1 cells=   797 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - Schwann    CL:0000218   myelinating Schwann cell               tier=T3        demand= 6 cells=  8855 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - RGC        CL:4023189   parasol ganglion cell of retina        tier=T2        demand= 1 cells=   515 genes= 4 obs= 0  c3_panel_not_observable_in_window
+ - RGC        CL:4033051   OFF parasol ganglion cell              tier=T2        demand= 3 cells=  4272 genes= 0 obs= 0  c2_below_two_discriminating_genes,c3_panel_not_observable_in_window
+ - Endo       CL:0002139   endothelial cell of vascular tree      tier=T1        demand= 3 cells=   644 genes=46 obs= 0  c3_panel_not_observable_in_window
+wrote out/SCOPE.json / out/SCOPE.tsv

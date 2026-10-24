@@ -1,0 +1,84 @@
+{
+ "probe": "g1_registrations.py",
+ "rows": {
+  "L1-11M": {
+   "path": "mcp_server/eyekb_core.py",
+   "before": {
+    "sha256": "be4e91c311bb77f16cd7e3e3baf1ff2afcaee858dba7330be985ee137231a0df",
+    "bytes": "118133"
+   },
+   "after": {
+    "sha256": "69da7a354a4d9b9afa5c16ac637c2aeffb81abba47f5894dc23cc56ab0bde205",
+    "bytes": "120551",
+    "mtime": "2026-10-24 16:31:42"
+   }
+  },
+  "L1-23": {
+   "path": "kb/markers/markers_cl_alignment_v2_unified.json",
+   "before": {
+    "sha256": "48051cdae915b82e6e7812da9b98f93b41f51c5fac14bdb370bd5ccdb969a0a1",
+    "bytes": "20608"
+   },
+   "after": {
+    "sha256": "b68fe013f1bfc6934cb171076e35769cc66dc51d953f87370811c54462a31146",
+    "bytes": "21506",
+    "mtime": "2026-10-24 16:22:44"
+   }
+  },
+  "L6-47": {
+   "path": "docs/SWITCH_COVERAGE_REGISTRY.tsv",
+   "before": {
+    "sha256": "f23e5a2f1407a12cbf5e916a24affe96d97c5c6a40bce4741ee5dbc6b14d3221",
+    "bytes": "3920"
+   },
+   "after": {
+    "sha256": "1cc5803bbf2eeee5b59b69d791bb9b2d6ed7cb9cf7eb36c83ff4abfe5aaa3fe3",
+    "bytes": "4096",
+    "mtime": "2026-10-24 16:33:38"
+   }
+  }
+ },
+ "switch_registry": {
+  "rc": 0,
+  "stdout": "wrote /home/ubuntu/EYEKB_REPO/docs/SWITCH_COVERAGE_REGISTRY.tsv (25 rows)",
+  "stderr": "",
+  "sha256": "1cc5803bbf2eeee5b59b69d791bb9b2d6ed7cb9cf7eb36c83ff4abfe5aaa3fe3",
+  "has_cl56": true
+ },
+ "new_row": {
+  "layer": "L1",
+  "item_id": "L1-32",
+  "item_name": "Cell-Ontology child-term naming increment (author-side finer terms of coarser shipped classes)",
+  "category": "KB 版本件",
+  "path": "kb/markers/markers_v15_cl56_increment.json",
+  "version": "v15.0-cl56-child-term-adoption-20261024",
+  "authority": "REGISTERED_DEFAULT_OFF (empty whitelist: not in the default `all` set in any state; reachable only via library=cl56_v15; merging into the default route requires the pre-registered acceptance rule to pass, which it did NOT -- see the evidence column)",
+  "change_gate": "只经 L1 发布门（新版本件，禁止就地改）；任何字节变更在同一 commit 内重取 sha",
+  "freeze_gate": "KB bodies frozen: this file adds classes, it modifies no existing entry",
+  "regression_gate": "G5 + the recorded-set replay: the default route is byte-identical with the increment registered (721/721 cluster windows + 229/229 battery calls, raw and canonical)",
+  "sha256": "aef220598e7e0ffa1e5a0be56f5622beacbe381fa62c83115aeb34d9dda6563c",
+  "bytes": "18924",
+  "mtime": "2026-10-24 16:14:47",
+  "state": "ON_DISK",
+  "evidence": "pre-registration plans/cl56_adopt_20261022/PREREG_ADOPT_CL56_20261022.md; scope rule application out/SCOPE.json (3 of 25 adopted, 22 pending with reasons, 31 out of scope); measurement out/MEASURE.json; acceptance verdict NO-GO on clauses (a) and (b) out/ACCEPTANCE.json; default-face byte identity out/DEFAULT_FACE.json; report REPORT.md",
+  "notes": "3 entries / 126 genes: the author-side finer Cell-Ontology terms for recorded clusters whose reference label is literally that term, carrying only each term's discriminating positive genes (parent-shared genes removed). NOT merged into the default route: the recorded-set reading fails the pre-registered rule (consistent -5.173pp; inconsistent +9.766pp; 89 of the 92 clusters it renames carry a different author label). Kept registered so the terms are reachable by name and so a future, narrower pre-registration can build on it.",
+  "surface": "repo"
+ },
+ "registry_sha256_after": "99dab4ce39b136b4c081161597644066824d67c4eff551e2884720aa0b0176cd",
+ "registry_sha256_before": "be4e91c311bb77f16cd7e3e3baf1ff2afcaee858dba7330be985ee137231a0df",
+ "rows_taken": [
+  "L1-11M",
+  "L1-23",
+  "L6-47"
+ ],
+ "instance_row": "CHG-20261024-CL56-ADOPT",
+ "instance_sha256_after": "3acea4e4d5a027d673f16fba1b1bbe790a973839bf1c2c653f6e4129b2ade10f",
+ "w3_manifest_touched": [
+  {
+   "file": "W3_PIPELINE_REGISTRY.tsv",
+   "before": "3eaba4754434e62c2a26bc22d3dbd156c5162e351081aa7f8a9931b22e85869b",
+   "after": "99dab4ce39b136b4c081161597644066824d67c4eff551e2884720aa0b0176cd"
+  }
+ ],
+ "w3_manifest_sha256": "9f21f5dde70d0dd6a7f4b01b4c93eb07780422d867ba59a3846dfa53587e1cb1"
+}

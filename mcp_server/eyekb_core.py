@@ -347,7 +347,19 @@ MARKER_LIBS = {"retina": MARKER_JSON,
     #   REGISTERED_DEFAULT_OFF with an EMPTY whitelist: nothing is merged into `all` in any state, so
     #   the shipped default route is byte-identical; merging it needs its own measured harm line and
     #   separate PI approval. Rollback = delete the subtype_v14 lines and the file.
-    "subtype_v14": MARKER_DIR / "markers_v14_subtype_second_increment.json"}
+    "subtype_v14": MARKER_DIR / "markers_v14_subtype_second_increment.json",
+    # cl56_v15 = the corpus-supported Cell-Ontology child-term adoption (2026-10-24, card
+    #   t_fabddb85): one entry per adopted (our class -> finer author-side CL term) pair, named by
+    #   the frozen snapshot's own preferred name for the child term and carrying only that term's
+    #   discriminating positive genes (parent-shared genes removed), so the finer name can be
+    #   produced without re-stating the parent's identity genes. Scope, floor and acceptance rule:
+    #   plans/cl56_adopt_20261022/PREREG_ADOPT_CL56_20261022.md.
+    #   REGISTERED_DEFAULT_OFF with an EMPTY whitelist: nothing is merged into `all` in any state,
+    #   so the shipped default route is byte-identical; merging it needs the pre-registered
+    #   acceptance rule to pass and a separate PI decision. Rollback = delete this line and the file.
+    #   The anchor line below is ECHOED because appending to this dictionary without echoing it is
+    #   how `holefill_v12` was lost once (see the note above).
+    "cl56_v15": MARKER_DIR / "markers_v15_cl56_increment.json"}
 
 # [ACT t_5d5853c9] v6-merge whitelist for the default all — hard-coded; env values can only toggle the
 # whole feature, never inject any library
@@ -423,6 +435,27 @@ def _subtype_act_enabled():
     only, and the panel it carries is a measurement artefact, not a shipped route.
     """
     v = (os.environ.get("EYEKB_ACT_SUBTYPE") or "").strip().casefold()
+    return v not in {"0", "false", "off", "no"}
+
+
+# [CL56 t_fabddb85] whitelist for the corpus-supported child-term naming increment.  EMPTY BY
+# DESIGN while the registration is measured: the increment is deliberately unreachable from the
+# default `all` set, so this predicate exists to make the OFF state explicit and machine-readable.
+# Semantics follow the ACT-v6 discipline so a future adoption step inherits the same shape:
+# {0,false,off,no} = OFF; unset/empty/anything else = ON, which with an empty whitelist still
+# merges nothing.
+CL56_DEFAULT_LIBS = ()
+
+
+def _cl56_act_enabled():
+    """env EYEKB_ACT_CL56 in {0,false,off,no} = OFF; unset/anything else = ON.
+
+    ON still injects nothing while CL56_DEFAULT_LIBS is empty by design (card t_fabddb85: the
+    registration may not change the default response bytes). The library is reachable by name only
+    until the pre-registered acceptance rule passes on the recorded set and the whitelist is
+    flipped in one recorded step, with EYEKB_ACT_CL56=0 remaining the documented kill switch.
+    """
+    v = (os.environ.get("EYEKB_ACT_CL56") or "").strip().casefold()
     return v not in {"0", "false", "off", "no"}
 
 
@@ -969,12 +1002,15 @@ def _load_marker_dbs(library="all"):
         if _subtype_act_enabled():
             names = names + list(SUBTYPE_DEFAULT_LIBS)  # [SUBTYPE2] empty whitelist: appends nothing,
             # and the branch is kept so the OFF state is auditable rather than implicit
+        if _cl56_act_enabled():
+            names = names + list(CL56_DEFAULT_LIBS)  # [CL56] empty whitelist: appends nothing,
+            # and the branch is kept so the OFF state is auditable rather than implicit
     elif lib in MARKER_LIBS:
         names = [lib]
     else:
         raise ValueError("library must be one of retina|membrane|retina_interneuron|retina_v6|"
                          "face_v6|lacrimal_v6|k9_ocs|retina_v7|retina_dev|antseg_v10|"
-                         "lensiris_v11|holefill_v12|onfibro_v13|subtype_v14|all, got: "
+                         "lensiris_v11|holefill_v12|onfibro_v13|subtype_v14|cl56_v15|all, got: "
                          + repr(library))
     dbs = []
     for n in names:

@@ -1,0 +1,7 @@
+verdict: NO-GO | failed clauses: ['a', 'b']
+  (a) no dataset's cell-weighted consistent share may fall                     FAIL
+  (b) the aggregate cell-weighted inconsistent share must not rise             FAIL
+  (c) every move attributable cluster by cluster, zero unexplained             PASS
+  (d) the finer name must be the author's own label for those clusters         PASS
+  (e) the kill switch restores the pre-flip default byte-for-byte              PASS
+wrote out/ACCEPTANCE.json / .md

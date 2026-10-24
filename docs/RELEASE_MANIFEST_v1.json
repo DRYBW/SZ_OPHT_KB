@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "c59d59c43882",
- "digest_sha256": "c59d59c4388235aeb1d67825ac768d113eefb46d8803aed891f65d9319ea8f68",
+ "release_id": "57f1523d871c",
+ "digest_sha256": "57f1523d871c97a9143384fc6989d1541dcccdad98e794a7b942b5848f2213ce",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 4171,
- "total_bytes": 246962921,
+ "n_files": 4228,
+ "total_bytes": 248116559,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
-  "service_build_id": "3b91e3d4e50a",
-  "knowledge_bundle_id": "791212db1465",
-  "effective_profile_id": "3cedfef88a7c"
+  "service_build_id": "d82ed8bb7ba8",
+  "knowledge_bundle_id": "06a96aa15353",
+  "effective_profile_id": "26ab3210d7d1"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -62,8 +62,8 @@
   },
   {
    "path": "docs/CHANGE_CONTROL_G6_INSTANCE.tsv",
-   "git_blob": "7d95293bf1226e40d7a26157d990f6f7e7bf36e6",
-   "bytes": 65122
+   "git_blob": "411e78cad85442dd85459027646323257ec90594",
+   "bytes": 73764
   },
   {
    "path": "docs/CHANGE_CONTROL_G6_TEMPLATE.tsv",
@@ -137,8 +137,8 @@
   },
   {
    "path": "docs/SWITCH_COVERAGE_REGISTRY.tsv",
-   "git_blob": "eb0b5835f003f187c92f16d6c9a65325dd0c9250",
-   "bytes": 3920
+   "git_blob": "8dc4cb265e61fe9d87523b0375cea8d4c8bfa9eb",
+   "bytes": 4096
   },
   {
    "path": "docs/TISSUE_COVERAGE_DECLARATION.md",
@@ -177,13 +177,13 @@
   },
   {
    "path": "docs/W3_MANIFEST.sha256",
-   "git_blob": "8317dda2061d0bb2e14086091388729953d832e9",
-   "bytes": 4238
+   "git_blob": "5d3c752740f5c349c4bddefc35ca4955da052bef",
+   "bytes": 4416
   },
   {
    "path": "docs/W3_PIPELINE_REGISTRY.tsv",
-   "git_blob": "4ee3b615abc508e12a57586a105aa86f9dd9e1e5",
-   "bytes": 131257
+   "git_blob": "8f22226518c649eacb653427f2c55ca2823c58db",
+   "bytes": 134544
   },
   {
    "path": "docs/W3_UPSTREAM_FIRST_RULE.md",
@@ -4199,6 +4199,286 @@
    "path": "docs/plans/btest_20260927/scripts/btest_verdict.py",
    "git_blob": "ac17d56520220155c9cbc6e4beee8328a695cda9",
    "bytes": 17072
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/BRIEF_ADOPT_CL56_20261022.md",
+   "git_blob": "5bb16ee1ce9fa3a70d4fb5351f3cc5747d7dd09b",
+   "bytes": 6635
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/PREREG_ADOPT_CL56_20261022.md",
+   "git_blob": "e61862fc294992cc14613141e8e4e331684283e2",
+   "bytes": 19339
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/REPORT.md",
+   "git_blob": "96f07101ee81268e7735596cce8cbf3d671376bc",
+   "bytes": 24942
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/discipline/net_audit/sitecustomize.py",
+   "git_blob": "11c3be7fc672300e29d8d3ce1f58df698c188677",
+   "bytes": 1341
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/ledgers/NET_AUDIT_SUMMARY.txt",
+   "git_blob": "9d0700b3fdd45b16ece204552a9b9d37b7124c67",
+   "bytes": 1015
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/ledgers/net_audit.log",
+   "git_blob": "45198a01c982b5c126bef52a7802ca3b80039e1b",
+   "bytes": 4266
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/logs/a1_acceptance.log",
+   "git_blob": "809b1e365bd7c506ead6916c2b03676e1ef7bc3f",
+   "bytes": 496
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/logs/b1_build.log",
+   "git_blob": "ba07c84de379969b33d41e837970afef631fec9e",
+   "bytes": 145
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/logs/f0_freeze.log",
+   "git_blob": "40cff5f2eb4384d5ace308a2742d0ed222225ee6",
+   "bytes": 80
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/logs/f0_freeze_inputs.log",
+   "git_blob": "40cff5f2eb4384d5ace308a2742d0ed222225ee6",
+   "bytes": 80
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/logs/g1_registrations.log",
+   "git_blob": "831f5557f9e31f610f63559598ecf98c6d688073",
+   "bytes": 468
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/logs/m1_measure.log",
+   "git_blob": "433342243ad924675a4a8a02c78179ed03d8f444",
+   "bytes": 869
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/logs/m2_default_face.log",
+   "git_blob": "4cdd5831ebe53d0941f226ad55f3432a76d2bc45",
+   "bytes": 1754
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/logs/r0_recon.log",
+   "git_blob": "cbb029febd01872c189311dc3b793cefcaf6a905",
+   "bytes": 4082
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/logs/s1_scope.log",
+   "git_blob": "4af80b107cced3dca60a9baad05d2a81d2cf5735",
+   "bytes": 4540
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/logs/s2_sensitivity.log",
+   "git_blob": "581bc406ea1fb6bc8fa730a0a83587f2c8bd52b6",
+   "bytes": 289
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/logs/w1_wire.log",
+   "git_blob": "026b34ca7d084a4b452fc7b928490beb6f19b3d9",
+   "bytes": 75
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/ACCEPTANCE.json",
+   "git_blob": "56b2d67333e07d53bbc36cf497b59faa944bc4bb",
+   "bytes": 6458
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/ACCEPTANCE.md",
+   "git_blob": "e3c30802209e15bf88bb54d75c872683062058b0",
+   "bytes": 1527
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/BUILD.json",
+   "git_blob": "3628eb5a446125539b83e1295b22ee89790c6757",
+   "bytes": 18924
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/CLOSURE_INSTRUMENT_DIFFERENCE.json",
+   "git_blob": "8a7534970e84e9cc73f804c1e0931e9c4f7466d5",
+   "bytes": 2586
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/DEFAULT_FACE.json",
+   "git_blob": "9edf3768565ab55d83581bce6ed0163875e7beae",
+   "bytes": 10210
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/INPUT_MANIFEST.json",
+   "git_blob": "39bc132d238b1182c813dd329dc2caca7314b462",
+   "bytes": 18016
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/MANIFEST.sha256",
+   "git_blob": "be672dd33235cc65fabde5f8be67e02667dc75ba",
+   "bytes": 4091
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/MEASURE.json",
+   "git_blob": "a3b813e58618be293a6b7f3a534600aaf26e1563",
+   "bytes": 220360
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/PREIMAGE.json",
+   "git_blob": "79ba1ee3dcdccbb51f4ae2e3a0b2ec9de120904e",
+   "bytes": 910
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/RECON_BEFORE_SCOPE.json",
+   "git_blob": "5e8d44593ec3cc4172709093465ea262abcdc133",
+   "bytes": 6525
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/REGISTRY_ROWS.json",
+   "git_blob": "8aef50462e1c6e41f44e647c226e012330a0c1b0",
+   "bytes": 4115
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/REPO_SHA_AFTER.json",
+   "git_blob": "f698aee2c4bf1b06d9f8428cca7c5aa8a95f7f09",
+   "bytes": 746
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/SCOPE.json",
+   "git_blob": "39d7cb62680e9b2f6707294f9d20852227dcc532",
+   "bytes": 32539
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/SCOPE.tsv",
+   "git_blob": "7ff9a13abd0ddb181f77546e66b79c3405c8f243",
+   "bytes": 3863
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/SENSITIVITY.json",
+   "git_blob": "50262ed09640457cf1de0441a70f32044d17b02b",
+   "bytes": 8888
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/WIRING.json",
+   "git_blob": "26f5e5dda6df6f99df08ed4420b86ab06617dbfe",
+   "bytes": 1096
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/harness/A1_recorded_decls/REPORT.json",
+   "git_blob": "52984217813b4913868ba5df3a281aea353648fa",
+   "bytes": 177526
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/harness/A1_recorded_decls/REPORT.md",
+   "git_blob": "d2b1db404f5d04caa4ea428a45c0b798bb0732d2",
+   "bytes": 42134
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/harness/A2_tester_decls/REPORT.json",
+   "git_blob": "8974eae2b216e3f30fe7f4b97bc802dfc7158b9c",
+   "bytes": 177641
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/out/harness/A2_tester_decls/REPORT.md",
+   "git_blob": "005b4957a0c935cb0f59dc4e1d22fa708b1dbd67",
+   "bytes": 42210
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/pre_images/eyekb_core.py.pre_cl56",
+   "git_blob": "de8398e6a949094cf2188dad718a5bf2341d6529",
+   "bytes": 118133
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/pre_images/markers_cl_alignment_v2_unified.json.pre_cl56",
+   "git_blob": "73a0563af408ccdf2c16209f823d497f8c4aea36",
+   "bytes": 20608
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/a1_acceptance.py",
+   "git_blob": "3de054e426acab5b02b5b02eb1e0f6d5f0684afd",
+   "bytes": 9471
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/b1_build_increment.py",
+   "git_blob": "63ee66fa06ac91f5c71356d3dddcd4b0296aaaf1",
+   "bytes": 13052
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/b1b_map_only.py",
+   "git_blob": "4234fa273a254dd281ebebd46ab73ce69ff1fa4e",
+   "bytes": 3145
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/f0_freeze_inputs.py",
+   "git_blob": "f9c3a21eb2ef69dbf577618008f81003919de19e",
+   "bytes": 5623
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/g1_registrations.py",
+   "git_blob": "f723b18a6531dabb930a7dbf16cc0f0a8a9e99ad",
+   "bytes": 24015
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/m1_measure.py",
+   "git_blob": "b3900a0c8e50d4378dcd0812f661c7345699bd8e",
+   "bytes": 16710
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/m2_default_face.py",
+   "git_blob": "93b6376fe2c8b7fddf86cdf684f23c67105d1cc9",
+   "bytes": 9769
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/m2_replay_route.py",
+   "git_blob": "509a5c70e7a7ad29507f6f47304ec66df7d90659",
+   "bytes": 5886
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/m4_mirror.py",
+   "git_blob": "f5387b2579c2b0169fb29442db06cece816785bb",
+   "bytes": 2184
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/ont_closure_probe.py",
+   "git_blob": "88181f64eab4cf45d14f446a1b90306155212733",
+   "bytes": 4871
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/r0_recon.py",
+   "git_blob": "60b0fbd96dda9fcd606137c543159ae1cf47cd0b",
+   "bytes": 4344
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/reset_tree.sh",
+   "git_blob": "6af6d8ff6e7b27d5d9469b05483542cff661c105",
+   "bytes": 1038
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/run_all.sh",
+   "git_blob": "ee3b8e8de783c528654c47e8df0ee70aaa78e6d7",
+   "bytes": 1808
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/s1_scope.py",
+   "git_blob": "89180ca73adb9d382fcf519330aa0b8ad45aab95",
+   "bytes": 9651
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/s2_sensitivity.py",
+   "git_blob": "d1d48594814ef86e932587b8f77f0c0154d67efb",
+   "bytes": 7009
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/w1_wire.py",
+   "git_blob": "3dbd25e9a98b26d11ddddbadea5f77ab6127ed75",
+   "bytes": 7721
+  },
+  {
+   "path": "docs/plans/cl56_adopt_20261022/scripts/z1_manifest.py",
+   "git_blob": "8b8e847832f4164f296193bec1f603e132e6ed07",
+   "bytes": 3296
   },
   {
    "path": "docs/plans/cl_depth_devlineage_20261021/GRANULARITY_READER_PAGE.md",
@@ -19477,8 +19757,8 @@
   },
   {
    "path": "kb/markers/markers_cl_alignment_v2_unified.json",
-   "git_blob": "73a0563af408ccdf2c16209f823d497f8c4aea36",
-   "bytes": 20608
+   "git_blob": "865213c29e8e81ce9de08b270020b08ed268d9ca",
+   "bytes": 21506
   },
   {
    "path": "kb/markers/markers_k9_ocs_increment.json",
@@ -19514,6 +19794,11 @@
    "path": "kb/markers/markers_v14_subtype_second_increment.json",
    "git_blob": "801fee1b8c99219f5bde3e7c8b78ffc9a9a8df9d",
    "bytes": 37576
+  },
+  {
+   "path": "kb/markers/markers_v15_cl56_increment.json",
+   "git_blob": "3628eb5a446125539b83e1295b22ee89790c6757",
+   "bytes": 18924
   },
   {
    "path": "kb/markers/markers_v4.1_clean.json",
@@ -19902,8 +20187,8 @@
   },
   {
    "path": "mcp_server/eyekb_core.py",
-   "git_blob": "de8398e6a949094cf2188dad718a5bf2341d6529",
-   "bytes": 118133
+   "git_blob": "e85a5921b857a243d50f4745418a6b1ad7630f25",
+   "bytes": 120551
   },
   {
    "path": "mcp_server/kbgov_vocab.json.gz",

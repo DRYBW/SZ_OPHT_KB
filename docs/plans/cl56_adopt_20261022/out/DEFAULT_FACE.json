@@ -1,0 +1,211 @@
+{
+ "probe": "m2_default_face.py",
+ "core_path": "mcp_server/eyekb_core.py",
+ "pre_card_reference_commit": "c06aac2a59220e73346e1e25854aac4b5fbb97a0",
+ "reference_note": "pinned to the commit recorded by this card's pre-image, not to HEAD, so a post-commit re-run still compares against the pre-card default",
+ "child_env_policy": "PYTHONPATH pinned to the audit-hook directory; PYTHONDONTWRITEBYTECODE=1; PYTHONHASHSEED=0; every service switch cleared before the arm's own value is applied",
+ "registration_entry_present": true,
+ "whitelist_is_empty": true,
+ "current_core_sha256": "69da7a354a4d9b9afa5c16ac637c2aeffb81abba47f5894dc23cc56ab0bde205",
+ "current_core_bytes": 120551,
+ "current_core_equals_kept_preimage": false,
+ "parent_core_sha256": "be4e91c311bb77f16cd7e3e3baf1ff2afcaee858dba7330be985ee137231a0df",
+ "parent_core_equals_kept_preimage": true,
+ "pre_image_relationship_note": "the kept pre-image is the exact state this card started from; the change against it is the wiring, kept in out/WIRING.json",
+ "parent_core_verified_in_place": true,
+ "parent_probe": {
+  "rc": 0,
+  "stdout_tail": "{\n \"legacy_panel\": \"47e42230a8f7256b4ae9a78d4ff628d3\",\n \"full_panel\": \"f97ff8ad2507f4d69a0e6e57406c2de1\",\n \"n_legacy_calls\": 10,\n \"n_calls\": 12\n}\ntools advertised: explain_annotation, get_disease_prior, get_kb_page, get_release_identity, get_tissue_composition, query_marker, search_literature\ninterpreter: /home/ubuntu/training-venv/bin/python3 (python 3.14.4, pydantic 2.12.5)",
+  "stderr_tail": "                             from                                               \n                             /mnt/D/OcularKB/models/bge-large-en-v              \n                             1.5.                                               \n\n\n"
+ },
+ "parent_probe_with_baseline": {
+  "rc": 1,
+  "stdout_tail": "{\n \"legacy_panel\": \"47e42230a8f7256b4ae9a78d4ff628d3\",\n \"full_panel\": \"f97ff8ad2507f4d69a0e6e57406c2de1\",\n \"n_legacy_calls\": 10,\n \"n_calls\": 12\n}\ntools advertised: explain_annotation, get_disease_prior, get_kb_page, get_release_identity, get_tissue_composition, query_marker, search_literature\ninterpreter: /home/ubuntu/training-venv/bin/python3 (python 3.14.4, pydantic 2.12.5)\nIDENTITY FAIL: legacy_panel, full_panel moved.\n  different: query_marker:{\"cell_type\": \"MG\"}\n  different: query_marker:{\"genes\": [\"TMEM119\", \"CX3CR1\", \"P2RY12\", \"C1QA\", \"SALL1\", \"CSF1R\", \"AIF1\"]}\nIf the change was intended, re-record the baseline in the same commit and say so in the change record (docs/CHANGE_CONTROL_G6_INSTANCE.tsv).",
+  "stderr_tail": "                             from                                               \n                             /mnt/D/OcularKB/models/bge-large-en-v              \n                             1.5.                                               \n\n\n"
+ },
+ "restored_core_sha256": "69da7a354a4d9b9afa5c16ac637c2aeffb81abba47f5894dc23cc56ab0bde205",
+ "restored_matches_snapshot": true,
+ "off0_probe": {
+  "rc": 0,
+  "stdout_tail": "{\n \"legacy_panel\": \"47e42230a8f7256b4ae9a78d4ff628d3\",\n \"full_panel\": \"f97ff8ad2507f4d69a0e6e57406c2de1\",\n \"n_legacy_calls\": 10,\n \"n_calls\": 12\n}\ntools advertised: explain_annotation, get_disease_prior, get_kb_page, get_release_identity, get_tissue_composition, query_marker, search_literature\ninterpreter: /home/ubuntu/training-venv/bin/python3 (python 3.14.4, pydantic 2.12.5)",
+  "stderr_tail": "                             from                                               \n                             /mnt/D/OcularKB/models/bge-large-en-v              \n                             1.5.                                               \n\n\n"
+ },
+ "unset_probe": {
+  "rc": 0,
+  "stdout_tail": "{\n \"legacy_panel\": \"47e42230a8f7256b4ae9a78d4ff628d3\",\n \"full_panel\": \"f97ff8ad2507f4d69a0e6e57406c2de1\",\n \"n_legacy_calls\": 10,\n \"n_calls\": 12\n}\ntools advertised: explain_annotation, get_disease_prior, get_kb_page, get_release_identity, get_tissue_composition, query_marker, search_literature\ninterpreter: /home/ubuntu/training-venv/bin/python3 (python 3.14.4, pydantic 2.12.5)",
+  "stderr_tail": "                             from                                               \n                             /mnt/D/OcularKB/models/bge-large-en-v              \n                             1.5.                                               \n\n\n"
+ },
+ "core_sha_seen_by_each_arm": {
+  "PARENT_clusters": "be4e91c311bb77f16cd7e3e3baf1ff2afcaee858dba7330be985ee137231a0df",
+  "PARENT_battery": "be4e91c311bb77f16cd7e3e3baf1ff2afcaee858dba7330be985ee137231a0df",
+  "PARENT_explicit": "be4e91c311bb77f16cd7e3e3baf1ff2afcaee858dba7330be985ee137231a0df",
+  "OFF0_clusters": "69da7a354a4d9b9afa5c16ac637c2aeffb81abba47f5894dc23cc56ab0bde205",
+  "OFF0_battery": "69da7a354a4d9b9afa5c16ac637c2aeffb81abba47f5894dc23cc56ab0bde205",
+  "OFF0_explicit": "69da7a354a4d9b9afa5c16ac637c2aeffb81abba47f5894dc23cc56ab0bde205",
+  "UNSET_clusters": "69da7a354a4d9b9afa5c16ac637c2aeffb81abba47f5894dc23cc56ab0bde205",
+  "UNSET_battery": "69da7a354a4d9b9afa5c16ac637c2aeffb81abba47f5894dc23cc56ab0bde205",
+  "UNSET_explicit": "69da7a354a4d9b9afa5c16ac637c2aeffb81abba47f5894dc23cc56ab0bde205"
+ },
+ "pre_card_byte_identity": {
+  "PARENT_vs_OFF0": {
+   "clusters": {
+    "n_queries": 721,
+    "identical_raw": true,
+    "identical_canonical": true,
+    "n_differing_raw": 0,
+    "n_differing_canonical": 0,
+    "differing": [],
+    "raw_combined_md5_a": "61ac177e309458a7832058a6cf95a286",
+    "raw_combined_md5_b": "61ac177e309458a7832058a6cf95a286",
+    "canon_combined_md5_a": "058004589e2b7f311c8517a05144ea60",
+    "canon_combined_md5_b": "058004589e2b7f311c8517a05144ea60"
+   },
+   "battery": {
+    "n_queries": 238,
+    "identical_raw": true,
+    "identical_canonical": true,
+    "n_differing_raw": 0,
+    "n_differing_canonical": 0,
+    "differing": [],
+    "raw_combined_md5_a": "d7400a22b408ca3d8da62d03d9fdcadf",
+    "raw_combined_md5_b": "d7400a22b408ca3d8da62d03d9fdcadf",
+    "canon_combined_md5_a": "59fa523a1f1824353cbb96307028e35b",
+    "canon_combined_md5_b": "59fa523a1f1824353cbb96307028e35b"
+   }
+  },
+  "PARENT_vs_UNSET": {
+   "clusters": {
+    "n_queries": 721,
+    "identical_raw": true,
+    "identical_canonical": true,
+    "n_differing_raw": 0,
+    "n_differing_canonical": 0,
+    "differing": [],
+    "raw_combined_md5_a": "61ac177e309458a7832058a6cf95a286",
+    "raw_combined_md5_b": "61ac177e309458a7832058a6cf95a286",
+    "canon_combined_md5_a": "058004589e2b7f311c8517a05144ea60",
+    "canon_combined_md5_b": "058004589e2b7f311c8517a05144ea60"
+   },
+   "battery": {
+    "n_queries": 238,
+    "identical_raw": true,
+    "identical_canonical": true,
+    "n_differing_raw": 0,
+    "n_differing_canonical": 0,
+    "differing": [],
+    "raw_combined_md5_a": "d7400a22b408ca3d8da62d03d9fdcadf",
+    "raw_combined_md5_b": "d7400a22b408ca3d8da62d03d9fdcadf",
+    "canon_combined_md5_a": "59fa523a1f1824353cbb96307028e35b",
+    "canon_combined_md5_b": "59fa523a1f1824353cbb96307028e35b"
+   }
+  },
+  "OFF0_vs_UNSET": {
+   "clusters": {
+    "n_queries": 721,
+    "identical_raw": true,
+    "identical_canonical": true,
+    "n_differing_raw": 0,
+    "n_differing_canonical": 0,
+    "differing": [],
+    "raw_combined_md5_a": "61ac177e309458a7832058a6cf95a286",
+    "raw_combined_md5_b": "61ac177e309458a7832058a6cf95a286",
+    "canon_combined_md5_a": "058004589e2b7f311c8517a05144ea60",
+    "canon_combined_md5_b": "058004589e2b7f311c8517a05144ea60"
+   },
+   "battery": {
+    "n_queries": 238,
+    "identical_raw": true,
+    "identical_canonical": true,
+    "n_differing_raw": 0,
+    "n_differing_canonical": 0,
+    "differing": [],
+    "raw_combined_md5_a": "d7400a22b408ca3d8da62d03d9fdcadf",
+    "raw_combined_md5_b": "d7400a22b408ca3d8da62d03d9fdcadf",
+    "canon_combined_md5_a": "59fa523a1f1824353cbb96307028e35b",
+    "canon_combined_md5_b": "59fa523a1f1824353cbb96307028e35b"
+   }
+  }
+ },
+ "explicit_route_reachability": {
+  "cl56_v15": {
+   "parent": {
+    "raw_md5": "be7e63719bde85702e9f48326b2f1a57",
+    "canon_md5": "be7e63719bde85702e9f48326b2f1a57",
+    "refused": true,
+    "error": "ValueError: library must be one of retina|membrane|retina_interneuron|retina_v6|face_v6|lacrimal_v6|k9_ocs|retina_v7|retina_dev|antseg_v10|lensiris_v11|holefill_v12|onfibro_v13|subtype_v14|all, got: 'cl56_v15'"
+   },
+   "current": {
+    "raw_md5": "47bbcb8f3555dc4f89da5e887a70fcf9",
+    "canon_md5": "884309176f8ab71561115277afcac5cf",
+    "refused": false,
+    "n_ranked": 2,
+    "top": "S cone cell"
+   }
+  },
+  "subtype_v14": {
+   "parent": {
+    "raw_md5": "43b04b45ee82d5953f86430667f2bda6",
+    "canon_md5": "2f6fbfafa1338bd008b257c4b128ab46",
+    "refused": false,
+    "n_ranked": 0,
+    "top": null
+   },
+   "current": {
+    "raw_md5": "43b04b45ee82d5953f86430667f2bda6",
+    "canon_md5": "2f6fbfafa1338bd008b257c4b128ab46",
+    "refused": false,
+    "n_ranked": 0,
+    "top": null
+   }
+  },
+  "holefill_v12": {
+   "parent": {
+    "raw_md5": "9cee4ab71400eca2e86b221c5d99bada",
+    "canon_md5": "d6678d051d61922791cdab327be9ff84",
+    "refused": false,
+    "n_ranked": 1,
+    "top": "retinal rod cell"
+   },
+   "current": {
+    "raw_md5": "9cee4ab71400eca2e86b221c5d99bada",
+    "canon_md5": "d6678d051d61922791cdab327be9ff84",
+    "refused": false,
+    "n_ranked": 1,
+    "top": "retinal rod cell"
+   }
+  },
+  "onfibro_v13": {
+   "parent": {
+    "raw_md5": "d51695b2aea6ce2b22b690b1818c360c",
+    "canon_md5": "b8ca613484e82e8852e09660d2d17a40",
+    "refused": false,
+    "n_ranked": 0,
+    "top": null
+   },
+   "current": {
+    "raw_md5": "d51695b2aea6ce2b22b690b1818c360c",
+    "canon_md5": "b8ca613484e82e8852e09660d2d17a40",
+    "refused": false,
+    "n_ranked": 0,
+    "top": null
+   }
+  },
+  "lensiris_v11": {
+   "parent": {
+    "raw_md5": "d7b12c2c8791e21c9baa2eb37797b22c",
+    "canon_md5": "4d45ea64e2640dbf59898284a4791799",
+    "refused": false,
+    "n_ranked": 0,
+    "top": null
+   },
+   "current": {
+    "raw_md5": "d7b12c2c8791e21c9baa2eb37797b22c",
+    "canon_md5": "4d45ea64e2640dbf59898284a4791799",
+    "refused": false,
+    "n_ranked": 0,
+    "top": null
+   }
+  }
+ },
+ "verdict": "PASS"
+}

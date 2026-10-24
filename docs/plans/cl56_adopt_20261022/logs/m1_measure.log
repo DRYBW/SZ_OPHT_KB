@@ -1,0 +1,9 @@
+   A1_recorded_decls    verdict=FAIL             changed=311 clusters / 681726 cells | consistent -5.173pp | inconsistent +9.766pp
+   A2_tester_decls      verdict=FAIL             changed=311 clusters / 681726 cells | consistent -5.173pp | inconsistent +9.784pp
+
+== moved: 311 clusters / 681726 cells  kinds={'adopted-name-gain': 92, 'rank-shift': 219}
+== clause(d): 14 adopted demand clusters, violations=0
+== ontology (whole recording, clusters): before={'kb_coarser': 116, 'same_cl': 244, 'truly_inconsistent': 176, 'abstain': 165, 'kb_finer': 5, 'unmappable_pred': 15} after={'kb_coarser': 114, 'same_cl': 220, 'truly_inconsistent': 241, 'abstain': 120, 'kb_finer': 11, 'unmappable_pred': 15}
+== ontology (scope subset): before={'kb_coarser': 12, 'abstain': 2} after={'kb_coarser': 10, 'same_cl': 3, 'abstain': 1}
+== peak RSS 193.2 MB, 23.4s
+wrote out/MEASURE.json

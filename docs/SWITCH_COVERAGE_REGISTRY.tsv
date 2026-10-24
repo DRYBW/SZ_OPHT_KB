@@ -7,6 +7,7 @@
 name	answer_affecting	cleared_by_recorded_harness	must_be_set_in_every_arm	disposition
 EYEKB_ABSTAIN_REASON	no	no	no	declared benign: supplies the human-readable abstention reason string; it does not change which candidate is ranked first or how a cluster is graded
 EYEKB_ACT_ANTSEG	yes	yes	no	cleared by the frozen harness before each arm; a before-arm setting cannot leak
+EYEKB_ACT_CL56	yes	no	yes	NOT cleared by the frozen harness -- any arm that sets it must set it in every arm of the comparison, or the two arms collapse into a self-comparison
 EYEKB_ACT_K9	yes	yes	no	cleared by the frozen harness before each arm; a before-arm setting cannot leak
 EYEKB_ACT_ONFIBRO	yes	no	yes	NOT cleared by the frozen harness -- any arm that sets it must set it in every arm of the comparison, or the two arms collapse into a self-comparison
 EYEKB_ACT_SUBTYPE	yes	no	yes	NOT cleared by the frozen harness -- any arm that sets it must set it in every arm of the comparison, or the two arms collapse into a self-comparison
