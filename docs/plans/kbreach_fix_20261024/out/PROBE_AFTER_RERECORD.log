@@ -1,0 +1,34 @@
+# command: HOME=/home/ubuntu EYEKB_PROBE_PY=/home/ubuntu/training-venv/bin/python3 /home/ubuntu/training-venv/bin/python3 tests/probe_tool_panel_identity.py --record tests/fixtures/tool_panel_baseline.json   (then --baseline verification run)
+# cwd /home/ubuntu/EYEKB_REPO at the post-fix tree of card t_c19cd667
+[10/24/26 17:15:12] INFO     JAX version 0.10.2 available.         config.py:125
+[10/24/26 17:15:13] INFO     Loading SentenceTransformer model     model.py:1080
+                             from                                               
+                             /mnt/D/OcularKB/models/bge-large-en-v              
+                             1.5.                                               
+DB: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09 | 242928 chunks, 6 species
+{
+ "legacy_panel": "47e42230a8f7256b4ae9a78d4ff628d3",
+ "full_panel": "f97ff8ad2507f4d69a0e6e57406c2de1",
+ "n_legacy_calls": 10,
+ "n_calls": 12
+}
+tools advertised: explain_annotation, get_disease_prior, get_kb_page, get_release_identity, get_tissue_composition, query_marker, search_literature
+interpreter: /home/ubuntu/training-venv/bin/python3 (python 3.14.4, pydantic 2.12.5)
+recorded baseline -> /tmp/kbreach_discard_probe.json
+=== verification run (--baseline):
+[10/24/26 17:15:38] INFO     JAX version 0.10.2 available.         config.py:125
+                    INFO     Loading SentenceTransformer model     model.py:1080
+                             from                                               
+                             /mnt/D/OcularKB/models/bge-large-en-v              
+                             1.5.                                               
+DB: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09 | 242928 chunks, 6 species
+{
+ "legacy_panel": "47e42230a8f7256b4ae9a78d4ff628d3",
+ "full_panel": "f97ff8ad2507f4d69a0e6e57406c2de1",
+ "n_legacy_calls": 10,
+ "n_calls": 12
+}
+tools advertised: explain_annotation, get_disease_prior, get_kb_page, get_release_identity, get_tissue_composition, query_marker, search_literature
+interpreter: /home/ubuntu/training-venv/bin/python3 (python 3.14.4, pydantic 2.12.5)
+IDENTITY PASS: both panel digests match the baseline.
+rc=0

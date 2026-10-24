@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "57a47a2b109e",
- "digest_sha256": "57a47a2b109e0fa851dc4841edb14f4c548582c6f03790c9b72f0f845098a17e",
+ "release_id": "af26ceca29fb",
+ "digest_sha256": "af26ceca29fb87f93ad4cb20d71e82af0d3be6dd86b7aa1f227d9c5b492d5b85",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 4232,
- "total_bytes": 248148301,
+ "n_files": 4271,
+ "total_bytes": 249571838,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "d82ed8bb7ba8",
-  "knowledge_bundle_id": "a415ff26a733",
-  "effective_profile_id": "1c243a23d6eb"
+  "knowledge_bundle_id": "159a536b76d9",
+  "effective_profile_id": "124ceeb028a3"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -62,8 +62,8 @@
   },
   {
    "path": "docs/CHANGE_CONTROL_G6_INSTANCE.tsv",
-   "git_blob": "694980887a54123ef0e6be9e07e6a9101c4dd00b",
-   "bytes": 74398
+   "git_blob": "ae7b0f30fb75bf78dae1d806d087f3023669b6cc",
+   "bytes": 90898
   },
   {
    "path": "docs/CHANGE_CONTROL_G6_TEMPLATE.tsv",
@@ -99,6 +99,11 @@
    "path": "docs/GIT_SELF_DECLARED_BOUNDARY_LEDGER.tsv",
    "git_blob": "8678de42b508ee38f741a3581ca1b0b98805e952",
    "bytes": 3452
+  },
+  {
+   "path": "docs/HARNESS_LIMIT_QUALIFIED_ISA_20261024.md",
+   "git_blob": "54ae5cf0ab435fc89bd99997eaa3346bf1ace8a6",
+   "bytes": 8524
   },
   {
    "path": "docs/ONTOLOGY_LAYER_CONTRACT_v1.md",
@@ -177,13 +182,13 @@
   },
   {
    "path": "docs/W3_MANIFEST.sha256",
-   "git_blob": "5d3c752740f5c349c4bddefc35ca4955da052bef",
-   "bytes": 4416
+   "git_blob": "cc1b7d6c3e8d6fb21fcfe7322df4d534d3d3f0da",
+   "bytes": 5007
   },
   {
    "path": "docs/W3_PIPELINE_REGISTRY.tsv",
-   "git_blob": "8f22226518c649eacb653427f2c55ca2823c58db",
-   "bytes": 134544
+   "git_blob": "7a4aeda71b3c21a788e275e2c2257e083baa3b38",
+   "bytes": 137035
   },
   {
    "path": "docs/W3_UPSTREAM_FIRST_RULE.md",
@@ -10381,6 +10386,196 @@
    "bytes": 8428
   },
   {
+   "path": "docs/plans/kbreach_fix_20261024/REPORT.md",
+   "git_blob": "291fd856d8d027b7e0bc233c53e11f8583a09b58",
+   "bytes": 16404
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/D2_FIELD_DIFF.json",
+   "git_blob": "e2a76b8455890501e83a210cf968bb31b6bad2ad",
+   "bytes": 27357
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/DUMP_435bb92.json",
+   "git_blob": "bc2e7505e23500d219c50dd8310e8ce7fe136bb8",
+   "bytes": 379996
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/DUMP_HEAD.json",
+   "git_blob": "9dfb42579278d8b95532a9be8b65fca62855e7f2",
+   "bytes": 380624
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/F1_FIX.json",
+   "git_blob": "909699ef73212f686a651d6def9d8ae9fad65264",
+   "bytes": 728
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/LIMIT_DOC_BUILD.json",
+   "git_blob": "4cfa82e9e0ab776ece4ffa084c0261faa077afdb",
+   "bytes": 251
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/POST_battery.json",
+   "git_blob": "6fd05fc461af401f96acfd7c3793328fb876adc6",
+   "bytes": 33109
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/POST_clusters.json",
+   "git_blob": "ac16922599bc9dd8b445b0a45cdc04dff1dbec67",
+   "bytes": 188084
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/POST_explicit.json",
+   "git_blob": "7f0826c48778ef4ee9d872d08018eb9b3f369664",
+   "bytes": 3417
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/PRE_battery.json",
+   "git_blob": "6fd05fc461af401f96acfd7c3793328fb876adc6",
+   "bytes": 33109
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/PRE_clusters.json",
+   "git_blob": "ac16922599bc9dd8b445b0a45cdc04dff1dbec67",
+   "bytes": 188084
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/PRE_explicit.json",
+   "git_blob": "7f0826c48778ef4ee9d872d08018eb9b3f369664",
+   "bytes": 3417
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/PROBE_AFTER_RERECORD.log",
+   "git_blob": "c5142288a0b846567e792a66eef60269dabb71f5",
+   "bytes": 2206
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/R1_REPRODUCE.json",
+   "git_blob": "73ab430d52a1819912fe68d857819e825f51c7a8",
+   "bytes": 3947
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/R2B_CENSUS.json",
+   "git_blob": "d6cb4e22d18543f2abe6dc175190c9b9d6a9f82e",
+   "bytes": 406
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/R2_AFTER_FIX.json",
+   "git_blob": "87fb984aacf7670a08fd3955bf46b76d71e97de6",
+   "bytes": 2219
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/R3_CLOSURE_READING.json",
+   "git_blob": "07dededd1fb5c1a66a587aff258cd396bbd76145",
+   "bytes": 15577
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/REGISTRY_UPDATE.json",
+   "git_blob": "6a172da695c4141f2788cdd8fada91a2f882547d",
+   "bytes": 345
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/pre_images/markers_v14_subtype_second_increment.json.pre_kbreach",
+   "git_blob": "801fee1b8c99219f5bde3e7c8b78ffc9a9a8df9d",
+   "bytes": 37576
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/pre_images/tool_panel_baseline.json.pre_rerecord",
+   "git_blob": "e10326116f3726eca42deba4272c73321c9a9373",
+   "bytes": 1735
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/d2_field_diff.py",
+   "git_blob": "8c99854de7baae60c2e4bb9db2493a9d07d13a47",
+   "bytes": 2463
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/dump_panel.py",
+   "git_blob": "d6ce41ca25a93cf7fb9d1ebb5fd10858ae400f86",
+   "bytes": 2397
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/env_check.py",
+   "git_blob": "130496050a69c7bb9c4a52c8d8567c5f41a6f7c6",
+   "bytes": 1346
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/f1_fix_subtype_markers.py",
+   "git_blob": "2f75e81af8dd93c2d74296c0852910390f454655",
+   "bytes": 4344
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/final_touches.py",
+   "git_blob": "499f5e525551dcbb337130a6c5b310cb12e04a5a",
+   "bytes": 2865
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/gen_limit_doc.py",
+   "git_blob": "aec7592577e1b748c3c21d464d81c24382c916b3",
+   "bytes": 9226
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/patch_g6_cells.py",
+   "git_blob": "6a07f9c3abff25838e6e60070636f0d91d4f427e",
+   "bytes": 2446
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/patch_g6_cells2.py",
+   "git_blob": "811b078d07adc92033503fddcc7f21bb98b0d942",
+   "bytes": 4002
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/peek_keys.py",
+   "git_blob": "6c6dbd36270e21c7900ded38143a5aa963a3524d",
+   "bytes": 416
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/r1_reproduce.py",
+   "git_blob": "46b0980f0f25b311e95230840b756492bb94bd9c",
+   "bytes": 8430
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/r2_after_fix.py",
+   "git_blob": "5db9c0fa6d0f0d001f06c6e2a89f07c7136e7ffa",
+   "bytes": 4145
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/r2b_full_census.py",
+   "git_blob": "86219c98716f9c73e746fdd5037a19203320d835",
+   "bytes": 2086
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/r3_closure.py",
+   "git_blob": "349693fdd09a2bd56b128786028a6a76c10fc903",
+   "bytes": 5228
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/registry_update.py",
+   "git_blob": "d49ff86c8dd02383adcf64fa4e738899f1f71a68",
+   "bytes": 20447
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/retake_l6_37.py",
+   "git_blob": "5da606568b8a1ec2e4c4c6bab040aea05457f315",
+   "bytes": 2694
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/show_last_g6.py",
+   "git_blob": "7ca2516a1bd6578a11ef8ac2938fa787f90975ad",
+   "bytes": 523
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/show_registry_row.py",
+   "git_blob": "595986d78086dd8999db0d6d41e0bce2b1008dce",
+   "bytes": 648
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/scripts/w3_manifest.py",
+   "git_blob": "07ceb1bf57a25a57a13dea403341ad5b1278c051",
+   "bytes": 1951
+  },
+  {
    "path": "docs/plans/kbx_lacrimal_20260928/BRIEF_KBX.md",
    "git_blob": "fafb532365991d01e9216c5d15aea3a7a8e91161",
    "bytes": 2210
@@ -19812,8 +20007,8 @@
   },
   {
    "path": "kb/markers/markers_v14_subtype_second_increment.json",
-   "git_blob": "801fee1b8c99219f5bde3e7c8b78ffc9a9a8df9d",
-   "bytes": 37576
+   "git_blob": "0d357da0f01623f8a5f9a078def1b28214c73e5c",
+   "bytes": 38759
   },
   {
    "path": "kb/markers/markers_v15_cl56_increment.json",
@@ -21082,7 +21277,7 @@
   },
   {
    "path": "tests/fixtures/tool_panel_baseline.json",
-   "git_blob": "e10326116f3726eca42deba4272c73321c9a9373",
+   "git_blob": "73d52bb034aca62c35329b2929bdbe9a8e6461db",
    "bytes": 1735
   },
   {

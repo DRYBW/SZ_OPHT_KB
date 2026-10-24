@@ -1,0 +1,806 @@
+{
+ "probe": "d2_field_diff.py",
+ "n_calls_compared": 12,
+ "n_differing": 2,
+ "calls": {
+  "query_marker:{\"cell_type\": \"MG\"}": {
+   "n_keys": 6,
+   "fields": {
+    "detail": "same",
+    "found": "same",
+    "markers": "same",
+    "mode": "same",
+    "provenance": {
+     "435bb92": {
+      "library_requested": "all",
+      "files": [
+       {
+        "library": "retina",
+        "path": "<REPO>/kb/markers/markers_v4.1_clean.json",
+        "version": "v4.1-clean-P0.4",
+        "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+       },
+       {
+        "library": "membrane",
+        "path": "<REPO>/kb/markers/markers_membrane_v1.json",
+        "version": "v1-membrane-20260924",
+        "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+       },
+       {
+        "library": "retina_interneuron",
+        "path": "<REPO>/kb/markers/markers_v5_retina_interneuron.json",
+        "version": "v5.0-retina-interneuron-20260924",
+        "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+       },
+       {
+        "library": "retina_v6",
+        "path": "<REPO>/kb/markers/markers_v6_retina_repair.json",
+        "version": "v6.0-retina-repair-20260925",
+        "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+       },
+       {
+        "library": "face_v6",
+        "path": "<REPO>/kb/markers/markers_v6_face_increment.json",
+        "version": "v6.0-face-20260925",
+        "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+       },
+       {
+        "library": "k9_ocs",
+        "path": "<REPO>/kb/markers/markers_k9_ocs_increment.json",
+        "version": "k9.0-ocs-registered-v1",
+        "note": null
+       },
+       {
+        "library": "antseg_v10",
+        "path": "<REPO>/kb/markers/markers_v10_antseg_increment.json",
+        "version": "v10.1-antseg-scope-20261020",
+        "note": null
+       }
+      ],
+      "conflicts": [
+       {
+        "class": "Rod",
+        "kept": "Rod",
+        "alias": "retina_interneuron::Rod"
+       },
+       {
+        "class": "Cone",
+        "kept": "Cone",
+        "alias": "retina_interneuron::Cone"
+       },
+       {
+        "class": "BC",
+        "kept": "BC",
+        "alias": "retina_interneuron::BC"
+       },
+       {
+        "class": "AC",
+        "kept": "AC",
+        "alias": "retina_interneuron::AC"
+       },
+       {
+        "class": "HC",
+        "kept": "HC",
+        "alias": "retina_interneuron::HC"
+       },
+       {
+        "class": "RGC",
+        "kept": "RGC",
+        "alias": "retina_interneuron::RGC"
+       },
+       {
+        "class": "MG",
+        "kept": "MG",
+        "alias": "retina_interneuron::MG"
+       },
+       {
+        "class": "Astro",
+        "kept": "Astro",
+        "alias": "retina_interneuron::Astro"
+       },
+       {
+        "class": "Micro",
+        "kept": "Micro",
+        "alias": "retina_interneuron::Micro"
+       },
+       {
+        "class": "RPE",
+        "kept": "RPE",
+        "alias": "retina_interneuron::RPE"
+       },
+       {
+        "class": "Rod",
+        "kept": "Rod",
+        "alias": "retina_v6::Rod"
+       },
+       {
+        "class": "Cone",
+        "kept": "Cone",
+        "alias": "retina_v6::Cone"
+       },
+       {
+        "class": "BC",
+        "kept": "BC",
+        "alias": "retina_v6::BC"
+       },
+       {
+        "class": "AC",
+        "kept": "AC",
+        "alias": "retina_v6::AC"
+       },
+       {
+        "class": "HC",
+        "kept": "HC",
+        "alias": "retina_v6::HC"
+       },
+       {
+        "class": "RGC",
+        "kept": "RGC",
+        "alias": "retina_v6::RGC"
+       },
+       {
+        "class": "MG",
+        "kept": "MG",
+        "alias": "retina_v6::MG"
+       },
+       {
+        "class": "Astro",
+        "kept": "Astro",
+        "alias": "retina_v6::Astro"
+       },
+       {
+        "class": "Micro",
+        "kept": "Micro",
+        "alias": "retina_v6::Micro"
+       },
+       {
+        "class": "RPE",
+        "kept": "RPE",
+        "alias": "retina_v6::RPE"
+       },
+       {
+        "class": "Keratocytes",
+        "kept": "Keratocytes",
+        "alias": "face_v6::Keratocytes"
+       },
+       {
+        "class": "Fibroblast",
+        "kept": "Fibroblast",
+        "alias": "face_v6::Fibroblast"
+       },
+       {
+        "class": "Pericyte",
+        "kept": "Pericyte",
+        "alias": "face_v6::Pericyte"
+       },
+       {
+        "class": "SMC",
+        "kept": "SMC",
+        "alias": "face_v6::SMC"
+       },
+       {
+        "class": "Myofibroblast",
+        "kept": "Myofibroblast",
+        "alias": "face_v6::Myofibroblast"
+       }
+      ]
+     },
+     "HEAD": {
+      "library_requested": "all",
+      "files": [
+       {
+        "library": "retina",
+        "path": "<REPO>/kb/markers/markers_v4.1_clean.json",
+        "version": "v4.1-clean-P0.4",
+        "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+       },
+       {
+        "library": "membrane",
+        "path": "<REPO>/kb/markers/markers_membrane_v1.json",
+        "version": "v1-membrane-20260924",
+        "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+       },
+       {
+        "library": "retina_interneuron",
+        "path": "<REPO>/kb/markers/markers_v5_retina_interneuron.json",
+        "version": "v5.0-retina-interneuron-20260924",
+        "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+       },
+       {
+        "library": "retina_v6",
+        "path": "<REPO>/kb/markers/markers_v6_retina_repair.json",
+        "version": "v6.0-retina-repair-20260925",
+        "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+       },
+       {
+        "library": "face_v6",
+        "path": "<REPO>/kb/markers/markers_v6_face_increment.json",
+        "version": "v6.0-face-20260925",
+        "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+       },
+       {
+        "library": "k9_ocs",
+        "path": "<REPO>/kb/markers/markers_k9_ocs_increment.json",
+        "version": "k9.0-ocs-registered-v1",
+        "note": null
+       },
+       {
+        "library": "antseg_v10",
+        "path": "<REPO>/kb/markers/markers_v10_antseg_increment.json",
+        "version": "v10.1-antseg-scope-20261020",
+        "note": null
+       },
+       {
+        "library": "onfibro_v13",
+        "path": "<REPO>/kb/markers/markers_v13_onfibro_increment.json",
+        "version": "v13.0-onfibro-20261022",
+        "note": null
+       }
+      ],
+      "conflicts": [
+       {
+        "class": "Rod",
+        "kept": "Rod",
+        "alias": "retina_interneuron::Rod"
+       },
+       {
+        "class": "Cone",
+        "kept": "Cone",
+        "alias": "retina_interneuron::Cone"
+       },
+       {
+        "class": "BC",
+        "kept": "BC",
+        "alias": "retina_interneuron::BC"
+       },
+       {
+        "class": "AC",
+        "kept": "AC",
+        "alias": "retina_interneuron::AC"
+       },
+       {
+        "class": "HC",
+        "kept": "HC",
+        "alias": "retina_interneuron::HC"
+       },
+       {
+        "class": "RGC",
+        "kept": "RGC",
+        "alias": "retina_interneuron::RGC"
+       },
+       {
+        "class": "MG",
+        "kept": "MG",
+        "alias": "retina_interneuron::MG"
+       },
+       {
+        "class": "Astro",
+        "kept": "Astro",
+        "alias": "retina_interneuron::Astro"
+       },
+       {
+        "class": "Micro",
+        "kept": "Micro",
+        "alias": "retina_interneuron::Micro"
+       },
+       {
+        "class": "RPE",
+        "kept": "RPE",
+        "alias": "retina_interneuron::RPE"
+       },
+       {
+        "class": "Rod",
+        "kept": "Rod",
+        "alias": "retina_v6::Rod"
+       },
+       {
+        "class": "Cone",
+        "kept": "Cone",
+        "alias": "retina_v6::Cone"
+       },
+       {
+        "class": "BC",
+        "kept": "BC",
+        "alias": "retina_v6::BC"
+       },
+       {
+        "class": "AC",
+        "kept": "AC",
+        "alias": "retina_v6::AC"
+       },
+       {
+        "class": "HC",
+        "kept": "HC",
+        "alias": "retina_v6::HC"
+       },
+       {
+        "class": "RGC",
+        "kept": "RGC",
+        "alias": "retina_v6::RGC"
+       },
+       {
+        "class": "MG",
+        "kept": "MG",
+        "alias": "retina_v6::MG"
+       },
+       {
+        "class": "Astro",
+        "kept": "Astro",
+        "alias": "retina_v6::Astro"
+       },
+       {
+        "class": "Micro",
+        "kept": "Micro",
+        "alias": "retina_v6::Micro"
+       },
+       {
+        "class": "RPE",
+        "kept": "RPE",
+        "alias": "retina_v6::RPE"
+       },
+       {
+        "class": "Keratocytes",
+        "kept": "Keratocytes",
+        "alias": "face_v6::Keratocytes"
+       },
+       {
+        "class": "Fibroblast",
+        "kept": "Fibroblast",
+        "alias": "face_v6::Fibroblast"
+       },
+       {
+        "class": "Pericyte",
+        "kept": "Pericyte",
+        "alias": "face_v6::Pericyte"
+       },
+       {
+        "class": "SMC",
+        "kept": "SMC",
+        "alias": "face_v6::SMC"
+       },
+       {
+        "class": "Myofibroblast",
+        "kept": "Myofibroblast",
+        "alias": "face_v6::Myofibroblast"
+       },
+       {
+        "class": "Fibroblast",
+        "kept": "Fibroblast",
+        "alias": "onfibro_v13::Fibroblast"
+       }
+      ]
+     }
+    },
+    "query": "same"
+   },
+   "semantic_summary": {
+    "435bb92": {
+     "mode": "cell_type",
+     "found": true,
+     "markers_keys": [
+      "MG"
+     ],
+     "cell_types": null,
+     "celltype_ranking": [],
+     "n_shared_first": null,
+     "matched_by": null
+    },
+    "HEAD": {
+     "mode": "cell_type",
+     "found": true,
+     "markers_keys": [
+      "MG"
+     ],
+     "cell_types": null,
+     "celltype_ranking": [],
+     "n_shared_first": null,
+     "matched_by": null
+    }
+   }
+  },
+  "query_marker:{\"genes\": [\"TMEM119\", \"CX3CR1\", \"P2RY12\", \"C1QA\", \"SALL1\", \"CSF1R\", \"AIF1\"]}": {
+   "n_keys": 7,
+   "fields": {
+    "auc_threshold": "same",
+    "celltype_ranking": "same",
+    "gene_to_celltypes": "same",
+    "input_species": "same",
+    "mode": "same",
+    "provenance": {
+     "435bb92": {
+      "library_requested": "all",
+      "files": [
+       {
+        "library": "retina",
+        "path": "<REPO>/kb/markers/markers_v4.1_clean.json",
+        "version": "v4.1-clean-P0.4",
+        "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+       },
+       {
+        "library": "membrane",
+        "path": "<REPO>/kb/markers/markers_membrane_v1.json",
+        "version": "v1-membrane-20260924",
+        "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+       },
+       {
+        "library": "retina_interneuron",
+        "path": "<REPO>/kb/markers/markers_v5_retina_interneuron.json",
+        "version": "v5.0-retina-interneuron-20260924",
+        "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+       },
+       {
+        "library": "retina_v6",
+        "path": "<REPO>/kb/markers/markers_v6_retina_repair.json",
+        "version": "v6.0-retina-repair-20260925",
+        "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+       },
+       {
+        "library": "face_v6",
+        "path": "<REPO>/kb/markers/markers_v6_face_increment.json",
+        "version": "v6.0-face-20260925",
+        "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+       },
+       {
+        "library": "k9_ocs",
+        "path": "<REPO>/kb/markers/markers_k9_ocs_increment.json",
+        "version": "k9.0-ocs-registered-v1",
+        "note": null
+       },
+       {
+        "library": "antseg_v10",
+        "path": "<REPO>/kb/markers/markers_v10_antseg_increment.json",
+        "version": "v10.1-antseg-scope-20261020",
+        "note": null
+       }
+      ],
+      "conflicts": [
+       {
+        "class": "Rod",
+        "kept": "Rod",
+        "alias": "retina_interneuron::Rod"
+       },
+       {
+        "class": "Cone",
+        "kept": "Cone",
+        "alias": "retina_interneuron::Cone"
+       },
+       {
+        "class": "BC",
+        "kept": "BC",
+        "alias": "retina_interneuron::BC"
+       },
+       {
+        "class": "AC",
+        "kept": "AC",
+        "alias": "retina_interneuron::AC"
+       },
+       {
+        "class": "HC",
+        "kept": "HC",
+        "alias": "retina_interneuron::HC"
+       },
+       {
+        "class": "RGC",
+        "kept": "RGC",
+        "alias": "retina_interneuron::RGC"
+       },
+       {
+        "class": "MG",
+        "kept": "MG",
+        "alias": "retina_interneuron::MG"
+       },
+       {
+        "class": "Astro",
+        "kept": "Astro",
+        "alias": "retina_interneuron::Astro"
+       },
+       {
+        "class": "Micro",
+        "kept": "Micro",
+        "alias": "retina_interneuron::Micro"
+       },
+       {
+        "class": "RPE",
+        "kept": "RPE",
+        "alias": "retina_interneuron::RPE"
+       },
+       {
+        "class": "Rod",
+        "kept": "Rod",
+        "alias": "retina_v6::Rod"
+       },
+       {
+        "class": "Cone",
+        "kept": "Cone",
+        "alias": "retina_v6::Cone"
+       },
+       {
+        "class": "BC",
+        "kept": "BC",
+        "alias": "retina_v6::BC"
+       },
+       {
+        "class": "AC",
+        "kept": "AC",
+        "alias": "retina_v6::AC"
+       },
+       {
+        "class": "HC",
+        "kept": "HC",
+        "alias": "retina_v6::HC"
+       },
+       {
+        "class": "RGC",
+        "kept": "RGC",
+        "alias": "retina_v6::RGC"
+       },
+       {
+        "class": "MG",
+        "kept": "MG",
+        "alias": "retina_v6::MG"
+       },
+       {
+        "class": "Astro",
+        "kept": "Astro",
+        "alias": "retina_v6::Astro"
+       },
+       {
+        "class": "Micro",
+        "kept": "Micro",
+        "alias": "retina_v6::Micro"
+       },
+       {
+        "class": "RPE",
+        "kept": "RPE",
+        "alias": "retina_v6::RPE"
+       },
+       {
+        "class": "Keratocytes",
+        "kept": "Keratocytes",
+        "alias": "face_v6::Keratocytes"
+       },
+       {
+        "class": "Fibroblast",
+        "kept": "Fibroblast",
+        "alias": "face_v6::Fibroblast"
+       },
+       {
+        "class": "Pericyte",
+        "kept": "Pericyte",
+        "alias": "face_v6::Pericyte"
+       },
+       {
+        "class": "SMC",
+        "kept": "SMC",
+        "alias": "face_v6::SMC"
+       },
+       {
+        "class": "Myofibroblast",
+        "kept": "Myofibroblast",
+        "alias": "face_v6::Myofibroblast"
+       }
+      ]
+     },
+     "HEAD": {
+      "library_requested": "all",
+      "files": [
+       {
+        "library": "retina",
+        "path": "<REPO>/kb/markers/markers_v4.1_clean.json",
+        "version": "v4.1-clean-P0.4",
+        "note": "P0.3 Endo/Peri deletion + P0.4 data-driven Micro/RPE markers (all AUC>0.65 selected); remaining 8 classes inherit v4 marker table (pending P1 freeze)"
+       },
+       {
+        "library": "membrane",
+        "path": "<REPO>/kb/markers/markers_membrane_v1.json",
+        "version": "v1-membrane-20260924",
+        "note": "Provenance tri-state: canonical=textbook consensus (explicitly marked) / pmid=v1 MCP search audit trail verified / data_driven=GSE165784 v1 cluster_markers.csv true wilcoxon ranking. RAG evidence is cited only, not scored (frozen adjudication). Parallel to retina v4.1, query_marker(library) selection. | v1-membrane-20260924: Added Keratocytes + Corneal Endothelium categories (card t_e1febb8e; empirical fix for zero corneal coverage across 31 classes in both v1 libraries; gene-level content provenance via v2.2 in-library chunk body extraction + eutils bibliographic record verification, downgrade/discard list per external review adjudication; hierarchy mapping and mutual exclusion explanations see provenance._disambiguation; vocabulary ontology update belongs to next evaluation series, this library entry does not claim vocabulary repair)"
+       },
+       {
+        "library": "retina_interneuron",
+        "path": "<REPO>/kb/markers/markers_v5_retina_interneuron.json",
+        "version": "v5.0-retina-interneuron-20260924",
+        "note": "v5 = full inheritance of v4.1-clean-P0.4 + BC/AC/HC generic core (25/class) + high-frequency subtype anchor supplementation (t_9714f560 / plans/kb5_interneuron_20260924); panel derived from HRCA D001 author annotation pairwise DE donor stratification gate (DERIVATION_v2.md pre-registration, v0 gate defect fix: detection absolute difference system + photoreceptor abundance track + composite sorting + high-detection guaranteed seat + anonymous elimination + forced complementary anchor core), gene-level provenance see provenance; active query-side library remains v4.1. Publication basis S1 Version B truth∈top-3 = 18/22 (hotspot list per truthfix errata v1.1: original 23 clusters removed uncorrectable target Q2::18 due to author mislabeling (corrected truth=Rod, audit t_89d02fde), goal >=15/22 represents real denominator shrinkage rather than lowered standard; Version A=19/22 mechanism attribution only)"
+       },
+       {
+        "library": "retina_v6",
+        "path": "<REPO>/kb/markers/markers_v6_retina_repair.json",
+        "version": "v6.0-retina-repair-20260925",
+        "note": "Versioned release; see plans/kb7_v6_20260925/KB7_RELEASE_COMPLETED.md and out/ ledger."
+       },
+       {
+        "library": "face_v6",
+        "path": "<REPO>/kb/markers/markers_v6_face_increment.json",
+        "version": "v6.0-face-20260925",
+        "note": "Fire audit: out/kb7_fire_audit_face.tsv = W2 full grid matrix as-is; B1 each new entry against all 9 mutually exclusive groups + same mc sibling subtypes per grid in table."
+       },
+       {
+        "library": "k9_ocs",
+        "path": "<REPO>/kb/markers/markers_k9_ocs_increment.json",
+        "version": "k9.0-ocs-registered-v1",
+        "note": null
+       },
+       {
+        "library": "antseg_v10",
+        "path": "<REPO>/kb/markers/markers_v10_antseg_increment.json",
+        "version": "v10.1-antseg-scope-20261020",
+        "note": null
+       },
+       {
+        "library": "onfibro_v13",
+        "path": "<REPO>/kb/markers/markers_v13_onfibro_increment.json",
+        "version": "v13.0-onfibro-20261022",
+        "note": null
+       }
+      ],
+      "conflicts": [
+       {
+        "class": "Rod",
+        "kept": "Rod",
+        "alias": "retina_interneuron::Rod"
+       },
+       {
+        "class": "Cone",
+        "kept": "Cone",
+        "alias": "retina_interneuron::Cone"
+       },
+       {
+        "class": "BC",
+        "kept": "BC",
+        "alias": "retina_interneuron::BC"
+       },
+       {
+        "class": "AC",
+        "kept": "AC",
+        "alias": "retina_interneuron::AC"
+       },
+       {
+        "class": "HC",
+        "kept": "HC",
+        "alias": "retina_interneuron::HC"
+       },
+       {
+        "class": "RGC",
+        "kept": "RGC",
+        "alias": "retina_interneuron::RGC"
+       },
+       {
+        "class": "MG",
+        "kept": "MG",
+        "alias": "retina_interneuron::MG"
+       },
+       {
+        "class": "Astro",
+        "kept": "Astro",
+        "alias": "retina_interneuron::Astro"
+       },
+       {
+        "class": "Micro",
+        "kept": "Micro",
+        "alias": "retina_interneuron::Micro"
+       },
+       {
+        "class": "RPE",
+        "kept": "RPE",
+        "alias": "retina_interneuron::RPE"
+       },
+       {
+        "class": "Rod",
+        "kept": "Rod",
+        "alias": "retina_v6::Rod"
+       },
+       {
+        "class": "Cone",
+        "kept": "Cone",
+        "alias": "retina_v6::Cone"
+       },
+       {
+        "class": "BC",
+        "kept": "BC",
+        "alias": "retina_v6::BC"
+       },
+       {
+        "class": "AC",
+        "kept": "AC",
+        "alias": "retina_v6::AC"
+       },
+       {
+        "class": "HC",
+        "kept": "HC",
+        "alias": "retina_v6::HC"
+       },
+       {
+        "class": "RGC",
+        "kept": "RGC",
+        "alias": "retina_v6::RGC"
+       },
+       {
+        "class": "MG",
+        "kept": "MG",
+        "alias": "retina_v6::MG"
+       },
+       {
+        "class": "Astro",
+        "kept": "Astro",
+        "alias": "retina_v6::Astro"
+       },
+       {
+        "class": "Micro",
+        "kept": "Micro",
+        "alias": "retina_v6::Micro"
+       },
+       {
+        "class": "RPE",
+        "kept": "RPE",
+        "alias": "retina_v6::RPE"
+       },
+       {
+        "class": "Keratocytes",
+        "kept": "Keratocytes",
+        "alias": "face_v6::Keratocytes"
+       },
+       {
+        "class": "Fibroblast",
+        "kept": "Fibroblast",
+        "alias": "face_v6::Fibroblast"
+       },
+       {
+        "class": "Pericyte",
+        "kept": "Pericyte",
+        "alias": "face_v6::Pericyte"
+       },
+       {
+        "class": "SMC",
+        "kept": "SMC",
+        "alias": "face_v6::SMC"
+       },
+       {
+        "class": "Myofibroblast",
+        "kept": "Myofibroblast",
+        "alias": "face_v6::Myofibroblast"
+       },
+       {
+        "class": "Fibroblast",
+        "kept": "Fibroblast",
+        "alias": "onfibro_v13::Fibroblast"
+       }
+      ]
+     }
+    },
+    "query": "same"
+   },
+   "semantic_summary": {
+    "435bb92": {
+     "mode": "genes",
+     "found": null,
+     "markers_keys": null,
+     "cell_types": null,
+     "celltype_ranking": [
+      "Microglia",
+      "HC",
+      "Mono_Nonclassical",
+      "Mac_Tissue",
+      "retina_interneuron::HC"
+     ],
+     "n_shared_first": 5,
+     "matched_by": null
+    },
+    "HEAD": {
+     "mode": "genes",
+     "found": null,
+     "markers_keys": null,
+     "cell_types": null,
+     "celltype_ranking": [
+      "Microglia",
+      "HC",
+      "Mono_Nonclassical",
+      "Mac_Tissue",
+      "retina_interneuron::HC"
+     ],
+     "n_shared_first": 5,
+     "matched_by": null
+    }
+   }
+  }
+ }
+}

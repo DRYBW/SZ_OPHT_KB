@@ -36,6 +36,95 @@
   "robustness": "out/ROBUSTNESS.json",
   "ruler_patch": "out/RULER_PATCH.json"
  },
+ "markers": {
+  "H1 horizontal cell": [
+   "LHX1",
+   "SPP1"
+  ],
+  "H2 horizontal cell": [
+   "ISL1",
+   "SPP1"
+  ],
+  "OFF-bipolar cell": [
+   "GRIK1",
+   "FEZF2",
+   "LHX3",
+   "SI"
+  ],
+  "ON-bipolar cell": [
+   "GRM6",
+   "TRPM1",
+   "ISL1",
+   "ST18",
+   "CA1",
+   "CRX"
+  ],
+  "ON-blue cone bipolar cell": [
+   "GRM6",
+   "VSX2"
+  ],
+  "diffuse bipolar 2 cell": [
+   "GRIK1",
+   "VSX2",
+   "CACNA1G",
+   "GSG1"
+  ],
+  "diffuse bipolar 3a cell": [
+   "GRIK1",
+   "VSX2",
+   "CALB1"
+  ],
+  "diffuse bipolar 3b cell": [
+   "GRIK1",
+   "VSX2",
+   "MEIS2",
+   "QPCT"
+  ],
+  "diffuse bipolar 4 cell": [
+   "GRM6",
+   "VSX2",
+   "LMO4"
+  ],
+  "diffuse bipolar 6 cell": [
+   "SCGN",
+   "GRM6",
+   "DNER"
+  ],
+  "flat midget bipolar cell": [
+   "GRIK1",
+   "VSX2",
+   "GLRA1"
+  ],
+  "giant bipolar cell": [
+   "UTRN"
+  ],
+  "invaginating midget bipolar cell": [
+   "GRM6",
+   "VSX2"
+  ],
+  "parasol ganglion cell of retina": [
+   "SPP1",
+   "RBPMS2",
+   "CHRNA2",
+   "CA8",
+   "AFAP1",
+   "POU6F2"
+  ],
+  "rod bipolar cell": [
+   "PRKCA",
+   "TRPM1",
+   "VSTM2B",
+   "C3",
+   "NRL"
+  ],
+  "starburst amacrine cell": [
+   "CHAT",
+   "SLC18A3",
+   "SLC5A7",
+   "CTBP2",
+   "EMD"
+  ]
+ },
  "entries": [
   {
    "class_name": "H1 horizontal cell",

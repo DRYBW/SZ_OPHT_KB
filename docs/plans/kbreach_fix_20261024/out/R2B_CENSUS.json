@@ -1,0 +1,22 @@
+{
+ "probe": "r2b_full_census.py",
+ "command": "/usr/bin/python3 child (clean env): full 721-window library=subtype_v14 census",
+ "reading": {
+  "n_windows": 721,
+  "best_window": {
+   "vol": "CX02_adult_retina",
+   "cluster": "7",
+   "n_cells": 2398,
+   "n_ranked": 6,
+   "top": "ON-bipolar cell"
+  },
+  "census_by_n_ranked": {
+   "0": 576,
+   "1": 59,
+   "2": 42,
+   "3": 9,
+   "5": 31,
+   "6": 4
+  }
+ }
+}

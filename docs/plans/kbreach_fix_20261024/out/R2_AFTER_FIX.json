@@ -1,0 +1,98 @@
+{
+ "probe": "r2_after_fix.py",
+ "rowdiff_clusters": {
+  "n_rows": 721,
+  "n_differing_raw": 0,
+  "n_differing_canonical": 0,
+  "differing_raw": [],
+  "differing_canonical": []
+ },
+ "rowdiff_battery": {
+  "n_rows": 238,
+  "n_differing_raw": 0,
+  "n_differing_canonical": 0,
+  "differing_raw": [],
+  "differing_canonical": []
+ },
+ "rowdiff_explicit": {
+  "n_rows": 15,
+  "n_differing_raw": 0,
+  "n_differing_canonical": 0,
+  "differing_raw": [],
+  "differing_canonical": []
+ },
+ "D1_after": {
+  "command": "/usr/bin/python3 child (clean env): inventory + best-window + hit census, library=subtype_v14",
+  "reading": {
+   "inventory_mode": "list",
+   "inventory_n": 16,
+   "inventory_classes": [
+    "H1 horizontal cell",
+    "H2 horizontal cell",
+    "OFF-bipolar cell",
+    "ON-bipolar cell",
+    "ON-blue cone bipolar cell",
+    "diffuse bipolar 2 cell",
+    "diffuse bipolar 3a cell",
+    "diffuse bipolar 3b cell",
+    "diffuse bipolar 4 cell",
+    "diffuse bipolar 6 cell",
+    "flat midget bipolar cell",
+    "giant bipolar cell",
+    "invaginating midget bipolar cell",
+    "parasol ganglion cell of retina",
+    "rod bipolar cell",
+    "starburst amacrine cell"
+   ],
+   "best_window": {
+    "vol": "CX02_adult_retina",
+    "cluster": "18",
+    "n_cells": 3645,
+    "n_genes": 10,
+    "n_ranked": 5,
+    "top": "OFF-bipolar cell"
+   },
+   "explicit_probe_window": {
+    "vol": "CX02_adult_retina",
+    "cluster": "4",
+    "genes": [
+     "PDE6A",
+     "SAG",
+     "ANO2",
+     "PDE6G",
+     "CNGB1",
+     "ENSG00000271758",
+     "SYNE2",
+     "EXOC4",
+     "RHO",
+     "GNB1"
+    ],
+    "tissue": "retina",
+    "species": "human",
+    "ref_cell_type": "retinal rod cell",
+    "ref_family": "rod",
+    "n_cells": 12902,
+    "truth": {
+     "ref_cell_type": "retinal rod cell",
+     "ref_family": "rod",
+     "n_cells": 12902,
+     "recorded_pred_top1": "Rod",
+     "recorded_pred_family": "rod",
+     "recorded_grade": "mixed_or_insufficient",
+     "recorded_verdict": "✅一致",
+     "recorded_has_cand": true,
+     "recorded_fam_eq_raw": true
+    }
+   },
+   "explicit_probe_n_ranked": 0,
+   "windows_scanned": 200,
+   "hit_census": {
+    "0": 163,
+    "1": 16,
+    "2": 12,
+    "3": 3,
+    "5": 6
+   }
+  }
+ }
+}

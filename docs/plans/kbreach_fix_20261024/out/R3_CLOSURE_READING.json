@@ -1,0 +1,653 @@
+{
+ "probe": "r3_closure.py (v2)",
+ "command": "/usr/bin/python3 scripts/r3_closure.py",
+ "n_recorded_clusters": 721,
+ "obo_sha256": "c6274fb65cdf740b983a06b74cb678814249d7f8e580c2ec9de54bf204a2b1c7",
+ "qualified_is_a_lines_any_qualifier": 686,
+ "A_replay_top": {
+  "dist_harness": {
+   "kb_coarser": 116,
+   "same_cl": 244,
+   "truly_inconsistent": 176,
+   "abstain": 165,
+   "kb_finer": 5,
+   "unmappable_pred": 15
+  },
+  "dist_corrected": {
+   "kb_coarser": 129,
+   "same_cl": 244,
+   "truly_inconsistent": 150,
+   "abstain": 165,
+   "kb_finer": 18,
+   "unmappable_pred": 15
+  },
+  "n_changed": 26,
+  "changed_clusters": [
+   {
+    "vol": "CX08_RPE_choroid_scRNA",
+    "cluster": "1",
+    "pred_top1": "SMC",
+    "truth": "blood vessel smooth muscle cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 4872
+   },
+   {
+    "vol": "CX08_RPE_choroid_scRNA",
+    "cluster": "9",
+    "pred_top1": "Mono_Classical",
+    "truth": "monocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 4974
+   },
+   {
+    "vol": "CX08_RPE_choroid_scRNA",
+    "cluster": "17",
+    "pred_top1": "Endo",
+    "truth": "endothelial cell of arteriole",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 5334
+   },
+   {
+    "vol": "CX08_RPE_choroid_snRNA",
+    "cluster": "4",
+    "pred_top1": "SMC",
+    "truth": "vascular associated smooth muscle cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 4743
+   },
+   {
+    "vol": "CX08_RPE_choroid_snRNA",
+    "cluster": "9",
+    "pred_top1": "T",
+    "truth": "helper T cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 7969
+   },
+   {
+    "vol": "CX08_RPE_choroid_snRNA",
+    "cluster": "16",
+    "pred_top1": "Endo",
+    "truth": "vein endothelial cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 7584
+   },
+   {
+    "vol": "CX09_voigt_RPE_choroid",
+    "cluster": "0",
+    "pred_top1": "Microglia",
+    "truth": "macrophage",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 156
+   },
+   {
+    "vol": "CX12_ocular_surface_snRNA",
+    "cluster": "2",
+    "pred_top1": "Mac_Tissue",
+    "truth": "myeloid leukocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 1333
+   },
+   {
+    "vol": "CX12_ocular_surface_snRNA",
+    "cluster": "6",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 862
+   },
+   {
+    "vol": "CX12_ocular_surface_snRNA",
+    "cluster": "18",
+    "pred_top1": "ciliary muscle cell",
+    "truth": "smooth muscle cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 1851
+   },
+   {
+    "vol": "CX13_TM_corneal_scleral",
+    "cluster": "16",
+    "pred_top1": "SMC",
+    "truth": "ciliary muscle cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 6461
+   },
+   {
+    "vol": "CX13_TM_corneal_scleral",
+    "cluster": "19",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 557
+   },
+   {
+    "vol": "CX13_ciliary_body",
+    "cluster": "14",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 300
+   },
+   {
+    "vol": "CX13_iris",
+    "cluster": "7",
+    "pred_top1": "SMC",
+    "truth": "smooth muscle cell of sphincter of pupil",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 1166
+   },
+   {
+    "vol": "CX14_TM_ciliary_snRNA",
+    "cluster": "10",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 6383
+   },
+   {
+    "vol": "CX16_tabula_sapiens_eye",
+    "cluster": "3",
+    "pred_top1": "Microglia",
+    "truth": "myeloid leukocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 1341
+   },
+   {
+    "vol": "CX16_tabula_sapiens_eye",
+    "cluster": "4",
+    "pred_top1": "T",
+    "truth": "CD8-positive, alpha-beta T cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 1803
+   },
+   {
+    "vol": "CX16_tabula_sapiens_eye",
+    "cluster": "5",
+    "pred_top1": "T",
+    "truth": "CD4-positive, alpha-beta T cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 797
+   },
+   {
+    "vol": "CX16_tabula_sapiens_eye",
+    "cluster": "19",
+    "pred_top1": "Endo",
+    "truth": "retinal blood vessel endothelial cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 1671
+   },
+   {
+    "vol": "PRE_GSE199013",
+    "cluster": "9",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 11
+   },
+   {
+    "vol": "PRE_GSE199013",
+    "cluster": "12",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 984
+   },
+   {
+    "vol": "PRE_GSE199013",
+    "cluster": "32",
+    "pred_top1": "SMC",
+    "truth": "smooth muscle cell of sphincter of pupil",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 716
+   },
+   {
+    "vol": "PRE_OA-D002",
+    "cluster": "3",
+    "pred_top1": "Endo",
+    "truth": "endothelial cell of lymphatic vessel",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 3921
+   },
+   {
+    "vol": "PRE_OA-D004",
+    "cluster": "5",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 6450
+   },
+   {
+    "vol": "PRE_OA-D004",
+    "cluster": "7",
+    "pred_top1": "SMC",
+    "truth": "ciliary muscle cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 1369
+   },
+   {
+    "vol": "PRE_OA-D004",
+    "cluster": "20",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 161
+   }
+  ],
+  "rfam_states_harness": {
+   "consistent": 297,
+   "inconsistent": 171,
+   "related": 88,
+   "mixed": 165
+  },
+  "rfam_states_corrected": {
+   "consistent": 297,
+   "inconsistent": 157,
+   "related": 102,
+   "mixed": 165
+  },
+  "n_rfam_state_moves": 14,
+  "rfam_state_moved_clusters": [
+   {
+    "vol": "CX08_RPE_choroid_scRNA",
+    "cluster": "1",
+    "pred_top1": "SMC",
+    "truth": "blood vessel smooth muscle cell",
+    "state_harness": "inconsistent",
+    "state_corrected": "related"
+   },
+   {
+    "vol": "CX08_RPE_choroid_scRNA",
+    "cluster": "17",
+    "pred_top1": "Endo",
+    "truth": "endothelial cell of arteriole",
+    "state_harness": "inconsistent",
+    "state_corrected": "related"
+   },
+   {
+    "vol": "CX08_RPE_choroid_snRNA",
+    "cluster": "4",
+    "pred_top1": "SMC",
+    "truth": "vascular associated smooth muscle cell",
+    "state_harness": "inconsistent",
+    "state_corrected": "related"
+   },
+   {
+    "vol": "CX08_RPE_choroid_snRNA",
+    "cluster": "16",
+    "pred_top1": "Endo",
+    "truth": "vein endothelial cell",
+    "state_harness": "inconsistent",
+    "state_corrected": "related"
+   },
+   {
+    "vol": "CX09_voigt_RPE_choroid",
+    "cluster": "0",
+    "pred_top1": "Microglia",
+    "truth": "macrophage",
+    "state_harness": "inconsistent",
+    "state_corrected": "related"
+   },
+   {
+    "vol": "CX12_ocular_surface_snRNA",
+    "cluster": "2",
+    "pred_top1": "Mac_Tissue",
+    "truth": "myeloid leukocyte",
+    "state_harness": "inconsistent",
+    "state_corrected": "related"
+   },
+   {
+    "vol": "CX12_ocular_surface_snRNA",
+    "cluster": "18",
+    "pred_top1": "ciliary muscle cell",
+    "truth": "smooth muscle cell",
+    "state_harness": "inconsistent",
+    "state_corrected": "related"
+   },
+   {
+    "vol": "CX13_TM_corneal_scleral",
+    "cluster": "16",
+    "pred_top1": "SMC",
+    "truth": "ciliary muscle cell",
+    "state_harness": "inconsistent",
+    "state_corrected": "related"
+   },
+   {
+    "vol": "CX13_iris",
+    "cluster": "7",
+    "pred_top1": "SMC",
+    "truth": "smooth muscle cell of sphincter of pupil",
+    "state_harness": "inconsistent",
+    "state_corrected": "related"
+   },
+   {
+    "vol": "CX16_tabula_sapiens_eye",
+    "cluster": "3",
+    "pred_top1": "Microglia",
+    "truth": "myeloid leukocyte",
+    "state_harness": "inconsistent",
+    "state_corrected": "related"
+   },
+   {
+    "vol": "CX16_tabula_sapiens_eye",
+    "cluster": "19",
+    "pred_top1": "Endo",
+    "truth": "retinal blood vessel endothelial cell",
+    "state_harness": "inconsistent",
+    "state_corrected": "related"
+   },
+   {
+    "vol": "PRE_GSE199013",
+    "cluster": "32",
+    "pred_top1": "SMC",
+    "truth": "smooth muscle cell of sphincter of pupil",
+    "state_harness": "inconsistent",
+    "state_corrected": "related"
+   },
+   {
+    "vol": "PRE_OA-D002",
+    "cluster": "3",
+    "pred_top1": "Endo",
+    "truth": "endothelial cell of lymphatic vessel",
+    "state_harness": "inconsistent",
+    "state_corrected": "related"
+   },
+   {
+    "vol": "PRE_OA-D004",
+    "cluster": "7",
+    "pred_top1": "SMC",
+    "truth": "ciliary muscle cell",
+    "state_harness": "inconsistent",
+    "state_corrected": "related"
+   }
+  ]
+ },
+ "B_ledger_top": {
+  "dist_harness": {
+   "kb_coarser": 116,
+   "same_cl": 207,
+   "truly_inconsistent": 203,
+   "abstain": 179,
+   "kb_finer": 3,
+   "unmappable_pred": 13
+  },
+  "dist_corrected": {
+   "kb_coarser": 131,
+   "same_cl": 207,
+   "truly_inconsistent": 176,
+   "abstain": 179,
+   "kb_finer": 15,
+   "unmappable_pred": 13
+  },
+  "n_changed": 27,
+  "changed_clusters": [
+   {
+    "vol": "CX08_RPE_choroid_scRNA",
+    "cluster": "1",
+    "pred_top1": "SMC",
+    "truth": "blood vessel smooth muscle cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 4872
+   },
+   {
+    "vol": "CX08_RPE_choroid_scRNA",
+    "cluster": "9",
+    "pred_top1": "Mono_Classical",
+    "truth": "monocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 4974
+   },
+   {
+    "vol": "CX08_RPE_choroid_scRNA",
+    "cluster": "17",
+    "pred_top1": "Endo",
+    "truth": "endothelial cell of arteriole",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 5334
+   },
+   {
+    "vol": "CX08_RPE_choroid_snRNA",
+    "cluster": "4",
+    "pred_top1": "SMC",
+    "truth": "vascular associated smooth muscle cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 4743
+   },
+   {
+    "vol": "CX08_RPE_choroid_snRNA",
+    "cluster": "9",
+    "pred_top1": "T",
+    "truth": "helper T cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 7969
+   },
+   {
+    "vol": "CX08_RPE_choroid_snRNA",
+    "cluster": "16",
+    "pred_top1": "Endo",
+    "truth": "vein endothelial cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 7584
+   },
+   {
+    "vol": "CX09_voigt_RPE_choroid",
+    "cluster": "0",
+    "pred_top1": "Microglia",
+    "truth": "macrophage",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 156
+   },
+   {
+    "vol": "CX12_ocular_surface_snRNA",
+    "cluster": "2",
+    "pred_top1": "Mac_Tissue",
+    "truth": "myeloid leukocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 1333
+   },
+   {
+    "vol": "CX12_ocular_surface_snRNA",
+    "cluster": "6",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 862
+   },
+   {
+    "vol": "CX13_TM_corneal_scleral",
+    "cluster": "15",
+    "pred_top1": "SMC",
+    "truth": "ciliary muscle cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 7529
+   },
+   {
+    "vol": "CX13_TM_corneal_scleral",
+    "cluster": "16",
+    "pred_top1": "SMC",
+    "truth": "ciliary muscle cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 6461
+   },
+   {
+    "vol": "CX13_TM_corneal_scleral",
+    "cluster": "19",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 557
+   },
+   {
+    "vol": "CX13_ciliary_body",
+    "cluster": "12",
+    "pred_top1": "SMC",
+    "truth": "ciliary muscle cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 4062
+   },
+   {
+    "vol": "CX13_ciliary_body",
+    "cluster": "14",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 300
+   },
+   {
+    "vol": "CX13_iris",
+    "cluster": "7",
+    "pred_top1": "SMC",
+    "truth": "smooth muscle cell of sphincter of pupil",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 1166
+   },
+   {
+    "vol": "CX14_TM_ciliary_snRNA",
+    "cluster": "2",
+    "pred_top1": "SMC",
+    "truth": "ciliary muscle cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 7111
+   },
+   {
+    "vol": "CX14_TM_ciliary_snRNA",
+    "cluster": "10",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 6383
+   },
+   {
+    "vol": "CX16_tabula_sapiens_eye",
+    "cluster": "3",
+    "pred_top1": "Microglia",
+    "truth": "myeloid leukocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 1341
+   },
+   {
+    "vol": "CX16_tabula_sapiens_eye",
+    "cluster": "4",
+    "pred_top1": "T",
+    "truth": "CD8-positive, alpha-beta T cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 1803
+   },
+   {
+    "vol": "CX16_tabula_sapiens_eye",
+    "cluster": "5",
+    "pred_top1": "T",
+    "truth": "CD4-positive, alpha-beta T cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 797
+   },
+   {
+    "vol": "CX16_tabula_sapiens_eye",
+    "cluster": "19",
+    "pred_top1": "Endo",
+    "truth": "retinal blood vessel endothelial cell",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 1671
+   },
+   {
+    "vol": "PRE_GSE199013",
+    "cluster": "9",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 11
+   },
+   {
+    "vol": "PRE_GSE199013",
+    "cluster": "12",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 984
+   },
+   {
+    "vol": "PRE_GSE199013",
+    "cluster": "32",
+    "pred_top1": "SMC",
+    "truth": "smooth muscle cell of sphincter of pupil",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 716
+   },
+   {
+    "vol": "PRE_OA-D002",
+    "cluster": "3",
+    "pred_top1": "Endo",
+    "truth": "endothelial cell of lymphatic vessel",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_coarser",
+    "n_cells": 3921
+   },
+   {
+    "vol": "PRE_OA-D004",
+    "cluster": "5",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 6450
+   },
+   {
+    "vol": "PRE_OA-D004",
+    "cluster": "20",
+    "pred_top1": "T",
+    "truth": "lymphocyte",
+    "harness": "truly_inconsistent",
+    "corrected": "kb_finer",
+    "n_cells": 161
+   }
+  ]
+ }
+}

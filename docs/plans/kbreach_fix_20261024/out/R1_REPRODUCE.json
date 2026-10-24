@@ -1,0 +1,141 @@
+{
+ "probe": "r1_reproduce.py",
+ "argv": [],
+ "D1_body": {
+  "command": "/usr/bin/python3 r1_reproduce.py  (json.load of kb/markers markers_v14_subtype_second_increment.json)",
+  "markers_key_present": false,
+  "n_entries": 16,
+  "sha256_of_bytes": "75884fb7bd88e1ab7fd1652a26051046bff07dd0c6ee2972abfd7c8100f9f452",
+  "bytes": 37576,
+  "n_class_names_distinct": 16,
+  "entries_markers_all_nonempty": true
+ },
+ "D1_explicit_route": {
+  "command": "/usr/bin/python3 child (clean env, imports mcp_server/eyekb_core.py)",
+  "reading": {
+   "n_probe_genes": 10,
+   "refused": false,
+   "n_ranked": 0,
+   "top": null,
+   "inventory_mode": "list",
+   "inventory_n": 0,
+   "inventory_sample": []
+  }
+ },
+ "D1c_coverage_oracle": {
+  "command": "wave_common.load_set() x static marker lists (no core import)",
+  "explicit_window_reading": {
+   "window": {
+    "vol": "CX02_adult_retina",
+    "cluster": "4",
+    "n_cells": 12902,
+    "n_genes": 10
+   },
+   "per_entry_n_shared": [
+    {
+     "class_name": "H1 horizontal cell",
+     "n_shared": 0
+    },
+    {
+     "class_name": "H2 horizontal cell",
+     "n_shared": 0
+    },
+    {
+     "class_name": "OFF-bipolar cell",
+     "n_shared": 0
+    },
+    {
+     "class_name": "ON-bipolar cell",
+     "n_shared": 0
+    },
+    {
+     "class_name": "ON-blue cone bipolar cell",
+     "n_shared": 0
+    },
+    {
+     "class_name": "diffuse bipolar 2 cell",
+     "n_shared": 0
+    },
+    {
+     "class_name": "diffuse bipolar 3a cell",
+     "n_shared": 0
+    },
+    {
+     "class_name": "diffuse bipolar 3b cell",
+     "n_shared": 0
+    },
+    {
+     "class_name": "diffuse bipolar 4 cell",
+     "n_shared": 0
+    },
+    {
+     "class_name": "diffuse bipolar 6 cell",
+     "n_shared": 0
+    },
+    {
+     "class_name": "flat midget bipolar cell",
+     "n_shared": 0
+    },
+    {
+     "class_name": "giant bipolar cell",
+     "n_shared": 0
+    },
+    {
+     "class_name": "invaginating midget bipolar cell",
+     "n_shared": 0
+    },
+    {
+     "class_name": "parasol ganglion cell of retina",
+     "n_shared": 0
+    },
+    {
+     "class_name": "rod bipolar cell",
+     "n_shared": 0
+    },
+    {
+     "class_name": "starburst amacrine cell",
+     "n_shared": 0
+    }
+   ],
+   "n_entries_hit": 0,
+   "best_recorded_window": {
+    "n_entries_hit": 6,
+    "window": {
+     "vol": "CX02_adult_retina",
+     "cluster": "7",
+     "n_cells": 2398,
+     "n_genes": 10
+    }
+   }
+  }
+ },
+ "D2_probe_baseline": {
+  "command": "training-venv/bin/python3 tests/probe_tool_panel_identity.py --baseline tests/fixtures/tool_panel_baseline.json (cwd=repo, clean env)",
+  "returncode": 1,
+  "headline": [
+   "IDENTITY FAIL: legacy_panel, full_panel moved."
+  ],
+  "moved_calls": [
+   "query_marker:{\"cell_type\": \"MG\"}",
+   "query_marker:{\"genes\": [\"TMEM119\", \"CX3CR1\", \"P2RY12\", \"C1QA\", \"SALL1\", \"CSF1R\", \"AIF1\"]}"
+  ],
+  "stderr_tail": ""
+ },
+ "D3_qualified_isa": {
+  "command": "/usr/bin/python3-parse of kb/ontology/cl/releases/2026-06-08/cl-base.obo (r1_reproduce.py D3 block)",
+  "obo_sha256": "c6274fb65cdf740b983a06b74cb678814249d7f8e580c2ec9de54bf204a2b1c7",
+  "n_terms": 3540,
+  "n_is_a_lines": 4880,
+  "qualified_any_qualifier": 686,
+  "qualified_is_inferred": 679,
+  "qualifier_kinds": {
+   "is_inferred=\"true\"": 679,
+   "evidence=\"http://identifiers.org/ncbigene/140919\", evidence=\"http://identifiers.org/ncbigene/14415\", evidence=\"http://identifiers.org/ncbigene/14417\"": 1,
+   "evidence=\"http://identifiers.org/ncbigene/13195\", evidence=\"http://identifiers.org/ncbigene/140919\", evidence=\"http://identifiers.org/ncbigene/72961\"": 1,
+   "evidence=\"http://identifiers.org/ncbigene/14415\", evidence=\"http://identifiers.org/ncbigene/14417\", evidence=\"http://identifiers.org/ncbigene/22348\"": 1,
+   "evidence=\"http://identifiers.org/ncbigene/11668\"": 2,
+   "evidence=\"http://identifiers.org/ncbigene/216227\"": 1,
+   "evidence=\"http://identifiers.org/ncbigene/15186\"": 1
+  }
+ }
+}
