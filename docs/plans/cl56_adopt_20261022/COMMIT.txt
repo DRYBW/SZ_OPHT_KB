@@ -1,0 +1,11 @@
+CL-56 adoption wave (card t_fabddb85, board pi-briefing) — local commits, nothing pushed
+
+da4c41203048c187cc1d52dd2684e6af2598099d  the adoption, the measurement, the NO-GO, the registrations
+141862305ef24a0a632c89c3b26d1c40a482f1e1  the ontology-manifest re-anchor (G7-C01)
+edbf7568a16622887425d4163d75eae4a0f9d5d4  record only: the clean-clone gate readout and report section
+<this commit>                              record only: the final gate readout at the last commit, COMMIT.txt
+
+Gate chain (clean clone, EYEKB_G3_PY=/home/ubuntu/training-venv/bin/python3):
+  1418623  gates=8 failed=0  CHAIN PASS   (out/CLONE_REPO_GATES.log)
+  edbf756  gates=8 failed=0  CHAIN PASS   (out/CLONE_REPO_GATES_final.log)
+Release identity: IDENTITY MATCH (re-taken per commit); W3 manifest verifies 4/4.

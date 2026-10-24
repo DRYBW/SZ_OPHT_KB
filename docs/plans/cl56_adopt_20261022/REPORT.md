@@ -394,9 +394,17 @@ EYEKB_GATE_OUT=/tmp/cl56_clone2/.gate_out bash tests/run_gates.sh
 | G9 gate_preimage_ref_immutable | violations = 0 (the pre/post-image reference is the fixed sha `c06aac2…`) | 0 |
 | G10 gate_switch_coverage | R1 registry matches source, R2 18 reports / 0 violations | 0 |
 
-Two commits carry the work: `da4c412` (the adoption, the measurement, the NO-GO and the registrations)
-and `1418623` (the ontology-manifest re-anchor of §6.4). Everything after those is a record-only commit
-under `docs/plans/cl56_adopt_20261022/`.
+Four local commits carry the work (`COMMIT.txt`, nothing pushed): `da4c412` (the adoption, the
+measurement, the NO-GO and the registrations), `1418623` (the ontology-manifest re-anchor of §6.4),
+then two record-only commits under `docs/plans/cl56_adopt_20261022/` — `edbf756` (the gate readout at the
+commit under test, the mirror-fidelity check, this section) and the commit that adds `COMMIT.txt` and the
+final readout line.
+
+The chain was run in a clean clone **twice**, at `1418623` (`out/CLONE_REPO_GATES.log`) and at `edbf756`
+(`out/CLONE_REPO_GATES_final.log`): `gates=8 failed=0 (CHAIN PASS)` both times. The commit that carries
+this line is record-only — its content is `COMMIT.txt`, the final log and these sentences; no code,
+registry, gate or anchor surface differs from `edbf756`, and the chain was **not** re-run after it (stated
+as not run rather than claimed).
 
 Mirror fidelity, measured (`out/CLONE_CHECK.json`): 56 files compared between the construction site and
 `docs/plans/cl56_adopt_20261022/`, 55 byte-identical, 1 declared difference — `ledgers/net_audit.log`, the

@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "0543c7c12483",
- "digest_sha256": "0543c7c124834845eb6e3ac134a2afb3c3c12a232cab463300f28ee79c0132ec",
+ "release_id": "57a47a2b109e",
+ "digest_sha256": "57a47a2b109e0fa851dc4841edb14f4c548582c6f03790c9b72f0f845098a17e",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 4230,
- "total_bytes": 248135663,
+ "n_files": 4232,
+ "total_bytes": 248148301,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "d82ed8bb7ba8",
   "knowledge_bundle_id": "a415ff26a733",
-  "effective_profile_id": "b1dcdcd6c864"
+  "effective_profile_id": "1c243a23d6eb"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -4206,14 +4206,19 @@
    "bytes": 6635
   },
   {
+   "path": "docs/plans/cl56_adopt_20261022/COMMIT.txt",
+   "git_blob": "89d4d34dcc5b8da5f8a7ef9670aa45c14a462949",
+   "bytes": 795
+  },
+  {
    "path": "docs/plans/cl56_adopt_20261022/PREREG_ADOPT_CL56_20261022.md",
    "git_blob": "e61862fc294992cc14613141e8e4e331684283e2",
    "bytes": 19339
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/REPORT.md",
-   "git_blob": "2f236dc2c0765e1feabd104955cf3956aea2533f",
-   "bytes": 28513
+   "git_blob": "74cd3b9876d1214bf44e86d88771e261ca2e8e9e",
+   "bytes": 29146
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/discipline/net_audit/sitecustomize.py",
@@ -4227,8 +4232,8 @@
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/ledgers/net_audit.log",
-   "git_blob": "1748da69123af9fa19ce5ae9cdfabd9cc96ef290",
-   "bytes": 7574
+   "git_blob": "82956e88d20741e972b8b783f93ab037a6f89597",
+   "bytes": 8978
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/logs/a1_acceptance.log",
@@ -4311,6 +4316,11 @@
    "bytes": 9825
   },
   {
+   "path": "docs/plans/cl56_adopt_20261022/out/CLONE_REPO_GATES_final.log",
+   "git_blob": "cec101ee243792087313820bad76e4496559b467",
+   "bytes": 9806
+  },
+  {
    "path": "docs/plans/cl56_adopt_20261022/out/CLOSURE_INSTRUMENT_DIFFERENCE.json",
    "git_blob": "8a7534970e84e9cc73f804c1e0931e9c4f7466d5",
    "bytes": 2586
@@ -4327,7 +4337,7 @@
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/out/MANIFEST.sha256",
-   "git_blob": "b7350a8eedf89eb99645516c3d96179a9bc9e6e8",
+   "git_blob": "c90ef4e14ef1c2e8ab4141f9912c58c371d94ebb",
    "bytes": 4264
   },
   {
