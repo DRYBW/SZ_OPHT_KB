@@ -212,10 +212,16 @@ terms).
 4. `tests/fixtures/tool_panel_baseline.json` — re-recorded (PRE bytes kept as pre-image).
 5. `docs/HARNESS_LIMIT_QUALIFIED_ISA_20261024.md` — new (generated table-driven from
    out/R3_CLOSURE_READING.json + out/R1_REPRODUCE.json; scripts/gen_limit_doc.py).
-6. `docs/plans/kbreach_fix_20261024/` — this REPORT + scripts/ + out/ + pre_images/ (the wave mirror).
-7. `docs/RELEASE_IDENTITY.json` — re-taken from the staged tree AFTER all byte changes
-   (`python3 scripts/release_identity.py --take --source index`), then committed.
-8. `docs/W3_MANIFEST.sha256` — re-frozen LAST (registry row sha changed; dated header line appended).
+6. `docs/W3_PIPELINE_REGISTRY.tsv` row L6-37 (the fixture's own registration row) — re-taken
+   from live bytes in the same commit (sha256 ce6416126252663ff8be794fe985500a284876c3d15b2420359656c1bb4afd87
+   -> e0198b4a24e961b85e13877d090c41f1b5b56ef44fb9d940c103bb5ee8b064dd, 1,735 bytes; see the G5-C05 finding that drove it: out/CLONE_REPO_GATES.log first pass, FAIL
+   G5-C05 live-vs-registered on L6-37, fixed in the amended commit and re-verified 8/8, second-run log
+   with both passes in out/G5_FIRSTPASS_FINDING.txt).
+7. `docs/plans/kbreach_fix_20261024/` — this REPORT + scripts/ + out/ + pre_images/ (the wave mirror).
+8. `docs/RELEASE_IDENTITY.json` (+ docs/RELEASE_MANIFEST_v1.json) — re-taken from the staged tree
+   AFTER all byte changes (`python3 scripts/release_identity.py --take --source index`), then committed.
+9. `docs/W3_MANIFEST.sha256` — re-frozen LAST (registry rows L1-31 and L6-37 sha changed; two dated
+   header lines appended; `sha256sum -c` 4/4 OK, re-verified in the clean clone).
 
 ## 7. Commits + clean-clone gate
 
@@ -230,8 +236,13 @@ cd /tmp/kbreach_clone && EYEKB_CORPUS=/home/ubuntu/EYEKB_REPO/literature_db/v2.4
 # required tail: gates=8 failed=0
 ```
 
-(The readout line and the commit hash are stamped into COMMIT.txt and out/CLONE_REPO_GATES.log at
-the end of this wave.)
+Stamped readouts at the wave commit **87e246b** (COMMIT.txt, out/CLONE_REPO_GATES.log):
+`gates=8 failed=0 (CHAIN PASS)` — G3 pass (REPRO 41/41), G4 pass (three byte anchors), G5 pass
+(registry: rows=141, C01-C08 incl. the re-taken L6-37 sha), G6 pass (eight machine rules, rc=0),
+G7 pass, G8 pass, G9 pass, G10 pass. In the same clone: `scripts/release_identity.py --check` ->
+IDENTITY MATCH rc=0; `sha256sum -c docs/W3_MANIFEST.sha256` -> 4/4 OK; the identity device
+`tests/probe_tool_panel_identity.py --baseline tests/fixtures/tool_panel_baseline.json` ->
+IDENTITY PASS rc=0 (out/CLONE_IDENTITY_PROBE.log carries readouts and return codes).
 
 ## 8. What did not clear, and why (one line)
 

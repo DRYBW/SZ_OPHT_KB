@@ -1,0 +1,11 @@
+KB-REACH (card t_c19cd667) — wave commit: 87e246b4e07ab727dde23860af2f25905e46453d
+parent: e028d06c128f
+surfaces: kb/markers/markers_v14_subtype_second_increment.json; docs/W3_PIPELINE_REGISTRY.tsv
+(rows L1-31 + L6-37 re-taken); docs/CHANGE_CONTROL_G6_INSTANCE.tsv (+2 rows);
+tests/fixtures/tool_panel_baseline.json (re-recorded, PRE bytes kept);
+docs/HARNESS_LIMIT_QUALIFIED_ISA_20261024.md (new); docs/plans/kbreach_fix_20261024/ (mirror);
+docs/RELEASE_IDENTITY.json + docs/RELEASE_MANIFEST_v1.json (taken against index);
+docs/W3_MANIFEST.sha256 (re-frozen last, two passes).
+clean clone at this commit: gates=8 failed=0 (CHAIN PASS); release identity IDENTITY MATCH;
+W3 manifest 4/4 OK; probe --baseline IDENTITY PASS rc=0.
+committed locally, not pushed.

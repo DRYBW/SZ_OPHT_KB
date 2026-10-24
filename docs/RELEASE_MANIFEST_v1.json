@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "af26ceca29fb",
- "digest_sha256": "af26ceca29fb87f93ad4cb20d71e82af0d3be6dd86b7aa1f227d9c5b492d5b85",
+ "release_id": "3aac865a58c2",
+ "digest_sha256": "3aac865a58c2047c23064c0e7fbf1ab1f1ac7ace7c509b70440d499e8f3cb56b",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 4271,
- "total_bytes": 249571838,
+ "n_files": 4275,
+ "total_bytes": 249584652,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "d82ed8bb7ba8",
   "knowledge_bundle_id": "159a536b76d9",
-  "effective_profile_id": "124ceeb028a3"
+  "effective_profile_id": "efdf5224146b"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -10386,9 +10386,24 @@
    "bytes": 8428
   },
   {
+   "path": "docs/plans/kbreach_fix_20261024/COMMIT.txt",
+   "git_blob": "0f124f6a11fb6f22b0758837822a80e24819e117",
+   "bytes": 760
+  },
+  {
    "path": "docs/plans/kbreach_fix_20261024/REPORT.md",
-   "git_blob": "291fd856d8d027b7e0bc233c53e11f8583a09b58",
-   "bytes": 16404
+   "git_blob": "0386a126f3719c7e16ddb8e49909424595a16570",
+   "bytes": 17571
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/CLONE_IDENTITY_PROBE.log",
+   "git_blob": "220d57073e3c3cbdcdb32e8226a82c79f5f90f8b",
+   "bytes": 434
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/CLONE_REPO_GATES.log",
+   "git_blob": "a93c0e107a87db69121d4f1ff44dd924a2893f85",
+   "bytes": 9971
   },
   {
    "path": "docs/plans/kbreach_fix_20261024/out/D2_FIELD_DIFF.json",
@@ -10409,6 +10424,11 @@
    "path": "docs/plans/kbreach_fix_20261024/out/F1_FIX.json",
    "git_blob": "909699ef73212f686a651d6def9d8ae9fad65264",
    "bytes": 728
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/G5_FIRSTPASS_FINDING.txt",
+   "git_blob": "06121a992defda7292d193b75477ef3ad6e5b39c",
+   "bytes": 482
   },
   {
    "path": "docs/plans/kbreach_fix_20261024/out/LIMIT_DOC_BUILD.json",

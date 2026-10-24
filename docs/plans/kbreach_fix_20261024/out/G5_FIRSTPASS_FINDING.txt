@@ -1,0 +1,6 @@
+First clean-clone gate run (commit 55b3aeb, before the L6-37 re-take):
+  FAIL G5-C05 SHA-MATCH :: live-vs-registered mismatches=1
+    - L6-37:tool_panel_baseline.json registered=ce6416126252663f live=e0198b4a24e961b8
+Cause: the tool-panel baseline re-record had not been carried into its own registry row.
+Fix: scripts/retake_l6_37.py (row re-take + dated note), W3 manifest re-frozen (second pass),
+commit amended -> 87e246b; second clean-clone run: gates=8 failed=0 (CHAIN PASS).
