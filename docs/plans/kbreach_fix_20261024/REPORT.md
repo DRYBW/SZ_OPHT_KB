@@ -244,6 +244,12 @@ IDENTITY MATCH rc=0; `sha256sum -c docs/W3_MANIFEST.sha256` -> 4/4 OK; the ident
 `tests/probe_tool_panel_identity.py --baseline tests/fixtures/tool_panel_baseline.json` ->
 IDENTITY PASS rc=0 (out/CLONE_IDENTITY_PROBE.log carries readouts and return codes).
 
+Chain re-run at **03b6fe6** (the record-only closeout above): a fresh clean clone of that commit
+re-ran the full gate chain — `gates=8 failed=0 (CHAIN PASS)` — and in the same clone
+`scripts/release_identity.py --check` -> IDENTITY MATCH rc=0 (4275 files); `sha256sum -c docs/W3_MANIFEST.sha256`
+-> 4/4 OK; `tests/probe_tool_panel_identity.py --baseline` -> IDENTITY PASS rc=0. The terminal
+readout is stamp-stored in out/CLONE_REPO_GATES_final.log (full run_gates.sh stdout of the re-run).
+
 ## 8. What did not clear, and why (one line)
 
 `n_ranked = 16 for a recorded probe window` — no recorded window can rank 16/16 (max 6 in the full

@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "3aac865a58c2",
- "digest_sha256": "3aac865a58c2047c23064c0e7fbf1ab1f1ac7ace7c509b70440d499e8f3cb56b",
+ "release_id": "5b476734c976",
+ "digest_sha256": "5b476734c97619873ce0c6539de6c1a2050a6afc37688f81938ca5ecb47151c6",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 4275,
- "total_bytes": 249584652,
+ "n_files": 4352,
+ "total_bytes": 249891911,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "d82ed8bb7ba8",
   "knowledge_bundle_id": "159a536b76d9",
-  "effective_profile_id": "efdf5224146b"
+  "effective_profile_id": "4e143d74e976"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -8261,6 +8261,386 @@
    "bytes": 1001
   },
   {
+   "path": "docs/plans/fairex4a_20261024/FAIR_X4A_20261024.md",
+   "git_blob": "77619f9085f23e1279fed6ef27442aa9eb03768d",
+   "bytes": 26703
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/MANIFEST.sha256",
+   "git_blob": "18611830286787f3aa2f13175430bbbd201c5ab1",
+   "bytes": 9585
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/PREREG_FAIRX4A_20261024.md",
+   "git_blob": "7b28d3642df72a2c406b64da1d23989a2556d05a",
+   "bytes": 15386
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/cw_x4a_lenient.tsv",
+   "git_blob": "b6be2f985bd85e4e3c44c20c4e48e44984c112df",
+   "bytes": 21089
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/00_recon_reference_candidate.py",
+   "git_blob": "74ad811350668501e91bd8b6313b89ffe257cb65",
+   "bytes": 4011
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/00b_recon_full.py",
+   "git_blob": "9d8d01d1b5a81b2268bb08489c27791ef6b2fbb9",
+   "bytes": 4148
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/10_armA_whitelist.py",
+   "git_blob": "08ee8d687d21090b488858ac8c891c773881b292",
+   "bytes": 13491
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/10_hvg_x4a_pool.py",
+   "git_blob": "9cdc6456af4119b364e856137dad401e0dfdccc0",
+   "bytes": 1907
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/11_armA_score_both_rulers.py",
+   "git_blob": "994076403fb29e75187f778731f4ca19e324e2f6",
+   "bytes": 5926
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/20_build_reference.py",
+   "git_blob": "1b593982fec72a040028e4607f70d89c1751bae0",
+   "bytes": 13044
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/30_embed.py",
+   "git_blob": "f6d2a03f2ebef2e7d675ce165557848afa6a42d6",
+   "bytes": 2899
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/31_gpu_driver.sh",
+   "git_blob": "50f5a2c6426306e4ffc5962dc75ff5470837e319",
+   "bytes": 1944
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/31b_gpu_one.sh",
+   "git_blob": "e2d479aea3b4b81621adda5ab8e9fef62f1ed819",
+   "bytes": 1566
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/32_b0_gate.py",
+   "git_blob": "c744c82b9a533d185fef671a417a81d81451f583",
+   "bytes": 4625
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/33_refswap_vote.py",
+   "git_blob": "ffa65032bc88c5efd36aca010c5573edfea15829",
+   "bytes": 2695
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/34_build_cw_refswap.py",
+   "git_blob": "fcbb1a01e50c8e6f861da5f84edf2fdae5d9ded4",
+   "bytes": 1508
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/35_score_refswap.py",
+   "git_blob": "8ffec11284d6f8974248b4fd25af6c9bf1dee149",
+   "bytes": 2913
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/40_report_numbers.py",
+   "git_blob": "b1ebfb0f52f3cab09cec46a0201864ce69c07c97",
+   "bytes": 5251
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/41_noise_floor.py",
+   "git_blob": "17623f12b99eaffc3ba8f7f40c547e9c39152bd2",
+   "bytes": 3963
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/42_spread_score.py",
+   "git_blob": "b64474309573ffa1c4e44cfd28ca89896f97bb98",
+   "bytes": 2058
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/44_reference_homology.py",
+   "git_blob": "0f91dd2b2bdae2474ce0cc319bcd76ce5ced8b31",
+   "bytes": 3303
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/45_vote_frac.py",
+   "git_blob": "eb09f3d85da8f546db0ea932db55b3438d769a06",
+   "bytes": 1427
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/scripts/50_make_manifest.py",
+   "git_blob": "2f2db8530bdb452a53313b9754dd9536c80ef09e",
+   "bytes": 2685
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/ARM_A_both_rulers.tsv",
+   "git_blob": "2485498510a87e3b33b0940b1783abe34d64052c",
+   "bytes": 1262
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/ARM_A_invalid_reconciliation.tsv",
+   "git_blob": "38d8e73d664e8705a3dace8c540ede234d9fb295",
+   "bytes": 312
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/ARM_A_label_inventory.tsv",
+   "git_blob": "17e714a09eecce2b1999e4711443615a92cd4beb",
+   "bytes": 9890
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/ARM_A_lenient_cw_edits.json",
+   "git_blob": "66a603b5148334d28387053a504ed75fd0f7e154",
+   "bytes": 589
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/ARM_A_oracle_bound.json",
+   "git_blob": "ddebc68c878d588f3c679bf18a841718e9d1029b",
+   "bytes": 1840
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/ARM_A_perclass_lineage_delta.tsv",
+   "git_blob": "40879f498612d91ab386e20872e00506f7b889c3",
+   "bytes": 1051
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/ARM_A_unreachable_mass.tsv",
+   "git_blob": "70122271d0f9c12b1176067dac25d82655615fd7",
+   "bytes": 3571
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/B0_reproduction_gate.json",
+   "git_blob": "2f43321ecdc622f1a25aec9097d73e0a8f1f0dd0",
+   "bytes": 2259
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/B_arm_comparison.tsv",
+   "git_blob": "db54536c8991506f417966da8827a6cad918d8d8",
+   "bytes": 556
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/CW_LENIENT_X4A.sha256",
+   "git_blob": "2674eed1a1b5d10e799e203c108e7df60c55a8e1",
+   "bytes": 85
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/C_table.tsv",
+   "git_blob": "d087cc343db39399232d02bc7b7eb32978c69081",
+   "bytes": 1593
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/INSTRUMENT_noise_floor.json",
+   "git_blob": "9f6a3d19608e1d413b433aa63290d3bec8244e47",
+   "bytes": 679
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/RECON_reference_candidate.json",
+   "git_blob": "581374157c98de3f36a9377bcd90546b91078b5c",
+   "bytes": 1568
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/RECON_reference_candidate_full.json",
+   "git_blob": "c5e79431a135d73a903a326865f14e4a6067a3f9",
+   "bytes": 7287
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/REFERENCE_LABEL_HOMOLOGY.json",
+   "git_blob": "4cb8df25d3eb38942236758e0af408d3335e8478",
+   "bytes": 844
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/REFSCORE_refswap_S2_vs_official.json",
+   "git_blob": "332ee0710374980d608e755c6359f3ddfe6707c5",
+   "bytes": 1646
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/REFSCORE_refswap_vs_official.json",
+   "git_blob": "bb54056f04eaf6d074b4d9a6501cbaa7a820d2c9",
+   "bytes": 1632
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/REFVOTE_refswap_S2_ledger.json",
+   "git_blob": "66c3a44630c612d38c9573e9165a7a95fdff8a88",
+   "bytes": 1160
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/REFVOTE_refswap_ledger.json",
+   "git_blob": "f8309f7cec5e71164a2c08fefabf9f12422a8089",
+   "bytes": 1126
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/REPORT_NUMBERS.json",
+   "git_blob": "5ce1530a201b80d0d0177936bfb1827f7b4af1d0",
+   "bytes": 42145
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/SPREAD_strict_and_refswap.json",
+   "git_blob": "ca59c6157533a7232a3dd01c10f70ed0e15b34f0",
+   "bytes": 4526
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/VOTE_FRAC_comparison.json",
+   "git_blob": "c8bb482d1c2aa9ceeb4181a499f8b9611ac72521",
+   "bytes": 1555
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/WHITELIST_REJECTED_X4A.tsv",
+   "git_blob": "83d1160c1de7f588d5cafa17da0ea4365ce61887",
+   "bytes": 26177
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/WHITELIST_X4A.sha256",
+   "git_blob": "39e35c626064c359b47c7ab00511486244f417be",
+   "bytes": 84
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/WHITELIST_X4A.tsv",
+   "git_blob": "8ce940477ceda9fdd1d8eb0b00bd8fbb41b2d355",
+   "bytes": 2375
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/cw_x4a_refswap.tsv",
+   "git_blob": "1b5aff4be52e01d4ec004721cdc0e827ab817a3d",
+   "bytes": 6445
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/cw_x4a_refswap_S2.tsv",
+   "git_blob": "dd4ed1eb0b52a30c575cb9c0f69448b0b35001bd",
+   "bytes": 6798
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/perclass_x4a_lenient_A1a_eyesgpt.tsv",
+   "git_blob": "1a6ec9367ea94616d08d271077ef66a2409f35f9",
+   "bytes": 647
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/perclass_x4a_lenient_A1b_scgpt.tsv",
+   "git_blob": "92c12ccf5874aababe33046b37bd320c217b9342",
+   "bytes": 647
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/perclass_x4a_lenient_B1a_celltypist.tsv",
+   "git_blob": "5f261afe6d7722ab6ef063038f5d08fb45a08a0d",
+   "bytes": 158
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/perclass_x4a_lenient_B1b_celltypist.tsv",
+   "git_blob": "910b4ffe4f6ef3f2e3f76deae18b8862cdb0579f",
+   "bytes": 152
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/perclass_x4a_lenient_C1.tsv",
+   "git_blob": "95fda35c65c372a738580bd171195bc4c5f88224",
+   "bytes": 666
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/perclass_x4a_lenient_C2.tsv",
+   "git_blob": "ece651495e320e16369574ccf9ca7cd0c7c653bf",
+   "bytes": 662
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/perclass_x4a_refswap.tsv",
+   "git_blob": "3250560848ca42e5ad2f6331a67613836a2f0b0b",
+   "bytes": 690
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/perclass_x4a_refswap_S2.tsv",
+   "git_blob": "6aaa9258f25396ef17229db565f6ca8ee8cb5a47",
+   "bytes": 688
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/perclass_x4a_refswap_run1.tsv",
+   "git_blob": "3250560848ca42e5ad2f6331a67613836a2f0b0b",
+   "bytes": 690
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/perclass_x4a_refswap_run2.tsv",
+   "git_blob": "97411498cec2dfb2833106c45ae3055ac1a8de76",
+   "bytes": 686
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/perclass_x4a_strict_run1.tsv",
+   "git_blob": "464d2aad021af4ae14598317a14dc879893a0aa8",
+   "bytes": 647
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/perclass_x4a_strict_run2.tsv",
+   "git_blob": "e685a9430791c58deb09c8c324f7326377941eef",
+   "bytes": 645
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/scores_x4a_lenient_A1a_eyesgpt.json",
+   "git_blob": "6d9b55c3580305f98bb5efe2d726454a970da863",
+   "bytes": 552
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/scores_x4a_lenient_A1b_scgpt.json",
+   "git_blob": "7c774479fe5b7faa5b0aef18278fcc782a434114",
+   "bytes": 548
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/scores_x4a_lenient_B1a_celltypist.json",
+   "git_blob": "fccfb0c347977d139065cc0302860ff943a96685",
+   "bytes": 540
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/scores_x4a_lenient_B1b_celltypist.json",
+   "git_blob": "9518a1322900de9409996cba3d180bdfcf47b890",
+   "bytes": 540
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/scores_x4a_lenient_C1.json",
+   "git_blob": "9e08a419b36e138efbaf36311b2760d878c1451e",
+   "bytes": 543
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/scores_x4a_lenient_C2.json",
+   "git_blob": "b825902a1a79e0d69f0c742e5ca4d4b20f670950",
+   "bytes": 544
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/scores_x4a_refswap.json",
+   "git_blob": "7517ecf6ecd3b1d686d009a7897d911771bcb47d",
+   "bytes": 1008
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/scores_x4a_refswap_S2.json",
+   "git_blob": "d66dcc0668081028b0419fe39dfc9d4f8992e922",
+   "bytes": 1021
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/verify_scores_x4a_A1a_eyesgpt.json",
+   "git_blob": "6d9b55c3580305f98bb5efe2d726454a970da863",
+   "bytes": 552
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/verify_scores_x4a_A1b_scgpt.json",
+   "git_blob": "288fcba0719676797c98bfa09e0df0b82caac790",
+   "bytes": 549
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/verify_scores_x4a_B1a_celltypist.json",
+   "git_blob": "1192e59e5d1c0e3f53637ff2f1191eca3b761564",
+   "bytes": 540
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/verify_scores_x4a_B1b_celltypist.json",
+   "git_blob": "40f78e4bf1ce53699f4740c99e44c76a9a025751",
+   "bytes": 540
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/verify_scores_x4a_C1.json",
+   "git_blob": "9e08a419b36e138efbaf36311b2760d878c1451e",
+   "bytes": 543
+  },
+  {
+   "path": "docs/plans/fairex4a_20261024/tables/verify_scores_x4a_C2.json",
+   "git_blob": "b825902a1a79e0d69f0c742e5ca4d4b20f670950",
+   "bytes": 544
+  },
+  {
    "path": "docs/plans/figure_uplift_20260928/FIGURE_COMPLETED.md",
    "git_blob": "a91c30afc3455e3c93ca596362b3fdbd60b4b813",
    "bytes": 3849
@@ -10392,8 +10772,8 @@
   },
   {
    "path": "docs/plans/kbreach_fix_20261024/REPORT.md",
-   "git_blob": "0386a126f3719c7e16ddb8e49909424595a16570",
-   "bytes": 17571
+   "git_blob": "7960350c53195a14c3e2621834ef802f16d92bd5",
+   "bytes": 18067
   },
   {
    "path": "docs/plans/kbreach_fix_20261024/out/CLONE_IDENTITY_PROBE.log",
@@ -10404,6 +10784,11 @@
    "path": "docs/plans/kbreach_fix_20261024/out/CLONE_REPO_GATES.log",
    "git_blob": "a93c0e107a87db69121d4f1ff44dd924a2893f85",
    "bytes": 9971
+  },
+  {
+   "path": "docs/plans/kbreach_fix_20261024/out/CLONE_REPO_GATES_final.log",
+   "git_blob": "822411ef211cf8a7f68016b81ffbeba9c88fa624",
+   "bytes": 10039
   },
   {
    "path": "docs/plans/kbreach_fix_20261024/out/D2_FIELD_DIFF.json",
