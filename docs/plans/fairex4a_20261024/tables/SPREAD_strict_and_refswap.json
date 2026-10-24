@@ -1,0 +1,114 @@
+{
+ "strict_run1": {
+  "arm": "A1b_scgpt",
+  "n_gold": 139978,
+  "n_abstain": 0,
+  "n_missing_pred": 0,
+  "n_unmapped_label": 0,
+  "n_suspended_mapping": 0,
+  "n_invalid_projection": 53636,
+  "qualification": {
+   "eligible_for_formal_table": true,
+   "note": null
+  },
+  "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+  "lineage": {
+   "overall_acc": 0.4205,
+   "macro_f1": 0.3242,
+   "coverage": 0.6169,
+   "selective_acc": 0.6816
+  },
+  "cell_type": {
+   "overall_acc": 0.3043,
+   "macro_f1": 0.1135,
+   "coverage": 0.6168,
+   "selective_acc": 0.4934
+  },
+  "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python /mnt/D/EyeKB/plans/toolbenchmark_20261009/s2_crosswalk/score_engine.py --gold /mnt/D/EyeKB/plans/toolbenchmark_20261010_x4clean/arms/engine_gold_x4a.tsv --pred /mnt/D/EyeKB/plans/fairex4a_20261024/out/pred_A1b_scgpt_x4a_rerun.tsv --arm A1b_scgpt --crosswalk /mnt/D/EyeKB/plans/toolbenchmark_20261010_x4clean/arms/cw_x4a.tsv --arm-stage adult --gold-stage adult --per-class-out /mnt/D/EyeKB/plans/fairex4a_20261024/out/perclass_x4a_strict_run1.tsv",
+  "status": "RUN"
+ },
+ "strict_run2": {
+  "arm": "A1b_scgpt",
+  "n_gold": 139978,
+  "n_abstain": 0,
+  "n_missing_pred": 0,
+  "n_unmapped_label": 0,
+  "n_suspended_mapping": 0,
+  "n_invalid_projection": 53686,
+  "qualification": {
+   "eligible_for_formal_table": true,
+   "note": null
+  },
+  "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+  "lineage": {
+   "overall_acc": 0.4206,
+   "macro_f1": 0.3243,
+   "coverage": 0.6166,
+   "selective_acc": 0.6822
+  },
+  "cell_type": {
+   "overall_acc": 0.3044,
+   "macro_f1": 0.1135,
+   "coverage": 0.6165,
+   "selective_acc": 0.4937
+  },
+  "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python /mnt/D/EyeKB/plans/toolbenchmark_20261009/s2_crosswalk/score_engine.py --gold /mnt/D/EyeKB/plans/toolbenchmark_20261010_x4clean/arms/engine_gold_x4a.tsv --pred /mnt/D/EyeKB/plans/fairex4a_20261024/out/pred_A1b_scgpt_x4a_run2_raw.tsv --arm A1b_scgpt --crosswalk /mnt/D/EyeKB/plans/toolbenchmark_20261010_x4clean/arms/cw_x4a.tsv --arm-stage adult --gold-stage adult --per-class-out /mnt/D/EyeKB/plans/fairex4a_20261024/out/perclass_x4a_strict_run2.tsv",
+  "status": "RUN"
+ },
+ "refswap_run1": {
+  "arm": "A1b_scgpt_refswap",
+  "n_gold": 139978,
+  "n_abstain": 0,
+  "n_missing_pred": 0,
+  "n_unmapped_label": 0,
+  "n_suspended_mapping": 0,
+  "n_invalid_projection": 0,
+  "qualification": {
+   "eligible_for_formal_table": true,
+   "note": null
+  },
+  "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+  "lineage": {
+   "overall_acc": 0.9941,
+   "macro_f1": 0.9893,
+   "coverage": 1.0,
+   "selective_acc": 0.9941
+  },
+  "cell_type": {
+   "overall_acc": 0.9817,
+   "macro_f1": 0.9132,
+   "coverage": 1.0,
+   "selective_acc": 0.9817
+  },
+  "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python /mnt/D/EyeKB/plans/toolbenchmark_20261009/s2_crosswalk/score_engine.py --gold /mnt/D/EyeKB/plans/toolbenchmark_20261010_x4clean/arms/engine_gold_x4a.tsv --pred /mnt/D/EyeKB/plans/fairex4a_20261024/out/pred_A1b_scgpt_x4a_refswap_raw.tsv --arm A1b_scgpt_refswap --crosswalk /mnt/D/EyeKB/plans/fairex4a_20261024/out/cw_x4a_refswap.tsv --arm-stage adult --gold-stage adult --per-class-out /mnt/D/EyeKB/plans/fairex4a_20261024/out/perclass_x4a_refswap_run1.tsv",
+  "status": "RUN"
+ },
+ "refswap_run2": {
+  "arm": "A1b_scgpt_refswap",
+  "n_gold": 139978,
+  "n_abstain": 0,
+  "n_missing_pred": 0,
+  "n_unmapped_label": 0,
+  "n_suspended_mapping": 0,
+  "n_invalid_projection": 0,
+  "qualification": {
+   "eligible_for_formal_table": true,
+   "note": null
+  },
+  "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+  "lineage": {
+   "overall_acc": 0.9941,
+   "macro_f1": 0.9893,
+   "coverage": 1.0,
+   "selective_acc": 0.9941
+  },
+  "cell_type": {
+   "overall_acc": 0.9817,
+   "macro_f1": 0.9125,
+   "coverage": 1.0,
+   "selective_acc": 0.9817
+  },
+  "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python /mnt/D/EyeKB/plans/toolbenchmark_20261009/s2_crosswalk/score_engine.py --gold /mnt/D/EyeKB/plans/toolbenchmark_20261010_x4clean/arms/engine_gold_x4a.tsv --pred /mnt/D/EyeKB/plans/fairex4a_20261024/out/pred_A1b_scgpt_x4a_refswap_run2_raw.tsv --arm A1b_scgpt_refswap --crosswalk /mnt/D/EyeKB/plans/fairex4a_20261024/out/cw_x4a_refswap.tsv --arm-stage adult --gold-stage adult --per-class-out /mnt/D/EyeKB/plans/fairex4a_20261024/out/perclass_x4a_refswap_run2.tsv",
+  "status": "RUN"
+ }
+}

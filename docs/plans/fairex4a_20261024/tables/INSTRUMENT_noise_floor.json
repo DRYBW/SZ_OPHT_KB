@@ -1,0 +1,15 @@
+{
+ "comparison": "same script + same input h5ad + same GPU, run 1 vs run 2",
+ "max_abs_elementwise_diff": 0.07255148887634277,
+ "median_abs_elementwise_diff": 0.001355234533548355,
+ "per_cell_cosine: min": 0.9389106035232544,
+ "median": 0.9988694190979004,
+ "max": 0.999975860118866,
+ "n_cells_with_cosine_lt_0.999": 77495,
+ "n_cells_with_cosine_lt_0.99": 1870,
+ "n_cells_with_cosine_lt_0.95": 2,
+ "frozen_index_label_agreement_run1_vs_run2": 0.931132,
+ "frozen_index_label_agreement_run1_vs_official": 0.930661,
+ "frozen_index_label_agreement_run2_vs_official": 0.930568,
+ "refswap_pred_run2": "/mnt/D/EyeKB/plans/fairex4a_20261024/out/pred_A1b_scgpt_x4a_refswap_run2_raw.tsv"
+}

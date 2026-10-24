@@ -1,0 +1,38 @@
+{
+ "C1": {
+  "macro_f1_as_is": 0.7433,
+  "macro_f1_if_all_unreachable_named_correctly": 0.7433,
+  "n_unreachable": 0,
+  "note": "UNATTAINABLE oracle: an alias maps a LABEL, not a cell; the same label carries different true lineages. Reported only to bound what any alias layer could ever move."
+ },
+ "C2": {
+  "macro_f1_as_is": 0.6783,
+  "macro_f1_if_all_unreachable_named_correctly": 0.6783,
+  "n_unreachable": 0,
+  "note": "UNATTAINABLE oracle: an alias maps a LABEL, not a cell; the same label carries different true lineages. Reported only to bound what any alias layer could ever move."
+ },
+ "A1a_eyesgpt": {
+  "macro_f1_as_is": 0.2464,
+  "macro_f1_if_all_unreachable_named_correctly": 0.2946,
+  "n_unreachable": 27489,
+  "note": "UNATTAINABLE oracle: an alias maps a LABEL, not a cell; the same label carries different true lineages. Reported only to bound what any alias layer could ever move."
+ },
+ "A1b_scgpt": {
+  "macro_f1_as_is": 0.3248,
+  "macro_f1_if_all_unreachable_named_correctly": 0.5489,
+  "n_unreachable": 53607,
+  "note": "UNATTAINABLE oracle: an alias maps a LABEL, not a cell; the same label carries different true lineages. Reported only to bound what any alias layer could ever move."
+ },
+ "B1a_celltypist": {
+  "macro_f1_as_is": 0.5902,
+  "macro_f1_if_all_unreachable_named_correctly": 0.6983,
+  "n_unreachable": 53793,
+  "note": "UNATTAINABLE oracle: an alias maps a LABEL, not a cell; the same label carries different true lineages. Reported only to bound what any alias layer could ever move."
+ },
+ "B1b_celltypist": {
+  "macro_f1_as_is": 0.0676,
+  "macro_f1_if_all_unreachable_named_correctly": 0.5963,
+  "n_unreachable": 80652,
+  "note": "UNATTAINABLE oracle: an alias maps a LABEL, not a cell; the same label carries different true lineages. Reported only to bound what any alias layer could ever move."
+ }
+}

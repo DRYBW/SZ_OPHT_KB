@@ -1,0 +1,48 @@
+{
+ "refswap_arm": "A1b_scgpt_refswap_S2",
+ "tag": "refswap_S2",
+ "official_A1b_lineage_macro_f1": 0.3248,
+ "official_A1b_ct_macro_f1": 0.1138,
+ "official_A1b_n_invalid_projection": 53621,
+ "refswap_lineage": {
+  "overall_acc": 0.994,
+  "macro_f1": 0.9892,
+  "coverage": 1.0,
+  "selective_acc": 0.994
+ },
+ "refswap_ct": {
+  "overall_acc": 0.9816,
+  "macro_f1": 0.9132,
+  "coverage": 1.0,
+  "selective_acc": 0.9816
+ },
+ "refswap_n_invalid_projection": 0,
+ "refswap_n_unmapped_label": 0,
+ "refswap_eligible": true,
+ "lineage_per_class_f1": {
+  "glia": "0.998",
+  "immune": "0.9938",
+  "pigmented": "0.9868",
+  "stromal": "0.9814",
+  "vascular": "0.986"
+ },
+ "cell_type_per_class_f1": {
+  "B cell": "0.9371",
+  "Schwann cell": "0.9865",
+  "T cell": "0.9326",
+  "astrocyte": "0.9961",
+  "endothelial cell": "0.9897",
+  "fibroblast": "0.9814",
+  "macrophage": "0.9378",
+  "melanocyte": "0.9877",
+  "microglial cell": "0.8846",
+  "myelinating Schwann cell": "0.744",
+  "natural killer cell": "0.5705",
+  "oligodendrocyte": "0.9987",
+  "oligodendrocyte precursor cell": "0.9932",
+  "pericyte": "0.781",
+  "pigmented epithelial cell": "0.9809",
+  "vascular associated smooth muscle cell": "0.9089"
+ },
+ "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python /mnt/D/EyeKB/plans/toolbenchmark_20261009/s2_crosswalk/score_engine.py --gold /mnt/D/EyeKB/plans/toolbenchmark_20261010_x4clean/arms/engine_gold_x4a.tsv --pred out/pred_A1b_scgpt_x4a_refswap_S2_raw.tsv --arm A1b_scgpt_refswap_S2 --crosswalk out/cw_x4a_refswap_S2.tsv --arm-stage adult --gold-stage adult --per-class-out /mnt/D/EyeKB/plans/fairex4a_20261024/out/perclass_x4a_refswap_S2.tsv"
+}

@@ -1,0 +1,74 @@
+{
+ "gate": "B0 reproduction",
+ "frozen_index": "/mnt/D/HermesAI/shared/reproduction/scgpt/a1b_formal/formal200k.index",
+ "frozen_index_sha256": "5de48427979f669bd6b9a79ff610b28788354eb34ae63b76359ff24f7f7e6b92",
+ "frozen_index_ntotal": 189049,
+ "n_cells": 139978,
+ "agreement": 0.930661,
+ "threshold": 0.99,
+ "verdict": "FAIL",
+ "n_disagree": 9706,
+ "n_cells_with_gt1200_nonzero_genes": 186,
+ "note_on_randomness": "the collator randomly subsamples when a cell's nonzero-gene count exceeds max_length; only cells above 1200 nonzero genes (out of the 5,000-gene set) can differ between runs. Measured here so the gate is interpretable.",
+ "disagree_first10": [
+  [
+   "HuPt14ODON_AAAGAACCAGACACAG-1",
+   "glycinergic amacrine cell",
+   "GABAergic amacrine cell"
+  ],
+  [
+   "HuPt14ODON_AAAGGGCGTGAGATAT-1",
+   "amacrine cell",
+   "glycinergic amacrine cell"
+  ],
+  [
+   "HuPt14ODON_AACAACCAGTCATGGG-1",
+   "amacrine cell",
+   "glycinergic amacrine cell"
+  ],
+  [
+   "HuPt14ODON_AACAACCGTTTAGTCG-1",
+   "amacrine cell",
+   "glycinergic amacrine cell"
+  ],
+  [
+   "HuPt14ODON_AACAAGACAACCGCCA-1",
+   "ON parasol ganglion cell",
+   "glycinergic amacrine cell"
+  ],
+  [
+   "HuPt14ODON_AACAAGACAAGCTGCC-1",
+   "amacrine cell",
+   "glycinergic amacrine cell"
+  ],
+  [
+   "HuPt14ODON_AACAAGAGTGCTTCAA-1",
+   "glycinergic amacrine cell",
+   "ON parasol ganglion cell"
+  ],
+  [
+   "HuPt14ODON_AACCAACCACTGTCCT-1",
+   "glycinergic amacrine cell",
+   "amacrine cell"
+  ],
+  [
+   "HuPt14ODON_AACCACAAGCGATGGT-1",
+   "glycinergic amacrine cell",
+   "amacrine cell"
+  ],
+  [
+   "HuPt14ODON_AACCATGAGACTCCGC-1",
+   "glycinergic amacrine cell",
+   "amacrine cell"
+  ]
+ ],
+ "alt_index_diagnostic": {
+  "index": "/mnt/D/EyeKB/plans/toolbenchmark_20261009/a1b_formal_cache/formal200k.index",
+  "sha256": "3697f39f1c3f7d96ee9fcfa745fcc8c4aae942f9a547e49d034363dcce89a03e",
+  "ntotal": 189049,
+  "meta_sha256": "a61211b3a9adf1e1432d8a7dc79cf380a792fe771cd6104d29f95fa6e66c2c3d",
+  "agreement_with_official_pred": 0.956643,
+  "matches_official_pred_itself": 0.922166,
+  "note": "the near-duplicate cache copy of the same 189k reference (identical meta200k.npy sha, different index bytes) scores this differently; recorded as a storage-hygiene observation, not a scoring change"
+ }
+}

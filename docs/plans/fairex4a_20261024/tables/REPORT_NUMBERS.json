@@ -1,0 +1,1250 @@
+{
+ "official_x4a": {
+  "C1": {
+   "arm": "C1",
+   "n_gold": 139978,
+   "n_abstain": 69332,
+   "n_missing_pred": 0,
+   "n_unmapped_label": 0,
+   "n_suspended_mapping": 0,
+   "n_invalid_projection": 0,
+   "qualification": {
+    "eligible_for_formal_table": true,
+    "note": null
+   },
+   "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+   "lineage": {
+    "overall_acc": 0.5032,
+    "macro_f1": 0.7433,
+    "coverage": 0.5047,
+    "selective_acc": 0.997
+   },
+   "cell_type": {
+    "overall_acc": 0.4316,
+    "macro_f1": 0.3888,
+    "coverage": 0.5047,
+    "selective_acc": 0.8553
+   },
+   "status": "RUN"
+  },
+  "C2": {
+   "arm": "C2",
+   "n_gold": 139978,
+   "n_abstain": 69332,
+   "n_missing_pred": 0,
+   "n_unmapped_label": 0,
+   "n_suspended_mapping": 0,
+   "n_invalid_projection": 0,
+   "qualification": {
+    "eligible_for_formal_table": true,
+    "note": null
+   },
+   "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+   "lineage": {
+    "overall_acc": 0.4837,
+    "macro_f1": 0.6783,
+    "coverage": 0.5047,
+    "selective_acc": 0.9585
+   },
+   "cell_type": {
+    "overall_acc": 0.4122,
+    "macro_f1": 0.3694,
+    "coverage": 0.5047,
+    "selective_acc": 0.8166
+   },
+   "status": "RUN"
+  },
+  "A1a_eyesgpt": {
+   "arm": "A1a_eyesgpt",
+   "n_gold": 139978,
+   "n_abstain": 0,
+   "n_missing_pred": 0,
+   "n_unmapped_label": 0,
+   "n_suspended_mapping": 0,
+   "n_invalid_projection": 27489,
+   "qualification": {
+    "eligible_for_formal_table": true,
+    "note": null
+   },
+   "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+   "lineage": {
+    "overall_acc": 0.4128,
+    "macro_f1": 0.2464,
+    "coverage": 0.8036,
+    "selective_acc": 0.5137
+   },
+   "cell_type": {
+    "overall_acc": 0.301,
+    "macro_f1": 0.0909,
+    "coverage": 0.8036,
+    "selective_acc": 0.3746
+   },
+   "status": "RUN"
+  },
+  "A1b_scgpt": {
+   "arm": "A1b_scgpt",
+   "n_gold": 139978,
+   "n_abstain": 0,
+   "n_missing_pred": 0,
+   "n_unmapped_label": 0,
+   "n_suspended_mapping": 0,
+   "n_invalid_projection": 53621,
+   "qualification": {
+    "eligible_for_formal_table": true,
+    "note": null
+   },
+   "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+   "lineage": {
+    "overall_acc": 0.4208,
+    "macro_f1": 0.3248,
+    "coverage": 0.617,
+    "selective_acc": 0.682
+   },
+   "cell_type": {
+    "overall_acc": 0.3044,
+    "macro_f1": 0.1138,
+    "coverage": 0.6169,
+    "selective_acc": 0.4935
+   },
+   "status": "RUN"
+  },
+  "B1a_celltypist": {
+   "arm": "B1a_celltypist",
+   "n_gold": 139978,
+   "n_abstain": 0,
+   "n_missing_pred": 0,
+   "n_unmapped_label": 0,
+   "n_suspended_mapping": 0,
+   "n_invalid_projection": 84057,
+   "qualification": {
+    "eligible_for_formal_table": true,
+    "note": null
+   },
+   "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+   "lineage": {
+    "overall_acc": 0.4996,
+    "macro_f1": 0.5902,
+    "coverage": 0.6157,
+    "selective_acc": 0.8114
+   },
+   "cell_type": null,
+   "cell_type_na_reason": "cross-stage: arm_stage=developing, gold_stage=adult",
+   "status": "RUN"
+  },
+  "B1b_celltypist": {
+   "arm": "B1b_celltypist",
+   "n_gold": 139978,
+   "n_abstain": 0,
+   "n_missing_pred": 0,
+   "n_unmapped_label": 0,
+   "n_suspended_mapping": 0,
+   "n_invalid_projection": 95340,
+   "qualification": {
+    "eligible_for_formal_table": true,
+    "note": null
+   },
+   "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+   "lineage": {
+    "overall_acc": 0.0847,
+    "macro_f1": 0.0676,
+    "coverage": 0.4238,
+    "selective_acc": 0.1998
+   },
+   "cell_type": null,
+   "cell_type_na_reason": "cross-stage: arm_stage=developing, gold_stage=adult",
+   "status": "RUN"
+  }
+ },
+ "arm_A_both_rulers_source": "/mnt/D/EyeKB/plans/fairex4a_20261024/out/ARM_A_both_rulers.tsv",
+ "C_table": "/mnt/D/EyeKB/plans/fairex4a_20261024/out/C_table.tsv",
+ "B_arm": {
+  "official_A1b": {
+   "arm": "A1b_scgpt",
+   "n_gold": 139978,
+   "n_abstain": 0,
+   "n_missing_pred": 0,
+   "n_unmapped_label": 0,
+   "n_suspended_mapping": 0,
+   "n_invalid_projection": 53621,
+   "qualification": {
+    "eligible_for_formal_table": true,
+    "note": null
+   },
+   "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+   "lineage": {
+    "overall_acc": 0.4208,
+    "macro_f1": 0.3248,
+    "coverage": 0.617,
+    "selective_acc": 0.682
+   },
+   "cell_type": {
+    "overall_acc": 0.3044,
+    "macro_f1": 0.1138,
+    "coverage": 0.6169,
+    "selective_acc": 0.4935
+   },
+   "status": "RUN"
+  },
+  "refswap": {
+   "arm": "A1b_scgpt_refswap",
+   "n_gold": 139978,
+   "n_abstain": 0,
+   "n_missing_pred": 0,
+   "n_unmapped_label": 0,
+   "n_suspended_mapping": 0,
+   "n_invalid_projection": 0,
+   "qualification": {
+    "eligible_for_formal_table": true,
+    "note": null
+   },
+   "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+   "lineage": {
+    "overall_acc": 0.9941,
+    "macro_f1": 0.9893,
+    "coverage": 1.0,
+    "selective_acc": 0.9941
+   },
+   "cell_type": {
+    "overall_acc": 0.9817,
+    "macro_f1": 0.9132,
+    "coverage": 1.0,
+    "selective_acc": 0.9817
+   },
+   "status": "RUN",
+   "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python /mnt/D/EyeKB/plans/toolbenchmark_20261009/s2_crosswalk/score_engine.py --gold /mnt/D/EyeKB/plans/toolbenchmark_20261010_x4clean/arms/engine_gold_x4a.tsv --pred out/pred_A1b_scgpt_x4a_refswap_raw.tsv --arm A1b_scgpt_refswap --crosswalk out/cw_x4a_refswap.tsv --arm-stage adult --gold-stage adult --per-class-out /mnt/D/EyeKB/plans/fairex4a_20261024/out/perclass_x4a_refswap.tsv"
+  },
+  "refswap_vs_official": {
+   "refswap_arm": "A1b_scgpt_refswap",
+   "tag": "refswap",
+   "official_A1b_lineage_macro_f1": 0.3248,
+   "official_A1b_ct_macro_f1": 0.1138,
+   "official_A1b_n_invalid_projection": 53621,
+   "refswap_lineage": {
+    "overall_acc": 0.9941,
+    "macro_f1": 0.9893,
+    "coverage": 1.0,
+    "selective_acc": 0.9941
+   },
+   "refswap_ct": {
+    "overall_acc": 0.9817,
+    "macro_f1": 0.9132,
+    "coverage": 1.0,
+    "selective_acc": 0.9817
+   },
+   "refswap_n_invalid_projection": 0,
+   "refswap_n_unmapped_label": 0,
+   "refswap_eligible": true,
+   "lineage_per_class_f1": {
+    "glia": "0.9981",
+    "immune": "0.9938",
+    "pigmented": "0.9868",
+    "stromal": "0.9818",
+    "vascular": "0.9862"
+   },
+   "cell_type_per_class_f1": {
+    "B cell": "0.9371",
+    "Schwann cell": "0.9857",
+    "T cell": "0.9318",
+    "astrocyte": "0.9962",
+    "endothelial cell": "0.99",
+    "fibroblast": "0.9818",
+    "macrophage": "0.9374",
+    "melanocyte": "0.9878",
+    "microglial cell": "0.8841",
+    "myelinating Schwann cell": "0.7451",
+    "natural killer cell": "0.5589",
+    "oligodendrocyte": "0.9988",
+    "oligodendrocyte precursor cell": "0.9932",
+    "pericyte": "0.7916",
+    "pigmented epithelial cell": "0.9804",
+    "vascular associated smooth muscle cell": "0.9111"
+   },
+   "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python /mnt/D/EyeKB/plans/toolbenchmark_20261009/s2_crosswalk/score_engine.py --gold /mnt/D/EyeKB/plans/toolbenchmark_20261010_x4clean/arms/engine_gold_x4a.tsv --pred out/pred_A1b_scgpt_x4a_refswap_raw.tsv --arm A1b_scgpt_refswap --crosswalk out/cw_x4a_refswap.tsv --arm-stage adult --gold-stage adult --per-class-out /mnt/D/EyeKB/plans/fairex4a_20261024/out/perclass_x4a_refswap.tsv"
+  },
+  "refvote_ledger": {
+   "tag": "refswap",
+   "reference": "work/ref_hra006282.h5ad",
+   "reference_embeddings": "work/E_ref_hra006282.npy",
+   "index": "faiss.IndexFlatIP (exact, same metric as the frozen index)",
+   "index_ntotal": 146568,
+   "k": 50,
+   "n_query": 139978,
+   "vote_frac_mean": 0.9583,
+   "vote_frac_median": 1.0,
+   "vote_frac_lt_0.5": 1180,
+   "emitted_labels": {
+    "oligodendrocyte": 45393,
+    "astrocyte": 28382,
+    "fibroblast": 14849,
+    "retinal astrocyte": 9476,
+    "melanocyte": 8754,
+    "macrophage": 7404,
+    "T cell": 4448,
+    "microglial cell": 4140,
+    "blood vessel endothelial cell": 2740,
+    "oligodendrocyte precursor cell": 2564,
+    "endothelial cell of venule": 2345,
+    "pigmented epithelial cell": 2080,
+    "non-myelinating Schwann cell": 1884,
+    "vascular associated smooth muscle cell": 1636,
+    "fenestrated endothelial cell": 1185,
+    "capillary endothelial cell": 1049,
+    "pericyte": 701,
+    "B cell": 465,
+    "natural killer cell": 367,
+    "myelinating Schwann cell": 111,
+    "retinal pigment epithelial cell": 5
+   },
+   "pred_out": "/mnt/D/EyeKB/plans/fairex4a_20261024/out/pred_A1b_scgpt_x4a_refswap_raw.tsv",
+   "ts": "2026-10-24 17:06:14"
+  },
+  "ref_build_ledger": {
+   "ref_path": "/mnt/D/OcularKB/data/HRA006282_optic_nerve/HRA006282_optic_nerve.h5ad",
+   "matrix": "raw/X (raw counts)",
+   "seed": 20261024,
+   "cap": 12500,
+   "n_ref_cells": 959629,
+   "n_ref_donors_total": 83,
+   "x4a_donors": [
+    "Hu0218",
+    "Hu0220",
+    "Hu0221",
+    "Hu0222",
+    "Hu0235",
+    "Hu0326",
+    "Hu0355",
+    "Hu0563",
+    "Hu0564",
+    "Hu0869",
+    "Hu0887",
+    "Hu10",
+    "Hu1059",
+    "Hu11",
+    "Hu12",
+    "Hu13",
+    "Hu14",
+    "Hu6",
+    "Hu8"
+   ],
+   "cell_id_intersection_with_x4a": 0,
+   "candidate_mask": {
+    "n_cells": 713438,
+    "n_donors": 58,
+    "donors": [
+     "Atlanta_A230245",
+     "BCM_22_0047",
+     "BCM_22_0101",
+     "BCM_22_0183",
+     "BCM_22_0200",
+     "BCM_22_0389",
+     "BCM_22_0396",
+     "BCM_22_0434",
+     "BCM_22_0458",
+     "BCM_22_0500",
+     "BCM_22_0524",
+     "BCM_22_0528",
+     "BCM_22_0563",
+     "BCM_22_0784",
+     "BCM_22_0849",
+     "BCM_22_0854",
+     "BCM_22_0867",
+     "BCM_22_0890",
+     "BCM_22_0896",
+     "BCM_22_0952",
+     "BCM_23_0224",
+     "BCM_23_0231",
+     "BCM_23_0313",
+     "BCM_23_0329",
+     "BCM_23_0334",
+     "BCM_23_0358",
+     "BCM_23_0362",
+     "BCM_23_0390",
+     "BCM_23_0416",
+     "BCM_23_0574",
+     "BCM_23_0578",
+     "BCM_23_0596",
+     "BCM_23_0622",
+     "BCM_23_0792",
+     "BCM_23_1080",
+     "MMD_19_D008",
+     "MMD_22_13066",
+     "MMD_22_14307",
+     "MMD_22_16608",
+     "MMD_22_16860",
+     "MMD_22_17464",
+     "MMD_22_17939",
+     "MMD_22_18633",
+     "MMD_22_20137",
+     "MMD_22_20357",
+     "MMD_22_20372",
+     "MMD_22_21878",
+     "MMD_22_25357",
+     "MMD_22_32888",
+     "MMD_22_33472",
+     "MMD_22_34032",
+     "MMD_22_37089",
+     "MMD_22_37117",
+     "MMD_22_38029",
+     "MMD_22_38453",
+     "MMD_23_02177",
+     "MMD_23_16055",
+     "MMD_D009_13"
+    ],
+    "sources": {
+     "Chen": 713438
+    },
+    "n_age_unparsed_in_ref": 0,
+    "n_age_unparsed_donor_disjoint": 0
+   },
+   "gold_16_classes": [
+    "B cell",
+    "Schwann cell",
+    "T cell",
+    "astrocyte",
+    "endothelial cell",
+    "fibroblast",
+    "macrophage",
+    "melanocyte",
+    "microglial cell",
+    "myelinating Schwann cell",
+    "natural killer cell",
+    "oligodendrocyte",
+    "oligodendrocyte precursor cell",
+    "pericyte",
+    "pigmented epithelial cell",
+    "vascular associated smooth muscle cell"
+   ],
+   "label_map": [
+    {
+     "ref_label": "retinal rod cell",
+     "n_candidate_cells": 30427,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "Mueller cell",
+     "n_candidate_cells": 9961,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "rod bipolar cell",
+     "n_candidate_cells": 4681,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "GABAergic amacrine cell",
+     "n_candidate_cells": 3346,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "flat midget bipolar cell",
+     "n_candidate_cells": 2624,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "retinal cone cell",
+     "n_candidate_cells": 2452,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "invaginating midget bipolar cell",
+     "n_candidate_cells": 2414,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "H1 horizontal cell",
+     "n_candidate_cells": 2382,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "glycinergic amacrine cell",
+     "n_candidate_cells": 1936,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "diffuse bipolar 2 cell",
+     "n_candidate_cells": 1869,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "diffuse bipolar 4a cell",
+     "n_candidate_cells": 1089,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "diffuse bipolar 5 cell",
+     "n_candidate_cells": 1071,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "diffuse bipolar 3b cell",
+     "n_candidate_cells": 992,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "diffuse bipolar 3a cell",
+     "n_candidate_cells": 952,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "diffuse bipolar 1 cell",
+     "n_candidate_cells": 916,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "OFF midget ganglion cell",
+     "n_candidate_cells": 894,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "giant bipolar cell",
+     "n_candidate_cells": 570,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "adipocyte",
+     "n_candidate_cells": 511,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "diffuse bipolar 6 cell",
+     "n_candidate_cells": 410,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "ON midget ganglion cell",
+     "n_candidate_cells": 379,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "H2 horizontal cell",
+     "n_candidate_cells": 308,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "amacrine cell",
+     "n_candidate_cells": 258,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "retinal ganglion cell",
+     "n_candidate_cells": 252,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "OFFx cell",
+     "n_candidate_cells": 212,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "S cone cell",
+     "n_candidate_cells": 197,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "diffuse bipolar 4b cell",
+     "n_candidate_cells": 181,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "mast cell",
+     "n_candidate_cells": 159,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "ON parasol ganglion cell",
+     "n_candidate_cells": 74,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "OFF parasol ganglion cell",
+     "n_candidate_cells": 61,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "dendritic cell",
+     "n_candidate_cells": 55,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "ON-blue cone bipolar cell",
+     "n_candidate_cells": 48,
+     "decision": "drop",
+     "gold_celltype": "",
+     "gold_lineage": "",
+     "evidence": "not among the gold's 16 classes: retinal neuron / photoreceptor / bipolar / amacrine / horizontal / RGC / RPC / other lineage (adipocyte, mast, dendritic). PREREG §3.3 drop = 'answer space = the gold ontology'."
+    },
+    {
+     "ref_label": "oligodendrocyte",
+     "n_candidate_cells": 214922,
+     "decision": "map",
+     "gold_celltype": "oligodendrocyte",
+     "gold_lineage": "glia",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "astrocyte",
+     "n_candidate_cells": 187305,
+     "decision": "map",
+     "gold_celltype": "astrocyte",
+     "gold_lineage": "glia",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "fibroblast",
+     "n_candidate_cells": 102596,
+     "decision": "map",
+     "gold_celltype": "fibroblast",
+     "gold_lineage": "stromal",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "microglial cell",
+     "n_candidate_cells": 39098,
+     "decision": "map",
+     "gold_celltype": "microglial cell",
+     "gold_lineage": "immune",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "oligodendrocyte precursor cell",
+     "n_candidate_cells": 13428,
+     "decision": "map",
+     "gold_celltype": "oligodendrocyte precursor cell",
+     "gold_lineage": "glia",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "blood vessel endothelial cell",
+     "n_candidate_cells": 12840,
+     "decision": "map",
+     "gold_celltype": "endothelial cell",
+     "gold_lineage": "vascular",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "retinal astrocyte",
+     "n_candidate_cells": 10725,
+     "decision": "map",
+     "gold_celltype": "astrocyte",
+     "gold_lineage": "glia",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "capillary endothelial cell",
+     "n_candidate_cells": 9333,
+     "decision": "map",
+     "gold_celltype": "endothelial cell",
+     "gold_lineage": "vascular",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "macrophage",
+     "n_candidate_cells": 8698,
+     "decision": "map",
+     "gold_celltype": "macrophage",
+     "gold_lineage": "immune",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "vascular associated smooth muscle cell",
+     "n_candidate_cells": 8414,
+     "decision": "map",
+     "gold_celltype": "vascular associated smooth muscle cell",
+     "gold_lineage": "vascular",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "retinal pigment epithelial cell",
+     "n_candidate_cells": 7709,
+     "decision": "map",
+     "gold_celltype": "pigmented epithelial cell",
+     "gold_lineage": "pigmented",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "melanocyte",
+     "n_candidate_cells": 7421,
+     "decision": "map",
+     "gold_celltype": "melanocyte",
+     "gold_lineage": "pigmented",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "pericyte",
+     "n_candidate_cells": 5855,
+     "decision": "map",
+     "gold_celltype": "pericyte",
+     "gold_lineage": "vascular",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "endothelial cell of venule",
+     "n_candidate_cells": 4762,
+     "decision": "map",
+     "gold_celltype": "endothelial cell",
+     "gold_lineage": "vascular",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "pigmented epithelial cell",
+     "n_candidate_cells": 2707,
+     "decision": "map",
+     "gold_celltype": "pigmented epithelial cell",
+     "gold_lineage": "pigmented",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "T cell",
+     "n_candidate_cells": 2483,
+     "decision": "map",
+     "gold_celltype": "T cell",
+     "gold_lineage": "immune",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "fenestrated endothelial cell",
+     "n_candidate_cells": 1346,
+     "decision": "map",
+     "gold_celltype": "endothelial cell",
+     "gold_lineage": "vascular",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "non-myelinating Schwann cell",
+     "n_candidate_cells": 1093,
+     "decision": "map",
+     "gold_celltype": "Schwann cell",
+     "gold_lineage": "glia",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "myelinating Schwann cell",
+     "n_candidate_cells": 377,
+     "decision": "map",
+     "gold_celltype": "myelinating Schwann cell",
+     "gold_lineage": "glia",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "B cell",
+     "n_candidate_cells": 335,
+     "decision": "map",
+     "gold_celltype": "B cell",
+     "gold_lineage": "immune",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    },
+    {
+     "ref_label": "natural killer cell",
+     "n_candidate_cells": 310,
+     "decision": "map",
+     "gold_celltype": "natural killer cell",
+     "gold_lineage": "immune",
+     "evidence": "CL identity: same CL class or an explicit CL subtype of the gold's own class (PREREG §3.3)"
+    }
+   ],
+   "n_ref_labels_seen": 52,
+   "n_labels_mapped": 21,
+   "n_labels_dropped": 31,
+   "dropped_cells": 71681,
+   "per_class_sampled": {
+    "B cell": {
+     "n_candidate": 335,
+     "n_sampled": 335,
+     "gold_celltype": "B cell"
+    },
+    "T cell": {
+     "n_candidate": 2483,
+     "n_sampled": 2483,
+     "gold_celltype": "T cell"
+    },
+    "astrocyte": {
+     "n_candidate": 187305,
+     "n_sampled": 12500,
+     "gold_celltype": "astrocyte"
+    },
+    "blood vessel endothelial cell": {
+     "n_candidate": 12840,
+     "n_sampled": 12500,
+     "gold_celltype": "endothelial cell"
+    },
+    "capillary endothelial cell": {
+     "n_candidate": 9333,
+     "n_sampled": 9333,
+     "gold_celltype": "endothelial cell"
+    },
+    "endothelial cell of venule": {
+     "n_candidate": 4762,
+     "n_sampled": 4762,
+     "gold_celltype": "endothelial cell"
+    },
+    "fenestrated endothelial cell": {
+     "n_candidate": 1346,
+     "n_sampled": 1346,
+     "gold_celltype": "endothelial cell"
+    },
+    "fibroblast": {
+     "n_candidate": 102596,
+     "n_sampled": 12500,
+     "gold_celltype": "fibroblast"
+    },
+    "macrophage": {
+     "n_candidate": 8698,
+     "n_sampled": 8698,
+     "gold_celltype": "macrophage"
+    },
+    "melanocyte": {
+     "n_candidate": 7421,
+     "n_sampled": 7421,
+     "gold_celltype": "melanocyte"
+    },
+    "microglial cell": {
+     "n_candidate": 39098,
+     "n_sampled": 12500,
+     "gold_celltype": "microglial cell"
+    },
+    "myelinating Schwann cell": {
+     "n_candidate": 377,
+     "n_sampled": 377,
+     "gold_celltype": "myelinating Schwann cell"
+    },
+    "natural killer cell": {
+     "n_candidate": 310,
+     "n_sampled": 310,
+     "gold_celltype": "natural killer cell"
+    },
+    "non-myelinating Schwann cell": {
+     "n_candidate": 1093,
+     "n_sampled": 1093,
+     "gold_celltype": "Schwann cell"
+    },
+    "oligodendrocyte": {
+     "n_candidate": 214922,
+     "n_sampled": 12500,
+     "gold_celltype": "oligodendrocyte"
+    },
+    "oligodendrocyte precursor cell": {
+     "n_candidate": 13428,
+     "n_sampled": 12500,
+     "gold_celltype": "oligodendrocyte precursor cell"
+    },
+    "pericyte": {
+     "n_candidate": 5855,
+     "n_sampled": 5855,
+     "gold_celltype": "pericyte"
+    },
+    "pigmented epithelial cell": {
+     "n_candidate": 2707,
+     "n_sampled": 2707,
+     "gold_celltype": "pigmented epithelial cell"
+    },
+    "retinal astrocyte": {
+     "n_candidate": 10725,
+     "n_sampled": 10725,
+     "gold_celltype": "astrocyte"
+    },
+    "retinal pigment epithelial cell": {
+     "n_candidate": 7709,
+     "n_sampled": 7709,
+     "gold_celltype": "pigmented epithelial cell"
+    },
+    "vascular associated smooth muscle cell": {
+     "n_candidate": 8414,
+     "n_sampled": 8414,
+     "gold_celltype": "vascular associated smooth muscle cell"
+    }
+   },
+   "n_sampled_cells": 146568,
+   "n_sampled_donors": 58,
+   "gene_space": {
+    "n_hvg": 5000,
+    "n_matched_in_reference": 4838,
+    "n_zero_filled": 162,
+    "alignment": "reference matrix has the same 5,000 symbols in the same order as the query; genes the reference does not measure are zero-filled so the collator sees an identical gene_ids array"
+   },
+   "out": {
+    "shape": [
+     146568,
+     5000
+    ],
+    "nnz": 54592076,
+    "per_cell_nonzero_median": 347.0,
+    "per_cell_nonzero_min": 70,
+    "per_cell_nonzero_max": 2045,
+    "wall_s": 97.9,
+    "ts": "2026-10-24 16:40:08"
+   },
+   "out_class_counts": {
+    "B cell": 335,
+    "Schwann cell": 1093,
+    "T cell": 2483,
+    "astrocyte": 23225,
+    "endothelial cell": 27941,
+    "fibroblast": 12500,
+    "macrophage": 8698,
+    "melanocyte": 7421,
+    "microglial cell": 12500,
+    "myelinating Schwann cell": 377,
+    "natural killer cell": 310,
+    "oligodendrocyte": 12500,
+    "oligodendrocyte precursor cell": 12500,
+    "pericyte": 5855,
+    "pigmented epithelial cell": 10416,
+    "vascular associated smooth muscle cell": 8414
+   },
+   "out_lineage_counts": {
+    "glia": 49695,
+    "immune": 24326,
+    "pigmented": 17837,
+    "stromal": 12500,
+    "vascular": 42210
+   }
+  },
+  "refswap_S2": {
+   "arm": "A1b_scgpt_refswap_S2",
+   "n_gold": 139978,
+   "n_abstain": 0,
+   "n_missing_pred": 0,
+   "n_unmapped_label": 0,
+   "n_suspended_mapping": 0,
+   "n_invalid_projection": 0,
+   "qualification": {
+    "eligible_for_formal_table": true,
+    "note": null
+   },
+   "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+   "lineage": {
+    "overall_acc": 0.994,
+    "macro_f1": 0.9892,
+    "coverage": 1.0,
+    "selective_acc": 0.994
+   },
+   "cell_type": {
+    "overall_acc": 0.9816,
+    "macro_f1": 0.9132,
+    "coverage": 1.0,
+    "selective_acc": 0.9816
+   },
+   "status": "RUN",
+   "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python /mnt/D/EyeKB/plans/toolbenchmark_20261009/s2_crosswalk/score_engine.py --gold /mnt/D/EyeKB/plans/toolbenchmark_20261010_x4clean/arms/engine_gold_x4a.tsv --pred out/pred_A1b_scgpt_x4a_refswap_S2_raw.tsv --arm A1b_scgpt_refswap_S2 --crosswalk out/cw_x4a_refswap_S2.tsv --arm-stage adult --gold-stage adult --per-class-out /mnt/D/EyeKB/plans/fairex4a_20261024/out/perclass_x4a_refswap_S2.tsv"
+  },
+  "refswap_S2_vs_official": {
+   "refswap_arm": "A1b_scgpt_refswap_S2",
+   "tag": "refswap_S2",
+   "official_A1b_lineage_macro_f1": 0.3248,
+   "official_A1b_ct_macro_f1": 0.1138,
+   "official_A1b_n_invalid_projection": 53621,
+   "refswap_lineage": {
+    "overall_acc": 0.994,
+    "macro_f1": 0.9892,
+    "coverage": 1.0,
+    "selective_acc": 0.994
+   },
+   "refswap_ct": {
+    "overall_acc": 0.9816,
+    "macro_f1": 0.9132,
+    "coverage": 1.0,
+    "selective_acc": 0.9816
+   },
+   "refswap_n_invalid_projection": 0,
+   "refswap_n_unmapped_label": 0,
+   "refswap_eligible": true,
+   "lineage_per_class_f1": {
+    "glia": "0.998",
+    "immune": "0.9938",
+    "pigmented": "0.9868",
+    "stromal": "0.9814",
+    "vascular": "0.986"
+   },
+   "cell_type_per_class_f1": {
+    "B cell": "0.9371",
+    "Schwann cell": "0.9865",
+    "T cell": "0.9326",
+    "astrocyte": "0.9961",
+    "endothelial cell": "0.9897",
+    "fibroblast": "0.9814",
+    "macrophage": "0.9378",
+    "melanocyte": "0.9877",
+    "microglial cell": "0.8846",
+    "myelinating Schwann cell": "0.744",
+    "natural killer cell": "0.5705",
+    "oligodendrocyte": "0.9987",
+    "oligodendrocyte precursor cell": "0.9932",
+    "pericyte": "0.781",
+    "pigmented epithelial cell": "0.9809",
+    "vascular associated smooth muscle cell": "0.9089"
+   },
+   "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python /mnt/D/EyeKB/plans/toolbenchmark_20261009/s2_crosswalk/score_engine.py --gold /mnt/D/EyeKB/plans/toolbenchmark_20261010_x4clean/arms/engine_gold_x4a.tsv --pred out/pred_A1b_scgpt_x4a_refswap_S2_raw.tsv --arm A1b_scgpt_refswap_S2 --crosswalk out/cw_x4a_refswap_S2.tsv --arm-stage adult --gold-stage adult --per-class-out /mnt/D/EyeKB/plans/fairex4a_20261024/out/perclass_x4a_refswap_S2.tsv"
+  },
+  "refvote_ledger_S2": {
+   "tag": "refswap_S2",
+   "reference": "work/ref_hra006282_S2.h5ad",
+   "reference_embeddings": "work/E_ref_hra006282_S2.npy",
+   "index": "faiss.IndexFlatIP (exact, same metric as the frozen index)",
+   "index_ntotal": 156529,
+   "k": 50,
+   "n_query": 139978,
+   "vote_frac_mean": 0.9586,
+   "vote_frac_median": 1.0,
+   "vote_frac_lt_0.5": 1224,
+   "emitted_labels": {
+    "oligodendrocyte": 45399,
+    "astrocyte": 28121,
+    "fibroblast": 14844,
+    "retinal astrocyte": 9708,
+    "melanocyte": 8758,
+    "macrophage": 7406,
+    "T cell": 4434,
+    "microglial cell": 4138,
+    "blood vessel endothelial cell": 2772,
+    "oligodendrocyte precursor cell": 2566,
+    "endothelial cell of venule": 2342,
+    "pigmented epithelial cell": 2081,
+    "non-myelinating Schwann cell": 1883,
+    "vascular associated smooth muscle cell": 1644,
+    "fenestrated endothelial cell": 1172,
+    "capillary endothelial cell": 1037,
+    "pericyte": 687,
+    "B cell": 465,
+    "natural killer cell": 381,
+    "myelinating Schwann cell": 114,
+    "Mueller cell": 22,
+    "retinal pigment epithelial cell": 4
+   },
+   "pred_out": "/mnt/D/EyeKB/plans/fairex4a_20261024/out/pred_A1b_scgpt_x4a_refswap_S2_raw.tsv",
+   "ts": "2026-10-24 17:35:20"
+  },
+  "B0_gate": {
+   "gate": "B0 reproduction",
+   "frozen_index": "/mnt/D/HermesAI/shared/reproduction/scgpt/a1b_formal/formal200k.index",
+   "frozen_index_sha256": "5de48427979f669bd6b9a79ff610b28788354eb34ae63b76359ff24f7f7e6b92",
+   "frozen_index_ntotal": 189049,
+   "n_cells": 139978,
+   "agreement": 0.930661,
+   "threshold": 0.99,
+   "verdict": "FAIL",
+   "n_disagree": 9706,
+   "n_cells_with_gt1200_nonzero_genes": 186,
+   "note_on_randomness": "the collator randomly subsamples when a cell's nonzero-gene count exceeds max_length; only cells above 1200 nonzero genes (out of the 5,000-gene set) can differ between runs. Measured here so the gate is interpretable.",
+   "disagree_first10": [
+    [
+     "HuPt14ODON_AAAGAACCAGACACAG-1",
+     "glycinergic amacrine cell",
+     "GABAergic amacrine cell"
+    ],
+    [
+     "HuPt14ODON_AAAGGGCGTGAGATAT-1",
+     "amacrine cell",
+     "glycinergic amacrine cell"
+    ],
+    [
+     "HuPt14ODON_AACAACCAGTCATGGG-1",
+     "amacrine cell",
+     "glycinergic amacrine cell"
+    ],
+    [
+     "HuPt14ODON_AACAACCGTTTAGTCG-1",
+     "amacrine cell",
+     "glycinergic amacrine cell"
+    ],
+    [
+     "HuPt14ODON_AACAAGACAACCGCCA-1",
+     "ON parasol ganglion cell",
+     "glycinergic amacrine cell"
+    ],
+    [
+     "HuPt14ODON_AACAAGACAAGCTGCC-1",
+     "amacrine cell",
+     "glycinergic amacrine cell"
+    ],
+    [
+     "HuPt14ODON_AACAAGAGTGCTTCAA-1",
+     "glycinergic amacrine cell",
+     "ON parasol ganglion cell"
+    ],
+    [
+     "HuPt14ODON_AACCAACCACTGTCCT-1",
+     "glycinergic amacrine cell",
+     "amacrine cell"
+    ],
+    [
+     "HuPt14ODON_AACCACAAGCGATGGT-1",
+     "glycinergic amacrine cell",
+     "amacrine cell"
+    ],
+    [
+     "HuPt14ODON_AACCATGAGACTCCGC-1",
+     "glycinergic amacrine cell",
+     "amacrine cell"
+    ]
+   ],
+   "alt_index_diagnostic": {
+    "index": "/mnt/D/EyeKB/plans/toolbenchmark_20261009/a1b_formal_cache/formal200k.index",
+    "sha256": "3697f39f1c3f7d96ee9fcfa745fcc8c4aae942f9a547e49d034363dcce89a03e",
+    "ntotal": 189049,
+    "meta_sha256": "a61211b3a9adf1e1432d8a7dc79cf380a792fe771cd6104d29f95fa6e66c2c3d",
+    "agreement_with_official_pred": 0.956643,
+    "matches_official_pred_itself": 0.922166,
+    "note": "the near-duplicate cache copy of the same 189k reference (identical meta200k.npy sha, different index bytes) scores this differently; recorded as a storage-hygiene observation, not a scoring change"
+   }
+  }
+ },
+ "refswap_per_class": {
+  "lineage": {
+   "glia": "0.9981",
+   "immune": "0.9938",
+   "pigmented": "0.9868",
+   "stromal": "0.9818",
+   "vascular": "0.9862"
+  },
+  "cell_type": {
+   "B cell": "0.9371",
+   "Schwann cell": "0.9857",
+   "T cell": "0.9318",
+   "astrocyte": "0.9962",
+   "endothelial cell": "0.99",
+   "fibroblast": "0.9818",
+   "macrophage": "0.9374",
+   "melanocyte": "0.9878",
+   "microglial cell": "0.8841",
+   "myelinating Schwann cell": "0.7451",
+   "natural killer cell": "0.5589",
+   "oligodendrocyte": "0.9988",
+   "oligodendrocyte precursor cell": "0.9932",
+   "pericyte": "0.7916",
+   "pigmented epithelial cell": "0.9804",
+   "vascular associated smooth muscle cell": "0.9111"
+  }
+ },
+ "official_per_class": {
+  "lineage": {
+   "glia": "0.5438",
+   "immune": "0.8427",
+   "pigmented": "0.2374",
+   "stromal": "0.0",
+   "vascular": "0.0"
+  },
+  "cell_type": {
+   "B cell": "0.0",
+   "Schwann cell": "0.0",
+   "T cell": "0.0",
+   "astrocyte": "0.7564",
+   "endothelial cell": "0.0",
+   "fibroblast": "0.0",
+   "macrophage": "0.0",
+   "melanocyte": "0.0",
+   "microglial cell": "0.2561",
+   "myelinating Schwann cell": "0.0",
+   "natural killer cell": "0.0",
+   "oligodendrocyte": "0.0",
+   "oligodendrocyte precursor cell": "0.0",
+   "pericyte": "0.0",
+   "pigmented epithelial cell": "0.8085",
+   "vascular associated smooth muscle cell": "0.0"
+  }
+ },
+ "instrument_noise_floor": {
+  "comparison": "same script + same input h5ad + same GPU, run 1 vs run 2",
+  "max_abs_elementwise_diff": 0.07255148887634277,
+  "median_abs_elementwise_diff": 0.001355234533548355,
+  "per_cell_cosine: min": 0.9389106035232544,
+  "median": 0.9988694190979004,
+  "max": 0.999975860118866,
+  "n_cells_with_cosine_lt_0.999": 77495,
+  "n_cells_with_cosine_lt_0.99": 1870,
+  "n_cells_with_cosine_lt_0.95": 2,
+  "frozen_index_label_agreement_run1_vs_run2": 0.931132,
+  "frozen_index_label_agreement_run1_vs_official": 0.930661,
+  "frozen_index_label_agreement_run2_vs_official": 0.930568,
+  "refswap_pred_run2": "/mnt/D/EyeKB/plans/fairex4a_20261024/out/pred_A1b_scgpt_x4a_refswap_run2_raw.tsv"
+ }
+}

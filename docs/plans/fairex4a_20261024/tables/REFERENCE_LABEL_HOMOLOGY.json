@@ -1,0 +1,14 @@
+{
+ "reference": "/mnt/D/OcularKB/data/HRA006282_optic_nerve/HRA006282_optic_nerve.h5ad",
+ "query": "/mnt/D/EyeKB/plans/toolbenchmark_20261010_x4clean/gold/x4a_input.h5ad",
+ "n_x4a_cells": 139978,
+ "n_x4a_distinct_donor_barcode": 139844,
+ "n_reference_cells_on_x4a_donors": 146121,
+ "n_x4a_cells_matched_in_reference_on_same_donor": 77522,
+ "match_rate_over_cells": 0.5538,
+ "n_matches_ambiguous_within_donor": 90,
+ "n_unambiguous_matches": 77432,
+ "cell_type_label_identity_on_matched": 0.9345,
+ "author_cell_type_label_identity_on_matched": 0.0,
+ "note": "X4A's 19 donors are excluded from the reference, so no query cell is in the reference index. What this measures is that reference and query come from the SAME CELLxGENE collection (HRA006282) and carry homologous annotation columns; the refswap reading must be read with that in mind."
+}

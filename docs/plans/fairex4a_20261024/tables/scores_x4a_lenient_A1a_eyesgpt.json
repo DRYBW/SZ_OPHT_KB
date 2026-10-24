@@ -1,0 +1,26 @@
+{
+ "arm": "A1a_eyesgpt",
+ "n_gold": 139978,
+ "n_abstain": 0,
+ "n_missing_pred": 0,
+ "n_unmapped_label": 0,
+ "n_suspended_mapping": 0,
+ "n_invalid_projection": 27489,
+ "qualification": {
+  "eligible_for_formal_table": true,
+  "note": null
+ },
+ "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+ "lineage": {
+  "overall_acc": 0.4128,
+  "macro_f1": 0.2464,
+  "coverage": 0.8036,
+  "selective_acc": 0.5137
+ },
+ "cell_type": {
+  "overall_acc": 0.301,
+  "macro_f1": 0.0909,
+  "coverage": 0.8036,
+  "selective_acc": 0.3746
+ }
+}

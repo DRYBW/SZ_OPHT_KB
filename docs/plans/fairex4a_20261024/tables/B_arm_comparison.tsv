@@ -1,0 +1,4 @@
+setting	lineage_overall_acc	lineage_macro_f1	lineage_coverage	lineage_selective_acc	ct_overall_acc	ct_macro_f1	ct_coverage	ct_selective_acc	n_invalid_projection	n_unmapped	label
+A1b_scgpt	0.4208	0.3248	0.617	0.682	0.3044	0.1138	0.6169	0.4935	53621	0	A1b X4A official (our retinal 189k reference)
+A1b_scgpt_refswap	0.9941	0.9893	1.0	0.9941	0.9817	0.9132	1.0	0.9817	0	0	A1b X4A refswap (reference rebuilt with the gold's own classes)
+A1b_scgpt_refswap_S2	0.994	0.9892	1.0	0.994	0.9816	0.9132	1.0	0.9816	0	0	A1b X4A refswap_S2 (same + Mueller->astrocyte)

@@ -1,0 +1,28 @@
+{
+ "arm": "A1b_scgpt_refswap_S2",
+ "n_gold": 139978,
+ "n_abstain": 0,
+ "n_missing_pred": 0,
+ "n_unmapped_label": 0,
+ "n_suspended_mapping": 0,
+ "n_invalid_projection": 0,
+ "qualification": {
+  "eligible_for_formal_table": true,
+  "note": null
+ },
+ "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+ "lineage": {
+  "overall_acc": 0.994,
+  "macro_f1": 0.9892,
+  "coverage": 1.0,
+  "selective_acc": 0.994
+ },
+ "cell_type": {
+  "overall_acc": 0.9816,
+  "macro_f1": 0.9132,
+  "coverage": 1.0,
+  "selective_acc": 0.9816
+ },
+ "status": "RUN",
+ "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python /mnt/D/EyeKB/plans/toolbenchmark_20261009/s2_crosswalk/score_engine.py --gold /mnt/D/EyeKB/plans/toolbenchmark_20261010_x4clean/arms/engine_gold_x4a.tsv --pred out/pred_A1b_scgpt_x4a_refswap_S2_raw.tsv --arm A1b_scgpt_refswap_S2 --crosswalk out/cw_x4a_refswap_S2.tsv --arm-stage adult --gold-stage adult --per-class-out /mnt/D/EyeKB/plans/fairex4a_20261024/out/perclass_x4a_refswap_S2.tsv"
+}

@@ -1,0 +1,22 @@
+{
+ "arm": "B1a_celltypist",
+ "n_gold": 139978,
+ "n_abstain": 0,
+ "n_missing_pred": 0,
+ "n_unmapped_label": 0,
+ "n_suspended_mapping": 0,
+ "n_invalid_projection": 84057,
+ "qualification": {
+  "eligible_for_formal_table": true,
+  "note": null
+ },
+ "primary_rank_metric": "lineage.macro_f1 (full-gold denominator, abstention=FN)",
+ "lineage": {
+  "overall_acc": 0.4996,
+  "macro_f1": 0.5902,
+  "coverage": 0.6157,
+  "selective_acc": 0.8114
+ },
+ "cell_type": null,
+ "cell_type_na_reason": "cross-stage: arm_stage=developing, gold_stage=adult"
+}
