@@ -70,6 +70,10 @@ role: default 必须仍是 v2.4.2 块）；C05 POINTER-AGREE（随件 build 记�
   G3 41/41 dense PASS、G4 3/3、G5 8/8、G6 21 检查 PASS、G7 6/6、G8、G9、G10、G11 6/6 —— **CHAIN PASS rc=0**。
   （首轮 run_gates_after.log 的 G3=INCONCLUSIVE / G7=FAIL 为解释器前提所致的非结果，非本卡削弱；G6 首轮 3 项 = 本卡实例行措辞，
   按 R5/R6/R7 判据修正后 PASS，全程无既有判据改动。）
+- **G5 复算时点披露（并发写者环境）**：本卡全部文件定稿后的 2026-10-25 11:03 G5 读数 = PASS（143 行/11 门/0 失配）；
+  其后 4 条 SHA-MATCH 漂移（L6-19 / L6-22 / L6-30 / L6-34，全部 link-registry 面）由并发卡 t_2fed9122（linkkey 波，
+  git status 中 kb/link_registry/** 的 M 文件同源）产生，与本卡行（L1-33/L6-48/L6-01/G11）零交集——协调者复算若遇 G5-C05
+  红，请先 `git status + 漂移行清单` 归因，linkkey 波收口（其自身的 sha 重取/记账 commit）后即回归自洽；本卡未触碰这些行。
 - 注册面：GATE_INVENTORY 更新（G11 行新增 + G2 行 sha 重取）；REGISTRY 更新（L6-01 sha/bytes/mtime 重取 + L1-33、L6-48 新行）；
   G5 复算 rc=0（143 行/11 门；SHA-MATCH 0 失配）。
 - release identity：staged tree 同 commit 重取（python3 scripts/release_identity.py --take --source index；--check rc=0 复算见 §7）。
