@@ -19,10 +19,16 @@ CITTITLE (t_d8e7f2d4) — local commits, nothing pushed (push is the coordinator
          - Frozen kb/link_registry/LINK_REGISTRY_v1.jsonl is byte-unchanged
            (sha a04be771...): the repaired registry ships beside it as a new file.
 
-<record-only commit>  this COMMIT.txt and the release records re-taken with it. The hash of
-         this commit is deliberately not written here: it only becomes known after it exists
-         (the same reason the earlier waves wrote "the commit that carries this line"). No
-         code, registry, gate, contract or anchor surface differs from 6aa0d49.
+9a4e344  CITTITLE (t_d8e7f2d4, record only): this COMMIT.txt and the release records re-taken
+         with it. No code, registry, gate, contract or anchor surface differs from 6aa0d49.
+
+<docs-only commit>  the final wording pass on README.md (two sentences tightened: the per-row vs
+         per-paper granularity of "all misses are attributed", and which files are Chinese on
+         purpose) plus logs/run_gates_tip.log, the full gate chain read out at the tip
+         (gates=10 failed=0, CHAIN PASS), and the release records re-taken with them. The hash of
+         this commit is deliberately not written here: it only becomes known after it exists (the
+         same reason the earlier waves wrote "the commit that carries this line"). No code,
+         registry, gate, contract or anchor surface differs from 6aa0d49.
 
 Verification at the tip:
   python3 scripts/release_identity.py --check            -> IDENTITY MATCH + MANIFEST MATCH

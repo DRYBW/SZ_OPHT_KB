@@ -3,8 +3,10 @@
 Card: `t_d8e7f2d4` (board `pi-briefing`, executed by `pi-chief`).
 Brief: `/mnt/D/EyeKB/plans/consistency_20261024/BRIEF_CITTITLE_20261025.md` (copy: `out/`).
 Construction site mirror: `/mnt/D/EyeKB/plans/consistency_20261024/cittitle_out/` (same tree, second copy).
-Deliverables are English as the repository requires; the two campaign briefs and the reason strings of
-`UNMATCHED_PRE_v1.tsv` are Chinese because they are the coordinator's own artefacts.
+The delivery documents (`README.md`, `REPORT.md`, `out/CITATION_META_SPEC_v1.md`) are English as the
+repository requires. `out/CITATION_TITLE_COUNTERFACTUAL_v1.md` and the `reason_text` column of the
+`UNMATCHED_*.tsv` files are Chinese on purpose: they reproduce the coordinator's own campaign brief
+table format and its per-row reason strings (the LINKKEY card's `UNMATCHED_v1.tsv` does the same).
 
 ## One line
 
@@ -13,10 +15,11 @@ from the corpus on `paper_id == pmid`. Before the fix the builder wrote `(hit ti
 retrieval route and `""` on the full-text gene-index route, so 2,429 of the shipped registry's 3,993
 citation records had no title at all and 509 carried a 120-character prefix of one — and a title-keyed
 audit against the corpus read that as "the two libraries disagree" (strict 247/825 = 29.94%,
-prefix-40 369/825 = 44.73%). With the complete titles the same audit is 825/825, and **all 2,066
-pre-fix misses are attributable to the two builder defects plus one display artefact: zero are a
-genuine title difference.** The frozen registry is not rewritten; the repaired registry ships beside
-it as a new file that inverts to the frozen bytes exactly.
+prefix-40 369/825 = 44.73%). With the complete titles the same audit is 825/825, and every one of the
+2,066 unmatched rows carries a named cause — at paper level 455 papers had no citation-side title,
+122 had a clipped one and 1 differed only by display marks, so **zero are a genuine title
+difference**. The frozen registry is not rewritten; the repaired registry ships beside it as a new
+file that inverts to the frozen bytes exactly.
 
 ## What to read, in order
 

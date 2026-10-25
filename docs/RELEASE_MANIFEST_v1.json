@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "dc363f08e7f3",
- "digest_sha256": "dc363f08e7f3253c1659c8a0eeced0bc1caefe064d6fea2675bc9d07e74fd556",
+ "release_id": "53752c51ae5c",
+ "digest_sha256": "53752c51ae5c3cd07e8fff1b0208e6d64ceccffb4e8d62e46a3e07ef6c1c9038",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 4475,
- "total_bytes": 273915944,
+ "n_files": 4476,
+ "total_bytes": 273929320,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "6ff8a2ee2c35",
   "knowledge_bundle_id": "54c5da2d2c05",
-  "effective_profile_id": "b69d26eba8f3"
+  "effective_profile_id": "9aa51b97451c"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -4207,13 +4207,13 @@
   },
   {
    "path": "docs/plans/cittitle_20261025/COMMIT.txt",
-   "git_blob": "9c6e7b5a3e65586d9fb1324b62a477f4310253da",
-   "bytes": 3524
+   "git_blob": "5c01bf3c2a8d914c0d6655de0581f8f6f006fba0",
+   "bytes": 3995
   },
   {
    "path": "docs/plans/cittitle_20261025/README.md",
-   "git_blob": "f453641c917e88d64cdc1377e9767c32584eb312",
-   "bytes": 3508
+   "git_blob": "186e34cda7cc754259c9f64d3903ce92589e5c6a",
+   "bytes": 3804
   },
   {
    "path": "docs/plans/cittitle_20261025/REPORT.md",
@@ -4269,6 +4269,11 @@
    "path": "docs/plans/cittitle_20261025/logs/run_gates_final.log",
    "git_blob": "23fbbfe18cbe406d44c2eb31927fb8f95e4db095",
    "bytes": 12617
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/logs/run_gates_tip.log",
+   "git_blob": "0874215659d436d58dc5336aa586c2364463fce8",
+   "bytes": 12609
   },
   {
    "path": "docs/plans/cittitle_20261025/out/BACKFILL_META.json",
