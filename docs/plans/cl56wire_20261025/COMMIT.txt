@@ -24,5 +24,13 @@ Verification: clean clone of 619a702 with the corpus unpacked per G2 ->
 `gates=9 failed=0 (CHAIN PASS)` (out/CLONE_REPO_GATES.log). On the pristine clone G11 reads
 rc=3 INCONCLUSIVE by design (the bundled corpus ships as the G2 Release asset).
 
+Record-only commits after 619a702, in order: e3d5530 (wave report, machine proof, ledger read-out,
+pre-images, logs, clone gate readout, mirror), 93d655b (this file carrying e3d5530's hash instead of
+a placeholder), 8067f24 (release records re-taken at HEAD so `release_identity.py --check` is green at
+the tip), and the commit that carries this line (release records re-taken again with it, for the same
+reason: this file is inside the tree the record covers). None of them changes any code, registry,
+gate or anchor surface. The identity check was green at the commit that carries this line's
+predecessor; re-run `python3 scripts/release_identity.py --check` to confirm it at the tip.
+
 Not committed on purpose (other cards' surface): docs/plans/linkkey_20261025/ (card t_83c4324d) and
 docs/plans/mcpdesc_20261025/logs/{commit2,release_take2}.log (card t_2a047be0).
