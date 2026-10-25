@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "51955ce80f42",
- "digest_sha256": "51955ce80f426749d345862553d4900ac4655968957b84f0a152b507da8d6f57",
+ "release_id": "dc363f08e7f3",
+ "digest_sha256": "dc363f08e7f3253c1659c8a0eeced0bc1caefe064d6fea2675bc9d07e74fd556",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 4474,
- "total_bytes": 273912420,
+ "n_files": 4475,
+ "total_bytes": 273915944,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "6ff8a2ee2c35",
   "knowledge_bundle_id": "54c5da2d2c05",
-  "effective_profile_id": "1190304dff22"
+  "effective_profile_id": "b69d26eba8f3"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -4204,6 +4204,11 @@
    "path": "docs/plans/btest_20260927/scripts/btest_verdict.py",
    "git_blob": "ac17d56520220155c9cbc6e4beee8328a695cda9",
    "bytes": 17072
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/COMMIT.txt",
+   "git_blob": "9c6e7b5a3e65586d9fb1324b62a477f4310253da",
+   "bytes": 3524
   },
   {
    "path": "docs/plans/cittitle_20261025/README.md",

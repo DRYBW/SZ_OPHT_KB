@@ -1,0 +1,49 @@
+CITTITLE (t_d8e7f2d4) — local commits, nothing pushed (push is the coordinator's)
+
+6aa0d49  CITTITLE (t_d8e7f2d4): citation records carry the paper's own title/doi/pmcid
+         - kb/link_registry/scripts/build_link_registry.py: corpus_meta_index() +
+           citation_field(); the retrieval route writes the complete title (the `[:120]`
+           cap is gone) and the gene-index route no longer writes `""`; both carry
+           doi/pmcid joined from the corpus on `paper_id == pmid`; every build prints the
+           resolved/unresolved cited-id count.
+         - tests/gate_cittitle_meta.py (new, G12) + tests/run_gates.sh (G12 appended):
+           seven fail-closed checks, rc 0/2/3.
+         - docs/plans/cittitle_20261025/ (new): the delivered registry twins, the
+           counterfactual, the ledgers, the independent verifier, the control battery, the
+           spec, pre-images, logs.
+         - docs/W3_PIPELINE_REGISTRY.tsv (L6-01/L6-22 re-taken, L6-53..L6-57 added),
+           docs/GATE_INVENTORY_G5G6.tsv (G12 row; G2's contract entry point re-taken),
+           docs/CHANGE_CONTROL_G6_INSTANCE.tsv (CHG-20261025-CITTITLE),
+           docs/VERIFY_CONTRACT.md (sect 5.7), docs/W3_MANIFEST.sha256 (re-frozen last),
+           docs/RELEASE_IDENTITY.json + docs/RELEASE_MANIFEST_v1.json (re-taken).
+         - Frozen kb/link_registry/LINK_REGISTRY_v1.jsonl is byte-unchanged
+           (sha a04be771...): the repaired registry ships beside it as a new file.
+
+<record-only commit>  this COMMIT.txt and the release records re-taken with it. The hash of
+         this commit is deliberately not written here: it only becomes known after it exists
+         (the same reason the earlier waves wrote "the commit that carries this line"). No
+         code, registry, gate, contract or anchor surface differs from 6aa0d49.
+
+Verification at the tip:
+  python3 scripts/release_identity.py --check            -> IDENTITY MATCH + MANIFEST MATCH
+  python3 tests/gate_cittitle_meta.py                    -> rc=0 (G12-C01..C07 PASS)
+  EYEKB_G3_PY=/home/ubuntu/.conda/envs/pipeline_env/bin/python /bin/bash tests/run_gates.sh
+                                                         -> gates=10 failed=0 (CHAIN PASS)
+  cd docs/plans/cittitle_20261025
+  python3 scripts/verify_deliverables.py                 -> 12 checks, 12 PASS, 0 FAIL
+  python3 scripts/g12_controls.py                        -> verdict=PASS, restored byte-identical
+  sha256sum -c out/MANIFEST.sha256                       -> 11/11 OK
+
+Environment note: with the bare `python3` on this machine G3 reports rc=3 INCONCLUSIVE (no dense
+embedding model in that interpreter) and G7 reports ENV_ERROR (no MCP SDK); both are interpreter
+preconditions, not verdicts about the repository, and both clear under EYEKB_G3_PY above. That is
+the only reason a chain run without it ends "CHAIN FAIL" — recorded in
+docs/plans/cittitle_20261025/logs/run_gates_after.log versus .../logs/run_gates_final.log.
+
+Not committed on purpose (other cards' surface, docs/VERIFY_CONTRACT.md sect 5.2 rule 1):
+docs/plans/linkkey_20261025/ (card t_83c4324d) and docs/plans/mcpdesc_20261025/logs/
+{commit2,release_take2}.log (card t_2a047be0) — they were untracked before this card and remain so.
+
+Boundary declaration (sect 5.2 rule 5): no push. This commit may be released (pushed) by a later
+card that names 6aa0d49 (and the record-only commit that carries this file), or by direct PI
+instruction; this line is the release mechanism for the "local commit only" declaration.
