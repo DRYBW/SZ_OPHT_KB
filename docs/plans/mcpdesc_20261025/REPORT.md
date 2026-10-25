@@ -19,6 +19,8 @@ D 侧运行时入口同源残留另行登记（见 §6）。
 复算：`grep -n "174616\|2713" kb/literature_db/EYEKB_DB_POINTER.yaml`（v2.0 块）；
 `python3 -c` 读 `literature_db/v2.4.2_2026-09_slim/build_stats.json` 键 n_papers/n_chunks（或 `python3 mcp_server/corpus_stats.py` 不可用时的等价读取）。
 
+口径精确化（CORPUSONE provenance 移交，卡 t_44d29ac9 comment 2026-10-25 10:52；本卡 11:2x 收口扫描读得——执行中窗口错过，核后与移交 provenance 精确一致，零返工）：**2,713 = v2.0 papers.jsonl 的字面行数**（复算 `wc -l` /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.0_2026-09/papers.jsonl = 2713；指针 v2.0 块 unique_papers 同值），而 v2.0 build_stats.json n_papers=2702（有正文篇数）——旧说明串的 papers 取的是行数口径。本卡新串 = **CANON_SHIPPED 单源单一口径**：bundled slim build_stats.json 的 n_papers=3869（有正文篇数）与 n_chunks=242928 同源同件、零混合（slim papers.jsonl 3,884 行含 15 条 0-chunk 幽灵行，不采用行数口径）。全位对齐表 /mnt/D/EyeKB/plans/consistency_20261024/CORPUS_IDENTITY_ALIGNMENT_v1.md **第 9 行 = 本责任面**，其裁定的应为值（CANON_SHIPPED：3,869 papers / 242,928 passages，随件读）与本卡实现精确一致（provenance 证据由 CORPUSONE §2 移交）。另一事实分立：D 侧运行时指针自 2026-10-05 起已切 v2.6-dev（3,902 篇 / 244,877 chunks；既有 PI 批准件 DEV-ACT t_f7d4985e，非并发卡本波动作）——属镜像 B-M01 既有登记的分歧面；本卡声明的是 bundled（随件）身份，与运行时 EYEKB_DB_DIR/指针覆盖正交，不受其影响。
+
 ## 2. 说明串改前/改后逐字对照（交付 2）
 
 改前（server.py:104，PRE sha 040d99baf3956b210a0324c6db3b571fd8cac1a8ba8b086a0a144e4886dcf052）：
@@ -83,6 +85,9 @@ role: default 必须仍是 v2.4.2 块）；C05 POINTER-AGREE（随件 build 记�
 2. 面板基线 tests/fixtures/tool_panel_baseline.json 维持 t_c19cd667 的 RED-by-design 状态（本卡不重录；
    与 §5.5 的遗留条款一致——该器件本就按记录保持 RED）。
 3. run_gates.sh 头注释「G3 -> G4 -> G5 -> G6」文字滞后于实际 9 门（既有文本，非本卡判据件；未改，避免与本波无关的字节扩散）。
+4. repo README.md L490 末句「internal and external default states now match」自 2026-10-05（D 侧 runtime 指针切 v2.6-dev，
+   既有 PI 批准件 DEV-ACT t_f7d4985e）起对 runtime 面不再成立——CORPUSONE 对齐表 #13 已判「公共面默认披露 = PI 门，
+   呈报不代改」；本卡沿用同一处置，不触碰 README。
 
 ## 7. 协调者复算入口（逐节点）
 

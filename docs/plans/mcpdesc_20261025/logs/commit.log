@@ -1,0 +1,33 @@
+[main 8b0ce01] MCPDESC (t_2a047be0): the service description renders its corpus numbers from the bundled corpus
+ 38 files changed, 2439 insertions(+), 25 deletions(-)
+ create mode 100644 docs/plans/mcpdesc_20261025/REPORT.md
+ create mode 100644 docs/plans/mcpdesc_20261025/logs/g11_green_after_a1.log
+ create mode 100644 docs/plans/mcpdesc_20261025/logs/g11_green_after_a2.log
+ create mode 100644 docs/plans/mcpdesc_20261025/logs/g11_sabotage_a1.log
+ create mode 100644 docs/plans/mcpdesc_20261025/logs/g11_sabotage_a2.log
+ create mode 100644 docs/plans/mcpdesc_20261025/logs/g5_after.log
+ create mode 100644 docs/plans/mcpdesc_20261025/logs/g5_after_fix.log
+ create mode 100644 docs/plans/mcpdesc_20261025/logs/g6_after.log
+ create mode 100644 docs/plans/mcpdesc_20261025/logs/g6_after_fix.log
+ create mode 100644 docs/plans/mcpdesc_20261025/logs/g6_final.log
+ create mode 100644 docs/plans/mcpdesc_20261025/logs/panel_post.log
+ create mode 100644 docs/plans/mcpdesc_20261025/logs/panel_pre.log
+ create mode 100644 docs/plans/mcpdesc_20261025/logs/run_gates_after.log
+ create mode 100644 docs/plans/mcpdesc_20261025/logs/run_gates_after2.log
+ create mode 100644 docs/plans/mcpdesc_20261025/out/G11_GREEN.json
+ create mode 100644 docs/plans/mcpdesc_20261025/out/G11_GREEN_AFTER_A1.json
+ create mode 100644 docs/plans/mcpdesc_20261025/out/G11_GREEN_AFTER_A2.json
+ create mode 100644 docs/plans/mcpdesc_20261025/out/G11_SABOTAGE_A1.json
+ create mode 100644 docs/plans/mcpdesc_20261025/out/G11_SABOTAGE_A2.json
+ create mode 100644 docs/plans/mcpdesc_20261025/out/G11_SHADOW_INCONCLUSIVE.json
+ create mode 100644 docs/plans/mcpdesc_20261025/out/G5_AFTER.json
+ create mode 100644 docs/plans/mcpdesc_20261025/out/G6_AFTER.json
+ create mode 100644 docs/plans/mcpdesc_20261025/out/G6_FINAL.json
+ create mode 100644 docs/plans/mcpdesc_20261025/out/PANEL_POST.json
+ create mode 100644 docs/plans/mcpdesc_20261025/out/PANEL_PRE.json
+ create mode 100644 docs/plans/mcpdesc_20261025/out/POST_IMPL_SHAS.txt
+ create mode 100644 docs/plans/mcpdesc_20261025/out/PRE_DESCRIPTION_LITERAL.txt
+ create mode 100644 docs/plans/mcpdesc_20261025/out/PRE_SHAS.txt
+ create mode 100644 docs/plans/mcpdesc_20261025/out/gate_run.log
+ create mode 100644 mcp_server/corpus_stats.py
+ create mode 100644 tests/gate_mcpdesc_corpus.py
