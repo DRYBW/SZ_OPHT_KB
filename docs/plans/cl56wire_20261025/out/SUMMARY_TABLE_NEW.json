@@ -1,0 +1,89 @@
+{
+ "registry": "/home/ubuntu/EYEKB_REPO/kb/link_registry/LINK_REGISTRY_v1.jsonl",
+ "per_library": {
+  "retina": {
+   "entries": 10,
+   "cit_rows": 616,
+   "checkable": 525,
+   "by_index": 427,
+   "entries_with": 10
+  },
+  "membrane": {
+   "entries": 23,
+   "cit_rows": 810,
+   "checkable": 485,
+   "by_index": 373,
+   "entries_with": 23
+  },
+  "retina_interneuron": {
+   "entries": 10,
+   "cit_rows": 551,
+   "checkable": 454,
+   "by_index": 361,
+   "entries_with": 10
+  },
+  "retina_v6": {
+   "entries": 10,
+   "cit_rows": 464,
+   "checkable": 369,
+   "by_index": 276,
+   "entries_with": 10
+  },
+  "face_v6": {
+   "entries": 7,
+   "cit_rows": 172,
+   "checkable": 63,
+   "by_index": 38,
+   "entries_with": 5
+  },
+  "k9_ocs": {
+   "entries": 4,
+   "cit_rows": 144,
+   "checkable": 99,
+   "by_index": 71,
+   "entries_with": 4
+  },
+  "antseg_v10": {
+   "entries": 16,
+   "cit_rows": 978,
+   "checkable": 875,
+   "by_index": 700,
+   "entries_with": 16
+  },
+  "onfibro_v13": {
+   "entries": 1,
+   "cit_rows": 77,
+   "checkable": 67,
+   "by_index": 57,
+   "entries_with": 1
+  },
+  "cl56_v15": {
+   "entries": 3,
+   "cit_rows": 181,
+   "checkable": 160,
+   "by_index": 126,
+   "entries_with": 3
+  }
+ },
+ "total": {
+  "entries": 84,
+  "cit_rows": 3993,
+  "checkable": 3097,
+  "by_index": 2429,
+  "entries_with": 82
+ },
+ "table_markdown": [
+  "| library | entries | citation rows | rows whose paper states a marker gene | of those, found by the index rather than the label search | entries with at least one checkable citation |",
+  "|---|---|---|---|---|---|",
+  "| membrane | 23 | 810 | 485 (60%) | 373 | 23/23 |",
+  "| antseg_v10 | 16 | 978 | 875 (89%) | 700 | 16/16 |",
+  "| retina | 10 | 616 | 525 (85%) | 427 | 10/10 |",
+  "| retina_interneuron | 10 | 551 | 454 (82%) | 361 | 10/10 |",
+  "| retina_v6 | 10 | 464 | 369 (80%) | 276 | 10/10 |",
+  "| face_v6 | 7 | 172 | 63 (37%) | 38 | 5/7 |",
+  "| k9_ocs | 4 | 144 | 99 (69%) | 71 | 4/4 |",
+  "| cl56_v15 | 3 | 181 | 160 (88%) | 126 | 3/3 |",
+  "| onfibro_v13 | 1 | 77 | 67 (87%) | 57 | 1/1 |",
+  "| **total** | **84** | **3993** | **3097 (78%)** | **2429** | **82/84** |"
+ ]
+}

@@ -1,0 +1,26 @@
+CL56WIRE (t_2fed9122) — local commits, nothing pushed (push is the coordinator's)
+
+619a702  CL56WIRE (t_2fed9122): wire the newest library (cl56_v15) into the registry / wiki /
+         route / skill
+         - kb/link_registry/scripts/build_link_registry.py: REGISTRY_EXTRA_LIBS = ("cl56_v15",)
+         - kb/link_registry/LINK_REGISTRY_v1.jsonl rebuilt: 161 -> 165 rows (3 cl56_v15 + 1
+           onfibro_v13 catch-up); 161/161 pre-existing rows byte-identical
+         - kb/link_registry/out/GENE_PAPER_INDEX_v1.{tsv,json} rebuilt (312 -> 330 panel genes)
+         - kb/vk_literature_index/cell-ontology-child-terms.md (new page for the three entries)
+         - appendix + machine twin + coverage summary regenerated
+         - kb/link_registry/README.md: which libraries the registry covers; rebuild to a fixed point
+         - docs/W3_PIPELINE_REGISTRY.tsv: L6-19/L6-20/L6-22/L6-30/L6-34/L6-35 re-taken,
+           L6-49..L6-52 added; docs/CHANGE_CONTROL_G6_INSTANCE.tsv: CHG-20261025-CL56WIRE;
+           docs/W3_MANIFEST.sha256 re-frozen last; release records re-taken against the staged tree
+
+<record-only commit>  this COMMIT.txt + the mirror docs/plans/cl56wire_20261025/
+         Content: the wave report, the machine proof, the ledger read-out, the pre-images, the run
+         logs and the clean-clone gate readout. No code, registry, gate or anchor surface differs
+         from 619a702.
+
+Verification: clean clone of 619a702 with the corpus unpacked per G2 ->
+`gates=9 failed=0 (CHAIN PASS)` (out/CLONE_REPO_GATES.log). On the pristine clone G11 reads
+rc=3 INCONCLUSIVE by design (the bundled corpus ships as the G2 Release asset).
+
+Not committed on purpose (other cards' surface): docs/plans/linkkey_20261025/ (card t_83c4324d) and
+docs/plans/mcpdesc_20261025/logs/{commit2,release_take2}.log (card t_2a047be0).

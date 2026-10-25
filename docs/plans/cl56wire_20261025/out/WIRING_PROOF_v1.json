@@ -1,0 +1,96 @@
+{
+ "generated_by": "wiring_proof.py",
+ "registry": "/home/ubuntu/EYEKB_REPO/kb/link_registry/LINK_REGISTRY_v1.jsonl",
+ "pre_image": "/mnt/D/EyeKB/plans/consistency_20261024/cl56wire_out/pre_images/LINK_REGISTRY_v1.jsonl.pre_cl56wire",
+ "entries_total": 165,
+ "entries_marker": 84,
+ "entries_textbook": 81,
+ "per_library_entries": {
+  "antseg_v10": 16,
+  "cl56_v15": 3,
+  "face_v6": 7,
+  "k9_ocs": 4,
+  "membrane": 23,
+  "onfibro_v13": 1,
+  "retina": 10,
+  "retina_interneuron": 10,
+  "retina_v6": 10,
+  "textbook_t4": 81
+ },
+ "field_completeness": {
+  "required_fields": [
+   "entry_id",
+   "library",
+   "cell_type",
+   "panel_genes",
+   "kb_file",
+   "wiki_pages",
+   "n_wiki_pages",
+   "pmids",
+   "citations",
+   "mcp_route",
+   "skill_trigger"
+  ],
+  "textbook_required_fields": [
+   "entry_id",
+   "library",
+   "cell_type",
+   "kb_file",
+   "wiki_pages",
+   "n_wiki_pages",
+   "mcp_route",
+   "skill_trigger",
+   "book_anchors"
+  ],
+  "rows_with_all_required_fields": 163,
+  "rows": 165,
+  "unexplained_gaps": [],
+  "registered_exceptions": [
+   [
+    "face_v6::Fibroblast",
+    [
+     "panel_genes"
+    ],
+    "the source library records no marker panel at all for this entry (registered gap, named in ANNOTATION_EVIDENCE_SUMMARY_v1.md)"
+   ],
+   [
+    "face_v6::Myofibroblast",
+    [
+     "panel_genes"
+    ],
+    "the source library records no marker panel at all for this entry (registered gap, named in ANNOTATION_EVIDENCE_SUMMARY_v1.md)"
+   ]
+  ]
+ },
+ "wiki_pages": {
+  "listed": 403,
+  "missing_on_disk": [],
+  "existence_rate": 1.0
+ },
+ "kb_file_missing": [],
+ "routes": {
+  "checked": 165,
+  "not_answering": []
+ },
+ "default_route_leaks": [],
+ "isomorphy": {
+  "added": [
+   "cl56_v15::S cone cell",
+   "cl56_v15::keratocyte",
+   "cl56_v15::rod bipolar cell",
+   "onfibro_v13::Fibroblast"
+  ],
+  "removed": [],
+  "changed_existing": [],
+  "shipped_order_preserved": true
+ },
+ "linkage_gate": {
+  "rc": 0,
+  "stdout": "linkage gate: 165/165 entries fully wired\nPASS: every entry carries a citation, a page, a route and a skill entry point; every gene-verified citation matches the shipped full-text index"
+ },
+ "circularity": {
+  "rc": 0,
+  "stdout": "entries: 84\nA. reachable at all            : 84/84\nB. reachable excluding the registry's own rendered appendix: 84/84\n   of which rely only on that appendix: 0"
+ },
+ "verdict": "PASS"
+}

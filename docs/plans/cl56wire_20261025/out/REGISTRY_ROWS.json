@@ -1,0 +1,181 @@
+{
+ "probe": "registrations.py",
+ "card": "t_2fed9122",
+ "rows": {
+  "L6-19": {
+   "path": "kb/link_registry/LINK_REGISTRY_v1.jsonl",
+   "before": {
+    "sha256": "8d8be96cfec1b5a6c54da02987565249d194dcb23ec38478415b444302162434",
+    "bytes": "2342979"
+   },
+   "after": {
+    "sha256": "a04be7711131225129ed6a8f6d3cb08862216c9187307a8a2b663b7bdd15e9cf",
+    "bytes": "2498557",
+    "mtime": "2026-10-25 11:18:47"
+   }
+  },
+  "L6-20": {
+   "path": "kb/link_registry/README.md",
+   "before": {
+    "sha256": "cee856e21826b38720810cbc8b1f0b63cb05fd8be6088cd3bc8351b132b2056d",
+    "bytes": "6543"
+   },
+   "after": {
+    "sha256": "c0ed572bf5f68335ab1a23254d489d914b023a5f345a7a43344305496157927b",
+    "bytes": "7903",
+    "mtime": "2026-10-25 11:21:53"
+   }
+  },
+  "L6-22": {
+   "path": "kb/link_registry/scripts/build_link_registry.py",
+   "before": {
+    "sha256": "f21f589d0b5b4f262885ce5678cbc5897825765d6f0711820c88fcd534a123d1",
+    "bytes": "21713"
+   },
+   "after": {
+    "sha256": "483ff1462031f0e20493b20d36b0041773d7ce3687db0ba9c32c577eb9fa5397",
+    "bytes": "22951",
+    "mtime": "2026-10-25 11:10:46"
+   }
+  },
+  "L6-30": {
+   "path": "kb/link_registry/out/GENE_PAPER_INDEX_v1.tsv",
+   "before": {
+    "sha256": "e5b04b94b2abedc68003217766e604c49298e4c493013806b353eb735688d94f",
+    "bytes": "2036615"
+   },
+   "after": {
+    "sha256": "afbcba432ad87fe702f2c76d72d8fdbaa6a58d9c92e8947a0ba404b0514eb9a3",
+    "bytes": "2223093",
+    "mtime": "2026-10-25 11:17:38"
+   }
+  },
+  "L6-34": {
+   "path": "kb/link_registry/out/ANNOTATION_EVIDENCE_APPENDIX_v1.md",
+   "before": {
+    "sha256": "914cf110f3a474f2dbd4792e8621c3d79096ae250a3e0bc17e00b96bdda073a7",
+    "bytes": "74504"
+   },
+   "after": {
+    "sha256": "bbe17e99507192b4d5901ca9c2ef0bb6b832b3fa62ee109b6c41e4aa71187ffb",
+    "bytes": "77564",
+    "mtime": "2026-10-25 11:18:49"
+   }
+  },
+  "L6-35": {
+   "path": "kb/link_registry/out/ANNOTATION_EVIDENCE_SUMMARY_v1.md",
+   "before": {
+    "sha256": "db84a18e983dc42cec5dc8058161e038bfe57ad37f89447143813727bc9bf0ea",
+    "bytes": "2657"
+   },
+   "after": {
+    "sha256": "44aa8316f668f28c7b54141fa72a4d6ee75d9d7d04c776a7205c9514bd809081",
+    "bytes": "3946",
+    "mtime": "2026-10-25 11:21:42"
+   }
+  }
+ },
+ "new_rows": {
+  "L6-49": {
+   "layer": "L6",
+   "item_id": "L6-49",
+   "item_name": "Cell-Ontology child-term page (finer terms of coarser shipped classes)",
+   "category": "Delivery document",
+   "path": "kb/vk_literature_index/cell-ontology-child-terms.md",
+   "version": "v1 (2026-10-25 first registration)",
+   "authority": "AUTHORITATIVE(delivery artefact)",
+   "change_gate": "Same commit as the change (VERIFY_CONTRACT §5)",
+   "freeze_gate": "Not frozen (hand-written page)",
+   "regression_gate": "kb/link_registry/scripts/validate_linkage.py + scripts/audit_link_circularity.py",
+   "sha256": "57d088ce2923bb00020a7aa430f3833c70caa4fc258462e3dbdaeb15b4a45aba",
+   "bytes": "5255",
+   "mtime": "2026-10-25 11:10:46",
+   "state": "ON_DISK",
+   "evidence": "Written so the three newly wired entries are reachable from a written page rather than only from the registry's generated appendix: the three adopted Cell-Ontology child terms, their CL ids and is_a paths, the panels and where the panels come from, the route that reaches each name, and the measured caveat (the panels are broad - the merge into the default route renamed 92 clusters of which only 3 carry the adopted term as their author label, which is why the library stays default-off). No number on the page is proposed here: they are read from the increment's own entries and the wave's measured readings.",
+   "notes": "Written for an external reader: English only, no internal identifiers.",
+   "surface": "repo"
+  },
+  "L6-50": {
+   "layer": "L6",
+   "item_id": "L6-50",
+   "item_name": "Annotation evidence appendix renderer",
+   "category": "Delivery tooling",
+   "path": "kb/link_registry/scripts/build_citation_appendix.py",
+   "version": "v1 (2026-10-25 first registration)",
+   "authority": "AUTHORITATIVE(regenerates L6-34)",
+   "change_gate": "Same commit as the change (VERIFY_CONTRACT §5)",
+   "freeze_gate": "Not frozen",
+   "regression_gate": "kb/link_registry/scripts/validate_linkage.py (the rule the appendix states)",
+   "sha256": "d7c079bfd2ffd0871674a7fbc5d94383c2a5723df7d7804147149746069cd504",
+   "bytes": "7945",
+   "mtime": "2026-10-25 11:10:46",
+   "state": "ON_DISK",
+   "evidence": "Registered for the first time by this card, although it has shipped since the 2026-10-21 link-spine wave under L6-34: it renders the reader-facing appendix from the registry and is the file this card edited. The edit corrects the default-route label set (adds `onfibro_v13`, activated 2026-10-22, which was rendering as `explicit routing only`) and is not read by any scoring path.",
+   "notes": "A registered surface that is not in the ledger cannot be re-taken by rule; this row closes that gap for this file.",
+   "surface": "repo"
+  },
+  "L6-51": {
+   "layer": "L6",
+   "item_id": "L6-51",
+   "item_name": "Gene-to-paper index provenance read-out",
+   "category": "Delivery data",
+   "path": "kb/link_registry/out/GENE_PAPER_INDEX_v1.json",
+   "version": "v1 (2026-10-25 first registration)",
+   "authority": "AUTHORITATIVE(provenance of L6-30)",
+   "change_gate": "Same commit as the change (VERIFY_CONTRACT §5)",
+   "freeze_gate": "Not frozen (written by L6-31)",
+   "regression_gate": "kb/link_registry/scripts/build_gene_paper_index.py (writes it); kb/link_registry/scripts/validate_linkage.py consumes L6-30",
+   "sha256": "2b10aad7ccf2c7b1620a4e2aebe51f9ef5d5b9e8d7d849b073fbe9dd0d74e96e",
+   "bytes": "548",
+   "mtime": "2026-10-25 11:17:38",
+   "state": "ON_DISK",
+   "evidence": "Machine twin of L6-30's provenance: corpus path, corpus bytes/mtime, panel genes scanned, genes with hits, genes absent from the whole corpus (MOBP), papers with any hit, index rows, chunks scanned, match rule and elapsed seconds. Re-taken by this card with the index it describes (330 panel genes / 10,550 rows / 2,667 papers with any hit).",
+   "notes": "Registered so the index's own provenance can be re-taken by rule rather than by hand.",
+   "surface": "repo"
+  },
+  "L6-52": {
+   "layer": "L6",
+   "item_id": "L6-52",
+   "item_name": "Annotation evidence appendix (machine-readable twin)",
+   "category": "Delivery data",
+   "path": "kb/link_registry/out/ANNOTATION_EVIDENCE_APPENDIX_v1.tsv",
+   "version": "v1 (2026-10-25 first registration)",
+   "authority": "AUTHORITATIVE(machine twin of L6-34)",
+   "change_gate": "Same commit as the change (VERIFY_CONTRACT §5)",
+   "freeze_gate": "Not frozen (regenerated by L6-50)",
+   "regression_gate": "kb/link_registry/scripts/build_citation_appendix.py; kb/link_registry/scripts/validate_linkage.py (same rule)",
+   "sha256": "d18b669abca4fb663f19dd884761312da6cc1e927be6da9047116fe2c1b3eb5e",
+   "bytes": "83135",
+   "mtime": "2026-10-25 11:18:49",
+   "state": "ON_DISK",
+   "evidence": "The same rows as L6-34, tab separated, for programmatic consumption by reports. Re-taken by this card in the same pass as L6-34 (165 entries across 10 libraries).",
+   "notes": "Registered so the twin cannot drift from the page it mirrors unnoticed.",
+   "surface": "repo"
+  }
+ },
+ "registry_sha256_after": "32ae77ed5c4aefd3bce0117b8c037dc55f3e6f6892d510cfba92cb9c7ad65a31",
+ "rows_taken": [
+  "L6-19",
+  "L6-20",
+  "L6-22",
+  "L6-30",
+  "L6-34",
+  "L6-35"
+ ],
+ "rows_added": [
+  "L6-49",
+  "L6-50",
+  "L6-51",
+  "L6-52"
+ ],
+ "instance_row": "CHG-20261025-CL56WIRE",
+ "instance_sha256_after": "f8eae79ea3628f4832c9619dedf92c3c5a836326cb8560a2600ac9f1ab16922c",
+ "w3_manifest_touched": [
+  {
+   "file": "W3_PIPELINE_REGISTRY.tsv",
+   "before": "91d0a6952046a235ccbef6a65be96eae7ea8e266374d290014edce4d8bcb1860",
+   "after": "32ae77ed5c4aefd3bce0117b8c037dc55f3e6f6892d510cfba92cb9c7ad65a31"
+  }
+ ],
+ "w3_manifest_sha256": "6c6889bda22693493f2f3ebe713a46052641c3bc5300924f17e7b57b7e779621"
+}
