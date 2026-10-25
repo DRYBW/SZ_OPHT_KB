@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "6f47ffab16ff",
- "digest_sha256": "6f47ffab16ff8d9278c34c9b5cde10d94331277084c185b0bb674039ab17d32b",
+ "release_id": "973e25104549",
+ "digest_sha256": "973e25104549116b968ed8af7f98ec22b54e465ab0df92bea0697d47d804cad4",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 4387,
- "total_bytes": 250403596,
+ "n_files": 4430,
+ "total_bytes": 262753133,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "6ff8a2ee2c35",
   "knowledge_bundle_id": "f952af810ffa",
-  "effective_profile_id": "cf7aaabfdef1"
+  "effective_profile_id": "a06c838a1887"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -4504,6 +4504,221 @@
    "path": "docs/plans/cl56_adopt_20261022/scripts/z1_manifest.py",
    "git_blob": "6be8fa172f9ddf57633e2b1a4ccfab2c04a3c225",
    "bytes": 3410
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/COMMIT.txt",
+   "git_blob": "240fa78ea64298d22d5ae9b190b342a785bb203c",
+   "bytes": 1971
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/MANIFEST.sha256",
+   "git_blob": "5dbddbc442c7e0e78f3cf111307e487c333ed5e8",
+   "bytes": 3952
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/README.md",
+   "git_blob": "8de764a243e3dae553cec79c15671c7bad39d66a",
+   "bytes": 2917
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/REPORT.md",
+   "git_blob": "8d9ba800b2dce32defa686cf4fe44cedf9f3f12b",
+   "bytes": 14596
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/logs/p1_registry_pass1.log",
+   "git_blob": "436c2a5117f97e0e8bb3ff6b0a9cb9fe50e36be9",
+   "bytes": 368
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/logs/p2_appendix_pass1.log",
+   "git_blob": "4b06201fc39331facb879203950fc457a742d774",
+   "bytes": 128
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/logs/p3_registry_pass2.log",
+   "git_blob": "80829db8a5001530b6b5818ab9f3fbebd955a73a",
+   "bytes": 369
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/logs/p4_appendix_pass2.log",
+   "git_blob": "bb80933a9bb4f103692bf6f7b664ebc8fd49318b",
+   "bytes": 128
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/logs/p5_registry_pass3.log",
+   "git_blob": "7b656909881fc06e8e713dba5a06609fa9c4a7a2",
+   "bytes": 380
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/logs/q1_gene_index.log",
+   "git_blob": "8936983b150baf5b1a428087aa53ce6908fefde9",
+   "bytes": 216
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/logs/q2_registry_after_index.log",
+   "git_blob": "1bc5b9f35c91f7da39d45631a46216ae5c28f09b",
+   "bytes": 368
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/logs/q3_gene_index_pass2.log",
+   "git_blob": "3f4c6efd551b3575c7c05d3ce1b6c11bbdb8a4a6",
+   "bytes": 165
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/logs/q4_appendix.log",
+   "git_blob": "08fdb21e1fdaca42156c7627646017ed7ca9f113",
+   "bytes": 81
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/logs/q5_registry_final.log",
+   "git_blob": "b7953fa6882f80b0f43726767e6a237d3b6ab717",
+   "bytes": 310
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/logs/q6_appendix_final.log",
+   "git_blob": "08fdb21e1fdaca42156c7627646017ed7ca9f113",
+   "bytes": 81
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/logs/r1_registry_resource.log",
+   "git_blob": "4f06e411d148c07aa4195b7ae5c7a393c6b496ee",
+   "bytes": 1117
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/logs/wiring_proof.log",
+   "git_blob": "ab8db327c40550d497c4010354cebd0c40e0d11f",
+   "bytes": 147
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/out/ANNOTATION_EVIDENCE_APPENDIX_v1.md.new",
+   "git_blob": "97d28970c33c94cca8049e8defcac1416e57f9b0",
+   "bytes": 77396
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/out/ANNOTATION_EVIDENCE_APPENDIX_v1.tsv.new",
+   "git_blob": "3d05e4a80bcf856b18cd268d95260e5060d91c8f",
+   "bytes": 82684
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/out/CLONE_REPO_GATES.log",
+   "git_blob": "27d344b555690a6f3b3a688936723ca332b6421b",
+   "bytes": 11042
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/out/CLONE_REPO_GATES_pristine_clone.log",
+   "git_blob": "780dfba880b13d86cd57e177db378bbfdf4b9695",
+   "bytes": 11084
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/out/FINAL_SHA.txt",
+   "git_blob": "23f543f816a2c0497a79f64b810b870a647a49c4",
+   "bytes": 394
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/out/GENE_PAPER_INDEX_v1.tsv.pass1",
+   "git_blob": "d1ab238e40556e19bc6b3a59682b139a488229cf",
+   "bytes": 2223093
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/out/LINK_REGISTRY.before_index_rebuild.jsonl",
+   "git_blob": "1aded5ec5d7e157029702bd4494b1f5711970ced",
+   "bytes": 2439107
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/out/LINK_REGISTRY.pre_final.jsonl",
+   "git_blob": "49f45eb87ecf3ae3a3d4483cec710c3abc9e3afe",
+   "bytes": 2498557
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/out/LINK_REGISTRY_v1.jsonl.new",
+   "git_blob": "1aded5ec5d7e157029702bd4494b1f5711970ced",
+   "bytes": 2439107
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/out/MANIFEST.sha256",
+   "git_blob": "5dbddbc442c7e0e78f3cf111307e487c333ed5e8",
+   "bytes": 3952
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/out/PREIMAGE.sha256",
+   "git_blob": "f79d1195806e8eb0377a8afa7c6a4f96c4bd63de",
+   "bytes": 1010
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/out/REGISTRY_ROWS.json",
+   "git_blob": "3417079f7ee49183998f176d865286a33c5fce18",
+   "bytes": 7940
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/out/SUMMARY_TABLE_NEW.json",
+   "git_blob": "2fa9987161319fa8fa61dbb21fe23df9cb792914",
+   "bytes": 2124
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/out/WIRING_PROOF_v1.json",
+   "git_blob": "bc5db0f423eb09a0b6a556f3928886adab51079b",
+   "bytes": 2358
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/out/WIRING_PROOF_v1.md",
+   "git_blob": "02afba7e65743fe9529b892dce7e237848d36347",
+   "bytes": 5836
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/pre_images/ANNOTATION_EVIDENCE_APPENDIX_v1.md.pre_cl56wire",
+   "git_blob": "4034a131508306fe2405a032569f43a67b098808",
+   "bytes": 74504
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/pre_images/ANNOTATION_EVIDENCE_SUMMARY_v1.md.pre_cl56wire",
+   "git_blob": "20d039940565f92e50b934a3024c285ed8044aeb",
+   "bytes": 2657
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/pre_images/LINK_REGISTRY_v1.jsonl.pre_cl56wire",
+   "git_blob": "d792e5afde62cb6508d602d571fddfef955321a7",
+   "bytes": 2342979
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/pre_images/README.md.pre_cl56wire",
+   "git_blob": "51254ca26c0a3229d33ef63b8f08e98b25b2c313",
+   "bytes": 6543
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/pre_images/build_citation_appendix.py.pre_cl56wire",
+   "git_blob": "26b90aa5c37638c25fff38334aa46896b9342f39",
+   "bytes": 7548
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/pre_images/build_link_registry.py.pre_cl56wire",
+   "git_blob": "e643dc0f7253fad7e861be08460f3efb92f41dc3",
+   "bytes": 21713
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/scripts/make_manifest.py",
+   "git_blob": "1d7acf7a112c87e3579877c2af8afa3af958bb7a",
+   "bytes": 1470
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/scripts/recompute_summary_table.py",
+   "git_blob": "1a6804f2c397072f51609106754ee1da8ac01054",
+   "bytes": 6392
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/scripts/registrations.py",
+   "git_blob": "15748740fe1af7ab0b46c26e5cd69838249df1af",
+   "bytes": 29862
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/scripts/update_summary_tail.py",
+   "git_blob": "864c0fb0d3ec0988201561125b41ab20112187eb",
+   "bytes": 6766
+  },
+  {
+   "path": "docs/plans/cl56wire_20261025/scripts/wiring_proof.py",
+   "git_blob": "f9095ccebd4a761cd9d99627cce2074512bb0253",
+   "bytes": 16125
   },
   {
    "path": "docs/plans/cl_depth_devlineage_20261021/GRANULARITY_READER_PAGE.md",
