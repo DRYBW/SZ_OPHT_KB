@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "5b476734c976",
- "digest_sha256": "5b476734c97619873ce0c6539de6c1a2050a6afc37688f81938ca5ecb47151c6",
+ "release_id": "6f47ffab16ff",
+ "digest_sha256": "6f47ffab16ff8d9278c34c9b5cde10d94331277084c185b0bb674039ab17d32b",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 4352,
- "total_bytes": 249891911,
+ "n_files": 4387,
+ "total_bytes": 250403596,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
-  "service_build_id": "d82ed8bb7ba8",
-  "knowledge_bundle_id": "159a536b76d9",
-  "effective_profile_id": "4e143d74e976"
+  "service_build_id": "6ff8a2ee2c35",
+  "knowledge_bundle_id": "f952af810ffa",
+  "effective_profile_id": "cf7aaabfdef1"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -62,8 +62,8 @@
   },
   {
    "path": "docs/CHANGE_CONTROL_G6_INSTANCE.tsv",
-   "git_blob": "ae7b0f30fb75bf78dae1d806d087f3023669b6cc",
-   "bytes": 90898
+   "git_blob": "1129ab349eb631d76d1f3b8b9490d34780412c17",
+   "bytes": 110881
   },
   {
    "path": "docs/CHANGE_CONTROL_G6_TEMPLATE.tsv",
@@ -92,8 +92,8 @@
   },
   {
    "path": "docs/GATE_INVENTORY_G5G6.tsv",
-   "git_blob": "96bc0462b60f70bb91905dc0626500d76b358f27",
-   "bytes": 9063
+   "git_blob": "7480fe653ad1da2919805fcef689b32566285030",
+   "bytes": 10044
   },
   {
    "path": "docs/GIT_SELF_DECLARED_BOUNDARY_LEDGER.tsv",
@@ -162,8 +162,8 @@
   },
   {
    "path": "docs/VERIFY_CONTRACT.md",
-   "git_blob": "3b20e75b486ebece9965c1c26d026a15a7aff1a9",
-   "bytes": 23643
+   "git_blob": "60b385f7e2c61b18761402cb3cd9bd87d9320c8d",
+   "bytes": 26755
   },
   {
    "path": "docs/VERIFY_CONTRACT_G5G6.md",
@@ -182,13 +182,13 @@
   },
   {
    "path": "docs/W3_MANIFEST.sha256",
-   "git_blob": "cc1b7d6c3e8d6fb21fcfe7322df4d534d3d3f0da",
-   "bytes": 5007
+   "git_blob": "d5767c25daf47a5af615dfb7e3c755428c750f08",
+   "bytes": 5248
   },
   {
    "path": "docs/W3_PIPELINE_REGISTRY.tsv",
-   "git_blob": "7a4aeda71b3c21a788e275e2c2257e083baa3b38",
-   "bytes": 137035
+   "git_blob": "d1ac122afc4c545770baa30852751ebfa701b48f",
+   "bytes": 146570
   },
   {
    "path": "docs/W3_UPSTREAM_FIRST_RULE.md",
@@ -13021,6 +13021,166 @@
    "bytes": 1555
   },
   {
+   "path": "docs/plans/mcpdesc_20261025/REPORT.md",
+   "git_blob": "c0ca06c8903f618e268151bc43f5d584e8bbeee9",
+   "bytes": 10734
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/logs/commit.log",
+   "git_blob": "9e78c31c7f4f93060218a128b0a66c5eaf330559",
+   "bytes": 2299
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/logs/g11_green_after_a1.log",
+   "git_blob": "760378470eb9932ead3dc13d26d464847a33d6bc",
+   "bytes": 867
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/logs/g11_green_after_a2.log",
+   "git_blob": "63e0e6d81d651c29c769b0976be664bceeef91a3",
+   "bytes": 867
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/logs/g11_sabotage_a1.log",
+   "git_blob": "2946b294d256fb22c377f406db976e90f7f1a652",
+   "bytes": 921
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/logs/g11_sabotage_a2.log",
+   "git_blob": "5d880b152964b733d8fe8151c35b1ed96fc569a0",
+   "bytes": 873
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/logs/g5_after.log",
+   "git_blob": "251b4ba0de779d10e85d0ef4cc1685171a38ed29",
+   "bytes": 1333
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/logs/g5_after_fix.log",
+   "git_blob": "041b4f6fc6da3c81d2419e72e2ec748459e13996",
+   "bytes": 1233
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/logs/g6_after.log",
+   "git_blob": "cfb31d0c220ac5d2e01a3853785e2800e0308398",
+   "bytes": 2407
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/logs/g6_after_fix.log",
+   "git_blob": "9400d5e4578fedf6aa1c68eaf353f561c62ea761",
+   "bytes": 1747
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/logs/g6_final.log",
+   "git_blob": "e6b90786fe95024fea801f6ae16e746ca154e0aa",
+   "bytes": 1550
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/logs/panel_post.log",
+   "git_blob": "2dcbbdd66a62b7b29242f5c65d09904c7caca176",
+   "bytes": 1409
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/logs/panel_pre.log",
+   "git_blob": "3ae826e7e5da146b219c3bc222e9d84f130a657e",
+   "bytes": 1408
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/logs/release_take.log",
+   "git_blob": "9a5f4e012f1b3857545627370490b6f32a8206a9",
+   "bytes": 950
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/logs/run_gates_after.log",
+   "git_blob": "3385b428e24369186d52aed94154f5807ce4f4d9",
+   "bytes": 11870
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/logs/run_gates_after2.log",
+   "git_blob": "84aebad52f9a2aa70e651b97f9fa035638084d0e",
+   "bytes": 11081
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/G11_FINAL.json",
+   "git_blob": "29ce7b3d37dcb7bd9e84c03685a8719c02ea9c7e",
+   "bytes": 1709
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/G11_GREEN.json",
+   "git_blob": "29ce7b3d37dcb7bd9e84c03685a8719c02ea9c7e",
+   "bytes": 1709
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/G11_GREEN_AFTER_A1.json",
+   "git_blob": "29ce7b3d37dcb7bd9e84c03685a8719c02ea9c7e",
+   "bytes": 1709
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/G11_GREEN_AFTER_A2.json",
+   "git_blob": "29ce7b3d37dcb7bd9e84c03685a8719c02ea9c7e",
+   "bytes": 1709
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/G11_SABOTAGE_A1.json",
+   "git_blob": "a0eecfe3b1b29449882408a26dfd9e0fd86d279b",
+   "bytes": 1925
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/G11_SABOTAGE_A2.json",
+   "git_blob": "8a71556bdf073eb4f27c688edb7c749b36200210",
+   "bytes": 1719
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/G11_SHADOW_INCONCLUSIVE.json",
+   "git_blob": "20e22d80fcef8544f8cae3e23959303bc94cedd4",
+   "bytes": 1280
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/G5_AFTER.json",
+   "git_blob": "52ba5a093d4f8f942db9b3e004c6d533959c5ba8",
+   "bytes": 2681
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/G6_AFTER.json",
+   "git_blob": "bb566166da1e0a3e31647db56fce6db027e33b39",
+   "bytes": 9444
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/G6_FINAL.json",
+   "git_blob": "f988511d9761100bdb1a34ad1f426706d4e31b4c",
+   "bytes": 9037
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/PANEL_POST.json",
+   "git_blob": "70e52db0df00442855bc746b39c0b92ca642749f",
+   "bytes": 1734
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/PANEL_PRE.json",
+   "git_blob": "6aa56910ededab4922ad6b83e8474918140d6bcb",
+   "bytes": 1734
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/POST_IMPL_SHAS.txt",
+   "git_blob": "21ba4f3d26b05961984346276c3cf9d73de3230b",
+   "bytes": 180
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/PRE_DESCRIPTION_LITERAL.txt",
+   "git_blob": "1b74f1e47a7656b8adf828b0fdec03c7abb1b82f",
+   "bytes": 3749
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/PRE_SHAS.txt",
+   "git_blob": "db1288524e70426f644ddbd73ec9051bd65996b2",
+   "bytes": 1035
+  },
+  {
+   "path": "docs/plans/mcpdesc_20261025/out/gate_run.log",
+   "git_blob": "c380d80d34995a191d184ac4bf0b6f103a788809",
+   "bytes": 873
+  },
+  {
    "path": "docs/plans/model_free_20260929/MODELFREE_NOTE.md",
    "git_blob": "d61288aeb6d542d991a0da7b9bf0556538196607",
    "bytes": 2188
@@ -19592,8 +19752,8 @@
   },
   {
    "path": "docs/wiki/DATA_ASSETS.md",
-   "git_blob": "3a4b06da9d1e47a51a0f0d57b55fd6640b73f93c",
-   "bytes": 13257
+   "git_blob": "1c168df2809ec9edbfe9810cbeee34e9559fea10",
+   "bytes": 14618
   },
   {
    "path": "docs/wiki/DECISION_LOG.md",
@@ -19607,8 +19767,8 @@
   },
   {
    "path": "docs/wiki/KEY_FINDINGS.md",
-   "git_blob": "023198e01b21541fd01f09b24e27d4a0e2b26258",
-   "bytes": 7200
+   "git_blob": "d654ac2733d861fec510192514af1e21f04053e4",
+   "bytes": 7945
   },
   {
    "path": "docs/wiki/PROJECT_REVIEW_20260928.md",
@@ -20187,28 +20347,28 @@
   },
   {
    "path": "kb/link_registry/LINK_REGISTRY_v1.jsonl",
-   "git_blob": "d792e5afde62cb6508d602d571fddfef955321a7",
-   "bytes": 2342979
+   "git_blob": "49f45eb87ecf3ae3a3d4483cec710c3abc9e3afe",
+   "bytes": 2498557
   },
   {
    "path": "kb/link_registry/README.md",
-   "git_blob": "51254ca26c0a3229d33ef63b8f08e98b25b2c313",
-   "bytes": 6543
+   "git_blob": "0f80b2f577b7aebde52dd088e46881e29eb3f678",
+   "bytes": 7903
   },
   {
    "path": "kb/link_registry/out/ANNOTATION_EVIDENCE_APPENDIX_v1.md",
-   "git_blob": "4034a131508306fe2405a032569f43a67b098808",
-   "bytes": 74504
+   "git_blob": "d693a508db8b2920c017c34febc74ef0641c931d",
+   "bytes": 77564
   },
   {
    "path": "kb/link_registry/out/ANNOTATION_EVIDENCE_APPENDIX_v1.tsv",
-   "git_blob": "43a1dd4da3ff1426d6b39c8373a449720073fe65",
-   "bytes": 80187
+   "git_blob": "5cdbac82f3a35ff0400b4689c50bf8c7dc0269d8",
+   "bytes": 83135
   },
   {
    "path": "kb/link_registry/out/ANNOTATION_EVIDENCE_SUMMARY_v1.md",
-   "git_blob": "20d039940565f92e50b934a3024c285ed8044aeb",
-   "bytes": 2657
+   "git_blob": "0e6b12b4e251a24e3c10120bd225dfbd01b05398",
+   "bytes": 3946
   },
   {
    "path": "kb/link_registry/out/CITATION_VERIFICATION_v1.json",
@@ -20217,13 +20377,13 @@
   },
   {
    "path": "kb/link_registry/out/GENE_PAPER_INDEX_v1.json",
-   "git_blob": "9569eb93e1175bcfd7fbc2c9458bc9b66b54b92d",
-   "bytes": 547
+   "git_blob": "7a000f83618d9b700c184b64c808c4e1a558a32b",
+   "bytes": 548
   },
   {
    "path": "kb/link_registry/out/GENE_PAPER_INDEX_v1.tsv",
-   "git_blob": "536506d69110b0b3a833d4bd98f06cc552069e27",
-   "bytes": 2036615
+   "git_blob": "d1ab238e40556e19bc6b3a59682b139a488229cf",
+   "bytes": 2223093
   },
   {
    "path": "kb/link_registry/scripts/audit_link_circularity.py",
@@ -20237,8 +20397,8 @@
   },
   {
    "path": "kb/link_registry/scripts/build_citation_appendix.py",
-   "git_blob": "26b90aa5c37638c25fff38334aa46896b9342f39",
-   "bytes": 7548
+   "git_blob": "80da4fdf908747f9329b5768367661d75c35b50e",
+   "bytes": 7945
   },
   {
    "path": "kb/link_registry/scripts/build_gene_paper_index.py",
@@ -20247,8 +20407,8 @@
   },
   {
    "path": "kb/link_registry/scripts/build_link_registry.py",
-   "git_blob": "e643dc0f7253fad7e861be08460f3efb92f41dc3",
-   "bytes": 21713
+   "git_blob": "5b4d23fda2c7910f3d22637b1afe159915b155d0",
+   "bytes": 22951
   },
   {
    "path": "kb/link_registry/scripts/build_recent_inclusions.py",
@@ -20587,8 +20747,8 @@
   },
   {
    "path": "kb/vk_literature_index/INDEX.md",
-   "git_blob": "6d15c8a6532cd982b9ca1db9fe51df7939cd6bc6",
-   "bytes": 140090
+   "git_blob": "bea26ffb68b2a1a6517912220ab3bf8fe3ff1605",
+   "bytes": 140690
   },
   {
    "path": "kb/vk_literature_index/aging.md",
@@ -20599,6 +20759,11 @@
    "path": "kb/vk_literature_index/amd.md",
    "git_blob": "c3eb1d3d7a54cb005a77bcde6d31226a0616fd9f",
    "bytes": 34419
+  },
+  {
+   "path": "kb/vk_literature_index/cell-ontology-child-terms.md",
+   "git_blob": "bea23dae5b7ea041a714596be88b0bbe5283342c",
+   "bytes": 5255
   },
   {
    "path": "kb/vk_literature_index/dr-diabetic-retinopathy.md",
@@ -20806,6 +20971,11 @@
    "bytes": 9163
   },
   {
+   "path": "mcp_server/corpus_stats.py",
+   "git_blob": "fce75fdb67750bbf064e7906c608b0adab134e00",
+   "bytes": 4855
+  },
+  {
    "path": "mcp_server/eyekb_core.py",
    "git_blob": "e85a5921b857a243d50f4745418a6b1ad7630f25",
    "bytes": 120551
@@ -20832,8 +21002,8 @@
   },
   {
    "path": "mcp_server/server.py",
-   "git_blob": "e5c52474c644095221e141233251c218ff19c995",
-   "bytes": 30464
+   "git_blob": "4ad9757bc5a4c2327746ffe7156cbd3ba4dbe602",
+   "bytes": 30888
   },
   {
    "path": "mcp_server/softflags.py",
@@ -21696,6 +21866,11 @@
    "bytes": 17466
   },
   {
+   "path": "tests/gate_mcpdesc_corpus.py",
+   "git_blob": "acdecb2de61ba05f3e57cf43b365c36c6b2fe84b",
+   "bytes": 17420
+  },
+  {
    "path": "tests/gate_ontlayer_portability.py",
    "git_blob": "33751ee28105aa81afbbeee99a86281213054fbf",
    "bytes": 15909
@@ -21742,8 +21917,8 @@
   },
   {
    "path": "tests/run_gates.sh",
-   "git_blob": "96e536392b9732453a3c587fa0510090a4c64ca7",
-   "bytes": 5546
+   "git_blob": "7421c7a444b08ae99f9d02f5780e69c01d1d51a5",
+   "bytes": 6594
   },
   {
    "path": "tests/scan_jargon.py",

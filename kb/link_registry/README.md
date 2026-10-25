@@ -95,6 +95,15 @@ resolves that through the alignment pinned in `kb/markers/markers_cl_alignment_v
 reports which route matched in `matched_by` (`library name` / `cell ontology label` / `partial
 name`). This is a lookup widening only — it does not add, rename or merge any entry.
 
+## Which libraries the registry covers
+
+The registry covers every library the default answer route loads, plus the libraries named in
+`REGISTRY_EXTRA_LIBS` at the top of `build_link_registry.py` — currently `cl56_v15`, a library
+registered **default-off** (empty whitelist, reachable only by naming it) whose entries would
+otherwise be a dead end: a name that exists in the knowledge base with no page, no route and no
+citation. Wiring a default-off library into the registry changes no answer, because the route is
+derived from the service's own whitelist and not from this list.
+
 ## Rebuilding
 
 ```bash
@@ -106,6 +115,15 @@ python3 validate_linkage.py                  # the gate above
 
 Run the index first: the registry consumes it. Citations come only from the local corpus — no
 network access, so a rebuild reproduces the same PMIDs on any machine that ships the same library.
+
+**The three builders consume each other, so rebuild to a fixed point.** The index's gene list is the
+union of the registry's panels, and the registry's page matcher reads every page under `kb/`
+including this registry's own rendered appendix. A single pass therefore lands on one of two states
+depending on which side changed last. Run the pair in the order above and stop when
+`build_link_registry.py` stops changing the registry (measured 2026-10-25: two passes, then stable;
+the second pass moves nothing but the rows whose library was just added). `validate_linkage.py` and
+`audit_link_circularity.py` are the two readings that say the fixed point is a good one: every entry
+reachable end to end, and no entry reachable only through the appendix this registry generates.
 
 ## Evidence discipline
 

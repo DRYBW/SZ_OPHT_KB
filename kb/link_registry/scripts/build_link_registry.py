@@ -48,6 +48,20 @@ BOOK_ITEMS = ROOT / "plans" / "devline_book_20261002" / "out" / "BOOK_KB_ITEMS.t
 TOP_RANKED = 8          # the highest-evidence candidates, admitted by rank (unchanged behaviour)
 STRONG_MIN_GENES = 2    # panel genes that must occur in a paper's BODY text for the extended route
 
+# Libraries the registry wires IN ADDITION to the default answer route.
+#
+# The registry is a disclosure / wiring surface, not a route. A library registered
+# REGISTERED_DEFAULT_OFF has an empty whitelist, so it is not in the default `all` set in any
+# state and its entries change no answer; wiring them here is what keeps a name that exists in the
+# knowledge base from being a dead end (no wiki page, no route, no citation). Equally, a library
+# that is IN the default route is picked up from `core._load_marker_dbs("all")` and must not be
+# listed here.
+#
+# Each name must be a registered `MARKER_LIBS` key whose explicit route
+# (`query_marker(cell_type=..., library="<name>")`) actually answers — the wiring proof re-reads
+# that against the shipped code rather than trusting this line.
+REGISTRY_EXTRA_LIBS = ("cl56_v15",)
+
 
 def load_paper_tissues():
     """paper_id -> "tissue,tissue" from the shipped corpus metadata.
@@ -170,6 +184,13 @@ def book_index():
 
 def main():
     libs = core._load_marker_dbs("all")
+    # Registered default-off libraries wired into the disclosure surface (see REGISTRY_EXTRA_LIBS).
+    # Appended after the route's own libraries, so the shipped row order is unchanged and the extra
+    # rows land at the end of the marker block.
+    have = {n for n, _, _ in libs}
+    for extra in REGISTRY_EXTRA_LIBS:
+        if extra not in have:
+            libs = libs + core._load_marker_dbs(extra)
     wiki, wiki_spans = wiki_index()
     books = book_index()
     gidx = gene_index()

@@ -2,10 +2,10 @@
 
 Generated from the local knowledge base and the local literature corpus. Every cell-type entry below carries the three things a reader needs in order to check an annotation: the markers that identify it, the source the entry came from, and the papers that back it.
 
-- entries: **161**
-- distinct papers cited: **803** (3735 citation rows; 2870 of them state one of the marker genes we use in their own text)
-- fully linked (source + page + MCP route + skill): **80**
-- reachable on the default answer surface: **80**
+- entries: **165**
+- distinct papers cited: **825** (3993 citation rows; 3097 of them state one of the marker genes we use in their own text)
+- fully linked (source + page + MCP route + skill): **84**
+- reachable on the default answer surface: **81**
 
 Citations are drawn from the corpus shipped with this knowledge base, so every PMID below can be resolved by `search_literature` without network access.
 
@@ -31,6 +31,14 @@ A citation is marked `states` when the gene symbols of this entry occur in the c
 | progenitor cell | PAX6, CD44, TP63, KRT15, STAT3, GAPDH | — | composition/COMP_SELFFLAG_20260928.md, link_registry/out/ANNOTATION_EVIDENCE_APPENDIX_v1.md | PMID 33485387 (Cell & bioscience 2021) states TP63, KRT14, KRT15, KRT19, CD44, PAX6, STAT3 — paragraph:9 @ Discussion; PMID 40131296 (Investigative ophthalmology & visual science 2025) states CD44, KRT14, KRT15, PAX6, STAT3, TP63 — abstract:1 @ Abstract; PMID 38177186 (Nature communications 2024) states PAX6, TP63, KRT14, KRT15, KRT19, GAPDH — paragraph:4 @ Discussion |
 | trabecular meshwork cell | MYOC, TIMP3, STAT3, GLIS1, CDH11, NEAT1 | — | link_registry/out/ANNOTATION_EVIDENCE_APPENDIX_v1.md, vk_literature_index/INCLUSIONS_RECENT.md | PMID 38272457 (Human molecular genetics 2024) states GLIS3, MYOC, TIMP3 — paragraph:8 @ Discussion; PMID 34385434 (Nature communications 2021) states GLIS1, GLIS3, MYOC — abstract:1 @ Abstract; PMID 34440692 (Cells 2021) states CDH11, MYOC, TIMP3 — paragraph:16 @ 3. Results > 3.4. Hierarchical Clustering Reveals Differences in the Expression of ECM Protein Genes |
 | transit amplifying cell | PAX6, ALDH3A1, KRT12, KRT3, TP63, CD44 | — | link_registry/out/ANNOTATION_EVIDENCE_APPENDIX_v1.md, vk_literature_index/INCLUSIONS_RECENT.md | PMID 37443842 (Cells 2023) states ALDH3A1, KRT12, KRT3, KRT5, PAX6, TP63 — paragraph:9 @ 3. Classical and Novel Marker Genes Defining Cell States in the Cornea > 3.1. The Limbus and Limbal Epithelium; PMID 33865984 (The ocular surface 2021) states KRT3, KRT12, TP63, PAX6, ALDH3A1, KRT5 — paragraph:10 @ Results > scRNA-seq analysis reveals novel markers for LPCs; PMID 36712326 (PNAS nexus 2022) states KRT3, KRT12, KRT5, PAX6, ALDH3A1, TP63 — paragraph:5 @ Discussion |
+
+## Library `cl56_v15` (explicit routing only) — 3 entries
+
+| cell type | key markers | textbook anchor | wiki page | backing papers |
+|---|---|---|---|---|
+| S cone cell | AIPL1, ATF6, C2, CEP290, CNGB1, CRB1 | — | link_registry/out/ANNOTATION_EVIDENCE_APPENDIX_v1.md, vk_literature_index/cell-ontology-child-terms.md | PMID 33673358 (International journal of molecular sciences 2021) states CEP290, CRB1, AIPL1, ATF6, C2, CNGB1, EYS — paragraph:18 @ 3. The Role of Alternative Splicing in Retinal Disease > 3.2. Cis-Acting Mutations Altering the Splicing > 3.2.2. Deep Intronic Variants: ABCA4, CEP290 and USH2A; PMID 39422807 (Stem cell reviews and reports 2025) states CRB1, CEP290, AIPL1, ATF6, EYS — paragraph:18 @ Results > Generation of ROs from iPSCs Derived from Patients with IRDs > Leber Congenital Amaurosis; PMID 38012786 (Stem cell research & therapy 2023) states AIPL1, CRB1, ATF6, CEP290 — paragraph:3 @ Application of patient-derived iPSCs in IRDs |
+| keratocyte | ABCB5, ABCG2, ACKR1, ACTA2, ALCAM, ALDH1A1 | — | baselines/ocular_surface.md, composition/EXPECTED_COMPOSITION_v0.md | PMID 37443842 (Cells 2023) states ABCB5, ABCG2, ACTA2, ALCAM, ALDH3A1, AQP1 — paragraph:9 @ 3. Classical and Novel Marker Genes Defining Cell States in the Cornea > 3.1. The Limbus and Limbal Epithelium; PMID 33865984 (The ocular surface 2021) states ABCB5, ABCG2, ACKR1, ACTA2, ALDH3A1 — paragraph:33 @ Discussion; PMID 34741068 (Scientific reports 2021) states ABCB5, ABCG2, ACTA2, ALCAM, ALDH3A1 — paragraph:6 @ Discussion |
+| rod bipolar cell | ARR3, BEST1, CACNA1F, CALB1, CLU, CRB1 | — | baselines/retina.md, link_registry/out/ANNOTATION_EVIDENCE_APPENDIX_v1.md | PMID 37794584 (Cell reports. Medicine 2023) states BEST1, CALB1, CLU, DAB1 — paragraph:57 @ STAR★Methods > Method details > snRNA-seq cell sub-type analysis; PMID 34445064 (International journal of molecular sciences 2021) states CRX, ARR3, BEST1, CLU — paragraph:8 @ 3. Single-Cell Sequencing Analysis in Human Retinal Photoreceptor Developmental Process > 3.1. Human Fetal Retina Development; PMID 33673358 (International journal of molecular sciences 2021) states CRB1, BEST1, CACNA1F, CRX — paragraph:6 @ 2. Alternative Splicing of Retinal Genes > 2.2. Novel Approaches to Detect Alternative Splicing Events |
 
 ## Library `face_v6` (default) — 7 entries
 
@@ -80,6 +88,12 @@ A citation is marked `states` when the gene symbols of this entry occur in the c
 | cDC1 | CLEC9A, XCR1, C1S, C1R, CADM1, ZBTB46 | — | link_registry/out/ANNOTATION_EVIDENCE_APPENDIX_v1.md, link_registry/out/ANNOTATION_EVIDENCE_SUMMARY_v1.md | PMID 38716077 (Upsala journal of medical sciences 2024) states CADM1, CLEC9A, FLT3, IRF8, XCR1 — paragraph:5 @ Introduction > The DC3 and mregDC states; PMID 35784369 (Frontiers in immunology 2022) states C1R, C1S — paragraph:7 @ Discussion > A Refined Map of Complement Expression in Retina, RPE and Choroid; PMID 31840941 (Stem cells translational medicine 2020) states C1R, C1S — paragraph:24 @ DISCUSSION |
 | cDC2 | CD1C, FCER1A, CLEC10A, CD4, HLA-DRA, S100A10 | — | link_registry/out/ANNOTATION_EVIDENCE_APPENDIX_v1.md, link_registry/out/ANNOTATION_EVIDENCE_SUMMARY_v1.md | PMID 38716077 (Upsala journal of medical sciences 2024) states CD1C, CD4, CLEC10A, FCER1A — paragraph:3 @ Introduction > Dendritic cell subtypes; PMID 37917183 (JCI insight 2023) states CD1C, CD4, CLEC10A, FCER1A — paragraph:10 @ Results > Immune cells in the fibrovascular membranes express proangiogenic genes.; PMID 42021381 (Biology direct 2026) states CD1C, CD4, CLEC10A — abstract:1 @ Abstract |
 | pDC | LILRA4, IL3RA, IRF7, GZMB, PLD4, CLEC4C | — | composition/COMP_SELFFLAG_20260928.md, link_registry/out/ANNOTATION_EVIDENCE_APPENDIX_v1.md | PMID 38716077 (Upsala journal of medical sciences 2024) states CLEC4C, GZMB, IL3RA, IRF7, LILRA4, TCF4 — table_row:43 @ Table: ; PMID 42059276 (Journal of diabetes research 2026) states CLEC4C, GZMB, IL3RA — table_row:74 @ Table: ; PMID 42021381 (Biology direct 2026) states GZMB, CLEC4C, LILRA4 — paragraph:33 @ Results > Dynamics of T cell subsets identified in scRNA-seq |
+
+## Library `onfibro_v13` (default) — 1 entries
+
+| cell type | key markers | textbook anchor | wiki page | backing papers |
+|---|---|---|---|---|
+| Fibroblast | BICC1, COL1A1, COL1A2, COL3A1, DCN, EYA2 | — | baselines/ciliary_body.md, baselines/lacrimal_gland.md | PMID 36712326 (PNAS nexus 2022) states DCN, COL1A1, COL1A2, COL3A1, FN1 — paragraph:6 @ Discussion; PMID 40576432 (Investigative ophthalmology & visual science 2025) states BICC1, COL1A1, COL1A2, FBN1 — paragraph:22 @ Results > Comprehensive Single-Cell Atlas of the Sclera in New Zealand Rabbits; PMID 35858321 (Proceedings of the National Academy of Sciences of the United States of America 2022) states BICC1, DCN, FBN1, FN1 — paragraph:10 @ Results > Ciliary Body. |
 
 ## Library `retina` (default) — 10 entries
 

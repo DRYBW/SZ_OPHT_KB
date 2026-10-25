@@ -19,7 +19,12 @@ OUT = HERE.parent / "out"
 REG = HERE.parent / "LINK_REGISTRY_v1.jsonl"
 
 # Which libraries feed the default answer surface vs which are reachable only by explicit routing.
-DEFAULT_ON = {"retina", "membrane", "retina_interneuron", "retina_v6", "face_v6", "k9_ocs", "antseg_v10"}
+# Re-taken 2026-10-25: `onfibro_v13` was activated on the default route on 2026-10-22 (after this
+# set was written, which is why the shipped registry predates its row too), so the label set is
+# corrected here and the appendix regenerated in the same change; `cl56_v15` is registered
+# REGISTERED_DEFAULT_OFF with an empty whitelist and is therefore NOT in this set.
+DEFAULT_ON = {"retina", "membrane", "retina_interneuron", "retina_v6", "face_v6", "k9_ocs",
+              "antseg_v10", "onfibro_v13"}
 
 
 def main():
