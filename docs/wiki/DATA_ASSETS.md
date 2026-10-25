@@ -1,14 +1,16 @@
 # Data Assets (marker-annotation project)
 
-> All paths verified to exist. Updated: 2026-09-28 (+ KB9 ocular-surface new-entry registration section)
+> All paths verified to exist. Updated: 2026-09-28 (+ KB9 ocular-surface new-entry registration section) + 2026-10-25: §1 corpus status aligned to the pointer (t_44d29ac9 CORPUSONE; canonical alignment table = delivery-mirror plans/consistency_20261024/CORPUS_IDENTITY_ALIGNMENT_v1.md)
 
-## 1. RAG literature library (literature_db, three versions coexisting)
+## 1. RAG literature library (`literature_db` — milestone versions; the full version ladder is authoritative in `kb/literature_db/EYEKB_DB_POINTER.yaml`)
 
 | Version | Path | Content | Status |
 |---|---|---|---|
 | v1.0_2026-08 | `ocularkb/rag/literature_db/v1.0_2026-08/` | retina 684 papers / 46,363 chunks / bge-large-en-v1.5 | **frozen read-only** |
 | v1.1_2026-08 | `ocularkb/rag/literature_db/v1.1_2026-08/` | retina supplement: 505 screened papers (not ingested at the time; its 32,789 chunks were back-computed in v2.0) | **frozen read-only** |
-| **v2.0_2026-09** | `ocularkb/rag/literature_db/v2.0_2026-09/` | **whole eye, 11 tissues, 2,713 papers / 174,616 chunks** (= v1.0 inheritance + v1.1 back-computation + 95,464 from new tissues), chunks.parquet 776MB + manifest + QA + coverage report | **active** |
+| **v2.0_2026-09** | `ocularkb/rag/literature_db/v2.0_2026-09/` | **whole eye, 11 tissues, 2,713 papers / 174,616 chunks** (= v1.0 inheritance + v1.1 back-computation + 95,464 from new tissues), chunks.parquet 776MB + manifest + QA + coverage report | **frozen read-only — MCP default until 2026-10-01 (legacy)** |
+| **v2.4.2_2026-09** | `ocularkb/rag/literature_db/v2.4.2_2026-09/` | = v2.4.1 fully inherited zero-recompute + ragfix3 wave: **3,869 papers with passages / 242,928 chunks** (papers.jsonl 3,884 lines incl. 15 zero-chunk ghosts); MCP default 2026-10-01 → 2026-10-05; released in this repo as the fp16 slim `literature_db/v2.4.2_2026-09_slim` (the verification corpus of `tests/REPRO_EXPECTED.json` / `tests/verify_repro.py`) | **frozen read-only — former default; the shipped/Release identity** |
+| **v2.6-dev_2026-10** | `ocularkb/rag/literature_db/v2.6-dev_2026-10/` | = v2.5-dev 243,302 chunks inherited zero-recompute + DEVLINE paywall wave 24 papers / 1,575 chunks: **3,902 papers with passages / 244,877 chunks** (papers.jsonl 3,917 lines incl. the 15 ghosts); dev-axis corpus, devline sidecars parked alongside (not yet wired into the stage3 filter) | **internal runtime default since 2026-10-05** (pointer `role: default`, DEV-ACT R1 re-cut with its three gates; shelf state lifted by PI 2026-10-05); **NOT shipped in this repo** |
 
 Companions: `QA_V2.md` (retina regression + per-tissue recall spot-checks + weak-coverage list), `build_stats.json`, manifest.yaml (contains the full per-tissue EPMC query strings).
 

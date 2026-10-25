@@ -1,5 +1,6 @@
 # OcularKB Literature Index (Full RAG Library)
 
+> ⚠️ 2026-10-25 (CORPUSONE t_44d29ac9) supersession banner: the v2.0 banner BELOW is a dated 2026-09-23 historical note. Library ladder since then: **v2.4.2_2026-09** = MCP default on 2026-10-01 (3,869 papers with passages / 242,928 chunks; fp16 slim shipped in this repo at `literature_db/v2.4.2_2026-09_slim`) → **v2.6-dev_2026-10** = internal runtime default since 2026-10-05 (DEV-ACT pointer re-cut; 3,902 papers with passages / 244,877 chunks; not shipped in this repo). Authoritative pointer: `kb/literature_db/EYEKB_DB_POINTER.yaml` (resolved at runtime from its `role: default` entry).
 > ⚠️ 2026-09-23 (KB1v2) Update: Active library upgraded to **v2.0_2026-09 = 2,713 papers / 174,616 chunks / 11 ocular tissue multi-labels**
 > (The count of 1,189 papers from v1.0 [684] + v1.1 [500] has been superseded; all tissue/topic subpages on this site have been regenerated for v2.0).
 > **Reading Layer Entry Points (KB1v2)**: Composition baselines `/mnt/D/EyeKB/kb/baselines/` (general ophthalmology, donor-level conditional reference distributions, anchored to D001/D002) |
