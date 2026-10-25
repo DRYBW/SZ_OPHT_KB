@@ -1,0 +1,23 @@
+[g6] changes=12 checks=21 fail=1 verdict=FAIL (instance:FAIL; template:PASS)
+  PASS G6-R1 REQUIRED :: [instance] empty required cells: 0
+  PASS G6-R2 EVIDENCE :: [instance] evidence cells without a resolvable anchor: 0
+  PASS G6-R3 NA :: [instance] rule-numbered NA defects: 0
+  PASS G6-R4 OUTCOME1 :: [instance] Q1 layer-id defects: 0
+  PASS G6-R5 MONOTONE :: [instance] Q3 rollback-term defects: 0
+  PASS G6-R6 PREREG :: [instance] Q4 sha-anchor defects: 0
+  PASS G6-R7 ESCAPE :: [instance] Q5 escape-door defects: 0
+  PASS G6-R8 PRECOND :: [instance] gate-precondition defects: 0
+  PASS G6-R2-CONCRETE  :: [instance] concrete-action cells without a command/threshold: 0
+  FAIL G6-R2-PORTABLE  :: [instance] path anchors by rule: declared-local=6, declared-not-distributed=1, exact=105, relative-absent=4, repo-relative=182, unresolved=1; unresolvable here: 1
+      - CHG-20261025-MCPDESC-ALIGN.Q3_evidence: /home/ubuntu/EYEKB_REPO/docs/plans/mcpdesc_20261025/out/PANEL_POST.json (names a repository path that is absent)
+  PASS G6-R1 REQUIRED :: [template] empty required cells: 0
+  PASS G6-R2 EVIDENCE :: [template] evidence cells without a resolvable anchor: 0
+  PASS G6-R3 NA :: [template] rule-numbered NA defects: 0
+  PASS G6-R4 OUTCOME1 :: [template] Q1 layer-id defects: 0
+  PASS G6-R5 MONOTONE :: [template] Q3 rollback-term defects: 0
+  PASS G6-R6 PREREG :: [template] Q4 sha-anchor defects: 0
+  PASS G6-R7 ESCAPE :: [template] Q5 escape-door defects: 0
+  PASS G6-R8 PRECOND :: [template] gate-precondition defects: 0
+  PASS G6-R2-CONCRETE  :: [template] concrete-action cells without a command/threshold: 0
+  PASS G6-R2-PORTABLE  :: [template] path anchors by rule: exact=22
+  PASS G6-MAP  :: checklist rows=14; covered=14; problems=0

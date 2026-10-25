@@ -1,0 +1,18 @@
+[10/25/26 10:49:02] INFO     JAX version 0.10.2 available.         config.py:125
+                    INFO     Loading SentenceTransformer model     model.py:1080
+                             from                                               
+                             /mnt/D/OcularKB/models/bge-large-en-v              
+                             1.5.                                               
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 4676.78it/s]
+DB: /mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09 | 242928 chunks, 6 species
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:09<00:00,  9.42s/it]Batches: 100%|██████████| 1/1 [00:09<00:00,  9.42s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 22.51it/s]
+{
+ "legacy_panel": "47e42230a8f7256b4ae9a78d4ff628d3",
+ "full_panel": "f97ff8ad2507f4d69a0e6e57406c2de1",
+ "n_legacy_calls": 10,
+ "n_calls": 12
+}
+tools advertised: explain_annotation, get_disease_prior, get_kb_page, get_release_identity, get_tissue_composition, query_marker, search_literature
+interpreter: /home/ubuntu/training-venv/bin/python (python 3.14.4, pydantic 2.12.5)
+recorded baseline -> docs/plans/mcpdesc_20261025/out/PANEL_PRE.json

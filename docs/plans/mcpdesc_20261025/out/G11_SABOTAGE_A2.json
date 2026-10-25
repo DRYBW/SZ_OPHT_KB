@@ -1,0 +1,75 @@
+{
+ "gate": "G11",
+ "script": "tests/gate_mcpdesc_corpus.py",
+ "final": "FAIL",
+ "ok": false,
+ "checks": [
+  {
+   "id": "G11-C01",
+   "name": "STATS-SOURCE",
+   "verdict": "PASS",
+   "detail": "bundled build record parses: n_papers=3869, n_chunks=242928",
+   "extra": {
+    "path": "literature_db/v2.4.2_2026-09_slim/build_stats.json",
+    "sha256": "9e1c51c566970cfb4b75a99ee0ef22a7783c5376258a0964056598e6c9129eb8"
+   }
+  },
+  {
+   "id": "G11-C02",
+   "name": "RENDER-NO-HARDCODE",
+   "verdict": "PASS",
+   "detail": "corpus clause renders from corpus_stats; retired v2.0 numbers absent from server.py"
+  },
+  {
+   "id": "G11-C03",
+   "name": "RENDER-MATCH",
+   "verdict": "PASS",
+   "detail": "rendered == bundled build record: 3869 papers / 242928 chunks (live:literature_db/v2.4.2_2026-09_slim/build_stats.json#n_papers,n_chunks)",
+   "extra": {
+    "rendered": [
+     3869,
+     242928
+    ],
+    "source": "live:literature_db/v2.4.2_2026-09_slim/build_stats.json#n_papers,n_chunks"
+   }
+  },
+  {
+   "id": "G11-C04",
+   "name": "FALLBACK-IDENTITY",
+   "verdict": "FAIL",
+   "detail": "fallback constants disagree with the pointer's registered v2.4.2_2026-09 identity",
+   "extra": {
+    "fallback": [
+     3860,
+     242928
+    ],
+    "pointer": [
+     3869,
+     242928
+    ]
+   }
+  },
+  {
+   "id": "G11-C05",
+   "name": "POINTER-AGREE",
+   "verdict": "PASS",
+   "detail": "bundled build record == registered v2.4.2 identity",
+   "extra": {
+    "build_stats": [
+     3869,
+     242928
+    ],
+    "pointer": [
+     3869,
+     242928
+    ]
+   }
+  },
+  {
+   "id": "G11-C06",
+   "name": "SELF-TEST",
+   "verdict": "PASS",
+   "detail": "planted hard-coded clause / drifted pair / mutated pointer all flagged"
+  }
+ ]
+}

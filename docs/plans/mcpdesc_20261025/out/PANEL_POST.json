@@ -1,0 +1,35 @@
+{
+ "calls": {
+  "explain_annotation:{\"cell_type\": \"Mueller cell\"}": "919fac6e91a67153a214870127407e13",
+  "explain_annotation:{\"cell_type\": \"Rod\"}": "bc10d68da5a502f2ca005c77e076875e",
+  "get_disease_prior:{\"disease\": \"PDR\"}": "7c724d1c4bac6031e55842214b50ca89",
+  "get_kb_page:{\"name\": \"vascular\", \"scope\": \"topic\"}": "80a7a27dfcfadb50d562126d61786243",
+  "get_kb_page:{\"scope\": \"index\"}": "72cb74c81ea17149ce7a9e6da96f279a",
+  "get_tissue_composition:{\"detail\": \"full\", \"species\": \"human\", \"tissue\": \"retina\"}": "53a3565cc92b8eca6462f24d6b77b10d",
+  "get_tissue_composition:{\"species\": \"mouse\", \"tissue\": \"retina\"}": "cf3c46ae8268a86f9180d7edfabc48a2",
+  "query_marker:{\"cell_type\": \"MG\"}": "7335ec685a420b35bff41f76b0bf1457",
+  "query_marker:{\"cell_type\": \"RPE\", \"library\": \"retina\"}": "46ff880c2551ce49241f24f9f1123a3d",
+  "query_marker:{\"genes\": [\"TMEM119\", \"CX3CR1\", \"P2RY12\", \"C1QA\", \"SALL1\", \"CSF1R\", \"AIF1\"]}": "31170c7b144e6f1b80e9fb1214eb0f2e",
+  "search_literature:{\"cell_type\": \"Muller glia\", \"query\": \"Mueller cell gliosis\", \"top_k\": 3}": "3d1486d08e40e980b0191af244c9af59",
+  "search_literature:{\"cell_type\": \"Rod\", \"top_k\": 3}": "69ca6bc891015bb622f57cf11402f2f1"
+ },
+ "full_panel": "b1023bdbde501e9d35e686b29d95f068",
+ "legacy_panel": "de0495c44a3cb1ac4320aaf863b16bab",
+ "n_calls": 12,
+ "n_legacy_calls": 10,
+ "provenance": {
+  "executable": "/home/ubuntu/training-venv/bin/python",
+  "pydantic": "2.12.5",
+  "python": "3.14.4"
+ },
+ "refused_calls": [],
+ "tools": [
+  "explain_annotation",
+  "get_disease_prior",
+  "get_kb_page",
+  "get_release_identity",
+  "get_tissue_composition",
+  "query_marker",
+  "search_literature"
+ ]
+}

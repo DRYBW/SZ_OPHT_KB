@@ -1,0 +1,8 @@
+[G11] description corpus coherence: PASS (rc=0)
+  G11-C01 STATS-SOURCE         PASS          bundled build record parses: n_papers=3869, n_chunks=242928
+  G11-C02 RENDER-NO-HARDCODE   PASS          corpus clause renders from corpus_stats; retired v2.0 numbers absent from server.py
+  G11-C03 RENDER-MATCH         PASS          rendered == bundled build record: 3869 papers / 242928 chunks (live:literature_db/v2.4.2_2026-09_slim/build_stats.json#n_papers,n_chunks)
+  G11-C04 FALLBACK-IDENTITY    PASS          fallback == pointer v2.4.2_2026-09 identity: 3869 papers / 242928 chunks
+  G11-C05 POINTER-AGREE        PASS          bundled build record == registered v2.4.2 identity
+  G11-C06 SELF-TEST            PASS          planted hard-coded clause / drifted pair / mutated pointer all flagged
+[G11] runout -> docs/plans/mcpdesc_20261025/out/G11_GREEN_AFTER_A2.json

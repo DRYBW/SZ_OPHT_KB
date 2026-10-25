@@ -1,0 +1,8 @@
+[G11] description corpus coherence: INCONCLUSIVE (rc=3)
+  G11-C01 STATS-SOURCE         INCONCLUSIVE  bundled build record not on disk: literature_db/v2.4.2_2026-09_slim/build_stats.json (fresh clone; the corpus ships as the G2 Release asset)
+  G11-C02 RENDER-NO-HARDCODE   PASS          corpus clause renders from corpus_stats; retired v2.0 numbers absent from server.py
+  G11-C03 RENDER-MATCH         INCONCLUSIVE  no live build record on this tree (see C01)
+  G11-C04 FALLBACK-IDENTITY    PASS          fallback == pointer v2.4.2_2026-09 identity: 3869 papers / 242928 chunks
+  G11-C05 POINTER-AGREE        INCONCLUSIVE  no live build record on this tree (see C01)
+  G11-C06 SELF-TEST            PASS          planted hard-coded clause / drifted pair / mutated pointer all flagged
+[G11] runout -> /tmp/mcpdesc_shadow_nocorpus_20261025T105455/G11_SHADOW_INCONCLUSIVE.json

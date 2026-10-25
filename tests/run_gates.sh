@@ -95,6 +95,19 @@ run_gate "G9 gate_preimage_ref_immutable (pre/post-image refs must be immutable)
 run_gate "G10 gate_switch_coverage (switch registry in sync; before/after arms separated)" \
   python3 tests/gate_switch_coverage.py --json "$OUT/G10_RESULTS.json"
 
+# G11 was added after the shipped service description kept quoting its launch-era corpus size
+# (v2.0's 2,713 papers / 174,616 passages) while the bundled corpus had been re-cut
+# (v2.4.2_2026-09_slim: 3,869 papers / 242,928 passages — the built-in switch of 2026-10-01).
+# The description now renders from mcp_server/corpus_stats.py (reads the bundled
+# build_stats.json; frozen fallback for a fresh clone). This gate re-derives every number
+# from disk: rendered vs bundled build_stats.json vs the pointer's registered v2.4.2 identity,
+# plus a no-hardcode scan of the description clause and a planted-shape self-test. A digit
+# sabotaged in the description or the fallback must flip rc to 2; a tree without the G2 corpus
+# asset is INCONCLUSIVE (rc=3), with the fallback still pinned to the pointer
+# (contract: docs/VERIFY_CONTRACT.md §5.6; evidence: docs/plans/mcpdesc_20261025/).
+run_gate "G11 gate_mcpdesc_corpus (description corpus numbers vs the bundled corpus)" \
+  python3 tests/gate_mcpdesc_corpus.py --json "$OUT/G11_RESULTS.json"
+
 printf '\n=================== summary ===================\n'
 bad=0
 for i in "${!NAMES[@]}"; do

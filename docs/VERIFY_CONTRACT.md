@@ -272,3 +272,44 @@ change**, so this contract registers the precondition that follows from it:
 - **Scope.** No other library is activated, no whitelist gains another entry, no exclusion row is
   withdrawn, and no score, admission floor or tie-break changes: the carrier is a class carrier.
 
+### §5.6 The service description's corpus numbers render from the bundled corpus (card t_2a047be0, 2026-10-25)
+
+**Defect registered.** The shipped description (mcp_server/server.py, `MCPServer(description=...)`)
+quoted its launch-era corpus identity — v2.0_2026-09's 2,713 papers / 174,616 passages — while the
+bundled corpus had been re-cut twice since: the built-in default switched to v2.4.2 on 2026-10-01
+(switch card t_b94d0999; kb/literature_db/EYEKB_DB_POINTER.yaml, block v2.4.2_2026-09, role:
+default, unique_papers 3869 / chunks 242928), whose bundled copy is
+literature_db/v2.4.2_2026-09_slim (build_stats.json: n_papers=3869, n_chunks=242928).
+A description edit is a byte change like any other and nothing on disk could catch its drift.
+
+**Fix (same commit as this contract line).** mcp_server/corpus_stats.py (stdlib-only, repo-relative)
+reads the bundled build record at import time and renders the description clause
+("bundled corpus of ... papers / ... passages"); a frozen fallback
+(FALLBACK_PAPERS / FALLBACK_CHUNKS, source file and keys named in the module) keeps the service
+startable on a fresh clone, where the corpus itself is not in the git tree (§G2 Release asset).
+The tool docstring that still claimed "the bundled v2.0_2026-09 corpus" was aligned to the actual
+resolution chain (EYEKB_DB_DIR -> pointer role:default -> the bundled v2.4.2_2026-09_slim corpus).
+
+**Machine gate.** G11 = tests/gate_mcpdesc_corpus.py, wired into tests/run_gates.sh and registered
+in docs/GATE_INVENTORY_G5G6.tsv. Six fail-closed checks (G11-C01..C06; see the gate's own header):
+rendered == bundled build_stats.json == pointer's registered v2.4.2 identity; fallback == pointer
+identity; the description clause must carry no baked-in digits (the dynamic render must stay wired)
+and the retired v2.0 numbers must not reappear in server.py; a planted-shape self-test proves the
+comparators flag the violation shapes. Exit 0 / 2 (FAIL) / 3 (INCONCLUSIVE — G2 asset absent on this
+tree; the chain counts rc=3 as not-pass, the G3 precedent). The pointer block is repo-committed, so
+the fallback stays verifiable on any clone.
+
+**Reverse controls measured on the real tree (docs/plans/mcpdesc_20261025/).**
+Description clause hard-coded one digit wrong (3,859 / 242,918) -> rc=2
+(out/G11_SABOTAGE_A1.json, C02 names the clause); restored byte-identical -> rc=0
+(out/G11_GREEN_AFTER_A1.json). Fallback constant one digit wrong (3860) -> rc=2
+(out/G11_SABOTAGE_A2.json, C04 names the pair); restored byte-identical -> rc=0
+(out/G11_GREEN_AFTER_A2.json). Shadow root without the corpus asset (copy, no move) -> rc=3 with
+C04 still enforced (out/G11_SHADOW_INCONCLUSIVE.json).
+
+**Scope note (registered, not silently dropped).** The D-side runtime entry
+(/mnt/D/EyeKB/mcp_server/server.py) carries the same retired numbers in its own older-generation
+description ("v2.0 whole-eye-bank 174,616 chunks / 2,713 papers"). Delivery authority is the repo
+side; the runtime copy picks this correction up on its next mirror sync of mcp_server/
+(CHG-20261025-MCPDESC-ALIGN in docs/CHANGE_CONTROL_G6_INSTANCE.tsv).
+

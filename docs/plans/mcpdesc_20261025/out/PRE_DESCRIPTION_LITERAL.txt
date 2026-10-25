@@ -1,0 +1,48 @@
+== PRE description literal (server.py 95-125) ==
+    """
+    return ToolAnnotations(title=title, readOnlyHint=True, destructiveHint=False,
+                           idempotentHint=True, openWorldHint=False)
+
+app = MCPServer(
+    name="eyekb",
+    title="EyeKB ophthalmic knowledge-base evidence service",
+    version=SERVER_VERSION,
+    description=("Ophthalmic knowledge base for cell-type annotation. (1) Literature retrieval over a "
+                 "bundled corpus of 2,713 papers / 174,616 passages covering the whole eye; each result "
+                 "carries PMID, journal, year, co-occurring markers, a relevance score and the "
+                 "inclusion_reasons / claim_relation / evidence_context fields plus a verification status. "
+                 "(2) Knowledge-base index pages (tissue and topic). (3) A local authoritative marker "
+                 "library, queryable as a whole or by library name (retina, retina_interneuron, retina_v6, "
+                 "retina_v7, retina_dev, face_v6, membrane, k9_ocs, lacrimal_v6), with species routing for "
+                 "gene-symbol queries. (4) An interpretation layer: donor-level expected-composition "
+                 "baselines and a disease x tissue matrix with sampling-material mismatch warnings. "
+                 "Red line: returned content is evidence for human interpretation and QC only; it must not "
+                 "become input to any score, weighting, ranking or composite QC score. "
+                 "Behaviour toggles, each of which restores the previous behaviour when switched off: "
+                 "EYEKB_ACT_V6, EYEKB_ACT_ANTSEG, EYEKB_KBGOV_B5, EYEKB_CN_REWRITE; the additional marker "
+                 "libraries are opt-in by name and never enter the default set. Optional libraries stay "
+                 "reachable by explicit query only, in any state."),
+    instructions=("EyeKB tools: query_marker checks the local marker library first; "
+                  "search_literature retrieves literature evidence (everything traceable via PMID); "
+                  "get_kb_page reads tissue/topic index pages; before annotating, follow the four stages of "
+                  "the annotation protocol (docs/skills/protocols/ANNOTATION_PROTOCOL_v1.3.md) using "
+                  "get_tissue_composition (against the actual sampling material!) / get_disease_prior "
+                  "(call it only in the post-freeze disease-contrast stage). "
+                  "get_release_identity reports which release of this service is answering. "
+                  "Before any comparison, declare the tissue from the dataset's own metadata "
+
+@app.tool(title="Search ophthalmic literature", annotations=_read_only("Search ophthalmic literature"))
+def search_literature(cell_type: str, top_k: int = 5, species: str = "",
+                      tissue: str = "", query: str = "", db: str = "") -> dict:
+    """Retrieve literature passages for a cell type / tissue from the bundled ophthalmic corpus.
+    Returns passage text, PMID, journal, year, the marker genes that co-occur, and a relevance
+    score. top_k controls how many passages come back (default 5).
+
+    cell_type: metadata filter, e.g. "Muller glia" or "corneal endothelium". Recommended.
+    species:   human | mouse | "" (no filter).
+    tissue:    multi-label tissue filter, e.g. retina, cornea, RPE, choroid.
+    query:     your own search sentence; when empty, a template sentence is built from cell_type.
+    db:        empty = the bundled v2.0_2026-09 corpus, or an absolute path to another corpus.
+
+    Chinese questions are accepted. A deterministic term-level bridge inserts English anchor
+    terms in place without deleting any of your characters; it is not a translator. The bridge

@@ -1,0 +1,93 @@
+{
+ "gate": "G5",
+ "script": "/home/ubuntu/EYEKB_REPO/tests/gate_registry.py",
+ "generated_at": "2026-10-25T10:58:48+08:00",
+ "note": "generated_at = ownership-ledger mtime: same inputs -> same bytes -> the outer manifest does not go stale on re-run",
+ "inputs": {
+  "registry": "/home/ubuntu/EYEKB_REPO/docs/W3_PIPELINE_REGISTRY.tsv",
+  "gate_inventory": "/home/ubuntu/EYEKB_REPO/docs/GATE_INVENTORY_G5G6.tsv",
+  "drift_ledger": "/home/ubuntu/EYEKB_REPO/tests/fixtures/g5/snapshot_drift_ledger.tsv",
+  "entry": "/home/ubuntu/EYEKB_REPO/tests/run_gates.sh",
+  "as_of": "2026-10-12"
+ },
+ "ledger_rows": 143,
+ "inventory_rows": 11,
+ "verdict": "FAIL",
+ "n_checks": 8,
+ "n_fail": 1,
+ "dispensed": [
+  "L1-21(SPEC_SPECIES_ROUTING.md)",
+  "L2-05(GEN_CONFIG_VERSION.json)",
+  "L5-13(REGRESSION_OFF_BYTEIDENTITY.log)",
+  "L6-13(C_ARM_PRIMAR_YLINE_FREEZE_v1.0.md)"
+ ],
+ "checks": [
+  {
+   "code": "G5-C01",
+   "label": "SCHEMA",
+   "status": "FAIL",
+   "detail": "missing_columns=none; empty_required_cells=0; bad_surface_values=2 (allowed: repo, local)",
+   "n_offenders": 2,
+   "offenders": [
+    "L1-33.surface='repo (delivery authority)'",
+    "L6-48.surface='repo (delivery authority)'"
+   ]
+  },
+  {
+   "code": "G5-C02",
+   "label": "ID-UNIQUE",
+   "status": "PASS",
+   "detail": "ledger 143 rows/143 ids; inventory 11 rows/11 ids",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G5-C03",
+   "label": "OWNER",
+   "status": "PASS",
+   "detail": "empty/placeholder owners: 0 (16 short-shorthand rows pass as non-empty; ledger-side criterion)",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G5-C04",
+   "label": "REF-EXIST",
+   "status": "PASS",
+   "detail": "missing paths=0; dangling id refs=0; surface repo=61/local=80; local-unavailable=0 (declared local roots: /mnt/D/EyeKB)",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G5-C05",
+   "label": "SHA-MATCH",
+   "status": "PASS",
+   "detail": "live-vs-registered mismatches=0; dispensed-by-ledger=4; vcs-metadata-skipped=1 (.git/** bytes depend on how the clone was checked out)",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G5-C06",
+   "label": "LEDGER",
+   "status": "PASS",
+   "detail": "ledger entries=4; problems=0; stale dispensations=0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G5-C07",
+   "label": "UNREG-LOAD",
+   "status": "PASS",
+   "detail": "unregistered/mismatched gate scripts invoked by the entry: 0",
+   "n_offenders": 0,
+   "offenders": []
+  },
+  {
+   "code": "G5-C08",
+   "label": "CERT-EXPIRY",
+   "status": "PASS",
+   "detail": "as_of=2026-10-12; expired declared certifications=0",
+   "n_offenders": 0,
+   "offenders": []
+  }
+ ]
+}

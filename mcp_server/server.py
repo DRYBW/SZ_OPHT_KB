@@ -47,6 +47,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import eyekb_core as core  # noqa: E402
 import calllog  # call-tracing layer: logging only, no change in behaviour (see mcp_server/calllog.py)
+import corpus_stats  # bundled-corpus numbers for the description below (see mcp_server/corpus_stats.py;
+                     # machine gate G11 tests/gate_mcpdesc_corpus.py pins it to the bundled build_stats.json
+                     # and to the pointer's registered v2.4.2 identity; frozen fallback for fresh clones)
 
 from mcp.server import MCPServer  # noqa: E402
 from mcp.types import ToolAnnotations  # noqa: E402
@@ -101,7 +104,7 @@ app = MCPServer(
     title="EyeKB ophthalmic knowledge-base evidence service",
     version=SERVER_VERSION,
     description=("Ophthalmic knowledge base for cell-type annotation. (1) Literature retrieval over a "
-                 "bundled corpus of 2,713 papers / 174,616 passages covering the whole eye; each result "
+                 f"bundled corpus of {corpus_stats.BUNDLED_CORPUS_LINE} covering the whole eye; each result "
                  "carries PMID, journal, year, co-occurring markers, a relevance score and the "
                  "inclusion_reasons / claim_relation / evidence_context fields plus a verification status. "
                  "(2) Knowledge-base index pages (tissue and topic). (3) A local authoritative marker "
@@ -194,7 +197,8 @@ def search_literature(cell_type: str, top_k: int = 5, species: str = "",
     species:   human | mouse | "" (no filter).
     tissue:    multi-label tissue filter, e.g. retina, cornea, RPE, choroid.
     query:     your own search sentence; when empty, a template sentence is built from cell_type.
-    db:        empty = the bundled v2.0_2026-09 corpus, or an absolute path to another corpus.
+    db:        empty = default resolution (EYEKB_DB_DIR env -> the pointer's role:default corpus -> the
+               bundled v2.4.2_2026-09_slim corpus), or an absolute path to another corpus.
 
     Chinese questions are accepted. A deterministic term-level bridge inserts English anchor
     terms in place without deleting any of your characters; it is not a translator. The bridge

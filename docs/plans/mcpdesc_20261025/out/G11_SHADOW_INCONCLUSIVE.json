@@ -1,0 +1,54 @@
+{
+ "gate": "G11",
+ "script": "tests/gate_mcpdesc_corpus.py",
+ "final": "INCONCLUSIVE",
+ "ok": false,
+ "checks": [
+  {
+   "id": "G11-C01",
+   "name": "STATS-SOURCE",
+   "verdict": "INCONCLUSIVE",
+   "detail": "bundled build record not on disk: literature_db/v2.4.2_2026-09_slim/build_stats.json (fresh clone; the corpus ships as the G2 Release asset)"
+  },
+  {
+   "id": "G11-C02",
+   "name": "RENDER-NO-HARDCODE",
+   "verdict": "PASS",
+   "detail": "corpus clause renders from corpus_stats; retired v2.0 numbers absent from server.py"
+  },
+  {
+   "id": "G11-C03",
+   "name": "RENDER-MATCH",
+   "verdict": "INCONCLUSIVE",
+   "detail": "no live build record on this tree (see C01)"
+  },
+  {
+   "id": "G11-C04",
+   "name": "FALLBACK-IDENTITY",
+   "verdict": "PASS",
+   "detail": "fallback == pointer v2.4.2_2026-09 identity: 3869 papers / 242928 chunks",
+   "extra": {
+    "fallback": [
+     3869,
+     242928
+    ],
+    "pointer": [
+     3869,
+     242928
+    ]
+   }
+  },
+  {
+   "id": "G11-C05",
+   "name": "POINTER-AGREE",
+   "verdict": "INCONCLUSIVE",
+   "detail": "no live build record on this tree (see C01)"
+  },
+  {
+   "id": "G11-C06",
+   "name": "SELF-TEST",
+   "verdict": "PASS",
+   "detail": "planted hard-coded clause / drifted pair / mutated pointer all flagged"
+  }
+ ]
+}
