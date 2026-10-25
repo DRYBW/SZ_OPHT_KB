@@ -1,0 +1,8 @@
+[G12] citation presentation metadata: PASS (rc=0)
+  G12-C01 SOURCE-FIX         PASS          builder carries the fix: corpus_meta_index() present, citation_field(..., "title") at 3 sites, neither pre-fix literal present
+  G12-C02 META-PRESENT       PASS          all 3993 citation records carry title_full, doi, pmcid [registry under test: delivered anchor twin (the live registry does not carry the three keys ye
+  G12-C03 META-FROM-CORPUS   PASS          corpus v2.4.2_2026-09_slim: 3993 citation records checked; title_full mismatches=0 empty=0 doi mismatches=0 pmcid mismatches=0 unresolved ids=0
+  G12-C04 COVERAGE           PASS          165 rows and 3993 (entry_id, pmid) pairs identical to the pre-image
+  G12-C05 ANCHOR             PASS          165 lines: anchor twin inverts to the pre-image byte-for-byte and the drop-in is the anchor twin derived by title := title_full; pre-image sha a04be77
+  G12-C06 BUILDER-PARITY     PASS          builder reader vs this gate's reader: 3993 ids compared, 0 disagreements; builder sources=2
+  G12-C07 SELF-TEST          PASS          planted pre-fix source literal / dropped metadata key / broken inversion all flagged

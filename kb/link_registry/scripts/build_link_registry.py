@@ -10,6 +10,13 @@ One row per knowledge entry, carrying the five fields that define a live link:
 
 Rows are written to out/LINK_REGISTRY_v1.jsonl plus a coverage summary.
 No network access: citations come only from the local RAG corpus.
+
+Citation records carry the paper's own presentation metadata — `title` (complete, never a
+120-character prefix), `doi`, `pmcid` — joined from the corpus on `paper_id == pmid`. Before card
+t_d8e7f2d4 (CITTITLE) `title` was `(hit title)[:120]` on the retrieval route and `""` on the
+full-text gene-index route, so a title-keyed audit could only ever see ~30% of the citations and
+reported it as "the two libraries disagree". Both numbers are re-measured here on every build and
+printed; see `citation_field()` / `corpus_meta_index()`.
 """
 import json
 import os
@@ -90,6 +97,74 @@ def load_paper_tissues():
     except Exception:                                                  # noqa: BLE001
         return {}
     return out
+
+
+# Presentation metadata a citation record carries about the paper it cites (card t_d8e7f2d4).
+CITATION_META_FIELDS = ("title", "doi", "pmcid", "is_preprint")
+
+
+def corpus_meta_index():
+    """paper_id -> {title, doi, pmcid, is_preprint} from the shipped corpus, plus the sources used.
+
+    Why this exists (card t_d8e7f2d4, CITTITLE). A citation record carried `pmid` and a title the
+    builder had already cut to 120 characters — or an empty string, for the papers admitted through
+    the full-text gene index. Both are defects of THIS file, not of the corpus: every cited paper is
+    present in the corpus and the corpus' own `title` field is complete. A title-keyed audit was
+    therefore comparing a clipped or blank key against a full one and reading the mismatch as "the
+    two libraries disagree".
+
+    The join key is `paper_id == pmid`. That is not an assumption made here: it is the same field
+    carried through the chain (corpus build -> retrieval kernel -> this registry) and it is
+    re-measured on every build — the caller prints how many cited ids failed to resolve, and any
+    non-zero count is visible rather than silently blanking a title.
+
+    Resolution follows the chain the citations themselves come from: EYEKB_DB_DIR, then the
+    repository's default-DB resolution (`mcp_server/eyekb_core._default_db_dir()`, i.e. the pointer's
+    role:default entry), then the repo-committed G2 slim library. **This function is read-only and
+    changes no route** — it resolves the same library the retrieval layer already answers from.
+    """
+    cands = []
+    env = os.environ.get("EYEKB_DB_DIR")
+    if env:
+        cands.append(Path(env))
+    try:
+        cands.append(Path(core._default_db_dir()))
+    except Exception:                                                  # noqa: BLE001
+        pass
+    cands.append(ROOT / "literature_db" / "v2.4.2_2026-09_slim")
+    out, sources = {}, []
+    for db in cands:
+        p = Path(db) / "papers.jsonl"
+        if not p.is_file():
+            continue
+        sources.append(str(p))
+        try:
+            with p.open(encoding="utf-8") as fh:
+                for line in fh:
+                    if not line.strip():
+                        continue
+                    d = json.loads(line)
+                    pid = str(d.get("paper_id") or d.get("pmid") or "")
+                    if not pid:
+                        continue
+                    out[pid] = {k: ("" if d.get(k) is None else d.get(k))
+                                for k in CITATION_META_FIELDS}
+        except Exception:                                              # noqa: BLE001
+            continue
+    return out, sources
+
+
+def citation_field(meta, pmid, key, fallback=""):
+    """One corpus metadata field for a cited paper, with the retrieval hit as the fallback.
+
+    Never returns a truncated value: the point of the CITTITLE fix is that a citation's title is the
+    paper's own title, not a 120-character prefix of it. Falls back to `fallback` (the search hit's
+    own value) only when the id does not resolve in the corpus — and the caller reports that count.
+    """
+    v = (meta.get(str(pmid)) or {}).get(key)
+    if v in (None, ""):
+        v = fallback
+    return v if isinstance(v, str) else ("" if v is None else str(v))
 
 
 def _norm(s):
@@ -195,6 +270,15 @@ def main():
     books = book_index()
     gidx = gene_index()
     paper_tissues = load_paper_tissues()
+    cmeta, corpus_srcs = corpus_meta_index()
+    if not cmeta:
+        print("WARNING: citation presentation metadata (title/doi/pmcid) could not be read from any "
+              "corpus copy; the gene-index route would then write EMPTY titles and a title-keyed "
+              "audit would be unanswerable (card t_d8e7f2d4).")
+    else:
+        print(f"citation metadata: {len(cmeta)} papers indexed from {corpus_srcs[0]}"
+              + (f" ({len(corpus_srcs)} corpus copies read, later ones override earlier ones)"
+                 if len(corpus_srcs) > 1 else ""))
     if not gidx:
         print("WARNING: GENE_PAPER_INDEX_v1.tsv missing - citations cannot be verified against "
               "paper full text; run scripts/build_gene_paper_index.py first")
@@ -229,7 +313,13 @@ def main():
                     pmids.append(pmid)
                     cites.append({
                         "pmid": pmid,
-                        "title": (hit.get("title") or "")[:120],
+                        # Was (hit.get("title") or "")[:120] — a 120-character prefix is not a title
+                        # and cannot be matched against one (card t_d8e7f2d4). The corpus' own field
+                        # is complete; the retrieval hit carries the same string and is used only
+                        # when the id fails to resolve, which the caller reports.
+                        "title": citation_field(cmeta, pmid, "title", hit.get("title")),
+                        "doi": citation_field(cmeta, pmid, "doi"),
+                        "pmcid": citation_field(cmeta, pmid, "pmcid"),
                         "journal": hit.get("journal", ""),
                         "year": hit.get("year", ""),
                         "tissues": ",".join(tl) if isinstance(tl, list) else str(tl),
@@ -296,7 +386,12 @@ def main():
                 first_sec = [s for s in top_meta["sections"].split("|") if s] or [""]
                 return {
                     "pmid": pid,
-                    "title": "",
+                    # Was "" — the gene-index route wrote no title at all, so 2,429 of the registry's
+                    # citation records had no title key a reader (or an audit) could use, although the
+                    # corpus holds it (card t_d8e7f2d4, CITTITLE).
+                    "title": citation_field(cmeta, pid, "title"),
+                    "doi": citation_field(cmeta, pid, "doi"),
+                    "pmcid": citation_field(cmeta, pid, "pmcid"),
                     "journal": top_meta["journal"],
                     "year": top_meta["year"],
                     "tissues": paper_tissues.get(pid, ""),
@@ -462,6 +557,16 @@ def main():
     with (HERE.parent / "LINK_REGISTRY_v1.jsonl").open("w", encoding="utf-8") as fh:
         for r in rows:
             fh.write(json.dumps(r, ensure_ascii=False) + "\n")
+
+    # CITTITLE re-measurement (card t_d8e7f2d4): a title-keyed audit is only answerable if every
+    # citation record carries a non-empty, untruncated title. Both numbers are printed on every build
+    # so the defect cannot come back unnoticed.
+    cited = {c["pmid"] for r in rows for c in (r.get("citations") or [])}
+    n_cit = sum(len(r.get("citations") or []) for r in rows)
+    untitled = sorted(p for p in cited if not citation_field(cmeta, p, "title"))
+    print(f"citation titles: records={n_cit} distinct_papers={len(cited)} "
+          f"resolved={len(cited) - len(untitled)} unresolved={len(untitled)}"
+          + (f" UNRESOLVED={untitled[:10]}" if untitled else ""))
 
     # Same rule as the gate: evidence is a paper OR a textbook page; a page, a route and a skill
     # entry point are always required.

@@ -313,3 +313,52 @@ description ("v2.0 whole-eye-bank 174,616 chunks / 2,713 papers"). Delivery auth
 side; the runtime copy picks this correction up on its next mirror sync of mcp_server/
 (CHG-20261025-MCPDESC-ALIGN in docs/CHANGE_CONTROL_G6_INSTANCE.tsv).
 
+### §5.7 Citation presentation metadata on the link registry (card t_d8e7f2d4, 2026-10-25)
+
+**Defect registered.** Every citation record in `kb/link_registry/LINK_REGISTRY_v1.jsonl` carries a
+`pmid` and a `title`, and the title was unusable as a key: `kb/link_registry/scripts/
+build_link_registry.py` wrote `(hit title)[:120]` on the retrieval route and `""` on the full-text
+gene-index route. Measured on the shipped file: of 3,993 citation records, 2,429 have no title at all
+and 509 carry a 120-character prefix of one (511 read as length 120, of which 2 are papers whose real
+title is 120 characters long). All 825 cited papers are present in the corpus and the corpus holds the
+complete title, so nothing on disk could catch the drift — and a title-keyed audit against the corpus
+reported 247/825 (29.94%) strict, 369/825 (44.73%) prefix-40, which reads as "the two libraries
+disagree" when in fact **zero** of the failures are a genuine title difference: 455 papers had no
+citation-side title, 122 had a clipped one, 1 differed only by HTML/Unicode display marks.
+
+**Fix (same commit as this contract line).** The builder gains `corpus_meta_index()` (reads the
+shipped corpus into `paper_id -> {title, doi, pmcid, is_preprint}` through the same resolution chain
+the citations come from: `EYEKB_DB_DIR` → `eyekb_core._default_db_dir()` → the in-repo G2 slim
+library; read-only, no route change) and `citation_field()`, and writes the **complete** title plus
+`doi` / `pmcid` on both citation routes. The frozen registry is deliberately **not** rewritten: the
+repaired registry ships as a new file beside it, `docs/plans/cittitle_20261025/out/
+LINK_REGISTRY_v2_cittitle.jsonl` (anchor twin: remove the three added keys and every line equals the
+frozen file byte-for-byte) with `…_dropin.jsonl` derived from it by `title := title_full`.
+
+**Machine gate.** G12 = `tests/gate_cittitle_meta.py`, wired into `tests/run_gates.sh` and registered
+in `docs/GATE_INVENTORY_G5G6.tsv`. Seven fail-closed checks (G12-C01..C07; see the gate's own header):
+the builder carries the fix and neither pre-fix literal is back; every citation record of the registry
+under test carries the three fields; those fields equal the corpus for its `pmid`; coverage matches the
+frozen registry and the pre-image; the anchor twin inverts to the pre-image and the drop-in derives
+from it, both byte-for-byte; the builder's own corpus reader agrees with the gate's independent
+reader; and a planted-shape self-test proves the comparators are not vacuous. Exit 0 / 2 (FAIL) / 3
+(INCONCLUSIVE — no corpus copy on this tree; the G3/G11 precedent, counted as not-pass by the chain).
+`EYEKB_G12_CORPUS` overrides the corpus candidate list and exists so the INCONCLUSIVE branch can be
+exercised on a real tree without moving the corpus.
+
+**Reverse controls measured on the real tree (docs/plans/cittitle_20261025/).** The battery plants
+each shape, runs the gate, then restores and re-hashes: CLEAN rc=0; a pre-fix `[:120]` literal planted
+back into the builder rc=2 with G12-C01 naming it; a mutated `title_full` rc=2 (G12-C03, plus the
+consequential G12-C05/C06 incoherence); a mutated pre-existing citation key rc=2 (G12-C05); a dropped
+row rc=2 (G12-C04); a missing corpus rc=3 (G12-C03). All planted files came back byte-identical
+(`out/G12_CONTROLS.json`).
+
+**Scope note (registered, not silently dropped).** The two registry files stay in the card's delivery
+tree; promoting either into `kb/link_registry/` — which would move the knowledge-bundle identity — is
+the coordinator's decision, and this card neither performs nor implies it. The builder change means a
+rebuild now carries the three fields; until such a rebuild, a consumer of the frozen file still sees
+the defect. The post-fix match rate is 825/825 **by construction** (same-source join) and is recorded
+as such, never as evidence that the two libraries agree; the non-circular readings are the same
+comparison against two other corpus copies, the journal/year field controls on the same join, and the
+243 already-complete citation titles (written by the frozen builder, not by this card) matching the
+corpus 243/243.

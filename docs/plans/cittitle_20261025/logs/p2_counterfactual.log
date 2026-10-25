@@ -1,0 +1,8 @@
+[counterfactual] papers=825 records=3993
+  A_strict_full_equality   N1_raw             pre 247/825 (29.94%) -> post 825/825 (100.0%)
+  A_strict_full_equality   N2_display_stripped pre 248/825 (30.06%) -> post 825/825 (100.0%)
+  B_prefix40               N1_raw             pre 369/825 (44.73%) -> post 825/825 (100.0%)
+  B_prefix40               N2_display_stripped pre 370/825 (44.85%) -> post 825/825 (100.0%)
+[counterfactual] pre ledger classes {'FULL_OK': 1074, 'CAPPED_120': 488, 'EMPTY': 2429, 'GENUINE_120': 2}
+[counterfactual] controls {'journal_agree': 820, 'journal_denom': 825, 'year_agree': 825, 'year_denom': 825, 'pre_full_ok_strict': 243, 'pre_full_ok_denom': 243, 'pre_capped_prefix40': 115, 'pre_capped_denom': 115}
+[counterfactual] unmatched rows: pre=2066 post=0

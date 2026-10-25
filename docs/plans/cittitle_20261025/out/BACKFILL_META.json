@@ -1,0 +1,88 @@
+{
+ "card": "t_d8e7f2d4",
+ "what": "citation records carry the paper's own title/doi/pmcid, joined from the corpus on paper_id == pmid",
+ "inputs": {
+  "frozen_registry": {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/link_registry/LINK_REGISTRY_v1.jsonl",
+   "sha256": "a04be7711131225129ed6a8f6d3cb08862216c9187307a8a2b663b7bdd15e9cf",
+   "lines": 165
+  },
+  "corpora": [
+   {
+    "role": "declared_primary",
+    "path": "/home/ubuntu/EYEKB_REPO/literature_db/v2.4.2_2026-09_slim/papers.jsonl",
+    "sha256": "7883f8db5bb235ecee95efa39c22129bb33b9d898af0817e3be647239fae5cea",
+    "papers": 3884
+   }
+  ],
+  "cross_check_corpora": [
+   {
+    "path": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl",
+    "present": true,
+    "sha256": "7883f8db5bb235ecee95efa39c22129bb33b9d898af0817e3be647239fae5cea",
+    "papers": 3884
+   },
+   {
+    "path": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl",
+    "present": true,
+    "sha256": "acf2a567cbcb0351371e5ab903e5bf9bb8b4e9364a7d9a2d1c738ed522980b9b",
+    "papers": 3917
+   }
+  ],
+  "declared_primary_reason": "the G2 slim library is the contract's sole official corpus channel (docs/VERIFY_CONTRACT.md §G2) and is the copy present in the repository"
+ },
+ "join": {
+  "key": "citation.pmid == corpus.paper_id",
+  "cited_ids": 825,
+  "resolved": 825,
+  "unresolved": 0,
+  "title_missing_in_corpus": 0,
+  "doi_missing_in_corpus": 0,
+  "pmcid_missing_in_corpus": 5,
+  "cross_copy_title_disagreements": 0,
+  "cross_copy_disagreement_sample": []
+ },
+ "counts": {
+  "rows": 165,
+  "citation_records": 3993,
+  "distinct_cited_papers": 825,
+  "citation_records_by_source": {
+   "corpus search": 1564,
+   "gene index (full text)": 2429
+  },
+  "title_state_pre_fix": {
+   "EMPTY_CITED": 2429,
+   "TRUNCATED_120": 511,
+   "OK": 1053
+  },
+  "title_state_post_anchor_twin__title_full": {
+   "EMPTY_CITED": 0,
+   "TRUNCATED_120": 32,
+   "OK": 3961
+  },
+  "title_state_post_dropin__title": {
+   "EMPTY_CITED": 0,
+   "TRUNCATED_120": 32,
+   "OK": 3961
+  },
+  "records_carrying_all_three_added_keys": 3993
+ },
+ "outputs": {
+  "anchor_twin": {
+   "path": "/home/ubuntu/EYEKB_REPO/docs/plans/cittitle_20261025/out/LINK_REGISTRY_v2_cittitle.jsonl",
+   "sha256": "0d49ee04dc0a940d183ad887af592b1be39c59c71621a0df5816cef94198b549",
+   "bytes": 3259193,
+   "lines": 165
+  },
+  "dropin": {
+   "path": "/home/ubuntu/EYEKB_REPO/docs/plans/cittitle_20261025/out/LINK_REGISTRY_v2_cittitle_dropin.jsonl",
+   "sha256": "ba5e71b5b19b4a558e0b2f3e47f4419995ecea5c9d4e8c88702b3fbdfe411e18",
+   "bytes": 3553292,
+   "lines": 165
+  }
+ },
+ "inversion": {
+  "anchor_twin": "json.dumps(row with title_full/doi/pmcid removed) == frozen line, for every line (asserted during this run, bytes)",
+  "dropin": "drop-in == anchor twin with title := title_full, for every line (asserted during this run, bytes). The drop-in is NOT invertible on its own: `title` was overwritten, so the pre-fix value lives only in the anchor twin."
+ }
+}

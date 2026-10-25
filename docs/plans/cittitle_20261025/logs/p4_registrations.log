@@ -1,0 +1,24 @@
+== contract ==
+  sect 5.7 appended; contract sha e2b35ac74b8ae3b8
+== gate inventory ==
+G12 sha 8c44b60387420dd1d98d684c748fd46ca8488e3896396e0e8455d2319b9cb9c3
+== W3 registry ==
+  re-take L6-01 docs/VERIFY_CONTRACT.md: 00c8dc51d7007b09 -> e2b35ac74b8ae3b8 (30923 B)
+  re-take L6-22 kb/link_registry/scripts/build_link_registry.py: 483ff1462031f0e2 -> 304317cc2402308a (29016 B)
+  add     L6-53 tests/gate_cittitle_meta.py: 8c44b60387420dd1 (20620 B)
+  add     L6-54 tests/run_gates.sh: a247e4bab48fe8f8 (7883 B)
+  add     L6-55 docs/plans/cittitle_20261025/out/LINK_REGISTRY_v2_cittitle.jsonl: 0d49ee04dc0a940d (3259193 B)
+  add     L6-56 docs/plans/cittitle_20261025/out/LINK_REGISTRY_v2_cittitle_dropin.jsonl: ba5e71b5b19b4a55 (3553292 B)
+  add     L6-57 docs/plans/cittitle_20261025/out/CITATION_META_SPEC_v1.md: cb4bbcf30389af2d (12689 B)
+== change control ==
+Traceback (most recent call last):
+  File "/home/ubuntu/EYEKB_REPO/docs/plans/cittitle_20261025/scripts/registrations.py", line 508, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/ubuntu/EYEKB_REPO/docs/plans/cittitle_20261025/scripts/registrations.py", line 502, in main
+    print(" ", append_g6())
+               ~~~~~~~~~^^
+  File "/home/ubuntu/EYEKB_REPO/docs/plans/cittitle_20261025/scripts/registrations.py", line 405, in append_g6
+    assert head[0] == "change_id", head[:3]
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ['# G6 变更控制实例（机器可读；人读版=docs/W3_CHANGE_CONTROL_CHECKLIST.md）。']

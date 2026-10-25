@@ -1,0 +1,8 @@
+  [PASS] CLEAN              rc=0 (want 0) failing=[] unmodified tree
+  [PASS] SOURCE-REGRESSION  rc=2 (want 2) failing=['G12-C01'] pre-fix [:120] literal planted back into the builder
+  [PASS] TITLE-DRIFT        rc=2 (want 2) failing=['G12-C03', 'G12-C05', 'G12-C06'] one citation's title_full mutated: C03 names the drift; C05 and C06 also report the resulting incoherence (the drop-in derives from the twin, the builder reader is the reference the twin was filled from), which is correct consequential detection
+  [PASS] ANCHOR-BREAK       rc=2 (want 2) failing=['G12-C05'] a pre-existing citation key mutated, so the twin no longer inverts to the pre-image
+  [PASS] COVERAGE-DROP      rc=2 (want 2) failing=['G12-C04', 'G12-C05'] last row dropped from the anchor twin
+  [PASS] CORPUS-ABSENT      rc=3 (want 3) failing=['G12-C03'] corpus pointed at a missing path: INCONCLUSIVE, not a verdict about the repository
+
+G12 controls: PASS  (restored byte-identical: True)

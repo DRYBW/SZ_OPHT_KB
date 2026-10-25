@@ -1,0 +1,85 @@
+{
+ "gate": "G12",
+ "script": "tests/gate_cittitle_meta.py",
+ "planted_on_the_real_tree_then_restored": true,
+ "pre_shas": {
+  "kb/link_registry/scripts/build_link_registry.py": "304317cc2402308a5ca30b13d67cff1f947a2592ec0eb0ec8aa3a5135197622f",
+  "docs/plans/cittitle_20261025/out/LINK_REGISTRY_v2_cittitle.jsonl": "0d49ee04dc0a940d183ad887af592b1be39c59c71621a0df5816cef94198b549",
+  "docs/plans/cittitle_20261025/out/LINK_REGISTRY_v2_cittitle_dropin.jsonl": "ba5e71b5b19b4a558e0b2f3e47f4419995ecea5c9d4e8c88702b3fbdfe411e18"
+ },
+ "restored_byte_identical": {
+  "kb/link_registry/scripts/build_link_registry.py": true,
+  "docs/plans/cittitle_20261025/out/LINK_REGISTRY_v2_cittitle.jsonl": true,
+  "docs/plans/cittitle_20261025/out/LINK_REGISTRY_v2_cittitle_dropin.jsonl": true
+ },
+ "cases": [
+  {
+   "case": "CLEAN",
+   "rc": 0,
+   "expected_rc": 0,
+   "expected_check": null,
+   "failing": [],
+   "verdict": "PASS",
+   "note": "unmodified tree"
+  },
+  {
+   "case": "SOURCE-REGRESSION",
+   "rc": 2,
+   "expected_rc": 2,
+   "expected_check": "G12-C01",
+   "failing": [
+    "G12-C01"
+   ],
+   "verdict": "PASS",
+   "note": "pre-fix [:120] literal planted back into the builder"
+  },
+  {
+   "case": "TITLE-DRIFT",
+   "rc": 2,
+   "expected_rc": 2,
+   "expected_check": "G12-C03",
+   "failing": [
+    "G12-C03",
+    "G12-C05",
+    "G12-C06"
+   ],
+   "verdict": "PASS",
+   "note": "one citation's title_full mutated: C03 names the drift; C05 and C06 also report the resulting incoherence (the drop-in derives from the twin, the builder reader is the reference the twin was filled from), which is correct consequential detection"
+  },
+  {
+   "case": "ANCHOR-BREAK",
+   "rc": 2,
+   "expected_rc": 2,
+   "expected_check": "G12-C05",
+   "failing": [
+    "G12-C05"
+   ],
+   "verdict": "PASS",
+   "note": "a pre-existing citation key mutated, so the twin no longer inverts to the pre-image"
+  },
+  {
+   "case": "COVERAGE-DROP",
+   "rc": 2,
+   "expected_rc": 2,
+   "expected_check": "G12-C04",
+   "failing": [
+    "G12-C04",
+    "G12-C05"
+   ],
+   "verdict": "PASS",
+   "note": "last row dropped from the anchor twin"
+  },
+  {
+   "case": "CORPUS-ABSENT",
+   "rc": 3,
+   "expected_rc": 3,
+   "expected_check": "G12-C03",
+   "failing": [
+    "G12-C03"
+   ],
+   "verdict": "PASS",
+   "note": "corpus pointed at a missing path: INCONCLUSIVE, not a verdict about the repository"
+  }
+ ],
+ "verdict": "PASS"
+}

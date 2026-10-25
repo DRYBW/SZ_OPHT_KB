@@ -108,6 +108,21 @@ run_gate "G10 gate_switch_coverage (switch registry in sync; before/after arms s
 run_gate "G11 gate_mcpdesc_corpus (description corpus numbers vs the bundled corpus)" \
   python3 tests/gate_mcpdesc_corpus.py --json "$OUT/G11_RESULTS.json"
 
+# G12 was added after the link registry's citation records turned out to carry no usable title key:
+# the builder wrote `(hit title)[:120]` on the retrieval route and `""` on the full-text gene-index
+# route, so 2,429 of the shipped registry's 3,993 citation records had no title at all and 509 had a
+# 120-character prefix of one. Every cited paper is in the corpus and the corpus holds the complete
+# title, so nothing on disk could catch the drift and a title-keyed audit read it as "the two
+# libraries disagree" (measured: A strict 247/825 = 29.94%, B prefix-40 369/825 = 44.73%). The
+# builder now joins title / doi / pmcid from the corpus on `paper_id == pmid`, and the delivered
+# registry carries title_full / doi / pmcid on every citation record. This gate re-derives that from
+# disk (source regression, metadata presence, metadata vs corpus, coverage, byte anchor against the
+# delivery's immutable pre-image, builder-vs-gate reader parity) plus a planted-shape self-test.
+# A corpus-absent tree is INCONCLUSIVE (rc=3), the G3/G11 precedent; evidence and reverse controls:
+# docs/plans/cittitle_20261025/ (out/G12_CONTROLS.json).
+run_gate "G12 gate_cittitle_meta (citation title/doi/pmcid vs the corpus)" \
+  python3 tests/gate_cittitle_meta.py --json "$OUT/G12_RESULTS.json"
+
 printf '\n=================== summary ===================\n'
 bad=0
 for i in "${!NAMES[@]}"; do

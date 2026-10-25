@@ -1,0 +1,483 @@
+{
+ "card": "t_d8e7f2d4",
+ "unit": "distinct cited paper (pmid) in the frozen registry",
+ "n_papers": 825,
+ "n_citation_records_in_ledger": 3993,
+ "inputs": {
+  "frozen_registry": {
+   "path": "/home/ubuntu/EYEKB_REPO/kb/link_registry/LINK_REGISTRY_v1.jsonl",
+   "sha256": "a04be7711131225129ed6a8f6d3cb08862216c9187307a8a2b663b7bdd15e9cf"
+  },
+  "anchor_twin": {
+   "path": "/home/ubuntu/EYEKB_REPO/docs/plans/cittitle_20261025/out/LINK_REGISTRY_v2_cittitle.jsonl",
+   "sha256": "0d49ee04dc0a940d183ad887af592b1be39c59c71621a0df5816cef94198b549"
+  },
+  "corpus_primary": {
+   "path": "/home/ubuntu/EYEKB_REPO/literature_db/v2.4.2_2026-09_slim/papers.jsonl",
+   "sha256": "7883f8db5bb235ecee95efa39c22129bb33b9d898af0817e3be647239fae5cea"
+  },
+  "corpus_others": [
+   {
+    "path": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl",
+    "sha256": "7883f8db5bb235ecee95efa39c22129bb33b9d898af0817e3be647239fae5cea"
+   },
+   {
+    "path": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl",
+    "sha256": "acf2a567cbcb0351371e5ab903e5bf9bb8b4e9364a7d9a2d1c738ed522980b9b"
+   }
+  ]
+ },
+ "calibers": {
+  "A_strict_full_equality|N1_raw|pre": {
+   "caliber": "A_strict_full_equality",
+   "normalisation": "N1_raw",
+   "arm": "pre",
+   "n": 825,
+   "matched": 247,
+   "rate": 29.94,
+   "unmatched": 578,
+   "reasons": {
+    "TITLE_EMPTY_CITED": 455,
+    "TITLE_CAPPED_120": 122,
+    "TITLE_DISPLAY_ARTIFACT": 1
+   }
+  },
+  "A_strict_full_equality|N1_raw|post": {
+   "caliber": "A_strict_full_equality",
+   "normalisation": "N1_raw",
+   "arm": "post",
+   "n": 825,
+   "matched": 825,
+   "rate": 100.0,
+   "unmatched": 0,
+   "reasons": {}
+  },
+  "A_strict_full_equality|N2_display_stripped|pre": {
+   "caliber": "A_strict_full_equality",
+   "normalisation": "N2_display_stripped",
+   "arm": "pre",
+   "n": 825,
+   "matched": 248,
+   "rate": 30.06,
+   "unmatched": 577,
+   "reasons": {
+    "TITLE_EMPTY_CITED": 455,
+    "TITLE_CAPPED_120": 122
+   }
+  },
+  "A_strict_full_equality|N2_display_stripped|post": {
+   "caliber": "A_strict_full_equality",
+   "normalisation": "N2_display_stripped",
+   "arm": "post",
+   "n": 825,
+   "matched": 825,
+   "rate": 100.0,
+   "unmatched": 0,
+   "reasons": {}
+  },
+  "B_prefix40|N1_raw|pre": {
+   "caliber": "B_prefix40",
+   "normalisation": "N1_raw",
+   "arm": "pre",
+   "n": 825,
+   "matched": 369,
+   "rate": 44.73,
+   "unmatched": 456,
+   "reasons": {
+    "TITLE_EMPTY_CITED": 455,
+    "TITLE_CAPPED_120": 1
+   }
+  },
+  "B_prefix40|N1_raw|post": {
+   "caliber": "B_prefix40",
+   "normalisation": "N1_raw",
+   "arm": "post",
+   "n": 825,
+   "matched": 825,
+   "rate": 100.0,
+   "unmatched": 0,
+   "reasons": {}
+  },
+  "B_prefix40|N2_display_stripped|pre": {
+   "caliber": "B_prefix40",
+   "normalisation": "N2_display_stripped",
+   "arm": "pre",
+   "n": 825,
+   "matched": 370,
+   "rate": 44.85,
+   "unmatched": 455,
+   "reasons": {
+    "TITLE_EMPTY_CITED": 455
+   }
+  },
+  "B_prefix40|N2_display_stripped|post": {
+   "caliber": "B_prefix40",
+   "normalisation": "N2_display_stripped",
+   "arm": "post",
+   "n": 825,
+   "matched": 825,
+   "rate": 100.0,
+   "unmatched": 0,
+   "reasons": {}
+  }
+ },
+ "cross_corpus": {
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl|A_strict_full_equality|pre": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl",
+   "caliber": "A_strict_full_equality",
+   "arm": "pre",
+   "n": 825,
+   "matched": 247,
+   "rate": 29.94,
+   "unmatched": 578,
+   "sample_misses": [
+    {
+     "pmid": "25946197",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26052939",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26343740",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26606685",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "27839872",
+     "reason_code": "TITLE_EMPTY_CITED"
+    }
+   ]
+  },
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl|A_strict_full_equality|post_from_primary": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl",
+   "caliber": "A_strict_full_equality",
+   "arm": "post_from_primary",
+   "n": 825,
+   "matched": 825,
+   "rate": 100.0,
+   "unmatched": 0,
+   "sample_misses": []
+  },
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl|B_prefix40|pre": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl",
+   "caliber": "B_prefix40",
+   "arm": "pre",
+   "n": 825,
+   "matched": 369,
+   "rate": 44.73,
+   "unmatched": 456,
+   "sample_misses": [
+    {
+     "pmid": "25946197",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26052939",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26343740",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26606685",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "27839872",
+     "reason_code": "TITLE_EMPTY_CITED"
+    }
+   ]
+  },
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl|B_prefix40|post_from_primary": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl",
+   "caliber": "B_prefix40",
+   "arm": "post_from_primary",
+   "n": 825,
+   "matched": 825,
+   "rate": 100.0,
+   "unmatched": 0,
+   "sample_misses": []
+  },
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl|A_strict_full_equality_N2|pre": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl",
+   "caliber": "A_strict_full_equality_N2",
+   "arm": "pre",
+   "n": 825,
+   "matched": 248,
+   "rate": 30.06,
+   "unmatched": 577,
+   "sample_misses": [
+    {
+     "pmid": "25946197",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26052939",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26343740",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26606685",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "27839872",
+     "reason_code": "TITLE_EMPTY_CITED"
+    }
+   ]
+  },
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl|A_strict_full_equality_N2|post_from_primary": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl",
+   "caliber": "A_strict_full_equality_N2",
+   "arm": "post_from_primary",
+   "n": 825,
+   "matched": 825,
+   "rate": 100.0,
+   "unmatched": 0,
+   "sample_misses": []
+  },
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl|B_prefix40_N2|pre": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl",
+   "caliber": "B_prefix40_N2",
+   "arm": "pre",
+   "n": 825,
+   "matched": 370,
+   "rate": 44.85,
+   "unmatched": 455,
+   "sample_misses": [
+    {
+     "pmid": "25946197",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26052939",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26343740",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26606685",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "27839872",
+     "reason_code": "TITLE_EMPTY_CITED"
+    }
+   ]
+  },
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl|B_prefix40_N2|post_from_primary": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.4.2_2026-09/papers.jsonl",
+   "caliber": "B_prefix40_N2",
+   "arm": "post_from_primary",
+   "n": 825,
+   "matched": 825,
+   "rate": 100.0,
+   "unmatched": 0,
+   "sample_misses": []
+  },
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl|A_strict_full_equality|pre": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl",
+   "caliber": "A_strict_full_equality",
+   "arm": "pre",
+   "n": 825,
+   "matched": 247,
+   "rate": 29.94,
+   "unmatched": 578,
+   "sample_misses": [
+    {
+     "pmid": "25946197",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26052939",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26343740",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26606685",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "27839872",
+     "reason_code": "TITLE_EMPTY_CITED"
+    }
+   ]
+  },
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl|A_strict_full_equality|post_from_primary": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl",
+   "caliber": "A_strict_full_equality",
+   "arm": "post_from_primary",
+   "n": 825,
+   "matched": 825,
+   "rate": 100.0,
+   "unmatched": 0,
+   "sample_misses": []
+  },
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl|B_prefix40|pre": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl",
+   "caliber": "B_prefix40",
+   "arm": "pre",
+   "n": 825,
+   "matched": 369,
+   "rate": 44.73,
+   "unmatched": 456,
+   "sample_misses": [
+    {
+     "pmid": "25946197",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26052939",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26343740",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26606685",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "27839872",
+     "reason_code": "TITLE_EMPTY_CITED"
+    }
+   ]
+  },
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl|B_prefix40|post_from_primary": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl",
+   "caliber": "B_prefix40",
+   "arm": "post_from_primary",
+   "n": 825,
+   "matched": 825,
+   "rate": 100.0,
+   "unmatched": 0,
+   "sample_misses": []
+  },
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl|A_strict_full_equality_N2|pre": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl",
+   "caliber": "A_strict_full_equality_N2",
+   "arm": "pre",
+   "n": 825,
+   "matched": 248,
+   "rate": 30.06,
+   "unmatched": 577,
+   "sample_misses": [
+    {
+     "pmid": "25946197",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26052939",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26343740",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26606685",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "27839872",
+     "reason_code": "TITLE_EMPTY_CITED"
+    }
+   ]
+  },
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl|A_strict_full_equality_N2|post_from_primary": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl",
+   "caliber": "A_strict_full_equality_N2",
+   "arm": "post_from_primary",
+   "n": 825,
+   "matched": 825,
+   "rate": 100.0,
+   "unmatched": 0,
+   "sample_misses": []
+  },
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl|B_prefix40_N2|pre": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl",
+   "caliber": "B_prefix40_N2",
+   "arm": "pre",
+   "n": 825,
+   "matched": 370,
+   "rate": 44.85,
+   "unmatched": 455,
+   "sample_misses": [
+    {
+     "pmid": "25946197",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26052939",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26343740",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "26606685",
+     "reason_code": "TITLE_EMPTY_CITED"
+    },
+    {
+     "pmid": "27839872",
+     "reason_code": "TITLE_EMPTY_CITED"
+    }
+   ]
+  },
+  "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl|B_prefix40_N2|post_from_primary": {
+   "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl",
+   "caliber": "B_prefix40_N2",
+   "arm": "post_from_primary",
+   "n": 825,
+   "matched": 825,
+   "rate": 100.0,
+   "unmatched": 0,
+   "sample_misses": []
+  }
+ },
+ "controls": {
+  "journal_agree": 820,
+  "journal_denom": 825,
+  "year_agree": 825,
+  "year_denom": 825,
+  "pre_full_ok_strict": 243,
+  "pre_full_ok_denom": 243,
+  "pre_capped_prefix40": 115,
+  "pre_capped_denom": 115
+ },
+ "ledger_counts": {
+  "pre_class": {
+   "FULL_OK": 1053,
+   "CAPPED_120": 509,
+   "EMPTY": 2429,
+   "GENUINE_120": 2
+  },
+  "pre_class_definition": {
+   "EMPTY": "citation record had no title at all (gene-index route)",
+   "CAPPED_120": "citation title is exactly the corpus title's 120-char prefix and the corpus title is longer — the frozen builder's cap",
+   "GENUINE_120": "corpus title is itself exactly 120 characters — NOT a defect",
+   "FULL_OK": "citation title was already the complete title"
+  },
+  "post_class_note": "post-fix, `title_full`/drop-in `title` is the complete title for every record; 32 records read as TRUNCATED_120 under the blunt len==120 test because those papers' real titles are 120 chars long"
+ },
+ "unmatched_rows": {
+  "pre": 2066,
+  "post": 0
+ }
+}

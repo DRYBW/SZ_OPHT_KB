@@ -1,0 +1,42 @@
+# W3-NORM 仓侧双落清单（卡 t_b820cc96, frozen_at=2026-10-12 17:44:07）
+# re-taken 2026-10-24 (card t_c19cd667, KB-REACH): the registry row L1-31 was re-taken in the same commit as the subtype_v14 body fix (sha256 99dab4ce39b136b4c081161597644066824d67c4eff551e2884720aa0b0176cd -> df07293db216d54578bfdaf50faa3dd0716398e39014c71d66610824fbf58f88, bytes 136067); the other rows are unchanged. Frozen by scripts/w3_manifest.py (t_c19cd667).
+# re-taken 2026-10-24 (card t_c19cd667, KB-REACH, second pass): registry row L6-37 was re-taken after the tool-panel fixture re-record; both passes covered by scripts/w3_manifest.py + scripts/final_touches.py (t_c19cd667).
+# 校验法（在 docs/ 执行）：sha256sum -c W3_MANIFEST.sha256
+# Re-frozen 2026-10-14: the W3_PIPELINE_REGISTRY.tsv hash was re-taken from the current bytes after
+# the 2026-10-13 batched registry refresh; the other rows are unchanged.
+# Re-frozen 2026-10-15 (card t_0ec42aa8): the registry row was re-taken for the L6-01/L6-06
+# Re-frozen 2026-10-21: the W3_PIPELINE_REGISTRY.tsv hash was re-taken from the current bytes for the
+# link-registry registration (rows L6-19..L6-22) and the re-anchoring of L1-11 / L1-11M after the
+# explain_annotation wave; the other rows are unchanged.
+# Re-frozen 2026-10-21 (second pass, same day): the registry row was re-taken again for the
+# evidence-trail exposure on the service surface (rows L1-11M, L6-02, L6-06, L6-19, L6-20, L6-34)
+# and the four new registrations L6-36..L6-39; the other rows are unchanged.
+# Re-frozen 2026-10-21 (second pass): registry re-taken after the registry/appendix refresh following
+# the gene-anchored citation pass; the other rows are unchanged.
+# Re-frozen 2026-10-21 (textbook layer): registry re-taken after rows L6-23..L6-26 were added and
+# L6-19..L6-22 re-taken; the other rows are unchanged.
+# Re-frozen 2026-10-21 (cluster-level evidence): registry re-taken after row L6-27 was added and
+# L6-19/L6-21/L6-22 re-taken; the other rows are unchanged.
+# Re-frozen 2026-10-21 (corpus-to-page gap): registry re-taken after rows L6-28/L6-29 were added;
+# the other rows are unchanged.
+# identity refresh and the checklist row for the new boundary-discipline section 7; the other
+# rows are unchanged.
+# 源件与其全目录清单在 /mnt/D/EyeKB/plans/x10_improve_20261012/W3_NORM/（含 MANIFEST.sha256）
+# Re-frozen 2026-10-15 (card t_55884641): the registry row was re-taken from the current bytes
+# after the REPO_EN_MIG3 data-plane alignment (registry revision v6, header E1 + L6-01 identity),
+# per VERIFY_CONTRACT §5 clause 1 (maintainer-side evidence-bearing re-take); the other rows are unchanged.
+# 注意：本清单不含仓侧其他 W3_* 之外的任何文件；本文件自身不被登记（不自哈希）
+# Re-frozen 2026-10-17 23:13:02 (mcp_clients wave): the registry line was re-taken after the L6-06/L1-11/L6-10 row re-probe and the new L6-16 row (MCP client-integration surface); the other rows are unchanged.
+# re-taken 2026-10-21 for W3_PIPELINE_REGISTRY.tsv: bc595e443b35547f -> 4bec0f8d8ba1064c
+# re-taken 2026-10-22 (shipped-surface card t_19831068): the registry row was re-taken after the shipped-surface re-take of rows L1-11M / L6-06 / L6-36 / L6-37 (c7fe739c692ccef1 -> 011469dce14e1837, bytes=105389); the other rows are unchanged.
+# re-taken 2026-10-22 (activation card t_42df17c2): the registry row was re-taken after the activation of `onfibro_v13` on the default route (14c3892086caae05 -> e9e08c9b554e9a89, bytes=120461); the other rows are unchanged.
+# re-taken 2026-10-22 (activation card t_42df17c2): the registry row was re-taken after the activation of `onfibro_v13` on the default route (e9e08c9b554e9a89 -> 99087735271241a3, bytes=120461); the other rows are unchanged.
+# re-taken 2026-10-22 (activation card t_42df17c2): the registry row was re-taken after the activation of `onfibro_v13` on the default route (99087735271241a3 -> 91c82281581f4255, bytes=130926); the other rows are unchanged.
+# re-taken 2026-10-22 (activation card t_42df17c2): the registry row was re-taken after the activation of `onfibro_v13` on the default route (91c82281581f4255 -> 95218bc619358823, bytes=131257); the other rows are unchanged.
+# re-taken 2026-10-22 (activation card t_42df17c2): the registry row was re-taken after the activation of `onfibro_v13` on the default route (95218bc619358823 -> 3eaba4754434e62c, bytes=131257); the other rows are unchanged.
+# re-taken 2026-10-24 (card t_fabddb85, CL-56 adoption): the registry row was re-taken after adding row L1-32 and re-taking L1-11M / L1-23 / L6-47; the other rows are unchanged.
+# re-taken 2026-10-25 (card t_2fed9122, CL56WIRE): the registry row was re-taken after six rows were re-taken (L6-19/L6-20/L6-22/L6-30/L6-34/L6-35) and four added (L6-49..L6-52) for the newest library's wiring; the other rows are unchanged.
+32ae77ed5c4aefd3bce0117b8c037dc55f3e6f6892d510cfba92cb9c7ad65a31  W3_PIPELINE_REGISTRY.tsv
+19f5b85cda1feedd07620673c3aa1e46de6b6c19b943ce025a4adb1c951ba2c3  W3_CHANGE_CONTROL_CHECKLIST.md
+4f093fc030e7ff4c20b5d7d8c220ba27a85ad4b2bd4685ec679e03e93d5f393a  W3_UPSTREAM_FIRST_RULE.md
+b6224ed9fd8718f90ed02ee477a0d69eeb270bcdc0bd473be4080df7e7b9e345  W3_VERIFY_CONTRACT_AMENDMENT_PROPOSAL.md

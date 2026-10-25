@@ -1,0 +1,15 @@
+verify_deliverables.py — CITTITLE independent recomputation
+  [PASS] C01-input-sha frozen a04be77111312251 / corpus 7883f8db5bb235ec match the declared inputs
+  [PASS] C02-row-count frozen=165 anchor=165 dropin=165
+  [PASS] C03-anchor-inverts every one of 165 lines inverts to the frozen bytes (bad=0)
+  [PASS] C04-dropin-derives dropin == anchor with title := title_full on 165 lines (bad=0)
+  [PASS] C05-three-keys-present 3993 citation records carry title_full/doi/pmcid (missing=0)
+  [PASS] C06-title-from-corpus title_full == corpus title, doi/pmcid == corpus fields; mismatches=title=0 doi=0 pmcid=0
+  [PASS] C07-counterfactual-recompute all 8 caliber arms recomputed: {'A_strict_full_equality|N1_raw|pre': 247, 'A_strict_full_equality|N1_raw|post': 825, 'A_strict_full_equality|N2_display_stripped|pre': 248, 'A_strict_full_equality|N2_display_stripped|post': 825, 'B_prefix40|N1_raw|pre': 369, 'B_prefix40|N1_raw|post': 825, 'B_prefix40|N2_display_stripped|pre': 370, 'B_prefix40|N2_display_stripped|post': 825}
+  [PASS] C08-unmatched-rows pre rows=2066 declared=2066 reason-sum=2066; post rows=0 declared=0; blank-reason rows=0
+  [PASS] C09-ledger ledger rows=3993 (citations=3993); post-fix strict match on all rows=True; pre classes={'FULL_OK': 1053, 'CAPPED_120': 509, 'EMPTY': 2429, 'GENUINE_120': 2}
+  [PASS] C10-field-controls year agreement recomputed 825/825 (declared 825); journal 820/825 (declared 820, the 5 misses being the PPR_* preprints whose corpus journal field is empty)
+  [PASS] C11-preprint-ids 5 non-numeric cited ids, all PPR_*: ['PPR_PPR104937', 'PPR_PPR185854', 'PPR_PPR539262', 'PPR_PPR844871', 'PPR_PPR990826']
+  [PASS] C12-defect-live frozen registry: 2429 empty-title records, 511 records whose title is exactly 120 chars (= 509 capped + 2 genuinely 120 chars)
+
+verify_deliverables: 12 checks, 12 PASS, 0 FAIL

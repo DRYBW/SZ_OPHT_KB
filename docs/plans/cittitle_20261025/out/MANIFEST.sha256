@@ -1,0 +1,16 @@
+# CITTITLE (card t_d8e7f2d4) — delivered artefacts under out/
+# Excluded on purpose: this manifest itself (a file cannot hash itself) and G12_CONTROLS.json
+# (rewritten by every run of scripts/g12_controls.py, so pinning it would make `sha256sum -c` fail after a re-run
+#  of the controls while the artefacts are untouched).
+# Verify from THIS directory:  sha256sum -c MANIFEST.sha256
+f803dd6cf894cf93f4c97b5883950b735ad32b6fbcf248a3c792400515d24724  BACKFILL_META.json
+635991f81e55c22055861b1ff7cbd95569c53adfd07163e5c0394c2043290d24  BRIEF_CITTITLE_20261025.md
+cb4bbcf30389af2d7d050047f0233e74b3617f55ae6c9d7931912aabe3231527  CITATION_META_SPEC_v1.md
+04c922122063aa4ef4303544e22b5baadd6a3cf2aa4bd98834d3822a8b6017ec  CITATION_TITLE_BY_PAPER_v1.tsv
+b362495659726615ae3f80f9d31fc772b8072154933db50e7586d280e8e5f160  CITATION_TITLE_COUNTERFACTUAL_v1.json
+4cd942357a6e5ddaa6e3c57c0329c55e533dc456f579376d32f12c4d6fb93cdd  CITATION_TITLE_COUNTERFACTUAL_v1.md
+9ac208b119cfe464d4b18b4738b22b34fedb0f83d652d06c0c78245c60a6ec1b  CITATION_TITLE_LEDGER_v1.tsv
+0d49ee04dc0a940d183ad887af592b1be39c59c71621a0df5816cef94198b549  LINK_REGISTRY_v2_cittitle.jsonl
+ba5e71b5b19b4a558e0b2f3e47f4419995ecea5c9d4e8c88702b3fbdfe411e18  LINK_REGISTRY_v2_cittitle_dropin.jsonl
+5a6f9cc1448c306ea515d46a7b7da8fc76f746099421a42b6eaa7065028e5bbe  UNMATCHED_POSTFIX_v1.tsv
+abb87422ab3ce7e0334e39e04dfef5b416a7bc175f1cfcf724a8a4feba8b6567  UNMATCHED_PRE_v1.tsv

@@ -1,16 +1,16 @@
 {
  "schema": "eyekb-release-manifest/1.0",
- "release_id": "48da808e334c",
- "digest_sha256": "48da808e334c0f73ee772a7d62a6881baf74ed946a34a2040af4f582addb849d",
+ "release_id": "51955ce80f42",
+ "digest_sha256": "51955ce80f426749d345862553d4900ac4655968957b84f0a152b507da8d6f57",
  "algorithm": "sha256 over sorted lines '<git blob id>  <path>' for every file in the tree",
  "source": "index",
- "n_files": 4430,
- "total_bytes": 262753821,
+ "n_files": 4474,
+ "total_bytes": 273912420,
  "layers": {
   "protocol_generation": "KB1v2-0.14-kb11a-reasonjoin",
   "service_build_id": "6ff8a2ee2c35",
-  "knowledge_bundle_id": "f952af810ffa",
-  "effective_profile_id": "b1c67c949038"
+  "knowledge_bundle_id": "54c5da2d2c05",
+  "effective_profile_id": "1190304dff22"
  },
  "excluded": [
   "docs/RELEASE_IDENTITY.json",
@@ -62,8 +62,8 @@
   },
   {
    "path": "docs/CHANGE_CONTROL_G6_INSTANCE.tsv",
-   "git_blob": "1129ab349eb631d76d1f3b8b9490d34780412c17",
-   "bytes": 110881
+   "git_blob": "1117a50cc9c696efe429d9ae5f61a715c6b5f515",
+   "bytes": 123682
   },
   {
    "path": "docs/CHANGE_CONTROL_G6_TEMPLATE.tsv",
@@ -92,8 +92,8 @@
   },
   {
    "path": "docs/GATE_INVENTORY_G5G6.tsv",
-   "git_blob": "7480fe653ad1da2919805fcef689b32566285030",
-   "bytes": 10044
+   "git_blob": "1df9b12452577d475082b0b1a8b2ca04cad28ac6",
+   "bytes": 11630
   },
   {
    "path": "docs/GIT_SELF_DECLARED_BOUNDARY_LEDGER.tsv",
@@ -162,8 +162,8 @@
   },
   {
    "path": "docs/VERIFY_CONTRACT.md",
-   "git_blob": "60b385f7e2c61b18761402cb3cd9bd87d9320c8d",
-   "bytes": 26755
+   "git_blob": "d6dc6908cd6b80444adf1826fca45e27bf4f609b",
+   "bytes": 30923
   },
   {
    "path": "docs/VERIFY_CONTRACT_G5G6.md",
@@ -182,13 +182,13 @@
   },
   {
    "path": "docs/W3_MANIFEST.sha256",
-   "git_blob": "d5767c25daf47a5af615dfb7e3c755428c750f08",
-   "bytes": 5248
+   "git_blob": "df70018d055ec73eebb3632e6570154cd91fca52",
+   "bytes": 5522
   },
   {
    "path": "docs/W3_PIPELINE_REGISTRY.tsv",
-   "git_blob": "d1ac122afc4c545770baa30852751ebfa701b48f",
-   "bytes": 146570
+   "git_blob": "7529bfdf89ee6c15503690c9a38bee597afa9a52",
+   "bytes": 151257
   },
   {
    "path": "docs/W3_UPSTREAM_FIRST_RULE.md",
@@ -4204,6 +4204,221 @@
    "path": "docs/plans/btest_20260927/scripts/btest_verdict.py",
    "git_blob": "ac17d56520220155c9cbc6e4beee8328a695cda9",
    "bytes": 17072
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/README.md",
+   "git_blob": "f453641c917e88d64cdc1377e9767c32584eb312",
+   "bytes": 3508
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/REPORT.md",
+   "git_blob": "20e70139b91db89a00dfeeff8f9f9fd42d2ad3df",
+   "bytes": 8265
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/logs/g12_after.log",
+   "git_blob": "5a4e34d1cfd027cadfa833a7f0e4801df40b3378",
+   "bytes": 1169
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/logs/g12_controls.log",
+   "git_blob": "7d0519ea6647286eef7aecee073776a66d4e0eca",
+   "bytes": 553
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/logs/g12_controls_stdout.log",
+   "git_blob": "e44ad660376a58538632a61182e0e17cde154c08",
+   "bytes": 969
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/logs/p1_backfill.log",
+   "git_blob": "4871c559b8475aba403963fb75573dce980dd6b9",
+   "bytes": 583
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/logs/p2_counterfactual.log",
+   "git_blob": "ffe406ab12768134ca47a7ffde6412d47bf24aad",
+   "bytes": 781
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/logs/p3_verify.log",
+   "git_blob": "9829b493c4bd69d5dcd700b74fdd5394238c385c",
+   "bytes": 1850
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/logs/p4_registrations.log",
+   "git_blob": "104be3d13987eee34c235508ba1bcd1a1c272c7e",
+   "bytes": 1513
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/logs/p5_manifest.log",
+   "git_blob": "b9596ad61b38764bfab2b2314e2f81afa59df584",
+   "bytes": 557
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/logs/run_gates_after.log",
+   "git_blob": "a76fcb873c09d3623a8fce122da6adb7f7d4750b",
+   "bytes": 13102
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/logs/run_gates_final.log",
+   "git_blob": "23fbbfe18cbe406d44c2eb31927fb8f95e4db095",
+   "bytes": 12617
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/out/BACKFILL_META.json",
+   "git_blob": "ae613a87b57f03c39fc9c5541ab0ebc90a4ed71b",
+   "bytes": 2982
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/out/BRIEF_CITTITLE_20261025.md",
+   "git_blob": "ad006f402bdc81654c26ceebd20444e0d98dd100",
+   "bytes": 1174
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/out/CITATION_META_SPEC_v1.md",
+   "git_blob": "b026e6832a00673a5d4dce84a9b4abea03b6c805",
+   "bytes": 12689
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/out/CITATION_TITLE_BY_PAPER_v1.tsv",
+   "git_blob": "529f6484a6d0506873e987724f2f913cdbf30dbb",
+   "bytes": 205518
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/out/CITATION_TITLE_COUNTERFACTUAL_v1.json",
+   "git_blob": "48cd4135881a99e044bf282db49f68c1e08c0e7b",
+   "bytes": 13012
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/out/CITATION_TITLE_COUNTERFACTUAL_v1.md",
+   "git_blob": "2435820116c27b39cfcec48d30f7a84b85e498be",
+   "bytes": 2992
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/out/CITATION_TITLE_LEDGER_v1.tsv",
+   "git_blob": "6aa7b9d76b85405df89f2e9f898a9ba84bac4abb",
+   "bytes": 405483
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/out/G12_CONTROLS.json",
+   "git_blob": "b614b2a323e012e9e1d3fa554ad5312a2f852feb",
+   "bytes": 2391
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/out/LINK_REGISTRY_v2_cittitle.jsonl",
+   "git_blob": "1344e08af7642482bc89cc2ee6ab1db03acbcc3b",
+   "bytes": 3259193
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/out/LINK_REGISTRY_v2_cittitle_dropin.jsonl",
+   "git_blob": "aa7ded24405d681c018b41d8413359e158df8c6a",
+   "bytes": 3553292
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/out/MANIFEST.sha256",
+   "git_blob": "b6692a1a972d9026d1e1086f94728d86a5d99f71",
+   "bytes": 1435
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/out/UNMATCHED_POSTFIX_v1.tsv",
+   "git_blob": "8a89ef0a98d65fafaed202827b3f4a0a4574f98b",
+   "bytes": 76
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/out/UNMATCHED_PRE_v1.tsv",
+   "git_blob": "e3d2b1b8dcd6aff3e53844e9c42e045538423a49",
+   "bytes": 665654
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/pre_images/CHANGE_CONTROL_G6_INSTANCE.tsv.pre_cittitle",
+   "git_blob": "1129ab349eb631d76d1f3b8b9490d34780412c17",
+   "bytes": 110881
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/pre_images/GATE_INVENTORY_G5G6.tsv.pre_cittitle",
+   "git_blob": "7480fe653ad1da2919805fcef689b32566285030",
+   "bytes": 10044
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/pre_images/LINK_REGISTRY_v1.jsonl.pre_cittitle",
+   "git_blob": "49f45eb87ecf3ae3a3d4483cec710c3abc9e3afe",
+   "bytes": 2498557
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/pre_images/PREIMAGE.sha256",
+   "git_blob": "33d3a140dbfc1e633f8ba754d0019dc1057035c3",
+   "bytes": 809
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/pre_images/VERIFY_CONTRACT.md.pre_cittitle",
+   "git_blob": "60b385f7e2c61b18761402cb3cd9bd87d9320c8d",
+   "bytes": 26755
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/pre_images/W3_MANIFEST.sha256.pre_cittitle",
+   "git_blob": "d5767c25daf47a5af615dfb7e3c755428c750f08",
+   "bytes": 5248
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/pre_images/W3_PIPELINE_REGISTRY.tsv.pre_cittitle",
+   "git_blob": "d1ac122afc4c545770baa30852751ebfa701b48f",
+   "bytes": 146570
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/pre_images/build_link_registry.py.pre_cittitle",
+   "git_blob": "5b4d23fda2c7910f3d22637b1afe159915b155d0",
+   "bytes": 22951
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/pre_images/run_gates.sh.pre_cittitle",
+   "git_blob": "7421c7a444b08ae99f9d02f5780e69c01d1d51a5",
+   "bytes": 6594
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/scripts/backfill_citation_meta.py",
+   "git_blob": "9f45b9a434b3e4ad634ddae69ad1cb5280f0c7f0",
+   "bytes": 11956
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/scripts/cittitle_common.py",
+   "git_blob": "0d1591c455573eaa02df1e39355214dc81981810",
+   "bytes": 7430
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/scripts/counterfactual_titles.py",
+   "git_blob": "b14f28223be2b19210f3ce66f37ec0fe8bc621a5",
+   "bytes": 23811
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/scripts/freeze_w3_manifest.py",
+   "git_blob": "899d2b7a55f414e241bcc17d0500811adbb49eb6",
+   "bytes": 2300
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/scripts/g12_controls.py",
+   "git_blob": "383802eed7f16973d408fe9b6109e3626fe0ded4",
+   "bytes": 8211
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/scripts/make_manifest.py",
+   "git_blob": "07f69496ed0730b696fa896a41778948abfed20a",
+   "bytes": 2479
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/scripts/mirror_to_D.py",
+   "git_blob": "c51e853e2d6e54c6ca2ddf05f3eae8dee1734add",
+   "bytes": 1621
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/scripts/registrations.py",
+   "git_blob": "ade41eb3f3e1fa4e275e2bf5925bf0e53cdd84b3",
+   "bytes": 36590
+  },
+  {
+   "path": "docs/plans/cittitle_20261025/scripts/verify_deliverables.py",
+   "git_blob": "de4b21266a5905c27d12bd2e9e3e1a7b231f59ed",
+   "bytes": 12944
   },
   {
    "path": "docs/plans/cl56_adopt_20261022/BRIEF_ADOPT_CL56_20261022.md",
@@ -20622,8 +20837,8 @@
   },
   {
    "path": "kb/link_registry/scripts/build_link_registry.py",
-   "git_blob": "5b4d23fda2c7910f3d22637b1afe159915b155d0",
-   "bytes": 22951
+   "git_blob": "0bd5127dda71ee7d95eab4f4b192b13e925e085b",
+   "bytes": 29016
   },
   {
    "path": "kb/link_registry/scripts/build_recent_inclusions.py",
@@ -22076,6 +22291,11 @@
    "bytes": 23070
   },
   {
+   "path": "tests/gate_cittitle_meta.py",
+   "git_blob": "80607ef2dfb29383398505f2e239992b73790cbd",
+   "bytes": 20620
+  },
+  {
    "path": "tests/gate_g5g6_negative.py",
    "git_blob": "fbd7672cef266ecf17225b9d5f17d51de40a303c",
    "bytes": 17466
@@ -22132,8 +22352,8 @@
   },
   {
    "path": "tests/run_gates.sh",
-   "git_blob": "7421c7a444b08ae99f9d02f5780e69c01d1d51a5",
-   "bytes": 6594
+   "git_blob": "c8862e17b74f54416ef16e416af182a64e3607bd",
+   "bytes": 7883
   },
   {
    "path": "tests/scan_jargon.py",

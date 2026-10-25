@@ -1,0 +1,7 @@
+CLEAN              rc=0 want=0 check=None -> PASS
+SOURCE-REGRESSION  rc=2 want=2 check=G12-C01 -> PASS
+TITLE-DRIFT        rc=2 want=2 check=G12-C03 -> PASS
+ANCHOR-BREAK       rc=2 want=2 check=G12-C05 -> PASS
+COVERAGE-DROP      rc=2 want=2 check=G12-C04 -> PASS
+CORPUS-ABSENT      rc=3 want=3 check=G12-C03 -> PASS
+restored byte-identical: {'kb/link_registry/scripts/build_link_registry.py': True, 'docs/plans/cittitle_20261025/out/LINK_REGISTRY_v2_cittitle.jsonl': True, 'docs/plans/cittitle_20261025/out/LINK_REGISTRY_v2_cittitle_dropin.jsonl': True}
