@@ -1,0 +1,87 @@
+{
+  "caliber_A_strict_title": {
+    "denom": 803,
+    "hit": 243,
+    "pct": 30.26
+  },
+  "caliber_B_relaxed_title_prefix40": {
+    "denom": 803,
+    "hit": 360,
+    "pct": 44.83
+  },
+  "caliber_C_identifier_pmid": {
+    "denom": 803,
+    "hit": 803,
+    "pct": 100.0
+  },
+  "cited_absent_from_corpus": 0,
+  "cited_total_citations": 3735,
+  "cited_unique_pmid": 803,
+  "corpus_robustness": {
+    "A_hit": 243,
+    "A_hit_alt": 243,
+    "B_hit": 360,
+    "B_hit_alt": 360,
+    "C_hit": 803,
+    "C_hit_alt": 803,
+    "alt_corpus": "/home/ubuntu/EYEKB_REPO/literature_db/v2.4.2_2026-09_slim/papers.jsonl",
+    "alt_sha256": "7883f8db5bb235ecee95efa39c22129bb33b9d898af0817e3be647239fae5cea",
+    "identical": true,
+    "primary_corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl",
+    "rows_alt": 3884,
+    "rows_primary": 3917
+  },
+  "corpus_rows": 3917,
+  "corpus_rows_cited_as_evidence": 803,
+  "corpus_rows_not_cited": 3114,
+  "corpus_unique_paper_id": 3917,
+  "doi_key_available_on_cited_side": 0,
+  "inputs": {
+    "cited_registry": "/mnt/D/EyeKB/plans/kbreach_fix_20261024/clone_check/kb/link_registry/LINK_REGISTRY_v1.jsonl",
+    "cited_sha256": "8d8be96cfec1b5a6c54da02987565249d194dcb23ec38478415b444302162434",
+    "corpus": "/mnt/D/OcularKB/ocularkb/rag/literature_db/v2.6-dev_2026-10/papers.jsonl",
+    "corpus_sha256": "acf2a567cbcb0351371e5ab903e5bf9bb8b4e9364a7d9a2d1c738ed522980b9b"
+  },
+  "journal_agree": {
+    "denom": 798,
+    "yes": 798
+  },
+  "matched_rows_with_zero_chunks": 0,
+  "pmcid_key_available_on_cited_side": 0,
+  "rows_written": {
+    "CONNECT_KEY_v1.tsv": 803,
+    "CORPUS_TOUCH_v1.tsv": 3917,
+    "REGISTRY_SOURCES_v1.tsv": 5,
+    "UNMATCHED_v1.tsv": 1003
+  },
+  "source_anchors": {
+    "corpus_paper_id_is_pmid": "/mnt/D/OcularKB/ocularkb/rag/scripts/stage1b_v11.py:229 (OcularKB 树；构建脚本未随仓)",
+    "registry_geneindex_title_empty": "EYEKB_REPO/kb/link_registry/scripts/build_link_registry.py:278",
+    "registry_pmid_from_paper_id": "EYEKB_REPO/kb/link_registry/scripts/build_link_registry.py:201",
+    "registry_title_truncated_120": "EYEKB_REPO/kb/link_registry/scripts/build_link_registry.py:211",
+    "retriever_pmid_is_paper_id": "EYEKB_REPO/clients/ocularkb/rag/scripts/stage3_retrieve.py:237"
+  },
+  "title_sim_vs_corpus": {
+    "lt_0.90": 32,
+    "mean": 0.974,
+    "median": 1.0,
+    "min": 0.7362,
+    "n": 361
+  },
+  "ts_note": "all rates are machine-recomputed from the two on-disk files named above",
+  "unmatched_rows_bucket_counts": {
+    "其他": 442,
+    "标题写法差异": 116,
+    "预印本或全文缺": 2
+  },
+  "unmatched_rows_reason_counts": {
+    "PREPRINT_ID": 2,
+    "TITLE_EMPTY_CITED": 442,
+    "TITLE_REWRITTEN": 1,
+    "TITLE_TRUNCATED_120": 115
+  },
+  "year_agree": {
+    "denom": 803,
+    "yes": 803
+  }
+}
