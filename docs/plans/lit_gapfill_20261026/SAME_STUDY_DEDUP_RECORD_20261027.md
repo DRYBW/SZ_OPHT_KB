@@ -147,7 +147,38 @@ python plans/lit_gapfill_20261026/build_preprint_pairs.py
 **contract 8/9 的那 1 项失败** = `all_list_plus10`，依赖历史卡 `t_d07ab64f` 的工作区快照
 `marker_snapshot_pre.json` + 当时 marker 库状态，同属该冻结件的历史契约，非本轮。
 
-## 九、证据件索引
+## 九、仓门链复跑：两项红灯是上一轮的既有欠账，一项本轮已修
+
+门链入口 `tests/run_gates.sh`（G3…G13），正确跑法需把解释器指给 `EYEKB_G3_PY`（G7 默认跟它走）。
+
+| 门 | 读数 | 归因（是否本轮） |
+|---|---|---|
+| G3 复现门（41 查询 top-5 逐位） | **21/41** —— **折叠关 = 折叠开 = 21/41** | **既有**：与上一轮 `POINTER_SWITCH_RECORD_20261027.md §八` 记录的「闸开 FAIL 21/41（20 条变动）／`EYEKB_SCOPE_EXCLUDE=""` 闸关 PASS 41/41」**同一读数** ⇒ 缺省库 + 发育轴闸所致。重锚 `REPRO_EXPECTED.json` = **PI 保留门** |
+| G4 字节锚（三件） | **2/3**：`annotation_evidence_report.md` got `7c225802…` ≠ expected `6f795b32…`（另两件 PASS） | **既有**：缺省库升级后 pipeline 产物内容变了、锚未随之更新。**关折叠重跑 got 一字不差、两次一致** ⇒ 与折叠零关系。重锚 = 验收基线变更 |
+| G5 注册表门 | **8/8 PASS**（修前 6/8） | **本轮可修、已修**：新门未登记（UNREG-LOAD）+ 三个文件 sha 未随改动更新（SHA-MATCH）⇒ 已加 `L6-58` / `G13` 行并重取 live sha |
+| G6 / G8 / G9 / G10 / G11 / G12 | PASS | — |
+| G7 ontology 解释层 | **PASS 9/9**（单独带 `--service-python <带 MCP SDK 的解释器>`）；门链里报错=**跑法**（`EYEKB_G3_PY` 未设时默认 `python3`，缺 SDK） | 跑法，非缺陷 |
+| G13（本轮新增） | **PASS**，controls **5/5** | 本轮新增 |
+
+**结论**：门链未全绿，但**两项红灯全部是上一轮缺省库切换留下的既有欠账**，且两者都属于「重锚冻结期望」（=改变验收基线，属 PI 保留门）。因此**入仓 push 未执行**——不是请示，是既定保留门。
+
+## 十、本轮新增的防复发件：G13 library-pin consistency 门
+
+`tests/gate_library_pin_consistency.py`，挂进门链 G13 槽位。
+
+**为什么加**：一个门的两个臂读两个不同库时，它的失败**长得和真回归一模一样**（本轮就被它误导过）。此后机器自己会说话：
+
+- 读 `kb/literature_db/EYEKB_DB_POINTER.yaml` 里 `role: default` 的版本；
+- 扫 `tests/` 与 `evals/` 下所有脚本引用的库版本；
+- **FAIL**：**门链成员**（`run_gates.sh` 实际调用的脚本）被钉在非缺省库 ⇒ 该门已不能看出厂库；
+- **WARN**：非门链成员钉非缺省库（历史审计件合法）、或引用多个库（可能是**有意的 A/B 对比**，如 `regression_kb1v2d`）；
+- **五条自控**：门链成员过期钉→FAIL、单件过期钉→WARN、两库引用→WARN、正确缺省钉→OK、非检索脚本→忽略。**全从零构造**，一道不会红门的门不算门。
+
+**本轮它抓到的**（当前读数：扫 35 个脚本、门链成员 11、FAIL 0、WARN 4）：`regression_run4w_golden41_t_d07ab64f.py` 与两个 `regression_mcp_vs_direct_*` 钉在 v2.0（缺省 v2.4.2），`regression_kb1v2d` 引用 v2.1+v2.2（有意的跨库复核）。
+
+**登记**：`docs/W3_PIPELINE_REGISTRY.tsv` 新增 `L6-58`、`docs/GATE_INVENTORY_G5G6.tsv` 新增 `G13`（sha 同一提交内现取），`L6-54` 名称更新为 G3..G13。
+
+## 十一、证据件索引
 
 | 件 | 路径 |
 |---|---|
