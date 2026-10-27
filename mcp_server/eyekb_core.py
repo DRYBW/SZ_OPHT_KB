@@ -86,11 +86,17 @@ def _default_db_dir():
 
 
 def search_literature(cell_type, species=None, tissue=None, top_k=5,
-                      query=None, db=None):
+                      query=None, db=None, dev_stage=None):
     """Literature-snippet retrieval: passes through to stage3_retrieve.retrieve().
 
     db: None → resolve the library via the _default_db_dir() chain; or an explicit directory path.
     The species/tissue/cell_type three-way filter passes through (landed per Claude5 review request).
+
+    dev_stage: "" / "any" / None → the default adult face (the developmental-axis gate excludes
+    fetal-only and developing-only papers there). "fetal_developing" | "adult" | "unknown" → paper-level
+    hard filter on that stage; the gate stands down so the stage's own papers stay reachable
+    (fetal/developing material is listed separately, never deleted). Without this pass-through the
+    gate would be a one-way door: fetal work excluded from the adult face and unreachable by request.
     """
     db_dir = str(db) if db else _default_db_dir()
     # Query-rewrite layer wiring point: rewrite only when an explicit query exists and the switch is
@@ -99,7 +105,8 @@ def search_literature(cell_type, species=None, tissue=None, top_k=5,
     if _rw is not None and query:
         query_used, rw_meta = _rw.rewrite_query(query)
     res = _s3.retrieve(cell_type, species=species or None, top_k=int(top_k),
-                       query=query_used or None, tissue=tissue, db_dir=db_dir)
+                       query=query_used or None, tissue=tissue, db_dir=db_dir,
+                       dev_stage=(dev_stage or None))
     # K3 additive join-table: attach inclusion_reason (intake-reason categorization) to each hit;
     # retrieval semantics untouched
     try:

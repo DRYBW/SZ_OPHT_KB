@@ -188,7 +188,8 @@ def _ont_call(fn, **kw):
 
 @app.tool(title="Search ophthalmic literature", annotations=_read_only("Search ophthalmic literature"))
 def search_literature(cell_type: str, top_k: int = 5, species: str = "",
-                      tissue: str = "", query: str = "", db: str = "") -> dict:
+                      tissue: str = "", query: str = "", db: str = "",
+                      dev_stage: str = "") -> dict:
     """Retrieve literature passages for a cell type / tissue from the bundled ophthalmic corpus.
     Returns passage text, PMID, journal, year, the marker genes that co-occur, and a relevance
     score. top_k controls how many passages come back (default 5).
@@ -199,6 +200,10 @@ def search_literature(cell_type: str, top_k: int = 5, species: str = "",
     query:     your own search sentence; when empty, a template sentence is built from cell_type.
     db:        empty = default resolution (EYEKB_DB_DIR env -> the pointer's role:default corpus -> the
                bundled v2.4.2_2026-09_slim corpus), or an absolute path to another corpus.
+    dev_stage: "" / "any" (default) = the adult face, which excludes fetal-only and developing-only
+               papers. "fetal_developing" | "adult" | "unknown" = ask for that stage explicitly; the
+               gate stands down and that stage's own papers are returned. Fetal / developing work is
+               kept in the corpus and reachable this way — it is put on its own shelf, not deleted.
 
     Chinese questions are accepted. A deterministic term-level bridge inserts English anchor
     terms in place without deleting any of your characters; it is not a translator. The bridge
@@ -210,10 +215,11 @@ def search_literature(cell_type: str, top_k: int = 5, species: str = "",
     """
     resp = core.search_literature(
         cell_type, species=species or None, tissue=tissue or None,
-        top_k=top_k, query=query or None, db=db or None)
+        top_k=top_k, query=query or None, db=db or None,
+        dev_stage=dev_stage or None)
     calllog.trace("search_literature",
                   {"cell_type": cell_type, "species": species, "tissue": tissue,
-                   "top_k": top_k, "query": query, "db": db}, resp)
+                   "top_k": top_k, "query": query, "db": db, "dev_stage": dev_stage}, resp)
     return resp
 
 

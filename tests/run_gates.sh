@@ -123,6 +123,20 @@ run_gate "G11 gate_mcpdesc_corpus (description corpus numbers vs the bundled cor
 run_gate "G12 gate_cittitle_meta (citation title/doi/pmcid vs the corpus)" \
   python3 tests/gate_cittitle_meta.py --json "$OUT/G12_RESULTS.json"
 
+# G13 was added after the frozen RUN4W golden-41 gate reported 0/41 on EVERY case while nothing was
+# actually broken: its direct arm had .../literature_db/v2.0_2026-09 hard-coded while its MCP arm
+# resolved the default library through the pointer, so the two arms read two different libraries and
+# the gate could only ever report a difference. A stale pin fails in exactly the shape of a real
+# regression, and it cost a long detour to separate the two (measured 2026-10-27; recorded in
+# docs/plans/lit_gapfill_20261026/SAME_STUDY_DEDUP_RECORD_20261027.md). This gate reads the library
+# versions each gate/verification script references, compares them with the pointer's declared
+# default, and FAILS only when a member of THIS chain is pinned to a non-default library; standalone
+# historical audit files are reported as WARN, because they legitimately pin the library of their own
+# date. Static, standard library only, no network, no GPU, and it carries five controls that build
+# each situation from scratch -- a gate that cannot fail is not a gate.
+run_gate "G13 gate_library_pin_consistency (no chain member pinned to a stale library)" \
+  python3 tests/gate_library_pin_consistency.py --controls --json "$OUT/G13_RESULTS.json"
+
 printf '\n=================== summary ===================\n'
 bad=0
 for i in "${!NAMES[@]}"; do
