@@ -1,0 +1,309 @@
+{
+ "loaded_default": [
+  "retina",
+  "membrane",
+  "retina_interneuron",
+  "retina_v6",
+  "face_v6",
+  "k9_ocs",
+  "antseg_v10",
+  "onfibro_v13"
+ ],
+ "verdict": {
+  "emulation": true,
+  "B1": true,
+  "B2": true,
+  "A1": true,
+  "A2": true
+ },
+ "B1": {
+  "clusters": 764,
+  "same_md5": 764,
+  "same_rank": 764
+ },
+ "B2": {
+  "all": [
+   9,
+   9
+  ],
+  "antseg_v10": [
+   9,
+   9
+  ],
+  "cl56_v15": [
+   9,
+   9
+  ],
+  "face_v6": [
+   9,
+   9
+  ],
+  "holefill_v12": [
+   9,
+   9
+  ],
+  "k9_ocs": [
+   9,
+   9
+  ],
+  "lensiris_v11": [
+   9,
+   9
+  ],
+  "membrane": [
+   9,
+   9
+  ],
+  "onfibro_v13": [
+   9,
+   9
+  ],
+  "retina": [
+   9,
+   9
+  ],
+  "retina_dev": [
+   9,
+   9
+  ],
+  "retina_interneuron": [
+   9,
+   9
+  ],
+  "retina_v6": [
+   9,
+   9
+  ],
+  "retina_v7": [
+   9,
+   9
+  ],
+  "subtype_v14": [
+   9,
+   9
+  ]
+ },
+ "M1_fix": {
+  "net": -2,
+  "per": {
+   "CX13_lens": {
+    "clusters": 20,
+    "off_ok": 11,
+    "on_ok": 10,
+    "gain": 0,
+    "loss": 1,
+    "gain_keys": [],
+    "loss_keys": [
+     "CX13_lens|7"
+    ]
+   },
+   "CX13_iris": {
+    "clusters": 28,
+    "off_ok": 7,
+    "on_ok": 6,
+    "gain": 0,
+    "loss": 1,
+    "gain_keys": [],
+    "loss_keys": [
+     "CX13_iris|13"
+    ]
+   }
+  },
+  "others": 716,
+  "lost": 0,
+  "gained": 1,
+  "lost_by_vol": {},
+  "ch_top": 5,
+  "ch_rank": 20,
+  "cornea_lost": 0,
+  "lost_keys": [],
+  "gained_keys": [
+   "PRE_GSE199013|14"
+  ],
+  "ch_top_keys": [
+   "CX14_TM_ciliary_snRNA|8",
+   "PRE_GSE199013|14",
+   "PRE_GSE199013|15",
+   "PRE_GSE199013|43",
+   "PRE_OA-D004|26"
+  ]
+ },
+ "M1_abs": {
+  "net": 5,
+  "per": {
+   "CX13_lens": {
+    "clusters": 20,
+    "off_ok": 6,
+    "on_ok": 10,
+    "gain": 4,
+    "loss": 0,
+    "gain_keys": [
+     "CX13_lens|1",
+     "CX13_lens|5",
+     "CX13_lens|12",
+     "CX13_lens|18"
+    ],
+    "loss_keys": []
+   },
+   "CX13_iris": {
+    "clusters": 28,
+    "off_ok": 5,
+    "on_ok": 6,
+    "gain": 1,
+    "loss": 0,
+    "gain_keys": [
+     "CX13_iris|1"
+    ],
+    "loss_keys": []
+   }
+  },
+  "others": 716,
+  "lost": 8,
+  "gained": 2,
+  "lost_by_vol": {
+   "CX03_retina_multiome": 2,
+   "CX04_cowan_fovea": 1,
+   "CX04_cowan_organoid": 2,
+   "CX09_voigt_RPE_choroid": 1,
+   "CX14_TM_ciliary_snRNA": 1,
+   "PRE_OA-D068": 1
+  },
+  "ch_top": 37,
+  "ch_rank": 371,
+  "cornea_lost": 0,
+  "lost_keys": [
+   "CX03_retina_multiome|5",
+   "CX03_retina_multiome|12",
+   "CX04_cowan_fovea|8",
+   "CX04_cowan_organoid|1",
+   "CX04_cowan_organoid|20",
+   "CX09_voigt_RPE_choroid|4",
+   "CX14_TM_ciliary_snRNA|11",
+   "PRE_OA-D068|27"
+  ],
+  "gained_keys": [
+   "CX07_iPSC_organoid_POAG|23",
+   "CX10_hiPSC_RPE|6"
+  ],
+  "ch_top_keys": [
+   "CX03_retina_multiome|5",
+   "CX03_retina_multiome|12",
+   "CX04_cowan_fovea|8",
+   "CX04_cowan_organoid|1",
+   "CX04_cowan_organoid|20",
+   "CX04_cowan_periphery|23",
+   "CX07_iPSC_organoid_POAG|5",
+   "CX07_iPSC_organoid_POAG|6",
+   "CX07_iPSC_organoid_POAG|13",
+   "CX07_iPSC_organoid_POAG|19",
+   "CX07_iPSC_organoid_POAG|23",
+   "CX08_RPE_choroid_scRNA|26",
+   "CX08_RPE_choroid_snRNA|14",
+   "CX09_voigt_RPE_choroid|4",
+   "CX10_hiPSC_RPE|5",
+   "CX10_hiPSC_RPE|6",
+   "CX10_hiPSC_RPE|16",
+   "CX10_hiPSC_RPE|19",
+   "CX10_hiPSC_RPE|21",
+   "CX10_hiPSC_RPE|24",
+   "CX11_posterior_eye_atlas|21",
+   "CX11_posterior_eye_atlas|27",
+   "CX11_posterior_eye_atlas|28",
+   "CX13_TM_corneal_scleral|22",
+   "CX13_central_cornea|20",
+   "CX14_TM_ciliary_snRNA|11",
+   "CX16_tabula_sapiens_eye|16",
+   "CX16_tabula_sapiens_eye|25",
+   "PRE_GSE199013|1",
+   "PRE_GSE199013|42",
+   "PRE_GSE268630|33",
+   "PRE_OA-D001|25",
+   "PRE_OA-D001|35",
+   "PRE_OA-D068|7",
+   "PRE_OA-D068|15",
+   "PRE_OA-D068|27",
+   "PRE_OA-D068|38"
+  ]
+ },
+ "M2_fix": {
+  "net": -1,
+  "per": {
+   "CX13_lens": {
+    "clusters": 20,
+    "off_ok": 9,
+    "on_ok": 8,
+    "gain": 0,
+    "loss": 1,
+    "gain_keys": [],
+    "loss_keys": [
+     "CX13_lens|7"
+    ]
+   },
+   "CX13_iris": {
+    "clusters": 28,
+    "off_ok": 5,
+    "on_ok": 5,
+    "gain": 0,
+    "loss": 0,
+    "gain_keys": [],
+    "loss_keys": []
+   }
+  },
+  "others": 716,
+  "lost": 0,
+  "gained": 3,
+  "lost_by_vol": {},
+  "ch_top": 5,
+  "ch_rank": 20,
+  "cornea_lost": 0,
+  "lost_keys": [],
+  "gained_keys": [
+   "CX14_TM_ciliary_snRNA|8",
+   "PRE_GSE199013|14",
+   "PRE_OA-D004|26"
+  ],
+  "ch_top_keys": [
+   "CX14_TM_ciliary_snRNA|8",
+   "PRE_GSE199013|14",
+   "PRE_GSE199013|15",
+   "PRE_GSE199013|43",
+   "PRE_OA-D004|26"
+  ]
+ },
+ "M2_abs": {
+  "net": 2,
+  "per": {
+   "CX13_lens": {
+    "clusters": 20,
+    "off_ok": 6,
+    "on_ok": 8,
+    "gain": 2,
+    "loss": 0,
+    "gain_keys": [
+     "CX13_lens|5",
+     "CX13_lens|18"
+    ],
+    "loss_keys": []
+   },
+   "CX13_iris": {
+    "clusters": 28,
+    "off_ok": 5,
+    "on_ok": 5,
+    "gain": 0,
+    "loss": 0,
+    "gain_keys": [],
+    "loss_keys": []
+   }
+  },
+  "others": 716,
+  "lost": 0,
+  "gained": 0,
+  "lost_by_vol": {},
+  "ch_top": 0,
+  "ch_rank": 0,
+  "cornea_lost": 0,
+  "lost_keys": [],
+  "gained_keys": [],
+  "ch_top_keys": []
+ }
+}

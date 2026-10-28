@@ -1,0 +1,119 @@
+corpus 764 clusters / 15 libraries x 9 probes
+  arm merge=0 sem=old done | errors 0 | 
+  arm merge=0 sem=new done | errors 0 | 
+  arm merge=1 sem=old done | errors 0 | 
+  arm merge=1 sem=new done | errors 0 | 
+  arm merge=2 sem=old done | errors 0 | 
+  arm merge=2 sem=new done | errors 0 | 
+shipped route loads: ['retina', 'membrane', 'retina_interneuron', 'retina_v6', 'face_v6', 'k9_ocs', 'antseg_v10', 'onfibro_v13']
+
+== self-proof 0: emulated pre-fix meaning == real pre-fix bytes ==
+  shipped route 764 clusters, md5 identical 764
+  merged state  764 clusters, md5 identical 764
+
+== criterion B1 (shipped route: real pre-fix bytes vs post-fix bytes) ==
+  764 clusters: full-response md5 identical 764, ranking sequence identical 764
+
+== criterion B2 (15 libraries named explicitly: pre-fix vs post-fix) ==
+  all                  9/9 OK
+  antseg_v10           9/9 OK
+  cl56_v15             9/9 OK
+  face_v6              9/9 OK
+  holefill_v12         9/9 OK
+  k9_ocs               9/9 OK
+  lensiris_v11         9/9 OK
+  membrane             9/9 OK
+  onfibro_v13          9/9 OK
+  retina               9/9 OK
+  retina_dev           9/9 OK
+  retina_interneuron   9/9 OK
+  retina_v6            9/9 OK
+  retina_v7            9/9 OK
+  subtype_v14          9/9 OK
+
+######## M1a = library merged without its own scope guard: the fix's own effect ########
+
+== M1 pre-fix -> post-fix · criterion A (lens + iris) ==
+  CX13_lens    20 clusters | base right 11 ( 55.0%) | arm right 10 ( 50.0%) | gained 0 | lost 1
+  CX13_iris    28 clusters | base right  7 ( 25.0%) | arm right  6 ( 21.4%) | gained 0 | lost 1
+  net -2 clusters (criterion A2 asks for >= +4)
+
+== M1 pre-fix -> post-fix · criterion A1 (answers outside the merged library's tissues) ==
+  716 scoreable clusters: lost 0, gained 1
+   gained PRE_GSE199013|14                   author=non-pigmented ciliary epithelial cell arm='pigmented ciliary epithelial cell'
+  716 clusters (ranking layer): top-1 moved 5, ranking sequence moved 20
+  criterion A1 requires cornea losses = 0; measured 0
+
+== M1 pre-fix -> post-fix · criterion A3 (where the gained answers landed) ==
+
+######## M1b = merged (post-fix) vs shipped route: the pre-registered A reading ########
+
+== M1 post-fix vs shipped · criterion A (lens + iris) ==
+  CX13_lens    20 clusters | base right  6 ( 30.0%) | arm right 10 ( 50.0%) | gained 4 | lost 0
+  CX13_iris    28 clusters | base right  5 ( 17.9%) | arm right  6 ( 21.4%) | gained 1 | lost 0
+  net +5 clusters (criterion A2 asks for >= +4)
+
+== M1 post-fix vs shipped · criterion A1 (answers outside the merged library's tissues) ==
+  716 scoreable clusters: lost 8, gained 2
+  losses by volume: {'CX03_retina_multiome': 2, 'CX04_cowan_fovea': 1, 'CX04_cowan_organoid': 2, 'CX09_voigt_RPE_choroid': 1, 'CX14_TM_ciliary_snRNA': 1, 'PRE_OA-D068': 1}
+   lost CX03_retina_multiome|5             author=Mueller cell                 base='MG' arm='anterior lens cell'
+   lost CX03_retina_multiome|12            author=retinal rod cell             base='Rod' arm='secondary lens fiber'
+   lost CX04_cowan_fovea|8                 author=amacrine cell                base='AC' arm='anterior lens cell'
+   lost CX04_cowan_organoid|1              author=amacrine cell                base='AC' arm='pigmented epithelial cell'
+   lost CX04_cowan_organoid|20             author=astrocyte                    base='Astro' arm='anterior lens cell'
+   lost CX09_voigt_RPE_choroid|4           author=melanocyte                   base='Melanocyte' arm='pigmented epithelial cell'
+   lost CX14_TM_ciliary_snRNA|11           author=melanocyte                   base='Melanocyte' arm='pigmented epithelial cell'
+   lost PRE_OA-D068|27                     author=amacrine cell                base='AC' arm='anterior lens cell'
+   gained CX07_iPSC_organoid_POAG|23         author=lens fiber cell              arm='secondary lens fiber'
+   gained CX10_hiPSC_RPE|6                   author=retinal pigment epithelial cell arm='pigmented epithelial cell'
+  716 clusters (ranking layer): top-1 moved 37, ranking sequence moved 371
+  criterion A1 requires cornea losses = 0; measured 0
+
+== M1 post-fix vs shipped · criterion A3 (where the gained answers landed) ==
+   CX13_lens|1                author=anterior lens cell         arm top-1='anterior lens cell'
+   CX13_lens|5                author=anterior lens cell         arm top-1='anterior lens cell'
+   CX13_lens|12               author=lens epithelial cell       arm top-1='anterior lens cell'
+   CX13_lens|18               author=anterior lens cell         arm top-1='anterior lens cell'
+   CX13_iris|1                author=pigmented epithelial cell  arm top-1='pigmented epithelial cell'
+
+######## M2a = merged with its declared scope honoured: the fix's own effect ########
+
+== M2 pre-fix -> post-fix · criterion A (lens + iris) ==
+  CX13_lens    20 clusters | base right  9 ( 45.0%) | arm right  8 ( 40.0%) | gained 0 | lost 1
+  CX13_iris    28 clusters | base right  5 ( 17.9%) | arm right  5 ( 17.9%) | gained 0 | lost 0
+  net -1 clusters (criterion A2 asks for >= +4)
+
+== M2 pre-fix -> post-fix · criterion A1 (answers outside the merged library's tissues) ==
+  716 scoreable clusters: lost 0, gained 3
+   gained CX14_TM_ciliary_snRNA|8            author=non-pigmented ciliary epithelial cell arm='pigmented ciliary epithelial cell'
+   gained PRE_GSE199013|14                   author=non-pigmented ciliary epithelial cell arm='pigmented ciliary epithelial cell'
+   gained PRE_OA-D004|26                     author=non-pigmented ciliary epithelial cell arm='non-pigmented ciliary epithelial cell'
+  716 clusters (ranking layer): top-1 moved 5, ranking sequence moved 20
+  criterion A1 requires cornea losses = 0; measured 0
+
+== M2 pre-fix -> post-fix · criterion A3 (where the gained answers landed) ==
+
+######## M2b = merged with scope (post-fix) vs shipped route: pre-registered A ########
+
+== M2 post-fix vs shipped · criterion A (lens + iris) ==
+  CX13_lens    20 clusters | base right  6 ( 30.0%) | arm right  8 ( 40.0%) | gained 2 | lost 0
+  CX13_iris    28 clusters | base right  5 ( 17.9%) | arm right  5 ( 17.9%) | gained 0 | lost 0
+  net +2 clusters (criterion A2 asks for >= +4)
+
+== M2 post-fix vs shipped · criterion A1 (answers outside the merged library's tissues) ==
+  716 scoreable clusters: lost 0, gained 0
+  716 clusters (ranking layer): top-1 moved 0, ranking sequence moved 0
+  criterion A1 requires cornea losses = 0; measured 0
+
+== M2 post-fix vs shipped · criterion A3 (where the gained answers landed) ==
+   CX13_lens|5                author=anterior lens cell         arm top-1='anterior lens cell'
+   CX13_lens|18               author=anterior lens cell         arm top-1='anterior lens cell'
+
+== criteria (pre-registered wording) ==
+  emulation  PASS
+  B1         PASS
+  B2         PASS
+  A1         PASS
+  A2         PASS
+wrote GUARD_FIX_VERIFY.json
+EXIT=0

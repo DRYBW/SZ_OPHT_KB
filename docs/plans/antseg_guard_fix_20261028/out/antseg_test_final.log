@@ -1,0 +1,35 @@
+module under test: /home/ubuntu/EYEKB_REPO/mcp_server/eyekb_core.py
+
+PASS  C1 guard-then-merge: failing increment does not delete the production class  |  final ranking=['Corneal Endothelium', 'Rod']; demoted=['lens epithelial cell']
+PASS  C1 the increment was demoted for the margin, not for scope  |  reason=below_increment_eligibility n_shared=3 needed=7
+PASS  C2 counter-example reproduces the unrecoverable loss under the OLD order  |  merge-first kept=['lens epithelial cell', 'Rod'] -> after guard=['Rod']
+PASS  C2 out-of-scope increment also leaves the production class answerable  |  status=out_of_scope final=['Corneal Endothelium', 'Rod']
+PASS  C3 fixture: the state entry really is concept_kind=state_program  |  state_program
+PASS  C3 state entry does not raise the bar (4 shared genes admitted against incumbent 2)  |  best_incumbent=2 kept=['Proliferating', 'lens epithelial cell', 'Fibroblast']
+PASS  C3 counter-example: counting the state entry WOULD have raised the bar  |  best_incumbent=9
+PASS  C4 live path calls the guard before the CL merge  |  call order=['guard', 'cl_merge']
+PASS  D1 release file declares scope_tissues  |  ['cornea', 'conjunctiv', 'ocular_surface', 'lens', 'iris', 'ciliary', 'trabecular']
+PASS  D1 the loaded db exposes the declaration  |  loaded=['markers_v10_antseg_increment.json']
+PASS  D2a no increment class name collides with a production class name  |  increment=16 collisions=[]
+PASS  D2b every class on the merged surface resolves to exactly one owning file  |  surface=81 unresolved=[] (count=0)
+PASS  D2c every production name clash is disambiguated by an explicit alias  |  conflict_rows=26 aliased_keys=26
+PASS  D3 in-scope tissue admits the increment class  |  status=in_scope top3=['lens epithelial cell', 'lens fiber cell', 'Corneal Endothelium']
+PASS  D4 out-of-scope tissue leaves no increment candidate answerable  |  status=None (None = removed by an earlier filter) lens_visible=False
+PASS  D5 absent tissue leaves no increment candidate answerable (fail closed)  |  status=out_of_scope lens_visible=False
+PASS  D6 missing declaration fails closed and is reported  |  status=no_declared_scope demoted=12
+PASS  D7 normalisation [case] tissue='LENS' normalises to an in-scope string  |  status=in_scope
+PASS  D7 normalisation [spaces] tissue='Ciliary Body' normalises to an in-scope string  |  status=in_scope
+PASS  D7 normalisation [underscore] tissue='trabecular_meshwork' normalises to an in-scope string  |  status=in_scope
+PASS  D7 normalisation [partial] tissue='ocular surface' normalises to an in-scope string  |  status=in_scope
+PASS  D8 admission arithmetic (incumbent 0/1/2 vs shared 1..4)  |  best=0,inc=1:reject best=0,inc=2:admit best=1,inc=2:reject best=1,inc=3:admit best=2,inc=3:reject best=2,inc=4:admit
+PASS  D9 production single-gene candidate is not filtered  |  kept=['lens epithelial cell', 'Fibroblast']
+PASS  D10 explicit library=antseg_v10 is never guarded  |  top3=['lens epithelial cell', 'lens fiber cell', 'pigmented ciliary epithelial cell']
+PASS  E1 the incumbent set covers every library the shipped route loads  |  loaded=['markers_k9_ocs_increment.json', 'markers_membrane_v1.json', 'markers_v10_antseg_increment.json', 'markers_v13_onfibro_increment.json', 'markers_v4.1_clean.json', 'markers_v5_retina_interneuron.json', 'markers_v6_face_increment.json', 'markers_v6_retina_repair.json'] prod_size=8
+PASS  E2 no staging library is treated as an incumbent  |  leaked=[]
+PASS  E3 a sibling staging increment no longer raises the bar (2 shared genes admitted)  |  best_incumbent=0 kept=['lens epithelial cell', 'pigmented epithelial cell', 'Fibroblast']
+PASS  E3b and that sibling entry never counts as the incumbent by itself  |  best_incumbent=0 (sibling had n_shared=1)
+PASS  E4 a production incumbent at the same n_shared still demotes the increment  |  best_incumbent=2 demoted=['below_increment_eligibility']
+PASS  E5 live shipped route still reports an incumbent margin (guard wired, not skipped)  |  status=in_scope best_incumbent=1
+
+=== 30/30 assertions passed ===
+TEST_EXIT=0

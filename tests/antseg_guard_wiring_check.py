@@ -291,12 +291,69 @@ def d():
           f"top3={tops[:3]}")
 
 
+# --------------------------------------------- E: sibling staging increment must not raise the bar
+def e():
+    """2026-10-28 defect: `best_incumbent` counted OTHER increments' entries.
+
+    A staging library (registered default-OFF, reachable by name only) has not been admitted to the
+    production surface, so its entries may not raise this library's admission bar. Regression shape:
+    two increments loaded on one route (this is what merging v11 into `all` looked like).
+    """
+    V11 = "markers_v11_lensiris_increment.json"
+    MEMB = "markers_membrane_v1.json"
+
+    prod = core._production_lib_basenames()
+    loaded = {Path(p).name for _n, p, _db in core._load_marker_dbs("all")}
+    staging = {"markers_v11_lensiris_increment.json", "markers_v12_holefill_increment.json",
+               "markers_v14_subtype_second_increment.json",
+               "markers_v15_cl56_increment.json", "markers_v7_panel_increment.json",
+               "markers_v9_dev_retina.json", "markers_v6_lacrimal_increment.json",
+               "markers_v10_antseg_increment.json"} - loaded
+    check("E1 the incumbent set covers every library the shipped route loads",
+          loaded <= prod, f"loaded={sorted(loaded)} prod_size={len(prod)}")
+    check("E2 no staging library is treated as an incumbent",
+          not (staging & prod), f"leaked={sorted(staging & prod)}")
+
+    # E3: the defect itself. A sibling increment entry with the highest n_shared used to lift the
+    # bar from 2 to 3, demoting a legitimately eligible antseg candidate (n_shared=2).
+    ranks = [R(INC_CLASS, 2, ANTSEG), R("pigmented epithelial cell", 1, V11),
+             R("Fibroblast", 0, MEMB)]
+    owner = owner_of(**{INC_CLASS: ANTSEG, "pigmented epithelial cell": V11,
+                        "Fibroblast": MEMB})
+    kept, dem, st = core._antseg_guard_split(ranks, owner, "lens", ("lens",), NO_STATE)
+    names = [r["cell_type"] for r in kept]
+    check("E3 a sibling staging increment no longer raises the bar (2 shared genes admitted)",
+          INC_CLASS in names and st["best_incumbent_n_shared"] == 0,
+          f"best_incumbent={st['best_incumbent_n_shared']} kept={names}")
+    check("E3b and that sibling entry never counts as the incumbent by itself",
+          st["best_incumbent_n_shared"] == 0,
+          f"best_incumbent={st['best_incumbent_n_shared']} (sibling had n_shared=1)")
+
+    # E4: the fix must not loosen the rule against a REAL production incumbent — margin still bites.
+    ranks = [R(INC_CLASS, 2, ANTSEG), R("Corneal Endothelium", 2, MEMB)]
+    owner = owner_of(**{INC_CLASS: ANTSEG, "Corneal Endothelium": MEMB})
+    kept, dem, st = core._antseg_guard_split(ranks, owner, "lens", ("lens",), NO_STATE)
+    check("E4 a production incumbent at the same n_shared still demotes the increment",
+          INC_CLASS not in [r["cell_type"] for r in kept]
+          and st["best_incumbent_n_shared"] == 2,
+          f"best_incumbent={st['best_incumbent_n_shared']} demoted={[d['reason'] for d in dem]}")
+
+    # E5: the shipped route's incumbent value must not move (only one increment is loaded there).
+    r = core.query_marker(genes=["PAX6", "CRYBB2", "CRYAB", "BFSP2", "CDH2", "PROX1", "MALAT1"],
+                          library="all", species="human", tissue="lens")
+    g = r.get("antseg_guard") or {}
+    check("E5 live shipped route still reports an incumbent margin (guard wired, not skipped)",
+          g.get("status") == "in_scope" and isinstance(g.get("best_incumbent_n_shared"), int),
+          f"status={g.get('status')} best_incumbent={g.get('best_incumbent_n_shared')}")
+
+
 if __name__ == "__main__":
     print(f"module under test: {core.__file__}\n")
     c1_c2()
     c3()
     c4()
     d()
+    e()
     bad = [n for n, ok, _ in results if not ok]
     print(f"\n=== {len(results) - len(bad)}/{len(results)} assertions passed ===")
     if bad:

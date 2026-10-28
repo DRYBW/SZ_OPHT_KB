@@ -522,6 +522,31 @@ ANTSEG_MIN_SHARED = 2
 ANTSEG_MARGIN = 2
 
 
+def _production_lib_basenames():
+    """Filenames of the libraries the SHIPPED default `all` route loads — i.e. the incumbents.
+
+    Why this exists (defect fix, 2026-10-28; prereg =
+    eyekb_indep_validation_20261022/PREREG_ANTSEG_GUARD_FIX_20261028.md): the incumbent margin
+    used to be computed as "every candidate that is not owned by this increment file", which made
+    **any other increment library's entries count as incumbents**. Loading two increments on the
+    same route therefore lifted the admission bar for this one: measured on 2026-10-28, adding
+    lensiris_v11 (n_shared=1 entries) to `all` raised the bar from 2 to 3 shared genes and
+    demoted legitimately-eligible antseg candidates (n_shared=2) on the cornea.
+
+    The set is DERIVED from the activation whitelists, never restated: activating a new increment
+    only edits its own whitelist and this set follows, so there is no second list to drift. Empty
+    whitelists (subtype_v14 / cl56_v15 today) contribute nothing. Staging libraries — registered
+    default-OFF and reachable by name only — are deliberately absent, so they cannot raise the bar
+    here. `retina`/`membrane`/`retina_interneuron` are the three base libraries of the default
+    route and are appended explicitly.
+    """
+    names = ["retina", "membrane", "retina_interneuron"]
+    for wl in (V6_DEFAULT_LIBS, K9_DEFAULT_LIBS, ANTSEG_DEFAULT_LIBS,
+               ONFIBRO_DEFAULT_LIBS, SUBTYPE_DEFAULT_LIBS, CL56_DEFAULT_LIBS):
+        names.extend(wl)
+    return frozenset(Path(MARKER_LIBS[n]).name for n in names if n in MARKER_LIBS)
+
+
 def _antseg_scope_tissues(dbs):
     """Declared anterior-segment scope, read from the increment file itself (never hard-coded).
 
@@ -573,8 +598,18 @@ def _antseg_guard_split(rank_full, owner_map, tissue, scope_tissues, is_state_en
         status["status"] = "out_of_scope"
         status["tissue"] = tissue
         return kept, demoted, status
-    best_inc = max([r["n_shared"] for r in rank_full
-                    if not _antseg_is_increment(r, owner_map) and not is_state_entry(r)] or [0])
+    # The incumbent margin is measured against the libraries the SHIPPED route loads. A candidate
+    # owned by a staging (registered default-OFF) increment is not an incumbent: it has not been
+    # admitted to the production surface, so it may not raise this library's admission bar. Before
+    # 2026-10-28 the filter read "not owned by this increment file", which let a *sibling* staging
+    # increment raise the bar (two increments on one route) — see `_production_lib_basenames`.
+    prod = _production_lib_basenames()
+
+    def _is_incumbent(x):
+        b = Path(owner_map.get(x["cell_type"], "")).name
+        return b in prod and b != ANTSEG_LIB_BASENAME and not is_state_entry(x)
+
+    best_inc = max([r["n_shared"] for r in rank_full if _is_incumbent(r)] or [0])
     kept, demoted = [], []
     for r in rank_full:
         if _antseg_is_increment(r, owner_map) and (
