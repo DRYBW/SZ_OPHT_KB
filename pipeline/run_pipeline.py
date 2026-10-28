@@ -254,6 +254,11 @@ def main():
     ap.add_argument("--list-tissues", action="store_true", help="print the known tissue dictionary and exit")
     ap.add_argument("--llm-assist", action="store_true",
                     help="optional switch: call a user-supplied channel to generate evidence-summary drafts (off by default; does not affect grading)")
+    ap.add_argument("--adjudicate", action="store_true", dest="adjudicate_layer",
+                    help="optional SECOND answer per cluster from a user-supplied channel (off by "
+                         "default; EYEKB_ADJUDICATE=1 also enables it). The library answer is never "
+                         "replaced; both answers are reported side by side, and the second column is "
+                         "labelled not reproducible.")
     ap.add_argument("--volume-counts", default="", dest="volume_counts",
                     help="[X4B-FIX F2] optional JSON dict {type-label: whole-volume cell count} for the Stage B "
                          "volume plausibility gate (inert without it; EYEKB_STATE_GUARD=0|false|off|no disables).")
@@ -333,7 +338,10 @@ def main():
                       group_col="group" if sa["group_present"] else "",
                       gene_degraded=bool(sa["gene_id"].get("degraded")),
                       top_genes_n=_l2_budget_n(a.top_genes_n), llm_assist=a.llm_assist,
-                      volume_counts=volume_counts)
+                      volume_counts=volume_counts,
+                      adjudicate_layer=(a.adjudicate_layer
+                                        or os.environ.get("EYEKB_ADJUDICATE", "").strip()
+                                        .lower() in ("1", "true", "yes", "on")))
     att_stats = inject_shadow(out, species, tissue, meta) if gate else None
     grades = {}
     for c in rep["clusters"]:

@@ -162,7 +162,8 @@ def grade_cluster(kb_marker, comp, lit, group_present, gene_degraded):
 # ---------------------------------------------------------------- main flow
 def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue,
                 disease="", group_col="group", gene_degraded=False, top_genes_n=10,
-                llm_assist=False, logf=None, volume_counts=None):
+                llm_assist=False, logf=None, volume_counts=None, dev_stage="",
+                marker_library="", adjudicate_layer=False):
     import anyio
     import pandas as pd
     from mcp import ClientSession, StdioServerParameters
@@ -253,6 +254,13 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
                     _qm_args = {"genes": top}
                     if tissue:
                         _qm_args["tissue"] = tissue
+                    # A fetal volume that queries the adult marker libraries gets adult answers:
+                    # on this volume's largest cluster the default ranking returns horizontal
+                    # cell for a retinal progenitor cluster, while the developmental panel
+                    # returns RPC_late from the same genes. Empty = the historical default, so
+                    # adult behaviour is untouched; fetal callers must name the panel.
+                    if marker_library:
+                        _qm_args["library"] = marker_library
                     qm = await call("query_marker", _qm_args) if top else None
                     cands = [x.get("cell_type") for x in demote_kb9((qm or {}).get("celltype_ranking") or [])][:3]  # [KB9B t_3bbc769f]
                     # [X4B-FIX F2 t_95015c8a] volume plausibility gate — active only when the caller
@@ -274,16 +282,22 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
                     comp = composition_flag(rows, cands[0] if cands else None, frac_pct)
                     lit = {"per_celltype": {}}
                     query_cands = cands or cands_unranked
+                    # dev_stage is empty by default, which is the adult face: fetal-only and
+                    # developing-only papers stay on their own shelf. A fetal/developing volume
+                    # has to ask for that shelf explicitly (traceable per-member, never inferred
+                    # from the caller's data) or every citation comes back adult-tagged.
+                    _stage = {"dev_stage": dev_stage} if dev_stage else {}
                     if query_cands:
                         for ct in query_cands:
                             lit["per_celltype"][ct] = await call(
                                 "search_literature",
-                                {"cell_type": ct, "species": species, "tissue": tissue, "top_k": 4})
+                                {"cell_type": ct, "species": species, "tissue": tissue, "top_k": 4,
+                                 **_stage})
                     else:  # no candidates: use the top genes for a lexical query — still evidence, no conclusion
                         lit["gene_query"] = await call(
                             "search_literature",
                             {"cell_type": "", "species": species, "tissue": tissue,
-                             "query": " ".join(top[:6]) + f" {tissue}", "top_k": 4})
+                             "query": " ".join(top[:6]) + f" {tissue}", "top_k": 4, **_stage})
                     dp_hits = {}
                     if group_present:
                         for lab, dp in dp_cache.items():
@@ -330,6 +344,16 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
         from llm_assist import assist  # noqa: E402
         llm_meta = assist(per_cluster, out)
 
+    # optional SECOND answer per cluster (off by default). It writes beside the library answer and
+    # never replaces it: the two answers are reported side by side, because on the corpora measured
+    # so far the global difference between them is not separated by the data.
+    adj_meta = {"enabled": False,
+                "note": "zero LLM by default; enabled only with --adjudicate or EYEKB_ADJUDICATE=1, "
+                        "and a user-supplied channel is required"}
+    if adjudicate_layer:
+        from adjudicate import adjudicate as _adjudicate   # noqa: E402
+        adj_meta = _adjudicate(per_cluster, out)
+
     report = {
         "schema": "eyekb-pipeline-evidence-v1",
         "generated_at": time.strftime("%F %T"),
@@ -352,6 +376,10 @@ def run_stage_b(processed_h5ad, markers_csv, sizes_csv, out_dir, species, tissue
                       "errors": sum(1 for c in calls if not c["ok"])},
         "clusters": per_cluster,
     }
+    # the second-answer block appears only when the layer was requested: a default run must
+    # produce exactly the report it produced before this layer existed, byte for byte.
+    if adjudicate_layer:
+        report["adjudication"] = adj_meta
     if volume_counts is not None:
         # [X4B-FIX F2] header disclosure appears only on runs that opted into --volume-counts
         report["volume_gate"] = {
@@ -440,10 +468,15 @@ def render_md(rep):
               f"  - Rules fired: {', '.join(c['confidence_rules_fired'])}",
               f"- top genes: {', '.join(c['top_genes'])}",
               "- query_marker candidates: " + (
-                  "; ".join(f"{x['cell_type']} (n_shared={x['n_shared']}, "
-                            f"{','.join(x.get('shared_genes', [])[:4])})" for x in cr[:3])
-                  or ("no named candidates" + (f" (unranked: {', '.join(x['cell_type'] for x in ur[:3])}; "
-                                               f"{qm.get('no_named_ranking_for', '')})" if ur else ""))),
+                                "; ".join(f"{x['cell_type']} (n_shared={x['n_shared']}, "
+                                          f"{','.join(x.get('shared_genes', [])[:4])})" for x in cr[:3])
+                                or ("no named candidates" + (f" (unranked: {', '.join(x['cell_type'] for x in ur[:3])}; "
+                                                             f"{qm.get('no_named_ranking_for', '')})" if ur else ""))),
+                            *([f"- Second answer (model, optional layer; NOT reproducible): **{c['adjudication']['answer']}**"
+                               f" — {c['adjudication']['runs']} runs {c['adjudication'].get('run_answers')}, "
+                               f"model `{c['adjudication']['model']}`, library answer unchanged: "
+                               f"{'yes' if c['adjudication'].get('library_answer_unchanged') else 'NO'}"]
+                              if c.get("adjudication") else []),
               *( (lambda vg: [f"- Volume gate (X4B-FIX F2): **{vg['flag']}** — cluster n_cells={vg['n_cells']} "
                               "exceeds the same-volume interpreted total N_t for: "
                               + "; ".join(f"{r['candidate']} (N_t={r['N_t']})" for r in vg["rejected"])
@@ -501,10 +534,26 @@ def main():
                     help="set when Stage A reports gene IDs unmapped to symbols (affects grading)")
     ap.add_argument("--llm-assist", action="store_true",
                     help="optional: call a user-supplied OpenAI-compatible channel to generate evidence summaries (off by default; does not affect grading)")
+    ap.add_argument("--adjudicate", action="store_true", dest="adjudicate_layer",
+                    help="optional SECOND answer per cluster from a user-supplied channel "
+                         "(off by default; EYEKB_ADJUDICATE=1 enables it too). The library answer "
+                         "is never replaced - both answers are reported side by side, because the "
+                         "difference between them is not separated by the corpus measured so far. "
+                         "This column is not reproducible and is labelled as such.")
     ap.add_argument("--volume-counts", default="", dest="volume_counts",
                     help="[X4B-FIX F2] optional JSON dict {type-label: whole-volume cell count} driving the "
                          "volume plausibility gate (n_cells > N_t cascade veto; inert without it). "
                          "Env EYEKB_STATE_GUARD=0|false|off|no disables the gate even when provided.")
+    ap.add_argument("--dev-stage", default="", dest="dev_stage",
+                    choices=["", "fetal_developing", "adult", "unknown"],
+                    help="organism-stage shelf for the literature query. Empty (default) keeps the adult "
+                         "face, which excludes fetal-only and developing-only papers — correct for adult "
+                         "volumes and wrong for fetal/developing ones. Pass fetal_developing for a fetal "
+                         "volume so its citations come from that shelf instead of borrowing adult ones.")
+    ap.add_argument("--marker-library", default="", dest="marker_library",
+                    help="restrict the marker query to one library (e.g. retina_dev for fetal/developing "
+                         "retina). Empty (default) searches every active library, which is the historical "
+                         "behaviour and ranks adult classes first on a fetal volume.")
     a = ap.parse_args()
     vc = None
     if a.volume_counts:
@@ -515,7 +564,11 @@ def main():
     run_stage_b(a.processed, a.markers, a.sizes, a.out, a.species, a.tissue,
                 disease=a.disease, group_col=a.group_col,
                 gene_degraded=a.gene_degraded, top_genes_n=_l2_budget_n(a.top_genes_n),
-                llm_assist=a.llm_assist, volume_counts=vc)
+                llm_assist=a.llm_assist, volume_counts=vc, dev_stage=a.dev_stage,
+                marker_library=a.marker_library,
+                adjudicate_layer=(a.adjudicate_layer
+                                  or os.environ.get("EYEKB_ADJUDICATE", "").strip()
+                                  .lower() in ("1", "true", "yes", "on")))
 
 
 if __name__ == "__main__":
