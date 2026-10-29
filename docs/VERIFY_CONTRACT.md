@@ -402,3 +402,36 @@ the knowledge base: the full answers are unchanged and one argument away.
   re-measured in the same commit: G4 stays at its pre-existing 1/3 mismatch
   (`7c225802…` vs the expected `6f795b32…`), the negative battery keeps its pre-existing single BAD
   cell (G5 `P0_POSITIVE_CONTROL` / `G5-C05`), and G6 passes 21/21.
+
+### §5.9 A page has a middle tier: outline and verbatim slices (card docs/plans/page_midtier_20261029, 2026-10-29)
+
+**Behaviour registered.** `get_kb_page` gained two views for a single page, and the default for a
+long page moved. Nothing was removed: the page text is still returned by `detail="full"`, byte for
+byte.
+
+- **Views.** `detail="outline"` returns front matter, the heading tree with per-section line and
+  character counts, paper-line counts and a year histogram. `detail="slice"` returns consecutive
+  verbatim lines with `offset`/`limit` (default 100) and `next_offset`; the response states the join
+  rule, and `"\n".join` of every slice reproduces the page exactly. Both are computed from the page
+  text at call time; no new file, index or cache is written.
+- **Default rule.** A single page above 20,000 characters defaults to its outline; a shorter page is
+  returned in full. The catalogue keeps the default it was given in §5.8 (the inventory), which this
+  card does not touch.
+- **Switch and OFF identity.** `EYEKB_DEFAULT_DETAIL` — the same variable §5.8 registers. With
+  `EYEKB_DEFAULT_DETAIL=full`, every non-catalogue page returns its pre-change default bytes
+  (28/28 measured) and the catalogue returns the 140,005-character text, which is what §5.8 already
+  declared that value to mean. No new switch was introduced and the switch registry is unchanged
+  (R1 in sync, 29 rows).
+- **Losslessness, measured not asserted.** 29/29 pages, walked in slices of 37 lines (997 on the two
+  very large pages), rebuild to byte-identical text. Outline numbers were re-derived by a second
+  implementation inside the probe on all 29 pages: 0 field mismatches.
+- **Registered misses (not absorbed).** Two of the seven pre-registered criteria missed and stay
+  red in `verify_page_tiers.py` (rc=1): C4's absolute 2,500-character bound (the largest page turned
+  out to be `INCLUSIONS_RECENT` at 200,447 characters, outline 2,663 — the bound was guessed before
+  measuring and was not tuned afterwards), and C6's wording, which did not carve out the catalogue
+  and therefore could not pass (28/29 pages obey the threshold rule and revert). Both are set out in
+  the card's `AMENDMENT_2_C4_C6.md` with the readings they are made of. The change-control row
+  records 5/7, not 7/7.
+- **Failure policy.** A replay that compares default-route bytes for a page must state which value of
+  `EYEKB_DEFAULT_DETAIL` it was taken with and whether the page is above or below the 20,000-character
+  threshold; a mismatch under the other value is a configuration difference, not a regression.

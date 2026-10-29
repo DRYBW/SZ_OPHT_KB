@@ -41,6 +41,7 @@ Running it (MCP client configuration):
 """
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -224,12 +225,14 @@ def search_literature(cell_type: str, top_k: int = 5, species: str = "",
 
 
 def _normalise_detail(value):
-    """Fold a caller's detail argument to "answer", "full", or "" (caller expressed no choice).
+    """Fold a caller's detail argument to one of the recognised tiers, or "" (no choice made).
 
-    Unrecognised non-empty values keep the pre-change behaviour ("full") rather than silently
-    downgrading a caller who typed something the tool does not know. A boolean is accepted because
-    callers have passed one: `True` used to raise AttributeError inside the core, so it now means
-    "full" and `False` means "answer" — the same reading a human gives those two words.
+    Recognised: "full", "answer" (the page inventory / compact answer), "outline" (a page's
+    structure without its bulk) and "slice" (consecutive verbatim lines). Unrecognised non-empty
+    values keep the pre-change behaviour ("full") rather than silently downgrading a caller who
+    typed something the tool does not know. A boolean is accepted because callers have passed one:
+    `True` used to raise AttributeError inside the core, so it now means "full" and `False` means
+    "answer" — the same reading a human gives those two words.
     """
     if isinstance(value, bool):
         return "full" if value else "answer"
@@ -238,6 +241,10 @@ def _normalise_detail(value):
     s = str(value).strip().lower()
     if s in ("answer", "compact", "brief", "short"):
         return "answer"
+    if s in ("outline", "toc", "structure"):
+        return "outline"
+    if s in ("slice", "lines", "paged"):
+        return "slice"
     if s in ("full", "heavy", "all"):
         return "full"
     return "full" if s else ""
@@ -261,22 +268,116 @@ def _default_tier(fallback="answer"):
     return fallback
 
 
-def _tier_note(tier):
+def _tier_note(tier, extra=""):
     """Disclosure block for a tier the caller did not ask for. A smaller answer may not hide that
     it is smaller: the note names the tier and the one call that returns the whole thing."""
+    note = (
+        "This is the compact default tier. Nothing was removed from the knowledge base and the "
+        "full answer is one call away: pass detail=\"full\" (on get_kb_page, summary=False does "
+        "the same thing). Set EYEKB_DEFAULT_DETAIL=full to make the full tier the default again."
+    )
+    if extra:
+        note = note + " " + extra
+    return {"detail_applied": tier, "detail_note": note}
+
+
+PAGE_OUTLINE_THRESHOLD = 20000   # characters; above this a page defaults to its outline
+SLICE_DEFAULT_LINES = 100        # verbatim lines per slice when the caller does not say
+
+
+def _split_lines(text):
+    """The page as lines, with the rule that makes slicing lossless: "\\n".join(all slices) == text."""
+    return str(text).split("\n")
+
+
+def _outline_view(scope, name, text):
+    """Structure without the bulk: headings, per-section sizes, paper counts, year histogram.
+
+    Every number here is derived from the text handed in, at call time. The counting rule is stated
+    in the response (chars_taken_as = 'len(line) + 1 for each line in the section, terminator
+    included'), so a reader can recompute it rather than trust it.
+    """
+    lines = _split_lines(text)
+    front, body_start = {}, 0
+    if lines and lines[0].strip() == "---":
+        for i in range(1, len(lines)):
+            if lines[i].strip() == "---":
+                for ln in lines[1:i]:
+                    k, _, v = ln.partition(":")
+                    if k.strip():
+                        front[k.strip()] = v.strip()
+                body_start = i + 1
+                break
+    sections, cur = [], None
+    for idx in range(body_start, len(lines)):
+        ln = lines[idx]
+        m = re.match(r"^(#{1,6})\s+(.*)$", ln)
+        if m:
+            cur = {"level": len(m.group(1)), "heading": m.group(2).strip(),
+                   "start_line": idx + 1, "lines": 0, "chars": 0, "paper_rows": 0}
+            sections.append(cur)
+        elif cur is not None:
+            cur["lines"] += 1
+            cur["chars"] += len(ln) + 1
+            if ln.startswith("- PMID"):
+                cur["paper_rows"] += 1
+    years, papers = {}, 0
+    for ln in lines:
+        if ln.startswith("- PMID"):
+            papers += 1
+            m = re.search(r"\((\d{4})\)", ln)
+            if m:
+                years[m.group(1)] = years.get(m.group(1), 0) + 1
+    heads = [s["heading"] for s in sections]
     return {
-        "detail_applied": tier,
-        "detail_note": (
-            "This is the compact default tier. Nothing was removed from the knowledge base and the "
-            "full answer is one call away: pass detail=\"full\" (on get_kb_page, summary=False does "
-            "the same thing). Set EYEKB_DEFAULT_DETAIL=full to make the full tier the default again."
-        ),
+        "scope": scope, "name": name, "view": "outline",
+        "chars": len(text), "lines": len(lines),
+        "front_matter": front,
+        "sections": sections,
+        "papers": {"rows": papers, "by_year": dict(sorted(years.items()))},
+        "headings_unique": len(heads) == len(set(heads)),
+        "chars_taken_as": "len(line) + 1 per line in the section, terminator included",
+        "read_it": {
+            "part": "detail=\"slice\" with offset/limit (default %d lines); slices concatenate with "
+                    "a newline and reproduce the page exactly" % SLICE_DEFAULT_LINES,
+            "whole": "detail=\"full\" (or summary=false) returns the page text",
+        },
+    }
+
+
+def _slice_view(scope, name, text, offset, limit):
+    """Consecutive verbatim lines. No parsing, so the union of all slices is the page."""
+    lines = _split_lines(text)
+    try:
+        off = int(offset)
+    except (TypeError, ValueError):
+        off = 0
+    try:
+        lim = int(limit)
+    except (TypeError, ValueError):
+        lim = SLICE_DEFAULT_LINES
+    if off < 0 or lim <= 0:
+        return {"error": "offset must be >= 0 and limit must be > 0",
+                "got": {"offset": offset, "limit": limit},
+                "total_lines": len(lines),
+                "hint": "use offset=0 and a positive limit; detail=\"outline\" first if you need "
+                        "to know how big the page is"}
+    part = lines[off:off + lim]
+    nxt = off + len(part)
+    eof = nxt >= len(lines)
+    return {
+        "scope": scope, "name": name, "view": "slice",
+        "total_lines": len(lines), "offset": off, "limit": lim,
+        "returned": len(part), "next_offset": None if eof else nxt, "eof": eof,
+        "join": "\\n",
+        "lines": part,
     }
 
 
 @app.tool(title="Read knowledge-base page", annotations=_read_only("Read knowledge-base page"))
 def get_kb_page(scope: str, name: str = "", summary: bool | None = None,
-                detail: str = "") -> dict:
+                detail: str = "", offset: int = 0,
+                limit: int = SLICE_DEFAULT_LINES) -> dict:
     """Read a knowledge-base page as shipped (markdown).
       scope="index"              the master catalog of every page.
       scope="topic", name="..."  a topic page, e.g. vascular.
@@ -284,33 +385,65 @@ def get_kb_page(scope: str, name: str = "", summary: bool | None = None,
     scope is required; name is required for topic and tissue. An unknown path is rejected and
     the response lists the pages that do exist.
 
-    Size first: the index is about 140,000 characters of text but about 4,000 as an inventory.
-    The default for scope="index" is the inventory; a single topic or tissue page is small and is
-    returned in full by default.
+    Size first. The index is about 140,000 characters of text but about 4,000 as an inventory, so
+    scope="index" defaults to the inventory. One page runs from about 1,500 to about 191,000
+    characters, so a page above 20,000 characters defaults to its OUTLINE: headings, per-section
+    sizes, how many paper lines and a year histogram. A shorter page is returned in full.
 
-    detail="answer" gives one row per page (title, scope, path, size) and names what it left out
-    in omitted_fields; detail="full" is the page text. Empty means the default above. This is the
-    same field name get_tissue_composition uses, so one habit covers both tools. summary=true still
-    works and equals detail="answer"; an explicit detail wins if the two disagree.
+    detail: "outline" = structure only; "slice" = consecutive verbatim lines (offset/limit, default
+    100 lines, and the slices concatenate with a newline to reproduce the page exactly); "full" =
+    the page text; "answer" = the page inventory. Empty means the default above. Same field name as
+    get_tissue_composition, so one habit covers both tools. summary=true still equals
+    detail="answer"; an explicit detail wins if the two disagree.
     """
+    sc = str(scope or "").strip().lower()
     _d = _normalise_detail(detail)
     implicit = not _d
-    if not implicit:
-        _summary = (_d == "answer")
-    elif summary is not None:
-        _summary = bool(summary)
+    if implicit and summary is not None:
+        _d = "answer" if summary else "full"
         implicit = False   # an explicit `summary` is a caller choice, so its bytes stay as shipped
+    if implicit and sc == "index":
+        _d = _default_tier("answer")     # the catalogue: an inventory unless the revert is set
+
+    if _d == "answer":
+        resp = core.get_kb_page(scope, name, True)
+        if implicit and isinstance(resp, dict):
+            resp = dict(resp)
+            resp.update(_tier_note("answer"))
+        calllog.trace("get_kb_page", {"scope": scope, "name": name, "summary": True,
+                                      "detail": _d, "implicit": implicit}, resp)
+        return resp
+
+    # Everything else needs the page text. Fetch once, then shape it.
+    resp = core.get_kb_page(scope, name, False)
+    text = resp.get("content") if isinstance(resp, dict) else None
+    if text is None:      # rejected path / missing page: hand the core's own answer back untouched
+        calllog.trace("get_kb_page", {"scope": scope, "name": name, "summary": False,
+                                      "detail": _d or None, "implicit": implicit}, resp)
+        return resp
+
+    if implicit:
+        heavy = _default_tier("outline")          # EYEKB_DEFAULT_DETAIL=full -> "full"
+        _d = ("outline" if heavy != "full" and len(text) > PAGE_OUTLINE_THRESHOLD else "full")
+
+    if _d == "outline":
+        out = _outline_view(scope, name, text)
+    elif _d == "slice":
+        out = _slice_view(scope, name, text, offset, limit)
     else:
-        # No caller preference at all: the catalogue is the expensive one, one page is not.
-        _d = _default_tier("answer") if str(scope or "").strip().lower() == "index" else "full"
-        _summary = (_d == "answer")
-    resp = core.get_kb_page(scope, name, _summary)
-    if implicit and _summary and isinstance(resp, dict):
-        resp = dict(resp)
-        resp.update(_tier_note("answer"))
-    calllog.trace("get_kb_page", {"scope": scope, "name": name, "summary": _summary,
-                                 "detail": _d or None, "implicit": implicit}, resp)
-    return resp
+        out = resp                                # "full": byte-for-byte what the core returned
+
+    if implicit and isinstance(out, dict) and _d != "full":
+        extra = ""
+        if _d == "outline":
+            extra = ("This page is %d characters, so the outline is the default; read any part of it "
+                     "with detail=\"slice\" and offset/limit." % len(text))
+        out = dict(out)
+        out.update(_tier_note(_d, extra))
+    calllog.trace("get_kb_page", {"scope": scope, "name": name, "summary": False,
+                                  "detail": _d, "implicit": implicit,
+                                  "offset": offset, "limit": limit}, out)
+    return out
 
 
 @app.tool(title="Look up marker library", annotations=_read_only("Look up marker library"))

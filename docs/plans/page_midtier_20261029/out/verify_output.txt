@@ -1,0 +1,13 @@
+C1  PASS  3/3 full-tier responses byte-identical (cornea_full, vascular_full, index_full)
+C2  PASS  29 pages re-derived, 0 field mismatches
+C3  PASS  29/29 pages rebuilt byte-identically from slices
+C4  FAIL  largest page (topic:INCLUSIONS_RECENT, 200447 chars) outline 2663 chars; largest default slice 20303 chars; [supplementary] largest outline anywhere: 4267 chars
+C5  PASS  service lists 29, probed 29, fully reachable 29
+C6  FAIL  threshold rule violations: ['index:INDEX=should be outline, got answer']; EYEKB_DEFAULT_DETAIL=full restores 28/29 pages to their pre-change default bytes
+C8  PASS  implicit outlines without a disclosure: none
+
+5/7 criteria pass (as pre-registered)
+
+restated readings (not verdicts):
+  C4 ratio form: 24 pages default to outline; smallest saving topic:dr-diabetic-retinopathy 21258 -> 1519 chars (14.0x); largest saving 191143 chars page -> 1424 chars outline
+  C6 non-index form: threshold rule 28/28 pages, environment revert 28/28 pages; the index keeps the inventory default (4,324 chars) and returns the 140,005-char text under EYEKB_DEFAULT_DETAIL=full, which is VERIFY_CONTRACT 5.8's documented meaning of that variable
