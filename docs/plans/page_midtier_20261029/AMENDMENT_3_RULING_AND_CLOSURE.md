@@ -61,3 +61,32 @@ which equals **no** revision of the file in this repository (this card's parent 
 `1253be5e…`, this card `20e5f0c8…`). Copying the repo file over it would overwrite changes that exist
 only in the mirror. Sync therefore requires a three-way diff first, and that is a separate card. This
 is recorded here rather than silently skipped.
+
+## Independent end-to-end confirmation at closure
+
+The readings above come from `probe_page_tiers.py`. At closure the same behaviour was re-measured
+through a **second, separately written** probe that starts the real stdio server
+(`scripts/closure_probe.py`, readout in `out/CLOSURE_PROBE.txt`), so the claim does not rest on one
+instrument agreeing with itself.
+
+| request | response chars | view |
+|---|---|---|
+| `tissue/cornea`, nothing asked | 1,909 | outline + disclosure |
+| `tissue/cornea`, `detail="outline"` | 1,475 | outline |
+| `tissue/cornea`, `detail="full"` | 41,930 | full text |
+| `topic/INCLUSIONS_RECENT`, nothing asked | 3,098 | outline + disclosure |
+| `topic/models`, nothing asked | 1,902 | outline + disclosure |
+| `index`, nothing asked | 4,324 | inventory |
+| the three defaulted pages under `EYEKB_DEFAULT_DETAIL=full` | 41,930 / 201,893 / 192,383 | full text |
+
+Counting rule, stated because the two probes do not count the same thing: this probe measures the
+**whole MCP response text**, which on an implicit request includes the disclosure block. That block is
+434 characters on the cornea page and 435 on the two large topic pages; subtract it and the figures
+are the report's — 2,663 and 1,467 exactly, and 1,475 on cornea where the recorded figure is 1,482
+(the same 7-character gap appears in the explicit `detail="outline"` reading, so it is a
+counting-convention difference present in both views, not a behaviour difference). The revert check
+`cornea_default` under `EYEKB_DEFAULT_DETAIL=full` equals the plain-state `cornea_full` exactly.
+
+One practical note for anyone re-running it: the script must not live in `/tmp` on this machine. A
+stray `/tmp/select.py` shadows the stdlib `select` module and the interpreter dies inside `asyncio`
+before the server starts.

@@ -1,0 +1,19 @@
+plain  cornea_default       chars=   1909 view=None
+plain  cornea_full          chars=  41930 view=None
+plain  cornea_outline       chars=   1475 view=None
+plain  inclusions_default   chars=   3098 view=None
+plain  models_default       chars=   1902 view=None
+plain  index_default        chars=   4324 view=None
+envfull cornea_default       chars=  41930 view=None
+envfull cornea_full          chars=  41930 view=None
+envfull cornea_outline       chars=   1475 view=None
+envfull inclusions_default   chars= 201893 view=None
+envfull models_default       chars= 192383 view=None
+envfull index_default        chars= 140005 view=None
+
+--- revert check (EYEKB_DEFAULT_DETAIL=full) ---
+cornea_default       plain=   1909  envfull=  41930  MATCHES pre-change full text
+inclusions_default   plain=   3098  envfull= 201893  MATCHES pre-change full text
+models_default       plain=   1902  envfull= 192383  MATCHES pre-change full text
+
+cornea_default envfull == cornea_full plain ? True
