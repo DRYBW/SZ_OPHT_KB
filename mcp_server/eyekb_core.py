@@ -1423,6 +1423,37 @@ def query_marker(genes=None, cell_type=None, library="all",
                             "state_program_only": len(state_ann or []),
                             "cl_duplicate_collapse": len(cl_demoted)},
             }
+            # [ABSTAINNEAR 2026-10-22 · PI approved in chat · card = plans/abstain_grade_20261022/CARD.md]
+            # An abstention currently reads as one blank bit. This additive key answers the next
+            # question a caller has: what came close, and by how much did it miss.
+            #
+            # Whitelist is deliberately narrow — ONLY the two demotion causes whose meaning is
+            # "the class is right, the release bar was not met":
+            #   * state_program_only          the entry is a state/program, not a named cell type
+            #   * below_increment_eligibility  right class, too few shared genes vs the incumbent
+            # The other two antseg sub-reasons (out_of_declared_tissue_scope, no_declared_scope)
+            # and composite/tissue exclusions mean "this class is wrong here" and are NEVER
+            # surfaced — a tissue filter that leaks its own exclusions is not a filter (PI red
+            # line, amendment 1). Numbers are copied verbatim from the guard; nothing is scored.
+            # Key is written only when non-empty, so an all-empty abstention keeps its old bytes.
+            _nm = []
+            for _s in (state_ann or []):
+                if _s.get("cell_type"):
+                    _nm.append({"cell_type": _s.get("cell_type"),
+                                "n_shared": _s.get("n_shared"),
+                                "shared_genes": _s.get("shared_genes"),
+                                "why": "state_program_only"})
+            for _d in (antseg_demoted or []):
+                if _d.get("reason") == "below_increment_eligibility" and _d.get("cell_type"):
+                    _nm.append({"cell_type": _d.get("cell_type"),
+                                "n_shared": _d.get("n_shared"),
+                                "shared_genes": _d.get("shared_genes"),
+                                "why": "increment_guard",
+                                "needs_n_shared": _d.get("needs_n_shared"),
+                                "best_incumbent_n_shared": _d.get("best_incumbent_n_shared")})
+            if _nm:
+                _nm.sort(key=lambda x: -(x.get("n_shared") or 0))
+                resp["abstain_reason"]["near_miss"] = _nm[:3]
         # [X4B-FIX F3] off-domain low-confidence advisory (additive key only; criterion frozen in
         # PREREG §3.1 — the dev-panel file being absent on this surface makes the probe inert, zero
         # drift). Attached on the default all-route only — the "adult vocabulary on fetal material"
