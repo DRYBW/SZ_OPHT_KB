@@ -223,8 +223,59 @@ def search_literature(cell_type: str, top_k: int = 5, species: str = "",
     return resp
 
 
+def _normalise_detail(value):
+    """Fold a caller's detail argument to "answer", "full", or "" (caller expressed no choice).
+
+    Unrecognised non-empty values keep the pre-change behaviour ("full") rather than silently
+    downgrading a caller who typed something the tool does not know. A boolean is accepted because
+    callers have passed one: `True` used to raise AttributeError inside the core, so it now means
+    "full" and `False` means "answer" — the same reading a human gives those two words.
+    """
+    if isinstance(value, bool):
+        return "full" if value else "answer"
+    if value is None:
+        return ""
+    s = str(value).strip().lower()
+    if s in ("answer", "compact", "brief", "short"):
+        return "answer"
+    if s in ("full", "heavy", "all"):
+        return "full"
+    return "full" if s else ""
+
+
+def _default_tier(fallback="answer"):
+    """The shipped default tier, with a single-variable revert path.
+
+    Unset or unrecognised -> `fallback`. `EYEKB_DEFAULT_DETAIL=full` makes the heavy tier the
+    default again for every tool that reads this, which is the revert path the card pre-registers.
+
+    The environment name is written literally rather than through a constant on purpose: the switch
+    registry generator scans the source for `os.environ` reads, so a name reached through a variable
+    would become a switch nobody can find in docs/SWITCH_COVERAGE_REGISTRY.tsv.
+    """
+    raw = str(os.environ.get("EYEKB_DEFAULT_DETAIL") or "").strip().lower()
+    if raw in ("full", "heavy", "all"):
+        return "full"
+    if raw in ("answer", "compact", "brief", "short"):
+        return "answer"
+    return fallback
+
+
+def _tier_note(tier):
+    """Disclosure block for a tier the caller did not ask for. A smaller answer may not hide that
+    it is smaller: the note names the tier and the one call that returns the whole thing."""
+    return {
+        "detail_applied": tier,
+        "detail_note": (
+            "This is the compact default tier. Nothing was removed from the knowledge base and the "
+            "full answer is one call away: pass detail=\"full\" (on get_kb_page, summary=False does "
+            "the same thing). Set EYEKB_DEFAULT_DETAIL=full to make the full tier the default again."
+        ),
+    }
+
+
 @app.tool(title="Read knowledge-base page", annotations=_read_only("Read knowledge-base page"))
-def get_kb_page(scope: str, name: str = "", summary: bool = False,
+def get_kb_page(scope: str, name: str = "", summary: bool | None = None,
                 detail: str = "") -> dict:
     """Read a knowledge-base page as shipped (markdown).
       scope="index"              the master catalog of every page.
@@ -233,23 +284,32 @@ def get_kb_page(scope: str, name: str = "", summary: bool = False,
     scope is required; name is required for topic and tissue. An unknown path is rejected and
     the response lists the pages that do exist.
 
-    Size first: the index is about 140,000 characters of text but about 2,800 as an index. If
-    you only need to know which pages exist, ask for the index rather than reading it whole.
+    Size first: the index is about 140,000 characters of text but about 4,000 as an inventory.
+    The default for scope="index" is the inventory; a single topic or tissue page is small and is
+    returned in full by default.
 
     detail="answer" gives one row per page (title, scope, path, size) and names what it left out
-    in omitted_fields; detail="full" is the page text. Empty (the default) follows `summary`, so
-    existing callers are unaffected. This is the same field name get_tissue_composition uses, so
-    one habit covers both tools. summary=true still works and equals detail="answer"; an explicit
-    detail wins if the two disagree.
+    in omitted_fields; detail="full" is the page text. Empty means the default above. This is the
+    same field name get_tissue_composition uses, so one habit covers both tools. summary=true still
+    works and equals detail="answer"; an explicit detail wins if the two disagree.
     """
-    _detail = (detail or "").strip().lower()
-    if _detail in ("answer", "full"):
-        _summary = (_detail == "answer")
-    else:
+    _d = _normalise_detail(detail)
+    implicit = not _d
+    if not implicit:
+        _summary = (_d == "answer")
+    elif summary is not None:
         _summary = bool(summary)
+        implicit = False   # an explicit `summary` is a caller choice, so its bytes stay as shipped
+    else:
+        # No caller preference at all: the catalogue is the expensive one, one page is not.
+        _d = _default_tier("answer") if str(scope or "").strip().lower() == "index" else "full"
+        _summary = (_d == "answer")
     resp = core.get_kb_page(scope, name, _summary)
+    if implicit and _summary and isinstance(resp, dict):
+        resp = dict(resp)
+        resp.update(_tier_note("answer"))
     calllog.trace("get_kb_page", {"scope": scope, "name": name, "summary": _summary,
-                                 "detail": _detail or None}, resp)
+                                 "detail": _d or None, "implicit": implicit}, resp)
     return resp
 
 
@@ -300,7 +360,7 @@ def query_marker(genes: list[str] | None = None, cell_type: str = "",
 
 @app.tool(title="Expected tissue composition", annotations=_read_only("Expected tissue composition"))
 def get_tissue_composition(species: str, tissue: str, disease: str = "",
-                           development_stage: str = "", detail: str = "full") -> dict:
+                           development_stage: str = "", detail: str = "") -> dict:
     """Expected cell composition for a species x tissue: per-cell-type proportion intervals, plus
     per-row provenance (PMID / dataset and evidence grade).
 
@@ -319,15 +379,24 @@ def get_tissue_composition(species: str, tissue: str, disease: str = "",
 
     Call this before annotating, to fix what the tissue should contain and roughly how much.
 
-    Size: about 91,000 characters in full. detail: "answer" keeps the proportions, the state
-    layer, the flags and the caveats, and names what it left out in omitted_fields -- roughly
-    20,000 characters. Every row keeps its own citations either way, so the answer tier is not
-    an evidence-poor tier.
+    Size: about 91,000 characters in full, so the default is the compact tier. detail="answer"
+    keeps the proportions, the state layer, the flags and the caveats, and names what it left out
+    in omitted_fields -- about 25,000 characters. Every row keeps its own citations either way, so
+    the compact tier is not an evidence-poor tier. detail="full" returns everything, and
+    EYEKB_DEFAULT_DETAIL=full restores the full tier as the default.
     """
-    resp = core.get_tissue_composition(species, tissue, disease, development_stage, detail)
+    _d = _normalise_detail(detail)
+    implicit = not _d
+    if implicit:
+        _d = _default_tier("answer")
+    resp = core.get_tissue_composition(species, tissue, disease, development_stage, _d)
+    if implicit and _d == "answer" and isinstance(resp, dict):
+        resp = dict(resp)
+        resp.update(_tier_note("answer"))
     calllog.trace("get_tissue_composition",
                   {"species": species, "tissue": tissue, "disease": disease,
-                   "development_stage": development_stage, "detail": detail}, resp)
+                   "development_stage": development_stage, "detail": _d,
+                   "implicit": implicit}, resp)
     return resp
 
 

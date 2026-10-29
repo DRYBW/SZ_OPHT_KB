@@ -1,0 +1,9 @@
+C1   PASS  3/3 heavy-tier calls byte-identical (index_detail_full, tissue_detail_full, comp_detail_full)
+C2   PASS  summary=False after 44b352e5 vs old default 44b352e5
+C3a  PASS  index 140005 -> 4324 chars (32.4x, need >=20x)
+C3b  PASS  composition 91332 -> 25745 chars (3.55x, need >=3x)
+C4   PASS  EYEKB_DEFAULT_DETAIL=full restores 4/4 defaults (index_default, tissue_default, comp_default, comp_mouse_default)
+C5   PASS  rows 10/10, citations in rows 20/20
+C8   PASS  shrunk defaults without a disclosure: none; disclosed: index_default, comp_default, comp_mouse_default
+
+7/7 criteria pass

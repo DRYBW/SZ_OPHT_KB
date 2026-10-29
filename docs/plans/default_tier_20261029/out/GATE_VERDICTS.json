@@ -1,0 +1,54 @@
+{
+ "gates": {
+  "card_criteria": {
+   "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python docs/plans/default_tier_20261029/verify_default_tier.py",
+   "rc": 0,
+   "verdict_lines": [
+    "7/7 criteria pass"
+   ]
+  },
+  "g4_verify_pipeline": {
+   "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python tests/verify_pipeline.py",
+   "rc": 1,
+   "verdict_lines": [
+    "FAIL annotation_evidence_report.md__normalized",
+    "G4 FAIL: 1/3 mismatch"
+   ]
+  },
+  "g5_switch_coverage": {
+   "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python tests/gate_switch_coverage.py",
+   "rc": 0,
+   "verdict_lines": [
+    "R1 pass -- registry matches the source",
+    "R2 pass -- scanned 18 report(s); 0 violation(s)"
+   ]
+  },
+  "g5g6_negative_battery": {
+   "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python tests/gate_g5g6_negative.py",
+   "rc": 1,
+   "verdict_lines": [
+    "G5G6 negative battery: 16/17 as expected -> FAIL"
+   ]
+  },
+  "g6_change_control": {
+   "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python tests/gate_change_control.py",
+   "rc": 0,
+   "verdict_lines": [
+    "[g6] changes=16 checks=21 fail=0 verdict=PASS (instance:PASS; template:PASS)"
+   ]
+  },
+  "legacy_tool_panel": {
+   "command": "/home/ubuntu/.conda/envs/pipeline_env/bin/python tests/probe_tool_panel_identity.py --baseline tests/fixtures/tool_panel_baseline.json",
+   "rc": 1,
+   "verdict_lines": [
+    "\"legacy_panel\": \"95952b46a1b327eb6425f5e14edc712d\",",
+    "IDENTITY FAIL: legacy_panel, full_panel moved.",
+    "different: get_kb_page:{\"scope\": \"index\"}",
+    "different: get_tissue_composition:{\"species\": \"mouse\", \"tissue\": \"retina\"}",
+    "different: search_literature:{\"cell_type\": \"Muller glia\", \"query\": \"Mueller cell gliosis\", \"top_k\": 3}",
+    "different: search_literature:{\"cell_type\": \"Rod\", \"top_k\": 3}"
+   ]
+  }
+ },
+ "written_at": "2026-10-29 21:14:49"
+}

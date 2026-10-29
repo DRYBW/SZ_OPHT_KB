@@ -1,0 +1,246 @@
+{
+ "cases": {
+  "comp_default": {
+   "args": {
+    "species": "human",
+    "tissue": "retina"
+   },
+   "chars": 25745,
+   "detail_applied": "answer",
+   "detail_field": "answer",
+   "has_detail_note": true,
+   "is_error": false,
+   "md5": "7305e4dc3a2ec85fdd838da1a361d18c",
+   "omitted_fields": [
+    "adult_only_meta",
+    "anchor",
+    "donor_level_adult_pool_contrast",
+    "donor_level_main",
+    "evidence_grades",
+    "excluded_nonadult_units",
+    "frozen_date",
+    "identity_signature",
+    "mapping_from_t_6f5cc731",
+    "marker_repair",
+    "pooled_adult_only_main",
+    "pooled_all_cells",
+    "provenance",
+    "stage_axis",
+    "stage_disclosure",
+    "stage_note",
+    "strata",
+    "t2_fields",
+    "tissue_class_crosswalk",
+    "verdict"
+   ],
+   "row_citations": 20,
+   "rows": 10,
+   "tool": "get_tissue_composition",
+   "view_field": null
+  },
+  "comp_detail_answer": {
+   "args": {
+    "detail": "answer",
+    "species": "human",
+    "tissue": "retina"
+   },
+   "chars": 25434,
+   "detail_applied": null,
+   "detail_field": "answer",
+   "has_detail_note": false,
+   "is_error": false,
+   "md5": "bf86987cfe9b5f649940198010eee156",
+   "omitted_fields": [
+    "adult_only_meta",
+    "anchor",
+    "donor_level_adult_pool_contrast",
+    "donor_level_main",
+    "evidence_grades",
+    "excluded_nonadult_units",
+    "frozen_date",
+    "identity_signature",
+    "mapping_from_t_6f5cc731",
+    "marker_repair",
+    "pooled_adult_only_main",
+    "pooled_all_cells",
+    "provenance",
+    "stage_axis",
+    "stage_disclosure",
+    "stage_note",
+    "strata",
+    "t2_fields",
+    "tissue_class_crosswalk",
+    "verdict"
+   ],
+   "row_citations": 20,
+   "rows": 10,
+   "tool": "get_tissue_composition",
+   "view_field": null
+  },
+  "comp_detail_full": {
+   "args": {
+    "detail": "full",
+    "species": "human",
+    "tissue": "retina"
+   },
+   "chars": 91332,
+   "detail_applied": null,
+   "detail_field": null,
+   "has_detail_note": false,
+   "is_error": false,
+   "md5": "c2114c413ab07c8d35eb601eba682dc9",
+   "omitted_fields": null,
+   "row_citations": 20,
+   "rows": 10,
+   "tool": "get_tissue_composition",
+   "view_field": null
+  },
+  "comp_mouse_default": {
+   "args": {
+    "species": "mouse",
+    "tissue": "retina"
+   },
+   "chars": 2736,
+   "detail_applied": "answer",
+   "detail_field": null,
+   "has_detail_note": true,
+   "is_error": false,
+   "md5": "821cd04c6a5edf2a6e84e14825ef0ea6",
+   "omitted_fields": null,
+   "row_citations": null,
+   "rows": null,
+   "tool": "get_tissue_composition",
+   "view_field": null
+  },
+  "disease_prior_pdr": {
+   "args": {
+    "disease": "PDR"
+   },
+   "chars": 23617,
+   "detail_applied": null,
+   "detail_field": null,
+   "has_detail_note": false,
+   "is_error": false,
+   "md5": "d69000ee4059ac59f31f0e10fe19f805",
+   "omitted_fields": null,
+   "row_citations": null,
+   "rows": null,
+   "tool": "get_disease_prior",
+   "view_field": null
+  },
+  "index_default": {
+   "args": {
+    "scope": "index"
+   },
+   "chars": 4324,
+   "detail_applied": "answer",
+   "detail_field": null,
+   "has_detail_note": true,
+   "is_error": false,
+   "md5": "4bf59d3ada1b7ecded477f39caa801bf",
+   "omitted_fields": null,
+   "row_citations": null,
+   "rows": null,
+   "tool": "get_kb_page",
+   "view_field": null
+  },
+  "index_detail_full": {
+   "args": {
+    "detail": "full",
+    "scope": "index"
+   },
+   "chars": 140005,
+   "detail_applied": null,
+   "detail_field": null,
+   "has_detail_note": false,
+   "is_error": false,
+   "md5": "44b352e57f8fbd04ba3a1aaf6e3778a8",
+   "omitted_fields": null,
+   "row_citations": null,
+   "rows": null,
+   "tool": "get_kb_page",
+   "view_field": null
+  },
+  "index_summary_false": {
+   "args": {
+    "scope": "index",
+    "summary": false
+   },
+   "chars": 140005,
+   "detail_applied": null,
+   "detail_field": null,
+   "has_detail_note": false,
+   "is_error": false,
+   "md5": "44b352e57f8fbd04ba3a1aaf6e3778a8",
+   "omitted_fields": null,
+   "row_citations": null,
+   "rows": null,
+   "tool": "get_kb_page",
+   "view_field": null
+  },
+  "index_summary_true": {
+   "args": {
+    "scope": "index",
+    "summary": true
+   },
+   "chars": 4013,
+   "detail_applied": null,
+   "detail_field": null,
+   "has_detail_note": false,
+   "is_error": false,
+   "md5": "3b9fce1aa03bd62404e23ac7d5a1ee44",
+   "omitted_fields": null,
+   "row_citations": null,
+   "rows": null,
+   "tool": "get_kb_page",
+   "view_field": null
+  },
+  "tissue_default": {
+   "args": {
+    "name": "cornea",
+    "scope": "tissue"
+   },
+   "chars": 41930,
+   "detail_applied": null,
+   "detail_field": null,
+   "has_detail_note": false,
+   "is_error": false,
+   "md5": "575719d8fa23ee94ba8bc6f007afb316",
+   "omitted_fields": null,
+   "row_citations": null,
+   "rows": null,
+   "tool": "get_kb_page",
+   "view_field": null
+  },
+  "tissue_detail_full": {
+   "args": {
+    "detail": "full",
+    "name": "cornea",
+    "scope": "tissue"
+   },
+   "chars": 41930,
+   "detail_applied": null,
+   "detail_field": null,
+   "has_detail_note": false,
+   "is_error": false,
+   "md5": "575719d8fa23ee94ba8bc6f007afb316",
+   "omitted_fields": null,
+   "row_citations": null,
+   "rows": null,
+   "tool": "get_kb_page",
+   "view_field": null
+  }
+ },
+ "env_extra": {},
+ "label": "after",
+ "tool_names": [
+  "search_literature",
+  "get_kb_page",
+  "query_marker",
+  "get_tissue_composition",
+  "get_disease_prior",
+  "explain_annotation",
+  "get_release_identity"
+ ],
+ "tools": 7
+}

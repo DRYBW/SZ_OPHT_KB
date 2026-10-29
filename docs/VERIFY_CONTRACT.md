@@ -362,3 +362,43 @@ as such, never as evidence that the two libraries agree; the non-circular readin
 comparison against two other corpus copies, the journal/year field controls on the same join, and the
 243 already-complete citation titles (written by the frozen builder, not by this card) matching the
 corpus 243/243.
+
+### §5.8 The shipped default tier is the compact one (card docs/plans/default_tier_20261029, 2026-10-29)
+
+**Behaviour registered.** Two shipped tools changed which tier they return when the caller
+expresses no preference. `get_kb_page(scope="index")` now returns the page inventory instead of the
+page text, and `get_tissue_composition(...)` now returns the compact tier. Nothing was removed from
+the knowledge base: the full answers are unchanged and one argument away.
+
+- **Switch and OFF identity.** `EYEKB_DEFAULT_DETAIL` — unset, empty or any value other than
+  `{full,heavy,all}` means the compact tier is the default; `EYEKB_DEFAULT_DETAIL=full` restores the
+  pre-flip default **byte-for-byte** on all four default calls (index page, one tissue page, human
+  composition, mouse composition): md5 `44b352e5…`, `575719d8…`, `c2114c41…`, `cf3c46ae…`, identical
+  to the pre-change responses in `docs/plans/default_tier_20261029/out/AFTER_ENV_FULL.json` versus
+  `out/BEFORE.json`. The switch is registered in `docs/SWITCH_COVERAGE_REGISTRY.tsv` as
+  answer-affecting, so an arm that sets it must set it in every arm of a comparison.
+- **What moves and what does not.** Default calls shrink (index 140,005 → 4,324 characters;
+  human composition 91,332 → 25,745). Every explicit choice is untouched: `detail="full"` on three
+  calls, `summary=False`, `summary=True` and `detail="answer"` all return exactly the bytes they
+  returned before the flip, because the compact-with-disclosure shape is applied only when the
+  caller expressed no preference. Per-row citations are not dropped by the compact composition tier
+  (10 rows / 20 citations in both tiers).
+- **Disclosure.** A default that got smaller names itself: the response carries `detail_applied` and
+  a `detail_note` stating that the full answer is one call away and which variable restores it. The
+  rule this encodes is that a smaller default may not hide that it is smaller.
+- **Failure policy.** A replay that compares default-route bytes must state which value of
+  `EYEKB_DEFAULT_DETAIL` it was taken with; a mismatch under the other value is a configuration
+  difference, not a regression.
+- **Legacy panel compatibility item (reported, not absorbed).**
+  `tests/probe_tool_panel_identity.py` against `tests/fixtures/tool_panel_baseline.json` is RED at
+  this release on four calls. Three of them were already RED before this card (the index page and two
+  `search_literature` calls, from catalogue and library growth); exactly one moves because of this
+  card — `get_tissue_composition:{"species": "mouse", "tissue": "retina"}`. The baseline was
+  deliberately **not** re-recorded, so the historical drift stays visible instead of being absorbed
+  by a re-record performed for an unrelated reason. No gate of the one-click chain invokes that
+  probe; the item is carried in `docs/CHANGE_CONTROL_G6_INSTANCE.tsv` (row
+  `CHG-20261029-DEFAULT-TIER`) and in the switch registry.
+- **No gate was weakened for this flip.** G4's three byte anchors and the retrieval anchors are
+  re-measured in the same commit: G4 stays at its pre-existing 1/3 mismatch
+  (`7c225802…` vs the expected `6f795b32…`), the negative battery keeps its pre-existing single BAD
+  cell (G5 `P0_POSITIVE_CONTROL` / `G5-C05`), and G6 passes 21/21.

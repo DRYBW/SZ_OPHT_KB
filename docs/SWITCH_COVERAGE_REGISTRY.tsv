@@ -19,6 +19,7 @@ EYEKB_CL_KEY	yes	no	yes	NOT cleared by the frozen harness -- any arm that sets i
 EYEKB_CN_BRIDGE_TSV	yes	no	yes	NOT cleared by the frozen harness -- any arm that sets it must set it in every arm of the comparison, or the two arms collapse into a self-comparison
 EYEKB_CN_REWRITE	yes	no	yes	NOT cleared by the frozen harness -- any arm that sets it must set it in every arm of the comparison, or the two arms collapse into a self-comparison
 EYEKB_DB_DIR	no	no	no	declared benign: selects the directory the marker libraries are read from
+EYEKB_DEFAULT_DETAIL	yes	no	yes	NOT cleared by the frozen harness -- any arm that sets it must set it in every arm of the comparison, or the two arms collapse into a self-comparison
 EYEKB_FALLBACK_WIDEN	yes	yes	no	cleared by the frozen harness before each arm; a before-arm setting cannot leak
 EYEKB_FALLBACK_WIDEN_DENY_TISSUES	yes	yes	no	cleared by the frozen harness before each arm; a before-arm setting cannot leak
 EYEKB_FALLBACK_WIDEN_MIN_SHARED	yes	no	yes	NOT cleared by the frozen harness -- any arm that sets it must set it in every arm of the comparison, or the two arms collapse into a self-comparison
