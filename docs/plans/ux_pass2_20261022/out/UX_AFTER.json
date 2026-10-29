@@ -1,0 +1,65 @@
+{
+ "cases": {
+  "search_literature": {
+   "p50_ms": 848.4,
+   "chars": 14550
+  },
+  "get_tissue_composition": {
+   "p50_ms": 13.4,
+   "chars": 91332
+  },
+  "get_disease_prior": {
+   "p50_ms": 10.9,
+   "chars": 18711
+  },
+  "get_kb_page": {
+   "p50_ms": 5.5,
+   "chars": 140005
+  }
+ },
+ "schema": {
+  "tools": 7,
+  "total_description_chars": 9227,
+  "per_tool": {
+   "search_literature": {
+    "description_chars": 1760,
+    "required": [
+     "cell_type"
+    ]
+   },
+   "get_kb_page": {
+    "description_chars": 1157,
+    "required": [
+     "scope"
+    ]
+   },
+   "query_marker": {
+    "description_chars": 1722,
+    "required": []
+   },
+   "get_tissue_composition": {
+    "description_chars": 1907,
+    "required": [
+     "species",
+     "tissue"
+    ]
+   },
+   "get_disease_prior": {
+    "description_chars": 553,
+    "required": [
+     "disease"
+    ]
+   },
+   "explain_annotation": {
+    "description_chars": 1323,
+    "required": [
+     "cell_type"
+    ]
+   },
+   "get_release_identity": {
+    "description_chars": 805,
+    "required": []
+   }
+  }
+ }
+}

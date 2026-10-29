@@ -1,5 +1,7 @@
 # Tool-surface usability pass 2: measurements
 
+Executed 2026-10-29 (the directory name keeps the date the card was opened).
+
 Date 2026-10-22. Method: `shipped-service-usability-audit`, three measurable axes
 (description cost, response size, latency), measured with the real stdio server.
 

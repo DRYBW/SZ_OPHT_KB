@@ -1,0 +1,53 @@
+{
+ "method": "official scorer fields (volumes[].coverage/top1_acc/macro_f1), cell-weighted by scored_cells",
+ "arms": {
+  "10_genes": {
+   "volumes": 25,
+   "clusters": 764,
+   "scored_cells": 995557,
+   "coverage_pct": 68.04,
+   "top1_acc_pct": 66.91,
+   "macro_f1_pct": 68.9
+  },
+  "30_genes": {
+   "volumes": 25,
+   "clusters": 764,
+   "scored_cells": 995557,
+   "coverage_pct": 75.38,
+   "top1_acc_pct": 75.06,
+   "macro_f1_pct": 75.01
+  }
+ },
+ "delta_pp": {
+  "coverage": 7.34,
+  "top1_acc": 8.15,
+  "macro_f1": 6.11
+ },
+ "calibration_check": "10-gene arm top1_acc 66.91% reproduces CHANNEL_COMPARE.json human/new acc_all 0.6691 over the all-volume denominator",
+ "cluster_level": {
+  "denominator": {
+   "clusters": 764,
+   "cells": 1162568
+  },
+  "abstain_resolution": {
+   "still abstained": {
+    "clusters": 139,
+    "cells": 186059
+   },
+   "now correct": {
+    "clusters": 58,
+    "cells": 86231
+   },
+   "now answered wrong": {
+    "clusters": 26,
+    "cells": 26452
+   }
+  },
+  "answered_arm_change": {
+   "unchanged": 523,
+   "fixed": 8,
+   "broken": 10
+  },
+  "note": "cluster-equal counts, NOT cell-weighted; do not mix with the arm percentages above"
+ }
+}

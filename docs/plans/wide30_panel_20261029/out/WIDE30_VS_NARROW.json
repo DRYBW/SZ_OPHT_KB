@@ -1,0 +1,2283 @@
+{
+ "arms": {
+  "10_genes": {
+   "arm": "10 genes",
+   "clusters": 764,
+   "cells": 1162568,
+   "abstain": 223,
+   "abstain_pct": 29.19,
+   "answered": 541,
+   "coverage_pct": 70.81,
+   "correct_clusters": 432,
+   "top1_overall_pct": 56.54,
+   "top1_in_answers_pct": 79.85
+  },
+  "30_genes": {
+   "arm": "30 genes",
+   "clusters": 764,
+   "cells": 1162568,
+   "abstain": 153,
+   "abstain_pct": 20.03,
+   "answered": 611,
+   "coverage_pct": 79.97,
+   "correct_clusters": 488,
+   "top1_overall_pct": 63.87,
+   "top1_in_answers_pct": 79.87
+  }
+ },
+ "denominator": {
+  "clusters": 764,
+  "cells": 1162568
+ },
+ "abstain_resolution": {
+  "still abstained": {
+   "clusters": 139,
+   "cells": 186059
+  },
+  "now correct": {
+   "clusters": 58,
+   "cells": 86231
+  },
+  "now answered wrong": {
+   "clusters": 26,
+   "cells": 26452
+  }
+ },
+ "answered_arm_change": {
+  "unchanged": 523,
+  "fixed": 8,
+  "broken": 10
+ },
+ "per_cluster": [
+  {
+   "volume": "CX03_retina_multiome",
+   "cluster": "13",
+   "n_cells": 469,
+   "truth": "amacrine cell",
+   "family": "ac",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX03_retina_multiome",
+   "cluster": "21",
+   "n_cells": 718,
+   "truth": "amacrine cell",
+   "family": "ac",
+   "narrow_voted": null,
+   "wide_voted": "amacrine cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX03_retina_multiome",
+   "cluster": "22",
+   "n_cells": 663,
+   "truth": "ON-bipolar cell",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": "amacrine cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX03_retina_multiome",
+   "cluster": "26",
+   "n_cells": 216,
+   "truth": "ON-bipolar cell",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": "ON-bipolar cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX03_retina_multiome",
+   "cluster": "28",
+   "n_cells": 616,
+   "truth": "ON-bipolar cell",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": "amacrine cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX03_retina_multiome",
+   "cluster": "32",
+   "n_cells": 111,
+   "truth": "amacrine cell",
+   "family": "ac",
+   "narrow_voted": null,
+   "wide_voted": "amacrine cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX03_retina_multiome",
+   "cluster": "5",
+   "n_cells": 2063,
+   "truth": "Mueller cell",
+   "family": "mg",
+   "narrow_voted": null,
+   "wide_voted": "Mueller cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX03_retina_multiome",
+   "cluster": "8",
+   "n_cells": 6108,
+   "truth": "retinal rod cell",
+   "family": "rod",
+   "narrow_voted": null,
+   "wide_voted": "retinal rod cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX03_retina_multiome",
+   "cluster": "9",
+   "n_cells": 1132,
+   "truth": "retinal rod cell",
+   "family": "rod",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX04_cowan_fovea",
+   "cluster": "12",
+   "n_cells": 1987,
+   "truth": "retinal ganglion cell",
+   "family": "rgc",
+   "narrow_voted": null,
+   "wide_voted": "retinal ganglion cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX04_cowan_fovea",
+   "cluster": "14",
+   "n_cells": 181,
+   "truth": "monocyte",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX04_cowan_fovea",
+   "cluster": "16",
+   "n_cells": 1083,
+   "truth": "Mueller cell",
+   "family": "mg",
+   "narrow_voted": null,
+   "wide_voted": "Mueller cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX04_cowan_fovea",
+   "cluster": "23",
+   "n_cells": 422,
+   "truth": "T cell",
+   "family": "cytotoxic t cell",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX04_cowan_fovea",
+   "cluster": "6",
+   "n_cells": 1241,
+   "truth": "OFF-bipolar cell",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX04_cowan_fovea",
+   "cluster": "7",
+   "n_cells": 362,
+   "truth": "OFF-bipolar cell",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX04_cowan_organoid",
+   "cluster": "0",
+   "n_cells": 132,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": "retinal pigment epithelial cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX04_cowan_organoid",
+   "cluster": "12",
+   "n_cells": 319,
+   "truth": "unknown",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "retina horizontal cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX04_cowan_organoid",
+   "cluster": "13",
+   "n_cells": 1671,
+   "truth": "ON-bipolar cell",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX04_cowan_organoid",
+   "cluster": "17",
+   "n_cells": 4170,
+   "truth": "Mueller cell",
+   "family": "mg",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX04_cowan_organoid",
+   "cluster": "18",
+   "n_cells": 167,
+   "truth": "Mueller cell",
+   "family": "mg",
+   "narrow_voted": null,
+   "wide_voted": "Mueller cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX04_cowan_organoid",
+   "cluster": "2",
+   "n_cells": 1689,
+   "truth": "retina horizontal cell",
+   "family": "hc",
+   "narrow_voted": null,
+   "wide_voted": "retina horizontal cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX04_cowan_organoid",
+   "cluster": "7",
+   "n_cells": 661,
+   "truth": "OFF-bipolar cell",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": "OFF-bipolar cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX04_cowan_periphery",
+   "cluster": "20",
+   "n_cells": 287,
+   "truth": "OFF-bipolar cell",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": "ON-bipolar cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX04_cowan_periphery",
+   "cluster": "4",
+   "n_cells": 472,
+   "truth": "monocyte",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "microglial cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX04_cowan_periphery",
+   "cluster": "5",
+   "n_cells": 203,
+   "truth": "T cell",
+   "family": "cytotoxic t cell",
+   "narrow_voted": null,
+   "wide_voted": "T cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "0",
+   "n_cells": 3086,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "1",
+   "n_cells": 1761,
+   "truth": "retina horizontal cell",
+   "family": "hc",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "10",
+   "n_cells": 3200,
+   "truth": "retinal cone cell",
+   "family": "cone",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "11",
+   "n_cells": 2343,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "12",
+   "n_cells": 1839,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": "retinal progenitor cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "13",
+   "n_cells": 2469,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "14",
+   "n_cells": 415,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "15",
+   "n_cells": 639,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "16",
+   "n_cells": 2227,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "18",
+   "n_cells": 1341,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "19",
+   "n_cells": 2854,
+   "truth": "retinal ganglion cell",
+   "family": "rgc",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "20",
+   "n_cells": 1704,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "21",
+   "n_cells": 1169,
+   "truth": "retinal ganglion cell",
+   "family": "rgc",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "22",
+   "n_cells": 1273,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "24",
+   "n_cells": 436,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "25",
+   "n_cells": 452,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "3",
+   "n_cells": 2940,
+   "truth": "retinal ganglion cell",
+   "family": "rgc",
+   "narrow_voted": null,
+   "wide_voted": "retinal ganglion cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "4",
+   "n_cells": 330,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "6",
+   "n_cells": 1502,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "7",
+   "n_cells": 753,
+   "truth": "retinal ganglion cell",
+   "family": "rgc",
+   "narrow_voted": null,
+   "wide_voted": "retinal ganglion cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX07_iPSC_organoid_POAG",
+   "cluster": "8",
+   "n_cells": 2160,
+   "truth": "retinal cone cell",
+   "family": "cone",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX08_RPE_choroid_scRNA",
+   "cluster": "18",
+   "n_cells": 1472,
+   "truth": "endothelial cell of venule",
+   "family": "endo",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX08_RPE_choroid_scRNA",
+   "cluster": "19",
+   "n_cells": 2896,
+   "truth": "endothelial cell of venule",
+   "family": "endo",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX08_RPE_choroid_scRNA",
+   "cluster": "21",
+   "n_cells": 55,
+   "truth": "B cell",
+   "family": "bplasma",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX08_RPE_choroid_scRNA",
+   "cluster": "26",
+   "n_cells": 109,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX08_RPE_choroid_scRNA",
+   "cluster": "28",
+   "n_cells": 512,
+   "truth": "monocyte",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX08_RPE_choroid_snRNA",
+   "cluster": "12",
+   "n_cells": 818,
+   "truth": "classical monocyte",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX08_RPE_choroid_snRNA",
+   "cluster": "15",
+   "n_cells": 209,
+   "truth": "endothelial cell of venule",
+   "family": "endo",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX08_RPE_choroid_snRNA",
+   "cluster": "16",
+   "n_cells": 2651,
+   "truth": "fenestrated endothelial cell",
+   "family": "endo",
+   "narrow_voted": null,
+   "wide_voted": "fenestrated endothelial cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX08_RPE_choroid_snRNA",
+   "cluster": "18",
+   "n_cells": 1112,
+   "truth": "myelinating Schwann cell",
+   "family": "schwann",
+   "narrow_voted": null,
+   "wide_voted": "myelinating Schwann cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX08_RPE_choroid_snRNA",
+   "cluster": "20",
+   "n_cells": 6288,
+   "truth": "endothelial cell of artery",
+   "family": "endo",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX08_RPE_choroid_snRNA",
+   "cluster": "22",
+   "n_cells": 6070,
+   "truth": "vein endothelial cell",
+   "family": "endo",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX08_RPE_choroid_snRNA",
+   "cluster": "23",
+   "n_cells": 122,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": "retinal pigment epithelial cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX09_voigt_RPE_choroid",
+   "cluster": "10",
+   "n_cells": 98,
+   "truth": "fibroblast",
+   "family": "fibro",
+   "narrow_voted": null,
+   "wide_voted": "fibroblast",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX09_voigt_RPE_choroid",
+   "cluster": "11",
+   "n_cells": 163,
+   "truth": "melanocyte",
+   "family": "melanocyte",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX09_voigt_RPE_choroid",
+   "cluster": "4",
+   "n_cells": 282,
+   "truth": "melanocyte",
+   "family": "melanocyte",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "10",
+   "n_cells": 2758,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "11",
+   "n_cells": 3200,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "12",
+   "n_cells": 3044,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "13",
+   "n_cells": 2681,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "15",
+   "n_cells": 865,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "16",
+   "n_cells": 20,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "17",
+   "n_cells": 1237,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "18",
+   "n_cells": 1038,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "19",
+   "n_cells": 664,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "20",
+   "n_cells": 601,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "22",
+   "n_cells": 1393,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "24",
+   "n_cells": 263,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "25",
+   "n_cells": 58,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "26",
+   "n_cells": 617,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "27",
+   "n_cells": 138,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "28",
+   "n_cells": 608,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "29",
+   "n_cells": 593,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": "retinal progenitor cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "3",
+   "n_cells": 2124,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": "retinal pigment epithelial cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "5",
+   "n_cells": 1663,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "6",
+   "n_cells": 3592,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "7",
+   "n_cells": 1479,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "8",
+   "n_cells": 2221,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX10_hiPSC_RPE",
+   "cluster": "9",
+   "n_cells": 2644,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX11_posterior_eye_atlas",
+   "cluster": "2",
+   "n_cells": 2388,
+   "truth": "oligodendrocyte precursor cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "oligodendrocyte precursor cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX11_posterior_eye_atlas",
+   "cluster": "21",
+   "n_cells": 1943,
+   "truth": "astrocyte",
+   "family": "astro",
+   "narrow_voted": null,
+   "wide_voted": "astrocyte",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX11_posterior_eye_atlas",
+   "cluster": "25",
+   "n_cells": 1143,
+   "truth": "fibroblast",
+   "family": "fibro",
+   "narrow_voted": null,
+   "wide_voted": "fibroblast",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX11_posterior_eye_atlas",
+   "cluster": "27",
+   "n_cells": 1201,
+   "truth": "pigmented epithelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "melanocyte",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX11_posterior_eye_atlas",
+   "cluster": "28",
+   "n_cells": 954,
+   "truth": "pigmented epithelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX11_posterior_eye_atlas",
+   "cluster": "29",
+   "n_cells": 8,
+   "truth": "pigmented epithelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "melanocyte",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX11_posterior_eye_atlas",
+   "cluster": "3",
+   "n_cells": 4302,
+   "truth": "astrocyte",
+   "family": "astro",
+   "narrow_voted": null,
+   "wide_voted": "astrocyte",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX11_posterior_eye_atlas",
+   "cluster": "8",
+   "n_cells": 182,
+   "truth": "oligodendrocyte precursor cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX12_ocular_surface_snRNA",
+   "cluster": "1",
+   "n_cells": 136,
+   "truth": "corneal endothelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "corneal endothelial cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX12_ocular_surface_snRNA",
+   "cluster": "14",
+   "n_cells": 304,
+   "truth": "endothelial cell of lymphatic vessel",
+   "family": "endo",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX12_ocular_surface_snRNA",
+   "cluster": "2",
+   "n_cells": 3272,
+   "truth": "epithelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "epithelial cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX12_ocular_surface_snRNA",
+   "cluster": "20",
+   "n_cells": 1076,
+   "truth": "progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX12_ocular_surface_snRNA",
+   "cluster": "24",
+   "n_cells": 873,
+   "truth": "fibroblast",
+   "family": "fibro",
+   "narrow_voted": null,
+   "wide_voted": "fibroblast",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX12_ocular_surface_snRNA",
+   "cluster": "4",
+   "n_cells": 708,
+   "truth": "corneal endothelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "epithelial cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX13_TM_corneal_scleral",
+   "cluster": "1",
+   "n_cells": 1535,
+   "truth": "conjunctival epithelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "conjunctival epithelial cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX13_TM_corneal_scleral",
+   "cluster": "10",
+   "n_cells": 3124,
+   "truth": "fibroblast",
+   "family": "fibro",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_TM_corneal_scleral",
+   "cluster": "3",
+   "n_cells": 792,
+   "truth": "basal cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "conjunctival epithelial cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX13_TM_corneal_scleral",
+   "cluster": "30",
+   "n_cells": 30,
+   "truth": "corneal endothelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "melanocyte",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX13_central_cornea",
+   "cluster": "0",
+   "n_cells": 2979,
+   "truth": "basal cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "basal cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX13_central_cornea",
+   "cluster": "14",
+   "n_cells": 4116,
+   "truth": "corneal epithelial cell",
+   "family": "cornea_epi",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_central_cornea",
+   "cluster": "15",
+   "n_cells": 1554,
+   "truth": "basal cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "basal cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX13_central_cornea",
+   "cluster": "17",
+   "n_cells": 2372,
+   "truth": "corneal endothelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "corneal endothelial cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX13_central_cornea",
+   "cluster": "2",
+   "n_cells": 774,
+   "truth": "corneal epithelial cell",
+   "family": "cornea_epi",
+   "narrow_voted": null,
+   "wide_voted": "corneal epithelial cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX13_central_cornea",
+   "cluster": "20",
+   "n_cells": 54,
+   "truth": "corneal endothelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_central_cornea",
+   "cluster": "22",
+   "n_cells": 308,
+   "truth": "corneal endothelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "corneal endothelial cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX13_central_cornea",
+   "cluster": "25",
+   "n_cells": 595,
+   "truth": "corneal epithelial cell",
+   "family": "cornea_epi",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_central_cornea",
+   "cluster": "27",
+   "n_cells": 82,
+   "truth": "corneal endothelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_central_cornea",
+   "cluster": "7",
+   "n_cells": 343,
+   "truth": "transit amplifying cell",
+   "family": "transit amplifying cell",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_ciliary_body",
+   "cluster": "0",
+   "n_cells": 4443,
+   "truth": "pigmented ciliary epithelial cell",
+   "family": "cb",
+   "narrow_voted": null,
+   "wide_voted": "pigmented ciliary epithelial cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX13_ciliary_body",
+   "cluster": "19",
+   "n_cells": 3062,
+   "truth": "pigmented ciliary epithelial cell",
+   "family": "cb",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_ciliary_body",
+   "cluster": "21",
+   "n_cells": 530,
+   "truth": "macrophage",
+   "family": "macro",
+   "narrow_voted": null,
+   "wide_voted": "macrophage",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "0",
+   "n_cells": 4729,
+   "truth": "pigmented epithelial cell",
+   "family": "cb",
+   "narrow_voted": null,
+   "wide_voted": "pigmented epithelial cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "1",
+   "n_cells": 1704,
+   "truth": "pigmented epithelial cell",
+   "family": "cb",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "10",
+   "n_cells": 2339,
+   "truth": "fibroblast",
+   "family": "fibro",
+   "narrow_voted": null,
+   "wide_voted": "fibroblast",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "11",
+   "n_cells": 2294,
+   "truth": "fibroblast",
+   "family": "fibro",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "12",
+   "n_cells": 607,
+   "truth": "macrophage",
+   "family": "macro",
+   "narrow_voted": null,
+   "wide_voted": "macrophage",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "14",
+   "n_cells": 323,
+   "truth": "pigmented epithelial cell",
+   "family": "cb",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "17",
+   "n_cells": 4281,
+   "truth": "melanocyte",
+   "family": "melanocyte",
+   "narrow_voted": null,
+   "wide_voted": "melanocyte",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "19",
+   "n_cells": 3717,
+   "truth": "fibroblast",
+   "family": "fibro",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "2",
+   "n_cells": 4192,
+   "truth": "pigmented epithelial cell",
+   "family": "cb",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "20",
+   "n_cells": 248,
+   "truth": "melanocyte",
+   "family": "melanocyte",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "21",
+   "n_cells": 41,
+   "truth": "lymphocyte",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "23",
+   "n_cells": 4100,
+   "truth": "pigmented epithelial cell",
+   "family": "cb",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "24",
+   "n_cells": 3823,
+   "truth": "pigmented epithelial cell",
+   "family": "cb",
+   "narrow_voted": null,
+   "wide_voted": "smooth muscle cell of sphincter of pupil",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "25",
+   "n_cells": 288,
+   "truth": "pigmented epithelial cell",
+   "family": "cb",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "26",
+   "n_cells": 72,
+   "truth": "pigmented epithelial cell",
+   "family": "cb",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "27",
+   "n_cells": 155,
+   "truth": "pigmented epithelial cell",
+   "family": "cb",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "3",
+   "n_cells": 1833,
+   "truth": "melanocyte",
+   "family": "melanocyte",
+   "narrow_voted": null,
+   "wide_voted": "melanocyte",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "4",
+   "n_cells": 5224,
+   "truth": "melanocyte",
+   "family": "melanocyte",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "5",
+   "n_cells": 1197,
+   "truth": "melanocyte",
+   "family": "melanocyte",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "6",
+   "n_cells": 228,
+   "truth": "fibroblast",
+   "family": "fibro",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_iris",
+   "cluster": "9",
+   "n_cells": 3265,
+   "truth": "fibroblast",
+   "family": "fibro",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "0",
+   "n_cells": 986,
+   "truth": "lens epithelial cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "1",
+   "n_cells": 1123,
+   "truth": "anterior lens cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "10",
+   "n_cells": 439,
+   "truth": "lens epithelial cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "11",
+   "n_cells": 586,
+   "truth": "secondary lens fiber",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "12",
+   "n_cells": 71,
+   "truth": "lens epithelial cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "13",
+   "n_cells": 14,
+   "truth": "lens epithelial cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "14",
+   "n_cells": 406,
+   "truth": "secondary lens fiber",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "15",
+   "n_cells": 836,
+   "truth": "lens epithelial cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "16",
+   "n_cells": 18,
+   "truth": "lens epithelial cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "17",
+   "n_cells": 737,
+   "truth": "anterior lens cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "18",
+   "n_cells": 1525,
+   "truth": "anterior lens cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "19",
+   "n_cells": 8,
+   "truth": "anterior lens cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "2",
+   "n_cells": 443,
+   "truth": "lens epithelial cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "3",
+   "n_cells": 529,
+   "truth": "secondary lens fiber",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": "lens fiber cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "5",
+   "n_cells": 1663,
+   "truth": "anterior lens cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "6",
+   "n_cells": 787,
+   "truth": "lens epithelial cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "7",
+   "n_cells": 1535,
+   "truth": "anterior lens cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "8",
+   "n_cells": 590,
+   "truth": "lens epithelial cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX13_lens",
+   "cluster": "9",
+   "n_cells": 783,
+   "truth": "lens epithelial cell",
+   "family": "lens",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX14_TM_ciliary_snRNA",
+   "cluster": "18",
+   "n_cells": 413,
+   "truth": "B cell",
+   "family": "bplasma",
+   "narrow_voted": null,
+   "wide_voted": "B cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX14_TM_ciliary_snRNA",
+   "cluster": "4",
+   "n_cells": 1009,
+   "truth": "pigmented ciliary epithelial cell",
+   "family": "cb",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX16_tabula_sapiens_eye",
+   "cluster": "0",
+   "n_cells": 321,
+   "truth": "fibroblast",
+   "family": "fibro",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX16_tabula_sapiens_eye",
+   "cluster": "16",
+   "n_cells": 1470,
+   "truth": "conjunctival epithelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX16_tabula_sapiens_eye",
+   "cluster": "25",
+   "n_cells": 58,
+   "truth": "retinal bipolar neuron",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX16_tabula_sapiens_eye",
+   "cluster": "27",
+   "n_cells": 291,
+   "truth": "retinal blood vessel endothelial cell",
+   "family": "endo",
+   "narrow_voted": null,
+   "wide_voted": "endothelial cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX16_tabula_sapiens_eye",
+   "cluster": "35",
+   "n_cells": 32,
+   "truth": "retinal blood vessel endothelial cell",
+   "family": "endo",
+   "narrow_voted": null,
+   "wide_voted": "endothelial cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX16_tabula_sapiens_eye",
+   "cluster": "37",
+   "n_cells": 232,
+   "truth": "conjunctival epithelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX16_tabula_sapiens_eye",
+   "cluster": "6",
+   "n_cells": 295,
+   "truth": "Schwann cell",
+   "family": "schwann",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX17_mouse_retina_all",
+   "cluster": "12",
+   "n_cells": 1486,
+   "truth": "type 1 cone bipolar cell (sensu Mus)",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": "retinal bipolar neuron",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX17_mouse_retina_all",
+   "cluster": "13",
+   "n_cells": 2382,
+   "truth": "type 9 cone bipolar cell (sensu Mus)",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX17_mouse_retina_all",
+   "cluster": "14",
+   "n_cells": 2223,
+   "truth": "type 8 cone bipolar cell (sensu Mus)",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "CX17_mouse_retina_all",
+   "cluster": "41",
+   "n_cells": 1739,
+   "truth": "amacrine cell",
+   "family": "ac",
+   "narrow_voted": null,
+   "wide_voted": "amacrine cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "CX17_mouse_retina_all",
+   "cluster": "9",
+   "n_cells": 2895,
+   "truth": "type 6 cone bipolar cell (sensu Mus)",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": "retinal bipolar neuron",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "1",
+   "n_cells": 626,
+   "truth": "pigmented epithelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "smooth muscle cell of sphincter of pupil",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "12",
+   "n_cells": 123,
+   "truth": "corneal endothelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "lymphocyte",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "13",
+   "n_cells": 1016,
+   "truth": "fibroblast",
+   "family": "fibro",
+   "narrow_voted": null,
+   "wide_voted": "fibroblast",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "15",
+   "n_cells": 832,
+   "truth": "pigmented epithelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "pigmented ciliary epithelial cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "16",
+   "n_cells": 2935,
+   "truth": "ciliary muscle cell",
+   "family": "muscle",
+   "narrow_voted": null,
+   "wide_voted": "ciliary muscle cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "18",
+   "n_cells": 18,
+   "truth": "lymphocyte",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "2",
+   "n_cells": 40,
+   "truth": "macrophage",
+   "family": "macro",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "33",
+   "n_cells": 12,
+   "truth": "corneal endothelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "corneal endothelial cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "35",
+   "n_cells": 853,
+   "truth": "smooth muscle cell of sphincter of pupil",
+   "family": "muscle",
+   "narrow_voted": null,
+   "wide_voted": "ciliary muscle cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "37",
+   "n_cells": 1590,
+   "truth": "fibroblast",
+   "family": "fibro",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "39",
+   "n_cells": 1009,
+   "truth": "endothelial cell of lymphatic vessel",
+   "family": "endo",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "4",
+   "n_cells": 2713,
+   "truth": "fibroblast",
+   "family": "fibro",
+   "narrow_voted": null,
+   "wide_voted": "fibroblast",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "42",
+   "n_cells": 409,
+   "truth": "pigmented epithelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "43",
+   "n_cells": 275,
+   "truth": "pigmented epithelial cell",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "pigmented ciliary epithelial cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "5",
+   "n_cells": 39,
+   "truth": "fibroblast",
+   "family": "fibro",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_GSE199013",
+   "cluster": "7",
+   "n_cells": 25,
+   "truth": "Schwann cell",
+   "family": "schwann",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "cluster": "0",
+   "n_cells": 1255,
+   "truth": "diffuse bipolar 3a cell",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": "retinal bipolar neuron",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "cluster": "1",
+   "n_cells": 2219,
+   "truth": "glycinergic amacrine cell",
+   "family": "ac",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "cluster": "19",
+   "n_cells": 1444,
+   "truth": "amacrine cell",
+   "family": "ac",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "cluster": "21",
+   "n_cells": 155,
+   "truth": "midget ganglion cell of retina",
+   "family": "rgc",
+   "narrow_voted": null,
+   "wide_voted": "retinal ganglion cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "cluster": "29",
+   "n_cells": 790,
+   "truth": "glycinergic amacrine cell",
+   "family": "ac",
+   "narrow_voted": null,
+   "wide_voted": "amacrine cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "cluster": "3",
+   "n_cells": 2426,
+   "truth": "retinal rod cell",
+   "family": "rod",
+   "narrow_voted": null,
+   "wide_voted": "retinal rod cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "cluster": "31",
+   "n_cells": 3696,
+   "truth": "flat midget bipolar cell",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": "retinal bipolar neuron",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "cluster": "34",
+   "n_cells": 776,
+   "truth": "retinal ganglion cell",
+   "family": "rgc",
+   "narrow_voted": null,
+   "wide_voted": "amacrine cell",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "cluster": "35",
+   "n_cells": 980,
+   "truth": "Mueller cell",
+   "family": "mg",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "cluster": "7",
+   "n_cells": 1673,
+   "truth": "Mueller cell",
+   "family": "mg",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_GSE268630",
+   "cluster": "8",
+   "n_cells": 1956,
+   "truth": "Mueller cell",
+   "family": "mg",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D001",
+   "cluster": "0",
+   "n_cells": 908,
+   "truth": "Mueller cell",
+   "family": "mg",
+   "narrow_voted": null,
+   "wide_voted": "Mueller cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_OA-D001",
+   "cluster": "10",
+   "n_cells": 2952,
+   "truth": "microglial cell",
+   "family": "micro",
+   "narrow_voted": null,
+   "wide_voted": "microglial cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_OA-D001",
+   "cluster": "12",
+   "n_cells": 355,
+   "truth": "retinal bipolar neuron",
+   "family": "bc",
+   "narrow_voted": null,
+   "wide_voted": "retinal bipolar neuron",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_OA-D001",
+   "cluster": "2",
+   "n_cells": 5290,
+   "truth": "H1 horizontal cell",
+   "family": "hc",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D001",
+   "cluster": "20",
+   "n_cells": 1639,
+   "truth": "H2 horizontal cell",
+   "family": "hc",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D001",
+   "cluster": "27",
+   "n_cells": 776,
+   "truth": "glycinergic amacrine cell",
+   "family": "ac",
+   "narrow_voted": null,
+   "wide_voted": "amacrine cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_OA-D001",
+   "cluster": "28",
+   "n_cells": 959,
+   "truth": "starburst amacrine cell",
+   "family": "ac",
+   "narrow_voted": null,
+   "wide_voted": "amacrine cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_OA-D001",
+   "cluster": "35",
+   "n_cells": 17,
+   "truth": "retinal pigment epithelial cell",
+   "family": "rpe",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D002",
+   "cluster": "6",
+   "n_cells": 39,
+   "truth": "leukocyte",
+   "family": null,
+   "narrow_voted": null,
+   "wide_voted": "fibroblast",
+   "bucket": "now answered wrong"
+  },
+  {
+   "volume": "PRE_OA-D004",
+   "cluster": "15",
+   "n_cells": 1667,
+   "truth": "B cell",
+   "family": "bplasma",
+   "narrow_voted": null,
+   "wide_voted": "B cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_OA-D004",
+   "cluster": "16",
+   "n_cells": 28,
+   "truth": "B cell",
+   "family": "bplasma",
+   "narrow_voted": null,
+   "wide_voted": "B cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "11",
+   "n_cells": 1775,
+   "truth": "Mueller cell",
+   "family": "mg",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "12",
+   "n_cells": 297,
+   "truth": "retinal cone cell",
+   "family": "cone",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "14",
+   "n_cells": 318,
+   "truth": "amacrine cell",
+   "family": "ac",
+   "narrow_voted": null,
+   "wide_voted": "amacrine cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "15",
+   "n_cells": 1073,
+   "truth": "amacrine cell",
+   "family": "ac",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "16",
+   "n_cells": 1285,
+   "truth": "retina horizontal cell",
+   "family": "hc",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "21",
+   "n_cells": 183,
+   "truth": "retinal ganglion cell",
+   "family": "rgc",
+   "narrow_voted": null,
+   "wide_voted": "retinal ganglion cell",
+   "bucket": "now correct"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "23",
+   "n_cells": 2263,
+   "truth": "retina horizontal cell",
+   "family": "hc",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "24",
+   "n_cells": 1725,
+   "truth": "retina horizontal cell",
+   "family": "hc",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "29",
+   "n_cells": 1990,
+   "truth": "retinal cone cell",
+   "family": "cone",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "3",
+   "n_cells": 1931,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "31",
+   "n_cells": 2339,
+   "truth": "retina horizontal cell",
+   "family": "hc",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "38",
+   "n_cells": 691,
+   "truth": "retinal rod cell",
+   "family": "rod",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "39",
+   "n_cells": 348,
+   "truth": "retinal cone cell",
+   "family": "cone",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "4",
+   "n_cells": 839,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "41",
+   "n_cells": 620,
+   "truth": "retinal progenitor cell",
+   "family": "progenitor",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  },
+  {
+   "volume": "PRE_OA-D068",
+   "cluster": "9",
+   "n_cells": 388,
+   "truth": "Mueller cell",
+   "family": "mg",
+   "narrow_voted": null,
+   "wide_voted": null,
+   "bucket": "still abstained"
+  }
+ ]
+}

@@ -1,5 +1,7 @@
 # Graded abstention output: results
 
+Executed 2026-10-29 (the directory name keeps the date the card was opened).
+
 Date 2026-10-22. Card: `CARD.md`, amendment: `AMENDMENT_1.md`.
 
 ## What was added
