@@ -337,7 +337,12 @@ def main():
                       out, species, tissue, disease=a.disease,
                       group_col="group" if sa["group_present"] else "",
                       gene_degraded=bool(sa["gene_id"].get("degraded")),
-                      top_genes_n=_l2_budget_n(a.top_genes_n), llm_assist=a.llm_assist,
+                      top_genes_n=_l2_budget_n(
+                          a.top_genes_n,
+                          judge=bool(a.adjudicate_layer
+                                     or os.environ.get("EYEKB_ADJUDICATE", "").strip().lower()
+                                     in ("1", "true", "yes", "on"))),
+                      llm_assist=a.llm_assist,
                       volume_counts=volume_counts,
                       adjudicate_layer=(a.adjudicate_layer
                                         or os.environ.get("EYEKB_ADJUDICATE", "").strip()

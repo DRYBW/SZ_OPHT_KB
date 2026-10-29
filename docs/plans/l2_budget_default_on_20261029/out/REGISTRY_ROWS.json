@@ -1,0 +1,79 @@
+{
+ "probe": "registry_rows.py",
+ "row_id": "CHG-20261029-L2BUDGET-JUDGEDEFAULT",
+ "files": {
+  "pipeline/l2_budget.py": {
+   "rel": "pipeline/l2_budget.py",
+   "sha256": "6bd8328a1a693dbd28870ff57dff66a6694bc3d09daf5df3e7a9cd1faa702626",
+   "bytes": 3043,
+   "mtime": "2026-10-29 18:38:34"
+  },
+  "pipeline/stage_b_evidence.py": {
+   "rel": "pipeline/stage_b_evidence.py",
+   "sha256": "fd3035d555be8858d7c1b9fb4403ee63bda95dddf7df7da0e230d46637b657e4",
+   "bytes": 34643,
+   "mtime": "2026-10-29 18:38:34"
+  },
+  "pipeline/run_pipeline.py": {
+   "rel": "pipeline/run_pipeline.py",
+   "sha256": "4c5b717657e32d9190318f228881f3e20ffa5777c40cb5b648d2de266b1179f5",
+   "bytes": 21895,
+   "mtime": "2026-10-29 18:38:34"
+  }
+ },
+ "w3_rows_updated": [
+  {
+   "item_id": "L2-01",
+   "path": "pipeline/stage_b_evidence.py",
+   "before_sha256": "651c0931c53f80ed5d9ea2d5bea8e11240d5bb185a489c6e40f56add7996c21e",
+   "after_sha256": "fd3035d555be8858d7c1b9fb4403ee63bda95dddf7df7da0e230d46637b657e4",
+   "before_version": "v(2026-10-29 ADJUDICATE-LAYER 可选第二答案层)",
+   "after_version": "v(2026-10-29 L2BUDGET-JUDGEDEFAULT 判读路径默认 30)"
+  },
+  {
+   "item_id": "L2-03",
+   "path": "pipeline/run_pipeline.py",
+   "before_sha256": "76ea5565a5cb9673db76fd9a6135c69011af87e18f1b4fb1e7919ba414ccb4c2",
+   "after_sha256": "4c5b717657e32d9190318f228881f3e20ffa5777c40cb5b648d2de266b1179f5",
+   "before_version": "v(2026-10-29 ADJUDICATE-LAYER 可选第二答案层)",
+   "after_version": "v(2026-10-29 L2BUDGET-JUDGEDEFAULT 判读路径默认 30)"
+  },
+  {
+   "item_id": "L2-11",
+   "path": "pipeline/l2_budget.py",
+   "before_sha256": "2836e6f0ec1557ca69f902a0b1cbbe07f049db51e9c9b761ae1fd0744472e112",
+   "after_sha256": "6bd8328a1a693dbd28870ff57dff66a6694bc3d09daf5df3e7a9cd1faa702626",
+   "before_version": "v(2026-10-13 L2BUDGET-WIRE t_038e03a7)",
+   "after_version": "v(2026-10-29 L2BUDGET-JUDGEDEFAULT 判读路径默认 30)"
+  }
+ ],
+ "card_sha256": "f77279a896d55bca92782fcf209dcf475f2caff2996b4eb9be77b1939f629300",
+ "gate_change_control": {
+  "rc": 0,
+  "tail": [
+   "  PASS G6-R2-PORTABLE  :: [instance] path anchors by rule: declared-local=6, declared-not-distributed=1, exact=153, relative-absent=9, repo-relative=207",
+   "  PASS G6-R1 REQUIRED :: [template] empty required cells: 0",
+   "  PASS G6-R2 EVIDENCE :: [template] evidence cells without a resolvable anchor: 0",
+   "  PASS G6-R3 NA :: [template] rule-numbered NA defects: 0",
+   "  PASS G6-R4 OUTCOME1 :: [template] Q1 layer-id defects: 0",
+   "  PASS G6-R5 MONOTONE :: [template] Q3 rollback-term defects: 0",
+   "  PASS G6-R6 PREREG :: [template] Q4 sha-anchor defects: 0",
+   "  PASS G6-R7 ESCAPE :: [template] Q5 escape-door defects: 0",
+   "  PASS G6-R8 PRECOND :: [template] gate-precondition defects: 0",
+   "  PASS G6-R2-CONCRETE  :: [template] concrete-action cells without a command/threshold: 0",
+   "  PASS G6-R2-PORTABLE  :: [template] path anchors by rule: exact=22",
+   "  PASS G6-MAP  :: checklist rows=14; covered=14; problems=0"
+  ]
+ },
+ "gate_g5g6_negative": {
+  "rc": 1,
+  "tail": [
+   "  [OK ] G6 N4_PREREG_NO_SHA           rc=2 codes=['G6-R6'] expect=['G6-R6']",
+   "  [OK ] G6 N5_ESCAPE_NO_SWITCH        rc=2 codes=['G6-R7'] expect=['G6-R7']",
+   "  [OK ] G6 N6_PRECOND_UNREGISTERED    rc=2 codes=['G6-R8'] expect=['G6-R8']",
+   "  [OK ] G6 N7_NO_THRESHOLD_ACTION     rc=2 codes=['G6-R2-CONCRETE'] expect=['G6-R2-CONCRETE']",
+   "  [OK ] G6 N8_CHECKLIST_MAP_GAP       rc=2 codes=['G6-MAP'] expect=['G6-MAP']",
+   "G5G6 negative battery: 16/17 as expected -> FAIL"
+  ]
+ }
+}

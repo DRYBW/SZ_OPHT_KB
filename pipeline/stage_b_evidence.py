@@ -555,6 +555,9 @@ def main():
                          "retina). Empty (default) searches every active library, which is the historical "
                          "behaviour and ranks adult classes first on a fetal volume.")
     a = ap.parse_args()
+    judge = bool(a.adjudicate_layer
+                 or os.environ.get("EYEKB_ADJUDICATE", "").strip().lower()
+                 in ("1", "true", "yes", "on"))
     vc = None
     if a.volume_counts:
         vc = json.loads(Path(a.volume_counts).read_text(encoding="utf-8"))
@@ -563,12 +566,11 @@ def main():
             warn_guard_off()
     run_stage_b(a.processed, a.markers, a.sizes, a.out, a.species, a.tissue,
                 disease=a.disease, group_col=a.group_col,
-                gene_degraded=a.gene_degraded, top_genes_n=_l2_budget_n(a.top_genes_n),
+                gene_degraded=a.gene_degraded,
+                top_genes_n=_l2_budget_n(a.top_genes_n, judge=judge),
                 llm_assist=a.llm_assist, volume_counts=vc, dev_stage=a.dev_stage,
                 marker_library=a.marker_library,
-                adjudicate_layer=(a.adjudicate_layer
-                                  or os.environ.get("EYEKB_ADJUDICATE", "").strip()
-                                  .lower() in ("1", "true", "yes", "on")))
+                adjudicate_layer=judge)
 
 
 if __name__ == "__main__":

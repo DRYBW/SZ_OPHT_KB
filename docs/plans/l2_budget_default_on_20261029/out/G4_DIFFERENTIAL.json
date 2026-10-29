@@ -1,0 +1,96 @@
+{
+ "probe": "g4_default_differential.py",
+ "card": "docs/plans/l2_budget_default_on_20261029",
+ "frozen_expectation": {
+  "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
+  "decisions_template.csv": "fe269908069932f3452365fd235beb34ca247da91bc60b608c72fe75745c4fc0",
+  "annotation_evidence_report.md__normalized": "6f795b329fbb87eb2d0cd687abcde6d2d9ca0f56866cb1e9a744ac6ddf55a144"
+ },
+ "frozen_expectation_sha256": "5c063fbe26b01730089fddae28f02ce65226430d1b6a09e16947681a37fc516f",
+ "module_new_sha256": "6bd8328a1a693dbd28870ff57dff66a6694bc3d09daf5df3e7a9cd1faa702626",
+ "pre_sha256": {
+  "pipeline/l2_budget.py": "2836e6f0ec1557ca69f902a0b1cbbe07f049db51e9c9b761ae1fd0744472e112",
+  "pipeline/stage_b_evidence.py": "651c0931c53f80ed5d9ea2d5bea8e11240d5bb185a489c6e40f56add7996c21e",
+  "pipeline/run_pipeline.py": "76ea5565a5cb9673db76fd9a6135c69011af87e18f1b4fb1e7919ba414ccb4c2"
+ },
+ "pre": {
+  "tag": "pre_run1",
+  "rc": 0,
+  "interpreter": [
+   "/home/ubuntu/.conda/envs/pipeline_env/bin/python",
+   "contract default (rung 1)",
+   "3.10"
+  ],
+  "env": {},
+  "anchors": {
+   "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
+   "decisions_template.csv": "fe269908069932f3452365fd235beb34ca247da91bc60b608c72fe75745c4fc0",
+   "annotation_evidence_report.md__normalized": "7c225802e04e81fa206a18b45e39025ebe9d9dbd1dc6b83b75384e6806a93e2d"
+  },
+  "stderr_tail": "                             from                                               \n                             /mnt/D/OcularKB/models/bge-large-en-v              \n                             1.5.                                               \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+ },
+ "restored_sha256": {
+  "pipeline/l2_budget.py": "6bd8328a1a693dbd28870ff57dff66a6694bc3d09daf5df3e7a9cd1faa702626",
+  "pipeline/stage_b_evidence.py": "fd3035d555be8858d7c1b9fb4403ee63bda95dddf7df7da0e230d46637b657e4",
+  "pipeline/run_pipeline.py": "4c5b717657e32d9190318f228881f3e20ffa5777c40cb5b648d2de266b1179f5"
+ },
+ "module_restored_sha256": "6bd8328a1a693dbd28870ff57dff66a6694bc3d09daf5df3e7a9cd1faa702626",
+ "rollback": {
+  "tag": "rollback_run1",
+  "rc": 0,
+  "interpreter": [
+   "/home/ubuntu/.conda/envs/pipeline_env/bin/python",
+   "contract default (rung 1)",
+   "3.10"
+  ],
+  "env": {
+   "EYEKB_L2_BUDGET": "0"
+  },
+  "anchors": {
+   "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
+   "decisions_template.csv": "fe269908069932f3452365fd235beb34ca247da91bc60b608c72fe75745c4fc0",
+   "annotation_evidence_report.md__normalized": "7c225802e04e81fa206a18b45e39025ebe9d9dbd1dc6b83b75384e6806a93e2d"
+  },
+  "stderr_tail": "                             from                                               \n                             /mnt/D/OcularKB/models/bge-large-en-v              \n                             1.5.                                               \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+ },
+ "post": [
+  {
+   "tag": "post_run1",
+   "rc": 0,
+   "interpreter": [
+    "/home/ubuntu/.conda/envs/pipeline_env/bin/python",
+    "contract default (rung 1)",
+    "3.10"
+   ],
+   "env": {},
+   "anchors": {
+    "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
+    "decisions_template.csv": "fe269908069932f3452365fd235beb34ca247da91bc60b608c72fe75745c4fc0",
+    "annotation_evidence_report.md__normalized": "7c225802e04e81fa206a18b45e39025ebe9d9dbd1dc6b83b75384e6806a93e2d"
+   },
+   "stderr_tail": "                             from                                               \n                             /mnt/D/OcularKB/models/bge-large-en-v              \n                             1.5.                                               \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+  },
+  {
+   "tag": "post_run2",
+   "rc": 0,
+   "interpreter": [
+    "/home/ubuntu/.conda/envs/pipeline_env/bin/python",
+    "contract default (rung 1)",
+    "3.10"
+   ],
+   "env": {},
+   "anchors": {
+    "stage_a/processed.h5ad": "dbc657fa2bc4a9cce1060c72aa96a58d278f794612b6bb7cff81bad27f3ef7a5",
+    "decisions_template.csv": "fe269908069932f3452365fd235beb34ca247da91bc60b608c72fe75745c4fc0",
+    "annotation_evidence_report.md__normalized": "7c225802e04e81fa206a18b45e39025ebe9d9dbd1dc6b83b75384e6806a93e2d"
+   },
+   "stderr_tail": "                             from                                               \n                             /mnt/D/OcularKB/models/bge-large-en-v              \n                             1.5.                                               \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+  }
+ ],
+ "post_deterministic": true,
+ "rollback_reproduces_pre": true,
+ "post_differs_from_pre": false,
+ "anchors_moved_by_this_change": [],
+ "post_matches_frozen_expectation": false,
+ "pre_matches_frozen_expectation": false
+}
