@@ -224,20 +224,32 @@ def search_literature(cell_type: str, top_k: int = 5, species: str = "",
 
 
 @app.tool(title="Read knowledge-base page", annotations=_read_only("Read knowledge-base page"))
-def get_kb_page(scope: str, name: str = "", summary: bool = False) -> dict:
-    """Read a knowledge-base page as shipped (markdown). Three page types:
-      scope="index"                 the master catalog of every page.
-      scope="topic",  name="..."    a topic page, e.g. vascular.
-      scope="tissue", name="..."    a tissue page, e.g. cornea, RPE, trabecular_meshwork.
-    scope is required; name is required for topic and tissue. An unknown or illegal path is
-    rejected, and the response lists the pages that do exist.
+def get_kb_page(scope: str, name: str = "", summary: bool = False,
+                detail: str = "") -> dict:
+    """Read a knowledge-base page as shipped (markdown).
+      scope="index"              the master catalog of every page.
+      scope="topic", name="..."  a topic page, e.g. vascular.
+      scope="tissue",name="..."  a tissue page, e.g. cornea, RPE, trabecular_meshwork.
+    scope is required; name is required for topic and tissue. An unknown path is rejected and
+    the response lists the pages that do exist.
 
-    summary=true returns one row per page (title, scope, path, size in characters) instead of the
-    page text. The catalogue page runs to roughly 139,000 characters, so use summary when you only
-    need to see which pages exist before reading one. summary=false, the default, is unchanged.
+    Size first: the index is about 140,000 characters of text but about 2,800 as an index. If
+    you only need to know which pages exist, ask for the index rather than reading it whole.
+
+    detail="answer" gives one row per page (title, scope, path, size) and names what it left out
+    in omitted_fields; detail="full" is the page text. Empty (the default) follows `summary`, so
+    existing callers are unaffected. This is the same field name get_tissue_composition uses, so
+    one habit covers both tools. summary=true still works and equals detail="answer"; an explicit
+    detail wins if the two disagree.
     """
-    resp = core.get_kb_page(scope, name, summary)
-    calllog.trace("get_kb_page", {"scope": scope, "name": name, "summary": summary}, resp)
+    _detail = (detail or "").strip().lower()
+    if _detail in ("answer", "full"):
+        _summary = (_detail == "answer")
+    else:
+        _summary = bool(summary)
+    resp = core.get_kb_page(scope, name, _summary)
+    calllog.trace("get_kb_page", {"scope": scope, "name": name, "summary": _summary,
+                                 "detail": _detail or None}, resp)
     return resp
 
 
@@ -295,27 +307,22 @@ def get_tissue_composition(species: str, tissue: str, disease: str = "",
     species: human | mouse.
     tissue:  retina | fibrovascular_membrane | ... (the response reports what is covered).
     disease: optional, e.g. "proliferative diabetic"; empty = normal tissue.
-    development_stage: empty = the adult baseline (donors 18y+, non-adult donors removed row by
-      row and listed in stage_disclosure / excluded_nonadult_units). "fetal" or "developing"
-      returns the developmental transition entry instead -- adult numbers must not answer a
-      fetal question, even for the same tissue. "unknown" = only entries whose disclosure files
-      carry no age column. The literal is resolved, never guessed: "" and "any" reach the adult
-      main file, "postnatal" folds to "developing", and any other literal -- "organoid" included --
-      resolves to the unknown tier and adds a stage_literal block naming the literal and the tier it
-      reached. No literal falls through to the adult baseline.
+    development_stage: empty = the adult baseline (donors 18y+). "fetal" or "developing"
+      returns that stage instead, because adult numbers must not answer a fetal question even
+      for the same tissue. An unrecognised literal (including "organoid") reaches the unknown
+      tier and names itself in a stage_literal block rather than silently falling back to adult.
 
-    How to read it: these are reference intervals, not acceptance thresholds. A proportion
-    clearly outside its interval raises an advisory flag for you to revisit -- it can be a
-    sampling difference, an enrichment protocol, or an annotation error. Contrast and QC only:
-    never feed these numbers into scoring.
+    How to read it: reference intervals, not acceptance thresholds. A proportion clearly
+    outside its interval raises an advisory flag to revisit -- a sampling difference, an
+    enrichment protocol, or an annotation error. Contrast and QC only; never feed these numbers
+    into scoring.
 
     Call this before annotating, to fix what the tissue should contain and roughly how much.
 
-    detail: "full" (default) returns the complete record, including the stratum breakdown, the
-    stage disclosure and the caliber metadata. "answer" returns the proportions, the state layer,
-    the flags and the caveats only, and names what it left out in omitted_fields. Use "answer" when
-    you are reading the numbers rather than auditing them; every row keeps its own citations either
-    way.
+    Size: about 91,000 characters in full. detail: "answer" keeps the proportions, the state
+    layer, the flags and the caveats, and names what it left out in omitted_fields -- roughly
+    20,000 characters. Every row keeps its own citations either way, so the answer tier is not
+    an evidence-poor tier.
     """
     resp = core.get_tissue_composition(species, tissue, disease, development_stage, detail)
     calllog.trace("get_tissue_composition",
