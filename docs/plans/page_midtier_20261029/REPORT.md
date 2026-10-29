@@ -7,6 +7,12 @@ labelled as such).
 **Read this first: the strict verdict is 5/7, not 7/7.** Two pre-registered criteria missed. Both are
 explained below with the numbers that caused them, and neither was tuned away.
 
+**Owner ruling (2026-10-29, after reading this report): take the maximum benefit, then close.**
+The two misses were mis-specified criteria, not working defects: C4's absolute 2,500-character bound
+is not adopted (the outline keeps all of its information at 2,663 characters), and C6's catalogue
+carve-out is the behaviour `VERIFY_CONTRACT` §5.8 already registered. The 5/7 verdict above stays on
+the record unchanged. See `AMENDMENT_3_RULING_AND_CLOSURE.md`.
+
 ## 1. The gap this closes
 
 The previous card fixed the catalogue and then named its own leftover: a single page has nothing
@@ -127,4 +133,21 @@ parent commit and running the same probe, so both sides come from the same instr
 the full page text, and keeping a 200,000-character page body under an `outline` key would have made
 the reading file misdescribe what it held — and made it 1.7 MB for no evidential gain. The fields it
 is actually read for (characters, md5, default-view characters) are unchanged by that trimming: the
-verifier prints the same 5/7 and the same numbers before and after it.
+the verifier prints the same 5/7 and the same numbers before and after it.
+
+## Closure
+
+Closed 2026-10-29 by owner ruling ("take the maximum benefit, then close it out"), recorded in
+`AMENDMENT_3_RULING_AND_CLOSURE.md`. What that changed: nothing in the code, nothing in the readings,
+nothing in any gate — the 5/7 verdict and the two named misses stay exactly as measured. What it
+settled: the absolute character bound in C4 is not an acceptance criterion (the outline keeps its
+information), and the catalogue keeps the default §5.8 registered for it.
+
+Left open, named rather than buried:
+
+* The delivered mirror `/mnt/D/EyeKB` was **not** synced. Its `mcp_server/server.py` is
+  `394d4d91…`, which matches no revision in this repository, so a straight copy would overwrite
+  mirror-only changes. It needs a three-way diff, which is its own card.
+* Latency is still unmeasured; it requires an idle machine.
+* The legacy tool-panel fixture is still not re-recorded, so its accumulated drift stays visible: five
+  calls differ, only one of them this card's.
