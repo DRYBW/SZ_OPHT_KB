@@ -62,4 +62,4 @@ exclude = ["kbkit*"]
 include-package-data = true
 
 [tool.setuptools.package-data]
-mcp_server = ["*.json.gz"]
+mcp_server = ["*.json.gz", "RELEASE_IDENTITY.json"]

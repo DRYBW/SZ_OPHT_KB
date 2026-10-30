@@ -13,3 +13,6 @@ recursive-include rag_snapshots/ *
 
 global-exclude *.py[cod]
 global-exclude __pycache__/*
+
+# Staged by scripts/build_wheel.py for the duration of a build only; not a tracked file.
+include mcp_server/RELEASE_IDENTITY.json

@@ -62,7 +62,15 @@ from mcp.types import ToolAnnotations  # noqa: E402
 # (get_release_identity). Both read docs/RELEASE_IDENTITY.json, which
 # scripts/release_identity.py re-takes in the same commit as any byte change.
 PROTOCOL_GENERATION = "KB1v2-0.14-kb11a-reasonjoin"
-IDENTITY_RECORD = Path(__file__).resolve().parent.parent / "docs" / "RELEASE_IDENTITY.json"
+# In a repository checkout the record sits at <repo>/docs/RELEASE_IDENTITY.json. Inside an
+# installed wheel there is no repository, so scripts/build_wheel.py copies the same record into the
+# package for the duration of the build; it is never a tracked file, which keeps it out of the
+# identity hash and avoids a self-referencing record.
+_IDENTITY_CANDIDATES = (
+    Path(__file__).resolve().parent.parent / "docs" / "RELEASE_IDENTITY.json",
+    Path(__file__).resolve().parent / "RELEASE_IDENTITY.json",
+)
+IDENTITY_RECORD = next((p for p in _IDENTITY_CANDIDATES if p.exists()), _IDENTITY_CANDIDATES[0])
 
 
 def _release_info():
@@ -80,7 +88,9 @@ def _release_info():
               "effective_profile_id"):
         if k in rec and rec[k] not in (None, ""):
             out[k] = rec[k]
-    out["source"] = "docs/RELEASE_IDENTITY.json"
+    out["source"] = (str(IDENTITY_RECORD.relative_to(IDENTITY_RECORD.parents[1]))
+                     if IDENTITY_RECORD.parent.name == "docs"
+                     else "mcp_server/RELEASE_IDENTITY.json (packaged copy)")
     out["recorded"] = bool(rec.get("release_id"))
     return out
 
